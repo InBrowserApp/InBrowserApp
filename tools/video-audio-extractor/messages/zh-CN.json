@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "选择 MP4 或 WebM",
+  "changeVideo": "更换视频",
+  "dropHint": "或将视频拖到这里",
+  "privacy": "视频始终保留在此设备上。",
+  "reading": "正在读取音轨…",
+  "audioTrack": "音轨",
+  "trackNumber": "音轨 {number}",
+  "preview": "音频预听",
+  "preparing": "正在准备所选音轨…",
+  "download": "下载 {format}",
+  "unsupportedTrack": "此音频编码格式无法导出。可以试试其他音轨。",
+  "noAudio": "此视频没有音轨。",
+  "readError": "无法打开视频。请选择有效的 MP4 或 WebM 文件。",
+  "exportError": "无法提取此音轨。",
+  "previewError": "当前浏览器无法播放预听音频，仍可下载音频文件。"
+}

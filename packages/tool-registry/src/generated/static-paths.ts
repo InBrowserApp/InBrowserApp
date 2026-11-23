@@ -27510,6 +27510,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "video-audio-extractor",
+    language: "ar",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "de",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "en",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "es",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "fr",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "he",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "hi",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "id",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "it",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "ja",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "ko",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "ms",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "nl",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "no",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "pl",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "pt",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "ru",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "sv",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "th",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "tr",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "vi",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-audio-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "video-frame-extractor",
     language: "ar",
   },

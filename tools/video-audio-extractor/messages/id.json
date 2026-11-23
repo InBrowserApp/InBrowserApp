@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Pilih MP4 atau WebM",
+  "changeVideo": "Ganti video",
+  "dropHint": "Atau letakkan video di sini",
+  "privacy": "Video tetap berada di perangkat Anda.",
+  "reading": "Membaca trek audio…",
+  "audioTrack": "Trek audio",
+  "trackNumber": "Trek {number}",
+  "preview": "Pratinjau audio",
+  "preparing": "Menyiapkan trek yang dipilih…",
+  "download": "Unduh {format}",
+  "unsupportedTrack": "Codec audio ini tidak dapat diekspor. Coba trek lain.",
+  "noAudio": "Video ini tidak memiliki trek audio.",
+  "readError": "Video tidak dapat dibuka. Pilih file MP4 atau WebM yang valid.",
+  "exportError": "Trek audio ini tidak dapat diekstrak.",
+  "previewError": "Browser Anda tidak dapat memutar pratinjau ini. Anda masih bisa mengunduh audionya."
+}

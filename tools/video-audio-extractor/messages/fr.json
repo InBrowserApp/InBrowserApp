@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Choisir un fichier MP4 ou WebM",
+  "changeVideo": "Changer de vidéo",
+  "dropHint": "Ou déposez une vidéo ici",
+  "privacy": "Votre vidéo reste sur votre appareil.",
+  "reading": "Analyse des pistes audio…",
+  "audioTrack": "Piste audio",
+  "trackNumber": "Piste {number}",
+  "preview": "Écoute de la piste",
+  "preparing": "Préparation de la piste sélectionnée…",
+  "download": "Télécharger en {format}",
+  "unsupportedTrack": "L’exportation de ce codec audio est indisponible. Essayez une autre piste.",
+  "noAudio": "Cette vidéo ne contient aucune piste audio.",
+  "readError": "Impossible d’ouvrir cette vidéo. Choisissez un fichier MP4 ou WebM valide.",
+  "exportError": "Impossible d’extraire cette piste audio.",
+  "previewError": "Votre navigateur ne peut pas lire cette piste. Vous pouvez quand même la télécharger."
+}

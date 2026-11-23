@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "MP4 または WebM を選択",
+  "changeVideo": "動画を変更",
+  "dropHint": "ここに動画をドロップすることもできます",
+  "privacy": "動画はお使いの端末内で処理されます。",
+  "reading": "音声トラックを読み込んでいます…",
+  "audioTrack": "音声トラック",
+  "trackNumber": "トラック {number}",
+  "preview": "音声の試聴",
+  "preparing": "選択したトラックを準備しています…",
+  "download": "{format} をダウンロード",
+  "unsupportedTrack": "この音声コーデックは書き出しに対応していません。別のトラックを選んでください。",
+  "noAudio": "この動画には音声トラックがありません。",
+  "readError": "動画を開けませんでした。有効な MP4 または WebM ファイルを選んでください。",
+  "exportError": "この音声トラックを抽出できませんでした。",
+  "previewError": "お使いのブラウザーでは試聴できません。音声はダウンロードできます。"
+}

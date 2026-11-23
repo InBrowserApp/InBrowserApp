@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "MP4 또는 WebM 선택",
+  "changeVideo": "동영상 변경",
+  "dropHint": "또는 여기에 동영상을 끌어다 놓으세요",
+  "privacy": "동영상은 이 기기에서만 처리됩니다.",
+  "reading": "오디오 트랙 확인 중…",
+  "audioTrack": "오디오 트랙",
+  "trackNumber": "트랙 {number}",
+  "preview": "오디오 미리 듣기",
+  "preparing": "선택한 트랙 준비 중…",
+  "download": "{format} 다운로드",
+  "unsupportedTrack": "이 오디오 코덱으로는 내보낼 수 없습니다. 다른 트랙을 선택해 보세요.",
+  "noAudio": "이 동영상에는 오디오 트랙이 없습니다.",
+  "readError": "동영상을 열 수 없습니다. 올바른 MP4 또는 WebM 파일을 선택하세요.",
+  "exportError": "이 오디오 트랙을 추출할 수 없습니다.",
+  "previewError": "이 브라우저에서 미리 듣기를 재생할 수 없습니다. 오디오는 다운로드할 수 있습니다."
+}

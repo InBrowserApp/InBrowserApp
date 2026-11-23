@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "選擇 MP4 或 WebM",
+  "changeVideo": "更換影片",
+  "dropHint": "或將影片拖曳到這裡",
+  "privacy": "影片會留在你的裝置上。",
+  "reading": "正在讀取音軌…",
+  "audioTrack": "音軌",
+  "trackNumber": "音軌 {number}",
+  "preview": "試聽音軌",
+  "preparing": "正在處理選取的音軌…",
+  "download": "下載 {format}",
+  "unsupportedTrack": "無法匯出使用這種編解碼器的音軌。請試試其他音軌。",
+  "noAudio": "這部影片沒有音軌。",
+  "readError": "無法開啟影片。請選擇有效的 MP4 或 WebM 檔案。",
+  "exportError": "無法擷取這條音軌。",
+  "previewError": "你的瀏覽器無法播放這條音軌。你仍可下載音訊。"
+}

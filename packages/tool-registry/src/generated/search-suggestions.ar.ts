@@ -1498,6 +1498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "misc",
+    name: "استخراج الصوت من الفيديو",
+    slug: "video-audio-extractor",
+  },
+  {
     category: "image",
     name: "أداة استخراج إطارات الفيديو",
     slug: "video-frame-extractor",

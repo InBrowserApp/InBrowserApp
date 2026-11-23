@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Choose MP4 or WebM",
+  "changeVideo": "Change video",
+  "dropHint": "Or drop a video here",
+  "privacy": "Your video stays on your device.",
+  "reading": "Reading audio tracks…",
+  "audioTrack": "Audio track",
+  "trackNumber": "Track {number}",
+  "preview": "Audio preview",
+  "preparing": "Preparing the selected track…",
+  "download": "Download {format}",
+  "unsupportedTrack": "This audio codec cannot be exported. Try another track.",
+  "noAudio": "This video has no audio tracks.",
+  "readError": "Could not open the video. Choose a valid MP4 or WebM file.",
+  "exportError": "Could not extract this audio track.",
+  "previewError": "Your browser cannot play this preview. You can still download the audio."
+}

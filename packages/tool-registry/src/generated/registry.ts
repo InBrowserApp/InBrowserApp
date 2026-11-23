@@ -37836,6 +37836,142 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "video-audio-extractor",
+    category: "misc",
+    icon: "film",
+    tags: [
+      "video",
+      "audio",
+      "extract",
+      "sound",
+      "track",
+      "mp4",
+      "webm",
+      "aac",
+      "m4a",
+      "opus",
+      "vorbis",
+      "remux",
+    ],
+    locales: {
+      ar: {
+        name: "استخراج الصوت من الفيديو",
+        description:
+          "استخرج الصوت من MP4 أو WebM في متصفحك. اختر مسارًا صوتيًا واستمع إليه، ثم نزّل صوت AAC من MP4 بصيغة M4A أو صوت WebM دون إعادة ترميز.",
+      },
+      de: {
+        name: "Audio aus Video extrahieren",
+        description:
+          "Extrahiere Audio aus MP4 oder WebM im Browser. Höre die Audiospur vorab an und lade AAC aus MP4 als M4A oder WebM-Audio ohne erneute Codierung herunter.",
+      },
+      en: {
+        name: "Video Audio Extractor",
+        description:
+          "Extract audio from MP4 or WebM in your browser. Choose and preview an audio track, then download MP4 AAC as M4A or WebM audio without re-encoding.",
+      },
+      es: {
+        name: "Extractor de audio de video",
+        description:
+          "Extrae audio de MP4 o WebM en tu navegador. Elige y escucha una pista, y descarga el audio AAC de un MP4 en M4A o el audio de un WebM sin recodificar.",
+      },
+      fr: {
+        name: "Extracteur audio de vidéos",
+        description:
+          "Extrayez l’audio d’une vidéo MP4 ou WebM dans votre navigateur. Écoutez la piste choisie, puis téléchargez-la en M4A ou WebM sans réencodage.",
+      },
+      he: {
+        name: "חילוץ שמע מווידאו",
+        description:
+          "חלצו שמע מ-MP4 או WebM בדפדפן. בחרו רצועת שמע והאזינו לה, ואז הורידו שמע AAC מ-MP4 כ-M4A או שמע מ-WebM ללא קידוד מחדש.",
+      },
+      hi: {
+        name: "वीडियो ऑडियो एक्सट्रैक्टर",
+        description:
+          "ब्राउज़र में MP4 या WebM से ऑडियो निकालें। ट्रैक चुनकर सुनें, फिर MP4 के AAC को M4A में या WebM के ऑडियो को बिना दोबारा एन्कोड किए डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Audio dari Video",
+        description:
+          "Ekstrak audio MP4 atau WebM di browser. Pilih dan dengarkan trek, lalu unduh AAC dari MP4 sebagai M4A atau audio WebM tanpa pengodean ulang.",
+      },
+      it: {
+        name: "Estrai audio da video",
+        description:
+          "Estrai l’audio da MP4 o WebM nel browser. Scegli una traccia, ascolta l’anteprima e scarica l’audio AAC da MP4 in M4A oppure l’audio da WebM senza ricodifica.",
+      },
+      ja: {
+        name: "動画から音声を抽出",
+        description:
+          "MP4 や WebM から音声を抽出。ブラウザーで音声トラックを選んで試聴し、再エンコードせずに MP4 の AAC 音声は M4A、WebM の音声は音声のみの WebM として保存できます。",
+      },
+      ko: {
+        name: "동영상 오디오 추출기",
+        description:
+          "브라우저에서 MP4 또는 WebM 동영상의 오디오를 추출하세요. 원하는 오디오 트랙을 골라 미리 듣고, 재인코딩 없이 MP4의 AAC 트랙은 M4A로, WebM의 오디오는 WebM으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Audio daripada Video",
+        description:
+          "Ekstrak audio MP4 atau WebM dalam pelayar. Pilih dan dengar trek, kemudian muat turun AAC daripada MP4 sebagai M4A atau audio WebM tanpa pengekodan semula.",
+      },
+      nl: {
+        name: "Audio uit video halen",
+        description:
+          "Haal audio uit MP4 of WebM in je browser. Kies een audiospoor, luister het terug en download AAC als M4A of WebM-audio zonder opnieuw te coderen.",
+      },
+      no: {
+        name: "Hent ut lyd fra video",
+        description:
+          "Hent ut lyd fra MP4 eller WebM i nettleseren. Velg og lytt til et lydspor, og last ned AAC som M4A eller WebM-lyd uten ny koding.",
+      },
+      pl: {
+        name: "Wyodrębnianie audio z wideo",
+        description:
+          "Wyodrębnij audio z MP4 lub WebM w przeglądarce. Wybierz i odsłuchaj ścieżkę, a potem pobierz AAC jako M4A lub audio WebM bez ponownego kodowania.",
+      },
+      pt: {
+        name: "Extrator de áudio de vídeo",
+        description:
+          "Extraia áudio de MP4 ou WebM no navegador. Escolha e ouça a faixa antes de baixar o AAC do MP4 em M4A ou o áudio do WebM, sem recodificar.",
+      },
+      ru: {
+        name: "Извлечение звука из видео",
+        description:
+          "Извлекайте звук из MP4 и WebM в браузере. Выберите и прослушайте аудиодорожку, затем скачайте AAC в M4A или звук в WebM без перекодирования.",
+      },
+      sv: {
+        name: "Extrahera ljud från video",
+        description:
+          "Extrahera ljud från MP4 eller WebM i webbläsaren. Välj och lyssna på ett ljudspår och ladda ner AAC som M4A eller WebM-ljud utan omkodning.",
+      },
+      th: {
+        name: "เครื่องมือแยกเสียงจากวิดีโอ",
+        description:
+          "แยกเสียงจาก MP4 หรือ WebM ในเบราว์เซอร์ เลือกแทร็กและฟังก่อนดาวน์โหลด AAC จาก MP4 เป็น M4A หรือดาวน์โหลดเสียง WebM โดยไม่เข้ารหัสใหม่",
+      },
+      tr: {
+        name: "Videodan Ses Çıkarma",
+        description:
+          "Tarayıcıda MP4 veya WebM videodan ses çıkarın. Ses izini seçip dinleyin, ardından MP4'teki AAC sesi M4A olarak veya WebM sesini yeniden kodlamadan indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất âm thanh từ video",
+        description:
+          "Trích xuất âm thanh từ MP4 hoặc WebM ngay trong trình duyệt. Chọn luồng, nghe thử rồi tải AAC từ MP4 dưới dạng M4A hoặc tải âm thanh WebM mà không mã hóa lại.",
+      },
+      "zh-CN": {
+        name: "视频音频提取器",
+        description:
+          "在浏览器中从 MP4 或 WebM 视频提取音频。选择音轨并预听，再将 MP4 中的 AAC 无需重新编码保存为 M4A，或导出纯音频 WebM。",
+      },
+      "zh-TW": {
+        name: "影片音訊擷取器",
+        description:
+          "在瀏覽器中從 MP4 或 WebM 影片擷取音訊。選擇音軌並試聽後，可將 MP4 的 AAC 音軌下載為 M4A，或下載純音訊 WebM，無需重新編碼。",
+      },
+    },
+  },
+  {
     slug: "video-frame-extractor",
     category: "image",
     icon: "film",
@@ -77588,6 +77724,142 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  "video-audio-extractor": {
+    slug: "video-audio-extractor",
+    category: "misc",
+    icon: "film",
+    tags: [
+      "video",
+      "audio",
+      "extract",
+      "sound",
+      "track",
+      "mp4",
+      "webm",
+      "aac",
+      "m4a",
+      "opus",
+      "vorbis",
+      "remux",
+    ],
+    locales: {
+      ar: {
+        name: "استخراج الصوت من الفيديو",
+        description:
+          "استخرج الصوت من MP4 أو WebM في متصفحك. اختر مسارًا صوتيًا واستمع إليه، ثم نزّل صوت AAC من MP4 بصيغة M4A أو صوت WebM دون إعادة ترميز.",
+      },
+      de: {
+        name: "Audio aus Video extrahieren",
+        description:
+          "Extrahiere Audio aus MP4 oder WebM im Browser. Höre die Audiospur vorab an und lade AAC aus MP4 als M4A oder WebM-Audio ohne erneute Codierung herunter.",
+      },
+      en: {
+        name: "Video Audio Extractor",
+        description:
+          "Extract audio from MP4 or WebM in your browser. Choose and preview an audio track, then download MP4 AAC as M4A or WebM audio without re-encoding.",
+      },
+      es: {
+        name: "Extractor de audio de video",
+        description:
+          "Extrae audio de MP4 o WebM en tu navegador. Elige y escucha una pista, y descarga el audio AAC de un MP4 en M4A o el audio de un WebM sin recodificar.",
+      },
+      fr: {
+        name: "Extracteur audio de vidéos",
+        description:
+          "Extrayez l’audio d’une vidéo MP4 ou WebM dans votre navigateur. Écoutez la piste choisie, puis téléchargez-la en M4A ou WebM sans réencodage.",
+      },
+      he: {
+        name: "חילוץ שמע מווידאו",
+        description:
+          "חלצו שמע מ-MP4 או WebM בדפדפן. בחרו רצועת שמע והאזינו לה, ואז הורידו שמע AAC מ-MP4 כ-M4A או שמע מ-WebM ללא קידוד מחדש.",
+      },
+      hi: {
+        name: "वीडियो ऑडियो एक्सट्रैक्टर",
+        description:
+          "ब्राउज़र में MP4 या WebM से ऑडियो निकालें। ट्रैक चुनकर सुनें, फिर MP4 के AAC को M4A में या WebM के ऑडियो को बिना दोबारा एन्कोड किए डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Audio dari Video",
+        description:
+          "Ekstrak audio MP4 atau WebM di browser. Pilih dan dengarkan trek, lalu unduh AAC dari MP4 sebagai M4A atau audio WebM tanpa pengodean ulang.",
+      },
+      it: {
+        name: "Estrai audio da video",
+        description:
+          "Estrai l’audio da MP4 o WebM nel browser. Scegli una traccia, ascolta l’anteprima e scarica l’audio AAC da MP4 in M4A oppure l’audio da WebM senza ricodifica.",
+      },
+      ja: {
+        name: "動画から音声を抽出",
+        description:
+          "MP4 や WebM から音声を抽出。ブラウザーで音声トラックを選んで試聴し、再エンコードせずに MP4 の AAC 音声は M4A、WebM の音声は音声のみの WebM として保存できます。",
+      },
+      ko: {
+        name: "동영상 오디오 추출기",
+        description:
+          "브라우저에서 MP4 또는 WebM 동영상의 오디오를 추출하세요. 원하는 오디오 트랙을 골라 미리 듣고, 재인코딩 없이 MP4의 AAC 트랙은 M4A로, WebM의 오디오는 WebM으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Audio daripada Video",
+        description:
+          "Ekstrak audio MP4 atau WebM dalam pelayar. Pilih dan dengar trek, kemudian muat turun AAC daripada MP4 sebagai M4A atau audio WebM tanpa pengekodan semula.",
+      },
+      nl: {
+        name: "Audio uit video halen",
+        description:
+          "Haal audio uit MP4 of WebM in je browser. Kies een audiospoor, luister het terug en download AAC als M4A of WebM-audio zonder opnieuw te coderen.",
+      },
+      no: {
+        name: "Hent ut lyd fra video",
+        description:
+          "Hent ut lyd fra MP4 eller WebM i nettleseren. Velg og lytt til et lydspor, og last ned AAC som M4A eller WebM-lyd uten ny koding.",
+      },
+      pl: {
+        name: "Wyodrębnianie audio z wideo",
+        description:
+          "Wyodrębnij audio z MP4 lub WebM w przeglądarce. Wybierz i odsłuchaj ścieżkę, a potem pobierz AAC jako M4A lub audio WebM bez ponownego kodowania.",
+      },
+      pt: {
+        name: "Extrator de áudio de vídeo",
+        description:
+          "Extraia áudio de MP4 ou WebM no navegador. Escolha e ouça a faixa antes de baixar o AAC do MP4 em M4A ou o áudio do WebM, sem recodificar.",
+      },
+      ru: {
+        name: "Извлечение звука из видео",
+        description:
+          "Извлекайте звук из MP4 и WebM в браузере. Выберите и прослушайте аудиодорожку, затем скачайте AAC в M4A или звук в WebM без перекодирования.",
+      },
+      sv: {
+        name: "Extrahera ljud från video",
+        description:
+          "Extrahera ljud från MP4 eller WebM i webbläsaren. Välj och lyssna på ett ljudspår och ladda ner AAC som M4A eller WebM-ljud utan omkodning.",
+      },
+      th: {
+        name: "เครื่องมือแยกเสียงจากวิดีโอ",
+        description:
+          "แยกเสียงจาก MP4 หรือ WebM ในเบราว์เซอร์ เลือกแทร็กและฟังก่อนดาวน์โหลด AAC จาก MP4 เป็น M4A หรือดาวน์โหลดเสียง WebM โดยไม่เข้ารหัสใหม่",
+      },
+      tr: {
+        name: "Videodan Ses Çıkarma",
+        description:
+          "Tarayıcıda MP4 veya WebM videodan ses çıkarın. Ses izini seçip dinleyin, ardından MP4'teki AAC sesi M4A olarak veya WebM sesini yeniden kodlamadan indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất âm thanh từ video",
+        description:
+          "Trích xuất âm thanh từ MP4 hoặc WebM ngay trong trình duyệt. Chọn luồng, nghe thử rồi tải AAC từ MP4 dưới dạng M4A hoặc tải âm thanh WebM mà không mã hóa lại.",
+      },
+      "zh-CN": {
+        name: "视频音频提取器",
+        description:
+          "在浏览器中从 MP4 或 WebM 视频提取音频。选择音轨并预听，再将 MP4 中的 AAC 无需重新编码保存为 M4A，或导出纯音频 WebM。",
+      },
+      "zh-TW": {
+        name: "影片音訊擷取器",
+        description:
+          "在瀏覽器中從 MP4 或 WebM 影片擷取音訊。選擇音軌並試聽後，可將 MP4 的 AAC 音軌下載為 M4A，或下載純音訊 WebM，無需重新編碼。",
       },
     },
   },

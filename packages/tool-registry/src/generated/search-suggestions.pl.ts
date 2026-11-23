@@ -1498,6 +1498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "misc",
+    name: "Wyodrębnianie audio z wideo",
+    slug: "video-audio-extractor",
+  },
+  {
     category: "image",
     name: "Wyodrębnianie klatek wideo",
     slug: "video-frame-extractor",

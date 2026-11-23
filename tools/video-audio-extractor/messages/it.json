@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Scegli un MP4 o un WebM",
+  "changeVideo": "Cambia video",
+  "dropHint": "Oppure trascina qui un video",
+  "privacy": "Il video rimane su questo dispositivo.",
+  "reading": "Lettura delle tracce audio…",
+  "audioTrack": "Traccia audio",
+  "trackNumber": "Traccia {number}",
+  "preview": "Anteprima audio",
+  "preparing": "Preparazione della traccia selezionata…",
+  "download": "Scarica {format}",
+  "unsupportedTrack": "Non è possibile esportare questo codec audio. Prova un’altra traccia.",
+  "noAudio": "Questo video non contiene tracce audio.",
+  "readError": "Impossibile aprire il video. Scegli un file MP4 o WebM valido.",
+  "exportError": "Impossibile estrarre questa traccia audio.",
+  "previewError": "Il browser non riesce a riprodurre l’anteprima. Puoi comunque scaricare l’audio."
+}
