@@ -34,7 +34,7 @@ test("keeps a decoder for navigation, correlates requests and releases it on clo
     id: 2,
     type: "render",
     index: 1,
-    jpeg: undefined,
+    output: undefined,
     transform: undefined,
   })
   worker.onmessage!({
@@ -124,7 +124,7 @@ test("sends explicit JPEG options for both initial and selected images", async (
     id: 2,
     type: "render",
     index: 2,
-    jpeg,
+    output: jpeg,
     transform: undefined,
   })
   worker.onmessage!({ data: { id: 2, type: "rendered", preview: {} } })
@@ -151,7 +151,7 @@ test("inspects source pages before rendering and passes thumbnail transforms", a
     id: 2,
     type: "render",
     index: 2,
-    jpeg: undefined,
+    output: undefined,
     transform,
   })
   worker.onmessage!({ data: { id: 2, type: "rendered", preview: {} } })

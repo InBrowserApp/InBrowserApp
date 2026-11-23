@@ -4,7 +4,7 @@ export function imageFilename(
   name: string,
   info: ImageInfo,
   index: number,
-  format: "png" | "jpg"
+  format: "png" | "jpg" | "webp"
 ) {
   const extension = name.lastIndexOf(".")
   const basename = (extension < 0 ? name : name.slice(0, extension))

@@ -2,6 +2,8 @@
 
 Open a local image, choose JPG quality and a background color, inspect the actual compressed preview and download the selected image. The output keeps its full pixel dimensions and applied orientation. Zoom and preview backgrounds do not resize or recolor the saved image.
 
+To convert multiple images at once and download a ZIP, use the [Batch Image Converter](/tools/batch-image-converter/).
+
 ## Formats and image selection
 
 Read JPEG, PNG, GIF, BMP, WebP, AVIF still images, TIFF, ICO, HEIC/HEIF still images and collections, JPEG XL, JP2 and JPEG 2000 codestreams (J2K). The file content is checked rather than trusting its extension. Support depends on the encoding inside the file. Use the separate SVG converters for vector SVG images.

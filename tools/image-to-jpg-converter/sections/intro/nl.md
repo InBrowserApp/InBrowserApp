@@ -2,6 +2,8 @@
 
 Open een lokale afbeelding, kies de JPG-kwaliteit en een achtergrondkleur, bekijk het voorbeeld van de daadwerkelijke gecomprimeerde uitvoer en download de geselecteerde afbeelding. De uitvoer behoudt de volledige pixelafmetingen en toegepaste oriëntatie. Zoom en voorbeeldachtergronden veranderen de afmetingen of kleuren van de opgeslagen afbeelding niet.
 
+Wil je meerdere afbeeldingen tegelijk converteren en als ZIP downloaden? Gebruik de tool om [afbeeldingen in bulk te converteren](/nl/tools/batch-image-converter/).
+
 ## Formaten en afbeeldingen selecteren
 
 Lees JPEG, PNG, GIF, BMP, WebP, stilstaande AVIF-afbeeldingen, TIFF, ICO, stilstaande HEIC/HEIF-afbeeldingen en verzamelingen, JPEG XL, JP2 en JPEG 2000-codestreams (J2K). De bestandsinhoud wordt gecontroleerd in plaats van op de extensie te vertrouwen. De ondersteuning hangt af van de codering in het bestand. Gebruik voor SVG-vectorafbeeldingen de afzonderlijke SVG-converters.

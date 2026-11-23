@@ -143,6 +143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "basic-auth-generator",
   },
   {
+    category: "image",
+    name: "Konvertera bilder i grupp – JPG, PNG och WebP",
+    slug: "batch-image-converter",
+  },
+  {
     category: "crypto",
     name: "Bcrypt-generator för lösenordshashar",
     slug: "bcrypt-hash-password",

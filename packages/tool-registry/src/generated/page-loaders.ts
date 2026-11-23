@@ -36,6 +36,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "base85-encoder": () => import("@tool/base85-encoder/page"),
   "basic-auth-decoder": () => import("@tool/basic-auth-decoder/page"),
   "basic-auth-generator": () => import("@tool/basic-auth-generator/page"),
+  "batch-image-converter": () => import("@tool/batch-image-converter/page"),
   "bcrypt-hash-password": () => import("@tool/bcrypt-hash-password/page"),
   "bcrypt-hash-password-verifier": () =>
     import("@tool/bcrypt-hash-password-verifier/page"),

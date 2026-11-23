@@ -2,6 +2,8 @@
 
 Åpne et lokalt bilde, velg JPG-kvalitet og bakgrunnsfarge, undersøk forhåndsvisningen av det faktiske komprimerte resultatet og last ned det valgte bildet. Resultatet beholder de fulle pikselmålene og den brukte bilderetningen. Zoom og bakgrunner i forhåndsvisningen endrer ikke størrelsen eller fargene på det lagrede bildet.
 
+Vil du konvertere flere bilder samtidig og laste dem ned som en ZIP-fil? Bruk verktøyet for å [konvertere flere bilder](/no/tools/batch-image-converter/).
+
 ## Formater og bildevalg
 
 Les JPEG, PNG, GIF, BMP, WebP, AVIF-stillbilder, TIFF, ICO, stillbilder og samlinger i HEIC/HEIF, JPEG XL, JP2 og JPEG 2000-kodestrømmer (J2K). Verktøyet kontrollerer filinnholdet fremfor å stole på filtypen i navnet. Støtten avhenger av kodingen inne i filen. Bruk de separate SVG-konvertererne for SVG-vektorbilder.

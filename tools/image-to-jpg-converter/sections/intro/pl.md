@@ -2,6 +2,8 @@
 
 Otwórz lokalny obraz, wybierz jakość JPG i kolor tła, sprawdź podgląd rzeczywistego wyniku kompresji i pobierz wybrany obraz. Wynik zachowuje pełne wymiary w pikselach i zastosowaną orientację. Powiększenie i tło podglądu nie zmieniają rozmiaru ani kolorów zapisanego obrazu.
 
+Aby przekonwertować kilka obrazów naraz i pobrać je w archiwum ZIP, użyj [wsadowego konwertera obrazów](/pl/tools/batch-image-converter/).
+
 ## Formaty i wybór obrazu
 
 Odczytuj JPEG, PNG, GIF, BMP, WebP, nieruchome obrazy AVIF, TIFF, ICO, nieruchome obrazy i kolekcje HEIC/HEIF, JPEG XL, JP2 oraz strumienie kodowe JPEG 2000 (J2K). Narzędzie sprawdza zawartość pliku zamiast polegać na jego rozszerzeniu. Obsługa zależy od kodowania wewnątrz pliku. Do wektorowych obrazów SVG użyj osobnych konwerterów SVG.

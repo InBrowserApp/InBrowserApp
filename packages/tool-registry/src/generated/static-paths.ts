@@ -2578,6 +2578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "batch-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "de",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "en",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "es",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "he",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "id",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "it",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "no",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "th",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "batch-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "bcrypt-hash-password",
     language: "ar",
   },

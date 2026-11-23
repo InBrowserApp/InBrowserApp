@@ -322,3 +322,19 @@ test("retains later TIFF pages when one strip offset points beyond the file", as
   expect([third.width, third.height]).toEqual([100, 100])
   expect(pixel(third.bytes, 10, 10)).toEqual([232, 92, 40])
 })
+
+test("encodes a still WebP with alpha, dimensions and the requested quality", async () => {
+  await inspectImage(fixture("color-chart.png"))
+  expect(() => renderImage(0, { format: "webp", quality: 0 })).toThrow(
+    "invalid"
+  )
+  const webp = renderImage(0, { format: "webp", quality: 85 })
+  expect(webp.mime).toBe("image/webp")
+  expect(new TextDecoder().decode(webp.bytes.slice(8, 12))).toBe("WEBP")
+  ImageMagick.read(webp.bytes, (image) => {
+    expect([image.width, image.height]).toEqual([320, 200])
+    image.getPixels((pixels) => expect(pixels.getPixel(200, 150)[3]).toBe(128))
+  })
+  const lowQuality = renderImage(0, { format: "webp", quality: 20 })
+  expect(lowQuality.bytes).not.toEqual(webp.bytes)
+})

@@ -20,8 +20,15 @@ import type {
   Preview,
   SourceKind,
   JpegOptions,
+  ImageOutputOptions,
   ImageTransform,
 } from "../types"
+
+const outputFormats = {
+  "image/png": MagickFormat.Png,
+  "image/jpeg": MagickFormat.Jpeg,
+  "image/webp": MagickFormat.WebP,
+}
 
 let source: Uint8Array
 let kind: SourceKind
@@ -36,7 +43,7 @@ function initialize() {
       <policy domain="filter" rights="none" pattern="*"/>
       <policy domain="coder" rights="none" pattern="*"/>
       <policy domain="coder" rights="read" pattern="{JPEG,PNG,GIF,BMP,BMP2,BMP3,WEBP,AVIF,HEIC,HEIF,JXL,TIFF,ICO,JP2,J2K,JPC}"/>
-      <policy domain="coder" rights="read|write" pattern="{PNG,JPEG}"/>
+      <policy domain="coder" rights="read|write" pattern="{PNG,JPEG,WEBP}"/>
       <policy domain="path" rights="none" pattern="*"/>
       <policy domain="path" rights="read|write" pattern="/tmp/magick-*"/>
     </policymap>`
@@ -92,9 +99,11 @@ export async function openImage(file: File, jpeg?: JpegOptions) {
 
 export function renderImage(
   index: number,
-  jpeg?: JpegOptions,
+  output?: ImageOutputOptions,
   transform?: ImageTransform
 ): Preview {
+  const jpeg = output && "background" in output ? output : undefined
+  const mime = jpeg ? "image/jpeg" : output ? "image/webp" : "image/png"
   const rotation = transform?.rotation ?? 0
   const size = transform?.maxDimension
   if (
@@ -103,11 +112,15 @@ export function renderImage(
   )
     throw new Error("invalid")
   if (
+    output &&
+    (!Number.isInteger(output.quality) ||
+      output.quality < 1 ||
+      output.quality > 100)
+  )
+    throw new Error("invalid")
+  if (
     jpeg &&
-    (!Number.isInteger(jpeg.quality) ||
-      jpeg.quality < 1 ||
-      jpeg.quality > 100 ||
-      typeof jpeg.background !== "string" ||
+    (typeof jpeg.background !== "string" ||
       jpeg.background.length !== 7 ||
       !/^#[0-9a-f]{6}$/i.test(jpeg.background))
   )
@@ -142,25 +155,22 @@ export function renderImage(
       image.alpha(AlphaAction.Remove)
       // Keep grayscale pixels in RGB so the JPEG matches its sRGB profile.
       image.settings.colorType = ColorType.TrueColor
-      image.quality = jpeg.quality
     }
+    if (output) image.quality = output.quality
     // Q8 decoding already reduces source precision; encode the same 8-bit pixels.
     image.depth = 8
-    return image.write(
-      jpeg ? MagickFormat.Jpeg : MagickFormat.Png,
-      (bytes) => ({
-        mime: jpeg ? "image/jpeg" : "image/png",
-        bytes: new Uint8Array(bytes),
-        width: image.width,
-        height: image.height,
-        fullWidth,
-        fullHeight,
-        delay: image.animationTicksPerSecond
-          ? (image.animationDelay * 1000) / image.animationTicksPerSecond
-          : 0,
-        depth,
-        profile,
-      })
-    )
+    return image.write(outputFormats[mime], (bytes) => ({
+      mime,
+      bytes: new Uint8Array(bytes),
+      width: image.width,
+      height: image.height,
+      fullWidth,
+      fullHeight,
+      delay: image.animationTicksPerSecond
+        ? (image.animationDelay * 1000) / image.animationTicksPerSecond
+        : 0,
+      depth,
+      profile,
+    }))
   })
 }

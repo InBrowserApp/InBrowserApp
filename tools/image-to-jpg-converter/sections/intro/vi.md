@@ -2,6 +2,8 @@
 
 Mở ảnh trên thiết bị, chọn chất lượng JPG và màu nền, kiểm tra bản xem trước của kết quả nén thực tế rồi tải ảnh đã chọn xuống. Đầu ra giữ nguyên kích thước pixel đầy đủ và hướng ảnh đã áp dụng. Thu phóng và nền xem trước không làm thay đổi kích thước hoặc màu sắc của ảnh đã lưu.
 
+Để chuyển đổi nhiều ảnh cùng lúc và tải về dưới dạng ZIP, hãy dùng [công cụ chuyển đổi ảnh hàng loạt](/vi/tools/batch-image-converter/).
+
 ## Định dạng và lựa chọn ảnh
 
 Đọc JPEG, PNG, GIF, BMP, WebP, ảnh tĩnh AVIF, TIFF, ICO, ảnh tĩnh và bộ sưu tập HEIC/HEIF, JPEG XL, JP2 và luồng mã JPEG 2000 (J2K). Nội dung tệp được kiểm tra thay vì dựa vào phần mở rộng. Khả năng hỗ trợ phụ thuộc vào cách mã hóa bên trong tệp. Với ảnh vector SVG, hãy dùng các công cụ chuyển đổi SVG riêng.

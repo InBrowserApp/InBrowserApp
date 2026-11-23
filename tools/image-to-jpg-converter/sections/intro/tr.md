@@ -2,6 +2,8 @@
 
 Yerel bir görsel açın, JPG kalitesini ve bir arka plan rengi seçin, gerçek sıkıştırılmış çıktının önizlemesini inceleyin ve seçilen görseli indirin. Çıktı, tam piksel boyutlarını ve uygulanan yön bilgisini korur. Yakınlaştırma ve önizleme arka planları kaydedilen görselin boyutunu veya renklerini değiştirmez.
 
+Birden fazla görseli aynı anda dönüştürüp ZIP olarak indirmek için [toplu görsel dönüştürücüyü](/tr/tools/batch-image-converter/) kullanın.
+
 ## Biçimler ve görsel seçimi
 
 JPEG, PNG, GIF, BMP, WebP, AVIF durağan görsellerini, TIFF, ICO, HEIC/HEIF durağan görsellerini ve koleksiyonlarını, JPEG XL, JP2 ve JPEG 2000 kod akışlarını (J2K) açın. Uzantıya güvenmek yerine dosya içeriği kontrol edilir. Destek, dosyanın içindeki kodlamaya bağlıdır. Vektör SVG görselleri için ayrı SVG dönüştürücülerini kullanın.

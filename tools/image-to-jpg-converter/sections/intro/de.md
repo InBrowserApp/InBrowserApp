@@ -2,6 +2,8 @@
 
 Öffnen Sie ein lokales Bild, wählen Sie JPG-Qualität und Hintergrundfarbe, prüfen Sie die Vorschau der tatsächlichen komprimierten Datei und laden Sie das ausgewählte Bild herunter. Die Ausgabe behält die vollständigen Pixelabmessungen und die angewandte Ausrichtung. Zoom und Vorschauhintergründe verändern weder die Größe noch die Farben des gespeicherten Bildes.
 
+Mit der [Stapelkonvertierung für Bilder](/de/tools/batch-image-converter/) können Sie mehrere Bilder gleichzeitig konvertieren und als ZIP herunterladen.
+
 ## Formate und Bildauswahl
 
 Unterstützt werden JPEG, PNG, GIF, BMP, WebP, AVIF-Standbilder, TIFF, ICO, HEIC/HEIF-Standbilder und -Sammlungen, JPEG XL, JP2 und JPEG-2000-Codestreams (J2K). Der Dateiinhalt wird geprüft, statt sich auf die Dateiendung zu verlassen. Die Unterstützung hängt von der Kodierung innerhalb der Datei ab. Verwenden Sie für SVG-Vektorbilder die separaten SVG-Konverter.

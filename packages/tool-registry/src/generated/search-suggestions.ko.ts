@@ -143,6 +143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "basic-auth-generator",
   },
   {
+    category: "image",
+    name: "이미지 일괄 변환기 – JPG, PNG 및 WebP",
+    slug: "batch-image-converter",
+  },
+  {
     category: "crypto",
     name: "Bcrypt 비밀번호 해시 생성기",
     slug: "bcrypt-hash-password",

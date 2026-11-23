@@ -143,6 +143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "basic-auth-generator",
   },
   {
+    category: "image",
+    name: "Chuyển đổi ảnh hàng loạt – JPG, PNG và WebP",
+    slug: "batch-image-converter",
+  },
+  {
     category: "crypto",
     name: "Trình tạo hash mật khẩu bcrypt",
     slug: "bcrypt-hash-password",
