@@ -23,6 +23,17 @@ function createWorkerUrl(languages: readonly Language[]) {
     const modelUrls = ${JSON.stringify(routes)}
     const fetchAsset = self.fetch.bind(self)
     self.fetch = (url, options) => fetchAsset(modelUrls[url] ?? url, options)
+
+    // createWorker only exposes its worker after successful initialization.
+    const send = self.postMessage.bind(self)
+    self.postMessage = (message) => {
+      send(message)
+      if (message.status === "reject") {
+        self.postMessage = () => {}
+        self.close()
+      }
+    }
+
     importScripts(${JSON.stringify(new URL(upstreamWorker, location.href).href)})
   `
   return URL.createObjectURL(new Blob([script], { type: "text/javascript" }))
