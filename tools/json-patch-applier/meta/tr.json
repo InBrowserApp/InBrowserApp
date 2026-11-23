@@ -1,0 +1,4 @@
+{
+  "name": "JSON Patch Uygulama Aracı",
+  "description": "RFC 6902 biçimindeki JSON Patch’i çevrimiçi uygulayın. Güncellenen JSON’u önizleyin ve hangi işlemin neden başarısız olduğunu görün. Verileriniz tarayıcınızda kalır."
+}

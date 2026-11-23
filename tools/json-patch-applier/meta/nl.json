@@ -1,0 +1,4 @@
+{
+  "name": "JSON Patch toepassen",
+  "description": "Pas online een RFC 6902 JSON Patch toe. Bekijk de bijgewerkte JSON en zie welke bewerking is mislukt en waarom. Je gegevens blijven in je browser."
+}

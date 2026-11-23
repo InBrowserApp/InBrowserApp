@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ áp dụng JSON Patch",
+  "description": "Áp dụng JSON Patch theo RFC 6902 trực tuyến. Xem trước JSON đã cập nhật và biết thao tác nào thất bại, vì sao. Dữ liệu luôn nằm trong trình duyệt của bạn."
+}

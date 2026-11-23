@@ -709,6 +709,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON Patch 적용 도구",
+    slug: "json-patch-applier",
+  },
+  {
+    category: "json",
     name: "JSON 스키마 생성기",
     slug: "json-schema-generator",
   },

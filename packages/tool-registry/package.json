@@ -148,6 +148,7 @@
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",
     "@tool/json-formatter": "workspace:*",
+    "@tool/json-patch-applier": "workspace:*",
     "@tool/json-schema-generator": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
     "@tool/json-to-csv-converter": "workspace:*",

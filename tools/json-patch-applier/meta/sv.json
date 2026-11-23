@@ -1,0 +1,4 @@
+{
+  "name": "Tillämpa JSON Patch",
+  "description": "Tillämpa en RFC 6902 JSON Patch online. Förhandsgranska uppdaterad JSON och se vilken operation som misslyckades och varför. Dina data stannar i webbläsaren."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Applicatore di JSON Patch",
+  "description": "Applica online una JSON Patch RFC 6902, visualizza il JSON aggiornato e scopri quale operazione non è riuscita e perché. I dati restano nel browser."
+}
