@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader } from "@workspace/ui/components/ui/card"
 import { platformName, publicLanguage, type Variant } from "./core/lookup"
 import { renderPage } from "./core/markdown"
 import { sourceLink } from "./core/source"
-import type { Messages } from "./client"
+import type { Messages } from "./messages"
 
 export function Result({
   page,

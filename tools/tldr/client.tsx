@@ -8,6 +8,7 @@ import {
   normalizeQuery,
   platformName,
   publicLanguage,
+  publicPlatform,
   readLookup,
   search,
   selectVariant,
@@ -16,9 +17,7 @@ import {
 } from "./core/lookup"
 import { fetchCatalog, fetchPage } from "./core/source"
 import { Result } from "./result"
-import type english from "./messages/en.json"
-
-export type Messages = typeof english
+import type { Messages } from "./messages"
 
 const initial = { q: "", os: "", lang: "" }
 const selectClass =
@@ -256,7 +255,7 @@ export default function TldrClient({
               href={lookupHref(".", {
                 ...lookup,
                 q: command[0],
-                os: os === "osx" ? "macos" : os,
+                os: publicPlatform(os),
               })}
               className="underline underline-offset-4"
             >
@@ -278,7 +277,7 @@ export default function TldrClient({
               window.location.origin + window.location.pathname,
               {
                 q: variant.q,
-                os: variant.os === "osx" ? "macos" : variant.os,
+                os: publicPlatform(variant.os),
                 lang: publicLanguage(variant.locale),
               }
             )}

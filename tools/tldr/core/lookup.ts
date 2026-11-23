@@ -34,6 +34,10 @@ export function publicLanguage(locale: string) {
   return locale === "zh" ? "zh-CN" : locale.replace("_", "-")
 }
 
+export function publicPlatform(os: string) {
+  return os === "osx" ? "macos" : os
+}
+
 function preferredLocale(language: string) {
   const locale = language.toLowerCase()
   return locale === "pt" ? "pt-br" : locale
@@ -69,7 +73,7 @@ export function catalogOptions(commands: readonly Command[]) {
   const languages = new Set<string>()
   for (const [, platforms] of commands) {
     for (const [platform, locales] of Object.entries(platforms)) {
-      os.add(platform === "osx" ? "macos" : platform)
+      os.add(publicPlatform(platform))
       locales.forEach((locale) => languages.add(publicLanguage(locale)))
     }
   }
@@ -79,7 +83,7 @@ export function catalogOptions(commands: readonly Command[]) {
 export function readLookup(parameters: URLSearchParams): Lookup {
   const os = parameters.get("os")?.trim().toLowerCase() ?? ""
   const lang = parameters.get("lang")?.trim().replace("_", "-") ?? ""
-  return { q: parameters.get("q") ?? "", os: os === "osx" ? "macos" : os, lang }
+  return { q: parameters.get("q") ?? "", os: publicPlatform(os), lang }
 }
 
 export function lookupHref(pathname: string, lookup: Lookup) {
