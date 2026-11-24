@@ -50,6 +50,7 @@ import {
   Text,
   Video,
   Wrench,
+  Workflow,
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
@@ -101,6 +102,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   text: Text,
   video: Video,
   wrench: Wrench,
+  workflow: Workflow,
 }
 
 type ToolIconProps = LucideProps & {

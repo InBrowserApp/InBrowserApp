@@ -1,0 +1,20 @@
+{
+  "open": "開啟 BPMN 檔案",
+  "replace": "更換 BPMN 檔案",
+  "clear": "關閉圖表",
+  "reader": "BPMN 檢視器",
+  "privacy": "檔案會留在您的裝置上。",
+  "focus": "開啟全螢幕檢視",
+  "exitFocus": "結束全螢幕檢視",
+  "releaseFile": "放開以開啟 BPMN 檔案",
+  "drop": "將 BPMN 檔案拖放到此處",
+  "formats": "開啟 .bpmn 或 .xml 檔案。",
+  "example": "試用範例",
+  "diagram": "BPMN 圖表",
+  "loading": "正在開啟圖表…",
+  "invalid": "無法開啟此圖表。請選擇有效的 BPMN 2.0 XML 檔案。",
+  "noLayout": "此 BPMN 檔案沒有圖表佈局。請從建模工具匯出包含佈局資料的檔案後重新開啟。",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "fit": "調整圖表至適合視圖"
+}

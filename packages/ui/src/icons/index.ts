@@ -115,6 +115,7 @@ export {
   TriangleAlert,
   Video,
   Wrench,
+  Workflow,
   Upload,
   Undo2,
   Unlink2,

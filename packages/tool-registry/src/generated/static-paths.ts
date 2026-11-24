@@ -3682,6 +3682,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpmn-viewer",
+    language: "ar",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "de",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "en",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "es",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "fr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "he",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "hi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "id",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "it",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ja",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ko",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ms",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "nl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "no",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pt",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ru",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "sv",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "th",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "tr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "vi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "business-days-calculator",
     language: "ar",
   },
