@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC एग्रीगेट रिपोर्ट व्यूअर",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "अक्षांश और देशांतर का DMS कन्वर्टर",
     slug: "dms-coordinate-converter",

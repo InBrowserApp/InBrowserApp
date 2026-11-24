@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Trình xem báo cáo tổng hợp DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
     slug: "dms-coordinate-converter",

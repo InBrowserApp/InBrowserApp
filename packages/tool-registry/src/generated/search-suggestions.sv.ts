@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Visare för aggregerade DMARC-rapporter",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
     slug: "dms-coordinate-converter",

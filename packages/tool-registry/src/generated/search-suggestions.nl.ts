@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Viewer voor geaggregeerde DMARC-rapporten",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Coördinaten omrekenen tussen decimale graden en DMS",
     slug: "dms-coordinate-converter",

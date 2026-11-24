@@ -1,0 +1,4 @@
+{
+  "name": "Betrachter für DMARC-Sammelberichte",
+  "description": "Lies DMARC-Sammelberichte im XML-Format direkt im Browser. Prüfe Absender-IP-Adressen, Nachrichtenanzahl, SPF- und DKIM-Domainabgleich sowie angewandte Maßnahmen."
+}

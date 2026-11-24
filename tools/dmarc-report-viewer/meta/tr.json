@@ -1,0 +1,4 @@
+{
+  "name": "DMARC Toplu Rapor Görüntüleyicisi",
+  "description": "DMARC toplu XML raporlarını tarayıcınızda okuyun. Kaynak IP adreslerini, ileti sayılarını, SPF ve DKIM uyumunu ve uygulanan işlemleri inceleyin."
+}

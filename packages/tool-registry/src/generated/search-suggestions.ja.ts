@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC集計レポートビューアー",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "緯度・経度の度分秒（DMS）変換",
     slug: "dms-coordinate-converter",

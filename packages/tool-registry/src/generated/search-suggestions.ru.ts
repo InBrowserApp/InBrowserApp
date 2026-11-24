@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Просмотр агрегированных отчётов DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Конвертер широты и долготы в формат DMS",
     slug: "dms-coordinate-converter",

@@ -112,6 +112,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "device-information": () => import("@tool/device-information/page"),
   "dicom-viewer": () => import("@tool/dicom-viewer/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
+  "dmarc-report-viewer": () => import("@tool/dmarc-report-viewer/page"),
   "dms-coordinate-converter": () =>
     import("@tool/dms-coordinate-converter/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),

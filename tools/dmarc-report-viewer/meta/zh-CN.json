@@ -1,0 +1,4 @@
+{
+  "name": "DMARC 汇总报告查看器",
+  "description": "在浏览器中读取 DMARC 汇总 XML 报告，查看发送方 IP、邮件数量、SPF 和 DKIM 对齐结果及实际处理结果。"
+}

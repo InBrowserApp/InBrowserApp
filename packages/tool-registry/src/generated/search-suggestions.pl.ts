@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Przeglądarka raportów zbiorczych DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Konwerter szerokości i długości geograficznej na DMS",
     slug: "dms-coordinate-converter",

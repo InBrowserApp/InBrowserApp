@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem báo cáo tổng hợp DMARC",
+  "description": "Đọc báo cáo tổng hợp DMARC dạng XML ngay trong trình duyệt. Xem IP gửi, số thư, kết quả đối chiếu miền SPF và DKIM, cùng cách máy chủ nhận đã xử lý thư."
+}

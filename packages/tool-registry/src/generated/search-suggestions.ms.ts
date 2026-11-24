@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Pemapar Laporan Agregat DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Penukar Latitud dan Longitud ↔ DMS",
     slug: "dms-coordinate-converter",
