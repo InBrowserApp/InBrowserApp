@@ -1,0 +1,4 @@
+{
+  "name": "DICOM Viewer",
+  "description": "Open local DICOM (.dcm, .dicom) images in your browser. Browse CT and MRI slices, adjust window width and level, and inspect DICOM tags without uploading files."
+}

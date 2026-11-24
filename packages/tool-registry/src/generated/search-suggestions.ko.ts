@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM 뷰어",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu 뷰어",
     slug: "djvu-viewer",
@@ -603,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 미리보기",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 네트워크 분석기",
     slug: "har-analyzer",
@@ -611,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "HAR 민감 정보 제거 도구",
     slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "16진수 편집기",
+    slug: "hex-editor",
   },
   {
     category: "crypto",

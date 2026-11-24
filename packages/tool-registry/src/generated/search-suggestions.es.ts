@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Visor DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Visor de DjVu",
     slug: "djvu-viewer",
@@ -603,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Vista previa de Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Analizador de red HAR",
     slug: "har-analyzer",
@@ -611,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Limpiador de archivos HAR",
     slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Editor hexadecimal",
+    slug: "hex-editor",
   },
   {
     category: "crypto",

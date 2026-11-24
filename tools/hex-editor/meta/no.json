@@ -1,0 +1,4 @@
+{
+  "name": "Hex-editor",
+  "description": "Vis og rediger binærfiler i heksadesimalt format og ASCII. Hopp til en byteposisjon, endre verdier og last ned en kopi. Filene blir i nettleseren."
+}

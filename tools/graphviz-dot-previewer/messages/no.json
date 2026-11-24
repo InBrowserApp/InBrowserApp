@@ -1,0 +1,16 @@
+{
+  "source": "DOT-kildekode",
+  "example": "Last inn eksempel",
+  "dependencies": "Avhengighetsgraf",
+  "network": "Urettet nettverk",
+  "clusters": "Graf med klynger",
+  "engine": "Layoutmotor",
+  "preview": "Forhåndsvisning av graf",
+  "empty": "Skriv inn DOT-kode for å forhåndsvise en graf.",
+  "loading": "Tegner grafen …",
+  "invalid": "Kunne ikke tegne DOT-grafen. Sjekk syntaksen og prøv igjen.",
+  "warnings": "Merknader om Graphviz-layouten",
+  "fit": "Tilpass til visningen",
+  "actualSize": "Faktisk størrelse",
+  "downloadSvg": "Last ned SVG"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Graphviz DOT 预览器",
+  "description": "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。"
+}

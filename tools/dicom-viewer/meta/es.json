@@ -1,0 +1,4 @@
+{
+  "name": "Visor DICOM",
+  "description": "Abre imágenes DICOM (.dcm, .dicom) en tu navegador. Recorre cortes de TC y RM, ajusta el ancho y el nivel de ventana y consulta etiquetas DICOM sin subir archivos."
+}

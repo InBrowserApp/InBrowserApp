@@ -1,0 +1,23 @@
+{
+  "openFile": "Datei öffnen",
+  "replaceFile": "Datei ersetzen",
+  "trySample": "Beispiel ausprobieren",
+  "dropFile": "Datei hier ablegen, um ihre Bytes anzusehen und zu bearbeiten.",
+  "download": "Kopie herunterladen",
+  "emptyFile": "Diese Datei enthält keine Bytes zur Anzeige.",
+  "readError": "Dieser Teil der Datei konnte nicht gelesen werden. Öffne die Datei erneut.",
+  "loading": "Bytes werden gelesen…",
+  "offset": "Offset",
+  "jumpOffset": "Zu Offset springen",
+  "go": "Los",
+  "offsetError": "Gib einen hexadezimalen Offset innerhalb der Datei ein.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte bei {offset}",
+  "editHint": "Wähle ein Byte aus und gib zwei Hex-Ziffern ein, um es zu überschreiben.",
+  "undo": "Rückgängig",
+  "redo": "Wiederholen",
+  "previousPage": "Vorherige Seite",
+  "nextPage": "Nächste Seite",
+  "page": "Seite {current} von {total}"
+}

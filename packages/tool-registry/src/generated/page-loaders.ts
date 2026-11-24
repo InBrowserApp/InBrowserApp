@@ -107,6 +107,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/data-uri-to-file-converter/page"),
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
+  "dicom-viewer": () => import("@tool/dicom-viewer/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
   "dms-coordinate-converter": () =>
     import("@tool/dms-coordinate-converter/page"),
@@ -152,8 +153,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
+  "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
   "har-sanitizer": () => import("@tool/har-sanitizer/page"),
+  "hex-editor": () => import("@tool/hex-editor/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),

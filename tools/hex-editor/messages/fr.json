@@ -1,0 +1,23 @@
+{
+  "openFile": "Ouvrir un fichier",
+  "replaceFile": "Remplacer le fichier",
+  "trySample": "Essayer un exemple",
+  "dropFile": "Déposez un fichier ici pour afficher et modifier ses octets.",
+  "download": "Télécharger une copie",
+  "emptyFile": "Ce fichier ne contient aucun octet à afficher.",
+  "readError": "Impossible de lire cette partie du fichier. Essayez de l’ouvrir à nouveau.",
+  "loading": "Lecture des octets…",
+  "offset": "Décalage",
+  "jumpOffset": "Aller à l’octet",
+  "go": "Aller",
+  "offsetError": "Saisissez un décalage hexadécimal qui correspond à un octet du fichier.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Octet au décalage {offset}",
+  "editHint": "Sélectionnez un octet et saisissez deux chiffres hexadécimaux pour le remplacer.",
+  "undo": "Annuler",
+  "redo": "Rétablir",
+  "previousPage": "Page précédente",
+  "nextPage": "Page suivante",
+  "page": "Page {current} sur {total}"
+}

@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "โปรแกรมดูภาพ DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "โปรแกรมดู DjVu",
     slug: "djvu-viewer",
@@ -603,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "เครื่องมือวิเคราะห์เครือข่าย HAR",
     slug: "har-analyzer",
@@ -611,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "เครื่องมือลบข้อมูลอ่อนไหวจากไฟล์ HAR",
     slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+    slug: "hex-editor",
   },
   {
     category: "crypto",

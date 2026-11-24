@@ -7638,6 +7638,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dicom-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "de",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "en",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "es",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "he",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "id",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "it",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "no",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "th",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "djvu-viewer",
     language: "ar",
   },
@@ -11042,6 +11134,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "graphviz-dot-previewer",
+    language: "ar",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "de",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "en",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "es",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "fr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "he",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "hi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "id",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "it",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ja",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ko",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ms",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "nl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "no",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pt",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ru",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "sv",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "th",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "tr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "vi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "har-analyzer",
     language: "ar",
   },
@@ -11223,6 +11407,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "har-sanitizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "hex-editor",
+    language: "ar",
+  },
+  {
+    slug: "hex-editor",
+    language: "de",
+  },
+  {
+    slug: "hex-editor",
+    language: "en",
+  },
+  {
+    slug: "hex-editor",
+    language: "es",
+  },
+  {
+    slug: "hex-editor",
+    language: "fr",
+  },
+  {
+    slug: "hex-editor",
+    language: "he",
+  },
+  {
+    slug: "hex-editor",
+    language: "hi",
+  },
+  {
+    slug: "hex-editor",
+    language: "id",
+  },
+  {
+    slug: "hex-editor",
+    language: "it",
+  },
+  {
+    slug: "hex-editor",
+    language: "ja",
+  },
+  {
+    slug: "hex-editor",
+    language: "ko",
+  },
+  {
+    slug: "hex-editor",
+    language: "ms",
+  },
+  {
+    slug: "hex-editor",
+    language: "nl",
+  },
+  {
+    slug: "hex-editor",
+    language: "no",
+  },
+  {
+    slug: "hex-editor",
+    language: "pl",
+  },
+  {
+    slug: "hex-editor",
+    language: "pt",
+  },
+  {
+    slug: "hex-editor",
+    language: "ru",
+  },
+  {
+    slug: "hex-editor",
+    language: "sv",
+  },
+  {
+    slug: "hex-editor",
+    language: "th",
+  },
+  {
+    slug: "hex-editor",
+    language: "tr",
+  },
+  {
+    slug: "hex-editor",
+    language: "vi",
+  },
+  {
+    slug: "hex-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "hex-editor",
     language: "zh-TW",
   },
   {

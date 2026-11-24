@@ -1,0 +1,4 @@
+{
+  "name": "Hex-Editor",
+  "description": "Binärdateien online in Hex und ASCII ansehen und bearbeiten. Zu einem Byte-Offset springen, Werte überschreiben und eine bearbeitete Kopie herunterladen. Dateien bleiben im Browser."
+}

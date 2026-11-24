@@ -1,0 +1,4 @@
+{
+  "name": "Éditeur hexadécimal",
+  "description": "Affichez et modifiez des fichiers binaires en ligne, en hexadécimal et en ASCII. Accédez à un octet, remplacez sa valeur et téléchargez une copie modifiée. Tout se passe dans votre navigateur."
+}

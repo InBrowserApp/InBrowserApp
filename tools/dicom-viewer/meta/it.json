@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore DICOM",
+  "description": "Apri immagini DICOM (.dcm, .dicom) nel browser. Scorri le sezioni di TC e RM, regola larghezza e livello della finestra e consulta i tag senza caricare file online."
+}

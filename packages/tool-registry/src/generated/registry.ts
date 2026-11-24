@@ -10620,6 +10620,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "dicom-viewer",
+    category: "image",
+    icon: "scan-line",
+    tags: [
+      "dicom",
+      "dcm",
+      "medical imaging",
+      "ct",
+      "mri",
+      "slice",
+      "window level",
+      "metadata",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض DICOM",
+        description:
+          "افتح صور DICOM بامتدادي .dcm و.dicom من جهازك في المتصفح. تصفح شرائح الأشعة المقطعية والرنين المغناطيسي، واضبط عرض النافذة ومستواها، وافحص الوسوم دون رفع الملفات.",
+      },
+      de: {
+        name: "DICOM-Betrachter",
+        description:
+          "Lokale DICOM-Bilder (.dcm, .dicom) im Browser öffnen. Durch CT- und MRT-Schichten blättern, Fensterbreite und Fensterlage ändern und DICOM-Tags ohne Upload prüfen.",
+      },
+      en: {
+        name: "DICOM Viewer",
+        description:
+          "Open local DICOM (.dcm, .dicom) images in your browser. Browse CT and MRI slices, adjust window width and level, and inspect DICOM tags without uploading files.",
+      },
+      es: {
+        name: "Visor DICOM",
+        description:
+          "Abre imágenes DICOM (.dcm, .dicom) en tu navegador. Recorre cortes de TC y RM, ajusta el ancho y el nivel de ventana y consulta etiquetas DICOM sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse DICOM",
+        description:
+          "Ouvrez vos images DICOM (.dcm, .dicom) dans votre navigateur. Parcourez les coupes de scanner et d’IRM, ajustez le fenêtrage et consultez les tags sans envoyer de fichiers.",
+      },
+      he: {
+        name: "מציג DICOM",
+        description:
+          "פתחו בדפדפן תמונות DICOM מקומיות בסיומות ‎.dcm ו־‎.dicom. עיינו בחתכי CT ו־MRI, הגדירו את רוחב החלון ואת מרכזו ועיינו בתגיות DICOM בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "DICOM व्यूअर",
+        description:
+          "अपने डिवाइस पर मौजूद DICOM (.dcm, .dicom) चित्र ब्राउज़र में खोलें। फ़ाइलें अपलोड किए बिना CT और MRI स्लाइस देखें, विंडो की चौड़ाई और स्तर बदलें और DICOM टैग जाँचें।",
+      },
+      id: {
+        name: "Penampil DICOM",
+        description:
+          "Buka gambar DICOM (.dcm, .dicom) dari perangkat Anda di browser. Telusuri irisan CT dan MRI, sesuaikan lebar dan tingkat jendela, serta periksa tag DICOM tanpa mengunggah berkas.",
+      },
+      it: {
+        name: "Visualizzatore DICOM",
+        description:
+          "Apri immagini DICOM (.dcm, .dicom) nel browser. Scorri le sezioni di TC e RM, regola larghezza e livello della finestra e consulta i tag senza caricare file online.",
+      },
+      ja: {
+        name: "DICOM ビューアー",
+        description:
+          "ローカルの DICOM（.dcm、.dicom）画像をブラウザーで開きます。ファイルをアップロードせずに CT・MRI のスライスを閲覧し、ウィンドウ幅とレベルを調整して DICOM タグを確認できます。",
+      },
+      ko: {
+        name: "DICOM 뷰어",
+        description:
+          "브라우저에서 로컬 DICOM(.dcm, .dicom) 영상을 열어 보세요. 파일을 업로드하지 않고 CT와 MRI 슬라이스를 탐색하고 윈도우 너비와 레벨을 조절하며 DICOM 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar DICOM",
+        description:
+          "Buka imej DICOM (.dcm, .dicom) pada peranti anda melalui pelayar. Layari hirisan CT dan MRI, laraskan lebar dan aras tetingkap serta periksa tag DICOM tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "DICOM-viewer",
+        description:
+          "Open lokale DICOM-beelden (.dcm, .dicom) in je browser. Blader door CT- en MRI-doorsneden, pas vensterbreedte en vensterniveau aan en bekijk DICOM-tags zonder upload.",
+      },
+      no: {
+        name: "DICOM-viser",
+        description:
+          "Åpne lokale DICOM-bilder (.dcm, .dicom) i nettleseren. Bla gjennom CT- og MR-snitt, juster vindusbredde og vindusnivå og se DICOM-tagger uten opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka DICOM",
+        description:
+          "Otwieraj lokalne obrazy DICOM (.dcm, .dicom) w przeglądarce. Przeglądaj przekroje TK i MRI, zmieniaj szerokość i poziom okna, sprawdzaj tagi bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador DICOM",
+        description:
+          "Abra imagens DICOM (.dcm, .dicom) no navegador. Percorra cortes de TC e RM, ajuste a largura e o nível da janela e consulte as tags sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр DICOM",
+        description:
+          "Открывайте локальные файлы DICOM (.dcm, .dicom) в браузере. Листайте срезы КТ и МРТ, меняйте ширину и уровень окна и изучайте теги DICOM без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "DICOM-visare",
+        description:
+          "Öppna lokala DICOM-bilder (.dcm, .dicom) i webbläsaren. Bläddra bland CT- och MR-snitt, justera fönsterbredd och fönsternivå och granska DICOM-taggar utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดูภาพ DICOM",
+        description:
+          "เปิดภาพ DICOM (.dcm, .dicom) บนอุปกรณ์ในเบราว์เซอร์ เลื่อนดูภาพตัดขวาง CT และ MRI ปรับความกว้างและระดับหน้าต่าง และตรวจสอบแท็ก DICOM โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DICOM Görüntüleyicisi",
+        description:
+          "Cihazınızdaki DICOM (.dcm, .dicom) görüntülerini tarayıcıda açın. Dosya yüklemeden BT ve MR kesitlerine göz atın, pencere genişliğini ve seviyesini ayarlayın, etiketleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem DICOM",
+        description:
+          "Mở ảnh DICOM (.dcm, .dicom) trên thiết bị ngay trong trình duyệt. Duyệt lát cắt CT và MRI, chỉnh độ rộng và mức cửa sổ, xem thẻ DICOM mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DICOM 查看器",
+        description:
+          "在浏览器中打开本地 DICOM（.dcm、.dicom）图像，浏览 CT 和 MRI 切片，调整窗宽窗位并查看 DICOM 标签，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "DICOM 檢視器",
+        description:
+          "在瀏覽器中開啟本機 DICOM（.dcm、.dicom）影像，瀏覽 CT 和 MRI 切片、調整窗寬與窗位，並檢視 DICOM 標籤，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "djvu-viewer",
     category: "document",
     icon: "book-open",
@@ -15316,6 +15450,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "graphviz-dot-previewer",
+    category: "developer",
+    icon: "network",
+    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    locales: {
+      ar: {
+        name: "معاين Graphviz DOT",
+        description:
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+      },
+      de: {
+        name: "Graphviz-DOT-Vorschau",
+        description:
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+      },
+      en: {
+        name: "Graphviz DOT Previewer",
+        description:
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+      },
+      es: {
+        name: "Vista previa de Graphviz DOT",
+        description:
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+      },
+      fr: {
+        name: "Aperçu Graphviz DOT",
+        description:
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Graphviz DOT",
+        description:
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+      },
+      hi: {
+        name: "Graphviz DOT प्रीव्यूअर",
+        description:
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Graphviz DOT",
+        description:
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+      },
+      it: {
+        name: "Anteprima Graphviz DOT",
+        description:
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+      },
+      ja: {
+        name: "Graphviz DOT プレビューアー",
+        description:
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+      },
+      ko: {
+        name: "Graphviz DOT 미리보기",
+        description:
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Graphviz DOT",
+        description:
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+      },
+      nl: {
+        name: "Graphviz DOT-voorvertoner",
+        description:
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+      },
+      no: {
+        name: "Graphviz DOT-forhåndsviser",
+        description:
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+      },
+      pl: {
+        name: "Podgląd Graphviz DOT",
+        description:
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Graphviz DOT",
+        description:
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+      },
+      ru: {
+        name: "Предпросмотр Graphviz DOT",
+        description:
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+      },
+      sv: {
+        name: "Graphviz DOT-förhandsgranskare",
+        description:
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+        description:
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+      },
+      tr: {
+        name: "Graphviz DOT Önizleyici",
+        description:
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Graphviz DOT",
+        description:
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+      },
+      "zh-CN": {
+        name: "Graphviz DOT 预览器",
+        description:
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+      },
+      "zh-TW": {
+        name: "Graphviz DOT 預覽器",
+        description:
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+      },
+    },
+  },
+  {
     slug: "har-analyzer",
     category: "network",
     icon: "network",
@@ -15575,6 +15832,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "HAR 敏感資料清理工具",
         description:
           "在瀏覽器中移除 HAR 檔案裡的 Cookie、權杖及其他敏感資料。保留請求時間與狀態碼，下載清理後的 HAR 以供分享。",
+      },
+    },
+  },
+  {
+    slug: "hex-editor",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "hex",
+      "hexadecimal",
+      "binary",
+      "ascii",
+      "byte",
+      "offset",
+      "editor",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر سداسي عشري",
+        description:
+          "اعرض الملفات الثنائية وحرّرها بالنظام السداسي العشري (Hex) مع عرض ASCII. انتقل إلى إزاحة، وعدّل البايتات، ونزّل نسخة. تبقى ملفاتك في المتصفح.",
+      },
+      de: {
+        name: "Hex-Editor",
+        description:
+          "Binärdateien online in Hex und ASCII ansehen und bearbeiten. Zu einem Byte-Offset springen, Werte überschreiben und eine bearbeitete Kopie herunterladen. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "Hex Editor",
+        description:
+          "View and edit binary files online in hex and ASCII. Jump to a byte offset, overwrite values, and download an edited copy. Files stay in your browser.",
+      },
+      es: {
+        name: "Editor hexadecimal",
+        description:
+          "Inspecciona archivos binarios en hexadecimal y ASCII. Ve a un desplazamiento, edita bytes y descarga una copia. Todo se hace en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur hexadécimal",
+        description:
+          "Affichez et modifiez des fichiers binaires en ligne, en hexadécimal et en ASCII. Accédez à un octet, remplacez sa valeur et téléchargez une copie modifiée. Tout se passe dans votre navigateur.",
+      },
+      he: {
+        name: "עורך הקסדצימלי",
+        description:
+          "הציגו קבצים בינאריים בהקסדצימלי וב־ASCII, עברו להיסט, ערכו בתים והורידו עותק. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "हेक्स एडिटर",
+        description:
+          "बाइनरी फ़ाइलें ऑनलाइन हेक्स और ASCII में देखें और संपादित करें। किसी भी बाइट के ऑफ़सेट पर जाएँ, उसका मान बदलें और संपादित कॉपी डाउनलोड करें। फ़ाइलें आपके ब्राउज़र में रहती हैं।",
+      },
+      id: {
+        name: "Editor Heksadesimal",
+        description:
+          "Lihat dan edit file biner secara online dalam heksadesimal dan ASCII. Lompat ke offset byte, timpa nilai, dan unduh salinan yang telah diedit. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Editor esadecimale",
+        description:
+          "Visualizza e modifica file binari online in esadecimale e ASCII. Vai a un offset, sovrascrivi i byte e scarica la copia modificata. I file restano nel browser.",
+      },
+      ja: {
+        name: "バイナリエディター",
+        description:
+          "バイナリファイルをオンラインで開き、16進数（Hex）とASCIIで表示・編集できます。指定したオフセットに移動し、バイトを上書きして編集済みのコピーをダウンロードできます。ファイルの処理はブラウザー内で完結します。",
+      },
+      ko: {
+        name: "16진수 편집기",
+        description:
+          "온라인에서 바이너리 파일을 16진수와 ASCII로 확인하고 편집하세요. 원하는 바이트 오프셋으로 이동해 값을 덮어쓰고 수정한 복사본을 다운로드할 수 있습니다. 파일은 브라우저에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Penyunting Heksadesimal",
+        description:
+          "Lihat dan sunting fail binari dalam paparan heksadesimal dan ASCII secara dalam talian. Pergi ke ofset bait, tulis ganti nilai dan muat turun salinan yang disunting. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Hex-editor",
+        description:
+          "Bekijk en bewerk binaire bestanden online in hexadecimale notatie en ASCII. Spring naar een bytepositie, overschrijf waarden en download een aangepaste kopie. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "Hex-editor",
+        description:
+          "Vis og rediger binærfiler i heksadesimalt format og ASCII. Hopp til en byteposisjon, endre verdier og last ned en kopi. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor szesnastkowy",
+        description:
+          "Przeglądaj i edytuj pliki binarne online w zapisie szesnastkowym i ASCII. Przejdź do wybranego bajtu, nadpisz jego wartość i pobierz zmienioną kopię. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor hexadecimal",
+        description:
+          "Visualize e edite arquivos binários online em hexadecimal e ASCII. Vá até um deslocamento, sobrescreva bytes e baixe uma cópia editada. Os arquivos ficam no seu navegador.",
+      },
+      ru: {
+        name: "Hex-редактор",
+        description:
+          "Просматривайте и редактируйте двоичные файлы онлайн в шестнадцатеричном виде и ASCII. Переходите к нужному смещению, меняйте значения байтов и скачивайте изменённую копию. Файлы обрабатываются в браузере.",
+      },
+      sv: {
+        name: "Hexredigerare",
+        description:
+          "Visa och redigera binärfiler online i hex och ASCII. Hoppa till ett offset, skriv över bytevärden och ladda ner en redigerad kopia. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+        description:
+          "ดูและแก้ไขไฟล์ไบนารีออนไลน์ในรูปแบบเลขฐานสิบหกและ ASCII ข้ามไปยังออฟเซตที่ต้องการ เขียนทับค่าไบต์ และดาวน์โหลดสำเนาที่แก้ไขแล้ว ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Onaltılık Düzenleyici",
+        description:
+          "İkili dosyaları çevrimiçi olarak onaltılık ve ASCII biçiminde görüntüleyin ve düzenleyin. Bir bayt ofsetine atlayın, değerlerin üzerine yazın ve düzenlenmiş bir kopya indirin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa hex",
+        description:
+          "Xem và chỉnh sửa tệp nhị phân trực tuyến dưới dạng hex và ASCII. Đến vị trí byte cần sửa, ghi đè giá trị rồi tải xuống bản sao. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "十六进制编辑器",
+        description:
+          "在线查看和编辑二进制文件，并排显示十六进制字节和 ASCII 字符。可跳转到指定偏移量、改写字节并下载编辑后的副本。文件仅在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "十六進位編輯器",
+        description:
+          "在線上以十六進位和 ASCII 檢視及編輯二進位檔案。跳至指定的位元組偏移量、覆寫數值，並下載編輯後的副本。檔案會留在瀏覽器中。",
       },
     },
   },
@@ -56043,6 +56432,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "dicom-viewer": {
+    slug: "dicom-viewer",
+    category: "image",
+    icon: "scan-line",
+    tags: [
+      "dicom",
+      "dcm",
+      "medical imaging",
+      "ct",
+      "mri",
+      "slice",
+      "window level",
+      "metadata",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض DICOM",
+        description:
+          "افتح صور DICOM بامتدادي .dcm و.dicom من جهازك في المتصفح. تصفح شرائح الأشعة المقطعية والرنين المغناطيسي، واضبط عرض النافذة ومستواها، وافحص الوسوم دون رفع الملفات.",
+      },
+      de: {
+        name: "DICOM-Betrachter",
+        description:
+          "Lokale DICOM-Bilder (.dcm, .dicom) im Browser öffnen. Durch CT- und MRT-Schichten blättern, Fensterbreite und Fensterlage ändern und DICOM-Tags ohne Upload prüfen.",
+      },
+      en: {
+        name: "DICOM Viewer",
+        description:
+          "Open local DICOM (.dcm, .dicom) images in your browser. Browse CT and MRI slices, adjust window width and level, and inspect DICOM tags without uploading files.",
+      },
+      es: {
+        name: "Visor DICOM",
+        description:
+          "Abre imágenes DICOM (.dcm, .dicom) en tu navegador. Recorre cortes de TC y RM, ajusta el ancho y el nivel de ventana y consulta etiquetas DICOM sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse DICOM",
+        description:
+          "Ouvrez vos images DICOM (.dcm, .dicom) dans votre navigateur. Parcourez les coupes de scanner et d’IRM, ajustez le fenêtrage et consultez les tags sans envoyer de fichiers.",
+      },
+      he: {
+        name: "מציג DICOM",
+        description:
+          "פתחו בדפדפן תמונות DICOM מקומיות בסיומות ‎.dcm ו־‎.dicom. עיינו בחתכי CT ו־MRI, הגדירו את רוחב החלון ואת מרכזו ועיינו בתגיות DICOM בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "DICOM व्यूअर",
+        description:
+          "अपने डिवाइस पर मौजूद DICOM (.dcm, .dicom) चित्र ब्राउज़र में खोलें। फ़ाइलें अपलोड किए बिना CT और MRI स्लाइस देखें, विंडो की चौड़ाई और स्तर बदलें और DICOM टैग जाँचें।",
+      },
+      id: {
+        name: "Penampil DICOM",
+        description:
+          "Buka gambar DICOM (.dcm, .dicom) dari perangkat Anda di browser. Telusuri irisan CT dan MRI, sesuaikan lebar dan tingkat jendela, serta periksa tag DICOM tanpa mengunggah berkas.",
+      },
+      it: {
+        name: "Visualizzatore DICOM",
+        description:
+          "Apri immagini DICOM (.dcm, .dicom) nel browser. Scorri le sezioni di TC e RM, regola larghezza e livello della finestra e consulta i tag senza caricare file online.",
+      },
+      ja: {
+        name: "DICOM ビューアー",
+        description:
+          "ローカルの DICOM（.dcm、.dicom）画像をブラウザーで開きます。ファイルをアップロードせずに CT・MRI のスライスを閲覧し、ウィンドウ幅とレベルを調整して DICOM タグを確認できます。",
+      },
+      ko: {
+        name: "DICOM 뷰어",
+        description:
+          "브라우저에서 로컬 DICOM(.dcm, .dicom) 영상을 열어 보세요. 파일을 업로드하지 않고 CT와 MRI 슬라이스를 탐색하고 윈도우 너비와 레벨을 조절하며 DICOM 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar DICOM",
+        description:
+          "Buka imej DICOM (.dcm, .dicom) pada peranti anda melalui pelayar. Layari hirisan CT dan MRI, laraskan lebar dan aras tetingkap serta periksa tag DICOM tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "DICOM-viewer",
+        description:
+          "Open lokale DICOM-beelden (.dcm, .dicom) in je browser. Blader door CT- en MRI-doorsneden, pas vensterbreedte en vensterniveau aan en bekijk DICOM-tags zonder upload.",
+      },
+      no: {
+        name: "DICOM-viser",
+        description:
+          "Åpne lokale DICOM-bilder (.dcm, .dicom) i nettleseren. Bla gjennom CT- og MR-snitt, juster vindusbredde og vindusnivå og se DICOM-tagger uten opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka DICOM",
+        description:
+          "Otwieraj lokalne obrazy DICOM (.dcm, .dicom) w przeglądarce. Przeglądaj przekroje TK i MRI, zmieniaj szerokość i poziom okna, sprawdzaj tagi bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador DICOM",
+        description:
+          "Abra imagens DICOM (.dcm, .dicom) no navegador. Percorra cortes de TC e RM, ajuste a largura e o nível da janela e consulte as tags sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр DICOM",
+        description:
+          "Открывайте локальные файлы DICOM (.dcm, .dicom) в браузере. Листайте срезы КТ и МРТ, меняйте ширину и уровень окна и изучайте теги DICOM без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "DICOM-visare",
+        description:
+          "Öppna lokala DICOM-bilder (.dcm, .dicom) i webbläsaren. Bläddra bland CT- och MR-snitt, justera fönsterbredd och fönsternivå och granska DICOM-taggar utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดูภาพ DICOM",
+        description:
+          "เปิดภาพ DICOM (.dcm, .dicom) บนอุปกรณ์ในเบราว์เซอร์ เลื่อนดูภาพตัดขวาง CT และ MRI ปรับความกว้างและระดับหน้าต่าง และตรวจสอบแท็ก DICOM โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DICOM Görüntüleyicisi",
+        description:
+          "Cihazınızdaki DICOM (.dcm, .dicom) görüntülerini tarayıcıda açın. Dosya yüklemeden BT ve MR kesitlerine göz atın, pencere genişliğini ve seviyesini ayarlayın, etiketleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem DICOM",
+        description:
+          "Mở ảnh DICOM (.dcm, .dicom) trên thiết bị ngay trong trình duyệt. Duyệt lát cắt CT và MRI, chỉnh độ rộng và mức cửa sổ, xem thẻ DICOM mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DICOM 查看器",
+        description:
+          "在浏览器中打开本地 DICOM（.dcm、.dicom）图像，浏览 CT 和 MRI 切片，调整窗宽窗位并查看 DICOM 标签，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "DICOM 檢視器",
+        description:
+          "在瀏覽器中開啟本機 DICOM（.dcm、.dicom）影像，瀏覽 CT 和 MRI 切片、調整窗寬與窗位，並檢視 DICOM 標籤，無須上傳檔案。",
+      },
+    },
+  },
   "djvu-viewer": {
     slug: "djvu-viewer",
     category: "document",
@@ -60739,6 +61262,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "graphviz-dot-previewer": {
+    slug: "graphviz-dot-previewer",
+    category: "developer",
+    icon: "network",
+    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    locales: {
+      ar: {
+        name: "معاين Graphviz DOT",
+        description:
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+      },
+      de: {
+        name: "Graphviz-DOT-Vorschau",
+        description:
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+      },
+      en: {
+        name: "Graphviz DOT Previewer",
+        description:
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+      },
+      es: {
+        name: "Vista previa de Graphviz DOT",
+        description:
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+      },
+      fr: {
+        name: "Aperçu Graphviz DOT",
+        description:
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Graphviz DOT",
+        description:
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+      },
+      hi: {
+        name: "Graphviz DOT प्रीव्यूअर",
+        description:
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Graphviz DOT",
+        description:
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+      },
+      it: {
+        name: "Anteprima Graphviz DOT",
+        description:
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+      },
+      ja: {
+        name: "Graphviz DOT プレビューアー",
+        description:
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+      },
+      ko: {
+        name: "Graphviz DOT 미리보기",
+        description:
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Graphviz DOT",
+        description:
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+      },
+      nl: {
+        name: "Graphviz DOT-voorvertoner",
+        description:
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+      },
+      no: {
+        name: "Graphviz DOT-forhåndsviser",
+        description:
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+      },
+      pl: {
+        name: "Podgląd Graphviz DOT",
+        description:
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Graphviz DOT",
+        description:
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+      },
+      ru: {
+        name: "Предпросмотр Graphviz DOT",
+        description:
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+      },
+      sv: {
+        name: "Graphviz DOT-förhandsgranskare",
+        description:
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+        description:
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+      },
+      tr: {
+        name: "Graphviz DOT Önizleyici",
+        description:
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Graphviz DOT",
+        description:
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+      },
+      "zh-CN": {
+        name: "Graphviz DOT 预览器",
+        description:
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+      },
+      "zh-TW": {
+        name: "Graphviz DOT 預覽器",
+        description:
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+      },
+    },
+  },
   "har-analyzer": {
     slug: "har-analyzer",
     category: "network",
@@ -60999,6 +61645,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "HAR 敏感資料清理工具",
         description:
           "在瀏覽器中移除 HAR 檔案裡的 Cookie、權杖及其他敏感資料。保留請求時間與狀態碼，下載清理後的 HAR 以供分享。",
+      },
+    },
+  },
+  "hex-editor": {
+    slug: "hex-editor",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "hex",
+      "hexadecimal",
+      "binary",
+      "ascii",
+      "byte",
+      "offset",
+      "editor",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر سداسي عشري",
+        description:
+          "اعرض الملفات الثنائية وحرّرها بالنظام السداسي العشري (Hex) مع عرض ASCII. انتقل إلى إزاحة، وعدّل البايتات، ونزّل نسخة. تبقى ملفاتك في المتصفح.",
+      },
+      de: {
+        name: "Hex-Editor",
+        description:
+          "Binärdateien online in Hex und ASCII ansehen und bearbeiten. Zu einem Byte-Offset springen, Werte überschreiben und eine bearbeitete Kopie herunterladen. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "Hex Editor",
+        description:
+          "View and edit binary files online in hex and ASCII. Jump to a byte offset, overwrite values, and download an edited copy. Files stay in your browser.",
+      },
+      es: {
+        name: "Editor hexadecimal",
+        description:
+          "Inspecciona archivos binarios en hexadecimal y ASCII. Ve a un desplazamiento, edita bytes y descarga una copia. Todo se hace en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur hexadécimal",
+        description:
+          "Affichez et modifiez des fichiers binaires en ligne, en hexadécimal et en ASCII. Accédez à un octet, remplacez sa valeur et téléchargez une copie modifiée. Tout se passe dans votre navigateur.",
+      },
+      he: {
+        name: "עורך הקסדצימלי",
+        description:
+          "הציגו קבצים בינאריים בהקסדצימלי וב־ASCII, עברו להיסט, ערכו בתים והורידו עותק. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "हेक्स एडिटर",
+        description:
+          "बाइनरी फ़ाइलें ऑनलाइन हेक्स और ASCII में देखें और संपादित करें। किसी भी बाइट के ऑफ़सेट पर जाएँ, उसका मान बदलें और संपादित कॉपी डाउनलोड करें। फ़ाइलें आपके ब्राउज़र में रहती हैं।",
+      },
+      id: {
+        name: "Editor Heksadesimal",
+        description:
+          "Lihat dan edit file biner secara online dalam heksadesimal dan ASCII. Lompat ke offset byte, timpa nilai, dan unduh salinan yang telah diedit. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Editor esadecimale",
+        description:
+          "Visualizza e modifica file binari online in esadecimale e ASCII. Vai a un offset, sovrascrivi i byte e scarica la copia modificata. I file restano nel browser.",
+      },
+      ja: {
+        name: "バイナリエディター",
+        description:
+          "バイナリファイルをオンラインで開き、16進数（Hex）とASCIIで表示・編集できます。指定したオフセットに移動し、バイトを上書きして編集済みのコピーをダウンロードできます。ファイルの処理はブラウザー内で完結します。",
+      },
+      ko: {
+        name: "16진수 편집기",
+        description:
+          "온라인에서 바이너리 파일을 16진수와 ASCII로 확인하고 편집하세요. 원하는 바이트 오프셋으로 이동해 값을 덮어쓰고 수정한 복사본을 다운로드할 수 있습니다. 파일은 브라우저에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Penyunting Heksadesimal",
+        description:
+          "Lihat dan sunting fail binari dalam paparan heksadesimal dan ASCII secara dalam talian. Pergi ke ofset bait, tulis ganti nilai dan muat turun salinan yang disunting. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Hex-editor",
+        description:
+          "Bekijk en bewerk binaire bestanden online in hexadecimale notatie en ASCII. Spring naar een bytepositie, overschrijf waarden en download een aangepaste kopie. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "Hex-editor",
+        description:
+          "Vis og rediger binærfiler i heksadesimalt format og ASCII. Hopp til en byteposisjon, endre verdier og last ned en kopi. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor szesnastkowy",
+        description:
+          "Przeglądaj i edytuj pliki binarne online w zapisie szesnastkowym i ASCII. Przejdź do wybranego bajtu, nadpisz jego wartość i pobierz zmienioną kopię. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor hexadecimal",
+        description:
+          "Visualize e edite arquivos binários online em hexadecimal e ASCII. Vá até um deslocamento, sobrescreva bytes e baixe uma cópia editada. Os arquivos ficam no seu navegador.",
+      },
+      ru: {
+        name: "Hex-редактор",
+        description:
+          "Просматривайте и редактируйте двоичные файлы онлайн в шестнадцатеричном виде и ASCII. Переходите к нужному смещению, меняйте значения байтов и скачивайте изменённую копию. Файлы обрабатываются в браузере.",
+      },
+      sv: {
+        name: "Hexredigerare",
+        description:
+          "Visa och redigera binärfiler online i hex och ASCII. Hoppa till ett offset, skriv över bytevärden och ladda ner en redigerad kopia. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+        description:
+          "ดูและแก้ไขไฟล์ไบนารีออนไลน์ในรูปแบบเลขฐานสิบหกและ ASCII ข้ามไปยังออฟเซตที่ต้องการ เขียนทับค่าไบต์ และดาวน์โหลดสำเนาที่แก้ไขแล้ว ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Onaltılık Düzenleyici",
+        description:
+          "İkili dosyaları çevrimiçi olarak onaltılık ve ASCII biçiminde görüntüleyin ve düzenleyin. Bir bayt ofsetine atlayın, değerlerin üzerine yazın ve düzenlenmiş bir kopya indirin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa hex",
+        description:
+          "Xem và chỉnh sửa tệp nhị phân trực tuyến dưới dạng hex và ASCII. Đến vị trí byte cần sửa, ghi đè giá trị rồi tải xuống bản sao. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "十六进制编辑器",
+        description:
+          "在线查看和编辑二进制文件，并排显示十六进制字节和 ASCII 字符。可跳转到指定偏移量、改写字节并下载编辑后的副本。文件仅在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "十六進位編輯器",
+        description:
+          "在線上以十六進位和 ASCII 檢視及編輯二進位檔案。跳至指定的位元組偏移量、覆寫數值，並下載編輯後的副本。檔案會留在瀏覽器中。",
       },
     },
   },

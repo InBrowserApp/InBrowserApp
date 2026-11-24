@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Pemapar DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Pemapar DjVu",
     slug: "djvu-viewer",
@@ -603,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Pratonton Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Penganalisis Rangkaian HAR",
     slug: "har-analyzer",
@@ -611,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Pembersih Fail HAR",
     slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Penyunting Heksadesimal",
+    slug: "hex-editor",
   },
   {
     category: "crypto",

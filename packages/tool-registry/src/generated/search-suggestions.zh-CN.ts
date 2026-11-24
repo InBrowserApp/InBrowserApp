@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM 查看器",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu 查看器",
     slug: "djvu-viewer",
@@ -603,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 预览器",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 网络分析器",
     slug: "har-analyzer",
@@ -611,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "HAR 脱敏工具",
     slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "十六进制编辑器",
+    slug: "hex-editor",
   },
   {
     category: "crypto",

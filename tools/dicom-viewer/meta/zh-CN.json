@@ -1,0 +1,4 @@
+{
+  "name": "DICOM 查看器",
+  "description": "在浏览器中打开本地 DICOM（.dcm、.dicom）图像，浏览 CT 和 MRI 切片，调整窗宽窗位并查看 DICOM 标签，无需上传文件。"
+}

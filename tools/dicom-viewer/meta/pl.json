@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka DICOM",
+  "description": "Otwieraj lokalne obrazy DICOM (.dcm, .dicom) w przeglądarce. Przeglądaj przekroje TK i MRI, zmieniaj szerokość i poziom okna, sprawdzaj tagi bez przesyłania plików."
+}

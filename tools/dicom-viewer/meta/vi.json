@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem DICOM",
+  "description": "Mở ảnh DICOM (.dcm, .dicom) trên thiết bị ngay trong trình duyệt. Duyệt lát cắt CT và MRI, chỉnh độ rộng và mức cửa sổ, xem thẻ DICOM mà không cần tải tệp lên."
+}
