@@ -1,0 +1,4 @@
+{
+  "name": "DNS Zone File Parser",
+  "description": "Parse BIND-style DNS zone files into searchable records and JSON. See each record’s name, type, TTL, class, and data directly in your browser."
+}

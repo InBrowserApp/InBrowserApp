@@ -1,0 +1,4 @@
+{
+  "name": "Parser for DNS-sonefiler",
+  "description": "Les DNS-sonefiler i BIND-format som søkbare poster og JSON. Se navn, type, TTL, klasse og data for hver post direkte i nettleseren."
+}

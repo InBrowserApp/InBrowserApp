@@ -433,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNS 区域文件解析器",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC / WPS 转 PDF 转换器",
     slug: "doc-to-pdf-converter",

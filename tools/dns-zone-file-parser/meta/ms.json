@@ -1,0 +1,4 @@
+{
+  "name": "Penghurai Fail Zon DNS",
+  "description": "Baca fail zon DNS dalam format BIND, cari rekod dan salin hasil sebagai JSON. Lihat nama, jenis, TTL, kelas dan data setiap rekod terus dalam pelayar."
+}

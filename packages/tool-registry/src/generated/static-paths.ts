@@ -7914,6 +7914,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dns-zone-file-parser",
+    language: "ar",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "de",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "en",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "es",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "fr",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "he",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "hi",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "id",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "it",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ja",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ko",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ms",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "nl",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "no",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "pl",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "pt",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ru",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "sv",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "th",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "tr",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "vi",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "doc-to-pdf-converter",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "DNS Bölge Dosyası Ayrıştırıcı",
+  "description": "BIND biçimindeki DNS bölge dosyalarını ayrıştırın ve kayıtları JSON olarak kopyalayın. Kayıtları filtreleyip adlarını, türlerini, TTL değerlerini, sınıflarını ve verilerini tarayıcınızda görün."
+}

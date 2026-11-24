@@ -433,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Parser för DNS-zonfiler",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Konverterare från DOC och WPS till PDF",
     slug: "doc-to-pdf-converter",
