@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio Loudness Normalizer",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Audio Recorder",
     slug: "audio-recorder",
   },

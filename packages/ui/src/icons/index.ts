@@ -119,6 +119,7 @@ export {
   Trash2,
   TriangleAlert,
   Video,
+  Volume2,
   Wrench,
   Workflow,
   Upload,

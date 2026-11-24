@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Chuẩn hóa âm lượng (LUFS)",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Trình ghi âm",
     slug: "audio-recorder",
   },

@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ses Yüksekliğini Normalleştirme",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Ses Kaydedici",
     slug: "audio-recorder",
   },

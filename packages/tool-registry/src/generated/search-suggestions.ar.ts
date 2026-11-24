@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "توحيد جهارة الصوت",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "مسجل الصوت",
     slug: "audio-recorder",
   },

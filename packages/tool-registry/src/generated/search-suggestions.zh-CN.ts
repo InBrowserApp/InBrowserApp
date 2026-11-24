@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音频响度标准化",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "音频录音器",
     slug: "audio-recorder",
   },

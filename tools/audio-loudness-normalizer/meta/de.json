@@ -1,0 +1,4 @@
+{
+  "name": "Audio-Lautheit normalisieren",
+  "description": "Normalisiere Podcasts, Musik oder Rundfunkbeiträge auf einen LUFS-Zielwert. Vergleiche Lautheit und True Peak, höre das Ergebnis im Browser an und speichere es als WAV."
+}

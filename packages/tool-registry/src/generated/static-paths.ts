@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-loudness-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "de",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "en",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "es",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "he",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "id",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "it",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "no",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "th",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-recorder",
     language: "ar",
   },

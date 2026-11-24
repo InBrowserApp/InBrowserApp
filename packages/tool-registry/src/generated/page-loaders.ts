@@ -25,6 +25,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "asciidoc-to-pdf-converter": () =>
     import("@tool/asciidoc-to-pdf-converter/page"),
   "asciidoc-viewer": () => import("@tool/asciidoc-viewer/page"),
+  "audio-loudness-normalizer": () =>
+    import("@tool/audio-loudness-normalizer/page"),
   "audio-recorder": () => import("@tool/audio-recorder/page"),
   "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),

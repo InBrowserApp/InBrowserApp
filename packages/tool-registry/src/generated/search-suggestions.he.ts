@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "נרמול עוצמת שמע",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "מקליט שמע",
     slug: "audio-recorder",
   },
