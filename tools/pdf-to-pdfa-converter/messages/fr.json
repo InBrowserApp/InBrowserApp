@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Choisir un PDF",
+  "dropHint": "Ou glissez-déposez le PDF ici",
+  "changePdf": "Changer de PDF",
+  "standard": "Norme PDF/A",
+  "part1": "Choisissez ce profil si votre service d’archives ou votre portail de dépôt exige le PDF/A-1b.",
+  "part2": "Recommandé pour la plupart des usages d’archivage, sauf si une autre norme est exigée.",
+  "appearance": "La copie conserve l’aspect des pages sous forme d’images. La conversion supprime la sélection de texte, les liens et les pièces jointes.",
+  "convert": "Convertir en PDF/A",
+  "cancel": "Annuler",
+  "opening": "Ouverture du PDF…",
+  "rendering": "Conversion de la page {page} sur {total}…",
+  "checking": "Vérification de la copie d’archivage…",
+  "ready": "Vérification réussie",
+  "download": "Télécharger le PDF/A",
+  "privacy": "Votre PDF reste sur votre appareil.",
+  "oneFile": "Choisissez un seul PDF à la fois.",
+  "invalid": "Impossible d’ouvrir ce fichier en tant que PDF. Essayez avec une autre copie.",
+  "encrypted": "Déverrouillez ce PDF protégé par mot de passe avant de le convertir.",
+  "xfa": "Ce PDF contient un formulaire XFA. Ouvrez-le dans un lecteur qui affiche le formulaire, puis enregistrez une copie au format PDF standard avant de la convertir.",
+  "failed": "Impossible de convertir le PDF. Essayez avec une autre copie.",
+  "checkFailed": "La copie d’archivage a échoué à la vérification pour la norme sélectionnée."
+}

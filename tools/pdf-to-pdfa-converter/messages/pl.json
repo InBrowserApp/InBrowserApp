@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Wybierz plik PDF",
+  "dropHint": "Lub przeciągnij go tutaj",
+  "changePdf": "Zmień plik PDF",
+  "standard": "Standard PDF/A",
+  "part1": "Wybierz ten profil, jeśli archiwum lub portal składania dokumentów wymaga PDF/A-1b.",
+  "part2": "Zalecany dla większości archiwów, o ile nie wymagają innego standardu.",
+  "appearance": "Kopia archiwalna zachowuje wygląd stron w postaci obrazów. Tekst z możliwością zaznaczania, linki i załączniki są usuwane.",
+  "convert": "Konwertuj do PDF/A",
+  "cancel": "Anuluj",
+  "opening": "Otwieranie PDF…",
+  "rendering": "Konwertowanie strony {page} z {total}…",
+  "checking": "Sprawdzanie kopii archiwalnej…",
+  "ready": "Kopia archiwalna przeszła kontrolę",
+  "download": "Pobierz PDF/A",
+  "privacy": "Plik PDF pozostaje na Twoim urządzeniu.",
+  "oneFile": "Wybierz tylko jeden plik PDF naraz.",
+  "invalid": "Nie udało się otworzyć pliku jako PDF. Spróbuj użyć innej kopii.",
+  "encrypted": "Przed konwersją odblokuj PDF zabezpieczony hasłem.",
+  "xfa": "Ten plik PDF zawiera formularz XFA. Otwórz go w przeglądarce PDF, która wyświetla formularz, i przed konwersją zapisz kopię w standardowym formacie PDF.",
+  "failed": "Nie udało się przekonwertować pliku PDF. Spróbuj użyć innej kopii.",
+  "checkFailed": "Kopia archiwalna nie przeszła kontroli dla wybranego standardu."
+}

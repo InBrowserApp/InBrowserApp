@@ -1129,6 +1129,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 转 PDF/A",
+    slug: "pdf-to-pdfa-converter",
+  },
+  {
+    category: "pdf",
     name: "PDF 查看器",
     slug: "pdf-viewer",
   },

@@ -28383,6 +28383,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-to-pdfa-converter",
+    category: "pdf",
+    icon: "archive",
+    tags: [
+      "pdf",
+      "pdf/a",
+      "pdfa",
+      "iso 19005",
+      "archive",
+      "validation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى PDF/A",
+        description:
+          "حوّل ملف PDF إلى PDF/A-1b أو PDF/A-2b للأرشفة طويلة الأمد. افحص نسخة الأرشفة ونزّلها مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "PDF in PDF/A umwandeln",
+        description:
+          "Wandle eine PDF zur Langzeitarchivierung in PDF/A-1b oder PDF/A-2b um. Prüfe die Archivkopie und lade sie direkt im Browser herunter.",
+      },
+      en: {
+        name: "PDF to PDF/A",
+        description:
+          "Convert a PDF to PDF/A-1b or PDF/A-2b for long-term archiving. Check the archive copy and download it directly from your browser.",
+      },
+      es: {
+        name: "Convertir PDF a PDF/A",
+        description:
+          "Convierte un PDF a PDF/A-1b o PDF/A-2b para su conservación a largo plazo. Comprueba y descarga la copia PDF/A directamente desde tu navegador.",
+      },
+      fr: {
+        name: "Convertir un PDF en PDF/A",
+        description:
+          "Convertissez un PDF en PDF/A-1b ou PDF/A-2b pour l’archivage à long terme. Vérifiez et téléchargez la copie d’archivage directement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת PDF ל־PDF/A",
+        description:
+          "המירו קובץ PDF ל־PDF/A-1b או ל־PDF/A-2b לשימור לטווח ארוך. בדקו את עותק הארכיון והורידו אותו ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "PDF को PDF/A में बदलें",
+        description:
+          "लंबे समय तक सुरक्षित रखने के लिए PDF को PDF/A-1b या PDF/A-2b में बदलें। संग्रहण के लिए बनी कॉपी की जाँच करें और सीधे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konversi PDF ke PDF/A",
+        description:
+          "Konversi PDF ke PDF/A-1b atau PDF/A-2b untuk pengarsipan jangka panjang. Periksa dan unduh salinan arsip langsung dari browser.",
+      },
+      it: {
+        name: "Converti PDF in PDF/A",
+        description:
+          "Converti un PDF in PDF/A-1b o PDF/A-2b per la conservazione a lungo termine. Verifica la copia d’archivio e scaricala direttamente dal browser.",
+      },
+      ja: {
+        name: "PDF を PDF/A に変換",
+        description:
+          "PDF を長期保存用の PDF/A-1b または PDF/A-2b に変換します。変換したファイルをチェックし、そのままブラウザーからダウンロードできます。",
+      },
+      ko: {
+        name: "PDF를 PDF/A로 변환",
+        description:
+          "장기 보관용으로 PDF를 PDF/A-1b 또는 PDF/A-2b로 변환하세요. 보관용 사본을 검사하고 브라우저에서 바로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar PDF kepada PDF/A",
+        description:
+          "Tukar PDF kepada PDF/A-1b atau PDF/A-2b untuk pengarkiban jangka panjang. Semak dan muat turun salinan arkib terus daripada pelayar.",
+      },
+      nl: {
+        name: "PDF naar PDF/A converteren",
+        description:
+          "Zet een PDF om naar PDF/A-1b of PDF/A-2b voor langdurige archivering. Controleer de archiefkopie en download deze direct vanuit je browser.",
+      },
+      no: {
+        name: "Konverter PDF til PDF/A",
+        description:
+          "Konverter en PDF til PDF/A-1b eller PDF/A-2b for langtidsarkivering. Kontroller arkivkopien og last den ned direkte fra nettleseren.",
+      },
+      pl: {
+        name: "Konwertuj PDF do PDF/A",
+        description:
+          "Konwertuj PDF do PDF/A-1b lub PDF/A-2b na potrzeby długoterminowej archiwizacji. Sprawdź kopię archiwalną i pobierz ją bezpośrednio z przeglądarki.",
+      },
+      pt: {
+        name: "Converter PDF para PDF/A",
+        description:
+          "Converta um PDF para PDF/A-1b ou PDF/A-2b para arquivamento de longo prazo. Verifique a cópia de arquivamento e baixe-a diretamente no navegador.",
+      },
+      ru: {
+        name: "Конвертер PDF в PDF/A",
+        description:
+          "Преобразуйте PDF в PDF/A-1b или PDF/A-2b для долговременного хранения. Проверьте архивную копию и скачайте её прямо из браузера.",
+      },
+      sv: {
+        name: "Konvertera PDF till PDF/A",
+        description:
+          "Konvertera en PDF till PDF/A-1b eller PDF/A-2b för långtidsarkivering. Kontrollera arkivkopian och ladda ned den direkt från webbläsaren.",
+      },
+      th: {
+        name: "แปลง PDF เป็น PDF/A",
+        description:
+          "แปลง PDF เป็น PDF/A-1b หรือ PDF/A-2b เพื่อจัดเก็บระยะยาว ตรวจสอบและดาวน์โหลดสำเนาสำหรับจัดเก็บได้โดยตรงจากเบราว์เซอร์",
+      },
+      tr: {
+        name: "PDF'yi PDF/A'ya dönüştürün",
+        description:
+          "PDF dosyalarını uzun süreli arşivleme için PDF/A-1b veya PDF/A-2b biçimine dönüştürün. Arşiv kopyasını kontrol edip doğrudan tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển PDF sang PDF/A",
+        description:
+          "Chuyển PDF sang PDF/A-1b hoặc PDF/A-2b để lưu trữ lâu dài. Kiểm tra và tải bản lưu trữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 转 PDF/A",
+        description:
+          "在浏览器中将 PDF 转换为 PDF/A-1b 或 PDF/A-2b，用于长期归档。校验通过后即可下载归档副本。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 PDF/A",
+        description:
+          "將 PDF 轉成適合長期保存的 PDF/A-1b 或 PDF/A-2b。直接在瀏覽器中檢查並下載封存副本。",
+      },
+    },
+  },
+  {
     slug: "pdf-viewer",
     category: "pdf",
     icon: "file-text",
@@ -71441,6 +71572,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 轉圖片轉換器",
         description:
           "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
+  "pdf-to-pdfa-converter": {
+    slug: "pdf-to-pdfa-converter",
+    category: "pdf",
+    icon: "archive",
+    tags: [
+      "pdf",
+      "pdf/a",
+      "pdfa",
+      "iso 19005",
+      "archive",
+      "validation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى PDF/A",
+        description:
+          "حوّل ملف PDF إلى PDF/A-1b أو PDF/A-2b للأرشفة طويلة الأمد. افحص نسخة الأرشفة ونزّلها مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "PDF in PDF/A umwandeln",
+        description:
+          "Wandle eine PDF zur Langzeitarchivierung in PDF/A-1b oder PDF/A-2b um. Prüfe die Archivkopie und lade sie direkt im Browser herunter.",
+      },
+      en: {
+        name: "PDF to PDF/A",
+        description:
+          "Convert a PDF to PDF/A-1b or PDF/A-2b for long-term archiving. Check the archive copy and download it directly from your browser.",
+      },
+      es: {
+        name: "Convertir PDF a PDF/A",
+        description:
+          "Convierte un PDF a PDF/A-1b o PDF/A-2b para su conservación a largo plazo. Comprueba y descarga la copia PDF/A directamente desde tu navegador.",
+      },
+      fr: {
+        name: "Convertir un PDF en PDF/A",
+        description:
+          "Convertissez un PDF en PDF/A-1b ou PDF/A-2b pour l’archivage à long terme. Vérifiez et téléchargez la copie d’archivage directement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת PDF ל־PDF/A",
+        description:
+          "המירו קובץ PDF ל־PDF/A-1b או ל־PDF/A-2b לשימור לטווח ארוך. בדקו את עותק הארכיון והורידו אותו ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "PDF को PDF/A में बदलें",
+        description:
+          "लंबे समय तक सुरक्षित रखने के लिए PDF को PDF/A-1b या PDF/A-2b में बदलें। संग्रहण के लिए बनी कॉपी की जाँच करें और सीधे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konversi PDF ke PDF/A",
+        description:
+          "Konversi PDF ke PDF/A-1b atau PDF/A-2b untuk pengarsipan jangka panjang. Periksa dan unduh salinan arsip langsung dari browser.",
+      },
+      it: {
+        name: "Converti PDF in PDF/A",
+        description:
+          "Converti un PDF in PDF/A-1b o PDF/A-2b per la conservazione a lungo termine. Verifica la copia d’archivio e scaricala direttamente dal browser.",
+      },
+      ja: {
+        name: "PDF を PDF/A に変換",
+        description:
+          "PDF を長期保存用の PDF/A-1b または PDF/A-2b に変換します。変換したファイルをチェックし、そのままブラウザーからダウンロードできます。",
+      },
+      ko: {
+        name: "PDF를 PDF/A로 변환",
+        description:
+          "장기 보관용으로 PDF를 PDF/A-1b 또는 PDF/A-2b로 변환하세요. 보관용 사본을 검사하고 브라우저에서 바로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar PDF kepada PDF/A",
+        description:
+          "Tukar PDF kepada PDF/A-1b atau PDF/A-2b untuk pengarkiban jangka panjang. Semak dan muat turun salinan arkib terus daripada pelayar.",
+      },
+      nl: {
+        name: "PDF naar PDF/A converteren",
+        description:
+          "Zet een PDF om naar PDF/A-1b of PDF/A-2b voor langdurige archivering. Controleer de archiefkopie en download deze direct vanuit je browser.",
+      },
+      no: {
+        name: "Konverter PDF til PDF/A",
+        description:
+          "Konverter en PDF til PDF/A-1b eller PDF/A-2b for langtidsarkivering. Kontroller arkivkopien og last den ned direkte fra nettleseren.",
+      },
+      pl: {
+        name: "Konwertuj PDF do PDF/A",
+        description:
+          "Konwertuj PDF do PDF/A-1b lub PDF/A-2b na potrzeby długoterminowej archiwizacji. Sprawdź kopię archiwalną i pobierz ją bezpośrednio z przeglądarki.",
+      },
+      pt: {
+        name: "Converter PDF para PDF/A",
+        description:
+          "Converta um PDF para PDF/A-1b ou PDF/A-2b para arquivamento de longo prazo. Verifique a cópia de arquivamento e baixe-a diretamente no navegador.",
+      },
+      ru: {
+        name: "Конвертер PDF в PDF/A",
+        description:
+          "Преобразуйте PDF в PDF/A-1b или PDF/A-2b для долговременного хранения. Проверьте архивную копию и скачайте её прямо из браузера.",
+      },
+      sv: {
+        name: "Konvertera PDF till PDF/A",
+        description:
+          "Konvertera en PDF till PDF/A-1b eller PDF/A-2b för långtidsarkivering. Kontrollera arkivkopian och ladda ned den direkt från webbläsaren.",
+      },
+      th: {
+        name: "แปลง PDF เป็น PDF/A",
+        description:
+          "แปลง PDF เป็น PDF/A-1b หรือ PDF/A-2b เพื่อจัดเก็บระยะยาว ตรวจสอบและดาวน์โหลดสำเนาสำหรับจัดเก็บได้โดยตรงจากเบราว์เซอร์",
+      },
+      tr: {
+        name: "PDF'yi PDF/A'ya dönüştürün",
+        description:
+          "PDF dosyalarını uzun süreli arşivleme için PDF/A-1b veya PDF/A-2b biçimine dönüştürün. Arşiv kopyasını kontrol edip doğrudan tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển PDF sang PDF/A",
+        description:
+          "Chuyển PDF sang PDF/A-1b hoặc PDF/A-2b để lưu trữ lâu dài. Kiểm tra và tải bản lưu trữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 转 PDF/A",
+        description:
+          "在浏览器中将 PDF 转换为 PDF/A-1b 或 PDF/A-2b，用于长期归档。校验通过后即可下载归档副本。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 PDF/A",
+        description:
+          "將 PDF 轉成適合長期保存的 PDF/A-1b 或 PDF/A-2b。直接在瀏覽器中檢查並下載封存副本。",
       },
     },
   },

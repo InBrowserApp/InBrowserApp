@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Escolher um PDF",
+  "dropHint": "Ou arraste e solte aqui",
+  "changePdf": "Trocar PDF",
+  "standard": "Padrão PDF/A",
+  "part1": "Escolha este perfil se o arquivo ou portal de envio exigir PDF/A-1b.",
+  "part2": "Recomendado para a maioria dos arquivos, salvo se houver exigência de outro padrão.",
+  "appearance": "A cópia de arquivamento mantém a aparência das páginas em forma de imagens. O texto selecionável, os links e os anexos são removidos.",
+  "convert": "Converter para PDF/A",
+  "cancel": "Cancelar",
+  "opening": "Abrindo PDF…",
+  "rendering": "Convertendo a página {page} de {total}…",
+  "checking": "Verificando a cópia de arquivamento…",
+  "ready": "A cópia de arquivamento passou nas verificações",
+  "download": "Baixar PDF/A",
+  "privacy": "Seu PDF fica no seu dispositivo.",
+  "oneFile": "Escolha um PDF por vez.",
+  "invalid": "Não foi possível abrir este arquivo como PDF. Tente usar outra cópia.",
+  "encrypted": "Desbloqueie este PDF protegido por senha antes de convertê-lo.",
+  "xfa": "Este PDF usa um formulário XFA. Abra o arquivo em um leitor que exiba o formulário e salve uma cópia em PDF padrão antes de convertê-lo.",
+  "failed": "Não foi possível converter o PDF. Tente usar outra cópia.",
+  "checkFailed": "A cópia de arquivamento não passou nas verificações do padrão selecionado."
+}

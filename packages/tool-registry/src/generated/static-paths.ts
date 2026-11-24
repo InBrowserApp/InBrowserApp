@@ -20702,6 +20702,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-to-pdfa-converter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "de",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "en",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "es",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "he",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "id",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "it",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "no",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "th",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-viewer",
     language: "ar",
   },

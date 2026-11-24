@@ -1,0 +1,23 @@
+{
+  "choosePdf": "PDF kiezen",
+  "dropHint": "Of sleep het bestand hierheen",
+  "changePdf": "Andere PDF kiezen",
+  "standard": "PDF/A-standaard",
+  "part1": "Kies dit als je archief of indieningsportaal PDF/A-1b vereist.",
+  "part2": "Aanbevolen voor de meeste archieven, tenzij een andere standaard vereist is.",
+  "appearance": "De archiefkopie bewaart de pagina’s als afbeeldingen. Tekstselectie, links en bijlagen verdwijnen.",
+  "convert": "Omzetten naar PDF/A",
+  "cancel": "Annuleren",
+  "opening": "PDF openen…",
+  "rendering": "Pagina {page} van {total} omzetten…",
+  "checking": "Archiefkopie controleren…",
+  "ready": "Archiefkopie heeft de controles doorstaan",
+  "download": "PDF/A downloaden",
+  "privacy": "Je PDF blijft op je apparaat.",
+  "oneFile": "Kies één PDF tegelijk.",
+  "invalid": "Dit bestand kon niet worden geopend als PDF. Probeer een andere kopie.",
+  "encrypted": "Ontgrendel deze met een wachtwoord beveiligde PDF voordat je hem omzet.",
+  "xfa": "Deze PDF bevat een XFA-formulier. Open het bestand in een PDF-lezer die het formulier weergeeft en sla een standaard-pdf op voordat je gaat converteren.",
+  "failed": "De PDF kon niet worden omgezet. Probeer een andere kopie.",
+  "checkFailed": "De archiefkopie heeft de controles voor de gekozen standaard niet doorstaan."
+}

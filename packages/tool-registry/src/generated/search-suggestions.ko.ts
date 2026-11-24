@@ -1129,6 +1129,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF를 PDF/A로 변환",
+    slug: "pdf-to-pdfa-converter",
+  },
+  {
+    category: "pdf",
     name: "PDF 뷰어",
     slug: "pdf-viewer",
   },

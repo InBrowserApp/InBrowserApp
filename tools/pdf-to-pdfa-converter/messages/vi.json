@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Chọn tệp PDF",
+  "dropHint": "Hoặc kéo và thả vào đây",
+  "changePdf": "Đổi tệp PDF",
+  "standard": "Tiêu chuẩn PDF/A",
+  "part1": "Chọn nếu cơ quan lưu trữ hoặc cổng nộp hồ sơ yêu cầu PDF/A-1b.",
+  "part2": "Phù hợp với hầu hết nhu cầu lưu trữ, trừ khi có yêu cầu về tiêu chuẩn khác.",
+  "appearance": "Bản lưu trữ giữ nguyên hình thức trang dưới dạng ảnh. Văn bản không còn chọn được. Liên kết và tệp đính kèm sẽ bị loại bỏ.",
+  "convert": "Chuyển sang PDF/A",
+  "cancel": "Hủy",
+  "opening": "Đang mở PDF…",
+  "rendering": "Đang chuyển đổi trang {page} trên {total}…",
+  "checking": "Đang kiểm tra bản lưu trữ…",
+  "ready": "Bản lưu trữ đã qua kiểm tra",
+  "download": "Tải PDF/A",
+  "privacy": "Tệp PDF của bạn được giữ trên thiết bị.",
+  "oneFile": "Mỗi lần chỉ chọn một tệp PDF.",
+  "invalid": "Không thể mở tệp này dưới dạng PDF. Hãy thử bản sao khác.",
+  "encrypted": "Hãy mở khóa tệp PDF được bảo vệ bằng mật khẩu trước khi chuyển đổi.",
+  "xfa": "Tệp PDF này dùng biểu mẫu XFA. Hãy mở tệp bằng trình đọc hiển thị được biểu mẫu và lưu một bản PDF thông thường trước khi chuyển đổi.",
+  "failed": "Không thể chuyển đổi tệp PDF. Hãy thử bản sao khác.",
+  "checkFailed": "Bản lưu trữ chưa đạt yêu cầu kiểm tra theo tiêu chuẩn đã chọn."
+}
