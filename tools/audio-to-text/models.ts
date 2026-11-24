@@ -56,11 +56,17 @@ const QWEN_TIMED_LANGUAGES = "zh yue en fr de it ja ko pt ru es".split(" ")
 const MODELS = {
   ...WHISPER_MODELS,
   senseVoice: {
-    name: "SenseVoiceSmall",
+    name: "SenseVoiceSmall (CPU)",
     repository:
       "csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2025-09-09",
     revision: "355f4d4884d8afd08aef04b9007a8556d7b463b2",
     sizes: { int8: 265 },
+  },
+  senseVoiceGpu: {
+    name: "SenseVoiceSmall (WebGPU)",
+    repository: "neavo/SenseVoiceSmall-ONNX-WebGPU-W8A32",
+    revision: "a212f4c6549d5af5ff3dc5e7e71c2d1a7b4fd5ce",
+    sizes: { int8: 290 },
   },
   qwenPlain: { name: "Qwen3-ASR 0.6B", sizes: { int8: 1015, q4: 1339 } },
   qwenTimed: { name: "Qwen3-ASR 0.6B", sizes: { int8: 2111, q4: 2414 } },
@@ -88,6 +94,7 @@ function getSpokenLanguages(lang: string) {
 function supportsLanguage(model: ModelId, code: string) {
   switch (model) {
     case "senseVoice":
+    case "senseVoiceGpu":
       return (
         !code || SENSE_VOICE_LANGUAGES.some((supported) => supported === code)
       )

@@ -8,24 +8,36 @@ import type {
   TranscriptionResponse,
 } from "../worker-messages"
 
-function send(message: TranscriptionResponse) {
-  self.postMessage(message)
+function send(message: TranscriptionResponse, transfer: Transferable[] = []) {
+  self.postMessage(message, { transfer })
 }
 
 self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
-  const { audio, language } = data
+  const { audio, language, model, cpuOnly } = data
   if (!audio.some((sample) => sample !== 0)) {
     send({ type: "done", segments: [] })
     return
   }
+  const tryGpu = model === "senseVoiceGpu" && !cpuOnly
   let stage: "modelError" | "transcriptionError" = "modelError"
-  send({ type: "loading", backend: "wasm" })
   try {
-    const { recognizer, vad } = await loadRecognizer(language, (progress) => {
-      send({ type: "loading", backend: "wasm", progress })
-    })
+    const gpu =
+      tryGpu && "gpu" in navigator
+        ? await (await import("./sense-voice-webgpu")).findSenseVoiceGpu()
+        : undefined
+    if (tryGpu && !gpu) {
+      send({ type: "retry", audio }, [audio.buffer])
+      return
+    }
+    const backend = gpu ? "webgpu" : "wasm"
+    send({ type: "loading", backend })
+    const { engine, vad } = await loadRecognizer(
+      language,
+      (progress) => send({ type: "loading", backend, progress }),
+      gpu
+    )
     stage = "transcriptionError"
-    send({ type: "transcribing", backend: "wasm", progress: 0 })
+    send({ type: "transcribing", backend, progress: 0 })
     const duration = audio.length / SAMPLE_RATE
     const segments: Segment[] = []
     const started = performance.now()
@@ -33,22 +45,14 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
       for (const { passages, progress } of speechUpdates(audio, vad)) {
         const previousCount = segments.length
         for (const { samples, start } of passages) {
-          const stream = recognizer.createStream()
-          try {
-            stream.acceptWaveform(SAMPLE_RATE, samples)
-            recognizer.decode(stream)
-            const { text, timestamps }: { text: string; timestamps: number[] } =
-              recognizer.getResult(stream)
-            const startSeconds = start / SAMPLE_RATE
-            const endSeconds = (start + samples.length) / SAMPLE_RATE
-            const timestamp: [number, number] = [
-              startSeconds + Math.max(0, timestamps[0] ?? 0),
-              endSeconds,
-            ]
-            segments.push(...toSegments([{ text, timestamp }], duration))
-          } finally {
-            stream.free()
-          }
+          const recognized = await engine.recognize(samples)
+          const timestamp: [number, number] = [
+            start / SAMPLE_RATE + recognized.startSeconds,
+            (start + samples.length) / SAMPLE_RATE,
+          ]
+          segments.push(
+            ...toSegments([{ text: recognized.text, timestamp }], duration)
+          )
         }
 
         const hasNewPassage = previousCount !== segments.length
@@ -59,7 +63,7 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
             : undefined
         send({
           type: "transcribing",
-          backend: "wasm",
+          backend,
           progress,
           etaSeconds,
           partialSegments: hasNewPassage ? segments : undefined,
@@ -67,10 +71,11 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
       }
     } finally {
       vad.free()
-      recognizer.free()
+      await engine.release()
     }
     send({ type: "done", segments })
   } catch {
-    send({ type: "error", stage })
+    if (tryGpu) send({ type: "retry", audio }, [audio.buffer])
+    else send({ type: "error", stage })
   }
 }

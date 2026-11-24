@@ -24,6 +24,9 @@ The INT8 conversion uses ASLP-lab's Cantonese-tuned SenseVoiceSmall from
 WSYue-ASR, published by ASLP-lab under the Apache License 2.0.
 Fine-tuned model: https://huggingface.co/ASLP-lab/WSYue-ASR/tree/main/sensevoice_small_yue
 INT8 conversion: https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2025-09-09
+The WebGPU option uses neavo's weight-only INT8 conversion of sherpa-onnx's
+export of the original SenseVoiceSmall checkpoint.
+WebGPU conversion: https://huggingface.co/neavo/SenseVoiceSmall-ONNX-WebGPU-W8A32/tree/a212f4c6549d5af5ff3dc5e7e71c2d1a7b4fd5ce
 
 The SenseVoiceSmall worker includes Sherpaw and sherpa-onnx under the Apache
 License 2.0 and downloads Silero VAD under the MIT License.

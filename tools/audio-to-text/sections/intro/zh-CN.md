@@ -8,7 +8,7 @@
 
 清晰的录音或初次转写可以使用 **Whisper Base**。**Whisper Small** 有助于识别口音和对话。**Whisper Large V3 Turbo** 适合有噪声或听不清的录音，但下载文件更大，占用的内存也更多。Whisper 模型支持将多种语言转写为原语言文字。**SenseVoiceSmall** 支持普通话、粤语、英语、日语和韩语。 **Qwen3-ASR 0.6B** 支持纯文本转写，也可对齐时间戳以供回放和制作字幕；对齐时会额外下载一个模型。纯文本文字稿可导出为 TXT。 Qwen 识别时优先使用 WebGPU，不可用时回退到 CPU；时间戳对齐在 CPU 上运行。
 
-当浏览器和显卡支持时，Whisper 使用 WebGPU 加速。首次运行会下载所选模型；浏览器可以复用其缓存中保留的模型文件。下载大小和处理时间取决于模型和设备。录音在设备上解码和转写，模型下载不包含你的音频。SenseVoiceSmall 通过 WebAssembly 在设备的 CPU 上本地运行。如果 WebGPU 不可用，Whisper 会通过 WebAssembly 回退到 CPU 运行。
+当浏览器和显卡支持时，Whisper 使用 WebGPU 加速。首次运行会下载所选模型；浏览器可以复用其缓存中保留的模型文件。下载大小和处理时间取决于模型和设备。录音在设备上解码和转写，模型下载不包含你的音频。**SenseVoiceSmall (CPU)** 针对粤语做了优化，通过 WebAssembly 在设备上运行。**SenseVoiceSmall (WebGPU)** 使用原始模型的另一种量化版本，需要时会切换到 CPU 版本。如果 WebGPU 不可用，Whisper 会通过 WebAssembly 回退到 CPU 运行。
 
 ## 导出带时间戳的文字稿或字幕
 

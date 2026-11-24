@@ -84,4 +84,4 @@ function modelDownloader(
 }
 
 export { modelDownloader }
-export type { DownloadModelAsset }
+export type { DownloadModelAsset, ModelAsset }
