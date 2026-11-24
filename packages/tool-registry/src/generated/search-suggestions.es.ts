@@ -83,32 +83,32 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "asciidoc-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Normalizador de sonoridad de audio",
     slug: "audio-loudness-normalizer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Grabadora de audio",
     slug: "audio-recorder",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Eliminar silencios del audio",
     slug: "audio-silence-remover",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Analizador de espectro de audio",
     slug: "audio-spectrum-analyzer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Audio a texto",
     slug: "audio-to-text",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Recortador y unificador de audio",
     slug: "audio-trimmer-merger",
   },
@@ -228,17 +228,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Detector de BPM",
     slug: "bpm-detector",
   },
   {
-    category: "document",
+    category: "diagram",
     name: "Conversor de BPMN a PDF",
     slug: "bpmn-to-pdf-converter",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Visor BPMN",
     slug: "bpmn-viewer",
   },
@@ -268,7 +268,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Lector de cómics CB7",
     slug: "cb7-reader",
   },
@@ -278,17 +278,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cbor-messagepack-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Lector de cómics CBR",
     slug: "cbr-reader",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Lector de cómics CBZ",
     slug: "cbz-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Conversor de CBZ a PDF",
     slug: "cbz-to-pdf-converter",
   },
@@ -403,12 +403,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Editor de CSV",
     slug: "csv-editor",
   },
   {
-    category: "developer",
+    category: "spreadsheet",
     name: "Conversor de CSV y Excel a SQLite",
     slug: "csv-excel-to-sqlite",
   },
@@ -418,7 +418,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-to-json-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Conversor de CSV / TSV a XLSX",
     slug: "csv-to-xlsx-converter",
   },
@@ -468,7 +468,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dmarc-report-viewer",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Convertidor de latitud y longitud a DMS",
     slug: "dms-coordinate-converter",
   },
@@ -523,7 +523,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Convertidor de libros electrónicos a TXT / HTML",
     slug: "ebook-text-html-export",
   },
@@ -558,22 +558,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Transformador de coordenadas EPSG",
     slug: "epsg-coordinate-transformer",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Editor de metadatos EPUB",
     slug: "epub-metadata-editor",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Lector de EPUB",
     slug: "epub-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Convertidor de EPUB a PDF",
     slug: "epub-to-pdf-converter",
   },
@@ -593,12 +593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "favicon-assets-generator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Lector de FB2",
     slug: "fb2-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Convertidor de FB2 a EPUB",
     slug: "fb2-to-epub-converter",
   },
@@ -628,7 +628,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Visor de GeoJSON",
     slug: "geojson-viewer",
   },
@@ -663,12 +663,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Visor GPX con perfil de elevación",
     slug: "gpx-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Vista previa de Graphviz DOT",
     slug: "graphviz-dot-previewer",
   },
@@ -923,7 +923,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "json-to-csv-converter",
   },
   {
-    category: "json",
+    category: "spreadsheet",
     name: "Conversor de JSON a Excel",
     slug: "json-to-excel-converter",
   },
@@ -978,7 +978,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Convertidor KML ↔ GeoJSON",
     slug: "kml-geojson-converter",
   },
@@ -1073,17 +1073,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "md5-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Visor de información multimedia",
     slug: "media-info-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Vista previa de Mermaid",
     slug: "mermaid-previewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Conversor de Mermaid a PDF",
     slug: "mermaid-to-pdf-converter",
   },
@@ -1108,12 +1108,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mime-type-lookup",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Lector de MOBI y AZW3",
     slug: "mobi-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Convertidor de MOBI / AZW3 a EPUB",
     slug: "mobi-to-epub-converter",
   },
@@ -1163,12 +1163,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "number-base-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Conversor de Numbers a XLSX",
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Conversor de ODS a XLSX",
     slug: "ods-to-xlsx-converter",
   },
@@ -1448,7 +1448,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "s3-file-manager",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Grabador de pantalla",
     slug: "screen-recorder",
   },
@@ -1553,7 +1553,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "spf-record-validator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Exportador de datos de hojas de cálculo",
     slug: "spreadsheet-data-export",
   },
@@ -1593,12 +1593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "step-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Separador de canales estéreo",
     slug: "stereo-channel-splitter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Cronómetro",
     slug: "stopwatch",
   },
@@ -1718,7 +1718,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unit-converter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Convertidor de Marca de Tiempo Unix",
     slug: "unix-timestamp-converter",
   },
@@ -1813,22 +1813,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vcard-generator",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Extractor de audio de video",
     slug: "video-audio-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Extractor de fotogramas de video",
     slug: "video-frame-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Convertir video a GIF",
     slug: "video-to-gif",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Recortar video",
     slug: "video-trimmer",
   },
@@ -1848,22 +1848,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Convertidor WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Conversor de XLS a XLSX",
     slug: "xls-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Conversor de XLSX a ODS",
     slug: "xlsx-to-ods-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Visor de hojas de cálculo",
     slug: "xlsx-viewer",
   },

@@ -9,7 +9,12 @@ import ToolList from "@/components/pages/tools-directory/tool-list.astro"
 import { rankToolEntries } from "@/components/pages/tools-directory/search-core"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import { countToolsByCategory, getCategoryLabel, toDirectoryEntries } from "@/lib/tool-directory"
+import {
+  countToolsByCategory,
+  getCategoryLabel,
+  getToolCategories,
+  toDirectoryEntries,
+} from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
@@ -21,7 +26,7 @@ const { language, category } = Astro.props
 const { catalog } = loadSiteMessages(language)
 const categoryCounts = countToolsByCategory(toolSearchIndex)
 const selectedTools = category
-  ? toolSearchIndex.filter((entry) => entry.category === category)
+  ? toolSearchIndex.filter((entry) => getToolCategories(entry).includes(category))
   : toolSearchIndex
 
 if (category && selectedTools.length === 0) {

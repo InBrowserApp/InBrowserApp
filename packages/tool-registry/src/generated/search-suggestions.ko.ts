@@ -83,32 +83,32 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "asciidoc-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "오디오 라우드니스 정규화",
     slug: "audio-loudness-normalizer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "오디오 녹음기",
     slug: "audio-recorder",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "오디오 무음 제거",
     slug: "audio-silence-remover",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "오디오 스펙트럼 분석기",
     slug: "audio-spectrum-analyzer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "음성을 텍스트로 변환",
     slug: "audio-to-text",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "오디오 자르기 및 합치기",
     slug: "audio-trimmer-merger",
   },
@@ -228,17 +228,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "BPM 측정기",
     slug: "bpm-detector",
   },
   {
-    category: "document",
+    category: "diagram",
     name: "BPMN PDF 변환기",
     slug: "bpmn-to-pdf-converter",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "BPMN 뷰어",
     slug: "bpmn-viewer",
   },
@@ -268,7 +268,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CB7 만화 리더",
     slug: "cb7-reader",
   },
@@ -278,17 +278,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cbor-messagepack-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CBR 만화 리더",
     slug: "cbr-reader",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CBZ 만화 리더",
     slug: "cbz-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "CBZ PDF 변환기",
     slug: "cbz-to-pdf-converter",
   },
@@ -403,12 +403,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "CSV 편집기",
     slug: "csv-editor",
   },
   {
-    category: "developer",
+    category: "spreadsheet",
     name: "CSV·Excel을 SQLite로 변환",
     slug: "csv-excel-to-sqlite",
   },
@@ -418,7 +418,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-to-json-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "CSV / TSV → XLSX 변환기",
     slug: "csv-to-xlsx-converter",
   },
@@ -468,7 +468,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dmarc-report-viewer",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "위도·경도 도분초 변환기",
     slug: "dms-coordinate-converter",
   },
@@ -523,7 +523,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "전자책 TXT / HTML 변환기",
     slug: "ebook-text-html-export",
   },
@@ -558,22 +558,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "EPSG 좌표 변환기",
     slug: "epsg-coordinate-transformer",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB 메타데이터 편집기",
     slug: "epub-metadata-editor",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB 리더",
     slug: "epub-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB PDF 변환기",
     slug: "epub-to-pdf-converter",
   },
@@ -593,12 +593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "favicon-assets-generator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "FB2 리더",
     slug: "fb2-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "FB2 EPUB 변환기",
     slug: "fb2-to-epub-converter",
   },
@@ -628,7 +628,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "GeoJSON 뷰어",
     slug: "geojson-viewer",
   },
@@ -663,12 +663,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "GPX 뷰어와 고도 프로파일",
     slug: "gpx-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Graphviz DOT 미리보기",
     slug: "graphviz-dot-previewer",
   },
@@ -923,7 +923,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "json-to-csv-converter",
   },
   {
-    category: "json",
+    category: "spreadsheet",
     name: "JSON Excel 변환기",
     slug: "json-to-excel-converter",
   },
@@ -978,7 +978,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "KML ↔ GeoJSON 변환기",
     slug: "kml-geojson-converter",
   },
@@ -1073,17 +1073,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "md5-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "video",
     name: "미디어 정보 뷰어",
     slug: "media-info-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Mermaid 미리보기",
     slug: "mermaid-previewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Mermaid PDF 변환기",
     slug: "mermaid-to-pdf-converter",
   },
@@ -1108,12 +1108,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mime-type-lookup",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "MOBI 및 AZW3 리더",
     slug: "mobi-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "MOBI / AZW3 EPUB 변환기",
     slug: "mobi-to-epub-converter",
   },
@@ -1163,12 +1163,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "number-base-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Numbers → XLSX 변환기",
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "ODS → XLSX 변환기",
     slug: "ods-to-xlsx-converter",
   },
@@ -1448,7 +1448,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "s3-file-manager",
   },
   {
-    category: "misc",
+    category: "video",
     name: "화면 녹화기",
     slug: "screen-recorder",
   },
@@ -1553,7 +1553,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "spf-record-validator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "스프레드시트 데이터 내보내기",
     slug: "spreadsheet-data-export",
   },
@@ -1593,12 +1593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "step-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "스테레오 좌우 채널 분리",
     slug: "stereo-channel-splitter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "스톱워치",
     slug: "stopwatch",
   },
@@ -1718,7 +1718,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unit-converter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Unix 타임스탬프 변환기",
     slug: "unix-timestamp-converter",
   },
@@ -1813,22 +1813,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vcard-generator",
   },
   {
-    category: "misc",
+    category: "video",
     name: "동영상 오디오 추출기",
     slug: "video-audio-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "동영상 프레임 추출기",
     slug: "video-frame-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "동영상을 GIF로 변환",
     slug: "video-to-gif",
   },
   {
-    category: "misc",
+    category: "video",
     name: "동영상 자르기",
     slug: "video-trimmer",
   },
@@ -1848,22 +1848,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
-    category: "json",
+    category: "geo",
     name: "WKT ↔ GeoJSON 변환기",
     slug: "wkt-geojson-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "XLS → XLSX 변환기",
     slug: "xls-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "XLSX → ODS 변환기",
     slug: "xlsx-to-ods-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "스프레드시트 뷰어",
     slug: "xlsx-viewer",
   },

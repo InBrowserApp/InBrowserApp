@@ -1812,6 +1812,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "asciidoc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["asciidoc", "adoc", "pdf", "document", "converter"],
     locales: {
@@ -2057,7 +2058,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-loudness-normalizer",
-    category: "misc",
+    category: "audio",
     icon: "volume-2",
     tags: [
       "audio",
@@ -2189,7 +2190,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-recorder",
-    category: "misc",
+    category: "audio",
     icon: "mic",
     tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
     locales: {
@@ -2308,7 +2309,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-silence-remover",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
     locales: {
@@ -2431,7 +2432,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-spectrum-analyzer",
-    category: "misc",
+    category: "audio",
     icon: "audio-lines",
     tags: [
       "audio",
@@ -2563,7 +2564,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-to-text",
-    category: "misc",
+    category: "audio",
+    secondaryCategories: ["text"],
     icon: "captions",
     tags: [
       "audio",
@@ -2700,7 +2702,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "audio-trimmer-merger",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: [
       "audio",
@@ -5826,7 +5828,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "bpm-detector",
-    category: "misc",
+    category: "audio",
     icon: "activity",
     tags: ["audio", "bpm", "tempo", "beat", "rhythm", "music", "song", "dj"],
     locales: {
@@ -5949,7 +5951,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "bpmn-to-pdf-converter",
-    category: "document",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "bpmn",
@@ -6081,7 +6084,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "bpmn-viewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "workflow",
     tags: [
       "bpmn",
@@ -6337,6 +6341,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "caj-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "caj",
@@ -6601,6 +6606,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "camera",
     category: "misc",
+    secondaryCategories: ["image", "video"],
     icon: "camera",
     tags: ["camera", "photo", "video", "record", "capture", "selfie"],
     locales: {
@@ -6854,7 +6860,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "cb7-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
     locales: {
@@ -7109,7 +7115,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "cbr-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cbr", "rar", "comic", "manga", "reader"],
     locales: {
@@ -7232,7 +7238,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "cbz-reader",
-    category: "image",
+    category: "ebook",
     icon: "image",
     tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
     locales: {
@@ -7355,7 +7361,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "cbz-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["cbz", "comic", "archive", "pdf", "converter", "offline"],
     locales: {
@@ -10286,7 +10293,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "csv-editor",
-    category: "document",
+    category: "spreadsheet",
     icon: "table-2",
     tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
     locales: {
@@ -10409,7 +10416,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "csv-excel-to-sqlite",
-    category: "developer",
+    category: "spreadsheet",
+    secondaryCategories: ["developer"],
     icon: "database",
     tags: [
       "csv",
@@ -10544,6 +10552,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "csv-to-json-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "csv", "json", "converter"],
     locales: {
@@ -10666,7 +10675,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "csv-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["csv", "tsv", "xlsx", "excel", "spreadsheet", "converter"],
     locales: {
@@ -11930,7 +11939,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "dms-coordinate-converter",
-    category: "misc",
+    category: "geo",
     icon: "compass",
     tags: [
       "gps",
@@ -12321,6 +12330,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "doc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
     locales: {
@@ -12945,6 +12955,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "docx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "docx",
@@ -13339,7 +13350,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "ebook-text-html-export",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "ebook",
@@ -13729,6 +13740,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "email-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "mail",
     tags: ["email", "eml", "emlx", "msg", "pdf", "converter"],
     locales: {
@@ -14232,7 +14244,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "epsg-coordinate-transformer",
-    category: "misc",
+    category: "geo",
     icon: "globe",
     tags: [
       "epsg",
@@ -14365,7 +14377,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "epub-metadata-editor",
-    category: "document",
+    category: "ebook",
     icon: "file-cog",
     tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
     locales: {
@@ -14488,7 +14500,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "epub-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["epub", "ebook", "book", "reader", "viewer", "offline", "document"],
     locales: {
@@ -14611,7 +14623,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "epub-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "book-open",
     tags: [
       "epub",
@@ -14866,6 +14879,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "exif-viewer",
     category: "image",
+    secondaryCategories: ["geo"],
     icon: "image",
     tags: ["image", "exif", "metadata", "photo", "camera", "gps", "privacy"],
     locales: {
@@ -15119,7 +15133,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "fb2-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "fb2",
@@ -15252,7 +15266,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "fb2-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "fb2", "fbz", "fictionbook", "epub", "converter"],
     locales: {
@@ -16024,7 +16038,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "geojson-viewer",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "map",
     tags: [
       "geojson",
@@ -16897,7 +16912,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "gpx-viewer",
-    category: "misc",
+    category: "geo",
     icon: "route",
     tags: [
       "gpx",
@@ -17030,7 +17045,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "graphviz-dot-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "network",
     tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
     locales: {
@@ -18180,6 +18196,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "html-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["html", "htm", "xhtml", "pdf", "document", "converter"],
     locales: {
@@ -18533,6 +18550,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "hwp-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["hwp", "hwpx", "hangul", "hancom", "pdf", "document", "converter"],
     locales: {
@@ -19141,6 +19159,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "ics-csv-converter",
     category: "time",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: [
       "ics",
@@ -20933,6 +20952,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "image-to-pdf-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-text",
     tags: [
       "pdf",
@@ -21943,6 +21963,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "ip-info-lookup",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "dns", "domain", "geolocation", "isp", "asn"],
     locales: {
@@ -23265,6 +23286,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "json-to-csv-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "json", "csv", "converter"],
     locales: {
@@ -23387,7 +23409,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "json-to-excel-converter",
-    category: "json",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "table-2",
     tags: [
       "json",
@@ -24795,7 +24818,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "kml-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "file-json-2",
     tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
     locales: {
@@ -26791,6 +26815,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "markdown-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["markdown", "md", "pdf", "document", "converter"],
     locales: {
@@ -27159,7 +27184,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "media-info-viewer",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "file-text",
     tags: [
       "audio",
@@ -27290,7 +27316,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "mermaid-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "blocks",
     tags: [
       "mermaid",
@@ -27422,7 +27449,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "mermaid-to-pdf-converter",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "mermaid",
@@ -27678,6 +27706,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "mhtml-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["mhtml", "mht", "pdf", "web archive", "document", "converter"],
     locales: {
@@ -28029,7 +28058,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "mobi-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "mobi",
@@ -28164,7 +28193,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "mobi-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "mobi", "azw", "azw3", "prc", "epub", "converter"],
     locales: {
@@ -28808,6 +28837,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "my-ip-address",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "ipv4", "ipv6", "webrtc", "geolocation", "isp"],
     locales: {
@@ -29447,7 +29477,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "numbers-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["numbers", "xlsx", "apple", "excel", "spreadsheet", "converter"],
     locales: {
@@ -29570,7 +29600,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "ods-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -29694,6 +29724,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "odt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "odt",
@@ -29948,6 +29979,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "ofd-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["ofd", "pdf", "document", "converter", "invoice"],
     locales: {
@@ -31080,6 +31112,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "pdf-image-extractor",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-image",
     tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
     locales: {
@@ -31581,6 +31614,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "pdf-ocr",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "scan-text",
     tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
     locales: {
@@ -32203,6 +32237,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "pdf-text-extractor",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "file-text",
     tags: ["pdf", "text", "extractor", "document", "offline"],
     locales: {
@@ -32325,6 +32360,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "pdf-to-image-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "image",
     tags: ["pdf", "image", "converter", "export", "offline"],
     locales: {
@@ -33316,6 +33352,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "ppt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "ppt",
@@ -33719,6 +33756,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "pptx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "pptx",
@@ -36292,6 +36330,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "rtf-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["rtf", "rich-text", "pdf", "document", "converter"],
     locales: {
@@ -36660,7 +36699,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "screen-recorder",
-    category: "misc",
+    category: "video",
     icon: "video",
     tags: [
       "screen",
@@ -39352,7 +39391,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "spreadsheet-data-export",
-    category: "document",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "file-text",
     tags: [
       "xlsx",
@@ -39735,6 +39775,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "sqlite-viewer",
     category: "developer",
+    secondaryCategories: ["spreadsheet"],
     icon: "layout-grid",
     tags: [
       "sqlite",
@@ -40401,7 +40442,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
-    category: "misc",
+    category: "audio",
     icon: "split",
     tags: [
       "audio",
@@ -40534,7 +40575,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "stopwatch",
-    category: "developer",
+    category: "time",
     icon: "wrench",
     tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
     locales: {
@@ -40651,6 +40692,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "subtitle-converter",
     category: "text",
+    secondaryCategories: ["video"],
     icon: "captions",
     tags: [
       "subtitle",
@@ -41018,6 +41060,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "svg-to-pdf-converter",
     category: "image",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
     locales: {
@@ -42630,6 +42673,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "typst-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["typst", "typ", "pdf", "converter", "export", "math", "local"],
     locales: {
@@ -43505,7 +43549,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "unix-timestamp-converter",
-    category: "developer",
+    category: "time",
+    secondaryCategories: ["developer"],
     icon: "binary",
     tags: [
       "unix",
@@ -45722,6 +45767,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "vcard-csv-converter",
     category: "document",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
     locales: {
@@ -45974,7 +46020,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "video-audio-extractor",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "film",
     tags: [
       "video",
@@ -46110,7 +46157,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "video-frame-extractor",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -46244,7 +46292,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "video-to-gif",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -46376,7 +46425,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "video-trimmer",
-    category: "misc",
+    category: "video",
     icon: "scissors",
     tags: ["video", "trim", "cut", "clip", "mp4", "webm", "screen recording"],
     locales: {
@@ -46875,7 +46924,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "wkt-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "braces",
     tags: [
       "wkt",
@@ -47006,7 +47056,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "xls-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["xls", "xlsx", "excel", "spreadsheet", "converter", "local"],
     locales: {
@@ -47129,7 +47179,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "xlsx-to-ods-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -47252,7 +47302,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "xlsx-viewer",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: [
       "xlsx",

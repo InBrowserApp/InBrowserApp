@@ -73,6 +73,33 @@ describe("toolDefinitionSchema", () => {
     expect(result.success).toBe(true)
   })
 
+  test("accepts distinct secondary categories", () => {
+    const result = toolDefinitionSchema.parse({
+      category: "geo",
+      secondaryCategories: ["json", "developer"],
+      icon: "map",
+    })
+
+    expect(result.secondaryCategories).toEqual(["json", "developer"])
+  })
+
+  test.each([
+    { reason: "repeats the primary category", secondaryCategories: ["geo"] },
+    {
+      reason: "repeats a secondary category",
+      secondaryCategories: [" json ", "json"],
+    },
+    { reason: "uses an invalid slug", secondaryCategories: ["JSON & Data"] },
+  ])("rejects a list that $reason", ({ secondaryCategories }) => {
+    expect(
+      toolDefinitionSchema.safeParse({
+        category: "geo",
+        secondaryCategories,
+        icon: "map",
+      }).success
+    ).toBe(false)
+  })
+
   test("deduplicates tags", () => {
     const result = toolDefinitionSchema.parse({
       category: "text",

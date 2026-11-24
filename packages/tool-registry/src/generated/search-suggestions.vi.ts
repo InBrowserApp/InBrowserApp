@@ -83,32 +83,32 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "asciidoc-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Chuẩn hóa âm lượng (LUFS)",
     slug: "audio-loudness-normalizer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Trình ghi âm",
     slug: "audio-recorder",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Cắt khoảng lặng trong âm thanh",
     slug: "audio-silence-remover",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Phân tích phổ âm thanh",
     slug: "audio-spectrum-analyzer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Chuyển âm thanh thành văn bản",
     slug: "audio-to-text",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Cắt và ghép âm thanh",
     slug: "audio-trimmer-merger",
   },
@@ -228,17 +228,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Dò BPM",
     slug: "bpm-detector",
   },
   {
-    category: "document",
+    category: "diagram",
     name: "Trình chuyển BPMN sang PDF",
     slug: "bpmn-to-pdf-converter",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Trình xem BPMN",
     slug: "bpmn-viewer",
   },
@@ -268,7 +268,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Trình đọc truyện tranh CB7",
     slug: "cb7-reader",
   },
@@ -278,17 +278,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cbor-messagepack-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Trình đọc truyện tranh CBR",
     slug: "cbr-reader",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Trình đọc truyện tranh CBZ",
     slug: "cbz-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình chuyển đổi CBZ sang PDF",
     slug: "cbz-to-pdf-converter",
   },
@@ -403,12 +403,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chỉnh sửa CSV",
     slug: "csv-editor",
   },
   {
-    category: "developer",
+    category: "spreadsheet",
     name: "Chuyển đổi CSV và Excel sang SQLite",
     slug: "csv-excel-to-sqlite",
   },
@@ -418,7 +418,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-to-json-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chuyển đổi CSV / TSV sang XLSX",
     slug: "csv-to-xlsx-converter",
   },
@@ -468,7 +468,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dmarc-report-viewer",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
     slug: "dms-coordinate-converter",
   },
@@ -523,7 +523,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình chuyển đổi sách điện tử sang TXT / HTML",
     slug: "ebook-text-html-export",
   },
@@ -558,22 +558,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Trình chuyển đổi tọa độ EPSG",
     slug: "epsg-coordinate-transformer",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình chỉnh sửa siêu dữ liệu EPUB",
     slug: "epub-metadata-editor",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình đọc EPUB",
     slug: "epub-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Chuyển EPUB sang PDF",
     slug: "epub-to-pdf-converter",
   },
@@ -593,12 +593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "favicon-assets-generator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình đọc FB2",
     slug: "fb2-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình chuyển đổi FB2 sang EPUB",
     slug: "fb2-to-epub-converter",
   },
@@ -628,7 +628,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Trình xem GeoJSON",
     slug: "geojson-viewer",
   },
@@ -663,12 +663,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Trình xem GPX và biểu đồ độ cao",
     slug: "gpx-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Trình xem trước Graphviz DOT",
     slug: "graphviz-dot-previewer",
   },
@@ -923,7 +923,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "json-to-csv-converter",
   },
   {
-    category: "json",
+    category: "spreadsheet",
     name: "Trình chuyển đổi JSON sang Excel",
     slug: "json-to-excel-converter",
   },
@@ -978,7 +978,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Trình chuyển đổi KML ↔ GeoJSON",
     slug: "kml-geojson-converter",
   },
@@ -1073,17 +1073,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "md5-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Trình xem thông tin đa phương tiện",
     slug: "media-info-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Trình xem trước Mermaid",
     slug: "mermaid-previewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Trình chuyển Mermaid sang PDF",
     slug: "mermaid-to-pdf-converter",
   },
@@ -1108,12 +1108,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mime-type-lookup",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình đọc MOBI & AZW3",
     slug: "mobi-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Trình chuyển đổi MOBI / AZW3 sang EPUB",
     slug: "mobi-to-epub-converter",
   },
@@ -1163,12 +1163,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "number-base-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chuyển đổi Numbers sang XLSX",
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chuyển đổi ODS sang XLSX",
     slug: "ods-to-xlsx-converter",
   },
@@ -1448,7 +1448,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "s3-file-manager",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Trình ghi màn hình",
     slug: "screen-recorder",
   },
@@ -1553,7 +1553,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "spf-record-validator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình xuất dữ liệu bảng tính",
     slug: "spreadsheet-data-export",
   },
@@ -1593,12 +1593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "step-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Tách kênh âm thanh stereo",
     slug: "stereo-channel-splitter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Đồng hồ bấm giờ",
     slug: "stopwatch",
   },
@@ -1718,7 +1718,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unit-converter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Bộ Chuyển Đổi Dấu Thời Gian Unix",
     slug: "unix-timestamp-converter",
   },
@@ -1813,22 +1813,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vcard-generator",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Trình trích xuất âm thanh từ video",
     slug: "video-audio-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Trình trích xuất khung hình từ video",
     slug: "video-frame-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Chuyển video thành GIF",
     slug: "video-to-gif",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Cắt video",
     slug: "video-trimmer",
   },
@@ -1848,22 +1848,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Trình chuyển đổi WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chuyển đổi XLS sang XLSX",
     slug: "xls-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình chuyển đổi XLSX sang ODS",
     slug: "xlsx-to-ods-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Trình xem bảng tính",
     slug: "xlsx-viewer",
   },

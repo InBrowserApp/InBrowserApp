@@ -83,32 +83,32 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "asciidoc-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Penyama Kelantangan Audio",
     slug: "audio-loudness-normalizer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Perakam Audio",
     slug: "audio-recorder",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Buang Jeda Senyap daripada Audio",
     slug: "audio-silence-remover",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Penganalisis Spektrum Audio",
     slug: "audio-spectrum-analyzer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Audio kepada Teks",
     slug: "audio-to-text",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Pemangkas & Penggabung Audio",
     slug: "audio-trimmer-merger",
   },
@@ -228,17 +228,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Pengesan BPM",
     slug: "bpm-detector",
   },
   {
-    category: "document",
+    category: "diagram",
     name: "Penukar BPMN ke PDF",
     slug: "bpmn-to-pdf-converter",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Pemapar BPMN",
     slug: "bpmn-viewer",
   },
@@ -268,7 +268,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Pembaca Komik CB7",
     slug: "cb7-reader",
   },
@@ -278,17 +278,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cbor-messagepack-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Pembaca Komik CBR",
     slug: "cbr-reader",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "Pembaca Komik CBZ",
     slug: "cbz-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penukar CBZ kepada PDF",
     slug: "cbz-to-pdf-converter",
   },
@@ -403,12 +403,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penyunting CSV",
     slug: "csv-editor",
   },
   {
-    category: "developer",
+    category: "spreadsheet",
     name: "Tukar CSV dan Excel kepada SQLite",
     slug: "csv-excel-to-sqlite",
   },
@@ -418,7 +418,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-to-json-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penukar CSV / TSV ke XLSX",
     slug: "csv-to-xlsx-converter",
   },
@@ -468,7 +468,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dmarc-report-viewer",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Penukar Latitud dan Longitud ↔ DMS",
     slug: "dms-coordinate-converter",
   },
@@ -523,7 +523,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penukar E-buku kepada TXT / HTML",
     slug: "ebook-text-html-export",
   },
@@ -558,22 +558,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Penukar Sistem Koordinat EPSG",
     slug: "epsg-coordinate-transformer",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penyunting Metadata EPUB",
     slug: "epub-metadata-editor",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Pembaca EPUB",
     slug: "epub-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penukar EPUB kepada PDF",
     slug: "epub-to-pdf-converter",
   },
@@ -593,12 +593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "favicon-assets-generator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Pembaca FB2",
     slug: "fb2-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penukar FB2 kepada EPUB",
     slug: "fb2-to-epub-converter",
   },
@@ -628,7 +628,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Pemapar GeoJSON",
     slug: "geojson-viewer",
   },
@@ -663,12 +663,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Pemapar GPX dan Profil Ketinggian",
     slug: "gpx-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Pratonton Graphviz DOT",
     slug: "graphviz-dot-previewer",
   },
@@ -923,7 +923,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "json-to-csv-converter",
   },
   {
-    category: "json",
+    category: "spreadsheet",
     name: "Penukar JSON ke Excel",
     slug: "json-to-excel-converter",
   },
@@ -978,7 +978,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Penukar KML ↔ GeoJSON",
     slug: "kml-geojson-converter",
   },
@@ -1073,17 +1073,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "md5-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Pemapar Maklumat Media",
     slug: "media-info-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Pratonton Mermaid",
     slug: "mermaid-previewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Penukar Mermaid ke PDF",
     slug: "mermaid-to-pdf-converter",
   },
@@ -1108,12 +1108,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mime-type-lookup",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Pembaca MOBI & AZW3",
     slug: "mobi-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "Penukar MOBI / AZW3 kepada EPUB",
     slug: "mobi-to-epub-converter",
   },
@@ -1163,12 +1163,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "number-base-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penukar Numbers ke XLSX",
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penukar ODS ke XLSX",
     slug: "ods-to-xlsx-converter",
   },
@@ -1448,7 +1448,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "s3-file-manager",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Perakam Skrin",
     slug: "screen-recorder",
   },
@@ -1553,7 +1553,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "spf-record-validator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Pengeksport Data Hamparan",
     slug: "spreadsheet-data-export",
   },
@@ -1593,12 +1593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "step-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Pemisah Saluran Audio Stereo",
     slug: "stereo-channel-splitter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Jam randik",
     slug: "stopwatch",
   },
@@ -1718,7 +1718,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unit-converter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Penukar Cap Masa Unix",
     slug: "unix-timestamp-converter",
   },
@@ -1813,22 +1813,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vcard-generator",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Pengekstrak Audio daripada Video",
     slug: "video-audio-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Pengekstrak Bingkai Video",
     slug: "video-frame-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Video ke GIF",
     slug: "video-to-gif",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Pemangkas Video",
     slug: "video-trimmer",
   },
@@ -1848,22 +1848,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
-    category: "json",
+    category: "geo",
     name: "Penukar WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penukar XLS ke XLSX",
     slug: "xls-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Penukar XLSX ke ODS",
     slug: "xlsx-to-ods-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Pemapar Hamparan",
     slug: "xlsx-viewer",
   },

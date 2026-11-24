@@ -83,32 +83,32 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "asciidoc-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Ses Yüksekliğini Normalleştirme",
     slug: "audio-loudness-normalizer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Ses Kaydedici",
     slug: "audio-recorder",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Ses Kaydından Sessizliği Kaldırma",
     slug: "audio-silence-remover",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Ses Spektrumu Analiz Aracı",
     slug: "audio-spectrum-analyzer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Sesi Metne Dönüştürme",
     slug: "audio-to-text",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Ses Kırpıcı ve Birleştirici",
     slug: "audio-trimmer-merger",
   },
@@ -228,17 +228,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "BPM Bulucu",
     slug: "bpm-detector",
   },
   {
-    category: "document",
+    category: "diagram",
     name: "BPMN’den PDF’ye Dönüştürücü",
     slug: "bpmn-to-pdf-converter",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "BPMN Görüntüleyici",
     slug: "bpmn-viewer",
   },
@@ -268,7 +268,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CB7 Çizgi Roman Okuyucu",
     slug: "cb7-reader",
   },
@@ -278,17 +278,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cbor-messagepack-converter",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CBR Çizgi Roman Okuyucu",
     slug: "cbr-reader",
   },
   {
-    category: "image",
+    category: "ebook",
     name: "CBZ Çizgi Roman Okuyucu",
     slug: "cbz-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "CBZ’den PDF’ye Dönüştürücü",
     slug: "cbz-to-pdf-converter",
   },
@@ -403,12 +403,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "CSV Düzenleyici",
     slug: "csv-editor",
   },
   {
-    category: "developer",
+    category: "spreadsheet",
     name: "CSV ve Excel'den SQLite'a Dönüştürücü",
     slug: "csv-excel-to-sqlite",
   },
@@ -418,7 +418,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-to-json-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "CSV / TSV’den XLSX’e Dönüştürücü",
     slug: "csv-to-xlsx-converter",
   },
@@ -468,7 +468,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dmarc-report-viewer",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "Enlem ve Boylam için DMS Dönüştürücü",
     slug: "dms-coordinate-converter",
   },
@@ -523,7 +523,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "E-kitaptan TXT / HTML’ye Dönüştürücü",
     slug: "ebook-text-html-export",
   },
@@ -558,22 +558,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "EPSG Koordinat Dönüştürücü",
     slug: "epsg-coordinate-transformer",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB Meta Veri Düzenleyicisi",
     slug: "epub-metadata-editor",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB Okuyucu",
     slug: "epub-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "EPUB'dan PDF'ye Dönüştürücü",
     slug: "epub-to-pdf-converter",
   },
@@ -593,12 +593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "favicon-assets-generator",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "FB2 Okuyucu",
     slug: "fb2-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "FB2’den EPUB’a Dönüştürücü",
     slug: "fb2-to-epub-converter",
   },
@@ -628,7 +628,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "GeoJSON Görüntüleyici",
     slug: "geojson-viewer",
   },
@@ -663,12 +663,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
-    category: "misc",
+    category: "geo",
     name: "GPX Görüntüleyici ve Yükseklik Profili",
     slug: "gpx-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Graphviz DOT Önizleyici",
     slug: "graphviz-dot-previewer",
   },
@@ -923,7 +923,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "json-to-csv-converter",
   },
   {
-    category: "json",
+    category: "spreadsheet",
     name: "JSON’dan Excel’e Dönüştürücü",
     slug: "json-to-excel-converter",
   },
@@ -978,7 +978,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
-    category: "json",
+    category: "geo",
     name: "KML ↔ GeoJSON Dönüştürücü",
     slug: "kml-geojson-converter",
   },
@@ -1073,17 +1073,17 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "md5-hash-text-or-file",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Medya Bilgisi Görüntüleyici",
     slug: "media-info-viewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Mermaid Önizleyici",
     slug: "mermaid-previewer",
   },
   {
-    category: "developer",
+    category: "diagram",
     name: "Mermaid’den PDF’ye Dönüştürücü",
     slug: "mermaid-to-pdf-converter",
   },
@@ -1108,12 +1108,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mime-type-lookup",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "MOBI ve AZW3 Okuyucu",
     slug: "mobi-reader",
   },
   {
-    category: "document",
+    category: "ebook",
     name: "MOBI / AZW3’ten EPUB’a Dönüştürücü",
     slug: "mobi-to-epub-converter",
   },
@@ -1163,12 +1163,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "number-base-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Numbers’tan XLSX’e Dönüştürücü",
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "ODS’den XLSX’e Dönüştürücü",
     slug: "ods-to-xlsx-converter",
   },
@@ -1448,7 +1448,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "s3-file-manager",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Ekran Kaydedici",
     slug: "screen-recorder",
   },
@@ -1553,7 +1553,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "spf-record-validator",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Elektronik Tablo Verilerini Dışa Aktarma Aracı",
     slug: "spreadsheet-data-export",
   },
@@ -1593,12 +1593,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "step-viewer",
   },
   {
-    category: "misc",
+    category: "audio",
     name: "Stereo Kanal Ayırıcı",
     slug: "stereo-channel-splitter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Kronometre",
     slug: "stopwatch",
   },
@@ -1718,7 +1718,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unit-converter",
   },
   {
-    category: "developer",
+    category: "time",
     name: "Unix Zaman Damgası Dönüştürücü",
     slug: "unix-timestamp-converter",
   },
@@ -1813,22 +1813,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vcard-generator",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Videodan Ses Çıkarma",
     slug: "video-audio-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Videodan Kare Çıkarma",
     slug: "video-frame-extractor",
   },
   {
-    category: "image",
+    category: "video",
     name: "Videodan GIF'e Dönüştürücü",
     slug: "video-to-gif",
   },
   {
-    category: "misc",
+    category: "video",
     name: "Video Kırpıcı",
     slug: "video-trimmer",
   },
@@ -1848,22 +1848,22 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
-    category: "json",
+    category: "geo",
     name: "WKT ↔ GeoJSON Dönüştürücü",
     slug: "wkt-geojson-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "XLS’ten XLSX’e Dönüştürücü",
     slug: "xls-to-xlsx-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "XLSX’ten ODS’ye Dönüştürücü",
     slug: "xlsx-to-ods-converter",
   },
   {
-    category: "document",
+    category: "spreadsheet",
     name: "Elektronik Tablo Görüntüleyici",
     slug: "xlsx-viewer",
   },

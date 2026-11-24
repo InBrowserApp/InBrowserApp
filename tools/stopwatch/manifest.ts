@@ -1,7 +1,7 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "developer",
+  category: "time",
   icon: "wrench",
   tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
 })

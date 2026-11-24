@@ -17,6 +17,7 @@ type ToolSearchLocaleEntry = ToolMeta
 type ToolRegistryEntry = Readonly<{
   slug: string
   category: string
+  secondaryCategories?: readonly string[]
   icon: string
   tags: readonly string[]
   locales: Readonly<Record<string, ToolSearchLocaleEntry>>
@@ -48,7 +49,6 @@ type ToolRegistryGenerationOptions = Readonly<{
 type LoadedToolManifest = Readonly<{
   manifest: ToolManifest
   registryEntry: ToolRegistryEntry
-  searchIndexEntry: ToolSearchIndexEntry
   source: ToolRegistryEntrySource
   staticPaths: readonly ToolStaticPathEntry[]
 }>

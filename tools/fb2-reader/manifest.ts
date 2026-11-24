@@ -1,7 +1,7 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "document",
+  category: "ebook",
   icon: "book-open",
   tags: [
     "fb2",

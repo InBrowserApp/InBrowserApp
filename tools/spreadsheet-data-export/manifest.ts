@@ -1,7 +1,8 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "document",
+  category: "spreadsheet",
+  secondaryCategories: ["json"],
   icon: "file-text",
   tags: [
     "xlsx",

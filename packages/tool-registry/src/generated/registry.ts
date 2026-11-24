@@ -1812,6 +1812,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "asciidoc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["asciidoc", "adoc", "pdf", "document", "converter"],
     locales: {
@@ -2057,7 +2058,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-loudness-normalizer",
-    category: "misc",
+    category: "audio",
     icon: "volume-2",
     tags: [
       "audio",
@@ -2189,7 +2190,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-recorder",
-    category: "misc",
+    category: "audio",
     icon: "mic",
     tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
     locales: {
@@ -2308,7 +2309,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-silence-remover",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
     locales: {
@@ -2431,7 +2432,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-spectrum-analyzer",
-    category: "misc",
+    category: "audio",
     icon: "audio-lines",
     tags: [
       "audio",
@@ -2563,7 +2564,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-to-text",
-    category: "misc",
+    category: "audio",
+    secondaryCategories: ["text"],
     icon: "captions",
     tags: [
       "audio",
@@ -2700,7 +2702,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "audio-trimmer-merger",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: [
       "audio",
@@ -5826,7 +5828,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "bpm-detector",
-    category: "misc",
+    category: "audio",
     icon: "activity",
     tags: ["audio", "bpm", "tempo", "beat", "rhythm", "music", "song", "dj"],
     locales: {
@@ -5949,7 +5951,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "bpmn-to-pdf-converter",
-    category: "document",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "bpmn",
@@ -6081,7 +6084,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "bpmn-viewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "workflow",
     tags: [
       "bpmn",
@@ -6337,6 +6341,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "caj-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "caj",
@@ -6601,6 +6606,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "camera",
     category: "misc",
+    secondaryCategories: ["image", "video"],
     icon: "camera",
     tags: ["camera", "photo", "video", "record", "capture", "selfie"],
     locales: {
@@ -6854,7 +6860,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "cb7-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
     locales: {
@@ -7109,7 +7115,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "cbr-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cbr", "rar", "comic", "manga", "reader"],
     locales: {
@@ -7232,7 +7238,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "cbz-reader",
-    category: "image",
+    category: "ebook",
     icon: "image",
     tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
     locales: {
@@ -7355,7 +7361,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "cbz-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["cbz", "comic", "archive", "pdf", "converter", "offline"],
     locales: {
@@ -10286,7 +10293,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "csv-editor",
-    category: "document",
+    category: "spreadsheet",
     icon: "table-2",
     tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
     locales: {
@@ -10409,7 +10416,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "csv-excel-to-sqlite",
-    category: "developer",
+    category: "spreadsheet",
+    secondaryCategories: ["developer"],
     icon: "database",
     tags: [
       "csv",
@@ -10544,6 +10552,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "csv-to-json-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "csv", "json", "converter"],
     locales: {
@@ -10666,7 +10675,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "csv-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["csv", "tsv", "xlsx", "excel", "spreadsheet", "converter"],
     locales: {
@@ -11930,7 +11939,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "dms-coordinate-converter",
-    category: "misc",
+    category: "geo",
     icon: "compass",
     tags: [
       "gps",
@@ -12321,6 +12330,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "doc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
     locales: {
@@ -12945,6 +12955,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "docx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "docx",
@@ -13339,7 +13350,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "ebook-text-html-export",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "ebook",
@@ -13729,6 +13740,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "email-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "mail",
     tags: ["email", "eml", "emlx", "msg", "pdf", "converter"],
     locales: {
@@ -14232,7 +14244,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "epsg-coordinate-transformer",
-    category: "misc",
+    category: "geo",
     icon: "globe",
     tags: [
       "epsg",
@@ -14365,7 +14377,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "epub-metadata-editor",
-    category: "document",
+    category: "ebook",
     icon: "file-cog",
     tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
     locales: {
@@ -14488,7 +14500,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "epub-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["epub", "ebook", "book", "reader", "viewer", "offline", "document"],
     locales: {
@@ -14611,7 +14623,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "epub-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "book-open",
     tags: [
       "epub",
@@ -14866,6 +14879,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "exif-viewer",
     category: "image",
+    secondaryCategories: ["geo"],
     icon: "image",
     tags: ["image", "exif", "metadata", "photo", "camera", "gps", "privacy"],
     locales: {
@@ -15119,7 +15133,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "fb2-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "fb2",
@@ -15252,7 +15266,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "fb2-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "fb2", "fbz", "fictionbook", "epub", "converter"],
     locales: {
@@ -16024,7 +16038,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "geojson-viewer",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "map",
     tags: [
       "geojson",
@@ -16897,7 +16912,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "gpx-viewer",
-    category: "misc",
+    category: "geo",
     icon: "route",
     tags: [
       "gpx",
@@ -17030,7 +17045,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "graphviz-dot-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "network",
     tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
     locales: {
@@ -18180,6 +18196,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "html-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["html", "htm", "xhtml", "pdf", "document", "converter"],
     locales: {
@@ -18533,6 +18550,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "hwp-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["hwp", "hwpx", "hangul", "hancom", "pdf", "document", "converter"],
     locales: {
@@ -19141,6 +19159,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "ics-csv-converter",
     category: "time",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: [
       "ics",
@@ -20933,6 +20952,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "image-to-pdf-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-text",
     tags: [
       "pdf",
@@ -21943,6 +21963,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "ip-info-lookup",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "dns", "domain", "geolocation", "isp", "asn"],
     locales: {
@@ -23265,6 +23286,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "json-to-csv-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "json", "csv", "converter"],
     locales: {
@@ -23387,7 +23409,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "json-to-excel-converter",
-    category: "json",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "table-2",
     tags: [
       "json",
@@ -24795,7 +24818,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "kml-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "file-json-2",
     tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
     locales: {
@@ -26791,6 +26815,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "markdown-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["markdown", "md", "pdf", "document", "converter"],
     locales: {
@@ -27159,7 +27184,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "media-info-viewer",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "file-text",
     tags: [
       "audio",
@@ -27290,7 +27316,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "mermaid-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "blocks",
     tags: [
       "mermaid",
@@ -27422,7 +27449,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "mermaid-to-pdf-converter",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "mermaid",
@@ -27678,6 +27706,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "mhtml-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["mhtml", "mht", "pdf", "web archive", "document", "converter"],
     locales: {
@@ -28029,7 +28058,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "mobi-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "mobi",
@@ -28164,7 +28193,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "mobi-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "mobi", "azw", "azw3", "prc", "epub", "converter"],
     locales: {
@@ -28808,6 +28837,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "my-ip-address",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "ipv4", "ipv6", "webrtc", "geolocation", "isp"],
     locales: {
@@ -29447,7 +29477,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "numbers-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["numbers", "xlsx", "apple", "excel", "spreadsheet", "converter"],
     locales: {
@@ -29570,7 +29600,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "ods-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -29694,6 +29724,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "odt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "odt",
@@ -29948,6 +29979,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "ofd-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["ofd", "pdf", "document", "converter", "invoice"],
     locales: {
@@ -31080,6 +31112,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "pdf-image-extractor",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-image",
     tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
     locales: {
@@ -31581,6 +31614,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "pdf-ocr",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "scan-text",
     tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
     locales: {
@@ -32203,6 +32237,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "pdf-text-extractor",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "file-text",
     tags: ["pdf", "text", "extractor", "document", "offline"],
     locales: {
@@ -32325,6 +32360,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "pdf-to-image-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "image",
     tags: ["pdf", "image", "converter", "export", "offline"],
     locales: {
@@ -33316,6 +33352,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "ppt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "ppt",
@@ -33719,6 +33756,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "pptx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "pptx",
@@ -36292,6 +36330,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "rtf-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["rtf", "rich-text", "pdf", "document", "converter"],
     locales: {
@@ -36660,7 +36699,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "screen-recorder",
-    category: "misc",
+    category: "video",
     icon: "video",
     tags: [
       "screen",
@@ -39352,7 +39391,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "spreadsheet-data-export",
-    category: "document",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "file-text",
     tags: [
       "xlsx",
@@ -39735,6 +39775,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "sqlite-viewer",
     category: "developer",
+    secondaryCategories: ["spreadsheet"],
     icon: "layout-grid",
     tags: [
       "sqlite",
@@ -40401,7 +40442,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
-    category: "misc",
+    category: "audio",
     icon: "split",
     tags: [
       "audio",
@@ -40534,7 +40575,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "stopwatch",
-    category: "developer",
+    category: "time",
     icon: "wrench",
     tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
     locales: {
@@ -40651,6 +40692,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "subtitle-converter",
     category: "text",
+    secondaryCategories: ["video"],
     icon: "captions",
     tags: [
       "subtitle",
@@ -41018,6 +41060,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "svg-to-pdf-converter",
     category: "image",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
     locales: {
@@ -42630,6 +42673,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "typst-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["typst", "typ", "pdf", "converter", "export", "math", "local"],
     locales: {
@@ -43505,7 +43549,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "unix-timestamp-converter",
-    category: "developer",
+    category: "time",
+    secondaryCategories: ["developer"],
     icon: "binary",
     tags: [
       "unix",
@@ -45722,6 +45767,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "vcard-csv-converter",
     category: "document",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
     locales: {
@@ -45974,7 +46020,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "video-audio-extractor",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "film",
     tags: [
       "video",
@@ -46110,7 +46157,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "video-frame-extractor",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -46244,7 +46292,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "video-to-gif",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -46376,7 +46425,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "video-trimmer",
-    category: "misc",
+    category: "video",
     icon: "scissors",
     tags: ["video", "trim", "cut", "clip", "mp4", "webm", "screen recording"],
     locales: {
@@ -46875,7 +46924,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "wkt-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "braces",
     tags: [
       "wkt",
@@ -47006,7 +47056,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "xls-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["xls", "xlsx", "excel", "spreadsheet", "converter", "local"],
     locales: {
@@ -47129,7 +47179,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "xlsx-to-ods-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -47252,7 +47302,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "xlsx-viewer",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: [
       "xlsx",
@@ -50226,6 +50276,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "asciidoc-to-pdf-converter": {
     slug: "asciidoc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["asciidoc", "adoc", "pdf", "document", "converter"],
     locales: {
@@ -50471,7 +50522,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-loudness-normalizer": {
     slug: "audio-loudness-normalizer",
-    category: "misc",
+    category: "audio",
     icon: "volume-2",
     tags: [
       "audio",
@@ -50603,7 +50654,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-recorder": {
     slug: "audio-recorder",
-    category: "misc",
+    category: "audio",
     icon: "mic",
     tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
     locales: {
@@ -50722,7 +50773,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-silence-remover": {
     slug: "audio-silence-remover",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
     locales: {
@@ -50845,7 +50896,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-spectrum-analyzer": {
     slug: "audio-spectrum-analyzer",
-    category: "misc",
+    category: "audio",
     icon: "audio-lines",
     tags: [
       "audio",
@@ -50977,7 +51028,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-to-text": {
     slug: "audio-to-text",
-    category: "misc",
+    category: "audio",
+    secondaryCategories: ["text"],
     icon: "captions",
     tags: [
       "audio",
@@ -51114,7 +51166,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "audio-trimmer-merger": {
     slug: "audio-trimmer-merger",
-    category: "misc",
+    category: "audio",
     icon: "scissors",
     tags: [
       "audio",
@@ -54240,7 +54292,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "bpm-detector": {
     slug: "bpm-detector",
-    category: "misc",
+    category: "audio",
     icon: "activity",
     tags: ["audio", "bpm", "tempo", "beat", "rhythm", "music", "song", "dj"],
     locales: {
@@ -54363,7 +54415,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "bpmn-to-pdf-converter": {
     slug: "bpmn-to-pdf-converter",
-    category: "document",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "bpmn",
@@ -54495,7 +54548,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "bpmn-viewer": {
     slug: "bpmn-viewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "workflow",
     tags: [
       "bpmn",
@@ -54751,6 +54805,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "caj-to-pdf-converter": {
     slug: "caj-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "caj",
@@ -55015,6 +55070,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   camera: {
     slug: "camera",
     category: "misc",
+    secondaryCategories: ["image", "video"],
     icon: "camera",
     tags: ["camera", "photo", "video", "record", "capture", "selfie"],
     locales: {
@@ -55268,7 +55324,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "cb7-reader": {
     slug: "cb7-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
     locales: {
@@ -55523,7 +55579,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "cbr-reader": {
     slug: "cbr-reader",
-    category: "image",
+    category: "ebook",
     icon: "book-open",
     tags: ["cbr", "rar", "comic", "manga", "reader"],
     locales: {
@@ -55646,7 +55702,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "cbz-reader": {
     slug: "cbz-reader",
-    category: "image",
+    category: "ebook",
     icon: "image",
     tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
     locales: {
@@ -55769,7 +55825,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "cbz-to-pdf-converter": {
     slug: "cbz-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["cbz", "comic", "archive", "pdf", "converter", "offline"],
     locales: {
@@ -58700,7 +58757,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "csv-editor": {
     slug: "csv-editor",
-    category: "document",
+    category: "spreadsheet",
     icon: "table-2",
     tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
     locales: {
@@ -58823,7 +58880,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "csv-excel-to-sqlite": {
     slug: "csv-excel-to-sqlite",
-    category: "developer",
+    category: "spreadsheet",
+    secondaryCategories: ["developer"],
     icon: "database",
     tags: [
       "csv",
@@ -58958,6 +59016,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "csv-to-json-converter": {
     slug: "csv-to-json-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "csv", "json", "converter"],
     locales: {
@@ -59080,7 +59139,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "csv-to-xlsx-converter": {
     slug: "csv-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["csv", "tsv", "xlsx", "excel", "spreadsheet", "converter"],
     locales: {
@@ -60344,7 +60403,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "dms-coordinate-converter": {
     slug: "dms-coordinate-converter",
-    category: "misc",
+    category: "geo",
     icon: "compass",
     tags: [
       "gps",
@@ -60735,6 +60794,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "doc-to-pdf-converter": {
     slug: "doc-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
     locales: {
@@ -61359,6 +61419,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "docx-to-pdf-converter": {
     slug: "docx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "docx",
@@ -61753,7 +61814,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "ebook-text-html-export": {
     slug: "ebook-text-html-export",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "ebook",
@@ -62143,6 +62204,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "email-to-pdf-converter": {
     slug: "email-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "mail",
     tags: ["email", "eml", "emlx", "msg", "pdf", "converter"],
     locales: {
@@ -62646,7 +62708,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "epsg-coordinate-transformer": {
     slug: "epsg-coordinate-transformer",
-    category: "misc",
+    category: "geo",
     icon: "globe",
     tags: [
       "epsg",
@@ -62779,7 +62841,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "epub-metadata-editor": {
     slug: "epub-metadata-editor",
-    category: "document",
+    category: "ebook",
     icon: "file-cog",
     tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
     locales: {
@@ -62902,7 +62964,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "epub-reader": {
     slug: "epub-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["epub", "ebook", "book", "reader", "viewer", "offline", "document"],
     locales: {
@@ -63025,7 +63087,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "epub-to-pdf-converter": {
     slug: "epub-to-pdf-converter",
-    category: "document",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
     icon: "book-open",
     tags: [
       "epub",
@@ -63280,6 +63343,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "exif-viewer": {
     slug: "exif-viewer",
     category: "image",
+    secondaryCategories: ["geo"],
     icon: "image",
     tags: ["image", "exif", "metadata", "photo", "camera", "gps", "privacy"],
     locales: {
@@ -63533,7 +63597,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "fb2-reader": {
     slug: "fb2-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "fb2",
@@ -63666,7 +63730,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "fb2-to-epub-converter": {
     slug: "fb2-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "fb2", "fbz", "fictionbook", "epub", "converter"],
     locales: {
@@ -64438,7 +64502,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "geojson-viewer": {
     slug: "geojson-viewer",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "map",
     tags: [
       "geojson",
@@ -65311,7 +65376,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "gpx-viewer": {
     slug: "gpx-viewer",
-    category: "misc",
+    category: "geo",
     icon: "route",
     tags: [
       "gpx",
@@ -65444,7 +65509,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "graphviz-dot-previewer": {
     slug: "graphviz-dot-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "network",
     tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
     locales: {
@@ -66594,6 +66660,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "html-to-pdf-converter": {
     slug: "html-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["html", "htm", "xhtml", "pdf", "document", "converter"],
     locales: {
@@ -66947,6 +67014,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "hwp-to-pdf-converter": {
     slug: "hwp-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["hwp", "hwpx", "hangul", "hancom", "pdf", "document", "converter"],
     locales: {
@@ -67555,6 +67623,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "ics-csv-converter": {
     slug: "ics-csv-converter",
     category: "time",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: [
       "ics",
@@ -69347,6 +69416,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "image-to-pdf-converter": {
     slug: "image-to-pdf-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-text",
     tags: [
       "pdf",
@@ -70357,6 +70427,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "ip-info-lookup": {
     slug: "ip-info-lookup",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "dns", "domain", "geolocation", "isp", "asn"],
     locales: {
@@ -71679,6 +71750,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "json-to-csv-converter": {
     slug: "json-to-csv-converter",
     category: "json",
+    secondaryCategories: ["spreadsheet"],
     icon: "file-json-2",
     tags: ["code", "json", "csv", "converter"],
     locales: {
@@ -71801,7 +71873,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "json-to-excel-converter": {
     slug: "json-to-excel-converter",
-    category: "json",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "table-2",
     tags: [
       "json",
@@ -73209,7 +73282,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "kml-geojson-converter": {
     slug: "kml-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "file-json-2",
     tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
     locales: {
@@ -75205,6 +75279,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "markdown-to-pdf-converter": {
     slug: "markdown-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["markdown", "md", "pdf", "document", "converter"],
     locales: {
@@ -75573,7 +75648,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "media-info-viewer": {
     slug: "media-info-viewer",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "file-text",
     tags: [
       "audio",
@@ -75704,7 +75780,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "mermaid-previewer": {
     slug: "mermaid-previewer",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["developer"],
     icon: "blocks",
     tags: [
       "mermaid",
@@ -75836,7 +75913,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "mermaid-to-pdf-converter": {
     slug: "mermaid-to-pdf-converter",
-    category: "developer",
+    category: "diagram",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "mermaid",
@@ -76092,6 +76170,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "mhtml-to-pdf-converter": {
     slug: "mhtml-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["mhtml", "mht", "pdf", "web archive", "document", "converter"],
     locales: {
@@ -76443,7 +76522,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "mobi-reader": {
     slug: "mobi-reader",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: [
       "mobi",
@@ -76578,7 +76657,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "mobi-to-epub-converter": {
     slug: "mobi-to-epub-converter",
-    category: "document",
+    category: "ebook",
     icon: "book-open",
     tags: ["ebook", "mobi", "azw", "azw3", "prc", "epub", "converter"],
     locales: {
@@ -77222,6 +77301,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "my-ip-address": {
     slug: "my-ip-address",
     category: "network",
+    secondaryCategories: ["geo"],
     icon: "network",
     tags: ["ip", "ipv4", "ipv6", "webrtc", "geolocation", "isp"],
     locales: {
@@ -77861,7 +77941,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "numbers-to-xlsx-converter": {
     slug: "numbers-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["numbers", "xlsx", "apple", "excel", "spreadsheet", "converter"],
     locales: {
@@ -77984,7 +78064,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "ods-to-xlsx-converter": {
     slug: "ods-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -78108,6 +78188,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "odt-to-pdf-converter": {
     slug: "odt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "odt",
@@ -78362,6 +78443,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "ofd-to-pdf-converter": {
     slug: "ofd-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["ofd", "pdf", "document", "converter", "invoice"],
     locales: {
@@ -79494,6 +79576,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "pdf-image-extractor": {
     slug: "pdf-image-extractor",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "file-image",
     tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
     locales: {
@@ -79995,6 +80078,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "pdf-ocr": {
     slug: "pdf-ocr",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "scan-text",
     tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
     locales: {
@@ -80617,6 +80701,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "pdf-text-extractor": {
     slug: "pdf-text-extractor",
     category: "pdf",
+    secondaryCategories: ["text"],
     icon: "file-text",
     tags: ["pdf", "text", "extractor", "document", "offline"],
     locales: {
@@ -80739,6 +80824,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "pdf-to-image-converter": {
     slug: "pdf-to-image-converter",
     category: "pdf",
+    secondaryCategories: ["image"],
     icon: "image",
     tags: ["pdf", "image", "converter", "export", "offline"],
     locales: {
@@ -81730,6 +81816,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "ppt-to-pdf-converter": {
     slug: "ppt-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "ppt",
@@ -82133,6 +82220,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "pptx-to-pdf-converter": {
     slug: "pptx-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: [
       "pptx",
@@ -84706,6 +84794,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "rtf-to-pdf-converter": {
     slug: "rtf-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["rtf", "rich-text", "pdf", "document", "converter"],
     locales: {
@@ -85074,7 +85163,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "screen-recorder": {
     slug: "screen-recorder",
-    category: "misc",
+    category: "video",
     icon: "video",
     tags: [
       "screen",
@@ -87766,7 +87855,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "spreadsheet-data-export": {
     slug: "spreadsheet-data-export",
-    category: "document",
+    category: "spreadsheet",
+    secondaryCategories: ["json"],
     icon: "file-text",
     tags: [
       "xlsx",
@@ -88149,6 +88239,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "sqlite-viewer": {
     slug: "sqlite-viewer",
     category: "developer",
+    secondaryCategories: ["spreadsheet"],
     icon: "layout-grid",
     tags: [
       "sqlite",
@@ -88815,7 +88906,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "stereo-channel-splitter": {
     slug: "stereo-channel-splitter",
-    category: "misc",
+    category: "audio",
     icon: "split",
     tags: [
       "audio",
@@ -88948,7 +89039,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   stopwatch: {
     slug: "stopwatch",
-    category: "developer",
+    category: "time",
     icon: "wrench",
     tags: ["time", "stopwatch", "lap", "timer", "elapsed"],
     locales: {
@@ -89065,6 +89156,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "subtitle-converter": {
     slug: "subtitle-converter",
     category: "text",
+    secondaryCategories: ["video"],
     icon: "captions",
     tags: [
       "subtitle",
@@ -89432,6 +89524,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "svg-to-pdf-converter": {
     slug: "svg-to-pdf-converter",
     category: "image",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
     locales: {
@@ -91044,6 +91137,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "typst-to-pdf-converter": {
     slug: "typst-to-pdf-converter",
     category: "document",
+    secondaryCategories: ["pdf"],
     icon: "file-text",
     tags: ["typst", "typ", "pdf", "converter", "export", "math", "local"],
     locales: {
@@ -91919,7 +92013,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "unix-timestamp-converter": {
     slug: "unix-timestamp-converter",
-    category: "developer",
+    category: "time",
+    secondaryCategories: ["developer"],
     icon: "binary",
     tags: [
       "unix",
@@ -94136,6 +94231,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "vcard-csv-converter": {
     slug: "vcard-csv-converter",
     category: "document",
+    secondaryCategories: ["spreadsheet"],
     icon: "arrow-left-right",
     tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
     locales: {
@@ -94388,7 +94484,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "video-audio-extractor": {
     slug: "video-audio-extractor",
-    category: "misc",
+    category: "video",
+    secondaryCategories: ["audio"],
     icon: "film",
     tags: [
       "video",
@@ -94524,7 +94621,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "video-frame-extractor": {
     slug: "video-frame-extractor",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -94658,7 +94756,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "video-to-gif": {
     slug: "video-to-gif",
-    category: "image",
+    category: "video",
+    secondaryCategories: ["image"],
     icon: "film",
     tags: [
       "video",
@@ -94790,7 +94889,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "video-trimmer": {
     slug: "video-trimmer",
-    category: "misc",
+    category: "video",
     icon: "scissors",
     tags: ["video", "trim", "cut", "clip", "mp4", "webm", "screen recording"],
     locales: {
@@ -95289,7 +95388,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "wkt-geojson-converter": {
     slug: "wkt-geojson-converter",
-    category: "json",
+    category: "geo",
+    secondaryCategories: ["json"],
     icon: "braces",
     tags: [
       "wkt",
@@ -95420,7 +95520,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "xls-to-xlsx-converter": {
     slug: "xls-to-xlsx-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["xls", "xlsx", "excel", "spreadsheet", "converter", "local"],
     locales: {
@@ -95543,7 +95643,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "xlsx-to-ods-converter": {
     slug: "xlsx-to-ods-converter",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
     locales: {
@@ -95666,7 +95766,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "xlsx-viewer": {
     slug: "xlsx-viewer",
-    category: "document",
+    category: "spreadsheet",
     icon: "file-text",
     tags: [
       "xlsx",

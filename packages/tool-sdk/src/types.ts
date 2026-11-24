@@ -12,16 +12,26 @@ type ToolMetaCatalogs<TLanguage extends string = ToolLanguage> = Readonly<
 /**
  * Known tool categories.  The union is open-ended (`string & {}`) so new
  * categories can be introduced without updating the SDK first, while
- * existing values still get autocomplete and typo detection.
+ * existing values still get autocomplete.
  */
 type ToolCategory =
+  | "audio"
   | "crypto"
   | "developer"
+  | "diagram"
+  | "document"
+  | "ebook"
+  | "geo"
   | "image"
   | "json"
+  | "misc"
   | "network"
   | "pdf"
+  | "random"
+  | "spreadsheet"
   | "text"
+  | "time"
+  | "video"
   | "web"
   | (string & {})
 
@@ -41,7 +51,10 @@ type ToolIcon =
   | (string & {})
 
 type ToolDefinition = Readonly<{
+  /** Primary category, used for the tool's breadcrumb and directory label. */
   category: ToolCategory
+  /** Additional categories where the tool can be browsed. */
+  secondaryCategories?: readonly ToolCategory[]
   icon: ToolIcon
   tags?: readonly string[]
 }>

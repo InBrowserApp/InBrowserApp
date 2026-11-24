@@ -8,6 +8,11 @@ type ToolCategoryCount = Readonly<{
   count: number
 }>
 
+type CategorizedTool = Pick<
+  ToolSearchIndexEntry,
+  "category" | "secondaryCategories"
+>
+
 type DirectoryToolEntry = Readonly<{
   slug: string
   category: string
@@ -18,17 +23,23 @@ type DirectoryToolEntry = Readonly<{
 
 /** Icon identifiers (see ToolIcon) shown on the home category tiles. */
 const CATEGORY_ICONS: Readonly<Record<string, string>> = {
+  audio: "audio-lines",
   crypto: "lock",
   developer: "wrench",
+  diagram: "workflow",
   document: "file-text",
+  ebook: "book-open",
+  geo: "map",
   image: "image",
   json: "braces",
   misc: "layout-grid",
   network: "network",
   pdf: "file-text",
   random: "sparkles",
+  spreadsheet: "table-2",
   text: "case-sensitive",
   time: "clock3",
+  video: "video",
   web: "globe",
 }
 
@@ -50,17 +61,23 @@ const POPULAR_TOOL_SLUGS = [
   "unix-timestamp-converter",
 ] as const
 
+function getToolCategories({ category, secondaryCategories }: CategorizedTool) {
+  return [category, ...(secondaryCategories ?? [])]
+}
+
 /**
- * Aggregates tool counts per manifest category, ordered by count
+ * Aggregates tool counts per primary and secondary category, ordered by count
  * (descending) with ties broken alphabetically for a stable order.
  */
 function countToolsByCategory(
-  entries: readonly Pick<ToolSearchIndexEntry, "category">[]
+  entries: readonly CategorizedTool[]
 ): readonly ToolCategoryCount[] {
   const counts = new Map<string, number>()
 
   for (const entry of entries) {
-    counts.set(entry.category, (counts.get(entry.category) ?? 0) + 1)
+    for (const category of getToolCategories(entry)) {
+      counts.set(category, (counts.get(category) ?? 0) + 1)
+    }
   }
 
   return [...counts.entries()]
@@ -123,6 +140,7 @@ export {
   findToolsBySlugs,
   getCategoryIcon,
   getCategoryLabel,
+  getToolCategories,
   resolveEntryLocale,
   toDirectoryEntries,
 }

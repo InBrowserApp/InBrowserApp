@@ -1,7 +1,8 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "developer",
+  category: "diagram",
+  secondaryCategories: ["developer"],
   icon: "network",
   tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
 })

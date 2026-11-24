@@ -2,9 +2,11 @@ import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { describe, expect, test } from "vitest"
 import { SUPPORTED_SITE_LANGUAGES } from "../apps/web/src/lib/site"
-import { toolSearchIndex } from "../packages/tool-registry/src/generated/search-index"
+import { getDefaultCategoryStaticPaths } from "../apps/web/src/lib/static-paths"
 
-const categories = [...new Set(toolSearchIndex.map((entry) => entry.category))]
+const categories = getDefaultCategoryStaticPaths().map(
+  ({ params }) => params.category
+)
 
 function loadCategoryLabels(language: string) {
   const file = resolve(__dirname, `../apps/web/src/messages/${language}.json`)
