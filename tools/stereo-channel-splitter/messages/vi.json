@@ -8,9 +8,17 @@
   "ready": "Kênh trái và kênh phải đã sẵn sàng.",
   "left": "Kênh trái",
   "right": "Kênh phải",
-  "downloadLeft": "Tải WAV kênh trái",
-  "downloadRight": "Tải WAV kênh phải",
+  "downloadLeft": "Tải {format} kênh trái",
+  "downloadRight": "Tải {format} kênh phải",
   "monoError": "Tệp này chỉ có một kênh âm thanh. Hãy chọn tệp stereo có cả kênh trái và kênh phải.",
   "multichannelError": "Tệp này có hơn hai kênh âm thanh. Hãy chọn tệp stereo hai kênh.",
-  "readError": "Không mở được tệp âm thanh này. Hãy thử một tệp khác hoặc xuất tệp này sang WAV stereo."
+  "readError": "Không mở được tệp âm thanh này. Hãy thử một tệp khác hoặc xuất tệp này sang WAV stereo.",
+  "formatLabel": "Định dạng tải xuống",
+  "wavOption": "WAV · Dùng để chỉnh sửa",
+  "flacOption": "FLAC · Nén không mất dữ liệu",
+  "mp3Option": "MP3 · Dung lượng nhỏ hơn",
+  "flacUnavailable": "Chọn WAV để giữ tần số lấy mẫu và độ chính xác của bản ghi này.",
+  "preparingDownload": "Đang chuẩn bị tệp {format} để tải xuống…",
+  "exportError": "Không tạo được tệp {format} để tải xuống. Hãy thử lại hoặc chọn WAV.",
+  "retry": "Thử lại"
 }

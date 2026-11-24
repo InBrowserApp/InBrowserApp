@@ -8,9 +8,17 @@
   "ready": "Linker und rechter Kanal sind bereit.",
   "left": "Linker Kanal",
   "right": "Rechter Kanal",
-  "downloadLeft": "Linken Kanal als WAV herunterladen",
-  "downloadRight": "Rechten Kanal als WAV herunterladen",
+  "downloadLeft": "Linken Kanal als {format} herunterladen",
+  "downloadRight": "Rechten Kanal als {format} herunterladen",
   "monoError": "Diese Datei enthält nur einen Audiokanal. Wähle eine Stereodatei mit linkem und rechtem Kanal.",
   "multichannelError": "Diese Datei enthält mehr als zwei Audiokanäle. Wähle eine Stereodatei mit zwei Kanälen.",
-  "readError": "Diese Audiodatei konnte nicht geöffnet werden. Wähle eine andere Datei oder exportiere sie als Stereo-WAV."
+  "readError": "Diese Audiodatei konnte nicht geöffnet werden. Wähle eine andere Datei oder exportiere sie als Stereo-WAV.",
+  "formatLabel": "Downloadformat",
+  "wavOption": "WAV · Für die Bearbeitung",
+  "flacOption": "FLAC · Verlustfreie Komprimierung",
+  "mp3Option": "MP3 · Kleinere Dateien",
+  "flacUnavailable": "Wähle WAV, damit Abtastrate und Auflösung der Aufnahme erhalten bleiben.",
+  "preparingDownload": "{format}-Dateien werden erstellt …",
+  "exportError": "Die {format}-Dateien konnten nicht erstellt werden. Versuche es erneut oder wähle WAV.",
+  "retry": "Erneut versuchen"
 }
