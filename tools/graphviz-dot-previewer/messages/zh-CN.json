@@ -1,0 +1,15 @@
+{
+  "source": "DOT 源码",
+  "example": "加载示例",
+  "dependencies": "依赖关系图",
+  "network": "无向网络",
+  "clusters": "分组图",
+  "engine": "布局引擎",
+  "preview": "图形预览",
+  "empty": "输入 DOT 代码以预览图形。",
+  "loading": "正在渲染图形…",
+  "invalid": "无法渲染此 DOT 图形。请检查语法后重试。",
+  "warnings": "Graphviz 布局提示",
+  "fit": "适应视图",
+  "actualSize": "实际大小"
+}

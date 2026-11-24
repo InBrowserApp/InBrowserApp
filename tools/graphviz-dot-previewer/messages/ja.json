@@ -1,0 +1,15 @@
+{
+  "source": "DOT ソース",
+  "example": "サンプルを読み込む",
+  "dependencies": "依存関係グラフ",
+  "network": "無向ネットワーク",
+  "clusters": "クラスター付きグラフ",
+  "engine": "レイアウトエンジン",
+  "preview": "グラフのプレビュー",
+  "empty": "DOT コードを入力するとグラフをプレビューできます。",
+  "loading": "グラフを描画しています…",
+  "invalid": "DOT グラフを描画できませんでした。構文を確認してもう一度お試しください。",
+  "warnings": "Graphviz のレイアウトに関する通知",
+  "fit": "画面に合わせる",
+  "actualSize": "実寸"
+}

@@ -1,0 +1,15 @@
+{
+  "source": "DOT kodu",
+  "example": "Örnek yükle",
+  "dependencies": "Bağımlılık grafı",
+  "network": "Yönsüz ağ",
+  "clusters": "Kümeli graf",
+  "engine": "Yerleşim motoru",
+  "preview": "Graf önizlemesi",
+  "empty": "Grafı önizlemek için DOT kodu girin.",
+  "loading": "Graf oluşturuluyor…",
+  "invalid": "DOT grafı oluşturulamadı. Söz dizimini kontrol edip yeniden deneyin.",
+  "warnings": "Graphviz yerleşim notları",
+  "fit": "Ekrana sığdır",
+  "actualSize": "Gerçek boyut"
+}

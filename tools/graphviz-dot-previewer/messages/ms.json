@@ -1,0 +1,15 @@
+{
+  "source": "Kod DOT",
+  "example": "Muatkan contoh",
+  "dependencies": "Graf kebergantungan",
+  "network": "Rangkaian tak berarah",
+  "clusters": "Graf berkelompok",
+  "engine": "Enjin susun atur",
+  "preview": "Pratonton graf",
+  "empty": "Masukkan kod DOT untuk melihat pratonton graf.",
+  "loading": "Memaparkan graf…",
+  "invalid": "Graf DOT ini tidak dapat dipaparkan. Semak sintaks dan cuba lagi.",
+  "warnings": "Nota susun atur Graphviz",
+  "fit": "Muatkan pada paparan",
+  "actualSize": "Saiz sebenar"
+}

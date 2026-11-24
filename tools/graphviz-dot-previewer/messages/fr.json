@@ -1,0 +1,15 @@
+{
+  "source": "Code DOT",
+  "example": "Charger un exemple",
+  "dependencies": "Graphe de dépendances",
+  "network": "Réseau non orienté",
+  "clusters": "Graphe avec groupes de nœuds",
+  "engine": "Moteur de disposition",
+  "preview": "Aperçu du graphe",
+  "empty": "Saisissez du code DOT pour afficher un graphe.",
+  "loading": "Rendu du graphe…",
+  "invalid": "Impossible d’afficher ce graphe DOT. Vérifiez la syntaxe et réessayez.",
+  "warnings": "Remarques de Graphviz sur la disposition",
+  "fit": "Ajuster à la vue",
+  "actualSize": "Taille réelle"
+}

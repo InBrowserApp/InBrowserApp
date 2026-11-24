@@ -1,0 +1,15 @@
+{
+  "source": "Mã nguồn DOT",
+  "example": "Tải ví dụ",
+  "dependencies": "Đồ thị phụ thuộc",
+  "network": "Mạng vô hướng",
+  "clusters": "Đồ thị phân cụm",
+  "engine": "Bộ máy bố cục",
+  "preview": "Xem trước đồ thị",
+  "empty": "Nhập mã DOT để xem trước đồ thị.",
+  "loading": "Đang kết xuất đồ thị…",
+  "invalid": "Không thể kết xuất đồ thị DOT này. Hãy kiểm tra cú pháp và thử lại.",
+  "warnings": "Lưu ý về bố cục Graphviz",
+  "fit": "Vừa khung xem",
+  "actualSize": "Kích thước thực"
+}

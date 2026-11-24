@@ -1,0 +1,15 @@
+{
+  "source": "Kod DOT",
+  "example": "Wczytaj przykład",
+  "dependencies": "Graf zależności",
+  "network": "Sieć nieskierowana",
+  "clusters": "Graf z klastrami",
+  "engine": "Silnik układu",
+  "preview": "Podgląd grafu",
+  "empty": "Wpisz kod DOT, aby wyświetlić podgląd grafu.",
+  "loading": "Rysowanie grafu…",
+  "invalid": "Nie udało się wyświetlić grafu DOT. Sprawdź składnię i spróbuj ponownie.",
+  "warnings": "Komunikaty Graphviz o układzie",
+  "fit": "Dopasuj do widoku",
+  "actualSize": "Rzeczywisty rozmiar"
+}

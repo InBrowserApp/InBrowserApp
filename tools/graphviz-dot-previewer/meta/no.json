@@ -1,0 +1,4 @@
+{
+  "name": "Graphviz DOT-forhåndsviser",
+  "description": "Tegn grafer fra Graphviz DOT-kode i nettleseren. Forhåndsvis rettede og urettede grafer mens du skriver, og sammenlign layoutmotorene i Graphviz."
+}

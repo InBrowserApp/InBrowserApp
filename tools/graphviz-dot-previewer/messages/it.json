@@ -1,0 +1,15 @@
+{
+  "source": "Codice DOT",
+  "example": "Carica un esempio",
+  "dependencies": "Grafo delle dipendenze",
+  "network": "Rete non orientata",
+  "clusters": "Grafo con cluster",
+  "engine": "Motore di layout",
+  "preview": "Anteprima del grafo",
+  "empty": "Inserisci il codice DOT per vedere il grafo.",
+  "loading": "Generazione del grafo…",
+  "invalid": "Impossibile visualizzare il grafo DOT. Controlla la sintassi e riprova.",
+  "warnings": "Avvisi sul layout di Graphviz",
+  "fit": "Adatta alla vista",
+  "actualSize": "Dimensioni reali"
+}

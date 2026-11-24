@@ -10398,6 +10398,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "graphviz-dot-previewer",
+    language: "ar",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "de",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "en",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "es",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "fr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "he",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "hi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "id",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "it",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ja",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ko",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ms",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "nl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "no",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pt",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ru",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "sv",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "th",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "tr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "vi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "har-analyzer",
     language: "ar",
   },

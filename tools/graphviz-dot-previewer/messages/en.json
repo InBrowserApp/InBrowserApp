@@ -1,0 +1,15 @@
+{
+  "source": "DOT source",
+  "example": "Load an example",
+  "dependencies": "Dependency graph",
+  "network": "Undirected network",
+  "clusters": "Clustered graph",
+  "engine": "Layout engine",
+  "preview": "Graph preview",
+  "empty": "Enter DOT code to preview a graph.",
+  "loading": "Rendering graph…",
+  "invalid": "Could not render this DOT graph. Check the syntax and try again.",
+  "warnings": "Graphviz layout notes",
+  "fit": "Fit to view",
+  "actualSize": "Actual size"
+}

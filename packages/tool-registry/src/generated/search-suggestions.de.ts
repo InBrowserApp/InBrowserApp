@@ -568,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "developer",
+    name: "Graphviz-DOT-Vorschau",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR-Netzwerkanalyse",
     slug: "har-analyzer",
