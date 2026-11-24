@@ -36,8 +36,7 @@ export default function ModelPanel({
   const host = useRef<HTMLDivElement>(null)
   const pointer = useRef<{ id: number; x: number; y: number } | null>(null)
   const helpId = useId()
-  const [viewport, setViewport] = useState<Viewport>()
-  const [loadFailed, setLoadFailed] = useState(false)
+  const [viewport, setViewport] = useState<Viewport | "error">()
   const [exportFailed, setExportFailed] = useState(false)
   const [unit, setUnit] = useState<Unit>("millimeter")
   const [measuring, setMeasuring] = useState(false)
@@ -51,10 +50,18 @@ export default function ModelPanel({
       }
       return () => viewer.dispose()
     } catch {
-      setLoadFailed(true)
+      setViewport("error")
       return undefined
     }
   }, [model, focusOnOpen])
+
+  if (viewport === "error") {
+    return (
+      <Alert variant="destructive" className="m-3 w-auto">
+        <AlertDescription>{m.renderError}</AlertDescription>
+      </Alert>
+    )
+  }
 
   const numberFormat = new Intl.NumberFormat(lang, {
     style: "unit",
@@ -80,7 +87,7 @@ export default function ModelPanel({
   }
   function onPointerDown(event: PointerEvent<HTMLDivElement>) {
     pointer.current =
-      event.button === 0 && event.isPrimary
+      measuring && event.button === 0 && event.isPrimary
         ? { id: event.pointerId, x: event.clientX, y: event.clientY }
         : null
   }
@@ -95,8 +102,10 @@ export default function ModelPanel({
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     if (!viewport) return
     const direction = arrows[event.key]
-    if (direction) viewport.rotate(...direction)
-    else if (event.key === "+" || event.key === "=") viewport.zoom(0.8)
+    if (direction) {
+      if (event.shiftKey) viewport.pan(direction[0] * 150, -direction[1] * 150)
+      else viewport.rotate(...direction)
+    } else if (event.key === "+" || event.key === "=") viewport.zoom(0.8)
     else if (event.key === "-" || event.key === "−") viewport.zoom(1.25)
     else if (event.key === "Enter" && measuring) {
       const { left, top, width, height } =
@@ -106,13 +115,6 @@ export default function ModelPanel({
     event.preventDefault()
   }
 
-  if (loadFailed)
-    return (
-      <Alert variant="destructive" className="m-3 w-auto">
-        <AlertDescription>{m.renderError}</AlertDescription>
-      </Alert>
-    )
-
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-auto">
       {viewport && (
@@ -120,7 +122,10 @@ export default function ModelPanel({
           messages={m}
           viewport={viewport}
           measuring={measuring}
-          onMeasure={() => setMeasuring(!measuring)}
+          onMeasure={() => {
+            if (measuring && first && !second) updatePoints([])
+            setMeasuring(!measuring)
+          }}
           onSave={() => {
             setExportFailed(false)
             void viewport
@@ -129,15 +134,46 @@ export default function ModelPanel({
           }}
         />
       )}
+      {viewport && (
+        <div
+          className="flex min-h-11 shrink-0 items-center gap-2 border-b px-3 py-1 text-sm"
+          aria-live="polite"
+        >
+          {distance ? (
+            <span className="font-medium">
+              {m.distance} <bdi className="ms-1 tabular-nums">{distance}</bdi>
+            </span>
+          ) : measuring ? (
+            <span>{first ? m.secondPoint : m.firstPoint}</span>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              <span className="pointer-coarse:hidden">{m.controls}</span>
+              <span className="hidden pointer-coarse:inline">
+                {m.touchControls}
+              </span>
+            </p>
+          )}
+          {first && (
+            <DocumentIconButton
+              label={m.clearMeasurement}
+              onClick={() => updatePoints([])}
+            >
+              <X aria-hidden="true" />
+            </DocumentIconButton>
+          )}
+        </div>
+      )}
       <div
         ref={host}
         role="region"
         aria-label={m.viewport}
         aria-describedby={helpId}
+        aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Shift+ArrowUp Shift+ArrowDown Shift+ArrowLeft Shift+ArrowRight Enter"
         // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- The view supports camera and measurement keys.
         tabIndex={0}
         dir="ltr"
-        className={`group/view relative h-[clamp(18rem,47dvh,35rem)] min-h-56 flex-1 touch-none overflow-hidden bg-slate-100 focus-visible:z-10 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring dark:bg-slate-900 ${measuring ? "cursor-crosshair" : "cursor-grab active:cursor-grabbing"}`}
+        data-suppress-language-suggestion={Boolean(viewport) || undefined}
+        className={`group/view relative h-[clamp(17rem,38dvh,23rem)] min-h-56 flex-auto touch-none overflow-hidden bg-slate-100 focus-visible:z-10 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring sm:h-[clamp(22rem,48dvh,35rem)] dark:bg-slate-900 ${measuring ? "cursor-crosshair" : "cursor-grab active:cursor-grabbing"}`}
         onPointerDown={onPointerDown}
         onPointerMove={(event) => {
           if (moved(event)) pointer.current = null
@@ -163,44 +199,6 @@ export default function ModelPanel({
       </span>
       {viewport && (
         <>
-          <div
-            className="flex min-h-11 shrink-0 items-center gap-2 border-t px-3 py-1 text-sm"
-            aria-live="polite"
-          >
-            {distance ? (
-              <>
-                <span className="font-medium">
-                  {m.distance}{" "}
-                  <bdi className="ms-1 tabular-nums">{distance}</bdi>
-                </span>
-                <DocumentIconButton
-                  label={m.clearMeasurement}
-                  onClick={() => updatePoints([])}
-                >
-                  <X aria-hidden="true" />
-                </DocumentIconButton>
-              </>
-            ) : measuring ? (
-              <>
-                <span>{first ? m.secondPoint : m.firstPoint}</span>
-                {first && (
-                  <DocumentIconButton
-                    label={m.clearMeasurement}
-                    onClick={() => updatePoints([])}
-                  >
-                    <X aria-hidden="true" />
-                  </DocumentIconButton>
-                )}
-              </>
-            ) : (
-              <p className="text-xs text-muted-foreground">
-                <span className="pointer-coarse:hidden">{m.controls}</span>
-                <span className="hidden pointer-coarse:inline">
-                  {m.touchControls}
-                </span>
-              </p>
-            )}
-          </div>
           <div className="flex shrink-0 flex-wrap items-center justify-between gap-x-5 gap-y-2 border-t bg-muted/25 px-3 py-2">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
               <span className="font-medium">{m.overall}</span>

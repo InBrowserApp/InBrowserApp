@@ -37,5 +37,5 @@
   "distance": "Avstånd",
   "controls": "Dra för att rotera · Rulla för att zooma · Dra med höger musknapp för att panorera",
   "touchControls": "Dra för att rotera · Nyp för att zooma · Dra med två fingrar för att panorera",
-  "keyboardControls": "Använd piltangenterna för att rotera och + eller − för att zooma. Tryck på Enter i mätläget för att välja en punkt i vyns mitt."
+  "keyboardControls": "Använd piltangenterna för att rotera och + eller − för att zooma. Tryck på Enter i mätläget för att välja en punkt i vyns mitt. Håll ned Skift och använd piltangenterna för att förskjuta vyn."
 }

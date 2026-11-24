@@ -12,6 +12,7 @@ const mock = vi.hoisted(() => ({
     view: vi.fn(),
     zoom: vi.fn(),
     rotate: vi.fn(),
+    pan: vi.fn(),
     pick: vi.fn(),
     showMeasurement: vi.fn(),
     save: vi.fn(),
@@ -63,6 +64,8 @@ test("opens a sample, measures with the keyboard, converts units, and exports th
   expect(screen.getByText(m.secondPoint)).toBeTruthy()
   fireEvent.keyDown(viewport, { key: "ArrowRight" })
   expect(mock.view.rotate).toHaveBeenCalledWith(-0.12, 0)
+  fireEvent.keyDown(viewport, { key: "ArrowRight", shiftKey: true })
+  expect(mock.view.pan).toHaveBeenCalledWith(-18, -0)
   fireEvent.keyDown(viewport, { key: "Enter" })
   expect(screen.getByText("≈ 25.4 mm")).toBeTruthy()
 

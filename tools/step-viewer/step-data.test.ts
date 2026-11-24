@@ -1,5 +1,7 @@
 import { createRequire } from "node:module"
 import initialize from "occt-import-js"
+import { Color } from "three"
+import { makeMesh } from "./model-scene"
 import { expect, test } from "vitest"
 import bracket from "./mounting-bracket.step?raw"
 import { prepareModel } from "./step-data"
@@ -48,4 +50,20 @@ test("centers the whole assembly before reducing precision and skips unmeshed sh
   expect(model.meshes[1]?.faces).toEqual([
     { first: 0, last: 0, color: [1, 0, 0] },
   ])
+})
+
+test("retains the CAD importer’s linear body and face colors", () => {
+  const mesh = makeMesh(
+    {
+      positions: new Float32Array([0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1]),
+      indices: new Uint32Array([0, 1, 2, 1, 2, 3]),
+      color: [0.604, 0.604, 0.604],
+      faces: [{ first: 0, last: 0, color: [0.402, 0.402, 0.402] }],
+    },
+    new Color(0x123456)
+  )
+  const colors = mesh.geometry.getAttribute("color")
+  expect(colors.getX(0)).toBeCloseTo(0.402)
+  expect(colors.getX(3)).toBeCloseTo(0.604)
+  expect(mesh.material.vertexColors).toBe(true)
 })

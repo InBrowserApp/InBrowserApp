@@ -5,7 +5,6 @@ import {
   DoubleSide,
   Mesh,
   MeshStandardMaterial,
-  SRGBColorSpace,
 } from "three"
 import type { StepMesh, Triple } from "./step-data"
 
@@ -19,8 +18,7 @@ export function makeMesh(data: StepMesh, baseColor: Color) {
     geometry.computeVertexNormals()
   }
 
-  const fromRgb = ([r, g, b]: Triple) =>
-    new Color().setRGB(r, g, b, SRGBColorSpace)
+  const fromRgb = ([r, g, b]: Triple) => new Color().setRGB(r, g, b)
   const color = data.color ? fromRgb(data.color) : baseColor
   if (data.faces.length) {
     const colors = new Float32Array(data.positions.length)

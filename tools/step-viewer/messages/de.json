@@ -37,5 +37,5 @@
   "distance": "Abstand",
   "controls": "Ziehen zum Drehen · Mausrad zum Zoomen · Rechts ziehen zum Verschieben",
   "touchControls": "Ziehen zum Drehen · Auf- oder zuziehen zum Zoomen · Mit zwei Fingern verschieben",
-  "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Wähle beim Messen mit der Eingabetaste einen Punkt in der Mitte der Ansicht."
+  "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Wähle beim Messen mit der Eingabetaste einen Punkt in der Mitte der Ansicht. Halten Sie die Umschalttaste gedrückt und verwenden Sie die Pfeiltasten, um die Ansicht zu verschieben."
 }

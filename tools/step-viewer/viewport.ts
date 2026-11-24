@@ -23,7 +23,7 @@ import type { StepModel } from "./step-data"
 
 type Point = Vector3
 const directions = {
-  isometric: new Vector3(1, 1, 0.85),
+  isometric: new Vector3(1, 1, 1),
   front: new Vector3(0, -1, 0),
   top: new Vector3(0, -0.000001, 1),
   right: new Vector3(1, 0, 0),
@@ -42,7 +42,7 @@ export function createViewport(host: HTMLElement, model: StepModel) {
   const scene = new Scene()
   const baseColor = new Color(0x659ce8)
   const meshes = model.meshes.map((mesh) => makeMesh(mesh, baseColor))
-  scene.add(...meshes)
+  for (const mesh of meshes) scene.add(mesh)
   const camera = new OrthographicCamera(
     -1,
     1,
@@ -111,7 +111,7 @@ export function createViewport(host: HTMLElement, model: StepModel) {
   function setTheme() {
     const dark = document.documentElement.classList.contains("dark")
     scene.background = new Color(dark ? 0x131e2e : 0xeaf1fa)
-    grid.material.opacity = dark ? 0.23 : 0.42
+    grid.material.opacity = dark ? 0.18 : 0.22
     render()
   }
 
@@ -150,6 +150,7 @@ export function createViewport(host: HTMLElement, model: StepModel) {
   return {
     fit: () => fit(),
     view: (view: View) => fit(directions[view]),
+    pan: (x: number, y: number) => controls.pan(x, y),
     zoom: (factor: number) => controls.dollyIn(factor),
     rotate: (horizontal: number, vertical: number) => {
       if (horizontal) controls.rotateLeft(horizontal)

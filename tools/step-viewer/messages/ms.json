@@ -37,5 +37,5 @@
   "distance": "Jarak",
   "controls": "Seret untuk putar · Tatal untuk zum · Seret dengan butang kanan untuk alih pandangan",
   "touchControls": "Seret untuk putar · Cubit untuk zum · Seret dengan dua jari untuk alih pandangan",
-  "keyboardControls": "Gunakan kekunci anak panah untuk memutar model, + atau − untuk zum, dan Enter untuk memilih titik di tengah paparan semasa mengukur."
+  "keyboardControls": "Gunakan kekunci anak panah untuk memutar model, + atau − untuk zum, dan Enter untuk memilih titik di tengah paparan semasa mengukur. Tekan dan tahan Shift sambil menggunakan kekunci anak panah untuk mengalih pandangan."
 }

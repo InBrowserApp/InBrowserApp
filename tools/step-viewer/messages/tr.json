@@ -37,5 +37,5 @@
   "distance": "Mesafe",
   "controls": "Döndürmek için sürükleyin · Yakınlaştırmak için tekerleği kullanın · Kaydırmak için sağ tuşla sürükleyin",
   "touchControls": "Döndürmek için sürükleyin · Yakınlaştırmak için iki parmağınızı açıp kapatın · Kaydırmak için iki parmakla sürükleyin",
-  "keyboardControls": "Döndürmek için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + veya − tuşunu kullanın. Ölçüm yaparken görünümün ortasındaki noktayı seçmek için Enter tuşuna basın."
+  "keyboardControls": "Döndürmek için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + veya − tuşunu kullanın. Ölçüm yaparken görünümün ortasındaki noktayı seçmek için Enter tuşuna basın. Görünümü kaydırmak için Shift tuşunu basılı tutarak ok tuşlarını kullanın."
 }

@@ -37,5 +37,5 @@
   "distance": "Distance",
   "controls": "Glisser pour pivoter · Molette pour zoomer · Glisser avec le bouton droit pour déplacer la vue",
   "touchControls": "Glisser pour pivoter · Pincer pour zoomer · Glisser à deux doigts pour déplacer la vue",
-  "keyboardControls": "Utilisez les flèches pour faire pivoter le modèle, les touches + et − pour zoomer, et la touche Entrée pour sélectionner un point au centre de la vue en mode mesure."
+  "keyboardControls": "Utilisez les flèches pour faire pivoter le modèle, les touches + et − pour zoomer, et la touche Entrée pour sélectionner un point au centre de la vue en mode mesure. Maintenez Maj et utilisez les flèches pour déplacer la vue."
 }
