@@ -1,0 +1,19 @@
+{
+  "details": "İletişim bilgileri",
+  "preview": "Kişi kartı önizlemesi",
+  "empty": "Kişi kartınızı oluşturmaya başlamak için bir ad girin.",
+  "firstName": "Ad",
+  "lastName": "Soyad",
+  "phone": "Telefon",
+  "email": "E-posta",
+  "company": "Şirket",
+  "jobTitle": "Unvan",
+  "website": "Web sitesi",
+  "address": "Adres",
+  "notes": "Notlar",
+  "more": "Diğer iletişim bilgileri",
+  "copy": "vCard’ı kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "download": "VCF indir"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Visor de GeoJSON",
+  "description": "Abre o pega GeoJSON, explora puntos, líneas y polígonos en un mapa interactivo sin conexión y consulta los atributos de cada entidad. Los archivos se quedan en tu navegador."
+}

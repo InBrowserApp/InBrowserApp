@@ -1,0 +1,17 @@
+{
+  "openFile": "Buka GeoJSON",
+  "example": "Cuba contoh",
+  "paste": "Tampal GeoJSON",
+  "render": "Papar pada peta",
+  "map": "Peta GeoJSON",
+  "fit": "Papar seluruh kawasan data",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "features": "Ciri",
+  "properties": "Atribut",
+  "empty": "Buka fail .geojson atau .json, atau tampal GeoJSON untuk bermula.",
+  "noGeometry": "GeoJSON ini tidak mengandungi bentuk yang boleh dipaparkan.",
+  "noProperties": "Ciri ini tidak mempunyai atribut.",
+  "invalid": "GeoJSON ini tidak dapat dibuka. Semak sama ada fail mengandungi geometri GeoJSON yang sah.",
+  "feature": "Ciri {number}"
+}

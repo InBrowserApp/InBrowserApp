@@ -1,0 +1,33 @@
+{
+  "assumptions": "Plan d’épargne",
+  "initialAmount": "Capital initial",
+  "monthlyContribution": "Versement mensuel",
+  "annualRate": "Taux d’intérêt annuel",
+  "years": "Durée",
+  "yearsUnit": "ans",
+  "frequency": "Fréquence de capitalisation",
+  "frequencies": {
+    "daily": "Quotidienne",
+    "monthly": "Mensuelle",
+    "quarterly": "Trimestrielle",
+    "semiannually": "Semestrielle",
+    "annually": "Annuelle"
+  },
+  "timing": "Moment des versements",
+  "timings": {
+    "end": "Fin du mois",
+    "start": "Début du mois"
+  },
+  "reset": "Rétablir l’exemple",
+  "endingBalance": "Capital estimé",
+  "totalContributed": "Total versé",
+  "interestEarned": "Intérêts cumulés",
+  "growth": "Évolution du capital",
+  "breakdown": "Détail par année",
+  "year": "Année",
+  "amountError": "Saisissez un montant supérieur ou égal à zéro.",
+  "rateError": "Saisissez un taux annuel compris entre −100 % et 100 %.",
+  "yearsError": "Saisissez un nombre entier compris entre 1 et 100.",
+  "resultError": "Les montants sont trop élevés pour le calcul. Essayez avec des montants plus faibles.",
+  "resultPending": "Vérifiez les champs signalés pour afficher l’estimation."
+}

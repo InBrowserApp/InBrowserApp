@@ -1,0 +1,4 @@
+{
+  "name": "BPMN 查看器",
+  "description": "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。"
+}

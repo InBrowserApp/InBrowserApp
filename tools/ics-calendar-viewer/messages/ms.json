@@ -1,0 +1,20 @@
+{
+  "openFile": "Buka fail",
+  "sample": "Cuba contoh",
+  "input": "Teks sumber",
+  "readError": "Fail tidak dapat dibaca. Pilih semula fail atau tampal teks.",
+  "paste": "Tampal teks ICS",
+  "view": "Lihat acara",
+  "placeholder": "Tampal kandungan fail iCalendar di sini",
+  "search": "Cari acara",
+  "empty": "Buka fail ICS atau cuba contoh untuk melihat senarai acara.",
+  "invalid": "Fail iCalendar ini tidak dapat dibaca. Semak kandungan ICS dan cuba lagi.",
+  "noEvents": "Kalendar ini tiada acara.",
+  "noMatches": "Tiada acara yang sepadan dengan carian anda.",
+  "untitled": "Acara tanpa tajuk",
+  "allDay": "Sepanjang hari",
+  "floating": "Waktu tempatan",
+  "recurring": "Berulang",
+  "occurrence": "Kejadian yang disunting",
+  "count": "Bilangan acara: {count}"
+}

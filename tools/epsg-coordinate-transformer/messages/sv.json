@@ -1,0 +1,17 @@
+{
+  "source": "Källkoordinatsystem",
+  "target": "Målkoordinatsystem",
+  "search": "Sök på EPSG-kod eller namn",
+  "noSystems": "Inga matchande koordinatsystem.",
+  "longitude": "Longitud (°)",
+  "latitude": "Latitud (°)",
+  "easting": "Östkoordinat",
+  "northing": "Nordkoordinat",
+  "meters": "Meter",
+  "example": "Prova ett exempel",
+  "swap": "Vänd transformationsriktning",
+  "copy": "Kopiera koordinater",
+  "copied": "Kopierat",
+  "invalid": "Koordinaterna kunde inte transformeras. Kontrollera värdena och källkoordinatsystemet.",
+  "axisHelp": "Geografiska koordinater anges med longitud först och sedan latitud. Plan­koordinater anges med östkoordinat först och sedan nordkoordinat."
+}

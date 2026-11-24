@@ -1,0 +1,17 @@
+{
+  "source": "Kaynak koordinat sistemi",
+  "target": "Hedef koordinat sistemi",
+  "search": "EPSG koduna veya ada göre ara",
+  "noSystems": "Eşleşen koordinat sistemi bulunamadı.",
+  "longitude": "Boylam (°)",
+  "latitude": "Enlem (°)",
+  "easting": "Doğu koordinatı",
+  "northing": "Kuzey koordinatı",
+  "meters": "Metre",
+  "example": "Örneği dene",
+  "swap": "Dönüşüm yönünü tersine çevir",
+  "copy": "Koordinatları kopyala",
+  "copied": "Kopyalandı",
+  "invalid": "Koordinatlar dönüştürülemedi. Değerleri ve kaynak koordinat sistemini kontrol edin.",
+  "axisHelp": "Coğrafi koordinatlarda önce boylam, sonra enlem girilir. İzdüşüm koordinatlarında önce doğu, sonra kuzey değeri girilir."
+}

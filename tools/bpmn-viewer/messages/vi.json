@@ -1,0 +1,20 @@
+{
+  "open": "Mở tệp BPMN",
+  "replace": "Thay tệp BPMN",
+  "clear": "Đóng sơ đồ",
+  "reader": "Trình xem BPMN",
+  "privacy": "Tệp được giữ trên thiết bị của bạn.",
+  "focus": "Mở chế độ toàn màn hình",
+  "exitFocus": "Thoát chế độ toàn màn hình",
+  "releaseFile": "Thả để mở tệp BPMN",
+  "drop": "Thả tệp BPMN vào đây",
+  "formats": "Mở tệp .bpmn hoặc .xml.",
+  "example": "Thử ví dụ",
+  "diagram": "Sơ đồ BPMN",
+  "loading": "Đang mở sơ đồ…",
+  "invalid": "Không thể mở sơ đồ này. Hãy chọn tệp XML BPMN 2.0 hợp lệ.",
+  "noLayout": "Tệp BPMN này không có bố cục sơ đồ. Hãy xuất lại từ công cụ mô hình hóa kèm dữ liệu bố cục rồi mở lại.",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "fit": "Điều chỉnh sơ đồ vừa khung xem"
+}

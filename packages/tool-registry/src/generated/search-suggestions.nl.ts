@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN-viewer",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Werkdagen-rekenmachine",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Chinees naar pinyin omzetten",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Omzetter getal ↔ Chinese financiële cijfers",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Kleurkiezer",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculator voor samengestelde rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Coördinaten omrekenen tussen decimale graden en DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-zoektool",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-coördinaten transformeren",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB-metadata-editor",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON-viewer",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF-maker",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU-informatie",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX-viewer met hoogteprofiel",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-evenementgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Viewer voor ICS-agendabestanden",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS-CSV-converter",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard-generator",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

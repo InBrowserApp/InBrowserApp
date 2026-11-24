@@ -8,9 +8,17 @@
   "ready": "Saluran kiri dan kanan sedia digunakan.",
   "left": "Saluran kiri",
   "right": "Saluran kanan",
-  "downloadLeft": "Muat turun WAV kiri",
-  "downloadRight": "Muat turun WAV kanan",
+  "downloadLeft": "Muat turun {format} kiri",
+  "downloadRight": "Muat turun {format} kanan",
   "monoError": "Fail ini hanya mempunyai satu saluran audio. Pilih fail stereo dengan saluran kiri dan kanan.",
   "multichannelError": "Fail ini mempunyai lebih daripada dua saluran audio. Pilih fail stereo dua saluran.",
-  "readError": "Fail audio ini tidak dapat dibuka. Cuba fail lain atau eksport fail ini sebagai WAV stereo."
+  "readError": "Fail audio ini tidak dapat dibuka. Cuba fail lain atau eksport fail ini sebagai WAV stereo.",
+  "formatLabel": "Format muat turun",
+  "wavOption": "WAV · Untuk penyuntingan",
+  "flacOption": "FLAC · Pemampatan tanpa kehilangan data",
+  "mp3Option": "MP3 · Fail lebih kecil",
+  "flacUnavailable": "Pilih WAV untuk mengekalkan kadar sampel dan ketepatan rakaman ini.",
+  "preparingDownload": "Menyediakan fail {format} untuk dimuat turun…",
+  "exportError": "Fail {format} gagal dihasilkan. Cuba lagi atau pilih WAV.",
+  "retry": "Cuba lagi"
 }

@@ -1,0 +1,15 @@
+{
+  "inputLabel": "טקסט בסינית",
+  "inputPlaceholder": "הקלידו או הדביקו טקסט בסינית",
+  "exampleLabel": "נסו דוגמה",
+  "clearLabel": "ניקוי",
+  "outputLabel": "פיניין",
+  "outputPlaceholder": "התעתיק לפיניין יופיע כאן",
+  "formatLabel": "סימון טונים",
+  "marksLabel": "סימני טון",
+  "numbersLabel": "מספרי טון",
+  "plainLabel": "בלי טונים",
+  "copyLabel": "העתקת פיניין",
+  "copiedLabel": "הועתק",
+  "copyFailedLabel": "ההעתקה נכשלה"
+}

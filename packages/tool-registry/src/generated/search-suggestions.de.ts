@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN-Betrachter",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Arbeitstage-Rechner",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Chinesisch in Pinyin umwandeln",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Zahlenkonverter für chinesische Finanzziffern",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Farbwähler",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Zinseszinsrechner",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-Abfrage",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-Koordinatentransformation",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB-Metadaten-Editor",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON-Betrachter",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF-Ersteller",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU-Informationen",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX-Betrachter mit Höhenprofil",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-Ereignisgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Betrachter für ICS-Kalenderdateien",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS-CSV-Konverter",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-Validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard-Generator",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

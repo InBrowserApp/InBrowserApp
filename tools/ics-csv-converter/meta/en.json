@@ -1,0 +1,4 @@
+{
+  "name": "ICS ↔ CSV Converter",
+  "description": "Convert iCalendar (.ics) events to a CSV spreadsheet or turn CSV rows into a calendar file. Preview and download either format in your browser."
+}

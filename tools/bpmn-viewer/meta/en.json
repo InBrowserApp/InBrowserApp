@@ -1,0 +1,4 @@
+{
+  "name": "BPMN Viewer",
+  "description": "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, and fit the process diagram to the view."
+}

@@ -1,0 +1,19 @@
+{
+  "details": "Contact details",
+  "preview": "Contact preview",
+  "empty": "Enter a name to start your contact card.",
+  "firstName": "First name",
+  "lastName": "Last name",
+  "phone": "Phone",
+  "email": "Email",
+  "company": "Company",
+  "jobTitle": "Job title",
+  "website": "Website",
+  "address": "Address",
+  "notes": "Notes",
+  "more": "More contact details",
+  "copy": "Copy vCard",
+  "copied": "Copied",
+  "copyFailed": "Could not copy",
+  "download": "Download VCF"
+}

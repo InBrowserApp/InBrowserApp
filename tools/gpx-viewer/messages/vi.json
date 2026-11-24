@@ -1,0 +1,17 @@
+{
+  "openFile": "Mở GPX",
+  "example": "Dùng thử ví dụ",
+  "map": "Bản đồ GPX",
+  "fit": "Vừa với dữ liệu",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "empty": "Mở tệp .gpx hoặc tải ví dụ để khám phá tuyến đường.",
+  "invalid": "Không thể mở tệp GPX này. Hãy kiểm tra xem tệp có chứa tọa độ GPX hợp lệ không.",
+  "distance": "Quãng đường",
+  "ascent": "Độ cao tăng",
+  "descent": "Độ cao giảm",
+  "elevation": "Độ cao",
+  "profile": "Biểu đồ độ cao",
+  "noElevation": "Vệt đường hoặc tuyến đường không có dữ liệu độ cao được ghi lại.",
+  "waypoint": "Điểm đánh dấu {number}"
+}

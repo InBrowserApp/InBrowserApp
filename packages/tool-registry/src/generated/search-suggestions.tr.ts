@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN Görüntüleyici",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "İş Günü Hesaplayıcı",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Çinceden Pinyin’e Dönüştürücü",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Renk Seçici",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Bileşik Faiz Hesaplayıcı",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Enlem ve Boylam için DMS Dönüştürücü",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS Sorgulama",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG Koordinat Dönüştürücü",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB Meta Veri Düzenleyicisi",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON Görüntüleyici",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF Oluşturucu",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU Bilgileri",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX Görüntüleyici ve Yükseklik Profili",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal Etkinlik Oluşturucu",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS Takvim Dosyası Görüntüleyici",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS ↔ CSV Dönüştürücü",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Doğrulayıcı",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard Oluşturucu",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

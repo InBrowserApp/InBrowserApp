@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Просмотр диаграмм BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Калькулятор рабочих дней",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Конвертер китайского текста в пиньинь",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Конвертер: числа ↔ китайская финансовая запись",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Пипетка Цвета",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Калькулятор сложного процента",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Конвертер широты и долготы в формат DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Поиск DNS-записей",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Преобразование координат по кодам EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Редактор метаданных EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "Просмотр GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "Создание GIF",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Информация о GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "Просмотр GPX и профиль высот",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Генератор событий iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Просмотр файлов календаря ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Конвертер ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Валидатор UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "Генератор vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

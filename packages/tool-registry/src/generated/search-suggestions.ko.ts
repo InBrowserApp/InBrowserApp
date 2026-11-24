@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 뷰어",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "영업일 계산기",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "중국어 병음 변환기",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "숫자 ↔ 중국어 대자 변환기",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "색상 선택기",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "복리 계산기",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "위도·경도 도분초 변환기",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS 조회",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 좌표 변환기",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB 메타데이터 편집기",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON 뷰어",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF 만들기",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU 정보",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX 뷰어와 고도 프로파일",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 이벤트 생성기",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS 캘린더 파일 뷰어",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS·CSV 변환기",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 검증기",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard 명함 생성기",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

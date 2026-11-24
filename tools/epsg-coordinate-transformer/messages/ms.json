@@ -1,0 +1,17 @@
+{
+  "source": "Sistem koordinat sumber",
+  "target": "Sistem koordinat sasaran",
+  "search": "Cari mengikut kod EPSG atau nama",
+  "noSystems": "Tiada sistem koordinat yang sepadan.",
+  "longitude": "Longitud (°)",
+  "latitude": "Latitud (°)",
+  "easting": "Timuran",
+  "northing": "Utaraan",
+  "meters": "Meter",
+  "example": "Cuba contoh",
+  "swap": "Songsangkan penukaran",
+  "copy": "Salin koordinat",
+  "copied": "Disalin",
+  "invalid": "Koordinat ini tidak dapat ditukar. Semak nilai dan sistem koordinat sumber.",
+  "axisHelp": "Untuk koordinat geografi, masukkan longitud diikuti latitud. Untuk koordinat unjuran, masukkan timuran diikuti utaraan."
+}

@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 檢視器",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "工作日計算器",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "漢字轉拼音",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "取色器",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算機",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "經緯度與度分秒轉換器",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS 查詢",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系統轉換器",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB 中繼資料編輯器",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON 檢視器",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF 製作器",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU 資訊",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX 檢視器與海拔剖面圖",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 事件產生器",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS 行事曆檔案檢視器",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS 與 CSV 互轉",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 驗證器",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard 名片產生器",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

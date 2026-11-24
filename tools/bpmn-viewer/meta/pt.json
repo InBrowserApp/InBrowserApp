@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de BPMN",
+  "description": "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela."
+}

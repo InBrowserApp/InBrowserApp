@@ -1,0 +1,20 @@
+{
+  "open": "BPMN 파일 열기",
+  "replace": "BPMN 파일 바꾸기",
+  "clear": "다이어그램 닫기",
+  "reader": "BPMN 뷰어",
+  "privacy": "파일은 기기에 남아 있습니다.",
+  "focus": "전체 화면 열기",
+  "exitFocus": "전체 화면 나가기",
+  "releaseFile": "놓아서 BPMN 파일 열기",
+  "drop": "여기에 BPMN 파일 놓기",
+  "formats": ".bpmn 또는 .xml 파일을 여세요.",
+  "example": "예제 보기",
+  "diagram": "BPMN 다이어그램",
+  "loading": "다이어그램을 여는 중…",
+  "invalid": "다이어그램을 열 수 없습니다. 유효한 BPMN 2.0 XML 파일을 선택하세요.",
+  "noLayout": "이 BPMN 파일에는 다이어그램 레이아웃이 없습니다. 모델링 도구에서 레이아웃 데이터를 포함해 다시 내보낸 후 여세요.",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "fit": "다이어그램을 화면에 맞추기"
+}

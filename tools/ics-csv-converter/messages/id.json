@@ -1,0 +1,28 @@
+{
+  "openFile": "Buka file",
+  "sample": "Coba contoh",
+  "input": "Teks sumber",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "copyFailed": "Tidak dapat menyalin",
+  "readError": "File tidak dapat dibaca. Pilih lagi atau tempel teksnya.",
+  "result": "Hasil konversi",
+  "empty": "Tambahkan file atau tempel teks, lalu konversi untuk melihat hasilnya di sini.",
+  "convert": "Konversi",
+  "preview": "Pratinjau hasil",
+  "invalid": "Periksa format file dan contoh di bawah ini, lalu coba lagi.",
+  "noRows": "Tidak ada entri untuk dikonversi. Periksa data masukan dan judul kolomnya.",
+  "rowError": "Periksa nilai pada baris {row} di file CSV.",
+  "count": "Jumlah entri: {count}",
+  "paste": "Tempel isi file di sini",
+  "forward": "ICS ke CSV",
+  "reverse": "CSV ke ICS",
+  "downloadForward": "Unduh CSV",
+  "downloadReverse": "Unduh ICS",
+  "columns": {
+    "Title": "Ringkasan",
+    "Start": "Tanggal mulai",
+    "End": "Tanggal selesai",
+    "Location": "Lokasi"
+  }
+}

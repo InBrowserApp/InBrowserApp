@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "عارض BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "حاسبة أيام العمل",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "محوّل الصينية إلى البينيين",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "محوّل الأعداد ↔ الأرقام الصينية المالية",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "أداة انتقاء الألوان",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "حاسبة الفائدة المركبة",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "محوّل خطوط الطول والعرض إلى DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "استعلام DNS",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "محوّل إحداثيات EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "محرر بيانات EPUB الوصفية",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "عارض GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "أداة إنشاء GIF",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "معلومات GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "عارض GPX مع منحنى الارتفاع",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "مولد أحداث iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "عارض ملفات تقويم ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "محوّل ICS وCSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "مدقق UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "مولّد vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

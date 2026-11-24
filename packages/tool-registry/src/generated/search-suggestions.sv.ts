@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN-visare",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Arbetsdagskalkylator",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Konvertera kinesiska till pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Omvandlare för tal ↔ kinesiska finansiella siffror",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Färgväljare",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Ränta på ränta-kalkylator",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-uppslagning",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-koordinattransformerare",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Redigerare för EPUB-metadata",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON-visare",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF-skapare",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU-information",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX-visare och höjdprofil",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-händelsegenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Visare för ICS-kalenderfiler",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Konverterare för ICS och CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard-generator",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

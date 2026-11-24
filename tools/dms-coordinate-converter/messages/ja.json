@@ -1,0 +1,18 @@
+{
+  "decimal": "十進法の度数（DD）",
+  "dms": "度分秒（DMS）",
+  "latitude": "緯度",
+  "longitude": "経度",
+  "degrees": "度",
+  "minutes": "分",
+  "seconds": "秒",
+  "hemisphere": "方位",
+  "north": "北緯（N）",
+  "south": "南緯（S）",
+  "east": "東経（E）",
+  "west": "西経（W）",
+  "example": "サンプルを試す",
+  "copy": "座標をコピー",
+  "copied": "コピーしました",
+  "invalid": "緯度は ±90°、経度は ±180° の範囲で入力してください。分と秒はそれぞれ 60 未満にしてください。"
+}

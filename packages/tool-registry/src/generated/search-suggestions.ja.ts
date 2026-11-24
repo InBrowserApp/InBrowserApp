@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN ビューアー",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "営業日計算ツール",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "中国語ピンイン変換",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "数値・中国語大字変換ツール",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "カラーピッカー",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算ツール",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "緯度・経度の度分秒（DMS）変換",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS ルックアップ",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系変換",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUBメタデータエディター",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON ビューアー",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF 作成ツール",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU 情報",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX ビューアー・標高断面図",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal イベント生成ツール",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS カレンダーファイルビューアー",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS・CSV 相互変換ツール",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID バリデーター",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard 名刺作成ツール",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

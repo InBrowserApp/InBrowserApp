@@ -1,0 +1,17 @@
+{
+  "openFile": "Otwórz GeoJSON",
+  "example": "Wypróbuj przykład",
+  "paste": "Wklej GeoJSON",
+  "render": "Pokaż na mapie",
+  "map": "Mapa GeoJSON",
+  "fit": "Dopasuj widok do danych",
+  "zoomIn": "Przybliż",
+  "zoomOut": "Oddal",
+  "features": "Obiekty",
+  "properties": "Atrybuty",
+  "empty": "Aby zacząć, otwórz plik .geojson lub .json albo wklej dane GeoJSON.",
+  "noGeometry": "Te dane GeoJSON nie zawierają geometrii do wyświetlenia.",
+  "noProperties": "Ten obiekt nie ma atrybutów.",
+  "invalid": "Nie udało się otworzyć danych GeoJSON. Sprawdź, czy zawierają poprawną geometrię GeoJSON.",
+  "feature": "Obiekt {number}"
+}

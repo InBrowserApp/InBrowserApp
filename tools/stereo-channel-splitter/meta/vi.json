@@ -1,4 +1,4 @@
 {
   "name": "Tách kênh âm thanh stereo",
-  "description": "Tách hai kênh trái và phải của âm thanh stereo thành hai tệp WAV mono riêng. Nghe thử và tải xuống từng kênh ngay trong trình duyệt."
+  "description": "Tách âm thanh stereo thành hai tệp mono riêng cho kênh trái và kênh phải. Nghe thử cả hai kênh và tải xuống dưới dạng WAV, FLAC hoặc MP3 ngay trong trình duyệt."
 }

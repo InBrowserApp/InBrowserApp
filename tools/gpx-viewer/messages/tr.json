@@ -1,0 +1,17 @@
+{
+  "openFile": "GPX aç",
+  "example": "Örneği dene",
+  "map": "GPX haritası",
+  "fit": "Verileri haritaya sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "empty": "Bir rotayı incelemek için .gpx dosyası açın veya örneği yükleyin.",
+  "invalid": "GPX dosyası açılamadı. Dosyada geçerli GPX koordinatları olduğundan emin olun.",
+  "distance": "Mesafe",
+  "ascent": "Toplam tırmanış",
+  "descent": "Toplam iniş",
+  "elevation": "Yükseklik",
+  "profile": "Yükseklik profili",
+  "noElevation": "Bu iz veya rota için yükseklik kaydı yok.",
+  "waypoint": "Yol noktası {number}"
+}

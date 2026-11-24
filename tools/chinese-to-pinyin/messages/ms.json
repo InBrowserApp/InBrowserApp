@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Teks bahasa Cina",
+  "inputPlaceholder": "Taip atau tampal teks bahasa Cina",
+  "exampleLabel": "Cuba contoh",
+  "clearLabel": "Kosongkan",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Hasil pinyin akan dipaparkan di sini",
+  "formatLabel": "Format nada",
+  "marksLabel": "Tanda nada",
+  "numbersLabel": "Nombor nada",
+  "plainLabel": "Tanpa nada",
+  "copyLabel": "Salin pinyin",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin"
+}

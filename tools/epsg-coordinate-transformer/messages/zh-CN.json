@@ -1,0 +1,17 @@
+{
+  "source": "源坐标系",
+  "target": "目标坐标系",
+  "search": "按 EPSG 代码或名称搜索",
+  "noSystems": "没有匹配的坐标系。",
+  "longitude": "经度（°）",
+  "latitude": "纬度（°）",
+  "easting": "东坐标",
+  "northing": "北坐标",
+  "meters": "米",
+  "example": "试用示例",
+  "swap": "反向转换",
+  "copy": "复制坐标",
+  "copied": "已复制",
+  "invalid": "无法转换这些坐标。请检查数值和源坐标系。",
+  "axisHelp": "地理坐标先输入经度，再输入纬度；投影坐标先输入东坐标，再输入北坐标。"
+}

@@ -1,0 +1,17 @@
+{
+  "openFile": "Mở GeoJSON",
+  "example": "Dùng thử ví dụ",
+  "paste": "Dán GeoJSON",
+  "render": "Hiển thị trên bản đồ",
+  "map": "Bản đồ GeoJSON",
+  "fit": "Vừa với dữ liệu",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "features": "Đối tượng",
+  "properties": "Thuộc tính",
+  "empty": "Mở tệp .geojson hoặc .json, hoặc dán GeoJSON để bắt đầu.",
+  "noGeometry": "GeoJSON này không có hình học để hiển thị.",
+  "noProperties": "Đối tượng này không có thuộc tính.",
+  "invalid": "Không thể mở GeoJSON này. Hãy kiểm tra xem dữ liệu có chứa hình học GeoJSON hợp lệ không.",
+  "feature": "Đối tượng {number}"
+}

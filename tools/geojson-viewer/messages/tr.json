@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON aç",
+  "example": "Örneği dene",
+  "paste": "GeoJSON yapıştır",
+  "render": "Haritada göster",
+  "map": "GeoJSON haritası",
+  "fit": "Verileri haritaya sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "features": "Coğrafi detaylar",
+  "properties": "Öznitelikler",
+  "empty": "Başlamak için .geojson veya .json dosyası açın ya da GeoJSON metni yapıştırın.",
+  "noGeometry": "Bu GeoJSON’da gösterilecek geometri yok.",
+  "noProperties": "Bu detayın özniteliği yok.",
+  "invalid": "GeoJSON açılamadı. Geçerli GeoJSON geometrileri içerdiğinden emin olun.",
+  "feature": "Detay {number}"
+}

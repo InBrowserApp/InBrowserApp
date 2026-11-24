@@ -1,0 +1,4 @@
+{
+  "name": "Transformasi Koordinat EPSG",
+  "description": "Transformasikan koordinat antara sistem referensi EPSG seperti WGS 84, Web Mercator, dan UTM. Periksa urutan sumbu dan satuan sebelum menyalin hasil."
+}

@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Pemapar BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Pengira hari bekerja",
     slug: "business-days-calculator",
@@ -263,6 +268,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Penukar Aksara Cina kepada Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +321,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator faedah kompaun",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Penukar Latitud dan Longitud ↔ DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Carian DNS",
     slug: "dns-lookup",
@@ -483,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Penukar Sistem Koordinat EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Penyunting Metadata EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "Pemapar GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "Pembuat GIF",
     slug: "gif-maker",
@@ -566,6 +596,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Maklumat GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "Pemapar GPX dan Profil Ketinggian",
+    slug: "gpx-viewer",
   },
   {
     category: "developer",
@@ -636,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Penjana acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Pemapar Fail Kalendar ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Penukar ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1636,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Pengesah UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "Penjana vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",
