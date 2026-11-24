@@ -1,0 +1,4 @@
+{
+  "name": "DICOM-viser",
+  "description": "Åpne lokale DICOM-bilder (.dcm, .dicom) i nettleseren. Bla gjennom CT- og MR-snitt, juster vindusbredde og vindusnivå og se DICOM-tagger uten opplasting."
+}

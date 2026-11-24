@@ -418,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Просмотр DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Просмотр DjVu",
     slug: "djvu-viewer",

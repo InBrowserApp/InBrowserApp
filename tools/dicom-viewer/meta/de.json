@@ -1,0 +1,4 @@
+{
+  "name": "DICOM-Betrachter",
+  "description": "Lokale DICOM-Bilder (.dcm, .dicom) im Browser öffnen. Durch CT- und MRT-Schichten blättern, Fensterbreite und Fensterlage ändern und DICOM-Tags ohne Upload prüfen."
+}

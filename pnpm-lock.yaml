@@ -800,6 +800,9 @@ catalogs:
     dependency-cruiser:
       specifier: ^18.8.0
       version: 18.8.0
+    dicom-parser:
+      specifier: ^1.8.21
+      version: 1.8.21
     diff:
       specifier: ^9.0.0
       version: 9.0.0
@@ -872,6 +875,9 @@ catalogs:
     jmespath:
       specifier: ^0.16.0
       version: 0.16.0
+    jpeg-lossless-decoder-js:
+      specifier: ^2.1.2
+      version: 2.1.2
     js-yaml:
       specifier: ^5.5.0
       version: 5.5.0
@@ -2217,6 +2223,9 @@ importers:
       '@tool/device-information':
         specifier: workspace:*
         version: link:../../tools/device-information
+      '@tool/dicom-viewer':
+        specifier: workspace:*
+        version: link:../../tools/dicom-viewer
       '@tool/djvu-viewer':
         specifier: workspace:*
         version: link:../../tools/djvu-viewer
@@ -5451,6 +5460,37 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/dicom-viewer:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      dicom-parser:
+        specifier: 'catalog:'
+        version: 1.8.21
+      jpeg-lossless-decoder-js:
+        specifier: 'catalog:'
+        version: 2.1.2
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -16280,6 +16320,12 @@ packages:
   '@rolldown/pluginutils@1.1.1':
     resolution: {integrity: sha512-glFIJDvLNDtJhT9qrMFWLPbvS+skxgt4L0K8Ei2YtnhPysAJnsI7nyxSJxKj4ADeKX0OLjC4ntRkwpLOoS3rwA==}
 
+  '@rollup/rollup-linux-x64-gnu@4.13.0':
+    resolution: {integrity: sha512-yUD/8wMffnTKuiIsl6xU+4IA8UNhQ/f1sAnQebmE/lyQ8abjsVyDkyRkWop0kdMhKMprpNIhPmYlCxgHrPoXoA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
@@ -18130,6 +18176,9 @@ packages:
   diagram-js@15.30.1:
     resolution: {integrity: sha512-RPye9d6JYiNABqqRe4fFGVwy/tFIYrfRu/PeVrjx6dlkDj8gsGwuUS7y9KwLEg9hWp0zYXAA1Jz5KNX0dzCdzA==}
 
+  dicom-parser@1.8.21:
+    resolution: {integrity: sha512-lYCweHQDsC8UFpXErPlg86Px2A8bay0HiUY+wzoG3xv5GzgqVHU3lziwSc/Gzn7VV7y2KeP072SzCviuOoU02w==}
+
   didi@12.0.0:
     resolution: {integrity: sha512-zn4AVarmnjgEHyBb3j5yc3KSMPkfkoj+D6nt8qisyvxG/NkmQuHsgQB54Wdc4tITUkJRqU1EvGuNe8RuHWIh6g==}
     engines: {node: '>= 20.12'}
@@ -18957,6 +19006,9 @@ packages:
 
   jpeg-js@0.4.4:
     resolution: {integrity: sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==}
+
+  jpeg-lossless-decoder-js@2.1.2:
+    resolution: {integrity: sha512-fYf/plymnuKwVw+s8gJ8O/BPw8y8OLaN11MBvEcT05kuy3m45o7BEC4J0JbxMNUYyO+MdK/I/jq0q1gkVYZm2Q==}
 
   js-binary-schema-parser@2.0.3:
     resolution: {integrity: sha512-xezGJmOb4lk/M1ZZLTR/jaBHQ4gG/lqQnJqdIv4721DMggsa1bDVlHXNeHYogaIEHD9vCRv0fcL4hMA+Coarkg==}
@@ -23857,6 +23909,9 @@ snapshots:
 
   '@rolldown/pluginutils@1.1.1': {}
 
+  '@rollup/rollup-linux-x64-gnu@4.13.0':
+    optional: true
+
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sentry/bundler-plugins@11.12.0':
@@ -25824,6 +25879,8 @@ snapshots:
     transitivePeerDependencies:
       - preact-render-to-string
 
+  dicom-parser@1.8.21: {}
+
   didi@12.0.0: {}
 
   diff@8.0.4: {}
@@ -26664,6 +26721,10 @@ snapshots:
   jmespath@0.16.0: {}
 
   jpeg-js@0.4.4: {}
+
+  jpeg-lossless-decoder-js@2.1.2:
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.13.0
 
   js-binary-schema-parser@2.0.3: {}
 

@@ -7638,6 +7638,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dicom-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "de",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "en",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "es",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "he",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "id",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "it",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "no",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "th",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "djvu-viewer",
     language: "ar",
   },
