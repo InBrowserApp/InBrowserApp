@@ -9,3 +9,7 @@ Ziehe das Diagramm, um den sichtbaren Ausschnitt zu verschieben. Mit den Zoomtas
 ## Eine BPMN-Datei ohne Diagrammlayout öffnen
 
 BPMN-2.0-XML kann einen Prozess beschreiben, ohne die Positionen von Formen und Verbindungen zu speichern. Der Betrachter zeichnet das Diagramm anhand der BPMN-Diagram-Interchange-Daten, die mit dem Modell gespeichert wurden. Wenn das Layout fehlt, öffne das Modell in deinem BPMN-Modellierungswerkzeug und exportiere es erneut mit dem Diagramm. Mehr zum Format findest du in der [BPMN-2.0-Spezifikation](https://www.omg.org/spec/BPMN/2.0.2/).
+
+## Ein Diagramm als SVG herunterladen
+
+Öffne ein Diagramm und wähle **SVG herunterladen**. Die Datei enthält das vollständige Diagramm im ursprünglichen Maßstab. Es bleibt auch beim Skalieren in Dokumenten und Präsentationsfolien scharf.

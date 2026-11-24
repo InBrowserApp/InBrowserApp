@@ -16,5 +16,7 @@
   "noLayout": "In dieser BPMN-Datei fehlen Layoutdaten. Exportiere sie erneut mit Diagrammlayout aus deinem Modellierungswerkzeug und öffne sie hier.",
   "zoomIn": "Vergrößern",
   "zoomOut": "Verkleinern",
-  "fit": "Diagramm an Ansicht anpassen"
+  "fit": "Diagramm an Ansicht anpassen",
+  "downloadSvg": "SVG herunterladen",
+  "exportError": "Die SVG-Datei konnte nicht erstellt werden. Versuche erneut, das Diagramm herunterzuladen."
 }

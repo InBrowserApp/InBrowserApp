@@ -1,4 +1,4 @@
 {
   "name": "Visor BPMN",
-  "description": "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista."
+  "description": "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en SVG."
 }

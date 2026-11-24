@@ -9,3 +9,7 @@ Kéo sơ đồ để di chuyển, dùng nút thu phóng để đọc nhãn nhỏ
 ## Khi tệp không có bố cục sơ đồ
 
 XML BPMN 2.0 có thể mô tả quy trình mà không ghi vị trí hình và đường nối. Trình xem dùng dữ liệu BPMN Diagram Interchange lưu cùng mô hình để vẽ sơ đồ. Nếu thiếu bố cục, hãy xuất lại mô hình từ công cụ mô hình hóa và bao gồm sơ đồ. Xem [đặc tả BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) để biết chi tiết định dạng.
+
+## Tải sơ đồ dưới dạng SVG
+
+Sau khi mở sơ đồ, chọn **Tải SVG**. Tệp chứa toàn bộ sơ đồ ở tỷ lệ gốc và vẫn sắc nét khi thay đổi kích thước trong tài liệu hoặc trang chiếu.

@@ -9,3 +9,7 @@ Seret diagram untuk menggeser tampilan. Gunakan tombol perbesaran untuk membaca 
 ## Buka file BPMN tanpa tata letak diagram
 
 XML BPMN 2.0 dapat menjelaskan proses tanpa mencatat lokasi bentuk dan penghubung. Penampil menggunakan data BPMN Diagram Interchange yang disimpan bersama model untuk menggambar diagram. Jika tata letaknya tidak ada, buka model di alat pemodelan BPMN dan ekspor ulang dengan menyertakan diagram. Lihat [spesifikasi BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) untuk detail format.
+
+## Unduh diagram sebagai SVG
+
+Setelah membuka diagram, pilih **Unduh SVG**. File berisi seluruh diagram pada skala aslinya dan tetap tajam saat ukurannya diubah di dokumen atau slide.

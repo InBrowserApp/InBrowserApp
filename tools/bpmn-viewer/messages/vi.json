@@ -16,5 +16,7 @@
   "noLayout": "Tệp BPMN này không có bố cục sơ đồ. Hãy xuất lại từ công cụ mô hình hóa kèm dữ liệu bố cục rồi mở lại.",
   "zoomIn": "Phóng to",
   "zoomOut": "Thu nhỏ",
-  "fit": "Điều chỉnh sơ đồ vừa khung xem"
+  "fit": "Điều chỉnh sơ đồ vừa khung xem",
+  "downloadSvg": "Tải SVG",
+  "exportError": "Không thể tạo SVG. Hãy thử tải lại sơ đồ."
 }

@@ -16,5 +16,7 @@
   "noLayout": "Este arquivo BPMN não contém o layout do diagrama. Exporte-o novamente com os dados de layout na ferramenta de modelagem e abra-o aqui.",
   "zoomIn": "Aumentar zoom",
   "zoomOut": "Diminuir zoom",
-  "fit": "Ajustar diagrama à janela"
+  "fit": "Ajustar diagrama à janela",
+  "downloadSvg": "Baixar SVG",
+  "exportError": "Não foi possível criar o SVG. Tente baixar o diagrama novamente."
 }

@@ -9,3 +9,7 @@ Dra i diagrammet för att panorera. Använd zoomknapparna för att läsa små et
 ## Öppna en BPMN-fil utan diagramlayout
 
 BPMN 2.0 XML kan beskriva en process utan att ange var dess former och förbindelser ska visas. Visaren ritar diagrammet med hjälp av modellens BPMN Diagram Interchange-data. Om layouten saknas, öppna modellen i ditt BPMN-verktyg och exportera på nytt med diagrammet inkluderat. Läs mer om formatet i [specifikationen för BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/).
+
+## Ladda ned ett diagram som SVG
+
+Välj **Ladda ned SVG** när du har öppnat ett diagram. Filen innehåller hela diagrammet i originalskala och förblir skarp när du ändrar storlek på diagrammet i dokument och presentationer.

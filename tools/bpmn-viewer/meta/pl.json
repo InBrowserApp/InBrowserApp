@@ -1,4 +1,4 @@
 {
   "name": "Przeglądarka diagramów BPMN",
-  "description": "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok."
+  "description": "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok. Pobieraj diagramy w formacie SVG."
 }

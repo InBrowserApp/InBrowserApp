@@ -16,5 +16,7 @@
   "noLayout": "Ce fichier BPMN ne contient aucune disposition de diagramme. Exportez-le de nouveau depuis votre outil de modélisation en incluant les données de disposition, puis rouvrez-le.",
   "zoomIn": "Agrandir",
   "zoomOut": "Réduire",
-  "fit": "Ajuster le diagramme à la vue"
+  "fit": "Ajuster le diagramme à la vue",
+  "downloadSvg": "Télécharger le SVG",
+  "exportError": "Impossible de créer le SVG. Essayez de télécharger le diagramme à nouveau."
 }

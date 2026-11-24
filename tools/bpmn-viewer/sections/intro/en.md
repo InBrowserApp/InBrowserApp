@@ -9,3 +9,7 @@ Drag the diagram to pan. Use the zoom buttons to read small labels, and select *
 ## Open a BPMN file that has no diagram layout
 
 BPMN 2.0 XML can describe a process without recording where its shapes or connections appear. The viewer uses the BPMN Diagram Interchange data stored with the model to draw the diagram. If the layout is missing, open the model in your BPMN modeling tool and export it again with the diagram included. See the [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0.2/) for format details.
+
+## Download a diagram as SVG
+
+Choose **Download SVG** after opening a diagram. The file contains the full diagram at its original scale and stays sharp when resized in documents and slides.

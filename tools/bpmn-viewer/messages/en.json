@@ -16,5 +16,7 @@
   "noLayout": "This BPMN file has no diagram layout. Export it from your modeling tool with diagram layout data and open it again.",
   "zoomIn": "Zoom in",
   "zoomOut": "Zoom out",
-  "fit": "Fit diagram to view"
+  "fit": "Fit diagram to view",
+  "downloadSvg": "Download SVG",
+  "exportError": "Could not create the SVG. Try downloading the diagram again."
 }
