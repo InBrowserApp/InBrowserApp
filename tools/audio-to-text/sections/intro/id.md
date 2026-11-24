@@ -1,14 +1,14 @@
 ## Cara mengubah rekaman audio menjadi teks
 
-Seret dan letakkan rekaman rapat, wawancara, kuliah, podcast, atau catatan suara di alat ini. Gunakan deteksi bahasa otomatis atau pilih bahasa yang digunakan dalam rekaman jika sudah mengetahuinya. Pilih model Whisper lalu klik **Mulai transkripsi**. Setelah transkrip siap, pilih penanda waktu untuk mendengarkan bagian rekaman tersebut. Anda bisa memperbaiki nama, tanda baca, atau kata yang keliru dikenali sebelum menyalin atau mengunduh teks.
+Seret dan letakkan rekaman rapat, wawancara, kuliah, podcast, atau catatan suara di alat ini. Gunakan deteksi bahasa otomatis atau pilih bahasa yang digunakan dalam rekaman jika sudah mengetahuinya. Pilih model transkripsi lalu klik **Mulai transkripsi**. Setelah transkrip siap, pilih penanda waktu untuk mendengarkan bagian rekaman tersebut. Anda bisa memperbaiki nama, tanda baca, atau kata yang keliru dikenali sebelum menyalin atau mengunduh teks.
 
 Alat ini membaca format audio yang bisa didekode oleh browser Anda, termasuk MP3, WAV, M4A, FLAC, OGG, dan WebM. Dukungan codec berbeda antarbrowser. Jika file gagal dibuka, coba ekspor ulang rekaman dari aplikasi perekam sebagai WAV atau MP3.
 
 ## Model transkripsi mana yang sebaiknya dipilih?
 
-Mulai dengan **Cepat (Whisper Base)** untuk catatan suara yang jernih atau untuk membuat draf awal. **Seimbang (Whisper Small)** bisa membantu mengenali percakapan dan beragam aksen. **Akurasi tertinggi (Whisper Large V3 Turbo)** adalah pilihan terbaik di sini untuk audio yang sulit dipahami. Ukuran unduhannya lebih besar dan penggunaan memorinya lebih tinggi. Ketiga model mendukung berbagai bahasa dan menuliskan ucapan dalam bahasa aslinya.
+Gunakan **Whisper Base** untuk rekaman yang jernih atau draf awal. **Whisper Small** membantu menangani percakapan dan aksen. **Whisper Large V3 Turbo** cocok untuk rekaman bising atau sulit dipahami, tetapi unduhannya lebih besar dan membutuhkan lebih banyak memori. Model Whisper mendukung berbagai bahasa dan menuliskan ucapan dalam bahasa aslinya. **SenseVoiceSmall** mendukung bahasa Mandarin, Kanton, Inggris, Jepang, dan Korea.
 
-Whisper menggunakan WebGPU jika browser dan perangkat grafis mendukungnya. Alat ini juga dapat berjalan di CPU melalui WebAssembly. Model pilihan Anda diunduh saat pertama kali digunakan. Browser dapat menggunakan kembali file model yang tersimpan di cache. Ukuran unduhan dan lama pemrosesan bergantung pada model dan perangkat. Rekaman didekode dan ditranskripsikan di perangkat Anda. Audio tidak dikirim saat model diunduh.
+Whisper menggunakan WebGPU jika browser dan perangkat grafis mendukungnya. Model pilihan Anda diunduh saat pertama kali digunakan. Browser dapat menggunakan kembali file model yang tersimpan di cache. Ukuran unduhan dan lama pemrosesan bergantung pada model dan perangkat. Rekaman didekode dan ditranskripsikan di perangkat Anda. Audio tidak dikirim saat model diunduh. SenseVoiceSmall berjalan secara lokal di CPU melalui WebAssembly. Jika WebGPU tidak tersedia, Whisper beralih ke CPU melalui WebAssembly.
 
 ## Mengekspor transkrip dengan penanda waktu atau subtitel
 
@@ -16,4 +16,4 @@ Whisper menggunakan WebGPU jika browser dan perangkat grafis mendukungnya. Alat 
 - **SRT (SubRip)** menambahkan waktu mulai dan selesai untuk setiap subtitel bernomor. Format ini umum digunakan di editor video.
 - **VTT (WebVTT)** juga menyertakan waktu mulai dan selesai setiap subtitel. Format ini dapat digunakan pada pemutar video HTML yang mendukung trek subtitel.
 
-Whisper memperkirakan waktu mulai dan selesai setiap potongan teks. Dengarkan kembali kutipan penting dan tinjau kesesuaian waktu subtitel sebelum membagikannya. Suara latar dan percakapan yang saling tumpang tindih bisa memengaruhi hasil. Teks disusun per bagian berdasarkan waktunya.
+Alat ini memperkirakan waktu mulai dan selesai setiap potongan teks. Dengarkan kembali kutipan penting dan tinjau kesesuaian waktu subtitel sebelum membagikannya. Suara latar dan percakapan yang saling tumpang tindih bisa memengaruhi hasil. Teks disusun per bagian berdasarkan waktunya.

@@ -73,12 +73,16 @@ function useTranscription() {
 
     function run(audio: Float32Array<ArrayBuffer>, cpuOnly: boolean) {
       try {
-        const worker = new Worker(
-          new URL("./workers/transcribe.worker.ts", import.meta.url),
-          {
-            type: "module",
-          }
-        )
+        const worker =
+          model === "senseVoice"
+            ? new Worker(
+                new URL("./workers/sense-voice.worker.ts", import.meta.url),
+                { type: "module" }
+              )
+            : new Worker(
+                new URL("./workers/transcribe.worker.ts", import.meta.url),
+                { type: "module" }
+              )
         job.worker = worker
         worker.onmessage = ({ data }: MessageEvent<TranscriptionResponse>) => {
           if (active.current !== job || job.worker !== worker) return

@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react"
+import { useEffect, useId, useMemo, useRef, useState } from "react"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
@@ -10,12 +10,19 @@ import {
   TriangleAlert,
 } from "@workspace/ui/icons"
 import { AudioPicker, NativeSelect } from "./input-fields"
-import { MODELS } from "./models"
+import { ModelPicker } from "./model-picker"
+import { SENSE_VOICE_LANGUAGES } from "./models"
 import { TranscriptResult } from "./transcript-result"
 import { useTranscription } from "./use-transcription"
 import type { AudioSource } from "./input-fields"
 import type { ModelId } from "./models"
 import type { Messages } from "./types"
+
+function supportsLanguage(model: ModelId, code: string) {
+  return model === "senseVoice"
+    ? SENSE_VOICE_LANGUAGES.some((supported) => supported === code)
+    : code !== "yue"
+}
 
 export default function Client({
   messages: m,
@@ -40,10 +47,15 @@ export default function Client({
     }
   }, [source])
 
-  const number = new Intl.NumberFormat(lang)
-  const modelSize = Object.values(MODELS[model].sizes)
-    .map((mb) => number.format(mb))
-    .join("–")
+  const modelLanguages = useMemo(
+    () => languages.filter(({ code }) => supportsLanguage(model, code)),
+    [model, languages]
+  )
+
+  function chooseModel(next: ModelId) {
+    setModel(next)
+    setLanguage((current) => (supportsLanguage(next, current) ? current : ""))
+  }
 
   function chooseFile(file: File) {
     transcription.clear()
@@ -97,6 +109,14 @@ export default function Client({
             />
 
             <div className="grid content-start gap-4">
+              <ModelPicker
+                messages={m}
+                lang={lang}
+                model={model}
+                disabled={!!status}
+                onChange={chooseModel}
+              />
+
               <div className="grid gap-2">
                 <Label htmlFor={`${id}-language`}>{m.language}</Label>
                 <NativeSelect
@@ -106,41 +126,12 @@ export default function Client({
                   onChange={(event) => setLanguage(event.currentTarget.value)}
                 >
                   <option value="">{m.autoLanguage}</option>
-                  {languages.map(({ code, name }) => (
+                  {modelLanguages.map(({ code, name }) => (
                     <option key={code} value={code}>
                       {name}
                     </option>
                   ))}
                 </NativeSelect>
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor={`${id}-model`}>{m.model}</Label>
-                <NativeSelect
-                  id={`${id}-model`}
-                  aria-describedby={`${id}-model-help`}
-                  value={model}
-                  disabled={!!status}
-                  onChange={(event) =>
-                    setModel(event.currentTarget.value as ModelId)
-                  }
-                >
-                  {(Object.keys(MODELS) as ModelId[]).map((key) => (
-                    <option key={key} value={key}>
-                      {m[key]}
-                    </option>
-                  ))}
-                </NativeSelect>
-                <div
-                  id={`${id}-model-help`}
-                  className="grid gap-1 text-xs leading-5 text-muted-foreground"
-                >
-                  <p>
-                    <bdi className="font-medium">{MODELS[model].name}</bdi>
-                    {" · "}
-                    {m.modelSize.replace("{size}", `\u2066${modelSize}\u2069`)}
-                  </p>
-                  <p>{m[`${model}Help`]}</p>
-                </div>
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <Button

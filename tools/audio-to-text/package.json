@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@huggingface/transformers": "catalog:",
+    "@sherpaw/asr": "catalog:",
+    "@sherpaw/vad": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*"
   },

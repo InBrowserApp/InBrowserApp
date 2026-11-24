@@ -281,6 +281,12 @@ catalogs:
     '@rhwp/core':
       specifier: 0.9.0
       version: 0.9.0
+    '@sherpaw/asr':
+      specifier: 0.3.0
+      version: 0.3.0
+    '@sherpaw/vad':
+      specifier: 0.3.0
+      version: 0.3.0
     '@silurus/ooxml':
       specifier: 0.90.1
       version: 0.90.1
@@ -3438,6 +3444,12 @@ importers:
       '@huggingface/transformers':
         specifier: 'catalog:'
         version: 3.8.1
+      '@sherpaw/asr':
+        specifier: 'catalog:'
+        version: 0.3.0
+      '@sherpaw/vad':
+        specifier: 'catalog:'
+        version: 0.3.0
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -15733,6 +15745,17 @@ packages:
     resolution: {integrity: sha512-wMvZ3DGdnhCwtpeFbwKybSGfCcP52bZX77jMKgZvupmirgyA5KRLlkeQXkI2RGHIaD8TX2iWe2wcIEjjqzg2FQ==}
     engines: {node: '>=20.18.1'}
 
+  '@sherpaw/asr@0.3.0':
+    resolution: {integrity: sha512-zLCJk7ZUVdc/GKeUx2dCfqDkbfiuA/iWlWYsHbPz/9ltwXVwAZckUr+bDQ3Jlcbpfvoe+y+GK7WqP0oMUIkCeQ==}
+    peerDependencies:
+      onnxruntime-web: 1.27.0
+    peerDependenciesMeta:
+      onnxruntime-web:
+        optional: true
+
+  '@sherpaw/vad@0.3.0':
+    resolution: {integrity: sha512-hj9d65vXIvHIiCV4uPZnRBmJ50pcUeOdXIJL0LdzfLzt7TtHiZKDDP8jItuaYefayp9CZ7guRZbxnRnReP1MFw==}
+
   '@shikijs/core@4.6.0':
     resolution: {integrity: sha512-bfd4OKgvoyXYiYmMRuleA656P4V7M/Du9lcTl38Ngm6KszMj7bq4J1IGZwSYR4c95Tv5UQALtYNWUwaI9UT3xw==}
     engines: {node: '>=20'}
@@ -23028,6 +23051,10 @@ snapshots:
       zod: 4.6.7
     transitivePeerDependencies:
       - supports-color
+
+  '@sherpaw/asr@0.3.0': {}
+
+  '@sherpaw/vad@0.3.0': {}
 
   '@shikijs/core@4.6.0':
     dependencies:

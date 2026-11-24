@@ -10,7 +10,7 @@ import type {
 } from "@huggingface/transformers"
 import { toSegments } from "../core/transcript"
 import type { Segment } from "../core/transcript"
-import { MODELS } from "../models"
+import { WHISPER_MODELS } from "../models"
 import { SAMPLE_RATE } from "../worker-messages"
 import type {
   TranscriptionRequest,
@@ -102,7 +102,11 @@ async function detectLanguagePrompt(
   return [start, language, config.task_to_id.transcribe]
 }
 
-self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
+self.onmessage = async ({
+  data,
+}: MessageEvent<
+  TranscriptionRequest & { model: keyof typeof WHISPER_MODELS }
+>) => {
   const { audio, model, language, cpuOnly } = data
   if (!audio.some((sample) => sample !== 0)) {
     send({ type: "done", segments: [] })
@@ -110,7 +114,7 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
   }
   const adapter = cpuOnly ? null : await findAdapter()
   const backend = adapter ? "webgpu" : "wasm"
-  const config = MODELS[model]
+  const config = WHISPER_MODELS[model]
   const dtype =
     model === "turbo"
       ? adapter?.features.has("shader-f16")

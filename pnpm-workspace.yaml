@@ -16,6 +16,8 @@ catalog:
   djvu-rs: 0.46.0
   mediabunny: 1.66.0
   onnxruntime-web: 1.31.1
+  "@sherpaw/asr": 0.3.0
+  "@sherpaw/vad": 0.3.0
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
   "@tesseract.js-data/afr": 1.0.0

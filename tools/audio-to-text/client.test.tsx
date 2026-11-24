@@ -56,6 +56,13 @@ function choose(input: HTMLInputElement, recording = file) {
   fireEvent.change(input, { target: { files: [recording] } })
 }
 
+async function chooseModel(name: RegExp) {
+  fireEvent.keyDown(screen.getByRole("combobox", { name: messages.model }), {
+    key: "ArrowDown",
+  })
+  fireEvent.click(await screen.findByRole("option", { name }))
+}
+
 beforeEach(() => {
   workers.length = 0
   vi.resetAllMocks()
@@ -98,9 +105,7 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
   fireEvent.drop(drop, { dataTransfer })
   expect(screen.getByText(file.name)).toBeDefined()
   expect(view.start.disabled).toBe(false)
-  fireEvent.change(screen.getByLabelText(messages.model), {
-    target: { value: "small" },
-  })
+  await chooseModel(/^Whisper Small/)
   fireEvent.change(screen.getByLabelText(messages.language), {
     target: { value: "zh" },
   })
@@ -177,6 +182,33 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
   choose(view.input, new File(["samples"], "different.mp3"))
   expect(screen.queryByRole("textbox")).toBeNull()
   expect(URL.revokeObjectURL).toHaveBeenCalled()
+})
+
+it("keeps compatible languages when switching engines and resets unsupported languages to automatic", async () => {
+  renderTool()
+  const language = screen.getByRole<HTMLSelectElement>("combobox", {
+    name: messages.language,
+  })
+  const codes = () => Array.from(language.options, (option) => option.value)
+  const changeLanguage = (value: string) =>
+    fireEvent.change(language, { target: { value } })
+
+  expect(codes()).toContain("de")
+  expect(codes()).not.toContain("yue")
+  changeLanguage("de")
+  await chooseModel(/^SenseVoiceSmall/)
+  expect(new Set(codes())).toEqual(new Set(["", "zh", "yue", "en", "ja", "ko"]))
+  expect(language.value).toBe("")
+
+  changeLanguage("ja")
+  await chooseModel(/^Whisper Base/)
+  expect(language.value).toBe("ja")
+  await chooseModel(/^SenseVoiceSmall/)
+  expect(language.value).toBe("ja")
+
+  changeLanguage("yue")
+  await chooseModel(/^Whisper Base/)
+  expect(language.value).toBe("")
 })
 
 it("downloads a timestamped partial TXT with only completed passages", async () => {
