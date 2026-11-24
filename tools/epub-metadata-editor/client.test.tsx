@@ -119,9 +119,9 @@ describe("EPUB editor interaction", () => {
       replacement
     )
     expect(HTMLAnchorElement.prototype.click).toHaveBeenCalled()
-    expect(
-      vi.mocked(HTMLAnchorElement.prototype.click).mock.instances[0]?.download
-    ).toBe("book-edited.epub")
+    const link = vi.mocked(HTMLAnchorElement.prototype.click).mock
+      .contexts[0] as HTMLAnchorElement
+    expect(link.download).toBe("book-edited.epub")
   })
 
   it("keeps edits and the existing cover when replacement files or download fail", async () => {
