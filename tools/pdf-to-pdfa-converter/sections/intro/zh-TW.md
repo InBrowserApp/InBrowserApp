@@ -23,4 +23,4 @@ PDF/A 是 ISO 19005 系列標準，用於長期保存 PDF 文件。封存副本�
 
 ### 在 Acrobat Pro 中驗證封存副本
 
-在 Adobe Acrobat Pro 中開啟下載的 PDF。在**標準**（Standards）面板中選擇**驗證符合性**（Verify Conformance），查看 PDF/A 設定檔及驗證結果。若要依下載按鈕旁顯示的設定檔進行檢查，請開啟**所有工具 → 使用列印作品 → 預檢**（All tools → Use print production → Preflight），選擇對應的 PDF/A 驗證設定檔，再選擇**分析**（Analyze）。
+在 Adobe Acrobat Pro 中開啟下載的 PDF。在**標準**（Standards）面板中選擇**驗證符合性**（Verify Conformance），查看 PDF/A 標準及驗證結果。若要依下載按鈕旁標示的標準檢查，請開啟**所有工具 → 使用列印製作 → 預檢**（All tools → Use print production → Preflight），選擇對應的 PDF/A 驗證設定檔，再選擇**分析**（Analyze）。

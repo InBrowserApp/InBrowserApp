@@ -23,4 +23,4 @@ PDF/A 是 ISO 19005 系列标准定义的长期文档保存格式。归档副本
 
 ### 在 Acrobat Pro 中验证归档副本
 
-在 Adobe Acrobat Pro 中打开下载的 PDF。在**标准**（Standards）面板中选择**验证符合性**（Verify Conformance），查看 PDF/A 配置文件和验证结果。要按下载按钮旁显示的配置文件进行检查，请打开**所有工具 → 使用印刷制作 → 印前检查**（All tools → Use print production → Preflight），选择对应的 PDF/A 验证配置文件，然后选择**分析**（Analyze）。
+在 Adobe Acrobat Pro 中打开下载的 PDF。在**标准**（Standards）面板中选择**验证符合性**（Verify Conformance），查看 PDF/A 标准和验证结果。要按下载按钮旁标明的标准检查，请打开**所有工具 → 使用印刷生产 → 印前检查**（All tools → Use print production → Preflight），选择对应的 PDF/A 验证配置文件，然后点击**分析**（Analyze）。
