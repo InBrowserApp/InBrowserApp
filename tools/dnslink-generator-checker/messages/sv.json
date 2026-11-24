@@ -1,0 +1,22 @@
+{
+  "domain": "Domän",
+  "target": "IPFS- eller IPNS-mål (valfritt)",
+  "example": "Prova ett exempel",
+  "check": "Kontrollera publicerad post",
+  "checking": "Kontrollerar DNS…",
+  "record": "DNS-post att lägga till",
+  "name": "Namn",
+  "value": "TXT-värde",
+  "copy": "Kopiera",
+  "copied": "Kopierad",
+  "published": "Publicerad DNSLink",
+  "invalidDomain": "Ange ett giltigt domännamn.",
+  "invalidTarget": "Ange en CID, en IPFS-sökväg eller en IPNS-sökväg.",
+  "missing": "Ingen DNSLink TXT-post returnerades.",
+  "unavailable": "Den här resolvern kunde inte slutföra uppslagningen.",
+  "malformed": "Det publicerade DNSLink-målet är ogiltigt.",
+  "match": "Matchar ditt mål",
+  "different": "Skiljer sig från ditt mål",
+  "ttl": "TTL (sekunder)",
+  "conflicting": "Flera DNSLink-poster hittades. Behåll ett enda IPFS- eller IPNS-mål."
+}

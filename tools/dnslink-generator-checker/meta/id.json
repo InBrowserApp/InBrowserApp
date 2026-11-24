@@ -1,0 +1,4 @@
+{
+  "name": "Pembuat dan Pemeriksa DNSLink",
+  "description": "Buat record TXT DNSLink untuk CID IPFS atau nama IPNS. Periksa hasil dari resolver DNS publik, lalu bandingkan target yang dipublikasikan dengan target yang Anda inginkan."
+}

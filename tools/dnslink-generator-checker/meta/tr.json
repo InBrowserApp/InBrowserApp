@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink Kaydı Oluşturma ve Kontrol Etme",
+  "description": "IPFS CID değeri veya IPNS adı için DNSLink TXT kaydı oluşturun. Genel DNS çözümleyicilerinin yanıtlarını kontrol edip yayımlanan hedefi beklediğiniz değerle karşılaştırın."
+}

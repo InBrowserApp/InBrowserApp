@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink-Generator und -Prüfer",
+  "description": "Erstellen Sie einen DNSLink-TXT-Eintrag für eine IPFS-CID oder einen IPNS-Namen. Rufen Sie die Antworten öffentlicher DNS-Resolver ab und vergleichen Sie das veröffentlichte mit dem gewünschten Ziel."
+}

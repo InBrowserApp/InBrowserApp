@@ -1,0 +1,4 @@
+{
+  "name": "Generator i weryfikator rekordów DNSLink",
+  "description": "Utwórz rekord TXT DNSLink dla identyfikatora CID w IPFS lub nazwy IPNS. Sprawdź odpowiedzi publicznych serwerów DNS i porównaj opublikowany adres docelowy z oczekiwanym."
+}

@@ -1,0 +1,22 @@
+{
+  "domain": "Domain",
+  "target": "IPFS- oder IPNS-Ziel (optional)",
+  "example": "Beispiel ausprobieren",
+  "check": "Veröffentlichten Eintrag prüfen",
+  "checking": "Hinzuzufügender DNS-Eintrag",
+  "record": "Name",
+  "name": "TXT-Wert",
+  "value": "Kopieren",
+  "copy": "Kopiert",
+  "copied": "Veröffentlichter DNSLink",
+  "published": "Geben Sie einen gültigen Domainnamen ein.",
+  "invalidDomain": "Geben Sie eine CID, einen IPFS-Pfad oder einen IPNS-Pfad ein.",
+  "invalidTarget": "Die Antwort enthält keinen DNSLink-TXT-Eintrag.",
+  "missing": "Dieser Resolver konnte die Abfrage nicht abschließen.",
+  "unavailable": "Das veröffentlichte DNSLink-Ziel ist ungültig.",
+  "malformed": "Entspricht Ihrem Ziel",
+  "match": "Weicht von Ihrem Ziel ab",
+  "different": "TTL (Sekunden)",
+  "ttl": "TTL (Sekunden)",
+  "conflicting": "Mehrere DNSLink-Einträge gefunden. Behalten Sie nur ein IPFS- oder IPNS-Ziel."
+}

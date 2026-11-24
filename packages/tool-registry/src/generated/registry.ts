@@ -12328,6 +12328,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "dnslink-generator-checker",
+    category: "ipfs",
+    secondaryCategories: ["network"],
+    icon: "link-2",
+    tags: ["dnslink", "_dnslink", "ipfs", "ipns", "dns", "txt", "domain"],
+    locales: {
+      ar: {
+        name: "مولّد سجلات DNSLink وفاحصها",
+        description:
+          "أنشئ سجل TXT لـ DNSLink باستخدام معرّف IPFS CID أو اسم IPNS. تحقّق مما تُرجعه محلّلات DNS العامة وقارن الوجهة المنشورة بالوجهة التي تريدها.",
+      },
+      de: {
+        name: "DNSLink-Generator und -Prüfer",
+        description:
+          "Erstellen Sie einen DNSLink-TXT-Eintrag für eine IPFS-CID oder einen IPNS-Namen. Rufen Sie die Antworten öffentlicher DNS-Resolver ab und vergleichen Sie das veröffentlichte mit dem gewünschten Ziel.",
+      },
+      en: {
+        name: "DNSLink Generator & Checker",
+        description:
+          "Generate a DNSLink TXT record for an IPFS CID or IPNS name. Check what public DNS resolvers return and compare the published target with your intended value.",
+      },
+      es: {
+        name: "Generador y comprobador de DNSLink",
+        description:
+          "Genera un registro TXT de DNSLink para un CID de IPFS o un nombre IPNS. Consulta las respuestas de los resolutores DNS públicos y compara el destino publicado con el que quieres usar.",
+      },
+      fr: {
+        name: "Générateur et vérificateur DNSLink",
+        description:
+          "Générez un enregistrement TXT DNSLink pour un CID IPFS ou un nom IPNS. Consultez les réponses des résolveurs DNS publics et comparez la cible publiée à celle que vous souhaitez utiliser.",
+      },
+      he: {
+        name: "יצירה ובדיקה של רשומות DNSLink",
+        description:
+          "צרו רשומת TXT של DNSLink עבור CID של IPFS או שם IPNS. בדקו מה מחזירים שרתי DNS ציבוריים והשוו את היעד שפורסם ליעד המבוקש.",
+      },
+      hi: {
+        name: "DNSLink रिकॉर्ड बनाने और जाँचने का टूल",
+        description:
+          "IPFS CID या IPNS नाम के लिए DNSLink TXT रिकॉर्ड बनाएँ। देखें कि सार्वजनिक DNS रिज़ॉल्वर क्या लौटाते हैं और प्रकाशित लक्ष्य की तुलना अपने तय किए गए लक्ष्य से करें।",
+      },
+      id: {
+        name: "Pembuat dan Pemeriksa DNSLink",
+        description:
+          "Buat record TXT DNSLink untuk CID IPFS atau nama IPNS. Periksa hasil dari resolver DNS publik, lalu bandingkan target yang dipublikasikan dengan target yang Anda inginkan.",
+      },
+      it: {
+        name: "Generatore e verificatore DNSLink",
+        description:
+          "Genera un record TXT DNSLink per un CID IPFS o un nome IPNS. Controlla le risposte dei resolver DNS pubblici e confronta la destinazione pubblicata con quella prevista.",
+      },
+      ja: {
+        name: "DNSLink 生成・確認ツール",
+        description:
+          "IPFS CID や IPNS 名に対応する DNSLink の TXT レコードを生成します。公開 DNS リゾルバーの応答を確認し、公開されているリンク先を設定予定の値と照合できます。",
+      },
+      ko: {
+        name: "DNSLink 생성 및 확인 도구",
+        description:
+          "IPFS CID 또는 IPNS 이름에 사용할 DNSLink TXT 레코드를 생성하세요. 공개 DNS 확인자의 응답을 조회하고 게시된 대상을 원하는 값과 비교할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana dan Penyemak DNSLink",
+        description:
+          "Jana rekod TXT DNSLink untuk CID IPFS atau nama IPNS. Semak jawapan penyelesai DNS awam dan bandingkan sasaran yang diterbitkan dengan sasaran yang anda inginkan.",
+      },
+      nl: {
+        name: "DNSLink-generator en -checker",
+        description:
+          "Genereer een DNSLink TXT-record voor een IPFS-CID of IPNS-naam. Controleer de antwoorden van openbare DNS-resolvers en vergelijk het gepubliceerde doel met het gewenste doel.",
+      },
+      no: {
+        name: "DNSLink-generator og kontroll",
+        description:
+          "Generer en DNSLink TXT-post for en IPFS-CID eller et IPNS-navn. Kontroller svarene fra offentlige DNS-oppslagstjenere og sammenlign det publiserte målet med ønsket verdi.",
+      },
+      pl: {
+        name: "Generator i weryfikator rekordów DNSLink",
+        description:
+          "Utwórz rekord TXT DNSLink dla identyfikatora CID w IPFS lub nazwy IPNS. Sprawdź odpowiedzi publicznych serwerów DNS i porównaj opublikowany adres docelowy z oczekiwanym.",
+      },
+      pt: {
+        name: "Gerador e verificador de DNSLink",
+        description:
+          "Gere um registo TXT de DNSLink para um CID do IPFS ou um nome IPNS. Consulte as respostas dos resolvedores de DNS públicos e compare o destino publicado com o pretendido.",
+      },
+      ru: {
+        name: "Создание и проверка DNSLink",
+        description:
+          "Создайте TXT-запись DNSLink для CID в IPFS или имени IPNS. Посмотрите ответы публичных DNS-резолверов и сравните опубликованный адрес с нужным.",
+      },
+      sv: {
+        name: "DNSLink-generator och kontroll",
+        description:
+          "Generera en DNSLink TXT-post för en IPFS-CID eller ett IPNS-namn. Kontrollera svaren från offentliga DNS-resolvrar och jämför det publicerade målet med det avsedda värdet.",
+      },
+      th: {
+        name: "เครื่องมือสร้างและตรวจสอบ DNSLink",
+        description:
+          "สร้างระเบียน TXT ของ DNSLink สำหรับ CID ของ IPFS หรือชื่อ IPNS ดูผลจากรีโซลเวอร์ DNS สาธารณะ แล้วเทียบเป้าหมายที่เผยแพร่กับค่าที่ต้องการ",
+      },
+      tr: {
+        name: "DNSLink Kaydı Oluşturma ve Kontrol Etme",
+        description:
+          "IPFS CID değeri veya IPNS adı için DNSLink TXT kaydı oluşturun. Genel DNS çözümleyicilerinin yanıtlarını kontrol edip yayımlanan hedefi beklediğiniz değerle karşılaştırın.",
+      },
+      vi: {
+        name: "Công cụ tạo và kiểm tra DNSLink",
+        description:
+          "Tạo bản ghi TXT DNSLink cho CID IPFS hoặc tên IPNS. Xem kết quả từ các bộ phân giải DNS công cộng và đối chiếu đích đã công bố với đích bạn muốn dùng.",
+      },
+      "zh-CN": {
+        name: "DNSLink 生成与检查工具",
+        description:
+          "为 IPFS CID 或 IPNS 名称生成 DNSLink TXT 记录。查询公共 DNS 解析器的响应，核对已发布的目标是否符合预期。",
+      },
+      "zh-TW": {
+        name: "DNSLink 產生與檢查工具",
+        description:
+          "為 IPFS CID 或 IPNS 名稱產生 DNSLink TXT 記錄。查詢公開 DNS 解析器的回應，並比對已發布的目標是否符合預期。",
+      },
+    },
+  },
+  {
     slug: "doc-to-pdf-converter",
     category: "document",
     secondaryCategories: ["pdf"],
@@ -61427,6 +61551,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DNS 區域檔案解析器",
         description:
           "將 BIND 格式的 DNS 區域檔案解析為可搜尋的記錄和 JSON，直接在瀏覽器中查看記錄名稱、類型、TTL、類別及資料。",
+      },
+    },
+  },
+  "dnslink-generator-checker": {
+    slug: "dnslink-generator-checker",
+    category: "ipfs",
+    secondaryCategories: ["network"],
+    icon: "link-2",
+    tags: ["dnslink", "_dnslink", "ipfs", "ipns", "dns", "txt", "domain"],
+    locales: {
+      ar: {
+        name: "مولّد سجلات DNSLink وفاحصها",
+        description:
+          "أنشئ سجل TXT لـ DNSLink باستخدام معرّف IPFS CID أو اسم IPNS. تحقّق مما تُرجعه محلّلات DNS العامة وقارن الوجهة المنشورة بالوجهة التي تريدها.",
+      },
+      de: {
+        name: "DNSLink-Generator und -Prüfer",
+        description:
+          "Erstellen Sie einen DNSLink-TXT-Eintrag für eine IPFS-CID oder einen IPNS-Namen. Rufen Sie die Antworten öffentlicher DNS-Resolver ab und vergleichen Sie das veröffentlichte mit dem gewünschten Ziel.",
+      },
+      en: {
+        name: "DNSLink Generator & Checker",
+        description:
+          "Generate a DNSLink TXT record for an IPFS CID or IPNS name. Check what public DNS resolvers return and compare the published target with your intended value.",
+      },
+      es: {
+        name: "Generador y comprobador de DNSLink",
+        description:
+          "Genera un registro TXT de DNSLink para un CID de IPFS o un nombre IPNS. Consulta las respuestas de los resolutores DNS públicos y compara el destino publicado con el que quieres usar.",
+      },
+      fr: {
+        name: "Générateur et vérificateur DNSLink",
+        description:
+          "Générez un enregistrement TXT DNSLink pour un CID IPFS ou un nom IPNS. Consultez les réponses des résolveurs DNS publics et comparez la cible publiée à celle que vous souhaitez utiliser.",
+      },
+      he: {
+        name: "יצירה ובדיקה של רשומות DNSLink",
+        description:
+          "צרו רשומת TXT של DNSLink עבור CID של IPFS או שם IPNS. בדקו מה מחזירים שרתי DNS ציבוריים והשוו את היעד שפורסם ליעד המבוקש.",
+      },
+      hi: {
+        name: "DNSLink रिकॉर्ड बनाने और जाँचने का टूल",
+        description:
+          "IPFS CID या IPNS नाम के लिए DNSLink TXT रिकॉर्ड बनाएँ। देखें कि सार्वजनिक DNS रिज़ॉल्वर क्या लौटाते हैं और प्रकाशित लक्ष्य की तुलना अपने तय किए गए लक्ष्य से करें।",
+      },
+      id: {
+        name: "Pembuat dan Pemeriksa DNSLink",
+        description:
+          "Buat record TXT DNSLink untuk CID IPFS atau nama IPNS. Periksa hasil dari resolver DNS publik, lalu bandingkan target yang dipublikasikan dengan target yang Anda inginkan.",
+      },
+      it: {
+        name: "Generatore e verificatore DNSLink",
+        description:
+          "Genera un record TXT DNSLink per un CID IPFS o un nome IPNS. Controlla le risposte dei resolver DNS pubblici e confronta la destinazione pubblicata con quella prevista.",
+      },
+      ja: {
+        name: "DNSLink 生成・確認ツール",
+        description:
+          "IPFS CID や IPNS 名に対応する DNSLink の TXT レコードを生成します。公開 DNS リゾルバーの応答を確認し、公開されているリンク先を設定予定の値と照合できます。",
+      },
+      ko: {
+        name: "DNSLink 생성 및 확인 도구",
+        description:
+          "IPFS CID 또는 IPNS 이름에 사용할 DNSLink TXT 레코드를 생성하세요. 공개 DNS 확인자의 응답을 조회하고 게시된 대상을 원하는 값과 비교할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana dan Penyemak DNSLink",
+        description:
+          "Jana rekod TXT DNSLink untuk CID IPFS atau nama IPNS. Semak jawapan penyelesai DNS awam dan bandingkan sasaran yang diterbitkan dengan sasaran yang anda inginkan.",
+      },
+      nl: {
+        name: "DNSLink-generator en -checker",
+        description:
+          "Genereer een DNSLink TXT-record voor een IPFS-CID of IPNS-naam. Controleer de antwoorden van openbare DNS-resolvers en vergelijk het gepubliceerde doel met het gewenste doel.",
+      },
+      no: {
+        name: "DNSLink-generator og kontroll",
+        description:
+          "Generer en DNSLink TXT-post for en IPFS-CID eller et IPNS-navn. Kontroller svarene fra offentlige DNS-oppslagstjenere og sammenlign det publiserte målet med ønsket verdi.",
+      },
+      pl: {
+        name: "Generator i weryfikator rekordów DNSLink",
+        description:
+          "Utwórz rekord TXT DNSLink dla identyfikatora CID w IPFS lub nazwy IPNS. Sprawdź odpowiedzi publicznych serwerów DNS i porównaj opublikowany adres docelowy z oczekiwanym.",
+      },
+      pt: {
+        name: "Gerador e verificador de DNSLink",
+        description:
+          "Gere um registo TXT de DNSLink para um CID do IPFS ou um nome IPNS. Consulte as respostas dos resolvedores de DNS públicos e compare o destino publicado com o pretendido.",
+      },
+      ru: {
+        name: "Создание и проверка DNSLink",
+        description:
+          "Создайте TXT-запись DNSLink для CID в IPFS или имени IPNS. Посмотрите ответы публичных DNS-резолверов и сравните опубликованный адрес с нужным.",
+      },
+      sv: {
+        name: "DNSLink-generator och kontroll",
+        description:
+          "Generera en DNSLink TXT-post för en IPFS-CID eller ett IPNS-namn. Kontrollera svaren från offentliga DNS-resolvrar och jämför det publicerade målet med det avsedda värdet.",
+      },
+      th: {
+        name: "เครื่องมือสร้างและตรวจสอบ DNSLink",
+        description:
+          "สร้างระเบียน TXT ของ DNSLink สำหรับ CID ของ IPFS หรือชื่อ IPNS ดูผลจากรีโซลเวอร์ DNS สาธารณะ แล้วเทียบเป้าหมายที่เผยแพร่กับค่าที่ต้องการ",
+      },
+      tr: {
+        name: "DNSLink Kaydı Oluşturma ve Kontrol Etme",
+        description:
+          "IPFS CID değeri veya IPNS adı için DNSLink TXT kaydı oluşturun. Genel DNS çözümleyicilerinin yanıtlarını kontrol edip yayımlanan hedefi beklediğiniz değerle karşılaştırın.",
+      },
+      vi: {
+        name: "Công cụ tạo và kiểm tra DNSLink",
+        description:
+          "Tạo bản ghi TXT DNSLink cho CID IPFS hoặc tên IPNS. Xem kết quả từ các bộ phân giải DNS công cộng và đối chiếu đích đã công bố với đích bạn muốn dùng.",
+      },
+      "zh-CN": {
+        name: "DNSLink 生成与检查工具",
+        description:
+          "为 IPFS CID 或 IPNS 名称生成 DNSLink TXT 记录。查询公共 DNS 解析器的响应，核对已发布的目标是否符合预期。",
+      },
+      "zh-TW": {
+        name: "DNSLink 產生與檢查工具",
+        description:
+          "為 IPFS CID 或 IPNS 名稱產生 DNSLink TXT 記錄。查詢公開 DNS 解析器的回應，並比對已發布的目標是否符合預期。",
       },
     },
   },

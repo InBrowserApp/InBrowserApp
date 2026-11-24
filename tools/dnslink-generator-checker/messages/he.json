@@ -1,0 +1,22 @@
+{
+  "domain": "דומיין",
+  "target": "יעד IPFS או IPNS (אופציונלי)",
+  "example": "נסו דוגמה פעילה",
+  "check": "בדיקת הרשומה שפורסמה",
+  "checking": "בודק DNS…",
+  "record": "רשומת DNS להוספה",
+  "name": "שם",
+  "value": "ערך TXT",
+  "copy": "העתקה",
+  "copied": "הועתק",
+  "published": "רשומת DNSLink שפורסמה",
+  "invalidDomain": "הזינו שם דומיין תקין.",
+  "invalidTarget": "הזינו CID או נתיב של IPFS או IPNS.",
+  "missing": "לא התקבלה רשומת TXT של DNSLink.",
+  "unavailable": "שרת ה-DNS הזה לא הצליח להשלים את הבדיקה.",
+  "malformed": "היעד שפורסם ברשומת DNSLink אינו תקין.",
+  "match": "תואם ליעד שהזנתם",
+  "different": "שונה מהיעד שהזנתם",
+  "ttl": "TTL (שניות)",
+  "conflicting": "נמצאו כמה רשומות DNSLink. השאירו יעד IPFS או IPNS אחד בלבד."
+}

@@ -1,0 +1,22 @@
+{
+  "domain": "Domínio",
+  "target": "Destino IPFS ou IPNS (opcional)",
+  "example": "Experimentar um exemplo real",
+  "check": "Verificar registo publicado",
+  "checking": "Registo DNS a adicionar",
+  "record": "Nome",
+  "name": "Valor TXT",
+  "value": "Copiar",
+  "copy": "Copiado",
+  "copied": "DNSLink publicado",
+  "published": "Introduza um nome de domínio válido.",
+  "invalidDomain": "Introduza um CID, um caminho IPFS ou um caminho IPNS.",
+  "invalidTarget": "A resposta não contém nenhum registo TXT de DNSLink.",
+  "missing": "Este resolvedor não conseguiu concluir a consulta.",
+  "unavailable": "O destino DNSLink publicado é inválido.",
+  "malformed": "Corresponde ao seu destino",
+  "match": "Difere do seu destino",
+  "different": "TTL (segundos)",
+  "ttl": "TTL (segundos)",
+  "conflicting": "Existem vários registos DNSLink. Mantenha apenas um destino IPFS ou IPNS."
+}

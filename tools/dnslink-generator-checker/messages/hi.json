@@ -1,0 +1,22 @@
+{
+  "domain": "डोमेन",
+  "target": "IPFS या IPNS लक्ष्य (वैकल्पिक)",
+  "example": "असली उदाहरण आज़माएँ",
+  "check": "प्रकाशित रिकॉर्ड जाँचें",
+  "checking": "DNS की जाँच हो रही है…",
+  "record": "जोड़ने के लिए DNS रिकॉर्ड",
+  "name": "नाम",
+  "value": "TXT का मान",
+  "copy": "कॉपी करें",
+  "copied": "कॉपी हो गया",
+  "published": "प्रकाशित DNSLink",
+  "invalidDomain": "मान्य डोमेन नाम दर्ज करें।",
+  "invalidTarget": "CID, IPFS पाथ या IPNS पाथ दर्ज करें।",
+  "missing": "जवाब में कोई DNSLink TXT रिकॉर्ड नहीं मिला।",
+  "unavailable": "यह DNS रिज़ॉल्वर खोज पूरी नहीं कर सका।",
+  "malformed": "प्रकाशित DNSLink का लक्ष्य अमान्य है।",
+  "match": "आपके लक्ष्य से मेल खाता है",
+  "different": "आपके लक्ष्य से अलग है",
+  "ttl": "TTL (सेकंड)",
+  "conflicting": "कई DNSLink रिकॉर्ड हैं। केवल एक IPFS या IPNS लक्ष्य रखें।"
+}

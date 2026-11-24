@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tạo và kiểm tra DNSLink",
+  "description": "Tạo bản ghi TXT DNSLink cho CID IPFS hoặc tên IPNS. Xem kết quả từ các bộ phân giải DNS công cộng và đối chiếu đích đã công bố với đích bạn muốn dùng."
+}

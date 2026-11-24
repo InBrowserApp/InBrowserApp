@@ -1,0 +1,22 @@
+{
+  "domain": "域名",
+  "target": "IPFS 或 IPNS 目标（可选）",
+  "example": "试查示例域名",
+  "check": "检查已发布的记录",
+  "checking": "正在查询 DNS…",
+  "record": "要添加的 DNS 记录",
+  "name": "名称",
+  "value": "TXT 值",
+  "copy": "复制",
+  "copied": "已复制",
+  "published": "已发布的 DNSLink",
+  "invalidDomain": "请输入有效的域名。",
+  "invalidTarget": "请输入 CID、IPFS 路径或 IPNS 路径。",
+  "missing": "未返回 DNSLink TXT 记录。",
+  "unavailable": "此解析器未能完成查询。",
+  "malformed": "已发布的 DNSLink 目标无效。",
+  "match": "与预期目标一致",
+  "different": "与预期目标不同",
+  "ttl": "TTL（秒）",
+  "conflicting": "检测到多条 DNSLink 记录。请只保留一个 IPFS 或 IPNS 目标。"
+}

@@ -122,6 +122,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/dms-coordinate-converter/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "dns-zone-file-parser": () => import("@tool/dns-zone-file-parser/page"),
+  "dnslink-generator-checker": () =>
+    import("@tool/dnslink-generator-checker/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),
   "docker-compose-validator": () =>

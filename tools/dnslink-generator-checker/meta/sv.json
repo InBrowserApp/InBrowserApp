@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink-generator och kontroll",
+  "description": "Generera en DNSLink TXT-post för en IPFS-CID eller ett IPNS-namn. Kontrollera svaren från offentliga DNS-resolvrar och jämför det publicerade målet med det avsedda värdet."
+}

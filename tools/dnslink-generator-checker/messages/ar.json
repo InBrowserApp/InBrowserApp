@@ -1,0 +1,22 @@
+{
+  "domain": "النطاق",
+  "target": "وجهة IPFS أو IPNS (اختياري)",
+  "example": "جرّب مثالًا فعليًا",
+  "check": "افحص السجل المنشور",
+  "checking": "جارٍ فحص DNS…",
+  "record": "سجل DNS المطلوب إضافته",
+  "name": "الاسم",
+  "value": "قيمة TXT",
+  "copy": "نسخ",
+  "copied": "تم النسخ",
+  "published": "سجل DNSLink المنشور",
+  "invalidDomain": "أدخل اسم نطاق صالحًا.",
+  "invalidTarget": "أدخل معرّف CID أو مسار IPFS أو IPNS.",
+  "missing": "لم يُرجع محلّل DNS أي سجل TXT لـ DNSLink.",
+  "unavailable": "تعذّر على محلّل DNS هذا إكمال الاستعلام.",
+  "malformed": "الوجهة المنشورة في سجل DNSLink غير صالحة.",
+  "match": "تطابق الوجهة المحددة",
+  "different": "تختلف عن الوجهة المحددة",
+  "ttl": "مدة التخزين المؤقت (TTL بالثواني)",
+  "conflicting": "توجد سجلات DNSLink متعددة. احتفظ بوجهة IPFS أو IPNS واحدة."
+}

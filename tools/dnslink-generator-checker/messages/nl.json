@@ -1,0 +1,22 @@
+{
+  "domain": "Domein",
+  "target": "IPFS- of IPNS-doel (optioneel)",
+  "example": "Een live voorbeeld proberen",
+  "check": "Gepubliceerd record controleren",
+  "checking": "DNS controleren…",
+  "record": "Toe te voegen DNS-record",
+  "name": "Naam",
+  "value": "TXT-waarde",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd",
+  "published": "Gepubliceerde DNSLink",
+  "invalidDomain": "Voer een geldige domeinnaam in.",
+  "invalidTarget": "Voer een CID, een IPFS-pad of een IPNS-pad in.",
+  "missing": "Er is geen DNSLink TXT-record teruggegeven.",
+  "unavailable": "Deze resolver kon de zoekopdracht niet voltooien.",
+  "malformed": "Het gepubliceerde DNSLink-doel is ongeldig.",
+  "match": "Komt overeen met je doel",
+  "different": "Verschilt van je doel",
+  "ttl": "TTL (seconden)",
+  "conflicting": "Meerdere DNSLink-records gevonden. Behoud één IPFS- of IPNS-doel."
+}

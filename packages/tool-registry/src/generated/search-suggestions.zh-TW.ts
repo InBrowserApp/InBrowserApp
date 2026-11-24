@@ -483,6 +483,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-zone-file-parser",
   },
   {
+    category: "ipfs",
+    name: "DNSLink 產生與檢查工具",
+    slug: "dnslink-generator-checker",
+  },
+  {
     category: "document",
     name: "DOC / WPS 轉 PDF 轉換器",
     slug: "doc-to-pdf-converter",

@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink-generator en -checker",
+  "description": "Genereer een DNSLink TXT-record voor een IPFS-CID of IPNS-naam. Controleer de antwoorden van openbare DNS-resolvers en vergelijk het gepubliceerde doel met het gewenste doel."
+}

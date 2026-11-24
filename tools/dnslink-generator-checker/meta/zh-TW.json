@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink 產生與檢查工具",
+  "description": "為 IPFS CID 或 IPNS 名稱產生 DNSLink TXT 記錄。查詢公開 DNS 解析器的回應，並比對已發布的目標是否符合預期。"
+}
