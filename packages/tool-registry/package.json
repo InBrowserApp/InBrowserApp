@@ -11,6 +11,7 @@
     "@tool/adler32-hash-text-or-file": "workspace:*",
     "@tool/aes-decryptor": "workspace:*",
     "@tool/aes-encryptor": "workspace:*",
+    "@tool/ai-image-upscaler": "workspace:*",
     "@tool/animated-webp-maker": "workspace:*",
     "@tool/animated-webp-to-gif-converter": "workspace:*",
     "@tool/apng-maker": "workspace:*",

@@ -1,0 +1,20 @@
+{
+  "chooseImage": "选择图片",
+  "dropHint": "或将图片拖放到此处",
+  "formats": "JPG、PNG、WebP 和其他静态图片",
+  "privacy": "图片始终保留在您的设备上。",
+  "changeImage": "更换图片",
+  "scale": "放大倍数",
+  "outputSize": "输出尺寸",
+  "upscale": "放大图片",
+  "loading": "正在加载 AI 模型…",
+  "processing": "正在放大图片…",
+  "cancel": "取消",
+  "original": "原图",
+  "upscaled": "放大后",
+  "comparison": "对比原图和放大后的图片",
+  "download": "下载 PNG",
+  "invalidImage": "无法打开此图片，请尝试 JPG、PNG 或 WebP 文件。",
+  "largeImage": "请选择长宽均不超过 2,048 像素、总像素不超过 100 万的图片。",
+  "failed": "图片放大失败，请重试或使用较小的图片。"
+}

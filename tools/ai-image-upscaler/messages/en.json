@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Choose an image",
+  "dropHint": "or drop it here",
+  "formats": "JPG, PNG, WebP and other still images",
+  "privacy": "Your image stays on your device.",
+  "changeImage": "Change image",
+  "scale": "Upscale factor",
+  "outputSize": "Output size",
+  "upscale": "Upscale image",
+  "loading": "Loading the AI model…",
+  "processing": "Upscaling image…",
+  "cancel": "Cancel",
+  "original": "Original",
+  "upscaled": "Upscaled",
+  "comparison": "Compare original and upscaled image",
+  "download": "Download PNG",
+  "invalidImage": "This image could not be opened. Try a JPG, PNG, or WebP file.",
+  "largeImage": "Choose an image no larger than 2,048 pixels on either side and 1 megapixel in total.",
+  "failed": "Upscaling failed. Try again or use a smaller image."
+}

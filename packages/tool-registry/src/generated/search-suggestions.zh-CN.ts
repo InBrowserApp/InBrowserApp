@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI 图片放大",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "动态 WebP 制作器",
     slug: "animated-webp-maker",
   },

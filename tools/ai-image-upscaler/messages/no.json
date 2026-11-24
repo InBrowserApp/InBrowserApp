@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Velg et bilde",
+  "dropHint": "eller slipp det her",
+  "formats": "JPG, PNG, WebP og andre stillbilder",
+  "privacy": "Bildet blir på enheten din.",
+  "changeImage": "Bytt bilde",
+  "scale": "Skaleringsfaktor",
+  "outputSize": "Ny bildestørrelse",
+  "upscale": "Oppskaler bildet",
+  "loading": "Laster inn KI-modellen …",
+  "processing": "Oppskalerer bildet …",
+  "cancel": "Avbryt",
+  "original": "Original",
+  "upscaled": "Oppskalert",
+  "comparison": "Sammenlign originalen med det oppskalerte bildet",
+  "download": "Last ned PNG",
+  "invalidImage": "Kunne ikke åpne bildet. Prøv en JPG-, PNG- eller WebP-fil.",
+  "largeImage": "Velg et bilde med høyst 2 048 piksler per side og høyst 1 megapiksel til sammen.",
+  "failed": "Kunne ikke oppskalere bildet. Prøv igjen eller velg et mindre bilde."
+}

@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI 이미지 확대",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "움직이는 WebP 만들기",
     slug: "animated-webp-maker",
   },

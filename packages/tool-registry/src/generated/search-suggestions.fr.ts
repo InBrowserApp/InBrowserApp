@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Agrandir une image avec l’IA",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Créateur de WebP animé",
     slug: "animated-webp-maker",
   },

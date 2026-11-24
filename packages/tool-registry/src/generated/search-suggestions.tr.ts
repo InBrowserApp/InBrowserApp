@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Yapay zekâ ile görsel büyütme",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Animasyonlu WebP Oluşturucu",
     slug: "animated-webp-maker",
   },
