@@ -33,6 +33,8 @@ add_subdirectory("${FYNEPDF_SOURCE}" fynepdf)
 
 add_executable(fynepdf bridge.cpp)
 set_target_properties(fynepdf PROPERTIES SUFFIX ".mjs")
+set_property(TARGET fynepdf APPEND PROPERTY LINK_DEPENDS
+  "${FYNEPDF_SOURCE}/fonts/DroidSansFallbackFull.ttf")
 target_link_libraries(fynepdf PRIVATE fynepdf::pdfa "${PORTS_LIB}/libz.a")
 target_link_options(fynepdf PRIVATE
   -fexceptions

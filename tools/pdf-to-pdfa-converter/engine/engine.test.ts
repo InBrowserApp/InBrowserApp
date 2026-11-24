@@ -82,4 +82,12 @@ describe("built PDF/A engine", () => {
       problems: ["transparency"],
     })
   })
+
+  it("embeds a font for Chinese text and ASCII digits in the same font run", () => {
+    expect(convert("searchable-chinese.pdf", 2)).toMatchObject({
+      ok: true,
+      conforms: true,
+      changes: { "fonts-substituted": 1 },
+    })
+  })
 })

@@ -20,6 +20,14 @@ fetch qpdf https://github.com/qpdf/qpdf.git 4eba95899886e851cc41d76886483b347612
 fetch openjpeg https://github.com/uclouvain/openjpeg.git 6c4a29b00211eb0430fa0e5e890f1ce5c80f409f
 fetch lcms https://github.com/mm2/Little-CMS.git 7717fce0d85447ef3b2df0cca2e99207c15eeecd
 
+# This CJK fallback lacks ASCII digits used by some unembedded Chinese fonts.
+curl --fail --silent --show-error --location \
+  https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/63ade05d76785975fc3292ca030abbaa1dda8891/data/fonts/DroidSans.ttf \
+  --output "$work/DroidSans.ttf"
+printf '%s  %s\n' 'f51b88945f4c1b236f44b8d55a2d304316869127e95248c435c23f1e4142a7db' \
+  "$work/DroidSans.ttf" | sha256sum --check
+python3 "$engine/add-latin.py" "$work/DroidSans.ttf" "$work/fynepdf/fonts/DroidSansFallbackFull.ttf"
+
 embuilder build zlib libjpeg
 sysroot="$(em-config CACHE)/sysroot"
 ports_lib="$sysroot/lib/wasm32-emscripten"

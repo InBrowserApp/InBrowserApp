@@ -20,6 +20,12 @@ https://github.com/mm2/Little-CMS/tree/7717fce0d85447ef3b2df0cca2e99207c15eeecd
 Emscripten 4.0.10 and its libjpeg 9f and zlib 1.3.1 ports
 https://github.com/emscripten-core/emscripten/tree/4.0.10
 
+Archive CJK Fallback combines FynePDF's Droid Sans Fallback with ASCII glyphs
+from Droid Sans. The added glyphs are rescaled to the fallback's units per em.
+Both are licensed under Apache-2.0. Droid Sans digitized data copyright
+2007, Google Corporation. Droid Sans source:
+https://github.com/aosp-mirror/platform_frameworks_base/blob/63ade05d76785975fc3292ca030abbaa1dda8891/data/fonts/DroidSans.ttf
+
 Adobe Glyph List copyright 2002, 2010, 2015 Adobe Systems Incorporated.
 PDF.js encoding tables copyright Mozilla Foundation. Both are licensed
 under Apache-2.0. The license text appears in the QPDF notice below.
