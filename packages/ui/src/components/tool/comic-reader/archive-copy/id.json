@@ -1,0 +1,21 @@
+{
+  "readerName": "Pembaca Komik {format}",
+  "choose": "Pilih file {format}",
+  "drop": "Atau letakkan file {format} atau {archive} di sini.",
+  "privacy": "Komik Anda tetap di perangkat ini.",
+  "invalid": "Pilih file {format} atau {archive}.",
+  "damaged": "Arsip tidak dapat dibaca. Arsip mungkin rusak atau menggunakan fitur {archive} yang tidak didukung.",
+  "howTitle": "Cara membuka file {format}",
+  "how": [
+    "Pilih file {format} atau seret ke pembaca. Anda juga dapat membuka arsip {archive} yang berisi gambar halaman komik.",
+    "Gunakan tombol panah untuk membalik halaman, masukkan nomor halaman untuk melompat ke sana, atau buka kisi pratinjau untuk menemukan adegan.",
+    "Pilih ‘Sesuaikan halaman’ untuk melihat seluruh gambar, atau gunakan ‘Sesuaikan lebar’ dan pembesaran untuk membaca tulisan kecil. Ubah arah baca ke kanan ke kiri untuk manga, atau gunakan mode Baca dengan fokus agar komik mendapat lebih banyak ruang."
+  ],
+  "formatTitle": "Apa itu file {format}?",
+  "formatBody": "File {format} adalah arsip komik yang menggunakan kompresi {archive}. Halamannya disimpan sebagai gambar, sering kali dalam folder per bab. Pembaca mengurutkan jalur lengkap file secara alami, sehingga halaman 2 muncul sebelum halaman 10, serta melewati file tersembunyi dan file yang bukan gambar.",
+  "compatibilityTitle": "Gambar dan arsip yang didukung",
+  "compatibilityBody": "Baca komik dengan halaman JPEG, PNG, GIF, WebP, dan BMP, serta AVIF di browser yang mendukungnya. Arsip yang dilindungi kata sandi atau terbagi menjadi beberapa bagian harus diekstrak terlebih dahulu. Arsip solid berukuran besar mungkin lebih lama dibuka dan dibalik halamannya karena beberapa gambar dapat berbagi blok terkompresi yang sama.",
+  "privacyTitle": "Baca secara privat di browser",
+  "privacyBody": "Browser membuka arsip di perangkat Anda tanpa unggahan, akun, atau instalasi. Untuk membaca komik berbasis ZIP, gunakan pembaca CBZ.",
+  "relatedTitle": "Alat terkait"
+}

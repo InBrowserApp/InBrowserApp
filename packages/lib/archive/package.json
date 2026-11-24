@@ -1,0 +1,20 @@
+{
+  "name": "@workspace/archive",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./archive": "./src/core/archive.ts",
+    "./formats": "./src/core/formats.ts",
+    "./mime": "./src/core/mime.ts",
+    "./path": "./src/core/path.ts",
+    "./types": "./src/core/types.ts",
+    "./worker": "./src/workers/open-worker-archive.ts"
+  },
+  "dependencies": {
+    "@zip.js/zip.js": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

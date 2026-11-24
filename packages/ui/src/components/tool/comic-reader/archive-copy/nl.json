@@ -1,0 +1,21 @@
+{
+  "readerName": "{format}-striplezer",
+  "choose": "Kies een {format}-bestand",
+  "drop": "Of sleep een {format}- of {archive}-bestand hierheen.",
+  "privacy": "Je strip blijft op dit apparaat.",
+  "invalid": "Kies een {format}- of {archive}-bestand.",
+  "damaged": "Het archief kon niet worden gelezen. Het is mogelijk beschadigd of gebruikt niet-ondersteunde {archive}-functies.",
+  "howTitle": "Hoe open je een {format}-bestand?",
+  "how": [
+    "Kies een {format}-bestand of sleep het naar de lezer. Je kunt ook een {archive}-archief openen dat afbeeldingen van strippagina’s bevat.",
+    "Blader met de pijlen, voer een paginanummer in om daarheen te gaan of open de miniaturen om een scène te zoeken.",
+    "Kies ‘Hele pagina’ om de volledige afbeelding te zien. Gebruik ‘Paginabreedte’ en de zoomfunctie om kleine tekst te lezen. Schakel voor manga over op lezen van rechts naar links. Met ‘Geconcentreerd lezen’ geef je de strip meer ruimte."
+  ],
+  "formatTitle": "Wat is een {format}-bestand?",
+  "formatBody": "Een {format}-bestand is een striparchief met {archive}-compressie. Het bevat de pagina’s als afbeeldingen, vaak gegroepeerd in mappen per hoofdstuk. De lezer sorteert de volledige bestandsnamen inclusief mappen op natuurlijke volgorde. Zo komt pagina 2 vóór pagina 10. Verborgen bestanden en bestanden die geen afbeeldingen zijn, worden overgeslagen.",
+  "compatibilityTitle": "Ondersteunde afbeeldingen en archieven",
+  "compatibilityBody": "Lees strips met pagina’s in JPEG, PNG, GIF, WebP en BMP. AVIF werkt als je browser het formaat ondersteunt. Pak archieven met een wachtwoord of meerdere delen eerst uit. Bij grote archieven met solide compressie kunnen openen en bladeren langer duren doordat meerdere afbeeldingen in hetzelfde gecomprimeerde blok zitten.",
+  "privacyTitle": "Lees in je browser zonder bestanden te uploaden",
+  "privacyBody": "Je browser opent het archief rechtstreeks op je apparaat. Uploaden, een account aanmaken en software installeren zijn overbodig. Gebruik de CBZ-striplezer voor strips in ZIP-formaat.",
+  "relatedTitle": "Verwante tools"
+}

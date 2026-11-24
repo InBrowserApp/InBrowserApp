@@ -1,0 +1,21 @@
+{
+  "readerName": "{format}-Comic-Reader",
+  "choose": "{format}-Datei auswählen",
+  "drop": "Oder ziehe eine {format}- oder {archive}-Datei hierher.",
+  "privacy": "Dein Comic bleibt auf diesem Gerät.",
+  "invalid": "Wähle eine {format}- oder {archive}-Datei aus.",
+  "damaged": "Das Archiv konnte nicht gelesen werden. Es ist möglicherweise beschädigt oder nutzt nicht unterstützte {archive}-Funktionen.",
+  "howTitle": "So öffnest du eine {format}-Datei",
+  "how": [
+    "Wähle eine {format}-Datei aus oder ziehe sie in den Lesebereich. Du kannst auch ein {archive}-Archiv mit Comicseiten als Bilddateien öffnen.",
+    "Blättere mit den Pfeilen, gib eine Seitenzahl ein oder suche über die Seitenvorschauen nach einer Szene.",
+    "Mit „Ganze Seite“ siehst du das vollständige Bild. „Seitenbreite“ und Zoom helfen beim Lesen kleiner Schrift. Für Manga kannst du von rechts nach links lesen. Im Fokusmodus hat der Comic mehr Platz."
+  ],
+  "formatTitle": "Was ist eine {format}-Datei?",
+  "formatBody": "Eine {format}-Datei ist ein Comicarchiv mit {archive}-Komprimierung. Die Seiten sind darin als Bilder gespeichert, häufig in Kapitelordnern. Der Reader sortiert sie nach dem vollständigen Ordner- und Dateipfad, sodass Seite 2 vor Seite 10 kommt. Versteckte Dateien und Dateien ohne Bilder werden übersprungen.",
+  "compatibilityTitle": "Unterstützte Bilder und Archive",
+  "compatibilityBody": "Du kannst Comics mit Seiten im JPEG-, PNG-, GIF-, WebP- oder BMP-Format lesen. AVIF funktioniert in Browsern, die das Format unterstützen. Passwortgeschützte und mehrteilige Archive musst du zuerst entpacken. Bei großen Solid-Archiven kann das Öffnen und Blättern länger dauern, weil mehrere Bilder im selben komprimierten Datenblock liegen können.",
+  "privacyTitle": "Comics privat im Browser lesen",
+  "privacyBody": "Dein Browser öffnet das Archiv direkt auf deinem Gerät. Du brauchst keine Datei hochzuladen, kein Konto und keine Installation. Für Comics im ZIP-Format gibt es den CBZ-Comic-Reader.",
+  "relatedTitle": "Verwandte Tools"
+}

@@ -1,0 +1,21 @@
+{
+  "readerName": "{format}-tegneserieleser",
+  "choose": "Velg en {format}-fil",
+  "drop": "Du kan også slippe en {format}- eller {archive}-fil her.",
+  "privacy": "Tegneserien blir på enheten din.",
+  "invalid": "Velg en {format}- eller {archive}-fil.",
+  "damaged": "Arkivet kunne ikke leses. Det kan være skadet eller bruke {archive}-funksjoner som ikke støttes.",
+  "howTitle": "Slik åpner du en {format}-fil",
+  "how": [
+    "Velg en {format}-fil, eller dra den inn i leseren og slipp den der. Du kan også åpne et {archive}-arkiv som inneholder bilder av tegneseriesidene.",
+    "Bla med pilene, skriv inn et sidetall for å hoppe dit, eller åpne sideminiatyrene for å finne en bestemt scene.",
+    "Velg «Tilpass side» for å se hele bildet, eller velg «Tilpass bredde» og zoom inn for å lese liten tekst. For manga kan du endre leseretningen til «Høyre til venstre». Bruk «Fokusert lesing» for å gi tegneserien mer plass."
+  ],
+  "formatTitle": "Hva er en {format}-fil?",
+  "formatBody": "En {format}-fil er et tegneseriearkiv som bruker {archive}-komprimering. Sidene er lagret som bilder, ofte fordelt i mapper etter kapittel. Leseren sorterer de fullstendige filstiene i naturlig rekkefølge, slik at side 2 kommer før side 10. Skjulte filer og filer som ikke er bilder, hoppes over.",
+  "compatibilityTitle": "Bilde- og arkivformater som støttes",
+  "compatibilityBody": "Du kan lese tegneserier med bilder i JPEG, PNG, GIF, WebP og BMP, samt AVIF hvis nettleseren støtter formatet. Passordbeskyttede arkiver og arkiver som er delt i flere deler, må pakkes ut først. Med store arkiver som bruker solid komprimering, kan det ta lengre tid å åpne tegneserien og bla fordi flere bilder kan ligge i samme komprimerte blokk.",
+  "privacyTitle": "Les i nettleseren uten å laste opp filer",
+  "privacyBody": "Nettleseren åpner arkivet på enheten din. Du kan lese uten å laste opp filer, opprette en konto eller installere et program. Tegneserier i ZIP-format kan åpnes med CBZ-tegneserieleseren.",
+  "relatedTitle": "Relaterte verktøy"
+}

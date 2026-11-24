@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Читалка комиксов CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Конвертер CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Читалка комиксов CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",

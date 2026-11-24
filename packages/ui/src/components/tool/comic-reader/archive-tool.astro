@@ -1,0 +1,58 @@
+---
+import { resolveLocale, type ToolMeta } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import ArchiveClient, { type ArchiveReaderMessages } from "./archive-client"
+import { comicArchiveFormats, type ComicArchiveKind } from "./archive-formats"
+import { comicReaderMessages } from "./locales"
+import type english from "./archive-copy/en.json"
+
+interface Props {
+  kind: ComicArchiveKind
+  lang: string
+  meta: ToolMeta
+}
+
+const { kind, lang, meta } = Astro.props
+const { label, archive } = comicArchiveFormats[kind]
+const copy = resolveLocale<typeof english>(
+  import.meta.glob("./archive-copy/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const text = (value: string) => value.replaceAll("{format}", label).replaceAll("{archive}", archive)
+const readerName = (format: string) => copy.readerName.replaceAll("{format}", format)
+const messages: ArchiveReaderMessages = {
+  ...comicReaderMessages(lang),
+  open: text(copy.choose),
+  drop: text(copy.drop),
+  invalid: text(copy.invalid),
+  damaged: text(copy.damaged),
+  privacy: copy.privacy,
+}
+const other = kind === "cbr" ? "cb7" : "cbr"
+const toolsPath = lang === "en" ? "/tools" : `/${lang}/tools`
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <ArchiveClient client:load kind={kind} messages={messages} />
+  <ToolArticle className="[&_ol]:ml-0 [&_ol]:ps-6">
+    <h2>{text(copy.howTitle)}</h2>
+    <ol>
+      {copy.how.map((step) => <li>{text(step)}</li>)}
+    </ol>
+    <h2>{text(copy.formatTitle)}</h2>
+    <p>{text(copy.formatBody)}</p>
+    <h2>{copy.compatibilityTitle}</h2>
+    <p>{copy.compatibilityBody}</p>
+    <h2>{copy.privacyTitle}</h2>
+    <p>{copy.privacyBody}</p>
+    <h2>{copy.relatedTitle}</h2>
+    <p class="flex flex-wrap gap-x-5 gap-y-1">
+      <a href={`${toolsPath}/cbz-reader/`}>{readerName("CBZ")}</a>
+      <a href={`${toolsPath}/${other}-reader/`}>{readerName(comicArchiveFormats[other].label)}</a>
+    </p>
+  </ToolArticle>
+  <p class="text-xs text-muted-foreground">
+    <a href="/licenses/archive-viewer.txt">libarchive</a>
+  </p>
+</ToolPageShell>

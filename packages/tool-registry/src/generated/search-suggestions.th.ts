@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "ตัวแปลง CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",

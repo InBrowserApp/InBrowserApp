@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest"
 
 import { resolveArchiveError } from "./archive-errors"
-import { ArchiveError } from "./core/types"
+import { ArchiveError } from "@workspace/archive/types"
 import messagesCatalog from "./messages/en.json"
 
 import type { ArchiveViewerMessages } from "./types"
