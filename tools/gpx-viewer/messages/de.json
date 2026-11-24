@@ -1,0 +1,17 @@
+{
+  "openFile": "GPX öffnen",
+  "example": "Beispiel ausprobieren",
+  "map": "GPX-Karte",
+  "fit": "Auf Daten zoomen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "empty": "Öffne eine .gpx-Datei oder lade das Beispiel, um eine Route anzusehen.",
+  "invalid": "Die GPX-Datei konnte nicht geöffnet werden. Prüfe, ob sie gültige GPX-Koordinaten enthält.",
+  "distance": "Strecke",
+  "ascent": "Aufstieg",
+  "descent": "Abstieg",
+  "elevation": "Höhe",
+  "profile": "Höhenprofil",
+  "noElevation": "Für diesen Track oder diese Route wurden keine Höhenwerte aufgezeichnet.",
+  "waypoint": "Wegpunkt {number}"
+}

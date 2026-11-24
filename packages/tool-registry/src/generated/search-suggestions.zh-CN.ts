@@ -588,6 +588,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "GPX 查看器与海拔剖面图",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "HAR 网络分析器",
     slug: "har-analyzer",

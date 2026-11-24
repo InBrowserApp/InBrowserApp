@@ -1,0 +1,17 @@
+{
+  "openFile": "Abrir GPX",
+  "example": "Probar un ejemplo",
+  "map": "Mapa de GPX",
+  "fit": "Ajustar vista a los datos",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "empty": "Abre un archivo .gpx o carga el ejemplo para explorar una ruta.",
+  "invalid": "No se pudo abrir el archivo GPX. Comprueba que contenga coordenadas GPX válidas.",
+  "distance": "Distancia",
+  "ascent": "Desnivel positivo",
+  "descent": "Desnivel negativo",
+  "elevation": "Elevación",
+  "profile": "Perfil de elevación",
+  "noElevation": "El trayecto o la ruta no tiene datos de elevación.",
+  "waypoint": "Punto de paso {number}"
+}

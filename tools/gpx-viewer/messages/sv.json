@@ -1,0 +1,17 @@
+{
+  "openFile": "Öppna GPX",
+  "example": "Prova ett exempel",
+  "map": "GPX-karta",
+  "fit": "Anpassa till data",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "empty": "Öppna en .gpx-fil eller läs in exemplet för att utforska en rutt.",
+  "invalid": "Det gick inte att öppna GPX-filen. Kontrollera att den innehåller giltiga GPX-koordinater.",
+  "distance": "Sträcka",
+  "ascent": "Stigning",
+  "descent": "Nedstigning",
+  "elevation": "Höjd",
+  "profile": "Höjdprofil",
+  "noElevation": "Spåret eller rutten saknar registrerad höjd.",
+  "waypoint": "Waypoint {number}"
+}

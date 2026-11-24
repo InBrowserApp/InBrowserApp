@@ -1,0 +1,17 @@
+{
+  "openFile": "Abrir GPX",
+  "example": "Testar um exemplo",
+  "map": "Mapa de GPX",
+  "fit": "Ajustar aos dados",
+  "zoomIn": "Aproximar",
+  "zoomOut": "Afastar",
+  "empty": "Abra um arquivo .gpx ou carregue o exemplo para explorar uma rota.",
+  "invalid": "Não foi possível abrir o arquivo GPX. Verifique se ele contém coordenadas GPX válidas.",
+  "distance": "Distância",
+  "ascent": "Ganho de elevação",
+  "descent": "Perda de elevação",
+  "elevation": "Elevação",
+  "profile": "Perfil de elevação",
+  "noElevation": "A trilha ou rota não tem dados de elevação.",
+  "waypoint": "Ponto de passagem {number}"
+}

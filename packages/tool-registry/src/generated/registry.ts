@@ -14927,6 +14927,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gpx-viewer",
+    category: "misc",
+    icon: "route",
+    tags: [
+      "gpx",
+      "gps",
+      "track",
+      "route",
+      "elevation",
+      "hiking",
+      "cycling",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GPX مع منحنى الارتفاع",
+        description:
+          "افتح ملف GPX لعرض المسارات المسجّلة والمسارات المخطّطة ونقاط المرور على الخريطة. تتبّع تغيّر الارتفاع مع المسافة واطّلع على إجمالي المسافة والصعود والهبوط.",
+      },
+      de: {
+        name: "GPX-Betrachter mit Höhenprofil",
+        description:
+          "GPX-Dateien öffnen und GPS-Tracks, Routen und Wegpunkte auf einer Karte anzeigen. Sieh dir das Höhenprofil, die Gesamtstrecke und die Höhenmeter bergauf und bergab an.",
+      },
+      en: {
+        name: "GPX Viewer & Elevation Profile",
+        description:
+          "Open a GPX file to view GPS tracks, routes and waypoints on a map. Explore elevation by distance and see total distance, ascent and descent.",
+      },
+      es: {
+        name: "Visor GPX con perfil de elevación",
+        description:
+          "Abre un archivo GPX para ver trayectos, rutas y puntos de paso GPS en un mapa. Explora la elevación según la distancia y consulta la distancia total y el desnivel acumulado.",
+      },
+      fr: {
+        name: "Visionneuse GPX et profil altimétrique",
+        description:
+          "Ouvrez un fichier GPX pour afficher traces GPS, itinéraires et points de cheminement. Explorez le profil altimétrique et consultez la distance totale et les dénivelés.",
+      },
+      he: {
+        name: "מציג GPX ופרופיל גובה",
+        description:
+          "פתחו קובץ GPX והציגו מסלולי GPS מוקלטים, מסלולים מתוכננים ונקודות ציון על המפה. בדקו את הגובה לפי המרחק ואת סך המרחק, העלייה והירידה.",
+      },
+      hi: {
+        name: "GPX व्यूअर और ऊँचाई प्रोफ़ाइल",
+        description:
+          "GPX फ़ाइल खोलकर मानचित्र पर GPS ट्रैक, मार्ग और वेपॉइंट देखें। दूरी के साथ ऊँचाई में बदलाव, कुल दूरी, कुल चढ़ाई और कुल उतराई जानें।",
+      },
+      id: {
+        name: "Penampil GPX dan Profil Elevasi",
+        description:
+          "Buka berkas GPX untuk melihat jejak GPS, rute, dan titik penanda pada peta. Lihat perubahan elevasi sepanjang rute, jarak total, serta total kenaikan dan penurunan elevasi.",
+      },
+      it: {
+        name: "Visualizzatore GPX con profilo altimetrico",
+        description:
+          "Apri file GPX per vedere sulla mappa tracce GPS, percorsi e waypoint. Esplora il profilo altimetrico e consulta distanza totale, salita e discesa.",
+      },
+      ja: {
+        name: "GPX ビューアー・標高断面図",
+        description:
+          "GPX ファイルを開いて、GPS トラック、ルート、ウェイポイントを地図に表示できます。距離に沿った標高の変化や総距離、累積上昇・下降量を確認できます。",
+      },
+      ko: {
+        name: "GPX 뷰어와 고도 프로파일",
+        description:
+          "GPX 파일을 열어 지도에서 GPS 트랙, 경로와 웨이포인트를 확인하세요. 거리에 따른 고도와 총 거리, 누적 상승 및 하강을 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GPX dan Profil Ketinggian",
+        description:
+          "Buka fail GPX untuk melihat trek GPS, laluan dan titik laluan pada peta. Lihat perubahan ketinggian sepanjang perjalanan, jumlah jarak serta jumlah kenaikan dan penurunan ketinggian.",
+      },
+      nl: {
+        name: "GPX-viewer met hoogteprofiel",
+        description:
+          "Open GPX-bestanden en bekijk gps-tracks, routes en waypoints op een kaart. Bekijk het hoogteprofiel, de totale afstand en de stijg- en daalmeters.",
+      },
+      no: {
+        name: "GPX-viser med høydeprofil",
+        description:
+          "Åpne en GPX-fil og se GPS-spor, ruter og veipunkter på et kart. Utforsk høydeprofilen og se total lengde og høydemeter opp og ned.",
+      },
+      pl: {
+        name: "Przeglądarka GPX z profilem wysokościowym",
+        description:
+          "Otwórz plik GPX i zobacz na mapie ślady GPS, trasy i punkty trasy. Sprawdź profil wysokościowy, całkowity dystans oraz przewyższenia w górę i w dół.",
+      },
+      pt: {
+        name: "Visualizador GPX com perfil de elevação",
+        description:
+          "Abra um arquivo GPX para ver trilhas, rotas e pontos de passagem GPS no mapa. Explore a elevação ao longo do percurso e veja a distância total, o ganho e a perda de elevação.",
+      },
+      ru: {
+        name: "Просмотр GPX и профиль высот",
+        description:
+          "Откройте GPX-файл и просмотрите GPS-треки, маршруты и путевые точки на карте. Узнайте, как меняется высота по мере прохождения маршрута, и проверьте общую дистанцию, набор и сброс высоты.",
+      },
+      sv: {
+        name: "GPX-visare och höjdprofil",
+        description:
+          "Öppna en GPX-fil för att visa GPS-spår, rutter och waypoints på en karta. Utforska höjd längs sträckan och se total sträcka, stigning och nedstigning.",
+      },
+      th: {
+        name: "โปรแกรมดู GPX และกราฟระดับความสูง",
+        description:
+          "เปิดไฟล์ GPX เพื่อดูเส้นทางที่บันทึกด้วย GPS เส้นทางที่วางแผนไว้ และจุดอ้างอิงบนแผนที่ ดูระดับความสูงตามระยะทาง รวมถึงระยะทางรวม ระยะไต่ขึ้น และระยะลงสะสม",
+      },
+      tr: {
+        name: "GPX Görüntüleyici ve Yükseklik Profili",
+        description:
+          "GPX dosyalarını açıp GPS izlerini, rotaları ve yol noktalarını haritada görün. Mesafeye göre yükseklik profilini, toplam mesafeyi, tırmanışı ve inişi inceleyin.",
+      },
+      vi: {
+        name: "Trình xem GPX và biểu đồ độ cao",
+        description:
+          "Mở tệp GPX để xem vệt đường GPS, tuyến đường và điểm đánh dấu trên bản đồ. Khám phá độ cao theo quãng đường, tổng quãng đường, độ cao tăng và giảm.",
+      },
+      "zh-CN": {
+        name: "GPX 查看器与海拔剖面图",
+        description:
+          "打开 GPX 文件，在地图上查看 GPS 轨迹、路线和航点。查看海拔随距离的变化，以及总距离、累计爬升和累计下降。",
+      },
+      "zh-TW": {
+        name: "GPX 檢視器與海拔剖面圖",
+        description:
+          "開啟 GPX 檔案，在地圖上查看 GPS 軌跡、路線和航點。沿途查看海拔變化，並掌握總距離、累計爬升和累計下降。",
+      },
+    },
+  },
+  {
     slug: "har-analyzer",
     category: "network",
     icon: "network",
@@ -59050,6 +59183,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "GPU 資訊",
         description:
           "查看瀏覽器使用哪個圖形處理器（GPU），以及是否能使用 WebGL 顯示網頁 3D 圖形。了解結果的意義，再複製或下載報告，協助排查繪圖問題。",
+      },
+    },
+  },
+  "gpx-viewer": {
+    slug: "gpx-viewer",
+    category: "misc",
+    icon: "route",
+    tags: [
+      "gpx",
+      "gps",
+      "track",
+      "route",
+      "elevation",
+      "hiking",
+      "cycling",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GPX مع منحنى الارتفاع",
+        description:
+          "افتح ملف GPX لعرض المسارات المسجّلة والمسارات المخطّطة ونقاط المرور على الخريطة. تتبّع تغيّر الارتفاع مع المسافة واطّلع على إجمالي المسافة والصعود والهبوط.",
+      },
+      de: {
+        name: "GPX-Betrachter mit Höhenprofil",
+        description:
+          "GPX-Dateien öffnen und GPS-Tracks, Routen und Wegpunkte auf einer Karte anzeigen. Sieh dir das Höhenprofil, die Gesamtstrecke und die Höhenmeter bergauf und bergab an.",
+      },
+      en: {
+        name: "GPX Viewer & Elevation Profile",
+        description:
+          "Open a GPX file to view GPS tracks, routes and waypoints on a map. Explore elevation by distance and see total distance, ascent and descent.",
+      },
+      es: {
+        name: "Visor GPX con perfil de elevación",
+        description:
+          "Abre un archivo GPX para ver trayectos, rutas y puntos de paso GPS en un mapa. Explora la elevación según la distancia y consulta la distancia total y el desnivel acumulado.",
+      },
+      fr: {
+        name: "Visionneuse GPX et profil altimétrique",
+        description:
+          "Ouvrez un fichier GPX pour afficher traces GPS, itinéraires et points de cheminement. Explorez le profil altimétrique et consultez la distance totale et les dénivelés.",
+      },
+      he: {
+        name: "מציג GPX ופרופיל גובה",
+        description:
+          "פתחו קובץ GPX והציגו מסלולי GPS מוקלטים, מסלולים מתוכננים ונקודות ציון על המפה. בדקו את הגובה לפי המרחק ואת סך המרחק, העלייה והירידה.",
+      },
+      hi: {
+        name: "GPX व्यूअर और ऊँचाई प्रोफ़ाइल",
+        description:
+          "GPX फ़ाइल खोलकर मानचित्र पर GPS ट्रैक, मार्ग और वेपॉइंट देखें। दूरी के साथ ऊँचाई में बदलाव, कुल दूरी, कुल चढ़ाई और कुल उतराई जानें।",
+      },
+      id: {
+        name: "Penampil GPX dan Profil Elevasi",
+        description:
+          "Buka berkas GPX untuk melihat jejak GPS, rute, dan titik penanda pada peta. Lihat perubahan elevasi sepanjang rute, jarak total, serta total kenaikan dan penurunan elevasi.",
+      },
+      it: {
+        name: "Visualizzatore GPX con profilo altimetrico",
+        description:
+          "Apri file GPX per vedere sulla mappa tracce GPS, percorsi e waypoint. Esplora il profilo altimetrico e consulta distanza totale, salita e discesa.",
+      },
+      ja: {
+        name: "GPX ビューアー・標高断面図",
+        description:
+          "GPX ファイルを開いて、GPS トラック、ルート、ウェイポイントを地図に表示できます。距離に沿った標高の変化や総距離、累積上昇・下降量を確認できます。",
+      },
+      ko: {
+        name: "GPX 뷰어와 고도 프로파일",
+        description:
+          "GPX 파일을 열어 지도에서 GPS 트랙, 경로와 웨이포인트를 확인하세요. 거리에 따른 고도와 총 거리, 누적 상승 및 하강을 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GPX dan Profil Ketinggian",
+        description:
+          "Buka fail GPX untuk melihat trek GPS, laluan dan titik laluan pada peta. Lihat perubahan ketinggian sepanjang perjalanan, jumlah jarak serta jumlah kenaikan dan penurunan ketinggian.",
+      },
+      nl: {
+        name: "GPX-viewer met hoogteprofiel",
+        description:
+          "Open GPX-bestanden en bekijk gps-tracks, routes en waypoints op een kaart. Bekijk het hoogteprofiel, de totale afstand en de stijg- en daalmeters.",
+      },
+      no: {
+        name: "GPX-viser med høydeprofil",
+        description:
+          "Åpne en GPX-fil og se GPS-spor, ruter og veipunkter på et kart. Utforsk høydeprofilen og se total lengde og høydemeter opp og ned.",
+      },
+      pl: {
+        name: "Przeglądarka GPX z profilem wysokościowym",
+        description:
+          "Otwórz plik GPX i zobacz na mapie ślady GPS, trasy i punkty trasy. Sprawdź profil wysokościowy, całkowity dystans oraz przewyższenia w górę i w dół.",
+      },
+      pt: {
+        name: "Visualizador GPX com perfil de elevação",
+        description:
+          "Abra um arquivo GPX para ver trilhas, rotas e pontos de passagem GPS no mapa. Explore a elevação ao longo do percurso e veja a distância total, o ganho e a perda de elevação.",
+      },
+      ru: {
+        name: "Просмотр GPX и профиль высот",
+        description:
+          "Откройте GPX-файл и просмотрите GPS-треки, маршруты и путевые точки на карте. Узнайте, как меняется высота по мере прохождения маршрута, и проверьте общую дистанцию, набор и сброс высоты.",
+      },
+      sv: {
+        name: "GPX-visare och höjdprofil",
+        description:
+          "Öppna en GPX-fil för att visa GPS-spår, rutter och waypoints på en karta. Utforska höjd längs sträckan och se total sträcka, stigning och nedstigning.",
+      },
+      th: {
+        name: "โปรแกรมดู GPX และกราฟระดับความสูง",
+        description:
+          "เปิดไฟล์ GPX เพื่อดูเส้นทางที่บันทึกด้วย GPS เส้นทางที่วางแผนไว้ และจุดอ้างอิงบนแผนที่ ดูระดับความสูงตามระยะทาง รวมถึงระยะทางรวม ระยะไต่ขึ้น และระยะลงสะสม",
+      },
+      tr: {
+        name: "GPX Görüntüleyici ve Yükseklik Profili",
+        description:
+          "GPX dosyalarını açıp GPS izlerini, rotaları ve yol noktalarını haritada görün. Mesafeye göre yükseklik profilini, toplam mesafeyi, tırmanışı ve inişi inceleyin.",
+      },
+      vi: {
+        name: "Trình xem GPX và biểu đồ độ cao",
+        description:
+          "Mở tệp GPX để xem vệt đường GPS, tuyến đường và điểm đánh dấu trên bản đồ. Khám phá độ cao theo quãng đường, tổng quãng đường, độ cao tăng và giảm.",
+      },
+      "zh-CN": {
+        name: "GPX 查看器与海拔剖面图",
+        description:
+          "打开 GPX 文件，在地图上查看 GPS 轨迹、路线和航点。查看海拔随距离的变化，以及总距离、累计爬升和累计下降。",
+      },
+      "zh-TW": {
+        name: "GPX 檢視器與海拔剖面圖",
+        description:
+          "開啟 GPX 檔案，在地圖上查看 GPS 軌跡、路線和航點。沿途查看海拔變化，並掌握總距離、累計爬升和累計下降。",
       },
     },
   },

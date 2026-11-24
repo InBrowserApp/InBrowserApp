@@ -96,6 +96,7 @@ export {
   RefreshCcw,
   RectangleHorizontal,
   Ruler,
+  Route,
   Rows2,
   Scan,
   ScanLine,

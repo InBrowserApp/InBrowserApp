@@ -588,6 +588,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "Просмотр GPX и профиль высот",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "Анализатор сетевых журналов HAR",
     slug: "har-analyzer",

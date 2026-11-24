@@ -1,0 +1,17 @@
+{
+  "openFile": "Apri GPX",
+  "example": "Prova un esempio",
+  "map": "Mappa GPX",
+  "fit": "Inquadra i dati",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "empty": "Apri un file .gpx o carica l’esempio per esplorare un percorso.",
+  "invalid": "Impossibile aprire il file GPX. Verifica che contenga coordinate GPX valide.",
+  "distance": "Distanza",
+  "ascent": "Dislivello positivo",
+  "descent": "Dislivello negativo",
+  "elevation": "Quota",
+  "profile": "Profilo altimetrico",
+  "noElevation": "La traccia o il percorso non contiene quote registrate.",
+  "waypoint": "Waypoint {number}"
+}

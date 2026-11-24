@@ -1,0 +1,17 @@
+{
+  "openFile": "Ouvrir un fichier GPX",
+  "example": "Essayer un exemple",
+  "map": "Carte GPX",
+  "fit": "Cadrer sur les données",
+  "zoomIn": "Zoom avant",
+  "zoomOut": "Zoom arrière",
+  "empty": "Ouvrez un fichier .gpx ou chargez l’exemple pour explorer un itinéraire.",
+  "invalid": "Impossible d’ouvrir ce fichier GPX. Vérifiez qu’il contient des coordonnées GPX valides.",
+  "distance": "Distance",
+  "ascent": "Dénivelé positif",
+  "descent": "Dénivelé négatif",
+  "elevation": "Altitude",
+  "profile": "Profil altimétrique",
+  "noElevation": "La trace ou l’itinéraire ne contient aucune altitude enregistrée.",
+  "waypoint": "Point de cheminement {number}"
+}

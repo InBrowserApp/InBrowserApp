@@ -1,0 +1,17 @@
+{
+  "openFile": "GPX を開く",
+  "example": "サンプルを試す",
+  "map": "GPX の地図",
+  "fit": "全体を表示",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "empty": ".gpx ファイルを開くか、サンプルを読み込んでルートを確認できます。",
+  "invalid": "GPX ファイルを開けませんでした。有効な GPX 座標が含まれているか確認してください。",
+  "distance": "距離",
+  "ascent": "累積上昇量",
+  "descent": "累積下降量",
+  "elevation": "標高",
+  "profile": "標高断面図",
+  "noElevation": "このトラックやルートには標高が記録されていません。",
+  "waypoint": "ウェイポイント {number}"
+}

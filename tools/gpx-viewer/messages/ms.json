@@ -1,0 +1,17 @@
+{
+  "openFile": "Buka GPX",
+  "example": "Cuba contoh",
+  "map": "Peta GPX",
+  "fit": "Papar seluruh kawasan data",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "empty": "Buka fail .gpx atau muatkan contoh untuk melihat laluan.",
+  "invalid": "Fail GPX ini tidak dapat dibuka. Pastikan fail mengandungi koordinat GPX yang sah.",
+  "distance": "Jarak",
+  "ascent": "Kenaikan ketinggian",
+  "descent": "Penurunan ketinggian",
+  "elevation": "Ketinggian",
+  "profile": "Profil ketinggian",
+  "noElevation": "Tiada ketinggian direkodkan untuk trek atau laluan ini.",
+  "waypoint": "Titik laluan {number}"
+}

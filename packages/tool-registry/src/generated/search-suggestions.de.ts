@@ -588,6 +588,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "GPX-Betrachter mit Höhenprofil",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "HAR-Netzwerkanalyse",
     slug: "har-analyzer",
