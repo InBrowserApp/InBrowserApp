@@ -152,6 +152,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
+  "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),

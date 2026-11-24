@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 미리보기",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 네트워크 분석기",
     slug: "har-analyzer",

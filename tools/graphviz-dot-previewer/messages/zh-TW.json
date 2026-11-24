@@ -1,0 +1,16 @@
+{
+  "source": "DOT 原始碼",
+  "example": "載入範例",
+  "dependencies": "相依關係圖",
+  "network": "無向網路",
+  "clusters": "分群圖",
+  "engine": "佈局引擎",
+  "preview": "圖形預覽",
+  "empty": "輸入 DOT 程式碼以預覽圖形。",
+  "loading": "正在轉譯圖形…",
+  "invalid": "無法轉譯此 DOT 圖形。請檢查語法後再試。",
+  "warnings": "Graphviz 佈局提示",
+  "fit": "符合檢視範圍",
+  "actualSize": "實際大小",
+  "downloadSvg": "下載 SVG"
+}

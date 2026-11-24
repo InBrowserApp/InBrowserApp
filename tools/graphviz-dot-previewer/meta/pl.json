@@ -1,0 +1,4 @@
+{
+  "name": "Podgląd Graphviz DOT",
+  "description": "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG."
+}

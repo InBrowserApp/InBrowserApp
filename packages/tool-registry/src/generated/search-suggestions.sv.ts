@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT-förhandsgranskare",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR-nätverksanalysator",
     slug: "har-analyzer",
