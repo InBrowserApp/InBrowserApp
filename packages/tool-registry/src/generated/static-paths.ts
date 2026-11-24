@@ -6350,6 +6350,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-editor",
+    language: "ar",
+  },
+  {
+    slug: "csv-editor",
+    language: "de",
+  },
+  {
+    slug: "csv-editor",
+    language: "en",
+  },
+  {
+    slug: "csv-editor",
+    language: "es",
+  },
+  {
+    slug: "csv-editor",
+    language: "fr",
+  },
+  {
+    slug: "csv-editor",
+    language: "he",
+  },
+  {
+    slug: "csv-editor",
+    language: "hi",
+  },
+  {
+    slug: "csv-editor",
+    language: "id",
+  },
+  {
+    slug: "csv-editor",
+    language: "it",
+  },
+  {
+    slug: "csv-editor",
+    language: "ja",
+  },
+  {
+    slug: "csv-editor",
+    language: "ko",
+  },
+  {
+    slug: "csv-editor",
+    language: "ms",
+  },
+  {
+    slug: "csv-editor",
+    language: "nl",
+  },
+  {
+    slug: "csv-editor",
+    language: "no",
+  },
+  {
+    slug: "csv-editor",
+    language: "pl",
+  },
+  {
+    slug: "csv-editor",
+    language: "pt",
+  },
+  {
+    slug: "csv-editor",
+    language: "ru",
+  },
+  {
+    slug: "csv-editor",
+    language: "sv",
+  },
+  {
+    slug: "csv-editor",
+    language: "th",
+  },
+  {
+    slug: "csv-editor",
+    language: "tr",
+  },
+  {
+    slug: "csv-editor",
+    language: "vi",
+  },
+  {
+    slug: "csv-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-excel-to-sqlite",
     language: "ar",
   },

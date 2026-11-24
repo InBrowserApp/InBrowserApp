@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "Editor CSV",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "Konverter CSV dan Excel ke SQLite",
     slug: "csv-excel-to-sqlite",

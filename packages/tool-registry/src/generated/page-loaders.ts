@@ -91,6 +91,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "css-box-shadow-generator": () =>
     import("@tool/css-box-shadow-generator/page"),
   "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),
+  "csv-editor": () => import("@tool/csv-editor/page"),
   "csv-excel-to-sqlite": () => import("@tool/csv-excel-to-sqlite/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "csv-to-xlsx-converter": () => import("@tool/csv-to-xlsx-converter/page"),

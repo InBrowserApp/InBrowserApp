@@ -76,6 +76,7 @@
     "@tool/csr-generator": "workspace:*",
     "@tool/css-box-shadow-generator": "workspace:*",
     "@tool/css-gradient-generator": "workspace:*",
+    "@tool/csv-editor": "workspace:*",
     "@tool/csv-excel-to-sqlite": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/csv-to-xlsx-converter": "workspace:*",
