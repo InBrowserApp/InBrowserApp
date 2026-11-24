@@ -25,7 +25,9 @@ const QWEN_GPU_ASSETS = Object.values(FILES).map(([path, size]) => ({
   url: `${MODEL_URL}/${path}`,
   size,
 }))
-type Adapter = NonNullable<typeof env.webgpu.adapter>
+type Adapter = NonNullable<typeof env.webgpu.adapter> & {
+  readonly info?: { readonly isFallbackAdapter?: boolean }
+}
 type PromptConfig = {
   prompt: {
     prefix_ids: number[]
@@ -52,11 +54,7 @@ async function findQwenGpu() {
     const adapter = await gpu?.requestAdapter({
       powerPreference: "high-performance",
     })
-    return adapter &&
-      !(adapter.info as { isFallbackAdapter?: boolean } | undefined)
-        ?.isFallbackAdapter
-      ? adapter
-      : undefined
+    return adapter && !adapter.info?.isFallbackAdapter ? adapter : undefined
   } catch {
     return undefined
   }
