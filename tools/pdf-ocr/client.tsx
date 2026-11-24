@@ -141,7 +141,7 @@ export default function PdfOcr({ lang, messages: m }: Props) {
           type="button"
           disabled={busy}
           className={cn(
-            "flex min-h-44 min-w-0 flex-col items-center justify-center gap-2 rounded-xl border border-dashed bg-muted/35 p-5 text-center transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring enabled:hover:border-primary/50 enabled:hover:bg-muted/60",
+            "flex min-w-0 items-center gap-3 rounded-xl border border-dashed bg-muted/35 p-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring enabled:hover:border-primary/50 enabled:hover:bg-muted/60",
             file
               ? "min-h-24 text-start"
               : "min-h-40 flex-col justify-center text-center",
