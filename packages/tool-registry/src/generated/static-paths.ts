@@ -18402,6 +18402,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-bookmark-editor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "de",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "en",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "es",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "he",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "id",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "it",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "no",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "th",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-compressor",
     language: "ar",
   },

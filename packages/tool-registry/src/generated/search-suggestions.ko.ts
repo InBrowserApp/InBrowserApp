@@ -1004,6 +1004,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 책갈피 편집기",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF 압축 도구",
     slug: "pdf-compressor",
   },

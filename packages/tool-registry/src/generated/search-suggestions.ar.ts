@@ -1004,6 +1004,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "محرر الإشارات المرجعية لملفات PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "ضاغط ملفات PDF",
     slug: "pdf-compressor",
   },

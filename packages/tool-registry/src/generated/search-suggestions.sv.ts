@@ -1004,6 +1004,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Redigera PDF-bokmärken",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF-komprimering",
     slug: "pdf-compressor",
   },
