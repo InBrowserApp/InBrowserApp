@@ -1,0 +1,23 @@
+{
+  "openFile": "Åpne fil",
+  "replaceFile": "Bytt fil",
+  "trySample": "Prøv et eksempel",
+  "dropFile": "Slipp en fil her for å se og redigere bytene.",
+  "download": "Last ned kopi",
+  "emptyFile": "Filen er tom. Det er ingen byte å vise.",
+  "readError": "Kunne ikke lese denne delen av filen. Prøv å åpne filen på nytt.",
+  "loading": "Leser byte…",
+  "offset": "Forskyvning",
+  "jumpOffset": "Gå til forskyvning",
+  "go": "Gå",
+  "offsetError": "Skriv inn en heksadesimal forskyvning til en byte i filen.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte ved {offset}",
+  "editHint": "Velg en byte og skriv to heksadesimale sifre for å erstatte verdien.",
+  "undo": "Angre",
+  "redo": "Gjør om",
+  "previousPage": "Forrige side",
+  "nextPage": "Neste side",
+  "page": "Side {current} av {total}"
+}

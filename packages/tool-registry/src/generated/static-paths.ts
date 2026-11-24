@@ -11042,6 +11042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hex-editor",
+    language: "ar",
+  },
+  {
+    slug: "hex-editor",
+    language: "de",
+  },
+  {
+    slug: "hex-editor",
+    language: "en",
+  },
+  {
+    slug: "hex-editor",
+    language: "es",
+  },
+  {
+    slug: "hex-editor",
+    language: "fr",
+  },
+  {
+    slug: "hex-editor",
+    language: "he",
+  },
+  {
+    slug: "hex-editor",
+    language: "hi",
+  },
+  {
+    slug: "hex-editor",
+    language: "id",
+  },
+  {
+    slug: "hex-editor",
+    language: "it",
+  },
+  {
+    slug: "hex-editor",
+    language: "ja",
+  },
+  {
+    slug: "hex-editor",
+    language: "ko",
+  },
+  {
+    slug: "hex-editor",
+    language: "ms",
+  },
+  {
+    slug: "hex-editor",
+    language: "nl",
+  },
+  {
+    slug: "hex-editor",
+    language: "no",
+  },
+  {
+    slug: "hex-editor",
+    language: "pl",
+  },
+  {
+    slug: "hex-editor",
+    language: "pt",
+  },
+  {
+    slug: "hex-editor",
+    language: "ru",
+  },
+  {
+    slug: "hex-editor",
+    language: "sv",
+  },
+  {
+    slug: "hex-editor",
+    language: "th",
+  },
+  {
+    slug: "hex-editor",
+    language: "tr",
+  },
+  {
+    slug: "hex-editor",
+    language: "vi",
+  },
+  {
+    slug: "hex-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "hex-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

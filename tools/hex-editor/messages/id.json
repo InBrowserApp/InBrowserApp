@@ -1,0 +1,23 @@
+{
+  "openFile": "Buka file",
+  "replaceFile": "Ganti file",
+  "trySample": "Coba contoh",
+  "dropFile": "Letakkan file di sini untuk melihat dan mengedit byte-nya.",
+  "download": "Unduh salinan",
+  "emptyFile": "File ini tidak memiliki byte untuk ditampilkan.",
+  "readError": "Bagian file ini tidak dapat dibaca. Coba buka kembali file tersebut.",
+  "loading": "Membaca byte…",
+  "offset": "Offset",
+  "jumpOffset": "Lompat ke offset",
+  "go": "Pergi",
+  "offsetError": "Masukkan offset heksadesimal yang berada dalam file.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte pada {offset}",
+  "editHint": "Pilih byte dan ketik dua digit heksadesimal untuk menimpanya.",
+  "undo": "Urungkan",
+  "redo": "Ulangi",
+  "previousPage": "Halaman sebelumnya",
+  "nextPage": "Halaman berikutnya",
+  "page": "Halaman {current} dari {total}"
+}

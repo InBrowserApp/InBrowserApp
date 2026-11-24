@@ -1,0 +1,23 @@
+{
+  "openFile": "Abrir archivo",
+  "replaceFile": "Reemplazar archivo",
+  "trySample": "Probar con un ejemplo",
+  "dropFile": "Suelta aquí un archivo para ver y editar sus bytes.",
+  "download": "Descargar copia",
+  "emptyFile": "Este archivo está vacío.",
+  "readError": "No se pudo leer esta parte del archivo. Prueba a abrirlo de nuevo.",
+  "loading": "Leyendo bytes…",
+  "offset": "Desplazamiento",
+  "jumpOffset": "Ir al desplazamiento",
+  "go": "Ir",
+  "offsetError": "Introduce un desplazamiento hexadecimal que esté dentro del archivo.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte en {offset}",
+  "editHint": "Selecciona un byte y escribe dos dígitos hexadecimales para sobrescribirlo.",
+  "undo": "Deshacer",
+  "redo": "Rehacer",
+  "previousPage": "Página anterior",
+  "nextPage": "Página siguiente",
+  "page": "Página {current} de {total}"
+}

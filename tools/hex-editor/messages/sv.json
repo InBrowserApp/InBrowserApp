@@ -1,0 +1,23 @@
+{
+  "openFile": "Öppna fil",
+  "replaceFile": "Byt fil",
+  "trySample": "Ladda exempel",
+  "dropFile": "Släpp en fil här för att visa och redigera dess bytevärden.",
+  "download": "Ladda ner kopia",
+  "emptyFile": "Filen innehåller inga byte att visa.",
+  "readError": "Det gick inte att läsa den här delen av filen. Försök öppna filen igen.",
+  "loading": "Läser byte…",
+  "offset": "Offset",
+  "jumpOffset": "Hoppa till offset",
+  "go": "Gå till",
+  "offsetError": "Ange ett hexadecimalt offset inom filens gränser.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte vid offset {offset}",
+  "editHint": "Markera en byte och skriv två hexsiffror för att ersätta värdet.",
+  "undo": "Ångra",
+  "redo": "Gör om",
+  "previousPage": "Föregående sida",
+  "nextPage": "Nästa sida",
+  "page": "Sida {current} av {total}"
+}

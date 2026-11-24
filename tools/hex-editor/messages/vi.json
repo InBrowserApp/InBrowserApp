@@ -1,0 +1,23 @@
+{
+  "openFile": "Mở tệp",
+  "replaceFile": "Thay tệp",
+  "trySample": "Thử tệp mẫu",
+  "dropFile": "Thả tệp vào đây để xem và chỉnh sửa các byte.",
+  "download": "Tải xuống bản sao",
+  "emptyFile": "Tệp này không có byte nào để hiển thị.",
+  "readError": "Không đọc được phần này của tệp. Hãy thử mở lại tệp.",
+  "loading": "Đang đọc dữ liệu…",
+  "offset": "Vị trí",
+  "jumpOffset": "Đến vị trí byte",
+  "go": "Đi đến",
+  "offsetError": "Nhập vị trí của một byte trong tệp dưới dạng hex.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte tại vị trí {offset}",
+  "editHint": "Chọn một byte rồi nhập hai chữ số hex để ghi đè.",
+  "undo": "Hoàn tác",
+  "redo": "Làm lại",
+  "previousPage": "Trang trước",
+  "nextPage": "Trang sau",
+  "page": "Trang {current} trên {total}"
+}

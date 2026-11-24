@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "developer",
+    name: "محرّر سداسي عشري",
+    slug: "hex-editor",
+  },
+  {
     category: "crypto",
     name: "حساب تجزئة HighwayHash للنص أو الملف",
     slug: "highwayhash-hash-text-or-file",

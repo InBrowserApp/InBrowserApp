@@ -1,0 +1,4 @@
+{
+  "name": "Hex Editor",
+  "description": "View and edit binary files online in hex and ASCII. Jump to a byte offset, overwrite values, and download an edited copy. Files stay in your browser."
+}

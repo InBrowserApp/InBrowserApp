@@ -1,0 +1,4 @@
+{
+  "name": "Editor Heksadesimal",
+  "description": "Lihat dan edit file biner secara online dalam heksadesimal dan ASCII. Lompat ke offset byte, timpa nilai, dan unduh salinan yang telah diedit. File tetap berada di browser Anda."
+}

@@ -127,6 +127,7 @@
     "@tool/gitignore-generator": "workspace:*",
     "@tool/gpu-information": "workspace:*",
     "@tool/har-analyzer": "workspace:*",
+    "@tool/hex-editor": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",
