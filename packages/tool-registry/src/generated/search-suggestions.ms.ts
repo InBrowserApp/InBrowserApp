@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Penukar Aksara Cina Ringkas dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",

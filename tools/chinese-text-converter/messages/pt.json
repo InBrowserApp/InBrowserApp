@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Sentido da conversão",
+  "toTraditional": "De simplificado para tradicional",
+  "toSimplified": "De tradicional para simplificado",
+  "variantLabel": "Variante do chinês tradicional",
+  "variants": {
+    "t": "Tradicional padrão",
+    "tw": "Caracteres de Taiwan",
+    "twp": "Caracteres e vocabulário de Taiwan",
+    "hk": "Caracteres de Hong Kong"
+  },
+  "inputLabel": "Texto original",
+  "inputPlaceholder": "Cole ou escreva texto em chinês",
+  "exampleLabel": "Experimentar um exemplo",
+  "clearLabel": "Limpar",
+  "outputLabel": "Texto convertido",
+  "outputPlaceholder": "O resultado aparece aqui",
+  "copyLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "copyFailedLabel": "Falha ao copiar",
+  "loading": "A carregar o dicionário de conversão…",
+  "loadError": "Não foi possível carregar o dicionário. Copie o texto original antes de recarregar a página."
+}

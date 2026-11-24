@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Arah penukaran",
+  "toTraditional": "Ringkas ke tradisional",
+  "toSimplified": "Tradisional ke ringkas",
+  "variantLabel": "Varian aksara Cina tradisional",
+  "variants": {
+    "t": "Tradisional standard",
+    "tw": "Aksara gaya Taiwan",
+    "twp": "Aksara dan kosa kata Taiwan",
+    "hk": "Aksara gaya Hong Kong"
+  },
+  "inputLabel": "Teks asal",
+  "inputPlaceholder": "Tampal atau taip teks bahasa Cina",
+  "exampleLabel": "Cuba contoh",
+  "clearLabel": "Kosongkan",
+  "outputLabel": "Hasil penukaran",
+  "outputPlaceholder": "Hasil akan dipaparkan di sini",
+  "copyLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin",
+  "loading": "Sedang memuatkan kamus penukaran…",
+  "loadError": "Kamus tidak dapat dimuatkan. Salin teks asal sebelum memuat semula halaman."
+}
