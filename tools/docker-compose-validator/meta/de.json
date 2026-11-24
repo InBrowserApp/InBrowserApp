@@ -1,0 +1,4 @@
+{
+  "name": "Docker-Compose-Validator",
+  "description": "Validieren Sie compose.yaml oder docker-compose.yml online. Finden Sie YAML-Syntaxfehler und ungültige Docker-Compose-Felder mit Zeilen- und Spaltenangaben."
+}

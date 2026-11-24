@@ -11513,6 +11513,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "docker-compose-validator",
+    category: "developer",
+    icon: "file-check",
+    tags: [
+      "docker",
+      "compose",
+      "docker-compose",
+      "yaml",
+      "validator",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق Docker Compose",
+        description:
+          "تحقّق من ملفات compose.yaml أو docker-compose.yml عبر الإنترنت. اعثر على أخطاء صياغة YAML والحقول غير الصالحة في Docker Compose مع تحديد رقم السطر والعمود.",
+      },
+      de: {
+        name: "Docker-Compose-Validator",
+        description:
+          "Validieren Sie compose.yaml oder docker-compose.yml online. Finden Sie YAML-Syntaxfehler und ungültige Docker-Compose-Felder mit Zeilen- und Spaltenangaben.",
+      },
+      en: {
+        name: "Docker Compose Validator",
+        description:
+          "Validate compose.yaml or docker-compose.yml online. Find YAML syntax errors and invalid Docker Compose fields with line and column feedback.",
+      },
+      es: {
+        name: "Validador de Docker Compose",
+        description:
+          "Valida compose.yaml o docker-compose.yml en línea. Detecta errores de sintaxis YAML y campos no válidos de Docker Compose con su línea y columna.",
+      },
+      fr: {
+        name: "Validateur Docker Compose",
+        description:
+          "Validez un fichier compose.yaml ou docker-compose.yml en ligne. Repérez les erreurs de syntaxe YAML et les champs Docker Compose non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Docker Compose",
+        description:
+          "אימות מקוון לקובצי compose.yaml ו-docker-compose.yml. אפשר לאתר שגיאות תחביר ב-YAML ושדות לא תקינים של Docker Compose לפי מספר השורה והעמודה.",
+      },
+      hi: {
+        name: "Docker Compose वैलिडेटर",
+        description:
+          "compose.yaml या docker-compose.yml को ऑनलाइन सत्यापित करें। YAML सिंटैक्स की गड़बड़ियों और Docker Compose के अमान्य फ़ील्ड को पंक्ति और कॉलम नंबर की मदद से ढूँढें।",
+      },
+      id: {
+        name: "Validator Docker Compose",
+        description:
+          "Validasi compose.yaml atau docker-compose.yml secara online. Temukan kesalahan sintaks YAML dan properti Docker Compose yang tidak valid beserta nomor baris dan kolomnya.",
+      },
+      it: {
+        name: "Validatore Docker Compose",
+        description:
+          "Convalida compose.yaml o docker-compose.yml online. Trova gli errori di sintassi YAML e i campi Docker Compose non validi con indicazione di riga e colonna.",
+      },
+      ja: {
+        name: "Docker Compose バリデーター",
+        description:
+          "compose.yaml や docker-compose.yml をオンラインで検証します。YAML の構文エラーや Docker Compose のフィールドの誤りを行番号と列番号で確認できます。",
+      },
+      ko: {
+        name: "Docker Compose 검증기",
+        description:
+          "compose.yaml 또는 docker-compose.yml을 온라인에서 검증하세요. YAML 구문 오류와 잘못된 Docker Compose 필드를 줄과 열 번호로 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah Docker Compose",
+        description:
+          "Sahkan compose.yaml atau docker-compose.yml dalam talian. Cari ralat sintaks YAML dan medan Docker Compose yang tidak sah, dengan kedudukan baris dan lajur.",
+      },
+      nl: {
+        name: "Docker Compose-validator",
+        description:
+          "Valideer compose.yaml of docker-compose.yml online. Vind YAML-syntaxisfouten en ongeldige Docker Compose-velden met regel- en kolomnummers.",
+      },
+      no: {
+        name: "Docker Compose-validator",
+        description:
+          "Valider compose.yaml eller docker-compose.yml på nett. Finn syntaksfeil i YAML og ugyldige Docker Compose-felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator Docker Compose",
+        description:
+          "Sprawdź online plik compose.yaml lub docker-compose.yml. Znajdź błędy składni YAML i nieprawidłowe pola Docker Compose wraz z numerami wierszy i kolumn.",
+      },
+      pt: {
+        name: "Validador de Docker Compose",
+        description:
+          "Valide compose.yaml ou docker-compose.yml online. Encontre erros de sintaxe YAML e campos inválidos do Docker Compose com indicação de linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор Docker Compose",
+        description:
+          "Проверяйте compose.yaml и docker-compose.yml онлайн. Находите ошибки синтаксиса YAML и недопустимые поля Docker Compose с указанием строки и столбца.",
+      },
+      sv: {
+        name: "Docker Compose-validerare",
+        description:
+          "Validera compose.yaml eller docker-compose.yml online. Hitta YAML-syntaxfel och ogiltiga Docker Compose-fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ Docker Compose",
+        description:
+          "ตรวจสอบ compose.yaml หรือ docker-compose.yml ออนไลน์ ค้นหาข้อผิดพลาดทางไวยากรณ์ YAML และฟิลด์ Docker Compose ที่ไม่ถูกต้อง พร้อมระบุบรรทัดและคอลัมน์",
+      },
+      tr: {
+        name: "Docker Compose Doğrulayıcı",
+        description:
+          "compose.yaml veya docker-compose.yml dosyasını çevrimiçi doğrulayın. YAML sözdizimi hatalarını ve geçersiz Docker Compose alanlarını satır ve sütun numaralarıyla bulun.",
+      },
+      vi: {
+        name: "Trình xác thực Docker Compose",
+        description:
+          "Xác thực compose.yaml hoặc docker-compose.yml trực tuyến. Tìm lỗi cú pháp YAML và các trường Docker Compose không hợp lệ, kèm vị trí dòng và cột.",
+      },
+      "zh-CN": {
+        name: "Docker Compose 校验器",
+        description:
+          "在线校验 compose.yaml 或 docker-compose.yml，查找 YAML 语法错误和无效的 Docker Compose 字段，并查看错误所在的行和列。",
+      },
+      "zh-TW": {
+        name: "Docker Compose 驗證器",
+        description:
+          "線上驗證 compose.yaml 或 docker-compose.yml，找出 YAML 語法錯誤和無效的 Docker Compose 欄位，並顯示問題所在的行號與欄位位置。",
+      },
+    },
+  },
+  {
     slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",

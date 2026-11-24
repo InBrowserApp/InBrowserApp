@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Валидатор Docker Compose",
+    slug: "docker-compose-validator",
+  },
+  {
+    category: "developer",
     name: "Конвертер Docker Run в Compose",
     slug: "docker-run-to-compose-converter",
   },

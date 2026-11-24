@@ -8282,6 +8282,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docker-compose-validator",
+    language: "ar",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "de",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "en",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "es",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "fr",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "he",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "hi",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "id",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "it",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ja",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ko",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ms",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "nl",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "no",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "pl",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "pt",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ru",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "sv",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "th",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "tr",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "vi",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },

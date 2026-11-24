@@ -1,0 +1,4 @@
+{
+  "name": "Validator Docker Compose",
+  "description": "Validasi compose.yaml atau docker-compose.yml secara online. Temukan kesalahan sintaks YAML dan properti Docker Compose yang tidak valid beserta nomor baris dan kolomnya."
+}

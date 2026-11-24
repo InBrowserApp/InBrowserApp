@@ -97,6 +97,7 @@
     "@tool/dns-zone-file-parser": "workspace:*",
     "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",
+    "@tool/docker-compose-validator": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/docx-to-markdown-converter": "workspace:*",
     "@tool/docx-to-pdf-converter": "workspace:*",

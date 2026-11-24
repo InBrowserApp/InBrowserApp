@@ -115,6 +115,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "dns-zone-file-parser": () => import("@tool/dns-zone-file-parser/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),
+  "docker-compose-validator": () =>
+    import("@tool/docker-compose-validator/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "docx-to-markdown-converter": () =>

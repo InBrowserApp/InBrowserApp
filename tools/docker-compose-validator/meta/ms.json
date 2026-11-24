@@ -1,0 +1,4 @@
+{
+  "name": "Pengesah Docker Compose",
+  "description": "Sahkan compose.yaml atau docker-compose.yml dalam talian. Cari ralat sintaks YAML dan medan Docker Compose yang tidak sah, dengan kedudukan baris dan lajur."
+}

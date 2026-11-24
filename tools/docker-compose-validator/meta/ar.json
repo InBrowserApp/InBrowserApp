@@ -1,0 +1,4 @@
+{
+  "name": "مدقق Docker Compose",
+  "description": "تحقّق من ملفات compose.yaml أو docker-compose.yml عبر الإنترنت. اعثر على أخطاء صياغة YAML والحقول غير الصالحة في Docker Compose مع تحديد رقم السطر والعمود."
+}

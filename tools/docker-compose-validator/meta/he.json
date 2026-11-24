@@ -1,0 +1,4 @@
+{
+  "name": "מאמת Docker Compose",
+  "description": "אימות מקוון לקובצי compose.yaml ו-docker-compose.yml. אפשר לאתר שגיאות תחביר ב-YAML ושדות לא תקינים של Docker Compose לפי מספר השורה והעמודה."
+}

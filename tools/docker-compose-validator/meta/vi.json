@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực Docker Compose",
+  "description": "Xác thực compose.yaml hoặc docker-compose.yml trực tuyến. Tìm lỗi cú pháp YAML và các trường Docker Compose không hợp lệ, kèm vị trí dòng và cột."
+}
