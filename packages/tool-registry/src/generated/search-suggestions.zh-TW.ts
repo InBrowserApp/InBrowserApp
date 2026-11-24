@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB 中繼資料編輯器",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB 閱讀器",
     slug: "epub-reader",
   },

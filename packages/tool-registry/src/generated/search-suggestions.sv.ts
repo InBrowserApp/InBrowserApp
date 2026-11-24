@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Redigerare för EPUB-metadata",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB-läsare",
     slug: "epub-reader",
   },

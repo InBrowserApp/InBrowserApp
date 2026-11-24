@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "โปรแกรมอ่าน EPUB",
     slug: "epub-reader",
   },

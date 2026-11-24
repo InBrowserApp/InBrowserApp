@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "Trình đọc EPUB",
     slug: "epub-reader",
   },

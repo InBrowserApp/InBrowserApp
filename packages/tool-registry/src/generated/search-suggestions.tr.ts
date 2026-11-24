@@ -454,6 +454,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB Meta Veri Düzenleyicisi",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB Okuyucu",
     slug: "epub-reader",
   },
