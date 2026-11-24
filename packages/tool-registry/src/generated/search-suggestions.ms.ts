@@ -393,6 +393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "document",
+    name: "Pemapar DjVu",
+    slug: "djvu-viewer",
+  },
+  {
     category: "network",
     name: "Carian DNS",
     slug: "dns-lookup",

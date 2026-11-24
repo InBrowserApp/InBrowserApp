@@ -16,6 +16,7 @@
         "couldNotResolve": true,
         "pathNot": [
           "^astro:",
+          "^djvu-rs/(scalar|simd128)/djvu_rs_bg[.]wasm[?]url$",
           "^mediainfo[.]js/MediaInfoModule[.]wasm[?]url$",
           "^hb-subset-wasm/hb-subset[.]wasm[?]url$",
           "^@imagemagick/magick-wasm/magick[.]wasm[?]url$",
