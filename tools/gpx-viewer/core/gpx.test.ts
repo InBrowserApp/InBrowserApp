@@ -1,3 +1,5 @@
+// @vitest-environment jsdom
+
 import { expect, it } from "vitest"
 import { parseGpx } from "./gpx"
 
@@ -67,9 +69,5 @@ it("unwraps each point relative to the previous one and rejects parser errors", 
       [181, 0],
     ],
   })
-  expect(() =>
-    parseGpx(
-      '<gpx><parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"/><wpt lat="1" lon="2"/></gpx>'
-    )
-  ).toThrow("Invalid XML")
+  expect(() => parseGpx('<gpx><wpt lat="1" lon="2"/>')).toThrow("Invalid XML")
 })

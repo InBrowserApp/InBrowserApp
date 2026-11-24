@@ -1,0 +1,28 @@
+{
+  "openFile": "開啟檔案",
+  "sample": "試用範例",
+  "input": "來源文字",
+  "copy": "複製",
+  "copied": "已複製",
+  "copyFailed": "無法複製",
+  "readError": "無法讀取檔案。請重新選取檔案，或直接貼上文字。",
+  "result": "轉換結果",
+  "empty": "開啟檔案或貼上文字，轉換後即可在此查看結果。",
+  "convert": "轉換",
+  "preview": "結果預覽",
+  "invalid": "請確認檔案格式，參考下方範例後再試一次。",
+  "noRows": "沒有可轉換的資料。請確認內容與欄位名稱。",
+  "rowError": "請檢查 CSV 第 {row} 列的值。",
+  "count": "資料筆數：{count}",
+  "paste": "在此貼上檔案內容",
+  "forward": "vCard 轉 CSV",
+  "reverse": "CSV 轉 vCard",
+  "downloadForward": "下載 CSV",
+  "downloadReverse": "下載 VCF",
+  "columns": {
+    "Full Name": "姓名",
+    "Email": "電子郵件",
+    "Phone": "電話",
+    "Company": "公司"
+  }
+}

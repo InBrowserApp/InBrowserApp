@@ -1,0 +1,4 @@
+{
+  "name": "vCard 与 CSV 互转",
+  "description": "在浏览器中将联系人文件在 vCard（.vcf）与 CSV 之间互转。打开文件或粘贴文本，即可预览并下载转换结果。"
+}

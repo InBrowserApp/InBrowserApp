@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT プレビューアー",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HARネットワーク解析ツール",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "音声・動画情報ビューアー",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "Mermaid プレビューアー",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "vCard・CSV 相互変換ツール",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "vCard 名刺作成ツール",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM サブネット計算ツール",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool ハッシュ テキストまたはファイル",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON 変換",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

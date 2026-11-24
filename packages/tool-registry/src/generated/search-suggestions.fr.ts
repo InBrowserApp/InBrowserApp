@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Aperçu Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Analyseur réseau HAR",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Visionneuse d’informations multimédias",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "Aperçu Mermaid",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Convertisseur vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "Générateur de vCard",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Calculateur VLSM IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool de Texte ou Fichier",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "Convertisseur WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

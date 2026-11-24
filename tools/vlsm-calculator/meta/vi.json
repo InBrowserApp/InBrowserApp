@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tính mạng con IPv4 theo VLSM",
+  "description": "Chia mạng con IPv4 theo số lượng máy cần cấp IP. Nhập khối CIDR gốc để tính mặt nạ mạng con, dải IP khả dụng, địa chỉ quảng bá và phần địa chỉ còn trống."
+}

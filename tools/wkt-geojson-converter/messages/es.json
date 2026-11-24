@@ -1,0 +1,12 @@
+{
+  "direction": "Sentido de la conversión",
+  "example": "Probar un ejemplo",
+  "openFile": "Abrir archivo",
+  "convert": "Convertir",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "download": "Descargar",
+  "empty": "El archivo convertido aparecerá aquí.",
+  "invalid": "No se pudo realizar la conversión. Comprueba el formato y la geometría.",
+  "swap": "Usar el resultado como entrada"
+}

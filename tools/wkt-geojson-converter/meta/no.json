@@ -1,0 +1,4 @@
+{
+  "name": "WKT ↔ GeoJSON-omformer",
+  "description": "Konverter geometrier fra Well-Known Text (WKT) til GeoJSON eller omvendt. Lim inn tekst eller åpne en fil, og kopier eller last ned geometrien."
+}

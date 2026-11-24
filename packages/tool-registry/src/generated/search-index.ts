@@ -15316,6 +15316,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "graphviz-dot-previewer",
+    category: "developer",
+    icon: "network",
+    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    locales: {
+      ar: {
+        name: "معاين Graphviz DOT",
+        description:
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+      },
+      de: {
+        name: "Graphviz-DOT-Vorschau",
+        description:
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+      },
+      en: {
+        name: "Graphviz DOT Previewer",
+        description:
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+      },
+      es: {
+        name: "Vista previa de Graphviz DOT",
+        description:
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+      },
+      fr: {
+        name: "Aperçu Graphviz DOT",
+        description:
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Graphviz DOT",
+        description:
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+      },
+      hi: {
+        name: "Graphviz DOT प्रीव्यूअर",
+        description:
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Graphviz DOT",
+        description:
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+      },
+      it: {
+        name: "Anteprima Graphviz DOT",
+        description:
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+      },
+      ja: {
+        name: "Graphviz DOT プレビューアー",
+        description:
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+      },
+      ko: {
+        name: "Graphviz DOT 미리보기",
+        description:
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Graphviz DOT",
+        description:
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+      },
+      nl: {
+        name: "Graphviz DOT-voorvertoner",
+        description:
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+      },
+      no: {
+        name: "Graphviz DOT-forhåndsviser",
+        description:
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+      },
+      pl: {
+        name: "Podgląd Graphviz DOT",
+        description:
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Graphviz DOT",
+        description:
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+      },
+      ru: {
+        name: "Предпросмотр Graphviz DOT",
+        description:
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+      },
+      sv: {
+        name: "Graphviz DOT-förhandsgranskare",
+        description:
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+        description:
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+      },
+      tr: {
+        name: "Graphviz DOT Önizleyici",
+        description:
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Graphviz DOT",
+        description:
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+      },
+      "zh-CN": {
+        name: "Graphviz DOT 预览器",
+        description:
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+      },
+      "zh-TW": {
+        name: "Graphviz DOT 預覽器",
+        description:
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+      },
+    },
+  },
+  {
     slug: "har-analyzer",
     category: "network",
     icon: "network",
@@ -24807,6 +24930,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "影音資訊檢視器",
         description:
           "檢視 MP4、MOV、MKV、WebM、AVI、MP3、FLAC 和 WAV 的編解碼器、位元率、長度、解析度與影格率。查看音軌的語言標記、聲道數、取樣率及字幕軌資訊。可在本機複製報告或匯出 JSON。",
+      },
+    },
+  },
+  {
+    slug: "mermaid-previewer",
+    category: "developer",
+    icon: "blocks",
+    tags: [
+      "mermaid",
+      "diagram",
+      "flowchart",
+      "sequence diagram",
+      "svg",
+      "png",
+      "preview",
+    ],
+    locales: {
+      ar: {
+        name: "معاين Mermaid",
+        description:
+          "حرّر شيفرة Mermaid وشاهد المخطط فورًا. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG.",
+      },
+      de: {
+        name: "Mermaid-Vorschau",
+        description:
+          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG oder PNG herunter.",
+      },
+      en: {
+        name: "Mermaid Previewer",
+        description:
+          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG or PNG.",
+      },
+      es: {
+        name: "Vista previa de Mermaid",
+        description:
+          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG o PNG.",
+      },
+      fr: {
+        name: "Aperçu Mermaid",
+        description:
+          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG ou PNG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Mermaid",
+        description:
+          "אפשר לערוך קוד Mermaid ולראות את התרשים מתעדכן בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו אותו כ-SVG או PNG.",
+      },
+      hi: {
+        name: "Mermaid प्रीव्यूअर",
+        description:
+          "Mermaid कोड संपादित करते हुए डायग्राम का लाइव प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG या PNG डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Mermaid",
+        description:
+          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG atau PNG.",
+      },
+      it: {
+        name: "Anteprima Mermaid",
+        description:
+          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG o PNG.",
+      },
+      ja: {
+        name: "Mermaid プレビューアー",
+        description:
+          "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid 미리보기",
+        description:
+          "Mermaid 코드를 편집하며 다이어그램을 실시간으로 확인하세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 살펴보고 SVG 또는 PNG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Mermaid",
+        description:
+          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG atau PNG.",
+      },
+      nl: {
+        name: "Mermaid-voorvertoner",
+        description:
+          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG of PNG.",
+      },
+      no: {
+        name: "Mermaid-forhåndsviser",
+        description:
+          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG eller PNG.",
+      },
+      pl: {
+        name: "Podgląd Mermaid",
+        description:
+          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go w formacie SVG albo PNG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Mermaid",
+        description:
+          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG ou PNG.",
+      },
+      ru: {
+        name: "Предпросмотр Mermaid",
+        description:
+          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG или PNG.",
+      },
+      sv: {
+        name: "Mermaid-förhandsgranskare",
+        description:
+          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG eller PNG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Mermaid",
+        description:
+          "แก้ไขโค้ด Mermaid พร้อมดูแผนภาพสด ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลดเป็น SVG หรือ PNG",
+      },
+      tr: {
+        name: "Mermaid Önizleyici",
+        description:
+          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış, sıralama veya ER diyagramı örneğini deneyin ve SVG ya da PNG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Mermaid",
+        description:
+          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG hoặc PNG.",
+      },
+      "zh-CN": {
+        name: "Mermaid 预览器",
+        description:
+          "编辑 Mermaid 代码并实时预览图表。试用流程图、时序图或 ER 图，然后下载 SVG 或 PNG。",
+      },
+      "zh-TW": {
+        name: "Mermaid 預覽器",
+        description:
+          "編輯 Mermaid 程式碼並即時預覽圖表。試用流程圖、循序圖或 ER 圖，再下載 SVG 或 PNG。",
       },
     },
   },
@@ -42600,6 +42854,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vcard-csv-converter",
+    category: "document",
+    icon: "arrow-left-right",
+    tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل vCard وCSV",
+        description:
+          "حوّل جهات الاتصال بين vCard ‏(.vcf) وCSV. افتح ملفًا أو الصق النص، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "vCard-CSV-Konverter",
+        description:
+          "Konvertieren Sie Kontakte zwischen vCard (.vcf) und CSV. Öffnen Sie eine Datei oder fügen Sie Text ein, prüfen Sie das Ergebnis und laden Sie es direkt im Browser herunter.",
+      },
+      en: {
+        name: "vCard ↔ CSV Converter",
+        description:
+          "Convert contacts between vCard (.vcf) and CSV. Open a file or paste text, preview the conversion, and download the result in your browser.",
+      },
+      es: {
+        name: "Convertidor vCard ↔ CSV",
+        description:
+          "Convierte contactos entre vCard (.vcf) y CSV. Abre un archivo o pega el texto, revisa la vista previa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur vCard ↔ CSV",
+        description:
+          "Convertissez vos contacts entre vCard (.vcf) et CSV. Ouvrez un fichier ou collez du texte, vérifiez l’aperçu et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר vCard ו-CSV",
+        description:
+          "המירו רשימות אנשי קשר בין vCard ‏(.vcf) ל-CSV. פתחו קובץ או הדביקו טקסט, צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "vCard ↔ CSV कन्वर्टर",
+        description:
+          "संपर्कों को vCard (.vcf) से CSV या CSV से vCard में बदलें। फ़ाइल खोलें या टेक्स्ट पेस्ट करें, नतीजे का पूर्वावलोकन करें और उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi vCard ↔ CSV",
+        description:
+          "Konversi kontak antara vCard (.vcf) dan CSV. Buka file atau tempel teks, lihat pratinjau, lalu unduh hasilnya langsung di browser.",
+      },
+      it: {
+        name: "Convertitore vCard ↔ CSV",
+        description:
+          "Converti i contatti tra vCard (.vcf) e CSV. Apri un file o incolla il testo, controlla l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "vCard・CSV 相互変換ツール",
+        description:
+          "連絡先を vCard（.vcf）と CSV の間で相互変換します。ファイルを開くかテキストを貼り付け、ブラウザーで結果を確認してダウンロードできます。",
+      },
+      ko: {
+        name: "vCard·CSV 변환기",
+        description:
+          "연락처를 vCard(.vcf)와 CSV 사이에서 양방향으로 변환합니다. 파일을 열거나 텍스트를 붙여넣고 브라우저에서 결과를 확인해 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar vCard ↔ CSV",
+        description:
+          "Tukar senarai kenalan antara vCard (.vcf) dengan CSV. Buka fail atau tampal teks, semak pratonton, kemudian muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "vCard-CSV-converter",
+        description:
+          "Zet contacten om tussen vCard (.vcf) en CSV. Open een bestand of plak tekst, bekijk het resultaat en download het rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom vCard og CSV",
+        description:
+          "Konverter kontakter mellom vCard (.vcf) og CSV. Åpne en fil eller lim inn tekst, se en forhåndsvisning og last ned resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter vCard i CSV",
+        description:
+          "Konwertuj kontakty między vCard (.vcf) a CSV. Otwórz plik lub wklej tekst, sprawdź podgląd i pobierz wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor vCard ↔ CSV",
+        description:
+          "Converta contatos entre vCard (.vcf) e CSV. Abra um arquivo ou cole o texto, confira a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер vCard ↔ CSV",
+        description:
+          "Преобразуйте списки контактов из vCard (.vcf) в CSV и обратно. Откройте файл или вставьте текст, проверьте результат и скачайте его из браузера.",
+      },
+      sv: {
+        name: "Konverterare för vCard och CSV",
+        description:
+          "Konvertera kontakter mellan vCard (.vcf) och CSV. Öppna en fil eller klistra in text, förhandsgranska resultatet och ladda ner det i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง vCard ↔ CSV",
+        description:
+          "แปลงรายชื่อติดต่อระหว่าง vCard (.vcf) กับ CSV เปิดไฟล์หรือวางข้อความ แล้วดูตัวอย่างและดาวน์โหลดผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "vCard ↔ CSV Dönüştürücü",
+        description:
+          "Kişi listelerini vCard (.vcf) ile CSV arasında dönüştürün. Dosya açın veya metin yapıştırın, sonucu önizleyin ve tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi vCard ↔ CSV",
+        description:
+          "Chuyển đổi danh bạ giữa vCard (.vcf) và CSV. Mở tệp hoặc dán văn bản, xem trước và tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "vCard 与 CSV 互转",
+        description:
+          "在浏览器中将联系人文件在 vCard（.vcf）与 CSV 之间互转。打开文件或粘贴文本，即可预览并下载转换结果。",
+      },
+      "zh-TW": {
+        name: "vCard 與 CSV 互轉",
+        description:
+          "在瀏覽器中互轉 vCard（.vcf）與 CSV 聯絡人檔案。開啟檔案或貼上文字，即可預覽並下載轉換結果。",
+      },
+    },
+  },
+  {
     slug: "vcard-generator",
     category: "document",
     icon: "contact-round",
@@ -43369,6 +43746,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vlsm-calculator",
+    category: "network",
+    icon: "network",
+    tags: [
+      "vlsm",
+      "subnet",
+      "calculator",
+      "ipv4",
+      "cidr",
+      "netmask",
+      "address",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
+        description:
+          "خطّط للشبكات الفرعية IPv4 حسب عدد المضيفين. أدخل كتلة CIDR رئيسية لحساب أقنعة الشبكات الفرعية ونطاقات عناوين IP القابلة للاستخدام وعناوين البث والمساحة المتبقية.",
+      },
+      de: {
+        name: "IPv4-VLSM-Rechner",
+        description:
+          "Plane IPv4-Subnetze nach Hostanzahl. Gib einen übergeordneten CIDR-Block ein und berechne Subnetzmasken, nutzbare IP-Bereiche, Broadcast-Adressen und den verbleibenden Adressraum.",
+      },
+      en: {
+        name: "IPv4 VLSM Calculator",
+        description:
+          "Plan IPv4 subnets by host count. Enter a parent CIDR block to calculate subnet masks, usable IP ranges, broadcast addresses, and remaining address space.",
+      },
+      es: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planifica subredes IPv4 según el número de hosts. Introduce el bloque CIDR principal para calcular las máscaras de subred, los rangos IP utilizables, las direcciones de difusión y el espacio disponible.",
+      },
+      fr: {
+        name: "Calculateur VLSM IPv4",
+        description:
+          "Planifiez vos sous-réseaux IPv4 selon le nombre d’hôtes. À partir d’un bloc CIDR parent, calculez les masques, les plages d’IP utilisables, les adresses de diffusion et l’espace restant.",
+      },
+      he: {
+        name: "מחשבון VLSM לתת־רשתות IPv4",
+        description:
+          "תכננו תת־רשתות IPv4 לפי מספר המארחים. הזינו את בלוק ה־CIDR הראשי כדי לחשב מסכות תת־רשת, טווחי כתובות IP שמישות, כתובות שידור ושטח כתובות פנוי.",
+      },
+      hi: {
+        name: "IPv4 VLSM कैलकुलेटर",
+        description:
+          "होस्ट की संख्या के आधार पर IPv4 सबनेट की योजना बनाएँ। सबनेट मास्क, उपयोग योग्य IP रेंज, ब्रॉडकास्ट पते और बचा हुआ पता क्षेत्र जानने के लिए मूल CIDR ब्लॉक दर्ज करें।",
+      },
+      id: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rencanakan subnet IPv4 berdasarkan jumlah host. Masukkan blok CIDR induk untuk menghitung subnet mask, rentang IP yang bisa dipakai, alamat broadcast, dan sisa alamat.",
+      },
+      it: {
+        name: "Calcolatore di sottoreti IPv4 VLSM",
+        description:
+          "Pianifica le sottoreti IPv4 in base al numero di host. Inserisci un blocco CIDR per calcolare maschere, intervalli IP utilizzabili, indirizzi broadcast e spazio residuo.",
+      },
+      ja: {
+        name: "IPv4 VLSM サブネット計算ツール",
+        description:
+          "必要なホスト数に合わせて IPv4 サブネットを割り当てます。親ネットワークの CIDR ブロックを指定すると、サブネットマスク、使用可能な IP アドレス範囲、ブロードキャストアドレス、未割り当てのアドレスを確認できます。",
+      },
+      ko: {
+        name: "IPv4 VLSM 서브넷 계산기",
+        description:
+          "필요한 호스트 수에 맞춰 IPv4 서브넷을 구성하세요. 상위 CIDR 블록을 입력하면 서브넷 마스크, 사용 가능한 IP 범위, 브로드캐스트 주소, 남은 주소 공간을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rancang subnet IPv4 mengikut bilangan hos. Masukkan blok CIDR induk untuk mengira topeng subnet, julat IP yang boleh digunakan, alamat siaran dan baki alamat.",
+      },
+      nl: {
+        name: "IPv4 VLSM-calculator",
+        description:
+          "Plan IPv4-subnetten op basis van het aantal hosts. Voer een overkoepelend CIDR-blok in om subnetmaskers, bruikbare IP-bereiken, broadcastadressen en de resterende adresruimte te berekenen.",
+      },
+      no: {
+        name: "IPv4 VLSM-kalkulator",
+        description:
+          "Planlegg IPv4-subnett etter antall verter. Oppgi en overordnet CIDR-blokk for å beregne nettmasker, brukbare IP-områder, broadcast-adresser og gjenværende adresseplass.",
+      },
+      pl: {
+        name: "Kalkulator podsieci IPv4 VLSM",
+        description:
+          "Zaplanuj podsieci IPv4 według liczby hostów. Podaj blok CIDR, aby obliczyć maski podsieci, zakresy adresów IP dla hostów, adresy rozgłoszeniowe i pozostałą pulę adresów.",
+      },
+      pt: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planeje sub-redes IPv4 pela quantidade de hosts. Informe um bloco CIDR principal para calcular máscaras, faixas de IPs utilizáveis, endereços de broadcast e o espaço restante.",
+      },
+      ru: {
+        name: "Калькулятор подсетей IPv4 с VLSM",
+        description:
+          "Разбейте блок IPv4 на подсети по числу узлов. По исходному блоку CIDR калькулятор определит маски подсетей, диапазоны доступных IP, широковещательные адреса и остаток адресов.",
+      },
+      sv: {
+        name: "IPv4 VLSM-kalkylator",
+        description:
+          "Planera IPv4-subnät utifrån antalet värdar. Ange ett överordnat CIDR-block för att beräkna nätmasker, användbara IP-intervall, broadcast-adresser och återstående adressutrymme.",
+      },
+      th: {
+        name: "เครื่องคำนวณ IPv4 VLSM",
+        description:
+          "วางแผนซับเน็ต IPv4 ตามจำนวนโฮสต์ กรอกบล็อก CIDR ต้นทางเพื่อคำนวณซับเน็ตมาสก์ ช่วง IP ที่ใช้ได้ ที่อยู่บรอดแคสต์ และพื้นที่ที่อยู่ที่เหลือ",
+      },
+      tr: {
+        name: "IPv4 VLSM Hesaplayıcı",
+        description:
+          "IPv4 alt ağlarını ana makine sayısına göre planlayın. Alt ağ maskelerini, kullanılabilir IP aralıklarını, yayın adreslerini ve kalan adres alanını hesaplamak için üst CIDR bloğunu girin.",
+      },
+      vi: {
+        name: "Công cụ tính mạng con IPv4 theo VLSM",
+        description:
+          "Chia mạng con IPv4 theo số lượng máy cần cấp IP. Nhập khối CIDR gốc để tính mặt nạ mạng con, dải IP khả dụng, địa chỉ quảng bá và phần địa chỉ còn trống.",
+      },
+      "zh-CN": {
+        name: "IPv4 VLSM 子网计算器",
+        description:
+          "根据所需主机数规划 IPv4 子网。输入基础 CIDR 地址块，计算子网掩码、可用 IP 范围、广播地址和剩余地址空间。",
+      },
+      "zh-TW": {
+        name: "IPv4 VLSM 子網路計算機",
+        description:
+          "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -43496,6 +44004,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Whirlpool 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "wkt-geojson-converter",
+    category: "json",
+    icon: "braces",
+    tags: [
+      "wkt",
+      "well-known-text",
+      "geojson",
+      "gis",
+      "geometry",
+      "converter",
+      "postgis",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل بين WKT وGeoJSON",
+        description:
+          "حوّل الأشكال الهندسية من صيغة Well-Known Text (WKT) إلى GeoJSON أو بالعكس. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "WKT ↔ GeoJSON-Konverter",
+        description:
+          "Geometrien zwischen Well-Known Text (WKT) und GeoJSON umwandeln. Füge Text ein oder öffne eine Datei und kopiere die Geometrie oder lade sie herunter.",
+      },
+      en: {
+        name: "WKT ↔ GeoJSON Converter",
+        description:
+          "Convert Well-Known Text (WKT) geometries to GeoJSON and back. Paste text or open a file, then copy or download the converted geometry.",
+      },
+      es: {
+        name: "Convertidor WKT ↔ GeoJSON",
+        description:
+          "Convierte geometrías en Well-Known Text (WKT) a GeoJSON y viceversa. Pega el texto o abre un archivo y luego copia o descarga la geometría convertida.",
+      },
+      fr: {
+        name: "Convertisseur WKT ↔ GeoJSON",
+        description:
+          "Convertissez des géométries Well-Known Text (WKT) en GeoJSON et inversement. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר WKT ↔ GeoJSON",
+        description:
+          "המירו גאומטריות מ־Well-Known Text (WKT) ל־GeoJSON ובחזרה. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את הגאומטריה שהומרה.",
+      },
+      hi: {
+        name: "WKT ↔ GeoJSON कन्वर्टर",
+        description:
+          "Well-Known Text (WKT) और GeoJSON के बीच ज्यामिति बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर बदली गई ज्यामिति कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WKT ↔ GeoJSON",
+        description:
+          "Konversi geometri Well-Known Text (WKT) ke GeoJSON atau sebaliknya. Tempel teks atau buka berkas, lalu salin atau unduh geometri hasil konversi.",
+      },
+      it: {
+        name: "Convertitore WKT ↔ GeoJSON",
+        description:
+          "Converti geometrie Well-Known Text (WKT) in GeoJSON e viceversa. Incolla il testo o apri un file, poi copia o scarica la geometria convertita.",
+      },
+      ja: {
+        name: "WKT ↔ GeoJSON 変換",
+        description:
+          "Well-Known Text（WKT）と GeoJSON のジオメトリを相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "WKT ↔ GeoJSON 변환기",
+        description:
+          "Well-Known Text(WKT) 지오메트리와 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 변환된 지오메트리를 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WKT ↔ GeoJSON",
+        description:
+          "Tukar geometri Well-Known Text (WKT) kepada GeoJSON dan sebaliknya. Tampal teks atau buka fail, kemudian salin atau muat turun geometri yang ditukar.",
+      },
+      nl: {
+        name: "WKT ↔ GeoJSON-converter",
+        description:
+          "Zet geometrieën om van Well-Known Text (WKT) naar GeoJSON of andersom. Plak tekst of open een bestand en kopieer of download de geometrie.",
+      },
+      no: {
+        name: "WKT ↔ GeoJSON-omformer",
+        description:
+          "Konverter geometrier fra Well-Known Text (WKT) til GeoJSON eller omvendt. Lim inn tekst eller åpne en fil, og kopier eller last ned geometrien.",
+      },
+      pl: {
+        name: "Konwerter WKT ↔ GeoJSON",
+        description:
+          "Konwertuj geometrie Well-Known Text (WKT) na GeoJSON i odwrotnie. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor WKT ↔ GeoJSON",
+        description:
+          "Converta geometrias no formato Well-Known Text (WKT) para GeoJSON e vice-versa. Cole o texto ou abra um arquivo e copie ou baixe a geometria convertida.",
+      },
+      ru: {
+        name: "Конвертер WKT ↔ GeoJSON",
+        description:
+          "Преобразуйте геометрии из Well-Known Text (WKT) в GeoJSON и обратно. Вставьте текст или откройте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "WKT ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera Well-Known Text-geometrier (WKT) till GeoJSON och tillbaka. Klistra in text eller öppna en fil och kopiera eller ladda ned den konverterade geometrin.",
+      },
+      th: {
+        name: "เครื่องมือแปลง WKT ↔ GeoJSON",
+        description:
+          "แปลงข้อมูลเรขาคณิตจาก Well-Known Text (WKT) เป็น GeoJSON หรือแปลงย้อนกลับ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดข้อมูลที่แปลงแล้ว",
+      },
+      tr: {
+        name: "WKT ↔ GeoJSON Dönüştürücü",
+        description:
+          "Well-Known Text (WKT) geometrilerini GeoJSON’a veya GeoJSON’u WKT’ye dönüştürün. Metni yapıştırın ya da dosyayı açın, ardından geometriyi kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WKT ↔ GeoJSON",
+        description:
+          "Chuyển đổi qua lại giữa hình học Well-Known Text (WKT) và GeoJSON. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải hình học đã chuyển đổi.",
+      },
+      "zh-CN": {
+        name: "WKT ↔ GeoJSON 转换器",
+        description:
+          "在 Well-Known Text（WKT）几何图形和 GeoJSON 之间相互转换。粘贴文本或打开文件，然后复制或下载转换后的几何图形。",
+      },
+      "zh-TW": {
+        name: "WKT ↔ GeoJSON 轉換器",
+        description:
+          "在 Well-Known Text（WKT）與 GeoJSON 之間雙向轉換幾何資料。貼上文字或開啟檔案，再複製或下載結果。",
       },
     },
   },

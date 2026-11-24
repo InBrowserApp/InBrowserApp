@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi WKT ↔ GeoJSON",
+  "description": "Chuyển đổi qua lại giữa hình học Well-Known Text (WKT) và GeoJSON. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải hình học đã chuyển đổi."
+}

@@ -11042,6 +11042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "graphviz-dot-previewer",
+    language: "ar",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "de",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "en",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "es",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "fr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "he",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "hi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "id",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "it",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ja",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ko",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ms",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "nl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "no",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pt",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ru",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "sv",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "th",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "tr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "vi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "har-analyzer",
     language: "ar",
   },
@@ -18031,6 +18123,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "media-info-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ar",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "de",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "en",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "es",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "fr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "he",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "hi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "id",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "it",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ja",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ko",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ms",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "nl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "no",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pt",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ru",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "sv",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "th",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "tr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "vi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mermaid-previewer",
     language: "zh-TW",
   },
   {
@@ -30914,6 +31098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vcard-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "vcard-generator",
     language: "ar",
   },
@@ -31466,6 +31742,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vlsm-calculator",
+    language: "ar",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "de",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "en",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "es",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "fr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "he",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "hi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "id",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "it",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ja",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ko",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ms",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "nl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "no",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pt",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ru",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "sv",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "th",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "tr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "vi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },
@@ -31555,6 +31923,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "whirlpool-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "wkt-geojson-converter",
     language: "zh-TW",
   },
   {

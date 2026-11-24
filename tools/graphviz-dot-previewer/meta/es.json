@@ -1,0 +1,4 @@
+{
+  "name": "Vista previa de Graphviz DOT",
+  "description": "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG."
+}

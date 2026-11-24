@@ -210,6 +210,8 @@ catalog:
   "@peculiar/x509": ^3.1.0
   "@prettier/plugin-xml": ^3.4.2
   "@tailwindcss/vite": ^4.3.5
+  "@types/terraformer__wkt": ^2.0.3
+  "@terraformer/wkt": ^2.2.2
   "@testing-library/react": ^16.3.3
   "@types/crypto-js": ^4.2.2
   "@types/jmespath": ^0.15.2
@@ -223,6 +225,7 @@ catalog:
   "@types/react-dom": ^19.3.0
   "@types/turndown": ^5.0.6
   "@vitest/coverage-v8": ^5.1.0
+  "@viz-js/viz": 3.31.0
   "@zip.js/zip.js": ^2.25.0
   "@zxing/browser": ^0.2.1
   "@zxing/library": ^0.23.0
@@ -275,6 +278,7 @@ catalog:
   lint-staged: ^17.6.1
   lucide-react: ^1.74.0
   marked: ^18.2.1
+  mermaid: 12.3.0
   mhtml-to-html: 2.2.1
   mime-db: ^1.54.0
   minimatch: ^11.0.8

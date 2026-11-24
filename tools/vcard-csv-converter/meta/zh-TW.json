@@ -1,0 +1,4 @@
+{
+  "name": "vCard 與 CSV 互轉",
+  "description": "在瀏覽器中互轉 vCard（.vcf）與 CSV 聯絡人檔案。開啟檔案或貼上文字，即可預覽並下載轉換結果。"
+}

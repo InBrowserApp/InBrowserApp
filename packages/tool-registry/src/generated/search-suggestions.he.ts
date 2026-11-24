@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "תצוגה מקדימה של Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "מנתח תעבורת רשת HAR",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "מציג פרטי מדיה",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "תצוגה מקדימה של Mermaid",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "ממיר vCard ו-CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "מחולל vCard",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "מחשבון VLSM לתת־רשתות IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "האש Whirlpool טקסט או קובץ",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "ממיר WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

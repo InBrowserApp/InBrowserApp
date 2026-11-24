@@ -1,0 +1,28 @@
+{
+  "openFile": "ファイルを開く",
+  "sample": "サンプルを試す",
+  "input": "入力テキスト",
+  "copy": "コピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーできませんでした",
+  "readError": "ファイルを読み込めませんでした。選び直すか、テキストを貼り付けてください。",
+  "result": "変換結果",
+  "empty": "ファイルを開くかテキストを貼り付けて変換すると、結果がここに表示されます。",
+  "convert": "変換",
+  "preview": "結果のプレビュー",
+  "invalid": "ファイル形式と下の例を確認して、もう一度お試しください。",
+  "noRows": "変換できるデータがありません。入力内容と列名を確認してください。",
+  "rowError": "CSV の {row} 行目の値を確認してください。",
+  "count": "データ件数：{count}",
+  "paste": "ここにファイルの内容を貼り付け",
+  "forward": "vCard から CSV",
+  "reverse": "CSV から vCard",
+  "downloadForward": "CSV をダウンロード",
+  "downloadReverse": "VCF をダウンロード",
+  "columns": {
+    "Full Name": "氏名",
+    "Email": "メールアドレス",
+    "Phone": "電話番号",
+    "Company": "会社名"
+  }
+}

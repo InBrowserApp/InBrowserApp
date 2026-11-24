@@ -1,0 +1,28 @@
+{
+  "openFile": "Open file",
+  "sample": "Try an example",
+  "input": "Source text",
+  "copy": "Copy",
+  "copied": "Copied",
+  "copyFailed": "Could not copy",
+  "readError": "Could not read the file. Choose it again or paste the text.",
+  "result": "Conversion result",
+  "empty": "Add a file or paste text, then convert it to see the result here.",
+  "convert": "Convert",
+  "preview": "Output preview",
+  "invalid": "Check the file format and the examples below, then try again.",
+  "noRows": "There are no records to convert. Check the input and its column headers.",
+  "rowError": "Check the values in CSV row {row}.",
+  "count": "Records: {count}",
+  "paste": "Paste file contents here",
+  "forward": "vCard to CSV",
+  "reverse": "CSV to vCard",
+  "downloadForward": "Download CSV",
+  "downloadReverse": "Download VCF",
+  "columns": {
+    "Full Name": "Full name",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Company": "Company"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "DOT 소스",
+  "example": "예제 불러오기",
+  "dependencies": "의존성 그래프",
+  "network": "무방향 네트워크",
+  "clusters": "클러스터 그래프",
+  "engine": "레이아웃 엔진",
+  "preview": "그래프 미리보기",
+  "empty": "DOT 코드를 입력하면 그래프가 표시됩니다.",
+  "loading": "그래프를 렌더링하는 중…",
+  "invalid": "DOT 그래프를 렌더링할 수 없습니다. 구문을 확인하고 다시 시도하세요.",
+  "warnings": "Graphviz 레이아웃 알림",
+  "fit": "화면에 맞추기",
+  "actualSize": "실제 크기",
+  "downloadSvg": "SVG 다운로드"
+}

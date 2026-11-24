@@ -1,0 +1,4 @@
+{
+  "name": "IPv4 VLSM-kalkulator",
+  "description": "Planlegg IPv4-subnett etter antall verter. Oppgi en overordnet CIDR-blokk for å beregne nettmasker, brukbare IP-områder, broadcast-adresser og gjenværende adresseplass."
+}

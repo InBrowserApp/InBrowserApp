@@ -1,0 +1,28 @@
+{
+  "openFile": "Mở tệp",
+  "sample": "Thử ví dụ",
+  "input": "Văn bản nguồn",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "readError": "Không đọc được tệp. Hãy chọn lại tệp hoặc dán văn bản.",
+  "result": "Kết quả chuyển đổi",
+  "empty": "Thêm tệp hoặc dán văn bản rồi chuyển đổi để xem kết quả tại đây.",
+  "convert": "Chuyển đổi",
+  "preview": "Xem trước kết quả",
+  "invalid": "Kiểm tra định dạng tệp và ví dụ bên dưới rồi thử lại.",
+  "noRows": "Không có mục nào để chuyển đổi. Hãy kiểm tra dữ liệu đầu vào và tiêu đề cột.",
+  "rowError": "Kiểm tra các giá trị ở dòng {row} của tệp CSV.",
+  "count": "Số mục: {count}",
+  "paste": "Dán nội dung tệp vào đây",
+  "forward": "vCard sang CSV",
+  "reverse": "CSV sang vCard",
+  "downloadForward": "Tải CSV",
+  "downloadReverse": "Tải VCF",
+  "columns": {
+    "Full Name": "Họ và tên",
+    "Email": "Email",
+    "Phone": "Số điện thoại",
+    "Company": "Công ty"
+  }
+}

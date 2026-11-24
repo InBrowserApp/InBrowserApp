@@ -1,0 +1,16 @@
+{
+  "source": "DOT-källkod",
+  "example": "Ladda exempel",
+  "dependencies": "Beroendegraf",
+  "network": "Oriktat nätverk",
+  "clusters": "Graf med kluster",
+  "engine": "Layoutmotor",
+  "preview": "Förhandsvisning av graf",
+  "empty": "Skriv DOT-kod för att förhandsvisa en graf.",
+  "loading": "Ritar grafen…",
+  "invalid": "Det gick inte att rita DOT-grafen. Kontrollera syntaxen och försök igen.",
+  "warnings": "Kommentarer om Graphviz layout",
+  "fit": "Anpassa till vyn",
+  "actualSize": "Faktisk storlek",
+  "downloadSvg": "Ladda ned SVG"
+}

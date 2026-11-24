@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Trình xem trước Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Trình phân tích mạng HAR",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Trình xem thông tin đa phương tiện",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "Trình xem trước Mermaid",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Trình chuyển đổi vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "Trình tạo vCard",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Công cụ tính mạng con IPv4 theo VLSM",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool văn bản hoặc tệp",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "Trình chuyển đổi WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

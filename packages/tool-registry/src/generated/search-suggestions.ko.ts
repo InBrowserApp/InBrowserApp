@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 미리보기",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 네트워크 분석기",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "미디어 정보 뷰어",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "Mermaid 미리보기",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "vCard·CSV 변환기",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "vCard 명함 생성기",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM 서브넷 계산기",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool 해시 텍스트 또는 파일",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON 변환기",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

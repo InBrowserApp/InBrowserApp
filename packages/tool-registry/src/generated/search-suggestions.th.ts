@@ -603,6 +603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "เครื่องมือวิเคราะห์เครือข่าย HAR",
     slug: "har-analyzer",
@@ -981,6 +986,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "โปรแกรมดูข้อมูลเสียงและวิดีโอ",
     slug: "media-info-viewer",
+  },
+  {
+    category: "developer",
+    name: "โปรแกรมดูตัวอย่าง Mermaid",
+    slug: "mermaid-previewer",
   },
   {
     category: "document",
@@ -1684,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "ตัวแปลง vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "ตัวสร้าง vCard",
     slug: "vcard-generator",
   },
@@ -1713,9 +1728,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "เครื่องคำนวณ IPv4 VLSM",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "แฮช Whirlpool ข้อความหรือไฟล์",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "เครื่องมือแปลง WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

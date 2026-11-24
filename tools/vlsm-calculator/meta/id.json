@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Subnet IPv4 VLSM",
+  "description": "Rencanakan subnet IPv4 berdasarkan jumlah host. Masukkan blok CIDR induk untuk menghitung subnet mask, rentang IP yang bisa dipakai, alamat broadcast, dan sisa alamat."
+}

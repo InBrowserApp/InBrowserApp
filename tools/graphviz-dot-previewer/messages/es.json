@@ -1,0 +1,16 @@
+{
+  "source": "Código DOT",
+  "example": "Cargar un ejemplo",
+  "dependencies": "Grafo de dependencias",
+  "network": "Red no dirigida",
+  "clusters": "Grafo con clústeres",
+  "engine": "Motor de disposición",
+  "preview": "Vista previa del grafo",
+  "empty": "Escribe código DOT para ver el grafo.",
+  "loading": "Dibujando el grafo…",
+  "invalid": "No se pudo dibujar este grafo DOT. Revisa la sintaxis y vuelve a intentarlo.",
+  "warnings": "Avisos de disposición de Graphviz",
+  "fit": "Ajustar a la vista",
+  "actualSize": "Tamaño real",
+  "downloadSvg": "Descargar SVG"
+}
