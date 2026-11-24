@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดู BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "เครื่องคำนวณวันทำงาน",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "ตัวเลือกสี",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "ค้นหา DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "เครื่องมือแปลงระบบพิกัด EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "โปรแกรมดู GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "เครื่องมือสร้าง GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "ข้อมูล GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "โปรแกรมดู GPX และกราฟระดับความสูง",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "ตัวสร้างอีเวนต์ iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ตัวแปลง ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดูตัวอย่าง Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "โปรแกรมแปลง MHTML เป็น HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "ตัวแปลง PDF เป็นรูปภาพ",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "แปลง PDF เป็น PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "นาฬิกาจับเวลา",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "ตัวแปลง vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "ตัวสร้าง vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "เครื่องมือแยกเสียงจากวิดีโอ",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "เครื่องคำนวณ IPv4 VLSM",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "แฮช Whirlpool ข้อความหรือไฟล์",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "เครื่องมือแปลง WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

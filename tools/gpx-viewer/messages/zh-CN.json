@@ -1,0 +1,17 @@
+{
+  "openFile": "打开 GPX",
+  "example": "试用示例",
+  "map": "GPX 地图",
+  "fit": "缩放至数据范围",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "empty": "打开 .gpx 文件或加载示例，开始查看路线。",
+  "invalid": "无法打开此 GPX 文件。请检查其中是否包含有效的 GPX 坐标。",
+  "distance": "距离",
+  "ascent": "累计爬升",
+  "descent": "累计下降",
+  "elevation": "海拔",
+  "profile": "海拔剖面图",
+  "noElevation": "轨迹或路线中没有记录海拔。",
+  "waypoint": "航点 {number}"
+}

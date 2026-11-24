@@ -1,0 +1,18 @@
+{
+  "decimal": "Desimalgrader (DD)",
+  "dms": "Grader, minutter og sekunder (DMS)",
+  "latitude": "Breddegrad",
+  "longitude": "Lengdegrad",
+  "degrees": "Grader",
+  "minutes": "Minutter",
+  "seconds": "Sekunder",
+  "hemisphere": "Himmelretning",
+  "north": "Nord (N)",
+  "south": "Sør (S)",
+  "east": "Øst (E)",
+  "west": "Vest (W)",
+  "example": "Prøv et eksempel",
+  "copy": "Kopier koordinater",
+  "copied": "Kopiert",
+  "invalid": "Breddegraden må være innenfor ±90° og lengdegraden innenfor ±180°. Minutter og sekunder må være mindre enn 60."
+}

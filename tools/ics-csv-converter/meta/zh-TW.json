@@ -1,0 +1,4 @@
+{
+  "name": "ICS 與 CSV 互轉",
+  "description": "將 iCalendar（.ics）行程匯出為 CSV 試算表，或將 CSV 資料列轉成行事曆檔案。兩種格式都可在瀏覽器中預覽與下載。"
+}

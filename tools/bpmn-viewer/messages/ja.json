@@ -1,0 +1,20 @@
+{
+  "open": "BPMN ファイルを開く",
+  "replace": "BPMN ファイルを変更",
+  "clear": "図を閉じる",
+  "reader": "BPMN ビューアー",
+  "privacy": "ファイルはお使いのデバイス内に保持されます。",
+  "focus": "全画面表示を開く",
+  "exitFocus": "全画面表示を終了",
+  "releaseFile": "ドロップして BPMN ファイルを開く",
+  "drop": "BPMN ファイルをここにドロップ",
+  "formats": ".bpmn または .xml ファイルを開いてください。",
+  "example": "サンプルを試す",
+  "diagram": "BPMN 図",
+  "loading": "図を開いています…",
+  "invalid": "図を開けませんでした。有効な BPMN 2.0 XML ファイルを選択してください。",
+  "noLayout": "この BPMN ファイルには図のレイアウトがありません。モデリングツールからレイアウトデータを含めて書き出し、再度開いてください。",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "fit": "図を画面に合わせる"
+}

@@ -1,0 +1,28 @@
+{
+  "openFile": "Otwórz plik",
+  "sample": "Wypróbuj przykład",
+  "input": "Tekst źródłowy",
+  "copy": "Kopiuj",
+  "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
+  "readError": "Nie udało się odczytać pliku. Wybierz go ponownie lub wklej tekst.",
+  "result": "Wynik konwersji",
+  "empty": "Otwórz plik lub wklej tekst i uruchom konwersję. Tutaj pojawi się wynik.",
+  "convert": "Konwertuj",
+  "preview": "Podgląd wyniku",
+  "invalid": "Sprawdź format pliku oraz przykłady poniżej i spróbuj ponownie.",
+  "noRows": "Brak wpisów do konwersji. Sprawdź dane wejściowe i nagłówki kolumn.",
+  "rowError": "Sprawdź wartości w wierszu {row} pliku CSV.",
+  "count": "Liczba wpisów: {count}",
+  "paste": "Wklej tutaj zawartość pliku",
+  "forward": "vCard na CSV",
+  "reverse": "CSV na vCard",
+  "downloadForward": "Pobierz CSV",
+  "downloadReverse": "Pobierz VCF",
+  "columns": {
+    "Full Name": "Imię i nazwisko",
+    "Email": "E-mail",
+    "Phone": "Telefon",
+    "Company": "Firma"
+  }
+}

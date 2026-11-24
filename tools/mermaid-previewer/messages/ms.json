@@ -1,0 +1,16 @@
+{
+  "source": "Kod Mermaid",
+  "example": "Muatkan contoh",
+  "flowchart": "Carta alir",
+  "sequence": "Rajah jujukan",
+  "relationships": "Rajah ER",
+  "preview": "Pratonton rajah",
+  "empty": "Masukkan kod Mermaid untuk melihat pratonton rajah.",
+  "loading": "Memaparkan rajah…",
+  "invalid": "Rajah Mermaid ini tidak dapat dipaparkan. Semak sintaks dan cuba lagi.",
+  "downloadSvg": "Muat turun SVG",
+  "downloadPng": "Muat turun PNG",
+  "exportError": "PNG tidak dapat dihasilkan. Cuba muat turun rajah sebagai SVG.",
+  "fit": "Muatkan pada paparan",
+  "actualSize": "Saiz sebenar"
+}

@@ -1,0 +1,28 @@
+{
+  "openFile": "Bestand openen",
+  "sample": "Voorbeeld proberen",
+  "input": "Brontekst",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "readError": "Het bestand kon niet worden gelezen. Kies het opnieuw of plak de tekst.",
+  "result": "Conversieresultaat",
+  "empty": "Open een bestand of plak tekst en start de conversie. Het resultaat verschijnt hier.",
+  "convert": "Converteren",
+  "preview": "Voorbeeld van resultaat",
+  "invalid": "Controleer het bestandsformaat en de voorbeelden hieronder en probeer het opnieuw.",
+  "noRows": "Er zijn geen items om te converteren. Controleer de invoer en kolomnamen.",
+  "rowError": "Controleer de waarden op CSV-rij {row}.",
+  "count": "Items: {count}",
+  "paste": "Plak hier de bestandsinhoud",
+  "forward": "ICS naar CSV",
+  "reverse": "CSV naar ICS",
+  "downloadForward": "CSV downloaden",
+  "downloadReverse": "ICS downloaden",
+  "columns": {
+    "Title": "Samenvatting",
+    "Start": "Begindatum",
+    "End": "Einddatum",
+    "Location": "Locatie"
+  }
+}

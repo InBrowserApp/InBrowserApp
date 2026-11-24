@@ -1,0 +1,17 @@
+{
+  "openFile": "Buka GPX",
+  "example": "Coba contoh",
+  "map": "Peta GPX",
+  "fit": "Sesuaikan tampilan dengan data",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "empty": "Buka berkas .gpx atau muat contoh untuk melihat rute.",
+  "invalid": "Berkas GPX ini tidak dapat dibuka. Pastikan koordinat GPX-nya valid.",
+  "distance": "Jarak",
+  "ascent": "Total kenaikan",
+  "descent": "Total penurunan",
+  "elevation": "Elevasi",
+  "profile": "Profil elevasi",
+  "noElevation": "Tidak ada elevasi yang tercatat pada jejak atau rute ini.",
+  "waypoint": "Titik penanda {number}"
+}

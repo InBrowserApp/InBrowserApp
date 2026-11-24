@@ -1,0 +1,4 @@
+{
+  "name": "IPv4 VLSM Calculator",
+  "description": "Plan IPv4 subnets by host count. Enter a parent CIDR block to calculate subnet masks, usable IP ranges, broadcast addresses, and remaining address space."
+}

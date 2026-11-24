@@ -1,0 +1,17 @@
+{
+  "openFile": "فتح ملف GeoJSON",
+  "example": "تجربة مثال",
+  "paste": "لصق GeoJSON",
+  "render": "عرض على الخريطة",
+  "map": "خريطة GeoJSON",
+  "fit": "ملاءمة عرض الخريطة للبيانات",
+  "zoomIn": "تكبير",
+  "zoomOut": "تصغير",
+  "features": "المعالم",
+  "properties": "الخصائص",
+  "empty": "افتح ملفًا بامتداد .geojson أو .json، أو ألصق بيانات GeoJSON للبدء.",
+  "noGeometry": "لا تتضمن بيانات GeoJSON أشكالًا هندسية يمكن عرضها.",
+  "noProperties": "لا توجد خصائص لهذا المعلم.",
+  "invalid": "تعذّر فتح بيانات GeoJSON. تأكّد من أنها تتضمن أشكالًا هندسية صالحة بتنسيق GeoJSON.",
+  "feature": "المعلم {number}"
+}

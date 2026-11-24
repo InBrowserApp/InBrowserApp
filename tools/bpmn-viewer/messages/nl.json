@@ -1,0 +1,20 @@
+{
+  "open": "BPMN-bestand openen",
+  "replace": "BPMN-bestand vervangen",
+  "clear": "Diagram sluiten",
+  "reader": "BPMN-viewer",
+  "privacy": "Bestanden blijven op je apparaat.",
+  "focus": "Volledig scherm openen",
+  "exitFocus": "Volledig scherm verlaten",
+  "releaseFile": "Laat los om het BPMN-bestand te openen",
+  "drop": "Sleep hier een BPMN-bestand naartoe",
+  "formats": "Open een .bpmn- of .xml-bestand.",
+  "example": "Voorbeeld proberen",
+  "diagram": "BPMN-diagram",
+  "loading": "Diagram wordt geopend…",
+  "invalid": "Dit diagram kon niet worden geopend. Kies een geldig BPMN 2.0 XML-bestand.",
+  "noLayout": "Dit BPMN-bestand bevat geen diagramindeling. Exporteer het opnieuw vanuit je modelleertool, inclusief de diagramindeling, en open het nieuwe bestand.",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "fit": "Hele diagram tonen"
+}

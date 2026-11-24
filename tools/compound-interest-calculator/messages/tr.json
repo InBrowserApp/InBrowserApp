@@ -1,0 +1,33 @@
+{
+  "assumptions": "Birikim planı",
+  "initialAmount": "Başlangıç bakiyesi",
+  "monthlyContribution": "Aylık katkı",
+  "annualRate": "Yıllık faiz oranı",
+  "years": "Birikim süresi",
+  "yearsUnit": "yıl",
+  "frequency": "Bileşikleşme sıklığı",
+  "frequencies": {
+    "daily": "Günlük",
+    "monthly": "Aylık",
+    "quarterly": "Üç ayda bir",
+    "semiannually": "Altı ayda bir",
+    "annually": "Yıllık"
+  },
+  "timing": "Katkı zamanı",
+  "timings": {
+    "end": "Ay sonunda",
+    "start": "Ay başında"
+  },
+  "reset": "Örnek değerlere dön",
+  "endingBalance": "Tahmini bakiye",
+  "totalContributed": "Toplam katkı",
+  "interestEarned": "Kazanılan faiz",
+  "growth": "Zaman içinde birikim",
+  "breakdown": "Yıllara göre döküm",
+  "year": "Yıl",
+  "amountError": "Sıfır veya daha büyük bir tutar girin.",
+  "rateError": "−%100 ile %100 arasında bir yıllık oran girin.",
+  "yearsError": "1 ile 100 arasında bir tam sayı girin.",
+  "resultError": "Bu tutarlar hesaplanamayacak kadar büyük. Daha küçük değerler deneyin.",
+  "resultPending": "Tahmini sonucu görmek için işaretli alanları kontrol edin."
+}

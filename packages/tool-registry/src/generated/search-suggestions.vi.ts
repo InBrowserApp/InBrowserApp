@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Trình xem BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Máy tính ngày làm việc",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Chuyển chữ Hán sang Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Bộ Chọn Màu",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Công cụ tính lãi kép",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Tra cứu DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi tọa độ EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Trình chỉnh sửa siêu dữ liệu EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "Trình xem GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "Trình tạo GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Thông tin GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "Trình xem GPX và biểu đồ độ cao",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Trình tạo sự kiện iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Trình xem tệp lịch ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Trình chuyển đổi ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Trình xem trước Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "Trình chuyển đổi MHTML sang HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Trình chuyển đổi PDF sang hình ảnh",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "Chuyển PDF sang PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Tách kênh âm thanh stereo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Đồng hồ bấm giờ",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "Trình chuyển đổi vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "Trình tạo vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Trình trích xuất âm thanh từ video",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Công cụ tính mạng con IPv4 theo VLSM",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool văn bản hoặc tệp",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "Trình chuyển đổi WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

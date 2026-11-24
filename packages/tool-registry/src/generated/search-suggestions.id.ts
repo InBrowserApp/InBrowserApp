@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Penampil BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Kalkulator hari kerja",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Konverter Hanzi ke Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Konverter Angka ↔ Angka Finansial Tionghoa",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator bunga majemuk",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Konverter Lintang dan Bujur ke DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Pencarian DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Transformasi Koordinat EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Editor Metadata EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "Penampil GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "Pembuat GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Informasi GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "Penampil GPX dan Profil Elevasi",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Generator acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Penampil File Kalender ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Pengonversi ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Pratinjau Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "Konverter MHTML ke HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Konverter PDF ke Gambar",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "Konversi PDF ke PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Pemisah Kanal Audio Stereo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Stopwatch",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "Pengonversi vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "Pembuat vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Pengekstrak Audio dari Video",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Kalkulator Subnet IPv4 VLSM",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool Teks atau File",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "Konverter WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

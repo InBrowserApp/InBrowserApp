@@ -1,0 +1,19 @@
+{
+  "details": "Kontaktdaten",
+  "preview": "Kontaktvorschau",
+  "empty": "Geben Sie einen Namen ein, um Ihre Kontaktkarte zu erstellen.",
+  "firstName": "Vorname",
+  "lastName": "Nachname",
+  "phone": "Telefon",
+  "email": "E-Mail",
+  "company": "Unternehmen",
+  "jobTitle": "Position",
+  "website": "Website",
+  "address": "Adresse",
+  "notes": "Notizen",
+  "more": "Weitere Kontaktdaten",
+  "copy": "vCard kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "VCF herunterladen"
+}

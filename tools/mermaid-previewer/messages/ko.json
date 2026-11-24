@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid 소스",
+  "example": "예제 불러오기",
+  "flowchart": "순서도",
+  "sequence": "시퀀스 다이어그램",
+  "relationships": "ER 다이어그램",
+  "preview": "다이어그램 미리보기",
+  "empty": "Mermaid 코드를 입력하면 다이어그램이 표시됩니다.",
+  "loading": "다이어그램을 렌더링하는 중…",
+  "invalid": "Mermaid 다이어그램을 렌더링할 수 없습니다. 구문을 확인하고 다시 시도하세요.",
+  "downloadSvg": "SVG 다운로드",
+  "downloadPng": "PNG 다운로드",
+  "exportError": "PNG를 만들 수 없습니다. 대신 SVG를 다운로드해 보세요.",
+  "fit": "화면에 맞추기",
+  "actualSize": "실제 크기"
+}

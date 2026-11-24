@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN Görüntüleyici",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "İş Günü Hesaplayıcı",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Çinceden Pinyin’e Dönüştürücü",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Renk Seçici",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Bileşik Faiz Hesaplayıcı",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Enlem ve Boylam için DMS Dönüştürücü",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS Sorgulama",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG Koordinat Dönüştürücü",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB Meta Veri Düzenleyicisi",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON Görüntüleyici",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF Oluşturucu",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU Bilgileri",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX Görüntüleyici ve Yükseklik Profili",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal Etkinlik Oluşturucu",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS Takvim Dosyası Görüntüleyici",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS ↔ CSV Dönüştürücü",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid Önizleyici",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTML’den HTML’ye Dönüştürücü",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF'den Görüntüye Dönüştürücü",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "PDF'yi PDF/A'ya dönüştürün",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Stereo Kanal Ayırıcı",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Kronometre",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "vCard ↔ CSV Dönüştürücü",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard Oluşturucu",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Videodan Ses Çıkarma",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM Hesaplayıcı",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool Hash Metin veya Dosya",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON Dönüştürücü",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

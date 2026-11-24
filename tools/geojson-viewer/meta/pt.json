@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de GeoJSON",
+  "description": "Abra ou cole GeoJSON para explorar pontos, linhas e polígonos em um mapa interativo offline e consultar os atributos das feições. Os arquivos ficam no navegador."
+}

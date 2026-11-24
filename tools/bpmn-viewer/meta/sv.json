@@ -1,0 +1,4 @@
+{
+  "name": "BPMN-visare",
+  "description": "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IPv4 VLSM Hesaplayıcı",
+  "description": "IPv4 alt ağlarını ana makine sayısına göre planlayın. Alt ağ maskelerini, kullanılabilir IP aralıklarını, yayın adreslerini ve kalan adres alanını hesaplamak için üst CIDR bloğunu girin."
+}

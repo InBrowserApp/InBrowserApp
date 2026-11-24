@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON-visare",
+  "description": "Öppna eller klistra in GeoJSON, utforska punkter, linjer och polygoner på en interaktiv karta offline och granska objektens attribut. Filerna stannar i webbläsaren."
+}

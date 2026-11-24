@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Arah konversi",
+  "toTraditional": "Sederhana ke tradisional",
+  "toSimplified": "Tradisional ke sederhana",
+  "variantLabel": "Varian aksara tradisional",
+  "variants": {
+    "t": "Tradisional standar",
+    "tw": "Aksara gaya Taiwan",
+    "twp": "Aksara dan kosakata Taiwan",
+    "hk": "Aksara gaya Hong Kong"
+  },
+  "inputLabel": "Teks asli",
+  "inputPlaceholder": "Tempel atau ketik teks bahasa Tionghoa",
+  "exampleLabel": "Coba contoh",
+  "clearLabel": "Hapus",
+  "outputLabel": "Hasil konversi",
+  "outputPlaceholder": "Hasil muncul di sini",
+  "copyLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin",
+  "loading": "Memuat kamus konversi…",
+  "loadError": "Kamus gagal dimuat. Salin teks asli sebelum memuat ulang halaman."
+}

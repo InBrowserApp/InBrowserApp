@@ -20,6 +20,7 @@
     "coverage/",
     "tools/html-viewer/fixtures/",
     "tools/html-to-pdf-converter/fixtures/",
+    "tools/pdf-to-pdfa-converter/engine/generated/fynepdf.mjs",
     "pnpm-lock.yaml",
     "packages/lib/mac-address/data/registry.json",
     ".pnpm-store/",

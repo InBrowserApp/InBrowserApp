@@ -1,0 +1,4 @@
+{
+  "name": "ICS 与 CSV 互转",
+  "description": "将 iCalendar（.ics）日程导出为 CSV 表格，或将 CSV 中的日程转成日历文件。两种格式均可在浏览器中预览并下载。"
+}

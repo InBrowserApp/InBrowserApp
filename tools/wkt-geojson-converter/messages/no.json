@@ -1,0 +1,12 @@
+{
+  "direction": "Konverteringsretning",
+  "example": "Prøv et eksempel",
+  "openFile": "Åpne fil",
+  "convert": "Konverter",
+  "copy": "Kopier",
+  "copied": "Kopiert",
+  "download": "Last ned",
+  "empty": "Den konverterte filen vises her.",
+  "invalid": "Kunne ikke konvertere dataene. Sjekk filformatet og geometrien.",
+  "swap": "Bruk resultatet som inndata"
+}

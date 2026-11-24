@@ -1,0 +1,19 @@
+{
+  "details": "Detail kontak",
+  "preview": "Pratinjau kartu kontak",
+  "empty": "Masukkan nama depan atau nama belakang untuk mulai membuat kartu kontak.",
+  "firstName": "Nama depan",
+  "lastName": "Nama belakang",
+  "phone": "Telepon",
+  "email": "Email",
+  "company": "Perusahaan",
+  "jobTitle": "Jabatan",
+  "website": "Situs web",
+  "address": "Alamat",
+  "notes": "Catatan",
+  "more": "Detail kontak lainnya",
+  "copy": "Salin vCard",
+  "copied": "Disalin",
+  "copyFailed": "Tidak dapat menyalin",
+  "download": "Unduh VCF"
+}

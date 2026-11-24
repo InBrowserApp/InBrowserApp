@@ -1,0 +1,20 @@
+{
+  "open": "打开 BPMN 文件",
+  "replace": "更换 BPMN 文件",
+  "clear": "关闭图表",
+  "reader": "BPMN 查看器",
+  "privacy": "文件保留在您的设备上。",
+  "focus": "打开全屏视图",
+  "exitFocus": "退出全屏视图",
+  "releaseFile": "松开以打开 BPMN 文件",
+  "drop": "将 BPMN 文件拖放到此处",
+  "formats": "打开 .bpmn 或 .xml 文件。",
+  "example": "试用示例",
+  "diagram": "BPMN 图表",
+  "loading": "正在打开图表…",
+  "invalid": "无法打开此图表。请选择有效的 BPMN 2.0 XML 文件。",
+  "noLayout": "此 BPMN 文件没有图表布局。请从建模工具导出包含布局数据的文件后重新打开。",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "fit": "适应视图"
+}

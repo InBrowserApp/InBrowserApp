@@ -1,0 +1,15 @@
+{
+  "inputLabel": "中文文本",
+  "inputPlaceholder": "输入或粘贴中文",
+  "exampleLabel": "试用示例",
+  "clearLabel": "清空",
+  "outputLabel": "拼音",
+  "outputPlaceholder": "拼音将显示在这里",
+  "formatLabel": "声调格式",
+  "marksLabel": "声调符号",
+  "numbersLabel": "数字声调",
+  "plainLabel": "不带声调",
+  "copyLabel": "复制拼音",
+  "copiedLabel": "已复制",
+  "copyFailedLabel": "复制失败"
+}

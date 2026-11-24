@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore GeoJSON",
+  "description": "Apri un file GeoJSON o incollane il contenuto. Esplora punti, linee e poligoni su una mappa interattiva offline e consulta gli attributi. I file restano nel browser."
+}

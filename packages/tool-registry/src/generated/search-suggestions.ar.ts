@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "عارض BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "حاسبة أيام العمل",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "محوّل الصينية المبسطة والتقليدية",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "محوّل الصينية إلى البينيين",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "محوّل الأعداد ↔ الأرقام الصينية المالية",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "أداة انتقاء الألوان",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "حاسبة الفائدة المركبة",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "محوّل خطوط الطول والعرض إلى DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "استعلام DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "محوّل إحداثيات EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "محرر بيانات EPUB الوصفية",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "عارض GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "أداة إنشاء GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "معلومات GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "عارض GPX مع منحنى الارتفاع",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "مولد أحداث iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "عارض ملفات تقويم ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "محوّل ICS وCSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "معاين Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "محوّل MHTML إلى HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "محول PDF إلى صور",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "تحويل PDF إلى PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "أداة فصل قنوات الستيريو",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "ساعة إيقاف",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "محوّل vCard وCSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "مولّد vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "استخراج الصوت من الفيديو",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "تجزئة Whirlpool للنص أو الملف",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "محوّل بين WKT وGeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

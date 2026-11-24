@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN-visare",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Arbetsdagskalkylator",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Omvandlare för förenklad och traditionell kinesiska",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Konvertera kinesiska till pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Omvandlare för tal ↔ kinesiska finansiella siffror",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Färgväljare",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Ränta på ränta-kalkylator",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-uppslagning",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-koordinattransformerare",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Redigerare för EPUB-metadata",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON-visare",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF-skapare",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU-information",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX-visare och höjdprofil",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-händelsegenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Visare för ICS-kalenderfiler",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Konverterare för ICS och CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid-förhandsgranskare",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTML till HTML-konverterare",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF-till-bild-konverterare",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "Konvertera PDF till PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Separera stereokanaler",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Stoppur",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "Konverterare för vCard och CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard-generator",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Extrahera ljud från video",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM-kalkylator",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool-hash text eller fil",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON-konverterare",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

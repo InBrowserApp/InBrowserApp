@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Chinesischer Text",
+  "inputPlaceholder": "Chinesischen Text eingeben oder einfügen",
+  "exampleLabel": "Beispiel laden",
+  "clearLabel": "Leeren",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Hier erscheint der Text in Pinyin",
+  "formatLabel": "Tonangabe",
+  "marksLabel": "Tonzeichen",
+  "numbersLabel": "Tonziffern",
+  "plainLabel": "Ohne Tonangabe",
+  "copyLabel": "Pinyin kopieren",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kopieren fehlgeschlagen"
+}

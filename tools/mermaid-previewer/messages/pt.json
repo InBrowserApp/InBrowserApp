@@ -1,0 +1,16 @@
+{
+  "source": "Código Mermaid",
+  "example": "Carregar um exemplo",
+  "flowchart": "Fluxograma",
+  "sequence": "Diagrama de sequência",
+  "relationships": "Diagrama ER",
+  "preview": "Prévia do diagrama",
+  "empty": "Digite código Mermaid para visualizar um diagrama.",
+  "loading": "Renderizando diagrama…",
+  "invalid": "Não foi possível exibir este diagrama Mermaid. Confira a sintaxe e tente novamente.",
+  "downloadSvg": "Baixar SVG",
+  "downloadPng": "Baixar PNG",
+  "exportError": "Não foi possível criar o PNG. Tente baixar o SVG.",
+  "fit": "Ajustar à janela",
+  "actualSize": "Tamanho real"
+}

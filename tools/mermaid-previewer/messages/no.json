@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid-kildekode",
+  "example": "Last inn eksempel",
+  "flowchart": "Flytskjema",
+  "sequence": "Sekvensdiagram",
+  "relationships": "ER-diagram",
+  "preview": "Forhåndsvisning av diagram",
+  "empty": "Skriv inn Mermaid-kode for å forhåndsvise et diagram.",
+  "loading": "Tegner diagrammet …",
+  "invalid": "Kunne ikke tegne Mermaid-diagrammet. Sjekk syntaksen og prøv igjen.",
+  "downloadSvg": "Last ned SVG",
+  "downloadPng": "Last ned PNG",
+  "exportError": "Kunne ikke opprette PNG-filen. Prøv å laste ned diagrammet som SVG.",
+  "fit": "Tilpass til visningen",
+  "actualSize": "Faktisk størrelse"
+}

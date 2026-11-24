@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN व्यूअर",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "कार्यदिवस कैलकुलेटर",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "चीनी से पिनयिन कन्वर्टर",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "संख्या ↔ चीनी वित्तीय अंक कन्वर्टर",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "कलर पिकर",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS खोज",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG निर्देशांक कन्वर्टर",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB मेटाडेटा एडिटर",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON व्यूअर",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF मेकर",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU जानकारी",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX व्यूअर और ऊँचाई प्रोफ़ाइल",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal इवेंट जेनरेटर",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS कैलेंडर फ़ाइल व्यूअर",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS ↔ CSV कन्वर्टर",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid प्रीव्यूअर",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTML से HTML कन्वर्टर",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF से इमेज कनवर्टर",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "PDF को PDF/A में बदलें",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "स्टीरियो चैनल अलग करें",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "स्टॉपवॉच",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "vCard ↔ CSV कन्वर्टर",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard जनरेटर",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "वीडियो ऑडियो एक्सट्रैक्टर",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM कैलकुलेटर",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool हैश टेक्स्ट या फ़ाइल",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON कन्वर्टर",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

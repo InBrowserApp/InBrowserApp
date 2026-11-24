@@ -5307,6 +5307,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bpmn-viewer",
+    category: "developer",
+    icon: "workflow",
+    tags: ["bpmn", "process", "workflow", "diagram", "xml", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض BPMN",
+        description:
+          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا.",
+      },
+      de: {
+        name: "BPMN-Betrachter",
+        description:
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein.",
+      },
+      en: {
+        name: "BPMN Viewer",
+        description:
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, and fit the process diagram to the view.",
+      },
+      es: {
+        name: "Visor BPMN",
+        description:
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista.",
+      },
+      fr: {
+        name: "Visionneuse BPMN",
+        description:
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue.",
+      },
+      he: {
+        name: "מציג BPMN",
+        description:
+          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה.",
+      },
+      hi: {
+        name: "BPMN व्यूअर",
+        description:
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें।",
+      },
+      id: {
+        name: "Penampil BPMN",
+        description:
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat.",
+      },
+      it: {
+        name: "Visualizzatore BPMN",
+        description:
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista.",
+      },
+      ja: {
+        name: "BPMN ビューアー",
+        description:
+          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。",
+      },
+      ko: {
+        name: "BPMN 뷰어",
+        description:
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요.",
+      },
+      ms: {
+        name: "Pemapar BPMN",
+        description:
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan.",
+      },
+      nl: {
+        name: "BPMN-viewer",
+        description:
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld.",
+      },
+      no: {
+        name: "BPMN-viser",
+        description:
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen.",
+      },
+      pl: {
+        name: "Przeglądarka diagramów BPMN",
+        description:
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok.",
+      },
+      pt: {
+        name: "Visualizador de BPMN",
+        description:
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela.",
+      },
+      ru: {
+        name: "Просмотр диаграмм BPMN",
+        description:
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком.",
+      },
+      sv: {
+        name: "BPMN-visare",
+        description:
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn.",
+      },
+      th: {
+        name: "โปรแกรมดู BPMN",
+        description:
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ",
+      },
+      tr: {
+        name: "BPMN Görüntüleyici",
+        description:
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın.",
+      },
+      vi: {
+        name: "Trình xem BPMN",
+        description:
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem.",
+      },
+      "zh-CN": {
+        name: "BPMN 查看器",
+        description:
+          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。",
+      },
+      "zh-TW": {
+        name: "BPMN 檢視器",
+        description:
+          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。",
+      },
+    },
+  },
+  {
     slug: "business-days-calculator",
     category: "time",
     icon: "clock3",
@@ -6704,6 +6827,279 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
+  {
+    slug: "chinese-to-pinyin",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "chinese",
+      "hanzi",
+      "mandarin",
+      "pinyin",
+      "pronunciation",
+      "romanization",
+      "transliteration",
+      "汉字",
+      "中文转拼音",
+      "漢字",
+      "中文轉拼音",
+      "拼音",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية إلى البينيين",
+        description:
+          "حوّل الصينية المبسّطة أو التقليدية إلى هانيو بينيين. اختر عرض النغمات بالعلامات أو بالأرقام أو إخفاءها، واعرض النتيجة وانسخها في متصفحك.",
+      },
+      de: {
+        name: "Chinesisch in Pinyin umwandeln",
+        description:
+          "Vereinfachtes oder traditionelles Chinesisch in Hanyu Pinyin umwandeln. Pinyin mit Tonzeichen, Tonziffern oder ohne Tonangabe im Browser kopieren.",
+      },
+      en: {
+        name: "Chinese to Pinyin Converter",
+        description:
+          "Convert simplified or traditional Chinese to Hanyu Pinyin with tone marks, tone numbers, or no tones. See and copy the result in your browser.",
+      },
+      es: {
+        name: "Conversor de chino a pinyin",
+        description:
+          "Convierte texto en chino simplificado o tradicional a Hanyu Pinyin con marcas de tono, números o sin tonos. Consulta y copia el resultado en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois en pinyin",
+        description:
+          "Convertissez le chinois simplifié ou traditionnel en Hanyu Pinyin avec des marques de ton, des tons chiffrés ou sans tons. Affichez et copiez le résultat dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר מסינית לפיניין",
+        description:
+          "המירו טקסט בסינית מפושטת או מסורתית להאניו פיניין עם סימני טון, מספרי טון או בלי טונים. אפשר לראות ולהעתיק את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "चीनी से पिनयिन कन्वर्टर",
+        description:
+          "सरलीकृत या पारंपरिक चीनी को हान्यू पिनयिन में बदलें। टोन चिह्न, टोन की संख्याएँ या बिना टोन का विकल्प चुनें और नतीजा ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Hanzi ke Pinyin",
+        description:
+          "Ubah aksara Han sederhana atau tradisional ke Hanyu Pinyin. Pilih tanda nada, angka nada, atau tanpa nada, lalu lihat dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Convertitore dal cinese al pinyin",
+        description:
+          "Converti il cinese semplificato o tradizionale in Hanyu Pinyin, con segni di tono, toni numerici o senza toni. Leggi e copia il risultato nel browser.",
+      },
+      ja: {
+        name: "中国語ピンイン変換",
+        description:
+          "簡体字・繁体字の中国語を漢語ピンインに変換。声調記号、声調番号、声調なしから選び、ブラウザで結果を確認してコピーできます。",
+      },
+      ko: {
+        name: "중국어 병음 변환기",
+        description:
+          "간체 또는 번체 중국어를 한어병음으로 변환합니다. 성조 기호, 성조 숫자 또는 성조 없는 표기를 선택하고 브라우저에서 결과를 확인하고 복사하세요.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina kepada Pinyin",
+        description:
+          "Tukar aksara Cina ringkas atau tradisional kepada Hanyu Pinyin. Pilih tanda nada, nombor nada atau tanpa nada, kemudian lihat dan salin hasilnya terus dalam pelayar.",
+      },
+      nl: {
+        name: "Chinees naar pinyin omzetten",
+        description:
+          "Zet vereenvoudigd of traditioneel Chinees om naar Hanyu Pinyin met toontekens, tooncijfers of zonder tonen. Bekijk en kopieer het resultaat in je browser.",
+      },
+      no: {
+        name: "Konverter kinesisk til pinyin",
+        description:
+          "Gjør om forenklet eller tradisjonell kinesisk til Hanyu Pinyin med tonetegn, tonetall eller uten toner. Se og kopier resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter chińskiego na pinyin",
+        description:
+          "Zapisuj uproszczone i tradycyjne znaki chińskie w Hanyu Pinyin ze znakami tonów, z cyframi lub bez tonów. Zobacz i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês para pinyin",
+        description:
+          "Converta chinês simplificado ou tradicional para Hanyu Pinyin com marcas tonais, tons numerados ou sem tons. Veja e copie o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер китайского текста в пиньинь",
+        description:
+          "Преобразуйте упрощённые и традиционные иероглифы в пиньинь со знаками тонов, цифрами или без тонов. Результат можно просмотреть и скопировать в браузере.",
+      },
+      sv: {
+        name: "Konvertera kinesiska till pinyin",
+        description:
+          "Omvandla förenklad eller traditionell kinesiska till Hanyu Pinyin med tontecken, tonsiffror eller utan tonangivelse. Läs och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+        description:
+          "แปลงอักษรจีนตัวย่อหรือตัวเต็มเป็นฮั่นอวี่พินอิน เลือกแสดงวรรณยุกต์ด้วยเครื่องหมายหรือตัวเลข หรือไม่แสดงวรรณยุกต์ แล้วดูและคัดลอกผลได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çinceden Pinyin’e Dönüştürücü",
+        description:
+          "Basitleştirilmiş veya geleneksel Çinceyi Hanyu Pinyin’e dönüştürün. Tonları işaretle veya sayıyla gösterin ya da gizleyin. Sonucu tarayıcıda görün ve kopyalayın.",
+      },
+      vi: {
+        name: "Chuyển chữ Hán sang Pinyin",
+        description:
+          "Chuyển chữ Hán giản thể hoặc phồn thể sang Pinyin (bính âm) có dấu thanh, có số chỉ thanh hoặc không ghi thanh điệu. Xem và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "汉字转拼音",
+        description:
+          "在线中文转拼音，支持简体和繁体。可选择声调符号、数字声调或不带声调，在浏览器中转换并复制汉语拼音。",
+      },
+      "zh-TW": {
+        name: "漢字轉拼音",
+        description:
+          "線上中文轉拼音，支援簡體字和繁體字。可選擇聲調符號、聲調數字或不帶聲調，並在瀏覽器中複製漢語拼音。",
+      },
+    },
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
     icon: "binary",
@@ -7967,6 +8363,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
       },
     },
   },
@@ -10355,6 +10880,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
+      },
+    },
+  },
+  {
     slug: "dns-lookup",
     category: "network",
     icon: "globe",
@@ -12260,6 +12920,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "epsg-coordinate-transformer",
+    category: "misc",
+    icon: "globe",
+    tags: [
+      "epsg",
+      "crs",
+      "coordinates",
+      "projection",
+      "wgs84",
+      "utm",
+      "web-mercator",
+      "gis",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل إحداثيات EPSG",
+        description:
+          "حوّل الإحداثيات بين الأنظمة المرجعية ذات رموز EPSG، مثل WGS 84 وWeb Mercator وUTM. تحقّق من ترتيب المحاور والوحدات قبل نسخ النتيجة.",
+      },
+      de: {
+        name: "EPSG-Koordinatentransformation",
+        description:
+          "Transformiere Koordinaten zwischen EPSG-Bezugssystemen wie WGS 84, Web Mercator und UTM. Prüfe die Achsenreihenfolge und Einheiten vor dem Kopieren.",
+      },
+      en: {
+        name: "EPSG Coordinate Transformer",
+        description:
+          "Transform coordinates between EPSG reference systems such as WGS 84, Web Mercator and UTM. See axis order and units before copying the result.",
+      },
+      es: {
+        name: "Transformador de coordenadas EPSG",
+        description:
+          "Transforma coordenadas entre sistemas de referencia EPSG como WGS 84, Web Mercator y UTM. Consulta el orden de los ejes y las unidades antes de copiar el resultado.",
+      },
+      fr: {
+        name: "Transformateur de coordonnées EPSG",
+        description:
+          "Transformez des coordonnées entre systèmes EPSG tels que WGS 84, Web Mercator et UTM. Vérifiez l’ordre des axes et les unités avant de copier le résultat.",
+      },
+      he: {
+        name: "ממיר קואורדינטות EPSG",
+        description:
+          "המירו קואורדינטות בין מערכות ייחוס של EPSG, כמו WGS 84, ‏Web Mercator ו־UTM. בדקו את סדר הצירים והיחידות לפני העתקת התוצאה.",
+      },
+      hi: {
+        name: "EPSG निर्देशांक कन्वर्टर",
+        description:
+          "WGS 84, Web Mercator और UTM जैसी EPSG संदर्भ प्रणालियों के बीच निर्देशांक बदलें। नतीजा कॉपी करने से पहले अक्षों का क्रम और इकाइयाँ देखें।",
+      },
+      id: {
+        name: "Transformasi Koordinat EPSG",
+        description:
+          "Transformasikan koordinat antara sistem referensi EPSG seperti WGS 84, Web Mercator, dan UTM. Periksa urutan sumbu dan satuan sebelum menyalin hasil.",
+      },
+      it: {
+        name: "Trasformazione di coordinate EPSG",
+        description:
+          "Trasforma coordinate tra sistemi di riferimento EPSG come WGS 84, Web Mercator e UTM. Controlla l’ordine degli assi e le unità prima di copiare il risultato.",
+      },
+      ja: {
+        name: "EPSG 座標系変換",
+        description:
+          "WGS 84、Web メルカトル、UTM など、EPSG コードで指定した座標参照系の間で座標を変換できます。軸の順序と単位を確認して、変換結果をコピーできます。",
+      },
+      ko: {
+        name: "EPSG 좌표 변환기",
+        description:
+          "WGS 84, 웹 메르카토르, UTM 등 EPSG 좌표 참조계 사이에서 좌표를 변환하세요. 결과를 복사하기 전에 축 순서와 단위를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sistem Koordinat EPSG",
+        description:
+          "Tukar koordinat antara sistem rujukan EPSG seperti WGS 84, Web Mercator dan UTM. Semak susunan paksi dan unit sebelum menyalin hasil.",
+      },
+      nl: {
+        name: "EPSG-coördinaten transformeren",
+        description:
+          "Transformeer coördinaten tussen EPSG-referentiestelsels zoals WGS 84, Web Mercator en UTM. Bekijk de asvolgorde en eenheden voor je het resultaat kopieert.",
+      },
+      no: {
+        name: "EPSG-koordinattransformasjon",
+        description:
+          "Transformer koordinater mellom EPSG-referansesystemer som WGS 84, Web Mercator og UTM. Se akserekkefølgen og enhetene før du kopierer resultatet.",
+      },
+      pl: {
+        name: "Transformacja współrzędnych EPSG",
+        description:
+          "Przelicz współrzędne między układami EPSG, takimi jak WGS 84, Web Mercator i UTM. Sprawdź kolejność osi i jednostki przed skopiowaniem wyniku.",
+      },
+      pt: {
+        name: "Transformador de coordenadas EPSG",
+        description:
+          "Transforme coordenadas entre sistemas de referência EPSG, como WGS 84, Web Mercator e UTM. Confira a ordem dos eixos e as unidades antes de copiar o resultado.",
+      },
+      ru: {
+        name: "Преобразование координат по кодам EPSG",
+        description:
+          "Преобразуйте координаты между системами EPSG, в том числе WGS 84, Web Mercator и UTM. Проверьте порядок осей и единицы измерения, затем скопируйте результат.",
+      },
+      sv: {
+        name: "EPSG-koordinattransformerare",
+        description:
+          "Transformera koordinater mellan EPSG-referenssystem som WGS 84, Web Mercator och UTM. Se axelordning och enheter innan du kopierar resultatet.",
+      },
+      th: {
+        name: "เครื่องมือแปลงระบบพิกัด EPSG",
+        description:
+          "แปลงพิกัดระหว่างระบบอ้างอิง EPSG เช่น WGS 84, Web Mercator และ UTM ตรวจสอบลำดับแกนและหน่วยก่อนคัดลอกผลลัพธ์",
+      },
+      tr: {
+        name: "EPSG Koordinat Dönüştürücü",
+        description:
+          "WGS 84, Web Mercator ve UTM gibi EPSG referans sistemleri arasında koordinat dönüştürün. Sonucu kopyalamadan önce eksen sırasını ve birimleri kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tọa độ EPSG",
+        description:
+          "Chuyển đổi tọa độ giữa các hệ quy chiếu EPSG như WGS 84, Web Mercator và UTM. Xem thứ tự trục và đơn vị trước khi sao chép kết quả.",
+      },
+      "zh-CN": {
+        name: "EPSG 坐标转换器",
+        description:
+          "在 WGS 84、Web 墨卡托和 UTM 等 EPSG 参考系统之间转换坐标。复制结果前可查看坐标轴顺序和单位。",
+      },
+      "zh-TW": {
+        name: "EPSG 座標系統轉換器",
+        description:
+          "在 WGS 84、Web Mercator、UTM 等 EPSG 座標參考系統之間轉換座標，並在複製結果前查看座標軸順序與單位。",
+      },
+    },
+  },
+  {
     slug: "epub-metadata-editor",
     category: "document",
     icon: "file-cog",
@@ -13786,6 +14579,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "geojson-viewer",
+    category: "json",
+    icon: "map",
+    tags: [
+      "geojson",
+      "map",
+      "gis",
+      "viewer",
+      "offline",
+      "polygon",
+      "feature",
+      "latitude",
+      "longitude",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoJSON",
+        description:
+          "افتح ملف GeoJSON أو ألصق محتواه لاستعراض النقاط والخطوط والمضلعات على خريطة تفاعلية تعمل دون اتصال، والاطّلاع على خصائص المعالم. تبقى الملفات في متصفحك.",
+      },
+      de: {
+        name: "GeoJSON-Betrachter",
+        description:
+          "GeoJSON öffnen oder einfügen, Punkte, Linien und Polygone auf einer interaktiven Offline-Karte anzeigen und ihre Eigenschaften prüfen. Dateien bleiben in deinem Browser.",
+      },
+      en: {
+        name: "GeoJSON Viewer",
+        description:
+          "Open or paste GeoJSON, explore points, lines and polygons on an interactive offline map, and inspect feature properties. Files stay in your browser.",
+      },
+      es: {
+        name: "Visor de GeoJSON",
+        description:
+          "Abre o pega GeoJSON, explora puntos, líneas y polígonos en un mapa interactivo sin conexión y consulta los atributos de cada entidad. Los archivos se quedan en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse GeoJSON",
+        description:
+          "Ouvrez ou collez du GeoJSON, explorez les points, lignes et polygones sur une carte interactive hors ligne et consultez les attributs des entités. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג GeoJSON",
+        description:
+          "פתחו קובץ GeoJSON או הדביקו את תוכנו. צפו בנקודות, בקווים ובמצולעים במפה אינטראקטיבית ללא חיבור לרשת ובדקו את המאפיינים שלהם. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "GeoJSON व्यूअर",
+        description:
+          "GeoJSON फ़ाइल खोलें या उसका टेक्स्ट पेस्ट करें। इंटरैक्टिव ऑफ़लाइन मानचित्र पर बिंदु, रेखाएँ और बहुभुज देखें और उनकी विशेषताएँ जाँचें। फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil GeoJSON",
+        description:
+          "Buka atau tempel GeoJSON untuk melihat titik, garis, dan poligon pada peta interaktif luring serta memeriksa atribut fitur. Berkas tetap berada di browser.",
+      },
+      it: {
+        name: "Visualizzatore GeoJSON",
+        description:
+          "Apri un file GeoJSON o incollane il contenuto. Esplora punti, linee e poligoni su una mappa interattiva offline e consulta gli attributi. I file restano nel browser.",
+      },
+      ja: {
+        name: "GeoJSON ビューアー",
+        description:
+          "GeoJSON ファイルを開くかテキストを貼り付けると、オフラインの地図で点・線・ポリゴンと地物の属性を確認できます。ファイルはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "GeoJSON 뷰어",
+        description:
+          "GeoJSON을 열거나 붙여 넣어 오프라인 대화형 지도에서 점, 선, 폴리곤을 살펴보고 피처 속성을 확인하세요. 파일은 브라우저에 그대로 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar GeoJSON",
+        description:
+          "Buka atau tampal GeoJSON untuk melihat titik, garisan dan poligon pada peta interaktif luar talian serta menyemak atribut ciri. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "GeoJSON-viewer",
+        description:
+          "Open of plak GeoJSON, bekijk punten, lijnen en polygonen op een interactieve offlinekaart en inspecteer objecteigenschappen. Bestanden blijven in je browser.",
+      },
+      no: {
+        name: "GeoJSON-viser",
+        description:
+          "Åpne eller lim inn GeoJSON, se punkter, linjer og polygoner på et interaktivt kart uten nett, og undersøk objektegenskaper. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka GeoJSON",
+        description:
+          "Otwórz plik GeoJSON lub wklej jego treść. Przeglądaj punkty, linie i poligony na interaktywnej mapie offline oraz sprawdzaj atrybuty obiektów. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de GeoJSON",
+        description:
+          "Abra ou cole GeoJSON para explorar pontos, linhas e polígonos em um mapa interativo offline e consultar os atributos das feições. Os arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр GeoJSON",
+        description:
+          "Откройте файл GeoJSON или вставьте его содержимое, чтобы просмотреть точки, линии, полигоны и атрибуты объектов на интерактивной офлайн-карте. Файлы остаются в браузере.",
+      },
+      sv: {
+        name: "GeoJSON-visare",
+        description:
+          "Öppna eller klistra in GeoJSON, utforska punkter, linjer och polygoner på en interaktiv karta offline och granska objektens attribut. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoJSON",
+        description:
+          "เปิดหรือวาง GeoJSON เพื่อดูจุด เส้น และรูปหลายเหลี่ยมบนแผนที่แบบโต้ตอบที่ใช้แบบออฟไลน์ได้ พร้อมตรวจสอบแอตทริบิวต์ของแต่ละฟีเจอร์ ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "GeoJSON Görüntüleyici",
+        description:
+          "GeoJSON dosyası açın veya GeoJSON metni yapıştırın. Çevrimdışı etkileşimli haritada noktaları, çizgileri ve çokgenleri görün, detayların özniteliklerini inceleyin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem GeoJSON",
+        description:
+          "Mở hoặc dán GeoJSON, khám phá các điểm, đường và đa giác trên bản đồ tương tác ngoại tuyến, rồi xem thuộc tính của đối tượng. Tệp được giữ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GeoJSON 查看器",
+        description:
+          "打开或粘贴 GeoJSON，在可交互的离线地图上查看点、线和面，并检查要素属性。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "GeoJSON 檢視器",
+        description:
+          "開啟或貼上 GeoJSON，在可離線使用的互動地圖上查看點、線和多邊形，並檢查圖徵屬性。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
+  {
     slug: "gif-maker",
     category: "image",
     icon: "film",
@@ -14390,6 +15316,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "GPU 資訊",
         description:
           "查看瀏覽器使用哪個圖形處理器（GPU），以及是否能使用 WebGL 顯示網頁 3D 圖形。了解結果的意義，再複製或下載報告，協助排查繪圖問題。",
+      },
+    },
+  },
+  {
+    slug: "gpx-viewer",
+    category: "misc",
+    icon: "route",
+    tags: [
+      "gpx",
+      "gps",
+      "track",
+      "route",
+      "elevation",
+      "hiking",
+      "cycling",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GPX مع منحنى الارتفاع",
+        description:
+          "افتح ملف GPX لعرض المسارات المسجّلة والمسارات المخطّطة ونقاط المرور على الخريطة. تتبّع تغيّر الارتفاع مع المسافة واطّلع على إجمالي المسافة والصعود والهبوط.",
+      },
+      de: {
+        name: "GPX-Betrachter mit Höhenprofil",
+        description:
+          "GPX-Dateien öffnen und GPS-Tracks, Routen und Wegpunkte auf einer Karte anzeigen. Sieh dir das Höhenprofil, die Gesamtstrecke und die Höhenmeter bergauf und bergab an.",
+      },
+      en: {
+        name: "GPX Viewer & Elevation Profile",
+        description:
+          "Open a GPX file to view GPS tracks, routes and waypoints on a map. Explore elevation by distance and see total distance, ascent and descent.",
+      },
+      es: {
+        name: "Visor GPX con perfil de elevación",
+        description:
+          "Abre un archivo GPX para ver trayectos, rutas y puntos de paso GPS en un mapa. Explora la elevación según la distancia y consulta la distancia total y el desnivel acumulado.",
+      },
+      fr: {
+        name: "Visionneuse GPX et profil altimétrique",
+        description:
+          "Ouvrez un fichier GPX pour afficher traces GPS, itinéraires et points de cheminement. Explorez le profil altimétrique et consultez la distance totale et les dénivelés.",
+      },
+      he: {
+        name: "מציג GPX ופרופיל גובה",
+        description:
+          "פתחו קובץ GPX והציגו מסלולי GPS מוקלטים, מסלולים מתוכננים ונקודות ציון על המפה. בדקו את הגובה לפי המרחק ואת סך המרחק, העלייה והירידה.",
+      },
+      hi: {
+        name: "GPX व्यूअर और ऊँचाई प्रोफ़ाइल",
+        description:
+          "GPX फ़ाइल खोलकर मानचित्र पर GPS ट्रैक, मार्ग और वेपॉइंट देखें। दूरी के साथ ऊँचाई में बदलाव, कुल दूरी, कुल चढ़ाई और कुल उतराई जानें।",
+      },
+      id: {
+        name: "Penampil GPX dan Profil Elevasi",
+        description:
+          "Buka berkas GPX untuk melihat jejak GPS, rute, dan titik penanda pada peta. Lihat perubahan elevasi sepanjang rute, jarak total, serta total kenaikan dan penurunan elevasi.",
+      },
+      it: {
+        name: "Visualizzatore GPX con profilo altimetrico",
+        description:
+          "Apri file GPX per vedere sulla mappa tracce GPS, percorsi e waypoint. Esplora il profilo altimetrico e consulta distanza totale, salita e discesa.",
+      },
+      ja: {
+        name: "GPX ビューアー・標高断面図",
+        description:
+          "GPX ファイルを開いて、GPS トラック、ルート、ウェイポイントを地図に表示できます。距離に沿った標高の変化や総距離、累積上昇・下降量を確認できます。",
+      },
+      ko: {
+        name: "GPX 뷰어와 고도 프로파일",
+        description:
+          "GPX 파일을 열어 지도에서 GPS 트랙, 경로와 웨이포인트를 확인하세요. 거리에 따른 고도와 총 거리, 누적 상승 및 하강을 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GPX dan Profil Ketinggian",
+        description:
+          "Buka fail GPX untuk melihat trek GPS, laluan dan titik laluan pada peta. Lihat perubahan ketinggian sepanjang perjalanan, jumlah jarak serta jumlah kenaikan dan penurunan ketinggian.",
+      },
+      nl: {
+        name: "GPX-viewer met hoogteprofiel",
+        description:
+          "Open GPX-bestanden en bekijk gps-tracks, routes en waypoints op een kaart. Bekijk het hoogteprofiel, de totale afstand en de stijg- en daalmeters.",
+      },
+      no: {
+        name: "GPX-viser med høydeprofil",
+        description:
+          "Åpne en GPX-fil og se GPS-spor, ruter og veipunkter på et kart. Utforsk høydeprofilen og se total lengde og høydemeter opp og ned.",
+      },
+      pl: {
+        name: "Przeglądarka GPX z profilem wysokościowym",
+        description:
+          "Otwórz plik GPX i zobacz na mapie ślady GPS, trasy i punkty trasy. Sprawdź profil wysokościowy, całkowity dystans oraz przewyższenia w górę i w dół.",
+      },
+      pt: {
+        name: "Visualizador GPX com perfil de elevação",
+        description:
+          "Abra um arquivo GPX para ver trilhas, rotas e pontos de passagem GPS no mapa. Explore a elevação ao longo do percurso e veja a distância total, o ganho e a perda de elevação.",
+      },
+      ru: {
+        name: "Просмотр GPX и профиль высот",
+        description:
+          "Откройте GPX-файл и просмотрите GPS-треки, маршруты и путевые точки на карте. Узнайте, как меняется высота по мере прохождения маршрута, и проверьте общую дистанцию, набор и сброс высоты.",
+      },
+      sv: {
+        name: "GPX-visare och höjdprofil",
+        description:
+          "Öppna en GPX-fil för att visa GPS-spår, rutter och waypoints på en karta. Utforska höjd längs sträckan och se total sträcka, stigning och nedstigning.",
+      },
+      th: {
+        name: "โปรแกรมดู GPX และกราฟระดับความสูง",
+        description:
+          "เปิดไฟล์ GPX เพื่อดูเส้นทางที่บันทึกด้วย GPS เส้นทางที่วางแผนไว้ และจุดอ้างอิงบนแผนที่ ดูระดับความสูงตามระยะทาง รวมถึงระยะทางรวม ระยะไต่ขึ้น และระยะลงสะสม",
+      },
+      tr: {
+        name: "GPX Görüntüleyici ve Yükseklik Profili",
+        description:
+          "GPX dosyalarını açıp GPS izlerini, rotaları ve yol noktalarını haritada görün. Mesafeye göre yükseklik profilini, toplam mesafeyi, tırmanışı ve inişi inceleyin.",
+      },
+      vi: {
+        name: "Trình xem GPX và biểu đồ độ cao",
+        description:
+          "Mở tệp GPX để xem vệt đường GPS, tuyến đường và điểm đánh dấu trên bản đồ. Khám phá độ cao theo quãng đường, tổng quãng đường, độ cao tăng và giảm.",
+      },
+      "zh-CN": {
+        name: "GPX 查看器与海拔剖面图",
+        description:
+          "打开 GPX 文件，在地图上查看 GPS 轨迹、路线和航点。查看海拔随距离的变化，以及总距离、累计爬升和累计下降。",
+      },
+      "zh-TW": {
+        name: "GPX 檢視器與海拔剖面圖",
+        description:
+          "開啟 GPX 檔案，在地圖上查看 GPS 軌跡、路線和航點。沿途查看海拔變化，並掌握總距離、累計爬升和累計下降。",
       },
     },
   },
@@ -15983,6 +17042,268 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  {
+    slug: "ics-calendar-viewer",
+    category: "time",
+    icon: "calendar-days",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "agenda",
+      "events",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملفات تقويم ICS",
+        description:
+          "افتح ملف iCalendar ‏(.ics) وابحث في أحداثه. اطّلع على التواريخ والمناطق الزمنية والمواقع والأوصاف مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für ICS-Kalenderdateien",
+        description:
+          "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser.",
+      },
+      en: {
+        name: "ICS Calendar File Viewer",
+        description:
+          "Open an iCalendar (.ics) file and search its events. Check dates, time zones, locations, and descriptions directly in your browser.",
+      },
+      es: {
+        name: "Visor de archivos ICS",
+        description:
+          "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers ICS",
+        description:
+          "Ouvrez un fichier iCalendar (.ics) et recherchez ses événements. Consultez les dates, fuseaux horaires, lieux et descriptions directement dans le navigateur.",
+      },
+      he: {
+        name: "מציג קובצי לוח שנה ICS",
+        description:
+          "פתחו קובץ iCalendar ‏(.ics) וחפשו בו אירועים. צפו בתאריכים, באזורי זמן, במיקומים ובתיאורים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ICS कैलेंडर फ़ाइल व्यूअर",
+        description:
+          "iCalendar (.ics) फ़ाइल खोलें और उसमें इवेंट खोजें। तारीखें, समय क्षेत्र, स्थान और विवरण सीधे अपने ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil File Kalender ICS",
+        description:
+          "Buka file iCalendar (.ics) dan cari acara di dalamnya. Periksa tanggal, zona waktu, lokasi, dan deskripsi langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di file ICS",
+        description:
+          "Apri un file iCalendar (.ics) e cerca gli eventi. Consulta date, fusi orari, luoghi e descrizioni direttamente nel browser.",
+      },
+      ja: {
+        name: "ICS カレンダーファイルビューアー",
+        description:
+          "iCalendar（.ics）ファイルをブラウザーで開き、予定を検索できます。日付やタイムゾーン、場所、説明を確認できます。",
+      },
+      ko: {
+        name: "ICS 캘린더 파일 뷰어",
+        description:
+          "브라우저에서 iCalendar(.ics) 파일을 열고 일정을 검색하세요. 날짜, 시간대, 장소, 설명을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Kalendar ICS",
+        description:
+          "Buka fail iCalendar (.ics) dan cari acara di dalamnya. Semak tarikh, zon masa, lokasi dan penerangan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor ICS-agendabestanden",
+        description:
+          "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Viser for ICS-kalenderfiler",
+        description:
+          "Åpne en iCalendar-fil (.ics) og søk i hendelsene. Se datoer, tidssoner, steder og beskrivelser direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka plików kalendarza ICS",
+        description:
+          "Otwórz plik iCalendar (.ics) i wyszukaj w nim wydarzenia. Sprawdź daty, strefy czasowe, miejsca i opisy bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de arquivos ICS",
+        description:
+          "Abra um arquivo iCalendar (.ics) e pesquise os eventos. Confira datas, fusos horários, locais e descrições diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр файлов календаря ICS",
+        description:
+          "Откройте файл iCalendar (.ics) и найдите нужные события. Просматривайте даты, часовые пояса, места и описания прямо в браузере.",
+      },
+      sv: {
+        name: "Visare för ICS-kalenderfiler",
+        description:
+          "Öppna en iCalendar-fil (.ics) och sök bland händelserna. Se datum, tidszoner, platser och beskrivningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+        description:
+          "เปิดไฟล์ iCalendar (.ics) และค้นหากิจกรรม ตรวจสอบวันที่ เขตเวลา สถานที่ และรายละเอียดได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS Takvim Dosyası Görüntüleyici",
+        description:
+          "Bir iCalendar (.ics) dosyası açın ve etkinliklerde arama yapın. Tarihleri, saat dilimlerini, konumları ve açıklamaları doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp lịch ICS",
+        description:
+          "Mở tệp iCalendar (.ics) và tìm kiếm sự kiện. Xem ngày, múi giờ, địa điểm và mô tả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 日历文件查看器",
+        description:
+          "在浏览器中打开 iCalendar（.ics）文件，搜索日程并查看日期、时区、地点和详细说明。",
+      },
+      "zh-TW": {
+        name: "ICS 行事曆檔案檢視器",
+        description:
+          "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
+      },
+    },
+  },
+  {
+    slug: "ics-csv-converter",
+    category: "time",
+    icon: "arrow-left-right",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "csv",
+      "spreadsheet",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ICS وCSV",
+        description:
+          "حوّل أحداث iCalendar ‏(.ics) إلى جدول CSV أو حوّل صفوف CSV إلى ملف تقويم. عاين أيًا من الصيغتين ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "ICS-CSV-Konverter",
+        description:
+          "Konvertieren Sie iCalendar-Termine (.ics) in eine CSV-Tabelle oder erstellen Sie eine Kalenderdatei aus CSV-Zeilen. Beide Formate lassen sich im Browser prüfen und herunterladen.",
+      },
+      en: {
+        name: "ICS ↔ CSV Converter",
+        description:
+          "Convert iCalendar (.ics) events to a CSV spreadsheet or turn CSV rows into a calendar file. Preview and download either format in your browser.",
+      },
+      es: {
+        name: "Convertidor ICS ↔ CSV",
+        description:
+          "Pasa eventos de iCalendar (.ics) a una hoja de cálculo CSV o convierte filas CSV en un archivo de calendario. Revisa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur ICS ↔ CSV",
+        description:
+          "Exportez des événements iCalendar (.ics) en CSV ou créez un fichier de calendrier à partir de lignes CSV. Visualisez et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר ICS ו-CSV",
+        description:
+          "המירו אירועי iCalendar ‏(.ics) לגיליון CSV או הפכו שורות CSV לקובץ לוח שנה. צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "ICS ↔ CSV कन्वर्टर",
+        description:
+          "iCalendar (.ics) इवेंट को CSV स्प्रेडशीट में बदलें या CSV की पंक्तियों से कैलेंडर फ़ाइल बनाएँ। नतीजा देखकर उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi ICS ↔ CSV",
+        description:
+          "Ubah acara iCalendar (.ics) menjadi spreadsheet CSV atau buat file kalender dari baris CSV. Lihat pratinjau dan unduh kedua format di browser.",
+      },
+      it: {
+        name: "Convertitore ICS ↔ CSV",
+        description:
+          "Esporta gli eventi iCalendar (.ics) in CSV o crea un file di calendario da righe CSV. Visualizza l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "ICS・CSV 相互変換ツール",
+        description:
+          "iCalendar（.ics）の予定を CSV に書き出したり、CSV の行をカレンダーファイルにしたりできます。結果はブラウザーで確認してダウンロードできます。",
+      },
+      ko: {
+        name: "ICS·CSV 변환기",
+        description:
+          "iCalendar(.ics) 일정을 CSV로 내보내거나 CSV 행을 캘린더 파일로 만드세요. 브라우저에서 두 형식을 모두 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar ICS ↔ CSV",
+        description:
+          "Tukar acara iCalendar (.ics) kepada hamparan CSV atau cipta fail kalendar daripada baris CSV. Pratonton dan muat turun kedua-dua format dalam pelayar.",
+      },
+      nl: {
+        name: "ICS-CSV-converter",
+        description:
+          "Zet iCalendar-afspraken (.ics) om in een CSV-tabel of maak een agendabestand van CSV-rijen. Bekijk een voorbeeld en download het gewenste formaat in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom ICS og CSV",
+        description:
+          "Konverter iCalendar-hendelser (.ics) til CSV, eller lag en kalenderfil fra CSV-rader. Forhåndsvis og last ned i begge formater i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter ICS i CSV",
+        description:
+          "Konwertuj wydarzenia iCalendar (.ics) na tabelę CSV lub utwórz plik kalendarza z wierszy CSV. Sprawdź podgląd i pobierz wynik w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor ICS ↔ CSV",
+        description:
+          "Exporte eventos do iCalendar (.ics) para uma planilha CSV ou converta linhas CSV em um arquivo de calendário. Veja a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер ICS ↔ CSV",
+        description:
+          "Преобразуйте события iCalendar (.ics) в таблицу CSV или создайте файл календаря из строк CSV. Просмотрите и скачайте результат в браузере.",
+      },
+      sv: {
+        name: "Konverterare för ICS och CSV",
+        description:
+          "Konvertera iCalendar-händelser (.ics) till CSV eller skapa en kalenderfil från CSV-rader. Förhandsgranska och ladda ner i båda formaten i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง ICS ↔ CSV",
+        description:
+          "แปลงกิจกรรม iCalendar (.ics) เป็นสเปรดชีต CSV หรือสร้างไฟล์ปฏิทินจากข้อมูล CSV ดูตัวอย่างและดาวน์โหลดได้ทั้งสองรูปแบบในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS ↔ CSV Dönüştürücü",
+        description:
+          "iCalendar (.ics) etkinliklerini CSV tablosuna dönüştürün veya CSV satırlarından bir takvim dosyası oluşturun. Sonucu tarayıcınızda önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi ICS ↔ CSV",
+        description:
+          "Chuyển sự kiện iCalendar (.ics) thành bảng tính CSV hoặc tạo tệp lịch từ các dòng CSV. Xem trước và tải xuống ở cả hai định dạng ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 与 CSV 互转",
+        description:
+          "将 iCalendar（.ics）日程导出为 CSV 表格，或将 CSV 中的日程转成日历文件。两种格式均可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "ICS 與 CSV 互轉",
+        description:
+          "將 iCalendar（.ics）行程匯出為 CSV 試算表，或將 CSV 資料列轉成行事曆檔案。兩種格式都可在瀏覽器中預覽與下載。",
       },
     },
   },
@@ -23627,6 +24948,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mermaid-previewer",
+    category: "developer",
+    icon: "blocks",
+    tags: [
+      "mermaid",
+      "diagram",
+      "flowchart",
+      "sequence diagram",
+      "svg",
+      "png",
+      "preview",
+    ],
+    locales: {
+      ar: {
+        name: "معاين Mermaid",
+        description:
+          "حرّر شيفرة Mermaid وشاهد المخطط فورًا. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG.",
+      },
+      de: {
+        name: "Mermaid-Vorschau",
+        description:
+          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG oder PNG herunter.",
+      },
+      en: {
+        name: "Mermaid Previewer",
+        description:
+          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG or PNG.",
+      },
+      es: {
+        name: "Vista previa de Mermaid",
+        description:
+          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG o PNG.",
+      },
+      fr: {
+        name: "Aperçu Mermaid",
+        description:
+          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG ou PNG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Mermaid",
+        description:
+          "אפשר לערוך קוד Mermaid ולראות את התרשים מתעדכן בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו אותו כ-SVG או PNG.",
+      },
+      hi: {
+        name: "Mermaid प्रीव्यूअर",
+        description:
+          "Mermaid कोड संपादित करते हुए डायग्राम का लाइव प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG या PNG डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Mermaid",
+        description:
+          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG atau PNG.",
+      },
+      it: {
+        name: "Anteprima Mermaid",
+        description:
+          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG o PNG.",
+      },
+      ja: {
+        name: "Mermaid プレビューアー",
+        description:
+          "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid 미리보기",
+        description:
+          "Mermaid 코드를 편집하며 다이어그램을 실시간으로 확인하세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 살펴보고 SVG 또는 PNG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Mermaid",
+        description:
+          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG atau PNG.",
+      },
+      nl: {
+        name: "Mermaid-voorvertoner",
+        description:
+          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG of PNG.",
+      },
+      no: {
+        name: "Mermaid-forhåndsviser",
+        description:
+          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG eller PNG.",
+      },
+      pl: {
+        name: "Podgląd Mermaid",
+        description:
+          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go w formacie SVG albo PNG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Mermaid",
+        description:
+          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG ou PNG.",
+      },
+      ru: {
+        name: "Предпросмотр Mermaid",
+        description:
+          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG или PNG.",
+      },
+      sv: {
+        name: "Mermaid-förhandsgranskare",
+        description:
+          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG eller PNG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Mermaid",
+        description:
+          "แก้ไขโค้ด Mermaid พร้อมดูแผนภาพสด ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลดเป็น SVG หรือ PNG",
+      },
+      tr: {
+        name: "Mermaid Önizleyici",
+        description:
+          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış, sıralama veya ER diyagramı örneğini deneyin ve SVG ya da PNG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Mermaid",
+        description:
+          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG hoặc PNG.",
+      },
+      "zh-CN": {
+        name: "Mermaid 预览器",
+        description:
+          "编辑 Mermaid 代码并实时预览图表。试用流程图、时序图或 ER 图，然后下载 SVG 或 PNG。",
+      },
+      "zh-TW": {
+        name: "Mermaid 預覽器",
+        description:
+          "編輯 Mermaid 程式碼並即時預覽圖表。試用流程圖、循序圖或 ER 圖，再下載 SVG 或 PNG。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",
@@ -28516,6 +29968,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "PDF 轉圖片轉換器",
         description:
           "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    category: "pdf",
+    icon: "archive",
+    tags: [
+      "pdf",
+      "pdf/a",
+      "pdfa",
+      "iso 19005",
+      "archive",
+      "validation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى PDF/A",
+        description:
+          "حوّل ملف PDF إلى PDF/A-1b أو PDF/A-2b للأرشفة طويلة الأمد. احتفظ بإمكانية البحث في النص وافحص نسخة الأرشفة في متصفحك.",
+      },
+      de: {
+        name: "PDF in PDF/A umwandeln",
+        description:
+          "Wandle eine PDF zur Langzeitarchivierung in PDF/A-1b oder PDF/A-2b um. Der Text bleibt durchsuchbar und du kannst die Archivkopie im Browser prüfen.",
+      },
+      en: {
+        name: "PDF to PDF/A",
+        description:
+          "Convert a PDF to PDF/A-1b or PDF/A-2b for long-term archiving. Keep text searchable and check the archive copy in your browser.",
+      },
+      es: {
+        name: "Convertir PDF a PDF/A",
+        description:
+          "Convierte un PDF a PDF/A-1b o PDF/A-2b para su conservación a largo plazo. La búsqueda de texto sigue disponible. Comprueba la copia en tu navegador.",
+      },
+      fr: {
+        name: "Convertir un PDF en PDF/A",
+        description:
+          "Convertissez un PDF en PDF/A-1b ou PDF/A-2b pour l’archivage à long terme. La recherche de texte reste possible. Vérifiez la copie dans votre navigateur.",
+      },
+      he: {
+        name: "המרת PDF ל־PDF/A",
+        description:
+          "המירו קובץ PDF ל־PDF/A-1b או ל־PDF/A-2b לשימור לטווח ארוך. הטקסט יישאר ניתן לחיפוש, ותוכלו לבדוק את עותק הארכיון בדפדפן.",
+      },
+      hi: {
+        name: "PDF को PDF/A में बदलें",
+        description:
+          "लंबे समय तक सुरक्षित रखने के लिए PDF को PDF/A-1b या PDF/A-2b में बदलें। टेक्स्ट खोजने की सुविधा बनाए रखें और संग्रहण की कॉपी अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Konversi PDF ke PDF/A",
+        description:
+          "Konversi PDF ke PDF/A-1b atau PDF/A-2b untuk pengarsipan jangka panjang. Teks tetap bisa dicari, dan salinan arsip diperiksa langsung di browser.",
+      },
+      it: {
+        name: "Converti PDF in PDF/A",
+        description:
+          "Converti un PDF in PDF/A-1b o PDF/A-2b per la conservazione a lungo termine. Mantieni il testo ricercabile e verifica la copia d’archivio nel browser.",
+      },
+      ja: {
+        name: "PDF を PDF/A に変換",
+        description:
+          "PDF を長期保存用の PDF/A-1b または PDF/A-2b に変換します。文字検索機能を保ったまま、ブラウザーで変換結果をチェックできます。",
+      },
+      ko: {
+        name: "PDF를 PDF/A로 변환",
+        description:
+          "PDF를 장기 보관용 PDF/A-1b 또는 PDF/A-2b로 변환하세요. 텍스트 검색 기능을 유지하고 브라우저에서 보관용 사본을 검사할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar PDF kepada PDF/A",
+        description:
+          "Tukar PDF kepada PDF/A-1b atau PDF/A-2b untuk pengarkiban jangka panjang. Teks masih boleh dicari dan salinan arkib disemak terus dalam pelayar.",
+      },
+      nl: {
+        name: "PDF naar PDF/A converteren",
+        description:
+          "Zet een PDF om naar PDF/A-1b of PDF/A-2b voor langdurige archivering. Houd tekst doorzoekbaar en controleer de archiefkopie in je browser.",
+      },
+      no: {
+        name: "Konverter PDF til PDF/A",
+        description:
+          "Konverter en PDF til PDF/A-1b eller PDF/A-2b for langtidsarkivering. Behold søkbar tekst og kontroller arkivkopien i nettleseren.",
+      },
+      pl: {
+        name: "Konwertuj PDF do PDF/A",
+        description:
+          "Konwertuj PDF do PDF/A-1b lub PDF/A-2b na potrzeby długoterminowej archiwizacji. Zachowaj możliwość wyszukiwania tekstu i sprawdź kopię archiwalną w przeglądarce.",
+      },
+      pt: {
+        name: "Converter PDF para PDF/A",
+        description:
+          "Converta um PDF para PDF/A-1b ou PDF/A-2b para arquivamento de longo prazo. Mantenha o texto pesquisável e verifique a cópia de arquivamento no navegador.",
+      },
+      ru: {
+        name: "Конвертер PDF в PDF/A",
+        description:
+          "Преобразуйте PDF в PDF/A-1b или PDF/A-2b для долговременного хранения. Сохраните возможность поиска по тексту и проверьте архивную копию в браузере.",
+      },
+      sv: {
+        name: "Konvertera PDF till PDF/A",
+        description:
+          "Konvertera en PDF till PDF/A-1b eller PDF/A-2b för långtidsarkivering. Behåll sökbar text och kontrollera arkivkopian i webbläsaren.",
+      },
+      th: {
+        name: "แปลง PDF เป็น PDF/A",
+        description:
+          "แปลง PDF เป็น PDF/A-1b หรือ PDF/A-2b เพื่อจัดเก็บระยะยาว ข้อความยังค้นหาได้ และตรวจสอบสำเนาสำหรับจัดเก็บในเบราว์เซอร์ได้",
+      },
+      tr: {
+        name: "PDF'yi PDF/A'ya dönüştürün",
+        description:
+          "PDF dosyalarını uzun süreli arşivleme için PDF/A-1b veya PDF/A-2b biçimine dönüştürün. Metni aranabilir tutun ve arşiv kopyasını tarayıcınızda kontrol edin.",
+      },
+      vi: {
+        name: "Chuyển PDF sang PDF/A",
+        description:
+          "Chuyển PDF sang PDF/A-1b hoặc PDF/A-2b để lưu trữ lâu dài. Văn bản vẫn tìm kiếm được và bản lưu trữ được kiểm tra ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 转 PDF/A",
+        description:
+          "将 PDF 转换为 PDF/A-1b 或 PDF/A-2b，用于长期归档。保留文本搜索功能，并在浏览器中校验归档副本。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 PDF/A",
+        description:
+          "將 PDF 轉成適合長期保存的 PDF/A-1b 或 PDF/A-2b。保留文字搜尋功能，並直接在瀏覽器中檢查封存副本。",
       },
     },
   },
@@ -35833,6 +37416,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "stereo-channel-splitter",
+    category: "misc",
+    icon: "split",
+    tags: [
+      "audio",
+      "stereo",
+      "mono",
+      "split",
+      "channel",
+      "left",
+      "right",
+      "wav",
+      "mp3",
+    ],
+    locales: {
+      ar: {
+        name: "أداة فصل قنوات الستيريو",
+        description:
+          "افصل صوت الستيريو إلى ملفين أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى القناتين ونزّل كلًّا منهما بصيغة WAV أو FLAC أو MP3 من متصفحك.",
+      },
+      de: {
+        name: "Stereokanäle trennen",
+        description:
+          "Speichere den linken und rechten Kanal einer Stereoaufnahme als separate Monodateien. Höre beide im Browser an und lade sie als WAV, FLAC oder MP3 herunter.",
+      },
+      en: {
+        name: "Stereo Channel Splitter",
+        description:
+          "Split stereo audio into separate left and right mono files. Preview both channels and download as WAV, FLAC, or MP3 in your browser.",
+      },
+      es: {
+        name: "Separador de canales estéreo",
+        description:
+          "Separa los canales izquierdo y derecho de un archivo estéreo en dos archivos mono. Escúchalos y descárgalos en WAV, FLAC o MP3 desde tu navegador.",
+      },
+      fr: {
+        name: "Séparateur de canaux stéréo",
+        description:
+          "Séparez les canaux gauche et droit d’un fichier stéréo en deux fichiers mono. Écoutez-les et téléchargez-les en WAV, FLAC ou MP3 dans votre navigateur.",
+      },
+      he: {
+        name: "פיצול ערוצי סטריאו",
+        description:
+          "פצלו אודיו בסטריאו לשני קובצי מונו, אחד לערוץ השמאלי ואחד לימני. האזינו לשני הערוצים והורידו אותם בפורמט WAV, FLAC או MP3 ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "स्टीरियो चैनल अलग करें",
+        description:
+          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को अलग मोनो फ़ाइलों में सेव करें। दोनों चैनल ब्राउज़र में सुनें और WAV, FLAC या MP3 में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemisah Kanal Audio Stereo",
+        description:
+          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file mono. Dengarkan kedua kanal dan unduh dalam format WAV, FLAC, atau MP3 langsung di browser Anda.",
+      },
+      it: {
+        name: "Separa i canali stereo",
+        description:
+          "Separa i canali sinistro e destro di un file stereo in due file mono. Ascoltali e scaricali in WAV, FLAC o MP3 direttamente nel browser.",
+      },
+      ja: {
+        name: "ステレオ音声の左右チャンネル分割",
+        description:
+          "ステレオ音声の左右のチャンネルを個別のモノラルファイルに分割します。ブラウザー上で各チャンネルを試聴し、WAV、FLAC、MP3形式でダウンロードできます。",
+      },
+      ko: {
+        name: "스테레오 좌우 채널 분리",
+        description:
+          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 WAV, FLAC, MP3로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemisah Saluran Audio Stereo",
+        description:
+          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail mono. Dengar pratonton kedua-dua saluran dan muat turun sebagai WAV, FLAC atau MP3 terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Stereokanalen splitsen",
+        description:
+          "Splits stereogeluid in twee monobestanden, één voor links en één voor rechts. Beluister beide kanalen en download ze als WAV, FLAC of MP3 in je browser.",
+      },
+      no: {
+        name: "Del stereolyd i to monofiler",
+        description:
+          "Lagre venstre og høyre kanal fra en stereofil som separate monofiler. Lytt til begge og last ned som WAV, FLAC eller MP3 direkte i nettleseren.",
+      },
+      pl: {
+        name: "Rozdzielanie kanałów stereo",
+        description:
+          "Rozdziel nagranie stereo na osobne pliki mono dla lewego i prawego kanału. Odsłuchaj oba kanały i pobierz je jako WAV, FLAC lub MP3 w przeglądarce.",
+      },
+      pt: {
+        name: "Separador de canais estéreo",
+        description:
+          "Separe os canais esquerdo e direito de um ficheiro estéreo em dois ficheiros mono. Ouça e transfira ambos em WAV, FLAC ou MP3 no navegador.",
+      },
+      ru: {
+        name: "Разделение стереоканалов",
+        description:
+          "Разделите стереозапись на два монофайла для левого и правого каналов. Прослушайте оба канала и скачайте их в WAV, FLAC или MP3 прямо в браузере.",
+      },
+      sv: {
+        name: "Separera stereokanaler",
+        description:
+          "Spara vänster och höger kanal i en stereoinspelning som separata monofiler. Lyssna på båda och ladda ner som WAV, FLAC eller MP3 direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
+        description:
+          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์โมโนคนละไฟล์ ฟังตัวอย่างทั้งสองช่องและดาวน์โหลดเป็น WAV, FLAC หรือ MP3 ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Stereo Kanal Ayırıcı",
+        description:
+          "Stereo sesin sol ve sağ kanallarını ayrı mono dosyalara ayırın. İki kanalı da tarayıcınızda dinleyin ve WAV, FLAC veya MP3 olarak indirin.",
+      },
+      vi: {
+        name: "Tách kênh âm thanh stereo",
+        description:
+          "Tách âm thanh stereo thành hai tệp mono riêng cho kênh trái và kênh phải. Nghe thử cả hai kênh và tải xuống dưới dạng WAV, FLAC hoặc MP3 ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "左右声道拆分",
+        description:
+          "把立体声音频的左右声道分别导出为单声道文件。直接在浏览器中试听各声道，并下载为 WAV、FLAC 或 MP3。",
+      },
+      "zh-TW": {
+        name: "左右聲道分離",
+        description:
+          "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  {
     slug: "stopwatch",
     category: "developer",
     icon: "wrench",
@@ -41020,6 +42736,259 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vcard-csv-converter",
+    category: "document",
+    icon: "arrow-left-right",
+    tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل vCard وCSV",
+        description:
+          "حوّل جهات الاتصال بين vCard ‏(.vcf) وCSV. افتح ملفًا أو الصق النص، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "vCard-CSV-Konverter",
+        description:
+          "Konvertieren Sie Kontakte zwischen vCard (.vcf) und CSV. Öffnen Sie eine Datei oder fügen Sie Text ein, prüfen Sie das Ergebnis und laden Sie es direkt im Browser herunter.",
+      },
+      en: {
+        name: "vCard ↔ CSV Converter",
+        description:
+          "Convert contacts between vCard (.vcf) and CSV. Open a file or paste text, preview the conversion, and download the result in your browser.",
+      },
+      es: {
+        name: "Convertidor vCard ↔ CSV",
+        description:
+          "Convierte contactos entre vCard (.vcf) y CSV. Abre un archivo o pega el texto, revisa la vista previa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur vCard ↔ CSV",
+        description:
+          "Convertissez vos contacts entre vCard (.vcf) et CSV. Ouvrez un fichier ou collez du texte, vérifiez l’aperçu et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר vCard ו-CSV",
+        description:
+          "המירו רשימות אנשי קשר בין vCard ‏(.vcf) ל-CSV. פתחו קובץ או הדביקו טקסט, צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "vCard ↔ CSV कन्वर्टर",
+        description:
+          "संपर्कों को vCard (.vcf) से CSV या CSV से vCard में बदलें। फ़ाइल खोलें या टेक्स्ट पेस्ट करें, नतीजे का पूर्वावलोकन करें और उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi vCard ↔ CSV",
+        description:
+          "Konversi kontak antara vCard (.vcf) dan CSV. Buka file atau tempel teks, lihat pratinjau, lalu unduh hasilnya langsung di browser.",
+      },
+      it: {
+        name: "Convertitore vCard ↔ CSV",
+        description:
+          "Converti i contatti tra vCard (.vcf) e CSV. Apri un file o incolla il testo, controlla l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "vCard・CSV 相互変換ツール",
+        description:
+          "連絡先を vCard（.vcf）と CSV の間で相互変換します。ファイルを開くかテキストを貼り付け、ブラウザーで結果を確認してダウンロードできます。",
+      },
+      ko: {
+        name: "vCard·CSV 변환기",
+        description:
+          "연락처를 vCard(.vcf)와 CSV 사이에서 양방향으로 변환합니다. 파일을 열거나 텍스트를 붙여넣고 브라우저에서 결과를 확인해 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar vCard ↔ CSV",
+        description:
+          "Tukar senarai kenalan antara vCard (.vcf) dengan CSV. Buka fail atau tampal teks, semak pratonton, kemudian muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "vCard-CSV-converter",
+        description:
+          "Zet contacten om tussen vCard (.vcf) en CSV. Open een bestand of plak tekst, bekijk het resultaat en download het rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom vCard og CSV",
+        description:
+          "Konverter kontakter mellom vCard (.vcf) og CSV. Åpne en fil eller lim inn tekst, se en forhåndsvisning og last ned resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter vCard i CSV",
+        description:
+          "Konwertuj kontakty między vCard (.vcf) a CSV. Otwórz plik lub wklej tekst, sprawdź podgląd i pobierz wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor vCard ↔ CSV",
+        description:
+          "Converta contatos entre vCard (.vcf) e CSV. Abra um arquivo ou cole o texto, confira a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер vCard ↔ CSV",
+        description:
+          "Преобразуйте списки контактов из vCard (.vcf) в CSV и обратно. Откройте файл или вставьте текст, проверьте результат и скачайте его из браузера.",
+      },
+      sv: {
+        name: "Konverterare för vCard och CSV",
+        description:
+          "Konvertera kontakter mellan vCard (.vcf) och CSV. Öppna en fil eller klistra in text, förhandsgranska resultatet och ladda ner det i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง vCard ↔ CSV",
+        description:
+          "แปลงรายชื่อติดต่อระหว่าง vCard (.vcf) กับ CSV เปิดไฟล์หรือวางข้อความ แล้วดูตัวอย่างและดาวน์โหลดผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "vCard ↔ CSV Dönüştürücü",
+        description:
+          "Kişi listelerini vCard (.vcf) ile CSV arasında dönüştürün. Dosya açın veya metin yapıştırın, sonucu önizleyin ve tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi vCard ↔ CSV",
+        description:
+          "Chuyển đổi danh bạ giữa vCard (.vcf) và CSV. Mở tệp hoặc dán văn bản, xem trước và tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "vCard 与 CSV 互转",
+        description:
+          "在浏览器中将联系人文件在 vCard（.vcf）与 CSV 之间互转。打开文件或粘贴文本，即可预览并下载转换结果。",
+      },
+      "zh-TW": {
+        name: "vCard 與 CSV 互轉",
+        description:
+          "在瀏覽器中互轉 vCard（.vcf）與 CSV 聯絡人檔案。開啟檔案或貼上文字，即可預覽並下載轉換結果。",
+      },
+    },
+  },
+  {
+    slug: "vcard-generator",
+    category: "document",
+    icon: "contact-round",
+    tags: [
+      "vcard",
+      "vcf",
+      "contact",
+      "contact card",
+      "address book",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد vCard",
+        description:
+          "أنشئ بطاقة اتصال رقمية ونزّلها بصيغة vCard ‏(.vcf). أضف اسمك ورقم هاتفك وبريدك الإلكتروني وغيرها من بيانات الاتصال مع معاينة فورية.",
+      },
+      de: {
+        name: "vCard-Generator",
+        description:
+          "Erstellen Sie eine digitale Kontaktkarte und laden Sie sie als vCard (.vcf) herunter. Name, Telefon, E-Mail und weitere Kontaktdaten erscheinen direkt in der Vorschau.",
+      },
+      en: {
+        name: "vCard Generator",
+        description:
+          "Create a digital contact card and download it as a vCard (.vcf). Add your name, phone, email, and other contact details with a live preview.",
+      },
+      es: {
+        name: "Generador de vCard",
+        description:
+          "Crea una tarjeta de contacto digital y descárgala como vCard (.vcf). Añade tu nombre, teléfono, correo y otros datos con una vista previa en tiempo real.",
+      },
+      fr: {
+        name: "Générateur de vCard",
+        description:
+          "Créez une fiche de contact et téléchargez-la au format vCard (.vcf). Ajoutez votre nom, votre téléphone, votre e-mail et d’autres coordonnées avec un aperçu en direct.",
+      },
+      he: {
+        name: "מחולל vCard",
+        description:
+          "צרו כרטיס איש קשר דיגיטלי והורידו אותו כקובץ vCard ‏(.vcf). הוסיפו שם, טלפון, דוא״ל ופרטים נוספים, וצפו בכרטיס תוך כדי עריכה.",
+      },
+      hi: {
+        name: "vCard जनरेटर",
+        description:
+          "डिजिटल संपर्क कार्ड बनाएँ और उसे vCard (.vcf) फ़ाइल के रूप में डाउनलोड करें। नाम, फ़ोन, ईमेल और अन्य संपर्क विवरण जोड़ें और साथ-साथ कार्ड देखें।",
+      },
+      id: {
+        name: "Pembuat vCard",
+        description:
+          "Buat kartu kontak digital dan unduh sebagai vCard (.vcf). Tambahkan nama, nomor telepon, email, dan detail kontak lain dengan pratinjau yang diperbarui saat Anda mengetik.",
+      },
+      it: {
+        name: "Generatore di vCard",
+        description:
+          "Crea una scheda di contatto digitale e scaricala come vCard (.vcf). Aggiungi nome, telefono, email e altri recapiti con un’anteprima in tempo reale.",
+      },
+      ja: {
+        name: "vCard 名刺作成ツール",
+        description:
+          "名前や電話番号、メールアドレスなどを入力してデジタル名刺を作成。プレビューを確認して vCard（.vcf）をダウンロードできます。",
+      },
+      ko: {
+        name: "vCard 명함 생성기",
+        description:
+          "이름, 전화번호, 이메일 등 연락처 정보를 입력해 디지털 명함을 만드세요. 미리보기로 확인하고 vCard(.vcf) 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana vCard",
+        description:
+          "Cipta kad kenalan digital dan muat turun sebagai vCard (.vcf). Tambah nama, nombor telefon, e-mel dan butiran kenalan lain dengan pratonton semasa anda menaip.",
+      },
+      nl: {
+        name: "vCard-generator",
+        description:
+          "Maak een digitaal visitekaartje en download het als vCard (.vcf). Voeg je naam, telefoonnummer, e-mailadres en andere contactgegevens toe en zie meteen hoe het kaartje eruitziet.",
+      },
+      no: {
+        name: "vCard-generator",
+        description:
+          "Lag et digitalt kontaktkort og last det ned som vCard (.vcf). Legg til navn, telefonnummer, e-post og andre kontaktopplysninger, og se en forhåndsvisning mens du skriver.",
+      },
+      pl: {
+        name: "Generator vCard",
+        description:
+          "Utwórz cyfrową wizytówkę i pobierz ją jako plik vCard (.vcf). Dodaj imię, nazwisko, telefon, e-mail i inne dane kontaktowe, korzystając z podglądu na żywo.",
+      },
+      pt: {
+        name: "Gerador de vCard",
+        description:
+          "Crie um cartão de contato digital e baixe-o como vCard (.vcf). Adicione nome, telefone, e-mail e outros dados com uma prévia em tempo real.",
+      },
+      ru: {
+        name: "Генератор vCard",
+        description:
+          "Создайте цифровую карточку контакта и скачайте её в формате vCard (.vcf). Добавьте имя, телефон, почту и другие данные и сразу посмотрите, как выглядит карточка.",
+      },
+      sv: {
+        name: "vCard-generator",
+        description:
+          "Skapa ett digitalt kontaktkort och ladda ner det som vCard (.vcf). Lägg till namn, telefonnummer, e-post och andra uppgifter och se direkt hur kortet blir.",
+      },
+      th: {
+        name: "ตัวสร้าง vCard",
+        description:
+          "สร้างบัตรข้อมูลติดต่อดิจิทัลและดาวน์โหลดเป็น vCard (.vcf) เพิ่มชื่อ เบอร์โทร อีเมล และข้อมูลติดต่ออื่น ๆ พร้อมดูตัวอย่างขณะกรอก",
+      },
+      tr: {
+        name: "vCard Oluşturucu",
+        description:
+          "Dijital kişi kartı oluşturun ve vCard (.vcf) dosyası olarak indirin. Adınızı, telefonunuzu, e-posta adresinizi ve diğer iletişim bilgilerinizi eklerken kartınızı önizleyin.",
+      },
+      vi: {
+        name: "Trình tạo vCard",
+        description:
+          "Tạo thẻ liên hệ kỹ thuật số và tải xuống dưới dạng vCard (.vcf). Thêm tên, số điện thoại, email và các thông tin liên hệ khác, rồi xem trước ngay khi nhập.",
+      },
+      "zh-CN": {
+        name: "vCard 名片生成器",
+        description:
+          "创建电子名片并下载为 vCard（.vcf）文件。填写姓名、电话、邮箱等联系信息，实时预览名片。",
+      },
+      "zh-TW": {
+        name: "vCard 名片產生器",
+        description:
+          "建立電子名片，並下載為 vCard（.vcf）檔案。輸入姓名、電話、電子郵件等聯絡資訊，即可即時預覽。",
+      },
+    },
+  },
+  {
     slug: "video-audio-extractor",
     category: "misc",
     icon: "film",
@@ -41659,6 +43628,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vlsm-calculator",
+    category: "network",
+    icon: "network",
+    tags: [
+      "vlsm",
+      "subnet",
+      "calculator",
+      "ipv4",
+      "cidr",
+      "netmask",
+      "address",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
+        description:
+          "خطّط للشبكات الفرعية IPv4 حسب عدد المضيفين. أدخل كتلة CIDR رئيسية لحساب أقنعة الشبكات الفرعية ونطاقات عناوين IP القابلة للاستخدام وعناوين البث والمساحة المتبقية.",
+      },
+      de: {
+        name: "IPv4-VLSM-Rechner",
+        description:
+          "Plane IPv4-Subnetze nach Hostanzahl. Gib einen übergeordneten CIDR-Block ein und berechne Subnetzmasken, nutzbare IP-Bereiche, Broadcast-Adressen und den verbleibenden Adressraum.",
+      },
+      en: {
+        name: "IPv4 VLSM Calculator",
+        description:
+          "Plan IPv4 subnets by host count. Enter a parent CIDR block to calculate subnet masks, usable IP ranges, broadcast addresses, and remaining address space.",
+      },
+      es: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planifica subredes IPv4 según el número de hosts. Introduce el bloque CIDR principal para calcular las máscaras de subred, los rangos IP utilizables, las direcciones de difusión y el espacio disponible.",
+      },
+      fr: {
+        name: "Calculateur VLSM IPv4",
+        description:
+          "Planifiez vos sous-réseaux IPv4 selon le nombre d’hôtes. À partir d’un bloc CIDR parent, calculez les masques, les plages d’IP utilisables, les adresses de diffusion et l’espace restant.",
+      },
+      he: {
+        name: "מחשבון VLSM לתת־רשתות IPv4",
+        description:
+          "תכננו תת־רשתות IPv4 לפי מספר המארחים. הזינו את בלוק ה־CIDR הראשי כדי לחשב מסכות תת־רשת, טווחי כתובות IP שמישות, כתובות שידור ושטח כתובות פנוי.",
+      },
+      hi: {
+        name: "IPv4 VLSM कैलकुलेटर",
+        description:
+          "होस्ट की संख्या के आधार पर IPv4 सबनेट की योजना बनाएँ। सबनेट मास्क, उपयोग योग्य IP रेंज, ब्रॉडकास्ट पते और बचा हुआ पता क्षेत्र जानने के लिए मूल CIDR ब्लॉक दर्ज करें।",
+      },
+      id: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rencanakan subnet IPv4 berdasarkan jumlah host. Masukkan blok CIDR induk untuk menghitung subnet mask, rentang IP yang bisa dipakai, alamat broadcast, dan sisa alamat.",
+      },
+      it: {
+        name: "Calcolatore di sottoreti IPv4 VLSM",
+        description:
+          "Pianifica le sottoreti IPv4 in base al numero di host. Inserisci un blocco CIDR per calcolare maschere, intervalli IP utilizzabili, indirizzi broadcast e spazio residuo.",
+      },
+      ja: {
+        name: "IPv4 VLSM サブネット計算ツール",
+        description:
+          "必要なホスト数に合わせて IPv4 サブネットを割り当てます。親ネットワークの CIDR ブロックを指定すると、サブネットマスク、使用可能な IP アドレス範囲、ブロードキャストアドレス、未割り当てのアドレスを確認できます。",
+      },
+      ko: {
+        name: "IPv4 VLSM 서브넷 계산기",
+        description:
+          "필요한 호스트 수에 맞춰 IPv4 서브넷을 구성하세요. 상위 CIDR 블록을 입력하면 서브넷 마스크, 사용 가능한 IP 범위, 브로드캐스트 주소, 남은 주소 공간을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rancang subnet IPv4 mengikut bilangan hos. Masukkan blok CIDR induk untuk mengira topeng subnet, julat IP yang boleh digunakan, alamat siaran dan baki alamat.",
+      },
+      nl: {
+        name: "IPv4 VLSM-calculator",
+        description:
+          "Plan IPv4-subnetten op basis van het aantal hosts. Voer een overkoepelend CIDR-blok in om subnetmaskers, bruikbare IP-bereiken, broadcastadressen en de resterende adresruimte te berekenen.",
+      },
+      no: {
+        name: "IPv4 VLSM-kalkulator",
+        description:
+          "Planlegg IPv4-subnett etter antall verter. Oppgi en overordnet CIDR-blokk for å beregne nettmasker, brukbare IP-områder, broadcast-adresser og gjenværende adresseplass.",
+      },
+      pl: {
+        name: "Kalkulator podsieci IPv4 VLSM",
+        description:
+          "Zaplanuj podsieci IPv4 według liczby hostów. Podaj blok CIDR, aby obliczyć maski podsieci, zakresy adresów IP dla hostów, adresy rozgłoszeniowe i pozostałą pulę adresów.",
+      },
+      pt: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planeje sub-redes IPv4 pela quantidade de hosts. Informe um bloco CIDR principal para calcular máscaras, faixas de IPs utilizáveis, endereços de broadcast e o espaço restante.",
+      },
+      ru: {
+        name: "Калькулятор подсетей IPv4 с VLSM",
+        description:
+          "Разбейте блок IPv4 на подсети по числу узлов. По исходному блоку CIDR калькулятор определит маски подсетей, диапазоны доступных IP, широковещательные адреса и остаток адресов.",
+      },
+      sv: {
+        name: "IPv4 VLSM-kalkylator",
+        description:
+          "Planera IPv4-subnät utifrån antalet värdar. Ange ett överordnat CIDR-block för att beräkna nätmasker, användbara IP-intervall, broadcast-adresser och återstående adressutrymme.",
+      },
+      th: {
+        name: "เครื่องคำนวณ IPv4 VLSM",
+        description:
+          "วางแผนซับเน็ต IPv4 ตามจำนวนโฮสต์ กรอกบล็อก CIDR ต้นทางเพื่อคำนวณซับเน็ตมาสก์ ช่วง IP ที่ใช้ได้ ที่อยู่บรอดแคสต์ และพื้นที่ที่อยู่ที่เหลือ",
+      },
+      tr: {
+        name: "IPv4 VLSM Hesaplayıcı",
+        description:
+          "IPv4 alt ağlarını ana makine sayısına göre planlayın. Alt ağ maskelerini, kullanılabilir IP aralıklarını, yayın adreslerini ve kalan adres alanını hesaplamak için üst CIDR bloğunu girin.",
+      },
+      vi: {
+        name: "Công cụ tính mạng con IPv4 theo VLSM",
+        description:
+          "Chia mạng con IPv4 theo số lượng máy cần cấp IP. Nhập khối CIDR gốc để tính mặt nạ mạng con, dải IP khả dụng, địa chỉ quảng bá và phần địa chỉ còn trống.",
+      },
+      "zh-CN": {
+        name: "IPv4 VLSM 子网计算器",
+        description:
+          "根据所需主机数规划 IPv4 子网。输入基础 CIDR 地址块，计算子网掩码、可用 IP 范围、广播地址和剩余地址空间。",
+      },
+      "zh-TW": {
+        name: "IPv4 VLSM 子網路計算機",
+        description:
+          "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -41786,6 +43886,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Whirlpool 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "wkt-geojson-converter",
+    category: "json",
+    icon: "braces",
+    tags: [
+      "wkt",
+      "well-known-text",
+      "geojson",
+      "gis",
+      "geometry",
+      "converter",
+      "postgis",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل بين WKT وGeoJSON",
+        description:
+          "حوّل الأشكال الهندسية من صيغة Well-Known Text (WKT) إلى GeoJSON أو بالعكس. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "WKT ↔ GeoJSON-Konverter",
+        description:
+          "Geometrien zwischen Well-Known Text (WKT) und GeoJSON umwandeln. Füge Text ein oder öffne eine Datei und kopiere die Geometrie oder lade sie herunter.",
+      },
+      en: {
+        name: "WKT ↔ GeoJSON Converter",
+        description:
+          "Convert Well-Known Text (WKT) geometries to GeoJSON and back. Paste text or open a file, then copy or download the converted geometry.",
+      },
+      es: {
+        name: "Convertidor WKT ↔ GeoJSON",
+        description:
+          "Convierte geometrías en Well-Known Text (WKT) a GeoJSON y viceversa. Pega el texto o abre un archivo y luego copia o descarga la geometría convertida.",
+      },
+      fr: {
+        name: "Convertisseur WKT ↔ GeoJSON",
+        description:
+          "Convertissez des géométries Well-Known Text (WKT) en GeoJSON et inversement. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר WKT ↔ GeoJSON",
+        description:
+          "המירו גאומטריות מ־Well-Known Text (WKT) ל־GeoJSON ובחזרה. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את הגאומטריה שהומרה.",
+      },
+      hi: {
+        name: "WKT ↔ GeoJSON कन्वर्टर",
+        description:
+          "Well-Known Text (WKT) और GeoJSON के बीच ज्यामिति बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर बदली गई ज्यामिति कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WKT ↔ GeoJSON",
+        description:
+          "Konversi geometri Well-Known Text (WKT) ke GeoJSON atau sebaliknya. Tempel teks atau buka berkas, lalu salin atau unduh geometri hasil konversi.",
+      },
+      it: {
+        name: "Convertitore WKT ↔ GeoJSON",
+        description:
+          "Converti geometrie Well-Known Text (WKT) in GeoJSON e viceversa. Incolla il testo o apri un file, poi copia o scarica la geometria convertita.",
+      },
+      ja: {
+        name: "WKT ↔ GeoJSON 変換",
+        description:
+          "Well-Known Text（WKT）と GeoJSON のジオメトリを相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "WKT ↔ GeoJSON 변환기",
+        description:
+          "Well-Known Text(WKT) 지오메트리와 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 변환된 지오메트리를 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WKT ↔ GeoJSON",
+        description:
+          "Tukar geometri Well-Known Text (WKT) kepada GeoJSON dan sebaliknya. Tampal teks atau buka fail, kemudian salin atau muat turun geometri yang ditukar.",
+      },
+      nl: {
+        name: "WKT ↔ GeoJSON-converter",
+        description:
+          "Zet geometrieën om van Well-Known Text (WKT) naar GeoJSON of andersom. Plak tekst of open een bestand en kopieer of download de geometrie.",
+      },
+      no: {
+        name: "WKT ↔ GeoJSON-omformer",
+        description:
+          "Konverter geometrier fra Well-Known Text (WKT) til GeoJSON eller omvendt. Lim inn tekst eller åpne en fil, og kopier eller last ned geometrien.",
+      },
+      pl: {
+        name: "Konwerter WKT ↔ GeoJSON",
+        description:
+          "Konwertuj geometrie Well-Known Text (WKT) na GeoJSON i odwrotnie. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor WKT ↔ GeoJSON",
+        description:
+          "Converta geometrias no formato Well-Known Text (WKT) para GeoJSON e vice-versa. Cole o texto ou abra um arquivo e copie ou baixe a geometria convertida.",
+      },
+      ru: {
+        name: "Конвертер WKT ↔ GeoJSON",
+        description:
+          "Преобразуйте геометрии из Well-Known Text (WKT) в GeoJSON и обратно. Вставьте текст или откройте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "WKT ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera Well-Known Text-geometrier (WKT) till GeoJSON och tillbaka. Klistra in text eller öppna en fil och kopiera eller ladda ned den konverterade geometrin.",
+      },
+      th: {
+        name: "เครื่องมือแปลง WKT ↔ GeoJSON",
+        description:
+          "แปลงข้อมูลเรขาคณิตจาก Well-Known Text (WKT) เป็น GeoJSON หรือแปลงย้อนกลับ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดข้อมูลที่แปลงแล้ว",
+      },
+      tr: {
+        name: "WKT ↔ GeoJSON Dönüştürücü",
+        description:
+          "Well-Known Text (WKT) geometrilerini GeoJSON’a veya GeoJSON’u WKT’ye dönüştürün. Metni yapıştırın ya da dosyayı açın, ardından geometriyi kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WKT ↔ GeoJSON",
+        description:
+          "Chuyển đổi qua lại giữa hình học Well-Known Text (WKT) và GeoJSON. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải hình học đã chuyển đổi.",
+      },
+      "zh-CN": {
+        name: "WKT ↔ GeoJSON 转换器",
+        description:
+          "在 Well-Known Text（WKT）几何图形和 GeoJSON 之间相互转换。粘贴文本或打开文件，然后复制或下载转换后的几何图形。",
+      },
+      "zh-TW": {
+        name: "WKT ↔ GeoJSON 轉換器",
+        description:
+          "在 Well-Known Text（WKT）與 GeoJSON 之間雙向轉換幾何資料。貼上文字或開啟檔案，再複製或下載結果。",
       },
     },
   },

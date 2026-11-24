@@ -1,0 +1,18 @@
+{
+  "decimal": "Ondalık derece (DD)",
+  "dms": "Derece, dakika, saniye (DMS)",
+  "latitude": "Enlem",
+  "longitude": "Boylam",
+  "degrees": "Derece",
+  "minutes": "Dakika",
+  "seconds": "Saniye",
+  "hemisphere": "Yarım küre",
+  "north": "Kuzey (N)",
+  "south": "Güney (S)",
+  "east": "Doğu (E)",
+  "west": "Batı (W)",
+  "example": "Örneği dene",
+  "copy": "Koordinatları kopyala",
+  "copied": "Kopyalandı",
+  "invalid": "Enlem ±90°, boylam ±180° aralığında olmalıdır. Dakika ve saniye 60’tan küçük olmalıdır."
+}

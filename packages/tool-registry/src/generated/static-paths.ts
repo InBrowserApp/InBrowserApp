@@ -3774,6 +3774,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpmn-viewer",
+    language: "ar",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "de",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "en",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "es",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "fr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "he",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "hi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "id",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "it",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ja",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ko",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ms",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "nl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "no",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pt",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ru",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "sv",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "th",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "tr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "vi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "business-days-calculator",
     language: "ar",
   },
@@ -4786,6 +4878,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-text-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ar",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "de",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "en",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "es",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "fr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "he",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "hi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "id",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "it",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ja",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ko",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ms",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "nl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "no",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pt",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ru",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "sv",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "th",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "tr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "vi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     language: "ar",
   },
@@ -5703,6 +5979,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "color-picker",
+    language: "zh-TW",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ar",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "de",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "en",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "es",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "fr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "he",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "hi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "id",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "it",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ja",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ko",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ms",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "nl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "no",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pt",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ru",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "sv",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "th",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "tr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "vi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "compound-interest-calculator",
     language: "zh-TW",
   },
   {
@@ -7454,6 +7822,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dms-coordinate-converter",
+    language: "ar",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "de",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "en",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "es",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "fr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "he",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "hi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "id",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "it",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ja",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ko",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ms",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "nl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "no",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pt",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ru",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "sv",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "th",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "tr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "vi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "dns-lookup",
     language: "ar",
   },
@@ -8834,6 +9294,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epsg-coordinate-transformer",
+    language: "ar",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "de",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "en",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "es",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "fr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "he",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "hi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "id",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "it",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ja",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ko",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ms",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "nl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "no",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pt",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ru",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "sv",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "th",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "tr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "vi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-CN",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-metadata-editor",
     language: "ar",
   },
@@ -9938,6 +10490,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geojson-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "de",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "en",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "es",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "he",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "id",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "it",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "no",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "th",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-maker",
     language: "ar",
   },
@@ -10395,6 +11039,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "gpu-information",
+    language: "zh-TW",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ar",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "de",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "en",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "es",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "fr",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "he",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "hi",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "id",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "it",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ja",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ko",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ms",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "nl",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "no",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "pl",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "pt",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ru",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "sv",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "th",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "tr",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "vi",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "gpx-viewer",
     language: "zh-TW",
   },
   {
@@ -11591,6 +12327,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ical-event-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "de",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "en",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "es",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "he",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "id",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "it",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "no",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "th",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-csv-converter",
     language: "zh-TW",
   },
   {
@@ -17206,6 +18126,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mermaid-previewer",
+    language: "ar",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "de",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "en",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "es",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "fr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "he",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "hi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "id",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "it",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ja",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ko",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ms",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "nl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "no",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pt",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ru",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "sv",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "th",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "tr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "vi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-html-converter",
     language: "ar",
   },
@@ -20791,6 +21803,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pdf-to-image-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "de",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "en",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "es",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "he",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "id",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "it",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "no",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "th",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-to-pdfa-converter",
     language: "zh-TW",
   },
   {
@@ -26038,6 +27142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "stereo-channel-splitter",
+    language: "ar",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "de",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "en",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "es",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "fr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "he",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "hi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "id",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "it",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ja",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ko",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ms",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "nl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "no",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pt",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ru",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "sv",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "th",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "tr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "vi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
     slug: "stopwatch",
     language: "ar",
   },
@@ -29810,6 +31006,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vcard-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ar",
+  },
+  {
+    slug: "vcard-generator",
+    language: "de",
+  },
+  {
+    slug: "vcard-generator",
+    language: "en",
+  },
+  {
+    slug: "vcard-generator",
+    language: "es",
+  },
+  {
+    slug: "vcard-generator",
+    language: "fr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "he",
+  },
+  {
+    slug: "vcard-generator",
+    language: "hi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "id",
+  },
+  {
+    slug: "vcard-generator",
+    language: "it",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ja",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ko",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ms",
+  },
+  {
+    slug: "vcard-generator",
+    language: "nl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "no",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pt",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ru",
+  },
+  {
+    slug: "vcard-generator",
+    language: "sv",
+  },
+  {
+    slug: "vcard-generator",
+    language: "th",
+  },
+  {
+    slug: "vcard-generator",
+    language: "tr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "vi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "video-audio-extractor",
     language: "ar",
   },
@@ -30270,6 +31650,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vlsm-calculator",
+    language: "ar",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "de",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "en",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "es",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "fr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "he",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "hi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "id",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "it",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ja",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ko",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ms",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "nl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "no",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pt",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ru",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "sv",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "th",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "tr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "vi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },
@@ -30359,6 +31831,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "whirlpool-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "wkt-geojson-converter",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,17 @@
+{
+  "source": "Sistem koordinat sumber",
+  "target": "Sistem koordinat tujuan",
+  "search": "Cari dengan kode EPSG atau nama",
+  "noSystems": "Tidak ada sistem koordinat yang cocok.",
+  "longitude": "Bujur (°)",
+  "latitude": "Lintang (°)",
+  "easting": "Koordinat timur",
+  "northing": "Koordinat utara",
+  "meters": "Meter",
+  "example": "Coba contoh",
+  "swap": "Balik arah transformasi",
+  "copy": "Salin koordinat",
+  "copied": "Disalin",
+  "invalid": "Koordinat ini tidak dapat ditransformasikan. Periksa nilai dan sistem koordinat sumber.",
+  "axisHelp": "Koordinat geografis memakai urutan bujur, lalu lintang. Koordinat proyeksi memakai urutan koordinat timur, lalu koordinat utara."
+}

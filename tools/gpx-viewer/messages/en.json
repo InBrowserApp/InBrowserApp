@@ -1,0 +1,17 @@
+{
+  "openFile": "Open GPX",
+  "example": "Try an example",
+  "map": "GPX map",
+  "fit": "Fit to data",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "empty": "Open a .gpx file or load the example to explore a route.",
+  "invalid": "Could not open this GPX file. Check that it contains valid GPX coordinates.",
+  "distance": "Distance",
+  "ascent": "Ascent",
+  "descent": "Descent",
+  "elevation": "Elevation",
+  "profile": "Elevation profile",
+  "noElevation": "The track or route has no recorded elevation.",
+  "waypoint": "Waypoint {number}"
+}

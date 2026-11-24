@@ -1,0 +1,17 @@
+{
+  "openFile": "Åpne GeoJSON",
+  "example": "Prøv et eksempel",
+  "paste": "Lim inn GeoJSON",
+  "render": "Vis på kartet",
+  "map": "GeoJSON-kart",
+  "fit": "Tilpass kartutsnittet",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "features": "Objekter",
+  "properties": "Egenskaper",
+  "empty": "Åpne en .geojson- eller .json-fil, eller lim inn GeoJSON for å komme i gang.",
+  "noGeometry": "Disse GeoJSON-dataene inneholder ingen geometrier som kan vises.",
+  "noProperties": "Dette objektet har ingen egenskaper.",
+  "invalid": "Kunne ikke åpne GeoJSON. Sjekk at dataene inneholder gyldige GeoJSON-geometrier.",
+  "feature": "Objekt {number}"
+}

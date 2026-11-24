@@ -55,6 +55,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "bpmn-viewer": () => import("@tool/bpmn-viewer/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
   "caj-to-pdf-converter": () => import("@tool/caj-to-pdf-converter/page"),
@@ -69,6 +70,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
+  "chinese-text-converter": () => import("@tool/chinese-text-converter/page"),
+  "chinese-to-pinyin": () => import("@tool/chinese-to-pinyin/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
   "chm-viewer": () => import("@tool/chm-viewer/page"),
@@ -82,6 +85,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
+  "compound-interest-calculator": () =>
+    import("@tool/compound-interest-calculator/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "crc-checksum-calculator": () => import("@tool/crc-checksum-calculator/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
@@ -104,6 +109,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
+  "dms-coordinate-converter": () =>
+    import("@tool/dms-coordinate-converter/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),
@@ -122,6 +129,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "email-viewer": () => import("@tool/email-viewer/page"),
   "env-converter": () => import("@tool/env-converter/page"),
+  "epsg-coordinate-transformer": () =>
+    import("@tool/epsg-coordinate-transformer/page"),
   "epub-metadata-editor": () => import("@tool/epub-metadata-editor/page"),
   "epub-reader": () => import("@tool/epub-reader/page"),
   "epub-to-pdf-converter": () => import("@tool/epub-to-pdf-converter/page"),
@@ -136,12 +145,14 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
+  "geojson-viewer": () => import("@tool/geojson-viewer/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
+  "gpx-viewer": () => import("@tool/gpx-viewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
@@ -158,6 +169,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "ics-calendar-viewer": () => import("@tool/ics-calendar-viewer/page"),
+  "ics-csv-converter": () => import("@tool/ics-csv-converter/page"),
   "image-background-remover": () =>
     import("@tool/image-background-remover/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),
@@ -230,6 +243,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "media-info-viewer": () => import("@tool/media-info-viewer/page"),
+  "mermaid-previewer": () => import("@tool/mermaid-previewer/page"),
   "mhtml-to-html-converter": () => import("@tool/mhtml-to-html-converter/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
@@ -275,6 +289,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-splitter": () => import("@tool/pdf-splitter/page"),
   "pdf-text-extractor": () => import("@tool/pdf-text-extractor/page"),
   "pdf-to-image-converter": () => import("@tool/pdf-to-image-converter/page"),
+  "pdf-to-pdfa-converter": () => import("@tool/pdf-to-pdfa-converter/page"),
   "pdf-viewer": () => import("@tool/pdf-viewer/page"),
   "pdf-watermark": () => import("@tool/pdf-watermark/page"),
   "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
@@ -356,6 +371,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ssh-key-generator": () => import("@tool/ssh-key-generator/page"),
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
+  "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),
@@ -402,13 +418,17 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "vcard-csv-converter": () => import("@tool/vcard-csv-converter/page"),
+  "vcard-generator": () => import("@tool/vcard-generator/page"),
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),
   "video-trimmer": () => import("@tool/video-trimmer/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
+  "vlsm-calculator": () => import("@tool/vlsm-calculator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
+  "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),
   "xls-to-xlsx-converter": () => import("@tool/xls-to-xlsx-converter/page"),
   "xlsx-to-ods-converter": () => import("@tool/xlsx-to-ods-converter/page"),
   "xlsx-viewer": () => import("@tool/xlsx-viewer/page"),

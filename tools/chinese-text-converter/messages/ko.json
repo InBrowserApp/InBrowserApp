@@ -1,0 +1,23 @@
+{
+  "directionLabel": "변환 방향",
+  "toTraditional": "간체에서 번체로",
+  "toSimplified": "번체에서 간체로",
+  "variantLabel": "번체 종류",
+  "variants": {
+    "t": "표준 번체",
+    "tw": "대만 글자",
+    "twp": "대만 글자와 용어",
+    "hk": "홍콩 글자"
+  },
+  "inputLabel": "원문",
+  "inputPlaceholder": "중국어를 붙여넣거나 입력하세요",
+  "exampleLabel": "예시 사용",
+  "clearLabel": "지우기",
+  "outputLabel": "변환 결과",
+  "outputPlaceholder": "결과가 여기에 표시됩니다",
+  "copyLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "copyFailedLabel": "복사 실패",
+  "loading": "변환 사전을 불러오는 중…",
+  "loadError": "사전을 불러오지 못했습니다. 페이지를 새로고침하기 전에 원문을 복사하세요."
+}

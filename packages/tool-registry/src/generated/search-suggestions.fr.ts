@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Visionneuse BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Calculateur de jours ouvrés",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Convertisseur de chinois simplifié et traditionnel",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Convertisseur de chinois en pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Convertisseur de nombres ↔ chiffres financiers chinois",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Sélecteur de Couleurs",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculateur d’intérêts composés",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Convertisseur de coordonnées GPS en DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Recherche DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Transformateur de coordonnées EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Éditeur de métadonnées EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "Visionneuse GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "Créateur de GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Informations sur le GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "Visionneuse GPX et profil altimétrique",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Générateur d'événements iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Visionneuse de fichiers ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Convertisseur ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Aperçu Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "Convertisseur MHTML en HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Convertisseur PDF en images",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "Convertir un PDF en PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Séparateur de canaux stéréo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Chronomètre",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "Convertisseur vCard ↔ CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "Générateur de vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Extracteur audio de vidéos",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Calculateur VLSM IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool de Texte ou Fichier",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "Convertisseur WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

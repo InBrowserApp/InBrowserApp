@@ -1,0 +1,4 @@
+{
+  "name": "Stereokanäle trennen",
+  "description": "Speichere den linken und rechten Kanal einer Stereoaufnahme als separate Monodateien. Höre beide im Browser an und lade sie als WAV, FLAC oder MP3 herunter."
+}

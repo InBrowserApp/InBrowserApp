@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 檢視器",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "工作日計算器",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "繁簡轉換器",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "漢字轉拼音",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "取色器",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算機",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "經緯度與度分秒轉換器",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS 查詢",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系統轉換器",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB 中繼資料編輯器",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON 檢視器",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF 製作器",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU 資訊",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX 檢視器與海拔剖面圖",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 事件產生器",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS 行事曆檔案檢視器",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS 與 CSV 互轉",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid 預覽器",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTML 轉 HTML 轉換器",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF 轉圖片轉換器",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "PDF 轉 PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "左右聲道分離",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "秒錶",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "vCard 與 CSV 互轉",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard 名片產生器",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "影片音訊擷取器",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM 子網路計算機",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool 雜湊文字或檔案",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON 轉換器",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

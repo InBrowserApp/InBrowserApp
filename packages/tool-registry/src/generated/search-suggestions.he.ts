@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "מציג BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "מחשבון ימי עבודה",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ממיר בין סינית מפושטת לסינית מסורתית",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "ממיר מסינית לפיניין",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "בוחר צבעים",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "מחשבון ריבית דריבית",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "ממיר קווי רוחב ואורך ל־DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "בדיקת DNS",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "ממיר קואורדינטות EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "עורך מטא־נתונים ל־EPUB",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "מציג GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "יוצר GIF",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "מידע על ה-GPU",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "מציג GPX ופרופיל גובה",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "מחולל אירועי iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "מציג קובצי לוח שנה ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ממיר ICS ו-CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "תצוגה מקדימה של Mermaid",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "ממיר MHTML ל־HTML",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "ממיר PDF לתמונות",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "המרת PDF ל־PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "פיצול ערוצי סטריאו",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "סטופר",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "ממיר vCard ו-CSV",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "מחולל vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "חילוץ שמע מווידאו",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "מחשבון VLSM לתת־רשתות IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "האש Whirlpool טקסט או קובץ",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "ממיר WKT ↔ GeoJSON",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",

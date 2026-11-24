@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Teks Mandarin",
+  "inputPlaceholder": "Ketik atau tempel teks Mandarin",
+  "exampleLabel": "Coba contoh",
+  "clearLabel": "Hapus",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Hasil pinyin akan muncul di sini",
+  "formatLabel": "Format nada",
+  "marksLabel": "Tanda nada",
+  "numbersLabel": "Angka nada",
+  "plainLabel": "Tanpa nada",
+  "copyLabel": "Salin pinyin",
+  "copiedLabel": "Tersalin",
+  "copyFailedLabel": "Gagal menyalin"
+}

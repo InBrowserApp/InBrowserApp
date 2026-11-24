@@ -1,0 +1,4 @@
+{
+  "name": "PDF 转 PDF/A",
+  "description": "将 PDF 转换为 PDF/A-1b 或 PDF/A-2b，用于长期归档。保留文本搜索功能，并在浏览器中校验归档副本。"
+}

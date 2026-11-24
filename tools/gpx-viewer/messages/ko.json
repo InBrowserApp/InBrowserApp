@@ -1,0 +1,17 @@
+{
+  "openFile": "GPX 열기",
+  "example": "예제 사용하기",
+  "map": "GPX 지도",
+  "fit": "데이터에 맞추기",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "empty": ".gpx 파일을 열거나 예제를 불러와 경로를 살펴보세요.",
+  "invalid": "이 GPX 파일을 열 수 없습니다. 유효한 GPX 좌표가 포함되어 있는지 확인하세요.",
+  "distance": "거리",
+  "ascent": "누적 상승",
+  "descent": "누적 하강",
+  "elevation": "고도",
+  "profile": "고도 프로파일",
+  "noElevation": "트랙 또는 경로에 기록된 고도가 없습니다.",
+  "waypoint": "웨이포인트 {number}"
+}

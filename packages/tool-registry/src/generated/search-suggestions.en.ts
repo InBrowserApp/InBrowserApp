@@ -208,6 +208,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN Viewer",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Business Days Calculator",
     slug: "business-days-calculator",
@@ -263,6 +268,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Simplified and Traditional Chinese Converter",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Chinese to Pinyin Converter",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Number ↔ Chinese Uppercase Converter",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +326,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Color Picker",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Compound Interest Calculator",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Latitude & Longitude Converter (DD ↔ DMS)",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS Lookup",
     slug: "dns-lookup",
@@ -483,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG Coordinate Transformer",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB Metadata Editor",
     slug: "epub-metadata-editor",
@@ -543,6 +573,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "GeoJSON Viewer",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "GIF Maker",
     slug: "gif-maker",
@@ -566,6 +601,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "GPU Information",
     slug: "gpu-information",
+  },
+  {
+    category: "misc",
+    name: "GPX Viewer & Elevation Profile",
+    slug: "gpx-viewer",
   },
   {
     category: "network",
@@ -631,6 +671,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal Event Generator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS Calendar File Viewer",
+    slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS ↔ CSV Converter",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -938,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid Previewer",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTML to HTML Converter",
     slug: "mhtml-to-html-converter",
@@ -1131,6 +1186,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF to Image Converter",
     slug: "pdf-to-image-converter",
+  },
+  {
+    category: "pdf",
+    name: "PDF to PDF/A",
+    slug: "pdf-to-pdfa-converter",
   },
   {
     category: "pdf",
@@ -1418,6 +1478,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Stereo Channel Splitter",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Stopwatch",
     slug: "stopwatch",
@@ -1623,6 +1688,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "vCard ↔ CSV Converter",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard Generator",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Video Audio Extractor",
     slug: "video-audio-extractor",
@@ -1648,9 +1723,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM Calculator",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool Hash Text or File",
     slug: "whirlpool-hash-text-or-file",
+  },
+  {
+    category: "json",
+    name: "WKT ↔ GeoJSON Converter",
+    slug: "wkt-geojson-converter",
   },
   {
     category: "document",
