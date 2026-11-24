@@ -12,6 +12,7 @@
     "@workspace/pdf-reader": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
+    "bidi-js": "catalog:",
     "pdf-lib": "catalog:",
     "pdfjs-dist": "catalog:",
     "tesseract.js": "catalog:"

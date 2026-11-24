@@ -44,7 +44,14 @@ export default function PdfOcr({ lang, messages: m }: Props) {
           .replace("{total}", formatted.format(progress.total))
       : progress && m[progress.stage]
 
-  useEffect(() => () => active.current?.abort(), [])
+  useEffect(
+    () => () => {
+      const run = active.current
+      active.current = null
+      run?.abort()
+    },
+    []
+  )
   useEffect(() => {
     if (!download) {
       setDownloadUrl("")

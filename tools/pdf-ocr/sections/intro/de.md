@@ -13,10 +13,12 @@ Die optische Zeichenerkennung (OCR) liest Buchstaben und Zahlen aus den gescannt
 
 Seiten mit markierbarem Text überspringt die OCR, damit der vorhandene Text erhalten bleibt und nicht doppelt erscheint. Das gilt auch, wenn auf derselben Seite zusätzlich Text in einem Bild steckt. Enthalten alle Seiten bereits Text oder erkennt die OCR keinen neuen Text, steht die Original-PDF zum Download bereit.
 
+Bewahre das Original auf, wenn es digital signiert ist. Durch die neue Textebene wird die Signatur in der Kopie ungültig.
+
 ## Wie verbessere ich die Genauigkeit der Texterkennung?
 
 Wähle die Sprache des Textes und verwende einen scharfen, gerade ausgerichteten Scan mit gutem Kontrast. Für senkrecht geschriebenes Chinesisch, Japanisch oder Koreanisch gibt es eigene Sprachmodelle. Handschrift, Unschärfe und Kleingedrucktes können die Genauigkeit beeinträchtigen. Vergleiche wichtige Namen und Zahlen mit dem Original.
 
 ## Wo wird die PDF verarbeitet?
 
-Der Browser lädt die OCR-Engine und die ausgewählten Sprachdaten bei Bedarf. Deine PDF und der erkannte Text bleiben auf deinem Gerät. Wenn du reinen Text aus einer durchsuchbaren PDF brauchst, nutze die [PDF-Textextraktion](/tools/pdf-text-extractor/). Für Screenshots und Fotos eignet sich [Bild in Text umwandeln (OCR)](/tools/image-to-text-converter/).
+Der Browser lädt die OCR-Engine und die ausgewählten Sprachdaten bei Bedarf. Deine PDF und der erkannte Text bleiben auf deinem Gerät. Wenn du reinen Text aus einer durchsuchbaren PDF brauchst, nutze die [PDF-Textextraktion](/de/tools/pdf-text-extractor/). Für Screenshots und Fotos eignet sich [Bild in Text umwandeln (OCR)](/de/tools/image-to-text-converter/).

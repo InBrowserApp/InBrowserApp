@@ -13,10 +13,12 @@ Optisk tegngjenkjenning (OCR) leser bokstaver og tall i sidebildene og legger in
 
 OCR hopper over sider som allerede har tekst du kan merke, slik at den eksisterende teksten bevares uten duplikater. Det gjelder også for sider med både markerbar tekst og ord i et bilde. Hvis alle sidene allerede har tekst, eller OCR ikke finner ny tekst, kan du laste ned originalfilen.
 
+Behold originalen hvis den er digitalt signert. Når tekstlaget legges til, blir signaturen i den nye kopien ugyldig.
+
 ## Slik får du mer nøyaktig tekstgjenkjenning
 
 Velg språket i teksten, og bruk en skarp skanning med god kontrast der teksten står riktig vei. For loddrett skrevet kinesisk, japansk eller koreansk velger du en modell for loddrett tekst på det aktuelle språket. Håndskrift, uskarphet og liten skrift kan redusere nøyaktigheten. Dobbeltsjekk viktige navn og tall mot den opprinnelige siden.
 
 ## Hvor behandles PDF-filen min?
 
-Nettleseren laster ned OCR-programmet og språkdata for de valgte språkene ved behov. PDF-filen og teksten som gjenkjennes, blir på enheten din. Vil du hente ren tekst fra en søkbar PDF, kan du bruke [PDF-tekstuttrekker](/tools/pdf-text-extractor/). For skjermbilder og foto kan du bruke [Bilde til tekst (OCR)](/tools/image-to-text-converter/).
+Nettleseren laster ned OCR-programmet og språkdata for de valgte språkene ved behov. PDF-filen og teksten som gjenkjennes, blir på enheten din. Vil du hente ren tekst fra en søkbar PDF, kan du bruke [PDF-tekstuttrekker](/no/tools/pdf-text-extractor/). For skjermbilder og foto kan du bruke [Bilde til tekst (OCR)](/no/tools/image-to-text-converter/).

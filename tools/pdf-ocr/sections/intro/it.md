@@ -13,10 +13,12 @@ Il riconoscimento ottico dei caratteri (OCR) legge lettere e numeri nelle immagi
 
 L’OCR salta le pagine che contengono già testo selezionabile, così nei PDF con pagine scansionate e pagine di testo quello esistente viene conservato senza duplicati. Anche una pagina che contiene sia testo selezionabile sia parole all’interno di un’immagine viene saltata. Se tutte le pagine contengono già testo o l’OCR non ne trova di nuovo, puoi scaricare il PDF originale.
 
+Conserva l’originale se contiene una firma digitale. L’aggiunta del livello di testo invalida la firma nella nuova copia.
+
 ## Come posso migliorare la precisione dell’OCR?
 
 Scegli la lingua del testo e usa una scansione nitida, orientata correttamente e con un buon contrasto. Per il cinese, il giapponese o il coreano scritto in verticale, scegli il modello corrispondente. Scrittura a mano, sfocatura e caratteri piccoli possono ridurre la precisione. Confronta nomi e numeri importanti con la pagina originale.
 
 ## Dove viene elaborato il PDF?
 
-Il browser scarica il motore OCR e i dati della lingua selezionata quando servono. Il PDF e il testo riconosciuto rimangono sul tuo dispositivo. Per ottenere testo normale da un PDF ricercabile, usa l’[Estrattore di testo PDF](/tools/pdf-text-extractor/). Per screenshot o foto, usa il [Convertitore da immagine a testo (OCR)](/tools/image-to-text-converter/).
+Il browser scarica il motore OCR e i dati della lingua selezionata quando servono. Il PDF e il testo riconosciuto rimangono sul tuo dispositivo. Per ottenere testo normale da un PDF ricercabile, usa l’[Estrattore di testo PDF](/it/tools/pdf-text-extractor/). Per screenshot o foto, usa il [Convertitore da immagine a testo (OCR)](/it/tools/image-to-text-converter/).

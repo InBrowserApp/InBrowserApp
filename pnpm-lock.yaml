@@ -716,6 +716,9 @@ catalogs:
     bcrypt-ts:
       specifier: ^9.0.3
       version: 9.0.3
+    bidi-js:
+      specifier: 1.0.3
+      version: 1.0.3
     bip39:
       specifier: ^3.1.2
       version: 3.1.2
@@ -8922,6 +8925,9 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      bidi-js:
+        specifier: 'catalog:'
+        version: 1.0.3
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -16110,6 +16116,9 @@ packages:
     resolution: {integrity: sha512-7N21c3DP+jqYUlxhrx5b4GMzZaLw5kmokizcXny2PIDRxETkll7HNDo36mI2xClsxYdpX+eP77pEDPXYDNNQLw==}
     engines: {node: '>=22'}
 
+  bidi-js@1.0.3:
+    resolution: {integrity: sha512-RKshQI1R3YQ+n9YJz2QQ147P66ELpa1FQEg20Dk8oW9t2KgLbpDLLp9aGZ7y8WHSshDknG0bknqGw5/tyCs5tw==}
+
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
 
@@ -23159,6 +23168,10 @@ snapshots:
       is-decimal: 2.0.1
 
   bcrypt-ts@9.0.3: {}
+
+  bidi-js@1.0.3:
+    dependencies:
+      require-from-string: 2.0.2
 
   bignumber.js@9.3.1: {}
 

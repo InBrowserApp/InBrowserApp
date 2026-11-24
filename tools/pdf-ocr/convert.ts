@@ -15,7 +15,25 @@ export type Progress =
 export type Result =
   | { status: "ready"; blob: Blob; skippedPages: boolean }
   | { status: "alreadySearchable" | "noText" }
-  | { status: "invalidPdf" | "encryptedPdf" }
+  | { status: "invalidPdf" }
+  | { status: "encryptedPdf" }
+
+// Request word geometry for models whose native text-only PDF needs ordering
+// adjustments. Vertical writing keeps Tesseract's native vertical layout.
+const normalizedModels = new Set<Language>([
+  "ara",
+  "chi_sim",
+  "chi_tra",
+  "div",
+  "fas",
+  "heb",
+  "jpn",
+  "pus",
+  "syr",
+  "uig",
+  "urd",
+  "yid",
+])
 
 type Options = {
   language: Language
@@ -81,7 +99,7 @@ export async function convertPdf(
       const { data } = await worker.recognize(
         canvas,
         { pdfTextOnly: true },
-        { text: true, pdf: true }
+        { text: true, pdf: true, blocks: normalizedModels.has(language) }
       )
       signal.throwIfAborted()
       if (!data.text.trim() || !data.pdf) return
@@ -94,7 +112,8 @@ export async function convertPdf(
         new Uint8Array(data.pdf),
         viewport,
         canvas.width,
-        canvas.height
+        canvas.height,
+        data.blocks
       )
     }
 
@@ -155,7 +174,7 @@ export async function convertPdf(
     if (!output)
       return { status: skippedPages ? "alreadySearchable" : "noText" }
     onProgress({ stage: "saving" })
-    const result = await output.save()
+    const result = await output.save({ updateFieldAppearances: false })
     signal.throwIfAborted()
     return {
       status: "ready",

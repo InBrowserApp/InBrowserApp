@@ -13,10 +13,12 @@ O reconhecimento óptico de caracteres (OCR) identifica letras e números nas im
 
 O OCR pula as páginas que já têm texto selecionável para preservar o texto existente e evitar duplicatas. Isso vale também para páginas que contêm texto selecionável e palavras dentro de uma imagem. Se todas as páginas já tiverem texto ou se o OCR não encontrar texto novo, você poderá baixar o PDF original.
 
+Se o arquivo original tiver uma assinatura digital, guarde-o. A adição da camada de texto invalida a assinatura na nova cópia.
+
 ## Como melhorar a precisão do OCR?
 
 Escolha o idioma do texto e use uma digitalização alinhada, nítida e com bom contraste. Para chinês, japonês ou coreano escritos na vertical, escolha o modelo correspondente. Texto manuscrito, áreas borradas e letras pequenas podem reduzir a precisão. Confira nomes e números importantes na página original.
 
 ## Onde o OCR de PDF é processado?
 
-O navegador baixa o mecanismo de OCR e os dados dos idiomas selecionados conforme a necessidade. O PDF e o texto reconhecido ficam no seu dispositivo. Para obter texto simples de um PDF pesquisável, use o [Extrator de texto de PDF](/tools/pdf-text-extractor/). Para capturas de tela ou fotos, use o [Conversor de imagem em texto (OCR)](/tools/image-to-text-converter/).
+O navegador baixa o mecanismo de OCR e os dados dos idiomas selecionados conforme a necessidade. O PDF e o texto reconhecido ficam no seu dispositivo. Para obter texto simples de um PDF pesquisável, use o [Extrator de texto de PDF](/pt/tools/pdf-text-extractor/). Para capturas de tela ou fotos, use o [Conversor de imagem em texto (OCR)](/pt/tools/image-to-text-converter/).

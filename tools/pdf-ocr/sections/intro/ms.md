@@ -13,10 +13,12 @@ Pengecaman aksara optik (OCR) membaca huruf dan nombor dalam imej halaman dan me
 
 OCR melangkau halaman yang sudah mengandungi teks yang boleh dipilih. Dengan itu, PDF yang mengandungi halaman imbasan dan halaman teks akan mengekalkan teks sedia ada tanpa pendua. Halaman yang mengandungi kedua-dua teks boleh dipilih dan perkataan dalam imej juga dilangkau. Jika setiap halaman sudah mengandungi teks, atau OCR tidak menemui teks baharu, anda boleh memuat turun PDF asal.
 
+Simpan fail asal jika ia mempunyai tandatangan digital. Penambahan lapisan teks membatalkan tandatangan dalam salinan baharu.
+
 ## Bagaimanakah saya boleh meningkatkan ketepatan OCR?
 
 Pilih bahasa yang digunakan pada halaman dan gunakan imbasan yang jelas, tegak dan mempunyai kontras yang baik. Untuk tulisan menegak dalam bahasa Cina, Jepun atau Korea, pilih model bahasa menegak yang sepadan. Tulisan tangan, imej kabur dan cetakan kecil boleh mengurangkan ketepatan. Bandingkan nama dan nombor penting dengan halaman asal.
 
 ## Di manakah PDF saya diproses?
 
-Pelayar memuat turun enjin OCR dan data bahasa pilihan apabila diperlukan. PDF dan teks yang dikenal pasti kekal pada peranti anda. Untuk mendapatkan teks biasa daripada PDF yang boleh dicari, gunakan [Pengekstrak Teks PDF](/tools/pdf-text-extractor/). Untuk tangkapan skrin atau foto, gunakan [Penukar Imej kepada Teks (OCR)](/tools/image-to-text-converter/).
+Pelayar memuat turun enjin OCR dan data bahasa pilihan apabila diperlukan. PDF dan teks yang dikenal pasti kekal pada peranti anda. Untuk mendapatkan teks biasa daripada PDF yang boleh dicari, gunakan [Pengekstrak Teks PDF](/ms/tools/pdf-text-extractor/). Untuk tangkapan skrin atau foto, gunakan [Penukar Imej kepada Teks (OCR)](/ms/tools/image-to-text-converter/).

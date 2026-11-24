@@ -13,10 +13,12 @@ La reconnaissance optique de caractères (OCR) lit les lettres et les chiffres p
 
 L’OCR ignore les pages qui contiennent déjà du texte sélectionnable pour éviter les doublons. Il ignore également les pages qui mêlent du texte sélectionnable et des mots intégrés à une image. Si toutes les pages contiennent déjà du texte ou si aucun nouveau texte n’est reconnu, l’outil vous propose de télécharger le PDF d’origine.
 
+Si le fichier d’origine comporte une signature numérique, conservez-le. L’ajout d’une couche de texte invalide la signature dans la nouvelle copie.
+
 ## Comment améliorer la précision de l’OCR ?
 
 Sélectionnez la langue du texte et utilisez une numérisation nette, à l’endroit et bien contrastée. Pour du chinois, du japonais ou du coréen écrit à la verticale, sélectionnez le modèle correspondant à l’écriture verticale. L’écriture manuscrite, le flou et les petits caractères peuvent rendre la reconnaissance moins précise. Vérifiez les noms et les chiffres importants sur la page d’origine.
 
 ## Où se déroule la reconnaissance de texte ?
 
-Le navigateur télécharge le moteur OCR et les données des langues sélectionnées au besoin. Votre PDF et le texte reconnu restent sur votre appareil. Pour récupérer le texte brut d’un PDF consultable, utilisez l’[Extracteur de texte PDF](/tools/pdf-text-extractor/). Pour une capture d’écran ou une photo, utilisez le [Convertisseur d’image en texte (OCR)](/tools/image-to-text-converter/).
+Le navigateur télécharge le moteur OCR et les données des langues sélectionnées au besoin. Votre PDF et le texte reconnu restent sur votre appareil. Pour récupérer le texte brut d’un PDF consultable, utilisez l’[Extracteur de texte PDF](/fr/tools/pdf-text-extractor/). Pour une capture d’écran ou une photo, utilisez le [Convertisseur d’image en texte (OCR)](/fr/tools/image-to-text-converter/).

@@ -13,6 +13,8 @@ Optical character recognition (OCR) reads letters and numbers in page images and
 
 OCR skips pages that already contain selectable text so mixed PDFs keep their existing text without doubling it. A page that mixes selectable text with words inside an image is also skipped. If every page already has text, or OCR finds no new text, the tool offers the original PDF to download.
 
+Keep the original if it carries a digital signature. Adding a text layer invalidates the signature in the new copy.
+
 ## How can I improve OCR accuracy?
 
 Choose the language on the page and use a sharp, upright scan with good contrast. For vertical Chinese, Japanese, or Korean, choose the corresponding vertical language model. Handwriting, blur, and small print can reduce accuracy. Check important names and numbers against the original page.

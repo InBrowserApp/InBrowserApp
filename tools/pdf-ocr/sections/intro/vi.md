@@ -13,10 +13,12 @@ Công nghệ nhận dạng ký tự quang học (OCR) đọc chữ và số tron
 
 OCR bỏ qua các trang đã có văn bản chọn được để giữ nguyên phần văn bản có sẵn và tránh tạo nội dung trùng lặp. Điều này áp dụng cả khi trang đó có thêm chữ trong ảnh. Nếu tất cả các trang đã có văn bản hoặc OCR không nhận dạng được văn bản mới, bạn có thể tải xuống PDF gốc.
 
+Nếu PDF có chữ ký số, hãy giữ lại bản gốc. Việc thêm lớp văn bản làm mất hiệu lực của chữ ký trên bản sao mới.
+
 ## Làm sao để OCR nhận dạng chính xác hơn?
 
 Chọn đúng ngôn ngữ và dùng bản quét rõ nét, ngay ngắn, có độ tương phản tốt. Nếu văn bản tiếng Trung, tiếng Nhật hoặc tiếng Hàn được viết theo chiều dọc, hãy chọn mô hình dành cho chữ viết dọc của ngôn ngữ tương ứng. Chữ viết tay, ảnh mờ và chữ in nhỏ có thể làm giảm độ chính xác. Hãy đối chiếu tên và số quan trọng với trang gốc.
 
 ## Tệp PDF được xử lý ở đâu?
 
-Trình duyệt tải bộ nhận dạng OCR và dữ liệu cho ngôn ngữ đã chọn khi cần dùng. Tệp PDF và văn bản nhận dạng được đều nằm trên thiết bị của bạn. Để lấy văn bản thuần từ một PDF có thể tìm kiếm, hãy dùng [Trình trích xuất văn bản PDF](/tools/pdf-text-extractor/). Với ảnh chụp màn hình hoặc ảnh chụp, hãy dùng công cụ [Chuyển ảnh thành văn bản (OCR)](/tools/image-to-text-converter/).
+Trình duyệt tải bộ nhận dạng OCR và dữ liệu cho ngôn ngữ đã chọn khi cần dùng. Tệp PDF và văn bản nhận dạng được đều nằm trên thiết bị của bạn. Để lấy văn bản thuần từ một PDF có thể tìm kiếm, hãy dùng [Trình trích xuất văn bản PDF](/vi/tools/pdf-text-extractor/). Với ảnh chụp màn hình hoặc ảnh chụp, hãy dùng công cụ [Chuyển ảnh thành văn bản (OCR)](/vi/tools/image-to-text-converter/).

@@ -13,10 +13,12 @@ Optik karakter tanıma (OCR), sayfa görüntülerindeki harfleri ve rakamları o
 
 OCR, seçilebilir metin içeren sayfaları atlar. Böylece hem taranmış hem dijital sayfalardan oluşan PDF'lerde mevcut metin yinelenmeden korunur. Seçilebilir metinle birlikte bir görselin içinde sözcükler bulunan sayfalar da atlanır. Tüm sayfalarda zaten metin varsa veya OCR yeni metin bulamazsa orijinal PDF'yi indirebilirsiniz.
 
+Dijital imzalı PDF’nin aslını saklayın. Metin katmanı eklendiğinde yeni kopyadaki imza geçersiz olur.
+
 ## OCR doğruluğunu nasıl artırabilirim?
 
 Sayfadaki metnin dilini seçin ve net, doğru yönde, kontrastı iyi bir tarama kullanın. Dikey yazılmış Çince, Japonca veya Korece metinler için ilgili dikey yazı modelini seçin. El yazısı, bulanıklık ve küçük yazılar doğruluğu düşürebilir. Önemli adları ve sayıları orijinal sayfayla karşılaştırın.
 
 ## PDF OCR kullanırken dosyam gizli kalır mı?
 
-Tarayıcınız gerektiğinde OCR motorunu ve seçtiğiniz dilin verilerini indirir. PDF'niz ve tanınan metin cihazınızda kalır. Aranabilir bir PDF'den düz metin almak için [PDF Metin Çıkarıcı](/tools/pdf-text-extractor/) aracını kullanın. Ekran görüntüleri ve fotoğraflar için [Görselden Metne Dönüştürücü (OCR)](/tools/image-to-text-converter/) aracını kullanın.
+Tarayıcınız gerektiğinde OCR motorunu ve seçtiğiniz dilin verilerini indirir. PDF'niz ve tanınan metin cihazınızda kalır. Aranabilir bir PDF'den düz metin almak için [PDF Metin Çıkarıcı](/tr/tools/pdf-text-extractor/) aracını kullanın. Ekran görüntüleri ve fotoğraflar için [Görselden Metne Dönüştürücü (OCR)](/tr/tools/image-to-text-converter/) aracını kullanın.

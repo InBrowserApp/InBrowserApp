@@ -13,10 +13,12 @@ Optisk teckenigenkänning (OCR) läser av bokstäver och siffror i sidbilderna o
 
 OCR hoppar över sidor som redan innehåller markerbar text. I PDF-filer med både skannade sidor och textsidor bevaras den befintliga texten utan att dubblas. Även sidor som innehåller både markerbar text och text i en bild hoppas över. Om alla sidor redan innehåller text, eller om OCR inte hittar ny text, kan du ladda ned den ursprungliga PDF-filen.
 
+Spara originalfilen om den har en digital signatur. När textlagret läggs till blir signaturen i den nya kopian ogiltig.
+
 ## Hur får jag bättre OCR-resultat?
 
 Välj språket på sidan och använd en skarp, rättvänd skanning med god kontrast. Om kinesiska, japanska eller koreanska är skrivet lodrätt, välj motsvarande språkmodell för lodrät text. Handskrift, oskärpa och liten text kan göra avläsningen mindre exakt. Kontrollera viktiga namn och siffror mot originalsidan.
 
 ## Var bearbetas PDF-filen?
 
-Webbläsaren hämtar OCR-motorn och data för det valda språket vid behov. PDF-filen och den avlästa texten stannar på din enhet. För oformaterad text från en sökbar PDF, använd [Textextraherare för PDF](/tools/pdf-text-extractor/). För en skärmbild eller ett foto, använd [Bild till text (OCR)](/tools/image-to-text-converter/).
+Webbläsaren hämtar OCR-motorn och data för det valda språket vid behov. PDF-filen och den avlästa texten stannar på din enhet. För oformaterad text från en sökbar PDF, använd [Textextraherare för PDF](/sv/tools/pdf-text-extractor/). För en skärmbild eller ett foto, använd [Bild till text (OCR)](/sv/tools/image-to-text-converter/).
