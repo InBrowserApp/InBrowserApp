@@ -1,0 +1,22 @@
+{
+  "address": "CID of IPFS-link",
+  "open": "Inhoud openen",
+  "example": "Een voorbeeldmap proberen",
+  "opening": "Inhoud ophalen…",
+  "contents": "Inhoud",
+  "back": "Terug",
+  "download": "Bestand downloaden",
+  "zip": "ZIP downloaden",
+  "preparing": "Download voorbereiden…",
+  "cancel": "Annuleren",
+  "empty": "Deze map is leeg.",
+  "invalid": "Voer een geldige CID, IPFS-URI of IPFS-gatewaylink in.",
+  "missing": "De inhoud kon niet via de gateways worden opgehaald.",
+  "pathMissing": "Dit pad is niet gevonden onder de CID.",
+  "corrupt": "Het teruggegeven blok kwam niet overeen met zijn CID.",
+  "unsupported": "Deze inhoud kan niet als UnixFS-bestand of -map worden geopend.",
+  "failed": "De download kon niet worden voltooid. Probeer het opnieuw of selecteer een kleinere map.",
+  "incomplete": "Sommige paden konden niet worden gedownload.",
+  "available": "Beschikbare bestanden downloaden",
+  "progress": "{path} voorbereiden"
+}

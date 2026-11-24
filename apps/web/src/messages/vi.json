@@ -89,7 +89,7 @@
       "ebook": "Đọc sách EPUB, MOBI, FB2 và tệp nén truyện tranh trong trình duyệt. Chuyển đổi định dạng sách điện tử, chỉnh sửa siêu dữ liệu EPUB hoặc xuất nội dung sách.",
       "geo": "Xem bản đồ và vệt đường GPS, chuyển đổi tọa độ giữa các hệ quy chiếu và làm việc với tệp GeoJSON, GPX, KML và WKT.",
       "image": "Chuyển đổi, thay đổi kích thước và kiểm tra hình ảnh trong trình duyệt của bạn. Tối ưu hóa tệp hình ảnh, xem siêu dữ liệu, tạo mã vạch và làm việc với các định dạng ảnh động.",
-      "ipfs": "Tính mã định danh nội dung cho tệp và thư mục, rồi tái tạo kết quả nhập IPFS ngay trong trình duyệt.",
+      "ipfs": "Tính CID IPFS, cấu hình DNSLink, trích xuất tệp lưu trữ CAR và tải tệp hoặc thư mục từ IPFS ngay trong trình duyệt.",
       "json": "Định dạng, xác thực, so sánh và chuyển đổi dữ liệu có cấu trúc. Làm việc với JSON, YAML, TOML, XML và CSV bằng các công cụ chạy trong trình duyệt của bạn.",
       "misc": "Dùng camera, kiểm tra bàn phím hoặc tay cầm chơi game, xem thông tin thiết bị và tìm các công cụ trình duyệt cho công việc hằng ngày.",
       "network": "Tra cứu thông tin DNS và IP, tính toán mạng con và kiểm tra chứng chỉ. Tìm các công cụ dành cho địa chỉ mạng, giao thức và khắc phục sự cố.",

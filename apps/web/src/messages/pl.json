@@ -89,7 +89,7 @@
       "ebook": "Czytaj pliki EPUB, MOBI, FB2 i archiwa komiksów w przeglądarce. Konwertuj e-booki, edytuj metadane EPUB lub eksportuj treść książek.",
       "geo": "Przeglądaj mapy i ślady GPS, przeliczaj współrzędne między układami odniesienia i pracuj z plikami GeoJSON, GPX, KML i WKT.",
       "image": "Konwertuj obrazy, zmieniaj ich rozmiar i przeglądaj je w przeglądarce. Optymalizuj pliki graficzne, przeglądaj metadane, twórz kody kreskowe i pracuj z animowanymi formatami obrazów.",
-      "ipfs": "Obliczaj identyfikatory treści plików i folderów oraz odtwarzaj wyniki importu do IPFS w przeglądarce.",
+      "ipfs": "Obliczaj identyfikatory CID w IPFS, konfiguruj DNSLink, rozpakowuj archiwa CAR oraz pobieraj pliki i foldery z IPFS bezpośrednio w przeglądarce.",
       "json": "Formatuj, sprawdzaj poprawność, porównuj i konwertuj dane strukturalne. Pracuj z formatami JSON, YAML, TOML, XML i CSV za pomocą narzędzi działających w przeglądarce.",
       "misc": "Korzystaj z kamery, testuj klawiaturę lub kontroler do gier, sprawdzaj informacje o urządzeniu i znajduj narzędzia przeglądarkowe do codziennych zadań.",
       "network": "Sprawdzaj informacje DNS i IP, obliczaj podsieci i przeglądaj certyfikaty. Znajdź narzędzia do adresów sieciowych, protokołów i rozwiązywania problemów z siecią.",

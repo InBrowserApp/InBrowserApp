@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-nedlaster",
+  "description": "Last ned en IPFS-fil med CID eller lenke. Bla i UnixFS-mapper, lagre enkeltfiler og last ned en hel IPFS-mappe som ZIP."
+}

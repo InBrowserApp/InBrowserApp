@@ -89,7 +89,7 @@
       "ebook": "Leia livros em formato EPUB, MOBI e FB2 e ficheiros de banda desenhada no seu navegador. Converta livros eletrónicos, edite metadados EPUB ou exporte o conteúdo dos livros.",
       "geo": "Veja mapas e percursos GPS, converta coordenadas entre sistemas de referência e trabalhe com ficheiros GeoJSON, GPX, KML e WKT.",
       "image": "Converta, redimensione e inspecione imagens no seu navegador. Otimize ficheiros de imagem, veja metadados, crie códigos de barras e trabalhe com formatos de imagem animada.",
-      "ipfs": "Calcule identificadores de conteúdo para ficheiros e pastas e reproduza os resultados de uma importação do IPFS no seu navegador.",
+      "ipfs": "Calcule CID do IPFS, configure o DNSLink, extraia arquivos CAR e descarregue ficheiros e pastas do IPFS no seu navegador.",
       "json": "Formate, valide, compare e converta dados estruturados. Trabalhe com JSON, YAML, TOML, XML e CSV usando ferramentas que funcionam no seu navegador.",
       "misc": "Use a sua câmara, teste o seu teclado ou comando de jogos, consulte informações do dispositivo e encontre ferramentas no navegador para tarefas do dia a dia.",
       "network": "Consulte informações de DNS e IP, calcule sub-redes e inspecione certificados. Encontre ferramentas para endereços de rede, protocolos e resolução de problemas.",

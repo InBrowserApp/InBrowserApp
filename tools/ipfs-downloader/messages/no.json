@@ -1,0 +1,22 @@
+{
+  "address": "CID eller IPFS-lenke",
+  "open": "Åpne innhold",
+  "example": "Prøv en eksempelmappe",
+  "opening": "Henter innhold…",
+  "contents": "Innhold",
+  "back": "Tilbake",
+  "download": "Last ned fil",
+  "zip": "Last ned ZIP",
+  "preparing": "Forbereder nedlasting…",
+  "cancel": "Avbryt",
+  "empty": "Denne mappen er tom.",
+  "invalid": "Skriv inn en gyldig CID, IPFS-URI eller IPFS-gatewaylenke.",
+  "missing": "Innholdet kunne ikke hentes fra gatewayene.",
+  "pathMissing": "Stien ble ikke funnet under CID-en.",
+  "corrupt": "Den returnerte blokken samsvarte ikke med CID-en sin.",
+  "unsupported": "Dette innholdet kan ikke åpnes som en UnixFS-fil eller -mappe.",
+  "failed": "Kunne ikke fullføre nedlastingen. Prøv igjen eller velg en mindre mappe.",
+  "incomplete": "Noen stier kunne ikke lastes ned.",
+  "available": "Last ned tilgjengelige filer",
+  "progress": "Forbereder {path}"
+}

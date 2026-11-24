@@ -1,0 +1,4 @@
+{
+  "name": "Pobieranie plików z IPFS",
+  "description": "Pobieraj pliki z IPFS za pomocą identyfikatora CID lub linku. Przeglądaj foldery UnixFS, zapisuj pojedyncze pliki lub pobierz cały folder z IPFS jako ZIP."
+}

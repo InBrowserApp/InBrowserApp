@@ -89,7 +89,7 @@
       "ebook": "Baca EPUB, MOBI, FB2 dan arkib komik dalam pelayar anda. Tukar format e-buku, sunting metadata EPUB atau eksport kandungan buku.",
       "geo": "Lihat peta dan trek GPS, tukar koordinat antara sistem rujukan dan kendalikan fail GeoJSON, GPX, KML dan WKT.",
       "image": "Tukar, ubah saiz dan periksa imej dalam pelayar anda. Optimumkan fail imej, lihat metadata, cipta kod bar dan gunakan format imej beranimasi.",
-      "ipfs": "Kira pengecam kandungan untuk fail dan folder, dan hasilkan semula keputusan import IPFS dalam pelayar anda.",
+      "ipfs": "Kira CID IPFS, konfigurasikan DNSLink, ekstrak arkib CAR dan muat turun fail atau folder IPFS dalam pelayar anda.",
       "json": "Format, sahkan, bandingkan dan tukar data berstruktur. Kendalikan JSON, YAML, TOML, XML dan CSV menggunakan alat yang berjalan dalam pelayar anda.",
       "misc": "Gunakan kamera, uji papan kekunci atau alat kawalan permainan, semak maklumat peranti dan cari alat pelayar untuk tugas harian.",
       "network": "Cari maklumat DNS dan IP, kira subnet dan periksa sijil. Cari alat untuk alamat rangkaian, protokol dan penyelesaian masalah.",

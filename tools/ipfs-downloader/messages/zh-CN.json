@@ -1,0 +1,22 @@
+{
+  "address": "CID 或 IPFS 链接",
+  "open": "打开内容",
+  "example": "试用示例文件夹",
+  "opening": "正在获取内容…",
+  "contents": "内容",
+  "back": "返回",
+  "download": "下载文件",
+  "zip": "下载 ZIP",
+  "preparing": "正在准备下载…",
+  "cancel": "取消",
+  "empty": "此文件夹为空。",
+  "invalid": "请输入有效的 CID、IPFS URI 或 IPFS 网关链接。",
+  "missing": "未能从网关获取内容。",
+  "pathMissing": "在该 CID 下找不到此路径。",
+  "corrupt": "网关返回的块与其 CID 不匹配。",
+  "unsupported": "无法将此内容作为 UnixFS 文件或文件夹打开。",
+  "failed": "无法完成下载。请重试或选择较小的文件夹。",
+  "incomplete": "部分路径无法下载。",
+  "available": "下载已获取的文件",
+  "progress": "正在准备 {path}"
+}

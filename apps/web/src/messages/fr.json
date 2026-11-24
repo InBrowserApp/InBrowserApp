@@ -89,7 +89,7 @@
       "ebook": "Lisez des livres EPUB, MOBI et FB2 et des archives de bandes dessinées dans votre navigateur. Convertissez des livres numériques, modifiez les métadonnées EPUB ou exportez le contenu de vos livres.",
       "geo": "Affichez des cartes et des traces GPS, convertissez des coordonnées entre systèmes de référence et travaillez avec des fichiers GeoJSON, GPX, KML et WKT.",
       "image": "Convertissez, redimensionnez et inspectez des images dans votre navigateur. Optimisez les fichiers image, consultez les métadonnées, créez des codes-barres et travaillez avec des formats d'image animée.",
-      "ipfs": "Calculez des identifiants de contenu pour des fichiers et des dossiers, et reproduisez les résultats d’une importation IPFS dans votre navigateur.",
+      "ipfs": "Calculez des CID IPFS, configurez DNSLink, extrayez des archives CAR et téléchargez des fichiers et des dossiers IPFS dans votre navigateur.",
       "json": "Formatez, validez, comparez et convertissez des données structurées. Travaillez avec les formats JSON, YAML, TOML, XML et CSV à l'aide d'outils qui s'exécutent dans votre navigateur.",
       "misc": "Utilisez votre caméra, testez votre clavier ou votre manette, consultez les informations de votre appareil et trouvez des outils dans votre navigateur pour vos tâches quotidiennes.",
       "network": "Recherchez des informations DNS et IP, calculez des sous-réseaux et inspectez des certificats. Trouvez des outils pour les adresses réseau, les protocoles et le dépannage.",

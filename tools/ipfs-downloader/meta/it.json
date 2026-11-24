@@ -1,0 +1,4 @@
+{
+  "name": "Downloader IPFS",
+  "description": "Scarica un file IPFS tramite CID o link. Esplora le cartelle UnixFS, salva singoli file e scarica un’intera cartella IPFS come ZIP."
+}

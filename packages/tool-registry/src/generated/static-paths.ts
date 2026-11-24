@@ -16286,6 +16286,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipfs-downloader",
+    language: "ar",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "de",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "en",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "es",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "fr",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "he",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "hi",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "id",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "it",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "ja",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "ko",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "ms",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "nl",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "no",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "pl",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "pt",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "ru",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "sv",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "th",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "tr",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "vi",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipfs-downloader",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Télécharger des fichiers IPFS",
+  "description": "Téléchargez un fichier IPFS à partir de son CID ou d’un lien. Parcourez les dossiers UnixFS, enregistrez des fichiers séparément ou téléchargez un dossier IPFS complet en ZIP."
+}

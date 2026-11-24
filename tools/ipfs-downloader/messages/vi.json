@@ -1,0 +1,22 @@
+{
+  "address": "CID hoặc liên kết IPFS",
+  "open": "Mở nội dung",
+  "example": "Thử với thư mục mẫu",
+  "opening": "Đang truy xuất nội dung…",
+  "contents": "Nội dung",
+  "back": "Quay lại",
+  "download": "Tải tệp xuống",
+  "zip": "Tải ZIP xuống",
+  "preparing": "Đang chuẩn bị tải xuống…",
+  "cancel": "Hủy",
+  "empty": "Thư mục này trống.",
+  "invalid": "Nhập CID, URI IPFS hoặc liên kết cổng truy cập IPFS hợp lệ.",
+  "missing": "Không thể lấy nội dung qua các cổng truy cập IPFS.",
+  "pathMissing": "Không tìm thấy đường dẫn này trong nội dung mà CID trỏ tới.",
+  "corrupt": "Khối dữ liệu nhận được không khớp với CID của nó.",
+  "unsupported": "Không thể mở nội dung này dưới dạng tệp hoặc thư mục UnixFS.",
+  "failed": "Không thể hoàn tất tải xuống. Hãy thử lại hoặc chọn thư mục nhỏ hơn.",
+  "incomplete": "Không thể tải xuống một số đường dẫn.",
+  "available": "Tải các tệp có sẵn",
+  "progress": "Đang chuẩn bị {path}"
+}

@@ -1,0 +1,22 @@
+{
+  "address": "CID atau pautan IPFS",
+  "open": "Buka kandungan",
+  "example": "Cuba folder contoh",
+  "opening": "Sedang mendapatkan kandungan…",
+  "contents": "Kandungan",
+  "back": "Kembali",
+  "download": "Muat turun fail",
+  "zip": "Muat turun ZIP",
+  "preparing": "Sedang menyediakan muat turun…",
+  "cancel": "Batal",
+  "empty": "Folder ini kosong.",
+  "invalid": "Masukkan CID, URI IPFS atau pautan get laluan IPFS yang sah.",
+  "missing": "Kandungan tidak dapat diperoleh melalui get laluan.",
+  "pathMissing": "Laluan ini tidak ditemui dalam kandungan yang dirujuk oleh CID.",
+  "corrupt": "Blok yang diterima tidak sepadan dengan CID-nya.",
+  "unsupported": "Kandungan ini tidak boleh dibuka sebagai fail atau folder UnixFS.",
+  "failed": "Muat turun tidak dapat diselesaikan. Cuba lagi atau pilih folder yang lebih kecil.",
+  "incomplete": "Muat turun gagal bagi beberapa laluan.",
+  "available": "Muat turun fail yang tersedia",
+  "progress": "Sedang menyediakan {path}"
+}

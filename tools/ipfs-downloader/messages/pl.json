@@ -1,0 +1,22 @@
+{
+  "address": "CID lub link do IPFS",
+  "open": "Otwórz zawartość",
+  "example": "Wypróbuj przykładowy folder",
+  "opening": "Pobieranie zawartości…",
+  "contents": "Zawartość",
+  "back": "Wstecz",
+  "download": "Pobierz plik",
+  "zip": "Pobierz ZIP",
+  "preparing": "Przygotowywanie pobierania…",
+  "cancel": "Anuluj",
+  "empty": "Ten folder jest pusty.",
+  "invalid": "Wpisz poprawny CID, URI IPFS lub link do bramy IPFS.",
+  "missing": "Nie udało się pobrać zawartości przez bramy IPFS.",
+  "pathMissing": "Nie znaleziono tej ścieżki pod podanym CID.",
+  "corrupt": "Pobrany blok nie odpowiada swojemu CID.",
+  "unsupported": "Tej zawartości nie można otworzyć jako pliku ani folderu UnixFS.",
+  "failed": "Nie udało się ukończyć pobierania. Spróbuj ponownie lub wybierz mniejszy folder.",
+  "incomplete": "Nie udało się pobrać zawartości z niektórych ścieżek.",
+  "available": "Pobierz dostępne pliki",
+  "progress": "Przygotowywanie: {path}"
+}

@@ -1,0 +1,22 @@
+{
+  "address": "CID or IPFS link",
+  "open": "Open content",
+  "example": "Try a sample folder",
+  "opening": "Retrieving content…",
+  "contents": "Contents",
+  "back": "Back",
+  "download": "Download file",
+  "zip": "Download ZIP",
+  "preparing": "Preparing download…",
+  "cancel": "Cancel",
+  "empty": "This folder is empty.",
+  "invalid": "Enter a valid CID, IPFS URI, or IPFS gateway link.",
+  "missing": "The content could not be retrieved from the gateways.",
+  "pathMissing": "This path was not found under the CID.",
+  "corrupt": "The returned block did not match its CID.",
+  "unsupported": "This content cannot be opened as a UnixFS file or folder.",
+  "failed": "Could not complete the download. Try again or select a smaller folder.",
+  "incomplete": "Some paths could not be downloaded.",
+  "available": "Download available files",
+  "progress": "Preparing {path}"
+}
