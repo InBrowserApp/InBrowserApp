@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ऑडियो से टेक्स्ट",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "ऑडियो काटें और जोड़ें",
     slug: "audio-trimmer-merger",
   },

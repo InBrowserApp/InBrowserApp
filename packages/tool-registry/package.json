@@ -23,6 +23,7 @@
     "@tool/asciidoc-to-pdf-converter": "workspace:*",
     "@tool/asciidoc-viewer": "workspace:*",
     "@tool/audio-recorder": "workspace:*",
+    "@tool/audio-to-text": "workspace:*",
     "@tool/audio-trimmer-merger": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",

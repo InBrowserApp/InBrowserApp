@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Lyd til tekst",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Beskjær og slå sammen lyd",
     slug: "audio-trimmer-merger",
   },

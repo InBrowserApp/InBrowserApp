@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio naar tekst",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Audio bijsnijden en samenvoegen",
     slug: "audio-trimmer-merger",
   },

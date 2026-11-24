@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Chuyển âm thanh thành văn bản",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Cắt và ghép âm thanh",
     slug: "audio-trimmer-merger",
   },

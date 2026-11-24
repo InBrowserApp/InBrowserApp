@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声文字起こし",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "音声トリミング・結合",
     slug: "audio-trimmer-merger",
   },

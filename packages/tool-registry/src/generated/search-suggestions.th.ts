@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "แปลงเสียงเป็นข้อความ",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "เครื่องมือตัดและรวมเสียง",
     slug: "audio-trimmer-merger",
   },

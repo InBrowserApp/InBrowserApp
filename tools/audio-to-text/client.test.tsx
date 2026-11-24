@@ -1,0 +1,245 @@
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react"
+import { afterEach, beforeEach, expect, it, vi } from "vitest"
+import Client from "./client"
+import messages from "./messages/en.json"
+import { getSpokenLanguages } from "./models"
+import type { TranscriptionResponse } from "./worker-messages"
+
+const workers: FakeWorker[] = []
+const decodeAudioData = vi.fn()
+const startRendering = vi.fn()
+const connect = vi.fn()
+const begin = vi.fn()
+const decoded = new Float32Array(32000)
+const file = new File(["samples"], "team.meeting.wav", { type: "audio/wav" })
+const segments = [{ start: 250, end: 1480, text: "Team update" }]
+const playback = { play: vi.fn() }
+
+class FakeWorker {
+  onmessage?: (event: { data: TranscriptionResponse }) => void
+  onerror?: () => void
+  postMessage = vi.fn()
+  terminate = vi.fn()
+
+  constructor() {
+    workers.push(this)
+  }
+
+  emit(data: TranscriptionResponse) {
+    act(() => this.onmessage?.({ data }))
+  }
+}
+
+function renderTool() {
+  const view = render(
+    <Client
+      messages={messages}
+      lang="en"
+      languages={getSpokenLanguages("en")}
+    />
+  )
+  const input = view.container.querySelector("input")!
+  const start = screen.getByRole<HTMLButtonElement>("button", {
+    name: messages.start,
+  })
+  return { ...view, input, start }
+}
+
+function choose(input: HTMLInputElement, recording = file) {
+  fireEvent.change(input, { target: { files: [recording] } })
+}
+
+beforeEach(() => {
+  workers.length = 0
+  vi.resetAllMocks()
+  decodeAudioData.mockResolvedValue({
+    length: decoded.length,
+    numberOfChannels: 1,
+    getChannelData: () => decoded,
+  })
+  vi.stubGlobal(
+    "OfflineAudioContext",
+    class {
+      destination = {}
+      decodeAudioData = decodeAudioData
+      startRendering = startRendering
+      createBufferSource = () => ({ connect, start: begin })
+    }
+  )
+  vi.stubGlobal("Worker", FakeWorker)
+  vi.spyOn(URL, "createObjectURL").mockImplementation(
+    () => "blob:" + Math.random()
+  )
+  vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => undefined)
+  vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(playback.play)
+  playback.play.mockResolvedValue(undefined)
+})
+
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals()
+})
+
+it("transcribes a dropped file, then plays, edits, copies and exports its timed result", async () => {
+  const view = renderTool()
+  expect(view.start.disabled).toBe(true)
+  const drop = screen.getByText(messages.dropFile)
+  const dataTransfer = { types: ["Files"], files: [file], dropEffect: "" }
+  fireEvent.dragOver(drop, { dataTransfer })
+  fireEvent.dragLeave(drop, { relatedTarget: null })
+  fireEvent.drop(drop, { dataTransfer })
+  expect(screen.getByText(file.name)).toBeDefined()
+  expect(view.start.disabled).toBe(false)
+  fireEvent.change(screen.getByLabelText(messages.model), {
+    target: { value: "small" },
+  })
+  fireEvent.change(screen.getByLabelText(messages.language), {
+    target: { value: "zh" },
+  })
+  fireEvent.click(view.start)
+
+  await waitFor(() => expect(workers).toHaveLength(1))
+  expect(workers[0]?.postMessage).toHaveBeenCalledWith(
+    { audio: decoded, model: "small", language: "zh", cpuOnly: false },
+    [decoded.buffer]
+  )
+  const worker = workers[0]!
+  worker.emit({ type: "loading", backend: "webgpu", progress: 0.42 })
+  expect(screen.getByRole("progressbar").getAttribute("value")).toBe("0.42")
+  worker.emit({ type: "transcribing", backend: "webgpu" })
+  worker.emit({ type: "done", segments })
+  expect(worker.terminate).toHaveBeenCalledOnce()
+  fireEvent.click(
+    screen.getByRole("button", { name: "Play from 00:00:00.250" })
+  )
+  expect(view.container.querySelector("audio")?.currentTime).toBe(0.25)
+  expect(playback.play).toHaveBeenCalledOnce()
+  fireEvent.change(screen.getByRole("textbox"), {
+    target: { value: "Corrected & reviewed" },
+  })
+  const writeText = vi
+    .spyOn(navigator.clipboard, "writeText")
+    .mockResolvedValue(undefined)
+  fireEvent.click(screen.getByRole("button", { name: messages.copy }))
+  await screen.findByRole("button", { name: messages.copied })
+  expect(writeText).toHaveBeenCalledWith(
+    "[00:00:00.250] Corrected & reviewed\n"
+  )
+
+  const downloads: HTMLAnchorElement[] = []
+  vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (
+    this: HTMLAnchorElement
+  ) {
+    downloads.push(this)
+  })
+  fireEvent.change(screen.getByLabelText(messages.exportFormat), {
+    target: { value: "vtt" },
+  })
+  fireEvent.click(screen.getByRole("button", { name: "Download VTT" }))
+  expect(downloads[0]?.download).toBe("team.meeting.vtt")
+  const blob = vi.mocked(URL.createObjectURL).mock.lastCall?.[0] as Blob
+  expect(await blob.text()).toContain(
+    "00:00:00.250 --> 00:00:01.480\nCorrected &amp; reviewed"
+  )
+
+  choose(view.input, new File(["samples"], "different.mp3"))
+  expect(screen.queryByRole("textbox")).toBeNull()
+  expect(URL.revokeObjectURL).toHaveBeenCalled()
+})
+
+it("retries with the same samples on CPU and ignores results from a canceled run", async () => {
+  const view = renderTool()
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  workers[0]!.emit({ type: "retry", audio: decoded })
+  expect(workers[0]!.terminate).toHaveBeenCalledOnce()
+  const cpu = workers[1]!
+  expect(cpu.postMessage).toHaveBeenCalledWith(
+    { audio: decoded, model: "base", language: "", cpuOnly: true },
+    [decoded.buffer]
+  )
+  expect(screen.getByText(messages.cpuFallback)).toBeDefined()
+  fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
+  expect(cpu.terminate).toHaveBeenCalledOnce()
+  cpu.emit({ type: "done", segments })
+  expect(screen.queryByRole("textbox")).toBeNull()
+  expect(screen.getByText(file.name)).toBeDefined()
+  expect(view.start.disabled).toBe(false)
+})
+
+it("keeps the chosen file through decode, model and empty-result failures", async () => {
+  const view = renderTool()
+  choose(view.input)
+  decodeAudioData.mockRejectedValueOnce(Error("unsupported"))
+  fireEvent.click(view.start)
+  await screen.findByText(messages.decodeError)
+  expect(workers).toHaveLength(0)
+
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  workers[0]!.emit({ type: "error", stage: "modelError" })
+  await screen.findByText(messages.modelError)
+
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(2))
+  workers[1]!.emit({ type: "done", segments: [] })
+  await screen.findByText(messages.noSpeech)
+  expect(screen.getByText(file.name)).toBeDefined()
+  expect(view.start.disabled).toBe(false)
+})
+
+it("downmixes stereo audio before handing samples to the worker", async () => {
+  const view = renderTool()
+  const mono = new Float32Array([0.01, 0.25])
+  decodeAudioData.mockResolvedValueOnce({
+    numberOfChannels: 2,
+    length: mono.length,
+  })
+  startRendering.mockResolvedValueOnce({ getChannelData: () => mono })
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  expect(connect).toHaveBeenCalledOnce()
+  expect(begin).toHaveBeenCalledOnce()
+  expect(workers[0]?.postMessage).toHaveBeenCalledWith(
+    expect.objectContaining({ audio: mono }),
+    [mono.buffer]
+  )
+})
+
+it("cancels decoding without starting a worker or losing an existing transcript", async () => {
+  const view = renderTool()
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  workers[0]!.emit({ type: "done", segments })
+  let completeDecode!: (value: unknown) => void
+  decodeAudioData.mockReturnValueOnce(
+    new Promise((resolve) => {
+      completeDecode = resolve
+    })
+  )
+  fireEvent.click(view.start)
+  await waitFor(() => expect(decodeAudioData).toHaveBeenCalledTimes(2))
+  fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
+  await act(async () =>
+    completeDecode({
+      numberOfChannels: 1,
+      getChannelData: () => decoded,
+    })
+  )
+  expect(workers).toHaveLength(1)
+  expect(screen.getByRole<HTMLTextAreaElement>("textbox").value).toBe(
+    "Team update"
+  )
+  expect(view.start.disabled).toBe(false)
+})

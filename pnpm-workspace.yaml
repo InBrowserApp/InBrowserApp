@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@huggingface/transformers": 3.8.1
   "@citation-js/core": 0.9.0
   "@citation-js/plugin-bibtex": 0.9.0
   "@citation-js/plugin-ris": 0.9.0
@@ -327,6 +328,7 @@ allowBuilds:
   msw: true
   protobufjs: false
   sharp: true
+  onnxruntime-node: false
   tesseract.js: false
   tree-sitter: false
   tree-sitter-bash: false

@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-to-text",
+    language: "ar",
+  },
+  {
+    slug: "audio-to-text",
+    language: "de",
+  },
+  {
+    slug: "audio-to-text",
+    language: "en",
+  },
+  {
+    slug: "audio-to-text",
+    language: "es",
+  },
+  {
+    slug: "audio-to-text",
+    language: "fr",
+  },
+  {
+    slug: "audio-to-text",
+    language: "he",
+  },
+  {
+    slug: "audio-to-text",
+    language: "hi",
+  },
+  {
+    slug: "audio-to-text",
+    language: "id",
+  },
+  {
+    slug: "audio-to-text",
+    language: "it",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ja",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ko",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ms",
+  },
+  {
+    slug: "audio-to-text",
+    language: "nl",
+  },
+  {
+    slug: "audio-to-text",
+    language: "no",
+  },
+  {
+    slug: "audio-to-text",
+    language: "pl",
+  },
+  {
+    slug: "audio-to-text",
+    language: "pt",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ru",
+  },
+  {
+    slug: "audio-to-text",
+    language: "sv",
+  },
+  {
+    slug: "audio-to-text",
+    language: "th",
+  },
+  {
+    slug: "audio-to-text",
+    language: "tr",
+  },
+  {
+    slug: "audio-to-text",
+    language: "vi",
+  },
+  {
+    slug: "audio-to-text",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-to-text",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-trimmer-merger",
     language: "ar",
   },

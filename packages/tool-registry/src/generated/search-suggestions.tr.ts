@@ -84,6 +84,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Sesi Metne Dönüştürme",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Ses Kırpıcı ve Birleştirici",
     slug: "audio-trimmer-merger",
   },
