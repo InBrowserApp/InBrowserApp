@@ -308,6 +308,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Calculadora de juros compostos",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Analisador de Cookies",
     slug: "cookie-parser",

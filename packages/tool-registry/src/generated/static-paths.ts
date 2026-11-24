@@ -5614,6 +5614,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "compound-interest-calculator",
+    language: "ar",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "de",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "en",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "es",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "fr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "he",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "hi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "id",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "it",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ja",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ko",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ms",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "nl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "no",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pt",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ru",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "sv",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "th",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "tr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "vi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "cookie-parser",
     language: "ar",
   },

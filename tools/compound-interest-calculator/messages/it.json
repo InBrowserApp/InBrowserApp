@@ -1,0 +1,33 @@
+{
+  "assumptions": "Piano di risparmio",
+  "initialAmount": "Capitale iniziale",
+  "monthlyContribution": "Versamento mensile",
+  "annualRate": "Tasso d’interesse annuo",
+  "years": "Durata",
+  "yearsUnit": "anni",
+  "frequency": "Frequenza di capitalizzazione",
+  "frequencies": {
+    "daily": "Ogni giorno",
+    "monthly": "Ogni mese",
+    "quarterly": "Ogni trimestre",
+    "semiannually": "Ogni semestre",
+    "annually": "Ogni anno"
+  },
+  "timing": "Quando versi",
+  "timings": {
+    "end": "A fine mese",
+    "start": "A inizio mese"
+  },
+  "reset": "Ripristina l’esempio",
+  "endingBalance": "Saldo stimato",
+  "totalContributed": "Totale versato",
+  "interestEarned": "Interessi maturati",
+  "growth": "Crescita nel tempo",
+  "breakdown": "Dettaglio anno per anno",
+  "year": "Anno",
+  "amountError": "Inserisci un importo pari o superiore a zero.",
+  "rateError": "Inserisci un tasso annuo tra −100% e 100%.",
+  "yearsError": "Inserisci un numero intero da 1 a 100.",
+  "resultError": "Gli importi sono troppo elevati per il calcolo. Prova con valori più bassi.",
+  "resultPending": "Controlla i campi evidenziati per vedere la stima."
+}

@@ -308,6 +308,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "מחשבון ריבית דריבית",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "מפרש Cookie",
     slug: "cookie-parser",

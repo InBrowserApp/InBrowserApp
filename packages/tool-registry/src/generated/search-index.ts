@@ -7834,6 +7834,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
+      },
+    },
+  },
+  {
     slug: "cookie-parser",
     category: "web",
     icon: "network",
