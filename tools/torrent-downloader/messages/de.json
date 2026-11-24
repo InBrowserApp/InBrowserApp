@@ -3,6 +3,8 @@
   "open": "Torrent öffnen",
   "choose": ".torrent-Datei auswählen",
   "example": "Beispiel ausprobieren",
+  "publicTrackers": "Öffentliche WebRTC-Tracker bei Bedarf verwenden",
+  "publicTrackersHint": "Öffentliche Tracker können deine IP-Adresse und den Info-Hash sehen. Ob ein Magnet-Link privat ist, kann sich erst nach Empfang der Metadaten zeigen.",
   "network": "Downloads laufen über WebTorrent-Peers oder Webseeds. Lass den Tab offen, bis die Datei gespeichert ist.",
   "opening": "Torrent-Metadaten werden gesucht …",
   "stop": "Torrent schließen",

@@ -3,6 +3,8 @@
   "open": "打开种子",
   "choose": "选择 .torrent 文件",
   "example": "试用示例",
+  "publicTrackers": "使用公共 WebRTC Tracker 作为后备",
+  "publicTrackersHint": "公共 Tracker 可看到你的 IP 和种子的信息哈希。磁力链接可能要等元数据到达后才能确认是否私有。",
   "network": "下载通过 WebTorrent 节点或 Web 种子进行。请保持此标签页打开，直到文件保存完成。",
   "opening": "正在查找种子元数据…",
   "stop": "关闭种子",

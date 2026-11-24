@@ -29,7 +29,8 @@ function TorrentDownloader({
   const id = useId()
   const fileInput = useRef<HTMLInputElement>(null)
   const [magnet, setMagnet] = useState("")
-  const downloader = useDownloader()
+  const [publicTrackers, setPublicTrackers] = useState(true)
+  const downloader = useDownloader(publicTrackers)
   const { session, download, notice } = downloader
   const opening = session.status === "opening"
   const torrent = session.status === "ready" ? session.torrent : undefined
@@ -107,6 +108,33 @@ function TorrentDownloader({
               >
                 {m.example}
               </Button>
+            </div>
+            <div className="flex items-start gap-2">
+              <input
+                id={`${id}-public-trackers`}
+                type="checkbox"
+                className="mt-0.5 size-4 shrink-0 accent-primary"
+                checked={publicTrackers}
+                disabled={session.status !== "idle"}
+                onChange={(event) =>
+                  setPublicTrackers(event.currentTarget.checked)
+                }
+                aria-describedby={`${id}-tracker-hint`}
+              />
+              <div className="grid min-w-0 gap-1">
+                <label
+                  htmlFor={`${id}-public-trackers`}
+                  className="text-sm font-medium"
+                >
+                  {m.publicTrackers}
+                </label>
+                <p
+                  id={`${id}-tracker-hint`}
+                  className="text-sm text-muted-foreground"
+                >
+                  {m.publicTrackersHint}
+                </p>
+              </div>
             </div>
             <p id={`${id}-hint`} className="text-sm text-muted-foreground">
               {m.network}

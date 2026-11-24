@@ -3,6 +3,8 @@
   "open": "Apri torrent",
   "choose": "Scegli un file .torrent",
   "example": "Prova un esempio",
+  "publicTrackers": "Usa tracker WebRTC pubblici come alternativa",
+  "publicTrackersHint": "I tracker pubblici possono vedere il tuo indirizzo IP e l’info hash. Lo stato privato di un link magnet può essere noto solo dopo aver ricevuto i metadati.",
   "network": "I download usano peer WebTorrent o web seed. Tieni aperta questa scheda fino al salvataggio del file.",
   "opening": "Ricerca dei metadati del torrent…",
   "stop": "Chiudi torrent",
