@@ -21,6 +21,8 @@
   "loading": "Menyiapkan model Whisper…",
   "loadingPercent": "Menyiapkan model Whisper… {percent}",
   "transcribing": "Mentranskripsikan audio…",
+  "remainingTime": "Sekitar {time} lagi",
+  "livePreview": "Pratinjau langsung",
   "gpu": "Akselerasi GPU",
   "cpu": "Pemrosesan dengan CPU",
   "cpuFallback": "Beralih ke pemrosesan dengan CPU.",

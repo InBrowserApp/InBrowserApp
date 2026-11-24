@@ -62,6 +62,17 @@ export default function Client({
         }).format(Math.floor(progress * 1000) / 1000)
   const showDownloadPercent =
     status?.type === "loading" && percent !== undefined
+  const eta = status?.type === "transcribing" ? status.etaSeconds : undefined
+  const preview = status?.type === "transcribing" ? status.preview : undefined
+  const remainingTime =
+    eta === undefined
+      ? undefined
+      : new Intl.NumberFormat(lang, {
+          style: "unit",
+          unit: eta < 60 ? "second" : "minute",
+          unitDisplay: "short",
+          maximumFractionDigits: 1,
+        }).format(eta < 60 ? eta : eta / 60)
   const backend =
     status && status.type !== "decoding"
       ? fallback
@@ -189,7 +200,26 @@ export default function Client({
                 className="h-1.5 w-full accent-primary"
               />
             )}
+            {remainingTime && (
+              <p className="text-xs text-muted-foreground">
+                {m.remainingTime.replace(
+                  "{time}",
+                  `\u2068${remainingTime}\u2069`
+                )}
+              </p>
+            )}
           </div>
+
+          {preview && (
+            <div className="min-w-0 rounded-lg border bg-muted/30 px-4 py-3">
+              <h2 className="text-xs font-medium text-muted-foreground">
+                {m.livePreview}
+              </h2>
+              <p dir="auto" className="mt-1.5 text-sm leading-6 wrap-anywhere">
+                {preview}
+              </p>
+            </div>
+          )}
 
           {error && (
             <Alert

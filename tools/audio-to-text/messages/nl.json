@@ -21,6 +21,8 @@
   "loading": "Whisper-model voorbereiden…",
   "loadingPercent": "Whisper-model voorbereiden… {percent}",
   "transcribing": "Audio transcriberen…",
+  "remainingTime": "Nog ongeveer {time}",
+  "livePreview": "Livevoorbeeld",
   "gpu": "GPU-versnelling",
   "cpu": "Verwerking via CPU",
   "cpuFallback": "Overgeschakeld op verwerking via de CPU.",

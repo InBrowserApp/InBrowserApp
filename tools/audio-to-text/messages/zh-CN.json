@@ -21,6 +21,8 @@
   "loading": "正在准备 Whisper 模型…",
   "loadingPercent": "正在准备 Whisper 模型… {percent}",
   "transcribing": "正在转写音频…",
+  "remainingTime": "预计还需 {time}",
+  "livePreview": "实时预览",
   "gpu": "GPU 加速",
   "cpu": "CPU 处理",
   "cpuFallback": "已切换到 CPU 处理。",

@@ -21,6 +21,8 @@
   "loading": "جارٍ إعداد نموذج Whisper…",
   "loadingPercent": "جارٍ إعداد نموذج Whisper… {percent}",
   "transcribing": "جارٍ تحويل الصوت إلى نص…",
+  "remainingTime": "الوقت المتبقي نحو {time}",
+  "livePreview": "معاينة مباشرة",
   "gpu": "تسريع بمعالج الرسومات",
   "cpu": "معالجة بالمعالج المركزي",
   "cpuFallback": "تم التبديل إلى المعالج المركزي.",

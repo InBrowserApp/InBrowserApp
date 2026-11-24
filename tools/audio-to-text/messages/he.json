@@ -21,6 +21,8 @@
   "loading": "מכין את מודל Whisper…",
   "loadingPercent": "מכין את מודל Whisper… {percent}",
   "transcribing": "מתמלל את ההקלטה…",
+  "remainingTime": "נותרו כ־{time}",
+  "livePreview": "תצוגה מקדימה בזמן אמת",
   "gpu": "האצה באמצעות מעבד גרפי",
   "cpu": "עיבוד במעבד המרכזי",
   "cpuFallback": "העיבוד הועבר למעבד המרכזי.",

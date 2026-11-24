@@ -21,6 +21,8 @@
   "loading": "Whisper modeli hazırlanıyor…",
   "loadingPercent": "Whisper modeli hazırlanıyor… {percent}",
   "transcribing": "Ses metne dönüştürülüyor…",
+  "remainingTime": "Yaklaşık {time} kaldı",
+  "livePreview": "Canlı önizleme",
   "gpu": "GPU hızlandırması",
   "cpu": "CPU ile işleme",
   "cpuFallback": "CPU ile işlemeye geçildi.",

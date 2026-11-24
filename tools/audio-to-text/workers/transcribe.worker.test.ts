@@ -11,7 +11,21 @@ vi.mock("@huggingface/transformers", () => ({
   env: {},
   pipeline,
   Tensor: class {},
-  TextStreamer: class {},
+  WhisperTextStreamer: class {
+    readonly callback_function: (text: string) => void
+    readonly end: () => void
+
+    constructor(
+      _tokenizer: unknown,
+      options: {
+        callback_function: (text: string) => void
+        on_finalize: () => void
+      }
+    ) {
+      this.callback_function = options.callback_function
+      this.end = options.on_finalize
+    }
+  },
 }))
 
 const send = vi.fn()
@@ -53,6 +67,7 @@ beforeEach(async () => {
   await import("./transcribe.worker")
 })
 afterEach(() => {
+  vi.restoreAllMocks()
   vi.unstubAllGlobals()
   self.onmessage = null
 })
@@ -92,13 +107,21 @@ describe("local transcription worker", () => {
     )
   })
 
-  it("reports completed audio across overlapping windows, including the final tail", async () => {
+  it("previews new speech and estimates the remaining audio after two windows", async () => {
     const longAudio = new Float32Array(65 * SAMPLE_RATE)
     longAudio[0] = 0.2
+    let now = 4000
+    vi.spyOn(performance, "now").mockImplementation(() => now)
     transcribe.mockImplementationOnce(async (_audio, { streamer }) => {
-      streamer.put([[1n]])
+      streamer.callback_function("First words")
+      now += 50
+      streamer.callback_function(" " + "音".repeat(240))
+      now = 15000
       streamer.end()
+      now = 23000
+      streamer.callback_function("Second window")
       streamer.end()
+      now = 31000
       streamer.end()
       return { chunks: [{ timestamp: [62, 64], text: "Finished" }] }
     })
@@ -106,11 +129,21 @@ describe("local transcription worker", () => {
     await run({ audio: longAudio, language: "en" })
 
     const events = send.mock.calls.map(([event]) => event)
+    const updates = events.filter((event) => event.type === "transcribing")
     expect(
-      events
-        .filter((event) => event.type === "transcribing")
-        .map((event) => event.progress)
-    ).toEqual([0, 25 / 65, 45 / 65, 1])
+      updates.map(({ progress, preview, etaSeconds }) => ({
+        progress,
+        preview,
+        etaSeconds,
+      }))
+    ).toEqual([
+      { progress: 0 },
+      { progress: 0, preview: "First words" },
+      { progress: 25 / 65, preview: "…" + "音".repeat(240) },
+      { progress: 25 / 65, preview: "Second window" },
+      { progress: 45 / 65, preview: "Second window", etaSeconds: 8 },
+      { progress: 1, preview: "Second window" },
+    ])
     expect(events.at(-1)).toEqual({
       type: "done",
       segments: [{ start: 62000, end: 64000, text: "Finished" }],

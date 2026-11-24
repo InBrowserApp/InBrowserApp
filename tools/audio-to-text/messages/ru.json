@@ -21,6 +21,8 @@
   "loading": "Подготавливаем модель Whisper…",
   "loadingPercent": "Подготавливаем модель Whisper… {percent}",
   "transcribing": "Расшифровываем аудио…",
+  "remainingTime": "Осталось около {time}",
+  "livePreview": "Предпросмотр в реальном времени",
   "gpu": "Ускорение на GPU",
   "cpu": "Обработка на CPU",
   "cpuFallback": "Включена обработка на CPU.",

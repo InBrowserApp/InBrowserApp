@@ -21,6 +21,8 @@
   "loading": "Whisper 모델 준비 중…",
   "loadingPercent": "Whisper 모델 준비 중… {percent}",
   "transcribing": "오디오 변환 중…",
+  "remainingTime": "약 {time} 남음",
+  "livePreview": "실시간 미리보기",
   "gpu": "GPU 가속",
   "cpu": "CPU 처리",
   "cpuFallback": "CPU 처리로 전환했습니다.",

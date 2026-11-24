@@ -21,6 +21,8 @@
   "loading": "Klargjør Whisper-modellen …",
   "loadingPercent": "Klargjør Whisper-modellen … {percent}",
   "transcribing": "Transkriberer lyden …",
+  "remainingTime": "Omtrent {time} igjen",
+  "livePreview": "Forhåndsvisning i sanntid",
   "gpu": "GPU-akselerasjon",
   "cpu": "Behandling via CPU",
   "cpuFallback": "Gikk over til behandling via CPU.",

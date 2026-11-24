@@ -21,6 +21,8 @@
   "loading": "Whisper मॉडल तैयार हो रहा है…",
   "loadingPercent": "Whisper मॉडल तैयार हो रहा है… {percent}",
   "transcribing": "ऑडियो टेक्स्ट में बदला जा रहा है…",
+  "remainingTime": "लगभग {time} बाकी",
+  "livePreview": "लाइव पूर्वावलोकन",
   "gpu": "GPU से तेज़ प्रोसेसिंग",
   "cpu": "CPU से प्रोसेसिंग",
   "cpuFallback": "अब CPU से प्रोसेसिंग हो रही है।",

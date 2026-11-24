@@ -118,15 +118,28 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
       .getByRole("progressbar", { name: messages.loading })
       .getAttribute("value")
   ).toBe("0.42")
-  worker.emit({ type: "transcribing", backend: "webgpu", progress: 0.675 })
+  worker.emit({
+    type: "transcribing",
+    backend: "webgpu",
+    progress: 0.675,
+    etaSeconds: 120,
+    preview: "Draft excerpt",
+  })
   expect(
     screen
       .getByRole("progressbar", { name: messages.transcribing })
       .getAttribute("value")
   ).toBe("0.675")
   expect(screen.getByText("67.5%")).toBeDefined()
+  expect(screen.getByText(/About .*2 min.* remaining/)).toBeDefined()
+  expect(
+    screen.getByRole("heading", { name: messages.livePreview })
+  ).toBeDefined()
+  expect(screen.getByText("Draft excerpt")).toBeDefined()
+  expect(screen.queryByRole("textbox")).toBeNull()
   worker.emit({ type: "done", segments })
   expect(screen.queryByRole("progressbar")).toBeNull()
+  expect(screen.queryByText("Draft excerpt")).toBeNull()
   expect(worker.terminate).toHaveBeenCalledOnce()
   fireEvent.click(
     screen.getByRole("button", { name: "Play from 00:00:00.250" })
@@ -181,11 +194,19 @@ it("retries with the same samples on CPU and ignores results from a canceled run
   expect(screen.getByText(messages.cpuFallback)).toBeDefined()
   workers[0]!.emit({ type: "transcribing", backend: "webgpu", progress: 0.9 })
   expect(screen.queryByRole("progressbar")).toBeNull()
-  cpu.emit({ type: "transcribing", backend: "wasm", progress: 0.25 })
+  cpu.emit({
+    type: "transcribing",
+    backend: "wasm",
+    progress: 0.25,
+    etaSeconds: 8,
+    preview: "Retry excerpt",
+  })
   expect(screen.getByText("25%")).toBeDefined()
+  expect(screen.getByText(/About .*8 sec.* remaining/)).toBeDefined()
   fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
   expect(cpu.terminate).toHaveBeenCalledOnce()
   expect(screen.queryByRole("progressbar")).toBeNull()
+  expect(screen.queryByText("Retry excerpt")).toBeNull()
   cpu.emit({ type: "done", segments })
   expect(screen.queryByRole("textbox")).toBeNull()
   expect(screen.getByText(file.name)).toBeDefined()

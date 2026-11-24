@@ -21,6 +21,8 @@
   "loading": "Förbereder Whisper-modellen…",
   "loadingPercent": "Förbereder Whisper-modellen… {percent}",
   "transcribing": "Transkriberar ljudet…",
+  "remainingTime": "Cirka {time} kvar",
+  "livePreview": "Förhandsvisning i realtid",
   "gpu": "GPU-acceleration",
   "cpu": "Bearbetning via CPU",
   "cpuFallback": "Bearbetningen fortsätter via CPU.",

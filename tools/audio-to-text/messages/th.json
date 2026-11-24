@@ -21,6 +21,8 @@
   "loading": "กำลังเตรียมโมเดล Whisper…",
   "loadingPercent": "กำลังเตรียมโมเดล Whisper… {percent}",
   "transcribing": "กำลังถอดเสียง…",
+  "remainingTime": "เหลืออีกประมาณ {time}",
+  "livePreview": "ดูตัวอย่างแบบเรียลไทม์",
   "gpu": "เร่งความเร็วด้วย GPU",
   "cpu": "ประมวลผลด้วย CPU",
   "cpuFallback": "เปลี่ยนไปประมวลผลด้วย CPU แล้ว",

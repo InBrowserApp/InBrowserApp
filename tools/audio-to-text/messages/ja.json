@@ -21,6 +21,8 @@
   "loading": "Whisper モデルを準備中…",
   "loadingPercent": "Whisper モデルを準備中… {percent}",
   "transcribing": "音声を文字起こし中…",
+  "remainingTime": "残り約{time}",
+  "livePreview": "リアルタイムプレビュー",
   "gpu": "GPU アクセラレーション",
   "cpu": "CPU で処理",
   "cpuFallback": "CPU による処理に切り替えました。",

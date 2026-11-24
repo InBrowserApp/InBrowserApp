@@ -21,6 +21,8 @@
   "loading": "Preparando el modelo Whisper…",
   "loadingPercent": "Preparando el modelo Whisper… {percent}",
   "transcribing": "Transcribiendo el audio…",
+  "remainingTime": "Aprox. {time} para terminar",
+  "livePreview": "Vista previa en tiempo real",
   "gpu": "Aceleración por GPU",
   "cpu": "Procesamiento por CPU",
   "cpuFallback": "El procesamiento continúa en la CPU.",

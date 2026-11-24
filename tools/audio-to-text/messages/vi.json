@@ -21,6 +21,8 @@
   "loading": "Đang chuẩn bị mô hình Whisper…",
   "loadingPercent": "Đang chuẩn bị mô hình Whisper… {percent}",
   "transcribing": "Đang chép lời…",
+  "remainingTime": "Còn khoảng {time}",
+  "livePreview": "Xem trước theo thời gian thực",
   "gpu": "Tăng tốc bằng GPU",
   "cpu": "Xử lý bằng CPU",
   "cpuFallback": "Đã chuyển sang xử lý bằng CPU.",
