@@ -16,5 +16,6 @@
   "copied": "Kopierad",
   "download": "Ladda ner CAR",
   "duplicate": "Två objekt har samma sökväg. Byt namn på ett av dem och försök igen.",
-  "failed": "Det gick inte att skapa CAR-arkivet. Kontrollera att de valda filerna är läsbara och försök igen."
+  "failed": "Det gick inte att skapa CAR-arkivet. Kontrollera att de valda filerna är läsbara och försök igen.",
+  "unsupportedPath": "Ett mappnamn slutar med ett omvänt snedstreck. Byt namn på mappen och försök igen."
 }

@@ -16,5 +16,6 @@
   "copied": "Disalin",
   "download": "Unduh CAR",
   "duplicate": "Ada dua item dengan jalur yang sama. Ganti nama salah satunya, lalu coba lagi.",
-  "failed": "CAR tidak dapat dibuat. Pastikan file yang dipilih dapat dibaca, lalu coba lagi."
+  "failed": "CAR tidak dapat dibuat. Pastikan file yang dipilih dapat dibaca, lalu coba lagi.",
+  "unsupportedPath": "Nama folder diakhiri garis miring terbalik. Ubah namanya lalu coba lagi."
 }

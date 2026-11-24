@@ -16,5 +16,6 @@
   "copied": "Gekopieerd",
   "download": "CAR downloaden",
   "duplicate": "Twee items hebben hetzelfde pad. Hernoem er één en probeer het opnieuw.",
-  "failed": "De CAR kon niet worden gemaakt. Controleer of de geselecteerde bestanden leesbaar zijn en probeer het opnieuw."
+  "failed": "De CAR kon niet worden gemaakt. Controleer of de geselecteerde bestanden leesbaar zijn en probeer het opnieuw.",
+  "unsupportedPath": "Een mapnaam eindigt op een backslash. Wijzig de naam en probeer het opnieuw."
 }

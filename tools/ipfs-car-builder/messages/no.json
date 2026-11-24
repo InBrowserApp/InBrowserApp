@@ -16,5 +16,6 @@
   "copied": "Kopiert",
   "download": "Last ned CAR",
   "duplicate": "To elementer har samme sti. Gi ett av dem et nytt navn og prøv igjen.",
-  "failed": "Kunne ikke opprette CAR-arkivet. Kontroller at de valgte filene kan leses, og prøv igjen."
+  "failed": "Kunne ikke opprette CAR-arkivet. Kontroller at de valgte filene kan leses, og prøv igjen.",
+  "unsupportedPath": "Et mappenavn slutter med en omvendt skråstrek. Gi mappen nytt navn og prøv igjen."
 }

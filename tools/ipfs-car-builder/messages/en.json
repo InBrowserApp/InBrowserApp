@@ -16,5 +16,6 @@
   "copied": "Copied",
   "download": "Download CAR",
   "duplicate": "Two items have the same path. Rename one and try again.",
-  "failed": "Could not create the CAR. Check that the selected files are readable and try again."
+  "failed": "Could not create the CAR. Check that the selected files are readable and try again.",
+  "unsupportedPath": "A folder name ends in a backslash. Rename it and try again."
 }

@@ -16,5 +16,6 @@
   "copied": "Kopiert",
   "download": "CAR herunterladen",
   "duplicate": "Zwei Elemente haben denselben Pfad. Benennen Sie eines davon um und versuchen Sie es erneut.",
-  "failed": "Das CAR-Archiv konnte nicht erstellt werden. Prüfen Sie, ob die ausgewählten Dateien lesbar sind, und versuchen Sie es erneut."
+  "failed": "Das CAR-Archiv konnte nicht erstellt werden. Prüfen Sie, ob die ausgewählten Dateien lesbar sind, und versuchen Sie es erneut.",
+  "unsupportedPath": "Ein Ordnername endet mit einem Backslash. Benennen Sie den Ordner um und versuchen Sie es erneut."
 }

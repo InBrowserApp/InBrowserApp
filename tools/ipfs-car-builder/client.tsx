@@ -19,7 +19,11 @@ import {
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
 import { cn } from "@workspace/ui/lib/utils"
 
-import { buildCar, DuplicatePathError } from "./core/car"
+import {
+  buildCar,
+  DuplicatePathError,
+  UnsupportedFolderPathError,
+} from "./core/car"
 import type EnglishMessages from "./messages/en.json"
 import { dropSource, sourcesFromFiles } from "./selection"
 
@@ -57,7 +61,6 @@ export default function CarBuilder({
 
   function select(entries: readonly UnixFsSource[]) {
     if (entries.length === 0) return
-    cancel()
     const roots = new Set(entries.map(({ path }) => path.split("/", 1)[0]!))
     setSelection({
       entries,
@@ -69,7 +72,7 @@ export default function CarBuilder({
   }
 
   async function run(stage: Job, work: (signal: AbortSignal) => Promise<void>) {
-    cancel()
+    active.current?.abort()
     const controller = new AbortController()
     active.current = controller
     setError("")
@@ -81,7 +84,9 @@ export default function CarBuilder({
         setError(
           error instanceof DuplicatePathError
             ? messages.duplicate
-            : messages.failed
+            : error instanceof UnsupportedFolderPathError
+              ? messages.unsupportedPath
+              : messages.failed
         )
       }
     } finally {
@@ -105,14 +110,20 @@ export default function CarBuilder({
 
   function build() {
     if (!selection) return
+    setResult(null)
     void run("hashing", async (signal) => {
-      const next = await buildCar(selection.entries, signal, () =>
+      const next = await buildCar(selection.entries, signal, () => {
+        signal.throwIfAborted()
         setJob("packing")
-      )
+      })
       signal.throwIfAborted()
       setResult(next)
     })
   }
+
+  const fileCount = selection
+    ? `${messages.files} · ${selection.count.toLocaleString(language)}`
+    : null
 
   return (
     <div className="grid min-w-0 items-start gap-4 lg:grid-cols-2">
@@ -146,12 +157,10 @@ export default function CarBuilder({
               className="size-6 text-muted-foreground"
             />
             <p dir="auto" className="max-w-full text-sm wrap-anywhere">
-              {selection ? selection.name : messages.drop}
+              {selection?.name || fileCount || messages.drop}
             </p>
-            {selection && (
-              <p className="text-xs text-muted-foreground">
-                {messages.files} · {selection.count.toLocaleString(language)}
-              </p>
+            {selection?.name && (
+              <p className="text-xs text-muted-foreground">{fileCount}</p>
             )}
             <div className="flex flex-wrap justify-center gap-2">
               <Button
@@ -183,8 +192,11 @@ export default function CarBuilder({
               type="file"
               {...(index === 1 && { webkitdirectory: "" })}
               onChange={(event) => {
-                select(sourcesFromFiles(Array.from(event.target.files ?? [])))
+                const files = Array.from(event.target.files ?? [])
                 event.target.value = ""
+                if (files.length === 0) return
+                cancel()
+                select(sourcesFromFiles(files))
               }}
             />
           ))}
@@ -254,6 +266,7 @@ export default function CarBuilder({
                   {new Intl.NumberFormat(language, {
                     style: "unit",
                     unit: "byte",
+                    unitDisplay: "long",
                   }).format(result.blob.size)}
                 </p>
                 <Button

@@ -16,5 +16,6 @@
   "copied": "Skopiowano",
   "download": "Pobierz CAR",
   "duplicate": "Dwa elementy mają tę samą ścieżkę. Zmień nazwę jednego z nich i spróbuj ponownie.",
-  "failed": "Nie udało się utworzyć archiwum CAR. Sprawdź, czy wybrane pliki można odczytać, i spróbuj ponownie."
+  "failed": "Nie udało się utworzyć archiwum CAR. Sprawdź, czy wybrane pliki można odczytać, i spróbuj ponownie.",
+  "unsupportedPath": "Nazwa folderu kończy się ukośnikiem odwrotnym. Zmień nazwę i spróbuj ponownie."
 }

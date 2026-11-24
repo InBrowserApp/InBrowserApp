@@ -16,5 +16,6 @@
   "copied": "Copiado",
   "download": "Descarregar CAR",
   "duplicate": "Dois elementos têm o mesmo caminho. Mude o nome de um deles e tente novamente.",
-  "failed": "Não foi possível criar o arquivo CAR. Verifique se os ficheiros selecionados podem ser lidos e tente novamente."
+  "failed": "Não foi possível criar o arquivo CAR. Verifique se os ficheiros selecionados podem ser lidos e tente novamente.",
+  "unsupportedPath": "O nome de uma pasta termina com uma barra invertida. Altere o nome e tente novamente."
 }

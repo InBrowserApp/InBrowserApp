@@ -16,5 +16,6 @@
   "copied": "Đã sao chép",
   "download": "Tải CAR xuống",
   "duplicate": "Hai mục có cùng đường dẫn. Hãy đổi tên một mục rồi thử lại.",
-  "failed": "Không thể tạo CAR. Hãy kiểm tra xem các tệp đã chọn có đọc được không rồi thử lại."
+  "failed": "Không thể tạo CAR. Hãy kiểm tra xem các tệp đã chọn có đọc được không rồi thử lại.",
+  "unsupportedPath": "Tên thư mục kết thúc bằng dấu gạch chéo ngược. Hãy đổi tên rồi thử lại."
 }

@@ -6,12 +6,16 @@ import {
 } from "@workspace/ipfs-files/import"
 
 export class DuplicatePathError extends Error {}
+export class UnsupportedFolderPathError extends Error {}
 
 export async function buildCar(
   entries: readonly UnixFsSource[],
   signal: AbortSignal,
   onPacking: () => void
 ) {
+  if (entries.some(({ path }) => path.includes("\\/") || path.includes("//"))) {
+    throw new UnsupportedFolderPathError()
+  }
   const paths = new Set(entries.map(({ path }) => path))
   if (paths.size !== entries.length) throw new DuplicatePathError()
 
@@ -25,7 +29,7 @@ export async function buildCar(
   const write = async () => {
     try {
       const writtenRoot = await importUnixFs(entries, settings, signal, {
-        async put(cid, bytes) {
+        async put(cid, bytes: Uint8Array) {
           signal.throwIfAborted()
           const key = cid.toString()
           if (!written.has(key)) {

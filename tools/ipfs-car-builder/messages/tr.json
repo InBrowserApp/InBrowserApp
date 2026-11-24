@@ -16,5 +16,6 @@
   "copied": "Kopyalandı",
   "download": "CAR indir",
   "duplicate": "İki öğe aynı yola sahip. Birinin adını değiştirip tekrar deneyin.",
-  "failed": "CAR arşivi oluşturulamadı. Seçtiğiniz dosyaların okunabildiğini kontrol edip tekrar deneyin."
+  "failed": "CAR arşivi oluşturulamadı. Seçtiğiniz dosyaların okunabildiğini kontrol edip tekrar deneyin.",
+  "unsupportedPath": "Bir klasör adı ters eğik çizgiyle bitiyor. Adını değiştirip yeniden deneyin."
 }

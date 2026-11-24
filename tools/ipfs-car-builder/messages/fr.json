@@ -16,5 +16,6 @@
   "copied": "Copié",
   "download": "Télécharger le CAR",
   "duplicate": "Deux éléments ont le même chemin. Renommez l’un d’eux et réessayez.",
-  "failed": "Impossible de créer l’archive CAR. Vérifiez que les fichiers sélectionnés sont lisibles, puis réessayez."
+  "failed": "Impossible de créer l’archive CAR. Vérifiez que les fichiers sélectionnés sont lisibles, puis réessayez.",
+  "unsupportedPath": "Un nom de dossier se termine par une barre oblique inverse. Renommez-le et réessayez."
 }

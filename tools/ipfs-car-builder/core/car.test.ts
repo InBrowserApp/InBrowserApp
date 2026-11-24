@@ -7,7 +7,7 @@ import {
 } from "@workspace/ipfs-files"
 import { expect, it, vi } from "vitest"
 
-import { buildCar, DuplicatePathError } from "./car"
+import { buildCar, DuplicatePathError, UnsupportedFolderPathError } from "./car"
 
 const signal = new AbortController().signal
 const hello = new File(["hello\n"], "hello.txt")
@@ -89,6 +89,14 @@ it("reports duplicate paths before writing", async () => {
   await expect(
     buildCar([entry, entry], signal, vi.fn())
   ).rejects.toBeInstanceOf(DuplicatePathError)
+})
+
+it("rejects folder paths the UnixFS importer would misinterpret", async () => {
+  for (const path of ["folder\\/hello.txt", "folder//hello.txt"]) {
+    await expect(
+      buildCar([{ ...entry, path }], signal, vi.fn())
+    ).rejects.toBeInstanceOf(UnsupportedFolderPathError)
+  }
 })
 
 it("aborts during writing and rejects a changed input instead of exposing an invalid CAR", async () => {
