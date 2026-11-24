@@ -77,7 +77,10 @@ test("renders a bounded canvas and cleans up the page", async () => {
 test("cancels an obsolete render when the user switches pages", async () => {
   const controller = new AbortController()
   const cleanup = vi.fn()
-  const { promise, reject } = Promise.withResolvers<void>()
+  let reject!: (error: Error) => void
+  const promise = new Promise<void>((_, fail) => {
+    reject = fail
+  })
   const cancel = vi.fn(() => reject(new Error("canceled")))
   const render = vi.fn(() => ({ promise, cancel }))
   const getPage = vi.fn().mockResolvedValue({

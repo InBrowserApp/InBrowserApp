@@ -76,6 +76,7 @@ export function PdfPreview({
             type="button"
             variant="ghost"
             size="icon-sm"
+            className="max-sm:size-10"
             aria-label={messages.previousPage}
             title={messages.previousPage}
             disabled={page === 1}
@@ -96,6 +97,7 @@ export function PdfPreview({
             type="button"
             variant="ghost"
             size="icon-sm"
+            className="max-sm:size-10"
             aria-label={messages.nextPage}
             title={messages.nextPage}
             disabled={page === total}

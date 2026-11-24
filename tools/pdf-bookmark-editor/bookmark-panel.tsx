@@ -215,6 +215,7 @@ export function BookmarkPanel({
                     type="button"
                     variant="outline"
                     size="icon-sm"
+                    className="max-sm:size-10"
                     title={messages[label]}
                     aria-label={messages[label]}
                     disabled={!canMove?.[action]}
@@ -237,7 +238,7 @@ export function BookmarkPanel({
                   title={messages.deleteBookmark}
                   aria-label={messages.deleteBookmark}
                   onClick={onDelete}
-                  className="ms-auto text-destructive hover:text-destructive"
+                  className="ms-auto text-destructive hover:text-destructive max-sm:size-10"
                 >
                   <Trash2 aria-hidden="true" />
                 </Button>
