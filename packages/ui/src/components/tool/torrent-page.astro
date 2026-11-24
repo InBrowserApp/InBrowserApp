@@ -1,5 +1,4 @@
 ---
-import { Button } from "@workspace/ui/components/ui/button"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { FileText, Magnet } from "@workspace/ui/icons"
@@ -19,15 +18,14 @@ const relatedHref = `${lang === "en" ? "" : `/${lang}`}/tools/${relatedSlug}/`
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <div class="grid min-w-0 gap-3">
+    <a
+      href={relatedHref}
+      class="inline-flex min-h-8 w-fit max-w-full items-center gap-2 rounded-md text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+    >
+      <RelatedIcon aria-hidden="true" className="size-4 shrink-0" />
+      <span>{related}</span>
+    </a>
     <slot />
-    <div>
-      <Button variant="ghost" size="sm" asChild>
-        <a href={relatedHref} class="h-auto min-h-8 max-w-full justify-start whitespace-normal">
-          <RelatedIcon aria-hidden="true" data-icon="inline-start" />
-          <span>{related}</span>
-        </a>
-      </Button>
-    </div>
   </div>
-  <ToolArticle><slot name="intro" /></ToolArticle>
+  <ToolArticle className="max-w-[75ch]"><slot name="intro" /></ToolArticle>
 </ToolPageShell>

@@ -44,6 +44,7 @@ function TorrentFileViewer({
         stopReading.current = null
       }
       function finish(result: WorkerReply) {
+        if (stopReading.current !== stop) return
         stop()
         setState(result ? { status: "done", ...result } : { status: "error" })
       }
