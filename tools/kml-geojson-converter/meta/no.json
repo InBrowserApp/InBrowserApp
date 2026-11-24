@@ -1,0 +1,4 @@
+{
+  "name": "KML ↔ GeoJSON-omformer",
+  "description": "Konverter KML til GeoJSON eller GeoJSON til KML i nettleseren. Lim inn tekst eller åpne en fil, og kopier eller last ned resultatet til GIS-arbeidet ditt."
+}

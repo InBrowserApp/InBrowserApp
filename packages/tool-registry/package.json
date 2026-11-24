@@ -187,6 +187,7 @@
     "@tool/jwt-signer": "workspace:*",
     "@tool/keccak-hash-text-or-file": "workspace:*",
     "@tool/keyboard-tester": "workspace:*",
+    "@tool/kml-geojson-converter": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/latex-previewer": "workspace:*",
     "@tool/legacy-motorola-system-key-generator": "workspace:*",

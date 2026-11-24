@@ -16562,6 +16562,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "kml-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "ksuid-generator",
     language: "ar",
   },
