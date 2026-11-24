@@ -23,6 +23,9 @@
           "^@resvg/resvg-wasm/index_bg[.]wasm[?]url$",
           "^@file-viewer/renderer-chm/(worker/chm[.]worker[.]js|wasm/chm_wasm([.]js|_bg[.]wasm))[?]url&no-inline$",
           "^onnxruntime-web/ort-wasm-simd-threaded[.]wasm[?]url$",
+          "^onnxruntime-web/ort-wasm-simd-threaded[.]asyncify[.]mjs[?]url$",
+          "^onnxruntime-web/ort-wasm-simd-threaded[.]asyncify[.]wasm[?]gzip-url$",
+          "^audio-transcription-runtime/ort-wasm-simd-threaded[.]jsep[.](mjs|wasm)[?]url$",
           "^wasm-media-encoders/wasm/(mp3|ogg)[?]url$"
         ]
       }
