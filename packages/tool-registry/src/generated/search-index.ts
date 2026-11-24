@@ -37110,7 +37110,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Chuyển cơ sở dữ liệu SQLite (.db, .sqlite hoặc .sqlite3) thành bản kết xuất SQL để tải xuống. Xuất cả lược đồ và dữ liệu hoặc chỉ lược đồ ngay trong trình duyệt.",
       },
       "zh-CN": {
-        name: "SQLite 转 SQL 转储",
+        name: "SQLite 转 SQL",
         description:
           "将 SQLite 数据库（.db、.sqlite 或 .sqlite3）转换为可下载的 SQL 转储文件。在浏览器中导出数据库结构和数据，或仅导出结构。",
       },
