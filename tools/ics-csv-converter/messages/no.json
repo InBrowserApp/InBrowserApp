@@ -1,0 +1,28 @@
+{
+  "openFile": "Åpne fil",
+  "sample": "Prøv et eksempel",
+  "input": "Kildetekst",
+  "copy": "Kopier",
+  "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
+  "readError": "Kunne ikke lese filen. Velg den på nytt eller lim inn teksten.",
+  "result": "Resultat",
+  "empty": "Åpne en fil eller lim inn tekst og konverter for å se resultatet her.",
+  "convert": "Konverter",
+  "preview": "Forhåndsvisning av resultat",
+  "invalid": "Kontroller filformatet og eksemplene nedenfor, og prøv igjen.",
+  "noRows": "Ingen oppføringer å konvertere. Kontroller innholdet og kolonneoverskriftene.",
+  "rowError": "Kontroller verdiene på rad {row} i CSV-filen.",
+  "count": "Oppføringer: {count}",
+  "paste": "Lim inn filinnholdet her",
+  "forward": "ICS til CSV",
+  "reverse": "CSV til ICS",
+  "downloadForward": "Last ned CSV",
+  "downloadReverse": "Last ned ICS",
+  "columns": {
+    "Title": "Sammendrag",
+    "Start": "Startdato",
+    "End": "Sluttdato",
+    "Location": "Sted"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "openFile": "Buka fail",
+  "sample": "Cuba contoh",
+  "input": "Teks sumber",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "copyFailed": "Tidak dapat menyalin",
+  "readError": "Fail tidak dapat dibaca. Pilih semula fail atau tampal teks.",
+  "result": "Hasil penukaran",
+  "empty": "Tambah fail atau tampal teks, kemudian tukar untuk melihat hasilnya di sini.",
+  "convert": "Tukar",
+  "preview": "Pratonton hasil",
+  "invalid": "Semak format fail dan contoh di bawah, kemudian cuba lagi.",
+  "noRows": "Tiada rekod untuk ditukar. Semak data input dan tajuk lajur.",
+  "rowError": "Semak nilai pada baris {row} dalam fail CSV.",
+  "count": "Bilangan rekod: {count}",
+  "paste": "Tampal kandungan fail di sini",
+  "forward": "ICS kepada CSV",
+  "reverse": "CSV kepada ICS",
+  "downloadForward": "Muat turun CSV",
+  "downloadReverse": "Muat turun ICS",
+  "columns": {
+    "Title": "Ringkasan",
+    "Start": "Tarikh mula",
+    "End": "Tarikh tamat",
+    "Location": "Lokasi"
+  }
+}

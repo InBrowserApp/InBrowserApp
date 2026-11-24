@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "Convertidor ICS ↔ CSV",
+    slug: "ics-csv-converter",
+  },
+  {
     category: "image",
     name: "Quitar fondo de imágenes",
     slug: "image-background-remover",

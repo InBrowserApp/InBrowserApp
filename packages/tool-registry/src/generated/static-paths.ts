@@ -11502,6 +11502,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ics-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-background-remover",
     language: "ar",
   },

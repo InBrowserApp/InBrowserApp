@@ -1,0 +1,28 @@
+{
+  "openFile": "Öppna fil",
+  "sample": "Prova ett exempel",
+  "input": "Källtext",
+  "copy": "Kopiera",
+  "copied": "Kopierat",
+  "copyFailed": "Det gick inte att kopiera",
+  "readError": "Det gick inte att läsa filen. Välj den igen eller klistra in texten.",
+  "result": "Konverteringsresultat",
+  "empty": "Öppna en fil eller klistra in text och konvertera för att se resultatet här.",
+  "convert": "Konvertera",
+  "preview": "Förhandsgranska resultatet",
+  "invalid": "Kontrollera filformatet och exemplen nedan och försök igen.",
+  "noRows": "Det finns inga poster att konvertera. Kontrollera innehållet och kolumnrubrikerna.",
+  "rowError": "Kontrollera värdena på rad {row} i CSV-filen.",
+  "count": "Poster: {count}",
+  "paste": "Klistra in filens innehåll här",
+  "forward": "ICS till CSV",
+  "reverse": "CSV till ICS",
+  "downloadForward": "Ladda ner CSV",
+  "downloadReverse": "Ladda ner ICS",
+  "columns": {
+    "Title": "Sammanfattning",
+    "Start": "Startdatum",
+    "End": "Slutdatum",
+    "Location": "Plats"
+  }
+}
