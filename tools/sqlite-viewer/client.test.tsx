@@ -189,3 +189,56 @@ test("does not replace a chosen local file when an earlier sample finishes loadi
   expect(screen.getByText("local.db")).toBeTruthy()
   expect(screen.queryByText("sample.sqlite")).toBeNull()
 })
+
+test("opens a same-origin transferred database and clears its fragment", async () => {
+  const localUrl = `blob:${window.location.origin}/database`
+  window.history.replaceState(
+    {},
+    "",
+    `#${new URLSearchParams({ database: localUrl, name: "résultat.sqlite" })}`
+  )
+  const fetcher = vi
+    .fn()
+    .mockResolvedValue({ ok: true, blob: async () => new Blob(["database"]) })
+  vi.stubGlobal("fetch", fetcher)
+  await act(async () => {
+    render(<Client {...props} />)
+  })
+  expect(fetcher).toHaveBeenCalledWith(localUrl, {
+    signal: expect.any(AbortSignal),
+  })
+  expect(screen.getByText("résultat.sqlite")).toBeTruthy()
+  expect(window.location.hash).toBe("")
+})
+
+test("does not fetch an external transfer and recovers when a local transfer expires", async () => {
+  const fetcher = vi.fn().mockResolvedValue({ ok: false })
+  vi.stubGlobal("fetch", fetcher)
+  try {
+    window.history.replaceState(
+      {},
+      "",
+      "#database=https%3A%2F%2Fexample.org%2Fdb&name=data.sqlite"
+    )
+    const { unmount } = render(<Client {...props} />)
+    expect(fetcher).not.toHaveBeenCalled()
+    unmount()
+
+    const database = `blob:${window.location.origin}/expired`
+    window.history.replaceState(
+      {},
+      "",
+      `#${new URLSearchParams({ database, name: "expired.sqlite" })}`
+    )
+    await act(async () => {
+      render(<Client {...props} />)
+    })
+    expect(screen.getByRole("alert").textContent).toContain(m.workerError)
+    fireEvent.change(screen.getByLabelText(m.open), {
+      target: { files: [file] },
+    })
+    expect(screen.queryByRole("alert")).toBeNull()
+  } finally {
+    window.history.replaceState({}, "", window.location.pathname)
+  }
+})

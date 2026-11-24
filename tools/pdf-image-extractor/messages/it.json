@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Scegli PDF",
+  "dropPdf": "Trascina qui un PDF",
+  "localProcessing": "Il PDF resta sul tuo dispositivo.",
+  "changePdf": "Cambia PDF",
+  "opening": "Apertura del PDF…",
+  "scanning": "Analisi della pagina {page} di {total}…",
+  "results": "Immagini estratte",
+  "firstPage": "Prima occorrenza a pagina {page}",
+  "download": "Scarica",
+  "downloadImage": "Scarica {name}",
+  "downloadZip": "Scarica tutto in ZIP",
+  "preparingZip": "Preparazione del file ZIP…",
+  "emptyTitle": "Nessuna immagine incorporata trovata",
+  "emptyDescription": "Il PDF potrebbe contenere solo testo o grafica vettoriale. Per salvare pagine intere come immagini, usa il Convertitore da PDF a immagini.",
+  "invalidFile": "Scegli un file PDF da cui estrarre le immagini.",
+  "lockedPdf": "Il PDF è protetto da password. Aprilo con la password, salva una copia senza protezione e riprova.",
+  "readError": "Impossibile leggere il PDF. Prova ad aprire un’altra copia.",
+  "skippedImages": "Non è stato possibile estrarre alcune immagini dal PDF.",
+  "zipError": "Impossibile creare il file ZIP. Puoi comunque scaricare le immagini singolarmente."
+}

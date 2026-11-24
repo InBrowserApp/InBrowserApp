@@ -1,0 +1,21 @@
+{
+  "choosePdf": "選擇 PDF",
+  "dropPdf": "或將 PDF 拖放到這裡",
+  "changePdf": "更換 PDF",
+  "privacy": "PDF 和密碼都留在您的瀏覽器中。",
+  "password": "開啟 PDF 的密碼",
+  "confirmPassword": "確認密碼",
+  "showPasswords": "顯示密碼",
+  "hidePasswords": "隱藏密碼",
+  "protectPdf": "加密 PDF",
+  "protecting": "正在加密 PDF…",
+  "protected": "加密後的 PDF 已準備好",
+  "downloadPdf": "下載加密後的 PDF",
+  "startOver": "加密另一個 PDF",
+  "onePdf": "一次請選擇一個 PDF。",
+  "invalidPdf": "請選擇包含資料的 PDF 檔案。",
+  "passwordTooLong": "請使用較短的密碼。PDF 密碼最多可包含 127 個位元組。",
+  "passwordInvalid": "請使用不含不可見控制字元的密碼。",
+  "passwordMismatch": "兩次輸入的密碼不一致。",
+  "protectionFailed": "無法加密此 PDF。請嘗試在 PDF 閱讀器中開啟，並選擇無須密碼即可開啟的副本。"
+}

@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Drop an SVG file here",
+  "chooseSvg": "Choose SVG",
+  "tryExample": "Try an example",
+  "reading": "Reading SVG…",
+  "preview": "SVG preview",
+  "changeSvg": "Change SVG",
+  "pageSize": "PDF page size",
+  "original": "Original SVG size",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Fits the artwork to the page with margins.",
+  "download": "Download PDF",
+  "converting": "Creating PDF…",
+  "downloadReady": "PDF ready.",
+  "invalidSvg": "This file could not be opened as an SVG. Choose a valid SVG file and try again.",
+  "conversionFailed": "Could not create the PDF. Try exporting a simpler SVG from your editor."
+}

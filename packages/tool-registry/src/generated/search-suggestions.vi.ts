@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "Trình xem CHM",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "Máy tính Chmod",
     slug: "chmod-calculator",
@@ -331,6 +336,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Trình tạo Gradient CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Chuyển đổi CSV và Excel sang SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +459,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "Trình đọc EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Chuyển EPUB sang PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -1004,8 +1024,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Trình chỉnh sửa dấu trang PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "Nén PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Trích xuất ảnh từ PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1141,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình định dạng mã Prettier",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Đặt mật khẩu cho PDF",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1381,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Trình chuyển SVG sang ảnh",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Trình chuyển SVG sang PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

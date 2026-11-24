@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF 선택",
+  "dropPdf": "PDF를 여기에 끌어다 놓으세요",
+  "localProcessing": "PDF는 기기 안에서만 처리됩니다.",
+  "changePdf": "PDF 변경",
+  "opening": "PDF 여는 중…",
+  "scanning": "전체 {total}페이지 중 {page}페이지 확인 중…",
+  "results": "추출된 이미지",
+  "firstPage": "처음 나온 페이지 {page}",
+  "download": "다운로드",
+  "downloadImage": "{name} 다운로드",
+  "downloadZip": "모두 ZIP으로 다운로드",
+  "preparingZip": "ZIP 파일 준비 중…",
+  "emptyTitle": "PDF에 포함된 이미지를 찾지 못했습니다",
+  "emptyDescription": "이 PDF에는 텍스트나 벡터 그래픽만 들어 있을 수 있습니다. 페이지 전체를 이미지로 저장하려면 PDF 이미지 변환기를 사용하세요.",
+  "invalidFile": "이미지를 추출할 PDF 파일을 선택하세요.",
+  "lockedPdf": "비밀번호로 보호된 PDF입니다. 비밀번호로 파일을 열고 잠금을 해제한 사본을 저장한 뒤 다시 시도하세요.",
+  "readError": "이 PDF를 읽을 수 없습니다. 다른 사본을 열어 보세요.",
+  "skippedImages": "이 PDF의 일부 이미지를 추출하지 못했습니다.",
+  "zipError": "ZIP 파일을 만들 수 없습니다. 이미지는 개별로 다운로드할 수 있습니다."
+}

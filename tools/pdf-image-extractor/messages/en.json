@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Choose PDF",
+  "dropPdf": "Drop a PDF here",
+  "localProcessing": "Your PDF stays on your device.",
+  "changePdf": "Change PDF",
+  "opening": "Opening PDF…",
+  "scanning": "Scanning page {page} of {total}…",
+  "results": "Extracted images",
+  "firstPage": "First seen on page {page}",
+  "download": "Download",
+  "downloadImage": "Download {name}",
+  "downloadZip": "Download all as ZIP",
+  "preparingZip": "Preparing ZIP…",
+  "emptyTitle": "No embedded images found",
+  "emptyDescription": "This PDF may contain only text or vector graphics. To save entire pages as images, use the PDF to Image Converter.",
+  "invalidFile": "Choose a PDF file to extract its images.",
+  "lockedPdf": "This PDF is password protected. Open it with its password and save an unlocked copy, then try again.",
+  "readError": "Could not read this PDF. Try opening a different copy.",
+  "skippedImages": "Some images could not be extracted from this PDF.",
+  "zipError": "Could not create the ZIP. You can still download the images individually."
+}

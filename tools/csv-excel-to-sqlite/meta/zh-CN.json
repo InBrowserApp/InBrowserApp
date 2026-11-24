@@ -1,0 +1,4 @@
+{
+  "name": "CSV 和 Excel 转 SQLite",
+  "description": "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。"
+}

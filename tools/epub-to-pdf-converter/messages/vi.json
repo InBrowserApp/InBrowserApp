@@ -1,0 +1,23 @@
+{
+  "open": "Chọn tệp EPUB",
+  "replace": "Chọn tệp EPUB khác",
+  "drop": "hoặc thả tệp .epub vào đây",
+  "privacy": "Sách vẫn nằm trên thiết bị của bạn.",
+  "loading": "Đang chuẩn bị bản xem trước…",
+  "cancel": "Hủy",
+  "pageSize": "Khổ giấy",
+  "letter": "US Letter",
+  "save": "Lưu dưới dạng PDF",
+  "saveHelp": "Chọn Lưu dưới dạng PDF trong hộp thoại in. Tắt đầu trang và chân trang nếu bạn chỉ muốn lưu nội dung sách.",
+  "preview": "Bản xem trước sách",
+  "chapter": "Chương",
+  "contents": "Mục lục",
+  "supportingSections": "Chú thích và nội dung bổ sung",
+  "imageUnavailable": "Không thể hiển thị hình ảnh",
+  "missingResources": "Không thể đưa một số hình ảnh hoặc tài nguyên khác vào bản chuyển đổi.",
+  "unsupported": "Chọn tệp .epub để tiếp tục.",
+  "invalid": "Không đọc được tệp EPUB này. Hãy thử một bản khác của cuốn sách.",
+  "protected": "Tệp EPUB này được bảo vệ. Hãy chọn bản không có DRM.",
+  "unsupportedLayout": "Tệp EPUB này có bố cục cố định. Hãy chọn bản EPUB có bố cục linh hoạt.",
+  "printUnavailable": "Trình duyệt này không hỗ trợ in. Hãy mở công cụ bằng trình duyệt có thể lưu bản in dưới dạng PDF."
+}

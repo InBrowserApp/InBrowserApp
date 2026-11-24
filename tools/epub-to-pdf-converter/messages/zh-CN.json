@@ -1,0 +1,23 @@
+{
+  "open": "选择 EPUB 文件",
+  "replace": "选择其他 EPUB",
+  "drop": "或将 .epub 文件拖放到这里",
+  "privacy": "书籍保留在此设备上。",
+  "loading": "正在准备书籍预览…",
+  "cancel": "取消",
+  "pageSize": "纸张大小",
+  "letter": "美式信纸",
+  "save": "保存为 PDF",
+  "saveHelp": "在打印对话框中选择“保存为 PDF”。关闭页眉和页脚可获得更整洁的文件。",
+  "preview": "书籍预览",
+  "chapter": "章节",
+  "contents": "目录",
+  "supportingSections": "注释和附加内容",
+  "imageUnavailable": "图片不可用",
+  "missingResources": "部分图片或其他资源无法包含在内。",
+  "unsupported": "请选择 .epub 文件以继续。",
+  "invalid": "无法读取此 EPUB。请尝试使用书籍的另一个副本。",
+  "protected": "此 EPUB 受保护。请选择无 DRM 保护的副本。",
+  "unsupportedLayout": "此 EPUB 使用固定版式。请选择可重排的 EPUB。",
+  "printUnavailable": "此浏览器无法打印。请在支持打印为 PDF 的浏览器中打开此工具。"
+}

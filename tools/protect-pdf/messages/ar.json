@@ -1,0 +1,21 @@
+{
+  "choosePdf": "اختر ملف PDF",
+  "dropPdf": "أو أفلت ملف PDF هنا",
+  "changePdf": "تغيير ملف PDF",
+  "privacy": "يبقى ملف PDF وكلمة المرور في متصفحك.",
+  "password": "كلمة مرور فتح ملف PDF",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "showPasswords": "إظهار كلمتَي المرور",
+  "hidePasswords": "إخفاء كلمتَي المرور",
+  "protectPdf": "حماية ملف PDF",
+  "protecting": "جارٍ تشفير ملف PDF…",
+  "protected": "نسختك المحمية جاهزة",
+  "downloadPdf": "تنزيل ملف PDF المحمي",
+  "startOver": "حماية ملف PDF آخر",
+  "onePdf": "اختر ملف PDF واحدًا في كل مرة.",
+  "invalidPdf": "اختر ملف PDF غير فارغ.",
+  "passwordTooLong": "استخدم كلمة مرور أقصر. الحد الأقصى لكلمة مرور PDF هو 127 بايت.",
+  "passwordInvalid": "استخدم كلمة مرور لا تحتوي على أحرف تحكم غير مرئية.",
+  "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+  "protectionFailed": "تعذّرت حماية ملف PDF. افتحه في عارض PDF وجرّب اختيار نسخة تُفتح دون كلمة مرور."
+}

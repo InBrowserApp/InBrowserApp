@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Välj PDF",
+  "dropPdf": "eller dra och släpp en PDF-fil här",
+  "changePdf": "Välj en annan PDF",
+  "privacy": "PDF-filen och lösenordet stannar i webbläsaren.",
+  "password": "Lösenord för att öppna PDF-filen",
+  "confirmPassword": "Bekräfta lösenord",
+  "showPasswords": "Visa lösenorden",
+  "hidePasswords": "Dölj lösenorden",
+  "protectPdf": "Skydda PDF",
+  "protecting": "Skyddar PDF-filen …",
+  "protected": "Din skyddade PDF är klar",
+  "downloadPdf": "Ladda ner skyddad PDF",
+  "startOver": "Skydda en till PDF",
+  "onePdf": "Välj en PDF-fil i taget.",
+  "invalidPdf": "Välj en PDF-fil som inte är tom.",
+  "passwordTooLong": "Använd ett kortare lösenord. Lösenord för PDF-filer får vara högst 127 byte.",
+  "passwordInvalid": "Använd ett lösenord utan osynliga styrtecken.",
+  "passwordMismatch": "Lösenorden stämmer inte överens.",
+  "protectionFailed": "Det gick inte att skydda PDF-filen. Prova att öppna den i en PDF-läsare och välj en kopia som går att öppna utan lösenord."
+}

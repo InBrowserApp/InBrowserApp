@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "CHM 查看器",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "Chmod 计算器",
     slug: "chmod-calculator",
@@ -331,6 +336,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS 渐变生成器",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV 和 Excel 转 SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +459,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB 元数据编辑器",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB 阅读器",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB 转 PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -1004,8 +1024,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 书签编辑器",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF 压缩",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "从 PDF 中提取图片",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1141,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier 代码格式化工具",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "为 PDF 添加密码",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1381,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG 转图片转换器",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG 转 PDF 转换器",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

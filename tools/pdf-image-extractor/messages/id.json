@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropPdf": "Letakkan PDF di sini",
+  "localProcessing": "PDF tetap berada di perangkat Anda.",
+  "changePdf": "Ganti PDF",
+  "opening": "Membuka PDF…",
+  "scanning": "Memindai halaman {page} dari {total}…",
+  "results": "Gambar hasil ekstraksi",
+  "firstPage": "Pertama muncul di halaman {page}",
+  "download": "Unduh",
+  "downloadImage": "Unduh {name}",
+  "downloadZip": "Unduh semua sebagai ZIP",
+  "preparingZip": "Menyiapkan ZIP…",
+  "emptyTitle": "Tidak ada gambar tertanam yang ditemukan",
+  "emptyDescription": "PDF ini mungkin hanya berisi teks atau grafis vektor. Untuk menyimpan halaman utuh sebagai gambar, gunakan Konverter PDF ke Gambar.",
+  "invalidFile": "Pilih file PDF untuk mengekstrak gambarnya.",
+  "lockedPdf": "PDF ini dilindungi kata sandi. Buka dengan kata sandinya, simpan salinan tanpa kunci, lalu coba lagi.",
+  "readError": "PDF ini tidak dapat dibaca. Coba buka salinan lain.",
+  "skippedImages": "Beberapa gambar tidak dapat diekstrak dari PDF ini.",
+  "zipError": "File ZIP tidak dapat dibuat. Anda masih bisa mengunduh gambar satu per satu."
+}

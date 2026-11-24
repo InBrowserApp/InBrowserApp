@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropPdf": "atau seret PDF ke sini",
+  "changePdf": "Ganti PDF",
+  "privacy": "PDF dan kata sandi tetap di browser Anda.",
+  "password": "Kata sandi untuk membuka PDF",
+  "confirmPassword": "Konfirmasi kata sandi",
+  "showPasswords": "Tampilkan kata sandi",
+  "hidePasswords": "Sembunyikan kata sandi",
+  "protectPdf": "Lindungi PDF",
+  "protecting": "Mengenkripsi PDF…",
+  "protected": "PDF yang dilindungi siap diunduh",
+  "downloadPdf": "Unduh PDF yang dilindungi",
+  "startOver": "Lindungi PDF lain",
+  "onePdf": "Pilih satu PDF saja.",
+  "invalidPdf": "Pilih file PDF yang tidak kosong.",
+  "passwordTooLong": "Gunakan kata sandi yang lebih pendek. Panjang kata sandi PDF maksimal 127 byte.",
+  "passwordInvalid": "Gunakan kata sandi tanpa karakter kontrol yang tidak terlihat.",
+  "passwordMismatch": "Kedua kata sandi tidak cocok.",
+  "protectionFailed": "PDF ini tidak bisa dilindungi. Coba buka file di pembaca PDF, lalu pilih salinan yang bisa dibuka tanpa kata sandi."
+}

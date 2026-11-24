@@ -1,0 +1,21 @@
+{
+  "choosePdf": "בחירת קובץ PDF",
+  "dropPdf": "או גררו לכאן קובץ PDF",
+  "changePdf": "בחירת קובץ PDF אחר",
+  "privacy": "קובץ ה-PDF והסיסמה נשארים בדפדפן שלכם.",
+  "password": "סיסמה לפתיחת הקובץ",
+  "confirmPassword": "אימות הסיסמה",
+  "showPasswords": "הצגת הסיסמאות",
+  "hidePasswords": "הסתרת הסיסמאות",
+  "protectPdf": "הגנה על קובץ PDF",
+  "protecting": "קובץ ה-PDF מוצפן כעת…",
+  "protected": "קובץ ה-PDF המוגן מוכן",
+  "downloadPdf": "הורדת קובץ PDF מוגן",
+  "startOver": "הגנה על קובץ PDF נוסף",
+  "onePdf": "בחרו קובץ PDF אחד בכל פעם.",
+  "invalidPdf": "בחרו קובץ PDF שאינו ריק.",
+  "passwordTooLong": "השתמשו בסיסמה קצרה יותר. סיסמה לקובץ PDF יכולה להכיל עד 127 בתים.",
+  "passwordInvalid": "יש להשתמש בסיסמה ללא תווי בקרה בלתי נראים.",
+  "passwordMismatch": "הסיסמאות אינן זהות.",
+  "protectionFailed": "לא הצלחנו להגן על קובץ ה-PDF. נסו לפתוח אותו במציג PDF ולבחור עותק שנפתח ללא סיסמה."
+}

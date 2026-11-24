@@ -1,0 +1,19 @@
+{
+  "dropSvg": "將 SVG 檔案拖放到這裡",
+  "chooseSvg": "選擇 SVG",
+  "tryExample": "試用範例",
+  "reading": "正在讀取 SVG…",
+  "preview": "SVG 預覽",
+  "changeSvg": "更換 SVG",
+  "pageSize": "PDF 頁面尺寸",
+  "original": "原始 SVG 尺寸",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "配合頁面大小縮放圖稿，並保留邊界。",
+  "download": "下載 PDF",
+  "converting": "正在產生 PDF…",
+  "downloadReady": "PDF 已就緒。",
+  "invalidSvg": "無法以 SVG 格式開啟這個檔案。請選擇有效的 SVG 檔案再試一次。",
+  "conversionFailed": "無法產生 PDF。請試著從編輯器匯出較簡單的 SVG。"
+}

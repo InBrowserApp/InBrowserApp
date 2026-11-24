@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "CHM-viser",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "Chmod-kalkulator",
     slug: "chmod-calculator",
@@ -331,6 +336,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS-gradientgenerator",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Konverter CSV og Excel til SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +459,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Redigering av EPUB-metadata",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB-leser",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Konverter EPUB til PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -1004,8 +1024,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Rediger PDF-bokmerker",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF-komprimering",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Trekk ut bilder fra PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1141,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier-kodeformatterer",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Passordbeskytt PDF",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1381,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG-til-bilde-konverterer",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Konverterer fra SVG til PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

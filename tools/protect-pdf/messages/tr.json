@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF seç",
+  "dropPdf": "veya bir PDF dosyasını buraya sürükleyin",
+  "changePdf": "PDF’yi değiştir",
+  "privacy": "PDF dosyanız ve parolanız tarayıcınızda kalır.",
+  "password": "PDF’yi açmak için parola",
+  "confirmPassword": "Parolayı doğrula",
+  "showPasswords": "Parolaları göster",
+  "hidePasswords": "Parolaları gizle",
+  "protectPdf": "PDF’yi koru",
+  "protecting": "PDF şifreleniyor…",
+  "protected": "Korumalı PDF dosyanız hazır",
+  "downloadPdf": "Korumalı PDF’yi indir",
+  "startOver": "Başka bir PDF’yi koru",
+  "onePdf": "Bir seferde tek bir PDF dosyası seçin.",
+  "invalidPdf": "İçeriği olan bir PDF dosyası seçin.",
+  "passwordTooLong": "Daha kısa bir parola kullanın. PDF parolası en fazla 127 bayt olabilir.",
+  "passwordInvalid": "Görünmeyen kontrol karakterleri içermeyen bir parola kullanın.",
+  "passwordMismatch": "Parolalar eşleşmiyor.",
+  "protectionFailed": "PDF şifrelenemedi. Dosyayı bir PDF görüntüleyicide açmayı deneyin ve parola istemeden açılan bir kopya seçin."
+}

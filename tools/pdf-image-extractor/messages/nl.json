@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Kies een PDF",
+  "dropPdf": "Sleep een PDF hierheen",
+  "localProcessing": "Je PDF blijft op je apparaat.",
+  "changePdf": "Andere PDF kiezen",
+  "opening": "PDF wordt geopend…",
+  "scanning": "Pagina {page} van {total} wordt doorzocht…",
+  "results": "Geëxtraheerde afbeeldingen",
+  "firstPage": "Voor het eerst op pagina {page}",
+  "download": "Downloaden",
+  "downloadImage": "{name} downloaden",
+  "downloadZip": "Alles als ZIP downloaden",
+  "preparingZip": "ZIP-bestand wordt gemaakt…",
+  "emptyTitle": "Geen ingesloten afbeeldingen gevonden",
+  "emptyDescription": "Deze PDF bevat mogelijk alleen tekst of vectorafbeeldingen. Sla volledige pagina's als afbeeldingen op met de PDF-naar-afbeelding-converter.",
+  "invalidFile": "Kies een PDF-bestand om de afbeeldingen eruit te halen.",
+  "lockedPdf": "Deze PDF is beveiligd met een wachtwoord. Open het bestand met het wachtwoord, sla een onbeveiligde kopie op en probeer het opnieuw.",
+  "readError": "Deze PDF kan niet worden gelezen. Probeer een andere kopie te openen.",
+  "skippedImages": "Enkele afbeeldingen konden niet uit deze PDF worden gehaald.",
+  "zipError": "Het ZIP-bestand kon niet worden gemaakt. Je kunt de afbeeldingen nog afzonderlijk downloaden."
+}

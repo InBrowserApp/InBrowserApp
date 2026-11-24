@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "عارض CHM",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "حاسبة Chmod",
     slug: "chmod-calculator",
@@ -331,6 +336,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "مولد تدرجات CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "تحويل CSV وExcel إلى SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +459,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "محرر بيانات EPUB الوصفية",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "قارئ EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "محوّل EPUB إلى PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -1004,8 +1024,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "محرر الإشارات المرجعية لملفات PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "ضاغط ملفات PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "استخراج الصور من PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1141,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "منسق كود Prettier",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "حماية ملف PDF بكلمة مرور",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1381,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "محول SVG إلى صورة",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "محوّل SVG إلى PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

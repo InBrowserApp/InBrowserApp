@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "CHM 뷰어",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "Chmod 계산기",
     slug: "chmod-calculator",
@@ -331,6 +336,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS 그라디언트 생성기",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV·Excel을 SQLite로 변환",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +459,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB 메타데이터 편집기",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB 리더",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB PDF 변환기",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -1004,8 +1024,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 책갈피 편집기",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF 압축 도구",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "PDF에서 이미지 추출",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1141,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier 코드 포맷터",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "PDF 암호 설정",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1381,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG 이미지 변환기",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG PDF 변환기",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

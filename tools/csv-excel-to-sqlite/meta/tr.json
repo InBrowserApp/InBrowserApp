@@ -1,0 +1,4 @@
+{
+  "name": "CSV ve Excel'den SQLite'a Dönüştürücü",
+  "description": "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın."
+}

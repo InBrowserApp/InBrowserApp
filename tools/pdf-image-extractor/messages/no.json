@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Velg PDF",
+  "dropPdf": "Slipp en PDF her",
+  "localProcessing": "PDF-en blir på enheten din.",
+  "changePdf": "Velg en annen PDF",
+  "opening": "Åpner PDF…",
+  "scanning": "Ser etter bilder på side {page} av {total}…",
+  "results": "Bilder fra PDF-en",
+  "firstPage": "Vises først på side {page}",
+  "download": "Last ned",
+  "downloadImage": "Last ned {name}",
+  "downloadZip": "Last ned alle som ZIP",
+  "preparingZip": "Klargjør ZIP-fil…",
+  "emptyTitle": "Fant ingen innebygde bilder",
+  "emptyDescription": "Denne PDF-en kan inneholde bare tekst eller vektorgrafikk. Bruk PDF-til-bilde-konverter for å lagre hele sider som bilder.",
+  "invalidFile": "Velg en PDF-fil for å trekke ut bildene.",
+  "lockedPdf": "Denne PDF-en er passordbeskyttet. Åpne den med passordet, lagre en ubeskyttet kopi og prøv igjen.",
+  "readError": "Kunne ikke lese denne PDF-en. Prøv å åpne en annen kopi.",
+  "skippedImages": "Noen bilder kunne ikke trekkes ut fra denne PDF-en.",
+  "zipError": "Kunne ikke opprette ZIP-filen. Du kan fortsatt laste ned bildene enkeltvis."
+}

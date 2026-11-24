@@ -4602,6 +4602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chm-viewer",
+    language: "ar",
+  },
+  {
+    slug: "chm-viewer",
+    language: "de",
+  },
+  {
+    slug: "chm-viewer",
+    language: "en",
+  },
+  {
+    slug: "chm-viewer",
+    language: "es",
+  },
+  {
+    slug: "chm-viewer",
+    language: "fr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "he",
+  },
+  {
+    slug: "chm-viewer",
+    language: "hi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "id",
+  },
+  {
+    slug: "chm-viewer",
+    language: "it",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ja",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ko",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ms",
+  },
+  {
+    slug: "chm-viewer",
+    language: "nl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "no",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pt",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ru",
+  },
+  {
+    slug: "chm-viewer",
+    language: "sv",
+  },
+  {
+    slug: "chm-viewer",
+    language: "th",
+  },
+  {
+    slug: "chm-viewer",
+    language: "tr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "vi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "chm-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "chmod-calculator",
     language: "ar",
   },
@@ -6071,6 +6163,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "css-gradient-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ar",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "de",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "en",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "es",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "fr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "he",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "hi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "id",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "it",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ja",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ko",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ms",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "nl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "no",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pt",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ru",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "sv",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "th",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "tr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "vi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
     language: "zh-TW",
   },
   {
@@ -8190,6 +8374,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epub-metadata-editor",
+    language: "ar",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "de",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "en",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "es",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "fr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "he",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "hi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "id",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "it",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ja",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ko",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ms",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "nl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "no",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pt",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ru",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "sv",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "th",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "tr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "vi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-reader",
     language: "ar",
   },
@@ -8279,6 +8555,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "epub-reader",
+    language: "zh-TW",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-to-pdf-converter",
     language: "zh-TW",
   },
   {
@@ -18402,6 +18770,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-bookmark-editor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "de",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "en",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "es",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "he",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "id",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "it",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "no",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "th",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-compressor",
     language: "ar",
   },
@@ -18491,6 +18951,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pdf-compressor",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "de",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "en",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "es",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "he",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "id",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "it",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "no",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "th",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-image-extractor",
     language: "zh-TW",
   },
   {
@@ -20423,6 +20975,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "prettier-code-formatter",
+    language: "zh-TW",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ar",
+  },
+  {
+    slug: "protect-pdf",
+    language: "de",
+  },
+  {
+    slug: "protect-pdf",
+    language: "en",
+  },
+  {
+    slug: "protect-pdf",
+    language: "es",
+  },
+  {
+    slug: "protect-pdf",
+    language: "fr",
+  },
+  {
+    slug: "protect-pdf",
+    language: "he",
+  },
+  {
+    slug: "protect-pdf",
+    language: "hi",
+  },
+  {
+    slug: "protect-pdf",
+    language: "id",
+  },
+  {
+    slug: "protect-pdf",
+    language: "it",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ja",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ko",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ms",
+  },
+  {
+    slug: "protect-pdf",
+    language: "nl",
+  },
+  {
+    slug: "protect-pdf",
+    language: "no",
+  },
+  {
+    slug: "protect-pdf",
+    language: "pl",
+  },
+  {
+    slug: "protect-pdf",
+    language: "pt",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ru",
+  },
+  {
+    slug: "protect-pdf",
+    language: "sv",
+  },
+  {
+    slug: "protect-pdf",
+    language: "th",
+  },
+  {
+    slug: "protect-pdf",
+    language: "tr",
+  },
+  {
+    slug: "protect-pdf",
+    language: "vi",
+  },
+  {
+    slug: "protect-pdf",
+    language: "zh-CN",
+  },
+  {
+    slug: "protect-pdf",
     language: "zh-TW",
   },
   {
@@ -24747,6 +25391,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "svg-to-image-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-pdf-converter",
     language: "zh-TW",
   },
   {

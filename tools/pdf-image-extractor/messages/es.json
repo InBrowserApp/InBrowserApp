@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Elegir PDF",
+  "dropPdf": "Suelta un PDF aquí",
+  "localProcessing": "Tu PDF se queda en tu dispositivo.",
+  "changePdf": "Cambiar PDF",
+  "opening": "Abriendo el PDF…",
+  "scanning": "Analizando la página {page} de {total}…",
+  "results": "Imágenes extraídas",
+  "firstPage": "Aparece por primera vez en la página {page}",
+  "download": "Descargar",
+  "downloadImage": "Descargar {name}",
+  "downloadZip": "Descargar todo en ZIP",
+  "preparingZip": "Preparando el ZIP…",
+  "emptyTitle": "No se encontraron imágenes incrustadas",
+  "emptyDescription": "Puede que este PDF solo contenga texto o gráficos vectoriales. Para guardar páginas completas como imágenes, usa el Convertidor de PDF a imagen.",
+  "invalidFile": "Elige un archivo PDF para extraer sus imágenes.",
+  "lockedPdf": "Este PDF está protegido con contraseña. Ábrelo con su contraseña, guarda una copia sin protección y vuelve a intentarlo.",
+  "readError": "No se pudo leer este PDF. Prueba con otra copia.",
+  "skippedImages": "No se pudieron extraer algunas imágenes de este PDF.",
+  "zipError": "No se pudo crear el ZIP. Puedes descargar las imágenes por separado."
+}

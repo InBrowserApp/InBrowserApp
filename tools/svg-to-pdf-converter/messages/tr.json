@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Bir SVG dosyasını buraya bırakın",
+  "chooseSvg": "SVG seç",
+  "tryExample": "Örnek dene",
+  "reading": "SVG okunuyor…",
+  "preview": "SVG önizlemesi",
+  "changeSvg": "SVG'yi değiştir",
+  "pageSize": "PDF sayfa boyutu",
+  "original": "Özgün SVG boyutu",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Çizimi kenar boşluklarıyla sayfaya sığdırır.",
+  "download": "PDF indir",
+  "converting": "PDF oluşturuluyor…",
+  "downloadReady": "PDF hazır.",
+  "invalidSvg": "Bu dosya SVG olarak açılamadı. Geçerli bir SVG dosyası seçip tekrar deneyin.",
+  "conversionFailed": "PDF oluşturulamadı. Düzenleyicinizden daha basit bir SVG dışa aktarmayı deneyin."
+}

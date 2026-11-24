@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Solte um arquivo SVG aqui",
+  "chooseSvg": "Escolher SVG",
+  "tryExample": "Testar um exemplo",
+  "reading": "Lendo SVG…",
+  "preview": "Prévia do SVG",
+  "changeSvg": "Trocar SVG",
+  "pageSize": "Tamanho da página do PDF",
+  "original": "Tamanho original do SVG",
+  "a4": "A4",
+  "letter": "Carta (EUA)",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Ajusta a ilustração à página com margens.",
+  "download": "Baixar PDF",
+  "converting": "Criando PDF…",
+  "downloadReady": "O PDF está pronto.",
+  "invalidSvg": "Não foi possível abrir este arquivo como SVG. Escolha um arquivo SVG válido e tente novamente.",
+  "conversionFailed": "Não foi possível criar o PDF. Tente exportar um SVG mais simples no seu editor."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CSV・ExcelをSQLiteに変換",
+  "description": "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。"
+}
