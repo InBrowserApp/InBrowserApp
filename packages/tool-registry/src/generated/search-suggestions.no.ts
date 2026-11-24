@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Lag undertekster til video",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Video til GIF",
     slug: "video-to-gif",
   },

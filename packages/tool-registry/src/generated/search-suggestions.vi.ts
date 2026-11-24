@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Trình tạo phụ đề video",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Chuyển video thành GIF",
     slug: "video-to-gif",
   },

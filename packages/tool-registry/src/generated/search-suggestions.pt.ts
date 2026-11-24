@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Gerador de legendas para vídeos",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Converter vídeo em GIF",
     slug: "video-to-gif",
   },

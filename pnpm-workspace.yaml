@@ -15,6 +15,8 @@ catalog:
   parse-torrent: 11.0.24
   path-browserify: 1.0.1
   webtorrent: 3.0.21
+  "@ffmpeg/core": 0.12.10
+  "@ffmpeg/ffmpeg": 0.12.15
   "@aws-sdk/client-s3": 3.1174.0
   "@aws-sdk/s3-request-presigner": 3.1174.0
   "@huggingface/transformers": 3.8.1

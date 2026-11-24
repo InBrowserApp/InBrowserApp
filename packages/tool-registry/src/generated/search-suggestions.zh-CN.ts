@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "视频字幕生成器",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "视频转 GIF",
     slug: "video-to-gif",
   },

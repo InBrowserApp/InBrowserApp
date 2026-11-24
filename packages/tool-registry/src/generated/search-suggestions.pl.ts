@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Generator napisów do filmów",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Konwerter wideo na GIF",
     slug: "video-to-gif",
   },

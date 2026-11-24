@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Video Altyazı Oluşturucu",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Videodan GIF'e Dönüştürücü",
     slug: "video-to-gif",
   },

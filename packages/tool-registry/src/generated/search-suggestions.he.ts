@@ -1834,6 +1834,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "מחולל כתוביות לווידאו",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "המרת וידאו ל-GIF",
     slug: "video-to-gif",
   },

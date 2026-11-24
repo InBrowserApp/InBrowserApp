@@ -1,3 +1,4 @@
+import { createWhisperWorker } from "@workspace/local-speech/worker"
 import { useEffect, useRef, useState } from "react"
 import { hasTranscriptText } from "./core/transcript"
 import { SAMPLE_RATE } from "./worker-messages"
@@ -90,10 +91,7 @@ function useTranscription() {
                     type: "module",
                   }
                 )
-              : new Worker(
-                  new URL("./workers/transcribe.worker.ts", import.meta.url),
-                  { type: "module" }
-                )
+              : createWhisperWorker()
         job.worker = worker
         worker.onmessage = ({ data }: MessageEvent<TranscriptionResponse>) => {
           if (active.current !== job || job.worker !== worker) return

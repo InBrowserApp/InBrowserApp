@@ -16,6 +16,9 @@
         "couldNotResolve": true,
         "pathNot": [
           "^astro:",
+          "^@ffmpeg/core[?]url$",
+          "^@ffmpeg/core/wasm[?]gzip-url$",
+          "^@ffmpeg/ffmpeg/worker[?]worker&url$",
           "^djvu-rs/(scalar|simd128)/djvu_rs_bg[.]wasm[?]url$",
           "^mediainfo[.]js/MediaInfoModule[.]wasm[?]url$",
           "^hb-subset-wasm/hb-subset[.]wasm[?]url$",

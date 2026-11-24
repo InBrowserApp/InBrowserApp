@@ -46537,6 +46537,143 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "video-subtitle-generator",
+    category: "video",
+    secondaryCategories: ["text"],
+    icon: "captions",
+    tags: [
+      "video",
+      "subtitles",
+      "captions",
+      "automatic subtitles",
+      "video transcription",
+      "speech to text",
+      "whisper",
+      "webgpu",
+      "srt",
+      "mp4",
+      "mkv",
+      "soft subtitles",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد ترجمة الفيديو",
+        description:
+          "أضف ترجمة نصية إلى الفيديو تلقائيًا في متصفحك. عدّل النص والتوقيت، وأدرج مسار ترجمة في فيديو MP4 أو MKV، أو نزّل ملف SRT.",
+      },
+      de: {
+        name: "Untertitel für Videos erstellen",
+        description:
+          "Erstelle automatisch Untertitel im Browser. Bearbeite Text und Zeitstempel, bette Untertitel in MP4 oder MKV ein oder lade sie als SRT herunter.",
+      },
+      en: {
+        name: "Video Subtitle Generator",
+        description:
+          "Automatically add subtitles to video in your browser. Edit text and timing, embed a subtitle track in MP4 or MKV, or download an SRT file.",
+      },
+      es: {
+        name: "Generador de subtítulos para vídeos",
+        description:
+          "Añade subtítulos automáticos a tus vídeos desde el navegador. Edita el texto y los tiempos, incorpora una pista de subtítulos a un archivo MP4 o MKV, o descarga un archivo SRT.",
+      },
+      fr: {
+        name: "Générateur de sous-titres vidéo",
+        description:
+          "Générez automatiquement des sous-titres dans votre navigateur. Corrigez le texte et le minutage, intégrez une piste à une vidéo MP4 ou MKV, ou téléchargez un fichier SRT.",
+      },
+      he: {
+        name: "מחולל כתוביות לווידאו",
+        description:
+          "מוסיפים כתוביות אוטומטיות לסרטונים בדפדפן. עורכים את הטקסט והתזמון, מטמיעים רצועת כתוביות בקובץ MP4 או MKV, או מורידים קובץ SRT.",
+      },
+      hi: {
+        name: "वीडियो उपशीर्षक जनरेटर",
+        description:
+          "अपने ब्राउज़र में वीडियो के लिए अपने आप उपशीर्षक बनाएँ। टेक्स्ट और समय बदलें, MP4 या MKV में उपशीर्षक ट्रैक जोड़ें या SRT फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Subtitle Video",
+        description:
+          "Tambahkan subtitle otomatis ke video langsung di browser. Edit teks dan penanda waktu, sematkan trek subtitle di MP4 atau MKV, atau unduh file SRT.",
+      },
+      it: {
+        name: "Generatore di sottotitoli per video",
+        description:
+          "Aggiungi sottotitoli automatici ai video nel browser. Correggi testo e tempi, incorpora una traccia in MP4 o MKV oppure scarica un file SRT.",
+      },
+      ja: {
+        name: "動画字幕生成ツール",
+        description:
+          "ブラウザーで動画に字幕を自動生成。テキストやタイミングを編集し、MP4やMKVに字幕トラックを埋め込むか、SRTファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 자막 생성기",
+        description:
+          "브라우저에서 동영상 자막을 자동으로 생성하세요. 자막 내용과 시간을 편집하고 MP4 또는 MKV에 자막 트랙을 넣거나 SRT 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Sari Kata Video",
+        description:
+          "Tambahkan sari kata pada video secara automatik dalam pelayar. Sunting teks dan pemasaan, benamkan trek sari kata dalam MP4 atau MKV, atau muat turun fail SRT.",
+      },
+      nl: {
+        name: "Video ondertitelen",
+        description:
+          "Voeg automatisch ondertitels toe aan je video in de browser. Pas tekst en timing aan, voeg een ondertitelspoor toe aan MP4 of MKV of download een SRT-bestand.",
+      },
+      no: {
+        name: "Lag undertekster til video",
+        description:
+          "Legg til undertekster automatisk i nettleseren. Rediger teksten og tidskodene, bygg inn et undertekstspor i MP4 eller MKV, eller last ned en SRT-fil.",
+      },
+      pl: {
+        name: "Generator napisów do filmów",
+        description:
+          "Dodawaj automatyczne napisy do filmów w przeglądarce. Popraw tekst i czas wyświetlania, osadź ścieżkę napisów w MP4 lub MKV albo pobierz plik SRT.",
+      },
+      pt: {
+        name: "Gerador de legendas para vídeos",
+        description:
+          "Adicione legendas automáticas a vídeos no navegador. Edite o texto e os tempos, inclua uma faixa de legendas em MP4 ou MKV ou baixe um arquivo SRT.",
+      },
+      ru: {
+        name: "Генератор субтитров для видео",
+        description:
+          "Создавайте субтитры для видео в браузере. Редактируйте текст и время показа, встраивайте дорожку субтитров в MP4 или MKV либо скачивайте файл SRT.",
+      },
+      sv: {
+        name: "Skapa undertexter till video",
+        description:
+          "Lägg till undertexter automatiskt i webbläsaren. Justera text och tider, bädda in ett undertextspår i MP4 eller MKV eller ladda ned en SRT-fil.",
+      },
+      th: {
+        name: "เครื่องมือสร้างคำบรรยายวิดีโอ",
+        description:
+          "สร้างคำบรรยายวิดีโออัตโนมัติในเบราว์เซอร์ แก้ไขข้อความและเวลา ฝังแทร็กคำบรรยายใน MP4 หรือ MKV หรือดาวน์โหลดไฟล์ SRT",
+      },
+      tr: {
+        name: "Video Altyazı Oluşturucu",
+        description:
+          "Tarayıcınızda videoya otomatik altyazı ekleyin. Metni ve zamanlamayı düzenleyin, MP4 veya MKV dosyasına altyazı parçası gömün ya da SRT indirin.",
+      },
+      vi: {
+        name: "Trình tạo phụ đề video",
+        description:
+          "Tự động tạo phụ đề video ngay trong trình duyệt. Chỉnh sửa lời và thời gian hiển thị, nhúng rãnh phụ đề vào MP4 hoặc MKV, hoặc tải tệp SRT.",
+      },
+      "zh-CN": {
+        name: "视频字幕生成器",
+        description:
+          "在浏览器中自动为视频添加字幕。编辑字幕文本和时间，将字幕轨道嵌入 MP4 或 MKV，或下载 SRT 文件。",
+      },
+      "zh-TW": {
+        name: "影片字幕產生器",
+        description:
+          "直接在瀏覽器中為影片自動產生字幕。編輯字幕文字與時間，將字幕軌內嵌至 MP4 或 MKV，或下載 SRT 字幕檔。",
+      },
+    },
+  },
+  {
     slug: "video-to-gif",
     category: "video",
     secondaryCategories: ["image"],
