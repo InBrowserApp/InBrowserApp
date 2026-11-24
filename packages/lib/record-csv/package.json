@@ -1,0 +1,16 @@
+{
+  "name": "@workspace/record-csv",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "papaparse": "catalog:"
+  },
+  "devDependencies": {
+    "@types/papaparse": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@workspace/vcard",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./read": "./src/read.ts"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

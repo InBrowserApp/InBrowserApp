@@ -2,6 +2,7 @@ import type { LucideProps } from "lucide-react"
 import type { ComponentType } from "react"
 
 import {
+  ArrowLeftRight,
   Binary,
   Blocks,
   Bookmark,
@@ -50,6 +51,7 @@ import {
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
+  "arrow-left-right": ArrowLeftRight,
   binary: Binary,
   blocks: Blocks,
   bookmark: Bookmark,

@@ -1,0 +1,28 @@
+{
+  "openFile": "파일 열기",
+  "sample": "예제 사용",
+  "input": "원본 텍스트",
+  "copy": "복사",
+  "copied": "복사됨",
+  "copyFailed": "복사할 수 없음",
+  "readError": "파일을 읽을 수 없습니다. 파일을 다시 선택하거나 텍스트를 붙여넣으세요.",
+  "result": "변환 결과",
+  "empty": "파일을 열거나 텍스트를 붙여넣고 변환하면 여기에 결과가 표시됩니다.",
+  "convert": "변환",
+  "preview": "결과 미리보기",
+  "invalid": "파일 형식과 아래 예제를 확인한 뒤 다시 시도하세요.",
+  "noRows": "변환할 데이터가 없습니다. 입력 내용과 열 이름을 확인하세요.",
+  "rowError": "CSV {row}행의 값을 확인하세요.",
+  "count": "데이터 수: {count}",
+  "paste": "여기에 파일 내용을 붙여넣으세요",
+  "forward": "vCard → CSV",
+  "reverse": "CSV → vCard",
+  "downloadForward": "CSV 다운로드",
+  "downloadReverse": "VCF 다운로드",
+  "columns": {
+    "Full Name": "이름",
+    "Email": "이메일",
+    "Phone": "전화번호",
+    "Company": "회사"
+  }
+}

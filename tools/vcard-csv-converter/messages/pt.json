@@ -1,0 +1,28 @@
+{
+  "openFile": "Abrir arquivo",
+  "sample": "Testar um exemplo",
+  "input": "Texto de origem",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "copyFailed": "Não foi possível copiar",
+  "readError": "Não foi possível ler o arquivo. Selecione-o novamente ou cole o texto.",
+  "result": "Resultado da conversão",
+  "empty": "Abra um arquivo ou cole o texto, depois converta para ver o resultado aqui.",
+  "convert": "Converter",
+  "preview": "Prévia do resultado",
+  "invalid": "Confira o formato do arquivo e os exemplos abaixo. Depois, tente novamente.",
+  "noRows": "Não há registros para converter. Confira os dados e os cabeçalhos das colunas.",
+  "rowError": "Confira os valores na linha {row} do CSV.",
+  "count": "Registros: {count}",
+  "paste": "Cole aqui o conteúdo do arquivo",
+  "forward": "vCard para CSV",
+  "reverse": "CSV para vCard",
+  "downloadForward": "Baixar CSV",
+  "downloadReverse": "Baixar VCF",
+  "columns": {
+    "Full Name": "Nome completo",
+    "Email": "E-mail",
+    "Phone": "Telefone",
+    "Company": "Empresa"
+  }
+}
