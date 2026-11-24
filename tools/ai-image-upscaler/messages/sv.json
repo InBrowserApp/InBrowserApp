@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Välj en bild",
+  "dropHint": "eller släpp bilden här",
+  "formats": "JPG, PNG, WebP och andra stillbilder",
+  "privacy": "Bilden stannar på din enhet.",
+  "changeImage": "Byt bild",
+  "scale": "Skalningsfaktor",
+  "outputSize": "Nya bildmått",
+  "upscale": "Skala upp bilden",
+  "loading": "Läser in AI-modellen…",
+  "processing": "Skalar upp bilden…",
+  "cancel": "Avbryt",
+  "original": "Original",
+  "upscaled": "Uppskalad",
+  "comparison": "Jämför originalet med den uppskalade bilden",
+  "download": "Ladda ner PNG",
+  "invalidImage": "Bilden kunde inte öppnas. Prova med en JPG-, PNG- eller WebP-fil.",
+  "largeImage": "Välj en bild med högst 2 048 pixlar per sida och högst 1 megapixel totalt.",
+  "failed": "Det gick inte att skala upp bilden. Försök igen eller välj en mindre bild."
+}

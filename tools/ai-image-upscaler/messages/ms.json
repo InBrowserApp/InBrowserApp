@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Pilih imej",
+  "dropHint": "atau seret dan lepaskan di sini",
+  "formats": "JPG, PNG, WebP dan format imej pegun lain",
+  "privacy": "Imej kekal pada peranti anda.",
+  "changeImage": "Tukar imej",
+  "scale": "Faktor pembesaran",
+  "outputSize": "Saiz hasil",
+  "upscale": "Besarkan imej",
+  "loading": "Memuatkan model AI…",
+  "processing": "Membesarkan imej…",
+  "cancel": "Batal",
+  "original": "Imej asal",
+  "upscaled": "Imej yang dibesarkan",
+  "comparison": "Bandingkan imej asal dengan imej yang dibesarkan",
+  "download": "Muat turun PNG",
+  "invalidImage": "Imej ini tidak dapat dibuka. Cuba fail JPG, PNG atau WebP.",
+  "largeImage": "Pilih imej dengan panjang maksimum 2,048 piksel pada setiap sisi dan 1 megapiksel secara keseluruhan.",
+  "failed": "Imej gagal dibesarkan. Cuba lagi atau gunakan imej yang lebih kecil."
+}

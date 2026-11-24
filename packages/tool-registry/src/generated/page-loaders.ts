@@ -9,6 +9,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/adler32-hash-text-or-file/page"),
   "aes-decryptor": () => import("@tool/aes-decryptor/page"),
   "aes-encryptor": () => import("@tool/aes-encryptor/page"),
+  "ai-image-upscaler": () => import("@tool/ai-image-upscaler/page"),
   "animated-webp-maker": () => import("@tool/animated-webp-maker/page"),
   "animated-webp-to-gif-converter": () =>
     import("@tool/animated-webp-to-gif-converter/page"),

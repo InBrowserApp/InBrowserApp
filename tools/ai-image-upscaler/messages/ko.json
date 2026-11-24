@@ -1,0 +1,20 @@
+{
+  "chooseImage": "이미지 선택",
+  "dropHint": "또는 여기에 놓기",
+  "formats": "JPG, PNG, WebP 및 기타 정지 이미지",
+  "privacy": "이미지는 기기에 보관됩니다.",
+  "changeImage": "이미지 변경",
+  "scale": "확대 배율",
+  "outputSize": "출력 크기",
+  "upscale": "이미지 확대",
+  "loading": "AI 모델을 불러오는 중…",
+  "processing": "이미지를 확대하는 중…",
+  "cancel": "취소",
+  "original": "원본",
+  "upscaled": "확대 결과",
+  "comparison": "원본과 확대 이미지 비교",
+  "download": "PNG 다운로드",
+  "invalidImage": "이미지를 열 수 없습니다. JPG, PNG 또는 WebP 파일을 사용해 보세요.",
+  "largeImage": "가로와 세로가 각각 2,048픽셀 이하이고 전체가 100만 픽셀 이하인 이미지를 선택하세요.",
+  "failed": "이미지 확대에 실패했습니다. 다시 시도하거나 더 작은 이미지를 사용해 보세요."
+}

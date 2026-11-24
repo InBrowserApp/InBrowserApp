@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Görsel seç",
+  "dropHint": "veya buraya bırak",
+  "formats": "JPG, PNG, WebP ve diğer durağan görseller",
+  "privacy": "Görseliniz cihazınızda kalır.",
+  "changeImage": "Görseli değiştir",
+  "scale": "Büyütme oranı",
+  "outputSize": "Çıktı boyutu",
+  "upscale": "Görseli büyüt",
+  "loading": "Yapay zekâ modeli yükleniyor…",
+  "processing": "Görsel büyütülüyor…",
+  "cancel": "İptal et",
+  "original": "Orijinal",
+  "upscaled": "Büyütülmüş",
+  "comparison": "Orijinal ve büyütülmüş görselleri karşılaştır",
+  "download": "PNG indir",
+  "invalidImage": "Görsel açılamadı. JPG, PNG veya WebP dosyası deneyin.",
+  "largeImage": "Her kenarı en fazla 2.048 piksel, toplam çözünürlüğü en fazla 1 megapiksel olan bir görsel seçin.",
+  "failed": "Görsel büyütülemedi. Tekrar deneyin veya daha küçük bir görsel kullanın."
+}

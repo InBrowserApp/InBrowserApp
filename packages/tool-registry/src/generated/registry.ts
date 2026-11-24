@@ -535,6 +535,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ai-image-upscaler",
+    category: "image",
+    icon: "image-up",
+    tags: [
+      "ai",
+      "upscale",
+      "super-resolution",
+      "enlarge",
+      "increase image resolution",
+      "photo",
+      "realesrgan",
+    ],
+    locales: {
+      ar: {
+        name: "تكبير الصور بالذكاء الاصطناعي",
+        description:
+          "ارفع دقة صور JPG وPNG وWebP بالذكاء الاصطناعي إلى الضعف أو أربعة أضعاف في متصفحك. قارن النتيجة بالصورة الأصلية ونزّلها بصيغة PNG من دون رفع ملفات.",
+      },
+      de: {
+        name: "Bilder mit KI hochskalieren",
+        description:
+          "Erhöhe die Bildauflösung mit KI um den Faktor 2 oder 4. Skaliere JPG, PNG und WebP im Browser hoch, vergleiche das Ergebnis und lade es als PNG herunter. Ohne Upload.",
+      },
+      en: {
+        name: "AI Image Upscaler",
+        description:
+          "Increase image resolution 2× or 4× with AI. Upscale JPG, PNG, and WebP in your browser, compare the result, and download it as PNG. No uploads.",
+      },
+      es: {
+        name: "Aumentar resolución de imágenes con IA",
+        description:
+          "Amplía tus imágenes JPG, PNG y WebP a 2× o 4× con IA. Compara el resultado en tu navegador y descárgalo en PNG sin subir archivos.",
+      },
+      fr: {
+        name: "Agrandir une image avec l’IA",
+        description:
+          "Doublez ou quadruplez la résolution d’images JPG, PNG et WebP avec l’IA. Comparez le résultat et téléchargez-le en PNG depuis votre navigateur, sans envoyer de fichier.",
+      },
+      he: {
+        name: "הגדלת תמונות בעזרת בינה מלאכותית",
+        description:
+          "הגדילו את רזולוציית התמונה פי 2 או פי 4 בעזרת AI. הגדילו תמונות JPG, PNG ו־WebP בדפדפן, השוו למקור והורידו כקובץ PNG. בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "AI इमेज अपस्केलर",
+        description:
+          "AI से इमेज का रिज़ॉल्यूशन 2× या 4× बढ़ाएँ। ब्राउज़र में JPG, PNG और WebP इमेज बड़ी करें, मूल इमेज से तुलना करें और नतीजा PNG में डाउनलोड करें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Tingkatkan Resolusi Gambar dengan AI",
+        description:
+          "Perbesar gambar JPG, PNG, dan WebP 2× atau 4× dengan AI di browser. Bandingkan dengan gambar asli dan unduh hasilnya sebagai PNG. Gambar tidak perlu diunggah.",
+      },
+      it: {
+        name: "Ingrandire immagini con l’IA",
+        description:
+          "Raddoppia o quadruplica la risoluzione di immagini JPG, PNG e WebP con l’IA. Confronta il risultato nel browser e scaricalo in PNG senza inviare file.",
+      },
+      ja: {
+        name: "AI画像拡大・高画質化",
+        description:
+          "AIで画像の解像度を2倍または4倍に。ブラウザでJPG、PNG、WebP画像を拡大し、結果を比較してPNGでダウンロードできます。アップロード不要。",
+      },
+      ko: {
+        name: "AI 이미지 확대",
+        description:
+          "AI로 이미지 해상도를 2배 또는 4배 높이세요. 브라우저에서 JPG, PNG, WebP 이미지를 확대하고 결과를 비교한 뒤 PNG로 다운로드할 수 있습니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Tingkatkan Resolusi Imej dengan AI",
+        description:
+          "Besarkan imej JPG, PNG dan WebP 2× atau 4× dengan AI dalam pelayar. Bandingkan dengan imej asal dan muat turun PNG. Imej tidak perlu dimuat naik.",
+      },
+      nl: {
+        name: "Afbeeldingen vergroten met AI",
+        description:
+          "Verhoog de beeldresolutie 2× of 4× met AI. Vergroot JPG, PNG en WebP in je browser, vergelijk het resultaat en download het als PNG. Zonder uploads.",
+      },
+      no: {
+        name: "Oppskaler bilder med KI",
+        description:
+          "Øk bildeoppløsningen 2× eller 4× med KI. Oppskaler JPG, PNG og WebP i nettleseren, sammenlign resultatet og last ned som PNG. Ingen opplasting.",
+      },
+      pl: {
+        name: "Powiększanie obrazów z AI",
+        description:
+          "Zwiększ rozdzielczość obrazu JPG, PNG lub WebP 2× albo 4× dzięki AI. Porównaj wynik i pobierz PNG prosto z przeglądarki, bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Aumentar resolução de imagens com IA",
+        description:
+          "Aumente a resolução de imagens JPG, PNG e WebP em 2× ou 4× com IA. Compare o resultado no navegador e baixe em PNG sem enviar arquivos.",
+      },
+      ru: {
+        name: "Увеличение изображений с ИИ",
+        description:
+          "Повысьте разрешение JPG, PNG или WebP в 2 или 4 раза с помощью ИИ. Сравните изображения и скачайте PNG. Всё прямо в браузере, без отправки файлов.",
+      },
+      sv: {
+        name: "Skala upp bilder med AI",
+        description:
+          "Öka bildupplösningen 2× eller 4× med AI. Skala upp JPG, PNG och WebP i webbläsaren, jämför resultatet och ladda ner som PNG. Ingen uppladdning.",
+      },
+      th: {
+        name: "เพิ่มความละเอียดภาพด้วย AI",
+        description:
+          "ขยายภาพ JPG, PNG และ WebP ขนาด 2× หรือ 4× ด้วย AI ในเบราว์เซอร์ เปรียบเทียบกับต้นฉบับแล้วดาวน์โหลดเป็น PNG โดยไม่ต้องอัปโหลดภาพ",
+      },
+      tr: {
+        name: "Yapay zekâ ile görsel büyütme",
+        description:
+          "JPG, PNG ve WebP görsellerin çözünürlüğünü yapay zekâyla 2 veya 4 kat artırın. Sonucu karşılaştırın ve PNG olarak indirin. Tüm işlem tarayıcınızda gerçekleşir ve dosyanız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Tăng độ phân giải ảnh bằng AI",
+        description:
+          "Dùng AI để phóng to ảnh JPG, PNG và WebP lên 2× hoặc 4× ngay trong trình duyệt. So sánh với ảnh gốc rồi tải xuống dưới dạng PNG. Không cần tải ảnh lên.",
+      },
+      "zh-CN": {
+        name: "AI 图片放大",
+        description:
+          "使用 AI 将图片分辨率提高至 2 倍或 4 倍。在浏览器中放大 JPG、PNG 和 WebP 图片，对比结果并下载为 PNG，无需上传。",
+      },
+      "zh-TW": {
+        name: "AI 圖片放大",
+        description:
+          "使用 AI 將圖片解析度提高至 2 倍或 4 倍。在瀏覽器中放大 JPG、PNG 和 WebP 圖片，比較結果並下載為 PNG，無須上傳。",
+      },
+    },
+  },
+  {
     slug: "animated-webp-maker",
     category: "image",
     icon: "film",
@@ -46731,6 +46862,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "AES 加密器",
         description:
           "使用由密碼衍生的金鑰或原始十六進位金鑰，在瀏覽器中以 AES-GCM、AES-CBC 或 AES-CTR 加密文字或檔案。",
+      },
+    },
+  },
+  "ai-image-upscaler": {
+    slug: "ai-image-upscaler",
+    category: "image",
+    icon: "image-up",
+    tags: [
+      "ai",
+      "upscale",
+      "super-resolution",
+      "enlarge",
+      "increase image resolution",
+      "photo",
+      "realesrgan",
+    ],
+    locales: {
+      ar: {
+        name: "تكبير الصور بالذكاء الاصطناعي",
+        description:
+          "ارفع دقة صور JPG وPNG وWebP بالذكاء الاصطناعي إلى الضعف أو أربعة أضعاف في متصفحك. قارن النتيجة بالصورة الأصلية ونزّلها بصيغة PNG من دون رفع ملفات.",
+      },
+      de: {
+        name: "Bilder mit KI hochskalieren",
+        description:
+          "Erhöhe die Bildauflösung mit KI um den Faktor 2 oder 4. Skaliere JPG, PNG und WebP im Browser hoch, vergleiche das Ergebnis und lade es als PNG herunter. Ohne Upload.",
+      },
+      en: {
+        name: "AI Image Upscaler",
+        description:
+          "Increase image resolution 2× or 4× with AI. Upscale JPG, PNG, and WebP in your browser, compare the result, and download it as PNG. No uploads.",
+      },
+      es: {
+        name: "Aumentar resolución de imágenes con IA",
+        description:
+          "Amplía tus imágenes JPG, PNG y WebP a 2× o 4× con IA. Compara el resultado en tu navegador y descárgalo en PNG sin subir archivos.",
+      },
+      fr: {
+        name: "Agrandir une image avec l’IA",
+        description:
+          "Doublez ou quadruplez la résolution d’images JPG, PNG et WebP avec l’IA. Comparez le résultat et téléchargez-le en PNG depuis votre navigateur, sans envoyer de fichier.",
+      },
+      he: {
+        name: "הגדלת תמונות בעזרת בינה מלאכותית",
+        description:
+          "הגדילו את רזולוציית התמונה פי 2 או פי 4 בעזרת AI. הגדילו תמונות JPG, PNG ו־WebP בדפדפן, השוו למקור והורידו כקובץ PNG. בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "AI इमेज अपस्केलर",
+        description:
+          "AI से इमेज का रिज़ॉल्यूशन 2× या 4× बढ़ाएँ। ब्राउज़र में JPG, PNG और WebP इमेज बड़ी करें, मूल इमेज से तुलना करें और नतीजा PNG में डाउनलोड करें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Tingkatkan Resolusi Gambar dengan AI",
+        description:
+          "Perbesar gambar JPG, PNG, dan WebP 2× atau 4× dengan AI di browser. Bandingkan dengan gambar asli dan unduh hasilnya sebagai PNG. Gambar tidak perlu diunggah.",
+      },
+      it: {
+        name: "Ingrandire immagini con l’IA",
+        description:
+          "Raddoppia o quadruplica la risoluzione di immagini JPG, PNG e WebP con l’IA. Confronta il risultato nel browser e scaricalo in PNG senza inviare file.",
+      },
+      ja: {
+        name: "AI画像拡大・高画質化",
+        description:
+          "AIで画像の解像度を2倍または4倍に。ブラウザでJPG、PNG、WebP画像を拡大し、結果を比較してPNGでダウンロードできます。アップロード不要。",
+      },
+      ko: {
+        name: "AI 이미지 확대",
+        description:
+          "AI로 이미지 해상도를 2배 또는 4배 높이세요. 브라우저에서 JPG, PNG, WebP 이미지를 확대하고 결과를 비교한 뒤 PNG로 다운로드할 수 있습니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Tingkatkan Resolusi Imej dengan AI",
+        description:
+          "Besarkan imej JPG, PNG dan WebP 2× atau 4× dengan AI dalam pelayar. Bandingkan dengan imej asal dan muat turun PNG. Imej tidak perlu dimuat naik.",
+      },
+      nl: {
+        name: "Afbeeldingen vergroten met AI",
+        description:
+          "Verhoog de beeldresolutie 2× of 4× met AI. Vergroot JPG, PNG en WebP in je browser, vergelijk het resultaat en download het als PNG. Zonder uploads.",
+      },
+      no: {
+        name: "Oppskaler bilder med KI",
+        description:
+          "Øk bildeoppløsningen 2× eller 4× med KI. Oppskaler JPG, PNG og WebP i nettleseren, sammenlign resultatet og last ned som PNG. Ingen opplasting.",
+      },
+      pl: {
+        name: "Powiększanie obrazów z AI",
+        description:
+          "Zwiększ rozdzielczość obrazu JPG, PNG lub WebP 2× albo 4× dzięki AI. Porównaj wynik i pobierz PNG prosto z przeglądarki, bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Aumentar resolução de imagens com IA",
+        description:
+          "Aumente a resolução de imagens JPG, PNG e WebP em 2× ou 4× com IA. Compare o resultado no navegador e baixe em PNG sem enviar arquivos.",
+      },
+      ru: {
+        name: "Увеличение изображений с ИИ",
+        description:
+          "Повысьте разрешение JPG, PNG или WebP в 2 или 4 раза с помощью ИИ. Сравните изображения и скачайте PNG. Всё прямо в браузере, без отправки файлов.",
+      },
+      sv: {
+        name: "Skala upp bilder med AI",
+        description:
+          "Öka bildupplösningen 2× eller 4× med AI. Skala upp JPG, PNG och WebP i webbläsaren, jämför resultatet och ladda ner som PNG. Ingen uppladdning.",
+      },
+      th: {
+        name: "เพิ่มความละเอียดภาพด้วย AI",
+        description:
+          "ขยายภาพ JPG, PNG และ WebP ขนาด 2× หรือ 4× ด้วย AI ในเบราว์เซอร์ เปรียบเทียบกับต้นฉบับแล้วดาวน์โหลดเป็น PNG โดยไม่ต้องอัปโหลดภาพ",
+      },
+      tr: {
+        name: "Yapay zekâ ile görsel büyütme",
+        description:
+          "JPG, PNG ve WebP görsellerin çözünürlüğünü yapay zekâyla 2 veya 4 kat artırın. Sonucu karşılaştırın ve PNG olarak indirin. Tüm işlem tarayıcınızda gerçekleşir ve dosyanız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Tăng độ phân giải ảnh bằng AI",
+        description:
+          "Dùng AI để phóng to ảnh JPG, PNG và WebP lên 2× hoặc 4× ngay trong trình duyệt. So sánh với ảnh gốc rồi tải xuống dưới dạng PNG. Không cần tải ảnh lên.",
+      },
+      "zh-CN": {
+        name: "AI 图片放大",
+        description:
+          "使用 AI 将图片分辨率提高至 2 倍或 4 倍。在浏览器中放大 JPG、PNG 和 WebP 图片，对比结果并下载为 PNG，无需上传。",
+      },
+      "zh-TW": {
+        name: "AI 圖片放大",
+        description:
+          "使用 AI 將圖片解析度提高至 2 倍或 4 倍。在瀏覽器中放大 JPG、PNG 和 WebP 圖片，比較結果並下載為 PNG，無須上傳。",
       },
     },
   },

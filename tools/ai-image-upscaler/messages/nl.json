@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Afbeelding kiezen",
+  "dropHint": "of sleep je afbeelding hierheen",
+  "formats": "JPG, PNG, WebP en andere stilstaande beelden",
+  "privacy": "De afbeelding blijft op je apparaat.",
+  "changeImage": "Andere afbeelding kiezen",
+  "scale": "Vergrotingsfactor",
+  "outputSize": "Nieuwe afmetingen",
+  "upscale": "Afbeelding vergroten",
+  "loading": "AI-model laden…",
+  "processing": "Afbeelding vergroten…",
+  "cancel": "Annuleren",
+  "original": "Origineel",
+  "upscaled": "Vergroot",
+  "comparison": "Vergelijk het origineel met de vergrote afbeelding",
+  "download": "PNG downloaden",
+  "invalidImage": "Kan de afbeelding niet openen. Probeer een JPG-, PNG- of WebP-bestand.",
+  "largeImage": "Kies een afbeelding van maximaal 2.048 pixels per zijde en in totaal maximaal 1 megapixel.",
+  "failed": "Vergroten is mislukt. Probeer het opnieuw of gebruik een kleinere afbeelding."
+}

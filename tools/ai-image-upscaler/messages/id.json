@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Pilih gambar",
+  "dropHint": "atau seret dan lepas di sini",
+  "formats": "JPG, PNG, WebP, dan format gambar statis lainnya",
+  "privacy": "Gambar tetap di perangkat Anda.",
+  "changeImage": "Ganti gambar",
+  "scale": "Faktor pembesaran",
+  "outputSize": "Ukuran hasil",
+  "upscale": "Perbesar gambar",
+  "loading": "Memuat model AI…",
+  "processing": "Memperbesar gambar…",
+  "cancel": "Batal",
+  "original": "Asli",
+  "upscaled": "Hasil pembesaran",
+  "comparison": "Bandingkan gambar asli dan hasil pembesaran",
+  "download": "Unduh PNG",
+  "invalidImage": "Gambar ini tidak dapat dibuka. Coba file JPG, PNG, atau WebP.",
+  "largeImage": "Pilih gambar dengan panjang setiap sisi maksimal 2.048 piksel dan total maksimal 1 megapiksel.",
+  "failed": "Gagal memperbesar gambar. Coba lagi atau gunakan gambar yang lebih kecil."
+}

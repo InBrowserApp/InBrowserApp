@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ai-image-upscaler",
+    language: "ar",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "de",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "en",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "es",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "fr",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "he",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "hi",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "id",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "it",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ja",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ko",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ms",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "nl",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "no",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "pl",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "pt",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ru",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "sv",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "th",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "tr",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "vi",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "zh-CN",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "zh-TW",
+  },
+  {
     slug: "animated-webp-maker",
     language: "ar",
   },

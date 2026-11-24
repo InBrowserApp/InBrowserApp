@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Aumentar resolução de imagens com IA",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Criador de WebP animado",
     slug: "animated-webp-maker",
   },

@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Escolher imagem",
+  "dropHint": "ou arraste a imagem até aqui",
+  "formats": "JPG, PNG, WebP e outras imagens estáticas",
+  "privacy": "A imagem fica no seu dispositivo.",
+  "changeImage": "Trocar imagem",
+  "scale": "Fator de ampliação",
+  "outputSize": "Dimensões finais",
+  "upscale": "Ampliar imagem",
+  "loading": "Carregando o modelo de IA…",
+  "processing": "Ampliando a imagem…",
+  "cancel": "Cancelar",
+  "original": "Original",
+  "upscaled": "Ampliada",
+  "comparison": "Comparar a imagem original com a ampliada",
+  "download": "Baixar PNG",
+  "invalidImage": "Não foi possível abrir a imagem. Tente um arquivo JPG, PNG ou WebP.",
+  "largeImage": "Escolha uma imagem com até 2.048 pixels de cada lado e 1 megapixel no total.",
+  "failed": "Não foi possível ampliar a imagem. Tente novamente ou use uma imagem menor."
+}

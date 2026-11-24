@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Tăng độ phân giải ảnh bằng AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Trình tạo WebP động",
     slug: "animated-webp-maker",
   },
