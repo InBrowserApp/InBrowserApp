@@ -668,6 +668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-calendar-viewer",
   },
   {
+    category: "time",
+    name: "Trình chuyển đổi ICS ↔ CSV",
+    slug: "ics-csv-converter",
+  },
+  {
     category: "image",
     name: "Xóa nền ảnh",
     slug: "image-background-remover",

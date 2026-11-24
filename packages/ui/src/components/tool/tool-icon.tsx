@@ -2,6 +2,7 @@ import type { LucideProps } from "lucide-react"
 import type { ComponentType } from "react"
 
 import {
+  ArrowLeftRight,
   Binary,
   Blocks,
   Bookmark,
@@ -55,6 +56,7 @@ import {
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
+  "arrow-left-right": ArrowLeftRight,
   archive: FileArchive,
   "calendar-days": CalendarDays,
   binary: Binary,

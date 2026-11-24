@@ -668,6 +668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-calendar-viewer",
   },
   {
+    category: "time",
+    name: "ICS ↔ CSV Dönüştürücü",
+    slug: "ics-csv-converter",
+  },
+  {
     category: "image",
     name: "Görsel Arka Planını Kaldırma",
     slug: "image-background-remover",

@@ -668,6 +668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-calendar-viewer",
   },
   {
+    category: "time",
+    name: "ICS ↔ CSV Converter",
+    slug: "ics-csv-converter",
+  },
+  {
     category: "image",
     name: "Image Background Remover",
     slug: "image-background-remover",

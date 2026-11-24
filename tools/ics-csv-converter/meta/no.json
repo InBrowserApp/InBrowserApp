@@ -1,0 +1,4 @@
+{
+  "name": "Konvertering mellom ICS og CSV",
+  "description": "Konverter iCalendar-hendelser (.ics) til CSV, eller lag en kalenderfil fra CSV-rader. Forhåndsvis og last ned i begge formater i nettleseren."
+}

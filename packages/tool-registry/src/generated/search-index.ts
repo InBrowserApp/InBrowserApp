@@ -16907,6 +16907,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ics-csv-converter",
+    category: "time",
+    icon: "arrow-left-right",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "csv",
+      "spreadsheet",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ICS وCSV",
+        description:
+          "حوّل أحداث iCalendar ‏(.ics) إلى جدول CSV أو حوّل صفوف CSV إلى ملف تقويم. عاين أيًا من الصيغتين ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "ICS-CSV-Konverter",
+        description:
+          "Konvertieren Sie iCalendar-Termine (.ics) in eine CSV-Tabelle oder erstellen Sie eine Kalenderdatei aus CSV-Zeilen. Beide Formate lassen sich im Browser prüfen und herunterladen.",
+      },
+      en: {
+        name: "ICS ↔ CSV Converter",
+        description:
+          "Convert iCalendar (.ics) events to a CSV spreadsheet or turn CSV rows into a calendar file. Preview and download either format in your browser.",
+      },
+      es: {
+        name: "Convertidor ICS ↔ CSV",
+        description:
+          "Pasa eventos de iCalendar (.ics) a una hoja de cálculo CSV o convierte filas CSV en un archivo de calendario. Revisa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur ICS ↔ CSV",
+        description:
+          "Exportez des événements iCalendar (.ics) en CSV ou créez un fichier de calendrier à partir de lignes CSV. Visualisez et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר ICS ו-CSV",
+        description:
+          "המירו אירועי iCalendar ‏(.ics) לגיליון CSV או הפכו שורות CSV לקובץ לוח שנה. צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "ICS ↔ CSV कन्वर्टर",
+        description:
+          "iCalendar (.ics) इवेंट को CSV स्प्रेडशीट में बदलें या CSV की पंक्तियों से कैलेंडर फ़ाइल बनाएँ। नतीजा देखकर उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi ICS ↔ CSV",
+        description:
+          "Ubah acara iCalendar (.ics) menjadi spreadsheet CSV atau buat file kalender dari baris CSV. Lihat pratinjau dan unduh kedua format di browser.",
+      },
+      it: {
+        name: "Convertitore ICS ↔ CSV",
+        description:
+          "Esporta gli eventi iCalendar (.ics) in CSV o crea un file di calendario da righe CSV. Visualizza l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "ICS・CSV 相互変換ツール",
+        description:
+          "iCalendar（.ics）の予定を CSV に書き出したり、CSV の行をカレンダーファイルにしたりできます。結果はブラウザーで確認してダウンロードできます。",
+      },
+      ko: {
+        name: "ICS·CSV 변환기",
+        description:
+          "iCalendar(.ics) 일정을 CSV로 내보내거나 CSV 행을 캘린더 파일로 만드세요. 브라우저에서 두 형식을 모두 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar ICS ↔ CSV",
+        description:
+          "Tukar acara iCalendar (.ics) kepada hamparan CSV atau cipta fail kalendar daripada baris CSV. Pratonton dan muat turun kedua-dua format dalam pelayar.",
+      },
+      nl: {
+        name: "ICS-CSV-converter",
+        description:
+          "Zet iCalendar-afspraken (.ics) om in een CSV-tabel of maak een agendabestand van CSV-rijen. Bekijk een voorbeeld en download het gewenste formaat in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom ICS og CSV",
+        description:
+          "Konverter iCalendar-hendelser (.ics) til CSV, eller lag en kalenderfil fra CSV-rader. Forhåndsvis og last ned i begge formater i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter ICS i CSV",
+        description:
+          "Konwertuj wydarzenia iCalendar (.ics) na tabelę CSV lub utwórz plik kalendarza z wierszy CSV. Sprawdź podgląd i pobierz wynik w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor ICS ↔ CSV",
+        description:
+          "Exporte eventos do iCalendar (.ics) para uma planilha CSV ou converta linhas CSV em um arquivo de calendário. Veja a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер ICS ↔ CSV",
+        description:
+          "Преобразуйте события iCalendar (.ics) в таблицу CSV или создайте файл календаря из строк CSV. Просмотрите и скачайте результат в браузере.",
+      },
+      sv: {
+        name: "Konverterare för ICS och CSV",
+        description:
+          "Konvertera iCalendar-händelser (.ics) till CSV eller skapa en kalenderfil från CSV-rader. Förhandsgranska och ladda ner i båda formaten i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง ICS ↔ CSV",
+        description:
+          "แปลงกิจกรรม iCalendar (.ics) เป็นสเปรดชีต CSV หรือสร้างไฟล์ปฏิทินจากข้อมูล CSV ดูตัวอย่างและดาวน์โหลดได้ทั้งสองรูปแบบในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS ↔ CSV Dönüştürücü",
+        description:
+          "iCalendar (.ics) etkinliklerini CSV tablosuna dönüştürün veya CSV satırlarından bir takvim dosyası oluşturun. Sonucu tarayıcınızda önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi ICS ↔ CSV",
+        description:
+          "Chuyển sự kiện iCalendar (.ics) thành bảng tính CSV hoặc tạo tệp lịch từ các dòng CSV. Xem trước và tải xuống ở cả hai định dạng ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 与 CSV 互转",
+        description:
+          "将 iCalendar（.ics）日程导出为 CSV 表格，或将 CSV 中的日程转成日历文件。两种格式均可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "ICS 與 CSV 互轉",
+        description:
+          "將 iCalendar（.ics）行程匯出為 CSV 試算表，或將 CSV 資料列轉成行事曆檔案。兩種格式都可在瀏覽器中預覽與下載。",
+      },
+    },
+  },
+  {
     slug: "image-background-remover",
     category: "image",
     icon: "scissors",

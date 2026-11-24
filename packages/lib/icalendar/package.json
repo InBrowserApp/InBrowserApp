@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./example": "./src/example.ts"
+    "./example": "./src/example.ts",
+    "./write": "./src/write.ts"
   },
   "dependencies": {
     "ical.js": "catalog:"

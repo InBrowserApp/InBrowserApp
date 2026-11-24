@@ -668,6 +668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-calendar-viewer",
   },
   {
+    category: "time",
+    name: "ICS 與 CSV 互轉",
+    slug: "ics-csv-converter",
+  },
+  {
     category: "image",
     name: "圖片去背",
     slug: "image-background-remover",
