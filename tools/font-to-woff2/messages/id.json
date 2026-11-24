@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Pilih file font",
+  "dropFonts": "atau seret dan letakkan di sini",
+  "formats": ".ttf dan .otf",
+  "localProcessing": "File font Anda tetap berada di perangkat ini.",
+  "results": "Hasil konversi",
+  "clear": "Hapus semua",
+  "converting": "Mengonversi…",
+  "download": "Unduh WOFF2",
+  "sizes": "Asli {original} · WOFF2 {output}",
+  "failed": "File ini tidak dapat dikonversi. Pilih file font TTF atau OTF yang valid."
+}

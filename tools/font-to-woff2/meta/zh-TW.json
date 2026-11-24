@@ -1,0 +1,4 @@
+{
+  "name": "TTF、OTF 轉 WOFF2 字型轉換器",
+  "description": "在瀏覽器中將 TrueType（.ttf）和 OpenType（.otf）字型轉換成 WOFF2 網頁字型。支援批次轉換，可比較轉換前後的大小並逐一下載。"
+}

@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "اختر ملفات الخطوط",
+  "dropFonts": "أو أفلتها هنا",
+  "formats": "\u2066.ttf\u2069 و\u2066.otf\u2069",
+  "localProcessing": "تبقى الخطوط على جهازك.",
+  "results": "نتائج التحويل",
+  "clear": "مسح الكل",
+  "converting": "جارٍ التحويل…",
+  "download": "تنزيل WOFF2",
+  "sizes": "الأصلي {original} · WOFF2 ‏{output}",
+  "failed": "تعذّر تحويل هذا الملف. اختر ملف خط صالحًا بصيغة TTF أو OTF."
+}

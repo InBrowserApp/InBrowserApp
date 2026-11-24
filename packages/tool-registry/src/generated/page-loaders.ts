@@ -143,6 +143,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
+  "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
   "geojson-viewer": () => import("@tool/geojson-viewer/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),

@@ -10306,6 +10306,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "font-to-woff2",
+    language: "ar",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "de",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "en",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "es",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "fr",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "he",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "hi",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "id",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "it",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ja",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ko",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ms",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "nl",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "no",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "pl",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "pt",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ru",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "sv",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "th",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "tr",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "vi",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "zh-CN",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "zh-TW",
+  },
+  {
     slug: "gamepad-tester",
     language: "ar",
   },

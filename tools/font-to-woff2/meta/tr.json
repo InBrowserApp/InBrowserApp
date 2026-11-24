@@ -1,0 +1,4 @@
+{
+  "name": "TTF ve OTF'den WOFF2'ye Dönüştürücü",
+  "description": "TrueType (.ttf) ve OpenType (.otf) yazı tiplerini tarayıcınızda WOFF2 web yazı tiplerine dönüştürün. Birden fazla dosyayı dönüştürün, boyutları karşılaştırın ve her yazı tipini indirin."
+}

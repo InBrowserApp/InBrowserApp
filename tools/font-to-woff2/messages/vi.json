@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Chọn tệp phông chữ",
+  "dropFonts": "hoặc kéo thả vào đây",
+  "formats": ".ttf và .otf",
+  "localProcessing": "Tệp phông chữ chỉ được xử lý trên thiết bị này.",
+  "results": "Kết quả chuyển đổi",
+  "clear": "Xóa tất cả",
+  "converting": "Đang chuyển đổi…",
+  "download": "Tải WOFF2",
+  "sizes": "Tệp gốc {original} · WOFF2 {output}",
+  "failed": "Không thể chuyển đổi tệp này. Hãy chọn tệp phông chữ TTF hoặc OTF hợp lệ."
+}

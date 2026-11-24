@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+  "description": "Chuyển phông chữ TrueType (.ttf) và OpenType (.otf) sang định dạng WOFF2 cho web ngay trong trình duyệt. Chuyển đổi nhiều tệp cùng lúc, so sánh dung lượng và tải từng phông chữ xuống."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de polices TTF et OTF en WOFF2",
+  "description": "Convertissez vos polices TrueType (.ttf) et OpenType (.otf) en polices web WOFF2 dans votre navigateur. Traitez plusieurs fichiers à la fois, comparez les tailles et téléchargez chaque police."
+}

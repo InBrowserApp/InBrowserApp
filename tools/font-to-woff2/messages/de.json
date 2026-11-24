@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Schriftdateien auswählen",
+  "dropFonts": "oder hier ablegen",
+  "formats": ".ttf und .otf",
+  "localProcessing": "Deine Schriften bleiben auf diesem Gerät.",
+  "results": "Konvertierte Schriften",
+  "clear": "Alles leeren",
+  "converting": "Wird umgewandelt…",
+  "download": "WOFF2 herunterladen",
+  "sizes": "{original} Original · {output} WOFF2",
+  "failed": "Diese Datei konnte nicht umgewandelt werden. Wähle eine gültige TTF- oder OTF-Schrift."
+}

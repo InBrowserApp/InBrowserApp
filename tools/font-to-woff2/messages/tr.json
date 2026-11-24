@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Yazı tipi dosyalarını seç",
+  "dropFonts": "veya dosyaları buraya bırakın",
+  "formats": ".ttf ve .otf",
+  "localProcessing": "Yazı tipleriniz bu cihazda kalır.",
+  "results": "Dönüştürme sonuçları",
+  "clear": "Tümünü temizle",
+  "converting": "Dönüştürülüyor…",
+  "download": "WOFF2'yi indir",
+  "sizes": "Orijinal: {original} · WOFF2: {output}",
+  "failed": "Bu dosya dönüştürülemedi. Geçerli bir TTF veya OTF yazı tipi seçin."
+}
