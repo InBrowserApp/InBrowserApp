@@ -15,9 +15,7 @@ import { TranscriptResult } from "./transcript-result"
 import { useTranscription } from "./use-transcription"
 import type { AudioSource } from "./input-fields"
 import type { ModelId } from "./models"
-import type English from "./messages/en.json"
-
-export type Messages = typeof English
+import type { Messages } from "./types"
 
 export default function Client({
   messages: m,

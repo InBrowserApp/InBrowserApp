@@ -1,7 +1,7 @@
 import type { Segment } from "./core/transcript"
 import type { ModelId } from "./models"
 
-export type Backend = "webgpu" | "wasm"
+type Backend = "webgpu" | "wasm"
 export type TranscriptionRequest = {
   audio: Float32Array<ArrayBuffer>
   model: ModelId

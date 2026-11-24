@@ -12,7 +12,7 @@ import { Download, Play } from "@workspace/ui/icons"
 import { FORMATS, formatTranscript, timestamp } from "./core/transcript"
 import { NativeSelect } from "./input-fields"
 import type { Format, Segment } from "./core/transcript"
-import type { Messages } from "./client"
+import type { Messages } from "./types"
 
 export function TranscriptResult({
   filename,

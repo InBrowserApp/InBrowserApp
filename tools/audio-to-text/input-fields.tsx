@@ -3,7 +3,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { File, Upload } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import type { ComponentProps, Ref } from "react"
-import type { Messages } from "./client"
+import type { Messages } from "./types"
 
 export type AudioSource = { file: File; url: string }
 
