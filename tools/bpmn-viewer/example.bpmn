@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="ApprovalDefinitions" targetNamespace="https://inbrowser.app/bpmn-example">
+  <bpmn:process id="Approval" isExecutable="false">
+    <bpmn:startEvent id="Received" name="Request received" />
+    <bpmn:userTask id="Review" name="Review request" />
+    <bpmn:exclusiveGateway id="Decision" name="Approved?" />
+    <bpmn:endEvent id="Approved" name="Approved" />
+    <bpmn:endEvent id="Returned" name="Changes requested" />
+    <bpmn:sequenceFlow id="ToReview" sourceRef="Received" targetRef="Review" />
+    <bpmn:sequenceFlow id="ToDecision" sourceRef="Review" targetRef="Decision" />
+    <bpmn:sequenceFlow id="Yes" name="Yes" sourceRef="Decision" targetRef="Approved" />
+    <bpmn:sequenceFlow id="No" name="No" sourceRef="Decision" targetRef="Returned" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="ApprovalDiagram">
+    <bpmndi:BPMNPlane id="ApprovalPlane" bpmnElement="Approval">
+      <bpmndi:BPMNShape id="ReceivedShape" bpmnElement="Received">
+        <dc:Bounds x="80" y="121" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="52" y="165" width="92" height="28" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ReviewShape" bpmnElement="Review"><dc:Bounds x="180" y="99" width="112" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DecisionShape" bpmnElement="Decision" isMarkerVisible="true">
+        <dc:Bounds x="356" y="114" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="345" y="86" width="72" height="15" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ApprovedShape" bpmnElement="Approved">
+        <dc:Bounds x="486" y="121" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="467" y="165" width="74" height="15" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ReturnedShape" bpmnElement="Returned">
+        <dc:Bounds x="486" y="246" width="36" height="36" />
+        <bpmndi:BPMNLabel><dc:Bounds x="455" y="290" width="98" height="28" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="ToReviewEdge" bpmnElement="ToReview"><di:waypoint x="116" y="139" /><di:waypoint x="180" y="139" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="ToDecisionEdge" bpmnElement="ToDecision"><di:waypoint x="292" y="139" /><di:waypoint x="356" y="139" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="YesEdge" bpmnElement="Yes">
+        <di:waypoint x="406" y="139" /><di:waypoint x="486" y="139" />
+        <bpmndi:BPMNLabel><dc:Bounds x="435" y="118" width="22" height="15" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="NoEdge" bpmnElement="No">
+        <di:waypoint x="381" y="164" /><di:waypoint x="381" y="264" /><di:waypoint x="486" y="264" />
+        <bpmndi:BPMNLabel><dc:Bounds x="358" y="201" width="20" height="15" /></bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

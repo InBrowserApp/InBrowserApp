@@ -31,7 +31,6 @@ import {
   Globe,
   ImageIcon,
   Keyboard,
-  Languages,
   LayoutGrid,
   Lock,
   Mic,
@@ -41,12 +40,12 @@ import {
   ScanText,
   Search,
   Sparkles,
-  Split,
   Scissors,
   Table2,
   Text,
   Video,
   Wrench,
+  Workflow,
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
@@ -79,7 +78,6 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   globe: Globe,
   image: ImageIcon,
   keyboard: Keyboard,
-  languages: Languages,
   "layout-grid": LayoutGrid,
   lock: Lock,
   mic: Mic,
@@ -89,12 +87,12 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "scan-text": ScanText,
   search: Search,
   sparkles: Sparkles,
-  split: Split,
   scissors: Scissors,
   "table-2": Table2,
   text: Text,
   video: Video,
   wrench: Wrench,
+  workflow: Workflow,
 }
 
 type ToolIconProps = LucideProps & {

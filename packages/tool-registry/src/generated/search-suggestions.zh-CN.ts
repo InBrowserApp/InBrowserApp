@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 查看器",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "工作日计算器",
     slug: "business-days-calculator",

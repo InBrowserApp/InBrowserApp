@@ -1,0 +1,20 @@
+{
+  "open": "Öppna BPMN-fil",
+  "replace": "Byt BPMN-fil",
+  "clear": "Stäng diagrammet",
+  "reader": "BPMN-visare",
+  "privacy": "Filerna stannar på din enhet.",
+  "focus": "Öppna helskärmsvyn",
+  "exitFocus": "Lämna helskärmsvyn",
+  "releaseFile": "Släpp för att öppna BPMN-filen",
+  "drop": "Släpp en BPMN-fil här",
+  "formats": "Öppna en .bpmn- eller .xml-fil.",
+  "example": "Prova ett exempel",
+  "diagram": "BPMN-diagram",
+  "loading": "Öppnar diagrammet…",
+  "invalid": "Det gick inte att öppna diagrammet. Välj en giltig XML-fil i BPMN 2.0-format.",
+  "noLayout": "BPMN-filen saknar diagramlayout. Exportera den på nytt från modelleringsverktyget med diagramlayouten inkluderad och öppna filen igen.",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "fit": "Visa hela diagrammet"
+}

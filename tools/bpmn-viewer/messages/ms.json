@@ -1,0 +1,20 @@
+{
+  "open": "Buka fail BPMN",
+  "replace": "Ganti fail BPMN",
+  "clear": "Tutup rajah",
+  "reader": "Pemapar BPMN",
+  "privacy": "Fail kekal pada peranti anda.",
+  "focus": "Buka paparan skrin penuh",
+  "exitFocus": "Keluar daripada skrin penuh",
+  "releaseFile": "Lepaskan untuk membuka fail BPMN",
+  "drop": "Lepaskan fail BPMN di sini",
+  "formats": "Buka fail .bpmn atau .xml.",
+  "example": "Cuba contoh",
+  "diagram": "Rajah BPMN",
+  "loading": "Membuka rajah…",
+  "invalid": "Rajah ini tidak dapat dibuka. Pilih fail XML BPMN 2.0 yang sah.",
+  "noLayout": "Fail BPMN ini tiada data susun atur rajah. Eksport semula daripada alat pemodelan dengan menyertakan susun atur, kemudian buka fail itu semula.",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "fit": "Papar seluruh rajah"
+}

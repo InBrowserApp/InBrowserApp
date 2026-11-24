@@ -54,6 +54,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "bpmn-viewer": () => import("@tool/bpmn-viewer/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
   "caj-to-pdf-converter": () => import("@tool/caj-to-pdf-converter/page"),
