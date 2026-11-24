@@ -251,6 +251,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
+  "pdf-bookmark-editor": () => import("@tool/pdf-bookmark-editor/page"),
   "pdf-compressor": () => import("@tool/pdf-compressor/page"),
   "pdf-image-extractor": () => import("@tool/pdf-image-extractor/page"),
   "pdf-info-viewer": () => import("@tool/pdf-info-viewer/page"),

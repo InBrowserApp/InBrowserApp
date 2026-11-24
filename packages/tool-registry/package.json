@@ -210,6 +210,7 @@
     "@tool/parquet-viewer": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
     "@tool/pbkdf2-key-derivation": "workspace:*",
+    "@tool/pdf-bookmark-editor": "workspace:*",
     "@tool/pdf-compressor": "workspace:*",
     "@tool/pdf-image-extractor": "workspace:*",
     "@tool/pdf-info-viewer": "workspace:*",

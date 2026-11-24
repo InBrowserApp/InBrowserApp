@@ -4,6 +4,7 @@ import type { ComponentType } from "react"
 import {
   Binary,
   Blocks,
+  Bookmark,
   BookOpen,
   Braces,
   Building2,
@@ -47,6 +48,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
   binary: Binary,
   blocks: Blocks,
+  bookmark: Bookmark,
   "book-open": BookOpen,
   braces: Braces,
   "building-2": Building2,

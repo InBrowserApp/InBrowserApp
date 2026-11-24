@@ -25617,6 +25617,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-bookmark-editor",
+    category: "pdf",
+    icon: "bookmark",
+    tags: [
+      "pdf",
+      "bookmark",
+      "outline",
+      "table of contents",
+      "navigation",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محرر الإشارات المرجعية لملفات PDF",
+        description:
+          "أضف إشارات مرجعية إلى ملف PDF وغيّر أسماءها ورتّبها ضمن مستويات. عاين الصفحات المرتبطة بها ونزّل الملف المعدّل مباشرةً من متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF-Lesezeichen bearbeiten",
+        description:
+          "Füge PDF-Lesezeichen online hinzu, benenne sie um und ordne sie neu oder hierarchisch an. Prüfe die Zielseiten in der Vorschau und lade die bearbeitete PDF ohne Upload herunter.",
+      },
+      en: {
+        name: "PDF Bookmark Editor",
+        description:
+          "Add, rename, reorder, and nest PDF bookmarks online. Preview destination pages and download the edited PDF without uploading your file.",
+      },
+      es: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Añade, renombra, reordena y anida marcadores de PDF en línea. Previsualiza las páginas de destino y descarga el PDF editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de signets PDF",
+        description:
+          "Ajoutez, renommez, réorganisez et imbriquez les signets d’un PDF en ligne. Prévisualisez les pages cibles et téléchargez le PDF modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך סימניות PDF",
+        description:
+          "הוסיפו סימניות לקובץ PDF, שנו את שמן, סדרו אותן מחדש וקבצו אותן לפי פרקים. צפו בעמודי היעד והורידו את הקובץ הערוך בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "PDF बुकमार्क एडिटर",
+        description:
+          "PDF बुकमार्क ऑनलाइन जोड़ें, उनके नाम और क्रम बदलें या उन्हें एक-दूसरे के नीचे रखें। लिंक किए गए पेज का प्रीव्यू देखें और फ़ाइल अपलोड किए बिना संपादित PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Markah PDF",
+        description:
+          "Tambah, ganti nama, atur urutan, dan kelompokkan markah PDF (bookmark) secara online. Lihat pratinjau halaman tujuan dan unduh hasil edit tanpa mengunggah file.",
+      },
+      it: {
+        name: "Editor di segnalibri PDF",
+        description:
+          "Aggiungi, rinomina e organizza i segnalibri PDF online. Visualizza le pagine di destinazione e scarica il PDF modificato senza caricare il file.",
+      },
+      ja: {
+        name: "PDF のしおり編集ツール",
+        description:
+          "オンラインで PDF のしおりを追加し、タイトルや順序、階層を変更できます。リンク先のページをプレビューし、ファイルをアップロードせずに編集済みの PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 책갈피 편집기",
+        description:
+          "온라인에서 PDF 책갈피를 추가하고, 이름과 순서를 바꾸고, 하위 책갈피로 정리하세요. 대상 페이지를 미리 보고 파일 업로드 없이 편집한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Penanda Buku PDF",
+        description:
+          "Tambah, namakan semula dan susun penanda buku PDF mengikut aras dalam talian. Pratonton halaman sasaran dan muat turun PDF yang disunting tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF-bladwijzers bewerken",
+        description:
+          "Voeg PDF-bladwijzers online toe, hernoem, verplaats of nest ze. Bekijk de doelpagina’s en download de bewerkte PDF zonder upload.",
+      },
+      no: {
+        name: "Rediger PDF-bokmerker",
+        description:
+          "Legg til og organiser bokmerker i PDF-filer. Endre navn og struktur, forhåndsvis målsider og last ned den redigerte PDF-filen uten opplasting.",
+      },
+      pl: {
+        name: "Edytor zakładek PDF",
+        description:
+          "Dodawaj i edytuj zakładki w PDF online. Zmieniaj ich kolejność, grupuj je i sprawdzaj strony docelowe. Pobierz zmieniony PDF bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Adicione, renomeie, reordene e aninhe marcadores de PDF online. Confira as páginas de destino e baixe o PDF editado sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Редактор закладок PDF",
+        description:
+          "Добавляйте, переименовывайте и группируйте закладки PDF онлайн. Меняйте их порядок, просматривайте страницы и скачивайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigera PDF-bokmärken",
+        description:
+          "Lägg till, byt namn på och ordna PDF-bokmärken i flera nivåer. Förhandsvisa målsidorna och ladda ner den redigerade PDF-filen utan att ladda upp den.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+        description:
+          "เพิ่ม เปลี่ยนชื่อ จัดลำดับ และสร้างบุ๊กมาร์กย่อยใน PDF ออนไลน์ ดูตัวอย่างหน้าปลายทางแล้วดาวน์โหลด PDF ที่แก้ไขแล้วโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Yer İmi Düzenleyici",
+        description:
+          "PDF yer imleri ekleyin, adlarını ve sıralarını değiştirin, iç içe yerleştirin. Hedef sayfaları önizleyin ve dosyanızı yüklemeden düzenlenmiş PDF'yi indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa dấu trang PDF",
+        description:
+          "Thêm, đổi tên, sắp xếp và tạo dấu trang con trong PDF trực tuyến. Xem trước trang đích rồi tải xuống bản PDF đã sửa ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 书签编辑器",
+        description:
+          "在线添加、重命名、排序和嵌套 PDF 书签。预览目标页面并下载编辑后的 PDF，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PDF 書籤編輯器",
+        description:
+          "線上新增、重新命名、排序 PDF 書籤，並建立多層書籤。預覽書籤指向的頁面，再下載編輯後的 PDF，檔案無須上傳。",
+      },
+    },
+  },
+  {
     slug: "pdf-compressor",
     category: "pdf",
     icon: "archive",
