@@ -2307,6 +2307,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-silence-remover",
+    category: "misc",
+    icon: "scissors",
+    tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
+    locales: {
+      ar: {
+        name: "إزالة الصمت من الصوت",
+        description:
+          "اكتشف فترات الصمت الطويلة واختصرها في حلقات البودكاست والمقابلات والتسجيلات الصوتية. اضبط عتبة الصمت، واستمع إلى النتيجة ونزّلها بصيغة WAV على جهازك.",
+      },
+      de: {
+        name: "Lange Audiopausen kürzen",
+        description:
+          "Erkenne und kürze lange Pausen in Podcasts, Interviews und Sprachaufnahmen. Passe den Schwellenwert an, höre das Ergebnis an und lade es als WAV herunter.",
+      },
+      en: {
+        name: "Audio Silence Remover",
+        description:
+          "Find and shorten long silences in podcasts, interviews, and voice recordings. Adjust the silence threshold, preview the edit, and download WAV locally.",
+      },
+      es: {
+        name: "Eliminar silencios del audio",
+        description:
+          "Detecta y acorta silencios largos en pódcast, entrevistas y grabaciones de voz. Ajusta el umbral, escucha el resultado y descarga el WAV desde el navegador.",
+      },
+      fr: {
+        name: "Suppression des silences audio",
+        description:
+          "Détectez et raccourcissez les longs silences dans vos podcasts, interviews et enregistrements vocaux. Réglez le seuil, écoutez le montage et téléchargez-le en WAV.",
+      },
+      he: {
+        name: "הסרת קטעי שקט מהקלטות",
+        description:
+          "זהו וקצרו הפסקות ארוכות בפודקאסטים, בראיונות ובהקלטות קול. התאימו את סף השקט, האזינו לעריכה והורידו קובץ WAV ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+        description:
+          "पॉडकास्ट, इंटरव्यू और वॉइस रिकॉर्डिंग में लंबे ठहराव ढूँढकर छोटे करें। सन्नाटे की सीमा बदलें, संपादित ऑडियो सुनें और अपने डिवाइस पर WAV डाउनलोड करें।",
+      },
+      id: {
+        name: "Penghapus Jeda Hening Audio",
+        description:
+          "Temukan dan persingkat jeda hening panjang dalam podcast, wawancara, serta rekaman suara. Sesuaikan ambang hening, dengarkan hasil edit, lalu unduh WAV dari browser.",
+      },
+      it: {
+        name: "Rimuovi i silenzi dall’audio",
+        description:
+          "Rileva e accorcia i silenzi lunghi in podcast, interviste e registrazioni vocali. Regola la soglia, ascolta il risultato e scarica il WAV dal browser.",
+      },
+      ja: {
+        name: "音声の無音部分を削除",
+        description:
+          "ポッドキャスト、インタビュー、音声録音の長い無音部分を検出して短縮します。無音判定のしきい値を調整し、結果を試聴してWAVをダウンロードできます。処理は端末内で行われます。",
+      },
+      ko: {
+        name: "오디오 무음 제거",
+        description:
+          "팟캐스트, 인터뷰, 음성 녹음에서 긴 무음 구간을 찾아 줄입니다. 무음 감지 임계값을 조정하고, 편집 결과를 들어 본 뒤 기기에서 WAV로 다운로드하세요.",
+      },
+      ms: {
+        name: "Buang Jeda Senyap daripada Audio",
+        description:
+          "Kesan dan pendekkan jeda senyap yang panjang dalam podsiar, temu bual dan rakaman suara. Laraskan ambang senyap, dengar suntingan dan muat turun WAV dalam pelayar.",
+      },
+      nl: {
+        name: "Stiltes uit audio verwijderen",
+        description:
+          "Vind en verkort lange stiltes in podcasts, interviews en spraakopnamen. Stel de stiltedrempel in, beluister de montage en download het resultaat als WAV.",
+      },
+      no: {
+        name: "Fjern stillhet fra lyd",
+        description:
+          "Finn og kort ned lange pauser i podkaster, intervjuer og taleopptak. Juster terskelen for stillhet, lytt til resultatet og last ned WAV.",
+      },
+      pl: {
+        name: "Usuwanie ciszy z nagrań",
+        description:
+          "Wykryj i skróć długie pauzy w podcastach, wywiadach i nagraniach głosowych. Ustaw próg ciszy, odsłuchaj efekt i pobierz plik WAV w przeglądarce.",
+      },
+      pt: {
+        name: "Remover silêncios do áudio",
+        description:
+          "Detete e encurte silêncios longos em podcasts, entrevistas e gravações de voz. Ajuste o limiar, ouça o resultado e transfira o WAV no navegador.",
+      },
+      ru: {
+        name: "Удаление тишины из аудио",
+        description:
+          "Находите и сокращайте длинные паузы в подкастах, интервью и голосовых записях. Настройте порог тишины, прослушайте результат и скачайте WAV в браузере.",
+      },
+      sv: {
+        name: "Ta bort tystnad ur ljud",
+        description:
+          "Hitta och korta ned långa pauser i poddar, intervjuer och röstinspelningar. Justera tröskeln för tystnad, lyssna på klippet och ladda ned en WAV-fil.",
+      },
+      th: {
+        name: "ตัดช่วงเงียบในไฟล์เสียง",
+        description:
+          "ตรวจหาและย่นช่วงเงียบยาวในพอดแคสต์ บทสัมภาษณ์ และเสียงบันทึก ปรับเกณฑ์ความเงียบ ฟังผลหลังตัด และดาวน์โหลด WAV ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ses Kaydından Sessizliği Kaldırma",
+        description:
+          "Podcast, röportaj ve ses kayıtlarındaki uzun duraklamaları bulun ve kısaltın. Sessizlik eşiğini ayarlayın, sonucu dinleyin ve tarayıcıdan WAV indirin.",
+      },
+      vi: {
+        name: "Cắt khoảng lặng trong âm thanh",
+        description:
+          "Phát hiện và rút ngắn khoảng lặng dài trong podcast, phỏng vấn và bản ghi giọng nói. Chỉnh ngưỡng, nghe thử rồi tải WAV ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频静音去除",
+        description:
+          "检测并缩短播客、访谈和语音录音中的长静音。调整静音阈值，预听剪辑结果，并在本地下载 WAV。",
+      },
+      "zh-TW": {
+        name: "音訊靜音移除",
+        description:
+          "偵測並縮短 Podcast、訪談和語音錄音中的長時間靜音。調整靜音閾值、預聽剪輯結果，並在本機下載 WAV。",
+      },
+    },
+  },
+  {
     slug: "audio-trimmer-merger",
     category: "misc",
     icon: "scissors",

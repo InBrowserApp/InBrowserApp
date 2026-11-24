@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声の無音部分を削除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "音声トリミング・結合",
     slug: "audio-trimmer-merger",
   },

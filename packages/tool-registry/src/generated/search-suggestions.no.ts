@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Fjern stillhet fra lyd",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Beskjær og slå sammen lyd",
     slug: "audio-trimmer-merger",
   },

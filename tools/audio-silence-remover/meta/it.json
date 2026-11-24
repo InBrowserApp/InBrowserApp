@@ -1,0 +1,4 @@
+{
+  "name": "Rimuovi i silenzi dall’audio",
+  "description": "Rileva e accorcia i silenzi lunghi in podcast, interviste e registrazioni vocali. Regola la soglia, ascolta il risultato e scarica il WAV dal browser."
+}

@@ -3,7 +3,7 @@ import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
 
 import { MINIMUM_FRAMES, SAMPLE_RATE } from "./core/loudness"
-import { AudioFilePicker } from "./file-picker"
+import { AudioFilePicker } from "@workspace/ui/components/tool/audio-file-picker"
 import { LoudnessResult } from "./result"
 import type { Request, Response } from "./workers/normalize"
 import type englishMessages from "./messages/en.json"

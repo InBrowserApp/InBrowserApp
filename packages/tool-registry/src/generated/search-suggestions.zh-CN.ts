@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音频静音去除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "音频裁剪与合并",
     slug: "audio-trimmer-merger",
   },

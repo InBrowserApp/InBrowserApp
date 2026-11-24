@@ -1,5 +1,5 @@
 import { SAMPLE_RATE, measure, normalize } from "../core/loudness"
-import { encodeWav } from "../core/wav"
+import { encodeWav } from "@workspace/pcm-audio"
 
 export type Request =
   | { type: "measure"; channels: Float32Array[] }

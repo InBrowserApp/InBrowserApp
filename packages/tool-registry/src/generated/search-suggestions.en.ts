@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio Silence Remover",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio Trimmer & Merger",
     slug: "audio-trimmer-merger",
   },

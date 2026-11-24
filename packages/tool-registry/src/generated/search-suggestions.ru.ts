@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Удаление тишины из аудио",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Обрезка и объединение аудио",
     slug: "audio-trimmer-merger",
   },

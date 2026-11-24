@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Usuwanie ciszy z nagrań",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Przycinanie i łączenie audio",
     slug: "audio-trimmer-merger",
   },

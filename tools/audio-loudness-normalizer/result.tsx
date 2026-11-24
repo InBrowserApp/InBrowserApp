@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
+import { AudioPreviewDownload } from "@workspace/ui/components/tool/audio-preview-download"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
@@ -7,7 +8,7 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { Download, LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
+import { LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
 
 import type { Request, Response } from "./workers/normalize"
 import type englishMessages from "./messages/en.json"
@@ -18,43 +19,6 @@ type Result = Rendered | Extract<Response, { type: "renderError" }>
 type Metric = { loudness: number; peak: number }
 const minTarget = -30
 const maxTarget = -5
-
-function AudioDownload({
-  name,
-  wav,
-  messages: m,
-}: {
-  name: string
-  wav: ArrayBuffer
-  messages: Messages
-}) {
-  const [url, setUrl] = useState("")
-  useEffect(() => {
-    const url = URL.createObjectURL(new Blob([wav], { type: "audio/wav" }))
-    setUrl(url)
-    return () => URL.revokeObjectURL(url)
-  }, [wav])
-  return (
-    <div className="flex flex-wrap items-center gap-3 border-t pt-4">
-      {/* oxlint-disable-next-line jsx-a11y/media-has-caption -- Preview plays user-supplied audio. */}
-      <audio
-        className="h-11 min-w-0 grow basis-52"
-        controls
-        src={url || undefined}
-        aria-label={m.preview}
-      />
-      <Button asChild className="min-h-11 w-full sm:w-auto">
-        <a
-          href={url || undefined}
-          download={name.replace(/\.[^.]+$/, "") + "-normalized.wav"}
-        >
-          <Download data-icon="inline-start" aria-hidden="true" />
-          {m.download}
-        </a>
-      </Button>
-    </div>
-  )
-}
 
 export function LoudnessResult({
   worker,
@@ -285,11 +249,12 @@ export function LoudnessResult({
           </Alert>
         )}
         {result?.type === "rendered" && (
-          <AudioDownload
+          <AudioPreviewDownload
             key={result.id}
-            name={name}
+            filename={name.replace(/\.[^.]+$/, "") + "-normalized.wav"}
             wav={result.wav}
-            messages={m}
+            previewLabel={m.preview}
+            downloadLabel={m.download}
           />
         )}
       </ToolPanelCardContent>

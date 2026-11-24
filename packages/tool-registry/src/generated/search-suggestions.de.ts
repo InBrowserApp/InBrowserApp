@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Lange Audiopausen kürzen",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio schneiden & zusammenfügen",
     slug: "audio-trimmer-merger",
   },

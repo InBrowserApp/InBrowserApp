@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ta bort tystnad ur ljud",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Ljudtrimning och sammanslagning",
     slug: "audio-trimmer-merger",
   },
