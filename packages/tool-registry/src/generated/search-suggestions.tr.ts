@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Görsel Histogramı Görüntüleyicisi",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Görüntü Meta Verisi Temizleyici (EXIF)",
     slug: "image-metadata-cleaner",
   },

@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "ตัวล้างข้อมูลเมตาของภาพ (EXIF)",
     slug: "image-metadata-cleaner",
   },

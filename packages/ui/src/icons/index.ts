@@ -19,6 +19,7 @@ export {
   Car,
   CameraOff,
   Captions,
+  ChartNoAxesColumnIncreasing,
   Circle,
   CaseSensitive,
   Check,

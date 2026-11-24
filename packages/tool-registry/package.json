@@ -127,6 +127,7 @@
     "@tool/image-combiner": "workspace:*",
     "@tool/image-comparator": "workspace:*",
     "@tool/image-cropper": "workspace:*",
+    "@tool/image-histogram": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-palette-extractor": "workspace:*",
     "@tool/image-redactor": "workspace:*",

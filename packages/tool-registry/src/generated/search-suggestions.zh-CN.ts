@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "图像直方图查看器",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "图片元数据清理器（EXIF）",
     slug: "image-metadata-cleaner",
   },

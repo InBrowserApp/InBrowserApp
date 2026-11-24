@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "इमेज हिस्टोग्राम व्यूअर",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "छवि मेटाडेटा क्लीनर (EXIF)",
     slug: "image-metadata-cleaner",
   },

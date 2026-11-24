@@ -152,6 +152,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-combiner": () => import("@tool/image-combiner/page"),
   "image-comparator": () => import("@tool/image-comparator/page"),
   "image-cropper": () => import("@tool/image-cropper/page"),
+  "image-histogram": () => import("@tool/image-histogram/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-redactor": () => import("@tool/image-redactor/page"),
