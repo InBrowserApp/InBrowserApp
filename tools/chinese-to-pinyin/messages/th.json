@@ -1,0 +1,15 @@
+{
+  "inputLabel": "ข้อความภาษาจีน",
+  "inputPlaceholder": "พิมพ์หรือวางข้อความภาษาจีน",
+  "exampleLabel": "ลองตัวอย่าง",
+  "clearLabel": "ล้าง",
+  "outputLabel": "พินอิน",
+  "outputPlaceholder": "พินอินจะปรากฏที่นี่",
+  "formatLabel": "รูปแบบวรรณยุกต์",
+  "marksLabel": "เครื่องหมาย",
+  "numbersLabel": "ตัวเลข",
+  "plainLabel": "ไม่แสดงวรรณยุกต์",
+  "copyLabel": "คัดลอกพินอิน",
+  "copiedLabel": "คัดลอกแล้ว",
+  "copyFailedLabel": "คัดลอกไม่สำเร็จ"
+}

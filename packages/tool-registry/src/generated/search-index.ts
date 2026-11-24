@@ -6704,6 +6704,142 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "chinese-to-pinyin",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "chinese",
+      "hanzi",
+      "mandarin",
+      "pinyin",
+      "pronunciation",
+      "romanization",
+      "transliteration",
+      "汉字",
+      "中文转拼音",
+      "漢字",
+      "中文轉拼音",
+      "拼音",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية إلى البينيين",
+        description:
+          "حوّل الصينية المبسّطة أو التقليدية إلى هانيو بينيين. اختر عرض النغمات بالعلامات أو بالأرقام أو إخفاءها، واعرض النتيجة وانسخها في متصفحك.",
+      },
+      de: {
+        name: "Chinesisch in Pinyin umwandeln",
+        description:
+          "Vereinfachtes oder traditionelles Chinesisch in Hanyu Pinyin umwandeln. Pinyin mit Tonzeichen, Tonziffern oder ohne Tonangabe im Browser kopieren.",
+      },
+      en: {
+        name: "Chinese to Pinyin Converter",
+        description:
+          "Convert simplified or traditional Chinese to Hanyu Pinyin with tone marks, tone numbers, or no tones. See and copy the result in your browser.",
+      },
+      es: {
+        name: "Conversor de chino a pinyin",
+        description:
+          "Convierte texto en chino simplificado o tradicional a Hanyu Pinyin con marcas de tono, números o sin tonos. Consulta y copia el resultado en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois en pinyin",
+        description:
+          "Convertissez le chinois simplifié ou traditionnel en Hanyu Pinyin avec des marques de ton, des tons chiffrés ou sans tons. Affichez et copiez le résultat dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר מסינית לפיניין",
+        description:
+          "המירו טקסט בסינית מפושטת או מסורתית להאניו פיניין עם סימני טון, מספרי טון או בלי טונים. אפשר לראות ולהעתיק את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "चीनी से पिनयिन कन्वर्टर",
+        description:
+          "सरलीकृत या पारंपरिक चीनी को हान्यू पिनयिन में बदलें। टोन चिह्न, टोन की संख्याएँ या बिना टोन का विकल्प चुनें और नतीजा ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Hanzi ke Pinyin",
+        description:
+          "Ubah aksara Han sederhana atau tradisional ke Hanyu Pinyin. Pilih tanda nada, angka nada, atau tanpa nada, lalu lihat dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Convertitore dal cinese al pinyin",
+        description:
+          "Converti il cinese semplificato o tradizionale in Hanyu Pinyin, con segni di tono, toni numerici o senza toni. Leggi e copia il risultato nel browser.",
+      },
+      ja: {
+        name: "中国語ピンイン変換",
+        description:
+          "簡体字・繁体字の中国語を漢語ピンインに変換。声調記号、声調番号、声調なしから選び、ブラウザで結果を確認してコピーできます。",
+      },
+      ko: {
+        name: "중국어 병음 변환기",
+        description:
+          "간체 또는 번체 중국어를 한어병음으로 변환합니다. 성조 기호, 성조 숫자 또는 성조 없는 표기를 선택하고 브라우저에서 결과를 확인하고 복사하세요.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina kepada Pinyin",
+        description:
+          "Tukar aksara Cina ringkas atau tradisional kepada Hanyu Pinyin. Pilih tanda nada, nombor nada atau tanpa nada, kemudian lihat dan salin hasilnya terus dalam pelayar.",
+      },
+      nl: {
+        name: "Chinees naar pinyin omzetten",
+        description:
+          "Zet vereenvoudigd of traditioneel Chinees om naar Hanyu Pinyin met toontekens, tooncijfers of zonder tonen. Bekijk en kopieer het resultaat in je browser.",
+      },
+      no: {
+        name: "Konverter kinesisk til pinyin",
+        description:
+          "Gjør om forenklet eller tradisjonell kinesisk til Hanyu Pinyin med tonetegn, tonetall eller uten toner. Se og kopier resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter chińskiego na pinyin",
+        description:
+          "Zapisuj uproszczone i tradycyjne znaki chińskie w Hanyu Pinyin ze znakami tonów, z cyframi lub bez tonów. Zobacz i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês para pinyin",
+        description:
+          "Converta chinês simplificado ou tradicional para Hanyu Pinyin com marcas tonais, tons numerados ou sem tons. Veja e copie o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер китайского текста в пиньинь",
+        description:
+          "Преобразуйте упрощённые и традиционные иероглифы в пиньинь со знаками тонов, цифрами или без тонов. Результат можно просмотреть и скопировать в браузере.",
+      },
+      sv: {
+        name: "Konvertera kinesiska till pinyin",
+        description:
+          "Omvandla förenklad eller traditionell kinesiska till Hanyu Pinyin med tontecken, tonsiffror eller utan tonangivelse. Läs och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+        description:
+          "แปลงอักษรจีนตัวย่อหรือตัวเต็มเป็นฮั่นอวี่พินอิน เลือกแสดงวรรณยุกต์ด้วยเครื่องหมายหรือตัวเลข หรือไม่แสดงวรรณยุกต์ แล้วดูและคัดลอกผลได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çinceden Pinyin’e Dönüştürücü",
+        description:
+          "Basitleştirilmiş veya geleneksel Çinceyi Hanyu Pinyin’e dönüştürün. Tonları işaretle veya sayıyla gösterin ya da gizleyin. Sonucu tarayıcıda görün ve kopyalayın.",
+      },
+      vi: {
+        name: "Chuyển chữ Hán sang Pinyin",
+        description:
+          "Chuyển chữ Hán giản thể hoặc phồn thể sang Pinyin (bính âm) có dấu thanh, có số chỉ thanh hoặc không ghi thanh điệu. Xem và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "汉字转拼音",
+        description:
+          "在线中文转拼音，支持简体和繁体。可选择声调符号、数字声调或不带声调，在浏览器中转换并复制汉语拼音。",
+      },
+      "zh-TW": {
+        name: "漢字轉拼音",
+        description:
+          "線上中文轉拼音，支援簡體字和繁體字。可選擇聲調符號、聲調數字或不帶聲調，並在瀏覽器中複製漢語拼音。",
+      },
+    },
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
     icon: "binary",

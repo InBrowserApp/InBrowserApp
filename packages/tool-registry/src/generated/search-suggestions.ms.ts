@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Penukar Aksara Cina kepada Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",

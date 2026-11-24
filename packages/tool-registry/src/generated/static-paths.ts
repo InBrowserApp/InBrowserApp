@@ -4786,6 +4786,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-to-pinyin",
+    language: "ar",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "de",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "en",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "es",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "fr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "he",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "hi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "id",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "it",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ja",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ko",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ms",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "nl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "no",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pt",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ru",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "sv",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "th",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "tr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "vi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     language: "ar",
   },

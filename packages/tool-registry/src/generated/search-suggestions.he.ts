@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "ממיר מסינית לפיניין",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",

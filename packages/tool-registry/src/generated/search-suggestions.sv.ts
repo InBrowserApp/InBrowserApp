@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Konvertera kinesiska till pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Omvandlare för tal ↔ kinesiska finansiella siffror",
     slug: "chinese-uppercase-number-converter",
