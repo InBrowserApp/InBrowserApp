@@ -25490,6 +25490,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-image-extractor",
+    category: "pdf",
+    icon: "file-image",
+    tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
+    locales: {
+      ar: {
+        name: "استخراج الصور من PDF",
+        description:
+          "استخرج الصور المضمّنة في ملفات PDF بالدقة التي حُفظت بها. عاين الصور ونزّلها كلًّا على حدة بصيغة JPG أو PNG، أو نزّلها كلها في ملف ZIP. لا حاجة إلى رفع الملف.",
+      },
+      de: {
+        name: "Bilder aus PDF extrahieren",
+        description:
+          "Hole Fotos und andere eingebettete Bilder aus PDF-Dateien in der gespeicherten Auflösung. Sieh sie in der Vorschau an und lade sie einzeln als JPG oder PNG oder zusammen als ZIP herunter. Kein Upload nötig.",
+      },
+      en: {
+        name: "Extract Images from PDF",
+        description:
+          "Extract photos and other embedded images from PDF files at their stored resolution. Preview and save JPG or PNG files individually or download them all as a ZIP. No upload required.",
+      },
+      es: {
+        name: "Extraer imágenes de un PDF",
+        description:
+          "Extrae fotos e imágenes incrustadas en un PDF sin cambiar su resolución. Previsualiza y descarga archivos JPG o PNG por separado o en un ZIP, sin subir el PDF.",
+      },
+      fr: {
+        name: "Extraire les images d’un PDF",
+        description:
+          "Extrayez les photos et autres images intégrées aux PDF dans leur résolution enregistrée. Prévisualisez et enregistrez les fichiers JPG ou PNG individuellement, ou téléchargez-les dans un fichier ZIP. Sans téléversement.",
+      },
+      he: {
+        name: "חילוץ תמונות מ־PDF",
+        description:
+          "חלצו תמונות ותצלומים שמוטמעים בקובצי PDF ברזולוציה שבה נשמרו. צפו בתמונות והורידו כל אחת כ־JPG או PNG, או את כולן בקובץ ZIP אחד. אין צורך בהעלאה.",
+      },
+      hi: {
+        name: "PDF से इमेज निकालें",
+        description:
+          "PDF में मौजूद फ़ोटो और दूसरी एम्बेड की गई इमेज उनके मूल पिक्सेल आकार में निकालें। पहले इमेज देखें, फिर अलग-अलग JPG या PNG डाउनलोड करें या सभी को एक ZIP में लें। फ़ाइल अपलोड करने की ज़रूरत नहीं है।",
+      },
+      id: {
+        name: "Ekstrak Gambar dari PDF",
+        description:
+          "Ekstrak foto dan gambar yang tertanam dalam PDF dengan resolusi yang tersimpan. Pratinjau dan simpan sebagai JPG atau PNG, atau unduh semuanya dalam satu ZIP. Tidak perlu mengunggah PDF.",
+      },
+      it: {
+        name: "Estrarre immagini da PDF",
+        description:
+          "Estrai foto e altre immagini incorporate nei PDF alla risoluzione a cui sono salvate. Guarda l’anteprima e scaricale singolarmente in JPG o PNG, oppure tutte insieme in un file ZIP. Non serve caricare il PDF online.",
+      },
+      ja: {
+        name: "PDFから画像を抽出",
+        description:
+          "PDFに埋め込まれた写真や画像を、保存されている解像度のまま抽出します。プレビューしてJPG・PNGを個別に保存したり、すべてをZIPでまとめてダウンロードしたりできます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PDF에서 이미지 추출",
+        description:
+          "PDF에 포함된 사진과 이미지를 저장된 해상도로 추출하세요. 미리 본 뒤 JPG 또는 PNG로 개별 저장하거나, ZIP 파일로 한꺼번에 다운로드할 수 있습니다. 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Ekstrak Imej daripada PDF",
+        description:
+          "Ekstrak foto dan imej terbenam daripada PDF pada resolusi yang tersimpan. Pratonton dan simpan sebagai JPG atau PNG, atau muat turun semuanya sebagai ZIP. Tidak perlu memuat naik fail.",
+      },
+      nl: {
+        name: "Afbeeldingen uit PDF halen",
+        description:
+          "Haal foto's en andere ingesloten afbeeldingen uit PDF-bestanden op de opgeslagen resolutie. Bekijk en download JPG- of PNG-bestanden afzonderlijk of samen in een ZIP-bestand. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Trekk ut bilder fra PDF",
+        description:
+          "Trekk ut bilder og annen innebygd grafikk fra PDF-filer i oppløsningen de er lagret i. Forhåndsvis og last ned JPG eller PNG enkeltvis, eller last ned alle i én ZIP-fil. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wyodrębnianie obrazów z PDF",
+        description:
+          "Wyodrębniaj zdjęcia i inne obrazy osadzone w plikach PDF w zapisanej rozdzielczości. Przeglądaj je i zapisuj pojedynczo jako JPG lub PNG albo pobierz wszystkie w archiwum ZIP. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Extrair imagens de PDF",
+        description:
+          "Extraia fotos e outras imagens incorporadas em PDFs na resolução em que foram salvas. Veja a prévia e baixe cada imagem em JPG ou PNG, ou baixe todas em um ZIP. Sem upload.",
+      },
+      ru: {
+        name: "Извлечение изображений из PDF",
+        description:
+          "Извлекайте фотографии и другие встроенные изображения из PDF в сохранённом разрешении. Просматривайте и сохраняйте файлы JPG или PNG по отдельности либо скачивайте все изображения в ZIP. Загрузка на сервер не нужна.",
+      },
+      sv: {
+        name: "Extrahera bilder från PDF",
+        description:
+          "Extrahera foton och andra inbäddade bilder från PDF-filer i den upplösning de sparats med. Förhandsvisa och ladda ner JPG eller PNG separat eller alla bilder i en ZIP-fil. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "แยกรูปภาพจาก PDF",
+        description:
+          "แยกภาพถ่ายและรูปภาพที่ฝังใน PDF ตามความละเอียดที่บันทึกไว้ ดูตัวอย่างแล้วบันทึกเป็น JPG หรือ PNG ทีละรูป หรือดาวน์โหลดทั้งหมดเป็น ZIP โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF'den Görüntü Çıkarma",
+        description:
+          "PDF'ye gömülü fotoğrafları ve diğer görüntüleri kaydedildikleri çözünürlükte çıkarın. Önizleyin, JPG veya PNG olarak tek tek ya da hepsini ZIP olarak indirin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Trích xuất ảnh từ PDF",
+        description:
+          "Trích xuất ảnh chụp và hình ảnh nhúng trong PDF ở độ phân giải được lưu trong tệp. Xem trước và lưu từng ảnh dạng JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "从 PDF 中提取图片",
+        description:
+          "提取 PDF 中嵌入的照片和其他图片，保留原始像素尺寸。支持预览、单张下载 JPG 或 PNG，以及打包下载 ZIP。无需上传文件。",
+      },
+      "zh-TW": {
+        name: "從 PDF 擷取圖片",
+        description:
+          "以 PDF 內儲存的解析度擷取照片與其他嵌入的圖片。支援預覽、逐張下載 JPG 或 PNG，也能將所有圖片打包成 ZIP，無須上傳。",
+      },
+    },
+  },
+  {
     slug: "pdf-info-viewer",
     category: "pdf",
     icon: "file-text",

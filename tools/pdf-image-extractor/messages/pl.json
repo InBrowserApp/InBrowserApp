@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Wybierz PDF",
+  "dropPdf": "Upuść tutaj plik PDF",
+  "localProcessing": "Twój plik PDF pozostaje na urządzeniu.",
+  "changePdf": "Zmień PDF",
+  "opening": "Otwieranie PDF…",
+  "scanning": "Skanowanie strony {page} z {total}…",
+  "results": "Wyodrębnione obrazy",
+  "firstPage": "Pierwsze wystąpienie na stronie {page}",
+  "download": "Pobierz",
+  "downloadImage": "Pobierz {name}",
+  "downloadZip": "Pobierz wszystko jako ZIP",
+  "preparingZip": "Przygotowywanie ZIP…",
+  "emptyTitle": "Nie znaleziono osadzonych obrazów",
+  "emptyDescription": "Ten PDF może zawierać tylko tekst lub grafikę wektorową. Aby zapisać całe strony jako obrazy, użyj konwertera PDF na obrazy.",
+  "invalidFile": "Wybierz plik PDF, z którego chcesz wyodrębnić obrazy.",
+  "lockedPdf": "Ten PDF jest chroniony hasłem. Otwórz go za pomocą hasła, zapisz odblokowaną kopię i spróbuj ponownie.",
+  "readError": "Nie udało się odczytać tego pliku PDF. Spróbuj otworzyć inną kopię.",
+  "skippedImages": "Nie udało się wyodrębnić niektórych obrazów z tego PDF.",
+  "zipError": "Nie udało się utworzyć archiwum ZIP. Nadal możesz pobrać obrazy pojedynczo."
+}

@@ -1,0 +1,21 @@
+{
+  "choosePdf": "选择 PDF",
+  "dropPdf": "将 PDF 拖放到这里",
+  "localProcessing": "PDF 文件保留在您的设备上。",
+  "changePdf": "更换 PDF",
+  "opening": "正在打开 PDF…",
+  "scanning": "正在扫描第 {page} 页，共 {total} 页…",
+  "results": "已提取的图片",
+  "firstPage": "首次出现在第 {page} 页",
+  "download": "下载",
+  "downloadImage": "下载 {name}",
+  "downloadZip": "打包下载全部图片",
+  "preparingZip": "正在准备 ZIP…",
+  "emptyTitle": "未找到嵌入的图片",
+  "emptyDescription": "此 PDF 可能只包含文本或矢量图形。如需将整个页面保存为图片，请使用 PDF 转图片转换器。",
+  "invalidFile": "请选择要提取图片的 PDF 文件。",
+  "lockedPdf": "此 PDF 受密码保护。请使用密码打开文件并保存一份未加密的副本，然后重试。",
+  "readError": "无法读取此 PDF。请尝试打开文件的其他副本。",
+  "skippedImages": "无法提取此 PDF 中的部分图片。",
+  "zipError": "无法创建 ZIP 文件。您仍可单独下载图片。"
+}

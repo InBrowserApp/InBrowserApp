@@ -43,6 +43,7 @@ export {
   File,
   FileArchive,
   FileCog,
+  FileImage,
   FileJson2,
   FileText,
   Film,

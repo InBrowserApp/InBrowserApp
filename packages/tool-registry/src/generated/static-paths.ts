@@ -18586,6 +18586,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-image-extractor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "de",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "en",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "es",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "he",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "id",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "it",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "no",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "th",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-image-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-info-viewer",
     language: "ar",
   },

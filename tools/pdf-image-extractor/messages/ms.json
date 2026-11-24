@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropPdf": "Lepaskan PDF di sini",
+  "localProcessing": "PDF kekal pada peranti anda.",
+  "changePdf": "Tukar PDF",
+  "opening": "Membuka PDF…",
+  "scanning": "Mengimbas halaman {page} daripada {total}…",
+  "results": "Imej yang diekstrak",
+  "firstPage": "Mula-mula muncul pada halaman {page}",
+  "download": "Muat turun",
+  "downloadImage": "Muat turun {name}",
+  "downloadZip": "Muat turun semua sebagai ZIP",
+  "preparingZip": "Menyediakan ZIP…",
+  "emptyTitle": "Tiada imej terbenam dijumpai",
+  "emptyDescription": "PDF ini mungkin hanya mengandungi teks atau grafik vektor. Untuk menyimpan seluruh halaman sebagai imej, gunakan Penukar PDF kepada Imej.",
+  "invalidFile": "Pilih fail PDF untuk mengekstrak imejnya.",
+  "lockedPdf": "PDF ini dilindungi kata laluan. Buka fail dengan kata laluannya, simpan salinan yang tidak berkunci, kemudian cuba lagi.",
+  "readError": "PDF ini tidak dapat dibaca. Cuba buka salinan lain.",
+  "skippedImages": "Sesetengah imej tidak dapat diekstrak daripada PDF ini.",
+  "zipError": "Fail ZIP tidak dapat dibuat. Anda masih boleh memuat turun imej satu demi satu."
+}
