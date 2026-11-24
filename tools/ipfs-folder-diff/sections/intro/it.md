@@ -4,7 +4,7 @@ Incolla la cartella originale in **Cartella precedente** e quella aggiornata in 
 
 ## Quando un percorso è aggiunto, rimosso o modificato?
 
-Un percorso presente in una sola cartella è aggiunto o rimosso. Un’intera sottocartella aggiunta o rimossa compare come un unico percorso. Quando entrambe le versioni contengono una sottocartella con CID diversi, lo strumento confronta i percorsi al suo interno. Un elemento il cui CID cambia appare come modificato. File importati con impostazioni diverse di suddivisione in blocchi o codifica possono avere CID diversi anche se il contenuto visibile è identico.
+Un percorso presente in una sola cartella è aggiunto o rimosso. Un’intera sottocartella aggiunta o rimossa compare come un unico percorso. Quando entrambe le versioni contengono una sottocartella con CID diversi, lo strumento confronta i percorsi al suo interno. L’elenco delle modifiche include file o link simbolici con CID diversi e percorsi il cui tipo di elemento è cambiato. File importati con impostazioni diverse di suddivisione in blocchi o codifica possono avere CID diversi anche se il contenuto visibile è identico.
 
 ## Confronta le versioni IPFS senza scaricare ogni file
 

@@ -4,7 +4,7 @@ Plak de oorspronkelijke map in **Eerdere map** en de bijgewerkte map in **Latere
 
 ## Wanneer is een pad toegevoegd, verwijderd of gewijzigd?
 
-Een pad dat maar in één map bestaat, is toegevoegd of verwijderd. Een volledig toegevoegde of verwijderde submap verschijnt als één pad. Als beide versies een submap met verschillende CID’s bevatten, vergelijkt het hulpmiddel de paden daarbinnen. Een item waarvan de CID verandert, verschijnt als gewijzigd. Bestanden die met verschillende chunking- of coderingsinstellingen zijn geïmporteerd, kunnen verschillende CID’s hebben, ook als hun zichtbare inhoud gelijk is.
+Een pad dat maar in één map bestaat, is toegevoegd of verwijderd. Een volledig toegevoegde of verwijderde submap verschijnt als één pad. Als beide versies een submap met verschillende CID’s bevatten, vergelijkt het hulpmiddel de paden daarbinnen. De lijst met wijzigingen bevat bestanden of symbolische links met verschillende CID’s en paden waarvan het itemtype is veranderd. Bestanden die met verschillende chunking- of coderingsinstellingen zijn geïmporteerd, kunnen verschillende CID’s hebben, ook als hun zichtbare inhoud gelijk is.
 
 ## IPFS-momentopnamen vergelijken zonder elk bestand te downloaden
 

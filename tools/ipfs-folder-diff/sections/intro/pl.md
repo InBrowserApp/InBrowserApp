@@ -4,7 +4,7 @@ Wklej adres pierwotnej wersji w polu **Wcześniejszy folder**, a adres nowszej w
 
 ## Kiedy ścieżka jest dodana, usunięta lub zmieniona?
 
-Jeśli ścieżka istnieje tylko w jednym folderze, jest oznaczana jako dodana lub usunięta. Podfolder dodany lub usunięty w całości pojawia się jako jedna ścieżka. Jeśli ten sam podfolder występuje w obu wersjach, lecz ma różne identyfikatory CID, narzędzie porównuje ścieżki w jego wnętrzu. Pozycja o zmienionym CID jest oznaczana jako zmieniona. Pliki zaimportowane z innymi ustawieniami podziału na fragmenty lub kodowania mogą mieć różne CID, nawet gdy ich widoczna zawartość jest identyczna.
+Jeśli ścieżka istnieje tylko w jednym folderze, jest oznaczana jako dodana lub usunięta. Podfolder dodany lub usunięty w całości pojawia się jako jedna ścieżka. Jeśli ten sam podfolder występuje w obu wersjach, lecz ma różne identyfikatory CID, narzędzie porównuje ścieżki w jego wnętrzu. Lista „Zmienione” obejmuje pliki i dowiązania symboliczne o różnych identyfikatorach CID oraz ścieżki, pod którymi zmienił się typ elementu. Pliki zaimportowane z innymi ustawieniami podziału na fragmenty lub kodowania mogą mieć różne CID, nawet gdy ich widoczna zawartość jest identyczna.
 
 ## Jak porównać wersje w IPFS bez pobierania wszystkich plików
 

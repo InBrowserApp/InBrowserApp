@@ -4,7 +4,7 @@ Cole o endereço da pasta original em **Pasta anterior** e o da versão atualiza
 
 ## Quando é que um caminho é considerado adicionado, removido ou alterado?
 
-Um caminho que só existe numa das pastas é marcado como adicionado ou removido. Uma subpasta adicionada ou removida na íntegra aparece como um único caminho. Quando ambas as versões contêm uma subpasta com CID diferentes, a ferramenta compara os caminhos no seu interior. Uma entrada cujo CID muda é marcada como alterada. Os ficheiros importados com definições de segmentação ou codificação diferentes podem ter CID diferentes mesmo quando o conteúdo visível é igual.
+Um caminho que só existe numa das pastas é marcado como adicionado ou removido. Uma subpasta adicionada ou removida na íntegra aparece como um único caminho. Quando ambas as versões contêm uma subpasta com CID diferentes, a ferramenta compara os caminhos no seu interior. A lista de caminhos alterados inclui ficheiros ou ligações simbólicas com CID diferentes e caminhos cujo tipo de entrada mudou. Os ficheiros importados com definições de segmentação ou codificação diferentes podem ter CID diferentes mesmo quando o conteúdo visível é igual.
 
 ## Comparar versões do IPFS sem descarregar todos os ficheiros
 

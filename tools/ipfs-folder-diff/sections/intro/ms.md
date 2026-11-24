@@ -4,7 +4,7 @@ Tampal alamat folder asal pada **Folder asal** dan alamat folder yang telah dike
 
 ## Bilakah laluan dikira sebagai ditambah, dibuang atau diubah?
 
-Laluan yang hanya wujud dalam satu folder ditandakan sebagai ditambah atau dibuang. Jika seluruh subfolder ditambah atau dibuang, subfolder itu ditunjukkan sebagai satu laluan. Jika kedua-dua versi mempunyai subfolder yang sama dengan CID yang berbeza, alat ini membandingkan laluan di dalamnya. Entri yang CID-nya berubah ditandakan sebagai diubah. Fail yang diimport dengan tetapan pembahagian atau pengekodan yang berbeza boleh mempunyai CID yang berlainan walaupun kandungannya kelihatan sama.
+Laluan yang hanya wujud dalam satu folder ditandakan sebagai ditambah atau dibuang. Jika seluruh subfolder ditambah atau dibuang, subfolder itu ditunjukkan sebagai satu laluan. Jika kedua-dua versi mempunyai subfolder yang sama dengan CID yang berbeza, alat ini membandingkan laluan di dalamnya. Senarai entri yang diubah merangkumi fail atau pautan simbolik dengan CID yang berbeza serta laluan yang jenis entrinya berubah. Fail yang diimport dengan tetapan pembahagian atau pengekodan yang berbeza boleh mempunyai CID yang berlainan walaupun kandungannya kelihatan sama.
 
 ## Bandingkan versi IPFS tanpa memuat turun setiap fail
 

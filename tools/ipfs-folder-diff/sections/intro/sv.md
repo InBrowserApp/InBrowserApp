@@ -4,7 +4,7 @@ Klistra in den ursprungliga mappen i **Tidigare mapp** och den uppdaterade i **S
 
 ## Vad räknas som en tillagd, borttagen eller ändrad sökväg?
 
-En sökväg som bara finns i en av mapparna är tillagd eller borttagen. En hel tillagd eller borttagen undermapp visas som en enda sökväg. När båda versionerna innehåller en undermapp med olika CID:er jämför verktyget sökvägarna i den. En post vars CID ändras visas som ändrad. Filer som importerats med olika inställningar för uppdelning eller kodning kan få olika CID:er även om deras synliga innehåll är detsamma.
+En sökväg som bara finns i en av mapparna är tillagd eller borttagen. En hel tillagd eller borttagen undermapp visas som en enda sökväg. När båda versionerna innehåller en undermapp med olika CID:er jämför verktyget sökvägarna i den. Listan över ändringar innehåller filer eller symboliska länkar med olika CID:er och sökvägar vars posttyp har ändrats. Filer som importerats med olika inställningar för uppdelning eller kodning kan få olika CID:er även om deras synliga innehåll är detsamma.
 
 ## Jämför IPFS-ögonblicksbilder utan att ladda ner varje fil
 

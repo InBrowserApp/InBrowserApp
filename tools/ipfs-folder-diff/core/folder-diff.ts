@@ -68,8 +68,14 @@ async function openFolder(
 type Directory = Awaited<ReturnType<typeof openFolder>>
 
 async function directoryLinks(directory: Directory, signal: AbortSignal) {
-  const entries = await listIpfsDirectory(directory, signal)
-  return new Map(entries.map(({ name, cid }) => [name, cid]))
+  const links = new Map<string, Directory["cid"]>()
+  for (const { name, cid } of await listIpfsDirectory(directory, signal)) {
+    if (!name || name.includes("/") || links.has(name)) {
+      throw new IpfsFileError("unsupported")
+    }
+    links.set(name, cid)
+  }
+  return links
 }
 
 export async function compareFolders(

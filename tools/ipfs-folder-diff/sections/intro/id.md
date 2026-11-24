@@ -4,7 +4,7 @@ Tempel alamat folder asli ke **Folder awal** dan alamat folder yang sudah diperb
 
 ## Kapan jalur dianggap ditambahkan, dihapus, atau diubah?
 
-Jalur yang hanya ada di salah satu folder ditandai sebagai ditambahkan atau dihapus. Jika seluruh subfolder ditambahkan atau dihapus, subfolder itu tampil sebagai satu jalur. Jika subfolder ada di kedua versi tetapi CID-nya berbeda, alat ini akan membandingkan jalur di dalamnya. Entri yang CID-nya berubah ditandai sebagai diubah. File yang diimpor dengan pengaturan pemotongan atau pengodean berbeda bisa memiliki CID berbeda meskipun isinya tampak sama.
+Jalur yang hanya ada di salah satu folder ditandai sebagai ditambahkan atau dihapus. Jika seluruh subfolder ditambahkan atau dihapus, subfolder itu tampil sebagai satu jalur. Jika subfolder ada di kedua versi tetapi CID-nya berbeda, alat ini akan membandingkan jalur di dalamnya. Daftar entri yang diubah mencakup file atau tautan simbolis dengan CID berbeda serta jalur yang jenis entrinya berubah. File yang diimpor dengan pengaturan pemotongan atau pengodean berbeda bisa memiliki CID berbeda meskipun isinya tampak sama.
 
 ## Bandingkan versi IPFS tanpa mengunduh setiap file
 

@@ -1,4 +1,4 @@
-import { useId, useState } from "react"
+import { useId, useMemo, useState } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
@@ -38,19 +38,28 @@ export default function FolderDiffResults({
   const [query, setQuery] = useState("")
   const [visible, setVisible] = useState(pageSize)
   const { changes, unchecked } = result
-  const counts = { all: changes.length, added: 0, removed: 0, changed: 0 }
-  for (const change of changes) counts[change.kind]++
+  const counts = useMemo(() => {
+    const totals = { all: changes.length, added: 0, removed: 0, changed: 0 }
+    for (const change of changes) totals[change.kind]++
+    return totals
+  }, [changes])
   const needle = query.trim().toLocaleLowerCase(language)
-  const filtered = changes.filter(
-    (change) =>
-      (kind === "all" || change.kind === kind) &&
-      change.path.toLocaleLowerCase(language).includes(needle)
+  const filtered = useMemo(
+    () =>
+      changes.filter(
+        (change) =>
+          (kind === "all" || change.kind === kind) &&
+          (!needle || change.path.toLocaleLowerCase(language).includes(needle))
+      ),
+    [changes, kind, language, needle]
   )
 
   return (
     <ToolPanelCard role="region" aria-labelledby={headingId}>
       <CardHeader className="flex flex-wrap items-center justify-between gap-2">
-        <CardTitle id={headingId}>{messages.results}</CardTitle>
+        <CardTitle>
+          <h2 id={headingId}>{messages.results}</h2>
+        </CardTitle>
         <Button
           type="button"
           size="sm"
@@ -128,20 +137,20 @@ export default function FolderDiffResults({
                   return (
                     <li key={change.path}>
                       <details className="group">
-                        <summary className="grid cursor-pointer list-none grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 p-3 text-sm hover:bg-muted/40 [&::-webkit-details-marker]:hidden">
-                          <span className="flex items-center gap-1.5 rounded-md bg-muted px-2 py-1 text-xs font-medium">
+                        <summary className="grid cursor-pointer list-none grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1 p-2.5 text-sm hover:bg-muted/40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-3 sm:p-3 [&::-webkit-details-marker]:hidden">
+                          <span className="flex w-fit items-center gap-1.5 rounded-md bg-muted px-2 py-1 text-xs font-medium">
                             <Icon
                               aria-hidden="true"
                               className="size-3.5 shrink-0"
                             />
                             {messages[change.kind]}
                           </span>
-                          <bdi className="font-mono wrap-anywhere">
+                          <bdi className="col-span-2 row-start-2 font-mono wrap-anywhere sm:col-span-1 sm:col-start-2 sm:row-start-1">
                             {change.path}
                           </bdi>
                           <ChevronDown
                             aria-hidden="true"
-                            className="size-4 text-muted-foreground group-open:rotate-180"
+                            className="col-start-2 row-start-1 size-4 text-muted-foreground group-open:rotate-180 sm:col-start-3"
                           />
                         </summary>
                         <dl className="grid gap-2 border-t bg-muted/20 p-3">

@@ -4,7 +4,7 @@ Lim inn den opprinnelige mappen i **Tidligere mappe** og den oppdaterte i **Sene
 
 ## Hva regnes som en lagt til, fjernet eller endret sti?
 
-En sti som bare finnes i én av mappene, er lagt til eller fjernet. En hel undermappe som er lagt til eller fjernet, vises som én sti. Når begge versjonene inneholder en undermappe med ulike CID-er, sammenligner verktøyet stiene inni den. Et element der CID-en endres, vises som endret. Filer som er importert med ulike innstillinger for oppdeling eller koding, kan ha ulike CID-er selv om det synlige innholdet er likt.
+En sti som bare finnes i én av mappene, er lagt til eller fjernet. En hel undermappe som er lagt til eller fjernet, vises som én sti. Når begge versjonene inneholder en undermappe med ulike CID-er, sammenligner verktøyet stiene inni den. Listen over endringer omfatter filer eller symbolske lenker med ulike CID-er og stier der elementtypen har endret seg. Filer som er importert med ulike innstillinger for oppdeling eller koding, kan ha ulike CID-er selv om det synlige innholdet er likt.
 
 ## Sammenlign IPFS-øyeblikksbilder uten å laste ned hver fil
 

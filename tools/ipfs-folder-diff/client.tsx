@@ -48,6 +48,7 @@ export default function FolderDiffTool({
   const [errors, setErrors] = useState<Errors>({})
   const [progress, setProgress] = useState<string | null>(null)
   const [result, setResult] = useState<FolderDiff | null>(null)
+  const busy = progress !== null
 
   useEffect(() => () => active.current?.abort(), [])
 
@@ -149,11 +150,11 @@ export default function FolderDiffTool({
               })}
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <Button type="submit" disabled={progress !== null}>
+              <Button type="submit" disabled={busy}>
                 <Search data-icon="inline-start" aria-hidden="true" />
                 {messages.compare}
               </Button>
-              {progress !== null ? (
+              {busy ? (
                 <Button type="button" variant="ghost" onClick={cancel}>
                   {messages.cancel}
                 </Button>
@@ -177,7 +178,7 @@ export default function FolderDiffTool({
                     type="button"
                     variant="ghost"
                     onClick={() => {
-                      edit(example)
+                      setAddresses(example)
                       void compare(example)
                     }}
                   >
@@ -191,7 +192,7 @@ export default function FolderDiffTool({
             role="status"
             className="flex items-center gap-2 text-sm text-muted-foreground empty:hidden"
           >
-            {progress !== null && (
+            {busy && (
               <>
                 <LoaderCircle
                   aria-hidden="true"
@@ -208,6 +209,9 @@ export default function FolderDiffTool({
           )}
         </ToolPanelCardContent>
       </ToolPanelCard>
+      <p role="status" className="sr-only">
+        {result && result.changes.length > 0 ? messages.results : ""}
+      </p>
       {result && (
         <FolderDiffResults
           result={result}

@@ -4,7 +4,7 @@ Dán địa chỉ thư mục gốc vào ô **Thư mục ban đầu** và địa 
 
 ## Thế nào là đường dẫn được thêm, xóa hoặc thay đổi?
 
-Đường dẫn chỉ có trong một thư mục được đánh dấu là đã thêm hoặc đã xóa. Khi toàn bộ thư mục con được thêm hoặc xóa, công cụ hiển thị thư mục đó dưới dạng một đường dẫn. Nếu cả hai phiên bản đều có cùng một thư mục con với CID khác nhau, công cụ sẽ so sánh các đường dẫn bên trong. Mục có CID khác giữa hai phiên bản được đánh dấu là đã thay đổi. Tệp được nhập với cách chia phần hoặc mã hóa khác nhau có thể có CID khác nhau dù nội dung nhìn thấy giống hệt nhau.
+Đường dẫn chỉ có trong một thư mục được đánh dấu là đã thêm hoặc đã xóa. Khi toàn bộ thư mục con được thêm hoặc xóa, công cụ hiển thị thư mục đó dưới dạng một đường dẫn. Nếu cả hai phiên bản đều có cùng một thư mục con với CID khác nhau, công cụ sẽ so sánh các đường dẫn bên trong. Danh sách mục đã thay đổi gồm các tệp hoặc liên kết tượng trưng có CID khác nhau giữa hai phiên bản và các đường dẫn có loại mục thay đổi. Tệp được nhập với cách chia phần hoặc mã hóa khác nhau có thể có CID khác nhau dù nội dung nhìn thấy giống hệt nhau.
 
 ## So sánh các phiên bản IPFS mà không cần tải từng tệp
 

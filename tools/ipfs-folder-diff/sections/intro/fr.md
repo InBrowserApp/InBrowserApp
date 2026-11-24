@@ -4,7 +4,7 @@ Collez l’adresse du dossier d’origine dans **Ancien dossier** et celle du do
 
 ## Quand un chemin est-il considéré comme ajouté, supprimé ou modifié ?
 
-Un chemin qui existe dans un seul dossier est marqué comme ajouté ou supprimé. Un sous-dossier ajouté ou supprimé dans son intégralité apparaît comme un seul chemin. Si un sous-dossier est présent dans les deux versions avec des CID différents, l’outil compare les chemins qu’il contient. Une entrée dont le CID change est marquée comme modifiée. Des fichiers importés avec des paramètres de découpage ou d’encodage différents peuvent avoir des CID différents même si leur contenu visible est identique.
+Un chemin qui existe dans un seul dossier est marqué comme ajouté ou supprimé. Un sous-dossier ajouté ou supprimé dans son intégralité apparaît comme un seul chemin. Si un sous-dossier est présent dans les deux versions avec des CID différents, l’outil compare les chemins qu’il contient. La liste des chemins modifiés comprend les fichiers ou les liens symboliques dont le CID diffère, ainsi que les chemins dont le type d’entrée a changé. Des fichiers importés avec des paramètres de découpage ou d’encodage différents peuvent avoir des CID différents même si leur contenu visible est identique.
 
 ## Comparer des versions IPFS sans télécharger tous les fichiers
 

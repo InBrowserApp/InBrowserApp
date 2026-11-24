@@ -4,7 +4,7 @@ Fügen Sie die Adresse des ursprünglichen Ordners in **Älterer Ordner** und di
 
 ## Wann gilt ein Pfad als hinzugefügt, entfernt oder geändert?
 
-Ein Pfad, der nur in einem Ordner existiert, gilt als hinzugefügt oder entfernt. Ein vollständig hinzugefügter oder entfernter Unterordner erscheint als einzelner Pfad. Wenn ein Unterordner in beiden Versionen vorhanden ist und unterschiedliche CIDs hat, vergleicht das Tool seine Pfade. Ein Eintrag mit einer anderen CID gilt als geändert. Wenn sich beim Import die Einstellungen für Segmentierung oder Kodierung unterscheiden, können Dateien verschiedene CIDs haben, auch wenn ihr sichtbarer Inhalt gleich ist.
+Ein Pfad, der nur in einem Ordner existiert, gilt als hinzugefügt oder entfernt. Ein vollständig hinzugefügter oder entfernter Unterordner erscheint als einzelner Pfad. Wenn ein Unterordner in beiden Versionen vorhanden ist und unterschiedliche CIDs hat, vergleicht das Tool seine Pfade. Die Liste der geänderten Pfade enthält Dateien oder symbolische Links mit unterschiedlichen CIDs sowie Pfade, deren Eintragstyp sich geändert hat. Wenn sich beim Import die Einstellungen für Segmentierung oder Kodierung unterscheiden, können Dateien verschiedene CIDs haben, auch wenn ihr sichtbarer Inhalt gleich ist.
 
 ## Versionen auf IPFS vergleichen, ohne alle Dateien herunterzuladen
 

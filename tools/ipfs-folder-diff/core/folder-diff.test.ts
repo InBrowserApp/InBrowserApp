@@ -3,11 +3,15 @@ import { expect, it, vi } from "vitest"
 
 import { gatewayStore, parseIpfsAddress } from "@workspace/ipfs-files/gateway"
 
+import invalidPaths from "../fixtures/invalid-paths.json"
 import fixture from "../fixtures/snapshots.json"
 import { compareFolders } from "./folder-diff"
 
 const address = (input: string) => parseIpfsAddress(input)!
-const blocks: Record<string, string> = fixture.blocks
+const blocks: Record<string, string> = {
+  ...fixture.blocks,
+  ...invalidPaths.blocks,
+}
 
 function fixtureContext(
   hide: (cid: string) => boolean = () => false,
@@ -128,6 +132,20 @@ it("marks the root unchecked when a shard of a directory listing is missing", as
   const result = await compareFolders(
     address(fixture.sharded),
     after,
+    fixtureContext()
+  )
+  expect(result.unchecked).toEqual([""])
+  expect(result.changes).toEqual([])
+})
+
+it.each([
+  ["duplicate", invalidPaths.before, invalidPaths.after],
+  ["slash", invalidPaths.slashName, fixture.after],
+  ["empty", invalidPaths.emptyName, fixture.after],
+])("marks a directory with a %s name unchecked", async (_kind, left, right) => {
+  const result = await compareFolders(
+    address(left),
+    address(right),
     fixtureContext()
   )
   expect(result.unchecked).toEqual([""])

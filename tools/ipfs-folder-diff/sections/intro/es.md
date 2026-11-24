@@ -4,7 +4,7 @@ Pega la dirección de la carpeta original en **Carpeta anterior** y la de la ver
 
 ## ¿Cuándo se considera que una ruta se ha añadido, eliminado o modificado?
 
-Una ruta que solo existe en una de las carpetas se marca como añadida o eliminada. Si se añade o elimina una subcarpeta entera, esta aparece como una sola ruta. Cuando ambas versiones contienen una subcarpeta con CID distintos, la herramienta compara sus rutas internas. Si cambia el CID de una entrada, la entrada se marca como modificada. Los archivos importados con ajustes de fragmentación o codificación distintos pueden tener CID diferentes aunque su contenido visible sea idéntico.
+Una ruta que solo existe en una de las carpetas se marca como añadida o eliminada. Si se añade o elimina una subcarpeta entera, esta aparece como una sola ruta. Cuando ambas versiones contienen una subcarpeta con CID distintos, la herramienta compara sus rutas internas. La lista de rutas modificadas incluye archivos o enlaces simbólicos con CID distintos y rutas cuyo tipo de entrada ha cambiado. Los archivos importados con ajustes de fragmentación o codificación distintos pueden tener CID diferentes aunque su contenido visible sea idéntico.
 
 ## Compara versiones de IPFS sin descargar todos los archivos
 

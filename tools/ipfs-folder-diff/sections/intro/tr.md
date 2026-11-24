@@ -4,7 +4,7 @@
 
 ## Bir yol hangi durumda eklenmiş, kaldırılmış veya değişmiş sayılır?
 
-Yalnızca bir klasörde bulunan yol eklenmiş ya da kaldırılmış sayılır. Tamamı eklenen veya kaldırılan bir alt klasör tek bir yol olarak görünür. Her iki sürümde de alt klasör varsa ancak CID değerleri farklıysa araç içindeki yolları karşılaştırır. CID değeri farklı olan bir öğe değişmiş olarak görünür. Farklı parçalama veya kodlama ayarlarıyla içe aktarılan dosyaların görünen içerikleri aynı olsa bile CID değerleri farklı olabilir.
+Yalnızca bir klasörde bulunan yol eklenmiş ya da kaldırılmış sayılır. Tamamı eklenen veya kaldırılan bir alt klasör tek bir yol olarak görünür. Her iki sürümde de alt klasör varsa ancak CID değerleri farklıysa araç içindeki yolları karşılaştırır. Değişenler listesine CID değeri değişen dosyalar ve sembolik bağlantılar ile öğe türü değişen yollar girer. Farklı parçalama veya kodlama ayarlarıyla içe aktarılan dosyaların görünen içerikleri aynı olsa bile CID değerleri farklı olabilir.
 
 ## Her dosyayı indirmeden IPFS sürümlerini karşılaştırma
 

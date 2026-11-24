@@ -4,7 +4,7 @@ Paste the original folder in **Earlier folder** and the updated one in **Later f
 
 ## What counts as an added, removed, or changed path?
 
-A path that exists in only one folder is added or removed. An entire added or removed subfolder appears as one path. When both versions contain a subfolder with different CIDs, the tool compares the paths inside it. An entry whose CID changes appears as changed. Files imported with different chunking or encoding settings can have different CIDs even if their visible contents are the same.
+A path that exists in only one folder is added or removed. An entire added or removed subfolder appears as one path. When both versions contain a subfolder with different CIDs, the tool compares the paths inside it. The changed list includes files or symlinks with different CIDs and paths that switched entry type. Files imported with different chunking or encoding settings can have different CIDs even if their visible contents are the same.
 
 ## Comparing IPFS snapshots without downloading every file
 
