@@ -1,0 +1,21 @@
+{
+  "domain": "도메인",
+  "target": "IPFS 또는 IPNS 대상(선택 사항)",
+  "example": "실제 도메인으로 시도",
+  "check": "게시된 레코드 확인",
+  "checking": "DNS 확인 중…",
+  "record": "추가할 DNS 레코드",
+  "name": "이름",
+  "value": "TXT 값",
+  "copy": "복사",
+  "copied": "복사됨",
+  "published": "게시된 DNSLink",
+  "invalidDomain": "유효한 도메인 이름을 입력하세요.",
+  "invalidTarget": "CID, IPFS 경로 또는 IPNS 경로를 입력하세요.",
+  "missing": "DNSLink TXT 레코드가 반환되지 않았습니다.",
+  "unavailable": "이 DNS 확인자가 조회를 완료하지 못했습니다.",
+  "malformed": "게시된 DNSLink 대상이 유효하지 않습니다.",
+  "match": "입력한 대상과 일치",
+  "different": "입력한 대상과 다름",
+  "ttl": "TTL(초)"
+}

@@ -483,6 +483,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-zone-file-parser",
   },
   {
+    category: "ipfs",
+    name: "DNSLink Generator & Checker",
+    slug: "dnslink-generator-checker",
+  },
+  {
     category: "document",
     name: "DOC / WPS to PDF Converter",
     slug: "doc-to-pdf-converter",

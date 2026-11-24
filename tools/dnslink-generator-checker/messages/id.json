@@ -1,0 +1,21 @@
+{
+  "domain": "Domain",
+  "target": "Target IPFS atau IPNS (opsional)",
+  "example": "Coba contoh yang aktif",
+  "check": "Periksa record yang dipublikasikan",
+  "checking": "Memeriksa DNS…",
+  "record": "Record DNS yang perlu ditambahkan",
+  "name": "Nama",
+  "value": "Nilai TXT",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "published": "DNSLink yang dipublikasikan",
+  "invalidDomain": "Masukkan nama domain yang valid.",
+  "invalidTarget": "Masukkan CID, jalur IPFS, atau jalur IPNS.",
+  "missing": "Resolver tidak mengembalikan record TXT DNSLink.",
+  "unavailable": "Resolver ini tidak dapat menyelesaikan pencarian.",
+  "malformed": "Target DNSLink yang dipublikasikan tidak valid.",
+  "match": "Cocok dengan target Anda",
+  "different": "Berbeda dari target Anda",
+  "ttl": "TTL (detik)"
+}

@@ -103,6 +103,7 @@
     "@tool/dms-coordinate-converter": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
     "@tool/dns-zone-file-parser": "workspace:*",
+    "@tool/dnslink-generator-checker": "workspace:*",
     "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",
     "@tool/docker-compose-validator": "workspace:*",

@@ -1,0 +1,21 @@
+{
+  "domain": "Domene",
+  "target": "IPFS- eller IPNS-mål (valgfritt)",
+  "example": "Prøv et eksempel",
+  "check": "Kontroller publisert post",
+  "checking": "Kontrollerer DNS…",
+  "record": "DNS-post som skal legges til",
+  "name": "Navn",
+  "value": "TXT-verdi",
+  "copy": "Kopier",
+  "copied": "Kopiert",
+  "published": "Publisert DNSLink",
+  "invalidDomain": "Skriv inn et gyldig domenenavn.",
+  "invalidTarget": "Skriv inn en CID, en IPFS-sti eller en IPNS-sti.",
+  "missing": "Ingen DNSLink TXT-post ble returnert.",
+  "unavailable": "Denne oppslagstjeneren kunne ikke fullføre oppslaget.",
+  "malformed": "Det publiserte DNSLink-målet er ugyldig.",
+  "match": "Samsvarer med målet ditt",
+  "different": "Avviker fra målet ditt",
+  "ttl": "TTL (sekunder)"
+}

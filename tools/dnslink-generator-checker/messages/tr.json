@@ -1,0 +1,21 @@
+{
+  "domain": "Alan adı",
+  "target": "IPFS veya IPNS hedefi (isteğe bağlı)",
+  "example": "Çalışan bir örneği deneyin",
+  "check": "Yayımlanan kaydı kontrol et",
+  "checking": "DNS kontrol ediliyor…",
+  "record": "Eklenecek DNS kaydı",
+  "name": "Ad",
+  "value": "TXT değeri",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "published": "Yayımlanan DNSLink",
+  "invalidDomain": "Geçerli bir alan adı girin.",
+  "invalidTarget": "Bir CID, IPFS yolu veya IPNS yolu girin.",
+  "missing": "Yanıtta DNSLink TXT kaydı bulunamadı.",
+  "unavailable": "Bu DNS çözümleyicisi sorguyu tamamlayamadı.",
+  "malformed": "Yayımlanan DNSLink hedefi geçersiz.",
+  "match": "Hedefinizle eşleşiyor",
+  "different": "Hedefinizden farklı",
+  "ttl": "TTL (saniye)"
+}

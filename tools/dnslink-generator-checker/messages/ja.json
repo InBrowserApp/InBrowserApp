@@ -1,0 +1,21 @@
+{
+  "domain": "ドメイン",
+  "target": "IPFS または IPNS のリンク先（任意）",
+  "example": "実際のドメインで試す",
+  "check": "公開レコードを確認",
+  "checking": "DNS を確認中…",
+  "record": "追加する DNS レコード",
+  "name": "名前",
+  "value": "TXT の値",
+  "copy": "コピー",
+  "copied": "コピーしました",
+  "published": "公開されている DNSLink",
+  "invalidDomain": "有効なドメイン名を入力してください。",
+  "invalidTarget": "CID、IPFS パス、IPNS パスのいずれかを入力してください。",
+  "missing": "DNSLink の TXT レコードが返されませんでした。",
+  "unavailable": "このリゾルバーでは検索を完了できませんでした。",
+  "malformed": "公開されている DNSLink のリンク先が無効です。",
+  "match": "指定したリンク先と一致",
+  "different": "指定したリンク先と不一致",
+  "ttl": "TTL（秒）"
+}

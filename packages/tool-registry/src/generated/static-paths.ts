@@ -8834,6 +8834,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dnslink-generator-checker",
+    language: "ar",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "de",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "en",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "es",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "fr",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "he",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "hi",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "id",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "it",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "ja",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "ko",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "ms",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "nl",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "no",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "pl",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "pt",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "ru",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "sv",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "th",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "tr",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "vi",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "dnslink-generator-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "doc-to-pdf-converter",
     language: "ar",
   },

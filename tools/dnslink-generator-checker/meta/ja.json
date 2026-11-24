@@ -1,0 +1,4 @@
+{
+  "name": "DNSLink 生成・確認ツール",
+  "description": "IPFS CID や IPNS 名に対応する DNSLink の TXT レコードを生成します。公開 DNS リゾルバーの応答を確認し、公開されているリンク先を設定予定の値と照合できます。"
+}

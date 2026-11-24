@@ -1,0 +1,21 @@
+{
+  "domain": "Dominio",
+  "target": "Destinazione IPFS o IPNS (facoltativa)",
+  "example": "Prova un esempio reale",
+  "check": "Controlla il record pubblicato",
+  "checking": "Controllo DNS in corso…",
+  "record": "Record DNS da aggiungere",
+  "name": "Nome",
+  "value": "Valore TXT",
+  "copy": "Copia",
+  "copied": "Copiato",
+  "published": "DNSLink pubblicato",
+  "invalidDomain": "Inserisci un nome di dominio valido.",
+  "invalidTarget": "Inserisci un CID, un percorso IPFS o un percorso IPNS.",
+  "missing": "Non è stato restituito alcun record TXT DNSLink.",
+  "unavailable": "Questo resolver non ha potuto completare la ricerca.",
+  "malformed": "La destinazione DNSLink pubblicata non è valida.",
+  "match": "Corrisponde alla destinazione",
+  "different": "Diverso dalla destinazione",
+  "ttl": "TTL (secondi)"
+}

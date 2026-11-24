@@ -1,0 +1,21 @@
+{
+  "domain": "網域",
+  "target": "IPFS 或 IPNS 目標（選填）",
+  "example": "試查範例網域",
+  "check": "檢查已發布的記錄",
+  "checking": "正在查詢 DNS…",
+  "record": "要新增的 DNS 記錄",
+  "name": "名稱",
+  "value": "TXT 值",
+  "copy": "複製",
+  "copied": "已複製",
+  "published": "已發布的 DNSLink",
+  "invalidDomain": "請輸入有效的網域名稱。",
+  "invalidTarget": "請輸入 CID、IPFS 路徑或 IPNS 路徑。",
+  "missing": "未傳回 DNSLink TXT 記錄。",
+  "unavailable": "此解析器無法完成查詢。",
+  "malformed": "已發布的 DNSLink 目標無效。",
+  "match": "符合預期目標",
+  "different": "與預期目標不同",
+  "ttl": "TTL（秒）"
+}

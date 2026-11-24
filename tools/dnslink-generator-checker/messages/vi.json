@@ -1,0 +1,21 @@
+{
+  "domain": "Tên miền",
+  "target": "Đích IPFS hoặc IPNS (không bắt buộc)",
+  "example": "Thử với ví dụ thực tế",
+  "check": "Kiểm tra bản ghi đã công bố",
+  "checking": "Đang tra cứu DNS…",
+  "record": "Bản ghi DNS cần thêm",
+  "name": "Tên",
+  "value": "Giá trị TXT",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "published": "DNSLink đã công bố",
+  "invalidDomain": "Nhập tên miền hợp lệ.",
+  "invalidTarget": "Nhập CID, đường dẫn IPFS hoặc đường dẫn IPNS.",
+  "missing": "Không nhận được bản ghi TXT DNSLink.",
+  "unavailable": "Bộ phân giải này không thể hoàn tất tra cứu.",
+  "malformed": "Đích trong bản ghi DNSLink đã công bố không hợp lệ.",
+  "match": "Khớp với đích của bạn",
+  "different": "Khác với đích của bạn",
+  "ttl": "TTL (giây)"
+}

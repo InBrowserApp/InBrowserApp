@@ -1,0 +1,21 @@
+{
+  "domain": "Domain",
+  "target": "IPFS or IPNS target (optional)",
+  "example": "Try a live example",
+  "check": "Check published record",
+  "checking": "Checking DNS…",
+  "record": "DNS record to add",
+  "name": "Name",
+  "value": "TXT value",
+  "copy": "Copy",
+  "copied": "Copied",
+  "published": "Published DNSLink",
+  "invalidDomain": "Enter a valid domain name.",
+  "invalidTarget": "Enter a CID, an IPFS path, or an IPNS path.",
+  "missing": "No DNSLink TXT record was returned.",
+  "unavailable": "This resolver could not complete the lookup.",
+  "malformed": "The published DNSLink target is invalid.",
+  "match": "Matches your target",
+  "different": "Differs from your target",
+  "ttl": "TTL (seconds)"
+}

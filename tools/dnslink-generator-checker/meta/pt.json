@@ -1,0 +1,4 @@
+{
+  "name": "Gerador e verificador de DNSLink",
+  "description": "Gere um registo TXT de DNSLink para um CID do IPFS ou um nome IPNS. Consulte as respostas dos resolvedores de DNS públicos e compare o destino publicado com o pretendido."
+}
