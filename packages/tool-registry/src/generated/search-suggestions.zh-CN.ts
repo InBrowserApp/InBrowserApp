@@ -1054,6 +1054,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 表单填写",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "从 PDF 中提取图片",
     slug: "pdf-image-extractor",
   },

@@ -1054,6 +1054,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Remplir un formulaire PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Extraire les images d’un PDF",
     slug: "pdf-image-extractor",
   },

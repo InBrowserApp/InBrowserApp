@@ -23,7 +23,8 @@ const mock = vi.hoisted(() => ({
 vi.mock("pdfjs-dist", () => ({
   getDocument: mock.getDocument,
   GlobalWorkerOptions: {},
-  AnnotationMode: { ENABLE: 1 },
+  AnnotationEditorType: { DISABLE: -1 },
+  AnnotationMode: { ENABLE: 1, ENABLE_FORMS: 2 },
   PasswordResponses: { INCORRECT_PASSWORD: 2 },
 }))
 vi.mock("./pdf-assets", () => ({ PdfAssets: class {} }))
@@ -97,6 +98,28 @@ test("waits for viewer styles before creating a viewer or PDF worker", async () 
   loaded()
   const reader = await opening
   expect(mock.createViewer).toHaveBeenCalledOnce()
+  reader.dispose()
+})
+
+test("forms supply accessible field names without replacing authored labels", async () => {
+  const { options } = setup()
+  const reader = await openReader({ ...options, prepareForm: async () => {} })
+  const div = document.createElement("div")
+  div.innerHTML = `
+    <div class="annotationLayer">
+      <section class="widgetAnnotation" title="Full name"><input name="name"></section>
+      <section class="widgetAnnotation"><textarea name="Comments"></textarea></section>
+      <section class="widgetAnnotation"><select name="choice" aria-labelledby="authored"></select></section>
+    </div>
+  `
+  mock.events.get("annotationlayerrendered")!({ source: { div } })
+  expect(div.querySelector("input")?.getAttribute("aria-label")).toBe(
+    "Full name"
+  )
+  expect(div.querySelector("textarea")?.getAttribute("aria-label")).toBe(
+    "Comments"
+  )
+  expect(div.querySelector("select")?.hasAttribute("aria-label")).toBe(false)
   reader.dispose()
 })
 

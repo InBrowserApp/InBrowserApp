@@ -19322,6 +19322,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-form-filler",
+    language: "ar",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "de",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "en",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "es",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "fr",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "he",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "hi",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "id",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "it",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ja",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ko",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ms",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "nl",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "no",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "pl",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "pt",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ru",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "sv",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "th",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "tr",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "vi",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-image-extractor",
     language: "ar",
   },

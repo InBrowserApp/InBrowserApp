@@ -1054,6 +1054,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Isi Formulir PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Ekstrak Gambar dari PDF",
     slug: "pdf-image-extractor",
   },

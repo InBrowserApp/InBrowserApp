@@ -1054,6 +1054,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Điền biểu mẫu PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Trích xuất ảnh từ PDF",
     slug: "pdf-image-extractor",
   },
