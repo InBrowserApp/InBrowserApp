@@ -4,7 +4,7 @@ Choose a local file or folder, then select **Calculate CID**. Copy the content i
 
 ## Why can the same file have different IPFS CIDs?
 
-IPFS can split a file into blocks and store links between them using UnixFS. The root CID depends on how those blocks are split, encoded, and arranged. To reproduce a CID, use the same chunk size, raw leaf setting, and directory structure as the original import. A folder CID also includes its entry names. Empty subfolders are omitted by the browser's folder picker.
+IPFS can split a file into blocks and store links between them using UnixFS. The root CID depends on how those blocks are split, encoded, and arranged. To reproduce a CID, use the same chunk size, raw leaf setting, and directory structure as the original import. A folder CID also includes its entry names. Empty subfolders are omitted by the browser's folder picker. The folder picker can also omit symbolic links.
 
 ## Reproduce the CID with Kubo
 

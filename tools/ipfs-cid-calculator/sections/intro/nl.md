@@ -4,7 +4,7 @@ Kies een lokaal bestand of een lokale map en selecteer **CID berekenen**. Kopiee
 
 ## Waarom kan hetzelfde bestand verschillende IPFS-CID’s hebben?
 
-IPFS kan een bestand in blokken verdelen en de onderlinge koppelingen met UnixFS opslaan. De root-CID hangt af van hoe die blokken worden verdeeld, gecodeerd en gerangschikt. Gebruik dezelfde chunkgrootte, instelling voor raw leaf-blokken en mapstructuur als bij de oorspronkelijke import om een CID te reproduceren. Een map-CID bevat ook de namen van de items in de map. De mapkiezer van de browser laat lege submappen weg.
+IPFS kan een bestand in blokken verdelen en de onderlinge koppelingen met UnixFS opslaan. De root-CID hangt af van hoe die blokken worden verdeeld, gecodeerd en gerangschikt. Gebruik dezelfde chunkgrootte, instelling voor raw leaf-blokken en mapstructuur als bij de oorspronkelijke import om een CID te reproduceren. Een map-CID bevat ook de namen van de items in de map. De mapkiezer van de browser laat lege submappen weg. De mapkiezer kan ook symbolische koppelingen overslaan.
 
 ## De CID reproduceren met Kubo
 

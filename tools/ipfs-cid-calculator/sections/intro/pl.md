@@ -4,7 +4,7 @@ Wybierz plik lub folder na urządzeniu, a następnie kliknij **Oblicz CID**. Sko
 
 ## Dlaczego ten sam plik może mieć różne identyfikatory CID w IPFS?
 
-IPFS może podzielić plik na bloki i zapisać powiązania między nimi w formacie UnixFS. Główny CID zależy od sposobu podziału, kodowania i ułożenia bloków. Aby odtworzyć CID, użyj tego samego rozmiaru fragmentów, ustawienia bloków liściowych i struktury folderów co przy pierwszym imporcie. Na CID folderu wpływają również nazwy plików i podfolderów. Przeglądarka pomija puste podfoldery podczas wyboru folderu.
+IPFS może podzielić plik na bloki i zapisać powiązania między nimi w formacie UnixFS. Główny CID zależy od sposobu podziału, kodowania i ułożenia bloków. Aby odtworzyć CID, użyj tego samego rozmiaru fragmentów, ustawienia bloków liściowych i struktury folderów co przy pierwszym imporcie. Na CID folderu wpływają również nazwy plików i podfolderów. Przeglądarka pomija puste podfoldery podczas wyboru folderu. Przeglądarka może też pominąć dowiązania symboliczne.
 
 ## Jak odtworzyć CID za pomocą Kubo
 

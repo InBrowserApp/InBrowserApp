@@ -89,6 +89,14 @@ it("handles cancellation and empty selections", async () => {
 it("quotes the input path and reproduces options", () => {
   expect(
     kuboCommand(
+      { name: hello.name, directory: false, files: [hello] },
+      DEFAULT_SETTINGS
+    )
+  ).toBe(
+    "ipfs add --only-hash -Q --cid-version=1 --raw-leaves=true --chunker=size-262144 -- 'hello.txt'"
+  )
+  expect(
+    kuboCommand(
       { name: "-a'b", directory: true, files: [hello] },
       { ...DEFAULT_SETTINGS, wrap: true }
     )

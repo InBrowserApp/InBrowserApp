@@ -4,7 +4,7 @@ Pilih fail atau folder pada peranti anda, kemudian pilih **Kira CID**. Salin pen
 
 ## Mengapakah fail yang sama boleh mempunyai CID IPFS yang berbeza?
 
-IPFS boleh membahagikan fail kepada blok dan menggunakan UnixFS untuk menyimpan pautan antara blok. CID akar bergantung pada cara blok dibahagikan, dikodkan dan disusun. Untuk menghasilkan semula CID, gunakan saiz bahagian, tetapan blok daun mentah dan struktur folder yang sama seperti import asal. Nama fail dan folder di dalam folder turut mempengaruhi CID folder. Pemilih folder pelayar mengabaikan subfolder yang kosong.
+IPFS boleh membahagikan fail kepada blok dan menggunakan UnixFS untuk menyimpan pautan antara blok. CID akar bergantung pada cara blok dibahagikan, dikodkan dan disusun. Untuk menghasilkan semula CID, gunakan saiz bahagian, tetapan blok daun mentah dan struktur folder yang sama seperti import asal. Nama fail dan folder di dalam folder turut mempengaruhi CID folder. Pemilih folder pelayar mengabaikan subfolder yang kosong. Pemilih folder juga boleh mengabaikan pautan simbolik.
 
 ## Hasilkan semula CID dengan Kubo
 

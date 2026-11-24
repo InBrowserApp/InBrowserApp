@@ -4,7 +4,7 @@ Wählen Sie eine lokale Datei oder einen Ordner aus und klicken Sie auf **CID be
 
 ## Warum kann dieselbe Datei unterschiedliche IPFS-CIDs haben?
 
-IPFS kann eine Datei in Blöcke aufteilen und die Verknüpfungen zwischen ihnen mit UnixFS speichern. Die Wurzel-CID hängt davon ab, wie diese Blöcke aufgeteilt, codiert und angeordnet sind. Um eine CID zu reproduzieren, verwenden Sie dieselbe Segmentgröße, dieselbe Einstellung für Blattblöcke und dieselbe Ordnerstruktur wie beim ursprünglichen Import. In die CID eines Ordners fließen auch die Namen seiner Einträge ein. Die Ordnerauswahl des Browsers lässt leere Unterordner aus.
+IPFS kann eine Datei in Blöcke aufteilen und die Verknüpfungen zwischen ihnen mit UnixFS speichern. Die Wurzel-CID hängt davon ab, wie diese Blöcke aufgeteilt, codiert und angeordnet sind. Um eine CID zu reproduzieren, verwenden Sie dieselbe Segmentgröße, dieselbe Einstellung für Blattblöcke und dieselbe Ordnerstruktur wie beim ursprünglichen Import. In die CID eines Ordners fließen auch die Namen seiner Einträge ein. Die Ordnerauswahl des Browsers lässt leere Unterordner aus. Die Ordnerauswahl kann auch symbolische Links auslassen.
 
 ## CID mit Kubo reproduzieren
 

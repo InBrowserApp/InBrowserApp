@@ -60,6 +60,8 @@ export async function calculateCid(
       cidVersion: settings.version,
       rawLeaves: settings.rawLeaves,
       chunker: fixedSize({ chunkSize: settings.chunkSize }),
+      fileImportConcurrency: 4,
+      blockWriteConcurrency: 4,
       wrapWithDirectory: settings.wrap,
     }
   )) {
@@ -89,7 +91,8 @@ export function kuboCommand(selection: Selection, settings: ImportSettings) {
     `--raw-leaves=${settings.rawLeaves}`,
     `--chunker=size-${settings.chunkSize}`,
   ]
-  if (selection.directory) args.push("--recursive", "--hidden", "--empty-dirs=false")
+  if (selection.directory)
+    args.push("--recursive", "--hidden", "--empty-dirs=false")
   if (settings.wrap) args.push("--wrap-with-directory")
   return `${args.join(" ")} -- '${selection.name.replaceAll("'", "'\"'\"'")}'`
 }

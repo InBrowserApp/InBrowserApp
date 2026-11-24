@@ -4,7 +4,7 @@ Scegli un file o una cartella locale, quindi seleziona **Calcola CID**. Copia l�
 
 ## Perché lo stesso file può avere CID IPFS diversi?
 
-IPFS può suddividere un file in blocchi e memorizzare i collegamenti tra essi con UnixFS. Il CID radice dipende dal modo in cui i blocchi vengono suddivisi, codificati e organizzati. Per riprodurre un CID, usa la stessa dimensione dei blocchi, la stessa impostazione per i blocchi foglia raw e la stessa struttura delle cartelle dell’importazione originale. Il CID di una cartella include anche i nomi degli elementi contenuti. Il selettore di cartelle del browser omette le sottocartelle vuote.
+IPFS può suddividere un file in blocchi e memorizzare i collegamenti tra essi con UnixFS. Il CID radice dipende dal modo in cui i blocchi vengono suddivisi, codificati e organizzati. Per riprodurre un CID, usa la stessa dimensione dei blocchi, la stessa impostazione per i blocchi foglia raw e la stessa struttura delle cartelle dell’importazione originale. Il CID di una cartella include anche i nomi degli elementi contenuti. Il selettore di cartelle del browser omette le sottocartelle vuote. Il selettore di cartelle può omettere anche i collegamenti simbolici.
 
 ## Riproduci il CID con Kubo
 

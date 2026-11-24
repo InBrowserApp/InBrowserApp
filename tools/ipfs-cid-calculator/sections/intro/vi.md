@@ -4,7 +4,7 @@ Chọn tệp hoặc thư mục trên thiết bị, rồi nhấn **Tính CID**. S
 
 ## Vì sao cùng một tệp có thể có nhiều CID IPFS?
 
-IPFS có thể chia một tệp thành các khối và dùng UnixFS để lưu liên kết giữa các khối. CID gốc phụ thuộc vào cách chia, mã hóa và sắp xếp chúng. Để tái tạo CID, hãy dùng cùng kích thước phần chia, thiết lập khối lá dạng thô và cấu trúc thư mục như lần nhập ban đầu. CID của thư mục còn phụ thuộc vào tên của các mục bên trong. Trình chọn thư mục của trình duyệt bỏ qua các thư mục con trống.
+IPFS có thể chia một tệp thành các khối và dùng UnixFS để lưu liên kết giữa các khối. CID gốc phụ thuộc vào cách chia, mã hóa và sắp xếp chúng. Để tái tạo CID, hãy dùng cùng kích thước phần chia, thiết lập khối lá dạng thô và cấu trúc thư mục như lần nhập ban đầu. CID của thư mục còn phụ thuộc vào tên của các mục bên trong. Trình chọn thư mục của trình duyệt bỏ qua các thư mục con trống. Trình chọn thư mục cũng có thể bỏ qua liên kết tượng trưng.
 
 ## Tái tạo CID bằng Kubo
 

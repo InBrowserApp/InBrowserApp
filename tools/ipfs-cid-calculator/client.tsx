@@ -18,7 +18,6 @@ import { cn } from "@workspace/ui/lib/utils"
 
 import {
   calculateCid,
-  compareCid,
   DEFAULT_SETTINGS,
   kuboCommand,
   type ImportSettings,
@@ -41,7 +40,6 @@ function CidCalculator({
   const [selection, setSelection] = useState<Selection | null>(null)
   const [settings, setSettings] = useState(DEFAULT_SETTINGS)
   const [result, setResult] = useState<CID | null>(null)
-  const [expected, setExpected] = useState("")
   const [error, setError] = useState("")
   const [busy, setBusy] = useState(false)
   const [dragging, setDragging] = useState(false)
@@ -107,10 +105,11 @@ function CidCalculator({
     setError("")
   }
 
-  const comparison =
-    result && expected.trim() ? compareCid(expected, result) : null
-  const format = new Intl.NumberFormat(language)
-  const SelectionIcon = selection?.directory ? FolderInput : File
+  const SelectionIcon = selection
+    ? selection.directory
+      ? FolderInput
+      : File
+    : Upload
 
   return (
     <div className="grid min-w-0 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
@@ -139,32 +138,24 @@ function CidCalculator({
             }}
             onDrop={onDrop}
           >
-            {selection ? (
-              <>
-                <SelectionIcon
-                  aria-hidden="true"
-                  className="size-6 text-muted-foreground"
-                />
-                <p
-                  dir="auto"
-                  className="max-w-full text-sm font-medium wrap-anywhere"
-                >
-                  {selection.name}
-                </p>
-                {selection.directory && (
-                  <p className="text-xs text-muted-foreground">
-                    {messages.files} · {format.format(selection.files.length)}
-                  </p>
-                )}
-              </>
-            ) : (
-              <>
-                <Upload
-                  aria-hidden="true"
-                  className="size-6 text-muted-foreground"
-                />
-                <p className="text-sm text-muted-foreground">{messages.drop}</p>
-              </>
+            <SelectionIcon
+              aria-hidden="true"
+              className="size-6 text-muted-foreground"
+            />
+            <p
+              dir="auto"
+              className={cn(
+                "max-w-full text-sm wrap-anywhere",
+                selection ? "font-medium" : "text-muted-foreground"
+              )}
+            >
+              {selection?.name ?? messages.drop}
+            </p>
+            {selection?.directory && (
+              <p className="text-xs text-muted-foreground">
+                {messages.files} ·{" "}
+                {selection.files.length.toLocaleString(language)}
+              </p>
             )}
             <div className="flex flex-wrap justify-center gap-2">
               <Button
@@ -245,12 +236,9 @@ function CidCalculator({
       </ToolPanelCard>
       <ResultPanel
         messages={messages}
-        result={result?.toString()}
-        command={selection ? kuboCommand(selection, settings) : ""}
-        expected={expected}
-        comparison={comparison}
+        result={result}
+        command={result && selection ? kuboCommand(selection, settings) : ""}
         busy={busy}
-        setExpected={setExpected}
       />
     </div>
   )

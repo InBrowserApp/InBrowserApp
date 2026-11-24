@@ -4,7 +4,7 @@ Pilih file atau folder dari perangkat, lalu pilih **Hitung CID**. Salin pengenal
 
 ## Mengapa file yang sama bisa memiliki CID IPFS yang berbeda?
 
-IPFS dapat membagi file menjadi beberapa blok dan menggunakan UnixFS untuk menyimpan tautan antarblok. CID akar bergantung pada cara blok dibagi, dikodekan, dan disusun. Untuk mendapatkan CID yang sama, gunakan ukuran potongan, pengaturan blok daun mentah, dan struktur folder yang sama seperti pada impor awal. CID folder juga dipengaruhi oleh nama file dan folder di dalamnya. Pemilih folder di browser melewati subfolder kosong.
+IPFS dapat membagi file menjadi beberapa blok dan menggunakan UnixFS untuk menyimpan tautan antarblok. CID akar bergantung pada cara blok dibagi, dikodekan, dan disusun. Untuk mendapatkan CID yang sama, gunakan ukuran potongan, pengaturan blok daun mentah, dan struktur folder yang sama seperti pada impor awal. CID folder juga dipengaruhi oleh nama file dan folder di dalamnya. Pemilih folder di browser melewati subfolder kosong. Pemilih folder juga dapat melewati tautan simbolis.
 
 ## Hitung ulang CID dengan Kubo
 

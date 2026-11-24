@@ -1,4 +1,5 @@
-import { useId } from "react"
+import { useId, useState } from "react"
+import type { CID } from "multiformats/cid"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
@@ -8,26 +9,25 @@ import {
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { compareCid } from "./core/cid"
 import type EnglishMessages from "./messages/en.json"
 
 export function ResultPanel({
   messages,
   result,
   command,
-  expected,
-  comparison,
   busy,
-  setExpected,
 }: {
   messages: typeof EnglishMessages
-  result: string | undefined
+  result: CID | null
   command: string
-  expected: string
-  comparison: "match" | "different" | "invalidCid" | null
   busy: boolean
-  setExpected: (value: string) => void
 }) {
   const id = useId()
+  const [expected, setExpected] = useState("")
+  const cid = result?.toString()
+  const comparison =
+    result && expected.trim() ? compareCid(expected, result) : null
   const copy = { copyLabel: messages.copy, copiedLabel: messages.copied }
   return (
     <ToolPanelCard>
@@ -36,17 +36,17 @@ export function ResultPanel({
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <div aria-live="polite" className="min-w-0">
-          {result ? (
+          {cid ? (
             <div className="flex min-w-0 flex-wrap items-start gap-2">
               <code
                 dir="ltr"
                 className="min-w-0 flex-1 rounded-lg bg-muted p-2.5 text-sm wrap-anywhere"
               >
-                {result}
+                {cid}
               </code>
               <ToolCopyButton
-                value={result}
-                ariaLabel={messages.result}
+                value={cid}
+                ariaLabel={`${messages.copy}: ${messages.result}`}
                 {...copy}
               />
             </div>
@@ -75,13 +75,13 @@ export function ResultPanel({
             </p>
           )}
         </Field>
-        {result && (
+        {command && (
           <div className="grid gap-2 border-t pt-3">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p className="text-sm font-medium">{messages.command}</p>
               <ToolCopyButton
                 value={command}
-                ariaLabel={messages.command}
+                ariaLabel={`${messages.copy}: ${messages.command}`}
                 {...copy}
               />
             </div>

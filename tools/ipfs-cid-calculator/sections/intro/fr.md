@@ -4,7 +4,7 @@ Choisissez un fichier ou un dossier local, puis sélectionnez **Calculer le CID*
 
 ## Pourquoi un même fichier peut-il avoir plusieurs CID IPFS ?
 
-IPFS peut scinder un fichier en blocs et enregistrer leurs liens avec UnixFS. Le CID racine dépend du découpage, de l’encodage et de l’agencement de ces blocs. Pour reproduire un CID, utilisez la même taille de segment, le même réglage des blocs feuilles et la même structure de dossiers que lors de l’importation d’origine. Le CID d’un dossier tient aussi compte des noms de ses entrées. Le sélecteur de dossiers du navigateur omet les sous-dossiers vides.
+IPFS peut scinder un fichier en blocs et enregistrer leurs liens avec UnixFS. Le CID racine dépend du découpage, de l’encodage et de l’agencement de ces blocs. Pour reproduire un CID, utilisez la même taille de segment, le même réglage des blocs feuilles et la même structure de dossiers que lors de l’importation d’origine. Le CID d’un dossier tient aussi compte des noms de ses entrées. Le sélecteur de dossiers du navigateur omet les sous-dossiers vides. Le sélecteur de dossiers peut aussi omettre les liens symboliques.
 
 ## Reproduire le CID avec Kubo
 

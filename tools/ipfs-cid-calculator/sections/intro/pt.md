@@ -4,7 +4,7 @@ Escolha um ficheiro ou uma pasta no seu dispositivo e selecione **Calcular CID**
 
 ## Por que razão pode o mesmo ficheiro ter diferentes CID do IPFS?
 
-O IPFS pode dividir um ficheiro em blocos e guardar as ligações entre eles com o UnixFS. O CID de raiz depende de como esses blocos são divididos, codificados e organizados. Para reproduzir um CID, utilize o mesmo tamanho de segmento, a mesma definição de blocos folha e a mesma estrutura de pastas da importação original. O CID de uma pasta também inclui os nomes das suas entradas. O seletor de pastas do navegador omite as subpastas vazias.
+O IPFS pode dividir um ficheiro em blocos e guardar as ligações entre eles com o UnixFS. O CID de raiz depende de como esses blocos são divididos, codificados e organizados. Para reproduzir um CID, utilize o mesmo tamanho de segmento, a mesma definição de blocos folha e a mesma estrutura de pastas da importação original. O CID de uma pasta também inclui os nomes das suas entradas. O seletor de pastas do navegador omite as subpastas vazias. O seletor de pastas também pode omitir ligações simbólicas.
 
 ## Reproduzir o CID com o Kubo
 

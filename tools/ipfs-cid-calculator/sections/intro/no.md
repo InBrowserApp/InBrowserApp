@@ -4,7 +4,7 @@ Velg en lokal fil eller mappe, og velg deretter **Beregn CID**. Kopier innholdsi
 
 ## Hvorfor kan samme fil ha ulike IPFS-CID-er?
 
-IPFS kan dele en fil i blokker og lagre lenker mellom dem med UnixFS. Rot-CID-en avhenger av hvordan blokkene deles opp, kodes og organiseres. For å gjenskape en CID må du bruke samme chunkstørrelse, innstilling for rå bladblokker og mappestruktur som ved den opprinnelige importen. En mappes CID inneholder også navnene på elementene i mappen. Nettleserens mappevelger utelater tomme undermapper.
+IPFS kan dele en fil i blokker og lagre lenker mellom dem med UnixFS. Rot-CID-en avhenger av hvordan blokkene deles opp, kodes og organiseres. For å gjenskape en CID må du bruke samme chunkstørrelse, innstilling for rå bladblokker og mappestruktur som ved den opprinnelige importen. En mappes CID inneholder også navnene på elementene i mappen. Nettleserens mappevelger utelater tomme undermapper. Mappevelgeren kan også utelate symbolske lenker.
 
 ## Gjenskap CID-en med Kubo
 

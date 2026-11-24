@@ -4,7 +4,7 @@ Elige un archivo o carpeta de tu dispositivo y selecciona **Calcular CID**. Copi
 
 ## ¿Por qué puede tener distintos CID de IPFS el mismo archivo?
 
-IPFS puede dividir un archivo en bloques y guardar los enlaces entre ellos mediante UnixFS. El CID raíz depende de cómo se dividan, codifiquen y organicen esos bloques. Para reproducir un CID, usa el mismo tamaño de fragmento, la misma opción para los bloques hoja y la misma estructura de carpetas que en la importación original. El CID de una carpeta también incorpora los nombres de sus entradas. El selector de carpetas del navegador omite las subcarpetas vacías.
+IPFS puede dividir un archivo en bloques y guardar los enlaces entre ellos mediante UnixFS. El CID raíz depende de cómo se dividan, codifiquen y organicen esos bloques. Para reproducir un CID, usa el mismo tamaño de fragmento, la misma opción para los bloques hoja y la misma estructura de carpetas que en la importación original. El CID de una carpeta también incorpora los nombres de sus entradas. El selector de carpetas del navegador omite las subcarpetas vacías. El selector de carpetas también puede omitir los enlaces simbólicos.
 
 ## Reproduce el CID con Kubo
 

@@ -4,7 +4,7 @@ Välj en lokal fil eller mapp och välj sedan **Beräkna CID**. Kopiera innehål
 
 ## Varför kan samma fil ha olika IPFS-CID:er?
 
-IPFS kan dela upp en fil i block och lagra länkar mellan dem med UnixFS. Rot-CID:n beror på hur blocken delas upp, kodas och ordnas. För att återskapa en CID använder du samma chunkstorlek, inställning för råa lövblock och mappstruktur som vid den ursprungliga importen. En mapps CID innehåller även namnen på dess poster. Webbläsarens mappväljare utelämnar tomma undermappar.
+IPFS kan dela upp en fil i block och lagra länkar mellan dem med UnixFS. Rot-CID:n beror på hur blocken delas upp, kodas och ordnas. För att återskapa en CID använder du samma chunkstorlek, inställning för råa lövblock och mappstruktur som vid den ursprungliga importen. En mapps CID innehåller även namnen på dess poster. Webbläsarens mappväljare utelämnar tomma undermappar. Mappväljaren kan även utelämna symboliska länkar.
 
 ## Återskapa CID:n med Kubo
 

@@ -4,7 +4,7 @@ Cihazınızdan bir dosya veya klasör seçip **CID hesapla** düğmesine basın.
 
 ## Aynı dosyanın IPFS CID değerleri neden farklı olabilir?
 
-IPFS, dosyayı bloklara ayırabilir ve bloklar arasındaki bağlantıları UnixFS ile saklayabilir. Kök CID, blokların nasıl bölündüğüne, kodlandığına ve düzenlendiğine bağlıdır. Aynı CID değerini elde etmek için ilk içe aktarmadaki parça boyutunu, ham yaprak bloğu ayarını ve klasör yapısını kullanın. Klasör CID değerini dosya ve alt klasör adları da etkiler. Tarayıcının klasör seçicisi boş alt klasörleri atlar.
+IPFS, dosyayı bloklara ayırabilir ve bloklar arasındaki bağlantıları UnixFS ile saklayabilir. Kök CID, blokların nasıl bölündüğüne, kodlandığına ve düzenlendiğine bağlıdır. Aynı CID değerini elde etmek için ilk içe aktarmadaki parça boyutunu, ham yaprak bloğu ayarını ve klasör yapısını kullanın. Klasör CID değerini dosya ve alt klasör adları da etkiler. Tarayıcının klasör seçicisi boş alt klasörleri atlar. Klasör seçici sembolik bağlantıları da atlayabilir.
 
 ## Kubo ile aynı CID nasıl elde edilir?
 
