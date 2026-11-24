@@ -73,6 +73,7 @@ export {
   Keyboard,
   Layers2,
   LayoutGrid,
+  Layers,
   Link2,
   LoaderCircle,
   Lock,

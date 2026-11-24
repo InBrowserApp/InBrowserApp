@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML 검증기",
+  "description": "Kubernetes YAML 매니페스트를 온라인으로 검증하세요. 내장 스키마로 여러 리소스를 한 번에 확인하고 줄과 열 번호로 잘못된 필드 위치를 찾을 수 있습니다."
+}

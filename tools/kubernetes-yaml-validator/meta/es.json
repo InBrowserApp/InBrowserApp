@@ -1,0 +1,4 @@
+{
+  "name": "Validador de YAML de Kubernetes",
+  "description": "Valida manifiestos YAML de Kubernetes en línea. Comprueba varios recursos con esquemas integrados y salta a los campos no válidos por línea y columna."
+}

@@ -17206,6 +17206,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "kubernetes-yaml-validator",
+    language: "ar",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "de",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "en",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "es",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "fr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "he",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "hi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "id",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "it",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ja",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ko",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ms",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "nl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "no",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pt",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ru",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "sv",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "th",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "tr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "vi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "latex-previewer",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML-validator",
+  "description": "Valideer Kubernetes-manifesten in YAML online. Controleer meerdere resources met ingebouwde schema’s en ga via het regel- en kolomnummer naar ongeldige velden."
+}

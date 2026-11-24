@@ -938,6 +938,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "מאמת Kubernetes YAML",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "תצוגה מקדימה של LaTeX",
     slug: "latex-previewer",

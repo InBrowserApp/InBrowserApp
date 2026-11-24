@@ -194,6 +194,7 @@
     "@tool/keyboard-tester": "workspace:*",
     "@tool/kml-geojson-converter": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
+    "@tool/kubernetes-yaml-validator": "workspace:*",
     "@tool/latex-previewer": "workspace:*",
     "@tool/legacy-motorola-system-key-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
