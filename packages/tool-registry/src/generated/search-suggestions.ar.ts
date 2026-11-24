@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "مولّد ترجمة الفيديو",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "تحويل فيديو إلى GIF",
     slug: "video-to-gif",
   },

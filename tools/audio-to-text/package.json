@@ -11,6 +11,7 @@
     "@huggingface/transformers": "catalog:",
     "@sherpaw/asr": "catalog:",
     "@sherpaw/vad": "catalog:",
+    "@workspace/local-speech": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "onnxruntime-web": "catalog:"

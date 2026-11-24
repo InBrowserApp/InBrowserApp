@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "動画字幕生成ツール",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "動画を GIF に変換",
     slug: "video-to-gif",
   },

@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Генератор субтитров для видео",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Конвертер видео в GIF",
     slug: "video-to-gif",
   },

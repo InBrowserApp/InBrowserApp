@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Skapa undertexter till video",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Video till GIF",
     slug: "video-to-gif",
   },

@@ -371,6 +371,7 @@
     "@tool/vcard-generator": "workspace:*",
     "@tool/video-audio-extractor": "workspace:*",
     "@tool/video-frame-extractor": "workspace:*",
+    "@tool/video-subtitle-generator": "workspace:*",
     "@tool/video-to-gif": "workspace:*",
     "@tool/video-trimmer": "workspace:*",
     "@tool/vin-validator": "workspace:*",

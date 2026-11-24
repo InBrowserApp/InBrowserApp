@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Generatore di sottotitoli per video",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Converti video in GIF",
     slug: "video-to-gif",
   },

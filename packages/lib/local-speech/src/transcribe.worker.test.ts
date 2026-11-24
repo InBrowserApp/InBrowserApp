@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
-import { SAMPLE_RATE } from "../worker-messages"
+import { SAMPLE_RATE } from "./protocol"
 
 const { pipeline, processor, forward, transcribe, decodeAsr } = vi.hoisted(
   () => ({
