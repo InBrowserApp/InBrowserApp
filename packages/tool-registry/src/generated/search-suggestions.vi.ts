@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Xóa siêu dữ liệu PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "Trình thêm số trang PDF",
     slug: "pdf-page-number-adder",
   },

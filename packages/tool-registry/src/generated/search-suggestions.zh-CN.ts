@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "删除 PDF 元数据",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF 页码添加器",
     slug: "pdf-page-number-adder",
   },

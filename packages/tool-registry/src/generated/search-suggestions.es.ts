@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Eliminar metadatos de un PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "Añadir números de página a PDF",
     slug: "pdf-page-number-adder",
   },

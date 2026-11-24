@@ -251,6 +251,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-compressor": () => import("@tool/pdf-compressor/page"),
   "pdf-info-viewer": () => import("@tool/pdf-info-viewer/page"),
   "pdf-merger": () => import("@tool/pdf-merger/page"),
+  "pdf-metadata-remover": () => import("@tool/pdf-metadata-remover/page"),
   "pdf-page-number-adder": () => import("@tool/pdf-page-number-adder/page"),
   "pdf-page-organizer": () => import("@tool/pdf-page-organizer/page"),
   "pdf-splitter": () => import("@tool/pdf-splitter/page"),

@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Pilih fail PDF",
+  "dropPdf": "atau lepaskan fail PDF di sini",
+  "changePdf": "Pilih fail PDF lain",
+  "privacy": "Fail diproses dalam pelayar anda tanpa dimuat naik.",
+  "removeMetadata": "Buang metadata",
+  "removingMetadata": "Sedang membuang metadata…",
+  "success": "Fail PDF anda sedia untuk dimuat turun.",
+  "downloadPdf": "Muat turun PDF",
+  "oneFile": "Pilih satu fail PDF pada satu masa.",
+  "encryptedPdf": "Fail PDF ini disulitkan. Buka dan simpan salinan tanpa penyulitan, kemudian cuba lagi.",
+  "invalidPdf": "Fail ini tidak dapat diproses. Pilih fail PDF yang boleh dibuka."
+}

@@ -1,0 +1,13 @@
+{
+  "choosePdf": "选择 PDF",
+  "dropPdf": "或将 PDF 拖放到此处",
+  "changePdf": "选择其他 PDF",
+  "privacy": "在浏览器中处理，不会上传文件。",
+  "removeMetadata": "删除元数据",
+  "removingMetadata": "正在删除元数据…",
+  "success": "PDF 已准备好下载。",
+  "downloadPdf": "下载 PDF",
+  "oneFile": "每次请选择一个 PDF。",
+  "encryptedPdf": "此 PDF 已加密。请打开并保存未加密的副本后重试。",
+  "invalidPdf": "无法处理此文件。请选择可正常读取的 PDF。"
+}

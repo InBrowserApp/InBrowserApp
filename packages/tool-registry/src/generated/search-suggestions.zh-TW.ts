@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "移除 PDF 中繼資料",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF 頁碼新增工具",
     slug: "pdf-page-number-adder",
   },

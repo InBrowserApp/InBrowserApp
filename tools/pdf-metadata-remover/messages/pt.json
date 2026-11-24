@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Escolher um PDF",
+  "dropPdf": "ou solte um PDF aqui",
+  "changePdf": "Escolher outro PDF",
+  "privacy": "O PDF é processado no seu navegador, sem envio do arquivo.",
+  "removeMetadata": "Remover metadados",
+  "removingMetadata": "Removendo metadados…",
+  "success": "Seu PDF está pronto para baixar.",
+  "downloadPdf": "Baixar PDF",
+  "oneFile": "Escolha um PDF por vez.",
+  "encryptedPdf": "Este PDF está criptografado. Abra o arquivo, salve uma cópia desbloqueada e tente novamente.",
+  "invalidPdf": "Não foi possível processar este arquivo. Escolha um PDF que você consiga abrir."
+}

@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF का मेटाडेटा हटाएँ",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF पेज नंबर ऐडर",
     slug: "pdf-page-number-adder",
   },

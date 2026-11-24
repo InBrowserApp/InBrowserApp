@@ -34,6 +34,7 @@ export {
   Cpu,
   Copy,
   Download,
+  Eraser,
   Eye,
   EyeOff,
   Flag,

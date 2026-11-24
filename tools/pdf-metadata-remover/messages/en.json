@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Choose PDF",
+  "dropPdf": "or drop a PDF here",
+  "changePdf": "Choose another PDF",
+  "privacy": "Processed in your browser. No file upload.",
+  "removeMetadata": "Remove metadata",
+  "removingMetadata": "Removing metadata…",
+  "success": "Your PDF is ready to download.",
+  "downloadPdf": "Download PDF",
+  "oneFile": "Choose one PDF at a time.",
+  "encryptedPdf": "This PDF is encrypted. Open and save an unlocked copy, then try again.",
+  "invalidPdf": "Could not process this file. Choose a readable PDF."
+}

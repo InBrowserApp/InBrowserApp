@@ -1019,6 +1019,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "הסרת מטא-נתונים מקובץ PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "מוסיף מספרי עמודים ל-PDF",
     slug: "pdf-page-number-adder",
   },
