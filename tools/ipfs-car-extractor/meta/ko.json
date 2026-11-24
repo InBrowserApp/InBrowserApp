@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR 파일 추출 도구",
+  "description": "브라우저에서 IPFS 또는 Filecoin CAR 파일을 여세요. 보관 파일을 업로드하지 않고 UnixFS 폴더를 살펴보고, 개별 파일을 다운로드하거나 폴더를 ZIP으로 추출할 수 있습니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-CAR-Dateien extrahieren",
+  "description": "Öffnen Sie eine CAR-Datei von IPFS oder Filecoin im Browser. Durchsuchen Sie UnixFS-Ordner, laden Sie einzelne Dateien herunter oder exportieren Sie einen Ordner als ZIP. Das Archiv bleibt auf Ihrem Gerät."
+}

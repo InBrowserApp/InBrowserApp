@@ -1,0 +1,21 @@
+{
+  "archive": "CAR arşivi",
+  "choose": "CAR dosyası seç",
+  "drop": "IPFS veya Filecoin CAR dosyasını buraya bırakın",
+  "reading": "Arşiv okunuyor…",
+  "roots": "Kök CID",
+  "rootsMissing": "Bu arşivde kök CID bulunmuyor.",
+  "contents": "İçindekiler",
+  "folder": "Klasör",
+  "back": "Geri",
+  "download": "Dosyayı indir",
+  "zip": "ZIP indir",
+  "preparing": "İndirme hazırlanıyor…",
+  "cancel": "İptal",
+  "empty": "Bu klasör boş.",
+  "missing": "Arşivde gerekli bir blok eksik.",
+  "corrupt": "Bir blok kendi CID değeriyle eşleşmedi.",
+  "unsupported": "Bu öğe UnixFS dosyası veya klasörü olarak çıkarılamıyor.",
+  "invalid": "Bu IPFS CAR arşivi okunamadı.",
+  "failed": "İndirme tamamlanamadı. Tekrar deneyin veya daha küçük bir klasör seçin."
+}

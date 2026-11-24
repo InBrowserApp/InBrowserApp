@@ -1,0 +1,21 @@
+{
+  "archive": "CAR archive",
+  "choose": "Choose CAR file",
+  "drop": "Drop an IPFS or Filecoin CAR file here",
+  "reading": "Reading archive…",
+  "roots": "Root CID",
+  "rootsMissing": "This archive has no root CID.",
+  "contents": "Contents",
+  "folder": "Folder",
+  "back": "Back",
+  "download": "Download file",
+  "zip": "Download ZIP",
+  "preparing": "Preparing download…",
+  "cancel": "Cancel",
+  "empty": "This folder is empty.",
+  "missing": "A required block is missing from the archive.",
+  "corrupt": "A block did not match its CID.",
+  "unsupported": "This entry cannot be extracted as a UnixFS file or folder.",
+  "invalid": "Could not read this IPFS CAR archive.",
+  "failed": "Could not complete the download. Try again or select a smaller folder."
+}

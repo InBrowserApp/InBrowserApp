@@ -1,0 +1,21 @@
+{
+  "archive": "CAR 归档",
+  "choose": "选择 CAR 文件",
+  "drop": "将 IPFS 或 Filecoin 的 CAR 文件拖到此处",
+  "reading": "正在读取归档…",
+  "roots": "根 CID",
+  "rootsMissing": "此归档没有根 CID。",
+  "contents": "内容",
+  "folder": "文件夹",
+  "back": "返回",
+  "download": "下载文件",
+  "zip": "下载 ZIP",
+  "preparing": "正在准备下载…",
+  "cancel": "取消",
+  "empty": "此文件夹为空。",
+  "missing": "归档中缺少所需的块。",
+  "corrupt": "有一个块与其 CID 不匹配。",
+  "unsupported": "此条目无法作为 UnixFS 文件或文件夹提取。",
+  "invalid": "无法读取此 IPFS CAR 归档。",
+  "failed": "无法完成下载。请重试或选择较小的文件夹。"
+}

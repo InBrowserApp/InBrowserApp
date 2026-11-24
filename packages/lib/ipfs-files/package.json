@@ -1,0 +1,14 @@
+{
+  "name": "@workspace/ipfs-files",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@zip.js/zip.js": "catalog:",
+    "ipfs-unixfs-exporter": "catalog:",
+    "multiformats": "catalog:"
+  }
+}

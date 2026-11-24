@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ trích xuất CAR IPFS",
+  "description": "Mở tệp CAR của IPFS hoặc Filecoin ngay trong trình duyệt. Duyệt thư mục UnixFS, tải từng tệp xuống hoặc xuất cả thư mục thành ZIP mà không cần tải tệp CAR lên."
+}

@@ -1,0 +1,21 @@
+{
+  "archive": "Archive CAR",
+  "choose": "Choisir un fichier CAR",
+  "drop": "Déposez ici un fichier CAR d’IPFS ou de Filecoin",
+  "reading": "Lecture de l’archive…",
+  "roots": "CID racine",
+  "rootsMissing": "Cette archive ne contient aucun CID racine.",
+  "contents": "Contenu",
+  "folder": "Dossier",
+  "back": "Retour",
+  "download": "Télécharger le fichier",
+  "zip": "Télécharger le ZIP",
+  "preparing": "Préparation du téléchargement…",
+  "cancel": "Annuler",
+  "empty": "Ce dossier est vide.",
+  "missing": "Il manque un bloc requis dans l’archive.",
+  "corrupt": "Un bloc ne correspond pas à son CID.",
+  "unsupported": "Cette entrée ne peut pas être extraite comme fichier ou dossier UnixFS.",
+  "invalid": "Impossible de lire cette archive CAR IPFS.",
+  "failed": "Impossible de terminer le téléchargement. Réessayez ou choisissez un dossier plus petit."
+}

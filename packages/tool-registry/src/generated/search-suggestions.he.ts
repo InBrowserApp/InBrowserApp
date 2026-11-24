@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "חילוץ תוכן מקובצי CAR של IPFS",
+    slug: "ipfs-car-extractor",
+  },
+  {
+    category: "ipfs",
     name: "מחשבון CID ל-IPFS",
     slug: "ipfs-cid-calculator",
   },

@@ -1,0 +1,21 @@
+{
+  "archive": "Arsip CAR",
+  "choose": "Pilih file CAR",
+  "drop": "Seret dan lepas file CAR dari IPFS atau Filecoin di sini",
+  "reading": "Membaca arsip…",
+  "roots": "CID akar",
+  "rootsMissing": "Arsip ini tidak memiliki CID akar.",
+  "contents": "Isi arsip",
+  "folder": "Folder",
+  "back": "Kembali",
+  "download": "Unduh file",
+  "zip": "Unduh ZIP",
+  "preparing": "Menyiapkan unduhan…",
+  "cancel": "Batal",
+  "empty": "Folder ini kosong.",
+  "missing": "Arsip tidak memiliki salah satu blok yang diperlukan.",
+  "corrupt": "Ada blok yang tidak cocok dengan CID-nya.",
+  "unsupported": "Entri ini tidak dapat diekstrak sebagai file atau folder UnixFS.",
+  "invalid": "Arsip CAR IPFS ini tidak dapat dibaca.",
+  "failed": "Unduhan tidak selesai. Coba lagi atau pilih folder yang lebih kecil."
+}

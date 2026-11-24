@@ -1,0 +1,21 @@
+{
+  "archive": "CAR-arkiv",
+  "choose": "Velg CAR-fil",
+  "drop": "Slipp en IPFS- eller Filecoin-CAR-fil her",
+  "reading": "Leser arkivet…",
+  "roots": "Rot-CID",
+  "rootsMissing": "Dette arkivet har ingen rot-CID.",
+  "contents": "Innhold",
+  "folder": "Mappe",
+  "back": "Tilbake",
+  "download": "Last ned fil",
+  "zip": "Last ned ZIP",
+  "preparing": "Forbereder nedlasting…",
+  "cancel": "Avbryt",
+  "empty": "Denne mappen er tom.",
+  "missing": "En nødvendig blokk mangler i arkivet.",
+  "corrupt": "En blokk samsvarte ikke med CID-en sin.",
+  "unsupported": "Elementet kan ikke pakkes ut som en UnixFS-fil eller -mappe.",
+  "invalid": "Kunne ikke lese dette IPFS CAR-arkivet.",
+  "failed": "Kunne ikke fullføre nedlastingen. Prøv igjen eller velg en mindre mappe."
+}

@@ -22332,6 +22332,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipfs-car-extractor",
+    category: "ipfs",
+    icon: "archive",
+    tags: ["ipfs", "filecoin", "car", "unixfs", "archive", "extract", "zip"],
+    locales: {
+      ar: {
+        name: "مستخرج أرشيفات CAR لـ IPFS",
+        description:
+          "افتح ملف CAR من IPFS أو Filecoin في متصفحك. تصفّح مجلدات UnixFS، ونزّل ملفات منفردة أو صدّر مجلدًا بصيغة ZIP دون رفع الأرشيف.",
+      },
+      de: {
+        name: "IPFS-CAR-Dateien extrahieren",
+        description:
+          "Öffnen Sie eine CAR-Datei von IPFS oder Filecoin im Browser. Durchsuchen Sie UnixFS-Ordner, laden Sie einzelne Dateien herunter oder exportieren Sie einen Ordner als ZIP. Das Archiv bleibt auf Ihrem Gerät.",
+      },
+      en: {
+        name: "IPFS CAR Extractor",
+        description:
+          "Open an IPFS or Filecoin CAR file in your browser. Browse UnixFS folders, download individual files, or extract a folder as ZIP without uploading the archive.",
+      },
+      es: {
+        name: "Extractor de archivos CAR de IPFS",
+        description:
+          "Abre un archivo CAR de IPFS o Filecoin en tu navegador. Explora carpetas de UnixFS, descarga archivos individuales o extrae una carpeta como ZIP sin subir el archivo CAR.",
+      },
+      fr: {
+        name: "Extracteur de fichiers CAR IPFS",
+        description:
+          "Ouvrez un fichier CAR d’IPFS ou de Filecoin dans votre navigateur. Parcourez les dossiers UnixFS, téléchargez des fichiers individuels ou exportez un dossier en ZIP sans envoyer l’archive.",
+      },
+      he: {
+        name: "חילוץ תוכן מקובצי CAR של IPFS",
+        description:
+          "פתחו בדפדפן קובץ CAR של IPFS או Filecoin. עיינו בתיקיות UnixFS, הורידו קבצים בודדים או ייצאו תיקייה כ-ZIP בלי להעלות את הארכיון.",
+      },
+      hi: {
+        name: "IPFS CAR एक्सट्रैक्टर",
+        description:
+          "अपने ब्राउज़र में IPFS या Filecoin की CAR फ़ाइल खोलें। आर्काइव अपलोड किए बिना UnixFS फ़ोल्डर देखें, अलग-अलग फ़ाइलें डाउनलोड करें या फ़ोल्डर को ZIP में सेव करें।",
+      },
+      id: {
+        name: "Pengekstrak CAR IPFS",
+        description:
+          "Buka file CAR dari IPFS atau Filecoin di browser. Jelajahi folder UnixFS, unduh file satu per satu, atau ekspor folder sebagai ZIP tanpa mengunggah arsip.",
+      },
+      it: {
+        name: "Estrattore CAR IPFS",
+        description:
+          "Apri un file CAR di IPFS o Filecoin nel browser. Esplora le cartelle UnixFS, scarica singoli file o estrai una cartella come ZIP senza caricare l’archivio.",
+      },
+      ja: {
+        name: "IPFS CAR ファイル展開ツール",
+        description:
+          "IPFS や Filecoin の CAR ファイルをブラウザで開きます。アーカイブをアップロードせずに UnixFS フォルダーを参照し、個別のファイルやフォルダーの ZIP をダウンロードできます。",
+      },
+      ko: {
+        name: "IPFS CAR 파일 추출 도구",
+        description:
+          "브라우저에서 IPFS 또는 Filecoin CAR 파일을 여세요. 보관 파일을 업로드하지 않고 UnixFS 폴더를 살펴보고, 개별 파일을 다운로드하거나 폴더를 ZIP으로 추출할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak CAR IPFS",
+        description:
+          "Buka fail CAR IPFS atau Filecoin dalam pelayar anda. Semak imbas folder UnixFS, muat turun fail satu demi satu atau eksport folder sebagai ZIP tanpa memuat naik arkib.",
+      },
+      nl: {
+        name: "IPFS CAR-extractor",
+        description:
+          "Open een IPFS- of Filecoin-CAR-bestand in je browser. Blader door UnixFS-mappen, download afzonderlijke bestanden of pak een map uit als ZIP zonder het archief te uploaden.",
+      },
+      no: {
+        name: "IPFS CAR-utpakker",
+        description:
+          "Åpne en IPFS- eller Filecoin-CAR-fil i nettleseren. Bla i UnixFS-mapper, last ned enkeltfiler eller pakk ut en mappe som ZIP uten å laste opp arkivet.",
+      },
+      pl: {
+        name: "Rozpakowywanie archiwów CAR IPFS",
+        description:
+          "Otwórz plik CAR z IPFS lub Filecoin w przeglądarce. Przeglądaj foldery UnixFS, pobieraj pojedyncze pliki lub zapisz folder jako ZIP bez przesyłania archiwum.",
+      },
+      pt: {
+        name: "Extrator de ficheiros CAR do IPFS",
+        description:
+          "Abra um ficheiro CAR do IPFS ou do Filecoin no seu navegador. Explore pastas UnixFS, descarregue ficheiros individuais ou extraia uma pasta em ZIP sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Распаковка CAR-архивов IPFS",
+        description:
+          "Откройте CAR-файл IPFS или Filecoin прямо в браузере. Просматривайте папки UnixFS, скачивайте отдельные файлы или сохраняйте папку в ZIP без загрузки архива на сервер.",
+      },
+      sv: {
+        name: "IPFS CAR-extraherare",
+        description:
+          "Öppna en IPFS- eller Filecoin-CAR-fil i webbläsaren. Bläddra i UnixFS-mappar, ladda ner enskilda filer eller extrahera en mapp som ZIP utan att ladda upp arkivet.",
+      },
+      th: {
+        name: "เครื่องมือดึงไฟล์จาก CAR ของ IPFS",
+        description:
+          "เปิดไฟล์ CAR ของ IPFS หรือ Filecoin ในเบราว์เซอร์ เลือกดูโฟลเดอร์ UnixFS ดาวน์โหลดทีละไฟล์ หรือบันทึกทั้งโฟลเดอร์เป็น ZIP โดยไม่ต้องอัปโหลดไฟล์ CAR",
+      },
+      tr: {
+        name: "IPFS CAR Arşivi Açma Aracı",
+        description:
+          "IPFS veya Filecoin CAR dosyalarını tarayıcınızda açın. Arşivi yüklemeden UnixFS klasörlerine göz atın, dosyaları tek tek indirin veya klasörü ZIP olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Công cụ trích xuất CAR IPFS",
+        description:
+          "Mở tệp CAR của IPFS hoặc Filecoin ngay trong trình duyệt. Duyệt thư mục UnixFS, tải từng tệp xuống hoặc xuất cả thư mục thành ZIP mà không cần tải tệp CAR lên.",
+      },
+      "zh-CN": {
+        name: "IPFS CAR 文件提取工具",
+        description:
+          "在浏览器中打开 IPFS 或 Filecoin 的 CAR 文件。无需上传归档，即可浏览 UnixFS 文件夹、下载单个文件，或将文件夹提取为 ZIP。",
+      },
+      "zh-TW": {
+        name: "IPFS CAR 檔案擷取工具",
+        description:
+          "在瀏覽器中開啟 IPFS 或 Filecoin 的 CAR 檔案。無須上傳封存檔，即可瀏覽 UnixFS 資料夾、下載個別檔案，或將資料夾匯出為 ZIP。",
+      },
+    },
+  },
+  {
     slug: "ipfs-cid-calculator",
     category: "ipfs",
     icon: "hash",

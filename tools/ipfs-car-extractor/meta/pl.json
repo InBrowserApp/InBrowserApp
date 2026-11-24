@@ -1,0 +1,4 @@
+{
+  "name": "Rozpakowywanie archiwów CAR IPFS",
+  "description": "Otwórz plik CAR z IPFS lub Filecoin w przeglądarce. Przeglądaj foldery UnixFS, pobieraj pojedyncze pliki lub zapisz folder jako ZIP bez przesyłania archiwum."
+}
