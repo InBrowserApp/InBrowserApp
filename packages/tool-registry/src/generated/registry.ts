@@ -38088,6 +38088,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "serial-terminal",
+    category: "developer",
+    icon: "terminal",
+    tags: [
+      "web serial",
+      "serial monitor",
+      "uart",
+      "com port",
+      "arduino",
+      "esp32",
+      "hex",
+    ],
+    locales: {
+      ar: {
+        name: "طرفية الاتصال التسلسلي",
+        description:
+          "اتصل بأجهزة Arduino وESP32 وغيرها من الأجهزة التسلسلية في المتصفح. أرسل نصوصًا أو بايتات سداسية عشرية، واقرأ المخرجات المرفقة بطوابع زمنية، ونزّل سجل الجلسة.",
+      },
+      de: {
+        name: "Serielles Terminal",
+        description:
+          "Verbinde Arduino, ESP32 und andere serielle Geräte im Browser. Sende Text oder Hex-Bytes, lies Ausgaben mit Zeitstempel und lade das Sitzungsprotokoll herunter.",
+      },
+      en: {
+        name: "Serial Terminal",
+        description:
+          "Connect to Arduino, ESP32, and other serial devices in your browser. Send text or hex bytes, read timestamped output, and download the session log.",
+      },
+      es: {
+        name: "Terminal serie",
+        description:
+          "Conecta Arduino, ESP32 y otros dispositivos serie desde el navegador. Envía texto o bytes hexadecimales, lee la salida con marcas de tiempo y descarga el registro de la sesión.",
+      },
+      fr: {
+        name: "Terminal série",
+        description:
+          "Connectez-vous à un Arduino, un ESP32 ou d’autres périphériques série dans votre navigateur. Envoyez du texte ou des octets hexadécimaux, consultez les données horodatées et téléchargez le journal de session.",
+      },
+      he: {
+        name: "מסוף תקשורת טורית",
+        description:
+          "התחברו ל-Arduino, ל-ESP32 ולהתקני תקשורת טורית נוספים בדפדפן. שלחו טקסט או בתים הקסדצימליים, קראו פלט עם חותמות זמן והורידו את יומן ההפעלה.",
+      },
+      hi: {
+        name: "सीरियल टर्मिनल",
+        description:
+          "अपने ब्राउज़र में Arduino, ESP32 और अन्य सीरियल डिवाइस से कनेक्ट करें। टेक्स्ट या हेक्स बाइट भेजें, समय सहित आउटपुट देखें और सेशन लॉग डाउनलोड करें।",
+      },
+      id: {
+        name: "Terminal Serial",
+        description:
+          "Hubungkan Arduino, ESP32, dan perangkat serial lainnya di browser. Kirim teks atau byte heksadesimal, baca keluaran dengan stempel waktu, dan unduh log sesi.",
+      },
+      it: {
+        name: "Terminale seriale",
+        description:
+          "Collega Arduino, ESP32 e altri dispositivi seriali nel browser. Invia testo o byte esadecimali, leggi i dati con indicazione dell'ora e scarica il registro della sessione.",
+      },
+      ja: {
+        name: "シリアルターミナル",
+        description:
+          "ブラウザーで Arduino、ESP32 などのシリアルデバイスに接続します。テキストや16進数のバイト列を送信し、時刻付きの出力を確認してセッションログをダウンロードできます。",
+      },
+      ko: {
+        name: "직렬 터미널",
+        description:
+          "브라우저에서 Arduino, ESP32 및 기타 직렬 장치에 연결하세요. 텍스트나 16진수 바이트를 보내고, 타임스탬프가 표시된 출력을 읽고, 세션 로그를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Terminal Bersiri",
+        description:
+          "Sambungkan Arduino, ESP32 dan peranti bersiri lain dalam pelayar anda. Hantar teks atau bait heksadesimal, baca output bertanda masa dan muat turun log sesi.",
+      },
+      nl: {
+        name: "Seriële terminal",
+        description:
+          "Maak in je browser verbinding met Arduino, ESP32 en andere seriële apparaten. Verstuur tekst of hexadecimale bytes, lees uitvoer met tijdstempels en download het sessielogboek.",
+      },
+      no: {
+        name: "Seriell terminal",
+        description:
+          "Koble til Arduino, ESP32 og andre serielle enheter i nettleseren. Send tekst eller heksadesimale byte, les utdata med tidsstempel og last ned øktloggen.",
+      },
+      pl: {
+        name: "Terminal portu szeregowego",
+        description:
+          "Połącz się w przeglądarce z Arduino, ESP32 i innymi urządzeniami szeregowymi. Wysyłaj tekst lub bajty szesnastkowe, odczytuj dane ze znacznikami czasu i pobieraj dziennik sesji.",
+      },
+      pt: {
+        name: "Terminal serial",
+        description:
+          "Conecte Arduino, ESP32 e outros dispositivos seriais no navegador. Envie texto ou bytes em hexadecimal, leia a saída com indicação de horário e baixe o registro da sessão.",
+      },
+      ru: {
+        name: "Терминал последовательного порта",
+        description:
+          "Подключайтесь к Arduino, ESP32 и другим устройствам через последовательный порт в браузере. Отправляйте текст или шестнадцатеричные байты, просматривайте данные с отметками времени и скачивайте журнал сеанса.",
+      },
+      sv: {
+        name: "Serieterminal",
+        description:
+          "Anslut till Arduino, ESP32 och andra seriella enheter i webbläsaren. Skicka text eller hexadecimala byte, läs tidsstämplad utdata och ladda ner sessionsloggen.",
+      },
+      th: {
+        name: "เทอร์มินัลอนุกรม",
+        description:
+          "เชื่อมต่อ Arduino, ESP32 และอุปกรณ์อนุกรมอื่นๆ ในเบราว์เซอร์ ส่งข้อความหรือไบต์ฐานสิบหก อ่านข้อมูลที่มีเวลาบันทึก และดาวน์โหลดบันทึกเซสชัน",
+      },
+      tr: {
+        name: "Seri Terminal",
+        description:
+          "Arduino, ESP32 ve diğer seri cihazlara tarayıcınızdan bağlanın. Metin veya onaltılık baytlar gönderin, zaman damgalı çıktıyı okuyun ve oturum günlüğünü indirin.",
+      },
+      vi: {
+        name: "Terminal nối tiếp",
+        description:
+          "Kết nối Arduino, ESP32 và các thiết bị nối tiếp khác trong trình duyệt. Gửi văn bản hoặc byte thập lục phân, đọc dữ liệu kèm thời gian và tải nhật ký phiên làm việc.",
+      },
+      "zh-CN": {
+        name: "串口终端",
+        description:
+          "在浏览器中连接 Arduino、ESP32 等串口设备。发送文本或十六进制字节，读取带时间戳的输出，并下载会话日志。",
+      },
+      "zh-TW": {
+        name: "序列終端機",
+        description:
+          "在瀏覽器中連接 Arduino、ESP32 和其他序列裝置。傳送文字或十六進位位元組、讀取附有時間戳記的輸出，並下載工作階段記錄。",
+      },
+    },
+  },
+  {
     slug: "sha1-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -88065,6 +88196,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "scrypt 金鑰派生",
         description:
           "使用 scrypt 從密碼和鹽派生金鑰。可設定 N、r、p 與輸出長度，支援 hex 或 Base64 輸出。",
+      },
+    },
+  },
+  "serial-terminal": {
+    slug: "serial-terminal",
+    category: "developer",
+    icon: "terminal",
+    tags: [
+      "web serial",
+      "serial monitor",
+      "uart",
+      "com port",
+      "arduino",
+      "esp32",
+      "hex",
+    ],
+    locales: {
+      ar: {
+        name: "طرفية الاتصال التسلسلي",
+        description:
+          "اتصل بأجهزة Arduino وESP32 وغيرها من الأجهزة التسلسلية في المتصفح. أرسل نصوصًا أو بايتات سداسية عشرية، واقرأ المخرجات المرفقة بطوابع زمنية، ونزّل سجل الجلسة.",
+      },
+      de: {
+        name: "Serielles Terminal",
+        description:
+          "Verbinde Arduino, ESP32 und andere serielle Geräte im Browser. Sende Text oder Hex-Bytes, lies Ausgaben mit Zeitstempel und lade das Sitzungsprotokoll herunter.",
+      },
+      en: {
+        name: "Serial Terminal",
+        description:
+          "Connect to Arduino, ESP32, and other serial devices in your browser. Send text or hex bytes, read timestamped output, and download the session log.",
+      },
+      es: {
+        name: "Terminal serie",
+        description:
+          "Conecta Arduino, ESP32 y otros dispositivos serie desde el navegador. Envía texto o bytes hexadecimales, lee la salida con marcas de tiempo y descarga el registro de la sesión.",
+      },
+      fr: {
+        name: "Terminal série",
+        description:
+          "Connectez-vous à un Arduino, un ESP32 ou d’autres périphériques série dans votre navigateur. Envoyez du texte ou des octets hexadécimaux, consultez les données horodatées et téléchargez le journal de session.",
+      },
+      he: {
+        name: "מסוף תקשורת טורית",
+        description:
+          "התחברו ל-Arduino, ל-ESP32 ולהתקני תקשורת טורית נוספים בדפדפן. שלחו טקסט או בתים הקסדצימליים, קראו פלט עם חותמות זמן והורידו את יומן ההפעלה.",
+      },
+      hi: {
+        name: "सीरियल टर्मिनल",
+        description:
+          "अपने ब्राउज़र में Arduino, ESP32 और अन्य सीरियल डिवाइस से कनेक्ट करें। टेक्स्ट या हेक्स बाइट भेजें, समय सहित आउटपुट देखें और सेशन लॉग डाउनलोड करें।",
+      },
+      id: {
+        name: "Terminal Serial",
+        description:
+          "Hubungkan Arduino, ESP32, dan perangkat serial lainnya di browser. Kirim teks atau byte heksadesimal, baca keluaran dengan stempel waktu, dan unduh log sesi.",
+      },
+      it: {
+        name: "Terminale seriale",
+        description:
+          "Collega Arduino, ESP32 e altri dispositivi seriali nel browser. Invia testo o byte esadecimali, leggi i dati con indicazione dell'ora e scarica il registro della sessione.",
+      },
+      ja: {
+        name: "シリアルターミナル",
+        description:
+          "ブラウザーで Arduino、ESP32 などのシリアルデバイスに接続します。テキストや16進数のバイト列を送信し、時刻付きの出力を確認してセッションログをダウンロードできます。",
+      },
+      ko: {
+        name: "직렬 터미널",
+        description:
+          "브라우저에서 Arduino, ESP32 및 기타 직렬 장치에 연결하세요. 텍스트나 16진수 바이트를 보내고, 타임스탬프가 표시된 출력을 읽고, 세션 로그를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Terminal Bersiri",
+        description:
+          "Sambungkan Arduino, ESP32 dan peranti bersiri lain dalam pelayar anda. Hantar teks atau bait heksadesimal, baca output bertanda masa dan muat turun log sesi.",
+      },
+      nl: {
+        name: "Seriële terminal",
+        description:
+          "Maak in je browser verbinding met Arduino, ESP32 en andere seriële apparaten. Verstuur tekst of hexadecimale bytes, lees uitvoer met tijdstempels en download het sessielogboek.",
+      },
+      no: {
+        name: "Seriell terminal",
+        description:
+          "Koble til Arduino, ESP32 og andre serielle enheter i nettleseren. Send tekst eller heksadesimale byte, les utdata med tidsstempel og last ned øktloggen.",
+      },
+      pl: {
+        name: "Terminal portu szeregowego",
+        description:
+          "Połącz się w przeglądarce z Arduino, ESP32 i innymi urządzeniami szeregowymi. Wysyłaj tekst lub bajty szesnastkowe, odczytuj dane ze znacznikami czasu i pobieraj dziennik sesji.",
+      },
+      pt: {
+        name: "Terminal serial",
+        description:
+          "Conecte Arduino, ESP32 e outros dispositivos seriais no navegador. Envie texto ou bytes em hexadecimal, leia a saída com indicação de horário e baixe o registro da sessão.",
+      },
+      ru: {
+        name: "Терминал последовательного порта",
+        description:
+          "Подключайтесь к Arduino, ESP32 и другим устройствам через последовательный порт в браузере. Отправляйте текст или шестнадцатеричные байты, просматривайте данные с отметками времени и скачивайте журнал сеанса.",
+      },
+      sv: {
+        name: "Serieterminal",
+        description:
+          "Anslut till Arduino, ESP32 och andra seriella enheter i webbläsaren. Skicka text eller hexadecimala byte, läs tidsstämplad utdata och ladda ner sessionsloggen.",
+      },
+      th: {
+        name: "เทอร์มินัลอนุกรม",
+        description:
+          "เชื่อมต่อ Arduino, ESP32 และอุปกรณ์อนุกรมอื่นๆ ในเบราว์เซอร์ ส่งข้อความหรือไบต์ฐานสิบหก อ่านข้อมูลที่มีเวลาบันทึก และดาวน์โหลดบันทึกเซสชัน",
+      },
+      tr: {
+        name: "Seri Terminal",
+        description:
+          "Arduino, ESP32 ve diğer seri cihazlara tarayıcınızdan bağlanın. Metin veya onaltılık baytlar gönderin, zaman damgalı çıktıyı okuyun ve oturum günlüğünü indirin.",
+      },
+      vi: {
+        name: "Terminal nối tiếp",
+        description:
+          "Kết nối Arduino, ESP32 và các thiết bị nối tiếp khác trong trình duyệt. Gửi văn bản hoặc byte thập lục phân, đọc dữ liệu kèm thời gian và tải nhật ký phiên làm việc.",
+      },
+      "zh-CN": {
+        name: "串口终端",
+        description:
+          "在浏览器中连接 Arduino、ESP32 等串口设备。发送文本或十六进制字节，读取带时间戳的输出，并下载会话日志。",
+      },
+      "zh-TW": {
+        name: "序列終端機",
+        description:
+          "在瀏覽器中連接 Arduino、ESP32 和其他序列裝置。傳送文字或十六進位位元組、讀取附有時間戳記的輸出，並下載工作階段記錄。",
       },
     },
   },

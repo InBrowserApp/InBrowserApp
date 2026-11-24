@@ -1,0 +1,4 @@
+{
+  "name": "Terminal série",
+  "description": "Connectez-vous à un Arduino, un ESP32 ou d’autres périphériques série dans votre navigateur. Envoyez du texte ou des octets hexadécimaux, consultez les données horodatées et téléchargez le journal de session."
+}

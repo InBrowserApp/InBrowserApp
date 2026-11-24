@@ -1,0 +1,4 @@
+{
+  "name": "Terminal Bersiri",
+  "description": "Sambungkan Arduino, ESP32 dan peranti bersiri lain dalam pelayar anda. Hantar teks atau bait heksadesimal, baca output bertanda masa dan muat turun log sesi."
+}

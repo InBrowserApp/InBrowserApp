@@ -1,0 +1,4 @@
+{
+  "name": "Serielles Terminal",
+  "description": "Verbinde Arduino, ESP32 und andere serielle Geräte im Browser. Sende Text oder Hex-Bytes, lies Ausgaben mit Zeitstempel und lade das Sitzungsprotokoll herunter."
+}

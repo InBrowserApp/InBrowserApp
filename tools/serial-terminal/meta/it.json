@@ -1,0 +1,4 @@
+{
+  "name": "Terminale seriale",
+  "description": "Collega Arduino, ESP32 e altri dispositivi seriali nel browser. Invia testo o byte esadecimali, leggi i dati con indicazione dell'ora e scarica il registro della sessione."
+}

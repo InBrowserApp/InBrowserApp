@@ -1,0 +1,4 @@
+{
+  "name": "Terminal serial",
+  "description": "Conecte Arduino, ESP32 e outros dispositivos seriais no navegador. Envie texto ou bytes em hexadecimal, leia a saída com indicação de horário e baixe o registro da sessão."
+}

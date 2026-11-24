@@ -1,0 +1,4 @@
+{
+  "name": "Seri Terminal",
+  "description": "Arduino, ESP32 ve diğer seri cihazlara tarayıcınızdan bağlanın. Metin veya onaltılık baytlar gönderin, zaman damgalı çıktıyı okuyun ve oturum günlüğünü indirin."
+}
