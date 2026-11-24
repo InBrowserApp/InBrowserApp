@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropHint": "Atau seret dan lepas di sini",
+  "changePdf": "Ganti PDF",
+  "standard": "Standar PDF/A",
+  "part1": "Pilih jika arsip atau portal pengiriman dokumen Anda mensyaratkan PDF/A-1b.",
+  "part2": "Disarankan untuk sebagian besar arsip, kecuali jika ada standar lain yang diwajibkan.",
+  "appearance": "Salinan arsip mempertahankan tampilan halaman dalam bentuk gambar. Teks tidak lagi bisa dipilih, dan tautan serta lampiran dihapus.",
+  "convert": "Konversi ke PDF/A",
+  "cancel": "Batal",
+  "opening": "Membuka PDF…",
+  "rendering": "Mengonversi halaman {page} dari {total}…",
+  "checking": "Memeriksa salinan arsip…",
+  "ready": "Salinan arsip lolos pemeriksaan",
+  "download": "Unduh PDF/A",
+  "privacy": "PDF tetap di perangkat Anda.",
+  "oneFile": "Pilih satu file PDF saja.",
+  "invalid": "File ini tidak bisa dibuka sebagai PDF. Coba salinan lain.",
+  "encrypted": "Buka kunci PDF yang dilindungi kata sandi ini sebelum mengonversinya.",
+  "xfa": "PDF ini menggunakan formulir XFA. Buka dengan pembaca PDF yang dapat menampilkan formulir tersebut, lalu simpan salinannya sebagai PDF standar sebelum mengonversi.",
+  "failed": "PDF tidak bisa dikonversi. Coba salinan lain.",
+  "checkFailed": "Salinan arsip tidak lolos pemeriksaan untuk standar yang dipilih."
+}

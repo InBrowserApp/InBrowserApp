@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Elegir un PDF",
+  "dropHint": "O arrástralo y suéltalo aquí",
+  "changePdf": "Cambiar PDF",
+  "standard": "Estándar PDF/A",
+  "part1": "Elige esta opción si tu archivo o portal de entrega exige PDF/A-1b.",
+  "part2": "Opción recomendada para archivar documentos, salvo que te pidan otro estándar.",
+  "appearance": "La copia PDF/A guarda las páginas como imágenes para conservar su aspecto. El texto deja de ser seleccionable y se eliminan los enlaces y los archivos adjuntos.",
+  "convert": "Convertir a PDF/A",
+  "cancel": "Cancelar",
+  "opening": "Abriendo el PDF…",
+  "rendering": "Convirtiendo la página {page} de {total}…",
+  "checking": "Comprobando la copia PDF/A…",
+  "ready": "La copia PDF/A superó las comprobaciones",
+  "download": "Descargar PDF/A",
+  "privacy": "Tu PDF se queda en tu dispositivo.",
+  "oneFile": "Elige un solo PDF a la vez.",
+  "invalid": "No se pudo abrir el archivo como PDF. Prueba con otra copia.",
+  "encrypted": "Desbloquea este PDF protegido con contraseña antes de convertirlo.",
+  "xfa": "Este PDF contiene un formulario XFA. Ábrelo en un lector que muestre el formulario y guarda una copia en PDF estándar antes de convertirla.",
+  "failed": "No se pudo convertir el PDF. Prueba con otra copia.",
+  "checkFailed": "La copia PDF/A no superó las comprobaciones del estándar seleccionado."
+}

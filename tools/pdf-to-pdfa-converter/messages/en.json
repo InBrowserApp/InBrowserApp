@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Choose a PDF",
+  "dropHint": "Or drag and drop it here",
+  "changePdf": "Change PDF",
+  "standard": "PDF/A standard",
+  "part1": "Choose this if your archive or submission portal requires PDF/A-1b.",
+  "part2": "Recommended for most archives unless a different standard is required.",
+  "appearance": "The archive copy preserves the page appearance as images. Text selection, links, and attachments are removed.",
+  "convert": "Convert to PDF/A",
+  "cancel": "Cancel",
+  "opening": "Opening PDF…",
+  "rendering": "Converting page {page} of {total}…",
+  "checking": "Checking the archive copy…",
+  "ready": "Archive checks passed",
+  "download": "Download PDF/A",
+  "privacy": "Your PDF stays on your device.",
+  "oneFile": "Choose one PDF at a time.",
+  "invalid": "This file could not be opened as a PDF. Try another copy.",
+  "encrypted": "Unlock this password-protected PDF before converting it.",
+  "xfa": "This PDF uses an XFA form. Open it in a reader that displays the form and save a standard PDF copy before converting.",
+  "failed": "The PDF could not be converted. Try another copy.",
+  "checkFailed": "The archive copy did not pass the checks for the selected standard."
+}

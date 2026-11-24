@@ -1,0 +1,23 @@
+{
+  "choosePdf": "Velg PDF",
+  "dropHint": "Eller dra og slipp filen her",
+  "changePdf": "Bytt PDF",
+  "standard": "PDF/A-standard",
+  "part1": "Velg dette hvis arkivet eller innsendingsportalen krever PDF/A-1b.",
+  "part2": "Anbefales for de fleste arkiver, med mindre de krever en annen standard.",
+  "appearance": "Arkivkopien bevarer utseendet til sidene som bilder. Muligheten til å merke tekst forsvinner, og lenker og vedlegg fjernes.",
+  "convert": "Konverter til PDF/A",
+  "cancel": "Avbryt",
+  "opening": "Åpner PDF …",
+  "rendering": "Konverterer side {page} av {total} …",
+  "checking": "Kontrollerer arkivkopien …",
+  "ready": "Arkivkopien har bestått kontrollen",
+  "download": "Last ned PDF/A",
+  "privacy": "PDF-filen blir på enheten din.",
+  "oneFile": "Velg én PDF-fil om gangen.",
+  "invalid": "Filen kunne ikke åpnes som PDF. Prøv en annen kopi.",
+  "encrypted": "Lås opp den passordbeskyttede PDF-filen før du konverterer den.",
+  "xfa": "Denne PDF-filen bruker et XFA-skjema. Åpne filen i en PDF-leser som kan vise skjemaet, og lagre en vanlig PDF-kopi før du konverterer.",
+  "failed": "Kunne ikke konvertere PDF-filen. Prøv en annen kopi.",
+  "checkFailed": "Arkivkopien besto ikke kontrollen for den valgte standarden."
+}

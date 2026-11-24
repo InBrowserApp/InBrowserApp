@@ -1,0 +1,23 @@
+{
+  "choosePdf": "PDF auswählen",
+  "dropHint": "Oder ziehe sie hierher",
+  "changePdf": "Andere PDF wählen",
+  "standard": "PDF/A-Standard",
+  "part1": "Wähle diese Version, wenn dein Archiv oder Einreichungsportal PDF/A-1b verlangt.",
+  "part2": "Für die meisten Archive empfohlen. Beachte die Vorgaben deines Archivs.",
+  "appearance": "Die Archivkopie gibt die Seiten als Bilder wieder. Markierbarer Text, Links und Anhänge entfallen.",
+  "convert": "In PDF/A umwandeln",
+  "cancel": "Abbrechen",
+  "opening": "PDF wird geöffnet…",
+  "rendering": "Seite {page} von {total} wird umgewandelt…",
+  "checking": "Archivkopie wird geprüft…",
+  "ready": "Prüfung bestanden",
+  "download": "PDF/A herunterladen",
+  "privacy": "Deine PDF bleibt auf deinem Gerät.",
+  "oneFile": "Wähle jeweils eine PDF-Datei aus.",
+  "invalid": "Die Datei ließ sich nicht als PDF öffnen. Versuche es mit einer anderen Kopie.",
+  "encrypted": "Entferne den Passwortschutz, bevor du diese PDF umwandelst.",
+  "xfa": "Diese PDF enthält ein XFA-Formular. Öffne sie in einem PDF-Programm, das das Formular anzeigt, und speichere vor dem Umwandeln eine Kopie als gewöhnliche PDF-Datei.",
+  "failed": "Die PDF ließ sich nicht umwandeln. Versuche es mit einer anderen Kopie.",
+  "checkFailed": "Die Archivkopie hat die Prüfung für den gewählten Standard nicht bestanden."
+}

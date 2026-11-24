@@ -1,0 +1,23 @@
+{
+  "choosePdf": "选择 PDF",
+  "dropHint": "或将文件拖放到此处",
+  "changePdf": "更换 PDF",
+  "standard": "PDF/A 标准",
+  "part1": "如果归档机构或提交平台要求 PDF/A-1b，请选此项。",
+  "part2": "适用于大多数归档场景。若有明确要求，请按要求选择。",
+  "appearance": "归档副本以图像保留页面外观，转换后无法选中文本，链接和附件也会移除。",
+  "convert": "转换为 PDF/A",
+  "cancel": "取消",
+  "opening": "正在打开 PDF…",
+  "rendering": "正在转换第 {page} 页，共 {total} 页…",
+  "checking": "正在校验归档副本…",
+  "ready": "归档副本已通过校验",
+  "download": "下载 PDF/A",
+  "privacy": "PDF 始终保留在您的设备上。",
+  "oneFile": "请一次选择一个 PDF。",
+  "invalid": "此文件无法作为 PDF 打开。请尝试使用其他副本。",
+  "encrypted": "此 PDF 受密码保护，请先解锁再转换。",
+  "xfa": "此 PDF 包含 XFA 表单。请用支持 XFA 的阅读器打开文件，另存为普通 PDF 后再转换。",
+  "failed": "无法转换此 PDF。请尝试使用其他副本。",
+  "checkFailed": "归档副本未通过所选标准的校验。"
+}
