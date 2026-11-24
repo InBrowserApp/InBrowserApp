@@ -62,9 +62,7 @@ function actionName(name: string) {
 }
 
 function click(name: string) {
-  fireEvent.click(
-    screen.getByRole("button", { name: actionName(name), exact: true })
-  )
+  fireEvent.click(screen.getByRole("button", { name: actionName(name) }))
 }
 
 afterEach(() => {
