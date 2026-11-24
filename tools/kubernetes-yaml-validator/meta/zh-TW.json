@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML 驗證器",
+  "description": "線上驗證 Kubernetes YAML 資源清單。使用內建結構描述檢查多個資源，並依行號與欄位位置跳到無效的欄位。"
+}

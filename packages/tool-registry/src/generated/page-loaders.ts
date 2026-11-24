@@ -231,6 +231,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "keyboard-tester": () => import("@tool/keyboard-tester/page"),
   "kml-geojson-converter": () => import("@tool/kml-geojson-converter/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
+  "kubernetes-yaml-validator": () =>
+    import("@tool/kubernetes-yaml-validator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
   "legacy-motorola-system-key-generator": () =>
     import("@tool/legacy-motorola-system-key-generator/page"),

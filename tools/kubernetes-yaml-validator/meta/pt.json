@@ -1,0 +1,4 @@
+{
+  "name": "Validador de YAML do Kubernetes",
+  "description": "Valide manifestos YAML do Kubernetes online. Confira vários recursos com esquemas integrados e vá direto aos campos inválidos pela linha e coluna."
+}

@@ -24130,6 +24130,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "kubernetes-yaml-validator",
+    category: "developer",
+    icon: "layers",
+    tags: ["kubernetes", "k8s", "yaml", "manifest", "validator", "devops"],
+    locales: {
+      ar: {
+        name: "مدقق Kubernetes YAML",
+        description:
+          "تحقّق من ملفات تعريف Kubernetes بصيغة YAML عبر الإنترنت. افحص عدة موارد باستخدام المخططات المضمّنة وانتقل إلى الحقول غير الصالحة وفق رقم السطر والعمود.",
+      },
+      de: {
+        name: "Kubernetes-YAML-Validator",
+        description:
+          "Validieren Sie Kubernetes-Manifeste im YAML-Format online. Prüfen Sie mehrere Ressourcen mit integrierten Schemas und springen Sie per Zeilen- und Spaltenangabe zu ungültigen Feldern.",
+      },
+      en: {
+        name: "Kubernetes YAML Validator",
+        description:
+          "Validate Kubernetes YAML manifests online. Check multiple resources against built-in schemas and jump to invalid fields by line and column.",
+      },
+      es: {
+        name: "Validador de YAML de Kubernetes",
+        description:
+          "Valida manifiestos YAML de Kubernetes en línea. Comprueba varios recursos con esquemas integrados y salta a los campos no válidos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur YAML Kubernetes",
+        description:
+          "Validez vos manifestes YAML Kubernetes en ligne. Vérifiez plusieurs ressources à l’aide des schémas intégrés et repérez les champs non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Kubernetes YAML",
+        description:
+          "אימות מקוון למניפסטים של Kubernetes בפורמט YAML. אפשר לבדוק כמה משאבים מול סכמות מובנות ולעבור לשדות לא תקינים לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "Kubernetes YAML वैलिडेटर",
+        description:
+          "Kubernetes के YAML मैनिफ़ेस्ट ऑनलाइन सत्यापित करें। बिल्ट-इन स्कीमा से कई रिसोर्स जाँचें और पंक्ति व कॉलम नंबर की मदद से अमान्य फ़ील्ड तक जाएँ।",
+      },
+      id: {
+        name: "Validator YAML Kubernetes",
+        description:
+          "Validasi manifes YAML Kubernetes secara online. Periksa beberapa resource dengan skema bawaan dan langsung buka baris serta kolom properti yang tidak valid.",
+      },
+      it: {
+        name: "Validatore YAML per Kubernetes",
+        description:
+          "Convalida online i manifest YAML di Kubernetes. Verifica più risorse con gli schemi integrati e vai ai campi non validi tramite riga e colonna.",
+      },
+      ja: {
+        name: "Kubernetes YAML バリデーター",
+        description:
+          "Kubernetes の YAML マニフェストをオンラインで検証します。内蔵スキーマで複数のリソースを一度に確認し、誤りのあるフィールドに行番号と列番号から移動できます。",
+      },
+      ko: {
+        name: "Kubernetes YAML 검증기",
+        description:
+          "Kubernetes YAML 매니페스트를 온라인으로 검증하세요. 내장 스키마로 여러 리소스를 한 번에 확인하고 줄과 열 번호로 잘못된 필드 위치를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah YAML Kubernetes",
+        description:
+          "Sahkan manifes YAML Kubernetes dalam talian. Semak beberapa sumber menggunakan skema terbina dalam dan terus ke baris serta lajur medan yang tidak sah.",
+      },
+      nl: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valideer Kubernetes-manifesten in YAML online. Controleer meerdere resources met ingebouwde schema’s en ga via het regel- en kolomnummer naar ongeldige velden.",
+      },
+      no: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valider Kubernetes-manifester i YAML på nett. Sjekk flere ressurser mot innebygde skjemaer og gå til ugyldige felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator YAML Kubernetes",
+        description:
+          "Sprawdzaj manifesty YAML Kubernetes online. Zweryfikuj wiele zasobów według wbudowanych schematów i przejdź do błędnych pól po numerze wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de YAML do Kubernetes",
+        description:
+          "Valide manifestos YAML do Kubernetes online. Confira vários recursos com esquemas integrados e vá direto aos campos inválidos pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор YAML для Kubernetes",
+        description:
+          "Проверяйте YAML-манифесты Kubernetes онлайн. Сверяйте несколько ресурсов со встроенными схемами и переходите к ошибочным полям по строке и столбцу.",
+      },
+      sv: {
+        name: "Kubernetes YAML-validerare",
+        description:
+          "Validera Kubernetes-manifest i YAML online. Kontrollera flera resurser mot inbyggda scheman och hoppa till ogiltiga fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+        description:
+          "ตรวจสอบมานิเฟสต์ YAML ของ Kubernetes ออนไลน์ ตรวจหลายทรัพยากรกับสคีมาในตัวและไปยังบรรทัดและคอลัมน์ของฟิลด์ที่ไม่ถูกต้องได้ทันที",
+      },
+      tr: {
+        name: "Kubernetes YAML Doğrulayıcı",
+        description:
+          "Kubernetes YAML manifestlerini çevrimiçi doğrulayın. Birden fazla kaynağı yerleşik şemalarla denetleyin ve geçersiz alanlara satır ve sütun numaralarıyla gidin.",
+      },
+      vi: {
+        name: "Trình xác thực YAML Kubernetes",
+        description:
+          "Xác thực tệp kê khai YAML Kubernetes trực tuyến. Kiểm tra nhiều tài nguyên theo lược đồ tích hợp và chuyển đến dòng, cột của trường không hợp lệ.",
+      },
+      "zh-CN": {
+        name: "Kubernetes YAML 校验器",
+        description:
+          "在线校验 Kubernetes YAML 清单，根据内置模式检查多个资源，并按行和列跳转到无效字段。",
+      },
+      "zh-TW": {
+        name: "Kubernetes YAML 驗證器",
+        description:
+          "線上驗證 Kubernetes YAML 資源清單。使用內建結構描述檢查多個資源，並依行號與欄位位置跳到無效的欄位。",
+      },
+    },
+  },
+  {
     slug: "latex-previewer",
     category: "document",
     icon: "file-text",
@@ -71107,6 +71230,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "KSUID 產生器",
         description:
           "在瀏覽器內產生 KSUID（可排序的唯一識別），支援自訂時間戳。",
+      },
+    },
+  },
+  "kubernetes-yaml-validator": {
+    slug: "kubernetes-yaml-validator",
+    category: "developer",
+    icon: "layers",
+    tags: ["kubernetes", "k8s", "yaml", "manifest", "validator", "devops"],
+    locales: {
+      ar: {
+        name: "مدقق Kubernetes YAML",
+        description:
+          "تحقّق من ملفات تعريف Kubernetes بصيغة YAML عبر الإنترنت. افحص عدة موارد باستخدام المخططات المضمّنة وانتقل إلى الحقول غير الصالحة وفق رقم السطر والعمود.",
+      },
+      de: {
+        name: "Kubernetes-YAML-Validator",
+        description:
+          "Validieren Sie Kubernetes-Manifeste im YAML-Format online. Prüfen Sie mehrere Ressourcen mit integrierten Schemas und springen Sie per Zeilen- und Spaltenangabe zu ungültigen Feldern.",
+      },
+      en: {
+        name: "Kubernetes YAML Validator",
+        description:
+          "Validate Kubernetes YAML manifests online. Check multiple resources against built-in schemas and jump to invalid fields by line and column.",
+      },
+      es: {
+        name: "Validador de YAML de Kubernetes",
+        description:
+          "Valida manifiestos YAML de Kubernetes en línea. Comprueba varios recursos con esquemas integrados y salta a los campos no válidos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur YAML Kubernetes",
+        description:
+          "Validez vos manifestes YAML Kubernetes en ligne. Vérifiez plusieurs ressources à l’aide des schémas intégrés et repérez les champs non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Kubernetes YAML",
+        description:
+          "אימות מקוון למניפסטים של Kubernetes בפורמט YAML. אפשר לבדוק כמה משאבים מול סכמות מובנות ולעבור לשדות לא תקינים לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "Kubernetes YAML वैलिडेटर",
+        description:
+          "Kubernetes के YAML मैनिफ़ेस्ट ऑनलाइन सत्यापित करें। बिल्ट-इन स्कीमा से कई रिसोर्स जाँचें और पंक्ति व कॉलम नंबर की मदद से अमान्य फ़ील्ड तक जाएँ।",
+      },
+      id: {
+        name: "Validator YAML Kubernetes",
+        description:
+          "Validasi manifes YAML Kubernetes secara online. Periksa beberapa resource dengan skema bawaan dan langsung buka baris serta kolom properti yang tidak valid.",
+      },
+      it: {
+        name: "Validatore YAML per Kubernetes",
+        description:
+          "Convalida online i manifest YAML di Kubernetes. Verifica più risorse con gli schemi integrati e vai ai campi non validi tramite riga e colonna.",
+      },
+      ja: {
+        name: "Kubernetes YAML バリデーター",
+        description:
+          "Kubernetes の YAML マニフェストをオンラインで検証します。内蔵スキーマで複数のリソースを一度に確認し、誤りのあるフィールドに行番号と列番号から移動できます。",
+      },
+      ko: {
+        name: "Kubernetes YAML 검증기",
+        description:
+          "Kubernetes YAML 매니페스트를 온라인으로 검증하세요. 내장 스키마로 여러 리소스를 한 번에 확인하고 줄과 열 번호로 잘못된 필드 위치를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah YAML Kubernetes",
+        description:
+          "Sahkan manifes YAML Kubernetes dalam talian. Semak beberapa sumber menggunakan skema terbina dalam dan terus ke baris serta lajur medan yang tidak sah.",
+      },
+      nl: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valideer Kubernetes-manifesten in YAML online. Controleer meerdere resources met ingebouwde schema’s en ga via het regel- en kolomnummer naar ongeldige velden.",
+      },
+      no: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valider Kubernetes-manifester i YAML på nett. Sjekk flere ressurser mot innebygde skjemaer og gå til ugyldige felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator YAML Kubernetes",
+        description:
+          "Sprawdzaj manifesty YAML Kubernetes online. Zweryfikuj wiele zasobów według wbudowanych schematów i przejdź do błędnych pól po numerze wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de YAML do Kubernetes",
+        description:
+          "Valide manifestos YAML do Kubernetes online. Confira vários recursos com esquemas integrados e vá direto aos campos inválidos pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор YAML для Kubernetes",
+        description:
+          "Проверяйте YAML-манифесты Kubernetes онлайн. Сверяйте несколько ресурсов со встроенными схемами и переходите к ошибочным полям по строке и столбцу.",
+      },
+      sv: {
+        name: "Kubernetes YAML-validerare",
+        description:
+          "Validera Kubernetes-manifest i YAML online. Kontrollera flera resurser mot inbyggda scheman och hoppa till ogiltiga fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+        description:
+          "ตรวจสอบมานิเฟสต์ YAML ของ Kubernetes ออนไลน์ ตรวจหลายทรัพยากรกับสคีมาในตัวและไปยังบรรทัดและคอลัมน์ของฟิลด์ที่ไม่ถูกต้องได้ทันที",
+      },
+      tr: {
+        name: "Kubernetes YAML Doğrulayıcı",
+        description:
+          "Kubernetes YAML manifestlerini çevrimiçi doğrulayın. Birden fazla kaynağı yerleşik şemalarla denetleyin ve geçersiz alanlara satır ve sütun numaralarıyla gidin.",
+      },
+      vi: {
+        name: "Trình xác thực YAML Kubernetes",
+        description:
+          "Xác thực tệp kê khai YAML Kubernetes trực tuyến. Kiểm tra nhiều tài nguyên theo lược đồ tích hợp và chuyển đến dòng, cột của trường không hợp lệ.",
+      },
+      "zh-CN": {
+        name: "Kubernetes YAML 校验器",
+        description:
+          "在线校验 Kubernetes YAML 清单，根据内置模式检查多个资源，并按行和列跳转到无效字段。",
+      },
+      "zh-TW": {
+        name: "Kubernetes YAML 驗證器",
+        description:
+          "線上驗證 Kubernetes YAML 資源清單。使用內建結構描述檢查多個資源，並依行號與欄位位置跳到無效的欄位。",
       },
     },
   },

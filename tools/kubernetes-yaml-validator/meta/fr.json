@@ -1,0 +1,4 @@
+{
+  "name": "Validateur YAML Kubernetes",
+  "description": "Validez vos manifestes YAML Kubernetes en ligne. Vérifiez plusieurs ressources à l’aide des schémas intégrés et repérez les champs non valides par ligne et colonne."
+}
