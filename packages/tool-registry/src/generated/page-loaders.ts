@@ -68,6 +68,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/certificate-public-key-parser/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
+  "chm-viewer": () => import("@tool/chm-viewer/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),
   "cidrs-merger-excluder": () => import("@tool/cidrs-merger-excluder/page"),

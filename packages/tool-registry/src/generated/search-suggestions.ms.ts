@@ -253,6 +253,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-uppercase-number-converter",
   },
   {
+    category: "document",
+    name: "Pemapar CHM",
+    slug: "chm-viewer",
+  },
+  {
     category: "developer",
     name: "Kalkulator Chmod",
     slug: "chmod-calculator",
