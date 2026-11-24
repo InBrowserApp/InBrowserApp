@@ -24,7 +24,7 @@ export type SplitResult =
 
 function channelError(numberOfChannels: number) {
   if (numberOfChannels === 1) return "monoError"
-  if (numberOfChannels !== 2) return "multichannelError"
+  return numberOfChannels === 2 ? undefined : "multichannelError"
 }
 
 async function* browserSamples(audio: AudioBuffer) {
@@ -128,7 +128,7 @@ export async function splitStereoFile(
               description.byteOffset,
               description.byteLength
             )
-          : new Uint8Array(description ?? 0)
+          : new Uint8Array(description ?? new ArrayBuffer(0))
         inputPcm = flacPcmFormat(bytes)
       }
       if (inputPcm) {

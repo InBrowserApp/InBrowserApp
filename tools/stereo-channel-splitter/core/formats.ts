@@ -9,7 +9,7 @@ const FLAC_RATES = new Set([
 ])
 const MP3_RATES = [
   8_000, 11_025, 12_000, 16_000, 22_050, 24_000, 32_000, 44_100, 48_000,
-]
+] as const
 
 export function supportsFlac(sampleRate: number, pcm: PcmFormat) {
   return pcm !== "pcm-f32" && pcm !== "pcm-s32" && FLAC_RATES.has(sampleRate)
@@ -34,6 +34,8 @@ export function pcmFormat(codec: string | null): PcmFormat | undefined {
       return littleEndian
     case "pcm-f64":
       return "pcm-f32"
+    default:
+      return undefined
   }
 }
 
