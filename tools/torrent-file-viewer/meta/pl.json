@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka plików torrent",
+  "description": "Otwórz plik .torrent online i sprawdź jego info hash BitTorrent, listę plików, łączny rozmiar i trackery. Przeglądarka odczytuje plik lokalnie."
+}

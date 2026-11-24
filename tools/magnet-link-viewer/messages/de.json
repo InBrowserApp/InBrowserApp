@@ -1,0 +1,13 @@
+{
+  "input": "Magnet-Link",
+  "inspect": "Metadaten abrufen",
+  "example": "Beispiel ausprobieren",
+  "network": "WebTorrent kontaktiert Tracker und Peers oder ruft die im Link angegebene Metadatenquelle ab.",
+  "loading": "Torrent-Metadaten werden gesucht …",
+  "cancel": "Abbrechen",
+  "invalid": "Gib einen Magnet-Link mit einem gültigen BitTorrent-v1-Info-Hash (btih) ein.",
+  "unavailable": "Die Metadaten konnten nicht abgerufen werden. Versuche es erneut oder öffne die .torrent-Datei, falls sie dir vorliegt.",
+  "timeout": "Es sind keine Metadaten eingetroffen. Möglicherweise sind keine WebTorrent-Peers oder Metadatenquellen erreichbar.",
+  "linkDetails": "Angaben aus dem Magnet-Link",
+  "related": "Du hast eine .torrent-Datei? Öffne den Torrent-Dateibetrachter"
+}

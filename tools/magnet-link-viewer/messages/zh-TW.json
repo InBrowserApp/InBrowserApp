@@ -1,0 +1,13 @@
+{
+  "input": "磁力連結",
+  "inspect": "查詢中繼資料",
+  "example": "試用範例",
+  "network": "透過 WebTorrent 連線到 Tracker、節點或連結中指定的中繼資料來源。",
+  "loading": "正在查詢種子中繼資料…",
+  "cancel": "取消",
+  "invalid": "請輸入含有有效 BitTorrent v1 資訊雜湊值（btih）的磁力連結。",
+  "unavailable": "無法取得中繼資料。請再試一次，或直接開啟手上的 .torrent 種子檔。",
+  "timeout": "未能在時間內取得中繼資料。這份種子可能沒有可連線的 WebTorrent 節點或中繼資料來源。",
+  "linkDetails": "磁力連結內含的資訊",
+  "related": "手上有 .torrent 種子檔？開啟 Torrent 檔案檢視器"
+}

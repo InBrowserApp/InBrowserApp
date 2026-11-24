@@ -1,0 +1,4 @@
+{
+  "name": "Torrent-Dateibetrachter",
+  "description": "Öffne eine .torrent-Datei online und prüfe Info-Hash, Dateiliste, Gesamtgröße und Tracker. Die Datei wird lokal im Browser gelesen."
+}

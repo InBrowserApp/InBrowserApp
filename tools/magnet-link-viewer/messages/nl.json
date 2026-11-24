@@ -1,0 +1,13 @@
+{
+  "input": "Magnetlink",
+  "inspect": "Metadata opzoeken",
+  "example": "Voorbeeld proberen",
+  "network": "WebTorrent maakt verbinding met trackers en peers of met een metadatabron in de link.",
+  "loading": "Torrentmetadata zoeken…",
+  "cancel": "Annuleren",
+  "invalid": "Voer een magnetlink in met een geldige BitTorrent v1-infohash (btih).",
+  "unavailable": "De metadata konden niet worden opgehaald. Probeer het opnieuw of open het .torrent-bestand als je dat hebt.",
+  "timeout": "De metadata kwamen niet op tijd binnen. Mogelijk heeft deze torrent geen bereikbare WebTorrent-peers of metadatabron.",
+  "linkDetails": "Gegevens uit de magnetlink",
+  "related": "Heb je een .torrent-bestand? Open de torrentbestandsviewer"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Torrent 檔案檢視器",
+  "description": "線上開啟 .torrent 種子檔，檢視 BitTorrent 資訊雜湊值、檔案清單、總大小及 Tracker。檔案由瀏覽器在本機讀取。"
+}

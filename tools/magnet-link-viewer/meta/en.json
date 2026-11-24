@@ -1,0 +1,4 @@
+{
+  "name": "Magnet Link Viewer",
+  "description": "Inspect a BitTorrent magnet link and use WebTorrent to look up its file list, total size, and other metadata before downloading."
+}

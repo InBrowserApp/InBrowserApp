@@ -1,0 +1,4 @@
+{
+  "name": "Magnetlinkviewer",
+  "description": "Inspecteer een BitTorrent-magnetlink en zoek met WebTorrent de bestandslijst, totale grootte en andere metadata op voordat je gaat downloaden."
+}

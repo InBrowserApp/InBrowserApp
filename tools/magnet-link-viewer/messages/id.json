@@ -1,0 +1,13 @@
+{
+  "input": "Tautan magnet",
+  "inspect": "Cari metadata",
+  "example": "Coba contoh",
+  "network": "WebTorrent menghubungi pelacak dan peer atau sumber metadata yang tercantum dalam tautan.",
+  "loading": "Mencari metadata torrent…",
+  "cancel": "Batal",
+  "invalid": "Masukkan tautan magnet yang berisi info hash BitTorrent v1 (btih) yang valid.",
+  "unavailable": "Metadata tidak dapat diambil. Coba lagi atau buka file .torrent jika Anda memilikinya.",
+  "timeout": "Metadata belum diterima hingga batas waktu. Mungkin tidak ada peer WebTorrent atau sumber metadata yang dapat dijangkau.",
+  "linkDetails": "Informasi dari tautan magnet",
+  "related": "Punya file .torrent? Buka Penampil File Torrent"
+}

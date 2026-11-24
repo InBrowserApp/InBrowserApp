@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Velg .torrent-fil",
+  "dropFile": "eller dra den hit",
+  "example": "Prøv et eksempel",
+  "local": "Filen leses lokalt i nettleseren.",
+  "reading": "Leser torrentmetadata …",
+  "invalid": "Kunne ikke lese filen. Velg en gyldig .torrent-fil i BitTorrent v1- eller hybridformat.",
+  "related": "Har du en magnetlenke? Åpne Magnetlenkeviser"
+}

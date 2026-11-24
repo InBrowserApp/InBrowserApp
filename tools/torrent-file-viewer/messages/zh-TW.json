@@ -1,0 +1,9 @@
+{
+  "chooseFile": "選擇 .torrent 檔案",
+  "dropFile": "或將檔案拖曳到這裡",
+  "example": "試用範例",
+  "local": "由瀏覽器在本機讀取。",
+  "reading": "正在讀取種子中繼資料…",
+  "invalid": "無法讀取這個檔案。請選擇有效的 BitTorrent v1 或 v1/v2 混合格式 .torrent 檔案。",
+  "related": "手上有磁力連結？開啟磁力連結檢視器"
+}

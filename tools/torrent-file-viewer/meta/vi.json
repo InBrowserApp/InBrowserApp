@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem tệp torrent",
+  "description": "Mở tệp .torrent trực tuyến để xem mã băm thông tin BitTorrent, danh sách tệp, tổng dung lượng và các tracker. Tệp được đọc cục bộ trong trình duyệt."
+}

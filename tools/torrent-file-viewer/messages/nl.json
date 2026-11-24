@@ -1,0 +1,9 @@
+{
+  "chooseFile": ".torrent-bestand kiezen",
+  "dropFile": "of sleep het hierheen",
+  "example": "Voorbeeld proberen",
+  "local": "Je browser leest het bestand lokaal.",
+  "reading": "Torrentmetadata lezen…",
+  "invalid": "Dit bestand kan niet worden gelezen. Kies een geldig .torrent-bestand voor BitTorrent v1 of een hybride torrent.",
+  "related": "Heb je een magnetlink? Open de magnetlinkviewer"
+}

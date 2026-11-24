@@ -1,0 +1,4 @@
+{
+  "name": "Magnetlänkvisare",
+  "description": "Granska en BitTorrent-magnetlänk och använd WebTorrent för att hämta fillista, total storlek och andra metadata innan du laddar ner."
+}

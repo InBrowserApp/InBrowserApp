@@ -43,6 +43,8 @@
     "./icons": "./src/icons/index.ts",
     "./lib/*": "./src/lib/*.ts",
     "./components/*": "./src/components/*.tsx",
+    "./astro/torrent-page": "./src/components/tool/torrent-page.astro",
+    "./torrent-messages": "./src/components/tool/torrent-messages.ts",
     "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
     "./comic-reader/*": "./src/components/tool/comic-reader/*.ts"
   }

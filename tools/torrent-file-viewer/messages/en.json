@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Choose .torrent file",
+  "dropFile": "or drop it here",
+  "example": "Try an example",
+  "local": "Read locally in your browser.",
+  "reading": "Reading torrent metadata…",
+  "invalid": "This file could not be read. Choose a valid BitTorrent v1 or hybrid .torrent file.",
+  "related": "Have a magnet link? Open Magnet Link Viewer"
+}

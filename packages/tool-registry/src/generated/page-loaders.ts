@@ -258,6 +258,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/mac-address-vendor-lookup/page"),
   "mac-to-ipv6-eui-64-converter": () =>
     import("@tool/mac-to-ipv6-eui-64-converter/page"),
+  "magnet-link-viewer": () => import("@tool/magnet-link-viewer/page"),
   "markdown-previewer": () => import("@tool/markdown-previewer/page"),
   "markdown-to-html-converter": () =>
     import("@tool/markdown-to-html-converter/page"),
@@ -418,6 +419,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   tldr: () => import("@tool/tldr/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "torrent-file-viewer": () => import("@tool/torrent-file-viewer/page"),
   "typst-to-pdf-converter": () => import("@tool/typst-to-pdf-converter/page"),
   "typst-viewer": () => import("@tool/typst-viewer/page"),
   "ulid-generator": () => import("@tool/ulid-generator/page"),

@@ -49,6 +49,8 @@ export default defineConfig({
     optimizeDeps: { exclude: ["@silurus/ooxml"] },
     resolve: {
       alias: {
+        // parse-torrent uses path to join the file path components.
+        path: require.resolve("path-browserify"),
         // MSG ANSI decoding uses iconv-lite through these browser packages.
         buffer: require.resolve("buffer/index.js"),
         string_decoder: require.resolve("string_decoder/lib/string_decoder.js"),

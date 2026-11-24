@@ -1,0 +1,13 @@
+{
+  "input": "Lien magnet",
+  "inspect": "Rechercher les métadonnées",
+  "example": "Essayer un exemple",
+  "network": "WebTorrent contacte les trackers et les pairs ou une source de métadonnées indiquée dans le lien.",
+  "loading": "Recherche des métadonnées du torrent…",
+  "cancel": "Annuler",
+  "invalid": "Saisissez un lien magnet contenant un info hash BitTorrent v1 valide (btih).",
+  "unavailable": "Impossible de récupérer les métadonnées. Réessayez ou ouvrez le fichier .torrent si vous l’avez.",
+  "timeout": "Le délai de recherche a expiré. Il se peut qu’aucun pair WebTorrent ni aucune source de métadonnées ne soit joignable.",
+  "linkDetails": "Informations du lien magnet",
+  "related": "Vous avez un fichier .torrent ? Ouvrir la visionneuse de fichiers torrent"
+}

@@ -1,0 +1,13 @@
+{
+  "input": "Link magnet",
+  "inspect": "Consultar metadados",
+  "example": "Experimentar um exemplo",
+  "network": "Usa o WebTorrent para se conectar a trackers, peers ou a uma fonte de metadados indicada no link.",
+  "loading": "Buscando metadados do torrent…",
+  "cancel": "Cancelar",
+  "invalid": "Insira um link magnet com um hash de informação BitTorrent v1 (btih) válido.",
+  "unavailable": "Não foi possível obter os metadados. Tente novamente ou abra o arquivo .torrent, se tiver um.",
+  "timeout": "Os metadados não chegaram a tempo. Talvez não haja peers WebTorrent acessíveis nem uma fonte de metadados para este torrent.",
+  "linkDetails": "Informações do link magnet",
+  "related": "Tem um arquivo .torrent? Abra o Visualizador de arquivos torrent"
+}

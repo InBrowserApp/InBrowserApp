@@ -1,0 +1,13 @@
+{
+  "input": "Enlace magnet",
+  "inspect": "Buscar metadatos",
+  "example": "Probar un ejemplo",
+  "network": "WebTorrent puede contactar con rastreadores, pares o una fuente de metadatos indicada en el enlace.",
+  "loading": "Buscando los metadatos del torrent…",
+  "cancel": "Cancelar",
+  "invalid": "Introduce un enlace magnet con un hash válido de BitTorrent v1 (btih).",
+  "unavailable": "No se pudieron recuperar los metadatos. Vuelve a intentarlo o abre el archivo .torrent si lo tienes.",
+  "timeout": "Los metadatos no llegaron a tiempo. Es posible que no haya pares de WebTorrent ni fuentes de metadatos accesibles para este torrent.",
+  "linkDetails": "Información del enlace magnet",
+  "related": "¿Tienes un archivo .torrent? Abre el visor de archivos torrent"
+}

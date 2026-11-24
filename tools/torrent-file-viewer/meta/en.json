@@ -1,0 +1,4 @@
+{
+  "name": "Torrent File Viewer",
+  "description": "Open a .torrent file online to view its BitTorrent info hash, file list, total size, and trackers. The file is read locally in your browser."
+}

@@ -9,6 +9,12 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@types/parse-torrent": 11.0.1
+  "@types/webtorrent": 3.0.0
+  memory-chunk-store: 1.3.5
+  parse-torrent: 11.0.24
+  path-browserify: 1.0.1
+  webtorrent: 3.0.21
   "@ffmpeg/core": 0.12.10
   "@ffmpeg/ffmpeg": 0.12.15
   "@aws-sdk/client-s3": 3.1174.0
@@ -344,6 +350,11 @@ catalog:
 # pnpm 10 catalogs do not support file: specifiers. Resolve the catalog's
 # SheetJS version to the unchanged local distribution through an override.
 overrides:
+  # The WebTorrent browser bundle needs no optional WebSocket native add-ons.
+  "bittorrent-tracker>bufferutil": "-"
+  "bittorrent-tracker>utf-8-validate": "-"
+  "ws>bufferutil": "-"
+  "ws>utf-8-validate": "-"
   xlsx: file:vendor/xlsx-0.20.3.tgz
   # These upstream dependency ranges still select vulnerable release lines.
   "basic-ftp@<6.2.6": "catalog:"
@@ -352,6 +363,10 @@ overrides:
   "minimatch@>=7 <11.0.8": "catalog:"
 
 allowBuilds:
+  # WebTorrent runs only through its prebuilt browser entry.
+  ip-set: false
+  node-datachannel: false
+  utp-native: false
   core-js: false
   es5-ext: false
   esbuild: true

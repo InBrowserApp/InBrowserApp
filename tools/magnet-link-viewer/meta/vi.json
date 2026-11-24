@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem liên kết magnet",
+  "description": "Kiểm tra liên kết magnet BitTorrent và dùng WebTorrent để tra cứu danh sách tệp, tổng dung lượng cùng các siêu dữ liệu khác trước khi tải xuống."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "种子文件查看器",
+  "description": "在线打开 .torrent 种子文件，查看 BitTorrent 信息哈希、文件列表、总大小和 Tracker。文件在浏览器中本地读取。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de arquivos torrent",
+  "description": "Abra um arquivo .torrent online para ver o hash de informação BitTorrent, a lista de arquivos, o tamanho total e os trackers. O arquivo é lido localmente no navegador."
+}
