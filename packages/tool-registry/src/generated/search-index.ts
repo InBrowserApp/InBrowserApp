@@ -23627,6 +23627,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mermaid-previewer",
+    category: "developer",
+    icon: "blocks",
+    tags: [
+      "mermaid",
+      "diagram",
+      "flowchart",
+      "sequence diagram",
+      "svg",
+      "png",
+      "preview",
+    ],
+    locales: {
+      ar: {
+        name: "معاين Mermaid",
+        description:
+          "حرّر شيفرة Mermaid وشاهد المخطط فورًا. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG.",
+      },
+      de: {
+        name: "Mermaid-Vorschau",
+        description:
+          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG oder PNG herunter.",
+      },
+      en: {
+        name: "Mermaid Previewer",
+        description:
+          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG or PNG.",
+      },
+      es: {
+        name: "Vista previa de Mermaid",
+        description:
+          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG o PNG.",
+      },
+      fr: {
+        name: "Aperçu Mermaid",
+        description:
+          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG ou PNG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Mermaid",
+        description:
+          "אפשר לערוך קוד Mermaid ולראות את התרשים מתעדכן בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו אותו כ-SVG או PNG.",
+      },
+      hi: {
+        name: "Mermaid प्रीव्यूअर",
+        description:
+          "Mermaid कोड संपादित करते हुए डायग्राम का लाइव प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG या PNG डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Mermaid",
+        description:
+          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG atau PNG.",
+      },
+      it: {
+        name: "Anteprima Mermaid",
+        description:
+          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG o PNG.",
+      },
+      ja: {
+        name: "Mermaid プレビューアー",
+        description:
+          "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid 미리보기",
+        description:
+          "Mermaid 코드를 편집하며 다이어그램을 실시간으로 확인하세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 살펴보고 SVG 또는 PNG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Mermaid",
+        description:
+          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG atau PNG.",
+      },
+      nl: {
+        name: "Mermaid-voorvertoner",
+        description:
+          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG of PNG.",
+      },
+      no: {
+        name: "Mermaid-forhåndsviser",
+        description:
+          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG eller PNG.",
+      },
+      pl: {
+        name: "Podgląd Mermaid",
+        description:
+          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go w formacie SVG albo PNG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Mermaid",
+        description:
+          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG ou PNG.",
+      },
+      ru: {
+        name: "Предпросмотр Mermaid",
+        description:
+          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG или PNG.",
+      },
+      sv: {
+        name: "Mermaid-förhandsgranskare",
+        description:
+          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG eller PNG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Mermaid",
+        description:
+          "แก้ไขโค้ด Mermaid พร้อมดูแผนภาพสด ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลดเป็น SVG หรือ PNG",
+      },
+      tr: {
+        name: "Mermaid Önizleyici",
+        description:
+          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış, sıralama veya ER diyagramı örneğini deneyin ve SVG ya da PNG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Mermaid",
+        description:
+          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG hoặc PNG.",
+      },
+      "zh-CN": {
+        name: "Mermaid 预览器",
+        description:
+          "编辑 Mermaid 代码并实时预览图表。试用流程图、时序图或 ER 图，然后下载 SVG 或 PNG。",
+      },
+      "zh-TW": {
+        name: "Mermaid 預覽器",
+        description:
+          "編輯 Mermaid 程式碼並即時預覽圖表。試用流程圖、循序圖或 ER 圖，再下載 SVG 或 PNG。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",

@@ -938,6 +938,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "media-info-viewer",
   },
   {
+    category: "developer",
+    name: "Mermaid プレビューアー",
+    slug: "mermaid-previewer",
+  },
+  {
     category: "document",
     name: "MHTMLからHTMLへの変換ツール",
     slug: "mhtml-to-html-converter",

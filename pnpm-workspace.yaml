@@ -261,6 +261,7 @@ catalog:
   lint-staged: ^17.6.1
   lucide-react: ^1.74.0
   marked: ^18.2.1
+  mermaid: 12.3.0
   mhtml-to-html: 2.2.1
   mime-db: ^1.54.0
   minimatch: ^11.0.8

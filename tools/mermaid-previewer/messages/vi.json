@@ -1,0 +1,16 @@
+{
+  "source": "Mã nguồn Mermaid",
+  "example": "Tải ví dụ",
+  "flowchart": "Lưu đồ",
+  "sequence": "Biểu đồ tuần tự",
+  "relationships": "Biểu đồ ER",
+  "preview": "Xem trước sơ đồ",
+  "empty": "Nhập mã Mermaid để xem trước sơ đồ.",
+  "loading": "Đang kết xuất sơ đồ…",
+  "invalid": "Không thể kết xuất sơ đồ Mermaid này. Hãy kiểm tra cú pháp và thử lại.",
+  "downloadSvg": "Tải SVG",
+  "downloadPng": "Tải PNG",
+  "exportError": "Không thể tạo PNG. Hãy thử tải SVG thay thế.",
+  "fit": "Vừa khung xem",
+  "actualSize": "Kích thước thực"
+}
