@@ -50,7 +50,7 @@ export function SessionLog({
   return (
     <div className="overflow-hidden rounded-xl border bg-card">
       <div className="flex flex-wrap items-end gap-2 border-b p-3 sm:p-4">
-        <h2 className="grow self-center text-sm font-semibold">
+        <h2 className="w-full grow self-center text-sm font-semibold sm:w-auto">
           {messages.log}
         </h2>
         <label className="flex items-center gap-2 text-sm">
@@ -64,45 +64,51 @@ export function SessionLog({
             <option value="hex">{messages.hex}</option>
           </select>
         </label>
-        <Button
-          type="button"
-          variant="outline"
-          size="icon"
-          aria-label={paused ? messages.resumeScroll : messages.pauseScroll}
-          title={paused ? messages.resumeScroll : messages.pauseScroll}
-          onClick={() => setPaused(!paused)}
-        >
-          {paused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}
-        </Button>
-        <Button
-          type="button"
-          variant="outline"
-          size="icon"
-          aria-label={messages.download}
-          title={messages.download}
-          disabled={!entries.length}
-          onClick={() =>
-            downloadBlob(
-              new Blob([formatLog(getLog(), display)], {
-                type: "text/plain;charset=utf-8",
-              }),
-              "serial-log.txt"
-            )
-          }
-        >
-          <Download aria-hidden="true" />
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          aria-label={messages.clear}
-          title={messages.clear}
-          disabled={!entries.length}
-          onClick={clear}
-        >
-          <Trash2 aria-hidden="true" />
-        </Button>
+        <div className="ms-auto flex items-center gap-2">
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            aria-label={paused ? messages.resumeScroll : messages.pauseScroll}
+            title={paused ? messages.resumeScroll : messages.pauseScroll}
+            onClick={() => setPaused(!paused)}
+          >
+            {paused ? (
+              <Play aria-hidden="true" />
+            ) : (
+              <Pause aria-hidden="true" />
+            )}
+          </Button>
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            aria-label={messages.download}
+            title={messages.download}
+            disabled={!entries.length}
+            onClick={() =>
+              downloadBlob(
+                new Blob([formatLog(getLog(), display)], {
+                  type: "text/plain;charset=utf-8",
+                }),
+                "serial-log.txt"
+              )
+            }
+          >
+            <Download aria-hidden="true" />
+          </Button>
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            aria-label={messages.clear}
+            title={messages.clear}
+            disabled={!entries.length}
+            onClick={clear}
+          >
+            <Trash2 aria-hidden="true" />
+          </Button>
+        </div>
       </div>
       <div
         ref={logPanel}
@@ -110,7 +116,7 @@ export function SessionLog({
         aria-label={messages.log}
         // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- Give keyboard users access to the scrolling log.
         tabIndex={0}
-        className="h-64 overflow-auto bg-muted/35 px-3 py-2 text-sm focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring sm:h-80 sm:px-4"
+        className="h-48 overflow-auto bg-muted/35 px-3 py-2 text-sm focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring sm:h-80 sm:px-4"
       >
         {entries.length === 0 ? (
           <p className="flex h-full items-center justify-center text-center text-muted-foreground">
