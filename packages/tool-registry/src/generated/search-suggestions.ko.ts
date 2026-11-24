@@ -383,6 +383,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "document",
+    name: "DjVu 뷰어",
+    slug: "djvu-viewer",
+  },
+  {
     category: "network",
     name: "DNS 조회",
     slug: "dns-lookup",

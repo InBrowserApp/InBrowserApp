@@ -9726,6 +9726,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "djvu-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: ["djvu", "djv", "viewer", "reader", "scanned", "book", "document"],
+    locales: {
+      ar: {
+        name: "عارض DjVu",
+        description:
+          "افتح ملفات ⁦.djvu⁩ و⁦.djv⁩ واقرأها عبر الإنترنت. قلّب الصفحات، وانتقل إلى أي صفحة برقمها، وكبّر تفاصيل الكتب والمستندات الممسوحة ضوئيًا. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "DjVu-Betrachter",
+        description:
+          "Öffnen und lesen Sie .djvu- und .djv-Dateien online. Blättern Sie, springen Sie direkt zu einer Seite und vergrößern Sie Scans. Die Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "DjVu Viewer",
+        description:
+          "Open and read .djvu and .djv files online. Turn pages, jump to a page number, and zoom in on scanned books and documents. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de DjVu",
+        description:
+          "Abre y lee archivos .djvu y .djv en línea. Pasa páginas, salta a una página concreta y amplía libros y documentos escaneados. Los archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse DjVu",
+        description:
+          "Ouvrez et lisez les fichiers .djvu et .djv en ligne. Tournez les pages, accédez à une page précise et zoomez sur vos livres et documents numérisés. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג DjVu",
+        description:
+          "פתחו וקראו קובצי ⁦.djvu⁩ ו־⁦.djv⁩ באינטרנט. דפדפו, עברו ישירות לעמוד לפי מספרו והגדילו פרטים בספרים ובמסמכים סרוקים. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "DjVu व्यूअर",
+        description:
+          "ऑनलाइन .djvu और .djv फ़ाइलें खोलें और पढ़ें। पेज पलटें, सीधे किसी पेज पर जाएँ और स्कैन की गई किताबों व दस्तावेज़ों को ज़ूम करके देखें। फ़ाइलें आपके डिवाइस पर ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil DjVu",
+        description:
+          "Buka dan baca file .djvu dan .djv secara online. Pindah ke halaman yang diinginkan dan perbesar pindaian buku atau dokumen. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore DjVu",
+        description:
+          "Apri e leggi file .djvu e .djv online. Sfoglia le pagine, vai direttamente a quella che cerchi e ingrandisci libri e documenti scansionati. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "DjVu ビューアー",
+        description:
+          ".djvu・.djv ファイルをオンラインで開いて読めます。ページの移動や指定、スキャンされた書籍や文書の拡大表示に対応。ファイルはお使いの端末内に保持されます。",
+      },
+      ko: {
+        name: "DjVu 뷰어",
+        description:
+          ".djvu 및 .djv 파일을 온라인에서 열고 읽으세요. 페이지를 넘기거나 지정한 페이지로 이동하고 스캔한 책과 문서를 확대할 수 있습니다. 파일은 기기에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Pemapar DjVu",
+        description:
+          "Buka dan baca fail .djvu dan .djv dalam talian. Selak halaman, lompat ke halaman tertentu dan zum buku atau dokumen imbasan. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "DjVu-viewer",
+        description:
+          "Open .djvu- en .djv-bestanden online. Blader door gescande boeken en documenten, ga direct naar een pagina en zoom in. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "DjVu-viser",
+        description:
+          "Åpne .djvu- og .djv-filer på nett. Bla i skannede bøker og dokumenter, gå rett til en side og zoom inn på detaljer. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka DjVu",
+        description:
+          "Otwieraj pliki .djvu i .djv online. Przeglądaj skany książek i dokumentów, przechodź do wybranej strony i powiększaj szczegóły. Pliki pozostają na urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de DjVu",
+        description:
+          "Abra e leia arquivos .djvu e .djv online. Passe de página, vá direto à página desejada e amplie livros e documentos digitalizados. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр DjVu",
+        description:
+          "Открывайте файлы .djvu и .djv онлайн, листайте страницы, переходите по номеру и увеличивайте сканы книг и документов. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "DjVu-visare",
+        description:
+          "Öppna .djvu- och .djv-filer online. Bläddra bland skannade sidor, gå direkt till en sida och zooma in på detaljer. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดู DjVu",
+        description:
+          "เปิดและอ่านไฟล์ .djvu และ .djv ออนไลน์ พลิกหน้า ข้ามไปยังหน้าที่ต้องการ และซูมดูหนังสือหรือเอกสารสแกน ไฟล์จะอยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DjVu Görüntüleyici",
+        description:
+          ".djvu ve .djv dosyalarını çevrimiçi açıp okuyun. Taranmış kitaplarda ve belgelerde sayfa çevirin, istediğiniz sayfaya geçin ve yakınlaştırın. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem DjVu",
+        description:
+          "Mở và đọc tệp .djvu và .djv trực tuyến. Lật trang, đến thẳng trang cần đọc và phóng to sách, tài liệu quét. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DjVu 查看器",
+        description:
+          "在线打开并阅读 .djvu 和 .djv 文件。翻页、跳转到指定页码，并放大查看扫描书籍和文档。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "DjVu 檢視器",
+        description:
+          "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "dns-lookup",
     category: "network",
     icon: "globe",
@@ -51392,6 +51515,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "裝置資訊",
         description:
           "從目前裝置檢視瀏覽器、顯示器、硬體、網路、儲存空間與功能支援詳細資料，不需上傳任何內容。",
+      },
+    },
+  },
+  "djvu-viewer": {
+    slug: "djvu-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: ["djvu", "djv", "viewer", "reader", "scanned", "book", "document"],
+    locales: {
+      ar: {
+        name: "عارض DjVu",
+        description:
+          "افتح ملفات ⁦.djvu⁩ و⁦.djv⁩ واقرأها عبر الإنترنت. قلّب الصفحات، وانتقل إلى أي صفحة برقمها، وكبّر تفاصيل الكتب والمستندات الممسوحة ضوئيًا. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "DjVu-Betrachter",
+        description:
+          "Öffnen und lesen Sie .djvu- und .djv-Dateien online. Blättern Sie, springen Sie direkt zu einer Seite und vergrößern Sie Scans. Die Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "DjVu Viewer",
+        description:
+          "Open and read .djvu and .djv files online. Turn pages, jump to a page number, and zoom in on scanned books and documents. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de DjVu",
+        description:
+          "Abre y lee archivos .djvu y .djv en línea. Pasa páginas, salta a una página concreta y amplía libros y documentos escaneados. Los archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse DjVu",
+        description:
+          "Ouvrez et lisez les fichiers .djvu et .djv en ligne. Tournez les pages, accédez à une page précise et zoomez sur vos livres et documents numérisés. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג DjVu",
+        description:
+          "פתחו וקראו קובצי ⁦.djvu⁩ ו־⁦.djv⁩ באינטרנט. דפדפו, עברו ישירות לעמוד לפי מספרו והגדילו פרטים בספרים ובמסמכים סרוקים. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "DjVu व्यूअर",
+        description:
+          "ऑनलाइन .djvu और .djv फ़ाइलें खोलें और पढ़ें। पेज पलटें, सीधे किसी पेज पर जाएँ और स्कैन की गई किताबों व दस्तावेज़ों को ज़ूम करके देखें। फ़ाइलें आपके डिवाइस पर ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil DjVu",
+        description:
+          "Buka dan baca file .djvu dan .djv secara online. Pindah ke halaman yang diinginkan dan perbesar pindaian buku atau dokumen. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore DjVu",
+        description:
+          "Apri e leggi file .djvu e .djv online. Sfoglia le pagine, vai direttamente a quella che cerchi e ingrandisci libri e documenti scansionati. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "DjVu ビューアー",
+        description:
+          ".djvu・.djv ファイルをオンラインで開いて読めます。ページの移動や指定、スキャンされた書籍や文書の拡大表示に対応。ファイルはお使いの端末内に保持されます。",
+      },
+      ko: {
+        name: "DjVu 뷰어",
+        description:
+          ".djvu 및 .djv 파일을 온라인에서 열고 읽으세요. 페이지를 넘기거나 지정한 페이지로 이동하고 스캔한 책과 문서를 확대할 수 있습니다. 파일은 기기에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Pemapar DjVu",
+        description:
+          "Buka dan baca fail .djvu dan .djv dalam talian. Selak halaman, lompat ke halaman tertentu dan zum buku atau dokumen imbasan. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "DjVu-viewer",
+        description:
+          "Open .djvu- en .djv-bestanden online. Blader door gescande boeken en documenten, ga direct naar een pagina en zoom in. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "DjVu-viser",
+        description:
+          "Åpne .djvu- og .djv-filer på nett. Bla i skannede bøker og dokumenter, gå rett til en side og zoom inn på detaljer. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka DjVu",
+        description:
+          "Otwieraj pliki .djvu i .djv online. Przeglądaj skany książek i dokumentów, przechodź do wybranej strony i powiększaj szczegóły. Pliki pozostają na urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de DjVu",
+        description:
+          "Abra e leia arquivos .djvu e .djv online. Passe de página, vá direto à página desejada e amplie livros e documentos digitalizados. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр DjVu",
+        description:
+          "Открывайте файлы .djvu и .djv онлайн, листайте страницы, переходите по номеру и увеличивайте сканы книг и документов. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "DjVu-visare",
+        description:
+          "Öppna .djvu- och .djv-filer online. Bläddra bland skannade sidor, gå direkt till en sida och zooma in på detaljer. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดู DjVu",
+        description:
+          "เปิดและอ่านไฟล์ .djvu และ .djv ออนไลน์ พลิกหน้า ข้ามไปยังหน้าที่ต้องการ และซูมดูหนังสือหรือเอกสารสแกน ไฟล์จะอยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DjVu Görüntüleyici",
+        description:
+          ".djvu ve .djv dosyalarını çevrimiçi açıp okuyun. Taranmış kitaplarda ve belgelerde sayfa çevirin, istediğiniz sayfaya geçin ve yakınlaştırın. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem DjVu",
+        description:
+          "Mở và đọc tệp .djvu và .djv trực tuyến. Lật trang, đến thẳng trang cần đọc và phóng to sách, tài liệu quét. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DjVu 查看器",
+        description:
+          "在线打开并阅读 .djvu 和 .djv 文件。翻页、跳转到指定页码，并放大查看扫描书籍和文档。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "DjVu 檢視器",
+        description:
+          "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
       },
     },
   },

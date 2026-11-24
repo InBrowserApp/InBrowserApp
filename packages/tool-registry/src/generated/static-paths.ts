@@ -6994,6 +6994,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "djvu-viewer",
+    language: "ar",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "de",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "en",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "es",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "fr",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "he",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "hi",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "id",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "it",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ja",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ko",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ms",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "nl",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "no",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "pl",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "pt",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ru",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "sv",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "th",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "tr",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "vi",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "dns-lookup",
     language: "ar",
   },

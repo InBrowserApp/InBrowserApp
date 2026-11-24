@@ -90,6 +90,7 @@ export {
   RectangleHorizontal,
   Ruler,
   Rows2,
+  Scan,
   ScanLine,
   ScanText,
   Search,

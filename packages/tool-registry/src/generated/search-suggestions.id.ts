@@ -383,6 +383,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "document",
+    name: "Penampil DjVu",
+    slug: "djvu-viewer",
+  },
+  {
     category: "network",
     name: "Pencarian DNS",
     slug: "dns-lookup",

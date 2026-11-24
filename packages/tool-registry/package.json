@@ -83,6 +83,7 @@
     "@tool/data-uri-to-file-converter": "workspace:*",
     "@tool/date-age-calculator": "workspace:*",
     "@tool/device-information": "workspace:*",
+    "@tool/djvu-viewer": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
     "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",

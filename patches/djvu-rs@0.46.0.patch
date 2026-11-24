@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -43,6 +43,8 @@
+       "types": "./djvu_rs.d.ts",
+       "import": "./djvu_rs.js",
+       "default": "./djvu_rs.js"
+-    }
++    },
++    "./scalar/djvu_rs_bg.wasm": "./scalar/djvu_rs_bg.wasm",
++    "./simd128/djvu_rs_bg.wasm": "./simd128/djvu_rs_bg.wasm"
+   }
+ }
