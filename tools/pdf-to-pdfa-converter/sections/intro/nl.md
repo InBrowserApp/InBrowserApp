@@ -11,12 +11,12 @@ PDF/A is de ISO 19005-reeks van PDF-standaarden voor het langdurig bewaren van d
 
 ## Welke PDF/A-standaard kan ik het beste kiezen?
 
-**PDF/A-2b** is een goede standaardkeuze voor algemene archivering. Kies **PDF/A-1b** wanneer een archiefdienst, rechtbank of indieningsportaal uitdrukkelijk om de oudere standaard vraagt. Beide profielen voldoen aan niveau B, dat gericht is op het behoud van het uiterlijk van de pagina’s.
+**PDF/A-2b** is een goede standaardkeuze voor algemene archivering. Kies **PDF/A-1b** wanneer een archiefdienst, rechtbank of indieningsportaal uitdrukkelijk om de oudere standaard vraagt. Beide profielen voldoen aan niveau B, dat gericht is op het behoud van het uiterlijk van de pagina’s. PDF/A-2b ondersteunt transparantie. Gebruik dit profiel voor documenten met transparante afbeeldingen of effecten als je archief deze standaard accepteert.
 
 ## Wat verandert er in de archiefkopie?
 
-De converter zet elke pagina in de oorspronkelijke volgorde om in een afbeelding. Ongebruikelijk grote of kleine pagina’s worden naar verhouding geschaald zodat ze binnen het archiefprofiel passen. Selecteerbare tekst verdwijnt, inclusief een eventuele OCR-laag. Ook links, bewerkbare formuliervelden, bijlagen en digitale handtekeningen verdwijnen. Bewaar het origineel als je tekst wilt doorzoeken, toegankelijkheidsfuncties nodig hebt, interactieve onderdelen wilt gebruiken of de oorspronkelijke handtekening wilt behouden.
+Tekst en vectorafbeeldingen blijven behouden in de PDF. Je kunt dus nog steeds tekst doorzoeken en kopiëren en illustraties vergroten. Een gescande pagina blijft een scan en behoudt een eventuele doorzoekbare tekstlaag. Als een lettertype ontbreekt, kan de converter een vervangend lettertype met dezelfde tekenbreedtes insluiten. De converter kan kleuren aanpassen of functies verwijderen die de gekozen standaard verbiedt, zoals JavaScript en bepaalde bijlagen. Bewaar het origineel als het een digitale handtekening bevat, want door de conversie vervalt die handtekening.
 
 ## Hoe wordt het PDF/A-bestand gecontroleerd?
 
-De browser opent het gemaakte bestand opnieuw en controleert de PDF-versie, de PDF/A-identificatie, het ingesloten kleurprofiel en de paginastructuur, die alleen uit afbeeldingen bestaat. Deze controles gelden voor bestanden die deze tool maakt. Gebruik [veraPDF](https://verapdf.org/) voor onafhankelijke validatie of als een archief om een volledig conformiteitsrapport vraagt. De conversie en ingebouwde controles vinden plaats op je eigen apparaat.
+De converter toetst tijdens het omzetten aan het gekozen PDF/A-profiel. Daarna opent de browser de archiefkopie opnieuw en controleert hij de PDF/A-identificatie, de paginageometrie en de doorzoekbare tekst. Je kunt de archiefkopie downloaden zodra de controles geslaagd zijn. Gebruik [veraPDF](https://verapdf.org/) voor een onafhankelijk conformiteitsrapport. Je document blijft tijdens het hele proces op je apparaat.

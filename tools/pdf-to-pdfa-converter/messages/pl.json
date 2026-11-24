@@ -3,13 +3,13 @@
   "dropHint": "Lub przeciągnij go tutaj",
   "changePdf": "Zmień plik PDF",
   "standard": "Standard PDF/A",
-  "part1": "Wybierz ten profil, jeśli archiwum lub portal składania dokumentów wymaga PDF/A-1b.",
+  "part1": "Wybierz ten profil, jeśli archiwum wymaga PDF/A-1b. W przypadku dokumentów z przezroczystością użyj PDF/A-2b.",
   "part2": "Zalecany dla większości archiwów, o ile nie wymagają innego standardu.",
-  "appearance": "Kopia archiwalna zachowuje wygląd stron w postaci obrazów. Tekst z możliwością zaznaczania, linki i załączniki są usuwane.",
+  "appearance": "Tekst nadal można wyszukiwać, a grafika wektorowa pozostaje ostra. Wybrany standard może wymagać zmian w czcionkach, kolorach lub funkcjach interaktywnych.",
   "convert": "Konwertuj do PDF/A",
   "cancel": "Anuluj",
   "opening": "Otwieranie PDF…",
-  "rendering": "Konwertowanie strony {page} z {total}…",
+  "converting": "Konwertowanie do PDF/A…",
   "checking": "Sprawdzanie kopii archiwalnej…",
   "ready": "Kopia archiwalna przeszła kontrolę",
   "download": "Pobierz PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "Przed konwersją odblokuj PDF zabezpieczony hasłem.",
   "xfa": "Ten plik PDF zawiera formularz XFA. Otwórz go w przeglądarce PDF, która wyświetla formularz, i przed konwersją zapisz kopię w standardowym formacie PDF.",
   "failed": "Nie udało się przekonwertować pliku PDF. Spróbuj użyć innej kopii.",
-  "checkFailed": "Kopia archiwalna nie przeszła kontroli dla wybranego standardu."
+  "checkFailed": "Kopia archiwalna nie przeszła kontroli dla wybranego standardu.",
+  "transparency": "Ten PDF zawiera elementy przezroczyste. Wybierz PDF/A-2b, aby je zachować, lub przed konwersją do PDF/A-1b wyeksportuj kopię ze spłaszczoną przezroczystością.",
+  "contentChanged": "Kopia archiwalna nie zachowała oryginalnego tekstu lub układu stron. Spróbuj wyeksportować nowy PDF z osadzonymi czcionkami."
 }

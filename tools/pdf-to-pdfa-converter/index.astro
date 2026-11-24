@@ -26,8 +26,11 @@ const Intro = resolveLocale<AstroComponentFactory>(
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <PdfToPdfa client:load lang={lang} messages={messages} />
+  <PdfToPdfa client:load messages={messages} />
   <ToolArticle className="rtl:[&_ol]:ml-0 rtl:[&_ol]:mr-6">
     <Intro />
   </ToolArticle>
+  <p class="text-xs text-muted-foreground">
+    <a href="/licenses/pdf-to-pdfa-converter.txt">FynePDF · MIT</a>
+  </p>
 </ToolPageShell>

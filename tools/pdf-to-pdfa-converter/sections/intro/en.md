@@ -11,12 +11,12 @@ PDF/A is the ISO 19005 family of PDF standards for long-term document preservati
 
 ## Which PDF/A standard should I choose?
 
-**PDF/A-2b** is a good default for general archiving. Choose **PDF/A-1b** when a records office, court, or submission portal explicitly asks for the older standard. Both profiles use level B, which focuses on preserving the visual appearance of the pages.
+**PDF/A-2b** is a good default for general archiving. Choose **PDF/A-1b** when a records office, court, or submission portal explicitly asks for the older standard. Both profiles use level B, which focuses on preserving the visual appearance of the pages. PDF/A-2b supports transparency. Use it for documents with transparent artwork or effects when your archive accepts it.
 
 ## What changes in the archive copy?
 
-The converter renders each page as an image in the original order. Unusually large or small pages are resized proportionally to fit the archive profile. Selectable text, including any OCR layer, is removed. Links, editable form fields, attachments, and digital signatures are also removed. Keep the original whenever you need search, accessibility, interactive features, or the original signature.
+Text and vector graphics stay in the PDF, so you can still search and copy text and enlarge illustrations. A scanned page remains a scan with any existing searchable text layer. If a font is missing, the converter can embed a replacement that uses the same character widths. It may adjust colors or remove features the selected standard forbids, such as JavaScript and some attachments. Keep the original if it carries a digital signature, since conversion invalidates that signature.
 
 ## How is the PDF/A file checked?
 
-The browser reopens the generated file and checks its PDF version, PDF/A identification, embedded color profile, and image-only page structure. The checks apply to the files this tool creates. For independent validation or when an archive requires a full conformance report, use [veraPDF](https://verapdf.org/). The conversion and built-in checks run on your device.
+The converter checks the selected PDF/A profile as it works. The browser then reopens the archive copy and checks its PDF/A identification, page geometry, and searchable text. The download becomes available after those checks pass. For an independent conformance report, use [veraPDF](https://verapdf.org/). Your document stays on your device throughout.

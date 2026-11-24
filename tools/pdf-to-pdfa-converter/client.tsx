@@ -13,20 +13,14 @@ import {
 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
-import type { Profile } from "./archive"
-import type { Progress } from "./convert"
+import type { Profile } from "./engine/protocol"
+import type { ConversionError, Progress } from "./convert"
 import type englishMessages from "./messages/en.json"
 
 export type Messages = typeof englishMessages
-type ErrorKey =
-  | "oneFile"
-  | "invalid"
-  | "encrypted"
-  | "xfa"
-  | "failed"
-  | "checkFailed"
+type ErrorKey = "oneFile" | ConversionError
 type Job =
-  | { status: "working"; progress?: Progress }
+  | { status: "working"; progress: "opening" | Progress }
   | { status: "error"; key: ErrorKey }
   | { status: "ready"; url: string; filename: string }
 
@@ -35,13 +29,7 @@ const profiles = [
   { id: 1, label: "PDF/A-1b" },
 ] as const
 
-export default function PdfToPdfa({
-  lang,
-  messages: m,
-}: {
-  lang: string
-  messages: Messages
-}) {
+export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
   const id = useId()
   const picker = useRef<HTMLInputElement>(null)
   const startButton = useRef<HTMLButtonElement>(null)
@@ -75,7 +63,7 @@ export default function PdfToPdfa({
     if (!file || active.current) return
     const run = new AbortController()
     active.current = run
-    setJob({ status: "working" })
+    setJob({ status: "working", progress: "opening" })
     try {
       const { convertPdf } = await import("./convert")
       const result = await convertPdf(file, {
@@ -108,17 +96,6 @@ export default function PdfToPdfa({
     setJob(null)
     startButton.current?.focus()
   }
-
-  const numbers = new Intl.NumberFormat(lang)
-  const progress = busy ? job.progress : undefined
-  const progressText =
-    progress?.stage === "rendering"
-      ? m.rendering
-          .replace("{page}", numbers.format(progress.page))
-          .replace("{total}", numbers.format(progress.total))
-      : progress?.stage === "checking"
-        ? m.checking
-        : m.opening
 
   return (
     <div className="grid gap-4">
@@ -244,7 +221,7 @@ export default function PdfToPdfa({
               className="size-4 shrink-0 motion-safe:animate-spin"
               aria-hidden="true"
             />
-            {progressText}
+            {m[job.progress]}
           </p>
         )}
         {job?.status === "ready" && (

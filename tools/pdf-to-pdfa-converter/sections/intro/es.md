@@ -11,12 +11,12 @@ PDF/A es el formato definido por la familia de normas ISO 19005 para conservar d
 
 ## ¿Qué estándar PDF/A conviene elegir?
 
-**PDF/A-2b** es una buena opción para el archivado general. Elige **PDF/A-1b** si un archivo, un juzgado o un portal de entrega pide expresamente ese estándar anterior. Ambos perfiles corresponden al nivel B, que se centra en conservar el aspecto visual de las páginas.
+**PDF/A-2b** es una buena opción para el archivado general. Elige **PDF/A-1b** si un archivo, un juzgado o un portal de entrega pide expresamente ese estándar anterior. Ambos perfiles corresponden al nivel B, que se centra en conservar el aspecto visual de las páginas. PDF/A-2b admite transparencias. Úsalo para documentos con gráficos o efectos transparentes si tu archivo lo acepta.
 
 ## ¿Qué cambia en la copia PDF/A?
 
-El convertidor genera una imagen de cada página y conserva el orden original. Las páginas especialmente grandes o pequeñas se ajustan de forma proporcional al perfil de archivado. Se elimina el texto seleccionable, incluida cualquier capa de OCR. También se eliminan los enlaces, los campos de formulario editables, los archivos adjuntos y las firmas digitales. Conserva el original si necesitas buscar texto, usar funciones de accesibilidad, interactuar con el documento o conservar la firma original.
+El texto y los gráficos vectoriales se conservan en el PDF. Puedes seguir buscando y copiando texto y ampliar las ilustraciones. Las páginas escaneadas conservan su imagen y su capa de texto con opción de búsqueda, si la tienen. Si falta una fuente, la herramienta puede incrustar otra con los mismos anchos de carácter. También puede ajustar los colores o quitar elementos que el estándar elegido no permite, como JavaScript y ciertos archivos adjuntos. Conserva el original si contiene una firma digital, ya que la conversión invalida esa firma.
 
 ## ¿Cómo se comprueba el archivo PDF/A?
 
-El navegador vuelve a abrir el archivo generado para comprobar la versión de PDF, la identificación PDF/A, el perfil de color incrustado y que las páginas solo contengan imágenes. Estas comprobaciones se aplican a los archivos que genera la herramienta. Si necesitas una validación independiente o un informe completo de conformidad, usa [veraPDF](https://verapdf.org/). La conversión y las comprobaciones de la herramienta se realizan en tu dispositivo.
+La herramienta comprueba los requisitos del perfil PDF/A elegido durante la conversión. Luego el navegador vuelve a abrir la copia PDF/A y comprueba su identificación PDF/A, la geometría de las páginas y el texto en el que se pueden hacer búsquedas. Podrás descargarla cuando se superen las comprobaciones. Para obtener un informe de conformidad independiente, usa [veraPDF](https://verapdf.org/). El documento permanece en tu dispositivo durante todo el proceso.

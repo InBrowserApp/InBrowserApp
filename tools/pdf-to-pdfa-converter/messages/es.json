@@ -3,13 +3,13 @@
   "dropHint": "O arrástralo y suéltalo aquí",
   "changePdf": "Cambiar PDF",
   "standard": "Estándar PDF/A",
-  "part1": "Elige esta opción si tu archivo o portal de entrega exige PDF/A-1b.",
+  "part1": "Elige esta opción si tu archivo exige PDF/A-1b. Usa PDF/A-2b para documentos con transparencias.",
   "part2": "Opción recomendada para archivar documentos, salvo que te pidan otro estándar.",
-  "appearance": "La copia PDF/A guarda las páginas como imágenes para conservar su aspecto. El texto deja de ser seleccionable y se eliminan los enlaces y los archivos adjuntos.",
+  "appearance": "Puedes seguir buscando texto y los gráficos vectoriales conservan su nitidez. El estándar elegido puede exigir cambios en las fuentes, los colores o los elementos interactivos.",
   "convert": "Convertir a PDF/A",
   "cancel": "Cancelar",
   "opening": "Abriendo el PDF…",
-  "rendering": "Convirtiendo la página {page} de {total}…",
+  "converting": "Convirtiendo a PDF/A…",
   "checking": "Comprobando la copia PDF/A…",
   "ready": "La copia PDF/A superó las comprobaciones",
   "download": "Descargar PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "Desbloquea este PDF protegido con contraseña antes de convertirlo.",
   "xfa": "Este PDF contiene un formulario XFA. Ábrelo en un lector que muestre el formulario y guarda una copia en PDF estándar antes de convertirla.",
   "failed": "No se pudo convertir el PDF. Prueba con otra copia.",
-  "checkFailed": "La copia PDF/A no superó las comprobaciones del estándar seleccionado."
+  "checkFailed": "La copia PDF/A no superó las comprobaciones del estándar seleccionado.",
+  "transparency": "Este PDF contiene transparencias. Elige PDF/A-2b para conservarlas o exporta una copia con las transparencias acopladas antes de convertirla a PDF/A-1b.",
+  "contentChanged": "La copia PDF/A no conservó el texto o el diseño de página del original. Prueba a exportar un PDF nuevo con las fuentes incrustadas."
 }

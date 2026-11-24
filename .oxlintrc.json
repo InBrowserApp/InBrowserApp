@@ -76,6 +76,7 @@
     ".agents/**",
     ".playwright-cli/**",
     "coverage/**",
+    "tools/pdf-to-pdfa-converter/engine/generated/fynepdf.mjs",
     "node_modules/**"
   ],
   "settings": {

@@ -3,13 +3,13 @@
   "dropHint": "Eller dra och släpp filen här",
   "changePdf": "Byt PDF",
   "standard": "PDF/A-standard",
-  "part1": "Välj det här om arkivet eller inlämningsportalen kräver PDF/A-1b.",
+  "part1": "Välj det här om arkivet kräver PDF/A-1b. Använd PDF/A-2b för dokument med genomskinlighet.",
   "part2": "Rekommenderas för de flesta arkiv, såvida de inte kräver en annan standard.",
-  "appearance": "Arkivkopian bevarar sidornas utseende som bilder. Möjligheten att markera text försvinner, liksom länkar och bilagor.",
+  "appearance": "Texten förblir sökbar och vektorgrafiken behåller skärpan. Den valda standarden kan kräva ändringar av teckensnitt, färger eller interaktiva funktioner.",
   "convert": "Konvertera till PDF/A",
   "cancel": "Avbryt",
   "opening": "Öppnar PDF-filen…",
-  "rendering": "Konverterar sida {page} av {total}…",
+  "converting": "Konverterar till PDF/A…",
   "checking": "Kontrollerar arkivkopian…",
   "ready": "Arkivkopian klarade kontrollerna",
   "download": "Ladda ned PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "Lås upp den lösenordsskyddade PDF-filen innan du konverterar den.",
   "xfa": "Den här PDF-filen använder ett XFA-formulär. Öppna filen i en PDF-läsare som kan visa formuläret och spara en vanlig PDF-kopia innan du konverterar den.",
   "failed": "Det gick inte att konvertera PDF-filen. Prova en annan kopia.",
-  "checkFailed": "Arkivkopian klarade inte kontrollerna för den valda standarden."
+  "checkFailed": "Arkivkopian klarade inte kontrollerna för den valda standarden.",
+  "transparency": "Den här PDF-filen använder genomskinlighet. Välj PDF/A-2b för att behålla den, eller exportera en kopia med förenklad genomskinlighet innan du konverterar till PDF/A-1b.",
+  "contentChanged": "Texten eller sidlayouten i arkivkopian avviker från originalet. Prova att exportera en ny PDF med inbäddade teckensnitt."
 }

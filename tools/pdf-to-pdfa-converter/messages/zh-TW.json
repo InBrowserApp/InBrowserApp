@@ -3,13 +3,13 @@
   "dropHint": "也可以將檔案拖曳到這裡",
   "changePdf": "更換 PDF",
   "standard": "PDF/A 標準",
-  "part1": "如果檔案管理單位或提交平台要求 PDF/A-1b，請選擇這個標準。",
+  "part1": "如果檔案管理單位要求 PDF/A-1b，請選擇這個標準。含有透明效果的文件請選擇 PDF/A-2b。",
   "part2": "除非有指定標準，這個版本適合大多數長期保存需求。",
-  "appearance": "封存副本會以影像保留頁面外觀，轉換後無法選取文字，連結和附件也會移除。",
+  "appearance": "轉換後仍可搜尋文字，向量圖形放大後依然清晰。依所選標準，字型、色彩或互動功能可能會調整。",
   "convert": "轉成 PDF/A",
   "cancel": "取消",
   "opening": "正在開啟 PDF…",
-  "rendering": "正在轉換第 {page} 頁，共 {total} 頁…",
+  "converting": "正在轉成 PDF/A…",
   "checking": "正在檢查封存副本…",
   "ready": "封存副本已通過檢查",
   "download": "下載 PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "請先解除這份 PDF 的密碼保護，再進行轉換。",
   "xfa": "這份 PDF 含有 XFA 表單。請用支援 XFA 的閱讀器開啟檔案，另存為一般 PDF 後再轉換。",
   "failed": "無法轉換這份 PDF。請試用另一份檔案。",
-  "checkFailed": "封存副本未通過所選標準的檢查。"
+  "checkFailed": "封存副本未通過所選標準的檢查。",
+  "transparency": "這份 PDF 含有透明效果。選擇 PDF/A-2b 可保留透明效果。若要轉成 PDF/A-1b，請先匯出已平面化透明度的 PDF 副本。",
+  "contentChanged": "封存副本無法保留原始文字或頁面配置。請試著重新匯出一份已嵌入字型的 PDF。"
 }

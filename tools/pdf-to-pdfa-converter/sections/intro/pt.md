@@ -11,12 +11,12 @@ PDF/A é a família de padrões ISO 19005 para a preservação de documentos PDF
 
 ## Qual padrão PDF/A devo escolher?
 
-**PDF/A-2b** é uma boa opção para arquivamento em geral. Escolha **PDF/A-1b** se o setor de arquivo, o tribunal ou o portal de envio exigir expressamente essa versão anterior. Os dois perfis usam o nível B, voltado à preservação da aparência das páginas.
+**PDF/A-2b** é uma boa opção para arquivamento em geral. Escolha **PDF/A-1b** se o setor de arquivo, o tribunal ou o portal de envio exigir expressamente essa versão anterior. Os dois perfis usam o nível B, voltado à preservação da aparência das páginas. PDF/A-2b aceita transparência. Use esse perfil para documentos com elementos gráficos ou efeitos transparentes quando o arquivo o aceitar.
 
 ## O que muda na cópia de arquivamento?
 
-A ferramenta transforma cada página em uma imagem, mantendo a ordem original. Páginas muito grandes ou muito pequenas são redimensionadas proporcionalmente para se adequar ao perfil de arquivamento. O texto selecionável, incluindo qualquer camada de OCR, é removido. Links, campos de formulário editáveis, anexos e assinaturas digitais também são removidos. Guarde o original se precisar de busca no texto, acessibilidade, recursos interativos ou da assinatura original.
+O texto e os gráficos vetoriais continuam no PDF, então você ainda pode pesquisar e copiar texto e ampliar as ilustrações. Uma página digitalizada continua sendo uma digitalização e mantém qualquer camada de texto pesquisável existente. Se faltar alguma fonte, o conversor pode incorporar uma substituta com caracteres da mesma largura. A ferramenta pode ajustar cores ou remover recursos proibidos pelo padrão escolhido, como JavaScript e alguns anexos. Se o arquivo tiver assinatura digital, guarde o original, pois a conversão invalida a assinatura.
 
 ## Como o arquivo PDF/A é verificado?
 
-O navegador reabre o arquivo gerado e verifica a versão do PDF, a identificação PDF/A, o perfil de cor incorporado e a estrutura das páginas, que contêm apenas imagens. As verificações se aplicam aos arquivos criados pela ferramenta. Para uma validação independente ou quando o arquivo exigir um relatório de conformidade completo, use o [veraPDF](https://verapdf.org/). A conversão e as verificações integradas ocorrem no seu dispositivo.
+O conversor verifica o perfil PDF/A selecionado durante a conversão. Em seguida, o navegador reabre a cópia de arquivamento e verifica a identificação PDF/A, a geometria das páginas e o texto pesquisável. O download fica disponível quando a cópia passa nessas verificações. Para obter um relatório de conformidade independente, use o [veraPDF](https://verapdf.org/). O documento permanece no seu dispositivo durante todo o processo.
