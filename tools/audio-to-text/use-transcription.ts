@@ -78,7 +78,7 @@ function useTranscription() {
     function run(audio: Float32Array<ArrayBuffer>, cpuOnly: boolean) {
       try {
         const worker =
-          model === "senseVoice"
+          model === "senseVoice" || model === "senseVoiceGpu"
             ? new Worker(
                 new URL("./workers/sense-voice.worker.ts", import.meta.url),
                 { type: "module" }

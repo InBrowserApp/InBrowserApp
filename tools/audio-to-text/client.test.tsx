@@ -206,14 +206,18 @@ it("keeps compatible languages when switching engines and resets unsupported lan
   expect(codes()).toContain("de")
   expect(codes()).not.toContain("yue")
   changeLanguage("de")
-  await chooseModel(/^SenseVoiceSmall/)
+  await chooseModel(/^SenseVoiceSmall \(CPU\)/)
   expect(new Set(codes())).toEqual(new Set(["", "zh", "yue", "en", "ja", "ko"]))
   expect(language.value).toBe("")
 
   changeLanguage("ja")
   await chooseModel(/^Whisper Base/)
   expect(language.value).toBe("ja")
-  await chooseModel(/^SenseVoiceSmall/)
+  await chooseModel(/^SenseVoiceSmall \(CPU\)/)
+  expect(language.value).toBe("ja")
+
+  await chooseModel(/^SenseVoiceSmall \(WebGPU\)/)
+  expect(new Set(codes())).toEqual(new Set(["", "zh", "yue", "en", "ja", "ko"]))
   expect(language.value).toBe("ja")
 
   changeLanguage("yue")
@@ -360,13 +364,18 @@ it("previews and exports plain text without cue times, including edits after com
 it("retries with the same samples on CPU and ignores results from a canceled run", async () => {
   const view = renderTool()
   choose(view.input)
+  await chooseModel(/^SenseVoiceSmall \(WebGPU\)/)
   fireEvent.click(view.start)
   await waitFor(() => expect(workers).toHaveLength(1))
+  expect(workers[0]!.postMessage).toHaveBeenCalledWith(
+    { audio: decoded, model: "senseVoiceGpu", language: "", cpuOnly: false },
+    [decoded.buffer]
+  )
   workers[0]!.emit({ type: "retry", audio: decoded })
   expect(workers[0]!.terminate).toHaveBeenCalledOnce()
   const cpu = workers[1]!
   expect(cpu.postMessage).toHaveBeenCalledWith(
-    { audio: decoded, model: "base", language: "", cpuOnly: true },
+    { audio: decoded, model: "senseVoiceGpu", language: "", cpuOnly: true },
     [decoded.buffer]
   )
   expect(screen.getByText(messages.cpuFallback)).toBeDefined()

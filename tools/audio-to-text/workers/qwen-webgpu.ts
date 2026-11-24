@@ -1,10 +1,10 @@
 import { PreTrainedTokenizer } from "@huggingface/transformers"
-import { env, InferenceSession, Tensor } from "onnxruntime-web/webgpu"
-import mjsUrl from "onnxruntime-web/ort-wasm-simd-threaded.asyncify.mjs?url"
-import wasmUrl from "onnxruntime-web/ort-wasm-simd-threaded.asyncify.wasm?gzip-url"
+import { InferenceSession, Tensor } from "onnxruntime-web/webgpu"
 import { QWEN_LANGUAGES } from "../models"
 import { qwenFeatureExtractor } from "./qwen-features"
+import { findWebGpuAdapter, initializeWebGpu } from "./webgpu-runtime"
 import type { DownloadModelAsset } from "./model-download"
+import type { WebGpuAdapter } from "./webgpu-runtime"
 
 const MODEL_URL =
   "https://huggingface.co/jiangzhuo9357/Qwen3-ASR-0.6B-ONNX/resolve/4a01b95fafe2c9e3af77e33c18bbb7de349c62f6"
@@ -25,9 +25,6 @@ const QWEN_GPU_ASSETS = Object.values(FILES).map(([path, size]) => ({
   url: `${MODEL_URL}/${path}`,
   size,
 }))
-type Adapter = NonNullable<typeof env.webgpu.adapter> & {
-  readonly info?: { readonly isFallbackAdapter?: boolean }
-}
 type PromptConfig = {
   prompt: {
     prefix_ids: number[]
@@ -38,38 +35,6 @@ type PromptConfig = {
     max_new_tokens: number
   }
   language_prefix_ids: Record<string, number[]>
-}
-
-async function findQwenGpu() {
-  try {
-    const gpu = (
-      navigator as Navigator & {
-        gpu?: {
-          requestAdapter: (options: {
-            powerPreference: string
-          }) => Promise<Adapter | null>
-        }
-      }
-    ).gpu
-    const adapter = await gpu?.requestAdapter({
-      powerPreference: "high-performance",
-    })
-    return adapter && !adapter.info?.isFallbackAdapter ? adapter : undefined
-  } catch {
-    return undefined
-  }
-}
-
-async function initializeGpu(adapter: Adapter) {
-  const response = await fetch(new URL(wasmUrl, self.location.href))
-  if (!response.ok || !response.body)
-    throw new Error("Could not load the WebGPU runtime")
-  env.wasm.wasmBinary = await new Response(
-    response.body.pipeThrough(new DecompressionStream("gzip"))
-  ).arrayBuffer()
-  env.wasm.wasmPaths = { mjs: new URL(mjsUrl, self.location.href).href }
-  env.wasm.numThreads = 1
-  env.webgpu.adapter = adapter
 }
 
 function positions(from: number, length: number) {
@@ -88,8 +53,11 @@ function bestToken(scores: Float32Array) {
   return best
 }
 
-async function loadQwenGpu(download: DownloadModelAsset, adapter: Adapter) {
-  await initializeGpu(adapter)
+async function loadQwenGpu(
+  download: DownloadModelAsset,
+  adapter: WebGpuAdapter
+) {
+  await initializeWebGpu(adapter)
   function asset([path, size]: readonly [string, number]) {
     return download({ url: `${MODEL_URL}/${path}`, size })
   }
@@ -231,4 +199,4 @@ async function loadQwenGpu(download: DownloadModelAsset, adapter: Adapter) {
   }
 }
 
-export { findQwenGpu, loadQwenGpu, QWEN_GPU_ASSETS }
+export { findWebGpuAdapter as findQwenGpu, loadQwenGpu, QWEN_GPU_ASSETS }
