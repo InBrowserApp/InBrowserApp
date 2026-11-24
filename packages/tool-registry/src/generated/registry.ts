@@ -6444,6 +6444,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
+      },
+    },
+  },
+  {
     slug: "chmod-calculator",
     category: "developer",
     icon: "lock",
@@ -47979,6 +48110,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "國字大寫轉換器",
         description:
           "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
+      },
+    },
+  },
+  "chm-viewer": {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
       },
     },
   },

@@ -4602,6 +4602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chm-viewer",
+    language: "ar",
+  },
+  {
+    slug: "chm-viewer",
+    language: "de",
+  },
+  {
+    slug: "chm-viewer",
+    language: "en",
+  },
+  {
+    slug: "chm-viewer",
+    language: "es",
+  },
+  {
+    slug: "chm-viewer",
+    language: "fr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "he",
+  },
+  {
+    slug: "chm-viewer",
+    language: "hi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "id",
+  },
+  {
+    slug: "chm-viewer",
+    language: "it",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ja",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ko",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ms",
+  },
+  {
+    slug: "chm-viewer",
+    language: "nl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "no",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pt",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ru",
+  },
+  {
+    slug: "chm-viewer",
+    language: "sv",
+  },
+  {
+    slug: "chm-viewer",
+    language: "th",
+  },
+  {
+    slug: "chm-viewer",
+    language: "tr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "vi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "chm-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "chmod-calculator",
     language: "ar",
   },
