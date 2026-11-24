@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react"
 
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
+import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
 import {
@@ -22,12 +23,10 @@ type ErrorKey = "oneFile" | ConversionError
 type Job =
   | { status: "working"; progress: "opening" | Progress }
   | { status: "error"; key: ErrorKey }
-  | { status: "ready"; url: string; filename: string }
+  | { status: "ready"; url: string; filename: string; profile: Profile }
 
-const profiles = [
-  { id: 2, label: "PDF/A-2b" },
-  { id: 1, label: "PDF/A-1b" },
-] as const
+const profiles = [2, 1] as const
+const profileLabels = { 1: "PDF/A-1b", 2: "PDF/A-2b" } as const
 
 export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
   const id = useId()
@@ -80,6 +79,7 @@ export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
               status: "ready",
               url: URL.createObjectURL(result.blob),
               filename: `${file.name.replace(/\.pdf$/i, "")}-pdfa-${profile}b.pdf`,
+              profile,
             }
           : { status: "error", key: result.status }
       )
@@ -158,7 +158,7 @@ export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
             >
               <legend className="mb-2 font-medium">{m.standard}</legend>
               <div className="grid grid-cols-2 gap-2">
-                {profiles.map(({ id: value, label }) => (
+                {profiles.map((value) => (
                   <label
                     key={value}
                     className="flex min-h-10 cursor-pointer items-center gap-2 rounded-lg border bg-background px-2.5 py-1.5 has-checked:border-primary/65 has-checked:bg-primary/5 has-disabled:opacity-60"
@@ -174,7 +174,7 @@ export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
                         setJob(null)
                       }}
                     />
-                    <span dir="ltr">{label}</span>
+                    <span dir="ltr">{profileLabels[value]}</span>
                   </label>
                 ))}
               </div>
@@ -232,7 +232,12 @@ export default function PdfToPdfa({ messages: m }: { messages: Messages }) {
                 aria-hidden="true"
               />
               <div className="min-w-0">
-                <p className="text-sm font-medium">{m.ready}</p>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <p className="text-sm font-medium">{m.ready}</p>
+                  <Badge variant="outline" dir="ltr">
+                    {profileLabels[job.profile]}
+                  </Badge>
+                </div>
                 <p
                   className="text-sm wrap-anywhere text-muted-foreground"
                   dir="auto"
