@@ -193,7 +193,7 @@ function ComposeValidator({ messages }: { messages: typeof EnglishMessages }) {
                 className="mt-0.5 size-4 shrink-0 text-destructive"
               />
             ) : null}
-            {issues && !invalid ? (
+            {issues && !invalid && !error ? (
               <Check
                 aria-hidden="true"
                 className="mt-0.5 size-4 shrink-0 text-emerald-600 dark:text-emerald-400"
@@ -222,9 +222,17 @@ function ComposeValidator({ messages }: { messages: typeof EnglishMessages }) {
                         {path}
                       </code>
                     ) : null}
-                    <bdi dir="ltr" className="block text-left break-words">
-                      {code ? messages[code] : message}
-                    </bdi>
+                    {code ? (
+                      <span>{messages[code]}</span>
+                    ) : (
+                      <bdi
+                        dir="ltr"
+                        lang="en"
+                        className="block text-left wrap-break-word"
+                      >
+                        {message}
+                      </bdi>
+                    )}
                   </button>
                 </li>
               ))}

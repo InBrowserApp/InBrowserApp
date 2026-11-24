@@ -38,7 +38,7 @@ describe("ComposeValidator", () => {
     const editor = screen.getByLabelText<HTMLTextAreaElement>(
       messages.inputLabel
     )
-    const source = "services:\n  web:\n    typo: nginx\n"
+    const source = "services:\n  web:\n    typo: nginx\n    image: []\n"
     fireEvent.change(editor, { target: { value: source } })
     fireEvent.keyDown(editor, { ctrlKey: true, key: "Enter" })
 
@@ -49,7 +49,9 @@ describe("ComposeValidator", () => {
     expect(editor.selectionStart).toBe(source.indexOf("typo"))
 
     fireEvent.change(editor, {
-      target: { value: source.replace("typo", "image") },
+      target: {
+        value: source.replace("    image: []\n", "").replace("typo", "image"),
+      },
     })
     expect(screen.getByText(messages.idle)).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.validate }))
@@ -71,6 +73,8 @@ describe("ComposeValidator", () => {
       target: { files: [{ text: async () => "services:\r\n  web: {}" }] },
     })
     await waitFor(() => expect(editor.value).toBe("services:\n  web: {}"))
+    fireEvent.click(screen.getByRole("button", { name: messages.validate }))
+    expect(await screen.findByText(messages.valid)).toBeTruthy()
 
     fireEvent.change(input, {
       target: {
