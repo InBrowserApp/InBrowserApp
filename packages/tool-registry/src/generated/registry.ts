@@ -5845,10 +5845,15 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         description:
           "Find the tempo of a song or audio loop in beats per minute. Compare half and double BPM, play the original audio, and copy the estimate.",
       },
+      es: {
+        name: "Detector de BPM",
+        description:
+          "Estima el tempo de una canción o un bucle en pulsos por minuto. Compara la mitad y el doble de los BPM, escucha el audio original y copia el resultado.",
+      },
       fr: {
         name: "Détecteur de BPM",
         description:
-          "Trouvez le tempo d’un morceau ou d’une boucle audio en battements par minute. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez l’estimation.",
+          "Trouvez le tempo d’un morceau ou d’une boucle en BPM. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez la valeur estimée.",
       },
       he: {
         name: "מזהה קצב מוזיקלי (BPM)",
@@ -5865,10 +5870,15 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         description:
           "Cari tahu tempo lagu atau loop audio dalam ketukan per menit. Bandingkan setengah dan dua kali BPM, putar audio asli, dan salin perkiraannya.",
       },
+      it: {
+        name: "Rilevatore di BPM",
+        description:
+          "Trova il tempo di un brano o di un loop audio in battiti al minuto. Confronta la metà e il doppio dei BPM, ascolta l’originale e copia il valore stimato.",
+      },
       ja: {
         name: "BPM検出ツール",
         description:
-          "曲や音声ループのテンポを1分あたりの拍数（BPM）で調べます。推定値の半分と2倍を比較でき、元の音声の再生やBPMのコピーもできます。",
+          "曲やオーディオループのテンポを1分あたりの拍数（BPM）で調べます。推定値の半分と2倍を比較でき、元の音声の再生やBPMのコピーもできます。",
       },
       ko: {
         name: "BPM 측정기",
@@ -5888,12 +5898,17 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       no: {
         name: "BPM-detektor",
         description:
-          "Finn tempoet i en låt eller en lydsløyfe i slag per minutt. Sammenlign halvt og dobbelt tempo, spill av originalen og kopier anslaget.",
+          "Finn tempoet i en låt eller en lydsløyfe i slag per minutt. Sammenlign halvt og dobbelt tempo, spill av originalen og kopier BPM-verdien.",
       },
       pl: {
         name: "Wykrywacz BPM",
         description:
           "Sprawdź tempo utworu lub pętli w uderzeniach na minutę. Porównaj tempo o połowę wolniejsze i dwa razy szybsze, odsłuchaj plik i skopiuj wynik.",
+      },
+      pt: {
+        name: "Detetor de BPM",
+        description:
+          "Estime o andamento de uma música ou loop em batidas por minuto. Consulte a metade e o dobro dos BPM, ouça o áudio original e copie o resultado.",
       },
       ru: {
         name: "Определение BPM",
@@ -5903,7 +5918,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       sv: {
         name: "BPM-detektor",
         description:
-          "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera uppskattningen.",
+          "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera BPM-värdet.",
       },
       th: {
         name: "เครื่องมือตรวจหา BPM",
@@ -5914,6 +5929,11 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "BPM Bulucu",
         description:
           "Şarkı veya ses döngüsünün dakikadaki vuruş sayısını bulun. Yarım ve çift tempoyu karşılaştırın, orijinal kaydı dinleyin ve tahmini BPM’yi kopyalayın.",
+      },
+      vi: {
+        name: "Dò BPM",
+        description:
+          "Tìm nhịp độ của bài hát hoặc đoạn âm thanh lặp theo số nhịp mỗi phút. So sánh BPM bằng một nửa và gấp đôi, nghe bản gốc rồi sao chép kết quả.",
       },
       "zh-CN": {
         name: "BPM 检测器",
@@ -53983,10 +54003,15 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         description:
           "Find the tempo of a song or audio loop in beats per minute. Compare half and double BPM, play the original audio, and copy the estimate.",
       },
+      es: {
+        name: "Detector de BPM",
+        description:
+          "Estima el tempo de una canción o un bucle en pulsos por minuto. Compara la mitad y el doble de los BPM, escucha el audio original y copia el resultado.",
+      },
       fr: {
         name: "Détecteur de BPM",
         description:
-          "Trouvez le tempo d’un morceau ou d’une boucle audio en battements par minute. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez l’estimation.",
+          "Trouvez le tempo d’un morceau ou d’une boucle en BPM. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez la valeur estimée.",
       },
       he: {
         name: "מזהה קצב מוזיקלי (BPM)",
@@ -54003,10 +54028,15 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         description:
           "Cari tahu tempo lagu atau loop audio dalam ketukan per menit. Bandingkan setengah dan dua kali BPM, putar audio asli, dan salin perkiraannya.",
       },
+      it: {
+        name: "Rilevatore di BPM",
+        description:
+          "Trova il tempo di un brano o di un loop audio in battiti al minuto. Confronta la metà e il doppio dei BPM, ascolta l’originale e copia il valore stimato.",
+      },
       ja: {
         name: "BPM検出ツール",
         description:
-          "曲や音声ループのテンポを1分あたりの拍数（BPM）で調べます。推定値の半分と2倍を比較でき、元の音声の再生やBPMのコピーもできます。",
+          "曲やオーディオループのテンポを1分あたりの拍数（BPM）で調べます。推定値の半分と2倍を比較でき、元の音声の再生やBPMのコピーもできます。",
       },
       ko: {
         name: "BPM 측정기",
@@ -54026,12 +54056,17 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       no: {
         name: "BPM-detektor",
         description:
-          "Finn tempoet i en låt eller en lydsløyfe i slag per minutt. Sammenlign halvt og dobbelt tempo, spill av originalen og kopier anslaget.",
+          "Finn tempoet i en låt eller en lydsløyfe i slag per minutt. Sammenlign halvt og dobbelt tempo, spill av originalen og kopier BPM-verdien.",
       },
       pl: {
         name: "Wykrywacz BPM",
         description:
           "Sprawdź tempo utworu lub pętli w uderzeniach na minutę. Porównaj tempo o połowę wolniejsze i dwa razy szybsze, odsłuchaj plik i skopiuj wynik.",
+      },
+      pt: {
+        name: "Detetor de BPM",
+        description:
+          "Estime o andamento de uma música ou loop em batidas por minuto. Consulte a metade e o dobro dos BPM, ouça o áudio original e copie o resultado.",
       },
       ru: {
         name: "Определение BPM",
@@ -54041,7 +54076,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       sv: {
         name: "BPM-detektor",
         description:
-          "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera uppskattningen.",
+          "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera BPM-värdet.",
       },
       th: {
         name: "เครื่องมือตรวจหา BPM",
@@ -54052,6 +54087,11 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "BPM Bulucu",
         description:
           "Şarkı veya ses döngüsünün dakikadaki vuruş sayısını bulun. Yarım ve çift tempoyu karşılaştırın, orijinal kaydı dinleyin ve tahmini BPM’yi kopyalayın.",
+      },
+      vi: {
+        name: "Dò BPM",
+        description:
+          "Tìm nhịp độ của bài hát hoặc đoạn âm thanh lặp theo số nhịp mỗi phút. So sánh BPM bằng một nửa và gấp đôi, nghe bản gốc rồi sao chép kết quả.",
       },
       "zh-CN": {
         name: "BPM 检测器",

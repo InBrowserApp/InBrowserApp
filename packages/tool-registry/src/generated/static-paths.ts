@@ -4155,6 +4155,10 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "bpm-detector",
+    language: "es",
+  },
+  {
+    slug: "bpm-detector",
     language: "fr",
   },
   {
@@ -4168,6 +4172,10 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
     slug: "bpm-detector",
     language: "id",
+  },
+  {
+    slug: "bpm-detector",
+    language: "it",
   },
   {
     slug: "bpm-detector",
@@ -4195,6 +4203,10 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "bpm-detector",
+    language: "pt",
+  },
+  {
+    slug: "bpm-detector",
     language: "ru",
   },
   {
@@ -4208,6 +4220,10 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
     slug: "bpm-detector",
     language: "tr",
+  },
+  {
+    slug: "bpm-detector",
+    language: "vi",
   },
   {
     slug: "bpm-detector",

@@ -229,7 +229,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
-    name: "BPM Detector",
+    name: "Rilevatore di BPM",
     slug: "bpm-detector",
   },
   {
