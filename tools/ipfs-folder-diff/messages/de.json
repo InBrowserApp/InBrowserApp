@@ -1,6 +1,8 @@
 {
   "before": "Älterer Ordner",
   "after": "Neuerer Ordner",
+  "beforeCid": "CID vorher",
+  "afterCid": "CID nachher",
   "compare": "Ordner vergleichen",
   "example": "Beispiel ausprobieren",
   "swap": "Ordner tauschen",

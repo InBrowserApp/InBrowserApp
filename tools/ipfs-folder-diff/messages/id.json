@@ -1,6 +1,8 @@
 {
   "before": "Folder awal",
   "after": "Folder yang diperbarui",
+  "beforeCid": "CID sebelumnya",
+  "afterCid": "CID sesudahnya",
   "compare": "Bandingkan folder",
   "example": "Coba contoh",
   "swap": "Tukar folder",

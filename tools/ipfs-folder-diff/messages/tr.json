@@ -1,6 +1,8 @@
 {
   "before": "Önceki klasör",
   "after": "Sonraki klasör",
+  "beforeCid": "Önceki CID",
+  "afterCid": "Sonraki CID",
   "compare": "Klasörleri karşılaştır",
   "example": "Örnek dene",
   "swap": "Klasörlerin yerini değiştir",

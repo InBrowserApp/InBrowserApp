@@ -156,11 +156,12 @@ export default function FolderDiffResults({
                         <dl className="grid gap-2 border-t bg-muted/20 p-3">
                           {(["before", "after"] as const).map((side) => {
                             const cid = change[side]
+                            const label = messages[`${side}Cid`]
                             return (
                               cid && (
                                 <div key={side} className="grid gap-1">
                                   <dt className="text-xs font-medium text-muted-foreground">
-                                    {messages[side]}
+                                    {label}
                                   </dt>
                                   <dd className="flex items-start justify-between gap-2">
                                     <code
@@ -173,7 +174,7 @@ export default function FolderDiffResults({
                                       value={cid}
                                       copyLabel={messages.copy}
                                       copiedLabel={messages.copied}
-                                      ariaLabel={`${messages.copy} · ${messages[side]}`}
+                                      ariaLabel={`${messages.copy} · ${label}`}
                                     />
                                   </dd>
                                 </div>

@@ -1,6 +1,8 @@
 {
   "before": "Cartella precedente",
   "after": "Cartella successiva",
+  "beforeCid": "CID precedente",
+  "afterCid": "CID successivo",
   "compare": "Confronta cartelle",
   "example": "Prova un esempio",
   "swap": "Scambia cartelle",

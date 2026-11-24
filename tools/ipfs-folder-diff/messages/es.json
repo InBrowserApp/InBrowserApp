@@ -1,6 +1,8 @@
 {
   "before": "Carpeta anterior",
   "after": "Carpeta nueva",
+  "beforeCid": "CID anterior",
+  "afterCid": "CID posterior",
   "compare": "Comparar carpetas",
   "example": "Probar un ejemplo",
   "swap": "Intercambiar carpetas",

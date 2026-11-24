@@ -1,6 +1,8 @@
 {
   "before": "Pasta anterior",
   "after": "Pasta mais recente",
+  "beforeCid": "CID anterior",
+  "afterCid": "CID posterior",
   "compare": "Comparar pastas",
   "example": "Experimentar um exemplo",
   "swap": "Trocar pastas",

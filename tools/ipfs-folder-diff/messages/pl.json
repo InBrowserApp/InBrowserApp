@@ -1,6 +1,8 @@
 {
   "before": "Wcześniejszy folder",
   "after": "Późniejszy folder",
+  "beforeCid": "Wcześniejszy CID",
+  "afterCid": "Późniejszy CID",
   "compare": "Porównaj foldery",
   "example": "Wypróbuj przykład",
   "swap": "Zamień foldery miejscami",

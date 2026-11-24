@@ -1,6 +1,8 @@
 {
   "before": "Thư mục ban đầu",
   "after": "Thư mục cập nhật",
+  "beforeCid": "CID trước",
+  "afterCid": "CID sau",
   "compare": "So sánh thư mục",
   "example": "Thử ví dụ",
   "swap": "Đổi chỗ hai thư mục",

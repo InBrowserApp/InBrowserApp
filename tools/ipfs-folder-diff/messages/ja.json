@@ -1,6 +1,8 @@
 {
   "before": "変更前のフォルダー",
   "after": "変更後のフォルダー",
+  "beforeCid": "変更前の CID",
+  "afterCid": "変更後の CID",
   "compare": "フォルダーを比較",
   "example": "サンプルを試す",
   "swap": "フォルダーを入れ替え",

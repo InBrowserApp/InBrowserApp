@@ -1,6 +1,8 @@
 {
   "before": "旧版文件夹",
   "after": "新版文件夹",
+  "beforeCid": "变更前的 CID",
+  "afterCid": "变更后的 CID",
   "compare": "对比文件夹",
   "example": "试用示例",
   "swap": "交换文件夹",

@@ -1,6 +1,8 @@
 {
   "before": "Ancien dossier",
   "after": "Nouveau dossier",
+  "beforeCid": "CID antérieur",
+  "afterCid": "CID ultérieur",
   "compare": "Comparer les dossiers",
   "example": "Essayer un exemple",
   "swap": "Intervertir les dossiers",

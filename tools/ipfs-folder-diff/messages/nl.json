@@ -1,6 +1,8 @@
 {
   "before": "Eerdere map",
   "after": "Latere map",
+  "beforeCid": "Eerdere CID",
+  "afterCid": "Latere CID",
   "compare": "Mappen vergelijken",
   "example": "Een voorbeeld proberen",
   "swap": "Mappen omwisselen",

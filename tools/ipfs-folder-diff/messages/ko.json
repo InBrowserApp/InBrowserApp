@@ -1,6 +1,8 @@
 {
   "before": "변경 전 폴더",
   "after": "변경 후 폴더",
+  "beforeCid": "이전 CID",
+  "afterCid": "이후 CID",
   "compare": "폴더 비교",
   "example": "예제 사용하기",
   "swap": "폴더 순서 바꾸기",

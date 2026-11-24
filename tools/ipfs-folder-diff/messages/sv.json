@@ -1,6 +1,8 @@
 {
   "before": "Tidigare mapp",
   "after": "Senare mapp",
+  "beforeCid": "Tidigare CID",
+  "afterCid": "Senare CID",
   "compare": "Jämför mappar",
   "example": "Prova ett exempel",
   "swap": "Byt plats på mapparna",

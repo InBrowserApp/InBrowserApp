@@ -1,6 +1,8 @@
 {
   "before": "舊版資料夾",
   "after": "新版資料夾",
+  "beforeCid": "變更前的 CID",
+  "afterCid": "變更後的 CID",
   "compare": "比較資料夾",
   "example": "試用範例",
   "swap": "交換資料夾",
