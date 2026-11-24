@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest"
 
 import fixture from "../fixtures/ipfs.json"
 import { checkBatch } from "./batch"
+import { expandUriPattern } from "./pattern"
 
 const base = new URL("https://example.org/metadata/1.json")
 const image = "data:image/svg+xml,%3Csvg%2F%3E"
@@ -44,10 +45,50 @@ describe("browser batch checking", () => {
     expect(complete[0]?.issues).toEqual([
       { code: "missingMedia", field: "animation_url" },
     ])
+    const rootRelative = await checkBatch(
+      [file(paths[0]!, { ...sample, image: "/image%20name.jpg" })],
+      { ...config, completeFolder: true }
+    )
+    expect(rootRelative[0]?.issues).toEqual([])
     expect((await checkBatch([item], config))[0]?.issues).toEqual([
       { code: "unverifiedMedia", field: "animation_url" },
     ])
     expect(fetcher).not.toHaveBeenCalled()
+  })
+
+  it("substitutes the ERC-1155 ID in metadata values before checking media", async () => {
+    const fetcher = vi
+      .fn<typeof fetch>()
+      .mockImplementation(async (_input, init) =>
+        init?.method === "HEAD"
+          ? new Response(null)
+          : Response.json({ name: "Moon {id}", image: "../images/{id}.png" })
+      )
+    const pattern = expandUriPattern(
+      "https://example.org/metadata/{id}.json",
+      "42",
+      "42",
+      "hex"
+    )
+    if ("error" in pattern) throw new Error(pattern.error)
+    const config = { ...options(), checkMedia: true, fetcher }
+    const id = "0".repeat(62) + "2a"
+    const withId = await checkBatch(pattern.items, config)
+    expect(withId[0]).toMatchObject({ name: `Moon ${id}`, issues: [] })
+    expect(String(fetcher.mock.calls[1]![0])).toBe(
+      `https://example.org/images/${id}.png`
+    )
+
+    const withoutId = await checkBatch(
+      [{ source: pattern.items[0]!.source }],
+      config
+    )
+    expect(withoutId[0]?.issues).toEqual([
+      { code: "unverifiedMedia", field: "image" },
+    ])
+    expect(
+      fetcher.mock.calls.filter(([, init]) => init?.method === "HEAD")
+    ).toHaveLength(1)
   })
 
   it("classifies media probe failures without losing valid item details", async () => {

@@ -88,9 +88,7 @@ export function LocalFileInput({
           type="file"
           hidden
           multiple
-          {...(index === 1
-            ? { webkitdirectory: "" }
-            : { accept: ".json,application/json" })}
+          {...(index === 1 && { webkitdirectory: "" })}
           onChange={(event) => {
             const selected = Array.from(event.target.files ?? [])
             event.target.value = ""

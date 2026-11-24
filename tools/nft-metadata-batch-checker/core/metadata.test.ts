@@ -102,18 +102,20 @@ describe("token URI ranges", () => {
   it("preserves decimal width and uses the ERC-1155 hex substitution", () => {
     expect(expandUriPattern(` ${pattern} `, " 008 ", "009", "decimal")).toEqual(
       {
-        urls: [
-          "https://example.org/008/008.json",
-          "https://example.org/009/009.json",
+        items: [
+          { source: "https://example.org/008/008.json" },
+          { source: "https://example.org/009/009.json" },
         ],
       }
     )
     const hex = "0".repeat(62) + "1a"
     expect(expandUriPattern(pattern, "26", "26", "hex")).toEqual({
-      urls: [`https://example.org/${hex}/${hex}.json`],
+      items: [
+        { source: `https://example.org/${hex}/${hex}.json`, tokenId: hex },
+      ],
     })
     expect(expandUriPattern(pattern, "0", "499", "decimal")).toHaveProperty(
-      "urls.length",
+      "items.length",
       500
     )
   })

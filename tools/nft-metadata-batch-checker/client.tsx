@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 
 import {
   ToolPanelCard,
@@ -18,7 +18,12 @@ import { FileCheck } from "@workspace/ui/icons"
 
 import { checkBatch, type Item, type Result } from "./core/batch"
 import { expandUriPattern } from "./core/pattern"
-import { LocalFileInput, UriPatternInput, type PatternInput } from "./inputs"
+import {
+  exampleFiles,
+  LocalFileInput,
+  UriPatternInput,
+  type PatternInput,
+} from "./inputs"
 import type EnglishMessages from "./messages/en.json"
 import MetadataResults from "./results"
 
@@ -29,19 +34,25 @@ type InputProblem =
   | "invalidPattern"
   | "invalidRange"
   | "unavailable"
-type Selection = { files: File[]; folder: boolean }
+type Selection = { items: Item[]; paths: string[]; folder: boolean }
 const modes = ["files", "urls", "pattern"] as const
+const metadataName = /\.json$|^(?:\d+|[\da-f]{64})$/i
 
 function filePath(file: File) {
   return file.webkitRelativePath || file.name
 }
 
-function metadataItems(files: readonly File[]) {
-  return files
-    .filter(
-      (file) => /\.json$/i.test(file.name) || file.type === "application/json"
-    )
-    .map((file) => ({ source: filePath(file), file }))
+function localSelection(files: readonly File[], folder: boolean): Selection {
+  const paths: string[] = []
+  const items: Item[] = []
+  for (const file of files) {
+    const source = filePath(file)
+    paths.push(source)
+    if (metadataName.test(file.name) || file.type === "application/json") {
+      items.push({ source, file })
+    }
+  }
+  return { paths, items, folder }
 }
 
 export default function NftMetadataChecker({
@@ -54,10 +65,7 @@ export default function NftMetadataChecker({
   const id = useId()
   const active = useRef<AbortController | null>(null)
   const [mode, setMode] = useState<Mode>("files")
-  const [selection, setSelection] = useState<Selection>({
-    files: [],
-    folder: false,
-  })
+  const [selection, setSelection] = useState<Selection | null>(null)
   const [uriList, setUriList] = useState("")
   const [pattern, setPattern] = useState<PatternInput>({
     uri: "",
@@ -72,7 +80,6 @@ export default function NftMetadataChecker({
     total: number
   } | null>(null)
   const [results, setResults] = useState<Result[] | null>(null)
-  const files = useMemo(() => metadataItems(selection.files), [selection.files])
 
   useEffect(() => () => active.current?.abort(), [])
 
@@ -99,7 +106,7 @@ export default function NftMetadataChecker({
       const report = await checkBatch(items, {
         signal,
         checkMedia,
-        localFiles: new Set(local?.files.map(filePath)),
+        localFiles: new Set(local?.paths),
         completeFolder: local?.folder ?? false,
         onProgress: (completed) => {
           if (!signal.aborted) setProgress({ completed, total })
@@ -115,8 +122,8 @@ export default function NftMetadataChecker({
 
   function submit() {
     if (mode === "files") {
-      if (files.length === 0) setInputError("noFiles")
-      else void run(files, selection)
+      if (!selection?.items.length) setInputError("noFiles")
+      else void run(selection.items, selection)
       return
     }
     if (mode === "urls") {
@@ -139,7 +146,7 @@ export default function NftMetadataChecker({
       pattern.format
     )
     if ("error" in expanded) setInputError(expanded.error)
-    else void run(expanded.urls.map((source) => ({ source })))
+    else void run(expanded.items)
   }
 
   const busy = progress !== null
@@ -174,14 +181,14 @@ export default function NftMetadataChecker({
               </TabsList>
               <TabsContent value="files">
                 <LocalFileInput
-                  count={files.length}
+                  count={selection?.items.length ?? 0}
                   language={language}
                   messages={messages}
                   onSelect={(files, folder) => {
                     edit()
-                    setSelection({ files, folder })
-                    if (metadataItems(files).length === 0)
-                      setInputError("noFiles")
+                    const next = localSelection(files, folder)
+                    setSelection(next)
+                    if (next.items.length === 0) setInputError("noFiles")
                   }}
                 />
               </TabsContent>
@@ -245,10 +252,10 @@ export default function NftMetadataChecker({
                   type="button"
                   variant="ghost"
                   onClick={() => {
-                    const selection = { files: exampleFiles(), folder: false }
+                    const selection = localSelection(exampleFiles(), false)
                     setMode("files")
                     setSelection(selection)
-                    void run(metadataItems(selection.files), selection)
+                    void run(selection.items, selection)
                   }}
                 >
                   {messages.example}

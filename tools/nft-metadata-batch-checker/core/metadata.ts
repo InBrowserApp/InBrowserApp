@@ -26,14 +26,18 @@ type MediaField = (typeof mediaFields)[number]
 interface Metadata {
   name?: string
   issues: Issue[]
-  media: { field: MediaField; url: URL }[]
+  media: { field: MediaField; url: URL; needsTokenId: boolean }[]
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return Boolean(value && typeof value === "object" && !Array.isArray(value))
 }
 
-export function inspectMetadata(text: string, base: URL): Metadata {
+export function inspectMetadata(
+  text: string,
+  base: URL,
+  tokenId?: string
+): Metadata {
   const result: Metadata = { issues: [], media: [] }
   let value: unknown
   try {
@@ -48,8 +52,11 @@ export function inspectMetadata(text: string, base: URL): Metadata {
   }
 
   const { name, description, image_data, attributes } = value
-  if (typeof name === "string" && name.trim()) result.name = name.trim()
-  else result.issues.push({ code: "missingName", field: "name" })
+  if (typeof name === "string" && name.trim()) {
+    result.name = tokenId
+      ? name.trim().replaceAll("{id}", tokenId)
+      : name.trim()
+  } else result.issues.push({ code: "missingName", field: "name" })
   if (description !== undefined && typeof description !== "string") {
     result.issues.push({ code: "invalidDescription", field: "description" })
   }
@@ -63,10 +70,10 @@ export function inspectMetadata(text: string, base: URL): Metadata {
   for (const field of mediaFields) {
     const media = value[field]
     if (media === undefined) continue
-    const url =
-      typeof media === "string" && media.trim()
-        ? parseNftUrl(media.trim(), base)
-        : null
+    const target = typeof media === "string" ? media.trim() : ""
+    const url = target
+      ? parseNftUrl(target.replaceAll("{id}", tokenId ?? "0"), base)
+      : null
     if (
       !url ||
       (url.protocol === "data:" &&
@@ -74,7 +81,11 @@ export function inspectMetadata(text: string, base: URL): Metadata {
     ) {
       result.issues.push({ code: "invalidMedia", field })
     } else {
-      result.media.push({ field, url })
+      result.media.push({
+        field,
+        url,
+        needsTokenId: !tokenId && target.includes("{id}"),
+      })
     }
   }
 

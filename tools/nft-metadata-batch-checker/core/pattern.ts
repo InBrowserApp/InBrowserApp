@@ -1,4 +1,5 @@
 import { parseNftUrl } from "./urls"
+import type { Item } from "./batch"
 
 export type IdFormat = "decimal" | "hex"
 const maxId = (1n << 256n) - 1n
@@ -9,7 +10,7 @@ export function expandUriPattern(
   start: string,
   end: string,
   format: IdFormat
-): { urls: string[] } | { error: "invalidPattern" | "invalidRange" } {
+): { items: Item[] } | { error: "invalidPattern" | "invalidRange" } {
   const template = input.trim()
   const example = parseNftUrl(template.replaceAll("{id}", "1"))
   if (!template.includes("{id}") || !example || example.protocol === "data:") {
@@ -28,13 +29,12 @@ export function expandUriPattern(
     return { error: "invalidRange" }
   }
 
-  const urls: string[] = []
+  const items: Item[] = []
   for (let id = first; id <= last; id++) {
-    const token =
-      format === "hex"
-        ? id.toString(16).padStart(64, "0")
-        : id.toString().padStart(firstText.length, "0")
-    urls.push(template.replaceAll("{id}", token))
+    const tokenId =
+      format === "hex" ? id.toString(16).padStart(64, "0") : undefined
+    const token = tokenId ?? id.toString().padStart(firstText.length, "0")
+    items.push({ source: template.replaceAll("{id}", token), tokenId })
   }
-  return { urls }
+  return { items }
 }

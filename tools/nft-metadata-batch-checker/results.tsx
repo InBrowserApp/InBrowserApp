@@ -132,7 +132,7 @@ export default function MetadataResults({
                           {name}
                         </bdi>
                       )}
-                      <bdi className="truncate font-mono text-xs text-muted-foreground">
+                      <bdi className="truncate font-mono text-xs text-muted-foreground group-open:overflow-visible group-open:wrap-anywhere group-open:whitespace-normal">
                         {source}
                       </bdi>
                     </span>

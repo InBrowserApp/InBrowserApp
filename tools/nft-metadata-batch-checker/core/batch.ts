@@ -13,7 +13,7 @@ const limit = 4 * 1024 * 1024
 const localRoot = "https://nft-metadata.local"
 const parallel = 5
 
-export type Item = { source: string; file?: File }
+export type Item = { source: string; file?: File; tokenId?: string }
 export interface Result {
   source: string
   name?: string
@@ -43,6 +43,10 @@ function localUrl(path: string) {
   return new URL(path.split("/").map(encodeURIComponent).join("/"), localRoot)
 }
 
+function relativeLocalPath(path: string, completeFolder: boolean) {
+  return completeFolder ? path.slice(path.indexOf("/") + 1) : path
+}
+
 async function readRemote(response: Response) {
   if (!response.ok) throw new SourceError("unavailable")
   if (!response.body) return ""
@@ -70,11 +74,14 @@ async function readSource(
   item: Item,
   fetcher: typeof fetch,
   store: ReadableStorage,
-  signal: AbortSignal
+  { signal, completeFolder }: Options
 ) {
   if (item.file) {
     if (item.file.size > limit) throw new SourceError("tooLarge")
-    return { text: await item.file.text(), base: localUrl(item.source) }
+    return {
+      text: await item.file.text(),
+      base: localUrl(relativeLocalPath(item.source, completeFolder)),
+    }
   }
   const uri = parseNftUrl(item.source)
   if (
@@ -146,6 +153,14 @@ async function checkLink(
 export async function checkBatch(items: readonly Item[], options: Options) {
   const { signal, fetcher = fetch } = options
   const store = gatewayStore(fetcher)
+  const localOptions = {
+    ...options,
+    localFiles: new Set(
+      Array.from(options.localFiles, (path) =>
+        relativeLocalPath(path, options.completeFolder)
+      )
+    ),
+  }
   const results: Result[] = []
   let next = 0
   let done = 0
@@ -153,11 +168,13 @@ export async function checkBatch(items: readonly Item[], options: Options) {
   async function check(item: Item): Promise<Result> {
     const { source } = item
     try {
-      const { text, base } = await readSource(item, fetcher, store, signal)
-      const { name, issues, media } = inspectMetadata(text, base)
+      const { text, base } = await readSource(item, fetcher, store, options)
+      const { name, issues, media } = inspectMetadata(text, base, item.tokenId)
       if (options.checkMedia) {
-        for (const { field, url } of media) {
-          const code = await checkLink(url, item, fetcher, options)
+        for (const { field, url, needsTokenId } of media) {
+          const code = needsTokenId
+            ? "unverifiedMedia"
+            : await checkLink(url, item, fetcher, localOptions)
           if (code) issues.push({ code, field })
         }
       }
