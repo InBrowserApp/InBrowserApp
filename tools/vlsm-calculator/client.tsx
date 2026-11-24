@@ -158,9 +158,9 @@ export default function Client({
                 return (
                   <div
                     key={row.id}
-                    className="grid grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_auto] items-start gap-2 rounded-md border bg-muted/30 p-3 sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,0.75fr)_auto]"
+                    className="relative grid grid-cols-[minmax(0,1fr)_minmax(5.5rem,0.45fr)] items-end gap-2 rounded-md border bg-muted/30 p-3 sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,0.75fr)_auto]"
                   >
-                    <label className="col-span-2 grid min-w-0 gap-1 text-xs font-medium sm:col-span-1">
+                    <label className="col-span-full grid min-w-0 gap-1 pe-10 text-xs font-medium sm:col-span-1 sm:pe-0">
                       {messages.name}
                       <Input
                         data-subnet-name={row.id}
@@ -171,7 +171,7 @@ export default function Client({
                         }
                       />
                     </label>
-                    <label className="col-start-1 row-start-2 grid min-w-0 gap-1 text-xs font-medium sm:col-start-auto sm:row-start-auto">
+                    <label className="grid min-w-0 gap-1 text-xs font-medium max-[359px]:col-span-full">
                       {messages.type}
                       <select
                         value={row.type}
@@ -191,7 +191,7 @@ export default function Client({
                         </option>
                       </select>
                     </label>
-                    <label className="col-start-2 row-start-2 grid min-w-0 gap-1 text-xs font-medium sm:col-start-auto sm:row-start-auto">
+                    <label className="grid min-w-0 gap-1 text-xs font-medium max-[359px]:col-span-full">
                       {messages.hosts}
                       <Input
                         name="hosts"
@@ -220,7 +220,7 @@ export default function Client({
                       type="button"
                       variant="ghost"
                       size="icon"
-                      className="col-start-3 row-start-1 self-end sm:col-start-auto sm:row-start-auto"
+                      className="absolute end-3 top-7.5 sm:static"
                       disabled={rows.length === 1}
                       aria-label={`${messages.remove} ${index + 1}`}
                       title={messages.remove}
