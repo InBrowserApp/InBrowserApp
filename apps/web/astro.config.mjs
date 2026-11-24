@@ -61,7 +61,7 @@ export default defineConfig({
           dirname(requireAudioTool.resolve("onnxruntime-web/webgpu")),
           "ort.webgpu.min.mjs"
         ),
-        "audio-transcription-runtime": dirname(
+        "@huggingface/transformers/dist": dirname(
           requireAudioTool.resolve("@huggingface/transformers")
         ),
       },

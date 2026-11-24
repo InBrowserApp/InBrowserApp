@@ -1,6 +1,6 @@
 import { env, WhisperFeatureExtractor } from "@huggingface/transformers"
-import mjsUrl from "audio-transcription-runtime/ort-wasm-simd-threaded.jsep.mjs?url"
-import wasmUrl from "audio-transcription-runtime/ort-wasm-simd-threaded.jsep.wasm?url"
+import mjsUrl from "@huggingface/transformers/dist/ort-wasm-simd-threaded.jsep.mjs?url"
+import wasmUrl from "@huggingface/transformers/dist/ort-wasm-simd-threaded.jsep.wasm?url"
 import { SAMPLE_RATE } from "../worker-messages"
 
 function qwenFeatureExtractor(melFilters?: number[][]) {
