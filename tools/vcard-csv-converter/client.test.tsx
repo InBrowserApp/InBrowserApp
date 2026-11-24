@@ -13,8 +13,7 @@ afterEach(cleanup)
 
 test("retains each conversion draft and removes stale output when the source changes", () => {
   render(<Client language="en" messages={messages} />)
-  const button = (name: string) =>
-    screen.getByRole("button", { name, exact: true })
+  const button = (name: string) => screen.getByRole("button", { name })
   const source = () =>
     screen.getByRole<HTMLTextAreaElement>("textbox", { name: messages.input })
 
