@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CID 計算器",
+  "description": "在瀏覽器中計算檔案或資料夾的 IPFS CID，無須上傳。可比對現有 CID，並使用相同的 Kubo 匯入設定重現結果。"
+}

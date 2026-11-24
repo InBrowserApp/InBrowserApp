@@ -31,6 +31,7 @@ const CATEGORY_ICONS: Readonly<Record<string, string>> = {
   ebook: "book-open",
   geo: "map",
   image: "image",
+  ipfs: "box",
   json: "braces",
   misc: "layout-grid",
   network: "network",

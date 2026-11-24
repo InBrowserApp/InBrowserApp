@@ -873,6 +873,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ip-range-to-cidr-converter",
   },
   {
+    category: "ipfs",
+    name: "IPFS CID 計算ツール",
+    slug: "ipfs-cid-calculator",
+  },
+  {
     category: "network",
     name: "IPv6 アドレスから MAC アドレスへの変換ツール",
     slug: "ipv6-address-to-mac-address-converter",

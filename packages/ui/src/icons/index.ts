@@ -30,6 +30,7 @@ export {
   Check,
   ChevronDown,
   HardDrive,
+  Hash,
   ChevronLeft,
   ChevronRight,
   ChevronUp,
