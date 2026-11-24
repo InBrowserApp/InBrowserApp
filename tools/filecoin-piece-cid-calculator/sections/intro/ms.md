@@ -4,7 +4,7 @@ Pilih fail yang akan anda hantar kepada penyedia storan Filecoin. Pilih **Kira P
 
 ## Format manakah yang patut saya gunakan?
 
-**Piece CID (v2)** mengikut [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Pengecam ini biasanya bermula dengan `bafkzci` dan mengandungi maklumat saiz data yang diperlukan oleh alat Filecoin yang lebih baharu. **CommP versi lama (v1)** biasanya bermula dengan `baga6ea4` dan digunakan dalam perjanjian storan Filecoin tradisional. Jika proses anda memerlukan Piece CID versi lama dan saiz piece selepas pengisian, salin komitmen versi lama dan gunakan saiz yang dipaparkan di sebelahnya. Anda boleh menampal mana-mana format untuk menyemak sama ada komitmen sedia ada sepadan dengan fail anda.
+**Piece CID (v2)** mengikut [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Pengecam ini biasanya bermula dengan `bafkzci` dan mengandungi maklumat saiz data yang diperlukan oleh alat Filecoin yang lebih baharu. **CommP versi lama (v1)** biasanya bermula dengan `baga6ea4` dan digunakan dalam perjanjian storan Filecoin tradisional. Jika proses anda memerlukan Piece CID versi lama dan saiz piece selepas pengisian, salin komitmen versi lama dan gunakan saiz yang dipaparkan di sebelahnya. Anda boleh menampal mana-mana format untuk menyemak sama ada komitmen sedia ada sepadan dengan fail anda. CommP versi lama boleh memberikan nilai yang sama untuk fail yang hanya berbeza dari segi bilangan bait sifar di hujung.
 
 ## Mengapakah CID IPFS saya kelihatan berbeza?
 

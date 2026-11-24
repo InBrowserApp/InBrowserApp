@@ -4,7 +4,7 @@
 
 ## 該使用哪一種格式？
 
-**Piece CID（v2）** 遵循 [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md)。它通常以 `bafkzci` 開頭，並包含較新的 Filecoin 工具所需的酬載大小資訊。**舊版 CommP（v1）** 通常以 `baga6ea4` 開頭，適用於傳統的 Filecoin 儲存交易。如果流程需要舊版 Piece CID 和填補後的 Piece 大小，請複製舊版承諾值，並使用旁邊顯示的大小。你可以將任一格式貼到比對欄位，核對檔案是否與現有的承諾值相符。
+**Piece CID（v2）** 遵循 [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md)。它通常以 `bafkzci` 開頭，並包含較新的 Filecoin 工具所需的酬載大小資訊。**舊版 CommP（v1）** 通常以 `baga6ea4` 開頭，適用於傳統的 Filecoin 儲存交易。如果流程需要舊版 Piece CID 和填補後的 Piece 大小，請複製舊版承諾值，並使用旁邊顯示的大小。你可以將任一格式貼到比對欄位，核對檔案是否與現有的承諾值相符。只有尾端零位元組數量不同的檔案，可能具有相同的舊版 CommP。
 
 ## 為什麼 IPFS CID 看起來不一樣？
 

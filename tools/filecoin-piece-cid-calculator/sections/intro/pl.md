@@ -4,7 +4,7 @@ Wybierz dokładnie ten plik, który chcesz przekazać dostawcy usług przechowyw
 
 ## Którego formatu użyć?
 
-**Piece CID (v2)** jest zgodny z [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Zwykle zaczyna się od `bafkzci` i zawiera informację o rozmiarze danych, której potrzebują nowsze narzędzia Filecoin. **CommP w starszym formacie (v1)** zwykle zaczyna się od `baga6ea4` i jest używany w tradycyjnych umowach o przechowywanie danych w Filecoin. Jeśli potrzebujesz Piece CID w starszym formacie i rozmiaru fragmentu po dopełnieniu, skopiuj CommP i użyj rozmiaru wyświetlonego obok niego. Wklej identyfikator w dowolnym z tych formatów, aby zweryfikować istniejące zobowiązanie na podstawie swojego pliku.
+**Piece CID (v2)** jest zgodny z [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Zwykle zaczyna się od `bafkzci` i zawiera informację o rozmiarze danych, której potrzebują nowsze narzędzia Filecoin. **CommP w starszym formacie (v1)** zwykle zaczyna się od `baga6ea4` i jest używany w tradycyjnych umowach o przechowywanie danych w Filecoin. Jeśli potrzebujesz Piece CID w starszym formacie i rozmiaru fragmentu po dopełnieniu, skopiuj CommP i użyj rozmiaru wyświetlonego obok niego. Wklej identyfikator w dowolnym z tych formatów, aby zweryfikować istniejące zobowiązanie na podstawie swojego pliku. Identyfikator CommP w starszym formacie może być taki sam dla plików, które różnią się jedynie zerowymi bajtami na końcu.
 
 ## Dlaczego mój CID z IPFS wygląda inaczej?
 

@@ -4,7 +4,7 @@ Choose the exact file you plan to send to a Filecoin storage provider. Select **
 
 ## Which format should I use?
 
-**Piece CID (v2)** follows [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). It usually starts with `bafkzci` and carries the payload size information needed by newer Filecoin tools. **Legacy CommP (v1)** usually starts with `baga6ea4` and is used in traditional Filecoin storage deals. For a workflow that asks for a legacy Piece CID and padded piece size, copy the legacy commitment and use the size shown alongside it. You can paste either format to verify an existing commitment against your file.
+**Piece CID (v2)** follows [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). It usually starts with `bafkzci` and carries the payload size information needed by newer Filecoin tools. **Legacy CommP (v1)** usually starts with `baga6ea4` and is used in traditional Filecoin storage deals. For a workflow that asks for a legacy Piece CID and padded piece size, copy the legacy commitment and use the size shown alongside it. You can paste either format to verify an existing commitment against your file. A legacy CommP can match files that differ only by trailing zero bytes.
 
 ## Why does my IPFS CID look different?
 

@@ -4,7 +4,7 @@ Velg nøyaktig filen du planlegger å sende til en Filecoin-lagringsleverandør.
 
 ## Hvilket format bør jeg bruke?
 
-**Piece CID (v2)** følger [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Den begynner vanligvis med `bafkzci` og inneholder informasjon om størrelsen på nyttelasten som nyere Filecoin-verktøy trenger. **Eldre CommP (v1)** begynner vanligvis med `baga6ea4` og brukes i tradisjonelle Filecoin-lagringsavtaler. Hvis arbeidsflyten krever en eldre Piece CID og utfylt piece-størrelse, kopierer du den eldre commitmenten og bruker størrelsen som vises ved siden av. Du kan lime inn begge formatene for å kontrollere en eksisterende commitment mot filen.
+**Piece CID (v2)** følger [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Den begynner vanligvis med `bafkzci` og inneholder informasjon om størrelsen på nyttelasten som nyere Filecoin-verktøy trenger. **Eldre CommP (v1)** begynner vanligvis med `baga6ea4` og brukes i tradisjonelle Filecoin-lagringsavtaler. Hvis arbeidsflyten krever en eldre Piece CID og utfylt piece-størrelse, kopierer du den eldre commitmenten og bruker størrelsen som vises ved siden av. Du kan lime inn begge formatene for å kontrollere en eksisterende commitment mot filen. En eldre CommP kan samsvare for filer som bare skiller seg i antall avsluttende nuller.
 
 ## Hvorfor ser IPFS-CID-en min annerledes ut?
 

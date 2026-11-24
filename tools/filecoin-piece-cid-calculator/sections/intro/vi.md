@@ -4,7 +4,7 @@ Chọn đúng tệp bạn định gửi cho nhà cung cấp dịch vụ lưu tr�
 
 ## Nên dùng định dạng nào?
 
-**Piece CID (v2)** tuân theo [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Mã này thường bắt đầu bằng `bafkzci` và chứa thông tin kích thước dữ liệu mà các công cụ Filecoin mới cần. **CommP phiên bản cũ (v1)** thường bắt đầu bằng `baga6ea4` và được dùng trong các thỏa thuận lưu trữ Filecoin truyền thống. Nếu hệ thống yêu cầu Piece CID phiên bản cũ và kích thước piece sau khi đệm, hãy sao chép giá trị cam kết phiên bản cũ và dùng kích thước hiển thị kèm theo. Bạn có thể dán mã ở một trong hai định dạng để kiểm tra giá trị cam kết có khớp với tệp hay không.
+**Piece CID (v2)** tuân theo [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Mã này thường bắt đầu bằng `bafkzci` và chứa thông tin kích thước dữ liệu mà các công cụ Filecoin mới cần. **CommP phiên bản cũ (v1)** thường bắt đầu bằng `baga6ea4` và được dùng trong các thỏa thuận lưu trữ Filecoin truyền thống. Nếu hệ thống yêu cầu Piece CID phiên bản cũ và kích thước piece sau khi đệm, hãy sao chép giá trị cam kết phiên bản cũ và dùng kích thước hiển thị kèm theo. Bạn có thể dán mã ở một trong hai định dạng để kiểm tra giá trị cam kết có khớp với tệp hay không. CommP phiên bản cũ có thể cho cùng một giá trị với các tệp chỉ khác nhau về số byte 0 ở cuối.
 
 ## Vì sao CID IPFS của tôi trông khác?
 

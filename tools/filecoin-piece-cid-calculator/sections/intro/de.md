@@ -4,7 +4,7 @@ Wählen Sie genau die Datei aus, die Sie an einen Filecoin-Speicheranbieter send
 
 ## Welches Format soll ich verwenden?
 
-Die **Piece-CID (v2)** folgt [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Sie beginnt meist mit `bafkzci` und enthält die Angaben zur Datengröße, die neuere Filecoin-Tools benötigen. Die **ältere CommP (v1)** beginnt meist mit `baga6ea4` und wird bei herkömmlichen Filecoin-Speichervereinbarungen verwendet. Wenn eine ältere Piece-CID und die Piece-Größe mit Padding benötigt werden, kopieren Sie das ältere Commitment und verwenden Sie die daneben angezeigte Größe. Um ein vorhandenes Commitment anhand Ihrer Datei zu prüfen, können Sie die Kennung in einem der beiden Formate einfügen.
+Die **Piece-CID (v2)** folgt [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Sie beginnt meist mit `bafkzci` und enthält die Angaben zur Datengröße, die neuere Filecoin-Tools benötigen. Die **ältere CommP (v1)** beginnt meist mit `baga6ea4` und wird bei herkömmlichen Filecoin-Speichervereinbarungen verwendet. Wenn eine ältere Piece-CID und die Piece-Größe mit Padding benötigt werden, kopieren Sie das ältere Commitment und verwenden Sie die daneben angezeigte Größe. Um ein vorhandenes Commitment anhand Ihrer Datei zu prüfen, können Sie die Kennung in einem der beiden Formate einfügen. Dateien, die sich nur in der Anzahl der abschließenden Nullbytes unterscheiden, können dieselbe ältere CommP ergeben.
 
 ## Warum sieht meine IPFS-CID anders aus?
 

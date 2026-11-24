@@ -49,7 +49,6 @@ export default function PieceCidCalculator({
     setFile(next)
     setError("")
     setResult(null)
-    setExpected("")
     setComparison(null)
   }
 
@@ -57,7 +56,7 @@ export default function PieceCidCalculator({
     event.preventDefault()
     setDragging(false)
     const { files, items } = event.dataTransfer
-    if (files.length !== 1 || items[0]?.webkitGetAsEntry()?.isDirectory) {
+    if (files.length !== 1 || items[0]?.webkitGetAsEntry?.()?.isDirectory) {
       setError(messages.singleFile)
       return
     }
@@ -110,10 +109,11 @@ export default function PieceCidCalculator({
     unit: "byte",
     unitDisplay: "long",
   })
+  const FileIcon = file ? FileText : Upload
 
   return (
-    <div className="grid min-w-0 items-start gap-4 lg:grid-cols-2">
-      <ToolPanelCard>
+    <div className="grid min-w-0 items-start gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+      <ToolPanelCard className="h-auto">
         <CardHeader>
           <CardTitle>{messages.input}</CardTitle>
         </CardHeader>
@@ -139,17 +139,10 @@ export default function PieceCidCalculator({
             }}
             onDrop={drop}
           >
-            {file ? (
-              <FileText
-                aria-hidden="true"
-                className="size-6 text-muted-foreground"
-              />
-            ) : (
-              <Upload
-                aria-hidden="true"
-                className="size-6 text-muted-foreground"
-              />
-            )}
+            <FileIcon
+              aria-hidden="true"
+              className="size-6 text-muted-foreground"
+            />
             <p dir="auto" className="text-sm wrap-anywhere">
               {file?.name || messages.drop}
             </p>
@@ -217,6 +210,9 @@ export default function PieceCidCalculator({
         <CardHeader>
           <CardTitle>{messages.result}</CardTitle>
         </CardHeader>
+        <p role="status" className="sr-only">
+          {result && messages.result}
+        </p>
         <ToolPanelCardContent className="gap-4">
           {result ? (
             <>

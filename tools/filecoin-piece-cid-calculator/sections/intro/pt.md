@@ -4,7 +4,7 @@ Escolha exatamente o ficheiro que pretende enviar a um fornecedor de armazenamen
 
 ## Que formato devo utilizar?
 
-O **Piece CID (v2)** segue a especificação [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Normalmente começa por `bafkzci` e contém as informações sobre o tamanho dos dados de que as ferramentas mais recentes do Filecoin precisam. O **CommP legado (v1)** começa normalmente por `baga6ea4` e é utilizado nos acordos de armazenamento tradicionais do Filecoin. Se precisar de um Piece CID legado e do tamanho da peça após preenchimento, copie o compromisso legado e utilize o tamanho que aparece ao lado. Pode colar qualquer um dos formatos para verificar um compromisso existente com o seu ficheiro.
+O **Piece CID (v2)** segue a especificação [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Normalmente começa por `bafkzci` e contém as informações sobre o tamanho dos dados de que as ferramentas mais recentes do Filecoin precisam. O **CommP legado (v1)** começa normalmente por `baga6ea4` e é utilizado nos acordos de armazenamento tradicionais do Filecoin. Se precisar de um Piece CID legado e do tamanho da peça após preenchimento, copie o compromisso legado e utilize o tamanho que aparece ao lado. Pode colar qualquer um dos formatos para verificar um compromisso existente com o seu ficheiro. Ficheiros que diferem apenas no número de bytes a zero no fim podem gerar o mesmo CommP legado.
 
 ## Porque é que o meu CID do IPFS é diferente?
 

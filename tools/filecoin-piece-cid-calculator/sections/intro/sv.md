@@ -4,7 +4,7 @@ Välj exakt den fil du tänker skicka till en Filecoin-lagringsleverantör. Väl
 
 ## Vilket format ska jag använda?
 
-**Piece CID (v2)** följer [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Den börjar vanligtvis med `bafkzci` och innehåller information om nyttolastens storlek som nyare Filecoin-verktyg behöver. **Äldre CommP (v1)** börjar vanligtvis med `baga6ea4` och används i traditionella Filecoin-lagringsavtal. Om arbetsflödet kräver en äldre Piece CID och utfylld piece-storlek kopierar du det äldre åtagandet och använder storleken som visas intill. Du kan klistra in något av formaten för att jämföra ett befintligt åtagande med filen.
+**Piece CID (v2)** följer [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Den börjar vanligtvis med `bafkzci` och innehåller information om nyttolastens storlek som nyare Filecoin-verktyg behöver. **Äldre CommP (v1)** börjar vanligtvis med `baga6ea4` och används i traditionella Filecoin-lagringsavtal. Om arbetsflödet kräver en äldre Piece CID och utfylld piece-storlek kopierar du det äldre åtagandet och använder storleken som visas intill. Du kan klistra in något av formaten för att jämföra ett befintligt åtagande med filen. En äldre CommP kan matcha filer som bara skiljer sig åt genom avslutande nollor.
 
 ## Varför ser min IPFS-CID annorlunda ut?
 

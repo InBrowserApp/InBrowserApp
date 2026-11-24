@@ -4,7 +4,7 @@ Scegli il file esatto che intendi inviare a un provider di archiviazione Filecoi
 
 ## Quale formato usare?
 
-**Piece CID (v2)** segue [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Di solito inizia con `bafkzci` e contiene le informazioni sulla dimensione del payload richieste dagli strumenti Filecoin più recenti. **CommP precedente (v1)** di solito inizia con `baga6ea4` e viene usato negli accordi di archiviazione Filecoin tradizionali. Se il flusso di lavoro richiede un Piece CID precedente e la dimensione del piece con padding, copia l’impegno precedente e usa la dimensione mostrata accanto. Puoi incollare uno dei due formati per verificare un impegno esistente rispetto al tuo file.
+**Piece CID (v2)** segue [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md). Di solito inizia con `bafkzci` e contiene le informazioni sulla dimensione del payload richieste dagli strumenti Filecoin più recenti. **CommP precedente (v1)** di solito inizia con `baga6ea4` e viene usato negli accordi di archiviazione Filecoin tradizionali. Se il flusso di lavoro richiede un Piece CID precedente e la dimensione del piece con padding, copia l’impegno precedente e usa la dimensione mostrata accanto. Puoi incollare uno dei due formati per verificare un impegno esistente rispetto al tuo file. Un CommP precedente può corrispondere a file che differiscono solo per gli zeri finali.
 
 ## Perché il mio CID IPFS è diverso?
 

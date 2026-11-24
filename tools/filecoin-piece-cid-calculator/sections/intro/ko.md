@@ -4,7 +4,7 @@ Filecoin 스토리지 제공자에게 보낼 파일을 그대로 선택하세요
 
 ## 어떤 형식을 사용해야 하나요?
 
-**Piece CID(v2)**는 [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md)를 따릅니다. 일반적으로 `bafkzci`로 시작하며 최신 Filecoin 도구에 필요한 페이로드 크기 정보가 들어 있습니다. **이전 형식의 CommP(v1)**는 일반적으로 `baga6ea4`로 시작하며 기존 Filecoin 스토리지 거래에 사용됩니다. 작업에 이전 형식의 Piece CID와 패딩된 피스 크기가 필요하다면 해당 커밋먼트를 복사하고 옆에 표시된 크기를 사용하세요. 어느 형식이든 비교란에 붙여넣어 기존 커밋먼트가 파일과 일치하는지 확인할 수 있습니다.
+**Piece CID(v2)**는 [FRC-0069](https://github.com/filecoin-project/FIPs/blob/master/FRCs/frc-0069.md)를 따릅니다. 일반적으로 `bafkzci`로 시작하며 최신 Filecoin 도구에 필요한 페이로드 크기 정보가 들어 있습니다. **이전 형식의 CommP(v1)**는 일반적으로 `baga6ea4`로 시작하며 기존 Filecoin 스토리지 거래에 사용됩니다. 작업에 이전 형식의 Piece CID와 패딩된 피스 크기가 필요하다면 해당 커밋먼트를 복사하고 옆에 표시된 크기를 사용하세요. 어느 형식이든 비교란에 붙여넣어 기존 커밋먼트가 파일과 일치하는지 확인할 수 있습니다. 파일 끝에 붙은 값이 0인 바이트의 개수만 다른 경우, 이전 형식의 CommP가 같을 수 있습니다.
 
 ## IPFS CID와 왜 다른가요?
 
