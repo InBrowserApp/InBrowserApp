@@ -17,7 +17,13 @@
     "@workspace/raster-image": "workspace:*",
     "@workspace/ocr-models": "workspace:*",
     "@workspace/comic": "workspace:*",
-    "@workspace/tool-sdk": "workspace:*"
+    "@workspace/tool-sdk": "workspace:*",
+    "@types/geojson": "catalog:",
+    "@types/leaflet": "catalog:",
+    "@types/topojson-client": "catalog:",
+    "leaflet": "catalog:",
+    "topojson-client": "catalog:",
+    "world-atlas": "catalog:"
   },
   "peerDependencies": {
     "react": "catalog:",

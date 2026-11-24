@@ -10214,6 +10214,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geojson-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "de",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "en",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "es",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "he",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "id",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "it",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "no",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "th",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-maker",
     language: "ar",
   },

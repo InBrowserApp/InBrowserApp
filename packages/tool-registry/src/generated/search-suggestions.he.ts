@@ -558,6 +558,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gamepad-tester",
   },
   {
+    category: "json",
+    name: "מציג GeoJSON",
+    slug: "geojson-viewer",
+  },
+  {
     category: "image",
     name: "יוצר GIF",
     slug: "gif-maker",

@@ -14186,6 +14186,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "geojson-viewer",
+    category: "json",
+    icon: "map",
+    tags: [
+      "geojson",
+      "map",
+      "gis",
+      "viewer",
+      "offline",
+      "polygon",
+      "feature",
+      "latitude",
+      "longitude",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoJSON",
+        description:
+          "افتح ملف GeoJSON أو ألصق محتواه لاستعراض النقاط والخطوط والمضلعات على خريطة تفاعلية تعمل دون اتصال، والاطّلاع على خصائص المعالم. تبقى الملفات في متصفحك.",
+      },
+      de: {
+        name: "GeoJSON-Betrachter",
+        description:
+          "GeoJSON öffnen oder einfügen, Punkte, Linien und Polygone auf einer interaktiven Offline-Karte anzeigen und ihre Eigenschaften prüfen. Dateien bleiben in deinem Browser.",
+      },
+      en: {
+        name: "GeoJSON Viewer",
+        description:
+          "Open or paste GeoJSON, explore points, lines and polygons on an interactive offline map, and inspect feature properties. Files stay in your browser.",
+      },
+      es: {
+        name: "Visor de GeoJSON",
+        description:
+          "Abre o pega GeoJSON, explora puntos, líneas y polígonos en un mapa interactivo sin conexión y consulta los atributos de cada entidad. Los archivos se quedan en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse GeoJSON",
+        description:
+          "Ouvrez ou collez du GeoJSON, explorez les points, lignes et polygones sur une carte interactive hors ligne et consultez les attributs des entités. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג GeoJSON",
+        description:
+          "פתחו קובץ GeoJSON או הדביקו את תוכנו. צפו בנקודות, בקווים ובמצולעים במפה אינטראקטיבית ללא חיבור לרשת ובדקו את המאפיינים שלהם. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "GeoJSON व्यूअर",
+        description:
+          "GeoJSON फ़ाइल खोलें या उसका टेक्स्ट पेस्ट करें। इंटरैक्टिव ऑफ़लाइन मानचित्र पर बिंदु, रेखाएँ और बहुभुज देखें और उनकी विशेषताएँ जाँचें। फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil GeoJSON",
+        description:
+          "Buka atau tempel GeoJSON untuk melihat titik, garis, dan poligon pada peta interaktif luring serta memeriksa atribut fitur. Berkas tetap berada di browser.",
+      },
+      it: {
+        name: "Visualizzatore GeoJSON",
+        description:
+          "Apri un file GeoJSON o incollane il contenuto. Esplora punti, linee e poligoni su una mappa interattiva offline e consulta gli attributi. I file restano nel browser.",
+      },
+      ja: {
+        name: "GeoJSON ビューアー",
+        description:
+          "GeoJSON ファイルを開くかテキストを貼り付けると、オフラインの地図で点・線・ポリゴンと地物の属性を確認できます。ファイルはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "GeoJSON 뷰어",
+        description:
+          "GeoJSON을 열거나 붙여 넣어 오프라인 대화형 지도에서 점, 선, 폴리곤을 살펴보고 피처 속성을 확인하세요. 파일은 브라우저에 그대로 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar GeoJSON",
+        description:
+          "Buka atau tampal GeoJSON untuk melihat titik, garisan dan poligon pada peta interaktif luar talian serta menyemak atribut ciri. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "GeoJSON-viewer",
+        description:
+          "Open of plak GeoJSON, bekijk punten, lijnen en polygonen op een interactieve offlinekaart en inspecteer objecteigenschappen. Bestanden blijven in je browser.",
+      },
+      no: {
+        name: "GeoJSON-viser",
+        description:
+          "Åpne eller lim inn GeoJSON, se punkter, linjer og polygoner på et interaktivt kart uten nett, og undersøk objektegenskaper. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka GeoJSON",
+        description:
+          "Otwórz plik GeoJSON lub wklej jego treść. Przeglądaj punkty, linie i poligony na interaktywnej mapie offline oraz sprawdzaj atrybuty obiektów. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de GeoJSON",
+        description:
+          "Abra ou cole GeoJSON para explorar pontos, linhas e polígonos em um mapa interativo offline e consultar os atributos das feições. Os arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр GeoJSON",
+        description:
+          "Откройте файл GeoJSON или вставьте его содержимое, чтобы просмотреть точки, линии, полигоны и атрибуты объектов на интерактивной офлайн-карте. Файлы остаются в браузере.",
+      },
+      sv: {
+        name: "GeoJSON-visare",
+        description:
+          "Öppna eller klistra in GeoJSON, utforska punkter, linjer och polygoner på en interaktiv karta offline och granska objektens attribut. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoJSON",
+        description:
+          "เปิดหรือวาง GeoJSON เพื่อดูจุด เส้น และรูปหลายเหลี่ยมบนแผนที่แบบโต้ตอบที่ใช้แบบออฟไลน์ได้ พร้อมตรวจสอบแอตทริบิวต์ของแต่ละฟีเจอร์ ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "GeoJSON Görüntüleyici",
+        description:
+          "GeoJSON dosyası açın veya GeoJSON metni yapıştırın. Çevrimdışı etkileşimli haritada noktaları, çizgileri ve çokgenleri görün, detayların özniteliklerini inceleyin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem GeoJSON",
+        description:
+          "Mở hoặc dán GeoJSON, khám phá các điểm, đường và đa giác trên bản đồ tương tác ngoại tuyến, rồi xem thuộc tính của đối tượng. Tệp được giữ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GeoJSON 查看器",
+        description:
+          "打开或粘贴 GeoJSON，在可交互的离线地图上查看点、线和面，并检查要素属性。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "GeoJSON 檢視器",
+        description:
+          "開啟或貼上 GeoJSON，在可離線使用的互動地圖上查看點、線和多邊形，並檢查圖徵屬性。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
+  {
     slug: "gif-maker",
     category: "image",
     icon: "film",

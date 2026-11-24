@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON を開く",
+  "example": "サンプルを試す",
+  "paste": "GeoJSON を貼り付け",
+  "render": "地図に表示",
+  "map": "GeoJSON の地図",
+  "fit": "全体を表示",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "features": "地物",
+  "properties": "属性",
+  "empty": ".geojson または .json ファイルを開くか、GeoJSON を貼り付けてください。",
+  "noGeometry": "この GeoJSON には表示できる形状がありません。",
+  "noProperties": "この地物に属性はありません。",
+  "invalid": "GeoJSON を開けませんでした。有効な GeoJSON ジオメトリが含まれているか確認してください。",
+  "feature": "地物 {number}"
+}
