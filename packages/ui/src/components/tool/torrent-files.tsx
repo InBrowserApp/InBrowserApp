@@ -1,4 +1,5 @@
-import { useId, useState } from "react"
+import { fileSizeFormatter } from "@workspace/ui/lib/format-file-size"
+import { useId, useState, type ReactNode } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
@@ -8,22 +9,27 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { FileText, Search } from "@workspace/ui/icons"
-import type { TorrentMessages, TorrentMetadata } from "./torrent-types"
+import type { TorrentMessages } from "./torrent-types"
 
 const PAGE_SIZE = 50
 
-function TorrentFiles({
+function TorrentFiles<File extends { path: string; length: number }>({
   files,
   messages: m,
-  formatSize,
-  formatNumber,
+  language,
+  actions,
 }: {
-  files: TorrentMetadata["files"]
-  messages: TorrentMessages
-  formatSize: (bytes: number) => string
-  formatNumber: Intl.NumberFormat
+  files: File[]
+  messages: Pick<
+    TorrentMessages,
+    "files" | "filter" | "path" | "size" | "noMatches" | "previous" | "next"
+  >
+  language: string
+  actions?: { heading: string; render: (file: File) => ReactNode }
 }) {
   const id = useId()
+  const formatSize = fileSizeFormatter(language)
+  const formatNumber = new Intl.NumberFormat(language)
   const [filter, setFilter] = useState("")
   const [page, setPage] = useState(0)
   const query = filter.trim().toLowerCase()
@@ -70,23 +76,42 @@ function TorrentFiles({
             <table aria-label={m.files} className="w-full text-sm">
               <thead className="border-b text-muted-foreground">
                 <tr>
-                  <th scope="col" className="px-3 py-2 text-start font-medium">
+                  <th
+                    scope="col"
+                    className="px-2 py-2 text-start font-medium sm:px-3"
+                  >
                     {m.path}
                   </th>
-                  <th scope="col" className="px-3 py-2 text-end font-medium">
+                  <th
+                    scope="col"
+                    className="px-2 py-2 text-end font-medium sm:px-3"
+                  >
                     {m.size}
                   </th>
+                  {actions ? (
+                    <th
+                      scope="col"
+                      className="px-2 py-2 text-end font-medium sm:px-3"
+                    >
+                      {actions.heading}
+                    </th>
+                  ) : null}
                 </tr>
               </thead>
               <tbody className="divide-y">
                 {matches.slice(start, end).map((file, index) => (
                   <tr key={start + index}>
-                    <td className="px-3 py-2 wrap-anywhere">
+                    <td className="px-2 py-2 wrap-anywhere sm:px-3">
                       <bdi>{file.path}</bdi>
                     </td>
-                    <td className="px-3 py-2 text-end whitespace-nowrap tabular-nums">
+                    <td className="px-2 py-2 text-end whitespace-nowrap tabular-nums sm:px-3">
                       {formatSize(file.length)}
                     </td>
+                    {actions ? (
+                      <td className="px-2 py-2 text-end sm:px-3">
+                        {actions.render(file)}
+                      </td>
+                    ) : null}
                   </tr>
                 ))}
               </tbody>

@@ -42927,6 +42927,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "torrent-downloader",
+    category: "network",
+    icon: "download",
+    tags: ["bittorrent", "torrent", "downloader", "magnet", "webtorrent"],
+    locales: {
+      ar: {
+        name: "تنزيل ملفات التورنت",
+        description:
+          "نزّل الملفات من رابط مغناطيسي أو ملف ⁦.torrent⁩ مباشرةً في متصفحك باستخدام WebTorrent. اختر الملف الذي تريده وتابع تقدّم التنزيل.",
+      },
+      de: {
+        name: "Torrent-Downloader",
+        description:
+          "Lade Dateien aus einem Magnet-Link oder einer .torrent-Datei mit WebTorrent im Browser herunter. Wähle eine Datei und verfolge den Downloadfortschritt.",
+      },
+      en: {
+        name: "Torrent Downloader",
+        description:
+          "Download files from a magnet link or .torrent file in your browser with WebTorrent. Choose a file and track its download progress.",
+      },
+      es: {
+        name: "Descargador de torrents",
+        description:
+          "Descarga archivos de un enlace magnet o un archivo .torrent en tu navegador con WebTorrent. Elige un archivo y consulta el progreso de la descarga.",
+      },
+      fr: {
+        name: "Téléchargeur de torrents",
+        description:
+          "Téléchargez des fichiers depuis un lien magnet ou un fichier .torrent dans votre navigateur avec WebTorrent. Choisissez le fichier à télécharger et suivez la progression.",
+      },
+      he: {
+        name: "הורדת קבצים מטורנט",
+        description:
+          "הורידו קבצים מקישור מגנט או מקובץ ⁦.torrent⁩ ישירות בדפדפן באמצעות WebTorrent. בחרו את הקובץ הרצוי ועקבו אחר התקדמות ההורדה.",
+      },
+      hi: {
+        name: "टोरेंट डाउनलोडर",
+        description:
+          "WebTorrent की मदद से मैग्नेट लिंक या .torrent फ़ाइल से सीधे ब्राउज़र में डाउनलोड करें। फ़ाइल चुनें और डाउनलोड की प्रगति देखें।",
+      },
+      id: {
+        name: "Pengunduh Torrent",
+        description:
+          "Unduh file dari tautan magnet atau file .torrent di browser dengan WebTorrent. Pilih file yang diinginkan dan pantau kemajuan unduhan.",
+      },
+      it: {
+        name: "Download torrent",
+        description:
+          "Scarica file da un link magnet o da un file .torrent direttamente nel browser con WebTorrent. Scegli un file e segui l'avanzamento del download.",
+      },
+      ja: {
+        name: "Torrentダウンローダー",
+        description:
+          "WebTorrentを使い、マグネットリンクや.torrentファイルからブラウザーでファイルをダウンロード。ファイルを選んで進行状況を確認できます。",
+      },
+      ko: {
+        name: "토렌트 다운로더",
+        description:
+          "WebTorrent를 사용해 마그넷 링크나 .torrent 파일에서 브라우저로 파일을 다운로드하세요. 원하는 파일을 선택하고 진행 상황을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemuat Turun Torrent",
+        description:
+          "Muat turun fail daripada pautan magnet atau fail .torrent dalam penyemak imbas dengan WebTorrent. Pilih fail dan pantau kemajuan muat turun.",
+      },
+      nl: {
+        name: "Torrentdownloader",
+        description:
+          "Download bestanden via een magnetlink of .torrent-bestand in je browser met WebTorrent. Kies een bestand en volg de voortgang van de download.",
+      },
+      no: {
+        name: "Torrentnedlaster",
+        description:
+          "Last ned filer fra en magnetlenke eller .torrent-fil i nettleseren med WebTorrent. Velg en fil og følg med på nedlastingen.",
+      },
+      pl: {
+        name: "Program do pobierania torrentów",
+        description:
+          "Pobieraj pliki z linku magnet lub pliku .torrent w przeglądarce za pomocą WebTorrent. Wybierz plik i śledź postęp pobierania.",
+      },
+      pt: {
+        name: "Baixador de torrents",
+        description:
+          "Baixe arquivos de um link magnet ou arquivo .torrent no navegador com o WebTorrent. Escolha um arquivo e acompanhe o progresso do download.",
+      },
+      ru: {
+        name: "Загрузка торрентов",
+        description:
+          "Скачивайте файлы по магнит-ссылке или из файла .torrent прямо в браузере через WebTorrent. Выберите нужный файл и следите за ходом загрузки.",
+      },
+      sv: {
+        name: "Torrentnedladdare",
+        description:
+          "Ladda ner filer från en magnetlänk eller .torrent-fil direkt i webbläsaren med WebTorrent. Välj en fil och följ nedladdningen.",
+      },
+      th: {
+        name: "โปรแกรมดาวน์โหลด Torrent",
+        description:
+          "ดาวน์โหลดไฟล์จากลิงก์ Magnet หรือไฟล์ .torrent ในเบราว์เซอร์ด้วย WebTorrent เลือกไฟล์และติดตามความคืบหน้าการดาวน์โหลด",
+      },
+      tr: {
+        name: "Torrent İndirme Aracı",
+        description:
+          "WebTorrent ile magnet bağlantısından veya .torrent dosyasından tarayıcınızda dosya indirin. İndirmek istediğiniz dosyayı seçin ve ilerlemeyi takip edin.",
+      },
+      vi: {
+        name: "Trình tải torrent",
+        description:
+          "Tải tệp từ liên kết magnet hoặc tệp .torrent trong trình duyệt bằng WebTorrent. Chọn tệp và theo dõi tiến trình tải xuống.",
+      },
+      "zh-CN": {
+        name: "BT 种子下载器",
+        description:
+          "在浏览器中使用 WebTorrent 从磁力链接或 .torrent 文件下载内容。选择文件并查看下载进度。",
+      },
+      "zh-TW": {
+        name: "Torrent 下載器",
+        description:
+          "在瀏覽器中透過 WebTorrent 從磁力連結或 .torrent 種子檔下載。選擇所需檔案，即可查看下載進度。",
+      },
+    },
+  },
+  {
     slug: "torrent-file-viewer",
     category: "network",
     icon: "file-text",
@@ -91903,6 +92026,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "torrent-downloader": {
+    slug: "torrent-downloader",
+    category: "network",
+    icon: "download",
+    tags: ["bittorrent", "torrent", "downloader", "magnet", "webtorrent"],
+    locales: {
+      ar: {
+        name: "تنزيل ملفات التورنت",
+        description:
+          "نزّل الملفات من رابط مغناطيسي أو ملف ⁦.torrent⁩ مباشرةً في متصفحك باستخدام WebTorrent. اختر الملف الذي تريده وتابع تقدّم التنزيل.",
+      },
+      de: {
+        name: "Torrent-Downloader",
+        description:
+          "Lade Dateien aus einem Magnet-Link oder einer .torrent-Datei mit WebTorrent im Browser herunter. Wähle eine Datei und verfolge den Downloadfortschritt.",
+      },
+      en: {
+        name: "Torrent Downloader",
+        description:
+          "Download files from a magnet link or .torrent file in your browser with WebTorrent. Choose a file and track its download progress.",
+      },
+      es: {
+        name: "Descargador de torrents",
+        description:
+          "Descarga archivos de un enlace magnet o un archivo .torrent en tu navegador con WebTorrent. Elige un archivo y consulta el progreso de la descarga.",
+      },
+      fr: {
+        name: "Téléchargeur de torrents",
+        description:
+          "Téléchargez des fichiers depuis un lien magnet ou un fichier .torrent dans votre navigateur avec WebTorrent. Choisissez le fichier à télécharger et suivez la progression.",
+      },
+      he: {
+        name: "הורדת קבצים מטורנט",
+        description:
+          "הורידו קבצים מקישור מגנט או מקובץ ⁦.torrent⁩ ישירות בדפדפן באמצעות WebTorrent. בחרו את הקובץ הרצוי ועקבו אחר התקדמות ההורדה.",
+      },
+      hi: {
+        name: "टोरेंट डाउनलोडर",
+        description:
+          "WebTorrent की मदद से मैग्नेट लिंक या .torrent फ़ाइल से सीधे ब्राउज़र में डाउनलोड करें। फ़ाइल चुनें और डाउनलोड की प्रगति देखें।",
+      },
+      id: {
+        name: "Pengunduh Torrent",
+        description:
+          "Unduh file dari tautan magnet atau file .torrent di browser dengan WebTorrent. Pilih file yang diinginkan dan pantau kemajuan unduhan.",
+      },
+      it: {
+        name: "Download torrent",
+        description:
+          "Scarica file da un link magnet o da un file .torrent direttamente nel browser con WebTorrent. Scegli un file e segui l'avanzamento del download.",
+      },
+      ja: {
+        name: "Torrentダウンローダー",
+        description:
+          "WebTorrentを使い、マグネットリンクや.torrentファイルからブラウザーでファイルをダウンロード。ファイルを選んで進行状況を確認できます。",
+      },
+      ko: {
+        name: "토렌트 다운로더",
+        description:
+          "WebTorrent를 사용해 마그넷 링크나 .torrent 파일에서 브라우저로 파일을 다운로드하세요. 원하는 파일을 선택하고 진행 상황을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemuat Turun Torrent",
+        description:
+          "Muat turun fail daripada pautan magnet atau fail .torrent dalam penyemak imbas dengan WebTorrent. Pilih fail dan pantau kemajuan muat turun.",
+      },
+      nl: {
+        name: "Torrentdownloader",
+        description:
+          "Download bestanden via een magnetlink of .torrent-bestand in je browser met WebTorrent. Kies een bestand en volg de voortgang van de download.",
+      },
+      no: {
+        name: "Torrentnedlaster",
+        description:
+          "Last ned filer fra en magnetlenke eller .torrent-fil i nettleseren med WebTorrent. Velg en fil og følg med på nedlastingen.",
+      },
+      pl: {
+        name: "Program do pobierania torrentów",
+        description:
+          "Pobieraj pliki z linku magnet lub pliku .torrent w przeglądarce za pomocą WebTorrent. Wybierz plik i śledź postęp pobierania.",
+      },
+      pt: {
+        name: "Baixador de torrents",
+        description:
+          "Baixe arquivos de um link magnet ou arquivo .torrent no navegador com o WebTorrent. Escolha um arquivo e acompanhe o progresso do download.",
+      },
+      ru: {
+        name: "Загрузка торрентов",
+        description:
+          "Скачивайте файлы по магнит-ссылке или из файла .torrent прямо в браузере через WebTorrent. Выберите нужный файл и следите за ходом загрузки.",
+      },
+      sv: {
+        name: "Torrentnedladdare",
+        description:
+          "Ladda ner filer från en magnetlänk eller .torrent-fil direkt i webbläsaren med WebTorrent. Välj en fil och följ nedladdningen.",
+      },
+      th: {
+        name: "โปรแกรมดาวน์โหลด Torrent",
+        description:
+          "ดาวน์โหลดไฟล์จากลิงก์ Magnet หรือไฟล์ .torrent ในเบราว์เซอร์ด้วย WebTorrent เลือกไฟล์และติดตามความคืบหน้าการดาวน์โหลด",
+      },
+      tr: {
+        name: "Torrent İndirme Aracı",
+        description:
+          "WebTorrent ile magnet bağlantısından veya .torrent dosyasından tarayıcınızda dosya indirin. İndirmek istediğiniz dosyayı seçin ve ilerlemeyi takip edin.",
+      },
+      vi: {
+        name: "Trình tải torrent",
+        description:
+          "Tải tệp từ liên kết magnet hoặc tệp .torrent trong trình duyệt bằng WebTorrent. Chọn tệp và theo dõi tiến trình tải xuống.",
+      },
+      "zh-CN": {
+        name: "BT 种子下载器",
+        description:
+          "在浏览器中使用 WebTorrent 从磁力链接或 .torrent 文件下载内容。选择文件并查看下载进度。",
+      },
+      "zh-TW": {
+        name: "Torrent 下載器",
+        description:
+          "在瀏覽器中透過 WebTorrent 從磁力連結或 .torrent 種子檔下載。選擇所需檔案，即可查看下載進度。",
       },
     },
   },

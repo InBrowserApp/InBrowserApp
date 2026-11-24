@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "network",
+    name: "Program do pobierania torrentów",
+    slug: "torrent-downloader",
+  },
+  {
+    category: "network",
     name: "Przeglądarka plików torrent",
     slug: "torrent-file-viewer",
   },

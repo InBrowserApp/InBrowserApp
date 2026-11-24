@@ -1,0 +1,4 @@
+{
+  "name": "Torrent 下載器",
+  "description": "在瀏覽器中透過 WebTorrent 從磁力連結或 .torrent 種子檔下載。選擇所需檔案，即可查看下載進度。"
+}

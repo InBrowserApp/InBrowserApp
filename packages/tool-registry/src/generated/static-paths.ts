@@ -31098,6 +31098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "torrent-downloader",
+    language: "ar",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "de",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "en",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "es",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "fr",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "he",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "hi",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "id",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "it",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "ja",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "ko",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "ms",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "nl",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "no",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "pl",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "pt",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "ru",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "sv",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "th",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "tr",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "vi",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "zh-CN",
+  },
+  {
+    slug: "torrent-downloader",
+    language: "zh-TW",
+  },
+  {
     slug: "torrent-file-viewer",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Torrent-Downloader",
+  "description": "Lade Dateien aus einem Magnet-Link oder einer .torrent-Datei mit WebTorrent im Browser herunter. Wähle eine Datei und verfolge den Downloadfortschritt."
+}

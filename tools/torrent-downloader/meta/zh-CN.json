@@ -1,0 +1,4 @@
+{
+  "name": "BT 种子下载器",
+  "description": "在浏览器中使用 WebTorrent 从磁力链接或 .torrent 文件下载内容。选择文件并查看下载进度。"
+}

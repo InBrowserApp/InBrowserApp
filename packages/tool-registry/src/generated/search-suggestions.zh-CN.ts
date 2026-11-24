@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "network",
+    name: "BT 种子下载器",
+    slug: "torrent-downloader",
+  },
+  {
+    category: "network",
     name: "种子文件查看器",
     slug: "torrent-file-viewer",
   },

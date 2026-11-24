@@ -1,0 +1,4 @@
+{
+  "name": "Program do pobierania torrentów",
+  "description": "Pobieraj pliki z linku magnet lub pliku .torrent w przeglądarce za pomocą WebTorrent. Wybierz plik i śledź postęp pobierania."
+}

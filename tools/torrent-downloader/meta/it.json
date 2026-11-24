@@ -1,0 +1,4 @@
+{
+  "name": "Download torrent",
+  "description": "Scarica file da un link magnet o da un file .torrent direttamente nel browser con WebTorrent. Scegli un file e segui l'avanzamento del download."
+}
