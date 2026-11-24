@@ -1343,6 +1343,9 @@ importers:
       '@types/geojson':
         specifier: 'catalog:'
         version: 7946.0.16
+      saxes:
+        specifier: 'catalog:'
+        version: 6.0.0
 
   packages/lib/html-pdf:
     dependencies:
