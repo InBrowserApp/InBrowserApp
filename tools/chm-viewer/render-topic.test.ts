@@ -32,8 +32,8 @@ test("preserves local links, styles and images in a script-free reading document
   vi.stubGlobal(
     "URL",
     class extends URL {
-      static createObjectURL = createUrl
-      static revokeObjectURL = revokeUrl
+      static override createObjectURL = createUrl
+      static override revokeObjectURL = revokeUrl
     }
   )
   try {
