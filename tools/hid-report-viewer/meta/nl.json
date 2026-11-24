@@ -1,0 +1,4 @@
+{
+  "name": "HID-rapportviewer",
+  "description": "Inspecteer een toegestaan HID-apparaat met WebHID. Bekijk leverancier- en product-ID’s, gebruikspagina’s, verzamelingen en live invoerrapporten in hexadecimaal met gewijzigde bytes gemarkeerd."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "HID-rapportvisare",
+  "description": "Granska en godkänd HID-enhet med WebHID. Visa tillverkar- och produkt-ID, användningssidor, samlingar och indatarapporter i hexadecimalformat i realtid, med ändrade byte markerade."
+}

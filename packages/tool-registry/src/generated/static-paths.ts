@@ -12882,6 +12882,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hid-report-viewer",
+    language: "ar",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "de",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "en",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "es",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "fr",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "he",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "hi",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "id",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "it",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "ja",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "ko",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "ms",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "nl",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "no",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "pl",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "pt",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "ru",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "sv",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "th",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "tr",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "vi",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "hid-report-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

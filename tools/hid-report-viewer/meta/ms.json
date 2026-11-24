@@ -1,0 +1,4 @@
+{
+  "name": "Pemapar laporan HID",
+  "description": "Periksa peranti HID yang dibenarkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi dan laporan input heks secara langsung dengan bait yang berubah diserlahkan."
+}

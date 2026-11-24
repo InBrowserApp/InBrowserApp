@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de rapports HID",
+  "description": "Examinez un périphérique HID autorisé avec WebHID. Consultez les identifiants du fabricant et du produit, les pages d’utilisation, les collections et les rapports d’entrée en hexadécimal en direct, avec les octets modifiés mis en évidence."
+}

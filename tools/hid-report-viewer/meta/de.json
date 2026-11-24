@@ -1,0 +1,4 @@
+{
+  "name": "HID-Berichtsbetrachter",
+  "description": "Untersuche ein freigegebenes HID-Gerät mit WebHID. Zeige Hersteller- und Produkt-IDs, Verwendungsseiten, Sammlungen und laufende Eingabeberichte in Hex an; geänderte Bytes werden hervorgehoben."
+}

@@ -147,6 +147,7 @@
     "@tool/har-analyzer": "workspace:*",
     "@tool/har-sanitizer": "workspace:*",
     "@tool/hex-editor": "workspace:*",
+    "@tool/hid-report-viewer": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",

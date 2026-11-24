@@ -703,6 +703,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "hex-editor",
   },
   {
+    category: "developer",
+    name: "Просмотрщик отчётов HID",
+    slug: "hid-report-viewer",
+  },
+  {
     category: "crypto",
     name: "Хеш HighwayHash для текста или файла",
     slug: "highwayhash-hash-text-or-file",

@@ -177,6 +177,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "har-analyzer": () => import("@tool/har-analyzer/page"),
   "har-sanitizer": () => import("@tool/har-sanitizer/page"),
   "hex-editor": () => import("@tool/hex-editor/page"),
+  "hid-report-viewer": () => import("@tool/hid-report-viewer/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),

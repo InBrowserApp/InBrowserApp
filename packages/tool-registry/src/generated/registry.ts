@@ -17948,6 +17948,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "hid-report-viewer",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "webhid",
+      "hid",
+      "device",
+      "input report",
+      "report id",
+      "hex",
+      "usage page",
+    ],
+    locales: {
+      ar: {
+        name: "عارض تقارير HID",
+        description:
+          "افحص جهاز HID مصرّحًا به باستخدام WebHID. اعرض معرّفي المورّد والمنتج وصفحات الاستخدام والمجموعات وتقارير الإدخال السداسية العشرية المباشرة مع تمييز البايتات المتغيرة.",
+      },
+      de: {
+        name: "HID-Berichtsbetrachter",
+        description:
+          "Untersuche ein freigegebenes HID-Gerät mit WebHID. Zeige Hersteller- und Produkt-IDs, Verwendungsseiten, Sammlungen und laufende Eingabeberichte in Hex an; geänderte Bytes werden hervorgehoben.",
+      },
+      en: {
+        name: "HID Report Viewer",
+        description:
+          "Inspect an authorized HID device with WebHID. View vendor and product IDs, usage pages, collections, and live hex input reports with changed bytes highlighted.",
+      },
+      es: {
+        name: "Visor de informes HID",
+        description:
+          "Inspecciona un dispositivo HID autorizado con WebHID. Consulta los identificadores de fabricante y producto, las páginas de uso, las colecciones y los informes de entrada en hexadecimal en tiempo real con los bytes modificados resaltados.",
+      },
+      fr: {
+        name: "Visionneuse de rapports HID",
+        description:
+          "Examinez un périphérique HID autorisé avec WebHID. Consultez les identifiants du fabricant et du produit, les pages d’utilisation, les collections et les rapports d’entrée en hexadécimal en direct, avec les octets modifiés mis en évidence.",
+      },
+      he: {
+        name: "מציג דוחות HID",
+        description:
+          "בדקו התקן HID מורשה באמצעות WebHID. הציגו מזהי ספק ומוצר, דפי שימוש, אוספים ודוחות קלט הקסדצימליים בזמן אמת עם הדגשת בתים שהשתנו.",
+      },
+      hi: {
+        name: "HID रिपोर्ट व्यूअर",
+        description:
+          "WebHID से अनुमति प्राप्त HID डिवाइस की जाँच करें। वेंडर और प्रोडक्ट ID, यूसेज पेज, कलेक्शन और लाइव हेक्स इनपुट रिपोर्ट देखें, जिनमें बदले हुए बाइट हाइलाइट होते हैं।",
+      },
+      id: {
+        name: "Penampil Laporan HID",
+        description:
+          "Periksa perangkat HID yang diizinkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi, serta laporan input heksadesimal secara langsung dengan byte yang berubah disorot.",
+      },
+      it: {
+        name: "Visualizzatore di report HID",
+        description:
+          "Esamina un dispositivo HID autorizzato con WebHID. Visualizza ID fornitore e prodotto, pagine di utilizzo, raccolte e report di input esadecimali in tempo reale, con i byte modificati evidenziati.",
+      },
+      ja: {
+        name: "HID レポートビューアー",
+        description:
+          "WebHID でアクセスを許可した HID デバイスを調べます。ベンダー ID、製品 ID、使用法ページ、コレクション、リアルタイムの16進数入力レポートを確認でき、変化したバイトが強調表示されます。",
+      },
+      ko: {
+        name: "HID 보고서 뷰어",
+        description:
+          "WebHID로 접근이 허용된 HID 기기를 살펴보세요. 공급업체 및 제품 ID, 사용 페이지, 컬렉션과 실시간 16진수 입력 보고서를 확인하고 변경된 바이트를 강조 표시합니다.",
+      },
+      ms: {
+        name: "Pemapar laporan HID",
+        description:
+          "Periksa peranti HID yang dibenarkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi dan laporan input heks secara langsung dengan bait yang berubah diserlahkan.",
+      },
+      nl: {
+        name: "HID-rapportviewer",
+        description:
+          "Inspecteer een toegestaan HID-apparaat met WebHID. Bekijk leverancier- en product-ID’s, gebruikspagina’s, verzamelingen en live invoerrapporten in hexadecimaal met gewijzigde bytes gemarkeerd.",
+      },
+      no: {
+        name: "HID-rapportviser",
+        description:
+          "Undersøk en godkjent HID-enhet med WebHID. Se leverandør- og produkt-ID-er, brukssider, samlinger og løpende inndatarapporter i hex med endrede byte uthevet.",
+      },
+      pl: {
+        name: "Przeglądarka raportów HID",
+        description:
+          "Sprawdź autoryzowane urządzenie HID za pomocą WebHID. Wyświetl identyfikatory dostawcy i produktu, strony użycia, kolekcje oraz raporty wejściowe na żywo w formacie szesnastkowym z wyróżnionymi zmienionymi bajtami.",
+      },
+      pt: {
+        name: "Visualizador de relatórios HID",
+        description:
+          "Inspecione um dispositivo HID autorizado com WebHID. Veja IDs de fabricante e produto, páginas de uso, coleções e relatórios de entrada em hexadecimal ao vivo, com os bytes alterados destacados.",
+      },
+      ru: {
+        name: "Просмотрщик отчётов HID",
+        description:
+          "Исследуйте разрешённое устройство HID с помощью WebHID. Просматривайте идентификаторы производителя и продукта, страницы использования, коллекции и входные отчёты в шестнадцатеричном виде с выделением изменённых байтов.",
+      },
+      sv: {
+        name: "HID-rapportvisare",
+        description:
+          "Granska en godkänd HID-enhet med WebHID. Visa tillverkar- och produkt-ID, användningssidor, samlingar och indatarapporter i hexadecimalformat i realtid, med ändrade byte markerade.",
+      },
+      th: {
+        name: "โปรแกรมดูรายงาน HID",
+        description:
+          "ตรวจสอบอุปกรณ์ HID ที่ได้รับอนุญาตด้วย WebHID ดูรหัสผู้ผลิตและผลิตภัณฑ์ หน้าการใช้งาน คอลเล็กชัน และรายงานอินพุตฐานสิบหกแบบสดที่เน้นไบต์ซึ่งเปลี่ยนแปลง",
+      },
+      tr: {
+        name: "HID Rapor Görüntüleyici",
+        description:
+          "WebHID ile yetki verilmiş bir HID cihazını inceleyin. Üretici ve ürün kimliklerini, kullanım sayfalarını, koleksiyonları ve değişen baytları vurgulanmış canlı onaltılık giriş raporlarını görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem báo cáo HID",
+        description:
+          "Kiểm tra thiết bị HID đã được cấp quyền bằng WebHID. Xem ID nhà cung cấp và sản phẩm, trang sử dụng, tập hợp và báo cáo đầu vào dạng hex trực tiếp với các byte thay đổi được tô sáng.",
+      },
+      "zh-CN": {
+        name: "HID 报告查看器",
+        description:
+          "使用 WebHID 检查已授权的 HID 设备。查看厂商和产品 ID、用法页、集合以及实时十六进制输入报告，并高亮显示变化的字节。",
+      },
+      "zh-TW": {
+        name: "HID 報告檢視器",
+        description:
+          "使用 WebHID 檢視已授權的 HID 裝置。查看廠商與產品識別碼、使用方式頁面、集合，以及即時十六進位輸入報告，並醒目標示變更的位元組。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -68451,6 +68582,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "十六進位編輯器",
         description:
           "在線上以十六進位和 ASCII 檢視及編輯二進位檔案。跳至指定的位元組偏移量、覆寫數值，並下載編輯後的副本。檔案會留在瀏覽器中。",
+      },
+    },
+  },
+  "hid-report-viewer": {
+    slug: "hid-report-viewer",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "webhid",
+      "hid",
+      "device",
+      "input report",
+      "report id",
+      "hex",
+      "usage page",
+    ],
+    locales: {
+      ar: {
+        name: "عارض تقارير HID",
+        description:
+          "افحص جهاز HID مصرّحًا به باستخدام WebHID. اعرض معرّفي المورّد والمنتج وصفحات الاستخدام والمجموعات وتقارير الإدخال السداسية العشرية المباشرة مع تمييز البايتات المتغيرة.",
+      },
+      de: {
+        name: "HID-Berichtsbetrachter",
+        description:
+          "Untersuche ein freigegebenes HID-Gerät mit WebHID. Zeige Hersteller- und Produkt-IDs, Verwendungsseiten, Sammlungen und laufende Eingabeberichte in Hex an; geänderte Bytes werden hervorgehoben.",
+      },
+      en: {
+        name: "HID Report Viewer",
+        description:
+          "Inspect an authorized HID device with WebHID. View vendor and product IDs, usage pages, collections, and live hex input reports with changed bytes highlighted.",
+      },
+      es: {
+        name: "Visor de informes HID",
+        description:
+          "Inspecciona un dispositivo HID autorizado con WebHID. Consulta los identificadores de fabricante y producto, las páginas de uso, las colecciones y los informes de entrada en hexadecimal en tiempo real con los bytes modificados resaltados.",
+      },
+      fr: {
+        name: "Visionneuse de rapports HID",
+        description:
+          "Examinez un périphérique HID autorisé avec WebHID. Consultez les identifiants du fabricant et du produit, les pages d’utilisation, les collections et les rapports d’entrée en hexadécimal en direct, avec les octets modifiés mis en évidence.",
+      },
+      he: {
+        name: "מציג דוחות HID",
+        description:
+          "בדקו התקן HID מורשה באמצעות WebHID. הציגו מזהי ספק ומוצר, דפי שימוש, אוספים ודוחות קלט הקסדצימליים בזמן אמת עם הדגשת בתים שהשתנו.",
+      },
+      hi: {
+        name: "HID रिपोर्ट व्यूअर",
+        description:
+          "WebHID से अनुमति प्राप्त HID डिवाइस की जाँच करें। वेंडर और प्रोडक्ट ID, यूसेज पेज, कलेक्शन और लाइव हेक्स इनपुट रिपोर्ट देखें, जिनमें बदले हुए बाइट हाइलाइट होते हैं।",
+      },
+      id: {
+        name: "Penampil Laporan HID",
+        description:
+          "Periksa perangkat HID yang diizinkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi, serta laporan input heksadesimal secara langsung dengan byte yang berubah disorot.",
+      },
+      it: {
+        name: "Visualizzatore di report HID",
+        description:
+          "Esamina un dispositivo HID autorizzato con WebHID. Visualizza ID fornitore e prodotto, pagine di utilizzo, raccolte e report di input esadecimali in tempo reale, con i byte modificati evidenziati.",
+      },
+      ja: {
+        name: "HID レポートビューアー",
+        description:
+          "WebHID でアクセスを許可した HID デバイスを調べます。ベンダー ID、製品 ID、使用法ページ、コレクション、リアルタイムの16進数入力レポートを確認でき、変化したバイトが強調表示されます。",
+      },
+      ko: {
+        name: "HID 보고서 뷰어",
+        description:
+          "WebHID로 접근이 허용된 HID 기기를 살펴보세요. 공급업체 및 제품 ID, 사용 페이지, 컬렉션과 실시간 16진수 입력 보고서를 확인하고 변경된 바이트를 강조 표시합니다.",
+      },
+      ms: {
+        name: "Pemapar laporan HID",
+        description:
+          "Periksa peranti HID yang dibenarkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi dan laporan input heks secara langsung dengan bait yang berubah diserlahkan.",
+      },
+      nl: {
+        name: "HID-rapportviewer",
+        description:
+          "Inspecteer een toegestaan HID-apparaat met WebHID. Bekijk leverancier- en product-ID’s, gebruikspagina’s, verzamelingen en live invoerrapporten in hexadecimaal met gewijzigde bytes gemarkeerd.",
+      },
+      no: {
+        name: "HID-rapportviser",
+        description:
+          "Undersøk en godkjent HID-enhet med WebHID. Se leverandør- og produkt-ID-er, brukssider, samlinger og løpende inndatarapporter i hex med endrede byte uthevet.",
+      },
+      pl: {
+        name: "Przeglądarka raportów HID",
+        description:
+          "Sprawdź autoryzowane urządzenie HID za pomocą WebHID. Wyświetl identyfikatory dostawcy i produktu, strony użycia, kolekcje oraz raporty wejściowe na żywo w formacie szesnastkowym z wyróżnionymi zmienionymi bajtami.",
+      },
+      pt: {
+        name: "Visualizador de relatórios HID",
+        description:
+          "Inspecione um dispositivo HID autorizado com WebHID. Veja IDs de fabricante e produto, páginas de uso, coleções e relatórios de entrada em hexadecimal ao vivo, com os bytes alterados destacados.",
+      },
+      ru: {
+        name: "Просмотрщик отчётов HID",
+        description:
+          "Исследуйте разрешённое устройство HID с помощью WebHID. Просматривайте идентификаторы производителя и продукта, страницы использования, коллекции и входные отчёты в шестнадцатеричном виде с выделением изменённых байтов.",
+      },
+      sv: {
+        name: "HID-rapportvisare",
+        description:
+          "Granska en godkänd HID-enhet med WebHID. Visa tillverkar- och produkt-ID, användningssidor, samlingar och indatarapporter i hexadecimalformat i realtid, med ändrade byte markerade.",
+      },
+      th: {
+        name: "โปรแกรมดูรายงาน HID",
+        description:
+          "ตรวจสอบอุปกรณ์ HID ที่ได้รับอนุญาตด้วย WebHID ดูรหัสผู้ผลิตและผลิตภัณฑ์ หน้าการใช้งาน คอลเล็กชัน และรายงานอินพุตฐานสิบหกแบบสดที่เน้นไบต์ซึ่งเปลี่ยนแปลง",
+      },
+      tr: {
+        name: "HID Rapor Görüntüleyici",
+        description:
+          "WebHID ile yetki verilmiş bir HID cihazını inceleyin. Üretici ve ürün kimliklerini, kullanım sayfalarını, koleksiyonları ve değişen baytları vurgulanmış canlı onaltılık giriş raporlarını görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem báo cáo HID",
+        description:
+          "Kiểm tra thiết bị HID đã được cấp quyền bằng WebHID. Xem ID nhà cung cấp và sản phẩm, trang sử dụng, tập hợp và báo cáo đầu vào dạng hex trực tiếp với các byte thay đổi được tô sáng.",
+      },
+      "zh-CN": {
+        name: "HID 报告查看器",
+        description:
+          "使用 WebHID 检查已授权的 HID 设备。查看厂商和产品 ID、用法页、集合以及实时十六进制输入报告，并高亮显示变化的字节。",
+      },
+      "zh-TW": {
+        name: "HID 報告檢視器",
+        description:
+          "使用 WebHID 檢視已授權的 HID 裝置。查看廠商與產品識別碼、使用方式頁面、集合，以及即時十六進位輸入報告，並醒目標示變更的位元組。",
       },
     },
   },

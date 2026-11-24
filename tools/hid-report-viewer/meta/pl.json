@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka raportów HID",
+  "description": "Sprawdź autoryzowane urządzenie HID za pomocą WebHID. Wyświetl identyfikatory dostawcy i produktu, strony użycia, kolekcje oraz raporty wejściowe na żywo w formacie szesnastkowym z wyróżnionymi zmienionymi bajtami."
+}
