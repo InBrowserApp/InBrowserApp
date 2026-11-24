@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Pembaca Komik CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Penukar CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Pembaca Komik CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Pemapar CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Pemangkas Imej",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "Pemapar Histogram Imej",
+    slug: "image-histogram",
   },
   {
     category: "image",

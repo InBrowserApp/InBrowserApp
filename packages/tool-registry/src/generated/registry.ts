@@ -5811,6 +5811,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "cbor-messagepack-converter",
     category: "json",
     icon: "binary",
@@ -5939,6 +6062,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },
@@ -6440,6 +6686,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "國字大寫轉換器",
         description:
           "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
+      },
+    },
+  },
+  {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
       },
     },
   },
@@ -15599,6 +15976,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "圖片裁剪器",
         description:
           "自由裁剪圖片或使用固定長寬比，並可旋轉與翻轉。直接在瀏覽器本機預覽及下載 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  {
+    slug: "image-histogram",
+    category: "image",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "photo",
+      "histogram",
+      "rgb",
+      "color channels",
+      "brightness",
+      "luminance",
+      "exposure",
+      "clipping",
+    ],
+    locales: {
+      ar: {
+        name: "عارض المدرج التكراري للصور",
+        description:
+          "اعرض المدرج التكراري للسطوع وقنوات RGB في صورك. افحص الظلال والمناطق الساطعة وكل قناة لونية مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für Bildhistogramme",
+        description:
+          "Sieh dir das Helligkeits- und RGB-Histogramm eines Fotos oder Bildes an. Prüfe Tiefen, Lichter und einzelne Farbkanäle direkt im Browser.",
+      },
+      en: {
+        name: "Image Histogram Viewer",
+        description:
+          "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser.",
+      },
+      es: {
+        name: "Visor de histogramas de imágenes",
+        description:
+          "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’histogrammes d’images",
+        description:
+          "Affichez les histogrammes de luminosité et RVB d’une photo ou d’une image. Inspectez les ombres, les hautes lumières et chaque canal de couleur dans votre navigateur.",
+      },
+      he: {
+        name: "מציג היסטוגרמה לתמונות",
+        description:
+          "הציגו היסטוגרמות בהירות וערוצי RGB של צילומים ותמונות. בדקו צללים, אזורים בהירים וערוצי צבע נפרדים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज हिस्टोग्राम व्यूअर",
+        description:
+          "फ़ोटो या इमेज की चमक और RGB के हिस्टोग्राम देखें। गहरे और उजले टोन और अलग-अलग रंग चैनल सीधे अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Histogram Gambar",
+        description:
+          "Lihat histogram kecerahan dan RGB untuk foto atau gambar. Periksa bayangan, sorotan, dan tiap saluran warna langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di istogrammi di immagini",
+        description:
+          "Visualizza gli istogrammi di luminosità e RGB di una foto o immagine. Esamina ombre, luci e singoli canali di colore direttamente nel browser.",
+      },
+      ja: {
+        name: "画像ヒストグラムビューアー",
+        description:
+          "写真や画像の明るさと RGB のヒストグラムをブラウザーで表示し、シャドウ、ハイライト、各色のチャンネルを確認できます。",
+      },
+      ko: {
+        name: "이미지 히스토그램 뷰어",
+        description:
+          "사진이나 이미지의 밝기와 RGB 히스토그램을 확인하세요. 어두운 영역, 밝은 영역, 개별 색상 채널을 브라우저에서 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Histogram Imej",
+        description:
+          "Lihat histogram kecerahan dan RGB bagi foto atau imej. Semak bahagian gelap dan cerah serta setiap saluran warna terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Histogramviewer voor afbeeldingen",
+        description:
+          "Bekijk de helderheids- en RGB-histogrammen van een foto of afbeelding. Controleer schaduwen, hooglichten en afzonderlijke kleurkanalen in je browser.",
+      },
+      no: {
+        name: "Histogramviser for bilder",
+        description:
+          "Vis histogrammer for lysstyrke og RGB i bilder og fotografier. Undersøk skygger, høylys og enkeltkanaler direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka histogramów obrazów",
+        description:
+          "Wyświetl histogramy jasności i RGB zdjęcia lub innego obrazu. Sprawdź cienie, światła i poszczególne kanały kolorów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de histogramas de imagens",
+        description:
+          "Veja os histogramas de brilho e RGB de uma foto ou imagem. Confira as sombras, os realces e cada canal de cor diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр гистограмм изображений",
+        description:
+          "Просматривайте гистограммы яркости и RGB для фотографий и других изображений. Проверяйте тени, света и отдельные цветовые каналы прямо в браузере.",
+      },
+      sv: {
+        name: "Histogramvisare för bilder",
+        description:
+          "Visa ljusstyrke- och RGB-histogram för foton och andra bilder. Granska skuggor, högdagrar och enskilda färgkanaler direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+        description:
+          "ดูฮิสโตแกรมความสว่างและ RGB ของรูปภาพ ตรวจสอบส่วนมืด ส่วนสว่าง และแต่ละช่องสีได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görsel Histogramı Görüntüleyicisi",
+        description:
+          "Fotoğraf ve görsellerin parlaklık ve RGB histogramlarını görüntüleyin. Gölgeleri, açık tonları ve renk kanallarını doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem histogram ảnh",
+        description:
+          "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu.",
+      },
+      "zh-CN": {
+        name: "图像直方图查看器",
+        description:
+          "直接在浏览器中查看照片或图片的亮度和 RGB 直方图，检查阴影、高光及各个颜色通道。",
+      },
+      "zh-TW": {
+        name: "影像色階分佈圖檢視器",
+        description:
+          "直接在瀏覽器中查看照片或圖片的亮度與 RGB 色階分佈圖，檢查陰影、亮部及個別色版。",
       },
     },
   },
@@ -26252,7 +26761,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
     locales: {
       ar: {
-        name: "التعرف على النص في PDF — اجعل الملفات الممسوحة ضوئيًا قابلة للبحث",
+        name: "اجعل ملف PDF الممسوح قابلًا للبحث (OCR)",
         description:
           "اجعل ملفات PDF الممسوحة ضوئيًا قابلة للبحث باستخدام OCR مجانًا في متصفحك. احتفظ بالصفحات الأصلية ونزّل ملف PDF بنص قابل للبحث والتحديد والنسخ.",
       },
@@ -47472,6 +47981,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "cb7-reader": {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
   "cbor-messagepack-converter": {
     slug: "cbor-messagepack-converter",
     category: "json",
@@ -47601,6 +48233,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  "cbr-reader": {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },
@@ -48102,6 +48857,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "國字大寫轉換器",
         description:
           "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
+      },
+    },
+  },
+  "chm-viewer": {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
       },
     },
   },
@@ -57261,6 +58147,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片裁剪器",
         description:
           "自由裁剪圖片或使用固定長寬比，並可旋轉與翻轉。直接在瀏覽器本機預覽及下載 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  "image-histogram": {
+    slug: "image-histogram",
+    category: "image",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "photo",
+      "histogram",
+      "rgb",
+      "color channels",
+      "brightness",
+      "luminance",
+      "exposure",
+      "clipping",
+    ],
+    locales: {
+      ar: {
+        name: "عارض المدرج التكراري للصور",
+        description:
+          "اعرض المدرج التكراري للسطوع وقنوات RGB في صورك. افحص الظلال والمناطق الساطعة وكل قناة لونية مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für Bildhistogramme",
+        description:
+          "Sieh dir das Helligkeits- und RGB-Histogramm eines Fotos oder Bildes an. Prüfe Tiefen, Lichter und einzelne Farbkanäle direkt im Browser.",
+      },
+      en: {
+        name: "Image Histogram Viewer",
+        description:
+          "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser.",
+      },
+      es: {
+        name: "Visor de histogramas de imágenes",
+        description:
+          "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’histogrammes d’images",
+        description:
+          "Affichez les histogrammes de luminosité et RVB d’une photo ou d’une image. Inspectez les ombres, les hautes lumières et chaque canal de couleur dans votre navigateur.",
+      },
+      he: {
+        name: "מציג היסטוגרמה לתמונות",
+        description:
+          "הציגו היסטוגרמות בהירות וערוצי RGB של צילומים ותמונות. בדקו צללים, אזורים בהירים וערוצי צבע נפרדים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज हिस्टोग्राम व्यूअर",
+        description:
+          "फ़ोटो या इमेज की चमक और RGB के हिस्टोग्राम देखें। गहरे और उजले टोन और अलग-अलग रंग चैनल सीधे अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Histogram Gambar",
+        description:
+          "Lihat histogram kecerahan dan RGB untuk foto atau gambar. Periksa bayangan, sorotan, dan tiap saluran warna langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di istogrammi di immagini",
+        description:
+          "Visualizza gli istogrammi di luminosità e RGB di una foto o immagine. Esamina ombre, luci e singoli canali di colore direttamente nel browser.",
+      },
+      ja: {
+        name: "画像ヒストグラムビューアー",
+        description:
+          "写真や画像の明るさと RGB のヒストグラムをブラウザーで表示し、シャドウ、ハイライト、各色のチャンネルを確認できます。",
+      },
+      ko: {
+        name: "이미지 히스토그램 뷰어",
+        description:
+          "사진이나 이미지의 밝기와 RGB 히스토그램을 확인하세요. 어두운 영역, 밝은 영역, 개별 색상 채널을 브라우저에서 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Histogram Imej",
+        description:
+          "Lihat histogram kecerahan dan RGB bagi foto atau imej. Semak bahagian gelap dan cerah serta setiap saluran warna terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Histogramviewer voor afbeeldingen",
+        description:
+          "Bekijk de helderheids- en RGB-histogrammen van een foto of afbeelding. Controleer schaduwen, hooglichten en afzonderlijke kleurkanalen in je browser.",
+      },
+      no: {
+        name: "Histogramviser for bilder",
+        description:
+          "Vis histogrammer for lysstyrke og RGB i bilder og fotografier. Undersøk skygger, høylys og enkeltkanaler direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka histogramów obrazów",
+        description:
+          "Wyświetl histogramy jasności i RGB zdjęcia lub innego obrazu. Sprawdź cienie, światła i poszczególne kanały kolorów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de histogramas de imagens",
+        description:
+          "Veja os histogramas de brilho e RGB de uma foto ou imagem. Confira as sombras, os realces e cada canal de cor diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр гистограмм изображений",
+        description:
+          "Просматривайте гистограммы яркости и RGB для фотографий и других изображений. Проверяйте тени, света и отдельные цветовые каналы прямо в браузере.",
+      },
+      sv: {
+        name: "Histogramvisare för bilder",
+        description:
+          "Visa ljusstyrke- och RGB-histogram för foton och andra bilder. Granska skuggor, högdagrar och enskilda färgkanaler direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+        description:
+          "ดูฮิสโตแกรมความสว่างและ RGB ของรูปภาพ ตรวจสอบส่วนมืด ส่วนสว่าง และแต่ละช่องสีได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görsel Histogramı Görüntüleyicisi",
+        description:
+          "Fotoğraf ve görsellerin parlaklık ve RGB histogramlarını görüntüleyin. Gölgeleri, açık tonları ve renk kanallarını doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem histogram ảnh",
+        description:
+          "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu.",
+      },
+      "zh-CN": {
+        name: "图像直方图查看器",
+        description:
+          "直接在浏览器中查看照片或图片的亮度和 RGB 直方图，检查阴影、高光及各个颜色通道。",
+      },
+      "zh-TW": {
+        name: "影像色階分佈圖檢視器",
+        description:
+          "直接在瀏覽器中查看照片或圖片的亮度與 RGB 色階分佈圖，檢查陰影、亮部及個別色版。",
       },
     },
   },
@@ -67914,7 +68932,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
     locales: {
       ar: {
-        name: "التعرف على النص في PDF — اجعل الملفات الممسوحة ضوئيًا قابلة للبحث",
+        name: "اجعل ملف PDF الممسوح قابلًا للبحث (OCR)",
         description:
           "اجعل ملفات PDF الممسوحة ضوئيًا قابلة للبحث باستخدام OCR مجانًا في متصفحك. احتفظ بالصفحات الأصلية ونزّل ملف PDF بنص قابل للبحث والتحديد والنسخ.",
       },

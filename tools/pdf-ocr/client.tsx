@@ -142,6 +142,9 @@ export default function PdfOcr({ lang, messages: m }: Props) {
           disabled={busy}
           className={cn(
             "flex min-h-44 min-w-0 flex-col items-center justify-center gap-2 rounded-xl border border-dashed bg-muted/35 p-5 text-center transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring enabled:hover:border-primary/50 enabled:hover:bg-muted/60",
+            file
+              ? "min-h-24 text-start"
+              : "min-h-40 flex-col justify-center text-center",
             dragging && "border-primary bg-primary/5"
           )}
           onClick={() => picker.current?.click()}
@@ -156,19 +159,21 @@ export default function PdfOcr({ lang, messages: m }: Props) {
             selectFile(event.dataTransfer.files)
           }}
         >
-          <span className="mb-1 rounded-xl border bg-background p-2.5 text-primary shadow-xs">
+          <span className="shrink-0 rounded-xl border bg-background p-2.5 text-primary shadow-xs">
             <FileText className="size-6" aria-hidden="true" />
           </span>
-          <span className="max-w-full font-medium wrap-anywhere" dir="auto">
-            {file?.name ?? m.choosePdf}
-          </span>
-          <span
-            className={cn(
-              "text-sm text-muted-foreground",
-              file && "underline underline-offset-4"
-            )}
-          >
-            {file ? m.changePdf : m.dropHint}
+          <span className="grid min-w-0 gap-1">
+            <span className="font-medium wrap-anywhere" dir="auto">
+              {file?.name ?? m.choosePdf}
+            </span>
+            <span
+              className={cn(
+                "text-sm text-muted-foreground",
+                file && "underline underline-offset-4"
+              )}
+            >
+              {file ? m.changePdf : m.dropHint}
+            </span>
           </span>
         </button>
 
@@ -203,6 +208,7 @@ export default function PdfOcr({ lang, messages: m }: Props) {
               <Button
                 type="button"
                 className="h-auto min-h-10 max-w-full py-2 whitespace-normal aria-disabled:opacity-50"
+                variant={result ? "outline" : "default"}
                 ref={startButton}
                 disabled={!file}
                 aria-disabled={busy || undefined}
@@ -263,8 +269,8 @@ export default function PdfOcr({ lang, messages: m }: Props) {
 
         {file && result && downloadUrl && (
           <Card>
-            <CardContent className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex min-w-0 items-start gap-3">
+            <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex min-w-0 flex-1 items-start gap-3">
                 {result.status === "ready" && (
                   <BadgeCheck
                     className="mt-0.5 size-5 shrink-0 text-primary"
@@ -282,7 +288,7 @@ export default function PdfOcr({ lang, messages: m }: Props) {
               </div>
               <Button
                 asChild
-                className="h-auto min-h-10 max-w-full py-2 whitespace-normal"
+                className="h-auto min-h-10 w-full max-w-full py-2 whitespace-normal sm:w-auto sm:shrink-0"
               >
                 <a
                   href={downloadUrl}

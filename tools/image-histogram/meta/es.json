@@ -1,0 +1,4 @@
+{
+  "name": "Visor de histogramas de imágenes",
+  "description": "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador."
+}

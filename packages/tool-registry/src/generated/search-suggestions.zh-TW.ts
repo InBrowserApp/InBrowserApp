@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 漫畫閱讀器",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack 轉換器",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR 漫畫閱讀器",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM 檢視器",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "圖片裁剪器",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "影像色階分佈圖檢視器",
+    slug: "image-histogram",
   },
   {
     category: "image",

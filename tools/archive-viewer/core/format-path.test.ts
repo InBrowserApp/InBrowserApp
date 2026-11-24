@@ -7,7 +7,7 @@ import {
   getKindLabel,
   summarizeEntries,
 } from "./format"
-import { guessMimeType, withGuessedMimeType } from "./mime"
+import { guessMimeType, withGuessedMimeType } from "@workspace/archive/mime"
 import {
   extractExtension,
   normalizeArchivePath,
@@ -17,9 +17,9 @@ import {
   splitPathSegments,
   stripSuffix,
   toDirectoryPath,
-} from "./path"
+} from "@workspace/archive/path"
 
-import type { ArchiveEntry, ArchiveEntryKind } from "./types"
+import type { ArchiveEntry, ArchiveEntryKind } from "@workspace/archive/types"
 
 function entry(
   path: string,

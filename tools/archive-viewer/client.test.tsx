@@ -9,10 +9,10 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import ArchiveViewerClient from "./client"
 import messagesCatalog from "./messages/en.json"
-import { ArchiveError } from "./core/types"
+import { ArchiveError } from "@workspace/archive/types"
 
 import type { ArchiveViewerMessages } from "./types"
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 
 const openArchiveMock = vi.fn()
 const clipboardWriteTextMock = vi.fn()
@@ -20,7 +20,7 @@ const createObjectUrlMock = vi.fn()
 const revokeObjectUrlMock = vi.fn()
 const anchorClickMock = vi.fn()
 
-vi.mock("./core/archive", () => ({
+vi.mock("@workspace/archive/archive", () => ({
   openArchive: (...args: unknown[]) => openArchiveMock(...args),
 }))
 

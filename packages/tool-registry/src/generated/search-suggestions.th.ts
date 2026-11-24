@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "ตัวแปลง CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "เครื่องมือครอบตัดรูปภาพ",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+    slug: "image-histogram",
   },
   {
     category: "image",

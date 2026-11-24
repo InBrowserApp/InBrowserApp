@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Leitor de quadrinhos CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Conversor de CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Leitor de quadrinhos CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Conversor de números ↔ numeração financeira chinesa",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Visualizador de CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Recortador de imagens",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "Visualizador de histogramas de imagens",
+    slug: "image-histogram",
   },
   {
     category: "image",

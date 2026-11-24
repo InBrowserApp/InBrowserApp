@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "قارئ القصص المصوّرة CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "محوّل CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "قارئ القصص المصوّرة CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "محوّل الأعداد ↔ الأرقام الصينية المالية",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "عارض CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "أداة قص الصور",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "عارض المدرج التكراري للصور",
+    slug: "image-histogram",
   },
   {
     category: "image",
@@ -1044,7 +1064,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
-    name: "التعرف على النص في PDF — اجعل الملفات الممسوحة ضوئيًا قابلة للبحث",
+    name: "اجعل ملف PDF الممسوح قابلًا للبحث (OCR)",
     slug: "pdf-ocr",
   },
   {

@@ -35,7 +35,9 @@ async function layerWithWords(words: string[], leftToRight: boolean) {
     },
   ] as Block[]
   normalizeTextLayer(page, blocks, 300, 200)
-  const stream = page.node.lookup(PDFName.of("Contents"), PDFContentStream)
+  const stream = page.node.lookup(PDFName.of("Contents"))
+  if (!(stream instanceof PDFContentStream))
+    throw new Error("Expected a text layer")
   return stream.getContentsString().toLowerCase()
 }
 

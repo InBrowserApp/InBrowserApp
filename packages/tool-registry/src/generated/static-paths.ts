@@ -4142,6 +4142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cb7-reader",
+    language: "ar",
+  },
+  {
+    slug: "cb7-reader",
+    language: "de",
+  },
+  {
+    slug: "cb7-reader",
+    language: "en",
+  },
+  {
+    slug: "cb7-reader",
+    language: "es",
+  },
+  {
+    slug: "cb7-reader",
+    language: "fr",
+  },
+  {
+    slug: "cb7-reader",
+    language: "he",
+  },
+  {
+    slug: "cb7-reader",
+    language: "hi",
+  },
+  {
+    slug: "cb7-reader",
+    language: "id",
+  },
+  {
+    slug: "cb7-reader",
+    language: "it",
+  },
+  {
+    slug: "cb7-reader",
+    language: "ja",
+  },
+  {
+    slug: "cb7-reader",
+    language: "ko",
+  },
+  {
+    slug: "cb7-reader",
+    language: "ms",
+  },
+  {
+    slug: "cb7-reader",
+    language: "nl",
+  },
+  {
+    slug: "cb7-reader",
+    language: "no",
+  },
+  {
+    slug: "cb7-reader",
+    language: "pl",
+  },
+  {
+    slug: "cb7-reader",
+    language: "pt",
+  },
+  {
+    slug: "cb7-reader",
+    language: "ru",
+  },
+  {
+    slug: "cb7-reader",
+    language: "sv",
+  },
+  {
+    slug: "cb7-reader",
+    language: "th",
+  },
+  {
+    slug: "cb7-reader",
+    language: "tr",
+  },
+  {
+    slug: "cb7-reader",
+    language: "vi",
+  },
+  {
+    slug: "cb7-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "cb7-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "cbor-messagepack-converter",
     language: "ar",
   },
@@ -4231,6 +4323,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "cbor-messagepack-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "cbr-reader",
+    language: "ar",
+  },
+  {
+    slug: "cbr-reader",
+    language: "de",
+  },
+  {
+    slug: "cbr-reader",
+    language: "en",
+  },
+  {
+    slug: "cbr-reader",
+    language: "es",
+  },
+  {
+    slug: "cbr-reader",
+    language: "fr",
+  },
+  {
+    slug: "cbr-reader",
+    language: "he",
+  },
+  {
+    slug: "cbr-reader",
+    language: "hi",
+  },
+  {
+    slug: "cbr-reader",
+    language: "id",
+  },
+  {
+    slug: "cbr-reader",
+    language: "it",
+  },
+  {
+    slug: "cbr-reader",
+    language: "ja",
+  },
+  {
+    slug: "cbr-reader",
+    language: "ko",
+  },
+  {
+    slug: "cbr-reader",
+    language: "ms",
+  },
+  {
+    slug: "cbr-reader",
+    language: "nl",
+  },
+  {
+    slug: "cbr-reader",
+    language: "no",
+  },
+  {
+    slug: "cbr-reader",
+    language: "pl",
+  },
+  {
+    slug: "cbr-reader",
+    language: "pt",
+  },
+  {
+    slug: "cbr-reader",
+    language: "ru",
+  },
+  {
+    slug: "cbr-reader",
+    language: "sv",
+  },
+  {
+    slug: "cbr-reader",
+    language: "th",
+  },
+  {
+    slug: "cbr-reader",
+    language: "tr",
+  },
+  {
+    slug: "cbr-reader",
+    language: "vi",
+  },
+  {
+    slug: "cbr-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbr-reader",
     language: "zh-TW",
   },
   {
@@ -4599,6 +4783,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "chinese-uppercase-number-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ar",
+  },
+  {
+    slug: "chm-viewer",
+    language: "de",
+  },
+  {
+    slug: "chm-viewer",
+    language: "en",
+  },
+  {
+    slug: "chm-viewer",
+    language: "es",
+  },
+  {
+    slug: "chm-viewer",
+    language: "fr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "he",
+  },
+  {
+    slug: "chm-viewer",
+    language: "hi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "id",
+  },
+  {
+    slug: "chm-viewer",
+    language: "it",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ja",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ko",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ms",
+  },
+  {
+    slug: "chm-viewer",
+    language: "nl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "no",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pl",
+  },
+  {
+    slug: "chm-viewer",
+    language: "pt",
+  },
+  {
+    slug: "chm-viewer",
+    language: "ru",
+  },
+  {
+    slug: "chm-viewer",
+    language: "sv",
+  },
+  {
+    slug: "chm-viewer",
+    language: "th",
+  },
+  {
+    slug: "chm-viewer",
+    language: "tr",
+  },
+  {
+    slug: "chm-viewer",
+    language: "vi",
+  },
+  {
+    slug: "chm-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "chm-viewer",
     language: "zh-TW",
   },
   {
@@ -11315,6 +11591,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-cropper",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-histogram",
+    language: "ar",
+  },
+  {
+    slug: "image-histogram",
+    language: "de",
+  },
+  {
+    slug: "image-histogram",
+    language: "en",
+  },
+  {
+    slug: "image-histogram",
+    language: "es",
+  },
+  {
+    slug: "image-histogram",
+    language: "fr",
+  },
+  {
+    slug: "image-histogram",
+    language: "he",
+  },
+  {
+    slug: "image-histogram",
+    language: "hi",
+  },
+  {
+    slug: "image-histogram",
+    language: "id",
+  },
+  {
+    slug: "image-histogram",
+    language: "it",
+  },
+  {
+    slug: "image-histogram",
+    language: "ja",
+  },
+  {
+    slug: "image-histogram",
+    language: "ko",
+  },
+  {
+    slug: "image-histogram",
+    language: "ms",
+  },
+  {
+    slug: "image-histogram",
+    language: "nl",
+  },
+  {
+    slug: "image-histogram",
+    language: "no",
+  },
+  {
+    slug: "image-histogram",
+    language: "pl",
+  },
+  {
+    slug: "image-histogram",
+    language: "pt",
+  },
+  {
+    slug: "image-histogram",
+    language: "ru",
+  },
+  {
+    slug: "image-histogram",
+    language: "sv",
+  },
+  {
+    slug: "image-histogram",
+    language: "th",
+  },
+  {
+    slug: "image-histogram",
+    language: "tr",
+  },
+  {
+    slug: "image-histogram",
+    language: "vi",
+  },
+  {
+    slug: "image-histogram",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-histogram",
     language: "zh-TW",
   },
   {

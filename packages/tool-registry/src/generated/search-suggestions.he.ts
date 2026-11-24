@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "קורא קומיקס CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "ממיר CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "קורא קומיקס CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "מציג CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "כלי חיתוך תמונות",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "מציג היסטוגרמה לתמונות",
+    slug: "image-histogram",
   },
   {
     category: "image",

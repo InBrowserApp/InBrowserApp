@@ -10,8 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@zip.js/zip.js": "catalog:",
-    "highlight.js": "catalog:"
+    "highlight.js": "catalog:",
+    "@workspace/archive": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

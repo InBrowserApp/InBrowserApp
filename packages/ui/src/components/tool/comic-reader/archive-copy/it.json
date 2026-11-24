@@ -1,0 +1,21 @@
+{
+  "readerName": "Lettore di fumetti {format}",
+  "choose": "Scegli un file {format}",
+  "drop": "Oppure trascina qui un file {format} o {archive}.",
+  "privacy": "Il fumetto resta su questo dispositivo.",
+  "invalid": "Scegli un file {format} o {archive}.",
+  "damaged": "Impossibile leggere l’archivio. Potrebbe essere danneggiato o usare funzionalità {archive} non supportate.",
+  "howTitle": "Come aprire un file {format}",
+  "how": [
+    "Scegli un file {format} o trascinalo nel lettore. Puoi aprire anche un archivio {archive} che contiene le immagini delle pagine.",
+    "Usa le frecce per sfogliare il fumetto, inserisci un numero per andare alla pagina desiderata o apri le miniature per trovare una scena.",
+    "Scegli «Adatta alla pagina» per vedere l’immagine intera. Per leggere i testi più piccoli, usa «Adatta alla larghezza» e lo zoom. Per i manga, puoi leggere da destra a sinistra. La lettura immersiva lascia più spazio al fumetto."
+  ],
+  "formatTitle": "Che cos’è un file {format}?",
+  "formatBody": "Un file {format} è un archivio di fumetti compresso in formato {archive}. Contiene le pagine come immagini, spesso organizzate in cartelle per capitolo. Il lettore ordina i percorsi completi in modo naturale, per cui la pagina 2 precede la 10, e ignora i file nascosti e quelli che non sono immagini.",
+  "compatibilityTitle": "Immagini e archivi supportati",
+  "compatibilityBody": "Puoi leggere fumetti con pagine JPEG, PNG, GIF, WebP e BMP. Le immagini AVIF sono disponibili se il browser le supporta. Gli archivi protetti da password o suddivisi in più volumi vanno prima estratti. Gli archivi di grandi dimensioni con compressione solida possono richiedere più tempo per aprirsi o per cambiare pagina, perché più immagini possono condividere lo stesso blocco di dati compressi.",
+  "privacyTitle": "Leggi nel browser senza caricare i file online",
+  "privacyBody": "Il browser apre l’archivio direttamente sul tuo dispositivo. Non devi caricare file online, creare un account o installare software. Per leggere un fumetto compresso in ZIP, usa il Lettore di fumetti CBZ.",
+  "relatedTitle": "Strumenti correlati"
+}

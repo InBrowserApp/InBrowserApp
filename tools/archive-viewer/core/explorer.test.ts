@@ -2,7 +2,7 @@ import { describe, expect, test } from "vitest"
 
 import { buildRowIndex, buildRows, getRowsForDirectory } from "./explorer"
 
-import type { ArchiveEntry } from "./types"
+import type { ArchiveEntry } from "@workspace/archive/types"
 
 const entries: ArchiveEntry[] = [
   {

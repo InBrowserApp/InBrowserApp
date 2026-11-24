@@ -1,4 +1,4 @@
-import { ArchiveError } from "./core/types"
+import { ArchiveError } from "@workspace/archive/types"
 
 import type { ArchiveViewerMessages } from "./types"
 

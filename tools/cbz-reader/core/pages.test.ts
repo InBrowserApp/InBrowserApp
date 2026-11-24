@@ -1,6 +1,6 @@
 import { expect, test } from "vitest"
-import { failureCode, imageMime, indexPages } from "@workspace/cbz/pages"
-import { navigationPage } from "./pages"
+import { failureCode, imageMime, indexPages } from "@workspace/comic/pages"
+import { navigationPage } from "@workspace/ui/comic-reader/navigation"
 
 test("sorts complete paths naturally with stable case, padding and duplicate ties", () => {
   const entries = [

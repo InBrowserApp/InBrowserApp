@@ -60,14 +60,17 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "caj-viewer": () => import("@tool/caj-viewer/page"),
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "cb7-reader": () => import("@tool/cb7-reader/page"),
   "cbor-messagepack-converter": () =>
     import("@tool/cbor-messagepack-converter/page"),
+  "cbr-reader": () => import("@tool/cbr-reader/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
+  "chm-viewer": () => import("@tool/chm-viewer/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),
   "cidrs-merger-excluder": () => import("@tool/cidrs-merger-excluder/page"),
@@ -155,6 +158,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-combiner": () => import("@tool/image-combiner/page"),
   "image-comparator": () => import("@tool/image-comparator/page"),
   "image-cropper": () => import("@tool/image-cropper/page"),
+  "image-histogram": () => import("@tool/image-histogram/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-redactor": () => import("@tool/image-redactor/page"),

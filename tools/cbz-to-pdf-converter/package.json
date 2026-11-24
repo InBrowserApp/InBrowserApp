@@ -11,7 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@workspace/pdf-reader": "workspace:*",
-    "@workspace/cbz": "workspace:*"
+    "@workspace/comic": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

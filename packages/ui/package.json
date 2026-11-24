@@ -15,7 +15,9 @@
     "dompurify": "catalog:",
     "@workspace/spreadsheet-conversion": "workspace:*",
     "@workspace/raster-image": "workspace:*",
-    "@workspace/ocr-models": "workspace:*"
+    "@workspace/ocr-models": "workspace:*",
+    "@workspace/comic": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*"
   },
   "peerDependencies": {
     "react": "catalog:",
@@ -34,6 +36,8 @@
     "./styles/*": "./src/styles/*",
     "./icons": "./src/icons/index.ts",
     "./lib/*": "./src/lib/*.ts",
-    "./components/*": "./src/components/*.tsx"
+    "./components/*": "./src/components/*.tsx",
+    "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
+    "./comic-reader/*": "./src/components/tool/comic-reader/*.ts"
   }
 }

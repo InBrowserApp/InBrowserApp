@@ -8,7 +8,7 @@ import {
 import messagesCatalog from "./messages/en.json"
 
 import type { ArchiveViewerMessages } from "./types"
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 
 const createObjectUrlMock = vi.fn(() => "blob:preview")
 const revokeObjectUrlMock = vi.fn()

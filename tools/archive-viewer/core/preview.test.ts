@@ -7,7 +7,7 @@ import {
   resolveTextPreviewLanguage,
 } from "./preview"
 
-import type { ArchiveEntry } from "./types"
+import type { ArchiveEntry } from "@workspace/archive/types"
 
 function entry(extension: string): ArchiveEntry {
   return {

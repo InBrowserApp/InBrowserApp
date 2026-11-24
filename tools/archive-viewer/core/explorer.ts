@@ -2,9 +2,9 @@ import {
   normalizeDirectoryPath,
   splitPathSegments,
   toDirectoryPath,
-} from "./path"
+} from "@workspace/archive/path"
 
-import type { ArchiveEntry, ArchiveEntryKind } from "./types"
+import type { ArchiveEntry, ArchiveEntryKind } from "@workspace/archive/types"
 
 type ArchiveExplorerRow = Readonly<{
   path: string

@@ -1,0 +1,21 @@
+{
+  "readerName": "{format}-serieläsare",
+  "choose": "Välj en {format}-fil",
+  "drop": "Du kan också släppa en {format}- eller {archive}-fil här.",
+  "privacy": "Din serie stannar på den här enheten.",
+  "invalid": "Välj en {format}- eller {archive}-fil.",
+  "damaged": "Arkivet kunde inte läsas. Det kan vara skadat eller använda {archive}-funktioner som inte stöds.",
+  "howTitle": "Så öppnar du en {format}-fil",
+  "how": [
+    "Välj en {format}-fil eller dra och släpp den i läsaren. Du kan också öppna ett {archive}-arkiv med seriebilder.",
+    "Bläddra med pilarna, skriv ett sidnummer för att hoppa till en sida eller öppna sidminiatyrerna för att hitta en viss scen.",
+    "Välj ”Anpassa sida” för att visa hela bilden, eller välj ”Anpassa bredd” och zooma för att läsa liten text. För manga kan du byta läsriktning till ”Höger till vänster”. Aktivera ”Fokuserad läsning” om du vill ge serien mer plats."
+  ],
+  "formatTitle": "Vad är en {format}-fil?",
+  "formatBody": "En {format}-fil är ett seriearkiv som använder {archive}-komprimering. Sidorna sparas som bilder, ofta i mappar för olika kapitel. Läsaren sorterar de fullständiga filsökvägarna i naturlig ordning, så att sida 2 visas före sida 10, och hoppar över dolda filer och filer som inte är bilder.",
+  "compatibilityTitle": "Bild- och arkivformat som stöds",
+  "compatibilityBody": "Du kan läsa serier med bilder i JPEG, PNG, GIF, WebP och BMP samt AVIF om din webbläsare stöder formatet. Lösenordsskyddade arkiv och arkiv som är uppdelade i flera delar behöver packas upp först. Stora solida arkiv kan ta längre tid att öppna och bläddra i eftersom flera bilder kan ligga i samma komprimerade block.",
+  "privacyTitle": "Läs i webbläsaren utan att ladda upp filer",
+  "privacyBody": "Webbläsaren öppnar arkivet på din enhet. Ingen uppladdning, inget konto och ingen installation behövs. Om serien ligger i ett ZIP-arkiv kan du öppna den med CBZ-serieläsaren.",
+  "relatedTitle": "Relaterade verktyg"
+}

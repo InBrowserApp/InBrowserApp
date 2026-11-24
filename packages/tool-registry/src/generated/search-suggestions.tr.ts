@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 Çizgi Roman Okuyucu",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack Dönüştürücü",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR Çizgi Roman Okuyucu",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM Görüntüleyici",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Görüntü Kırpıcı",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "Görsel Histogramı Görüntüleyicisi",
+    slug: "image-histogram",
   },
   {
     category: "image",

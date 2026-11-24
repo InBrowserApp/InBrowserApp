@@ -13,7 +13,7 @@ import { formatBytes, formatDate, getKindLabel } from "../core/format"
 
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react"
 import type { ArchiveExplorerRow } from "../core/explorer"
-import type { ArchiveEntryKind } from "../core/types"
+import type { ArchiveEntryKind } from "@workspace/archive/types"
 import type { ArchiveViewerMessages } from "../types"
 
 type ExplorerTableRowProps = Readonly<{

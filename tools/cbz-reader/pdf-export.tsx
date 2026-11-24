@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
-import { failureMessage } from "@workspace/cbz/errors"
+import { failureMessage } from "@workspace/comic/errors"
 import type { Messages } from "./types"
 
 export function PdfExport({
@@ -33,7 +33,7 @@ export function PdfExport({
     controller.current = active
     setStatus(m.reading)
     try {
-      const { preparePdf } = await import("@workspace/cbz/pdf")
+      const { preparePdf } = await import("@workspace/comic/pdf")
       active.signal.throwIfAborted()
       const result = await preparePdf(file, active.signal, (progress) => {
         if (!active.signal.aborted)

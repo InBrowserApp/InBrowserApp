@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Trình đọc truyện tranh CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Trình chuyển đổi CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Trình đọc truyện tranh CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Trình xem CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Công cụ cắt ảnh",
     slug: "image-cropper",
+  },
+  {
+    category: "image",
+    name: "Trình xem histogram ảnh",
+    slug: "image-histogram",
   },
   {
     category: "image",
