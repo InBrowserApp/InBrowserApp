@@ -52,13 +52,13 @@ test("rejects malformed dates and mismatched value types before rendering", () =
   expect(readCalendar(wrap("")).length).toBe(0)
   expect(() =>
     readCalendar(wrap(event("DTSTART;VALUE=DATE:20260231")))
-  ).toThrow()
+  ).toThrow("Invalid iCalendar date")
   expect(() =>
     readCalendar(
       wrap(event("DTSTART;VALUE=DATE:20260501\r\nDTEND:20260502T120000Z"))
     )
-  ).toThrow()
+  ).toThrow("iCalendar start and end must have the same value type")
   expect(() =>
     readCalendar(wrap(event("DTSTART:20260502T120000Z\r\nDURATION:-PT2H")))
-  ).toThrow()
+  ).toThrow("Invalid iCalendar event duration")
 })

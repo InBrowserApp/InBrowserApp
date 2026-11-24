@@ -228,6 +228,7 @@ export function RecordConverter({
                 </p>
                 <div
                   className="overflow-x-auto rounded-lg border focus-visible:outline-2 focus-visible:outline-ring"
+                  // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- Allow keyboard scrolling in the preview.
                   tabIndex={0}
                   role="region"
                   aria-label={m.preview}
