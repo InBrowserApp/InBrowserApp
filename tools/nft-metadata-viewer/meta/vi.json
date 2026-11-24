@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem siêu dữ liệu NFT",
+  "description": "Tra cứu siêu dữ liệu NFT trên Ethereum bằng địa chỉ hợp đồng và ID token. Xem URI token ERC-721 hoặc ERC-1155, ảnh, đặc điểm và JSON gốc."
+}

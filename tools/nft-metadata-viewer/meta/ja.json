@@ -1,0 +1,4 @@
+{
+  "name": "NFT メタデータビューアー",
+  "description": "コントラクトアドレスとトークン ID から Ethereum の NFT メタデータを取得します。ERC-721 や ERC-1155 のトークン URI、画像、特性、元の JSON を確認できます。"
+}

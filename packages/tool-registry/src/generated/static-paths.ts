@@ -21898,6 +21898,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "nft-metadata-viewer",
+    language: "ar",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "de",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "en",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "es",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "fr",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "he",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "hi",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "id",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "it",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "ja",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "ko",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "ms",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "nl",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "no",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "pl",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "pt",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "ru",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "sv",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "th",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "tr",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "vi",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "nft-metadata-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "notebook-export",
     language: "ar",
   },

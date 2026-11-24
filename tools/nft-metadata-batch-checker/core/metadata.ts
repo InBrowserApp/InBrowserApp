@@ -1,4 +1,4 @@
-import { parseNftUrl } from "./urls"
+import { parseNftUrl } from "@workspace/nft-metadata"
 
 type IssueCode =
   | "badUri"

@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de métadonnées NFT",
+  "description": "Consultez les métadonnées d’un NFT Ethereum à partir de l’adresse du contrat et de l’ID du jeton. Affichez l’URI du jeton ERC-721 ou ERC-1155, son image, ses traits et le JSON brut."
+}

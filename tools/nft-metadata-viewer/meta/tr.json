@@ -1,0 +1,4 @@
+{
+  "name": "NFT Meta Veri Görüntüleyici",
+  "description": "Sözleşme adresi ve token kimliğiyle Ethereum NFT meta verilerini bulun. ERC-721 veya ERC-1155 token URI'sini, görseli, özellikleri ve ham JSON'u görüntüleyin."
+}

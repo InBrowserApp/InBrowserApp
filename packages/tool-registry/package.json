@@ -245,6 +245,7 @@
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/nft-metadata-batch-checker": "workspace:*",
+    "@tool/nft-metadata-viewer": "workspace:*",
     "@tool/notebook-export": "workspace:*",
     "@tool/notebook-viewer": "workspace:*",
     "@tool/number-base-converter": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "NFT-metadata-viewer",
+  "description": "Zoek Ethereum NFT-metadata op met contractadres en token-ID. Bekijk de ERC-721- of ERC-1155-token-URI, afbeelding, kenmerken en ruwe JSON."
+}

@@ -1,15 +1,12 @@
 import {
-  openIpfsEntry,
-  readIpfsFile,
-  resolveIpfsPath,
-  type ReadableStorage,
-} from "@workspace/ipfs-files"
-import { gatewayStore, parseIpfsAddress } from "@workspace/ipfs-files/gateway"
+  gatewayUrl,
+  maxMetadataBytes,
+  NftMetadataSourceError,
+  readNftMetadata,
+} from "@workspace/nft-metadata"
 
 import { inspectMetadata, type Issue } from "./metadata"
-import { gatewayUrl, parseNftUrl } from "./urls"
 
-const limit = 4 * 1024 * 1024
 const localRoot = "https://nft-metadata.local"
 const parallel = 5
 
@@ -29,12 +26,6 @@ interface Options {
   onProgress: (complete: number) => void
 }
 
-class SourceError extends Error {
-  constructor(readonly code: "badUri" | "unavailable" | "tooLarge") {
-    super(code)
-  }
-}
-
 function timeout(signal: AbortSignal) {
   return AbortSignal.any([signal, AbortSignal.timeout(15000)])
 }
@@ -47,76 +38,20 @@ function relativeLocalPath(path: string, completeFolder: boolean) {
   return completeFolder ? path.slice(path.indexOf("/") + 1) : path
 }
 
-async function readRemote(response: Response) {
-  if (!response.ok) throw new SourceError("unavailable")
-  if (!response.body) return ""
-  const reader = response.body.getReader()
-  const decoder = new TextDecoder()
-  let text = ""
-  let bytes = 0
-  try {
-    for (;;) {
-      const { done, value } = await reader.read()
-      if (done) return text + decoder.decode()
-      bytes += value.byteLength
-      if (bytes > limit) {
-        await reader.cancel().catch(() => {})
-        throw new SourceError("tooLarge")
-      }
-      text += decoder.decode(value, { stream: true })
-    }
-  } finally {
-    reader.releaseLock()
-  }
-}
-
 async function readSource(
   item: Item,
   fetcher: typeof fetch,
-  store: ReadableStorage,
   { signal, completeFolder }: Options
 ) {
   if (item.file) {
-    if (item.file.size > limit) throw new SourceError("tooLarge")
+    if (item.file.size > maxMetadataBytes)
+      throw new NftMetadataSourceError("tooLarge")
     return {
       text: await item.file.text(),
       base: localUrl(relativeLocalPath(item.source, completeFolder)),
     }
   }
-  const uri = parseNftUrl(item.source)
-  if (
-    !uri ||
-    (uri.protocol === "data:" && !/^data:application\/json[;,]/i.test(uri.href))
-  ) {
-    throw new SourceError("badUri")
-  }
-  const requestSignal = timeout(signal)
-  if (uri.protocol === "ipfs:") {
-    const address = parseIpfsAddress(uri.href)!
-    const path = await resolveIpfsPath(
-      address.cid,
-      address.parts,
-      store,
-      requestSignal
-    )
-    if (!path) throw new SourceError("unavailable")
-    const entry = await openIpfsEntry(path.at(-1)!.cid, store, requestSignal)
-    if (entry.type === "directory") throw new SourceError("unavailable")
-    if (entry.size > limit) throw new SourceError("tooLarge")
-    return {
-      text: await (await readIpfsFile(entry, requestSignal)).text(),
-      base: uri,
-    }
-  }
-  const url = gatewayUrl(uri)
-  const response = await fetcher(url, {
-    credentials: "omit",
-    signal: requestSignal,
-  })
-  return {
-    text: await readRemote(response),
-    base: new URL(response.url || url.href),
-  }
+  return readNftMetadata(item.source, fetcher, timeout(signal))
 }
 
 async function checkLink(
@@ -152,7 +87,6 @@ async function checkLink(
 
 export async function checkBatch(items: readonly Item[], options: Options) {
   const { signal, fetcher = fetch } = options
-  const store = gatewayStore(fetcher)
   const localOptions = {
     ...options,
     localFiles: new Set(
@@ -168,7 +102,7 @@ export async function checkBatch(items: readonly Item[], options: Options) {
   async function check(item: Item): Promise<Result> {
     const { source } = item
     try {
-      const { text, base } = await readSource(item, fetcher, store, options)
+      const { text, base } = await readSource(item, fetcher, options)
       const { name, issues, media } = inspectMetadata(text, base, item.tokenId)
       if (options.checkMedia) {
         for (const { field, url, needsTokenId } of media) {
@@ -184,7 +118,12 @@ export async function checkBatch(items: readonly Item[], options: Options) {
       return {
         source,
         issues: [
-          { code: error instanceof SourceError ? error.code : "unavailable" },
+          {
+            code:
+              error instanceof NftMetadataSourceError
+                ? error.code
+                : "unavailable",
+          },
         ],
       }
     }

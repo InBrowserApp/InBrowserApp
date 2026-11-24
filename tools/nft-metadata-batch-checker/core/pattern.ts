@@ -1,4 +1,4 @@
-import { parseNftUrl } from "./urls"
+import { parseNftUrl } from "@workspace/nft-metadata"
 import type { Item } from "./batch"
 
 export type IdFormat = "decimal" | "hex"

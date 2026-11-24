@@ -1193,6 +1193,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "nft-metadata-batch-checker",
   },
   {
+    category: "ipfs",
+    name: "NFT 메타데이터 뷰어",
+    slug: "nft-metadata-viewer",
+  },
+  {
     category: "document",
     name: "Jupyter 노트북 변환기",
     slug: "notebook-export",

@@ -1,0 +1,4 @@
+{
+  "name": "NFT 中繼資料檢視器",
+  "description": "透過合約位址和代幣 ID 查詢以太坊 NFT 中繼資料。檢視 ERC-721 或 ERC-1155 的代幣 URI、圖片、特徵和原始 JSON。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "NFT Metadata Viewer",
+  "description": "Look up Ethereum NFT metadata by contract address and token ID. View the ERC-721 or ERC-1155 token URI, image, traits, and raw JSON."
+}

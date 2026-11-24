@@ -30225,6 +30225,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "nft-metadata-viewer",
+    category: "ipfs",
+    icon: "file-image",
+    tags: [
+      "nft",
+      "ethereum",
+      "metadata",
+      "tokenuri",
+      "erc-721",
+      "erc-1155",
+      "ipfs",
+      "json",
+    ],
+    locales: {
+      ar: {
+        name: "عارض بيانات NFT الوصفية",
+        description:
+          "ابحث عن بيانات NFT الوصفية على Ethereum باستخدام عنوان العقد ومعرّف الرمز. اعرض عنوان URI للرمز وصورته وسماته وبيانات JSON الخام وفق ERC-721 أو ERC-1155.",
+      },
+      de: {
+        name: "NFT-Metadaten-Betrachter",
+        description:
+          "Rufen Sie Ethereum-NFT-Metadaten per Vertragsadresse und Token-ID ab. Sehen Sie die ERC-721- oder ERC-1155-Token-URI, das Bild, die Merkmale und die JSON-Rohdaten.",
+      },
+      en: {
+        name: "NFT Metadata Viewer",
+        description:
+          "Look up Ethereum NFT metadata by contract address and token ID. View the ERC-721 or ERC-1155 token URI, image, traits, and raw JSON.",
+      },
+      es: {
+        name: "Visor de metadatos NFT",
+        description:
+          "Consulta los metadatos de un NFT de Ethereum con la dirección del contrato y el ID del token. Visualiza el URI del token ERC-721 o ERC-1155, la imagen, los rasgos y el JSON sin modificar.",
+      },
+      fr: {
+        name: "Visionneuse de métadonnées NFT",
+        description:
+          "Consultez les métadonnées d’un NFT Ethereum à partir de l’adresse du contrat et de l’ID du jeton. Affichez l’URI du jeton ERC-721 ou ERC-1155, son image, ses traits et le JSON brut.",
+      },
+      he: {
+        name: "מציג מטא-נתוני NFT",
+        description:
+          "אתרו מטא-נתוני NFT ב-Ethereum לפי כתובת חוזה ומזהה טוקן. הציגו את כתובת ה-URI של הטוקן בתקן ERC-721 או ERC-1155, את התמונה, המאפיינים וה-JSON הגולמי.",
+      },
+      hi: {
+        name: "NFT मेटाडेटा व्यूअर",
+        description:
+          "कॉन्ट्रैक्ट पते और टोकन ID से Ethereum NFT का मेटाडेटा ढूँढें। ERC-721 या ERC-1155 टोकन URI, इमेज, गुण और मूल JSON देखें।",
+      },
+      id: {
+        name: "Penampil Metadata NFT",
+        description:
+          "Cari metadata NFT Ethereum dengan alamat kontrak dan ID token. Lihat URI token ERC-721 atau ERC-1155, gambar, trait, dan JSON mentah.",
+      },
+      it: {
+        name: "Visualizzatore di metadati NFT",
+        description:
+          "Cerca i metadati di un NFT Ethereum tramite indirizzo del contratto e ID del token. Visualizza l’URI del token ERC-721 o ERC-1155, l’immagine, gli attributi e il JSON originale.",
+      },
+      ja: {
+        name: "NFT メタデータビューアー",
+        description:
+          "コントラクトアドレスとトークン ID から Ethereum の NFT メタデータを取得します。ERC-721 や ERC-1155 のトークン URI、画像、特性、元の JSON を確認できます。",
+      },
+      ko: {
+        name: "NFT 메타데이터 뷰어",
+        description:
+          "컨트랙트 주소와 토큰 ID로 이더리움 NFT 메타데이터를 조회하세요. ERC-721 또는 ERC-1155 토큰의 URI, 이미지, 특성, 원본 JSON을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Metadata NFT",
+        description:
+          "Cari metadata NFT Ethereum menggunakan alamat kontrak dan ID token. Lihat URI token ERC-721 atau ERC-1155, imej, ciri dan JSON mentah.",
+      },
+      nl: {
+        name: "NFT-metadata-viewer",
+        description:
+          "Zoek Ethereum NFT-metadata op met contractadres en token-ID. Bekijk de ERC-721- of ERC-1155-token-URI, afbeelding, kenmerken en ruwe JSON.",
+      },
+      no: {
+        name: "NFT-metadataviser",
+        description:
+          "Slå opp Ethereum NFT-metadata med kontraktadresse og token-ID. Se ERC-721- eller ERC-1155-token-URI, bilde, egenskaper og rå JSON.",
+      },
+      pl: {
+        name: "Przeglądarka metadanych NFT",
+        description:
+          "Wyszukaj metadane NFT w Ethereum według adresu kontraktu i ID tokena. Zobacz URI tokena ERC-721 lub ERC-1155, obraz, cechy i źródłowy JSON.",
+      },
+      pt: {
+        name: "Visualizador de metadados NFT",
+        description:
+          "Consulte metadados de NFT no Ethereum pelo endereço do contrato e pelo ID do token. Veja o URI do token ERC-721 ou ERC-1155, a imagem, as características e o JSON em bruto.",
+      },
+      ru: {
+        name: "Просмотр метаданных NFT",
+        description:
+          "Найдите метаданные NFT в Ethereum по адресу контракта и ID токена. Просматривайте URI токена ERC-721 или ERC-1155, изображение, свойства и исходный JSON.",
+      },
+      sv: {
+        name: "NFT-metadatavisare",
+        description:
+          "Slå upp Ethereum NFT-metadata med kontraktsadress och token-ID. Visa ERC-721- eller ERC-1155-token-URI, bild, egenskaper och rå JSON.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเมตา NFT",
+        description:
+          "ค้นหาข้อมูลเมตา NFT บน Ethereum ด้วยที่อยู่สัญญาและ ID ของโทเคน ดู URI ของโทเคน ERC-721 หรือ ERC-1155 รูปภาพ ลักษณะ และ JSON ดิบ",
+      },
+      tr: {
+        name: "NFT Meta Veri Görüntüleyici",
+        description:
+          "Sözleşme adresi ve token kimliğiyle Ethereum NFT meta verilerini bulun. ERC-721 veya ERC-1155 token URI'sini, görseli, özellikleri ve ham JSON'u görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem siêu dữ liệu NFT",
+        description:
+          "Tra cứu siêu dữ liệu NFT trên Ethereum bằng địa chỉ hợp đồng và ID token. Xem URI token ERC-721 hoặc ERC-1155, ảnh, đặc điểm và JSON gốc.",
+      },
+      "zh-CN": {
+        name: "NFT 元数据查看器",
+        description:
+          "通过合约地址和 Token ID 查询以太坊 NFT 元数据。查看 ERC-721 或 ERC-1155 的 Token URI、图片、特征和原始 JSON。",
+      },
+      "zh-TW": {
+        name: "NFT 中繼資料檢視器",
+        description:
+          "透過合約位址和代幣 ID 查詢以太坊 NFT 中繼資料。檢視 ERC-721 或 ERC-1155 的代幣 URI、圖片、特徵和原始 JSON。",
+      },
+    },
+  },
+  {
     slug: "notebook-export",
     category: "document",
     icon: "file-text",
