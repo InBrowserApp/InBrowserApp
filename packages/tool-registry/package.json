@@ -94,6 +94,7 @@
     "@tool/djvu-viewer": "workspace:*",
     "@tool/dms-coordinate-converter": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
+    "@tool/dns-zone-file-parser": "workspace:*",
     "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",

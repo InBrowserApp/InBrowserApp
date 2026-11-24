@@ -11135,6 +11135,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "dns-zone-file-parser",
+    category: "network",
+    icon: "file-text",
+    tags: [
+      "dns",
+      "zone",
+      "bind",
+      "zone-file",
+      "resource-record",
+      "ttl",
+      "json",
+      "parser",
+    ],
+    locales: {
+      ar: {
+        name: "محلّل ملفات مناطق DNS",
+        description:
+          "حلّل ملفات مناطق DNS بتنسيق BIND واعرض سجلاتها في قائمة يمكنك تصفيتها ونسخها بتنسيق JSON. راجع اسم كل سجل ونوعه ومدة بقائه وفئته وبياناته في متصفّحك.",
+      },
+      de: {
+        name: "Parser für DNS-Zonendateien",
+        description:
+          "Lies DNS-Zonendateien im BIND-Format als durchsuchbare DNS-Einträge und JSON. Prüfe Name, Typ, TTL, Klasse und Daten jedes Eintrags direkt im Browser.",
+      },
+      en: {
+        name: "DNS Zone File Parser",
+        description:
+          "Parse BIND-style DNS zone files into searchable records and JSON. See each record’s name, type, TTL, class, and data directly in your browser.",
+      },
+      es: {
+        name: "Analizador de archivos de zona DNS",
+        description:
+          "Analiza archivos de zona DNS en formato BIND. Filtra registros por nombre, tipo o datos, consulta su TTL y su clase y copia el resultado como JSON.",
+      },
+      fr: {
+        name: "Analyseur de fichiers de zone DNS",
+        description:
+          "Analysez les fichiers de zone DNS au format BIND. Filtrez les enregistrements, consultez leur nom, type, TTL, classe et données, puis copiez-les en JSON depuis votre navigateur.",
+      },
+      he: {
+        name: "מנתח קובצי אזור DNS",
+        description:
+          "נתחו קובצי אזור DNS בפורמט BIND, סננו את הרשומות והעתיקו אותן כ־JSON. הציגו את השם, הסוג, ה־TTL, המחלקה והנתונים של כל רשומה בדפדפן.",
+      },
+      hi: {
+        name: "DNS ज़ोन फ़ाइल पार्सर",
+        description:
+          "BIND फ़ॉर्मैट की DNS ज़ोन फ़ाइल पढ़ें, रिकॉर्ड फ़िल्टर करें और उन्हें JSON में कॉपी करें। हर रिकॉर्ड का नाम, प्रकार, TTL, क्लास और डेटा सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Parser File Zona DNS",
+        description:
+          "Baca file zona DNS format BIND, telusuri record, dan salin hasilnya sebagai JSON. Lihat nama, jenis, TTL, kelas, dan data setiap record langsung di browser.",
+      },
+      it: {
+        name: "Analizzatore di file di zona DNS",
+        description:
+          "Analizza file di zona DNS in formato BIND. Filtra i record, consulta nome, tipo, TTL, classe e dati, poi copiali in JSON direttamente dal browser.",
+      },
+      ja: {
+        name: "DNSゾーンファイル解析ツール",
+        description:
+          "BIND形式のDNSゾーンファイルを、検索可能なレコードとJSONに解析します。名前、タイプ、TTL、クラス、データをブラウザで確認できます。",
+      },
+      ko: {
+        name: "DNS 영역 파일 파서",
+        description:
+          "BIND 형식의 DNS 영역 파일을 검색 가능한 레코드 목록과 JSON으로 변환합니다. 각 레코드의 이름, 유형, TTL, 클래스와 데이터를 브라우저에서 바로 확인하세요.",
+      },
+      ms: {
+        name: "Penghurai Fail Zon DNS",
+        description:
+          "Baca fail zon DNS dalam format BIND, cari rekod dan salin hasil sebagai JSON. Lihat nama, jenis, TTL, kelas dan data setiap rekod terus dalam pelayar.",
+      },
+      nl: {
+        name: "Parser voor DNS-zonebestanden",
+        description:
+          "Zet DNS-zonebestanden in BIND-formaat om in doorzoekbare records en JSON. Bekijk de naam, het type, de TTL, de klasse en de gegevens per record in je browser.",
+      },
+      no: {
+        name: "Parser for DNS-sonefiler",
+        description:
+          "Les DNS-sonefiler i BIND-format som søkbare poster og JSON. Se navn, type, TTL, klasse og data for hver post direkte i nettleseren.",
+      },
+      pl: {
+        name: "Parser plików stref DNS",
+        description:
+          "Odczytaj plik strefy DNS w formacie BIND, przeszukaj rekordy i skopiuj je jako JSON. Zobacz nazwę, typ, TTL, klasę i dane każdego rekordu w przeglądarce.",
+      },
+      pt: {
+        name: "Analisador de arquivos de zona DNS",
+        description:
+          "Analise arquivos de zona DNS no formato BIND. Filtre registros por nome, tipo ou dados, confira o TTL e a classe e copie o resultado como JSON.",
+      },
+      ru: {
+        name: "Парсер файлов зон DNS",
+        description:
+          "Разбирайте файлы зон DNS в формате BIND. Просматривайте и фильтруйте записи по имени, типу и данным, проверяйте TTL и класс, копируйте записи в JSON прямо в браузере.",
+      },
+      sv: {
+        name: "Parser för DNS-zonfiler",
+        description:
+          "Läs DNS-zonfiler i BIND-format som sökbara poster och JSON. Se varje posts namn, typ, TTL, klass och data direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์ไฟล์โซน DNS",
+        description:
+          "อ่านไฟล์โซน DNS รูปแบบ BIND เป็นรายการระเบียนที่ค้นหาและคัดลอกเป็น JSON ได้ ดูชื่อ ประเภท TTL คลาส และข้อมูลของแต่ละระเบียนได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "DNS Bölge Dosyası Ayrıştırıcı",
+        description:
+          "BIND biçimindeki DNS bölge dosyalarını ayrıştırın ve kayıtları JSON olarak kopyalayın. Kayıtları filtreleyip adlarını, türlerini, TTL değerlerini, sınıflarını ve verilerini tarayıcınızda görün.",
+      },
+      vi: {
+        name: "Trình phân tích tệp vùng DNS",
+        description:
+          "Chuyển tệp vùng DNS định dạng BIND thành danh sách bản ghi có thể lọc và sao chép dưới dạng JSON. Xem tên, loại, TTL, lớp và dữ liệu của từng bản ghi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "DNS 区域文件解析器",
+        description:
+          "将 BIND 格式的 DNS 区域文件解析为可搜索的记录和 JSON，在浏览器中查看记录名称、类型、TTL、类和数据。",
+      },
+      "zh-TW": {
+        name: "DNS 區域檔案解析器",
+        description:
+          "將 BIND 格式的 DNS 區域檔案解析為可搜尋的記錄和 JSON，直接在瀏覽器中查看記錄名稱、類型、TTL、類別及資料。",
+      },
+    },
+  },
+  {
     slug: "doc-to-pdf-converter",
     category: "document",
     icon: "file-text",
@@ -56936,6 +57068,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DNS 查詢",
         description:
           "透過 DNS over HTTPS 解析器查詢 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 記錄。",
+      },
+    },
+  },
+  "dns-zone-file-parser": {
+    slug: "dns-zone-file-parser",
+    category: "network",
+    icon: "file-text",
+    tags: [
+      "dns",
+      "zone",
+      "bind",
+      "zone-file",
+      "resource-record",
+      "ttl",
+      "json",
+      "parser",
+    ],
+    locales: {
+      ar: {
+        name: "محلّل ملفات مناطق DNS",
+        description:
+          "حلّل ملفات مناطق DNS بتنسيق BIND واعرض سجلاتها في قائمة يمكنك تصفيتها ونسخها بتنسيق JSON. راجع اسم كل سجل ونوعه ومدة بقائه وفئته وبياناته في متصفّحك.",
+      },
+      de: {
+        name: "Parser für DNS-Zonendateien",
+        description:
+          "Lies DNS-Zonendateien im BIND-Format als durchsuchbare DNS-Einträge und JSON. Prüfe Name, Typ, TTL, Klasse und Daten jedes Eintrags direkt im Browser.",
+      },
+      en: {
+        name: "DNS Zone File Parser",
+        description:
+          "Parse BIND-style DNS zone files into searchable records and JSON. See each record’s name, type, TTL, class, and data directly in your browser.",
+      },
+      es: {
+        name: "Analizador de archivos de zona DNS",
+        description:
+          "Analiza archivos de zona DNS en formato BIND. Filtra registros por nombre, tipo o datos, consulta su TTL y su clase y copia el resultado como JSON.",
+      },
+      fr: {
+        name: "Analyseur de fichiers de zone DNS",
+        description:
+          "Analysez les fichiers de zone DNS au format BIND. Filtrez les enregistrements, consultez leur nom, type, TTL, classe et données, puis copiez-les en JSON depuis votre navigateur.",
+      },
+      he: {
+        name: "מנתח קובצי אזור DNS",
+        description:
+          "נתחו קובצי אזור DNS בפורמט BIND, סננו את הרשומות והעתיקו אותן כ־JSON. הציגו את השם, הסוג, ה־TTL, המחלקה והנתונים של כל רשומה בדפדפן.",
+      },
+      hi: {
+        name: "DNS ज़ोन फ़ाइल पार्सर",
+        description:
+          "BIND फ़ॉर्मैट की DNS ज़ोन फ़ाइल पढ़ें, रिकॉर्ड फ़िल्टर करें और उन्हें JSON में कॉपी करें। हर रिकॉर्ड का नाम, प्रकार, TTL, क्लास और डेटा सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Parser File Zona DNS",
+        description:
+          "Baca file zona DNS format BIND, telusuri record, dan salin hasilnya sebagai JSON. Lihat nama, jenis, TTL, kelas, dan data setiap record langsung di browser.",
+      },
+      it: {
+        name: "Analizzatore di file di zona DNS",
+        description:
+          "Analizza file di zona DNS in formato BIND. Filtra i record, consulta nome, tipo, TTL, classe e dati, poi copiali in JSON direttamente dal browser.",
+      },
+      ja: {
+        name: "DNSゾーンファイル解析ツール",
+        description:
+          "BIND形式のDNSゾーンファイルを、検索可能なレコードとJSONに解析します。名前、タイプ、TTL、クラス、データをブラウザで確認できます。",
+      },
+      ko: {
+        name: "DNS 영역 파일 파서",
+        description:
+          "BIND 형식의 DNS 영역 파일을 검색 가능한 레코드 목록과 JSON으로 변환합니다. 각 레코드의 이름, 유형, TTL, 클래스와 데이터를 브라우저에서 바로 확인하세요.",
+      },
+      ms: {
+        name: "Penghurai Fail Zon DNS",
+        description:
+          "Baca fail zon DNS dalam format BIND, cari rekod dan salin hasil sebagai JSON. Lihat nama, jenis, TTL, kelas dan data setiap rekod terus dalam pelayar.",
+      },
+      nl: {
+        name: "Parser voor DNS-zonebestanden",
+        description:
+          "Zet DNS-zonebestanden in BIND-formaat om in doorzoekbare records en JSON. Bekijk de naam, het type, de TTL, de klasse en de gegevens per record in je browser.",
+      },
+      no: {
+        name: "Parser for DNS-sonefiler",
+        description:
+          "Les DNS-sonefiler i BIND-format som søkbare poster og JSON. Se navn, type, TTL, klasse og data for hver post direkte i nettleseren.",
+      },
+      pl: {
+        name: "Parser plików stref DNS",
+        description:
+          "Odczytaj plik strefy DNS w formacie BIND, przeszukaj rekordy i skopiuj je jako JSON. Zobacz nazwę, typ, TTL, klasę i dane każdego rekordu w przeglądarce.",
+      },
+      pt: {
+        name: "Analisador de arquivos de zona DNS",
+        description:
+          "Analise arquivos de zona DNS no formato BIND. Filtre registros por nome, tipo ou dados, confira o TTL e a classe e copie o resultado como JSON.",
+      },
+      ru: {
+        name: "Парсер файлов зон DNS",
+        description:
+          "Разбирайте файлы зон DNS в формате BIND. Просматривайте и фильтруйте записи по имени, типу и данным, проверяйте TTL и класс, копируйте записи в JSON прямо в браузере.",
+      },
+      sv: {
+        name: "Parser för DNS-zonfiler",
+        description:
+          "Läs DNS-zonfiler i BIND-format som sökbara poster och JSON. Se varje posts namn, typ, TTL, klass och data direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์ไฟล์โซน DNS",
+        description:
+          "อ่านไฟล์โซน DNS รูปแบบ BIND เป็นรายการระเบียนที่ค้นหาและคัดลอกเป็น JSON ได้ ดูชื่อ ประเภท TTL คลาส และข้อมูลของแต่ละระเบียนได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "DNS Bölge Dosyası Ayrıştırıcı",
+        description:
+          "BIND biçimindeki DNS bölge dosyalarını ayrıştırın ve kayıtları JSON olarak kopyalayın. Kayıtları filtreleyip adlarını, türlerini, TTL değerlerini, sınıflarını ve verilerini tarayıcınızda görün.",
+      },
+      vi: {
+        name: "Trình phân tích tệp vùng DNS",
+        description:
+          "Chuyển tệp vùng DNS định dạng BIND thành danh sách bản ghi có thể lọc và sao chép dưới dạng JSON. Xem tên, loại, TTL, lớp và dữ liệu của từng bản ghi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "DNS 区域文件解析器",
+        description:
+          "将 BIND 格式的 DNS 区域文件解析为可搜索的记录和 JSON，在浏览器中查看记录名称、类型、TTL、类和数据。",
+      },
+      "zh-TW": {
+        name: "DNS 區域檔案解析器",
+        description:
+          "將 BIND 格式的 DNS 區域檔案解析為可搜尋的記錄和 JSON，直接在瀏覽器中查看記錄名稱、類型、TTL、類別及資料。",
       },
     },
   },

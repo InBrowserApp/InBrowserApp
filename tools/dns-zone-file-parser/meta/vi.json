@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích tệp vùng DNS",
+  "description": "Chuyển tệp vùng DNS định dạng BIND thành danh sách bản ghi có thể lọc và sao chép dưới dạng JSON. Xem tên, loại, TTL, lớp và dữ liệu của từng bản ghi ngay trong trình duyệt."
+}

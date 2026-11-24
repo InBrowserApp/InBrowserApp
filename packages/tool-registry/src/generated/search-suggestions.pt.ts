@@ -438,6 +438,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Analisador de arquivos de zona DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Conversor de DOC / WPS para PDF",
     slug: "doc-to-pdf-converter",

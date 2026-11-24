@@ -1,0 +1,4 @@
+{
+  "name": "Parser für DNS-Zonendateien",
+  "description": "Lies DNS-Zonendateien im BIND-Format als durchsuchbare DNS-Einträge und JSON. Prüfe Name, Typ, TTL, Klasse und Daten jedes Eintrags direkt im Browser."
+}
