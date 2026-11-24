@@ -1,0 +1,4 @@
+{
+  "name": "Konverter WKT ↔ GeoJSON",
+  "description": "Konversi geometri Well-Known Text (WKT) ke GeoJSON atau sebaliknya. Tempel teks atau buka berkas, lalu salin atau unduh geometri hasil konversi."
+}

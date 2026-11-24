@@ -206,6 +206,8 @@ catalog:
   "@peculiar/x509": ^3.1.0
   "@prettier/plugin-xml": ^3.4.2
   "@tailwindcss/vite": ^4.3.5
+  "@types/terraformer__wkt": ^2.0.3
+  "@terraformer/wkt": ^2.2.2
   "@testing-library/react": ^16.3.3
   "@types/crypto-js": ^4.2.2
   "@types/jmespath": ^0.15.2

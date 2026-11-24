@@ -1,0 +1,12 @@
+{
+  "direction": "Konverteringsriktning",
+  "example": "Prova ett exempel",
+  "openFile": "Öppna fil",
+  "convert": "Konvertera",
+  "copy": "Kopiera",
+  "copied": "Kopierat",
+  "download": "Ladda ned",
+  "empty": "Den konverterade filen visas här.",
+  "invalid": "Det gick inte att konvertera indata. Kontrollera filformatet och geometrin.",
+  "swap": "Använd resultatet som indata"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "WKT ↔ GeoJSON 转换器",
+  "description": "在 Well-Known Text（WKT）几何图形和 GeoJSON 之间相互转换。粘贴文本或打开文件，然后复制或下载转换后的几何图形。"
+}

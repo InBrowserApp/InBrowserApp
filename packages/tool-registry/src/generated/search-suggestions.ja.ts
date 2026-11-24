@@ -1688,6 +1688,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
+    category: "json",
+    name: "WKT ↔ GeoJSON 変換",
+    slug: "wkt-geojson-converter",
+  },
+  {
     category: "document",
     name: "XLSからXLSXへの変換ツール",
     slug: "xls-to-xlsx-converter",

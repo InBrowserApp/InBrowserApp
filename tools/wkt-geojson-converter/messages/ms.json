@@ -1,0 +1,12 @@
+{
+  "direction": "Arah penukaran",
+  "example": "Cuba contoh",
+  "openFile": "Buka fail",
+  "convert": "Tukar",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Muat turun",
+  "empty": "Hasil penukaran akan dipaparkan di sini.",
+  "invalid": "Input tidak dapat ditukar. Semak format fail dan geometri.",
+  "swap": "Guna hasil sebagai input"
+}

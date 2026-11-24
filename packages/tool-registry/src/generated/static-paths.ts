@@ -31006,6 +31006,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "wkt-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "wkt-geojson-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "xls-to-xlsx-converter",
     language: "ar",
   },

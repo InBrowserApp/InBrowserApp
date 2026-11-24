@@ -1,0 +1,4 @@
+{
+  "name": "WKT ↔ GeoJSON 変換",
+  "description": "Well-Known Text（WKT）と GeoJSON のジオメトリを相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーまたはダウンロードできます。"
+}

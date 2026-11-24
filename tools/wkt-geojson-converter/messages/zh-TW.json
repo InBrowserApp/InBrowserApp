@@ -1,0 +1,12 @@
+{
+  "direction": "轉換方向",
+  "example": "試用範例",
+  "openFile": "開啟檔案",
+  "convert": "轉換",
+  "copy": "複製",
+  "copied": "已複製",
+  "download": "下載",
+  "empty": "轉換結果會顯示在這裡。",
+  "invalid": "無法轉換。請檢查檔案格式和幾何資料。",
+  "swap": "以結果作為輸入"
+}
