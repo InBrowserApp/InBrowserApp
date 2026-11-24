@@ -50,6 +50,7 @@ test("opens the example, filters its files, then downloads the selected row only
   expect(saveTorrentFile).toHaveBeenCalledExactlyOnceWith(
     poster,
     expect.any(AbortSignal),
+    expect.any(Function),
     expect.any(Function)
   )
 })

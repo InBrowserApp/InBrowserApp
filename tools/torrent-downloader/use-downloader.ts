@@ -73,19 +73,28 @@ function useDownloader() {
   }
 
   async function save(file: TorrentFile) {
-    const session = sessionRequest.current
-    if (!session || session.signal.aborted || activeDownload.current) return
-
+    const request = sessionRequest.current
+    if (
+      !request ||
+      request.signal.aborted ||
+      activeDownload.current ||
+      session.status !== "ready"
+    )
+      return
+    const { torrent } = session
     const transfer = new AbortController()
     activeDownload.current = transfer
-    const signal = AbortSignal.any([transfer.signal, session.signal])
+    const signal = AbortSignal.any([transfer.signal, request.signal])
     setNotice(undefined)
     setDownload({ file, percent: 0 })
 
     try {
-      const result = await saveTorrentFile(file, signal, (percent) => {
-        setDownload({ file, percent })
-      })
+      const result = await saveTorrentFile(
+        file,
+        signal,
+        (percent) => setDownload({ file, percent }),
+        () => torrent.downloaded
+      )
       if (!signal.aborted) setNotice(result)
     } catch (error) {
       if (

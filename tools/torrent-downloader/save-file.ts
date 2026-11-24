@@ -10,9 +10,10 @@ type FilePickerWindow = Window & {
 class NoFileDataError extends Error {}
 
 async function saveTorrentFile(
-  file: Pick<TorrentFile, "name" | "length" | "downloaded" | "stream">,
+  file: Pick<TorrentFile, "name" | "length" | "stream">,
   signal: AbortSignal,
-  onProgress: (percent: number) => void
+  onProgress: (percent: number) => void,
+  readDownloaded: () => number
 ) {
   const handle = await (window as FilePickerWindow).showSaveFilePicker?.({
     suggestedName: file.name,
@@ -21,11 +22,12 @@ async function saveTorrentFile(
   const writable = await handle?.createWritable()
   const idle = new AbortController()
   const combined = AbortSignal.any([signal, idle.signal])
-  let received = file.downloaded
+  let downloaded = readDownloaded()
   const timeout = (): number =>
     window.setTimeout(() => {
-      if (file.downloaded > received) {
-        received = file.downloaded
+      const current = readDownloaded()
+      if (current > downloaded) {
+        downloaded = current
         timer = timeout()
       } else {
         idle.abort(new NoFileDataError())

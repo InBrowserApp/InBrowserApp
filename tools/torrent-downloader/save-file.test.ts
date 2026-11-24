@@ -5,15 +5,15 @@ import type { TorrentFile } from "webtorrent"
 
 vi.mock("@workspace/ui/lib/download-blob", () => ({ downloadBlob: vi.fn() }))
 
+const noData = () => 0
 const contents = new TextEncoder().encode("Sample torrent data")
 
 function file(stream: ReadableStream, length = contents.byteLength) {
   return {
     name: "sample.txt",
     length,
-    downloaded: 0,
     stream: () => stream,
-  } as Pick<TorrentFile, "name" | "length" | "downloaded" | "stream">
+  } as Pick<TorrentFile, "name" | "length" | "stream">
 }
 
 function bytes() {
@@ -36,7 +36,8 @@ test("hands the verified file to the browser with its name", async () => {
   const result = await saveTorrentFile(
     file(bytes()),
     new AbortController().signal,
-    onProgress
+    onProgress,
+    noData
   )
   expect(result).toBe("saved")
   expect(onProgress).toHaveBeenCalledWith(100)
@@ -50,7 +51,8 @@ test("rejects a truncated stream and never saves the partial file", async () => 
     saveTorrentFile(
       file(bytes(), contents.byteLength + 1),
       new AbortController().signal,
-      vi.fn()
+      vi.fn(),
+      noData
     )
   ).rejects.toThrow("Incomplete file")
   expect(downloadBlob).not.toHaveBeenCalled()
@@ -65,7 +67,12 @@ test("streams into the native save destination when available", async () => {
   vi.stubGlobal("showSaveFilePicker", picker)
 
   await expect(
-    saveTorrentFile(file(bytes()), new AbortController().signal, vi.fn())
+    saveTorrentFile(
+      file(bytes()),
+      new AbortController().signal,
+      vi.fn(),
+      noData
+    )
   ).resolves.toBe("written")
   expect(picker).toHaveBeenCalledWith({ suggestedName: "sample.txt" })
   expect(write).toHaveBeenCalledWith(contents, expect.anything())
@@ -77,7 +84,12 @@ test("cancels a stalled transfer and closes the source", async () => {
   const cancel = vi.fn()
   const controller = new AbortController()
   const stream = new ReadableStream({ cancel })
-  const result = saveTorrentFile(file(stream), controller.signal, vi.fn())
+  const result = saveTorrentFile(
+    file(stream),
+    controller.signal,
+    vi.fn(),
+    noData
+  )
 
   await Promise.all([
     expect(result).rejects.toMatchObject({ name: "AbortError" }),
@@ -94,9 +106,37 @@ test("a stalled source times out even without user cancellation", async () => {
 
   await Promise.all([
     expect(
-      saveTorrentFile(file(stream), new AbortController().signal, vi.fn())
+      saveTorrentFile(
+        file(stream),
+        new AbortController().signal,
+        vi.fn(),
+        noData
+      )
     ).rejects.toBeInstanceOf(NoFileDataError),
     vi.advanceTimersByTimeAsync(60_001),
   ])
   expect(cancel).toHaveBeenCalledOnce()
+})
+
+test("keeps a transfer alive while later pieces arrive out of order", async () => {
+  vi.useFakeTimers()
+  const cancel = vi.fn()
+  const stream = new ReadableStream({ cancel })
+  let downloaded = 0
+  const result = saveTorrentFile(
+    file(stream),
+    new AbortController().signal,
+    vi.fn(),
+    () => downloaded
+  )
+  await Promise.all([
+    expect(result).rejects.toBeInstanceOf(NoFileDataError),
+    (async () => {
+      await vi.advanceTimersByTimeAsync(30_000)
+      downloaded = 2
+      await vi.advanceTimersByTimeAsync(30_000)
+      expect(cancel).not.toHaveBeenCalled()
+      await vi.advanceTimersByTimeAsync(60_000)
+    })(),
+  ])
 })
