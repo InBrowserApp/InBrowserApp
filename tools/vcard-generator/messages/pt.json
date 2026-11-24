@@ -1,0 +1,19 @@
+{
+  "details": "Dados de contato",
+  "preview": "Prévia do contato",
+  "empty": "Digite um nome para começar a criar o cartão de contato.",
+  "firstName": "Nome",
+  "lastName": "Sobrenome",
+  "phone": "Telefone",
+  "email": "E-mail",
+  "company": "Empresa",
+  "jobTitle": "Cargo",
+  "website": "Site",
+  "address": "Endereço",
+  "notes": "Notas",
+  "more": "Mais dados de contato",
+  "copy": "Copiar vCard",
+  "copied": "Copiado",
+  "copyFailed": "Não foi possível copiar",
+  "download": "Baixar VCF"
+}

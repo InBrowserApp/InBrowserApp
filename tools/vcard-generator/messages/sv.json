@@ -1,0 +1,19 @@
+{
+  "details": "Kontaktuppgifter",
+  "preview": "Förhandsgranskning av kontaktkort",
+  "empty": "Ange ett namn för att börja skapa kontaktkortet.",
+  "firstName": "Förnamn",
+  "lastName": "Efternamn",
+  "phone": "Telefonnummer",
+  "email": "E-post",
+  "company": "Företag",
+  "jobTitle": "Befattning",
+  "website": "Webbplats",
+  "address": "Adress",
+  "notes": "Anteckningar",
+  "more": "Fler kontaktuppgifter",
+  "copy": "Kopiera vCard",
+  "copied": "Kopierat",
+  "copyFailed": "Det gick inte att kopiera",
+  "download": "Ladda ner VCF"
+}

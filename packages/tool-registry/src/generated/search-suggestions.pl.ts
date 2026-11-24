@@ -1668,6 +1668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "Generator vCard",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Wyodrębnianie audio z wideo",
     slug: "video-audio-extractor",
