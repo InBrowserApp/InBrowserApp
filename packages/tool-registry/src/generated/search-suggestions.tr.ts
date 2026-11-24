@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Enlem ve Boylam için DMS Dönüştürücü",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS Sorgulama",
     slug: "dns-lookup",

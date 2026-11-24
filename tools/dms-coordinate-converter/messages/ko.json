@@ -1,0 +1,18 @@
+{
+  "decimal": "십진 도(DD)",
+  "dms": "도·분·초(DMS)",
+  "latitude": "위도",
+  "longitude": "경도",
+  "degrees": "도",
+  "minutes": "분",
+  "seconds": "초",
+  "hemisphere": "반구",
+  "north": "북(N)",
+  "south": "남(S)",
+  "east": "동(E)",
+  "west": "서(W)",
+  "example": "예제 사용하기",
+  "copy": "좌표 복사",
+  "copied": "복사됨",
+  "invalid": "위도는 ±90° 이내, 경도는 ±180° 이내여야 합니다. 분과 초는 60보다 작아야 합니다."
+}

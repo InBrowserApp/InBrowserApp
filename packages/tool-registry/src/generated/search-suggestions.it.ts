@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Convertitore di latitudine e longitudine in DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Ricerca DNS",
     slug: "dns-lookup",

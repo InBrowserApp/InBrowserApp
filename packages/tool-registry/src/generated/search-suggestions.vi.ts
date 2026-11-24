@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Tra cứu DNS",
     slug: "dns-lookup",

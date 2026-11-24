@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Coördinaten omrekenen tussen decimale graden en DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-zoektool",
     slug: "dns-lookup",

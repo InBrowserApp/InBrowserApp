@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Penukar Latitud dan Longitud ↔ DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Carian DNS",
     slug: "dns-lookup",

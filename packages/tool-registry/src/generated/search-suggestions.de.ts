@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-Abfrage",
     slug: "dns-lookup",

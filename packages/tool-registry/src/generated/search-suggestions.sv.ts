@@ -403,6 +403,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-uppslagning",
     slug: "dns-lookup",

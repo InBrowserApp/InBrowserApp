@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter szerokości i długości geograficznej na DMS",
+  "description": "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie."
+}
