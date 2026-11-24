@@ -86,6 +86,7 @@ export default function PinyinConverter({
               {messages.outputLabel}
             </label>
             <ToolCopyButton
+              key={output}
               value={output}
               className="min-h-9"
               copyLabel={messages.copyLabel}

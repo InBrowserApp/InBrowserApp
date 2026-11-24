@@ -57,11 +57,15 @@ test("tries an example, switches the tone format, copies the result, and clears 
     ).toBeTruthy()
   })
 
+  fireEvent.click(screen.getByRole("radio", { name: messages.marksLabel }))
+  expect(output().value).toBe("chóng qìng yín háng")
+  expect(screen.getByRole("button", { name: messages.copyLabel })).toBeTruthy()
+
   clickButton(messages.clearLabel)
   expect(input().value).toBe("")
   expect(output().value).toBe("")
   fireEvent.change(input(), { target: { value: "你好" } })
-  expect(output().value).toBe("ni3 hao3")
+  expect(output().value).toBe("nǐ hǎo")
 })
 
 test("keeps the result available when clipboard access fails", async () => {
