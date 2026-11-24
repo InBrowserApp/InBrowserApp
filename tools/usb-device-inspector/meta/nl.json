@@ -1,0 +1,4 @@
+{
+  "name": "USB-apparaatinspectie",
+  "description": "Inspecteer een USB-apparaat in je browser met WebUSB. Bekijk VID, PID, USB-versie, configuraties, interfaces en eindpunten en controleer de toegang tot het apparaat."
+}

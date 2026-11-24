@@ -13,3 +13,5 @@ Công cụ chạy hoàn toàn trong trình duyệt của bạn và không tải 
 ## Cách Đọc Kết Quả
 
 Hãy xem dữ liệu là góc nhìn hiện tại của trình duyệt về môi trường của bạn, không phải một bản kiểm kê phần cứng được bảo đảm. Thay đổi kích thước cửa sổ hoặc xoay thiết bị, rồi làm mới bản chụp để cập nhật viewport, hướng xoay và các giá trị màn hình. Dùng thao tác sao chép JSON khi bạn cần chia sẻ chính xác các giá trị đã quan sát với nhà phát triển hoặc nhóm hỗ trợ.
+
+[Công cụ kiểm tra thiết bị USB](../usb-device-inspector/)

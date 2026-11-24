@@ -1,0 +1,4 @@
+{
+  "name": "USB 设备检查器",
+  "description": "使用 WebUSB 在浏览器中检查 USB 设备。查看 VID、PID、USB 版本、配置、接口和端点，并检查设备访问权限。"
+}

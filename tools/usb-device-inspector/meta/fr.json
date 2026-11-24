@@ -1,0 +1,4 @@
+{
+  "name": "Inspecteur de périphériques USB",
+  "description": "Examinez un périphérique USB dans votre navigateur avec WebUSB. Consultez les VID, PID, version USB, configurations, interfaces et points de terminaison, et vérifiez l’accès au périphérique."
+}

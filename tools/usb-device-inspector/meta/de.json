@@ -1,0 +1,4 @@
+{
+  "name": "USB-Geräteinspektor",
+  "description": "Untersuche ein USB-Gerät mit WebUSB im Browser. Zeige VID, PID, USB-Version, Konfigurationen, Schnittstellen und Endpunkte an und prüfe den Gerätezugriff."
+}

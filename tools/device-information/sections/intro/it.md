@@ -13,3 +13,5 @@ Lo strumento viene eseguito interamente nel browser e non carica l'istantanea. I
 ## Come leggere i risultati
 
 Considera i dati come la vista corrente del browser sul tuo ambiente, non come un inventario hardware garantito. Ridimensiona la finestra o ruota il dispositivo, quindi aggiorna l'istantanea per aggiornare i valori di viewport, orientamento e display. Usa l'azione di copia JSON quando devi condividere i valori esatti osservati con uno sviluppatore o un team di supporto.
+
+[Analisi dispositivi USB](../usb-device-inspector/)

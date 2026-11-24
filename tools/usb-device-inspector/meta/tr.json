@@ -1,0 +1,4 @@
+{
+  "name": "USB Cihaz İnceleyici",
+  "description": "WebUSB ile tarayıcınızda bir USB cihazını inceleyin. VID, PID, USB sürümü, yapılandırmalar, arabirimler ve uç noktaları görüntüleyin ve cihaz erişimini kontrol edin."
+}

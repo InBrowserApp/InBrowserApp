@@ -13,3 +13,5 @@ De tool draait volledig in je browser en uploadt de snapshot niet. Browsers verb
 ## Zo lees je de resultaten
 
 Beschouw de gegevens als de huidige weergave van je omgeving door de browser, niet als een gegarandeerde hardware-inventaris. Wijzig de venstergrootte of draai het apparaat en vernieuw daarna de snapshot om viewport-, oriëntatie- en schermwaarden bij te werken. Gebruik de JSON-kopieeractie wanneer je de exact waargenomen waarden met een ontwikkelaar of supportteam moet delen.
+
+[USB-apparaatinspectie](../usb-device-inspector/)

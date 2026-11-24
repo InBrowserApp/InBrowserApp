@@ -451,6 +451,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
   "url-parser-builder": () => import("@tool/url-parser-builder/page"),
+  "usb-device-inspector": () => import("@tool/usb-device-inspector/page"),
   "user-agent-parser": () => import("@tool/user-agent-parser/page"),
   "uuid-base64-hex-decimal-octal-binary-converter": () =>
     import("@tool/uuid-base64-hex-decimal-octal-binary-converter/page"),

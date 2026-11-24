@@ -13,3 +13,5 @@ Narzędzie działa w całości w przeglądarce i nie przesyła zrzutu. Przegląd
 ## Jak czytać wyniki
 
 Traktuj dane jako bieżący obraz środowiska widziany przez przeglądarkę, a nie gwarantowany spis sprzętu. Zmień rozmiar okna lub obróć urządzenie, a następnie odśwież zrzut, aby zaktualizować wartości viewportu, orientacji i ekranu. Użyj akcji kopiowania JSON, gdy trzeba udostępnić dokładnie zaobserwowane wartości deweloperowi lub zespołowi wsparcia.
+
+[Inspektor urządzeń USB](../usb-device-inspector/)

@@ -1,0 +1,4 @@
+{
+  "name": "Analisi dispositivi USB",
+  "description": "Esamina un dispositivo USB nel browser con WebUSB. Visualizza VID, PID, versione USB, configurazioni, interfacce ed endpoint e verifica l'accesso al dispositivo."
+}

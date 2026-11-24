@@ -1813,6 +1813,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "url-parser-builder",
   },
   {
+    category: "developer",
+    name: "USB デバイスインスペクター",
+    slug: "usb-device-inspector",
+  },
+  {
     category: "web",
     name: "ユーザーエージェント（User-Agent）解析",
     slug: "user-agent-parser",

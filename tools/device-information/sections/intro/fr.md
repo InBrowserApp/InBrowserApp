@@ -13,3 +13,5 @@ L'outil s'exécute entièrement dans votre navigateur et n'envoie pas l'instanta
 ## Comment lire les résultats
 
 Traitez les données comme la vue actuelle de votre environnement par le navigateur, et non comme un inventaire matériel garanti. Redimensionnez la fenêtre ou faites pivoter l'appareil, puis actualisez l'instantané pour mettre à jour les valeurs de fenêtre d'affichage, d'orientation et d'affichage. Utilisez l'action de copie JSON lorsque vous devez partager les valeurs observées exactes avec une équipe de développement ou de support.
+
+[Inspecteur de périphériques USB](../usb-device-inspector/)

@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ kiểm tra thiết bị USB",
+  "description": "Kiểm tra thiết bị USB trong trình duyệt bằng WebUSB. Xem VID, PID, phiên bản USB, cấu hình, giao diện và điểm cuối, đồng thời kiểm tra quyền truy cập thiết bị."
+}

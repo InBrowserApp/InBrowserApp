@@ -45965,6 +45965,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "usb-device-inspector",
+    category: "developer",
+    icon: "usb",
+    tags: [
+      "webusb",
+      "usb",
+      "usb device",
+      "vid",
+      "pid",
+      "descriptors",
+      "interface",
+      "endpoints",
+    ],
+    locales: {
+      ar: {
+        name: "فاحص أجهزة USB",
+        description:
+          "افحص جهاز USB في المتصفح باستخدام WebUSB. اعرض VID وPID وإصدار USB والتكوينات والواجهات ونقاط النهاية، وتحقق من إمكانية الوصول إلى الجهاز.",
+      },
+      de: {
+        name: "USB-Geräteinspektor",
+        description:
+          "Untersuche ein USB-Gerät mit WebUSB im Browser. Zeige VID, PID, USB-Version, Konfigurationen, Schnittstellen und Endpunkte an und prüfe den Gerätezugriff.",
+      },
+      en: {
+        name: "USB Device Inspector",
+        description:
+          "Inspect a USB device in your browser with WebUSB. View VID, PID, USB version, configurations, interfaces, and endpoints, and check device access.",
+      },
+      es: {
+        name: "Inspector de dispositivos USB",
+        description:
+          "Inspecciona un dispositivo USB en el navegador con WebUSB. Consulta el VID, el PID, la versión USB, las configuraciones, las interfaces y los puntos de conexión, y comprueba el acceso al dispositivo.",
+      },
+      fr: {
+        name: "Inspecteur de périphériques USB",
+        description:
+          "Examinez un périphérique USB dans votre navigateur avec WebUSB. Consultez les VID, PID, version USB, configurations, interfaces et points de terminaison, et vérifiez l’accès au périphérique.",
+      },
+      he: {
+        name: "בודק התקני USB",
+        description:
+          "בדקו התקן USB בדפדפן באמצעות WebUSB. הציגו VID, PID, גרסת USB, תצורות, ממשקים ונקודות קצה ובדקו את הגישה להתקן.",
+      },
+      hi: {
+        name: "USB डिवाइस इंस्पेक्टर",
+        description:
+          "WebUSB से ब्राउज़र में USB डिवाइस की जाँच करें। VID, PID, USB वर्शन, कॉन्फ़िगरेशन, इंटरफ़ेस और एंडपॉइंट देखें और डिवाइस का एक्सेस जाँचें।",
+      },
+      id: {
+        name: "Pemeriksa Perangkat USB",
+        description:
+          "Periksa perangkat USB di browser dengan WebUSB. Lihat VID, PID, versi USB, konfigurasi, antarmuka, dan titik akhir, serta periksa akses ke perangkat.",
+      },
+      it: {
+        name: "Analisi dispositivi USB",
+        description:
+          "Esamina un dispositivo USB nel browser con WebUSB. Visualizza VID, PID, versione USB, configurazioni, interfacce ed endpoint e verifica l'accesso al dispositivo.",
+      },
+      ja: {
+        name: "USB デバイスインスペクター",
+        description:
+          "WebUSB を使ってブラウザーで USB デバイスを調べます。VID、PID、USB バージョン、構成、インターフェース、エンドポイントを表示し、デバイスへのアクセスを確認できます。",
+      },
+      ko: {
+        name: "USB 기기 검사기",
+        description:
+          "WebUSB를 사용해 브라우저에서 USB 기기를 살펴보세요. VID, PID, USB 버전, 구성, 인터페이스와 엔드포인트를 확인하고 기기 접근 여부를 검사할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemeriksa peranti USB",
+        description:
+          "Periksa peranti USB dalam pelayar dengan WebUSB. Lihat VID, PID, versi USB, konfigurasi, antara muka dan titik akhir serta semak akses peranti.",
+      },
+      nl: {
+        name: "USB-apparaatinspectie",
+        description:
+          "Inspecteer een USB-apparaat in je browser met WebUSB. Bekijk VID, PID, USB-versie, configuraties, interfaces en eindpunten en controleer de toegang tot het apparaat.",
+      },
+      no: {
+        name: "USB-enhetsinspektør",
+        description:
+          "Undersøk en USB-enhet i nettleseren med WebUSB. Se VID, PID, USB-versjon, konfigurasjoner, grensesnitt og endepunkter, og kontroller tilgangen til enheten.",
+      },
+      pl: {
+        name: "Inspektor urządzeń USB",
+        description:
+          "Sprawdź urządzenie USB w przeglądarce za pomocą WebUSB. Wyświetl VID, PID, wersję USB, konfiguracje, interfejsy i punkty końcowe oraz sprawdź dostęp do urządzenia.",
+      },
+      pt: {
+        name: "Inspetor de dispositivos USB",
+        description:
+          "Inspecione um dispositivo USB no navegador com WebUSB. Veja VID, PID, versão USB, configurações, interfaces e endpoints e verifique o acesso ao dispositivo.",
+      },
+      ru: {
+        name: "Инспектор USB-устройств",
+        description:
+          "Исследуйте USB-устройство в браузере с помощью WebUSB. Просматривайте VID, PID, версию USB, конфигурации, интерфейсы и конечные точки, а также проверяйте доступ к устройству.",
+      },
+      sv: {
+        name: "USB-enhetsgranskare",
+        description:
+          "Granska en USB-enhet i webbläsaren med WebUSB. Visa VID, PID, USB-version, konfigurationer, gränssnitt och slutpunkter samt kontrollera åtkomsten till enheten.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบอุปกรณ์ USB",
+        description:
+          "ตรวจสอบอุปกรณ์ USB ในเบราว์เซอร์ด้วย WebUSB ดู VID, PID, เวอร์ชัน USB, การกำหนดค่า อินเทอร์เฟซ และปลายทาง พร้อมตรวจสอบการเข้าถึงอุปกรณ์",
+      },
+      tr: {
+        name: "USB Cihaz İnceleyici",
+        description:
+          "WebUSB ile tarayıcınızda bir USB cihazını inceleyin. VID, PID, USB sürümü, yapılandırmalar, arabirimler ve uç noktaları görüntüleyin ve cihaz erişimini kontrol edin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra thiết bị USB",
+        description:
+          "Kiểm tra thiết bị USB trong trình duyệt bằng WebUSB. Xem VID, PID, phiên bản USB, cấu hình, giao diện và điểm cuối, đồng thời kiểm tra quyền truy cập thiết bị.",
+      },
+      "zh-CN": {
+        name: "USB 设备检查器",
+        description:
+          "使用 WebUSB 在浏览器中检查 USB 设备。查看 VID、PID、USB 版本、配置、接口和端点，并检查设备访问权限。",
+      },
+      "zh-TW": {
+        name: "USB 裝置檢查器",
+        description:
+          "使用 WebUSB 在瀏覽器中檢查 USB 裝置。查看 VID、PID、USB 版本、組態、介面與端點，並檢查裝置存取權。",
+      },
+    },
+  },
+  {
     slug: "user-agent-parser",
     category: "web",
     icon: "globe",
@@ -96599,6 +96731,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "URL 解析器/建構器",
         description:
           "將 URL 拆解為各個組成部分，並在同一個結構化編輯器中從協定、憑證、主機、路徑、查詢參數與片段重新建構 URL。",
+      },
+    },
+  },
+  "usb-device-inspector": {
+    slug: "usb-device-inspector",
+    category: "developer",
+    icon: "usb",
+    tags: [
+      "webusb",
+      "usb",
+      "usb device",
+      "vid",
+      "pid",
+      "descriptors",
+      "interface",
+      "endpoints",
+    ],
+    locales: {
+      ar: {
+        name: "فاحص أجهزة USB",
+        description:
+          "افحص جهاز USB في المتصفح باستخدام WebUSB. اعرض VID وPID وإصدار USB والتكوينات والواجهات ونقاط النهاية، وتحقق من إمكانية الوصول إلى الجهاز.",
+      },
+      de: {
+        name: "USB-Geräteinspektor",
+        description:
+          "Untersuche ein USB-Gerät mit WebUSB im Browser. Zeige VID, PID, USB-Version, Konfigurationen, Schnittstellen und Endpunkte an und prüfe den Gerätezugriff.",
+      },
+      en: {
+        name: "USB Device Inspector",
+        description:
+          "Inspect a USB device in your browser with WebUSB. View VID, PID, USB version, configurations, interfaces, and endpoints, and check device access.",
+      },
+      es: {
+        name: "Inspector de dispositivos USB",
+        description:
+          "Inspecciona un dispositivo USB en el navegador con WebUSB. Consulta el VID, el PID, la versión USB, las configuraciones, las interfaces y los puntos de conexión, y comprueba el acceso al dispositivo.",
+      },
+      fr: {
+        name: "Inspecteur de périphériques USB",
+        description:
+          "Examinez un périphérique USB dans votre navigateur avec WebUSB. Consultez les VID, PID, version USB, configurations, interfaces et points de terminaison, et vérifiez l’accès au périphérique.",
+      },
+      he: {
+        name: "בודק התקני USB",
+        description:
+          "בדקו התקן USB בדפדפן באמצעות WebUSB. הציגו VID, PID, גרסת USB, תצורות, ממשקים ונקודות קצה ובדקו את הגישה להתקן.",
+      },
+      hi: {
+        name: "USB डिवाइस इंस्पेक्टर",
+        description:
+          "WebUSB से ब्राउज़र में USB डिवाइस की जाँच करें। VID, PID, USB वर्शन, कॉन्फ़िगरेशन, इंटरफ़ेस और एंडपॉइंट देखें और डिवाइस का एक्सेस जाँचें।",
+      },
+      id: {
+        name: "Pemeriksa Perangkat USB",
+        description:
+          "Periksa perangkat USB di browser dengan WebUSB. Lihat VID, PID, versi USB, konfigurasi, antarmuka, dan titik akhir, serta periksa akses ke perangkat.",
+      },
+      it: {
+        name: "Analisi dispositivi USB",
+        description:
+          "Esamina un dispositivo USB nel browser con WebUSB. Visualizza VID, PID, versione USB, configurazioni, interfacce ed endpoint e verifica l'accesso al dispositivo.",
+      },
+      ja: {
+        name: "USB デバイスインスペクター",
+        description:
+          "WebUSB を使ってブラウザーで USB デバイスを調べます。VID、PID、USB バージョン、構成、インターフェース、エンドポイントを表示し、デバイスへのアクセスを確認できます。",
+      },
+      ko: {
+        name: "USB 기기 검사기",
+        description:
+          "WebUSB를 사용해 브라우저에서 USB 기기를 살펴보세요. VID, PID, USB 버전, 구성, 인터페이스와 엔드포인트를 확인하고 기기 접근 여부를 검사할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemeriksa peranti USB",
+        description:
+          "Periksa peranti USB dalam pelayar dengan WebUSB. Lihat VID, PID, versi USB, konfigurasi, antara muka dan titik akhir serta semak akses peranti.",
+      },
+      nl: {
+        name: "USB-apparaatinspectie",
+        description:
+          "Inspecteer een USB-apparaat in je browser met WebUSB. Bekijk VID, PID, USB-versie, configuraties, interfaces en eindpunten en controleer de toegang tot het apparaat.",
+      },
+      no: {
+        name: "USB-enhetsinspektør",
+        description:
+          "Undersøk en USB-enhet i nettleseren med WebUSB. Se VID, PID, USB-versjon, konfigurasjoner, grensesnitt og endepunkter, og kontroller tilgangen til enheten.",
+      },
+      pl: {
+        name: "Inspektor urządzeń USB",
+        description:
+          "Sprawdź urządzenie USB w przeglądarce za pomocą WebUSB. Wyświetl VID, PID, wersję USB, konfiguracje, interfejsy i punkty końcowe oraz sprawdź dostęp do urządzenia.",
+      },
+      pt: {
+        name: "Inspetor de dispositivos USB",
+        description:
+          "Inspecione um dispositivo USB no navegador com WebUSB. Veja VID, PID, versão USB, configurações, interfaces e endpoints e verifique o acesso ao dispositivo.",
+      },
+      ru: {
+        name: "Инспектор USB-устройств",
+        description:
+          "Исследуйте USB-устройство в браузере с помощью WebUSB. Просматривайте VID, PID, версию USB, конфигурации, интерфейсы и конечные точки, а также проверяйте доступ к устройству.",
+      },
+      sv: {
+        name: "USB-enhetsgranskare",
+        description:
+          "Granska en USB-enhet i webbläsaren med WebUSB. Visa VID, PID, USB-version, konfigurationer, gränssnitt och slutpunkter samt kontrollera åtkomsten till enheten.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบอุปกรณ์ USB",
+        description:
+          "ตรวจสอบอุปกรณ์ USB ในเบราว์เซอร์ด้วย WebUSB ดู VID, PID, เวอร์ชัน USB, การกำหนดค่า อินเทอร์เฟซ และปลายทาง พร้อมตรวจสอบการเข้าถึงอุปกรณ์",
+      },
+      tr: {
+        name: "USB Cihaz İnceleyici",
+        description:
+          "WebUSB ile tarayıcınızda bir USB cihazını inceleyin. VID, PID, USB sürümü, yapılandırmalar, arabirimler ve uç noktaları görüntüleyin ve cihaz erişimini kontrol edin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra thiết bị USB",
+        description:
+          "Kiểm tra thiết bị USB trong trình duyệt bằng WebUSB. Xem VID, PID, phiên bản USB, cấu hình, giao diện và điểm cuối, đồng thời kiểm tra quyền truy cập thiết bị.",
+      },
+      "zh-CN": {
+        name: "USB 设备检查器",
+        description:
+          "使用 WebUSB 在浏览器中检查 USB 设备。查看 VID、PID、USB 版本、配置、接口和端点，并检查设备访问权限。",
+      },
+      "zh-TW": {
+        name: "USB 裝置檢查器",
+        description:
+          "使用 WebUSB 在瀏覽器中檢查 USB 裝置。查看 VID、PID、USB 版本、組態、介面與端點，並檢查裝置存取權。",
       },
     },
   },

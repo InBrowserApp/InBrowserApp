@@ -13,3 +13,5 @@ Verktyget körs helt i din webbläsare och laddar inte upp ögonblicksbilden. We
 ## Så läser du resultaten
 
 Behandla uppgifterna som webbläsarens aktuella bild av din miljö, inte som en garanterad hårdvaruinventering. Ändra fönsterstorleken eller rotera enheten och uppdatera sedan ögonblicksbilden för att uppdatera viewport-, orienterings- och skärmvärden. Använd åtgärden Kopiera JSON när du behöver dela de exakta observerade värdena med en utvecklare eller ett supportteam.
+
+[USB-enhetsgranskare](../usb-device-inspector/)
