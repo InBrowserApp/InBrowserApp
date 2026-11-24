@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — 스캔한 PDF를 검색 가능하게 만들기",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF 페이지 번호 추가 도구",
     slug: "pdf-page-number-adder",
   },

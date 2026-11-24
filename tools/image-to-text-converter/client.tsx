@@ -13,8 +13,12 @@ import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, ScanText } from "@workspace/ui/icons"
 
 import { SourcePanel } from "./source-panel"
-import { LanguagePicker } from "./language-picker"
-import { defaultLanguage, isChinese, type Language } from "./languages"
+import { OcrLanguagePicker } from "@workspace/ui/components/tool/ocr-language-picker"
+import {
+  defaultLanguage,
+  isChinese,
+  type Language,
+} from "@workspace/ocr-models/languages"
 import type { Messages } from "./messages"
 
 type Status =
@@ -98,7 +102,7 @@ export default function Client({
     <div className="grid items-stretch gap-4 lg:grid-cols-2">
       <SourcePanel image={image} messages={m} onImage={changeImage}>
         <div className="flex flex-wrap items-end gap-3">
-          <LanguagePicker
+          <OcrLanguagePicker
             lang={lang}
             language={language}
             disabled={busy}

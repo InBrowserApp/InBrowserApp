@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "スキャンした PDF を検索可能に（OCR）",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDFページ番号追加ツール",
     slug: "pdf-page-number-adder",
   },

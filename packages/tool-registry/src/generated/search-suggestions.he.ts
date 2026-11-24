@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR ל־PDF — הפיכת קובצי PDF סרוקים לניתנים לחיפוש",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "מוסיף מספרי עמודים ל-PDF",
     slug: "pdf-page-number-adder",
   },

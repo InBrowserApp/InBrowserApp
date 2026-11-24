@@ -256,6 +256,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-image-extractor": () => import("@tool/pdf-image-extractor/page"),
   "pdf-info-viewer": () => import("@tool/pdf-info-viewer/page"),
   "pdf-merger": () => import("@tool/pdf-merger/page"),
+  "pdf-ocr": () => import("@tool/pdf-ocr/page"),
   "pdf-page-number-adder": () => import("@tool/pdf-page-number-adder/page"),
   "pdf-page-organizer": () => import("@tool/pdf-page-organizer/page"),
   "pdf-splitter": () => import("@tool/pdf-splitter/page"),

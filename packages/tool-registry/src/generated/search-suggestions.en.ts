@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — Make Scanned PDFs Searchable",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF Page Number Adder",
     slug: "pdf-page-number-adder",
   },

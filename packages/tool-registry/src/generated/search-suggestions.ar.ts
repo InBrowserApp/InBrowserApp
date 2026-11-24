@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "التعرف على النص في PDF — اجعل الملفات الممسوحة ضوئيًا قابلة للبحث",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "إضافة أرقام صفحات PDF",
     slug: "pdf-page-number-adder",
   },

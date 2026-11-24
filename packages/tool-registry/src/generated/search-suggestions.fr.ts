@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR PDF — Rendre un PDF numérisé consultable",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Ajout de numéros de page PDF",
     slug: "pdf-page-number-adder",
   },

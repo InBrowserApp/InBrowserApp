@@ -5,7 +5,9 @@
   "type": "module",
   "exports": {
     ".": "./catalog.json",
-    "./urls": "./urls.ts"
+    "./urls": "./urls.ts",
+    "./languages": "./languages.ts",
+    "./worker": "./worker.ts"
   },
   "dependencies": {
     "@tesseract.js-data/afr": "catalog:",
@@ -130,6 +132,8 @@
     "@tesseract.js-data/uzb_cyrl": "catalog:",
     "@tesseract.js-data/vie": "catalog:",
     "@tesseract.js-data/yid": "catalog:",
-    "@tesseract.js-data/yor": "catalog:"
+    "@tesseract.js-data/yor": "catalog:",
+    "tesseract.js": "catalog:",
+    "tesseract.js-core": "catalog:"
   }
 }

@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF-OCR – Gescannte PDFs durchsuchbar machen",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF-Seitenzahlen hinzufügen",
     slug: "pdf-page-number-adder",
   },

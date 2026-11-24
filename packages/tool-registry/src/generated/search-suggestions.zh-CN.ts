@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — 将扫描件转为可搜索 PDF",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF 页码添加器",
     slug: "pdf-page-number-adder",
   },

@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — Taranmış PDF'leri aranabilir yapın",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF Sayfa Numarası Ekleyici",
     slug: "pdf-page-number-adder",
   },

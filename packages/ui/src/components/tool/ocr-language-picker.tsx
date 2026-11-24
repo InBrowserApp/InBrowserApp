@@ -12,10 +12,13 @@ import { Input } from "@workspace/ui/components/ui/input"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Check, ChevronDown } from "@workspace/ui/icons"
 
-import { foldLanguageQuery, languageOptions, type Language } from "./languages"
-import type { Messages } from "./messages"
+import {
+  foldLanguageQuery,
+  languageOptions,
+  type Language,
+} from "@workspace/ocr-models/languages"
 
-export function LanguagePicker({
+export function OcrLanguagePicker({
   lang,
   language,
   onChange,
@@ -26,7 +29,14 @@ export function LanguagePicker({
   language: Language
   onChange: (language: Language) => void
   disabled: boolean
-  messages: Messages
+  messages: {
+    language: string
+    searchLanguages: string
+    noLanguages: string
+    verticalLanguage: string
+    historicalLanguage: string
+    close: string
+  }
 }) {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState("")
@@ -73,7 +83,7 @@ export function LanguagePicker({
           className="gap-3 p-4 sm:p-6"
         >
           <DialogHeader>
-            <DialogTitle className="pr-6 text-start">{m.language}</DialogTitle>
+            <DialogTitle className="pe-6 text-start">{m.language}</DialogTitle>
           </DialogHeader>
           <Input
             type="search"
@@ -104,7 +114,7 @@ export function LanguagePicker({
                     <span dir="auto" className="min-w-0 break-words">
                       {option.label}
                     </span>
-                    <span className="ml-auto flex shrink-0 items-center gap-1.5 text-xs text-muted-foreground">
+                    <span className="ms-auto flex shrink-0 items-center gap-1.5 text-xs text-muted-foreground">
                       <span dir="ltr">{option.code}</span>
                       {option.code === language ? (
                         <Check aria-hidden="true" />

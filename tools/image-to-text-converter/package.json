@@ -10,9 +10,7 @@
   "dependencies": {
     "@workspace/ocr-models": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*",
-    "tesseract.js": "catalog:",
-    "tesseract.js-core": "catalog:"
+    "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -21,6 +19,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "tesseract.js": "catalog:"
   }
 }

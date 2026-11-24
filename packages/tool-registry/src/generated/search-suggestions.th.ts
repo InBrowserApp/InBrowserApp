@@ -1044,6 +1044,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — แปลง PDF ที่สแกนให้ค้นหาข้อความได้",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "เครื่องมือเพิ่มเลขหน้า PDF",
     slug: "pdf-page-number-adder",
   },

@@ -1,5 +1,4 @@
-import catalog from "@workspace/ocr-models"
-import type { Messages } from "./messages"
+import catalog from "./catalog.json"
 
 type Language = keyof typeof catalog.models
 type Model = Readonly<{ name: string; locale?: string }>
@@ -50,7 +49,7 @@ function foldLanguageQuery(value: string) {
 
 function languageOptions(
   lang: string,
-  messages: Pick<Messages, "verticalLanguage" | "historicalLanguage">
+  messages: { verticalLanguage: string; historicalLanguage: string }
 ): LanguageOption[] {
   const localized = new Intl.DisplayNames(lang, {
     type: "language",

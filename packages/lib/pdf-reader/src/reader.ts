@@ -1,22 +1,9 @@
-import {
-  AnnotationMode,
-  getDocument,
-  GlobalWorkerOptions,
-  PasswordResponses,
-} from "pdfjs-dist"
-// oxlint-disable-next-line import/default -- Vite creates the default export for ?url assets.
-import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
-import { PdfAssets } from "./pdf-assets"
+import { AnnotationMode, PasswordResponses } from "pdfjs-dist"
+import { openPdfDocument } from "./document"
 import { readOutline, renderThumbnail } from "./navigation"
 import { loadViewerStyles } from "./viewer-styles"
 import type { PDFDocumentProxy } from "pdfjs-dist"
 import type { Reader, ReaderState } from "./types"
-
-// Isolated pages need a worker response carrying COEP. Keep their URL separate
-// from immutable worker responses cached before that header was introduced.
-GlobalWorkerOptions.workerSrc = globalThis.crossOriginIsolated
-  ? `${workerUrl}${workerUrl.includes("?") ? "&" : "?"}isolated=1`
-  : workerUrl
 
 type Options = {
   file: Blob
@@ -81,14 +68,7 @@ export async function openReader({
   })
   resize.observe(container)
   links.setViewer(viewer)
-  const task = getDocument({
-    data,
-    BinaryDataFactory: PdfAssets,
-    useWorkerFetch: false,
-    useSystemFonts: true,
-    enableXfa: false,
-    verbosity: 0,
-  })
+  const task = openPdfDocument(data)
   let disposed = false
   const dispose = () => {
     if (disposed) return
