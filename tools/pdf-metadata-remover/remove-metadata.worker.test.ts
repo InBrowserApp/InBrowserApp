@@ -2,19 +2,25 @@ import { PDFDocument } from "pdf-lib"
 import { afterEach, expect, test, vi } from "vitest"
 import "./remove-metadata.worker"
 
-const { callMain, mkdir, mount, readFile } = vi.hoisted(() => ({
+const { callMain, configureQpdf, mkdir, mount, readFile } = vi.hoisted(() => ({
   callMain: vi.fn(),
+  configureQpdf:
+    vi.fn<
+      (options: {
+        locateFile: () => string
+        printErr: (message: string) => void
+      }) => void
+    >(),
   mkdir: vi.fn(),
   mount: vi.fn(),
   readFile: vi.fn(),
 }))
 
 vi.mock("@jspawn/qpdf-wasm/qpdf.js", () => ({
-  default: () => ({
-    FS: { mkdir, mount, readFile },
-    WORKERFS: "WorkerFS",
-    callMain,
-  }),
+  default: (options: Parameters<typeof configureQpdf>[0]) => {
+    configureQpdf(options)
+    return { FS: { mkdir, mount, readFile }, WORKERFS: "WorkerFS", callMain }
+  },
 }))
 
 const processFile = self.onmessage!
@@ -33,6 +39,7 @@ test("rewrites the active PDF revision before stripping its metadata", async () 
   callMain.mockReturnValueOnce(2).mockReturnValueOnce(0)
   const file = new File(["original"], "input.pdf")
   await send(file)
+  expect(configureQpdf.mock.lastCall![0].locateFile()).toContain("qpdf.wasm")
   expect(mount).toHaveBeenCalledWith(
     "WorkerFS",
     { blobs: [{ data: file, name: "input.pdf" }] },
@@ -54,6 +61,15 @@ test("rewrites the active PDF revision before stripping its metadata", async () 
   })
 
   callMain.mockReturnValueOnce(0)
+  await send(file)
+  expect(post).toHaveBeenLastCalledWith({ status: "encryptedPdf" })
+
+  callMain.mockImplementationOnce(() => {
+    configureQpdf.mock.lastCall![0].printErr(
+      "this.program: /working/input.pdf: invalid password"
+    )
+    return 2
+  })
   await send(file)
   expect(post).toHaveBeenLastCalledWith({ status: "encryptedPdf" })
 

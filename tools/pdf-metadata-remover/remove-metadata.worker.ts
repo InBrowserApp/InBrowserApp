@@ -10,7 +10,13 @@ const inputPath = "/working/input.pdf"
 const outputPath = "/output.pdf"
 
 async function processFile(file: File): Promise<RemovalResult> {
-  const qpdf = await createQpdfModule({ locateFile: () => qpdfWasmUrl })
+  let invalidPassword = false
+  const qpdf = await createQpdfModule({
+    locateFile: () => qpdfWasmUrl,
+    printErr(message) {
+      invalidPassword ||= message.endsWith(`${inputPath}: invalid password`)
+    },
+  })
   qpdf.FS.mkdir("/working")
   qpdf.FS.mount(
     qpdf.WORKERFS,
@@ -18,7 +24,9 @@ async function processFile(file: File): Promise<RemovalResult> {
     "/working"
   )
 
-  if ((await qpdf.callMain(["--is-encrypted", inputPath])) === 0) {
+  const encryptionStatus = await qpdf.callMain(["--is-encrypted", inputPath])
+  // The bundled QPDF 11 build can report an invalid password with exit code 2.
+  if (encryptionStatus === 0 || invalidPassword) {
     return { status: "encryptedPdf" }
   }
 
