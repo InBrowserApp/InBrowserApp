@@ -35,6 +35,7 @@ function useTranscription() {
   const active = useRef<Job | null>(null)
   const [status, setStatus] = useState<Status | null>(null)
   const [segments, setSegments] = useState<Segment[]>([])
+  const [partialSegments, setPartialSegments] = useState<Segment[]>([])
   const [error, setError] = useState<ErrorMessage | null>(null)
   const [fallback, setFallback] = useState(false)
 
@@ -49,6 +50,7 @@ function useTranscription() {
     active.current?.worker?.terminate()
     active.current = null
     setStatus(null)
+    setPartialSegments([])
   }
 
   function clear() {
@@ -82,12 +84,16 @@ function useTranscription() {
           if (active.current !== job || job.worker !== worker) return
           switch (data.type) {
             case "loading":
+              setStatus(data)
+              break
             case "transcribing":
+              if (data.partialSegments) setPartialSegments(data.partialSegments)
               setStatus(data)
               break
             case "retry":
               worker.terminate()
               setFallback(true)
+              setPartialSegments([])
               setStatus({ type: "loading", backend: "wasm" })
               run(data.audio, true)
               break
@@ -127,7 +133,17 @@ function useTranscription() {
     if (active.current === job) run(audio, false)
   }
 
-  return { status, segments, setSegments, error, fallback, start, stop, clear }
+  return {
+    status,
+    segments,
+    partialSegments,
+    setSegments,
+    error,
+    fallback,
+    start,
+    stop,
+    clear,
+  }
 }
 
 export { useTranscription }

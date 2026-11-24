@@ -32,6 +32,8 @@
   "noSpeech": "未偵測到語音。請試用其他語言、模型或錄音。",
   "transcript": "逐字稿",
   "editHint": "選取時間戳記可從該處播放。匯出前可以編輯文字。",
+  "partialHint": "已完成的段落可下載為 TXT，轉錄完成後可編輯文字。",
+  "downloadPartial": "下載目前的 TXT",
   "playFrom": "從 {time} 開始播放",
   "editSegment": "{time} 的逐字稿",
   "exportFormat": "匯出格式",

@@ -32,6 +32,8 @@
   "noSpeech": "音声が検出されませんでした。別の言語、モデル、録音を試してください。",
   "transcript": "文字起こし結果",
   "editHint": "タイムスタンプを選ぶとその位置から再生できます。書き出す前にテキストを編集できます。",
+  "partialHint": "完了した部分はTXTでダウンロードできます。文字起こしが終わったら編集できます。",
+  "downloadPartial": "途中までのTXTをダウンロード",
   "playFrom": "{time} から再生",
   "editSegment": "{time} の文字起こし",
   "exportFormat": "書き出し形式",

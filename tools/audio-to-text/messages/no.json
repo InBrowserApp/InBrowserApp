@@ -32,6 +32,8 @@
   "noSpeech": "Ingen tale ble gjenkjent. Prøv et annet språk, en annen modell eller et annet opptak.",
   "transcript": "Transkripsjon",
   "editHint": "Velg en tidskode for å spille av derfra. Du kan redigere teksten før eksport.",
+  "partialHint": "Ferdige avsnitt kan lastes ned som TXT. Du kan redigere teksten når transkriberingen er ferdig.",
+  "downloadPartial": "Last ned delvis TXT",
   "playFrom": "Spill av fra {time}",
   "editSegment": "Transkripsjon ved {time}",
   "exportFormat": "Eksportformat",

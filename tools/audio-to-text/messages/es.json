@@ -32,6 +32,8 @@
   "noSpeech": "No se detectó voz. Prueba con otro idioma, modelo o archivo de audio.",
   "transcript": "Transcripción",
   "editHint": "Selecciona una marca de tiempo para escuchar desde ese punto. Puedes editar el texto antes de exportarlo.",
+  "partialHint": "Puedes descargar los fragmentos listos en TXT y editar la transcripción al terminar.",
+  "downloadPartial": "Descargar TXT parcial",
   "playFrom": "Reproducir desde {time}",
   "editSegment": "Transcripción en {time}",
   "exportFormat": "Formato de exportación",

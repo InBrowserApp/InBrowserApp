@@ -133,7 +133,7 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
   expect(screen.getByText("67.5%")).toBeDefined()
   expect(screen.getByText(/About .*2 min.* remaining/)).toBeDefined()
   expect(
-    screen.getByRole("heading", { name: messages.livePreview })
+    screen.getByRole("group", { name: messages.livePreview })
   ).toBeDefined()
   expect(screen.getByText("Draft excerpt")).toBeDefined()
   expect(screen.queryByRole("textbox")).toBeNull()
@@ -177,6 +177,65 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
   choose(view.input, new File(["samples"], "different.mp3"))
   expect(screen.queryByRole("textbox")).toBeNull()
   expect(URL.revokeObjectURL).toHaveBeenCalled()
+})
+
+it("downloads a timestamped partial TXT with only completed passages", async () => {
+  const view = renderTool()
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  const worker = workers[0]!
+  worker.emit({
+    type: "transcribing",
+    backend: "wasm",
+    progress: 0,
+    preview: "Working draft",
+  })
+  expect(
+    screen.getByRole("heading", { name: messages.transcript })
+  ).toBeDefined()
+  const download = screen.getByRole<HTMLButtonElement>("button", {
+    name: messages.downloadPartial,
+  })
+  expect(download.disabled).toBe(true)
+
+  worker.emit({
+    type: "transcribing",
+    backend: "wasm",
+    progress: 0.4,
+    partialSegments: segments,
+  })
+  worker.emit({
+    type: "transcribing",
+    backend: "wasm",
+    progress: 0.4,
+    preview: "Next draft",
+  })
+  expect(download.disabled).toBe(false)
+  expect(screen.getByText("Team update")).toBeDefined()
+  expect(screen.getByText("Next draft")).toBeDefined()
+  expect(screen.queryByRole("textbox")).toBeNull()
+
+  const links: HTMLAnchorElement[] = []
+  vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (
+    this: HTMLAnchorElement
+  ) {
+    links.push(this)
+  })
+  fireEvent.click(download)
+  expect(links[0]?.download).toBe("team.meeting.partial.txt")
+  const blob = vi.mocked(URL.createObjectURL).mock.lastCall?.[0] as Blob
+  expect(await blob.text()).toBe("[00:00:00.250] Team update\n")
+
+  worker.emit({
+    type: "done",
+    segments: [{ ...segments[0]!, text: "Final wording" }],
+  })
+  expect(screen.getByRole("button", { name: "Download TXT" })).toBe(download)
+  expect(screen.getByRole<HTMLTextAreaElement>("textbox").value).toBe(
+    "Final wording"
+  )
+  expect(screen.queryByText("Next draft")).toBeNull()
 })
 
 it("retries with the same samples on CPU and ignores results from a canceled run", async () => {

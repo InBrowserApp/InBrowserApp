@@ -32,6 +32,8 @@
   "noSpeech": "Nie wykryto mowy. Spróbuj użyć innego języka, modelu lub nagrania.",
   "transcript": "Transkrypcja",
   "editHint": "Wybierz znacznik czasu, aby odtworzyć nagranie od tego miejsca. Przed eksportem możesz poprawić tekst.",
+  "partialHint": "Gotowe fragmenty możesz pobrać w formacie TXT. Transkrypcję edytujesz po zakończeniu.",
+  "downloadPartial": "Pobierz częściowy TXT",
   "playFrom": "Odtwórz od {time}",
   "editSegment": "Tekst od {time}",
   "exportFormat": "Format eksportu",

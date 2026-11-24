@@ -32,6 +32,8 @@
   "noSpeech": "Es wurde keine Sprache erkannt. Probiere eine andere Sprache, ein anderes Modell oder eine andere Aufnahme.",
   "transcript": "Transkript",
   "editHint": "Wähle einen Zeitstempel, um ab dieser Stelle abzuspielen. Du kannst den Text vor dem Export bearbeiten.",
+  "partialHint": "Fertige Abschnitte stehen als TXT bereit. Nach der Transkription kannst du den Text bearbeiten.",
+  "downloadPartial": "Teiltranskript als TXT laden",
   "playFrom": "Ab {time} abspielen",
   "editSegment": "Transkript bei {time}",
   "exportFormat": "Exportformat",

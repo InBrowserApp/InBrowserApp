@@ -16,6 +16,7 @@ export type TranscriptionResponse =
       progress: number
       etaSeconds?: number
       preview?: string
+      partialSegments?: Segment[]
     }
   | { type: "done"; segments: Segment[] }
   | { type: "retry"; audio: Float32Array<ArrayBuffer> }

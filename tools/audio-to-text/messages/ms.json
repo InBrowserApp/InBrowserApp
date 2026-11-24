@@ -32,6 +32,8 @@
   "noSpeech": "Tiada pertuturan dikesan. Cuba bahasa, model atau rakaman lain.",
   "transcript": "Transkrip",
   "editHint": "Pilih cap masa untuk memainkan rakaman dari bahagian itu. Sunting teks sebelum mengeksport.",
+  "partialHint": "Bahagian yang siap boleh dimuat turun sebagai TXT. Anda boleh menyunting teks selepas transkripsi selesai.",
+  "downloadPartial": "Muat turun TXT separa",
   "playFrom": "Main dari {time}",
   "editSegment": "Teks pada {time}",
   "exportFormat": "Format eksport",

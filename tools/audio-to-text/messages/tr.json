@@ -32,6 +32,8 @@
   "noSpeech": "Konuşma algılanamadı. Farklı bir dil, model veya kayıt deneyin.",
   "transcript": "Döküm",
   "editHint": "Zaman damgasını seçerek kaydı o noktadan dinleyin. Dışa aktarmadan önce metni düzenleyebilirsiniz.",
+  "partialHint": "Tamamlanan bölümleri TXT olarak indirebilir, döküm hazır olduğunda düzenleyebilirsiniz.",
+  "downloadPartial": "Kısmi TXT indir",
   "playFrom": "{time} zamanından itibaren oynat",
   "editSegment": "{time} zamanındaki metin",
   "exportFormat": "Dışa aktarma biçimi",

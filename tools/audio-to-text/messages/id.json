@@ -32,6 +32,8 @@
   "noSpeech": "Tidak ada ucapan yang terdeteksi. Coba bahasa, model, atau rekaman lain.",
   "transcript": "Transkrip",
   "editHint": "Pilih penanda waktu untuk memutar rekaman dari bagian tersebut. Edit teks sebelum mengekspor.",
+  "partialHint": "Bagian yang sudah selesai dapat diunduh sebagai TXT. Transkrip bisa diedit setelah selesai.",
+  "downloadPartial": "Unduh TXT sementara",
   "playFrom": "Putar dari {time}",
   "editSegment": "Teks pada {time}",
   "exportFormat": "Format ekspor",

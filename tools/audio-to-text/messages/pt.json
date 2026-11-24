@@ -32,6 +32,8 @@
   "noSpeech": "Não foi detetada fala. Experimente outro idioma, modelo ou gravação.",
   "transcript": "Transcrição",
   "editHint": "Selecione uma marca de tempo para ouvir a partir daí. Pode corrigir o texto antes de o exportar.",
+  "partialHint": "Pode descarregar os trechos concluídos em TXT e editar a transcrição quando estiver pronta.",
+  "downloadPartial": "Descarregar TXT parcial",
   "playFrom": "Reproduzir a partir de {time}",
   "editSegment": "Texto em {time}",
   "exportFormat": "Formato de exportação",

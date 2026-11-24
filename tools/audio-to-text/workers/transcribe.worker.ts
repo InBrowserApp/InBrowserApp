@@ -9,6 +9,7 @@ import type {
   WhisperTokenizer,
 } from "@huggingface/transformers"
 import { toSegments } from "../core/transcript"
+import type { Segment } from "../core/transcript"
 import { MODELS } from "../models"
 import { SAMPLE_RATE } from "../worker-messages"
 import type {
@@ -22,6 +23,31 @@ const WINDOW_SECONDS = 30
 const OVERLAP_SECONDS = 5
 const PREVIEW_INTERVAL_MS = 250
 const PREVIEW_CHARACTERS = 240
+
+type WhisperWindow = { tokens: bigint[]; stride: number[] }
+
+function completedSegments(
+  tokenizer: WhisperTokenizer,
+  windows: WhisperWindow[],
+  covered: number
+) {
+  // Use the same overlap decoder as the pipeline. Its open tail can still
+  // change when the next window arrives, so only publish closed passages.
+  const [, result] = tokenizer._decode_asr(windows, {
+    return_timestamps: true,
+    force_full_sequences: false,
+    time_precision: 0.02,
+  })
+  if (typeof result !== "object" || !result.chunks) return []
+  return toSegments(
+    result.chunks.flatMap(({ timestamp: [start, end], text }) =>
+      start != null && end != null && end <= covered
+        ? [{ timestamp: [start, end], text }]
+        : []
+    ),
+    covered
+  )
+}
 
 function send(message: TranscriptionResponse, transfer: Transferable[] = []) {
   self.postMessage(message, { transfer })
@@ -134,58 +160,77 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
     let firstWindow: { covered: number; finishedAt: number } | undefined
     let etaSeconds: number | undefined
     let draft = ""
-    let preview: string | undefined
     let lastUpdate = -Infinity
+    const tokenizer = transcribe.tokenizer as WhisperTokenizer
+    const windows: WhisperWindow[] = []
+    let tokens: bigint[] = []
 
-    function publish() {
+    function publish(partialSegments?: Segment[]) {
       const text = draft.trim()
-      if (text) {
-        const characters = Array.from(text)
-        preview =
-          characters.length > PREVIEW_CHARACTERS
-            ? `…${characters.slice(-PREVIEW_CHARACTERS).join("")}`
-            : text
-      }
-      send({ type: "transcribing", backend, progress, etaSeconds, preview })
+      const characters = Array.from(text)
+      const preview =
+        characters.length > PREVIEW_CHARACTERS
+          ? `…${characters.slice(-PREVIEW_CHARACTERS).join("")}`
+          : text || undefined
+      send({
+        type: "transcribing",
+        backend,
+        progress,
+        etaSeconds,
+        preview,
+        partialSegments,
+      })
       lastUpdate = performance.now()
     }
 
-    // Preview the current window independently of Whisper's final overlap merge.
-    const streamer = new WhisperTextStreamer(
-      transcribe.tokenizer as WhisperTokenizer,
-      {
-        skip_prompt: true,
-        callback_function(text) {
-          draft += text
-          if (performance.now() - lastUpdate >= PREVIEW_INTERVAL_MS) publish()
-        },
-        on_finalize() {
-          // Whisper calls end once per window. Its trailing overlap is
-          // processed in the next window, except at the end of the recording.
-          const covered =
-            windowEnd >= duration ? duration : windowEnd - OVERLAP_SECONDS
-          const now = performance.now()
-          // Exclude initial audio preparation and language detection from the rate.
-          if (firstWindow && covered < duration) {
-            const elapsedSeconds = (now - firstWindow.finishedAt) / 1000
-            const coveredSinceStart = covered - firstWindow.covered
-            etaSeconds = Math.max(
-              1,
-              Math.ceil(
-                (elapsedSeconds * (duration - covered)) / coveredSinceStart
-              )
+    const streamer = new WhisperTextStreamer(tokenizer, {
+      skip_prompt: true,
+      token_callback_function(generated) {
+        tokens.push(...generated)
+      },
+      callback_function(text) {
+        draft += text
+        if (performance.now() - lastUpdate >= PREVIEW_INTERVAL_MS) publish()
+      },
+      on_finalize() {
+        // Whisper calls end once per window. Its trailing overlap is
+        // processed in the next window, except at the end of the recording.
+        const covered =
+          windowEnd >= duration ? duration : windowEnd - OVERLAP_SECONDS
+        const now = performance.now()
+        // Exclude initial audio preparation and language detection from the rate.
+        if (firstWindow && covered < duration) {
+          const elapsedSeconds = (now - firstWindow.finishedAt) / 1000
+          const coveredSinceStart = covered - firstWindow.covered
+          etaSeconds = Math.max(
+            1,
+            Math.ceil(
+              (elapsedSeconds * (duration - covered)) / coveredSinceStart
             )
-          } else {
-            etaSeconds = undefined
-          }
-          firstWindow ??= { covered, finishedAt: now }
-          progress = covered / duration
+          )
+        } else {
+          etaSeconds = undefined
+        }
+        firstWindow ??= { covered, finishedAt: now }
+        progress = covered / duration
+        draft = ""
+        if (covered < duration) {
+          windows.push({
+            tokens,
+            stride: [
+              WINDOW_SECONDS,
+              windows.length ? OVERLAP_SECONDS : 0,
+              OVERLAP_SECONDS,
+            ],
+          })
+          publish(completedSegments(tokenizer, windows, covered))
+        } else {
           publish()
-          draft = ""
-          windowEnd += WINDOW_SECONDS - 2 * OVERLAP_SECONDS
-        },
-      }
-    )
+        }
+        tokens = []
+        windowEnd += WINDOW_SECONDS - 2 * OVERLAP_SECONDS
+      },
+    })
     const result = await transcribe(audio, {
       ...prompt,
       task: "transcribe",

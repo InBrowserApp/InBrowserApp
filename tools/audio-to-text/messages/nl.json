@@ -32,6 +32,8 @@
   "noSpeech": "Er is geen spraak herkend. Probeer een andere taal, een ander model of een andere opname.",
   "transcript": "Transcriptie",
   "editHint": "Kies een tijdcode om vanaf dat punt af te spelen. Je kunt de tekst bewerken voordat je die exporteert.",
+  "partialHint": "Download voltooide passages als TXT. Je kunt het transcript bewerken zodra het klaar is.",
+  "downloadPartial": "Gedeeltelijke TXT downloaden",
   "playFrom": "Afspelen vanaf {time}",
   "editSegment": "Transcriptie op {time}",
   "exportFormat": "Exportformaat",

@@ -32,7 +32,7 @@ export default function Client({
   const [language, setLanguage] = useState("")
   const audio = useRef<HTMLAudioElement>(null)
   const id = useId()
-  const { status, segments, error, fallback } = transcription
+  const { status, segments, partialSegments, error, fallback } = transcription
 
   useEffect(() => {
     return () => {
@@ -64,6 +64,7 @@ export default function Client({
     status?.type === "loading" && percent !== undefined
   const eta = status?.type === "transcribing" ? status.etaSeconds : undefined
   const preview = status?.type === "transcribing" ? status.preview : undefined
+  const transcribing = status?.type === "transcribing"
   const remainingTime =
     eta === undefined
       ? undefined
@@ -172,10 +173,12 @@ export default function Client({
             {status && (
               <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-sm">
                 <p className="inline-flex items-center gap-2">
-                  <LoaderCircle
-                    className="size-4 shrink-0 motion-safe:animate-spin"
-                    aria-hidden="true"
-                  />
+                  {!transcribing && (
+                    <LoaderCircle
+                      className="size-4 shrink-0 motion-safe:animate-spin"
+                      aria-hidden="true"
+                    />
+                  )}
                   <span className={showDownloadPercent ? "sr-only" : undefined}>
                     {statusText}
                   </span>
@@ -210,17 +213,6 @@ export default function Client({
             )}
           </div>
 
-          {preview && (
-            <div className="min-w-0 rounded-lg border bg-muted/30 px-4 py-3">
-              <h2 className="text-xs font-medium text-muted-foreground">
-                {m.livePreview}
-              </h2>
-              <p dir="auto" className="mt-1.5 text-sm leading-6 wrap-anywhere">
-                {preview}
-              </p>
-            </div>
-          )}
-
           {error && (
             <Alert
               variant={error === "noSpeech" ? "default" : "destructive"}
@@ -237,12 +229,14 @@ export default function Client({
         </CardContent>
       </Card>
 
-      {source && segments.length > 0 && (
+      {source && (transcribing || segments.length > 0) && (
         <TranscriptResult
           key={source.url}
           filename={source.file.name}
           messages={m}
-          segments={segments}
+          segments={transcribing ? partialSegments : segments}
+          transcribing={transcribing}
+          preview={preview}
           audioRef={audio}
           onEdit={(index, text) => {
             transcription.setSegments((previous) =>

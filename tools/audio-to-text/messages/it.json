@@ -32,6 +32,8 @@
   "noSpeech": "Nessuna voce rilevata. Prova un’altra lingua, un altro modello o un’altra registrazione.",
   "transcript": "Trascrizione",
   "editHint": "Seleziona un timestamp per ascoltare da quel punto. Puoi correggere il testo prima di esportarlo.",
+  "partialHint": "Scarica i passaggi completati in TXT. Potrai modificare la trascrizione quando sarà pronta.",
+  "downloadPartial": "Scarica TXT parziale",
   "playFrom": "Riproduci da {time}",
   "editSegment": "Testo a {time}",
   "exportFormat": "Formato di esportazione",

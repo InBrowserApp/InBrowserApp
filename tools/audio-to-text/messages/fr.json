@@ -32,6 +32,8 @@
   "noSpeech": "Aucune parole détectée. Essayez une autre langue, un autre modèle ou un autre enregistrement.",
   "transcript": "Transcription",
   "editHint": "Sélectionnez un horodatage pour écouter le passage correspondant. Vous pouvez corriger le texte avant de l’exporter.",
+  "partialHint": "Téléchargez les passages terminés en TXT. Vous pourrez modifier la transcription une fois prête.",
+  "downloadPartial": "Télécharger le TXT partiel",
   "playFrom": "Écouter à partir de {time}",
   "editSegment": "Texte à {time}",
   "exportFormat": "Format d’export",

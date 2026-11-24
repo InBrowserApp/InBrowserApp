@@ -32,6 +32,8 @@
   "noSpeech": "Inget tal kunde identifieras. Prova ett annat språk, en annan modell eller en annan inspelning.",
   "transcript": "Transkription",
   "editHint": "Välj en tidsstämpel för att spela upp därifrån. Du kan redigera texten före export.",
+  "partialHint": "Färdiga avsnitt kan laddas ner som TXT. Du kan redigera texten när transkriberingen är klar.",
+  "downloadPartial": "Ladda ner delvis TXT",
   "playFrom": "Spela upp från {time}",
   "editSegment": "Transkription vid {time}",
   "exportFormat": "Exportformat",

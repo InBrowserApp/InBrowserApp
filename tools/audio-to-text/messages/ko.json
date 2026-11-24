@@ -32,6 +32,8 @@
   "noSpeech": "음성을 감지하지 못했습니다. 다른 언어, 모델 또는 녹음으로 시도해 보세요.",
   "transcript": "변환 결과",
   "editHint": "시간을 선택하면 해당 지점부터 재생됩니다. 내보내기 전에 텍스트를 편집할 수 있습니다.",
+  "partialHint": "완료된 구간은 TXT로 다운로드할 수 있습니다. 변환이 끝나면 텍스트를 편집할 수 있습니다.",
+  "downloadPartial": "현재까지 TXT 다운로드",
   "playFrom": "{time}부터 재생",
   "editSegment": "{time} 구간의 텍스트",
   "exportFormat": "내보낼 형식",

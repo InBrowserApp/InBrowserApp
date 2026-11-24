@@ -32,6 +32,8 @@
   "noSpeech": "No speech was detected. Try a different language, model, or recording.",
   "transcript": "Transcript",
   "editHint": "Select a timestamp to play from there. Edit the text before exporting.",
+  "partialHint": "Completed passages are available as TXT. You can edit the finished transcript.",
+  "downloadPartial": "Download partial TXT",
   "playFrom": "Play from {time}",
   "editSegment": "Transcript at {time}",
   "exportFormat": "Export format",
