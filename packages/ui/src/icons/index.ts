@@ -35,6 +35,7 @@ export {
   CreditCard,
   Cpu,
   Database,
+  Compass,
   Copy,
   Download,
   Eraser,

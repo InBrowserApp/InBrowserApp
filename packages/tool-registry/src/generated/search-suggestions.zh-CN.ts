@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "经纬度与度分秒转换器",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS 查询",
     slug: "dns-lookup",

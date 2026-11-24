@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Convertisseur de coordonnées GPS en DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Recherche DNS",
     slug: "dns-lookup",

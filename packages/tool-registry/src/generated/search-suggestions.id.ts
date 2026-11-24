@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Konverter Lintang dan Bujur ke DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Pencarian DNS",
     slug: "dns-lookup",

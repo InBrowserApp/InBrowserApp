@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "위도·경도 도분초 변환기",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS 조회",
     slug: "dns-lookup",

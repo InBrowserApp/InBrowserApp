@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "ממיר קווי רוחב ואורך ל־DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "בדיקת DNS",
     slug: "dns-lookup",

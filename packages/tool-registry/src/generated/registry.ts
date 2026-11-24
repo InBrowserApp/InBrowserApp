@@ -10484,6 +10484,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
+      },
+    },
+  },
+  {
     slug: "dns-lookup",
     category: "network",
     icon: "globe",
@@ -54072,6 +54207,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DjVu 檢視器",
         description:
           "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  "dms-coordinate-converter": {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
       },
     },
   },

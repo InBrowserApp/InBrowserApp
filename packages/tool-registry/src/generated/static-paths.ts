@@ -7546,6 +7546,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dms-coordinate-converter",
+    language: "ar",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "de",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "en",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "es",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "fr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "he",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "hi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "id",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "it",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ja",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ko",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ms",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "nl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "no",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pt",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ru",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "sv",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "th",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "tr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "vi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "dns-lookup",
     language: "ar",
   },

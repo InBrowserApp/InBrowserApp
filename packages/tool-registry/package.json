@@ -89,6 +89,7 @@
     "@tool/date-age-calculator": "workspace:*",
     "@tool/device-information": "workspace:*",
     "@tool/djvu-viewer": "workspace:*",
+    "@tool/dms-coordinate-converter": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
     "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",

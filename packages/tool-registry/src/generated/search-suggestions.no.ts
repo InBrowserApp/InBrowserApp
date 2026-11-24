@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Koordinatomregner for desimalgrader og DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-oppslag",
     slug: "dns-lookup",

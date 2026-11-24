@@ -413,6 +413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Konwerter szerokości i długości geograficznej na DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Wyszukiwanie DNS",
     slug: "dns-lookup",

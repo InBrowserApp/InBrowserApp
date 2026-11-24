@@ -1,0 +1,18 @@
+{
+  "decimal": "Dezimalgrad (DD)",
+  "dms": "Grad, Minuten, Sekunden (DMS)",
+  "latitude": "Breitengrad",
+  "longitude": "Längengrad",
+  "degrees": "Grad",
+  "minutes": "Minuten",
+  "seconds": "Sekunden",
+  "hemisphere": "Himmelsrichtung",
+  "north": "Nord (N)",
+  "south": "Süd (S)",
+  "east": "Ost (E)",
+  "west": "West (W)",
+  "example": "Beispiel ausprobieren",
+  "copy": "Koordinaten kopieren",
+  "copied": "Kopiert",
+  "invalid": "Der Breitengrad muss innerhalb von ±90° und der Längengrad innerhalb von ±180° liegen. Minuten und Sekunden müssen kleiner als 60 sein."
+}
