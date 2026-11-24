@@ -1,0 +1,4 @@
+{
+  "name": "Generatore CAR IPFS",
+  "description": "Crea un file CAR IPFS da file o da una cartella nel browser. Scarica l’archivio e copia il CID radice senza caricare i tuoi file."
+}

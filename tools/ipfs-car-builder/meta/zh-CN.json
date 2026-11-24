@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR 文件生成器",
+  "description": "在浏览器中将文件或文件夹打包成 IPFS CAR 文件。无需上传文件，便可下载归档并复制根 CID。"
+}

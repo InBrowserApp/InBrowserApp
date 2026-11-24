@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR-generator",
+  "description": "Maak in je browser een IPFS-CAR-bestand van bestanden of een map. Download het archief en kopieer de root-CID zonder je bestanden te uploaden."
+}

@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "IPFS CAR 文件生成器",
+    slug: "ipfs-car-builder",
+  },
+  {
+    category: "ipfs",
     name: "IPFS CAR 文件提取工具",
     slug: "ipfs-car-extractor",
   },

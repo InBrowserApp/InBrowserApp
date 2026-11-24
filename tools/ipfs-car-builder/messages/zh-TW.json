@@ -1,0 +1,21 @@
+{
+  "input": "檔案或資料夾",
+  "drop": "將檔案或資料夾拖曳到此處",
+  "chooseFiles": "選擇檔案",
+  "chooseFolder": "選擇資料夾",
+  "files": "檔案",
+  "build": "產生 CAR",
+  "reading": "正在讀取選取的內容…",
+  "hashing": "正在計算根 CID…",
+  "packing": "正在寫入 CAR 封存檔…",
+  "cancel": "取消",
+  "result": "CAR 封存檔",
+  "empty": "選擇檔案或資料夾以產生 CAR。",
+  "root": "根 CID",
+  "copy": "複製",
+  "copied": "已複製",
+  "download": "下載 CAR",
+  "duplicate": "有兩個項目的路徑相同。請重新命名其中一項，再重試。",
+  "failed": "無法產生 CAR。請確認選取的檔案可讀取，再重試。",
+  "unsupportedPath": "有資料夾名稱以反斜線結尾。請重新命名後再試。"
+}

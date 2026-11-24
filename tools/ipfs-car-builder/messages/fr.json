@@ -1,0 +1,21 @@
+{
+  "input": "Fichiers ou dossier",
+  "drop": "Déposez des fichiers ou un dossier ici",
+  "chooseFiles": "Choisir des fichiers",
+  "chooseFolder": "Choisir un dossier",
+  "files": "Fichiers",
+  "build": "Créer le CAR",
+  "reading": "Lecture de la sélection…",
+  "hashing": "Calcul du CID racine…",
+  "packing": "Écriture de l’archive CAR…",
+  "cancel": "Annuler",
+  "result": "Archive CAR",
+  "empty": "Choisissez des fichiers ou un dossier pour créer une archive CAR.",
+  "root": "CID racine",
+  "copy": "Copier",
+  "copied": "Copié",
+  "download": "Télécharger le CAR",
+  "duplicate": "Deux éléments ont le même chemin. Renommez l’un d’eux et réessayez.",
+  "failed": "Impossible de créer l’archive CAR. Vérifiez que les fichiers sélectionnés sont lisibles, puis réessayez.",
+  "unsupportedPath": "Un nom de dossier se termine par une barre oblique inverse. Renommez-le et réessayez."
+}

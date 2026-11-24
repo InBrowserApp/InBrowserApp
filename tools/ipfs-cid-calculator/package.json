@@ -8,9 +8,9 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/ipfs-files": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "ipfs-unixfs-importer": "catalog:",
     "multiformats": "catalog:"
   },
   "peerDependencies": {

@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./import": "./src/import-unixfs.ts"
   },
   "dependencies": {
     "@zip.js/zip.js": "catalog:",
     "ipfs-unixfs-exporter": "catalog:",
-    "multiformats": "catalog:"
+    "multiformats": "catalog:",
+    "ipfs-unixfs-importer": "catalog:"
   }
 }

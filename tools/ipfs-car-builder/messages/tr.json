@@ -1,0 +1,21 @@
+{
+  "input": "Dosyalar veya klasör",
+  "drop": "Dosyaları veya bir klasörü buraya bırakın",
+  "chooseFiles": "Dosyaları seç",
+  "chooseFolder": "Klasör seç",
+  "files": "Dosyalar",
+  "build": "CAR oluştur",
+  "reading": "Seçilen dosyalar okunuyor…",
+  "hashing": "Kök CID hesaplanıyor…",
+  "packing": "CAR arşivi yazılıyor…",
+  "cancel": "İptal",
+  "result": "CAR arşivi",
+  "empty": "CAR arşivi oluşturmak için dosyaları veya bir klasör seçin.",
+  "root": "Kök CID",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "download": "CAR indir",
+  "duplicate": "İki öğe aynı yola sahip. Birinin adını değiştirip tekrar deneyin.",
+  "failed": "CAR arşivi oluşturulamadı. Seçtiğiniz dosyaların okunabildiğini kontrol edip tekrar deneyin.",
+  "unsupportedPath": "Bir klasör adı ters eğik çizgiyle bitiyor. Adını değiştirip yeniden deneyin."
+}

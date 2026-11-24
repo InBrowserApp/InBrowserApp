@@ -216,6 +216,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ip-info-lookup": () => import("@tool/ip-info-lookup/page"),
   "ip-range-to-cidr-converter": () =>
     import("@tool/ip-range-to-cidr-converter/page"),
+  "ipfs-car-builder": () => import("@tool/ipfs-car-builder/page"),
   "ipfs-car-extractor": () => import("@tool/ipfs-car-extractor/page"),
   "ipfs-cid-calculator": () => import("@tool/ipfs-cid-calculator/page"),
   "ipfs-downloader": () => import("@tool/ipfs-downloader/page"),

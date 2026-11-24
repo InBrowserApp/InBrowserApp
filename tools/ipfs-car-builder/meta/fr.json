@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de fichiers CAR IPFS",
+  "description": "Créez un fichier CAR IPFS à partir de fichiers ou d’un dossier dans votre navigateur. Téléchargez l’archive et copiez son CID racine. Vos fichiers restent sur votre appareil."
+}

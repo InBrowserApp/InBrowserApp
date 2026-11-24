@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de ficheiros CAR do IPFS",
+  "description": "Crie um ficheiro CAR do IPFS a partir de ficheiros ou de uma pasta no navegador. Descarregue o arquivo e copie o CID de raiz. Os ficheiros ficam no seu dispositivo."
+}

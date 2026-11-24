@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Trình tạo CAR IPFS",
+    slug: "ipfs-car-builder",
+  },
+  {
+    category: "ipfs",
     name: "Công cụ trích xuất CAR IPFS",
     slug: "ipfs-car-extractor",
   },

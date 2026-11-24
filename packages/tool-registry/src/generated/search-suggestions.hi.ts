@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "IPFS CAR फ़ाइल बनाने का टूल",
+    slug: "ipfs-car-builder",
+  },
+  {
+    category: "ipfs",
     name: "IPFS CAR एक्सट्रैक्टर",
     slug: "ipfs-car-extractor",
   },

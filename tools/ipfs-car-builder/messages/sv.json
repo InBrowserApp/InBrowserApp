@@ -1,0 +1,21 @@
+{
+  "input": "Filer eller mapp",
+  "drop": "Släpp filer eller en mapp här",
+  "chooseFiles": "Välj filer",
+  "chooseFolder": "Välj mapp",
+  "files": "Filer",
+  "build": "Skapa CAR",
+  "reading": "Läser det valda innehållet…",
+  "hashing": "Beräknar rot-CID…",
+  "packing": "Skriver CAR-arkivet…",
+  "cancel": "Avbryt",
+  "result": "CAR-arkiv",
+  "empty": "Välj filer eller en mapp för att skapa en CAR.",
+  "root": "Rot-CID",
+  "copy": "Kopiera",
+  "copied": "Kopierad",
+  "download": "Ladda ner CAR",
+  "duplicate": "Två objekt har samma sökväg. Byt namn på ett av dem och försök igen.",
+  "failed": "Det gick inte att skapa CAR-arkivet. Kontrollera att de valda filerna är läsbara och försök igen.",
+  "unsupportedPath": "Ett mappnamn slutar med ett omvänt snedstreck. Byt namn på mappen och försök igen."
+}

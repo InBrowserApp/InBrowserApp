@@ -1,0 +1,21 @@
+{
+  "input": "Filer eller mappe",
+  "drop": "Slipp filer eller en mappe her",
+  "chooseFiles": "Velg filer",
+  "chooseFolder": "Velg mappe",
+  "files": "Filer",
+  "build": "Opprett CAR",
+  "reading": "Leser utvalget…",
+  "hashing": "Beregner rot-CID-en…",
+  "packing": "Skriver CAR-arkivet…",
+  "cancel": "Avbryt",
+  "result": "CAR-arkiv",
+  "empty": "Velg filer eller en mappe for å opprette en CAR.",
+  "root": "Rot-CID",
+  "copy": "Kopier",
+  "copied": "Kopiert",
+  "download": "Last ned CAR",
+  "duplicate": "To elementer har samme sti. Gi ett av dem et nytt navn og prøv igjen.",
+  "failed": "Kunne ikke opprette CAR-arkivet. Kontroller at de valgte filene kan leses, og prøv igjen.",
+  "unsupportedPath": "Et mappenavn slutter med en omvendt skråstrek. Gi mappen nytt navn og prøv igjen."
+}

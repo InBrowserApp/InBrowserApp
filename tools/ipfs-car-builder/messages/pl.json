@@ -1,0 +1,21 @@
+{
+  "input": "Pliki lub folder",
+  "drop": "Upuść tutaj pliki lub folder",
+  "chooseFiles": "Wybierz pliki",
+  "chooseFolder": "Wybierz folder",
+  "files": "Pliki",
+  "build": "Utwórz CAR",
+  "reading": "Odczytywanie wybranych plików…",
+  "hashing": "Obliczanie głównego CID…",
+  "packing": "Zapisywanie archiwum CAR…",
+  "cancel": "Anuluj",
+  "result": "Archiwum CAR",
+  "empty": "Wybierz pliki lub folder, aby utworzyć archiwum CAR.",
+  "root": "Główny CID",
+  "copy": "Kopiuj",
+  "copied": "Skopiowano",
+  "download": "Pobierz CAR",
+  "duplicate": "Dwa elementy mają tę samą ścieżkę. Zmień nazwę jednego z nich i spróbuj ponownie.",
+  "failed": "Nie udało się utworzyć archiwum CAR. Sprawdź, czy wybrane pliki można odczytać, i spróbuj ponownie.",
+  "unsupportedPath": "Nazwa folderu kończy się ukośnikiem odwrotnym. Zmień nazwę i spróbuj ponownie."
+}

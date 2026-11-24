@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR Builder",
+  "description": "Create an IPFS CAR file from files or a folder in your browser. Download the archive and copy its root CID without uploading your files."
+}

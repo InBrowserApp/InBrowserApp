@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR-byggare",
+  "description": "Skapa en IPFS CAR-fil från filer eller en mapp i webbläsaren. Ladda ner arkivet och kopiera dess rot-CID utan att ladda upp filerna."
+}

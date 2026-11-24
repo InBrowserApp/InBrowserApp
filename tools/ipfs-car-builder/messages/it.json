@@ -1,0 +1,21 @@
+{
+  "input": "File o cartella",
+  "drop": "Trascina qui file o una cartella",
+  "chooseFiles": "Scegli file",
+  "chooseFolder": "Scegli cartella",
+  "files": "File",
+  "build": "Crea CAR",
+  "reading": "Lettura della selezione…",
+  "hashing": "Calcolo del CID radice…",
+  "packing": "Scrittura dell’archivio CAR…",
+  "cancel": "Annulla",
+  "result": "Archivio CAR",
+  "empty": "Scegli file o una cartella per creare un CAR.",
+  "root": "CID radice",
+  "copy": "Copia",
+  "copied": "Copiato",
+  "download": "Scarica CAR",
+  "duplicate": "Due elementi hanno lo stesso percorso. Rinomina uno dei due e riprova.",
+  "failed": "Impossibile creare il CAR. Verifica che i file selezionati siano leggibili e riprova.",
+  "unsupportedPath": "Il nome di una cartella termina con una barra rovesciata. Rinominala e riprova."
+}

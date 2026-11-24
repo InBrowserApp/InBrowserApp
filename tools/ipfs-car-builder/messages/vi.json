@@ -1,0 +1,21 @@
+{
+  "input": "Tệp hoặc thư mục",
+  "drop": "Thả tệp hoặc thư mục vào đây",
+  "chooseFiles": "Chọn tệp",
+  "chooseFolder": "Chọn thư mục",
+  "files": "Tệp",
+  "build": "Tạo CAR",
+  "reading": "Đang đọc các mục đã chọn…",
+  "hashing": "Đang tính CID gốc…",
+  "packing": "Đang ghi tệp lưu trữ CAR…",
+  "cancel": "Hủy",
+  "result": "Tệp lưu trữ CAR",
+  "empty": "Chọn tệp hoặc thư mục để tạo CAR.",
+  "root": "CID gốc",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "download": "Tải CAR xuống",
+  "duplicate": "Hai mục có cùng đường dẫn. Hãy đổi tên một mục rồi thử lại.",
+  "failed": "Không thể tạo CAR. Hãy kiểm tra xem các tệp đã chọn có đọc được không rồi thử lại.",
+  "unsupportedPath": "Tên thư mục kết thúc bằng dấu gạch chéo ngược. Hãy đổi tên rồi thử lại."
+}

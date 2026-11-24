@@ -16102,6 +16102,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipfs-car-builder",
+    language: "ar",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "de",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "en",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "es",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "fr",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "he",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "hi",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "id",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "it",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "ja",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "ko",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "ms",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "nl",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "no",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "pl",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "pt",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "ru",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "sv",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "th",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "tr",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "vi",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipfs-car-builder",
+    language: "zh-TW",
+  },
+  {
     slug: "ipfs-car-extractor",
     language: "ar",
   },

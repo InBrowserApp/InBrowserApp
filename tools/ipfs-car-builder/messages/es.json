@@ -1,0 +1,21 @@
+{
+  "input": "Archivos o carpeta",
+  "drop": "Suelta aquí los archivos o una carpeta",
+  "chooseFiles": "Elegir archivos",
+  "chooseFolder": "Elegir carpeta",
+  "files": "Archivos",
+  "build": "Crear CAR",
+  "reading": "Leyendo la selección…",
+  "hashing": "Calculando el CID raíz…",
+  "packing": "Escribiendo el archivo CAR…",
+  "cancel": "Cancelar",
+  "result": "Archivo CAR",
+  "empty": "Elige archivos o una carpeta para crear un CAR.",
+  "root": "CID raíz",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "download": "Descargar CAR",
+  "duplicate": "Dos elementos tienen la misma ruta. Cambia el nombre de uno y vuelve a intentarlo.",
+  "failed": "No se pudo crear el CAR. Comprueba que se pueden leer los archivos seleccionados y vuelve a intentarlo.",
+  "unsupportedPath": "Un nombre de carpeta termina en una barra invertida. Cambia el nombre y vuelve a intentarlo."
+}

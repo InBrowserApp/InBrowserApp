@@ -1,0 +1,21 @@
+{
+  "input": "文件或文件夹",
+  "drop": "将文件或文件夹拖到此处",
+  "chooseFiles": "选择文件",
+  "chooseFolder": "选择文件夹",
+  "files": "文件",
+  "build": "生成 CAR",
+  "reading": "正在读取所选内容…",
+  "hashing": "正在计算根 CID…",
+  "packing": "正在写入 CAR 归档…",
+  "cancel": "取消",
+  "result": "CAR 归档",
+  "empty": "选择文件或文件夹以生成 CAR。",
+  "root": "根 CID",
+  "copy": "复制",
+  "copied": "已复制",
+  "download": "下载 CAR",
+  "duplicate": "有两个条目的路径相同。请重命名其中一个，然后重试。",
+  "failed": "无法生成 CAR。请确认所选文件可读取，然后重试。",
+  "unsupportedPath": "有文件夹名称以反斜杠结尾。请重命名后重试。"
+}

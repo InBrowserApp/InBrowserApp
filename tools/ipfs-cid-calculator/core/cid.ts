@@ -1,17 +1,14 @@
-import { importer } from "ipfs-unixfs-importer"
-import { fixedSize } from "ipfs-unixfs-importer/chunker"
+import { importUnixFs, type ImportSettings } from "@workspace/ipfs-files/import"
 import { base16 } from "multiformats/bases/base16"
 import { base32 } from "multiformats/bases/base32"
 import { base36 } from "multiformats/bases/base36"
 import { base58btc } from "multiformats/bases/base58"
 import { CID } from "multiformats/cid"
 
-export type ImportSettings = {
-  version: 0 | 1
-  chunkSize: number
-  rawLeaves: boolean
-  wrap: boolean
-}
+export {
+  DEFAULT_SETTINGS,
+  type ImportSettings,
+} from "@workspace/ipfs-files/import"
 
 export type Selection = {
   name: string
@@ -19,57 +16,24 @@ export type Selection = {
   files: readonly File[]
 }
 
-export const DEFAULT_SETTINGS: ImportSettings = {
-  version: 1,
-  chunkSize: 262144,
-  rawLeaves: true,
-  wrap: false,
-}
-
 const cidDecoder = base32.decoder
   .or(base58btc.decoder)
   .or(base36.decoder)
   .or(base16.decoder)
 
-async function* readChunks(file: File, size: number, signal: AbortSignal) {
-  for (let start = 0; start < file.size; start += size) {
-    signal.throwIfAborted()
-    yield new Uint8Array(await file.slice(start, start + size).arrayBuffer())
-  }
-}
-
-export async function calculateCid(
+export function calculateCid(
   selection: Selection,
   settings: ImportSettings,
   signal: AbortSignal
 ) {
-  const candidates = selection.files.map((file) => ({
-    path: selection.directory ? file.webkitRelativePath : file.name,
-    content: readChunks(file, settings.chunkSize, signal),
-  }))
-  let root: CID | undefined
-  for await (const entry of importer(
-    candidates,
-    {
-      async put(cid) {
-        return cid
-      },
-    },
-    {
-      profile: "unixfs-v0-2015",
-      cidVersion: settings.version,
-      rawLeaves: settings.rawLeaves,
-      chunker: fixedSize({ chunkSize: settings.chunkSize }),
-      fileImportConcurrency: 4,
-      blockWriteConcurrency: 4,
-      wrapWithDirectory: settings.wrap,
-    }
-  )) {
-    signal.throwIfAborted()
-    root = entry.cid
-  }
-  if (!root) throw new Error("No UnixFS root")
-  return root
+  return importUnixFs(
+    selection.files.map((file) => ({
+      path: selection.directory ? file.webkitRelativePath : file.name,
+      file,
+    })),
+    settings,
+    signal
+  )
 }
 
 export function compareCid(expected: string, calculated: CID) {
