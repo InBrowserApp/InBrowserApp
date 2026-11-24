@@ -36,7 +36,7 @@ export default function ModelPanel({
   const host = useRef<HTMLDivElement>(null)
   const pointer = useRef<{ id: number; x: number; y: number } | null>(null)
   const helpId = useId()
-  const [viewport, setViewport] = useState<Viewport | "error">()
+  const [viewportState, setViewportState] = useState<Viewport | "error">()
   const [exportFailed, setExportFailed] = useState(false)
   const [unit, setUnit] = useState<Unit>("millimeter")
   const [measuring, setMeasuring] = useState(false)
@@ -44,18 +44,18 @@ export default function ModelPanel({
   useEffect(() => {
     try {
       const viewer = createViewport(host.current!, model)
-      setViewport(viewer)
+      setViewportState(viewer)
       if (focusOnOpen && document.activeElement === document.body) {
         host.current?.focus({ preventScroll: true })
       }
       return () => viewer.dispose()
     } catch {
-      setViewport("error")
+      setViewportState("error")
       return undefined
     }
   }, [model, focusOnOpen])
 
-  if (viewport === "error") {
+  if (viewportState === "error") {
     return (
       <Alert variant="destructive" className="m-3 w-auto">
         <AlertDescription>{m.renderError}</AlertDescription>
@@ -63,6 +63,7 @@ export default function ModelPanel({
     )
   }
 
+  const viewport = viewportState
   const numberFormat = new Intl.NumberFormat(lang, {
     style: "unit",
     unit,
