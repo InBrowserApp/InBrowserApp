@@ -4,6 +4,7 @@ import {
   sanitizeChmCss,
   sanitizeChmHtmlDocument,
 } from "@file-viewer/renderer-chm/security"
+import { staticSvg } from "@workspace/web-document"
 
 const assetTypes: Record<string, string> = {
   avif: "image/avif",
@@ -74,7 +75,9 @@ export async function renderTopic({
       body = await replaceCssResources(css)
       signal.throwIfAborted()
     } else if (type === "image/svg+xml") {
-      assertChmSvgSourceSafety(decodeChmText(bytes, "utf-8"))
+      const svg = decodeChmText(bytes, "utf-8")
+      assertChmSvgSourceSafety(svg)
+      return staticSvg(svg).url ?? ""
     }
     return URL.createObjectURL(new Blob([body], { type }))
   }
@@ -108,7 +111,7 @@ export async function renderTopic({
     for (const url of objectUrls.values()) {
       void url.then(
         (value) => {
-          if (value) URL.revokeObjectURL(value)
+          if (value.startsWith("blob:")) URL.revokeObjectURL(value)
         },
         () => {}
       )

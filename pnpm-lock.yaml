@@ -4280,6 +4280,9 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@workspace/web-document':
+        specifier: workspace:*
+        version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)

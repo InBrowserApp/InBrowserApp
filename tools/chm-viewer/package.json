@@ -10,7 +10,8 @@
   "dependencies": {
     "@file-viewer/renderer-chm": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "@workspace/web-document": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -23,8 +23,10 @@ test("preserves local links, styles and images in a script-free reading document
   const read = vi.fn(async (path: string) =>
     new TextEncoder().encode(files.get(path))
   )
-  const createUrl = vi.fn((blob: Blob) =>
-    blob.type.startsWith("text/css") ? "blob:stylesheet" : "blob:logo"
+  const createUrl = vi.fn((blob: Blob | MediaSource) =>
+    blob instanceof Blob && blob.type.startsWith("text/css")
+      ? "blob:stylesheet"
+      : "blob:logo"
   )
   const revokeUrl = vi.fn()
   vi.stubGlobal(
@@ -80,7 +82,7 @@ test("preserves local links, styles and images in a script-free reading document
     ])
     const style = createUrl.mock.calls
       .map(([blob]) => blob)
-      .find((blob) => blob.type.startsWith("text/css"))
+      .find((blob) => blob instanceof Blob && blob.type.startsWith("text/css"))
     expect(style).toBeTruthy()
     page.dispose()
     await Promise.resolve()
