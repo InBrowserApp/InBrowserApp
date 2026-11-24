@@ -6,9 +6,9 @@ Tempel definisi diagram ke kolom **Kode Mermaid**. Pratinjau diperbarui saat And
 
 Buka menu **Muat contoh** untuk mengganti isi editor dengan contoh yang bisa langsung ditampilkan. Diagram alir menunjukkan langkah dan keputusan, diagram urutan menunjukkan pesan antarpeserta, dan diagram ER menggambarkan hubungan antarentitas data. Anda juga bisa menempel definisi Mermaid lain yang didukung, seperti diagram kelas dan bagan Gantt.
 
-## Ekspor ke SVG atau PNG
+## Ekspor ke SVG, PNG, atau PDF
 
-Unduh **SVG** untuk mendapatkan gambar vektor yang tetap tajam saat ukurannya diubah. Pilih **PNG** untuk gambar raster yang bisa disisipkan ke slide atau dokumen. File yang diunduh berisi diagram saat ini dengan latar transparan. Simpan kode Mermaid jika Anda ingin mengedit diagramnya lagi nanti.
+Gunakan **SVG** untuk gambar yang dapat diperbesar di halaman web, **PNG** untuk gambar yang bisa ditempel ke slide, atau **PDF** untuk dokumen vektor yang bisa dibagikan atau dicetak. PDF memuat seluruh diagram. Gunakan [Konverter Mermaid ke PDF](../mermaid-to-pdf-converter/) untuk membuka file `.mmd` atau menyesuaikan diagram ke A4 atau US Letter. Simpan kode Mermaid untuk mengedit diagram lagi.
 
 ## Perbaiki diagram yang gagal ditampilkan
 

@@ -6,9 +6,9 @@ Cole uma definição no campo **Código Mermaid**. A prévia se atualiza enquant
 
 Selecione **Carregar um exemplo** para substituir o conteúdo do editor por um exemplo pronto. Um fluxograma mostra etapas e decisões. Um diagrama de sequência mostra as mensagens entre participantes e um diagrama ER mostra as relações entre entidades de um modelo de dados. Você também pode colar outras definições compatíveis com Mermaid, como diagramas de classes e de Gantt.
 
-## Exportar como SVG ou PNG
+## Exportar como SVG, PNG ou PDF
 
-Baixe o **SVG** para obter uma imagem vetorial que continua nítida ao mudar de tamanho. Escolha **PNG** para inserir uma imagem raster em slides ou documentos. O arquivo contém o diagrama atual com fundo transparente. Guarde o código Mermaid se quiser editar o diagrama mais tarde.
+Baixe em **SVG** para incorporar uma imagem escalável a uma página da web, em **PNG** para inserir em slides, ou em **PDF** para compartilhar ou imprimir um documento vetorial. A página do PDF comporta todo o diagrama. Use o [Conversor de Mermaid para PDF](../mermaid-to-pdf-converter/) para abrir um arquivo `.mmd` ou ajustar o diagrama a A4 ou Carta (EUA). Guarde o código Mermaid para editar o diagrama mais tarde.
 
 ## Corrigir um diagrama que não aparece
 

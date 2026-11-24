@@ -1,0 +1,4 @@
+{
+  "name": "MermaidからPDFへのコンバーター",
+  "description": "Mermaid コードを貼り付けるか .mmd ファイルを開いて図をプレビューし、元のサイズ、A4、US Letter のベクター PDF をダウンロードできます。"
+}

@@ -1,0 +1,9 @@
+{
+  "openFile": "Dosya aç",
+  "fileError": "Dosya okunamadı. Mermaid kaynak dosyası açın veya kodu yapıştırın.",
+  "sourcePlaceholder": "Mermaid kodunu yapıştırın veya bir .mmd dosyasını buraya bırakın.",
+  "pageSize": "PDF sayfa boyutu",
+  "original": "Diyagrama göre",
+  "a4": "A4",
+  "letter": "US Letter"
+}

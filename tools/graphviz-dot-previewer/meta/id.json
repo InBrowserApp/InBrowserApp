@@ -1,4 +1,4 @@
 {
   "name": "Pratinjau Graphviz DOT",
-  "description": "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG."
+  "description": "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh graf sebagai SVG atau PDF vektor."
 }

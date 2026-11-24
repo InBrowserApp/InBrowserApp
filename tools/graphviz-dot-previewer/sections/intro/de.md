@@ -10,6 +10,6 @@ Beginne mit `dot` für Graphen mit Ebenen, etwa für Build-Abhängigkeiten. Prob
 
 Graphviz kann einen Fehler melden, wenn der Kantenoperator nicht zum Graphentyp passt oder wenn eine Klammer oder ein Anführungszeichen fehlt. Prüfe die angegebene und die vorherige Zeile. Graphviz kann auch eine Vorschau zusammen mit Hinweisen zu Attributen anzeigen, die nicht angewendet werden konnten. Wenn der Graph ein eigenes `layout`-Attribut festlegt, verwendet Graphviz die dort angegebene Engine. Details findest du in der [DOT-Sprachreferenz](https://graphviz.org/doc/info/lang.html) und in der [Graphviz-Layout-Übersicht](https://graphviz.org/docs/layouts/).
 
-## Einen Graphen als SVG herunterladen
+## Einen Graphviz-DOT-Graphen als SVG oder PDF exportieren
 
-Wähle **SVG herunterladen**, um das aktuelle Layout als Vektorgrafik zu speichern. **An Ansicht anpassen** und **Tatsächliche Größe** ändern nur die Vorschau. Bewahre den DOT-Code auf, wenn du den Graphen später bearbeiten möchtest.
+Wähle **PDF herunterladen**, um das vollständige Layout auf einer Seite in der Größe des Graphen zu speichern. Formen und Linien bleiben beim Vergrößern und Drucken scharf. Mit **SVG herunterladen** kannst du den Graphen in eine Webseite einbetten oder in einem Vektoreditor öffnen. **An Ansicht anpassen** und **Tatsächliche Größe** ändern nur die Vorschau. Bewahre den DOT-Code auf, wenn du den Graphen später bearbeiten möchtest.

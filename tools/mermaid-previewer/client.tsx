@@ -1,36 +1,44 @@
-import { useEffect, useId, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
+import type { PageSize } from "@workspace/svg-pdf"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
+import type { PdfPageSizeLabels } from "@workspace/ui/components/tool/pdf-page-size-select"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@workspace/ui/components/ui/select"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Code, Download, Eye, Maximize2 } from "@workspace/ui/icons"
+import { Eye, Maximize2 } from "@workspace/ui/icons"
+import { downloadBlob } from "@workspace/ui/lib/download-blob"
+import { DownloadToolbar } from "./download-toolbar"
+import type { ExportFormat } from "./download-toolbar"
 import { examples } from "./examples"
+import { SourcePanel } from "./source-panel"
+import type { FileMessages } from "./source-panel"
 
 import type Messages from "./messages/en.json"
 
 type Result = { source: string } & ({ svg: string } | { error: string })
-type Example = keyof typeof examples
+type ExportState = { format: ExportFormat; failed?: boolean }
+type ConverterMessages = FileMessages & PdfPageSizeLabels
 
-const exampleNames = Object.keys(examples) as Example[]
-
-export default function Client({ messages: m }: { messages: typeof Messages }) {
-  const sourceId = useId()
+export default function Client({
+  messages: m,
+  language,
+  converter,
+}: {
+  messages: typeof Messages
+  language?: string
+  converter?: ConverterMessages
+}) {
   const previewId = useId()
-  const [source, setSource] = useState(examples.flowchart)
+  const [source, setSource] = useState(converter ? "" : examples.flowchart)
+  const [filename, setFilename] = useState("mermaid-diagram")
+  const [pageSize, setPageSize] = useState<PageSize>("original")
   const [result, setResult] = useState<Result>()
   const [actualSize, setActualSize] = useState(false)
-  const [pngExport, setPngExport] = useState<"busy" | Result>()
+  const [exportState, setExportState] = useState<ExportState>()
+  const sourceVersion = useRef(0)
   const current = result?.source === source ? result : undefined
   const svg = current && "svg" in current ? current.svg : undefined
   const error = current && "error" in current ? current.error : undefined
   const url = svg && `data:image/svg+xml,${encodeURIComponent(svg)}`
-  const exporting = pngExport === "busy"
+  const exporting = exportState?.failed ? undefined : exportState?.format
 
   useEffect(() => {
     if (!source.trim()) return
@@ -57,57 +65,41 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
     }
   }, [source])
 
-  async function savePng() {
-    if (!url) return
-    setPngExport("busy")
+  async function save(format: ExportFormat) {
+    if (!url || !svg) return
+    const version = sourceVersion.current
+    setExportState({ format })
     try {
-      const { createPng, download } = await import("./render")
-      download(await createPng(url), "mermaid-diagram.png")
-      setPngExport(undefined)
+      let blob: Blob
+      if (format === "pdf") {
+        const { createDiagramPdf } = await import("@workspace/svg-pdf")
+        blob = await createDiagramPdf(svg, pageSize, language)
+      } else {
+        const { createPng } = await import("./render")
+        blob = await createPng(url)
+      }
+      if (version !== sourceVersion.current) return
+      downloadBlob(blob, `${filename}.${format}`)
+      setExportState(undefined)
     } catch {
-      setPngExport(current)
+      if (version === sourceVersion.current)
+        setExportState({ format, failed: true })
     }
   }
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
-      <section className="flex min-w-0 flex-col overflow-hidden rounded-xl border bg-card">
-        <div className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b px-4 py-2">
-          <label
-            htmlFor={sourceId}
-            className="flex items-center gap-2 font-medium"
-          >
-            <Code aria-hidden="true" className="size-4 text-muted-foreground" />
-            {m.source}
-          </label>
-          <Select
-            value=""
-            onValueChange={(value) => setSource(examples[value as Example])}
-          >
-            <SelectTrigger aria-label={m.example}>
-              <SelectValue placeholder={m.example} />
-            </SelectTrigger>
-            <SelectContent position="popper">
-              {exampleNames.map((key) => (
-                <SelectItem key={key} value={key}>
-                  {m[key]}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        <Textarea
-          id={sourceId}
-          dir="ltr"
-          spellCheck={false}
-          autoCapitalize="off"
-          autoComplete="off"
-          wrap="off"
-          value={source}
-          onChange={(event) => setSource(event.target.value)}
-          className="h-56 flex-auto resize-none rounded-none border-0 p-4 font-mono focus-visible:ring-inset sm:h-72 lg:h-96"
-        />
-      </section>
+      <SourcePanel
+        messages={m}
+        fileLabels={converter}
+        source={source}
+        onChange={(value, name) => {
+          sourceVersion.current++
+          setExportState(undefined)
+          setSource(value)
+          if (name !== undefined) setFilename(name)
+        }}
+      />
 
       <section
         aria-labelledby={previewId}
@@ -139,35 +131,6 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
               onClick={() => setActualSize(true)}
             >
               1:1
-            </Button>
-            <Button
-              asChild={Boolean(url)}
-              variant="outline"
-              size="sm"
-              disabled={!url}
-            >
-              {url ? (
-                <a
-                  href={url}
-                  download="mermaid-diagram.svg"
-                  data-astro-prefetch="false"
-                >
-                  <Download data-icon="inline-start" aria-hidden="true" />
-                  {m.downloadSvg}
-                </a>
-              ) : (
-                <span>{m.downloadSvg}</span>
-              )}
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={!url || exporting}
-              aria-busy={exporting}
-              onClick={() => void savePng()}
-            >
-              <Download data-icon="inline-start" aria-hidden="true" />
-              {m.downloadPng}
             </Button>
           </div>
         </div>
@@ -224,12 +187,22 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             </div>
           )}
         </div>
-        {current && pngExport === current && (
+        <DownloadToolbar
+          labels={m}
+          sizes={converter}
+          pageSize={pageSize}
+          setPageSize={setPageSize}
+          url={url}
+          filename={filename}
+          exporting={exporting}
+          save={save}
+        />
+        {exportState?.failed && (
           <p
             role="status"
             className="border-t px-4 py-2 text-sm text-destructive"
           >
-            {m.exportError}
+            {exportState.format === "pdf" ? m.pdfError : m.exportError}
           </p>
         )}
       </section>

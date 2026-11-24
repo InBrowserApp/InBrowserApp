@@ -10,6 +10,6 @@ Seret rajah untuk mengalih pandangan. Gunakan butang zum untuk membaca label kec
 
 Fail XML BPMN 2.0 boleh menerangkan proses tanpa menyimpan kedudukan bentuk dan penyambungnya. Pemapar menggunakan data BPMN Diagram Interchange yang disimpan bersama model untuk melukis rajah. Jika susun atur tiada, buka model dalam alat pemodelan BPMN dan eksport semula dengan menyertakan rajah. Lihat [spesifikasi BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) untuk butiran format.
 
-## Muat turun rajah sebagai SVG
+## Muat turun rajah sebagai PDF atau SVG
 
-Selepas membuka rajah, pilih **Muat turun SVG**. Fail mengandungi keseluruhan rajah pada skala asalnya dan kekal tajam apabila saiznya diubah dalam dokumen atau slaid.
+Pilih **Muat turun PDF** untuk berkongsi seluruh rajah sebagai PDF vektor, atau **Muat turun SVG** untuk membenamkannya dalam dokumen dan slaid. Kedua-dua format memuatkan seluruh rajah walaupun anda mengezum untuk membaca label. Untuk mencetak pada kertas A4 atau US Letter, buka rajah dalam [Penukar BPMN ke PDF](../bpmn-to-pdf-converter/).

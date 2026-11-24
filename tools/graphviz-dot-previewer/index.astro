@@ -28,7 +28,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <Client client:load messages={messages} />
+  <Client client:load messages={messages} language={lang} />
   <ToolArticle><Intro /></ToolArticle>
   <p class="text-xs text-muted-foreground">
     <a href="/licenses/graphviz-dot-previewer.txt">Viz.js · Graphviz · Expat</a>

@@ -12,5 +12,7 @@
   "warnings": "Layout-Hinweise von Graphviz",
   "fit": "An Ansicht anpassen",
   "actualSize": "Tatsächliche Größe",
-  "downloadSvg": "SVG herunterladen"
+  "downloadSvg": "SVG herunterladen",
+  "downloadPdf": "PDF herunterladen",
+  "pdfError": "Die PDF-Datei konnte nicht erstellt werden. Versuche es erneut."
 }

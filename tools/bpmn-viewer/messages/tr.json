@@ -17,6 +17,9 @@
   "zoomIn": "Yakınlaştır",
   "zoomOut": "Uzaklaştır",
   "fit": "Diyagramı ekrana sığdır",
+  "downloadPdf": "PDF indir",
+  "creatingPdf": "PDF oluşturuluyor…",
+  "pdfError": "PDF oluşturulamadı. Diyagramı yeniden indirmeyi deneyin.",
   "downloadSvg": "SVG indir",
   "exportError": "SVG oluşturulamadı. Diyagramı yeniden indirmeyi deneyin."
 }

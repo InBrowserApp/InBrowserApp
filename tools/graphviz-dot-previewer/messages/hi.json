@@ -12,5 +12,7 @@
   "warnings": "Graphviz लेआउट सूचनाएँ",
   "fit": "दृश्य में फ़िट करें",
   "actualSize": "वास्तविक आकार",
-  "downloadSvg": "SVG डाउनलोड करें"
+  "downloadSvg": "SVG डाउनलोड करें",
+  "downloadPdf": "PDF डाउनलोड करें",
+  "pdfError": "PDF नहीं बनाया जा सका। ग्राफ़ दोबारा डाउनलोड करने का प्रयास करें।"
 }

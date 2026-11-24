@@ -1,0 +1,9 @@
+{
+  "openFile": "파일 열기",
+  "fileError": "이 파일을 읽을 수 없습니다. Mermaid 소스 파일을 열거나 코드를 붙여넣으세요.",
+  "sourcePlaceholder": "Mermaid 코드를 붙여넣거나 .mmd 파일을 여기에 놓으세요.",
+  "pageSize": "PDF 페이지 크기",
+  "original": "다이어그램에 맞추기",
+  "a4": "A4",
+  "letter": "US Letter"
+}

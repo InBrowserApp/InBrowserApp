@@ -1,0 +1,9 @@
+{
+  "openFile": "打开文件",
+  "fileError": "无法读取文件。请打开 Mermaid 源文件或直接粘贴代码。",
+  "sourcePlaceholder": "在此粘贴 Mermaid 代码，或拖入 .mmd 文件。",
+  "pageSize": "PDF 页面尺寸",
+  "original": "按图表尺寸",
+  "a4": "A4",
+  "letter": "US Letter"
+}

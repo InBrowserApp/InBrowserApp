@@ -6,9 +6,9 @@ Paste a Mermaid definition into **Mermaid source**. The preview updates as you t
 
 Open **Load an example** to replace the editor contents with a working example. A flowchart shows steps and decisions, a sequence diagram shows messages between participants, and an ER diagram shows relationships between data entities. You can also paste other supported Mermaid definitions, such as class diagrams and Gantt charts.
 
-## Export to SVG or PNG
+## Export to SVG, PNG, or PDF
 
-Download **SVG** for a vector image that stays sharp when resized. Choose **PNG** for a raster image you can insert into slides or documents. The download uses the current diagram with a transparent background. Keep the Mermaid source if you want to edit the diagram again later.
+Download **SVG** for a scalable image to embed in a web page, **PNG** for an image to paste into slides, or **PDF** for a vector document to share or print. The PDF fits the whole diagram. Use the [Mermaid to PDF Converter](../mermaid-to-pdf-converter/) if you want to open a `.mmd` file or fit the diagram to A4 or US Letter. Keep the Mermaid source if you want to edit the diagram again later.
 
 ## Fix a diagram that will not render
 

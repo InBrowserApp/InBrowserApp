@@ -1,0 +1,9 @@
+{
+  "openFile": "فتح ملف",
+  "fileError": "تعذّرت قراءة الملف. افتح ملف شيفرة Mermaid أو الصق الشيفرة.",
+  "sourcePlaceholder": "الصق شيفرة Mermaid أو أفلت ملف ‎.mmd هنا.",
+  "pageSize": "حجم صفحة PDF",
+  "original": "ملاءمة حجم المخطط",
+  "a4": "A4",
+  "letter": "US Letter"
+}

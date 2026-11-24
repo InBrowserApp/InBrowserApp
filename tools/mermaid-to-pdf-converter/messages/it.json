@@ -1,0 +1,9 @@
+{
+  "openFile": "Apri file",
+  "fileError": "Impossibile leggere il file. Apri un file sorgente Mermaid o incolla il codice.",
+  "sourcePlaceholder": "Incolla il codice Mermaid o trascina qui un file .mmd.",
+  "pageSize": "Formato pagina PDF",
+  "original": "Adatta al diagramma",
+  "a4": "A4",
+  "letter": "Lettera USA"
+}

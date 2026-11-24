@@ -12,5 +12,7 @@
   "warnings": "Сообщения Graphviz о компоновке",
   "fit": "Вписать в область просмотра",
   "actualSize": "Исходный размер",
-  "downloadSvg": "Скачать SVG"
+  "downloadSvg": "Скачать SVG",
+  "downloadPdf": "Скачать PDF",
+  "pdfError": "Не удалось создать PDF-файл. Попробуйте скачать граф ещё раз."
 }

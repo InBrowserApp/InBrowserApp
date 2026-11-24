@@ -12,5 +12,7 @@
   "warnings": "หมายเหตุการจัดวางของ Graphviz",
   "fit": "ปรับให้พอดีกับหน้าจอ",
   "actualSize": "ขนาดจริง",
-  "downloadSvg": "ดาวน์โหลด SVG"
+  "downloadSvg": "ดาวน์โหลด SVG",
+  "downloadPdf": "ดาวน์โหลด PDF",
+  "pdfError": "สร้าง PDF ไม่สำเร็จ โปรดลองดาวน์โหลดกราฟอีกครั้ง"
 }

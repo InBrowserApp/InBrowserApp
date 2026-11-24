@@ -17,6 +17,9 @@
   "zoomIn": "Phóng to",
   "zoomOut": "Thu nhỏ",
   "fit": "Điều chỉnh sơ đồ vừa khung xem",
+  "downloadPdf": "Tải PDF xuống",
+  "creatingPdf": "Đang tạo PDF…",
+  "pdfError": "Không thể tạo PDF. Hãy thử tải lại sơ đồ.",
   "downloadSvg": "Tải SVG",
   "exportError": "Không thể tạo SVG. Hãy thử tải lại sơ đồ."
 }

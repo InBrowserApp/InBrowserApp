@@ -17,6 +17,9 @@
   "zoomIn": "Acercar",
   "zoomOut": "Alejar",
   "fit": "Ajustar diagrama a la vista",
+  "downloadPdf": "Descargar PDF",
+  "creatingPdf": "Creando el PDF…",
+  "pdfError": "No se pudo crear el PDF. Vuelve a intentar la descarga.",
   "downloadSvg": "Descargar SVG",
   "exportError": "No se pudo crear el SVG. Intenta descargar el diagrama de nuevo."
 }

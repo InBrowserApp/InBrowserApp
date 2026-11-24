@@ -12,5 +12,7 @@
   "warnings": "Opmerkingen over de Graphviz-indeling",
   "fit": "Passend in beeld",
   "actualSize": "Ware grootte",
-  "downloadSvg": "SVG downloaden"
+  "downloadSvg": "SVG downloaden",
+  "downloadPdf": "PDF downloaden",
+  "pdfError": "Het maken van de PDF is mislukt. Probeer de download opnieuw."
 }

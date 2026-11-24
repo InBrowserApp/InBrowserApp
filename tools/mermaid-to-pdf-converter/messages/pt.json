@@ -1,0 +1,9 @@
+{
+  "openFile": "Abrir arquivo",
+  "fileError": "Não foi possível ler o arquivo. Abra um arquivo de código Mermaid ou cole o código.",
+  "sourcePlaceholder": "Cole código Mermaid ou solte um arquivo .mmd aqui.",
+  "pageSize": "Tamanho da página do PDF",
+  "original": "Ajustar ao diagrama",
+  "a4": "A4",
+  "letter": "Carta (EUA)"
+}

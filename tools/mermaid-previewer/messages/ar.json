@@ -12,5 +12,7 @@
   "downloadPng": "تنزيل PNG",
   "exportError": "تعذّر إنشاء صورة PNG. جرّب تنزيل المخطط بصيغة SVG.",
   "fit": "ملاءمة مساحة العرض",
-  "actualSize": "الحجم الفعلي"
+  "actualSize": "الحجم الفعلي",
+  "pdfError": "تعذّر إنشاء PDF. حاول مجددًا أو نزّل SVG.",
+  "downloadPdf": "تنزيل PDF"
 }

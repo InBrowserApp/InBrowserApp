@@ -21,7 +21,7 @@ const PAPER_SIZES = {
 
 export type PageSize = "original" | keyof typeof PAPER_SIZES
 
-export type SvgArtwork = ReturnType<typeof prepareSvg>
+export type SvgArtwork = ReturnType<typeof prepareArtwork>
 
 export const embeddedRaster =
   /^data:image\/(?:png|jpeg|gif|webp);base64,[a-z\d+/=\s]+$/i
@@ -121,7 +121,7 @@ function normalizeGradients(root: SVGSVGElement) {
   }
 }
 
-export function prepareSvg(source: string) {
+export function prepareArtwork(source: string) {
   const root = parseSvg(source)
   const viewBox = (root.getAttribute("viewBox") ?? "")
     .trim()
@@ -163,9 +163,14 @@ export function prepareSvg(source: string) {
   prepareReferences(root)
   normalizeGradients(root)
 
+  return { root, width, height }
+}
+
+export function prepareSvg(source: string) {
+  const artwork = prepareArtwork(source)
   // SVG image mode keeps the preview isolated from the page DOM and external loads.
-  const preview = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(new XMLSerializer().serializeToString(root))}`
-  return { root, width, height, preview }
+  const preview = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(new XMLSerializer().serializeToString(artwork.root))}`
+  return { ...artwork, preview }
 }
 
 export function pageLayout(

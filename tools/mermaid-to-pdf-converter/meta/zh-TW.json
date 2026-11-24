@@ -1,0 +1,4 @@
+{
+  "name": "Mermaid 轉 PDF",
+  "description": "貼上 Mermaid 程式碼或開啟 .mmd 檔案，預覽圖表並下載向量 PDF。支援原圖尺寸、A4 和 US Letter。"
+}

@@ -10,6 +10,6 @@ Kéo sơ đồ để di chuyển, dùng nút thu phóng để đọc nhãn nhỏ
 
 XML BPMN 2.0 có thể mô tả quy trình mà không ghi vị trí hình và đường nối. Trình xem dùng dữ liệu BPMN Diagram Interchange lưu cùng mô hình để vẽ sơ đồ. Nếu thiếu bố cục, hãy xuất lại mô hình từ công cụ mô hình hóa và bao gồm sơ đồ. Xem [đặc tả BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) để biết chi tiết định dạng.
 
-## Tải sơ đồ dưới dạng SVG
+## Tải sơ đồ dưới dạng PDF hoặc SVG
 
-Sau khi mở sơ đồ, chọn **Tải SVG**. Tệp chứa toàn bộ sơ đồ ở tỷ lệ gốc và vẫn sắc nét khi thay đổi kích thước trong tài liệu hoặc trang chiếu.
+Chọn **Tải PDF xuống** để chia sẻ toàn bộ sơ đồ dưới dạng PDF vectơ hoặc **Tải SVG** để nhúng sơ đồ vào tài liệu và trang chiếu. Cả hai dạng tệp đều chứa toàn bộ sơ đồ, kể cả khi bạn đang phóng to một vùng để đọc nhãn. Để căn sơ đồ vừa khổ A4 hoặc US Letter khi in, hãy mở bằng [Trình chuyển BPMN sang PDF](../bpmn-to-pdf-converter/).

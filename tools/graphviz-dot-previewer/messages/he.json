@@ -12,5 +12,7 @@
   "warnings": "הערות פריסה של Graphviz",
   "fit": "התאמה לתצוגה",
   "actualSize": "גודל בפועל",
-  "downloadSvg": "הורדת SVG"
+  "downloadSvg": "הורדת SVG",
+  "downloadPdf": "הורדת PDF",
+  "pdfError": "לא ניתן ליצור את קובץ ה-PDF. נסו להוריד את הגרף שוב."
 }

@@ -1,0 +1,9 @@
+{
+  "openFile": "Open file",
+  "fileError": "Could not read this file. Open a Mermaid source file or paste the code.",
+  "sourcePlaceholder": "Paste Mermaid code or drop a .mmd file here.",
+  "pageSize": "PDF page size",
+  "original": "Fit to diagram",
+  "a4": "A4",
+  "letter": "US Letter"
+}

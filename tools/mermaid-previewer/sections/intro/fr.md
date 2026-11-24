@@ -6,9 +6,9 @@ Collez une définition dans **Code Mermaid**. L’aperçu se met à jour au fil 
 
 Sélectionnez **Charger un exemple** pour remplacer le contenu de l’éditeur par un exemple fonctionnel. Le diagramme de flux montre des étapes et des décisions. Le diagramme de séquence illustre les messages entre participants et le diagramme entité-association représente les relations entre les entités d’un modèle de données. Vous pouvez aussi coller d’autres définitions prises en charge par Mermaid, comme des diagrammes de classes ou de Gantt.
 
-## Exporter en SVG ou en PNG
+## Exporter en SVG, PNG ou PDF
 
-Téléchargez le **SVG** pour obtenir une image vectorielle qui reste nette à toutes les tailles. Choisissez le **PNG** pour insérer une image matricielle dans un document ou des diapositives. Le fichier contient le diagramme actuel sur fond transparent. Conservez le code Mermaid si vous souhaitez modifier le diagramme plus tard.
+Téléchargez le **SVG** pour intégrer le diagramme à une page web sans perte de qualité, le **PNG** pour l’insérer dans des diapositives ou le **PDF** pour le partager ou l’imprimer sous forme vectorielle. La page du PDF contient le diagramme entier. Utilisez le [Convertisseur Mermaid en PDF](../mermaid-to-pdf-converter/) pour ouvrir un fichier `.mmd` ou ajuster le diagramme à une page A4 ou Lettre US. Conservez le code Mermaid pour pouvoir modifier le diagramme.
 
 ## Corriger un diagramme qui ne s’affiche pas
 

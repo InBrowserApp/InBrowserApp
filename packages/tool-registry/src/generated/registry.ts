@@ -5693,125 +5693,266 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "bpmn-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "bpmn",
+      "pdf",
+      "vector",
+      "process",
+      "workflow",
+      "xml",
+      "svg",
+      "print",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل BPMN إلى PDF",
+        description:
+          "حوّل ملفات ‎.bpmn أو ‎.xml إلى PDF متجهي في متصفحك. عاين العملية واختر الحجم الأصلي أو A4 أو US Letter.",
+      },
+      de: {
+        name: "BPMN-zu-PDF-Konverter",
+        description:
+          "Konvertiere .bpmn- oder .xml-Dateien im Browser in ein Vektor-PDF. Prüfe das Prozessdiagramm in der Vorschau und wähle Originalgröße, A4 oder US Letter.",
+      },
+      en: {
+        name: "BPMN to PDF Converter",
+        description:
+          "Convert .bpmn or .xml files to a vector PDF in your browser. Preview the process and use the original size, A4, or US Letter.",
+      },
+      es: {
+        name: "Conversor de BPMN a PDF",
+        description:
+          "Convierte archivos .bpmn o .xml en un PDF vectorial desde el navegador. Previsualiza el proceso y elige el tamaño original, A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur BPMN en PDF",
+        description:
+          "Convertissez des fichiers .bpmn ou .xml en PDF vectoriel dans votre navigateur. Prévisualisez le processus et choisissez les dimensions d’origine, le format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר BPMN ל-PDF",
+        description:
+          "המירו קובצי ‎.bpmn או ‎.xml ל-PDF וקטורי בדפדפן. צפו בתהליך ובחרו בגודל המקורי, A4 או US Letter.",
+      },
+      hi: {
+        name: "BPMN से PDF कन्वर्टर",
+        description:
+          "ब्राउज़र में .bpmn या .xml फ़ाइल को वेक्टर PDF में बदलें। प्रक्रिया का प्रीव्यू देखें और मूल आकार, A4 या US Letter चुनें।",
+      },
+      id: {
+        name: "Konverter BPMN ke PDF",
+        description:
+          "Ubah file .bpmn atau .xml menjadi PDF vektor di browser. Lihat pratinjau proses dan pilih ukuran asli, A4, atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da BPMN a PDF",
+        description:
+          "Converti file .bpmn o .xml in PDF vettoriali nel browser. Controlla l’anteprima del processo e scegli le dimensioni originali, A4 o Lettera USA.",
+      },
+      ja: {
+        name: "BPMNからPDFへのコンバーター",
+        description:
+          "ブラウザーで .bpmn または .xml ファイルをベクター PDF に変換します。プロセスをプレビューし、元のサイズ、A4、US Letter を選べます。",
+      },
+      ko: {
+        name: "BPMN PDF 변환기",
+        description:
+          "브라우저에서 .bpmn 또는 .xml 파일을 벡터 PDF로 변환하세요. 프로세스를 미리 보고 원본 크기, A4 또는 US Letter를 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar BPMN ke PDF",
+        description:
+          "Tukar fail .bpmn atau .xml kepada PDF vektor dalam pelayar. Pratonton proses dan pilih saiz asal, A4 atau US Letter.",
+      },
+      nl: {
+        name: "BPMN naar PDF-converter",
+        description:
+          "Converteer .bpmn- of .xml-bestanden naar een vector-PDF in je browser. Bekijk het proces en kies ware grootte, A4 of US Letter.",
+      },
+      no: {
+        name: "BPMN til PDF-konverterer",
+        description:
+          "Konverter .bpmn- eller .xml-filer til vektor-PDF i nettleseren. Forhåndsvis prosessen og velg original størrelse, A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter BPMN na PDF",
+        description:
+          "Konwertuj pliki .bpmn lub .xml na wektorowy PDF w przeglądarce. Sprawdź podgląd procesu i wybierz oryginalny rozmiar, A4 lub US Letter.",
+      },
+      pt: {
+        name: "Conversor de BPMN para PDF",
+        description:
+          "Converta arquivos .bpmn ou .xml em PDF vetorial no navegador. Confira a prévia do processo e escolha o tamanho original, A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер BPMN в PDF",
+        description:
+          "Преобразуйте файлы .bpmn или .xml в векторный PDF прямо в браузере. Проверьте схему процесса и выберите исходный размер, A4 или US Letter.",
+      },
+      sv: {
+        name: "BPMN till PDF-konverterare",
+        description:
+          "Konvertera .bpmn- eller .xml-filer till vektor-PDF i webbläsaren. Förhandsgranska processen och välj originalstorlek, A4 eller US Letter.",
+      },
+      th: {
+        name: "เครื่องมือแปลงไฟล์ BPMN เป็น PDF",
+        description:
+          "แปลงไฟล์ .bpmn หรือ .xml เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ ดูตัวอย่างกระบวนการแล้วเลือกขนาดต้นฉบับ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "BPMN’den PDF’ye Dönüştürücü",
+        description:
+          "Tarayıcınızda .bpmn veya .xml dosyalarını vektörel PDF’ye dönüştürün. Süreci önizleyin, özgün boyutu, A4’ü veya US Letter’ı seçin.",
+      },
+      vi: {
+        name: "Trình chuyển BPMN sang PDF",
+        description:
+          "Chuyển tệp .bpmn hoặc .xml sang PDF vectơ trong trình duyệt. Xem trước quy trình và chọn kích thước gốc, A4 hoặc US Letter.",
+      },
+      "zh-CN": {
+        name: "BPMN 转 PDF",
+        description:
+          "在浏览器中打开 .bpmn 或 .xml 文件，预览 BPMN 流程图并转换成矢量 PDF。支持原图尺寸、A4 和 US Letter。",
+      },
+      "zh-TW": {
+        name: "BPMN 轉 PDF",
+        description:
+          "在瀏覽器中開啟 .bpmn 或 .xml 檔案，預覽 BPMN 流程圖並轉存為向量 PDF。支援原圖尺寸、A4 和 US Letter。",
+      },
+    },
+  },
+  {
     slug: "bpmn-viewer",
     category: "developer",
     icon: "workflow",
-    tags: ["bpmn", "process", "workflow", "diagram", "xml", "viewer"],
+    tags: [
+      "bpmn",
+      "process",
+      "workflow",
+      "diagram",
+      "xml",
+      "viewer",
+      "pdf",
+      "svg",
+    ],
     locales: {
       ar: {
         name: "عارض BPMN",
         description:
-          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا. يمكنك أيضًا تنزيل المخطط بصيغة SVG.",
+          "افتح ملفات BPMN 2.0 بامتداد ‎.bpmn أو ‎.xml في متصفحك. حرّك المخطط وكبّره وملاءمه للعرض، ثم نزّله بصيغة PDF أو SVG.",
       },
       de: {
         name: "BPMN-Betrachter",
         description:
-          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als SVG herunter.",
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als PDF oder SVG herunter.",
       },
       en: {
         name: "BPMN Viewer",
         description:
-          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download SVG.",
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download PDF or SVG.",
       },
       es: {
         name: "Visor BPMN",
         description:
-          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en SVG.",
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en PDF o SVG.",
       },
       fr: {
         name: "Visionneuse BPMN",
         description:
-          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en SVG.",
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en PDF ou SVG.",
       },
       he: {
         name: "מציג BPMN",
         description:
-          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה. אפשר גם להוריד את התרשים כ-SVG.",
+          "פתחו תרשימי BPMN 2.0 מקובצי ‎.bpmn או ‎.xml בדפדפן. הזיזו והגדילו את התרשים, התאימו אותו לתצוגה והורידו PDF או SVG.",
       },
       hi: {
         name: "BPMN व्यूअर",
         description:
-          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें। SVG डाउनलोड भी करें।",
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें, दृश्य में फ़िट करें और PDF या SVG डाउनलोड करें।",
       },
       id: {
         name: "Penampil BPMN",
         description:
-          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat. Anda juga bisa mengunduh diagram sebagai SVG.",
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, tampilkan seluruh diagram, dan unduh sebagai PDF atau SVG.",
       },
       it: {
         name: "Visualizzatore BPMN",
         description:
-          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in SVG.",
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in PDF o SVG.",
       },
       ja: {
         name: "BPMN ビューアー",
         description:
-          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。 SVG をダウンロードできます。",
+          "ブラウザーで .bpmn または .xml ファイルの BPMN 2.0 図を開けます。図の移動や拡大・縮小、画面へのフィット、PDF または SVG のダウンロードができます。",
       },
       ko: {
         name: "BPMN 뷰어",
         description:
-          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요. SVG 다운로드를 지원합니다.",
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 여세요. 이동, 확대 및 축소, 화면 맞춤을 사용하고 PDF 또는 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemapar BPMN",
         description:
-          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan. Anda juga boleh memuat turun rajah sebagai SVG.",
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum rajah, paparkan keseluruhannya atau muat turun sebagai PDF atau SVG.",
       },
       nl: {
         name: "BPMN-viewer",
         description:
-          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als SVG.",
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als PDF of SVG.",
       },
       no: {
         name: "BPMN-viser",
         description:
-          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som SVG.",
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som PDF eller SVG.",
       },
       pl: {
         name: "Przeglądarka diagramów BPMN",
         description:
-          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok. Pobieraj diagramy w formacie SVG.",
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram, zmieniaj powiększenie, dopasowuj widok i pobieraj pliki PDF lub SVG.",
       },
       pt: {
         name: "Visualizador de BPMN",
         description:
-          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em SVG.",
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em PDF ou SVG.",
       },
       ru: {
         name: "Просмотр диаграмм BPMN",
         description:
-          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком. Скачивайте диаграммы в формате SVG.",
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml в браузере. Перемещайте и масштабируйте схему, просматривайте её целиком и скачивайте в PDF или SVG.",
       },
       sv: {
         name: "BPMN-visare",
         description:
-          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som SVG.",
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som PDF eller SVG.",
       },
       th: {
         name: "โปรแกรมดู BPMN",
         description:
-          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ ดาวน์โหลดเป็น SVG ได้",
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ แล้วดาวน์โหลดเป็น PDF หรือ SVG",
       },
       tr: {
         name: "BPMN Görüntüleyici",
         description:
-          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın. Diyagramı SVG olarak da indirebilirsiniz.",
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Diyagramı kaydırın, yakınlaştırın, ekrana sığdırın ve PDF veya SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem BPMN",
         description:
-          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem. Tải sơ đồ xuống dưới dạng SVG.",
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng, điều chỉnh sơ đồ vừa khung xem và tải xuống PDF hoặc SVG.",
       },
       "zh-CN": {
         name: "BPMN 查看器",
         description:
-          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。 支持下载 SVG。",
+          "在浏览器中查看 .bpmn 或 .xml 文件里的 BPMN 2.0 流程图。支持平移、缩放、适应视图及下载 PDF 或 SVG。",
       },
       "zh-TW": {
         name: "BPMN 檢視器",
         description:
-          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。 支援下載 SVG。",
+          "在瀏覽器中檢視 .bpmn 或 .xml 檔案中的 BPMN 2.0 流程圖。支援平移、縮放、配合視窗及下載 PDF 或 SVG。",
       },
     },
   },
@@ -16636,122 +16777,122 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     slug: "graphviz-dot-previewer",
     category: "developer",
     icon: "network",
-    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
     locales: {
       ar: {
         name: "معاين Graphviz DOT",
         description:
-          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG أو PDF متجهي.",
       },
       de: {
         name: "Graphviz-DOT-Vorschau",
         description:
-          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG oder Vektor-PDF herunter.",
       },
       en: {
         name: "Graphviz DOT Previewer",
         description:
-          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG or vector PDF.",
       },
       es: {
         name: "Vista previa de Graphviz DOT",
         description:
-          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG o PDF vectorial.",
       },
       fr: {
         name: "Aperçu Graphviz DOT",
         description:
-          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG ou PDF vectoriel.",
       },
       he: {
         name: "תצוגה מקדימה של Graphviz DOT",
         description:
-          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG או PDF וקטורי.",
       },
       hi: {
         name: "Graphviz DOT प्रीव्यूअर",
         description:
-          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG या वेक्टर PDF के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Graphviz DOT",
         description:
-          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh graf sebagai SVG atau PDF vektor.",
       },
       it: {
         name: "Anteprima Graphviz DOT",
         description:
-          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG o PDF vettoriale.",
       },
       ja: {
         name: "Graphviz DOT プレビューアー",
         description:
-          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG またはベクター PDF でダウンロードできます。",
       },
       ko: {
         name: "Graphviz DOT 미리보기",
         description:
-          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG 또는 벡터 PDF로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Graphviz DOT",
         description:
-          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun graf sebagai SVG atau PDF vektor.",
       },
       nl: {
         name: "Graphviz DOT-voorvertoner",
         description:
-          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG of vector-PDF.",
       },
       no: {
         name: "Graphviz DOT-forhåndsviser",
         description:
-          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG eller vektor-PDF.",
       },
       pl: {
         name: "Podgląd Graphviz DOT",
         description:
-          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobieraj grafy jako SVG lub wektorowy PDF.",
       },
       pt: {
         name: "Pré-visualizador de Graphviz DOT",
         description:
-          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG ou PDF vetorial.",
       },
       ru: {
         name: "Предпросмотр Graphviz DOT",
         description:
-          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте графы в SVG или векторном PDF.",
       },
       sv: {
         name: "Graphviz DOT-förhandsgranskare",
         description:
-          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG eller vektor-PDF.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
         description:
-          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG หรือ PDF แบบเวกเตอร์",
       },
       tr: {
         name: "Graphviz DOT Önizleyici",
         description:
-          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG ya da vektörel PDF olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Graphviz DOT",
         description:
-          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, so sánh các bộ máy bố cục và tải xuống SVG hoặc PDF vectơ.",
       },
       "zh-CN": {
         name: "Graphviz DOT 预览器",
         description:
-          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+          "在线渲染 Graphviz DOT 代码，实时预览有向图和无向图，比较不同布局引擎，并下载 SVG 或矢量 PDF。",
       },
       "zh-TW": {
         name: "Graphviz DOT 預覽器",
         description:
-          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+          "在線上渲染 Graphviz DOT 程式碼，即時預覽有向圖和無向圖，比較不同配置引擎，並下載 SVG 或向量 PDF。",
       },
     },
   },
@@ -26770,123 +26911,256 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "sequence diagram",
       "svg",
       "png",
+      "pdf",
       "preview",
     ],
     locales: {
       ar: {
         name: "معاين Mermaid",
         description:
-          "حرّر شيفرة Mermaid وشاهد المخطط فورًا. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG.",
+          "حرّر شيفرة Mermaid وعاين المخطط مباشرة. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG أو PDF متجهي.",
       },
       de: {
         name: "Mermaid-Vorschau",
         description:
-          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG oder PNG herunter.",
+          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG, PNG oder Vektor-PDF herunter.",
       },
       en: {
         name: "Mermaid Previewer",
         description:
-          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG or PNG.",
+          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG, PNG, or vector PDF.",
       },
       es: {
         name: "Vista previa de Mermaid",
         description:
-          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG o PNG.",
+          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG, PNG o PDF vectorial.",
       },
       fr: {
         name: "Aperçu Mermaid",
         description:
-          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG ou PNG.",
+          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG, PNG ou PDF vectoriel.",
       },
       he: {
         name: "תצוגה מקדימה של Mermaid",
         description:
-          "אפשר לערוך קוד Mermaid ולראות את התרשים מתעדכן בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו אותו כ-SVG או PNG.",
+          "ערכו קוד Mermaid עם תצוגה מקדימה שמתעדכנת בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו SVG, PNG או PDF וקטורי.",
       },
       hi: {
         name: "Mermaid प्रीव्यूअर",
         description:
-          "Mermaid कोड संपादित करते हुए डायग्राम का लाइव प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG या PNG डाउनलोड करें।",
+          "Mermaid कोड संपादित करते हुए डायग्राम का प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG, PNG या वेक्टर PDF डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Mermaid",
         description:
-          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG atau PNG.",
+          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG, PNG, atau PDF vektor.",
       },
       it: {
         name: "Anteprima Mermaid",
         description:
-          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG o PNG.",
+          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG, PNG o PDF vettoriale.",
       },
       ja: {
         name: "Mermaid プレビューアー",
         description:
-          "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。",
+          "Mermaid コードを編集しながら図をプレビューできます。フローチャート、シーケンス図、ER 図を試し、SVG、PNG、ベクター PDF でダウンロードできます。",
       },
       ko: {
         name: "Mermaid 미리보기",
         description:
-          "Mermaid 코드를 편집하며 다이어그램을 실시간으로 확인하세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 살펴보고 SVG 또는 PNG로 다운로드할 수 있습니다.",
+          "Mermaid 코드를 편집하면서 다이어그램을 미리 보세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 시험하고 SVG, PNG 또는 벡터 PDF로 다운로드하세요.",
       },
       ms: {
         name: "Pratonton Mermaid",
         description:
-          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG atau PNG.",
+          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG, PNG atau PDF vektor.",
       },
       nl: {
         name: "Mermaid-voorvertoner",
         description:
-          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG of PNG.",
+          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG, PNG of vector-PDF.",
       },
       no: {
         name: "Mermaid-forhåndsviser",
         description:
-          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG eller PNG.",
+          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG, PNG eller vektor-PDF.",
       },
       pl: {
         name: "Podgląd Mermaid",
         description:
-          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go w formacie SVG albo PNG.",
+          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go jako SVG, PNG lub wektorowy PDF.",
       },
       pt: {
         name: "Pré-visualizador de Mermaid",
         description:
-          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG ou PNG.",
+          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG, PNG ou PDF vetorial.",
       },
       ru: {
         name: "Предпросмотр Mermaid",
         description:
-          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG или PNG.",
+          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG, PNG или векторном PDF.",
       },
       sv: {
         name: "Mermaid-förhandsgranskare",
         description:
-          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG eller PNG.",
+          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG, PNG eller vektor-PDF.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Mermaid",
         description:
-          "แก้ไขโค้ด Mermaid พร้อมดูแผนภาพสด ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลดเป็น SVG หรือ PNG",
+          "แก้ไขโค้ด Mermaid พร้อมดูตัวอย่างแผนภาพแบบเรียลไทม์ ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลด SVG, PNG หรือ PDF แบบเวกเตอร์",
       },
       tr: {
         name: "Mermaid Önizleyici",
         description:
-          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış, sıralama veya ER diyagramı örneğini deneyin ve SVG ya da PNG olarak indirin.",
+          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış şeması, sıralama veya ER diyagramı örneğini deneyin ve SVG, PNG ya da vektörel PDF olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Mermaid",
         description:
-          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG hoặc PNG.",
+          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG, PNG hoặc PDF vectơ.",
       },
       "zh-CN": {
         name: "Mermaid 预览器",
         description:
-          "编辑 Mermaid 代码并实时预览图表。试用流程图、时序图或 ER 图，然后下载 SVG 或 PNG。",
+          "编辑 Mermaid 代码并实时预览。可试用流程图、时序图和 ER 图示例，下载 SVG、PNG 或矢量 PDF。",
       },
       "zh-TW": {
         name: "Mermaid 預覽器",
         description:
-          "編輯 Mermaid 程式碼並即時預覽圖表。試用流程圖、循序圖或 ER 圖，再下載 SVG 或 PNG。",
+          "編輯 Mermaid 程式碼並即時預覽。可試用流程圖、循序圖和 ER 圖範例，下載 SVG、PNG 或向量 PDF。",
+      },
+    },
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    category: "developer",
+    icon: "file-text",
+    tags: [
+      "mermaid",
+      "mmd",
+      "pdf",
+      "svg",
+      "vector",
+      "diagram",
+      "flowchart",
+      "print",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل Mermaid إلى PDF",
+        description:
+          "الصق شيفرة Mermaid أو افتح ملف ‎.mmd، ثم عاين المخطط ونزّله كملف PDF متجهي بالحجم الأصلي أو بحجم A4 أو US Letter.",
+      },
+      de: {
+        name: "Mermaid-zu-PDF-Konverter",
+        description:
+          "Füge Mermaid-Code ein oder öffne eine .mmd-Datei. Prüfe die Vorschau und lade ein Vektor-PDF in Originalgröße oder passend für A4 oder US Letter herunter.",
+      },
+      en: {
+        name: "Mermaid to PDF Converter",
+        description:
+          "Paste Mermaid code or open a .mmd file, preview the diagram, and download a vector PDF at its original size or fitted to A4 or US Letter.",
+      },
+      es: {
+        name: "Conversor de Mermaid a PDF",
+        description:
+          "Pega código Mermaid o abre un archivo .mmd, previsualiza el diagrama y descarga un PDF vectorial en su tamaño original o ajustado a A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur Mermaid en PDF",
+        description:
+          "Collez du code Mermaid ou ouvrez un fichier .mmd, prévisualisez le diagramme et téléchargez un PDF vectoriel aux dimensions d’origine ou ajusté au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר Mermaid ל-PDF",
+        description:
+          "הדביקו קוד Mermaid או פתחו קובץ ‎.mmd, צפו בתרשים והורידו PDF וקטורי בגודל המקורי או מותאם ל-A4 או US Letter.",
+      },
+      hi: {
+        name: "Mermaid से PDF कन्वर्टर",
+        description:
+          "Mermaid कोड पेस्ट करें या .mmd फ़ाइल खोलें, डायग्राम का प्रीव्यू देखें और मूल आकार, A4 या US Letter में वेक्टर PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Mermaid ke PDF",
+        description:
+          "Tempel kode Mermaid atau buka file .mmd. Lihat pratinjau diagram dan unduh PDF vektor pada ukuran asli atau dalam format A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da Mermaid a PDF",
+        description:
+          "Incolla il codice Mermaid o apri un file .mmd, controlla l’anteprima e scarica un PDF vettoriale nelle dimensioni originali o in formato A4 o Lettera USA.",
+      },
+      ja: {
+        name: "MermaidからPDFへのコンバーター",
+        description:
+          "Mermaid コードを貼り付けるか .mmd ファイルを開いて図をプレビューし、元のサイズ、A4、US Letter のベクター PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid PDF 변환기",
+        description:
+          "Mermaid 코드를 붙여넣거나 .mmd 파일을 열어 다이어그램을 미리 보고 원본 크기, A4 또는 US Letter에 맞춘 벡터 PDF로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar Mermaid ke PDF",
+        description:
+          "Tampal kod Mermaid atau buka fail .mmd. Pratonton rajah dan muat turun PDF vektor pada saiz asal atau muatkannya pada halaman A4 atau US Letter.",
+      },
+      nl: {
+        name: "Mermaid naar PDF-converter",
+        description:
+          "Plak Mermaid-code of open een .mmd-bestand. Bekijk het diagram en download een vector-PDF op ware grootte of passend op A4 of US Letter.",
+      },
+      no: {
+        name: "Mermaid til PDF-konverterer",
+        description:
+          "Lim inn Mermaid-kode eller åpne en .mmd-fil. Se diagrammet i forhåndsvisningen og last ned en vektor-PDF i original størrelse eller tilpasset A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter Mermaid na PDF",
+        description:
+          "Wklej kod Mermaid lub otwórz plik .mmd. Zobacz podgląd i pobierz wektorowy PDF w oryginalnym rozmiarze lub w formacie A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de Mermaid para PDF",
+        description:
+          "Cole código Mermaid ou abra um arquivo .mmd, confira a prévia do diagrama e baixe um PDF vetorial no tamanho original ou ajustado a A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер Mermaid в PDF",
+        description:
+          "Вставьте код Mermaid или откройте файл .mmd. Проверьте диаграмму и скачайте векторный PDF исходного размера или на листе A4 либо US Letter.",
+      },
+      sv: {
+        name: "Mermaid till PDF-konverterare",
+        description:
+          "Klistra in Mermaid-kod eller öppna en .mmd-fil. Förhandsgranska diagrammet och ladda ned en vektor-PDF i originalstorlek eller anpassad till A4 eller US Letter.",
+      },
+      th: {
+        name: "เครื่องมือแปลงไฟล์ Mermaid เป็น PDF",
+        description:
+          "วางโค้ด Mermaid หรือเปิดไฟล์ .mmd ดูตัวอย่างแผนภาพ แล้วดาวน์โหลด PDF แบบเวกเตอร์ในขนาดต้นฉบับ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "Mermaid’den PDF’ye Dönüştürücü",
+        description:
+          "Mermaid kodunu yapıştırın veya bir .mmd dosyası açın. Diyagramı önizleyin ve özgün boyutunda, A4 ya da US Letter boyutunda vektörel PDF indirin.",
+      },
+      vi: {
+        name: "Trình chuyển Mermaid sang PDF",
+        description:
+          "Dán mã Mermaid hoặc mở tệp .mmd, xem trước sơ đồ và tải PDF vectơ xuống theo kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "Mermaid 转 PDF",
+        description:
+          "粘贴 Mermaid 代码或打开 .mmd 文件，预览图表并下载矢量 PDF。支持原图尺寸、A4 和 US Letter。",
+      },
+      "zh-TW": {
+        name: "Mermaid 轉 PDF",
+        description:
+          "貼上 Mermaid 程式碼或開啟 .mmd 檔案，預覽圖表並下載向量 PDF。支援原圖尺寸、A4 和 US Letter。",
       },
     },
   },
@@ -53321,126 +53595,267 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "bpmn-to-pdf-converter": {
+    slug: "bpmn-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "bpmn",
+      "pdf",
+      "vector",
+      "process",
+      "workflow",
+      "xml",
+      "svg",
+      "print",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل BPMN إلى PDF",
+        description:
+          "حوّل ملفات ‎.bpmn أو ‎.xml إلى PDF متجهي في متصفحك. عاين العملية واختر الحجم الأصلي أو A4 أو US Letter.",
+      },
+      de: {
+        name: "BPMN-zu-PDF-Konverter",
+        description:
+          "Konvertiere .bpmn- oder .xml-Dateien im Browser in ein Vektor-PDF. Prüfe das Prozessdiagramm in der Vorschau und wähle Originalgröße, A4 oder US Letter.",
+      },
+      en: {
+        name: "BPMN to PDF Converter",
+        description:
+          "Convert .bpmn or .xml files to a vector PDF in your browser. Preview the process and use the original size, A4, or US Letter.",
+      },
+      es: {
+        name: "Conversor de BPMN a PDF",
+        description:
+          "Convierte archivos .bpmn o .xml en un PDF vectorial desde el navegador. Previsualiza el proceso y elige el tamaño original, A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur BPMN en PDF",
+        description:
+          "Convertissez des fichiers .bpmn ou .xml en PDF vectoriel dans votre navigateur. Prévisualisez le processus et choisissez les dimensions d’origine, le format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר BPMN ל-PDF",
+        description:
+          "המירו קובצי ‎.bpmn או ‎.xml ל-PDF וקטורי בדפדפן. צפו בתהליך ובחרו בגודל המקורי, A4 או US Letter.",
+      },
+      hi: {
+        name: "BPMN से PDF कन्वर्टर",
+        description:
+          "ब्राउज़र में .bpmn या .xml फ़ाइल को वेक्टर PDF में बदलें। प्रक्रिया का प्रीव्यू देखें और मूल आकार, A4 या US Letter चुनें।",
+      },
+      id: {
+        name: "Konverter BPMN ke PDF",
+        description:
+          "Ubah file .bpmn atau .xml menjadi PDF vektor di browser. Lihat pratinjau proses dan pilih ukuran asli, A4, atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da BPMN a PDF",
+        description:
+          "Converti file .bpmn o .xml in PDF vettoriali nel browser. Controlla l’anteprima del processo e scegli le dimensioni originali, A4 o Lettera USA.",
+      },
+      ja: {
+        name: "BPMNからPDFへのコンバーター",
+        description:
+          "ブラウザーで .bpmn または .xml ファイルをベクター PDF に変換します。プロセスをプレビューし、元のサイズ、A4、US Letter を選べます。",
+      },
+      ko: {
+        name: "BPMN PDF 변환기",
+        description:
+          "브라우저에서 .bpmn 또는 .xml 파일을 벡터 PDF로 변환하세요. 프로세스를 미리 보고 원본 크기, A4 또는 US Letter를 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar BPMN ke PDF",
+        description:
+          "Tukar fail .bpmn atau .xml kepada PDF vektor dalam pelayar. Pratonton proses dan pilih saiz asal, A4 atau US Letter.",
+      },
+      nl: {
+        name: "BPMN naar PDF-converter",
+        description:
+          "Converteer .bpmn- of .xml-bestanden naar een vector-PDF in je browser. Bekijk het proces en kies ware grootte, A4 of US Letter.",
+      },
+      no: {
+        name: "BPMN til PDF-konverterer",
+        description:
+          "Konverter .bpmn- eller .xml-filer til vektor-PDF i nettleseren. Forhåndsvis prosessen og velg original størrelse, A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter BPMN na PDF",
+        description:
+          "Konwertuj pliki .bpmn lub .xml na wektorowy PDF w przeglądarce. Sprawdź podgląd procesu i wybierz oryginalny rozmiar, A4 lub US Letter.",
+      },
+      pt: {
+        name: "Conversor de BPMN para PDF",
+        description:
+          "Converta arquivos .bpmn ou .xml em PDF vetorial no navegador. Confira a prévia do processo e escolha o tamanho original, A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер BPMN в PDF",
+        description:
+          "Преобразуйте файлы .bpmn или .xml в векторный PDF прямо в браузере. Проверьте схему процесса и выберите исходный размер, A4 или US Letter.",
+      },
+      sv: {
+        name: "BPMN till PDF-konverterare",
+        description:
+          "Konvertera .bpmn- eller .xml-filer till vektor-PDF i webbläsaren. Förhandsgranska processen och välj originalstorlek, A4 eller US Letter.",
+      },
+      th: {
+        name: "เครื่องมือแปลงไฟล์ BPMN เป็น PDF",
+        description:
+          "แปลงไฟล์ .bpmn หรือ .xml เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ ดูตัวอย่างกระบวนการแล้วเลือกขนาดต้นฉบับ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "BPMN’den PDF’ye Dönüştürücü",
+        description:
+          "Tarayıcınızda .bpmn veya .xml dosyalarını vektörel PDF’ye dönüştürün. Süreci önizleyin, özgün boyutu, A4’ü veya US Letter’ı seçin.",
+      },
+      vi: {
+        name: "Trình chuyển BPMN sang PDF",
+        description:
+          "Chuyển tệp .bpmn hoặc .xml sang PDF vectơ trong trình duyệt. Xem trước quy trình và chọn kích thước gốc, A4 hoặc US Letter.",
+      },
+      "zh-CN": {
+        name: "BPMN 转 PDF",
+        description:
+          "在浏览器中打开 .bpmn 或 .xml 文件，预览 BPMN 流程图并转换成矢量 PDF。支持原图尺寸、A4 和 US Letter。",
+      },
+      "zh-TW": {
+        name: "BPMN 轉 PDF",
+        description:
+          "在瀏覽器中開啟 .bpmn 或 .xml 檔案，預覽 BPMN 流程圖並轉存為向量 PDF。支援原圖尺寸、A4 和 US Letter。",
+      },
+    },
+  },
   "bpmn-viewer": {
     slug: "bpmn-viewer",
     category: "developer",
     icon: "workflow",
-    tags: ["bpmn", "process", "workflow", "diagram", "xml", "viewer"],
+    tags: [
+      "bpmn",
+      "process",
+      "workflow",
+      "diagram",
+      "xml",
+      "viewer",
+      "pdf",
+      "svg",
+    ],
     locales: {
       ar: {
         name: "عارض BPMN",
         description:
-          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا. يمكنك أيضًا تنزيل المخطط بصيغة SVG.",
+          "افتح ملفات BPMN 2.0 بامتداد ‎.bpmn أو ‎.xml في متصفحك. حرّك المخطط وكبّره وملاءمه للعرض، ثم نزّله بصيغة PDF أو SVG.",
       },
       de: {
         name: "BPMN-Betrachter",
         description:
-          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als SVG herunter.",
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als PDF oder SVG herunter.",
       },
       en: {
         name: "BPMN Viewer",
         description:
-          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download SVG.",
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download PDF or SVG.",
       },
       es: {
         name: "Visor BPMN",
         description:
-          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en SVG.",
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en PDF o SVG.",
       },
       fr: {
         name: "Visionneuse BPMN",
         description:
-          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en SVG.",
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en PDF ou SVG.",
       },
       he: {
         name: "מציג BPMN",
         description:
-          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה. אפשר גם להוריד את התרשים כ-SVG.",
+          "פתחו תרשימי BPMN 2.0 מקובצי ‎.bpmn או ‎.xml בדפדפן. הזיזו והגדילו את התרשים, התאימו אותו לתצוגה והורידו PDF או SVG.",
       },
       hi: {
         name: "BPMN व्यूअर",
         description:
-          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें। SVG डाउनलोड भी करें।",
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें, दृश्य में फ़िट करें और PDF या SVG डाउनलोड करें।",
       },
       id: {
         name: "Penampil BPMN",
         description:
-          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat. Anda juga bisa mengunduh diagram sebagai SVG.",
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, tampilkan seluruh diagram, dan unduh sebagai PDF atau SVG.",
       },
       it: {
         name: "Visualizzatore BPMN",
         description:
-          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in SVG.",
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in PDF o SVG.",
       },
       ja: {
         name: "BPMN ビューアー",
         description:
-          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。 SVG をダウンロードできます。",
+          "ブラウザーで .bpmn または .xml ファイルの BPMN 2.0 図を開けます。図の移動や拡大・縮小、画面へのフィット、PDF または SVG のダウンロードができます。",
       },
       ko: {
         name: "BPMN 뷰어",
         description:
-          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요. SVG 다운로드를 지원합니다.",
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 여세요. 이동, 확대 및 축소, 화면 맞춤을 사용하고 PDF 또는 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemapar BPMN",
         description:
-          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan. Anda juga boleh memuat turun rajah sebagai SVG.",
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum rajah, paparkan keseluruhannya atau muat turun sebagai PDF atau SVG.",
       },
       nl: {
         name: "BPMN-viewer",
         description:
-          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als SVG.",
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als PDF of SVG.",
       },
       no: {
         name: "BPMN-viser",
         description:
-          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som SVG.",
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som PDF eller SVG.",
       },
       pl: {
         name: "Przeglądarka diagramów BPMN",
         description:
-          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok. Pobieraj diagramy w formacie SVG.",
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram, zmieniaj powiększenie, dopasowuj widok i pobieraj pliki PDF lub SVG.",
       },
       pt: {
         name: "Visualizador de BPMN",
         description:
-          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em SVG.",
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em PDF ou SVG.",
       },
       ru: {
         name: "Просмотр диаграмм BPMN",
         description:
-          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком. Скачивайте диаграммы в формате SVG.",
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml в браузере. Перемещайте и масштабируйте схему, просматривайте её целиком и скачивайте в PDF или SVG.",
       },
       sv: {
         name: "BPMN-visare",
         description:
-          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som SVG.",
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som PDF eller SVG.",
       },
       th: {
         name: "โปรแกรมดู BPMN",
         description:
-          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ ดาวน์โหลดเป็น SVG ได้",
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ แล้วดาวน์โหลดเป็น PDF หรือ SVG",
       },
       tr: {
         name: "BPMN Görüntüleyici",
         description:
-          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın. Diyagramı SVG olarak da indirebilirsiniz.",
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Diyagramı kaydırın, yakınlaştırın, ekrana sığdırın ve PDF veya SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem BPMN",
         description:
-          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem. Tải sơ đồ xuống dưới dạng SVG.",
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng, điều chỉnh sơ đồ vừa khung xem và tải xuống PDF hoặc SVG.",
       },
       "zh-CN": {
         name: "BPMN 查看器",
         description:
-          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。 支持下载 SVG。",
+          "在浏览器中查看 .bpmn 或 .xml 文件里的 BPMN 2.0 流程图。支持平移、缩放、适应视图及下载 PDF 或 SVG。",
       },
       "zh-TW": {
         name: "BPMN 檢視器",
         description:
-          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。 支援下載 SVG。",
+          "在瀏覽器中檢視 .bpmn 或 .xml 檔案中的 BPMN 2.0 流程圖。支援平移、縮放、配合視窗及下載 PDF 或 SVG。",
       },
     },
   },
@@ -64265,122 +64680,122 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     slug: "graphviz-dot-previewer",
     category: "developer",
     icon: "network",
-    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    tags: ["graphviz", "dot", "graph", "layout", "preview", "pdf", "svg"],
     locales: {
       ar: {
         name: "معاين Graphviz DOT",
         description:
-          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG أو PDF متجهي.",
       },
       de: {
         name: "Graphviz-DOT-Vorschau",
         description:
-          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG oder Vektor-PDF herunter.",
       },
       en: {
         name: "Graphviz DOT Previewer",
         description:
-          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG or vector PDF.",
       },
       es: {
         name: "Vista previa de Graphviz DOT",
         description:
-          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG o PDF vectorial.",
       },
       fr: {
         name: "Aperçu Graphviz DOT",
         description:
-          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG ou PDF vectoriel.",
       },
       he: {
         name: "תצוגה מקדימה של Graphviz DOT",
         description:
-          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG או PDF וקטורי.",
       },
       hi: {
         name: "Graphviz DOT प्रीव्यूअर",
         description:
-          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG या वेक्टर PDF के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Graphviz DOT",
         description:
-          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh graf sebagai SVG atau PDF vektor.",
       },
       it: {
         name: "Anteprima Graphviz DOT",
         description:
-          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG o PDF vettoriale.",
       },
       ja: {
         name: "Graphviz DOT プレビューアー",
         description:
-          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG またはベクター PDF でダウンロードできます。",
       },
       ko: {
         name: "Graphviz DOT 미리보기",
         description:
-          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG 또는 벡터 PDF로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Graphviz DOT",
         description:
-          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun graf sebagai SVG atau PDF vektor.",
       },
       nl: {
         name: "Graphviz DOT-voorvertoner",
         description:
-          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG of vector-PDF.",
       },
       no: {
         name: "Graphviz DOT-forhåndsviser",
         description:
-          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG eller vektor-PDF.",
       },
       pl: {
         name: "Podgląd Graphviz DOT",
         description:
-          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobieraj grafy jako SVG lub wektorowy PDF.",
       },
       pt: {
         name: "Pré-visualizador de Graphviz DOT",
         description:
-          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG ou PDF vetorial.",
       },
       ru: {
         name: "Предпросмотр Graphviz DOT",
         description:
-          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте графы в SVG или векторном PDF.",
       },
       sv: {
         name: "Graphviz DOT-förhandsgranskare",
         description:
-          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG eller vektor-PDF.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
         description:
-          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG หรือ PDF แบบเวกเตอร์",
       },
       tr: {
         name: "Graphviz DOT Önizleyici",
         description:
-          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG ya da vektörel PDF olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Graphviz DOT",
         description:
-          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, so sánh các bộ máy bố cục và tải xuống SVG hoặc PDF vectơ.",
       },
       "zh-CN": {
         name: "Graphviz DOT 预览器",
         description:
-          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+          "在线渲染 Graphviz DOT 代码，实时预览有向图和无向图，比较不同布局引擎，并下载 SVG 或矢量 PDF。",
       },
       "zh-TW": {
         name: "Graphviz DOT 預覽器",
         description:
-          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+          "在線上渲染 Graphviz DOT 程式碼，即時預覽有向圖和無向圖，比較不同配置引擎，並下載 SVG 或向量 PDF。",
       },
     },
   },
@@ -74399,123 +74814,256 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "sequence diagram",
       "svg",
       "png",
+      "pdf",
       "preview",
     ],
     locales: {
       ar: {
         name: "معاين Mermaid",
         description:
-          "حرّر شيفرة Mermaid وشاهد المخطط فورًا. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG.",
+          "حرّر شيفرة Mermaid وعاين المخطط مباشرة. جرّب مخططًا انسيابيًا أو مخطط تسلسل أو مخطط كيانات وعلاقات، ثم نزّله بصيغة SVG أو PNG أو PDF متجهي.",
       },
       de: {
         name: "Mermaid-Vorschau",
         description:
-          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG oder PNG herunter.",
+          "Bearbeite Mermaid-Code mit einer Live-Vorschau. Probiere ein Flussdiagramm, Sequenzdiagramm oder ER-Diagramm aus und lade es als SVG, PNG oder Vektor-PDF herunter.",
       },
       en: {
         name: "Mermaid Previewer",
         description:
-          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG or PNG.",
+          "Edit Mermaid code with a live diagram preview. Try a flowchart, sequence diagram, or ER diagram, then download SVG, PNG, or vector PDF.",
       },
       es: {
         name: "Vista previa de Mermaid",
         description:
-          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG o PNG.",
+          "Edita código Mermaid con una vista previa en tiempo real. Prueba un diagrama de flujo, de secuencia o de entidad-relación y descárgalo en SVG, PNG o PDF vectorial.",
       },
       fr: {
         name: "Aperçu Mermaid",
         description:
-          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG ou PNG.",
+          "Modifiez du code Mermaid avec un aperçu en direct. Essayez un diagramme de flux, de séquence ou entité-association, puis téléchargez-le en SVG, PNG ou PDF vectoriel.",
       },
       he: {
         name: "תצוגה מקדימה של Mermaid",
         description:
-          "אפשר לערוך קוד Mermaid ולראות את התרשים מתעדכן בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו אותו כ-SVG או PNG.",
+          "ערכו קוד Mermaid עם תצוגה מקדימה שמתעדכנת בזמן אמת. נסו תרשים זרימה, תרשים רצף או תרשים ישויות וקשרים והורידו SVG, PNG או PDF וקטורי.",
       },
       hi: {
         name: "Mermaid प्रीव्यूअर",
         description:
-          "Mermaid कोड संपादित करते हुए डायग्राम का लाइव प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG या PNG डाउनलोड करें।",
+          "Mermaid कोड संपादित करते हुए डायग्राम का प्रीव्यू देखें। फ़्लोचार्ट, सीक्वेंस या ER डायग्राम आज़माएँ और SVG, PNG या वेक्टर PDF डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Mermaid",
         description:
-          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG atau PNG.",
+          "Edit kode Mermaid sambil melihat pratinjau diagram secara langsung. Coba diagram alir, diagram urutan, atau diagram ER, lalu unduh sebagai SVG, PNG, atau PDF vektor.",
       },
       it: {
         name: "Anteprima Mermaid",
         description:
-          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG o PNG.",
+          "Modifica il codice Mermaid con un’anteprima in tempo reale. Prova un diagramma di flusso, di sequenza o ER e scaricalo in SVG, PNG o PDF vettoriale.",
       },
       ja: {
         name: "Mermaid プレビューアー",
         description:
-          "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。",
+          "Mermaid コードを編集しながら図をプレビューできます。フローチャート、シーケンス図、ER 図を試し、SVG、PNG、ベクター PDF でダウンロードできます。",
       },
       ko: {
         name: "Mermaid 미리보기",
         description:
-          "Mermaid 코드를 편집하며 다이어그램을 실시간으로 확인하세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 살펴보고 SVG 또는 PNG로 다운로드할 수 있습니다.",
+          "Mermaid 코드를 편집하면서 다이어그램을 미리 보세요. 순서도, 시퀀스 다이어그램, ER 다이어그램을 시험하고 SVG, PNG 또는 벡터 PDF로 다운로드하세요.",
       },
       ms: {
         name: "Pratonton Mermaid",
         description:
-          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG atau PNG.",
+          "Sunting kod Mermaid sambil melihat pratonton rajah secara langsung. Cuba carta alir, rajah jujukan atau rajah ER, kemudian muat turun sebagai SVG, PNG atau PDF vektor.",
       },
       nl: {
         name: "Mermaid-voorvertoner",
         description:
-          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG of PNG.",
+          "Bewerk Mermaid-code en bekijk direct het diagram. Probeer een stroomdiagram, sequentiediagram of ER-diagram en download het als SVG, PNG of vector-PDF.",
       },
       no: {
         name: "Mermaid-forhåndsviser",
         description:
-          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG eller PNG.",
+          "Rediger Mermaid-kode med løpende forhåndsvisning. Prøv et flytskjema, et sekvensdiagram eller et ER-diagram, og last ned som SVG, PNG eller vektor-PDF.",
       },
       pl: {
         name: "Podgląd Mermaid",
         description:
-          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go w formacie SVG albo PNG.",
+          "Edytuj kod Mermaid i oglądaj diagram na bieżąco. Wypróbuj schemat blokowy, diagram sekwencji lub diagram ER i pobierz go jako SVG, PNG lub wektorowy PDF.",
       },
       pt: {
         name: "Pré-visualizador de Mermaid",
         description:
-          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG ou PNG.",
+          "Edite código Mermaid com prévia em tempo real. Experimente um fluxograma, um diagrama de sequência ou um diagrama ER e baixe em SVG, PNG ou PDF vetorial.",
       },
       ru: {
         name: "Предпросмотр Mermaid",
         description:
-          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG или PNG.",
+          "Редактируйте код Mermaid и сразу смотрите, как выглядит диаграмма. Попробуйте блок-схему, диаграмму последовательности или ER-диаграмму и скачайте её в SVG, PNG или векторном PDF.",
       },
       sv: {
         name: "Mermaid-förhandsgranskare",
         description:
-          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG eller PNG.",
+          "Redigera Mermaid-kod och förhandsvisa diagrammet medan du skriver. Prova flödesscheman, sekvensdiagram och ER-diagram och ladda ned som SVG, PNG eller vektor-PDF.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Mermaid",
         description:
-          "แก้ไขโค้ด Mermaid พร้อมดูแผนภาพสด ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลดเป็น SVG หรือ PNG",
+          "แก้ไขโค้ด Mermaid พร้อมดูตัวอย่างแผนภาพแบบเรียลไทม์ ลองผังงาน แผนภาพลำดับ หรือแผนภาพ ER แล้วดาวน์โหลด SVG, PNG หรือ PDF แบบเวกเตอร์",
       },
       tr: {
         name: "Mermaid Önizleyici",
         description:
-          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış, sıralama veya ER diyagramı örneğini deneyin ve SVG ya da PNG olarak indirin.",
+          "Mermaid kodunu düzenlerken diyagramı anında önizleyin. Akış şeması, sıralama veya ER diyagramı örneğini deneyin ve SVG, PNG ya da vektörel PDF olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Mermaid",
         description:
-          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG hoặc PNG.",
+          "Chỉnh sửa mã Mermaid và xem sơ đồ trực tiếp. Thử lưu đồ, biểu đồ tuần tự hoặc ER, rồi tải xuống SVG, PNG hoặc PDF vectơ.",
       },
       "zh-CN": {
         name: "Mermaid 预览器",
         description:
-          "编辑 Mermaid 代码并实时预览图表。试用流程图、时序图或 ER 图，然后下载 SVG 或 PNG。",
+          "编辑 Mermaid 代码并实时预览。可试用流程图、时序图和 ER 图示例，下载 SVG、PNG 或矢量 PDF。",
       },
       "zh-TW": {
         name: "Mermaid 預覽器",
         description:
-          "編輯 Mermaid 程式碼並即時預覽圖表。試用流程圖、循序圖或 ER 圖，再下載 SVG 或 PNG。",
+          "編輯 Mermaid 程式碼並即時預覽。可試用流程圖、循序圖和 ER 圖範例，下載 SVG、PNG 或向量 PDF。",
+      },
+    },
+  },
+  "mermaid-to-pdf-converter": {
+    slug: "mermaid-to-pdf-converter",
+    category: "developer",
+    icon: "file-text",
+    tags: [
+      "mermaid",
+      "mmd",
+      "pdf",
+      "svg",
+      "vector",
+      "diagram",
+      "flowchart",
+      "print",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل Mermaid إلى PDF",
+        description:
+          "الصق شيفرة Mermaid أو افتح ملف ‎.mmd، ثم عاين المخطط ونزّله كملف PDF متجهي بالحجم الأصلي أو بحجم A4 أو US Letter.",
+      },
+      de: {
+        name: "Mermaid-zu-PDF-Konverter",
+        description:
+          "Füge Mermaid-Code ein oder öffne eine .mmd-Datei. Prüfe die Vorschau und lade ein Vektor-PDF in Originalgröße oder passend für A4 oder US Letter herunter.",
+      },
+      en: {
+        name: "Mermaid to PDF Converter",
+        description:
+          "Paste Mermaid code or open a .mmd file, preview the diagram, and download a vector PDF at its original size or fitted to A4 or US Letter.",
+      },
+      es: {
+        name: "Conversor de Mermaid a PDF",
+        description:
+          "Pega código Mermaid o abre un archivo .mmd, previsualiza el diagrama y descarga un PDF vectorial en su tamaño original o ajustado a A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur Mermaid en PDF",
+        description:
+          "Collez du code Mermaid ou ouvrez un fichier .mmd, prévisualisez le diagramme et téléchargez un PDF vectoriel aux dimensions d’origine ou ajusté au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר Mermaid ל-PDF",
+        description:
+          "הדביקו קוד Mermaid או פתחו קובץ ‎.mmd, צפו בתרשים והורידו PDF וקטורי בגודל המקורי או מותאם ל-A4 או US Letter.",
+      },
+      hi: {
+        name: "Mermaid से PDF कन्वर्टर",
+        description:
+          "Mermaid कोड पेस्ट करें या .mmd फ़ाइल खोलें, डायग्राम का प्रीव्यू देखें और मूल आकार, A4 या US Letter में वेक्टर PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Mermaid ke PDF",
+        description:
+          "Tempel kode Mermaid atau buka file .mmd. Lihat pratinjau diagram dan unduh PDF vektor pada ukuran asli atau dalam format A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da Mermaid a PDF",
+        description:
+          "Incolla il codice Mermaid o apri un file .mmd, controlla l’anteprima e scarica un PDF vettoriale nelle dimensioni originali o in formato A4 o Lettera USA.",
+      },
+      ja: {
+        name: "MermaidからPDFへのコンバーター",
+        description:
+          "Mermaid コードを貼り付けるか .mmd ファイルを開いて図をプレビューし、元のサイズ、A4、US Letter のベクター PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid PDF 변환기",
+        description:
+          "Mermaid 코드를 붙여넣거나 .mmd 파일을 열어 다이어그램을 미리 보고 원본 크기, A4 또는 US Letter에 맞춘 벡터 PDF로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar Mermaid ke PDF",
+        description:
+          "Tampal kod Mermaid atau buka fail .mmd. Pratonton rajah dan muat turun PDF vektor pada saiz asal atau muatkannya pada halaman A4 atau US Letter.",
+      },
+      nl: {
+        name: "Mermaid naar PDF-converter",
+        description:
+          "Plak Mermaid-code of open een .mmd-bestand. Bekijk het diagram en download een vector-PDF op ware grootte of passend op A4 of US Letter.",
+      },
+      no: {
+        name: "Mermaid til PDF-konverterer",
+        description:
+          "Lim inn Mermaid-kode eller åpne en .mmd-fil. Se diagrammet i forhåndsvisningen og last ned en vektor-PDF i original størrelse eller tilpasset A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter Mermaid na PDF",
+        description:
+          "Wklej kod Mermaid lub otwórz plik .mmd. Zobacz podgląd i pobierz wektorowy PDF w oryginalnym rozmiarze lub w formacie A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de Mermaid para PDF",
+        description:
+          "Cole código Mermaid ou abra um arquivo .mmd, confira a prévia do diagrama e baixe um PDF vetorial no tamanho original ou ajustado a A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер Mermaid в PDF",
+        description:
+          "Вставьте код Mermaid или откройте файл .mmd. Проверьте диаграмму и скачайте векторный PDF исходного размера или на листе A4 либо US Letter.",
+      },
+      sv: {
+        name: "Mermaid till PDF-konverterare",
+        description:
+          "Klistra in Mermaid-kod eller öppna en .mmd-fil. Förhandsgranska diagrammet och ladda ned en vektor-PDF i originalstorlek eller anpassad till A4 eller US Letter.",
+      },
+      th: {
+        name: "เครื่องมือแปลงไฟล์ Mermaid เป็น PDF",
+        description:
+          "วางโค้ด Mermaid หรือเปิดไฟล์ .mmd ดูตัวอย่างแผนภาพ แล้วดาวน์โหลด PDF แบบเวกเตอร์ในขนาดต้นฉบับ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "Mermaid’den PDF’ye Dönüştürücü",
+        description:
+          "Mermaid kodunu yapıştırın veya bir .mmd dosyası açın. Diyagramı önizleyin ve özgün boyutunda, A4 ya da US Letter boyutunda vektörel PDF indirin.",
+      },
+      vi: {
+        name: "Trình chuyển Mermaid sang PDF",
+        description:
+          "Dán mã Mermaid hoặc mở tệp .mmd, xem trước sơ đồ và tải PDF vectơ xuống theo kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "Mermaid 转 PDF",
+        description:
+          "粘贴 Mermaid 代码或打开 .mmd 文件，预览图表并下载矢量 PDF。支持原图尺寸、A4 和 US Letter。",
+      },
+      "zh-TW": {
+        name: "Mermaid 轉 PDF",
+        description:
+          "貼上 Mermaid 程式碼或開啟 .mmd 檔案，預覽圖表並下載向量 PDF。支援原圖尺寸、A4 和 US Letter。",
       },
     },
   },

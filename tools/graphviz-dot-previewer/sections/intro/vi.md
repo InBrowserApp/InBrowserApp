@@ -10,6 +10,6 @@ Dùng `dot` cho đồ thị phân tầng; thử `neato` hoặc `fdp` cho mạng 
 
 Toán tử cạnh không khớp loại đồ thị hoặc thiếu dấu ngoặc nhọn hay dấu nháy có thể gây lỗi. Kiểm tra dòng được báo và dòng trước đó. Bản xem trước vẫn có thể xuất hiện cùng lưu ý về thuộc tính không áp dụng được. Nếu mã có thuộc tính `layout`, Graphviz dùng bộ máy đó. Xem [tài liệu ngôn ngữ DOT](https://graphviz.org/doc/info/lang.html) và [hướng dẫn bố cục Graphviz](https://graphviz.org/docs/layouts/).
 
-## Tải đồ thị dưới dạng SVG
+## Xuất đồ thị Graphviz DOT sang SVG hoặc PDF
 
-Chọn **Tải SVG** để lưu bố cục hiện tại dưới dạng ảnh vector. **Vừa khung xem** và **Kích thước thực** chỉ thay đổi bản xem trước. Hãy giữ mã nguồn DOT để chỉnh sửa đồ thị sau này.
+Chọn **Tải PDF xuống** để lưu toàn bộ đồ thị trên một trang có kích thước vừa với đồ thị. Hình và đường nét vẫn rõ khi phóng to hoặc in. Chọn **Tải SVG** để nhúng đồ thị vào trang web hoặc mở trong trình chỉnh sửa vectơ. **Vừa khung xem** và **Kích thước thực** chỉ thay đổi phần xem trước trên màn hình. Giữ mã nguồn DOT nếu bạn muốn chỉnh sửa đồ thị sau này.

@@ -17,6 +17,9 @@
   "zoomIn": "Perbesar",
   "zoomOut": "Perkecil",
   "fit": "Tampilkan seluruh diagram",
+  "downloadPdf": "Unduh PDF",
+  "creatingPdf": "Membuat PDF…",
+  "pdfError": "PDF tidak dapat dibuat. Coba unduh diagram lagi.",
   "downloadSvg": "Unduh SVG",
   "exportError": "SVG tidak dapat dibuat. Coba unduh diagram lagi."
 }

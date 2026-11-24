@@ -8,10 +8,9 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/svg-pdf": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*",
-    "jspdf": "catalog:",
-    "svg2pdf.js": "catalog:"
+    "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

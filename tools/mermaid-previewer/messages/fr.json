@@ -10,6 +10,8 @@
   "invalid": "Impossible d’afficher ce diagramme Mermaid. Vérifiez la syntaxe et réessayez.",
   "downloadSvg": "Télécharger le SVG",
   "downloadPng": "Télécharger le PNG",
+  "downloadPdf": "Télécharger le PDF",
+  "pdfError": "Impossible de créer le PDF. Réessayez ou téléchargez le SVG.",
   "exportError": "Impossible de créer le PNG. Essayez de télécharger le SVG.",
   "fit": "Ajuster à la vue",
   "actualSize": "Taille réelle"

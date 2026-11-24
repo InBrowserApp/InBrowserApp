@@ -1,4 +1,4 @@
 {
   "name": "BPMN-viser",
-  "description": "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som SVG."
+  "description": "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som PDF eller SVG."
 }

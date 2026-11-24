@@ -1,4 +1,4 @@
 {
   "name": "BPMN Görüntüleyici",
-  "description": "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın. Diyagramı SVG olarak da indirebilirsiniz."
+  "description": "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Diyagramı kaydırın, yakınlaştırın, ekrana sığdırın ve PDF veya SVG olarak indirin."
 }

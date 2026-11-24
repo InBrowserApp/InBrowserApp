@@ -1,0 +1,9 @@
+{
+  "openFile": "Otwórz plik",
+  "fileError": "Nie udało się odczytać pliku. Otwórz plik źródłowy Mermaid lub wklej kod.",
+  "sourcePlaceholder": "Wklej kod Mermaid lub upuść tutaj plik .mmd.",
+  "pageSize": "Format strony PDF",
+  "original": "Dopasuj do diagramu",
+  "a4": "A4",
+  "letter": "US Letter"
+}

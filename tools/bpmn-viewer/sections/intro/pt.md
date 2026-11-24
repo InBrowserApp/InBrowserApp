@@ -10,6 +10,6 @@ Arraste o diagrama para navegar. Use os controles de zoom para ler rótulos pequ
 
 O XML do BPMN 2.0 pode descrever um processo sem registrar a posição das formas e conexões. O visualizador desenha o diagrama usando os dados de BPMN Diagram Interchange salvos com o modelo. Se não houver layout, abra o modelo na sua ferramenta de modelagem BPMN e exporte-o novamente com o diagrama incluído. Consulte a [especificação BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) para saber mais sobre o formato.
 
-## Baixar um diagrama em SVG
+## Baixar um diagrama em PDF ou SVG
 
-Depois de abrir um diagrama, selecione **Baixar SVG**. O arquivo contém o diagrama completo na escala original e permanece nítido ao ser redimensionado em documentos e slides.
+Escolha **Baixar PDF** para compartilhar o diagrama completo como PDF vetorial ou **Baixar SVG** para inseri-lo em documentos e slides. Os dois formatos incluem o diagrama inteiro, mesmo que você tenha ampliado um rótulo. Para ajustar o diagrama a A4 ou Carta (EUA) antes de imprimir, abra o arquivo no [Conversor de BPMN para PDF](../bpmn-to-pdf-converter/).

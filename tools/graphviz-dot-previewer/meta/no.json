@@ -1,4 +1,4 @@
 {
   "name": "Graphviz DOT-forhåndsviser",
-  "description": "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG."
+  "description": "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG eller vektor-PDF."
 }

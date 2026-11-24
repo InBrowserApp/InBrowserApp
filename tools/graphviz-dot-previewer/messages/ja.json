@@ -12,5 +12,7 @@
   "warnings": "Graphviz のレイアウトに関する通知",
   "fit": "画面に合わせる",
   "actualSize": "実寸",
-  "downloadSvg": "SVG をダウンロード"
+  "downloadSvg": "SVG をダウンロード",
+  "downloadPdf": "PDF をダウンロード",
+  "pdfError": "PDF を作成できませんでした。もう一度グラフをダウンロードしてください。"
 }

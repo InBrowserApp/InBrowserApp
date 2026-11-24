@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/svg-pdf": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@viz-js/viz": "catalog:",

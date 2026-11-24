@@ -1,4 +1,4 @@
 {
   "name": "Graphviz DOT Previewer",
-  "description": "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG."
+  "description": "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG or vector PDF."
 }

@@ -12,5 +12,7 @@
   "warnings": "Lưu ý về bố cục Graphviz",
   "fit": "Vừa khung xem",
   "actualSize": "Kích thước thực",
-  "downloadSvg": "Tải SVG"
+  "downloadSvg": "Tải SVG",
+  "downloadPdf": "Tải PDF xuống",
+  "pdfError": "Không thể tạo PDF. Hãy thử tải lại đồ thị."
 }

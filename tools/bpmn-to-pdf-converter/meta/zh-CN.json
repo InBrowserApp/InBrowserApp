@@ -1,0 +1,4 @@
+{
+  "name": "BPMN 转 PDF",
+  "description": "在浏览器中打开 .bpmn 或 .xml 文件，预览 BPMN 流程图并转换成矢量 PDF。支持原图尺寸、A4 和 US Letter。"
+}

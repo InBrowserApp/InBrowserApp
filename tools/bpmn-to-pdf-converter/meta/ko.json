@@ -1,0 +1,4 @@
+{
+  "name": "BPMN PDF 변환기",
+  "description": "브라우저에서 .bpmn 또는 .xml 파일을 벡터 PDF로 변환하세요. 프로세스를 미리 보고 원본 크기, A4 또는 US Letter를 선택할 수 있습니다."
+}

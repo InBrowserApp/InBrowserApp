@@ -1,4 +1,4 @@
 {
   "name": "Mermaid プレビューアー",
-  "description": "Mermaid コードを編集しながら図をプレビュー。フローチャート、シーケンス図、ER 図を試し、SVG または PNG でダウンロードできます。"
+  "description": "Mermaid コードを編集しながら図をプレビューできます。フローチャート、シーケンス図、ER 図を試し、SVG、PNG、ベクター PDF でダウンロードできます。"
 }

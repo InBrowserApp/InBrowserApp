@@ -10,6 +10,6 @@ Dra i diagrammet for å panorere. Bruk zoomknappene for å lese små etiketter, 
 
 BPMN 2.0 XML kan beskrive en prosess uten å angi plasseringen av figurene og forbindelsene. Viseren bruker modellens BPMN Diagram Interchange-data til å tegne diagrammet. Hvis layouten mangler, åpner du modellen i BPMN-verktøyet ditt og eksporterer den på nytt med diagrammet inkludert. Les mer om formatet i [BPMN 2.0-spesifikasjonen](https://www.omg.org/spec/BPMN/2.0.2/).
 
-## Last ned et diagram som SVG
+## Last ned et diagram som PDF eller SVG
 
-Velg **Last ned SVG** etter at du har åpnet et diagram. Filen inneholder hele diagrammet i opprinnelig skala og holder seg skarp når du endrer størrelsen i dokumenter og lysbilder.
+Velg **Last ned PDF** for å dele hele diagrammet som en vektor-PDF, eller **Last ned SVG** for å sette diagrammet inn i dokumenter og lysbilder. Begge filene inneholder hele diagrammet, også når du har zoomet inn på en etikett. For å tilpasse diagrammet til A4 eller US Letter før utskrift kan du åpne filen i [BPMN til PDF-konverterer](../bpmn-to-pdf-converter/).

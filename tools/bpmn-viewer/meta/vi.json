@@ -1,4 +1,4 @@
 {
   "name": "Trình xem BPMN",
-  "description": "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem. Tải sơ đồ xuống dưới dạng SVG."
+  "description": "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng, điều chỉnh sơ đồ vừa khung xem và tải xuống PDF hoặc SVG."
 }

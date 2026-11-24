@@ -10,8 +10,9 @@ import {
 } from "@workspace/ui/components/ui/select"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Code, Download, Eye, Maximize2 } from "@workspace/ui/icons"
+import { downloadBlob } from "@workspace/ui/lib/download-blob"
 import { examples } from "./examples"
-import { graphSvgUrl } from "./graph-svg"
+import { sanitizeGraphSvg } from "./graph-svg"
 
 import type { GraphInput, GraphResult } from "./graph-worker"
 import type Messages from "./messages/en.json"
@@ -30,18 +31,28 @@ const engines = [
   "patchwork",
 ]
 
-export default function Client({ messages: m }: { messages: typeof Messages }) {
+export default function Client({
+  language = "en",
+  messages: m,
+}: {
+  language?: string
+  messages: typeof Messages
+}) {
   const sourceId = useId()
   const previewId = useId()
   const [input, setInput] = useState<GraphInput>(examples.dependencies)
   const [result, setResult] = useState<GraphResult>()
   const [actualSize, setActualSize] = useState(false)
+  const [exporting, setExporting] = useState(false)
+  const [failedSvg, setFailedSvg] = useState<string>()
   const worker = useRef<Worker>(null)
+  const pendingPdf = useRef<string>(undefined)
   const { source, engine } = input
   const current =
     result?.source === source && result.engine === engine ? result : undefined
-  const svg = current?.svg
-  const url = useMemo(() => (svg ? graphSvgUrl(svg) : undefined), [svg])
+  const markup = current?.svg
+  const svg = useMemo(() => markup && sanitizeGraphSvg(markup), [markup])
+  const url = svg ? `data:image/svg+xml,${encodeURIComponent(svg)}` : undefined
   const notes = current?.notes.join("\n")
 
   useEffect(() => {
@@ -72,11 +83,29 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
       250
     )
     return () => {
+      pendingPdf.current = undefined
       window.clearTimeout(timer)
       graphWorker.removeEventListener("message", receive)
       graphWorker.removeEventListener("error", failed)
     }
   }, [source, engine])
+
+  async function downloadPdf() {
+    if (!svg) return
+
+    pendingPdf.current = svg
+    setExporting(true)
+    setFailedSvg(undefined)
+    try {
+      const { createDiagramPdf } = await import("@workspace/svg-pdf")
+      const pdf = await createDiagramPdf(svg, "original", language)
+      if (pendingPdf.current === svg) downloadBlob(pdf, "graphviz-graph.pdf")
+    } catch {
+      if (pendingPdf.current === svg) setFailedSvg(svg)
+    } finally {
+      setExporting(false)
+    }
+  }
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
@@ -169,25 +198,6 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
                 ))}
               </SelectContent>
             </Select>
-            <Button
-              asChild={Boolean(url)}
-              variant="outline"
-              size="sm"
-              disabled={!url}
-            >
-              {url ? (
-                <a
-                  href={url}
-                  download="graphviz-graph.svg"
-                  data-astro-prefetch="false"
-                >
-                  <Download data-icon="inline-start" aria-hidden="true" />
-                  {m.downloadSvg}
-                </a>
-              ) : (
-                <span>{m.downloadSvg}</span>
-              )}
-            </Button>
           </div>
         </div>
         <div className="relative min-h-56 flex-1 bg-white text-zinc-700 sm:min-h-72 lg:min-h-96">
@@ -243,6 +253,45 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             </div>
           )}
         </div>
+        <div className="flex flex-wrap items-center gap-2 border-t px-4 py-3">
+          <Button
+            variant="outline"
+            size="sm"
+            disabled={!svg || exporting}
+            aria-busy={exporting}
+            onClick={() => void downloadPdf()}
+          >
+            <Download data-icon="inline-start" aria-hidden="true" />
+            {m.downloadPdf}
+          </Button>
+          <Button
+            asChild={Boolean(url)}
+            variant="outline"
+            size="sm"
+            disabled={!url}
+          >
+            {url ? (
+              <a
+                href={url}
+                download="graphviz-graph.svg"
+                data-astro-prefetch="false"
+              >
+                <Download data-icon="inline-start" aria-hidden="true" />
+                {m.downloadSvg}
+              </a>
+            ) : (
+              <span>{m.downloadSvg}</span>
+            )}
+          </Button>
+        </div>
+        {svg && failedSvg === svg && (
+          <p
+            role="alert"
+            className="border-t px-4 py-2 text-sm text-destructive"
+          >
+            {m.pdfError}
+          </p>
+        )}
         {url && notes && (
           <details className="border-t px-4 py-2 text-sm">
             <summary className="cursor-pointer">{m.warnings}</summary>

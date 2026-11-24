@@ -1,4 +1,4 @@
 {
   "name": "Pré-visualizador de Graphviz DOT",
-  "description": "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG."
+  "description": "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG ou PDF vetorial."
 }

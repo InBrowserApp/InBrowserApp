@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./fonts": "./src/font-assets.ts",
     "./load-assets": "./src/load-assets.ts",
     "./scripts": "./src/scripts.ts"
   },

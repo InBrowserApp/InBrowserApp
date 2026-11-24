@@ -1,0 +1,9 @@
+{
+  "openFile": "Datei öffnen",
+  "fileError": "Die Datei konnte nicht gelesen werden. Öffne eine Mermaid-Quelldatei oder füge den Code ein.",
+  "sourcePlaceholder": "Mermaid-Code einfügen oder eine .mmd-Datei hier ablegen.",
+  "pageSize": "PDF-Seitenformat",
+  "original": "An Diagramm anpassen",
+  "a4": "A4",
+  "letter": "US Letter"
+}

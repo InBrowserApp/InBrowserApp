@@ -7,10 +7,10 @@ import {
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import Client from "./client"
-import { createPdf } from "./export-pdf"
+import { createPdf } from "@workspace/svg-pdf/export"
 import messages from "./messages/en.json"
 
-vi.mock("./export-pdf", () => ({ createPdf: vi.fn() }))
+vi.mock("@workspace/svg-pdf/export", () => ({ createPdf: vi.fn() }))
 
 const save = vi.fn()
 const mockPdf = vi.mocked(createPdf)

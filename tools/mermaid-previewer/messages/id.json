@@ -10,6 +10,8 @@
   "invalid": "Diagram Mermaid ini tidak dapat ditampilkan. Periksa sintaksnya, lalu coba lagi.",
   "downloadSvg": "Unduh SVG",
   "downloadPng": "Unduh PNG",
+  "downloadPdf": "Unduh PDF",
+  "pdfError": "PDF tidak dapat dibuat. Coba lagi atau unduh SVG.",
   "exportError": "PNG tidak dapat dibuat. Coba unduh diagram dalam format SVG.",
   "fit": "Sesuaikan dengan tampilan",
   "actualSize": "Ukuran sebenarnya"

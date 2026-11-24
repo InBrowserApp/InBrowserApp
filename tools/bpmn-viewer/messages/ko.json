@@ -18,5 +18,8 @@
   "zoomOut": "축소",
   "fit": "다이어그램을 화면에 맞추기",
   "downloadSvg": "SVG 다운로드",
-  "exportError": "SVG를 만들 수 없습니다. 다이어그램을 다시 다운로드해 보세요."
+  "exportError": "SVG를 만들 수 없습니다. 다이어그램을 다시 다운로드해 보세요.",
+  "pdfError": "PDF를 만들 수 없습니다. 다이어그램을 다시 다운로드해 보세요.",
+  "creatingPdf": "PDF를 만드는 중…",
+  "downloadPdf": "PDF 다운로드"
 }

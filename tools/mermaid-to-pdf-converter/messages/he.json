@@ -1,0 +1,9 @@
+{
+  "openFile": "פתיחת קובץ",
+  "fileError": "לא ניתן לקרוא את הקובץ. פתחו קובץ מקור של Mermaid או הדביקו את הקוד.",
+  "sourcePlaceholder": "הדביקו קוד Mermaid או גררו לכאן קובץ ‎.mmd.",
+  "pageSize": "גודל עמוד PDF",
+  "original": "התאמה לתרשים",
+  "a4": "A4",
+  "letter": "US Letter"
+}

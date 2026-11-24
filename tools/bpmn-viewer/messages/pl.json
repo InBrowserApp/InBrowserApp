@@ -17,6 +17,9 @@
   "zoomIn": "Powiększ",
   "zoomOut": "Pomniejsz",
   "fit": "Pokaż cały diagram",
+  "downloadPdf": "Pobierz PDF",
+  "creatingPdf": "Tworzenie PDF…",
+  "pdfError": "Nie udało się utworzyć pliku PDF. Spróbuj ponownie pobrać diagram.",
   "downloadSvg": "Pobierz SVG",
   "exportError": "Nie udało się utworzyć pliku SVG. Spróbuj ponownie pobrać diagram."
 }

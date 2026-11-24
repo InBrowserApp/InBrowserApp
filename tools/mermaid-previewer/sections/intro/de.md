@@ -6,9 +6,9 @@ Füge eine Mermaid-Definition in **Mermaid-Code** ein. Die Vorschau aktualisiert
 
 Wähle **Beispiel laden**, um den Inhalt des Editors durch ein fertiges Beispiel zu ersetzen. Ein Flussdiagramm stellt Schritte und Entscheidungen dar. Ein Sequenzdiagramm zeigt Nachrichten zwischen Beteiligten und ein ER-Diagramm die Beziehungen zwischen Entitäten eines Datenmodells. Du kannst auch andere von Mermaid unterstützte Definitionen einfügen, etwa Klassen- und Gantt-Diagramme.
 
-## Als SVG oder PNG exportieren
+## Als SVG, PNG oder PDF exportieren
 
-Lade **SVG** herunter, wenn du eine Vektorgrafik brauchst, die auch beim Skalieren scharf bleibt. Wähle **PNG**, um eine Rastergrafik in Folien oder Dokumente einzufügen. Die Datei enthält das aktuelle Diagramm mit transparentem Hintergrund. Bewahre den Mermaid-Code auf, wenn du das Diagramm später weiter bearbeiten möchtest.
+Lade **SVG** herunter, wenn du das Diagramm als skalierbare Grafik in eine Webseite einbetten möchtest. **PNG** eignet sich zum Einfügen in Folien, **PDF** als Vektordokument zum Teilen und Drucken. Die PDF-Seite ist so groß wie das vollständige Diagramm. Im [Mermaid-zu-PDF-Konverter](../mermaid-to-pdf-converter/) kannst du eine `.mmd`-Datei öffnen oder das Diagramm an A4 oder US Letter anpassen. Bewahre den Mermaid-Code auf, um das Diagramm später zu bearbeiten.
 
 ## Fehler beheben, wenn kein Diagramm erscheint
 

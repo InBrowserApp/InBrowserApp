@@ -17,6 +17,9 @@
   "zoomIn": "Zooma in",
   "zoomOut": "Zooma ut",
   "fit": "Visa hela diagrammet",
+  "downloadPdf": "Ladda ned PDF",
+  "creatingPdf": "Skapar PDF…",
+  "pdfError": "Det gick inte att skapa PDF-filen. Försök ladda ned den igen.",
   "downloadSvg": "Ladda ned SVG",
   "exportError": "Det gick inte att skapa SVG-filen. Försök ladda ned diagrammet igen."
 }

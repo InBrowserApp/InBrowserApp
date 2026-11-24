@@ -78,6 +78,33 @@ function prepareSvg(svg: string) {
   })
   const diagram = fragment.querySelector("svg")
   if (!diagram) throw new Error("Invalid Mermaid SVG")
+
+  // Journey and C4 supply SVG text inside their HTML label switches.
+  // Use that fallback for preview and export so vector PDFs retain the labels.
+  for (const label of diagram.querySelectorAll("switch")) {
+    const text = label.querySelectorAll(":scope > text")
+    if (text.length && label.firstElementChild?.localName === "foreignObject")
+      label.replaceWith(...text)
+  }
+  // Mermaid assigns section labels the background class from their rectangles.
+  for (const label of diagram.querySelectorAll<SVGTextElement>(
+    "text.journey-section"
+  )) {
+    label.style.fill = label.getAttribute("fill") ?? "inherit"
+  }
+  // Use an absolute baseline so vector outlining can reorder RTL glyphs
+  // without applying Mermaid's relative offset to an individual glyph.
+  for (const label of diagram.querySelectorAll<SVGTextElement>(
+    'text.messageText[y][dy="1em"]'
+  )) {
+    const baseline = Number(label.getAttribute("y"))
+    if (Number.isFinite(baseline) && label.style.fontSize.endsWith("px")) {
+      const offset = parseFloat(label.style.fontSize)
+      label.setAttribute("y", String(baseline + offset))
+      label.removeAttribute("dy")
+    }
+  }
+
   const viewBox = diagram
     .getAttribute("viewBox")
     ?.trim()
@@ -121,13 +148,4 @@ export async function createPng(url: string) {
       else reject(new Error("PNG export failed"))
     }, "image/png")
   })
-}
-
-export function download(blob: Blob, filename: string) {
-  const url = URL.createObjectURL(blob)
-  const link = document.createElement("a")
-  link.href = url
-  link.download = filename
-  link.click()
-  window.setTimeout(() => URL.revokeObjectURL(url), 1000)
 }

@@ -10,6 +10,8 @@
   "invalid": "Không thể kết xuất sơ đồ Mermaid này. Hãy kiểm tra cú pháp và thử lại.",
   "downloadSvg": "Tải SVG",
   "downloadPng": "Tải PNG",
+  "downloadPdf": "Tải PDF xuống",
+  "pdfError": "Không thể tạo PDF. Hãy thử lại hoặc tải SVG.",
   "exportError": "Không thể tạo PNG. Hãy thử tải SVG thay thế.",
   "fit": "Vừa khung xem",
   "actualSize": "Kích thước thực"

@@ -10,6 +10,6 @@ Commencez par `dot` pour les graphes en couches comme les dépendances de compil
 
 Graphviz peut signaler une erreur lorsqu’un opérateur d’arête ne correspond pas au type de graphe ou quand il manque une accolade ou un guillemet. Vérifiez la ligne indiquée et la précédente. L’aperçu peut aussi s’afficher avec des remarques sur les attributs que Graphviz n’a pas pu appliquer. Si le graphe définit son propre attribut `layout`, Graphviz utilise le moteur qui y est indiqué. Retrouvez les détails dans la [référence du langage DOT](https://graphviz.org/doc/info/lang.html) et le [guide des dispositions Graphviz](https://graphviz.org/docs/layouts/).
 
-## Télécharger un graphe en SVG
+## Exporter un graphe Graphviz DOT en SVG ou en PDF
 
-Sélectionnez **Télécharger le SVG** pour enregistrer la disposition actuelle sous forme d’image vectorielle. Les commandes **Ajuster à la vue** et **Taille réelle** agissent uniquement sur l’aperçu. Conservez le code DOT pour modifier le graphe plus tard.
+Choisissez **Télécharger le PDF** pour enregistrer le graphe entier sur une page à ses dimensions. Les formes et les lignes restent nettes au zoom et à l’impression. Utilisez **Télécharger le SVG** pour intégrer le graphe à une page web ou l’ouvrir dans un éditeur vectoriel. **Ajuster à la vue** et **Taille réelle** agissent uniquement sur l’aperçu. Conservez le code DOT pour modifier le graphe plus tard.

@@ -9,19 +9,15 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import {
-  Download,
-  Folder,
-  Scan,
-  Workflow,
-  ZoomIn,
-  ZoomOut,
-} from "@workspace/ui/icons"
+import { Folder, Scan, Workflow, ZoomIn, ZoomOut } from "@workspace/ui/icons"
+import type { PdfPageSizeLabels } from "@workspace/ui/components/tool/pdf-page-size-select"
+import { DiagramDownloads } from "./diagram-downloads"
 import example from "./example.bpmn?raw"
 
 import "bpmn-js/dist/assets/diagram-js.css"
 import "bpmn-js/dist/assets/bpmn-js.css"
 import type Viewer from "bpmn-js/lib/NavigatedViewer"
+import type { PageSize } from "@workspace/svg-pdf"
 import type Messages from "./messages/en.json"
 
 type Status = "loading" | "ready" | "invalid" | "noLayout"
@@ -38,29 +34,43 @@ type Diagram = { viewer: Viewer; canvas: Canvas }
 
 function fit(canvas: Canvas) {
   const { inner, outer } = canvas.viewbox()
-  const padding = 32
-  if (outer.width <= padding || outer.height <= padding) return false
+  const inset = 16
+  const bottomInset = 44
+  const availableWidth = outer.width - 2 * inset
+  const availableHeight = outer.height - inset - bottomInset
+  if (availableWidth <= 0 || availableHeight <= 0) return false
 
   const scale = Math.min(
     1,
-    (outer.width - padding) / Math.max(1, inner.width),
-    (outer.height - padding) / Math.max(1, inner.height)
+    availableWidth / Math.max(1, inner.width),
+    availableHeight / Math.max(1, inner.height)
   )
   const width = outer.width / scale
   const height = outer.height / scale
   canvas.viewbox({
     x: inner.x + (inner.width - width) / 2,
-    y: inner.y + (inner.height - height) / 2,
+    y:
+      inner.y +
+      (inner.height - height) / 2 +
+      (bottomInset - inset) / (2 * scale),
     width,
     height,
   })
   return true
 }
 
-export default function Client({ messages: m }: { messages: typeof Messages }) {
+export default function Client({
+  messages: m,
+  language = "en",
+  paperSizes,
+}: {
+  messages: typeof Messages
+  language?: string
+  paperSizes?: PdfPageSizeLabels
+}) {
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<Status>("loading")
-  const [exportFailed, setExportFailed] = useState(false)
+  const [pageSize, setPageSize] = useState<PageSize>("original")
   const container = useRef<HTMLDivElement>(null)
   const diagram = useRef<Diagram>(null)
   const touch = useRef<(Point & { id: number }) | null>(null)
@@ -71,11 +81,14 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
     focusExample.current = focusDiagram
     setFile(next)
     setStatus("loading")
-    setExportFailed(false)
   }
 
   useEffect(() => {
-    if (!ready || !focusExample.current) return
+    if (!ready || !diagram.current) return
+    const { canvas } = diagram.current
+    canvas.resized()
+    fit(canvas)
+    if (!focusExample.current) return
     focusExample.current = false
     if (document.activeElement === document.body) {
       container.current?.querySelector("svg")?.focus({ preventScroll: true })
@@ -148,33 +161,9 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
     if (canvas) canvas.zoom(Math.min(5, Math.max(0.01, canvas.zoom() * factor)))
   }
 
-  async function downloadSvg(file: File) {
-    const current = diagram.current
-    if (!current) return
-    setExportFailed(false)
-
-    try {
-      const { svg } = await current.viewer.saveSVG()
-      if (diagram.current !== current) return
-      if (!svg) throw new Error("Empty SVG export")
-
-      const stem = file.name.replace(/\.(?:bpmn|xml)$/i, "") || "bpmn-diagram"
-      const url = URL.createObjectURL(
-        new Blob([svg], { type: "image/svg+xml" })
-      )
-      window.setTimeout(() => URL.revokeObjectURL(url), 1000)
-      const link = document.createElement("a")
-      link.href = url
-      link.download = `${stem}.svg`
-      link.click()
-    } catch {
-      if (diagram.current === current) setExportFailed(true)
-    }
-  }
-
   return (
     <DocumentWorkspace
-      tool="bpmn-viewer"
+      tool={paperSizes ? "bpmn-to-pdf-converter" : "bpmn-viewer"}
       file={file}
       onFile={open}
       accept=".bpmn,.xml,application/xml,text/xml"
@@ -211,6 +200,32 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
         </Empty>
       )}
     >
+      {file && ready && (
+        <DiagramDownloads
+          filename={file.name}
+          getViewer={() => diagram.current?.viewer}
+          language={language}
+          messages={m}
+          paperSizes={paperSizes}
+          size={pageSize}
+          onSizeChange={setPageSize}
+        >
+          <DocumentIconButton label={m.zoomOut} onClick={() => zoom(1 / 1.25)}>
+            <ZoomOut aria-hidden="true" />
+          </DocumentIconButton>
+          <DocumentIconButton label={m.zoomIn} onClick={() => zoom(1.25)}>
+            <ZoomIn aria-hidden="true" />
+          </DocumentIconButton>
+          <DocumentIconButton
+            label={m.fit}
+            onClick={() => {
+              if (diagram.current) fit(diagram.current.canvas)
+            }}
+          >
+            <Scan aria-hidden="true" />
+          </DocumentIconButton>
+        </DiagramDownloads>
+      )}
       {file && (
         <div className="relative flex min-h-0 flex-1 flex-col">
           <div
@@ -248,44 +263,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
               touch.current = null
             }}
           />
-          {ready ? (
-            <div className="absolute end-3 top-3 flex max-w-[calc(100%-1.5rem)] flex-wrap items-center gap-1 rounded-lg border bg-background p-1 shadow-sm">
-              <DocumentIconButton
-                label={m.zoomOut}
-                onClick={() => zoom(1 / 1.25)}
-              >
-                <ZoomOut aria-hidden="true" />
-              </DocumentIconButton>
-              <DocumentIconButton label={m.zoomIn} onClick={() => zoom(1.25)}>
-                <ZoomIn aria-hidden="true" />
-              </DocumentIconButton>
-              <DocumentIconButton
-                label={m.fit}
-                onClick={() => {
-                  if (diagram.current) fit(diagram.current.canvas)
-                }}
-              >
-                <Scan aria-hidden="true" />
-              </DocumentIconButton>
-              <Button
-                variant="outline"
-                size="sm"
-                className="max-sm:min-h-10"
-                onClick={() => void downloadSvg(file)}
-              >
-                <Download data-icon="inline-start" aria-hidden="true" />
-                {m.downloadSvg}
-              </Button>
-              {exportFailed && (
-                <p
-                  role="status"
-                  className="max-w-60 basis-full px-2 py-1 text-sm text-destructive"
-                >
-                  {m.exportError}
-                </p>
-              )}
-            </div>
-          ) : (
+          {!ready && (
             <div
               role="status"
               className="absolute inset-0 grid place-items-center bg-background px-6 text-center text-sm"

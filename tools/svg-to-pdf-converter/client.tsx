@@ -9,13 +9,13 @@ import {
 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import { example } from "./example"
-import { millimeters, pageLayout, prepareSvg } from "./svg"
-import type { PageSize, SvgArtwork } from "./svg"
+import { millimeters, pageLayout, prepareSvg } from "@workspace/svg-pdf/svg"
+import type { PageSize } from "@workspace/svg-pdf/svg"
 import type en from "./messages/en.json"
 
 export type Messages = typeof en
 
-type Source = { filename: string; artwork: SvgArtwork }
+type Source = { filename: string; artwork: ReturnType<typeof prepareSvg> }
 type Status =
   | "reading"
   | "converting"
@@ -59,7 +59,7 @@ export default function Client({
     if (!source || busy) return
     setStatus("converting")
     try {
-      const { createPdf } = await import("./export-pdf")
+      const { createPdf } = await import("@workspace/svg-pdf/export")
       const pdf = await createPdf(source.artwork, size)
       const baseName = source.filename.replace(/\.svg$/i, "") || "image"
       pdf.save(`${baseName}.pdf`)
