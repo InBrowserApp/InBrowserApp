@@ -1,0 +1,4 @@
+{
+  "name": "NFT Metadata Batch Checker",
+  "description": "Validate NFT metadata JSON in bulk before minting. Check local files or token URIs for missing fields, invalid traits, and broken image links."
+}

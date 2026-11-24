@@ -1,0 +1,4 @@
+{
+  "name": "Trình kiểm tra hàng loạt siêu dữ liệu NFT",
+  "description": "Kiểm tra hàng loạt JSON siêu dữ liệu NFT trước khi mint. Dùng tệp trên thiết bị hoặc URI token để tìm trường còn thiếu, đặc điểm không hợp lệ và liên kết ảnh bị lỗi."
+}

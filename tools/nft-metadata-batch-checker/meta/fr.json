@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de métadonnées NFT par lots",
+  "description": "Validez les métadonnées JSON de vos NFT par lots avant le mint. Vérifiez les fichiers locaux ou les URI de jetons pour repérer les champs manquants, les traits invalides et les liens d’images rompus."
+}

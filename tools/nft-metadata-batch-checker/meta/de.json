@@ -1,0 +1,4 @@
+{
+  "name": "NFT-Metadaten stapelweise prüfen",
+  "description": "Validieren Sie NFT-Metadaten im JSON-Format vor dem Minting stapelweise. Prüfen Sie lokale Dateien oder Token-URIs auf fehlende Felder, ungültige Merkmale und fehlerhafte Bildlinks."
+}

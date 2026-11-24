@@ -1188,6 +1188,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "nanoid-generator",
   },
   {
+    category: "ipfs",
+    name: "בדיקה מרוכזת של מטא-נתוני NFT",
+    slug: "nft-metadata-batch-checker",
+  },
+  {
     category: "document",
     name: "ממיר מחברות Jupyter",
     slug: "notebook-export",

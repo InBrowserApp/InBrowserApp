@@ -1,0 +1,4 @@
+{
+  "name": "NFT-metadata in bulk controleren",
+  "description": "Valideer NFT-metadata in JSON in bulk vóór het minten. Controleer lokale bestanden of token-URI’s op ontbrekende velden, ongeldige kenmerken en niet-werkende afbeeldingslinks."
+}

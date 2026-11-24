@@ -244,6 +244,7 @@
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
+    "@tool/nft-metadata-batch-checker": "workspace:*",
     "@tool/notebook-export": "workspace:*",
     "@tool/notebook-viewer": "workspace:*",
     "@tool/number-base-converter": "workspace:*",

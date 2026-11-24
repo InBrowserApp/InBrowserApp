@@ -1,0 +1,4 @@
+{
+  "name": "Validador de metadatos NFT por lotes",
+  "description": "Valida metadatos JSON de NFT por lotes antes de acuñar. Comprueba archivos locales o URI de tokens para detectar campos que faltan, rasgos no válidos y enlaces de imagen rotos."
+}
