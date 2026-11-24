@@ -23215,6 +23215,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "kml-geojson-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
+    locales: {
+      ar: {
+        name: "محوّل بين KML وGeoJSON",
+        description:
+          "حوّل من KML إلى GeoJSON أو بالعكس في متصفحك. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها لاستخدامها في نظم المعلومات الجغرافية.",
+      },
+      de: {
+        name: "KML ↔ GeoJSON-Konverter",
+        description:
+          "KML und GeoJSON in beide Richtungen im Browser konvertieren. Füge Text ein oder öffne eine Datei und kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "KML ↔ GeoJSON Converter",
+        description:
+          "Convert KML to GeoJSON or GeoJSON to KML in your browser. Paste text or open a file, then copy or download the result for your GIS workflow.",
+      },
+      es: {
+        name: "Convertidor KML ↔ GeoJSON",
+        description:
+          "Convierte KML a GeoJSON o GeoJSON a KML en tu navegador. Pega el texto o abre un archivo y luego copia o descarga el resultado para usarlo en un SIG.",
+      },
+      fr: {
+        name: "Convertisseur KML ↔ GeoJSON",
+        description:
+          "Convertissez KML en GeoJSON ou GeoJSON en KML dans votre navigateur. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר KML ↔ GeoJSON",
+        description:
+          "המירו KML ל־GeoJSON או GeoJSON ל־KML בדפדפן. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את התוצאה לשימוש ב־GIS.",
+      },
+      hi: {
+        name: "KML ↔ GeoJSON कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में KML को GeoJSON में या GeoJSON को KML में बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर GIS में इस्तेमाल के लिए नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter KML ↔ GeoJSON",
+        description:
+          "Konversi KML ke GeoJSON atau sebaliknya di browser. Tempel teks atau buka berkas, lalu salin atau unduh hasilnya untuk digunakan di aplikasi GIS.",
+      },
+      it: {
+        name: "Convertitore KML ↔ GeoJSON",
+        description:
+          "Converti KML in GeoJSON o GeoJSON in KML nel browser. Incolla il testo o apri un file, poi copia o scarica il risultato per il tuo progetto GIS.",
+      },
+      ja: {
+        name: "KML ↔ GeoJSON 変換",
+        description:
+          "ブラウザーで KML と GeoJSON を相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーしたり、GIS で使うファイルをダウンロードしたりできます。",
+      },
+      ko: {
+        name: "KML ↔ GeoJSON 변환기",
+        description:
+          "브라우저에서 KML과 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 결과를 복사하거나 다운로드하여 GIS 작업에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar KML ↔ GeoJSON",
+        description:
+          "Tukar KML kepada GeoJSON atau sebaliknya dalam pelayar anda. Tampal teks atau buka fail, kemudian salin atau muat turun hasil untuk digunakan dalam GIS.",
+      },
+      nl: {
+        name: "KML ↔ GeoJSON-converter",
+        description:
+          "Zet KML om naar GeoJSON of GeoJSON naar KML in je browser. Plak tekst of open een bestand en kopieer of download het resultaat voor je GIS-project.",
+      },
+      no: {
+        name: "KML ↔ GeoJSON-omformer",
+        description:
+          "Konverter KML til GeoJSON eller GeoJSON til KML i nettleseren. Lim inn tekst eller åpne en fil, og kopier eller last ned resultatet til GIS-arbeidet ditt.",
+      },
+      pl: {
+        name: "Konwerter KML ↔ GeoJSON",
+        description:
+          "Konwertuj KML na GeoJSON i GeoJSON na KML w przeglądarce. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik do wykorzystania w GIS.",
+      },
+      pt: {
+        name: "Conversor KML ↔ GeoJSON",
+        description:
+          "Converta KML para GeoJSON ou GeoJSON para KML no navegador. Cole o texto ou abra um arquivo e copie ou baixe o resultado para usar no seu SIG.",
+      },
+      ru: {
+        name: "Конвертер KML ↔ GeoJSON",
+        description:
+          "Преобразуйте KML в GeoJSON и обратно прямо в браузере. Вставьте текст или откройте файл, затем скопируйте или скачайте результат для работы в ГИС.",
+      },
+      sv: {
+        name: "KML ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera KML till GeoJSON eller GeoJSON till KML i webbläsaren. Klistra in text eller öppna en fil och kopiera eller ladda sedan ned resultatet för ditt GIS-arbete.",
+      },
+      th: {
+        name: "เครื่องมือแปลง KML ↔ GeoJSON",
+        description:
+          "แปลง KML เป็น GeoJSON หรือแปลงย้อนกลับในเบราว์เซอร์ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ไปใช้ในงาน GIS",
+      },
+      tr: {
+        name: "KML ↔ GeoJSON Dönüştürücü",
+        description:
+          "Tarayıcınızda KML’yi GeoJSON’a veya GeoJSON’u KML’ye dönüştürün. Metni yapıştırın veya bir dosya açın, ardından sonucu CBS çalışmalarınız için kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi KML ↔ GeoJSON",
+        description:
+          "Chuyển KML sang GeoJSON hoặc GeoJSON sang KML ngay trong trình duyệt. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải kết quả để sử dụng trong công việc GIS.",
+      },
+      "zh-CN": {
+        name: "KML ↔ GeoJSON 转换器",
+        description:
+          "在浏览器中互转 KML 和 GeoJSON。粘贴文本或打开文件，然后复制或下载结果，用于 GIS 工作。",
+      },
+      "zh-TW": {
+        name: "KML ↔ GeoJSON 轉換器",
+        description:
+          "在瀏覽器內將 KML 轉成 GeoJSON，或將 GeoJSON 轉成 KML。貼上文字或開啟檔案，再複製或下載結果供 GIS 工具使用。",
+      },
+    },
+  },
+  {
     slug: "ksuid-generator",
     category: "developer",
     icon: "lock",
@@ -69024,6 +69147,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "鍵盤測試器",
         description:
           "即時查看實體鍵盤的按鍵、修飾鍵與組合鍵，測試瀏覽器能同時偵測多少個按鍵。",
+      },
+    },
+  },
+  "kml-geojson-converter": {
+    slug: "kml-geojson-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
+    locales: {
+      ar: {
+        name: "محوّل بين KML وGeoJSON",
+        description:
+          "حوّل من KML إلى GeoJSON أو بالعكس في متصفحك. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها لاستخدامها في نظم المعلومات الجغرافية.",
+      },
+      de: {
+        name: "KML ↔ GeoJSON-Konverter",
+        description:
+          "KML und GeoJSON in beide Richtungen im Browser konvertieren. Füge Text ein oder öffne eine Datei und kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "KML ↔ GeoJSON Converter",
+        description:
+          "Convert KML to GeoJSON or GeoJSON to KML in your browser. Paste text or open a file, then copy or download the result for your GIS workflow.",
+      },
+      es: {
+        name: "Convertidor KML ↔ GeoJSON",
+        description:
+          "Convierte KML a GeoJSON o GeoJSON a KML en tu navegador. Pega el texto o abre un archivo y luego copia o descarga el resultado para usarlo en un SIG.",
+      },
+      fr: {
+        name: "Convertisseur KML ↔ GeoJSON",
+        description:
+          "Convertissez KML en GeoJSON ou GeoJSON en KML dans votre navigateur. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר KML ↔ GeoJSON",
+        description:
+          "המירו KML ל־GeoJSON או GeoJSON ל־KML בדפדפן. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את התוצאה לשימוש ב־GIS.",
+      },
+      hi: {
+        name: "KML ↔ GeoJSON कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में KML को GeoJSON में या GeoJSON को KML में बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर GIS में इस्तेमाल के लिए नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter KML ↔ GeoJSON",
+        description:
+          "Konversi KML ke GeoJSON atau sebaliknya di browser. Tempel teks atau buka berkas, lalu salin atau unduh hasilnya untuk digunakan di aplikasi GIS.",
+      },
+      it: {
+        name: "Convertitore KML ↔ GeoJSON",
+        description:
+          "Converti KML in GeoJSON o GeoJSON in KML nel browser. Incolla il testo o apri un file, poi copia o scarica il risultato per il tuo progetto GIS.",
+      },
+      ja: {
+        name: "KML ↔ GeoJSON 変換",
+        description:
+          "ブラウザーで KML と GeoJSON を相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーしたり、GIS で使うファイルをダウンロードしたりできます。",
+      },
+      ko: {
+        name: "KML ↔ GeoJSON 변환기",
+        description:
+          "브라우저에서 KML과 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 결과를 복사하거나 다운로드하여 GIS 작업에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar KML ↔ GeoJSON",
+        description:
+          "Tukar KML kepada GeoJSON atau sebaliknya dalam pelayar anda. Tampal teks atau buka fail, kemudian salin atau muat turun hasil untuk digunakan dalam GIS.",
+      },
+      nl: {
+        name: "KML ↔ GeoJSON-converter",
+        description:
+          "Zet KML om naar GeoJSON of GeoJSON naar KML in je browser. Plak tekst of open een bestand en kopieer of download het resultaat voor je GIS-project.",
+      },
+      no: {
+        name: "KML ↔ GeoJSON-omformer",
+        description:
+          "Konverter KML til GeoJSON eller GeoJSON til KML i nettleseren. Lim inn tekst eller åpne en fil, og kopier eller last ned resultatet til GIS-arbeidet ditt.",
+      },
+      pl: {
+        name: "Konwerter KML ↔ GeoJSON",
+        description:
+          "Konwertuj KML na GeoJSON i GeoJSON na KML w przeglądarce. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik do wykorzystania w GIS.",
+      },
+      pt: {
+        name: "Conversor KML ↔ GeoJSON",
+        description:
+          "Converta KML para GeoJSON ou GeoJSON para KML no navegador. Cole o texto ou abra um arquivo e copie ou baixe o resultado para usar no seu SIG.",
+      },
+      ru: {
+        name: "Конвертер KML ↔ GeoJSON",
+        description:
+          "Преобразуйте KML в GeoJSON и обратно прямо в браузере. Вставьте текст или откройте файл, затем скопируйте или скачайте результат для работы в ГИС.",
+      },
+      sv: {
+        name: "KML ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera KML till GeoJSON eller GeoJSON till KML i webbläsaren. Klistra in text eller öppna en fil och kopiera eller ladda sedan ned resultatet för ditt GIS-arbete.",
+      },
+      th: {
+        name: "เครื่องมือแปลง KML ↔ GeoJSON",
+        description:
+          "แปลง KML เป็น GeoJSON หรือแปลงย้อนกลับในเบราว์เซอร์ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ไปใช้ในงาน GIS",
+      },
+      tr: {
+        name: "KML ↔ GeoJSON Dönüştürücü",
+        description:
+          "Tarayıcınızda KML’yi GeoJSON’a veya GeoJSON’u KML’ye dönüştürün. Metni yapıştırın veya bir dosya açın, ardından sonucu CBS çalışmalarınız için kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi KML ↔ GeoJSON",
+        description:
+          "Chuyển KML sang GeoJSON hoặc GeoJSON sang KML ngay trong trình duyệt. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải kết quả để sử dụng trong công việc GIS.",
+      },
+      "zh-CN": {
+        name: "KML ↔ GeoJSON 转换器",
+        description:
+          "在浏览器中互转 KML 和 GeoJSON。粘贴文本或打开文件，然后复制或下载结果，用于 GIS 工作。",
+      },
+      "zh-TW": {
+        name: "KML ↔ GeoJSON 轉換器",
+        description:
+          "在瀏覽器內將 KML 轉成 GeoJSON，或將 GeoJSON 轉成 KML。貼上文字或開啟檔案，再複製或下載結果供 GIS 工具使用。",
       },
     },
   },

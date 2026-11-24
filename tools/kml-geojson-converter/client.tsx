@@ -1,0 +1,43 @@
+import { TextFormatConverter } from "@workspace/ui/components/tool/text-format-converter"
+import { convert } from "./core/convert"
+import type english from "./messages/en.json"
+
+export type Messages = { readonly [Key in keyof typeof english]: string }
+
+const formats = [
+  {
+    name: "KML",
+    extension: "kml",
+    accept: ".kml",
+    example: `<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Placemark>
+    <name>Tokyo Station</name>
+    <Point><coordinates>139.767,35.681</coordinates></Point>
+  </Placemark>
+</kml>`,
+  },
+  {
+    name: "GeoJSON",
+    extension: "geojson",
+    accept: ".geojson,.json",
+    example: JSON.stringify(
+      {
+        type: "Feature",
+        properties: { name: "Tokyo Station" },
+        geometry: { type: "Point", coordinates: [139.767, 35.681] },
+      },
+      null,
+      2
+    ),
+  },
+] as const
+
+export default function Client({ messages }: Readonly<{ messages: Messages }>) {
+  return (
+    <TextFormatConverter
+      formats={formats}
+      convert={convert}
+      messages={messages}
+    />
+  )
+}

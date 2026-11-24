@@ -1,0 +1,4 @@
+{
+  "name": "KML ↔ GeoJSON 转换器",
+  "description": "在浏览器中互转 KML 和 GeoJSON。粘贴文本或打开文件，然后复制或下载结果，用于 GIS 工作。"
+}

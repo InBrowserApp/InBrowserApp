@@ -918,6 +918,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keyboard-tester",
   },
   {
+    category: "json",
+    name: "Conversor KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
+  },
+  {
     category: "developer",
     name: "Gerador de KSUID",
     slug: "ksuid-generator",

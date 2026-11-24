@@ -1,0 +1,12 @@
+{
+  "direction": "Dönüştürme yönü",
+  "example": "Örneği dene",
+  "openFile": "Dosya aç",
+  "convert": "Dönüştür",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "download": "İndir",
+  "empty": "Dönüştürme sonucu burada görünecek.",
+  "invalid": "Girdi dönüştürülemedi. Dosya biçimini ve geometriyi kontrol edin.",
+  "swap": "Sonucu girdi olarak kullan"
+}

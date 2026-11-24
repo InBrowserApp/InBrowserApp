@@ -1,0 +1,4 @@
+{
+  "name": "Conversor KML ↔ GeoJSON",
+  "description": "Converta KML para GeoJSON ou GeoJSON para KML no navegador. Cole o texto ou abra um arquivo e copie ou baixe o resultado para usar no seu SIG."
+}

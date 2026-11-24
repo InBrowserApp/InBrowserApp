@@ -1,0 +1,12 @@
+{
+  "direction": "Conversion direction",
+  "example": "Try an example",
+  "openFile": "Open file",
+  "convert": "Convert",
+  "copy": "Copy",
+  "copied": "Copied",
+  "download": "Download",
+  "empty": "The converted file will appear here.",
+  "invalid": "Could not convert the input. Check the file format and geometry.",
+  "swap": "Use result as input"
+}
