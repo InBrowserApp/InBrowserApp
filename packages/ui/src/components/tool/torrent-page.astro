@@ -27,5 +27,5 @@ const relatedHref = `${lang === "en" ? "" : `/${lang}`}/tools/${relatedSlug}/`
     </a>
     <slot />
   </div>
-  <ToolArticle className="max-w-[75ch]"><slot name="intro" /></ToolArticle>
+  <ToolArticle className="max-w-[75ch] [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]"><slot name="intro" /></ToolArticle>
 </ToolPageShell>

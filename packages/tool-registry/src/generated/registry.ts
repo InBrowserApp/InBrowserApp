@@ -42802,7 +42802,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "عارض ملفات تورنت",
         description:
-          "افتح ملفًا بامتداد .torrent لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
+          "افتح ملفًا بامتداد ⁦.torrent⁩ لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
       },
       de: {
         name: "Torrent-Dateibetrachter",
@@ -91512,7 +91512,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "عارض ملفات تورنت",
         description:
-          "افتح ملفًا بامتداد .torrent لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
+          "افتح ملفًا بامتداد ⁦.torrent⁩ لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
       },
       de: {
         name: "Torrent-Dateibetrachter",

@@ -52,8 +52,8 @@ function TorrentDetails({
         </CardHeader>
         <CardContent className="grid min-w-0 gap-4">
           {torrent.name ? (
-            <p dir="auto" className="text-xl font-semibold wrap-anywhere">
-              {torrent.name}
+            <p className="text-xl font-semibold wrap-anywhere">
+              <bdi>{torrent.name}</bdi>
             </p>
           ) : null}
           {full ? (
