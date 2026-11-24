@@ -17,7 +17,7 @@ function change(element: HTMLElement, value: string) {
 }
 
 function click(label: string) {
-  fireEvent.click(screen.getByRole("button", { name: label, exact: true }))
+  fireEvent.click(screen.getByRole("button", { name: label }))
 }
 
 test("loads the sample, shows the plan and copies the allocated and free blocks", async () => {
@@ -56,8 +56,8 @@ test("focuses the invalid field, preserves the requirements, and clears outdated
   click(messages.add)
   const names = screen.getAllByLabelText(messages.name)
   expect(document.activeElement).toBe(names[1])
-  change(names[1], "Router")
-  change(screen.getAllByLabelText(messages.type)[1], "singleHost")
+  change(names[1]!, "Router")
+  change(screen.getAllByLabelText(messages.type)[1]!, "singleHost")
   click(messages.calculate)
   expect(screen.getByText("203.0.113.32/32")).toBeTruthy()
 
@@ -80,8 +80,8 @@ test("keeps unnamed subnet identities when sorting by allocation size", () => {
   change(screen.getByLabelText(messages.parent), "203.0.113.0/24")
   click(messages.add)
   const [first, second] = screen.getAllByLabelText(messages.hosts)
-  change(first, "10")
-  change(second, "50")
+  change(first!, "10")
+  change(second!, "50")
   click(messages.calculate)
   expect(screen.getByText("Subnet 2").closest("li")?.textContent).toContain(
     "203.0.113.0/26"
