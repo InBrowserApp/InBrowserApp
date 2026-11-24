@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi JSON sang Excel",
+  "description": "Chuyển mảng JSON sang Excel (.xlsx). Dán JSON hoặc mở tệp, xem trước bảng tính và mở rộng các trường lồng nhau thành cột ngay trong trình duyệt."
+}

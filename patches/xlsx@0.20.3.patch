@@ -23,7 +23,18 @@ diff --git a/xlsx.js b/xlsx.js
  					w = __readUInt8(this, loc);
  					this.l = loc + 1;
  					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
-@@ -15973,7 +15974,9 @@
+@@ -10469,7 +10470,9 @@
+ 			if(!s.t) s.t = "";
+ 			if(typeof s.t !== "string") s.t = String(s.t);
+ 			if(s.t.match(straywsregex)) sitag += ' xml:space="preserve"';
+-			sitag += ">" + escapexml(s.t) + "</t>";
++			/* Preserve literal OOXML escape sequences and carriage returns in shared strings. */
++			var text = s.t.replace(/_(?=x[0-9a-f]{4}_)/gi, "_x005F_").split("\r").map(escapexml).join("&#13;");
++			sitag += ">" + text + "</t>";
+ 		}
+ 		sitag += "</si>";
+ 		o[o.length] = (sitag);
+@@ -15973,7 +15976,9 @@
  	var o = ["<cols>"], col;
  	for(var i = 0; i != cols.length; ++i) {
  		if(!(col = cols[i])) continue;
@@ -34,7 +45,7 @@ diff --git a/xlsx.js b/xlsx.js
  	}
  	o[o.length] = "</cols>";
  	return o.join("");
-@@ -16048,7 +16051,9 @@
+@@ -16048,7 +16053,9 @@
  			break;
  		default: vv = cell.v; break;
  	}
@@ -45,7 +56,7 @@ diff --git a/xlsx.js b/xlsx.js
  	/* TODO: cell style */
  	var os = get_cell_style(opts.cellXfs, cell, opts);
  	if(os !== 0) o.s = os;
-@@ -16292,7 +16297,8 @@
+@@ -16292,7 +16299,8 @@
  		r = [];
  		rr = encode_row(R);
  		var data_R = dense ? data[R] : [];
@@ -55,7 +66,7 @@ diff --git a/xlsx.js b/xlsx.js
  			ref = cols[C] + rr;
  			var _cell = dense ? data_R[C] : ws[ref];
  			if(_cell === undefined) continue;
-@@ -24724,6 +24730,7 @@
+@@ -24724,6 +24732,7 @@
      numbers_format_cell(ret, t | v << 8, flags, lut.ofmt[zidx], lut.nfmt[zidx]);
    if (t == 7)
      ret.v /= 86400;
@@ -63,7 +74,7 @@ diff --git a/xlsx.js b/xlsx.js
    return ret;
  }
  function parse_new_storage(buf, lut, opts) {
-@@ -24824,6 +24831,7 @@
+@@ -24824,6 +24833,7 @@
      numbers_format_cell(ret, t | 5 << 8, fields >> 13, lut.ofmt[zidx], lut.nfmt[zidx]);
    if (t == 7)
      ret.v /= 86400;
@@ -71,7 +82,7 @@ diff --git a/xlsx.js b/xlsx.js
    return ret;
  }
  function write_new_storage(cell, lut) {
-@@ -25196,6 +25204,7 @@
+@@ -25196,6 +25206,7 @@
  function parse_TST_TableModelArchive(M, root, ws, opts) {
    var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
    var pb = parse_shallow(root.data);
@@ -79,7 +90,7 @@ diff --git a/xlsx.js b/xlsx.js
    var range = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } };
    range.e.r = (varint_to_i32(pb[6][0].data) >>> 0) - 1;
    if (range.e.r < 0)
-@@ -25228,9 +25237,12 @@
+@@ -25228,9 +25239,12 @@
    var rtt = parse_shallow(store[9][0].data)[1].map(function(p) {
      return parse_shallow(p.data);
    });
@@ -92,7 +103,7 @@ diff --git a/xlsx.js b/xlsx.js
      var t = tile[1][tidx];
      if (!t)
        throw "NUMBERS missing tile " + tidx;
-@@ -25256,12 +25268,13 @@
+@@ -25256,12 +25270,13 @@
      });
      _R += _tile.nrows;
    });
@@ -107,7 +118,7 @@ diff --git a/xlsx.js b/xlsx.js
        var merge = parse_shallow(pi.data);
        var origin = u8_to_dataview(parse_shallow(merge[1][0].data)[1][0].data), size = u8_to_dataview(parse_shallow(merge[2][0].data)[1][0].data);
        return {
-@@ -25349,7 +25362,10 @@
+@@ -25349,7 +25364,10 @@
        if (mtype == 2) {
          var root2 = parse_TN_SheetArchive(M, m, opts);
          root2.sheets.forEach(function(sheet, idx) {
@@ -119,7 +130,7 @@ diff --git a/xlsx.js b/xlsx.js
          });
        }
      });
-@@ -25369,18 +25385,22 @@
+@@ -25369,18 +25387,22 @@
    cfb.FileIndex.forEach(function(s) {
      if (!s.name.match(/\.iwa$/))
        return;
@@ -168,7 +179,18 @@ diff --git a/xlsx.mjs b/xlsx.mjs
  					w = __readUInt8(this, loc);
  					this.l = loc + 1;
  					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
-@@ -16062,7 +16063,9 @@
+@@ -10554,7 +10555,9 @@
+ 			if(!s.t) s.t = "";
+ 			if(typeof s.t !== "string") s.t = String(s.t);
+ 			if(s.t.match(straywsregex)) sitag += ' xml:space="preserve"';
+-			sitag += ">" + escapexml(s.t) + "</t>";
++			/* Preserve literal OOXML escape sequences and carriage returns in shared strings. */
++			var text = s.t.replace(/_(?=x[0-9a-f]{4}_)/gi, "_x005F_").split("\r").map(escapexml).join("&#13;");
++			sitag += ">" + text + "</t>";
+ 		}
+ 		sitag += "</si>";
+ 		o[o.length] = (sitag);
+@@ -16062,7 +16065,9 @@
  	var o = ["<cols>"], col;
  	for(var i = 0; i != cols.length; ++i) {
  		if(!(col = cols[i])) continue;
@@ -179,7 +201,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
  	}
  	o[o.length] = "</cols>";
  	return o.join("");
-@@ -16137,7 +16140,9 @@
+@@ -16137,7 +16142,9 @@
  			break;
  		default: vv = cell.v; break;
  	}
@@ -190,7 +212,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
  	/* TODO: cell style */
  	var os = get_cell_style(opts.cellXfs, cell, opts);
  	if(os !== 0) o.s = os;
-@@ -16381,7 +16386,8 @@
+@@ -16381,7 +16388,8 @@
  		r = [];
  		rr = encode_row(R);
  		var data_R = dense ? data[R] : [];
@@ -200,7 +222,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
  			ref = cols[C] + rr;
  			var _cell = dense ? data_R[C] : ws[ref];
  			if(_cell === undefined) continue;
-@@ -24829,6 +24835,7 @@
+@@ -24829,6 +24837,7 @@
      numbers_format_cell(ret, t | v << 8, flags, lut.ofmt[zidx], lut.nfmt[zidx]);
    if (t == 7)
      ret.v /= 86400;
@@ -208,7 +230,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
    return ret;
  }
  function parse_new_storage(buf, lut, opts) {
-@@ -24929,6 +24936,7 @@
+@@ -24929,6 +24938,7 @@
      numbers_format_cell(ret, t | 5 << 8, fields >> 13, lut.ofmt[zidx], lut.nfmt[zidx]);
    if (t == 7)
      ret.v /= 86400;
@@ -216,7 +238,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
    return ret;
  }
  function write_new_storage(cell, lut) {
-@@ -25301,6 +25309,7 @@
+@@ -25301,6 +25311,7 @@
  function parse_TST_TableModelArchive(M, root, ws, opts) {
    var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
    var pb = parse_shallow(root.data);
@@ -224,7 +246,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
    var range = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } };
    range.e.r = (varint_to_i32(pb[6][0].data) >>> 0) - 1;
    if (range.e.r < 0)
-@@ -25333,9 +25342,12 @@
+@@ -25333,9 +25344,12 @@
    var rtt = parse_shallow(store[9][0].data)[1].map(function(p) {
      return parse_shallow(p.data);
    });
@@ -237,7 +259,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
      var t = tile[1][tidx];
      if (!t)
        throw "NUMBERS missing tile " + tidx;
-@@ -25361,12 +25373,13 @@
+@@ -25361,12 +25375,13 @@
      });
      _R += _tile.nrows;
    });
@@ -252,7 +274,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
        var merge = parse_shallow(pi.data);
        var origin = u8_to_dataview(parse_shallow(merge[1][0].data)[1][0].data), size = u8_to_dataview(parse_shallow(merge[2][0].data)[1][0].data);
        return {
-@@ -25454,7 +25467,10 @@
+@@ -25454,7 +25469,10 @@
        if (mtype == 2) {
          var root2 = parse_TN_SheetArchive(M, m, opts);
          root2.sheets.forEach(function(sheet, idx) {
@@ -264,7 +286,7 @@ diff --git a/xlsx.mjs b/xlsx.mjs
          });
        }
      });
-@@ -25474,18 +25490,22 @@
+@@ -25474,18 +25492,22 @@
    cfb.FileIndex.forEach(function(s) {
      if (!s.name.match(/\.iwa$/))
        return;

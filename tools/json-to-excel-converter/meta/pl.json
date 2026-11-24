@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter JSON na Excel",
+  "description": "Zamień tablicę JSON na plik Excel (.xlsx). Wklej JSON lub otwórz plik, sprawdź podgląd arkusza i rozwiń zagnieżdżone pola na kolumny w przeglądarce."
+}

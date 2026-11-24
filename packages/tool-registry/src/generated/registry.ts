@@ -19591,6 +19591,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-to-excel-converter",
+    category: "json",
+    icon: "table-2",
+    tags: [
+      "json",
+      "excel",
+      "xlsx",
+      "spreadsheet",
+      "nested",
+      "flatten",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل JSON إلى Excel",
+        description:
+          "حوّل مصفوفة JSON إلى ملف Excel ⁦(.xlsx)⁩. الصق بيانات JSON أو افتح ملفًا، وعاين الجدول، ووسّع الحقول المتداخلة إلى أعمدة مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "JSON-zu-Excel-Konverter",
+        description:
+          "Wandeln Sie ein JSON-Array in Excel (.xlsx) um. Fügen Sie JSON ein oder öffnen Sie eine Datei, prüfen Sie die Vorschau und teilen Sie verschachtelte Felder direkt im Browser in Spalten auf.",
+      },
+      en: {
+        name: "JSON to Excel Converter",
+        description:
+          "Convert a JSON array to Excel (.xlsx). Paste JSON or open a file, preview the spreadsheet, and expand nested fields into columns right in your browser.",
+      },
+      es: {
+        name: "Conversor de JSON a Excel",
+        description:
+          "Convierte un array JSON a Excel (.xlsx). Pega el JSON o abre un archivo para ver la hoja y expandir los campos anidados desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers Excel",
+        description:
+          "Convertissez un tableau JSON en fichier Excel (.xlsx). Collez le JSON ou ouvrez un fichier, prévisualisez la feuille et développez les champs imbriqués dans le navigateur.",
+      },
+      he: {
+        name: "ממיר JSON ל-Excel",
+        description:
+          "המירו מערך JSON לקובץ Excel ⁦(.xlsx)⁩. הדביקו JSON או פתחו קובץ, צפו בתצוגה מקדימה והרחיבו שדות מקוננים לעמודות, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "JSON से Excel कन्वर्टर",
+        description:
+          "JSON ऐरे को Excel (.xlsx) में बदलें। JSON पेस्ट करें या फ़ाइल खोलें, स्प्रेडशीट का पूर्वावलोकन देखें और नेस्टेड फ़ील्ड को सीधे ब्राउज़र में अलग कॉलम में बाँटें।",
+      },
+      id: {
+        name: "Konverter JSON ke Excel",
+        description:
+          "Konversi array JSON ke Excel (.xlsx). Tempel JSON atau buka file, lihat pratinjau tabel, dan uraikan bidang bersarang menjadi kolom langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da JSON a Excel",
+        description:
+          "Converti un array JSON in Excel (.xlsx). Incolla il JSON o apri un file, controlla il foglio in anteprima ed espandi i campi annidati nel browser.",
+      },
+      ja: {
+        name: "JSON Excel 変換",
+        description:
+          "JSON 配列を Excel（.xlsx）に変換します。JSON を貼り付けるかファイルを開き、表をプレビューして、ネストされたフィールドをブラウザー内で列に展開できます。",
+      },
+      ko: {
+        name: "JSON Excel 변환기",
+        description:
+          "JSON 배열을 Excel(.xlsx)로 변환하세요. JSON을 붙여 넣거나 파일을 열어 스프레드시트를 미리 보고 브라우저에서 중첩 필드를 열로 펼칠 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar JSON ke Excel",
+        description:
+          "Tukar tatasusunan JSON kepada Excel (.xlsx). Tampal JSON atau buka fail, lihat pratonton hamparan dan pecahkan medan bersarang kepada lajur terus dalam pelayar.",
+      },
+      nl: {
+        name: "JSON-naar-Excel-converter",
+        description:
+          "Zet een JSON-array om naar Excel (.xlsx). Plak JSON of open een bestand, bekijk het resultaat en vouw geneste velden uit tot kolommen. Alles kan direct in je browser.",
+      },
+      no: {
+        name: "Konverter JSON til Excel",
+        description:
+          "Konverter en JSON-array til Excel (.xlsx). Lim inn JSON eller åpne en fil, forhåndsvis regnearket og utvid nestede felt til kolonner direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter JSON na Excel",
+        description:
+          "Zamień tablicę JSON na plik Excel (.xlsx). Wklej JSON lub otwórz plik, sprawdź podgląd arkusza i rozwiń zagnieżdżone pola na kolumny w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de JSON para Excel",
+        description:
+          "Converta um array JSON para Excel (.xlsx). Cole o JSON ou abra um arquivo, veja a prévia da planilha e expanda campos aninhados no navegador.",
+      },
+      ru: {
+        name: "Конвертер JSON в Excel",
+        description:
+          "Преобразуйте массив JSON в Excel (.xlsx). Вставьте JSON или откройте файл, просмотрите таблицу и разверните вложенные поля в столбцы прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera JSON till Excel",
+        description:
+          "Konvertera en JSON-array till Excel (.xlsx). Klistra in JSON eller öppna en fil, förhandsgranska kalkylbladet och expandera kapslade fält till kolumner direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลง JSON เป็น Excel",
+        description:
+          "แปลงอาร์เรย์ JSON เป็น Excel (.xlsx) วาง JSON หรือเปิดไฟล์ ดูตัวอย่างตาราง และแยกฟิลด์ที่ซ้อนกันเป็นคอลัมน์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "JSON’dan Excel’e Dönüştürücü",
+        description:
+          "JSON dizisini Excel (.xlsx) dosyasına dönüştürün. JSON yapıştırın veya bir dosya açın, tabloyu önizleyin ve iç içe alanları tarayıcınızda sütunlara açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi JSON sang Excel",
+        description:
+          "Chuyển mảng JSON sang Excel (.xlsx). Dán JSON hoặc mở tệp, xem trước bảng tính và mở rộng các trường lồng nhau thành cột ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "JSON 转 Excel",
+        description:
+          "在线将 JSON 对象数组转为 Excel（.xlsx）。粘贴 JSON 或打开文件，可预览表格、将嵌套字段展开为列，整个转换都在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 Excel 轉換器",
+        description:
+          "將 JSON 陣列轉換為 Excel（.xlsx）。貼上 JSON 或開啟檔案，即可在瀏覽器中預覽試算表，並將巢狀欄位展開成欄。",
+      },
+    },
+  },
+  {
     slug: "json-to-toml-converter",
     category: "json",
     icon: "file-json-2",
@@ -61758,6 +61889,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 轉 CSV 轉換器",
         description:
           "將 JSON 轉為 CSV。貼上 JSON 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  "json-to-excel-converter": {
+    slug: "json-to-excel-converter",
+    category: "json",
+    icon: "table-2",
+    tags: [
+      "json",
+      "excel",
+      "xlsx",
+      "spreadsheet",
+      "nested",
+      "flatten",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل JSON إلى Excel",
+        description:
+          "حوّل مصفوفة JSON إلى ملف Excel ⁦(.xlsx)⁩. الصق بيانات JSON أو افتح ملفًا، وعاين الجدول، ووسّع الحقول المتداخلة إلى أعمدة مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "JSON-zu-Excel-Konverter",
+        description:
+          "Wandeln Sie ein JSON-Array in Excel (.xlsx) um. Fügen Sie JSON ein oder öffnen Sie eine Datei, prüfen Sie die Vorschau und teilen Sie verschachtelte Felder direkt im Browser in Spalten auf.",
+      },
+      en: {
+        name: "JSON to Excel Converter",
+        description:
+          "Convert a JSON array to Excel (.xlsx). Paste JSON or open a file, preview the spreadsheet, and expand nested fields into columns right in your browser.",
+      },
+      es: {
+        name: "Conversor de JSON a Excel",
+        description:
+          "Convierte un array JSON a Excel (.xlsx). Pega el JSON o abre un archivo para ver la hoja y expandir los campos anidados desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers Excel",
+        description:
+          "Convertissez un tableau JSON en fichier Excel (.xlsx). Collez le JSON ou ouvrez un fichier, prévisualisez la feuille et développez les champs imbriqués dans le navigateur.",
+      },
+      he: {
+        name: "ממיר JSON ל-Excel",
+        description:
+          "המירו מערך JSON לקובץ Excel ⁦(.xlsx)⁩. הדביקו JSON או פתחו קובץ, צפו בתצוגה מקדימה והרחיבו שדות מקוננים לעמודות, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "JSON से Excel कन्वर्टर",
+        description:
+          "JSON ऐरे को Excel (.xlsx) में बदलें। JSON पेस्ट करें या फ़ाइल खोलें, स्प्रेडशीट का पूर्वावलोकन देखें और नेस्टेड फ़ील्ड को सीधे ब्राउज़र में अलग कॉलम में बाँटें।",
+      },
+      id: {
+        name: "Konverter JSON ke Excel",
+        description:
+          "Konversi array JSON ke Excel (.xlsx). Tempel JSON atau buka file, lihat pratinjau tabel, dan uraikan bidang bersarang menjadi kolom langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da JSON a Excel",
+        description:
+          "Converti un array JSON in Excel (.xlsx). Incolla il JSON o apri un file, controlla il foglio in anteprima ed espandi i campi annidati nel browser.",
+      },
+      ja: {
+        name: "JSON Excel 変換",
+        description:
+          "JSON 配列を Excel（.xlsx）に変換します。JSON を貼り付けるかファイルを開き、表をプレビューして、ネストされたフィールドをブラウザー内で列に展開できます。",
+      },
+      ko: {
+        name: "JSON Excel 변환기",
+        description:
+          "JSON 배열을 Excel(.xlsx)로 변환하세요. JSON을 붙여 넣거나 파일을 열어 스프레드시트를 미리 보고 브라우저에서 중첩 필드를 열로 펼칠 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar JSON ke Excel",
+        description:
+          "Tukar tatasusunan JSON kepada Excel (.xlsx). Tampal JSON atau buka fail, lihat pratonton hamparan dan pecahkan medan bersarang kepada lajur terus dalam pelayar.",
+      },
+      nl: {
+        name: "JSON-naar-Excel-converter",
+        description:
+          "Zet een JSON-array om naar Excel (.xlsx). Plak JSON of open een bestand, bekijk het resultaat en vouw geneste velden uit tot kolommen. Alles kan direct in je browser.",
+      },
+      no: {
+        name: "Konverter JSON til Excel",
+        description:
+          "Konverter en JSON-array til Excel (.xlsx). Lim inn JSON eller åpne en fil, forhåndsvis regnearket og utvid nestede felt til kolonner direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter JSON na Excel",
+        description:
+          "Zamień tablicę JSON na plik Excel (.xlsx). Wklej JSON lub otwórz plik, sprawdź podgląd arkusza i rozwiń zagnieżdżone pola na kolumny w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de JSON para Excel",
+        description:
+          "Converta um array JSON para Excel (.xlsx). Cole o JSON ou abra um arquivo, veja a prévia da planilha e expanda campos aninhados no navegador.",
+      },
+      ru: {
+        name: "Конвертер JSON в Excel",
+        description:
+          "Преобразуйте массив JSON в Excel (.xlsx). Вставьте JSON или откройте файл, просмотрите таблицу и разверните вложенные поля в столбцы прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera JSON till Excel",
+        description:
+          "Konvertera en JSON-array till Excel (.xlsx). Klistra in JSON eller öppna en fil, förhandsgranska kalkylbladet och expandera kapslade fält till kolumner direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลง JSON เป็น Excel",
+        description:
+          "แปลงอาร์เรย์ JSON เป็น Excel (.xlsx) วาง JSON หรือเปิดไฟล์ ดูตัวอย่างตาราง และแยกฟิลด์ที่ซ้อนกันเป็นคอลัมน์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "JSON’dan Excel’e Dönüştürücü",
+        description:
+          "JSON dizisini Excel (.xlsx) dosyasına dönüştürün. JSON yapıştırın veya bir dosya açın, tabloyu önizleyin ve iç içe alanları tarayıcınızda sütunlara açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi JSON sang Excel",
+        description:
+          "Chuyển mảng JSON sang Excel (.xlsx). Dán JSON hoặc mở tệp, xem trước bảng tính và mở rộng các trường lồng nhau thành cột ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "JSON 转 Excel",
+        description:
+          "在线将 JSON 对象数组转为 Excel（.xlsx）。粘贴 JSON 或打开文件，可预览表格、将嵌套字段展开为列，整个转换都在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 Excel 轉換器",
+        description:
+          "將 JSON 陣列轉換為 Excel（.xlsx）。貼上 JSON 或開啟檔案，即可在瀏覽器中預覽試算表，並將巢狀欄位展開成欄。",
       },
     },
   },

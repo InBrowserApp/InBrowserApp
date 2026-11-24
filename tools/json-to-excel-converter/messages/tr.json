@@ -1,0 +1,20 @@
+{
+  "input": "JSON girdisi",
+  "inputHint": "JSON nesnelerinden oluşan bir dizi yapıştırın veya bir JSON dosyası açın.",
+  "openFile": "Dosya aç",
+  "example": "Örnek yükle",
+  "clear": "Temizle",
+  "preview": "Tablo önizlemesi",
+  "flatten": "İç içe alanları sütunlara aç",
+  "flattenHint": "İç içe nesneleri contact.city gibi sütunlara dönüştürür. Her dizi tek hücrede kalır.",
+  "emptyPreview": "Tabloyu burada görmek için JSON girin veya örneği yükleyin.",
+  "previewCount": "{totalRows} satırın {rows} tanesi ve {totalColumns} sütunun {columns} tanesi gösteriliyor.",
+  "download": "XLSX indir",
+  "invalidJson": "JSON sözdizimini kontrol edip tekrar deneyin.",
+  "invalidRecords": "[{\"name\":\"Maya\"}] gibi boş olmayan bir nesne dizisi girin.",
+  "noColumns": "Tabloda sütun oluşturmak için en az bir alan ekleyin.",
+  "sheetLimit": "Verileri bölerek Excel’in başlık dahil 1.048.576 satır ve 16.384 sütun sınırına uyun.",
+  "cellLimit": "Excel’in hücre başına 32.767 karakter sınırını aşan alan adlarını veya değerleri kısaltın.",
+  "readError": "Dosya okunamadı. Dosyayı yeniden açmayı deneyin veya içeriğini yapıştırın.",
+  "downloadError": "Excel dosyası oluşturulamadı. Yeniden indirmeyi deneyin veya kayıt sayısını azaltın."
+}
