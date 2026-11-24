@@ -5827,6 +5827,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bluetooth-le-explorer",
+    category: "developer",
+    icon: "bluetooth",
+    tags: [
+      "bluetooth le",
+      "ble",
+      "gatt",
+      "web bluetooth",
+      "uuid",
+      "characteristics",
+      "notifications",
+    ],
+    locales: {
+      ar: {
+        name: "مستكشف بلوتوث منخفض الطاقة",
+        description:
+          "اتصل بجهاز بلوتوث منخفض الطاقة في المتصفح. تصفّح خدمات GATT، واقرأ قيم الخصائص كنص أو بالنظام السداسي العشري، وسجّل الإشعارات.",
+      },
+      de: {
+        name: "Bluetooth-LE-Explorer",
+        description:
+          "Verbinde ein Bluetooth-Low-Energy-Gerät im Browser. Durchsuche GATT-Dienste, lies Merkmalswerte als Hex oder Text und protokolliere Benachrichtigungen.",
+      },
+      en: {
+        name: "Bluetooth LE Explorer",
+        description:
+          "Connect to a Bluetooth Low Energy device in your browser. Browse GATT services, read characteristic values as hex or text, and log notifications.",
+      },
+      es: {
+        name: "Explorador de Bluetooth LE",
+        description:
+          "Conecta un dispositivo Bluetooth Low Energy desde el navegador. Explora servicios GATT, lee valores de características como texto o en hexadecimal y registra notificaciones.",
+      },
+      fr: {
+        name: "Explorateur Bluetooth LE",
+        description:
+          "Connectez-vous à un appareil Bluetooth Low Energy dans votre navigateur. Parcourez les services GATT, lisez les valeurs des caractéristiques en hexadécimal ou en texte et consignez les notifications.",
+      },
+      he: {
+        name: "סייר Bluetooth LE",
+        description:
+          "התחברו להתקן Bluetooth עם צריכת אנרגיה נמוכה בדפדפן. עיינו בשירותי GATT, קראו ערכי מאפיינים כהקסדצימלי או כטקסט ותעדו התראות.",
+      },
+      hi: {
+        name: "Bluetooth LE एक्सप्लोरर",
+        description:
+          "ब्राउज़र में Bluetooth Low Energy डिवाइस से कनेक्ट करें। GATT सेवाएँ देखें, विशेषताओं के मान हेक्स या टेक्स्ट में पढ़ें और सूचनाएँ लॉग करें।",
+      },
+      id: {
+        name: "Penjelajah Bluetooth LE",
+        description:
+          "Hubungkan perangkat Bluetooth Low Energy di browser. Jelajahi layanan GATT, baca nilai karakteristik sebagai heksadesimal atau teks, dan catat notifikasi.",
+      },
+      it: {
+        name: "Esplora Bluetooth LE",
+        description:
+          "Connettiti a un dispositivo Bluetooth Low Energy nel browser. Esplora i servizi GATT, leggi i valori delle caratteristiche in formato esadecimale o testo e registra le notifiche.",
+      },
+      ja: {
+        name: "Bluetooth LE エクスプローラー",
+        description:
+          "ブラウザーで Bluetooth Low Energy デバイスに接続します。GATT サービスを調べ、キャラクタリスティックの値を16進数またはテキストで読み取り、通知を記録できます。",
+      },
+      ko: {
+        name: "블루투스 LE 탐색기",
+        description:
+          "브라우저에서 저전력 블루투스 기기에 연결하세요. GATT 서비스를 살펴보고, 특성 값을 16진수 또는 텍스트로 읽고, 알림을 기록할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjelajah Bluetooth LE",
+        description:
+          "Sambungkan peranti Bluetooth Low Energy dalam pelayar. Terokai perkhidmatan GATT, baca nilai ciri sebagai heks atau teks, dan log pemberitahuan.",
+      },
+      nl: {
+        name: "Bluetooth LE-verkenner",
+        description:
+          "Maak in je browser verbinding met een Bluetooth Low Energy-apparaat. Bekijk GATT-services, lees kenmerkwaarden als hexadecimale gegevens of tekst en leg meldingen vast.",
+      },
+      no: {
+        name: "Bluetooth LE-utforsker",
+        description:
+          "Koble til en Bluetooth Low Energy-enhet i nettleseren. Utforsk GATT-tjenester, les karakteristikkverdier som hex eller tekst, og loggfør varsler.",
+      },
+      pl: {
+        name: "Eksplorator Bluetooth LE",
+        description:
+          "Połącz się z urządzeniem Bluetooth Low Energy w przeglądarce. Przeglądaj usługi GATT, odczytuj wartości charakterystyk jako tekst lub dane szesnastkowe i zapisuj powiadomienia.",
+      },
+      pt: {
+        name: "Explorador Bluetooth LE",
+        description:
+          "Conecte um dispositivo Bluetooth Low Energy no navegador. Explore serviços GATT, leia valores de características em hexadecimal ou texto e registre notificações.",
+      },
+      ru: {
+        name: "Обозреватель Bluetooth LE",
+        description:
+          "Подключайтесь к устройству Bluetooth Low Energy в браузере. Просматривайте службы GATT, считывайте значения характеристик в виде текста или шестнадцатеричных байтов и записывайте уведомления в журнал.",
+      },
+      sv: {
+        name: "Bluetooth LE-utforskare",
+        description:
+          "Anslut till en Bluetooth Low Energy-enhet i webbläsaren. Utforska GATT-tjänster, läs egenskapsvärden som hexadecimaldata eller text och logga aviseringar.",
+      },
+      th: {
+        name: "เครื่องมือสำรวจ Bluetooth LE",
+        description:
+          "เชื่อมต่ออุปกรณ์ Bluetooth Low Energy ในเบราว์เซอร์ สำรวจบริการ GATT อ่านค่าลักษณะเฉพาะเป็นเลขฐานสิบหกหรือข้อความ และบันทึกการแจ้งเตือน",
+      },
+      tr: {
+        name: "Bluetooth LE Gezgini",
+        description:
+          "Tarayıcınızda bir Bluetooth Low Energy cihazına bağlanın. GATT hizmetlerini inceleyin, özellik değerlerini onaltılık biçimde veya metin olarak okuyun ve bildirimleri günlüğe kaydedin.",
+      },
+      vi: {
+        name: "Công cụ khám phá Bluetooth LE",
+        description:
+          "Kết nối với thiết bị Bluetooth năng lượng thấp trong trình duyệt. Duyệt các dịch vụ GATT, đọc giá trị đặc điểm dưới dạng hex hoặc văn bản và ghi lại thông báo.",
+      },
+      "zh-CN": {
+        name: "低功耗蓝牙浏览器",
+        description:
+          "在浏览器中连接低功耗蓝牙设备。浏览 GATT 服务，以十六进制或文本形式读取特征值，并记录通知。",
+      },
+      "zh-TW": {
+        name: "藍牙 LE 探索器",
+        description:
+          "在瀏覽器中連接藍牙低功耗裝置。瀏覽 GATT 服務、以十六進位或文字讀取特性值，並記錄通知。",
+      },
+    },
+  },
+  {
     slug: "bpm-detector",
     category: "audio",
     icon: "activity",

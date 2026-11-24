@@ -4142,6 +4142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bluetooth-le-explorer",
+    language: "ar",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "de",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "en",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "es",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "fr",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "he",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "hi",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "id",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "it",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "ja",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "ko",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "ms",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "nl",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "no",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "pl",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "pt",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "ru",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "sv",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "th",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "tr",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "vi",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "zh-CN",
+  },
+  {
+    slug: "bluetooth-le-explorer",
+    language: "zh-TW",
+  },
+  {
     slug: "bpm-detector",
     language: "ar",
   },

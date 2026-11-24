@@ -1,0 +1,4 @@
+{
+  "name": "Bluetooth LE-verkenner",
+  "description": "Maak in je browser verbinding met een Bluetooth Low Energy-apparaat. Bekijk GATT-services, lees kenmerkwaarden als hexadecimale gegevens of tekst en leg meldingen vast."
+}

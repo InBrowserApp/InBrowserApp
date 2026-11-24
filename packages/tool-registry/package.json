@@ -52,6 +52,7 @@
     "@tool/blake2b-hash-text-or-file": "workspace:*",
     "@tool/blake2s-hash-text-or-file": "workspace:*",
     "@tool/blake3-hash-text-or-file": "workspace:*",
+    "@tool/bluetooth-le-explorer": "workspace:*",
     "@tool/bpm-detector": "workspace:*",
     "@tool/bpmn-to-pdf-converter": "workspace:*",
     "@tool/bpmn-viewer": "workspace:*",

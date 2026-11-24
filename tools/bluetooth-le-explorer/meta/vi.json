@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ khám phá Bluetooth LE",
+  "description": "Kết nối với thiết bị Bluetooth năng lượng thấp trong trình duyệt. Duyệt các dịch vụ GATT, đọc giá trị đặc điểm dưới dạng hex hoặc văn bản và ghi lại thông báo."
+}

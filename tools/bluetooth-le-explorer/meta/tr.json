@@ -1,0 +1,4 @@
+{
+  "name": "Bluetooth LE Gezgini",
+  "description": "Tarayıcınızda bir Bluetooth Low Energy cihazına bağlanın. GATT hizmetlerini inceleyin, özellik değerlerini onaltılık biçimde veya metin olarak okuyun ve bildirimleri günlüğe kaydedin."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Bluetooth LE エクスプローラー",
+  "description": "ブラウザーで Bluetooth Low Energy デバイスに接続します。GATT サービスを調べ、キャラクタリスティックの値を16進数またはテキストで読み取り、通知を記録できます。"
+}
