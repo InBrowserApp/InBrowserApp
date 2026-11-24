@@ -4,7 +4,7 @@ Open een DNS-export in BIND-formaat of plak de tekst. Laad het voorbeeld voor ee
 
 ## Hoe de parser omgaat met het zonedomein, de TTL en recordgegevens
 
-Met $ORIGIN ingesteld op example.com. wordt de relatieve recordnaam ‘www’ aangevuld tot www.example.com. De naam @ verwijst naar het huidige zonedomein. Een ingesprongen record neemt de naam van het vorige record over. Staat er geen $ORIGIN in het bestand? Vul het zonedomein dan in bij Begindomein. Een standaardwaarde van 1h voor $TTL komt overeen met 3.600 seconden. Heeft een record een eigen TTL, dan geldt die waarde. Aanhalingstekens, escapes en relatieve doelnamen blijven in de recordgegevens behouden. Zo blijft ‘hello; world’ één TXT-waarde, en blijft ‘mail’ in een MX-record gewoon ‘mail’.
+Met $ORIGIN ingesteld op `example.com.` wordt de relatieve recordnaam ‘www’ aangevuld tot `www.example.com.` De naam @ verwijst naar het huidige zonedomein. Een ingesprongen record neemt de naam van het vorige record over. Staat er geen $ORIGIN in het bestand? Vul het zonedomein dan in bij Begindomein. Een standaardwaarde van 1h voor $TTL komt overeen met 3.600 seconden. Heeft een record een eigen TTL, dan geldt die waarde. Aanhalingstekens, escapes en relatieve doelnamen blijven in de recordgegevens behouden. Zo blijft ‘hello; world’ één TXT-waarde, en blijft ‘mail’ in een MX-record gewoon ‘mail’.
 
 ## Wat je in de resultaten ziet
 

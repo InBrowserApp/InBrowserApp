@@ -4,7 +4,7 @@ Buka fail eksport DNS dalam format BIND atau tampal teksnya. Muatkan contoh untu
 
 ## Cara domain asas, TTL dan data rekod dikendalikan
 
-Jika $ORIGIN ditetapkan kepada “example.com.”, nama relatif “www” menjadi www.example.com. Nama @ merujuk kepada domain asas semasa, manakala rekod pada baris berinden mewarisi nama sebelumnya. Jika fail tiada $ORIGIN, masukkan domainnya dalam medan Domain asas awal. Nilai lalai $TTL sebanyak 1h menjadi 3,600 saat, manakala rekod dengan TTL sendiri menggunakan nilai tersebut. Tanda petikan, aksara lepas dan nama sasaran relatif dikekalkan seperti dalam teks asal. Oleh itu, “hello; world” kekal sebagai satu nilai TXT, dan “mail” dalam data MX kekal sebagai “mail”.
+Jika $ORIGIN ditetapkan kepada “`example.com.`”, nama relatif “www” menjadi `www.example.com.` Nama @ merujuk kepada domain asas semasa, manakala rekod pada baris berinden mewarisi nama sebelumnya. Jika fail tiada $ORIGIN, masukkan domainnya dalam medan Domain asas awal. Nilai lalai $TTL sebanyak 1h menjadi 3,600 saat, manakala rekod dengan TTL sendiri menggunakan nilai tersebut. Tanda petikan, aksara lepas dan nama sasaran relatif dikekalkan seperti dalam teks asal. Oleh itu, “hello; world” kekal sebagai satu nilai TXT, dan “mail” dalam data MX kekal sebagai “mail”.
 
 ## Cara memahami hasil
 

@@ -4,7 +4,7 @@ Apri un’esportazione DNS in formato BIND o incolla il contenuto. Carica l’es
 
 ## Come vengono gestiti origine, TTL e dati dei record
 
-Con $ORIGIN impostata su example.com., il nome relativo «www» diventa www.example.com. Il nome @ indica l’origine corrente, mentre un record indentato riprende il nome precedente. Se nel file manca $ORIGIN, inserisci il dominio nel campo Origine iniziale. Un $TTL predefinito di 1h equivale a 3.600 secondi. Un record con un proprio TTL conserva il suo valore. I dati mantengono virgolette, escape e destinazioni relative come nel file. Così «hello; world» resta un unico valore TXT e «mail» nei dati di un record MX resta «mail».
+Con $ORIGIN impostata su `example.com.`, il nome relativo «www» diventa `www.example.com.` Il nome @ indica l’origine corrente, mentre un record indentato riprende il nome precedente. Se nel file manca $ORIGIN, inserisci il dominio nel campo Origine iniziale. Un $TTL predefinito di 1h equivale a 3.600 secondi. Un record con un proprio TTL conserva il suo valore. I dati mantengono virgolette, escape e destinazioni relative come nel file. Così «hello; world» resta un unico valore TXT e «mail» nei dati di un record MX resta «mail».
 
 ## Come interpretare i risultati
 

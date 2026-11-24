@@ -4,7 +4,7 @@ BIND biçiminde dışa aktarılmış bir DNS dosyasını açın veya metnini yap
 
 ## Alan adı, TTL ve kayıt verileri nasıl işlenir?
 
-$ORIGIN değeri example.com. olduğunda ‘www’ göreli adı www.example.com. olur. @ geçerli alan adını belirtir. Girintili bir kayıt önceki kaydın adını kullanır. Dosyada $ORIGIN yoksa alan adını Başlangıç alan adı kutusuna girin. Varsayılan $TTL değeri 1h ise 3.600 saniyeye çevrilir. Kendi TTL değeri olan kayıt bu değeri kullanır. Kayıt verisindeki tırnak işaretleri, kaçış karakterleri ve göreli hedefler yazıldığı gibi kalır. Böylece “hello; world” tek bir TXT değeri olarak kalır ve MX verisindeki ‘mail’ değişmez.
+$ORIGIN değeri `example.com.` olduğunda ‘www’ göreli adı `www.example.com.` olur. @ geçerli alan adını belirtir. Girintili bir kayıt önceki kaydın adını kullanır. Dosyada $ORIGIN yoksa alan adını Başlangıç alan adı kutusuna girin. Varsayılan $TTL değeri 1h ise 3.600 saniyeye çevrilir. Kendi TTL değeri olan kayıt bu değeri kullanır. Kayıt verisindeki tırnak işaretleri, kaçış karakterleri ve göreli hedefler yazıldığı gibi kalır. Böylece “hello; world” tek bir TXT değeri olarak kalır ve MX verisindeki ‘mail’ değişmez.
 
 ## Sonuçlar nasıl yorumlanır?
 

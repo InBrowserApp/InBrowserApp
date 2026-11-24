@@ -4,7 +4,7 @@ Mở tệp DNS xuất theo định dạng BIND hoặc dán nội dung tệp. T�
 
 ## Cách xử lý tên miền gốc, TTL và dữ liệu bản ghi
 
-Khi $ORIGIN là example.com., tên tương đối ‘www’ trở thành www.example.com. Tên @ chỉ tên miền gốc hiện tại, còn bản ghi thụt lề dùng lại tên của bản ghi trước đó. Nếu tệp không có $ORIGIN, hãy điền tên miền của vùng vào ô Tên miền gốc ban đầu. $TTL mặc định là 1h tương ứng với 3.600 giây. Nếu bản ghi có TTL riêng, công cụ dùng giá trị đó. Dấu ngoặc kép, ký tự thoát và tên đích tương đối trong dữ liệu đều được giữ nguyên. Ví dụ, “hello; world” vẫn là một giá trị TXT và ‘mail’ trong dữ liệu MX vẫn được hiển thị là ‘mail’.
+Khi $ORIGIN là `example.com.`, tên tương đối ‘www’ trở thành `www.example.com.` Tên @ chỉ tên miền gốc hiện tại, còn bản ghi thụt lề dùng lại tên của bản ghi trước đó. Nếu tệp không có $ORIGIN, hãy điền tên miền của vùng vào ô Tên miền gốc ban đầu. $TTL mặc định là 1h tương ứng với 3.600 giây. Nếu bản ghi có TTL riêng, công cụ dùng giá trị đó. Dấu ngoặc kép, ký tự thoát và tên đích tương đối trong dữ liệu đều được giữ nguyên. Ví dụ, “hello; world” vẫn là một giá trị TXT và ‘mail’ trong dữ liệu MX vẫn được hiển thị là ‘mail’.
 
 ## Kết quả phân tích cho biết gì?
 

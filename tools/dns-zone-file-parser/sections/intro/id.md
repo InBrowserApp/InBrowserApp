@@ -4,7 +4,7 @@ Buka hasil ekspor DNS dalam format BIND atau tempel teksnya. Muat contoh untuk m
 
 ## Cara parser menangani domain dasar, TTL, dan data record
 
-Jika $ORIGIN ditetapkan ke “example.com.”, nama relatif “www” menjadi www.example.com. Nama @ merujuk ke domain dasar saat ini, sedangkan record pada baris yang menjorok mewarisi nama sebelumnya. Jika file tidak memiliki $ORIGIN, masukkan domainnya di kolom Domain dasar awal. Nilai bawaan $TTL sebesar 1h menjadi 3.600 detik, dan record yang memiliki TTL sendiri memakai nilai tersebut. Tanda kutip, karakter escape, dan nama tujuan relatif tetap seperti teks aslinya. Jadi “hello; world” tetap menjadi satu nilai TXT, dan “mail” pada data MX tetap “mail”.
+Jika $ORIGIN ditetapkan ke “`example.com.`”, nama relatif “www” menjadi `www.example.com.` Nama @ merujuk ke domain dasar saat ini, sedangkan record pada baris yang menjorok mewarisi nama sebelumnya. Jika file tidak memiliki $ORIGIN, masukkan domainnya di kolom Domain dasar awal. Nilai bawaan $TTL sebesar 1h menjadi 3.600 detik, dan record yang memiliki TTL sendiri memakai nilai tersebut. Tanda kutip, karakter escape, dan nama tujuan relatif tetap seperti teks aslinya. Jadi “hello; world” tetap menjadi satu nilai TXT, dan “mail” pada data MX tetap “mail”.
 
 ## Cara membaca hasil
 

@@ -4,7 +4,7 @@
 
 ## Så hanteras ursprungsdomän, TTL och postdata
 
-Med $ORIGIN satt till example.com. blir det relativa postnamnet ”www” det fullständiga namnet www.example.com. Namnet @ betecknar den aktuella ursprungsdomänen. En indragen post ärver namnet från föregående post. Om filen saknar $ORIGIN anger du domänen under Ursprungsdomän. Standardvärdet 1h för $TTL motsvarar 3 600 sekunder. En post med egen TTL använder det värdet. Citattecken, escape-sekvenser och relativa målnamn bevaras i postdata. Därför förblir ”hello; world” ett enda TXT-värde och ”mail” i en MX-post står kvar som ”mail”.
+Med $ORIGIN satt till `example.com.` blir det relativa postnamnet ”www” det fullständiga namnet `www.example.com.` Namnet @ betecknar den aktuella ursprungsdomänen. En indragen post ärver namnet från föregående post. Om filen saknar $ORIGIN anger du domänen under Ursprungsdomän. Standardvärdet 1h för $TTL motsvarar 3 600 sekunder. En post med egen TTL använder det värdet. Citattecken, escape-sekvenser och relativa målnamn bevaras i postdata. Därför förblir ”hello; world” ett enda TXT-värde och ”mail” i en MX-post står kvar som ”mail”.
 
 ## Vad resultaten visar
 

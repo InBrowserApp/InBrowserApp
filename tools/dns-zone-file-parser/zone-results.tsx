@@ -1,3 +1,4 @@
+/* oxlint-disable jsx-a11y/no-interactive-element-to-noninteractive-role -- Keep native table semantics when narrow screens lay rows out as grids. */
 import { useId } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
@@ -96,20 +97,22 @@ export function ZoneResults({
           </div>
         )}
         {visible.length > 0 ? (
-          <div
-            className="overflow-x-auto rounded-md border focus-visible:outline-2 focus-visible:outline-ring"
-            // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- Allow keyboard scrolling of the records.
-            tabIndex={0}
-            role="region"
-            aria-label={messages.records}
-          >
-            <table className="w-full min-w-[35rem] border-collapse text-sm">
-              <thead className="bg-muted/50 text-start text-xs font-medium">
-                <tr>
+          <div className="overflow-hidden rounded-md border">
+            <table
+              role="table"
+              className="block w-full border-collapse text-sm md:table"
+              aria-label={messages.records}
+            >
+              <thead
+                role="rowgroup"
+                className="sr-only bg-muted/50 text-start text-xs font-medium md:not-sr-only md:table-header-group"
+              >
+                <tr role="row">
                   {COLUMNS.map((column) => (
                     <th
                       key={column}
                       scope="col"
+                      role="columnheader"
                       className="px-3 py-2.5 text-start"
                     >
                       {messages[column]}
@@ -117,23 +120,58 @@ export function ZoneResults({
                   ))}
                 </tr>
               </thead>
-              <tbody>
+              <tbody role="rowgroup" className="block md:table-row-group">
                 {visible.map((record) => (
-                  <tr key={record.line} className="border-t align-top">
-                    <td className="px-3 py-2.5 font-mono wrap-anywhere">
+                  <tr
+                    key={record.line}
+                    role="row"
+                    className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 gap-y-2.5 border-t p-3 align-top first:border-t-0 md:table-row md:p-0 md:first:border-t"
+                  >
+                    <td
+                      role="cell"
+                      className="min-w-0 font-mono wrap-anywhere md:px-3 md:py-2.5"
+                    >
                       <bdi dir="ltr">{record.name}</bdi>
                     </td>
-                    <td className="px-3 py-2.5 font-mono">
-                      <bdi>{record.type}</bdi>
+                    <td role="cell" className="font-mono md:px-3 md:py-2.5">
+                      <bdi className="rounded bg-muted px-1.5 py-0.5 text-xs md:bg-transparent md:p-0 md:text-sm">
+                        {record.type}
+                      </bdi>
                     </td>
-                    <td className="w-1/2 px-3 py-2.5 font-mono wrap-anywhere">
-                      <bdi dir="ltr">{record.data}</bdi>
+                    <td
+                      role="cell"
+                      className="col-span-full min-w-0 wrap-anywhere md:w-1/2 md:px-3 md:py-2.5"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="block text-xs text-muted-foreground md:hidden"
+                      >
+                        {messages.data}
+                      </span>
+                      <bdi dir="ltr" className="font-mono">
+                        {record.data}
+                      </bdi>
                     </td>
-                    <td className="px-3 py-2.5 whitespace-nowrap tabular-nums">
+                    <td
+                      role="cell"
+                      className="tabular-nums md:px-3 md:py-2.5 md:whitespace-nowrap"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="block text-xs text-muted-foreground md:hidden"
+                      >
+                        {messages.ttl}
+                      </span>
                       {record.ttl === null ? "—" : format.format(record.ttl)}
                     </td>
-                    <td className="px-3 py-2.5 font-mono">
-                      <bdi>{record.class}</bdi>
+                    <td role="cell" className="md:px-3 md:py-2.5">
+                      <span
+                        aria-hidden="true"
+                        className="block text-xs text-muted-foreground md:hidden"
+                      >
+                        {messages.class}
+                      </span>
+                      <bdi className="font-mono">{record.class}</bdi>
                     </td>
                   </tr>
                 ))}

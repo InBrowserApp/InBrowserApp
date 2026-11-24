@@ -4,7 +4,7 @@ Ouvrez un export DNS au format BIND ou collez son contenu. Chargez l’exemple p
 
 ## Comment l’analyseur traite l’origine, le TTL et les données
 
-Avec un $ORIGIN de example.com., le nom relatif « www » devient www.example.com. Le nom @ désigne l’origine actuelle. Un enregistrement sur une ligne indentée reprend le nom précédent. Si le fichier ne contient pas de $ORIGIN, saisissez le domaine dans Origine initiale. Un $TTL par défaut de 1h devient 3 600 secondes. Un enregistrement qui définit son propre TTL conserve cette valeur. Les données gardent leurs guillemets, leurs caractères d’échappement et les cibles relatives telles qu’elles sont écrites. Ainsi, « hello; world » reste une seule valeur TXT et « mail » dans les données MX reste « mail ».
+Avec un $ORIGIN de `example.com.`, le nom relatif « www » devient `www.example.com.` Le nom @ désigne l’origine actuelle. Un enregistrement sur une ligne indentée reprend le nom précédent. Si le fichier ne contient pas de $ORIGIN, saisissez le domaine dans Origine initiale. Un $TTL par défaut de 1h devient 3 600 secondes. Un enregistrement qui définit son propre TTL conserve cette valeur. Les données gardent leurs guillemets, leurs caractères d’échappement et les cibles relatives telles qu’elles sont écrites. Ainsi, « hello; world » reste une seule valeur TXT et « mail » dans les données MX reste « mail ».
 
 ## Comment interpréter les résultats
 

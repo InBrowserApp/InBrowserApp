@@ -4,7 +4,7 @@
 
 ## Wie Zonendomain, TTL und Eintragsdaten verarbeitet werden
 
-Mit dem $ORIGIN-Wert example.com. wird aus dem relativen Eintragsnamen „www“ der vollständige Name www.example.com. Der Name @ steht für die aktuelle Zonendomain. Ein eingerückter Eintrag übernimmt den Namen des vorherigen Eintrags. Fehlt $ORIGIN in der Datei, trage die Domain unter Zonendomain ein. Ein Standardwert von 1h für $TTL entspricht 3.600 Sekunden. Ein Eintrag mit eigener TTL behält seinen Wert. Anführungszeichen, Escape-Sequenzen und relative Zielnamen bleiben in den Eintragsdaten erhalten. So bleibt „hello; world“ ein einzelner TXT-Wert, und „mail“ in einem MX-Eintrag bleibt „mail“.
+Mit dem $ORIGIN-Wert `example.com.` wird aus dem relativen Eintragsnamen „www“ der vollständige Name `www.example.com.` Der Name @ steht für die aktuelle Zonendomain. Ein eingerückter Eintrag übernimmt den Namen des vorherigen Eintrags. Fehlt $ORIGIN in der Datei, trage die Domain unter Zonendomain ein. Ein Standardwert von 1h für $TTL entspricht 3.600 Sekunden. Ein Eintrag mit eigener TTL behält seinen Wert. Anführungszeichen, Escape-Sequenzen und relative Zielnamen bleiben in den Eintragsdaten erhalten. So bleibt „hello; world“ ein einzelner TXT-Wert, und „mail“ in einem MX-Eintrag bleibt „mail“.
 
 ## Was die Ergebnisse enthalten
 
