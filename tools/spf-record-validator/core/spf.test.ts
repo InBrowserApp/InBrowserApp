@@ -4,7 +4,7 @@ import { readSpf } from "./spf"
 describe("readSpf", () => {
   test("parses mechanisms, qualifiers and modifiers with case-insensitive names", () => {
     const result = readSpf(
-      " V=SpF1   ip4:192.0.2.0/24 +A -MX//64 ?include:_spf.example.com ~exists:foo.%{d} exp=info.example.com ignored-tag= "
+      "V=SpF1   ip4:192.0.2.0/24 +A -MX//64 ?include:_spf.example.com ~exists:foo.%{d} exp=info.example.com ignored-tag= "
     )
     expect(result.errors).toEqual([])
     expect(result.lookupCount).toBe(4)
@@ -29,14 +29,22 @@ describe("readSpf", () => {
     ).toEqual([])
     expect(
       readSpf(
-        "v=spf1 ip4:255.255.255.255/32 ip4:0.0.0.0/0 include:foo.e1xists x.y_1=%{c}%%%-"
+        "v=spf1 ip4:255.255.255.255/32 ip4:0.0.0.0/0 include:foo.e1xists x.y_1=%{s}%%%-"
+      ).errors
+    ).toEqual([])
+    expect(
+      readSpf(
+        "v=spf1 a:customer/department.example.com -mx:%%%_/.Clara.de/27 exists:mail.%{d01r}"
       ).errors
     ).toEqual([])
   })
 
   test.each([
     ["", "version"],
+    [" v=spf1 -all", "version"],
     ["v=spf10 -all", "version"],
+    ["\tv=spf1 -all", "spacing"],
+    ["v=spf1 -all\u00a0", "spacing"],
     ["v=spf1\t-all", "spacing"],
     ["v=spf1\n-all", "spacing"],
     ["v=spf1 all:foo.example", "unexpectedArgument"],
@@ -45,6 +53,12 @@ describe("readSpf", () => {
     ["v=spf1 exists", "domain"],
     ["v=spf1 include:company", "domain"],
     ["v=spf1 include:a.1234", "domain"],
+    ["v=spf1 include:.example.com", "domain"],
+    ["v=spf1 include:foo..example.com", "domain"],
+    ["v=spf1 include:%{d}.sub..example.com", "domain"],
+    [`v=spf1 include:${"a".repeat(64)}.example.com`, "domain"],
+    ["v=spf1 exists:mail.%{d0}", "domain"],
+    ["v=spf1 exists:bad%z.%{d}", "domain"],
     ["v=spf1 ptr/32", "domain"],
     ["v=spf1 ptr:", "domain"],
     ["v=spf1 a:example.%{z}", "domain"],
@@ -65,6 +79,7 @@ describe("readSpf", () => {
     ["v=spf1 -redirect=example.com", "invalidModifier"],
     ["v=spf1 exp=bad%{t}.example.com", "invalidModifier"],
     ["v=spf1 ignored=%{bad}", "invalidModifier"],
+    ["v=spf1 ignored=%{c}", "invalidModifier"],
     [
       "v=spf1 redirect=example.com REDIRECT=elsewhere.example.com",
       "duplicateModifier",

@@ -35,6 +35,9 @@ test("shows error guidance and retains valid terms for correction", () => {
   input("v=spf1 ip4:192.0.2.1/99 -all")
   click(messages.check)
   expect(screen.getByRole("heading", { name: messages.invalid })).toBeTruthy()
+  expect(
+    screen.getByLabelText(messages.value).getAttribute("aria-invalid")
+  ).toBe("true")
   expect(screen.getByText("ip4:192.0.2.1/99")).toBeTruthy()
   expect(screen.getByText(messages.address)).toBeTruthy()
   expect(screen.getByText("-all")).toBeTruthy()

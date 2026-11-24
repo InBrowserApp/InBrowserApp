@@ -23,6 +23,7 @@ export default function Client({
   const [value, setValue] = useState("")
   const [result, setResult] = useState<ReturnType<typeof readSpf>>()
   const invalid = !!result?.errors.length
+  const status = result && (invalid ? messages.invalid : messages.valid)
 
   return (
     <div className="grid min-w-0 gap-5">
@@ -59,6 +60,7 @@ export default function Client({
               value={value}
               spellCheck={false}
               autoCapitalize="none"
+              aria-invalid={invalid || undefined}
               onChange={(event) => {
                 setValue(event.target.value)
                 setResult(undefined)
@@ -76,7 +78,7 @@ export default function Client({
       </Card>
 
       <div aria-live="polite" className="sr-only">
-        {result && (invalid ? messages.invalid : messages.valid)}
+        {status}
       </div>
       {result && (
         <Card>
@@ -90,7 +92,7 @@ export default function Client({
               ) : (
                 <Check aria-hidden="true" className="size-4" />
               )}
-              {invalid ? messages.invalid : messages.valid}
+              {status}
             </h2>
             {invalid ? (
               <ul className="grid gap-2 text-sm">
