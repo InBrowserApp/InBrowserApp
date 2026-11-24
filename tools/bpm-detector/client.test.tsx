@@ -59,13 +59,13 @@ it("reports a tempo, copies it, plays the local file, and releases the URL on re
   const revoke = vi.spyOn(URL, "revokeObjectURL")
   choose("loop.wav")
   expect(screen.getByRole("status").textContent).toBe(messages.analyzing)
-  const worker = workers[0]!
   await waitFor(() =>
-    expect(worker.postMessage).toHaveBeenCalledWith(
+    expect(workers[0]?.postMessage).toHaveBeenCalledWith(
       [[samples]],
       [expect.any(ArrayBuffer)]
     )
   )
+  const worker = workers[0]!
   act(() => worker.receive(125))
   expect(worker.terminate).toHaveBeenCalledOnce()
   expect(screen.getByRole("status").textContent).toContain("125 BPM")
@@ -92,17 +92,18 @@ it("explains when a file has no steady tempo and recovers from invalid input", a
   await waitFor(() =>
     expect(screen.getByRole("alert").textContent).toBe(messages.channelError)
   )
+  expect(workers).toHaveLength(0)
 
   choose("ambient.wav")
+  await waitFor(() => expect(workers.at(-1)?.postMessage).toHaveBeenCalled())
   const worker = workers.at(-1)!
-  await waitFor(() => expect(worker.postMessage).toHaveBeenCalledOnce())
   act(() => worker.receive(null))
   expect(screen.getByRole("status").textContent).toBe(messages.noTempo)
   expect(screen.queryByRole("button", { name: messages.copy })).toBeNull()
   expect(screen.getByLabelText(messages.preview)).toBeTruthy()
 })
 
-it("discards an outdated decode and handles a worker error", async () => {
+it("discards replaced work and handles an error from the current worker", async () => {
   const { choose } = setup()
   let release!: (buffer: typeof audio) => void
   decode.mockReturnValueOnce(
@@ -113,9 +114,18 @@ it("discards an outdated decode and handles a worker error", async () => {
   choose("slow.wav")
   await waitFor(() => expect(decode).toHaveBeenCalledOnce())
   choose("quick.wav")
-  expect(workers[0]!.terminate).toHaveBeenCalledOnce()
+  await waitFor(() => expect(workers[0]?.postMessage).toHaveBeenCalledOnce())
   await act(async () => release(audio))
-  expect(workers[0]!.postMessage).not.toHaveBeenCalled()
-  act(() => workers[1]!.onerror?.())
+  expect(workers).toHaveLength(1)
+  const replaced = workers[0]!
+  choose("latest.wav")
+  expect(replaced.terminate).toHaveBeenCalledOnce()
+  act(() => replaced.receive(90))
+  expect(screen.getByRole("status").textContent).toBe(messages.analyzing)
+
+  await waitFor(() => expect(workers[1]?.postMessage).toHaveBeenCalledOnce())
+  const worker = workers[1]!
+  act(() => worker.onerror?.())
+  expect(worker.terminate).toHaveBeenCalledOnce()
   expect(screen.getByRole("alert").textContent).toBe(messages.readError)
 })

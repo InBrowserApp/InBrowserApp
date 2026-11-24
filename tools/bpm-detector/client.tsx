@@ -20,45 +20,37 @@ export default function BpmDetector({
   messages: Messages
   lang: string
 }) {
-  const active = useRef<Worker>(null)
+  const active = useRef<AbortController>(null)
   const [name, setName] = useState("")
   const [state, setState] = useState<State>({ status: "idle" })
+  const reading = state.status === "reading"
+  const announcement =
+    state.status === "ready"
+      ? state.bpm === null
+        ? m.noTempo
+        : m.ready.replace("{bpm}", state.bpm.toLocaleString(lang))
+      : undefined
 
-  useEffect(
-    () => () => {
-      active.current?.terminate()
-      active.current = null
-    },
-    []
-  )
+  useEffect(() => () => active.current?.abort(), [])
 
   async function open(file: File) {
-    active.current?.terminate()
-    active.current = null
+    active.current?.abort()
+    const request = new AbortController()
+    active.current = request
+    const { signal } = request
     setName(file.name)
     setState({ status: "reading" })
-    let current: Worker | null = null
 
     function finish(next: State) {
-      if (active.current !== current) return
-      current?.terminate()
-      active.current = null
+      if (signal.aborted) return
+      request.abort()
       setState(next)
     }
 
     try {
-      const worker = new Worker(
-        new URL("./workers/detect.ts", import.meta.url),
-        { type: "module" }
-      )
-      active.current = current = worker
-      worker.onerror = () => finish({ status: "error", key: "readError" })
-      worker.onmessage = ({ data }: MessageEvent<number | null>) =>
-        finish({ status: "ready", file, bpm: data })
-
       const context = new OfflineAudioContext(1, 1, SAMPLE_RATE)
       const audio = await context.decodeAudioData(await file.arrayBuffer())
-      if (active.current !== worker) return
+      if (signal.aborted) return
       if (audio.numberOfChannels > 2) {
         finish({ status: "error", key: "channelError" })
         return
@@ -67,6 +59,14 @@ export default function BpmDetector({
         audio.getChannelData(i)
       )
       const sections = selectSections(channels)
+      const worker = new Worker(
+        new URL("./workers/detect.ts", import.meta.url),
+        { type: "module" }
+      )
+      signal.addEventListener("abort", () => worker.terminate(), { once: true })
+      worker.onerror = () => finish({ status: "error", key: "readError" })
+      worker.onmessage = ({ data }: MessageEvent<number | null>) =>
+        finish({ status: "ready", file, bpm: data })
       worker.postMessage(
         sections,
         sections.flatMap((section) => section.map((channel) => channel.buffer))
@@ -85,27 +85,15 @@ export default function BpmDetector({
       />
       <div
         role="status"
-        className={
-          state.status === "reading"
-            ? "flex items-center gap-2 text-sm"
-            : "sr-only"
-        }
+        className={reading ? "flex items-center gap-2 text-sm" : "sr-only"}
       >
-        {state.status === "reading" ? (
-          <>
-            <LoaderCircle
-              className="size-4 shrink-0 motion-safe:animate-spin"
-              aria-hidden="true"
-            />
-            {m.analyzing}
-          </>
-        ) : state.status === "ready" ? (
-          state.bpm === null ? (
-            m.noTempo
-          ) : (
-            m.ready.replace("{bpm}", state.bpm.toLocaleString(lang))
-          )
-        ) : null}
+        {reading && (
+          <LoaderCircle
+            className="size-4 shrink-0 motion-safe:animate-spin"
+            aria-hidden="true"
+          />
+        )}
+        {reading ? m.analyzing : announcement}
       </div>
       {state.status === "error" && (
         <Alert variant="destructive">

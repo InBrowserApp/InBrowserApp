@@ -1,41 +1,53 @@
 import { createPowerSpectrum } from "@workspace/pcm-audio/fft"
 
 export const SAMPLE_RATE = 48_000
-const frameSize = 1024
+const frameSize = 4096
 const hop = SAMPLE_RATE / 100
 const onsetRate = SAMPLE_RATE / hop
 const minBpm = 45
 const maxBpm = 220
 const minLag = Math.floor((60 * onsetRate) / maxBpm)
 const maxLag = Math.ceil((60 * onsetRate) / minBpm)
-const sectionFrames = 15 * SAMPLE_RATE
+const sectionFrames = 9 * SAMPLE_RATE
+const sectionCount = 5
 
 export function selectSections(channels: Float32Array[]) {
   const length = channels[0]!.length
-  if (length <= sectionFrames * 3) {
+  if (length <= sectionFrames * sectionCount) {
     return [channels.map((channel) => channel.slice())]
   }
   const span = length - sectionFrames
-  return [0, Math.floor(span / 2), span].map((start) =>
-    channels.map((channel) => channel.slice(start, start + sectionFrames))
-  )
+  return Array.from({ length: sectionCount }, (_, index) => {
+    const start = Math.floor((index * span) / (sectionCount - 1))
+    return channels.map((channel) =>
+      channel.slice(start, start + sectionFrames)
+    )
+  })
 }
 
 function novelty(channels: Float32Array[]) {
   const frames = 1 + Math.floor((channels[0]!.length - frameSize) / hop)
-  if (frames < 2 * onsetRate) return null
+  if (frames < 3 * minLag) return null
+
+  let amplitude = 0
+  for (const samples of channels) {
+    for (const sample of samples)
+      amplitude = Math.max(amplitude, Math.abs(sample))
+  }
+  if (amplitude === 0) return null
 
   const transform = createPowerSpectrum(frameSize)
-  const bins = 128
+  const bins = 512
   const power = new Float64Array(bins + 1)
   const energy = new Float64Array(bins + 1)
   const previous = new Float64Array(bins + 1)
   const weights = Float64Array.from(
     { length: bins + 1 },
-    (_, i) => 1 / Math.sqrt(1 + i / 20)
+    (_, i) => 1 / Math.sqrt(1 + i / 80)
   )
   const flux = new Float64Array(frames)
   const prefix = new Float64Array(frames + 1)
+  let strongestAttack = 0
   for (let frame = 0; frame < frames; frame++) {
     energy.fill(0)
     for (const samples of channels) {
@@ -45,14 +57,19 @@ function novelty(channels: Float32Array[]) {
     let change = 0
     for (let bin = 1; bin <= bins; bin++) {
       const magnitude = Math.log1p(
-        (8 * Math.sqrt(energy[bin]! / channels.length)) / frameSize
+        (8 * Math.sqrt(energy[bin]! / channels.length)) /
+          (frameSize * amplitude)
       )
       change += Math.max(0, magnitude - previous[bin]!) * weights[bin]!
       previous[bin] = magnitude
     }
     flux[frame] = frame === 0 ? 0 : change
     prefix[frame + 1] = prefix[frame]! + flux[frame]!
+    strongestAttack = Math.max(strongestAttack, flux[frame]!)
   }
+
+  const minimumAttack = Math.max(0.075, (2 * prefix[frames]!) / frames)
+  if (strongestAttack < minimumAttack) return null
 
   // Remove the short-term baseline so recurring attacks stand out.
   const envelope = flux.map((value, frame) => {
@@ -97,19 +114,23 @@ export function detectTempo(sections: Float32Array[][]) {
     .map(novelty)
     .filter((envelope) => envelope !== null)
   if (envelopes.length === 0) return null
-  const scores = new Float64Array(maxLag + 2)
+  // Require overlap across at least two periods for short loops.
+  const shortest = Math.min(...envelopes.map((envelope) => envelope.length))
+  const lastLag = Math.min(maxLag, Math.floor(shortest / 2))
+  const scores = new Float64Array(lastLag + 2)
   const peaks: number[] = []
-  for (let lag = minLag - 1; lag <= maxLag + 1; lag++) {
+  for (let lag = minLag - 1; lag <= lastLag + 1; lag++) {
     scores[lag] =
       envelopes.reduce((sum, envelope) => sum + correlation(envelope, lag), 0) /
       envelopes.length
   }
-  for (let lag = minLag; lag <= maxLag; lag++) {
+  for (let lag = minLag; lag <= lastLag; lag++) {
     if (scores[lag]! >= scores[lag - 1]! && scores[lag]! > scores[lag + 1]!)
       peaks.push(lag)
   }
   const strength = peaks.reduce((max, lag) => Math.max(max, scores[lag]!), 0)
-  if (strength < 0.24) return null
+  const minimumStrength = shortest < 4 * onsetRate ? 0.38 : 0.24
+  if (strength < minimumStrength) return null
 
   // Prefer the shortest period among similarly strong repeats.
   const lag = peaks.find((candidate) => scores[candidate]! >= strength * 0.84)!
