@@ -30093,6 +30093,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "nft-metadata-batch-checker",
+    category: "ipfs",
+    icon: "file-check",
+    tags: [
+      "nft",
+      "metadata",
+      "json",
+      "validator",
+      "ipfs",
+      "tokenuri",
+      "erc-721",
+      "erc-1155",
+    ],
+    locales: {
+      ar: {
+        name: "فحص بيانات NFT الوصفية دفعة واحدة",
+        description:
+          "تحقّق من بيانات NFT الوصفية بصيغة JSON دفعة واحدة قبل سكّ الرموز. افحص الملفات المحلية أو عناوين URI للرموز بحثًا عن الحقول الناقصة والسمات غير الصالحة وروابط الصور المعطّلة.",
+      },
+      de: {
+        name: "NFT-Metadaten stapelweise prüfen",
+        description:
+          "Validieren Sie NFT-Metadaten im JSON-Format vor dem Minting stapelweise. Prüfen Sie lokale Dateien oder Token-URIs auf fehlende Felder, ungültige Merkmale und fehlerhafte Bildlinks.",
+      },
+      en: {
+        name: "NFT Metadata Batch Checker",
+        description:
+          "Validate NFT metadata JSON in bulk before minting. Check local files or token URIs for missing fields, invalid traits, and broken image links.",
+      },
+      es: {
+        name: "Validador de metadatos NFT por lotes",
+        description:
+          "Valida metadatos JSON de NFT por lotes antes de acuñar. Comprueba archivos locales o URI de tokens para detectar campos que faltan, rasgos no válidos y enlaces de imagen rotos.",
+      },
+      fr: {
+        name: "Vérificateur de métadonnées NFT par lots",
+        description:
+          "Validez les métadonnées JSON de vos NFT par lots avant le mint. Vérifiez les fichiers locaux ou les URI de jetons pour repérer les champs manquants, les traits invalides et les liens d’images rompus.",
+      },
+      he: {
+        name: "בדיקה מרוכזת של מטא-נתוני NFT",
+        description:
+          "בדקו מטא-נתוני NFT בפורמט JSON לפני ההטבעה. סרקו קבצים מקומיים או כתובות URI של טוקנים כדי לאתר שדות חסרים, מאפיינים לא תקינים וקישורי תמונות שבורים.",
+      },
+      hi: {
+        name: "NFT मेटाडेटा बैच चेकर",
+        description:
+          "मिंट करने से पहले कई NFT के JSON मेटाडेटा की एक साथ जाँच करें। लोकल फ़ाइलों या टोकन URI में ग़ायब फ़ील्ड, अमान्य गुण और काम न करने वाले इमेज लिंक ढूँढें।",
+      },
+      id: {
+        name: "Pemeriksa Metadata NFT Massal",
+        description:
+          "Validasi JSON metadata NFT secara massal sebelum minting. Periksa file lokal atau URI token untuk menemukan kolom yang hilang, trait yang tidak valid, dan tautan gambar yang rusak.",
+      },
+      it: {
+        name: "Verificatore di metadati NFT in blocco",
+        description:
+          "Verifica in blocco i metadati JSON degli NFT prima del minting. Controlla file locali o URI dei token per individuare campi mancanti, attributi non validi e link alle immagini non funzionanti.",
+      },
+      ja: {
+        name: "NFT メタデータ一括チェックツール",
+        description:
+          "ミント前に NFT メタデータの JSON を一括で確認できます。端末上のファイルやトークン URI から、項目の欠落、無効な特性、画像リンク切れを検出します。",
+      },
+      ko: {
+        name: "NFT 메타데이터 일괄 검사 도구",
+        description:
+          "민팅 전에 NFT 메타데이터 JSON을 일괄 검사하세요. 로컬 파일 또는 토큰 URI에서 누락된 필드, 유효하지 않은 특성, 끊어진 이미지 링크를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Penyemak Metadata NFT Secara Pukal",
+        description:
+          "Sahkan JSON metadata NFT secara pukal sebelum proses minting. Semak fail setempat atau URI token untuk mengesan medan yang hilang, ciri yang tidak sah dan pautan imej yang rosak.",
+      },
+      nl: {
+        name: "NFT-metadata in bulk controleren",
+        description:
+          "Valideer NFT-metadata in JSON in bulk vóór het minten. Controleer lokale bestanden of token-URI’s op ontbrekende velden, ongeldige kenmerken en niet-werkende afbeeldingslinks.",
+      },
+      no: {
+        name: "Massekontroll av NFT-metadata",
+        description:
+          "Valider NFT-metadata i JSON samlet før minting. Kontroller lokale filer eller token-URI-er for manglende felt, ugyldige egenskaper og ødelagte bildelenker.",
+      },
+      pl: {
+        name: "Zbiorcza weryfikacja metadanych NFT",
+        description:
+          "Sprawdź zbiorczo metadane JSON przed utworzeniem NFT. Sprawdzaj pliki lokalne lub URI tokenów pod kątem brakujących pól, nieprawidłowych cech i niedziałających linków do obrazów.",
+      },
+      pt: {
+        name: "Verificador em lote de metadados de NFT",
+        description:
+          "Valide metadados JSON de NFT em lote antes de cunhar. Verifique ficheiros locais ou URI de tokens para identificar campos em falta, características inválidas e ligações de imagem que não funcionam.",
+      },
+      ru: {
+        name: "Пакетная проверка метаданных NFT",
+        description:
+          "Проверяйте JSON-метаданные NFT перед выпуском всей коллекции. Находите пропущенные поля, некорректные атрибуты и неработающие ссылки на изображения в локальных файлах или по URI токенов.",
+      },
+      sv: {
+        name: "Batchkontroll av NFT-metadata",
+        description:
+          "Validera NFT-metadata i JSON för flera objekt före mintning. Kontrollera lokala filer eller token-URI:er efter fält som saknas, ogiltiga egenskaper och trasiga bildlänkar.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบข้อมูลเมตา NFT แบบกลุ่ม",
+        description:
+          "ตรวจสอบ JSON ข้อมูลเมตาของ NFT หลายรายการก่อนมินต์ ใช้ไฟล์ในเครื่องหรือ URI ของโทเคนเพื่อหาฟิลด์ที่ขาด ลักษณะที่ไม่ถูกต้อง และลิงก์รูปภาพที่เปิดไม่ได้",
+      },
+      tr: {
+        name: "Toplu NFT Meta Veri Kontrolü",
+        description:
+          "NFT basmadan önce JSON meta verilerini toplu olarak kontrol edin. Yerel dosyalarda veya token URI'lerinde eksik alanları, geçersiz özellikleri ve bozuk görsel bağlantılarını bulun.",
+      },
+      vi: {
+        name: "Trình kiểm tra hàng loạt siêu dữ liệu NFT",
+        description:
+          "Kiểm tra hàng loạt JSON siêu dữ liệu NFT trước khi mint. Dùng tệp trên thiết bị hoặc URI token để tìm trường còn thiếu, đặc điểm không hợp lệ và liên kết ảnh bị lỗi.",
+      },
+      "zh-CN": {
+        name: "NFT 元数据批量检查工具",
+        description:
+          "在铸造前批量检查 NFT 元数据 JSON。支持本地文件和 Token URI，可检查缺失字段、无效特征及无法访问的图片链接。",
+      },
+      "zh-TW": {
+        name: "NFT 中繼資料批次檢查工具",
+        description:
+          "在鑄造前批次檢查 NFT 中繼資料 JSON。支援本機檔案或代幣 URI，可找出缺少的欄位、無效的特徵和無法存取的圖片連結。",
+      },
+    },
+  },
+  {
     slug: "notebook-export",
     category: "document",
     icon: "file-text",
@@ -79938,6 +80070,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "NanoID 產生器",
         description:
           "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
+  "nft-metadata-batch-checker": {
+    slug: "nft-metadata-batch-checker",
+    category: "ipfs",
+    icon: "file-check",
+    tags: [
+      "nft",
+      "metadata",
+      "json",
+      "validator",
+      "ipfs",
+      "tokenuri",
+      "erc-721",
+      "erc-1155",
+    ],
+    locales: {
+      ar: {
+        name: "فحص بيانات NFT الوصفية دفعة واحدة",
+        description:
+          "تحقّق من بيانات NFT الوصفية بصيغة JSON دفعة واحدة قبل سكّ الرموز. افحص الملفات المحلية أو عناوين URI للرموز بحثًا عن الحقول الناقصة والسمات غير الصالحة وروابط الصور المعطّلة.",
+      },
+      de: {
+        name: "NFT-Metadaten stapelweise prüfen",
+        description:
+          "Validieren Sie NFT-Metadaten im JSON-Format vor dem Minting stapelweise. Prüfen Sie lokale Dateien oder Token-URIs auf fehlende Felder, ungültige Merkmale und fehlerhafte Bildlinks.",
+      },
+      en: {
+        name: "NFT Metadata Batch Checker",
+        description:
+          "Validate NFT metadata JSON in bulk before minting. Check local files or token URIs for missing fields, invalid traits, and broken image links.",
+      },
+      es: {
+        name: "Validador de metadatos NFT por lotes",
+        description:
+          "Valida metadatos JSON de NFT por lotes antes de acuñar. Comprueba archivos locales o URI de tokens para detectar campos que faltan, rasgos no válidos y enlaces de imagen rotos.",
+      },
+      fr: {
+        name: "Vérificateur de métadonnées NFT par lots",
+        description:
+          "Validez les métadonnées JSON de vos NFT par lots avant le mint. Vérifiez les fichiers locaux ou les URI de jetons pour repérer les champs manquants, les traits invalides et les liens d’images rompus.",
+      },
+      he: {
+        name: "בדיקה מרוכזת של מטא-נתוני NFT",
+        description:
+          "בדקו מטא-נתוני NFT בפורמט JSON לפני ההטבעה. סרקו קבצים מקומיים או כתובות URI של טוקנים כדי לאתר שדות חסרים, מאפיינים לא תקינים וקישורי תמונות שבורים.",
+      },
+      hi: {
+        name: "NFT मेटाडेटा बैच चेकर",
+        description:
+          "मिंट करने से पहले कई NFT के JSON मेटाडेटा की एक साथ जाँच करें। लोकल फ़ाइलों या टोकन URI में ग़ायब फ़ील्ड, अमान्य गुण और काम न करने वाले इमेज लिंक ढूँढें।",
+      },
+      id: {
+        name: "Pemeriksa Metadata NFT Massal",
+        description:
+          "Validasi JSON metadata NFT secara massal sebelum minting. Periksa file lokal atau URI token untuk menemukan kolom yang hilang, trait yang tidak valid, dan tautan gambar yang rusak.",
+      },
+      it: {
+        name: "Verificatore di metadati NFT in blocco",
+        description:
+          "Verifica in blocco i metadati JSON degli NFT prima del minting. Controlla file locali o URI dei token per individuare campi mancanti, attributi non validi e link alle immagini non funzionanti.",
+      },
+      ja: {
+        name: "NFT メタデータ一括チェックツール",
+        description:
+          "ミント前に NFT メタデータの JSON を一括で確認できます。端末上のファイルやトークン URI から、項目の欠落、無効な特性、画像リンク切れを検出します。",
+      },
+      ko: {
+        name: "NFT 메타데이터 일괄 검사 도구",
+        description:
+          "민팅 전에 NFT 메타데이터 JSON을 일괄 검사하세요. 로컬 파일 또는 토큰 URI에서 누락된 필드, 유효하지 않은 특성, 끊어진 이미지 링크를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Penyemak Metadata NFT Secara Pukal",
+        description:
+          "Sahkan JSON metadata NFT secara pukal sebelum proses minting. Semak fail setempat atau URI token untuk mengesan medan yang hilang, ciri yang tidak sah dan pautan imej yang rosak.",
+      },
+      nl: {
+        name: "NFT-metadata in bulk controleren",
+        description:
+          "Valideer NFT-metadata in JSON in bulk vóór het minten. Controleer lokale bestanden of token-URI’s op ontbrekende velden, ongeldige kenmerken en niet-werkende afbeeldingslinks.",
+      },
+      no: {
+        name: "Massekontroll av NFT-metadata",
+        description:
+          "Valider NFT-metadata i JSON samlet før minting. Kontroller lokale filer eller token-URI-er for manglende felt, ugyldige egenskaper og ødelagte bildelenker.",
+      },
+      pl: {
+        name: "Zbiorcza weryfikacja metadanych NFT",
+        description:
+          "Sprawdź zbiorczo metadane JSON przed utworzeniem NFT. Sprawdzaj pliki lokalne lub URI tokenów pod kątem brakujących pól, nieprawidłowych cech i niedziałających linków do obrazów.",
+      },
+      pt: {
+        name: "Verificador em lote de metadados de NFT",
+        description:
+          "Valide metadados JSON de NFT em lote antes de cunhar. Verifique ficheiros locais ou URI de tokens para identificar campos em falta, características inválidas e ligações de imagem que não funcionam.",
+      },
+      ru: {
+        name: "Пакетная проверка метаданных NFT",
+        description:
+          "Проверяйте JSON-метаданные NFT перед выпуском всей коллекции. Находите пропущенные поля, некорректные атрибуты и неработающие ссылки на изображения в локальных файлах или по URI токенов.",
+      },
+      sv: {
+        name: "Batchkontroll av NFT-metadata",
+        description:
+          "Validera NFT-metadata i JSON för flera objekt före mintning. Kontrollera lokala filer eller token-URI:er efter fält som saknas, ogiltiga egenskaper och trasiga bildlänkar.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบข้อมูลเมตา NFT แบบกลุ่ม",
+        description:
+          "ตรวจสอบ JSON ข้อมูลเมตาของ NFT หลายรายการก่อนมินต์ ใช้ไฟล์ในเครื่องหรือ URI ของโทเคนเพื่อหาฟิลด์ที่ขาด ลักษณะที่ไม่ถูกต้อง และลิงก์รูปภาพที่เปิดไม่ได้",
+      },
+      tr: {
+        name: "Toplu NFT Meta Veri Kontrolü",
+        description:
+          "NFT basmadan önce JSON meta verilerini toplu olarak kontrol edin. Yerel dosyalarda veya token URI'lerinde eksik alanları, geçersiz özellikleri ve bozuk görsel bağlantılarını bulun.",
+      },
+      vi: {
+        name: "Trình kiểm tra hàng loạt siêu dữ liệu NFT",
+        description:
+          "Kiểm tra hàng loạt JSON siêu dữ liệu NFT trước khi mint. Dùng tệp trên thiết bị hoặc URI token để tìm trường còn thiếu, đặc điểm không hợp lệ và liên kết ảnh bị lỗi.",
+      },
+      "zh-CN": {
+        name: "NFT 元数据批量检查工具",
+        description:
+          "在铸造前批量检查 NFT 元数据 JSON。支持本地文件和 Token URI，可检查缺失字段、无效特征及无法访问的图片链接。",
+      },
+      "zh-TW": {
+        name: "NFT 中繼資料批次檢查工具",
+        description:
+          "在鑄造前批次檢查 NFT 中繼資料 JSON。支援本機檔案或代幣 URI，可找出缺少的欄位、無效的特徵和無法存取的圖片連結。",
       },
     },
   },

@@ -21806,6 +21806,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "nft-metadata-batch-checker",
+    language: "ar",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "de",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "en",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "es",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "fr",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "he",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "hi",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "id",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "it",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "ja",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "ko",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "ms",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "nl",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "no",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "pl",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "pt",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "ru",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "sv",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "th",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "tr",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "vi",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "zh-CN",
+  },
+  {
+    slug: "nft-metadata-batch-checker",
+    language: "zh-TW",
+  },
+  {
     slug: "notebook-export",
     language: "ar",
   },

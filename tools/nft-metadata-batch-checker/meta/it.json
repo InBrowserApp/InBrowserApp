@@ -1,0 +1,4 @@
+{
+  "name": "Verificatore di metadati NFT in blocco",
+  "description": "Verifica in blocco i metadati JSON degli NFT prima del minting. Controlla file locali o URI dei token per individuare campi mancanti, attributi non validi e link alle immagini non funzionanti."
+}

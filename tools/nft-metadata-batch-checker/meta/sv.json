@@ -1,0 +1,4 @@
+{
+  "name": "Batchkontroll av NFT-metadata",
+  "description": "Validera NFT-metadata i JSON för flera objekt före mintning. Kontrollera lokala filer eller token-URI:er efter fält som saknas, ogiltiga egenskaper och trasiga bildlänkar."
+}

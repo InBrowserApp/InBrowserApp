@@ -1,0 +1,4 @@
+{
+  "name": "Toplu NFT Meta Veri Kontrolü",
+  "description": "NFT basmadan önce JSON meta verilerini toplu olarak kontrol edin. Yerel dosyalarda veya token URI'lerinde eksik alanları, geçersiz özellikleri ve bozuk görsel bağlantılarını bulun."
+}

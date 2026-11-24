@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa Metadata NFT Massal",
+  "description": "Validasi JSON metadata NFT secara massal sebelum minting. Periksa file lokal atau URI token untuk menemukan kolom yang hilang, trait yang tidak valid, dan tautan gambar yang rusak."
+}

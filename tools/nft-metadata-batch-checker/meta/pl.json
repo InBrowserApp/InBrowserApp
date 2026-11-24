@@ -1,0 +1,4 @@
+{
+  "name": "Zbiorcza weryfikacja metadanych NFT",
+  "description": "Sprawdź zbiorczo metadane JSON przed utworzeniem NFT. Sprawdzaj pliki lokalne lub URI tokenów pod kątem brakujących pól, nieprawidłowych cech i niedziałających linków do obrazów."
+}

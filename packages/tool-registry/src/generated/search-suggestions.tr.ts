@@ -1188,6 +1188,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "nanoid-generator",
   },
   {
+    category: "ipfs",
+    name: "Toplu NFT Meta Veri Kontrolü",
+    slug: "nft-metadata-batch-checker",
+  },
+  {
     category: "document",
     name: "Jupyter Notebook Dönüştürücü",
     slug: "notebook-export",
