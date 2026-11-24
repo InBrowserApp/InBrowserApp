@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Scegli un file audio stereo",
+  "dropHint": "oppure trascina qui un file audio",
+  "formats": "WAV, MP3, M4A, FLAC, OGG e altri formati supportati dal browser",
+  "privacy": "L’audio resta sul tuo dispositivo.",
+  "changeFile": "Cambia file",
+  "processing": "Separazione dei canali stereo in corso…",
+  "ready": "I canali sinistro e destro sono pronti.",
+  "left": "Canale sinistro",
+  "right": "Canale destro",
+  "downloadLeft": "Scarica WAV sinistro",
+  "downloadRight": "Scarica WAV destro",
+  "monoError": "Questo file contiene un solo canale audio. Scegli un file stereo con un canale sinistro e uno destro.",
+  "multichannelError": "Questo file contiene più di due canali audio. Scegli un file stereo a due canali.",
+  "readError": "Impossibile aprire questo file audio. Prova con un altro file o esportalo in WAV stereo."
+}

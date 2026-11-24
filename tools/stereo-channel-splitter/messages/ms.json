@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Pilih fail audio stereo",
+  "dropHint": "atau seret dan lepaskan fail audio di sini",
+  "formats": "WAV, MP3, M4A, FLAC, OGG dan format audio lain yang disokong pelayar",
+  "privacy": "Audio anda kekal pada peranti anda.",
+  "changeFile": "Tukar fail",
+  "processing": "Memisahkan saluran audio stereo…",
+  "ready": "Saluran kiri dan kanan sedia digunakan.",
+  "left": "Saluran kiri",
+  "right": "Saluran kanan",
+  "downloadLeft": "Muat turun WAV kiri",
+  "downloadRight": "Muat turun WAV kanan",
+  "monoError": "Fail ini hanya mempunyai satu saluran audio. Pilih fail stereo dengan saluran kiri dan kanan.",
+  "multichannelError": "Fail ini mempunyai lebih daripada dua saluran audio. Pilih fail stereo dua saluran.",
+  "readError": "Fail audio ini tidak dapat dibuka. Cuba fail lain atau eksport fail ini sebagai WAV stereo."
+}

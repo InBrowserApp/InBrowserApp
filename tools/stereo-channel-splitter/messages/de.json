@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Stereo-Audiodatei auswählen",
+  "dropHint": "oder eine Audiodatei hier ablegen",
+  "formats": "WAV, MP3, M4A, FLAC, OGG und weitere Audioformate, die dein Browser unterstützt",
+  "privacy": "Deine Audiodatei bleibt auf deinem Gerät.",
+  "changeFile": "Andere Datei auswählen",
+  "processing": "Stereokanäle werden getrennt …",
+  "ready": "Linker und rechter Kanal sind bereit.",
+  "left": "Linker Kanal",
+  "right": "Rechter Kanal",
+  "downloadLeft": "Linken Kanal als WAV herunterladen",
+  "downloadRight": "Rechten Kanal als WAV herunterladen",
+  "monoError": "Diese Datei enthält nur einen Audiokanal. Wähle eine Stereodatei mit linkem und rechtem Kanal.",
+  "multichannelError": "Diese Datei enthält mehr als zwei Audiokanäle. Wähle eine Stereodatei mit zwei Kanälen.",
+  "readError": "Diese Audiodatei konnte nicht geöffnet werden. Wähle eine andere Datei oder exportiere sie als Stereo-WAV."
+}

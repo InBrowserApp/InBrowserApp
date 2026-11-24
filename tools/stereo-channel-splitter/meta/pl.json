@@ -1,0 +1,4 @@
+{
+  "name": "Rozdzielanie kanałów stereo",
+  "description": "Rozdziel nagranie stereo na dwa pliki mono WAV, po jednym dla lewego i prawego kanału. Odsłuchaj i pobierz każdy kanał w przeglądarce."
+}

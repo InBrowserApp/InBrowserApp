@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Tách kênh âm thanh stereo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Đồng hồ bấm giờ",
     slug: "stopwatch",
