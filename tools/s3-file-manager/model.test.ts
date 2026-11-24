@@ -137,7 +137,7 @@ it("generates a CORS rule for the page origin with the required actions and head
   const [rule] = JSON.parse(corsRule("https://preview.example.test"))
   expect(rule.AllowedOrigins).toEqual(["https://preview.example.test"])
   expect(rule.AllowedMethods).toEqual(["GET", "HEAD", "PUT", "DELETE"])
-  expect(rule.AllowedHeaders).toEqual(["*"])
+  expect(rule.AllowedHeaders).toEqual(["Authorization", "*"])
   expect(rule.ExposeHeaders).toContain("ETag")
   expect(rule.ExposeHeaders).toContain("Content-Encoding")
 })

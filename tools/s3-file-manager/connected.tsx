@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useId, useState } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import { Folder, LoaderCircle, Pencil, Search } from "@workspace/ui/icons"
@@ -20,6 +20,7 @@ export function Connected({
   lang: string
   edit: () => void
 }) {
+  const bucketId = useId()
   const [service] = useState(() => createStorage(connection))
   const [discovered, setDiscovered] = useState<string[]>([])
   const [bucket, setBucket] = useState(connection.buckets[0] ?? "")
@@ -85,9 +86,10 @@ export function Connected({
     <div className="min-w-0">
       <div className="grid gap-2 border-b bg-muted/15 p-3 sm:p-4">
         <div className="flex flex-wrap items-end gap-2">
-          <label className="grid min-w-36 flex-1 gap-1 text-xs font-medium sm:max-w-xs">
-            {labels.buckets}
+          <div className="grid min-w-36 flex-1 gap-1 text-xs font-medium sm:max-w-xs">
+            <label htmlFor={bucketId}>{labels.buckets}</label>
             <select
+              id={bucketId}
               value={bucket}
               onChange={(event) => setBucket(event.target.value)}
               className="h-9 w-full min-w-0 rounded-md border bg-background px-2 text-sm"
@@ -97,7 +99,7 @@ export function Connected({
                 <option key={name}>{name}</option>
               ))}
             </select>
-          </label>
+          </div>
           {discoverButton}
         </div>
         {alert}

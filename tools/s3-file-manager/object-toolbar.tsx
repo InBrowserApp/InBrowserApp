@@ -10,7 +10,7 @@ import {
 import { Input } from "@workspace/ui/components/ui/input"
 import {
   Database,
-  MoreHorizontal,
+  ChevronDown,
   Folder,
   FolderPlus,
   RefreshCcw,
@@ -94,7 +94,7 @@ export function ObjectToolbar({
                   aria-label={labels.uploadFolder}
                   title={labels.uploadFolder}
                 >
-                  <MoreHorizontal />
+                  <ChevronDown />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent

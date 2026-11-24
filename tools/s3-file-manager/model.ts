@@ -1,7 +1,7 @@
 export type Messages = typeof import("./messages/en.json")
 export type Labels = Omit<Messages, "article">
 
-export type Credentials = {
+type Credentials = {
   accessKeyId: string
   secretAccessKey: string
   sessionToken?: string
@@ -18,7 +18,7 @@ export type Connection = {
   credentials?: Credentials
 }
 
-export type StoredObject = {
+type StoredObject = {
   key: string
   size?: number
   modified?: Date
@@ -105,7 +105,7 @@ export function corsRule(origin: string) {
       {
         AllowedOrigins: [origin],
         AllowedMethods: ["GET", "HEAD", "PUT", "DELETE"],
-        AllowedHeaders: ["*"],
+        AllowedHeaders: ["Authorization", "*"],
         ExposeHeaders: [
           "ETag",
           "Content-Disposition",

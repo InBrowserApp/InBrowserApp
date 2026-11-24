@@ -29,6 +29,11 @@ function encodeSegment(value: string) {
   )
 }
 
+function decodeKey(value: string) {
+  // Some S3-compatible endpoints use form-style URL encoding for spaces.
+  return decodeURIComponent(value.replaceAll("+", " "))
+}
+
 export type ObjectDetails = {
   contentType: string
   text?: string
@@ -96,14 +101,14 @@ export function createStorage(connection: Connection) {
       )
       return {
         folders: (response.CommonPrefixes ?? []).flatMap(({ Prefix }) =>
-          Prefix === undefined ? [] : [decodeURIComponent(Prefix)]
+          Prefix === undefined ? [] : [decodeKey(Prefix)]
         ),
         objects: (response.Contents ?? []).flatMap(
           ({ Key, Size, LastModified }) => {
             if (Key === undefined) return []
             return [
               {
-                key: decodeURIComponent(Key),
+                key: decodeKey(Key),
                 size: Size,
                 modified: LastModified,
               },

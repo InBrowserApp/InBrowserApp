@@ -58,11 +58,15 @@ export function ObjectTable({
   )
   const keys = objects.map(({ key }) => key)
   const all = keys.length > 0 && keys.every((key) => selected.includes(key))
-  const number = new Intl.NumberFormat(lang, {
-    notation: "compact",
-    style: "unit",
-    unit: "byte",
-  })
+  const number = new Intl.NumberFormat(lang, { maximumFractionDigits: 1 })
+  const units = ["B", "KiB", "MiB", "GiB", "TiB"]
+  function formatSize(bytes: number) {
+    const power =
+      bytes < 1024
+        ? 0
+        : Math.min(Math.floor(Math.log2(bytes) / 10), units.length - 1)
+    return `${number.format(bytes / 1024 ** power)} ${units[power]}`
+  }
   const date = new Intl.DateTimeFormat(lang, { dateStyle: "medium" })
   const check = "size-4 shrink-0 cursor-pointer accent-primary"
 
@@ -148,7 +152,7 @@ export function ObjectTable({
                 </Button>
               </td>
               <td className="hidden px-2 text-end text-xs text-muted-foreground tabular-nums sm:table-cell">
-                {size === undefined ? "—" : number.format(size)}
+                {size === undefined ? "—" : formatSize(size)}
               </td>
               <td className="hidden px-2 text-xs text-muted-foreground lg:table-cell">
                 {modified ? date.format(modified) : "—"}

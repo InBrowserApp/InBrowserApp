@@ -76,7 +76,7 @@ export default function S3FileManager({
 
   return (
     <>
-      <section className="grid overflow-hidden rounded-xl border bg-card shadow-xs md:min-h-[30rem] md:grid-cols-[minmax(12rem,15rem)_minmax(0,1fr)]">
+      <section className="grid overflow-hidden rounded-xl border bg-card shadow-xs md:min-h-[26rem] md:grid-cols-[minmax(12rem,15rem)_minmax(0,1fr)]">
         <aside className="min-w-0 border-b bg-muted/30 p-3 md:border-e md:border-b-0 md:p-4">
           <div className="flex items-center justify-between gap-2">
             <h2 className="flex items-center gap-2 text-sm font-semibold">

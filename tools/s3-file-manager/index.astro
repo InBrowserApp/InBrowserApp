@@ -25,7 +25,7 @@ const { article, ...clientMessages } = messages
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <S3FileManager client:load messages={clientMessages} lang={lang} />
-  <ToolArticle>
+  <ToolArticle className="max-w-4xl">
     <h2>{article.overviewTitle}</h2>
     <p>{article.overview}</p>
     <h2>{article.connectTitle}</h2>

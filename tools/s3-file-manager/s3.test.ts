@@ -103,6 +103,7 @@ it("decodes encoded folder and object names while retaining the current folder m
         LastModified: modified,
       },
       { Key: "folder%2Fzero", Size: 0 },
+      { Key: "folder%2Fspace+%2B+plus.txt", Size: 2 },
       {},
     ],
     NextContinuationToken: "next-token",
@@ -115,6 +116,7 @@ it("decodes encoded folder and object names while retaining the current folder m
       { key: "folder/", size: 0 },
       { key: "folder/#café%2F.txt", size: 20, modified },
       { key: "folder/zero", size: 0 },
+      { key: "folder/space + plus.txt", size: 2 },
     ],
     next: "next-token",
   })
