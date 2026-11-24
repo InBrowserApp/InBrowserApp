@@ -4,7 +4,7 @@
   "example": "Load example",
   "placeholder": "Paste a BIND zone file here",
   "origin": "Initial origin (optional)",
-  "originHelp": "Enter the zone’s domain if the file uses relative names without an $ORIGIN directive.",
+  "originHelp": "Enter the zone’s domain to resolve relative names and relative $ORIGIN directives.",
   "readError": "Could not open this file. Try opening it again or paste its text.",
   "records": "DNS records",
   "search": "Filter records",
@@ -27,5 +27,6 @@
   "record": "Expected a record type followed by record data.",
   "invalidTtl": "Enter a valid TTL such as 3600 or 1h.",
   "invalidOrigin": "$ORIGIN needs one domain name.",
+  "missingOrigin": "This relative $ORIGIN needs an initial origin. Enter the zone’s domain to resolve the names.",
   "unsupported": "The parser skipped {directive}. Paste its expanded records to include them."
 }

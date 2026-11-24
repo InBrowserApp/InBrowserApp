@@ -1,10 +1,13 @@
-import { useId, useMemo, useRef, useState } from "react"
+import { useId, useMemo, useState } from "react"
 
+import {
+  ToolOpenTextFile,
+  useTextFileImport,
+} from "@workspace/ui/components/tool/tool-open-text-file"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { FolderInput } from "@workspace/ui/icons"
 
 import { readZone } from "./core/zone"
 import { ZoneResults } from "./zone-results"
@@ -35,8 +38,7 @@ export default function Client({
   language: string
 }) {
   const id = useId()
-  const picker = useRef<HTMLInputElement>(null)
-  const readId = useRef(0)
+  const importer = useTextFileImport()
   const [source, setSource] = useState("")
   const [origin, setOrigin] = useState("")
   const [filename, setFilename] = useState("")
@@ -45,22 +47,20 @@ export default function Client({
   const parsed = useMemo(() => readZone(source, origin), [source, origin])
 
   function editSource(text: string, name = "") {
-    readId.current++
+    importer.cancel()
     setSource(text)
     setFilename(name)
     setError(false)
     if (name) setQuery("")
   }
 
-  async function openFile(file: File) {
-    const operation = ++readId.current
+  function openFile(file: File) {
     setError(false)
-    try {
-      const text = await file.text()
-      if (operation === readId.current) editSource(text, file.name)
-    } catch {
-      if (operation === readId.current) setError(true)
-    }
+    void importer.read(
+      file,
+      (text) => editSource(text, file.name),
+      () => setError(true)
+    )
   }
 
   return (
@@ -72,14 +72,11 @@ export default function Client({
               {messages.source}
             </label>
             <div className="flex flex-wrap gap-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => picker.current?.click()}
-              >
-                <FolderInput data-icon="inline-start" aria-hidden="true" />
-                {messages.open}
-              </Button>
+              <ToolOpenTextFile
+                accept=""
+                label={messages.open}
+                onFile={openFile}
+              />
               <Button
                 type="button"
                 variant="outline"
@@ -93,16 +90,6 @@ export default function Client({
               </Button>
             </div>
           </div>
-          <input
-            ref={picker}
-            type="file"
-            hidden
-            onChange={(event) => {
-              const file = event.currentTarget.files?.[0]
-              if (file) void openFile(file)
-              event.currentTarget.value = ""
-            }}
-          />
           {filename && (
             <p className="text-sm break-all text-muted-foreground">
               <bdi>{filename}</bdi>
@@ -148,7 +135,7 @@ export default function Client({
           </div>
         </CardContent>
       </Card>
-      {source.trim() && (
+      {(source.trim() || filename) && (
         <ZoneResults
           {...parsed}
           language={language}

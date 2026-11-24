@@ -4,7 +4,7 @@
   "example": "Örnek yükle",
   "placeholder": "BIND bölge dosyasını buraya yapıştırın",
   "origin": "Başlangıç alan adı (isteğe bağlı)",
-  "originHelp": "Dosyada göreli adlar varsa ve $ORIGIN yönergesi yoksa bölgenin alan adını girin.",
+  "originHelp": "Göreli adları ve göreli değer içeren $ORIGIN yönergelerini çözümlemek için bölgenin alan adını girin.",
   "readError": "Dosya açılamadı. Tekrar açmayı deneyin veya içeriğini yapıştırın.",
   "records": "DNS kayıtları",
   "search": "Kayıtları filtrele",
@@ -27,5 +27,6 @@
   "record": "Önce kayıt türünü, ardından kayıt verisini yazın.",
   "invalidTtl": "3600 veya 1h gibi geçerli bir TTL değeri girin.",
   "invalidOrigin": "$ORIGIN tek bir alan adı gerektirir.",
+  "missingOrigin": "Göreli değer içeren bu $ORIGIN yönergesi bir başlangıç alan adı gerektirir. Adları çözümlemek için bölgenin alan adını girin.",
   "unsupported": "Ayrıştırıcı {directive} yönergesini atladı. Kayıtları dahil etmek için yönergenin ürettiği kayıtları yapıştırın."
 }

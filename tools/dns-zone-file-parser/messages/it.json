@@ -4,7 +4,7 @@
   "example": "Carica esempio",
   "placeholder": "Incolla qui un file di zona BIND",
   "origin": "Origine iniziale (facoltativa)",
-  "originHelp": "Inserisci il dominio della zona se il file contiene nomi relativi e non ha una direttiva $ORIGIN.",
+  "originHelp": "Inserisci il dominio della zona per risolvere i nomi relativi e le direttive $ORIGIN con un valore relativo.",
   "readError": "Impossibile aprire il file. Riprova oppure incolla il contenuto.",
   "records": "Record DNS",
   "search": "Filtra record",
@@ -27,5 +27,6 @@
   "record": "Indica il tipo di record seguito dai suoi dati.",
   "invalidTtl": "Inserisci un TTL valido, ad esempio 3600 o 1h.",
   "invalidOrigin": "$ORIGIN richiede un solo nome di dominio.",
+  "missingOrigin": "Questa direttiva $ORIGIN contiene un nome relativo e richiede un’origine iniziale. Inserisci il dominio della zona per risolvere i nomi.",
   "unsupported": "L’analizzatore ha ignorato {directive}. Per includerne i record, incollali in forma estesa."
 }

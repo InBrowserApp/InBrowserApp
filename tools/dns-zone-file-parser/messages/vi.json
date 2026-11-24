@@ -4,7 +4,7 @@
   "example": "Tải ví dụ",
   "placeholder": "Dán nội dung tệp vùng BIND vào đây",
   "origin": "Tên miền gốc ban đầu (không bắt buộc)",
-  "originHelp": "Nhập tên miền của vùng nếu tệp dùng tên tương đối mà không có chỉ thị $ORIGIN.",
+  "originHelp": "Nhập tên miền của vùng để chuyển tên tương đối và giá trị tương đối trong chỉ thị $ORIGIN thành tên đầy đủ.",
   "readError": "Không mở được tệp này. Hãy mở lại hoặc dán nội dung tệp.",
   "records": "Bản ghi DNS",
   "search": "Lọc bản ghi",
@@ -27,5 +27,6 @@
   "record": "Cần có loại bản ghi, theo sau là dữ liệu bản ghi.",
   "invalidTtl": "Nhập TTL hợp lệ, ví dụ 3600 hoặc 1h.",
   "invalidOrigin": "$ORIGIN cần đúng một tên miền.",
+  "missingOrigin": "Chỉ thị $ORIGIN này dùng tên tương đối nên cần tên miền gốc ban đầu. Nhập tên miền của vùng để chuyển tên tương đối thành tên đầy đủ.",
   "unsupported": "Đã bỏ qua chỉ thị {directive}. Hãy dán các bản ghi sau khi khai triển chỉ thị để đưa chúng vào kết quả."
 }

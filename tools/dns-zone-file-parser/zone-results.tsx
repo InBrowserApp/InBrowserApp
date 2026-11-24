@@ -8,6 +8,8 @@ import { Search, TriangleAlert } from "@workspace/ui/icons"
 import type { Note, ZoneRecord } from "./core/zone"
 import type english from "./messages/en.json"
 
+const COLUMNS = ["name", "type", "data", "ttl", "class"] as const
+
 export function ZoneResults({
   records,
   notes,
@@ -104,19 +106,13 @@ export function ZoneResults({
             <table className="w-full min-w-[35rem] border-collapse text-sm">
               <thead className="bg-muted/50 text-start text-xs font-medium">
                 <tr>
-                  {[
-                    messages.name,
-                    messages.type,
-                    messages.data,
-                    messages.ttl,
-                    messages.class,
-                  ].map((label, index) => (
+                  {COLUMNS.map((column) => (
                     <th
-                      key={index}
+                      key={column}
                       scope="col"
                       className="px-3 py-2.5 text-start"
                     >
-                      {label}
+                      {messages[column]}
                     </th>
                   ))}
                 </tr>

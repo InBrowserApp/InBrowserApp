@@ -4,7 +4,7 @@
   "example": "Last inn eksempel",
   "placeholder": "Lim inn en BIND-sonefil her",
   "origin": "Startdomene (valgfritt)",
-  "originHelp": "Oppgi sonens domene hvis filen bruker relative navn uten $ORIGIN-direktivet.",
+  "originHelp": "Oppgi sonens domene for å gjøre relative navn og relative $ORIGIN-direktiver fullstendige.",
   "readError": "Kunne ikke åpne filen. Prøv å åpne den igjen, eller lim inn teksten.",
   "records": "DNS-poster",
   "search": "Filtrer poster",
@@ -27,5 +27,6 @@
   "record": "Her må det stå en posttype etterfulgt av postdata.",
   "invalidTtl": "Oppgi en gyldig TTL, for eksempel 3600 eller 1h.",
   "invalidOrigin": "$ORIGIN krever ett domenenavn.",
+  "missingOrigin": "Dette relative $ORIGIN-direktivet trenger et startdomene. Oppgi sonens domene for å gjøre navnene fullstendige.",
   "unsupported": "Parseren hoppet over {directive}. Lim inn de fullstendige postene direktivet gir for å ta dem med."
 }

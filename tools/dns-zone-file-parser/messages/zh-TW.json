@@ -4,7 +4,7 @@
   "example": "載入範例",
   "placeholder": "在此貼上 BIND 區域檔案",
   "origin": "初始網域（選填）",
-  "originHelp": "如果檔案使用相對名稱且沒有 $ORIGIN 指令，請輸入區域的網域名稱。",
+  "originHelp": "輸入區域的網域名稱，以解析相對名稱及相對的 $ORIGIN 指令。",
   "readError": "無法開啟此檔案，請重試或貼上檔案內容。",
   "records": "DNS 記錄",
   "search": "篩選記錄",
@@ -27,5 +27,6 @@
   "record": "請輸入記錄類型及其後的記錄資料。",
   "invalidTtl": "請輸入有效的 TTL，例如 3600 或 1h。",
   "invalidOrigin": "$ORIGIN 需要一個網域名稱。",
+  "missingOrigin": "這個相對 $ORIGIN 需要初始網域。請輸入區域的網域名稱以解析這些名稱。",
   "unsupported": "解析器略過了 {directive}。請貼上展開後的記錄以納入這些內容。"
 }

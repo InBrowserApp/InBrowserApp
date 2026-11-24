@@ -4,7 +4,7 @@
   "example": "Beispiel laden",
   "placeholder": "BIND-Zonendatei hier einfügen",
   "origin": "Zonendomain (optional)",
-  "originHelp": "Gib die Domain der Zone ein, wenn die Datei relative Namen ohne $ORIGIN-Direktive verwendet.",
+  "originHelp": "Gib die Zonendomain ein, um relative Namen und relative $ORIGIN-Angaben aufzulösen.",
   "readError": "Die Datei ließ sich nicht öffnen. Öffne sie erneut oder füge ihren Inhalt als Text ein.",
   "records": "DNS-Einträge",
   "search": "Einträge filtern",
@@ -27,5 +27,6 @@
   "record": "Erwartet werden ein Eintragstyp und die zugehörigen Eintragsdaten.",
   "invalidTtl": "Gib eine gültige TTL wie 3600 oder 1h ein.",
   "invalidOrigin": "$ORIGIN erwartet genau einen Domainnamen.",
+  "missingOrigin": "Diese relative $ORIGIN-Angabe braucht eine Ausgangsdomain. Gib die Zonendomain ein, um die Namen aufzulösen.",
   "unsupported": "Der Parser hat {directive} übersprungen. Füge die daraus entstehenden Einträge ein, um sie zu übernehmen."
 }

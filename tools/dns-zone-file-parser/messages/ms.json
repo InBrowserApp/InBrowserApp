@@ -4,7 +4,7 @@
   "example": "Muatkan contoh",
   "placeholder": "Tampal kandungan fail zon BIND di sini",
   "origin": "Domain asas awal (pilihan)",
-  "originHelp": "Masukkan domain zon jika fail menggunakan nama relatif tanpa arahan $ORIGIN.",
+  "originHelp": "Masukkan domain zon untuk melengkapkan nama relatif, termasuk nama dalam arahan $ORIGIN.",
   "readError": "Fail ini tidak dapat dibuka. Cuba buka semula atau tampal kandungannya.",
   "records": "Rekod DNS",
   "search": "Tapis rekod",
@@ -27,5 +27,6 @@
   "record": "Jenis rekod mesti diikuti dengan data rekod.",
   "invalidTtl": "Masukkan TTL yang sah, seperti 3600 atau 1h.",
   "invalidOrigin": "$ORIGIN memerlukan satu nama domain.",
+  "missingOrigin": "Arahan $ORIGIN dengan nama relatif memerlukan domain asas awal. Masukkan domain zon untuk melengkapkan nama.",
   "unsupported": "Arahan {directive} dilangkau. Tampal rekod yang dijana daripada arahan itu untuk memasukkannya."
 }

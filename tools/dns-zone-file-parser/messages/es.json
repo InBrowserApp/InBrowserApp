@@ -4,7 +4,7 @@
   "example": "Cargar ejemplo",
   "placeholder": "Pega aquí un archivo de zona en formato BIND",
   "origin": "Origen inicial (opcional)",
-  "originHelp": "Introduce el dominio de la zona si el archivo usa nombres relativos y carece de la directiva $ORIGIN.",
+  "originHelp": "Introduce el dominio de la zona para resolver nombres relativos y directivas $ORIGIN con valores relativos.",
   "readError": "No se pudo abrir el archivo. Intenta abrirlo de nuevo o pega su contenido.",
   "records": "Registros DNS",
   "search": "Filtrar registros",
@@ -27,5 +27,6 @@
   "record": "Se esperaba un tipo de registro seguido de sus datos.",
   "invalidTtl": "Introduce un TTL válido, como 3600 o 1h.",
   "invalidOrigin": "$ORIGIN requiere un único nombre de dominio.",
+  "missingOrigin": "Esta directiva $ORIGIN usa un nombre relativo y necesita un origen inicial. Introduce el dominio de la zona para resolver los nombres.",
   "unsupported": "Se omitió {directive}. Pega los registros que genera para incluirlos."
 }

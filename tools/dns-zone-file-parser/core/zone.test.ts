@@ -73,7 +73,7 @@ describe("readZone", () => {
 
   test("resolves relative origins and recognizes escaped dot, semicolon, and quoted text", () => {
     const source = String.raw`$ORIGIN lab
-svc\. 1D2h3m4S5 IN TYPE123 \# 1 ff
+svc\. 1D2h3m9S IN TYPE123 \# 1 ff
 txt TXT "foo\"bar\;baz"
 open\;label A 192.0.2.1`
     expect(readZone(source, " example.org ")).toMatchObject({
@@ -182,5 +182,85 @@ open\;label A 192.0.2.1`
         { line: 4, code: "invalidTtl" },
       ],
     })
+  })
+
+  test("keeps a relative origin relative until the user provides an initial origin", () => {
+    const input = "$ORIGIN child\n@ A 192.0.2.1\nwww A 192.0.2.2"
+    expect(readZone(input)).toMatchObject({
+      notes: [{ line: 1, code: "missingOrigin" }],
+      records: [{ name: "child" }, { name: "www.child" }],
+    })
+    expect(readZone(input, "example.org")).toMatchObject({
+      notes: [],
+      records: [
+        { name: "child.example.org." },
+        { name: "www.child.example.org." },
+      ],
+    })
+    expect(readZone("$ORIGIN @\nwww A 192.0.2.3")).toMatchObject({
+      notes: [{ line: 1, code: "missingOrigin" }],
+      records: [{ name: "www" }],
+    })
+  })
+
+  test("does not use an older owner for inherited records after a bad named record", () => {
+    const input = [
+      "$ORIGIN example.org.",
+      "old A 192.0.2.1",
+      "new 1x A 192.0.2.2",
+      '  TXT "owner is new"',
+      'bad TXT "unterminated',
+      '  TXT "owner is unknown"',
+      "fresh A 192.0.2.3",
+      '  TXT "unterminated',
+      '  TXT "owner is still fresh"',
+    ].join("\n")
+    expect(readZone(input)).toMatchObject({
+      notes: [
+        { line: 3, code: "invalidTtl" },
+        { line: 5, code: "quote" },
+        { line: 6, code: "owner" },
+        { line: 8, code: "quote" },
+      ],
+      records: [
+        { name: "old.example.org." },
+        { name: "new.example.org.", type: "TXT" },
+        { name: "fresh.example.org." },
+        { name: "fresh.example.org.", type: "TXT" },
+      ],
+    })
+  })
+
+  test("shows unknown inherited TTLs when a skipped directive can affect them", () => {
+    const zone = [
+      "old 300 IN A 192.0.2.1",
+      "$GENERATE 1-2 host$ 600 A 192.0.2.$",
+      '  TXT "after generate"',
+      "$TTL 300",
+      "$INCLUDE extra.zone",
+      '  TXT "after include"',
+      '  123 TXT "explicit"',
+      '  TXT "include still matters"',
+      "$TTL 1h30",
+      "$TTL 600",
+      "$DIRECTIVE extra",
+      '  TXT "default restored"',
+    ].join("\n")
+    const result = readZone(zone)
+    expect(result.notes.map(({ line, code }) => [line, code])).toEqual([
+      [2, "unsupported"],
+      [5, "unsupported"],
+      [9, "invalidTtl"],
+      [11, "unsupported"],
+    ])
+    expect(result.records.map(({ ttl }) => ttl)).toEqual([
+      300,
+      null,
+      null,
+      123,
+      null,
+      600,
+    ])
+    expect(result.records.map(({ name }) => name)).toEqual(Array(6).fill("old"))
   })
 })

@@ -4,7 +4,7 @@
   "example": "Voorbeeld laden",
   "placeholder": "Plak hier een BIND-zonebestand",
   "origin": "Begindomein (optioneel)",
-  "originHelp": "Voer het domein van de zone in als het bestand relatieve namen gebruikt zonder $ORIGIN-instructie.",
+  "originHelp": "Voer het zonedomein in om relatieve namen en relatieve $ORIGIN-instructies aan te vullen.",
   "readError": "Het bestand kon niet worden geopend. Open het opnieuw of plak de tekst.",
   "records": "DNS-records",
   "search": "Records filteren",
@@ -27,5 +27,6 @@
   "record": "Verwacht een recordtype gevolgd door de recordgegevens.",
   "invalidTtl": "Voer een geldige TTL in, zoals 3600 of 1h.",
   "invalidOrigin": "$ORIGIN verwacht één domeinnaam.",
+  "missingOrigin": "Deze relatieve $ORIGIN-instructie heeft een begindomein nodig. Voer het zonedomein in om de namen aan te vullen.",
   "unsupported": "De parser heeft {directive} overgeslagen. Plak de volledige records die hieruit voortkomen om ze mee te nemen."
 }

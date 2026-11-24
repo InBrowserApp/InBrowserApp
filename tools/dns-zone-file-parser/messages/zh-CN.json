@@ -4,7 +4,7 @@
   "example": "加载示例",
   "placeholder": "在此粘贴 BIND 区域文件",
   "origin": "初始域名（可选）",
-  "originHelp": "如果文件使用相对名称且没有 $ORIGIN 指令，请输入区域的域名。",
+  "originHelp": "输入区域的域名，以解析相对名称和相对的 $ORIGIN 指令。",
   "readError": "无法打开此文件。请重试或粘贴文件内容。",
   "records": "DNS 记录",
   "search": "筛选记录",
@@ -27,5 +27,6 @@
   "record": "请输入记录类型及其后的记录数据。",
   "invalidTtl": "请输入有效的 TTL，例如 3600 或 1h。",
   "invalidOrigin": "$ORIGIN 需要一个域名。",
+  "missingOrigin": "这个相对 $ORIGIN 需要初始域名。请输入区域的域名以解析这些名称。",
   "unsupported": "解析器跳过了 {directive}。请粘贴展开后的记录以包含这些内容。"
 }

@@ -4,7 +4,7 @@
   "example": "Charger un exemple",
   "placeholder": "Collez ici un fichier de zone au format BIND",
   "origin": "Origine initiale (facultatif)",
-  "originHelp": "Saisissez le domaine de la zone si le fichier contient des noms relatifs sans directive $ORIGIN.",
+  "originHelp": "Saisissez le domaine de la zone pour résoudre les noms relatifs et les directives $ORIGIN dont la valeur est relative.",
   "readError": "Impossible d’ouvrir ce fichier. Réessayez ou collez son contenu.",
   "records": "Enregistrements DNS",
   "search": "Filtrer les enregistrements",
@@ -27,5 +27,6 @@
   "record": "Indiquez le type d’enregistrement suivi de ses données.",
   "invalidTtl": "Saisissez un TTL valide, par exemple 3600 ou 1h.",
   "invalidOrigin": "La directive $ORIGIN attend un seul nom de domaine.",
+  "missingOrigin": "Cette directive $ORIGIN contient un nom relatif et nécessite une origine initiale. Saisissez le domaine de la zone pour résoudre les noms.",
   "unsupported": "L’analyseur a ignoré {directive}. Pour inclure ses enregistrements, collez leur forme développée."
 }

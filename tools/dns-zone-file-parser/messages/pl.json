@@ -4,7 +4,7 @@
   "example": "Wczytaj przykład",
   "placeholder": "Wklej plik strefy w formacie BIND",
   "origin": "Domena bazowa (opcjonalnie)",
-  "originHelp": "Podaj domenę strefy, jeśli plik zawiera nazwy względne i nie ma dyrektywy $ORIGIN.",
+  "originHelp": "Podaj domenę strefy, aby rozwinąć nazwy względne, również w dyrektywach $ORIGIN.",
   "readError": "Nie udało się otworzyć pliku. Spróbuj ponownie lub wklej jego treść.",
   "records": "Rekordy DNS",
   "search": "Filtruj rekordy",
@@ -27,5 +27,6 @@
   "record": "Oczekiwano typu rekordu, a po nim danych rekordu.",
   "invalidTtl": "Wpisz poprawną wartość TTL, np. 3600 lub 1h.",
   "invalidOrigin": "Dyrektywa $ORIGIN wymaga jednej nazwy domeny.",
+  "missingOrigin": "Dyrektywa $ORIGIN z nazwą względną wymaga domeny bazowej. Podaj domenę strefy, aby rozwinąć nazwy.",
   "unsupported": "Pominięto dyrektywę {directive}. Wklej rekordy rozwinięte z tej dyrektywy, aby je uwzględnić."
 }

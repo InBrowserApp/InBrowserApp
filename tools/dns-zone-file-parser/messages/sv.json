@@ -4,7 +4,7 @@
   "example": "Läs in exempel",
   "placeholder": "Klistra in en BIND-zonfil här",
   "origin": "Ursprungsdomän (valfritt)",
-  "originHelp": "Ange zonens domän om filen använder relativa namn utan direktivet $ORIGIN.",
+  "originHelp": "Ange zonens domän för att komplettera relativa namn och relativa $ORIGIN-direktiv.",
   "readError": "Det gick inte att öppna filen. Försök öppna den igen eller klistra in texten.",
   "records": "DNS-poster",
   "search": "Filtrera poster",
@@ -27,5 +27,6 @@
   "record": "Här behövs en posttyp följd av postdata.",
   "invalidTtl": "Ange en giltig TTL, till exempel 3600 eller 1h.",
   "invalidOrigin": "$ORIGIN kräver ett domännamn.",
+  "missingOrigin": "Det här relativa $ORIGIN-direktivet kräver en ursprungsdomän. Ange zonens domän för att komplettera namnen.",
   "unsupported": "Parsern hoppade över {directive}. Klistra in de fullständiga poster som direktivet ger för att ta med dem."
 }

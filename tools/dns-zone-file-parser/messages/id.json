@@ -4,7 +4,7 @@
   "example": "Muat contoh",
   "placeholder": "Tempel isi file zona BIND di sini",
   "origin": "Domain dasar awal (opsional)",
-  "originHelp": "Masukkan domain zona jika file memakai nama relatif tanpa direktif $ORIGIN.",
+  "originHelp": "Masukkan domain zona untuk melengkapi nama relatif, termasuk yang digunakan dalam direktif $ORIGIN.",
   "readError": "File ini tidak dapat dibuka. Coba buka lagi atau tempel isinya.",
   "records": "Record DNS",
   "search": "Filter record",
@@ -27,5 +27,6 @@
   "record": "Jenis record harus diikuti data record.",
   "invalidTtl": "Masukkan TTL yang valid, misalnya 3600 atau 1h.",
   "invalidOrigin": "$ORIGIN memerlukan satu nama domain.",
+  "missingOrigin": "Direktif $ORIGIN dengan nama relatif memerlukan domain dasar awal. Masukkan domain zona untuk melengkapi nama.",
   "unsupported": "Direktif {directive} dilewati. Tempel record yang dihasilkan oleh direktif itu agar ikut ditampilkan."
 }
