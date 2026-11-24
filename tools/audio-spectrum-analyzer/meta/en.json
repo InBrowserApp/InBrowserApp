@@ -1,0 +1,4 @@
+{
+  "name": "Audio Spectrum Analyzer",
+  "description": "View the frequency spectrum of an audio file. Inspect peaks in Hz and levels in dBFS on a logarithmic or linear FFT chart, with local playback."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Penganalisis Spektrum Audio",
+  "description": "Lihat spektrum frekuensi file audio. Periksa puncak dalam Hz dan level dalam dBFS pada grafik FFT logaritmik atau linear sambil memutar audio di perangkat."
+}

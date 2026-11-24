@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "محلّل طيف الصوت",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "أداة قص الصوت ودمجه",
     slug: "audio-trimmer-merger",
   },

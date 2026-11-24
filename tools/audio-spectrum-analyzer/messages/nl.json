@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Audiobestand kiezen",
+  "dropHint": "of sleep hier een audiobestand naartoe",
+  "changeFile": "Ander bestand kiezen",
+  "privacy": "Je audio blijft op je apparaat.",
+  "analyzing": "Spectrum analyseren…",
+  "readError": "Kan dit audiobestand niet openen. Probeer een WAV-bestand in mono of stereo.",
+  "channelError": "Kies een audiobestand in mono of stereo.",
+  "spectrum": "Gemiddeld frequentiespectrum",
+  "scale": "Frequentieschaal",
+  "logarithmic": "Logaritmisch",
+  "linear": "Lineair",
+  "peak": "Sterkste frequentie",
+  "frequency": "Frequentie",
+  "level": "Niveau",
+  "cursor": "Frequentiecursor",
+  "cursorHint": "Wijs een punt aan of tik op de grafiek, of gebruik de schuifregelaar om een frequentie af te lezen.",
+  "silent": "Geen frequentiepiek boven de ondergrens van de grafiek.",
+  "ready": "Het frequentiespectrum is klaar.",
+  "preview": "Originele audio afspelen"
+}

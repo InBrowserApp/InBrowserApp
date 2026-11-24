@@ -1,0 +1,4 @@
+{
+  "name": "Ses Spektrumu Analiz Aracı",
+  "description": "Ses dosyasının frekans spektrumunu görüntüleyin. Logaritmik veya doğrusal FFT grafiğinde tepe frekanslarını Hz, seviyeleri dBFS cinsinden inceleyin. Dosyayı cihazınızda dinleyin."
+}

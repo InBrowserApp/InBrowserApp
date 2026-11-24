@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur de spectre audio",
+  "description": "Visualisez le spectre de fréquences d’un fichier audio. Repérez les pics en Hz et les niveaux en dBFS sur un graphique FFT linéaire ou logarithmique, avec écoute locale."
+}

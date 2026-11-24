@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Escolher áudio",
+  "dropHint": "ou largue aqui um ficheiro de áudio",
+  "changeFile": "Alterar ficheiro",
+  "privacy": "O áudio fica no seu dispositivo.",
+  "analyzing": "A analisar o espectro…",
+  "readError": "Não foi possível abrir este ficheiro de áudio. Experimente um WAV mono ou estéreo.",
+  "channelError": "Escolha um ficheiro de áudio mono ou estéreo.",
+  "spectrum": "Espectro médio de frequências",
+  "scale": "Escala de frequências",
+  "logarithmic": "Logarítmica",
+  "linear": "Linear",
+  "peak": "Frequência dominante",
+  "frequency": "Frequência",
+  "level": "Nível",
+  "cursor": "Cursor de frequência",
+  "cursorHint": "Aponte para o gráfico, toque nele ou mova o cursor para consultar uma frequência.",
+  "silent": "Nenhum pico de frequência ultrapassa o nível mínimo do gráfico.",
+  "ready": "O espectro de frequências está pronto.",
+  "preview": "Ouvir o áudio original"
+}

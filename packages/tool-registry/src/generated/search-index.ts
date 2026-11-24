@@ -2430,6 +2430,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-spectrum-analyzer",
+    category: "misc",
+    icon: "audio-lines",
+    tags: [
+      "audio",
+      "spectrum",
+      "frequency",
+      "fft",
+      "sound",
+      "analyzer",
+      "hz",
+      "dbfs",
+    ],
+    locales: {
+      ar: {
+        name: "محلّل طيف الصوت",
+        description:
+          "اعرض طيف ترددات ملف صوتي. افحص الذروات بالهرتز والمستويات بوحدة dBFS على رسم FFT بمقياس لوغاريتمي أو خطي، وشغّل الصوت على جهازك.",
+      },
+      de: {
+        name: "Audio-Spektrumanalyse",
+        description:
+          "Zeige das Frequenzspektrum einer Audiodatei an. Lies Spitzen in Hz und Pegel in dBFS im linearen oder logarithmischen FFT-Diagramm ab und höre die Datei lokal an.",
+      },
+      en: {
+        name: "Audio Spectrum Analyzer",
+        description:
+          "View the frequency spectrum of an audio file. Inspect peaks in Hz and levels in dBFS on a logarithmic or linear FFT chart, with local playback.",
+      },
+      es: {
+        name: "Analizador de espectro de audio",
+        description:
+          "Visualiza el espectro de frecuencias de un archivo de audio. Consulta picos en Hz y niveles en dBFS en una gráfica FFT logarítmica o lineal, y reproduce el audio en tu dispositivo.",
+      },
+      fr: {
+        name: "Analyseur de spectre audio",
+        description:
+          "Visualisez le spectre de fréquences d’un fichier audio. Repérez les pics en Hz et les niveaux en dBFS sur un graphique FFT linéaire ou logarithmique, avec écoute locale.",
+      },
+      he: {
+        name: "מנתח ספקטרום אודיו",
+        description:
+          "הציגו את ספקטרום התדרים של קובץ אודיו. בדקו שיאים ב־Hz ורמות ב־dBFS בגרף FFT לוגריתמי או ליניארי, והאזינו לקובץ במכשיר שלכם.",
+      },
+      hi: {
+        name: "ऑडियो स्पेक्ट्रम एनालाइज़र",
+        description:
+          "ऑडियो फ़ाइल का फ़्रीक्वेंसी स्पेक्ट्रम देखें। लॉगरिदमिक या लीनियर FFT चार्ट में Hz में पीक और dBFS में स्तर जाँचें और ऑडियो अपने डिवाइस पर सुनें।",
+      },
+      id: {
+        name: "Penganalisis Spektrum Audio",
+        description:
+          "Lihat spektrum frekuensi file audio. Periksa puncak dalam Hz dan level dalam dBFS pada grafik FFT logaritmik atau linear sambil memutar audio di perangkat.",
+      },
+      it: {
+        name: "Analizzatore di spettro audio",
+        description:
+          "Visualizza lo spettro di frequenza di un file audio. Esamina picchi in Hz e livelli in dBFS su un grafico FFT logaritmico o lineare e riproduci l’audio sul tuo dispositivo.",
+      },
+      ja: {
+        name: "音声の周波数スペクトル解析",
+        description:
+          "音声ファイルの周波数スペクトルを表示します。対数・リニアスケールのFFTグラフでピーク周波数（Hz）とレベル（dBFS）を確認し、端末内で音声を再生できます。",
+      },
+      ko: {
+        name: "오디오 스펙트럼 분석기",
+        description:
+          "오디오 파일의 주파수 스펙트럼을 확인하세요. 로그 또는 선형 FFT 차트에서 피크 주파수(Hz)와 레벨(dBFS)을 읽고 기기에서 오디오를 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Penganalisis Spektrum Audio",
+        description:
+          "Lihat spektrum frekuensi fail audio. Periksa puncak dalam Hz dan aras dalam dBFS pada carta FFT logaritma atau linear sambil memainkan audio pada peranti anda.",
+      },
+      nl: {
+        name: "Audiospectrumanalysator",
+        description:
+          "Bekijk het frequentiespectrum van een audiobestand. Lees pieken in Hz en niveaus in dBFS af op een logaritmische of lineaire FFT-grafiek en speel de audio lokaal af.",
+      },
+      no: {
+        name: "Spektrumanalysator for lyd",
+        description:
+          "Se frekvensspekteret til en lydfil. Les av topper i Hz og nivåer i dBFS i en logaritmisk eller lineær FFT-graf, og spill av filen lokalt.",
+      },
+      pl: {
+        name: "Analizator widma audio",
+        description:
+          "Zobacz widmo częstotliwości pliku audio. Sprawdź maksima w Hz i poziomy w dBFS na liniowym lub logarytmicznym wykresie FFT i odsłuchaj plik lokalnie.",
+      },
+      pt: {
+        name: "Analisador de espectro de áudio",
+        description:
+          "Visualize o espectro de frequências de um ficheiro de áudio. Consulte picos em Hz e níveis em dBFS num gráfico FFT logarítmico ou linear e ouça o áudio no seu dispositivo.",
+      },
+      ru: {
+        name: "Анализатор спектра аудио",
+        description:
+          "Просматривайте частотный спектр аудиофайла. Смотрите пики в Гц и уровни в dBFS на линейном или логарифмическом графике БПФ и слушайте запись локально.",
+      },
+      sv: {
+        name: "Spektrumanalysator för ljud",
+        description:
+          "Visa frekvensspektrumet för en ljudfil. Läs av toppar i Hz och nivåer i dBFS i ett logaritmiskt eller linjärt FFT-diagram och spela upp ljudet lokalt.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์สเปกตรัมเสียง",
+        description:
+          "ดูสเปกตรัมความถี่ของไฟล์เสียง ตรวจสอบความถี่พีกในหน่วย Hz และระดับในหน่วย dBFS บนกราฟ FFT แบบลอการิทึมหรือเชิงเส้น พร้อมเล่นเสียงบนอุปกรณ์",
+      },
+      tr: {
+        name: "Ses Spektrumu Analiz Aracı",
+        description:
+          "Ses dosyasının frekans spektrumunu görüntüleyin. Logaritmik veya doğrusal FFT grafiğinde tepe frekanslarını Hz, seviyeleri dBFS cinsinden inceleyin. Dosyayı cihazınızda dinleyin.",
+      },
+      vi: {
+        name: "Phân tích phổ âm thanh",
+        description:
+          "Xem phổ tần số của tệp âm thanh. Đọc các đỉnh theo Hz và mức tín hiệu theo dBFS trên biểu đồ FFT thang logarit hoặc tuyến tính, rồi nghe thử ngay trên thiết bị.",
+      },
+      "zh-CN": {
+        name: "音频频谱分析器",
+        description:
+          "查看音频文件的频谱。在对数或线性 FFT 图表上查看以 Hz 表示的峰值频率和以 dBFS 表示的电平，并在本地播放音频。",
+      },
+      "zh-TW": {
+        name: "音訊頻譜分析器",
+        description:
+          "查看音訊檔案的頻譜。在對數或線性 FFT 圖表上查看以 Hz 表示的峰值頻率和以 dBFS 表示的電平，並在本機播放音訊。",
+      },
+    },
+  },
+  {
     slug: "audio-trimmer-merger",
     category: "misc",
     icon: "scissors",

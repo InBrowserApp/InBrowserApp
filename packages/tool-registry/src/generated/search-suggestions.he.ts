@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "מנתח ספקטרום אודיו",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "חיתוך ומיזוג אודיו",
     slug: "audio-trimmer-merger",
   },

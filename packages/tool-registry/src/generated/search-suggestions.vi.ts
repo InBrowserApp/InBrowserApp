@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Phân tích phổ âm thanh",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "Cắt và ghép âm thanh",
     slug: "audio-trimmer-merger",
   },

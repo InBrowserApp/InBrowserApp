@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Analizator widma audio",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "Przycinanie i łączenie audio",
     slug: "audio-trimmer-merger",
   },

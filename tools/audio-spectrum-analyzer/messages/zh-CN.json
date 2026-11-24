@@ -1,0 +1,21 @@
+{
+  "chooseFile": "选择音频",
+  "dropHint": "或将音频文件拖放到这里",
+  "changeFile": "更换文件",
+  "privacy": "音频始终保留在您的设备上。",
+  "analyzing": "正在分析频谱…",
+  "readError": "无法打开此音频文件，请尝试单声道或立体声 WAV 文件。",
+  "channelError": "请选择单声道或立体声音频文件。",
+  "spectrum": "平均频谱",
+  "scale": "频率刻度",
+  "logarithmic": "对数",
+  "linear": "线性",
+  "peak": "最强频率",
+  "frequency": "频率",
+  "level": "电平",
+  "cursor": "频率光标",
+  "cursorHint": "将指针移到图表上或点击图表，也可移动滑块来读取频率。",
+  "silent": "没有高于图表下限的频率峰值。",
+  "ready": "频谱已准备好。",
+  "preview": "播放原始音频"
+}

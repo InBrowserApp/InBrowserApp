@@ -1,0 +1,4 @@
+{
+  "name": "Spektrumanalysator för ljud",
+  "description": "Visa frekvensspektrumet för en ljudfil. Läs av toppar i Hz och nivåer i dBFS i ett logaritmiskt eller linjärt FFT-diagram och spela upp ljudet lokalt."
+}

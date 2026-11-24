@@ -1,0 +1,4 @@
+{
+  "name": "Analisador de espectro de áudio",
+  "description": "Visualize o espectro de frequências de um ficheiro de áudio. Consulte picos em Hz e níveis em dBFS num gráfico FFT logarítmico ou linear e ouça o áudio no seu dispositivo."
+}

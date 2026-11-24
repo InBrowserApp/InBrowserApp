@@ -1,0 +1,4 @@
+{
+  "name": "Audio-Spektrumanalyse",
+  "description": "Zeige das Frequenzspektrum einer Audiodatei an. Lies Spitzen in Hz und Pegel in dBFS im linearen oder logarithmischen FFT-Diagramm ab und höre die Datei lokal an."
+}

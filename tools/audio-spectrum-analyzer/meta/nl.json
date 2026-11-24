@@ -1,0 +1,4 @@
+{
+  "name": "Audiospectrumanalysator",
+  "description": "Bekijk het frequentiespectrum van een audiobestand. Lees pieken in Hz en niveaus in dBFS af op een logaritmische of lineaire FFT-grafiek en speel de audio lokaal af."
+}

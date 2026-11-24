@@ -9,6 +9,7 @@ export {
   ArrowUp,
   ArrowLeftRight,
   ArrowRight,
+  AudioLines,
   BadgeCheck,
   Binary,
   Blocks,

@@ -3,6 +3,7 @@ import type { ComponentType } from "react"
 
 import {
   ArrowLeftRight,
+  AudioLines,
   Binary,
   Blocks,
   Bookmark,
@@ -65,6 +66,7 @@ import {
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   "arrow-left-right": ArrowLeftRight,
   archive: FileArchive,
+  "audio-lines": AudioLines,
   "calendar-days": CalendarDays,
   binary: Binary,
   blocks: Blocks,

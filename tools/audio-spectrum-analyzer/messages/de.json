@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Audiodatei auswählen",
+  "dropHint": "oder eine Audiodatei hier ablegen",
+  "changeFile": "Datei wechseln",
+  "privacy": "Deine Audiodatei bleibt auf deinem Gerät.",
+  "analyzing": "Frequenzspektrum wird analysiert …",
+  "readError": "Die Audiodatei konnte nicht geöffnet werden. Versuche es mit einer Mono- oder Stereo-WAV-Datei.",
+  "channelError": "Wähle eine Mono- oder Stereo-Audiodatei.",
+  "spectrum": "Gemitteltes Frequenzspektrum",
+  "scale": "Frequenzskala",
+  "logarithmic": "Logarithmisch",
+  "linear": "Linear",
+  "peak": "Stärkste Frequenz",
+  "frequency": "Frequenz",
+  "level": "Pegel",
+  "cursor": "Frequenzcursor",
+  "cursorHint": "Fahre mit dem Zeiger über das Diagramm, tippe darauf oder bewege den Schieberegler, um die Frequenz abzulesen.",
+  "silent": "Keine Frequenzspitze liegt über der unteren Anzeigegrenze.",
+  "ready": "Das Frequenzspektrum ist bereit.",
+  "preview": "Originalaufnahme abspielen"
+}

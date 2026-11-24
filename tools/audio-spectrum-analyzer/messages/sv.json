@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Välj ljudfil",
+  "dropHint": "eller släpp en ljudfil här",
+  "changeFile": "Byt fil",
+  "privacy": "Ljudfilen stannar på din enhet.",
+  "analyzing": "Analyserar spektrumet…",
+  "readError": "Det gick inte att öppna ljudfilen. Prova en WAV-fil i mono eller stereo.",
+  "channelError": "Välj en ljudfil i mono eller stereo.",
+  "spectrum": "Genomsnittligt frekvensspektrum",
+  "scale": "Frekvensskala",
+  "logarithmic": "Logaritmisk",
+  "linear": "Linjär",
+  "peak": "Starkaste frekvensen",
+  "frequency": "Frekvens",
+  "level": "Nivå",
+  "cursor": "Frekvensmarkör",
+  "cursorHint": "Peka eller tryck på diagrammet, eller använd reglaget för att läsa av en frekvens.",
+  "silent": "Ingen frekvenstopp över diagrammets nedre gräns.",
+  "ready": "Frekvensspektrumet är klart.",
+  "preview": "Spela upp originalljudet"
+}
