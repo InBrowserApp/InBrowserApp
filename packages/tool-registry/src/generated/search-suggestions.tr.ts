@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",

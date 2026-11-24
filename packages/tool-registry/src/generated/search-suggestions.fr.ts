@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Convertisseur de chinois simplifié et traditionnel",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Convertisseur de nombres ↔ chiffres financiers chinois",
     slug: "chinese-uppercase-number-converter",

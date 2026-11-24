@@ -58,6 +58,7 @@
     "@tool/cbz-reader": "workspace:*",
     "@tool/cbz-to-pdf-converter": "workspace:*",
     "@tool/certificate-public-key-parser": "workspace:*",
+    "@tool/chinese-text-converter": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
     "@tool/chm-viewer": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",

@@ -266,6 +266,7 @@ catalog:
   minimatch: ^11.0.8
   murmurhash3js-revisited: ^3.0.0
   openapi-typescript: ^7.13.0
+  opencc-js: 1.4.2
   openpgp: ^6.3.2
   otpauth: ^9.6.0
   oxfmt: ^0.79.0

@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Tall ↔ kinesiske finanstall-konverterer",
     slug: "chinese-uppercase-number-converter",

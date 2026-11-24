@@ -1,0 +1,23 @@
+{
+  "directionLabel": "转换方向",
+  "toTraditional": "简体转繁体",
+  "toSimplified": "繁体转简体",
+  "variantLabel": "繁体版本",
+  "variants": {
+    "t": "通用繁体",
+    "tw": "台湾字形",
+    "twp": "台湾字形和用语",
+    "hk": "香港字形"
+  },
+  "inputLabel": "原文",
+  "inputPlaceholder": "粘贴或输入中文",
+  "exampleLabel": "试用示例",
+  "clearLabel": "清空",
+  "outputLabel": "转换结果",
+  "outputPlaceholder": "结果将显示在这里",
+  "copyLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "copyFailedLabel": "复制失败",
+  "loading": "正在加载转换词典…",
+  "loadError": "词典加载失败。重新加载页面前，请先复制原文。"
+}

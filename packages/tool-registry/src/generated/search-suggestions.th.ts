@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
     slug: "chinese-uppercase-number-converter",

@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Omzetter getal ↔ Chinese financiële cijfers",
     slug: "chinese-uppercase-number-converter",

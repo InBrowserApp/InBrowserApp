@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ממיר בין סינית מפושטת לסינית מסורתית",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",

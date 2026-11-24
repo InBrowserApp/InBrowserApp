@@ -6567,6 +6567,143 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可同时转换台湾用语）和香港字形，文本在浏览器内转换。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
     icon: "binary",
@@ -49756,6 +49893,143 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "X.509 憑證與公開金鑰解析器",
         description:
           "解析 PEM、DER 或 base64 DER 形式的 X.509 憑證與公開金鑰。直接在瀏覽器本機檢視主體、簽發者、有效日期、指紋、擴充欄位與金鑰詳細資訊。",
+      },
+    },
+  },
+  "chinese-text-converter": {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可同时转换台湾用语）和香港字形，文本在浏览器内转换。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
       },
     },
   },

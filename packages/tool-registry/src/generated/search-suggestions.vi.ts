@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",

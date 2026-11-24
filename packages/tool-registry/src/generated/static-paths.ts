@@ -4694,6 +4694,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-text-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     language: "ar",
   },

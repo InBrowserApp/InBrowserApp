@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
     category: "misc",
     name: "Konverter Angka ↔ Angka Finansial Tionghoa",
     slug: "chinese-uppercase-number-converter",
