@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 內容遮蔽",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF 分割器",
     slug: "pdf-splitter",
   },

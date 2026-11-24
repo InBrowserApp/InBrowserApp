@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Noircir un PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "Séparateur de PDF",
     slug: "pdf-splitter",
   },

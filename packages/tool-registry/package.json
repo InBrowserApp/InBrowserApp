@@ -212,6 +212,7 @@
     "@tool/pdf-merger": "workspace:*",
     "@tool/pdf-page-number-adder": "workspace:*",
     "@tool/pdf-page-organizer": "workspace:*",
+    "@tool/pdf-redactor": "workspace:*",
     "@tool/pdf-splitter": "workspace:*",
     "@tool/pdf-text-extractor": "workspace:*",
     "@tool/pdf-to-image-converter": "workspace:*",

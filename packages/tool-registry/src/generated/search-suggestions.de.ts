@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF schwärzen",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF-Aufteilen",
     slug: "pdf-splitter",
   },

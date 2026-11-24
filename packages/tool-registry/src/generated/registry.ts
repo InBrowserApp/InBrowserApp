@@ -25851,6 +25851,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-redactor",
+    category: "pdf",
+    icon: "eye-off",
+    tags: [
+      "pdf",
+      "redact",
+      "black out",
+      "privacy",
+      "sensitive information",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حجب محتوى PDF",
+        description:
+          "احجب المعلومات الحساسة في ملفات PDF عبر الإنترنت. ارسم مستطيلات سوداء فوق الأسماء أو العناوين أو مبالغ العقود أو التوقيعات، ونزّل نسخة أُزيل منها المحتوى المحدد نهائيًا. تتم المعالجة بالكامل في متصفحك.",
+      },
+      de: {
+        name: "PDF schwärzen",
+        description:
+          "Schwärze PDF-Dateien online. Ziehe schwarze Rechtecke über Namen, Adressen, Vertragsbeträge oder Unterschriften und lade eine PDF-Datei herunter, aus der die markierten Inhalte dauerhaft entfernt wurden. Die Verarbeitung erfolgt in deinem Browser.",
+      },
+      en: {
+        name: "PDF Redactor",
+        description:
+          "Redact PDFs online. Draw black boxes over names, addresses, contract amounts, or signatures and download a PDF with the selected content permanently removed. All processing stays in your browser.",
+      },
+      es: {
+        name: "Censurar PDF",
+        description:
+          "Censura un PDF en línea. Traza recuadros negros sobre nombres, direcciones, importes de contratos o firmas y descarga una copia con esos datos eliminados de forma permanente. Todo se procesa en tu navegador.",
+      },
+      fr: {
+        name: "Noircir un PDF",
+        description:
+          "Noircissez un PDF en ligne. Tracez des rectangles sur les noms, adresses, montants des contrats ou signatures à supprimer définitivement, puis téléchargez une copie. Le fichier est traité dans votre navigateur.",
+      },
+      he: {
+        name: "השחרת PDF",
+        description:
+          "השחירו מידע רגיש בקובצי PDF באופן מקוון. סמנו שמות, כתובות, סכומים בחוזים או חתימות במלבנים שחורים והורידו עותק שממנו הוסר המידע שסימנתם לצמיתות. כל העיבוד נעשה בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF से संवेदनशील जानकारी हटाएँ",
+        description:
+          "PDF से संवेदनशील जानकारी ऑनलाइन हटाएँ। नाम, पते, अनुबंध की रकम या हस्ताक्षर पर काले बॉक्स बनाएँ। चुनी हुई जानकारी हमेशा के लिए हटाकर PDF डाउनलोड करें। पूरी प्रोसेसिंग आपके ब्राउज़र में होती है।",
+      },
+      id: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan bagian sensitif PDF secara online. Tandai nama, alamat, nilai kontrak, atau tanda tangan dengan kotak hitam, lalu unduh PDF dengan konten yang ditandai terhapus secara permanen. Semua proses berlangsung di browser Anda.",
+      },
+      it: {
+        name: "Oscurare PDF",
+        description:
+          "Oscura un PDF online. Traccia rettangoli neri su nomi, indirizzi, importi contrattuali o firme e scarica un PDF da cui i contenuti selezionati sono stati rimossi definitivamente. Tutto avviene nel browser.",
+      },
+      ja: {
+        name: "PDFの墨消し",
+        description:
+          "PDFをオンラインで墨消し。氏名、住所、契約金額、署名などをドラッグで囲み、黒く塗りつぶした範囲の情報を完全に削除したPDFをダウンロードできます。処理はすべてブラウザー内で行われます。",
+      },
+      ko: {
+        name: "PDF 민감 정보 가리기",
+        description:
+          "온라인에서 PDF의 민감 정보를 가리세요. 이름, 주소, 계약 금액, 서명 등에 검은 상자를 그려 선택한 내용을 영구 삭제한 PDF를 다운로드합니다. 모든 처리는 브라우저에서 이루어집니다.",
+      },
+      ms: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan maklumat dalam PDF secara dalam talian. Lukis kotak hitam pada nama, alamat, jumlah kontrak atau tandatangan dan muat turun PDF dengan kandungan yang dipilih dibuang secara kekal. Semua pemprosesan dilakukan dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF zwartlakken",
+        description:
+          "Lak online gegevens in PDF-bestanden zwart. Teken zwarte vlakken over namen, adressen, contractbedragen of handtekeningen en download een PDF waarin de geselecteerde inhoud definitief is verwijderd. De verwerking gebeurt volledig in uw browser.",
+      },
+      no: {
+        name: "Sladd PDF",
+        description:
+          "Sladd PDF-filer på nett. Tegn svarte bokser over navn, adresser, kontraktsbeløp eller signaturer, og last ned en PDF der det markerte innholdet er fjernet permanent. Alt behandles i nettleseren din.",
+      },
+      pl: {
+        name: "Zaczernianie PDF",
+        description:
+          "Zaczerniaj pliki PDF online. Zakryj imiona i nazwiska, adresy, kwoty z umów lub podpisy czarnymi prostokątami i pobierz PDF z trwale usuniętymi danymi. Całe przetwarzanie odbywa się w przeglądarce.",
+      },
+      pt: {
+        name: "Censurar PDF",
+        description:
+          "Censure PDFs online. Desenhe retângulos pretos sobre nomes, endereços, valores de contratos ou assinaturas e baixe um PDF com o conteúdo selecionado removido de forma permanente. Todo o processamento ocorre no navegador.",
+      },
+      ru: {
+        name: "Зачернение данных в PDF",
+        description:
+          "Зачерните данные в PDF онлайн. Отметьте имена, адреса, суммы по договорам или подписи чёрными прямоугольниками и скачайте PDF, из которого эти данные удалены безвозвратно. Файл обрабатывается в вашем браузере.",
+      },
+      sv: {
+        name: "Maskera PDF",
+        description:
+          "Maskera PDF-filer online. Rita svarta rutor över namn, adresser, avtalsbelopp eller underskrifter och ladda ner en PDF där det markerade innehållet har tagits bort permanent. All bearbetning sker i din webbläsare.",
+      },
+      th: {
+        name: "ปกปิดข้อมูลใน PDF",
+        description:
+          "ปกปิดข้อมูลใน PDF ออนไลน์ ลากกรอบดำทับชื่อ ที่อยู่ ยอดเงินในสัญญา หรือลายเซ็น แล้วดาวน์โหลด PDF ที่ลบเนื้อหาที่เลือกออกอย่างถาวร ไฟล์จะประมวลผลในเบราว์เซอร์ของคุณตลอดทั้งขั้นตอน",
+      },
+      tr: {
+        name: "PDF Karartma",
+        description:
+          "PDF dosyalarını çevrimiçi karartın. Adların, adreslerin, sözleşme tutarlarının veya imzaların üzerine siyah kutular çizin. Seçili bilgilerin kalıcı olarak silindiği PDF kopyasını indirin. Tüm işlemler tarayıcınızda gerçekleşir.",
+      },
+      vi: {
+        name: "Che thông tin trong PDF",
+        description:
+          "Che thông tin trong PDF trực tuyến. Vẽ khung đen lên tên, địa chỉ, số tiền trong hợp đồng hoặc chữ ký rồi tải bản PDF đã xóa vĩnh viễn các nội dung đã chọn. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 脱敏",
+        description:
+          "在线为 PDF 脱敏。框选并涂黑姓名、地址、合同金额或签名，下载永久移除了所选内容的 PDF。文件全程在浏览器本地处理。",
+      },
+      "zh-TW": {
+        name: "PDF 內容遮蔽",
+        description:
+          "線上遮蔽 PDF 內容。框選姓名、地址、合約金額或簽名，下載永久移除所選內容的 PDF。檔案全程在瀏覽器中處理。",
+      },
+    },
+  },
+  {
     slug: "pdf-splitter",
     category: "pdf",
     icon: "file-text",
@@ -66491,6 +66621,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 頁面整理器",
         description:
           "拖曳 PDF 頁面以重新排序、旋轉掃描頁面，或移除不需要的頁面，再下載新的 PDF。在瀏覽器中免費處理，保護你的隱私。",
+      },
+    },
+  },
+  "pdf-redactor": {
+    slug: "pdf-redactor",
+    category: "pdf",
+    icon: "eye-off",
+    tags: [
+      "pdf",
+      "redact",
+      "black out",
+      "privacy",
+      "sensitive information",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حجب محتوى PDF",
+        description:
+          "احجب المعلومات الحساسة في ملفات PDF عبر الإنترنت. ارسم مستطيلات سوداء فوق الأسماء أو العناوين أو مبالغ العقود أو التوقيعات، ونزّل نسخة أُزيل منها المحتوى المحدد نهائيًا. تتم المعالجة بالكامل في متصفحك.",
+      },
+      de: {
+        name: "PDF schwärzen",
+        description:
+          "Schwärze PDF-Dateien online. Ziehe schwarze Rechtecke über Namen, Adressen, Vertragsbeträge oder Unterschriften und lade eine PDF-Datei herunter, aus der die markierten Inhalte dauerhaft entfernt wurden. Die Verarbeitung erfolgt in deinem Browser.",
+      },
+      en: {
+        name: "PDF Redactor",
+        description:
+          "Redact PDFs online. Draw black boxes over names, addresses, contract amounts, or signatures and download a PDF with the selected content permanently removed. All processing stays in your browser.",
+      },
+      es: {
+        name: "Censurar PDF",
+        description:
+          "Censura un PDF en línea. Traza recuadros negros sobre nombres, direcciones, importes de contratos o firmas y descarga una copia con esos datos eliminados de forma permanente. Todo se procesa en tu navegador.",
+      },
+      fr: {
+        name: "Noircir un PDF",
+        description:
+          "Noircissez un PDF en ligne. Tracez des rectangles sur les noms, adresses, montants des contrats ou signatures à supprimer définitivement, puis téléchargez une copie. Le fichier est traité dans votre navigateur.",
+      },
+      he: {
+        name: "השחרת PDF",
+        description:
+          "השחירו מידע רגיש בקובצי PDF באופן מקוון. סמנו שמות, כתובות, סכומים בחוזים או חתימות במלבנים שחורים והורידו עותק שממנו הוסר המידע שסימנתם לצמיתות. כל העיבוד נעשה בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF से संवेदनशील जानकारी हटाएँ",
+        description:
+          "PDF से संवेदनशील जानकारी ऑनलाइन हटाएँ। नाम, पते, अनुबंध की रकम या हस्ताक्षर पर काले बॉक्स बनाएँ। चुनी हुई जानकारी हमेशा के लिए हटाकर PDF डाउनलोड करें। पूरी प्रोसेसिंग आपके ब्राउज़र में होती है।",
+      },
+      id: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan bagian sensitif PDF secara online. Tandai nama, alamat, nilai kontrak, atau tanda tangan dengan kotak hitam, lalu unduh PDF dengan konten yang ditandai terhapus secara permanen. Semua proses berlangsung di browser Anda.",
+      },
+      it: {
+        name: "Oscurare PDF",
+        description:
+          "Oscura un PDF online. Traccia rettangoli neri su nomi, indirizzi, importi contrattuali o firme e scarica un PDF da cui i contenuti selezionati sono stati rimossi definitivamente. Tutto avviene nel browser.",
+      },
+      ja: {
+        name: "PDFの墨消し",
+        description:
+          "PDFをオンラインで墨消し。氏名、住所、契約金額、署名などをドラッグで囲み、黒く塗りつぶした範囲の情報を完全に削除したPDFをダウンロードできます。処理はすべてブラウザー内で行われます。",
+      },
+      ko: {
+        name: "PDF 민감 정보 가리기",
+        description:
+          "온라인에서 PDF의 민감 정보를 가리세요. 이름, 주소, 계약 금액, 서명 등에 검은 상자를 그려 선택한 내용을 영구 삭제한 PDF를 다운로드합니다. 모든 처리는 브라우저에서 이루어집니다.",
+      },
+      ms: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan maklumat dalam PDF secara dalam talian. Lukis kotak hitam pada nama, alamat, jumlah kontrak atau tandatangan dan muat turun PDF dengan kandungan yang dipilih dibuang secara kekal. Semua pemprosesan dilakukan dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF zwartlakken",
+        description:
+          "Lak online gegevens in PDF-bestanden zwart. Teken zwarte vlakken over namen, adressen, contractbedragen of handtekeningen en download een PDF waarin de geselecteerde inhoud definitief is verwijderd. De verwerking gebeurt volledig in uw browser.",
+      },
+      no: {
+        name: "Sladd PDF",
+        description:
+          "Sladd PDF-filer på nett. Tegn svarte bokser over navn, adresser, kontraktsbeløp eller signaturer, og last ned en PDF der det markerte innholdet er fjernet permanent. Alt behandles i nettleseren din.",
+      },
+      pl: {
+        name: "Zaczernianie PDF",
+        description:
+          "Zaczerniaj pliki PDF online. Zakryj imiona i nazwiska, adresy, kwoty z umów lub podpisy czarnymi prostokątami i pobierz PDF z trwale usuniętymi danymi. Całe przetwarzanie odbywa się w przeglądarce.",
+      },
+      pt: {
+        name: "Censurar PDF",
+        description:
+          "Censure PDFs online. Desenhe retângulos pretos sobre nomes, endereços, valores de contratos ou assinaturas e baixe um PDF com o conteúdo selecionado removido de forma permanente. Todo o processamento ocorre no navegador.",
+      },
+      ru: {
+        name: "Зачернение данных в PDF",
+        description:
+          "Зачерните данные в PDF онлайн. Отметьте имена, адреса, суммы по договорам или подписи чёрными прямоугольниками и скачайте PDF, из которого эти данные удалены безвозвратно. Файл обрабатывается в вашем браузере.",
+      },
+      sv: {
+        name: "Maskera PDF",
+        description:
+          "Maskera PDF-filer online. Rita svarta rutor över namn, adresser, avtalsbelopp eller underskrifter och ladda ner en PDF där det markerade innehållet har tagits bort permanent. All bearbetning sker i din webbläsare.",
+      },
+      th: {
+        name: "ปกปิดข้อมูลใน PDF",
+        description:
+          "ปกปิดข้อมูลใน PDF ออนไลน์ ลากกรอบดำทับชื่อ ที่อยู่ ยอดเงินในสัญญา หรือลายเซ็น แล้วดาวน์โหลด PDF ที่ลบเนื้อหาที่เลือกออกอย่างถาวร ไฟล์จะประมวลผลในเบราว์เซอร์ของคุณตลอดทั้งขั้นตอน",
+      },
+      tr: {
+        name: "PDF Karartma",
+        description:
+          "PDF dosyalarını çevrimiçi karartın. Adların, adreslerin, sözleşme tutarlarının veya imzaların üzerine siyah kutular çizin. Seçili bilgilerin kalıcı olarak silindiği PDF kopyasını indirin. Tüm işlemler tarayıcınızda gerçekleşir.",
+      },
+      vi: {
+        name: "Che thông tin trong PDF",
+        description:
+          "Che thông tin trong PDF trực tuyến. Vẽ khung đen lên tên, địa chỉ, số tiền trong hợp đồng hoặc chữ ký rồi tải bản PDF đã xóa vĩnh viễn các nội dung đã chọn. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 脱敏",
+        description:
+          "在线为 PDF 脱敏。框选并涂黑姓名、地址、合同金额或签名，下载永久移除了所选内容的 PDF。文件全程在浏览器本地处理。",
+      },
+      "zh-TW": {
+        name: "PDF 內容遮蔽",
+        description:
+          "線上遮蔽 PDF 內容。框選姓名、地址、合約金額或簽名，下載永久移除所選內容的 PDF。檔案全程在瀏覽器中處理。",
       },
     },
   },

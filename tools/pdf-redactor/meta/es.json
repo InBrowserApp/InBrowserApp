@@ -1,0 +1,4 @@
+{
+  "name": "Censurar PDF",
+  "description": "Censura un PDF en línea. Traza recuadros negros sobre nombres, direcciones, importes de contratos o firmas y descarga una copia con esos datos eliminados de forma permanente. Todo se procesa en tu navegador."
+}

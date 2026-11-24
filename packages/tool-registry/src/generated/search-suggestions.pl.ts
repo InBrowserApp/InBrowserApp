@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Zaczernianie PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "Narzędzie do dzielenia PDF",
     slug: "pdf-splitter",
   },

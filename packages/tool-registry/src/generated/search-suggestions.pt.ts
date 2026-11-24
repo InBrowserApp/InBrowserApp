@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Censurar PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "Divisor de PDF",
     slug: "pdf-splitter",
   },

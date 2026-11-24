@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Hitamkan PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "Pemisah PDF",
     slug: "pdf-splitter",
   },

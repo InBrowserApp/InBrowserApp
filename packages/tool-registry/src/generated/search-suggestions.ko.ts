@@ -1029,6 +1029,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 민감 정보 가리기",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF 분할기",
     slug: "pdf-splitter",
   },
