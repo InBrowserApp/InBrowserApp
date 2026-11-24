@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Omzetrichting",
+  "toTraditional": "Vereenvoudigd → Traditioneel",
+  "toSimplified": "Traditioneel → Vereenvoudigd",
+  "variantLabel": "Variant van traditioneel Chinees",
+  "variants": {
+    "t": "Traditioneel (standaard)",
+    "tw": "Taiwan (tekens)",
+    "twp": "Taiwan (tekens en woordgebruik)",
+    "hk": "Hongkong (tekens)"
+  },
+  "inputLabel": "Originele tekst",
+  "inputPlaceholder": "Plak of typ Chinese tekst",
+  "exampleLabel": "Probeer een voorbeeld",
+  "clearLabel": "Wissen",
+  "outputLabel": "Omgezette tekst",
+  "outputPlaceholder": "Het resultaat verschijnt hier",
+  "copyLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "copyFailedLabel": "Kopiëren mislukt",
+  "loading": "Woordenboek laden…",
+  "loadError": "Het woordenboek kon niet worden geladen. Kopieer je oorspronkelijke tekst voordat je de pagina opnieuw laadt."
+}

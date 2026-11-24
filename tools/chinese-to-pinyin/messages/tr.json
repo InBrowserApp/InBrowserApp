@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Çince metin",
+  "inputPlaceholder": "Çince metin yazın veya yapıştırın",
+  "exampleLabel": "Örneği dene",
+  "clearLabel": "Temizle",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Pinyin burada görünecek",
+  "formatLabel": "Ton gösterimi",
+  "marksLabel": "Ton işaretleri",
+  "numbersLabel": "Ton numaraları",
+  "plainLabel": "Tonsuz",
+  "copyLabel": "Pinyin’i kopyala",
+  "copiedLabel": "Kopyalandı",
+  "copyFailedLabel": "Kopyalanamadı"
+}

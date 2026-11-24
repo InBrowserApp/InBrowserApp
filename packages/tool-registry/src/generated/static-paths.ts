@@ -4694,6 +4694,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-text-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ar",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "de",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "en",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "es",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "fr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "he",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "hi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "id",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "it",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ja",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ko",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ms",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "nl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "no",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pl",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "pt",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "ru",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "sv",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "th",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "tr",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "vi",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-to-pinyin",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     language: "ar",
   },
@@ -5611,6 +5795,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "color-picker",
+    language: "zh-TW",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ar",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "de",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "en",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "es",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "fr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "he",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "hi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "id",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "it",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ja",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ko",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ms",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "nl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "no",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pt",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ru",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "sv",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "th",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "tr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "vi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "compound-interest-calculator",
     language: "zh-TW",
   },
   {
@@ -7359,6 +7635,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "djvu-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ar",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "de",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "en",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "es",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "fr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "he",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "hi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "id",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "it",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ja",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ko",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ms",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "nl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "no",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pt",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ru",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "sv",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "th",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "tr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "vi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "dms-coordinate-converter",
     language: "zh-TW",
   },
   {
@@ -11499,6 +11867,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ical-event-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "de",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "en",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "es",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "he",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "id",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "it",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "no",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "th",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-calendar-viewer",
     language: "zh-TW",
   },
   {

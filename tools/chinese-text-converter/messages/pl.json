@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Kierunek konwersji",
+  "toTraditional": "Uproszczone → tradycyjne",
+  "toSimplified": "Tradycyjne → uproszczone",
+  "variantLabel": "Wariant zapisu tradycyjnego",
+  "variants": {
+    "t": "Standardowy zapis tradycyjny",
+    "tw": "Znaki tajwańskie",
+    "twp": "Znaki i słownictwo tajwańskie",
+    "hk": "Znaki używane w Hongkongu"
+  },
+  "inputLabel": "Tekst oryginalny",
+  "inputPlaceholder": "Wklej lub wpisz tekst po chińsku",
+  "exampleLabel": "Wstaw przykład",
+  "clearLabel": "Wyczyść",
+  "outputLabel": "Wynik konwersji",
+  "outputPlaceholder": "Tutaj pojawi się wynik",
+  "copyLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "copyFailedLabel": "Nie udało się skopiować",
+  "loading": "Wczytywanie słownika konwersji…",
+  "loadError": "Nie udało się wczytać słownika. Skopiuj tekst oryginalny przed odświeżeniem strony."
+}

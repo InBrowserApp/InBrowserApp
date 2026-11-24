@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Konverteringsretning",
+  "toTraditional": "Forenklet → Tradisjonell",
+  "toSimplified": "Tradisjonell → Forenklet",
+  "variantLabel": "Variant av tradisjonell kinesisk",
+  "variants": {
+    "t": "Tradisjonell (standard)",
+    "tw": "Taiwan (tegn)",
+    "twp": "Taiwan (tegn og ordvalg)",
+    "hk": "Hongkong (tegn)"
+  },
+  "inputLabel": "Originaltekst",
+  "inputPlaceholder": "Lim inn eller skriv kinesisk tekst",
+  "exampleLabel": "Prøv et eksempel",
+  "clearLabel": "Tøm",
+  "outputLabel": "Konvertert tekst",
+  "outputPlaceholder": "Resultatet vises her",
+  "copyLabel": "Kopier resultatet",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kunne ikke kopiere",
+  "loading": "Laster inn ordlisten …",
+  "loadError": "Ordlisten kunne ikke lastes inn. Kopier originalteksten før du laster inn siden på nytt."
+}

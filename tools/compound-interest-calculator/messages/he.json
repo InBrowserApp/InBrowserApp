@@ -1,0 +1,33 @@
+{
+  "assumptions": "תוכנית חיסכון",
+  "initialAmount": "סכום התחלתי",
+  "monthlyContribution": "הפקדה חודשית",
+  "annualRate": "ריבית שנתית",
+  "years": "תקופת החיסכון",
+  "yearsUnit": "שנים",
+  "frequency": "תדירות צבירת הריבית",
+  "frequencies": {
+    "daily": "יומית",
+    "monthly": "חודשית",
+    "quarterly": "רבעונית",
+    "semiannually": "חצי שנתית",
+    "annually": "שנתית"
+  },
+  "timing": "מועד ההפקדה החודשית",
+  "timings": {
+    "end": "סוף החודש",
+    "start": "תחילת החודש"
+  },
+  "reset": "שחזור הדוגמה",
+  "endingBalance": "יתרה צפויה",
+  "totalContributed": "סך ההפקדות",
+  "interestEarned": "ריבית שנצברה",
+  "growth": "צמיחת היתרה לאורך זמן",
+  "breakdown": "פירוט שנתי",
+  "year": "שנה",
+  "amountError": "יש להזין סכום השווה לאפס או גדול ממנו.",
+  "rateError": "יש להזין ריבית שנתית בין ‎−100%‎ ל־100%.",
+  "yearsError": "יש להזין מספר שלם בין 1 ל־100.",
+  "resultError": "הסכומים גדולים מדי לחישוב. כדאי לנסות ערכים קטנים יותר.",
+  "resultPending": "יש לבדוק את השדות המסומנים כדי לראות את התוצאה הצפויה."
+}

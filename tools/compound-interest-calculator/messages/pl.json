@@ -1,0 +1,33 @@
+{
+  "assumptions": "Plan oszczędzania",
+  "initialAmount": "Kapitał początkowy",
+  "monthlyContribution": "Miesięczna wpłata",
+  "annualRate": "Oprocentowanie roczne",
+  "years": "Okres oszczędzania",
+  "yearsUnit": "lat",
+  "frequency": "Częstotliwość kapitalizacji",
+  "frequencies": {
+    "daily": "Codziennie",
+    "monthly": "Co miesiąc",
+    "quarterly": "Co kwartał",
+    "semiannually": "Co pół roku",
+    "annually": "Co rok"
+  },
+  "timing": "Termin wpłat",
+  "timings": {
+    "end": "Koniec miesiąca",
+    "start": "Początek miesiąca"
+  },
+  "reset": "Przywróć przykład",
+  "endingBalance": "Prognozowane saldo",
+  "totalContributed": "Suma wpłat",
+  "interestEarned": "Naliczone odsetki",
+  "growth": "Zmiana salda w czasie",
+  "breakdown": "Zestawienie roczne",
+  "year": "Rok",
+  "amountError": "Wpisz kwotę równą zeru lub większą.",
+  "rateError": "Wpisz oprocentowanie roczne od −100% do 100%.",
+  "yearsError": "Wpisz liczbę całkowitą od 1 do 100.",
+  "resultError": "Kwoty są zbyt duże do obliczenia. Wpisz mniejsze wartości.",
+  "resultPending": "Sprawdź wyróżnione pola, aby zobaczyć prognozę."
+}

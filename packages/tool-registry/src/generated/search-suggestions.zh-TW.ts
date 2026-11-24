@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "繁簡轉換器",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "漢字轉拼音",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "取色器",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算機",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu 檢視器",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "經緯度與度分秒轉換器",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 事件產生器",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS 行事曆檔案檢視器",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

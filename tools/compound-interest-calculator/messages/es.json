@@ -1,0 +1,33 @@
+{
+  "assumptions": "Plan de ahorro",
+  "initialAmount": "Saldo inicial",
+  "monthlyContribution": "Aportación mensual",
+  "annualRate": "Tasa de interés anual",
+  "years": "Plazo",
+  "yearsUnit": "años",
+  "frequency": "Frecuencia de capitalización",
+  "frequencies": {
+    "daily": "Diaria",
+    "monthly": "Mensual",
+    "quarterly": "Trimestral",
+    "semiannually": "Semestral",
+    "annually": "Anual"
+  },
+  "timing": "Momento de la aportación",
+  "timings": {
+    "end": "Al final del mes",
+    "start": "Al inicio del mes"
+  },
+  "reset": "Restablecer el ejemplo",
+  "endingBalance": "Saldo estimado",
+  "totalContributed": "Total aportado",
+  "interestEarned": "Intereses generados",
+  "growth": "Evolución del saldo",
+  "breakdown": "Desglose por año",
+  "year": "Año",
+  "amountError": "Introduce un importe igual o superior a cero.",
+  "rateError": "Introduce una tasa anual entre −100 % y 100 %.",
+  "yearsError": "Introduce un número entero entre 1 y 100.",
+  "resultError": "Los importes son demasiado grandes para hacer el cálculo. Prueba con valores más pequeños.",
+  "resultPending": "Revisa los campos resaltados para ver la proyección."
+}

@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Chinees naar pinyin omzetten",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Omzetter getal ↔ Chinese financiële cijfers",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Kleurkiezer",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculator voor samengestelde rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu-viewer",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Coördinaten omrekenen tussen decimale graden en DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-evenementgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Viewer voor ICS-agendabestanden",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

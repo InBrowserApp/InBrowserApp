@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Convertisseur de chinois simplifié et traditionnel",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Convertisseur de chinois en pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Convertisseur de nombres ↔ chiffres financiers chinois",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Sélecteur de Couleurs",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculateur d’intérêts composés",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Visionneuse DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Convertisseur de coordonnées GPS en DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Générateur d'événements iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Visionneuse de fichiers ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

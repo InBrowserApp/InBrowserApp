@@ -1,0 +1,23 @@
+{
+  "directionLabel": "変換方向",
+  "toTraditional": "簡体字から繁体字",
+  "toSimplified": "繁体字から簡体字",
+  "variantLabel": "繁体字の種類",
+  "variants": {
+    "t": "標準繁体字",
+    "tw": "台湾の字形",
+    "twp": "台湾の字形と用語",
+    "hk": "香港の字形"
+  },
+  "inputLabel": "元のテキスト",
+  "inputPlaceholder": "中国語を貼り付けるか入力",
+  "exampleLabel": "サンプルを試す",
+  "clearLabel": "消去",
+  "outputLabel": "変換結果",
+  "outputPlaceholder": "ここに結果が表示されます",
+  "copyLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "copyFailedLabel": "コピーできませんでした",
+  "loading": "変換辞書を読み込み中…",
+  "loadError": "辞書を読み込めませんでした。ページを再読み込みする前に元のテキストをコピーしてください。"
+}

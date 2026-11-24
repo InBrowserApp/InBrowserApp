@@ -1,0 +1,20 @@
+{
+  "openFile": "Ouvrir un fichier",
+  "sample": "Essayer un exemple",
+  "input": "Texte source",
+  "readError": "Impossible de lire le fichier. Sélectionnez-le à nouveau ou collez le texte.",
+  "paste": "Coller le texte ICS",
+  "view": "Afficher les événements",
+  "placeholder": "Collez ici le contenu du fichier iCalendar",
+  "search": "Rechercher des événements",
+  "empty": "Ouvrez un fichier ICS ou essayez l’exemple pour voir ses événements.",
+  "invalid": "Impossible de lire ce fichier iCalendar. Vérifiez le contenu du fichier ICS, puis réessayez.",
+  "noEvents": "Ce calendrier ne contient aucun événement.",
+  "noMatches": "Aucun événement ne correspond à votre recherche.",
+  "untitled": "Événement sans titre",
+  "allDay": "Toute la journée",
+  "floating": "Heure locale",
+  "recurring": "Événement récurrent",
+  "occurrence": "Occurrence modifiée",
+  "count": "Événements : {count}"
+}

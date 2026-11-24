@@ -1,0 +1,20 @@
+{
+  "openFile": "Dosya aç",
+  "sample": "Örnek dene",
+  "input": "Kaynak metin",
+  "readError": "Dosya okunamadı. Dosyayı yeniden seçin veya metni yapıştırın.",
+  "paste": "ICS metni yapıştır",
+  "view": "Etkinlikleri göster",
+  "placeholder": "iCalendar dosyasının içeriğini buraya yapıştırın",
+  "search": "Etkinliklerde ara",
+  "empty": "Etkinlikleri görmek için bir ICS dosyası açın veya örneği deneyin.",
+  "invalid": "iCalendar dosyası okunamadı. ICS içeriğini kontrol edip yeniden deneyin.",
+  "noEvents": "Bu takvimde hiç etkinlik yok.",
+  "noMatches": "Aramanızla eşleşen etkinlik bulunamadı.",
+  "untitled": "Başlıksız etkinlik",
+  "allDay": "Tüm gün",
+  "floating": "Yerel saat",
+  "recurring": "Tekrarlanıyor",
+  "occurrence": "Düzenlenen tekrar",
+  "count": "Etkinlik sayısı: {count}"
+}

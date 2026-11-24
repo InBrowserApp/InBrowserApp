@@ -1,0 +1,18 @@
+{
+  "decimal": "Stopnie dziesiętne (DD)",
+  "dms": "Stopnie, minuty i sekundy (DMS)",
+  "latitude": "Szerokość geograficzna",
+  "longitude": "Długość geograficzna",
+  "degrees": "Stopnie",
+  "minutes": "Minuty",
+  "seconds": "Sekundy",
+  "hemisphere": "Półkula",
+  "north": "Północna (N)",
+  "south": "Południowa (S)",
+  "east": "Wschodnia (E)",
+  "west": "Zachodnia (W)",
+  "example": "Wypróbuj przykład",
+  "copy": "Kopiuj współrzędne",
+  "copied": "Skopiowano",
+  "invalid": "Szerokość geograficzna musi mieścić się w zakresie od −90° do 90°, a długość od −180° do 180°. Minuty i sekundy muszą być mniejsze niż 60."
+}
