@@ -24,4 +24,4 @@ body {
 }
 ```
 
-כשמשתמשים בגופן משתנה, הגדירו את טווח המשקלים שהגופן תומך בו בפועל, למשל `font-weight: 100 900;`. בדקו את רישיון הגופן לפני שמאחסנים אותו באתר, ובדקו את השפות והמשקלים שבהם משתמשים בדפי האתר. ראו [תיעוד @font-face ב-MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40font-face).
+כשמשתמשים בגופן משתנה, הגדירו את טווח המשקלים שהגופן תומך בו בפועל, למשל `font-weight: 100 900;`. בדקו את רישיון הגופן לפני שמאחסנים אותו באתר, ובדקו את השפות והמשקלים שבהם משתמשים בדפי האתר. ראו [תיעוד `@font-face` ב-MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40font-face).

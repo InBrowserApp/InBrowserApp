@@ -24,4 +24,4 @@ body {
 }
 ```
 
-عند استخدام خط متغير، حدّد نطاق الأوزان الذي يدعمه الخط فعليًا، مثل `font-weight: 100 900;`. تحقّق من ترخيص الخط قبل استضافته على موقعك، وجرّب اللغات والأوزان المستخدمة في صفحاتك. راجع [مرجع MDN لقاعدة @font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40font-face).
+عند استخدام خط متغير، حدّد نطاق الأوزان الذي يدعمه الخط فعليًا، مثل `font-weight: 100 900;`. تحقّق من ترخيص الخط قبل استضافته على موقعك، وجرّب اللغات والأوزان المستخدمة في صفحاتك. راجع [مرجع MDN لقاعدة `@font-face`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40font-face).

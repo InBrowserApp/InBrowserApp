@@ -14432,12 +14432,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Chuyển phông chữ TrueType (.ttf) và OpenType (.otf) sang định dạng WOFF2 cho web ngay trong trình duyệt. Chuyển đổi nhiều tệp cùng lúc, so sánh dung lượng và tải từng phông chữ xuống.",
       },
       "zh-CN": {
-        name: "TTF 和 OTF 转 WOFF2 转换器",
+        name: "TTF、OTF 转 WOFF2",
         description:
           "在浏览器中将 TrueType（.ttf）和 OpenType（.otf）字体转换为 WOFF2 网页字体。支持批量转换、比较文件大小并逐个下载。",
       },
       "zh-TW": {
-        name: "TTF、OTF 轉 WOFF2 字型轉換器",
+        name: "TTF、OTF 轉 WOFF2",
         description:
           "在瀏覽器中將 TrueType（.ttf）和 OpenType（.otf）字型轉換成 WOFF2 網頁字型。支援批次轉換，可比較轉換前後的大小並逐一下載。",
       },

@@ -564,7 +564,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "web",
-    name: "TTF 和 OTF 转 WOFF2 转换器",
+    name: "TTF、OTF 转 WOFF2",
     slug: "font-to-woff2",
   },
   {
