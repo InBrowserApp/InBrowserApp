@@ -70,3 +70,33 @@ it("opens a known example and handles partial resolver failures", async () => {
   await screen.findByText(messages.unavailable)
   expect(screen.getByText(messages.malformed)).toBeTruthy()
 })
+
+it("flags multiple valid records from one resolver without reporting a match", async () => {
+  vi.stubGlobal(
+    "fetch",
+    vi
+      .fn()
+      .mockResolvedValueOnce(
+        Response.json({
+          Status: 0,
+          TC: false,
+          Answer: ["site.example.com", "other.example.com"].map((domain) => ({
+            type: 16,
+            data: `dnslink=/ipns/${domain}`,
+            TTL: 60,
+          })),
+        })
+      )
+      .mockResolvedValueOnce(Response.json({ Status: 3, TC: false }))
+  )
+  render(<DnsLink messages={messages} />)
+  fireEvent.change(screen.getByLabelText(messages.domain), {
+    target: { value: "example.com" },
+  })
+  fireEvent.change(screen.getByLabelText(messages.target), {
+    target: { value: "ipns://site.example.com" },
+  })
+  fireEvent.click(screen.getByRole("button", { name: messages.check }))
+  await screen.findByText(messages.conflicting)
+  expect(screen.queryByText(messages.match)).toBeNull()
+})

@@ -17,5 +17,6 @@
   "malformed": "היעד שפורסם ברשומת DNSLink אינו תקין.",
   "match": "תואם ליעד שהזנתם",
   "different": "שונה מהיעד שהזנתם",
-  "ttl": "TTL (שניות)"
+  "ttl": "TTL (שניות)",
+  "conflicting": "נמצאו כמה רשומות DNSLink. השאירו יעד IPFS או IPNS אחד בלבד."
 }

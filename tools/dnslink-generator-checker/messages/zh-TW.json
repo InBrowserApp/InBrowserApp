@@ -17,5 +17,6 @@
   "malformed": "已發布的 DNSLink 目標無效。",
   "match": "符合預期目標",
   "different": "與預期目標不同",
-  "ttl": "TTL（秒）"
+  "ttl": "TTL（秒）",
+  "conflicting": "偵測到多筆 DNSLink 記錄。請只保留一個 IPFS 或 IPNS 目標。"
 }

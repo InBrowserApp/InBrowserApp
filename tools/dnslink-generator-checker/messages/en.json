@@ -17,5 +17,6 @@
   "malformed": "The published DNSLink target is invalid.",
   "match": "Matches your target",
   "different": "Differs from your target",
-  "ttl": "TTL (seconds)"
+  "ttl": "TTL (seconds)",
+  "conflicting": "Multiple DNSLink records. Keep only one IPFS or IPNS target."
 }

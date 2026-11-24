@@ -3,11 +3,12 @@ import { base32 } from "multiformats/bases/base32"
 import { base36 } from "multiformats/bases/base36"
 import { base58btc } from "multiformats/bases/base58"
 import { CID } from "multiformats/cid"
+import { decode as decodeDigest } from "multiformats/hashes/digest"
 
 const decoder = base32.decoder.or(base36.decoder).or(base58btc.decoder)
 const resolvers = DOH_SERVERS.slice(0, 2)
 
-export type PublishedRecord = {
+type PublishedRecord = {
   target: string
   normalized: string | null
   ttl: number
@@ -36,6 +37,21 @@ function parseCid(value: string) {
   }
 }
 
+function peerKey(identifier: string) {
+  const cid = parseCid(identifier)
+  if (cid?.version === 1) return cid.code === 0x72 ? cid : null
+
+  try {
+    const digest =
+      cid?.multihash ?? decodeDigest(base58btc.decode(`z${identifier}`))
+    const isInlineKey = digest.code === 0 && digest.size <= 42
+    const isHashedKey = digest.code === 0x12 && digest.size === 32
+    return isInlineKey || isHashedKey ? CID.createV1(0x72, digest) : null
+  } catch {
+    return null
+  }
+}
+
 export function parseTarget(input: string) {
   const value = input.trim().replace(/^dnslink=/, "")
   const path = /^(?:\/(ipfs|ipns)\/|(ipfs|ipns):\/\/)([^/]+)(\/.*)?$/i.exec(
@@ -46,15 +62,15 @@ export function parseTarget(input: string) {
   const suffix = path?.[4] ?? ""
   if (/[\s"?#\\]/.test(identifier + suffix)) return null
 
-  const cid = parseCid(identifier)
   if (protocol === "ipfs") {
+    const cid = parseCid(identifier)
     return cid ? `/ipfs/${cid}${suffix}` : null
   }
-  if (cid) return `/ipns/${identifier}${suffix}`
+  if (peerKey(identifier)) return `/ipns/${identifier}${suffix}`
 
   try {
     const name = normalizeDnsName(identifier)
-    return identifier.includes(".") && !identifier.includes(":")
+    return identifier.includes(".") && !/[:@]/.test(identifier)
       ? `/ipns/${name}${suffix}`
       : null
   } catch {
@@ -64,8 +80,17 @@ export function parseTarget(input: string) {
 
 export function targetKey(target: string) {
   const [, protocol, identifier, ...rest] = target.split("/")
-  const id = parseCid(identifier!)?.toV1().toString() ?? identifier
+  const cid = protocol === "ipns" ? peerKey(identifier!) : parseCid(identifier!)
+  const id = cid?.toV1().toString() ?? identifier
   return ["", protocol, id, ...rest].join("/")
+}
+
+function parsePublishedTarget(value: string) {
+  if (value.startsWith("/ipfs/") || value.startsWith("/ipns/")) {
+    return parseTarget(value)
+  }
+  const cid = parseCid(value)
+  return cid ? `/ipfs/${cid}` : null
 }
 
 function unquoteTxt(data: string) {
@@ -81,13 +106,13 @@ export async function checkDnslink(name: string, signal: AbortSignal) {
         const unavailable = response.TC || ![0, 3].includes(response.Status)
         const records: PublishedRecord[] = []
         for (const answer of response.Answer ?? []) {
+          if (answer.type !== 16) continue
           const value = unquoteTxt(answer.data)
-          if (answer.type === 16 && value.startsWith("dnslink=")) {
-            records.push({
-              target: value.slice("dnslink=".length),
-              normalized: parseTarget(value),
-              ttl: answer.TTL,
-            })
+          const prefixed = value.startsWith("dnslink=")
+          const target = prefixed ? value.slice("dnslink=".length) : value
+          const normalized = parsePublishedTarget(target)
+          if (prefixed || normalized) {
+            records.push({ target, normalized, ttl: answer.TTL })
           }
         }
         return { resolver: label, records, unavailable }

@@ -17,5 +17,6 @@
   "malformed": "Entspricht Ihrem Ziel",
   "match": "Weicht von Ihrem Ziel ab",
   "different": "TTL (Sekunden)",
-  "ttl": "TTL (Sekunden)"
+  "ttl": "TTL (Sekunden)",
+  "conflicting": "Mehrere DNSLink-Einträge gefunden. Behalten Sie nur ein IPFS- oder IPNS-Ziel."
 }

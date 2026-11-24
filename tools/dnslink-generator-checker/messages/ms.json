@@ -17,5 +17,6 @@
   "malformed": "Sasaran DNSLink yang diterbitkan tidak sah.",
   "match": "Sepadan dengan sasaran anda",
   "different": "Berbeza daripada sasaran anda",
-  "ttl": "TTL (saat)"
+  "ttl": "TTL (saat)",
+  "conflicting": "Terdapat beberapa rekod DNSLink. Kekalkan satu sasaran IPFS atau IPNS sahaja."
 }

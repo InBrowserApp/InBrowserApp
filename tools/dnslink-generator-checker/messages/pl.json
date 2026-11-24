@@ -17,5 +17,6 @@
   "malformed": "Adres docelowy w opublikowanym rekordzie DNSLink jest nieprawidłowy.",
   "match": "Zgodny z oczekiwanym adresem",
   "different": "Różni się od oczekiwanego adresu",
-  "ttl": "TTL (sekundy)"
+  "ttl": "TTL (sekundy)",
+  "conflicting": "Znaleziono kilka rekordów DNSLink. Pozostaw jeden cel IPFS lub IPNS."
 }

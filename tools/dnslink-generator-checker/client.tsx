@@ -25,8 +25,10 @@ import {
 import type EnglishMessages from "./messages/en.json"
 
 export default function DnsLink({
+  language = "en",
   messages,
 }: {
+  language?: string
   messages: typeof EnglishMessages
 }) {
   const id = useId()
@@ -35,21 +37,23 @@ export default function DnsLink({
   const [target, setTarget] = useState("")
   const [showDomainError, setShowDomainError] = useState(false)
   const [showTargetError, setShowTargetError] = useState(false)
-  const [results, setResults] = useState<ResolverResult[]>([])
-  const [checking, setChecking] = useState(false)
+  const [lookup, setLookup] = useState<ResolverResult[] | "checking" | null>(
+    null
+  )
 
   const name = dnslinkName(domain)
   const path = parseTarget(target)
   const invalidDomain = showDomainError && !name
   const invalidTarget = showTargetError && Boolean(target.trim()) && !path
   const expected = path ? targetKey(path) : null
+  const checking = lookup === "checking"
+  const results = Array.isArray(lookup) ? lookup : null
 
   useEffect(() => () => active.current?.abort(), [])
 
   function changeDomain(value: string) {
     active.current?.abort()
-    setChecking(false)
-    setResults([])
+    setLookup(null)
     setDomain(value)
     setShowDomainError(false)
   }
@@ -61,15 +65,13 @@ export default function DnsLink({
     active.current?.abort()
     const controller = new AbortController()
     active.current = controller
-    setChecking(true)
-    setResults([])
+    setLookup("checking")
     const results = await checkDnslink(
       nextName,
       AbortSignal.any([controller.signal, AbortSignal.timeout(12000)])
     )
     if (!controller.signal.aborted) {
-      setResults(results)
-      setChecking(false)
+      setLookup(results)
     }
   }
 
@@ -178,60 +180,82 @@ export default function DnsLink({
           </ToolPanelCardContent>
         </ToolPanelCard>
       </div>
-      {results.length > 0 && (
+      <p role="status" className="sr-only">
+        {results && messages.published}
+      </p>
+      {results && (
         <ToolPanelCard>
           <CardHeader>
-            <CardTitle>{messages.published}</CardTitle>
+            <CardTitle>
+              <h2>{messages.published}</h2>
+            </CardTitle>
           </CardHeader>
           <ToolPanelCardContent className="grid gap-3 md:grid-cols-2">
-            {results.map(({ resolver, records, unavailable }) => (
-              <section
-                key={resolver}
-                className="grid content-start gap-2 rounded-lg border p-3"
-              >
-                <h2 className="text-sm font-medium">{resolver}</h2>
-                {unavailable && (
-                  <p className="text-sm text-muted-foreground">
-                    {messages.unavailable}
-                  </p>
-                )}
-                {!unavailable && records.length === 0 && (
-                  <p className="text-sm text-muted-foreground">
-                    {messages.missing}
-                  </p>
-                )}
-                {records.map(({ target, normalized, ttl }, index) => (
-                  <div className="grid gap-1" key={`${target}-${index}`}>
-                    <code
-                      dir="ltr"
-                      className="rounded-md bg-muted p-2 text-xs wrap-anywhere"
-                    >
-                      {target}
-                    </code>
-                    <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
-                      <span>
-                        {messages.ttl} · {ttl.toLocaleString()}
-                      </span>
-                      {!normalized ? (
-                        <span>{messages.malformed}</span>
-                      ) : (
-                        expected && (
-                          <span className="font-medium text-foreground">
-                            {targetKey(normalized) === expected
-                              ? messages.match
-                              : messages.different}
-                          </span>
-                        )
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </section>
+            {results.map((result) => (
+              <ResolverCard
+                key={result.resolver}
+                result={result}
+                expected={expected}
+                language={language}
+                messages={messages}
+              />
             ))}
           </ToolPanelCardContent>
         </ToolPanelCard>
       )}
     </div>
+  )
+}
+
+function ResolverCard({
+  result: { resolver, records, unavailable },
+  expected,
+  language,
+  messages,
+}: {
+  result: ResolverResult
+  expected: string | null
+  language: string
+  messages: typeof EnglishMessages
+}) {
+  const conflicting = records.filter(({ normalized }) => normalized).length > 1
+  const notice = unavailable
+    ? messages.unavailable
+    : conflicting
+      ? messages.conflicting
+      : records.length === 0
+        ? messages.missing
+        : null
+  const compare = expected && !conflicting && !unavailable
+
+  return (
+    <section className="grid content-start gap-2 rounded-lg border p-3">
+      <h3 className="text-sm font-medium">{resolver}</h3>
+      {notice && <p className="text-sm text-muted-foreground">{notice}</p>}
+      {records.map(({ target, normalized, ttl }, index) => (
+        <div className="grid gap-1" key={`${target}-${index}`}>
+          <code
+            dir="ltr"
+            className="rounded-md bg-muted p-2 text-xs wrap-anywhere"
+          >
+            {target}
+          </code>
+          <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
+            <span>
+              {messages.ttl} · {ttl.toLocaleString(language)}
+            </span>
+            {!normalized && <span>{messages.malformed}</span>}
+            {compare && normalized && (
+              <span className="font-medium text-foreground">
+                {targetKey(normalized) === expected
+                  ? messages.match
+                  : messages.different}
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </section>
   )
 }
 

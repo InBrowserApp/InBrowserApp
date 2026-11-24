@@ -17,5 +17,6 @@
   "malformed": "게시된 DNSLink 대상이 유효하지 않습니다.",
   "match": "입력한 대상과 일치",
   "different": "입력한 대상과 다름",
-  "ttl": "TTL(초)"
+  "ttl": "TTL(초)",
+  "conflicting": "DNSLink 레코드가 여러 개 있습니다. IPFS 또는 IPNS 대상 하나만 남겨 주세요."
 }

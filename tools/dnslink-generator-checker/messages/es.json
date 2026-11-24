@@ -17,5 +17,6 @@
   "malformed": "Coincide con tu destino",
   "match": "Difiere de tu destino",
   "different": "TTL (segundos)",
-  "ttl": "TTL (segundos)"
+  "ttl": "TTL (segundos)",
+  "conflicting": "Hay varios registros DNSLink. Conserva un solo destino IPFS o IPNS."
 }

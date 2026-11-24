@@ -17,5 +17,6 @@
   "malformed": "Correspond à votre cible",
   "match": "Diffère de votre cible",
   "different": "TTL (secondes)",
-  "ttl": "TTL (secondes)"
+  "ttl": "TTL (secondes)",
+  "conflicting": "Plusieurs enregistrements DNSLink. Conservez une seule cible IPFS ou IPNS."
 }

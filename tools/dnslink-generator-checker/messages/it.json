@@ -17,5 +17,6 @@
   "malformed": "La destinazione DNSLink pubblicata non è valida.",
   "match": "Corrisponde alla destinazione",
   "different": "Diverso dalla destinazione",
-  "ttl": "TTL (secondi)"
+  "ttl": "TTL (secondi)",
+  "conflicting": "Sono presenti più record DNSLink. Mantieni una sola destinazione IPFS o IPNS."
 }

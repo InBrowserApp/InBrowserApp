@@ -28,6 +28,6 @@ const Intro = resolveLocale<AstroComponentFactory>(
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <DnsLink client:load messages={messages} />
+  <DnsLink client:load language={lang} messages={messages} />
   <ToolArticle><Intro /></ToolArticle>
 </ToolPageShell>

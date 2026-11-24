@@ -17,5 +17,6 @@
   "malformed": "Det publiserte DNSLink-målet er ugyldig.",
   "match": "Samsvarer med målet ditt",
   "different": "Avviker fra målet ditt",
-  "ttl": "TTL (sekunder)"
+  "ttl": "TTL (sekunder)",
+  "conflicting": "Flere DNSLink-poster funnet. Behold bare ett IPFS- eller IPNS-mål."
 }

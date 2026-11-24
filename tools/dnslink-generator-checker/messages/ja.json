@@ -17,5 +17,6 @@
   "malformed": "公開されている DNSLink のリンク先が無効です。",
   "match": "指定したリンク先と一致",
   "different": "指定したリンク先と不一致",
-  "ttl": "TTL（秒）"
+  "ttl": "TTL（秒）",
+  "conflicting": "DNSLink レコードが複数あります。IPFS または IPNS の参照先を 1 つだけ残してください。"
 }

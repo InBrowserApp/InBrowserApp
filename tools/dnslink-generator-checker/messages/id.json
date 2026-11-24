@@ -17,5 +17,6 @@
   "malformed": "Target DNSLink yang dipublikasikan tidak valid.",
   "match": "Cocok dengan target Anda",
   "different": "Berbeda dari target Anda",
-  "ttl": "TTL (detik)"
+  "ttl": "TTL (detik)",
+  "conflicting": "Ada beberapa catatan DNSLink. Sisakan satu tujuan IPFS atau IPNS."
 }

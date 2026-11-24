@@ -17,5 +17,6 @@
   "malformed": "Yayımlanan DNSLink hedefi geçersiz.",
   "match": "Hedefinizle eşleşiyor",
   "different": "Hedefinizden farklı",
-  "ttl": "TTL (saniye)"
+  "ttl": "TTL (saniye)",
+  "conflicting": "Birden fazla DNSLink kaydı bulundu. Yalnızca bir IPFS veya IPNS hedefi bırakın."
 }

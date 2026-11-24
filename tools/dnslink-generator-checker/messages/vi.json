@@ -17,5 +17,6 @@
   "malformed": "Đích trong bản ghi DNSLink đã công bố không hợp lệ.",
   "match": "Khớp với đích của bạn",
   "different": "Khác với đích của bạn",
-  "ttl": "TTL (giây)"
+  "ttl": "TTL (giây)",
+  "conflicting": "Có nhiều bản ghi DNSLink. Chỉ giữ một đích IPFS hoặc IPNS."
 }
