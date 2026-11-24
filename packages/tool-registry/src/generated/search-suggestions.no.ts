@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Konverter kinesisk til pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Tall ↔ kinesiske finanstall-konverterer",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Fargevelger",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator for rentes rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu-viser",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Koordinatomregner for desimalgrader og DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-hendelsesgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Viser for ICS-kalenderfiler",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

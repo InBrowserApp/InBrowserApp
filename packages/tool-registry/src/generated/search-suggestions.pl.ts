@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Konwerter chińskiego na pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Konwerter liczb ↔ chiński zapis finansowy",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Próbnik Kolorów",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator procentu składanego",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Przeglądarka DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Konwerter szerokości i długości geograficznej na DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Generator wydarzeń iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Przeglądarka plików kalendarza ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

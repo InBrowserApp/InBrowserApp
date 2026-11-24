@@ -1,0 +1,20 @@
+{
+  "openFile": "Åpne fil",
+  "sample": "Prøv et eksempel",
+  "input": "Kildetekst",
+  "readError": "Kunne ikke lese filen. Velg den på nytt eller lim inn teksten.",
+  "paste": "Lim inn ICS-tekst",
+  "view": "Vis hendelser",
+  "placeholder": "Lim inn innholdet fra iCalendar-filen her",
+  "search": "Søk etter hendelser",
+  "empty": "Åpne en ICS-fil eller prøv eksempelet for å se hendelsene.",
+  "invalid": "Kunne ikke lese iCalendar-filen. Kontroller ICS-innholdet og prøv igjen.",
+  "noEvents": "Kalenderen inneholder ingen hendelser.",
+  "noMatches": "Ingen hendelser samsvarer med søket.",
+  "untitled": "Hendelse uten tittel",
+  "allDay": "Hele dagen",
+  "floating": "Lokal tid",
+  "recurring": "Gjentas",
+  "occurrence": "Endret forekomst",
+  "count": "Hendelser: {count}"
+}

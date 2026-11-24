@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Penukar Aksara Cina Ringkas dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Penukar Aksara Cina kepada Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator faedah kompaun",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Pemapar DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Penukar Latitud dan Longitud ↔ DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Penjana acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Pemapar Fail Kalendar ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

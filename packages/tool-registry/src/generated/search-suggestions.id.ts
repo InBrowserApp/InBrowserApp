@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Konverter Hanzi ke Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Konverter Angka ↔ Angka Finansial Tionghoa",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator bunga majemuk",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Penampil DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Konverter Lintang dan Bujur ke DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Generator acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Penampil File Kalender ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

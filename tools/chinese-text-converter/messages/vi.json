@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Chiều chuyển đổi",
+  "toTraditional": "Giản thể sang phồn thể",
+  "toSimplified": "Phồn thể sang giản thể",
+  "variantLabel": "Biến thể chữ phồn thể",
+  "variants": {
+    "t": "Phồn thể tiêu chuẩn",
+    "tw": "Kiểu chữ Đài Loan",
+    "twp": "Kiểu chữ và từ vựng Đài Loan",
+    "hk": "Kiểu chữ Hồng Kông"
+  },
+  "inputLabel": "Văn bản gốc",
+  "inputPlaceholder": "Dán hoặc nhập văn bản tiếng Trung",
+  "exampleLabel": "Thử ví dụ",
+  "clearLabel": "Xóa",
+  "outputLabel": "Văn bản đã chuyển đổi",
+  "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+  "copyLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "copyFailedLabel": "Không sao chép được",
+  "loading": "Đang tải từ điển chuyển đổi…",
+  "loadError": "Không tải được từ điển. Hãy sao chép văn bản gốc trước khi tải lại trang."
+}

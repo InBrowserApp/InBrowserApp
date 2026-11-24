@@ -1,0 +1,18 @@
+{
+  "decimal": "Grados decimales (DD)",
+  "dms": "Grados, minutos y segundos (DMS)",
+  "latitude": "Latitud",
+  "longitude": "Longitud",
+  "degrees": "Grados",
+  "minutes": "Minutos",
+  "seconds": "Segundos",
+  "hemisphere": "Hemisferio",
+  "north": "Norte (N)",
+  "south": "Sur (S)",
+  "east": "Este (E)",
+  "west": "Oeste (W)",
+  "example": "Probar un ejemplo",
+  "copy": "Copiar coordenadas",
+  "copied": "Copiadas",
+  "invalid": "La latitud debe estar entre −90° y 90° y la longitud entre −180° y 180°. Los minutos y los segundos deben ser menores que 60."
+}

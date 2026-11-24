@@ -1,0 +1,18 @@
+{
+  "decimal": "Độ thập phân (DD)",
+  "dms": "Độ, phút, giây (DMS)",
+  "latitude": "Vĩ độ",
+  "longitude": "Kinh độ",
+  "degrees": "Độ",
+  "minutes": "Phút",
+  "seconds": "Giây",
+  "hemisphere": "Bán cầu",
+  "north": "Bắc (N)",
+  "south": "Nam (S)",
+  "east": "Đông (E)",
+  "west": "Tây (W)",
+  "example": "Dùng thử ví dụ",
+  "copy": "Sao chép tọa độ",
+  "copied": "Đã sao chép",
+  "invalid": "Vĩ độ phải nằm trong khoảng ±90° và kinh độ trong khoảng ±180°. Phút và giây phải nhỏ hơn 60."
+}

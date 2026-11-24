@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "ตัวเลือกสี",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "โปรแกรมดู DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "ตัวสร้างอีเวนต์ iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

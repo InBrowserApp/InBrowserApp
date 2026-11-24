@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "Çinceden Pinyin’e Dönüştürücü",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Renk Seçici",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Bileşik Faiz Hesaplayıcı",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu Görüntüleyici",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Enlem ve Boylam için DMS Dönüştürücü",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal Etkinlik Oluşturucu",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS Takvim Dosyası Görüntüleyici",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

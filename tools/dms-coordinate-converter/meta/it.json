@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di latitudine e longitudine in DMS",
+  "description": "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve."
+}

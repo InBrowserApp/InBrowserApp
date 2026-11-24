@@ -6567,6 +6567,279 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
+  {
+    slug: "chinese-to-pinyin",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "chinese",
+      "hanzi",
+      "mandarin",
+      "pinyin",
+      "pronunciation",
+      "romanization",
+      "transliteration",
+      "汉字",
+      "中文转拼音",
+      "漢字",
+      "中文轉拼音",
+      "拼音",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية إلى البينيين",
+        description:
+          "حوّل الصينية المبسّطة أو التقليدية إلى هانيو بينيين. اختر عرض النغمات بالعلامات أو بالأرقام أو إخفاءها، واعرض النتيجة وانسخها في متصفحك.",
+      },
+      de: {
+        name: "Chinesisch in Pinyin umwandeln",
+        description:
+          "Vereinfachtes oder traditionelles Chinesisch in Hanyu Pinyin umwandeln. Pinyin mit Tonzeichen, Tonziffern oder ohne Tonangabe im Browser kopieren.",
+      },
+      en: {
+        name: "Chinese to Pinyin Converter",
+        description:
+          "Convert simplified or traditional Chinese to Hanyu Pinyin with tone marks, tone numbers, or no tones. See and copy the result in your browser.",
+      },
+      es: {
+        name: "Conversor de chino a pinyin",
+        description:
+          "Convierte texto en chino simplificado o tradicional a Hanyu Pinyin con marcas de tono, números o sin tonos. Consulta y copia el resultado en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois en pinyin",
+        description:
+          "Convertissez le chinois simplifié ou traditionnel en Hanyu Pinyin avec des marques de ton, des tons chiffrés ou sans tons. Affichez et copiez le résultat dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר מסינית לפיניין",
+        description:
+          "המירו טקסט בסינית מפושטת או מסורתית להאניו פיניין עם סימני טון, מספרי טון או בלי טונים. אפשר לראות ולהעתיק את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "चीनी से पिनयिन कन्वर्टर",
+        description:
+          "सरलीकृत या पारंपरिक चीनी को हान्यू पिनयिन में बदलें। टोन चिह्न, टोन की संख्याएँ या बिना टोन का विकल्प चुनें और नतीजा ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Hanzi ke Pinyin",
+        description:
+          "Ubah aksara Han sederhana atau tradisional ke Hanyu Pinyin. Pilih tanda nada, angka nada, atau tanpa nada, lalu lihat dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Convertitore dal cinese al pinyin",
+        description:
+          "Converti il cinese semplificato o tradizionale in Hanyu Pinyin, con segni di tono, toni numerici o senza toni. Leggi e copia il risultato nel browser.",
+      },
+      ja: {
+        name: "中国語ピンイン変換",
+        description:
+          "簡体字・繁体字の中国語を漢語ピンインに変換。声調記号、声調番号、声調なしから選び、ブラウザで結果を確認してコピーできます。",
+      },
+      ko: {
+        name: "중국어 병음 변환기",
+        description:
+          "간체 또는 번체 중국어를 한어병음으로 변환합니다. 성조 기호, 성조 숫자 또는 성조 없는 표기를 선택하고 브라우저에서 결과를 확인하고 복사하세요.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina kepada Pinyin",
+        description:
+          "Tukar aksara Cina ringkas atau tradisional kepada Hanyu Pinyin. Pilih tanda nada, nombor nada atau tanpa nada, kemudian lihat dan salin hasilnya terus dalam pelayar.",
+      },
+      nl: {
+        name: "Chinees naar pinyin omzetten",
+        description:
+          "Zet vereenvoudigd of traditioneel Chinees om naar Hanyu Pinyin met toontekens, tooncijfers of zonder tonen. Bekijk en kopieer het resultaat in je browser.",
+      },
+      no: {
+        name: "Konverter kinesisk til pinyin",
+        description:
+          "Gjør om forenklet eller tradisjonell kinesisk til Hanyu Pinyin med tonetegn, tonetall eller uten toner. Se og kopier resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter chińskiego na pinyin",
+        description:
+          "Zapisuj uproszczone i tradycyjne znaki chińskie w Hanyu Pinyin ze znakami tonów, z cyframi lub bez tonów. Zobacz i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês para pinyin",
+        description:
+          "Converta chinês simplificado ou tradicional para Hanyu Pinyin com marcas tonais, tons numerados ou sem tons. Veja e copie o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер китайского текста в пиньинь",
+        description:
+          "Преобразуйте упрощённые и традиционные иероглифы в пиньинь со знаками тонов, цифрами или без тонов. Результат можно просмотреть и скопировать в браузере.",
+      },
+      sv: {
+        name: "Konvertera kinesiska till pinyin",
+        description:
+          "Omvandla förenklad eller traditionell kinesiska till Hanyu Pinyin med tontecken, tonsiffror eller utan tonangivelse. Läs och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+        description:
+          "แปลงอักษรจีนตัวย่อหรือตัวเต็มเป็นฮั่นอวี่พินอิน เลือกแสดงวรรณยุกต์ด้วยเครื่องหมายหรือตัวเลข หรือไม่แสดงวรรณยุกต์ แล้วดูและคัดลอกผลได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çinceden Pinyin’e Dönüştürücü",
+        description:
+          "Basitleştirilmiş veya geleneksel Çinceyi Hanyu Pinyin’e dönüştürün. Tonları işaretle veya sayıyla gösterin ya da gizleyin. Sonucu tarayıcıda görün ve kopyalayın.",
+      },
+      vi: {
+        name: "Chuyển chữ Hán sang Pinyin",
+        description:
+          "Chuyển chữ Hán giản thể hoặc phồn thể sang Pinyin (bính âm) có dấu thanh, có số chỉ thanh hoặc không ghi thanh điệu. Xem và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "汉字转拼音",
+        description:
+          "在线中文转拼音，支持简体和繁体。可选择声调符号、数字声调或不带声调，在浏览器中转换并复制汉语拼音。",
+      },
+      "zh-TW": {
+        name: "漢字轉拼音",
+        description:
+          "線上中文轉拼音，支援簡體字和繁體字。可選擇聲調符號、聲調數字或不帶聲調，並在瀏覽器中複製漢語拼音。",
+      },
+    },
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
     icon: "binary",
@@ -7830,6 +8103,135 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
       },
     },
   },
@@ -10214,6 +10616,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "DjVu 檢視器",
         description:
           "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
       },
     },
   },
@@ -15846,6 +16383,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  {
+    slug: "ics-calendar-viewer",
+    category: "time",
+    icon: "calendar-days",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "agenda",
+      "events",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملفات تقويم ICS",
+        description:
+          "افتح ملف iCalendar ‏(.ics) وابحث في أحداثه. اطّلع على التواريخ والمناطق الزمنية والمواقع والأوصاف مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für ICS-Kalenderdateien",
+        description:
+          "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser.",
+      },
+      en: {
+        name: "ICS Calendar File Viewer",
+        description:
+          "Open an iCalendar (.ics) file and search its events. Check dates, time zones, locations, and descriptions directly in your browser.",
+      },
+      es: {
+        name: "Visor de archivos ICS",
+        description:
+          "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers ICS",
+        description:
+          "Ouvrez un fichier iCalendar (.ics) et recherchez ses événements. Consultez les dates, fuseaux horaires, lieux et descriptions directement dans le navigateur.",
+      },
+      he: {
+        name: "מציג קובצי לוח שנה ICS",
+        description:
+          "פתחו קובץ iCalendar ‏(.ics) וחפשו בו אירועים. צפו בתאריכים, באזורי זמן, במיקומים ובתיאורים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ICS कैलेंडर फ़ाइल व्यूअर",
+        description:
+          "iCalendar (.ics) फ़ाइल खोलें और उसमें इवेंट खोजें। तारीखें, समय क्षेत्र, स्थान और विवरण सीधे अपने ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil File Kalender ICS",
+        description:
+          "Buka file iCalendar (.ics) dan cari acara di dalamnya. Periksa tanggal, zona waktu, lokasi, dan deskripsi langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di file ICS",
+        description:
+          "Apri un file iCalendar (.ics) e cerca gli eventi. Consulta date, fusi orari, luoghi e descrizioni direttamente nel browser.",
+      },
+      ja: {
+        name: "ICS カレンダーファイルビューアー",
+        description:
+          "iCalendar（.ics）ファイルをブラウザーで開き、予定を検索できます。日付やタイムゾーン、場所、説明を確認できます。",
+      },
+      ko: {
+        name: "ICS 캘린더 파일 뷰어",
+        description:
+          "브라우저에서 iCalendar(.ics) 파일을 열고 일정을 검색하세요. 날짜, 시간대, 장소, 설명을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Kalendar ICS",
+        description:
+          "Buka fail iCalendar (.ics) dan cari acara di dalamnya. Semak tarikh, zon masa, lokasi dan penerangan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor ICS-agendabestanden",
+        description:
+          "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Viser for ICS-kalenderfiler",
+        description:
+          "Åpne en iCalendar-fil (.ics) og søk i hendelsene. Se datoer, tidssoner, steder og beskrivelser direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka plików kalendarza ICS",
+        description:
+          "Otwórz plik iCalendar (.ics) i wyszukaj w nim wydarzenia. Sprawdź daty, strefy czasowe, miejsca i opisy bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de arquivos ICS",
+        description:
+          "Abra um arquivo iCalendar (.ics) e pesquise os eventos. Confira datas, fusos horários, locais e descrições diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр файлов календаря ICS",
+        description:
+          "Откройте файл iCalendar (.ics) и найдите нужные события. Просматривайте даты, часовые пояса, места и описания прямо в браузере.",
+      },
+      sv: {
+        name: "Visare för ICS-kalenderfiler",
+        description:
+          "Öppna en iCalendar-fil (.ics) och sök bland händelserna. Se datum, tidszoner, platser och beskrivningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+        description:
+          "เปิดไฟล์ iCalendar (.ics) และค้นหากิจกรรม ตรวจสอบวันที่ เขตเวลา สถานที่ และรายละเอียดได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS Takvim Dosyası Görüntüleyici",
+        description:
+          "Bir iCalendar (.ics) dosyası açın ve etkinliklerde arama yapın. Tarihleri, saat dilimlerini, konumları ve açıklamaları doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp lịch ICS",
+        description:
+          "Mở tệp iCalendar (.ics) và tìm kiếm sự kiện. Xem ngày, múi giờ, địa điểm và mô tả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 日历文件查看器",
+        description:
+          "在浏览器中打开 iCalendar（.ics）文件，搜索日程并查看日期、时区、地点和详细说明。",
+      },
+      "zh-TW": {
+        name: "ICS 行事曆檔案檢視器",
+        description:
+          "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
       },
     },
   },
@@ -50023,6 +50691,279 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "chinese-text-converter": {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
+  "chinese-to-pinyin": {
+    slug: "chinese-to-pinyin",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "chinese",
+      "hanzi",
+      "mandarin",
+      "pinyin",
+      "pronunciation",
+      "romanization",
+      "transliteration",
+      "汉字",
+      "中文转拼音",
+      "漢字",
+      "中文轉拼音",
+      "拼音",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية إلى البينيين",
+        description:
+          "حوّل الصينية المبسّطة أو التقليدية إلى هانيو بينيين. اختر عرض النغمات بالعلامات أو بالأرقام أو إخفاءها، واعرض النتيجة وانسخها في متصفحك.",
+      },
+      de: {
+        name: "Chinesisch in Pinyin umwandeln",
+        description:
+          "Vereinfachtes oder traditionelles Chinesisch in Hanyu Pinyin umwandeln. Pinyin mit Tonzeichen, Tonziffern oder ohne Tonangabe im Browser kopieren.",
+      },
+      en: {
+        name: "Chinese to Pinyin Converter",
+        description:
+          "Convert simplified or traditional Chinese to Hanyu Pinyin with tone marks, tone numbers, or no tones. See and copy the result in your browser.",
+      },
+      es: {
+        name: "Conversor de chino a pinyin",
+        description:
+          "Convierte texto en chino simplificado o tradicional a Hanyu Pinyin con marcas de tono, números o sin tonos. Consulta y copia el resultado en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois en pinyin",
+        description:
+          "Convertissez le chinois simplifié ou traditionnel en Hanyu Pinyin avec des marques de ton, des tons chiffrés ou sans tons. Affichez et copiez le résultat dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר מסינית לפיניין",
+        description:
+          "המירו טקסט בסינית מפושטת או מסורתית להאניו פיניין עם סימני טון, מספרי טון או בלי טונים. אפשר לראות ולהעתיק את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "चीनी से पिनयिन कन्वर्टर",
+        description:
+          "सरलीकृत या पारंपरिक चीनी को हान्यू पिनयिन में बदलें। टोन चिह्न, टोन की संख्याएँ या बिना टोन का विकल्प चुनें और नतीजा ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Hanzi ke Pinyin",
+        description:
+          "Ubah aksara Han sederhana atau tradisional ke Hanyu Pinyin. Pilih tanda nada, angka nada, atau tanpa nada, lalu lihat dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Convertitore dal cinese al pinyin",
+        description:
+          "Converti il cinese semplificato o tradizionale in Hanyu Pinyin, con segni di tono, toni numerici o senza toni. Leggi e copia il risultato nel browser.",
+      },
+      ja: {
+        name: "中国語ピンイン変換",
+        description:
+          "簡体字・繁体字の中国語を漢語ピンインに変換。声調記号、声調番号、声調なしから選び、ブラウザで結果を確認してコピーできます。",
+      },
+      ko: {
+        name: "중국어 병음 변환기",
+        description:
+          "간체 또는 번체 중국어를 한어병음으로 변환합니다. 성조 기호, 성조 숫자 또는 성조 없는 표기를 선택하고 브라우저에서 결과를 확인하고 복사하세요.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina kepada Pinyin",
+        description:
+          "Tukar aksara Cina ringkas atau tradisional kepada Hanyu Pinyin. Pilih tanda nada, nombor nada atau tanpa nada, kemudian lihat dan salin hasilnya terus dalam pelayar.",
+      },
+      nl: {
+        name: "Chinees naar pinyin omzetten",
+        description:
+          "Zet vereenvoudigd of traditioneel Chinees om naar Hanyu Pinyin met toontekens, tooncijfers of zonder tonen. Bekijk en kopieer het resultaat in je browser.",
+      },
+      no: {
+        name: "Konverter kinesisk til pinyin",
+        description:
+          "Gjør om forenklet eller tradisjonell kinesisk til Hanyu Pinyin med tonetegn, tonetall eller uten toner. Se og kopier resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter chińskiego na pinyin",
+        description:
+          "Zapisuj uproszczone i tradycyjne znaki chińskie w Hanyu Pinyin ze znakami tonów, z cyframi lub bez tonów. Zobacz i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês para pinyin",
+        description:
+          "Converta chinês simplificado ou tradicional para Hanyu Pinyin com marcas tonais, tons numerados ou sem tons. Veja e copie o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер китайского текста в пиньинь",
+        description:
+          "Преобразуйте упрощённые и традиционные иероглифы в пиньинь со знаками тонов, цифрами или без тонов. Результат можно просмотреть и скопировать в браузере.",
+      },
+      sv: {
+        name: "Konvertera kinesiska till pinyin",
+        description:
+          "Omvandla förenklad eller traditionell kinesiska till Hanyu Pinyin med tontecken, tonsiffror eller utan tonangivelse. Läs och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนเป็นพินอิน",
+        description:
+          "แปลงอักษรจีนตัวย่อหรือตัวเต็มเป็นฮั่นอวี่พินอิน เลือกแสดงวรรณยุกต์ด้วยเครื่องหมายหรือตัวเลข หรือไม่แสดงวรรณยุกต์ แล้วดูและคัดลอกผลได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çinceden Pinyin’e Dönüştürücü",
+        description:
+          "Basitleştirilmiş veya geleneksel Çinceyi Hanyu Pinyin’e dönüştürün. Tonları işaretle veya sayıyla gösterin ya da gizleyin. Sonucu tarayıcıda görün ve kopyalayın.",
+      },
+      vi: {
+        name: "Chuyển chữ Hán sang Pinyin",
+        description:
+          "Chuyển chữ Hán giản thể hoặc phồn thể sang Pinyin (bính âm) có dấu thanh, có số chỉ thanh hoặc không ghi thanh điệu. Xem và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "汉字转拼音",
+        description:
+          "在线中文转拼音，支持简体和繁体。可选择声调符号、数字声调或不带声调，在浏览器中转换并复制汉语拼音。",
+      },
+      "zh-TW": {
+        name: "漢字轉拼音",
+        description:
+          "線上中文轉拼音，支援簡體字和繁體字。可選擇聲調符號、聲調數字或不帶聲調，並在瀏覽器中複製漢語拼音。",
+      },
+    },
+  },
   "chinese-uppercase-number-converter": {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
@@ -51287,6 +52228,135 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  "compound-interest-calculator": {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
       },
     },
   },
@@ -53671,6 +54741,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DjVu 檢視器",
         description:
           "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  "dms-coordinate-converter": {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
       },
     },
   },
@@ -59303,6 +60508,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  "ics-calendar-viewer": {
+    slug: "ics-calendar-viewer",
+    category: "time",
+    icon: "calendar-days",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "agenda",
+      "events",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملفات تقويم ICS",
+        description:
+          "افتح ملف iCalendar ‏(.ics) وابحث في أحداثه. اطّلع على التواريخ والمناطق الزمنية والمواقع والأوصاف مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für ICS-Kalenderdateien",
+        description:
+          "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser.",
+      },
+      en: {
+        name: "ICS Calendar File Viewer",
+        description:
+          "Open an iCalendar (.ics) file and search its events. Check dates, time zones, locations, and descriptions directly in your browser.",
+      },
+      es: {
+        name: "Visor de archivos ICS",
+        description:
+          "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers ICS",
+        description:
+          "Ouvrez un fichier iCalendar (.ics) et recherchez ses événements. Consultez les dates, fuseaux horaires, lieux et descriptions directement dans le navigateur.",
+      },
+      he: {
+        name: "מציג קובצי לוח שנה ICS",
+        description:
+          "פתחו קובץ iCalendar ‏(.ics) וחפשו בו אירועים. צפו בתאריכים, באזורי זמן, במיקומים ובתיאורים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ICS कैलेंडर फ़ाइल व्यूअर",
+        description:
+          "iCalendar (.ics) फ़ाइल खोलें और उसमें इवेंट खोजें। तारीखें, समय क्षेत्र, स्थान और विवरण सीधे अपने ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil File Kalender ICS",
+        description:
+          "Buka file iCalendar (.ics) dan cari acara di dalamnya. Periksa tanggal, zona waktu, lokasi, dan deskripsi langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di file ICS",
+        description:
+          "Apri un file iCalendar (.ics) e cerca gli eventi. Consulta date, fusi orari, luoghi e descrizioni direttamente nel browser.",
+      },
+      ja: {
+        name: "ICS カレンダーファイルビューアー",
+        description:
+          "iCalendar（.ics）ファイルをブラウザーで開き、予定を検索できます。日付やタイムゾーン、場所、説明を確認できます。",
+      },
+      ko: {
+        name: "ICS 캘린더 파일 뷰어",
+        description:
+          "브라우저에서 iCalendar(.ics) 파일을 열고 일정을 검색하세요. 날짜, 시간대, 장소, 설명을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Kalendar ICS",
+        description:
+          "Buka fail iCalendar (.ics) dan cari acara di dalamnya. Semak tarikh, zon masa, lokasi dan penerangan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor ICS-agendabestanden",
+        description:
+          "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Viser for ICS-kalenderfiler",
+        description:
+          "Åpne en iCalendar-fil (.ics) og søk i hendelsene. Se datoer, tidssoner, steder og beskrivelser direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka plików kalendarza ICS",
+        description:
+          "Otwórz plik iCalendar (.ics) i wyszukaj w nim wydarzenia. Sprawdź daty, strefy czasowe, miejsca i opisy bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de arquivos ICS",
+        description:
+          "Abra um arquivo iCalendar (.ics) e pesquise os eventos. Confira datas, fusos horários, locais e descrições diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр файлов календаря ICS",
+        description:
+          "Откройте файл iCalendar (.ics) и найдите нужные события. Просматривайте даты, часовые пояса, места и описания прямо в браузере.",
+      },
+      sv: {
+        name: "Visare för ICS-kalenderfiler",
+        description:
+          "Öppna en iCalendar-fil (.ics) och sök bland händelserna. Se datum, tidszoner, platser och beskrivningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+        description:
+          "เปิดไฟล์ iCalendar (.ics) และค้นหากิจกรรม ตรวจสอบวันที่ เขตเวลา สถานที่ และรายละเอียดได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS Takvim Dosyası Görüntüleyici",
+        description:
+          "Bir iCalendar (.ics) dosyası açın ve etkinliklerde arama yapın. Tarihleri, saat dilimlerini, konumları ve açıklamaları doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp lịch ICS",
+        description:
+          "Mở tệp iCalendar (.ics) và tìm kiếm sự kiện. Xem ngày, múi giờ, địa điểm và mô tả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 日历文件查看器",
+        description:
+          "在浏览器中打开 iCalendar（.ics）文件，搜索日程并查看日期、时区、地点和详细说明。",
+      },
+      "zh-TW": {
+        name: "ICS 行事曆檔案檢視器",
+        description:
+          "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
       },
     },
   },

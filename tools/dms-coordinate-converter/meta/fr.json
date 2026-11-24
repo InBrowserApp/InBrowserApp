@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de coordonnées GPS en DMS",
+  "description": "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu."
+}

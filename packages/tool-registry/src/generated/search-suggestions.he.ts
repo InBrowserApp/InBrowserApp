@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ממיר בין סינית מפושטת לסינית מסורתית",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "ממיר מסינית לפיניין",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "בוחר צבעים",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "מחשבון ריבית דריבית",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "מציג DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "ממיר קווי רוחב ואורך ל־DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "מחולל אירועי iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "מציג קובצי לוח שנה ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

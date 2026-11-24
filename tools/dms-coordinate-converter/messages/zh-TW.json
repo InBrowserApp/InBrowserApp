@@ -1,0 +1,18 @@
+{
+  "decimal": "十進位度（DD）",
+  "dms": "度分秒（DMS）",
+  "latitude": "緯度",
+  "longitude": "經度",
+  "degrees": "度",
+  "minutes": "分",
+  "seconds": "秒",
+  "hemisphere": "半球方向",
+  "north": "北緯（N）",
+  "south": "南緯（S）",
+  "east": "東經（E）",
+  "west": "西經（W）",
+  "example": "試用範例",
+  "copy": "複製座標",
+  "copied": "已複製",
+  "invalid": "緯度須介於 −90° 至 90°，經度須介於 −180° 至 180°。分和秒都須小於 60。"
+}

@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "중국어 간체·번체 변환기",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "중국어 병음 변환기",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "숫자 ↔ 중국어 대자 변환기",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "색상 선택기",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "복리 계산기",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu 뷰어",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "위도·경도 도분초 변환기",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 이벤트 생성기",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS 캘린더 파일 뷰어",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "time",

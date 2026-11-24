@@ -1,0 +1,4 @@
+{
+  "name": "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+  "description": "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat."
+}

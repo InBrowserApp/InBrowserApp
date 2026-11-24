@@ -1,0 +1,20 @@
+{
+  "openFile": "ファイルを開く",
+  "sample": "サンプルを試す",
+  "input": "入力テキスト",
+  "readError": "ファイルを読み込めませんでした。選び直すか、テキストを貼り付けてください。",
+  "paste": "ICS テキストを貼り付け",
+  "view": "予定を表示",
+  "placeholder": "ここに iCalendar ファイルの内容を貼り付け",
+  "search": "予定を検索",
+  "empty": "ICS ファイルを開くかサンプルを試すと、予定を確認できます。",
+  "invalid": "この iCalendar ファイルを読み込めませんでした。ICS の内容を確認して、もう一度お試しください。",
+  "noEvents": "このカレンダーに予定はありません。",
+  "noMatches": "検索条件に一致する予定はありません。",
+  "untitled": "無題の予定",
+  "allDay": "終日",
+  "floating": "現地時刻",
+  "recurring": "繰り返し",
+  "occurrence": "個別に変更された予定",
+  "count": "予定件数：{count}"
+}
