@@ -190,6 +190,9 @@ data:
 
 it("reports List fields and handles cyclic YAML aliases", () => {
   expect(
+    validateKubernetes("apiVersion: v1\nkind: List\nmetadata: null\nitems: []")
+  ).toEqual([])
+  expect(
     validateKubernetes(`&self
 apiVersion: v1
 kind: List

@@ -38,7 +38,12 @@ ajv.addSchema({
         apiVersion: { type: "string" },
         kind: { type: "string" },
         metadata: {
-          $ref: "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+          anyOf: [
+            {
+              $ref: "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta",
+            },
+            { type: "null" },
+          ],
         },
         items: { type: "array" },
       },
