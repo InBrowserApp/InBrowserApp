@@ -23,7 +23,7 @@ const options = () => ({
 
 function mockOpen(promise: Promise<unknown>) {
   const destroy = vi.fn().mockResolvedValue(undefined)
-  open.mockReturnValue({ promise, destroy } as ReturnType<
+  open.mockReturnValue({ promise, destroy } as unknown as ReturnType<
     typeof openPdfDocument
   >)
   return destroy
