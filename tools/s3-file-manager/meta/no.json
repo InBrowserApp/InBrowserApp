@@ -1,0 +1,4 @@
+{
+  "name": "S3-filbehandler",
+  "description": "Bla i bøtter fra Amazon S3, Cloudflare R2 og MinIO. Lagre S3-tilkoblinger, last opp filer, forhåndsvis og rediger objekter og kopier, flytt eller slett filer på nett."
+}

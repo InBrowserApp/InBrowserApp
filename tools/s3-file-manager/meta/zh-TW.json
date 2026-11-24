@@ -1,0 +1,4 @@
+{
+  "name": "S3 檔案管理器",
+  "description": "在線上瀏覽 Amazon S3、Cloudflare R2 和 MinIO 的儲存桶。儲存 S3 連線、上傳檔案、預覽或編輯物件，以及複製、移動或刪除檔案。"
+}

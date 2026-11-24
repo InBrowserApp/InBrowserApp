@@ -9,6 +9,8 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@aws-sdk/client-s3": 3.1174.0
+  "@aws-sdk/s3-request-presigner": 3.1174.0
   "@huggingface/transformers": 3.8.1
   occt-import-js: 0.0.23
   three: 0.187.0

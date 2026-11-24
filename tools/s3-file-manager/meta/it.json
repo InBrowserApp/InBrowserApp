@@ -1,0 +1,4 @@
+{
+  "name": "Gestione file S3",
+  "description": "Esplora bucket Amazon S3, Cloudflare R2 e MinIO. Salva le connessioni, carica file, apri anteprime, modifica, copia, sposta ed elimina oggetti online."
+}

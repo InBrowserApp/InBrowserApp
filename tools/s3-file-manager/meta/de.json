@@ -1,0 +1,4 @@
+{
+  "name": "S3-Dateimanager",
+  "description": "Buckets in Amazon S3, Cloudflare R2 und MinIO durchsuchen. S3-Verbindungen speichern und Dateien online hochladen, ansehen, bearbeiten, kopieren, verschieben oder löschen."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Filhanterare för S3",
+  "description": "Bläddra bland bucketar i Amazon S3, Cloudflare R2 och MinIO. Spara S3-anslutningar, ladda upp filer, förhandsgranska och redigera objekt samt kopiera, flytta eller ta bort filer direkt i webbläsaren."
+}

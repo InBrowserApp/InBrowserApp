@@ -1433,6 +1433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "rtf-viewer",
   },
   {
+    category: "developer",
+    name: "Pengelola File S3",
+    slug: "s3-file-manager",
+  },
+  {
     category: "misc",
     name: "Perekam Layar",
     slug: "screen-recorder",

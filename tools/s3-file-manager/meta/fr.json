@@ -1,0 +1,4 @@
+{
+  "name": "Gestionnaire de fichiers S3",
+  "description": "Parcourez vos compartiments Amazon S3, Cloudflare R2 et MinIO. Enregistrez vos connexions, téléversez, modifiez et déplacez vos fichiers S3 en ligne."
+}

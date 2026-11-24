@@ -1,0 +1,4 @@
+{
+  "name": "Trình quản lý tệp S3",
+  "description": "Duyệt bucket trên Amazon S3, Cloudflare R2 và MinIO. Lưu kết nối S3, tải tệp lên, xem trước, chỉnh sửa, sao chép, di chuyển hoặc xóa đối tượng trực tuyến."
+}

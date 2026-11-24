@@ -1,0 +1,4 @@
+{
+  "name": "Menedżer plików S3",
+  "description": "Przeglądaj zasobniki Amazon S3, Cloudflare R2 i MinIO. Zapisuj połączenia S3, przesyłaj pliki, wyświetlaj i edytuj obiekty oraz kopiuj, przenoś lub usuwaj pliki online."
+}

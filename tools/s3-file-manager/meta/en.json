@@ -1,0 +1,4 @@
+{
+  "name": "S3 File Manager",
+  "description": "Browse Amazon S3, Cloudflare R2, and MinIO buckets. Save S3 connections, upload files, preview and edit objects, and copy, move, or delete files online."
+}

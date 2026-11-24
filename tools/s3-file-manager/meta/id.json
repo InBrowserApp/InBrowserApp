@@ -1,0 +1,4 @@
+{
+  "name": "Pengelola File S3",
+  "description": "Jelajahi bucket Amazon S3, Cloudflare R2, dan MinIO. Simpan koneksi S3, unggah file, lihat pratinjau, edit, salin, pindahkan, atau hapus file dari browser."
+}

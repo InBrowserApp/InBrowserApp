@@ -351,6 +351,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "rtf-to-pdf-converter": () => import("@tool/rtf-to-pdf-converter/page"),
   "rtf-viewer": () => import("@tool/rtf-viewer/page"),
+  "s3-file-manager": () => import("@tool/s3-file-manager/page"),
   "screen-recorder": () => import("@tool/screen-recorder/page"),
   "scrypt-key-derivation": () => import("@tool/scrypt-key-derivation/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),

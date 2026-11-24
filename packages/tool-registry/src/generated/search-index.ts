@@ -36280,6 +36280,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "s3-file-manager",
+    category: "developer",
+    icon: "database",
+    tags: ["s3", "storage", "amazon-s3", "cloudflare-r2", "minio", "files"],
+    locales: {
+      ar: {
+        name: "مدير ملفات S3",
+        description:
+          "تصفّح حاويات Amazon S3 وCloudflare R2 وMinIO. احفظ اتصالات S3، وارفع الملفات وعاينها وحرّرها، وانسخها أو انقلها أو احذفها عبر المتصفح.",
+      },
+      de: {
+        name: "S3-Dateimanager",
+        description:
+          "Buckets in Amazon S3, Cloudflare R2 und MinIO durchsuchen. S3-Verbindungen speichern und Dateien online hochladen, ansehen, bearbeiten, kopieren, verschieben oder löschen.",
+      },
+      en: {
+        name: "S3 File Manager",
+        description:
+          "Browse Amazon S3, Cloudflare R2, and MinIO buckets. Save S3 connections, upload files, preview and edit objects, and copy, move, or delete files online.",
+      },
+      es: {
+        name: "Gestor de archivos S3",
+        description:
+          "Explora buckets de Amazon S3, Cloudflare R2 y MinIO. Guarda conexiones S3, sube archivos, previsualiza y edita objetos, y copia, mueve o elimina archivos en línea.",
+      },
+      fr: {
+        name: "Gestionnaire de fichiers S3",
+        description:
+          "Parcourez vos compartiments Amazon S3, Cloudflare R2 et MinIO. Enregistrez vos connexions, téléversez, modifiez et déplacez vos fichiers S3 en ligne.",
+      },
+      he: {
+        name: "מנהל קבצים ל-S3",
+        description:
+          "עיינו בדליי אחסון של Amazon S3, Cloudflare R2 ו-MinIO בדפדפן. שמרו חיבורי S3, העלו קבצים, הציגו אובייקטים בתצוגה מקדימה וערכו אותם, והעתיקו, העבירו או מחקו קבצים.",
+      },
+      hi: {
+        name: "S3 फ़ाइल मैनेजर",
+        description:
+          "Amazon S3, Cloudflare R2 और MinIO बकेट ब्राउज़ करें। S3 कनेक्शन सेव करें और फ़ाइलें अपलोड करें। ऑब्जेक्ट ऑनलाइन देखें, बदलें, कॉपी करें, ले जाएँ या मिटाएँ।",
+      },
+      id: {
+        name: "Pengelola File S3",
+        description:
+          "Jelajahi bucket Amazon S3, Cloudflare R2, dan MinIO. Simpan koneksi S3, unggah file, lihat pratinjau, edit, salin, pindahkan, atau hapus file dari browser.",
+      },
+      it: {
+        name: "Gestione file S3",
+        description:
+          "Esplora bucket Amazon S3, Cloudflare R2 e MinIO. Salva le connessioni, carica file, apri anteprime, modifica, copia, sposta ed elimina oggetti online.",
+      },
+      ja: {
+        name: "S3 ファイルマネージャー",
+        description:
+          "Amazon S3、Cloudflare R2、MinIO のバケットを閲覧。S3 接続を保存し、ファイルのアップロード、オブジェクトのプレビューと編集、ファイルのコピー・移動・削除をオンラインで行えます。",
+      },
+      ko: {
+        name: "S3 파일 관리자",
+        description:
+          "브라우저에서 Amazon S3, Cloudflare R2, MinIO 버킷을 탐색하세요. S3 연결을 저장하고 파일을 업로드하거나, 객체를 미리 보고 편집하고, 파일을 복사·이동·삭제할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengurus Fail S3",
+        description:
+          "Semak imbas bucket Amazon S3, Cloudflare R2 dan MinIO. Simpan sambungan S3, muat naik fail, pratonton dan edit objek, serta salin, alih atau padam fail dalam talian.",
+      },
+      nl: {
+        name: "S3-bestandsbeheer",
+        description:
+          "Bekijk buckets van Amazon S3, Cloudflare R2 en MinIO. Sla S3-verbindingen op, upload bestanden, bekijk en bewerk objecten en kopieer, verplaats of verwijder bestanden online.",
+      },
+      no: {
+        name: "S3-filbehandler",
+        description:
+          "Bla i bøtter fra Amazon S3, Cloudflare R2 og MinIO. Lagre S3-tilkoblinger, last opp filer, forhåndsvis og rediger objekter og kopier, flytt eller slett filer på nett.",
+      },
+      pl: {
+        name: "Menedżer plików S3",
+        description:
+          "Przeglądaj zasobniki Amazon S3, Cloudflare R2 i MinIO. Zapisuj połączenia S3, przesyłaj pliki, wyświetlaj i edytuj obiekty oraz kopiuj, przenoś lub usuwaj pliki online.",
+      },
+      pt: {
+        name: "Gerenciador de arquivos S3",
+        description:
+          "Explore buckets do Amazon S3, Cloudflare R2 e MinIO. Salve conexões S3, envie arquivos, visualize e edite objetos, copie, mova ou exclua arquivos online.",
+      },
+      ru: {
+        name: "Файловый менеджер S3",
+        description:
+          "Просматривайте бакеты Amazon S3, Cloudflare R2 и MinIO. Сохраняйте подключения, загружайте, скачивайте, редактируйте и перемещайте файлы S3 в браузере.",
+      },
+      sv: {
+        name: "Filhanterare för S3",
+        description:
+          "Bläddra bland bucketar i Amazon S3, Cloudflare R2 och MinIO. Spara S3-anslutningar, ladda upp filer, förhandsgranska och redigera objekt samt kopiera, flytta eller ta bort filer direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมจัดการไฟล์ S3",
+        description:
+          "เปิดดูบัคเก็ต Amazon S3, Cloudflare R2 และ MinIO บันทึกการเชื่อมต่อ อัปโหลด ดูตัวอย่าง แก้ไข คัดลอก ย้าย หรือลบไฟล์ S3 ผ่านเบราว์เซอร์",
+      },
+      tr: {
+        name: "S3 Dosya Yöneticisi",
+        description:
+          "Amazon S3, Cloudflare R2 ve MinIO bucket’larına göz atın. S3 bağlantılarını kaydedin, dosya yükleyin ve nesneleri önizleyin, düzenleyin, kopyalayın, taşıyın veya silin.",
+      },
+      vi: {
+        name: "Trình quản lý tệp S3",
+        description:
+          "Duyệt bucket trên Amazon S3, Cloudflare R2 và MinIO. Lưu kết nối S3, tải tệp lên, xem trước, chỉnh sửa, sao chép, di chuyển hoặc xóa đối tượng trực tuyến.",
+      },
+      "zh-CN": {
+        name: "S3 文件管理器",
+        description:
+          "浏览 Amazon S3、Cloudflare R2 和 MinIO 存储桶。保存 S3 连接，在线上传文件、预览和编辑对象，以及复制、移动或删除文件。",
+      },
+      "zh-TW": {
+        name: "S3 檔案管理器",
+        description:
+          "在線上瀏覽 Amazon S3、Cloudflare R2 和 MinIO 的儲存桶。儲存 S3 連線、上傳檔案、預覽或編輯物件，以及複製、移動或刪除檔案。",
+      },
+    },
+  },
+  {
     slug: "screen-recorder",
     category: "misc",
     icon: "video",

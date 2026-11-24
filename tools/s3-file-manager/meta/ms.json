@@ -1,0 +1,4 @@
+{
+  "name": "Pengurus Fail S3",
+  "description": "Semak imbas bucket Amazon S3, Cloudflare R2 dan MinIO. Simpan sambungan S3, muat naik fail, pratonton dan edit objek, serta salin, alih atau padam fail dalam talian."
+}

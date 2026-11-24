@@ -1,0 +1,40 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import S3FileManager from "./client"
+
+import type { ToolMeta } from "@workspace/tool-sdk"
+import type { Messages } from "./model"
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang,
+)!
+const messages = resolveLocale<Messages>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang,
+)!
+const { article, ...clientMessages } = messages
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <S3FileManager client:load messages={clientMessages} lang={lang} />
+  <ToolArticle className="max-w-4xl">
+    <h2>{article.overviewTitle}</h2>
+    <p>{article.overview}</p>
+    <h2>{article.connectTitle}</h2>
+    <p>{article.connect}</p>
+    <h2>{article.objectsTitle}</h2>
+    <p>{article.objects}</p>
+    <h2>{article.corsTitle}</h2>
+    <p>{article.cors}</p>
+    <h2>{article.credentialsTitle}</h2>
+    <p>{article.credentials}</p>
+  </ToolArticle>
+</ToolPageShell>
