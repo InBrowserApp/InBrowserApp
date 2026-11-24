@@ -21,6 +21,7 @@
     "tools/html-viewer/fixtures/",
     "tools/html-to-pdf-converter/fixtures/",
     "tools/pdf-to-pdfa-converter/engine/generated/fynepdf.mjs",
+    "tools/github-actions-workflow-validator/engine/vendor/wasm_exec.js",
     "pnpm-lock.yaml",
     "packages/lib/mac-address/data/registry.json",
     ".pnpm-store/",

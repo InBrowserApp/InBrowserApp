@@ -619,6 +619,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "GitHub Actions 工作流校验器",
+    slug: "github-actions-workflow-validator",
+  },
+  {
+    category: "developer",
     name: ".gitignore 生成器",
     slug: "gitignore-generator",
   },

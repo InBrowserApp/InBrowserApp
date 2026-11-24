@@ -11318,6 +11318,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "github-actions-workflow-validator",
+    language: "ar",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "de",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "en",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "es",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "fr",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "he",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "hi",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "id",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "it",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ja",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ko",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ms",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "nl",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "no",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "pl",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "pt",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ru",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "sv",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "th",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "tr",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "vi",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },

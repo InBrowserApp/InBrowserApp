@@ -15736,6 +15736,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "github-actions-workflow-validator",
+    category: "developer",
+    icon: "workflow",
+    tags: [
+      "github",
+      "actions",
+      "workflow",
+      "actionlint",
+      "yaml",
+      "validator",
+      "ci",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق سير عمل GitHub Actions",
+        description:
+          "تحقّق عبر الإنترنت من ملفات YAML لسير عمل GitHub Actions باستخدام actionlint. حدّد مواقع أخطاء الصياغة والتعبيرات غير الصالحة ومشكلات تبعيات المهام برقم السطر والعمود.",
+      },
+      de: {
+        name: "GitHub-Actions-Workflow-Validator",
+        description:
+          "Validieren Sie GitHub-Actions-Workflows im YAML-Format online mit actionlint. Finden Sie Syntaxfehler, ungültige Ausdrücke und fehlerhafte Job-Abhängigkeiten mit Zeilen- und Spaltenangaben.",
+      },
+      en: {
+        name: "GitHub Actions Workflow Validator",
+        description:
+          "Validate GitHub Actions workflow YAML online with actionlint. Find syntax errors, invalid expressions, and job dependencies by line and column.",
+      },
+      es: {
+        name: "Validador de flujos de trabajo de GitHub Actions",
+        description:
+          "Valida el YAML de GitHub Actions en línea con actionlint. Encuentra errores de sintaxis, expresiones y dependencias de trabajos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur de workflows GitHub Actions",
+        description:
+          "Validez le YAML de vos workflows GitHub Actions en ligne avec actionlint. Repérez les erreurs de syntaxe, d’expression et de dépendance entre jobs par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת תהליכי עבודה של GitHub Actions",
+        description:
+          "בדיקה מקוונת של קובצי YAML לתהליכי עבודה של GitHub Actions באמצעות actionlint. אפשר לאתר שגיאות תחביר, ביטויים לא תקינים ובעיות בתלויות בין משימות לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "GitHub Actions वर्कफ़्लो वैलिडेटर",
+        description:
+          "actionlint से GitHub Actions वर्कफ़्लो YAML ऑनलाइन सत्यापित करें। पंक्ति और कॉलम नंबर से सिंटैक्स की गड़बड़ियाँ, अमान्य एक्सप्रेशन और जॉब डिपेंडेंसी की समस्याएँ ढूँढें।",
+      },
+      id: {
+        name: "Validator Alur Kerja GitHub Actions",
+        description:
+          "Validasi YAML alur kerja GitHub Actions secara online dengan actionlint. Temukan kesalahan sintaks, ekspresi yang tidak valid, dan masalah dependensi job beserta baris dan kolomnya.",
+      },
+      it: {
+        name: "Validatore di workflow per GitHub Actions",
+        description:
+          "Convalida online i workflow YAML di GitHub Actions con actionlint. Individua errori di sintassi, espressioni non valide e problemi con le dipendenze tra job per riga e colonna.",
+      },
+      ja: {
+        name: "GitHub Actions ワークフローバリデーター",
+        description:
+          "GitHub Actions のワークフロー YAML を actionlint でオンライン検証。構文エラー、無効な式、ジョブの依存関係の誤りを行番号と列番号で確認できます。",
+      },
+      ko: {
+        name: "GitHub Actions 워크플로 검증기",
+        description:
+          "actionlint로 GitHub Actions 워크플로 YAML을 온라인에서 검증하세요. 구문 오류, 잘못된 식, 작업 종속성 문제를 줄과 열 번호로 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah Aliran Kerja GitHub Actions",
+        description:
+          "Sahkan YAML aliran kerja GitHub Actions dalam talian dengan actionlint. Cari ralat sintaks, ungkapan tidak sah dan masalah kebergantungan tugas berserta kedudukan baris dan lajur.",
+      },
+      nl: {
+        name: "GitHub Actions-workflowvalidator",
+        description:
+          "Valideer GitHub Actions-workflows in YAML online met actionlint. Vind syntaxisfouten, ongeldige expressies en problemen met jobafhankelijkheden aan de hand van regel- en kolomnummers.",
+      },
+      no: {
+        name: "Validator for GitHub Actions-arbeidsflyter",
+        description:
+          "Valider YAML for GitHub Actions-arbeidsflyter på nett med actionlint. Finn syntaksfeil, ugyldige uttrykk og problemer med jobbavhengigheter med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator przepływów pracy GitHub Actions",
+        description:
+          "Sprawdzaj pliki YAML przepływów pracy GitHub Actions online za pomocą actionlint. Znajdź błędy składni, nieprawidłowe wyrażenia i problemy z zależnościami zadań według wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de fluxos de trabalho do GitHub Actions",
+        description:
+          "Valide o YAML do GitHub Actions online com actionlint. Encontre erros de sintaxe, expressões e dependências entre jobs pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор рабочих процессов GitHub Actions",
+        description:
+          "Проверяйте YAML-файлы рабочих процессов GitHub Actions онлайн с помощью actionlint. Находите ошибки синтаксиса, выражений и зависимостей заданий по строке и столбцу.",
+      },
+      sv: {
+        name: "Validerare för GitHub Actions-arbetsflöden",
+        description:
+          "Validera YAML för GitHub Actions-arbetsflöden online med actionlint. Hitta syntaxfel, ogiltiga uttryck och problem med jobbberoenden med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบเวิร์กโฟลว์ GitHub Actions",
+        description:
+          "ตรวจสอบ YAML ของเวิร์กโฟลว์ GitHub Actions ออนไลน์ด้วย actionlint ค้นหาข้อผิดพลาดทางไวยากรณ์ นิพจน์ที่ไม่ถูกต้อง และปัญหาการพึ่งพาระหว่างจ็อบ พร้อมระบุบรรทัดและคอลัมน์",
+      },
+      tr: {
+        name: "GitHub Actions İş Akışı Doğrulayıcı",
+        description:
+          "GitHub Actions iş akışı YAML dosyalarını actionlint ile çevrimiçi doğrulayın. Sözdizimi hatalarını, geçersiz ifadeleri ve iş bağımlılığı sorunlarını satır ve sütun numaralarıyla bulun.",
+      },
+      vi: {
+        name: "Trình xác thực quy trình làm việc GitHub Actions",
+        description:
+          "Dùng actionlint để xác thực YAML của quy trình làm việc GitHub Actions trực tuyến. Tìm lỗi cú pháp, biểu thức không hợp lệ và lỗi phụ thuộc giữa các job, kèm vị trí dòng và cột.",
+      },
+      "zh-CN": {
+        name: "GitHub Actions 工作流校验器",
+        description:
+          "使用 actionlint 在线校验 GitHub Actions 工作流 YAML，按行和列查找语法错误、无效表达式和作业依赖问题。",
+      },
+      "zh-TW": {
+        name: "GitHub Actions 工作流程驗證器",
+        description:
+          "使用 actionlint 線上驗證 GitHub Actions 工作流程的 YAML 檔案，找出語法錯誤、無效的運算式及作業相依問題，並顯示行號與欄位位置。",
+      },
+    },
+  },
+  {
     slug: "gitignore-generator",
     category: "developer",
     icon: "file-text",

@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions 工作流程驗證器",
+  "description": "使用 actionlint 線上驗證 GitHub Actions 工作流程的 YAML 檔案，找出語法錯誤、無效的運算式及作業相依問題，並顯示行號與欄位位置。"
+}

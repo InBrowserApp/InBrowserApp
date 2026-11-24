@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions 워크플로 검증기",
+  "description": "actionlint로 GitHub Actions 워크플로 YAML을 온라인에서 검증하세요. 구문 오류, 잘못된 식, 작업 종속성 문제를 줄과 열 번호로 찾을 수 있습니다."
+}

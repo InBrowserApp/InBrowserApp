@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions ワークフローバリデーター",
+  "description": "GitHub Actions のワークフロー YAML を actionlint でオンライン検証。構文エラー、無効な式、ジョブの依存関係の誤りを行番号と列番号で確認できます。"
+}

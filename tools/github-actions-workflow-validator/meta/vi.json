@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực quy trình làm việc GitHub Actions",
+  "description": "Dùng actionlint để xác thực YAML của quy trình làm việc GitHub Actions trực tuyến. Tìm lỗi cú pháp, biểu thức không hợp lệ và lỗi phụ thuộc giữa các job, kèm vị trí dòng và cột."
+}

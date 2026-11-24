@@ -1,0 +1,4 @@
+{
+  "name": "Validerare för GitHub Actions-arbetsflöden",
+  "description": "Validera YAML för GitHub Actions-arbetsflöden online med actionlint. Hitta syntaxfel, ogiltiga uttryck och problem med jobbberoenden med rad- och kolumnnummer."
+}

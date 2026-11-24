@@ -1,0 +1,4 @@
+{
+  "name": "Walidator przepływów pracy GitHub Actions",
+  "description": "Sprawdzaj pliki YAML przepływów pracy GitHub Actions online za pomocą actionlint. Znajdź błędy składni, nieprawidłowe wyrażenia i problemy z zależnościami zadań według wiersza i kolumny."
+}

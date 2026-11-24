@@ -1,0 +1,23 @@
+{
+  "inputLabel": "Arbeidsflytens YAML",
+  "placeholder": "Lim inn innholdet i en fil fra .github/workflows her …",
+  "openFile": "Åpne fil",
+  "example": "Last inn eksempel",
+  "clear": "Tøm",
+  "validate": "Valider",
+  "results": "Valideringsresultater",
+  "idle": "Lim inn arbeidsflytens YAML eller åpne en lokal fil for å sjekke den.",
+  "valid": "Arbeidsflyten består kontrollene i actionlint.",
+  "invalid": "Se gjennom problemene nedenfor.",
+  "location": "Linje {line}, kolonne {column}",
+  "fileError": "Kunne ikke åpne filen.",
+  "checkError": "Kunne ikke fullføre sjekken.",
+  "singleDocument": "En arbeidsflytfil må inneholde ett YAML-dokument.",
+  "introTitle": "Slik validerer du en GitHub Actions-arbeidsflyt",
+  "introBody": "Lim inn en arbeidsflyt fra .github/workflows eller åpne en lokal .yaml- eller .yml-fil. Velg deretter Valider. Velg Last inn eksempel for å se en fungerende CI-arbeidsflyt. Velg et problem for å gå til den aktuelle linjen og kolonnen. Arbeidsflyten behandles i nettleseren.",
+  "coverageTitle": "Hva sjekker validatoren for GitHub Actions?",
+  "coverageBody": "Validatoren bruker actionlint {version} til å sjekke YAML-syntaks, utløsere, jobbavhengigheter, runner-etiketter, trinn og GitHub Actions-uttrykk. Vanlige problemer er en udefinert jobb i needs, en skrivefeil i et kontekstnavn som github eller steps, og en ugyldig referanse i uses.",
+  "cliTitle": "Sjekk arbeidsflyter i repositoriet ditt",
+  "cliBody": "Kjør actionlint i repositoriet for å ta med prosjektinnstillinger og referanser til lokale handlinger eller gjenbrukbare arbeidsflyter. Det lokale kommandolinjeverktøyet kan også bruke ShellCheck og Pyflakes til å analysere skript hvis verktøyene er installert.",
+  "reference": "Syntaksreferanse for GitHub Actions-arbeidsflyter"
+}

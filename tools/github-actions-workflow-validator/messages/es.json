@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML del flujo de trabajo",
+  "placeholder": "Pega aquí el contenido de un archivo de .github/workflows…",
+  "openFile": "Abrir archivo",
+  "example": "Cargar ejemplo",
+  "clear": "Limpiar",
+  "validate": "Validar",
+  "results": "Resultados de la validación",
+  "idle": "Pega el YAML del flujo de trabajo o abre un archivo de tu dispositivo para validarlo.",
+  "valid": "El flujo de trabajo supera las comprobaciones de actionlint.",
+  "invalid": "Revisa los problemas que aparecen abajo.",
+  "location": "Línea {line}, columna {column}",
+  "fileError": "No se pudo abrir el archivo.",
+  "checkError": "No se pudo completar la validación.",
+  "singleDocument": "Un archivo de flujo de trabajo debe contener un único documento YAML.",
+  "introTitle": "Cómo validar un flujo de trabajo de GitHub Actions",
+  "introBody": "Pega el contenido de un archivo de .github/workflows o abre un archivo .yaml o .yml de tu dispositivo y selecciona Validar. Selecciona Cargar ejemplo para ver un flujo de trabajo válido de integración continua (CI). Selecciona un problema para ir a su línea y columna. El flujo de trabajo se procesa en tu navegador.",
+  "coverageTitle": "¿Qué comprueba el validador de GitHub Actions?",
+  "coverageBody": "El validador usa actionlint {version} para comprobar la sintaxis YAML, los eventos que activan el flujo de trabajo, las dependencias entre trabajos, las etiquetas de ejecutores, los pasos y las expresiones de GitHub Actions. Algunos problemas habituales son un trabajo sin definir en needs, un contexto mal escrito como github o steps y una referencia uses no válida.",
+  "cliTitle": "Cómo comprobar los flujos de trabajo en tu repositorio",
+  "cliBody": "Ejecuta actionlint desde tu repositorio para tener en cuenta la configuración del proyecto y las referencias a acciones locales o a flujos de trabajo reutilizables. La CLI también puede analizar scripts con ShellCheck y Pyflakes si están instalados.",
+  "reference": "Referencia de sintaxis de flujos de trabajo de GitHub Actions"
+}

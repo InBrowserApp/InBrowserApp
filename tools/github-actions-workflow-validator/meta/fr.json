@@ -1,0 +1,4 @@
+{
+  "name": "Validateur de workflows GitHub Actions",
+  "description": "Validez le YAML de vos workflows GitHub Actions en ligne avec actionlint. Repérez les erreurs de syntaxe, d’expression et de dépendance entre jobs par ligne et colonne."
+}
