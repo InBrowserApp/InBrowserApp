@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF Redactor",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF Splitter",
     slug: "pdf-splitter",
   },

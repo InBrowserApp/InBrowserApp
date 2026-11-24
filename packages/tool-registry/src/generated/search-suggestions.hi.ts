@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF से संवेदनशील जानकारी हटाएँ",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF विभाजक",
     slug: "pdf-splitter",
   },

@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 脱敏",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF 拆分器",
     slug: "pdf-splitter",
   },

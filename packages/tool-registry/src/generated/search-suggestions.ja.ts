@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDFの墨消し",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF 分割ツール",
     slug: "pdf-splitter",
   },

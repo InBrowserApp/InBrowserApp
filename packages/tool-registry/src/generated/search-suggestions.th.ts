@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "ปกปิดข้อมูลใน PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "ตัวแยก PDF",
     slug: "pdf-splitter",
   },

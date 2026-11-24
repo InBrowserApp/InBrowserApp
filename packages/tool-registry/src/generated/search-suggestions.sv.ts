@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Maskera PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "PDF-delare",
     slug: "pdf-splitter",
   },

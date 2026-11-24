@@ -20150,6 +20150,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-redactor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "de",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "en",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "es",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "he",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "id",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "it",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "no",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "th",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-splitter",
     language: "ar",
   },

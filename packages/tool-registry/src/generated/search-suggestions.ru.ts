@@ -1099,6 +1099,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Зачернение данных в PDF",
+    slug: "pdf-redactor",
+  },
+  {
+    category: "pdf",
     name: "Разделитель PDF",
     slug: "pdf-splitter",
   },
