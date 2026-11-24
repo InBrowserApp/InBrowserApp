@@ -27,6 +27,7 @@ export {
   CaseSensitive,
   Check,
   ChevronDown,
+  HardDrive,
   ChevronLeft,
   ChevronRight,
   ChevronUp,

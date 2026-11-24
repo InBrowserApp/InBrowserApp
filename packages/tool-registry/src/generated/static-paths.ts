@@ -25578,6 +25578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "s3-file-manager",
+    language: "ar",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "de",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "en",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "es",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "fr",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "he",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "hi",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "id",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "it",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "ja",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "ko",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "ms",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "nl",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "no",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "pl",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "pt",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "ru",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "sv",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "th",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "tr",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "vi",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "zh-CN",
+  },
+  {
+    slug: "s3-file-manager",
+    language: "zh-TW",
+  },
+  {
     slug: "screen-recorder",
     language: "ar",
   },

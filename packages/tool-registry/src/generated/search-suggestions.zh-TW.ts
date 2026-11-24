@@ -1393,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "rtf-viewer",
   },
   {
+    category: "developer",
+    name: "S3 檔案管理器",
+    slug: "s3-file-manager",
+  },
+  {
     category: "misc",
     name: "螢幕錄影器",
     slug: "screen-recorder",

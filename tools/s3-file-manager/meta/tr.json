@@ -1,0 +1,4 @@
+{
+  "name": "S3 Dosya Yöneticisi",
+  "description": "Amazon S3, Cloudflare R2 ve MinIO bucket’larına göz atın. S3 bağlantılarını kaydedin, dosya yükleyin ve nesneleri önizleyin, düzenleyin, kopyalayın, taşıyın veya silin."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "S3-bestandsbeheer",
+  "description": "Bekijk buckets van Amazon S3, Cloudflare R2 en MinIO. Sla S3-verbindingen op, upload bestanden, bekijk en bewerk objecten en kopieer, verplaats of verwijder bestanden online."
+}

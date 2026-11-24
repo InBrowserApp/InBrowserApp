@@ -1393,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "rtf-viewer",
   },
   {
+    category: "developer",
+    name: "Gestor de archivos S3",
+    slug: "s3-file-manager",
+  },
+  {
     category: "misc",
     name: "Grabador de pantalla",
     slug: "screen-recorder",

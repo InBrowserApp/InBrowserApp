@@ -1,0 +1,4 @@
+{
+  "name": "Gestor de archivos S3",
+  "description": "Explora buckets de Amazon S3, Cloudflare R2 y MinIO. Guarda conexiones S3, sube archivos, previsualiza y edita objetos, y copia, mueve o elimina archivos en línea."
+}
