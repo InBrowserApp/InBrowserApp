@@ -3,7 +3,8 @@
 The bundled ONNX model uses the official
 [realesr-general-x4v3 weights](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth)
 from Xintao Wang’s [Real-ESRGAN project](https://github.com/xinntao/Real-ESRGAN).
-The [BSD 3-Clause license](./LICENSE.Real-ESRGAN) accompanies the model.
+The [BSD 3-Clause license](../../../apps/web/public/licenses/ai-image-upscaler.txt)
+accompanies the model at `/licenses/ai-image-upscaler.txt`.
 
 The weights were exported with PyTorch 2.7.1 from the upstream
 [SRVGGNetCompact architecture](https://github.com/xinntao/Real-ESRGAN/blob/master/realesrgan/archs/srvgg_arch.py)
