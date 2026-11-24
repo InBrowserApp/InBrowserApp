@@ -84,7 +84,10 @@ function validateKubernetes(source: string): Diagnostic[] {
     prettyErrors: false,
     merge: true,
     version: "1.1",
-    customTags: (tags) => tags.filter((tag) => !tag.tag.endsWith(":timestamp")),
+    customTags: (tags) =>
+      tags.filter(
+        (tag) => (tag as { tag: string }).tag !== "tag:yaml.org,2002:timestamp"
+      ),
   })
   const issues: Diagnostic[] = []
   let sawResource = false
