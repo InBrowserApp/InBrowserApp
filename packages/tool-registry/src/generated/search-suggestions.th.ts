@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดู BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "เครื่องคำนวณวันทำงาน",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "เครื่องมือแปลงระบบพิกัด EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ทดสอบจอยเกม",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "โปรแกรมดู GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "ตัวแปลง vCard ↔ CSV",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "ตัวสร้าง vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

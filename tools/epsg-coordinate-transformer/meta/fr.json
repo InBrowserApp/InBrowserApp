@@ -1,0 +1,4 @@
+{
+  "name": "Transformateur de coordonnées EPSG",
+  "description": "Transformez des coordonnées entre systèmes EPSG tels que WGS 84, Web Mercator et UTM. Vérifiez l’ordre des axes et les unités avant de copier le résultat."
+}

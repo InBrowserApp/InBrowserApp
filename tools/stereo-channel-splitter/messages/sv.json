@@ -8,9 +8,17 @@
   "ready": "Vänster och höger kanal är klara.",
   "left": "Vänster kanal",
   "right": "Höger kanal",
-  "downloadLeft": "Ladda ner vänster kanal (WAV)",
-  "downloadRight": "Ladda ner höger kanal (WAV)",
+  "downloadLeft": "Ladda ner vänster kanal ({format})",
+  "downloadRight": "Ladda ner höger kanal ({format})",
   "monoError": "Den här filen har bara en ljudkanal. Välj en stereofil med vänster och höger kanal.",
   "multichannelError": "Den här filen har fler än två ljudkanaler. Välj en stereofil med två kanaler.",
-  "readError": "Det gick inte att öppna ljudfilen. Prova en annan fil eller exportera den som stereo-WAV."
+  "readError": "Det gick inte att öppna ljudfilen. Prova en annan fil eller exportera den som stereo-WAV.",
+  "formatLabel": "Format för nedladdning",
+  "wavOption": "WAV · För redigering",
+  "flacOption": "FLAC · Förlustfri komprimering",
+  "mp3Option": "MP3 · Mindre filer",
+  "flacUnavailable": "Välj WAV för att bevara inspelningens samplingsfrekvens och precision.",
+  "preparingDownload": "Skapar {format}-filer…",
+  "exportError": "Det gick inte att skapa {format}-filerna. Försök igen eller välj WAV.",
+  "retry": "Försök igen"
 }

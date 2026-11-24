@@ -54,6 +54,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "bpmn-viewer": () => import("@tool/bpmn-viewer/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
   "caj-to-pdf-converter": () => import("@tool/caj-to-pdf-converter/page"),
@@ -127,6 +128,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "email-viewer": () => import("@tool/email-viewer/page"),
   "env-converter": () => import("@tool/env-converter/page"),
+  "epsg-coordinate-transformer": () =>
+    import("@tool/epsg-coordinate-transformer/page"),
   "epub-metadata-editor": () => import("@tool/epub-metadata-editor/page"),
   "epub-reader": () => import("@tool/epub-reader/page"),
   "epub-to-pdf-converter": () => import("@tool/epub-to-pdf-converter/page"),
@@ -141,6 +144,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
+  "geojson-viewer": () => import("@tool/geojson-viewer/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
@@ -411,6 +415,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
   "vcard-csv-converter": () => import("@tool/vcard-csv-converter/page"),
+  "vcard-generator": () => import("@tool/vcard-generator/page"),
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),

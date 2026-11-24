@@ -1,0 +1,19 @@
+{
+  "details": "연락처 정보",
+  "preview": "명함 미리보기",
+  "empty": "이름이나 성을 입력해 명함을 만드세요.",
+  "firstName": "이름",
+  "lastName": "성",
+  "phone": "전화번호",
+  "email": "이메일",
+  "company": "회사",
+  "jobTitle": "직책",
+  "website": "웹사이트",
+  "address": "주소",
+  "notes": "메모",
+  "more": "추가 연락처 정보",
+  "copy": "vCard 복사",
+  "copied": "복사됨",
+  "copyFailed": "복사할 수 없음",
+  "download": "VCF 다운로드"
+}

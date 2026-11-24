@@ -1,0 +1,4 @@
+{
+  "name": "EPSG Koordinat Dönüştürücü",
+  "description": "WGS 84, Web Mercator ve UTM gibi EPSG referans sistemleri arasında koordinat dönüştürün. Sonucu kopyalamadan önce eksen sırasını ve birimleri kontrol edin."
+}

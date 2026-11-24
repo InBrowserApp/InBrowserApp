@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN व्यूअर",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "कार्यदिवस कैलकुलेटर",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG निर्देशांक कन्वर्टर",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB मेटाडेटा एडिटर",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "गेमपैड टेस्टर",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON व्यूअर",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "vCard ↔ CSV कन्वर्टर",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard जनरेटर",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

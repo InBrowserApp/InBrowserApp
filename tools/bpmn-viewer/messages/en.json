@@ -1,0 +1,20 @@
+{
+  "open": "Open BPMN file",
+  "replace": "Replace BPMN file",
+  "clear": "Close diagram",
+  "reader": "BPMN viewer",
+  "privacy": "Files stay on your device.",
+  "focus": "Open full-screen view",
+  "exitFocus": "Exit full-screen view",
+  "releaseFile": "Release to open the BPMN file",
+  "drop": "Drop a BPMN file here",
+  "formats": "Open a .bpmn or .xml file.",
+  "example": "Try an example",
+  "diagram": "BPMN diagram",
+  "loading": "Opening diagram…",
+  "invalid": "Could not open this diagram. Choose a valid BPMN 2.0 XML file.",
+  "noLayout": "This BPMN file has no diagram layout. Export it from your modeling tool with diagram layout data and open it again.",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "fit": "Fit diagram to view"
+}

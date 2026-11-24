@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Trình xem BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Máy tính ngày làm việc",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi tọa độ EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Trình chỉnh sửa siêu dữ liệu EPUB",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Kiểm tra tay cầm chơi game",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "Trình xem GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Trình chuyển đổi vCard ↔ CSV",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "Trình tạo vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

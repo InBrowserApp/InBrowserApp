@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN ビューアー",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "営業日計算ツール",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系変換",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUBメタデータエディター",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ゲームパッドテスター",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON ビューアー",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "vCard・CSV 相互変換ツール",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard 名刺作成ツール",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

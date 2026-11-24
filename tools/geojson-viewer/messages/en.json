@@ -1,0 +1,17 @@
+{
+  "openFile": "Open GeoJSON",
+  "example": "Try an example",
+  "paste": "Paste GeoJSON",
+  "render": "Show on map",
+  "map": "GeoJSON map",
+  "fit": "Fit to data",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "features": "Features",
+  "properties": "Properties",
+  "empty": "Open a .geojson or .json file, or paste GeoJSON to get started.",
+  "noGeometry": "This GeoJSON contains no shapes to display.",
+  "noProperties": "This feature has no properties.",
+  "invalid": "Could not open this GeoJSON. Check that it contains valid GeoJSON geometry.",
+  "feature": "Feature {number}"
+}

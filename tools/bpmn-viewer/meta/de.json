@@ -1,0 +1,4 @@
+{
+  "name": "BPMN-Betrachter",
+  "description": "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein."
+}

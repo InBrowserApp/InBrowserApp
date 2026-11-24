@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 檢視器",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "工作日計算器",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系統轉換器",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB 中繼資料編輯器",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "遊戲控制器測試器",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON 檢視器",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "vCard 與 CSV 互轉",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard 名片產生器",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

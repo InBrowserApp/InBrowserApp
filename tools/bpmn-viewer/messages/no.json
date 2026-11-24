@@ -1,0 +1,20 @@
+{
+  "open": "Åpne BPMN-fil",
+  "replace": "Bytt BPMN-fil",
+  "clear": "Lukk diagram",
+  "reader": "BPMN-viser",
+  "privacy": "Filene blir på enheten din.",
+  "focus": "Åpne fullskjermvisning",
+  "exitFocus": "Avslutt fullskjermvisning",
+  "releaseFile": "Slipp for å åpne BPMN-filen",
+  "drop": "Slipp en BPMN-fil her",
+  "formats": "Åpne en .bpmn- eller .xml-fil.",
+  "example": "Prøv et eksempel",
+  "diagram": "BPMN-diagram",
+  "loading": "Åpner diagrammet …",
+  "invalid": "Kunne ikke åpne diagrammet. Velg en gyldig XML-fil i BPMN 2.0-format.",
+  "noLayout": "Denne BPMN-filen mangler diagramlayout. Eksporter filen på nytt fra modelleringsverktøyet med diagramlayouten inkludert, og åpne den på nytt.",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "fit": "Vis hele diagrammet"
+}

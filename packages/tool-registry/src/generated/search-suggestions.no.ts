@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN-viser",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Kalkulator for arbeidsdager",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-koordinattransformasjon",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Redigering av EPUB-metadata",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Test av spillkontroller",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON-viser",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Konvertering mellom vCard og CSV",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard-generator",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

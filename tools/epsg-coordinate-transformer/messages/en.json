@@ -1,0 +1,17 @@
+{
+  "source": "Source coordinate system",
+  "target": "Target coordinate system",
+  "search": "Search by EPSG code or name",
+  "noSystems": "No matching coordinate systems.",
+  "longitude": "Longitude (°)",
+  "latitude": "Latitude (°)",
+  "easting": "Easting",
+  "northing": "Northing",
+  "meters": "Meters",
+  "example": "Try an example",
+  "swap": "Reverse transformation",
+  "copy": "Copy coordinates",
+  "copied": "Copied",
+  "invalid": "These coordinates could not be transformed. Check the values and the source coordinate system.",
+  "axisHelp": "Geographic coordinates use longitude first, then latitude. Projected coordinates use easting first, then northing."
+}

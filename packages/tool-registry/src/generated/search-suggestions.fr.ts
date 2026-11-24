@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Visionneuse BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Calculateur de jours ouvrés",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Transformateur de coordonnées EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Éditeur de métadonnées EPUB",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Test de manette",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "Visionneuse GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Convertisseur vCard ↔ CSV",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "Générateur de vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

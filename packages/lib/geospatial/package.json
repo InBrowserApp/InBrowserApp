@@ -1,0 +1,13 @@
+{
+  "name": "@workspace/geospatial",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./geojson": "./src/geojson.ts",
+    "./xml": "./src/xml.ts"
+  },
+  "dependencies": {
+    "@types/geojson": "catalog:"
+  }
+}

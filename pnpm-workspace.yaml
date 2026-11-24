@@ -9,6 +9,12 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  world-atlas: ^2.0.2
+  topojson-client: ^3.1.0
+  leaflet: ^1.9.4
+  "@types/topojson-client": ^3.1.5
+  "@types/leaflet": ^1.9.22
+  "@types/geojson": ^7946.0.16
   "@citation-js/core": 0.9.0
   "@citation-js/plugin-bibtex": 0.9.0
   "@citation-js/plugin-ris": 0.9.0
@@ -16,6 +22,7 @@ catalog:
   pinyin-pro: 3.29.5
   djvu-rs: 0.46.0
   mediabunny: 1.66.0
+  "@mediabunny/flac-encoder": 1.66.0
   onnxruntime-web: 1.31.1
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
@@ -220,6 +227,7 @@ catalog:
   ajv-formats: ^3.0.1
   astro: ^7.4.12
   bcrypt-ts: ^9.0.3
+  bpmn-js: 18.33.1
   basic-ftp: ^6.2.6
   bidi-js: 1.0.3
   bip39: ^3.1.2
@@ -277,6 +285,7 @@ catalog:
   papaparse: ^5.7.1
   parse5: ^8.1.1
   pdf-lib: ^1.17.1
+  proj4: ^2.23.0
   pdfjs-dist: ^6.5.438
   prettier: ^3.10.1
   prettier-plugin-svelte: ^4.1.1

@@ -8,9 +8,17 @@
   "ready": "左右聲道已分離完成。",
   "left": "左聲道",
   "right": "右聲道",
-  "downloadLeft": "下載左聲道 WAV",
-  "downloadRight": "下載右聲道 WAV",
+  "downloadLeft": "下載左聲道 {format}",
+  "downloadRight": "下載右聲道 {format}",
   "monoError": "這個檔案只有一個聲道。請選擇含有左右聲道的立體聲檔案。",
   "multichannelError": "這個檔案的聲道數超過兩個。請選擇雙聲道立體聲檔案。",
-  "readError": "無法開啟這個音訊檔案。請試用其他檔案，或先將這個檔案匯出為立體聲 WAV。"
+  "readError": "無法開啟這個音訊檔案。請試用其他檔案，或先將這個檔案匯出為立體聲 WAV。",
+  "formatLabel": "下載格式",
+  "wavOption": "WAV · 適合編輯",
+  "flacOption": "FLAC · 無損壓縮",
+  "mp3Option": "MP3 · 檔案較小",
+  "flacUnavailable": "請選擇 WAV，以保留這段錄音的取樣率和精度。",
+  "preparingDownload": "正在產生 {format} 檔案…",
+  "exportError": "無法產生 {format} 檔案。請再試一次或選擇 WAV。",
+  "retry": "再試一次"
 }

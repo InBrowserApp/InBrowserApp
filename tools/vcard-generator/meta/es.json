@@ -1,0 +1,4 @@
+{
+  "name": "Generador de vCard",
+  "description": "Crea una tarjeta de contacto digital y descárgala como vCard (.vcf). Añade tu nombre, teléfono, correo y otros datos con una vista previa en tiempo real."
+}

@@ -1,0 +1,19 @@
+{
+  "details": "連絡先情報",
+  "preview": "名刺プレビュー",
+  "empty": "姓または名を入力して名刺を作成しましょう。",
+  "firstName": "名",
+  "lastName": "姓",
+  "phone": "電話番号",
+  "email": "メールアドレス",
+  "company": "会社名",
+  "jobTitle": "役職",
+  "website": "ウェブサイト",
+  "address": "住所",
+  "notes": "メモ",
+  "more": "その他の連絡先情報",
+  "copy": "vCard をコピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーできませんでした",
+  "download": "VCF をダウンロード"
+}

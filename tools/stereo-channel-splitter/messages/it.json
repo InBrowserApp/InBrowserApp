@@ -8,9 +8,17 @@
   "ready": "I canali sinistro e destro sono pronti.",
   "left": "Canale sinistro",
   "right": "Canale destro",
-  "downloadLeft": "Scarica WAV sinistro",
-  "downloadRight": "Scarica WAV destro",
+  "downloadLeft": "Scarica canale sinistro ({format})",
+  "downloadRight": "Scarica canale destro ({format})",
   "monoError": "Questo file contiene un solo canale audio. Scegli un file stereo con un canale sinistro e uno destro.",
   "multichannelError": "Questo file contiene più di due canali audio. Scegli un file stereo a due canali.",
-  "readError": "Impossibile aprire questo file audio. Prova con un altro file o esportalo in WAV stereo."
+  "readError": "Impossibile aprire questo file audio. Prova con un altro file o esportalo in WAV stereo.",
+  "formatLabel": "Formato di download",
+  "wavOption": "WAV · Per la modifica",
+  "flacOption": "FLAC · Compressione senza perdita",
+  "mp3Option": "MP3 · File più piccolo",
+  "flacUnavailable": "Scegli WAV per mantenere la frequenza di campionamento e la precisione della registrazione.",
+  "preparingDownload": "Preparazione dei file {format}…",
+  "exportError": "Impossibile creare i file {format}. Riprova o scegli WAV.",
+  "retry": "Riprova"
 }

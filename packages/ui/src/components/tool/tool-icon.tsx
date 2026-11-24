@@ -18,6 +18,7 @@ import {
   Clock3,
   Compass,
   Columns2,
+  ContactRound,
   CreditCard,
   Cpu,
   Database,
@@ -38,6 +39,7 @@ import {
   LayoutGrid,
   Lock,
   Mic,
+  Map,
   Mail,
   Network,
   Ruler,
@@ -50,6 +52,7 @@ import {
   Text,
   Video,
   Wrench,
+  Workflow,
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
@@ -69,6 +72,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "chart-no-axes-column-increasing": ChartNoAxesColumnIncreasing,
   clock3: Clock3,
   "columns-2": Columns2,
+  "contact-round": ContactRound,
   "credit-card": CreditCard,
   compass: Compass,
   cpu: Cpu,
@@ -90,6 +94,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   lock: Lock,
   mic: Mic,
   mail: Mail,
+  map: Map,
   network: Network,
   ruler: Ruler,
   "scan-text": ScanText,
@@ -101,6 +106,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   text: Text,
   video: Video,
   wrench: Wrench,
+  workflow: Workflow,
 }
 
 type ToolIconProps = LucideProps & {

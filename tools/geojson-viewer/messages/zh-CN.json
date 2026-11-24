@@ -1,0 +1,17 @@
+{
+  "openFile": "打开 GeoJSON",
+  "example": "试用示例",
+  "paste": "粘贴 GeoJSON",
+  "render": "在地图上显示",
+  "map": "GeoJSON 地图",
+  "fit": "缩放至数据范围",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "features": "要素",
+  "properties": "属性",
+  "empty": "打开 .geojson 或 .json 文件，或粘贴 GeoJSON 开始查看。",
+  "noGeometry": "此 GeoJSON 中没有可显示的几何图形。",
+  "noProperties": "此要素没有属性。",
+  "invalid": "无法打开此 GeoJSON。请检查其中是否包含有效的 GeoJSON 几何图形。",
+  "feature": "要素 {number}"
+}

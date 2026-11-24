@@ -3682,6 +3682,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpmn-viewer",
+    language: "ar",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "de",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "en",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "es",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "fr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "he",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "hi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "id",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "it",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ja",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ko",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ms",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "nl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "no",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pt",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ru",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "sv",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "th",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "tr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "vi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "business-days-calculator",
     language: "ar",
   },
@@ -9110,6 +9202,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epsg-coordinate-transformer",
+    language: "ar",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "de",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "en",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "es",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "fr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "he",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "hi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "id",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "it",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ja",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ko",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ms",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "nl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "no",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pt",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ru",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "sv",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "th",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "tr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "vi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-CN",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-metadata-editor",
     language: "ar",
   },
@@ -10211,6 +10395,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "gamepad-tester",
+    language: "zh-TW",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "de",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "en",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "es",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "he",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "id",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "it",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "no",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "th",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geojson-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geojson-viewer",
     language: "zh-TW",
   },
   {
@@ -30451,6 +30727,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "vcard-csv-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ar",
+  },
+  {
+    slug: "vcard-generator",
+    language: "de",
+  },
+  {
+    slug: "vcard-generator",
+    language: "en",
+  },
+  {
+    slug: "vcard-generator",
+    language: "es",
+  },
+  {
+    slug: "vcard-generator",
+    language: "fr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "he",
+  },
+  {
+    slug: "vcard-generator",
+    language: "hi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "id",
+  },
+  {
+    slug: "vcard-generator",
+    language: "it",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ja",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ko",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ms",
+  },
+  {
+    slug: "vcard-generator",
+    language: "nl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "no",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pt",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ru",
+  },
+  {
+    slug: "vcard-generator",
+    language: "sv",
+  },
+  {
+    slug: "vcard-generator",
+    language: "th",
+  },
+  {
+    slug: "vcard-generator",
+    language: "tr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "vi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-generator",
     language: "zh-TW",
   },
   {

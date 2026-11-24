@@ -1,0 +1,17 @@
+{
+  "source": "Źródłowy układ współrzędnych",
+  "target": "Docelowy układ współrzędnych",
+  "search": "Szukaj według kodu EPSG lub nazwy",
+  "noSystems": "Nie znaleziono pasujących układów współrzędnych.",
+  "longitude": "Długość geograficzna (°)",
+  "latitude": "Szerokość geograficzna (°)",
+  "easting": "Współrzędna wschodnia",
+  "northing": "Współrzędna północna",
+  "meters": "Metry",
+  "example": "Wypróbuj przykład",
+  "swap": "Odwróć transformację",
+  "copy": "Kopiuj współrzędne",
+  "copied": "Skopiowano",
+  "invalid": "Nie udało się przeliczyć współrzędnych. Sprawdź wartości i źródłowy układ współrzędnych.",
+  "axisHelp": "W układach geograficznych podaj najpierw długość, a potem szerokość geograficzną. W układach odwzorowanych podaj najpierw współrzędną wschodnią, a potem północną."
+}

@@ -1,0 +1,17 @@
+{
+  "source": "Sistema di coordinate di origine",
+  "target": "Sistema di coordinate di destinazione",
+  "search": "Cerca per codice EPSG o nome",
+  "noSystems": "Nessun sistema di coordinate corrispondente.",
+  "longitude": "Longitudine (°)",
+  "latitude": "Latitudine (°)",
+  "easting": "Coordinata Est",
+  "northing": "Coordinata Nord",
+  "meters": "Metri",
+  "example": "Prova un esempio",
+  "swap": "Inverti la trasformazione",
+  "copy": "Copia coordinate",
+  "copied": "Copiato",
+  "invalid": "Impossibile trasformare queste coordinate. Controlla i valori e il sistema di coordinate di origine.",
+  "axisHelp": "Per le coordinate geografiche inserisci prima la longitudine, poi la latitudine. Per le coordinate proiettate inserisci prima la coordinata Est, poi la coordinata Nord."
+}

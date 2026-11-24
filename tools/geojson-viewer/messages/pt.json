@@ -1,0 +1,17 @@
+{
+  "openFile": "Abrir GeoJSON",
+  "example": "Testar um exemplo",
+  "paste": "Colar GeoJSON",
+  "render": "Mostrar no mapa",
+  "map": "Mapa de GeoJSON",
+  "fit": "Ajustar aos dados",
+  "zoomIn": "Aproximar",
+  "zoomOut": "Afastar",
+  "features": "Feições",
+  "properties": "Atributos",
+  "empty": "Abra um arquivo .geojson ou .json ou cole o conteúdo GeoJSON para começar.",
+  "noGeometry": "Este GeoJSON não contém geometrias para exibir.",
+  "noProperties": "Esta feição não tem atributos.",
+  "invalid": "Não foi possível abrir o GeoJSON. Verifique se ele contém geometrias GeoJSON válidas.",
+  "feature": "Feição {number}"
+}

@@ -1,0 +1,20 @@
+{
+  "open": "Otwórz plik BPMN",
+  "replace": "Zmień plik BPMN",
+  "clear": "Zamknij diagram",
+  "reader": "Przeglądarka diagramów BPMN",
+  "privacy": "Pliki pozostają na Twoim urządzeniu.",
+  "focus": "Otwórz widok pełnoekranowy",
+  "exitFocus": "Zamknij widok pełnoekranowy",
+  "releaseFile": "Upuść, aby otworzyć plik BPMN",
+  "drop": "Upuść plik BPMN tutaj",
+  "formats": "Otwórz plik .bpmn lub .xml.",
+  "example": "Wypróbuj przykład",
+  "diagram": "Diagram BPMN",
+  "loading": "Otwieranie diagramu…",
+  "invalid": "Nie udało się otworzyć diagramu. Wybierz poprawny plik XML w formacie BPMN 2.0.",
+  "noLayout": "Plik BPMN nie zawiera układu diagramu. Wyeksportuj plik ponownie z narzędzia do modelowania, uwzględniając układ, i otwórz go jeszcze raz.",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "fit": "Pokaż cały diagram"
+}

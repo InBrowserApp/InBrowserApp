@@ -8,9 +8,17 @@
   "ready": "左右のチャンネルに分割できました。",
   "left": "左チャンネル",
   "right": "右チャンネル",
-  "downloadLeft": "左チャンネルのWAVをダウンロード",
-  "downloadRight": "右チャンネルのWAVをダウンロード",
+  "downloadLeft": "左チャンネルの{format}をダウンロード",
+  "downloadRight": "右チャンネルの{format}をダウンロード",
   "monoError": "このファイルはモノラル音声です。左右のチャンネルがあるステレオ音声を選択してください。",
   "multichannelError": "このファイルには3つ以上の音声チャンネルがあります。2チャンネルのステレオ音声を選択してください。",
-  "readError": "音声ファイルを開けませんでした。別のファイルを選ぶか、ステレオWAV形式で書き出したファイルをお試しください。"
+  "readError": "音声ファイルを開けませんでした。別のファイルを選ぶか、ステレオWAV形式で書き出したファイルをお試しください。",
+  "formatLabel": "ダウンロード形式",
+  "wavOption": "WAV · 編集向け",
+  "flacOption": "FLAC · 可逆圧縮",
+  "mp3Option": "MP3 · ファイルを小さく",
+  "flacUnavailable": "元のサンプルレートと精度を保つには、WAVを選択してください。",
+  "preparingDownload": "{format}ファイルを作成中…",
+  "exportError": "{format}ファイルを作成できませんでした。もう一度試すか、WAVを選択してください。",
+  "retry": "再試行"
 }

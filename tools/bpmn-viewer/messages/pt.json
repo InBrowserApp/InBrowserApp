@@ -1,0 +1,20 @@
+{
+  "open": "Abrir arquivo BPMN",
+  "replace": "Substituir arquivo BPMN",
+  "clear": "Fechar diagrama",
+  "reader": "Visualizador de BPMN",
+  "privacy": "Os arquivos ficam no seu dispositivo.",
+  "focus": "Abrir em tela cheia",
+  "exitFocus": "Sair da tela cheia",
+  "releaseFile": "Solte para abrir o arquivo BPMN",
+  "drop": "Solte um arquivo BPMN aqui",
+  "formats": "Abra um arquivo .bpmn ou .xml.",
+  "example": "Experimentar um exemplo",
+  "diagram": "Diagrama BPMN",
+  "loading": "Abrindo diagrama…",
+  "invalid": "Não foi possível abrir o diagrama. Escolha um arquivo XML BPMN 2.0 válido.",
+  "noLayout": "Este arquivo BPMN não contém o layout do diagrama. Exporte-o novamente com os dados de layout na ferramenta de modelagem e abra-o aqui.",
+  "zoomIn": "Aumentar zoom",
+  "zoomOut": "Diminuir zoom",
+  "fit": "Ajustar diagrama à janela"
+}

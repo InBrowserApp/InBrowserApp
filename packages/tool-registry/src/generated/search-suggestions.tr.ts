@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN Görüntüleyici",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "İş Günü Hesaplayıcı",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG Koordinat Dönüştürücü",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB Meta Veri Düzenleyicisi",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Oyun Kumandası Testi",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON Görüntüleyici",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "vCard ↔ CSV Dönüştürücü",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard Oluşturucu",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON openen",
+  "example": "Voorbeeld proberen",
+  "paste": "GeoJSON plakken",
+  "render": "Op de kaart tonen",
+  "map": "GeoJSON-kaart",
+  "fit": "Zoomen naar gegevens",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "features": "Objecten",
+  "properties": "Eigenschappen",
+  "empty": "Open een .geojson- of .json-bestand of plak GeoJSON om te beginnen.",
+  "noGeometry": "Deze GeoJSON-gegevens bevatten geen geometrieën om weer te geven.",
+  "noProperties": "Dit object heeft geen eigenschappen.",
+  "invalid": "Kan deze GeoJSON-gegevens niet openen. Controleer of ze geldige geometrieën bevatten.",
+  "feature": "Object {number}"
+}

@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON खोलें",
+  "example": "उदाहरण आज़माएँ",
+  "paste": "GeoJSON पेस्ट करें",
+  "render": "मानचित्र पर दिखाएँ",
+  "map": "GeoJSON मानचित्र",
+  "fit": "सारा डेटा दिखाएँ",
+  "zoomIn": "ज़ूम इन",
+  "zoomOut": "ज़ूम आउट",
+  "features": "फ़ीचर",
+  "properties": "विशेषताएँ",
+  "empty": "शुरू करने के लिए .geojson या .json फ़ाइल खोलें या GeoJSON पेस्ट करें।",
+  "noGeometry": "इस GeoJSON में दिखाने के लिए कोई आकृति नहीं है।",
+  "noProperties": "इस फ़ीचर की कोई विशेषता दर्ज नहीं है।",
+  "invalid": "यह GeoJSON नहीं खुल सका। जाँचें कि इसमें मान्य GeoJSON ज्यामिति है।",
+  "feature": "फ़ीचर {number}"
+}

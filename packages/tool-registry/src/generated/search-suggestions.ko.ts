@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 뷰어",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "영업일 계산기",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 좌표 변환기",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB 메타데이터 편집기",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "게임패드 테스터",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON 뷰어",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "vCard·CSV 변환기",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "vCard 명함 생성기",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

@@ -1,0 +1,17 @@
+{
+  "openFile": "Apri GeoJSON",
+  "example": "Prova un esempio",
+  "paste": "Incolla GeoJSON",
+  "render": "Mostra sulla mappa",
+  "map": "Mappa GeoJSON",
+  "fit": "Inquadra i dati",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "features": "Elementi geografici",
+  "properties": "Attributi",
+  "empty": "Per iniziare, apri un file .geojson o .json oppure incolla del GeoJSON.",
+  "noGeometry": "Il GeoJSON non contiene geometrie da visualizzare.",
+  "noProperties": "Questo elemento non ha attributi.",
+  "invalid": "Impossibile aprire il GeoJSON. Verifica che contenga geometrie GeoJSON valide.",
+  "feature": "Elemento {number}"
+}

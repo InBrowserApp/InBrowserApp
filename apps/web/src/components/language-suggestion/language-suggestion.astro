@@ -7,7 +7,7 @@ import { cn } from "@workspace/ui/lib/utils"
 <!-- Inert, untranslated markup; only populated when a suggestion is needed. -->
 <template id="language-suggestion-template">
   <div
-    class="fixed end-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 max-w-[min(20rem,calc(100vw-2rem))] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4"
+    class="fixed end-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 max-w-[min(20rem,calc(100vw-2rem))] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 [body:has([data-suppress-language-suggestion])_&]:hidden"
     role="status"
     aria-live="polite"
   >

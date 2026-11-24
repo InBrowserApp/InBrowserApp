@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "מציג BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "מחשבון ימי עבודה",
     slug: "business-days-calculator",
@@ -498,6 +503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "ממיר קואורדינטות EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "עורך מטא־נתונים ל־EPUB",
     slug: "epub-metadata-editor",
@@ -556,6 +566,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "בדיקת בקר משחק",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "מציג GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -1656,6 +1671,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "ממיר vCard ו-CSV",
     slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
+    name: "מחולל vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",
