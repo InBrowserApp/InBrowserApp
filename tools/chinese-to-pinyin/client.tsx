@@ -106,8 +106,8 @@ export default function PinyinConverter({
           />
         </div>
       </CardContent>
-      <CardFooter>
-        <fieldset className="grid max-w-full min-w-0 gap-2">
+      <CardFooter className="md:grid md:grid-cols-2 md:gap-5">
+        <fieldset className="w-full max-w-full min-w-0 md:col-start-2 md:w-auto md:justify-self-start">
           <legend className="mb-2 text-sm font-medium">
             {messages.formatLabel}
           </legend>
@@ -115,7 +115,7 @@ export default function PinyinConverter({
             {FORMATS.map((option) => (
               <label
                 key={option.id}
-                className="grid min-w-0 cursor-pointer content-center gap-0.5 rounded-md px-2 py-1.5 text-center text-xs font-medium break-words text-muted-foreground hover:bg-muted/60 has-checked:bg-muted has-checked:text-foreground has-focus-visible:ring-2 has-focus-visible:ring-ring sm:px-4 sm:text-sm"
+                className="grid min-w-0 cursor-pointer content-center gap-0.5 rounded-md px-2 py-1.5 text-center text-xs font-medium break-words text-muted-foreground hover:bg-muted/60 has-checked:bg-muted has-checked:font-semibold has-checked:text-foreground has-focus-visible:ring-2 has-focus-visible:ring-ring sm:px-4 sm:text-sm"
               >
                 <input
                   type="radio"

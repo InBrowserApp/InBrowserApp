@@ -10,12 +10,13 @@ const MARK = /\p{M}/u
 const VARIATION_SELECTOR = /\p{Variation_Selector}/u
 
 export function convertToPinyin(input: string, toneType: ToneFormat): string {
-  // Spaced array mode returns one reading or original value per code point.
   const syllables = pinyin(input, {
     type: "array",
     nonZh: "spaced",
     toneType,
     traditional: true,
+    // Reverse maximum matching keeps phrase readings stable in longer text.
+    segmentit: 1,
   })
   let output = ""
   let index = 0

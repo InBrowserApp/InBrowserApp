@@ -30,7 +30,7 @@ const example = lang === "zh-TW"
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <PinyinConverter client:load messages={messages} example={example} />
-  <ToolArticle>
+  <ToolArticle className="[&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0">
     <Intro />
   </ToolArticle>
 </ToolPageShell>

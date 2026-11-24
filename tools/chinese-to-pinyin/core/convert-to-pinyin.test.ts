@@ -9,6 +9,22 @@ describe("convertToPinyin", () => {
     )
   })
 
+  test("keeps contextual readings when a passage mixes Chinese, Latin text, and emoji", () => {
+    expect(
+      convertToPinyin("重慶銀行，欢迎你！\nHello, 世界！ 🎉 2026", "symbol")
+    ).toBe("chóng qìng yín háng，huān yíng nǐ！\nHello, shì jiè！ 🎉 2026")
+    expect(convertToPinyin("🎉銀行𠮷重慶", "symbol")).toBe(
+      "🎉yín háng 𠮷 chóng qìng"
+    )
+  })
+
+  test("keeps a phrase reading in a longer Chinese passage", () => {
+    const suffix = "欢迎你".repeat(500)
+    expect(convertToPinyin(`重庆银行${suffix}`, "symbol")).toBe(
+      `chóng qìng yín háng${" huān yíng nǐ".repeat(500)}`
+    )
+  })
+
   test("formats tone marks, numbers including neutral zero, and unmarked syllables", () => {
     const input = "女儿和妈妈"
     expect(convertToPinyin(input, "symbol")).toBe("nǚ ér hé mā ma")
