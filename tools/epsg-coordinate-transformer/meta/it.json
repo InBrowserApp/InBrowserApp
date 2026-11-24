@@ -1,0 +1,4 @@
+{
+  "name": "Trasformazione di coordinate EPSG",
+  "description": "Trasforma coordinate tra sistemi di riferimento EPSG come WGS 84, Web Mercator e UTM. Controlla l’ordine degli assi e le unità prima di copiare il risultato."
+}

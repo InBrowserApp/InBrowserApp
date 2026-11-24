@@ -498,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "محوّل إحداثيات EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "محرر بيانات EPUB الوصفية",
     slug: "epub-metadata-editor",

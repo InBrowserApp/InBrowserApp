@@ -498,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Penukar Sistem Koordinat EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Penyunting Metadata EPUB",
     slug: "epub-metadata-editor",

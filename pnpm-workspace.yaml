@@ -283,6 +283,7 @@ catalog:
   papaparse: ^5.7.1
   parse5: ^8.1.1
   pdf-lib: ^1.17.1
+  proj4: ^2.23.0
   pdfjs-dist: ^6.5.438
   prettier: ^3.10.1
   prettier-plugin-svelte: ^4.1.1

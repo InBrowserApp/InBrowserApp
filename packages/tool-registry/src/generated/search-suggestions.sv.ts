@@ -498,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-koordinattransformerare",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Redigerare för EPUB-metadata",
     slug: "epub-metadata-editor",

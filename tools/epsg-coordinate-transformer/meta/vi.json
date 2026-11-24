@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi tọa độ EPSG",
+  "description": "Chuyển đổi tọa độ giữa các hệ quy chiếu EPSG như WGS 84, Web Mercator và UTM. Xem thứ tự trục và đơn vị trước khi sao chép kết quả."
+}

@@ -498,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi tọa độ EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Trình chỉnh sửa siêu dữ liệu EPUB",
     slug: "epub-metadata-editor",
