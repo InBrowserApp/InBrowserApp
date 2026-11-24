@@ -296,6 +296,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "nft-metadata-batch-checker": () =>
     import("@tool/nft-metadata-batch-checker/page"),
+  "nft-metadata-viewer": () => import("@tool/nft-metadata-viewer/page"),
   "notebook-export": () => import("@tool/notebook-export/page"),
   "notebook-viewer": () => import("@tool/notebook-viewer/page"),
   "number-base-converter": () => import("@tool/number-base-converter/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "NFT-metadatavisare",
+  "description": "Slå upp Ethereum NFT-metadata med kontraktsadress och token-ID. Visa ERC-721- eller ERC-1155-token-URI, bild, egenskaper och rå JSON."
+}

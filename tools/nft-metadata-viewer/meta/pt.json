@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de metadados NFT",
+  "description": "Consulte metadados de NFT no Ethereum pelo endereço do contrato e pelo ID do token. Veja o URI do token ERC-721 ou ERC-1155, a imagem, as características e o JSON em bruto."
+}

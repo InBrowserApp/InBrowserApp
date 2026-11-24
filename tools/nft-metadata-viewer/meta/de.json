@@ -1,0 +1,4 @@
+{
+  "name": "NFT-Metadaten-Betrachter",
+  "description": "Rufen Sie Ethereum-NFT-Metadaten per Vertragsadresse und Token-ID ab. Sehen Sie die ERC-721- oder ERC-1155-Token-URI, das Bild, die Merkmale und die JSON-Rohdaten."
+}

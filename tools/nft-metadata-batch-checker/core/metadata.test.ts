@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest"
 import fixture from "../fixtures/ipfs.json"
 import { inspectMetadata } from "./metadata"
 import { expandUriPattern } from "./pattern"
-import { gatewayUrl, parseNftUrl } from "./urls"
+import { gatewayUrl, parseNftUrl } from "@workspace/nft-metadata"
 
 const base = new URL("https://example.org/metadata/1.json")
 const image = "data:image/svg+xml,%3Csvg%2F%3E"

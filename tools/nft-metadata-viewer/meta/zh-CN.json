@@ -1,0 +1,4 @@
+{
+  "name": "NFT 元数据查看器",
+  "description": "通过合约地址和 Token ID 查询以太坊 NFT 元数据。查看 ERC-721 或 ERC-1155 的 Token URI、图片、特征和原始 JSON。"
+}
