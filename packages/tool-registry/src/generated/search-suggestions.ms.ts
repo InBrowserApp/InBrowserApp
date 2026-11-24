@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Buang Jeda Senyap daripada Audio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Pemangkas & Penggabung Audio",
     slug: "audio-trimmer-merger",
   },

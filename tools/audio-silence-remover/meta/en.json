@@ -1,0 +1,4 @@
+{
+  "name": "Audio Silence Remover",
+  "description": "Find and shorten long silences in podcasts, interviews, and voice recordings. Adjust the silence threshold, preview the edit, and download WAV locally."
+}

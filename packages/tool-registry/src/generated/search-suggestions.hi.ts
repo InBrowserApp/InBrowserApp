@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "ऑडियो काटें और जोड़ें",
     slug: "audio-trimmer-merger",
   },

@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ตัดช่วงเงียบในไฟล์เสียง",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "เครื่องมือตัดและรวมเสียง",
     slug: "audio-trimmer-merger",
   },

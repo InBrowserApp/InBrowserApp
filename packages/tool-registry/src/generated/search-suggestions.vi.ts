@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Cắt khoảng lặng trong âm thanh",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Cắt và ghép âm thanh",
     slug: "audio-trimmer-merger",
   },

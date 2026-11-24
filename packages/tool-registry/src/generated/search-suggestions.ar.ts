@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "إزالة الصمت من الصوت",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "أداة قص الصوت ودمجه",
     slug: "audio-trimmer-merger",
   },

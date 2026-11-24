@@ -1658,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-silence-remover",
+    language: "ar",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "de",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "en",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "es",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "fr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "he",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "hi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "id",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "it",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ja",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ko",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ms",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "nl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "no",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pt",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ru",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "sv",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "th",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "tr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "vi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-trimmer-merger",
     language: "ar",
   },

@@ -28,6 +28,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "audio-loudness-normalizer": () =>
     import("@tool/audio-loudness-normalizer/page"),
   "audio-recorder": () => import("@tool/audio-recorder/page"),
+  "audio-silence-remover": () => import("@tool/audio-silence-remover/page"),
   "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "barcode-reader": () => import("@tool/barcode-reader/page"),

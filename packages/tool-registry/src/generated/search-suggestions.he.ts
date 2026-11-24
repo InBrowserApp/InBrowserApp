@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "הסרת קטעי שקט מהקלטות",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "חיתוך ומיזוג אודיו",
     slug: "audio-trimmer-merger",
   },

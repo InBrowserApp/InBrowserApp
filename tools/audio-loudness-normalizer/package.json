@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/pcm-audio": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*"
   },

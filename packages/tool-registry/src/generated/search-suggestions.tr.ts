@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ses Kaydından Sessizliği Kaldırma",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Ses Kırpıcı ve Birleştirici",
     slug: "audio-trimmer-merger",
   },

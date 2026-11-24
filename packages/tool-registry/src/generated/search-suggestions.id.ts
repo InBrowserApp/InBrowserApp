@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Penghapus Jeda Hening Audio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Pemotong & Penggabung Audio",
     slug: "audio-trimmer-merger",
   },

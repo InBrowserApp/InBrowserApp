@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Stiltes uit audio verwijderen",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio bijsnijden en samenvoegen",
     slug: "audio-trimmer-merger",
   },
