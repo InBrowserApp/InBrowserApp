@@ -1464,6 +1464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite als SQL-Dump exportieren",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite-Betrachter",
     slug: "sqlite-viewer",
   },

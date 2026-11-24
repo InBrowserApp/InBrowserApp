@@ -1464,6 +1464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Convertir SQLite en SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Visionneuse SQLite",
     slug: "sqlite-viewer",
   },

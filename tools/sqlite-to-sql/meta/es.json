@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de SQLite a SQL",
+  "description": "Convierte una base de datos SQLite (.db, .sqlite o .sqlite3) en un volcado SQL descargable. Exporta el esquema con o sin datos desde tu navegador."
+}

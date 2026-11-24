@@ -1464,6 +1464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite 转 SQL 转储",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite 查看器",
     slug: "sqlite-viewer",
   },

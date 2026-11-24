@@ -1464,6 +1464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "המרת SQLite לקובץ SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "מציג SQLite",
     slug: "sqlite-viewer",
   },

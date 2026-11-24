@@ -1,0 +1,4 @@
+{
+  "name": "SQLite als SQL-Dump exportieren",
+  "description": "Exportieren Sie eine SQLite-Datenbank (.db, .sqlite oder .sqlite3) als SQL-Dump zum Herunterladen. Wählen Sie zwischen Schema mit Daten und reinem Schemaexport, direkt im Browser."
+}

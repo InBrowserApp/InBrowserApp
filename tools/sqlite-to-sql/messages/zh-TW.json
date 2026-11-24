@@ -1,0 +1,23 @@
+{
+  "open": "選擇 SQLite 檔案",
+  "replace": "更換 SQLite 檔案",
+  "clear": "關閉資料庫",
+  "reader": "SQLite 轉 SQL 匯出區",
+  "privacy": "資料庫只留在您的裝置上。",
+  "releaseFile": "放開以開啟資料庫",
+  "drop": "將 SQLite 資料庫拖曳到這裡",
+  "formats": "SQLite 3 資料庫（.db、.sqlite、.sqlite3）",
+  "sample": "試用範例",
+  "schemaOnly": "僅匯出結構",
+  "schemaNote": "保留資料庫的定義，省略資料表中的記錄。",
+  "working": "正在產生 SQL 指令碼…",
+  "preview": "SQL 預覽",
+  "previewLimit": "預覽只顯示部分內容。下載的檔案包含完整的 SQL 指令碼。",
+  "copy": "複製 SQL",
+  "copied": "已複製",
+  "copyFailed": "無法複製",
+  "download": "下載 .sql",
+  "invalid": "請選擇可讀取的 SQLite 3 資料庫檔案。",
+  "failed": "無法匯出此資料庫。請試著從原本的應用程式匯出獨立的資料庫副本。",
+  "unsupportedSchema": "這個虛擬資料表無法僅匯出結構。請關閉「僅匯出結構」以匯出完整資料庫。"
+}

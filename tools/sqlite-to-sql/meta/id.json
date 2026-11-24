@@ -1,0 +1,4 @@
+{
+  "name": "Ekspor SQLite ke SQL",
+  "description": "Ekspor basis data SQLite (.db, .sqlite, atau .sqlite3) ke file SQL yang bisa diunduh. Sertakan skema dan data atau skema saja, langsung di browser."
+}

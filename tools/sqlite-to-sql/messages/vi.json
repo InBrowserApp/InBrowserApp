@@ -1,0 +1,23 @@
+{
+  "open": "Chọn tệp SQLite",
+  "replace": "Thay tệp SQLite",
+  "clear": "Đóng cơ sở dữ liệu",
+  "reader": "Khu vực xuất SQLite sang SQL",
+  "privacy": "Cơ sở dữ liệu chỉ được xử lý trên thiết bị của bạn.",
+  "releaseFile": "Thả tệp để mở cơ sở dữ liệu",
+  "drop": "Thả cơ sở dữ liệu SQLite vào đây",
+  "formats": "Cơ sở dữ liệu SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Thử cơ sở dữ liệu mẫu",
+  "schemaOnly": "Chỉ xuất lược đồ",
+  "schemaNote": "Xuất cấu trúc cơ sở dữ liệu, bỏ qua các hàng dữ liệu trong bảng.",
+  "working": "Đang tạo bản kết xuất SQL…",
+  "preview": "Xem trước SQL",
+  "previewLimit": "Bản xem trước chỉ hiển thị một phần. Tệp tải xuống chứa toàn bộ bản kết xuất SQL.",
+  "copy": "Sao chép SQL",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "download": "Tải tệp .sql",
+  "invalid": "Hãy chọn một tệp cơ sở dữ liệu SQLite 3 có thể đọc được.",
+  "failed": "Không thể xuất cơ sở dữ liệu này. Hãy dùng ứng dụng đã tạo cơ sở dữ liệu để lưu một bản sao có thể mở độc lập.",
+  "unsupportedSchema": "Không thể chỉ xuất lược đồ của bảng ảo này. Hãy tắt “Chỉ xuất lược đồ” để xuất toàn bộ cơ sở dữ liệu."
+}

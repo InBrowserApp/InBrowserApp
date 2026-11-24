@@ -1,0 +1,23 @@
+{
+  "open": "SQLite dosyası seç",
+  "replace": "SQLite dosyasını değiştir",
+  "clear": "Veritabanını kapat",
+  "reader": "SQLite'tan SQL'e dışa aktarma",
+  "privacy": "Veritabanınız cihazınızda kalır.",
+  "releaseFile": "Veritabanını açmak için dosyayı bırakın",
+  "drop": "SQLite veritabanını buraya bırakın",
+  "formats": "SQLite 3 veritabanları (.db, .sqlite, .sqlite3)",
+  "sample": "Örnek veritabanını dene",
+  "schemaOnly": "Yalnızca şema",
+  "schemaNote": "Veritabanı yapısını tablo satırları olmadan dışa aktarır.",
+  "working": "SQL dökümü hazırlanıyor…",
+  "preview": "SQL önizlemesi",
+  "previewLimit": "Önizleme kısaltıldı. İndirilen dosya SQL dökümünün tamamını içerir.",
+  "copy": "SQL'i kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "download": ".sql dosyasını indir",
+  "invalid": "Okunabilir bir SQLite 3 veritabanı dosyası seçin.",
+  "failed": "Bu veritabanı dışa aktarılamadı. Veritabanını oluşturan uygulamadan aldığınız bağımsız bir kopyayı deneyin.",
+  "unsupportedSchema": "Bu sanal tablonun yalnızca şeması dışa aktarılamıyor. Veritabanının tamamını dışa aktarmak için “Yalnızca şema” seçeneğini kapatın."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Eksport SQLite do SQL",
+  "description": "Zapisz bazę SQLite (.db, .sqlite lub .sqlite3) jako zrzut SQL. Wyeksportuj schemat z danymi albo sam schemat bezpośrednio w przeglądarce."
+}

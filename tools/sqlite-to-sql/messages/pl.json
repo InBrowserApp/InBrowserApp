@@ -1,0 +1,23 @@
+{
+  "open": "Wybierz plik SQLite",
+  "replace": "Zastąp plik SQLite",
+  "clear": "Zamknij bazę danych",
+  "reader": "Eksport SQLite do SQL",
+  "privacy": "Baza danych pozostaje na Twoim urządzeniu.",
+  "releaseFile": "Upuść plik, aby otworzyć bazę danych",
+  "drop": "Upuść tutaj bazę danych SQLite",
+  "formats": "Bazy danych SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Wypróbuj przykład",
+  "schemaOnly": "Tylko schemat",
+  "schemaNote": "Eksportuje strukturę bazy bez wierszy tabel.",
+  "working": "Tworzenie zrzutu SQL…",
+  "preview": "Podgląd SQL",
+  "previewLimit": "Podgląd jest skrócony. Pobierany plik zawiera pełny zrzut SQL.",
+  "copy": "Kopiuj SQL",
+  "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
+  "download": "Pobierz plik .sql",
+  "invalid": "Wybierz poprawny plik bazy danych SQLite 3.",
+  "failed": "Nie udało się wyeksportować bazy danych. Spróbuj użyć samodzielnej kopii utworzonej w aplikacji źródłowej.",
+  "unsupportedSchema": "Nie można wyeksportować samego schematu tej tabeli wirtualnej. Wyłącz opcję „Tylko schemat”, aby wyeksportować całą bazę danych."
+}

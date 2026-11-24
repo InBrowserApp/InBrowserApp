@@ -1,0 +1,4 @@
+{
+  "name": "SQLite til SQL-dump",
+  "description": "Konverter en SQLite-database (.db, .sqlite eller .sqlite3) til en nedlastbar SQL-dump. Eksporter skjema og data eller bare skjemaet direkte i nettleseren."
+}

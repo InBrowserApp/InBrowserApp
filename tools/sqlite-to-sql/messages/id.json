@@ -1,0 +1,23 @@
+{
+  "open": "Pilih file SQLite",
+  "replace": "Ganti file SQLite",
+  "clear": "Tutup basis data",
+  "reader": "Ruang kerja ekspor SQLite ke SQL",
+  "privacy": "Basis data tetap berada di perangkat Anda.",
+  "releaseFile": "Lepaskan untuk membuka basis data",
+  "drop": "Letakkan basis data SQLite di sini",
+  "formats": "Basis data SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Coba contoh",
+  "schemaOnly": "Skema saja",
+  "schemaNote": "Ekspor struktur basis data tanpa isi tabel.",
+  "working": "Membuat dump SQL…",
+  "preview": "Pratinjau SQL",
+  "previewLimit": "Pratinjau hanya menampilkan sebagian isi. File unduhan memuat dump SQL lengkap.",
+  "copy": "Salin SQL",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh .sql",
+  "invalid": "Pilih file basis data SQLite 3 yang dapat dibaca.",
+  "failed": "Basis data ini tidak dapat diekspor. Coba buat salinan basis data mandiri dari aplikasi asal.",
+  "unsupportedSchema": "Skema tabel virtual ini tidak dapat diekspor secara terpisah. Nonaktifkan “Skema saja” untuk mengekspor seluruh basis data."
+}

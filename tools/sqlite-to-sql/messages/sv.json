@@ -1,0 +1,23 @@
+{
+  "open": "Välj SQLite-fil",
+  "replace": "Byt SQLite-fil",
+  "clear": "Stäng databasen",
+  "reader": "SQLite-export till SQL",
+  "privacy": "Din databas stannar på din enhet.",
+  "releaseFile": "Släpp filen för att öppna databasen",
+  "drop": "Släpp en SQLite-databas här",
+  "formats": "SQLite 3-databaser (.db, .sqlite, .sqlite3)",
+  "sample": "Prova ett exempel",
+  "schemaOnly": "Endast schema",
+  "schemaNote": "Exportera databasens struktur utan tabellrader.",
+  "working": "Skapar SQL-dump…",
+  "preview": "Förhandsvisning av SQL",
+  "previewLimit": "Förhandsvisningen är förkortad. Den nedladdade filen innehåller hela SQL-dumpen.",
+  "copy": "Kopiera SQL",
+  "copied": "Kopierat",
+  "copyFailed": "Kunde inte kopiera",
+  "download": "Ladda ned .sql",
+  "invalid": "Välj en SQLite 3-databasfil som går att läsa.",
+  "failed": "Det gick inte att exportera databasen. Skapa en fristående kopia i programmet som skapade databasen och försök igen.",
+  "unsupportedSchema": "Det går inte att exportera enbart schemat för den här virtuella tabellen. Stäng av ”Endast schema” för att exportera hela databasen."
+}

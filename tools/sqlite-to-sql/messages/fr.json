@@ -1,0 +1,23 @@
+{
+  "open": "Choisir un fichier SQLite",
+  "replace": "Remplacer le fichier SQLite",
+  "clear": "Fermer la base",
+  "reader": "Export SQLite vers SQL",
+  "privacy": "Votre base reste sur votre appareil.",
+  "releaseFile": "Relâchez pour ouvrir la base",
+  "drop": "Déposez une base SQLite ici",
+  "formats": "Bases SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Essayer une base d’exemple",
+  "schemaOnly": "Schéma uniquement",
+  "schemaNote": "Exporter la structure de la base sans les données des tables.",
+  "working": "Génération du fichier SQL…",
+  "preview": "Aperçu du SQL",
+  "previewLimit": "L’aperçu est abrégé. Le fichier téléchargé contient le script SQL complet.",
+  "copy": "Copier le SQL",
+  "copied": "Copié",
+  "copyFailed": "Échec de la copie",
+  "download": "Télécharger le fichier .sql",
+  "invalid": "Choisissez un fichier de base SQLite 3 lisible.",
+  "failed": "Impossible d’exporter cette base. Essayez avec une copie autonome créée par l’application d’origine.",
+  "unsupportedSchema": "Impossible d’exporter uniquement le schéma de cette table virtuelle. Désactivez « Schéma uniquement » pour exporter la base entière."
+}
