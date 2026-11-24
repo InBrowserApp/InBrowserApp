@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "ตัวแปลง SVG เป็น PDF",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "โปรแกรมดู SVG",
     slug: "svg-viewer",
   },

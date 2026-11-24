@@ -1,0 +1,19 @@
+{
+  "dropSvg": "SVG फ़ाइल यहाँ छोड़ें",
+  "chooseSvg": "SVG चुनें",
+  "tryExample": "उदाहरण आज़माएँ",
+  "reading": "SVG पढ़ रहे हैं…",
+  "preview": "SVG का पूर्वावलोकन",
+  "changeSvg": "SVG बदलें",
+  "pageSize": "PDF पेज का आकार",
+  "original": "मूल SVG आकार",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} मिमी",
+  "fitPaper": "चित्र को पेज के मार्जिन के अंदर फ़िट करता है।",
+  "download": "PDF डाउनलोड करें",
+  "converting": "PDF बना रहे हैं…",
+  "downloadReady": "PDF तैयार है।",
+  "invalidSvg": "यह फ़ाइल SVG के रूप में नहीं खुल सकी। कोई मान्य SVG फ़ाइल चुनें और फिर से कोशिश करें।",
+  "conversionFailed": "PDF नहीं बन सकी। अपने डिज़ाइन एडिटर से एक सरल SVG निर्यात करके देखें।"
+}

@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Trình chuyển SVG sang PDF",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "Trình xem SVG",
     slug: "svg-viewer",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "SVG PDF 변환기",
+  "description": "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SVG 轉 PDF 轉換器",
+  "description": "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。"
+}

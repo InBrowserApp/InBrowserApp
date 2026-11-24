@@ -1,0 +1,19 @@
+{
+  "dropSvg": "将 SVG 文件拖到这里",
+  "chooseSvg": "选择 SVG",
+  "tryExample": "试用示例",
+  "reading": "正在读取 SVG…",
+  "preview": "SVG 预览",
+  "changeSvg": "更换 SVG",
+  "pageSize": "PDF 页面尺寸",
+  "original": "SVG 原始尺寸",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} 毫米",
+  "fitPaper": "等比缩放图形，并留出页边距。",
+  "download": "下载 PDF",
+  "converting": "正在生成 PDF…",
+  "downloadReady": "PDF 已生成。",
+  "invalidSvg": "无法打开此 SVG。请选择有效的 SVG 文件后重试。",
+  "conversionFailed": "无法生成 PDF。请尝试在设计软件中导出简化后的 SVG。"
+}

@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Ziehe eine SVG-Datei hierher",
+  "chooseSvg": "SVG auswählen",
+  "tryExample": "Beispiel ausprobieren",
+  "reading": "SVG wird gelesen …",
+  "preview": "SVG-Vorschau",
+  "changeSvg": "Andere SVG wählen",
+  "pageSize": "PDF-Seitenformat",
+  "original": "SVG-Originalgröße",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Passt die Grafik mit Seitenrand ein.",
+  "download": "PDF herunterladen",
+  "converting": "PDF wird erstellt …",
+  "downloadReady": "Das PDF steht bereit.",
+  "invalidSvg": "Die Datei ließ sich nicht als SVG öffnen. Wähle eine gültige SVG-Datei und versuche es erneut.",
+  "conversionFailed": "Das PDF konnte nicht erstellt werden. Exportiere aus deinem Grafikprogramm eine einfachere SVG-Datei und versuche es erneut."
+}

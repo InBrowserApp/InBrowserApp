@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Seret dan lepaskan fail SVG di sini",
+  "chooseSvg": "Pilih SVG",
+  "tryExample": "Cuba contoh",
+  "reading": "Sedang membaca SVG…",
+  "preview": "Pratonton SVG",
+  "changeSvg": "Ganti SVG",
+  "pageSize": "Saiz halaman PDF",
+  "original": "Saiz asal SVG",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Grafik dimuatkan dalam halaman dengan ruang jidar.",
+  "download": "Muat turun PDF",
+  "converting": "Sedang menghasilkan PDF…",
+  "downloadReady": "PDF sedia dimuat turun.",
+  "invalidSvg": "Fail ini tidak dapat dibuka sebagai SVG. Pilih fail SVG yang sah dan cuba lagi.",
+  "conversionFailed": "PDF tidak dapat dihasilkan. Cuba eksport SVG yang lebih ringkas daripada penyunting anda."
+}

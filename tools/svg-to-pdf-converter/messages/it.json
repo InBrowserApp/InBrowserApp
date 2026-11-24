@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Trascina qui un file SVG",
+  "chooseSvg": "Scegli un SVG",
+  "tryExample": "Prova un esempio",
+  "reading": "Lettura dell’SVG in corso…",
+  "preview": "Anteprima SVG",
+  "changeSvg": "Cambia SVG",
+  "pageSize": "Formato pagina PDF",
+  "original": "Dimensioni originali dell’SVG",
+  "a4": "A4",
+  "letter": "Lettera USA",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Adatta la grafica alla pagina lasciando dei margini.",
+  "download": "Scarica PDF",
+  "converting": "Creazione del PDF in corso…",
+  "downloadReady": "PDF pronto.",
+  "invalidSvg": "Impossibile aprire questo file come SVG. Scegli un file SVG valido e riprova.",
+  "conversionFailed": "Impossibile creare il PDF. Prova a esportare un SVG più semplice dal tuo editor."
+}

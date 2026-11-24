@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Перетащите сюда файл SVG",
+  "chooseSvg": "Выбрать SVG",
+  "tryExample": "Открыть пример",
+  "reading": "Чтение SVG…",
+  "preview": "Предпросмотр SVG",
+  "changeSvg": "Заменить SVG",
+  "pageSize": "Формат страницы PDF",
+  "original": "Исходный размер SVG",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} мм",
+  "fitPaper": "Изображение размещается на странице с полями.",
+  "download": "Скачать PDF",
+  "converting": "Создание PDF…",
+  "downloadReady": "PDF готов.",
+  "invalidSvg": "Не удалось открыть файл как SVG. Выберите корректный файл SVG и повторите попытку.",
+  "conversionFailed": "Не удалось создать PDF. Попробуйте экспортировать более простой SVG из графического редактора."
+}

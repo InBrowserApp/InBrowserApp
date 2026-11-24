@@ -24658,6 +24658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "svg-viewer",
     language: "ar",
   },

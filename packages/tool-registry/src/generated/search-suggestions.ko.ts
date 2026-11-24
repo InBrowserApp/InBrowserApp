@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "SVG PDF 변환기",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "SVG 뷰어",
     slug: "svg-viewer",
   },
