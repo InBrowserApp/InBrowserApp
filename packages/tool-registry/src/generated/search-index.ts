@@ -8483,7 +8483,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "تحويل CSV وExcel إلى SQLite",
         description:
-          "حوّل ملفات CSV وExcel بامتدادَي .xlsx و.xls إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف .sqlite أو استعلم عنه في عارض SQLite.",
+          "حوّل ملفات CSV وExcel بامتدادَي ⁦.xlsx⁩ و⁦.xls⁩ إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف ⁦.sqlite⁩ أو استعلم عنه في عارض SQLite.",
       },
       de: {
         name: "CSV und Excel in SQLite umwandeln",
@@ -8508,7 +8508,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       he: {
         name: "ממיר CSV ו־Excel ל־SQLite",
         description:
-          "המרת קובצי CSV ו־Excel (.xlsx, .xls) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־.sqlite או להריץ עליו שאילתות במציג SQLite.",
+          "המרת קובצי CSV ו־Excel (⁦.xlsx⁩, ⁦.xls⁩) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־⁦.sqlite⁩ או להריץ עליו שאילתות במציג SQLite.",
       },
       hi: {
         name: "CSV और Excel को SQLite में बदलें",

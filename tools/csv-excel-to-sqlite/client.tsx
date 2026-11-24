@@ -171,7 +171,10 @@ export default function Client({
                   <Button
                     variant="ghost"
                     size="icon-sm"
-                    aria-label={m.remove.replace("{name}", () => file.name)}
+                    aria-label={m.remove.replace(
+                      "{name}",
+                      () => `\u2068${file.name}\u2069`
+                    )}
                     disabled={state.creating}
                     onClick={() => state.remove(id)}
                   >
@@ -230,10 +233,10 @@ export default function Client({
               <Check aria-hidden="true" className="size-4 shrink-0" />
               {m.ready}
             </p>
-            <div className="flex max-w-full flex-wrap gap-2">
+            <div className="flex w-full max-w-full flex-wrap gap-2 sm:w-auto">
               <Button
                 asChild
-                className="h-auto min-h-9 max-w-full whitespace-normal"
+                className="h-auto min-h-11 w-full max-w-full whitespace-normal sm:min-h-9 sm:w-auto"
               >
                 <a href={state.url} download={databaseName}>
                   <Download aria-hidden="true" />
@@ -243,7 +246,7 @@ export default function Client({
               <Button
                 asChild
                 variant="outline"
-                className="h-auto min-h-9 max-w-full whitespace-normal"
+                className="h-auto min-h-11 w-full max-w-full whitespace-normal sm:min-h-9 sm:w-auto"
               >
                 <a href={viewerHref} target="_blank" rel="noopener">
                   <LayoutGrid aria-hidden="true" />
@@ -257,7 +260,7 @@ export default function Client({
             <Button
               disabled={state.reading || state.creating}
               onClick={state.create}
-              className="h-auto min-h-9 max-w-full whitespace-normal"
+              className="h-auto min-h-11 w-full max-w-full whitespace-normal sm:min-h-9 sm:w-auto"
             >
               {state.creating ? (
                 <Spinner aria-hidden="true" />
