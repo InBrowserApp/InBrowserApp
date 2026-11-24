@@ -1468,6 +1468,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "image",
+    name: "STEP-Betrachter",
+    slug: "step-viewer",
+  },
+  {
     category: "misc",
     name: "Stereokanäle trennen",
     slug: "stereo-channel-splitter",

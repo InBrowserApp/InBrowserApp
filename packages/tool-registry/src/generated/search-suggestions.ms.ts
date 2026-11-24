@@ -1468,6 +1468,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "image",
+    name: "Pemapar STEP",
+    slug: "step-viewer",
+  },
+  {
     category: "misc",
     name: "Pemisah Saluran Audio Stereo",
     slug: "stereo-channel-splitter",

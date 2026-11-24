@@ -1,0 +1,4 @@
+{
+  "name": "STEP 查看器",
+  "description": "在浏览器中打开 STEP 和 STP CAD 文件，以 3D 方式查看零件和装配体、测量距离和整体尺寸，并保存 PNG 截图。"
+}

@@ -9,6 +9,9 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  occt-import-js: 0.0.23
+  three: 0.187.0
+  "@types/three": 0.187.0
   world-atlas: ^2.0.2
   topojson-client: ^3.1.0
   leaflet: ^1.9.4

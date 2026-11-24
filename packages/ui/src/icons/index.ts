@@ -14,6 +14,7 @@ export {
   Blocks,
   Bookmark,
   BookOpen,
+  Box,
   Braces,
   Building2,
   CalendarDays,
