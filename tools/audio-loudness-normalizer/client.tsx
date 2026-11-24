@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
 
+import { MINIMUM_FRAMES, SAMPLE_RATE } from "./core/loudness"
 import { AudioFilePicker } from "./file-picker"
 import { LoudnessResult } from "./result"
 import type { Request, Response } from "./workers/normalize"
@@ -11,9 +12,11 @@ type Messages = typeof englishMessages
 type Source = Extract<Response, { type: "measured" }> & { worker: Worker }
 type State =
   | { status: "idle" | "reading" }
-  | { status: "error"; key: "readError" | "channelError" | "quietError" }
+  | {
+      status: "error"
+      key: "readError" | "channelError" | "shortError" | "quietError"
+    }
   | { status: "ready"; source: Source }
-const sampleRate = 48_000
 
 export default function AudioLoudnessNormalizer({
   messages: m,
@@ -35,35 +38,42 @@ export default function AudioLoudnessNormalizer({
 
   async function open(file: File) {
     active.current?.terminate()
+    active.current = null
     setFileName(file.name)
     setState({ status: "reading" })
-    const worker = new Worker(
-      new URL("./workers/normalize.ts", import.meta.url),
-      { type: "module" }
-    )
-    active.current = worker
+    let started: Worker | null = null
 
     function fail(key: Extract<State, { status: "error" }>["key"]) {
-      if (active.current !== worker) return
-      worker.terminate()
+      if (active.current !== started) return
+      started?.terminate()
       active.current = null
       setState({ status: "error", key })
     }
 
-    worker.onerror = () => fail("readError")
-    worker.onmessage = ({ data }: MessageEvent<Response>) => {
-      if (active.current !== worker) return
-      if (data.type === "quiet") fail("quietError")
-      if (data.type === "measured")
-        setState({ status: "ready", source: { ...data, worker } })
-    }
-
     try {
-      const context = new OfflineAudioContext(1, 1, sampleRate)
+      const worker = new Worker(
+        new URL("./workers/normalize.ts", import.meta.url),
+        { type: "module" }
+      )
+      started = worker
+      active.current = worker
+      worker.onerror = () => fail("readError")
+      worker.onmessage = ({ data }: MessageEvent<Response>) => {
+        if (active.current !== worker) return
+        if (data.type === "quiet") fail("quietError")
+        if (data.type === "measured")
+          setState({ status: "ready", source: { ...data, worker } })
+      }
+
+      const context = new OfflineAudioContext(1, 1, SAMPLE_RATE)
       const audio = await context.decodeAudioData(await file.arrayBuffer())
       if (active.current !== worker) return
       if (audio.numberOfChannels > 2) {
         fail("channelError")
+        return
+      }
+      if (audio.length < MINIMUM_FRAMES) {
+        fail("shortError")
         return
       }
       // AudioBuffer may retain its planes. Transfer owned copies to the worker.

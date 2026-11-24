@@ -6,6 +6,7 @@
   "measuring": "Mengukur kelantangan…",
   "readError": "Fail audio ini tidak dapat dibuka. Cuba fail WAV mono atau stereo.",
   "channelError": "Pilih fail audio mono atau stereo.",
+  "shortError": "Pilih audio berdurasi sekurang-kurangnya 0.4 saat untuk mengukur kelantangan bersepadu.",
   "quietError": "Rakaman ini terlalu perlahan untuk diukur dalam LUFS.",
   "settings": "Tetapan kelantangan",
   "target": "Sasaran kelantangan",
@@ -23,6 +24,7 @@
   "peakLimited": "Had −1 dBTP mengehadkan kelantangan yang boleh dicapai sambil mengekalkan dinamik rakaman.",
   "preview": "Mainkan audio yang dilaraskan",
   "download": "Muat turun WAV",
+  "ready": "Audio yang dilaraskan sudah sedia.",
   "rendering": "Menyediakan WAV…",
   "exportError": "Fail WAV tidak dapat dihasilkan. Cuba sediakannya semula.",
   "retry": "Cuba lagi"

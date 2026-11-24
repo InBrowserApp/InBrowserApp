@@ -6,6 +6,7 @@
   "measuring": "Mengukur kenyaringan…",
   "readError": "File audio ini tidak dapat dibuka. Coba file WAV mono atau stereo.",
   "channelError": "Pilih file audio mono atau stereo.",
+  "shortError": "Pilih audio berdurasi minimal 0,4 detik untuk mengukur kenyaringan terintegrasi.",
   "quietError": "Rekaman ini terlalu pelan untuk diukur dalam LUFS.",
   "settings": "Pengaturan kenyaringan",
   "target": "Target kenyaringan",
@@ -23,6 +24,7 @@
   "peakLimited": "Batas −1 dBTP membatasi kenaikan kenyaringan agar dinamika audio tetap terjaga.",
   "preview": "Putar hasil normalisasi",
   "download": "Unduh WAV",
+  "ready": "Audio hasil normalisasi sudah siap.",
   "rendering": "Menyiapkan WAV…",
   "exportError": "File WAV tidak dapat dibuat. Coba lagi.",
   "retry": "Coba lagi"

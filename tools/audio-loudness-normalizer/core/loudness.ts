@@ -2,6 +2,8 @@ import { truePeak } from "./peak"
 
 export const SAMPLE_RATE = 48_000
 const hop = SAMPLE_RATE / 10
+const blockHops = 4
+export const MINIMUM_FRAMES = hop * blockHops
 const absoluteGate = -70
 const peakCeiling = -1.001 // Leave headroom for 16-bit rounding.
 const offset = -0.691
@@ -37,9 +39,6 @@ function addWeightedEnergy(samples: Float32Array, energy: Float64Array) {
     z2 = z1
     z1 = z
   }
-  if (samples.length < 4 * hop) {
-    energy[Math.floor(samples.length / hop)]! += sum
-  }
 }
 
 function gatedAverage(blocks: Float64Array, gate: number) {
@@ -65,19 +64,17 @@ function integratedLoudness(blocks: Float64Array, gain = 0) {
 }
 
 export function measure(channels: Float32Array[]) {
-  const energy = new Float64Array(
-    Math.max(4, Math.floor(channels[0]!.length / hop))
-  )
+  const energy = new Float64Array(Math.floor(channels[0]!.length / hop))
   let peak = -Infinity
   for (const channel of channels) {
     addWeightedEnergy(channel, energy)
     peak = Math.max(peak, truePeak(channel))
   }
-  const blocks = new Float64Array(energy.length - 3)
+  const blocks = new Float64Array(Math.max(0, energy.length - blockHops + 1))
   for (let i = 0; i < blocks.length; i++) {
     blocks[i] =
       (energy[i]! + energy[i + 1]! + energy[i + 2]! + energy[i + 3]!) /
-      (4 * hop)
+      MINIMUM_FRAMES
   }
   return { blocks, loudness: integratedLoudness(blocks), peak }
 }
@@ -88,18 +85,20 @@ export function normalize(
 ) {
   const ceilingGain = peakCeiling - analysis.peak
   let gain = Math.min(target - analysis.loudness, ceilingGain)
+  let loudness = integratedLoudness(analysis.blocks, gain)
   // Changing gain can move quiet blocks across the absolute gate.
   for (let attempt = 0; attempt < 3; attempt++) {
-    const correction = target - integratedLoudness(analysis.blocks, gain)
+    const correction = target - loudness
     if (Math.abs(correction) < 0.005) break
-    gain = Math.min(gain + correction, ceilingGain)
+    const nextGain = Math.min(gain + correction, ceilingGain)
+    if (nextGain === gain) break
+    gain = nextGain
+    loudness = integratedLoudness(analysis.blocks, gain)
   }
   return {
     gain,
-    loudness: integratedLoudness(analysis.blocks, gain),
+    loudness,
     peak: analysis.peak + gain,
-    limited:
-      gain === ceilingGain &&
-      target - integratedLoudness(analysis.blocks, gain) > 0.05,
+    limited: gain === ceilingGain && target - loudness > 0.05,
   }
 }

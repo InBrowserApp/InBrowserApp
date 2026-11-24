@@ -6,6 +6,7 @@
   "measuring": "Đang đo độ lớn âm thanh…",
   "readError": "Không mở được tệp âm thanh này. Hãy thử với tệp WAV mono hoặc stereo.",
   "channelError": "Hãy chọn tệp âm thanh mono hoặc stereo.",
+  "shortError": "Chọn tệp âm thanh dài ít nhất 0,4 giây để đo độ lớn tích hợp.",
   "quietError": "Âm lượng bản ghi quá thấp để đo bằng LUFS.",
   "settings": "Cài đặt độ lớn",
   "target": "Độ lớn mục tiêu",
@@ -23,6 +24,7 @@
   "peakLimited": "Giới hạn −1 dBTP hạn chế mức âm lượng có thể đạt được mà vẫn giữ nguyên dải động.",
   "preview": "Nghe thử bản đã chuẩn hóa",
   "download": "Tải WAV",
+  "ready": "Bản âm thanh đã chuẩn hóa sẵn sàng.",
   "rendering": "Đang tạo tệp WAV…",
   "exportError": "Không tạo được tệp WAV. Hãy thử lại.",
   "retry": "Thử lại"

@@ -16,6 +16,8 @@ type Messages = typeof englishMessages
 type Rendered = Extract<Response, { type: "rendered" }>
 type Result = Rendered | Extract<Response, { type: "renderError" }>
 type Metric = { loudness: number; peak: number }
+const minTarget = -30
+const maxTarget = -5
 
 function AudioDownload({
   name,
@@ -70,35 +72,41 @@ export function LoudnessResult({
   const id = useId()
   const [preset, setPreset] = useState("-16")
   const [custom, setCustom] = useState("-18")
-  const [result, setResult] = useState<Result>()
-  const [retry, setRetry] = useState(0)
-  const requestId = useRef(0)
+  const [response, setResponse] = useState<Result>()
+  const [requestId, setRequestId] = useState(0)
+  const inFlight = useRef<number | null>(null)
   const target = Number(preset === "custom" ? custom : preset)
-  const valid = target >= -30 && target <= -5
+  const valid = target >= minTarget && target <= maxTarget
+  const result = response?.id === requestId ? response : undefined
+  const rendering = valid && !result
 
   useEffect(() => {
-    if (!valid) return
-    const id = ++requestId.current
     function receive({ data }: MessageEvent<Response>) {
-      if ("id" in data && data.id === id) setResult(data)
+      if ("id" in data && data.id === inFlight.current) {
+        inFlight.current = null
+        setResponse(data)
+      }
     }
     worker.addEventListener("message", receive)
+    return () => worker.removeEventListener("message", receive)
+  }, [worker])
+
+  useEffect(() => {
+    if (!valid || response?.id === requestId || inFlight.current !== null)
+      return
     const timer = window.setTimeout(
       () => {
-        const message: Request = { type: "render", target, id }
+        inFlight.current = requestId
+        const message: Request = { type: "render", target, id: requestId }
         worker.postMessage(message)
       },
-      preset === "custom" && !retry ? 250 : 0
+      preset === "custom" ? 250 : 0
     )
-    return () => {
-      window.clearTimeout(timer)
-      worker.removeEventListener("message", receive)
-    }
-  }, [worker, valid, target, preset, retry])
+    return () => window.clearTimeout(timer)
+  }, [worker, valid, target, preset, requestId, response])
 
   function reset() {
-    setResult(undefined)
-    setRetry(0)
+    setRequestId((id) => id + 1)
   }
 
   const metrics = result?.type === "rendered" ? result.metrics : undefined
@@ -166,8 +174,8 @@ export function LoudnessResult({
                   id={id + "-custom"}
                   type="number"
                   dir="ltr"
-                  min={-30}
-                  max={-5}
+                  min={minTarget}
+                  max={maxTarget}
                   step="any"
                   value={custom}
                   aria-invalid={!valid}
@@ -182,7 +190,8 @@ export function LoudnessResult({
                   id={id + "-range"}
                   className="text-start text-xs text-muted-foreground"
                 >
-                  −30 … −5 LUFS
+                  {minTarget.toLocaleString(lang)} …{" "}
+                  {maxTarget.toLocaleString(lang)} LUFS
                 </bdi>
               </div>
             )}
@@ -250,11 +259,9 @@ export function LoudnessResult({
         )}
         <div
           role="status"
-          className={
-            valid && !result ? "flex items-center gap-2 text-sm" : "sr-only"
-          }
+          className={rendering ? "flex items-center gap-2 text-sm" : "sr-only"}
         >
-          {valid && !result && (
+          {rendering ? (
             <>
               <LoaderCircle
                 className="size-4 shrink-0 motion-safe:animate-spin"
@@ -262,21 +269,16 @@ export function LoudnessResult({
               />
               {m.rendering}
             </>
-          )}
+          ) : result?.type === "rendered" ? (
+            m.ready
+          ) : null}
         </div>
         {result?.type === "renderError" && (
           <Alert variant="destructive">
             <TriangleAlert aria-hidden="true" />
             <AlertDescription className="flex flex-wrap items-center gap-2">
               {m.exportError}
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => {
-                  setResult(undefined)
-                  setRetry(retry + 1)
-                }}
-              >
+              <Button size="sm" variant="outline" onClick={reset}>
                 {m.retry}
               </Button>
             </AlertDescription>

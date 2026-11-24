@@ -6,6 +6,7 @@
   "measuring": "Pomiar głośności…",
   "readError": "Nie udało się otworzyć pliku audio. Spróbuj użyć pliku WAV w mono lub stereo.",
   "channelError": "Wybierz plik audio w mono lub stereo.",
+  "shortError": "Aby zmierzyć głośność zintegrowaną, wybierz nagranie trwające co najmniej 0,4 sekundy.",
   "quietError": "Nagranie jest zbyt ciche, aby zmierzyć jego głośność w LUFS.",
   "settings": "Ustawienia głośności",
   "target": "Docelowa głośność",
@@ -23,6 +24,7 @@
   "peakLimited": "Limit −1 dBTP ogranicza możliwą głośność przy zachowaniu dynamiki nagrania.",
   "preview": "Odsłuchaj wynik",
   "download": "Pobierz WAV",
+  "ready": "Znormalizowany plik audio jest gotowy.",
   "rendering": "Przygotowywanie pliku WAV…",
   "exportError": "Nie udało się utworzyć pliku WAV. Spróbuj ponownie.",
   "retry": "Spróbuj ponownie"

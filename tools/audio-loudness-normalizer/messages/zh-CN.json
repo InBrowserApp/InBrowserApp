@@ -6,6 +6,7 @@
   "measuring": "正在测量响度…",
   "readError": "无法打开此音频文件，请尝试单声道或立体声 WAV 文件。",
   "channelError": "请选择单声道或立体声音频文件。",
+  "shortError": "请选择至少 0.4 秒的音频，以测量综合响度。",
   "quietError": "此录音的声音太小，无法测量 LUFS。",
   "settings": "响度设置",
   "target": "目标响度",
@@ -23,6 +24,7 @@
   "peakLimited": "−1 dBTP 上限限制了在保留动态范围的情况下此文件可达到的响度。",
   "preview": "播放标准化后的音频",
   "download": "下载 WAV",
+  "ready": "标准化后的音频已准备好。",
   "rendering": "正在准备 WAV…",
   "exportError": "无法生成 WAV，请重试。",
   "retry": "重试"

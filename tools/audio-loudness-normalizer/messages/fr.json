@@ -6,6 +6,7 @@
   "measuring": "Mesure de la sonie…",
   "readError": "Impossible d’ouvrir ce fichier audio. Essayez un fichier WAV mono ou stéréo.",
   "channelError": "Choisissez un fichier audio mono ou stéréo.",
+  "shortError": "Choisissez un enregistrement d’au moins 0,4 seconde pour mesurer la sonie intégrée.",
   "quietError": "Cet enregistrement est trop faible pour être mesuré en LUFS.",
   "settings": "Réglages de normalisation",
   "target": "Sonie cible",
@@ -23,6 +24,7 @@
   "peakLimited": "Le plafond de −1 dBTP limite le niveau que ce fichier peut atteindre tout en conservant sa dynamique.",
   "preview": "Écouter l’audio normalisé",
   "download": "Télécharger en WAV",
+  "ready": "L’audio normalisé est prêt.",
   "rendering": "Préparation du WAV…",
   "exportError": "Impossible de créer le fichier WAV. Relancez la préparation.",
   "retry": "Réessayer"

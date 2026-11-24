@@ -31,7 +31,11 @@ class AudioWorker extends EventTarget {
 const workers: AudioWorker[] = []
 const decode = vi.fn()
 const samples = Float32Array.of(0.1)
-const audio = { numberOfChannels: 1, getChannelData: () => samples }
+const audio = {
+  numberOfChannels: 1,
+  length: 48_000,
+  getChannelData: () => samples,
+}
 beforeEach(() => {
   workers.length = 0
   decode.mockReset().mockResolvedValue(audio)
@@ -66,14 +70,35 @@ function lastRender(worker: AudioWorker) {
 }
 
 describe("Audio Loudness Normalizer", () => {
+  it("renders only the latest target after an in-flight render", async () => {
+    const { choose } = setup()
+    choose("episode.wav")
+    const worker = workers[0]!
+    await waitFor(() => expect(worker.postMessage).toHaveBeenCalledOnce())
+    act(() => worker.receive({ type: "measured", loudness: -24, peak: -8 }))
+    await waitFor(() => expect(lastRender(worker).target).toBe(-16))
+    const id = lastRender(worker).id
+    const preset = screen.getByRole("combobox", { name: messages.target })
+    fireEvent.change(preset, { target: { value: "-14" } })
+    fireEvent.change(preset, { target: { value: "-23" } })
+    expect(worker.postMessage).toHaveBeenCalledTimes(2)
+    act(() => worker.receive({ type: "renderError", id }))
+    await waitFor(() => expect(lastRender(worker).target).toBe(-23))
+    expect(worker.postMessage).toHaveBeenCalledTimes(3)
+    expect(screen.queryByRole("alert")).toBeNull()
+  })
+
   it("measures local audio, renders a default WAV and refreshes it for a new target", async () => {
     const { choose, input } = setup()
     const click = vi.spyOn(input, "click")
     const revoke = vi.spyOn(URL, "revokeObjectURL")
-    fireEvent.click(screen.getByRole("button", { name: messages.chooseFile }))
+    const picker = screen.getByRole("button", { name: messages.chooseFile })
+    picker.focus()
+    fireEvent.click(picker)
     expect(click).toHaveBeenCalledOnce()
 
     choose("episode.take.wav")
+    expect(document.activeElement).toBe(picker)
     expect(screen.getByRole("status").textContent).toBe(messages.measuring)
     const worker = workers[0]!
     await waitFor(() =>
@@ -144,6 +169,12 @@ describe("Audio Loudness Normalizer", () => {
       expect(screen.getByRole("alert").textContent).toBe(messages.channelError)
     )
 
+    decode.mockResolvedValueOnce({ ...audio, length: 1_000 })
+    choose("short.wav")
+    await waitFor(() =>
+      expect(screen.getByRole("alert").textContent).toBe(messages.shortError)
+    )
+
     const picker = screen.getByRole("button", { name: messages.changeFile })
     fireEvent.dragOver(picker, { dataTransfer: { types: ["Files"] } })
     fireEvent.dragLeave(picker)
@@ -173,5 +204,24 @@ describe("Audio Loudness Normalizer", () => {
     expect(workers[0]!.postMessage).not.toHaveBeenCalled()
     act(() => workers[1]!.onerror?.())
     expect(screen.getByRole("alert").textContent).toBe(messages.readError)
+  })
+
+  it("recovers when the audio worker cannot start", async () => {
+    const { choose } = setup()
+    vi.stubGlobal(
+      "Worker",
+      class {
+        constructor() {
+          throw new Error("Worker unavailable")
+        }
+      }
+    )
+    choose("recording.wav")
+    expect(screen.getByRole("alert").textContent).toBe(messages.readError)
+    expect(screen.queryByText(messages.measuring)).toBeNull()
+
+    vi.stubGlobal("Worker", AudioWorker)
+    choose("another.wav")
+    await waitFor(() => expect(workers[0]!.postMessage).toHaveBeenCalled())
   })
 })

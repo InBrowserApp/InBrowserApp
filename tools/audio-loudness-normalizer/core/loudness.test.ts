@@ -24,13 +24,13 @@ describe("loudness normalization", () => {
     expect(output.limited).toBe(false)
   })
 
-  it("ignores silence and evaluates short audio", () => {
+  it("ignores silence and does not measure incomplete gating blocks", () => {
     const audio = new Float32Array(5 * SAMPLE_RATE)
     audio.set(sine(2, 0.1))
     audio.set(sine(1, 0.0001), 4 * SAMPLE_RATE)
     expect(measure([audio]).loudness).toBeCloseTo(-23.35, 1)
     expect(measure([new Float32Array(900)]).loudness).toBe(-Infinity)
-    expect(measure([sine(0.2, 0.1)]).loudness).toBeCloseTo(-26, 1)
+    expect(measure([sine(0.2, 0.1)]).loudness).toBe(-Infinity)
   })
 
   it("measures intersample peaks and reduces the gain for high transients", () => {
@@ -42,6 +42,20 @@ describe("loudness normalization", () => {
     expect(output.loudness).toBeLessThan(-16)
     expect(output.peak).toBeCloseTo(-1)
     expect(output.limited).toBe(true)
+  })
+
+  it("adjusts the gain when raising a quiet block above the absolute gate", () => {
+    const blockPower = (loudness: number) => 10 ** ((loudness + 0.691) / 10)
+    const result = normalize(
+      {
+        blocks: Float64Array.of(blockPower(-65), blockPower(-71)),
+        loudness: -65,
+        peak: -60,
+      },
+      -16
+    )
+    expect(result.gain).toBeGreaterThan(49)
+    expect(result.loudness).toBeCloseTo(-16)
   })
 })
 

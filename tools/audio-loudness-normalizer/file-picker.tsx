@@ -63,45 +63,48 @@ export function AudioFilePicker({
               event.currentTarget.value = ""
             }}
           />
-          {name ? (
-            <div className="flex flex-wrap items-center gap-3 p-3">
-              <Volume2
-                className="size-5 shrink-0 text-muted-foreground"
-                aria-hidden="true"
-              />
-              <p className="min-w-0 flex-1 basis-32 font-medium wrap-anywhere">
-                <bdi>{name}</bdi>
-              </p>
-              <Button
-                type="button"
-                variant="outline"
-                className="min-h-11 sm:min-h-0"
-                onClick={() => input.current?.click()}
-              >
-                {labels.changeFile}
-              </Button>
-            </div>
-          ) : (
+          <div className={cn(name && "flex flex-wrap items-center gap-3 p-3")}>
+            {name && (
+              <>
+                <Volume2
+                  className="size-5 shrink-0 text-muted-foreground"
+                  aria-hidden="true"
+                />
+                <p className="min-w-0 flex-1 basis-24 font-medium wrap-anywhere">
+                  <bdi>{name}</bdi>
+                </p>
+              </>
+            )}
             <Button
               type="button"
-              variant="ghost"
-              aria-label={labels.chooseFile}
-              className="h-auto min-h-40 w-full flex-col gap-2 px-4 py-6 whitespace-normal"
+              variant={name ? "outline" : "ghost"}
+              aria-label={name ? undefined : labels.chooseFile}
+              className={
+                name
+                  ? "min-h-11 sm:min-h-0"
+                  : "h-auto min-h-40 w-full flex-col gap-2 px-4 py-6 whitespace-normal"
+              }
               onClick={() => input.current?.click()}
             >
-              <Upload
-                className="mb-1 size-7 text-muted-foreground"
-                aria-hidden="true"
-              />
-              <span>{labels.chooseFile}</span>
-              <span className="font-normal text-muted-foreground">
-                {labels.dropHint}
-              </span>
-              <bdi className="mt-1 text-xs font-normal text-muted-foreground">
-                WAV · MP3 · M4A · FLAC · OGG
-              </bdi>
+              {name ? (
+                labels.changeFile
+              ) : (
+                <>
+                  <Upload
+                    className="mb-1 size-7 text-muted-foreground"
+                    aria-hidden="true"
+                  />
+                  <span>{labels.chooseFile}</span>
+                  <span className="font-normal text-muted-foreground">
+                    {labels.dropHint}
+                  </span>
+                  <bdi className="mt-1 text-xs font-normal text-muted-foreground">
+                    WAV · MP3 · M4A · FLAC · OGG
+                  </bdi>
+                </>
+              )}
             </Button>
-          )}
+          </div>
         </div>
         <p className="text-center text-xs text-muted-foreground">
           {labels.privacy}

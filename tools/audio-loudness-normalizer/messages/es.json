@@ -6,6 +6,7 @@
   "measuring": "Midiendo la sonoridad…",
   "readError": "No se pudo abrir este archivo de audio. Prueba con un archivo WAV mono o estéreo.",
   "channelError": "Elige un archivo de audio mono o estéreo.",
+  "shortError": "Elige un audio de al menos 0,4 segundos para medir su sonoridad integrada.",
   "quietError": "El nivel de esta grabación es demasiado bajo para medir su sonoridad en LUFS.",
   "settings": "Ajustes de sonoridad",
   "target": "Sonoridad objetivo",
@@ -23,6 +24,7 @@
   "peakLimited": "El límite de −1 dBTP restringe la sonoridad que puede alcanzar este archivo sin alterar su dinámica.",
   "preview": "Reproducir audio normalizado",
   "download": "Descargar WAV",
+  "ready": "El audio normalizado está listo.",
   "rendering": "Preparando el WAV…",
   "exportError": "No se pudo crear el archivo WAV. Inténtalo de nuevo.",
   "retry": "Reintentar"

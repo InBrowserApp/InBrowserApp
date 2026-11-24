@@ -6,6 +6,7 @@
   "measuring": "Measuring loudness…",
   "readError": "Could not open this audio file. Try a mono or stereo WAV file.",
   "channelError": "Choose a mono or stereo audio file.",
+  "shortError": "Choose audio at least 0.4 seconds long to measure integrated loudness.",
   "quietError": "This recording is too quiet to measure in LUFS.",
   "settings": "Loudness settings",
   "target": "Target loudness",
@@ -23,6 +24,7 @@
   "peakLimited": "The −1 dBTP ceiling limits how loud this file can get while keeping its dynamics.",
   "preview": "Play normalized audio",
   "download": "Download WAV",
+  "ready": "Normalized audio is ready.",
   "rendering": "Preparing WAV…",
   "exportError": "Could not create the WAV. Try preparing it again.",
   "retry": "Try again"
