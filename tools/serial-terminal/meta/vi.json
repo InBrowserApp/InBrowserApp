@@ -1,0 +1,4 @@
+{
+  "name": "Terminal nối tiếp",
+  "description": "Kết nối Arduino, ESP32 và các thiết bị nối tiếp khác trong trình duyệt. Gửi văn bản hoặc byte thập lục phân, đọc dữ liệu kèm thời gian và tải nhật ký phiên làm việc."
+}

@@ -1503,6 +1503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "scrypt-key-derivation",
   },
   {
+    category: "developer",
+    name: "מסוף תקשורת טורית",
+    slug: "serial-terminal",
+  },
+  {
     category: "crypto",
     name: "האש SHA-1 טקסט או קובץ",
     slug: "sha1-hash-text-or-file",

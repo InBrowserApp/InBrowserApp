@@ -1,0 +1,4 @@
+{
+  "name": "Terminal Serial",
+  "description": "Hubungkan Arduino, ESP32, dan perangkat serial lainnya di browser. Kirim teks atau byte heksadesimal, baca keluaran dengan stempel waktu, dan unduh log sesi."
+}

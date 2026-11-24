@@ -1,0 +1,4 @@
+{
+  "name": "Serieterminal",
+  "description": "Anslut till Arduino, ESP32 och andra seriella enheter i webbläsaren. Skicka text eller hexadecimala byte, läs tidsstämplad utdata och ladda ner sessionsloggen."
+}

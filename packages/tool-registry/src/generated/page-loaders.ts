@@ -369,6 +369,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "s3-file-manager": () => import("@tool/s3-file-manager/page"),
   "screen-recorder": () => import("@tool/screen-recorder/page"),
   "scrypt-key-derivation": () => import("@tool/scrypt-key-derivation/page"),
+  "serial-terminal": () => import("@tool/serial-terminal/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha224-hash-text-or-file": () =>
     import("@tool/sha224-hash-text-or-file/page"),

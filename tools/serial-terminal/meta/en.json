@@ -1,0 +1,4 @@
+{
+  "name": "Serial Terminal",
+  "description": "Connect to Arduino, ESP32, and other serial devices in your browser. Send text or hex bytes, read timestamped output, and download the session log."
+}

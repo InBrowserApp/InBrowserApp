@@ -1,0 +1,4 @@
+{
+  "name": "Terminal portu szeregowego",
+  "description": "Połącz się w przeglądarce z Arduino, ESP32 i innymi urządzeniami szeregowymi. Wysyłaj tekst lub bajty szesnastkowe, odczytuj dane ze znacznikami czasu i pobieraj dziennik sesji."
+}

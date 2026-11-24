@@ -1503,6 +1503,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "scrypt-key-derivation",
   },
   {
+    category: "developer",
+    name: "सीरियल टर्मिनल",
+    slug: "serial-terminal",
+  },
+  {
     category: "crypto",
     name: "SHA-1 हैश टेक्स्ट या फ़ाइल",
     slug: "sha1-hash-text-or-file",

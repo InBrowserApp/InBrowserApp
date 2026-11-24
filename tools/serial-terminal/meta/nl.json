@@ -1,0 +1,4 @@
+{
+  "name": "Seriële terminal",
+  "description": "Maak in je browser verbinding met Arduino, ESP32 en andere seriële apparaten. Verstuur tekst of hexadecimale bytes, lees uitvoer met tijdstempels en download het sessielogboek."
+}

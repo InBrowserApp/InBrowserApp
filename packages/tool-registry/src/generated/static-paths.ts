@@ -27602,6 +27602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "serial-terminal",
+    language: "ar",
+  },
+  {
+    slug: "serial-terminal",
+    language: "de",
+  },
+  {
+    slug: "serial-terminal",
+    language: "en",
+  },
+  {
+    slug: "serial-terminal",
+    language: "es",
+  },
+  {
+    slug: "serial-terminal",
+    language: "fr",
+  },
+  {
+    slug: "serial-terminal",
+    language: "he",
+  },
+  {
+    slug: "serial-terminal",
+    language: "hi",
+  },
+  {
+    slug: "serial-terminal",
+    language: "id",
+  },
+  {
+    slug: "serial-terminal",
+    language: "it",
+  },
+  {
+    slug: "serial-terminal",
+    language: "ja",
+  },
+  {
+    slug: "serial-terminal",
+    language: "ko",
+  },
+  {
+    slug: "serial-terminal",
+    language: "ms",
+  },
+  {
+    slug: "serial-terminal",
+    language: "nl",
+  },
+  {
+    slug: "serial-terminal",
+    language: "no",
+  },
+  {
+    slug: "serial-terminal",
+    language: "pl",
+  },
+  {
+    slug: "serial-terminal",
+    language: "pt",
+  },
+  {
+    slug: "serial-terminal",
+    language: "ru",
+  },
+  {
+    slug: "serial-terminal",
+    language: "sv",
+  },
+  {
+    slug: "serial-terminal",
+    language: "th",
+  },
+  {
+    slug: "serial-terminal",
+    language: "tr",
+  },
+  {
+    slug: "serial-terminal",
+    language: "vi",
+  },
+  {
+    slug: "serial-terminal",
+    language: "zh-CN",
+  },
+  {
+    slug: "serial-terminal",
+    language: "zh-TW",
+  },
+  {
     slug: "sha1-hash-text-or-file",
     language: "ar",
   },

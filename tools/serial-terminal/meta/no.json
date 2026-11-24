@@ -1,0 +1,4 @@
+{
+  "name": "Seriell terminal",
+  "description": "Koble til Arduino, ESP32 og andre serielle enheter i nettleseren. Send tekst eller heksadesimale byte, les utdata med tidsstempel og last ned øktloggen."
+}
