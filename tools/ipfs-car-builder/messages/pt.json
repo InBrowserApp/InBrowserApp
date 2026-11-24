@@ -1,0 +1,20 @@
+{
+  "input": "Ficheiros ou pasta",
+  "drop": "Largue aqui ficheiros ou uma pasta",
+  "chooseFiles": "Escolher ficheiros",
+  "chooseFolder": "Escolher pasta",
+  "files": "Ficheiros",
+  "build": "Criar CAR",
+  "reading": "A ler a seleção…",
+  "hashing": "A calcular o CID de raiz…",
+  "packing": "A escrever o arquivo CAR…",
+  "cancel": "Cancelar",
+  "result": "Arquivo CAR",
+  "empty": "Escolha ficheiros ou uma pasta para criar um arquivo CAR.",
+  "root": "CID de raiz",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "download": "Descarregar CAR",
+  "duplicate": "Dois elementos têm o mesmo caminho. Mude o nome de um deles e tente novamente.",
+  "failed": "Não foi possível criar o arquivo CAR. Verifique se os ficheiros selecionados podem ser lidos e tente novamente."
+}

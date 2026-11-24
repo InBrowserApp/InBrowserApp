@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo CAR IPFS",
+  "description": "Tạo tệp CAR IPFS từ các tệp hoặc một thư mục ngay trong trình duyệt. Tải tệp lưu trữ xuống và sao chép CID gốc mà không cần tải các tệp lên."
+}

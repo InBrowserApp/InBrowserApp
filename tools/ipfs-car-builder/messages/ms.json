@@ -1,0 +1,20 @@
+{
+  "input": "Fail atau folder",
+  "drop": "Seret dan lepas fail atau folder di sini",
+  "chooseFiles": "Pilih fail",
+  "chooseFolder": "Pilih folder",
+  "files": "Fail",
+  "build": "Cipta CAR",
+  "reading": "Sedang membaca pilihan…",
+  "hashing": "Sedang mengira CID akar…",
+  "packing": "Sedang menulis arkib CAR…",
+  "cancel": "Batal",
+  "result": "Arkib CAR",
+  "empty": "Pilih fail atau folder untuk mencipta CAR.",
+  "root": "CID akar",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Muat turun CAR",
+  "duplicate": "Dua item mempunyai laluan yang sama. Namakan semula salah satu daripadanya dan cuba lagi.",
+  "failed": "CAR tidak dapat dicipta. Pastikan fail yang dipilih boleh dibaca, kemudian cuba lagi."
+}

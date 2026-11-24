@@ -1,0 +1,20 @@
+{
+  "input": "Bestanden of map",
+  "drop": "Sleep hier bestanden of een map naartoe",
+  "chooseFiles": "Bestanden kiezen",
+  "chooseFolder": "Map kiezen",
+  "files": "Bestanden",
+  "build": "CAR maken",
+  "reading": "Selectie lezen…",
+  "hashing": "Root-CID berekenen…",
+  "packing": "CAR-archief schrijven…",
+  "cancel": "Annuleren",
+  "result": "CAR-archief",
+  "empty": "Kies bestanden of een map om een CAR te maken.",
+  "root": "Root-CID",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd",
+  "download": "CAR downloaden",
+  "duplicate": "Twee items hebben hetzelfde pad. Hernoem er één en probeer het opnieuw.",
+  "failed": "De CAR kon niet worden gemaakt. Controleer of de geselecteerde bestanden leesbaar zijn en probeer het opnieuw."
+}

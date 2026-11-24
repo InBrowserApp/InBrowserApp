@@ -1,0 +1,4 @@
+{
+  "name": "Tworzenie archiwów CAR IPFS",
+  "description": "Utwórz plik CAR dla IPFS z plików lub folderu w przeglądarce. Pobierz archiwum i skopiuj jego główny CID bez przesyłania plików."
+}

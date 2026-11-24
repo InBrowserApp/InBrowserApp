@@ -1,0 +1,20 @@
+{
+  "input": "파일 또는 폴더",
+  "drop": "여기에 파일이나 폴더를 놓으세요",
+  "chooseFiles": "파일 선택",
+  "chooseFolder": "폴더 선택",
+  "files": "파일",
+  "build": "CAR 만들기",
+  "reading": "선택한 항목을 읽는 중…",
+  "hashing": "루트 CID 계산 중…",
+  "packing": "CAR 보관 파일을 작성하는 중…",
+  "cancel": "취소",
+  "result": "CAR 보관 파일",
+  "empty": "파일이나 폴더를 선택하여 CAR를 만드세요.",
+  "root": "루트 CID",
+  "copy": "복사",
+  "copied": "복사됨",
+  "download": "CAR 다운로드",
+  "duplicate": "경로가 같은 항목이 두 개 있습니다. 하나의 이름을 바꾼 뒤 다시 시도하세요.",
+  "failed": "CAR를 만들 수 없습니다. 선택한 파일을 읽을 수 있는지 확인한 뒤 다시 시도하세요."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR-bygger",
+  "description": "Lag en IPFS CAR-fil fra filer eller en mappe i nettleseren. Last ned arkivet og kopier rot-CID-en uten å laste opp filene."
+}

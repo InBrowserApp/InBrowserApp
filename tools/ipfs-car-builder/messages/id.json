@@ -1,0 +1,20 @@
+{
+  "input": "File atau folder",
+  "drop": "Seret dan lepas file atau folder di sini",
+  "chooseFiles": "Pilih file",
+  "chooseFolder": "Pilih folder",
+  "files": "File",
+  "build": "Buat CAR",
+  "reading": "Membaca pilihan…",
+  "hashing": "Menghitung CID akar…",
+  "packing": "Menulis arsip CAR…",
+  "cancel": "Batal",
+  "result": "Arsip CAR",
+  "empty": "Pilih file atau folder untuk membuat CAR.",
+  "root": "CID akar",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Unduh CAR",
+  "duplicate": "Ada dua item dengan jalur yang sama. Ganti nama salah satunya, lalu coba lagi.",
+  "failed": "CAR tidak dapat dibuat. Pastikan file yang dipilih dapat dibaca, lalu coba lagi."
+}

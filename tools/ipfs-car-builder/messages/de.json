@@ -1,0 +1,20 @@
+{
+  "input": "Dateien oder Ordner",
+  "drop": "Dateien oder einen Ordner hierher ziehen",
+  "chooseFiles": "Dateien auswählen",
+  "chooseFolder": "Ordner auswählen",
+  "files": "Dateien",
+  "build": "CAR erstellen",
+  "reading": "Auswahl wird gelesen…",
+  "hashing": "Wurzel-CID wird berechnet…",
+  "packing": "CAR-Archiv wird erstellt…",
+  "cancel": "Abbrechen",
+  "result": "CAR-Archiv",
+  "empty": "Wählen Sie Dateien oder einen Ordner aus, um ein CAR-Archiv zu erstellen.",
+  "root": "Wurzel-CID",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "download": "CAR herunterladen",
+  "duplicate": "Zwei Elemente haben denselben Pfad. Benennen Sie eines davon um und versuchen Sie es erneut.",
+  "failed": "Das CAR-Archiv konnte nicht erstellt werden. Prüfen Sie, ob die ausgewählten Dateien lesbar sind, und versuchen Sie es erneut."
+}

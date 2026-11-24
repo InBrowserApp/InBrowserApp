@@ -22332,6 +22332,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipfs-car-builder",
+    category: "ipfs",
+    icon: "archive",
+    tags: ["ipfs", "filecoin", "car", "unixfs", "archive", "package", "cid"],
+    locales: {
+      ar: {
+        name: "إنشاء ملفات CAR لـ IPFS",
+        description:
+          "أنشئ ملف CAR لـ IPFS من ملفات أو مجلد في متصفحك. نزّل الأرشيف وانسخ معرّف الجذر (CID) دون رفع ملفاتك.",
+      },
+      de: {
+        name: "IPFS-CAR-Generator",
+        description:
+          "Erstellen Sie im Browser eine IPFS-CAR-Datei aus Dateien oder einem Ordner. Laden Sie das Archiv herunter und kopieren Sie seine Wurzel-CID. Ihre Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "IPFS CAR Builder",
+        description:
+          "Create an IPFS CAR file from files or a folder in your browser. Download the archive and copy its root CID without uploading your files.",
+      },
+      es: {
+        name: "Generador de archivos CAR de IPFS",
+        description:
+          "Crea un archivo CAR de IPFS a partir de archivos o una carpeta en tu navegador. Descarga el CAR y copia su CID raíz. Los archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Générateur de fichiers CAR IPFS",
+        description:
+          "Créez un fichier CAR IPFS à partir de fichiers ou d’un dossier dans votre navigateur. Téléchargez l’archive et copiez son CID racine. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "יצירת קובצי CAR ל-IPFS",
+        description:
+          "צרו בדפדפן קובץ CAR ל-IPFS מקבצים או מתיקייה. הורידו את הארכיון והעתיקו את מזהה השורש (CID) בלי להעלות את הקבצים.",
+      },
+      hi: {
+        name: "IPFS CAR फ़ाइल बनाने का टूल",
+        description:
+          "अपने ब्राउज़र में फ़ाइलों या किसी फ़ोल्डर से IPFS CAR फ़ाइल बनाएँ। फ़ाइलें अपलोड किए बिना आर्काइव डाउनलोड करें और उसका रूट CID कॉपी करें।",
+      },
+      id: {
+        name: "Pembuat CAR IPFS",
+        description:
+          "Buat file CAR IPFS dari beberapa file atau satu folder di browser. Unduh arsip dan salin CID akarnya tanpa mengunggah file.",
+      },
+      it: {
+        name: "Generatore CAR IPFS",
+        description:
+          "Crea un file CAR IPFS da file o da una cartella nel browser. Scarica l’archivio e copia il CID radice senza caricare i tuoi file.",
+      },
+      ja: {
+        name: "IPFS CAR ファイル作成ツール",
+        description:
+          "ファイルやフォルダーから IPFS CAR ファイルをブラウザで作成します。ファイルをアップロードせずに、アーカイブをダウンロードしてルート CID をコピーできます。",
+      },
+      ko: {
+        name: "IPFS CAR 파일 생성기",
+        description:
+          "브라우저에서 파일이나 폴더를 IPFS CAR 파일로 묶으세요. 파일을 업로드하지 않고 보관 파일을 다운로드하고 루트 CID를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Pencipta CAR IPFS",
+        description:
+          "Cipta fail CAR IPFS daripada fail atau folder dalam pelayar anda. Muat turun arkib dan salin CID akarnya tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "IPFS CAR-generator",
+        description:
+          "Maak in je browser een IPFS-CAR-bestand van bestanden of een map. Download het archief en kopieer de root-CID zonder je bestanden te uploaden.",
+      },
+      no: {
+        name: "IPFS CAR-bygger",
+        description:
+          "Lag en IPFS CAR-fil fra filer eller en mappe i nettleseren. Last ned arkivet og kopier rot-CID-en uten å laste opp filene.",
+      },
+      pl: {
+        name: "Tworzenie archiwów CAR IPFS",
+        description:
+          "Utwórz plik CAR dla IPFS z plików lub folderu w przeglądarce. Pobierz archiwum i skopiuj jego główny CID bez przesyłania plików.",
+      },
+      pt: {
+        name: "Gerador de ficheiros CAR do IPFS",
+        description:
+          "Crie um ficheiro CAR do IPFS a partir de ficheiros ou de uma pasta no navegador. Descarregue o arquivo e copie o CID de raiz. Os ficheiros ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Создание CAR-архивов IPFS",
+        description:
+          "Создайте CAR-файл IPFS из файлов или папки прямо в браузере. Скачайте архив и скопируйте его корневой CID без загрузки файлов на сервер.",
+      },
+      sv: {
+        name: "IPFS CAR-byggare",
+        description:
+          "Skapa en IPFS CAR-fil från filer eller en mapp i webbläsaren. Ladda ner arkivet och kopiera dess rot-CID utan att ladda upp filerna.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง CAR ของ IPFS",
+        description:
+          "สร้างไฟล์ CAR ของ IPFS จากไฟล์หรือโฟลเดอร์ในเบราว์เซอร์ ดาวน์โหลดไฟล์อาร์ไคฟ์และคัดลอก CID รากได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "IPFS CAR Oluşturucu",
+        description:
+          "Tarayıcınızda dosyalardan veya bir klasörden IPFS CAR dosyası oluşturun. Dosyalarınızı yüklemeden arşivi indirin ve kök CID değerini kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo CAR IPFS",
+        description:
+          "Tạo tệp CAR IPFS từ các tệp hoặc một thư mục ngay trong trình duyệt. Tải tệp lưu trữ xuống và sao chép CID gốc mà không cần tải các tệp lên.",
+      },
+      "zh-CN": {
+        name: "IPFS CAR 文件生成器",
+        description:
+          "在浏览器中将文件或文件夹打包成 IPFS CAR 文件。无需上传文件，便可下载归档并复制根 CID。",
+      },
+      "zh-TW": {
+        name: "IPFS CAR 檔案產生器",
+        description:
+          "在瀏覽器中將檔案或資料夾封裝成 IPFS CAR 檔案。無須上傳檔案，即可下載封存檔並複製根 CID。",
+      },
+    },
+  },
+  {
     slug: "ipfs-car-extractor",
     category: "ipfs",
     icon: "archive",

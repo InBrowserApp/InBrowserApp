@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-CAR-Generator",
+  "description": "Erstellen Sie im Browser eine IPFS-CAR-Datei aus Dateien oder einem Ordner. Laden Sie das Archiv herunter und kopieren Sie seine Wurzel-CID. Ihre Dateien bleiben auf Ihrem Gerät."
+}

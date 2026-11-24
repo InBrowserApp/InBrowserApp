@@ -1,0 +1,20 @@
+{
+  "input": "Files or folder",
+  "drop": "Drop files or a folder here",
+  "chooseFiles": "Choose files",
+  "chooseFolder": "Choose folder",
+  "files": "Files",
+  "build": "Create CAR",
+  "reading": "Reading selection…",
+  "hashing": "Calculating the root CID…",
+  "packing": "Writing the CAR archive…",
+  "cancel": "Cancel",
+  "result": "CAR archive",
+  "empty": "Choose files or a folder to create a CAR.",
+  "root": "Root CID",
+  "copy": "Copy",
+  "copied": "Copied",
+  "download": "Download CAR",
+  "duplicate": "Two items have the same path. Rename one and try again.",
+  "failed": "Could not create the CAR. Check that the selected files are readable and try again."
+}

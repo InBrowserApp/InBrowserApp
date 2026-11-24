@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR Oluşturucu",
+  "description": "Tarayıcınızda dosyalardan veya bir klasörden IPFS CAR dosyası oluşturun. Dosyalarınızı yüklemeden arşivi indirin ve kök CID değerini kopyalayın."
+}

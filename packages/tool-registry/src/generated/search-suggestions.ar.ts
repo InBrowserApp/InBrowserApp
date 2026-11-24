@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "إنشاء ملفات CAR لـ IPFS",
+    slug: "ipfs-car-builder",
+  },
+  {
+    category: "ipfs",
     name: "مستخرج أرشيفات CAR لـ IPFS",
     slug: "ipfs-car-extractor",
   },
