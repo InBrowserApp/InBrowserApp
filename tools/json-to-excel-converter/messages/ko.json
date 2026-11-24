@@ -1,0 +1,20 @@
+{
+  "input": "JSON 입력",
+  "inputHint": "JSON 객체 배열을 붙여 넣거나 JSON 파일을 여세요.",
+  "openFile": "파일 열기",
+  "example": "예제 불러오기",
+  "clear": "지우기",
+  "preview": "스프레드시트 미리보기",
+  "flatten": "중첩 필드 펼치기",
+  "flattenHint": "중첩 객체를 contact.city와 같은 열로 펼칩니다. 배열은 하나의 셀에 유지됩니다.",
+  "emptyPreview": "JSON을 입력하거나 예제를 불러오면 여기에 스프레드시트가 표시됩니다.",
+  "previewCount": "전체 {totalRows}개 행 중 {rows}개와 전체 {totalColumns}개 열 중 {columns}개를 표시합니다.",
+  "download": "XLSX 다운로드",
+  "invalidJson": "JSON 구문을 확인하고 다시 시도하세요.",
+  "invalidRecords": "[{\"name\":\"Maya\"}]처럼 비어 있지 않은 객체 배열을 입력하세요.",
+  "noColumns": "스프레드시트 열을 만들려면 필드를 하나 이상 추가하세요.",
+  "sheetLimit": "Excel의 한도인 1,048,576개 행(머리글 포함)과 16,384개 열에 맞게 데이터를 나누세요.",
+  "cellLimit": "Excel 셀의 32,767자 제한을 초과하는 필드 이름이나 값을 줄이세요.",
+  "readError": "파일을 읽을 수 없습니다. 다시 열거나 내용을 붙여 넣으세요.",
+  "downloadError": "Excel 파일을 만들 수 없습니다. 다시 다운로드하거나 레코드 수를 줄여 보세요."
+}

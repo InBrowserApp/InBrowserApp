@@ -1,0 +1,20 @@
+{
+  "input": "JSON-inndata",
+  "inputHint": "Lim inn en array med JSON-objekter eller åpne en JSON-fil.",
+  "openFile": "Åpne fil",
+  "example": "Last inn eksempel",
+  "clear": "Tøm",
+  "preview": "Forhåndsvisning av regneark",
+  "flatten": "Utvid nestede felt",
+  "flattenHint": "Nestede objekter blir til kolonner som contact.city. Arrayer blir liggende i én celle.",
+  "emptyPreview": "Legg til JSON eller last inn eksemplet for å se regnearket her.",
+  "previewCount": "Viser {rows} av {totalRows} rader og {columns} av {totalColumns} kolonner.",
+  "download": "Last ned XLSX",
+  "invalidJson": "Kontroller JSON-syntaksen og prøv igjen.",
+  "invalidRecords": "Angi en array med minst ett objekt, for eksempel [{\"name\":\"Maya\"}].",
+  "noColumns": "Legg til minst ett felt for å opprette en kolonne.",
+  "sheetLimit": "Del opp dataene. Excel har plass til opptil 1 048 576 rader (inkludert overskriftsraden) og 16 384 kolonner per ark.",
+  "cellLimit": "Forkort feltnavn eller verdier som overskrider Excel-grensen på 32 767 tegn per celle.",
+  "readError": "Kunne ikke lese filen. Åpne den på nytt eller lim inn innholdet.",
+  "downloadError": "Kunne ikke opprette Excel-filen. Prøv å laste ned på nytt eller bruk færre poster."
+}

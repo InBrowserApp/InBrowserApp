@@ -1,0 +1,4 @@
+{
+  "name": "JSON-naar-Excel-converter",
+  "description": "Zet een JSON-array om naar Excel (.xlsx). Plak JSON of open een bestand, bekijk het resultaat en vouw geneste velden uit tot kolommen. Alles kan direct in je browser."
+}

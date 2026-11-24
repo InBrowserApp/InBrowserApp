@@ -1,0 +1,4 @@
+{
+  "name": "JSON 轉 Excel 轉換器",
+  "description": "將 JSON 陣列轉換為 Excel（.xlsx）。貼上 JSON 或開啟檔案，即可在瀏覽器中預覽試算表，並將巢狀欄位展開成欄。"
+}

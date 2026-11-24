@@ -1,0 +1,20 @@
+{
+  "input": "Dane wejściowe JSON",
+  "inputHint": "Wklej tablicę obiektów JSON lub otwórz plik JSON.",
+  "openFile": "Otwórz plik",
+  "example": "Wczytaj przykład",
+  "clear": "Wyczyść",
+  "preview": "Podgląd arkusza",
+  "flatten": "Rozwiń zagnieżdżone pola",
+  "flattenHint": "Zagnieżdżone obiekty trafią do kolumn takich jak contact.city. Każda tablica pozostanie w jednej komórce.",
+  "emptyPreview": "Dodaj JSON lub wczytaj przykład, aby zobaczyć tutaj arkusz.",
+  "previewCount": "W podglądzie wiersze {rows} z {totalRows}, kolumny {columns} z {totalColumns}.",
+  "download": "Pobierz XLSX",
+  "invalidJson": "Sprawdź składnię JSON i spróbuj ponownie.",
+  "invalidRecords": "Wprowadź niepustą tablicę obiektów, na przykład [{\"name\":\"Maya\"}].",
+  "noColumns": "Dodaj co najmniej jedno pole, aby utworzyć kolumnę w arkuszu.",
+  "sheetLimit": "Podziel dane, aby zmieścić się w limitach programu Excel. Arkusz mieści 1 048 576 wierszy wraz z nagłówkiem i 16 384 kolumny.",
+  "cellLimit": "Skróć nazwy pól lub wartości przekraczające limit 32 767 znaków w komórce programu Excel.",
+  "readError": "Nie udało się odczytać pliku. Otwórz go ponownie lub wklej jego zawartość.",
+  "downloadError": "Nie udało się utworzyć pliku Excel. Spróbuj pobrać go ponownie lub zmniejsz liczbę rekordów."
+}

@@ -779,6 +779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "Penukar JSON ke Excel",
+    slug: "json-to-excel-converter",
+  },
+  {
+    category: "json",
     name: "Penukar JSON → TOML",
     slug: "json-to-toml-converter",
   },

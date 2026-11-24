@@ -1,0 +1,20 @@
+{
+  "input": "JSON 入力",
+  "inputHint": "JSON オブジェクトの配列を貼り付けるか、JSON ファイルを開いてください。",
+  "openFile": "ファイルを開く",
+  "example": "サンプルを読み込む",
+  "clear": "クリア",
+  "preview": "表のプレビュー",
+  "flatten": "ネストされたフィールドを展開",
+  "flattenHint": "ネストされたオブジェクトを contact.city のような列に展開します。配列は 1 つのセルに保持されます。",
+  "emptyPreview": "JSON を入力するかサンプルを読み込むと、ここに表が表示されます。",
+  "previewCount": "全 {totalRows} 行中 {rows} 行、全 {totalColumns} 列中 {columns} 列を表示しています。",
+  "download": "XLSX をダウンロード",
+  "invalidJson": "JSON の構文を確認して、もう一度お試しください。",
+  "invalidRecords": "[{\"name\":\"Maya\"}] のような、空でないオブジェクトの配列を入力してください。",
+  "noColumns": "表の列を作成するには、フィールドを 1 つ以上追加してください。",
+  "sheetLimit": "Excel の上限である 1,048,576 行（見出しを含む）と 16,384 列に収まるようにデータを分割してください。",
+  "cellLimit": "Excel のセルの上限である 32,767 文字を超えるフィールド名や値を短くしてください。",
+  "readError": "ファイルを読み込めませんでした。もう一度開くか、内容を貼り付けてください。",
+  "downloadError": "Excel ファイルを作成できませんでした。もう一度ダウンロードするか、レコード数を減らしてください。"
+}

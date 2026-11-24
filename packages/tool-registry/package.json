@@ -162,6 +162,7 @@
     "@tool/json-schema-generator": "workspace:*",
     "@tool/json-schema-validator": "workspace:*",
     "@tool/json-to-csv-converter": "workspace:*",
+    "@tool/json-to-excel-converter": "workspace:*",
     "@tool/json-to-toml-converter": "workspace:*",
     "@tool/json-to-typescript-zod": "workspace:*",
     "@tool/json-to-xml-converter": "workspace:*",
