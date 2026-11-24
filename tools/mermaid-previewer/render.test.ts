@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { beforeEach, expect, test, vi } from "vitest"
 import { renderDiagram, unwrapSource } from "./render"
 
@@ -53,4 +54,13 @@ test("rejects broken renderer output and still removes temporary DOM", async () 
     "Invalid Mermaid SVG"
   )
   expect(mock.render.mock.calls[0]?.[2].isConnected).toBe(false)
+})
+
+test("removes active markup while keeping diagram labels in the exported SVG", async () => {
+  mock.render.mockResolvedValueOnce({
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" onload=""><script></script><text>Review</text></svg>',
+  })
+  const svg = await renderDiagram("flowchart LR\n  A --> B")
+  expect(svg).toContain("<text>Review</text>")
+  expect(svg).not.toMatch(/onload|<script/)
 })

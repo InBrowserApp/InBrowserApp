@@ -1,3 +1,4 @@
+import DOMPurify from "dompurify"
 import mermaid from "mermaid"
 
 mermaid.initialize({
@@ -54,22 +55,26 @@ async function render(source: string) {
     "position:fixed;inset:0;visibility:hidden;pointer-events:none"
   container.inert = true
   document.body.append(container)
-  let svg: string
   try {
-    ;({ svg } = await mermaid.render(
+    const { svg } = await mermaid.render(
       `mermaid-preview-${++nextId}`,
       definition,
       container
-    ))
+    )
+    return prepareSvg(svg)
   } finally {
     container.remove()
   }
+}
 
-  const diagram = new DOMParser().parseFromString(
-    svg,
-    "image/svg+xml"
-  ).documentElement
-  if (diagram.localName !== "svg") throw new Error("Invalid Mermaid SVG")
+function prepareSvg(svg: string) {
+  const fragment = DOMPurify.sanitize(svg, {
+    USE_PROFILES: { html: true, svg: true, svgFilters: true },
+    ADD_TAGS: ["foreignObject"],
+    RETURN_DOM_FRAGMENT: true,
+  })
+  const diagram = fragment.querySelector("svg")
+  if (!diagram) throw new Error("Invalid Mermaid SVG")
   const viewBox = diagram
     .getAttribute("viewBox")
     ?.trim()
