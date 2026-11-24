@@ -598,6 +598,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "Penampil GPX dan Profil Elevasi",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "Penganalisis Jaringan HAR",
     slug: "har-analyzer",

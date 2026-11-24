@@ -598,6 +598,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "מציג GPX ופרופיל גובה",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "מנתח תעבורת רשת HAR",
     slug: "har-analyzer",

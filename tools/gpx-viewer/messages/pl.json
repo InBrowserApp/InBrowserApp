@@ -1,0 +1,17 @@
+{
+  "openFile": "Otwórz GPX",
+  "example": "Wypróbuj przykład",
+  "map": "Mapa GPX",
+  "fit": "Dopasuj widok do danych",
+  "zoomIn": "Przybliż",
+  "zoomOut": "Oddal",
+  "empty": "Otwórz plik .gpx lub wczytaj przykład, aby przejrzeć trasę.",
+  "invalid": "Nie udało się otworzyć pliku GPX. Sprawdź, czy zawiera poprawne współrzędne GPX.",
+  "distance": "Dystans",
+  "ascent": "Przewyższenie w górę",
+  "descent": "Przewyższenie w dół",
+  "elevation": "Wysokość",
+  "profile": "Profil wysokościowy",
+  "noElevation": "Ślad lub trasa nie zawiera danych o wysokości.",
+  "waypoint": "Punkt trasy {number}"
+}

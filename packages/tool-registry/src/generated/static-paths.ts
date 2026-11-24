@@ -10950,6 +10950,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gpx-viewer",
+    language: "ar",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "de",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "en",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "es",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "fr",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "he",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "hi",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "id",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "it",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ja",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ko",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ms",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "nl",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "no",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "pl",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "pt",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "ru",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "sv",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "th",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "tr",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "vi",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "gpx-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "har-analyzer",
     language: "ar",
   },

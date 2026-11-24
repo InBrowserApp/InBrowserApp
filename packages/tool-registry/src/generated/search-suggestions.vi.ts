@@ -598,6 +598,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpu-information",
   },
   {
+    category: "misc",
+    name: "Trình xem GPX và biểu đồ độ cao",
+    slug: "gpx-viewer",
+  },
+  {
     category: "network",
     name: "Trình phân tích mạng HAR",
     slug: "har-analyzer",

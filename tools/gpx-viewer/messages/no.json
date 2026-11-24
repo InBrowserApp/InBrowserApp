@@ -1,0 +1,17 @@
+{
+  "openFile": "Åpne GPX",
+  "example": "Prøv et eksempel",
+  "map": "GPX-kart",
+  "fit": "Tilpass kartutsnittet",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "empty": "Åpne en .gpx-fil eller last inn eksemplet for å se en rute.",
+  "invalid": "Kunne ikke åpne GPX-filen. Sjekk at den inneholder gyldige GPX-koordinater.",
+  "distance": "Lengde",
+  "ascent": "Stigning",
+  "descent": "Nedstigning",
+  "elevation": "Høyde",
+  "profile": "Høydeprofil",
+  "noElevation": "Det er ingen registrerte høyder for dette sporet eller denne ruten.",
+  "waypoint": "Veipunkt {number}"
+}

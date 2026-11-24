@@ -126,6 +126,7 @@
     "@tool/gif-to-apng-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/gpu-information": "workspace:*",
+    "@tool/gpx-viewer": "workspace:*",
     "@tool/har-analyzer": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",

@@ -1,0 +1,17 @@
+{
+  "openFile": "GPX openen",
+  "example": "Voorbeeld proberen",
+  "map": "GPX-kaart",
+  "fit": "Zoomen naar gegevens",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "empty": "Open een .gpx-bestand of laad het voorbeeld om een route te bekijken.",
+  "invalid": "Kan dit GPX-bestand niet openen. Controleer of het geldige GPX-coördinaten bevat.",
+  "distance": "Afstand",
+  "ascent": "Stijging",
+  "descent": "Daling",
+  "elevation": "Hoogte",
+  "profile": "Hoogteprofiel",
+  "noElevation": "Voor deze track of route zijn geen hoogtes vastgelegd.",
+  "waypoint": "Waypoint {number}"
+}
