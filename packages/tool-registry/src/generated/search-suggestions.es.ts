@@ -578,6 +578,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Convertidor de TTF y OTF a WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Prueba de mandos",
     slug: "gamepad-tester",

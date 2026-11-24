@@ -578,6 +578,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "ממיר גופני TTF ו-OTF ל-WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "בדיקת בקר משחק",
     slug: "gamepad-tester",

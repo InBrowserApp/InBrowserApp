@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Wybierz pliki fontów",
+  "dropFonts": "lub upuść je tutaj",
+  "formats": ".ttf i .otf",
+  "localProcessing": "Pliki fontów pozostają na tym urządzeniu.",
+  "results": "Wyniki konwersji",
+  "clear": "Wyczyść wszystko",
+  "converting": "Konwertowanie…",
+  "download": "Pobierz WOFF2",
+  "sizes": "Oryginał {original} · WOFF2 {output}",
+  "failed": "Nie udało się przekonwertować pliku. Wybierz prawidłowy font TTF lub OTF."
+}

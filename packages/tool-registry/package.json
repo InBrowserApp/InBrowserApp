@@ -122,6 +122,7 @@
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/file-type-detector": "workspace:*",
     "@tool/font-subset-generator": "workspace:*",
+    "@tool/font-to-woff2": "workspace:*",
     "@tool/gamepad-tester": "workspace:*",
     "@tool/geojson-viewer": "workspace:*",
     "@tool/gif-maker": "workspace:*",

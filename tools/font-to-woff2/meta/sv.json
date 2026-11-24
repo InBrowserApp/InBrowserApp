@@ -1,0 +1,4 @@
+{
+  "name": "Konvertera TTF och OTF till WOFF2",
+  "description": "Konvertera TrueType- (.ttf) och OpenType-teckensnitt (.otf) till WOFF2-webbteckensnitt i webbläsaren. Lägg till flera filer, jämför filstorlekar och ladda ned varje teckensnitt."
+}

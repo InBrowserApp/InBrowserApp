@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "फ़ॉन्ट फ़ाइलें चुनें",
+  "dropFonts": "या उन्हें यहाँ छोड़ें",
+  "formats": ".ttf और .otf",
+  "localProcessing": "आपके फ़ॉन्ट इसी डिवाइस पर रहते हैं।",
+  "results": "रूपांतरण के नतीजे",
+  "clear": "सभी हटाएँ",
+  "converting": "फ़ॉन्ट बदला जा रहा है…",
+  "download": "WOFF2 डाउनलोड करें",
+  "sizes": "मूल {original} · WOFF2 {output}",
+  "failed": "यह फ़ाइल बदली नहीं जा सकी। कोई मान्य TTF या OTF फ़ॉन्ट चुनें।"
+}

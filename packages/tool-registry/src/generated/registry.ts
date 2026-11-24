@@ -14707,6 +14707,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "font-to-woff2",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "woff2",
+      "ttf",
+      "otf",
+      "truetype",
+      "opentype",
+      "webfont",
+      "converter",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط TTF وOTF إلى WOFF2",
+        description:
+          "حوّل خطوط TrueType (.ttf) وOpenType (.otf) إلى خطوط ويب بصيغة WOFF2 داخل متصفحك. حوّل عدة ملفات وقارن الأحجام ونزّل كل خط على حدة.",
+      },
+      de: {
+        name: "TTF und OTF in WOFF2 umwandeln",
+        description:
+          "Wandle TrueType- (.ttf) und OpenType-Schriften (.otf) direkt im Browser in WOFF2-Webfonts um. Konvertiere mehrere Dateien, vergleiche ihre Größe und lade jede Schrift einzeln herunter.",
+      },
+      en: {
+        name: "TTF & OTF to WOFF2 Converter",
+        description:
+          "Convert TrueType (.ttf) and OpenType (.otf) fonts to WOFF2 web fonts in your browser. Convert multiple files, compare sizes, and download each font.",
+      },
+      es: {
+        name: "Convertidor de TTF y OTF a WOFF2",
+        description:
+          "Convierte fuentes TrueType (.ttf) y OpenType (.otf) a fuentes web WOFF2 en tu navegador. Convierte varios archivos, compara sus tamaños y descarga cada fuente.",
+      },
+      fr: {
+        name: "Convertisseur de polices TTF et OTF en WOFF2",
+        description:
+          "Convertissez vos polices TrueType (.ttf) et OpenType (.otf) en polices web WOFF2 dans votre navigateur. Traitez plusieurs fichiers à la fois, comparez les tailles et téléchargez chaque police.",
+      },
+      he: {
+        name: "ממיר גופני TTF ו-OTF ל-WOFF2",
+        description:
+          "המירו גופני TrueType (.ttf) ו-OpenType (.otf) לגופני אינטרנט בפורמט WOFF2, ישירות בדפדפן. אפשר להמיר כמה קבצים, להשוות גדלים ולהוריד כל גופן בנפרד.",
+      },
+      hi: {
+        name: "TTF और OTF से WOFF2 फ़ॉन्ट कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में TrueType (.ttf) और OpenType (.otf) फ़ॉन्ट को WOFF2 वेब फ़ॉन्ट में बदलें। एक साथ कई फ़ाइलें बदलें, उनके आकार की तुलना करें और हर फ़ॉन्ट को अलग से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Font TTF dan OTF ke WOFF2",
+        description:
+          "Ubah font TrueType (.ttf) dan OpenType (.otf) menjadi font web WOFF2 langsung di browser. Konversi beberapa file sekaligus, bandingkan ukurannya, lalu unduh setiap font.",
+      },
+      it: {
+        name: "Convertitore di font da TTF e OTF a WOFF2",
+        description:
+          "Converti i font TrueType (.ttf) e OpenType (.otf) in font web WOFF2 nel browser. Converti più file insieme, confronta le dimensioni e scarica ciascun font.",
+      },
+      ja: {
+        name: "TTF・OTF から WOFF2 へのフォント変換",
+        description:
+          "TrueType（.ttf）や OpenType（.otf）のフォントをブラウザー内で Web フォント用の WOFF2 に変換します。複数のファイルをまとめて変換し、サイズを比較して個別にダウンロードできます。",
+      },
+      ko: {
+        name: "TTF·OTF를 WOFF2로 변환",
+        description:
+          "TrueType(.ttf)과 OpenType(.otf) 글꼴을 브라우저에서 WOFF2 웹폰트로 변환하세요. 여러 파일을 한꺼번에 변환하고 크기를 비교한 뒤 각각 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar TTF dan OTF kepada WOFF2",
+        description:
+          "Tukar fon TrueType (.ttf) dan OpenType (.otf) kepada fon web WOFF2 dalam pelayar anda. Tukar berbilang fail, bandingkan saiz dan muat turun setiap fon.",
+      },
+      nl: {
+        name: "TTF en OTF naar WOFF2 converteren",
+        description:
+          "Zet TrueType- (.ttf) en OpenType-lettertypen (.otf) in je browser om naar WOFF2-webfonts. Converteer meerdere bestanden, vergelijk de bestandsgroottes en download elk lettertype afzonderlijk.",
+      },
+      no: {
+        name: "Konverter TTF og OTF til WOFF2",
+        description:
+          "Konverter TrueType- (.ttf) og OpenType-skrifter (.otf) til WOFF2-nettskrifter i nettleseren. Konverter flere filer, sammenlign filstørrelsene og last ned hver skrift.",
+      },
+      pl: {
+        name: "Konwerter fontów TTF i OTF do WOFF2",
+        description:
+          "Konwertuj fonty TrueType (.ttf) i OpenType (.otf) do formatu WOFF2 bezpośrednio w przeglądarce. Przetwarzaj wiele plików naraz, porównuj ich rozmiary i pobieraj każdy font osobno.",
+      },
+      pt: {
+        name: "Conversor de TTF e OTF para WOFF2",
+        description:
+          "Converta fontes TrueType (.ttf) e OpenType (.otf) em fontes web WOFF2 no navegador. Converta vários arquivos, compare os tamanhos e baixe cada fonte.",
+      },
+      ru: {
+        name: "Конвертер TTF и OTF в WOFF2",
+        description:
+          "Конвертируйте шрифты TrueType (.ttf) и OpenType (.otf) в веб-шрифты WOFF2 прямо в браузере. Преобразуйте несколько файлов, сравнивайте размеры и скачивайте каждый шрифт.",
+      },
+      sv: {
+        name: "Konvertera TTF och OTF till WOFF2",
+        description:
+          "Konvertera TrueType- (.ttf) och OpenType-teckensnitt (.otf) till WOFF2-webbteckensnitt i webbläsaren. Lägg till flera filer, jämför filstorlekar och ladda ned varje teckensnitt.",
+      },
+      th: {
+        name: "ตัวแปลงฟอนต์ TTF และ OTF เป็น WOFF2",
+        description:
+          "แปลงฟอนต์ TrueType (.ttf) และ OpenType (.otf) เป็นฟอนต์เว็บ WOFF2 ในเบราว์เซอร์ แปลงหลายไฟล์พร้อมกัน เปรียบเทียบขนาด และดาวน์โหลดฟอนต์ทีละไฟล์",
+      },
+      tr: {
+        name: "TTF ve OTF'den WOFF2'ye Dönüştürücü",
+        description:
+          "TrueType (.ttf) ve OpenType (.otf) yazı tiplerini tarayıcınızda WOFF2 web yazı tiplerine dönüştürün. Birden fazla dosyayı dönüştürün, boyutları karşılaştırın ve her yazı tipini indirin.",
+      },
+      vi: {
+        name: "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+        description:
+          "Chuyển phông chữ TrueType (.ttf) và OpenType (.otf) sang định dạng WOFF2 cho web ngay trong trình duyệt. Chuyển đổi nhiều tệp cùng lúc, so sánh dung lượng và tải từng phông chữ xuống.",
+      },
+      "zh-CN": {
+        name: "TTF、OTF 转 WOFF2",
+        description:
+          "在浏览器中将 TrueType（.ttf）和 OpenType（.otf）字体转换为 WOFF2 网页字体。支持批量转换、比较文件大小并逐个下载。",
+      },
+      "zh-TW": {
+        name: "TTF、OTF 轉 WOFF2",
+        description:
+          "在瀏覽器中將 TrueType（.ttf）和 OpenType（.otf）字型轉換成 WOFF2 網頁字型。支援批次轉換，可比較轉換前後的大小並逐一下載。",
+      },
+    },
+  },
+  {
     slug: "gamepad-tester",
     category: "misc",
     icon: "gamepad-2",
@@ -60770,6 +60903,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "字型子集產生器",
         description:
           "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
+  "font-to-woff2": {
+    slug: "font-to-woff2",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "woff2",
+      "ttf",
+      "otf",
+      "truetype",
+      "opentype",
+      "webfont",
+      "converter",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط TTF وOTF إلى WOFF2",
+        description:
+          "حوّل خطوط TrueType (.ttf) وOpenType (.otf) إلى خطوط ويب بصيغة WOFF2 داخل متصفحك. حوّل عدة ملفات وقارن الأحجام ونزّل كل خط على حدة.",
+      },
+      de: {
+        name: "TTF und OTF in WOFF2 umwandeln",
+        description:
+          "Wandle TrueType- (.ttf) und OpenType-Schriften (.otf) direkt im Browser in WOFF2-Webfonts um. Konvertiere mehrere Dateien, vergleiche ihre Größe und lade jede Schrift einzeln herunter.",
+      },
+      en: {
+        name: "TTF & OTF to WOFF2 Converter",
+        description:
+          "Convert TrueType (.ttf) and OpenType (.otf) fonts to WOFF2 web fonts in your browser. Convert multiple files, compare sizes, and download each font.",
+      },
+      es: {
+        name: "Convertidor de TTF y OTF a WOFF2",
+        description:
+          "Convierte fuentes TrueType (.ttf) y OpenType (.otf) a fuentes web WOFF2 en tu navegador. Convierte varios archivos, compara sus tamaños y descarga cada fuente.",
+      },
+      fr: {
+        name: "Convertisseur de polices TTF et OTF en WOFF2",
+        description:
+          "Convertissez vos polices TrueType (.ttf) et OpenType (.otf) en polices web WOFF2 dans votre navigateur. Traitez plusieurs fichiers à la fois, comparez les tailles et téléchargez chaque police.",
+      },
+      he: {
+        name: "ממיר גופני TTF ו-OTF ל-WOFF2",
+        description:
+          "המירו גופני TrueType (.ttf) ו-OpenType (.otf) לגופני אינטרנט בפורמט WOFF2, ישירות בדפדפן. אפשר להמיר כמה קבצים, להשוות גדלים ולהוריד כל גופן בנפרד.",
+      },
+      hi: {
+        name: "TTF और OTF से WOFF2 फ़ॉन्ट कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में TrueType (.ttf) और OpenType (.otf) फ़ॉन्ट को WOFF2 वेब फ़ॉन्ट में बदलें। एक साथ कई फ़ाइलें बदलें, उनके आकार की तुलना करें और हर फ़ॉन्ट को अलग से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Font TTF dan OTF ke WOFF2",
+        description:
+          "Ubah font TrueType (.ttf) dan OpenType (.otf) menjadi font web WOFF2 langsung di browser. Konversi beberapa file sekaligus, bandingkan ukurannya, lalu unduh setiap font.",
+      },
+      it: {
+        name: "Convertitore di font da TTF e OTF a WOFF2",
+        description:
+          "Converti i font TrueType (.ttf) e OpenType (.otf) in font web WOFF2 nel browser. Converti più file insieme, confronta le dimensioni e scarica ciascun font.",
+      },
+      ja: {
+        name: "TTF・OTF から WOFF2 へのフォント変換",
+        description:
+          "TrueType（.ttf）や OpenType（.otf）のフォントをブラウザー内で Web フォント用の WOFF2 に変換します。複数のファイルをまとめて変換し、サイズを比較して個別にダウンロードできます。",
+      },
+      ko: {
+        name: "TTF·OTF를 WOFF2로 변환",
+        description:
+          "TrueType(.ttf)과 OpenType(.otf) 글꼴을 브라우저에서 WOFF2 웹폰트로 변환하세요. 여러 파일을 한꺼번에 변환하고 크기를 비교한 뒤 각각 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar TTF dan OTF kepada WOFF2",
+        description:
+          "Tukar fon TrueType (.ttf) dan OpenType (.otf) kepada fon web WOFF2 dalam pelayar anda. Tukar berbilang fail, bandingkan saiz dan muat turun setiap fon.",
+      },
+      nl: {
+        name: "TTF en OTF naar WOFF2 converteren",
+        description:
+          "Zet TrueType- (.ttf) en OpenType-lettertypen (.otf) in je browser om naar WOFF2-webfonts. Converteer meerdere bestanden, vergelijk de bestandsgroottes en download elk lettertype afzonderlijk.",
+      },
+      no: {
+        name: "Konverter TTF og OTF til WOFF2",
+        description:
+          "Konverter TrueType- (.ttf) og OpenType-skrifter (.otf) til WOFF2-nettskrifter i nettleseren. Konverter flere filer, sammenlign filstørrelsene og last ned hver skrift.",
+      },
+      pl: {
+        name: "Konwerter fontów TTF i OTF do WOFF2",
+        description:
+          "Konwertuj fonty TrueType (.ttf) i OpenType (.otf) do formatu WOFF2 bezpośrednio w przeglądarce. Przetwarzaj wiele plików naraz, porównuj ich rozmiary i pobieraj każdy font osobno.",
+      },
+      pt: {
+        name: "Conversor de TTF e OTF para WOFF2",
+        description:
+          "Converta fontes TrueType (.ttf) e OpenType (.otf) em fontes web WOFF2 no navegador. Converta vários arquivos, compare os tamanhos e baixe cada fonte.",
+      },
+      ru: {
+        name: "Конвертер TTF и OTF в WOFF2",
+        description:
+          "Конвертируйте шрифты TrueType (.ttf) и OpenType (.otf) в веб-шрифты WOFF2 прямо в браузере. Преобразуйте несколько файлов, сравнивайте размеры и скачивайте каждый шрифт.",
+      },
+      sv: {
+        name: "Konvertera TTF och OTF till WOFF2",
+        description:
+          "Konvertera TrueType- (.ttf) och OpenType-teckensnitt (.otf) till WOFF2-webbteckensnitt i webbläsaren. Lägg till flera filer, jämför filstorlekar och ladda ned varje teckensnitt.",
+      },
+      th: {
+        name: "ตัวแปลงฟอนต์ TTF และ OTF เป็น WOFF2",
+        description:
+          "แปลงฟอนต์ TrueType (.ttf) และ OpenType (.otf) เป็นฟอนต์เว็บ WOFF2 ในเบราว์เซอร์ แปลงหลายไฟล์พร้อมกัน เปรียบเทียบขนาด และดาวน์โหลดฟอนต์ทีละไฟล์",
+      },
+      tr: {
+        name: "TTF ve OTF'den WOFF2'ye Dönüştürücü",
+        description:
+          "TrueType (.ttf) ve OpenType (.otf) yazı tiplerini tarayıcınızda WOFF2 web yazı tiplerine dönüştürün. Birden fazla dosyayı dönüştürün, boyutları karşılaştırın ve her yazı tipini indirin.",
+      },
+      vi: {
+        name: "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+        description:
+          "Chuyển phông chữ TrueType (.ttf) và OpenType (.otf) sang định dạng WOFF2 cho web ngay trong trình duyệt. Chuyển đổi nhiều tệp cùng lúc, so sánh dung lượng và tải từng phông chữ xuống.",
+      },
+      "zh-CN": {
+        name: "TTF、OTF 转 WOFF2",
+        description:
+          "在浏览器中将 TrueType（.ttf）和 OpenType（.otf）字体转换为 WOFF2 网页字体。支持批量转换、比较文件大小并逐个下载。",
+      },
+      "zh-TW": {
+        name: "TTF、OTF 轉 WOFF2",
+        description:
+          "在瀏覽器中將 TrueType（.ttf）和 OpenType（.otf）字型轉換成 WOFF2 網頁字型。支援批次轉換，可比較轉換前後的大小並逐一下載。",
       },
     },
   },

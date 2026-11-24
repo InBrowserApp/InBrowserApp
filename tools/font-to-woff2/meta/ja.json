@@ -1,0 +1,4 @@
+{
+  "name": "TTF・OTF から WOFF2 へのフォント変換",
+  "description": "TrueType（.ttf）や OpenType（.otf）のフォントをブラウザー内で Web フォント用の WOFF2 に変換します。複数のファイルをまとめて変換し、サイズを比較して個別にダウンロードできます。"
+}

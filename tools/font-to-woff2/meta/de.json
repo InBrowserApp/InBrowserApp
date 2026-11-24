@@ -1,0 +1,4 @@
+{
+  "name": "TTF und OTF in WOFF2 umwandeln",
+  "description": "Wandle TrueType- (.ttf) und OpenType-Schriften (.otf) direkt im Browser in WOFF2-Webfonts um. Konvertiere mehrere Dateien, vergleiche ihre Größe und lade jede Schrift einzeln herunter."
+}

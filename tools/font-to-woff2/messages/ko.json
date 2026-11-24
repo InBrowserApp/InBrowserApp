@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "글꼴 파일 선택",
+  "dropFonts": "또는 여기에 끌어 놓으세요",
+  "formats": ".ttf 및 .otf",
+  "localProcessing": "글꼴 파일은 이 기기에서 처리됩니다.",
+  "results": "변환 결과",
+  "clear": "모두 지우기",
+  "converting": "변환 중…",
+  "download": "WOFF2 다운로드",
+  "sizes": "원본 {original} · WOFF2 {output}",
+  "failed": "이 파일을 변환하지 못했습니다. 유효한 TTF 또는 OTF 글꼴을 선택하세요."
+}

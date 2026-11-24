@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Pilih fail fon",
+  "dropFonts": "atau lepaskan fail di sini",
+  "formats": ".ttf dan .otf",
+  "localProcessing": "Fon anda kekal pada peranti ini.",
+  "results": "Hasil penukaran",
+  "clear": "Kosongkan semua",
+  "converting": "Sedang menukar…",
+  "download": "Muat turun WOFF2",
+  "sizes": "Asal: {original} · WOFF2: {output}",
+  "failed": "Fail ini tidak dapat ditukar. Pilih fon TTF atau OTF yang sah."
+}

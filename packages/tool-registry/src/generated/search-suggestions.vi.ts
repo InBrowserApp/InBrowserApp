@@ -578,6 +578,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Kiểm tra tay cầm chơi game",
     slug: "gamepad-tester",

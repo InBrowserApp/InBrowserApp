@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Choisir des fichiers de police",
+  "dropFonts": "ou déposez-les ici",
+  "formats": ".ttf et .otf",
+  "localProcessing": "Vos polices restent sur cet appareil.",
+  "results": "Résultats de la conversion",
+  "clear": "Tout effacer",
+  "converting": "Conversion en cours…",
+  "download": "Télécharger le WOFF2",
+  "sizes": "Original {original} · WOFF2 {output}",
+  "failed": "Impossible de convertir ce fichier. Choisissez une police TTF ou OTF valide."
+}

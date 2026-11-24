@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Lettertypebestanden kiezen",
+  "dropFonts": "of sleep ze hierheen",
+  "formats": ".ttf en .otf",
+  "localProcessing": "Je lettertypen blijven op dit apparaat.",
+  "results": "Conversieresultaten",
+  "clear": "Alles wissen",
+  "converting": "Converteren…",
+  "download": "WOFF2 downloaden",
+  "sizes": "{original} origineel · {output} WOFF2",
+  "failed": "Dit bestand kon niet worden geconverteerd. Kies een geldig TTF- of OTF-lettertype."
+}

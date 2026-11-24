@@ -578,6 +578,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Penukar TTF dan OTF kepada WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Penguji Alat Kawalan Permainan",
     slug: "gamepad-tester",
