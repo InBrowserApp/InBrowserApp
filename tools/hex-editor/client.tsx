@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import type { DragEvent } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
-import { Binary, File as FileIcon, Upload } from "@workspace/ui/icons"
+import { Binary, File as FileIcon, Folder } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import { Workspace } from "./workspace"
 import type { Messages } from "./types"
@@ -100,7 +100,7 @@ export default function HexEditor({
                   {new Intl.NumberFormat(lang, {
                     style: "unit",
                     unit: "byte",
-                    unitDisplay: "short",
+                    unitDisplay: "long",
                   }).format(opened.file.size)}
                 </p>
               </div>
@@ -121,7 +121,7 @@ export default function HexEditor({
               variant={opened ? "outline" : "default"}
               onClick={() => input.current?.click()}
             >
-              <Upload aria-hidden="true" data-icon="inline-start" />
+              <Folder aria-hidden="true" data-icon="inline-start" />
               {opened ? messages.replaceFile : messages.openFile}
             </Button>
             {!opened && (
