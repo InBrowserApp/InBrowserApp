@@ -9,3 +9,7 @@ Arrastra el diagrama para desplazarte. Usa los controles de zoom para leer etiqu
 ## Abrir un archivo BPMN sin datos de disposición
 
 Un archivo XML de BPMN 2.0 puede describir un proceso sin indicar dónde aparecen sus formas y conexiones. El visor dibuja el diagrama a partir de los datos de BPMN Diagram Interchange guardados con el modelo. Si faltan estos datos, abre el modelo en tu herramienta de modelado BPMN y expórtalo de nuevo con el diagrama incluido. Consulta la [especificación BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) para conocer los detalles del formato.
+
+## Descargar un diagrama en SVG
+
+Después de abrir un diagrama, selecciona **Descargar SVG**. El archivo contiene el diagrama completo a su escala original y conserva la nitidez al cambiar de tamaño en documentos y presentaciones.

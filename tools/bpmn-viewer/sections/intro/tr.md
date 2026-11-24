@@ -9,3 +9,7 @@ Görünümü kaydırmak için diyagramı sürükleyin. Küçük etiketleri okuma
 ## Diyagram yerleşimi olmayan BPMN dosyasını açın
 
 Bir BPMN 2.0 XML dosyası, şekil ve bağlantıların yerlerini kaydetmeden de bir süreci tanımlayabilir. Görüntüleyici, diyagramı çizmek için modelle birlikte kaydedilen BPMN Diagram Interchange verilerini kullanır. Yerleşim eksikse modeli BPMN modelleme aracınızda açın ve diyagramı da içerecek şekilde yeniden dışa aktarın. Biçim ayrıntıları için [BPMN 2.0 belirtimine](https://www.omg.org/spec/BPMN/2.0.2/) bakın.
+
+## Diyagramı SVG olarak indirin
+
+Diyagramı açtıktan sonra **SVG indir** seçeneğini kullanın. Dosya, diyagramın tamamını özgün ölçeğinde içerir ve belgelerde ya da slaytlarda boyutu değiştirildiğinde netliğini korur.

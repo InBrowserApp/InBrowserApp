@@ -16,5 +16,7 @@
   "noLayout": "Bu BPMN dosyasında diyagram yerleşimi yok. Modelleme aracınızdan yerleşim verilerini de içerecek şekilde dışa aktarın ve yeniden açın.",
   "zoomIn": "Yakınlaştır",
   "zoomOut": "Uzaklaştır",
-  "fit": "Diyagramı ekrana sığdır"
+  "fit": "Diyagramı ekrana sığdır",
+  "downloadSvg": "SVG indir",
+  "exportError": "SVG oluşturulamadı. Diyagramı yeniden indirmeyi deneyin."
 }

@@ -16,5 +16,7 @@
   "noLayout": "Dit BPMN-bestand bevat geen diagramindeling. Exporteer het opnieuw vanuit je modelleertool, inclusief de diagramindeling, en open het nieuwe bestand.",
   "zoomIn": "Inzoomen",
   "zoomOut": "Uitzoomen",
-  "fit": "Hele diagram tonen"
+  "fit": "Hele diagram tonen",
+  "downloadSvg": "SVG downloaden",
+  "exportError": "Het SVG-bestand kon niet worden gemaakt. Probeer het diagram opnieuw te downloaden."
 }

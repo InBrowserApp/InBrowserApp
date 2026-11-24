@@ -16,5 +16,7 @@
   "noLayout": "Este archivo BPMN no incluye la disposición del diagrama. Expórtalo de nuevo desde tu herramienta de modelado con los datos de disposición y ábrelo en el visor.",
   "zoomIn": "Acercar",
   "zoomOut": "Alejar",
-  "fit": "Ajustar diagrama a la vista"
+  "fit": "Ajustar diagrama a la vista",
+  "downloadSvg": "Descargar SVG",
+  "exportError": "No se pudo crear el SVG. Intenta descargar el diagrama de nuevo."
 }

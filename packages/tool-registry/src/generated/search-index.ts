@@ -5441,117 +5441,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "عارض BPMN",
         description:
-          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا.",
+          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا. يمكنك أيضًا تنزيل المخطط بصيغة SVG.",
       },
       de: {
         name: "BPMN-Betrachter",
         description:
-          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein.",
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als SVG herunter.",
       },
       en: {
         name: "BPMN Viewer",
         description:
-          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, and fit the process diagram to the view.",
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download SVG.",
       },
       es: {
         name: "Visor BPMN",
         description:
-          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista.",
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en SVG.",
       },
       fr: {
         name: "Visionneuse BPMN",
         description:
-          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue.",
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en SVG.",
       },
       he: {
         name: "מציג BPMN",
         description:
-          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה.",
+          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה. אפשר גם להוריד את התרשים כ-SVG.",
       },
       hi: {
         name: "BPMN व्यूअर",
         description:
-          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें।",
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें। SVG डाउनलोड भी करें।",
       },
       id: {
         name: "Penampil BPMN",
         description:
-          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat.",
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat. Anda juga bisa mengunduh diagram sebagai SVG.",
       },
       it: {
         name: "Visualizzatore BPMN",
         description:
-          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista.",
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in SVG.",
       },
       ja: {
         name: "BPMN ビューアー",
         description:
-          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。",
+          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。 SVG をダウンロードできます。",
       },
       ko: {
         name: "BPMN 뷰어",
         description:
-          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요.",
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요. SVG 다운로드를 지원합니다.",
       },
       ms: {
         name: "Pemapar BPMN",
         description:
-          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan.",
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan. Anda juga boleh memuat turun rajah sebagai SVG.",
       },
       nl: {
         name: "BPMN-viewer",
         description:
-          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld.",
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als SVG.",
       },
       no: {
         name: "BPMN-viser",
         description:
-          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen.",
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som SVG.",
       },
       pl: {
         name: "Przeglądarka diagramów BPMN",
         description:
-          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok.",
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok. Pobieraj diagramy w formacie SVG.",
       },
       pt: {
         name: "Visualizador de BPMN",
         description:
-          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela.",
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em SVG.",
       },
       ru: {
         name: "Просмотр диаграмм BPMN",
         description:
-          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком.",
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком. Скачивайте диаграммы в формате SVG.",
       },
       sv: {
         name: "BPMN-visare",
         description:
-          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn.",
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som SVG.",
       },
       th: {
         name: "โปรแกรมดู BPMN",
         description:
-          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ",
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ ดาวน์โหลดเป็น SVG ได้",
       },
       tr: {
         name: "BPMN Görüntüleyici",
         description:
-          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın.",
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın. Diyagramı SVG olarak da indirebilirsiniz.",
       },
       vi: {
         name: "Trình xem BPMN",
         description:
-          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem.",
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem. Tải sơ đồ xuống dưới dạng SVG.",
       },
       "zh-CN": {
         name: "BPMN 查看器",
         description:
-          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。",
+          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。 支持下载 SVG。",
       },
       "zh-TW": {
         name: "BPMN 檢視器",
         description:
-          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。",
+          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。 支援下載 SVG。",
       },
     },
   },

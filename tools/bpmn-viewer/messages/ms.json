@@ -16,5 +16,7 @@
   "noLayout": "Fail BPMN ini tiada data susun atur rajah. Eksport semula daripada alat pemodelan dengan menyertakan susun atur, kemudian buka fail itu semula.",
   "zoomIn": "Zum masuk",
   "zoomOut": "Zum keluar",
-  "fit": "Papar seluruh rajah"
+  "fit": "Papar seluruh rajah",
+  "downloadSvg": "Muat turun SVG",
+  "exportError": "SVG tidak dapat dihasilkan. Cuba muat turun rajah sekali lagi."
 }
