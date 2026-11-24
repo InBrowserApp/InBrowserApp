@@ -28,5 +28,5 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description} className="[&_h1]:wrap-anywhere">
   <FontToWoff2Client client:load messages={messages} lang={lang} />
-  <ToolArticle className="min-w-0 [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] [&_pre]:[direction:ltr] [&_pre]:text-left"><Intro /></ToolArticle>
+  <ToolArticle className="min-w-0 [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] [&_p_code]:whitespace-nowrap [&_pre]:wrap-anywhere [&_pre]:whitespace-pre-wrap [&_pre]:[direction:ltr] [&_pre]:text-left sm:[&_pre]:whitespace-pre"><Intro /></ToolArticle>
 </ToolPageShell>
