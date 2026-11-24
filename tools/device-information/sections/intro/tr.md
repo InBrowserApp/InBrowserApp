@@ -13,3 +13,5 @@ Araç tamamen tarayıcınızda çalışır ve anlık görüntüyü yüklemez. Ta
 ## Sonuçları Nasıl Okumalısınız
 
 Verileri kesin bir donanım envanteri olarak değil, tarayıcının ortamınıza dair mevcut görünümü olarak değerlendirin. Pencereyi yeniden boyutlandırın veya cihazı döndürün, ardından görünüm alanı, yön ve ekran değerlerini güncellemek için anlık görüntüyü yenileyin. Kesin gözlemlenen değerleri bir geliştirici veya destek ekibiyle paylaşmanız gerektiğinde JSON kopyalama eylemini kullanın.
+
+[USB Cihaz İnceleyici](../usb-device-inspector/)

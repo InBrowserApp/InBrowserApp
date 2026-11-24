@@ -29,3 +29,5 @@ bukan inventori perkakasan yang dijamin. Ubah saiz tetingkap atau putar peranti,
 kemudian segar semula syot kilat untuk mengemas kini nilai viewport, orientasi
 dan paparan. Gunakan tindakan salin JSON apabila anda perlu berkongsi nilai yang
 diperhatikan dengan tepat dengan pembangun atau pasukan sokongan.
+
+[Pemeriksa peranti USB](../usb-device-inspector/)

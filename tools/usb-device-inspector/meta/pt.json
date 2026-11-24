@@ -1,0 +1,4 @@
+{
+  "name": "Inspetor de dispositivos USB",
+  "description": "Inspecione um dispositivo USB no navegador com WebUSB. Veja VID, PID, versão USB, configurações, interfaces e endpoints e verifique o acesso ao dispositivo."
+}

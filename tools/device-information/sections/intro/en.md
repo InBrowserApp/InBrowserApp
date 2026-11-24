@@ -13,3 +13,5 @@ The tool runs entirely in your browser and does not upload the snapshot. Browser
 ## How to Read the Results
 
 Treat the data as the browser's current view of your environment, not a guaranteed hardware inventory. Resize the window or rotate the device, then refresh the snapshot to update viewport, orientation, and display values. Use the JSON copy action when you need to share the exact observed values with a developer or support team.
+
+[USB Device Inspector](../usb-device-inspector/)

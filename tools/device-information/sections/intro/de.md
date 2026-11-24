@@ -13,3 +13,5 @@ Das Tool läuft vollständig in Ihrem Browser und lädt den Snapshot nicht hoch.
 ## So lesen Sie die Ergebnisse
 
 Behandeln Sie die Daten als aktuelle Sicht des Browsers auf Ihre Umgebung, nicht als garantiertes Hardwareinventar. Ändern Sie die Fenstergröße oder drehen Sie das Gerät und aktualisieren Sie dann den Snapshot, um Viewport-, Ausrichtungs- und Anzeigewerte zu aktualisieren. Verwenden Sie die JSON-Kopieraktion, wenn Sie die exakt beobachteten Werte mit einem Entwickler oder Supportteam teilen müssen.
+
+[USB-Geräteinspektor](../usb-device-inspector/)

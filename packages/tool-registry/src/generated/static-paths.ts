@@ -33306,6 +33306,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "usb-device-inspector",
+    language: "ar",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "de",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "en",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "es",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "fr",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "he",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "hi",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "id",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "it",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "ja",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "ko",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "ms",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "nl",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "no",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "pl",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "pt",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "ru",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "sv",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "th",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "tr",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "vi",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "zh-CN",
+  },
+  {
+    slug: "usb-device-inspector",
+    language: "zh-TW",
+  },
+  {
     slug: "user-agent-parser",
     language: "ar",
   },

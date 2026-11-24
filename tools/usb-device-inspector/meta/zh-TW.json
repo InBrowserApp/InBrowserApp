@@ -1,0 +1,4 @@
+{
+  "name": "USB 裝置檢查器",
+  "description": "使用 WebUSB 在瀏覽器中檢查 USB 裝置。查看 VID、PID、USB 版本、組態、介面與端點，並檢查裝置存取權。"
+}

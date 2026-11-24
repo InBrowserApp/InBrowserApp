@@ -13,3 +13,5 @@ Alat ini berjalan sepenuhnya di browser Anda dan tidak mengunggah cuplikan. Brow
 ## Cara Membaca Hasilnya
 
 Perlakukan data sebagai tampilan browser saat ini terhadap lingkungan Anda, bukan inventaris perangkat keras yang dijamin. Ubah ukuran jendela atau putar perangkat, lalu segarkan cuplikan untuk memperbarui nilai viewport, orientasi, dan tampilan. Gunakan aksi salin JSON saat Anda perlu membagikan nilai persis yang teramati kepada pengembang atau tim dukungan.
+
+[Pemeriksa Perangkat USB](../usb-device-inspector/)

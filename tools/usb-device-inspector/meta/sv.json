@@ -1,0 +1,4 @@
+{
+  "name": "USB-enhetsgranskare",
+  "description": "Granska en USB-enhet i webbläsaren med WebUSB. Visa VID, PID, USB-version, konfigurationer, gränssnitt och slutpunkter samt kontrollera åtkomsten till enheten."
+}

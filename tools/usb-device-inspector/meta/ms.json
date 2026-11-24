@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa peranti USB",
+  "description": "Periksa peranti USB dalam pelayar dengan WebUSB. Lihat VID, PID, versi USB, konfigurasi, antara muka dan titik akhir serta semak akses peranti."
+}

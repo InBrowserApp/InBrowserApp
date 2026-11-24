@@ -29,3 +29,5 @@ um inventário de hardware garantido. Redimensione a janela ou gire o
 dispositivo e atualize a captura para atualizar valores de viewport, orientação
 e tela. Use a ação Copiar JSON quando precisar compartilhar os valores
 observados exatos com um desenvolvedor ou equipe de suporte.
+
+[Inspetor de dispositivos USB](../usb-device-inspector/)

@@ -1,0 +1,4 @@
+{
+  "name": "USB-enhetsinspektør",
+  "description": "Undersøk en USB-enhet i nettleseren med WebUSB. Se VID, PID, USB-versjon, konfigurasjoner, grensesnitt og endepunkter, og kontroller tilgangen til enheten."
+}

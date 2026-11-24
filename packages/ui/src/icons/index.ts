@@ -131,6 +131,7 @@ export {
   Wrench,
   Workflow,
   Upload,
+  Usb,
   Undo2,
   Unlink2,
   Redo2,

@@ -13,3 +13,5 @@ Verktøyet kjører helt i nettleseren din og laster ikke opp øyeblikksbildet. N
 ## Slik leser du resultatene
 
 Behandle dataene som nettleserens nåværende bilde av miljøet ditt, ikke som en garantert maskinvareliste. Endre størrelsen på vinduet eller roter enheten, og oppdater deretter øyeblikksbildet for å oppdatere viewport-, orienterings- og skjermverdier. Bruk handlingen for å kopiere JSON når du trenger å dele de nøyaktige observerte verdiene med en utvikler eller et supportteam.
+
+[USB-enhetsinspektør](../usb-device-inspector/)

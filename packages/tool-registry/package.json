@@ -369,6 +369,7 @@
     "@tool/unix-timestamp-converter": "workspace:*",
     "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/url-parser-builder": "workspace:*",
+    "@tool/usb-device-inspector": "workspace:*",
     "@tool/user-agent-parser": "workspace:*",
     "@tool/uuid-base64-hex-decimal-octal-binary-converter": "workspace:*",
     "@tool/uuid-decoder": "workspace:*",

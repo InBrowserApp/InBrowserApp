@@ -1,0 +1,4 @@
+{
+  "name": "Inspektor urządzeń USB",
+  "description": "Sprawdź urządzenie USB w przeglądarce za pomocą WebUSB. Wyświetl VID, PID, wersję USB, konfiguracje, interfejsy i punkty końcowe oraz sprawdź dostęp do urządzenia."
+}
