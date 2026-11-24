@@ -36902,117 +36902,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "أداة فصل قنوات الستيريو",
         description:
-          "افصل صوت الستيريو إلى ملفَي WAV أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى كل قناة ونزّلها مباشرةً من متصفحك.",
+          "افصل صوت الستيريو إلى ملفين أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى القناتين ونزّل كلًّا منهما بصيغة WAV أو FLAC أو MP3 من متصفحك.",
       },
       de: {
         name: "Stereokanäle trennen",
         description:
-          "Trenne Stereoaufnahmen in zwei Mono-WAV-Dateien für den linken und rechten Kanal. Höre die Kanäle direkt im Browser an und lade sie einzeln herunter.",
+          "Speichere den linken und rechten Kanal einer Stereoaufnahme als separate Monodateien. Höre beide im Browser an und lade sie als WAV, FLAC oder MP3 herunter.",
       },
       en: {
         name: "Stereo Channel Splitter",
         description:
-          "Split stereo audio into separate left and right mono WAV files. Preview and download each channel directly in your browser.",
+          "Split stereo audio into separate left and right mono files. Preview both channels and download as WAV, FLAC, or MP3 in your browser.",
       },
       es: {
         name: "Separador de canales estéreo",
         description:
-          "Separa el audio estéreo en dos archivos WAV mono, uno para el canal izquierdo y otro para el derecho. Escucha y descarga cada canal desde tu navegador.",
+          "Separa los canales izquierdo y derecho de un archivo estéreo en dos archivos mono. Escúchalos y descárgalos en WAV, FLAC o MP3 desde tu navegador.",
       },
       fr: {
         name: "Séparateur de canaux stéréo",
         description:
-          "Séparez les canaux gauche et droit d’un fichier stéréo en deux WAV mono. Écoutez et téléchargez chaque canal directement dans votre navigateur.",
+          "Séparez les canaux gauche et droit d’un fichier stéréo en deux fichiers mono. Écoutez-les et téléchargez-les en WAV, FLAC ou MP3 dans votre navigateur.",
       },
       he: {
         name: "פיצול ערוצי סטריאו",
         description:
-          "פצלו אודיו בסטריאו לשני קובצי WAV במונו, אחד לערוץ השמאלי ואחד לימני. האזינו לכל ערוץ והורידו אותו ישירות מהדפדפן.",
+          "פצלו אודיו בסטריאו לשני קובצי מונו, אחד לערוץ השמאלי ואחד לימני. האזינו לשני הערוצים והורידו אותם בפורמט WAV, FLAC או MP3 ישירות מהדפדפן.",
       },
       hi: {
         name: "स्टीरियो चैनल अलग करें",
         description:
-          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को दो अलग मोनो WAV फ़ाइलों में सेव करें। हर चैनल को ब्राउज़र में सुनें और डाउनलोड करें।",
+          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को अलग मोनो फ़ाइलों में सेव करें। दोनों चैनल ब्राउज़र में सुनें और WAV, FLAC या MP3 में डाउनलोड करें।",
       },
       id: {
         name: "Pemisah Kanal Audio Stereo",
         description:
-          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file WAV mono. Dengarkan dan unduh setiap kanal langsung di browser Anda.",
+          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file mono. Dengarkan kedua kanal dan unduh dalam format WAV, FLAC, atau MP3 langsung di browser Anda.",
       },
       it: {
         name: "Separa i canali stereo",
         description:
-          "Separa l’audio stereo in due file WAV mono, uno per il canale sinistro e uno per il destro. Ascolta e scarica ogni canale direttamente nel browser.",
+          "Separa i canali sinistro e destro di un file stereo in due file mono. Ascoltali e scaricali in WAV, FLAC o MP3 direttamente nel browser.",
       },
       ja: {
         name: "ステレオ音声の左右チャンネル分割",
         description:
-          "ステレオ音声の左右のチャンネルを個別のモノラルWAVファイルに分割します。ブラウザー上で各チャンネルの試聴とダウンロードができます。",
+          "ステレオ音声の左右のチャンネルを個別のモノラルファイルに分割します。ブラウザー上で各チャンネルを試聴し、WAV、FLAC、MP3形式でダウンロードできます。",
       },
       ko: {
         name: "스테레오 좌우 채널 분리",
         description:
-          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 WAV 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 다운로드할 수 있습니다.",
+          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 WAV, FLAC, MP3로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemisah Saluran Audio Stereo",
         description:
-          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail WAV mono. Dengar pratonton dan muat turun setiap saluran terus dalam pelayar anda.",
+          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail mono. Dengar pratonton kedua-dua saluran dan muat turun sebagai WAV, FLAC atau MP3 terus dalam pelayar anda.",
       },
       nl: {
         name: "Stereokanalen splitsen",
         description:
-          "Splits stereogeluid in twee mono-WAV-bestanden, één voor links en één voor rechts. Beluister en download elk kanaal rechtstreeks in je browser.",
+          "Splits stereogeluid in twee monobestanden, één voor links en één voor rechts. Beluister beide kanalen en download ze als WAV, FLAC of MP3 in je browser.",
       },
       no: {
         name: "Del stereolyd i to monofiler",
         description:
-          "Lagre venstre og høyre kanal fra en stereofil som separate WAV-filer i mono. Lytt til og last ned hver kanal direkte i nettleseren.",
+          "Lagre venstre og høyre kanal fra en stereofil som separate monofiler. Lytt til begge og last ned som WAV, FLAC eller MP3 direkte i nettleseren.",
       },
       pl: {
         name: "Rozdzielanie kanałów stereo",
         description:
-          "Rozdziel nagranie stereo na dwa pliki mono WAV, po jednym dla lewego i prawego kanału. Odsłuchaj i pobierz każdy kanał w przeglądarce.",
+          "Rozdziel nagranie stereo na osobne pliki mono dla lewego i prawego kanału. Odsłuchaj oba kanały i pobierz je jako WAV, FLAC lub MP3 w przeglądarce.",
       },
       pt: {
         name: "Separador de canais estéreo",
         description:
-          "Separe o áudio estéreo em dois ficheiros WAV mono, um para o canal esquerdo e outro para o direito. Ouça e transfira cada canal no navegador.",
+          "Separe os canais esquerdo e direito de um ficheiro estéreo em dois ficheiros mono. Ouça e transfira ambos em WAV, FLAC ou MP3 no navegador.",
       },
       ru: {
         name: "Разделение стереоканалов",
         description:
-          "Разделите стереозапись на два монофайла WAV для левого и правого каналов. Прослушайте и скачайте каждый канал прямо в браузере.",
+          "Разделите стереозапись на два монофайла для левого и правого каналов. Прослушайте оба канала и скачайте их в WAV, FLAC или MP3 прямо в браузере.",
       },
       sv: {
         name: "Separera stereokanaler",
         description:
-          "Spara vänster och höger kanal i en stereoinspelning som separata WAV-filer i mono. Lyssna på och ladda ner varje kanal direkt i webbläsaren.",
+          "Spara vänster och höger kanal i en stereoinspelning som separata monofiler. Lyssna på båda och ladda ner som WAV, FLAC eller MP3 direkt i webbläsaren.",
       },
       th: {
         name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
         description:
-          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์ WAV โมโนคนละไฟล์ ฟังตัวอย่างและดาวน์โหลดแต่ละช่องได้ในเบราว์เซอร์",
+          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์โมโนคนละไฟล์ ฟังตัวอย่างทั้งสองช่องและดาวน์โหลดเป็น WAV, FLAC หรือ MP3 ได้ในเบราว์เซอร์",
       },
       tr: {
         name: "Stereo Kanal Ayırıcı",
         description:
-          "Stereo sesin sol ve sağ kanallarını iki ayrı mono WAV dosyasına ayırın. Her kanalı doğrudan tarayıcınızda dinleyip indirin.",
+          "Stereo sesin sol ve sağ kanallarını ayrı mono dosyalara ayırın. İki kanalı da tarayıcınızda dinleyin ve WAV, FLAC veya MP3 olarak indirin.",
       },
       vi: {
         name: "Tách kênh âm thanh stereo",
         description:
-          "Tách hai kênh trái và phải của âm thanh stereo thành hai tệp WAV mono riêng. Nghe thử và tải xuống từng kênh ngay trong trình duyệt.",
+          "Tách âm thanh stereo thành hai tệp mono riêng cho kênh trái và kênh phải. Nghe thử cả hai kênh và tải xuống dưới dạng WAV, FLAC hoặc MP3 ngay trong trình duyệt.",
       },
       "zh-CN": {
         name: "左右声道拆分",
         description:
-          "把立体声音频的左、右声道分别导出为单声道 WAV 文件，直接在浏览器中试听和下载。",
+          "把立体声音频的左右声道分别导出为单声道文件。直接在浏览器中试听各声道，并下载为 WAV、FLAC 或 MP3。",
       },
       "zh-TW": {
         name: "左右聲道分離",
         description:
-          "將立體聲音訊的左右聲道分別存成單聲道 WAV 檔案，直接在瀏覽器中試聽及下載。",
+          "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
       },
     },
   },

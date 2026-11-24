@@ -1,4 +1,4 @@
 {
   "name": "Separador de canais estéreo",
-  "description": "Separe o áudio estéreo em dois ficheiros WAV mono, um para o canal esquerdo e outro para o direito. Ouça e transfira cada canal no navegador."
+  "description": "Separe os canais esquerdo e direito de um ficheiro estéreo em dois ficheiros mono. Ouça e transfira ambos em WAV, FLAC ou MP3 no navegador."
 }

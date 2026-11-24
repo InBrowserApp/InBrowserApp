@@ -8,9 +8,17 @@
   "ready": "Les canaux gauche et droit sont prêts.",
   "left": "Canal gauche",
   "right": "Canal droit",
-  "downloadLeft": "Télécharger le WAV gauche",
-  "downloadRight": "Télécharger le WAV droit",
+  "downloadLeft": "Télécharger le canal gauche ({format})",
+  "downloadRight": "Télécharger le canal droit ({format})",
   "monoError": "Ce fichier ne contient qu’un canal audio. Choisissez un fichier stéréo avec un canal gauche et un canal droit.",
   "multichannelError": "Ce fichier contient plus de deux canaux audio. Choisissez un fichier stéréo à deux canaux.",
-  "readError": "Impossible d’ouvrir ce fichier audio. Essayez un autre fichier ou exportez-le en WAV stéréo."
+  "readError": "Impossible d’ouvrir ce fichier audio. Essayez un autre fichier ou exportez-le en WAV stéréo.",
+  "formatLabel": "Format de téléchargement",
+  "wavOption": "WAV · Pour le montage",
+  "flacOption": "FLAC · Compression sans perte",
+  "mp3Option": "MP3 · Fichier plus léger",
+  "flacUnavailable": "Choisissez WAV pour conserver la fréquence d’échantillonnage et la précision de cet enregistrement.",
+  "preparingDownload": "Préparation des fichiers {format}…",
+  "exportError": "Impossible de créer les fichiers {format}. Réessayez ou choisissez WAV.",
+  "retry": "Réessayer"
 }

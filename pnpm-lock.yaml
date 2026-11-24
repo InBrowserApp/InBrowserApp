@@ -245,6 +245,9 @@ catalogs:
     '@matbee/libreoffice-converter':
       specifier: 2.7.2
       version: 2.7.2
+    '@mediabunny/flac-encoder':
+      specifier: 1.66.0
+      version: 1.66.0
     '@msgpack/msgpack':
       specifier: 3.1.3
       version: 3.1.3
@@ -11446,6 +11449,9 @@ importers:
 
   tools/stereo-channel-splitter:
     dependencies:
+      '@mediabunny/flac-encoder':
+        specifier: 'catalog:'
+        version: 1.66.0(mediabunny@1.66.0)
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -11455,12 +11461,18 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      mediabunny:
+        specifier: 'catalog:'
+        version: 1.66.0
       react:
         specifier: 'catalog:'
         version: 19.3.1
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
+      wasm-media-encoders:
+        specifier: 'catalog:'
+        version: 0.7.0
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -14170,6 +14182,11 @@ packages:
         optional: true
       sharp:
         optional: true
+
+  '@mediabunny/flac-encoder@1.66.0':
+    resolution: {integrity: sha512-LbGOF9zz1u4uAsqV9v3RTbTKmfcGHVNKofqCPuJRrCU2PZcQtVd+M0GyZs5bPptauxcGUvWUaZIbUB0mMAa+Mw==}
+    peerDependencies:
+      mediabunny: ^1.0.0
 
   '@mixmark-io/domino@2.2.0':
     resolution: {integrity: sha512-Y28PR25bHXUg88kCV7nivXrP2Nj2RueZ3/l/jdx6J9f8J4nsEGcgX0Qe6lt7Pa+J79+kPiJU3LguR6O/6zrLOw==}
@@ -21660,6 +21677,10 @@ snapshots:
       zod: 4.6.7
     optionalDependencies:
       sharp: 0.35.5(@types/node@26.6.6)
+
+  '@mediabunny/flac-encoder@1.66.0(mediabunny@1.66.0)':
+    dependencies:
+      mediabunny: 1.66.0
 
   '@mixmark-io/domino@2.2.0': {}
 

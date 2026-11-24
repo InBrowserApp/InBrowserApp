@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "@mediabunny/flac-encoder": "catalog:",
+    "mediabunny": "catalog:",
+    "wasm-media-encoders": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",

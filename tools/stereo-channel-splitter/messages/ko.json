@@ -8,9 +8,17 @@
   "ready": "왼쪽과 오른쪽 채널이 분리되었습니다.",
   "left": "왼쪽 채널",
   "right": "오른쪽 채널",
-  "downloadLeft": "왼쪽 채널 WAV 다운로드",
-  "downloadRight": "오른쪽 채널 WAV 다운로드",
+  "downloadLeft": "왼쪽 채널 {format} 다운로드",
+  "downloadRight": "오른쪽 채널 {format} 다운로드",
   "monoError": "이 파일에는 오디오 채널이 하나뿐입니다. 왼쪽과 오른쪽 채널이 있는 스테레오 파일을 선택하세요.",
   "multichannelError": "이 파일에는 오디오 채널이 3개 이상 있습니다. 채널이 2개인 스테레오 파일을 선택하세요.",
-  "readError": "오디오 파일을 열 수 없습니다. 다른 파일을 선택하거나 스테레오 WAV로 내보낸 뒤 다시 시도하세요."
+  "readError": "오디오 파일을 열 수 없습니다. 다른 파일을 선택하거나 스테레오 WAV로 내보낸 뒤 다시 시도하세요.",
+  "formatLabel": "다운로드 형식",
+  "wavOption": "WAV · 편집용",
+  "flacOption": "FLAC · 무손실 압축",
+  "mp3Option": "MP3 · 작은 용량",
+  "flacUnavailable": "이 녹음의 샘플 레이트와 정밀도를 유지하려면 WAV를 선택하세요.",
+  "preparingDownload": "{format} 파일을 만드는 중…",
+  "exportError": "{format} 파일을 만들지 못했습니다. 다시 시도하거나 WAV를 선택하세요.",
+  "retry": "다시 시도"
 }
