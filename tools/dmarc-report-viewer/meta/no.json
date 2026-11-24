@@ -1,0 +1,4 @@
+{
+  "name": "Viser for aggregerte DMARC-rapporter",
+  "description": "Les aggregerte DMARC-rapporter i XML-format i nettleseren. Se avsenderens IP-adresser, antall meldinger, domenesamsvar for SPF og DKIM og mottakerens tiltak."
+}

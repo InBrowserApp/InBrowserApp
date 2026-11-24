@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes-YAML-Validator",
+  "description": "Validieren Sie Kubernetes-Manifeste im YAML-Format online. Prüfen Sie mehrere Ressourcen mit integrierten Schemas und springen Sie per Zeilen- und Spaltenangabe zu ungültigen Feldern."
+}

@@ -1,0 +1,23 @@
+{
+  "inputLabel": "工作流 YAML",
+  "placeholder": "在此粘贴 .github/workflows 中的文件内容…",
+  "openFile": "打开文件",
+  "example": "加载示例",
+  "clear": "清空",
+  "validate": "校验",
+  "results": "校验结果",
+  "idle": "粘贴工作流 YAML 内容或打开本地文件进行校验。",
+  "valid": "此工作流通过了 actionlint 检查。",
+  "invalid": "请查看以下问题。",
+  "location": "第 {line} 行，第 {column} 列",
+  "fileError": "无法打开文件。",
+  "checkError": "无法完成校验。",
+  "introTitle": "如何校验 GitHub Actions 工作流",
+  "introBody": "粘贴 .github/workflows 中的工作流内容或打开本地 .yaml 或 .yml 文件，然后选择“校验”。选择“加载示例”可以查看一个可用的 CI 工作流。选择问题后可跳转到对应的行和列。工作流在浏览器中处理。",
+  "coverageTitle": "GitHub Actions 校验器检查哪些内容？",
+  "coverageBody": "校验器使用 actionlint {version} 检查 YAML 语法、触发条件、作业依赖、运行器标签、步骤和 GitHub Actions 表达式。常见问题包括 needs 中引用了未定义的作业、github 或 steps 等上下文拼写错误，以及无效的 uses 引用。",
+  "cliTitle": "检查仓库中的工作流",
+  "cliBody": "在仓库中运行 actionlint，以检查项目设置、本地操作或可重用工作流引用。如果安装了 ShellCheck 和 Pyflakes，桌面命令行工具还可以使用它们分析脚本。",
+  "reference": "GitHub Actions 工作流语法参考",
+  "singleDocument": "工作流文件必须包含一个 YAML 文档。"
+}

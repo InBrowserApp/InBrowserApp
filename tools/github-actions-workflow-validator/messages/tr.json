@@ -1,0 +1,23 @@
+{
+  "inputLabel": "İş akışı YAML içeriği",
+  "placeholder": ".github/workflows içindeki bir dosyanın içeriğini buraya yapıştırın…",
+  "openFile": "Dosya aç",
+  "example": "Örnek yükle",
+  "clear": "Temizle",
+  "validate": "Doğrula",
+  "results": "Doğrulama sonuçları",
+  "idle": "Kontrol etmek için iş akışı YAML içeriğini yapıştırın veya cihazınızdan bir dosya açın.",
+  "valid": "Bu iş akışı actionlint denetimlerinden geçti.",
+  "invalid": "Aşağıdaki sorunları inceleyin.",
+  "location": "Satır {line}, sütun {column}",
+  "fileError": "Dosya açılamadı.",
+  "checkError": "Doğrulama tamamlanamadı.",
+  "singleDocument": "İş akışı dosyası tek bir YAML belgesi içermelidir.",
+  "introTitle": "GitHub Actions iş akışı nasıl doğrulanır?",
+  "introBody": ".github/workflows içindeki bir iş akışının içeriğini yapıştırın veya cihazınızdan bir .yaml ya da .yml dosyası açın. Ardından Doğrula'yı seçin. Örnek yükle ile çalışan bir CI iş akışı görebilirsiniz. Bir sorunu seçerek ilgili satıra ve sütuna gidin. İş akışı tarayıcınızda işlenir.",
+  "coverageTitle": "GitHub Actions doğrulayıcı neleri kontrol eder?",
+  "coverageBody": "Doğrulayıcı actionlint {version} ile YAML sözdizimini, tetikleyicileri, iş bağımlılıklarını, çalıştırıcı etiketlerini, adımları ve GitHub Actions ifadelerini denetler. needs içinde tanımlanmamış bir iş, github veya steps gibi bir bağlam adındaki yazım hatası ve uses içinde geçersiz bir başvuru sık görülen sorunlardır.",
+  "cliTitle": "Deponuzdaki iş akışlarını kontrol edin",
+  "cliBody": "Proje ayarlarını, yerel eylemlere ve yeniden kullanılabilir iş akışlarına yapılan başvuruları da denetlemek için deponuzdan actionlint komutunu çalıştırın. ShellCheck ve Pyflakes kuruluysa yerel komut satırı aracı bunlarla betikleri de inceleyebilir.",
+  "reference": "GitHub Actions iş akışı sözdizimi başvuru kılavuzu"
+}

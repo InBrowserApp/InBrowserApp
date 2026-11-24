@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Fjern stillhet fra lyd",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Lyd til tekst",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Beskjær og slå sammen lyd",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Viser for aggregerte DMARC-rapporter",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Koordinatomregner for desimalgrader og DMS",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF til APNG-konverterer",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "Validator for GitHub Actions-arbeidsflyter",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID-generator",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML-validator",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

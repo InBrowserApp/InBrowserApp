@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka raportów zbiorczych DMARC",
+  "description": "Otwórz zbiorczy raport DMARC w formacie XML w przeglądarce. Sprawdź adresy IP nadawców, liczbę wiadomości, zgodność domen SPF i DKIM oraz zastosowane działania."
+}

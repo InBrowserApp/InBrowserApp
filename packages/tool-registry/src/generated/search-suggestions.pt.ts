@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Remover silêncios do áudio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Áudio para texto",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Cortador e combinador de áudio",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Visualizador de relatórios agregados DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Conversor de latitude e longitude para DMS",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Conversor de GIF para APNG",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "Validador de fluxos de trabalho do GitHub Actions",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Gerador de KSUID",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Validador de YAML do Kubernetes",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

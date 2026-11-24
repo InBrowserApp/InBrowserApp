@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML-validator",
+  "description": "Valider Kubernetes-manifester i YAML på nett. Sjekk flere ressurser mot innebygde skjemaer og gå til ugyldige felt med linje- og kolonnenummer."
+}

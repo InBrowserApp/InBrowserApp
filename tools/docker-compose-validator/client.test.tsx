@@ -10,6 +10,9 @@ import { afterEach, describe, expect, it, vi } from "vitest"
 import ComposeValidator from "./client"
 import messages from "./messages/en.json"
 
+// Keep cold schema compilation outside the UI assertions.
+import "./core/validate-compose"
+
 afterEach(cleanup)
 
 describe("ComposeValidator", () => {

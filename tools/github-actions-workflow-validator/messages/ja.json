@@ -1,0 +1,23 @@
+{
+  "inputLabel": "ワークフロー YAML",
+  "placeholder": ".github/workflows 内のファイルの内容をここに貼り付け…",
+  "openFile": "ファイルを開く",
+  "example": "サンプルを読み込む",
+  "clear": "クリア",
+  "validate": "検証する",
+  "results": "検証結果",
+  "idle": "検証するワークフロー YAML を貼り付けるか、ローカルファイルを開いてください。",
+  "valid": "このワークフローは actionlint のチェックに合格しました。",
+  "invalid": "以下の問題を確認してください。",
+  "location": "{line} 行目、{column} 列目",
+  "fileError": "ファイルを開けませんでした。",
+  "checkError": "検証を完了できませんでした。",
+  "singleDocument": "ワークフローファイルには YAML ドキュメントが 1 つ必要です。",
+  "introTitle": "GitHub Actions ワークフローを検証する方法",
+  "introBody": ".github/workflows 内のワークフローを貼り付けるか、ローカルの .yaml または .yml ファイルを開いて「検証する」を選びます。「サンプルを読み込む」を選ぶと、動作する CI ワークフローを試せます。検出された問題を選ぶと、該当する行と列に移動します。ワークフローはブラウザー内で処理されます。",
+  "coverageTitle": "GitHub Actions バリデーターで確認できること",
+  "coverageBody": "actionlint {version} を使い、YAML の構文、トリガー、ジョブの依存関係、ランナーラベル、ステップ、GitHub Actions の式を確認します。よくある問題には、needs での未定義ジョブの参照、github や steps などのコンテキスト名の入力ミス、無効な uses の参照先があります。",
+  "cliTitle": "リポジトリ内でワークフローを確認する",
+  "cliBody": "リポジトリ内で actionlint を実行すると、プロジェクトの設定や、ローカルのアクションや再利用可能なワークフローへの参照も確認できます。ShellCheck や Pyflakes をインストールしている場合は、CLI からスクリプトの解析にも利用できます。",
+  "reference": "GitHub Actions のワークフロー構文リファレンス"
+}

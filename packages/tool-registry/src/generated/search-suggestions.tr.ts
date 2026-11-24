@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ses Kaydından Sessizliği Kaldırma",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Sesi Metne Dönüştürme",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Ses Kırpıcı ve Birleştirici",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC Toplu Rapor Görüntüleyicisi",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Enlem ve Boylam için DMS Dönüştürücü",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF'ten APNG'ye Dönüştürücü",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "GitHub Actions İş Akışı Doğrulayıcı",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID Oluşturucu",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML Doğrulayıcı",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

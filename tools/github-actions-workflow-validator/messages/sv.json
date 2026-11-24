@@ -1,0 +1,23 @@
+{
+  "inputLabel": "Arbetsflödets YAML",
+  "placeholder": "Klistra in innehållet i en fil från .github/workflows här…",
+  "openFile": "Öppna fil",
+  "example": "Ladda exempel",
+  "clear": "Rensa",
+  "validate": "Validera",
+  "results": "Valideringsresultat",
+  "idle": "Klistra in arbetsflödets YAML eller öppna en lokal fil för att kontrollera den.",
+  "valid": "Arbetsflödet klarar kontrollerna i actionlint.",
+  "invalid": "Granska problemen nedan.",
+  "location": "Rad {line}, kolumn {column}",
+  "fileError": "Det gick inte att öppna filen.",
+  "checkError": "Det gick inte att slutföra kontrollen.",
+  "singleDocument": "En arbetsflödesfil måste innehålla ett YAML-dokument.",
+  "introTitle": "Så validerar du ett GitHub Actions-arbetsflöde",
+  "introBody": "Klistra in ett arbetsflöde från .github/workflows eller öppna en lokal .yaml- eller .yml-fil. Välj sedan Validera. Välj Ladda exempel för att se ett fungerande CI-arbetsflöde. Välj ett problem för att hoppa till rätt rad och kolumn. Arbetsflödet hanteras i webbläsaren.",
+  "coverageTitle": "Vad kontrollerar valideraren för GitHub Actions?",
+  "coverageBody": "Valideraren använder actionlint {version} för att kontrollera YAML-syntax, utlösare, jobbberoenden, runner-etiketter, steg och GitHub Actions-uttryck. Vanliga problem är ett odefinierat jobb i needs, ett felstavat kontextnamn som github eller steps och en ogiltig referens i uses.",
+  "cliTitle": "Kontrollera arbetsflöden i ditt kodförråd",
+  "cliBody": "Kör actionlint i kodförrådet för att även ta med projektinställningar och referenser till lokala åtgärder eller återanvändbara arbetsflöden. Det lokala kommandoradsverktyget kan även använda ShellCheck och Pyflakes för att analysera skript om verktygen är installerade.",
+  "reference": "Syntaxreferens för GitHub Actions-arbetsflöden"
+}

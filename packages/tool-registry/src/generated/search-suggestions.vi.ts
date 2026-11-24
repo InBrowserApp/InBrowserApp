@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Cắt khoảng lặng trong âm thanh",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Chuyển âm thanh thành văn bản",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Cắt và ghép âm thanh",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Trình xem báo cáo tổng hợp DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Trình chuyển đổi GIF sang APNG",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "Trình xác thực quy trình làm việc GitHub Actions",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình tạo KSUID",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Trình xác thực YAML Kubernetes",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

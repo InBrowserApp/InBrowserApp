@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML du workflow",
+  "placeholder": "Collez ici le contenu d’un fichier de .github/workflows…",
+  "openFile": "Ouvrir un fichier",
+  "example": "Charger un exemple",
+  "clear": "Effacer",
+  "validate": "Valider",
+  "results": "Résultats de la validation",
+  "idle": "Collez le YAML de votre workflow ou ouvrez un fichier pour le vérifier.",
+  "valid": "Le workflow a passé les vérifications d’actionlint.",
+  "invalid": "Consultez les problèmes signalés ci-dessous.",
+  "location": "Ligne {line}, colonne {column}",
+  "fileError": "Impossible d’ouvrir le fichier.",
+  "checkError": "Impossible de terminer la validation.",
+  "singleDocument": "Un fichier de workflow doit contenir un seul document YAML.",
+  "introTitle": "Comment valider un workflow GitHub Actions",
+  "introBody": "Collez le contenu d’un fichier de .github/workflows ou ouvrez un fichier .yaml ou .yml sur votre appareil, puis sélectionnez Valider. Sélectionnez Charger un exemple pour voir un workflow d’intégration continue qui fonctionne. Sélectionnez un problème pour accéder à sa ligne et à sa colonne. Le workflow est traité dans votre navigateur.",
+  "coverageTitle": "Que vérifie le validateur GitHub Actions ?",
+  "coverageBody": "Le validateur utilise actionlint {version} pour vérifier la syntaxe YAML, les déclencheurs, les dépendances entre jobs, les étiquettes de runners, les étapes et les expressions GitHub Actions. Il détecte notamment les jobs non définis dans needs, les erreurs dans les noms de contextes comme github ou steps et les références uses non valides.",
+  "cliTitle": "Vérifier les workflows dans votre dépôt",
+  "cliBody": "Exécutez actionlint depuis votre dépôt pour tenir compte des paramètres du projet et des références aux actions locales ou aux workflows réutilisables. L’outil en ligne de commande peut aussi analyser les scripts à l’aide de ShellCheck et Pyflakes si ces outils sont installés.",
+  "reference": "Référence de la syntaxe des workflows GitHub Actions"
+}

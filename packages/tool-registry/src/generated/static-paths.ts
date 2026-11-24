@@ -1658,6 +1658,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-silence-remover",
+    language: "ar",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "de",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "en",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "es",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "fr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "he",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "hi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "id",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "it",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ja",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ko",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ms",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "nl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "no",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pt",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ru",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "sv",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "th",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "tr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "vi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-TW",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ar",
+  },
+  {
+    slug: "audio-to-text",
+    language: "de",
+  },
+  {
+    slug: "audio-to-text",
+    language: "en",
+  },
+  {
+    slug: "audio-to-text",
+    language: "es",
+  },
+  {
+    slug: "audio-to-text",
+    language: "fr",
+  },
+  {
+    slug: "audio-to-text",
+    language: "he",
+  },
+  {
+    slug: "audio-to-text",
+    language: "hi",
+  },
+  {
+    slug: "audio-to-text",
+    language: "id",
+  },
+  {
+    slug: "audio-to-text",
+    language: "it",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ja",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ko",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ms",
+  },
+  {
+    slug: "audio-to-text",
+    language: "nl",
+  },
+  {
+    slug: "audio-to-text",
+    language: "no",
+  },
+  {
+    slug: "audio-to-text",
+    language: "pl",
+  },
+  {
+    slug: "audio-to-text",
+    language: "pt",
+  },
+  {
+    slug: "audio-to-text",
+    language: "ru",
+  },
+  {
+    slug: "audio-to-text",
+    language: "sv",
+  },
+  {
+    slug: "audio-to-text",
+    language: "th",
+  },
+  {
+    slug: "audio-to-text",
+    language: "tr",
+  },
+  {
+    slug: "audio-to-text",
+    language: "vi",
+  },
+  {
+    slug: "audio-to-text",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-to-text",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-trimmer-merger",
     language: "ar",
   },
@@ -8006,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dmarc-report-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "de",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "en",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "es",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "he",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "id",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "it",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "no",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "th",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "dms-coordinate-converter",
     language: "ar",
   },
@@ -11315,6 +11591,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "gif-to-apng-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ar",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "de",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "en",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "es",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "fr",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "he",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "hi",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "id",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "it",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ja",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ko",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ms",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "nl",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "no",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "pl",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "pt",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "ru",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "sv",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "th",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "tr",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "vi",
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "github-actions-workflow-validator",
     language: "zh-TW",
   },
   {
@@ -17479,6 +17847,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ksuid-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ar",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "de",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "en",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "es",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "fr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "he",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "hi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "id",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "it",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ja",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ko",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ms",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "nl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "no",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pt",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ru",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "sv",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "th",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "tr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "vi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
     language: "zh-TW",
   },
   {

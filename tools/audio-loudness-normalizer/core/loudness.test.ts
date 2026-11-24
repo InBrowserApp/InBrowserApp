@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { SAMPLE_RATE, measure, normalize } from "./loudness"
 import { truePeak } from "./peak"
-import { encodeWav } from "./wav"
+import { encodeWav } from "@workspace/pcm-audio"
 
 function sine(seconds: number, amplitude: number, frequency = 1000, phase = 0) {
   return Float32Array.from(

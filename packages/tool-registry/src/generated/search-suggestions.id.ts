@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Penghapus Jeda Hening Audio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Audio ke Teks",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Pemotong & Penggabung Audio",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Penampil Laporan Agregat DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Konverter Lintang dan Bujur ke DMS",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Konverter GIF ke APNG",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "Validator Alur Kerja GitHub Actions",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Generator KSUID",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Validator YAML Kubernetes",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

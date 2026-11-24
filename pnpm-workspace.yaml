@@ -11,6 +11,7 @@ packages:
 catalog:
   "@aws-sdk/client-s3": 3.1174.0
   "@aws-sdk/s3-request-presigner": 3.1174.0
+  "@huggingface/transformers": 3.8.1
   occt-import-js: 0.0.23
   three: 0.187.0
   "@types/three": 0.187.0
@@ -30,6 +31,8 @@ catalog:
   mediabunny: 1.66.0
   "@mediabunny/flac-encoder": 1.66.0
   onnxruntime-web: 1.31.1
+  "@sherpaw/asr": 0.3.0
+  "@sherpaw/vad": 0.3.0
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
   "@tesseract.js-data/afr": 1.0.0
@@ -353,6 +356,7 @@ allowBuilds:
   msw: true
   protobufjs: false
   sharp: true
+  onnxruntime-node: false
   tesseract.js: false
   tree-sitter: false
   tree-sitter-bash: false

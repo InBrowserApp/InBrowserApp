@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声の無音部分を削除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "音声文字起こし",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "音声トリミング・結合",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC集計レポートビューアー",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "緯度・経度の度分秒（DMS）変換",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF から APNG へのコンバーター",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "GitHub Actions ワークフローバリデーター",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUIDジェネレーター",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML バリデーター",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

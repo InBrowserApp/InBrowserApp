@@ -1,0 +1,34 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import type { ToolMeta } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import WorkflowValidator from "./client"
+import { actionlintVersion } from "./engine/version"
+import type EnglishMessages from "./messages/en.json"
+
+const { lang } = Astro.props
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const messages = resolveLocale<typeof EnglishMessages>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <WorkflowValidator client:load messages={messages} />
+  <ToolArticle>
+    <h2>{messages.introTitle}</h2>
+    <p>{messages.introBody}</p>
+    <h2>{messages.coverageTitle}</h2>
+    <p>{messages.coverageBody.replace("{version}", actionlintVersion)}</p>
+    <h2>{messages.cliTitle}</h2>
+    <p>{messages.cliBody}</p>
+    <pre dir="ltr" class="whitespace-pre-wrap break-words"><code>actionlint .github/workflows/ci.yml</code></pre>
+    <p><a href="https://docs.github.com/actions/reference/workflows-and-actions/workflow-syntax">{messages.reference}</a></p>
+    <p><a href="/licenses/github-actions-workflow-validator.txt">actionlint · MIT</a></p>
+  </ToolArticle>
+</ToolPageShell>

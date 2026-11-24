@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML przepływu pracy",
+  "placeholder": "Wklej tutaj zawartość pliku z .github/workflows…",
+  "openFile": "Otwórz plik",
+  "example": "Wczytaj przykład",
+  "clear": "Wyczyść",
+  "validate": "Sprawdź",
+  "results": "Wyniki walidacji",
+  "idle": "Wklej kod YAML przepływu pracy lub otwórz plik z urządzenia do sprawdzenia.",
+  "valid": "Przepływ pracy przeszedł weryfikację actionlint.",
+  "invalid": "Sprawdź poniższą listę problemów.",
+  "location": "Wiersz {line}, kolumna {column}",
+  "fileError": "Nie udało się otworzyć pliku.",
+  "checkError": "Nie udało się ukończyć walidacji.",
+  "singleDocument": "Plik przepływu pracy musi zawierać jeden dokument YAML.",
+  "introTitle": "Jak sprawdzić przepływ pracy GitHub Actions",
+  "introBody": "Wklej zawartość pliku z .github/workflows lub otwórz plik .yaml albo .yml z urządzenia, a następnie wybierz Sprawdź. Wybierz Wczytaj przykład, aby zobaczyć działający przepływ ciągłej integracji (CI). Wybierz problem z listy, aby przejść do odpowiedniego wiersza i kolumny. Przepływ pracy jest przetwarzany w przeglądarce.",
+  "coverageTitle": "Co sprawdza walidator GitHub Actions?",
+  "coverageBody": "Walidator używa actionlint {version} do sprawdzania składni YAML, wyzwalaczy, zależności między zadaniami, etykiet runnerów, kroków i wyrażeń GitHub Actions. Typowe problemy to niezdefiniowane zadanie w needs, literówka w nazwie kontekstu takiego jak github lub steps oraz nieprawidłowe odwołanie uses.",
+  "cliTitle": "Jak sprawdzać przepływy pracy w repozytorium",
+  "cliBody": "Uruchom actionlint w repozytorium, aby uwzględnić ustawienia projektu i odwołania do lokalnych akcji lub przepływów pracy wielokrotnego użytku. Narzędzie wiersza polecenia może również analizować skrypty za pomocą zainstalowanych narzędzi ShellCheck i Pyflakes.",
+  "reference": "Dokumentacja składni przepływów pracy GitHub Actions"
+}

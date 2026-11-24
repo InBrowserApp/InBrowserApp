@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML alur kerja",
+  "placeholder": "Tempel isi file dari .github/workflows di sini…",
+  "openFile": "Buka file",
+  "example": "Muat contoh",
+  "clear": "Kosongkan",
+  "validate": "Validasi",
+  "results": "Hasil validasi",
+  "idle": "Tempel YAML alur kerja atau buka file dari perangkat untuk memeriksanya.",
+  "valid": "Alur kerja ini lolos pemeriksaan actionlint.",
+  "invalid": "Periksa masalah di bawah ini.",
+  "location": "Baris {line}, kolom {column}",
+  "fileError": "File tidak dapat dibuka.",
+  "checkError": "Validasi tidak dapat diselesaikan.",
+  "singleDocument": "File alur kerja harus berisi tepat satu dokumen YAML.",
+  "introTitle": "Cara memvalidasi alur kerja GitHub Actions",
+  "introBody": "Tempel isi alur kerja dari .github/workflows atau buka file .yaml atau .yml dari perangkat, lalu pilih Validasi. Pilih Muat contoh untuk melihat alur kerja CI yang berfungsi. Pilih masalah untuk langsung menuju baris dan kolomnya. Browser memproses alur kerja di perangkat Anda.",
+  "coverageTitle": "Apa saja yang diperiksa oleh validator GitHub Actions?",
+  "coverageBody": "Validator menggunakan actionlint {version} untuk memeriksa sintaks YAML, pemicu, dependensi antarjob, label runner, langkah, dan ekspresi GitHub Actions. Masalah umum meliputi job yang belum didefinisikan di needs, kesalahan penulisan konteks seperti github atau steps, dan referensi uses yang tidak valid.",
+  "cliTitle": "Periksa alur kerja di repositori Anda",
+  "cliBody": "Jalankan actionlint dari repositori untuk turut memeriksa pengaturan proyek dan referensi ke action lokal atau alur kerja yang dapat digunakan kembali. Alat baris perintah pada perangkat juga dapat menggunakan ShellCheck dan Pyflakes untuk menganalisis skrip jika keduanya terpasang.",
+  "reference": "Referensi sintaks alur kerja GitHub Actions"
+}

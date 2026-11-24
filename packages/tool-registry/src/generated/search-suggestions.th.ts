@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ตัดช่วงเงียบในไฟล์เสียง",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "แปลงเสียงเป็นข้อความ",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "เครื่องมือตัดและรวมเสียง",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "โปรแกรมดูรายงานสรุปรวม DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "ตัวแปลง GIF เป็น APNG",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "ตัวตรวจสอบเวิร์กโฟลว์ GitHub Actions",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวสร้าง KSUID",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

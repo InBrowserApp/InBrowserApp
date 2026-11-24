@@ -1,0 +1,4 @@
+{
+  "name": "DMARC 彙總報告檢視器",
+  "description": "在瀏覽器中讀取 DMARC 彙總 XML 報告，查看寄件來源 IP、郵件數、SPF 和 DKIM 對齊結果及實際處理結果。"
+}

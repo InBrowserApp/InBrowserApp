@@ -2307,6 +2307,266 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-silence-remover",
+    category: "misc",
+    icon: "scissors",
+    tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
+    locales: {
+      ar: {
+        name: "إزالة الصمت من الصوت",
+        description:
+          "اكتشف فترات الصمت الطويلة واختصرها في حلقات البودكاست والمقابلات والتسجيلات الصوتية. اضبط عتبة الصمت، واستمع إلى النتيجة ونزّلها بصيغة WAV على جهازك.",
+      },
+      de: {
+        name: "Lange Audiopausen kürzen",
+        description:
+          "Erkenne und kürze lange Pausen in Podcasts, Interviews und Sprachaufnahmen. Passe den Schwellenwert an, höre das Ergebnis an und lade es als WAV herunter.",
+      },
+      en: {
+        name: "Audio Silence Remover",
+        description:
+          "Find and shorten long silences in podcasts, interviews, and voice recordings. Adjust the silence threshold, preview the edit, and download WAV locally.",
+      },
+      es: {
+        name: "Eliminar silencios del audio",
+        description:
+          "Detecta y acorta silencios largos en pódcast, entrevistas y grabaciones de voz. Ajusta el umbral, escucha el resultado y descarga el WAV desde el navegador.",
+      },
+      fr: {
+        name: "Suppression des silences audio",
+        description:
+          "Détectez et raccourcissez les longs silences dans vos podcasts, interviews et enregistrements vocaux. Réglez le seuil, écoutez le montage et téléchargez-le en WAV.",
+      },
+      he: {
+        name: "הסרת קטעי שקט מהקלטות",
+        description:
+          "זהו וקצרו הפסקות ארוכות בפודקאסטים, בראיונות ובהקלטות קול. התאימו את סף השקט, האזינו לעריכה והורידו קובץ WAV ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+        description:
+          "पॉडकास्ट, इंटरव्यू और वॉइस रिकॉर्डिंग में लंबे ठहराव ढूँढकर छोटे करें। सन्नाटे की सीमा बदलें, संपादित ऑडियो सुनें और अपने डिवाइस पर WAV डाउनलोड करें।",
+      },
+      id: {
+        name: "Penghapus Jeda Hening Audio",
+        description:
+          "Temukan dan persingkat jeda hening panjang dalam podcast, wawancara, serta rekaman suara. Sesuaikan ambang hening, dengarkan hasil edit, lalu unduh WAV dari browser.",
+      },
+      it: {
+        name: "Rimuovi i silenzi dall’audio",
+        description:
+          "Rileva e accorcia i silenzi lunghi in podcast, interviste e registrazioni vocali. Regola la soglia, ascolta il risultato e scarica il WAV dal browser.",
+      },
+      ja: {
+        name: "音声の無音部分を削除",
+        description:
+          "ポッドキャスト、インタビュー、音声録音の長い無音部分を検出して短縮します。無音判定のしきい値を調整し、結果を試聴してWAVをダウンロードできます。処理は端末内で行われます。",
+      },
+      ko: {
+        name: "오디오 무음 제거",
+        description:
+          "팟캐스트, 인터뷰, 음성 녹음에서 긴 무음 구간을 찾아 줄입니다. 무음 감지 임계값을 조정하고, 편집 결과를 들어 본 뒤 기기에서 WAV로 다운로드하세요.",
+      },
+      ms: {
+        name: "Buang Jeda Senyap daripada Audio",
+        description:
+          "Kesan dan pendekkan jeda senyap yang panjang dalam podsiar, temu bual dan rakaman suara. Laraskan ambang senyap, dengar suntingan dan muat turun WAV dalam pelayar.",
+      },
+      nl: {
+        name: "Stiltes uit audio verwijderen",
+        description:
+          "Vind en verkort lange stiltes in podcasts, interviews en spraakopnamen. Stel de stiltedrempel in, beluister de montage en download het resultaat als WAV.",
+      },
+      no: {
+        name: "Fjern stillhet fra lyd",
+        description:
+          "Finn og kort ned lange pauser i podkaster, intervjuer og taleopptak. Juster terskelen for stillhet, lytt til resultatet og last ned WAV.",
+      },
+      pl: {
+        name: "Usuwanie ciszy z nagrań",
+        description:
+          "Wykryj i skróć długie pauzy w podcastach, wywiadach i nagraniach głosowych. Ustaw próg ciszy, odsłuchaj efekt i pobierz plik WAV w przeglądarce.",
+      },
+      pt: {
+        name: "Remover silêncios do áudio",
+        description:
+          "Detete e encurte silêncios longos em podcasts, entrevistas e gravações de voz. Ajuste o limiar, ouça o resultado e transfira o WAV no navegador.",
+      },
+      ru: {
+        name: "Удаление тишины из аудио",
+        description:
+          "Находите и сокращайте длинные паузы в подкастах, интервью и голосовых записях. Настройте порог тишины, прослушайте результат и скачайте WAV в браузере.",
+      },
+      sv: {
+        name: "Ta bort tystnad ur ljud",
+        description:
+          "Hitta och korta ned långa pauser i poddar, intervjuer och röstinspelningar. Justera tröskeln för tystnad, lyssna på klippet och ladda ned en WAV-fil.",
+      },
+      th: {
+        name: "ตัดช่วงเงียบในไฟล์เสียง",
+        description:
+          "ตรวจหาและย่นช่วงเงียบยาวในพอดแคสต์ บทสัมภาษณ์ และเสียงบันทึก ปรับเกณฑ์ความเงียบ ฟังผลหลังตัด และดาวน์โหลด WAV ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ses Kaydından Sessizliği Kaldırma",
+        description:
+          "Podcast, röportaj ve ses kayıtlarındaki uzun duraklamaları bulun ve kısaltın. Sessizlik eşiğini ayarlayın, sonucu dinleyin ve tarayıcıdan WAV indirin.",
+      },
+      vi: {
+        name: "Cắt khoảng lặng trong âm thanh",
+        description:
+          "Phát hiện và rút ngắn khoảng lặng dài trong podcast, phỏng vấn và bản ghi giọng nói. Chỉnh ngưỡng, nghe thử rồi tải WAV ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频静音去除",
+        description:
+          "检测并缩短播客、访谈和语音录音中的长静音。调整静音阈值，预听剪辑结果，并在本地下载 WAV。",
+      },
+      "zh-TW": {
+        name: "音訊靜音移除",
+        description:
+          "偵測並縮短 Podcast、訪談和語音錄音中的長時間靜音。調整靜音閾值、預聽剪輯結果，並在本機下載 WAV。",
+      },
+    },
+  },
+  {
+    slug: "audio-to-text",
+    category: "misc",
+    icon: "captions",
+    tags: [
+      "audio",
+      "recording",
+      "audio transcription",
+      "audio transcriber",
+      "speech to text",
+      "whisper",
+      "meeting recording",
+      "voice memo",
+      "subtitles",
+      "timestamps",
+      "txt",
+      "srt",
+      "vtt",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل الصوت إلى نص",
+        description:
+          "حوّل تسجيلات الاجتماعات والمقابلات والملاحظات الصوتية إلى نص داخل متصفحك. حرّر النص وصدّره مع التوقيتات بصيغة TXT أو SRT أو VTT.",
+      },
+      de: {
+        name: "Audio in Text umwandeln",
+        description:
+          "Transkribiere Meetingaufnahmen, Interviews und Sprachnotizen im Browser. Bearbeite den Text und exportiere ihn mit Zeitstempeln als TXT, SRT oder VTT.",
+      },
+      en: {
+        name: "Audio to Text",
+        description:
+          "Transcribe meeting recordings, interviews, and voice notes in your browser. Edit your transcript and export timestamped TXT, SRT, or VTT.",
+      },
+      es: {
+        name: "Audio a texto",
+        description:
+          "Transcribe grabaciones de reuniones, entrevistas y notas de voz en tu navegador. Edita la transcripción y expórtala con marcas de tiempo en TXT, SRT o VTT.",
+      },
+      fr: {
+        name: "Audio en texte",
+        description:
+          "Transcrivez réunions, entretiens et mémos vocaux dans votre navigateur. Corrigez le texte et exportez-le avec ses horodatages en TXT, SRT ou VTT.",
+      },
+      he: {
+        name: "המרת שמע לטקסט",
+        description:
+          "תמללו הקלטות של ישיבות, ראיונות ותזכורות קוליות בדפדפן. ערכו את התמלול וייצאו אותו עם חותמות זמן בפורמט TXT, SRT או VTT.",
+      },
+      hi: {
+        name: "ऑडियो से टेक्स्ट",
+        description:
+          "मीटिंग की रिकॉर्डिंग, इंटरव्यू और वॉइस नोट को ब्राउज़र में टेक्स्ट में बदलें। ट्रांसक्रिप्ट में सुधार करें और टाइमस्टैम्प के साथ TXT, SRT या VTT में निर्यात करें।",
+      },
+      id: {
+        name: "Audio ke Teks",
+        description:
+          "Ubah rekaman rapat, wawancara, dan catatan suara menjadi teks langsung di browser. Edit transkrip dan ekspor ke TXT, SRT, atau VTT dengan penanda waktu.",
+      },
+      it: {
+        name: "Audio in testo",
+        description:
+          "Trascrivi registrazioni di riunioni, interviste e note vocali nel browser. Correggi il testo ed esportalo con timestamp in TXT, SRT o VTT.",
+      },
+      ja: {
+        name: "音声文字起こし",
+        description:
+          "会議の録音、インタビュー、ボイスメモをブラウザーで文字起こし。テキストを編集し、タイムスタンプ付きの TXT・SRT・VTT で書き出せます。",
+      },
+      ko: {
+        name: "음성을 텍스트로 변환",
+        description:
+          "회의 녹음, 인터뷰, 음성 메모를 브라우저에서 텍스트로 변환하세요. 변환 결과를 편집하고 타임스탬프가 포함된 TXT, SRT 또는 VTT로 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Audio kepada Teks",
+        description:
+          "Tukar rakaman mesyuarat, temu bual dan nota suara kepada teks dalam pelayar. Sunting transkrip dan eksport sebagai TXT, SRT atau VTT dengan cap masa.",
+      },
+      nl: {
+        name: "Audio naar tekst",
+        description:
+          "Transcribeer vergaderopnamen, interviews en spraakmemo’s in je browser. Bewerk de tekst en exporteer die met tijdcodes als TXT, SRT of VTT.",
+      },
+      no: {
+        name: "Lyd til tekst",
+        description:
+          "Transkriber møteopptak, intervjuer og talenotater i nettleseren. Rediger teksten og eksporter den med tidskoder som TXT, SRT eller VTT.",
+      },
+      pl: {
+        name: "Audio na tekst",
+        description:
+          "Zamień nagrania spotkań, wywiadów i notatki głosowe na tekst w przeglądarce. Edytuj transkrypcję i pobierz plik TXT, SRT lub VTT ze znacznikami czasu.",
+      },
+      pt: {
+        name: "Áudio para texto",
+        description:
+          "Transcreva gravações de reuniões, entrevistas e notas de voz no navegador. Edite a transcrição e exporte-a com marcas de tempo em TXT, SRT ou VTT.",
+      },
+      ru: {
+        name: "Аудио в текст",
+        description:
+          "Переводите записи встреч, интервью и голосовые заметки в текст прямо в браузере. Редактируйте расшифровку и сохраняйте её с временными метками в TXT, SRT или VTT.",
+      },
+      sv: {
+        name: "Ljud till text",
+        description:
+          "Transkribera mötesinspelningar, intervjuer och röstanteckningar i webbläsaren. Redigera texten och exportera den med tidsstämplar som TXT, SRT eller VTT.",
+      },
+      th: {
+        name: "แปลงเสียงเป็นข้อความ",
+        description:
+          "ถอดเสียงการประชุม สัมภาษณ์ และบันทึกเสียงในเบราว์เซอร์ แก้ไขข้อความแล้วส่งออกเป็น TXT, SRT หรือ VTT พร้อมเวลาในคลิป",
+      },
+      tr: {
+        name: "Sesi Metne Dönüştürme",
+        description:
+          "Toplantı kayıtlarını, röportajları ve sesli notları tarayıcınızda metne dönüştürün. Metni düzenleyin ve zaman damgalı TXT, SRT veya VTT olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển âm thanh thành văn bản",
+        description:
+          "Chuyển bản ghi cuộc họp, phỏng vấn và ghi chú thoại thành văn bản ngay trong trình duyệt. Sửa bản chép lời rồi xuất TXT, SRT hoặc VTT có mốc thời gian.",
+      },
+      "zh-CN": {
+        name: "音频转文字",
+        description:
+          "在浏览器中转写会议录音、采访和语音备忘录。编辑文字稿，并导出带时间戳的 TXT、SRT 或 VTT。",
+      },
+      "zh-TW": {
+        name: "錄音轉文字",
+        description:
+          "在瀏覽器中將會議錄音、訪談和語音備忘錄轉成文字。編輯逐字稿，並匯出附時間戳記的 TXT、SRT 或 VTT。",
+      },
+    },
+  },
+  {
     slug: "audio-trimmer-merger",
     category: "misc",
     icon: "scissors",
@@ -11140,6 +11400,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dmarc-report-viewer",
+    category: "network",
+    icon: "table-2",
+    tags: [
+      "dmarc",
+      "rua",
+      "xml",
+      "report",
+      "email",
+      "spf",
+      "dkim",
+      "authentication",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض تقارير DMARC المجمّعة",
+        description:
+          "اقرأ تقارير DMARC المجمّعة بتنسيق XML في متصفّحك. راجع عناوين IP المرسلة وأعداد الرسائل ومحاذاة SPF وDKIM والإجراءات المُطبّقة.",
+      },
+      de: {
+        name: "Betrachter für DMARC-Sammelberichte",
+        description:
+          "Lies DMARC-Sammelberichte im XML-Format direkt im Browser. Prüfe Absender-IP-Adressen, Nachrichtenanzahl, SPF- und DKIM-Domainabgleich sowie angewandte Maßnahmen.",
+      },
+      en: {
+        name: "DMARC Aggregate Report Viewer",
+        description:
+          "Read DMARC aggregate XML reports in your browser. Inspect sending IPs, message counts, SPF and DKIM alignment, and applied dispositions.",
+      },
+      es: {
+        name: "Visor de informes agregados DMARC",
+        description:
+          "Lee informes agregados DMARC en XML desde el navegador. Consulta las IP de origen, el número de mensajes, la alineación de SPF y DKIM y la medida aplicada.",
+      },
+      fr: {
+        name: "Visionneuse de rapports agrégés DMARC",
+        description:
+          "Lisez les rapports XML agrégés DMARC dans votre navigateur. Consultez les IP sources, le nombre de messages, l’alignement SPF et DKIM et le traitement appliqué.",
+      },
+      he: {
+        name: "מציג דוחות DMARC מצטברים",
+        description:
+          "קראו דוחות XML מצטברים של DMARC בדפדפן. בדקו כתובות IP של מקורות שליחה, ספירות הודעות, התאמת דומיינים ב־SPF וב־DKIM והפעולות שננקטו.",
+      },
+      hi: {
+        name: "DMARC एग्रीगेट रिपोर्ट व्यूअर",
+        description:
+          "DMARC की एग्रीगेट XML रिपोर्ट ब्राउज़र में पढ़ें। भेजने वाले IP पते, संदेशों की गिनती, SPF और DKIM अलाइनमेंट और लागू कार्रवाइयाँ देखें।",
+      },
+      id: {
+        name: "Penampil Laporan Agregat DMARC",
+        description:
+          "Baca laporan agregat DMARC dalam format XML langsung di browser. Periksa IP pengirim, jumlah pesan, keselarasan SPF dan DKIM, serta tindakan yang diterapkan.",
+      },
+      it: {
+        name: "Visualizzatore di report aggregati DMARC",
+        description:
+          "Leggi nel browser i report XML aggregati DMARC. Consulta IP di origine, conteggi dei messaggi, allineamento SPF e DKIM e azioni applicate.",
+      },
+      ja: {
+        name: "DMARC集計レポートビューアー",
+        description:
+          "DMARC集計XMLレポートをブラウザで読み取り、送信元IP、メール数、SPF・DKIMのアライメント、実際の処理結果を確認できます。",
+      },
+      ko: {
+        name: "DMARC 집계 보고서 뷰어",
+        description:
+          "브라우저에서 DMARC 집계 XML 보고서를 읽으세요. 발신 IP, 메일 수, SPF 및 DKIM 도메인 일치 여부, 수신 서버가 적용한 처리 방식을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Laporan Agregat DMARC",
+        description:
+          "Baca laporan agregat DMARC dalam format XML terus dalam pelayar. Semak IP penghantar, bilangan mesej, kesepadanan SPF dan DKIM serta tindakan yang diambil.",
+      },
+      nl: {
+        name: "Viewer voor geaggregeerde DMARC-rapporten",
+        description:
+          "Lees geaggregeerde DMARC-rapporten in XML-formaat in je browser. Bekijk verzendende IP-adressen, aantallen berichten, SPF- en DKIM-domeinafstemming en toegepaste maatregelen.",
+      },
+      no: {
+        name: "Viser for aggregerte DMARC-rapporter",
+        description:
+          "Les aggregerte DMARC-rapporter i XML-format i nettleseren. Se avsenderens IP-adresser, antall meldinger, domenesamsvar for SPF og DKIM og mottakerens tiltak.",
+      },
+      pl: {
+        name: "Przeglądarka raportów zbiorczych DMARC",
+        description:
+          "Otwórz zbiorczy raport DMARC w formacie XML w przeglądarce. Sprawdź adresy IP nadawców, liczbę wiadomości, zgodność domen SPF i DKIM oraz zastosowane działania.",
+      },
+      pt: {
+        name: "Visualizador de relatórios agregados DMARC",
+        description:
+          "Leia relatórios agregados DMARC em XML no navegador. Confira IPs de origem, contagens de mensagens, alinhamento de SPF e DKIM e ações aplicadas.",
+      },
+      ru: {
+        name: "Просмотр агрегированных отчётов DMARC",
+        description:
+          "Открывайте агрегированные XML-отчёты DMARC в браузере. Проверяйте IP-адреса отправителей, число писем, выравнивание SPF и DKIM и действия получателей.",
+      },
+      sv: {
+        name: "Visare för aggregerade DMARC-rapporter",
+        description:
+          "Läs aggregerade DMARC-rapporter i XML-format i webbläsaren. Granska avsändar-IP, antal meddelanden, domänmatchning för SPF och DKIM samt mottagarens åtgärder.",
+      },
+      th: {
+        name: "โปรแกรมดูรายงานสรุปรวม DMARC",
+        description:
+          "อ่านรายงานสรุปรวม DMARC แบบ XML ในเบราว์เซอร์ ดู IP ต้นทาง จำนวนอีเมล ผลการจับคู่โดเมนของ SPF และ DKIM และวิธีที่ผู้รับจัดการอีเมล",
+      },
+      tr: {
+        name: "DMARC Toplu Rapor Görüntüleyicisi",
+        description:
+          "DMARC toplu XML raporlarını tarayıcınızda okuyun. Kaynak IP adreslerini, ileti sayılarını, SPF ve DKIM uyumunu ve uygulanan işlemleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem báo cáo tổng hợp DMARC",
+        description:
+          "Đọc báo cáo tổng hợp DMARC dạng XML ngay trong trình duyệt. Xem IP gửi, số thư, kết quả đối chiếu miền SPF và DKIM, cùng cách máy chủ nhận đã xử lý thư.",
+      },
+      "zh-CN": {
+        name: "DMARC 汇总报告查看器",
+        description:
+          "在浏览器中读取 DMARC 汇总 XML 报告，查看发送方 IP、邮件数量、SPF 和 DKIM 对齐结果及实际处理结果。",
+      },
+      "zh-TW": {
+        name: "DMARC 彙總報告檢視器",
+        description:
+          "在瀏覽器中讀取 DMARC 彙總 XML 報告，查看寄件來源 IP、郵件數、SPF 和 DKIM 對齊結果及實際處理結果。",
+      },
+    },
+  },
+  {
     slug: "dms-coordinate-converter",
     category: "misc",
     icon: "compass",
@@ -15732,6 +16125,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "GIF 轉 APNG 轉換器",
         description:
           "將動畫 GIF 檔轉換為 APNG PNG 動畫，支援本機批次匯出、縮放、播放速度與循環控制。",
+      },
+    },
+  },
+  {
+    slug: "github-actions-workflow-validator",
+    category: "developer",
+    icon: "workflow",
+    tags: [
+      "github",
+      "actions",
+      "workflow",
+      "actionlint",
+      "yaml",
+      "validator",
+      "ci",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق سير عمل GitHub Actions",
+        description:
+          "تحقّق عبر الإنترنت من ملفات YAML لسير عمل GitHub Actions باستخدام actionlint. حدّد مواقع أخطاء الصياغة والتعبيرات غير الصالحة ومشكلات تبعيات المهام برقم السطر والعمود.",
+      },
+      de: {
+        name: "GitHub-Actions-Workflow-Validator",
+        description:
+          "Validieren Sie GitHub-Actions-Workflows im YAML-Format online mit actionlint. Finden Sie Syntaxfehler, ungültige Ausdrücke und fehlerhafte Job-Abhängigkeiten mit Zeilen- und Spaltenangaben.",
+      },
+      en: {
+        name: "GitHub Actions Workflow Validator",
+        description:
+          "Validate GitHub Actions workflow YAML online with actionlint. Find syntax errors, invalid expressions, and job dependencies by line and column.",
+      },
+      es: {
+        name: "Validador de flujos de trabajo de GitHub Actions",
+        description:
+          "Valida el YAML de GitHub Actions en línea con actionlint. Encuentra errores de sintaxis, expresiones y dependencias de trabajos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur de workflows GitHub Actions",
+        description:
+          "Validez le YAML de vos workflows GitHub Actions en ligne avec actionlint. Repérez les erreurs de syntaxe, d’expression et de dépendance entre jobs par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת תהליכי עבודה של GitHub Actions",
+        description:
+          "בדיקה מקוונת של קובצי YAML לתהליכי עבודה של GitHub Actions באמצעות actionlint. אפשר לאתר שגיאות תחביר, ביטויים לא תקינים ובעיות בתלויות בין משימות לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "GitHub Actions वर्कफ़्लो वैलिडेटर",
+        description:
+          "actionlint से GitHub Actions वर्कफ़्लो YAML ऑनलाइन सत्यापित करें। पंक्ति और कॉलम नंबर से सिंटैक्स की गड़बड़ियाँ, अमान्य एक्सप्रेशन और जॉब डिपेंडेंसी की समस्याएँ ढूँढें।",
+      },
+      id: {
+        name: "Validator Alur Kerja GitHub Actions",
+        description:
+          "Validasi YAML alur kerja GitHub Actions secara online dengan actionlint. Temukan kesalahan sintaks, ekspresi yang tidak valid, dan masalah dependensi job beserta baris dan kolomnya.",
+      },
+      it: {
+        name: "Validatore di workflow per GitHub Actions",
+        description:
+          "Convalida online i workflow YAML di GitHub Actions con actionlint. Individua errori di sintassi, espressioni non valide e problemi con le dipendenze tra job per riga e colonna.",
+      },
+      ja: {
+        name: "GitHub Actions ワークフローバリデーター",
+        description:
+          "GitHub Actions のワークフロー YAML を actionlint でオンライン検証。構文エラー、無効な式、ジョブの依存関係の誤りを行番号と列番号で確認できます。",
+      },
+      ko: {
+        name: "GitHub Actions 워크플로 검증기",
+        description:
+          "actionlint로 GitHub Actions 워크플로 YAML을 온라인에서 검증하세요. 구문 오류, 잘못된 식, 작업 종속성 문제를 줄과 열 번호로 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah Aliran Kerja GitHub Actions",
+        description:
+          "Sahkan YAML aliran kerja GitHub Actions dalam talian dengan actionlint. Cari ralat sintaks, ungkapan tidak sah dan masalah kebergantungan tugas berserta kedudukan baris dan lajur.",
+      },
+      nl: {
+        name: "GitHub Actions-workflowvalidator",
+        description:
+          "Valideer GitHub Actions-workflows in YAML online met actionlint. Vind syntaxisfouten, ongeldige expressies en problemen met jobafhankelijkheden aan de hand van regel- en kolomnummers.",
+      },
+      no: {
+        name: "Validator for GitHub Actions-arbeidsflyter",
+        description:
+          "Valider YAML for GitHub Actions-arbeidsflyter på nett med actionlint. Finn syntaksfeil, ugyldige uttrykk og problemer med jobbavhengigheter med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator przepływów pracy GitHub Actions",
+        description:
+          "Sprawdzaj pliki YAML przepływów pracy GitHub Actions online za pomocą actionlint. Znajdź błędy składni, nieprawidłowe wyrażenia i problemy z zależnościami zadań według wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de fluxos de trabalho do GitHub Actions",
+        description:
+          "Valide o YAML do GitHub Actions online com actionlint. Encontre erros de sintaxe, expressões e dependências entre jobs pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор рабочих процессов GitHub Actions",
+        description:
+          "Проверяйте YAML-файлы рабочих процессов GitHub Actions онлайн с помощью actionlint. Находите ошибки синтаксиса, выражений и зависимостей заданий по строке и столбцу.",
+      },
+      sv: {
+        name: "Validerare för GitHub Actions-arbetsflöden",
+        description:
+          "Validera YAML för GitHub Actions-arbetsflöden online med actionlint. Hitta syntaxfel, ogiltiga uttryck och problem med jobbberoenden med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบเวิร์กโฟลว์ GitHub Actions",
+        description:
+          "ตรวจสอบ YAML ของเวิร์กโฟลว์ GitHub Actions ออนไลน์ด้วย actionlint ค้นหาข้อผิดพลาดทางไวยากรณ์ นิพจน์ที่ไม่ถูกต้อง และปัญหาการพึ่งพาระหว่างจ็อบ พร้อมระบุบรรทัดและคอลัมน์",
+      },
+      tr: {
+        name: "GitHub Actions İş Akışı Doğrulayıcı",
+        description:
+          "GitHub Actions iş akışı YAML dosyalarını actionlint ile çevrimiçi doğrulayın. Sözdizimi hatalarını, geçersiz ifadeleri ve iş bağımlılığı sorunlarını satır ve sütun numaralarıyla bulun.",
+      },
+      vi: {
+        name: "Trình xác thực quy trình làm việc GitHub Actions",
+        description:
+          "Dùng actionlint để xác thực YAML của quy trình làm việc GitHub Actions trực tuyến. Tìm lỗi cú pháp, biểu thức không hợp lệ và lỗi phụ thuộc giữa các job, kèm vị trí dòng và cột.",
+      },
+      "zh-CN": {
+        name: "GitHub Actions 工作流校验器",
+        description:
+          "使用 actionlint 在线校验 GitHub Actions 工作流 YAML，按行和列查找语法错误、无效表达式和作业依赖问题。",
+      },
+      "zh-TW": {
+        name: "GitHub Actions 工作流程驗證器",
+        description:
+          "使用 actionlint 線上驗證 GitHub Actions 工作流程的 YAML 檔案，找出語法錯誤、無效的運算式及作業相依問題，並顯示行號與欄位位置。",
       },
     },
   },
@@ -24126,6 +24651,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "KSUID 產生器",
         description:
           "在瀏覽器內產生 KSUID（可排序的唯一識別），支援自訂時間戳。",
+      },
+    },
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    category: "developer",
+    icon: "layers",
+    tags: ["kubernetes", "k8s", "yaml", "manifest", "validator", "devops"],
+    locales: {
+      ar: {
+        name: "مدقق Kubernetes YAML",
+        description:
+          "تحقّق من ملفات تعريف Kubernetes بصيغة YAML عبر الإنترنت. افحص عدة موارد باستخدام المخططات المضمّنة وانتقل إلى الحقول غير الصالحة وفق رقم السطر والعمود.",
+      },
+      de: {
+        name: "Kubernetes-YAML-Validator",
+        description:
+          "Validieren Sie Kubernetes-Manifeste im YAML-Format online. Prüfen Sie mehrere Ressourcen mit integrierten Schemas und springen Sie per Zeilen- und Spaltenangabe zu ungültigen Feldern.",
+      },
+      en: {
+        name: "Kubernetes YAML Validator",
+        description:
+          "Validate Kubernetes YAML manifests online. Check multiple resources against built-in schemas and jump to invalid fields by line and column.",
+      },
+      es: {
+        name: "Validador de YAML de Kubernetes",
+        description:
+          "Valida manifiestos YAML de Kubernetes en línea. Comprueba varios recursos con esquemas integrados y salta a los campos no válidos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur YAML Kubernetes",
+        description:
+          "Validez vos manifestes YAML Kubernetes en ligne. Vérifiez plusieurs ressources à l’aide des schémas intégrés et repérez les champs non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Kubernetes YAML",
+        description:
+          "אימות מקוון למניפסטים של Kubernetes בפורמט YAML. אפשר לבדוק כמה משאבים מול סכמות מובנות ולעבור לשדות לא תקינים לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "Kubernetes YAML वैलिडेटर",
+        description:
+          "Kubernetes के YAML मैनिफ़ेस्ट ऑनलाइन सत्यापित करें। बिल्ट-इन स्कीमा से कई रिसोर्स जाँचें और पंक्ति व कॉलम नंबर की मदद से अमान्य फ़ील्ड तक जाएँ।",
+      },
+      id: {
+        name: "Validator YAML Kubernetes",
+        description:
+          "Validasi manifes YAML Kubernetes secara online. Periksa beberapa resource dengan skema bawaan dan langsung buka baris serta kolom properti yang tidak valid.",
+      },
+      it: {
+        name: "Validatore YAML per Kubernetes",
+        description:
+          "Convalida online i manifest YAML di Kubernetes. Verifica più risorse con gli schemi integrati e vai ai campi non validi tramite riga e colonna.",
+      },
+      ja: {
+        name: "Kubernetes YAML バリデーター",
+        description:
+          "Kubernetes の YAML マニフェストをオンラインで検証します。内蔵スキーマで複数のリソースを一度に確認し、誤りのあるフィールドに行番号と列番号から移動できます。",
+      },
+      ko: {
+        name: "Kubernetes YAML 검증기",
+        description:
+          "Kubernetes YAML 매니페스트를 온라인으로 검증하세요. 내장 스키마로 여러 리소스를 한 번에 확인하고 줄과 열 번호로 잘못된 필드 위치를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah YAML Kubernetes",
+        description:
+          "Sahkan manifes YAML Kubernetes dalam talian. Semak beberapa sumber menggunakan skema terbina dalam dan terus ke baris serta lajur medan yang tidak sah.",
+      },
+      nl: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valideer Kubernetes-manifesten in YAML online. Controleer meerdere resources met ingebouwde schema’s en ga via het regel- en kolomnummer naar ongeldige velden.",
+      },
+      no: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valider Kubernetes-manifester i YAML på nett. Sjekk flere ressurser mot innebygde skjemaer og gå til ugyldige felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator YAML Kubernetes",
+        description:
+          "Sprawdzaj manifesty YAML Kubernetes online. Zweryfikuj wiele zasobów według wbudowanych schematów i przejdź do błędnych pól po numerze wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de YAML do Kubernetes",
+        description:
+          "Valide manifestos YAML do Kubernetes online. Confira vários recursos com esquemas integrados e vá direto aos campos inválidos pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор YAML для Kubernetes",
+        description:
+          "Проверяйте YAML-манифесты Kubernetes онлайн. Сверяйте несколько ресурсов со встроенными схемами и переходите к ошибочным полям по строке и столбцу.",
+      },
+      sv: {
+        name: "Kubernetes YAML-validerare",
+        description:
+          "Validera Kubernetes-manifest i YAML online. Kontrollera flera resurser mot inbyggda scheman och hoppa till ogiltiga fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+        description:
+          "ตรวจสอบมานิเฟสต์ YAML ของ Kubernetes ออนไลน์ ตรวจหลายทรัพยากรกับสคีมาในตัวและไปยังบรรทัดและคอลัมน์ของฟิลด์ที่ไม่ถูกต้องได้ทันที",
+      },
+      tr: {
+        name: "Kubernetes YAML Doğrulayıcı",
+        description:
+          "Kubernetes YAML manifestlerini çevrimiçi doğrulayın. Birden fazla kaynağı yerleşik şemalarla denetleyin ve geçersiz alanlara satır ve sütun numaralarıyla gidin.",
+      },
+      vi: {
+        name: "Trình xác thực YAML Kubernetes",
+        description:
+          "Xác thực tệp kê khai YAML Kubernetes trực tuyến. Kiểm tra nhiều tài nguyên theo lược đồ tích hợp và chuyển đến dòng, cột của trường không hợp lệ.",
+      },
+      "zh-CN": {
+        name: "Kubernetes YAML 校验器",
+        description:
+          "在线校验 Kubernetes YAML 清单，根据内置模式检查多个资源，并按行和列跳转到无效字段。",
+      },
+      "zh-TW": {
+        name: "Kubernetes YAML 驗證器",
+        description:
+          "線上驗證 Kubernetes YAML 資源清單。使用內建結構描述檢查多個資源，並依行號與欄位位置跳到無效的欄位。",
       },
     },
   },

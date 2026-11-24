@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de rapports agrégés DMARC",
+  "description": "Lisez les rapports XML agrégés DMARC dans votre navigateur. Consultez les IP sources, le nombre de messages, l’alignement SPF et DKIM et le traitement appliqué."
+}

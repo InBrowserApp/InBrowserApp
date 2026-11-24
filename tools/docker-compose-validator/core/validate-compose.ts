@@ -174,4 +174,3 @@ function validateCompose(source: string): ComposeIssue[] {
 }
 
 export { validateCompose }
-export type { ComposeIssue }

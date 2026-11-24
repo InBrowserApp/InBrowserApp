@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "ऑडियो से टेक्स्ट",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "ऑडियो काटें और जोड़ें",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC एग्रीगेट रिपोर्ट व्यूअर",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "अक्षांश और देशांतर का DMS कन्वर्टर",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF से APNG कन्वर्टर",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "GitHub Actions वर्कफ़्लो वैलिडेटर",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID जनरेटर",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML वैलिडेटर",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

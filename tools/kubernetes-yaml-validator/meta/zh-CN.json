@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML 校验器",
+  "description": "在线校验 Kubernetes YAML 清单，根据内置模式检查多个资源，并按行和列跳转到无效字段。"
+}

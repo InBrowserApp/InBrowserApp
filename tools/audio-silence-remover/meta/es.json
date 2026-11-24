@@ -1,0 +1,4 @@
+{
+  "name": "Eliminar silencios del audio",
+  "description": "Detecta y acorta silencios largos en pódcast, entrevistas y grabaciones de voz. Ajusta el umbral, escucha el resultado y descarga el WAV desde el navegador."
+}

@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "הסרת קטעי שקט מהקלטות",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "המרת שמע לטקסט",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "חיתוך ומיזוג אודיו",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "מציג דוחות DMARC מצטברים",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "ממיר קווי רוחב ואורך ל־DMS",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "ממיר GIF ל-APNG",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "מאמת תהליכי עבודה של GitHub Actions",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "מחולל KSUID",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "מאמת Kubernetes YAML",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

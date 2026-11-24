@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML Doğrulayıcı",
+  "description": "Kubernetes YAML manifestlerini çevrimiçi doğrulayın. Birden fazla kaynağı yerleşik şemalarla denetleyin ve geçersiz alanlara satır ve sütun numaralarıyla gidin."
+}

@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "오디오 무음 제거",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "음성을 텍스트로 변환",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "오디오 자르기 및 합치기",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC 집계 보고서 뷰어",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "위도·경도 도분초 변환기",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF to APNG 변환기",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "GitHub Actions 워크플로 검증기",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID 생성기",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML 검증기",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

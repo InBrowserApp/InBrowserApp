@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ta bort tystnad ur ljud",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "Ljud till text",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Ljudtrimning och sammanslagning",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "Visare för aggregerade DMARC-rapporter",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF till APNG-konverterare",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "Validerare för GitHub Actions-arbetsflöden",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID-generator",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML-validerare",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",

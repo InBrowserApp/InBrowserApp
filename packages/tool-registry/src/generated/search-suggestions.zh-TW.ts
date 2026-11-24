@@ -94,6 +94,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音訊靜音移除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
+    name: "錄音轉文字",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "音訊裁剪與合併",
     slug: "audio-trimmer-merger",
   },
@@ -438,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC 彙總報告檢視器",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "經緯度與度分秒轉換器",
     slug: "dms-coordinate-converter",
@@ -616,6 +631,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "GIF 轉 APNG 轉換器",
     slug: "gif-to-apng-converter",
+  },
+  {
+    category: "developer",
+    name: "GitHub Actions 工作流程驗證器",
+    slug: "github-actions-workflow-validator",
   },
   {
     category: "developer",
@@ -951,6 +971,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "KSUID 產生器",
     slug: "ksuid-generator",
+  },
+  {
+    category: "developer",
+    name: "Kubernetes YAML 驗證器",
+    slug: "kubernetes-yaml-validator",
   },
   {
     category: "document",
