@@ -85,6 +85,7 @@ export {
   Lock,
   List,
   Mic,
+  Mouse,
   Map,
   Magnet,
   Mail,

@@ -21438,6 +21438,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mouse-tester",
+    language: "ar",
+  },
+  {
+    slug: "mouse-tester",
+    language: "de",
+  },
+  {
+    slug: "mouse-tester",
+    language: "en",
+  },
+  {
+    slug: "mouse-tester",
+    language: "es",
+  },
+  {
+    slug: "mouse-tester",
+    language: "fr",
+  },
+  {
+    slug: "mouse-tester",
+    language: "he",
+  },
+  {
+    slug: "mouse-tester",
+    language: "hi",
+  },
+  {
+    slug: "mouse-tester",
+    language: "id",
+  },
+  {
+    slug: "mouse-tester",
+    language: "it",
+  },
+  {
+    slug: "mouse-tester",
+    language: "ja",
+  },
+  {
+    slug: "mouse-tester",
+    language: "ko",
+  },
+  {
+    slug: "mouse-tester",
+    language: "ms",
+  },
+  {
+    slug: "mouse-tester",
+    language: "nl",
+  },
+  {
+    slug: "mouse-tester",
+    language: "no",
+  },
+  {
+    slug: "mouse-tester",
+    language: "pl",
+  },
+  {
+    slug: "mouse-tester",
+    language: "pt",
+  },
+  {
+    slug: "mouse-tester",
+    language: "ru",
+  },
+  {
+    slug: "mouse-tester",
+    language: "sv",
+  },
+  {
+    slug: "mouse-tester",
+    language: "th",
+  },
+  {
+    slug: "mouse-tester",
+    language: "tr",
+  },
+  {
+    slug: "mouse-tester",
+    language: "vi",
+  },
+  {
+    slug: "mouse-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "mouse-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "murmurhash3-x64-128-hash-text-or-file",
     language: "ar",
   },

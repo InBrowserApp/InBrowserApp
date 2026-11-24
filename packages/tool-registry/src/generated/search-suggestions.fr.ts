@@ -1168,6 +1168,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "morse-code-converter",
   },
   {
+    category: "misc",
+    name: "Testeur de souris",
+    slug: "mouse-tester",
+  },
+  {
     category: "crypto",
     name: "Hachage MurmurHash3 (x64 128 bits) de texte ou fichier",
     slug: "murmurhash3-x64-128-hash-text-or-file",

@@ -240,6 +240,7 @@
     "@tool/mobi-reader": "workspace:*",
     "@tool/mobi-to-epub-converter": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
+    "@tool/mouse-tester": "workspace:*",
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
