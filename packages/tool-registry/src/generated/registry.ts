@@ -11489,6 +11489,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
+      },
+    },
+  },
+  {
     slug: "eu-vat-number-validator",
     category: "text",
     icon: "file-text",
@@ -34016,6 +34147,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "svg-to-pdf-converter",
+    category: "image",
+    icon: "file-text",
+    tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
+    locales: {
+      ar: {
+        name: "محوّل SVG إلى PDF",
+        description:
+          "حوّل ملفات SVG إلى PDF متجهي في متصفحك. حافظ على وضوح الرسم بأبعاده الأصلية، أو لائمه مع ورق A4 أو US Letter.",
+      },
+      de: {
+        name: "SVG-zu-PDF-Konverter",
+        description:
+          "Wandle SVG-Dateien im Browser in Vektor-PDFs um. Die Grafik bleibt scharf, ob in Originalgröße, auf A4 oder auf US Letter.",
+      },
+      en: {
+        name: "SVG to PDF Converter",
+        description:
+          "Convert SVG to vector PDF in your browser. Preserve sharp artwork at the original canvas size, or fit it to A4 or US Letter.",
+      },
+      es: {
+        name: "Convertidor de SVG a PDF",
+        description:
+          "Convierte SVG a PDF vectorial en tu navegador. Conserva la nitidez y el tamaño del lienzo original o ajusta el diseño a A4 o carta.",
+      },
+      fr: {
+        name: "Convertisseur SVG en PDF",
+        description:
+          "Convertissez vos SVG en PDF vectoriels dans votre navigateur. Conservez les dimensions d’origine ou adaptez le dessin au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר SVG ל-PDF",
+        description:
+          "המרת SVG ל-PDF וקטורי בדפדפן. אפשר לשמור על חדות האיור במידות המקוריות של משטח הציור או להתאים אותו לדף A4 או US Letter.",
+      },
+      hi: {
+        name: "SVG से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में SVG को वेक्टर PDF में बदलें। चित्र को मूल कैनवस के आकार में साफ़ रखें या A4 या US Letter पन्ने पर फ़िट करें।",
+      },
+      id: {
+        name: "Konverter SVG ke PDF",
+        description:
+          "Ubah SVG menjadi PDF vektor langsung di browser. Jaga gambar tetap tajam pada ukuran kanvas asli atau sesuaikan dengan kertas A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da SVG a PDF",
+        description:
+          "Converti SVG in PDF vettoriali nel browser. Mantieni la grafica nitida alle dimensioni originali o adattala a un foglio A4 o Lettera USA.",
+      },
+      ja: {
+        name: "SVGをPDFに変換",
+        description:
+          "ブラウザーでSVGをベクターPDFに変換します。図形の鮮明さを保ったまま、元のサイズで書き出したり、A4やUSレターに収めたりできます。",
+      },
+      ko: {
+        name: "SVG PDF 변환기",
+        description:
+          "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar SVG ke PDF",
+        description:
+          "Tukar SVG kepada PDF vektor terus dalam pelayar. Kekalkan ketajaman grafik pada saiz kanvas asal atau sesuaikannya dengan kertas A4 atau US Letter.",
+      },
+      nl: {
+        name: "SVG naar PDF converteren",
+        description:
+          "Zet SVG om naar een vector-PDF in je browser. Behoud de oorspronkelijke afmetingen of laat de afbeelding op A4 of US Letter passen.",
+      },
+      no: {
+        name: "Konverterer fra SVG til PDF",
+        description:
+          "Konverter SVG til vektorbasert PDF i nettleseren. Behold skarpheten og den opprinnelige størrelsen, eller tilpass illustrasjonen til A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter SVG na PDF",
+        description:
+          "Konwertuj SVG na wektorowy PDF w przeglądarce. Zachowaj ostrość i oryginalne wymiary grafiki lub dopasuj ją do formatu A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de SVG para PDF",
+        description:
+          "Converta SVG em PDF vetorial no navegador. Preserve a nitidez e o tamanho original da ilustração ou ajuste-a para A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер SVG в PDF",
+        description:
+          "Преобразуйте SVG в векторный PDF прямо в браузере. Сохраните чёткость графики при исходном размере или разместите её на листе A4 или US Letter.",
+      },
+      sv: {
+        name: "Konvertera SVG till PDF",
+        description:
+          "Konvertera SVG till vektor-PDF i webbläsaren. Behåll skärpan och originalmåtten eller anpassa grafiken till A4 eller US Letter.",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็น PDF",
+        description:
+          "แปลง SVG เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ คงความคมชัดที่ขนาดเดิม หรือปรับให้พอดีกับกระดาษ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "SVG'den PDF'ye Dönüştürücü",
+        description:
+          "SVG dosyalarını tarayıcınızda vektörel PDF'ye dönüştürün. Çizimin netliğini ve özgün tuval boyutunu koruyun veya çizimi A4 ya da US Letter sayfasına sığdırın.",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang PDF",
+        description:
+          "Chuyển SVG sang PDF vectơ ngay trong trình duyệt. Giữ đồ họa sắc nét ở kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "SVG 转 PDF 转换器",
+        description:
+          "在浏览器中将 SVG 转为矢量 PDF，放大依然清晰。可保留原始画布尺寸，也可适配 A4 或 US Letter 纸张。",
+      },
+      "zh-TW": {
+        name: "SVG 轉 PDF 轉換器",
+        description:
+          "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。",
+      },
+    },
+  },
+  {
     slug: "svg-viewer",
     category: "image",
     icon: "image",
@@ -52261,6 +52515,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EPUB 閱讀器",
         description:
           "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  "epub-to-pdf-converter": {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
       },
     },
   },
@@ -74788,6 +75173,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "SVG 轉圖片轉換器",
         description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
+  "svg-to-pdf-converter": {
+    slug: "svg-to-pdf-converter",
+    category: "image",
+    icon: "file-text",
+    tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
+    locales: {
+      ar: {
+        name: "محوّل SVG إلى PDF",
+        description:
+          "حوّل ملفات SVG إلى PDF متجهي في متصفحك. حافظ على وضوح الرسم بأبعاده الأصلية، أو لائمه مع ورق A4 أو US Letter.",
+      },
+      de: {
+        name: "SVG-zu-PDF-Konverter",
+        description:
+          "Wandle SVG-Dateien im Browser in Vektor-PDFs um. Die Grafik bleibt scharf, ob in Originalgröße, auf A4 oder auf US Letter.",
+      },
+      en: {
+        name: "SVG to PDF Converter",
+        description:
+          "Convert SVG to vector PDF in your browser. Preserve sharp artwork at the original canvas size, or fit it to A4 or US Letter.",
+      },
+      es: {
+        name: "Convertidor de SVG a PDF",
+        description:
+          "Convierte SVG a PDF vectorial en tu navegador. Conserva la nitidez y el tamaño del lienzo original o ajusta el diseño a A4 o carta.",
+      },
+      fr: {
+        name: "Convertisseur SVG en PDF",
+        description:
+          "Convertissez vos SVG en PDF vectoriels dans votre navigateur. Conservez les dimensions d’origine ou adaptez le dessin au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר SVG ל-PDF",
+        description:
+          "המרת SVG ל-PDF וקטורי בדפדפן. אפשר לשמור על חדות האיור במידות המקוריות של משטח הציור או להתאים אותו לדף A4 או US Letter.",
+      },
+      hi: {
+        name: "SVG से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में SVG को वेक्टर PDF में बदलें। चित्र को मूल कैनवस के आकार में साफ़ रखें या A4 या US Letter पन्ने पर फ़िट करें।",
+      },
+      id: {
+        name: "Konverter SVG ke PDF",
+        description:
+          "Ubah SVG menjadi PDF vektor langsung di browser. Jaga gambar tetap tajam pada ukuran kanvas asli atau sesuaikan dengan kertas A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da SVG a PDF",
+        description:
+          "Converti SVG in PDF vettoriali nel browser. Mantieni la grafica nitida alle dimensioni originali o adattala a un foglio A4 o Lettera USA.",
+      },
+      ja: {
+        name: "SVGをPDFに変換",
+        description:
+          "ブラウザーでSVGをベクターPDFに変換します。図形の鮮明さを保ったまま、元のサイズで書き出したり、A4やUSレターに収めたりできます。",
+      },
+      ko: {
+        name: "SVG PDF 변환기",
+        description:
+          "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar SVG ke PDF",
+        description:
+          "Tukar SVG kepada PDF vektor terus dalam pelayar. Kekalkan ketajaman grafik pada saiz kanvas asal atau sesuaikannya dengan kertas A4 atau US Letter.",
+      },
+      nl: {
+        name: "SVG naar PDF converteren",
+        description:
+          "Zet SVG om naar een vector-PDF in je browser. Behoud de oorspronkelijke afmetingen of laat de afbeelding op A4 of US Letter passen.",
+      },
+      no: {
+        name: "Konverterer fra SVG til PDF",
+        description:
+          "Konverter SVG til vektorbasert PDF i nettleseren. Behold skarpheten og den opprinnelige størrelsen, eller tilpass illustrasjonen til A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter SVG na PDF",
+        description:
+          "Konwertuj SVG na wektorowy PDF w przeglądarce. Zachowaj ostrość i oryginalne wymiary grafiki lub dopasuj ją do formatu A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de SVG para PDF",
+        description:
+          "Converta SVG em PDF vetorial no navegador. Preserve a nitidez e o tamanho original da ilustração ou ajuste-a para A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер SVG в PDF",
+        description:
+          "Преобразуйте SVG в векторный PDF прямо в браузере. Сохраните чёткость графики при исходном размере или разместите её на листе A4 или US Letter.",
+      },
+      sv: {
+        name: "Konvertera SVG till PDF",
+        description:
+          "Konvertera SVG till vektor-PDF i webbläsaren. Behåll skärpan och originalmåtten eller anpassa grafiken till A4 eller US Letter.",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็น PDF",
+        description:
+          "แปลง SVG เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ คงความคมชัดที่ขนาดเดิม หรือปรับให้พอดีกับกระดาษ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "SVG'den PDF'ye Dönüştürücü",
+        description:
+          "SVG dosyalarını tarayıcınızda vektörel PDF'ye dönüştürün. Çizimin netliğini ve özgün tuval boyutunu koruyun veya çizimi A4 ya da US Letter sayfasına sığdırın.",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang PDF",
+        description:
+          "Chuyển SVG sang PDF vectơ ngay trong trình duyệt. Giữ đồ họa sắc nét ở kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "SVG 转 PDF 转换器",
+        description:
+          "在浏览器中将 SVG 转为矢量 PDF，放大依然清晰。可保留原始画布尺寸，也可适配 A4 或 US Letter 纸张。",
+      },
+      "zh-TW": {
+        name: "SVG 轉 PDF 轉換器",
+        description:
+          "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。",
       },
     },
   },

@@ -1,0 +1,19 @@
+{
+  "dropSvg": "ลากไฟล์ SVG มาวางที่นี่",
+  "chooseSvg": "เลือก SVG",
+  "tryExample": "ลองใช้ไฟล์ตัวอย่าง",
+  "reading": "กำลังอ่านไฟล์ SVG…",
+  "preview": "ตัวอย่าง SVG",
+  "changeSvg": "เปลี่ยนไฟล์ SVG",
+  "pageSize": "ขนาดหน้า PDF",
+  "original": "ขนาด SVG เดิม",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} มม.",
+  "fitPaper": "ปรับภาพให้พอดีกับหน้าและเว้นขอบกระดาษ",
+  "download": "ดาวน์โหลด PDF",
+  "converting": "กำลังสร้าง PDF…",
+  "downloadReady": "PDF พร้อมแล้ว",
+  "invalidSvg": "เปิดไฟล์นี้เป็น SVG ไม่ได้ เลือกไฟล์ SVG ที่ถูกต้องแล้วลองอีกครั้ง",
+  "conversionFailed": "สร้าง PDF ไม่สำเร็จ ลองลดความซับซ้อนของภาพแล้วส่งออกเป็น SVG ใหม่จากโปรแกรมออกแบบ"
+}

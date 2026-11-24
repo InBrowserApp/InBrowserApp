@@ -1,0 +1,23 @@
+{
+  "open": "Wybierz plik EPUB",
+  "replace": "Wybierz inny plik EPUB",
+  "drop": "lub upuść tutaj plik .epub",
+  "privacy": "Książka pozostaje na Twoim urządzeniu.",
+  "loading": "Przygotowywanie podglądu książki…",
+  "cancel": "Anuluj",
+  "pageSize": "Rozmiar papieru",
+  "letter": "US Letter",
+  "save": "Zapisz jako PDF",
+  "saveHelp": "W oknie drukowania wybierz Zapisz jako PDF. Wyłącz nagłówki i stopki, jeśli chcesz zachować samą treść książki.",
+  "preview": "Podgląd książki",
+  "chapter": "Rozdział",
+  "contents": "Spis treści",
+  "supportingSections": "Przypisy i materiały uzupełniające",
+  "imageUnavailable": "Obraz niedostępny",
+  "missingResources": "Nie udało się dołączyć niektórych obrazów lub innych zasobów.",
+  "unsupported": "Wybierz plik .epub, aby kontynuować.",
+  "invalid": "Nie udało się odczytać pliku EPUB. Spróbuj użyć innej kopii książki.",
+  "protected": "Ten plik EPUB jest zabezpieczony. Wybierz kopię bez DRM.",
+  "unsupportedLayout": "Ten plik EPUB ma stały układ. Wybierz plik EPUB z płynnym układem tekstu.",
+  "printUnavailable": "Drukowanie jest niedostępne w tej przeglądarce. Otwórz narzędzie w przeglądarce, która pozwala zapisywać wydruki jako PDF."
+}

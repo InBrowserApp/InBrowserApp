@@ -1,0 +1,19 @@
+{
+  "dropSvg": "אפשר לגרור לכאן קובץ SVG",
+  "chooseSvg": "בחירת קובץ SVG",
+  "tryExample": "ניסיון עם קובץ לדוגמה",
+  "reading": "קובץ ה-SVG נטען…",
+  "preview": "תצוגה מקדימה של SVG",
+  "changeSvg": "החלפת קובץ SVG",
+  "pageSize": "גודל עמוד ה-PDF",
+  "original": "מידות ה-SVG המקוריות",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} מ״מ",
+  "fitPaper": "האיור מותאם לגודל העמוד עם שוליים.",
+  "download": "הורדת PDF",
+  "converting": "קובץ ה-PDF נוצר…",
+  "downloadReady": "קובץ ה-PDF מוכן.",
+  "invalidSvg": "לא ניתן לפתוח את הקובץ בתור SVG. יש לבחור קובץ SVG תקין ולנסות שוב.",
+  "conversionFailed": "לא הצלחנו ליצור את ה-PDF. כדאי לייצא קובץ SVG פשוט יותר מתוכנת העיצוב ולנסות שוב."
+}

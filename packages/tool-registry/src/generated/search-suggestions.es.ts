@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "Convertidor de EPUB a PDF",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "Validador de números de IVA de la UE",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Convertidor de SVG a imagen",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Convertidor de SVG a PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

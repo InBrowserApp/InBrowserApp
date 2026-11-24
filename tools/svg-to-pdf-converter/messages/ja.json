@@ -1,0 +1,19 @@
+{
+  "dropSvg": "SVGファイルをここにドロップ",
+  "chooseSvg": "SVGを選択",
+  "tryExample": "サンプルを試す",
+  "reading": "SVGを読み込み中…",
+  "preview": "SVGのプレビュー",
+  "changeSvg": "SVGを変更",
+  "pageSize": "PDFのページサイズ",
+  "original": "元のSVGサイズ",
+  "a4": "A4",
+  "letter": "USレター",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "図を余白付きでページに収めます。",
+  "download": "PDFをダウンロード",
+  "converting": "PDFを作成中…",
+  "downloadReady": "PDFの準備ができました。",
+  "invalidSvg": "このファイルをSVGとして開けませんでした。有効なSVGファイルを選び直してください。",
+  "conversionFailed": "PDFを作成できませんでした。デザインツールでSVGを簡略化して書き出し直してください。"
+}

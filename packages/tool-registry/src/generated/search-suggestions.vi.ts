@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "Chuyển EPUB sang PDF",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "Trình xác thực mã số thuế VAT EU",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Trình chuyển SVG sang ảnh",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Trình chuyển SVG sang PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

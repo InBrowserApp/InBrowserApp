@@ -1,0 +1,23 @@
+{
+  "open": "EPUB-bestand kiezen",
+  "replace": "Ander EPUB-bestand kiezen",
+  "drop": "of sleep een .epub-bestand hierheen",
+  "privacy": "Je boek blijft op dit apparaat.",
+  "loading": "Voorbeeld van het boek wordt voorbereid…",
+  "cancel": "Annuleren",
+  "pageSize": "Papierformaat",
+  "letter": "US Letter",
+  "save": "Opslaan als PDF",
+  "saveHelp": "Kies ‘Opslaan als PDF’ in het afdrukvenster. Schakel kop- en voetteksten uit als je alleen de inhoud van het boek wilt opslaan.",
+  "preview": "Voorbeeld van het boek",
+  "chapter": "Hoofdstuk",
+  "contents": "Inhoudsopgave",
+  "supportingSections": "Noten en aanvullende delen",
+  "imageUnavailable": "Afbeelding niet beschikbaar",
+  "missingResources": "Sommige afbeeldingen of andere onderdelen konden niet worden opgenomen.",
+  "unsupported": "Kies een .epub-bestand om verder te gaan.",
+  "invalid": "Dit EPUB-bestand kan niet worden gelezen. Probeer een andere kopie van het boek.",
+  "protected": "Dit EPUB-bestand is beveiligd. Kies een kopie zonder DRM.",
+  "unsupportedLayout": "Dit EPUB-bestand heeft een vaste opmaak. Kies een EPUB met een aanpasbare opmaak.",
+  "printUnavailable": "Afdrukken is niet beschikbaar in deze browser. Open dit hulpprogramma in een browser die afdrukken naar PDF ondersteunt."
+}

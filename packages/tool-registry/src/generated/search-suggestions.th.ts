@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "โปรแกรมแปลง EPUB เป็น PDF",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "ตัวตรวจสอบหมายเลข VAT ของสหภาพยุโรป",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "ตัวแปลง SVG เป็นรูปภาพ",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "ตัวแปลง SVG เป็น PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

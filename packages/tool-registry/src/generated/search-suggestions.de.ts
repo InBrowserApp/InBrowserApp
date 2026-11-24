@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "EPUB-zu-PDF-Konverter",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "EU-USt-IdNr.-Validator",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG-zu-Bild-Konverter",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG-zu-PDF-Konverter",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

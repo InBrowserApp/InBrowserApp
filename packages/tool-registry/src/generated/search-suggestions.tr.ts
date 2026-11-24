@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "EPUB'dan PDF'ye Dönüştürücü",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "AB KDV Numarası Doğrulayıcı",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG'den Görüntü Dönüştürücü",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG'den PDF'ye Dönüştürücü",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

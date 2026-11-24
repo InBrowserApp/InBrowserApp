@@ -1,0 +1,19 @@
+{
+  "dropSvg": "여기에 SVG 파일을 놓으세요",
+  "chooseSvg": "SVG 선택",
+  "tryExample": "예제로 체험하기",
+  "reading": "SVG 읽는 중…",
+  "preview": "SVG 미리보기",
+  "changeSvg": "SVG 바꾸기",
+  "pageSize": "PDF 페이지 크기",
+  "original": "원본 SVG 크기",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "그림을 여백을 제외한 페이지 영역에 맞춥니다.",
+  "download": "PDF 다운로드",
+  "converting": "PDF 만드는 중…",
+  "downloadReady": "PDF가 준비되었습니다.",
+  "invalidSvg": "이 파일을 SVG로 열 수 없습니다. 올바른 SVG 파일을 선택하고 다시 시도하세요.",
+  "conversionFailed": "PDF를 만들 수 없습니다. 디자인 편집기에서 더 단순한 SVG를 내보낸 후 다시 시도하세요."
+}

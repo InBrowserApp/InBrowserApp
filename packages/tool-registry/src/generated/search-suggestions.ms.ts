@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "Penukar EPUB kepada PDF",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "Pengesah Nombor VAT EU",
     slug: "eu-vat-number-validator",
@@ -1346,6 +1351,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Penukar SVG ke imej",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Penukar SVG ke PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",
