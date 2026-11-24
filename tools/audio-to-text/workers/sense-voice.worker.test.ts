@@ -6,10 +6,7 @@ import type {
 } from "../worker-messages"
 
 const { loadRecognizer } = vi.hoisted(() => ({ loadRecognizer: vi.fn() }))
-vi.mock("./sense-voice-runtime", () => ({
-  loadRecognizer,
-  WINDOW_SAMPLES: 512,
-}))
+vi.mock("./sense-voice-runtime", () => ({ loadRecognizer }))
 
 const messages: TranscriptionResponse[] = []
 

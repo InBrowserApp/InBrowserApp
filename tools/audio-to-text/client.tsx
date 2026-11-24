@@ -11,18 +11,12 @@ import {
 } from "@workspace/ui/icons"
 import { AudioPicker, NativeSelect } from "./input-fields"
 import { ModelPicker } from "./model-picker"
-import { SENSE_VOICE_LANGUAGES } from "./models"
+import { supportsLanguage } from "./models"
 import { TranscriptResult } from "./transcript-result"
 import { useTranscription } from "./use-transcription"
 import type { AudioSource } from "./input-fields"
 import type { ModelId } from "./models"
 import type { Messages } from "./types"
-
-function supportsLanguage(model: ModelId, code: string) {
-  return model === "senseVoice"
-    ? SENSE_VOICE_LANGUAGES.some((supported) => supported === code)
-    : code !== "yue"
-}
 
 export default function Client({
   messages: m,
@@ -39,7 +33,7 @@ export default function Client({
   const [language, setLanguage] = useState("")
   const audio = useRef<HTMLAudioElement>(null)
   const id = useId()
-  const { status, segments, partialSegments, error, fallback } = transcription
+  const { status, transcript, draft, error, fallback } = transcription
 
   useEffect(() => {
     return () => {
@@ -54,7 +48,12 @@ export default function Client({
 
   function chooseModel(next: ModelId) {
     setModel(next)
-    setLanguage((current) => (supportsLanguage(next, current) ? current : ""))
+    setLanguage((current) => {
+      if (supportsLanguage(next, current)) return current
+      if (next !== "qwenTimed") return ""
+      const locale = lang.split("-")[0]!
+      return supportsLanguage(next, locale) ? locale : "en"
+    })
   }
 
   function chooseFile(file: File) {
@@ -77,6 +76,7 @@ export default function Client({
   const eta = status?.type === "transcribing" ? status.etaSeconds : undefined
   const preview = status?.type === "transcribing" ? status.preview : undefined
   const transcribing = status?.type === "transcribing"
+  const visibleTranscript = transcribing ? draft : transcript
   const remainingTime =
     eta === undefined
       ? undefined
@@ -125,7 +125,9 @@ export default function Client({
                   disabled={!!status}
                   onChange={(event) => setLanguage(event.currentTarget.value)}
                 >
-                  <option value="">{m.autoLanguage}</option>
+                  {model !== "qwenTimed" && (
+                    <option value="">{m.autoLanguage}</option>
+                  )}
                   {modelLanguages.map(({ code, name }) => (
                     <option key={code} value={code}>
                       {name}
@@ -206,7 +208,11 @@ export default function Client({
 
           {error && (
             <Alert
-              variant={error === "noSpeech" ? "default" : "destructive"}
+              variant={
+                error === "noSpeech" || error === "alignmentFallback"
+                  ? "default"
+                  : "destructive"
+              }
               role="alert"
             >
               <TriangleAlert aria-hidden="true" />
@@ -220,22 +226,16 @@ export default function Client({
         </CardContent>
       </Card>
 
-      {source && (transcribing || segments.length > 0) && (
+      {source && visibleTranscript && (
         <TranscriptResult
           key={source.url}
           filename={source.file.name}
           messages={m}
-          segments={transcribing ? partialSegments : segments}
+          transcript={visibleTranscript}
           transcribing={transcribing}
           preview={preview}
           audioRef={audio}
-          onEdit={(index, text) => {
-            transcription.setSegments((previous) =>
-              previous.map((segment, i) =>
-                i === index ? { ...segment, text } : segment
-              )
-            )
-          }}
+          onChange={transcription.setTranscript}
         />
       )}
     </div>

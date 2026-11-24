@@ -20,6 +20,39 @@ const WHISPER_MODELS = {
 } as const
 
 const SENSE_VOICE_LANGUAGES = ["zh", "yue", "en", "ja", "ko"] as const
+const QWEN_LANGUAGES: Record<string, string> = {
+  ar: "Arabic",
+  yue: "Cantonese",
+  zh: "Chinese",
+  cs: "Czech",
+  da: "Danish",
+  nl: "Dutch",
+  en: "English",
+  fil: "Filipino",
+  fi: "Finnish",
+  fr: "French",
+  de: "German",
+  el: "Greek",
+  hi: "Hindi",
+  hu: "Hungarian",
+  id: "Indonesian",
+  it: "Italian",
+  ja: "Japanese",
+  ko: "Korean",
+  mk: "Macedonian",
+  ms: "Malay",
+  fa: "Persian",
+  pl: "Polish",
+  pt: "Portuguese",
+  ro: "Romanian",
+  ru: "Russian",
+  es: "Spanish",
+  sv: "Swedish",
+  th: "Thai",
+  tr: "Turkish",
+  vi: "Vietnamese",
+}
+const QWEN_TIMED_LANGUAGES = "zh yue en fr de it ja ko pt ru es".split(" ")
 const MODELS = {
   ...WHISPER_MODELS,
   senseVoice: {
@@ -29,11 +62,13 @@ const MODELS = {
     revision: "355f4d4884d8afd08aef04b9007a8556d7b463b2",
     sizes: { int8: 265 },
   },
+  qwenPlain: { name: "Qwen3-ASR 0.6B", sizes: { int8: 1015 } },
+  qwenTimed: { name: "Qwen3-ASR 0.6B", sizes: { int8: 2090 } },
 } as const
 
 type ModelId = keyof typeof MODELS
 
-// Whisper language codes plus Cantonese, which is available in SenseVoice.
+// Whisper language codes. Other engines add their own supported languages.
 const LANGUAGES =
   "af am ar as az ba be bg bn bo br bs ca cs cy da de el en es et eu fa fi fo fr gl gu ha haw he hi hr ht hu hy id is it ja jw ka kk km kn ko la lb ln lo lt lv mg mi mk ml mn mr ms mt my ne nl nn no oc pa pl ps pt ro ru sa sd si sk sl sn so sq sr su sv sw ta te tg th tk tl tr tt uk ur uz vi yi yo zh".split(
     " "
@@ -42,7 +77,7 @@ const LANGUAGES =
 function getSpokenLanguages(lang: string) {
   const names = new Intl.DisplayNames(lang, { type: "language" })
   const collator = new Intl.Collator(lang)
-  return [...LANGUAGES, "yue"]
+  return Array.from(new Set([...LANGUAGES, ...Object.keys(QWEN_LANGUAGES)]))
     .map((code) => ({
       code,
       name: names.of(code === "jw" ? "jv" : code) ?? code,
@@ -50,5 +85,26 @@ function getSpokenLanguages(lang: string) {
     .sort((a, b) => collator.compare(a.name, b.name))
 }
 
-export { getSpokenLanguages, MODELS, SENSE_VOICE_LANGUAGES, WHISPER_MODELS }
+function supportsLanguage(model: ModelId, code: string) {
+  switch (model) {
+    case "senseVoice":
+      return (
+        !code || SENSE_VOICE_LANGUAGES.some((supported) => supported === code)
+      )
+    case "qwenPlain":
+      return !code || Object.hasOwn(QWEN_LANGUAGES, code)
+    case "qwenTimed":
+      return QWEN_TIMED_LANGUAGES.includes(code)
+    default:
+      return !code || LANGUAGES.includes(code)
+  }
+}
+
+export {
+  getSpokenLanguages,
+  MODELS,
+  QWEN_LANGUAGES,
+  supportsLanguage,
+  WHISPER_MODELS,
+}
 export type { ModelId }

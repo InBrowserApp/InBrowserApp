@@ -179,6 +179,16 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
     "00:00:00.250 --> 00:00:01.480\nCorrected &amp; reviewed"
   )
 
+  const format = screen.getByLabelText(messages.exportFormat)
+  expect(screen.getByRole("option", { name: messages.timedTxt })).toBeDefined()
+  expect(screen.getByRole("option", { name: messages.plainTxt })).toBeDefined()
+  fireEvent.change(format, { target: { value: "plain" } })
+  fireEvent.click(screen.getByRole("button", { name: "Download TXT" }))
+  expect(downloads[1]?.download).toBe("team.meeting.txt")
+  const plain = vi.mocked(URL.createObjectURL).mock.lastCall?.[0] as Blob
+  expect(plain.type).toBe("text/plain;charset=utf-8")
+  expect(await plain.text()).toBe("Corrected & reviewed\n")
+
   choose(view.input, new File(["samples"], "different.mp3"))
   expect(screen.queryByRole("textbox")).toBeNull()
   expect(URL.revokeObjectURL).toHaveBeenCalled()
@@ -268,6 +278,83 @@ it("downloads a timestamped partial TXT with only completed passages", async () 
     "Final wording"
   )
   expect(screen.queryByText("Next draft")).toBeNull()
+})
+
+it("previews and exports plain text without cue times, including edits after completion", async () => {
+  const view = renderTool()
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  const worker = workers[0]!
+  worker.emit({
+    type: "transcribing",
+    backend: "webgpu",
+    progress: 0,
+    partialText: "",
+  })
+  const download = screen.getByRole<HTMLButtonElement>("button", {
+    name: messages.downloadPartial,
+  })
+  expect(download.disabled).toBe(true)
+  worker.emit({
+    type: "transcribing",
+    backend: "webgpu",
+    progress: 0.4,
+    partialText: "已确认的会议结果。",
+  })
+  worker.emit({
+    type: "transcribing",
+    backend: "webgpu",
+    progress: 0.7,
+    preview: "Unfinished draft",
+  })
+  expect(screen.getByText("已确认的会议结果。")).toBeDefined()
+  expect(screen.getByText("Unfinished draft")).toBeDefined()
+  expect(screen.queryByRole("textbox")).toBeNull()
+  expect(screen.queryByRole("button", { name: /^Play from/ })).toBeNull()
+  expect(screen.queryByLabelText(messages.exportFormat)).toBeNull()
+
+  const links: HTMLAnchorElement[] = []
+  vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (
+    this: HTMLAnchorElement
+  ) {
+    links.push(this)
+  })
+  fireEvent.click(download)
+  expect(links[0]?.download).toBe("team.meeting.partial.txt")
+  const partial = vi.mocked(URL.createObjectURL).mock.lastCall?.[0] as Blob
+  expect(await partial.text()).toBe("已确认的会议结果。")
+
+  worker.emit({ type: "done", plainText: "已确认的会议结果。\nAction items." })
+  const editor = screen.getByRole<HTMLTextAreaElement>("textbox", {
+    name: messages.transcript,
+  })
+  expect(editor.value).toBe("已确认的会议结果。\nAction items.")
+  expect(screen.getByText(messages.plainEditHint)).toBeDefined()
+  expect(screen.queryByText("Unfinished draft")).toBeNull()
+  expect(screen.queryByLabelText(messages.exportFormat)).toBeNull()
+  expect(screen.queryByRole("button", { name: /^Play from/ })).toBeNull()
+
+  const edited = "  修改后的结果。\n\nAction items.\n"
+  fireEvent.change(editor, { target: { value: edited } })
+  const writeText = vi
+    .spyOn(navigator.clipboard, "writeText")
+    .mockResolvedValue(undefined)
+  fireEvent.click(screen.getByRole("button", { name: messages.copy }))
+  await screen.findByRole("button", { name: messages.copied })
+  expect(writeText).toHaveBeenCalledWith(edited)
+  fireEvent.click(screen.getByRole("button", { name: "Download TXT" }))
+  expect(links[1]?.download).toBe("team.meeting.txt")
+  const full = vi.mocked(URL.createObjectURL).mock.lastCall?.[0] as Blob
+  expect(await full.text()).toBe(edited)
+
+  await chooseModel(/^Whisper Small/)
+  expect(editor.value).toBe(edited)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(2))
+  workers[1]!.emit({ type: "done", plainText: "  " })
+  expect(screen.getByText(messages.noSpeech)).toBeDefined()
+  expect(editor.value).toBe(edited)
 })
 
 it("retries with the same samples on CPU and ignores results from a canceled run", async () => {

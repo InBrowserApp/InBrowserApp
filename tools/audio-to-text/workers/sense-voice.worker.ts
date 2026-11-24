@@ -1,13 +1,12 @@
 import { toSegments } from "../core/transcript"
 import { SAMPLE_RATE } from "../worker-messages"
-import { loadRecognizer, WINDOW_SAMPLES } from "./sense-voice-runtime"
+import { loadRecognizer } from "./sense-voice-runtime"
+import { speechUpdates } from "./voice-activity"
 import type { Segment } from "../core/transcript"
 import type {
   TranscriptionRequest,
   TranscriptionResponse,
 } from "../worker-messages"
-
-const MAX_SPEECH_SAMPLES = 18 * SAMPLE_RATE
 
 function send(message: TranscriptionResponse) {
   self.postMessage(message)
@@ -30,23 +29,10 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
     const duration = audio.length / SAMPLE_RATE
     const segments: Segment[] = []
     const started = performance.now()
-    let speechStart = 0
-    let lastPublished = 0
     try {
-      for (let offset = 0; offset < audio.length; offset += WINDOW_SAMPLES) {
-        const end = Math.min(offset + WINDOW_SAMPLES, audio.length)
-        vad.acceptWaveform(audio.subarray(offset, end))
-        if (!vad.isDetected()) speechStart = end
-        // Bound memory use and publish a passage even during sustained speech.
-        if (end === audio.length || end - speechStart >= MAX_SPEECH_SAMPLES) {
-          vad.flush()
-          speechStart = end
-        }
-
+      for (const { passages, progress } of speechUpdates(audio, vad)) {
         const previousCount = segments.length
-        while (!vad.isEmpty()) {
-          const { samples, start } = vad.front()
-          vad.pop()
+        for (const { samples, start } of passages) {
           const stream = recognizer.createStream()
           try {
             stream.acceptWaveform(SAMPLE_RATE, samples)
@@ -66,13 +52,6 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
         }
 
         const hasNewPassage = previousCount !== segments.length
-        if (
-          !hasNewPassage &&
-          (vad.isDetected() || end - lastPublished < SAMPLE_RATE)
-        )
-          continue
-        lastPublished = end
-        const progress = end / audio.length
         const elapsed = (performance.now() - started) / 1000
         const etaSeconds =
           elapsed >= 1 && progress < 1 && segments.length >= 2

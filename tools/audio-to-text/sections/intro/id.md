@@ -6,7 +6,7 @@ Alat ini membaca format audio yang bisa didekode oleh browser Anda, termasuk MP3
 
 ## Model transkripsi mana yang sebaiknya dipilih?
 
-Gunakan **Whisper Base** untuk rekaman yang jernih atau draf awal. **Whisper Small** membantu menangani percakapan dan aksen. **Whisper Large V3 Turbo** cocok untuk rekaman bising atau sulit dipahami, tetapi unduhannya lebih besar dan membutuhkan lebih banyak memori. Model Whisper mendukung berbagai bahasa dan menuliskan ucapan dalam bahasa aslinya. **SenseVoiceSmall** mendukung bahasa Mandarin, Kanton, Inggris, Jepang, dan Korea.
+Gunakan **Whisper Base** untuk rekaman yang jernih atau draf awal. **Whisper Small** membantu menangani percakapan dan aksen. **Whisper Large V3 Turbo** cocok untuk rekaman bising atau sulit dipahami, tetapi unduhannya lebih besar dan membutuhkan lebih banyak memori. Model Whisper mendukung berbagai bahasa dan menuliskan ucapan dalam bahasa aslinya. **SenseVoiceSmall** mendukung bahasa Mandarin, Kanton, Inggris, Jepang, dan Korea. **Qwen3-ASR 0.6B** menyediakan teks biasa atau penyelarasan waktu untuk pemutaran dan subtitel; penyelarasan mengunduh model tambahan. Transkrip biasa dapat diekspor sebagai TXT.
 
 Whisper menggunakan WebGPU jika browser dan perangkat grafis mendukungnya. Model pilihan Anda diunduh saat pertama kali digunakan. Browser dapat menggunakan kembali file model yang tersimpan di cache. Ukuran unduhan dan lama pemrosesan bergantung pada model dan perangkat. Rekaman didekode dan ditranskripsikan di perangkat Anda. Audio tidak dikirim saat model diunduh. SenseVoiceSmall berjalan secara lokal di CPU melalui WebAssembly. Jika WebGPU tidak tersedia, Whisper beralih ke CPU melalui WebAssembly.
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -8,87 +8,57 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Download, LoaderCircle, Play } from "@workspace/ui/icons"
+import { Download, LoaderCircle } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
-import { FORMATS, formatTranscript, timestamp } from "./core/transcript"
+import { FORMATS, formatTranscript, hasTranscriptText } from "./core/transcript"
 import { NativeSelect } from "./input-fields"
-import type { Format, Segment } from "./core/transcript"
+import { TimedTranscriptRows } from "./timed-transcript-rows"
+import type { Format, Transcript } from "./core/transcript"
 import type { Messages } from "./types"
 import type { RefObject } from "react"
-
-const PLAYBACK_EVENTS = ["play", "pause", "timeupdate", "seeking", "ended"]
-
-function findCurrentSegment(segments: Segment[], milliseconds: number) {
-  for (let index = segments.length - 1; index >= 0; index--) {
-    const { start, end } = segments[index]!
-    if (start <= milliseconds && milliseconds < end) return index
-  }
-  return -1
-}
 
 export function TranscriptResult({
   filename,
   messages: m,
-  segments,
+  transcript,
   audioRef,
   transcribing,
   preview,
-  onEdit,
+  onChange,
 }: {
   filename: string
   messages: Messages
-  segments: Segment[]
+  transcript: Transcript
   audioRef: RefObject<HTMLAudioElement | null>
   transcribing: boolean
   preview?: string
-  onEdit: (index: number, text: string) => void
+  onChange: (next: Transcript) => void
 }) {
   const [format, setFormat] = useState<Format>("txt")
-  const [currentSegment, setCurrentSegment] = useState(-1)
-  const textToCopy = useMemo(
-    () => (transcribing ? "" : formatTranscript(segments, "txt")),
-    [segments, transcribing]
-  )
-  const hasText = segments.some(({ text }) => text.trim())
-
-  useEffect(() => {
-    const audio = audioRef.current
-    if (!audio) return
-
-    const updateCurrentSegment = () => {
-      const time = audio.currentTime * 1000
-      const index =
-        audio.ended || (audio.paused && time === 0)
-          ? -1
-          : findCurrentSegment(segments, time)
-      setCurrentSegment(index)
-    }
-
-    updateCurrentSegment()
-    for (const event of PLAYBACK_EVENTS) {
-      audio.addEventListener(event, updateCurrentSegment)
-    }
-    return () => {
-      for (const event of PLAYBACK_EVENTS) {
-        audio.removeEventListener(event, updateCurrentSegment)
-      }
-    }
-  }, [audioRef, segments])
-
-  function playFrom(milliseconds: number) {
-    const audio = audioRef.current
-    if (!audio) return
-    audio.currentTime = milliseconds / 1000
-    void audio.play().catch(() => audio.focus())
-  }
+  const timed = transcript.kind === "timed"
+  const selectedFormat = timed && !transcribing ? format : "txt"
+  const extension = selectedFormat === "plain" ? "txt" : selectedFormat
+  const textToCopy = useMemo(() => {
+    if (transcribing) return ""
+    return transcript.kind === "plain"
+      ? transcript.text
+      : formatTranscript(transcript.segments, "txt")
+  }, [transcript, transcribing])
+  const hasText = hasTranscriptText(transcript)
+  const hint = transcribing
+    ? m.partialHint
+    : timed
+      ? m.editHint
+      : m.plainEditHint
 
   function download() {
-    const extension = transcribing ? "txt" : format
     const basename = filename.replace(/\.[^.]+$/, "") || filename
+    const text =
+      transcript.kind === "plain"
+        ? transcript.text
+        : formatTranscript(transcript.segments, selectedFormat)
     const url = URL.createObjectURL(
-      new Blob([formatTranscript(segments, extension)], {
-        type: FORMATS[extension],
-      })
+      new Blob([text], { type: FORMATS[extension] })
     )
     const link = document.createElement("a")
     link.href = url
@@ -105,9 +75,7 @@ export function TranscriptResult({
             <CardTitle>
               <h2>{m.transcript}</h2>
             </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              {transcribing ? m.partialHint : m.editHint}
-            </p>
+            <p className="text-sm text-muted-foreground">{hint}</p>
           </div>
           <div className="flex max-w-full flex-wrap items-center gap-2">
             {!transcribing && (
@@ -121,20 +89,19 @@ export function TranscriptResult({
               />
             )}
             <div className="flex flex-wrap items-center gap-2">
-              {!transcribing && (
+              {timed && !transcribing && (
                 <NativeSelect
                   aria-label={m.exportFormat}
-                  className="w-fit"
+                  className="w-fit max-w-full"
                   value={format}
                   onChange={(event) =>
                     setFormat(event.currentTarget.value as Format)
                   }
                 >
-                  {Object.keys(FORMATS).map((key) => (
-                    <option key={key} value={key}>
-                      {key.toUpperCase()}
-                    </option>
-                  ))}
+                  <option value="txt">{m.timedTxt}</option>
+                  <option value="plain">{m.plainTxt}</option>
+                  <option value="srt">SRT</option>
+                  <option value="vtt">VTT</option>
                 </NativeSelect>
               )}
               <Button
@@ -146,70 +113,63 @@ export function TranscriptResult({
                 <Download data-icon="inline-start" aria-hidden="true" />
                 {transcribing
                   ? m.downloadPartial
-                  : m.download.replace("{format}", format.toUpperCase())}
+                  : m.download.replace("{format}", extension.toUpperCase())}
               </Button>
             </div>
           </div>
         </div>
       </CardHeader>
       <CardContent>
-        <div className="overflow-hidden rounded-lg border">
-          <ol className="max-h-[36rem] divide-y overflow-y-auto">
-            {segments.map(({ start, end, text }, index) => {
-              const time = timestamp(start)
-              const current = index === currentSegment
-              return (
-                <li
-                  key={`${start}-${end}-${index}`}
-                  className={cn(
-                    "grid items-start gap-x-2 border-s-2 border-s-transparent px-3 py-1.5 sm:grid-cols-[auto_minmax(0,1fr)]",
-                    current && "border-s-primary bg-muted"
-                  )}
-                >
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="ghost"
-                    dir="ltr"
-                    className={cn(
-                      "h-auto justify-self-start py-2 font-mono text-xs leading-5 tabular-nums",
-                      !current && "text-muted-foreground"
-                    )}
-                    aria-label={m.playFrom.replace("{time}", time)}
-                    aria-current={current ? "time" : undefined}
-                    onClick={() => playFrom(start)}
-                  >
-                    <Play data-icon="inline-start" aria-hidden="true" />
-                    {time}
-                  </Button>
-                  {transcribing ? (
-                    <p
-                      dir="auto"
-                      className="min-w-0 border border-transparent px-2.5 py-2 text-start text-base leading-5 wrap-anywhere md:text-sm"
-                    >
-                      {text}
-                    </p>
-                  ) : (
-                    <Textarea
-                      aria-label={m.editSegment.replace("{time}", time)}
-                      dir="auto"
-                      rows={1}
-                      className="min-h-9 min-w-0 resize-y border-transparent text-start leading-5 hover:bg-muted/40 supports-[field-sizing:content]:resize-none dark:bg-transparent"
-                      value={text}
-                      onChange={(event) =>
-                        onEdit(index, event.currentTarget.value)
-                      }
-                    />
-                  )}
-                </li>
-              )
-            })}
-          </ol>
+        <div
+          className={cn(
+            "overflow-hidden rounded-lg border",
+            !timed && "focus-within:ring-2 focus-within:ring-ring/50"
+          )}
+        >
+          {transcript.kind === "timed" ? (
+            <TimedTranscriptRows
+              segments={transcript.segments}
+              audioRef={audioRef}
+              messages={m}
+              transcribing={transcribing}
+              onEdit={(index, text) =>
+                onChange({
+                  kind: "timed",
+                  segments: transcript.segments.map((segment, i) =>
+                    i === index ? { ...segment, text } : segment
+                  ),
+                })
+              }
+            />
+          ) : transcribing ? (
+            hasText && (
+              <p
+                dir="auto"
+                className="max-h-[36rem] overflow-y-auto px-4 py-3 text-sm leading-6 wrap-anywhere whitespace-pre-wrap"
+              >
+                {transcript.text}
+              </p>
+            )
+          ) : (
+            <Textarea
+              aria-label={m.transcript}
+              dir="auto"
+              rows={6}
+              value={transcript.text}
+              className="max-h-[36rem] min-h-40 resize-y rounded-none border-0 px-4 py-3 text-start leading-6 focus-visible:ring-0 dark:bg-transparent"
+              onChange={(event) =>
+                onChange({
+                  kind: "plain",
+                  text: event.currentTarget.value,
+                })
+              }
+            />
+          )}
           {transcribing && (
             <div
               className={cn(
                 "grid gap-2 bg-muted/25 px-4 py-3",
-                segments.length > 0 && "border-t"
+                hasText && "border-t"
               )}
             >
               {preview && (

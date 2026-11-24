@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest"
-import { formatTranscript, timestamp, toSegments } from "./transcript"
+import {
+  formatTranscript,
+  hasTranscriptText,
+  timestamp,
+  toSegments,
+} from "./transcript"
 
 describe("timestamped audio exports", () => {
   const segments = [
@@ -19,6 +24,22 @@ describe("timestamped audio exports", () => {
       "WEBVTT\n\n00:00:00.630 --> 00:00:04.200\nR&amp;D &lt;update&gt;\n\n00:00:05.200 --> 00:00:07.600\nNext item\n"
     )
     expect(timestamp(3_661_023)).toBe("01:01:01.023")
+  })
+
+  it("omits timestamps from plain TXT without removing paragraph breaks", () => {
+    expect(formatTranscript(segments, "plain")).toBe(
+      "R&D <update>\n\nNext\n\nitem\n"
+    )
+  })
+
+  it("distinguishes an empty transcript from editable text in either mode", () => {
+    expect(hasTranscriptText({ kind: "plain", text: " \n" })).toBe(false)
+    expect(hasTranscriptText({ kind: "plain", text: "会议记录" })).toBe(true)
+    expect(hasTranscriptText({ kind: "timed", segments: [] })).toBe(false)
+    expect(hasTranscriptText({ kind: "timed", segments: [segments[1]!] })).toBe(
+      false
+    )
+    expect(hasTranscriptText({ kind: "timed", segments })).toBe(true)
   })
 
   it("reconstructs missing boundaries and clips cues to the recording", () => {

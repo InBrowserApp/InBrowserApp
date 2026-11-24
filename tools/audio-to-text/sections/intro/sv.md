@@ -6,7 +6,7 @@ Verktyget kan läsa ljudformat som din webbläsare stöder, till exempel vanliga
 
 ## Vilken transkriptionsmodell ska jag välja?
 
-Använd **Whisper Base** för tydliga inspelningar eller ett första utkast. **Whisper Small** kan hjälpa med accenter och samtal. **Whisper Large V3 Turbo** passar för brusiga inspelningar eller tal som är svårt att uppfatta, men kräver en större nedladdning och mer minne. Whisper-modellerna transkriberar flera språk på originalspråket. **SenseVoiceSmall** stöder mandarin, kantonesiska, engelska, japanska och koreanska.
+Använd **Whisper Base** för tydliga inspelningar eller ett första utkast. **Whisper Small** kan hjälpa med accenter och samtal. **Whisper Large V3 Turbo** passar för brusiga inspelningar eller tal som är svårt att uppfatta, men kräver en större nedladdning och mer minne. Whisper-modellerna transkriberar flera språk på originalspråket. **SenseVoiceSmall** stöder mandarin, kantonesiska, engelska, japanska och koreanska. **Qwen3-ASR 0.6B** erbjuder ren text eller tidsanpassning för uppspelning och undertexter; tidsanpassning laddar ner en extra modell. Ren text kan exporteras som TXT.
 
 Whisper använder WebGPU när webbläsaren och grafikhårdvaran stöder det. Modellen du valt laddas ned första gången du använder den. Webbläsaren kan återanvända modellfilerna som finns kvar i cacheminnet. Nedladdningsstorleken och bearbetningstiden beror på modell och enhet. Inspelningen läses in och transkriberas på din enhet. Ingen inspelad ljuddata skickas när modellen laddas ned. SenseVoiceSmall körs lokalt på processorn via WebAssembly. Om WebGPU inte är tillgängligt använder Whisper processorn via WebAssembly.
 

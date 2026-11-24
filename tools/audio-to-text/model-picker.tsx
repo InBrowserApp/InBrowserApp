@@ -46,6 +46,10 @@ export function ModelPicker({
     return min === max ? size : `${number.format(min)}–${size}`
   }
 
+  function mode(key: ModelId) {
+    return key === "qwenPlain" || key === "qwenTimed" ? m[key] : undefined
+  }
+
   return (
     <div className="grid min-w-0 gap-2">
       <Label htmlFor={id}>{m.model}</Label>
@@ -61,7 +65,10 @@ export function ModelPicker({
         >
           <SelectValue>
             <span className="grid min-w-0 gap-0.5">
-              <bdi className="font-medium wrap-break-word">{selected.name}</bdi>
+              <span className="font-medium wrap-break-word">
+                <bdi>{selected.name}</bdi>
+                {mode(model) && <> · {mode(model)}</>}
+              </span>
               <span className="text-xs leading-5 text-muted-foreground">
                 {sizePrefix}
                 <bdi dir="ltr" className="whitespace-nowrap">
@@ -82,14 +89,17 @@ export function ModelPicker({
             <SelectItem
               key={key}
               value={key}
-              textValue={MODELS[key].name}
+              textValue={[MODELS[key].name, mode(key)]
+                .filter(Boolean)
+                .join(" ")}
               className="items-start p-2 pe-8 [&>span:first-child]:end-2 [&>span:first-child]:top-2.5 rtl:[&>span:first-child]:right-auto [&>span:last-child]:min-w-0 [&>span:last-child]:flex-1"
             >
               <span className="grid w-full min-w-0 gap-0.5">
                 <span className="flex flex-wrap items-baseline justify-between gap-x-2">
-                  <bdi className="font-medium wrap-break-word">
-                    {MODELS[key].name}
-                  </bdi>
+                  <span className="font-medium wrap-break-word">
+                    <bdi>{MODELS[key].name}</bdi>
+                    {mode(key) && <> · {mode(key)}</>}
+                  </span>
                   <bdi dir="ltr" className="text-xs text-muted-foreground">
                     {compactSize(Object.values(MODELS[key].sizes))}
                   </bdi>

@@ -6,7 +6,7 @@ A ferramenta lê os formatos de áudio que o navegador consegue descodificar, in
 
 ## Que modelo de transcrição devo escolher?
 
-Use **Whisper Base** para gravações claras ou uma primeira transcrição. **Whisper Small** pode ajudar com sotaques e conversas. **Whisper Large V3 Turbo** é adequado para gravações com ruído ou difíceis de entender, mas requer uma transferência maior e mais memória. Os modelos Whisper transcrevem vários idiomas no idioma original. **SenseVoiceSmall** suporta mandarim, cantonês, inglês, japonês e coreano.
+Use **Whisper Base** para gravações claras ou uma primeira transcrição. **Whisper Small** pode ajudar com sotaques e conversas. **Whisper Large V3 Turbo** é adequado para gravações com ruído ou difíceis de entender, mas requer uma transferência maior e mais memória. Os modelos Whisper transcrevem vários idiomas no idioma original. **SenseVoiceSmall** suporta mandarim, cantonês, inglês, japonês e coreano. O **Qwen3-ASR 0.6B** oferece texto simples ou alinhamento de tempo para reprodução e legendas; o alinhamento transfere um modelo adicional. A transcrição simples pode ser exportada como TXT.
 
 O Whisper usa WebGPU quando o navegador e o hardware gráfico são compatíveis. Na primeira utilização, é transferido o modelo que escolheu. O navegador pode reutilizar os ficheiros do modelo que mantiver na cache. O tamanho da transferência e o tempo de processamento dependem do modelo e do dispositivo. A gravação é descodificada e transcrita no seu dispositivo. A transferência do modelo é independente da gravação. O SenseVoiceSmall funciona localmente na CPU através de WebAssembly. Se o WebGPU não estiver disponível, o Whisper recorre à CPU através de WebAssembly.
 

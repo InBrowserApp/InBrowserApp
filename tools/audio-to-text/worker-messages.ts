@@ -17,8 +17,15 @@ export type TranscriptionResponse =
       etaSeconds?: number
       preview?: string
       partialSegments?: Segment[]
+      partialText?: string
     }
-  | { type: "done"; segments: Segment[] }
+  | { type: "done"; segments: Segment[]; plainText?: never }
+  | {
+      type: "done"
+      plainText: string
+      segments?: never
+      alignmentFallback?: boolean
+    }
   | { type: "retry"; audio: Float32Array<ArrayBuffer> }
   | { type: "error"; stage: "modelError" | "transcriptionError" }
 

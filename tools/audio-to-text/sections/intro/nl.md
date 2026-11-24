@@ -6,7 +6,7 @@ De tool kan audioformaten lezen die je browser ondersteunt, waaronder gangbare M
 
 ## Welk transcriptiemodel past bij mijn opname?
 
-Gebruik **Whisper Base** voor duidelijke opnames of een eerste versie. **Whisper Small** kan helpen bij accenten en gesprekken. **Whisper Large V3 Turbo** is geschikt voor opnames met ruis of moeilijk verstaanbare spraak, maar vereist een grotere download en meer geheugen. De Whisper-modellen transcriberen meerdere talen in de oorspronkelijke taal. **SenseVoiceSmall** ondersteunt Mandarijn, Kantonees, Engels, Japans en Koreaans.
+Gebruik **Whisper Base** voor duidelijke opnames of een eerste versie. **Whisper Small** kan helpen bij accenten en gesprekken. **Whisper Large V3 Turbo** is geschikt voor opnames met ruis of moeilijk verstaanbare spraak, maar vereist een grotere download en meer geheugen. De Whisper-modellen transcriberen meerdere talen in de oorspronkelijke taal. **SenseVoiceSmall** ondersteunt Mandarijn, Kantonees, Engels, Japans en Koreaans. **Qwen3-ASR 0.6B** biedt alleen tekst of tijdcodes voor afspelen en ondertitels; voor tijdcodes wordt een extra model gedownload. Tekst zonder tijdcodes kun je als TXT exporteren.
 
 Whisper gebruikt WebGPU als je browser en grafische hardware dat ondersteunen. Bij het eerste gebruik wordt het gekozen model gedownload. De browser kan de modelbestanden die in het cachegeheugen staan opnieuw gebruiken. De downloadgrootte en verwerkingstijd hangen af van het model en het apparaat. Je opname wordt op je apparaat ingelezen en getranscribeerd. Bij het downloaden van het model wordt je opname nergens naartoe gestuurd. SenseVoiceSmall draait lokaal op de CPU via WebAssembly. Als WebGPU niet beschikbaar is, schakelt Whisper via WebAssembly over op de CPU.
 

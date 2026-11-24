@@ -6,7 +6,7 @@ Công cụ đọc được các định dạng âm thanh mà trình duyệt hỗ
 
 ## Nên chọn mô hình nhận dạng giọng nói nào?
 
-Dùng **Whisper Base** cho bản ghi rõ tiếng hoặc bản chép lời đầu tiên. **Whisper Small** có thể hỗ trợ với hội thoại và các giọng khác nhau. **Whisper Large V3 Turbo** phù hợp với bản ghi có tiếng ồn hoặc khó nghe rõ, nhưng cần tải nhiều dữ liệu hơn và dùng nhiều bộ nhớ hơn. Các mô hình Whisper chép lời nhiều ngôn ngữ theo ngôn ngữ gốc. **SenseVoiceSmall** hỗ trợ tiếng Quan thoại, tiếng Quảng Đông, tiếng Anh, tiếng Nhật và tiếng Hàn.
+Dùng **Whisper Base** cho bản ghi rõ tiếng hoặc bản chép lời đầu tiên. **Whisper Small** có thể hỗ trợ với hội thoại và các giọng khác nhau. **Whisper Large V3 Turbo** phù hợp với bản ghi có tiếng ồn hoặc khó nghe rõ, nhưng cần tải nhiều dữ liệu hơn và dùng nhiều bộ nhớ hơn. Các mô hình Whisper chép lời nhiều ngôn ngữ theo ngôn ngữ gốc. **SenseVoiceSmall** hỗ trợ tiếng Quan thoại, tiếng Quảng Đông, tiếng Anh, tiếng Nhật và tiếng Hàn. **Qwen3-ASR 0.6B** cung cấp văn bản thuần hoặc căn chỉnh thời gian để phát lại và tạo phụ đề; tính năng căn chỉnh tải thêm một mô hình. Bản chép lời thuần văn bản có thể xuất thành TXT.
 
 Whisper sử dụng WebGPU khi trình duyệt và phần cứng đồ họa hỗ trợ. Lần đầu sử dụng, trình duyệt sẽ tải mô hình bạn chọn và có thể dùng lại những tệp mô hình còn trong bộ nhớ đệm. Dung lượng tải xuống và thời gian xử lý tùy thuộc vào mô hình và thiết bị. Thiết bị của bạn tự giải mã và chép lời bản ghi, còn quá trình tải mô hình không gửi đi âm thanh. SenseVoiceSmall chạy cục bộ trên CPU qua WebAssembly. Nếu không có WebGPU, Whisper chuyển sang dùng CPU qua WebAssembly.
 

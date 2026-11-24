@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
+import { hasTranscriptText } from "./core/transcript"
 import { SAMPLE_RATE } from "./worker-messages"
-import type { Segment } from "./core/transcript"
+import type { Transcript } from "./core/transcript"
 import type { ModelId } from "./models"
 import type {
   TranscriptionRequest,
@@ -16,6 +17,9 @@ type ErrorMessage =
   | "modelError"
   | "transcriptionError"
   | "noSpeech"
+  | "alignmentFallback"
+
+const EMPTY_DRAFT: Transcript = { kind: "timed", segments: [] }
 
 async function decode(file: File) {
   const context = new OfflineAudioContext(1, 1, SAMPLE_RATE)
@@ -34,8 +38,8 @@ async function decode(file: File) {
 function useTranscription() {
   const active = useRef<Job | null>(null)
   const [status, setStatus] = useState<Status | null>(null)
-  const [segments, setSegments] = useState<Segment[]>([])
-  const [partialSegments, setPartialSegments] = useState<Segment[]>([])
+  const [transcript, setTranscript] = useState<Transcript | null>(null)
+  const [draft, setDraft] = useState<Transcript>(EMPTY_DRAFT)
   const [error, setError] = useState<ErrorMessage | null>(null)
   const [fallback, setFallback] = useState(false)
 
@@ -50,12 +54,12 @@ function useTranscription() {
     active.current?.worker?.terminate()
     active.current = null
     setStatus(null)
-    setPartialSegments([])
+    setDraft(EMPTY_DRAFT)
   }
 
   function clear() {
     setError(null)
-    setSegments([])
+    setTranscript(null)
     setFallback(false)
   }
 
@@ -79,10 +83,17 @@ function useTranscription() {
                 new URL("./workers/sense-voice.worker.ts", import.meta.url),
                 { type: "module" }
               )
-            : new Worker(
-                new URL("./workers/transcribe.worker.ts", import.meta.url),
-                { type: "module" }
-              )
+            : model === "qwenPlain" || model === "qwenTimed"
+              ? new Worker(
+                  new URL("./workers/qwen.worker.ts", import.meta.url),
+                  {
+                    type: "module",
+                  }
+                )
+              : new Worker(
+                  new URL("./workers/transcribe.worker.ts", import.meta.url),
+                  { type: "module" }
+                )
         job.worker = worker
         worker.onmessage = ({ data }: MessageEvent<TranscriptionResponse>) => {
           if (active.current !== job || job.worker !== worker) return
@@ -91,21 +102,33 @@ function useTranscription() {
               setStatus(data)
               break
             case "transcribing":
-              if (data.partialSegments) setPartialSegments(data.partialSegments)
+              if (data.partialText !== undefined) {
+                setDraft({ kind: "plain", text: data.partialText })
+              } else if (data.partialSegments) {
+                setDraft({ kind: "timed", segments: data.partialSegments })
+              }
               setStatus(data)
               break
             case "retry":
               worker.terminate()
               setFallback(true)
-              setPartialSegments([])
+              setDraft(EMPTY_DRAFT)
               setStatus({ type: "loading", backend: "wasm" })
               run(data.audio, true)
               break
-            case "done":
+            case "done": {
+              const result: Transcript =
+                data.plainText !== undefined
+                  ? { kind: "plain", text: data.plainText }
+                  : { kind: "timed", segments: data.segments }
               stop()
-              if (data.segments.length) setSegments(data.segments)
-              else setError("noSpeech")
+              if (hasTranscriptText(result)) {
+                setTranscript(result)
+                if ("alignmentFallback" in data && data.alignmentFallback)
+                  setError("alignmentFallback")
+              } else setError("noSpeech")
               break
+            }
             case "error":
               fail(data.stage)
           }
@@ -139,9 +162,9 @@ function useTranscription() {
 
   return {
     status,
-    segments,
-    partialSegments,
-    setSegments,
+    transcript,
+    draft,
+    setTranscript,
     error,
     fallback,
     start,

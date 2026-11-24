@@ -33,6 +33,12 @@ sherpa-onnx notices: https://github.com/k2-fsa/sherpa-onnx/blob/master/LICENSE
 Silero VAD: https://github.com/snakers4/silero-vad
 Silero VAD license: https://github.com/snakers4/silero-vad/blob/master/LICENSE
 
+Qwen3-ASR-0.6B and Qwen3-ForcedAligner-0.6B are developed by the Qwen team
+at Alibaba and are used under the Apache License 2.0.
+Qwen3-ASR and the forced aligner: https://github.com/QwenLM/Qwen3-ASR
+Qwen3-ASR sherpa-onnx conversion: https://huggingface.co/cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25
+Qwen3-ForcedAligner ONNX conversion: https://huggingface.co/valoomba/Qwen3-ForcedAligner-0.6B-ONNX
+
 
                                  Apache License
                            Version 2.0, January 2004

@@ -6,7 +6,7 @@ Narzędzie odczytuje pliki, które potrafi zdekodować Twoja przeglądarka, w ty
 
 ## Który model transkrypcji wybrać?
 
-Użyj **Whisper Base** do wyraźnych nagrań lub wstępnej transkrypcji. **Whisper Small** może pomóc w przypadku rozmów i akcentów. **Whisper Large V3 Turbo** nadaje się do nagrań z szumem lub trudną do zrozumienia mową, ale wymaga pobrania większego pliku i więcej pamięci. Modele Whisper transkrybują wiele języków w języku oryginału. **SenseVoiceSmall** obsługuje język mandaryński, kantoński, angielski, japoński i koreański.
+Użyj **Whisper Base** do wyraźnych nagrań lub wstępnej transkrypcji. **Whisper Small** może pomóc w przypadku rozmów i akcentów. **Whisper Large V3 Turbo** nadaje się do nagrań z szumem lub trudną do zrozumienia mową, ale wymaga pobrania większego pliku i więcej pamięci. Modele Whisper transkrybują wiele języków w języku oryginału. **SenseVoiceSmall** obsługuje język mandaryński, kantoński, angielski, japoński i koreański. **Qwen3-ASR 0.6B** oferuje sam tekst lub dopasowanie czasu do odtwarzania i napisów; dopasowanie wymaga pobrania dodatkowego modelu. Sam tekst można wyeksportować jako TXT.
 
 Whisper korzysta z WebGPU, gdy przeglądarka i sprzęt graficzny je obsługują. Wybrany model jest pobierany przy pierwszym uruchomieniu. Przeglądarka może potem ponownie użyć plików modelu zapisanych w pamięci podręcznej. Rozmiar pobieranych plików i czas przetwarzania zależą od modelu i urządzenia. Dekodowanie i transkrypcja odbywają się na Twoim urządzeniu. Podczas pobierania modelu nagranie nie jest wysyłane. SenseVoiceSmall działa lokalnie na procesorze przez WebAssembly. Gdy WebGPU jest niedostępne, Whisper przełącza się na procesor przez WebAssembly.
 

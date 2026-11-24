@@ -6,7 +6,7 @@ Das Tool verarbeitet Audioformate, die dein Browser lesen kann. Dazu zählen gä
 
 ## Welches Transkriptionsmodell passt zu meiner Aufnahme?
 
-**Whisper Base** eignet sich für klare Aufnahmen oder einen ersten Durchlauf. **Whisper Small** hilft bei Akzenten und Gesprächen. **Whisper Large V3 Turbo** eignet sich für verrauschte oder schwer verständliche Aufnahmen, benötigt aber einen größeren Download und mehr Arbeitsspeicher. Die Whisper-Modelle transkribieren mehrere Sprachen in der Originalsprache. **SenseVoiceSmall** unterstützt Mandarin, Kantonesisch, Englisch, Japanisch und Koreanisch.
+**Whisper Base** eignet sich für klare Aufnahmen oder einen ersten Durchlauf. **Whisper Small** hilft bei Akzenten und Gesprächen. **Whisper Large V3 Turbo** eignet sich für verrauschte oder schwer verständliche Aufnahmen, benötigt aber einen größeren Download und mehr Arbeitsspeicher. Die Whisper-Modelle transkribieren mehrere Sprachen in der Originalsprache. **SenseVoiceSmall** unterstützt Mandarin, Kantonesisch, Englisch, Japanisch und Koreanisch. **Qwen3-ASR 0.6B** bietet reinen Text oder Zeitstempel für Wiedergabe und Untertitel; dafür wird ein zusätzliches Modell heruntergeladen. Reiner Text lässt sich als TXT exportieren.
 
 Whisper nutzt WebGPU, wenn Browser und Grafikhardware es unterstützen. Beim ersten Start wird das gewählte Modell heruntergeladen. Dateien, die der Browser im Cache behält, können wiederverwendet werden. Downloadgröße und Verarbeitungszeit hängen vom Modell und Gerät ab. Deine Aufnahme wird auf deinem Gerät gelesen und transkribiert. Beim Modelldownload wird keine Aufnahme übertragen. SenseVoiceSmall läuft lokal auf der CPU über WebAssembly. Ist WebGPU nicht verfügbar, weicht Whisper über WebAssembly auf die CPU aus.
 

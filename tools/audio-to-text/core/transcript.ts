@@ -1,12 +1,21 @@
 type Segment = { start: number; end: number; text: string }
 type Chunk = { timestamp: [number | null, number | null]; text: string }
+type Transcript =
+  | { kind: "timed"; segments: Segment[] }
+  | { kind: "plain"; text: string }
 
 const FORMATS = {
   txt: "text/plain;charset=utf-8",
   srt: "application/x-subrip;charset=utf-8",
   vtt: "text/vtt;charset=utf-8",
 } as const
-type Format = keyof typeof FORMATS
+type Format = keyof typeof FORMATS | "plain"
+
+function hasTranscriptText(transcript: Transcript) {
+  return transcript.kind === "plain"
+    ? transcript.text.trim().length > 0
+    : transcript.segments.some(({ text }) => text.trim().length > 0)
+}
 
 function toSegments(chunks: Chunk[], duration: number): Segment[] {
   let previousEnd = 0
@@ -42,6 +51,7 @@ function formatTranscript(segments: Segment[], format: Format) {
   const cues = segments
     .filter(({ text }) => text.trim())
     .map(({ start, end, text }, index) => {
+      if (format === "plain") return text.trim()
       // Subtitle cue blocks are separated by blank lines.
       const content = text.trim().replace(/\s+/g, " ")
       if (format === "txt") return `[${timestamp(start)}] ${content}`
@@ -58,5 +68,5 @@ function formatTranscript(segments: Segment[], format: Format) {
   return (format === "vtt" ? "WEBVTT\n\n" : "") + body + "\n"
 }
 
-export { FORMATS, formatTranscript, timestamp, toSegments }
-export type { Format, Segment }
+export { FORMATS, formatTranscript, hasTranscriptText, timestamp, toSegments }
+export type { Format, Segment, Transcript }
