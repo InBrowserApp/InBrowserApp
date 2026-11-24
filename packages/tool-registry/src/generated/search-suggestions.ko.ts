@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "음성을 텍스트로 변환",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "오디오 자르기 및 합치기",
     slug: "audio-trimmer-merger",
   },

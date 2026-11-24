@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio en texte",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Découpe et fusion audio",
     slug: "audio-trimmer-merger",
   },

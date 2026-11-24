@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio ke Teks",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Pemotong & Penggabung Audio",
     slug: "audio-trimmer-merger",
   },

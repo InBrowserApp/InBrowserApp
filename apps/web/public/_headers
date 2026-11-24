@@ -2,6 +2,11 @@
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Embedder-Policy: require-corp
 
+# Model downloads only need the worker origin for CORS.
+# Hugging Face rejects requests with some preview domains as the referrer.
+/_astro/transcribe.worker-*.js
+  Referrer-Policy: no-referrer
+
 # Shared WebAssembly memory is isolated only on native office PDF converters.
 /tools/ppt-to-pdf-converter/
   Cross-Origin-Opener-Policy: same-origin

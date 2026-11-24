@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "המרת שמע לטקסט",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "חיתוך ומיזוג אודיו",
     slug: "audio-trimmer-merger",
   },

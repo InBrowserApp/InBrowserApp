@@ -1,0 +1,27 @@
+{
+  "name": "@tool/audio-to-text",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "catalog:",
+    "@sherpaw/asr": "catalog:",
+    "@sherpaw/vad": "catalog:",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "onnxruntime-web": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

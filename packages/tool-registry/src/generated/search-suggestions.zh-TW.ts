@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "錄音轉文字",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "音訊裁剪與合併",
     slug: "audio-trimmer-merger",
   },

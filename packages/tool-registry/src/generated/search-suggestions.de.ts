@@ -104,6 +104,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio in Text umwandeln",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "Audio schneiden & zusammenfügen",
     slug: "audio-trimmer-merger",
   },
