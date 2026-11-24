@@ -4,6 +4,7 @@ import {
   render,
   screen,
   waitFor,
+  within,
 } from "@testing-library/react"
 import { afterEach, describe, expect, it, vi } from "vitest"
 
@@ -50,6 +51,8 @@ describe("PDF/A converter controls", () => {
     const link = await screen.findByRole("link", { name: messages.download })
     expect(link.getAttribute("download")).toBe("Records-pdfa-2b.pdf")
     expect(link.getAttribute("href")).toBe("blob:archive")
+    const result = within(screen.getByRole("status"))
+    expect(result.getByText("PDF/A-2b")).toBeTruthy()
     expect(convert).toHaveBeenCalledWith(
       source,
       expect.objectContaining({ profile: 2 })
@@ -59,6 +62,15 @@ describe("PDF/A converter controls", () => {
     expect(screen.queryByRole("link", { name: messages.download })).toBeNull()
     expect(revoke).toHaveBeenCalledWith("blob:archive")
     expect(screen.getByText(messages.part1)).toBeTruthy()
+    expect(result.queryByText("PDF/A-2b")).toBeNull()
+
+    fireEvent.click(startButton())
+    expect(await result.findByText("PDF/A-1b")).toBeTruthy()
+    expect(
+      result
+        .getByRole("link", { name: messages.download })
+        .getAttribute("download")
+    ).toBe("Records-pdfa-1b.pdf")
   })
 
   it("retains the selected file if archive checks fail", async () => {

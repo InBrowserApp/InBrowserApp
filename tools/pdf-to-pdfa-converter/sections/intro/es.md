@@ -3,7 +3,7 @@
 1. Elige un PDF o arrástralo y suéltalo en la herramienta.
 2. Selecciona el estándar PDF/A que exige tu archivo o portal de entrega. Para archivar documentos en general, elige **PDF/A-2b**.
 3. Selecciona **Convertir a PDF/A**. La herramienta comprueba el archivo generado según el perfil elegido.
-4. Si se superan las comprobaciones, descarga la copia PDF/A. Tu PDF original se conserva intacto.
+4. Confirma el perfil PDF/A que aparece junto al botón de descarga y guarda la copia. Tu PDF original se conserva intacto.
 
 ## ¿Qué es PDF/A?
 
@@ -11,7 +11,7 @@ PDF/A es el formato definido por la familia de normas ISO 19005 para conservar d
 
 ## ¿Qué estándar PDF/A conviene elegir?
 
-**PDF/A-2b** es una buena opción para el archivado general. Elige **PDF/A-1b** si un archivo, un juzgado o un portal de entrega pide expresamente ese estándar anterior. Ambos perfiles corresponden al nivel B, que se centra en conservar el aspecto visual de las páginas. PDF/A-2b admite transparencias. Úsalo para documentos con gráficos o efectos transparentes si tu archivo lo acepta.
+Elige el estándar que solicite tu archivo o portal de entrega. **PDF/A-2b** es una buena opción para el archivado general. Elige **PDF/A-1b** si te piden ese estándar anterior. Ambos perfiles corresponden al nivel B, que se centra en conservar el aspecto visual de las páginas. PDF/A-2b admite transparencias. Úsalo para documentos con gráficos o efectos transparentes si tu archivo lo acepta.
 
 ## ¿Qué cambia en la copia PDF/A?
 
@@ -20,3 +20,7 @@ El texto y los gráficos vectoriales se conservan en el PDF. Puedes seguir busca
 ## ¿Cómo se comprueba el archivo PDF/A?
 
 La herramienta comprueba los requisitos del perfil PDF/A elegido durante la conversión. Luego el navegador vuelve a abrir la copia PDF/A y comprueba su identificación PDF/A, la geometría de las páginas y el texto en el que se pueden hacer búsquedas. Podrás descargarla cuando se superen las comprobaciones. Para obtener un informe de conformidad independiente, usa [veraPDF](https://verapdf.org/). El documento permanece en tu dispositivo durante todo el proceso.
+
+### Verificar la copia PDF/A en Acrobat Pro
+
+Abre el PDF que descargaste en Adobe Acrobat Pro. En el panel **Estándares**, selecciona **Verificar conformidad** para ver el perfil PDF/A y el resultado. Para comprobar el archivo con el perfil que aparece junto al botón de descarga, abre **Todas las herramientas → Usar producción de impresión → Comprobación preliminar** (Preflight), selecciona el perfil correspondiente y pulsa **Analizar**.

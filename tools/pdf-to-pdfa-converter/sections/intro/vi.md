@@ -3,7 +3,7 @@
 1. Chọn tệp PDF hoặc kéo và thả tệp vào công cụ.
 2. Chọn tiêu chuẩn PDF/A theo yêu cầu của cơ quan lưu trữ hoặc cổng nộp hồ sơ. Với nhu cầu lưu trữ thông thường, hãy chọn **PDF/A-2b**.
 3. Chọn **Chuyển sang PDF/A**. Công cụ sẽ kiểm tra tệp đầu ra theo cấu hình đã chọn.
-4. Sau khi bản lưu trữ qua kiểm tra, hãy tải tệp xuống. Tệp PDF gốc vẫn được giữ nguyên.
+4. Xác nhận cấu hình PDF/A bên cạnh nút tải xuống rồi lưu bản lưu trữ. Tệp PDF gốc vẫn được giữ nguyên.
 
 ## PDF/A là gì?
 
@@ -11,7 +11,7 @@ PDF/A là nhóm tiêu chuẩn PDF thuộc ISO 19005 dành cho việc bảo quả
 
 ## Nên chọn tiêu chuẩn PDF/A nào?
 
-**PDF/A-2b** là lựa chọn mặc định phù hợp cho nhu cầu lưu trữ thông thường. Chọn **PDF/A-1b** khi cơ quan lưu trữ, tòa án hoặc cổng nộp hồ sơ yêu cầu cụ thể phiên bản cũ hơn này. Cả hai đều dùng mức B, tập trung vào việc giữ nguyên hình thức hiển thị của các trang. PDF/A-2b hỗ trợ hiệu ứng trong suốt. Hãy dùng tiêu chuẩn này cho tài liệu có hình minh họa hoặc hiệu ứng trong suốt nếu cơ quan lưu trữ chấp nhận.
+Chọn tiêu chuẩn theo yêu cầu của cơ quan lưu trữ hoặc cổng nộp hồ sơ. **PDF/A-2b** là lựa chọn mặc định phù hợp cho nhu cầu lưu trữ thông thường. Chọn **PDF/A-1b** nếu cần dùng phiên bản cũ hơn này. Cả hai đều dùng mức B, tập trung vào việc giữ nguyên hình thức hiển thị của các trang. PDF/A-2b hỗ trợ hiệu ứng trong suốt. Hãy dùng tiêu chuẩn này cho tài liệu có hình minh họa hoặc hiệu ứng trong suốt nếu cơ quan lưu trữ chấp nhận.
 
 ## Bản lưu trữ thay đổi những gì?
 
@@ -20,3 +20,7 @@ Văn bản và đồ họa véc-tơ được giữ lại trong PDF, nên bạn v
 ## Tệp PDF/A được kiểm tra như thế nào?
 
 Công cụ kiểm tra theo cấu hình PDF/A đã chọn trong lúc chuyển đổi. Sau đó, trình duyệt mở lại bản lưu trữ để kiểm tra thông tin nhận dạng PDF/A, kích thước và hướng trang, cùng văn bản có thể tìm kiếm. Bạn có thể tải xuống sau khi tệp qua kiểm tra. Để có báo cáo tuân thủ độc lập, hãy dùng [veraPDF](https://verapdf.org/). Tài liệu vẫn nằm trên thiết bị của bạn trong suốt quá trình.
+
+### Xác minh bản lưu trữ trong Acrobat Pro
+
+Mở tệp PDF đã tải xuống trong Adobe Acrobat Pro. Trong bảng **Standards**, chọn **Verify Conformance** để xem cấu hình PDF/A và kết quả xác minh. Để kiểm tra theo cấu hình hiển thị bên cạnh nút tải xuống, mở **All tools → Use print production → Preflight**, chọn cấu hình xác minh PDF/A tương ứng rồi chọn **Analyze**.

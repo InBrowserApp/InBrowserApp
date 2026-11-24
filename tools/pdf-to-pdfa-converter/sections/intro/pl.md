@@ -3,7 +3,7 @@
 1. Wybierz plik PDF lub przeciągnij go do narzędzia.
 2. Wybierz standard PDF/A wymagany przez archiwum lub portal składania dokumentów. Do ogólnej archiwizacji wybierz **PDF/A-2b**.
 3. Wybierz **Konwertuj do PDF/A**. Narzędzie sprawdzi wygenerowany plik zgodnie z wybranym profilem.
-4. Jeśli plik przejdzie kontrolę, pobierz kopię archiwalną. Oryginalny plik PDF pozostanie bez zmian.
+4. Upewnij się, że profil PDF/A widoczny obok przycisku pobierania jest właściwy, a następnie zapisz kopię archiwalną. Oryginalny plik PDF pozostanie bez zmian.
 
 ## Co to jest PDF/A?
 
@@ -11,7 +11,7 @@ PDF/A to rodzina standardów ISO 19005 dotyczących długoterminowego przechowyw
 
 ## Który standard PDF/A wybrać?
 
-**PDF/A-2b** to dobry wybór do typowej archiwizacji. Wybierz **PDF/A-1b**, jeśli archiwum, sąd lub portal składania dokumentów wymaga konkretnie tej starszej wersji. Oba profile mają poziom zgodności B, który koncentruje się na zachowaniu wyglądu stron. PDF/A-2b obsługuje przezroczystość. Użyj tego profilu do dokumentów z przezroczystymi grafikami lub efektami, jeśli archiwum go akceptuje.
+Wybierz standard wymagany przez archiwum lub portal składania dokumentów. **PDF/A-2b** to dobry wybór do typowej archiwizacji. Wybierz **PDF/A-1b**, jeśli wymagana jest starsza wersja standardu. Oba profile mają poziom zgodności B, który koncentruje się na zachowaniu wyglądu stron. PDF/A-2b obsługuje przezroczystość. Użyj tego profilu do dokumentów z przezroczystymi grafikami lub efektami, jeśli archiwum go akceptuje.
 
 ## Co zmienia się w kopii archiwalnej?
 
@@ -20,3 +20,7 @@ Tekst i grafika wektorowa pozostają w pliku PDF, więc nadal możesz wyszukiwa�
 ## Jak sprawdzany jest plik PDF/A?
 
 Narzędzie podczas konwersji sprawdza plik pod kątem wybranego profilu PDF/A. Następnie przeglądarka ponownie otwiera kopię archiwalną i sprawdza oznaczenie PDF/A, geometrię stron oraz tekst, który można wyszukiwać. Plik można pobrać po pomyślnej weryfikacji. Aby uzyskać niezależny raport zgodności, użyj [veraPDF](https://verapdf.org/). Dokument przez cały czas pozostaje na Twoim urządzeniu.
+
+### Sprawdzanie kopii archiwalnej w Acrobat Pro
+
+Otwórz pobrany plik PDF w Adobe Acrobat Pro. W panelu **Standardy** wybierz **Weryfikuj zgodność**, aby zobaczyć profil PDF/A i wynik weryfikacji. Aby sprawdzić zgodność z profilem wyświetlonym przy pobieraniu, wybierz **Wszystkie narzędzia → Korzystanie z drukowania → Inspekcja wstępna**, wskaż odpowiedni profil weryfikacji PDF/A i kliknij **Analizuj**.

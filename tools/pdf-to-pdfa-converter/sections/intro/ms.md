@@ -3,7 +3,7 @@
 1. Pilih PDF atau seret fail ke ruang yang disediakan.
 2. Pilih piawaian PDF/A yang ditetapkan oleh arkib atau portal penyerahan dokumen anda. Untuk pengarkiban umum, gunakan **PDF/A-2b**.
 3. Pilih **Tukar kepada PDF/A**. Alat ini menyemak fail yang dihasilkan mengikut profil pilihan anda.
-4. Muat turun salinan arkib apabila semakan berjaya. PDF asal anda kekal seperti sedia ada.
+4. Pastikan profil PDF/A di sebelah butang muat turun sepadan dengan keperluan anda, kemudian simpan salinan arkib. PDF asal anda kekal seperti sedia ada.
 
 ## Apakah PDF/A?
 
@@ -11,7 +11,7 @@ PDF/A ialah keluarga piawaian PDF ISO 19005 untuk pemeliharaan dokumen jangka pa
 
 ## Piawaian PDF/A manakah yang patut saya pilih?
 
-**PDF/A-2b** ialah pilihan lalai yang sesuai untuk pengarkiban umum. Pilih **PDF/A-1b** jika pejabat rekod, mahkamah atau portal penyerahan dokumen menetapkan piawaian yang lebih lama ini. Kedua-dua profil menggunakan tahap B, yang menumpukan pada pemeliharaan rupa halaman. PDF/A-2b menyokong unsur lutsinar. Gunakannya untuk dokumen dengan ilustrasi atau kesan lutsinar jika arkib anda menerima piawaian ini.
+Gunakan piawaian yang ditetapkan oleh arkib atau portal penyerahan dokumen anda. **PDF/A-2b** ialah pilihan lalai yang sesuai untuk pengarkiban umum. Pilih **PDF/A-1b** jika piawaian yang lebih lama ini diperlukan. Kedua-dua profil menggunakan tahap B, yang menumpukan pada pemeliharaan rupa halaman. PDF/A-2b menyokong unsur lutsinar. Gunakannya untuk dokumen dengan ilustrasi atau kesan lutsinar jika arkib anda menerima piawaian ini.
 
 ## Apakah yang berubah dalam salinan arkib?
 
@@ -20,3 +20,7 @@ Teks dan grafik vektor kekal dalam PDF. Anda masih boleh mencari dan menyalin te
 ## Bagaimanakah fail PDF/A disemak?
 
 Alat ini menyemak profil PDF/A yang dipilih semasa penukaran. Pelayar kemudian membuka semula salinan arkib untuk menyemak pengenalan PDF/A, saiz dan orientasi halaman, serta teks yang boleh dicari. Salinan boleh dimuat turun setelah lulus semakan. Untuk laporan pematuhan bebas, gunakan [veraPDF](https://verapdf.org/). Dokumen anda kekal pada peranti sepanjang proses.
+
+### Sahkan salinan arkib dalam Acrobat Pro
+
+Buka PDF yang dimuat turun dalam Adobe Acrobat Pro. Dalam panel **Standards**, pilih **Verify Conformance** untuk melihat profil PDF/A dan hasil pengesahan. Untuk menyemak mengikut profil yang tertera di sebelah butang muat turun, buka **All tools → Use print production → Preflight**, pilih profil pengesahan PDF/A itu, kemudian pilih **Analyze**.
