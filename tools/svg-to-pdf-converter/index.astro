@@ -27,7 +27,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} language={lang} />
-  <ToolArticle>
+  <ToolArticle className="rtl:[&_ol]:ml-0 rtl:[&_ol]:mr-6">
     <Intro />
   </ToolArticle>
 </ToolPageShell>

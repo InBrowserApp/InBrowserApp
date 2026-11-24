@@ -44,6 +44,12 @@ describe("SVG page dimensions", () => {
     expect(millimeters(layout.height)).toBeCloseTo(279.4)
     expect(layout.y * 2 + layout.artworkHeight).toBeCloseTo(layout.height)
   })
+
+  test("preserves proportions when the original exceeds the PDF page limit", () => {
+    const layout = pageLayout({ width: 30_000, height: 15_000 }, "original")
+    expect(millimeters(layout.width)).toBeCloseTo(5080)
+    expect(layout.artworkWidth / layout.artworkHeight).toBe(2)
+  })
 })
 
 describe("SVG preparation", () => {
