@@ -83,7 +83,7 @@ export default function PdfRedactor({ messages }: Props) {
               <span className="rounded-xl border bg-background p-3 text-muted-foreground">
                 <FileText className="size-6" aria-hidden="true" />
               </span>
-              <p className="text-base font-medium">
+              <p className="text-base font-medium" role="status">
                 {file && !pdf ? messages.opening : messages.dropPdf}
               </p>
               <Button type="button" onClick={() => picker.current?.click()}>
@@ -194,6 +194,36 @@ function Editor({
           {messages.changePdf}
         </Button>
       </div>
+      <div className="space-y-3 border-b px-4 py-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-md text-sm text-muted-foreground">
+            {messages.exportNote}
+          </p>
+          <Button
+            type="button"
+            disabled={!count || busy}
+            onClick={() => void download()}
+          >
+            {busy ? (
+              <LoaderCircle className="animate-spin" aria-hidden="true" />
+            ) : (
+              <Download aria-hidden="true" />
+            )}
+            {busy ? exportStatus : messages.download}
+          </Button>
+        </div>
+        {busy && (
+          <p className="sr-only" role="status">
+            {exportStatus}
+          </p>
+        )}
+        {result === "downloaded" && (
+          <p className="text-sm text-muted-foreground" role="status">
+            {messages.downloaded}
+          </p>
+        )}
+        {result === "exportError" && <Problem>{messages.exportError}</Problem>}
+      </div>
       <Toolbar
         messages={messages}
         page={page}
@@ -226,36 +256,6 @@ function Editor({
         messages={messages}
         onRegion={addRegion}
       />
-      <div className="space-y-3 border-t px-4 py-3">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-md text-sm text-muted-foreground">
-            {messages.exportNote}
-          </p>
-          <Button
-            type="button"
-            disabled={!count || busy}
-            onClick={() => void download()}
-          >
-            {busy ? (
-              <LoaderCircle className="animate-spin" aria-hidden="true" />
-            ) : (
-              <Download aria-hidden="true" />
-            )}
-            {busy ? exportStatus : messages.download}
-          </Button>
-        </div>
-        {busy && (
-          <p className="sr-only" role="status">
-            {exportStatus}
-          </p>
-        )}
-        {result === "downloaded" && (
-          <p className="text-sm text-muted-foreground" role="status">
-            {messages.downloaded}
-          </p>
-        )}
-        {result === "exportError" && <Problem>{messages.exportError}</Problem>}
-      </div>
     </>
   )
 }

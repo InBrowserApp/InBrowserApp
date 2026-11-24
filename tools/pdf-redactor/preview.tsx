@@ -193,14 +193,14 @@ export function Preview({
     <div
       ref={scroll}
       dir="ltr"
-      className="group/preview max-h-[min(68svh,46rem)] overflow-auto bg-muted/55 p-3 sm:p-4"
+      className="group/preview relative max-h-[min(68svh,46rem)] overflow-auto bg-muted/55 p-3 sm:p-4"
     >
       <p
         id={hintId}
+        dir="auto"
         className={cn(
-          "sr-only",
-          !pan &&
-            "text-sm text-muted-foreground group-has-[:focus-visible]/preview:not-sr-only group-has-[:focus-visible]/preview:mb-2"
+          "pointer-events-none absolute inset-x-3 top-3 z-10 mx-auto w-fit rounded-md border bg-background px-3 py-2 text-xs text-muted-foreground opacity-0",
+          !pan && !cursor && "group-has-[:focus-visible]/preview:opacity-100"
         )}
       >
         {messages.keyboardHint}
