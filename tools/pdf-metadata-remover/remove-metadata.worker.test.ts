@@ -8,7 +8,7 @@ const { callMain, configureQpdf, mkdir, mount, readFile } = vi.hoisted(() => ({
     vi.fn<
       (options: {
         locateFile: () => string
-        printErr: (message: string) => void
+        stderr: (character: number) => void
       }) => void
     >(),
   mkdir: vi.fn(),
@@ -65,9 +65,10 @@ test("rewrites the active PDF revision before stripping its metadata", async () 
   expect(post).toHaveBeenLastCalledWith({ status: "encryptedPdf" })
 
   callMain.mockImplementationOnce(() => {
-    configureQpdf.mock.lastCall![0].printErr(
-      "this.program: /working/input.pdf: invalid password"
-    )
+    const { stderr } = configureQpdf.mock.lastCall![0]
+    for (const char of "this.program: /working/input.pdf: invalid password\n") {
+      stderr(char.charCodeAt(0))
+    }
     return 2
   })
   await send(file)
