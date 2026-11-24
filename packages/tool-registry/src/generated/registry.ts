@@ -8464,6 +8464,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csv-editor",
+    category: "document",
+    icon: "table-2",
+    tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
+    locales: {
+      ar: {
+        name: "محرّر CSV",
+        description:
+          "حرّر ملفات CSV وTSV عبر الإنترنت. عدّل الخلايا، ورتّب الصفوف وصفِّها، وأعد ترتيب الأعمدة، ثم نزّل الملف بصيغته الأصلية. تبقى ملفاتك في متصفحك.",
+      },
+      de: {
+        name: "CSV-Editor",
+        description:
+          "CSV und TSV online bearbeiten. Zellen ändern, Zeilen sortieren und filtern, Spalten verschieben und im Originalformat speichern. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "CSV Editor",
+        description:
+          "Edit CSV and TSV files online. Change cells, sort and filter rows, reorder columns, and download in the original format. Your files stay in your browser.",
+      },
+      es: {
+        name: "Editor de CSV",
+        description:
+          "Edita archivos CSV y TSV en línea. Cambia celdas, ordena y filtra filas, reordena columnas y descarga el archivo en su formato original. Todo en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur CSV",
+        description:
+          "Modifiez vos fichiers CSV et TSV en ligne. Éditez les cellules, triez et filtrez les lignes, réorganisez les colonnes et téléchargez le résultat au format d’origine. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "עורך CSV",
+        description:
+          "עריכת קובצי CSV ו-TSV באינטרנט. אפשר לערוך תאים, למיין ולסנן שורות, לשנות את סדר העמודות ולהוריד את הקובץ בפורמט המקורי. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "CSV संपादक",
+        description:
+          "CSV और TSV फ़ाइलें ऑनलाइन संपादित करें। सेल बदलें, पंक्तियाँ क्रमबद्ध और फ़िल्टर करें, कॉलम का क्रम बदलें और फ़ाइल मूल फ़ॉर्मैट में डाउनलोड करें। आपकी फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Editor CSV",
+        description:
+          "Edit file CSV dan TSV secara online. Ubah isi sel, urutkan dan filter baris, atur ulang kolom, lalu unduh dalam format asli. File tetap di browser Anda.",
+      },
+      it: {
+        name: "Editor CSV",
+        description:
+          "Modifica file CSV e TSV online. Aggiorna le celle, ordina e filtra le righe, sposta le colonne e scarica nel formato originale. I file restano nel browser.",
+      },
+      ja: {
+        name: "CSVエディタ",
+        description:
+          "CSV・TSVファイルをブラウザーで編集できます。セルの編集、行の並べ替えや絞り込み、列の移動ができ、元の形式でダウンロードできます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "CSV 편집기",
+        description:
+          "온라인에서 CSV와 TSV 파일을 편집하세요. 셀을 수정하고, 행을 정렬하거나 필터링하고, 열 순서를 바꿀 수 있습니다. 파일은 브라우저에서 처리되며 원래 형식으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting CSV",
+        description:
+          "Sunting fail CSV dan TSV dalam talian. Ubah kandungan sel, isih dan tapis baris, tukar susunan lajur, kemudian muat turun dalam format asal. Fail anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "CSV-editor",
+        description:
+          "Bewerk CSV- en TSV-bestanden online. Pas cellen aan, sorteer en filter rijen, verplaats kolommen en download in het oorspronkelijke formaat. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "CSV-redigerer",
+        description:
+          "Rediger CSV- og TSV-filer på nett. Endre celler, sorter og filtrer rader, flytt kolonner og last ned i originalformatet. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor CSV",
+        description:
+          "Edytuj pliki CSV i TSV online. Zmieniaj komórki, sortuj i filtruj wiersze, przestawiaj kolumny i pobieraj pliki w oryginalnym formacie. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor de CSV",
+        description:
+          "Edite arquivos CSV e TSV online. Altere células, ordene e filtre linhas, reorganize colunas e baixe no formato original. Seus arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Редактор CSV",
+        description:
+          "Редактируйте CSV и TSV онлайн. Меняйте ячейки, сортируйте и фильтруйте строки, переставляйте столбцы и скачивайте файлы в исходном формате. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "CSV-redigerare",
+        description:
+          "Redigera CSV- och TSV-filer online. Ändra celler, sortera och filtrera rader, flytta kolumner och ladda ner i originalformatet. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแก้ไข CSV",
+        description:
+          "แก้ไขไฟล์ CSV และ TSV ออนไลน์ เปลี่ยนค่าในเซลล์ เรียงและกรองแถว ย้ายคอลัมน์ แล้วดาวน์โหลดในรูปแบบเดิม ไฟล์ของคุณอยู่ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "CSV Düzenleyici",
+        description:
+          "CSV ve TSV dosyalarını çevrimiçi düzenleyin. Hücreleri değiştirin, satırları sıralayıp filtreleyin, sütunları taşıyın ve dosyanızı özgün biçiminde indirin. Dosyalarınız tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa CSV",
+        description:
+          "Chỉnh sửa tệp CSV và TSV trực tuyến. Sửa ô, sắp xếp và lọc hàng, đổi thứ tự cột rồi tải xuống theo định dạng gốc. Tệp luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CSV 编辑器",
+        description:
+          "在线编辑 CSV 和 TSV 文件。修改单元格、排序和筛选行、调整列顺序，并以原格式下载。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "CSV 編輯器",
+        description:
+          "在線上編輯 CSV 與 TSV 檔案。修改儲存格、排序及篩選資料列、調整欄順序，再以原格式下載。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
+  {
     slug: "csv-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -49612,6 +49735,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CSS 漸層產生器",
         description:
           "建立可拖曳色標的線性、放射與圓錐漸層，支援混合模式並輸出可直接使用的 CSS。",
+      },
+    },
+  },
+  "csv-editor": {
+    slug: "csv-editor",
+    category: "document",
+    icon: "table-2",
+    tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
+    locales: {
+      ar: {
+        name: "محرّر CSV",
+        description:
+          "حرّر ملفات CSV وTSV عبر الإنترنت. عدّل الخلايا، ورتّب الصفوف وصفِّها، وأعد ترتيب الأعمدة، ثم نزّل الملف بصيغته الأصلية. تبقى ملفاتك في متصفحك.",
+      },
+      de: {
+        name: "CSV-Editor",
+        description:
+          "CSV und TSV online bearbeiten. Zellen ändern, Zeilen sortieren und filtern, Spalten verschieben und im Originalformat speichern. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "CSV Editor",
+        description:
+          "Edit CSV and TSV files online. Change cells, sort and filter rows, reorder columns, and download in the original format. Your files stay in your browser.",
+      },
+      es: {
+        name: "Editor de CSV",
+        description:
+          "Edita archivos CSV y TSV en línea. Cambia celdas, ordena y filtra filas, reordena columnas y descarga el archivo en su formato original. Todo en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur CSV",
+        description:
+          "Modifiez vos fichiers CSV et TSV en ligne. Éditez les cellules, triez et filtrez les lignes, réorganisez les colonnes et téléchargez le résultat au format d’origine. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "עורך CSV",
+        description:
+          "עריכת קובצי CSV ו-TSV באינטרנט. אפשר לערוך תאים, למיין ולסנן שורות, לשנות את סדר העמודות ולהוריד את הקובץ בפורמט המקורי. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "CSV संपादक",
+        description:
+          "CSV और TSV फ़ाइलें ऑनलाइन संपादित करें। सेल बदलें, पंक्तियाँ क्रमबद्ध और फ़िल्टर करें, कॉलम का क्रम बदलें और फ़ाइल मूल फ़ॉर्मैट में डाउनलोड करें। आपकी फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Editor CSV",
+        description:
+          "Edit file CSV dan TSV secara online. Ubah isi sel, urutkan dan filter baris, atur ulang kolom, lalu unduh dalam format asli. File tetap di browser Anda.",
+      },
+      it: {
+        name: "Editor CSV",
+        description:
+          "Modifica file CSV e TSV online. Aggiorna le celle, ordina e filtra le righe, sposta le colonne e scarica nel formato originale. I file restano nel browser.",
+      },
+      ja: {
+        name: "CSVエディタ",
+        description:
+          "CSV・TSVファイルをブラウザーで編集できます。セルの編集、行の並べ替えや絞り込み、列の移動ができ、元の形式でダウンロードできます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "CSV 편집기",
+        description:
+          "온라인에서 CSV와 TSV 파일을 편집하세요. 셀을 수정하고, 행을 정렬하거나 필터링하고, 열 순서를 바꿀 수 있습니다. 파일은 브라우저에서 처리되며 원래 형식으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting CSV",
+        description:
+          "Sunting fail CSV dan TSV dalam talian. Ubah kandungan sel, isih dan tapis baris, tukar susunan lajur, kemudian muat turun dalam format asal. Fail anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "CSV-editor",
+        description:
+          "Bewerk CSV- en TSV-bestanden online. Pas cellen aan, sorteer en filter rijen, verplaats kolommen en download in het oorspronkelijke formaat. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "CSV-redigerer",
+        description:
+          "Rediger CSV- og TSV-filer på nett. Endre celler, sorter og filtrer rader, flytt kolonner og last ned i originalformatet. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor CSV",
+        description:
+          "Edytuj pliki CSV i TSV online. Zmieniaj komórki, sortuj i filtruj wiersze, przestawiaj kolumny i pobieraj pliki w oryginalnym formacie. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor de CSV",
+        description:
+          "Edite arquivos CSV e TSV online. Altere células, ordene e filtre linhas, reorganize colunas e baixe no formato original. Seus arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Редактор CSV",
+        description:
+          "Редактируйте CSV и TSV онлайн. Меняйте ячейки, сортируйте и фильтруйте строки, переставляйте столбцы и скачивайте файлы в исходном формате. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "CSV-redigerare",
+        description:
+          "Redigera CSV- och TSV-filer online. Ändra celler, sortera och filtrera rader, flytta kolumner och ladda ner i originalformatet. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแก้ไข CSV",
+        description:
+          "แก้ไขไฟล์ CSV และ TSV ออนไลน์ เปลี่ยนค่าในเซลล์ เรียงและกรองแถว ย้ายคอลัมน์ แล้วดาวน์โหลดในรูปแบบเดิม ไฟล์ของคุณอยู่ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "CSV Düzenleyici",
+        description:
+          "CSV ve TSV dosyalarını çevrimiçi düzenleyin. Hücreleri değiştirin, satırları sıralayıp filtreleyin, sütunları taşıyın ve dosyanızı özgün biçiminde indirin. Dosyalarınız tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa CSV",
+        description:
+          "Chỉnh sửa tệp CSV và TSV trực tuyến. Sửa ô, sắp xếp và lọc hàng, đổi thứ tự cột rồi tải xuống theo định dạng gốc. Tệp luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CSV 编辑器",
+        description:
+          "在线编辑 CSV 和 TSV 文件。修改单元格、排序和筛选行、调整列顺序，并以原格式下载。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "CSV 編輯器",
+        description:
+          "在線上編輯 CSV 與 TSV 檔案。修改儲存格、排序及篩選資料列、調整欄順序，再以原格式下載。檔案只在瀏覽器內處理。",
       },
     },
   },

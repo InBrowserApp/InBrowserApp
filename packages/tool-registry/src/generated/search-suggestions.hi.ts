@@ -333,6 +333,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV संपादक",
+    slug: "csv-editor",
+  },
+  {
     category: "json",
     name: "CSV → JSON परिवर्तक",
     slug: "csv-to-json-converter",
