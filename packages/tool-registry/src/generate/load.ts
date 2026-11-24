@@ -14,7 +14,6 @@ import type {
   LoadedToolManifest,
   ToolRegistryEntry,
   ToolRegistryEntrySource,
-  ToolSearchIndexEntry,
 } from "../types"
 import { fileExists, readJsonFile, TOOL_PACKAGE_SCOPE } from "./io"
 
@@ -165,22 +164,13 @@ function buildRegistryEntry(
 ): ToolRegistryEntry {
   return {
     slug: source.directoryName,
-    category: manifest.category,
+    category: manifest.category.trim(),
+    secondaryCategories: manifest.secondaryCategories?.map((category) =>
+      category.trim()
+    ),
     icon: manifest.icon,
     tags: manifest.tags ?? [],
     locales: catalogs,
-  }
-}
-
-function buildSearchIndexEntry(
-  registryEntry: ToolRegistryEntry
-): ToolSearchIndexEntry {
-  return {
-    slug: registryEntry.slug,
-    category: registryEntry.category,
-    icon: registryEntry.icon,
-    tags: registryEntry.tags,
-    locales: registryEntry.locales,
   }
 }
 
@@ -223,7 +213,6 @@ export async function loadToolManifests(
     manifests.push({
       manifest: loadedManifest,
       registryEntry,
-      searchIndexEntry: buildSearchIndexEntry(registryEntry),
       source,
       staticPaths: buildStaticPaths(source, catalogs),
     })

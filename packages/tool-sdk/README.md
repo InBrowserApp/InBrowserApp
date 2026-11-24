@@ -26,6 +26,11 @@ export const tool = defineTool({
 })
 ```
 
+Use `category` for the tool's primary purpose. The directory label and tool
+breadcrumb use this category. Add optional `secondaryCategories` where someone
+would also browse for the tool. For example, a KML to GeoJSON converter can use
+`category: "geo"` and `secondaryCategories: ["json"]`. Use distinct category slugs.
+
 Localized discovery metadata lives in `meta/<lang>.json`:
 
 ```json

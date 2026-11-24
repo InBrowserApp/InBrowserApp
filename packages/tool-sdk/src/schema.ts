@@ -17,11 +17,22 @@ const toolMetaSchema = z.object({
   description: z.string().trim().min(1),
 })
 
-const toolDefinitionSchema = z.object({
-  category: toolSlugSchema,
-  icon: toolSlugSchema,
-  tags: toolStringListSchema.optional(),
-})
+const toolDefinitionSchema = z
+  .object({
+    category: toolSlugSchema,
+    secondaryCategories: z.array(toolSlugSchema).optional(),
+    icon: toolSlugSchema,
+    tags: toolStringListSchema.optional(),
+  })
+  .refine(
+    ({ category, secondaryCategories = [] }) =>
+      new Set([category, ...secondaryCategories]).size ===
+      1 + secondaryCategories.length,
+    {
+      path: ["secondaryCategories"],
+      message: "must be unique and exclude the primary category",
+    }
+  )
 
 const toolManifestSchema = toolDefinitionSchema
 

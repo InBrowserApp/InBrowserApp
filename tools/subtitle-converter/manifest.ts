@@ -2,6 +2,7 @@ import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
   category: "text",
+  secondaryCategories: ["video"],
   icon: "captions",
   tags: [
     "subtitle",

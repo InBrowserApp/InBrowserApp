@@ -16,6 +16,7 @@ const entries = [
   {
     slug: "json-formatter",
     category: "json",
+    secondaryCategories: ["developer"],
     icon: "braces",
     tags: ["format"],
     locales: {
@@ -48,10 +49,12 @@ describe("directory data", () => {
     expect(entries[0].locales.en.name).toBe("PDF Merger")
   })
 
-  it("keeps category counts consistent after locale projection", () => {
-    expect(countToolsByCategory(toDirectoryEntries(entries, "en"))).toEqual(
-      countToolsByCategory(entries)
-    )
+  it("counts tools in both primary and secondary categories", () => {
+    expect(countToolsByCategory(entries)).toEqual([
+      { category: "developer", count: 1 },
+      { category: "json", count: 1 },
+      { category: "pdf", count: 1 },
+    ])
     expect(countToolsByCategory([])).toEqual([])
   })
 

@@ -9,7 +9,12 @@ import { SUPPORTED_SITE_LANGUAGES } from "./site"
 describe("category static paths", () => {
   it("generates exactly the populated categories without duplicate paths", () => {
     const categories = [
-      ...new Set(toolSearchIndex.map((entry) => entry.category)),
+      ...new Set(
+        toolSearchIndex.flatMap(({ category, secondaryCategories = [] }) => [
+          category,
+          ...secondaryCategories,
+        ])
+      ),
     ]
     const paths = getDefaultCategoryStaticPaths()
 

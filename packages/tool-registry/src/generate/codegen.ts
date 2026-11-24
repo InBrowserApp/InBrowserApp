@@ -41,7 +41,7 @@ export function createStaticPathsSource(
 export function createSearchIndexSource(
   manifests: readonly LoadedToolManifest[]
 ) {
-  const searchIndex = manifests.map(({ searchIndexEntry }) => searchIndexEntry)
+  const searchIndex = manifests.map(({ registryEntry }) => registryEntry)
 
   return [
     `import type { ToolSearchIndexEntry } from "../types"`,

@@ -39,7 +39,7 @@ async function generateToolRegistryArtifacts(
   await mkdir(paths.generatedRoot, { recursive: true })
 
   const suggestionSources = createSearchSuggestionSources(
-    manifests.map(({ searchIndexEntry }) => searchIndexEntry)
+    manifests.map(({ registryEntry }) => registryEntry)
   )
 
   await Promise.all([

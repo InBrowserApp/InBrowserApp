@@ -1,7 +1,8 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "json",
+  category: "geo",
+  secondaryCategories: ["json"],
   icon: "map",
   tags: [
     "geojson",
