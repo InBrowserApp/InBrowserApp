@@ -1,0 +1,4 @@
+{
+  "name": "Konverter JSON ke Excel",
+  "description": "Konversi array JSON ke Excel (.xlsx). Tempel JSON atau buka file, lihat pratinjau tabel, dan uraikan bidang bersarang menjadi kolom langsung di browser."
+}

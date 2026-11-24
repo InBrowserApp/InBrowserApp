@@ -182,6 +182,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-schema-generator": () => import("@tool/json-schema-generator/page"),
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),
+  "json-to-excel-converter": () => import("@tool/json-to-excel-converter/page"),
   "json-to-toml-converter": () => import("@tool/json-to-toml-converter/page"),
   "json-to-typescript-zod": () => import("@tool/json-to-typescript-zod/page"),
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),

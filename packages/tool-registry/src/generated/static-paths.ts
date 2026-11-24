@@ -13618,6 +13618,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-to-excel-converter",
+    language: "ar",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "de",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "en",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "es",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "fr",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "he",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "hi",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "id",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "it",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "ja",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "ko",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "ms",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "nl",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "no",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "pl",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "pt",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "ru",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "sv",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "th",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "tr",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "vi",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-excel-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "json-to-toml-converter",
     language: "ar",
   },

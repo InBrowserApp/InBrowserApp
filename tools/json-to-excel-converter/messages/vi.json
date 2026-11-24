@@ -1,0 +1,20 @@
+{
+  "input": "Dữ liệu JSON",
+  "inputHint": "Dán một mảng đối tượng JSON hoặc mở tệp JSON.",
+  "openFile": "Mở tệp",
+  "example": "Tải ví dụ",
+  "clear": "Xóa",
+  "preview": "Xem trước bảng tính",
+  "flatten": "Mở rộng trường lồng nhau",
+  "flattenHint": "Chuyển các đối tượng lồng nhau thành các cột như contact.city. Mảng vẫn nằm trong một ô.",
+  "emptyPreview": "Nhập JSON hoặc tải ví dụ để xem bảng tính tại đây.",
+  "previewCount": "Đang hiển thị {rows} trên {totalRows} hàng và {columns} trên {totalColumns} cột.",
+  "download": "Tải XLSX",
+  "invalidJson": "Kiểm tra cú pháp JSON rồi thử lại.",
+  "invalidRecords": "Nhập một mảng đối tượng không rỗng, chẳng hạn [{\"name\":\"Maya\"}].",
+  "noColumns": "Thêm ít nhất một trường để tạo cột trong bảng tính.",
+  "sheetLimit": "Chia dữ liệu để không vượt quá giới hạn của Excel: 1.048.576 hàng (bao gồm hàng tiêu đề) và 16.384 cột.",
+  "cellLimit": "Rút ngắn tên trường hoặc giá trị vượt quá giới hạn 32.767 ký tự của ô Excel.",
+  "readError": "Không thể đọc tệp này. Hãy thử mở lại hoặc dán nội dung của tệp.",
+  "downloadError": "Không thể tạo tệp Excel. Hãy thử tải lại hoặc giảm số bản ghi."
+}

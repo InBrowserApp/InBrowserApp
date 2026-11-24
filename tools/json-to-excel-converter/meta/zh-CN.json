@@ -1,0 +1,4 @@
+{
+  "name": "JSON 转 Excel",
+  "description": "在线将 JSON 对象数组转为 Excel（.xlsx）。粘贴 JSON 或打开文件，可预览表格、将嵌套字段展开为列，整个转换都在浏览器中完成。"
+}

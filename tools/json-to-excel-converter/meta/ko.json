@@ -1,0 +1,4 @@
+{
+  "name": "JSON Excel 변환기",
+  "description": "JSON 배열을 Excel(.xlsx)로 변환하세요. JSON을 붙여 넣거나 파일을 열어 스프레드시트를 미리 보고 브라우저에서 중첩 필드를 열로 펼칠 수 있습니다."
+}

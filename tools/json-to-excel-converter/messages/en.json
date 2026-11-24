@@ -1,0 +1,20 @@
+{
+  "input": "JSON input",
+  "inputHint": "Paste an array of JSON objects or open a JSON file.",
+  "openFile": "Open file",
+  "example": "Load example",
+  "clear": "Clear",
+  "preview": "Spreadsheet preview",
+  "flatten": "Expand nested fields",
+  "flattenHint": "Turn nested objects into columns such as contact.city. Arrays stay in one cell.",
+  "emptyPreview": "Add JSON or load the example to see the spreadsheet here.",
+  "previewCount": "Showing {rows} of {totalRows} rows and {columns} of {totalColumns} columns.",
+  "download": "Download XLSX",
+  "invalidJson": "Check the JSON syntax and try again.",
+  "invalidRecords": "Enter a non-empty array of objects, such as [{\"name\":\"Maya\"}].",
+  "noColumns": "Add at least one field to create a spreadsheet column.",
+  "sheetLimit": "Split the data to fit Excel’s limit of 1,048,576 rows (including the header) and 16,384 columns.",
+  "cellLimit": "Shorten the field names or values that exceed Excel’s 32,767-character cell limit.",
+  "readError": "Couldn’t read this file. Try opening it again or paste its contents.",
+  "downloadError": "Couldn’t create the Excel file. Try downloading again or use fewer records."
+}

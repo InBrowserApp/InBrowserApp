@@ -744,6 +744,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON-naar-Excel-converter",
+    slug: "json-to-excel-converter",
+  },
+  {
+    category: "json",
     name: "JSON → TOML-converter",
     slug: "json-to-toml-converter",
   },

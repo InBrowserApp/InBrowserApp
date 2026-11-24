@@ -1,0 +1,20 @@
+{
+  "input": "Datos JSON",
+  "inputHint": "Pega un array de objetos JSON o abre un archivo JSON.",
+  "openFile": "Abrir archivo",
+  "example": "Cargar ejemplo",
+  "clear": "Borrar",
+  "preview": "Vista previa de la hoja",
+  "flatten": "Expandir campos anidados",
+  "flattenHint": "Los objetos anidados pasan a columnas como contact.city. Cada array queda en una sola celda.",
+  "emptyPreview": "Añade el JSON o carga el ejemplo para ver la hoja aquí.",
+  "previewCount": "Filas visibles ({rows}/{totalRows}) y columnas visibles ({columns}/{totalColumns}).",
+  "download": "Descargar XLSX",
+  "invalidJson": "Comprueba la sintaxis del JSON e inténtalo de nuevo.",
+  "invalidRecords": "Introduce un array de objetos que no esté vacío, como [{\"name\":\"Maya\"}].",
+  "noColumns": "Añade al menos un campo para crear una columna.",
+  "sheetLimit": "Divide los datos para respetar los límites de Excel de 1.048.576 filas (con el encabezado) y 16.384 columnas.",
+  "cellLimit": "Acorta los nombres de campo o los valores que superen el límite de Excel de 32.767 caracteres por celda.",
+  "readError": "No se ha podido leer el archivo. Intenta abrirlo de nuevo o pega su contenido.",
+  "downloadError": "No se ha podido crear el archivo de Excel. Vuelve a intentar la descarga o usa menos registros."
+}

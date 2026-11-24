@@ -1,0 +1,20 @@
+{
+  "input": "Données JSON",
+  "inputHint": "Collez un tableau d’objets JSON ou ouvrez un fichier JSON.",
+  "openFile": "Ouvrir un fichier",
+  "example": "Charger un exemple",
+  "clear": "Effacer",
+  "preview": "Aperçu de la feuille",
+  "flatten": "Développer les champs imbriqués",
+  "flattenHint": "Les objets imbriqués deviennent des colonnes comme contact.city. Chaque tableau reste dans une seule cellule.",
+  "emptyPreview": "Ajoutez du JSON ou chargez l’exemple pour afficher la feuille ici.",
+  "previewCount": "Lignes affichées ({rows}/{totalRows}) et colonnes affichées ({columns}/{totalColumns}).",
+  "download": "Télécharger le XLSX",
+  "invalidJson": "Vérifiez la syntaxe JSON et réessayez.",
+  "invalidRecords": "Saisissez un tableau non vide d’objets, par exemple [{\"name\":\"Maya\"}].",
+  "noColumns": "Ajoutez au moins un champ pour créer une colonne.",
+  "sheetLimit": "Fractionnez les données pour respecter les limites d’Excel de 1 048 576 lignes (en-tête compris) et de 16 384 colonnes.",
+  "cellLimit": "Raccourcissez les noms de champs ou les valeurs qui dépassent la limite de 32 767 caractères par cellule dans Excel.",
+  "readError": "Impossible de lire ce fichier. Essayez de le rouvrir ou collez son contenu.",
+  "downloadError": "Impossible de créer le fichier Excel. Réessayez de le télécharger ou réduisez le nombre d’enregistrements."
+}

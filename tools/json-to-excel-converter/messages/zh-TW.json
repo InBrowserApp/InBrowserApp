@@ -1,0 +1,20 @@
+{
+  "input": "JSON 輸入",
+  "inputHint": "貼上 JSON 物件陣列或開啟 JSON 檔案。",
+  "openFile": "開啟檔案",
+  "example": "載入範例",
+  "clear": "清除",
+  "preview": "試算表預覽",
+  "flatten": "展開巢狀欄位",
+  "flattenHint": "將巢狀物件展開為 contact.city 等欄位。陣列會保留在單一儲存格中。",
+  "emptyPreview": "輸入 JSON 或載入範例，即可在此預覽試算表。",
+  "previewCount": "顯示 {totalRows} 列中的 {rows} 列，以及 {totalColumns} 欄中的 {columns} 欄。",
+  "download": "下載 XLSX",
+  "invalidJson": "請檢查 JSON 語法後再試一次。",
+  "invalidRecords": "請輸入非空的物件陣列，例如 [{\"name\":\"Maya\"}]。",
+  "noColumns": "請至少新增一個欄位以建立試算表的欄。",
+  "sheetLimit": "請分割資料，使其符合 Excel 的上限：1,048,576 列（含標題列）及 16,384 欄。",
+  "cellLimit": "請縮短超過 Excel 儲存格 32,767 字元上限的欄位名稱或值。",
+  "readError": "無法讀取此檔案。請重新開啟或貼上其內容。",
+  "downloadError": "無法建立 Excel 檔案。請重新下載或減少記錄數量。"
+}

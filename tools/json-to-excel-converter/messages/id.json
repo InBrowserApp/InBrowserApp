@@ -1,0 +1,20 @@
+{
+  "input": "Data JSON",
+  "inputHint": "Tempel array berisi objek JSON atau buka file JSON.",
+  "openFile": "Buka file",
+  "example": "Muat contoh",
+  "clear": "Kosongkan",
+  "preview": "Pratinjau tabel",
+  "flatten": "Uraikan bidang bersarang",
+  "flattenHint": "Uraikan objek bersarang menjadi kolom seperti contact.city. Array tetap berada dalam satu sel.",
+  "emptyPreview": "Masukkan JSON atau muat contoh untuk melihat tabel di sini.",
+  "previewCount": "Menampilkan {rows} dari {totalRows} baris dan {columns} dari {totalColumns} kolom.",
+  "download": "Unduh XLSX",
+  "invalidJson": "Periksa sintaks JSON, lalu coba lagi.",
+  "invalidRecords": "Masukkan array objek yang tidak kosong, misalnya [{\"name\":\"Maya\"}].",
+  "noColumns": "Tambahkan setidaknya satu bidang agar tabel memiliki kolom.",
+  "sheetLimit": "Bagi data agar tidak melebihi batas Excel, yaitu 1.048.576 baris (termasuk header) dan 16.384 kolom.",
+  "cellLimit": "Persingkat nama bidang atau nilai yang melebihi batas 32.767 karakter per sel di Excel.",
+  "readError": "File tidak dapat dibaca. Coba buka kembali atau tempel isinya.",
+  "downloadError": "File Excel tidak dapat dibuat. Coba unduh lagi atau kurangi jumlah rekaman."
+}
