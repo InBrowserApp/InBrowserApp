@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "ตัวแยกวิเคราะห์คุกกี้",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "โปรแกรมดู DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

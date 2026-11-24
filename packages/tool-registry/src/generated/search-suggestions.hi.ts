@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "कुकी पार्सर",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu व्यूअर",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

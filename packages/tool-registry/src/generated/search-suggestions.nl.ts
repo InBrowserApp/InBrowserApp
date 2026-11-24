@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Calculator voor samengestelde rente",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie-parser",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu-viewer",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Coördinaten omrekenen tussen decimale graden en DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

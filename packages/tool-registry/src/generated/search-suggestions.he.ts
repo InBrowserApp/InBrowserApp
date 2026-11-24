@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "מחשבון ריבית דריבית",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "מפרש Cookie",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "מציג DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "ממיר קווי רוחב ואורך ל־DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

@@ -1,0 +1,33 @@
+{
+  "assumptions": "储蓄计划",
+  "initialAmount": "初始余额",
+  "monthlyContribution": "每月投入",
+  "annualRate": "年利率",
+  "years": "储蓄期限",
+  "yearsUnit": "年",
+  "frequency": "复利频率",
+  "frequencies": {
+    "daily": "每天",
+    "monthly": "每月",
+    "quarterly": "每季度",
+    "semiannually": "每半年",
+    "annually": "每年"
+  },
+  "timing": "每月投入时间",
+  "timings": {
+    "end": "月末",
+    "start": "月初"
+  },
+  "reset": "恢复示例",
+  "endingBalance": "预计余额",
+  "totalContributed": "累计投入",
+  "interestEarned": "利息收益",
+  "growth": "余额增长趋势",
+  "breakdown": "逐年明细",
+  "year": "年份",
+  "amountError": "请输入大于或等于零的金额。",
+  "rateError": "请输入 −100% 至 100% 之间的年利率。",
+  "yearsError": "请输入 1 至 100 之间的整数。",
+  "resultError": "金额过大，无法计算。请尝试输入较小的数值。",
+  "resultPending": "请检查标出的输入项，以查看预计结果。"
+}

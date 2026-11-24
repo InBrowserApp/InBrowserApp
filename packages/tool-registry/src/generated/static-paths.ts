@@ -5798,6 +5798,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "compound-interest-calculator",
+    language: "ar",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "de",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "en",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "es",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "fr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "he",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "hi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "id",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "it",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ja",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ko",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ms",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "nl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "no",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pt",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ru",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "sv",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "th",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "tr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "vi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "cookie-parser",
     language: "ar",
   },
@@ -7543,6 +7635,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "djvu-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ar",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "de",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "en",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "es",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "fr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "he",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "hi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "id",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "it",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ja",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ko",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ms",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "nl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "no",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pl",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "pt",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "ru",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "sv",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "th",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "tr",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "vi",
+  },
+  {
+    slug: "dms-coordinate-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "dms-coordinate-converter",
     language: "zh-TW",
   },
   {

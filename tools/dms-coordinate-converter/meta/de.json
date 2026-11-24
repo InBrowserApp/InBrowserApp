@@ -1,0 +1,4 @@
+{
+  "name": "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+  "description": "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format."
+}

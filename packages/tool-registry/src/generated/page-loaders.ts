@@ -83,6 +83,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
+  "compound-interest-calculator": () =>
+    import("@tool/compound-interest-calculator/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "crc-checksum-calculator": () => import("@tool/crc-checksum-calculator/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
@@ -105,6 +107,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
+  "dms-coordinate-converter": () =>
+    import("@tool/dms-coordinate-converter/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),

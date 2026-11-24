@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Zinseszinsrechner",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie-Parser",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu-Betrachter",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

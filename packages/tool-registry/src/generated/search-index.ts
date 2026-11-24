@@ -8094,6 +8094,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
+      },
+    },
+  },
+  {
     slug: "cookie-parser",
     category: "web",
     icon: "network",
@@ -10474,6 +10603,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "DjVu 檢視器",
         description:
           "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
+    slug: "dms-coordinate-converter",
+    category: "misc",
+    icon: "compass",
+    tags: [
+      "gps",
+      "dms",
+      "dd",
+      "latitude",
+      "longitude",
+      "decimal",
+      "degrees",
+      "minutes",
+      "seconds",
+      "coordinates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط الطول والعرض إلى DMS",
+        description:
+          "حوّل إحداثيات خطوط الطول والعرض بين الدرجات العشرية (DD) والدرجات والدقائق والثواني (DMS). انسخ إحداثيات GPS بالتنسيق الذي تريده.",
+      },
+      de: {
+        name: "Koordinaten umrechnen (Dezimalgrad ↔ DMS)",
+        description:
+          "Rechne Längen- und Breitengrade zwischen Dezimalgrad (DD) und Grad, Minuten, Sekunden (DMS) um und kopiere die GPS-Koordinaten im gewünschten Format.",
+      },
+      en: {
+        name: "Latitude & Longitude Converter (DD ↔ DMS)",
+        description:
+          "Convert latitude and longitude between decimal degrees (DD) and degrees, minutes, seconds (DMS). Copy either GPS coordinate format.",
+      },
+      es: {
+        name: "Convertidor de latitud y longitud a DMS",
+        description:
+          "Convierte la latitud y la longitud entre grados decimales (DD) y grados, minutos y segundos (DMS). Copia las coordenadas GPS en cualquiera de los dos formatos.",
+      },
+      fr: {
+        name: "Convertisseur de coordonnées GPS en DMS",
+        description:
+          "Convertissez la latitude et la longitude entre degrés décimaux (DD) et degrés, minutes et secondes (DMS). Copiez les coordonnées GPS dans le format voulu.",
+      },
+      he: {
+        name: "ממיר קווי רוחב ואורך ל־DMS",
+        description:
+          "המירו קווי רוחב ואורך בין מעלות עשרוניות (DD) למעלות, דקות ושניות (DMS). העתיקו קואורדינטות GPS בפורמט הרצוי.",
+      },
+      hi: {
+        name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+        description:
+          "अक्षांश और देशांतर को दशमलव डिग्री (DD) और डिग्री, मिनट, सेकंड (DMS) के बीच बदलें। किसी भी फ़ॉर्मैट में GPS निर्देशांक कॉपी करें।",
+      },
+      id: {
+        name: "Konverter Lintang dan Bujur ke DMS",
+        description:
+          "Konversi lintang dan bujur antara derajat desimal (DD) dan derajat, menit, detik (DMS). Salin koordinat GPS dalam salah satu format.",
+      },
+      it: {
+        name: "Convertitore di latitudine e longitudine in DMS",
+        description:
+          "Converti latitudine e longitudine tra gradi decimali (DD) e gradi, primi e secondi (DMS). Copia le coordinate GPS nel formato che ti serve.",
+      },
+      ja: {
+        name: "緯度・経度の度分秒（DMS）変換",
+        description:
+          "緯度・経度を十進法の度数（DD）と度分秒（DMS）の間で相互変換できます。どちらの形式でも GPS 座標をコピーできます。",
+      },
+      ko: {
+        name: "위도·경도 도분초 변환기",
+        description:
+          "위도와 경도를 십진 도(DD)와 도·분·초(DMS) 사이에서 변환하세요. 두 GPS 좌표 형식 중 원하는 결과를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Latitud dan Longitud ↔ DMS",
+        description:
+          "Tukar latitud dan longitud antara darjah perpuluhan (DD) dengan darjah, minit dan saat (DMS). Salin koordinat GPS dalam mana-mana format.",
+      },
+      nl: {
+        name: "Coördinaten omrekenen tussen decimale graden en DMS",
+        description:
+          "Reken breedte- en lengtegraad om tussen decimale graden (DD) en graden, minuten en seconden (DMS). Kopieer de gps-coördinaten in de gewenste notatie.",
+      },
+      no: {
+        name: "Koordinatomregner for desimalgrader og DMS",
+        description:
+          "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format.",
+      },
+      pl: {
+        name: "Konwerter szerokości i długości geograficznej na DMS",
+        description:
+          "Przelicz szerokość i długość geograficzną ze stopni dziesiętnych (DD) na stopnie, minuty i sekundy (DMS) i odwrotnie. Skopiuj współrzędne GPS w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor de latitude e longitude para DMS",
+        description:
+          "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos.",
+      },
+      ru: {
+        name: "Конвертер широты и долготы в формат DMS",
+        description:
+          "Преобразуйте широту и долготу между десятичными градусами (DD) и градусами, минутами и секундами (DMS). Копируйте GPS-координаты в любом из этих форматов.",
+      },
+      sv: {
+        name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+        description:
+          "Omvandla latitud och longitud mellan decimalgrader (DD) och grader, minuter, sekunder (DMS). Kopiera valfritt GPS-koordinatformat.",
+      },
+      th: {
+        name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
+        description:
+          "แปลงละติจูดและลองจิจูดระหว่างองศาทศนิยม (DD) กับองศา ลิปดา พิลิปดา (DMS) แล้วคัดลอกพิกัด GPS ในรูปแบบที่ต้องการ",
+      },
+      tr: {
+        name: "Enlem ve Boylam için DMS Dönüştürücü",
+        description:
+          "Enlem ve boylamı ondalık derece (DD) ile derece, dakika ve saniye (DMS) arasında dönüştürün. GPS koordinatlarını istediğiniz biçimde kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+        description:
+          "Chuyển đổi kinh độ và vĩ độ giữa độ thập phân (DD) và độ, phút, giây (DMS). Sao chép tọa độ GPS ở một trong hai định dạng.",
+      },
+      "zh-CN": {
+        name: "经纬度与度分秒转换器",
+        description:
+          "在十进制度（DD）和度分秒（DMS）之间互转经纬度。可复制任一格式的 GPS 坐标。",
+      },
+      "zh-TW": {
+        name: "經緯度與度分秒轉換器",
+        description:
+          "將緯度與經度在十進位度（DD）和度分秒（DMS）之間雙向轉換，並複製任一格式的 GPS 座標。",
       },
     },
   },

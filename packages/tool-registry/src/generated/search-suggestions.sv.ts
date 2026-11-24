@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Ränta på ränta-kalkylator",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie-parser",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu-visare",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Omvandlare för latitud och longitud till grader, minuter och sekunder",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

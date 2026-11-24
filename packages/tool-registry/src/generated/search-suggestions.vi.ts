@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Công cụ tính lãi kép",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Trình phân tích Cookie",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Trình xem DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

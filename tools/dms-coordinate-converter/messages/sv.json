@@ -1,0 +1,18 @@
+{
+  "decimal": "Decimalgrader (DD)",
+  "dms": "Grader, minuter, sekunder (DMS)",
+  "latitude": "Latitud",
+  "longitude": "Longitud",
+  "degrees": "Grader",
+  "minutes": "Minuter",
+  "seconds": "Sekunder",
+  "hemisphere": "Hemisfär",
+  "north": "Nord (N)",
+  "south": "Syd (S)",
+  "east": "Öst (E)",
+  "west": "Väst (W)",
+  "example": "Prova ett exempel",
+  "copy": "Kopiera koordinater",
+  "copied": "Kopierat",
+  "invalid": "Latitud måste ligga inom ±90° och longitud inom ±180°. Minuter och sekunder måste vara mindre än 60."
+}

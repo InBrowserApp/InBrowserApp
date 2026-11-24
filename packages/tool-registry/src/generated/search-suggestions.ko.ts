@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "복리 계산기",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "쿠키 파서",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu 뷰어",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "위도·경도 도분초 변환기",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

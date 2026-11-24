@@ -1,0 +1,33 @@
+{
+  "assumptions": "Kế hoạch tiết kiệm",
+  "initialAmount": "Số dư ban đầu",
+  "monthlyContribution": "Tiền gửi hằng tháng",
+  "annualRate": "Lãi suất hằng năm",
+  "years": "Thời gian tiết kiệm",
+  "yearsUnit": "năm",
+  "frequency": "Tần suất ghép lãi",
+  "frequencies": {
+    "daily": "Hằng ngày",
+    "monthly": "Hằng tháng",
+    "quarterly": "Hằng quý",
+    "semiannually": "Hai lần một năm",
+    "annually": "Hằng năm"
+  },
+  "timing": "Thời điểm gửi thêm",
+  "timings": {
+    "end": "Cuối tháng",
+    "start": "Đầu tháng"
+  },
+  "reset": "Khôi phục số liệu mẫu",
+  "endingBalance": "Số dư dự kiến",
+  "totalContributed": "Tổng tiền đã gửi",
+  "interestEarned": "Tiền lãi tích lũy",
+  "growth": "Tăng trưởng theo thời gian",
+  "breakdown": "Chi tiết theo từng năm",
+  "year": "Năm",
+  "amountError": "Nhập số tiền từ 0 trở lên.",
+  "rateError": "Nhập lãi suất hằng năm từ −100% đến 100%.",
+  "yearsError": "Nhập một số nguyên từ 1 đến 100.",
+  "resultError": "Số tiền quá lớn để tính. Hãy thử giá trị nhỏ hơn.",
+  "resultPending": "Kiểm tra các ô được đánh dấu để xem kết quả dự kiến."
+}

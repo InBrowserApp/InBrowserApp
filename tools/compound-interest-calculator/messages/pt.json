@@ -1,0 +1,33 @@
+{
+  "assumptions": "Plano de poupança",
+  "initialAmount": "Valor inicial",
+  "monthlyContribution": "Aporte mensal",
+  "annualRate": "Taxa de juros anual",
+  "years": "Prazo",
+  "yearsUnit": "anos",
+  "frequency": "Frequência de capitalização",
+  "frequencies": {
+    "daily": "Diária",
+    "monthly": "Mensal",
+    "quarterly": "Trimestral",
+    "semiannually": "Semestral",
+    "annually": "Anual"
+  },
+  "timing": "Quando fazer o aporte",
+  "timings": {
+    "end": "No fim do mês",
+    "start": "No início do mês"
+  },
+  "reset": "Restaurar exemplo",
+  "endingBalance": "Saldo estimado",
+  "totalContributed": "Total aportado",
+  "interestEarned": "Juros acumulados",
+  "growth": "Evolução do saldo",
+  "breakdown": "Detalhamento ano a ano",
+  "year": "Ano",
+  "amountError": "Informe um valor igual ou maior que zero.",
+  "rateError": "Informe uma taxa anual entre −100% e 100%.",
+  "yearsError": "Informe um número inteiro de 1 a 100.",
+  "resultError": "Os valores são grandes demais para o cálculo. Experimente valores menores.",
+  "resultPending": "Confira os campos destacados para ver a projeção."
+}

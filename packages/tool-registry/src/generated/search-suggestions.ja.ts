@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "複利計算ツール",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie パーサー",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu ビューアー",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "緯度・経度の度分秒（DMS）変換",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

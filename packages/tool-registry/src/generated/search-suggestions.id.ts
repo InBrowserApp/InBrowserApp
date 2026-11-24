@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Kalkulator bunga majemuk",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Pengurai Cookie",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Penampil DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Konverter Lintang dan Bujur ke DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

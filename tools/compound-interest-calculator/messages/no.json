@@ -1,0 +1,33 @@
+{
+  "assumptions": "Spareplan",
+  "initialAmount": "Startbeløp",
+  "monthlyContribution": "Månedlig innskudd",
+  "annualRate": "Årlig rente",
+  "years": "Spareperiode",
+  "yearsUnit": "år",
+  "frequency": "Hvor ofte renten legges til",
+  "frequencies": {
+    "daily": "Daglig",
+    "monthly": "Månedlig",
+    "quarterly": "Kvartalsvis",
+    "semiannually": "Halvårlig",
+    "annually": "Årlig"
+  },
+  "timing": "Tidspunkt for innskudd",
+  "timings": {
+    "end": "Ved slutten av måneden",
+    "start": "Ved starten av måneden"
+  },
+  "reset": "Tilbake til eksemplet",
+  "endingBalance": "Forventet saldo",
+  "totalContributed": "Totalt innskutt",
+  "interestEarned": "Opptjente renter",
+  "growth": "Saldo over tid",
+  "breakdown": "Oversikt år for år",
+  "year": "År",
+  "amountError": "Skriv inn et beløp på null eller mer.",
+  "rateError": "Skriv inn en årlig rente fra −100 % til 100 %.",
+  "yearsError": "Skriv inn et heltall fra 1 til 100.",
+  "resultError": "Beløpene er for store til å beregne. Prøv med mindre beløp.",
+  "resultPending": "Sjekk de markerte feltene for å se beregningen."
+}

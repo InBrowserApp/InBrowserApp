@@ -1,0 +1,33 @@
+{
+  "assumptions": "Spaarplan",
+  "initialAmount": "Startbedrag",
+  "monthlyContribution": "Maandelijkse inleg",
+  "annualRate": "Rente per jaar",
+  "years": "Looptijd",
+  "yearsUnit": "jaar",
+  "frequency": "Hoe vaak wordt rente bijgeschreven?",
+  "frequencies": {
+    "daily": "Dagelijks",
+    "monthly": "Maandelijks",
+    "quarterly": "Per kwartaal",
+    "semiannually": "Halfjaarlijks",
+    "annually": "Jaarlijks"
+  },
+  "timing": "Inlegmoment",
+  "timings": {
+    "end": "Einde van de maand",
+    "start": "Begin van de maand"
+  },
+  "reset": "Voorbeeld herstellen",
+  "endingBalance": "Verwacht eindsaldo",
+  "totalContributed": "Totale inleg",
+  "interestEarned": "Opgebouwde rente",
+  "growth": "Ontwikkeling van je saldo",
+  "breakdown": "Overzicht per jaar",
+  "year": "Jaar",
+  "amountError": "Vul een bedrag van nul of hoger in.",
+  "rateError": "Vul een jaarrente in van −100% tot 100%.",
+  "yearsError": "Vul een geheel getal van 1 tot 100 in.",
+  "resultError": "Deze bedragen zijn te groot om mee te rekenen. Probeer kleinere bedragen.",
+  "resultPending": "Controleer de gemarkeerde velden om de berekening te zien."
+}

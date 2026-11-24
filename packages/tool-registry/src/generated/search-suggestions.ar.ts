@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "حاسبة الفائدة المركبة",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "محلل ملفات تعريف الارتباط",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "عارض DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "محوّل خطوط الطول والعرض إلى DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",

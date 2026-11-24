@@ -318,6 +318,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Calcolatore dell’interesse composto",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Parser di Cookie",
     slug: "cookie-parser",
@@ -411,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Visualizzatore DjVu",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "Convertitore di latitudine e longitudine in DMS",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
