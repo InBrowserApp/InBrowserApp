@@ -1,0 +1,4 @@
+{
+  "name": "Normalizador de sonoridad de audio",
+  "description": "Normaliza audio a un nivel objetivo en LUFS para pódcast, música o radiodifusión. Compara la sonoridad y el pico real, escucha el resultado y descarga el WAV desde el navegador."
+}

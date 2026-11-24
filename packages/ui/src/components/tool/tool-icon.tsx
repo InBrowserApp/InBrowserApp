@@ -52,6 +52,7 @@ import {
   Table2,
   Text,
   Video,
+  Volume2,
   Wrench,
   Workflow,
 } from "@workspace/ui/icons"
@@ -107,6 +108,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "table-2": Table2,
   text: Text,
   video: Video,
+  "volume-2": Volume2,
   wrench: Wrench,
   workflow: Workflow,
 }

@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声のラウドネス正規化",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "音声レコーダー",
     slug: "audio-recorder",
   },

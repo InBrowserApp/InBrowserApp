@@ -1925,6 +1925,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-loudness-normalizer",
+    category: "misc",
+    icon: "volume-2",
+    tags: [
+      "audio",
+      "loudness",
+      "lufs",
+      "normalize",
+      "volume",
+      "peak",
+      "podcast",
+      "wav",
+    ],
+    locales: {
+      ar: {
+        name: "توحيد جهارة الصوت",
+        description:
+          "اضبط جهارة التسجيلات الصوتية للبودكاست أو الموسيقى أو البث إلى مستوى تختاره بوحدة LUFS. قارن الجهارة والذروة الحقيقية، واستمع إلى النتيجة ونزّلها بصيغة WAV من متصفحك.",
+      },
+      de: {
+        name: "Audio-Lautheit normalisieren",
+        description:
+          "Normalisiere Podcasts, Musik oder Rundfunkbeiträge auf einen LUFS-Zielwert. Vergleiche Lautheit und True Peak, höre das Ergebnis im Browser an und speichere es als WAV.",
+      },
+      en: {
+        name: "Audio Loudness Normalizer",
+        description:
+          "Normalize audio to a target LUFS for podcasts, music, or broadcast. Compare loudness and true peak, preview the result, and download WAV in your browser.",
+      },
+      es: {
+        name: "Normalizador de sonoridad de audio",
+        description:
+          "Normaliza audio a un nivel objetivo en LUFS para pódcast, música o radiodifusión. Compara la sonoridad y el pico real, escucha el resultado y descarga el WAV desde el navegador.",
+      },
+      fr: {
+        name: "Normalisation audio (LUFS)",
+        description:
+          "Normalisez vos podcasts, morceaux et émissions à un niveau cible en LUFS. Comparez la sonie et la crête vraie, écoutez le résultat et téléchargez-le en WAV.",
+      },
+      he: {
+        name: "נרמול עוצמת שמע",
+        description:
+          "התאימו את עוצמת השמע לערך LUFS רצוי לפודקאסטים, למוזיקה או לשידור. השוו את העוצמה ואת השיא האמיתי, האזינו לתוצאה והורידו קובץ WAV ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "ऑडियो लाउडनेस नॉर्मलाइज़र",
+        description:
+          "पॉडकास्ट, संगीत या प्रसारण के ऑडियो को तय LUFS पर नॉर्मलाइज़ करें। लाउडनेस और ट्रू पीक की तुलना करें, नतीजा सुनें और ब्राउज़र में WAV डाउनलोड करें।",
+      },
+      id: {
+        name: "Normalisasi Kenyaringan Audio",
+        description:
+          "Sesuaikan audio untuk podcast, musik, atau siaran ke target LUFS. Bandingkan kenyaringan dan true peak, dengarkan hasilnya, lalu unduh WAV dari browser.",
+      },
+      it: {
+        name: "Normalizza l’audio in LUFS",
+        description:
+          "Normalizza l’audio in LUFS per podcast, musica o trasmissioni. Confronta loudness e picco effettivo, ascolta il risultato e scarica il WAV nel browser.",
+      },
+      ja: {
+        name: "音声のラウドネス正規化",
+        description:
+          "ポッドキャストや音楽、放送用の音声を目標LUFSに合わせます。ブラウザーでラウドネスとトゥルーピークを比較し、結果を試聴してWAVで保存できます。",
+      },
+      ko: {
+        name: "오디오 라우드니스 정규화",
+        description:
+          "팟캐스트, 음악, 방송용 오디오의 음량을 목표 LUFS에 맞추세요. 브라우저에서 라우드니스와 트루 피크를 비교하고, 미리 들어 본 뒤 WAV로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyama Kelantangan Audio",
+        description:
+          "Laraskan kelantangan audio podsiar, muzik atau siaran mengikut sasaran LUFS. Bandingkan kelantangan dan puncak sebenar, dengar hasilnya dan muat turun WAV dalam pelayar.",
+      },
+      nl: {
+        name: "Audio normaliseren (LUFS)",
+        description:
+          "Normaliseer audio naar een LUFS-doelniveau voor podcasts, muziek of uitzendingen. Vergelijk luidheid en true peak, beluister het resultaat en download een WAV.",
+      },
+      no: {
+        name: "Normaliser lydnivå (LUFS)",
+        description:
+          "Normaliser lyd til et valgt LUFS-nivå for podkast, musikk eller kringkasting. Sammenlign lydstyrke og true peak, lytt og last ned WAV i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja głośności audio",
+        description:
+          "Dopasuj głośność podcastu, muzyki lub materiału do emisji do docelowej wartości LUFS. Porównaj głośność i poziom szczytowy, odsłuchaj wynik i pobierz WAV w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador de áudio (LUFS)",
+        description:
+          "Normalize áudio em LUFS para podcasts, música ou radiodifusão. Compare a sonoridade e o pico real, ouça o resultado e transfira o WAV no navegador.",
+      },
+      ru: {
+        name: "Нормализация громкости аудио",
+        description:
+          "Настройте громкость подкаста, музыки или записи для эфира по заданному значению LUFS. Сравните громкость и истинный пик, прослушайте результат и скачайте WAV в браузере.",
+      },
+      sv: {
+        name: "Normalisera ljudnivån (LUFS)",
+        description:
+          "Normalisera ljud till ett valt LUFS-värde för poddar, musik eller radio och tv. Jämför ljudstyrka och true peak, lyssna och ladda ned en WAV-fil.",
+      },
+      th: {
+        name: "ปรับความดังเสียงตามค่า LUFS",
+        description:
+          "ปรับความดังของพอดแคสต์ เพลง หรือเสียงสำหรับออกอากาศให้ได้ค่า LUFS ที่ต้องการ เปรียบเทียบความดังและทรูพีก ฟังผล และดาวน์โหลด WAV ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ses Yüksekliğini Normalleştirme",
+        description:
+          "Podcast, müzik veya yayın sesini hedef LUFS değerine getirin. Yüksekliği ve gerçek tepe seviyesini karşılaştırın, sonucu dinleyin ve tarayıcıdan WAV indirin.",
+      },
+      vi: {
+        name: "Chuẩn hóa âm lượng (LUFS)",
+        description:
+          "Chuẩn hóa âm lượng theo mức LUFS cho podcast, bản nhạc hoặc chương trình phát sóng. So sánh độ lớn và mức đỉnh thực, nghe thử rồi tải WAV ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频响度标准化",
+        description:
+          "将播客、音乐或广播音频的响度调整到目标 LUFS。在浏览器中比较响度和真峰值、预听结果并下载 WAV。",
+      },
+      "zh-TW": {
+        name: "音訊響度標準化",
+        description:
+          "將 Podcast、音樂或廣播音訊的響度調整至目標 LUFS。在瀏覽器中比較響度和真峰值、預聽結果並下載 WAV。",
+      },
+    },
+  },
+  {
     slug: "audio-recorder",
     category: "misc",
     icon: "mic",

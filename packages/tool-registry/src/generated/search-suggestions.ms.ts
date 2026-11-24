@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Penyama Kelantangan Audio",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Perakam Audio",
     slug: "audio-recorder",
   },

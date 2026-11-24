@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "오디오 라우드니스 정규화",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "오디오 녹음기",
     slug: "audio-recorder",
   },

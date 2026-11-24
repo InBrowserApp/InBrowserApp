@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ปรับความดังเสียงตามค่า LUFS",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "เครื่องบันทึกเสียง",
     slug: "audio-recorder",
   },

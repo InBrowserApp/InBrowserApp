@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Normalisasi Kenyaringan Audio",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Perekam Audio",
     slug: "audio-recorder",
   },

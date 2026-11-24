@@ -1,0 +1,4 @@
+{
+  "name": "Normalisasi Kenyaringan Audio",
+  "description": "Sesuaikan audio untuk podcast, musik, atau siaran ke target LUFS. Bandingkan kenyaringan dan true peak, dengarkan hasilnya, lalu unduh WAV dari browser."
+}

@@ -79,6 +79,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Normalisera ljudnivån (LUFS)",
+    slug: "audio-loudness-normalizer",
+  },
+  {
+    category: "misc",
     name: "Ljudinspelare",
     slug: "audio-recorder",
   },
