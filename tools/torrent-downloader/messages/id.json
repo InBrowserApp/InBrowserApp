@@ -3,6 +3,8 @@
   "open": "Buka torrent",
   "choose": "Pilih file .torrent",
   "example": "Coba contoh",
+  "publicTrackers": "Gunakan pelacak WebRTC publik bila diperlukan",
+  "publicTrackersHint": "Pelacak publik dapat melihat alamat IP dan info hash Anda. Status privat tautan magnet mungkin baru diketahui setelah metadata diterima.",
   "network": "Unduhan menggunakan peer WebTorrent atau web seed. Biarkan tab ini terbuka sampai file tersimpan.",
   "opening": "Mencari metadata torrent…",
   "stop": "Tutup torrent",

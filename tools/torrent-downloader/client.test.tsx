@@ -76,10 +76,30 @@ test("retains invalid text for correction and accepts a selected torrent file", 
   expect(openTorrent).toHaveBeenLastCalledWith(
     local,
     expect.any(AbortSignal),
-    expect.any(Function)
+    expect.any(Function),
+    true
   )
   const signal = vi.mocked(openTorrent).mock.calls.at(-1)?.[1]
   fireEvent.click(screen.getByRole("button", { name: messages.stop }))
   expect(signal?.aborted).toBe(true)
   expect(screen.queryByRole("table")).toBeNull()
+})
+
+test("public trackers are checked by default and can be turned off before opening", async () => {
+  vi.mocked(openTorrent).mockResolvedValue(torrent)
+  render(<Client language="en" messages={messages} />)
+  const setting = screen.getByRole<HTMLInputElement>("checkbox", {
+    name: messages.publicTrackers,
+  })
+  expect(setting.checked).toBe(true)
+  fireEvent.click(setting)
+  fireEvent.click(screen.getByRole("button", { name: messages.example }))
+  await screen.findByRole("table", { name: messages.files })
+  expect(openTorrent).toHaveBeenCalledWith(
+    expect.stringContaining("magnet:"),
+    expect.any(AbortSignal),
+    expect.any(Function),
+    false
+  )
+  expect(setting.disabled).toBe(true)
 })

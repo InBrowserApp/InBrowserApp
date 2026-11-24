@@ -3,6 +3,8 @@
   "open": "Torrenti aç",
   "choose": ".torrent dosyası seç",
   "example": "Bir örnek dene",
+  "publicTrackers": "Gerektiğinde herkese açık WebRTC izleyicilerini kullan",
+  "publicTrackersHint": "Herkese açık izleyiciler IP adresinizi ve info hash değerini görebilir. Bir magnet bağlantısının özel olup olmadığı ancak meta veriler gelince anlaşılabilir.",
   "network": "Dosyalar WebTorrent eşlerinden veya web kaynaklarından indirilir. Dosya kaydedilene kadar bu sekmeyi açık tutun.",
   "opening": "Torrent meta verileri aranıyor…",
   "stop": "Torrenti kapat",

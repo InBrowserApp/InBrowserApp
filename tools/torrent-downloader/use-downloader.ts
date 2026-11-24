@@ -14,7 +14,7 @@ type Notice =
   | "saved"
   | "written"
 
-function useDownloader() {
+function useDownloader(publicTrackers: boolean) {
   const sessionRequest = useRef<AbortController>(null)
   const activeDownload = useRef<AbortController>(null)
   const [session, setSession] = useState<Session>({ status: "idle" })
@@ -55,10 +55,15 @@ function useDownloader() {
     }, 25_000)
 
     try {
-      const torrent = await openTorrent(input, request.signal, () => {
-        close()
-        setNotice("unreachable")
-      })
+      const torrent = await openTorrent(
+        input,
+        request.signal,
+        () => {
+          close()
+          setNotice("unreachable")
+        },
+        publicTrackers
+      )
       if (!request.signal.aborted) setSession({ status: "ready", torrent })
     } catch (error) {
       if (!request.signal.aborted) {

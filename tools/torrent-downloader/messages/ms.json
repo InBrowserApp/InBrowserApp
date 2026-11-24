@@ -3,6 +3,8 @@
   "open": "Buka torrent",
   "choose": "Pilih fail .torrent",
   "example": "Cuba contoh",
+  "publicTrackers": "Gunakan penjejak WebRTC awam apabila perlu",
+  "publicTrackersHint": "Penjejak awam boleh melihat alamat IP dan cincangan maklumat anda. Status peribadi pautan magnet mungkin hanya diketahui selepas metadata diterima.",
   "network": "Muat turun menggunakan rakan setara WebTorrent atau web seed. Biarkan tab ini terbuka sehingga fail disimpan.",
   "opening": "Mencari metadata torrent…",
   "stop": "Tutup torrent",
