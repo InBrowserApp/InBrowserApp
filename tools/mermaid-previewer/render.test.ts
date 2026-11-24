@@ -58,9 +58,12 @@ test("rejects broken renderer output and still removes temporary DOM", async () 
 
 test("removes active markup while keeping diagram labels in the exported SVG", async () => {
   mock.render.mockResolvedValueOnce({
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" onload=""><script></script><text>Review</text></svg>',
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" onload=""><script></script><text>Review</text><foreignObject><div xmlns="http://www.w3.org/1999/xhtml">HTML label</div></foreignObject></svg>',
   })
   const svg = await renderDiagram("flowchart LR\n  A --> B")
   expect(svg).toContain("<text>Review</text>")
+  expect(svg).toContain("HTML label")
   expect(svg).not.toMatch(/onload|<script/)
+  const doc = new DOMParser().parseFromString(svg, "image/svg+xml")
+  expect(doc.documentElement.localName).toBe("svg")
 })

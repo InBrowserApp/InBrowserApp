@@ -71,6 +71,9 @@ function prepareSvg(svg: string) {
   const fragment = DOMPurify.sanitize(svg, {
     USE_PROFILES: { html: true, svg: true, svgFilters: true },
     ADD_TAGS: ["foreignObject"],
+    HTML_INTEGRATION_POINTS: { foreignobject: true },
+    // The fragment already has namespaces. XMLSerializer writes the declarations.
+    FORBID_ATTR: ["xmlns"],
     RETURN_DOM_FRAGMENT: true,
   })
   const diagram = fragment.querySelector("svg")
