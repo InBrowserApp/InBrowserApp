@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Penukar Aksara Cina kepada Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator faedah kompaun",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Penukar Latitud dan Longitud ↔ DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Carian DNS",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Penukar Sistem Koordinat EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Penyunting Metadata EPUB",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Penguji Alat Kawalan Permainan",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "Pemapar GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Penjana acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Pemapar Fail Kalendar ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

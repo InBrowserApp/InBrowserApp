@@ -1,0 +1,17 @@
+{
+  "openFile": "開啟 GeoJSON",
+  "example": "試用範例",
+  "paste": "貼上 GeoJSON",
+  "render": "顯示在地圖上",
+  "map": "GeoJSON 地圖",
+  "fit": "縮放至資料範圍",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "features": "圖徵",
+  "properties": "屬性",
+  "empty": "開啟 .geojson 或 .json 檔案，或貼上 GeoJSON。",
+  "noGeometry": "這份 GeoJSON 沒有可顯示的圖形。",
+  "noProperties": "此圖徵沒有屬性。",
+  "invalid": "無法開啟這份 GeoJSON。請確認其中包含有效的 GeoJSON 幾何資料。",
+  "feature": "圖徵 {number}"
+}

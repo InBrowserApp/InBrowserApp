@@ -1,0 +1,4 @@
+{
+  "name": "EPSG-Koordinatentransformation",
+  "description": "Transformiere Koordinaten zwischen EPSG-Bezugssystemen wie WGS 84, Web Mercator und UTM. Prüfe die Achsenreihenfolge und Einheiten vor dem Kopieren."
+}

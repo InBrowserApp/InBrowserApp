@@ -1,0 +1,33 @@
+{
+  "assumptions": "積立プラン",
+  "initialAmount": "開始時の残高",
+  "monthlyContribution": "毎月の積立額",
+  "annualRate": "年利率",
+  "years": "運用期間",
+  "yearsUnit": "年",
+  "frequency": "利息の組み入れ頻度",
+  "frequencies": {
+    "daily": "毎日",
+    "monthly": "毎月",
+    "quarterly": "3か月ごと",
+    "semiannually": "半年ごと",
+    "annually": "年1回"
+  },
+  "timing": "積立のタイミング",
+  "timings": {
+    "end": "月末",
+    "start": "月初"
+  },
+  "reset": "入力例に戻す",
+  "endingBalance": "運用後の見込み残高",
+  "totalContributed": "入金総額",
+  "interestEarned": "利息",
+  "growth": "残高の推移",
+  "breakdown": "年ごとの内訳",
+  "year": "経過年数",
+  "amountError": "0以上の金額を入力してください。",
+  "rateError": "−100%から100%までの年利率を入力してください。",
+  "yearsError": "1から100までの整数を入力してください。",
+  "resultError": "金額が大きすぎて計算できません。より小さい金額を入力してください。",
+  "resultPending": "強調表示された入力欄を確認すると、試算結果を表示できます。"
+}

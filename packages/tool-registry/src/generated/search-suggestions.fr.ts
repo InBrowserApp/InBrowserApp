@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Convertisseur de chinois en pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Convertisseur de nombres ↔ chiffres financiers chinois",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Sélecteur de Couleurs",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculateur d’intérêts composés",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Convertisseur de coordonnées GPS en DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Recherche DNS",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Transformateur de coordonnées EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Éditeur de métadonnées EPUB",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Test de manette",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "Visionneuse GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Générateur d'événements iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Visionneuse de fichiers ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

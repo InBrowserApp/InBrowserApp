@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Китайский текст",
+  "inputPlaceholder": "Введите или вставьте китайский текст",
+  "exampleLabel": "Вставить пример",
+  "clearLabel": "Очистить",
+  "outputLabel": "Пиньинь",
+  "outputPlaceholder": "Здесь появится пиньинь",
+  "formatLabel": "Обозначение тонов",
+  "marksLabel": "Знаки тонов",
+  "numbersLabel": "Тоны цифрами",
+  "plainLabel": "Без тонов",
+  "copyLabel": "Копировать пиньинь",
+  "copiedLabel": "Скопировано",
+  "copyFailedLabel": "Не удалось скопировать"
+}

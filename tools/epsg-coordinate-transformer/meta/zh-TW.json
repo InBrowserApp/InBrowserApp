@@ -1,0 +1,4 @@
+{
+  "name": "EPSG 座標系統轉換器",
+  "description": "在 WGS 84、Web Mercator、UTM 等 EPSG 座標參考系統之間轉換座標，並在複製結果前查看座標軸順序與單位。"
+}

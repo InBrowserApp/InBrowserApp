@@ -1,0 +1,33 @@
+{
+  "assumptions": "儲蓄計畫",
+  "initialAmount": "起始金額",
+  "monthlyContribution": "每月投入金額",
+  "annualRate": "年利率",
+  "years": "儲蓄期間",
+  "yearsUnit": "年",
+  "frequency": "複利計息頻率",
+  "frequencies": {
+    "daily": "每天",
+    "monthly": "每月",
+    "quarterly": "每季",
+    "semiannually": "每半年",
+    "annually": "每年"
+  },
+  "timing": "每月投入時間",
+  "timings": {
+    "end": "月底",
+    "start": "月初"
+  },
+  "reset": "恢復範例",
+  "endingBalance": "預估期末金額",
+  "totalContributed": "累計投入",
+  "interestEarned": "利息收益",
+  "growth": "逐年成長",
+  "breakdown": "逐年明細",
+  "year": "年數",
+  "amountError": "請輸入大於或等於 0 的金額。",
+  "rateError": "請輸入 −100% 至 100% 之間的年利率。",
+  "yearsError": "請輸入 1 到 100 之間的整數。",
+  "resultError": "金額過大，無法計算。請試著輸入較小的金額。",
+  "resultPending": "請檢查標示的欄位，即可查看試算結果。"
+}

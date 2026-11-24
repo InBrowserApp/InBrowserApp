@@ -1,0 +1,17 @@
+{
+  "source": "Système de coordonnées source",
+  "target": "Système de coordonnées cible",
+  "search": "Rechercher par code EPSG ou par nom",
+  "noSystems": "Aucun système de coordonnées ne correspond.",
+  "longitude": "Longitude (°)",
+  "latitude": "Latitude (°)",
+  "easting": "Coordonnée est",
+  "northing": "Coordonnée nord",
+  "meters": "Mètres",
+  "example": "Essayer un exemple",
+  "swap": "Inverser la transformation",
+  "copy": "Copier les coordonnées",
+  "copied": "Copié",
+  "invalid": "Impossible de transformer ces coordonnées. Vérifiez les valeurs et le système de coordonnées source.",
+  "axisHelp": "En coordonnées géographiques, saisissez la longitude, puis la latitude. En coordonnées projetées, saisissez la coordonnée est, puis la coordonnée nord."
+}

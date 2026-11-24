@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Chinese to Pinyin Converter",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Number ↔ Chinese Uppercase Converter",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Color Picker",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Compound Interest Calculator",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Latitude & Longitude Converter (DD ↔ DMS)",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS Lookup",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG Coordinate Transformer",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB Metadata Editor",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Gamepad Tester",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON Viewer",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal Event Generator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS Calendar File Viewer",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

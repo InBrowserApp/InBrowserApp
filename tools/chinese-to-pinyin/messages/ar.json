@@ -1,0 +1,15 @@
+{
+  "inputLabel": "النص الصيني",
+  "inputPlaceholder": "اكتب نصًا صينيًا أو الصقه",
+  "exampleLabel": "جرّب مثالًا",
+  "clearLabel": "مسح",
+  "outputLabel": "البينيين",
+  "outputPlaceholder": "سيظهر نص البينيين هنا",
+  "formatLabel": "طريقة عرض النغمات",
+  "marksLabel": "علامات النغمات",
+  "numbersLabel": "أرقام النغمات",
+  "plainLabel": "بلا نغمات",
+  "copyLabel": "نسخ البينيين",
+  "copiedLabel": "تم النسخ",
+  "copyFailedLabel": "تعذّر النسخ"
+}

@@ -1,0 +1,33 @@
+{
+  "assumptions": "Savings plan",
+  "initialAmount": "Starting balance",
+  "monthlyContribution": "Monthly contribution",
+  "annualRate": "Annual interest rate",
+  "years": "Time to grow",
+  "yearsUnit": "years",
+  "frequency": "Compounding frequency",
+  "frequencies": {
+    "daily": "Daily",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "semiannually": "Twice a year",
+    "annually": "Annually"
+  },
+  "timing": "Add contributions at",
+  "timings": {
+    "end": "End of the month",
+    "start": "Start of the month"
+  },
+  "reset": "Reset example",
+  "endingBalance": "Projected balance",
+  "totalContributed": "Total contributed",
+  "interestEarned": "Interest earned",
+  "growth": "Growth over time",
+  "breakdown": "Year-by-year breakdown",
+  "year": "Year",
+  "amountError": "Enter an amount of zero or more.",
+  "rateError": "Enter an annual rate from −100% to 100%.",
+  "yearsError": "Enter a whole number from 1 to 100.",
+  "resultError": "These amounts are too large to calculate. Try smaller values.",
+  "resultPending": "Check the highlighted inputs to see your projection."
+}

@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "中国語ピンイン変換",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "数値・中国語大字変換ツール",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "カラーピッカー",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算ツール",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "緯度・経度の度分秒（DMS）変換",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS ルックアップ",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG 座標系変換",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUBメタデータエディター",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ゲームパッドテスター",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON ビューアー",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal イベント生成ツール",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS カレンダーファイルビューアー",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

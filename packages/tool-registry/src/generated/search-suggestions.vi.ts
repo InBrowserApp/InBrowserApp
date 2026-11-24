@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Chuyển chữ Hán sang Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Bộ Chọn Màu",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Công cụ tính lãi kép",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi kinh độ, vĩ độ và độ phút giây",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "Tra cứu DNS",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "Trình chuyển đổi tọa độ EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Trình chỉnh sửa siêu dữ liệu EPUB",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Kiểm tra tay cầm chơi game",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "Trình xem GeoJSON",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Trình tạo sự kiện iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Trình xem tệp lịch ICS",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

@@ -1,0 +1,24 @@
+.offline-map {
+  --offline-map-water: #e3f3f7;
+  --offline-map-land: #edf1e7;
+  --offline-map-border: #a6b7ab;
+  --offline-map-accent: #067b83;
+  --offline-map-highlight: #bf4e13;
+}
+
+.dark .offline-map {
+  --offline-map-water: #152e3d;
+  --offline-map-land: #293c3b;
+  --offline-map-border: #4b6661;
+  --offline-map-accent: #69d5d3;
+  --offline-map-highlight: #ffb269;
+}
+
+.offline-map .leaflet-container {
+  background: var(--offline-map-water);
+}
+
+.offline-map .leaflet-control-attribution {
+  background: var(--color-background);
+  color: var(--color-muted-foreground);
+}

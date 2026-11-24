@@ -1,0 +1,18 @@
+{
+  "decimal": "Decimale graden (DD)",
+  "dms": "Graden, minuten en seconden (DMS)",
+  "latitude": "Breedtegraad",
+  "longitude": "Lengtegraad",
+  "degrees": "Graden",
+  "minutes": "Minuten",
+  "seconds": "Seconden",
+  "hemisphere": "Halfrond",
+  "north": "Noord (N)",
+  "south": "Zuid (S)",
+  "east": "Oost (E)",
+  "west": "West (W)",
+  "example": "Voorbeeld proberen",
+  "copy": "Coördinaten kopiëren",
+  "copied": "Gekopieerd",
+  "invalid": "De breedtegraad moet binnen ±90° liggen en de lengtegraad binnen ±180°. Minuten en seconden moeten kleiner zijn dan 60."
+}

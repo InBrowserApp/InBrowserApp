@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "चीनी से पिनयिन कन्वर्टर",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "संख्या ↔ चीनी वित्तीय अंक कन्वर्टर",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "कलर पिकर",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS खोज",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG निर्देशांक कन्वर्टर",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "EPUB मेटाडेटा एडिटर",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "गेमपैड टेस्टर",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON व्यूअर",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal इवेंट जेनरेटर",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS कैलेंडर फ़ाइल व्यूअर",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

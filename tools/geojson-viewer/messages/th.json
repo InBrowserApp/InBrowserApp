@@ -1,0 +1,17 @@
+{
+  "openFile": "เปิด GeoJSON",
+  "example": "ลองใช้ตัวอย่าง",
+  "paste": "วาง GeoJSON",
+  "render": "แสดงบนแผนที่",
+  "map": "แผนที่ GeoJSON",
+  "fit": "ซูมให้เห็นข้อมูลทั้งหมด",
+  "zoomIn": "ซูมเข้า",
+  "zoomOut": "ซูมออก",
+  "features": "ฟีเจอร์",
+  "properties": "แอตทริบิวต์",
+  "empty": "เริ่มจากเปิดไฟล์ .geojson หรือ .json หรือวาง GeoJSON",
+  "noGeometry": "GeoJSON นี้ไม่มีรูปทรงที่จะแสดง",
+  "noProperties": "ฟีเจอร์นี้ไม่มีแอตทริบิวต์",
+  "invalid": "เปิด GeoJSON นี้ไม่ได้ โปรดตรวจสอบว่าข้อมูลเรขาคณิตเป็น GeoJSON ที่ถูกต้อง",
+  "feature": "ฟีเจอร์ {number}"
+}

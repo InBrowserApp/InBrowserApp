@@ -1,0 +1,17 @@
+{
+  "openFile": "פתיחת GeoJSON",
+  "example": "טעינת דוגמה",
+  "paste": "הדבקת GeoJSON",
+  "render": "הצגה במפה",
+  "map": "מפת GeoJSON",
+  "fit": "התאמת המפה לנתונים",
+  "zoomIn": "התקרבות",
+  "zoomOut": "התרחקות",
+  "features": "ישויות גאוגרפיות",
+  "properties": "מאפיינים",
+  "empty": "כדי להתחיל, פתחו קובץ בסיומת .geojson או .json, או הדביקו תוכן GeoJSON.",
+  "noGeometry": "קובץ ה־GeoJSON אינו מכיל גאומטריות להצגה.",
+  "noProperties": "לישות הזאת אין מאפיינים.",
+  "invalid": "לא ניתן לפתוח את ה־GeoJSON. בדקו שהוא מכיל גאומטריות GeoJSON תקינות.",
+  "feature": "ישות {number}"
+}

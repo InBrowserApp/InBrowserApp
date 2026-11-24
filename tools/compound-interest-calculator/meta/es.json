@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de interés compuesto",
+  "description": "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años."
+}

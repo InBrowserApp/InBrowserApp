@@ -1,0 +1,17 @@
+{
+  "openFile": "Открыть GeoJSON",
+  "example": "Загрузить пример",
+  "paste": "Вставить GeoJSON",
+  "render": "Показать на карте",
+  "map": "Карта GeoJSON",
+  "fit": "Показать все объекты",
+  "zoomIn": "Приблизить",
+  "zoomOut": "Отдалить",
+  "features": "Объекты",
+  "properties": "Атрибуты",
+  "empty": "Откройте файл .geojson или .json либо вставьте GeoJSON.",
+  "noGeometry": "В этом GeoJSON нет геометрий для отображения.",
+  "noProperties": "У этого объекта нет атрибутов.",
+  "invalid": "Не удалось открыть GeoJSON. Проверьте корректность геометрии.",
+  "feature": "Объект {number}"
+}

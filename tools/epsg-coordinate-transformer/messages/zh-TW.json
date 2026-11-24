@@ -1,0 +1,17 @@
+{
+  "source": "來源座標系統",
+  "target": "目標座標系統",
+  "search": "依 EPSG 代碼或名稱搜尋",
+  "noSystems": "找不到符合的座標系統。",
+  "longitude": "經度（°）",
+  "latitude": "緯度（°）",
+  "easting": "東向座標",
+  "northing": "北向座標",
+  "meters": "公尺",
+  "example": "試用範例",
+  "swap": "反向轉換",
+  "copy": "複製座標",
+  "copied": "已複製",
+  "invalid": "無法轉換此座標。請檢查數值和來源座標系統。",
+  "axisHelp": "地理座標依序填寫經度、緯度。投影座標依序填寫東向、北向座標。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka GeoJSON",
+  "description": "Otwórz plik GeoJSON lub wklej jego treść. Przeglądaj punkty, linie i poligony na interaktywnej mapie offline oraz sprawdzaj atrybuty obiektów. Pliki pozostają w przeglądarce."
+}

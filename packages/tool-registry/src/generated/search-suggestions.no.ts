@@ -263,6 +263,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chinese-text-converter",
   },
   {
+    category: "text",
+    name: "Konverter kinesisk til pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Tall ↔ kinesiske finanstall-konverterer",
     slug: "chinese-uppercase-number-converter",
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Fargevelger",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator for rentes rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -408,6 +418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "misc",
+    name: "Koordinatomregner for desimalgrader og DMS",
+    slug: "dms-coordinate-converter",
+  },
+  {
     category: "network",
     name: "DNS-oppslag",
     slug: "dns-lookup",
@@ -483,6 +498,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "EPSG-koordinattransformasjon",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "Redigering av EPUB-metadata",
     slug: "epub-metadata-editor",
@@ -541,6 +561,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Test av spillkontroller",
     slug: "gamepad-tester",
+  },
+  {
+    category: "json",
+    name: "GeoJSON-viser",
+    slug: "geojson-viewer",
   },
   {
     category: "image",
@@ -631,6 +656,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-hendelsesgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "Viser for ICS-kalenderfiler",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

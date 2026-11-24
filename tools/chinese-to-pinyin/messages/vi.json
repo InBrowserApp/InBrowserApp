@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Văn bản tiếng Trung",
+  "inputPlaceholder": "Nhập hoặc dán văn bản tiếng Trung",
+  "exampleLabel": "Thử ví dụ",
+  "clearLabel": "Xóa",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Kết quả Pinyin sẽ hiện ở đây",
+  "formatLabel": "Cách ghi thanh điệu",
+  "marksLabel": "Dấu thanh",
+  "numbersLabel": "Số chỉ thanh",
+  "plainLabel": "Không ghi thanh điệu",
+  "copyLabel": "Sao chép Pinyin",
+  "copiedLabel": "Đã sao chép",
+  "copyFailedLabel": "Sao chép thất bại"
+}

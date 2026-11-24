@@ -1,0 +1,33 @@
+{
+  "assumptions": "Sparplan",
+  "initialAmount": "Startkapital",
+  "monthlyContribution": "Monatliche Sparrate",
+  "annualRate": "Jährlicher Zinssatz",
+  "years": "Laufzeit",
+  "yearsUnit": "Jahre",
+  "frequency": "Zinsgutschrift",
+  "frequencies": {
+    "daily": "Täglich",
+    "monthly": "Monatlich",
+    "quarterly": "Vierteljährlich",
+    "semiannually": "Halbjährlich",
+    "annually": "Jährlich"
+  },
+  "timing": "Zeitpunkt der Einzahlung",
+  "timings": {
+    "end": "Monatsende",
+    "start": "Monatsanfang"
+  },
+  "reset": "Beispiel zurücksetzen",
+  "endingBalance": "Voraussichtliches Endkapital",
+  "totalContributed": "Einzahlungen insgesamt",
+  "interestEarned": "Zinserträge",
+  "growth": "Kapitalentwicklung",
+  "breakdown": "Jährliche Übersicht",
+  "year": "Jahr",
+  "amountError": "Gib einen Betrag von mindestens null ein.",
+  "rateError": "Gib einen jährlichen Zinssatz zwischen −100 % und 100 % ein.",
+  "yearsError": "Gib eine ganze Zahl zwischen 1 und 100 ein.",
+  "resultError": "Die Beträge sind für die Berechnung zu groß. Versuche es mit kleineren Werten.",
+  "resultPending": "Prüfe die markierten Eingaben, um die Berechnung zu sehen."
+}

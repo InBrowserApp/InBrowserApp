@@ -1,0 +1,20 @@
+{
+  "openFile": "Datei öffnen",
+  "sample": "Beispiel ausprobieren",
+  "input": "Quelltext",
+  "readError": "Die Datei konnte nicht gelesen werden. Wählen Sie sie erneut aus oder fügen Sie den Text ein.",
+  "paste": "ICS-Text einfügen",
+  "view": "Termine anzeigen",
+  "placeholder": "Inhalt der iCalendar-Datei hier einfügen",
+  "search": "Termine suchen",
+  "empty": "Öffnen Sie eine ICS-Datei oder probieren Sie das Beispiel aus, um die Termine anzuzeigen.",
+  "invalid": "Diese iCalendar-Datei konnte nicht gelesen werden. Prüfen Sie den ICS-Inhalt und versuchen Sie es erneut.",
+  "noEvents": "Dieser Kalender enthält keine Termine.",
+  "noMatches": "Keine Termine gefunden.",
+  "untitled": "Termin ohne Titel",
+  "allDay": "Ganztägig",
+  "floating": "Ortszeit",
+  "recurring": "Wiederholt sich",
+  "occurrence": "Geänderter Einzeltermin",
+  "count": "Termine: {count}"
+}
