@@ -25674,6 +25674,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "local-network-file-transfer",
+    category: "network",
+    icon: "network",
+    tags: [
+      "lan",
+      "wifi",
+      "p2p",
+      "webrtc",
+      "file",
+      "text",
+      "transfer",
+      "sharing",
+      "qr",
+    ],
+    locales: {
+      ar: {
+        name: "نقل الملفات عبر الشبكة المحلية",
+        description:
+          "أرسل الملفات والنصوص بين الأجهزة المتصلة بنفس شبكة Wi-Fi أو الشبكة السلكية. اربط الجهازين برمز QR وانقل المحتوى مباشرة بين المتصفحات دون رفعه إلى خادم.",
+      },
+      de: {
+        name: "Dateiübertragung im lokalen Netzwerk",
+        description:
+          "Sende Dateien und Text zwischen Geräten im selben WLAN oder kabelgebundenen Netzwerk. Verbinde sie per QR-Code und übertrage Daten direkt zwischen den Browsern, ohne sie auf einen Server hochzuladen.",
+      },
+      en: {
+        name: "Local Network File Transfer",
+        description:
+          "Send files and text between devices on the same Wi-Fi or wired network. Pair by QR code and transfer directly between browsers without uploading to a server.",
+      },
+      es: {
+        name: "Transferencia de archivos en red local",
+        description:
+          "Envía archivos y texto entre dispositivos conectados a la misma red Wi-Fi o cableada. Vincúlalos por código QR y transfiere los datos directamente entre navegadores sin subirlos a un servidor.",
+      },
+      fr: {
+        name: "Transfert de fichiers sur le réseau local",
+        description:
+          "Envoyez des fichiers et du texte entre appareils sur le même réseau Wi-Fi ou filaire. Associez-les par QR code et transférez vos données directement entre navigateurs, sans les envoyer à un serveur.",
+      },
+      he: {
+        name: "העברת קבצים ברשת המקומית",
+        description:
+          "שלחו קבצים וטקסט בין מכשירים שמחוברים לאותה רשת Wi-Fi או לאותה רשת קווית. התחברו באמצעות קוד QR והעבירו תוכן ישירות בין הדפדפנים בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "लोकल नेटवर्क पर फ़ाइल ट्रांसफ़र",
+        description:
+          "एक ही Wi-Fi या वायर्ड नेटवर्क से जुड़े डिवाइसों के बीच फ़ाइलें और टेक्स्ट भेजें। QR कोड से डिवाइस जोड़ें और बिना सर्वर पर अपलोड किए सीधे ब्राउज़रों के बीच डेटा भेजें।",
+      },
+      id: {
+        name: "Transfer File di Jaringan Lokal",
+        description:
+          "Kirim file dan teks antarperangkat di jaringan Wi-Fi atau kabel yang sama. Pasangkan perangkat lewat kode QR dan kirim langsung antarbrowser tanpa mengunggah ke server.",
+      },
+      it: {
+        name: "Trasferimento di file in rete locale",
+        description:
+          "Invia file e testo tra dispositivi sulla stessa rete Wi-Fi o cablata. Collegali tramite codice QR e trasferisci i dati direttamente tra browser, senza caricarli su un server.",
+      },
+      ja: {
+        name: "ローカルネットワークでファイル転送",
+        description:
+          "同じ Wi-Fi または有線ネットワーク上の端末間でファイルやテキストを送信します。QR コードでペアリングし、サーバーにアップロードせずブラウザー間で直接転送できます。",
+      },
+      ko: {
+        name: "로컬 네트워크 파일 전송",
+        description:
+          "같은 Wi-Fi 또는 유선 네트워크에 연결된 기기 간에 파일과 텍스트를 보냅니다. QR 코드로 페어링하고 서버에 업로드하지 않고 브라우저끼리 직접 전송합니다.",
+      },
+      ms: {
+        name: "Pindahan Fail melalui Rangkaian Setempat",
+        description:
+          "Hantar fail dan teks antara peranti pada rangkaian Wi-Fi atau berwayar yang sama. Gandingkan peranti dengan kod QR dan pindahkan terus antara pelayar tanpa memuat naik ke pelayan.",
+      },
+      nl: {
+        name: "Bestandsoverdracht via lokaal netwerk",
+        description:
+          "Verstuur bestanden en tekst tussen apparaten op hetzelfde wifi- of bekabelde netwerk. Koppel ze met een QR-code en verstuur gegevens rechtstreeks tussen browsers, zonder upload naar een server.",
+      },
+      no: {
+        name: "Filoverføring på lokalnettet",
+        description:
+          "Send filer og tekst mellom enheter på samme trådløse eller kablede nettverk. Koble dem sammen med en QR-kode og send direkte mellom nettleserne uten å laste opp til en server.",
+      },
+      pl: {
+        name: "Przesyłanie plików w sieci lokalnej",
+        description:
+          "Przesyłaj pliki i tekst między urządzeniami w tej samej sieci Wi-Fi lub sieci przewodowej. Połącz je kodem QR i przesyłaj dane bezpośrednio między przeglądarkami, bez wysyłania ich na serwer.",
+      },
+      pt: {
+        name: "Transferência de arquivos na rede local",
+        description:
+          "Envie arquivos e texto entre dispositivos na mesma rede Wi-Fi ou cabeada. Emparelhe com um código QR e transfira os dados diretamente entre navegadores, sem enviá-los a um servidor.",
+      },
+      ru: {
+        name: "Передача файлов по локальной сети",
+        description:
+          "Передавайте файлы и текст между устройствами в одной сети Wi-Fi или проводной сети. Подключите устройства по QR-коду и отправляйте данные напрямую между браузерами без загрузки на сервер.",
+      },
+      sv: {
+        name: "Filöverföring i lokalt nätverk",
+        description:
+          "Skicka filer och text mellan enheter i samma trådlösa eller trådbundna nätverk. Parkoppla med en QR-kod och överför direkt mellan webbläsare utan att ladda upp till en server.",
+      },
+      th: {
+        name: "ส่งไฟล์ผ่านเครือข่ายภายใน",
+        description:
+          "ส่งไฟล์และข้อความระหว่างอุปกรณ์บนเครือข่าย Wi-Fi หรือเครือข่ายแบบใช้สายเดียวกัน จับคู่ด้วย QR Code แล้วส่งตรงระหว่างเบราว์เซอร์โดยไม่ต้องอัปโหลดไปยังเซิร์ฟเวอร์",
+      },
+      tr: {
+        name: "Yerel Ağda Dosya Aktarımı",
+        description:
+          "Aynı Wi-Fi veya kablolu ağa bağlı cihazlar arasında dosya ve metin gönderin. QR koduyla eşleştirin, sunucuya yüklemeden doğrudan tarayıcılar arasında aktarın.",
+      },
+      vi: {
+        name: "Truyền tệp qua mạng nội bộ",
+        description:
+          "Gửi tệp và văn bản giữa các thiết bị kết nối cùng mạng Wi-Fi hoặc mạng có dây. Ghép nối bằng mã QR và gửi trực tiếp giữa hai trình duyệt mà không cần tải lên máy chủ.",
+      },
+      "zh-CN": {
+        name: "局域网文件传输",
+        description:
+          "在同一 Wi-Fi 或有线网络的设备之间发送文件和文本。通过二维码配对，在浏览器之间直接传输，无需上传到服务器。",
+      },
+      "zh-TW": {
+        name: "區域網路檔案傳輸",
+        description:
+          "在同一個 Wi-Fi 或有線網路的裝置之間傳送檔案和文字。透過 QR 碼配對，直接在瀏覽器之間傳輸，無須上傳至伺服器。",
+      },
+    },
+  },
+  {
     slug: "lorem-ipsum-generator",
     category: "text",
     icon: "file-text",
@@ -73951,6 +74084,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "本地字型冊",
         description: "使用 Local Font Access API 瀏覽並預覽裝置上的字型。",
+      },
+    },
+  },
+  "local-network-file-transfer": {
+    slug: "local-network-file-transfer",
+    category: "network",
+    icon: "network",
+    tags: [
+      "lan",
+      "wifi",
+      "p2p",
+      "webrtc",
+      "file",
+      "text",
+      "transfer",
+      "sharing",
+      "qr",
+    ],
+    locales: {
+      ar: {
+        name: "نقل الملفات عبر الشبكة المحلية",
+        description:
+          "أرسل الملفات والنصوص بين الأجهزة المتصلة بنفس شبكة Wi-Fi أو الشبكة السلكية. اربط الجهازين برمز QR وانقل المحتوى مباشرة بين المتصفحات دون رفعه إلى خادم.",
+      },
+      de: {
+        name: "Dateiübertragung im lokalen Netzwerk",
+        description:
+          "Sende Dateien und Text zwischen Geräten im selben WLAN oder kabelgebundenen Netzwerk. Verbinde sie per QR-Code und übertrage Daten direkt zwischen den Browsern, ohne sie auf einen Server hochzuladen.",
+      },
+      en: {
+        name: "Local Network File Transfer",
+        description:
+          "Send files and text between devices on the same Wi-Fi or wired network. Pair by QR code and transfer directly between browsers without uploading to a server.",
+      },
+      es: {
+        name: "Transferencia de archivos en red local",
+        description:
+          "Envía archivos y texto entre dispositivos conectados a la misma red Wi-Fi o cableada. Vincúlalos por código QR y transfiere los datos directamente entre navegadores sin subirlos a un servidor.",
+      },
+      fr: {
+        name: "Transfert de fichiers sur le réseau local",
+        description:
+          "Envoyez des fichiers et du texte entre appareils sur le même réseau Wi-Fi ou filaire. Associez-les par QR code et transférez vos données directement entre navigateurs, sans les envoyer à un serveur.",
+      },
+      he: {
+        name: "העברת קבצים ברשת המקומית",
+        description:
+          "שלחו קבצים וטקסט בין מכשירים שמחוברים לאותה רשת Wi-Fi או לאותה רשת קווית. התחברו באמצעות קוד QR והעבירו תוכן ישירות בין הדפדפנים בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "लोकल नेटवर्क पर फ़ाइल ट्रांसफ़र",
+        description:
+          "एक ही Wi-Fi या वायर्ड नेटवर्क से जुड़े डिवाइसों के बीच फ़ाइलें और टेक्स्ट भेजें। QR कोड से डिवाइस जोड़ें और बिना सर्वर पर अपलोड किए सीधे ब्राउज़रों के बीच डेटा भेजें।",
+      },
+      id: {
+        name: "Transfer File di Jaringan Lokal",
+        description:
+          "Kirim file dan teks antarperangkat di jaringan Wi-Fi atau kabel yang sama. Pasangkan perangkat lewat kode QR dan kirim langsung antarbrowser tanpa mengunggah ke server.",
+      },
+      it: {
+        name: "Trasferimento di file in rete locale",
+        description:
+          "Invia file e testo tra dispositivi sulla stessa rete Wi-Fi o cablata. Collegali tramite codice QR e trasferisci i dati direttamente tra browser, senza caricarli su un server.",
+      },
+      ja: {
+        name: "ローカルネットワークでファイル転送",
+        description:
+          "同じ Wi-Fi または有線ネットワーク上の端末間でファイルやテキストを送信します。QR コードでペアリングし、サーバーにアップロードせずブラウザー間で直接転送できます。",
+      },
+      ko: {
+        name: "로컬 네트워크 파일 전송",
+        description:
+          "같은 Wi-Fi 또는 유선 네트워크에 연결된 기기 간에 파일과 텍스트를 보냅니다. QR 코드로 페어링하고 서버에 업로드하지 않고 브라우저끼리 직접 전송합니다.",
+      },
+      ms: {
+        name: "Pindahan Fail melalui Rangkaian Setempat",
+        description:
+          "Hantar fail dan teks antara peranti pada rangkaian Wi-Fi atau berwayar yang sama. Gandingkan peranti dengan kod QR dan pindahkan terus antara pelayar tanpa memuat naik ke pelayan.",
+      },
+      nl: {
+        name: "Bestandsoverdracht via lokaal netwerk",
+        description:
+          "Verstuur bestanden en tekst tussen apparaten op hetzelfde wifi- of bekabelde netwerk. Koppel ze met een QR-code en verstuur gegevens rechtstreeks tussen browsers, zonder upload naar een server.",
+      },
+      no: {
+        name: "Filoverføring på lokalnettet",
+        description:
+          "Send filer og tekst mellom enheter på samme trådløse eller kablede nettverk. Koble dem sammen med en QR-kode og send direkte mellom nettleserne uten å laste opp til en server.",
+      },
+      pl: {
+        name: "Przesyłanie plików w sieci lokalnej",
+        description:
+          "Przesyłaj pliki i tekst między urządzeniami w tej samej sieci Wi-Fi lub sieci przewodowej. Połącz je kodem QR i przesyłaj dane bezpośrednio między przeglądarkami, bez wysyłania ich na serwer.",
+      },
+      pt: {
+        name: "Transferência de arquivos na rede local",
+        description:
+          "Envie arquivos e texto entre dispositivos na mesma rede Wi-Fi ou cabeada. Emparelhe com um código QR e transfira os dados diretamente entre navegadores, sem enviá-los a um servidor.",
+      },
+      ru: {
+        name: "Передача файлов по локальной сети",
+        description:
+          "Передавайте файлы и текст между устройствами в одной сети Wi-Fi или проводной сети. Подключите устройства по QR-коду и отправляйте данные напрямую между браузерами без загрузки на сервер.",
+      },
+      sv: {
+        name: "Filöverföring i lokalt nätverk",
+        description:
+          "Skicka filer och text mellan enheter i samma trådlösa eller trådbundna nätverk. Parkoppla med en QR-kod och överför direkt mellan webbläsare utan att ladda upp till en server.",
+      },
+      th: {
+        name: "ส่งไฟล์ผ่านเครือข่ายภายใน",
+        description:
+          "ส่งไฟล์และข้อความระหว่างอุปกรณ์บนเครือข่าย Wi-Fi หรือเครือข่ายแบบใช้สายเดียวกัน จับคู่ด้วย QR Code แล้วส่งตรงระหว่างเบราว์เซอร์โดยไม่ต้องอัปโหลดไปยังเซิร์ฟเวอร์",
+      },
+      tr: {
+        name: "Yerel Ağda Dosya Aktarımı",
+        description:
+          "Aynı Wi-Fi veya kablolu ağa bağlı cihazlar arasında dosya ve metin gönderin. QR koduyla eşleştirin, sunucuya yüklemeden doğrudan tarayıcılar arasında aktarın.",
+      },
+      vi: {
+        name: "Truyền tệp qua mạng nội bộ",
+        description:
+          "Gửi tệp và văn bản giữa các thiết bị kết nối cùng mạng Wi-Fi hoặc mạng có dây. Ghép nối bằng mã QR và gửi trực tiếp giữa hai trình duyệt mà không cần tải lên máy chủ.",
+      },
+      "zh-CN": {
+        name: "局域网文件传输",
+        description:
+          "在同一 Wi-Fi 或有线网络的设备之间发送文件和文本。通过二维码配对，在浏览器之间直接传输，无需上传到服务器。",
+      },
+      "zh-TW": {
+        name: "區域網路檔案傳輸",
+        description:
+          "在同一個 Wi-Fi 或有線網路的裝置之間傳送檔案和文字。透過 QR 碼配對，直接在瀏覽器之間傳輸，無須上傳至伺服器。",
       },
     },
   },

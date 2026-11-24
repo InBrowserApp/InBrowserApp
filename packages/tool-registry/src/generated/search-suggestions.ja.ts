@@ -1013,6 +1013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "ローカルネットワークでファイル転送",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Lorem Ipsum ジェネレーター",
     slug: "lorem-ipsum-generator",

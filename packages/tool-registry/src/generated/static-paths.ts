@@ -18586,6 +18586,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "local-network-file-transfer",
+    language: "ar",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "de",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "en",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "es",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "fr",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "he",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "hi",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "id",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "it",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "ja",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "ko",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "ms",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "nl",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "no",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "pl",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "pt",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "ru",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "sv",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "th",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "tr",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "vi",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "zh-CN",
+  },
+  {
+    slug: "local-network-file-transfer",
+    language: "zh-TW",
+  },
+  {
     slug: "lorem-ipsum-generator",
     language: "ar",
   },

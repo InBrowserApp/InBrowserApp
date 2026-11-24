@@ -1013,6 +1013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "Pindahan Fail melalui Rangkaian Setempat",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Penjana Lorem Ipsum",
     slug: "lorem-ipsum-generator",

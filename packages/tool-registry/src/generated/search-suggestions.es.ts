@@ -1013,6 +1013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "Transferencia de archivos en red local",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Generador de Lorem Ipsum",
     slug: "lorem-ipsum-generator",

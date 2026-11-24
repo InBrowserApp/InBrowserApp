@@ -1013,6 +1013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "Yerel Ağda Dosya Aktarımı",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Lorem Ipsum Oluşturucu",
     slug: "lorem-ipsum-generator",

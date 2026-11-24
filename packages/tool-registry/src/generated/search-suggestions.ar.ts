@@ -1013,6 +1013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "نقل الملفات عبر الشبكة المحلية",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "مولد Lorem Ipsum",
     slug: "lorem-ipsum-generator",

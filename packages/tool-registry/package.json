@@ -209,6 +209,7 @@
     "@tool/legacy-motorola-system-key-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
     "@tool/local-font-book": "workspace:*",
+    "@tool/local-network-file-transfer": "workspace:*",
     "@tool/lorem-ipsum-generator": "workspace:*",
     "@tool/mac-address-block-lookup": "workspace:*",
     "@tool/mac-address-lookup": "workspace:*",
