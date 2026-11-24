@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "EPUB naar PDF-converter",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "EU-btw-nummer-validator",
     slug: "eu-vat-number-validator",

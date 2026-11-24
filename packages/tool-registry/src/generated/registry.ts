@@ -11489,6 +11489,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
+      },
+    },
+  },
+  {
     slug: "eu-vat-number-validator",
     category: "text",
     icon: "file-text",
@@ -52129,6 +52260,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EPUB 閱讀器",
         description:
           "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  "epub-to-pdf-converter": {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
       },
     },
   },

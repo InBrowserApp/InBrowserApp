@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "EPUB PDF 변환기",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "EU 부가가치세 번호 검증기",
     slug: "eu-vat-number-validator",

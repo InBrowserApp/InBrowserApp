@@ -1,0 +1,23 @@
+{
+  "open": "Välj EPUB-fil",
+  "replace": "Välj en annan EPUB-fil",
+  "drop": "eller dra hit en .epub-fil",
+  "privacy": "Boken stannar på din enhet.",
+  "loading": "Förbereder förhandsgranskningen…",
+  "cancel": "Avbryt",
+  "pageSize": "Pappersstorlek",
+  "letter": "US Letter",
+  "save": "Spara som PDF",
+  "saveHelp": "Välj Spara som PDF i utskriftsdialogrutan. Stäng av sidhuvud och sidfot om du bara vill ha med bokens innehåll.",
+  "preview": "Förhandsgranskning av boken",
+  "chapter": "Kapitel",
+  "contents": "Innehållsförteckning",
+  "supportingSections": "Noter och kompletterande avsnitt",
+  "imageUnavailable": "Bilden är inte tillgänglig",
+  "missingResources": "Vissa bilder eller andra resurser kunde inte tas med.",
+  "unsupported": "Välj en .epub-fil för att fortsätta.",
+  "invalid": "Det gick inte att läsa EPUB-filen. Prova med ett annat exemplar av boken.",
+  "protected": "EPUB-filen är skyddad. Välj en kopia utan DRM.",
+  "unsupportedLayout": "EPUB-filen har fast layout. Välj en EPUB-fil med flödande text.",
+  "printUnavailable": "Utskrift är inte tillgänglig i den här webbläsaren. Öppna verktyget i en webbläsare som kan spara utskrifter som PDF."
+}

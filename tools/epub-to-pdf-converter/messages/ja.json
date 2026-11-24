@@ -1,0 +1,23 @@
+{
+  "open": "EPUBファイルを選択",
+  "replace": "別のEPUBを選択",
+  "drop": "または.epubファイルをここにドロップ",
+  "privacy": "書籍はこのデバイス内に保持されます。",
+  "loading": "書籍のプレビューを準備中…",
+  "cancel": "キャンセル",
+  "pageSize": "用紙サイズ",
+  "letter": "US Letter",
+  "save": "PDFとして保存",
+  "saveHelp": "印刷ダイアログで「PDFとして保存」を選択してください。ヘッダーとフッターをオフにすると、すっきりした仕上がりになります。",
+  "preview": "書籍のプレビュー",
+  "chapter": "章",
+  "contents": "目次",
+  "supportingSections": "注記と補足セクション",
+  "imageUnavailable": "画像を表示できません",
+  "missingResources": "一部の画像やその他のリソースを含められませんでした。",
+  "unsupported": "続行するには.epubファイルを選択してください。",
+  "invalid": "このEPUBを読み込めませんでした。別のコピーをお試しください。",
+  "protected": "このEPUBは保護されています。DRMのないコピーを選択してください。",
+  "unsupportedLayout": "このEPUBは固定レイアウトです。リフロー型のEPUBを選択してください。",
+  "printUnavailable": "このブラウザーでは印刷できません。PDF印刷に対応したブラウザーでこのツールを開いてください。"
+}

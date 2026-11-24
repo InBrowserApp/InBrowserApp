@@ -453,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-reader",
   },
   {
+    category: "document",
+    name: "EPUB से PDF कन्वर्टर",
+    slug: "epub-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "EU VAT नंबर सत्यापनकर्ता",
     slug: "eu-vat-number-validator",

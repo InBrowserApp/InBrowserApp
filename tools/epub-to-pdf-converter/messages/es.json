@@ -1,0 +1,23 @@
+{
+  "open": "Elegir archivo EPUB",
+  "replace": "Elegir otro EPUB",
+  "drop": "o arrastra un archivo .epub aquí",
+  "privacy": "Tu libro se queda en este dispositivo.",
+  "loading": "Preparando la vista previa del libro…",
+  "cancel": "Cancelar",
+  "pageSize": "Tamaño del papel",
+  "letter": "Carta (EE. UU.)",
+  "save": "Guardar como PDF",
+  "saveHelp": "Elige Guardar como PDF en el cuadro de impresión. Desactiva los encabezados y pies de página para obtener una copia limpia.",
+  "preview": "Vista previa del libro",
+  "chapter": "Capítulo",
+  "contents": "Índice",
+  "supportingSections": "Notas y secciones complementarias",
+  "imageUnavailable": "Imagen no disponible",
+  "missingResources": "No se pudieron incluir algunas imágenes u otros recursos.",
+  "unsupported": "Elige un archivo .epub para continuar.",
+  "invalid": "No se pudo leer este EPUB. Prueba con otra copia del libro.",
+  "protected": "Este EPUB está protegido. Elige una copia sin DRM.",
+  "unsupportedLayout": "Este EPUB tiene un diseño fijo. Elige un EPUB de diseño adaptable.",
+  "printUnavailable": "La impresión no está disponible en este navegador. Abre esta herramienta en un navegador que permita imprimir en PDF."
+}
