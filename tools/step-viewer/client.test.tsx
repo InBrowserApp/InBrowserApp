@@ -46,7 +46,11 @@ test("opens a sample, measures with the keyboard, converts units, and exports th
   })
   expect(await screen.findByText("60 mm")).toBeTruthy()
 
-  fireEvent.change(screen.getByLabelText(m.view), { target: { value: "top" } })
+  const views = screen.getByLabelText<HTMLSelectElement>(m.view)
+  fireEvent.change(views, { target: { value: "top" } })
+  expect(views.value).toBe("top")
+  fireEvent.blur(views)
+  expect(views.value).toBe("")
   fireEvent.click(button(m.fit))
   fireEvent.click(button(m.zoomIn))
   fireEvent.click(button(m.zoomOut))

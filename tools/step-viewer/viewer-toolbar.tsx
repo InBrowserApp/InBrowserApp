@@ -24,9 +24,12 @@ export function ViewerToolbar({
       <div className="flex flex-wrap items-center gap-1">
         <select
           aria-label={m.view}
-          value=""
+          defaultValue=""
           className="me-1 h-9 max-w-full rounded-md border border-input bg-background px-2 text-sm"
           onChange={(event) => viewport.view(event.target.value as View)}
+          onBlur={(event) => {
+            event.currentTarget.value = ""
+          }}
         >
           <option value="" disabled>
             {m.chooseView}
