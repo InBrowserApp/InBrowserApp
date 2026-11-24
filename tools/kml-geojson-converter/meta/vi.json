@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi KML ↔ GeoJSON",
+  "description": "Chuyển KML sang GeoJSON hoặc GeoJSON sang KML ngay trong trình duyệt. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải kết quả để sử dụng trong công việc GIS."
+}

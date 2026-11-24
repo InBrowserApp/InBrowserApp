@@ -1,0 +1,12 @@
+{
+  "direction": "Arah konversi",
+  "example": "Coba contoh",
+  "openFile": "Buka berkas",
+  "convert": "Konversi",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Unduh",
+  "empty": "Hasil konversi akan muncul di sini.",
+  "invalid": "Konversi gagal. Periksa format berkas dan geometrinya.",
+  "swap": "Gunakan hasil sebagai masukan"
+}

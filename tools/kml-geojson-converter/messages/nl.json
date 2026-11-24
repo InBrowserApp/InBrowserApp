@@ -1,0 +1,12 @@
+{
+  "direction": "Conversierichting",
+  "example": "Voorbeeld proberen",
+  "openFile": "Bestand openen",
+  "convert": "Omzetten",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd",
+  "download": "Downloaden",
+  "empty": "Het resultaat van de conversie verschijnt hier.",
+  "invalid": "Kan de inhoud niet omzetten. Controleer de bestandsindeling en de geometrie.",
+  "swap": "Resultaat als invoer gebruiken"
+}
