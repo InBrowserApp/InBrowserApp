@@ -1,11 +1,11 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
 
-import type { Messages } from "./client"
 import type { Plan } from "./core/plan"
+import type english from "./messages/en.json"
 
 type ResultMessages = Pick<
-  Messages,
+  typeof english,
   | "result"
   | "assigned"
   | "remaining"
