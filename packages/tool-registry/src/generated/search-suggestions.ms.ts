@@ -1689,6 +1689,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "network",
+    name: "Pemuat Turun Torrent",
+    slug: "torrent-downloader",
+  },
+  {
+    category: "network",
     name: "Pemapar Fail Torrent",
     slug: "torrent-file-viewer",
   },

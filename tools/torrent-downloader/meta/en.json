@@ -1,0 +1,4 @@
+{
+  "name": "Torrent Downloader",
+  "description": "Download files from a magnet link or .torrent file in your browser with WebTorrent. Choose a file and track its download progress."
+}

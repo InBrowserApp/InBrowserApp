@@ -344,6 +344,7 @@
     "@tool/tldr": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
+    "@tool/torrent-downloader": "workspace:*",
     "@tool/torrent-file-viewer": "workspace:*",
     "@tool/typst-to-pdf-converter": "workspace:*",
     "@tool/typst-viewer": "workspace:*",

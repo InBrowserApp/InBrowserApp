@@ -1,3 +1,4 @@
+import { fileSizeFormatter } from "@workspace/ui/lib/format-file-size"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   Card,
@@ -21,8 +22,6 @@ type TorrentDetailsProps = {
   heading?: string
 }
 
-const SIZE_UNITS = ["B", "KiB", "MiB", "GiB", "TiB", "PiB"]
-
 function TorrentDetails({
   torrent,
   magnet,
@@ -34,13 +33,7 @@ function TorrentDetails({
   const formatNumber = new Intl.NumberFormat(language, {
     maximumFractionDigits: 2,
   })
-  const formatSize = (bytes: number) => {
-    const unit = Math.min(
-      Math.floor(Math.log2(Math.max(1, bytes)) / 10),
-      SIZE_UNITS.length - 1
-    )
-    return `${formatNumber.format(bytes / 1024 ** unit)} ${SIZE_UNITS[unit]}`
-  }
+  const formatSize = fileSizeFormatter(language)
 
   return (
     <div className="grid min-w-0 gap-4">
@@ -142,8 +135,7 @@ function TorrentDetails({
           key={torrent.infoHash}
           files={full.files}
           messages={m}
-          formatSize={formatSize}
-          formatNumber={formatNumber}
+          language={language}
         />
       ) : null}
       {[

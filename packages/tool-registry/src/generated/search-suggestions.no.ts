@@ -1689,6 +1689,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "network",
+    name: "Torrentnedlaster",
+    slug: "torrent-downloader",
+  },
+  {
+    category: "network",
     name: "Torrentfilviser",
     slug: "torrent-file-viewer",
   },

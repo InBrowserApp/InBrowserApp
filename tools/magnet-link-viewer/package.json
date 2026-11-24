@@ -11,7 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "memory-chunk-store": "catalog:",
-    "parse-torrent": "catalog:",
+    "@workspace/bittorrent": "workspace:*",
     "webtorrent": "catalog:"
   },
   "peerDependencies": {
@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "@types/parse-torrent": "catalog:",
     "vitest": "catalog:",
     "@types/webtorrent": "catalog:"
   }

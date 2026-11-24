@@ -419,6 +419,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   tldr: () => import("@tool/tldr/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "torrent-downloader": () => import("@tool/torrent-downloader/page"),
   "torrent-file-viewer": () => import("@tool/torrent-file-viewer/page"),
   "typst-to-pdf-converter": () => import("@tool/typst-to-pdf-converter/page"),
   "typst-viewer": () => import("@tool/typst-viewer/page"),

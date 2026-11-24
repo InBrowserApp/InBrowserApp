@@ -1,0 +1,4 @@
+{
+  "name": "Trình tải torrent",
+  "description": "Tải tệp từ liên kết magnet hoặc tệp .torrent trong trình duyệt bằng WebTorrent. Chọn tệp và theo dõi tiến trình tải xuống."
+}

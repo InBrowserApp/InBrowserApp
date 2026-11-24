@@ -863,6 +863,9 @@ catalogs:
     foliate-js:
       specifier: 1.0.1
       version: 1.0.1
+    fsa-chunk-store:
+      specifier: 1.3.0
+      version: 1.3.0
     gifenc:
       specifier: 1.0.3
       version: 1.0.3
@@ -1323,6 +1326,16 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/lib/bittorrent:
+    dependencies:
+      parse-torrent:
+        specifier: 'catalog:'
+        version: 11.0.24
+    devDependencies:
+      '@types/parse-torrent':
+        specifier: 'catalog:'
+        version: 11.0.1
 
   packages/lib/caj:
     dependencies:
@@ -3077,6 +3090,9 @@ importers:
       '@tool/toml-to-yaml-converter':
         specifier: workspace:*
         version: link:../../tools/toml-to-yaml-converter
+      '@tool/torrent-downloader':
+        specifier: workspace:*
+        version: link:../../tools/torrent-downloader
       '@tool/torrent-file-viewer':
         specifier: workspace:*
         version: link:../../tools/torrent-file-viewer
@@ -9260,6 +9276,9 @@ importers:
 
   tools/magnet-link-viewer:
     dependencies:
+      '@workspace/bittorrent':
+        specifier: workspace:*
+        version: link:../../packages/lib/bittorrent
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -9272,9 +9291,6 @@ importers:
       memory-chunk-store:
         specifier: 'catalog:'
         version: 1.3.5
-      parse-torrent:
-        specifier: 'catalog:'
-        version: 11.0.24
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9288,9 +9304,6 @@ importers:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@types/parse-torrent':
-        specifier: 'catalog:'
-        version: 11.0.1
       '@types/webtorrent':
         specifier: 'catalog:'
         version: 3.0.0
@@ -13020,6 +13033,52 @@ importers:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/torrent-downloader:
+    dependencies:
+      '@workspace/bittorrent':
+        specifier: workspace:*
+        version: link:../../packages/lib/bittorrent
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      fsa-chunk-store:
+        specifier: 'catalog:'
+        version: 1.3.0
+      memory-chunk-store:
+        specifier: 'catalog:'
+        version: 1.3.5
+      parse-torrent:
+        specifier: 'catalog:'
+        version: 11.0.24
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      webtorrent:
+        specifier: 'catalog:'
+        version: 3.0.21(bare-buffer@3.7.3)(bare-url@2.5.8)(supports-color@10.2.2)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@types/parse-torrent':
+        specifier: 'catalog:'
+        version: 11.0.1
+      '@types/webtorrent':
+        specifier: 'catalog:'
+        version: 3.0.0
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))

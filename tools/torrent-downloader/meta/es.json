@@ -1,0 +1,4 @@
+{
+  "name": "Descargador de torrents",
+  "description": "Descarga archivos de un enlace magnet o un archivo .torrent en tu navegador con WebTorrent. Elige un archivo y consulta el progreso de la descarga."
+}
