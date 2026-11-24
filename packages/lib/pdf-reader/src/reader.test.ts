@@ -107,9 +107,9 @@ test("forms supply accessible field names without replacing authored labels", as
   const div = document.createElement("div")
   div.innerHTML = `
     <div class="annotationLayer">
-      <section class="widgetAnnotation" title="Full name"><input name="name"></section>
-      <section class="widgetAnnotation"><textarea name="Comments"></textarea></section>
-      <section class="widgetAnnotation"><select name="choice" aria-labelledby="authored"></select></section>
+      <section class="textWidgetAnnotation" title="Full name"><input name="name"></section>
+      <section class="textWidgetAnnotation"><textarea name="Comments"></textarea></section>
+      <section class="choiceWidgetAnnotation"><select name="choice" aria-labelledby="authored"></select></section>
     </div>
   `
   mock.events.get("annotationlayerrendered")!({ source: { div } })

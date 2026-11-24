@@ -145,7 +145,7 @@ export async function openReader({
       "annotationlayerrendered",
       ({ source }: { source: { div: HTMLElement } }) => {
         const fields = source.div.querySelectorAll<HTMLInputElement>(
-          ".annotationLayer .widgetAnnotation :is(input, textarea, select)"
+          ".annotationLayer :is(input[name], textarea[name], select[name])"
         )
         for (const field of fields) {
           if (field.matches("[aria-label], [aria-labelledby]")) continue
