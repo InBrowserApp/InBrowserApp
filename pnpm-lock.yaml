@@ -4858,7 +4858,7 @@ importers:
         version: 1.16.0
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
