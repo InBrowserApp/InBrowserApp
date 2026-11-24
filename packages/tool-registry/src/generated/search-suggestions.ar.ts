@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "عارض ملفات تقويم ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
     category: "image",
     name: "إزالة خلفية الصورة",
     slug: "image-background-remover",

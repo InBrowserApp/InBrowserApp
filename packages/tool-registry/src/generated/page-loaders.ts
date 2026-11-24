@@ -157,6 +157,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "ics-calendar-viewer": () => import("@tool/ics-calendar-viewer/page"),
   "image-background-remover": () =>
     import("@tool/image-background-remover/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),

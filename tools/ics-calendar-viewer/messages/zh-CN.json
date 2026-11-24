@@ -1,0 +1,20 @@
+{
+  "openFile": "打开文件",
+  "sample": "试用示例",
+  "input": "源文本",
+  "readError": "无法读取文件。请重新选择文件，或粘贴文本。",
+  "paste": "粘贴 ICS 文本",
+  "view": "查看日程",
+  "placeholder": "在此粘贴 iCalendar 文件内容",
+  "search": "搜索日程",
+  "empty": "打开 ICS 文件或试用示例来查看日程。",
+  "invalid": "无法读取此 iCalendar 文件。请检查 ICS 文件内容后重试。",
+  "noEvents": "此日历没有日程。",
+  "noMatches": "未找到匹配的日程。",
+  "untitled": "无标题日程",
+  "allDay": "全天",
+  "floating": "本地时间",
+  "recurring": "重复日程",
+  "occurrence": "已修改的单次日程",
+  "count": "日程数：{count}"
+}

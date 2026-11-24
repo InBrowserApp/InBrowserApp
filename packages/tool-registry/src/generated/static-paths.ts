@@ -11502,6 +11502,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ics-calendar-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "de",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "en",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "es",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "he",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "id",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "it",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "no",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "th",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-calendar-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "image-background-remover",
     language: "ar",
   },

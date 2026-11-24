@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "Trình xem tệp lịch ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
     category: "image",
     name: "Xóa nền ảnh",
     slug: "image-background-remover",

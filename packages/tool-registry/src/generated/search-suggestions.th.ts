@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
     category: "image",
     name: "ลบพื้นหลังรูปภาพ",
     slug: "image-background-remover",

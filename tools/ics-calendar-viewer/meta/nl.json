@@ -1,0 +1,4 @@
+{
+  "name": "Viewer voor ICS-agendabestanden",
+  "description": "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser."
+}

@@ -833,6 +833,9 @@ catalogs:
     hyparquet-compressors:
       specifier: 1.1.3
       version: 1.1.3
+    ical.js:
+      specifier: ^2.2.1
+      version: 2.2.1
     iconv-lite:
       specifier: 0.7.3
       version: 0.7.3
@@ -1332,6 +1335,16 @@ importers:
       saxes:
         specifier: 'catalog:'
         version: 6.0.0
+    devDependencies:
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/lib/icalendar:
+    dependencies:
+      ical.js:
+        specifier: 'catalog:'
+        version: 2.2.1
     devDependencies:
       vitest:
         specifier: 'catalog:'
@@ -2248,6 +2261,9 @@ importers:
       '@tool/ical-event-generator':
         specifier: workspace:*
         version: link:../../tools/ical-event-generator
+      '@tool/ics-calendar-viewer':
+        specifier: workspace:*
+        version: link:../../tools/ics-calendar-viewer
       '@tool/image-background-remover':
         specifier: workspace:*
         version: link:../../tools/image-background-remover
@@ -6535,6 +6551,34 @@ importers:
 
   tools/ical-event-generator:
     dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/ics-calendar-viewer:
+    dependencies:
+      '@workspace/icalendar':
+        specifier: workspace:*
+        version: link:../../packages/lib/icalendar
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -17652,6 +17696,9 @@ packages:
   hysnappy@1.1.1:
     resolution: {integrity: sha512-/V9XcN2NtRyWjR4LYMfvnvasVVF8jbT/ej0eofBQjZel91E3D813FQ3mQC6gDSMMTCq/FJh28XHeyqr3I/oBRw==}
 
+  ical.js@2.2.1:
+    resolution: {integrity: sha512-yK/UlPbEs316igb/tjRgbFA8ZV75rCsBJp/hWOatpyaPNlgw0dGDmU+FoicOcwX4xXkeXOkYiOmCqNPFpNPkQg==}
+
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -24830,6 +24877,8 @@ snapshots:
   hyparquet@1.33.1(patch_hash=f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830): {}
 
   hysnappy@1.1.1: {}
+
+  ical.js@2.2.1: {}
 
   iconv-lite@0.4.24:
     dependencies:

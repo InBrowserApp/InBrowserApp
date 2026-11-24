@@ -1,0 +1,4 @@
+{
+  "name": "Betrachter für ICS-Kalenderdateien",
+  "description": "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser."
+}

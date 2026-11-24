@@ -8,6 +8,7 @@ import {
   BookOpen,
   Braces,
   Building2,
+  CalendarDays,
   Camera,
   Captions,
   ChartNoAxesColumnIncreasing,
@@ -50,6 +51,7 @@ import {
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
+  "calendar-days": CalendarDays,
   binary: Binary,
   blocks: Blocks,
   bookmark: Bookmark,

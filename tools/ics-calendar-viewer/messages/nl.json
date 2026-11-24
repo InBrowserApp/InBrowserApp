@@ -1,0 +1,20 @@
+{
+  "openFile": "Bestand openen",
+  "sample": "Voorbeeld proberen",
+  "input": "Brontekst",
+  "readError": "Het bestand kon niet worden gelezen. Kies het opnieuw of plak de tekst.",
+  "paste": "ICS-tekst plakken",
+  "view": "Afspraken tonen",
+  "placeholder": "Plak hier de inhoud van het iCalendar-bestand",
+  "search": "Afspraken zoeken",
+  "empty": "Open een ICS-bestand of probeer het voorbeeld om afspraken te bekijken.",
+  "invalid": "Dit iCalendar-bestand kon niet worden gelezen. Controleer de ICS-inhoud en probeer het opnieuw.",
+  "noEvents": "Deze agenda bevat geen afspraken.",
+  "noMatches": "Geen afspraken gevonden.",
+  "untitled": "Afspraak zonder titel",
+  "allDay": "Hele dag",
+  "floating": "Lokale tijd",
+  "recurring": "Herhaalt zich",
+  "occurrence": "Gewijzigd exemplaar",
+  "count": "Afspraken: {count}"
+}
