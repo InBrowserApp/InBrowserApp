@@ -1,0 +1,15 @@
+{
+  "inputLabel": "中国語テキスト",
+  "inputPlaceholder": "中国語を入力または貼り付け",
+  "exampleLabel": "例を試す",
+  "clearLabel": "クリア",
+  "outputLabel": "ピンイン",
+  "outputPlaceholder": "ここにピンインが表示されます",
+  "formatLabel": "声調の形式",
+  "marksLabel": "声調記号",
+  "numbersLabel": "声調番号",
+  "plainLabel": "声調なし",
+  "copyLabel": "ピンインをコピー",
+  "copiedLabel": "コピーしました",
+  "copyFailedLabel": "コピーできませんでした"
+}

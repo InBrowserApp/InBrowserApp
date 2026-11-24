@@ -68,6 +68,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
+  "chinese-to-pinyin": () => import("@tool/chinese-to-pinyin/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
   "chm-viewer": () => import("@tool/chm-viewer/page"),

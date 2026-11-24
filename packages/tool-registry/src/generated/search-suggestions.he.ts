@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "ממיר מסינית לפיניין",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
     slug: "chinese-uppercase-number-converter",

@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Chuyển chữ Hán sang Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",

@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Chinese to Pinyin Converter",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Number ↔ Chinese Uppercase Converter",
     slug: "chinese-uppercase-number-converter",

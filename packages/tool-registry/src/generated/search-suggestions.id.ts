@@ -258,6 +258,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "Konverter Hanzi ke Pinyin",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "Konverter Angka ↔ Angka Finansial Tionghoa",
     slug: "chinese-uppercase-number-converter",
