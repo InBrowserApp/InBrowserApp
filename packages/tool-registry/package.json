@@ -340,6 +340,7 @@
     "@tool/video-to-gif": "workspace:*",
     "@tool/video-trimmer": "workspace:*",
     "@tool/vin-validator": "workspace:*",
+    "@tool/vlsm-calculator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xls-to-xlsx-converter": "workspace:*",
     "@tool/xlsx-to-ods-converter": "workspace:*",

@@ -1668,6 +1668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "IPv4 VLSM 子网计算器",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Whirlpool 哈希文本或文件",
     slug: "whirlpool-hash-text-or-file",

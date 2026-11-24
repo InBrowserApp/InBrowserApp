@@ -1668,6 +1668,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "Calculadora VLSM para IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool de Texto o Archivo",
     slug: "whirlpool-hash-text-or-file",

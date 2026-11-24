@@ -42187,6 +42187,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "vlsm-calculator",
+    category: "network",
+    icon: "network",
+    tags: [
+      "vlsm",
+      "subnet",
+      "calculator",
+      "ipv4",
+      "cidr",
+      "netmask",
+      "address",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
+        description:
+          "خطّط للشبكات الفرعية IPv4 حسب عدد المضيفين. أدخل كتلة CIDR رئيسية لحساب أقنعة الشبكات الفرعية ونطاقات عناوين IP القابلة للاستخدام وعناوين البث والمساحة المتبقية.",
+      },
+      de: {
+        name: "IPv4-VLSM-Rechner",
+        description:
+          "Plane IPv4-Subnetze nach Hostanzahl. Gib einen übergeordneten CIDR-Block ein und berechne Subnetzmasken, nutzbare IP-Bereiche, Broadcast-Adressen und den verbleibenden Adressraum.",
+      },
+      en: {
+        name: "IPv4 VLSM Calculator",
+        description:
+          "Plan IPv4 subnets by host count. Enter a parent CIDR block to calculate subnet masks, usable IP ranges, broadcast addresses, and remaining address space.",
+      },
+      es: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planifica subredes IPv4 según el número de hosts. Introduce el bloque CIDR principal para calcular las máscaras de subred, los rangos IP utilizables, las direcciones de difusión y el espacio disponible.",
+      },
+      fr: {
+        name: "Calculateur VLSM IPv4",
+        description:
+          "Planifiez vos sous-réseaux IPv4 selon le nombre d’hôtes. À partir d’un bloc CIDR parent, calculez les masques, les plages d’IP utilisables, les adresses de diffusion et l’espace restant.",
+      },
+      he: {
+        name: "מחשבון VLSM לתת־רשתות IPv4",
+        description:
+          "תכננו תת־רשתות IPv4 לפי מספר המארחים. הזינו את בלוק ה־CIDR הראשי כדי לחשב מסכות תת־רשת, טווחי כתובות IP שמישות, כתובות שידור ושטח כתובות פנוי.",
+      },
+      hi: {
+        name: "IPv4 VLSM कैलकुलेटर",
+        description:
+          "होस्ट की संख्या के आधार पर IPv4 सबनेट की योजना बनाएँ। सबनेट मास्क, उपयोग योग्य IP रेंज, ब्रॉडकास्ट पते और बचा हुआ पता क्षेत्र जानने के लिए मूल CIDR ब्लॉक दर्ज करें।",
+      },
+      id: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rencanakan subnet IPv4 berdasarkan jumlah host. Masukkan blok CIDR induk untuk menghitung subnet mask, rentang IP yang bisa dipakai, alamat broadcast, dan sisa alamat.",
+      },
+      it: {
+        name: "Calcolatore di sottoreti IPv4 VLSM",
+        description:
+          "Pianifica le sottoreti IPv4 in base al numero di host. Inserisci un blocco CIDR per calcolare maschere, intervalli IP utilizzabili, indirizzi broadcast e spazio residuo.",
+      },
+      ja: {
+        name: "IPv4 VLSM サブネット計算ツール",
+        description:
+          "必要なホスト数に合わせて IPv4 サブネットを割り当てます。親ネットワークの CIDR ブロックを指定すると、サブネットマスク、使用可能な IP アドレス範囲、ブロードキャストアドレス、未割り当てのアドレスを確認できます。",
+      },
+      ko: {
+        name: "IPv4 VLSM 서브넷 계산기",
+        description:
+          "필요한 호스트 수에 맞춰 IPv4 서브넷을 구성하세요. 상위 CIDR 블록을 입력하면 서브넷 마스크, 사용 가능한 IP 범위, 브로드캐스트 주소, 남은 주소 공간을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rancang subnet IPv4 mengikut bilangan hos. Masukkan blok CIDR induk untuk mengira topeng subnet, julat IP yang boleh digunakan, alamat siaran dan baki alamat.",
+      },
+      nl: {
+        name: "IPv4 VLSM-calculator",
+        description:
+          "Plan IPv4-subnetten op basis van het aantal hosts. Voer een overkoepelend CIDR-blok in om subnetmaskers, bruikbare IP-bereiken, broadcastadressen en de resterende adresruimte te berekenen.",
+      },
+      no: {
+        name: "IPv4 VLSM-kalkulator",
+        description:
+          "Planlegg IPv4-subnett etter antall verter. Oppgi en overordnet CIDR-blokk for å beregne nettmasker, brukbare IP-områder, broadcast-adresser og gjenværende adresseplass.",
+      },
+      pl: {
+        name: "Kalkulator podsieci IPv4 VLSM",
+        description:
+          "Zaplanuj podsieci IPv4 według liczby hostów. Podaj blok CIDR, aby obliczyć maski podsieci, zakresy adresów IP dla hostów, adresy rozgłoszeniowe i pozostałą pulę adresów.",
+      },
+      pt: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planeje sub-redes IPv4 pela quantidade de hosts. Informe um bloco CIDR principal para calcular máscaras, faixas de IPs utilizáveis, endereços de broadcast e o espaço restante.",
+      },
+      ru: {
+        name: "Калькулятор подсетей IPv4 с VLSM",
+        description:
+          "Разбейте блок IPv4 на подсети по числу узлов. По исходному блоку CIDR калькулятор определит маски подсетей, диапазоны доступных IP, широковещательные адреса и остаток адресов.",
+      },
+      sv: {
+        name: "IPv4 VLSM-kalkylator",
+        description:
+          "Planera IPv4-subnät utifrån antalet värdar. Ange ett överordnat CIDR-block för att beräkna nätmasker, användbara IP-intervall, broadcast-adresser och återstående adressutrymme.",
+      },
+      th: {
+        name: "เครื่องคำนวณ IPv4 VLSM",
+        description:
+          "วางแผนซับเน็ต IPv4 ตามจำนวนโฮสต์ กรอกบล็อก CIDR ต้นทางเพื่อคำนวณซับเน็ตมาสก์ ช่วง IP ที่ใช้ได้ ที่อยู่บรอดแคสต์ และพื้นที่ที่อยู่ที่เหลือ",
+      },
+      tr: {
+        name: "IPv4 VLSM Hesaplayıcı",
+        description:
+          "IPv4 alt ağlarını ana makine sayısına göre planlayın. Alt ağ maskelerini, kullanılabilir IP aralıklarını, yayın adreslerini ve kalan adres alanını hesaplamak için üst CIDR bloğunu girin.",
+      },
+      vi: {
+        name: "Công cụ tính mạng con IPv4 theo VLSM",
+        description:
+          "Chia mạng con IPv4 theo số lượng máy cần cấp IP. Nhập khối CIDR gốc để tính mặt nạ mạng con, dải IP khả dụng, địa chỉ quảng bá và phần địa chỉ còn trống.",
+      },
+      "zh-CN": {
+        name: "IPv4 VLSM 子网计算器",
+        description:
+          "根据所需主机数规划 IPv4 子网。输入基础 CIDR 地址块，计算子网掩码、可用 IP 范围、广播地址和剩余地址空间。",
+      },
+      "zh-TW": {
+        name: "IPv4 VLSM 子網路計算機",
+        description:
+          "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -85910,6 +86041,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "VIN 驗證器",
         description: "依據長度、字元及校驗碼規則驗證車輛識別號碼（VIN）",
+      },
+    },
+  },
+  "vlsm-calculator": {
+    slug: "vlsm-calculator",
+    category: "network",
+    icon: "network",
+    tags: [
+      "vlsm",
+      "subnet",
+      "calculator",
+      "ipv4",
+      "cidr",
+      "netmask",
+      "address",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
+        description:
+          "خطّط للشبكات الفرعية IPv4 حسب عدد المضيفين. أدخل كتلة CIDR رئيسية لحساب أقنعة الشبكات الفرعية ونطاقات عناوين IP القابلة للاستخدام وعناوين البث والمساحة المتبقية.",
+      },
+      de: {
+        name: "IPv4-VLSM-Rechner",
+        description:
+          "Plane IPv4-Subnetze nach Hostanzahl. Gib einen übergeordneten CIDR-Block ein und berechne Subnetzmasken, nutzbare IP-Bereiche, Broadcast-Adressen und den verbleibenden Adressraum.",
+      },
+      en: {
+        name: "IPv4 VLSM Calculator",
+        description:
+          "Plan IPv4 subnets by host count. Enter a parent CIDR block to calculate subnet masks, usable IP ranges, broadcast addresses, and remaining address space.",
+      },
+      es: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planifica subredes IPv4 según el número de hosts. Introduce el bloque CIDR principal para calcular las máscaras de subred, los rangos IP utilizables, las direcciones de difusión y el espacio disponible.",
+      },
+      fr: {
+        name: "Calculateur VLSM IPv4",
+        description:
+          "Planifiez vos sous-réseaux IPv4 selon le nombre d’hôtes. À partir d’un bloc CIDR parent, calculez les masques, les plages d’IP utilisables, les adresses de diffusion et l’espace restant.",
+      },
+      he: {
+        name: "מחשבון VLSM לתת־רשתות IPv4",
+        description:
+          "תכננו תת־רשתות IPv4 לפי מספר המארחים. הזינו את בלוק ה־CIDR הראשי כדי לחשב מסכות תת־רשת, טווחי כתובות IP שמישות, כתובות שידור ושטח כתובות פנוי.",
+      },
+      hi: {
+        name: "IPv4 VLSM कैलकुलेटर",
+        description:
+          "होस्ट की संख्या के आधार पर IPv4 सबनेट की योजना बनाएँ। सबनेट मास्क, उपयोग योग्य IP रेंज, ब्रॉडकास्ट पते और बचा हुआ पता क्षेत्र जानने के लिए मूल CIDR ब्लॉक दर्ज करें।",
+      },
+      id: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rencanakan subnet IPv4 berdasarkan jumlah host. Masukkan blok CIDR induk untuk menghitung subnet mask, rentang IP yang bisa dipakai, alamat broadcast, dan sisa alamat.",
+      },
+      it: {
+        name: "Calcolatore di sottoreti IPv4 VLSM",
+        description:
+          "Pianifica le sottoreti IPv4 in base al numero di host. Inserisci un blocco CIDR per calcolare maschere, intervalli IP utilizzabili, indirizzi broadcast e spazio residuo.",
+      },
+      ja: {
+        name: "IPv4 VLSM サブネット計算ツール",
+        description:
+          "必要なホスト数に合わせて IPv4 サブネットを割り当てます。親ネットワークの CIDR ブロックを指定すると、サブネットマスク、使用可能な IP アドレス範囲、ブロードキャストアドレス、未割り当てのアドレスを確認できます。",
+      },
+      ko: {
+        name: "IPv4 VLSM 서브넷 계산기",
+        description:
+          "필요한 호스트 수에 맞춰 IPv4 서브넷을 구성하세요. 상위 CIDR 블록을 입력하면 서브넷 마스크, 사용 가능한 IP 범위, 브로드캐스트 주소, 남은 주소 공간을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Subnet IPv4 VLSM",
+        description:
+          "Rancang subnet IPv4 mengikut bilangan hos. Masukkan blok CIDR induk untuk mengira topeng subnet, julat IP yang boleh digunakan, alamat siaran dan baki alamat.",
+      },
+      nl: {
+        name: "IPv4 VLSM-calculator",
+        description:
+          "Plan IPv4-subnetten op basis van het aantal hosts. Voer een overkoepelend CIDR-blok in om subnetmaskers, bruikbare IP-bereiken, broadcastadressen en de resterende adresruimte te berekenen.",
+      },
+      no: {
+        name: "IPv4 VLSM-kalkulator",
+        description:
+          "Planlegg IPv4-subnett etter antall verter. Oppgi en overordnet CIDR-blokk for å beregne nettmasker, brukbare IP-områder, broadcast-adresser og gjenværende adresseplass.",
+      },
+      pl: {
+        name: "Kalkulator podsieci IPv4 VLSM",
+        description:
+          "Zaplanuj podsieci IPv4 według liczby hostów. Podaj blok CIDR, aby obliczyć maski podsieci, zakresy adresów IP dla hostów, adresy rozgłoszeniowe i pozostałą pulę adresów.",
+      },
+      pt: {
+        name: "Calculadora VLSM para IPv4",
+        description:
+          "Planeje sub-redes IPv4 pela quantidade de hosts. Informe um bloco CIDR principal para calcular máscaras, faixas de IPs utilizáveis, endereços de broadcast e o espaço restante.",
+      },
+      ru: {
+        name: "Калькулятор подсетей IPv4 с VLSM",
+        description:
+          "Разбейте блок IPv4 на подсети по числу узлов. По исходному блоку CIDR калькулятор определит маски подсетей, диапазоны доступных IP, широковещательные адреса и остаток адресов.",
+      },
+      sv: {
+        name: "IPv4 VLSM-kalkylator",
+        description:
+          "Planera IPv4-subnät utifrån antalet värdar. Ange ett överordnat CIDR-block för att beräkna nätmasker, användbara IP-intervall, broadcast-adresser och återstående adressutrymme.",
+      },
+      th: {
+        name: "เครื่องคำนวณ IPv4 VLSM",
+        description:
+          "วางแผนซับเน็ต IPv4 ตามจำนวนโฮสต์ กรอกบล็อก CIDR ต้นทางเพื่อคำนวณซับเน็ตมาสก์ ช่วง IP ที่ใช้ได้ ที่อยู่บรอดแคสต์ และพื้นที่ที่อยู่ที่เหลือ",
+      },
+      tr: {
+        name: "IPv4 VLSM Hesaplayıcı",
+        description:
+          "IPv4 alt ağlarını ana makine sayısına göre planlayın. Alt ağ maskelerini, kullanılabilir IP aralıklarını, yayın adreslerini ve kalan adres alanını hesaplamak için üst CIDR bloğunu girin.",
+      },
+      vi: {
+        name: "Công cụ tính mạng con IPv4 theo VLSM",
+        description:
+          "Chia mạng con IPv4 theo số lượng máy cần cấp IP. Nhập khối CIDR gốc để tính mặt nạ mạng con, dải IP khả dụng, địa chỉ quảng bá và phần địa chỉ còn trống.",
+      },
+      "zh-CN": {
+        name: "IPv4 VLSM 子网计算器",
+        description:
+          "根据所需主机数规划 IPv4 子网。输入基础 CIDR 地址块，计算子网掩码、可用 IP 范围、广播地址和剩余地址空间。",
+      },
+      "zh-TW": {
+        name: "IPv4 VLSM 子網路計算機",
+        description:
+          "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator podsieci IPv4 VLSM",
+  "description": "Zaplanuj podsieci IPv4 według liczby hostów. Podaj blok CIDR, aby obliczyć maski podsieci, zakresy adresów IP dla hostów, adresy rozgłoszeniowe i pozostałą pulę adresów."
+}

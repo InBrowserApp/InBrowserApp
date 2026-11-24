@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur VLSM IPv4",
+  "description": "Planifiez vos sous-réseaux IPv4 selon le nombre d’hôtes. À partir d’un bloc CIDR parent, calculez les masques, les plages d’IP utilisables, les adresses de diffusion et l’espace restant."
+}

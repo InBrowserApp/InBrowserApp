@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Subnet IPv4 VLSM",
+  "description": "Rancang subnet IPv4 mengikut bilangan hos. Masukkan blok CIDR induk untuk mengira topeng subnet, julat IP yang boleh digunakan, alamat siaran dan baki alamat."
+}

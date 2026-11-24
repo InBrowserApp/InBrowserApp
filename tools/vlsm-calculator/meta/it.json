@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore di sottoreti IPv4 VLSM",
+  "description": "Pianifica le sottoreti IPv4 in base al numero di host. Inserisci un blocco CIDR per calcolare maschere, intervalli IP utilizzabili, indirizzi broadcast e spazio residuo."
+}
