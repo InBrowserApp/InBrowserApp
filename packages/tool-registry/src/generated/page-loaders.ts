@@ -222,6 +222,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ipfs-car-extractor": () => import("@tool/ipfs-car-extractor/page"),
   "ipfs-cid-calculator": () => import("@tool/ipfs-cid-calculator/page"),
   "ipfs-downloader": () => import("@tool/ipfs-downloader/page"),
+  "ipfs-folder-diff": () => import("@tool/ipfs-folder-diff/page"),
   "ipv6-address-to-mac-address-converter": () =>
     import("@tool/ipv6-address-to-mac-address-converter/page"),
   "ipv6-ula-generator": () => import("@tool/ipv6-ula-generator/page"),

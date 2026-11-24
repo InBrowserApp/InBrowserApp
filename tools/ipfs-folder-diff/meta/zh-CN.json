@@ -1,0 +1,4 @@
+{
+  "name": "IPFS 文件夹对比",
+  "description": "通过 CID 或网关 URL 对比两个 IPFS 文件夹。查看新增、删除和变更的路径，并将对比结果下载为 JSON。"
+}

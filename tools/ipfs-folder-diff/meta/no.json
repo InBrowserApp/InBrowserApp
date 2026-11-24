@@ -1,0 +1,4 @@
+{
+  "name": "Sammenlign IPFS-mapper",
+  "description": "Sammenlign to IPFS-mapper med CID eller gateway-URL. Se hvilke stier som er lagt til, fjernet eller endret, og last ned sammenligningen som JSON."
+}

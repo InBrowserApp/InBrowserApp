@@ -1,0 +1,4 @@
+{
+  "name": "Confronto cartelle IPFS",
+  "description": "Confronta due cartelle IPFS tramite CID o URL del gateway. Scopri quali percorsi sono stati aggiunti, rimossi o modificati e scarica il confronto come JSON."
+}

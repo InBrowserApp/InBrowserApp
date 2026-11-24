@@ -1,0 +1,4 @@
+{
+  "name": "Comparador de pastas do IPFS",
+  "description": "Compare duas pastas do IPFS pelo CID ou URL do gateway. Veja que caminhos foram adicionados, removidos ou alterados e descarregue a comparação em JSON."
+}

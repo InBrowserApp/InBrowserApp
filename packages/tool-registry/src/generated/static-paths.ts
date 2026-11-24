@@ -16562,6 +16562,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipfs-folder-diff",
+    language: "ar",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "de",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "en",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "es",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "fr",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "he",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "hi",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "id",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "it",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "ja",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "ko",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "ms",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "nl",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "no",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "pl",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "pt",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "ru",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "sv",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "th",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "tr",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "vi",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipfs-folder-diff",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },

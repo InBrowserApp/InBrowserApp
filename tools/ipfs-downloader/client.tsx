@@ -6,6 +6,7 @@ import {
   zipAvailableIpfsDirectory,
   type IpfsReference,
 } from "@workspace/ipfs-files"
+import { gatewayStore, parseIpfsAddress } from "@workspace/ipfs-files/gateway"
 import { FileBrowserPanel } from "@workspace/ui/components/tool/file-browser-panel"
 import {
   ToolPanelCard,
@@ -24,9 +25,7 @@ import { downloadBlob } from "@workspace/ui/lib/download-blob"
 import {
   addressView,
   entryView,
-  gatewayStore,
   IpfsPathError,
-  parseIpfsAddress,
   sampleAddress,
 } from "./core/gateway"
 import {

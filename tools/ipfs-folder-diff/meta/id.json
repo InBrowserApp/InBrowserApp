@@ -1,0 +1,4 @@
+{
+  "name": "Pembanding Folder IPFS",
+  "description": "Bandingkan dua folder IPFS dengan CID atau URL gateway. Lihat jalur yang ditambahkan, dihapus, atau diubah, lalu unduh hasil perbandingan sebagai JSON."
+}
