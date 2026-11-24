@@ -16387,6 +16387,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ics-calendar-viewer",
+    category: "time",
+    icon: "calendar-days",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "agenda",
+      "events",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملفات تقويم ICS",
+        description:
+          "افتح ملف iCalendar ‏(.ics) وابحث في أحداثه. اطّلع على التواريخ والمناطق الزمنية والمواقع والأوصاف مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für ICS-Kalenderdateien",
+        description:
+          "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser.",
+      },
+      en: {
+        name: "ICS Calendar File Viewer",
+        description:
+          "Open an iCalendar (.ics) file and search its events. Check dates, time zones, locations, and descriptions directly in your browser.",
+      },
+      es: {
+        name: "Visor de archivos ICS",
+        description:
+          "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers ICS",
+        description:
+          "Ouvrez un fichier iCalendar (.ics) et recherchez ses événements. Consultez les dates, fuseaux horaires, lieux et descriptions directement dans le navigateur.",
+      },
+      he: {
+        name: "מציג קובצי לוח שנה ICS",
+        description:
+          "פתחו קובץ iCalendar ‏(.ics) וחפשו בו אירועים. צפו בתאריכים, באזורי זמן, במיקומים ובתיאורים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ICS कैलेंडर फ़ाइल व्यूअर",
+        description:
+          "iCalendar (.ics) फ़ाइल खोलें और उसमें इवेंट खोजें। तारीखें, समय क्षेत्र, स्थान और विवरण सीधे अपने ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil File Kalender ICS",
+        description:
+          "Buka file iCalendar (.ics) dan cari acara di dalamnya. Periksa tanggal, zona waktu, lokasi, dan deskripsi langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di file ICS",
+        description:
+          "Apri un file iCalendar (.ics) e cerca gli eventi. Consulta date, fusi orari, luoghi e descrizioni direttamente nel browser.",
+      },
+      ja: {
+        name: "ICS カレンダーファイルビューアー",
+        description:
+          "iCalendar（.ics）ファイルをブラウザーで開き、予定を検索できます。日付やタイムゾーン、場所、説明を確認できます。",
+      },
+      ko: {
+        name: "ICS 캘린더 파일 뷰어",
+        description:
+          "브라우저에서 iCalendar(.ics) 파일을 열고 일정을 검색하세요. 날짜, 시간대, 장소, 설명을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Kalendar ICS",
+        description:
+          "Buka fail iCalendar (.ics) dan cari acara di dalamnya. Semak tarikh, zon masa, lokasi dan penerangan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor ICS-agendabestanden",
+        description:
+          "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Viser for ICS-kalenderfiler",
+        description:
+          "Åpne en iCalendar-fil (.ics) og søk i hendelsene. Se datoer, tidssoner, steder og beskrivelser direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka plików kalendarza ICS",
+        description:
+          "Otwórz plik iCalendar (.ics) i wyszukaj w nim wydarzenia. Sprawdź daty, strefy czasowe, miejsca i opisy bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de arquivos ICS",
+        description:
+          "Abra um arquivo iCalendar (.ics) e pesquise os eventos. Confira datas, fusos horários, locais e descrições diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр файлов календаря ICS",
+        description:
+          "Откройте файл iCalendar (.ics) и найдите нужные события. Просматривайте даты, часовые пояса, места и описания прямо в браузере.",
+      },
+      sv: {
+        name: "Visare för ICS-kalenderfiler",
+        description:
+          "Öppna en iCalendar-fil (.ics) och sök bland händelserna. Se datum, tidszoner, platser och beskrivningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+        description:
+          "เปิดไฟล์ iCalendar (.ics) และค้นหากิจกรรม ตรวจสอบวันที่ เขตเวลา สถานที่ และรายละเอียดได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS Takvim Dosyası Görüntüleyici",
+        description:
+          "Bir iCalendar (.ics) dosyası açın ve etkinliklerde arama yapın. Tarihleri, saat dilimlerini, konumları ve açıklamaları doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp lịch ICS",
+        description:
+          "Mở tệp iCalendar (.ics) và tìm kiếm sự kiện. Xem ngày, múi giờ, địa điểm và mô tả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 日历文件查看器",
+        description:
+          "在浏览器中打开 iCalendar（.ics）文件，搜索日程并查看日期、时区、地点和详细说明。",
+      },
+      "zh-TW": {
+        name: "ICS 行事曆檔案檢視器",
+        description:
+          "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
+      },
+    },
+  },
+  {
     slug: "image-background-remover",
     category: "image",
     icon: "scissors",
@@ -60246,6 +60377,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  "ics-calendar-viewer": {
+    slug: "ics-calendar-viewer",
+    category: "time",
+    icon: "calendar-days",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "agenda",
+      "events",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملفات تقويم ICS",
+        description:
+          "افتح ملف iCalendar ‏(.ics) وابحث في أحداثه. اطّلع على التواريخ والمناطق الزمنية والمواقع والأوصاف مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für ICS-Kalenderdateien",
+        description:
+          "Öffnen Sie eine iCalendar-Datei (.ics) und durchsuchen Sie ihre Termine. Prüfen Sie Datum, Zeitzone, Ort und Beschreibung direkt im Browser.",
+      },
+      en: {
+        name: "ICS Calendar File Viewer",
+        description:
+          "Open an iCalendar (.ics) file and search its events. Check dates, time zones, locations, and descriptions directly in your browser.",
+      },
+      es: {
+        name: "Visor de archivos ICS",
+        description:
+          "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers ICS",
+        description:
+          "Ouvrez un fichier iCalendar (.ics) et recherchez ses événements. Consultez les dates, fuseaux horaires, lieux et descriptions directement dans le navigateur.",
+      },
+      he: {
+        name: "מציג קובצי לוח שנה ICS",
+        description:
+          "פתחו קובץ iCalendar ‏(.ics) וחפשו בו אירועים. צפו בתאריכים, באזורי זמן, במיקומים ובתיאורים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ICS कैलेंडर फ़ाइल व्यूअर",
+        description:
+          "iCalendar (.ics) फ़ाइल खोलें और उसमें इवेंट खोजें। तारीखें, समय क्षेत्र, स्थान और विवरण सीधे अपने ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil File Kalender ICS",
+        description:
+          "Buka file iCalendar (.ics) dan cari acara di dalamnya. Periksa tanggal, zona waktu, lokasi, dan deskripsi langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di file ICS",
+        description:
+          "Apri un file iCalendar (.ics) e cerca gli eventi. Consulta date, fusi orari, luoghi e descrizioni direttamente nel browser.",
+      },
+      ja: {
+        name: "ICS カレンダーファイルビューアー",
+        description:
+          "iCalendar（.ics）ファイルをブラウザーで開き、予定を検索できます。日付やタイムゾーン、場所、説明を確認できます。",
+      },
+      ko: {
+        name: "ICS 캘린더 파일 뷰어",
+        description:
+          "브라우저에서 iCalendar(.ics) 파일을 열고 일정을 검색하세요. 날짜, 시간대, 장소, 설명을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Kalendar ICS",
+        description:
+          "Buka fail iCalendar (.ics) dan cari acara di dalamnya. Semak tarikh, zon masa, lokasi dan penerangan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor ICS-agendabestanden",
+        description:
+          "Open een iCalendar-bestand (.ics) en doorzoek de afspraken. Bekijk datums, tijdzones, locaties en beschrijvingen rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Viser for ICS-kalenderfiler",
+        description:
+          "Åpne en iCalendar-fil (.ics) og søk i hendelsene. Se datoer, tidssoner, steder og beskrivelser direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka plików kalendarza ICS",
+        description:
+          "Otwórz plik iCalendar (.ics) i wyszukaj w nim wydarzenia. Sprawdź daty, strefy czasowe, miejsca i opisy bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de arquivos ICS",
+        description:
+          "Abra um arquivo iCalendar (.ics) e pesquise os eventos. Confira datas, fusos horários, locais e descrições diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр файлов календаря ICS",
+        description:
+          "Откройте файл iCalendar (.ics) и найдите нужные события. Просматривайте даты, часовые пояса, места и описания прямо в браузере.",
+      },
+      sv: {
+        name: "Visare för ICS-kalenderfiler",
+        description:
+          "Öppna en iCalendar-fil (.ics) och sök bland händelserna. Se datum, tidszoner, platser och beskrivningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
+        description:
+          "เปิดไฟล์ iCalendar (.ics) และค้นหากิจกรรม ตรวจสอบวันที่ เขตเวลา สถานที่ และรายละเอียดได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS Takvim Dosyası Görüntüleyici",
+        description:
+          "Bir iCalendar (.ics) dosyası açın ve etkinliklerde arama yapın. Tarihleri, saat dilimlerini, konumları ve açıklamaları doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp lịch ICS",
+        description:
+          "Mở tệp iCalendar (.ics) và tìm kiếm sự kiện. Xem ngày, múi giờ, địa điểm và mô tả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 日历文件查看器",
+        description:
+          "在浏览器中打开 iCalendar（.ics）文件，搜索日程并查看日期、时区、地点和详细说明。",
+      },
+      "zh-TW": {
+        name: "ICS 行事曆檔案檢視器",
+        description:
+          "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
       },
     },
   },

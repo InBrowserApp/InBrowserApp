@@ -648,6 +648,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "Pemapar Fail Kalendar ICS",
+    slug: "ics-calendar-viewer",
+  },
+  {
     category: "image",
     name: "Buang Latar Belakang Imej",
     slug: "image-background-remover",

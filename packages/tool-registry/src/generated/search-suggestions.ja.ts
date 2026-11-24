@@ -648,6 +648,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ical-event-generator",
   },
   {
+    category: "time",
+    name: "ICS カレンダーファイルビューアー",
+    slug: "ics-calendar-viewer",
+  },
+  {
     category: "image",
     name: "画像の背景を削除",
     slug: "image-background-remover",

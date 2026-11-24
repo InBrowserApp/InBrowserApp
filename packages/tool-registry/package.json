@@ -136,6 +136,7 @@
     "@tool/hwp-viewer": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/ical-event-generator": "workspace:*",
+    "@tool/ics-calendar-viewer": "workspace:*",
     "@tool/image-background-remover": "workspace:*",
     "@tool/image-combiner": "workspace:*",
     "@tool/image-comparator": "workspace:*",

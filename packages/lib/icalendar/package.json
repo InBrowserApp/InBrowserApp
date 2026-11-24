@@ -1,0 +1,16 @@
+{
+  "name": "@workspace/icalendar",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./example": "./src/example.ts"
+  },
+  "dependencies": {
+    "ical.js": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}
