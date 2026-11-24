@@ -140,11 +140,10 @@ export default function Client({ messages: m }: { messages: Messages }) {
               className="size-4 shrink-0 text-muted-foreground"
             />
             <span
-              dir="auto"
               title={name}
               className="min-w-0 flex-1 truncate text-sm font-medium"
             >
-              {dragging ? m.releaseFile : name}
+              <bdi>{dragging ? m.releaseFile : name}</bdi>
             </span>
             <Button
               ref={chooseButton}
