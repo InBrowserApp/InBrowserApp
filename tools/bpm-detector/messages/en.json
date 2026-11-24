@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Choose audio",
+  "dropHint": "or drop an audio file here",
+  "changeFile": "Change file",
+  "privacy": "Your audio stays on your device.",
+  "analyzing": "Detecting tempo…",
+  "readError": "Could not open this audio file. Try a mono or stereo WAV file.",
+  "channelError": "Choose a mono or stereo audio file.",
+  "noTempo": "No steady beat detected. Try a longer clip with a clear rhythm.",
+  "tempo": "Estimated tempo",
+  "half": "Half BPM",
+  "double": "Double BPM",
+  "copy": "Copy BPM",
+  "copied": "Copied",
+  "ready": "Estimated tempo is {bpm} BPM.",
+  "preview": "Play original audio"
+}

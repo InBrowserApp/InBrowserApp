@@ -1,0 +1,17 @@
+{
+  "chooseFile": "选择音频",
+  "dropHint": "或将音频文件拖放到这里",
+  "changeFile": "更换文件",
+  "privacy": "音频始终保留在您的设备上。",
+  "analyzing": "正在检测速度…",
+  "readError": "无法打开此音频文件，请尝试单声道或立体声 WAV 文件。",
+  "channelError": "请选择单声道或立体声音频文件。",
+  "noTempo": "未检测到稳定节拍。请尝试使用节奏清晰的较长片段。",
+  "tempo": "估计速度",
+  "half": "一半 BPM",
+  "double": "两倍 BPM",
+  "copy": "复制 BPM",
+  "copied": "已复制",
+  "ready": "估计速度为 {bpm} BPM。",
+  "preview": "播放原始音频"
+}

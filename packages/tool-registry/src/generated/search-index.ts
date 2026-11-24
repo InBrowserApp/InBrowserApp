@@ -5825,6 +5825,109 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bpm-detector",
+    category: "misc",
+    icon: "activity",
+    tags: ["audio", "bpm", "tempo", "beat", "rhythm", "music", "song", "dj"],
+    locales: {
+      ar: {
+        name: "كاشف سرعة الإيقاع (BPM)",
+        description:
+          "اعرف سرعة إيقاع أغنية أو مقطع صوتي متكرر بالنبضات في الدقيقة. قارن نصف قيمة BPM وضعفها، وشغّل الصوت الأصلي وانسخ التقدير.",
+      },
+      de: {
+        name: "BPM ermitteln",
+        description:
+          "Ermittle das Tempo eines Songs oder Audio-Loops in Schlägen pro Minute. Vergleiche den halben und doppelten BPM-Wert, höre das Original an und kopiere das Ergebnis.",
+      },
+      en: {
+        name: "BPM Detector",
+        description:
+          "Find the tempo of a song or audio loop in beats per minute. Compare half and double BPM, play the original audio, and copy the estimate.",
+      },
+      fr: {
+        name: "Détecteur de BPM",
+        description:
+          "Trouvez le tempo d’un morceau ou d’une boucle audio en battements par minute. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez l’estimation.",
+      },
+      he: {
+        name: "מזהה קצב מוזיקלי (BPM)",
+        description:
+          "גלו את הקצב של שיר או לופ אודיו בפעימות לדקה. השוו בין חצי הקצב לקצב כפול, האזינו להקלטה המקורית והעתיקו את האומדן.",
+      },
+      hi: {
+        name: "BPM डिटेक्टर",
+        description:
+          "गाने या ऑडियो लूप का टेम्पो बीट प्रति मिनट में पता करें। आधे और दोगुने BPM की तुलना करें, मूल ऑडियो सुनें और अनुमानित मान कॉपी करें।",
+      },
+      id: {
+        name: "Pendeteksi BPM",
+        description:
+          "Cari tahu tempo lagu atau loop audio dalam ketukan per menit. Bandingkan setengah dan dua kali BPM, putar audio asli, dan salin perkiraannya.",
+      },
+      ja: {
+        name: "BPM検出ツール",
+        description:
+          "曲や音声ループのテンポを1分あたりの拍数（BPM）で調べます。推定値の半分と2倍を比較でき、元の音声の再生やBPMのコピーもできます。",
+      },
+      ko: {
+        name: "BPM 측정기",
+        description:
+          "곡이나 오디오 루프의 템포를 분당 박자 수(BPM)로 확인하세요. 추정값의 절반과 두 배를 비교하고, 원본을 재생하거나 BPM을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesan BPM",
+        description:
+          "Cari tempo lagu atau gelung audio dalam kiraan rentak seminit. Bandingkan separuh dan dua kali ganda BPM, mainkan audio asal dan salin anggaran.",
+      },
+      nl: {
+        name: "BPM-detector",
+        description:
+          "Vind het tempo van een nummer of audioloop in tellen per minuut. Vergelijk half en dubbel tempo, speel het origineel af en kopieer de geschatte BPM.",
+      },
+      no: {
+        name: "BPM-detektor",
+        description:
+          "Finn tempoet i en låt eller en lydsløyfe i slag per minutt. Sammenlign halvt og dobbelt tempo, spill av originalen og kopier anslaget.",
+      },
+      pl: {
+        name: "Wykrywacz BPM",
+        description:
+          "Sprawdź tempo utworu lub pętli w uderzeniach na minutę. Porównaj tempo o połowę wolniejsze i dwa razy szybsze, odsłuchaj plik i skopiuj wynik.",
+      },
+      ru: {
+        name: "Определение BPM",
+        description:
+          "Узнайте темп песни или лупа в ударах в минуту. Сравните половинный и удвоенный темп, прослушайте исходную запись и скопируйте результат.",
+      },
+      sv: {
+        name: "BPM-detektor",
+        description:
+          "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera uppskattningen.",
+      },
+      th: {
+        name: "เครื่องมือตรวจหา BPM",
+        description:
+          "หาเทมโปของเพลงหรือลูปเสียงเป็นจำนวนจังหวะต่อนาที เปรียบเทียบค่า BPM แบบครึ่งหนึ่งและสองเท่า เล่นเสียงต้นฉบับ และคัดลอกค่าประมาณ",
+      },
+      tr: {
+        name: "BPM Bulucu",
+        description:
+          "Şarkı veya ses döngüsünün dakikadaki vuruş sayısını bulun. Yarım ve çift tempoyu karşılaştırın, orijinal kaydı dinleyin ve tahmini BPM’yi kopyalayın.",
+      },
+      "zh-CN": {
+        name: "BPM 检测器",
+        description:
+          "检测歌曲或音频循环的速度，以每分钟拍数表示。比较一半和两倍的 BPM，播放原始音频并复制估计值。",
+      },
+      "zh-TW": {
+        name: "BPM 偵測器",
+        description:
+          "偵測歌曲或音訊循環的速度，以每分鐘拍數表示。比較一半和兩倍的 BPM，播放原始音訊並複製估計值。",
+      },
+    },
+  },
+  {
     slug: "bpmn-to-pdf-converter",
     category: "document",
     icon: "file-text",

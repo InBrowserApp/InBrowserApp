@@ -1,0 +1,4 @@
+{
+  "name": "Rilevatore di BPM",
+  "description": "Trova il tempo di un brano o di un loop audio in battiti al minuto. Confronta la metà e il doppio dei BPM, ascolta l’originale e copia il valore stimato."
+}

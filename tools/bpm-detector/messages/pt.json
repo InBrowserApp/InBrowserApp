@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Escolher áudio",
+  "dropHint": "ou largue aqui um ficheiro de áudio",
+  "changeFile": "Alterar ficheiro",
+  "privacy": "O áudio fica no seu dispositivo.",
+  "analyzing": "A detetar o andamento…",
+  "readError": "Não foi possível abrir este ficheiro de áudio. Experimente um WAV mono ou estéreo.",
+  "channelError": "Escolha um ficheiro de áudio mono ou estéreo.",
+  "noTempo": "Não foi detetada uma pulsação regular. Experimente um excerto mais longo com um ritmo claro.",
+  "tempo": "Andamento estimado",
+  "half": "Metade do andamento",
+  "double": "Dobro do andamento",
+  "copy": "Copiar BPM",
+  "copied": "Copiado",
+  "ready": "O andamento estimado é de {bpm} BPM.",
+  "preview": "Ouvir o áudio original"
+}

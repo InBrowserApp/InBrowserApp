@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Scegli un file audio",
+  "dropHint": "oppure trascina qui un file audio",
+  "changeFile": "Cambia file",
+  "privacy": "L’audio resta sul tuo dispositivo.",
+  "analyzing": "Rilevamento del tempo…",
+  "readError": "Impossibile aprire questo file audio. Prova con un WAV mono o stereo.",
+  "channelError": "Scegli un file audio mono o stereo.",
+  "noTempo": "Non è stato rilevato un battito regolare. Prova con un estratto più lungo e dal ritmo ben scandito.",
+  "tempo": "Tempo stimato",
+  "half": "Metà del tempo",
+  "double": "Doppio del tempo",
+  "copy": "Copia BPM",
+  "copied": "Copiato",
+  "ready": "Il tempo stimato è di {bpm} BPM.",
+  "preview": "Ascolta l’audio originale"
+}

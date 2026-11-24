@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Wybierz plik audio",
+  "dropHint": "lub przeciągnij tutaj plik audio",
+  "changeFile": "Zmień plik",
+  "privacy": "Plik audio pozostaje na Twoim urządzeniu.",
+  "analyzing": "Wykrywanie tempa…",
+  "readError": "Nie udało się otworzyć pliku audio. Spróbuj użyć pliku WAV w mono lub stereo.",
+  "channelError": "Wybierz plik audio w mono lub stereo.",
+  "noTempo": "Nie wykryto stałego pulsu. Spróbuj użyć dłuższego fragmentu z wyraźnym rytmem.",
+  "tempo": "Szacowane tempo",
+  "half": "Połowa tempa",
+  "double": "Podwójne tempo",
+  "copy": "Skopiuj BPM",
+  "copied": "Skopiowano",
+  "ready": "Szacowane tempo to {bpm} BPM.",
+  "preview": "Odsłuchaj nagranie źródłowe"
+}

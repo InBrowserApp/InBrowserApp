@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Välj ljudfil",
+  "dropHint": "eller släpp en ljudfil här",
+  "changeFile": "Byt fil",
+  "privacy": "Ljudfilen stannar på din enhet.",
+  "analyzing": "Hittar tempot…",
+  "readError": "Det gick inte att öppna ljudfilen. Prova en WAV-fil i mono eller stereo.",
+  "channelError": "Välj en ljudfil i mono eller stereo.",
+  "noTempo": "Ingen stadig puls hittades. Prova ett längre klipp med tydlig rytm.",
+  "tempo": "Uppskattat tempo",
+  "half": "Halvt tempo",
+  "double": "Dubbelt tempo",
+  "copy": "Kopiera BPM",
+  "copied": "Kopierat",
+  "ready": "Det uppskattade tempot är {bpm} BPM.",
+  "preview": "Spela upp originalljudet"
+}

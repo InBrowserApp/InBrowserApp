@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Ses dosyası seç",
+  "dropHint": "veya ses dosyasını buraya sürükleyip bırakın",
+  "changeFile": "Dosyayı değiştir",
+  "privacy": "Ses dosyanız cihazınızda kalır.",
+  "analyzing": "Tempo algılanıyor…",
+  "readError": "Ses dosyası açılamadı. Mono veya stereo bir WAV dosyası deneyin.",
+  "channelError": "Mono veya stereo bir ses dosyası seçin.",
+  "noTempo": "Düzenli bir vuruş bulunamadı. Ritmi belirgin, daha uzun bir bölüm deneyin.",
+  "tempo": "Tahmini tempo",
+  "half": "Yarım tempo",
+  "double": "Çift tempo",
+  "copy": "BPM’yi kopyala",
+  "copied": "Kopyalandı",
+  "ready": "Tahmini tempo {bpm} BPM.",
+  "preview": "Orijinal kaydı dinle"
+}

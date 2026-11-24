@@ -1,0 +1,4 @@
+{
+  "name": "BPM Detector",
+  "description": "Find the tempo of a song or audio loop in beats per minute. Compare half and double BPM, play the original audio, and copy the estimate."
+}

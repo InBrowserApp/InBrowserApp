@@ -1,0 +1,4 @@
+{
+  "name": "BPM-detektor",
+  "description": "Hitta tempot i en låt eller ljudloop i slag per minut. Jämför halvt och dubbelt tempo, spela upp originalet och kopiera BPM-värdet."
+}

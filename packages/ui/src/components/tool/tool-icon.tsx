@@ -2,6 +2,7 @@ import type { LucideProps } from "lucide-react"
 import type { ComponentType } from "react"
 
 import {
+  Activity,
   ArrowLeftRight,
   AudioLines,
   Binary,
@@ -64,6 +65,7 @@ import {
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
+  activity: Activity,
   "arrow-left-right": ArrowLeftRight,
   archive: FileArchive,
   "audio-lines": AudioLines,

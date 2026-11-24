@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Pilih file audio",
+  "dropHint": "atau letakkan file audio di sini",
+  "changeFile": "Ganti file",
+  "privacy": "Audio tetap berada di perangkat Anda.",
+  "analyzing": "Mendeteksi tempo…",
+  "readError": "File audio ini tidak dapat dibuka. Coba file WAV mono atau stereo.",
+  "channelError": "Pilih file audio mono atau stereo.",
+  "noTempo": "Tidak terdeteksi ketukan yang teratur. Coba cuplikan yang lebih panjang dengan ritme yang jelas.",
+  "tempo": "Perkiraan tempo",
+  "half": "Setengah BPM",
+  "double": "Dua kali BPM",
+  "copy": "Salin BPM",
+  "copied": "Disalin",
+  "ready": "Perkiraan tempo adalah {bpm} BPM.",
+  "preview": "Putar audio asli"
+}

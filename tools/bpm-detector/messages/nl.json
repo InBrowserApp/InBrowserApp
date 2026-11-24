@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Audiobestand kiezen",
+  "dropHint": "of sleep hier een audiobestand naartoe",
+  "changeFile": "Ander bestand kiezen",
+  "privacy": "Je audio blijft op je apparaat.",
+  "analyzing": "Tempo bepalen…",
+  "readError": "Kan dit audiobestand niet openen. Probeer een WAV-bestand in mono of stereo.",
+  "channelError": "Kies een audiobestand in mono of stereo.",
+  "noTempo": "Geen regelmatige beat gevonden. Probeer een langer fragment met een duidelijk ritme.",
+  "tempo": "Geschat tempo",
+  "half": "Half tempo",
+  "double": "Dubbel tempo",
+  "copy": "BPM kopiëren",
+  "copied": "Gekopieerd",
+  "ready": "Het geschatte tempo is {bpm} BPM.",
+  "preview": "Originele audio afspelen"
+}

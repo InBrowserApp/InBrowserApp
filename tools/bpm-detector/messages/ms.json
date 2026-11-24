@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Pilih fail audio",
+  "dropHint": "atau lepaskan fail audio di sini",
+  "changeFile": "Tukar fail",
+  "privacy": "Audio anda kekal pada peranti anda.",
+  "analyzing": "Mengesan tempo…",
+  "readError": "Fail audio ini tidak dapat dibuka. Cuba fail WAV mono atau stereo.",
+  "channelError": "Pilih fail audio mono atau stereo.",
+  "noTempo": "Tiada rentak tetap dikesan. Cuba klip yang lebih panjang dengan rentak yang jelas.",
+  "tempo": "Anggaran tempo",
+  "half": "Separuh BPM",
+  "double": "Dua kali ganda BPM",
+  "copy": "Salin BPM",
+  "copied": "Disalin",
+  "ready": "Anggaran tempo ialah {bpm} BPM.",
+  "preview": "Mainkan audio asal"
+}

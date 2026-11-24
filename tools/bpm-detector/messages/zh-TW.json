@@ -1,0 +1,17 @@
+{
+  "chooseFile": "選擇音訊",
+  "dropHint": "或將音訊檔案拖放至此",
+  "changeFile": "更換檔案",
+  "privacy": "音訊會保留在您的裝置上。",
+  "analyzing": "正在偵測速度…",
+  "readError": "無法開啟此音訊檔案，請試用單聲道或立體聲 WAV 檔案。",
+  "channelError": "請選擇單聲道或立體聲音訊檔案。",
+  "noTempo": "未偵測到穩定節拍。請試用節奏清楚的較長片段。",
+  "tempo": "估計速度",
+  "half": "一半 BPM",
+  "double": "兩倍 BPM",
+  "copy": "複製 BPM",
+  "copied": "已複製",
+  "ready": "估計速度為 {bpm} BPM。",
+  "preview": "播放原始音訊"
+}

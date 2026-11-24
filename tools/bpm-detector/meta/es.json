@@ -1,0 +1,4 @@
+{
+  "name": "Detector de BPM",
+  "description": "Estima el tempo de una canción o un bucle en pulsos por minuto. Compara la mitad y el doble de los BPM, escucha el audio original y copia el resultado."
+}

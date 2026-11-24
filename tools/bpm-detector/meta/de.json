@@ -1,0 +1,4 @@
+{
+  "name": "BPM ermitteln",
+  "description": "Ermittle das Tempo eines Songs oder Audio-Loops in Schlägen pro Minute. Vergleiche den halben und doppelten BPM-Wert, höre das Original an und kopiere das Ergebnis."
+}

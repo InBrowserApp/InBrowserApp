@@ -228,6 +228,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "misc",
+    name: "BPM-detektor",
+    slug: "bpm-detector",
+  },
+  {
     category: "document",
     name: "BPMN til PDF-konverterer",
     slug: "bpmn-to-pdf-converter",
