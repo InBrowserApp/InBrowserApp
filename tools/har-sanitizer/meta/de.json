@@ -1,0 +1,4 @@
+{
+  "name": "HAR-Dateien bereinigen",
+  "description": "Entferne Cookies, Tokens und andere sensible Daten aus HAR-Dateien direkt im Browser. Lade eine bereinigte Kopie mit Anfragezeiten und Statuscodes zum Teilen herunter."
+}

@@ -1,0 +1,19 @@
+{
+  "open": "HAR ファイルを開く",
+  "drop": ".har または .json ファイルをここにドロップ",
+  "example": "サンプルを試す",
+  "privacy": "ファイルはブラウザー内で処理されます。",
+  "options": "削除・マスクの設定",
+  "credentials": "Cookie と一般的な認証ヘッダーは常に削除されます。",
+  "parameters": "URL パラメーターの値をマスク",
+  "bodies": "リクエスト・レスポンス本文と WebSocket ペイロードを削除",
+  "reading": "サニタイズ済み HAR を準備中…",
+  "invalid": "HAR ファイルとして読み取れませんでした。ブラウザーの「ネットワーク」パネルから HAR を再度エクスポートしてお試しください。",
+  "failed": "ファイルを処理できませんでした。もう一度開くか、より短い記録をエクスポートしてください。",
+  "result": "サニタイズ済み HAR",
+  "requests": "保持したリクエスト",
+  "removedCredentials": "削除した認証情報フィールド",
+  "maskedParameters": "マスクした URL の値",
+  "removedBodies": "削除した本文・ペイロード",
+  "download": "サニタイズ済み HAR をダウンロード"
+}

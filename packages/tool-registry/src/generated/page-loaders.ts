@@ -162,6 +162,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
   "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
+  "har-sanitizer": () => import("@tool/har-sanitizer/page"),
   "hex-editor": () => import("@tool/hex-editor/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),

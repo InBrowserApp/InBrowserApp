@@ -643,6 +643,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "HAR-Dateien bereinigen",
+    slug: "har-sanitizer",
+  },
+  {
     category: "developer",
     name: "Hex-Editor",
     slug: "hex-editor",

@@ -1,0 +1,19 @@
+{
+  "open": "Buka file HAR",
+  "drop": "Atau seret dan letakkan file .har atau .json di sini",
+  "example": "Coba file contoh",
+  "privacy": "File tetap berada di browser Anda.",
+  "options": "Opsi penyamaran data",
+  "credentials": "Cookie dan header autentikasi yang umum selalu dihapus.",
+  "parameters": "Samarkan nilai parameter URL",
+  "bodies": "Hapus isi permintaan, respons, dan WebSocket",
+  "reading": "Menyiapkan salinan HAR yang sudah dibersihkan…",
+  "invalid": "File ini tidak dapat dibaca sebagai HAR. Ekspor file HAR baru dari panel Jaringan di browser, lalu coba lagi.",
+  "failed": "File ini tidak dapat diproses. Coba buka lagi atau ekspor rekaman yang lebih singkat.",
+  "result": "HAR yang sudah dibersihkan",
+  "requests": "Permintaan yang dipertahankan",
+  "removedCredentials": "Kolom kredensial yang dihapus",
+  "maskedParameters": "Nilai URL yang disamarkan",
+  "removedBodies": "Isi yang dihapus",
+  "download": "Unduh HAR yang sudah dibersihkan"
+}

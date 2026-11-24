@@ -16363,6 +16363,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "har-sanitizer",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "har",
+      "http",
+      "network",
+      "sanitize",
+      "redact",
+      "privacy",
+      "cookies",
+    ],
+    locales: {
+      ar: {
+        name: "منظّف ملفات HAR",
+        description:
+          "أزل ملفات تعريف الارتباط والرموز المميزة وغيرها من البيانات الحساسة من ملفات HAR في متصفحك. نزّل نسخة منظّفة للمشاركة مع الاحتفاظ بتوقيت الطلبات ورموز حالتها.",
+      },
+      de: {
+        name: "HAR-Dateien bereinigen",
+        description:
+          "Entferne Cookies, Tokens und andere sensible Daten aus HAR-Dateien direkt im Browser. Lade eine bereinigte Kopie mit Anfragezeiten und Statuscodes zum Teilen herunter.",
+      },
+      en: {
+        name: "HAR Sanitizer",
+        description:
+          "Remove cookies, tokens, and other sensitive data from HAR files in your browser. Download a sanitized HAR for sharing while keeping request timings and status codes.",
+      },
+      es: {
+        name: "Limpiador de archivos HAR",
+        description:
+          "Elimina cookies, tokens y otros datos sensibles de archivos HAR en tu navegador. Descarga una copia limpia para compartir que conserva los tiempos y los códigos de estado.",
+      },
+      fr: {
+        name: "Nettoyage de fichiers HAR",
+        description:
+          "Supprimez les cookies, jetons et autres données sensibles des fichiers HAR dans votre navigateur. Téléchargez une copie nettoyée qui conserve les durées et les codes d’état.",
+      },
+      he: {
+        name: "ניקוי קובצי HAR",
+        description:
+          "הסירו עוגיות, אסימונים ונתונים רגישים נוספים מקובצי HAR ישירות בדפדפן. הורידו קובץ HAR מנוקה לשיתוף, עם תזמוני הבקשות וקודי הסטטוס שלהן.",
+      },
+      hi: {
+        name: "HAR फ़ाइल क्लीनर",
+        description:
+          "अपने ब्राउज़र में HAR फ़ाइलों से कुकी, टोकन और अन्य संवेदनशील डेटा हटाएँ। अनुरोधों के समय और स्टेटस कोड वाली साफ़ HAR फ़ाइल डाउनलोड करें और उसे साझा करें।",
+      },
+      id: {
+        name: "Pembersih File HAR",
+        description:
+          "Hapus cookie, token, dan data sensitif lainnya dari file HAR langsung di browser. Unduh salinan HAR yang telah dibersihkan untuk dibagikan, dengan tetap menyimpan rincian waktu dan kode status permintaan.",
+      },
+      it: {
+        name: "Pulizia dei file HAR",
+        description:
+          "Rimuovi cookie, token e altri dati sensibili dai file HAR nel browser. Scarica una copia ripulita da condividere, con i tempi delle richieste e i codici di stato.",
+      },
+      ja: {
+        name: "HAR サニタイザー",
+        description:
+          "ブラウザー内で HAR ファイルから Cookie、トークンなどの機密データを削除します。リクエストの時間やステータスコードを残したまま、共有用の HAR をダウンロードできます。",
+      },
+      ko: {
+        name: "HAR 민감 정보 제거 도구",
+        description:
+          "브라우저에서 HAR 파일의 쿠키, 토큰 등 민감한 정보를 제거합니다. 요청 시간과 상태 코드를 유지하면서 공유할 HAR 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembersih Fail HAR",
+        description:
+          "Buang kuki, token dan data sensitif lain daripada fail HAR terus dalam pelayar. Muat turun salinan HAR yang telah dibersihkan untuk dikongsi sambil mengekalkan butiran masa dan kod status permintaan.",
+      },
+      nl: {
+        name: "HAR-bestanden opschonen",
+        description:
+          "Verwijder cookies, tokens en andere gevoelige gegevens uit HAR-bestanden in je browser. Download een opgeschoond HAR-bestand om te delen, met behoud van tijdsmetingen en statuscodes.",
+      },
+      no: {
+        name: "Fjern sensitive data fra HAR-filer",
+        description:
+          "Fjern informasjonskapsler, tokener og andre sensitive data fra HAR-filer i nettleseren. Last ned en renset HAR-fil til deling, med tidsmålinger og statuskoder intakt.",
+      },
+      pl: {
+        name: "Usuwanie danych wrażliwych z HAR",
+        description:
+          "Usuń pliki cookie, tokeny i inne dane wrażliwe z plików HAR w przeglądarce. Pobierz oczyszczony plik HAR do udostępnienia z zachowaniem czasów żądań i kodów stanu.",
+      },
+      pt: {
+        name: "Limpador de arquivos HAR",
+        description:
+          "Remova cookies, tokens e outros dados sensíveis de arquivos HAR no navegador. Baixe uma cópia limpa para compartilhar com os tempos e códigos de status das requisições.",
+      },
+      ru: {
+        name: "Очистка файлов HAR",
+        description:
+          "Удаляйте файлы cookie, токены и другие конфиденциальные данные из файлов HAR прямо в браузере. Скачайте очищенный HAR, сохранив временные показатели запросов и коды состояния.",
+      },
+      sv: {
+        name: "Rensa HAR-filer",
+        description:
+          "Ta bort kakor, token och andra känsliga uppgifter ur HAR-filer i webbläsaren. Ladda ner en rensad HAR-fil för delning med tidsmätningar och statuskoder kvar.",
+      },
+      th: {
+        name: "เครื่องมือลบข้อมูลอ่อนไหวจากไฟล์ HAR",
+        description:
+          "ลบคุกกี้ โทเค็น และข้อมูลอ่อนไหวอื่น ๆ จากไฟล์ HAR ในเบราว์เซอร์ ดาวน์โหลดไฟล์ HAR ที่ล้างข้อมูลแล้วเพื่อแชร์ โดยยังเก็บข้อมูลระยะเวลาและรหัสสถานะของคำขอไว้",
+      },
+      tr: {
+        name: "HAR Dosyası Temizleme",
+        description:
+          "HAR dosyalarındaki çerezleri, belirteçleri ve diğer hassas verileri tarayıcınızda kaldırın. İstek zamanlamalarını ve durum kodlarını koruyan temizlenmiş bir HAR dosyasını paylaşmak için indirin.",
+      },
+      vi: {
+        name: "Công cụ làm sạch tệp HAR",
+        description:
+          "Xóa cookie, mã thông báo và dữ liệu nhạy cảm khác khỏi tệp HAR ngay trong trình duyệt. Tải xuống bản HAR đã làm sạch để chia sẻ, vẫn giữ thông tin thời gian và mã trạng thái của các yêu cầu.",
+      },
+      "zh-CN": {
+        name: "HAR 脱敏工具",
+        description:
+          "在浏览器中移除 HAR 文件里的 Cookie、令牌等敏感数据。保留请求耗时和状态码，下载脱敏后的 HAR 以便分享。",
+      },
+      "zh-TW": {
+        name: "HAR 敏感資料清理工具",
+        description:
+          "在瀏覽器中移除 HAR 檔案裡的 Cookie、權杖及其他敏感資料。保留請求時間與狀態碼，下載清理後的 HAR 以供分享。",
+      },
+    },
+  },
+  {
     slug: "hex-editor",
     category: "developer",
     icon: "binary",

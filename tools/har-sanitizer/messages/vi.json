@@ -1,0 +1,19 @@
+{
+  "open": "Mở tệp HAR",
+  "drop": "Hoặc kéo và thả tệp .har hoặc .json vào đây",
+  "example": "Thử với tệp mẫu",
+  "privacy": "Tệp chỉ được xử lý trong trình duyệt.",
+  "options": "Tùy chọn làm sạch",
+  "credentials": "Cookie và các tiêu đề xác thực thông dụng luôn được xóa.",
+  "parameters": "Che giá trị tham số URL",
+  "bodies": "Xóa nội dung yêu cầu, phản hồi và WebSocket",
+  "reading": "Đang chuẩn bị bản HAR đã làm sạch…",
+  "invalid": "Không đọc được tệp này dưới dạng HAR. Hãy xuất tệp HAR mới từ bảng Network của trình duyệt rồi thử lại.",
+  "failed": "Không thể xử lý tệp này. Hãy mở lại tệp hoặc xuất bản ghi ngắn hơn.",
+  "result": "Bản HAR đã làm sạch",
+  "requests": "Yêu cầu được giữ lại",
+  "removedCredentials": "Trường xác thực đã xóa",
+  "maskedParameters": "Giá trị URL đã che",
+  "removedBodies": "Nội dung đã xóa",
+  "download": "Tải bản HAR đã làm sạch"
+}

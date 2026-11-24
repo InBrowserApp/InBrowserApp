@@ -643,6 +643,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "เครื่องมือลบข้อมูลอ่อนไหวจากไฟล์ HAR",
+    slug: "har-sanitizer",
+  },
+  {
     category: "developer",
     name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
     slug: "hex-editor",

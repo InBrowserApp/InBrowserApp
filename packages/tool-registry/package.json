@@ -135,6 +135,7 @@
     "@tool/gpx-viewer": "workspace:*",
     "@tool/graphviz-dot-previewer": "workspace:*",
     "@tool/har-analyzer": "workspace:*",
+    "@tool/har-sanitizer": "workspace:*",
     "@tool/hex-editor": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",

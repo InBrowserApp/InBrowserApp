@@ -1,0 +1,4 @@
+{
+  "name": "Rensa HAR-filer",
+  "description": "Ta bort kakor, token och andra känsliga uppgifter ur HAR-filer i webbläsaren. Ladda ner en rensad HAR-fil för delning med tidsmätningar och statuskoder kvar."
+}

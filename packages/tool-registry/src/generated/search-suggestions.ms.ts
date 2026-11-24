@@ -643,6 +643,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "Pembersih Fail HAR",
+    slug: "har-sanitizer",
+  },
+  {
     category: "developer",
     name: "Penyunting Heksadesimal",
     slug: "hex-editor",

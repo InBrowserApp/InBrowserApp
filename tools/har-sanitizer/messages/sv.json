@@ -1,0 +1,19 @@
+{
+  "open": "Öppna HAR-fil",
+  "drop": "Eller släpp en .har- eller .json-fil här",
+  "example": "Prova ett exempel",
+  "privacy": "Filerna stannar i webbläsaren.",
+  "options": "Alternativ för rensning",
+  "credentials": "Kakor och vanliga autentiseringshuvuden tas alltid bort.",
+  "parameters": "Maskera värden i URL-parametrar",
+  "bodies": "Ta bort HTTP- och WebSocket-innehåll",
+  "reading": "Förbereder den rensade HAR-filen…",
+  "invalid": "Filen gick inte att läsa som HAR. Exportera en ny HAR-fil från webbläsarens nätverkspanel och försök igen.",
+  "failed": "Det gick inte att rensa filen. Öppna den igen eller exportera en kortare inspelning.",
+  "result": "Rensad HAR-fil",
+  "requests": "Bevarade begäranden",
+  "removedCredentials": "Borttagna autentiseringsfält",
+  "maskedParameters": "Maskerade URL-värden",
+  "removedBodies": "Borttagna meddelandekroppar",
+  "download": "Ladda ner rensad HAR-fil"
+}

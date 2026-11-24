@@ -1,0 +1,4 @@
+{
+  "name": "Usuwanie danych wrażliwych z HAR",
+  "description": "Usuń pliki cookie, tokeny i inne dane wrażliwe z plików HAR w przeglądarce. Pobierz oczyszczony plik HAR do udostępnienia z zachowaniem czasów żądań i kodów stanu."
+}

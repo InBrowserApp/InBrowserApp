@@ -643,6 +643,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "ניקוי קובצי HAR",
+    slug: "har-sanitizer",
+  },
+  {
     category: "developer",
     name: "עורך הקסדצימלי",
     slug: "hex-editor",

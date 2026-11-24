@@ -1,0 +1,19 @@
+{
+  "open": "Otwórz plik HAR",
+  "drop": "Lub upuść tutaj plik .har lub .json",
+  "example": "Wypróbuj przykład",
+  "privacy": "Pliki pozostają w Twojej przeglądarce.",
+  "options": "Opcje usuwania danych",
+  "credentials": "Pliki cookie i typowe nagłówki uwierzytelniania są zawsze usuwane.",
+  "parameters": "Zamaskuj wartości parametrów URL",
+  "bodies": "Usuń treści HTTP i WebSocket",
+  "reading": "Przygotowywanie oczyszczonego pliku HAR…",
+  "invalid": "Nie można odczytać tego pliku jako HAR. Wyeksportuj nowy plik HAR z panelu Sieć przeglądarki i spróbuj ponownie.",
+  "failed": "Nie udało się przygotować pliku. Otwórz go ponownie lub wyeksportuj krótszy zapis.",
+  "result": "Oczyszczony plik HAR",
+  "requests": "Zachowane żądania",
+  "removedCredentials": "Usunięte pola uwierzytelniania",
+  "maskedParameters": "Zamaskowane wartości URL",
+  "removedBodies": "Usunięte treści wiadomości",
+  "download": "Pobierz oczyszczony plik HAR"
+}
