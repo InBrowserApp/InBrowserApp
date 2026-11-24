@@ -15,3 +15,5 @@ Druk elke knop in en laat hem weer los. Een werkende digitale knop wisselt meest
 ## Waarom wordt mijn gamepad niet herkend?
 
 Controleer of je apparaat de gamepad herkent, ga terug naar dit tabblad en druk opnieuw op een knop. Werkt Bluetooth niet betrouwbaar, probeer dan een USB-kabel die gegevens kan overdragen. Werkt de gamepad in een andere app, open de tester dan rechtstreeks in een actuele browser. Welke invoer de pagina kan lezen, hangt af van je browser en besturingssysteem.
+
+[Muistester](../mouse-tester/)

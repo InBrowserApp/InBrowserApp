@@ -15,3 +15,5 @@
 ## 왜 다른 키에 불이 들어오나요?
 
 그림은 풀사이즈 ANSI 키보드의 물리 키 위치를 따릅니다. 프랑스어 AZERTY 배열에서 `A`를 누르면 그림의 `Q`에 불이 들어올 수 있습니다. **마지막으로 누른 키**에는 현재 배열에서 입력된 값인 `a`와 물리 위치를 나타내는 코드 `KeyQ`가 함께 표시됩니다. 소형 키보드라면 실제로 있는 키를 테스트하세요. [MDN의 물리 키 코드 설명](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[마우스 테스터](../mouse-tester/)

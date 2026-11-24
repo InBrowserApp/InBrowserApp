@@ -15,3 +15,5 @@ Wähle erneut **Test starten**, wenn du woanders geklickt oder den Testbereich m
 ## Warum leuchtet eine andere Taste auf?
 
 Die Abbildung zeigt die physischen Tastenpositionen einer ANSI-Tastatur in voller Größe. Wenn du auf einer französischen AZERTY-Tastatur `A` drückst, kann in der Abbildung `Q` aufleuchten. Unter **Letzte Taste** siehst du den Wert aus deiner Tastaturbelegung, `a`, neben dem Code der physischen Tastenposition, `KeyQ`. Konzentriere dich bei einer kompakten Tastatur auf die Tasten, die sie tatsächlich hat. [MDN-Dokumentation zu physischen Tastencodes](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Maustester](../mouse-tester/)

@@ -15,3 +15,5 @@ Tryck på varje knapp och släpp den igen. En fungerande digital knapp växlar n
 ## Varför upptäcks inte handkontrollen?
 
 Kontrollera att enheten känner igen handkontrollen. Gå sedan tillbaka till fliken och tryck på en knapp igen. Om Bluetooth-anslutningen är instabil kan du prova en USB-kabel med stöd för dataöverföring. Om handkontrollen fungerar i en annan app kan du prova att öppna testet direkt i en uppdaterad webbläsare. Vilka signaler sidan kan läsa beror på webbläsaren och operativsystemet.
+
+[Mustestare](../mouse-tester/)

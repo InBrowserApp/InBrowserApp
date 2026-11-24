@@ -15,3 +15,5 @@ Her düğmeye basıp bırakın. Çalışan bir dijital düğme genellikle %0 ile
 ## Tarayıcı kumandamı neden algılamıyor?
 
 Cihazınızın kumandayı tanıdığından emin olun, ardından bu sekmeye dönüp bir düğmeye daha basın. Bluetooth bağlantısı kararsızsa veri aktarımını destekleyen bir USB kablosu deneyin. Kumanda başka bir uygulamada çalışıyorsa test aracını güncel bir tarayıcıda doğrudan açmayı deneyin. Sayfanın okuyabildiği girdiler tarayıcının ve işletim sisteminin sunduğu verilere bağlıdır.
+
+[Fare Testi](../mouse-tester/)

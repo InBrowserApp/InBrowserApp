@@ -15,3 +15,5 @@ Pulsa y suelta cada botón. Un botón digital suele alternar entre el 0 % y el 
 ## ¿Por qué no aparece mi mando?
 
 Comprueba que tu dispositivo reconoce el mando, vuelve a esta pestaña y pulsa un botón otra vez. Si la conexión Bluetooth es inestable, prueba con un cable USB que permita transferir datos. Si el mando funciona en otra aplicación, abre el probador directamente en un navegador actualizado. Las entradas disponibles dependen del navegador y del sistema operativo.
+
+[Comprobador de ratón](../mouse-tester/)

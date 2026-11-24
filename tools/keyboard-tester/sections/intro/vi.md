@@ -15,3 +15,5 @@ Nếu đã bấm ra ngoài hoặc dùng Tab hay Esc để rời vùng kiểm tra
 ## Vì sao một phím khác lại sáng?
 
 Sơ đồ dùng vị trí vật lý của bàn phím ANSI cỡ đầy đủ. Với bố cục AZERTY tiếng Pháp, nhấn `A` có thể làm sáng phím `Q` trên sơ đồ. **Phím vừa nhấn** vẫn hiển thị giá trị theo bố cục đang dùng, `a`, bên cạnh mã vị trí vật lý `KeyQ`. Nếu dùng bàn phím nhỏ gọn, hãy kiểm tra những phím mà bàn phím của bạn có. [Hướng dẫn về mã vị trí phím của MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Công cụ kiểm tra chuột](../mouse-tester/)

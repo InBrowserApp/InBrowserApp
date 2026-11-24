@@ -15,3 +15,5 @@ Press and release each button. A working digital button usually switches between
 ## Why isn't my gamepad detected?
 
 Check that your device recognizes the controller, then return to this tab and press a button again. If Bluetooth is unreliable, try a USB cable that supports data transfer. If the controller works in another app, try opening the tester directly in an up-to-date browser. What the page can read depends on what the browser and operating system expose.
+
+[Mouse Tester](../mouse-tester/)

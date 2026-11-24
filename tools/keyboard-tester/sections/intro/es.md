@@ -15,3 +15,5 @@ Selecciona **Iniciar prueba** de nuevo si hiciste clic fuera o pulsaste Tab o Es
 ## ¿Por qué se ilumina una tecla distinta?
 
 El diagrama usa las posiciones físicas de un teclado ANSI de tamaño completo. Con la distribución francesa AZERTY, pulsar `A` puede iluminar `Q` en el diagrama. En **Última tecla** verás el valor que produce tu distribución, `a`, junto al código físico `KeyQ`. Si tu teclado es compacto, prueba las teclas que tiene. [Guía de MDN sobre códigos de teclas físicas](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Comprobador de ratón](../mouse-tester/)

@@ -15,3 +15,5 @@ Pressione e solte cada botão. Um botão digital normalmente alterna entre 0% e 
 ## Por que meu controle não aparece?
 
 Confira se o seu dispositivo reconhece o controle, volte a esta aba e pressione um botão de novo. Se a conexão Bluetooth estiver instável, experimente um cabo USB que permita transferir dados. Se o controle funcionar em outro aplicativo, tente abrir o teste diretamente em um navegador atualizado. As entradas disponíveis dependem do navegador e do sistema operacional.
+
+[Testador de mouse](../mouse-tester/)

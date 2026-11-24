@@ -15,3 +15,5 @@ Velg **Start testen** igjen hvis du klikket et annet sted eller forlot testområ
 ## Hvorfor lyser en annen tast?
 
 Bildet viser de fysiske tasteplasseringene på et ANSI-tastatur i full størrelse. Hvis du trykker `A` på et fransk AZERTY-tastatur, kan `Q` lyse i bildet. Under **Siste tast** vises verdien fra tastaturoppsettet ditt, `a`, ved siden av koden for den fysiske tasteplasseringen, `KeyQ`. På et kompakt tastatur kan du konsentrere deg om tastene som finnes på tastaturet. [MDNs dokumentasjon om fysiske tastekoder](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Mustester](../mouse-tester/)

@@ -15,3 +15,5 @@ Trykk på hver knapp og slipp den igjen. En digital knapp som virker, veksler va
 ## Hvorfor oppdages ikke spillkontrolleren?
 
 Sjekk at enheten kjenner igjen spillkontrolleren. Gå deretter tilbake til fanen og trykk på en knapp igjen. Hvis Bluetooth-tilkoblingen er ustabil, prøv en USB-kabel som støtter dataoverføring. Hvis kontrolleren virker i en annen app, kan du prøve å åpne testen direkte i en oppdatert nettleser. Hvilke signaler siden kan lese, avhenger av nettleseren og operativsystemet.
+
+[Mustester](../mouse-tester/)

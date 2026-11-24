@@ -15,3 +15,5 @@ Välj **Starta testet** igen om du klickade någon annanstans eller lämnade tes
 ## Varför lyser en annan tangent?
 
 Bilden visar tangenternas fysiska placering på ett fullstort ANSI-tangentbord. Om du trycker på `A` på ett franskt AZERTY-tangentbord kan `Q` lysa i bilden. Under **Senaste tangent** ser du värdet från din tangentbordslayout, `a`, bredvid koden för tangentens fysiska position, `KeyQ`. På ett kompakt tangentbord räcker det att testa de tangenter som finns. [MDN:s dokumentation om fysiska tangentkoder](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Mustestare](../mouse-tester/)
