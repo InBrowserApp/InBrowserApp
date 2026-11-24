@@ -50,8 +50,7 @@ const service = {
   details: vi.fn<ReturnType<typeof createStorage>["details"]>(),
   download: vi.fn<ReturnType<typeof createStorage>["download"]>(),
 }
-const button = (name: string) =>
-  screen.getByRole("button", { name, exact: true })
+const button = (name: string) => screen.getByRole("button", { name })
 const click = (name: string) => fireEvent.click(button(name))
 const fill = (name: string, value: string) =>
   fireEvent.change(screen.getByLabelText(name), { target: { value } })
@@ -255,7 +254,7 @@ describe("S3 File Manager", () => {
   })
 
   it("moves a file after copying the matching source and exposes a partial failure", async () => {
-    const { container } = setup()
+    setup()
     await screen.findByRole("button", { name: "plan.txt" })
     await menu(messages.actions + " · plan.txt", messages.copyMove)
     click(messages.copyMove)
@@ -276,7 +275,6 @@ describe("S3 File Manager", () => {
       '"tag"'
     )
     expect(service.remove).toHaveBeenCalledWith("first", "plan.txt", '"tag"')
-    expect(container).toBeDefined()
   })
 
   it("opens text details, reports download errors there, and saves edits", async () => {
@@ -290,11 +288,7 @@ describe("S3 File Manager", () => {
     })
     service.download.mockRejectedValue(new Error("Download unavailable"))
     setup()
-    click(
-      await screen
-        .findByRole("button", { name: "plan.txt" })
-        .then((node) => node.textContent!)
-    )
+    fireEvent.click(await screen.findByRole("button", { name: "plan.txt" }))
     await screen.findByText("original")
     click(messages.download)
     expect((await screen.findByRole("alert")).textContent).toBe(
@@ -305,5 +299,33 @@ describe("S3 File Manager", () => {
     click(messages.saveText)
     await waitFor(() => expect(saveText).toHaveBeenCalledWith("changed"))
     await screen.findByText(messages.completed)
+  })
+
+  it("renders an image preview and downloads from the object menu", async () => {
+    const image = new Blob(["image"], { type: "image/png" })
+    const createUrl = vi
+      .spyOn(URL, "createObjectURL")
+      .mockReturnValue("blob:preview")
+    const revokeUrl = vi
+      .spyOn(URL, "revokeObjectURL")
+      .mockImplementation(() => {})
+    const navigate = vi
+      .spyOn(HTMLAnchorElement.prototype, "click")
+      .mockImplementation(() => {})
+    service.details.mockResolvedValue({ contentType: image.type, image })
+    service.download.mockResolvedValue("https://storage.example.com/signed")
+    setup()
+    fireEvent.click(await screen.findByRole("button", { name: "photo.png" }))
+    expect(
+      (await screen.findByRole("img", { name: "photo.png" })).getAttribute(
+        "src"
+      )
+    ).toBe("blob:preview")
+    expect(createUrl).toHaveBeenCalledWith(image)
+    fireEvent.keyDown(screen.getByRole("dialog"), { key: "Escape" })
+    expect(revokeUrl).toHaveBeenCalledWith("blob:preview")
+    await menu(messages.actions + " · photo.png", messages.download)
+    await waitFor(() => expect(navigate).toHaveBeenCalled())
+    expect(service.download).toHaveBeenCalledWith("first", "photo.png")
   })
 })
