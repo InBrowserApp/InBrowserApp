@@ -1,0 +1,4 @@
+{
+  "name": "HID-rapportviser",
+  "description": "Undersøk en godkjent HID-enhet med WebHID. Se leverandør- og produkt-ID-er, brukssider, samlinger og løpende inndatarapporter i hex med endrede byte uthevet."
+}

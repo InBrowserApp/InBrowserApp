@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem báo cáo HID",
+  "description": "Kiểm tra thiết bị HID đã được cấp quyền bằng WebHID. Xem ID nhà cung cấp và sản phẩm, trang sử dụng, tập hợp và báo cáo đầu vào dạng hex trực tiếp với các byte thay đổi được tô sáng."
+}

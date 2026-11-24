@@ -1,0 +1,4 @@
+{
+  "name": "Penampil Laporan HID",
+  "description": "Periksa perangkat HID yang diizinkan dengan WebHID. Lihat ID vendor dan produk, halaman penggunaan, koleksi, serta laporan input heksadesimal secara langsung dengan byte yang berubah disorot."
+}

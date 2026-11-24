@@ -1,0 +1,4 @@
+{
+  "name": "HID Report Viewer",
+  "description": "Inspect an authorized HID device with WebHID. View vendor and product IDs, usage pages, collections, and live hex input reports with changed bytes highlighted."
+}

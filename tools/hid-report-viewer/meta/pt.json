@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de relatórios HID",
+  "description": "Inspecione um dispositivo HID autorizado com WebHID. Veja IDs de fabricante e produto, páginas de uso, coleções e relatórios de entrada em hexadecimal ao vivo, com os bytes alterados destacados."
+}
