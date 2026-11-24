@@ -83,16 +83,21 @@ it("shows cuts, updates detection, retries export and downloads the edited file"
   })
 
   const apply = screen.getByRole("button", { name: messages.cut })
+  apply.focus()
   fireEvent.click(apply)
-  expect(apply.hasAttribute("disabled")).toBe(true)
+  expect(apply.getAttribute("aria-disabled")).toBe("true")
+  expect(document.activeElement).toBe(apply)
   expect(worker.postMessage).toHaveBeenLastCalledWith({
     type: "edit",
     cuts: [{ start: 51600, end: 140400 }],
   })
+  fireEvent.click(apply)
+  expect(worker.postMessage).toHaveBeenCalledTimes(2)
   act(() => worker.receive({ type: "error" }))
   expect(screen.getByRole("alert").textContent).toBe(messages.exportError)
   fireEvent.click(apply)
   act(() => worker.receive({ type: "edited", wav: new ArrayBuffer(44) }))
+  expect(document.activeElement).toBe(apply)
   const link = screen.getByRole("link", { name: messages.download })
   expect(link.getAttribute("download")).toBe("interview-trimmed.wav")
   expect(screen.getByLabelText(messages.preview).getAttribute("src")).toBe(

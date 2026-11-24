@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest"
+import { encodeWav } from "@workspace/pcm-audio"
 
 import {
   audioLevels,
   findCuts,
+  keptSpans,
   removedFrames,
   SAMPLE_RATE,
-  trimChannels,
 } from "./silence"
 
 const at = (seconds: number) => Math.round(seconds * SAMPLE_RATE)
@@ -25,6 +26,9 @@ describe("automatic silence removal", () => {
       { start: at(5.15), end: at(6) },
     ])
     expect(removedFrames(cuts)).toBe(at(1.7))
+    expect(keptSpans(samples.length, cuts)).toEqual([
+      { start: at(0.85), end: at(5.15) },
+    ])
   })
 
   it("shortens the center of a long pause and keeps a short pause", () => {
@@ -35,12 +39,21 @@ describe("automatic silence removal", () => {
     ])
     const { cuts } = findCuts(audioLevels([samples]), -42, 0.8)
     expect(cuts).toEqual([{ start: at(1.075), end: at(2.925) }])
-    const [left, right] = trimChannels([samples, samples], cuts)
-    expect(left).toEqual(right)
-    expect(left!.length).toBe(at(4.15))
-    expect(left![at(1.2)]).toBeCloseTo(0.2)
-    expect(left![at(1.8)]).toBe(0)
-    expect(left![at(2.4)]).toBeCloseTo(0.2)
+    const spans = keptSpans(samples.length, cuts)
+    expect(spans).toEqual([
+      { start: 0, end: at(1.075) },
+      { start: at(2.925), end: samples.length },
+    ])
+    const wav = new DataView(
+      encodeWav([samples, samples], SAMPLE_RATE, 0, {
+        spans,
+        fadeFrames: at(0.005),
+      })
+    )
+    expect(wav.byteLength).toBe(44 + 4 * at(4.15))
+    expect(wav.getInt16(44 + 4 * at(1.2), true)).toBeCloseTo(6554)
+    expect(wav.getInt16(46 + 4 * at(1.2), true)).toBeCloseTo(6554)
+    expect(wav.getInt16(44 + 4 * at(1.8), true)).toBe(0)
     expect(findCuts(audioLevels([samples]), -42, 2.1).cuts).toEqual([])
   })
 
@@ -61,13 +74,16 @@ describe("automatic silence removal", () => {
   })
 
   it("smooths the joins without changing kept duration", () => {
-    const [audio] = trimChannels(
-      [new Float32Array(10).fill(1)],
-      [{ start: 4, end: 6 }]
+    const samples = new Float32Array(10).fill(1)
+    const wav = new DataView(
+      encodeWav([samples], SAMPLE_RATE, 0, {
+        spans: keptSpans(samples.length, [{ start: 4, end: 6 }]),
+        fadeFrames: at(0.005),
+      })
     )
-    expect(audio!.length).toBe(8)
-    expect(audio![3]).toBe(0)
-    expect(audio![4]).toBe(0)
-    expect(audio![2]).toBeCloseTo(1 / at(0.005))
+    expect(wav.byteLength).toBe(44 + 16)
+    expect(wav.getInt16(44 + 2 * 3, true)).toBe(0)
+    expect(wav.getInt16(44 + 2 * 4, true)).toBe(0)
+    expect(wav.getInt16(44 + 2 * 2, true)).toBe(Math.round(32768 / at(0.005)))
   })
 })

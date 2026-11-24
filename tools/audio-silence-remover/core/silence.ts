@@ -1,9 +1,8 @@
 export const SAMPLE_RATE = 48_000
 const windowFrames = SAMPLE_RATE / 100
 const retainedFrames = Math.round(SAMPLE_RATE * 0.15)
-const fadeFrames = Math.round(SAMPLE_RATE * 0.005)
 
-type Range = { start: number; end: number }
+export type SilenceCut = { start: number; end: number }
 
 export function audioLevels(channels: Float32Array[]) {
   const length = channels[0]!.length
@@ -29,7 +28,7 @@ export function findCuts(
 ) {
   const limit = 10 ** (threshold / 10)
   const minimumFrames = Math.round(minimum * SAMPLE_RATE)
-  const cuts: Range[] = []
+  const cuts: SilenceCut[] = []
   let quietStart = 0
   let hasSound = false
   for (let i = 0; i <= levels.length; i++) {
@@ -53,32 +52,17 @@ export function findCuts(
   return { cuts: hasSound ? cuts : [], allQuiet: !hasSound }
 }
 
-export function removedFrames(cuts: Range[]) {
+export function removedFrames(cuts: SilenceCut[]) {
   return cuts.reduce((total, cut) => total + cut.end - cut.start, 0)
 }
 
-export function trimChannels(channels: Float32Array[], cuts: Range[]) {
-  const length = channels[0]!.length - removedFrames(cuts)
-  return channels.map((samples) => {
-    const output = new Float32Array(length)
-    let input = 0
-    let offset = 0
-    for (const cut of cuts) {
-      output.set(samples.subarray(input, cut.start), offset)
-      offset += cut.start - input
-      input = cut.end
-    }
-    output.set(samples.subarray(input), offset)
-
-    let removed = 0
-    for (const cut of cuts) {
-      const join = cut.start - removed
-      const before = Math.min(join, fadeFrames)
-      const after = Math.min(length - join, fadeFrames)
-      for (let i = 0; i < before; i++) output[join - 1 - i]! *= i / fadeFrames
-      for (let i = 0; i < after; i++) output[join + i]! *= i / fadeFrames
-      removed += cut.end - cut.start
-    }
-    return output
-  })
+export function keptSpans(length: number, cuts: SilenceCut[]) {
+  const spans: SilenceCut[] = []
+  let start = 0
+  for (const cut of cuts) {
+    if (start < cut.start) spans.push({ start, end: cut.start })
+    start = cut.end
+  }
+  if (start < length) spans.push({ start, end: length })
+  return spans
 }

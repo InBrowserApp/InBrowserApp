@@ -1,10 +1,16 @@
+type Span = { start: number; end: number }
+
 export function encodeWav(
   channels: Float32Array[],
   sampleRate: number,
-  gain: number
+  gain: number,
+  edit?: { spans: Span[]; fadeFrames: number }
 ) {
   const channelCount = channels.length
-  const frames = channels[0]!.length
+  const length = channels[0]!.length
+  const spans = edit?.spans ?? [{ start: 0, end: length }]
+  const fadeFrames = edit?.fadeFrames ?? 0
+  const frames = spans.reduce((total, span) => total + span.end - span.start, 0)
   const frameBytes = channelCount * 2
   const size = frames * frameBytes
   if (size > 0xffffffff - 36) throw new RangeError("WAV exceeds RIFF size")
@@ -25,14 +31,24 @@ export function encodeWav(
   view.setUint32(40, size, true)
   const scale = 10 ** (gain / 20) * 32768
   let byte = 44
-  for (let i = 0; i < frames; i++) {
-    for (const samples of channels) {
-      view.setInt16(
-        byte,
-        Math.max(-32768, Math.min(32767, Math.round(samples[i]! * scale))),
-        true
-      )
-      byte += 2
+  for (const { start, end } of spans) {
+    const fadeInEnd = start > 0 ? start + fadeFrames : start
+    const fadeOutStart = end < length ? end - fadeFrames : end
+    for (let i = start; i < end; i++) {
+      let frameScale = scale
+      if (i < fadeInEnd) frameScale *= (i - start) / fadeFrames
+      if (i >= fadeOutStart) frameScale *= (end - 1 - i) / fadeFrames
+      for (const samples of channels) {
+        view.setInt16(
+          byte,
+          Math.max(
+            -32768,
+            Math.min(32767, Math.round(samples[i]! * frameScale))
+          ),
+          true
+        )
+        byte += 2
+      }
     }
   }
   return buffer

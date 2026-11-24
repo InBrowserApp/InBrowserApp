@@ -1,17 +1,26 @@
-import type { audioLevels, findCuts } from "./core/silence"
+import { useMemo } from "react"
+import type { audioLevels, SilenceCut } from "./core/silence"
 
 type Audio = ReturnType<typeof audioLevels>
-type Cuts = ReturnType<typeof findCuts>["cuts"]
 
-export function Waveform({ audio, cuts }: { audio: Audio; cuts: Cuts }) {
-  const bars = Math.min(180, audio.levels.length)
-  const peaks = Array.from({ length: bars }, (_, bar) => {
-    const start = Math.floor((bar * audio.levels.length) / bars)
-    const end = Math.floor(((bar + 1) * audio.levels.length) / bars)
-    let peak = 0
-    for (let i = start; i < end; i++) peak = Math.max(peak, audio.levels[i]!)
-    return Math.min(100, Math.max(2, 100 * Math.sqrt(Math.sqrt(peak))))
-  })
+export function Waveform({
+  audio,
+  cuts,
+}: {
+  audio: Audio
+  cuts: SilenceCut[]
+}) {
+  const peaks = useMemo(() => {
+    const { levels } = audio
+    const bars = Math.min(180, levels.length)
+    return Array.from({ length: bars }, (_, bar) => {
+      const start = Math.floor((bar * levels.length) / bars)
+      const end = Math.floor(((bar + 1) * levels.length) / bars)
+      let peak = 0
+      for (let i = start; i < end; i++) peak = Math.max(peak, levels[i]!)
+      return Math.min(100, Math.max(2, 100 * Math.sqrt(Math.sqrt(peak))))
+    })
+  }, [audio])
   return (
     <div
       dir="ltr"

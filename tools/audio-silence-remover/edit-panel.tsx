@@ -38,18 +38,25 @@ export function EditPanel({
   const [minimum, setMinimum] = useState(0.8)
   const [edit, setEdit] = useState<Edit>({ status: "detected" })
   const processing = edit.status === "rendering"
+  const applyUnavailable = processing || edit.status === "ready"
   const { cuts, allQuiet } = useMemo(
     () => findCuts(audio, threshold, minimum),
     [audio, threshold, minimum]
   )
   const removed = removedFrames(cuts)
-  const number = new Intl.NumberFormat(lang, { maximumFractionDigits: 2 })
   const seconds = new Intl.NumberFormat(lang, {
     style: "unit",
     unit: "second",
     unitDisplay: "short",
     maximumFractionDigits: 2,
   })
+  const thresholdDisplay = threshold.toLocaleString(lang) + " dBFS"
+  const minimumDisplay = seconds.format(minimum)
+  const durations = [
+    [m.original, audio.length],
+    [m.edited, audio.length - removed],
+    [m.removed, removed],
+  ] as const
 
   useEffect(() => {
     function receive({ data }: MessageEvent<Response>) {
@@ -61,6 +68,7 @@ export function EditPanel({
   }, [worker])
 
   function apply() {
+    if (applyUnavailable) return
     setEdit({ status: "rendering" })
     const request: Request = { type: "edit", cuts }
     worker.postMessage(request)
@@ -70,17 +78,28 @@ export function EditPanel({
     <ToolPanelCard>
       <ToolPanelCardContent className="gap-5">
         <Waveform audio={audio} cuts={cuts} />
-        <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-muted-foreground">
-          <span className="flex items-center gap-2">
-            <span
-              className="size-3 rounded-sm border border-amber-600/60 bg-amber-500/25"
-              aria-hidden="true"
-            />
-            {m.cuts}
-            <span className="font-medium text-foreground tabular-nums">
-              {number.format(cuts.length)}
-            </span>
-          </span>
+        <div className="flex flex-wrap items-start justify-between gap-2 text-sm text-muted-foreground">
+          {cuts.length > 0 && (
+            <details>
+              <summary className="cursor-pointer rounded-sm font-medium text-foreground">
+                <span
+                  aria-hidden="true"
+                  className="me-2 inline-block size-3 rounded-sm border border-amber-600/60 bg-amber-500/25 align-[-1px]"
+                />
+                {m.cuts} ({cuts.length.toLocaleString(lang)})
+              </summary>
+              <ol className="mt-2 max-h-32 space-y-1 overflow-auto ps-4 tabular-nums">
+                {cuts.map(({ start, end }) => (
+                  <li key={start} className="list-decimal">
+                    <bdi>
+                      {seconds.format(start / SAMPLE_RATE)} –{" "}
+                      {seconds.format(end / SAMPLE_RATE)}
+                    </bdi>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          )}
           <span>{m.keepPause}</span>
         </div>
 
@@ -91,12 +110,9 @@ export function EditPanel({
           <div className="grid gap-2">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <Label htmlFor={id + "-threshold"}>{m.threshold}</Label>
-              <output
-                htmlFor={id + "-threshold"}
-                className="text-sm tabular-nums"
-              >
-                <bdi>{number.format(threshold)} dBFS</bdi>
-              </output>
+              <bdi aria-hidden="true" className="text-sm tabular-nums">
+                {thresholdDisplay}
+              </bdi>
             </div>
             <input
               id={id + "-threshold"}
@@ -107,7 +123,7 @@ export function EditPanel({
               max={-20}
               step={1}
               value={threshold}
-              aria-valuetext={number.format(threshold) + " dBFS"}
+              aria-valuetext={thresholdDisplay}
               onChange={(event) => {
                 setThreshold(event.currentTarget.valueAsNumber)
                 setEdit({ status: "detected" })
@@ -117,12 +133,9 @@ export function EditPanel({
           <div className="grid gap-2">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <Label htmlFor={id + "-duration"}>{m.minimum}</Label>
-              <output
-                htmlFor={id + "-duration"}
-                className="text-sm tabular-nums"
-              >
-                <bdi>{seconds.format(minimum)}</bdi>
-              </output>
+              <bdi aria-hidden="true" className="text-sm tabular-nums">
+                {minimumDisplay}
+              </bdi>
             </div>
             <input
               id={id + "-duration"}
@@ -133,7 +146,7 @@ export function EditPanel({
               max={5}
               step={0.1}
               value={minimum}
-              aria-valuetext={seconds.format(minimum)}
+              aria-valuetext={minimumDisplay}
               onChange={(event) => {
                 setMinimum(event.currentTarget.valueAsNumber)
                 setEdit({ status: "detected" })
@@ -143,18 +156,14 @@ export function EditPanel({
         </fieldset>
 
         <dl className="grid grid-cols-3 gap-2 tabular-nums">
-          {[
-            [m.original, audio.length],
-            [m.edited, audio.length - removed],
-            [m.removed, removed],
-          ].map(([label, frames]) => (
+          {durations.map(([label, frames]) => (
             <div
               key={label}
               className="rounded-md bg-muted/45 px-2 py-2 sm:px-3"
             >
               <dt className="text-xs text-muted-foreground">{label}</dt>
               <dd className="mt-1 text-sm font-semibold sm:text-base">
-                <bdi>{seconds.format(Number(frames) / SAMPLE_RATE)}</bdi>
+                <bdi>{seconds.format(frames / SAMPLE_RATE)}</bdi>
               </dd>
             </div>
           ))}
@@ -169,8 +178,8 @@ export function EditPanel({
             <Button
               type="button"
               onClick={apply}
-              disabled={processing || edit.status === "ready"}
-              className="min-h-11 w-full whitespace-normal sm:w-auto"
+              aria-disabled={applyUnavailable || undefined}
+              className="min-h-11 w-full whitespace-normal aria-disabled:pointer-events-none aria-disabled:opacity-50 sm:w-auto"
             >
               <Scissors data-icon="inline-start" aria-hidden="true" />
               {m.cut}

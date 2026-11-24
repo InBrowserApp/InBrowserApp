@@ -25,6 +25,7 @@ export function AudioPreviewDownload({
       <audio
         className="h-11 min-w-0 grow basis-52"
         controls
+        preload="metadata"
         src={url || undefined}
         aria-label={previewLabel}
       />
