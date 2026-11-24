@@ -1,0 +1,4 @@
+{
+  "name": "Pendeteksi BPM",
+  "description": "Cari tahu tempo lagu atau loop audio dalam ketukan per menit. Bandingkan setengah dan dua kali BPM, putar audio asli, dan salin perkiraannya."
+}

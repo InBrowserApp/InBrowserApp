@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Choisir un fichier audio",
+  "dropHint": "ou déposez un fichier audio ici",
+  "changeFile": "Changer de fichier",
+  "privacy": "Votre audio reste sur votre appareil.",
+  "analyzing": "Détection du tempo…",
+  "readError": "Impossible d’ouvrir ce fichier audio. Essayez un fichier WAV mono ou stéréo.",
+  "channelError": "Choisissez un fichier audio mono ou stéréo.",
+  "noTempo": "Aucune pulsation régulière détectée. Essayez un extrait plus long au rythme bien marqué.",
+  "tempo": "Tempo estimé",
+  "half": "Demi-tempo",
+  "double": "Tempo doublé",
+  "copy": "Copier le BPM",
+  "copied": "Copié",
+  "ready": "Le tempo estimé est de {bpm} BPM.",
+  "preview": "Écouter l’audio d’origine"
+}

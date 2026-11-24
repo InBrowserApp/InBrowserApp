@@ -1,0 +1,4 @@
+{
+  "name": "BPM-detector",
+  "description": "Vind het tempo van een nummer of audioloop in tellen per minuut. Vergelijk half en dubbel tempo, speel het origineel af en kopieer de geschatte BPM."
+}

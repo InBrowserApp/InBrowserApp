@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Elegir audio",
+  "dropHint": "o arrastra un archivo de audio aquí",
+  "changeFile": "Cambiar archivo",
+  "privacy": "Tu audio se queda en tu dispositivo.",
+  "analyzing": "Detectando el tempo…",
+  "readError": "No se pudo abrir este archivo de audio. Prueba con un archivo WAV mono o estéreo.",
+  "channelError": "Elige un archivo de audio mono o estéreo.",
+  "noTempo": "No se detectó un pulso constante. Prueba con un fragmento más largo que tenga un ritmo claro.",
+  "tempo": "Tempo estimado",
+  "half": "Mitad del tempo",
+  "double": "Doble del tempo",
+  "copy": "Copiar BPM",
+  "copied": "Copiado",
+  "ready": "El tempo estimado es de {bpm} BPM.",
+  "preview": "Reproducir el audio original"
+}

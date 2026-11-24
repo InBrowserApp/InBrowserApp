@@ -1,4 +1,5 @@
 export {
+  Activity,
   Crop,
   FlipHorizontal2,
   FlipVertical2,

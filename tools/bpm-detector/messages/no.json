@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Velg lydfil",
+  "dropHint": "eller slipp en lydfil her",
+  "changeFile": "Bytt fil",
+  "privacy": "Lydfilen blir på enheten din.",
+  "analyzing": "Finner tempoet…",
+  "readError": "Kunne ikke åpne lydfilen. Prøv en WAV-fil i mono eller stereo.",
+  "channelError": "Velg en lydfil i mono eller stereo.",
+  "noTempo": "Fant ingen jevn puls. Prøv et lengre utdrag med tydelig rytme.",
+  "tempo": "Anslått tempo",
+  "half": "Halvt tempo",
+  "double": "Dobbelt tempo",
+  "copy": "Kopier BPM",
+  "copied": "Kopiert",
+  "ready": "Anslått tempo er {bpm} BPM.",
+  "preview": "Spill av originalen"
+}

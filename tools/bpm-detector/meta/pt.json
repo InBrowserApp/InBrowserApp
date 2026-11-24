@@ -1,0 +1,4 @@
+{
+  "name": "Detetor de BPM",
+  "description": "Estime o andamento de uma música ou loop em batidas por minuto. Consulte a metade e o dobro dos BPM, ouça o áudio original e copie o resultado."
+}

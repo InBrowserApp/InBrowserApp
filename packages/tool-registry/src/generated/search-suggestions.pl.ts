@@ -228,6 +228,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "misc",
+    name: "Wykrywacz BPM",
+    slug: "bpm-detector",
+  },
+  {
     category: "document",
     name: "Konwerter BPMN na PDF",
     slug: "bpmn-to-pdf-converter",

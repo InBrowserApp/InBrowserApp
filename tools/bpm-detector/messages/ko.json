@@ -1,0 +1,17 @@
+{
+  "chooseFile": "오디오 파일 선택",
+  "dropHint": "또는 오디오 파일을 여기에 끌어다 놓으세요",
+  "changeFile": "파일 변경",
+  "privacy": "오디오 파일은 사용 중인 기기에서만 처리됩니다.",
+  "analyzing": "템포 감지 중…",
+  "readError": "오디오 파일을 열 수 없습니다. 모노 또는 스테레오 WAV 파일로 다시 시도하세요.",
+  "channelError": "모노 또는 스테레오 오디오 파일을 선택하세요.",
+  "noTempo": "일정한 비트를 찾지 못했습니다. 리듬이 뚜렷한 더 긴 구간으로 다시 시도하세요.",
+  "tempo": "추정 템포",
+  "half": "절반 BPM",
+  "double": "두 배 BPM",
+  "copy": "BPM 복사",
+  "copied": "복사됨",
+  "ready": "추정 템포는 {bpm} BPM입니다.",
+  "preview": "원본 오디오 재생"
+}

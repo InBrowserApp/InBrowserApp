@@ -4142,6 +4142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpm-detector",
+    language: "ar",
+  },
+  {
+    slug: "bpm-detector",
+    language: "de",
+  },
+  {
+    slug: "bpm-detector",
+    language: "en",
+  },
+  {
+    slug: "bpm-detector",
+    language: "es",
+  },
+  {
+    slug: "bpm-detector",
+    language: "fr",
+  },
+  {
+    slug: "bpm-detector",
+    language: "he",
+  },
+  {
+    slug: "bpm-detector",
+    language: "hi",
+  },
+  {
+    slug: "bpm-detector",
+    language: "id",
+  },
+  {
+    slug: "bpm-detector",
+    language: "it",
+  },
+  {
+    slug: "bpm-detector",
+    language: "ja",
+  },
+  {
+    slug: "bpm-detector",
+    language: "ko",
+  },
+  {
+    slug: "bpm-detector",
+    language: "ms",
+  },
+  {
+    slug: "bpm-detector",
+    language: "nl",
+  },
+  {
+    slug: "bpm-detector",
+    language: "no",
+  },
+  {
+    slug: "bpm-detector",
+    language: "pl",
+  },
+  {
+    slug: "bpm-detector",
+    language: "pt",
+  },
+  {
+    slug: "bpm-detector",
+    language: "ru",
+  },
+  {
+    slug: "bpm-detector",
+    language: "sv",
+  },
+  {
+    slug: "bpm-detector",
+    language: "th",
+  },
+  {
+    slug: "bpm-detector",
+    language: "tr",
+  },
+  {
+    slug: "bpm-detector",
+    language: "vi",
+  },
+  {
+    slug: "bpm-detector",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpm-detector",
+    language: "zh-TW",
+  },
+  {
     slug: "bpmn-to-pdf-converter",
     language: "ar",
   },

@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Audiodatei auswählen",
+  "dropHint": "oder eine Audiodatei hier ablegen",
+  "changeFile": "Datei wechseln",
+  "privacy": "Deine Audiodatei bleibt auf deinem Gerät.",
+  "analyzing": "Tempo wird ermittelt …",
+  "readError": "Die Audiodatei konnte nicht geöffnet werden. Versuche es mit einer Mono- oder Stereo-WAV-Datei.",
+  "channelError": "Wähle eine Mono- oder Stereo-Audiodatei.",
+  "noTempo": "Kein gleichmäßiger Beat erkannt. Versuche es mit einem längeren Ausschnitt mit klarem Rhythmus.",
+  "tempo": "Geschätztes Tempo",
+  "half": "Halber BPM-Wert",
+  "double": "Doppelter BPM-Wert",
+  "copy": "BPM kopieren",
+  "copied": "Kopiert",
+  "ready": "Das geschätzte Tempo beträgt {bpm} BPM.",
+  "preview": "Originalaufnahme abspielen"
+}

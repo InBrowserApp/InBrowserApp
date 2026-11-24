@@ -1,0 +1,4 @@
+{
+  "name": "Détecteur de BPM",
+  "description": "Trouvez le tempo d’un morceau ou d’une boucle en BPM. Comparez le demi-tempo et le tempo doublé, écoutez l’original et copiez la valeur estimée."
+}

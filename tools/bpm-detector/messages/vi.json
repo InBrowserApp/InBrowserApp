@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Chọn tệp âm thanh",
+  "dropHint": "hoặc thả tệp âm thanh vào đây",
+  "changeFile": "Đổi tệp",
+  "privacy": "Âm thanh chỉ được xử lý trên thiết bị của bạn.",
+  "analyzing": "Đang dò nhịp độ…",
+  "readError": "Không mở được tệp âm thanh này. Hãy thử với tệp WAV mono hoặc stereo.",
+  "channelError": "Hãy chọn tệp âm thanh mono hoặc stereo.",
+  "noTempo": "Không tìm thấy nhịp đều. Hãy thử một đoạn dài hơn có nhịp rõ ràng.",
+  "tempo": "Nhịp độ ước tính",
+  "half": "Một nửa BPM",
+  "double": "Gấp đôi BPM",
+  "copy": "Sao chép BPM",
+  "copied": "Đã sao chép",
+  "ready": "Nhịp độ ước tính là {bpm} BPM.",
+  "preview": "Phát âm thanh gốc"
+}
