@@ -1468,6 +1468,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "SPF Record Syntax Checker",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "Spreadsheet Data Exporter",
     slug: "spreadsheet-data-export",

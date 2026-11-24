@@ -1,0 +1,4 @@
+{
+  "name": "SPF-Syntaxprüfung",
+  "description": "Prüfe einen eingefügten SPF-TXT-Eintrag nach RFC 7208. Sieh dir Mechanismen, Qualifizierer, Modifikatoren und mögliche DNS-Abfragen direkt im Browser an."
+}

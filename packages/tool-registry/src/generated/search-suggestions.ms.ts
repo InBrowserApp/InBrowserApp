@@ -1468,6 +1468,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "Penyemak Sintaks Rekod SPF",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "Pengeksport Data Hamparan",
     slug: "spreadsheet-data-export",

@@ -26958,6 +26958,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "spf-record-validator",
+    language: "ar",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "de",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "en",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "es",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "fr",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "he",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "hi",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "id",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "it",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ja",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ko",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ms",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "nl",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "no",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "pl",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "pt",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ru",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "sv",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "th",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "tr",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "vi",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "spreadsheet-data-export",
     language: "ar",
   },

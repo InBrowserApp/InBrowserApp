@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de syntaxe SPF",
+  "description": "Collez un enregistrement TXT SPF pour vérifier sa syntaxe selon la RFC 7208. Examinez les mécanismes, qualificateurs, modificateurs et termes qui peuvent déclencher des requêtes DNS."
+}

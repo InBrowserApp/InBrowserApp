@@ -1468,6 +1468,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "SPF रिकॉर्ड सिंटैक्स चेकर",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "स्प्रेडशीट डेटा निर्यातक",
     slug: "spreadsheet-data-export",

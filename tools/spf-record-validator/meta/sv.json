@@ -1,0 +1,4 @@
+{
+  "name": "Syntaxkontroll för SPF-poster",
+  "description": "Kontrollera en inklistrad SPF-post av typen TXT enligt RFC 7208. Granska mekanismer, kvalificerare, modifierare och termer som kan orsaka DNS-uppslagningar direkt i webbläsaren."
+}
