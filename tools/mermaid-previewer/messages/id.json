@@ -1,0 +1,16 @@
+{
+  "source": "Kode Mermaid",
+  "example": "Muat contoh",
+  "flowchart": "Diagram alir",
+  "sequence": "Diagram urutan",
+  "relationships": "Diagram ER",
+  "preview": "Pratinjau diagram",
+  "empty": "Masukkan kode Mermaid untuk melihat pratinjau diagram.",
+  "loading": "Menampilkan diagram…",
+  "invalid": "Diagram Mermaid ini tidak dapat ditampilkan. Periksa sintaksnya, lalu coba lagi.",
+  "downloadSvg": "Unduh SVG",
+  "downloadPng": "Unduh PNG",
+  "exportError": "PNG tidak dapat dibuat. Coba unduh diagram dalam format SVG.",
+  "fit": "Sesuaikan dengan tampilan",
+  "actualSize": "Ukuran sebenarnya"
+}

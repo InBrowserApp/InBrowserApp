@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid 原始碼",
+  "example": "載入範例",
+  "flowchart": "流程圖",
+  "sequence": "循序圖",
+  "relationships": "ER 圖",
+  "preview": "圖表預覽",
+  "empty": "輸入 Mermaid 程式碼以預覽圖表。",
+  "loading": "正在轉譯圖表…",
+  "invalid": "無法轉譯此 Mermaid 圖表。請檢查語法後再試。",
+  "downloadSvg": "下載 SVG",
+  "downloadPng": "下載 PNG",
+  "exportError": "無法產生 PNG，請試著下載 SVG。",
+  "fit": "符合檢視範圍",
+  "actualSize": "實際大小"
+}

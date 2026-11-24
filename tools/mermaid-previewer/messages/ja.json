@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid ソース",
+  "example": "サンプルを読み込む",
+  "flowchart": "フローチャート",
+  "sequence": "シーケンス図",
+  "relationships": "ER 図",
+  "preview": "図のプレビュー",
+  "empty": "Mermaid コードを入力すると図をプレビューできます。",
+  "loading": "図を描画しています…",
+  "invalid": "Mermaid の図を描画できませんでした。構文を確認してもう一度お試しください。",
+  "downloadSvg": "SVG をダウンロード",
+  "downloadPng": "PNG をダウンロード",
+  "exportError": "PNG を作成できませんでした。代わりに SVG をダウンロードしてください。",
+  "fit": "画面に合わせる",
+  "actualSize": "実寸"
+}

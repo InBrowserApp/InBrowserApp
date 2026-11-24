@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid-brontekst",
+  "example": "Voorbeeld laden",
+  "flowchart": "Stroomdiagram",
+  "sequence": "Sequentiediagram",
+  "relationships": "ER-diagram",
+  "preview": "Diagramvoorvertoning",
+  "empty": "Voer Mermaid-code in om het diagram te bekijken.",
+  "loading": "Diagram wordt getekend…",
+  "invalid": "Dit Mermaid-diagram kon niet worden getekend. Controleer de syntaxis en probeer het opnieuw.",
+  "downloadSvg": "SVG downloaden",
+  "downloadPng": "PNG downloaden",
+  "exportError": "Het PNG-bestand kon niet worden gemaakt. Probeer het diagram als SVG te downloaden.",
+  "fit": "Passend in beeld",
+  "actualSize": "Ware grootte"
+}

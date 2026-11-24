@@ -1,0 +1,16 @@
+{
+  "source": "شيفرة Mermaid",
+  "example": "تحميل مثال",
+  "flowchart": "مخطط انسيابي",
+  "sequence": "مخطط تسلسل",
+  "relationships": "مخطط كيانات وعلاقات",
+  "preview": "معاينة المخطط",
+  "empty": "أدخل شيفرة Mermaid لمعاينة المخطط.",
+  "loading": "جارٍ رسم المخطط…",
+  "invalid": "تعذّر رسم مخطط Mermaid. راجع صياغة الشيفرة ثم حاول مجددًا.",
+  "downloadSvg": "تنزيل SVG",
+  "downloadPng": "تنزيل PNG",
+  "exportError": "تعذّر إنشاء صورة PNG. جرّب تنزيل المخطط بصيغة SVG.",
+  "fit": "ملاءمة مساحة العرض",
+  "actualSize": "الحجم الفعلي"
+}

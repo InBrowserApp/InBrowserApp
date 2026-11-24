@@ -18034,6 +18034,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mermaid-previewer",
+    language: "ar",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "de",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "en",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "es",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "fr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "he",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "hi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "id",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "it",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ja",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ko",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ms",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "nl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "no",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pl",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "pt",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "ru",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "sv",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "th",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "tr",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "vi",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mermaid-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-html-converter",
     language: "ar",
   },

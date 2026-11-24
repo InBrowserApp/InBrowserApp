@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid source",
+  "example": "Load an example",
+  "flowchart": "Flowchart",
+  "sequence": "Sequence diagram",
+  "relationships": "ER diagram",
+  "preview": "Diagram preview",
+  "empty": "Enter Mermaid code to preview a diagram.",
+  "loading": "Rendering diagram…",
+  "invalid": "Could not render this Mermaid diagram. Check the syntax and try again.",
+  "downloadSvg": "Download SVG",
+  "downloadPng": "Download PNG",
+  "exportError": "Could not create the PNG. Try downloading the SVG instead.",
+  "fit": "Fit to view",
+  "actualSize": "Actual size"
+}

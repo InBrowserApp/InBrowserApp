@@ -1,0 +1,16 @@
+{
+  "source": "Kod Mermaid",
+  "example": "Wczytaj przykład",
+  "flowchart": "Schemat blokowy",
+  "sequence": "Diagram sekwencji",
+  "relationships": "Diagram ER",
+  "preview": "Podgląd diagramu",
+  "empty": "Wpisz kod Mermaid, aby wyświetlić podgląd diagramu.",
+  "loading": "Tworzenie diagramu…",
+  "invalid": "Nie udało się wyświetlić diagramu Mermaid. Sprawdź składnię i spróbuj ponownie.",
+  "downloadSvg": "Pobierz SVG",
+  "downloadPng": "Pobierz PNG",
+  "exportError": "Nie udało się utworzyć pliku PNG. Spróbuj pobrać diagram w formacie SVG.",
+  "fit": "Dopasuj do widoku",
+  "actualSize": "Rzeczywisty rozmiar"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "Mermaid-källkod",
+  "example": "Ladda exempel",
+  "flowchart": "Flödesschema",
+  "sequence": "Sekvensdiagram",
+  "relationships": "ER-diagram",
+  "preview": "Förhandsvisning av diagram",
+  "empty": "Skriv Mermaid-kod för att förhandsvisa ett diagram.",
+  "loading": "Ritar diagrammet…",
+  "invalid": "Det gick inte att rita Mermaid-diagrammet. Kontrollera syntaxen och försök igen.",
+  "downloadSvg": "Ladda ned SVG",
+  "downloadPng": "Ladda ned PNG",
+  "exportError": "Det gick inte att skapa PNG-filen. Prova att ladda ned diagrammet som SVG.",
+  "fit": "Anpassa till vyn",
+  "actualSize": "Faktisk storlek"
+}
