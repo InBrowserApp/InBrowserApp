@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển BPMN sang PDF",
+  "description": "Chuyển tệp .bpmn hoặc .xml sang PDF vectơ trong trình duyệt. Xem trước quy trình và chọn kích thước gốc, A4 hoặc US Letter."
+}

@@ -18,5 +18,8 @@
   "zoomOut": "縮小",
   "fit": "図を画面に合わせる",
   "downloadSvg": "SVG をダウンロード",
-  "exportError": "SVG を作成できませんでした。図をもう一度ダウンロードしてください。"
+  "exportError": "SVG を作成できませんでした。図をもう一度ダウンロードしてください。",
+  "pdfError": "PDF を作成できませんでした。図をもう一度ダウンロードしてください。",
+  "creatingPdf": "PDF を作成しています…",
+  "downloadPdf": "PDF をダウンロード"
 }

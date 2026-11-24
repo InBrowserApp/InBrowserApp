@@ -1,4 +1,4 @@
 {
   "name": "Graphviz DOT-voorvertoner",
-  "description": "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG."
+  "description": "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG of vector-PDF."
 }

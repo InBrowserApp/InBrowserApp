@@ -17,6 +17,9 @@
   "zoomIn": "Zum masuk",
   "zoomOut": "Zum keluar",
   "fit": "Papar seluruh rajah",
+  "downloadPdf": "Muat turun PDF",
+  "creatingPdf": "Sedang menghasilkan PDF…",
+  "pdfError": "PDF tidak dapat dihasilkan. Cuba muat turun rajah sekali lagi.",
   "downloadSvg": "Muat turun SVG",
   "exportError": "SVG tidak dapat dihasilkan. Cuba muat turun rajah sekali lagi."
 }

@@ -1,0 +1,20 @@
+{
+  "name": "@workspace/svg-pdf",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/diagram-pdf.ts",
+    "./export": "./src/export-pdf.ts",
+    "./svg": "./src/svg.ts"
+  },
+  "dependencies": {
+    "@resvg/resvg-wasm": "catalog:",
+    "@workspace/libreoffice": "workspace:*",
+    "jspdf": "catalog:",
+    "svg2pdf.js": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

@@ -4,10 +4,12 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./editor": "./editor.astro",
     "./manifest": "./manifest.ts",
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/svg-pdf": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "dompurify": "catalog:",

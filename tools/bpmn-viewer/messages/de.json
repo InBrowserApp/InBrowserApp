@@ -17,6 +17,9 @@
   "zoomIn": "Vergrößern",
   "zoomOut": "Verkleinern",
   "fit": "Diagramm an Ansicht anpassen",
+  "downloadPdf": "PDF herunterladen",
+  "creatingPdf": "PDF wird erstellt…",
+  "pdfError": "Die PDF-Datei konnte nicht erstellt werden. Versuche es erneut.",
   "downloadSvg": "SVG herunterladen",
   "exportError": "Die SVG-Datei konnte nicht erstellt werden. Versuche erneut, das Diagramm herunterzuladen."
 }

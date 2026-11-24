@@ -1,0 +1,9 @@
+{
+  "openFile": "ファイルを開く",
+  "fileError": "ファイルを読み取れませんでした。Mermaid のソースファイルを開くか、コードを貼り付けてください。",
+  "sourcePlaceholder": "Mermaid コードを貼り付けるか、.mmd ファイルをドロップしてください。",
+  "pageSize": "PDF のページサイズ",
+  "original": "図に合わせる",
+  "a4": "A4",
+  "letter": "US Letter"
+}

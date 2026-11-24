@@ -10,6 +10,6 @@ Drag the diagram to pan. Use the zoom buttons to read small labels, and select *
 
 BPMN 2.0 XML can describe a process without recording where its shapes or connections appear. The viewer uses the BPMN Diagram Interchange data stored with the model to draw the diagram. If the layout is missing, open the model in your BPMN modeling tool and export it again with the diagram included. See the [BPMN 2.0 specification](https://www.omg.org/spec/BPMN/2.0.2/) for format details.
 
-## Download a diagram as SVG
+## Download a diagram as PDF or SVG
 
-Choose **Download SVG** after opening a diagram. The file contains the full diagram at its original scale and stays sharp when resized in documents and slides.
+Choose **Download PDF** to save the full diagram as a vector PDF for sharing, or **Download SVG** to embed the diagram in documents and slides. Both exports use the complete diagram, even when you zoom in to read a label. To fit the diagram to A4 or US Letter for printing, open it in the [BPMN to PDF Converter](../bpmn-to-pdf-converter/).

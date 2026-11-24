@@ -6,9 +6,9 @@ Wklej definicję w języku Mermaid w polu **Kod Mermaid**. Podgląd zmienia się
 
 Wybierz **Wczytaj przykład**, aby zastąpić zawartość edytora działającym przykładem. Schemat blokowy przedstawia etapy i decyzje, diagram sekwencji pokazuje komunikaty między uczestnikami, a diagram ER przedstawia związki między encjami. Możesz też wkleić definicje innych obsługiwanych typów diagramów Mermaid, takich jak diagramy klas lub wykresy Gantta.
 
-## Eksportuj do SVG lub PNG
+## Eksportuj do SVG, PNG lub PDF
 
-Wybierz **Pobierz SVG**, aby uzyskać grafikę wektorową, która pozostaje ostra po zmianie rozmiaru. Wybierz **Pobierz PNG**, aby pobrać obraz rastrowy do wstawienia na slajd lub do dokumentu. Pobrany plik zawiera bieżący diagram z przezroczystym tłem. Zachowaj kod Mermaid, jeśli chcesz później wrócić do edycji.
+Pobierz **SVG**, aby osadzić skalowalną grafikę na stronie internetowej, **PNG**, aby wkleić obraz do slajdów, lub **PDF**, aby udostępnić albo wydrukować dokument wektorowy. Na stronie PDF mieści się cały diagram. Wybierz [Konwerter Mermaid na PDF](../mermaid-to-pdf-converter/), aby otworzyć plik `.mmd` lub dopasować diagram do formatu A4 albo US Letter. Zachowaj kod Mermaid, jeśli zechcesz później edytować diagram.
 
 ## Popraw diagram, który się nie wyświetla
 

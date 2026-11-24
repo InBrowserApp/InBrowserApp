@@ -10,6 +10,8 @@
   "invalid": "Det gick inte att rita Mermaid-diagrammet. Kontrollera syntaxen och försök igen.",
   "downloadSvg": "Ladda ned SVG",
   "downloadPng": "Ladda ned PNG",
+  "downloadPdf": "Ladda ned PDF",
+  "pdfError": "Det gick inte att skapa PDF-filen. Försök igen eller ladda ned SVG-filen.",
   "exportError": "Det gick inte att skapa PNG-filen. Prova att ladda ned diagrammet som SVG.",
   "fit": "Anpassa till vyn",
   "actualSize": "Faktisk storlek"

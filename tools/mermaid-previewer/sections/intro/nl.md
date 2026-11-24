@@ -6,9 +6,9 @@ Plak een Mermaid-definitie in **Mermaid-brontekst**. Terwijl je typt, wordt het 
 
 Kies **Voorbeeld laden** om de inhoud van de editor door een werkend voorbeeld te vervangen. Een stroomdiagram toont stappen en beslissingen. Een sequentiediagram toont berichten tussen deelnemers. Een ER-diagram maakt relaties tussen gegevensentiteiten zichtbaar. Je kunt ook andere ondersteunde Mermaid-definities plakken, zoals klassendiagrammen en Gantt-diagrammen.
 
-## Exporteer naar SVG of PNG
+## Exporteren naar SVG, PNG of PDF
 
-Kies **SVG downloaden** voor een vectorafbeelding die scherp blijft bij schalen. Kies **PNG downloaden** voor een rasterafbeelding voor je dia’s of documenten. De download bevat het huidige diagram op een transparante achtergrond. Bewaar de Mermaid-brontekst om het diagram later te kunnen aanpassen.
+Download **SVG** om een schaalbare afbeelding op een webpagina te zetten, **PNG** om ze op een dia te plakken of **PDF** om het diagram als vectorbestand te delen of af te drukken. Het hele diagram past op de PDF-pagina. Gebruik de [Mermaid naar PDF-converter](../mermaid-to-pdf-converter/) om een `.mmd`-bestand te openen of het diagram op A4 of US Letter te plaatsen. Bewaar de Mermaid-code als je het diagram later wilt wijzigen.
 
 ## Los problemen met het tekenen van een diagram op
 

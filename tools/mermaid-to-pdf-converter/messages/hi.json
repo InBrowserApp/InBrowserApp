@@ -1,0 +1,9 @@
+{
+  "openFile": "फ़ाइल खोलें",
+  "fileError": "फ़ाइल नहीं पढ़ी जा सकी। Mermaid स्रोत फ़ाइल खोलें या कोड पेस्ट करें।",
+  "sourcePlaceholder": "Mermaid कोड पेस्ट करें या .mmd फ़ाइल यहाँ छोड़ें।",
+  "pageSize": "PDF पेज का आकार",
+  "original": "डायग्राम के अनुसार फ़िट करें",
+  "a4": "A4",
+  "letter": "US Letter"
+}

@@ -12,5 +12,7 @@
   "downloadPng": "הורדת PNG",
   "exportError": "לא ניתן ליצור קובץ PNG. אפשר לנסות להוריד את התרשים כ-SVG.",
   "fit": "התאמה לתצוגה",
-  "actualSize": "גודל בפועל"
+  "actualSize": "גודל בפועל",
+  "pdfError": "לא ניתן ליצור קובץ PDF. נסו שוב או הורידו SVG.",
+  "downloadPdf": "הורדת PDF"
 }

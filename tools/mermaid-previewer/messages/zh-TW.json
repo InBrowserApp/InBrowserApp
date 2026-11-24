@@ -12,5 +12,7 @@
   "downloadPng": "下載 PNG",
   "exportError": "無法產生 PNG，請試著下載 SVG。",
   "fit": "符合檢視範圍",
-  "actualSize": "實際大小"
+  "actualSize": "實際大小",
+  "pdfError": "無法建立 PDF。再試一次或下載 SVG。",
+  "downloadPdf": "下載 PDF"
 }

@@ -1,0 +1,9 @@
+{
+  "openFile": "Mở tệp",
+  "fileError": "Không thể đọc tệp này. Hãy mở tệp nguồn Mermaid hoặc dán mã.",
+  "sourcePlaceholder": "Dán mã Mermaid hoặc thả tệp .mmd vào đây.",
+  "pageSize": "Khổ trang PDF",
+  "original": "Vừa sơ đồ",
+  "a4": "A4",
+  "letter": "US Letter"
+}

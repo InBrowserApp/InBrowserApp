@@ -1,4 +1,4 @@
 {
   "name": "Graphviz-DOT-Vorschau",
-  "description": "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter."
+  "description": "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG oder Vektor-PDF herunter."
 }

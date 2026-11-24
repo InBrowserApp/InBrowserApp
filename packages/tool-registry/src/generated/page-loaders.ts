@@ -58,6 +58,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "bpmn-to-pdf-converter": () => import("@tool/bpmn-to-pdf-converter/page"),
   "bpmn-viewer": () => import("@tool/bpmn-viewer/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
@@ -258,6 +259,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "media-info-viewer": () => import("@tool/media-info-viewer/page"),
   "mermaid-previewer": () => import("@tool/mermaid-previewer/page"),
+  "mermaid-to-pdf-converter": () =>
+    import("@tool/mermaid-to-pdf-converter/page"),
   "mhtml-to-html-converter": () => import("@tool/mhtml-to-html-converter/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),

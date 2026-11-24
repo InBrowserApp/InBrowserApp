@@ -10,6 +10,6 @@ Derleme bağımlılıkları gibi katmanlı graflar için `dot` ile başlayın. Y
 
 Kenar işleci graf türüyle uyuşmadığında veya süslü ayraç ya da tırnak eksik olduğunda Graphviz hata verebilir. Belirtilen satırı ve bir önceki satırı kontrol edin. Graphviz bazen önizlemenin yanında uygulayamadığı öznitelikleri de listeler. Graf kendi `layout` özniteliğini tanımlıyorsa Graphviz orada belirtilen motoru kullanır. Ayrıntılar için [DOT dil başvurusuna](https://graphviz.org/doc/info/lang.html) ve [Graphviz yerleşim kılavuzuna](https://graphviz.org/docs/layouts/) bakın.
 
-## Grafı SVG olarak indirin
+## Graphviz DOT grafını SVG veya PDF olarak dışa aktarın
 
-Geçerli yerleşimi vektör görseli olarak kaydetmek için **SVG indir** seçeneğini kullanın. **Ekrana sığdır** ve **Gerçek boyut** yalnızca önizlemeyi değiştirir. Grafı daha sonra düzenlemek için DOT kodunu saklayın.
+Tüm grafı kendi boyutunda bir sayfaya kaydetmek için **PDF indir** seçeneğini kullanın. Şekiller ve çizgiler yakınlaştırıldığında veya yazdırıldığında net kalır. Grafı bir web sayfasına yerleştirmek ya da vektör düzenleyicide açmak için **SVG indir** seçeneğini kullanın. **Ekrana sığdır** ve **Gerçek boyut** yalnızca ekrandaki önizlemeyi değiştirir. Daha sonra düzenlemek için DOT kodunu saklayın.

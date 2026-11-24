@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de Mermaid a PDF",
+  "description": "Pega código Mermaid o abre un archivo .mmd, previsualiza el diagrama y descarga un PDF vectorial en su tamaño original o ajustado a A4 o Carta (EE. UU.)."
+}

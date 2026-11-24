@@ -6,9 +6,9 @@ Pega una definición en **Código Mermaid**. La vista previa se actualiza a medi
 
 Selecciona **Cargar un ejemplo** para sustituir el contenido del editor por un ejemplo que funciona. Un diagrama de flujo muestra pasos y decisiones. Uno de secuencia muestra los mensajes entre participantes y uno ER representa las relaciones entre entidades de datos. También puedes pegar otras definiciones compatibles con Mermaid, como diagramas de clases o de Gantt.
 
-## Cómo exportar a SVG o PNG
+## Cómo exportar a SVG, PNG o PDF
 
-Descarga **SVG** para obtener una imagen vectorial que conserva la nitidez al cambiar de tamaño. Elige **PNG** si quieres insertar una imagen de mapa de bits en una presentación o un documento. La descarga contiene el diagrama actual con fondo transparente. Conserva el código Mermaid para editar el diagrama más adelante.
+Descarga **SVG** para insertar una imagen escalable en una página web, **PNG** para pegarla en diapositivas o **PDF** para compartir o imprimir un documento vectorial. La página del PDF abarca el diagrama entero. Usa el [Conversor de Mermaid a PDF](../mermaid-to-pdf-converter/) para abrir un archivo `.mmd` o ajustar el diagrama a A4 o Carta (EE. UU.). Conserva el código Mermaid para editar el diagrama más adelante.
 
 ## Qué hacer si no se dibuja el diagrama
 

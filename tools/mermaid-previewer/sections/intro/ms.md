@@ -6,9 +6,9 @@ Tampalkan takrif rajah pada ruangan **Kod Mermaid**. Pratonton dikemas kini sema
 
 Buka menu **Muatkan contoh** untuk menggantikan kandungan penyunting dengan contoh yang boleh terus dipaparkan. Carta alir menunjukkan langkah dan keputusan, rajah jujukan menunjukkan mesej antara peserta, dan rajah ER menunjukkan hubungan antara entiti data. Anda juga boleh menampal takrif Mermaid lain yang disokong, seperti rajah kelas dan carta Gantt.
 
-## Eksport ke SVG atau PNG
+## Eksport ke SVG, PNG atau PDF
 
-Muat turun **SVG** untuk mendapatkan imej vektor yang kekal tajam apabila saiznya diubah. Pilih **PNG** untuk imej raster yang boleh dimasukkan ke dalam slaid atau dokumen. Fail yang dimuat turun mengandungi rajah semasa dengan latar belakang lutsinar. Simpan kod Mermaid jika anda mahu menyunting rajah itu semula kemudian.
+Gunakan **SVG** untuk imej boleh skala yang boleh dibenamkan pada halaman web, **PNG** untuk imej yang boleh ditampal pada slaid, atau **PDF** untuk dokumen vektor yang boleh dikongsi atau dicetak. PDF memuatkan seluruh rajah. Gunakan [Penukar Mermaid ke PDF](../mermaid-to-pdf-converter/) untuk membuka fail `.mmd` atau memuatkan rajah pada halaman A4 atau US Letter. Simpan kod Mermaid jika anda ingin menyunting rajah kemudian.
 
 ## Betulkan rajah yang tidak dapat dipaparkan
 

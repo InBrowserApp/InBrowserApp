@@ -17,6 +17,9 @@
   "zoomIn": "Zoom in",
   "zoomOut": "Zoom out",
   "fit": "Fit diagram to view",
+  "downloadPdf": "Download PDF",
+  "creatingPdf": "Creating PDF…",
+  "pdfError": "Could not create the PDF. Try downloading the diagram again.",
   "downloadSvg": "Download SVG",
   "exportError": "Could not create the SVG. Try downloading the diagram again."
 }

@@ -1,4 +1,4 @@
 {
   "name": "Anteprima Graphviz DOT",
-  "description": "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG."
+  "description": "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG o PDF vettoriale."
 }

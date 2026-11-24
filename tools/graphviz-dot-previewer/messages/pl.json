@@ -12,5 +12,7 @@
   "warnings": "Komunikaty Graphviz o układzie",
   "fit": "Dopasuj do widoku",
   "actualSize": "Rzeczywisty rozmiar",
-  "downloadSvg": "Pobierz SVG"
+  "downloadSvg": "Pobierz SVG",
+  "downloadPdf": "Pobierz PDF",
+  "pdfError": "Nie udało się utworzyć pliku PDF. Spróbuj ponownie pobrać graf."
 }

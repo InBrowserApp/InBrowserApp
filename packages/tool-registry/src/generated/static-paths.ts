@@ -3958,6 +3958,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpmn-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpmn-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "bpmn-viewer",
     language: "ar",
   },
@@ -19227,6 +19319,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "mermaid-previewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mermaid-to-pdf-converter",
     language: "zh-TW",
   },
   {

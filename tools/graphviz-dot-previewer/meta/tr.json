@@ -1,4 +1,4 @@
 {
   "name": "Graphviz DOT Önizleyici",
-  "description": "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin."
+  "description": "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG ya da vektörel PDF olarak indirin."
 }

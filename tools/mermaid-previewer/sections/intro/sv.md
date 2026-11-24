@@ -6,9 +6,9 @@ Klistra in en Mermaid-definition i **Mermaid-källkod**. Förhandsvisningen uppd
 
 Välj **Ladda exempel** för att ersätta innehållet i redigeraren med ett fungerande exempel. Flödesschemat visar steg och beslut, sekvensdiagrammet visar meddelanden mellan deltagare och ER-diagrammet visar relationer mellan dataentiteter. Du kan även klistra in andra Mermaid-definitioner som stöds, till exempel klassdiagram och Gantt-diagram.
 
-## Exportera till SVG eller PNG
+## Exportera till SVG, PNG eller PDF
 
-Välj **Ladda ned SVG** för en vektorbild som förblir skarp när du ändrar storlek på den. Välj **Ladda ned PNG** för en rasterbild som du kan infoga i en presentation eller ett dokument. Filen innehåller det aktuella diagrammet med genomskinlig bakgrund. Spara Mermaid-källkoden om du vill kunna redigera diagrammet senare.
+Ladda ned **SVG** för att bädda in en skalbar bild på en webbsida, **PNG** för att klistra in bilden i en presentation eller **PDF** för att dela eller skriva ut ett vektordokument. Hela diagrammet får plats på PDF-sidan. Använd [Mermaid till PDF-konverterare](../mermaid-to-pdf-converter/) för att öppna en `.mmd`-fil eller anpassa diagrammet till A4 eller US Letter. Spara Mermaid-koden om du vill ändra diagrammet senare.
 
 ## Felsök ett diagram som inte visas
 

@@ -18,5 +18,8 @@
   "zoomOut": "缩小",
   "fit": "适应视图",
   "downloadSvg": "下载 SVG",
-  "exportError": "无法生成 SVG。请尝试重新下载图表。"
+  "exportError": "无法生成 SVG。请尝试重新下载图表。",
+  "pdfError": "无法创建 PDF。尝试再次下载图表。",
+  "creatingPdf": "创建 PDF...",
+  "downloadPdf": "下载 PDF"
 }

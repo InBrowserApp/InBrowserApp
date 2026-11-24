@@ -10,6 +10,8 @@
   "invalid": "Kunne ikke tegne Mermaid-diagrammet. Sjekk syntaksen og prøv igjen.",
   "downloadSvg": "Last ned SVG",
   "downloadPng": "Last ned PNG",
+  "downloadPdf": "Last ned PDF",
+  "pdfError": "Kunne ikke opprette PDF-en. Prøv igjen eller last ned SVG-filen.",
   "exportError": "Kunne ikke opprette PNG-filen. Prøv å laste ned diagrammet som SVG.",
   "fit": "Tilpass til visningen",
   "actualSize": "Faktisk størrelse"

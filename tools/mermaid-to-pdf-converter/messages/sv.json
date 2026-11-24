@@ -1,0 +1,9 @@
+{
+  "openFile": "Öppna fil",
+  "fileError": "Det gick inte att läsa filen. Öppna en Mermaid-källfil eller klistra in koden.",
+  "sourcePlaceholder": "Klistra in Mermaid-kod eller släpp en .mmd-fil här.",
+  "pageSize": "Sidstorlek för PDF",
+  "original": "Anpassa till diagrammet",
+  "a4": "A4",
+  "letter": "US Letter"
+}

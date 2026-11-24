@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de BPMN a PDF",
+  "description": "Convierte archivos .bpmn o .xml en un PDF vectorial desde el navegador. Previsualiza el proceso y elige el tamaño original, A4 o Carta (EE. UU.)."
+}

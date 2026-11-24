@@ -4,10 +4,13 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./client": "./client.tsx",
     "./manifest": "./manifest.ts",
+    "./messages": "./locales.ts",
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/svg-pdf": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@workspace/web-document": "workspace:*",

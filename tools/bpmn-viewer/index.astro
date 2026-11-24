@@ -3,10 +3,10 @@ import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import Client from "./client"
+import { getBpmnMessages } from "./locales"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
-import type Messages from "./messages/en.json"
 
 interface Props {
   lang: string
@@ -17,10 +17,7 @@ const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
   lang
 )!
-const messages = resolveLocale<typeof Messages>(
-  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
-  lang
-)!
+const messages = await getBpmnMessages(lang)
 const Intro = resolveLocale<AstroComponentFactory>(
   import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
   lang
@@ -28,7 +25,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <Client client:load messages={messages} />
+  <Client client:load messages={messages} language={lang} />
   <ToolArticle><Intro /></ToolArticle>
   <p class="text-xs text-muted-foreground">
     <a href="/licenses/bpmn-viewer.txt">bpmn-js</a>

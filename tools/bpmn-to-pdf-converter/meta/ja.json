@@ -1,0 +1,4 @@
+{
+  "name": "BPMNからPDFへのコンバーター",
+  "description": "ブラウザーで .bpmn または .xml ファイルをベクター PDF に変換します。プロセスをプレビューし、元のサイズ、A4、US Letter を選べます。"
+}

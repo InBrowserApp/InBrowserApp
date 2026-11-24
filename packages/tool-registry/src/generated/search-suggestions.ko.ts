@@ -218,6 +218,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "document",
+    name: "BPMN PDF 변환기",
+    slug: "bpmn-to-pdf-converter",
+  },
+  {
     category: "developer",
     name: "BPMN 뷰어",
     slug: "bpmn-viewer",
@@ -1046,6 +1051,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Mermaid 미리보기",
     slug: "mermaid-previewer",
+  },
+  {
+    category: "developer",
+    name: "Mermaid PDF 변환기",
+    slug: "mermaid-to-pdf-converter",
   },
   {
     category: "document",

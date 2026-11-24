@@ -12,5 +12,7 @@
   "downloadPng": "PNG डाउनलोड करें",
   "exportError": "PNG नहीं बन सका। इसके बजाय SVG डाउनलोड करें।",
   "fit": "दृश्य में फ़िट करें",
-  "actualSize": "वास्तविक आकार"
+  "actualSize": "वास्तविक आकार",
+  "pdfError": "PDF नहीं बन सका। फिर से कोशिश करें या SVG डाउनलोड करें।",
+  "downloadPdf": "PDF डाउनलोड करें"
 }

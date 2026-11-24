@@ -10,6 +10,6 @@ Przeciągnij diagram, aby go przesunąć. Użyj przycisków powiększania i pomn
 
 Plik XML w formacie BPMN 2.0 może opisywać proces bez zapisu położenia kształtów i połączeń. Przeglądarka rysuje diagram na podstawie danych BPMN Diagram Interchange zawartych w modelu. Gdy brakuje układu, otwórz model w narzędziu do modelowania BPMN i wyeksportuj go jeszcze raz z diagramem. Szczegóły formatu znajdziesz w [specyfikacji BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/).
 
-## Pobierz diagram w formacie SVG
+## Pobierz diagram w formacie PDF lub SVG
 
-Po otwarciu diagramu wybierz **Pobierz SVG**. Plik zawiera cały diagram w oryginalnej skali, a obraz pozostaje ostry po zmianie rozmiaru w dokumentach i na slajdach.
+Wybierz **Pobierz PDF**, aby udostępnić cały diagram jako wektorowy PDF, lub **Pobierz SVG**, aby osadzić go w dokumentach i slajdach. Oba pliki zawierają cały diagram, nawet jeśli powiększysz fragment podglądu. Aby dopasować diagram do wydruku w formacie A4 lub US Letter, otwórz go w narzędziu [Konwerter BPMN na PDF](../bpmn-to-pdf-converter/).

@@ -12,5 +12,7 @@
   "downloadPng": "PNG 다운로드",
   "exportError": "PNG를 만들 수 없습니다. 대신 SVG를 다운로드해 보세요.",
   "fit": "화면에 맞추기",
-  "actualSize": "실제 크기"
+  "actualSize": "실제 크기",
+  "pdfError": "PDF를 만들 수 없습니다. 다시 시도하거나 SVG를 다운로드하세요.",
+  "downloadPdf": "PDF 다운로드"
 }

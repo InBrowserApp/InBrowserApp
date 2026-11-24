@@ -10,6 +10,6 @@ Mulakan dengan `dot` untuk graf berlapis, seperti graf kebergantungan binaan per
 
 Graphviz boleh melaporkan ralat apabila operator sisi tidak sepadan dengan jenis graf atau apabila kurungan berombak atau tanda petik tidak lengkap. Semak baris yang dilaporkan dan baris sebelumnya. Pratonton juga mungkin disertakan nota tentang atribut yang tidak dapat digunakan. Jika graf mempunyai atribut `layout`, Graphviz akan menggunakan enjin yang dinyatakan di situ. Lihat [rujukan bahasa DOT](https://graphviz.org/doc/info/lang.html) dan [panduan susun atur Graphviz](https://graphviz.org/docs/layouts/) untuk butiran sintaks dan enjin.
 
-## Muat turun graf sebagai SVG
+## Eksport graf Graphviz DOT ke SVG atau PDF
 
-Pilih **Muat turun SVG** untuk menyimpan susun atur semasa sebagai imej vektor. **Muatkan pada paparan** dan **Saiz sebenar** hanya mengubah pratonton. Simpan kod DOT untuk menyunting graf semula kemudian.
+Pilih **Muat turun PDF** untuk menyimpan seluruh susun atur pada halaman yang mengikut saiz graf. Bentuk dan garisan kekal tajam apabila dibesarkan atau dicetak. Pilih **Muat turun SVG** untuk membenamkan graf dalam halaman web atau membukanya dalam penyunting vektor. **Muatkan pada paparan** dan **Saiz sebenar** hanya mengubah pratonton pada skrin. Simpan kod DOT untuk menyunting graf kemudian.

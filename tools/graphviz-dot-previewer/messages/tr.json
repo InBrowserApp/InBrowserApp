@@ -12,5 +12,7 @@
   "warnings": "Graphviz yerleşim notları",
   "fit": "Ekrana sığdır",
   "actualSize": "Gerçek boyut",
-  "downloadSvg": "SVG indir"
+  "downloadSvg": "SVG indir",
+  "downloadPdf": "PDF indir",
+  "pdfError": "PDF oluşturulamadı. Grafı yeniden indirmeyi deneyin."
 }

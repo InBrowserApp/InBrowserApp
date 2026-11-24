@@ -1,0 +1,9 @@
+{
+  "openFile": "Buka file",
+  "fileError": "File ini tidak dapat dibaca. Buka file sumber Mermaid atau tempel kodenya.",
+  "sourcePlaceholder": "Tempel kode Mermaid atau letakkan file .mmd di sini.",
+  "pageSize": "Ukuran halaman PDF",
+  "original": "Sesuaikan dengan diagram",
+  "a4": "A4",
+  "letter": "US Letter"
+}

@@ -17,6 +17,9 @@
   "zoomIn": "Inzoomen",
   "zoomOut": "Uitzoomen",
   "fit": "Hele diagram tonen",
+  "downloadPdf": "PDF downloaden",
+  "creatingPdf": "PDF maken…",
+  "pdfError": "Het maken van de PDF is mislukt. Probeer de download opnieuw.",
   "downloadSvg": "SVG downloaden",
   "exportError": "Het SVG-bestand kon niet worden gemaakt. Probeer het diagram opnieuw te downloaden."
 }

@@ -12,5 +12,7 @@
   "warnings": "Graphviz 布局提示",
   "fit": "适应视图",
   "actualSize": "实际大小",
-  "downloadSvg": "下载 SVG"
+  "downloadSvg": "下载 SVG",
+  "downloadPdf": "下载 PDF",
+  "pdfError": "无法创建 PDF，请尝试重新下载图形。"
 }

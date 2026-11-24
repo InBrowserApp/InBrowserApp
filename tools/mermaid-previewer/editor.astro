@@ -1,0 +1,19 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import type { ComponentProps } from "react"
+import Client from "./client"
+import type Messages from "./messages/en.json"
+
+interface Props {
+  lang: string
+  converter?: ComponentProps<typeof Client>["converter"]
+}
+
+const { lang, converter } = Astro.props
+const messages = resolveLocale<typeof Messages>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+---
+
+<Client client:load {messages} language={lang} {converter} />

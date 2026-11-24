@@ -10,6 +10,6 @@ Empieza con `dot` para grafos por niveles, como las dependencias de compilación
 
 Graphviz puede indicar un error si el operador de una arista no coincide con el tipo de grafo o si falta una llave o una comilla. Revisa la línea indicada y la anterior. La vista previa también puede aparecer junto a avisos sobre atributos que Graphviz no pudo aplicar. Si el grafo ya define el atributo `layout`, Graphviz usa el motor indicado en él. Consulta la [referencia del lenguaje DOT](https://graphviz.org/doc/info/lang.html) y la [guía de disposición de Graphviz](https://graphviz.org/docs/layouts/) para ver los detalles de sintaxis y de cada motor.
 
-## Descargar un grafo en SVG
+## Exportar un grafo Graphviz DOT a SVG o PDF
 
-Elige **Descargar SVG** para guardar la disposición actual como imagen vectorial. **Ajustar a la vista** y **Tamaño real** solo cambian la vista previa. Conserva el código DOT para editar el grafo más adelante.
+Elige **Descargar PDF** para guardar la disposición completa en una página del tamaño del grafo. Las formas y líneas se mantienen nítidas al ampliar o imprimir. Usa **Descargar SVG** para insertar el grafo en una página web o abrirlo en un editor vectorial. **Ajustar a la vista** y **Tamaño real** solo cambian la vista previa. Conserva el código DOT para editar el grafo más adelante.

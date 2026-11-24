@@ -67,3 +67,14 @@ test("removes active markup while keeping diagram labels in the exported SVG", a
   const doc = new DOMParser().parseFromString(svg, "image/svg+xml")
   expect(doc.documentElement.localName).toBe("svg")
 })
+
+test("uses the supplied SVG text for Mermaid HTML label switches", async () => {
+  mock.render.mockResolvedValueOnce({
+    svg: '<svg xmlns="http://www.w3.org/2000/svg"><switch><foreignObject><div xmlns="http://www.w3.org/1999/xhtml">HTML</div></foreignObject><text class="journey-section section-type-0"><tspan>Plan</tspan></text><text><tspan>Review</tspan></text></switch></svg>',
+  })
+  const svg = await renderDiagram("journey\n  Plan: 5")
+  expect(svg).toContain("<tspan>Plan</tspan>")
+  expect(svg).toContain("<tspan>Review</tspan>")
+  expect(svg).toContain("fill: inherit")
+  expect(svg).not.toMatch(/<switch|<foreignObject/)
+})

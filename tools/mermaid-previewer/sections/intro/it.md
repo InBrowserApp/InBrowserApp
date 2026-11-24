@@ -6,9 +6,9 @@ Incolla una definizione nel campo **Codice Mermaid**. L’anteprima si aggiorna 
 
 Seleziona **Carica un esempio** per sostituire il contenuto dell’editor con un esempio funzionante. Un diagramma di flusso mostra passaggi e decisioni. Un diagramma di sequenza mostra i messaggi tra i partecipanti e un diagramma ER mostra le relazioni tra le entità di un modello di dati. Puoi incollare anche altre definizioni supportate da Mermaid, come diagrammi delle classi e diagrammi di Gantt.
 
-## Esportare in SVG o PNG
+## Esportare in SVG, PNG o PDF
 
-Scarica il file **SVG** per ottenere un’immagine vettoriale che resta nitida quando la ridimensioni. Scegli **PNG** per inserire un’immagine raster in diapositive o documenti. Il file contiene il diagramma corrente su sfondo trasparente. Conserva il codice Mermaid per poter modificare il diagramma in seguito.
+Scarica il file **SVG** per incorporare un’immagine scalabile in una pagina web, **PNG** per inserirla in una diapositiva o **PDF** per condividere o stampare il diagramma in formato vettoriale. La pagina del PDF contiene l’intero diagramma. Usa il [Convertitore da Mermaid a PDF](../mermaid-to-pdf-converter/) per aprire un file `.mmd` o adattare il diagramma ad A4 o Lettera USA. Conserva il codice Mermaid per modificare il diagramma in seguito.
 
 ## Correggere un diagramma che non viene visualizzato
 

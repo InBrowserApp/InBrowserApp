@@ -1,0 +1,9 @@
+{
+  "openFile": "Buka fail",
+  "fileError": "Fail ini tidak dapat dibaca. Buka fail sumber Mermaid atau tampal kodnya.",
+  "sourcePlaceholder": "Tampal kod Mermaid atau lepaskan fail .mmd di sini.",
+  "pageSize": "Saiz halaman PDF",
+  "original": "Muatkan mengikut rajah",
+  "a4": "A4",
+  "letter": "US Letter"
+}

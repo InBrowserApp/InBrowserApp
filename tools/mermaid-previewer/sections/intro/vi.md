@@ -6,9 +6,9 @@ Dán định nghĩa vào **Mã nguồn Mermaid**; bản xem trước cập nhậ
 
 Chọn **Tải ví dụ** để thay nội dung trình chỉnh sửa bằng ví dụ lưu đồ, biểu đồ tuần tự hoặc ER. Bạn cũng có thể dùng các định nghĩa được hỗ trợ khác như biểu đồ lớp và Gantt.
 
-## Xuất sang SVG hoặc PNG
+## Xuất sang SVG, PNG hoặc PDF
 
-**SVG** là ảnh vector sắc nét khi thay đổi kích thước; **PNG** phù hợp để chèn vào tài liệu hoặc trang chiếu. Sơ đồ hiện tại được tải xuống với nền trong suốt. Hãy giữ mã nguồn để chỉnh sửa sau.
+Tải **SVG** nếu bạn cần hình ảnh có thể co giãn để nhúng vào trang web, **PNG** để dán vào trang chiếu hoặc **PDF** nếu bạn cần tài liệu vectơ để chia sẻ hoặc in. Trang PDF chứa toàn bộ sơ đồ. Dùng [Trình chuyển Mermaid sang PDF](../mermaid-to-pdf-converter/) để mở tệp `.mmd` hoặc căn sơ đồ theo khổ A4 hay US Letter. Giữ mã nguồn Mermaid nếu bạn muốn chỉnh sửa sơ đồ sau này.
 
 ## Sửa lỗi kết xuất
 

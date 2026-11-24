@@ -12,5 +12,7 @@
   "warnings": "ملاحظات التخطيط من Graphviz",
   "fit": "ملاءمة مساحة العرض",
   "actualSize": "الحجم الفعلي",
-  "downloadSvg": "تنزيل SVG"
+  "downloadSvg": "تنزيل SVG",
+  "downloadPdf": "تنزيل PDF",
+  "pdfError": "تعذّر إنشاء PDF. حاول تنزيل الرسم البياني مرة أخرى."
 }

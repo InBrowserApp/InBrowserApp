@@ -10,6 +10,7 @@ export const tool = defineTool({
     "sequence diagram",
     "svg",
     "png",
+    "pdf",
     "preview",
   ],
 })

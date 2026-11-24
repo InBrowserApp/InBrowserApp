@@ -12,5 +12,7 @@
   "downloadPng": "PNG をダウンロード",
   "exportError": "PNG を作成できませんでした。代わりに SVG をダウンロードしてください。",
   "fit": "画面に合わせる",
-  "actualSize": "実寸"
+  "actualSize": "実寸",
+  "pdfError": "PDF を作成できませんでした。もう一度試すか、SVG をダウンロードしてください。",
+  "downloadPdf": "PDF をダウンロード"
 }

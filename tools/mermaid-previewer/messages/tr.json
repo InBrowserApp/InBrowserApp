@@ -10,6 +10,8 @@
   "invalid": "Mermaid diyagramı oluşturulamadı. Söz dizimini kontrol edip yeniden deneyin.",
   "downloadSvg": "SVG indir",
   "downloadPng": "PNG indir",
+  "downloadPdf": "PDF indir",
+  "pdfError": "PDF oluşturulamadı. Yeniden deneyin veya SVG indirin.",
   "exportError": "PNG oluşturulamadı. Diyagramı SVG olarak indirmeyi deneyin.",
   "fit": "Ekrana sığdır",
   "actualSize": "Gerçek boyut"

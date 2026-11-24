@@ -12,5 +12,7 @@
   "warnings": "Catatan tata letak Graphviz",
   "fit": "Sesuaikan dengan tampilan",
   "actualSize": "Ukuran sebenarnya",
-  "downloadSvg": "Unduh SVG"
+  "downloadSvg": "Unduh SVG",
+  "downloadPdf": "Unduh PDF",
+  "pdfError": "PDF tidak dapat dibuat. Coba unduh graf lagi."
 }

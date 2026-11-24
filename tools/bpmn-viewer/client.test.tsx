@@ -1,11 +1,12 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, expect, test, vi } from "vitest"
+import { afterEach, beforeAll, beforeEach, expect, test, vi } from "vitest"
 import Client from "./client"
 import m from "./messages/en.json"
 
@@ -15,6 +16,7 @@ const mock = vi.hoisted(() => {
   return {
     importXML: vi.fn(),
     saveSVG: vi.fn(),
+    createDiagramPdf: vi.fn(),
     destroy: vi.fn(),
     canvas: {
       viewbox: vi.fn(() => ({ outer, inner })),
@@ -34,11 +36,30 @@ vi.mock("bpmn-js/lib/NavigatedViewer", () => ({
   },
 }))
 
+vi.mock("@workspace/svg-pdf", () => ({
+  createDiagramPdf: mock.createDiagramPdf,
+}))
+
 const svg = '<svg xmlns="http://www.w3.org/2000/svg"><text>Review</text></svg>'
+const pdf = new Blob(["%PDF-1.4"], { type: "application/pdf" })
+const paperSizes = {
+  pageSize: "PDF page size",
+  original: "Original diagram size",
+  a4: "A4",
+  letter: "US Letter",
+}
+
+beforeAll(async () => {
+  await Promise.all([
+    import("bpmn-js/lib/NavigatedViewer"),
+    import("@workspace/web-document"),
+  ])
+})
 
 beforeEach(() => {
   vi.clearAllMocks()
   mock.saveSVG.mockResolvedValue({ svg })
+  mock.createDiagramPdf.mockResolvedValue(pdf)
   vi.stubGlobal(
     "ResizeObserver",
     class {
@@ -131,4 +152,61 @@ test("downloads the full rendered SVG under the source filename and can retry an
   const blob = makeUrl.mock.calls[0]?.[0] as Blob
   expect(blob.type).toBe("image/svg+xml")
   expect(await blob.text()).toBe(svg)
+})
+
+test("downloads a vector PDF using the selected paper size and source filename", async () => {
+  const makeUrl = vi
+    .spyOn(URL, "createObjectURL")
+    .mockReturnValue("blob:bpmn-pdf")
+  const click = vi
+    .spyOn(HTMLAnchorElement.prototype, "click")
+    .mockImplementation(function (this: HTMLAnchorElement) {
+      expect(this.download).toBe("approval.pdf")
+    })
+  mock.createDiagramPdf.mockRejectedValueOnce(new Error("PDF unavailable"))
+
+  render(<Client messages={m} paperSizes={paperSizes} language="de" />)
+  choose(new File(["diagram"], "approval.bpmn"))
+  const size = await screen.findByLabelText<HTMLSelectElement>(
+    paperSizes.pageSize
+  )
+  expect(size.value).toBe("original")
+  fireEvent.change(size, { target: { value: "letter" } })
+  const download = screen.getByRole("button", { name: m.downloadPdf })
+  fireEvent.click(download)
+  await screen.findByText(m.pdfError)
+  expect(click).not.toHaveBeenCalled()
+
+  fireEvent.click(download)
+  await waitFor(() => expect(click).toHaveBeenCalledOnce())
+  expect(mock.createDiagramPdf).toHaveBeenLastCalledWith(svg, "letter", "de")
+  expect(makeUrl).toHaveBeenCalledWith(pdf)
+  expect(screen.queryByText(m.pdfError)).toBeNull()
+})
+
+test("keeps a late export from downloading after the diagram is replaced", async () => {
+  let resolvePdf!: (value: Blob) => void
+  mock.createDiagramPdf.mockReturnValueOnce(
+    new Promise<Blob>((resolve) => {
+      resolvePdf = resolve
+    })
+  )
+  const click = vi.spyOn(HTMLAnchorElement.prototype, "click")
+
+  render(<Client messages={m} />)
+  choose(new File(["diagram"], "first.bpmn"))
+  const download = await screen.findByRole("button", { name: m.downloadPdf })
+  fireEvent.click(download)
+  await waitFor(() =>
+    expect(mock.createDiagramPdf).toHaveBeenCalledWith(svg, "original", "en")
+  )
+  expect(screen.getByRole("button", { name: m.creatingPdf })).toHaveProperty(
+    "disabled",
+    true
+  )
+
+  choose(new File(["other diagram"], "second.bpmn"))
+  await screen.findByRole("button", { name: m.downloadPdf })
+  await act(async () => resolvePdf(pdf))
+  expect(click).not.toHaveBeenCalled()
 })

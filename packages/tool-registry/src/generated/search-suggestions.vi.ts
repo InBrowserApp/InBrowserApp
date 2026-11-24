@@ -218,6 +218,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "document",
+    name: "Trình chuyển BPMN sang PDF",
+    slug: "bpmn-to-pdf-converter",
+  },
+  {
     category: "developer",
     name: "Trình xem BPMN",
     slug: "bpmn-viewer",
@@ -1046,6 +1051,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình xem trước Mermaid",
     slug: "mermaid-previewer",
+  },
+  {
+    category: "developer",
+    name: "Trình chuyển Mermaid sang PDF",
+    slug: "mermaid-to-pdf-converter",
   },
   {
     category: "document",

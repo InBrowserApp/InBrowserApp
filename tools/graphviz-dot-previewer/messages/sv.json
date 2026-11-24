@@ -12,5 +12,7 @@
   "warnings": "Kommentarer om Graphviz layout",
   "fit": "Anpassa till vyn",
   "actualSize": "Faktisk storlek",
-  "downloadSvg": "Ladda ned SVG"
+  "downloadSvg": "Ladda ned SVG",
+  "downloadPdf": "Ladda ned PDF",
+  "pdfError": "Det gick inte att skapa PDF-filen. Försök ladda ned den igen."
 }

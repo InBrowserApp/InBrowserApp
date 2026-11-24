@@ -10,6 +10,8 @@
   "invalid": "Could not render this Mermaid diagram. Check the syntax and try again.",
   "downloadSvg": "Download SVG",
   "downloadPng": "Download PNG",
+  "downloadPdf": "Download PDF",
+  "pdfError": "Could not create the PDF. Try again or download the SVG.",
   "exportError": "Could not create the PNG. Try downloading the SVG instead.",
   "fit": "Fit to view",
   "actualSize": "Actual size"

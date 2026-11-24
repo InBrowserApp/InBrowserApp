@@ -6,9 +6,9 @@ Lim inn en Mermaid-definisjon i **Mermaid-kildekode**. Forhåndsvisningen oppdat
 
 Velg **Last inn eksempel** for å bytte ut innholdet i redigeringsfeltet med et fungerende eksempel. Et flytskjema viser trinn og beslutninger. Et sekvensdiagram viser meldinger mellom deltakere. Et ER-diagram viser forholdet mellom dataentiteter. Du kan også lime inn andre støttede Mermaid-definisjoner, for eksempel klassediagrammer og Gantt-diagrammer.
 
-## Eksporter til SVG eller PNG
+## Eksporter til SVG, PNG eller PDF
 
-Velg **Last ned SVG** for et vektorbilde som holder seg skarpt når du endrer størrelsen. Velg **Last ned PNG** for et rasterbilde du kan sette inn i lysbilder eller dokumenter. Den nedlastede filen inneholder det gjeldende diagrammet med gjennomsiktig bakgrunn. Ta vare på Mermaid-kildekoden hvis du vil endre diagrammet senere.
+Last ned **SVG** for å bygge inn et skalerbart bilde på en nettside, **PNG** for å lime bildet inn i lysbilder, eller **PDF** for å dele eller skrive ut et vektordokument. Hele diagrammet får plass på PDF-siden. Bruk [Mermaid til PDF-konverterer](../mermaid-to-pdf-converter/) for å åpne en `.mmd`-fil eller tilpasse diagrammet til A4 eller US Letter. Behold Mermaid-koden hvis du vil redigere diagrammet senere.
 
 ## Rett opp et diagram som ikke vises
 

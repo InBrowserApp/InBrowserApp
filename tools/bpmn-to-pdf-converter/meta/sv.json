@@ -1,0 +1,4 @@
+{
+  "name": "BPMN till PDF-konverterare",
+  "description": "Konvertera .bpmn- eller .xml-filer till vektor-PDF i webbläsaren. Förhandsgranska processen och välj originalstorlek, A4 eller US Letter."
+}

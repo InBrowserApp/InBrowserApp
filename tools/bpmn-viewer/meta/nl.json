@@ -1,4 +1,4 @@
 {
   "name": "BPMN-viewer",
-  "description": "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als SVG."
+  "description": "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als PDF of SVG."
 }

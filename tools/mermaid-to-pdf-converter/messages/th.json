@@ -1,0 +1,9 @@
+{
+  "openFile": "เปิดไฟล์",
+  "fileError": "ไม่สามารถอ่านไฟล์นี้ได้ โปรดเปิดไฟล์ซอร์ส Mermaid หรือวางโค้ด",
+  "sourcePlaceholder": "วางโค้ด Mermaid หรือลากไฟล์ .mmd มาวางที่นี่",
+  "pageSize": "ขนาดหน้า PDF",
+  "original": "พอดีกับแผนภาพ",
+  "a4": "A4",
+  "letter": "US Letter"
+}

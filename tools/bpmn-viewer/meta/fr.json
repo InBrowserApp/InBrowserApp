@@ -1,4 +1,4 @@
 {
   "name": "Visionneuse BPMN",
-  "description": "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en SVG."
+  "description": "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en PDF ou SVG."
 }

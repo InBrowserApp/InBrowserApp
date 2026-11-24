@@ -10,6 +10,6 @@ Arrastra el diagrama para desplazarte. Usa los controles de zoom para leer etiqu
 
 Un archivo XML de BPMN 2.0 puede describir un proceso sin indicar dónde aparecen sus formas y conexiones. El visor dibuja el diagrama a partir de los datos de BPMN Diagram Interchange guardados con el modelo. Si faltan estos datos, abre el modelo en tu herramienta de modelado BPMN y expórtalo de nuevo con el diagrama incluido. Consulta la [especificación BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) para conocer los detalles del formato.
 
-## Descargar un diagrama en SVG
+## Descargar un diagrama en PDF o SVG
 
-Después de abrir un diagrama, selecciona **Descargar SVG**. El archivo contiene el diagrama completo a su escala original y conserva la nitidez al cambiar de tamaño en documentos y presentaciones.
+Elige **Descargar PDF** para compartir el diagrama completo como PDF vectorial o **Descargar SVG** para insertarlo en documentos o diapositivas. Ambos formatos incluyen el diagrama entero, aunque hayas ampliado una etiqueta. Para ajustarlo a A4 o Carta (EE. UU.) e imprimirlo, abre el archivo en el [Conversor de BPMN a PDF](../bpmn-to-pdf-converter/).

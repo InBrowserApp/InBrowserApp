@@ -12,5 +12,7 @@
   "warnings": "Graphviz layout notes",
   "fit": "Fit to view",
   "actualSize": "Actual size",
-  "downloadSvg": "Download SVG"
+  "downloadSvg": "Download SVG",
+  "downloadPdf": "Download PDF",
+  "pdfError": "Could not create the PDF. Try downloading the graph again."
 }

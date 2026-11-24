@@ -12,5 +12,7 @@
   "warnings": "Merknader om Graphviz-layouten",
   "fit": "Tilpass til visningen",
   "actualSize": "Faktisk størrelse",
-  "downloadSvg": "Last ned SVG"
+  "downloadSvg": "Last ned SVG",
+  "downloadPdf": "Last ned PDF",
+  "pdfError": "Kunne ikke opprette PDF-en. Prøv å laste den ned igjen."
 }

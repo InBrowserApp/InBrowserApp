@@ -1,0 +1,9 @@
+{
+  "openFile": "Bestand openen",
+  "fileError": "Het bestand kon niet worden gelezen. Open een Mermaid-bronbestand of plak de code.",
+  "sourcePlaceholder": "Plak Mermaid-code of sleep een .mmd-bestand hierheen.",
+  "pageSize": "PDF-paginaformaat",
+  "original": "Aanpassen aan diagram",
+  "a4": "A4",
+  "letter": "US Letter"
+}

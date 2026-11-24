@@ -10,6 +10,8 @@
   "invalid": "Rajah Mermaid ini tidak dapat dipaparkan. Semak sintaks dan cuba lagi.",
   "downloadSvg": "Muat turun SVG",
   "downloadPng": "Muat turun PNG",
+  "downloadPdf": "Muat turun PDF",
+  "pdfError": "PDF tidak dapat dihasilkan. Cuba lagi atau muat turun SVG.",
   "exportError": "PNG tidak dapat dihasilkan. Cuba muat turun rajah sebagai SVG.",
   "fit": "Muatkan pada paparan",
   "actualSize": "Saiz sebenar"

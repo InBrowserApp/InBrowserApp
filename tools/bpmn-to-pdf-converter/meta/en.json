@@ -1,0 +1,4 @@
+{
+  "name": "BPMN to PDF Converter",
+  "description": "Convert .bpmn or .xml files to a vector PDF in your browser. Preview the process and use the original size, A4, or US Letter."
+}
