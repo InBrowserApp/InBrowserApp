@@ -3,7 +3,7 @@ import { AudioFilePicker } from "@workspace/ui/components/tool/audio-file-picker
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { LoaderCircle, TriangleAlert } from "@workspace/ui/icons"
 
-import { SAMPLE_RATE } from "./core/spectrum"
+import { SAMPLE_RATE, selectFrames } from "./core/spectrum"
 import { SpectrumPanel } from "./spectrum-panel"
 import type englishMessages from "./messages/en.json"
 import type { Response } from "./workers/analyze"
@@ -65,11 +65,12 @@ export default function AudioSpectrumAnalyzer({
         return
       }
       const channels = Array.from({ length: audio.numberOfChannels }, (_, i) =>
-        audio.getChannelData(i).slice()
+        audio.getChannelData(i)
       )
+      const frames = selectFrames(channels)
       worker.postMessage(
-        channels,
-        channels.map((channel) => channel.buffer)
+        frames,
+        frames.channels.map((channel) => channel.buffer)
       )
     } catch {
       finish({ status: "error", key: "readError" })

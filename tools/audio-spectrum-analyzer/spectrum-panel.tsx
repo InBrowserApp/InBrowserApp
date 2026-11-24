@@ -6,7 +6,12 @@ import {
 import { Label } from "@workspace/ui/components/ui/label"
 import { AudioLines } from "@workspace/ui/icons"
 
-import { BIN_HZ, MIN_DB } from "./core/spectrum"
+import {
+  BIN_HZ,
+  fractionAtFrequency,
+  frequencyAtFraction,
+  MIN_DB,
+} from "./core/spectrum"
 import { SpectrumChart } from "./spectrum-chart"
 import type englishMessages from "./messages/en.json"
 import type { Response } from "./workers/analyze"
@@ -27,8 +32,13 @@ export function SpectrumPanel({
   const id = useId()
   const [url, setUrl] = useState("")
   const [log, setLog] = useState(true)
-  const [bin, setBin] = useState(spectrum.peak)
-  const cursor = log ? Math.max(1, bin) : bin
+  const [frequencyHz, setFrequency] = useState((spectrum.peak ?? 1) * BIN_HZ)
+  const cursorHz = log ? Math.max(BIN_HZ, frequencyHz) : frequencyHz
+  const cursor = Math.round(cursorHz / BIN_HZ)
+  const sliderSteps = spectrum.levels.length - 1
+  const sliderValue = Math.round(
+    fractionAtFrequency(cursorHz, log) * sliderSteps
+  )
   const number = new Intl.NumberFormat(lang, { maximumFractionDigits: 1 })
   const frequency = (index: number) => number.format(index * BIN_HZ) + " Hz"
   const level =
@@ -72,14 +82,18 @@ export function SpectrumPanel({
             log={log}
             bin={cursor}
             lang={lang}
-            onBin={setBin}
+            onFrequency={setFrequency}
           />
           <div className="grid grid-cols-3 gap-2 pt-3 sm:gap-3">
             <dl className="contents">
               <div className="rounded-md bg-teal-50 px-2 py-2 sm:px-3 dark:bg-teal-950/35">
                 <dt className="text-xs text-muted-foreground">{m.peak}</dt>
                 <dd className="mt-1 text-sm font-semibold tabular-nums">
-                  {spectrum.peak ? <bdi>{frequency(spectrum.peak)}</bdi> : "–"}
+                  {spectrum.peak !== null ? (
+                    <bdi>{frequency(spectrum.peak)}</bdi>
+                  ) : (
+                    "–"
+                  )}
                 </dd>
               </div>
               <div className="rounded-md bg-muted/55 px-2 py-2 sm:px-3">
@@ -97,7 +111,7 @@ export function SpectrumPanel({
             </dl>
           </div>
         </div>
-        {spectrum.peak === 0 && (
+        {spectrum.peak === null && (
           <p className="text-sm text-muted-foreground">{m.silent}</p>
         )}
         <div className="grid gap-2">
@@ -107,12 +121,19 @@ export function SpectrumPanel({
             type="range"
             dir="ltr"
             className="min-h-5 w-full accent-teal-700 dark:accent-teal-300"
-            min={log ? 1 : 0}
-            max={spectrum.levels.length - 1}
-            value={cursor}
+            min={0}
+            max={sliderSteps}
+            value={sliderValue}
             aria-valuetext={frequency(cursor) + ", " + level}
             aria-describedby={id + "-hint"}
-            onChange={(event) => setBin(event.currentTarget.valueAsNumber)}
+            onChange={(event) =>
+              setFrequency(
+                frequencyAtFraction(
+                  event.currentTarget.valueAsNumber / sliderSteps,
+                  log
+                )
+              )
+            }
           />
           <p id={id + "-hint"} className="text-xs text-muted-foreground">
             {m.cursorHint}

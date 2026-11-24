@@ -1,6 +1,6 @@
 // Reuse the window, permutation and twiddle factors for successive audio frames.
 // The caller chooses a power-of-two size and provides room for size / 2 + 1 bins.
-export function createPowerSpectrum(size: number) {
+export function createPowerSpectrum(size: number, windowLength = size) {
   const real = new Float64Array(size)
   const imaginary = new Float64Array(size)
   const permutation = new Uint32Array(size)
@@ -9,7 +9,12 @@ export function createPowerSpectrum(size: number) {
   const hann = new Float64Array(size)
   for (let i = 0; i < size; i++) {
     const angle = (2 * Math.PI * i) / size
-    hann[i] = (1 - Math.cos(angle)) / 2
+    if (i < windowLength) {
+      hann[i] =
+        windowLength === 1
+          ? 1
+          : (1 - Math.cos((2 * Math.PI * i) / windowLength)) / 2
+    }
     if (i < size / 2) {
       cosine[i] = Math.cos(angle)
       sine[i] = -Math.sin(angle)
@@ -20,7 +25,7 @@ export function createPowerSpectrum(size: number) {
   return (samples: Float32Array, start: number, power: Float64Array) => {
     for (let i = 0; i < size; i++) {
       const index = permutation[i]!
-      real[index] = (samples[start + i] ?? 0) * hann[i]!
+      real[index] = i < windowLength ? samples[start + i]! * hann[i]! : 0
       imaginary[index] = 0
     }
     for (let span = 2; span <= size; span *= 2) {

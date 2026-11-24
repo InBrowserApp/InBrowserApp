@@ -11,19 +11,21 @@ import {
 
 const inset = { left: 45, right: 25, top: 25, bottom: 26 }
 const maximumHz = SAMPLE_RATE / 2
+const levelFraction = (level: number) =>
+  Math.min(1, Math.max(0, level / MIN_DB))
 
 export function SpectrumChart({
   levels,
   log,
   bin,
   lang,
-  onBin,
+  onFrequency,
 }: {
   levels: Float32Array
   log: boolean
   bin: number
   lang: string
-  onBin: (bin: number) => void
+  onFrequency: (frequency: number) => void
 }) {
   const canvas = useRef<HTMLCanvasElement>(null)
 
@@ -40,17 +42,19 @@ export function SpectrumChart({
     function draw() {
       const { width, height } = element.getBoundingClientRect()
       const ratio = window.devicePixelRatio || 1
-      element.width = Math.round(width * ratio)
-      element.height = Math.round(height * ratio)
-      ctx.scale(ratio, ratio)
+      const pixelWidth = Math.round(width * ratio)
+      const pixelHeight = Math.round(height * ratio)
+      if (element.width !== pixelWidth) element.width = pixelWidth
+      if (element.height !== pixelHeight) element.height = pixelHeight
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0)
+      ctx.clearRect(0, 0, width, height)
       const plotWidth = width - inset.left - inset.right
       const plotHeight = height - inset.top - inset.bottom
       const left = inset.left
       const top = inset.top
       const x = (frequency: number) =>
         left + fractionAtFrequency(frequency, log) * plotWidth
-      const y = (level: number) =>
-        top + Math.min(1, Math.max(0, level / MIN_DB)) * plotHeight
+      const y = (level: number) => top + levelFraction(level) * plotHeight
       const color = getComputedStyle(element).color
       ctx.strokeStyle = color
       ctx.fillStyle = color
@@ -61,6 +65,7 @@ export function SpectrumChart({
       ctx.globalAlpha = 0.8
       ctx.fillText("dBFS", 7, 10)
       ctx.textAlign = "right"
+      ctx.fillText("Hz", width - 7, 10)
       for (const level of [0, -20, -40, -60, -80, MIN_DB]) {
         ctx.globalAlpha = 0.8
         ctx.fillText(number.format(level), left - 8, y(level))
@@ -72,7 +77,7 @@ export function SpectrumChart({
       }
       ctx.textAlign = "center"
       const ticks = log
-        ? [20, 100, 1000, 10_000, maximumHz]
+        ? [20, 100, 1000, ...(plotWidth >= 280 ? [10_000] : []), maximumHz]
         : [0, 6000, 12_000, 18_000, maximumHz]
       for (const frequency of ticks) {
         ctx.globalAlpha = 0.8
@@ -97,18 +102,6 @@ export function SpectrumChart({
         ctx.lineTo(x(index * BIN_HZ), y(levels[index]!))
       }
       ctx.stroke()
-
-      const cursorX = x(bin * BIN_HZ)
-      const cursorY = y(levels[bin]!)
-      ctx.globalAlpha = 0.55
-      ctx.beginPath()
-      ctx.moveTo(cursorX, top)
-      ctx.lineTo(cursorX, top + plotHeight)
-      ctx.stroke()
-      ctx.globalAlpha = 1
-      ctx.beginPath()
-      ctx.arc(cursorX, cursorY, 4, 0, 2 * Math.PI)
-      ctx.fill()
     }
 
     draw()
@@ -123,25 +116,40 @@ export function SpectrumChart({
       resize.disconnect()
       theme.disconnect()
     }
-  }, [bin, lang, levels, log])
+  }, [lang, levels, log])
 
   function inspect(event: PointerEvent<HTMLCanvasElement>) {
     const bounds = event.currentTarget.getBoundingClientRect()
     const fraction =
       (event.clientX - bounds.left - inset.left) /
       (bounds.width - inset.left - inset.right)
-    onBin(Math.round(frequencyAtFraction(fraction, log) / BIN_HZ))
+    onFrequency(frequencyAtFraction(fraction, log))
   }
 
   return (
-    <canvas
-      ref={canvas}
+    <div
       aria-hidden="true"
-      className="block h-56 w-full rounded-lg border bg-teal-50/30 text-teal-800 sm:h-72 dark:bg-teal-950/20 dark:text-teal-300"
-      onPointerMove={(event) => {
-        if (event.pointerType === "mouse") inspect(event)
-      }}
-      onPointerDown={inspect}
-    />
+      className="relative overflow-hidden rounded-lg border bg-teal-50/30 text-teal-800 dark:bg-teal-950/20 dark:text-teal-300"
+    >
+      <canvas
+        ref={canvas}
+        className="block h-56 w-full sm:h-72"
+        onPointerMove={(event) => {
+          if (event.pointerType === "mouse") inspect(event)
+        }}
+        onPointerDown={inspect}
+      />
+      <div className="pointer-events-none absolute" style={inset}>
+        <div
+          className="absolute inset-y-0 w-px -translate-x-1/2 bg-current/55"
+          style={{ left: fractionAtFrequency(bin * BIN_HZ, log) * 100 + "%" }}
+        >
+          <div
+            className="absolute left-1/2 size-2 -translate-1/2 rounded-full bg-current"
+            style={{ top: levelFraction(levels[bin]!) * 100 + "%" }}
+          />
+        </div>
+      </div>
+    </div>
   )
 }
