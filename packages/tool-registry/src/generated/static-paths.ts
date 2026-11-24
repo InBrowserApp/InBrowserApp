@@ -21162,6 +21162,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-monitor",
+    language: "ar",
+  },
+  {
+    slug: "midi-monitor",
+    language: "de",
+  },
+  {
+    slug: "midi-monitor",
+    language: "en",
+  },
+  {
+    slug: "midi-monitor",
+    language: "es",
+  },
+  {
+    slug: "midi-monitor",
+    language: "fr",
+  },
+  {
+    slug: "midi-monitor",
+    language: "he",
+  },
+  {
+    slug: "midi-monitor",
+    language: "hi",
+  },
+  {
+    slug: "midi-monitor",
+    language: "id",
+  },
+  {
+    slug: "midi-monitor",
+    language: "it",
+  },
+  {
+    slug: "midi-monitor",
+    language: "ja",
+  },
+  {
+    slug: "midi-monitor",
+    language: "ko",
+  },
+  {
+    slug: "midi-monitor",
+    language: "ms",
+  },
+  {
+    slug: "midi-monitor",
+    language: "nl",
+  },
+  {
+    slug: "midi-monitor",
+    language: "no",
+  },
+  {
+    slug: "midi-monitor",
+    language: "pl",
+  },
+  {
+    slug: "midi-monitor",
+    language: "pt",
+  },
+  {
+    slug: "midi-monitor",
+    language: "ru",
+  },
+  {
+    slug: "midi-monitor",
+    language: "sv",
+  },
+  {
+    slug: "midi-monitor",
+    language: "th",
+  },
+  {
+    slug: "midi-monitor",
+    language: "tr",
+  },
+  {
+    slug: "midi-monitor",
+    language: "vi",
+  },
+  {
+    slug: "midi-monitor",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-monitor",
+    language: "zh-TW",
+  },
+  {
     slug: "mime-type-lookup",
     language: "ar",
   },

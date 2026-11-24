@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-monitor",
+  "description": "Test een MIDI-keyboard, pad of controller in je browser. Bekijk noten en aanslagwaarden op een piano en controleer CC, pitchbend, kloksignalen en ruwe MIDI-bytes."
+}

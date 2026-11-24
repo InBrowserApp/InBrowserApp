@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-monitor",
+  "description": "Testa ett MIDI-keyboard, en pad eller en MIDI-kontroller i webbläsaren. Se noter och anslagsvärden på ett piano och granska CC, pitch bend, klocksignaler och råa MIDI-byte."
+}

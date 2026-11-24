@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-Monitor",
+  "description": "Teste ein MIDI-Keyboard, Pad oder einen Controller im Browser. Sieh Noten und Anschlagstärke auf einer Klaviatur und prüfe CC, Pitchbend, MIDI-Clock und rohe MIDI-Bytes."
+}

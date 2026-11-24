@@ -284,6 +284,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mhtml-to-html-converter": () => import("@tool/mhtml-to-html-converter/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
+  "midi-monitor": () => import("@tool/midi-monitor/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "mobi-reader": () => import("@tool/mobi-reader/page"),
   "mobi-to-epub-converter": () => import("@tool/mobi-to-epub-converter/page"),

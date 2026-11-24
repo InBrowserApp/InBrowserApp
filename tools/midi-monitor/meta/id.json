@@ -1,0 +1,4 @@
+{
+  "name": "Monitor MIDI",
+  "description": "Uji keyboard, pad, atau pengontrol MIDI di browser. Lihat not dan velocity pada piano, serta periksa CC, pitch bend, clock, dan byte MIDI mentah."
+}

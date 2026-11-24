@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-monitor",
+  "description": "Test et MIDI-keyboard, en pad eller en kontroller i nettleseren. Se noter og anslagsstyrke på et klaviatur, og undersøk CC, pitch bend, MIDI-klokke og rå MIDI-byte."
+}
