@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển đổi CSV và Excel sang SQLite",
+  "description": "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite."
+}

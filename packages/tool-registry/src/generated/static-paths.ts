@@ -6074,6 +6074,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-excel-to-sqlite",
+    language: "ar",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "de",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "en",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "es",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "fr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "he",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "hi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "id",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "it",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ja",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ko",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ms",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "nl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "no",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pt",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ru",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "sv",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "th",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "tr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "vi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-to-json-converter",
     language: "ar",
   },

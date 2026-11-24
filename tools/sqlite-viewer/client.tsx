@@ -28,6 +28,7 @@ import { ResultTable } from "./components/result-table"
 import { Structure } from "./components/structure"
 import { previewQuery } from "./core/query"
 import { useDatabase } from "./use-database"
+import { receiveDatabase, type TransferStatus } from "./transfer"
 import type { DatabaseObject, Messages } from "./types"
 import sampleUrl from "./fixtures/sample.sqlite?url"
 
@@ -45,12 +46,13 @@ export default function Client({
   const [limit, setLimit] = useState(1000)
   const [sampleLoading, setSampleLoading] = useState(false)
   const [sampleError, setSampleError] = useState(false)
+  const [transfer, setTransfer] = useState<TransferStatus>()
   const epoch = useRef(0)
   const db = useDatabase(file)
   const direction = lang === "ar" || lang === "he" ? "rtl" : "ltr"
   const cancelled = db.error?.key === "cancelled"
 
-  function changeFile(next: File | null) {
+  const changeFile = useCallback((next: File | null) => {
     epoch.current++
     setFile(next)
     setSelected(null)
@@ -58,7 +60,20 @@ export default function Client({
     setTab("query")
     setSampleError(false)
     setSampleLoading(false)
-  }
+    setTransfer(undefined)
+  }, [])
+
+  useEffect(() => {
+    const id = epoch.current
+    return receiveDatabase(
+      (opened) => {
+        if (epoch.current === id) changeFile(opened)
+      },
+      (status) => {
+        if (epoch.current === id) setTransfer(status)
+      }
+    )
+  }, [changeFile])
   const request = db.request
   const select = useCallback(
     (object: DatabaseObject) => {
@@ -77,6 +92,7 @@ export default function Client({
 
   async function sample() {
     const id = ++epoch.current
+    setTransfer(undefined)
     setSampleLoading(true)
     setSampleError(false)
     try {
@@ -108,7 +124,7 @@ export default function Client({
         >
           {m.cancelled}
         </p>
-      ) : db.error || sampleError ? (
+      ) : db.error || sampleError || transfer === "failed" ? (
         <Alert
           variant="destructive"
           className="rounded-none border-x-0 border-t-0"
@@ -117,7 +133,13 @@ export default function Client({
           <AlertTitle>{m.errorTitle}</AlertTitle>
           <AlertDescription>
             {!db.error?.detail ? (
-              <p>{db.error ? m[db.error.key] : m.sampleError}</p>
+              <p>
+                {db.error
+                  ? m[db.error.key]
+                  : transfer === "failed"
+                    ? m.workerError
+                    : m.sampleError}
+              </p>
             ) : null}
             {db.error?.detail ? (
               <pre
@@ -136,7 +158,9 @@ export default function Client({
             <EmptyMedia variant="icon">
               <LayoutGrid aria-hidden="true" />
             </EmptyMedia>
-            <EmptyTitle>{m.drop}</EmptyTitle>
+            <EmptyTitle>
+              {transfer === "opening" ? m.opening : m.drop}
+            </EmptyTitle>
             <EmptyDescription>
               {m.formats}
               <br />

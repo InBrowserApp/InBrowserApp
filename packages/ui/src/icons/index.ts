@@ -32,6 +32,7 @@ export {
   Code,
   CreditCard,
   Cpu,
+  Database,
   Copy,
   Download,
   Eye,

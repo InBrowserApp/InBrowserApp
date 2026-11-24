@@ -8464,6 +8464,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي .xlsx و.xls إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف .sqlite أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (.xlsx, .xls) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־.sqlite או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
+      },
+    },
+  },
+  {
     slug: "csv-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -49104,6 +49238,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CSS 漸層產生器",
         description:
           "建立可拖曳色標的線性、放射與圓錐漸層，支援混合模式並輸出可直接使用的 CSS。",
+      },
+    },
+  },
+  "csv-excel-to-sqlite": {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي .xlsx و.xls إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف .sqlite أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (.xlsx, .xls) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־.sqlite או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
       },
     },
   },

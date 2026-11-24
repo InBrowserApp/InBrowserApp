@@ -1,0 +1,4 @@
+{
+  "name": "Konverter CSV og Excel til SQLite",
+  "description": "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren."
+}

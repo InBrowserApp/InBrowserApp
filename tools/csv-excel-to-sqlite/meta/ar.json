@@ -1,0 +1,4 @@
+{
+  "name": "تحويل CSV وExcel إلى SQLite",
+  "description": "حوّل ملفات CSV وExcel بامتدادَي .xlsx و.xls إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف .sqlite أو استعلم عنه في عارض SQLite."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CSV और Excel को SQLite में बदलें",
+  "description": "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।"
+}
