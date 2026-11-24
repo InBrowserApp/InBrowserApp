@@ -10620,6 +10620,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dicom-viewer",
+    category: "image",
+    icon: "scan-line",
+    tags: [
+      "dicom",
+      "dcm",
+      "medical imaging",
+      "ct",
+      "mri",
+      "slice",
+      "window level",
+      "metadata",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض DICOM",
+        description:
+          "افتح صور DICOM بامتدادي .dcm و.dicom من جهازك في المتصفح. تصفح شرائح الأشعة المقطعية والرنين المغناطيسي، واضبط عرض النافذة ومستواها، وافحص الوسوم دون رفع الملفات.",
+      },
+      de: {
+        name: "DICOM-Betrachter",
+        description:
+          "Lokale DICOM-Bilder (.dcm, .dicom) im Browser öffnen. Durch CT- und MRT-Schichten blättern, Fensterbreite und Fensterlage ändern und DICOM-Tags ohne Upload prüfen.",
+      },
+      en: {
+        name: "DICOM Viewer",
+        description:
+          "Open local DICOM (.dcm, .dicom) images in your browser. Browse CT and MRI slices, adjust window width and level, and inspect DICOM tags without uploading files.",
+      },
+      es: {
+        name: "Visor DICOM",
+        description:
+          "Abre imágenes DICOM (.dcm, .dicom) en tu navegador. Recorre cortes de TC y RM, ajusta el ancho y el nivel de ventana y consulta etiquetas DICOM sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse DICOM",
+        description:
+          "Ouvrez vos images DICOM (.dcm, .dicom) dans votre navigateur. Parcourez les coupes de scanner et d’IRM, ajustez le fenêtrage et consultez les tags sans envoyer de fichiers.",
+      },
+      he: {
+        name: "מציג DICOM",
+        description:
+          "פתחו בדפדפן תמונות DICOM מקומיות בסיומות ‎.dcm ו־‎.dicom. עיינו בחתכי CT ו־MRI, הגדירו את רוחב החלון ואת מרכזו ועיינו בתגיות DICOM בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "DICOM व्यूअर",
+        description:
+          "अपने डिवाइस पर मौजूद DICOM (.dcm, .dicom) चित्र ब्राउज़र में खोलें। फ़ाइलें अपलोड किए बिना CT और MRI स्लाइस देखें, विंडो की चौड़ाई और स्तर बदलें और DICOM टैग जाँचें।",
+      },
+      id: {
+        name: "Penampil DICOM",
+        description:
+          "Buka gambar DICOM (.dcm, .dicom) dari perangkat Anda di browser. Telusuri irisan CT dan MRI, sesuaikan lebar dan tingkat jendela, serta periksa tag DICOM tanpa mengunggah berkas.",
+      },
+      it: {
+        name: "Visualizzatore DICOM",
+        description:
+          "Apri immagini DICOM (.dcm, .dicom) nel browser. Scorri le sezioni di TC e RM, regola larghezza e livello della finestra e consulta i tag senza caricare file online.",
+      },
+      ja: {
+        name: "DICOM ビューアー",
+        description:
+          "ローカルの DICOM（.dcm、.dicom）画像をブラウザーで開きます。ファイルをアップロードせずに CT・MRI のスライスを閲覧し、ウィンドウ幅とレベルを調整して DICOM タグを確認できます。",
+      },
+      ko: {
+        name: "DICOM 뷰어",
+        description:
+          "브라우저에서 로컬 DICOM(.dcm, .dicom) 영상을 열어 보세요. 파일을 업로드하지 않고 CT와 MRI 슬라이스를 탐색하고 윈도우 너비와 레벨을 조절하며 DICOM 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar DICOM",
+        description:
+          "Buka imej DICOM (.dcm, .dicom) pada peranti anda melalui pelayar. Layari hirisan CT dan MRI, laraskan lebar dan aras tetingkap serta periksa tag DICOM tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "DICOM-viewer",
+        description:
+          "Open lokale DICOM-beelden (.dcm, .dicom) in je browser. Blader door CT- en MRI-doorsneden, pas vensterbreedte en vensterniveau aan en bekijk DICOM-tags zonder upload.",
+      },
+      no: {
+        name: "DICOM-viser",
+        description:
+          "Åpne lokale DICOM-bilder (.dcm, .dicom) i nettleseren. Bla gjennom CT- og MR-snitt, juster vindusbredde og vindusnivå og se DICOM-tagger uten opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka DICOM",
+        description:
+          "Otwieraj lokalne obrazy DICOM (.dcm, .dicom) w przeglądarce. Przeglądaj przekroje TK i MRI, zmieniaj szerokość i poziom okna, sprawdzaj tagi bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador DICOM",
+        description:
+          "Abra imagens DICOM (.dcm, .dicom) no navegador. Percorra cortes de TC e RM, ajuste a largura e o nível da janela e consulte as tags sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр DICOM",
+        description:
+          "Открывайте локальные файлы DICOM (.dcm, .dicom) в браузере. Листайте срезы КТ и МРТ, меняйте ширину и уровень окна и изучайте теги DICOM без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "DICOM-visare",
+        description:
+          "Öppna lokala DICOM-bilder (.dcm, .dicom) i webbläsaren. Bläddra bland CT- och MR-snitt, justera fönsterbredd och fönsternivå och granska DICOM-taggar utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดูภาพ DICOM",
+        description:
+          "เปิดภาพ DICOM (.dcm, .dicom) บนอุปกรณ์ในเบราว์เซอร์ เลื่อนดูภาพตัดขวาง CT และ MRI ปรับความกว้างและระดับหน้าต่าง และตรวจสอบแท็ก DICOM โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DICOM Görüntüleyicisi",
+        description:
+          "Cihazınızdaki DICOM (.dcm, .dicom) görüntülerini tarayıcıda açın. Dosya yüklemeden BT ve MR kesitlerine göz atın, pencere genişliğini ve seviyesini ayarlayın, etiketleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem DICOM",
+        description:
+          "Mở ảnh DICOM (.dcm, .dicom) trên thiết bị ngay trong trình duyệt. Duyệt lát cắt CT và MRI, chỉnh độ rộng và mức cửa sổ, xem thẻ DICOM mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DICOM 查看器",
+        description:
+          "在浏览器中打开本地 DICOM（.dcm、.dicom）图像，浏览 CT 和 MRI 切片，调整窗宽窗位并查看 DICOM 标签，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "DICOM 檢視器",
+        description:
+          "在瀏覽器中開啟本機 DICOM（.dcm、.dicom）影像，瀏覽 CT 和 MRI 切片、調整窗寬與窗位，並檢視 DICOM 標籤，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "djvu-viewer",
     category: "document",
     icon: "book-open",

@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse DICOM",
+  "description": "Ouvrez vos images DICOM (.dcm, .dicom) dans votre navigateur. Parcourez les coupes de scanner et d’IRM, ajustez le fenêtrage et consultez les tags sans envoyer de fichiers."
+}

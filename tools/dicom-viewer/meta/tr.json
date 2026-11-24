@@ -1,0 +1,4 @@
+{
+  "name": "DICOM Görüntüleyicisi",
+  "description": "Cihazınızdaki DICOM (.dcm, .dicom) görüntülerini tarayıcıda açın. Dosya yüklemeden BT ve MR kesitlerine göz atın, pencere genişliğini ve seviyesini ayarlayın, etiketleri inceleyin."
+}

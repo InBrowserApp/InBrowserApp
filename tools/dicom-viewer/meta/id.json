@@ -1,0 +1,4 @@
+{
+  "name": "Penampil DICOM",
+  "description": "Buka gambar DICOM (.dcm, .dicom) dari perangkat Anda di browser. Telusuri irisan CT dan MRI, sesuaikan lebar dan tingkat jendela, serta periksa tag DICOM tanpa mengunggah berkas."
+}
