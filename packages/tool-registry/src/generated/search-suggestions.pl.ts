@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Usuwanie tła ze zdjęć",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Łączenie obrazów",
     slug: "image-combiner",
   },

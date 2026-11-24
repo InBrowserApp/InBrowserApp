@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "ลบพื้นหลังรูปภาพ",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "เครื่องมือรวมรูปภาพ",
     slug: "image-combiner",
   },

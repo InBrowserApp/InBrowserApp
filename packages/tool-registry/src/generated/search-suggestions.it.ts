@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Rimuovi lo sfondo dalle immagini",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Unisci immagini",
     slug: "image-combiner",
   },

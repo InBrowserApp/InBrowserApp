@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "הסרת רקע מתמונה",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "כלי לחיבור תמונות",
     slug: "image-combiner",
   },

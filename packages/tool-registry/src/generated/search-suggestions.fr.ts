@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Supprimer l’arrière-plan d’une image",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Assemblage d’images",
     slug: "image-combiner",
   },

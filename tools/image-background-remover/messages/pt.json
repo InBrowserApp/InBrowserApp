@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Escolher imagem",
+  "dropImage": "ou arraste até aqui",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Trocar imagem",
+  "original": "Original",
+  "result": "Sem fundo",
+  "download": "Baixar PNG",
+  "preparing": "Carregando o modelo de remoção de fundo…",
+  "processing": "Removendo o fundo…",
+  "invalidImage": "Não foi possível abrir a imagem. Escolha um arquivo JPG, PNG ou WebP.",
+  "modelFailed": "Não foi possível carregar o modelo. Verifique sua conexão e tente novamente.",
+  "processingFailed": "Não foi possível remover o fundo. Tente novamente ou escolha outra imagem.",
+  "retry": "Tentar novamente"
+}

@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Choisir une image",
+  "dropImage": "ou la déposer ici",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Changer d’image",
+  "original": "Image d’origine",
+  "result": "Sans arrière-plan",
+  "download": "Télécharger le PNG",
+  "preparing": "Chargement du modèle de détourage…",
+  "processing": "Suppression de l’arrière-plan…",
+  "invalidImage": "Impossible d’ouvrir cette image. Choisissez un fichier JPG, PNG ou WebP.",
+  "modelFailed": "Impossible de charger le modèle. Vérifiez votre connexion et réessayez.",
+  "processingFailed": "Impossible de supprimer l’arrière-plan. Réessayez ou choisissez une autre image.",
+  "retry": "Réessayer"
+}

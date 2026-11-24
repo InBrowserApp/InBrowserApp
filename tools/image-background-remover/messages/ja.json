@@ -1,0 +1,15 @@
+{
+  "chooseImage": "画像を選択",
+  "dropImage": "またはここにドロップ",
+  "formats": "JPG、PNG、WebP",
+  "changeImage": "画像を変更",
+  "original": "元の画像",
+  "result": "背景削除後",
+  "download": "PNG をダウンロード",
+  "preparing": "背景削除モデルを読み込み中…",
+  "processing": "背景を削除中…",
+  "invalidImage": "画像を開けませんでした。JPG、PNG、WebP のいずれかを選択してください。",
+  "modelFailed": "モデルを読み込めませんでした。インターネット接続を確認して、もう一度お試しください。",
+  "processingFailed": "背景を削除できませんでした。もう一度試すか、別の画像を選択してください。",
+  "retry": "もう一度試す"
+}

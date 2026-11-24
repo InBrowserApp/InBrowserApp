@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Wybierz obraz",
+  "dropImage": "lub przeciągnij go tutaj",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Zmień obraz",
+  "original": "Oryginał",
+  "result": "Bez tła",
+  "download": "Pobierz PNG",
+  "preparing": "Wczytywanie modelu do usuwania tła…",
+  "processing": "Usuwanie tła…",
+  "invalidImage": "Nie udało się otworzyć obrazu. Wybierz plik JPG, PNG lub WebP.",
+  "modelFailed": "Nie udało się wczytać modelu. Sprawdź połączenie z internetem i spróbuj ponownie.",
+  "processingFailed": "Nie udało się usunąć tła. Spróbuj ponownie lub wybierz inny obraz.",
+  "retry": "Spróbuj ponownie"
+}

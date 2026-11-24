@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Scegli immagine",
+  "dropImage": "o trascinala qui",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Cambia immagine",
+  "original": "Originale",
+  "result": "Senza sfondo",
+  "download": "Scarica PNG",
+  "preparing": "Caricamento del modello per la rimozione dello sfondo…",
+  "processing": "Rimozione dello sfondo…",
+  "invalidImage": "Impossibile aprire l’immagine. Scegli un file JPG, PNG o WebP.",
+  "modelFailed": "Impossibile caricare il modello. Controlla la connessione e riprova.",
+  "processingFailed": "Impossibile rimuovere lo sfondo. Riprova o scegli un’altra immagine.",
+  "retry": "Riprova"
+}

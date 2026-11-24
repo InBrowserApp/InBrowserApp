@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Pilih imej",
+  "dropImage": "atau seret dan lepaskan di sini",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Tukar imej",
+  "original": "Imej asal",
+  "result": "Tanpa latar belakang",
+  "download": "Muat turun PNG",
+  "preparing": "Memuatkan model pembuangan latar belakang…",
+  "processing": "Membuang latar belakang…",
+  "invalidImage": "Imej ini tidak dapat dibuka. Pilih fail JPG, PNG atau WebP.",
+  "modelFailed": "Model gagal dimuatkan. Semak sambungan Internet dan cuba lagi.",
+  "processingFailed": "Latar belakang tidak dapat dibuang. Cuba lagi atau pilih imej lain.",
+  "retry": "Cuba lagi"
+}

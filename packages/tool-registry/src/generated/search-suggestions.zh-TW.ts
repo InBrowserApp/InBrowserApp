@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "圖片去背",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "圖片拼接器",
     slug: "image-combiner",
   },

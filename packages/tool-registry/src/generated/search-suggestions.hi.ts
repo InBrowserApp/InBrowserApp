@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "फ़ोटो का बैकग्राउंड हटाएँ",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "इमेज कंबाइनर",
     slug: "image-combiner",
   },

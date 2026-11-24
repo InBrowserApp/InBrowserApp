@@ -624,6 +624,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Achtergrond van afbeelding verwijderen",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Afbeeldingen combineren",
     slug: "image-combiner",
   },
