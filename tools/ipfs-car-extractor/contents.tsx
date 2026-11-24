@@ -1,3 +1,5 @@
+import type { ReactNode } from "react"
+
 import type { IpfsReference } from "@workspace/ipfs-files"
 import {
   ToolPanelCard,
@@ -6,7 +8,7 @@ import {
 import { Button } from "@workspace/ui/components/ui/button"
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import {
-  ArrowLeftRight,
+  ChevronLeft,
   ChevronRight,
   Download,
   Folder,
@@ -20,6 +22,7 @@ export function CarContents({
   language,
   messages,
   busy,
+  feedback,
   browse,
   download,
 }: {
@@ -27,6 +30,7 @@ export function CarContents({
   language: string
   messages: typeof EnglishMessages
   busy: boolean
+  feedback: ReactNode
   browse: (path: readonly IpfsReference[]) => void
   download: () => void
 }) {
@@ -50,7 +54,11 @@ export function CarContents({
                 disabled={busy}
                 onClick={() => browse(path.slice(0, -1))}
               >
-                <ArrowLeftRight data-icon="inline-start" aria-hidden="true" />
+                <ChevronLeft
+                  className="rtl:rotate-180"
+                  data-icon="inline-start"
+                  aria-hidden="true"
+                />
                 {messages.back}
               </Button>
             )}
@@ -63,6 +71,7 @@ export function CarContents({
             {isFolder ? messages.zip : messages.download}
           </Button>
         </div>
+        {feedback}
         {isFolder ? (
           children.length ? (
             <ul className="divide-y rounded-lg border">

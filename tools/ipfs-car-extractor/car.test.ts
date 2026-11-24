@@ -59,10 +59,10 @@ it("reports missing blocks and modified blocks separately", async () => {
     const { roots, store } = await archive(bytes)
     const root = await openIpfsEntry(roots[0]!, store, signal)
     if (root.type !== "directory") throw new Error("Expected a directory")
-    await expect(zipIpfsDirectory(root, store, signal)).rejects.toHaveProperty(
-      "code",
-      code
-    )
+    await expect(zipIpfsDirectory(root, store, signal)).rejects.toMatchObject({
+      code,
+      path: "sub/world.txt",
+    })
   }
 })
 

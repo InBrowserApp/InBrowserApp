@@ -10,8 +10,12 @@ import { CID } from "multiformats/cid"
 export type { ReadableStorage } from "ipfs-unixfs-exporter"
 
 export class IpfsFileError extends Error {
-  constructor(readonly code: "missing" | "corrupt" | "unsupported") {
-    super(code)
+  constructor(
+    readonly code: "missing" | "corrupt" | "unsupported" | "failed",
+    readonly path?: string,
+    options?: ErrorOptions
+  ) {
+    super(code, options)
   }
 }
 
@@ -105,15 +109,23 @@ export async function zipIpfsDirectory(
   async function addFolder(folder: UnixFSDirectory, parent: string) {
     for await (const { name, cid } of folder.entries({ signal })) {
       signal.throwIfAborted()
-      const path = zipPath(parent, name)
-      const entry = await openIpfsEntry(cid, store, signal)
-      if (entry.type === "directory") {
-        await writer.add(path + "/", undefined, { directory: true, signal })
-        await addFolder(entry, path + "/")
-      } else {
-        await writer.add(path, fileStream(entry, signal), {
-          signal,
-          level: 0,
+      try {
+        const path = zipPath(parent, name)
+        const entry = await openIpfsEntry(cid, store, signal)
+        if (entry.type === "directory") {
+          await writer.add(path + "/", undefined, { directory: true, signal })
+          await addFolder(entry, path + "/")
+        } else {
+          await writer.add(path, fileStream(entry, signal), {
+            signal,
+            level: 0,
+          })
+        }
+      } catch (error) {
+        const problem = error instanceof IpfsFileError ? error : null
+        if (signal.aborted || problem?.path !== undefined) throw error
+        throw new IpfsFileError(problem?.code ?? "failed", parent + name, {
+          cause: error,
         })
       }
     }

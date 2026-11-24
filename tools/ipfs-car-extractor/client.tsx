@@ -33,6 +33,7 @@ export type CarView = {
 
 type Archive = Awaited<ReturnType<typeof openCar>>
 type Job = "reading" | "preparing"
+type JobError = { message: string; path?: string }
 
 export default function CarExtractor({
   language,
@@ -48,7 +49,7 @@ export default function CarExtractor({
   const [archive, setArchive] = useState<Archive | null>(null)
   const [view, setView] = useState<CarView | null>(null)
   const [job, setJob] = useState<Job | null>(null)
-  const [error, setError] = useState("")
+  const [error, setError] = useState<JobError | null>(null)
   const [dragging, setDragging] = useState(false)
 
   useEffect(() => () => active.current?.abort(), [])
@@ -67,15 +68,17 @@ export default function CarExtractor({
     active.current?.abort()
     const controller = new AbortController()
     active.current = controller
-    setError("")
+    setError(null)
     setJob(job)
     try {
       await action(controller.signal)
     } catch (error) {
       if (!controller.signal.aborted) {
-        setError(
-          messages[error instanceof IpfsFileError ? error.code : fallback]
-        )
+        const problem = error instanceof IpfsFileError ? error : null
+        setError({
+          message: messages[problem?.code ?? fallback],
+          path: problem?.path,
+        })
       }
     } finally {
       if (active.current === controller) {
@@ -110,7 +113,7 @@ export default function CarExtractor({
       if (root) {
         await show([{ name: archiveName(next), cid: root }], car.store, signal)
       } else {
-        setError(messages.rootsMissing)
+        setError({ message: messages.rootsMissing })
       }
     })
   }
@@ -141,6 +144,35 @@ export default function CarExtractor({
       downloadBlob(blob, folder ? `${name}.zip` : name)
     })
   }
+
+  const feedback = (job || error) && (
+    <div className="grid gap-2">
+      {job && (
+        <div className="flex flex-wrap items-center gap-2">
+          <p
+            role="status"
+            className="flex items-center gap-2 text-sm text-muted-foreground"
+          >
+            <LoaderCircle aria-hidden="true" className="size-4 animate-spin" />
+            {messages[job]}
+          </p>
+          <Button type="button" size="sm" variant="ghost" onClick={cancel}>
+            {messages.cancel}
+          </Button>
+        </div>
+      )}
+      {error && (
+        <div role="alert" className="grid gap-1 text-sm text-destructive">
+          <p>{error.message}</p>
+          {error.path && (
+            <code dir="auto" className="text-xs wrap-anywhere">
+              {error.path}
+            </code>
+          )}
+        </div>
+      )}
+    </div>
+  )
 
   return (
     <div className="grid min-w-0 gap-4">
@@ -222,28 +254,7 @@ export default function CarExtractor({
               </select>
             </Field>
           )}
-          {job && (
-            <div className="flex flex-wrap items-center gap-2">
-              <p
-                role="status"
-                className="flex items-center gap-2 text-sm text-muted-foreground"
-              >
-                <LoaderCircle
-                  aria-hidden="true"
-                  className="size-4 animate-spin"
-                />
-                {messages[job]}
-              </p>
-              <Button type="button" size="sm" variant="ghost" onClick={cancel}>
-                {messages.cancel}
-              </Button>
-            </div>
-          )}
-          {error && (
-            <p role="alert" className="text-sm text-destructive">
-              {error}
-            </p>
-          )}
+          {!view && feedback}
         </ToolPanelCardContent>
       </ToolPanelCard>
       {view && (
@@ -252,6 +263,7 @@ export default function CarExtractor({
           messages={messages}
           language={language}
           busy={Boolean(job)}
+          feedback={feedback}
           browse={browse}
           download={download}
         />

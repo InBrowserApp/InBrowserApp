@@ -77,7 +77,11 @@ it("cancels and retries an import, then switches between roots", async () => {
   const emptyDirectory = new Uint8Array([0x0a, 0x02, 0x08, 0x01])
   const directoryCid = CID.createV1(0x70, await sha256.digest(emptyDirectory))
   const { writer, out } = CarWriter.create([inlineCid, directoryCid])
-  const car = new Response(ReadableStream.from(out)).blob()
+  const car = (async () => {
+    const chunks: BlobPart[] = []
+    for await (const chunk of out) chunks.push(chunk.slice())
+    return new Blob(chunks)
+  })()
   await writer.put({ cid: directoryCid, bytes: emptyDirectory })
   await writer.close()
 
