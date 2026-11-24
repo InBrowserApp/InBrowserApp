@@ -38,13 +38,15 @@
   "receivedText": "Mottagen text",
   "download": "Ladda ner",
   "copyText": "Kopiera text",
-  "saveBeforeNext": "Spara den mottagna filen innan nästa fil ersätter den.",
-  "fileTooLarge": "Välj en fil på högst 128 MiB.",
+  "removeFile": "Ta bort fil",
+  "storageError": "Den mottagande webbläsaren kunde inte spara filen. Kontrollera det tillgängliga lagringsutrymmet och webbläsarens behörigheter.",
   "textTooLarge": "Skicka högst 1 MiB text åt gången.",
   "badInvite": "Inbjudningslänken är ogiltig. Be om en ny länk från den andra enheten.",
   "badReply": "Svarskoden är ogiltig. Kopiera eller skanna koden igen.",
   "cameraError": "Det gick inte att använda kameran. Du kan klistra in länken eller koden i stället.",
   "connectionError": "Anslutningen bröts eller kunde inte upprättas. Kontrollera att båda enheterna är i samma nätverk och parkoppla dem igen.",
   "transferError": "Överföringen avbröts. Parkoppla igen för att försöka på nytt.",
-  "unsupported": "Den här webbläsaren kan inte upprätta en direktanslutning. Prova en aktuell version av Chrome, Firefox, Safari eller Edge."
+  "unsupported": "Den här webbläsaren kan inte upprätta en direktanslutning. Prova en aktuell version av Chrome, Firefox, Safari eller Edge.",
+  "resumeFile": "Återuppta filöverföringen",
+  "resumeHelp": "Låt båda flikarna vara öppna. Parkoppla med samma enhet igen för att återuppta filöverföringen."
 }

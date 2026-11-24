@@ -10,4 +10,10 @@ WebRTC krypterar data och överför dem direkt mellan de två webbläsarna. Enhe
 
 ## Om enheterna inte kan ansluta
 
-Gästnätverk och vissa kontorsnätverk blockerar kommunikation mellan enheter, även när de använder samma wifi. Prova ett privat nätverk där enheterna kan nå varandra. Om kameran inte är tillgänglig kan du byta inbjudningslänken och svarskoden via en meddelandeapp eller en annan enhet. Filer på högst 128 MiB ligger kvar i den mottagande flikens minne tills du laddar ner dem. Spara varje fil innan du tar emot en ny eller stänger sidan.
+Gästnätverk och vissa kontorsnätverk blockerar kommunikation mellan enheter, även när de använder samma wifi. Prova ett privat nätverk där enheterna kan nå varandra. Om kameran inte är tillgänglig kan du byta inbjudningslänken och svarskoden via en meddelandeapp eller en annan enhet.
+
+## Stora filer och avbrutna överföringar
+
+Verktyget kontrollerar filerna block för block med SHA-256 och sparar dem lokalt i den mottagande webbläsaren. Hur stora filer du kan ta emot beror på webbläsarens tillgängliga lagringsutrymme. Ladda ner varje färdigöverförd fil för att spara en kopia.
+
+Om anslutningen bryts låter du båda de ursprungliga flikarna vara öppna och parkopplar enheterna igen. Välj **Återuppta filöverföringen** för att fortsätta från det senast kontrollerade blocket. Skanna eller klistra in den nya inbjudan i verktyget på mottagarfliken så att sidan förblir öppen.

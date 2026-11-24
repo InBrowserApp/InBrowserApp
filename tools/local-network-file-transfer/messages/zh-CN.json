@@ -38,13 +38,15 @@
   "receivedText": "收到的文本",
   "download": "下载",
   "copyText": "复制文本",
-  "saveBeforeNext": "接收下一个文件前，请先保存当前文件，否则它会被替换。",
-  "fileTooLarge": "请选择不超过 128 MiB 的文件。",
+  "removeFile": "移除文件",
+  "storageError": "接收端浏览器无法保存文件。请检查可用存储空间和浏览器权限。",
   "textTooLarge": "每次最多发送 1 MiB 的文本。",
   "badInvite": "邀请链接无效，请在另一台设备上重新生成。",
   "badReply": "回复码无效，请重新复制或扫描。",
   "cameraError": "无法使用摄像头，可改为粘贴链接或回复码。",
   "connectionError": "连接已断开或无法建立。请确认两台设备连接到同一网络，然后重新配对。",
   "transferError": "传输已中断，请重新配对后重试。",
-  "unsupported": "此浏览器无法建立直接连接，请尝试使用最新版 Chrome、Firefox、Safari 或 Edge。"
+  "unsupported": "此浏览器无法建立直接连接，请尝试使用最新版 Chrome、Firefox、Safari 或 Edge。",
+  "resumeFile": "继续传输文件",
+  "resumeHelp": "请保持两个标签页打开。与同一设备重新配对，以继续传输中断的文件。"
 }

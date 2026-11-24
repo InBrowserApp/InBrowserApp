@@ -10,4 +10,10 @@ WebRTC krypterer dataene og sender dem direkte mellom de to nettleserne. Invitas
 
 ## Hvis enhetene ikke får kontakt
 
-Gjestenett og enkelte jobbnettverk hindrer enheter i å kommunisere selv når begge bruker samme Wi-Fi. Prøv et privat nettverk der enhetene kan nå hverandre. Hvis du ikke får brukt kameraet, kan du utveksle invitasjonslenken og svarkoden i en meldingsapp eller via en annen enhet. Filer på opptil 128 MiB blir liggende i minnet til fanen som mottar filen, frem til du laster dem ned. Lagre hver fil før du mottar en ny eller lukker siden.
+Gjestenett og enkelte jobbnettverk hindrer enheter i å kommunisere selv når begge bruker samme Wi-Fi. Prøv et privat nettverk der enhetene kan nå hverandre. Hvis du ikke får brukt kameraet, kan du utveksle invitasjonslenken og svarkoden i en meldingsapp eller via en annen enhet.
+
+## Store filer og avbrutte overføringer
+
+Verktøyet kontrollerer filene blokk for blokk med SHA-256 og lagrer dem lokalt i nettleseren på mottakerenheten. Tilgjengelig lagringsplass i nettleseren avgjør hvor store filer du kan motta. Last ned hver ferdig overførte fil for å beholde en kopi.
+
+Hvis forbindelsen brytes, lar du begge de opprinnelige fanene stå åpne og kobler enhetene sammen på nytt. Velg **Gjenoppta filoverføringen** for å fortsette fra den siste kontrollerte blokken. Skann eller lim inn den nye invitasjonen i verktøyet på mottakerfanen, slik at siden forblir åpen.

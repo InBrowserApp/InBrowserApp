@@ -38,13 +38,15 @@
   "receivedText": "Ontvangen tekst",
   "download": "Downloaden",
   "copyText": "Tekst kopiëren",
-  "saveBeforeNext": "Sla het ontvangen bestand op voordat het volgende bestand het vervangt.",
-  "fileTooLarge": "Kies een bestand van maximaal 128 MiB.",
+  "removeFile": "Bestand verwijderen",
+  "storageError": "De ontvangende browser kon het bestand niet opslaan. Controleer de beschikbare opslagruimte en de browserrechten.",
   "textTooLarge": "Verstuur maximaal 1 MiB aan tekst per keer.",
   "badInvite": "Deze uitnodigingslink is ongeldig. Vraag het andere apparaat om een nieuwe link.",
   "badReply": "Deze antwoordcode is ongeldig. Kopieer of scan de code opnieuw.",
   "cameraError": "De camera is niet beschikbaar. Je kunt de link of code ook plakken.",
   "connectionError": "De verbinding is verbroken of kon niet worden gemaakt. Controleer of beide apparaten op hetzelfde netwerk zitten en koppel ze opnieuw.",
   "transferError": "De overdracht is onderbroken. Koppel de apparaten opnieuw om het nog eens te proberen.",
-  "unsupported": "Deze browser kan geen rechtstreekse verbinding maken. Probeer een recente versie van Chrome, Firefox, Safari of Edge."
+  "unsupported": "Deze browser kan geen rechtstreekse verbinding maken. Probeer een recente versie van Chrome, Firefox, Safari of Edge.",
+  "resumeFile": "Bestandsoverdracht hervatten",
+  "resumeHelp": "Laat beide tabbladen open. Maak opnieuw verbinding met hetzelfde apparaat om de bestandsoverdracht te hervatten."
 }

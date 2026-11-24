@@ -10,4 +10,10 @@ WebRTC mã hóa dữ liệu được gửi trực tiếp giữa hai trình duy�
 
 ## Khi hai thiết bị không kết nối được
 
-Wi-Fi dành cho khách và một số mạng văn phòng chặn các thiết bị liên lạc với nhau dù chúng dùng cùng Wi-Fi. Hãy thử một mạng riêng cho phép các thiết bị kết nối với nhau. Nếu không dùng được camera, hãy trao đổi liên kết mời và mã phản hồi qua ứng dụng nhắn tin hoặc thiết bị khác. Tệp tối đa 128 MiB được giữ tạm trong bộ nhớ của thẻ trình duyệt bên nhận để bạn tải xuống. Hãy lưu từng tệp trước khi nhận tệp tiếp theo hoặc đóng trang.
+Wi-Fi dành cho khách và một số mạng văn phòng chặn các thiết bị liên lạc với nhau dù chúng dùng cùng Wi-Fi. Hãy thử một mạng riêng cho phép các thiết bị kết nối với nhau. Nếu không dùng được camera, hãy trao đổi liên kết mời và mã phản hồi qua ứng dụng nhắn tin hoặc thiết bị khác.
+
+## Tệp dung lượng lớn và quá trình truyền bị gián đoạn
+
+Tệp được kiểm tra theo từng khối bằng SHA-256 rồi ghi vào bộ nhớ lưu trữ cục bộ của trình duyệt bên nhận. Kích thước tệp có thể nhận phụ thuộc vào dung lượng lưu trữ còn trống mà trình duyệt có thể dùng. Khi nhận xong, hãy tải tệp xuống để giữ một bản sao.
+
+Nếu mất kết nối, hãy giữ nguyên hai thẻ đang mở và ghép nối lại. Chọn **Tiếp tục truyền tệp** để tiếp tục từ khối cuối cùng đã được xác minh. Trên thẻ bên nhận, hãy quét hoặc dán lời mời mới ngay trong công cụ để giữ nguyên trang.

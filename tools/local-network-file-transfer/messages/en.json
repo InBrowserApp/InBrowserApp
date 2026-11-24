@@ -38,13 +38,15 @@
   "receivedText": "Received text",
   "download": "Download",
   "copyText": "Copy text",
-  "saveBeforeNext": "Save a received file before the next file replaces it.",
-  "fileTooLarge": "Choose a file up to 128 MiB.",
+  "removeFile": "Remove file",
+  "storageError": "The receiving browser could not save the file. Check its available storage and browser permissions.",
   "textTooLarge": "Send up to 1 MiB of text at a time.",
   "badInvite": "This invitation link is invalid. Ask the other device for a new one.",
   "badReply": "This reply code is invalid. Copy or scan it again.",
   "cameraError": "Could not use the camera. You can paste the link or code instead.",
   "connectionError": "The connection ended or could not be established. Check that both devices are on the same network, then pair again.",
   "transferError": "The transfer was interrupted. Pair again to retry.",
-  "unsupported": "This browser cannot create a direct connection. Try a current version of Chrome, Firefox, Safari, or Edge."
+  "unsupported": "This browser cannot create a direct connection. Try a current version of Chrome, Firefox, Safari, or Edge.",
+  "resumeFile": "Resume file transfer",
+  "resumeHelp": "Keep both tabs open. Pair again with the same device to resume the interrupted file."
 }

@@ -38,13 +38,15 @@
   "receivedText": "Texte reçu",
   "download": "Télécharger",
   "copyText": "Copier le texte",
-  "saveBeforeNext": "Enregistrez le fichier reçu avant que le suivant le remplace.",
-  "fileTooLarge": "Choisissez un fichier de 128 Mio maximum.",
+  "removeFile": "Retirer le fichier",
+  "storageError": "Le navigateur de réception n’a pas pu enregistrer le fichier. Vérifiez l’espace disponible et les autorisations du navigateur.",
   "textTooLarge": "Envoyez jusqu’à 1 Mio de texte à la fois.",
   "badInvite": "Ce lien d’invitation est invalide. Générez un nouveau lien sur l’autre appareil.",
   "badReply": "Ce code de réponse est invalide. Copiez-le ou scannez-le à nouveau.",
   "cameraError": "Impossible d’utiliser la caméra. Vous pouvez coller le lien ou le code.",
   "connectionError": "La connexion a été interrompue ou n’a pas pu être établie. Vérifiez que les deux appareils sont sur le même réseau, puis associez-les à nouveau.",
   "transferError": "Le transfert a été interrompu. Associez à nouveau les appareils pour réessayer.",
-  "unsupported": "Ce navigateur ne peut pas établir de connexion directe. Essayez une version récente de Chrome, Firefox, Safari ou Edge."
+  "unsupported": "Ce navigateur ne peut pas établir de connexion directe. Essayez une version récente de Chrome, Firefox, Safari ou Edge.",
+  "resumeFile": "Reprendre le transfert",
+  "resumeHelp": "Gardez les deux onglets ouverts. Associez à nouveau le même appareil pour reprendre le transfert du fichier."
 }

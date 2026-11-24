@@ -10,4 +10,10 @@ WebRTC chiffre les données et les transfère directement d’un navigateur à l
 
 ## Si les appareils ne se connectent pas
 
-Les réseaux Wi-Fi invités et certains réseaux d’entreprise empêchent les appareils de communiquer entre eux, même s’ils sont sur le même Wi-Fi. Essayez un réseau privé où les appareils peuvent se joindre. Si la caméra est indisponible, échangez le lien d’invitation et le code de réponse via une messagerie ou un autre appareil. Les fichiers de 128 Mio maximum restent en mémoire dans l’onglet de réception le temps de les télécharger. Enregistrez chaque fichier avant d’en recevoir un autre ou de fermer la page.
+Les réseaux Wi-Fi invités et certains réseaux d’entreprise empêchent les appareils de communiquer entre eux, même s’ils sont sur le même Wi-Fi. Essayez un réseau privé où les appareils peuvent se joindre. Si la caméra est indisponible, échangez le lien d’invitation et le code de réponse via une messagerie ou un autre appareil.
+
+## Fichiers volumineux et transferts interrompus
+
+L’intégrité des fichiers est vérifiée bloc par bloc avec SHA-256. Les données sont enregistrées dans le stockage local du navigateur qui reçoit le fichier. L’espace disponible dans ce navigateur détermine la taille des fichiers que vous pouvez recevoir. Téléchargez chaque fichier une fois le transfert terminé pour en garder une copie.
+
+Si la connexion est interrompue, laissez les deux onglets d’origine ouverts et associez à nouveau les appareils. Sélectionnez **Reprendre le transfert** pour continuer à partir du dernier bloc vérifié. Dans l’onglet de réception, scannez ou collez la nouvelle invitation directement dans l’outil pour garder la page ouverte.

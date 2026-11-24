@@ -36,9 +36,9 @@ describe("QR and clipboard pairing", () => {
       decodePairing("https://example.test", "offer")
     ).rejects.toThrow("Invalid pairing code")
     await expect(
-      decodePairing("lan1-answer.zzzz", "answer")
+      decodePairing("lan2-answer.zzzz", "answer")
     ).rejects.toBeInstanceOf(Error)
-    await expect(decodePairing("lan1-answer.<>", "answer")).rejects.toThrow(
+    await expect(decodePairing("lan2-answer.<>", "answer")).rejects.toThrow(
       "Invalid pairing code"
     )
     const tooLarge = await encodePairing("answer", sdp.repeat(800))

@@ -38,13 +38,15 @@
   "receivedText": "Mottatt tekst",
   "download": "Last ned",
   "copyText": "Kopier tekst",
-  "saveBeforeNext": "Lagre den mottatte filen før den erstattes av neste fil.",
-  "fileTooLarge": "Velg en fil på opptil 128 MiB.",
+  "removeFile": "Fjern fil",
+  "storageError": "Nettleseren på mottakerenheten kunne ikke lagre filen. Sjekk tilgjengelig lagringsplass og nettleserens tillatelser.",
   "textTooLarge": "Send opptil 1 MiB tekst om gangen.",
   "badInvite": "Invitasjonslenken er ugyldig. Be om en ny lenke fra den andre enheten.",
   "badReply": "Svarkoden er ugyldig. Kopier eller skann den på nytt.",
   "cameraError": "Kunne ikke bruke kameraet. Du kan lime inn lenken eller koden i stedet.",
   "connectionError": "Tilkoblingen ble brutt eller kunne ikke opprettes. Sjekk at begge enhetene er på samme nettverk, og koble dem til på nytt.",
   "transferError": "Overføringen ble avbrutt. Koble til på nytt for å prøve igjen.",
-  "unsupported": "Denne nettleseren kan ikke opprette en direkte tilkobling. Prøv en nyere versjon av Chrome, Firefox, Safari eller Edge."
+  "unsupported": "Denne nettleseren kan ikke opprette en direkte tilkobling. Prøv en nyere versjon av Chrome, Firefox, Safari eller Edge.",
+  "resumeFile": "Gjenoppta filoverføringen",
+  "resumeHelp": "La begge fanene stå åpne. Koble til samme enhet på nytt for å gjenoppta filoverføringen."
 }

@@ -10,4 +10,10 @@ WebRTC menyulitkan data yang dihantar terus antara kedua-dua pelayar. Jemputan d
 
 ## Jika peranti tidak dapat disambungkan
 
-Wi-Fi tetamu dan sesetengah rangkaian pejabat menyekat sambungan antara peranti walaupun kedua-duanya menggunakan Wi-Fi yang sama. Cuba rangkaian peribadi yang membenarkan peranti berhubung. Jika kamera tidak dapat digunakan, tukar pautan jemputan dan kod balasan melalui aplikasi pemesejan atau peranti lain. Fail sehingga 128 MiB disimpan sementara dalam memori tab penerima untuk dimuat turun. Simpan setiap fail sebelum menerima fail seterusnya atau menutup halaman.
+Wi-Fi tetamu dan sesetengah rangkaian pejabat menyekat sambungan antara peranti walaupun kedua-duanya menggunakan Wi-Fi yang sama. Cuba rangkaian peribadi yang membenarkan peranti berhubung. Jika kamera tidak dapat digunakan, tukar pautan jemputan dan kod balasan melalui aplikasi pemesejan atau peranti lain.
+
+## Fail besar dan pindahan yang terganggu
+
+Setiap blok fail disemak dengan SHA-256 lalu ditulis ke storan setempat pelayar penerima. Saiz fail yang boleh diterima bergantung pada ruang storan yang tersedia dalam pelayar. Muat turun setiap fail yang selesai diterima untuk menyimpan salinannya.
+
+Jika sambungan terputus, biarkan kedua-dua tab asal terbuka dan gandingkan semula peranti. Pilih **Sambung semula pindahan fail** untuk menyambung dari blok terakhir yang telah disahkan. Pada tab penerima, imbas atau tampal jemputan baharu dalam alat ini supaya halaman kekal terbuka.

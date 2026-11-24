@@ -38,13 +38,15 @@
   "receivedText": "Testo ricevuto",
   "download": "Scarica",
   "copyText": "Copia testo",
-  "saveBeforeNext": "Salva il file ricevuto prima che venga sostituito dal successivo.",
-  "fileTooLarge": "Scegli un file di massimo 128 MiB.",
+  "removeFile": "Rimuovi file",
+  "storageError": "Il browser che riceve il file non è riuscito a salvarlo. Controlla lo spazio disponibile e le autorizzazioni del browser.",
   "textTooLarge": "Invia fino a 1 MiB di testo alla volta.",
   "badInvite": "Il link di invito non è valido. Creane uno nuovo sull’altro dispositivo.",
   "badReply": "Il codice di risposta non è valido. Copialo o scansionalo di nuovo.",
   "cameraError": "Impossibile usare la fotocamera. Puoi incollare il link o il codice.",
   "connectionError": "La connessione si è interrotta o non è riuscita. Verifica che entrambi i dispositivi siano sulla stessa rete, poi collegali di nuovo.",
   "transferError": "Il trasferimento si è interrotto. Collega di nuovo i dispositivi per riprovare.",
-  "unsupported": "Questo browser non può stabilire una connessione diretta. Prova una versione recente di Chrome, Firefox, Safari o Edge."
+  "unsupported": "Questo browser non può stabilire una connessione diretta. Prova una versione recente di Chrome, Firefox, Safari o Edge.",
+  "resumeFile": "Riprendi il trasferimento",
+  "resumeHelp": "Lascia aperte entrambe le schede. Ricollegati allo stesso dispositivo per riprendere il trasferimento del file."
 }

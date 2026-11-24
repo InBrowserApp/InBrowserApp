@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { createFileStorage, StorageError } from "./file-storage"
 import { decodePairing, localPairing } from "./pairing"
 import { attachTransfer } from "./transfer"
 import type { Messages } from "./types"
@@ -15,13 +16,19 @@ type Session = {
 
 export function useConnection() {
   const session = useRef<Session | null>(null)
+  const [storage] = useState(createFileStorage)
+  const [fileIds] = useState(() => new WeakMap<File, string>())
+  const [resumeFile, setResumeFile] = useState<File>()
   const [phase, setPhase] = useState<Phase>("home")
   const [pending, setPending] = useState(false)
   const [code, setCode] = useState("")
   const [error, setError] = useState<keyof Messages>()
   const [outgoing, setOutgoing] = useState<number | File | string | null>(null)
   const [incoming, setIncoming] = useState<number | null>(null)
-  const [receivedFile, setReceivedFile] = useState<File>()
+  const [receivingFile, setReceivingFile] = useState(false)
+  const [receivedFiles, setReceivedFiles] = useState<
+    { file: File; name: string }[]
+  >([])
   const [receivedText, setReceivedText] = useState<string>()
 
   function reset(nextError?: keyof Messages, nextPhase: Phase = "home") {
@@ -35,7 +42,13 @@ export function useConnection() {
     setIncoming(null)
   }
 
-  useEffect(() => () => closeSession(session.current), [])
+  useEffect(
+    () => () => {
+      closeSession(session.current)
+      void storage.dispose()
+    },
+    [storage]
+  )
 
   function openSession() {
     const peer = new RTCPeerConnection({ iceServers: [] })
@@ -59,14 +72,24 @@ export function useConnection() {
         channel,
         {
           received(data) {
-            if (data.kind === "file") setReceivedFile(data.file)
-            else setReceivedText(data.text)
+            if (data.kind === "file") {
+              setReceivedFiles((files) =>
+                files.some(({ file }) => file.name === data.file.name)
+                  ? files
+                  : [data, ...files]
+              )
+            } else setReceivedText(data.text)
           },
           receivedProgress: setIncoming,
+          receivingFile: setReceivingFile,
           sentProgress: setOutgoing,
-          failed: () => fail("transferError"),
+          failed: (reason) => {
+            if (reason) setError(reason)
+            else fail("transferError")
+          },
         },
-        controller.signal
+        controller.signal,
+        storage
       )
     }
 
@@ -98,7 +121,9 @@ export function useConnection() {
     if (
       typeof RTCPeerConnection === "undefined" ||
       typeof CompressionStream === "undefined" ||
-      typeof DecompressionStream === "undefined"
+      typeof DecompressionStream === "undefined" ||
+      !globalThis.crypto?.subtle ||
+      typeof globalThis.crypto?.randomUUID !== "function"
     ) {
       reset("unsupported")
       return
@@ -164,14 +189,47 @@ export function useConnection() {
     const active = session.current
     if (!active?.send || active.sending) return
     active.sending = true
+    setError(undefined)
     setOutgoing(0)
+    const file = typeof value === "string" ? undefined : value
+    const id = (file && fileIds.get(file)) || crypto.randomUUID()
+    if (file) {
+      fileIds.set(file, id)
+      setResumeFile(file)
+    }
     try {
-      await active.send(value)
-      if (!active.controller.signal.aborted) setOutgoing(value)
-    } catch {
-      if (!active.controller.signal.aborted) reset("transferError")
+      await active.send(value, id)
+      if (!active.controller.signal.aborted) {
+        setOutgoing(value)
+        if (file) {
+          fileIds.delete(file)
+          setResumeFile(undefined)
+        }
+      }
+    } catch (error) {
+      if (!active.controller.signal.aborted) {
+        if (error instanceof StorageError) {
+          if (file) fileIds.delete(file)
+          setResumeFile(undefined)
+          setError("storageError")
+          setOutgoing(null)
+        } else {
+          reset("transferError")
+        }
+      }
     } finally {
       active.sending = false
+    }
+  }
+
+  async function removeFile(file: File) {
+    try {
+      await storage.removeCompleted(file.name)
+      setReceivedFiles((files) =>
+        files.filter((received) => received.file.name !== file.name)
+      )
+    } catch {
+      setError("storageError")
     }
   }
 
@@ -182,8 +240,11 @@ export function useConnection() {
     error,
     outgoing,
     incoming,
-    receivedFile,
+    receivedFiles,
+    removeFile,
     receivedText,
+    resumeFile,
+    receivingFile,
     begin,
     reply,
     send,

@@ -12,7 +12,9 @@ export default function LocalTransferClient({
   const connection = useConnection()
   const [file, setFile] = useState<File>()
   const [text, setText] = useState("")
-  const { error, phase, receivedFile, receivedText } = connection
+  const [mode, setMode] = useState<"file" | "text">("file")
+  const { error, phase, receivedFiles, receivedText } = connection
+  const canResume = connection.resumeFile || connection.receivingFile
   const begin = useEffectEvent(connection.begin)
 
   useEffect(() => {
@@ -34,17 +36,20 @@ export default function LocalTransferClient({
           {messages[error]}
         </p>
       )}
+      {canResume && (phase === "home" || phase === "receive") && (
+        <p className="text-sm text-muted-foreground">{messages.resumeHelp}</p>
+      )}
       <div className="min-w-0 overflow-hidden rounded-2xl border bg-muted/20">
         {phase === "connected" ? (
           <TransferPanel
             messages={messages}
             connection={connection}
-            draft={{ file, setFile, text, setText }}
+            draft={{ file, setFile, text, setText, mode, setMode }}
           />
         ) : (
           <PairingPanel messages={messages} connection={connection} />
         )}
-        {(receivedFile || receivedText !== undefined) && (
+        {(receivedFiles.length > 0 || receivedText !== undefined) && (
           <ReceivedPanel messages={messages} connection={connection} />
         )}
       </div>

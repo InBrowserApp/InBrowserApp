@@ -10,4 +10,10 @@ WebRTC szyfruje dane i przesyła je bezpośrednio między dwiema przeglądarkami
 
 ## Co zrobić, gdy urządzenia nie mogą się połączyć?
 
-Sieci dla gości i niektóre sieci biurowe blokują komunikację między urządzeniami, nawet gdy oba są połączone z tą samą siecią Wi-Fi. Wypróbuj prywatną sieć, która pozwala urządzeniom komunikować się ze sobą. Jeśli nie możesz użyć aparatu, wymień link z zaproszeniem i kod odpowiedzi przez komunikator lub inne urządzenie. Pliki o rozmiarze do 128 MiB są przechowywane w pamięci karty odbierającej do czasu pobrania. Zapisz każdy plik przed odebraniem następnego lub zamknięciem strony.
+Sieci dla gości i niektóre sieci biurowe blokują komunikację między urządzeniami, nawet gdy oba są połączone z tą samą siecią Wi-Fi. Wypróbuj prywatną sieć, która pozwala urządzeniom komunikować się ze sobą. Jeśli nie możesz użyć aparatu, wymień link z zaproszeniem i kod odpowiedzi przez komunikator lub inne urządzenie.
+
+## Duże pliki i przerwane przesyłanie
+
+Narzędzie sprawdza pliki blok po bloku za pomocą SHA-256 i zapisuje je w lokalnej pamięci przeglądarki na urządzeniu odbierającym. Maksymalny rozmiar pliku zależy od ilości dostępnego miejsca w tej przeglądarce. Pobierz każdy plik po zakończeniu przesyłania, aby zachować jego kopię.
+
+Jeśli połączenie zostanie przerwane, pozostaw obie dotychczasowe karty otwarte i połącz urządzenia ponownie. Wybierz **Wznów przesyłanie pliku**, aby kontynuować od ostatniego sprawdzonego bloku. Na karcie odbierającej zeskanuj lub wklej nowe zaproszenie w narzędziu, aby strona pozostała otwarta.

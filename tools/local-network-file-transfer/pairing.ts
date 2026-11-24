@@ -1,6 +1,6 @@
 type PairingType = "offer" | "answer"
 
-const prefix = (type: PairingType) => `lan1-${type}.`
+const prefix = (type: PairingType) => `lan2-${type}.`
 
 export async function encodePairing(type: PairingType, sdp: string) {
   const stream = new Blob([sdp])

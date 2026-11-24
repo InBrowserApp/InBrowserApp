@@ -8,9 +8,10 @@ import {
   Check,
   FileText,
   Paperclip,
+  Trash2,
   Upload,
 } from "@workspace/ui/icons"
-import { FILE_LIMIT, TEXT_LIMIT } from "./transfer"
+import { TEXT_LIMIT } from "./transfer"
 import type { Messages } from "./types"
 import type { useConnection } from "./use-connection"
 
@@ -20,6 +21,8 @@ type Draft = Readonly<{
   setFile: (file: File | undefined) => void
   text: string
   setText: (text: string) => void
+  mode: "file" | "text"
+  setMode: (mode: "file" | "text") => void
 }>
 
 export function TransferPanel({
@@ -28,9 +31,7 @@ export function TransferPanel({
   draft,
 }: Readonly<{ messages: Messages; connection: Connection; draft: Draft }>) {
   const id = useId()
-  const [mode, setMode] = useState<"file" | "text">(
-    draft.text && !draft.file ? "text" : "file"
-  )
+  const { mode, setMode } = draft
   const [dragging, setDragging] = useState(false)
   const { outgoing } = c
   const sending = typeof outgoing === "number"
@@ -39,9 +40,7 @@ export function TransferPanel({
     () => new Blob([draft.text]).size > TEXT_LIMIT,
     [draft.text]
   )
-  const tooLarge = fileMode
-    ? (draft.file?.size ?? 0) > FILE_LIMIT
-    : textTooLarge
+  const tooLarge = !fileMode && textTooLarge
   const value = fileMode ? draft.file : draft.text
 
   return (
@@ -90,14 +89,14 @@ export function TransferPanel({
           className={`grid cursor-pointer justify-items-center gap-2 rounded-xl border border-dashed p-6 text-center text-sm focus-within:ring-2 focus-within:ring-ring hover:bg-muted/50 ${dragging ? "border-primary bg-primary/10" : "bg-background"}`}
           onDragOver={(event) => {
             event.preventDefault()
-            setDragging(true)
+            if (!sending) setDragging(true)
           }}
           onDragLeave={() => setDragging(false)}
           onDrop={(event) => {
             event.preventDefault()
             setDragging(false)
             const file = event.dataTransfer.files[0]
-            if (file) draft.setFile(file)
+            if (file && !sending) draft.setFile(file)
           }}
         >
           <Upload aria-hidden="true" className="size-6 text-muted-foreground" />
@@ -109,6 +108,7 @@ export function TransferPanel({
           )}
           <input
             type="file"
+            disabled={sending}
             aria-label={m.chooseFile}
             className="sr-only"
             onChange={(event) => {
@@ -135,7 +135,7 @@ export function TransferPanel({
       )}
       {tooLarge && (
         <p role="status" className="text-sm text-destructive">
-          {fileMode ? m.fileTooLarge : m.textTooLarge}
+          {m.textTooLarge}
         </p>
       )}
       <div className="flex flex-wrap items-center gap-3">
@@ -146,7 +146,11 @@ export function TransferPanel({
             if (value) void c.send(value)
           }}
         >
-          {fileMode ? m.sendFile : m.sendText}
+          {fileMode
+            ? c.resumeFile && c.resumeFile === value && !sending
+              ? m.resumeFile
+              : m.sendFile
+            : m.sendText}
           <ArrowRight aria-hidden="true" className="rtl:rotate-180" />
         </Button>
         {outgoing === value && (
@@ -183,23 +187,38 @@ export function ReceivedPanel({
   messages: m,
   connection: c,
 }: Readonly<{ messages: Messages; connection: Connection }>) {
-  const file = c.receivedFile
   return (
     <div className="grid gap-3 border-t bg-background p-5 sm:p-7">
-      {file && (
-        <div className="grid gap-2 rounded-xl border p-4">
+      {c.receivedFiles.map((received) => (
+        <div
+          key={received.file.name}
+          className="grid gap-2 rounded-xl border p-4"
+        >
           <h2 className="text-sm font-semibold">{m.receivedFile}</h2>
           <div className="flex min-w-0 flex-wrap items-center justify-between gap-2">
-            <bdi className="min-w-0 flex-1 text-sm break-all">{file.name}</bdi>
-            <DocumentDownload
-              file={file}
-              filename={file.name}
-              label={m.download}
-            />
+            <bdi className="min-w-0 flex-1 text-sm break-all">
+              {received.name}
+            </bdi>
+            <div className="flex flex-wrap items-center gap-2">
+              <DocumentDownload
+                file={received.file}
+                filename={received.name}
+                label={m.download}
+              />
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                aria-label={m.removeFile}
+                title={m.removeFile}
+                onClick={() => void c.removeFile(received.file)}
+              >
+                <Trash2 aria-hidden="true" />
+              </Button>
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground">{m.saveBeforeNext}</p>
         </div>
-      )}
+      ))}
       {c.receivedText !== undefined && (
         <div className="grid gap-2 rounded-xl border p-4">
           <h2 className="text-sm font-semibold">{m.receivedText}</h2>

@@ -38,13 +38,15 @@
   "receivedText": "Odebrany tekst",
   "download": "Pobierz",
   "copyText": "Skopiuj tekst",
-  "saveBeforeNext": "Zapisz odebrany plik, zanim zastąpi go kolejny.",
-  "fileTooLarge": "Wybierz plik o rozmiarze do 128 MiB.",
+  "removeFile": "Usuń plik",
+  "storageError": "Przeglądarka na urządzeniu odbierającym nie mogła zapisać pliku. Sprawdź dostępne miejsce i uprawnienia przeglądarki.",
   "textTooLarge": "Możesz wysłać do 1 MiB tekstu naraz.",
   "badInvite": "Ten link z zaproszeniem jest nieprawidłowy. Utwórz nowy link na drugim urządzeniu.",
   "badReply": "Ten kod odpowiedzi jest nieprawidłowy. Skopiuj lub zeskanuj go ponownie.",
   "cameraError": "Nie udało się uruchomić aparatu. Zamiast tego możesz wkleić link lub kod.",
   "connectionError": "Połączenie zostało przerwane lub nie udało się go nawiązać. Sprawdź, czy oba urządzenia są w tej samej sieci, i połącz je ponownie.",
   "transferError": "Przesyłanie zostało przerwane. Połącz urządzenia ponownie, aby spróbować jeszcze raz.",
-  "unsupported": "Ta przeglądarka nie może nawiązać bezpośredniego połączenia. Wypróbuj aktualną wersję Chrome, Firefoksa, Safari lub Edge."
+  "unsupported": "Ta przeglądarka nie może nawiązać bezpośredniego połączenia. Wypróbuj aktualną wersję Chrome, Firefoksa, Safari lub Edge.",
+  "resumeFile": "Wznów przesyłanie pliku",
+  "resumeHelp": "Pozostaw obie karty otwarte. Połącz się ponownie z tym samym urządzeniem, aby wznowić przesyłanie pliku."
 }

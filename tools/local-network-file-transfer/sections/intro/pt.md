@@ -10,4 +10,10 @@ O WebRTC criptografa os dados e os transfere diretamente entre os navegadores. O
 
 ## Se os dispositivos não se conectarem
 
-Redes Wi-Fi de convidados e algumas redes de escritório impedem que os dispositivos se comuniquem entre si mesmo quando estão no mesmo Wi-Fi. Tente usar uma rede privada que permita a comunicação entre eles. Se a câmera não estiver disponível, troque o link de convite e o código de resposta por um aplicativo de mensagens ou outro dispositivo. Arquivos de até 128 MiB ficam na memória da aba que os recebe enquanto você faz o download. Salve cada arquivo antes de receber outro ou fechar a página.
+Redes Wi-Fi de convidados e algumas redes de escritório impedem que os dispositivos se comuniquem entre si mesmo quando estão no mesmo Wi-Fi. Tente usar uma rede privada que permita a comunicação entre eles. Se a câmera não estiver disponível, troque o link de convite e o código de resposta por um aplicativo de mensagens ou outro dispositivo.
+
+## Arquivos grandes e transferências interrompidas
+
+A integridade dos arquivos é verificada bloco a bloco com SHA-256. Os dados são gravados no armazenamento local do navegador que recebe o arquivo. O espaço disponível nesse navegador determina o tamanho dos arquivos que você pode receber. Baixe cada arquivo ao final da transferência para guardar uma cópia.
+
+Se a conexão cair, mantenha as duas abas originais abertas e emparelhe os dispositivos de novo. Selecione **Retomar transferência do arquivo** para continuar a partir do último bloco verificado. Na aba receptora, escaneie ou cole o novo convite dentro da ferramenta para manter a página aberta.

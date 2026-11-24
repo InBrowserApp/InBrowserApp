@@ -38,13 +38,15 @@
   "receivedText": "Teks yang diterima",
   "download": "Muat turun",
   "copyText": "Salin teks",
-  "saveBeforeNext": "Simpan fail yang diterima sebelum fail seterusnya menggantikannya.",
-  "fileTooLarge": "Pilih fail bersaiz sehingga 128 MiB.",
+  "removeFile": "Alih keluar fail",
+  "storageError": "Pelayar penerima tidak dapat menyimpan fail. Semak ruang storan yang tersedia dan kebenaran pelayar.",
   "textTooLarge": "Hantar sehingga 1 MiB teks pada satu masa.",
   "badInvite": "Pautan jemputan ini tidak sah. Minta jemputan baharu daripada peranti lain.",
   "badReply": "Kod balasan ini tidak sah. Salin atau imbas semula.",
   "cameraError": "Kamera tidak dapat digunakan. Anda boleh tampal pautan atau kod.",
   "connectionError": "Sambungan terputus atau tidak dapat dibuat. Pastikan kedua-dua peranti berada pada rangkaian yang sama, kemudian gandingkan semula.",
   "transferError": "Pindahan terganggu. Gandingkan semula peranti untuk mencuba lagi.",
-  "unsupported": "Pelayar ini tidak dapat membuat sambungan terus. Cuba versi terkini Chrome, Firefox, Safari atau Edge."
+  "unsupported": "Pelayar ini tidak dapat membuat sambungan terus. Cuba versi terkini Chrome, Firefox, Safari atau Edge.",
+  "resumeFile": "Sambung semula pindahan fail",
+  "resumeHelp": "Biarkan kedua-dua tab terbuka. Gandingkan semula peranti yang sama untuk menyambung pindahan fail yang terganggu."
 }

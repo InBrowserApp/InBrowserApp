@@ -92,7 +92,8 @@ describe("local network transfer tool", () => {
     fireEvent.click(screen.getByRole("button", { name: messages.sendText }))
     await screen.findByText(messages.sent)
     expect(attachTransfer.mock.results[0]?.value).toHaveBeenCalledWith(
-      "first note"
+      "first note",
+      expect.any(String)
     )
     fireEvent.change(draft, { target: { value: "second note" } })
     expect(screen.queryByText(messages.sent)).toBeNull()

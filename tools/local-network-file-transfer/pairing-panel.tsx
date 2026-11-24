@@ -183,7 +183,11 @@ export function PairingPanel({
           <div className="grid min-w-0 content-start justify-items-start gap-3">
             <h2 className="text-lg font-semibold">{codeTitle}</h2>
             <p className="text-sm text-muted-foreground">
-              {invite ? m.inviteHelp : m.replyHelp}
+              {invite
+                ? c.resumeFile || c.receivingFile
+                  ? `${m.resumeHelp} ${m.receiveHelp}`
+                  : m.inviteHelp
+                : m.replyHelp}
             </p>
             <PairingQr key={c.code} value={c.code} label={codeTitle} />
             <ToolCopyButton

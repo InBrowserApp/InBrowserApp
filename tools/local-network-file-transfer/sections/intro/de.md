@@ -10,4 +10,10 @@ WebRTC verschlüsselt die Daten und überträgt sie direkt zwischen den Browsern
 
 ## Wenn sich die Geräte nicht verbinden lassen
 
-Gast-WLANs und manche Büronetzwerke verhindern, dass Geräte miteinander kommunizieren, selbst wenn sie im selben WLAN sind. Versuche es mit einem privaten Netzwerk, in dem sich die Geräte gegenseitig erreichen können. Falls du die Kamera nicht verwenden kannst, tausche den Einladungslink und den Antwortcode über eine Messenger-App oder ein anderes Gerät aus. Dateien bis 128 MiB werden zum Herunterladen im Speicher des empfangenden Tabs gehalten. Speichere jede Datei, bevor du die nächste empfängst oder die Seite schließt.
+Gast-WLANs und manche Büronetzwerke verhindern, dass Geräte miteinander kommunizieren, selbst wenn sie im selben WLAN sind. Versuche es mit einem privaten Netzwerk, in dem sich die Geräte gegenseitig erreichen können. Falls du die Kamera nicht verwenden kannst, tausche den Einladungslink und den Antwortcode über eine Messenger-App oder ein anderes Gerät aus.
+
+## Große Dateien und unterbrochene Übertragungen
+
+Die Dateien werden blockweise mit SHA-256 geprüft und lokal im Browser auf dem empfangenden Gerät gespeichert. Wie groß eine Datei sein darf, hängt vom verfügbaren Speicherplatz im Browser ab. Lade jede vollständig übertragene Datei herunter, um eine Kopie zu behalten.
+
+Falls die Verbindung abbricht, lass die beiden ursprünglichen Tabs geöffnet und verbinde die Geräte erneut. Wähle **Dateiübertragung fortsetzen**, um ab dem letzten geprüften Block weiterzumachen. Scanne die neue Einladung im empfangenden Tab direkt im Tool oder füge sie dort ein, damit die Seite geöffnet bleibt.

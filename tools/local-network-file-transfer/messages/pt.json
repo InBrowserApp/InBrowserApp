@@ -38,13 +38,15 @@
   "receivedText": "Texto recebido",
   "download": "Baixar",
   "copyText": "Copiar texto",
-  "saveBeforeNext": "Salve o arquivo recebido antes que o próximo o substitua.",
-  "fileTooLarge": "Escolha um arquivo de até 128 MiB.",
+  "removeFile": "Remover arquivo",
+  "storageError": "O navegador que recebeu o arquivo não conseguiu salvá-lo. Verifique o espaço disponível e as permissões do navegador.",
   "textTooLarge": "Envie até 1 MiB de texto por vez.",
   "badInvite": "Este link de convite é inválido. Crie outro link no outro dispositivo.",
   "badReply": "Este código de resposta é inválido. Copie ou escaneie o código de novo.",
   "cameraError": "Não foi possível usar a câmera. Você pode colar o link ou o código.",
   "connectionError": "A conexão caiu ou não pôde ser estabelecida. Verifique se os dois dispositivos estão na mesma rede e emparelhe-os de novo.",
   "transferError": "A transferência foi interrompida. Emparelhe os dispositivos de novo para tentar outra vez.",
-  "unsupported": "Este navegador não consegue estabelecer uma conexão direta. Experimente uma versão recente do Chrome, Firefox, Safari ou Edge."
+  "unsupported": "Este navegador não consegue estabelecer uma conexão direta. Experimente uma versão recente do Chrome, Firefox, Safari ou Edge.",
+  "resumeFile": "Retomar transferência do arquivo",
+  "resumeHelp": "Mantenha as duas abas abertas. Emparelhe de novo com o mesmo dispositivo para retomar a transferência."
 }

@@ -38,13 +38,15 @@
   "receivedText": "Alınan metin",
   "download": "İndir",
   "copyText": "Metni kopyala",
-  "saveBeforeNext": "Gelen dosyayı kaydedin. Bir sonraki dosya onun yerini alır.",
-  "fileTooLarge": "En fazla 128 MiB boyutunda bir dosya seçin.",
+  "removeFile": "Dosyayı kaldır",
+  "storageError": "Alıcı tarayıcı dosyayı kaydedemedi. Kullanılabilir depolama alanını ve tarayıcı izinlerini kontrol edin.",
   "textTooLarge": "Tek seferde en fazla 1 MiB metin gönderin.",
   "badInvite": "Bu davet bağlantısı geçersiz. Diğer cihazdan yeni bir davet isteyin.",
   "badReply": "Bu yanıt kodu geçersiz. Kodu yeniden kopyalayın veya tarayın.",
   "cameraError": "Kamera kullanılamadı. Bağlantıyı veya kodu yapıştırabilirsiniz.",
   "connectionError": "Bağlantı kesildi veya kurulamadı. İki cihazın aynı ağda olduğundan emin olun, ardından yeniden eşleştirin.",
   "transferError": "Aktarım kesildi. Yeniden denemek için cihazları tekrar eşleştirin.",
-  "unsupported": "Bu tarayıcı doğrudan bağlantı kuramıyor. Chrome, Firefox, Safari veya Edge’in güncel bir sürümünü deneyin."
+  "unsupported": "Bu tarayıcı doğrudan bağlantı kuramıyor. Chrome, Firefox, Safari veya Edge’in güncel bir sürümünü deneyin.",
+  "resumeFile": "Dosya aktarımını sürdür",
+  "resumeHelp": "İki sekmeyi de açık tutun. Yarım kalan dosya aktarımını sürdürmek için aynı cihazla yeniden eşleştirin."
 }

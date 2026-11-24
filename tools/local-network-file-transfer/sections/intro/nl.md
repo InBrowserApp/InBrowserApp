@@ -10,4 +10,10 @@ WebRTC versleutelt de gegevens en verstuurt ze rechtstreeks tussen de twee brows
 
 ## Als de apparaten geen verbinding kunnen maken
 
-Op gastnetwerken en sommige bedrijfsnetwerken kunnen apparaten elkaar niet bereiken, ook als ze op hetzelfde wifi-netwerk zitten. Probeer een privénetwerk waarop apparaten met elkaar mogen communiceren. Als je de camera niet kunt gebruiken, wissel je de uitnodigingslink en antwoordcode uit via een berichtenapp of een ander apparaat. Bestanden tot 128 MiB blijven in het geheugen van het ontvangende tabblad totdat je ze downloadt. Sla elk bestand op voordat je het volgende ontvangt of de pagina sluit.
+Op gastnetwerken en sommige bedrijfsnetwerken kunnen apparaten elkaar niet bereiken, ook als ze op hetzelfde wifi-netwerk zitten. Probeer een privénetwerk waarop apparaten met elkaar mogen communiceren. Als je de camera niet kunt gebruiken, wissel je de uitnodigingslink en antwoordcode uit via een berichtenapp of een ander apparaat.
+
+## Grote bestanden en onderbroken overdrachten
+
+De tool controleert bestanden per blok met SHA-256 en schrijft ze naar de lokale opslag van de ontvangende browser. Hoe groot een bestand mag zijn, hangt af van de beschikbare opslagruimte van die browser. Download elk volledig ontvangen bestand om een kopie te bewaren.
+
+Als de verbinding wegvalt, laat dan beide oorspronkelijke tabbladen open en koppel de apparaten opnieuw. Kies **Bestandsoverdracht hervatten** om verder te gaan vanaf het laatste gecontroleerde blok. Scan of plak de nieuwe uitnodiging in het ontvangende tabblad binnen de tool, zodat de pagina open blijft.

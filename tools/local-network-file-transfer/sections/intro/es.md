@@ -10,4 +10,10 @@ WebRTC cifra los datos y los envía directamente entre los navegadores. El enlac
 
 ## Si los dispositivos no se conectan
 
-Las redes Wi-Fi para invitados y algunas redes de oficina impiden que los dispositivos se comuniquen entre sí aunque estén conectados a la misma red. Prueba con una red privada que permita el acceso entre dispositivos. Si no puedes usar la cámara, intercambia el enlace de invitación y el código de respuesta mediante una aplicación de mensajería u otro dispositivo. Los archivos de hasta 128 MiB se guardan en la memoria de la pestaña receptora mientras los descargas. Guarda cada archivo antes de recibir otro o cerrar la página.
+Las redes Wi-Fi para invitados y algunas redes de oficina impiden que los dispositivos se comuniquen entre sí aunque estén conectados a la misma red. Prueba con una red privada que permita el acceso entre dispositivos. Si no puedes usar la cámara, intercambia el enlace de invitación y el código de respuesta mediante una aplicación de mensajería u otro dispositivo.
+
+## Archivos grandes y transferencias interrumpidas
+
+La integridad de los archivos se verifica bloque a bloque con SHA-256. Los datos se guardan en el almacenamiento local del navegador receptor. El espacio disponible en el navegador determina el tamaño de los archivos que puedes recibir. Descarga cada archivo cuando termine la transferencia para conservar una copia.
+
+Si se pierde la conexión, mantén abiertas las dos pestañas originales y vuelve a vincular los dispositivos. Selecciona **Reanudar la transferencia del archivo** para continuar desde el último bloque verificado. En la pestaña receptora, escanea o pega la nueva invitación dentro de la herramienta para mantener abierta la página.

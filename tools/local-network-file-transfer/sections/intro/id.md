@@ -10,4 +10,10 @@ WebRTC mengenkripsi data yang dikirim langsung dari satu browser ke browser lain
 
 ## Jika perangkat tidak bisa terhubung
 
-Wi-Fi tamu dan beberapa jaringan kantor mencegah perangkat saling terhubung meski menggunakan Wi-Fi yang sama. Coba jaringan privat yang mengizinkan koneksi antarperangkat. Jika kamera tidak bisa digunakan, tukarkan tautan undangan dan kode balasan lewat aplikasi pesan atau perangkat lain. File hingga 128 MiB ditampung di memori tab penerima agar bisa diunduh. Simpan setiap file sebelum menerima file berikutnya atau menutup halaman.
+Wi-Fi tamu dan beberapa jaringan kantor mencegah perangkat saling terhubung meski menggunakan Wi-Fi yang sama. Coba jaringan privat yang mengizinkan koneksi antarperangkat. Jika kamera tidak bisa digunakan, tukarkan tautan undangan dan kode balasan lewat aplikasi pesan atau perangkat lain.
+
+## File besar dan transfer yang terputus
+
+Setiap blok file diperiksa dengan SHA-256 lalu ditulis ke penyimpanan lokal browser penerima. Ukuran file yang bisa diterima bergantung pada ruang penyimpanan yang tersedia di browser. Unduh setiap file yang sudah selesai diterima untuk menyimpan salinannya.
+
+Jika koneksi terputus, biarkan kedua tab yang tadi digunakan tetap terbuka dan pasangkan kembali perangkat. Pilih **Lanjutkan transfer file** untuk meneruskan transfer dari blok terakhir yang sudah diperiksa. Di tab penerima, pindai atau tempel undangan baru di dalam alat ini agar halaman tetap terbuka.

@@ -38,13 +38,15 @@
   "receivedText": "Empfangener Text",
   "download": "Herunterladen",
   "copyText": "Text kopieren",
-  "saveBeforeNext": "Speichere die empfangene Datei, bevor sie durch die nächste ersetzt wird.",
-  "fileTooLarge": "Wähle eine Datei mit höchstens 128 MiB aus.",
+  "removeFile": "Datei entfernen",
+  "storageError": "Der Browser auf dem empfangenden Gerät konnte die Datei nicht speichern. Prüfe den verfügbaren Speicherplatz und die Browserberechtigungen.",
   "textTooLarge": "Sende höchstens 1 MiB Text pro Übertragung.",
   "badInvite": "Dieser Einladungslink ist ungültig. Erstelle auf dem anderen Gerät einen neuen Link.",
   "badReply": "Dieser Antwortcode ist ungültig. Kopiere oder scanne ihn erneut.",
   "cameraError": "Die Kamera konnte nicht verwendet werden. Du kannst den Link oder Code einfügen.",
   "connectionError": "Die Verbindung wurde unterbrochen oder konnte nicht hergestellt werden. Prüfe, ob beide Geräte im selben Netzwerk sind, und verbinde sie erneut.",
   "transferError": "Die Übertragung wurde unterbrochen. Verbinde die Geräte erneut und versuche es noch einmal.",
-  "unsupported": "Dieser Browser kann keine direkte Verbindung herstellen. Versuche es mit einer aktuellen Version von Chrome, Firefox, Safari oder Edge."
+  "unsupported": "Dieser Browser kann keine direkte Verbindung herstellen. Versuche es mit einer aktuellen Version von Chrome, Firefox, Safari oder Edge.",
+  "resumeFile": "Dateiübertragung fortsetzen",
+  "resumeHelp": "Lass beide Tabs geöffnet. Verbinde dich erneut mit demselben Gerät, um die Dateiübertragung fortzusetzen."
 }

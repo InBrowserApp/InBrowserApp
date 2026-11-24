@@ -10,4 +10,10 @@ WebRTC encrypts the transfer and sends the data directly between the two browser
 
 ## If your devices cannot connect
 
-Guest Wi-Fi and some office networks block devices from talking to each other even when they are on the same Wi-Fi. Try a private network that allows devices to reach one another. If camera access is unavailable, exchange the invitation link and reply code using a messaging app or another device. Files up to 128 MiB are held in the receiving tab’s memory so you can download them. Save each file before receiving another or closing the page.
+Guest Wi-Fi and some office networks block devices from talking to each other even when they are on the same Wi-Fi. Try a private network that allows devices to reach one another. If camera access is unavailable, exchange the invitation link and reply code using a messaging app or another device.
+
+## Large files and interrupted transfers
+
+Files are checked in blocks with SHA-256 and written to the receiving browser’s local storage. The available browser storage determines how large a file you can receive. Download each completed file to keep a copy.
+
+If the connection drops, keep both original tabs open and pair them again. Select **Resume file transfer** to continue from the last verified block. On the receiving tab, scan or paste the new invitation within the tool so the page stays open.

@@ -38,13 +38,15 @@
   "receivedText": "Teks yang diterima",
   "download": "Unduh",
   "copyText": "Salin teks",
-  "saveBeforeNext": "Simpan file yang diterima sebelum digantikan oleh file berikutnya.",
-  "fileTooLarge": "Pilih file berukuran maksimal 128 MiB.",
+  "removeFile": "Hapus file",
+  "storageError": "Browser penerima tidak bisa menyimpan file. Periksa ruang penyimpanan yang tersedia dan izin browser.",
   "textTooLarge": "Kirim teks maksimal 1 MiB sekali kirim.",
   "badInvite": "Tautan undangan ini tidak valid. Minta perangkat lain mengirim undangan baru.",
   "badReply": "Kode balasan ini tidak valid. Salin atau pindai kembali.",
   "cameraError": "Kamera tidak bisa digunakan. Tempel tautan atau kodenya.",
   "connectionError": "Koneksi terputus atau gagal dibuat. Pastikan kedua perangkat berada di jaringan yang sama, lalu pasangkan kembali.",
   "transferError": "Transfer terputus. Pasangkan kembali perangkat untuk mencoba lagi.",
-  "unsupported": "Browser ini tidak bisa membuat koneksi langsung. Coba Chrome, Firefox, Safari, atau Edge versi terkini."
+  "unsupported": "Browser ini tidak bisa membuat koneksi langsung. Coba Chrome, Firefox, Safari, atau Edge versi terkini.",
+  "resumeFile": "Lanjutkan transfer file",
+  "resumeHelp": "Biarkan kedua tab tetap terbuka. Pasangkan kembali dengan perangkat yang sama untuk melanjutkan transfer file yang terputus."
 }

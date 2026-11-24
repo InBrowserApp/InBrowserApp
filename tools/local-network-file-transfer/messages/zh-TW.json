@@ -38,13 +38,15 @@
   "receivedText": "收到的文字",
   "download": "下載",
   "copyText": "複製文字",
-  "saveBeforeNext": "接收下一個檔案前，請先儲存目前的檔案，否則它會被取代。",
-  "fileTooLarge": "請選擇不超過 128 MiB 的檔案。",
+  "removeFile": "移除檔案",
+  "storageError": "接收端瀏覽器無法儲存檔案。請檢查可用儲存空間和瀏覽器權限。",
   "textTooLarge": "每次最多可傳送 1 MiB 的文字。",
   "badInvite": "邀請連結無效，請在另一台裝置上重新產生。",
   "badReply": "回覆碼無效，請重新複製或掃描。",
   "cameraError": "無法使用相機，請改為貼上連結或回覆碼。",
   "connectionError": "連線已中斷或無法建立。請確認兩台裝置位於同一個網路，然後重新配對。",
   "transferError": "傳輸已中斷，請重新配對後再試。",
-  "unsupported": "此瀏覽器無法建立直接連線，請使用最新版 Chrome、Firefox、Safari 或 Edge。"
+  "unsupported": "此瀏覽器無法建立直接連線，請使用最新版 Chrome、Firefox、Safari 或 Edge。",
+  "resumeFile": "繼續傳輸檔案",
+  "resumeHelp": "請保持兩個分頁開啟。與同一台裝置重新配對，以繼續傳輸中斷的檔案。"
 }
