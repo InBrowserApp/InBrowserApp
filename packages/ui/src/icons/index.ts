@@ -99,6 +99,7 @@ export {
   MonitorDown,
   Network,
   Pause,
+  Piano,
   Paintbrush,
   Phone,
   Play,

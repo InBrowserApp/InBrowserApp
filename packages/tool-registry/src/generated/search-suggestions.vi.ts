@@ -1153,6 +1153,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mhtml-viewer",
   },
   {
+    category: "misc",
+    name: "Bộ theo dõi MIDI",
+    slug: "midi-monitor",
+  },
+  {
     category: "network",
     name: "Tra Cứu Loại MIME",
     slug: "mime-type-lookup",

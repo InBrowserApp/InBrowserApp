@@ -1,0 +1,4 @@
+{
+  "name": "Monitor MIDI",
+  "description": "Prova una tastiera, un pad o un controller MIDI nel browser. Visualizza le note e la velocity su una tastiera e analizza CC, pitch bend, clock e byte MIDI grezzi."
+}

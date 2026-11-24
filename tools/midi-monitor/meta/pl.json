@@ -1,0 +1,4 @@
+{
+  "name": "Monitor MIDI",
+  "description": "Przetestuj klawiaturę, pad lub kontroler MIDI w przeglądarce. Zobacz nuty i ich dynamikę na klawiaturze oraz sprawdź komunikaty CC, pitch bend, zegara i surowe bajty MIDI."
+}

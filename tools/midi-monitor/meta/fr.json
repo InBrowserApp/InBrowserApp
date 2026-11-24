@@ -1,0 +1,4 @@
+{
+  "name": "Moniteur MIDI",
+  "description": "Testez un clavier, un pad ou un contrôleur MIDI dans votre navigateur. Visualisez les notes et leur vélocité sur un piano et examinez les messages CC, pitch bend et d’horloge ainsi que les octets MIDI bruts."
+}

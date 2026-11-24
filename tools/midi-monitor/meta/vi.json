@@ -1,0 +1,4 @@
+{
+  "name": "Bộ theo dõi MIDI",
+  "description": "Kiểm tra đàn phím, pad hoặc bộ điều khiển MIDI trong trình duyệt. Xem nốt và velocity trên đàn piano, kiểm tra CC, pitch bend, xung nhịp và các byte MIDI thô."
+}

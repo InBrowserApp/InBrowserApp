@@ -29215,6 +29215,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "midi-monitor",
+    category: "misc",
+    icon: "piano",
+    tags: [
+      "midi",
+      "web midi",
+      "midi tester",
+      "keyboard",
+      "piano",
+      "controller",
+      "velocity",
+      "pitch bend",
+      "clock",
+    ],
+    locales: {
+      ar: {
+        name: "مراقب MIDI",
+        description:
+          "اختبر لوحة مفاتيح MIDI أو لوحة وسادات أو وحدة تحكم في متصفحك. شاهد النغمات وشدة العزف على البيانو، وافحص رسائل CC وانحناء طبقة الصوت والساعة وبايتات MIDI الخام.",
+      },
+      de: {
+        name: "MIDI-Monitor",
+        description:
+          "Teste ein MIDI-Keyboard, Pad oder einen Controller im Browser. Sieh Noten und Anschlagstärke auf einer Klaviatur und prüfe CC, Pitchbend, MIDI-Clock und rohe MIDI-Bytes.",
+      },
+      en: {
+        name: "MIDI Monitor",
+        description:
+          "Test a MIDI keyboard, pad, or controller in your browser. See notes and velocity on a piano, and inspect CC, pitch bend, clock, and raw MIDI bytes.",
+      },
+      es: {
+        name: "Monitor MIDI",
+        description:
+          "Prueba un teclado, pad o controlador MIDI en el navegador. Visualiza notas y velocidades en un piano e inspecciona mensajes CC, pitch bend, reloj y bytes MIDI sin procesar.",
+      },
+      fr: {
+        name: "Moniteur MIDI",
+        description:
+          "Testez un clavier, un pad ou un contrôleur MIDI dans votre navigateur. Visualisez les notes et leur vélocité sur un piano et examinez les messages CC, pitch bend et d’horloge ainsi que les octets MIDI bruts.",
+      },
+      he: {
+        name: "מוניטור MIDI",
+        description:
+          "בדקו מקלדת MIDI, פד או בקר בדפדפן. הציגו תווים ומהירות לחיצה על מקלדת פסנתר ובדקו הודעות CC, שינוי גובה צליל, שעון MIDI ובתי MIDI גולמיים.",
+      },
+      hi: {
+        name: "MIDI मॉनिटर",
+        description:
+          "अपने ब्राउज़र में MIDI कीबोर्ड, पैड या कंट्रोलर जाँचें। पियानो पर नोट और वेलोसिटी देखें और CC, पिच बेंड, क्लॉक और रॉ MIDI बाइट जाँचें।",
+      },
+      id: {
+        name: "Monitor MIDI",
+        description:
+          "Uji keyboard, pad, atau pengontrol MIDI di browser. Lihat not dan velocity pada piano, serta periksa CC, pitch bend, clock, dan byte MIDI mentah.",
+      },
+      it: {
+        name: "Monitor MIDI",
+        description:
+          "Prova una tastiera, un pad o un controller MIDI nel browser. Visualizza le note e la velocity su una tastiera e analizza CC, pitch bend, clock e byte MIDI grezzi.",
+      },
+      ja: {
+        name: "MIDI モニター",
+        description:
+          "ブラウザーで MIDI キーボード、パッド、コントローラーをテストします。ピアノでノートとベロシティを確認し、CC、ピッチベンド、クロック、生の MIDI バイトを調べられます。",
+      },
+      ko: {
+        name: "MIDI 모니터",
+        description:
+          "브라우저에서 MIDI 키보드, 패드 또는 컨트롤러를 테스트하세요. 피아노에서 노트와 벨로시티를 확인하고 CC, 피치 벤드, 클록 및 원시 MIDI 바이트를 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Monitor MIDI",
+        description:
+          "Uji papan kekunci, pad atau pengawal MIDI dalam pelayar anda. Lihat not dan halaju pada papan kekunci piano, serta periksa CC, pitch bend, MIDI Clock dan bait MIDI mentah.",
+      },
+      nl: {
+        name: "MIDI-monitor",
+        description:
+          "Test een MIDI-keyboard, pad of controller in je browser. Bekijk noten en aanslagwaarden op een piano en controleer CC, pitchbend, kloksignalen en ruwe MIDI-bytes.",
+      },
+      no: {
+        name: "MIDI-monitor",
+        description:
+          "Test et MIDI-keyboard, en pad eller en kontroller i nettleseren. Se noter og anslagsstyrke på et klaviatur, og undersøk CC, pitch bend, MIDI-klokke og rå MIDI-byte.",
+      },
+      pl: {
+        name: "Monitor MIDI",
+        description:
+          "Przetestuj klawiaturę, pad lub kontroler MIDI w przeglądarce. Zobacz nuty i ich dynamikę na klawiaturze oraz sprawdź komunikaty CC, pitch bend, zegara i surowe bajty MIDI.",
+      },
+      pt: {
+        name: "Monitor MIDI",
+        description:
+          "Teste um teclado, pad ou controlador MIDI no navegador. Veja notas e velocidade em um teclado de piano e examine CC, pitch bend, MIDI Clock e bytes MIDI brutos.",
+      },
+      ru: {
+        name: "MIDI-монитор",
+        description:
+          "Проверьте MIDI-клавиатуру, пэд или контроллер в браузере. Смотрите ноты и скорость нажатия на клавиатуре пианино, изучайте CC, изменение высоты тона, MIDI Clock и исходные байты MIDI.",
+      },
+      sv: {
+        name: "MIDI-monitor",
+        description:
+          "Testa ett MIDI-keyboard, en pad eller en MIDI-kontroller i webbläsaren. Se noter och anslagsvärden på ett piano och granska CC, pitch bend, klocksignaler och råa MIDI-byte.",
+      },
+      th: {
+        name: "มอนิเตอร์ MIDI",
+        description:
+          "ทดสอบคีย์บอร์ด MIDI แพด หรือคอนโทรลเลอร์ในเบราว์เซอร์ ดูโน้ตและความเร็วในการกดบนคีย์บอร์ดเปียโน พร้อมตรวจสอบ CC, Pitch Bend, MIDI Clock และไบต์ MIDI ดิบ",
+      },
+      tr: {
+        name: "MIDI Monitörü",
+        description:
+          "MIDI klavyenizi, pad'inizi veya denetleyicinizi tarayıcıda test edin. Notaları ve hızlarını piyanoda görün; CC, perde bükme, saat ve ham MIDI baytlarını inceleyin.",
+      },
+      vi: {
+        name: "Bộ theo dõi MIDI",
+        description:
+          "Kiểm tra đàn phím, pad hoặc bộ điều khiển MIDI trong trình duyệt. Xem nốt và velocity trên đàn piano, kiểm tra CC, pitch bend, xung nhịp và các byte MIDI thô.",
+      },
+      "zh-CN": {
+        name: "MIDI 监视器",
+        description:
+          "在浏览器中测试 MIDI 键盘、打击垫或控制器。在钢琴键盘上查看音符和力度，并检查 CC、弯音、时钟和原始 MIDI 字节。",
+      },
+      "zh-TW": {
+        name: "MIDI 監視器",
+        description:
+          "在瀏覽器中測試 MIDI 鍵盤、打擊墊或控制器。在鋼琴鍵盤上查看音符和力度，並檢視 CC、彎音、時鐘及原始 MIDI 位元組。",
+      },
+    },
+  },
+  {
     slug: "mime-type-lookup",
     category: "network",
     icon: "network",
@@ -79981,6 +80114,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MHTML 檢視器",
         description:
           "在本機閱讀 MHTML 與 MHT 網頁封存檔，支援封存的圖片、樣式及文件導覽，且不會向網站請求資源。",
+      },
+    },
+  },
+  "midi-monitor": {
+    slug: "midi-monitor",
+    category: "misc",
+    icon: "piano",
+    tags: [
+      "midi",
+      "web midi",
+      "midi tester",
+      "keyboard",
+      "piano",
+      "controller",
+      "velocity",
+      "pitch bend",
+      "clock",
+    ],
+    locales: {
+      ar: {
+        name: "مراقب MIDI",
+        description:
+          "اختبر لوحة مفاتيح MIDI أو لوحة وسادات أو وحدة تحكم في متصفحك. شاهد النغمات وشدة العزف على البيانو، وافحص رسائل CC وانحناء طبقة الصوت والساعة وبايتات MIDI الخام.",
+      },
+      de: {
+        name: "MIDI-Monitor",
+        description:
+          "Teste ein MIDI-Keyboard, Pad oder einen Controller im Browser. Sieh Noten und Anschlagstärke auf einer Klaviatur und prüfe CC, Pitchbend, MIDI-Clock und rohe MIDI-Bytes.",
+      },
+      en: {
+        name: "MIDI Monitor",
+        description:
+          "Test a MIDI keyboard, pad, or controller in your browser. See notes and velocity on a piano, and inspect CC, pitch bend, clock, and raw MIDI bytes.",
+      },
+      es: {
+        name: "Monitor MIDI",
+        description:
+          "Prueba un teclado, pad o controlador MIDI en el navegador. Visualiza notas y velocidades en un piano e inspecciona mensajes CC, pitch bend, reloj y bytes MIDI sin procesar.",
+      },
+      fr: {
+        name: "Moniteur MIDI",
+        description:
+          "Testez un clavier, un pad ou un contrôleur MIDI dans votre navigateur. Visualisez les notes et leur vélocité sur un piano et examinez les messages CC, pitch bend et d’horloge ainsi que les octets MIDI bruts.",
+      },
+      he: {
+        name: "מוניטור MIDI",
+        description:
+          "בדקו מקלדת MIDI, פד או בקר בדפדפן. הציגו תווים ומהירות לחיצה על מקלדת פסנתר ובדקו הודעות CC, שינוי גובה צליל, שעון MIDI ובתי MIDI גולמיים.",
+      },
+      hi: {
+        name: "MIDI मॉनिटर",
+        description:
+          "अपने ब्राउज़र में MIDI कीबोर्ड, पैड या कंट्रोलर जाँचें। पियानो पर नोट और वेलोसिटी देखें और CC, पिच बेंड, क्लॉक और रॉ MIDI बाइट जाँचें।",
+      },
+      id: {
+        name: "Monitor MIDI",
+        description:
+          "Uji keyboard, pad, atau pengontrol MIDI di browser. Lihat not dan velocity pada piano, serta periksa CC, pitch bend, clock, dan byte MIDI mentah.",
+      },
+      it: {
+        name: "Monitor MIDI",
+        description:
+          "Prova una tastiera, un pad o un controller MIDI nel browser. Visualizza le note e la velocity su una tastiera e analizza CC, pitch bend, clock e byte MIDI grezzi.",
+      },
+      ja: {
+        name: "MIDI モニター",
+        description:
+          "ブラウザーで MIDI キーボード、パッド、コントローラーをテストします。ピアノでノートとベロシティを確認し、CC、ピッチベンド、クロック、生の MIDI バイトを調べられます。",
+      },
+      ko: {
+        name: "MIDI 모니터",
+        description:
+          "브라우저에서 MIDI 키보드, 패드 또는 컨트롤러를 테스트하세요. 피아노에서 노트와 벨로시티를 확인하고 CC, 피치 벤드, 클록 및 원시 MIDI 바이트를 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Monitor MIDI",
+        description:
+          "Uji papan kekunci, pad atau pengawal MIDI dalam pelayar anda. Lihat not dan halaju pada papan kekunci piano, serta periksa CC, pitch bend, MIDI Clock dan bait MIDI mentah.",
+      },
+      nl: {
+        name: "MIDI-monitor",
+        description:
+          "Test een MIDI-keyboard, pad of controller in je browser. Bekijk noten en aanslagwaarden op een piano en controleer CC, pitchbend, kloksignalen en ruwe MIDI-bytes.",
+      },
+      no: {
+        name: "MIDI-monitor",
+        description:
+          "Test et MIDI-keyboard, en pad eller en kontroller i nettleseren. Se noter og anslagsstyrke på et klaviatur, og undersøk CC, pitch bend, MIDI-klokke og rå MIDI-byte.",
+      },
+      pl: {
+        name: "Monitor MIDI",
+        description:
+          "Przetestuj klawiaturę, pad lub kontroler MIDI w przeglądarce. Zobacz nuty i ich dynamikę na klawiaturze oraz sprawdź komunikaty CC, pitch bend, zegara i surowe bajty MIDI.",
+      },
+      pt: {
+        name: "Monitor MIDI",
+        description:
+          "Teste um teclado, pad ou controlador MIDI no navegador. Veja notas e velocidade em um teclado de piano e examine CC, pitch bend, MIDI Clock e bytes MIDI brutos.",
+      },
+      ru: {
+        name: "MIDI-монитор",
+        description:
+          "Проверьте MIDI-клавиатуру, пэд или контроллер в браузере. Смотрите ноты и скорость нажатия на клавиатуре пианино, изучайте CC, изменение высоты тона, MIDI Clock и исходные байты MIDI.",
+      },
+      sv: {
+        name: "MIDI-monitor",
+        description:
+          "Testa ett MIDI-keyboard, en pad eller en MIDI-kontroller i webbläsaren. Se noter och anslagsvärden på ett piano och granska CC, pitch bend, klocksignaler och råa MIDI-byte.",
+      },
+      th: {
+        name: "มอนิเตอร์ MIDI",
+        description:
+          "ทดสอบคีย์บอร์ด MIDI แพด หรือคอนโทรลเลอร์ในเบราว์เซอร์ ดูโน้ตและความเร็วในการกดบนคีย์บอร์ดเปียโน พร้อมตรวจสอบ CC, Pitch Bend, MIDI Clock และไบต์ MIDI ดิบ",
+      },
+      tr: {
+        name: "MIDI Monitörü",
+        description:
+          "MIDI klavyenizi, pad'inizi veya denetleyicinizi tarayıcıda test edin. Notaları ve hızlarını piyanoda görün; CC, perde bükme, saat ve ham MIDI baytlarını inceleyin.",
+      },
+      vi: {
+        name: "Bộ theo dõi MIDI",
+        description:
+          "Kiểm tra đàn phím, pad hoặc bộ điều khiển MIDI trong trình duyệt. Xem nốt và velocity trên đàn piano, kiểm tra CC, pitch bend, xung nhịp và các byte MIDI thô.",
+      },
+      "zh-CN": {
+        name: "MIDI 监视器",
+        description:
+          "在浏览器中测试 MIDI 键盘、打击垫或控制器。在钢琴键盘上查看音符和力度，并检查 CC、弯音、时钟和原始 MIDI 字节。",
+      },
+      "zh-TW": {
+        name: "MIDI 監視器",
+        description:
+          "在瀏覽器中測試 MIDI 鍵盤、打擊墊或控制器。在鋼琴鍵盤上查看音符和力度，並檢視 CC、彎音、時鐘及原始 MIDI 位元組。",
       },
     },
   },

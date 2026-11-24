@@ -1,0 +1,4 @@
+{
+  "name": "MIDI Monitor",
+  "description": "Test a MIDI keyboard, pad, or controller in your browser. See notes and velocity on a piano, and inspect CC, pitch bend, clock, and raw MIDI bytes."
+}
