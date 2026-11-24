@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Choose PDF",
+  "dropPdf": "or drop a PDF here",
+  "changePdf": "Change PDF",
+  "privacy": "Your PDF and password stay in your browser.",
+  "password": "Password to open the PDF",
+  "confirmPassword": "Confirm password",
+  "showPasswords": "Show passwords",
+  "hidePasswords": "Hide passwords",
+  "protectPdf": "Protect PDF",
+  "protecting": "Protecting PDF…",
+  "protected": "Your protected PDF is ready",
+  "downloadPdf": "Download protected PDF",
+  "startOver": "Protect another PDF",
+  "onePdf": "Choose one PDF at a time.",
+  "invalidPdf": "Choose a PDF file that contains data.",
+  "passwordTooLong": "Use a shorter password. PDF passwords can contain up to 127 bytes.",
+  "passwordInvalid": "Use a password without invisible control characters.",
+  "passwordMismatch": "The passwords don’t match.",
+  "protectionFailed": "Couldn’t protect this PDF. Try opening it in a PDF reader and choosing a copy that opens without a password."
+}

@@ -27885,6 +27885,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "protect-pdf",
+    category: "pdf",
+    icon: "lock",
+    tags: [
+      "pdf",
+      "password",
+      "protect",
+      "encrypt",
+      "lock",
+      "aes-256",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حماية ملف PDF بكلمة مرور",
+        description:
+          "أضف كلمة مرور إلى ملف PDF ليحتاج إليها المستلمون عند فتحه. شفّر الملف ونزّل نسخة محمية مباشرةً في متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF mit Passwort schützen",
+        description:
+          "Lege ein Passwort zum Öffnen deiner PDF fest. Verschlüssele die Datei direkt im Browser und lade die geschützte Kopie herunter. Die Datei bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "Password Protect PDF",
+        description:
+          "Add a password to a PDF so recipients need it to open the file. Encrypt and download a protected copy directly in your browser, with no file upload.",
+      },
+      es: {
+        name: "Proteger un PDF con contraseña",
+        description:
+          "Añade una contraseña a un PDF para que solo puedan abrirlo quienes la conozcan. Cifra el archivo y descarga una copia protegida en tu navegador, sin subir el PDF.",
+      },
+      fr: {
+        name: "Protéger un PDF par mot de passe",
+        description:
+          "Ajoutez un mot de passe à un PDF pour en contrôler l’ouverture. Chiffrez le fichier et téléchargez une copie protégée dans votre navigateur, sans envoyer le PDF.",
+      },
+      he: {
+        name: "הוספת סיסמה ל-PDF",
+        description:
+          "הוסיפו סיסמה לקובץ PDF כדי שרק מי שיודע אותה יוכל לפתוח אותו. הצפינו והורידו עותק מוגן ישירות בדפדפן, בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "PDF में पासवर्ड लगाएँ",
+        description:
+          "PDF में पासवर्ड लगाएँ ताकि फ़ाइल खोलने के लिए उसकी ज़रूरत हो। फ़ाइल अपलोड किए बिना उसे एन्क्रिप्ट करें और सुरक्षित कॉपी सीधे ब्राउज़र में डाउनलोड करें।",
+      },
+      id: {
+        name: "Lindungi PDF dengan Kata Sandi",
+        description:
+          "Tambahkan kata sandi ke PDF agar penerima perlu memasukkannya untuk membuka file. Enkripsi dan unduh salinan yang terlindungi langsung di browser, tanpa mengunggah file.",
+      },
+      it: {
+        name: "Proteggi PDF con password",
+        description:
+          "Aggiungi una password a un PDF per consentire l’apertura solo a chi la conosce. Cifra e scarica una copia protetta nel browser, senza caricare il file online.",
+      },
+      ja: {
+        name: "PDFをパスワードで保護",
+        description:
+          "PDFにパスワードを設定して、受信者が開くときに入力を求めます。ファイルをアップロードせず、ブラウザで直接暗号化したコピーをダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 암호 설정",
+        description:
+          "PDF를 열 때 필요한 암호를 설정하세요. 파일을 업로드하지 않고 브라우저에서 직접 암호화한 사본을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Lindungi PDF dengan Kata Laluan",
+        description:
+          "Tetapkan kata laluan pada fail PDF supaya penerima perlu memasukkannya untuk membuka fail. Sulitkan dan muat turun salinan daripada pelayar, tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF beveiligen met een wachtwoord",
+        description:
+          "Stel een wachtwoord in dat nodig is om je PDF te openen. Versleutel het bestand in je browser en download een beveiligde kopie. Het bestand blijft op je apparaat.",
+      },
+      no: {
+        name: "Passordbeskytt PDF",
+        description:
+          "Legg til et passord som kreves for å åpne PDF-filen. Krypter den i nettleseren og last ned en beskyttet kopi. Filen blir på enheten din.",
+      },
+      pl: {
+        name: "Zabezpiecz PDF hasłem",
+        description:
+          "Dodaj hasło wymagane do otwarcia pliku PDF. Zaszyfruj i pobierz zabezpieczoną kopię w przeglądarce, bez wysyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Proteger PDF com senha",
+        description:
+          "Adicione uma senha ao PDF para que só quem a conhece possa abrir o arquivo. Criptografe e baixe uma cópia protegida no navegador, sem enviar o PDF.",
+      },
+      ru: {
+        name: "Защитить PDF паролем",
+        description:
+          "Установите пароль, который нужно будет ввести при открытии PDF. Зашифруйте и скачайте копию документа прямо в браузере, без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Lösenordsskydda PDF",
+        description:
+          "Lägg till ett lösenord som krävs för att öppna din PDF. Kryptera filen direkt i webbläsaren och ladda ner en skyddad kopia. Filen stannar på din enhet.",
+      },
+      th: {
+        name: "ตั้งรหัสผ่านให้ PDF",
+        description:
+          "ตั้งรหัสผ่านให้ไฟล์ PDF เพื่อให้ผู้รับต้องใส่รหัสก่อนเปิดไฟล์ เข้ารหัสและดาวน์โหลดสำเนาที่มีรหัสผ่านได้ในเบราว์เซอร์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF’yi Parolayla Koru",
+        description:
+          "PDF dosyanıza açılırken sorulacak bir parola ekleyin. Dosyayı sunucuya yüklemeden tarayıcınızda şifreleyin ve korumalı kopyasını indirin.",
+      },
+      vi: {
+        name: "Đặt mật khẩu cho PDF",
+        description:
+          "Đặt mật khẩu cho tệp PDF để người nhận phải nhập mật khẩu khi mở. Mã hóa và tải bản sao được bảo vệ ngay trong trình duyệt, không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "为 PDF 添加密码",
+        description:
+          "为 PDF 添加打开密码，收件人输入密码后才能查看文件。直接在浏览器中加密并下载受保护的副本，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "為 PDF 設定密碼",
+        description:
+          "為 PDF 設定開啟密碼，收件者輸入密碼後才能檢視檔案。直接在瀏覽器中加密並下載受保護的副本，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "qr-code-generator",
     category: "image",
     icon: "image",

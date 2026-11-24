@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Choisir un PDF",
+  "dropPdf": "ou déposer un PDF ici",
+  "changePdf": "Changer de PDF",
+  "privacy": "Votre PDF et votre mot de passe restent dans le navigateur.",
+  "password": "Mot de passe d’ouverture du PDF",
+  "confirmPassword": "Confirmer le mot de passe",
+  "showPasswords": "Afficher les mots de passe",
+  "hidePasswords": "Masquer les mots de passe",
+  "protectPdf": "Protéger le PDF",
+  "protecting": "Protection du PDF en cours…",
+  "protected": "Votre PDF protégé est prêt",
+  "downloadPdf": "Télécharger le PDF protégé",
+  "startOver": "Protéger un autre PDF",
+  "onePdf": "Choisissez un seul PDF à la fois.",
+  "invalidPdf": "Choisissez un fichier PDF qui n’est pas vide.",
+  "passwordTooLong": "Choisissez un mot de passe plus court. La limite est de 127 octets.",
+  "passwordInvalid": "Utilisez un mot de passe sans caractères de contrôle invisibles.",
+  "passwordMismatch": "Les mots de passe ne correspondent pas.",
+  "protectionFailed": "Impossible de protéger ce PDF. Essayez de l’ouvrir dans une visionneuse, puis choisissez une copie qui s’ouvre sans mot de passe."
+}

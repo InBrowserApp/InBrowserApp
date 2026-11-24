@@ -1,0 +1,21 @@
+{
+  "choosePdf": "选择 PDF",
+  "dropPdf": "或将 PDF 拖放到此处",
+  "changePdf": "更换 PDF",
+  "privacy": "PDF 和密码都保留在您的浏览器中。",
+  "password": "打开 PDF 的密码",
+  "confirmPassword": "确认密码",
+  "showPasswords": "显示密码",
+  "hidePasswords": "隐藏密码",
+  "protectPdf": "加密 PDF",
+  "protecting": "正在加密 PDF…",
+  "protected": "加密后的 PDF 已准备好",
+  "downloadPdf": "下载加密后的 PDF",
+  "startOver": "加密另一个 PDF",
+  "onePdf": "一次请选择一个 PDF。",
+  "invalidPdf": "请选择包含数据的 PDF 文件。",
+  "passwordTooLong": "请使用更短的密码。PDF 密码最多可包含 127 字节。",
+  "passwordInvalid": "请使用不含不可见控制字符的密码。",
+  "passwordMismatch": "两次输入的密码不一致。",
+  "protectionFailed": "无法加密此 PDF。请尝试在 PDF 阅读器中打开它，并选择无需密码即可打开的副本。"
+}

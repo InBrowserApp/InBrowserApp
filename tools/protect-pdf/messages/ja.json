@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDFを選択",
+  "dropPdf": "またはPDFをここにドロップ",
+  "changePdf": "PDFを変更",
+  "privacy": "PDFとパスワードはブラウザ内に留まります。",
+  "password": "PDFを開くためのパスワード",
+  "confirmPassword": "パスワードの確認",
+  "showPasswords": "パスワードを表示",
+  "hidePasswords": "パスワードを隠す",
+  "protectPdf": "PDFを保護",
+  "protecting": "PDFを保護しています…",
+  "protected": "保護されたPDFの準備ができました",
+  "downloadPdf": "保護されたPDFをダウンロード",
+  "startOver": "別のPDFを保護",
+  "onePdf": "PDFは一度に1ファイル選択してください。",
+  "invalidPdf": "データを含むPDFファイルを選択してください。",
+  "passwordTooLong": "パスワードを短くしてください。PDFのパスワードは最大127バイトです。",
+  "passwordInvalid": "目に見えない制御文字を含まないパスワードを使用してください。",
+  "passwordMismatch": "パスワードが一致しません。",
+  "protectionFailed": "このPDFを保護できませんでした。PDFリーダーで開いて確認し、パスワードなしで開けるコピーを選択してください。"
+}

@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Pilih fail PDF",
+  "dropPdf": "atau seret fail PDF ke sini",
+  "changePdf": "Tukar fail PDF",
+  "privacy": "Fail PDF dan kata laluan kekal dalam pelayar anda.",
+  "password": "Kata laluan untuk membuka PDF",
+  "confirmPassword": "Sahkan kata laluan",
+  "showPasswords": "Tunjukkan kata laluan",
+  "hidePasswords": "Sembunyikan kata laluan",
+  "protectPdf": "Lindungi PDF",
+  "protecting": "Sedang menyulitkan PDF…",
+  "protected": "PDF yang dilindungi sedia untuk dimuat turun",
+  "downloadPdf": "Muat turun PDF yang dilindungi",
+  "startOver": "Lindungi PDF lain",
+  "onePdf": "Pilih satu fail PDF pada satu masa.",
+  "invalidPdf": "Pilih fail PDF yang tidak kosong.",
+  "passwordTooLong": "Gunakan kata laluan yang lebih pendek. Panjang maksimum kata laluan PDF ialah 127 bait.",
+  "passwordInvalid": "Gunakan kata laluan tanpa aksara kawalan yang tidak kelihatan.",
+  "passwordMismatch": "Kedua-dua kata laluan tidak sepadan.",
+  "protectionFailed": "PDF ini tidak dapat dilindungi. Cuba buka fail dalam pembaca PDF dan pilih salinan yang boleh dibuka tanpa kata laluan."
+}

@@ -1108,6 +1108,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "حماية ملف PDF بكلمة مرور",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "مولّد رموز QR",
     slug: "qr-code-generator",

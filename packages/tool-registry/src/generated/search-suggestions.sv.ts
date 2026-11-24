@@ -1108,6 +1108,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "Lösenordsskydda PDF",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "QR-kodgenerator",
     slug: "qr-code-generator",

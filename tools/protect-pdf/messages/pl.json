@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Wybierz PDF",
+  "dropPdf": "lub przeciągnij tutaj plik PDF",
+  "changePdf": "Zmień plik PDF",
+  "privacy": "Plik PDF i hasło pozostają w przeglądarce.",
+  "password": "Hasło do otwarcia pliku PDF",
+  "confirmPassword": "Potwierdź hasło",
+  "showPasswords": "Pokaż hasła",
+  "hidePasswords": "Ukryj hasła",
+  "protectPdf": "Zabezpiecz PDF",
+  "protecting": "Zabezpieczanie pliku PDF…",
+  "protected": "Zabezpieczony plik PDF jest gotowy",
+  "downloadPdf": "Pobierz zabezpieczony PDF",
+  "startOver": "Zabezpiecz kolejny PDF",
+  "onePdf": "Wybierz tylko jeden plik PDF.",
+  "invalidPdf": "Wybierz plik PDF, który nie jest pusty.",
+  "passwordTooLong": "Użyj krótszego hasła. Hasło do pliku PDF może zajmować najwyżej 127 bajtów.",
+  "passwordInvalid": "Użyj hasła bez niewidocznych znaków sterujących.",
+  "passwordMismatch": "Hasła się nie zgadzają.",
+  "protectionFailed": "Nie udało się zabezpieczyć pliku PDF. Sprawdź go w przeglądarce plików PDF i wybierz kopię, którą można otworzyć bez hasła."
+}
