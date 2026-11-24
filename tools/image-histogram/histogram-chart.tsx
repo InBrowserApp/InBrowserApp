@@ -151,7 +151,7 @@ export function HistogramChart({
             <Button
               key={key}
               type="button"
-              variant={channel === key ? "secondary" : "ghost"}
+              variant={channel === key ? "default" : "ghost"}
               size="sm"
               aria-pressed={channel === key}
               className="h-auto min-h-9 px-2 whitespace-normal sm:px-3"

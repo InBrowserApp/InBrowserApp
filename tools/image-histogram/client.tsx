@@ -127,12 +127,20 @@ export default function ImageHistogram({
           <Button
             type="button"
             variant={result ? "outline" : "default"}
+            className="min-h-9"
             onClick={() => picker.current?.click()}
           >
             {result && <ImageUp aria-hidden="true" data-icon="inline-start" />}
             {result ? m.replaceImage : m.chooseImage}
           </Button>
-          <p className="text-sm text-muted-foreground">{m.dropHint}</p>
+          <p
+            className={cn(
+              "text-sm text-muted-foreground",
+              result && "pointer-coarse:hidden"
+            )}
+          >
+            {m.dropHint}
+          </p>
           {!result && (
             <p className="-mt-1 basis-full text-center text-xs text-muted-foreground">
               {m.formatHint}
@@ -142,7 +150,7 @@ export default function ImageHistogram({
             type="button"
             variant="link"
             size="sm"
-            className={result ? "ms-auto" : "-mt-2"}
+            className={result ? "ms-auto min-h-9" : "-mt-2"}
             onClick={() => open("sample")}
           >
             {m.trySample}
@@ -185,7 +193,7 @@ export default function ImageHistogram({
       {result && (
         <div className="grid min-w-0 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
           <figure className="min-w-0 overflow-hidden rounded-lg border bg-card">
-            <div className="grid h-40 place-items-center bg-muted sm:h-64">
+            <div className="grid h-36 place-items-center bg-muted sm:h-64">
               <img
                 src={result.src}
                 alt={m.preview}
