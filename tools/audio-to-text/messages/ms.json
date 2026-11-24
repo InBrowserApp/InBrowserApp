@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Untuk rakaman dalam bahasa Mandarin, Kantonis, Inggeris, Jepun dan Korea.",
   "qwenPlain": "Teks biasa",
   "qwenTimed": "Dengan cap masa",
-  "qwenPlainHelp": "Untuk bahasa Mandarin, Kantonis dan bahasa lain. Berjalan pada CPU.",
+  "qwenPlainHelp": "Untuk bahasa Mandarin, Kantonis dan bahasa lain. Menggunakan WebGPU jika tersedia, atau CPU jika tidak.",
   "qwenTimedHelp": "Menambah penjajaran cap masa setempat untuk main balik dan sari kata. Pilih bahasa pertuturan. Menggunakan lebih banyak memori.",
   "modelSize": "Muat turun pertama kira-kira {size} MB",
   "privacy": "Rakaman audio kekal pada peranti ini.",

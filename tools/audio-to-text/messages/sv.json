@@ -13,7 +13,7 @@
   "senseVoiceHelp": "För inspelningar på mandarin, kantonesiska, engelska, japanska och koreanska.",
   "qwenPlain": "Ren text",
   "qwenTimed": "Med tidskoder",
-  "qwenPlainHelp": "För mandarin, kantonesiska och andra språk. Körs på processorn.",
+  "qwenPlainHelp": "För mandarin, kantonesiska och andra språk. Använder WebGPU om tillgängligt, annars processorn.",
   "qwenTimedHelp": "Lägger till lokal tidsanpassning för uppspelning och undertexter. Välj språket som talas. Använder mer minne.",
   "modelSize": "Ungefär {size} MB vid första nedladdningen",
   "privacy": "Ljudet stannar på den här enheten.",

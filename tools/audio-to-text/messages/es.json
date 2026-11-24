@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Para grabaciones en mandarín, cantonés, inglés, japonés y coreano.",
   "qwenPlain": "Texto sin marcas",
   "qwenTimed": "Con marcas de tiempo",
-  "qwenPlainHelp": "Para mandarín, cantonés y otros idiomas. Se ejecuta en la CPU.",
+  "qwenPlainHelp": "Para mandarín, cantonés y otros idiomas. Usa WebGPU cuando está disponible y recurre a la CPU.",
   "qwenTimedHelp": "Añade alineación local de tiempos para la reproducción y los subtítulos. Elige el idioma hablado. Usa más memoria.",
   "modelSize": "Primera descarga de unos {size} MB",
   "privacy": "El audio se queda en tu dispositivo.",

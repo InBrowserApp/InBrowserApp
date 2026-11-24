@@ -13,7 +13,7 @@
   "senseVoiceHelp": "適合國語、粵語、英語、日語和韓語錄音。",
   "qwenPlain": "純文字",
   "qwenTimed": "含時間戳記",
-  "qwenPlainHelp": "適合國語、粵語等語言。在 CPU 上執行。",
+  "qwenPlainHelp": "適合國語、粵語等語言。優先使用 WebGPU，無法使用時改用 CPU。",
   "qwenTimedHelp": "在本機對齊時間戳記，供回放和字幕使用。請選擇錄音中的語言。使用較多記憶體。",
   "modelSize": "首次下載：約 {size} MB",
   "privacy": "音訊會留在這部裝置上。",

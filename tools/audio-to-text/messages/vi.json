@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Dành cho bản ghi tiếng Quan thoại, tiếng Quảng Đông, tiếng Anh, tiếng Nhật và tiếng Hàn.",
   "qwenPlain": "Văn bản thuần",
   "qwenTimed": "Có dấu thời gian",
-  "qwenPlainHelp": "Dành cho tiếng Quan thoại, tiếng Quảng Đông và các ngôn ngữ khác. Chạy trên CPU.",
+  "qwenPlainHelp": "Dành cho tiếng Quan thoại, tiếng Quảng Đông và các ngôn ngữ khác. Dùng WebGPU nếu có, nếu không sẽ dùng CPU.",
   "qwenTimedHelp": "Căn chỉnh thời gian ngay trên thiết bị để phát lại và tạo phụ đề. Hãy chọn ngôn ngữ được nói. Sử dụng nhiều bộ nhớ hơn.",
   "modelSize": "Tải khoảng {size} MB trong lần đầu",
   "privacy": "Âm thanh của bạn chỉ được xử lý trên thiết bị này.",

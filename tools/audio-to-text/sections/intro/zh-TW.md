@@ -6,7 +6,7 @@
 
 ## 該選擇哪個轉錄模型？
 
-清晰的錄音或初次轉錄可以使用 **Whisper Base**。**Whisper Small** 有助於辨識口音和對話。**Whisper Large V3 Turbo** 適合有雜音或聽不清楚的錄音，但下載檔案較大，也會使用較多記憶體。Whisper 模型支援將多種語言轉錄為原語言文字。**SenseVoiceSmall** 支援國語、粵語、英語、日語和韓語。 **Qwen3-ASR 0.6B** 支援純文字轉錄，也可對齊時間戳記以供回放和製作字幕；對齊時會額外下載一個模型。純文字逐字稿可匯出為 TXT。
+清晰的錄音或初次轉錄可以使用 **Whisper Base**。**Whisper Small** 有助於辨識口音和對話。**Whisper Large V3 Turbo** 適合有雜音或聽不清楚的錄音，但下載檔案較大，也會使用較多記憶體。Whisper 模型支援將多種語言轉錄為原語言文字。**SenseVoiceSmall** 支援國語、粵語、英語、日語和韓語。 **Qwen3-ASR 0.6B** 支援純文字轉錄，也可對齊時間戳記以供回放和製作字幕；對齊時會額外下載一個模型。純文字逐字稿可匯出為 TXT。 Qwen 辨識時優先使用 WebGPU，無法使用時改用 CPU；時間戳記對齊在 CPU 上執行。
 
 當瀏覽器和顯示卡支援時，Whisper 會使用 WebGPU 加速。首次執行時會下載所選模型；瀏覽器可以重複使用快取中保留的模型檔案。下載大小和處理時間取決於模型與裝置。錄音在裝置上解碼和轉錄，模型下載不包含您的音訊。SenseVoiceSmall 透過 WebAssembly 在裝置的 CPU 上本機執行。如果 WebGPU 無法使用，Whisper 會透過 WebAssembly 改用 CPU 執行。
 

@@ -62,8 +62,8 @@ const MODELS = {
     revision: "355f4d4884d8afd08aef04b9007a8556d7b463b2",
     sizes: { int8: 265 },
   },
-  qwenPlain: { name: "Qwen3-ASR 0.6B", sizes: { int8: 1015 } },
-  qwenTimed: { name: "Qwen3-ASR 0.6B", sizes: { int8: 2090 } },
+  qwenPlain: { name: "Qwen3-ASR 0.6B", sizes: { int8: 1015, q4: 1339 } },
+  qwenTimed: { name: "Qwen3-ASR 0.6B", sizes: { int8: 2111, q4: 2414 } },
 } as const
 
 type ModelId = keyof typeof MODELS

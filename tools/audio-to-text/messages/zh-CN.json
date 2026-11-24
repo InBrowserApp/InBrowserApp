@@ -13,7 +13,7 @@
   "senseVoiceHelp": "适合普通话、粤语、英语、日语和韩语录音。",
   "qwenPlain": "纯文本",
   "qwenTimed": "带时间戳",
-  "qwenPlainHelp": "适合普通话、粤语等语言。在 CPU 上运行。",
+  "qwenPlainHelp": "适合普通话、粤语等语言。优先使用 WebGPU，不可用时使用 CPU。",
   "qwenTimedHelp": "在本地对齐时间戳，用于回放和字幕。请选择录音中的语言。占用更多内存。",
   "modelSize": "首次下载：约 {size} MB",
   "privacy": "音频保留在此设备上。",

@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Mandarin Çincesi, Kantonca, İngilizce, Japonca ve Korece kayıtlar için.",
   "qwenPlain": "Düz metin",
   "qwenTimed": "Zaman damgalı",
-  "qwenPlainHelp": "Mandarin Çincesi, Kantonca ve diğer diller için. CPU üzerinde çalışır.",
+  "qwenPlainHelp": "Mandarin Çincesi, Kantonca ve diğer diller için. Varsa WebGPU, yoksa CPU kullanır.",
   "qwenTimedHelp": "Oynatma ve altyazılar için yerel zaman damgası hizalaması ekler. Konuşulan dili seçin. Daha fazla bellek kullanır.",
   "modelSize": "İlk indirmede yaklaşık {size} MB gerekir",
   "privacy": "Ses kaydınız bu cihazda kalır.",

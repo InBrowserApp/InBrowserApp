@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Pour les enregistrements en mandarin, cantonais, anglais, japonais et coréen.",
   "qwenPlain": "Texte sans horodatage",
   "qwenTimed": "Avec horodatages",
-  "qwenPlainHelp": "Pour le mandarin, le cantonais et d’autres langues. Fonctionne sur le processeur.",
+  "qwenPlainHelp": "Pour le mandarin, le cantonais et d’autres langues. Utilise WebGPU si disponible, sinon le processeur.",
   "qwenTimedHelp": "Ajoute un alignement local des horodatages pour la lecture et les sous-titres. Choisissez la langue parlée. Utilise plus de mémoire.",
   "modelSize": "Environ {size} Mo au premier téléchargement",
   "privacy": "Votre audio reste sur cet appareil.",

@@ -1,12 +1,10 @@
-import {
-  PreTrainedTokenizer,
-  WhisperFeatureExtractor,
-} from "@huggingface/transformers"
+import { PreTrainedTokenizer } from "@huggingface/transformers"
 import { env, InferenceSession } from "onnxruntime-web/wasm"
 import wasmUrl from "onnxruntime-web/ort-wasm-simd-threaded.wasm?url"
 import { toSegments } from "../core/transcript"
 import { SAMPLE_RATE } from "../worker-messages"
 import { alignQwenChunk } from "./qwen-aligner"
+import { qwenFeatureExtractor } from "./qwen-features"
 import { QWEN_ALIGNER_ASSETS } from "./qwen-runtime"
 import type { DownloadModelAsset } from "./model-download"
 
@@ -27,14 +25,7 @@ async function loadQwenTiming(download: DownloadModelAsset) {
   const session = await InferenceSession.create(weights, {
     executionProviders: ["wasm"],
   })
-  const features = new WhisperFeatureExtractor({
-    feature_size: 128,
-    hop_length: 160,
-    n_fft: 400,
-    sampling_rate: SAMPLE_RATE,
-    nb_max_frames: 3000,
-    n_samples: 30 * SAMPLE_RATE,
-  })
+  const features = qwenFeatureExtractor()
 
   return {
     async align(

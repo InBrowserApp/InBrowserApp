@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Per registrazioni in mandarino, cantonese, inglese, giapponese e coreano.",
   "qwenPlain": "Testo semplice",
   "qwenTimed": "Con timestamp",
-  "qwenPlainHelp": "Per mandarino, cantonese e altre lingue. Funziona sulla CPU.",
+  "qwenPlainHelp": "Per mandarino, cantonese e altre lingue. Usa WebGPU se disponibile, altrimenti la CPU.",
   "qwenTimedHelp": "Aggiunge l’allineamento locale dei timestamp per la riproduzione e i sottotitoli. Scegli la lingua parlata. Usa più memoria.",
   "modelSize": "Circa {size} MB al primo download",
   "privacy": "L’audio resta su questo dispositivo.",

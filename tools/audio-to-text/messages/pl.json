@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Do nagrań w języku mandaryńskim, kantońskim, angielskim, japońskim i koreańskim.",
   "qwenPlain": "Sam tekst",
   "qwenTimed": "Ze znacznikami czasu",
-  "qwenPlainHelp": "Do języka mandaryńskiego, kantońskiego i innych. Działa na procesorze.",
+  "qwenPlainHelp": "Do języka mandaryńskiego, kantońskiego i innych. Używa WebGPU, jeśli jest dostępne, a w przeciwnym razie procesora.",
   "qwenTimedHelp": "Dodaje lokalne dopasowanie znaczników czasu do odtwarzania i napisów. Wybierz język nagrania. Zużywa więcej pamięci.",
   "modelSize": "Pierwsze pobranie zajmie około {size} MB",
   "privacy": "Nagranie pozostaje na Twoim urządzeniu.",

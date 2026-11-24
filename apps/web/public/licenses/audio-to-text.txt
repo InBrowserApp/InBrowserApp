@@ -37,6 +37,7 @@ Qwen3-ASR-0.6B and Qwen3-ForcedAligner-0.6B are developed by the Qwen team
 at Alibaba and are used under the Apache License 2.0.
 Qwen3-ASR and the forced aligner: https://github.com/QwenLM/Qwen3-ASR
 Qwen3-ASR sherpa-onnx conversion: https://huggingface.co/cattle12/sherpa-onnx-qwen3-asr-0.6B-int8-2026-03-25
+Qwen3-ASR WebGPU conversion: https://huggingface.co/jiangzhuo9357/Qwen3-ASR-0.6B-ONNX
 Qwen3-ForcedAligner ONNX conversion: https://huggingface.co/valoomba/Qwen3-ForcedAligner-0.6B-ONNX
 
 

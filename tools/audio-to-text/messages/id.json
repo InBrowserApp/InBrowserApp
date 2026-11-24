@@ -13,7 +13,7 @@
   "senseVoiceHelp": "Untuk rekaman dalam bahasa Mandarin, Kanton, Inggris, Jepang, dan Korea.",
   "qwenPlain": "Teks biasa",
   "qwenTimed": "Dengan penanda waktu",
-  "qwenPlainHelp": "Untuk bahasa Mandarin, Kanton, dan bahasa lainnya. Berjalan di CPU.",
+  "qwenPlainHelp": "Untuk bahasa Mandarin, Kanton, dan bahasa lainnya. Menggunakan WebGPU jika tersedia, atau CPU jika tidak.",
   "qwenTimedHelp": "Menambahkan penyelarasan waktu lokal untuk pemutaran dan subtitel. Pilih bahasa yang digunakan. Menggunakan lebih banyak memori.",
   "modelSize": "Unduhan pertama sekitar {size} MB",
   "privacy": "Rekaman audio tetap di perangkat ini.",

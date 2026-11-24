@@ -4,13 +4,21 @@ import type {
   TranscriptionResponse,
 } from "../worker-messages"
 
-const { loadQwenRecognizer, loadQwenTiming } = vi.hoisted(() => ({
-  loadQwenRecognizer: vi.fn(),
-  loadQwenTiming: vi.fn(),
-}))
+const { loadQwenRecognizer, loadQwenTiming, findQwenGpu, recognize } =
+  vi.hoisted(() => ({
+    loadQwenRecognizer: vi.fn(),
+    loadQwenTiming: vi.fn(),
+    findQwenGpu: vi.fn(),
+    recognize: vi.fn(),
+  }))
 
 vi.mock("./qwen-runtime", () => ({ loadQwenRecognizer }))
 vi.mock("./qwen-timing", () => ({ loadQwenTiming }))
+vi.mock("./qwen-webgpu", () => ({
+  findQwenGpu,
+  loadQwenGpu: vi.fn(),
+  QWEN_GPU_ASSETS: [],
+}))
 
 const passages = [
   { start: 0, samples: Float32Array.of(0.1) },
@@ -25,7 +33,6 @@ vi.mock("./voice-activity", () => ({
 }))
 
 const output: TranscriptionResponse[] = []
-const stream = { acceptWaveform: vi.fn(), setOption: vi.fn(), free: vi.fn() }
 
 async function run(model: "qwenPlain" | "qwenTimed") {
   await self.onmessage!(
@@ -50,14 +57,11 @@ beforeEach(async () => {
   loadQwenRecognizer.mockResolvedValue({
     download: vi.fn(),
     vad: { free: vi.fn() },
-    recognizer: {
-      createStream: () => stream,
-      decode: vi.fn(),
-      getResult: vi
-        .fn()
-        .mockReturnValueOnce({ text: "第一段。" })
-        .mockReturnValueOnce({ text: "第二段。" }),
-      free: vi.fn(),
+    engine: {
+      recognize: recognize
+        .mockReturnValueOnce("第一段。")
+        .mockReturnValueOnce("第二段。"),
+      release: vi.fn(),
     },
   })
   await import("./qwen.worker")
@@ -70,9 +74,13 @@ afterEach(() => {
 
 it("transcribes plain text progressively without loading the aligner", async () => {
   await run("qwenPlain")
-  expect(loadQwenRecognizer).toHaveBeenCalledWith(false, expect.any(Function))
+  expect(loadQwenRecognizer).toHaveBeenCalledWith(
+    false,
+    expect.any(Function),
+    undefined
+  )
   expect(loadQwenTiming).not.toHaveBeenCalled()
-  expect(stream.setOption).toHaveBeenCalledWith("language", "Chinese")
+  expect(recognize).toHaveBeenCalledWith(passages[0]?.samples, "zh")
   expect(output).toContainEqual(
     expect.objectContaining({
       type: "transcribing",
@@ -94,12 +102,27 @@ it("publishes passages with the aligner's original-audio times", async () => {
     release,
   })
   await run("qwenTimed")
-  expect(loadQwenRecognizer).toHaveBeenCalledWith(true, expect.any(Function))
+  expect(loadQwenRecognizer).toHaveBeenCalledWith(
+    true,
+    expect.any(Function),
+    undefined
+  )
   expect(output).toContainEqual(
     expect.objectContaining({ type: "transcribing", partialSegments: [first] })
   )
   expect(output.at(-1)).toEqual({ type: "done", segments: [first, second] })
   expect(release).toHaveBeenCalledOnce()
+})
+
+it("retries on the CPU if WebGPU inference cannot be started", async () => {
+  vi.stubGlobal("navigator", { gpu: {} })
+  findQwenGpu.mockResolvedValueOnce({})
+  loadQwenRecognizer.mockRejectedValueOnce(new Error("Device lost"))
+  await run("qwenPlain")
+  expect(output[0]).toEqual({ type: "loading", backend: "webgpu" })
+  expect(output.at(-1)).toEqual(
+    expect.objectContaining({ type: "retry", audio: expect.any(Float32Array) })
+  )
 })
 
 it("keeps the complete text if alignment fails after the first passage", async () => {

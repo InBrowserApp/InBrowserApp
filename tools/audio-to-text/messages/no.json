@@ -13,7 +13,7 @@
   "senseVoiceHelp": "For opptak på mandarin, kantonesisk, engelsk, japansk og koreansk.",
   "qwenPlain": "Ren tekst",
   "qwenTimed": "Med tidskoder",
-  "qwenPlainHelp": "For mandarin, kantonesisk og andre språk. Kjører på prosessoren.",
+  "qwenPlainHelp": "For mandarin, kantonesisk og andre språk. Bruker WebGPU hvis tilgjengelig, ellers prosessoren.",
   "qwenTimedHelp": "Legger til lokale tidskoder for avspilling og undertekster. Velg språket som snakkes. Bruker mer minne.",
   "modelSize": "Omtrent {size} MB ved første nedlasting",
   "privacy": "Lyden blir på denne enheten.",
