@@ -983,6 +983,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "ส่งไฟล์ผ่านเครือข่ายภายใน",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "ตัวสร้าง Lorem Ipsum",
     slug: "lorem-ipsum-generator",

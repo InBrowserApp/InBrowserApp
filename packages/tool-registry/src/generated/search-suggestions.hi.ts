@@ -983,6 +983,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "लोकल नेटवर्क पर फ़ाइल ट्रांसफ़र",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Lorem Ipsum जनरेटर",
     slug: "lorem-ipsum-generator",

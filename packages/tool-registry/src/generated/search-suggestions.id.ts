@@ -983,6 +983,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "local-font-book",
   },
   {
+    category: "network",
+    name: "Transfer File di Jaringan Lokal",
+    slug: "local-network-file-transfer",
+  },
+  {
     category: "text",
     name: "Generator Lorem Ipsum",
     slug: "lorem-ipsum-generator",

@@ -239,6 +239,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/legacy-motorola-system-key-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "local-font-book": () => import("@tool/local-font-book/page"),
+  "local-network-file-transfer": () =>
+    import("@tool/local-network-file-transfer/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-block-lookup": () =>
     import("@tool/mac-address-block-lookup/page"),
