@@ -92,6 +92,18 @@ function prepareSvg(svg: string) {
   )) {
     label.style.fill = label.getAttribute("fill") ?? "inherit"
   }
+  // Use an absolute baseline so vector outlining can reorder RTL glyphs
+  // without applying Mermaid's relative offset to an individual glyph.
+  for (const label of diagram.querySelectorAll<SVGTextElement>(
+    'text.messageText[y][dy="1em"]'
+  )) {
+    const baseline = Number(label.getAttribute("y"))
+    if (Number.isFinite(baseline) && label.style.fontSize.endsWith("px")) {
+      const offset = parseFloat(label.style.fontSize)
+      label.setAttribute("y", String(baseline + offset))
+      label.removeAttribute("dy")
+    }
+  }
 
   const viewBox = diagram
     .getAttribute("viewBox")

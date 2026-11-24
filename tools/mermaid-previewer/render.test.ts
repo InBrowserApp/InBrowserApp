@@ -78,3 +78,13 @@ test("uses the supplied SVG text for Mermaid HTML label switches", async () => {
   expect(svg).toContain("fill: inherit")
   expect(svg).not.toMatch(/<switch|<foreignObject/)
 })
+
+test("stores the baseline for sequence message text as an absolute position", async () => {
+  mock.render.mockResolvedValueOnce({
+    svg: '<svg xmlns="http://www.w3.org/2000/svg"><text class="messageText" y="93" dy="1em" style="font-size:16px">طلب المنتج</text></svg>',
+  })
+  const svg = await renderDiagram("sequenceDiagram\n  A->>B: طلب المنتج")
+  expect(svg).toContain('y="109"')
+  expect(svg).toContain("طلب المنتج")
+  expect(svg).not.toContain('dy="1em"')
+})
