@@ -2430,6 +2430,143 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-to-text",
+    category: "misc",
+    icon: "captions",
+    tags: [
+      "audio",
+      "recording",
+      "audio transcription",
+      "audio transcriber",
+      "speech to text",
+      "whisper",
+      "meeting recording",
+      "voice memo",
+      "subtitles",
+      "timestamps",
+      "txt",
+      "srt",
+      "vtt",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل الصوت إلى نص",
+        description:
+          "حوّل تسجيلات الاجتماعات والمقابلات والملاحظات الصوتية إلى نص داخل متصفحك. حرّر النص وصدّره مع التوقيتات بصيغة TXT أو SRT أو VTT.",
+      },
+      de: {
+        name: "Audio in Text umwandeln",
+        description:
+          "Transkribiere Meetingaufnahmen, Interviews und Sprachnotizen im Browser. Bearbeite den Text und exportiere ihn mit Zeitstempeln als TXT, SRT oder VTT.",
+      },
+      en: {
+        name: "Audio to Text",
+        description:
+          "Transcribe meeting recordings, interviews, and voice notes in your browser. Edit your transcript and export timestamped TXT, SRT, or VTT.",
+      },
+      es: {
+        name: "Audio a texto",
+        description:
+          "Transcribe grabaciones de reuniones, entrevistas y notas de voz en tu navegador. Edita la transcripción y expórtala con marcas de tiempo en TXT, SRT o VTT.",
+      },
+      fr: {
+        name: "Audio en texte",
+        description:
+          "Transcrivez réunions, entretiens et mémos vocaux dans votre navigateur. Corrigez le texte et exportez-le avec ses horodatages en TXT, SRT ou VTT.",
+      },
+      he: {
+        name: "המרת שמע לטקסט",
+        description:
+          "תמללו הקלטות של ישיבות, ראיונות ותזכורות קוליות בדפדפן. ערכו את התמלול וייצאו אותו עם חותמות זמן בפורמט TXT, SRT או VTT.",
+      },
+      hi: {
+        name: "ऑडियो से टेक्स्ट",
+        description:
+          "मीटिंग की रिकॉर्डिंग, इंटरव्यू और वॉइस नोट को ब्राउज़र में टेक्स्ट में बदलें। ट्रांसक्रिप्ट में सुधार करें और टाइमस्टैम्प के साथ TXT, SRT या VTT में निर्यात करें।",
+      },
+      id: {
+        name: "Audio ke Teks",
+        description:
+          "Ubah rekaman rapat, wawancara, dan catatan suara menjadi teks langsung di browser. Edit transkrip dan ekspor ke TXT, SRT, atau VTT dengan penanda waktu.",
+      },
+      it: {
+        name: "Audio in testo",
+        description:
+          "Trascrivi registrazioni di riunioni, interviste e note vocali nel browser. Correggi il testo ed esportalo con timestamp in TXT, SRT o VTT.",
+      },
+      ja: {
+        name: "音声文字起こし",
+        description:
+          "会議の録音、インタビュー、ボイスメモをブラウザーで文字起こし。テキストを編集し、タイムスタンプ付きの TXT・SRT・VTT で書き出せます。",
+      },
+      ko: {
+        name: "음성을 텍스트로 변환",
+        description:
+          "회의 녹음, 인터뷰, 음성 메모를 브라우저에서 텍스트로 변환하세요. 변환 결과를 편집하고 타임스탬프가 포함된 TXT, SRT 또는 VTT로 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Audio kepada Teks",
+        description:
+          "Tukar rakaman mesyuarat, temu bual dan nota suara kepada teks dalam pelayar. Sunting transkrip dan eksport sebagai TXT, SRT atau VTT dengan cap masa.",
+      },
+      nl: {
+        name: "Audio naar tekst",
+        description:
+          "Transcribeer vergaderopnamen, interviews en spraakmemo’s in je browser. Bewerk de tekst en exporteer die met tijdcodes als TXT, SRT of VTT.",
+      },
+      no: {
+        name: "Lyd til tekst",
+        description:
+          "Transkriber møteopptak, intervjuer og talenotater i nettleseren. Rediger teksten og eksporter den med tidskoder som TXT, SRT eller VTT.",
+      },
+      pl: {
+        name: "Audio na tekst",
+        description:
+          "Zamień nagrania spotkań, wywiadów i notatki głosowe na tekst w przeglądarce. Edytuj transkrypcję i pobierz plik TXT, SRT lub VTT ze znacznikami czasu.",
+      },
+      pt: {
+        name: "Áudio para texto",
+        description:
+          "Transcreva gravações de reuniões, entrevistas e notas de voz no navegador. Edite a transcrição e exporte-a com marcas de tempo em TXT, SRT ou VTT.",
+      },
+      ru: {
+        name: "Аудио в текст",
+        description:
+          "Переводите записи встреч, интервью и голосовые заметки в текст прямо в браузере. Редактируйте расшифровку и сохраняйте её с временными метками в TXT, SRT или VTT.",
+      },
+      sv: {
+        name: "Ljud till text",
+        description:
+          "Transkribera mötesinspelningar, intervjuer och röstanteckningar i webbläsaren. Redigera texten och exportera den med tidsstämplar som TXT, SRT eller VTT.",
+      },
+      th: {
+        name: "แปลงเสียงเป็นข้อความ",
+        description:
+          "ถอดเสียงการประชุม สัมภาษณ์ และบันทึกเสียงในเบราว์เซอร์ แก้ไขข้อความแล้วส่งออกเป็น TXT, SRT หรือ VTT พร้อมเวลาในคลิป",
+      },
+      tr: {
+        name: "Sesi Metne Dönüştürme",
+        description:
+          "Toplantı kayıtlarını, röportajları ve sesli notları tarayıcınızda metne dönüştürün. Metni düzenleyin ve zaman damgalı TXT, SRT veya VTT olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển âm thanh thành văn bản",
+        description:
+          "Chuyển bản ghi cuộc họp, phỏng vấn và ghi chú thoại thành văn bản ngay trong trình duyệt. Sửa bản chép lời rồi xuất TXT, SRT hoặc VTT có mốc thời gian.",
+      },
+      "zh-CN": {
+        name: "音频转文字",
+        description:
+          "在浏览器中转写会议录音、采访和语音备忘录。编辑文字稿，并导出带时间戳的 TXT、SRT 或 VTT。",
+      },
+      "zh-TW": {
+        name: "錄音轉文字",
+        description:
+          "在瀏覽器中將會議錄音、訪談和語音備忘錄轉成文字。編輯逐字稿，並匯出附時間戳記的 TXT、SRT 或 VTT。",
+      },
+    },
+  },
+  {
     slug: "audio-trimmer-merger",
     category: "misc",
     icon: "scissors",

@@ -26,6 +26,7 @@
     "@tool/audio-loudness-normalizer": "workspace:*",
     "@tool/audio-recorder": "workspace:*",
     "@tool/audio-silence-remover": "workspace:*",
+    "@tool/audio-to-text": "workspace:*",
     "@tool/audio-trimmer-merger": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",

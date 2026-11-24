@@ -7,12 +7,16 @@ import react from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
 import { fileURLToPath } from "node:url"
 import { createRequire } from "node:module"
+import { dirname, join } from "node:path"
 
 import { isolatedConverter } from "./build/isolated-converter.mjs"
 
 import { gzipAssets } from "./build/gzip-assets.mjs"
 
 const require = createRequire(import.meta.url)
+const requireAudioTool = createRequire(
+  new URL("../../tools/audio-to-text/package.json", import.meta.url)
+)
 
 import {
   DEFAULT_SITE_LANGUAGE,
@@ -50,6 +54,15 @@ export default defineConfig({
         string_decoder: require.resolve("string_decoder/lib/string_decoder.js"),
         "node:perf_hooks": fileURLToPath(
           new URL("./src/shims/perf-hooks.ts", import.meta.url)
+        ),
+        // The WebGPU runtime's raw WASM exceeds the static asset size limit.
+        // Use its external-WASM entry so the audio worker can load gzip.
+        "onnxruntime-web/webgpu": join(
+          dirname(requireAudioTool.resolve("onnxruntime-web/webgpu")),
+          "ort.webgpu.min.mjs"
+        ),
+        "@huggingface/transformers/dist": dirname(
+          requireAudioTool.resolve("@huggingface/transformers")
         ),
       },
     },

@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@huggingface/transformers": 3.8.1
   occt-import-js: 0.0.23
   three: 0.187.0
   "@types/three": 0.187.0
@@ -28,6 +29,8 @@ catalog:
   mediabunny: 1.66.0
   "@mediabunny/flac-encoder": 1.66.0
   onnxruntime-web: 1.31.1
+  "@sherpaw/asr": 0.3.0
+  "@sherpaw/vad": 0.3.0
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
   "@tesseract.js-data/afr": 1.0.0
@@ -351,6 +354,7 @@ allowBuilds:
   msw: true
   protobufjs: false
   sharp: true
+  onnxruntime-node: false
   tesseract.js: false
   tree-sitter: false
   tree-sitter-bash: false

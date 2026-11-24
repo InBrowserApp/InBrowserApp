@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "تحويل الصوت إلى نص",
+    slug: "audio-to-text",
+  },
+  {
+    category: "misc",
     name: "أداة قص الصوت ودمجه",
     slug: "audio-trimmer-merger",
   },
