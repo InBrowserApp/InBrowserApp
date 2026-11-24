@@ -11,12 +11,12 @@ PDF/A to rodzina standardów ISO 19005 dotyczących długoterminowego przechowyw
 
 ## Który standard PDF/A wybrać?
 
-**PDF/A-2b** to dobry wybór do typowej archiwizacji. Wybierz **PDF/A-1b**, jeśli archiwum, sąd lub portal składania dokumentów wymaga konkretnie tej starszej wersji. Oba profile mają poziom zgodności B, który koncentruje się na zachowaniu wyglądu stron.
+**PDF/A-2b** to dobry wybór do typowej archiwizacji. Wybierz **PDF/A-1b**, jeśli archiwum, sąd lub portal składania dokumentów wymaga konkretnie tej starszej wersji. Oba profile mają poziom zgodności B, który koncentruje się na zachowaniu wyglądu stron. PDF/A-2b obsługuje przezroczystość. Użyj tego profilu do dokumentów z przezroczystymi grafikami lub efektami, jeśli archiwum go akceptuje.
 
 ## Co zmienia się w kopii archiwalnej?
 
-Narzędzie przekształca każdą stronę w obraz i zachowuje kolejność stron. Bardzo duże lub bardzo małe strony są proporcjonalnie skalowane do wymiarów dopuszczonych przez profil archiwalny. Usuwa tekst, który można zaznaczyć, w tym ewentualną warstwę OCR. Usuwa też linki, edytowalne pola formularzy, załączniki i podpisy cyfrowe. Zachowaj oryginał, jeśli potrzebujesz wyszukiwania w tekście, funkcji dostępności, elementów interaktywnych lub oryginalnego podpisu.
+Tekst i grafika wektorowa pozostają w pliku PDF, więc nadal możesz wyszukiwać i kopiować tekst oraz powiększać ilustracje. Zeskanowane strony pozostają skanami i zachowują ewentualną przeszukiwalną warstwę tekstową. Jeśli brakuje czcionki, konwerter może osadzić zamiennik o tej samej szerokości znaków. Może też dostosować kolory lub usunąć funkcje niedozwolone przez wybrany standard, na przykład JavaScript i niektóre załączniki. Jeśli dokument ma podpis cyfrowy, zachowaj oryginał, ponieważ konwersja unieważnia ten podpis.
 
 ## Jak sprawdzany jest plik PDF/A?
 
-Przeglądarka ponownie otwiera wygenerowany plik i sprawdza wersję PDF, oznaczenie PDF/A, osadzony profil kolorów oraz strukturę stron, które zawierają wyłącznie obrazy. Kontrola dotyczy plików utworzonych przez to narzędzie. Jeśli potrzebujesz niezależnej weryfikacji lub archiwum wymaga pełnego raportu zgodności, użyj [veraPDF](https://verapdf.org/). Konwersja i wbudowana kontrola odbywają się na Twoim urządzeniu.
+Narzędzie podczas konwersji sprawdza plik pod kątem wybranego profilu PDF/A. Następnie przeglądarka ponownie otwiera kopię archiwalną i sprawdza oznaczenie PDF/A, geometrię stron oraz tekst, który można wyszukiwać. Plik można pobrać po pomyślnej weryfikacji. Aby uzyskać niezależny raport zgodności, użyj [veraPDF](https://verapdf.org/). Dokument przez cały czas pozostaje na Twoim urządzeniu.

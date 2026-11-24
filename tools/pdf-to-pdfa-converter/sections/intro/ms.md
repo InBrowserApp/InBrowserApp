@@ -11,12 +11,12 @@ PDF/A ialah keluarga piawaian PDF ISO 19005 untuk pemeliharaan dokumen jangka pa
 
 ## Piawaian PDF/A manakah yang patut saya pilih?
 
-**PDF/A-2b** ialah pilihan lalai yang sesuai untuk pengarkiban umum. Pilih **PDF/A-1b** jika pejabat rekod, mahkamah atau portal penyerahan dokumen menetapkan piawaian yang lebih lama ini. Kedua-dua profil menggunakan tahap B, yang menumpukan pada pemeliharaan rupa halaman.
+**PDF/A-2b** ialah pilihan lalai yang sesuai untuk pengarkiban umum. Pilih **PDF/A-1b** jika pejabat rekod, mahkamah atau portal penyerahan dokumen menetapkan piawaian yang lebih lama ini. Kedua-dua profil menggunakan tahap B, yang menumpukan pada pemeliharaan rupa halaman. PDF/A-2b menyokong unsur lutsinar. Gunakannya untuk dokumen dengan ilustrasi atau kesan lutsinar jika arkib anda menerima piawaian ini.
 
 ## Apakah yang berubah dalam salinan arkib?
 
-Alat ini menukar setiap halaman kepada imej mengikut susunan asal. Halaman yang luar biasa besar atau kecil diubah saiznya secara berkadar agar sepadan dengan profil arkib. Teks yang boleh dipilih, termasuk sebarang lapisan OCR, dibuang. Pautan, medan borang yang boleh disunting, lampiran dan tandatangan digital turut dibuang. Simpan PDF asal jika anda memerlukan carian teks, kebolehcapaian, ciri interaktif atau tandatangan asal.
+Teks dan grafik vektor kekal dalam PDF. Anda masih boleh mencari dan menyalin teks serta membesarkan ilustrasi. Halaman imbasan kekal sebagai imbasan, bersama lapisan teks yang boleh dicari jika lapisan itu sudah ada. Jika ada fon yang tiada, alat ini boleh membenamkan fon ganti dengan lebar aksara yang sama. Alat ini mungkin melaraskan warna atau membuang ciri yang dilarang oleh piawaian yang dipilih, seperti JavaScript dan sesetengah lampiran. Simpan fail asal jika mengandungi tandatangan digital kerana penukaran akan membatalkan kesahan tandatangan itu.
 
 ## Bagaimanakah fail PDF/A disemak?
 
-Pelayar membuka semula fail yang dihasilkan untuk menyemak versi PDF, pengenalan PDF/A, profil warna terbenam dan struktur halaman yang hanya mengandungi imej. Semakan ini terpakai pada fail yang dihasilkan oleh alat ini. Untuk pengesahan bebas atau jika arkib memerlukan laporan pematuhan penuh, gunakan [veraPDF](https://verapdf.org/). Penukaran dan semakan terbina dalam dijalankan pada peranti anda.
+Alat ini menyemak profil PDF/A yang dipilih semasa penukaran. Pelayar kemudian membuka semula salinan arkib untuk menyemak pengenalan PDF/A, saiz dan orientasi halaman, serta teks yang boleh dicari. Salinan boleh dimuat turun setelah lulus semakan. Untuk laporan pematuhan bebas, gunakan [veraPDF](https://verapdf.org/). Dokumen anda kekal pada peranti sepanjang proses.

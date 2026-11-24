@@ -3,13 +3,13 @@
   "dropHint": "Or drag and drop it here",
   "changePdf": "Change PDF",
   "standard": "PDF/A standard",
-  "part1": "Choose this if your archive or submission portal requires PDF/A-1b.",
+  "part1": "Choose this if your archive requires PDF/A-1b. Use PDF/A-2b for documents with transparency.",
   "part2": "Recommended for most archives unless a different standard is required.",
-  "appearance": "The archive copy preserves the page appearance as images. Text selection, links, and attachments are removed.",
+  "appearance": "Text stays searchable and vector graphics stay sharp. The selected standard may require changes to fonts, colors, or interactive features.",
   "convert": "Convert to PDF/A",
   "cancel": "Cancel",
   "opening": "Opening PDF…",
-  "rendering": "Converting page {page} of {total}…",
+  "converting": "Converting to PDF/A…",
   "checking": "Checking the archive copy…",
   "ready": "Archive checks passed",
   "download": "Download PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "Unlock this password-protected PDF before converting it.",
   "xfa": "This PDF uses an XFA form. Open it in a reader that displays the form and save a standard PDF copy before converting.",
   "failed": "The PDF could not be converted. Try another copy.",
-  "checkFailed": "The archive copy did not pass the checks for the selected standard."
+  "checkFailed": "The archive copy did not pass the checks for the selected standard.",
+  "transparency": "This PDF uses transparency. Choose PDF/A-2b to keep it, or export a copy with transparency flattened before converting to PDF/A-1b.",
+  "contentChanged": "The archive copy did not preserve the original text or page layout. Try exporting a new PDF with its fonts embedded."
 }

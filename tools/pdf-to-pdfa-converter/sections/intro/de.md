@@ -11,12 +11,12 @@ PDF/A ist die Normenreihe ISO 19005 für die Langzeitarchivierung von Dokumenten
 
 ## Welchen PDF/A-Standard soll ich wählen?
 
-**PDF/A-2b** eignet sich in der Regel für die allgemeine Archivierung. Wähle **PDF/A-1b**, wenn ein Archiv, Gericht oder Einreichungsportal diesen älteren Standard ausdrücklich verlangt. Beide Profile entsprechen der Konformitätsstufe B, bei der das Erscheinungsbild der Seiten im Mittelpunkt steht.
+**PDF/A-2b** eignet sich in der Regel für die allgemeine Archivierung. Wähle **PDF/A-1b**, wenn ein Archiv, Gericht oder Einreichungsportal diesen älteren Standard ausdrücklich verlangt. Beide Profile entsprechen der Konformitätsstufe B, bei der das Erscheinungsbild der Seiten im Mittelpunkt steht. PDF/A-2b unterstützt Transparenz. Wähle es für Dokumente mit transparenten Grafiken oder Effekten, wenn dein Archiv den Standard akzeptiert.
 
 ## Was ändert sich in der Archivkopie?
 
-Der Konverter wandelt jede Seite in ein Bild um und übernimmt die ursprüngliche Seitenreihenfolge. Ungewöhnlich große oder kleine Seiten werden unter Beibehaltung ihres Seitenverhältnisses an das Archivprofil angepasst. Markierbarer Text einschließlich vorhandener OCR-Textebenen geht dabei ebenso verloren wie Links, bearbeitbare Formularfelder, Anhänge und digitale Signaturen. Bewahre das Original auf, wenn du die Suchfunktion, barrierefreie Inhalte, interaktive Funktionen oder die ursprüngliche Signatur benötigst.
+Text und Vektorgrafiken bleiben in der PDF erhalten. Du kannst den Text weiterhin durchsuchen und kopieren und die Grafiken vergrößern. Gescannte Seiten bleiben als Bilder erhalten, einschließlich einer vorhandenen durchsuchbaren Textebene. Fehlt eine Schrift, kann der Konverter eine Ersatzschrift mit denselben Zeichenbreiten einbetten. Er kann außerdem Farben anpassen oder Funktionen entfernen, die der gewählte Standard nicht erlaubt, etwa JavaScript und bestimmte Anhänge. Bewahre das Original auf, wenn es digital signiert ist. Die Umwandlung macht die ursprüngliche Signatur ungültig.
 
 ## Wie wird die PDF/A-Datei geprüft?
 
-Der Browser öffnet die erstellte Datei erneut und prüft die PDF-Version, die PDF/A-Kennung, das eingebettete Farbprofil und die Struktur der Bildseiten. Die integrierte Prüfung ist auf die Dateien abgestimmt, die dieses Werkzeug erstellt. Für eine unabhängige Prüfung oder einen vollständigen Konformitätsbericht für dein Archiv kannst du [veraPDF](https://verapdf.org/) nutzen. Die Umwandlung und die integrierte Prüfung laufen auf deinem Gerät.
+Der Konverter prüft während der Umwandlung die Vorgaben des gewählten PDF/A-Profils. Anschließend öffnet der Browser die Archivkopie erneut und prüft die PDF/A-Kennung, die Seitengeometrie und den durchsuchbaren Text. Nach erfolgreicher Prüfung kannst du die Datei herunterladen. Für einen unabhängigen Konformitätsbericht kannst du [veraPDF](https://verapdf.org/) nutzen. Dein Dokument bleibt während des gesamten Vorgangs auf deinem Gerät.

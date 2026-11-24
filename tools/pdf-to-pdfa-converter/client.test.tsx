@@ -16,7 +16,7 @@ const convert = vi.mocked(convertPdf)
 const source = new File(["pdf"], "Records.PDF", { type: "application/pdf" })
 
 function load() {
-  const { container } = render(<PdfToPdfa lang="en" messages={messages} />)
+  const { container } = render(<PdfToPdfa messages={messages} />)
   return container.querySelector("input[type=file]")!
 }
 
@@ -75,7 +75,7 @@ describe("PDF/A converter controls", () => {
 
   it("accepts one file by drag and drop and can cancel a conversion", async () => {
     convert.mockImplementation(async (_file, { signal, onProgress }) => {
-      onProgress({ stage: "rendering", page: 2, total: 3 })
+      onProgress("converting")
       return new Promise((_, reject) => {
         signal.addEventListener("abort", () => reject(signal.reason), {
           once: true,
@@ -88,7 +88,7 @@ describe("PDF/A converter controls", () => {
     expect(screen.getByRole("alert").textContent).toBe(messages.oneFile)
     fireEvent.drop(drop, { dataTransfer: { files: [source] } })
     fireEvent.click(startButton())
-    await screen.findByText("Converting page 2 of 3…")
+    await screen.findByText(messages.converting)
     fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
     await waitFor(() =>
       expect(convert.mock.lastCall?.[1].signal.aborted).toBe(true)

@@ -11,12 +11,12 @@ PDF/A, belgeleri uzun süre saklamak amacıyla geliştirilen ISO 19005 PDF stand
 
 ## Hangi PDF/A standardını seçmeliyim?
 
-**PDF/A-2b**, genel arşivleme için uygun bir varsayılan seçenektir. Bir arşiv kurumu, mahkeme veya belge teslim portalı özellikle daha eski standardı istiyorsa **PDF/A-1b**'yi seçin. Her iki profil de sayfaların görünümünü korumaya odaklanan B uygunluk düzeyini kullanır.
+**PDF/A-2b**, genel arşivleme için uygun bir varsayılan seçenektir. Bir arşiv kurumu, mahkeme veya belge teslim portalı özellikle daha eski standardı istiyorsa **PDF/A-1b**'yi seçin. Her iki profil de sayfaların görünümünü korumaya odaklanan B uygunluk düzeyini kullanır. PDF/A-2b saydamlığı destekler. Arşiviniz bu standardı kabul ediyorsa saydam grafikler veya efektler içeren belgeler için bu standardı kullanın.
 
 ## Arşiv kopyasında neler değişir?
 
-Dönüştürücü, her sayfayı özgün sırasıyla bir görüntüye dönüştürür. Çok büyük veya çok küçük sayfalar, en boy oranı korunarak arşiv profiline uygun boyuta getirilir. OCR katmanı dahil seçilebilir metin kaldırılır. Bağlantılar, düzenlenebilir form alanları, ekler ve dijital imzalar da kaldırılır. Arama, erişilebilirlik, etkileşimli özellikler veya özgün imza gerekiyorsa özgün PDF'yi saklayın.
+Metin ve vektör grafikler PDF'de kalır. Metni aramaya ve kopyalamaya devam edebilir, çizimleri büyütebilirsiniz. Taranmış sayfalar tarama olarak kalır ve varsa aranabilir metin katmanı korunur. Bir yazı tipi eksikse dönüştürücü, karakter genişlikleri aynı olan bir yazı tipini dosyaya gömebilir. Dönüştürücü renkleri değiştirebilir veya seçilen standardın izin vermediği JavaScript ve bazı ekler gibi özellikleri kaldırabilir. Dosya dijital imzalıysa özgün PDF'yi saklayın. Dönüştürme, imzayı geçersiz kılar.
 
 ## PDF/A dosyası nasıl kontrol edilir?
 
-Tarayıcı, oluşturulan dosyayı yeniden açıp PDF sürümünü, PDF/A tanımlama bilgilerini, gömülü renk profilini ve yalnızca görüntülerden oluşan sayfa yapısını kontrol eder. Bu kontroller aracın oluşturduğu dosyalara uygulanır. Bağımsız doğrulama için veya arşiviniz tam bir uygunluk raporu istiyorsa [veraPDF](https://verapdf.org/) kullanın. Dönüştürme ve yerleşik kontroller cihazınızda yapılır.
+Dönüştürücü işlem sırasında seçilen PDF/A profilinin gerekliliklerini kontrol eder. Ardından tarayıcı arşiv kopyasını yeniden açarak PDF/A tanımlama bilgilerini, sayfaların boyutlarını ve yönünü ve aranabilir metni kontrol eder. Dosyayı bu kontrollerden geçtikten sonra indirebilirsiniz. Bağımsız bir uygunluk raporu için [veraPDF](https://verapdf.org/) kullanın. Belgeniz işlem boyunca cihazınızda kalır.

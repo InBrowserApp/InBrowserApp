@@ -3,13 +3,13 @@
   "dropHint": "Ou arraste e solte aqui",
   "changePdf": "Trocar PDF",
   "standard": "Padrão PDF/A",
-  "part1": "Escolha este perfil se o arquivo ou portal de envio exigir PDF/A-1b.",
+  "part1": "Escolha este perfil se o arquivo exigir PDF/A-1b. Use PDF/A-2b para documentos com transparência.",
   "part2": "Recomendado para a maioria dos arquivos, salvo se houver exigência de outro padrão.",
-  "appearance": "A cópia de arquivamento mantém a aparência das páginas em forma de imagens. O texto selecionável, os links e os anexos são removidos.",
+  "appearance": "O texto continua pesquisável e os gráficos vetoriais mantêm a nitidez. O padrão selecionado pode exigir alterações em fontes, cores ou recursos interativos.",
   "convert": "Converter para PDF/A",
   "cancel": "Cancelar",
   "opening": "Abrindo PDF…",
-  "rendering": "Convertendo a página {page} de {total}…",
+  "converting": "Convertendo para PDF/A…",
   "checking": "Verificando a cópia de arquivamento…",
   "ready": "A cópia de arquivamento passou nas verificações",
   "download": "Baixar PDF/A",
@@ -19,5 +19,7 @@
   "encrypted": "Desbloqueie este PDF protegido por senha antes de convertê-lo.",
   "xfa": "Este PDF usa um formulário XFA. Abra o arquivo em um leitor que exiba o formulário e salve uma cópia em PDF padrão antes de convertê-lo.",
   "failed": "Não foi possível converter o PDF. Tente usar outra cópia.",
-  "checkFailed": "A cópia de arquivamento não passou nas verificações do padrão selecionado."
+  "checkFailed": "A cópia de arquivamento não passou nas verificações do padrão selecionado.",
+  "transparency": "Este PDF usa transparência. Escolha PDF/A-2b para preservá-la ou exporte uma cópia com a transparência achatada antes de converter para PDF/A-1b.",
+  "contentChanged": "A cópia de arquivamento não preservou o texto ou o layout das páginas do original. Tente exportar um novo PDF com fontes incorporadas."
 }

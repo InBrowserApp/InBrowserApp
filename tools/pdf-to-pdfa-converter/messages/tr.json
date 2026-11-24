@@ -3,13 +3,13 @@
   "dropHint": "Veya buraya sürükleyip bırakın",
   "changePdf": "PDF'yi değiştir",
   "standard": "PDF/A standardı",
-  "part1": "Arşiviniz veya belge teslim portalınız PDF/A-1b istiyorsa bunu seçin.",
+  "part1": "Arşiviniz PDF/A-1b istiyorsa bunu seçin. Saydamlık içeren belgeler için PDF/A-2b kullanın.",
   "part2": "Farklı bir standart istenmedikçe çoğu arşiv için önerilir.",
-  "appearance": "Arşiv kopyası, sayfaların görünümünü görsel olarak saklar. Metin seçme özelliği, bağlantılar ve ekler kaldırılır.",
+  "appearance": "Metin aranabilir kalır ve vektör grafikler netliğini korur. Seçilen standart yazı tiplerinde, renklerde veya etkileşimli özelliklerde değişiklik gerektirebilir.",
   "convert": "PDF/A'ya dönüştür",
   "cancel": "İptal",
   "opening": "PDF açılıyor…",
-  "rendering": "{total} sayfanın {page}. sayfası dönüştürülüyor…",
+  "converting": "PDF/A'ya dönüştürülüyor…",
   "checking": "Arşiv kopyası kontrol ediliyor…",
   "ready": "Arşiv kopyası kontrollerden geçti",
   "download": "PDF/A'yı indir",
@@ -19,5 +19,7 @@
   "encrypted": "Dönüştürmeden önce parola korumalı PDF'nin kilidini açın.",
   "xfa": "Bu PDF bir XFA formu içeriyor. Dönüştürmeden önce dosyayı formu görüntüleyebilen bir PDF okuyucuda açın ve standart bir PDF kopyası olarak kaydedin.",
   "failed": "PDF dönüştürülemedi. Başka bir kopyayla deneyin.",
-  "checkFailed": "Arşiv kopyası, seçilen standarda yönelik kontrollerden geçemedi."
+  "checkFailed": "Arşiv kopyası, seçilen standarda yönelik kontrollerden geçemedi.",
+  "transparency": "Bu PDF saydamlık içeriyor. Saydamlığı korumak için PDF/A-2b'yi seçin. PDF/A-1b'ye dönüştürecekseniz önce saydamlığı düzleştirilmiş bir kopya oluşturun.",
+  "contentChanged": "Arşiv kopyası özgün metni veya sayfa düzenini koruyamadı. Yazı tipleri gömülü olarak yeni bir PDF dışa aktarmayı deneyin."
 }
