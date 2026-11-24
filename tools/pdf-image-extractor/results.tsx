@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Download, FileArchive, LoaderCircle } from "@workspace/ui/icons"
-import type { Messages } from "./client"
+import type English from "./messages/en.json"
 import type { ExtractedImage } from "./pdf-images"
+
+type Messages = typeof English
 
 function ImageCard({
   image,
@@ -55,7 +57,11 @@ function ImageCard({
           </p>
         </div>
         {url && (
-          <Button asChild className="w-full" variant="outline">
+          <Button
+            asChild
+            className="min-h-11 w-full sm:min-h-0"
+            variant="outline"
+          >
             <a
               aria-label={messages.downloadImage.replace("{name}", image.name)}
               data-astro-prefetch="false"
@@ -120,7 +126,7 @@ export function ImageResults({
           </span>
         </h2>
         <Button
-          className="w-full sm:w-auto"
+          className="min-h-11 w-full sm:min-h-0 sm:w-auto"
           disabled={zip === "busy"}
           onClick={downloadZip}
           size="lg"

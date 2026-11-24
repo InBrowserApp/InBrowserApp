@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
-import { FileImage, ImageIcon, LoaderCircle, Upload } from "@workspace/ui/icons"
+import { FileImage, Folder, ImageIcon, LoaderCircle } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 import { ImageResults } from "./results"
 import type { Extraction } from "./pdf-images"
@@ -114,17 +114,21 @@ export default function PdfImageExtractor({
           />
         </div>
         {file && (
-          <p className="min-w-0 flex-1 text-sm font-medium wrap-anywhere">
+          <p
+            className="line-clamp-2 min-w-0 flex-1 text-sm font-medium wrap-anywhere"
+            title={file.name}
+          >
             <bdi>{file.name}</bdi>
           </p>
         )}
         <Button
+          className="min-h-11 sm:min-h-0"
           onClick={() => input.current?.click()}
           size="lg"
           type="button"
           variant={file ? "outline" : "default"}
         >
-          <Upload aria-hidden="true" data-icon="inline-start" />
+          <Folder aria-hidden="true" data-icon="inline-start" />
           {file ? messages.changePdf : messages.choosePdf}
         </Button>
         {!file && (

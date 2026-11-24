@@ -25472,7 +25472,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-CN": {
         name: "从 PDF 中提取图片",
         description:
-          "按存储的分辨率提取 PDF 文件中嵌入的照片和其他图片。预览并单独保存 JPG 或 PNG 文件，或打包下载为 ZIP。无需上传文件。",
+          "提取 PDF 中嵌入的照片和其他图片，保留原始像素尺寸。支持预览、单张下载 JPG 或 PNG，以及打包下载 ZIP。无需上传文件。",
       },
       "zh-TW": {
         name: "從 PDF 擷取圖片",
