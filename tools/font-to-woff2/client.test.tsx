@@ -63,7 +63,9 @@ describe("font converter", () => {
     expect(screen.getAllByText(messages.converting)).toHaveLength(2)
 
     job.respond(0, new ArrayBuffer(1024))
-    expect(screen.getByText("2 KiB original · 1 KiB WOFF2")).toBeTruthy()
+    expect(
+      screen.getByText("\u20662 KiB\u2069 original · \u20661 KiB\u2069 WOFF2")
+    ).toBeTruthy()
     const link = screen.getByRole("link", { name: "Download WOFF2 A$&.woff2" })
     expect(link.getAttribute("download")).toBe("A$&.woff2")
     expect(URL.createObjectURL).toHaveBeenCalledWith(
@@ -129,6 +131,8 @@ describe("font converter", () => {
     fireEvent.change(input, { target: { files: [font] } })
     const next = FakeWorker.jobs[1]!
     next.respond(0, new ArrayBuffer(64))
-    expect(screen.getByText("2 KiB original · 64 B WOFF2")).toBeTruthy()
+    expect(
+      screen.getByText("\u20662 KiB\u2069 original · \u206664 B\u2069 WOFF2")
+    ).toBeTruthy()
   })
 })

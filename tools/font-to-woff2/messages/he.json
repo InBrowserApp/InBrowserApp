@@ -7,6 +7,6 @@
   "clear": "ניקוי הכול",
   "converting": "מתבצעת המרה…",
   "download": "הורדת WOFF2",
-  "sizes": "מקור {original} · WOFF2 ‏{output}",
+  "sizes": "מקור {original} · \u2066WOFF2\u2069 {output}",
   "failed": "המרת הקובץ נכשלה. בחרו קובץ גופן תקין בפורמט TTF או OTF."
 }

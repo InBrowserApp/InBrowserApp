@@ -201,8 +201,14 @@ export default function FontToWoff2({
                 if (output === null) status = messages.failed
                 else if (output) {
                   status = messages.sizes
-                    .replace("{original}", formatBytes(file.size))
-                    .replace("{output}", formatBytes(output.byteLength))
+                    .replace(
+                      "{original}",
+                      `\u2066${formatBytes(file.size)}\u2069`
+                    )
+                    .replace(
+                      "{output}",
+                      `\u2066${formatBytes(output.byteLength)}\u2069`
+                    )
                 }
 
                 return (

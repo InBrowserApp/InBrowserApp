@@ -7,6 +7,6 @@
   "clear": "مسح الكل",
   "converting": "جارٍ التحويل…",
   "download": "تنزيل WOFF2",
-  "sizes": "الأصلي {original} · WOFF2 ‏{output}",
+  "sizes": "الأصلي {original} · \u2066WOFF2\u2069 {output}",
   "failed": "تعذّر تحويل هذا الملف. اختر ملف خط صالحًا بصيغة TTF أو OTF."
 }
