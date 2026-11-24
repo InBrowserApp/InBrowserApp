@@ -1,0 +1,4 @@
+{
+  "name": "IPv4 VLSM-calculator",
+  "description": "Plan IPv4-subnetten op basis van het aantal hosts. Voer een overkoepelend CIDR-blok in om subnetmaskers, bruikbare IP-bereiken, broadcastadressen en de resterende adresruimte te berekenen."
+}

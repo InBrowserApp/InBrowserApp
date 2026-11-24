@@ -31558,6 +31558,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vlsm-calculator",
+    language: "ar",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "de",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "en",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "es",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "fr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "he",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "hi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "id",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "it",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ja",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ko",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ms",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "nl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "no",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pl",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "pt",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "ru",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "sv",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "th",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "tr",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "vi",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vlsm-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },

@@ -1718,6 +1718,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vin-validator",
   },
   {
+    category: "network",
+    name: "מחשבון VLSM לתת־רשתות IPv4",
+    slug: "vlsm-calculator",
+  },
+  {
     category: "crypto",
     name: "האש Whirlpool טקסט או קובץ",
     slug: "whirlpool-hash-text-or-file",

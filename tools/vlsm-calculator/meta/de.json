@@ -1,0 +1,4 @@
+{
+  "name": "IPv4-VLSM-Rechner",
+  "description": "Plane IPv4-Subnetze nach Hostanzahl. Gib einen übergeordneten CIDR-Block ein und berechne Subnetzmasken, nutzbare IP-Bereiche, Broadcast-Adressen und den verbleibenden Adressraum."
+}

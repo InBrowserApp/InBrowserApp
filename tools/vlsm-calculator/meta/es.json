@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora VLSM para IPv4",
+  "description": "Planifica subredes IPv4 según el número de hosts. Introduce el bloque CIDR principal para calcular las máscaras de subred, los rangos IP utilizables, las direcciones de difusión y el espacio disponible."
+}
