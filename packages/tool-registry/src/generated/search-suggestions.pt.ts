@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Remover fundo de imagem",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Combinador de imagens",
     slug: "image-combiner",
   },

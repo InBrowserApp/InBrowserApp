@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "إزالة خلفية الصورة",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "دمج الصور",
     slug: "image-combiner",
   },

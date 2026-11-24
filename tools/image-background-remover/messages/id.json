@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Pilih gambar",
+  "dropImage": "atau seret dan lepas di sini",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Ganti gambar",
+  "original": "Gambar asli",
+  "result": "Tanpa latar belakang",
+  "download": "Unduh PNG",
+  "preparing": "Memuat model penghapus latar belakang…",
+  "processing": "Menghapus latar belakang…",
+  "invalidImage": "Gambar ini tidak bisa dibuka. Pilih file JPG, PNG, atau WebP.",
+  "modelFailed": "Model gagal dimuat. Periksa koneksi internet, lalu coba lagi.",
+  "processingFailed": "Latar belakang gagal dihapus. Coba lagi atau pilih gambar lain.",
+  "retry": "Coba lagi"
+}

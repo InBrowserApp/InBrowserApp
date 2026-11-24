@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Görsel seç",
+  "dropImage": "veya buraya sürükleyip bırak",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Görseli değiştir",
+  "original": "Orijinal",
+  "result": "Arka plan kaldırıldı",
+  "download": "PNG indir",
+  "preparing": "Arka plan kaldırma modeli yükleniyor…",
+  "processing": "Arka plan kaldırılıyor…",
+  "invalidImage": "Görsel açılamadı. JPG, PNG veya WebP dosyası seçin.",
+  "modelFailed": "Model yüklenemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.",
+  "processingFailed": "Arka plan kaldırılamadı. Tekrar deneyin veya başka bir görsel seçin.",
+  "retry": "Tekrar dene"
+}

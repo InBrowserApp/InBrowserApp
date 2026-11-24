@@ -11134,6 +11134,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-background-remover",
+    language: "ar",
+  },
+  {
+    slug: "image-background-remover",
+    language: "de",
+  },
+  {
+    slug: "image-background-remover",
+    language: "en",
+  },
+  {
+    slug: "image-background-remover",
+    language: "es",
+  },
+  {
+    slug: "image-background-remover",
+    language: "fr",
+  },
+  {
+    slug: "image-background-remover",
+    language: "he",
+  },
+  {
+    slug: "image-background-remover",
+    language: "hi",
+  },
+  {
+    slug: "image-background-remover",
+    language: "id",
+  },
+  {
+    slug: "image-background-remover",
+    language: "it",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ja",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ko",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ms",
+  },
+  {
+    slug: "image-background-remover",
+    language: "nl",
+  },
+  {
+    slug: "image-background-remover",
+    language: "no",
+  },
+  {
+    slug: "image-background-remover",
+    language: "pl",
+  },
+  {
+    slug: "image-background-remover",
+    language: "pt",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ru",
+  },
+  {
+    slug: "image-background-remover",
+    language: "sv",
+  },
+  {
+    slug: "image-background-remover",
+    language: "th",
+  },
+  {
+    slug: "image-background-remover",
+    language: "tr",
+  },
+  {
+    slug: "image-background-remover",
+    language: "vi",
+  },
+  {
+    slug: "image-background-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-background-remover",
+    language: "zh-TW",
+  },
+  {
     slug: "image-combiner",
     language: "ar",
   },

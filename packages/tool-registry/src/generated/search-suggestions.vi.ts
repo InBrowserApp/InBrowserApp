@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Xóa nền ảnh",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Công cụ ghép ảnh",
     slug: "image-combiner",
   },

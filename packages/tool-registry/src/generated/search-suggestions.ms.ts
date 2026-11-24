@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Buang Latar Belakang Imej",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Penggabung Imej",
     slug: "image-combiner",
   },

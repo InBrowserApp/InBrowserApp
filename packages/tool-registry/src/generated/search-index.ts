@@ -15358,6 +15358,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-background-remover",
+    category: "image",
+    icon: "scissors",
+    tags: [
+      "background removal",
+      "transparent png",
+      "cutout",
+      "product photo",
+      "portrait",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة خلفية الصورة",
+        description:
+          "أزل خلفية صور المنتجات والصور الشخصية والرسومات تلقائيًا. عاين النتيجة ونزّلها بصيغة PNG بخلفية شفافة وبالأبعاد الأصلية. تبقى الصورة في متصفحك.",
+      },
+      de: {
+        name: "Bildhintergrund entfernen",
+        description:
+          "Entferne automatisch den Hintergrund von Produktfotos, Porträts und Grafiken. Prüfe die Vorschau und lade ein transparentes PNG in Originalgröße herunter. Dein Bild bleibt im Browser.",
+      },
+      en: {
+        name: "Image Background Remover",
+        description:
+          "Automatically remove the background from product photos, portraits, and graphics. Preview and download a transparent PNG at the original size. Your image stays in your browser.",
+      },
+      es: {
+        name: "Quitar fondo de imágenes",
+        description:
+          "Quita automáticamente el fondo de fotos de productos, retratos y gráficos. Previsualiza y descarga un PNG transparente con las dimensiones originales. Tu imagen se queda en el navegador.",
+      },
+      fr: {
+        name: "Supprimer l’arrière-plan d’une image",
+        description:
+          "Supprimez automatiquement l’arrière-plan de vos photos de produits, portraits et visuels. Prévisualisez et téléchargez un PNG transparent aux dimensions d’origine. L’image reste dans votre navigateur.",
+      },
+      he: {
+        name: "הסרת רקע מתמונה",
+        description:
+          "הסירו אוטומטית רקע מתמונות מוצר, דיוקנאות וגרפיקה. בדקו את התוצאה והורידו קובץ PNG עם רקע שקוף בגודל המקורי. התמונה נשארת בדפדפן שלכם.",
+      },
+      hi: {
+        name: "फ़ोटो का बैकग्राउंड हटाएँ",
+        description:
+          "प्रोडक्ट फ़ोटो, पोर्ट्रेट और ग्राफ़िक्स से बैकग्राउंड अपने आप हटाएँ। नतीजा देखें और मूल आकार में पारदर्शी बैकग्राउंड वाली PNG डाउनलोड करें। इमेज आपके ब्राउज़र में ही रहती है।",
+      },
+      id: {
+        name: "Hapus Latar Belakang Gambar",
+        description:
+          "Hapus latar belakang foto produk, potret, dan grafis secara otomatis. Pratinjau hasilnya dan unduh PNG transparan dalam ukuran asli. Gambar tetap di browser Anda.",
+      },
+      it: {
+        name: "Rimuovi lo sfondo dalle immagini",
+        description:
+          "Rimuovi automaticamente lo sfondo da foto di prodotti, ritratti e grafiche. Controlla l’anteprima e scarica un PNG trasparente che mantiene le dimensioni originali. L’immagine resta nel browser.",
+      },
+      ja: {
+        name: "画像の背景を削除",
+        description:
+          "商品写真やポートレート、イラストの背景を自動で削除。仕上がりをプレビューし、元のサイズの透過 PNG をダウンロードできます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 배경 제거",
+        description:
+          "상품 사진, 인물 사진, 그래픽의 배경을 자동으로 제거합니다. 결과를 미리 보고 원본 크기의 투명 배경 PNG를 다운로드하세요. 이미지는 브라우저 안에서 처리됩니다.",
+      },
+      ms: {
+        name: "Buang Latar Belakang Imej",
+        description:
+          "Buang latar belakang foto produk, potret dan grafik secara automatik. Semak pratonton dan muat turun PNG berlatar lutsinar dalam saiz asal. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Achtergrond van afbeelding verwijderen",
+        description:
+          "Verwijder automatisch de achtergrond van productfoto’s, portretten en afbeeldingen. Bekijk het resultaat en download een transparante PNG op origineel formaat. Je afbeelding blijft in je browser.",
+      },
+      no: {
+        name: "Fjern bakgrunn fra bilde",
+        description:
+          "Fjern automatisk bakgrunnen fra produktbilder, portretter og grafikk. Forhåndsvis resultatet og last ned en PNG med gjennomsiktig bakgrunn i original størrelse. Bildet blir i nettleseren din.",
+      },
+      pl: {
+        name: "Usuwanie tła ze zdjęć",
+        description:
+          "Automatycznie usuwaj tło ze zdjęć produktów, portretów i grafik. Sprawdź podgląd i pobierz plik PNG z przezroczystym tłem w oryginalnym rozmiarze. Obraz pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover fundo de imagem",
+        description:
+          "Remova automaticamente o fundo de fotos de produtos, retratos e artes. Confira a prévia e baixe um PNG transparente nas dimensões originais. Sua imagem fica no navegador.",
+      },
+      ru: {
+        name: "Удаление фона с изображения",
+        description:
+          "Автоматически удаляйте фон с фотографий товаров, портретов и графики. Просматривайте результат и скачивайте PNG с прозрачным фоном в исходном размере. Изображение остаётся в браузере.",
+      },
+      sv: {
+        name: "Ta bort bakgrund från bild",
+        description:
+          "Ta automatiskt bort bakgrunden från produktfoton, porträtt och grafik. Förhandsgranska resultatet och ladda ned en PNG med transparent bakgrund i originalstorlek. Bilden stannar i din webbläsare.",
+      },
+      th: {
+        name: "ลบพื้นหลังรูปภาพ",
+        description:
+          "ลบพื้นหลังภาพสินค้า ภาพบุคคล และภาพกราฟิกโดยอัตโนมัติ ดูตัวอย่างแล้วดาวน์โหลด PNG พื้นหลังโปร่งใสขนาดเท่าต้นฉบับ รูปภาพประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görsel Arka Planını Kaldırma",
+        description:
+          "Ürün fotoğraflarının, portrelerin ve grafiklerin arka planını otomatik olarak kaldırın. Sonucu önizleyin ve orijinal boyutunda şeffaf PNG olarak indirin. Görseliniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Xóa nền ảnh",
+        description:
+          "Tự động xóa nền ảnh sản phẩm, ảnh chân dung và hình đồ họa. Xem trước rồi tải ảnh PNG nền trong suốt ở kích thước gốc. Ảnh được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片去背景",
+        description:
+          "自动为商品照、人像和素材去背景。在浏览器中预览并下载原尺寸透明 PNG，无需上传图片。",
+      },
+      "zh-TW": {
+        name: "圖片去背",
+        description:
+          "在瀏覽器內為商品照、人像和設計素材自動去背。預覽去背效果並下載原始尺寸的透明 PNG，無須上傳圖片。",
+      },
+    },
+  },
+  {
     slug: "image-combiner",
     category: "image",
     icon: "layout-grid",

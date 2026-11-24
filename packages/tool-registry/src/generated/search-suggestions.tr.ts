@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Görsel Arka Planını Kaldırma",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Görsel Birleştirici",
     slug: "image-combiner",
   },

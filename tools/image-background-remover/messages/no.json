@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Velg bilde",
+  "dropImage": "eller dra og slipp det her",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Bytt bilde",
+  "original": "Original",
+  "result": "Uten bakgrunn",
+  "download": "Last ned PNG",
+  "preparing": "Laster inn modellen for å fjerne bakgrunnen…",
+  "processing": "Fjerner bakgrunnen…",
+  "invalidImage": "Bildet kunne ikke åpnes. Velg en JPG-, PNG- eller WebP-fil.",
+  "modelFailed": "Kunne ikke laste inn modellen. Sjekk internettforbindelsen og prøv igjen.",
+  "processingFailed": "Bakgrunnen kunne ikke fjernes. Prøv igjen eller velg et annet bilde.",
+  "retry": "Prøv igjen"
+}

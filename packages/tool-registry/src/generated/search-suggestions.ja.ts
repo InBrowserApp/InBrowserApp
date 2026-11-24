@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "画像の背景を削除",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "画像結合ツール",
     slug: "image-combiner",
   },

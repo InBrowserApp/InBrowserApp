@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Fjern bakgrunn fra bilde",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Sett sammen bilder",
     slug: "image-combiner",
   },

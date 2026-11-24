@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Ta bort bakgrund från bild",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "Slå ihop bilder",
     slug: "image-combiner",
   },

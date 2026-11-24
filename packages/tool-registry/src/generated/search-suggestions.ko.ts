@@ -609,6 +609,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 배경 제거",
+    slug: "image-background-remover",
+  },
+  {
+    category: "image",
     name: "이미지 합치기",
     slug: "image-combiner",
   },

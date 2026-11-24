@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Afbeelding kiezen",
+  "dropImage": "of sleep de afbeelding hierheen",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Andere afbeelding kiezen",
+  "original": "Origineel",
+  "result": "Zonder achtergrond",
+  "download": "PNG downloaden",
+  "preparing": "Model voor achtergrondverwijdering laden…",
+  "processing": "Achtergrond verwijderen…",
+  "invalidImage": "Deze afbeelding kon niet worden geopend. Kies een JPG-, PNG- of WebP-bestand.",
+  "modelFailed": "Het model kon niet worden geladen. Controleer je internetverbinding en probeer het opnieuw.",
+  "processingFailed": "De achtergrond kon niet worden verwijderd. Probeer het opnieuw of kies een andere afbeelding.",
+  "retry": "Opnieuw proberen"
+}
