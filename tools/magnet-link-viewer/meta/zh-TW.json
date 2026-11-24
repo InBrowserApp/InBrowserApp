@@ -1,0 +1,4 @@
+{
+  "name": "磁力連結檢視器",
+  "description": "檢視 BitTorrent 磁力連結的資訊雜湊值，並透過 WebTorrent 查詢檔案清單、總大小等中繼資料，再決定是否下載。"
+}

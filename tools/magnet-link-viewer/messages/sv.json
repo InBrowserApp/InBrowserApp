@@ -1,0 +1,13 @@
+{
+  "input": "Magnetlänk",
+  "inspect": "Hämta metadata",
+  "example": "Prova ett exempel",
+  "network": "Använder WebTorrent för att kontakta spårare och peers eller en metadatakälla i länken.",
+  "loading": "Söker efter torrentens metadata…",
+  "cancel": "Avbryt",
+  "invalid": "Ange en magnetlänk med en giltig BitTorrent v1-infohash (btih).",
+  "unavailable": "Metadata kunde inte hämtas. Försök igen eller öppna .torrent-filen om du har den.",
+  "timeout": "Inga metadata kom fram i tid. Torrenten kanske saknar nåbara WebTorrent-peers eller en metadatakälla.",
+  "linkDetails": "Information från magnetlänken",
+  "related": "Har du en .torrent-fil? Öppna Torrentfilvisare"
+}

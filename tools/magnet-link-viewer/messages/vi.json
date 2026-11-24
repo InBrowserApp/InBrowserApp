@@ -1,0 +1,13 @@
+{
+  "input": "Liên kết magnet",
+  "inspect": "Tra cứu siêu dữ liệu",
+  "example": "Dùng thử ví dụ",
+  "network": "Dùng WebTorrent để kết nối tới tracker, peer hoặc nguồn siêu dữ liệu trong liên kết.",
+  "loading": "Đang tìm siêu dữ liệu torrent…",
+  "cancel": "Hủy",
+  "invalid": "Nhập liên kết magnet chứa mã băm thông tin BitTorrent v1 (btih) hợp lệ.",
+  "unavailable": "Không thể lấy siêu dữ liệu. Hãy thử lại hoặc mở tệp .torrent nếu bạn có.",
+  "timeout": "Không nhận được siêu dữ liệu kịp thời. Torrent có thể không có peer WebTorrent hoặc nguồn siêu dữ liệu truy cập được.",
+  "linkDetails": "Thông tin từ liên kết magnet",
+  "related": "Bạn có tệp .torrent? Mở Trình xem tệp torrent"
+}

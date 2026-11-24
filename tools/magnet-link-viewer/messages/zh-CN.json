@@ -1,0 +1,13 @@
+{
+  "input": "磁力链接",
+  "inspect": "查询元数据",
+  "example": "试用示例",
+  "network": "使用 WebTorrent 连接 Tracker、节点或链接中的元数据来源。",
+  "loading": "正在查找种子元数据…",
+  "cancel": "取消",
+  "invalid": "请输入包含有效 BitTorrent v1 信息哈希（btih）的磁力链接。",
+  "unavailable": "无法获取元数据。请重试；如果有 .torrent 文件，也可以打开该文件。",
+  "timeout": "未能及时获取元数据。该种子可能没有可连接的 WebTorrent 节点或元数据来源。",
+  "linkDetails": "磁力链接中的信息",
+  "related": "有 .torrent 文件？打开种子文件查看器"
+}

@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Pilih file .torrent",
+  "dropFile": "atau seret file ke sini",
+  "example": "Coba contoh",
+  "local": "File dibaca langsung di browser Anda.",
+  "reading": "Membaca metadata torrent…",
+  "invalid": "File ini tidak dapat dibaca. Pilih file .torrent BitTorrent v1 atau hibrida yang valid.",
+  "related": "Punya tautan magnet? Buka Penampil Tautan Magnet"
+}

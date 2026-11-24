@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Välj .torrent-fil",
+  "dropFile": "eller släpp den här",
+  "example": "Prova ett exempel",
+  "local": "Läses lokalt i webbläsaren.",
+  "reading": "Läser torrentens metadata…",
+  "invalid": "Filen kunde inte läsas. Välj en giltig .torrent-fil för BitTorrent v1 eller en hybridfil.",
+  "related": "Har du en magnetlänk? Öppna Magnetlänkvisare"
+}

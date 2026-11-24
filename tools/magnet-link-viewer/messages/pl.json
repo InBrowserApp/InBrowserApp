@@ -1,0 +1,13 @@
+{
+  "input": "Link magnet",
+  "inspect": "Wyszukaj metadane",
+  "example": "Wypróbuj przykład",
+  "network": "WebTorrent łączy się z trackerami i uczestnikami wymiany lub ze źródłem metadanych wskazanym w linku.",
+  "loading": "Wyszukiwanie metadanych torrenta…",
+  "cancel": "Anuluj",
+  "invalid": "Wpisz link magnet zawierający prawidłowy info hash BitTorrent v1 (btih).",
+  "unavailable": "Nie udało się pobrać metadanych. Spróbuj ponownie lub otwórz plik .torrent, jeśli go masz.",
+  "timeout": "Nie udało się pobrać metadanych w wyznaczonym czasie. Torrent może nie mieć dostępnych węzłów WebTorrent ani źródła metadanych.",
+  "linkDetails": "Informacje z linku magnet",
+  "related": "Masz plik .torrent? Otwórz przeglądarkę plików torrent"
+}

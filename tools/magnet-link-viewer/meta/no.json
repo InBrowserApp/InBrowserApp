@@ -1,0 +1,4 @@
+{
+  "name": "Magnetlenkeviser",
+  "description": "Undersøk en BitTorrent-magnetlenke og bruk WebTorrent til å hente fillisten, samlet størrelse og andre metadata før du laster ned."
+}

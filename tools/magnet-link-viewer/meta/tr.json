@@ -1,0 +1,4 @@
+{
+  "name": "Magnet Bağlantısı Görüntüleyicisi",
+  "description": "Bir BitTorrent magnet bağlantısını inceleyin. İndirmeden önce WebTorrent ile dosya listesini, toplam boyutu ve diğer meta verileri sorgulayın."
+}

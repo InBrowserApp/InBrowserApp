@@ -1,0 +1,9 @@
+{
+  "chooseFile": ".torrent dosyası seç",
+  "dropFile": "veya buraya sürükleyip bırakın",
+  "example": "Bir örnek dene",
+  "local": "Dosya tarayıcınızda yerel olarak okunur.",
+  "reading": "Torrent meta verileri okunuyor…",
+  "invalid": "Bu dosya okunamadı. Geçerli bir BitTorrent v1 veya hibrit .torrent dosyası seçin.",
+  "related": "Magnet bağlantınız mı var? Magnet Bağlantısı Görüntüleyicisi’ni açın"
+}

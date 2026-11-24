@@ -84,6 +84,7 @@ export {
   List,
   Mic,
   Map,
+  Magnet,
   Mail,
   MapPin,
   Paperclip,

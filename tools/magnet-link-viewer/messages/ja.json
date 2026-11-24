@@ -1,0 +1,13 @@
+{
+  "input": "マグネットリンク",
+  "inspect": "メタデータを取得",
+  "example": "サンプルを試す",
+  "network": "WebTorrentを使ってトラッカーやピア、またはリンク内のメタデータソースに接続します。",
+  "loading": "Torrentのメタデータを検索中…",
+  "cancel": "キャンセル",
+  "invalid": "有効なBitTorrent v1の情報ハッシュ（btih）を含むマグネットリンクを入力してください。",
+  "unavailable": "メタデータを取得できませんでした。もう一度試すか、.torrentファイルがあれば開いてください。",
+  "timeout": "時間内にメタデータを取得できませんでした。接続可能なWebTorrentピアまたはメタデータソースがない可能性があります。",
+  "linkDetails": "マグネットリンクの情報",
+  "related": ".torrentファイルをお持ちですか？ Torrentファイルビューアーを開く"
+}

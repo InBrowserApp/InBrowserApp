@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de fichiers torrent",
+  "description": "Ouvrez un fichier .torrent pour consulter son info hash BitTorrent, la liste des fichiers, leur taille totale et les trackers. La lecture se fait localement dans votre navigateur."
+}

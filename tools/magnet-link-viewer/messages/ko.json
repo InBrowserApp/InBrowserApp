@@ -1,0 +1,13 @@
+{
+  "input": "마그넷 링크",
+  "inspect": "메타데이터 조회",
+  "example": "예제로 확인하기",
+  "network": "WebTorrent를 사용해 트래커와 피어 또는 링크에 포함된 메타데이터 소스에 접속합니다.",
+  "loading": "토렌트 메타데이터를 찾는 중…",
+  "cancel": "취소",
+  "invalid": "유효한 BitTorrent v1 정보 해시(btih)가 포함된 마그넷 링크를 입력하세요.",
+  "unavailable": "메타데이터를 가져올 수 없습니다. 다시 시도하거나 .torrent 파일이 있다면 파일 뷰어에서 여세요.",
+  "timeout": "제한 시간 내에 메타데이터를 받지 못했습니다. 연결 가능한 WebTorrent 피어나 메타데이터 소스가 없을 수 있습니다.",
+  "linkDetails": "마그넷 링크에 포함된 정보",
+  "related": ".torrent 파일이 있나요? 토렌트 파일 뷰어 열기"
+}

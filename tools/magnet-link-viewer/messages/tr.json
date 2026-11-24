@@ -1,0 +1,13 @@
+{
+  "input": "Magnet bağlantısı",
+  "inspect": "Meta verileri sorgula",
+  "example": "Bir örnek dene",
+  "network": "WebTorrent, izleyicilere ve eşlere veya bağlantıdaki meta veri kaynağına erişir.",
+  "loading": "Torrent meta verileri aranıyor…",
+  "cancel": "İptal et",
+  "invalid": "Geçerli bir BitTorrent v1 info hash değeri (btih) içeren bir magnet bağlantısı girin.",
+  "unavailable": "Meta veriler alınamadı. Tekrar deneyin veya elinizde varsa .torrent dosyasını açın.",
+  "timeout": "Meta veriler zamanında alınamadı. Erişilebilir bir WebTorrent eşi veya meta veri kaynağı olmayabilir.",
+  "linkDetails": "Magnet bağlantısındaki bilgiler",
+  "related": ".torrent dosyanız mı var? Torrent Dosyası Görüntüleyicisi’ni açın"
+}

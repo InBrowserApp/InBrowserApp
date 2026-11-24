@@ -1,0 +1,4 @@
+{
+  "name": "磁力链接查看器",
+  "description": "查看 BitTorrent 磁力链接，并使用 WebTorrent 查询文件列表、总大小等元数据，下载前了解种子内容。"
+}

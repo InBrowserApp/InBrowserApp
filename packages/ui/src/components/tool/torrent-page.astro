@@ -1,0 +1,33 @@
+---
+import { Button } from "@workspace/ui/components/ui/button"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { FileText, Magnet } from "@workspace/ui/icons"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+interface Props {
+  lang: string
+  meta: ToolMeta
+  related: string
+  relatedSlug: "torrent-file-viewer" | "magnet-link-viewer"
+}
+
+const { lang, meta, related, relatedSlug } = Astro.props
+const RelatedIcon = relatedSlug === "magnet-link-viewer" ? Magnet : FileText
+const relatedHref = `${lang === "en" ? "" : `/${lang}`}/tools/${relatedSlug}/`
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <div class="grid min-w-0 gap-3">
+    <slot />
+    <div>
+      <Button variant="ghost" size="sm" asChild>
+        <a href={relatedHref} class="h-auto min-h-8 max-w-full justify-start whitespace-normal">
+          <RelatedIcon aria-hidden="true" data-icon="inline-start" />
+          <span>{related}</span>
+        </a>
+      </Button>
+    </div>
+  </div>
+  <ToolArticle><slot name="intro" /></ToolArticle>
+</ToolPageShell>

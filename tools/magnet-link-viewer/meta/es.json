@@ -1,0 +1,4 @@
+{
+  "name": "Visor de enlaces magnet",
+  "description": "Inspecciona un enlace magnet de BitTorrent y consulta la lista de archivos, el tamaño total y otros metadatos con WebTorrent antes de descargar."
+}

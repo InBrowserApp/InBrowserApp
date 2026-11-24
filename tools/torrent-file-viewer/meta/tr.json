@@ -1,0 +1,4 @@
+{
+  "name": "Torrent Dosyası Görüntüleyicisi",
+  "description": ".torrent dosyalarını çevrimiçi açın. BitTorrent info hash değerini, dosya listesini, toplam boyutu ve izleyicileri görün. Dosya tarayıcınızda yerel olarak okunur."
+}

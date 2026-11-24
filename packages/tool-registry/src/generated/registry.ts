@@ -26567,6 +26567,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "magnet-link-viewer",
+    category: "network",
+    icon: "magnet",
+    tags: ["bittorrent", "torrent", "magnet", "info hash", "metadata"],
+    locales: {
+      ar: {
+        name: "عارض الروابط المغناطيسية",
+        description:
+          "افحص رابطًا مغناطيسيًا من BitTorrent واستخدم WebTorrent للاطّلاع على قائمة الملفات وحجمها الإجمالي وبياناتها الوصفية قبل التنزيل.",
+      },
+      de: {
+        name: "Magnet-Link-Betrachter",
+        description:
+          "Prüfe einen BitTorrent-Magnet-Link vor dem Download. Rufe mit WebTorrent die Dateiliste, Gesamtgröße und weitere Metadaten ab.",
+      },
+      en: {
+        name: "Magnet Link Viewer",
+        description:
+          "Inspect a BitTorrent magnet link and use WebTorrent to look up its file list, total size, and other metadata before downloading.",
+      },
+      es: {
+        name: "Visor de enlaces magnet",
+        description:
+          "Inspecciona un enlace magnet de BitTorrent y consulta la lista de archivos, el tamaño total y otros metadatos con WebTorrent antes de descargar.",
+      },
+      fr: {
+        name: "Visionneuse de liens magnet",
+        description:
+          "Inspectez un lien magnet BitTorrent et utilisez WebTorrent pour consulter la liste des fichiers, leur taille totale et les autres métadonnées avant de télécharger.",
+      },
+      he: {
+        name: "מציג קישורי מגנט",
+        description:
+          "בדקו קישור מגנט של BitTorrent והשתמשו ב־WebTorrent כדי לקבל את רשימת הקבצים, את גודלם הכולל ומטא־נתונים נוספים לפני ההורדה.",
+      },
+      hi: {
+        name: "मैग्नेट लिंक व्यूअर",
+        description:
+          "डाउनलोड से पहले BitTorrent मैग्नेट लिंक की जाँच करें। WebTorrent से फ़ाइल सूची, कुल आकार और अन्य मेटाडेटा देखें।",
+      },
+      id: {
+        name: "Penampil Tautan Magnet",
+        description:
+          "Periksa tautan magnet BitTorrent dan gunakan WebTorrent untuk melihat daftar file, ukuran total, serta metadata lain sebelum mengunduh.",
+      },
+      it: {
+        name: "Visualizzatore di link magnet",
+        description:
+          "Esamina un link magnet BitTorrent e recupera con WebTorrent l'elenco dei file, la dimensione totale e altri metadati prima di scaricare.",
+      },
+      ja: {
+        name: "マグネットリンクビューアー",
+        description:
+          "BitTorrentのマグネットリンクを確認し、WebTorrentを使ってダウンロード前にファイル一覧、合計サイズなどのメタデータを取得できます。",
+      },
+      ko: {
+        name: "마그넷 링크 뷰어",
+        description:
+          "BitTorrent 마그넷 링크를 확인하고, 다운로드 전에 WebTorrent로 파일 목록, 전체 용량, 기타 메타데이터를 조회하세요.",
+      },
+      ms: {
+        name: "Pemapar Pautan Magnet",
+        description:
+          "Semak pautan magnet BitTorrent dengan WebTorrent. Lihat senarai fail, jumlah saiz dan metadata lain sebelum memuat turun.",
+      },
+      nl: {
+        name: "Magnetlinkviewer",
+        description:
+          "Inspecteer een BitTorrent-magnetlink en zoek met WebTorrent de bestandslijst, totale grootte en andere metadata op voordat je gaat downloaden.",
+      },
+      no: {
+        name: "Magnetlenkeviser",
+        description:
+          "Undersøk en BitTorrent-magnetlenke og bruk WebTorrent til å hente fillisten, samlet størrelse og andre metadata før du laster ned.",
+      },
+      pl: {
+        name: "Przeglądarka linków magnet",
+        description:
+          "Sprawdź link magnet BitTorrent i pobierz przez WebTorrent listę plików, łączny rozmiar oraz inne metadane przed rozpoczęciem pobierania plików.",
+      },
+      pt: {
+        name: "Visualizador de links magnet",
+        description:
+          "Examine um link magnet BitTorrent e use o WebTorrent para consultar a lista de arquivos, o tamanho total e outros metadados antes de baixar.",
+      },
+      ru: {
+        name: "Просмотр магнит-ссылок",
+        description:
+          "Проверьте магнит-ссылку BitTorrent и получите список файлов, общий размер и другие метаданные через WebTorrent перед скачиванием.",
+      },
+      sv: {
+        name: "Magnetlänkvisare",
+        description:
+          "Granska en BitTorrent-magnetlänk och använd WebTorrent för att hämta fillista, total storlek och andra metadata innan du laddar ner.",
+      },
+      th: {
+        name: "โปรแกรมดูลิงก์ Magnet",
+        description:
+          "ตรวจสอบลิงก์ Magnet ของ BitTorrent แล้วใช้ WebTorrent ค้นหารายชื่อไฟล์ ขนาดรวม และเมตาดาตาอื่น ๆ ก่อนดาวน์โหลด",
+      },
+      tr: {
+        name: "Magnet Bağlantısı Görüntüleyicisi",
+        description:
+          "Bir BitTorrent magnet bağlantısını inceleyin. İndirmeden önce WebTorrent ile dosya listesini, toplam boyutu ve diğer meta verileri sorgulayın.",
+      },
+      vi: {
+        name: "Trình xem liên kết magnet",
+        description:
+          "Kiểm tra liên kết magnet BitTorrent và dùng WebTorrent để tra cứu danh sách tệp, tổng dung lượng cùng các siêu dữ liệu khác trước khi tải xuống.",
+      },
+      "zh-CN": {
+        name: "磁力链接查看器",
+        description:
+          "查看 BitTorrent 磁力链接，并使用 WebTorrent 查询文件列表、总大小等元数据，下载前了解种子内容。",
+      },
+      "zh-TW": {
+        name: "磁力連結檢視器",
+        description:
+          "檢視 BitTorrent 磁力連結的資訊雜湊值，並透過 WebTorrent 查詢檔案清單、總大小等中繼資料，再決定是否下載。",
+      },
+    },
+  },
+  {
     slug: "markdown-previewer",
     category: "text",
     icon: "file-text",
@@ -42667,6 +42790,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "torrent-file-viewer",
+    category: "network",
+    icon: "file-text",
+    tags: ["bittorrent", "torrent", "magnet", "info hash", "metadata"],
+    locales: {
+      ar: {
+        name: "عارض ملفات تورنت",
+        description:
+          "افتح ملفًا بامتداد .torrent لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
+      },
+      de: {
+        name: "Torrent-Dateibetrachter",
+        description:
+          "Öffne eine .torrent-Datei online und prüfe Info-Hash, Dateiliste, Gesamtgröße und Tracker. Die Datei wird lokal im Browser gelesen.",
+      },
+      en: {
+        name: "Torrent File Viewer",
+        description:
+          "Open a .torrent file online to view its BitTorrent info hash, file list, total size, and trackers. The file is read locally in your browser.",
+      },
+      es: {
+        name: "Visor de archivos torrent",
+        description:
+          "Abre un archivo .torrent en línea y consulta su hash de BitTorrent, la lista de archivos, el tamaño total y los rastreadores. El archivo se lee en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers torrent",
+        description:
+          "Ouvrez un fichier .torrent pour consulter son info hash BitTorrent, la liste des fichiers, leur taille totale et les trackers. La lecture se fait localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי טורנט",
+        description:
+          "פתחו קובץ ‎.torrent בדפדפן כדי לראות את מזהה הטורנט (Info Hash), את רשימת הקבצים ואת גודלם הכולל, ואת כתובות הטראקרים של BitTorrent. הקובץ נקרא מקומית בדפדפן.",
+      },
+      hi: {
+        name: "टोरेंट फ़ाइल व्यूअर",
+        description:
+          "ऑनलाइन .torrent फ़ाइल खोलकर उसका BitTorrent इन्फ़ो हैश, फ़ाइल सूची, कुल आकार और ट्रैकर देखें। फ़ाइल सीधे आपके ब्राउज़र में पढ़ी जाती है।",
+      },
+      id: {
+        name: "Penampil File Torrent",
+        description:
+          "Buka file .torrent secara online untuk melihat info hash BitTorrent, daftar file, ukuran total, dan pelacak. File dibaca langsung di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore di file torrent",
+        description:
+          "Apri un file .torrent online per vedere l'info hash BitTorrent, l'elenco dei file, la dimensione totale e i tracker. Il file viene letto nel browser.",
+      },
+      ja: {
+        name: "Torrentファイルビューアー",
+        description:
+          ".torrentファイルをオンラインで開き、BitTorrentの情報ハッシュ、ファイル一覧、合計サイズ、トラッカーを確認できます。ファイルはブラウザー内で読み込まれます。",
+      },
+      ko: {
+        name: "토렌트 파일 뷰어",
+        description:
+          ".torrent 파일을 온라인에서 열어 BitTorrent 정보 해시, 파일 목록, 전체 용량, 트래커를 확인하세요. 파일은 브라우저에서 직접 읽습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Torrent",
+        description:
+          "Buka fail .torrent dalam talian untuk melihat hash info BitTorrent, senarai fail, jumlah saiz dan penjejak. Fail dibaca terus dalam penyemak imbas anda.",
+      },
+      nl: {
+        name: "Torrentbestandsviewer",
+        description:
+          "Open een .torrent-bestand online en bekijk de BitTorrent-infohash, bestandslijst, totale grootte en trackers. Je browser leest het bestand lokaal.",
+      },
+      no: {
+        name: "Torrentfilviser",
+        description:
+          "Åpne en .torrent-fil i nettleseren for å se BitTorrent-infohash, filliste, samlet størrelse og trackere. Filen leses lokalt.",
+      },
+      pl: {
+        name: "Przeglądarka plików torrent",
+        description:
+          "Otwórz plik .torrent online i sprawdź jego info hash BitTorrent, listę plików, łączny rozmiar i trackery. Przeglądarka odczytuje plik lokalnie.",
+      },
+      pt: {
+        name: "Visualizador de arquivos torrent",
+        description:
+          "Abra um arquivo .torrent online para ver o hash de informação BitTorrent, a lista de arquivos, o tamanho total e os trackers. O arquivo é lido localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр торрент-файлов",
+        description:
+          "Откройте файл .torrent онлайн, чтобы посмотреть инфо-хеш BitTorrent, список файлов, общий размер и трекеры. Файл считывается локально в браузере.",
+      },
+      sv: {
+        name: "Torrentfilvisare",
+        description:
+          "Öppna en .torrent-fil online och se dess BitTorrent-infohash, fillista, totala storlek och spårare. Filen läses lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ Torrent",
+        description:
+          "เปิดไฟล์ .torrent ออนไลน์เพื่อดู Info Hash ของ BitTorrent รายชื่อไฟล์ ขนาดรวม และแทร็กเกอร์ เบราว์เซอร์อ่านไฟล์บนอุปกรณ์ของคุณโดยตรง",
+      },
+      tr: {
+        name: "Torrent Dosyası Görüntüleyicisi",
+        description:
+          ".torrent dosyalarını çevrimiçi açın. BitTorrent info hash değerini, dosya listesini, toplam boyutu ve izleyicileri görün. Dosya tarayıcınızda yerel olarak okunur.",
+      },
+      vi: {
+        name: "Trình xem tệp torrent",
+        description:
+          "Mở tệp .torrent trực tuyến để xem mã băm thông tin BitTorrent, danh sách tệp, tổng dung lượng và các tracker. Tệp được đọc cục bộ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "种子文件查看器",
+        description:
+          "在线打开 .torrent 种子文件，查看 BitTorrent 信息哈希、文件列表、总大小和 Tracker。文件在浏览器中本地读取。",
+      },
+      "zh-TW": {
+        name: "Torrent 檔案檢視器",
+        description:
+          "線上開啟 .torrent 種子檔，檢視 BitTorrent 資訊雜湊值、檔案清單、總大小及 Tracker。檔案由瀏覽器在本機讀取。",
       },
     },
   },
@@ -75030,6 +75276,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "magnet-link-viewer": {
+    slug: "magnet-link-viewer",
+    category: "network",
+    icon: "magnet",
+    tags: ["bittorrent", "torrent", "magnet", "info hash", "metadata"],
+    locales: {
+      ar: {
+        name: "عارض الروابط المغناطيسية",
+        description:
+          "افحص رابطًا مغناطيسيًا من BitTorrent واستخدم WebTorrent للاطّلاع على قائمة الملفات وحجمها الإجمالي وبياناتها الوصفية قبل التنزيل.",
+      },
+      de: {
+        name: "Magnet-Link-Betrachter",
+        description:
+          "Prüfe einen BitTorrent-Magnet-Link vor dem Download. Rufe mit WebTorrent die Dateiliste, Gesamtgröße und weitere Metadaten ab.",
+      },
+      en: {
+        name: "Magnet Link Viewer",
+        description:
+          "Inspect a BitTorrent magnet link and use WebTorrent to look up its file list, total size, and other metadata before downloading.",
+      },
+      es: {
+        name: "Visor de enlaces magnet",
+        description:
+          "Inspecciona un enlace magnet de BitTorrent y consulta la lista de archivos, el tamaño total y otros metadatos con WebTorrent antes de descargar.",
+      },
+      fr: {
+        name: "Visionneuse de liens magnet",
+        description:
+          "Inspectez un lien magnet BitTorrent et utilisez WebTorrent pour consulter la liste des fichiers, leur taille totale et les autres métadonnées avant de télécharger.",
+      },
+      he: {
+        name: "מציג קישורי מגנט",
+        description:
+          "בדקו קישור מגנט של BitTorrent והשתמשו ב־WebTorrent כדי לקבל את רשימת הקבצים, את גודלם הכולל ומטא־נתונים נוספים לפני ההורדה.",
+      },
+      hi: {
+        name: "मैग्नेट लिंक व्यूअर",
+        description:
+          "डाउनलोड से पहले BitTorrent मैग्नेट लिंक की जाँच करें। WebTorrent से फ़ाइल सूची, कुल आकार और अन्य मेटाडेटा देखें।",
+      },
+      id: {
+        name: "Penampil Tautan Magnet",
+        description:
+          "Periksa tautan magnet BitTorrent dan gunakan WebTorrent untuk melihat daftar file, ukuran total, serta metadata lain sebelum mengunduh.",
+      },
+      it: {
+        name: "Visualizzatore di link magnet",
+        description:
+          "Esamina un link magnet BitTorrent e recupera con WebTorrent l'elenco dei file, la dimensione totale e altri metadati prima di scaricare.",
+      },
+      ja: {
+        name: "マグネットリンクビューアー",
+        description:
+          "BitTorrentのマグネットリンクを確認し、WebTorrentを使ってダウンロード前にファイル一覧、合計サイズなどのメタデータを取得できます。",
+      },
+      ko: {
+        name: "마그넷 링크 뷰어",
+        description:
+          "BitTorrent 마그넷 링크를 확인하고, 다운로드 전에 WebTorrent로 파일 목록, 전체 용량, 기타 메타데이터를 조회하세요.",
+      },
+      ms: {
+        name: "Pemapar Pautan Magnet",
+        description:
+          "Semak pautan magnet BitTorrent dengan WebTorrent. Lihat senarai fail, jumlah saiz dan metadata lain sebelum memuat turun.",
+      },
+      nl: {
+        name: "Magnetlinkviewer",
+        description:
+          "Inspecteer een BitTorrent-magnetlink en zoek met WebTorrent de bestandslijst, totale grootte en andere metadata op voordat je gaat downloaden.",
+      },
+      no: {
+        name: "Magnetlenkeviser",
+        description:
+          "Undersøk en BitTorrent-magnetlenke og bruk WebTorrent til å hente fillisten, samlet størrelse og andre metadata før du laster ned.",
+      },
+      pl: {
+        name: "Przeglądarka linków magnet",
+        description:
+          "Sprawdź link magnet BitTorrent i pobierz przez WebTorrent listę plików, łączny rozmiar oraz inne metadane przed rozpoczęciem pobierania plików.",
+      },
+      pt: {
+        name: "Visualizador de links magnet",
+        description:
+          "Examine um link magnet BitTorrent e use o WebTorrent para consultar a lista de arquivos, o tamanho total e outros metadados antes de baixar.",
+      },
+      ru: {
+        name: "Просмотр магнит-ссылок",
+        description:
+          "Проверьте магнит-ссылку BitTorrent и получите список файлов, общий размер и другие метаданные через WebTorrent перед скачиванием.",
+      },
+      sv: {
+        name: "Magnetlänkvisare",
+        description:
+          "Granska en BitTorrent-magnetlänk och använd WebTorrent för att hämta fillista, total storlek och andra metadata innan du laddar ner.",
+      },
+      th: {
+        name: "โปรแกรมดูลิงก์ Magnet",
+        description:
+          "ตรวจสอบลิงก์ Magnet ของ BitTorrent แล้วใช้ WebTorrent ค้นหารายชื่อไฟล์ ขนาดรวม และเมตาดาตาอื่น ๆ ก่อนดาวน์โหลด",
+      },
+      tr: {
+        name: "Magnet Bağlantısı Görüntüleyicisi",
+        description:
+          "Bir BitTorrent magnet bağlantısını inceleyin. İndirmeden önce WebTorrent ile dosya listesini, toplam boyutu ve diğer meta verileri sorgulayın.",
+      },
+      vi: {
+        name: "Trình xem liên kết magnet",
+        description:
+          "Kiểm tra liên kết magnet BitTorrent và dùng WebTorrent để tra cứu danh sách tệp, tổng dung lượng cùng các siêu dữ liệu khác trước khi tải xuống.",
+      },
+      "zh-CN": {
+        name: "磁力链接查看器",
+        description:
+          "查看 BitTorrent 磁力链接，并使用 WebTorrent 查询文件列表、总大小等元数据，下载前了解种子内容。",
+      },
+      "zh-TW": {
+        name: "磁力連結檢視器",
+        description:
+          "檢視 BitTorrent 磁力連結的資訊雜湊值，並透過 WebTorrent 查詢檔案清單、總大小等中繼資料，再決定是否下載。",
+      },
+    },
+  },
   "markdown-previewer": {
     slug: "markdown-previewer",
     category: "text",
@@ -91131,6 +91500,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "torrent-file-viewer": {
+    slug: "torrent-file-viewer",
+    category: "network",
+    icon: "file-text",
+    tags: ["bittorrent", "torrent", "magnet", "info hash", "metadata"],
+    locales: {
+      ar: {
+        name: "عارض ملفات تورنت",
+        description:
+          "افتح ملفًا بامتداد .torrent لعرض بصمة التورنت في BitTorrent وقائمة الملفات وحجمها الإجمالي وخوادم التتبع. يُقرأ الملف محليًا في متصفحك.",
+      },
+      de: {
+        name: "Torrent-Dateibetrachter",
+        description:
+          "Öffne eine .torrent-Datei online und prüfe Info-Hash, Dateiliste, Gesamtgröße und Tracker. Die Datei wird lokal im Browser gelesen.",
+      },
+      en: {
+        name: "Torrent File Viewer",
+        description:
+          "Open a .torrent file online to view its BitTorrent info hash, file list, total size, and trackers. The file is read locally in your browser.",
+      },
+      es: {
+        name: "Visor de archivos torrent",
+        description:
+          "Abre un archivo .torrent en línea y consulta su hash de BitTorrent, la lista de archivos, el tamaño total y los rastreadores. El archivo se lee en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de fichiers torrent",
+        description:
+          "Ouvrez un fichier .torrent pour consulter son info hash BitTorrent, la liste des fichiers, leur taille totale et les trackers. La lecture se fait localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי טורנט",
+        description:
+          "פתחו קובץ ‎.torrent בדפדפן כדי לראות את מזהה הטורנט (Info Hash), את רשימת הקבצים ואת גודלם הכולל, ואת כתובות הטראקרים של BitTorrent. הקובץ נקרא מקומית בדפדפן.",
+      },
+      hi: {
+        name: "टोरेंट फ़ाइल व्यूअर",
+        description:
+          "ऑनलाइन .torrent फ़ाइल खोलकर उसका BitTorrent इन्फ़ो हैश, फ़ाइल सूची, कुल आकार और ट्रैकर देखें। फ़ाइल सीधे आपके ब्राउज़र में पढ़ी जाती है।",
+      },
+      id: {
+        name: "Penampil File Torrent",
+        description:
+          "Buka file .torrent secara online untuk melihat info hash BitTorrent, daftar file, ukuran total, dan pelacak. File dibaca langsung di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore di file torrent",
+        description:
+          "Apri un file .torrent online per vedere l'info hash BitTorrent, l'elenco dei file, la dimensione totale e i tracker. Il file viene letto nel browser.",
+      },
+      ja: {
+        name: "Torrentファイルビューアー",
+        description:
+          ".torrentファイルをオンラインで開き、BitTorrentの情報ハッシュ、ファイル一覧、合計サイズ、トラッカーを確認できます。ファイルはブラウザー内で読み込まれます。",
+      },
+      ko: {
+        name: "토렌트 파일 뷰어",
+        description:
+          ".torrent 파일을 온라인에서 열어 BitTorrent 정보 해시, 파일 목록, 전체 용량, 트래커를 확인하세요. 파일은 브라우저에서 직접 읽습니다.",
+      },
+      ms: {
+        name: "Pemapar Fail Torrent",
+        description:
+          "Buka fail .torrent dalam talian untuk melihat hash info BitTorrent, senarai fail, jumlah saiz dan penjejak. Fail dibaca terus dalam penyemak imbas anda.",
+      },
+      nl: {
+        name: "Torrentbestandsviewer",
+        description:
+          "Open een .torrent-bestand online en bekijk de BitTorrent-infohash, bestandslijst, totale grootte en trackers. Je browser leest het bestand lokaal.",
+      },
+      no: {
+        name: "Torrentfilviser",
+        description:
+          "Åpne en .torrent-fil i nettleseren for å se BitTorrent-infohash, filliste, samlet størrelse og trackere. Filen leses lokalt.",
+      },
+      pl: {
+        name: "Przeglądarka plików torrent",
+        description:
+          "Otwórz plik .torrent online i sprawdź jego info hash BitTorrent, listę plików, łączny rozmiar i trackery. Przeglądarka odczytuje plik lokalnie.",
+      },
+      pt: {
+        name: "Visualizador de arquivos torrent",
+        description:
+          "Abra um arquivo .torrent online para ver o hash de informação BitTorrent, a lista de arquivos, o tamanho total e os trackers. O arquivo é lido localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр торрент-файлов",
+        description:
+          "Откройте файл .torrent онлайн, чтобы посмотреть инфо-хеш BitTorrent, список файлов, общий размер и трекеры. Файл считывается локально в браузере.",
+      },
+      sv: {
+        name: "Torrentfilvisare",
+        description:
+          "Öppna en .torrent-fil online och se dess BitTorrent-infohash, fillista, totala storlek och spårare. Filen läses lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูไฟล์ Torrent",
+        description:
+          "เปิดไฟล์ .torrent ออนไลน์เพื่อดู Info Hash ของ BitTorrent รายชื่อไฟล์ ขนาดรวม และแทร็กเกอร์ เบราว์เซอร์อ่านไฟล์บนอุปกรณ์ของคุณโดยตรง",
+      },
+      tr: {
+        name: "Torrent Dosyası Görüntüleyicisi",
+        description:
+          ".torrent dosyalarını çevrimiçi açın. BitTorrent info hash değerini, dosya listesini, toplam boyutu ve izleyicileri görün. Dosya tarayıcınızda yerel olarak okunur.",
+      },
+      vi: {
+        name: "Trình xem tệp torrent",
+        description:
+          "Mở tệp .torrent trực tuyến để xem mã băm thông tin BitTorrent, danh sách tệp, tổng dung lượng và các tracker. Tệp được đọc cục bộ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "种子文件查看器",
+        description:
+          "在线打开 .torrent 种子文件，查看 BitTorrent 信息哈希、文件列表、总大小和 Tracker。文件在浏览器中本地读取。",
+      },
+      "zh-TW": {
+        name: "Torrent 檔案檢視器",
+        description:
+          "線上開啟 .torrent 種子檔，檢視 BitTorrent 資訊雜湊值、檔案清單、總大小及 Tracker。檔案由瀏覽器在本機讀取。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Magnet-Link-Betrachter",
+  "description": "Prüfe einen BitTorrent-Magnet-Link vor dem Download. Rufe mit WebTorrent die Dateiliste, Gesamtgröße und weitere Metadaten ab."
+}

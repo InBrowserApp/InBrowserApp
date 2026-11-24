@@ -1,0 +1,9 @@
+{
+  "chooseFile": "选择 .torrent 文件",
+  "dropFile": "或将文件拖到这里",
+  "example": "试用示例",
+  "local": "在浏览器中本地读取。",
+  "reading": "正在读取种子元数据…",
+  "invalid": "无法读取此文件。请选择有效的 BitTorrent v1 或 v1/v2 混合种子文件。",
+  "related": "有磁力链接？打开磁力链接查看器"
+}

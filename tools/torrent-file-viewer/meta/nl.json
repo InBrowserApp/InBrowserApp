@@ -1,0 +1,4 @@
+{
+  "name": "Torrentbestandsviewer",
+  "description": "Open een .torrent-bestand online en bekijk de BitTorrent-infohash, bestandslijst, totale grootte en trackers. Je browser leest het bestand lokaal."
+}

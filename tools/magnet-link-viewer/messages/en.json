@@ -1,0 +1,13 @@
+{
+  "input": "Magnet link",
+  "inspect": "Look up metadata",
+  "example": "Try an example",
+  "network": "Uses WebTorrent to contact trackers and peers or a metadata source in the link.",
+  "loading": "Looking for torrent metadata…",
+  "cancel": "Cancel",
+  "invalid": "Enter a magnet link containing a valid BitTorrent v1 info hash (btih).",
+  "unavailable": "Metadata could not be retrieved. Try again or open the .torrent file if you have it.",
+  "timeout": "No metadata arrived in time. The torrent may have no reachable WebTorrent peers or metadata source.",
+  "linkDetails": "Information from the magnet link",
+  "related": "Have a .torrent file? Open Torrent File Viewer"
+}

@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Wybierz plik .torrent",
+  "dropFile": "lub przeciągnij go tutaj",
+  "example": "Wypróbuj przykład",
+  "local": "Odczyt odbywa się lokalnie w przeglądarce.",
+  "reading": "Odczytywanie metadanych torrenta…",
+  "invalid": "Nie udało się odczytać pliku. Wybierz poprawny plik .torrent w formacie BitTorrent v1 lub hybrydowym v1/v2.",
+  "related": "Masz link magnet? Otwórz przeglądarkę linków magnet"
+}

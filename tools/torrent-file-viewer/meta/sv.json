@@ -1,0 +1,4 @@
+{
+  "name": "Torrentfilvisare",
+  "description": "Öppna en .torrent-fil online och se dess BitTorrent-infohash, fillista, totala storlek och spårare. Filen läses lokalt i webbläsaren."
+}

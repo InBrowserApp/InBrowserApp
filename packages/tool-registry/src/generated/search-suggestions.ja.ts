@@ -1048,6 +1048,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mac-to-ipv6-eui-64-converter",
   },
   {
+    category: "network",
+    name: "マグネットリンクビューアー",
+    slug: "magnet-link-viewer",
+  },
+  {
     category: "text",
     name: "Markdown プレビューアー",
     slug: "markdown-previewer",
@@ -1681,6 +1686,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "TOML → YAML 変換",
     slug: "toml-to-yaml-converter",
+  },
+  {
+    category: "network",
+    name: "Torrentファイルビューアー",
+    slug: "torrent-file-viewer",
   },
   {
     category: "document",

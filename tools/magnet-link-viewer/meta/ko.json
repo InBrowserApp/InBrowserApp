@@ -1,0 +1,4 @@
+{
+  "name": "마그넷 링크 뷰어",
+  "description": "BitTorrent 마그넷 링크를 확인하고, 다운로드 전에 WebTorrent로 파일 목록, 전체 용량, 기타 메타데이터를 조회하세요."
+}

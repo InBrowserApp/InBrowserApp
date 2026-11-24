@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Chọn tệp .torrent",
+  "dropFile": "hoặc thả tệp vào đây",
+  "example": "Dùng thử ví dụ",
+  "local": "Đọc cục bộ trong trình duyệt.",
+  "reading": "Đang đọc siêu dữ liệu torrent…",
+  "invalid": "Không thể đọc tệp này. Hãy chọn tệp .torrent BitTorrent v1 hoặc tệp kết hợp v1/v2 hợp lệ.",
+  "related": "Bạn có liên kết magnet? Mở Trình xem liên kết magnet"
+}

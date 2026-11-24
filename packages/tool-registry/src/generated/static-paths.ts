@@ -19230,6 +19230,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "magnet-link-viewer",
+    language: "ar",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "de",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "en",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "es",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "fr",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "he",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "hi",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "id",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "it",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "ja",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "ko",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "ms",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "nl",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "no",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "pl",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "pt",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "ru",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "sv",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "th",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "tr",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "vi",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "magnet-link-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "markdown-previewer",
     language: "ar",
   },
@@ -30911,6 +31003,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "toml-to-yaml-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "ar",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "de",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "en",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "es",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "fr",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "he",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "hi",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "id",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "it",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "ja",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "ko",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "ms",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "nl",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "no",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "pl",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "pt",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "ru",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "sv",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "th",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "tr",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "vi",
+  },
+  {
+    slug: "torrent-file-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "torrent-file-viewer",
     language: "zh-TW",
   },
   {

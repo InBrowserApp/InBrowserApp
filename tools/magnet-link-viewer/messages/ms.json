@@ -1,0 +1,13 @@
+{
+  "input": "Pautan magnet",
+  "inspect": "Cari metadata",
+  "example": "Cuba contoh",
+  "network": "WebTorrent menghubungi penjejak dan rakan setara atau sumber metadata dalam pautan.",
+  "loading": "Mencari metadata torrent…",
+  "cancel": "Batal",
+  "invalid": "Masukkan pautan magnet yang mengandungi hash info BitTorrent v1 (btih) yang sah.",
+  "unavailable": "Metadata tidak dapat diambil. Cuba lagi atau buka fail .torrent jika anda mempunyainya.",
+  "timeout": "Metadata tidak diterima dalam tempoh yang ditetapkan. Rakan setara WebTorrent atau sumber metadata bagi torrent ini mungkin tidak dapat dihubungi.",
+  "linkDetails": "Maklumat daripada pautan magnet",
+  "related": "Ada fail .torrent? Buka Pemapar Fail Torrent"
+}

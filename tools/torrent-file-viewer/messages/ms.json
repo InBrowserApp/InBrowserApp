@@ -1,0 +1,9 @@
+{
+  "chooseFile": "Pilih fail .torrent",
+  "dropFile": "atau seret dan lepaskan di sini",
+  "example": "Cuba contoh",
+  "local": "Fail dibaca terus dalam penyemak imbas anda.",
+  "reading": "Membaca metadata torrent…",
+  "invalid": "Fail ini tidak dapat dibaca. Pilih fail .torrent BitTorrent v1 atau hibrid yang sah.",
+  "related": "Ada pautan magnet? Buka Pemapar Pautan Magnet"
+}

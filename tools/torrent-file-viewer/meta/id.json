@@ -1,0 +1,4 @@
+{
+  "name": "Penampil File Torrent",
+  "description": "Buka file .torrent secara online untuk melihat info hash BitTorrent, daftar file, ukuran total, dan pelacak. File dibaca langsung di browser Anda."
+}
