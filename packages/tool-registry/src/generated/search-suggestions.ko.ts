@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "동영상 자막 생성기",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "동영상을 GIF로 변환",
     slug: "video-to-gif",
   },

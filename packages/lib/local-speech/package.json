@@ -1,0 +1,17 @@
+{
+  "name": "@workspace/local-speech",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker": "./src/worker.ts",
+    "./transcript": "./src/transcript.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

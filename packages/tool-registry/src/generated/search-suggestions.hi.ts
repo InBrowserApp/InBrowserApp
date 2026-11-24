@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "वीडियो उपशीर्षक जनरेटर",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "वीडियो से GIF",
     slug: "video-to-gif",
   },

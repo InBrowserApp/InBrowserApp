@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "Penjana Sari Kata Video",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "Video ke GIF",
     slug: "video-to-gif",
   },

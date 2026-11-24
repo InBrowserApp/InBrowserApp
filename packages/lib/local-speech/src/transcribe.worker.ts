@@ -8,14 +8,11 @@ import type {
   AutomaticSpeechRecognitionPipeline,
   WhisperTokenizer,
 } from "@huggingface/transformers"
-import { toSegments } from "../core/transcript"
-import type { Segment } from "../core/transcript"
-import { WHISPER_MODELS } from "../models"
-import { SAMPLE_RATE } from "../worker-messages"
-import type {
-  TranscriptionRequest,
-  TranscriptionResponse,
-} from "../worker-messages"
+import { toSegments } from "./transcript"
+import type { Segment } from "./transcript"
+import { WHISPER_MODELS } from "./whisper"
+import { SAMPLE_RATE } from "./protocol"
+import type { TranscriptionRequest, TranscriptionResponse } from "./protocol"
 
 env.allowLocalModels = false
 
@@ -102,11 +99,7 @@ async function detectLanguagePrompt(
   return [start, language, config.task_to_id.transcribe]
 }
 
-self.onmessage = async ({
-  data,
-}: MessageEvent<
-  TranscriptionRequest & { model: keyof typeof WHISPER_MODELS }
->) => {
+self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
   const { audio, model, language, cpuOnly } = data
   if (!audio.some((sample) => sample !== 0)) {
     send({ type: "done", segments: [] })

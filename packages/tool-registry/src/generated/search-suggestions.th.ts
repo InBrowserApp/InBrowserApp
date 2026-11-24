@@ -1824,6 +1824,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "video",
+    name: "เครื่องมือสร้างคำบรรยายวิดีโอ",
+    slug: "video-subtitle-generator",
+  },
+  {
+    category: "video",
     name: "แปลงวิดีโอเป็น GIF",
     slug: "video-to-gif",
   },

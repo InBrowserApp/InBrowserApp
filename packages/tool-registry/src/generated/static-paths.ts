@@ -33490,6 +33490,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "video-subtitle-generator",
+    language: "ar",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "de",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "en",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "es",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "fr",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "he",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "hi",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "id",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "it",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "ja",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "ko",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "ms",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "nl",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "no",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "pl",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "pt",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "ru",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "sv",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "th",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "tr",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "vi",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-subtitle-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "video-to-gif",
     language: "ar",
   },

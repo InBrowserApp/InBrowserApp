@@ -451,6 +451,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "vcard-generator": () => import("@tool/vcard-generator/page"),
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
+  "video-subtitle-generator": () =>
+    import("@tool/video-subtitle-generator/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),
   "video-trimmer": () => import("@tool/video-trimmer/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
