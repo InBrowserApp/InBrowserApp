@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "SVG 转 PDF 转换器",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "SVG 查看器",
     slug: "svg-viewer",
   },

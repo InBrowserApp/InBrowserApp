@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Konverterer fra SVG til PDF",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "SVG-viser",
     slug: "svg-viewer",
   },

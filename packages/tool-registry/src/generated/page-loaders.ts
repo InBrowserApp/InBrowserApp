@@ -340,6 +340,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
+  "svg-to-pdf-converter": () => import("@tool/svg-to-pdf-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),
   "text-diff": () => import("@tool/text-diff/page"),
   "text-encoding-converter": () => import("@tool/text-encoding-converter/page"),

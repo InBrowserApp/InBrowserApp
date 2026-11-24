@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "ממיר SVG ל-PDF",
+    slug: "svg-to-pdf-converter",
+  },
+  {
+    category: "image",
     name: "מציג SVG",
     slug: "svg-viewer",
   },

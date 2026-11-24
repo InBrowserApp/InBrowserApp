@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Thả tệp SVG vào đây",
+  "chooseSvg": "Chọn SVG",
+  "tryExample": "Thử tệp mẫu",
+  "reading": "Đang đọc SVG…",
+  "preview": "Xem trước SVG",
+  "changeSvg": "Đổi tệp SVG",
+  "pageSize": "Khổ trang PDF",
+  "original": "Kích thước SVG gốc",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Căn đồ họa vừa trang và chừa lề.",
+  "download": "Tải PDF xuống",
+  "converting": "Đang tạo PDF…",
+  "downloadReady": "PDF đã sẵn sàng.",
+  "invalidSvg": "Không thể mở tệp này dưới dạng SVG. Hãy chọn một tệp SVG hợp lệ rồi thử lại.",
+  "conversionFailed": "Không thể tạo PDF. Hãy giản lược đồ họa rồi xuất lại tệp SVG từ trình chỉnh sửa."
+}

@@ -33884,6 +33884,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "svg-to-pdf-converter",
+    category: "image",
+    icon: "file-text",
+    tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
+    locales: {
+      ar: {
+        name: "محوّل SVG إلى PDF",
+        description:
+          "حوّل ملفات SVG إلى PDF متجهي في متصفحك. حافظ على وضوح الرسم بأبعاده الأصلية، أو لائمه مع ورق A4 أو US Letter.",
+      },
+      de: {
+        name: "SVG-zu-PDF-Konverter",
+        description:
+          "Wandle SVG-Dateien im Browser in Vektor-PDFs um. Die Grafik bleibt scharf, ob in Originalgröße, auf A4 oder auf US Letter.",
+      },
+      en: {
+        name: "SVG to PDF Converter",
+        description:
+          "Convert SVG to vector PDF in your browser. Preserve sharp artwork at the original canvas size, or fit it to A4 or US Letter.",
+      },
+      es: {
+        name: "Convertidor de SVG a PDF",
+        description:
+          "Convierte SVG a PDF vectorial en tu navegador. Conserva la nitidez y el tamaño del lienzo original o ajusta el diseño a A4 o carta.",
+      },
+      fr: {
+        name: "Convertisseur SVG en PDF",
+        description:
+          "Convertissez vos SVG en PDF vectoriels dans votre navigateur. Conservez les dimensions d’origine ou adaptez le dessin au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר SVG ל-PDF",
+        description:
+          "המרת SVG ל-PDF וקטורי בדפדפן. אפשר לשמור על חדות האיור במידות המקוריות של משטח הציור או להתאים אותו לדף A4 או US Letter.",
+      },
+      hi: {
+        name: "SVG से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में SVG को वेक्टर PDF में बदलें। चित्र को मूल कैनवस के आकार में साफ़ रखें या A4 या US Letter पन्ने पर फ़िट करें।",
+      },
+      id: {
+        name: "Konverter SVG ke PDF",
+        description:
+          "Ubah SVG menjadi PDF vektor langsung di browser. Jaga gambar tetap tajam pada ukuran kanvas asli atau sesuaikan dengan kertas A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da SVG a PDF",
+        description:
+          "Converti SVG in PDF vettoriali nel browser. Mantieni la grafica nitida alle dimensioni originali o adattala a un foglio A4 o Lettera USA.",
+      },
+      ja: {
+        name: "SVGをPDFに変換",
+        description:
+          "ブラウザーでSVGをベクターPDFに変換します。図形の鮮明さを保ったまま、元のサイズで書き出したり、A4やUSレターに収めたりできます。",
+      },
+      ko: {
+        name: "SVG PDF 변환기",
+        description:
+          "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar SVG ke PDF",
+        description:
+          "Tukar SVG kepada PDF vektor terus dalam pelayar. Kekalkan ketajaman grafik pada saiz kanvas asal atau sesuaikannya dengan kertas A4 atau US Letter.",
+      },
+      nl: {
+        name: "SVG naar PDF converteren",
+        description:
+          "Zet SVG om naar een vector-PDF in je browser. Behoud de oorspronkelijke afmetingen of laat de afbeelding op A4 of US Letter passen.",
+      },
+      no: {
+        name: "Konverterer fra SVG til PDF",
+        description:
+          "Konverter SVG til vektorbasert PDF i nettleseren. Behold skarpheten og den opprinnelige størrelsen, eller tilpass illustrasjonen til A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter SVG na PDF",
+        description:
+          "Konwertuj SVG na wektorowy PDF w przeglądarce. Zachowaj ostrość i oryginalne wymiary grafiki lub dopasuj ją do formatu A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de SVG para PDF",
+        description:
+          "Converta SVG em PDF vetorial no navegador. Preserve a nitidez e o tamanho original da ilustração ou ajuste-a para A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер SVG в PDF",
+        description:
+          "Преобразуйте SVG в векторный PDF прямо в браузере. Сохраните чёткость графики при исходном размере или разместите её на листе A4 или US Letter.",
+      },
+      sv: {
+        name: "Konvertera SVG till PDF",
+        description:
+          "Konvertera SVG till vektor-PDF i webbläsaren. Behåll skärpan och originalmåtten eller anpassa grafiken till A4 eller US Letter.",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็น PDF",
+        description:
+          "แปลง SVG เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ คงความคมชัดที่ขนาดเดิม หรือปรับให้พอดีกับกระดาษ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "SVG'den PDF'ye Dönüştürücü",
+        description:
+          "SVG dosyalarını tarayıcınızda vektörel PDF'ye dönüştürün. Çizimin netliğini ve özgün tuval boyutunu koruyun veya çizimi A4 ya da US Letter sayfasına sığdırın.",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang PDF",
+        description:
+          "Chuyển SVG sang PDF vectơ ngay trong trình duyệt. Giữ đồ họa sắc nét ở kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "SVG 转 PDF 转换器",
+        description:
+          "在浏览器中将 SVG 转为矢量 PDF，放大依然清晰。可保留原始画布尺寸，也可适配 A4 或 US Letter 纸张。",
+      },
+      "zh-TW": {
+        name: "SVG 轉 PDF 轉換器",
+        description:
+          "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。",
+      },
+    },
+  },
+  {
     slug: "svg-viewer",
     category: "image",
     icon: "image",

@@ -252,6 +252,7 @@ catalog:
   jsdom: ^31.0.1
   jsonpath-plus: ^11.3.0
   jsqr: ^1.4.0
+  jspdf: ^4.2.1
   knip: ^6.45.1
   lint-staged: ^17.6.1
   lucide-react: ^1.74.0
@@ -286,6 +287,7 @@ catalog:
   sql-formatter: ^15.9.0
   svelte: ^5.57.3
   svgo: ^4.1.0
+  svg2pdf.js: ^2.9.0
   tailwind-merge: ^3.7.0
   tailwindcss: ^4.3.5
   transliteration: ^2.7.0
