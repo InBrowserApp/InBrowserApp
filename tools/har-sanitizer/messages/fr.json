@@ -1,0 +1,19 @@
+{
+  "open": "Ouvrir un fichier HAR",
+  "drop": "Ou déposez ici un fichier .har ou .json",
+  "example": "Essayer avec un exemple",
+  "privacy": "Les fichiers restent dans votre navigateur.",
+  "options": "Options de nettoyage",
+  "credentials": "Les cookies et les en-têtes d’authentification courants sont toujours supprimés.",
+  "parameters": "Masquer les valeurs des paramètres d’URL",
+  "bodies": "Supprimer les corps HTTP et les données WebSocket",
+  "reading": "Préparation du fichier HAR nettoyé…",
+  "invalid": "Impossible de lire ce fichier comme un HAR. Exportez un nouveau fichier HAR depuis le panneau Réseau de votre navigateur, puis réessayez.",
+  "failed": "Impossible de préparer ce fichier. Rouvrez-le ou exportez une capture plus courte.",
+  "result": "Fichier HAR nettoyé",
+  "requests": "Requêtes conservées",
+  "removedCredentials": "Champs d’authentification supprimés",
+  "maskedParameters": "Valeurs d’URL masquées",
+  "removedBodies": "Contenus supprimés",
+  "download": "Télécharger le HAR nettoyé"
+}

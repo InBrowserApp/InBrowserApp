@@ -1,0 +1,19 @@
+{
+  "open": "打开 HAR 文件",
+  "drop": "或将 .har 或 .json 文件拖放到此处",
+  "example": "试用示例",
+  "privacy": "文件保留在您的浏览器中。",
+  "options": "脱敏选项",
+  "credentials": "Cookie 和常见身份验证标头始终会被移除。",
+  "parameters": "遮盖 URL 参数值",
+  "bodies": "移除请求、响应和 WebSocket 内容",
+  "reading": "正在生成脱敏后的 HAR…",
+  "invalid": "无法将此文件读取为 HAR。请从浏览器的“网络”面板重新导出 HAR 后重试。",
+  "failed": "无法处理此文件。请重新打开，或导出较短的记录后重试。",
+  "result": "脱敏后的 HAR",
+  "requests": "保留的请求",
+  "removedCredentials": "移除的凭据字段",
+  "maskedParameters": "遮盖的 URL 值",
+  "removedBodies": "移除的内容",
+  "download": "下载脱敏后的 HAR"
+}

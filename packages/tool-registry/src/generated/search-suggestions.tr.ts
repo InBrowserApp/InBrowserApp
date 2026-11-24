@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Yapay zekâ ile görsel büyütme",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Animasyonlu WebP Oluşturucu",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc Görüntüleyici",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Ses Yüksekliğini Normalleştirme",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM Görüntüleyicisi",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu Görüntüleyici",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNS Bölge Dosyası Ayrıştırıcı",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC ve WPS’ten PDF’ye Dönüştürücü",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC ve WPS Görüntüleyici",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose Doğrulayıcı",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "TTF ve OTF'den WOFF2'ye Dönüştürücü",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Oyun Kumandası Testi",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT Önizleyici",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR Ağ Analizörü",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "HAR Dosyası Temizleme",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Onaltılık Düzenleyici",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Klavye Testi",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON Dönüştürücü",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite'tan SQL'e Dönüştürücü",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite Görüntüleyici",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH Ortak Anahtar Parmak İzi",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP Görüntüleyici",
+    slug: "step-viewer",
   },
   {
     category: "misc",

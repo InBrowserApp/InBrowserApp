@@ -1,0 +1,4 @@
+{
+  "name": "HAR Sanitizer",
+  "description": "Remove cookies, tokens, and other sensitive data from HAR files in your browser. Download a sanitized HAR for sharing while keeping request timings and status codes."
+}

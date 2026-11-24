@@ -1,0 +1,23 @@
+{
+  "openFile": "打开文件",
+  "replaceFile": "替换文件",
+  "trySample": "试用示例",
+  "dropFile": "将文件拖到这里，即可查看和编辑其中的字节。",
+  "download": "下载副本",
+  "emptyFile": "此文件为空，没有可显示的字节。",
+  "readError": "无法读取文件的这部分内容，请尝试重新打开文件。",
+  "loading": "正在读取字节…",
+  "offset": "偏移量",
+  "jumpOffset": "跳转到偏移量",
+  "go": "跳转",
+  "offsetError": "请输入文件范围内的十六进制偏移量。",
+  "hex": "十六进制",
+  "ascii": "ASCII",
+  "byteValue": "偏移量 {offset} 处的字节",
+  "editHint": "选中字节后，输入两位十六进制数字即可改写。",
+  "undo": "撤销",
+  "redo": "重做",
+  "previousPage": "上一页",
+  "nextPage": "下一页",
+  "page": "第 {current} 页，共 {total} 页"
+}

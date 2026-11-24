@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "تكبير الصور بالذكاء الاصطناعي",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "أداة إنشاء WebP متحرك",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "عارض AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "توحيد جهارة الصوت",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "عارض DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "عارض DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "محلّل ملفات مناطق DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "محول DOC وWPS إلى PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "عارض DOC وWPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "مدقق Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "محوّل خطوط TTF وOTF إلى WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "اختبار يد التحكم",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "معاين Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "محلل شبكة HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "منظّف ملفات HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "محرّر سداسي عشري",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "اختبار لوحة المفاتيح",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "محوّل بين KML وGeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "تحويل SQLite إلى ملف SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "عارض SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "بصمة مفتاح SSH العام",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "عارض STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

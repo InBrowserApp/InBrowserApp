@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose वैलिडेटर",
+  "description": "compose.yaml या docker-compose.yml को ऑनलाइन सत्यापित करें। YAML सिंटैक्स की गड़बड़ियों और Docker Compose के अमान्य फ़ील्ड को पंक्ति और कॉलम नंबर की मदद से ढूँढें।"
+}

@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Skala upp bilder med AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Skapa animerad WebP",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc-visare",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Normalisera ljudnivån (LUFS)",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM-visare",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu-visare",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Parser för DNS-zonfiler",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Konverterare från DOC och WPS till PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC- och WPS-visare",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose-validerare",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Konvertera TTF och OTF till WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Test av handkontroll",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT-förhandsgranskare",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR-nätverksanalysator",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Rensa HAR-filer",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Hexredigerare",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Tangentbordstest",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON-konverterare",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite till SQL-dump",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite-visare",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Fingeravtryck för publik SSH-nyckel",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP-visare",
+    slug: "step-viewer",
   },
   {
     category: "misc",

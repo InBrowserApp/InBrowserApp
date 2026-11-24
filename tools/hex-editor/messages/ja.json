@@ -1,0 +1,23 @@
+{
+  "openFile": "ファイルを開く",
+  "replaceFile": "ファイルを入れ替える",
+  "trySample": "サンプルを読み込む",
+  "dropFile": "ここにファイルをドロップして、バイトを表示・編集できます。",
+  "download": "コピーをダウンロード",
+  "emptyFile": "このファイルは空です。",
+  "readError": "ファイルのこの範囲を読み込めませんでした。ファイルを開き直してください。",
+  "loading": "バイトを読み込み中…",
+  "offset": "オフセット",
+  "jumpOffset": "移動先のオフセット",
+  "go": "移動",
+  "offsetError": "ファイルの範囲内のオフセットを16進数で入力してください。",
+  "hex": "16進数",
+  "ascii": "ASCII",
+  "byteValue": "オフセット {offset} のバイト",
+  "editHint": "バイトを選び、16進数を2桁入力して上書きします。",
+  "undo": "元に戻す",
+  "redo": "やり直す",
+  "previousPage": "前のページ",
+  "nextPage": "次のページ",
+  "page": "{current} / {total} ページ"
+}

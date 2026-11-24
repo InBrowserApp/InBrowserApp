@@ -9,3 +9,7 @@ Trascina il diagramma per spostarti. Usa i pulsanti di zoom per leggere le etich
 ## Aprire un file BPMN senza layout
 
 Un file XML BPMN 2.0 può descrivere un processo senza indicare la posizione delle forme e dei collegamenti. Il visualizzatore usa i dati BPMN Diagram Interchange salvati con il modello per disegnare il diagramma. Se manca il layout, apri il modello nello strumento di modellazione BPMN ed esportalo di nuovo includendo il diagramma. Consulta la [specifica BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) per maggiori dettagli sul formato.
+
+## Scaricare un diagramma in SVG
+
+Dopo aver aperto un diagramma, seleziona **Scarica SVG**. Il file contiene l’intero diagramma alla scala originale e rimane nitido quando lo ridimensioni in documenti e diapositive.

@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI 圖片放大",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "動態 WebP 製作器",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc 檢視器",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "音訊響度標準化",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM 檢視器",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu 檢視器",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNS 區域檔案解析器",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC / WPS 轉 PDF 轉換器",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC 與 WPS 檢視器",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose 驗證器",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "TTF、OTF 轉 WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "遊戲控制器測試器",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 預覽器",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 網路分析器",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "HAR 敏感資料清理工具",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "十六進位編輯器",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "鍵盤測試器",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON 轉換器",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite 轉 SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite 檢視器",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH 公開金鑰指紋",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP 檢視器",
+    slug: "step-viewer",
   },
   {
     category: "misc",

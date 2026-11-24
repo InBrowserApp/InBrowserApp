@@ -1,0 +1,23 @@
+{
+  "openFile": "Apri file",
+  "replaceFile": "Sostituisci file",
+  "trySample": "Prova un esempio",
+  "dropFile": "Trascina qui un file per visualizzarne e modificarne i byte.",
+  "download": "Scarica una copia",
+  "emptyFile": "Il file è vuoto. Non ci sono byte da visualizzare.",
+  "readError": "Impossibile leggere questa parte del file. Prova a riaprirlo.",
+  "loading": "Lettura dei byte…",
+  "offset": "Offset",
+  "jumpOffset": "Vai all’offset",
+  "go": "Vai",
+  "offsetError": "Inserisci un offset esadecimale compreso nel file.",
+  "hex": "Esadecimale",
+  "ascii": "ASCII",
+  "byteValue": "Byte all’offset {offset}",
+  "editHint": "Seleziona un byte e digita due cifre esadecimali per sovrascriverlo.",
+  "undo": "Annulla",
+  "redo": "Ripristina",
+  "previousPage": "Pagina precedente",
+  "nextPage": "Pagina successiva",
+  "page": "Pagina {current} di {total}"
+}

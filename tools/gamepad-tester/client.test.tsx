@@ -58,6 +58,7 @@ function makeGamepad(overrides: Partial<MockGamepad> = {}): MockGamepad {
       value: 0,
     })),
     timestamp: 0,
+    hapticActuators: [],
     vibrationActuator: null as unknown as GamepadHapticActuator,
     ...overrides,
   }

@@ -26,6 +26,7 @@
           "^onnxruntime-web/ort-wasm-simd-threaded[.]asyncify[.]mjs[?]url$",
           "^onnxruntime-web/ort-wasm-simd-threaded[.]asyncify[.]wasm[?]gzip-url$",
           "^audio-transcription-runtime/ort-wasm-simd-threaded[.]jsep[.](mjs|wasm)[?]url$",
+          "^onnxruntime-web/webgpu[?]url$",
           "^wasm-media-encoders/wasm/(mp3|ogg)[?]url$"
         ]
       }

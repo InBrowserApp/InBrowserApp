@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ai-image-upscaler",
+    language: "ar",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "de",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "en",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "es",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "fr",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "he",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "hi",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "id",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "it",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ja",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ko",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ms",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "nl",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "no",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "pl",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "pt",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "ru",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "sv",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "th",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "tr",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "vi",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "zh-CN",
+  },
+  {
+    slug: "ai-image-upscaler",
+    language: "zh-TW",
+  },
+  {
     slug: "animated-webp-maker",
     language: "ar",
   },
@@ -1379,6 +1471,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "asciidoc-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "de",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "en",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "es",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "he",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "id",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "it",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "no",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "th",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-loudness-normalizer",
     language: "zh-TW",
   },
   {
@@ -7730,6 +7914,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dicom-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "de",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "en",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "es",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "he",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "id",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "it",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "no",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "th",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dicom-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "djvu-viewer",
     language: "ar",
   },
@@ -8006,6 +8282,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dns-zone-file-parser",
+    language: "ar",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "de",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "en",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "es",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "fr",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "he",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "hi",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "id",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "it",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ja",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ko",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ms",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "nl",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "no",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "pl",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "pt",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "ru",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "sv",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "th",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "tr",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "vi",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "dns-zone-file-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "doc-to-pdf-converter",
     language: "ar",
   },
@@ -8187,6 +8555,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "doc-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ar",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "de",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "en",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "es",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "fr",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "he",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "hi",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "id",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "it",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ja",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ko",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ms",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "nl",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "no",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "pl",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "pt",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "ru",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "sv",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "th",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "tr",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "vi",
+  },
+  {
+    slug: "docker-compose-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "docker-compose-validator",
     language: "zh-TW",
   },
   {
@@ -10398,6 +10858,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "font-to-woff2",
+    language: "ar",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "de",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "en",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "es",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "fr",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "he",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "hi",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "id",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "it",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ja",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ko",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ms",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "nl",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "no",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "pl",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "pt",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "ru",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "sv",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "th",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "tr",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "vi",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "zh-CN",
+  },
+  {
+    slug: "font-to-woff2",
+    language: "zh-TW",
+  },
+  {
     slug: "gamepad-tester",
     language: "ar",
   },
@@ -11134,6 +11686,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "graphviz-dot-previewer",
+    language: "ar",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "de",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "en",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "es",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "fr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "he",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "hi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "id",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "it",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ja",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ko",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ms",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "nl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "no",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pl",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "pt",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "ru",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "sv",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "th",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "tr",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "vi",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "graphviz-dot-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "har-analyzer",
     language: "ar",
   },
@@ -11223,6 +11867,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "har-analyzer",
+    language: "zh-TW",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ar",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "de",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "en",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "es",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "fr",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "he",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "hi",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "id",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "it",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ja",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ko",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ms",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "nl",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "no",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "pl",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "pt",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ru",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "sv",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "th",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "tr",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "vi",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "hex-editor",
+    language: "ar",
+  },
+  {
+    slug: "hex-editor",
+    language: "de",
+  },
+  {
+    slug: "hex-editor",
+    language: "en",
+  },
+  {
+    slug: "hex-editor",
+    language: "es",
+  },
+  {
+    slug: "hex-editor",
+    language: "fr",
+  },
+  {
+    slug: "hex-editor",
+    language: "he",
+  },
+  {
+    slug: "hex-editor",
+    language: "hi",
+  },
+  {
+    slug: "hex-editor",
+    language: "id",
+  },
+  {
+    slug: "hex-editor",
+    language: "it",
+  },
+  {
+    slug: "hex-editor",
+    language: "ja",
+  },
+  {
+    slug: "hex-editor",
+    language: "ko",
+  },
+  {
+    slug: "hex-editor",
+    language: "ms",
+  },
+  {
+    slug: "hex-editor",
+    language: "nl",
+  },
+  {
+    slug: "hex-editor",
+    language: "no",
+  },
+  {
+    slug: "hex-editor",
+    language: "pl",
+  },
+  {
+    slug: "hex-editor",
+    language: "pt",
+  },
+  {
+    slug: "hex-editor",
+    language: "ru",
+  },
+  {
+    slug: "hex-editor",
+    language: "sv",
+  },
+  {
+    slug: "hex-editor",
+    language: "th",
+  },
+  {
+    slug: "hex-editor",
+    language: "tr",
+  },
+  {
+    slug: "hex-editor",
+    language: "vi",
+  },
+  {
+    slug: "hex-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "hex-editor",
     language: "zh-TW",
   },
   {
@@ -16559,6 +17387,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "keyboard-tester",
+    language: "zh-TW",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "kml-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "kml-geojson-converter",
     language: "zh-TW",
   },
   {
@@ -26774,6 +27694,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sqlite-to-sql",
+    language: "ar",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "de",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "en",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "es",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "fr",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "he",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "hi",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "id",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "it",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ja",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ko",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ms",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "nl",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "no",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "pl",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "pt",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ru",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "sv",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "th",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "tr",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "vi",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "zh-CN",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "zh-TW",
+  },
+  {
     slug: "sqlite-viewer",
     language: "ar",
   },
@@ -27139,6 +28151,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ssh-public-key-fingerprint",
+    language: "zh-TW",
+  },
+  {
+    slug: "step-viewer",
+    language: "ar",
+  },
+  {
+    slug: "step-viewer",
+    language: "de",
+  },
+  {
+    slug: "step-viewer",
+    language: "en",
+  },
+  {
+    slug: "step-viewer",
+    language: "es",
+  },
+  {
+    slug: "step-viewer",
+    language: "fr",
+  },
+  {
+    slug: "step-viewer",
+    language: "he",
+  },
+  {
+    slug: "step-viewer",
+    language: "hi",
+  },
+  {
+    slug: "step-viewer",
+    language: "id",
+  },
+  {
+    slug: "step-viewer",
+    language: "it",
+  },
+  {
+    slug: "step-viewer",
+    language: "ja",
+  },
+  {
+    slug: "step-viewer",
+    language: "ko",
+  },
+  {
+    slug: "step-viewer",
+    language: "ms",
+  },
+  {
+    slug: "step-viewer",
+    language: "nl",
+  },
+  {
+    slug: "step-viewer",
+    language: "no",
+  },
+  {
+    slug: "step-viewer",
+    language: "pl",
+  },
+  {
+    slug: "step-viewer",
+    language: "pt",
+  },
+  {
+    slug: "step-viewer",
+    language: "ru",
+  },
+  {
+    slug: "step-viewer",
+    language: "sv",
+  },
+  {
+    slug: "step-viewer",
+    language: "th",
+  },
+  {
+    slug: "step-viewer",
+    language: "tr",
+  },
+  {
+    slug: "step-viewer",
+    language: "vi",
+  },
+  {
+    slug: "step-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "step-viewer",
     language: "zh-TW",
   },
   {

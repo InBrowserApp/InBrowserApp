@@ -1,0 +1,19 @@
+{
+  "open": "Abrir archivo HAR",
+  "drop": "O suelta aquí un archivo .har o .json",
+  "example": "Probar con un ejemplo",
+  "privacy": "Los archivos se quedan en tu navegador.",
+  "options": "Opciones de limpieza",
+  "credentials": "Las cookies y los encabezados de autenticación más comunes se eliminan siempre.",
+  "parameters": "Ocultar valores de parámetros de URL",
+  "bodies": "Eliminar cuerpos HTTP y datos de WebSocket",
+  "reading": "Preparando el HAR limpio…",
+  "invalid": "No se pudo leer el archivo como HAR. Exporta otro HAR desde el panel Red del navegador y vuelve a intentarlo.",
+  "failed": "No se pudo preparar el archivo. Vuelve a abrirlo o exporta una captura más corta.",
+  "result": "HAR limpio",
+  "requests": "Solicitudes conservadas",
+  "removedCredentials": "Campos de credenciales eliminados",
+  "maskedParameters": "Valores de URL ocultos",
+  "removedBodies": "Contenidos eliminados",
+  "download": "Descargar HAR limpio"
+}

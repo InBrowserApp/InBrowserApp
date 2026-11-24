@@ -1,0 +1,4 @@
+{
+  "name": "Parser File Zona DNS",
+  "description": "Baca file zona DNS format BIND, telusuri record, dan salin hasilnya sebagai JSON. Lihat nama, jenis, TTL, kelas, dan data setiap record langsung di browser."
+}

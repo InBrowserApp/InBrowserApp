@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI इमेज अपस्केलर",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "एनिमेटेड WebP मेकर",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc व्यूअर",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "ऑडियो लाउडनेस नॉर्मलाइज़र",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM व्यूअर",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu व्यूअर",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNS ज़ोन फ़ाइल पार्सर",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC और WPS से PDF कन्वर्टर",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC और WPS व्यूअर",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose वैलिडेटर",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "TTF और OTF से WOFF2 फ़ॉन्ट कन्वर्टर",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "गेमपैड टेस्टर",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT प्रीव्यूअर",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR नेटवर्क विश्लेषक",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "HAR फ़ाइल क्लीनर",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "हेक्स एडिटर",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "कीबोर्ड टेस्टर",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON कन्वर्टर",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite को SQL डंप में बदलें",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite व्यूअर",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH सार्वजनिक कुंजी फिंगरप्रिंट",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP व्यूअर",
+    slug: "step-viewer",
   },
   {
     category: "misc",

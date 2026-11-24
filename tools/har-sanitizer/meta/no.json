@@ -1,0 +1,4 @@
+{
+  "name": "Fjern sensitive data fra HAR-filer",
+  "description": "Fjern informasjonskapsler, tokener og andre sensitive data fra HAR-filer i nettleseren. Last ned en renset HAR-fil til deling, med tidsmålinger og statuskoder intakt."
+}

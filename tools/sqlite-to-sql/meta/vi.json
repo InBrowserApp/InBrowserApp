@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển SQLite sang tệp SQL",
+  "description": "Chuyển cơ sở dữ liệu SQLite (.db, .sqlite hoặc .sqlite3) thành bản kết xuất SQL để tải xuống. Xuất cả lược đồ và dữ liệu hoặc chỉ lược đồ ngay trong trình duyệt."
+}

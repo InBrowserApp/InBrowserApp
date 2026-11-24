@@ -1,0 +1,4 @@
+{
+  "name": "Hexredigerare",
+  "description": "Visa och redigera binärfiler online i hex och ASCII. Hoppa till ett offset, skriv över bytevärden och ladda ner en redigerad kopia. Filerna stannar i webbläsaren."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "TTF·OTF를 WOFF2로 변환",
+  "description": "TrueType(.ttf)과 OpenType(.otf) 글꼴을 브라우저에서 WOFF2 웹폰트로 변환하세요. 여러 파일을 한꺼번에 변환하고 크기를 비교한 뒤 각각 다운로드할 수 있습니다."
+}

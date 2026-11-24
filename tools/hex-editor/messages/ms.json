@@ -1,0 +1,23 @@
+{
+  "openFile": "Buka fail",
+  "replaceFile": "Ganti fail",
+  "trySample": "Cuba contoh",
+  "dropFile": "Lepaskan fail di sini untuk melihat dan menyunting baitnya.",
+  "download": "Muat turun salinan",
+  "emptyFile": "Tiada bait untuk dipaparkan dalam fail ini.",
+  "readError": "Bahagian fail ini tidak dapat dibaca. Cuba buka fail semula.",
+  "loading": "Membaca bait…",
+  "offset": "Ofset",
+  "jumpOffset": "Pergi ke ofset",
+  "go": "Pergi",
+  "offsetError": "Masukkan ofset heksadesimal dalam julat fail.",
+  "hex": "Heks",
+  "ascii": "ASCII",
+  "byteValue": "Bait pada ofset {offset}",
+  "editHint": "Pilih satu bait dan taip dua digit heksadesimal untuk menggantikan nilainya.",
+  "undo": "Buat asal",
+  "redo": "Buat semula",
+  "previousPage": "Halaman sebelumnya",
+  "nextPage": "Halaman seterusnya",
+  "page": "Halaman {current} daripada {total}"
+}

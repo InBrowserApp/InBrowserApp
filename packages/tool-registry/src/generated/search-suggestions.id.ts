@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Tingkatkan Resolusi Gambar dengan AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Pembuat WebP Animasi",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Penampil AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Normalisasi Kenyaringan Audio",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Penampil DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Penampil DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Parser File Zona DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Konverter DOC dan WPS ke PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Penampil DOC dan WPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Validator Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Konverter Font TTF dan OTF ke WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Penguji Gamepad",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Pratinjau Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Penganalisis Jaringan HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Pembersih File HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Editor Heksadesimal",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Tes Keyboard",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "Konverter KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Ekspor SQLite ke SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Penampil SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Sidik Jari Kunci Publik SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "Penampil STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

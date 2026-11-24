@@ -1,0 +1,23 @@
+{
+  "open": "Choose SQLite file",
+  "replace": "Replace SQLite file",
+  "clear": "Close database",
+  "reader": "SQLite to SQL export",
+  "privacy": "Your database stays on your device.",
+  "releaseFile": "Release to open the database",
+  "drop": "Drop a SQLite database here",
+  "formats": "SQLite 3 databases (.db, .sqlite, .sqlite3)",
+  "sample": "Try a sample",
+  "schemaOnly": "Schema only",
+  "schemaNote": "Export the database structure without table rows.",
+  "working": "Generating SQL dump…",
+  "preview": "SQL preview",
+  "previewLimit": "Preview shortened. The download includes the full SQL dump.",
+  "copy": "Copy SQL",
+  "copied": "Copied",
+  "copyFailed": "Could not copy",
+  "download": "Download .sql",
+  "invalid": "Choose a readable SQLite 3 database file.",
+  "failed": "Could not export this database. Try a standalone copy from the app that created it.",
+  "unsupportedSchema": "Schema-only export is unavailable for this virtual table. Turn off Schema only to export the full database."
+}

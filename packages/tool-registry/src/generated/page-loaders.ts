@@ -9,6 +9,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/adler32-hash-text-or-file/page"),
   "aes-decryptor": () => import("@tool/aes-decryptor/page"),
   "aes-encryptor": () => import("@tool/aes-encryptor/page"),
+  "ai-image-upscaler": () => import("@tool/ai-image-upscaler/page"),
   "animated-webp-maker": () => import("@tool/animated-webp-maker/page"),
   "animated-webp-to-gif-converter": () =>
     import("@tool/animated-webp-to-gif-converter/page"),
@@ -24,6 +25,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "asciidoc-to-pdf-converter": () =>
     import("@tool/asciidoc-to-pdf-converter/page"),
   "asciidoc-viewer": () => import("@tool/asciidoc-viewer/page"),
+  "audio-loudness-normalizer": () =>
+    import("@tool/audio-loudness-normalizer/page"),
   "audio-recorder": () => import("@tool/audio-recorder/page"),
   "audio-to-text": () => import("@tool/audio-to-text/page"),
   "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
@@ -108,12 +111,16 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/data-uri-to-file-converter/page"),
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
+  "dicom-viewer": () => import("@tool/dicom-viewer/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
   "dms-coordinate-converter": () =>
     import("@tool/dms-coordinate-converter/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
+  "dns-zone-file-parser": () => import("@tool/dns-zone-file-parser/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),
+  "docker-compose-validator": () =>
+    import("@tool/docker-compose-validator/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "docx-to-markdown-converter": () =>
@@ -144,6 +151,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
+  "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
   "geojson-viewer": () => import("@tool/geojson-viewer/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),
@@ -153,7 +161,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
+  "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
+  "har-sanitizer": () => import("@tool/har-sanitizer/page"),
+  "hex-editor": () => import("@tool/hex-editor/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
@@ -219,6 +230,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "keccak-hash-text-or-file": () =>
     import("@tool/keccak-hash-text-or-file/page"),
   "keyboard-tester": () => import("@tool/keyboard-tester/page"),
+  "kml-geojson-converter": () => import("@tool/kml-geojson-converter/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
   "legacy-motorola-system-key-generator": () =>
@@ -366,11 +378,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "spreadsheet-data-export": () => import("@tool/spreadsheet-data-export/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
+  "sqlite-to-sql": () => import("@tool/sqlite-to-sql/page"),
   "sqlite-viewer": () => import("@tool/sqlite-viewer/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   "ssh-key-generator": () => import("@tool/ssh-key-generator/page"),
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
+  "step-viewer": () => import("@tool/step-viewer/page"),
   "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),

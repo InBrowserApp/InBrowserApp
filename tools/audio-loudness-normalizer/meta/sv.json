@@ -1,0 +1,4 @@
+{
+  "name": "Normalisera ljudnivån (LUFS)",
+  "description": "Normalisera ljud till ett valt LUFS-värde för poddar, musik eller radio och tv. Jämför ljudstyrka och true peak, lyssna och ladda ned en WAV-fil."
+}

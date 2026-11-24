@@ -8,6 +8,7 @@
     "./xml": "./src/xml.ts"
   },
   "dependencies": {
-    "@types/geojson": "catalog:"
+    "@types/geojson": "catalog:",
+    "saxes": "catalog:"
   }
 }

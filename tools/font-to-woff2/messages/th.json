@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "เลือกไฟล์ฟอนต์",
+  "dropFonts": "หรือลากไฟล์มาวางที่นี่",
+  "formats": ".ttf และ .otf",
+  "localProcessing": "ฟอนต์จะอยู่บนอุปกรณ์ของคุณ",
+  "results": "ผลการแปลง",
+  "clear": "ล้างทั้งหมด",
+  "converting": "กำลังแปลง…",
+  "download": "ดาวน์โหลด WOFF2",
+  "sizes": "ต้นฉบับ {original} · WOFF2 {output}",
+  "failed": "แปลงไฟล์นี้ไม่ได้ เลือกไฟล์ฟอนต์ TTF หรือ OTF ที่ถูกต้อง"
+}

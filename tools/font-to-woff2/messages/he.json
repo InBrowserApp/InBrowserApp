@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "בחירת קובצי גופנים",
+  "dropFonts": "או גררו אותם לכאן",
+  "formats": "\u2066.ttf\u2069 ו-\u2066.otf\u2069",
+  "localProcessing": "הגופנים נשארים במכשיר הזה.",
+  "results": "תוצאות ההמרה",
+  "clear": "ניקוי הכול",
+  "converting": "מתבצעת המרה…",
+  "download": "הורדת WOFF2",
+  "sizes": "מקור {original} · \u2066WOFF2\u2069 {output}",
+  "failed": "המרת הקובץ נכשלה. בחרו קובץ גופן תקין בפורמט TTF או OTF."
+}

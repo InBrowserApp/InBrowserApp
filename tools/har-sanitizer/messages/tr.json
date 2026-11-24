@@ -1,0 +1,19 @@
+{
+  "open": "HAR dosyası aç",
+  "drop": "Veya buraya bir .har ya da .json dosyası bırakın",
+  "example": "Örneği deneyin",
+  "privacy": "Dosyalar tarayıcınızda kalır.",
+  "options": "Temizleme seçenekleri",
+  "credentials": "Çerezler ve yaygın kimlik doğrulama üstbilgileri her zaman kaldırılır.",
+  "parameters": "URL parametrelerinin değerlerini maskele",
+  "bodies": "HTTP ve WebSocket içeriklerini kaldır",
+  "reading": "Temizlenmiş HAR dosyası hazırlanıyor…",
+  "invalid": "Dosya HAR biçiminde okunamadı. Tarayıcınızın Ağ panelinden yeni bir HAR dosyası dışa aktarın ve tekrar deneyin.",
+  "failed": "Dosya hazırlanamadı. Dosyayı yeniden açmayı deneyin veya daha kısa bir kayıt dışa aktarın.",
+  "result": "Temizlenmiş HAR dosyası",
+  "requests": "Korunan istekler",
+  "removedCredentials": "Kaldırılan kimlik doğrulama alanları",
+  "maskedParameters": "Maskelenen URL değerleri",
+  "removedBodies": "Kaldırılan mesaj içerikleri",
+  "download": "Temizlenmiş HAR dosyasını indir"
+}

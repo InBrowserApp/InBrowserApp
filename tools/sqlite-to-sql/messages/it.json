@@ -1,0 +1,23 @@
+{
+  "open": "Scegli file SQLite",
+  "replace": "Sostituisci file SQLite",
+  "clear": "Chiudi database",
+  "reader": "Esportazione da SQLite a SQL",
+  "privacy": "Il database resta sul tuo dispositivo.",
+  "releaseFile": "Rilascia il file per aprire il database",
+  "drop": "Trascina qui un database SQLite",
+  "formats": "Database SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Prova un esempio",
+  "schemaOnly": "Solo schema",
+  "schemaNote": "Esporta la struttura del database senza le righe delle tabelle.",
+  "working": "Generazione del dump SQL…",
+  "preview": "Anteprima SQL",
+  "previewLimit": "L’anteprima mostra solo una parte. Il file scaricato contiene il dump SQL completo.",
+  "copy": "Copia SQL",
+  "copied": "Copiato",
+  "copyFailed": "Impossibile copiare",
+  "download": "Scarica .sql",
+  "invalid": "Scegli un file di database SQLite 3 leggibile.",
+  "failed": "Impossibile esportare il database. Prova con una copia autonoma generata dall’app di origine.",
+  "unsupportedSchema": "Per questa tabella virtuale non è possibile esportare solo lo schema. Disattiva «Solo schema» per esportare l’intero database."
+}

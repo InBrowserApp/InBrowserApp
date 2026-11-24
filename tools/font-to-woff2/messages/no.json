@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "Velg skriftfiler",
+  "dropFonts": "eller slipp dem her",
+  "formats": ".ttf og .otf",
+  "localProcessing": "Skriftene dine blir på denne enheten.",
+  "results": "Konverteringsresultater",
+  "clear": "Fjern alle",
+  "converting": "Konverterer…",
+  "download": "Last ned WOFF2",
+  "sizes": "{original} original · {output} WOFF2",
+  "failed": "Kunne ikke konvertere filen. Velg en gyldig TTF- eller OTF-skrift."
+}

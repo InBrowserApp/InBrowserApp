@@ -1,0 +1,19 @@
+{
+  "open": "HAR-bestand openen",
+  "drop": "Of sleep hier een .har- of .json-bestand naartoe",
+  "example": "Probeer een voorbeeld",
+  "privacy": "Bestanden blijven in je browser.",
+  "options": "Opties voor opschonen",
+  "credentials": "Cookies en gangbare authenticatieheaders worden altijd verwijderd.",
+  "parameters": "Waarden van URL-parameters maskeren",
+  "bodies": "HTTP- en WebSocket-inhoud verwijderen",
+  "reading": "Opgeschoond HAR-bestand maken…",
+  "invalid": "Dit bestand is niet leesbaar als HAR. Exporteer een nieuw HAR-bestand via het netwerkpaneel van je browser en probeer het opnieuw.",
+  "failed": "Het bestand kon niet worden opgeschoond. Open het opnieuw of exporteer een kortere opname.",
+  "result": "Opgeschoond HAR-bestand",
+  "requests": "Behouden verzoeken",
+  "removedCredentials": "Verwijderde authenticatievelden",
+  "maskedParameters": "Gemaskeerde URL-waarden",
+  "removedBodies": "Verwijderde berichtinhoud",
+  "download": "Opgeschoond HAR-bestand downloaden"
+}

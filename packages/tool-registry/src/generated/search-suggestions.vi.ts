@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Tăng độ phân giải ảnh bằng AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Trình tạo WebP động",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Trình xem AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Chuẩn hóa âm lượng (LUFS)",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Trình xem DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Trình xem DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Trình phân tích tệp vùng DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Trình chuyển đổi DOC và WPS sang PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Trình xem DOC và WPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Trình xác thực Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Kiểm tra tay cầm chơi game",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Trình xem trước Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Trình phân tích mạng HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Công cụ làm sạch tệp HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Trình chỉnh sửa hex",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Công cụ kiểm tra bàn phím",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "Trình chuyển đổi KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Chuyển SQLite sang tệp SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Trình xem SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Vân tay khóa công khai SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "Trình xem STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

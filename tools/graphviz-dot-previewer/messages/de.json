@@ -1,0 +1,16 @@
+{
+  "source": "DOT-Code",
+  "example": "Beispiel laden",
+  "dependencies": "Abhängigkeitsgraph",
+  "network": "Ungerichtetes Netzwerk",
+  "clusters": "Graph mit Clustern",
+  "engine": "Layout-Engine",
+  "preview": "Graphvorschau",
+  "empty": "Gib DOT-Code ein, um den Graphen zu sehen.",
+  "loading": "Graph wird gerendert …",
+  "invalid": "Der DOT-Graph konnte nicht angezeigt werden. Prüfe die Syntax und versuche es erneut.",
+  "warnings": "Layout-Hinweise von Graphviz",
+  "fit": "An Ansicht anpassen",
+  "actualSize": "Tatsächliche Größe",
+  "downloadSvg": "SVG herunterladen"
+}

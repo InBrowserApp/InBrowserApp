@@ -1,0 +1,4 @@
+{
+  "name": "SQLite 轉 SQL",
+  "description": "在瀏覽器中將 SQLite 資料庫（.db、.sqlite 或 .sqlite3）匯出成可下載的 SQL 檔案。可匯出完整的結構與資料，也可只匯出結構。"
+}

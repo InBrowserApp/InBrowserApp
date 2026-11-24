@@ -1,0 +1,4 @@
+{
+  "name": "SQLite till SQL-dump",
+  "description": "Konvertera en SQLite-databas (.db, .sqlite eller .sqlite3) till en nedladdningsbar SQL-dump. Exportera schema och data eller bara schemat direkt i webbläsaren."
+}

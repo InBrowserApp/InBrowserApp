@@ -1,0 +1,16 @@
+{
+  "source": "Kode DOT",
+  "example": "Muat contoh",
+  "dependencies": "Graf dependensi",
+  "network": "Jaringan tak berarah",
+  "clusters": "Graf berklaster",
+  "engine": "Mesin tata letak",
+  "preview": "Pratinjau graf",
+  "empty": "Masukkan kode DOT untuk melihat pratinjau graf.",
+  "loading": "Menampilkan graf…",
+  "invalid": "Graf DOT ini tidak dapat ditampilkan. Periksa sintaksnya, lalu coba lagi.",
+  "warnings": "Catatan tata letak Graphviz",
+  "fit": "Sesuaikan dengan tampilan",
+  "actualSize": "Ukuran sebenarnya",
+  "downloadSvg": "Unduh SVG"
+}

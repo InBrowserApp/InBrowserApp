@@ -9,7 +9,14 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { Folder, Scan, Workflow, ZoomIn, ZoomOut } from "@workspace/ui/icons"
+import {
+  Download,
+  Folder,
+  Scan,
+  Workflow,
+  ZoomIn,
+  ZoomOut,
+} from "@workspace/ui/icons"
 import example from "./example.bpmn?raw"
 
 import "bpmn-js/dist/assets/diagram-js.css"
@@ -27,6 +34,7 @@ type Canvas = {
   zoom(scale?: number): number
   scroll(delta: { dx: number; dy: number }): void
 }
+type Diagram = { viewer: Viewer; canvas: Canvas }
 
 function fit(canvas: Canvas) {
   const { inner, outer } = canvas.viewbox()
@@ -52,8 +60,9 @@ function fit(canvas: Canvas) {
 export default function Client({ messages: m }: { messages: typeof Messages }) {
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<Status>("loading")
+  const [exportFailed, setExportFailed] = useState(false)
   const container = useRef<HTMLDivElement>(null)
-  const canvasRef = useRef<Canvas | null>(null)
+  const diagram = useRef<Diagram>(null)
   const touch = useRef<(Point & { id: number }) | null>(null)
   const focusExample = useRef(false)
   const ready = status === "ready"
@@ -62,6 +71,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
     focusExample.current = focusDiagram
     setFile(next)
     setStatus("loading")
+    setExportFailed(false)
   }
 
   useEffect(() => {
@@ -88,14 +98,15 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             file.arrayBuffer(),
           ])
         if (cancelled) return
-        viewer = new NavigatedViewer({
+        const activeViewer = new NavigatedViewer({
           container: target,
           zoomScroll: { enabled: false },
         })
-        await viewer.importXML(decodeWebDocument(new Uint8Array(bytes)))
+        viewer = activeViewer
+        await activeViewer.importXML(decodeWebDocument(new Uint8Array(bytes)))
         if (cancelled) return
 
-        const canvas = viewer.get<Canvas>("canvas")
+        const canvas = activeViewer.get<Canvas>("canvas")
         const { inner } = canvas.viewbox()
         if (inner.width === 0 && inner.height === 0) {
           setStatus("noLayout")
@@ -104,8 +115,8 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
 
         function resize() {
           canvas.resized()
-          if (!canvasRef.current && fit(canvas)) {
-            canvasRef.current = canvas
+          if (!diagram.current && fit(canvas)) {
+            diagram.current = { viewer: activeViewer, canvas }
             setStatus("ready")
           }
         }
@@ -128,13 +139,37 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
       touch.current = null
       observer?.disconnect()
       viewer?.destroy()
-      canvasRef.current = null
+      diagram.current = null
     }
   }, [file])
 
   function zoom(factor: number) {
-    const canvas = canvasRef.current
+    const canvas = diagram.current?.canvas
     if (canvas) canvas.zoom(Math.min(5, Math.max(0.01, canvas.zoom() * factor)))
+  }
+
+  async function downloadSvg(file: File) {
+    const current = diagram.current
+    if (!current) return
+    setExportFailed(false)
+
+    try {
+      const { svg } = await current.viewer.saveSVG()
+      if (diagram.current !== current) return
+      if (!svg) throw new Error("Empty SVG export")
+
+      const stem = file.name.replace(/\.(?:bpmn|xml)$/i, "") || "bpmn-diagram"
+      const url = URL.createObjectURL(
+        new Blob([svg], { type: "image/svg+xml" })
+      )
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+      const link = document.createElement("a")
+      link.href = url
+      link.download = `${stem}.svg`
+      link.click()
+    } catch {
+      if (diagram.current === current) setExportFailed(true)
+    }
   }
 
   return (
@@ -199,7 +234,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             onPointerMove={(event) => {
               const last = touch.current
               if (last?.id !== event.pointerId) return
-              canvasRef.current?.scroll({
+              diagram.current?.canvas.scroll({
                 dx: event.clientX - last.x,
                 dy: event.clientY - last.y,
               })
@@ -214,7 +249,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             }}
           />
           {ready ? (
-            <div className="absolute end-3 top-3 flex gap-1 rounded-lg border bg-background p-1 shadow-sm">
+            <div className="absolute end-3 top-3 flex max-w-[calc(100%-1.5rem)] flex-wrap items-center gap-1 rounded-lg border bg-background p-1 shadow-sm">
               <DocumentIconButton
                 label={m.zoomOut}
                 onClick={() => zoom(1 / 1.25)}
@@ -227,11 +262,28 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
               <DocumentIconButton
                 label={m.fit}
                 onClick={() => {
-                  if (canvasRef.current) fit(canvasRef.current)
+                  if (diagram.current) fit(diagram.current.canvas)
                 }}
               >
                 <Scan aria-hidden="true" />
               </DocumentIconButton>
+              <Button
+                variant="outline"
+                size="sm"
+                className="max-sm:min-h-10"
+                onClick={() => void downloadSvg(file)}
+              >
+                <Download data-icon="inline-start" aria-hidden="true" />
+                {m.downloadSvg}
+              </Button>
+              {exportFailed && (
+                <p
+                  role="status"
+                  className="max-w-60 basis-full px-2 py-1 text-sm text-destructive"
+                >
+                  {m.exportError}
+                </p>
+              )}
             </div>
           ) : (
             <div

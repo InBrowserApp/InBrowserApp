@@ -16,5 +16,7 @@
   "noLayout": "此 BPMN 檔案沒有圖表佈局。請從建模工具匯出包含佈局資料的檔案後重新開啟。",
   "zoomIn": "放大",
   "zoomOut": "縮小",
-  "fit": "調整圖表至適合視圖"
+  "fit": "調整圖表至適合視圖",
+  "downloadSvg": "下載 SVG",
+  "exportError": "無法產生 SVG。請嘗試重新下載圖表。"
 }

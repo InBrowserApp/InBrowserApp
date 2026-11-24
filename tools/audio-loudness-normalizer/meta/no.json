@@ -1,0 +1,4 @@
+{
+  "name": "Normaliser lydnivå (LUFS)",
+  "description": "Normaliser lyd til et valgt LUFS-nivå for podkast, musikk eller kringkasting. Sammenlign lydstyrke og true peak, lytt og last ned WAV i nettleseren."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Parser voor DNS-zonebestanden",
+  "description": "Zet DNS-zonebestanden in BIND-formaat om in doorzoekbare records en JSON. Bekijk de naam, het type, de TTL, de klasse en de gegevens per record in je browser."
+}

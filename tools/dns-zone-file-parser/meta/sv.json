@@ -1,0 +1,4 @@
+{
+  "name": "Parser för DNS-zonfiler",
+  "description": "Läs DNS-zonfiler i BIND-format som sökbara poster och JSON. Se varje posts namn, typ, TTL, klass och data direkt i webbläsaren."
+}

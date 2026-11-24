@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Chọn ảnh",
+  "dropHint": "hoặc kéo thả ảnh vào đây",
+  "formats": "JPG, PNG, WebP và các định dạng ảnh tĩnh khác",
+  "privacy": "Ảnh luôn nằm trên thiết bị của bạn.",
+  "changeImage": "Đổi ảnh",
+  "scale": "Tỷ lệ phóng to",
+  "outputSize": "Kích thước đầu ra",
+  "upscale": "Phóng to ảnh",
+  "loading": "Đang tải mô hình AI…",
+  "processing": "Đang phóng to ảnh…",
+  "cancel": "Hủy",
+  "original": "Ảnh gốc",
+  "upscaled": "Ảnh phóng to",
+  "comparison": "So sánh ảnh gốc và ảnh phóng to",
+  "download": "Tải PNG xuống",
+  "invalidImage": "Không mở được ảnh này. Hãy thử tệp JPG, PNG hoặc WebP.",
+  "largeImage": "Chọn ảnh có mỗi cạnh tối đa 2.048 pixel và tổng cộng không quá 1 megapixel.",
+  "failed": "Không thể phóng to ảnh. Hãy thử lại hoặc dùng ảnh nhỏ hơn."
+}

@@ -1,4 +1,4 @@
 {
   "name": "BPMN 檢視器",
-  "description": "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。"
+  "description": "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。 支援下載 SVG。"
 }

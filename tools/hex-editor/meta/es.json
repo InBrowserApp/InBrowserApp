@@ -1,0 +1,4 @@
+{
+  "name": "Editor hexadecimal",
+  "description": "Inspecciona archivos binarios en hexadecimal y ASCII. Ve a un desplazamiento, edita bytes y descarga una copia. Todo se hace en tu navegador."
+}

@@ -1,0 +1,19 @@
+{
+  "open": "Open HAR file",
+  "drop": "Or drop a .har or .json file here",
+  "example": "Try an example",
+  "privacy": "Files stay in your browser.",
+  "options": "Redaction options",
+  "credentials": "Cookies and common authentication headers are always removed.",
+  "parameters": "Mask URL parameter values",
+  "bodies": "Remove HTTP and WebSocket bodies",
+  "reading": "Preparing the sanitized HAR…",
+  "invalid": "Couldn’t read this as a HAR file. Export a new HAR from your browser’s Network panel and try again.",
+  "failed": "Couldn’t prepare this file. Try opening it again or export a shorter recording.",
+  "result": "Sanitized HAR",
+  "requests": "Requests kept",
+  "removedCredentials": "Credential fields removed",
+  "maskedParameters": "URL values masked",
+  "removedBodies": "Bodies removed",
+  "download": "Download sanitized HAR"
+}

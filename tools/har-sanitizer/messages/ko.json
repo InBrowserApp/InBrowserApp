@@ -1,0 +1,19 @@
+{
+  "open": "HAR 파일 열기",
+  "drop": "또는 .har 또는 .json 파일을 여기에 놓으세요",
+  "example": "예제 사용해 보기",
+  "privacy": "파일은 브라우저 안에서 처리됩니다.",
+  "options": "민감 정보 제거 옵션",
+  "credentials": "쿠키와 일반적인 인증 헤더는 항상 제거됩니다.",
+  "parameters": "URL 매개변수 값 가리기",
+  "bodies": "요청·응답 본문 및 WebSocket 페이로드 제거",
+  "reading": "민감 정보를 제거한 HAR을 준비하는 중…",
+  "invalid": "이 파일을 HAR로 읽을 수 없습니다. 브라우저의 네트워크 패널에서 HAR을 다시 내보낸 후 시도하세요.",
+  "failed": "파일을 처리할 수 없습니다. 다시 열거나 더 짧게 기록한 파일을 내보내 보세요.",
+  "result": "민감 정보를 제거한 HAR",
+  "requests": "유지된 요청",
+  "removedCredentials": "제거된 인증 정보 필드",
+  "maskedParameters": "가려진 URL 값",
+  "removedBodies": "제거된 본문 및 페이로드",
+  "download": "민감 정보를 제거한 HAR 다운로드"
+}

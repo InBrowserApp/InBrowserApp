@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "เพิ่มความละเอียดภาพด้วย AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "เครื่องมือสร้าง WebP แบบเคลื่อนไหว",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "โปรแกรมดู AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "ปรับความดังเสียงตามค่า LUFS",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "โปรแกรมดูภาพ DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "โปรแกรมดู DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "เครื่องมือวิเคราะห์ไฟล์โซน DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "โปรแกรมแปลง DOC / WPS เป็น PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "โปรแกรมดู DOC และ WPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "ตัวตรวจสอบ Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "ตัวแปลงฟอนต์ TTF และ OTF เป็น WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "ทดสอบจอยเกม",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "เครื่องมือวิเคราะห์เครือข่าย HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "เครื่องมือลบข้อมูลอ่อนไหวจากไฟล์ HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "เครื่องมือทดสอบแป้นพิมพ์",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "เครื่องมือแปลง KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "แปลง SQLite เป็นไฟล์ดัมป์ SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "โปรแกรมดู SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "ลายนิ้วมือคีย์สาธารณะ SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมดู STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

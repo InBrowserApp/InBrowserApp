@@ -16,5 +16,7 @@
   "noLayout": "BPMN-filen saknar diagramlayout. Exportera den på nytt från modelleringsverktyget med diagramlayouten inkluderad och öppna filen igen.",
   "zoomIn": "Zooma in",
   "zoomOut": "Zooma ut",
-  "fit": "Visa hela diagrammet"
+  "fit": "Visa hela diagrammet",
+  "downloadSvg": "Ladda ned SVG",
+  "exportError": "Det gick inte att skapa SVG-filen. Försök ladda ned diagrammet igen."
 }

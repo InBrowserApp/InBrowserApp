@@ -1,0 +1,4 @@
+{
+  "name": "Normalizza l’audio in LUFS",
+  "description": "Normalizza l’audio in LUFS per podcast, musica o trasmissioni. Confronta loudness e picco effettivo, ascolta il risultato e scarica il WAV nel browser."
+}

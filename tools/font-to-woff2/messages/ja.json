@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "フォントファイルを選択",
+  "dropFonts": "またはここにドロップ",
+  "formats": ".ttf と .otf",
+  "localProcessing": "フォントはこのデバイス内で処理されます。",
+  "results": "変換結果",
+  "clear": "すべてクリア",
+  "converting": "変換中…",
+  "download": "WOFF2 をダウンロード",
+  "sizes": "変換前 {original} · WOFF2 {output}",
+  "failed": "このファイルを変換できませんでした。有効な TTF または OTF フォントを選択してください。"
+}

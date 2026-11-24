@@ -1,0 +1,4 @@
+{
+  "name": "Audio Loudness Normalizer",
+  "description": "Normalize audio to a target LUFS for podcasts, music, or broadcast. Compare loudness and true peak, preview the result, and download WAV in your browser."
+}

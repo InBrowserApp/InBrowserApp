@@ -1,0 +1,4 @@
+{
+  "name": "Trình chỉnh sửa hex",
+  "description": "Xem và chỉnh sửa tệp nhị phân trực tuyến dưới dạng hex và ASCII. Đến vị trí byte cần sửa, ghi đè giá trị rồi tải xuống bản sao. Tệp được xử lý ngay trong trình duyệt."
+}

@@ -1,0 +1,23 @@
+{
+  "openFile": "파일 열기",
+  "replaceFile": "파일 바꾸기",
+  "trySample": "예제 열기",
+  "dropFile": "파일을 여기에 놓고 바이트를 확인하거나 편집하세요.",
+  "download": "복사본 다운로드",
+  "emptyFile": "이 파일에는 표시할 바이트가 없습니다.",
+  "readError": "파일의 이 부분을 읽지 못했습니다. 파일을 다시 열어 보세요.",
+  "loading": "바이트 읽는 중…",
+  "offset": "오프셋",
+  "jumpOffset": "오프셋으로 이동",
+  "go": "이동",
+  "offsetError": "파일 범위 내의 16진수 오프셋을 입력하세요.",
+  "hex": "16진수",
+  "ascii": "ASCII",
+  "byteValue": "오프셋 {offset}의 바이트",
+  "editHint": "바이트를 선택한 후 16진수 두 자리를 입력해 값을 덮어쓰세요.",
+  "undo": "실행 취소",
+  "redo": "다시 실행",
+  "previousPage": "이전 페이지",
+  "nextPage": "다음 페이지",
+  "page": "{current} / {total} 페이지"
+}

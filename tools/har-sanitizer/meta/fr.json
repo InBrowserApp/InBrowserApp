@@ -1,0 +1,4 @@
+{
+  "name": "Nettoyage de fichiers HAR",
+  "description": "Supprimez les cookies, jetons et autres données sensibles des fichiers HAR dans votre navigateur. Téléchargez une copie nettoyée qui conserve les durées et les codes d’état."
+}

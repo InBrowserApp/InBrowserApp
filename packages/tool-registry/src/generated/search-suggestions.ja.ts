@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI画像拡大・高画質化",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "アニメーション WebP 作成ツール",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc ビューアー",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "音声のラウドネス正規化",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM ビューアー",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu ビューアー",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNSゾーンファイル解析ツール",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC・WPSからPDFへの変換ツール",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC・WPS ビューアー",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose バリデーター",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "TTF・OTF から WOFF2 へのフォント変換",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "ゲームパッドテスター",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT プレビューアー",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HARネットワーク解析ツール",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "HAR サニタイザー",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "バイナリエディター",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "キーボードテスター",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON 変換",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite を SQL ダンプに変換",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite ビューアー",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH 公開鍵フィンガープリント",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP ビューアー",
+    slug: "step-viewer",
   },
   {
     category: "misc",

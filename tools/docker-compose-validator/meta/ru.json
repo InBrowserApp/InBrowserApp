@@ -1,0 +1,4 @@
+{
+  "name": "Валидатор Docker Compose",
+  "description": "Проверяйте compose.yaml и docker-compose.yml онлайн. Находите ошибки синтаксиса YAML и недопустимые поля Docker Compose с указанием строки и столбца."
+}

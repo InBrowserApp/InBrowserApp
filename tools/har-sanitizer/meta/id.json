@@ -1,0 +1,4 @@
+{
+  "name": "Pembersih File HAR",
+  "description": "Hapus cookie, token, dan data sensitif lainnya dari file HAR langsung di browser. Unduh salinan HAR yang telah dibersihkan untuk dibagikan, dengan tetap menyimpan rincian waktu dan kode status permintaan."
+}

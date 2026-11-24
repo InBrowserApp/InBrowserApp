@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Bild auswählen",
+  "dropHint": "oder hierher ziehen",
+  "formats": "JPG, PNG, WebP und weitere Einzelbilder",
+  "privacy": "Dein Bild bleibt auf deinem Gerät.",
+  "changeImage": "Anderes Bild wählen",
+  "scale": "Skalierungsfaktor",
+  "outputSize": "Ausgabegröße",
+  "upscale": "Bild hochskalieren",
+  "loading": "KI-Modell wird geladen…",
+  "processing": "Bild wird hochskaliert…",
+  "cancel": "Abbrechen",
+  "original": "Original",
+  "upscaled": "Hochskaliert",
+  "comparison": "Original und hochskaliertes Bild vergleichen",
+  "download": "PNG herunterladen",
+  "invalidImage": "Das Bild konnte nicht geöffnet werden. Versuche es mit einer JPG-, PNG- oder WebP-Datei.",
+  "largeImage": "Wähle ein Bild mit höchstens 2.048 Pixeln pro Seite und insgesamt maximal 1 Megapixel.",
+  "failed": "Das Hochskalieren ist fehlgeschlagen. Versuche es erneut oder wähle ein kleineres Bild."
+}

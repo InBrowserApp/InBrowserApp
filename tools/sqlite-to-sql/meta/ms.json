@@ -1,0 +1,4 @@
+{
+  "name": "Eksport SQLite ke SQL",
+  "description": "Eksport pangkalan data SQLite (.db, .sqlite atau .sqlite3) sebagai fail SQL yang boleh dimuat turun. Eksport skema dan data atau skema sahaja terus dalam pelayar anda."
+}

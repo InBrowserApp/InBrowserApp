@@ -535,6 +535,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ai-image-upscaler",
+    category: "image",
+    icon: "image-up",
+    tags: [
+      "ai",
+      "upscale",
+      "super-resolution",
+      "enlarge",
+      "increase image resolution",
+      "photo",
+      "realesrgan",
+    ],
+    locales: {
+      ar: {
+        name: "تكبير الصور بالذكاء الاصطناعي",
+        description:
+          "ارفع دقة صور JPG وPNG وWebP بالذكاء الاصطناعي إلى الضعف أو أربعة أضعاف في متصفحك. قارن النتيجة بالصورة الأصلية ونزّلها بصيغة PNG من دون رفع ملفات.",
+      },
+      de: {
+        name: "Bilder mit KI hochskalieren",
+        description:
+          "Erhöhe die Bildauflösung mit KI um den Faktor 2 oder 4. Skaliere JPG, PNG und WebP im Browser hoch, vergleiche das Ergebnis und lade es als PNG herunter. Ohne Upload.",
+      },
+      en: {
+        name: "AI Image Upscaler",
+        description:
+          "Increase image resolution 2× or 4× with AI. Upscale JPG, PNG, and WebP in your browser, compare the result, and download it as PNG. No uploads.",
+      },
+      es: {
+        name: "Aumentar resolución de imágenes con IA",
+        description:
+          "Amplía tus imágenes JPG, PNG y WebP a 2× o 4× con IA. Compara el resultado en tu navegador y descárgalo en PNG sin subir archivos.",
+      },
+      fr: {
+        name: "Agrandir une image avec l’IA",
+        description:
+          "Doublez ou quadruplez la résolution d’images JPG, PNG et WebP avec l’IA. Comparez le résultat et téléchargez-le en PNG depuis votre navigateur, sans envoyer de fichier.",
+      },
+      he: {
+        name: "הגדלת תמונות בעזרת בינה מלאכותית",
+        description:
+          "הגדילו את רזולוציית התמונה פי 2 או פי 4 בעזרת AI. הגדילו תמונות JPG, PNG ו־WebP בדפדפן, השוו למקור והורידו כקובץ PNG. בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "AI इमेज अपस्केलर",
+        description:
+          "AI से इमेज का रिज़ॉल्यूशन 2× या 4× बढ़ाएँ। ब्राउज़र में JPG, PNG और WebP इमेज बड़ी करें, मूल इमेज से तुलना करें और नतीजा PNG में डाउनलोड करें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Tingkatkan Resolusi Gambar dengan AI",
+        description:
+          "Perbesar gambar JPG, PNG, dan WebP 2× atau 4× dengan AI di browser. Bandingkan dengan gambar asli dan unduh hasilnya sebagai PNG. Gambar tidak perlu diunggah.",
+      },
+      it: {
+        name: "Ingrandire immagini con l’IA",
+        description:
+          "Raddoppia o quadruplica la risoluzione di immagini JPG, PNG e WebP con l’IA. Confronta il risultato nel browser e scaricalo in PNG senza inviare file.",
+      },
+      ja: {
+        name: "AI画像拡大・高画質化",
+        description:
+          "AIで画像の解像度を2倍または4倍に。ブラウザでJPG、PNG、WebP画像を拡大し、結果を比較してPNGでダウンロードできます。アップロード不要。",
+      },
+      ko: {
+        name: "AI 이미지 확대",
+        description:
+          "AI로 이미지 해상도를 2배 또는 4배 높이세요. 브라우저에서 JPG, PNG, WebP 이미지를 확대하고 결과를 비교한 뒤 PNG로 다운로드할 수 있습니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Tingkatkan Resolusi Imej dengan AI",
+        description:
+          "Besarkan imej JPG, PNG dan WebP 2× atau 4× dengan AI dalam pelayar. Bandingkan dengan imej asal dan muat turun PNG. Imej tidak perlu dimuat naik.",
+      },
+      nl: {
+        name: "Afbeeldingen vergroten met AI",
+        description:
+          "Verhoog de beeldresolutie 2× of 4× met AI. Vergroot JPG, PNG en WebP in je browser, vergelijk het resultaat en download het als PNG. Zonder uploads.",
+      },
+      no: {
+        name: "Oppskaler bilder med KI",
+        description:
+          "Øk bildeoppløsningen 2× eller 4× med KI. Oppskaler JPG, PNG og WebP i nettleseren, sammenlign resultatet og last ned som PNG. Ingen opplasting.",
+      },
+      pl: {
+        name: "Powiększanie obrazów z AI",
+        description:
+          "Zwiększ rozdzielczość obrazu JPG, PNG lub WebP 2× albo 4× dzięki AI. Porównaj wynik i pobierz PNG prosto z przeglądarki, bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Aumentar resolução de imagens com IA",
+        description:
+          "Aumente a resolução de imagens JPG, PNG e WebP em 2× ou 4× com IA. Compare o resultado no navegador e baixe em PNG sem enviar arquivos.",
+      },
+      ru: {
+        name: "Увеличение изображений с ИИ",
+        description:
+          "Повысьте разрешение JPG, PNG или WebP в 2 или 4 раза с помощью ИИ. Сравните изображения и скачайте PNG. Всё прямо в браузере, без отправки файлов.",
+      },
+      sv: {
+        name: "Skala upp bilder med AI",
+        description:
+          "Öka bildupplösningen 2× eller 4× med AI. Skala upp JPG, PNG och WebP i webbläsaren, jämför resultatet och ladda ner som PNG. Ingen uppladdning.",
+      },
+      th: {
+        name: "เพิ่มความละเอียดภาพด้วย AI",
+        description:
+          "ขยายภาพ JPG, PNG และ WebP ขนาด 2× หรือ 4× ด้วย AI ในเบราว์เซอร์ เปรียบเทียบกับต้นฉบับแล้วดาวน์โหลดเป็น PNG โดยไม่ต้องอัปโหลดภาพ",
+      },
+      tr: {
+        name: "Yapay zekâ ile görsel büyütme",
+        description:
+          "JPG, PNG ve WebP görsellerin çözünürlüğünü yapay zekâyla 2 veya 4 kat artırın. Sonucu karşılaştırın ve PNG olarak indirin. Tüm işlem tarayıcınızda gerçekleşir ve dosyanız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Tăng độ phân giải ảnh bằng AI",
+        description:
+          "Dùng AI để phóng to ảnh JPG, PNG và WebP lên 2× hoặc 4× ngay trong trình duyệt. So sánh với ảnh gốc rồi tải xuống dưới dạng PNG. Không cần tải ảnh lên.",
+      },
+      "zh-CN": {
+        name: "AI 图片放大",
+        description:
+          "使用 AI 将图片分辨率提高至 2 倍或 4 倍。在浏览器中放大 JPG、PNG 和 WebP 图片，对比结果并下载为 PNG，无需上传。",
+      },
+      "zh-TW": {
+        name: "AI 圖片放大",
+        description:
+          "使用 AI 將圖片解析度提高至 2 倍或 4 倍。在瀏覽器中放大 JPG、PNG 和 WebP 圖片，比較結果並下載為 PNG，無須上傳。",
+      },
+    },
+  },
+  {
     slug: "animated-webp-maker",
     category: "image",
     icon: "film",
@@ -1921,6 +2052,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "AsciiDoc 檢視器",
         description:
           "閱讀本機 AsciiDoc 手冊與文章，提供大綱、閱讀大小調整及專注模式。檔案保留在您的裝置上。",
+      },
+    },
+  },
+  {
+    slug: "audio-loudness-normalizer",
+    category: "misc",
+    icon: "volume-2",
+    tags: [
+      "audio",
+      "loudness",
+      "lufs",
+      "normalize",
+      "volume",
+      "peak",
+      "podcast",
+      "wav",
+    ],
+    locales: {
+      ar: {
+        name: "توحيد جهارة الصوت",
+        description:
+          "اضبط جهارة التسجيلات الصوتية للبودكاست أو الموسيقى أو البث إلى مستوى تختاره بوحدة LUFS. قارن الجهارة والذروة الحقيقية، واستمع إلى النتيجة ونزّلها بصيغة WAV من متصفحك.",
+      },
+      de: {
+        name: "Audio-Lautheit normalisieren",
+        description:
+          "Normalisiere Podcasts, Musik oder Rundfunkbeiträge auf einen LUFS-Zielwert. Vergleiche Lautheit und True Peak, höre das Ergebnis im Browser an und speichere es als WAV.",
+      },
+      en: {
+        name: "Audio Loudness Normalizer",
+        description:
+          "Normalize audio to a target LUFS for podcasts, music, or broadcast. Compare loudness and true peak, preview the result, and download WAV in your browser.",
+      },
+      es: {
+        name: "Normalizador de sonoridad de audio",
+        description:
+          "Normaliza audio a un nivel objetivo en LUFS para pódcast, música o radiodifusión. Compara la sonoridad y el pico real, escucha el resultado y descarga el WAV desde el navegador.",
+      },
+      fr: {
+        name: "Normalisation audio (LUFS)",
+        description:
+          "Normalisez vos podcasts, morceaux et émissions à un niveau cible en LUFS. Comparez la sonie et la crête vraie, écoutez le résultat et téléchargez-le en WAV.",
+      },
+      he: {
+        name: "נרמול עוצמת שמע",
+        description:
+          "התאימו את עוצמת השמע לערך LUFS רצוי לפודקאסטים, למוזיקה או לשידור. השוו את העוצמה ואת השיא האמיתי, האזינו לתוצאה והורידו קובץ WAV ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "ऑडियो लाउडनेस नॉर्मलाइज़र",
+        description:
+          "पॉडकास्ट, संगीत या प्रसारण के ऑडियो को तय LUFS पर नॉर्मलाइज़ करें। लाउडनेस और ट्रू पीक की तुलना करें, नतीजा सुनें और ब्राउज़र में WAV डाउनलोड करें।",
+      },
+      id: {
+        name: "Normalisasi Kenyaringan Audio",
+        description:
+          "Sesuaikan audio untuk podcast, musik, atau siaran ke target LUFS. Bandingkan kenyaringan dan true peak, dengarkan hasilnya, lalu unduh WAV dari browser.",
+      },
+      it: {
+        name: "Normalizza l’audio in LUFS",
+        description:
+          "Normalizza l’audio in LUFS per podcast, musica o trasmissioni. Confronta loudness e picco effettivo, ascolta il risultato e scarica il WAV nel browser.",
+      },
+      ja: {
+        name: "音声のラウドネス正規化",
+        description:
+          "ポッドキャストや音楽、放送用の音声を目標LUFSに合わせます。ブラウザーでラウドネスとトゥルーピークを比較し、結果を試聴してWAVで保存できます。",
+      },
+      ko: {
+        name: "오디오 라우드니스 정규화",
+        description:
+          "팟캐스트, 음악, 방송용 오디오의 음량을 목표 LUFS에 맞추세요. 브라우저에서 라우드니스와 트루 피크를 비교하고, 미리 들어 본 뒤 WAV로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyama Kelantangan Audio",
+        description:
+          "Laraskan kelantangan audio podsiar, muzik atau siaran mengikut sasaran LUFS. Bandingkan kelantangan dan puncak sebenar, dengar hasilnya dan muat turun WAV dalam pelayar.",
+      },
+      nl: {
+        name: "Audio normaliseren (LUFS)",
+        description:
+          "Normaliseer audio naar een LUFS-doelniveau voor podcasts, muziek of uitzendingen. Vergelijk luidheid en true peak, beluister het resultaat en download een WAV.",
+      },
+      no: {
+        name: "Normaliser lydnivå (LUFS)",
+        description:
+          "Normaliser lyd til et valgt LUFS-nivå for podkast, musikk eller kringkasting. Sammenlign lydstyrke og true peak, lytt og last ned WAV i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja głośności audio",
+        description:
+          "Dopasuj głośność podcastu, muzyki lub materiału do emisji do docelowej wartości LUFS. Porównaj głośność i poziom szczytowy, odsłuchaj wynik i pobierz WAV w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador de áudio (LUFS)",
+        description:
+          "Normalize áudio em LUFS para podcasts, música ou radiodifusão. Compare a sonoridade e o pico real, ouça o resultado e transfira o WAV no navegador.",
+      },
+      ru: {
+        name: "Нормализация громкости аудио",
+        description:
+          "Настройте громкость подкаста, музыки или записи для эфира по заданному значению LUFS. Сравните громкость и истинный пик, прослушайте результат и скачайте WAV в браузере.",
+      },
+      sv: {
+        name: "Normalisera ljudnivån (LUFS)",
+        description:
+          "Normalisera ljud till ett valt LUFS-värde för poddar, musik eller radio och tv. Jämför ljudstyrka och true peak, lyssna och ladda ned en WAV-fil.",
+      },
+      th: {
+        name: "ปรับความดังเสียงตามค่า LUFS",
+        description:
+          "ปรับความดังของพอดแคสต์ เพลง หรือเสียงสำหรับออกอากาศให้ได้ค่า LUFS ที่ต้องการ เปรียบเทียบความดังและทรูพีก ฟังผล และดาวน์โหลด WAV ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ses Yüksekliğini Normalleştirme",
+        description:
+          "Podcast, müzik veya yayın sesini hedef LUFS değerine getirin. Yüksekliği ve gerçek tepe seviyesini karşılaştırın, sonucu dinleyin ve tarayıcıdan WAV indirin.",
+      },
+      vi: {
+        name: "Chuẩn hóa âm lượng (LUFS)",
+        description:
+          "Chuẩn hóa âm lượng theo mức LUFS cho podcast, bản nhạc hoặc chương trình phát sóng. So sánh độ lớn và mức đỉnh thực, nghe thử rồi tải WAV ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频响度标准化",
+        description:
+          "将播客、音乐或广播音频的响度调整到目标 LUFS。在浏览器中比较响度和真峰值、预听结果并下载 WAV。",
+      },
+      "zh-TW": {
+        name: "音訊響度標準化",
+        description:
+          "將 Podcast、音樂或廣播音訊的響度調整至目標 LUFS。在瀏覽器中比較響度和真峰值、預聽結果並下載 WAV。",
       },
     },
   },
@@ -5315,117 +5578,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "عارض BPMN",
         description:
-          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا.",
+          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا. يمكنك أيضًا تنزيل المخطط بصيغة SVG.",
       },
       de: {
         name: "BPMN-Betrachter",
         description:
-          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein.",
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein. Lade das Diagramm als SVG herunter.",
       },
       en: {
         name: "BPMN Viewer",
         description:
-          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, and fit the process diagram to the view.",
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, fit the diagram to view, and download SVG.",
       },
       es: {
         name: "Visor BPMN",
         description:
-          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista.",
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista. Descarga el diagrama en SVG.",
       },
       fr: {
         name: "Visionneuse BPMN",
         description:
-          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue.",
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue. Téléchargez le diagramme en SVG.",
       },
       he: {
         name: "מציג BPMN",
         description:
-          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה.",
+          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה. אפשר גם להוריד את התרשים כ-SVG.",
       },
       hi: {
         name: "BPMN व्यूअर",
         description:
-          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें।",
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें। SVG डाउनलोड भी करें।",
       },
       id: {
         name: "Penampil BPMN",
         description:
-          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat.",
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat. Anda juga bisa mengunduh diagram sebagai SVG.",
       },
       it: {
         name: "Visualizzatore BPMN",
         description:
-          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista.",
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista. Scarica il diagramma in SVG.",
       },
       ja: {
         name: "BPMN ビューアー",
         description:
-          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。",
+          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。 SVG をダウンロードできます。",
       },
       ko: {
         name: "BPMN 뷰어",
         description:
-          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요.",
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요. SVG 다운로드를 지원합니다.",
       },
       ms: {
         name: "Pemapar BPMN",
         description:
-          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan.",
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan. Anda juga boleh memuat turun rajah sebagai SVG.",
       },
       nl: {
         name: "BPMN-viewer",
         description:
-          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld.",
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld. Download het diagram als SVG.",
       },
       no: {
         name: "BPMN-viser",
         description:
-          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen.",
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen. Last ned diagrammet som SVG.",
       },
       pl: {
         name: "Przeglądarka diagramów BPMN",
         description:
-          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok.",
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok. Pobieraj diagramy w formacie SVG.",
       },
       pt: {
         name: "Visualizador de BPMN",
         description:
-          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela.",
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela. Baixe o diagrama em SVG.",
       },
       ru: {
         name: "Просмотр диаграмм BPMN",
         description:
-          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком.",
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком. Скачивайте диаграммы в формате SVG.",
       },
       sv: {
         name: "BPMN-visare",
         description:
-          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn.",
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn. Ladda ned diagrammet som SVG.",
       },
       th: {
         name: "โปรแกรมดู BPMN",
         description:
-          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ",
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ ดาวน์โหลดเป็น SVG ได้",
       },
       tr: {
         name: "BPMN Görüntüleyici",
         description:
-          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın.",
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın. Diyagramı SVG olarak da indirebilirsiniz.",
       },
       vi: {
         name: "Trình xem BPMN",
         description:
-          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem.",
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem. Tải sơ đồ xuống dưới dạng SVG.",
       },
       "zh-CN": {
         name: "BPMN 查看器",
         description:
-          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。",
+          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。 支持下载 SVG。",
       },
       "zh-TW": {
         name: "BPMN 檢視器",
         description:
-          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。",
+          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。 支援下載 SVG。",
       },
     },
   },
@@ -10757,6 +11020,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dicom-viewer",
+    category: "image",
+    icon: "scan-line",
+    tags: [
+      "dicom",
+      "dcm",
+      "medical imaging",
+      "ct",
+      "mri",
+      "slice",
+      "window level",
+      "metadata",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض DICOM",
+        description:
+          "افتح صور DICOM بامتدادي .dcm و.dicom من جهازك في المتصفح. تصفح شرائح الأشعة المقطعية والرنين المغناطيسي، واضبط عرض النافذة ومستواها، وافحص الوسوم دون رفع الملفات.",
+      },
+      de: {
+        name: "DICOM-Betrachter",
+        description:
+          "Lokale DICOM-Bilder (.dcm, .dicom) im Browser öffnen. Durch CT- und MRT-Schichten blättern, Fensterbreite und Fensterlage ändern und DICOM-Tags ohne Upload prüfen.",
+      },
+      en: {
+        name: "DICOM Viewer",
+        description:
+          "Open local DICOM (.dcm, .dicom) images in your browser. Browse CT and MRI slices, adjust window width and level, and inspect DICOM tags without uploading files.",
+      },
+      es: {
+        name: "Visor DICOM",
+        description:
+          "Abre imágenes DICOM (.dcm, .dicom) en tu navegador. Recorre cortes de TC y RM, ajusta el ancho y el nivel de ventana y consulta etiquetas DICOM sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse DICOM",
+        description:
+          "Ouvrez vos images DICOM (.dcm, .dicom) dans votre navigateur. Parcourez les coupes de scanner et d’IRM, ajustez le fenêtrage et consultez les tags sans envoyer de fichiers.",
+      },
+      he: {
+        name: "מציג DICOM",
+        description:
+          "פתחו בדפדפן תמונות DICOM מקומיות בסיומות ‎.dcm ו־‎.dicom. עיינו בחתכי CT ו־MRI, הגדירו את רוחב החלון ואת מרכזו ועיינו בתגיות DICOM בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "DICOM व्यूअर",
+        description:
+          "अपने डिवाइस पर मौजूद DICOM (.dcm, .dicom) चित्र ब्राउज़र में खोलें। फ़ाइलें अपलोड किए बिना CT और MRI स्लाइस देखें, विंडो की चौड़ाई और स्तर बदलें और DICOM टैग जाँचें।",
+      },
+      id: {
+        name: "Penampil DICOM",
+        description:
+          "Buka gambar DICOM (.dcm, .dicom) dari perangkat Anda di browser. Telusuri irisan CT dan MRI, sesuaikan lebar dan tingkat jendela, serta periksa tag DICOM tanpa mengunggah berkas.",
+      },
+      it: {
+        name: "Visualizzatore DICOM",
+        description:
+          "Apri immagini DICOM (.dcm, .dicom) nel browser. Scorri le sezioni di TC e RM, regola larghezza e livello della finestra e consulta i tag senza caricare file online.",
+      },
+      ja: {
+        name: "DICOM ビューアー",
+        description:
+          "ローカルの DICOM（.dcm、.dicom）画像をブラウザーで開きます。ファイルをアップロードせずに CT・MRI のスライスを閲覧し、ウィンドウ幅とレベルを調整して DICOM タグを確認できます。",
+      },
+      ko: {
+        name: "DICOM 뷰어",
+        description:
+          "브라우저에서 로컬 DICOM(.dcm, .dicom) 영상을 열어 보세요. 파일을 업로드하지 않고 CT와 MRI 슬라이스를 탐색하고 윈도우 너비와 레벨을 조절하며 DICOM 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar DICOM",
+        description:
+          "Buka imej DICOM (.dcm, .dicom) pada peranti anda melalui pelayar. Layari hirisan CT dan MRI, laraskan lebar dan aras tetingkap serta periksa tag DICOM tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "DICOM-viewer",
+        description:
+          "Open lokale DICOM-beelden (.dcm, .dicom) in je browser. Blader door CT- en MRI-doorsneden, pas vensterbreedte en vensterniveau aan en bekijk DICOM-tags zonder upload.",
+      },
+      no: {
+        name: "DICOM-viser",
+        description:
+          "Åpne lokale DICOM-bilder (.dcm, .dicom) i nettleseren. Bla gjennom CT- og MR-snitt, juster vindusbredde og vindusnivå og se DICOM-tagger uten opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka DICOM",
+        description:
+          "Otwieraj lokalne obrazy DICOM (.dcm, .dicom) w przeglądarce. Przeglądaj przekroje TK i MRI, zmieniaj szerokość i poziom okna, sprawdzaj tagi bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador DICOM",
+        description:
+          "Abra imagens DICOM (.dcm, .dicom) no navegador. Percorra cortes de TC e RM, ajuste a largura e o nível da janela e consulte as tags sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр DICOM",
+        description:
+          "Открывайте локальные файлы DICOM (.dcm, .dicom) в браузере. Листайте срезы КТ и МРТ, меняйте ширину и уровень окна и изучайте теги DICOM без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "DICOM-visare",
+        description:
+          "Öppna lokala DICOM-bilder (.dcm, .dicom) i webbläsaren. Bläddra bland CT- och MR-snitt, justera fönsterbredd och fönsternivå och granska DICOM-taggar utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดูภาพ DICOM",
+        description:
+          "เปิดภาพ DICOM (.dcm, .dicom) บนอุปกรณ์ในเบราว์เซอร์ เลื่อนดูภาพตัดขวาง CT และ MRI ปรับความกว้างและระดับหน้าต่าง และตรวจสอบแท็ก DICOM โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DICOM Görüntüleyicisi",
+        description:
+          "Cihazınızdaki DICOM (.dcm, .dicom) görüntülerini tarayıcıda açın. Dosya yüklemeden BT ve MR kesitlerine göz atın, pencere genişliğini ve seviyesini ayarlayın, etiketleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem DICOM",
+        description:
+          "Mở ảnh DICOM (.dcm, .dicom) trên thiết bị ngay trong trình duyệt. Duyệt lát cắt CT và MRI, chỉnh độ rộng và mức cửa sổ, xem thẻ DICOM mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DICOM 查看器",
+        description:
+          "在浏览器中打开本地 DICOM（.dcm、.dicom）图像，浏览 CT 和 MRI 切片，调整窗宽窗位并查看 DICOM 标签，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "DICOM 檢視器",
+        description:
+          "在瀏覽器中開啟本機 DICOM（.dcm、.dicom）影像，瀏覽 CT 和 MRI 切片、調整窗寬與窗位，並檢視 DICOM 標籤，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "djvu-viewer",
     category: "document",
     icon: "book-open",
@@ -11138,6 +11535,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dns-zone-file-parser",
+    category: "network",
+    icon: "file-text",
+    tags: [
+      "dns",
+      "zone",
+      "bind",
+      "zone-file",
+      "resource-record",
+      "ttl",
+      "json",
+      "parser",
+    ],
+    locales: {
+      ar: {
+        name: "محلّل ملفات مناطق DNS",
+        description:
+          "حلّل ملفات مناطق DNS بتنسيق BIND واعرض سجلاتها في قائمة يمكنك تصفيتها ونسخها بتنسيق JSON. راجع اسم كل سجل ونوعه ومدة بقائه وفئته وبياناته في متصفّحك.",
+      },
+      de: {
+        name: "Parser für DNS-Zonendateien",
+        description:
+          "Lies DNS-Zonendateien im BIND-Format als durchsuchbare DNS-Einträge und JSON. Prüfe Name, Typ, TTL, Klasse und Daten jedes Eintrags direkt im Browser.",
+      },
+      en: {
+        name: "DNS Zone File Parser",
+        description:
+          "Parse BIND-style DNS zone files into searchable records and JSON. See each record’s name, type, TTL, class, and data directly in your browser.",
+      },
+      es: {
+        name: "Analizador de archivos de zona DNS",
+        description:
+          "Analiza archivos de zona DNS en formato BIND. Filtra registros por nombre, tipo o datos, consulta su TTL y su clase y copia el resultado como JSON.",
+      },
+      fr: {
+        name: "Analyseur de fichiers de zone DNS",
+        description:
+          "Analysez les fichiers de zone DNS au format BIND. Filtrez les enregistrements, consultez leur nom, type, TTL, classe et données, puis copiez-les en JSON depuis votre navigateur.",
+      },
+      he: {
+        name: "מנתח קובצי אזור DNS",
+        description:
+          "נתחו קובצי אזור DNS בפורמט BIND, סננו את הרשומות והעתיקו אותן כ־JSON. הציגו את השם, הסוג, ה־TTL, המחלקה והנתונים של כל רשומה בדפדפן.",
+      },
+      hi: {
+        name: "DNS ज़ोन फ़ाइल पार्सर",
+        description:
+          "BIND फ़ॉर्मैट की DNS ज़ोन फ़ाइल पढ़ें, रिकॉर्ड फ़िल्टर करें और उन्हें JSON में कॉपी करें। हर रिकॉर्ड का नाम, प्रकार, TTL, क्लास और डेटा सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Parser File Zona DNS",
+        description:
+          "Baca file zona DNS format BIND, telusuri record, dan salin hasilnya sebagai JSON. Lihat nama, jenis, TTL, kelas, dan data setiap record langsung di browser.",
+      },
+      it: {
+        name: "Analizzatore di file di zona DNS",
+        description:
+          "Analizza file di zona DNS in formato BIND. Filtra i record, consulta nome, tipo, TTL, classe e dati, poi copiali in JSON direttamente dal browser.",
+      },
+      ja: {
+        name: "DNSゾーンファイル解析ツール",
+        description:
+          "BIND形式のDNSゾーンファイルを、検索可能なレコードとJSONに解析します。名前、タイプ、TTL、クラス、データをブラウザで確認できます。",
+      },
+      ko: {
+        name: "DNS 영역 파일 파서",
+        description:
+          "BIND 형식의 DNS 영역 파일을 검색 가능한 레코드 목록과 JSON으로 변환합니다. 각 레코드의 이름, 유형, TTL, 클래스와 데이터를 브라우저에서 바로 확인하세요.",
+      },
+      ms: {
+        name: "Penghurai Fail Zon DNS",
+        description:
+          "Baca fail zon DNS dalam format BIND, cari rekod dan salin hasil sebagai JSON. Lihat nama, jenis, TTL, kelas dan data setiap rekod terus dalam pelayar.",
+      },
+      nl: {
+        name: "Parser voor DNS-zonebestanden",
+        description:
+          "Zet DNS-zonebestanden in BIND-formaat om in doorzoekbare records en JSON. Bekijk de naam, het type, de TTL, de klasse en de gegevens per record in je browser.",
+      },
+      no: {
+        name: "Parser for DNS-sonefiler",
+        description:
+          "Les DNS-sonefiler i BIND-format som søkbare poster og JSON. Se navn, type, TTL, klasse og data for hver post direkte i nettleseren.",
+      },
+      pl: {
+        name: "Parser plików stref DNS",
+        description:
+          "Odczytaj plik strefy DNS w formacie BIND, przeszukaj rekordy i skopiuj je jako JSON. Zobacz nazwę, typ, TTL, klasę i dane każdego rekordu w przeglądarce.",
+      },
+      pt: {
+        name: "Analisador de arquivos de zona DNS",
+        description:
+          "Analise arquivos de zona DNS no formato BIND. Filtre registros por nome, tipo ou dados, confira o TTL e a classe e copie o resultado como JSON.",
+      },
+      ru: {
+        name: "Парсер файлов зон DNS",
+        description:
+          "Разбирайте файлы зон DNS в формате BIND. Просматривайте и фильтруйте записи по имени, типу и данным, проверяйте TTL и класс, копируйте записи в JSON прямо в браузере.",
+      },
+      sv: {
+        name: "Parser för DNS-zonfiler",
+        description:
+          "Läs DNS-zonfiler i BIND-format som sökbara poster och JSON. Se varje posts namn, typ, TTL, klass och data direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์ไฟล์โซน DNS",
+        description:
+          "อ่านไฟล์โซน DNS รูปแบบ BIND เป็นรายการระเบียนที่ค้นหาและคัดลอกเป็น JSON ได้ ดูชื่อ ประเภท TTL คลาส และข้อมูลของแต่ละระเบียนได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "DNS Bölge Dosyası Ayrıştırıcı",
+        description:
+          "BIND biçimindeki DNS bölge dosyalarını ayrıştırın ve kayıtları JSON olarak kopyalayın. Kayıtları filtreleyip adlarını, türlerini, TTL değerlerini, sınıflarını ve verilerini tarayıcınızda görün.",
+      },
+      vi: {
+        name: "Trình phân tích tệp vùng DNS",
+        description:
+          "Chuyển tệp vùng DNS định dạng BIND thành danh sách bản ghi có thể lọc và sao chép dưới dạng JSON. Xem tên, loại, TTL, lớp và dữ liệu của từng bản ghi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "DNS 区域文件解析器",
+        description:
+          "将 BIND 格式的 DNS 区域文件解析为可搜索的记录和 JSON，在浏览器中查看记录名称、类型、TTL、类和数据。",
+      },
+      "zh-TW": {
+        name: "DNS 區域檔案解析器",
+        description:
+          "將 BIND 格式的 DNS 區域檔案解析為可搜尋的記錄和 JSON，直接在瀏覽器中查看記錄名稱、類型、TTL、類別及資料。",
+      },
+    },
+  },
+  {
     slug: "doc-to-pdf-converter",
     category: "document",
     icon: "file-text",
@@ -11380,6 +11909,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "DOC 與 WPS 檢視器",
         description:
           "在瀏覽器本機閱讀舊版 Word DOC 文件，以及相容的 WPS Writer 文件與範本。",
+      },
+    },
+  },
+  {
+    slug: "docker-compose-validator",
+    category: "developer",
+    icon: "file-check",
+    tags: [
+      "docker",
+      "compose",
+      "docker-compose",
+      "yaml",
+      "validator",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق Docker Compose",
+        description:
+          "تحقّق من ملفات compose.yaml أو docker-compose.yml عبر الإنترنت. اعثر على أخطاء صياغة YAML والحقول غير الصالحة في Docker Compose مع تحديد رقم السطر والعمود.",
+      },
+      de: {
+        name: "Docker-Compose-Validator",
+        description:
+          "Validieren Sie compose.yaml oder docker-compose.yml online. Finden Sie YAML-Syntaxfehler und ungültige Docker-Compose-Felder mit Zeilen- und Spaltenangaben.",
+      },
+      en: {
+        name: "Docker Compose Validator",
+        description:
+          "Validate compose.yaml or docker-compose.yml online. Find YAML syntax errors and invalid Docker Compose fields with line and column feedback.",
+      },
+      es: {
+        name: "Validador de Docker Compose",
+        description:
+          "Valida compose.yaml o docker-compose.yml en línea. Detecta errores de sintaxis YAML y campos no válidos de Docker Compose con su línea y columna.",
+      },
+      fr: {
+        name: "Validateur Docker Compose",
+        description:
+          "Validez un fichier compose.yaml ou docker-compose.yml en ligne. Repérez les erreurs de syntaxe YAML et les champs Docker Compose non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Docker Compose",
+        description:
+          "אימות מקוון לקובצי compose.yaml ו-docker-compose.yml. אפשר לאתר שגיאות תחביר ב-YAML ושדות לא תקינים של Docker Compose לפי מספר השורה והעמודה.",
+      },
+      hi: {
+        name: "Docker Compose वैलिडेटर",
+        description:
+          "compose.yaml या docker-compose.yml को ऑनलाइन सत्यापित करें। YAML सिंटैक्स की गड़बड़ियों और Docker Compose के अमान्य फ़ील्ड को पंक्ति और कॉलम नंबर की मदद से ढूँढें।",
+      },
+      id: {
+        name: "Validator Docker Compose",
+        description:
+          "Validasi compose.yaml atau docker-compose.yml secara online. Temukan kesalahan sintaks YAML dan properti Docker Compose yang tidak valid beserta nomor baris dan kolomnya.",
+      },
+      it: {
+        name: "Validatore Docker Compose",
+        description:
+          "Convalida compose.yaml o docker-compose.yml online. Trova gli errori di sintassi YAML e i campi Docker Compose non validi con indicazione di riga e colonna.",
+      },
+      ja: {
+        name: "Docker Compose バリデーター",
+        description:
+          "compose.yaml や docker-compose.yml をオンラインで検証します。YAML の構文エラーや Docker Compose のフィールドの誤りを行番号と列番号で確認できます。",
+      },
+      ko: {
+        name: "Docker Compose 검증기",
+        description:
+          "compose.yaml 또는 docker-compose.yml을 온라인에서 검증하세요. YAML 구문 오류와 잘못된 Docker Compose 필드를 줄과 열 번호로 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah Docker Compose",
+        description:
+          "Sahkan compose.yaml atau docker-compose.yml dalam talian. Cari ralat sintaks YAML dan medan Docker Compose yang tidak sah, dengan kedudukan baris dan lajur.",
+      },
+      nl: {
+        name: "Docker Compose-validator",
+        description:
+          "Valideer compose.yaml of docker-compose.yml online. Vind YAML-syntaxisfouten en ongeldige Docker Compose-velden met regel- en kolomnummers.",
+      },
+      no: {
+        name: "Docker Compose-validator",
+        description:
+          "Valider compose.yaml eller docker-compose.yml på nett. Finn syntaksfeil i YAML og ugyldige Docker Compose-felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator Docker Compose",
+        description:
+          "Sprawdź online plik compose.yaml lub docker-compose.yml. Znajdź błędy składni YAML i nieprawidłowe pola Docker Compose wraz z numerami wierszy i kolumn.",
+      },
+      pt: {
+        name: "Validador de Docker Compose",
+        description:
+          "Valide compose.yaml ou docker-compose.yml online. Encontre erros de sintaxe YAML e campos inválidos do Docker Compose com indicação de linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор Docker Compose",
+        description:
+          "Проверяйте compose.yaml и docker-compose.yml онлайн. Находите ошибки синтаксиса YAML и недопустимые поля Docker Compose с указанием строки и столбца.",
+      },
+      sv: {
+        name: "Docker Compose-validerare",
+        description:
+          "Validera compose.yaml eller docker-compose.yml online. Hitta YAML-syntaxfel och ogiltiga Docker Compose-fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ Docker Compose",
+        description:
+          "ตรวจสอบ compose.yaml หรือ docker-compose.yml ออนไลน์ ค้นหาข้อผิดพลาดทางไวยากรณ์ YAML และฟิลด์ Docker Compose ที่ไม่ถูกต้อง พร้อมระบุบรรทัดและคอลัมน์",
+      },
+      tr: {
+        name: "Docker Compose Doğrulayıcı",
+        description:
+          "compose.yaml veya docker-compose.yml dosyasını çevrimiçi doğrulayın. YAML sözdizimi hatalarını ve geçersiz Docker Compose alanlarını satır ve sütun numaralarıyla bulun.",
+      },
+      vi: {
+        name: "Trình xác thực Docker Compose",
+        description:
+          "Xác thực compose.yaml hoặc docker-compose.yml trực tuyến. Tìm lỗi cú pháp YAML và các trường Docker Compose không hợp lệ, kèm vị trí dòng và cột.",
+      },
+      "zh-CN": {
+        name: "Docker Compose 校验器",
+        description:
+          "在线校验 compose.yaml 或 docker-compose.yml，查找 YAML 语法错误和无效的 Docker Compose 字段，并查看错误所在的行和列。",
+      },
+      "zh-TW": {
+        name: "Docker Compose 驗證器",
+        description:
+          "線上驗證 compose.yaml 或 docker-compose.yml，找出 YAML 語法錯誤和無效的 Docker Compose 欄位，並顯示問題所在的行號與欄位位置。",
       },
     },
   },
@@ -14448,6 +15107,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "font-to-woff2",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "woff2",
+      "ttf",
+      "otf",
+      "truetype",
+      "opentype",
+      "webfont",
+      "converter",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل خطوط TTF وOTF إلى WOFF2",
+        description:
+          "حوّل خطوط TrueType (.ttf) وOpenType (.otf) إلى خطوط ويب بصيغة WOFF2 داخل متصفحك. حوّل عدة ملفات وقارن الأحجام ونزّل كل خط على حدة.",
+      },
+      de: {
+        name: "TTF und OTF in WOFF2 umwandeln",
+        description:
+          "Wandle TrueType- (.ttf) und OpenType-Schriften (.otf) direkt im Browser in WOFF2-Webfonts um. Konvertiere mehrere Dateien, vergleiche ihre Größe und lade jede Schrift einzeln herunter.",
+      },
+      en: {
+        name: "TTF & OTF to WOFF2 Converter",
+        description:
+          "Convert TrueType (.ttf) and OpenType (.otf) fonts to WOFF2 web fonts in your browser. Convert multiple files, compare sizes, and download each font.",
+      },
+      es: {
+        name: "Convertidor de TTF y OTF a WOFF2",
+        description:
+          "Convierte fuentes TrueType (.ttf) y OpenType (.otf) a fuentes web WOFF2 en tu navegador. Convierte varios archivos, compara sus tamaños y descarga cada fuente.",
+      },
+      fr: {
+        name: "Convertisseur de polices TTF et OTF en WOFF2",
+        description:
+          "Convertissez vos polices TrueType (.ttf) et OpenType (.otf) en polices web WOFF2 dans votre navigateur. Traitez plusieurs fichiers à la fois, comparez les tailles et téléchargez chaque police.",
+      },
+      he: {
+        name: "ממיר גופני TTF ו-OTF ל-WOFF2",
+        description:
+          "המירו גופני TrueType (.ttf) ו-OpenType (.otf) לגופני אינטרנט בפורמט WOFF2, ישירות בדפדפן. אפשר להמיר כמה קבצים, להשוות גדלים ולהוריד כל גופן בנפרד.",
+      },
+      hi: {
+        name: "TTF और OTF से WOFF2 फ़ॉन्ट कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में TrueType (.ttf) और OpenType (.otf) फ़ॉन्ट को WOFF2 वेब फ़ॉन्ट में बदलें। एक साथ कई फ़ाइलें बदलें, उनके आकार की तुलना करें और हर फ़ॉन्ट को अलग से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Font TTF dan OTF ke WOFF2",
+        description:
+          "Ubah font TrueType (.ttf) dan OpenType (.otf) menjadi font web WOFF2 langsung di browser. Konversi beberapa file sekaligus, bandingkan ukurannya, lalu unduh setiap font.",
+      },
+      it: {
+        name: "Convertitore di font da TTF e OTF a WOFF2",
+        description:
+          "Converti i font TrueType (.ttf) e OpenType (.otf) in font web WOFF2 nel browser. Converti più file insieme, confronta le dimensioni e scarica ciascun font.",
+      },
+      ja: {
+        name: "TTF・OTF から WOFF2 へのフォント変換",
+        description:
+          "TrueType（.ttf）や OpenType（.otf）のフォントをブラウザー内で Web フォント用の WOFF2 に変換します。複数のファイルをまとめて変換し、サイズを比較して個別にダウンロードできます。",
+      },
+      ko: {
+        name: "TTF·OTF를 WOFF2로 변환",
+        description:
+          "TrueType(.ttf)과 OpenType(.otf) 글꼴을 브라우저에서 WOFF2 웹폰트로 변환하세요. 여러 파일을 한꺼번에 변환하고 크기를 비교한 뒤 각각 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar TTF dan OTF kepada WOFF2",
+        description:
+          "Tukar fon TrueType (.ttf) dan OpenType (.otf) kepada fon web WOFF2 dalam pelayar anda. Tukar berbilang fail, bandingkan saiz dan muat turun setiap fon.",
+      },
+      nl: {
+        name: "TTF en OTF naar WOFF2 converteren",
+        description:
+          "Zet TrueType- (.ttf) en OpenType-lettertypen (.otf) in je browser om naar WOFF2-webfonts. Converteer meerdere bestanden, vergelijk de bestandsgroottes en download elk lettertype afzonderlijk.",
+      },
+      no: {
+        name: "Konverter TTF og OTF til WOFF2",
+        description:
+          "Konverter TrueType- (.ttf) og OpenType-skrifter (.otf) til WOFF2-nettskrifter i nettleseren. Konverter flere filer, sammenlign filstørrelsene og last ned hver skrift.",
+      },
+      pl: {
+        name: "Konwerter fontów TTF i OTF do WOFF2",
+        description:
+          "Konwertuj fonty TrueType (.ttf) i OpenType (.otf) do formatu WOFF2 bezpośrednio w przeglądarce. Przetwarzaj wiele plików naraz, porównuj ich rozmiary i pobieraj każdy font osobno.",
+      },
+      pt: {
+        name: "Conversor de TTF e OTF para WOFF2",
+        description:
+          "Converta fontes TrueType (.ttf) e OpenType (.otf) em fontes web WOFF2 no navegador. Converta vários arquivos, compare os tamanhos e baixe cada fonte.",
+      },
+      ru: {
+        name: "Конвертер TTF и OTF в WOFF2",
+        description:
+          "Конвертируйте шрифты TrueType (.ttf) и OpenType (.otf) в веб-шрифты WOFF2 прямо в браузере. Преобразуйте несколько файлов, сравнивайте размеры и скачивайте каждый шрифт.",
+      },
+      sv: {
+        name: "Konvertera TTF och OTF till WOFF2",
+        description:
+          "Konvertera TrueType- (.ttf) och OpenType-teckensnitt (.otf) till WOFF2-webbteckensnitt i webbläsaren. Lägg till flera filer, jämför filstorlekar och ladda ned varje teckensnitt.",
+      },
+      th: {
+        name: "ตัวแปลงฟอนต์ TTF และ OTF เป็น WOFF2",
+        description:
+          "แปลงฟอนต์ TrueType (.ttf) และ OpenType (.otf) เป็นฟอนต์เว็บ WOFF2 ในเบราว์เซอร์ แปลงหลายไฟล์พร้อมกัน เปรียบเทียบขนาด และดาวน์โหลดฟอนต์ทีละไฟล์",
+      },
+      tr: {
+        name: "TTF ve OTF'den WOFF2'ye Dönüştürücü",
+        description:
+          "TrueType (.ttf) ve OpenType (.otf) yazı tiplerini tarayıcınızda WOFF2 web yazı tiplerine dönüştürün. Birden fazla dosyayı dönüştürün, boyutları karşılaştırın ve her yazı tipini indirin.",
+      },
+      vi: {
+        name: "Chuyển đổi phông chữ TTF và OTF sang WOFF2",
+        description:
+          "Chuyển phông chữ TrueType (.ttf) và OpenType (.otf) sang định dạng WOFF2 cho web ngay trong trình duyệt. Chuyển đổi nhiều tệp cùng lúc, so sánh dung lượng và tải từng phông chữ xuống.",
+      },
+      "zh-CN": {
+        name: "TTF、OTF 转 WOFF2",
+        description:
+          "在浏览器中将 TrueType（.ttf）和 OpenType（.otf）字体转换为 WOFF2 网页字体。支持批量转换、比较文件大小并逐个下载。",
+      },
+      "zh-TW": {
+        name: "TTF、OTF 轉 WOFF2",
+        description:
+          "在瀏覽器中將 TrueType（.ttf）和 OpenType（.otf）字型轉換成 WOFF2 網頁字型。支援批次轉換，可比較轉換前後的大小並逐一下載。",
+      },
+    },
+  },
+  {
     slug: "gamepad-tester",
     category: "misc",
     icon: "gamepad-2",
@@ -15453,6 +16245,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "graphviz-dot-previewer",
+    category: "developer",
+    icon: "network",
+    tags: ["graphviz", "dot", "graph", "layout", "preview"],
+    locales: {
+      ar: {
+        name: "معاين Graphviz DOT",
+        description:
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
+      },
+      de: {
+        name: "Graphviz-DOT-Vorschau",
+        description:
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
+      },
+      en: {
+        name: "Graphviz DOT Previewer",
+        description:
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
+      },
+      es: {
+        name: "Vista previa de Graphviz DOT",
+        description:
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
+      },
+      fr: {
+        name: "Aperçu Graphviz DOT",
+        description:
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
+      },
+      he: {
+        name: "תצוגה מקדימה של Graphviz DOT",
+        description:
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
+      },
+      hi: {
+        name: "Graphviz DOT प्रीव्यूअर",
+        description:
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pratinjau Graphviz DOT",
+        description:
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
+      },
+      it: {
+        name: "Anteprima Graphviz DOT",
+        description:
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
+      },
+      ja: {
+        name: "Graphviz DOT プレビューアー",
+        description:
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
+      },
+      ko: {
+        name: "Graphviz DOT 미리보기",
+        description:
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Graphviz DOT",
+        description:
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
+      },
+      nl: {
+        name: "Graphviz DOT-voorvertoner",
+        description:
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
+      },
+      no: {
+        name: "Graphviz DOT-forhåndsviser",
+        description:
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
+      },
+      pl: {
+        name: "Podgląd Graphviz DOT",
+        description:
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
+      },
+      pt: {
+        name: "Pré-visualizador de Graphviz DOT",
+        description:
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
+      },
+      ru: {
+        name: "Предпросмотр Graphviz DOT",
+        description:
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
+      },
+      sv: {
+        name: "Graphviz DOT-förhandsgranskare",
+        description:
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
+        description:
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
+      },
+      tr: {
+        name: "Graphviz DOT Önizleyici",
+        description:
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình xem trước Graphviz DOT",
+        description:
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
+      },
+      "zh-CN": {
+        name: "Graphviz DOT 预览器",
+        description:
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
+      },
+      "zh-TW": {
+        name: "Graphviz DOT 預覽器",
+        description:
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
+      },
+    },
+  },
+  {
     slug: "har-analyzer",
     category: "network",
     icon: "network",
@@ -15581,6 +16496,269 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "HAR 網路分析器",
         description:
           "直接在瀏覽器中分析 HAR 檔案。檢視請求瀑布圖、耗時、標頭及已記錄的本文，排查緩慢或失敗的請求。",
+      },
+    },
+  },
+  {
+    slug: "har-sanitizer",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "har",
+      "http",
+      "network",
+      "sanitize",
+      "redact",
+      "privacy",
+      "cookies",
+    ],
+    locales: {
+      ar: {
+        name: "منظّف ملفات HAR",
+        description:
+          "أزل ملفات تعريف الارتباط والرموز المميزة وغيرها من البيانات الحساسة من ملفات HAR في متصفحك. نزّل نسخة منظّفة للمشاركة مع الاحتفاظ بتوقيت الطلبات ورموز حالتها.",
+      },
+      de: {
+        name: "HAR-Dateien bereinigen",
+        description:
+          "Entferne Cookies, Tokens und andere sensible Daten aus HAR-Dateien direkt im Browser. Lade eine bereinigte Kopie mit Anfragezeiten und Statuscodes zum Teilen herunter.",
+      },
+      en: {
+        name: "HAR Sanitizer",
+        description:
+          "Remove cookies, tokens, and other sensitive data from HAR files in your browser. Download a sanitized HAR for sharing while keeping request timings and status codes.",
+      },
+      es: {
+        name: "Limpiador de archivos HAR",
+        description:
+          "Elimina cookies, tokens y otros datos sensibles de archivos HAR en tu navegador. Descarga una copia limpia para compartir que conserva los tiempos y los códigos de estado.",
+      },
+      fr: {
+        name: "Nettoyage de fichiers HAR",
+        description:
+          "Supprimez les cookies, jetons et autres données sensibles des fichiers HAR dans votre navigateur. Téléchargez une copie nettoyée qui conserve les durées et les codes d’état.",
+      },
+      he: {
+        name: "ניקוי קובצי HAR",
+        description:
+          "הסירו עוגיות, אסימונים ונתונים רגישים נוספים מקובצי HAR ישירות בדפדפן. הורידו קובץ HAR מנוקה לשיתוף, עם תזמוני הבקשות וקודי הסטטוס שלהן.",
+      },
+      hi: {
+        name: "HAR फ़ाइल क्लीनर",
+        description:
+          "अपने ब्राउज़र में HAR फ़ाइलों से कुकी, टोकन और अन्य संवेदनशील डेटा हटाएँ। अनुरोधों के समय और स्टेटस कोड वाली साफ़ HAR फ़ाइल डाउनलोड करें और उसे साझा करें।",
+      },
+      id: {
+        name: "Pembersih File HAR",
+        description:
+          "Hapus cookie, token, dan data sensitif lainnya dari file HAR langsung di browser. Unduh salinan HAR yang telah dibersihkan untuk dibagikan, dengan tetap menyimpan rincian waktu dan kode status permintaan.",
+      },
+      it: {
+        name: "Pulizia dei file HAR",
+        description:
+          "Rimuovi cookie, token e altri dati sensibili dai file HAR nel browser. Scarica una copia ripulita da condividere, con i tempi delle richieste e i codici di stato.",
+      },
+      ja: {
+        name: "HAR サニタイザー",
+        description:
+          "ブラウザー内で HAR ファイルから Cookie、トークンなどの機密データを削除します。リクエストの時間やステータスコードを残したまま、共有用の HAR をダウンロードできます。",
+      },
+      ko: {
+        name: "HAR 민감 정보 제거 도구",
+        description:
+          "브라우저에서 HAR 파일의 쿠키, 토큰 등 민감한 정보를 제거합니다. 요청 시간과 상태 코드를 유지하면서 공유할 HAR 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembersih Fail HAR",
+        description:
+          "Buang kuki, token dan data sensitif lain daripada fail HAR terus dalam pelayar. Muat turun salinan HAR yang telah dibersihkan untuk dikongsi sambil mengekalkan butiran masa dan kod status permintaan.",
+      },
+      nl: {
+        name: "HAR-bestanden opschonen",
+        description:
+          "Verwijder cookies, tokens en andere gevoelige gegevens uit HAR-bestanden in je browser. Download een opgeschoond HAR-bestand om te delen, met behoud van tijdsmetingen en statuscodes.",
+      },
+      no: {
+        name: "Fjern sensitive data fra HAR-filer",
+        description:
+          "Fjern informasjonskapsler, tokener og andre sensitive data fra HAR-filer i nettleseren. Last ned en renset HAR-fil til deling, med tidsmålinger og statuskoder intakt.",
+      },
+      pl: {
+        name: "Usuwanie danych wrażliwych z HAR",
+        description:
+          "Usuń pliki cookie, tokeny i inne dane wrażliwe z plików HAR w przeglądarce. Pobierz oczyszczony plik HAR do udostępnienia z zachowaniem czasów żądań i kodów stanu.",
+      },
+      pt: {
+        name: "Limpador de arquivos HAR",
+        description:
+          "Remova cookies, tokens e outros dados sensíveis de arquivos HAR no navegador. Baixe uma cópia limpa para compartilhar com os tempos e códigos de status das requisições.",
+      },
+      ru: {
+        name: "Очистка файлов HAR",
+        description:
+          "Удаляйте файлы cookie, токены и другие конфиденциальные данные из файлов HAR прямо в браузере. Скачайте очищенный HAR, сохранив временные показатели запросов и коды состояния.",
+      },
+      sv: {
+        name: "Rensa HAR-filer",
+        description:
+          "Ta bort kakor, token och andra känsliga uppgifter ur HAR-filer i webbläsaren. Ladda ner en rensad HAR-fil för delning med tidsmätningar och statuskoder kvar.",
+      },
+      th: {
+        name: "เครื่องมือลบข้อมูลอ่อนไหวจากไฟล์ HAR",
+        description:
+          "ลบคุกกี้ โทเค็น และข้อมูลอ่อนไหวอื่น ๆ จากไฟล์ HAR ในเบราว์เซอร์ ดาวน์โหลดไฟล์ HAR ที่ล้างข้อมูลแล้วเพื่อแชร์ โดยยังเก็บข้อมูลระยะเวลาและรหัสสถานะของคำขอไว้",
+      },
+      tr: {
+        name: "HAR Dosyası Temizleme",
+        description:
+          "HAR dosyalarındaki çerezleri, belirteçleri ve diğer hassas verileri tarayıcınızda kaldırın. İstek zamanlamalarını ve durum kodlarını koruyan temizlenmiş bir HAR dosyasını paylaşmak için indirin.",
+      },
+      vi: {
+        name: "Công cụ làm sạch tệp HAR",
+        description:
+          "Xóa cookie, mã thông báo và dữ liệu nhạy cảm khác khỏi tệp HAR ngay trong trình duyệt. Tải xuống bản HAR đã làm sạch để chia sẻ, vẫn giữ thông tin thời gian và mã trạng thái của các yêu cầu.",
+      },
+      "zh-CN": {
+        name: "HAR 脱敏工具",
+        description:
+          "在浏览器中移除 HAR 文件里的 Cookie、令牌等敏感数据。保留请求耗时和状态码，下载脱敏后的 HAR 以便分享。",
+      },
+      "zh-TW": {
+        name: "HAR 敏感資料清理工具",
+        description:
+          "在瀏覽器中移除 HAR 檔案裡的 Cookie、權杖及其他敏感資料。保留請求時間與狀態碼，下載清理後的 HAR 以供分享。",
+      },
+    },
+  },
+  {
+    slug: "hex-editor",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "hex",
+      "hexadecimal",
+      "binary",
+      "ascii",
+      "byte",
+      "offset",
+      "editor",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر سداسي عشري",
+        description:
+          "اعرض الملفات الثنائية وحرّرها بالنظام السداسي العشري (Hex) مع عرض ASCII. انتقل إلى إزاحة، وعدّل البايتات، ونزّل نسخة. تبقى ملفاتك في المتصفح.",
+      },
+      de: {
+        name: "Hex-Editor",
+        description:
+          "Binärdateien online in Hex und ASCII ansehen und bearbeiten. Zu einem Byte-Offset springen, Werte überschreiben und eine bearbeitete Kopie herunterladen. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "Hex Editor",
+        description:
+          "View and edit binary files online in hex and ASCII. Jump to a byte offset, overwrite values, and download an edited copy. Files stay in your browser.",
+      },
+      es: {
+        name: "Editor hexadecimal",
+        description:
+          "Inspecciona archivos binarios en hexadecimal y ASCII. Ve a un desplazamiento, edita bytes y descarga una copia. Todo se hace en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur hexadécimal",
+        description:
+          "Affichez et modifiez des fichiers binaires en ligne, en hexadécimal et en ASCII. Accédez à un octet, remplacez sa valeur et téléchargez une copie modifiée. Tout se passe dans votre navigateur.",
+      },
+      he: {
+        name: "עורך הקסדצימלי",
+        description:
+          "הציגו קבצים בינאריים בהקסדצימלי וב־ASCII, עברו להיסט, ערכו בתים והורידו עותק. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "हेक्स एडिटर",
+        description:
+          "बाइनरी फ़ाइलें ऑनलाइन हेक्स और ASCII में देखें और संपादित करें। किसी भी बाइट के ऑफ़सेट पर जाएँ, उसका मान बदलें और संपादित कॉपी डाउनलोड करें। फ़ाइलें आपके ब्राउज़र में रहती हैं।",
+      },
+      id: {
+        name: "Editor Heksadesimal",
+        description:
+          "Lihat dan edit file biner secara online dalam heksadesimal dan ASCII. Lompat ke offset byte, timpa nilai, dan unduh salinan yang telah diedit. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Editor esadecimale",
+        description:
+          "Visualizza e modifica file binari online in esadecimale e ASCII. Vai a un offset, sovrascrivi i byte e scarica la copia modificata. I file restano nel browser.",
+      },
+      ja: {
+        name: "バイナリエディター",
+        description:
+          "バイナリファイルをオンラインで開き、16進数（Hex）とASCIIで表示・編集できます。指定したオフセットに移動し、バイトを上書きして編集済みのコピーをダウンロードできます。ファイルの処理はブラウザー内で完結します。",
+      },
+      ko: {
+        name: "16진수 편집기",
+        description:
+          "온라인에서 바이너리 파일을 16진수와 ASCII로 확인하고 편집하세요. 원하는 바이트 오프셋으로 이동해 값을 덮어쓰고 수정한 복사본을 다운로드할 수 있습니다. 파일은 브라우저에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Penyunting Heksadesimal",
+        description:
+          "Lihat dan sunting fail binari dalam paparan heksadesimal dan ASCII secara dalam talian. Pergi ke ofset bait, tulis ganti nilai dan muat turun salinan yang disunting. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Hex-editor",
+        description:
+          "Bekijk en bewerk binaire bestanden online in hexadecimale notatie en ASCII. Spring naar een bytepositie, overschrijf waarden en download een aangepaste kopie. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "Hex-editor",
+        description:
+          "Vis og rediger binærfiler i heksadesimalt format og ASCII. Hopp til en byteposisjon, endre verdier og last ned en kopi. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor szesnastkowy",
+        description:
+          "Przeglądaj i edytuj pliki binarne online w zapisie szesnastkowym i ASCII. Przejdź do wybranego bajtu, nadpisz jego wartość i pobierz zmienioną kopię. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor hexadecimal",
+        description:
+          "Visualize e edite arquivos binários online em hexadecimal e ASCII. Vá até um deslocamento, sobrescreva bytes e baixe uma cópia editada. Os arquivos ficam no seu navegador.",
+      },
+      ru: {
+        name: "Hex-редактор",
+        description:
+          "Просматривайте и редактируйте двоичные файлы онлайн в шестнадцатеричном виде и ASCII. Переходите к нужному смещению, меняйте значения байтов и скачивайте изменённую копию. Файлы обрабатываются в браузере.",
+      },
+      sv: {
+        name: "Hexredigerare",
+        description:
+          "Visa och redigera binärfiler online i hex och ASCII. Hoppa till ett offset, skriv över bytevärden och ladda ner en redigerad kopia. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+        description:
+          "ดูและแก้ไขไฟล์ไบนารีออนไลน์ในรูปแบบเลขฐานสิบหกและ ASCII ข้ามไปยังออฟเซตที่ต้องการ เขียนทับค่าไบต์ และดาวน์โหลดสำเนาที่แก้ไขแล้ว ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Onaltılık Düzenleyici",
+        description:
+          "İkili dosyaları çevrimiçi olarak onaltılık ve ASCII biçiminde görüntüleyin ve düzenleyin. Bir bayt ofsetine atlayın, değerlerin üzerine yazın ve düzenlenmiş bir kopya indirin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa hex",
+        description:
+          "Xem và chỉnh sửa tệp nhị phân trực tuyến dưới dạng hex và ASCII. Đến vị trí byte cần sửa, ghi đè giá trị rồi tải xuống bản sao. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "十六进制编辑器",
+        description:
+          "在线查看和编辑二进制文件，并排显示十六进制字节和 ASCII 字符。可跳转到指定偏移量、改写字节并下载编辑后的副本。文件仅在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "十六進位編輯器",
+        description:
+          "在線上以十六進位和 ASCII 檢視及編輯二進位檔案。跳至指定的位元組偏移量、覆寫數值，並下載編輯後的副本。檔案會留在瀏覽器中。",
       },
     },
   },
@@ -22828,6 +24006,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "鍵盤測試器",
         description:
           "即時查看實體鍵盤的按鍵、修飾鍵與組合鍵，測試瀏覽器能同時偵測多少個按鍵。",
+      },
+    },
+  },
+  {
+    slug: "kml-geojson-converter",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["kml", "geojson", "gis", "converter", "google-earth", "map"],
+    locales: {
+      ar: {
+        name: "محوّل بين KML وGeoJSON",
+        description:
+          "حوّل من KML إلى GeoJSON أو بالعكس في متصفحك. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها لاستخدامها في نظم المعلومات الجغرافية.",
+      },
+      de: {
+        name: "KML ↔ GeoJSON-Konverter",
+        description:
+          "KML und GeoJSON in beide Richtungen im Browser konvertieren. Füge Text ein oder öffne eine Datei und kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "KML ↔ GeoJSON Converter",
+        description:
+          "Convert KML to GeoJSON or GeoJSON to KML in your browser. Paste text or open a file, then copy or download the result for your GIS workflow.",
+      },
+      es: {
+        name: "Convertidor KML ↔ GeoJSON",
+        description:
+          "Convierte KML a GeoJSON o GeoJSON a KML en tu navegador. Pega el texto o abre un archivo y luego copia o descarga el resultado para usarlo en un SIG.",
+      },
+      fr: {
+        name: "Convertisseur KML ↔ GeoJSON",
+        description:
+          "Convertissez KML en GeoJSON ou GeoJSON en KML dans votre navigateur. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר KML ↔ GeoJSON",
+        description:
+          "המירו KML ל־GeoJSON או GeoJSON ל־KML בדפדפן. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את התוצאה לשימוש ב־GIS.",
+      },
+      hi: {
+        name: "KML ↔ GeoJSON कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में KML को GeoJSON में या GeoJSON को KML में बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर GIS में इस्तेमाल के लिए नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter KML ↔ GeoJSON",
+        description:
+          "Konversi KML ke GeoJSON atau sebaliknya di browser. Tempel teks atau buka berkas, lalu salin atau unduh hasilnya untuk digunakan di aplikasi GIS.",
+      },
+      it: {
+        name: "Convertitore KML ↔ GeoJSON",
+        description:
+          "Converti KML in GeoJSON o GeoJSON in KML nel browser. Incolla il testo o apri un file, poi copia o scarica il risultato per il tuo progetto GIS.",
+      },
+      ja: {
+        name: "KML ↔ GeoJSON 変換",
+        description:
+          "ブラウザーで KML と GeoJSON を相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーしたり、GIS で使うファイルをダウンロードしたりできます。",
+      },
+      ko: {
+        name: "KML ↔ GeoJSON 변환기",
+        description:
+          "브라우저에서 KML과 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 결과를 복사하거나 다운로드하여 GIS 작업에 활용할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar KML ↔ GeoJSON",
+        description:
+          "Tukar KML kepada GeoJSON atau sebaliknya dalam pelayar anda. Tampal teks atau buka fail, kemudian salin atau muat turun hasil untuk digunakan dalam GIS.",
+      },
+      nl: {
+        name: "KML ↔ GeoJSON-converter",
+        description:
+          "Zet KML om naar GeoJSON of GeoJSON naar KML in je browser. Plak tekst of open een bestand en kopieer of download het resultaat voor je GIS-project.",
+      },
+      no: {
+        name: "KML ↔ GeoJSON-omformer",
+        description:
+          "Konverter KML til GeoJSON eller GeoJSON til KML i nettleseren. Lim inn tekst eller åpne en fil, og kopier eller last ned resultatet til GIS-arbeidet ditt.",
+      },
+      pl: {
+        name: "Konwerter KML ↔ GeoJSON",
+        description:
+          "Konwertuj KML na GeoJSON i GeoJSON na KML w przeglądarce. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik do wykorzystania w GIS.",
+      },
+      pt: {
+        name: "Conversor KML ↔ GeoJSON",
+        description:
+          "Converta KML para GeoJSON ou GeoJSON para KML no navegador. Cole o texto ou abra um arquivo e copie ou baixe o resultado para usar no seu SIG.",
+      },
+      ru: {
+        name: "Конвертер KML ↔ GeoJSON",
+        description:
+          "Преобразуйте KML в GeoJSON и обратно прямо в браузере. Вставьте текст или откройте файл, затем скопируйте или скачайте результат для работы в ГИС.",
+      },
+      sv: {
+        name: "KML ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera KML till GeoJSON eller GeoJSON till KML i webbläsaren. Klistra in text eller öppna en fil och kopiera eller ladda sedan ned resultatet för ditt GIS-arbete.",
+      },
+      th: {
+        name: "เครื่องมือแปลง KML ↔ GeoJSON",
+        description:
+          "แปลง KML เป็น GeoJSON หรือแปลงย้อนกลับในเบราว์เซอร์ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ไปใช้ในงาน GIS",
+      },
+      tr: {
+        name: "KML ↔ GeoJSON Dönüştürücü",
+        description:
+          "Tarayıcınızda KML’yi GeoJSON’a veya GeoJSON’u KML’ye dönüştürün. Metni yapıştırın veya bir dosya açın, ardından sonucu CBS çalışmalarınız için kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi KML ↔ GeoJSON",
+        description:
+          "Chuyển KML sang GeoJSON hoặc GeoJSON sang KML ngay trong trình duyệt. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải kết quả để sử dụng trong công việc GIS.",
+      },
+      "zh-CN": {
+        name: "KML ↔ GeoJSON 转换器",
+        description:
+          "在浏览器中互转 KML 和 GeoJSON。粘贴文本或打开文件，然后复制或下载结果，用于 GIS 工作。",
+      },
+      "zh-TW": {
+        name: "KML ↔ GeoJSON 轉換器",
+        description:
+          "在瀏覽器內將 KML 轉成 GeoJSON，或將 GeoJSON 轉成 KML。貼上文字或開啟檔案，再複製或下載結果供 GIS 工具使用。",
       },
     },
   },
@@ -36881,6 +38182,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "sqlite-to-sql",
+    category: "developer",
+    icon: "database",
+    tags: ["sqlite", "sql", "dump", "database", "schema", "export", "backup"],
+    locales: {
+      ar: {
+        name: "تحويل SQLite إلى ملف SQL",
+        description:
+          "حوّل قاعدة بيانات SQLite (بامتداد ⁦.db⁩ أو ⁦.sqlite⁩ أو ⁦.sqlite3⁩) إلى ملف SQL قابل للتنزيل. صدّر المخطط وحده أو مع البيانات مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "SQLite als SQL-Dump exportieren",
+        description:
+          "Exportieren Sie eine SQLite-Datenbank (.db, .sqlite oder .sqlite3) als SQL-Dump zum Herunterladen. Wählen Sie zwischen Schema mit Daten und reinem Schemaexport, direkt im Browser.",
+      },
+      en: {
+        name: "SQLite to SQL Dump",
+        description:
+          "Convert a SQLite database (.db, .sqlite, or .sqlite3) to a downloadable SQL dump. Export schema and data or schema only, right in your browser.",
+      },
+      es: {
+        name: "Conversor de SQLite a SQL",
+        description:
+          "Convierte una base de datos SQLite (.db, .sqlite o .sqlite3) en un volcado SQL descargable. Exporta el esquema con o sin datos desde tu navegador.",
+      },
+      fr: {
+        name: "Convertir SQLite en SQL",
+        description:
+          "Convertissez une base SQLite (.db, .sqlite ou .sqlite3) en fichier SQL téléchargeable. Exportez le schéma seul ou avec les données, directement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת SQLite לקובץ SQL",
+        description:
+          "המרת מסד נתונים של SQLite (⁦.db, .sqlite, .sqlite3⁩) לקובץ SQL להורדה. אפשר לייצא את הסכמה בלבד או יחד עם הנתונים, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "SQLite को SQL डंप में बदलें",
+        description:
+          "SQLite डेटाबेस (.db, .sqlite या .sqlite3) को डाउनलोड करने योग्य SQL डंप में बदलें। अपने ब्राउज़र में स्कीमा और डेटा दोनों या सिर्फ़ स्कीमा निर्यात करें।",
+      },
+      id: {
+        name: "Ekspor SQLite ke SQL",
+        description:
+          "Ekspor basis data SQLite (.db, .sqlite, atau .sqlite3) ke file SQL yang bisa diunduh. Sertakan skema dan data atau skema saja, langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da SQLite a SQL",
+        description:
+          "Converti un database SQLite (.db, .sqlite o .sqlite3) in un dump SQL scaricabile. Esporta lo schema con o senza i dati direttamente nel browser.",
+      },
+      ja: {
+        name: "SQLite を SQL ダンプに変換",
+        description:
+          "SQLite データベース（.db、.sqlite、.sqlite3）をブラウザーで SQL ダンプに変換し、.sql ファイルとして保存できます。スキーマとデータをまとめて、またはスキーマだけをエクスポートできます。",
+      },
+      ko: {
+        name: "SQLite를 SQL 덤프로 변환",
+        description:
+          "SQLite 데이터베이스(.db, .sqlite, .sqlite3)를 SQL 덤프 파일로 변환해 다운로드하세요. 브라우저에서 스키마와 데이터를 함께 내보내거나 스키마만 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Eksport SQLite ke SQL",
+        description:
+          "Eksport pangkalan data SQLite (.db, .sqlite atau .sqlite3) sebagai fail SQL yang boleh dimuat turun. Eksport skema dan data atau skema sahaja terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "SQLite naar SQL converteren",
+        description:
+          "Converteer een SQLite-database (.db, .sqlite of .sqlite3) naar een downloadbare SQL-dump. Exporteer het schema met of zonder gegevens in je browser.",
+      },
+      no: {
+        name: "SQLite til SQL-dump",
+        description:
+          "Konverter en SQLite-database (.db, .sqlite eller .sqlite3) til en nedlastbar SQL-dump. Eksporter skjema og data eller bare skjemaet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Eksport SQLite do SQL",
+        description:
+          "Zapisz bazę SQLite (.db, .sqlite lub .sqlite3) jako zrzut SQL. Wyeksportuj schemat z danymi albo sam schemat bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de SQLite para SQL",
+        description:
+          "Converta um banco de dados SQLite (.db, .sqlite ou .sqlite3) em um dump SQL para download. Exporte o esquema com ou sem os dados direto no navegador.",
+      },
+      ru: {
+        name: "Экспорт SQLite в SQL-дамп",
+        description:
+          "Сохраните базу SQLite (.db, .sqlite или .sqlite3) в виде SQL-дампа. Экспортируйте схему с данными или только схему прямо в браузере.",
+      },
+      sv: {
+        name: "SQLite till SQL-dump",
+        description:
+          "Konvertera en SQLite-databas (.db, .sqlite eller .sqlite3) till en nedladdningsbar SQL-dump. Exportera schema och data eller bara schemat direkt i webbläsaren.",
+      },
+      th: {
+        name: "แปลง SQLite เป็นไฟล์ดัมป์ SQL",
+        description:
+          "แปลงฐานข้อมูล SQLite (.db, .sqlite หรือ .sqlite3) เป็นไฟล์ดัมป์ SQL สำหรับดาวน์โหลด เลือกส่งออกทั้งสคีมาและข้อมูลหรือเฉพาะสคีมาได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "SQLite'tan SQL'e Dönüştürücü",
+        description:
+          "SQLite veritabanını (.db, .sqlite veya .sqlite3) indirilebilir bir SQL dökümüne dönüştürün. Şemayı tek başına veya verilerle birlikte doğrudan tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển SQLite sang tệp SQL",
+        description:
+          "Chuyển cơ sở dữ liệu SQLite (.db, .sqlite hoặc .sqlite3) thành bản kết xuất SQL để tải xuống. Xuất cả lược đồ và dữ liệu hoặc chỉ lược đồ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "SQLite 转 SQL",
+        description:
+          "将 SQLite 数据库（.db、.sqlite 或 .sqlite3）转换为可下载的 SQL 转储文件。在浏览器中导出数据库结构和数据，或仅导出结构。",
+      },
+      "zh-TW": {
+        name: "SQLite 轉 SQL",
+        description:
+          "在瀏覽器中將 SQLite 資料庫（.db、.sqlite 或 .sqlite3）匯出成可下載的 SQL 檔案。可匯出完整的結構與資料，也可只匯出結構。",
+      },
+    },
+  },
+  {
     slug: "sqlite-viewer",
     category: "developer",
     icon: "layout-grid",
@@ -37412,6 +38836,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SSH 公開金鑰指紋",
         description:
           "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
+      },
+    },
+  },
+  {
+    slug: "step-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "step",
+      "stp",
+      "cad",
+      "3d",
+      "model",
+      "assembly",
+      "measure",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض STEP",
+        description:
+          "افتح ملفات CAD بامتداد STEP أو STP في متصفحك. افحص القطع والتجميعات ثلاثية الأبعاد، وقِس المسافات والأبعاد الكلية، واحفظ لقطة شاشة بصيغة PNG.",
+      },
+      de: {
+        name: "STEP-Betrachter",
+        description:
+          "Öffne STEP- und STP-CAD-Dateien im Browser. Sieh dir Bauteile und Baugruppen in 3D an, miss Abstände und Gesamtabmessungen und speichere einen Screenshot als PNG.",
+      },
+      en: {
+        name: "STEP Viewer",
+        description:
+          "Open STEP and STP CAD files in your browser. Inspect parts and assemblies in 3D, measure distances and overall dimensions, and save a PNG screenshot.",
+      },
+      es: {
+        name: "Visor de STEP",
+        description:
+          "Abre archivos CAD STEP y STP en tu navegador. Explora piezas y ensamblajes en 3D, mide distancias y dimensiones totales y guarda una captura en PNG.",
+      },
+      fr: {
+        name: "Visionneuse STEP",
+        description:
+          "Ouvrez des fichiers de CAO STEP et STP dans votre navigateur. Inspectez vos pièces et assemblages en 3D, mesurez les distances et les dimensions hors tout, puis enregistrez une capture en PNG.",
+      },
+      he: {
+        name: "מציג STEP",
+        description:
+          "פתחו קובצי CAD בפורמט STEP או STP בדפדפן. בדקו חלקים ומכלולים בתלת־ממד, מדדו מרחקים ומידות כוללות ושמרו צילום מסך כקובץ PNG.",
+      },
+      hi: {
+        name: "STEP व्यूअर",
+        description:
+          "अपने ब्राउज़र में STEP और STP CAD फ़ाइलें खोलें। पुर्ज़े और असेंबली 3D में देखें, दूरी और कुल आयाम मापें और PNG स्क्रीनशॉट सहेजें।",
+      },
+      id: {
+        name: "Penampil STEP",
+        description:
+          "Buka file CAD STEP dan STP di browser. Lihat komponen dan rakitan dalam 3D, ukur jarak dan dimensi keseluruhan, lalu simpan tangkapan layar PNG.",
+      },
+      it: {
+        name: "Visualizzatore STEP",
+        description:
+          "Apri file CAD STEP e STP nel browser. Esamina parti e assiemi in 3D, misura distanze e dimensioni d’ingombro e salva uno screenshot in PNG.",
+      },
+      ja: {
+        name: "STEP ビューアー",
+        description:
+          "STEP・STP 形式の CAD ファイルをブラウザーで開けます。部品やアセンブリを 3D で確認し、距離や全体寸法を計測して、表示中のモデルを PNG 画像として保存できます。",
+      },
+      ko: {
+        name: "STEP 뷰어",
+        description:
+          "브라우저에서 STEP 및 STP CAD 파일을 열어 부품과 조립품을 3D로 확인하고, 거리와 전체 치수를 측정하거나 화면을 PNG로 저장하세요.",
+      },
+      ms: {
+        name: "Pemapar STEP",
+        description:
+          "Buka fail CAD STEP dan STP dalam pelayar. Periksa komponen dan model pemasangan dalam 3D, ukur jarak dan dimensi keseluruhan, serta simpan tangkapan skrin PNG.",
+      },
+      nl: {
+        name: "STEP-viewer",
+        description:
+          "Open STEP- en STP-bestanden in je browser. Bekijk CAD-onderdelen en samenstellingen in 3D, meet afstanden en buitenmaten en sla een schermafbeelding op als PNG.",
+      },
+      no: {
+        name: "STEP-viser",
+        description:
+          "Åpne STEP- og STP-filer i nettleseren. Se CAD-deler og sammenstillinger i 3D, mål avstander og ytterdimensjoner, og lagre et skjermbilde som PNG.",
+      },
+      pl: {
+        name: "Przeglądarka plików STEP",
+        description:
+          "Otwieraj pliki CAD STEP i STP w przeglądarce. Oglądaj części i zespoły w 3D, mierz odległości i wymiary całkowite oraz zapisuj zrzuty ekranu w formacie PNG.",
+      },
+      pt: {
+        name: "Visualizador de STEP",
+        description:
+          "Abra arquivos CAD STEP e STP no navegador. Examine peças e montagens em 3D, meça distâncias e dimensões totais e salve uma captura de tela em PNG.",
+      },
+      ru: {
+        name: "Просмотр STEP",
+        description:
+          "Открывайте файлы САПР с расширениями STEP и STP прямо в браузере. Просматривайте детали и сборки в 3D, измеряйте расстояния, проверяйте габариты и сохраняйте снимки в PNG.",
+      },
+      sv: {
+        name: "STEP-visare",
+        description:
+          "Öppna CAD-filer i STEP- eller STP-format i webbläsaren. Granska detaljer och sammanställningar i 3D, mät avstånd och yttermått och spara skärmbilder som PNG.",
+      },
+      th: {
+        name: "โปรแกรมดู STEP",
+        description:
+          "เปิดไฟล์ CAD นามสกุล .step และ .stp ในเบราว์เซอร์ ดูชิ้นส่วนและชุดประกอบแบบ 3 มิติ วัดระยะและขนาดโดยรวม แล้วบันทึกภาพเป็น PNG",
+      },
+      tr: {
+        name: "STEP Görüntüleyici",
+        description:
+          "STEP ve STP CAD dosyalarını tarayıcınızda açın. Parçaları ve montajları 3B olarak inceleyin, mesafeleri ve genel boyutları ölçün, ekran görüntüsünü PNG olarak kaydedin.",
+      },
+      vi: {
+        name: "Trình xem STEP",
+        description:
+          "Mở tệp CAD STEP và STP trong trình duyệt. Xem chi tiết và cụm lắp ráp ở dạng 3D, đo khoảng cách và kích thước tổng thể, rồi lưu ảnh chụp PNG.",
+      },
+      "zh-CN": {
+        name: "STEP 查看器",
+        description:
+          "在浏览器中打开 STEP 和 STP CAD 文件，以 3D 方式查看零件和装配体、测量距离和整体尺寸，并保存 PNG 截图。",
+      },
+      "zh-TW": {
+        name: "STEP 檢視器",
+        description:
+          "在瀏覽器中開啟 STEP 和 STP CAD 檔案。以 3D 檢視零件與組合件、量測距離與整體尺寸，並儲存 PNG 截圖。",
       },
     },
   },

@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "AI 이미지 확대",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "움직이는 WebP 만들기",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc 뷰어",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "오디오 라우드니스 정규화",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM 뷰어",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu 뷰어",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "DNS 영역 파일 파서",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "DOC / WPS → PDF 변환기",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC 및 WPS 뷰어",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose 검증기",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "TTF·OTF를 WOFF2로 변환",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "게임패드 테스터",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT 미리보기",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR 네트워크 분석기",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "HAR 민감 정보 제거 도구",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "16진수 편집기",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "키보드 테스터",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON 변환기",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite를 SQL 덤프로 변환",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite 뷰어",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH 공개 키 지문",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP 뷰어",
+    slug: "step-viewer",
   },
   {
     category: "misc",

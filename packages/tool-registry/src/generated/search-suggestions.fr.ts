@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Agrandir une image avec l’IA",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Créateur de WebP animé",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Visionneuse AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Normalisation audio (LUFS)",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Visionneuse DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Visionneuse DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Analyseur de fichiers de zone DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Convertisseur DOC et WPS en PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Visionneuse DOC et WPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Validateur Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Convertisseur de polices TTF et OTF en WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Test de manette",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Aperçu Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Analyseur réseau HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Nettoyage de fichiers HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Éditeur hexadécimal",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Test de clavier",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "Convertisseur KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Convertir SQLite en SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Visionneuse SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Empreinte de clé publique SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "Visionneuse STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

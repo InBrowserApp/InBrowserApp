@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da SQLite a SQL",
+  "description": "Converti un database SQLite (.db, .sqlite o .sqlite3) in un dump SQL scaricabile. Esporta lo schema con o senza i dati direttamente nel browser."
+}

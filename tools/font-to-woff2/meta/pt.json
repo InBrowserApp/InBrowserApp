@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de TTF e OTF para WOFF2",
+  "description": "Converta fontes TrueType (.ttf) e OpenType (.otf) em fontes web WOFF2 no navegador. Converta vários arquivos, compare os tamanhos e baixe cada fonte."
+}

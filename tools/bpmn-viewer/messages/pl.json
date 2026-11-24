@@ -16,5 +16,7 @@
   "noLayout": "Plik BPMN nie zawiera układu diagramu. Wyeksportuj plik ponownie z narzędzia do modelowania, uwzględniając układ, i otwórz go jeszcze raz.",
   "zoomIn": "Powiększ",
   "zoomOut": "Pomniejsz",
-  "fit": "Pokaż cały diagram"
+  "fit": "Pokaż cały diagram",
+  "downloadSvg": "Pobierz SVG",
+  "exportError": "Nie udało się utworzyć pliku SVG. Spróbuj ponownie pobrać diagram."
 }

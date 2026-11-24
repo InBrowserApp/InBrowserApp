@@ -1,0 +1,23 @@
+{
+  "open": "选择 SQLite 文件",
+  "replace": "更换 SQLite 文件",
+  "clear": "关闭数据库",
+  "reader": "SQLite 转 SQL 导出",
+  "privacy": "数据库始终留在您的设备上。",
+  "releaseFile": "松开以打开数据库",
+  "drop": "将 SQLite 数据库拖放到此处",
+  "formats": "SQLite 3 数据库（.db、.sqlite、.sqlite3）",
+  "sample": "试用示例",
+  "schemaOnly": "仅导出结构",
+  "schemaNote": "导出数据库结构，不包含表中的数据行。",
+  "working": "正在生成 SQL 转储…",
+  "preview": "SQL 预览",
+  "previewLimit": "预览已截短，下载的文件包含完整的 SQL 转储。",
+  "copy": "复制 SQL",
+  "copied": "已复制",
+  "copyFailed": "无法复制",
+  "download": "下载 .sql 文件",
+  "invalid": "请选择可读取的 SQLite 3 数据库文件。",
+  "failed": "无法导出此数据库。请尝试从创建该数据库的应用中导出独立副本。",
+  "unsupportedSchema": "此虚拟表暂不支持仅导出结构。关闭「仅导出结构」即可导出完整数据库。"
+}

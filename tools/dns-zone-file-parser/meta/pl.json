@@ -1,0 +1,4 @@
+{
+  "name": "Parser plików stref DNS",
+  "description": "Odczytaj plik strefy DNS w formacie BIND, przeszukaj rekordy i skopiuj je jako JSON. Zobacz nazwę, typ, TTL, klasę i dane każdego rekordu w przeglądarce."
+}

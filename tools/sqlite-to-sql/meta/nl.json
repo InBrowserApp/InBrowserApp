@@ -1,0 +1,4 @@
+{
+  "name": "SQLite naar SQL converteren",
+  "description": "Converteer een SQLite-database (.db, .sqlite of .sqlite3) naar een downloadbare SQL-dump. Exporteer het schema met of zonder gegevens in je browser."
+}

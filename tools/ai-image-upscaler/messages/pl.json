@@ -1,0 +1,20 @@
+{
+  "chooseImage": "Wybierz obraz",
+  "dropHint": "lub upuść go tutaj",
+  "formats": "JPG, PNG, WebP i inne obrazy statyczne",
+  "privacy": "Obraz pozostaje na Twoim urządzeniu.",
+  "changeImage": "Zmień obraz",
+  "scale": "Skala powiększenia",
+  "outputSize": "Wymiary wyniku",
+  "upscale": "Powiększ obraz",
+  "loading": "Wczytywanie modelu AI…",
+  "processing": "Powiększanie obrazu…",
+  "cancel": "Anuluj",
+  "original": "Oryginał",
+  "upscaled": "Po powiększeniu",
+  "comparison": "Porównaj obraz przed powiększeniem i po nim",
+  "download": "Pobierz PNG",
+  "invalidImage": "Nie udało się otworzyć obrazu. Spróbuj użyć pliku JPG, PNG lub WebP.",
+  "largeImage": "Wybierz obraz o bokach do 2048 pikseli i łącznej rozdzielczości do 1 megapiksela.",
+  "failed": "Nie udało się powiększyć obrazu. Spróbuj ponownie lub wybierz mniejszy obraz."
+}

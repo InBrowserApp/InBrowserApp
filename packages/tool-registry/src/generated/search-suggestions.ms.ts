@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Tingkatkan Resolusi Imej dengan AI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Pembuat WebP Beranimasi",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Pemapar AsciiDoc",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Penyama Kelantangan Audio",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "Pemapar DICOM",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "Pemapar DjVu",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Penghurai Fail Zon DNS",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Penukar DOC dan WPS kepada PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Pemapar DOC dan WPS",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Pengesah Docker Compose",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Penukar TTF dan OTF kepada WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Penguji Alat Kawalan Permainan",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Pratonton Graphviz DOT",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "Penganalisis Rangkaian HAR",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Pembersih Fail HAR",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Penyunting Heksadesimal",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Penguji Papan Kekunci",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "Penukar KML ↔ GeoJSON",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Eksport SQLite ke SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Pemapar SQLite",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Cap Jari Kunci Awam SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "Pemapar STEP",
+    slug: "step-viewer",
   },
   {
     category: "misc",

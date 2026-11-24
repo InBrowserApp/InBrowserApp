@@ -1,0 +1,12 @@
+{
+  "chooseFonts": "选择字体文件",
+  "dropFonts": "或将文件拖放到这里",
+  "formats": ".ttf 和 .otf",
+  "localProcessing": "字体文件始终保留在此设备上。",
+  "results": "转换结果",
+  "clear": "全部清除",
+  "converting": "正在转换…",
+  "download": "下载 WOFF2",
+  "sizes": "原文件 {original} · WOFF2 {output}",
+  "failed": "无法转换此文件。请选择有效的 TTF 或 OTF 字体文件。"
+}

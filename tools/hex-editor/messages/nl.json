@@ -1,0 +1,23 @@
+{
+  "openFile": "Bestand openen",
+  "replaceFile": "Bestand vervangen",
+  "trySample": "Probeer een voorbeeld",
+  "dropFile": "Sleep hier een bestand naartoe om de bytes ervan te bekijken en te bewerken.",
+  "download": "Kopie downloaden",
+  "emptyFile": "Het bestand is leeg. Er zijn geen bytes om weer te geven.",
+  "readError": "Dit deel van het bestand kon niet worden gelezen. Probeer het bestand opnieuw te openen.",
+  "loading": "Bytes worden gelezen…",
+  "offset": "Offset",
+  "jumpOffset": "Naar offset",
+  "go": "Ga",
+  "offsetError": "Voer een hexadecimale offset binnen het bestand in.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Byte op offset {offset}",
+  "editHint": "Selecteer een byte en typ twee hexadecimale cijfers om de waarde te overschrijven.",
+  "undo": "Ongedaan maken",
+  "redo": "Opnieuw uitvoeren",
+  "previousPage": "Vorige pagina",
+  "nextPage": "Volgende pagina",
+  "page": "Pagina {current} van {total}"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose 驗證器",
+  "description": "線上驗證 compose.yaml 或 docker-compose.yml，找出 YAML 語法錯誤和無效的 Docker Compose 欄位，並顯示問題所在的行號與欄位位置。"
+}

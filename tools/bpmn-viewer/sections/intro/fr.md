@@ -9,3 +9,7 @@ Faites glisser le diagramme pour vous déplacer. Les commandes de zoom permetten
 ## Ouvrir un fichier BPMN sans disposition de diagramme
 
 Un fichier XML BPMN 2.0 peut décrire un processus sans indiquer la position de ses formes et de ses connexions. La visionneuse utilise les données BPMN Diagram Interchange enregistrées avec le modèle pour dessiner le diagramme. Si la disposition est absente, ouvrez le modèle dans votre outil de modélisation BPMN et exportez-le de nouveau en incluant le diagramme. Consultez la [spécification BPMN 2.0](https://www.omg.org/spec/BPMN/2.0.2/) pour plus de détails sur le format.
+
+## Télécharger un diagramme en SVG
+
+Une fois le diagramme ouvert, sélectionnez **Télécharger le SVG**. Le fichier contient le diagramme entier à son échelle d’origine et reste net lorsque vous le redimensionnez dans un document ou sur une diapositive.

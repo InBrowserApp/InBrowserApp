@@ -24,6 +24,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Oppskaler bilder med KI",
+    slug: "ai-image-upscaler",
+  },
+  {
+    category: "image",
     name: "Lag animert WebP",
     slug: "animated-webp-maker",
   },
@@ -76,6 +81,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "AsciiDoc-viser",
     slug: "asciidoc-viewer",
+  },
+  {
+    category: "misc",
+    name: "Normaliser lydnivå (LUFS)",
+    slug: "audio-loudness-normalizer",
   },
   {
     category: "misc",
@@ -423,6 +433,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "image",
+    name: "DICOM-viser",
+    slug: "dicom-viewer",
+  },
+  {
     category: "document",
     name: "DjVu-viser",
     slug: "djvu-viewer",
@@ -438,6 +453,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dns-lookup",
   },
   {
+    category: "network",
+    name: "Parser for DNS-sonefiler",
+    slug: "dns-zone-file-parser",
+  },
+  {
     category: "document",
     name: "Konverterer fra DOC / WPS til PDF",
     slug: "doc-to-pdf-converter",
@@ -446,6 +466,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOC- og WPS-viser",
     slug: "doc-viewer",
+  },
+  {
+    category: "developer",
+    name: "Docker Compose-validator",
+    slug: "docker-compose-validator",
   },
   {
     category: "developer",
@@ -568,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "web",
+    name: "Konverter TTF og OTF til WOFF2",
+    slug: "font-to-woff2",
+  },
+  {
     category: "misc",
     name: "Test av spillkontroller",
     slug: "gamepad-tester",
@@ -608,9 +638,24 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gpx-viewer",
   },
   {
+    category: "developer",
+    name: "Graphviz DOT-forhåndsviser",
+    slug: "graphviz-dot-previewer",
+  },
+  {
     category: "network",
     name: "HAR-nettverksanalysator",
     slug: "har-analyzer",
+  },
+  {
+    category: "network",
+    name: "Fjern sensitive data fra HAR-filer",
+    slug: "har-sanitizer",
+  },
+  {
+    category: "developer",
+    name: "Hex-editor",
+    slug: "hex-editor",
   },
   {
     category: "crypto",
@@ -901,6 +946,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Tastaturtest",
     slug: "keyboard-tester",
+  },
+  {
+    category: "json",
+    name: "KML ↔ GeoJSON-omformer",
+    slug: "kml-geojson-converter",
   },
   {
     category: "developer",
@@ -1459,6 +1509,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite til SQL-dump",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite-viser",
     slug: "sqlite-viewer",
   },
@@ -1476,6 +1531,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH offentlig nøkkelfingeravtrykk",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "image",
+    name: "STEP-viser",
+    slug: "step-viewer",
   },
   {
     category: "misc",

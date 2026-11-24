@@ -1,0 +1,4 @@
+{
+  "name": "Graphviz DOT-förhandsgranskare",
+  "description": "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG."
+}

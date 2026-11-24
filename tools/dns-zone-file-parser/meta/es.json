@@ -1,0 +1,4 @@
+{
+  "name": "Analizador de archivos de zona DNS",
+  "description": "Analiza archivos de zona DNS en formato BIND. Filtra registros por nombre, tipo o datos, consulta su TTL y su clase y copia el resultado como JSON."
+}

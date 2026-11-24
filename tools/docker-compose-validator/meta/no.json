@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose-validator",
+  "description": "Valider compose.yaml eller docker-compose.yml på nett. Finn syntaksfeil i YAML og ugyldige Docker Compose-felt med linje- og kolonnenummer."
+}
