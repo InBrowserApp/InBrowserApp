@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "اجعل ملف PDF الممسوح قابلًا للبحث (OCR)",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "إضافة أرقام صفحات PDF",
     slug: "pdf-page-number-adder",
   },

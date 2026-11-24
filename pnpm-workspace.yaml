@@ -219,6 +219,7 @@ catalog:
   astro: ^7.4.12
   bcrypt-ts: ^9.0.3
   basic-ftp: ^6.2.6
+  bidi-js: 1.0.3
   bip39: ^3.1.2
   # v3 depends on the unpublished @c4312/blake3-internal@2.1.7.
   blake3-wasm: 2.1.5

@@ -225,6 +225,7 @@
     "@tool/pdf-info-viewer": "workspace:*",
     "@tool/pdf-merger": "workspace:*",
     "@tool/pdf-metadata-remover": "workspace:*",
+    "@tool/pdf-ocr": "workspace:*",
     "@tool/pdf-page-number-adder": "workspace:*",
     "@tool/pdf-page-organizer": "workspace:*",
     "@tool/pdf-redactor": "workspace:*",

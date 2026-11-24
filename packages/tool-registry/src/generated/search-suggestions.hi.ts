@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — स्कैन की गई PDF को खोजने योग्य बनाएँ",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF पेज नंबर ऐडर",
     slug: "pdf-page-number-adder",
   },

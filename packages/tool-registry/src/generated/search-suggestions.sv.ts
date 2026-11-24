@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR – Gör skannade PDF-filer sökbara",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Sidnumrering för PDF",
     slug: "pdf-page-number-adder",
   },

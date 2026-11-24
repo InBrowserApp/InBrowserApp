@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR PDF — Buat Teks di PDF Pindaian Bisa Dicari",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Penambah Nomor Halaman PDF",
     slug: "pdf-page-number-adder",
   },

@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR de PDF — Torne PDFs digitalizados pesquisáveis",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Adicionador de números de página em PDF",
     slug: "pdf-page-number-adder",
   },

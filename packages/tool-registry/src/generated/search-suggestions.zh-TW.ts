@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — 將掃描檔轉成可搜尋的 PDF",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF 頁碼新增工具",
     slug: "pdf-page-number-adder",
   },

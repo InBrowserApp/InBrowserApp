@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR PDF — Tạo PDF có thể tìm kiếm từ bản quét",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Trình thêm số trang PDF",
     slug: "pdf-page-number-adder",
   },

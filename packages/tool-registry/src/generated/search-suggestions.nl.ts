@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF OCR — Gescande PDF doorzoekbaar maken",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "PDF-paginanummeraar",
     slug: "pdf-page-number-adder",
   },

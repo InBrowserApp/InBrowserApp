@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR для PDF — поиск текста в сканах",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Добавление номеров страниц в PDF",
     slug: "pdf-page-number-adder",
   },

@@ -20058,6 +20058,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-ocr",
+    language: "ar",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "de",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "en",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "es",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "fr",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "he",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "hi",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "id",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "it",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "ja",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "ko",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "ms",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "nl",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "no",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "pl",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "pt",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "ru",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "sv",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "th",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "tr",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "vi",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-ocr",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-page-number-adder",
     language: "ar",
   },

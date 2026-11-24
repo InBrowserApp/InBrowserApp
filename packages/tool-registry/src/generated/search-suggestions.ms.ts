@@ -1094,6 +1094,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "OCR PDF — Jadikan PDF Imbasan Boleh Dicari",
+    slug: "pdf-ocr",
+  },
+  {
+    category: "pdf",
     name: "Penambah Nombor Halaman PDF",
     slug: "pdf-page-number-adder",
   },

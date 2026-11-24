@@ -27516,6 +27516,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-ocr",
+    category: "pdf",
+    icon: "scan-text",
+    tags: ["pdf", "ocr", "scanned pdf", "searchable pdf", "text recognition"],
+    locales: {
+      ar: {
+        name: "اجعل ملف PDF الممسوح قابلًا للبحث (OCR)",
+        description:
+          "اجعل ملفات PDF الممسوحة ضوئيًا قابلة للبحث باستخدام OCR مجانًا في متصفحك. احتفظ بالصفحات الأصلية ونزّل ملف PDF بنص قابل للبحث والتحديد والنسخ.",
+      },
+      de: {
+        name: "PDF-OCR – Gescannte PDFs durchsuchbar machen",
+        description:
+          "Mache gescannte PDFs mit kostenloser OCR im Browser durchsuchbar. Das Seitenbild bleibt erhalten. Du kannst den erkannten Text suchen, markieren und kopieren.",
+      },
+      en: {
+        name: "PDF OCR — Make Scanned PDFs Searchable",
+        description:
+          "Make scanned PDFs searchable with free OCR in your browser. Keep the original pages and download a PDF with text you can search, select, and copy.",
+      },
+      es: {
+        name: "OCR para PDF — Habilita la búsqueda en PDF escaneados",
+        description:
+          "Aplica OCR gratis a tus PDF escaneados desde el navegador. Conserva las páginas originales y descarga un PDF cuyo texto puedes buscar, seleccionar y copiar.",
+      },
+      fr: {
+        name: "OCR PDF — Rendre un PDF numérisé consultable",
+        description:
+          "Appliquez l’OCR à vos PDF numérisés gratuitement dans votre navigateur. Le PDF téléchargé conserve les pages d’origine et permet de rechercher, sélectionner et copier le texte.",
+      },
+      he: {
+        name: "OCR ל־PDF — הפיכת קובצי PDF סרוקים לניתנים לחיפוש",
+        description:
+          "הפכו קובצי PDF סרוקים לניתנים לחיפוש באמצעות OCR בחינם בדפדפן. שמרו על העמודים המקוריים והורידו PDF עם טקסט שאפשר לחפש, לבחור ולהעתיק.",
+      },
+      hi: {
+        name: "PDF OCR — स्कैन की गई PDF को खोजने योग्य बनाएँ",
+        description:
+          "ब्राउज़र में मुफ़्त OCR से स्कैन की गई PDF को खोजने योग्य बनाएँ। मूल पेज वैसे ही रहते हैं और डाउनलोड की गई PDF में आप टेक्स्ट खोज, चुन और कॉपी कर सकते हैं।",
+      },
+      id: {
+        name: "OCR PDF — Buat Teks di PDF Pindaian Bisa Dicari",
+        description:
+          "Gunakan OCR gratis di browser untuk membuat teks dalam PDF hasil pindai bisa dicari, dipilih, dan disalin. Unduh PDF dengan tampilan halaman asli.",
+      },
+      it: {
+        name: "OCR PDF — Rendi ricercabili i PDF scansionati",
+        description:
+          "Rendi ricercabili i PDF scansionati con l’OCR gratuito nel browser. Conserva le pagine originali e scarica un PDF in cui puoi cercare, selezionare e copiare il testo.",
+      },
+      ja: {
+        name: "スキャンした PDF を検索可能に（OCR）",
+        description:
+          "無料のブラウザー内 OCR で、スキャンした PDF を検索可能にします。元のページをそのまま保ち、文字を検索・選択・コピーできる PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF OCR — 스캔한 PDF를 검색 가능하게 만들기",
+        description:
+          "브라우저에서 무료 OCR로 스캔한 PDF를 검색 가능하게 만드세요. 원본 페이지를 유지하면서 텍스트를 검색, 선택, 복사할 수 있는 PDF를 다운로드합니다.",
+      },
+      ms: {
+        name: "OCR PDF — Jadikan PDF Imbasan Boleh Dicari",
+        description:
+          "Jadikan PDF imbasan boleh dicari dengan OCR percuma dalam pelayar. Kekalkan halaman asal dan muat turun PDF dengan teks yang boleh dicari, dipilih dan disalin.",
+      },
+      nl: {
+        name: "PDF OCR — Gescande PDF doorzoekbaar maken",
+        description:
+          "Maak gescande PDF's doorzoekbaar met gratis OCR in je browser. Behoud de originele pagina's en download een PDF met tekst die je kunt doorzoeken, selecteren en kopiëren.",
+      },
+      no: {
+        name: "PDF-OCR – Gjør skannede PDF-filer søkbare",
+        description:
+          "Gjør skannede PDF-filer søkbare med gratis OCR i nettleseren. Behold de opprinnelige sidene, og last ned en PDF med tekst du kan søke i, merke og kopiere.",
+      },
+      pl: {
+        name: "OCR PDF — wyszukiwanie tekstu w skanach",
+        description:
+          "Włącz wyszukiwanie tekstu w zeskanowanych plikach PDF dzięki darmowemu OCR w przeglądarce. Zachowaj wygląd oryginalnych stron i pobierz PDF, w którym można wyszukiwać, zaznaczać i kopiować tekst.",
+      },
+      pt: {
+        name: "OCR de PDF — Torne PDFs digitalizados pesquisáveis",
+        description:
+          "Use OCR grátis no navegador para tornar PDFs digitalizados pesquisáveis. Preserve as páginas originais e baixe um PDF com texto que você pode buscar, selecionar e copiar.",
+      },
+      ru: {
+        name: "OCR для PDF — поиск текста в сканах",
+        description:
+          "Добавьте поиск в отсканированный PDF с помощью бесплатного OCR прямо в браузере. Скачайте PDF с исходными страницами и текстом, который можно найти, выделить и скопировать.",
+      },
+      sv: {
+        name: "PDF OCR – Gör skannade PDF-filer sökbara",
+        description:
+          "Gör skannade PDF-filer sökbara med gratis OCR i webbläsaren. Behåll originalsidorna och ladda ned en PDF där du kan söka efter, markera och kopiera text.",
+      },
+      th: {
+        name: "PDF OCR — แปลง PDF ที่สแกนให้ค้นหาข้อความได้",
+        description:
+          "ใช้ OCR ฟรีในเบราว์เซอร์เพื่อให้ค้นหาข้อความใน PDF ที่สแกนได้ ดาวน์โหลด PDF ที่คงหน้าต้นฉบับไว้ พร้อมข้อความที่ค้นหา เลือก และคัดลอกได้",
+      },
+      tr: {
+        name: "PDF OCR — Taranmış PDF'leri aranabilir yapın",
+        description:
+          "Taranmış PDF'leri ücretsiz OCR ile tarayıcınızda aranabilir yapın. Orijinal sayfaları koruyun ve metnini arayabileceğiniz, seçebileceğiniz ve kopyalayabileceğiniz bir PDF indirin.",
+      },
+      vi: {
+        name: "OCR PDF — Tạo PDF có thể tìm kiếm từ bản quét",
+        description:
+          "Dùng OCR miễn phí ngay trong trình duyệt để tạo PDF có thể tìm kiếm từ bản quét. Giữ nguyên các trang gốc và tải PDF có văn bản để tìm, chọn và sao chép.",
+      },
+      "zh-CN": {
+        name: "PDF OCR — 将扫描件转为可搜索 PDF",
+        description:
+          "在浏览器中免费使用 OCR，让扫描版 PDF 支持搜索。保留原始页面，下载可搜索、选择和复制文本的 PDF。",
+      },
+      "zh-TW": {
+        name: "PDF OCR — 將掃描檔轉成可搜尋的 PDF",
+        description:
+          "直接在瀏覽器中使用免費 OCR，將掃描檔轉成可搜尋的 PDF。保留原始頁面，下載後即可搜尋、選取和複製文字。",
+      },
+    },
+  },
+  {
     slug: "pdf-page-number-adder",
     category: "pdf",
     icon: "file-text",

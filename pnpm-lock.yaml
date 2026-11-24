@@ -719,6 +719,9 @@ catalogs:
     bcrypt-ts:
       specifier: ^9.0.3
       version: 9.0.3
+    bidi-js:
+      specifier: 1.0.3
+      version: 1.0.3
     bip39:
       specifier: ^3.1.2
       version: 3.1.2
@@ -1756,6 +1759,12 @@ importers:
       '@tesseract.js-data/yor':
         specifier: 'catalog:'
         version: 1.0.0
+      tesseract.js:
+        specifier: 'catalog:'
+        version: 7.0.0
+      tesseract.js-core:
+        specifier: 'catalog:'
+        version: 7.0.0
 
   packages/lib/pdf-reader:
     dependencies:
@@ -2518,6 +2527,9 @@ importers:
       '@tool/pdf-metadata-remover':
         specifier: workspace:*
         version: link:../../tools/pdf-metadata-remover
+      '@tool/pdf-ocr':
+        specifier: workspace:*
+        version: link:../../tools/pdf-ocr
       '@tool/pdf-page-number-adder':
         specifier: workspace:*
         version: link:../../tools/pdf-page-number-adder
@@ -2910,6 +2922,9 @@ importers:
       '@workspace/comic':
         specifier: workspace:*
         version: link:../lib/comic
+      '@workspace/ocr-models':
+        specifier: workspace:*
+        version: link:../lib/ocr-models
       '@workspace/raster-image':
         specifier: workspace:*
         version: link:../lib/raster-image
@@ -6956,16 +6971,13 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
-      tesseract.js:
-        specifier: 'catalog:'
-        version: 7.0.0
-      tesseract.js-core:
-        specifier: 'catalog:'
-        version: 7.0.0
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      tesseract.js:
+        specifier: 'catalog:'
+        version: 7.0.0
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -9226,6 +9238,49 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/pdf-ocr:
+    dependencies:
+      '@workspace/ocr-models':
+        specifier: workspace:*
+        version: link:../../packages/lib/ocr-models
+      '@workspace/pdf-reader':
+        specifier: workspace:*
+        version: link:../../packages/lib/pdf-reader
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      bidi-js:
+        specifier: 'catalog:'
+        version: 1.0.3
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 6.5.438
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      tesseract.js:
+        specifier: 'catalog:'
+        version: 7.0.0
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -16466,6 +16521,9 @@ packages:
     resolution: {integrity: sha512-7N21c3DP+jqYUlxhrx5b4GMzZaLw5kmokizcXny2PIDRxETkll7HNDo36mI2xClsxYdpX+eP77pEDPXYDNNQLw==}
     engines: {node: '>=22'}
 
+  bidi-js@1.0.3:
+    resolution: {integrity: sha512-RKshQI1R3YQ+n9YJz2QQ147P66ELpa1FQEg20Dk8oW9t2KgLbpDLLp9aGZ7y8WHSshDknG0bknqGw5/tyCs5tw==}
+
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
 
@@ -23565,6 +23623,10 @@ snapshots:
       is-decimal: 2.0.1
 
   bcrypt-ts@9.0.3: {}
+
+  bidi-js@1.0.3:
+    dependencies:
+      require-from-string: 2.0.2
 
   bignumber.js@9.3.1: {}
 

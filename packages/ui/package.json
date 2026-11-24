@@ -15,6 +15,7 @@
     "dompurify": "catalog:",
     "@workspace/spreadsheet-conversion": "workspace:*",
     "@workspace/raster-image": "workspace:*",
+    "@workspace/ocr-models": "workspace:*",
     "@workspace/comic": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
   },
