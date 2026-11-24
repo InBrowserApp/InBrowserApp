@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore CID IPFS",
+  "description": "Calcola il CID IPFS di un file o di una cartella senza caricarli. Confronta un CID esistente e riproduci il risultato con le impostazioni di importazione di Kubo."
+}

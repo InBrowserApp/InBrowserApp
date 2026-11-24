@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator CID IPFS",
+  "description": "Hitung CID IPFS untuk file atau folder tanpa mengunggahnya. Bandingkan dengan CID yang sudah ada dan ulangi penghitungan dengan pengaturan impor Kubo."
+}

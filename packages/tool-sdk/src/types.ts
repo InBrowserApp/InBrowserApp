@@ -23,6 +23,7 @@ type ToolCategory =
   | "ebook"
   | "geo"
   | "image"
+  | "ipfs"
   | "json"
   | "misc"
   | "network"

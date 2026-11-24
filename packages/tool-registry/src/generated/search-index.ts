@@ -22208,6 +22208,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipfs-cid-calculator",
+    category: "ipfs",
+    icon: "hash",
+    tags: [
+      "ipfs",
+      "unixfs",
+      "cid",
+      "cidv0",
+      "cidv1",
+      "file",
+      "folder",
+      "kubo",
+      "hash",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة CID لـ IPFS",
+        description:
+          "احسب معرّف المحتوى (CID) لملف أو مجلد في IPFS دون رفعه. قارنه بمعرّف موجود وأعد إنتاج النتيجة باستخدام إعدادات الاستيراد في Kubo.",
+      },
+      de: {
+        name: "IPFS-CID-Rechner",
+        description:
+          "Berechnen Sie eine IPFS-CID für eine Datei oder einen Ordner ohne Upload. Vergleichen Sie eine vorhandene CID und reproduzieren Sie das Ergebnis mit den Importeinstellungen von Kubo.",
+      },
+      en: {
+        name: "IPFS CID Calculator",
+        description:
+          "Calculate an IPFS CID for a file or folder without uploading it. Compare an existing CID and reproduce the result with Kubo import settings.",
+      },
+      es: {
+        name: "Calculadora de CID de IPFS",
+        description:
+          "Calcula el CID de IPFS de un archivo o carpeta sin subirlo. Compara el resultado con un CID existente y reprodúcelo con las opciones de importación de Kubo.",
+      },
+      fr: {
+        name: "Calculateur de CID IPFS",
+        description:
+          "Calculez le CID IPFS d’un fichier ou d’un dossier sans l’envoyer. Comparez-le à un CID existant et reproduisez le résultat avec les paramètres d’importation de Kubo.",
+      },
+      he: {
+        name: "מחשבון CID ל-IPFS",
+        description:
+          "חשבו CID של קובץ או תיקייה ב-IPFS בלי להעלות אותם. השוו ל-CID קיים ושחזרו את התוצאה בעזרת הגדרות הייבוא של Kubo.",
+      },
+      hi: {
+        name: "IPFS CID कैलकुलेटर",
+        description:
+          "फ़ाइल या फ़ोल्डर अपलोड किए बिना उसका IPFS CID निकालें। किसी मौजूदा CID से तुलना करें और Kubo की इंपोर्ट सेटिंग से वही नतीजा पाएँ।",
+      },
+      id: {
+        name: "Kalkulator CID IPFS",
+        description:
+          "Hitung CID IPFS untuk file atau folder tanpa mengunggahnya. Bandingkan dengan CID yang sudah ada dan ulangi penghitungan dengan pengaturan impor Kubo.",
+      },
+      it: {
+        name: "Calcolatore CID IPFS",
+        description:
+          "Calcola il CID IPFS di un file o di una cartella senza caricarli. Confronta un CID esistente e riproduci il risultato con le impostazioni di importazione di Kubo.",
+      },
+      ja: {
+        name: "IPFS CID 計算ツール",
+        description:
+          "ファイルやフォルダーをアップロードせずに IPFS の CID を計算できます。既存の CID と照合し、Kubo のインポート設定を合わせて結果を再現できます。",
+      },
+      ko: {
+        name: "IPFS CID 계산기",
+        description:
+          "파일이나 폴더를 업로드하지 않고 IPFS CID를 계산하세요. 기존 CID와 비교하고 Kubo 가져오기 설정으로 결과를 재현할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator CID IPFS",
+        description:
+          "Kira CID IPFS untuk fail atau folder tanpa memuat naiknya. Bandingkan dengan CID sedia ada dan hasilkan semula keputusan menggunakan tetapan import Kubo.",
+      },
+      nl: {
+        name: "IPFS CID-calculator",
+        description:
+          "Bereken een IPFS-CID voor een bestand of map zonder deze te uploaden. Vergelijk een bestaande CID en reproduceer het resultaat met Kubo-importinstellingen.",
+      },
+      no: {
+        name: "IPFS CID-kalkulator",
+        description:
+          "Beregn en IPFS-CID for en fil eller mappe uten å laste den opp. Sammenlign med en eksisterende CID og gjenskap resultatet med Kubos importinnstillinger.",
+      },
+      pl: {
+        name: "Kalkulator CID IPFS",
+        description:
+          "Oblicz CID IPFS dla pliku lub folderu bez przesyłania danych. Porównaj go z istniejącym CID i odtwórz wynik przy użyciu ustawień importu Kubo.",
+      },
+      pt: {
+        name: "Calculadora de CID do IPFS",
+        description:
+          "Calcule o CID do IPFS de um ficheiro ou pasta sem o enviar. Compare-o com um CID existente e reproduza o resultado com as definições de importação do Kubo.",
+      },
+      ru: {
+        name: "Калькулятор CID для IPFS",
+        description:
+          "Вычисляйте CID для файла или папки в браузере без загрузки на сервер. Сравнивайте его с существующим CID и воспроизводите результат с настройками импорта Kubo.",
+      },
+      sv: {
+        name: "IPFS CID-kalkylator",
+        description:
+          "Beräkna en IPFS-CID för en fil eller mapp utan att ladda upp den. Jämför med en befintlig CID och återskapa resultatet med Kubos importinställningar.",
+      },
+      th: {
+        name: "เครื่องมือคำนวณ CID ของ IPFS",
+        description:
+          "คำนวณ CID ของ IPFS สำหรับไฟล์หรือโฟลเดอร์โดยไม่ต้องอัปโหลด เปรียบเทียบกับ CID ที่มีอยู่และคำนวณซ้ำด้วยการตั้งค่าการนำเข้าของ Kubo",
+      },
+      tr: {
+        name: "IPFS CID Hesaplayıcısı",
+        description:
+          "Dosya veya klasörü yüklemeden IPFS CID değerini hesaplayın. Mevcut bir CID ile karşılaştırın ve Kubo içe aktarma ayarlarıyla aynı sonucu elde edin.",
+      },
+      vi: {
+        name: "Công cụ tính CID IPFS",
+        description:
+          "Tính CID IPFS cho tệp hoặc thư mục mà không cần tải lên. So sánh với CID có sẵn và tái tạo kết quả bằng thiết lập nhập của Kubo.",
+      },
+      "zh-CN": {
+        name: "IPFS CID 计算器",
+        description:
+          "在浏览器中计算文件或文件夹的 IPFS CID，无需上传。支持对照已有 CID，并用相同的 Kubo 导入设置复现结果。",
+      },
+      "zh-TW": {
+        name: "IPFS CID 計算器",
+        description:
+          "在瀏覽器中計算檔案或資料夾的 IPFS CID，無須上傳。可比對現有 CID，並使用相同的 Kubo 匯入設定重現結果。",
+      },
+    },
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     category: "network",
     icon: "network",

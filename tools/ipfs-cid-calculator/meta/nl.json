@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CID-calculator",
+  "description": "Bereken een IPFS-CID voor een bestand of map zonder deze te uploaden. Vergelijk een bestaande CID en reproduceer het resultaat met Kubo-importinstellingen."
+}

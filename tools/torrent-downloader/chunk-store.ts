@@ -81,7 +81,10 @@ async function diskStore(signal: AbortSignal): Promise<Store> {
 
 async function selectStore(signal: AbortSignal): Promise<Store> {
   try {
-    if (navigator.storage?.getDirectory && navigator.locks)
+    if (
+      typeof navigator.storage?.getDirectory === "function" &&
+      navigator.locks
+    )
       return await diskStore(signal)
   } catch {
     // Private browsing or storage settings can make OPFS unavailable.
