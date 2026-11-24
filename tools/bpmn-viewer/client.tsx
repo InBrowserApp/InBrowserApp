@@ -184,6 +184,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             role="region"
             aria-label={m.diagram}
             aria-hidden={!ready}
+            data-suppress-language-suggestion={ready || undefined}
             className="min-h-0 flex-1 touch-none bg-white text-black"
             onPointerDown={(event) => {
               if (!ready || event.pointerType !== "touch" || !event.isPrimary)
