@@ -1,0 +1,28 @@
+{
+  "openFile": "Abrir archivo",
+  "sample": "Probar un ejemplo",
+  "input": "Texto de origen",
+  "copy": "Copiar",
+  "copied": "Copiado",
+  "copyFailed": "No se pudo copiar",
+  "readError": "No se pudo leer el archivo. Vuelve a seleccionarlo o pega el texto.",
+  "result": "Resultado de la conversión",
+  "empty": "Abre un archivo o pega el texto y conviértelo para ver aquí el resultado.",
+  "convert": "Convertir",
+  "preview": "Vista previa del resultado",
+  "invalid": "Revisa el formato del archivo y los ejemplos de abajo e inténtalo de nuevo.",
+  "noRows": "No hay registros para convertir. Revisa los datos y los encabezados de las columnas.",
+  "rowError": "Revisa los valores de la fila {row} del CSV.",
+  "count": "Registros: {count}",
+  "paste": "Pega aquí el contenido del archivo",
+  "forward": "De ICS a CSV",
+  "reverse": "De CSV a ICS",
+  "downloadForward": "Descargar CSV",
+  "downloadReverse": "Descargar ICS",
+  "columns": {
+    "Title": "Resumen",
+    "Start": "Fecha de inicio",
+    "End": "Fecha de fin",
+    "Location": "Ubicación"
+  }
+}

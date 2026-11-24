@@ -1,0 +1,19 @@
+{
+  "details": "聯絡資訊",
+  "preview": "名片預覽",
+  "empty": "輸入姓名即可開始建立名片。",
+  "firstName": "名",
+  "lastName": "姓",
+  "phone": "電話",
+  "email": "電子郵件",
+  "company": "公司",
+  "jobTitle": "職稱",
+  "website": "網站",
+  "address": "地址",
+  "notes": "備註",
+  "more": "更多聯絡資訊",
+  "copy": "複製 vCard",
+  "copied": "已複製",
+  "copyFailed": "無法複製",
+  "download": "下載 VCF"
+}

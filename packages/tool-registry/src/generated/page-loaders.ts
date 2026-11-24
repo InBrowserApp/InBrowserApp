@@ -54,6 +54,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "bpmn-viewer": () => import("@tool/bpmn-viewer/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
   "caj-to-pdf-converter": () => import("@tool/caj-to-pdf-converter/page"),
@@ -167,6 +168,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
   "ics-calendar-viewer": () => import("@tool/ics-calendar-viewer/page"),
+  "ics-csv-converter": () => import("@tool/ics-csv-converter/page"),
   "image-background-remover": () =>
     import("@tool/image-background-remover/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),
@@ -414,6 +416,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "vcard-generator": () => import("@tool/vcard-generator/page"),
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),

@@ -5170,6 +5170,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bpmn-viewer",
+    category: "developer",
+    icon: "workflow",
+    tags: ["bpmn", "process", "workflow", "diagram", "xml", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض BPMN",
+        description:
+          "افتح مخططات BPMN 2.0 من ملفات ‎.bpmn أو ‎.xml في متصفحك. حرّك مخطط العملية أو كبّره أو اضبط حجمه ليظهر كاملًا.",
+      },
+      de: {
+        name: "BPMN-Betrachter",
+        description:
+          "Öffne BPMN-2.0-Diagramme aus .bpmn- oder .xml-Dateien im Browser. Verschiebe und zoome die Ansicht oder passe das Prozessdiagramm in den Anzeigebereich ein.",
+      },
+      en: {
+        name: "BPMN Viewer",
+        description:
+          "Open BPMN 2.0 diagrams from .bpmn or .xml files in your browser. Pan, zoom, and fit the process diagram to the view.",
+      },
+      es: {
+        name: "Visor BPMN",
+        description:
+          "Abre diagramas BPMN 2.0 desde archivos .bpmn o .xml en tu navegador. Desplázate por el diagrama de proceso, amplíalo o ajústalo a la vista.",
+      },
+      fr: {
+        name: "Visionneuse BPMN",
+        description:
+          "Ouvrez des diagrammes BPMN 2.0 au format .bpmn ou .xml dans votre navigateur. Déplacez, agrandissez ou ajustez le diagramme de processus à la vue.",
+      },
+      he: {
+        name: "מציג BPMN",
+        description:
+          "פתחו תרשימי BPMN 2.0 מקבצים בסיומת ‎.bpmn או ‎.xml בדפדפן. אפשר לגרור את התרשים, להגדיל אותו ולהתאים אותו לאזור התצוגה.",
+      },
+      hi: {
+        name: "BPMN व्यूअर",
+        description:
+          "ब्राउज़र में .bpmn या .xml फ़ाइल से BPMN 2.0 डायग्राम खोलें। डायग्राम को खिसकाएँ, ज़ूम करें और दृश्य में फ़िट करें।",
+      },
+      id: {
+        name: "Penampil BPMN",
+        description:
+          "Buka diagram BPMN 2.0 dari file .bpmn atau .xml di browser. Geser, perbesar, atau sesuaikan skala agar seluruh diagram proses terlihat.",
+      },
+      it: {
+        name: "Visualizzatore BPMN",
+        description:
+          "Apri nel browser diagrammi BPMN 2.0 da file .bpmn o .xml. Sposta il diagramma di processo, ingrandiscilo o adattalo alla vista.",
+      },
+      ja: {
+        name: "BPMN ビューアー",
+        description:
+          ".bpmn または .xml ファイルの BPMN 2.0 図をブラウザーで開き、移動、拡大・縮小、画面に合わせた表示ができます。",
+      },
+      ko: {
+        name: "BPMN 뷰어",
+        description:
+          "브라우저에서 .bpmn 또는 .xml 파일의 BPMN 2.0 다이어그램을 열고 이동, 확대 및 축소하거나 화면에 맞춰 보세요.",
+      },
+      ms: {
+        name: "Pemapar BPMN",
+        description:
+          "Buka rajah BPMN 2.0 daripada fail .bpmn atau .xml dalam pelayar. Seret dan zum, atau muatkan seluruh rajah proses dalam ruang paparan.",
+      },
+      nl: {
+        name: "BPMN-viewer",
+        description:
+          "Open BPMN 2.0-diagrammen uit .bpmn- of .xml-bestanden in je browser. Verschuif het procesdiagram, zoom in of uit en breng het volledige diagram in beeld.",
+      },
+      no: {
+        name: "BPMN-viser",
+        description:
+          "Åpne BPMN 2.0-diagrammer fra .bpmn- eller .xml-filer i nettleseren. Panorer, zoom og tilpass prosessdiagrammet til visningen.",
+      },
+      pl: {
+        name: "Przeglądarka diagramów BPMN",
+        description:
+          "Otwieraj diagramy BPMN 2.0 z plików .bpmn lub .xml w przeglądarce. Przesuwaj diagram procesu, zmieniaj powiększenie i dopasowuj widok.",
+      },
+      pt: {
+        name: "Visualizador de BPMN",
+        description:
+          "Abra diagramas BPMN 2.0 de arquivos .bpmn ou .xml no navegador. Arraste o diagrama do processo, altere o zoom ou ajuste a visualização à janela.",
+      },
+      ru: {
+        name: "Просмотр диаграмм BPMN",
+        description:
+          "Открывайте диаграммы BPMN 2.0 из файлов .bpmn и .xml прямо в браузере. Перемещайте и масштабируйте схему процесса или выводите её целиком.",
+      },
+      sv: {
+        name: "BPMN-visare",
+        description:
+          "Öppna BPMN 2.0-diagram från .bpmn- eller .xml-filer i webbläsaren. Panorera, zooma och anpassa processdiagrammet till vyn.",
+      },
+      th: {
+        name: "โปรแกรมดู BPMN",
+        description:
+          "เปิดแผนภาพ BPMN 2.0 จากไฟล์ .bpmn หรือ .xml ในเบราว์เซอร์ เลื่อน ซูม และปรับแผนภาพให้พอดีกับหน้าจอ",
+      },
+      tr: {
+        name: "BPMN Görüntüleyici",
+        description:
+          "Tarayıcınızda .bpmn veya .xml dosyalarından BPMN 2.0 diyagramlarını açın. Süreç diyagramını kaydırın, yakınlaştırın veya ekrana sığdırın.",
+      },
+      vi: {
+        name: "Trình xem BPMN",
+        description:
+          "Mở sơ đồ BPMN 2.0 từ tệp .bpmn hoặc .xml trong trình duyệt. Di chuyển, thu phóng và điều chỉnh sơ đồ vừa khung xem.",
+      },
+      "zh-CN": {
+        name: "BPMN 查看器",
+        description:
+          "在浏览器中打开 .bpmn 或 .xml 格式的 BPMN 2.0 图表，支持平移、缩放和适应视图。",
+      },
+      "zh-TW": {
+        name: "BPMN 檢視器",
+        description:
+          "在瀏覽器中開啟 .bpmn 或 .xml 格式的 BPMN 2.0 圖表，並可平移、縮放及調整至適合視圖。",
+      },
+    },
+  },
+  {
     slug: "business-days-calculator",
     category: "time",
     icon: "clock3",
@@ -16780,6 +16903,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "ICS 行事曆檔案檢視器",
         description:
           "在瀏覽器中開啟 iCalendar（.ics）檔案，搜尋行程並查看日期、時區、地點和說明。",
+      },
+    },
+  },
+  {
+    slug: "ics-csv-converter",
+    category: "time",
+    icon: "arrow-left-right",
+    tags: [
+      "ics",
+      "ical",
+      "icalendar",
+      "calendar",
+      "csv",
+      "spreadsheet",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ICS وCSV",
+        description:
+          "حوّل أحداث iCalendar ‏(.ics) إلى جدول CSV أو حوّل صفوف CSV إلى ملف تقويم. عاين أيًا من الصيغتين ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "ICS-CSV-Konverter",
+        description:
+          "Konvertieren Sie iCalendar-Termine (.ics) in eine CSV-Tabelle oder erstellen Sie eine Kalenderdatei aus CSV-Zeilen. Beide Formate lassen sich im Browser prüfen und herunterladen.",
+      },
+      en: {
+        name: "ICS ↔ CSV Converter",
+        description:
+          "Convert iCalendar (.ics) events to a CSV spreadsheet or turn CSV rows into a calendar file. Preview and download either format in your browser.",
+      },
+      es: {
+        name: "Convertidor ICS ↔ CSV",
+        description:
+          "Pasa eventos de iCalendar (.ics) a una hoja de cálculo CSV o convierte filas CSV en un archivo de calendario. Revisa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur ICS ↔ CSV",
+        description:
+          "Exportez des événements iCalendar (.ics) en CSV ou créez un fichier de calendrier à partir de lignes CSV. Visualisez et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר ICS ו-CSV",
+        description:
+          "המירו אירועי iCalendar ‏(.ics) לגיליון CSV או הפכו שורות CSV לקובץ לוח שנה. צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "ICS ↔ CSV कन्वर्टर",
+        description:
+          "iCalendar (.ics) इवेंट को CSV स्प्रेडशीट में बदलें या CSV की पंक्तियों से कैलेंडर फ़ाइल बनाएँ। नतीजा देखकर उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi ICS ↔ CSV",
+        description:
+          "Ubah acara iCalendar (.ics) menjadi spreadsheet CSV atau buat file kalender dari baris CSV. Lihat pratinjau dan unduh kedua format di browser.",
+      },
+      it: {
+        name: "Convertitore ICS ↔ CSV",
+        description:
+          "Esporta gli eventi iCalendar (.ics) in CSV o crea un file di calendario da righe CSV. Visualizza l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "ICS・CSV 相互変換ツール",
+        description:
+          "iCalendar（.ics）の予定を CSV に書き出したり、CSV の行をカレンダーファイルにしたりできます。結果はブラウザーで確認してダウンロードできます。",
+      },
+      ko: {
+        name: "ICS·CSV 변환기",
+        description:
+          "iCalendar(.ics) 일정을 CSV로 내보내거나 CSV 행을 캘린더 파일로 만드세요. 브라우저에서 두 형식을 모두 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar ICS ↔ CSV",
+        description:
+          "Tukar acara iCalendar (.ics) kepada hamparan CSV atau cipta fail kalendar daripada baris CSV. Pratonton dan muat turun kedua-dua format dalam pelayar.",
+      },
+      nl: {
+        name: "ICS-CSV-converter",
+        description:
+          "Zet iCalendar-afspraken (.ics) om in een CSV-tabel of maak een agendabestand van CSV-rijen. Bekijk een voorbeeld en download het gewenste formaat in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom ICS og CSV",
+        description:
+          "Konverter iCalendar-hendelser (.ics) til CSV, eller lag en kalenderfil fra CSV-rader. Forhåndsvis og last ned i begge formater i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter ICS i CSV",
+        description:
+          "Konwertuj wydarzenia iCalendar (.ics) na tabelę CSV lub utwórz plik kalendarza z wierszy CSV. Sprawdź podgląd i pobierz wynik w wybranym formacie.",
+      },
+      pt: {
+        name: "Conversor ICS ↔ CSV",
+        description:
+          "Exporte eventos do iCalendar (.ics) para uma planilha CSV ou converta linhas CSV em um arquivo de calendário. Veja a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер ICS ↔ CSV",
+        description:
+          "Преобразуйте события iCalendar (.ics) в таблицу CSV или создайте файл календаря из строк CSV. Просмотрите и скачайте результат в браузере.",
+      },
+      sv: {
+        name: "Konverterare för ICS och CSV",
+        description:
+          "Konvertera iCalendar-händelser (.ics) till CSV eller skapa en kalenderfil från CSV-rader. Förhandsgranska och ladda ner i båda formaten i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง ICS ↔ CSV",
+        description:
+          "แปลงกิจกรรม iCalendar (.ics) เป็นสเปรดชีต CSV หรือสร้างไฟล์ปฏิทินจากข้อมูล CSV ดูตัวอย่างและดาวน์โหลดได้ทั้งสองรูปแบบในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ICS ↔ CSV Dönüştürücü",
+        description:
+          "iCalendar (.ics) etkinliklerini CSV tablosuna dönüştürün veya CSV satırlarından bir takvim dosyası oluşturun. Sonucu tarayıcınızda önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi ICS ↔ CSV",
+        description:
+          "Chuyển sự kiện iCalendar (.ics) thành bảng tính CSV hoặc tạo tệp lịch từ các dòng CSV. Xem trước và tải xuống ở cả hai định dạng ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ICS 与 CSV 互转",
+        description:
+          "将 iCalendar（.ics）日程导出为 CSV 表格，或将 CSV 中的日程转成日历文件。两种格式均可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "ICS 與 CSV 互轉",
+        description:
+          "將 iCalendar（.ics）行程匯出為 CSV 試算表，或將 CSV 資料列轉成行事曆檔案。兩種格式都可在瀏覽器中預覽與下載。",
       },
     },
   },
@@ -36910,117 +37164,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "أداة فصل قنوات الستيريو",
         description:
-          "افصل صوت الستيريو إلى ملفَي WAV أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى كل قناة ونزّلها مباشرةً من متصفحك.",
+          "افصل صوت الستيريو إلى ملفين أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى القناتين ونزّل كلًّا منهما بصيغة WAV أو FLAC أو MP3 من متصفحك.",
       },
       de: {
         name: "Stereokanäle trennen",
         description:
-          "Trenne Stereoaufnahmen in zwei Mono-WAV-Dateien für den linken und rechten Kanal. Höre die Kanäle direkt im Browser an und lade sie einzeln herunter.",
+          "Speichere den linken und rechten Kanal einer Stereoaufnahme als separate Monodateien. Höre beide im Browser an und lade sie als WAV, FLAC oder MP3 herunter.",
       },
       en: {
         name: "Stereo Channel Splitter",
         description:
-          "Split stereo audio into separate left and right mono WAV files. Preview and download each channel directly in your browser.",
+          "Split stereo audio into separate left and right mono files. Preview both channels and download as WAV, FLAC, or MP3 in your browser.",
       },
       es: {
         name: "Separador de canales estéreo",
         description:
-          "Separa el audio estéreo en dos archivos WAV mono, uno para el canal izquierdo y otro para el derecho. Escucha y descarga cada canal desde tu navegador.",
+          "Separa los canales izquierdo y derecho de un archivo estéreo en dos archivos mono. Escúchalos y descárgalos en WAV, FLAC o MP3 desde tu navegador.",
       },
       fr: {
         name: "Séparateur de canaux stéréo",
         description:
-          "Séparez les canaux gauche et droit d’un fichier stéréo en deux WAV mono. Écoutez et téléchargez chaque canal directement dans votre navigateur.",
+          "Séparez les canaux gauche et droit d’un fichier stéréo en deux fichiers mono. Écoutez-les et téléchargez-les en WAV, FLAC ou MP3 dans votre navigateur.",
       },
       he: {
         name: "פיצול ערוצי סטריאו",
         description:
-          "פצלו אודיו בסטריאו לשני קובצי WAV במונו, אחד לערוץ השמאלי ואחד לימני. האזינו לכל ערוץ והורידו אותו ישירות מהדפדפן.",
+          "פצלו אודיו בסטריאו לשני קובצי מונו, אחד לערוץ השמאלי ואחד לימני. האזינו לשני הערוצים והורידו אותם בפורמט WAV, FLAC או MP3 ישירות מהדפדפן.",
       },
       hi: {
         name: "स्टीरियो चैनल अलग करें",
         description:
-          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को दो अलग मोनो WAV फ़ाइलों में सेव करें। हर चैनल को ब्राउज़र में सुनें और डाउनलोड करें।",
+          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को अलग मोनो फ़ाइलों में सेव करें। दोनों चैनल ब्राउज़र में सुनें और WAV, FLAC या MP3 में डाउनलोड करें।",
       },
       id: {
         name: "Pemisah Kanal Audio Stereo",
         description:
-          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file WAV mono. Dengarkan dan unduh setiap kanal langsung di browser Anda.",
+          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file mono. Dengarkan kedua kanal dan unduh dalam format WAV, FLAC, atau MP3 langsung di browser Anda.",
       },
       it: {
         name: "Separa i canali stereo",
         description:
-          "Separa l’audio stereo in due file WAV mono, uno per il canale sinistro e uno per il destro. Ascolta e scarica ogni canale direttamente nel browser.",
+          "Separa i canali sinistro e destro di un file stereo in due file mono. Ascoltali e scaricali in WAV, FLAC o MP3 direttamente nel browser.",
       },
       ja: {
         name: "ステレオ音声の左右チャンネル分割",
         description:
-          "ステレオ音声の左右のチャンネルを個別のモノラルWAVファイルに分割します。ブラウザー上で各チャンネルの試聴とダウンロードができます。",
+          "ステレオ音声の左右のチャンネルを個別のモノラルファイルに分割します。ブラウザー上で各チャンネルを試聴し、WAV、FLAC、MP3形式でダウンロードできます。",
       },
       ko: {
         name: "스테레오 좌우 채널 분리",
         description:
-          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 WAV 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 다운로드할 수 있습니다.",
+          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 WAV, FLAC, MP3로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemisah Saluran Audio Stereo",
         description:
-          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail WAV mono. Dengar pratonton dan muat turun setiap saluran terus dalam pelayar anda.",
+          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail mono. Dengar pratonton kedua-dua saluran dan muat turun sebagai WAV, FLAC atau MP3 terus dalam pelayar anda.",
       },
       nl: {
         name: "Stereokanalen splitsen",
         description:
-          "Splits stereogeluid in twee mono-WAV-bestanden, één voor links en één voor rechts. Beluister en download elk kanaal rechtstreeks in je browser.",
+          "Splits stereogeluid in twee monobestanden, één voor links en één voor rechts. Beluister beide kanalen en download ze als WAV, FLAC of MP3 in je browser.",
       },
       no: {
         name: "Del stereolyd i to monofiler",
         description:
-          "Lagre venstre og høyre kanal fra en stereofil som separate WAV-filer i mono. Lytt til og last ned hver kanal direkte i nettleseren.",
+          "Lagre venstre og høyre kanal fra en stereofil som separate monofiler. Lytt til begge og last ned som WAV, FLAC eller MP3 direkte i nettleseren.",
       },
       pl: {
         name: "Rozdzielanie kanałów stereo",
         description:
-          "Rozdziel nagranie stereo na dwa pliki mono WAV, po jednym dla lewego i prawego kanału. Odsłuchaj i pobierz każdy kanał w przeglądarce.",
+          "Rozdziel nagranie stereo na osobne pliki mono dla lewego i prawego kanału. Odsłuchaj oba kanały i pobierz je jako WAV, FLAC lub MP3 w przeglądarce.",
       },
       pt: {
         name: "Separador de canais estéreo",
         description:
-          "Separe o áudio estéreo em dois ficheiros WAV mono, um para o canal esquerdo e outro para o direito. Ouça e transfira cada canal no navegador.",
+          "Separe os canais esquerdo e direito de um ficheiro estéreo em dois ficheiros mono. Ouça e transfira ambos em WAV, FLAC ou MP3 no navegador.",
       },
       ru: {
         name: "Разделение стереоканалов",
         description:
-          "Разделите стереозапись на два монофайла WAV для левого и правого каналов. Прослушайте и скачайте каждый канал прямо в браузере.",
+          "Разделите стереозапись на два монофайла для левого и правого каналов. Прослушайте оба канала и скачайте их в WAV, FLAC или MP3 прямо в браузере.",
       },
       sv: {
         name: "Separera stereokanaler",
         description:
-          "Spara vänster och höger kanal i en stereoinspelning som separata WAV-filer i mono. Lyssna på och ladda ner varje kanal direkt i webbläsaren.",
+          "Spara vänster och höger kanal i en stereoinspelning som separata monofiler. Lyssna på båda och ladda ner som WAV, FLAC eller MP3 direkt i webbläsaren.",
       },
       th: {
         name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
         description:
-          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์ WAV โมโนคนละไฟล์ ฟังตัวอย่างและดาวน์โหลดแต่ละช่องได้ในเบราว์เซอร์",
+          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์โมโนคนละไฟล์ ฟังตัวอย่างทั้งสองช่องและดาวน์โหลดเป็น WAV, FLAC หรือ MP3 ได้ในเบราว์เซอร์",
       },
       tr: {
         name: "Stereo Kanal Ayırıcı",
         description:
-          "Stereo sesin sol ve sağ kanallarını iki ayrı mono WAV dosyasına ayırın. Her kanalı doğrudan tarayıcınızda dinleyip indirin.",
+          "Stereo sesin sol ve sağ kanallarını ayrı mono dosyalara ayırın. İki kanalı da tarayıcınızda dinleyin ve WAV, FLAC veya MP3 olarak indirin.",
       },
       vi: {
         name: "Tách kênh âm thanh stereo",
         description:
-          "Tách hai kênh trái và phải của âm thanh stereo thành hai tệp WAV mono riêng. Nghe thử và tải xuống từng kênh ngay trong trình duyệt.",
+          "Tách âm thanh stereo thành hai tệp mono riêng cho kênh trái và kênh phải. Nghe thử cả hai kênh và tải xuống dưới dạng WAV, FLAC hoặc MP3 ngay trong trình duyệt.",
       },
       "zh-CN": {
         name: "左右声道拆分",
         description:
-          "把立体声音频的左、右声道分别导出为单声道 WAV 文件，直接在浏览器中试听和下载。",
+          "把立体声音频的左右声道分别导出为单声道文件。直接在浏览器中试听各声道，并下载为 WAV、FLAC 或 MP3。",
       },
       "zh-TW": {
         name: "左右聲道分離",
         description:
-          "將立體聲音訊的左右聲道分別存成單聲道 WAV 檔案，直接在瀏覽器中試聽及下載。",
+          "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
       },
     },
   },
@@ -42208,6 +42462,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  {
+    slug: "vcard-generator",
+    category: "document",
+    icon: "contact-round",
+    tags: [
+      "vcard",
+      "vcf",
+      "contact",
+      "contact card",
+      "address book",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد vCard",
+        description:
+          "أنشئ بطاقة اتصال رقمية ونزّلها بصيغة vCard ‏(.vcf). أضف اسمك ورقم هاتفك وبريدك الإلكتروني وغيرها من بيانات الاتصال مع معاينة فورية.",
+      },
+      de: {
+        name: "vCard-Generator",
+        description:
+          "Erstellen Sie eine digitale Kontaktkarte und laden Sie sie als vCard (.vcf) herunter. Name, Telefon, E-Mail und weitere Kontaktdaten erscheinen direkt in der Vorschau.",
+      },
+      en: {
+        name: "vCard Generator",
+        description:
+          "Create a digital contact card and download it as a vCard (.vcf). Add your name, phone, email, and other contact details with a live preview.",
+      },
+      es: {
+        name: "Generador de vCard",
+        description:
+          "Crea una tarjeta de contacto digital y descárgala como vCard (.vcf). Añade tu nombre, teléfono, correo y otros datos con una vista previa en tiempo real.",
+      },
+      fr: {
+        name: "Générateur de vCard",
+        description:
+          "Créez une fiche de contact et téléchargez-la au format vCard (.vcf). Ajoutez votre nom, votre téléphone, votre e-mail et d’autres coordonnées avec un aperçu en direct.",
+      },
+      he: {
+        name: "מחולל vCard",
+        description:
+          "צרו כרטיס איש קשר דיגיטלי והורידו אותו כקובץ vCard ‏(.vcf). הוסיפו שם, טלפון, דוא״ל ופרטים נוספים, וצפו בכרטיס תוך כדי עריכה.",
+      },
+      hi: {
+        name: "vCard जनरेटर",
+        description:
+          "डिजिटल संपर्क कार्ड बनाएँ और उसे vCard (.vcf) फ़ाइल के रूप में डाउनलोड करें। नाम, फ़ोन, ईमेल और अन्य संपर्क विवरण जोड़ें और साथ-साथ कार्ड देखें।",
+      },
+      id: {
+        name: "Pembuat vCard",
+        description:
+          "Buat kartu kontak digital dan unduh sebagai vCard (.vcf). Tambahkan nama, nomor telepon, email, dan detail kontak lain dengan pratinjau yang diperbarui saat Anda mengetik.",
+      },
+      it: {
+        name: "Generatore di vCard",
+        description:
+          "Crea una scheda di contatto digitale e scaricala come vCard (.vcf). Aggiungi nome, telefono, email e altri recapiti con un’anteprima in tempo reale.",
+      },
+      ja: {
+        name: "vCard 名刺作成ツール",
+        description:
+          "名前や電話番号、メールアドレスなどを入力してデジタル名刺を作成。プレビューを確認して vCard（.vcf）をダウンロードできます。",
+      },
+      ko: {
+        name: "vCard 명함 생성기",
+        description:
+          "이름, 전화번호, 이메일 등 연락처 정보를 입력해 디지털 명함을 만드세요. 미리보기로 확인하고 vCard(.vcf) 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana vCard",
+        description:
+          "Cipta kad kenalan digital dan muat turun sebagai vCard (.vcf). Tambah nama, nombor telefon, e-mel dan butiran kenalan lain dengan pratonton semasa anda menaip.",
+      },
+      nl: {
+        name: "vCard-generator",
+        description:
+          "Maak een digitaal visitekaartje en download het als vCard (.vcf). Voeg je naam, telefoonnummer, e-mailadres en andere contactgegevens toe en zie meteen hoe het kaartje eruitziet.",
+      },
+      no: {
+        name: "vCard-generator",
+        description:
+          "Lag et digitalt kontaktkort og last det ned som vCard (.vcf). Legg til navn, telefonnummer, e-post og andre kontaktopplysninger, og se en forhåndsvisning mens du skriver.",
+      },
+      pl: {
+        name: "Generator vCard",
+        description:
+          "Utwórz cyfrową wizytówkę i pobierz ją jako plik vCard (.vcf). Dodaj imię, nazwisko, telefon, e-mail i inne dane kontaktowe, korzystając z podglądu na żywo.",
+      },
+      pt: {
+        name: "Gerador de vCard",
+        description:
+          "Crie um cartão de contato digital e baixe-o como vCard (.vcf). Adicione nome, telefone, e-mail e outros dados com uma prévia em tempo real.",
+      },
+      ru: {
+        name: "Генератор vCard",
+        description:
+          "Создайте цифровую карточку контакта и скачайте её в формате vCard (.vcf). Добавьте имя, телефон, почту и другие данные и сразу посмотрите, как выглядит карточка.",
+      },
+      sv: {
+        name: "vCard-generator",
+        description:
+          "Skapa ett digitalt kontaktkort och ladda ner det som vCard (.vcf). Lägg till namn, telefonnummer, e-post och andra uppgifter och se direkt hur kortet blir.",
+      },
+      th: {
+        name: "ตัวสร้าง vCard",
+        description:
+          "สร้างบัตรข้อมูลติดต่อดิจิทัลและดาวน์โหลดเป็น vCard (.vcf) เพิ่มชื่อ เบอร์โทร อีเมล และข้อมูลติดต่ออื่น ๆ พร้อมดูตัวอย่างขณะกรอก",
+      },
+      tr: {
+        name: "vCard Oluşturucu",
+        description:
+          "Dijital kişi kartı oluşturun ve vCard (.vcf) dosyası olarak indirin. Adınızı, telefonunuzu, e-posta adresinizi ve diğer iletişim bilgilerinizi eklerken kartınızı önizleyin.",
+      },
+      vi: {
+        name: "Trình tạo vCard",
+        description:
+          "Tạo thẻ liên hệ kỹ thuật số và tải xuống dưới dạng vCard (.vcf). Thêm tên, số điện thoại, email và các thông tin liên hệ khác, rồi xem trước ngay khi nhập.",
+      },
+      "zh-CN": {
+        name: "vCard 名片生成器",
+        description:
+          "创建电子名片并下载为 vCard（.vcf）文件。填写姓名、电话、邮箱等联系信息，实时预览名片。",
+      },
+      "zh-TW": {
+        name: "vCard 名片產生器",
+        description:
+          "建立電子名片，並下載為 vCard（.vcf）檔案。輸入姓名、電話、電子郵件等聯絡資訊，即可即時預覽。",
       },
     },
   },

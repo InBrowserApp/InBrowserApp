@@ -1,0 +1,19 @@
+{
+  "details": "Kontaktopplysninger",
+  "preview": "Forhåndsvisning av kontaktkort",
+  "empty": "Skriv inn et navn for å begynne å lage kontaktkortet.",
+  "firstName": "Fornavn",
+  "lastName": "Etternavn",
+  "phone": "Telefonnummer",
+  "email": "E-post",
+  "company": "Organisasjon",
+  "jobTitle": "Stillingstittel",
+  "website": "Nettsted",
+  "address": "Adresse",
+  "notes": "Notater",
+  "more": "Flere kontaktopplysninger",
+  "copy": "Kopier vCard",
+  "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
+  "download": "Last ned VCF"
+}

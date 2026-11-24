@@ -1,0 +1,4 @@
+{
+  "name": "ICS-CSV-Konverter",
+  "description": "Konvertieren Sie iCalendar-Termine (.ics) in eine CSV-Tabelle oder erstellen Sie eine Kalenderdatei aus CSV-Zeilen. Beide Formate lassen sich im Browser prüfen und herunterladen."
+}

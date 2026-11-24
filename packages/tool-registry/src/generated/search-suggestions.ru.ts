@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Просмотр диаграмм BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "Калькулятор рабочих дней",
     slug: "business-days-calculator",
@@ -661,6 +666,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Просмотр файлов календаря ICS",
     slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "Конвертер ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1666,6 +1676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Валидатор UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "Генератор vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

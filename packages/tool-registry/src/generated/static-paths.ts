@@ -3682,6 +3682,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bpmn-viewer",
+    language: "ar",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "de",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "en",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "es",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "fr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "he",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "hi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "id",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "it",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ja",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ko",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ms",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "nl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "no",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pl",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "pt",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "ru",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "sv",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "th",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "tr",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "vi",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "bpmn-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "business-days-calculator",
     language: "ar",
   },
@@ -12143,6 +12235,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ics-calendar-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "ics-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ics-csv-converter",
     language: "zh-TW",
   },
   {
@@ -30635,6 +30819,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "uuid-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ar",
+  },
+  {
+    slug: "vcard-generator",
+    language: "de",
+  },
+  {
+    slug: "vcard-generator",
+    language: "en",
+  },
+  {
+    slug: "vcard-generator",
+    language: "es",
+  },
+  {
+    slug: "vcard-generator",
+    language: "fr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "he",
+  },
+  {
+    slug: "vcard-generator",
+    language: "hi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "id",
+  },
+  {
+    slug: "vcard-generator",
+    language: "it",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ja",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ko",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ms",
+  },
+  {
+    slug: "vcard-generator",
+    language: "nl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "no",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pt",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ru",
+  },
+  {
+    slug: "vcard-generator",
+    language: "sv",
+  },
+  {
+    slug: "vcard-generator",
+    language: "th",
+  },
+  {
+    slug: "vcard-generator",
+    language: "tr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "vi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-generator",
     language: "zh-TW",
   },
   {

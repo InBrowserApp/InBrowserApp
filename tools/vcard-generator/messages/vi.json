@@ -1,0 +1,19 @@
+{
+  "details": "Thông tin liên hệ",
+  "preview": "Xem trước thẻ liên hệ",
+  "empty": "Nhập tên hoặc họ để tạo thẻ liên hệ.",
+  "firstName": "Tên",
+  "lastName": "Họ",
+  "phone": "Số điện thoại",
+  "email": "Email",
+  "company": "Công ty",
+  "jobTitle": "Chức danh",
+  "website": "Trang web",
+  "address": "Địa chỉ",
+  "notes": "Ghi chú",
+  "more": "Thêm thông tin liên hệ",
+  "copy": "Sao chép vCard",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "download": "Tải VCF"
+}

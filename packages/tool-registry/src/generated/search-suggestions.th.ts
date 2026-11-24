@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดู BPMN",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "เครื่องคำนวณวันทำงาน",
     slug: "business-days-calculator",
@@ -661,6 +666,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "โปรแกรมดูไฟล์ปฏิทิน ICS",
     slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ตัวแปลง ICS ↔ CSV",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1666,6 +1676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวตรวจสอบ UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "ตัวสร้าง vCard",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

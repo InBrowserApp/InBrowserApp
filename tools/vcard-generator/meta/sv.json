@@ -1,0 +1,4 @@
+{
+  "name": "vCard-generator",
+  "description": "Skapa ett digitalt kontaktkort och ladda ner det som vCard (.vcf). Lägg till namn, telefonnummer, e-post och andra uppgifter och se direkt hur kortet blir."
+}

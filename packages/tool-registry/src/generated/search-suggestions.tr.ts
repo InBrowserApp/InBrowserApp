@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN Görüntüleyici",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "İş Günü Hesaplayıcı",
     slug: "business-days-calculator",
@@ -661,6 +666,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "ICS Takvim Dosyası Görüntüleyici",
     slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS ↔ CSV Dönüştürücü",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1666,6 +1676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Doğrulayıcı",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard Oluşturucu",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

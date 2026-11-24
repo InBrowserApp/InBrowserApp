@@ -1,0 +1,20 @@
+{
+  "open": "Buka file BPMN",
+  "replace": "Ganti file BPMN",
+  "clear": "Tutup diagram",
+  "reader": "Penampil BPMN",
+  "privacy": "File tetap di perangkat Anda.",
+  "focus": "Buka tampilan layar penuh",
+  "exitFocus": "Keluar dari layar penuh",
+  "releaseFile": "Lepaskan untuk membuka file BPMN",
+  "drop": "Letakkan file BPMN di sini",
+  "formats": "Buka file .bpmn atau .xml.",
+  "example": "Coba contoh",
+  "diagram": "Diagram BPMN",
+  "loading": "Membuka diagram…",
+  "invalid": "Diagram tidak dapat dibuka. Pilih file XML BPMN 2.0 yang valid.",
+  "noLayout": "File BPMN ini tidak memuat data tata letak diagram. Ekspor lagi dari alat pemodelan dengan menyertakan tata letak, lalu buka kembali.",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "fit": "Tampilkan seluruh diagram"
+}

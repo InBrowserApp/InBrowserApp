@@ -203,6 +203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "BPMN 뷰어",
+    slug: "bpmn-viewer",
+  },
+  {
     category: "time",
     name: "영업일 계산기",
     slug: "business-days-calculator",
@@ -661,6 +666,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "ICS 캘린더 파일 뷰어",
     slug: "ics-calendar-viewer",
+  },
+  {
+    category: "time",
+    name: "ICS·CSV 변환기",
+    slug: "ics-csv-converter",
   },
   {
     category: "image",
@@ -1666,6 +1676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 검증기",
     slug: "uuid-validator",
+  },
+  {
+    category: "document",
+    name: "vCard 명함 생성기",
+    slug: "vcard-generator",
   },
   {
     category: "misc",

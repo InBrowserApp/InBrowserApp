@@ -1,0 +1,28 @@
+{
+  "openFile": "打开文件",
+  "sample": "试用示例",
+  "input": "源文本",
+  "copy": "复制",
+  "copied": "已复制",
+  "copyFailed": "复制失败",
+  "readError": "无法读取文件。请重新选择文件，或粘贴文本。",
+  "result": "转换结果",
+  "empty": "打开文件或粘贴文本，转换后即可在这里查看结果。",
+  "convert": "转换",
+  "preview": "结果预览",
+  "invalid": "请检查文件格式并参考下方示例，然后重试。",
+  "noRows": "没有可转换的记录。请检查输入内容及其列名。",
+  "rowError": "请检查 CSV 第 {row} 行的值。",
+  "count": "记录数：{count}",
+  "paste": "在此粘贴文件内容",
+  "forward": "ICS 转 CSV",
+  "reverse": "CSV 转 ICS",
+  "downloadForward": "下载 CSV",
+  "downloadReverse": "下载 ICS",
+  "columns": {
+    "Title": "摘要",
+    "Start": "开始日期",
+    "End": "结束日期",
+    "Location": "地点"
+  }
+}

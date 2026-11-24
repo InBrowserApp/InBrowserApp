@@ -2,6 +2,7 @@ import type { LucideProps } from "lucide-react"
 import type { ComponentType } from "react"
 
 import {
+  ArrowLeftRight,
   Binary,
   Blocks,
   Bookmark,
@@ -17,6 +18,7 @@ import {
   Clock3,
   Compass,
   Columns2,
+  ContactRound,
   CreditCard,
   Cpu,
   Database,
@@ -50,9 +52,11 @@ import {
   Text,
   Video,
   Wrench,
+  Workflow,
 } from "@workspace/ui/icons"
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
+  "arrow-left-right": ArrowLeftRight,
   archive: FileArchive,
   "calendar-days": CalendarDays,
   binary: Binary,
@@ -68,6 +72,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "chart-no-axes-column-increasing": ChartNoAxesColumnIncreasing,
   clock3: Clock3,
   "columns-2": Columns2,
+  "contact-round": ContactRound,
   "credit-card": CreditCard,
   compass: Compass,
   cpu: Cpu,
@@ -101,6 +106,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   text: Text,
   video: Video,
   wrench: Wrench,
+  workflow: Workflow,
 }
 
 type ToolIconProps = LucideProps & {

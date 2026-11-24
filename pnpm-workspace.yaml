@@ -22,6 +22,7 @@ catalog:
   pinyin-pro: 3.29.5
   djvu-rs: 0.46.0
   mediabunny: 1.66.0
+  "@mediabunny/flac-encoder": 1.66.0
   onnxruntime-web: 1.31.1
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
@@ -226,6 +227,7 @@ catalog:
   ajv-formats: ^3.0.1
   astro: ^7.4.12
   bcrypt-ts: ^9.0.3
+  bpmn-js: 18.33.1
   basic-ftp: ^6.2.6
   bidi-js: 1.0.3
   bip39: ^3.1.2

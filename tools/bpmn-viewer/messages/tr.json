@@ -1,0 +1,20 @@
+{
+  "open": "BPMN dosyası aç",
+  "replace": "BPMN dosyasını değiştir",
+  "clear": "Diyagramı kapat",
+  "reader": "BPMN görüntüleyici",
+  "privacy": "Dosyalar cihazınızda kalır.",
+  "focus": "Tam ekran görünümünü aç",
+  "exitFocus": "Tam ekrandan çık",
+  "releaseFile": "BPMN dosyasını açmak için bırakın",
+  "drop": "BPMN dosyasını buraya bırakın",
+  "formats": ".bpmn veya .xml dosyası açın.",
+  "example": "Örnek dene",
+  "diagram": "BPMN diyagramı",
+  "loading": "Diyagram açılıyor…",
+  "invalid": "Diyagram açılamadı. Geçerli bir BPMN 2.0 XML dosyası seçin.",
+  "noLayout": "Bu BPMN dosyasında diyagram yerleşimi yok. Modelleme aracınızdan yerleşim verilerini de içerecek şekilde dışa aktarın ve yeniden açın.",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "fit": "Diyagramı ekrana sığdır"
+}

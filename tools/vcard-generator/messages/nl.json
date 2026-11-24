@@ -1,0 +1,19 @@
+{
+  "details": "Contactgegevens",
+  "preview": "Voorbeeld van visitekaartje",
+  "empty": "Vul een naam in om je digitale visitekaartje te maken.",
+  "firstName": "Voornaam",
+  "lastName": "Achternaam",
+  "phone": "Telefoonnummer",
+  "email": "E-mailadres",
+  "company": "Bedrijf",
+  "jobTitle": "Functie",
+  "website": "Website",
+  "address": "Adres",
+  "notes": "Notities",
+  "more": "Meer contactgegevens",
+  "copy": "vCard kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "VCF downloaden"
+}

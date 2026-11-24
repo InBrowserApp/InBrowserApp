@@ -1,0 +1,28 @@
+{
+  "openFile": "Datei öffnen",
+  "sample": "Beispiel ausprobieren",
+  "input": "Quelltext",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "readError": "Die Datei konnte nicht gelesen werden. Wählen Sie sie erneut aus oder fügen Sie den Text ein.",
+  "result": "Konvertierungsergebnis",
+  "empty": "Öffnen Sie eine Datei oder fügen Sie Text ein und starten Sie die Konvertierung. Das Ergebnis erscheint hier.",
+  "convert": "Konvertieren",
+  "preview": "Ergebnisvorschau",
+  "invalid": "Prüfen Sie das Dateiformat und die Beispiele unten und versuchen Sie es erneut.",
+  "noRows": "Keine Einträge zum Konvertieren. Prüfen Sie die Eingabe und die Spaltenüberschriften.",
+  "rowError": "Prüfen Sie die Werte in CSV-Zeile {row}.",
+  "count": "Einträge: {count}",
+  "paste": "Dateiinhalt hier einfügen",
+  "forward": "ICS in CSV",
+  "reverse": "CSV in ICS",
+  "downloadForward": "CSV herunterladen",
+  "downloadReverse": "ICS herunterladen",
+  "columns": {
+    "Title": "Zusammenfassung",
+    "Start": "Startdatum",
+    "End": "Enddatum",
+    "Location": "Ort"
+  }
+}
