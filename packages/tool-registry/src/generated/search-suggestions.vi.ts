@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Chuyển chữ Hán sang Pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Bộ Chọn Màu",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Công cụ tính lãi kép",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Vân tay khóa công khai SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Tách kênh âm thanh stereo",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

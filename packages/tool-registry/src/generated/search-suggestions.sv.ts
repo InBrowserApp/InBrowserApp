@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Omvandlare för förenklad och traditionell kinesiska",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Konvertera kinesiska till pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Färgväljare",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Ränta på ränta-kalkylator",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Fingeravtryck för publik SSH-nyckel",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Separera stereokanaler",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

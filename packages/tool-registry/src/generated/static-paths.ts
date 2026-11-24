@@ -4694,6 +4694,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chinese-text-converter",
+    language: "ar",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "de",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "en",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "es",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "fr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "he",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "hi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "id",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "it",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ja",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ko",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ms",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "nl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "no",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pl",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "pt",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "ru",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "sv",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "th",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "tr",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "vi",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chinese-text-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-to-pinyin",
     language: "ar",
   },
@@ -5703,6 +5795,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "color-picker",
+    language: "zh-TW",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ar",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "de",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "en",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "es",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "fr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "he",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "hi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "id",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "it",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ja",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ko",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ms",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "nl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "no",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pl",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "pt",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "ru",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "sv",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "th",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "tr",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "vi",
+  },
+  {
+    slug: "compound-interest-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "compound-interest-calculator",
     language: "zh-TW",
   },
   {
@@ -26127,6 +26311,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ssh-public-key-fingerprint",
+    language: "zh-TW",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ar",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "de",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "en",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "es",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "fr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "he",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "hi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "id",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "it",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ja",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ko",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ms",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "nl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "no",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pt",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ru",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "sv",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "th",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "tr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "vi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stereo-channel-splitter",
     language: "zh-TW",
   },
   {

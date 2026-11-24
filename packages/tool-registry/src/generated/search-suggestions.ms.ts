@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Penukar Aksara Cina Ringkas dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Penukar Aksara Cina kepada Pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator faedah kompaun",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Cap Jari Kunci Awam SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Pemisah Saluran Audio Stereo",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

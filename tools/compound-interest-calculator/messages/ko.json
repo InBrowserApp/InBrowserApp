@@ -1,0 +1,33 @@
+{
+  "assumptions": "저축 계획",
+  "initialAmount": "시작 잔액",
+  "monthlyContribution": "월 납입액",
+  "annualRate": "연이율",
+  "years": "저축 기간",
+  "yearsUnit": "년",
+  "frequency": "복리 주기",
+  "frequencies": {
+    "daily": "매일",
+    "monthly": "매월",
+    "quarterly": "분기별",
+    "semiannually": "연 2회",
+    "annually": "매년"
+  },
+  "timing": "월 납입 시점",
+  "timings": {
+    "end": "월말",
+    "start": "월초"
+  },
+  "reset": "예시 값으로 재설정",
+  "endingBalance": "예상 잔액",
+  "totalContributed": "총 납입액",
+  "interestEarned": "누적 이자",
+  "growth": "저축액 변화",
+  "breakdown": "연도별 내역",
+  "year": "경과 연수",
+  "amountError": "0 이상의 금액을 입력하세요.",
+  "rateError": "연이율을 −100%에서 100% 사이로 입력하세요.",
+  "yearsError": "1에서 100 사이의 정수를 입력하세요.",
+  "resultError": "금액이 너무 커서 계산할 수 없습니다. 더 작은 값을 입력하세요.",
+  "resultPending": "표시된 입력란을 확인하면 예상 결과를 볼 수 있습니다."
+}

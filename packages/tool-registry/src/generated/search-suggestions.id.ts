@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Konverter Hanzi ke Pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Pemilih Warna",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator bunga majemuk",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Sidik Jari Kunci Publik SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Pemisah Kanal Audio Stereo",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

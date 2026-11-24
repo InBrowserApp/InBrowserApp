@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Wybierz plik stereo",
+  "dropHint": "lub upuść tutaj plik audio",
+  "formats": "WAV, MP3, M4A, FLAC, OGG i inne formaty audio obsługiwane przez przeglądarkę",
+  "privacy": "Nagranie pozostaje na Twoim urządzeniu.",
+  "changeFile": "Zmień plik",
+  "processing": "Rozdzielanie kanałów stereo…",
+  "ready": "Lewy i prawy kanał są gotowe.",
+  "left": "Lewy kanał",
+  "right": "Prawy kanał",
+  "downloadLeft": "Pobierz lewy kanał (WAV)",
+  "downloadRight": "Pobierz prawy kanał (WAV)",
+  "monoError": "Ten plik ma jeden kanał audio. Wybierz plik stereo z lewym i prawym kanałem.",
+  "multichannelError": "Ten plik ma więcej niż dwa kanały audio. Wybierz dwukanałowy plik stereo.",
+  "readError": "Nie udało się otworzyć pliku audio. Wybierz inny plik lub wyeksportuj ten jako stereo WAV."
+}

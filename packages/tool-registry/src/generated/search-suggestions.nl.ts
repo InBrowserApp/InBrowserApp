@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Chinees naar pinyin omzetten",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Kleurkiezer",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculator voor samengestelde rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Vingerafdruk van openbare SSH-sleutel",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Stereokanalen splitsen",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

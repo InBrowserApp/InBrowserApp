@@ -100,6 +100,7 @@ export {
   Scissors,
   Shield,
   Sparkles,
+  Split,
   Square,
   Table2,
   Terminal,

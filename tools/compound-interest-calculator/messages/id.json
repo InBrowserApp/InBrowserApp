@@ -1,0 +1,33 @@
+{
+  "assumptions": "Rencana menabung",
+  "initialAmount": "Saldo awal",
+  "monthlyContribution": "Setoran bulanan",
+  "annualRate": "Suku bunga tahunan",
+  "years": "Jangka waktu",
+  "yearsUnit": "tahun",
+  "frequency": "Frekuensi pemajemukan",
+  "frequencies": {
+    "daily": "Harian",
+    "monthly": "Bulanan",
+    "quarterly": "Triwulanan",
+    "semiannually": "Dua kali setahun",
+    "annually": "Tahunan"
+  },
+  "timing": "Waktu setoran bulanan",
+  "timings": {
+    "end": "Akhir bulan",
+    "start": "Awal bulan"
+  },
+  "reset": "Kembalikan nilai contoh",
+  "endingBalance": "Perkiraan saldo",
+  "totalContributed": "Total setoran",
+  "interestEarned": "Bunga terkumpul",
+  "growth": "Pertumbuhan tabungan",
+  "breakdown": "Rincian tahunan",
+  "year": "Tahun",
+  "amountError": "Masukkan jumlah 0 atau lebih.",
+  "rateError": "Masukkan suku bunga tahunan dari −100% hingga 100%.",
+  "yearsError": "Masukkan bilangan bulat dari 1 hingga 100.",
+  "resultError": "Jumlahnya terlalu besar untuk dihitung. Coba nilai yang lebih kecil.",
+  "resultPending": "Periksa kolom yang disorot untuk melihat perkiraan Anda."
+}

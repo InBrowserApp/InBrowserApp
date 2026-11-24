@@ -1,0 +1,16 @@
+{
+  "chooseFile": "选择立体声音频",
+  "dropHint": "也可以将音频文件拖到这里",
+  "formats": "WAV、MP3、M4A、FLAC、OGG 等浏览器支持的音频格式",
+  "privacy": "音频文件仅在你的设备上处理。",
+  "changeFile": "更换文件",
+  "processing": "正在拆分左右声道…",
+  "ready": "左右声道已拆分完成。",
+  "left": "左声道",
+  "right": "右声道",
+  "downloadLeft": "下载左声道 WAV",
+  "downloadRight": "下载右声道 WAV",
+  "monoError": "此文件只有一个声道。请选择包含左右声道的立体声文件。",
+  "multichannelError": "此文件的声道数超过两个。请选择双声道立体声文件。",
+  "readError": "无法打开此音频文件。请尝试其他文件，或先将此文件导出为立体声 WAV。"
+}

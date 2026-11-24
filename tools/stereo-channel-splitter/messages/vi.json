@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Chọn tệp âm thanh stereo",
+  "dropHint": "hoặc thả tệp âm thanh vào đây",
+  "formats": "WAV, MP3, M4A, FLAC, OGG và các định dạng âm thanh khác mà trình duyệt hỗ trợ",
+  "privacy": "Âm thanh chỉ được xử lý trên thiết bị của bạn.",
+  "changeFile": "Đổi tệp",
+  "processing": "Đang tách kênh âm thanh stereo…",
+  "ready": "Kênh trái và kênh phải đã sẵn sàng.",
+  "left": "Kênh trái",
+  "right": "Kênh phải",
+  "downloadLeft": "Tải WAV kênh trái",
+  "downloadRight": "Tải WAV kênh phải",
+  "monoError": "Tệp này chỉ có một kênh âm thanh. Hãy chọn tệp stereo có cả kênh trái và kênh phải.",
+  "multichannelError": "Tệp này có hơn hai kênh âm thanh. Hãy chọn tệp stereo hai kênh.",
+  "readError": "Không mở được tệp âm thanh này. Hãy thử một tệp khác hoặc xuất tệp này sang WAV stereo."
+}

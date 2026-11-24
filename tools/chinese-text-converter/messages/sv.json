@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Omvandlingsriktning",
+  "toTraditional": "Förenklad → Traditionell",
+  "toSimplified": "Traditionell → Förenklad",
+  "variantLabel": "Variant av traditionell kinesiska",
+  "variants": {
+    "t": "Traditionell (standard)",
+    "tw": "Taiwan (tecken)",
+    "twp": "Taiwan (tecken och ordval)",
+    "hk": "Hongkong (tecken)"
+  },
+  "inputLabel": "Originaltext",
+  "inputPlaceholder": "Klistra in eller skriv kinesisk text",
+  "exampleLabel": "Prova ett exempel",
+  "clearLabel": "Rensa",
+  "outputLabel": "Omvandlad text",
+  "outputPlaceholder": "Resultatet visas här",
+  "copyLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "copyFailedLabel": "Kunde inte kopiera",
+  "loading": "Ordlistan laddas …",
+  "loadError": "Ordlistan kunde inte laddas. Kopiera originaltexten innan du laddar om sidan."
+}

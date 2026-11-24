@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Convertisseur de chinois simplifié et traditionnel",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Convertisseur de chinois en pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Sélecteur de Couleurs",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Calculateur d’intérêts composés",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Empreinte de clé publique SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Séparateur de canaux stéréo",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

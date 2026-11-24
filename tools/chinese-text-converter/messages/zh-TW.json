@@ -1,0 +1,23 @@
+{
+  "directionLabel": "轉換方向",
+  "toTraditional": "簡體轉繁體",
+  "toSimplified": "繁體轉簡體",
+  "variantLabel": "繁體版本",
+  "variants": {
+    "t": "通用繁體",
+    "tw": "台灣字形",
+    "twp": "台灣字形與用語",
+    "hk": "香港字形"
+  },
+  "inputLabel": "原文",
+  "inputPlaceholder": "貼上或輸入中文",
+  "exampleLabel": "試用範例",
+  "clearLabel": "清除",
+  "outputLabel": "轉換結果",
+  "outputPlaceholder": "結果會顯示在這裡",
+  "copyLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "copyFailedLabel": "複製失敗",
+  "loading": "正在載入轉換詞典…",
+  "loadError": "詞典載入失敗。重新載入頁面前，請先複製原文。"
+}

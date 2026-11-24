@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Konverter kinesisk til pinyin",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Fargevelger",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Kalkulator for rentes rente",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH offentlig nøkkelfingeravtrykk",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Del stereolyd i to monofiler",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

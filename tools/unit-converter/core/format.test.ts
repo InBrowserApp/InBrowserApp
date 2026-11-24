@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest"
 
 import { DEFAULT_PRECISION, formatNumber, significantDigits } from "./format"
-import { parseNumber } from "./parse"
+import { parseNumber } from "@workspace/localized-number"
 
 describe("formatNumber", () => {
   test("returns an empty string for non-finite values", () => {

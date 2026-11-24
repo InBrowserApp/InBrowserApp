@@ -1,0 +1,4 @@
+{
+  "name": "Del stereolyd i to monofiler",
+  "description": "Lagre venstre og høyre kanal fra en stereofil som separate WAV-filer i mono. Lytt til og last ned hver kanal direkte i nettleseren."
+}

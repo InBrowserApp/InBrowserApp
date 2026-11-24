@@ -1,0 +1,4 @@
+{
+  "name": "Separa i canali stereo",
+  "description": "Separa l’audio stereo in due file WAV mono, uno per il canale sinistro e uno per il destro. Ascolta e scarica ogni canale direttamente nel browser."
+}

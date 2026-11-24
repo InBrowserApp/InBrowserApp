@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Конвертер упрощённых и традиционных китайских иероглифов",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Конвертер китайского текста в пиньинь",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Пипетка Цвета",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Калькулятор сложного процента",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Отпечаток открытого ключа SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Разделение стереоканалов",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

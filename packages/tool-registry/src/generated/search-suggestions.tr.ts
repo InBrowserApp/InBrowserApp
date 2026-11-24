@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "Çinceden Pinyin’e Dönüştürücü",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Renk Seçici",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "Bileşik Faiz Hesaplayıcı",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH Ortak Anahtar Parmak İzi",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "Stereo Kanal Ayırıcı",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

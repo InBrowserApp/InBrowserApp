@@ -68,6 +68,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
+  "chinese-text-converter": () => import("@tool/chinese-text-converter/page"),
   "chinese-to-pinyin": () => import("@tool/chinese-to-pinyin/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
@@ -82,6 +83,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
+  "compound-interest-calculator": () =>
+    import("@tool/compound-interest-calculator/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "crc-checksum-calculator": () => import("@tool/crc-checksum-calculator/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
@@ -357,6 +360,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ssh-key-generator": () => import("@tool/ssh-key-generator/page"),
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
+  "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),

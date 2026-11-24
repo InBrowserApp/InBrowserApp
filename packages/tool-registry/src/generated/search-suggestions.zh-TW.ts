@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "繁簡轉換器",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "漢字轉拼音",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "取色器",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "複利計算機",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH 公開金鑰指紋",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "左右聲道分離",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

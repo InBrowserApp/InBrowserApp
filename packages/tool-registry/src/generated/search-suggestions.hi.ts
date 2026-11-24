@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "चीनी से पिनयिन कन्वर्टर",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "कलर पिकर",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH सार्वजनिक कुंजी फिंगरप्रिंट",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "स्टीरियो चैनल अलग करें",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

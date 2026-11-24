@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Velg stereofil",
+  "dropHint": "eller slipp en lydfil her",
+  "formats": "WAV, MP3, M4A, FLAC, OGG og andre lydformater nettleseren støtter",
+  "privacy": "Lydfilen blir på enheten din.",
+  "changeFile": "Bytt fil",
+  "processing": "Deler opp stereolyden…",
+  "ready": "Venstre og høyre kanal er klare.",
+  "left": "Venstre kanal",
+  "right": "Høyre kanal",
+  "downloadLeft": "Last ned venstre kanal (WAV)",
+  "downloadRight": "Last ned høyre kanal (WAV)",
+  "monoError": "Denne filen har bare én lydkanal. Velg en stereofil med venstre og høyre kanal.",
+  "multichannelError": "Denne filen har mer enn to lydkanaler. Velg en stereofil med to kanaler.",
+  "readError": "Kunne ikke åpne lydfilen. Prøv en annen fil eller eksporter den som stereo-WAV."
+}

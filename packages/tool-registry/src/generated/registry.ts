@@ -6567,6 +6567,143 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
+  {
     slug: "chinese-to-pinyin",
     category: "text",
     icon: "languages",
@@ -7966,6 +8103,135 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
       },
     },
   },
@@ -35963,6 +36229,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "stereo-channel-splitter",
+    category: "misc",
+    icon: "split",
+    tags: [
+      "audio",
+      "stereo",
+      "mono",
+      "split",
+      "channel",
+      "left",
+      "right",
+      "wav",
+      "mp3",
+    ],
+    locales: {
+      ar: {
+        name: "أداة فصل قنوات الستيريو",
+        description:
+          "افصل صوت الستيريو إلى ملفَي WAV أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى كل قناة ونزّلها مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "Stereokanäle trennen",
+        description:
+          "Trenne Stereoaufnahmen in zwei Mono-WAV-Dateien für den linken und rechten Kanal. Höre die Kanäle direkt im Browser an und lade sie einzeln herunter.",
+      },
+      en: {
+        name: "Stereo Channel Splitter",
+        description:
+          "Split stereo audio into separate left and right mono WAV files. Preview and download each channel directly in your browser.",
+      },
+      es: {
+        name: "Separador de canales estéreo",
+        description:
+          "Separa el audio estéreo en dos archivos WAV mono, uno para el canal izquierdo y otro para el derecho. Escucha y descarga cada canal desde tu navegador.",
+      },
+      fr: {
+        name: "Séparateur de canaux stéréo",
+        description:
+          "Séparez les canaux gauche et droit d’un fichier stéréo en deux WAV mono. Écoutez et téléchargez chaque canal directement dans votre navigateur.",
+      },
+      he: {
+        name: "פיצול ערוצי סטריאו",
+        description:
+          "פצלו אודיו בסטריאו לשני קובצי WAV במונו, אחד לערוץ השמאלי ואחד לימני. האזינו לכל ערוץ והורידו אותו ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "स्टीरियो चैनल अलग करें",
+        description:
+          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को दो अलग मोनो WAV फ़ाइलों में सेव करें। हर चैनल को ब्राउज़र में सुनें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemisah Kanal Audio Stereo",
+        description:
+          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file WAV mono. Dengarkan dan unduh setiap kanal langsung di browser Anda.",
+      },
+      it: {
+        name: "Separa i canali stereo",
+        description:
+          "Separa l’audio stereo in due file WAV mono, uno per il canale sinistro e uno per il destro. Ascolta e scarica ogni canale direttamente nel browser.",
+      },
+      ja: {
+        name: "ステレオ音声の左右チャンネル分割",
+        description:
+          "ステレオ音声の左右のチャンネルを個別のモノラルWAVファイルに分割します。ブラウザー上で各チャンネルの試聴とダウンロードができます。",
+      },
+      ko: {
+        name: "스테레오 좌우 채널 분리",
+        description:
+          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 WAV 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemisah Saluran Audio Stereo",
+        description:
+          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail WAV mono. Dengar pratonton dan muat turun setiap saluran terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Stereokanalen splitsen",
+        description:
+          "Splits stereogeluid in twee mono-WAV-bestanden, één voor links en één voor rechts. Beluister en download elk kanaal rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Del stereolyd i to monofiler",
+        description:
+          "Lagre venstre og høyre kanal fra en stereofil som separate WAV-filer i mono. Lytt til og last ned hver kanal direkte i nettleseren.",
+      },
+      pl: {
+        name: "Rozdzielanie kanałów stereo",
+        description:
+          "Rozdziel nagranie stereo na dwa pliki mono WAV, po jednym dla lewego i prawego kanału. Odsłuchaj i pobierz każdy kanał w przeglądarce.",
+      },
+      pt: {
+        name: "Separador de canais estéreo",
+        description:
+          "Separe o áudio estéreo em dois ficheiros WAV mono, um para o canal esquerdo e outro para o direito. Ouça e transfira cada canal no navegador.",
+      },
+      ru: {
+        name: "Разделение стереоканалов",
+        description:
+          "Разделите стереозапись на два монофайла WAV для левого и правого каналов. Прослушайте и скачайте каждый канал прямо в браузере.",
+      },
+      sv: {
+        name: "Separera stereokanaler",
+        description:
+          "Spara vänster och höger kanal i en stereoinspelning som separata WAV-filer i mono. Lyssna på och ladda ner varje kanal direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
+        description:
+          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์ WAV โมโนคนละไฟล์ ฟังตัวอย่างและดาวน์โหลดแต่ละช่องได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Stereo Kanal Ayırıcı",
+        description:
+          "Stereo sesin sol ve sağ kanallarını iki ayrı mono WAV dosyasına ayırın. Her kanalı doğrudan tarayıcınızda dinleyip indirin.",
+      },
+      vi: {
+        name: "Tách kênh âm thanh stereo",
+        description:
+          "Tách hai kênh trái và phải của âm thanh stereo thành hai tệp WAV mono riêng. Nghe thử và tải xuống từng kênh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "左右声道拆分",
+        description:
+          "把立体声音频的左、右声道分别导出为单声道 WAV 文件，直接在浏览器中试听和下载。",
+      },
+      "zh-TW": {
+        name: "左右聲道分離",
+        description:
+          "將立體聲音訊的左右聲道分別存成單聲道 WAV 檔案，直接在瀏覽器中試聽及下載。",
+      },
+    },
+  },
+  {
     slug: "stopwatch",
     category: "developer",
     icon: "wrench",
@@ -49895,6 +50294,143 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "chinese-text-converter": {
+    slug: "chinese-text-converter",
+    category: "text",
+    icon: "languages",
+    tags: [
+      "Chinese",
+      "simplified",
+      "traditional",
+      "OpenCC",
+      "Taiwan",
+      "Hong Kong",
+      "简繁转换",
+      "繁简转换",
+      "简体转繁体",
+      "繁体转简体",
+      "繁簡轉換",
+      "簡體轉繁體",
+      "繁體轉簡體",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الصينية المبسطة والتقليدية",
+        description:
+          "حوّل النص بين الصينية المبسطة والتقليدية. اختر الأشكال القياسية أو أشكال تايوان مع إمكانية تبديل المفردات أو أشكال هونغ كونغ. يبقى النص في متصفحك.",
+      },
+      de: {
+        name: "Konverter für vereinfachtes und traditionelles Chinesisch",
+        description:
+          "Wandle vereinfachtes und traditionelles Chinesisch ineinander um. Wähle Standardzeichen, Zeichen für Taiwan oder Hongkong und optional taiwanische Begriffe. Dein Text bleibt im Browser.",
+      },
+      en: {
+        name: "Simplified and Traditional Chinese Converter",
+        description:
+          "Convert between Simplified and Traditional Chinese in your browser. Choose standard Traditional, Taiwan forms with optional local vocabulary, or Hong Kong forms.",
+      },
+      es: {
+        name: "Conversor de chino simplificado y tradicional",
+        description:
+          "Convierte texto de chino simplificado a tradicional y viceversa. Elige la forma estándar, los caracteres de Taiwán con o sin vocabulario local, o los de Hong Kong. Tu texto se queda en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de chinois simplifié et traditionnel",
+        description:
+          "Convertissez du chinois simplifié en chinois traditionnel et inversement. Choisissez la forme standard, les caractères de Taïwan avec ou sans le vocabulaire local, ou les caractères de Hong Kong. Votre texte reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר בין סינית מפושטת לסינית מסורתית",
+        description:
+          "המירו טקסט בין סינית מפושטת למסורתית. אפשר לבחור בכתב מסורתי תקני, בכתב של טאיוואן עם אפשרות להתאמת אוצר המילים, או בכתב של הונג קונג. הטקסט נשאר בדפדפן.",
+      },
+      hi: {
+        name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+        description:
+          "चीनी टेक्स्ट को सरलीकृत से पारंपरिक लिपि में या उलटी दिशा में बदलें। मानक पारंपरिक, ताइवान या हांगकांग के अक्षर चुनें। ताइवानी शब्दावली का विकल्प भी है। टेक्स्ट आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Konverter Aksara Tionghoa Sederhana dan Tradisional",
+        description:
+          "Ubah aksara Tionghoa sederhana ke tradisional dan sebaliknya. Pilih bentuk tradisional standar, gaya Taiwan dengan atau tanpa kosakata setempat, atau gaya Hong Kong. Teks tetap di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di cinese semplificato e tradizionale",
+        description:
+          "Converti testi dal cinese semplificato al cinese tradizionale e viceversa. Scegli la forma standard, i caratteri di Taiwan con o senza il lessico locale, oppure quelli di Hong Kong. Il testo rimane nel browser.",
+      },
+      ja: {
+        name: "中国語の簡体字・繁体字変換",
+        description:
+          "中国語の簡体字と繁体字を相互変換します。標準繁体字、台湾の字形・用語、香港の字形を選べます。テキストはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "중국어 간체·번체 변환기",
+        description:
+          "중국어 간체와 번체를 서로 변환합니다. 표준 번체, 대만 글자와 용어, 홍콩 글자를 선택할 수 있습니다. 텍스트는 브라우저에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar Aksara Cina Ringkas dan Tradisional",
+        description:
+          "Tukar aksara Cina ringkas kepada tradisional dan sebaliknya. Pilih bentuk tradisional standard, gaya Taiwan dengan atau tanpa kosa kata tempatan, atau gaya Hong Kong. Teks kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Omzetter voor vereenvoudigd en traditioneel Chinees",
+        description:
+          "Zet vereenvoudigd Chinees om naar traditioneel Chinees en andersom. Kies standaardtekens, tekens uit Taiwan of Hongkong en desgewenst ook woordgebruik uit Taiwan. Je tekst blijft in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom forenklet og tradisjonell kinesisk",
+        description:
+          "Konverter forenklet kinesisk til tradisjonell kinesisk og tilbake. Velg standardtegn, tegn fra Taiwan eller Hongkong og eventuelt taiwansk ordvalg. Teksten blir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter uproszczonych i tradycyjnych znaków chińskich",
+        description:
+          "Zamieniaj uproszczone znaki chińskie na tradycyjne i odwrotnie. Wybierz zapis standardowy, tajwańskie znaki z opcjonalną zmianą słownictwa lub znaki używane w Hongkongu. Tekst pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de chinês simplificado e tradicional",
+        description:
+          "Converta texto de chinês simplificado para tradicional e vice-versa. Escolha a forma padrão, os caracteres de Taiwan com ou sem vocabulário local, ou os de Hong Kong. O texto fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер упрощённых и традиционных китайских иероглифов",
+        description:
+          "Преобразуйте упрощённые китайские иероглифы в традиционные и обратно. Доступны стандартные формы, тайваньские формы и лексика, а также гонконгские формы. Текст остаётся в браузере.",
+      },
+      sv: {
+        name: "Omvandlare för förenklad och traditionell kinesiska",
+        description:
+          "Omvandla förenklad kinesiska till traditionell kinesiska och tillbaka. Välj standardtecken, tecken från Taiwan eller Hongkong och vid behov ordval från Taiwan. Texten stannar i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+        description:
+          "แปลงอักษรจีนตัวย่อเป็นตัวเต็มและแปลงกลับได้ เลือกตัวเต็มมาตรฐาน แบบไต้หวันที่เลือกแปลงคำศัพท์ได้ หรือแบบฮ่องกง ข้อความจะประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Basitleştirilmiş ve Geleneksel Çince Dönüştürücü",
+        description:
+          "Basitleştirilmiş ve geleneksel Çince arasında metin dönüştürün. Standart, Tayvan veya Hong Kong yazımını seçin. Tayvan sözcükleri isteğe bağlıdır. Metin tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Chuyển đổi tiếng Trung giản thể và phồn thể",
+        description:
+          "Chuyển tiếng Trung giản thể sang phồn thể và ngược lại. Chọn phồn thể tiêu chuẩn, kiểu Đài Loan có hoặc không kèm từ vựng địa phương, hay kiểu Hồng Kông. Văn bản được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "中文简繁转换器",
+        description:
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
+      },
+      "zh-TW": {
+        name: "繁簡轉換器",
+        description:
+          "在瀏覽器內將簡體轉繁體、繁體轉簡體。可選擇通用繁體、台灣字形（可一併轉換台灣用語）或香港字形。",
+      },
+    },
+  },
   "chinese-to-pinyin": {
     slug: "chinese-to-pinyin",
     category: "text",
@@ -51295,6 +51831,135 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  "compound-interest-calculator": {
+    slug: "compound-interest-calculator",
+    category: "misc",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "finance",
+      "savings",
+      "investment",
+      "compound interest",
+      "calculator",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة الفائدة المركبة",
+        description:
+          "احسب الفائدة المركبة مع إيداعات شهرية، واطّلع على الرصيد المتوقع وإجمالي الإيداعات والفائدة المكتسبة في مخطط وجدول سنويين.",
+      },
+      de: {
+        name: "Zinseszinsrechner",
+        description:
+          "Berechne Zinseszinsen mit monatlicher Sparrate. Sieh das voraussichtliche Endkapital, die gesamten Einzahlungen und Zinserträge in einer jährlichen Grafik und Tabelle.",
+      },
+      en: {
+        name: "Compound Interest Calculator",
+        description:
+          "Calculate compound interest with monthly contributions. See your projected balance, total contributions, and interest earned in a year-by-year chart and table.",
+      },
+      es: {
+        name: "Calculadora de interés compuesto",
+        description:
+          "Calcula el interés compuesto con aportaciones mensuales. Consulta el saldo estimado, el total aportado y los intereses generados en un gráfico y una tabla por años.",
+      },
+      fr: {
+        name: "Calculateur d’intérêts composés",
+        description:
+          "Calculez les intérêts composés avec des versements mensuels. Suivez le capital estimé, le total versé et les intérêts cumulés année par année.",
+      },
+      he: {
+        name: "מחשבון ריבית דריבית",
+        description:
+          "חשבו ריבית דריבית עם הפקדות חודשיות וצפו ביתרה הצפויה, בסך ההפקדות ובריבית שנצברה בתרשים ובטבלה שנתיים.",
+      },
+      hi: {
+        name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+        description:
+          "मासिक योगदान के साथ चक्रवृद्धि ब्याज की गणना करें। अनुमानित शेष राशि, कुल योगदान और अर्जित ब्याज का सालाना विवरण ग्राफ़ और तालिका में देखें।",
+      },
+      id: {
+        name: "Kalkulator bunga majemuk",
+        description:
+          "Hitung bunga majemuk dengan setoran bulanan. Lihat perkiraan saldo, total setoran, dan bunga yang terkumpul dalam grafik dan tabel tahunan.",
+      },
+      it: {
+        name: "Calcolatore dell’interesse composto",
+        description:
+          "Calcola l’interesse composto con versamenti mensili. Il grafico e la tabella mostrano saldo stimato, totale versato e interessi maturati anno per anno.",
+      },
+      ja: {
+        name: "複利計算ツール",
+        description:
+          "毎月の積立を含めて複利で資産がいくらになるかをシミュレーション。将来の残高、入金総額、利息の推移を年ごとのグラフと表で確認できます。",
+      },
+      ko: {
+        name: "복리 계산기",
+        description:
+          "매월 일정 금액을 납입할 때 복리로 얼마나 불어나는지 계산하세요. 연도별 그래프와 표에서 예상 잔액, 총 납입액, 누적 이자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator faedah kompaun",
+        description:
+          "Kira faedah kompaun dengan deposit bulanan. Lihat anggaran baki, jumlah deposit dan faedah terkumpul dalam carta dan jadual tahunan.",
+      },
+      nl: {
+        name: "Calculator voor samengestelde rente",
+        description:
+          "Bereken samengestelde rente met maandelijkse inleg. Bekijk het verwachte saldo, de totale inleg en de opgebouwde rente per jaar in een grafiek en tabel.",
+      },
+      no: {
+        name: "Kalkulator for rentes rente",
+        description:
+          "Beregn rentes rente med månedlige innskudd. Se forventet saldo, samlede innskudd og opptjente renter år for år i en graf og en tabell.",
+      },
+      pl: {
+        name: "Kalkulator procentu składanego",
+        description:
+          "Oblicz procent składany z miesięcznymi wpłatami. Sprawdź prognozowane saldo, sumę wpłat i naliczone odsetki rok po roku na wykresie i w tabeli.",
+      },
+      pt: {
+        name: "Calculadora de juros compostos",
+        description:
+          "Calcule juros compostos com aportes mensais. Veja o saldo estimado, o total aportado e os juros acumulados em um gráfico e uma tabela ano a ano.",
+      },
+      ru: {
+        name: "Калькулятор сложного процента",
+        description:
+          "Рассчитайте доход по сложному проценту с ежемесячным пополнением. График и таблица покажут по годам ожидаемую сумму, общий размер взносов и начисленные проценты.",
+      },
+      sv: {
+        name: "Ränta på ränta-kalkylator",
+        description:
+          "Beräkna ränta på ränta med månadssparande. Se beräknat saldo, totala insättningar och intjänad ränta år för år i ett diagram och en tabell.",
+      },
+      th: {
+        name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+        description:
+          "คำนวณดอกเบี้ยทบต้นเมื่อออมเพิ่มทุกเดือน ดูยอดเงินที่คาดการณ์ ยอดเงินฝากสะสม และดอกเบี้ยสะสมในกราฟและตารางรายปี",
+      },
+      tr: {
+        name: "Bileşik Faiz Hesaplayıcı",
+        description:
+          "Aylık katkılarla bileşik faizi hesaplayın. Tahmini bakiyeyi, toplam katkıyı ve kazanılan faizi yıl yıl grafik ve tabloda görün.",
+      },
+      vi: {
+        name: "Công cụ tính lãi kép",
+        description:
+          "Tính lãi kép khi gửi thêm tiền hằng tháng. Xem số dư dự kiến, tổng tiền đã gửi và tiền lãi tích lũy trên biểu đồ và bảng theo từng năm.",
+      },
+      "zh-CN": {
+        name: "复利计算器",
+        description:
+          "计算每月追加投入的复利收益，通过逐年图表查看预计余额、累计投入和利息收益。",
+      },
+      "zh-TW": {
+        name: "複利計算機",
+        description:
+          "試算每月定期投入的複利成長。透過圖表和逐年明細，查看預估期末金額、累計投入與利息收益。",
       },
     },
   },
@@ -79288,6 +79953,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SSH 公開金鑰指紋",
         description:
           "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
+      },
+    },
+  },
+  "stereo-channel-splitter": {
+    slug: "stereo-channel-splitter",
+    category: "misc",
+    icon: "split",
+    tags: [
+      "audio",
+      "stereo",
+      "mono",
+      "split",
+      "channel",
+      "left",
+      "right",
+      "wav",
+      "mp3",
+    ],
+    locales: {
+      ar: {
+        name: "أداة فصل قنوات الستيريو",
+        description:
+          "افصل صوت الستيريو إلى ملفَي WAV أحاديَّي القناة، أحدهما للقناة اليسرى والآخر لليمنى. استمع إلى كل قناة ونزّلها مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "Stereokanäle trennen",
+        description:
+          "Trenne Stereoaufnahmen in zwei Mono-WAV-Dateien für den linken und rechten Kanal. Höre die Kanäle direkt im Browser an und lade sie einzeln herunter.",
+      },
+      en: {
+        name: "Stereo Channel Splitter",
+        description:
+          "Split stereo audio into separate left and right mono WAV files. Preview and download each channel directly in your browser.",
+      },
+      es: {
+        name: "Separador de canales estéreo",
+        description:
+          "Separa el audio estéreo en dos archivos WAV mono, uno para el canal izquierdo y otro para el derecho. Escucha y descarga cada canal desde tu navegador.",
+      },
+      fr: {
+        name: "Séparateur de canaux stéréo",
+        description:
+          "Séparez les canaux gauche et droit d’un fichier stéréo en deux WAV mono. Écoutez et téléchargez chaque canal directement dans votre navigateur.",
+      },
+      he: {
+        name: "פיצול ערוצי סטריאו",
+        description:
+          "פצלו אודיו בסטריאו לשני קובצי WAV במונו, אחד לערוץ השמאלי ואחד לימני. האזינו לכל ערוץ והורידו אותו ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "स्टीरियो चैनल अलग करें",
+        description:
+          "स्टीरियो ऑडियो के बाएँ और दाएँ चैनल को दो अलग मोनो WAV फ़ाइलों में सेव करें। हर चैनल को ब्राउज़र में सुनें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemisah Kanal Audio Stereo",
+        description:
+          "Pisahkan kanal kiri dan kanan audio stereo menjadi dua file WAV mono. Dengarkan dan unduh setiap kanal langsung di browser Anda.",
+      },
+      it: {
+        name: "Separa i canali stereo",
+        description:
+          "Separa l’audio stereo in due file WAV mono, uno per il canale sinistro e uno per il destro. Ascolta e scarica ogni canale direttamente nel browser.",
+      },
+      ja: {
+        name: "ステレオ音声の左右チャンネル分割",
+        description:
+          "ステレオ音声の左右のチャンネルを個別のモノラルWAVファイルに分割します。ブラウザー上で各チャンネルの試聴とダウンロードができます。",
+      },
+      ko: {
+        name: "스테레오 좌우 채널 분리",
+        description:
+          "스테레오 오디오의 왼쪽과 오른쪽 채널을 각각 모노 WAV 파일로 분리하세요. 브라우저에서 각 채널을 미리 듣고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemisah Saluran Audio Stereo",
+        description:
+          "Pisahkan saluran kiri dan kanan audio stereo kepada dua fail WAV mono. Dengar pratonton dan muat turun setiap saluran terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Stereokanalen splitsen",
+        description:
+          "Splits stereogeluid in twee mono-WAV-bestanden, één voor links en één voor rechts. Beluister en download elk kanaal rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Del stereolyd i to monofiler",
+        description:
+          "Lagre venstre og høyre kanal fra en stereofil som separate WAV-filer i mono. Lytt til og last ned hver kanal direkte i nettleseren.",
+      },
+      pl: {
+        name: "Rozdzielanie kanałów stereo",
+        description:
+          "Rozdziel nagranie stereo na dwa pliki mono WAV, po jednym dla lewego i prawego kanału. Odsłuchaj i pobierz każdy kanał w przeglądarce.",
+      },
+      pt: {
+        name: "Separador de canais estéreo",
+        description:
+          "Separe o áudio estéreo em dois ficheiros WAV mono, um para o canal esquerdo e outro para o direito. Ouça e transfira cada canal no navegador.",
+      },
+      ru: {
+        name: "Разделение стереоканалов",
+        description:
+          "Разделите стереозапись на два монофайла WAV для левого и правого каналов. Прослушайте и скачайте каждый канал прямо в браузере.",
+      },
+      sv: {
+        name: "Separera stereokanaler",
+        description:
+          "Spara vänster och höger kanal i en stereoinspelning som separata WAV-filer i mono. Lyssna på och ladda ner varje kanal direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
+        description:
+          "แยกช่องซ้ายและขวาจากเสียงสเตอริโอเป็นไฟล์ WAV โมโนคนละไฟล์ ฟังตัวอย่างและดาวน์โหลดแต่ละช่องได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Stereo Kanal Ayırıcı",
+        description:
+          "Stereo sesin sol ve sağ kanallarını iki ayrı mono WAV dosyasına ayırın. Her kanalı doğrudan tarayıcınızda dinleyip indirin.",
+      },
+      vi: {
+        name: "Tách kênh âm thanh stereo",
+        description:
+          "Tách hai kênh trái và phải của âm thanh stereo thành hai tệp WAV mono riêng. Nghe thử và tải xuống từng kênh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "左右声道拆分",
+        description:
+          "把立体声音频的左、右声道分别导出为单声道 WAV 文件，直接在浏览器中试听和下载。",
+      },
+      "zh-TW": {
+        name: "左右聲道分離",
+        description:
+          "將立體聲音訊的左右聲道分別存成單聲道 WAV 檔案，直接在瀏覽器中試聽及下載。",
       },
     },
   },

@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "محوّل الصينية المبسطة والتقليدية",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "محوّل الصينية إلى البينيين",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "أداة انتقاء الألوان",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "حاسبة الفائدة المركبة",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "بصمة مفتاح SSH العام",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "أداة فصل قنوات الستيريو",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "ממיר בין סינית מפושטת לסינית מסורתית",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "ממיר מסינית לפיניין",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "בוחר צבעים",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "מחשבון ריבית דריבית",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "טביעת אצבע של מפתח ציבורי SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "פיצול ערוצי סטריאו",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

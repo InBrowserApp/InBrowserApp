@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "중국어 간체·번체 변환기",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "중국어 병음 변환기",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "색상 선택기",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "복리 계산기",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "SSH 공개 키 지문",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "스테레오 좌우 채널 분리",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",

@@ -1,0 +1,16 @@
+{
+  "chooseFile": "選擇立體聲音訊",
+  "dropHint": "或將音訊檔案拖放到這裡",
+  "formats": "WAV、MP3、M4A、FLAC、OGG 等瀏覽器支援的音訊格式",
+  "privacy": "音訊檔案只會在你的裝置上處理。",
+  "changeFile": "更換檔案",
+  "processing": "正在分離左右聲道…",
+  "ready": "左右聲道已分離完成。",
+  "left": "左聲道",
+  "right": "右聲道",
+  "downloadLeft": "下載左聲道 WAV",
+  "downloadRight": "下載右聲道 WAV",
+  "monoError": "這個檔案只有一個聲道。請選擇含有左右聲道的立體聲檔案。",
+  "multichannelError": "這個檔案的聲道數超過兩個。請選擇雙聲道立體聲檔案。",
+  "readError": "無法開啟這個音訊檔案。請試用其他檔案，或先將這個檔案匯出為立體聲 WAV。"
+}

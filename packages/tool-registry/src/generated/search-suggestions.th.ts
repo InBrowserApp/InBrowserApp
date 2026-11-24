@@ -259,6 +259,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "ตัวแปลงอักษรจีนตัวย่อและตัวเต็ม",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
     name: "ตัวแปลงอักษรจีนเป็นพินอิน",
     slug: "chinese-to-pinyin",
   },
@@ -311,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "ตัวเลือกสี",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "ลายนิ้วมือคีย์สาธารณะ SSH",
     slug: "ssh-public-key-fingerprint",
+  },
+  {
+    category: "misc",
+    name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
+    slug: "stereo-channel-splitter",
   },
   {
     category: "developer",
