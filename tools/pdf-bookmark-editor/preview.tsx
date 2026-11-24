@@ -5,7 +5,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import { ChevronLeft, ChevronRight, LoaderCircle } from "@workspace/ui/icons"
 
-import type { Messages } from "./client"
+import type { Messages } from "./messages"
 import { PageInput } from "./page-input"
 
 type Preview = {

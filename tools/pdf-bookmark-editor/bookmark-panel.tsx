@@ -22,7 +22,7 @@ import {
 import { cn } from "@workspace/ui/lib/utils"
 
 import { availableMoves, type Bookmark, type Move } from "./core/bookmarks"
-import type { Messages } from "./client"
+import type { Messages } from "./messages"
 import { PageInput } from "./page-input"
 
 const moves = [

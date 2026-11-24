@@ -19,10 +19,9 @@ import {
   type Bookmark,
 } from "./core/bookmarks"
 import type { PdfBookmarks } from "./core/pdf-bookmarks"
-import type englishMessages from "./messages/en.json"
+import type { Messages } from "./messages"
 import { PdfPreview } from "./preview"
 
-export type Messages = typeof englishMessages
 type Session = { file: File; pdf: PdfBookmarks }
 
 export default function PdfBookmarkEditor({
