@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Audio Spectrum Analyzer",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "Audio to Text",
     slug: "audio-to-text",
   },

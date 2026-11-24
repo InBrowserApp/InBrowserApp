@@ -1,0 +1,4 @@
+{
+  "name": "Analizator widma audio",
+  "description": "Zobacz widmo częstotliwości pliku audio. Sprawdź maksima w Hz i poziomy w dBFS na liniowym lub logarytmicznym wykresie FFT i odsłuchaj plik lokalnie."
+}

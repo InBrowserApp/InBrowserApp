@@ -1,0 +1,155 @@
+import { useEffect, useRef } from "react"
+import type { PointerEvent } from "react"
+
+import {
+  BIN_HZ,
+  fractionAtFrequency,
+  frequencyAtFraction,
+  MIN_DB,
+  SAMPLE_RATE,
+} from "./core/spectrum"
+
+const inset = { left: 45, right: 25, top: 25, bottom: 26 }
+const maximumHz = SAMPLE_RATE / 2
+const levelFraction = (level: number) =>
+  Math.min(1, Math.max(0, level / MIN_DB))
+
+export function SpectrumChart({
+  levels,
+  log,
+  bin,
+  lang,
+  onFrequency,
+}: {
+  levels: Float32Array
+  log: boolean
+  bin: number
+  lang: string
+  onFrequency: (frequency: number) => void
+}) {
+  const canvas = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const element = canvas.current!
+    const drawing = element.getContext("2d")
+    if (!drawing) return
+    const ctx = drawing
+    const number = new Intl.NumberFormat(lang, {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    })
+
+    function draw() {
+      const { width, height } = element.getBoundingClientRect()
+      const ratio = window.devicePixelRatio || 1
+      const pixelWidth = Math.round(width * ratio)
+      const pixelHeight = Math.round(height * ratio)
+      if (element.width !== pixelWidth) element.width = pixelWidth
+      if (element.height !== pixelHeight) element.height = pixelHeight
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0)
+      ctx.clearRect(0, 0, width, height)
+      const plotWidth = width - inset.left - inset.right
+      const plotHeight = height - inset.top - inset.bottom
+      const left = inset.left
+      const top = inset.top
+      const x = (frequency: number) =>
+        left + fractionAtFrequency(frequency, log) * plotWidth
+      const y = (level: number) => top + levelFraction(level) * plotHeight
+      const color = getComputedStyle(element).color
+      ctx.strokeStyle = color
+      ctx.fillStyle = color
+      ctx.lineWidth = 1
+      ctx.font = "12px system-ui"
+      ctx.textBaseline = "middle"
+      ctx.textAlign = "left"
+      ctx.globalAlpha = 0.8
+      ctx.fillText("dBFS", 7, 10)
+      ctx.textAlign = "right"
+      ctx.fillText("Hz", width - 7, 10)
+      for (const level of [0, -20, -40, -60, -80, MIN_DB]) {
+        ctx.globalAlpha = 0.8
+        ctx.fillText(number.format(level), left - 8, y(level))
+        ctx.globalAlpha = 0.2
+        ctx.beginPath()
+        ctx.moveTo(left, y(level))
+        ctx.lineTo(left + plotWidth, y(level))
+        ctx.stroke()
+      }
+      ctx.textAlign = "center"
+      const ticks = log
+        ? [20, 100, 1000, ...(plotWidth >= 280 ? [10_000] : []), maximumHz]
+        : [0, 6000, 12_000, 18_000, maximumHz]
+      for (const frequency of ticks) {
+        ctx.globalAlpha = 0.8
+        ctx.fillText(
+          number.format(frequency),
+          x(frequency),
+          top + plotHeight + 15
+        )
+        ctx.beginPath()
+        ctx.globalAlpha = 0.2
+        ctx.moveTo(x(frequency), top)
+        ctx.lineTo(x(frequency), top + plotHeight)
+        ctx.stroke()
+      }
+
+      ctx.globalAlpha = 1
+      ctx.lineWidth = 1.5
+      const first = log ? 1 : 0
+      ctx.beginPath()
+      ctx.moveTo(x(first * BIN_HZ), y(levels[first]!))
+      for (let index = first + 1; index < levels.length; index++) {
+        ctx.lineTo(x(index * BIN_HZ), y(levels[index]!))
+      }
+      ctx.stroke()
+    }
+
+    draw()
+    const resize = new ResizeObserver(draw)
+    resize.observe(element)
+    const theme = new MutationObserver(draw)
+    theme.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+    return () => {
+      resize.disconnect()
+      theme.disconnect()
+    }
+  }, [lang, levels, log])
+
+  function inspect(event: PointerEvent<HTMLCanvasElement>) {
+    const bounds = event.currentTarget.getBoundingClientRect()
+    const fraction =
+      (event.clientX - bounds.left - inset.left) /
+      (bounds.width - inset.left - inset.right)
+    onFrequency(frequencyAtFraction(fraction, log))
+  }
+
+  return (
+    <div
+      aria-hidden="true"
+      className="relative overflow-hidden rounded-lg border bg-teal-50/30 text-teal-800 dark:bg-teal-950/20 dark:text-teal-300"
+    >
+      <canvas
+        ref={canvas}
+        className="block h-56 w-full sm:h-72"
+        onPointerMove={(event) => {
+          if (event.pointerType === "mouse") inspect(event)
+        }}
+        onPointerDown={inspect}
+      />
+      <div className="pointer-events-none absolute" style={inset}>
+        <div
+          className="absolute inset-y-0 w-px -translate-x-1/2 bg-current/55"
+          style={{ left: fractionAtFrequency(bin * BIN_HZ, log) * 100 + "%" }}
+        >
+          <div
+            className="absolute left-1/2 size-2 -translate-1/2 rounded-full bg-current"
+            style={{ top: levelFraction(levels[bin]!) * 100 + "%" }}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}

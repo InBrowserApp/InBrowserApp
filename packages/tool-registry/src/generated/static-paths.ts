@@ -1750,6 +1750,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-spectrum-analyzer",
+    language: "ar",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "de",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "en",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "es",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "fr",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "he",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "hi",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "id",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "it",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "ja",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "ko",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "ms",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "nl",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "no",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "pl",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "pt",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "ru",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "sv",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "th",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "tr",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "vi",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-spectrum-analyzer",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-to-text",
     language: "ar",
   },

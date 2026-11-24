@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Choose audio",
+  "dropHint": "or drop an audio file here",
+  "changeFile": "Change file",
+  "privacy": "Your audio stays on your device.",
+  "analyzing": "Analyzing the spectrum…",
+  "readError": "Could not open this audio file. Try a mono or stereo WAV file.",
+  "channelError": "Choose a mono or stereo audio file.",
+  "spectrum": "Average frequency spectrum",
+  "scale": "Frequency scale",
+  "logarithmic": "Logarithmic",
+  "linear": "Linear",
+  "peak": "Strongest frequency",
+  "frequency": "Frequency",
+  "level": "Level",
+  "cursor": "Frequency cursor",
+  "cursorHint": "Point to or tap the chart, or move the slider to read a frequency.",
+  "silent": "No frequency peak above the chart floor.",
+  "ready": "Frequency spectrum is ready.",
+  "preview": "Play original audio"
+}

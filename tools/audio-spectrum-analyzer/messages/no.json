@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Velg lydfil",
+  "dropHint": "eller slipp en lydfil her",
+  "changeFile": "Bytt fil",
+  "privacy": "Lydfilen blir på enheten din.",
+  "analyzing": "Analyserer spekteret…",
+  "readError": "Kunne ikke åpne lydfilen. Prøv en WAV-fil i mono eller stereo.",
+  "channelError": "Velg en lydfil i mono eller stereo.",
+  "spectrum": "Gjennomsnittlig frekvensspekter",
+  "scale": "Frekvensskala",
+  "logarithmic": "Logaritmisk",
+  "linear": "Lineær",
+  "peak": "Dominerende frekvens",
+  "frequency": "Frekvens",
+  "level": "Nivå",
+  "cursor": "Frekvensmarkør",
+  "cursorHint": "Pek eller trykk på grafen, eller bruk glidebryteren for å lese av en frekvens.",
+  "silent": "Ingen frekvenstopp over grafens nedre grense.",
+  "ready": "Frekvensspekteret er klart.",
+  "preview": "Spill av original lyd"
+}

@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Pilih file audio",
+  "dropHint": "atau letakkan file audio di sini",
+  "changeFile": "Ganti file",
+  "privacy": "Audio tetap berada di perangkat Anda.",
+  "analyzing": "Menganalisis spektrum…",
+  "readError": "File audio ini tidak dapat dibuka. Coba file WAV mono atau stereo.",
+  "channelError": "Pilih file audio mono atau stereo.",
+  "spectrum": "Spektrum frekuensi rata-rata",
+  "scale": "Skala frekuensi",
+  "logarithmic": "Logaritmik",
+  "linear": "Linear",
+  "peak": "Frekuensi terkuat",
+  "frequency": "Frekuensi",
+  "level": "Level",
+  "cursor": "Kursor frekuensi",
+  "cursorHint": "Arahkan kursor ke grafik, ketuk grafik, atau gerakkan penggeser untuk membaca frekuensi.",
+  "silent": "Tidak ada puncak frekuensi di atas batas bawah grafik.",
+  "ready": "Spektrum frekuensi siap ditampilkan.",
+  "preview": "Putar audio asli"
+}

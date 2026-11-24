@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Chọn tệp âm thanh",
+  "dropHint": "hoặc thả tệp âm thanh vào đây",
+  "changeFile": "Đổi tệp",
+  "privacy": "Âm thanh chỉ được xử lý trên thiết bị của bạn.",
+  "analyzing": "Đang phân tích phổ âm thanh…",
+  "readError": "Không mở được tệp âm thanh này. Hãy thử với tệp WAV mono hoặc stereo.",
+  "channelError": "Hãy chọn tệp âm thanh mono hoặc stereo.",
+  "spectrum": "Phổ tần số trung bình",
+  "scale": "Thang tần số",
+  "logarithmic": "Logarit",
+  "linear": "Tuyến tính",
+  "peak": "Tần số trội",
+  "frequency": "Tần số",
+  "level": "Mức tín hiệu",
+  "cursor": "Con trỏ tần số",
+  "cursorHint": "Trỏ hoặc chạm vào biểu đồ, hoặc di chuyển thanh trượt để đọc tần số.",
+  "silent": "Không có đỉnh tần số nào vượt mức thấp nhất của biểu đồ.",
+  "ready": "Phổ tần số đã sẵn sàng.",
+  "preview": "Phát âm thanh gốc"
+}

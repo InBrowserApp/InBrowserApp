@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "오디오 스펙트럼 분석기",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "음성을 텍스트로 변환",
     slug: "audio-to-text",
   },

@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ses Spektrumu Analiz Aracı",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "Sesi Metne Dönüştürme",
     slug: "audio-to-text",
   },

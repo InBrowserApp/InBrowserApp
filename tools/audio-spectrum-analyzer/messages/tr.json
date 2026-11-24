@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Ses dosyası seç",
+  "dropHint": "veya ses dosyasını buraya sürükleyip bırakın",
+  "changeFile": "Dosyayı değiştir",
+  "privacy": "Ses dosyanız cihazınızda kalır.",
+  "analyzing": "Frekans spektrumu analiz ediliyor…",
+  "readError": "Ses dosyası açılamadı. Mono veya stereo bir WAV dosyası deneyin.",
+  "channelError": "Mono veya stereo bir ses dosyası seçin.",
+  "spectrum": "Ortalama frekans spektrumu",
+  "scale": "Frekans ölçeği",
+  "logarithmic": "Logaritmik",
+  "linear": "Doğrusal",
+  "peak": "Baskın frekans",
+  "frequency": "Frekans",
+  "level": "Seviye",
+  "cursor": "Frekans imleci",
+  "cursorHint": "Frekansı okumak için grafikte bir noktayı işaretleyin, noktaya dokunun veya kaydırıcıyı hareket ettirin.",
+  "silent": "Grafiğin alt sınırının üzerinde frekans tepesi bulunamadı.",
+  "ready": "Frekans spektrumu hazır.",
+  "preview": "Orijinal kaydı dinle"
+}

@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "محلّل طيف الصوت",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "تحويل الصوت إلى نص",
     slug: "audio-to-text",
   },

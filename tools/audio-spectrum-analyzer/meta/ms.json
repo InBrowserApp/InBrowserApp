@@ -1,0 +1,4 @@
+{
+  "name": "Penganalisis Spektrum Audio",
+  "description": "Lihat spektrum frekuensi fail audio. Periksa puncak dalam Hz dan aras dalam dBFS pada carta FFT logaritma atau linear sambil memainkan audio pada peranti anda."
+}

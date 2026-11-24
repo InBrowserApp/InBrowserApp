@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Pilih fail audio",
+  "dropHint": "atau lepaskan fail audio di sini",
+  "changeFile": "Tukar fail",
+  "privacy": "Audio anda kekal pada peranti anda.",
+  "analyzing": "Menganalisis spektrum…",
+  "readError": "Fail audio ini tidak dapat dibuka. Cuba fail WAV mono atau stereo.",
+  "channelError": "Pilih fail audio mono atau stereo.",
+  "spectrum": "Spektrum frekuensi purata",
+  "scale": "Skala frekuensi",
+  "logarithmic": "Logaritma",
+  "linear": "Linear",
+  "peak": "Frekuensi terkuat",
+  "frequency": "Frekuensi",
+  "level": "Aras",
+  "cursor": "Kursor frekuensi",
+  "cursorHint": "Halakan kursor pada carta, ketik carta atau gerakkan peluncur untuk membaca frekuensi.",
+  "silent": "Tiada puncak frekuensi di atas had bawah carta.",
+  "ready": "Spektrum frekuensi sudah sedia.",
+  "preview": "Mainkan audio asal"
+}

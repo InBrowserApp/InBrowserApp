@@ -99,6 +99,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声の周波数スペクトル解析",
+    slug: "audio-spectrum-analyzer",
+  },
+  {
+    category: "misc",
     name: "音声文字起こし",
     slug: "audio-to-text",
   },

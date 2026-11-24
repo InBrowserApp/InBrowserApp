@@ -1,0 +1,4 @@
+{
+  "name": "Phân tích phổ âm thanh",
+  "description": "Xem phổ tần số của tệp âm thanh. Đọc các đỉnh theo Hz và mức tín hiệu theo dBFS trên biểu đồ FFT thang logarit hoặc tuyến tính, rồi nghe thử ngay trên thiết bị."
+}

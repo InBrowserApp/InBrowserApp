@@ -1,0 +1,21 @@
+{
+  "chooseFile": "選擇音訊",
+  "dropHint": "或將音訊檔案拖放至此",
+  "changeFile": "更換檔案",
+  "privacy": "音訊會保留在您的裝置上。",
+  "analyzing": "正在分析頻譜…",
+  "readError": "無法開啟此音訊檔案，請試用單聲道或立體聲 WAV 檔案。",
+  "channelError": "請選擇單聲道或立體聲音訊檔案。",
+  "spectrum": "平均頻譜",
+  "scale": "頻率刻度",
+  "logarithmic": "對數",
+  "linear": "線性",
+  "peak": "最強頻率",
+  "frequency": "頻率",
+  "level": "電平",
+  "cursor": "頻率游標",
+  "cursorHint": "將指標移到圖表上或點選圖表，也可移動滑桿來讀取頻率。",
+  "silent": "沒有高於圖表下限的頻率峰值。",
+  "ready": "頻譜已準備就緒。",
+  "preview": "播放原始音訊"
+}
