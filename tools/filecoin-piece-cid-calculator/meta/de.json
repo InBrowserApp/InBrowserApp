@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-Piece-CID-Rechner",
+  "description": "Berechnen Sie die Filecoin-Piece-CID und die ältere CommP für ein CAR-Archiv oder eine beliebige Datei. Ermitteln Sie die Piece-Größe mit Padding und prüfen Sie ein Commitment im Browser."
+}

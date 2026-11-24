@@ -11318,6 +11318,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "filecoin-piece-cid-calculator",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "de",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "en",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "es",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "he",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "id",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "it",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "no",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "th",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-piece-cid-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "font-subset-generator",
     language: "ar",
   },

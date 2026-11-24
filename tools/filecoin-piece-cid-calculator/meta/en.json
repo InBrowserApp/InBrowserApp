@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Piece CID Calculator",
+  "description": "Calculate the Filecoin Piece CID and legacy CommP for a CAR archive or any file. Get the padded piece size and verify a commitment in your browser."
+}

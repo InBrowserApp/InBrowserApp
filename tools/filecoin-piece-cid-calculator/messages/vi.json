@@ -1,0 +1,22 @@
+{
+  "input": "Tệp hoặc tệp lưu trữ CAR",
+  "drop": "Thả tệp vào đây",
+  "chooseFile": "Chọn tệp",
+  "calculate": "Tính Piece CID",
+  "calculating": "Đang tính Piece CID…",
+  "cancel": "Hủy",
+  "result": "Giá trị cam kết của piece",
+  "empty": "Chọn một tệp để tính Piece CID và CommP phiên bản cũ.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP phiên bản cũ (v1)",
+  "paddedSize": "Kích thước piece sau khi đệm",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "compare": "So sánh với Piece CID có sẵn",
+  "check": "Kiểm tra",
+  "match": "Hai Piece CID khớp nhau.",
+  "different": "Hai Piece CID khác nhau. Hãy kiểm tra xem bạn đã chọn đúng tệp dùng để tính giá trị cam kết chưa.",
+  "invalid": "Nhập Piece CID Filecoin hoặc CommP phiên bản cũ hợp lệ.",
+  "singleFile": "Mỗi lần chỉ chọn hoặc thả một tệp.",
+  "failed": "Không thể tính Piece CID. Hãy kiểm tra xem tệp có đọc được không rồi thử lại."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Piece CID 計算ツール",
+  "description": "CAR アーカイブや任意のファイルから、Filecoin の Piece CID と従来の CommP を計算します。パディング後のピースサイズを確認し、ブラウザでコミットメントを検証できます。"
+}

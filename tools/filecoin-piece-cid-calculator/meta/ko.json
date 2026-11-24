@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Piece CID 계산기",
+  "description": "CAR 보관 파일이나 임의의 파일에 대한 Filecoin Piece CID와 이전 형식의 CommP를 계산합니다. 브라우저에서 패딩된 피스 크기를 확인하고 커밋먼트를 검증할 수 있습니다."
+}

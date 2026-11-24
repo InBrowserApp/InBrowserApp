@@ -1,0 +1,22 @@
+{
+  "input": "文件或 CAR 归档",
+  "drop": "将文件拖到此处",
+  "chooseFile": "选择文件",
+  "calculate": "计算 Piece CID",
+  "calculating": "正在计算 Piece CID…",
+  "cancel": "取消",
+  "result": "Piece 承诺值",
+  "empty": "选择文件以计算其 Piece CID 和旧版 CommP。",
+  "pieceCid": "Piece CID（v2）",
+  "legacyCid": "旧版 CommP（v1）",
+  "paddedSize": "填充后的 Piece 大小",
+  "copy": "复制",
+  "copied": "已复制",
+  "compare": "与已有 Piece CID 比较",
+  "check": "检查",
+  "match": "两个 Piece CID 一致。",
+  "different": "两个 Piece CID 不同。请确认所选文件与计算承诺值时使用的文件完全相同。",
+  "invalid": "请输入有效的 Filecoin Piece CID 或旧版 CommP。",
+  "singleFile": "每次请选择或拖入一个文件。",
+  "failed": "无法计算 Piece CID。请确认文件可读取，然后重试。"
+}

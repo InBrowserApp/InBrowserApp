@@ -1,0 +1,22 @@
+{
+  "input": "Fichier ou archive CAR",
+  "drop": "Déposez un fichier ici",
+  "chooseFile": "Choisir un fichier",
+  "calculate": "Calculer le Piece CID",
+  "calculating": "Calcul du Piece CID…",
+  "cancel": "Annuler",
+  "result": "Engagement de la pièce",
+  "empty": "Choisissez un fichier pour calculer son Piece CID et son CommP historique.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP historique (v1)",
+  "paddedSize": "Taille de la pièce après remplissage",
+  "copy": "Copier",
+  "copied": "Copié",
+  "compare": "Comparer à un Piece CID existant",
+  "check": "Vérifier",
+  "match": "Les Piece CID correspondent.",
+  "different": "Les Piece CID diffèrent. Vérifiez que vous avez sélectionné exactement le fichier utilisé pour l’engagement.",
+  "invalid": "Saisissez un Piece CID Filecoin ou un CommP historique valide.",
+  "singleFile": "Choisissez ou déposez un seul fichier à la fois.",
+  "failed": "Impossible de calculer le Piece CID. Vérifiez que le fichier est lisible, puis réessayez."
+}

@@ -1,0 +1,22 @@
+{
+  "input": "Datei oder CAR-Archiv",
+  "drop": "Datei hierher ziehen",
+  "chooseFile": "Datei auswählen",
+  "calculate": "Piece-CID berechnen",
+  "calculating": "Piece-CID wird berechnet…",
+  "cancel": "Abbrechen",
+  "result": "Piece-Commitment",
+  "empty": "Wählen Sie eine Datei aus, um ihre Piece-CID und die ältere CommP zu berechnen.",
+  "pieceCid": "Piece-CID (v2)",
+  "legacyCid": "Ältere CommP (v1)",
+  "paddedSize": "Piece-Größe mit Padding",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "compare": "Mit einer vorhandenen Piece-CID vergleichen",
+  "check": "Prüfen",
+  "match": "Die Piece-CIDs stimmen überein.",
+  "different": "Die Piece-CIDs unterscheiden sich. Prüfen Sie, ob Sie genau die Datei ausgewählt haben, für die das Commitment berechnet wurde.",
+  "invalid": "Geben Sie eine gültige Filecoin-Piece-CID oder eine gültige ältere CommP ein.",
+  "singleFile": "Wählen Sie jeweils eine Datei aus oder ziehen Sie eine einzelne Datei hierher.",
+  "failed": "Die Piece-CID konnte nicht berechnet werden. Prüfen Sie, ob die Datei lesbar ist, und versuchen Sie es erneut."
+}

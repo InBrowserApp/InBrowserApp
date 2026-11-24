@@ -1,0 +1,22 @@
+{
+  "input": "ملف أو أرشيف CAR",
+  "drop": "أفلت ملفًا هنا",
+  "chooseFile": "اختر ملفًا",
+  "calculate": "احسب Piece CID",
+  "calculating": "جارٍ حساب Piece CID…",
+  "cancel": "إلغاء",
+  "result": "الالتزام التشفيري لقطعة التخزين",
+  "empty": "اختر ملفًا لحساب Piece CID وCommP القديم له.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP القديم (v1)",
+  "paddedSize": "حجم القطعة بعد الحشو",
+  "copy": "نسخ",
+  "copied": "تم النسخ",
+  "compare": "قارن بمعرّف Piece CID موجود",
+  "check": "تحقّق",
+  "match": "معرّفا Piece CID متطابقان.",
+  "different": "معرّفا Piece CID مختلفان. تأكّد من تحديد الملف نفسه الذي استُخدم لحساب الالتزام التشفيري.",
+  "invalid": "أدخل معرّف Filecoin Piece CID أو CommP قديمًا صالحًا.",
+  "singleFile": "اختر أو أفلت ملفًا واحدًا في كل مرة.",
+  "failed": "تعذّر حساب Piece CID. تأكّد من إمكانية قراءة الملف وحاول مجددًا."
+}

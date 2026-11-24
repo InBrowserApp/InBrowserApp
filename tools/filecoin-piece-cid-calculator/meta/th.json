@@ -1,0 +1,4 @@
+{
+  "name": "เครื่องมือคำนวณ Piece CID ของ Filecoin",
+  "description": "คำนวณ Piece CID ของ Filecoin และ CommP รุ่นเดิมจากอาร์ไคฟ์ CAR หรือไฟล์ใดก็ได้ ดูขนาด Piece หลังเติมข้อมูลและตรวจสอบค่า commitment ในเบราว์เซอร์"
+}

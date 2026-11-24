@@ -19,6 +19,7 @@ catalog:
   "@ffmpeg/core": 0.12.10
   "@ffmpeg/ffmpeg": 0.12.15
   "@ipld/car": ^6.2.0
+  "@hugomrdias/commp-wasm": 0.1.4
   ipfs-unixfs-exporter: ^16.2.3
   ipfs-unixfs-importer: ^17.1.1
   multiformats: ^14.0.0

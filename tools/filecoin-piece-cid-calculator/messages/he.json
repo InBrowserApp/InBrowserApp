@@ -1,0 +1,22 @@
+{
+  "input": "קובץ או ארכיון CAR",
+  "drop": "גררו לכאן קובץ",
+  "chooseFile": "בחירת קובץ",
+  "calculate": "חישוב Piece CID",
+  "calculating": "מחשב Piece CID…",
+  "cancel": "ביטול",
+  "result": "התחייבות קריפטוגרפית למקטע",
+  "empty": "בחרו קובץ כדי לחשב את ה-Piece CID ואת ה-CommP בגרסה הישנה.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP בגרסה הישנה (v1)",
+  "paddedSize": "גודל המקטע לאחר ריפוד",
+  "copy": "העתקה",
+  "copied": "הועתק",
+  "compare": "השוואה ל-Piece CID קיים",
+  "check": "בדיקה",
+  "match": "מזהי ה-Piece CID תואמים.",
+  "different": "מזהי ה-Piece CID שונים. ודאו שבחרתם בדיוק את הקובץ ששימש לחישוב ההתחייבות.",
+  "invalid": "הזינו Filecoin Piece CID תקין או CommP מהגרסה הישנה.",
+  "singleFile": "בחרו או גררו קובץ אחד בכל פעם.",
+  "failed": "לא ניתן לחשב את ה-Piece CID. בדקו שאפשר לקרוא את הקובץ ונסו שוב."
+}

@@ -15766,6 +15766,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "filecoin-piece-cid-calculator",
+    category: "ipfs",
+    icon: "hash",
+    tags: [
+      "filecoin",
+      "commp",
+      "piece cid",
+      "car",
+      "frc-0069",
+      "padded piece size",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة Piece CID لـ Filecoin",
+        description:
+          "احسب معرّف Filecoin Piece CID ومعرّف CommP القديم لأرشيف CAR أو أي ملف. اعرف حجم قطعة التخزين بعد الحشو وتحقّق من الالتزام التشفيري في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Piece-CID-Rechner",
+        description:
+          "Berechnen Sie die Filecoin-Piece-CID und die ältere CommP für ein CAR-Archiv oder eine beliebige Datei. Ermitteln Sie die Piece-Größe mit Padding und prüfen Sie ein Commitment im Browser.",
+      },
+      en: {
+        name: "Filecoin Piece CID Calculator",
+        description:
+          "Calculate the Filecoin Piece CID and legacy CommP for a CAR archive or any file. Get the padded piece size and verify a commitment in your browser.",
+      },
+      es: {
+        name: "Calculadora de Piece CID de Filecoin",
+        description:
+          "Calcula el Piece CID de Filecoin y el CommP anterior de un archivo CAR o de cualquier otro archivo. Obtén el tamaño de la pieza tras el relleno y verifica un compromiso en tu navegador.",
+      },
+      fr: {
+        name: "Calculateur de Piece CID Filecoin",
+        description:
+          "Calculez le Piece CID Filecoin et le CommP historique d’une archive CAR ou de tout autre fichier. Obtenez la taille de la pièce après remplissage et vérifiez un engagement dans votre navigateur.",
+      },
+      he: {
+        name: "מחשבון Piece CID של Filecoin",
+        description:
+          "חשבו Filecoin Piece CID ו-CommP מהגרסה הישנה לארכיון CAR או לכל קובץ אחר. בדקו בדפדפן את גודל מקטע האחסון לאחר ריפוד ואמתו התחייבות קריפטוגרפית קיימת.",
+      },
+      hi: {
+        name: "Filecoin Piece CID कैलकुलेटर",
+        description:
+          "CAR आर्काइव या किसी भी फ़ाइल का Filecoin Piece CID और पुराने फ़ॉर्मैट का CommP निकालें। ब्राउज़र में पैडिंग के बाद पीस का आकार देखें और कमिटमेंट की पुष्टि करें।",
+      },
+      id: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Hitung Piece CID Filecoin dan CommP versi lama untuk arsip CAR atau file apa pun. Lihat ukuran piece setelah padding dan verifikasi komitmen di browser.",
+      },
+      it: {
+        name: "Calcolatore Filecoin Piece CID",
+        description:
+          "Calcola il Filecoin Piece CID e il CommP precedente per un archivio CAR o qualsiasi file. Ottieni la dimensione del piece con padding e verifica un impegno crittografico nel browser.",
+      },
+      ja: {
+        name: "Filecoin Piece CID 計算ツール",
+        description:
+          "CAR アーカイブや任意のファイルから、Filecoin の Piece CID と従来の CommP を計算します。パディング後のピースサイズを確認し、ブラウザでコミットメントを検証できます。",
+      },
+      ko: {
+        name: "Filecoin Piece CID 계산기",
+        description:
+          "CAR 보관 파일이나 임의의 파일에 대한 Filecoin Piece CID와 이전 형식의 CommP를 계산합니다. 브라우저에서 패딩된 피스 크기를 확인하고 커밋먼트를 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Kira Piece CID Filecoin dan CommP versi lama bagi arkib CAR atau sebarang fail. Lihat saiz piece selepas pengisian dan sahkan komitmen dalam pelayar anda.",
+      },
+      nl: {
+        name: "Filecoin Piece CID-calculator",
+        description:
+          "Bereken de Filecoin Piece CID en de oudere CommP voor een CAR-archief of een ander bestand. Bekijk de opgevulde piece-grootte en controleer een commitment in je browser.",
+      },
+      no: {
+        name: "Filecoin Piece CID-kalkulator",
+        description:
+          "Beregn Filecoin Piece CID og eldre CommP for et CAR-arkiv eller en hvilken som helst fil. Se utfylt piece-størrelse og kontroller en commitment i nettleseren.",
+      },
+      pl: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Oblicz Piece CID Filecoin i CommP w starszym formacie dla archiwum CAR lub dowolnego pliku. Sprawdź rozmiar fragmentu po dopełnieniu i zweryfikuj zobowiązanie w przeglądarce.",
+      },
+      pt: {
+        name: "Calculadora de Piece CID do Filecoin",
+        description:
+          "Calcule o Piece CID do Filecoin e o CommP legado de um arquivo CAR ou de qualquer outro ficheiro. Obtenha o tamanho da peça após preenchimento e verifique um compromisso no navegador.",
+      },
+      ru: {
+        name: "Калькулятор Piece CID для Filecoin",
+        description:
+          "Вычислите Filecoin Piece CID и CommP старого формата для CAR-архива или любого файла. Узнайте размер фрагмента после дополнения и проверьте коммитмент в браузере.",
+      },
+      sv: {
+        name: "Filecoin Piece CID-kalkylator",
+        description:
+          "Beräkna Filecoin Piece CID och äldre CommP för ett CAR-arkiv eller en valfri fil. Se den utfyllda piece-storleken och verifiera ett åtagande i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือคำนวณ Piece CID ของ Filecoin",
+        description:
+          "คำนวณ Piece CID ของ Filecoin และ CommP รุ่นเดิมจากอาร์ไคฟ์ CAR หรือไฟล์ใดก็ได้ ดูขนาด Piece หลังเติมข้อมูลและตรวจสอบค่า commitment ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Piece CID Hesaplayıcısı",
+        description:
+          "Bir CAR arşivi veya herhangi bir dosya için Filecoin Piece CID ve eski biçimdeki CommP değerlerini hesaplayın. Dolgu sonrası parça boyutunu öğrenin ve taahhüdü tarayıcınızda doğrulayın.",
+      },
+      vi: {
+        name: "Công cụ tính Piece CID Filecoin",
+        description:
+          "Tính Piece CID Filecoin và CommP phiên bản cũ cho tệp lưu trữ CAR hoặc bất kỳ tệp nào. Xem kích thước piece sau khi đệm và xác minh giá trị cam kết ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin Piece CID 计算器",
+        description:
+          "计算 CAR 归档或任意文件的 Filecoin Piece CID 和旧版 CommP。在浏览器中查看填充后的 Piece 大小并验证承诺值。",
+      },
+      "zh-TW": {
+        name: "Filecoin Piece CID 計算器",
+        description:
+          "計算 CAR 封存檔或任何檔案的 Filecoin Piece CID 和舊版 CommP。在瀏覽器中查看填補後的 Piece 大小，並驗證承諾值。",
+      },
+    },
+  },
+  {
     slug: "font-subset-generator",
     category: "web",
     icon: "case-sensitive",
@@ -65358,6 +65488,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案類型偵測器",
         description:
           "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  "filecoin-piece-cid-calculator": {
+    slug: "filecoin-piece-cid-calculator",
+    category: "ipfs",
+    icon: "hash",
+    tags: [
+      "filecoin",
+      "commp",
+      "piece cid",
+      "car",
+      "frc-0069",
+      "padded piece size",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة Piece CID لـ Filecoin",
+        description:
+          "احسب معرّف Filecoin Piece CID ومعرّف CommP القديم لأرشيف CAR أو أي ملف. اعرف حجم قطعة التخزين بعد الحشو وتحقّق من الالتزام التشفيري في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Piece-CID-Rechner",
+        description:
+          "Berechnen Sie die Filecoin-Piece-CID und die ältere CommP für ein CAR-Archiv oder eine beliebige Datei. Ermitteln Sie die Piece-Größe mit Padding und prüfen Sie ein Commitment im Browser.",
+      },
+      en: {
+        name: "Filecoin Piece CID Calculator",
+        description:
+          "Calculate the Filecoin Piece CID and legacy CommP for a CAR archive or any file. Get the padded piece size and verify a commitment in your browser.",
+      },
+      es: {
+        name: "Calculadora de Piece CID de Filecoin",
+        description:
+          "Calcula el Piece CID de Filecoin y el CommP anterior de un archivo CAR o de cualquier otro archivo. Obtén el tamaño de la pieza tras el relleno y verifica un compromiso en tu navegador.",
+      },
+      fr: {
+        name: "Calculateur de Piece CID Filecoin",
+        description:
+          "Calculez le Piece CID Filecoin et le CommP historique d’une archive CAR ou de tout autre fichier. Obtenez la taille de la pièce après remplissage et vérifiez un engagement dans votre navigateur.",
+      },
+      he: {
+        name: "מחשבון Piece CID של Filecoin",
+        description:
+          "חשבו Filecoin Piece CID ו-CommP מהגרסה הישנה לארכיון CAR או לכל קובץ אחר. בדקו בדפדפן את גודל מקטע האחסון לאחר ריפוד ואמתו התחייבות קריפטוגרפית קיימת.",
+      },
+      hi: {
+        name: "Filecoin Piece CID कैलकुलेटर",
+        description:
+          "CAR आर्काइव या किसी भी फ़ाइल का Filecoin Piece CID और पुराने फ़ॉर्मैट का CommP निकालें। ब्राउज़र में पैडिंग के बाद पीस का आकार देखें और कमिटमेंट की पुष्टि करें।",
+      },
+      id: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Hitung Piece CID Filecoin dan CommP versi lama untuk arsip CAR atau file apa pun. Lihat ukuran piece setelah padding dan verifikasi komitmen di browser.",
+      },
+      it: {
+        name: "Calcolatore Filecoin Piece CID",
+        description:
+          "Calcola il Filecoin Piece CID e il CommP precedente per un archivio CAR o qualsiasi file. Ottieni la dimensione del piece con padding e verifica un impegno crittografico nel browser.",
+      },
+      ja: {
+        name: "Filecoin Piece CID 計算ツール",
+        description:
+          "CAR アーカイブや任意のファイルから、Filecoin の Piece CID と従来の CommP を計算します。パディング後のピースサイズを確認し、ブラウザでコミットメントを検証できます。",
+      },
+      ko: {
+        name: "Filecoin Piece CID 계산기",
+        description:
+          "CAR 보관 파일이나 임의의 파일에 대한 Filecoin Piece CID와 이전 형식의 CommP를 계산합니다. 브라우저에서 패딩된 피스 크기를 확인하고 커밋먼트를 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Kira Piece CID Filecoin dan CommP versi lama bagi arkib CAR atau sebarang fail. Lihat saiz piece selepas pengisian dan sahkan komitmen dalam pelayar anda.",
+      },
+      nl: {
+        name: "Filecoin Piece CID-calculator",
+        description:
+          "Bereken de Filecoin Piece CID en de oudere CommP voor een CAR-archief of een ander bestand. Bekijk de opgevulde piece-grootte en controleer een commitment in je browser.",
+      },
+      no: {
+        name: "Filecoin Piece CID-kalkulator",
+        description:
+          "Beregn Filecoin Piece CID og eldre CommP for et CAR-arkiv eller en hvilken som helst fil. Se utfylt piece-størrelse og kontroller en commitment i nettleseren.",
+      },
+      pl: {
+        name: "Kalkulator Piece CID Filecoin",
+        description:
+          "Oblicz Piece CID Filecoin i CommP w starszym formacie dla archiwum CAR lub dowolnego pliku. Sprawdź rozmiar fragmentu po dopełnieniu i zweryfikuj zobowiązanie w przeglądarce.",
+      },
+      pt: {
+        name: "Calculadora de Piece CID do Filecoin",
+        description:
+          "Calcule o Piece CID do Filecoin e o CommP legado de um arquivo CAR ou de qualquer outro ficheiro. Obtenha o tamanho da peça após preenchimento e verifique um compromisso no navegador.",
+      },
+      ru: {
+        name: "Калькулятор Piece CID для Filecoin",
+        description:
+          "Вычислите Filecoin Piece CID и CommP старого формата для CAR-архива или любого файла. Узнайте размер фрагмента после дополнения и проверьте коммитмент в браузере.",
+      },
+      sv: {
+        name: "Filecoin Piece CID-kalkylator",
+        description:
+          "Beräkna Filecoin Piece CID och äldre CommP för ett CAR-arkiv eller en valfri fil. Se den utfyllda piece-storleken och verifiera ett åtagande i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือคำนวณ Piece CID ของ Filecoin",
+        description:
+          "คำนวณ Piece CID ของ Filecoin และ CommP รุ่นเดิมจากอาร์ไคฟ์ CAR หรือไฟล์ใดก็ได้ ดูขนาด Piece หลังเติมข้อมูลและตรวจสอบค่า commitment ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Piece CID Hesaplayıcısı",
+        description:
+          "Bir CAR arşivi veya herhangi bir dosya için Filecoin Piece CID ve eski biçimdeki CommP değerlerini hesaplayın. Dolgu sonrası parça boyutunu öğrenin ve taahhüdü tarayıcınızda doğrulayın.",
+      },
+      vi: {
+        name: "Công cụ tính Piece CID Filecoin",
+        description:
+          "Tính Piece CID Filecoin và CommP phiên bản cũ cho tệp lưu trữ CAR hoặc bất kỳ tệp nào. Xem kích thước piece sau khi đệm và xác minh giá trị cam kết ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin Piece CID 计算器",
+        description:
+          "计算 CAR 归档或任意文件的 Filecoin Piece CID 和旧版 CommP。在浏览器中查看填充后的 Piece 大小并验证承诺值。",
+      },
+      "zh-TW": {
+        name: "Filecoin Piece CID 計算器",
+        description:
+          "計算 CAR 封存檔或任何檔案的 Filecoin Piece CID 和舊版 CommP。在瀏覽器中查看填補後的 Piece 大小，並驗證承諾值。",
       },
     },
   },

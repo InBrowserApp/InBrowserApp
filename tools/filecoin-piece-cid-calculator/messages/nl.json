@@ -1,0 +1,22 @@
+{
+  "input": "Bestand of CAR-archief",
+  "drop": "Sleep hier een bestand naartoe",
+  "chooseFile": "Bestand kiezen",
+  "calculate": "Piece CID berekenen",
+  "calculating": "Piece CID berekenen…",
+  "cancel": "Annuleren",
+  "result": "Piece-commitment",
+  "empty": "Kies een bestand om de Piece CID en oudere CommP te berekenen.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "Oudere CommP (v1)",
+  "paddedSize": "Opgevulde piece-grootte",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd",
+  "compare": "Vergelijken met een bestaande Piece CID",
+  "check": "Controleren",
+  "match": "De Piece CID’s komen overeen.",
+  "different": "De Piece CID’s verschillen. Controleer of je precies het bestand hebt gekozen dat voor het commitment is gebruikt.",
+  "invalid": "Voer een geldige Filecoin Piece CID of oudere CommP in.",
+  "singleFile": "Kies of sleep één bestand tegelijk.",
+  "failed": "De Piece CID kon niet worden berekend. Controleer of het bestand leesbaar is en probeer het opnieuw."
+}

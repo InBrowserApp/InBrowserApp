@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Piece CID Filecoin",
+  "description": "Hitung Piece CID Filecoin dan CommP versi lama untuk arsip CAR atau file apa pun. Lihat ukuran piece setelah padding dan verifikasi komitmen di browser."
+}

@@ -1,0 +1,22 @@
+{
+  "input": "Plik lub archiwum CAR",
+  "drop": "Upuść tutaj plik",
+  "chooseFile": "Wybierz plik",
+  "calculate": "Oblicz Piece CID",
+  "calculating": "Obliczanie Piece CID…",
+  "cancel": "Anuluj",
+  "result": "Zobowiązanie kryptograficzne",
+  "empty": "Wybierz plik, aby obliczyć jego Piece CID i CommP w starszym formacie.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP w starszym formacie (v1)",
+  "paddedSize": "Rozmiar fragmentu po dopełnieniu",
+  "copy": "Kopiuj",
+  "copied": "Skopiowano",
+  "compare": "Porównaj z istniejącym Piece CID",
+  "check": "Sprawdź",
+  "match": "Identyfikatory Piece CID są zgodne.",
+  "different": "Identyfikatory Piece CID się różnią. Upewnij się, że wybierasz dokładnie ten plik, dla którego obliczono zobowiązanie.",
+  "invalid": "Wpisz poprawny Piece CID Filecoin lub CommP w starszym formacie.",
+  "singleFile": "Wybierz lub upuść jeden plik naraz.",
+  "failed": "Nie udało się obliczyć Piece CID. Sprawdź, czy plik można odczytać, i spróbuj ponownie."
+}
