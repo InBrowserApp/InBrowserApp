@@ -1084,6 +1084,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Remove PDF Metadata",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF Page Number Adder",
     slug: "pdf-page-number-adder",
   },

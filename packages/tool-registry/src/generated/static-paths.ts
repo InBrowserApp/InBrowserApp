@@ -19874,6 +19874,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-metadata-remover",
+    language: "ar",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "de",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "en",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "es",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "fr",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "he",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "hi",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "id",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "it",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ja",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ko",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ms",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "nl",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "no",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "pl",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "pt",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ru",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "sv",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "th",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "tr",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "vi",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-page-number-adder",
     language: "ar",
   },

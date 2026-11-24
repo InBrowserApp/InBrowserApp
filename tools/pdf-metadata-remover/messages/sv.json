@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Välj en PDF-fil",
+  "dropPdf": "eller släpp en PDF-fil här",
+  "changePdf": "Byt PDF-fil",
+  "privacy": "Filen bearbetas i webbläsaren utan uppladdning.",
+  "removeMetadata": "Ta bort metadata",
+  "removingMetadata": "Tar bort metadata…",
+  "success": "Din PDF är klar att ladda ned.",
+  "downloadPdf": "Ladda ned PDF",
+  "oneFile": "Välj en PDF-fil i taget.",
+  "encryptedPdf": "PDF-filen är krypterad. Öppna filen, spara en okrypterad kopia och försök igen.",
+  "invalidPdf": "Det gick inte att bearbeta filen. Välj en PDF-fil som går att öppna."
+}

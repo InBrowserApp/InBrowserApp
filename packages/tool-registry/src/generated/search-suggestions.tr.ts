@@ -1084,6 +1084,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF Meta Verilerini Kaldır",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF Sayfa Numarası Ekleyici",
     slug: "pdf-page-number-adder",
   },

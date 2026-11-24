@@ -1084,6 +1084,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "إزالة البيانات الوصفية من ملف PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "إضافة أرقام صفحات PDF",
     slug: "pdf-page-number-adder",
   },

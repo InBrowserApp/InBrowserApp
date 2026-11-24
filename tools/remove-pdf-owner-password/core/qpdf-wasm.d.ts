@@ -17,6 +17,7 @@ declare module "@jspawn/qpdf-wasm/qpdf.js" {
 
   type QpdfModuleOptions = Readonly<{
     locateFile: () => string
+    stderr?: (character: number) => void
   }>
 
   export default function createQpdfModule(

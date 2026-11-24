@@ -1,0 +1,4 @@
+{
+  "name": "Ta bort PDF-metadata",
+  "description": "Ta bort författare, titel, nyckelord, datum och XMP-metadata från en PDF. Ladda ned en ny kopia direkt i webbläsaren utan att ladda upp filen."
+}

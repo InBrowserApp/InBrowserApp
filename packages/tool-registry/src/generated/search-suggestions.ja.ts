@@ -1084,6 +1084,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF のメタデータを削除",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDFページ番号追加ツール",
     slug: "pdf-page-number-adder",
   },

@@ -37,6 +37,7 @@ export {
   Database,
   Copy,
   Download,
+  Eraser,
   Eye,
   EyeOff,
   Flag,

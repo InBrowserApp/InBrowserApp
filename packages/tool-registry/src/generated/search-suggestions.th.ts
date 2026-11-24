@@ -1084,6 +1084,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "ลบเมตาดาตาของ PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "เครื่องมือเพิ่มเลขหน้า PDF",
     slug: "pdf-page-number-adder",
   },

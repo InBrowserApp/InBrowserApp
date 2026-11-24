@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropPdf": "atau lepas PDF di sini",
+  "changePdf": "Pilih PDF lain",
+  "privacy": "File diproses di browser Anda tanpa diunggah.",
+  "removeMetadata": "Hapus metadata",
+  "removingMetadata": "Menghapus metadata…",
+  "success": "PDF Anda siap diunduh.",
+  "downloadPdf": "Unduh PDF",
+  "oneFile": "Pilih satu PDF saja setiap kali.",
+  "encryptedPdf": "PDF ini terenkripsi. Buka dan simpan salinan tanpa enkripsi, lalu coba lagi.",
+  "invalidPdf": "File tidak dapat diproses. Pilih PDF yang bisa dibuka."
+}

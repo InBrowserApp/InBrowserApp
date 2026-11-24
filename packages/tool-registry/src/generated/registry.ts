@@ -27261,6 +27261,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-metadata-remover",
+    category: "pdf",
+    icon: "eraser",
+    tags: [
+      "pdf",
+      "metadata",
+      "remove",
+      "author",
+      "document properties",
+      "xmp",
+      "privacy",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة البيانات الوصفية من ملف PDF",
+        description:
+          "احذف اسم المؤلف والعنوان والكلمات المفتاحية والتواريخ وبيانات XMP من ملف PDF. نزّل نسخة جديدة بعد معالجة الملف داخل متصفحك.",
+      },
+      de: {
+        name: "PDF-Metadaten entfernen",
+        description:
+          "Entferne Autor, Titel, Schlüsselwörter, Datumsangaben und XMP-Metadaten aus einer PDF. Lade die bereinigte Kopie herunter, ganz ohne Upload.",
+      },
+      en: {
+        name: "Remove PDF Metadata",
+        description:
+          "Remove author, title, keywords, dates, and XMP metadata from a PDF online. Download a new copy. Your file stays in your browser.",
+      },
+      es: {
+        name: "Eliminar metadatos de un PDF",
+        description:
+          "Elimina el autor, el título, las palabras clave, las fechas y los metadatos XMP de un PDF en línea. Descarga una copia sin subir el archivo.",
+      },
+      fr: {
+        name: "Supprimer les métadonnées d’un PDF",
+        description:
+          "Supprimez l’auteur, le titre, les mots-clés, les dates et les métadonnées XMP d’un PDF en ligne. Téléchargez une copie sans envoyer votre fichier.",
+      },
+      he: {
+        name: "הסרת מטא-נתונים מקובץ PDF",
+        description:
+          "הסירו מקובץ PDF את שם המחבר, הכותרת, מילות המפתח, התאריכים ונתוני XMP. הקובץ מעובד בדפדפן ועותק חדש זמין להורדה.",
+      },
+      hi: {
+        name: "PDF का मेटाडेटा हटाएँ",
+        description:
+          "PDF से लेखक का नाम, शीर्षक, कीवर्ड, तारीखें और XMP मेटाडेटा हटाएँ। फ़ाइल आपके ब्राउज़र में ही प्रोसेस होती है और आप नई कॉपी डाउनलोड कर सकते हैं।",
+      },
+      id: {
+        name: "Hapus Metadata PDF",
+        description:
+          "Hapus nama penulis, judul, kata kunci, tanggal, dan metadata XMP dari PDF. Unduh salinan baru setelah file diproses di browser Anda.",
+      },
+      it: {
+        name: "Rimuovere i metadati da un PDF",
+        description:
+          "Rimuovi autore, titolo, parole chiave, date e metadati XMP da un PDF online. Scarica una nuova copia senza inviare il file.",
+      },
+      ja: {
+        name: "PDF のメタデータを削除",
+        description:
+          "PDF の作成者、タイトル、キーワード、作成・更新日時、XMP メタデータをオンラインで削除できます。ファイルをアップロードせず、ブラウザ内で処理した PDF を別のファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 메타데이터 제거",
+        description:
+          "PDF에서 작성자, 제목, 키워드, 날짜와 XMP 메타데이터를 제거하고 새 사본을 다운로드하세요. 파일은 브라우저에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Buang Metadata PDF",
+        description:
+          "Buang nama pengarang, tajuk, kata kunci, tarikh dan metadata XMP daripada PDF. Muat turun salinan baharu selepas fail diproses dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-metadata verwijderen",
+        description:
+          "Verwijder online de auteur, titel, trefwoorden, datums en XMP-metadata uit een PDF. Download een nieuwe kopie zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Fjern PDF-metadata",
+        description:
+          "Fjern forfatter, tittel, nøkkelord, datoer og XMP-metadata fra en PDF. Last ned en ny kopi i nettleseren uten å laste opp filen.",
+      },
+      pl: {
+        name: "Usuń metadane PDF",
+        description:
+          "Usuń z PDF autora, tytuł, słowa kluczowe, daty i metadane XMP. Pobierz nową kopię. Plik zostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover metadados de PDF",
+        description:
+          "Remova o autor, o título, as palavras-chave, as datas e os metadados XMP de um PDF online. Baixe uma nova cópia sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Удаление метаданных PDF",
+        description:
+          "Удалите автора, название, ключевые слова, даты и метаданные XMP из PDF. Скачайте новую копию. Файл обрабатывается в браузере.",
+      },
+      sv: {
+        name: "Ta bort PDF-metadata",
+        description:
+          "Ta bort författare, titel, nyckelord, datum och XMP-metadata från en PDF. Ladda ned en ny kopia direkt i webbläsaren utan att ladda upp filen.",
+      },
+      th: {
+        name: "ลบเมตาดาตาของ PDF",
+        description:
+          "ลบผู้เขียน ชื่อเรื่อง คำสำคัญ วันที่ และเมตาดาตา XMP จาก PDF แล้วดาวน์โหลดสำเนาใหม่ ไฟล์ยังคงอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "PDF Meta Verilerini Kaldır",
+        description:
+          "PDF'den yazar adı, başlık, anahtar kelimeler, tarihler ve XMP meta verilerini kaldırın. Dosyayı yüklemeden yeni bir kopya indirin.",
+      },
+      vi: {
+        name: "Xóa siêu dữ liệu PDF",
+        description:
+          "Xóa tác giả, tiêu đề, từ khóa, ngày tháng và siêu dữ liệu XMP khỏi PDF rồi tải bản sao mới. Tệp của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "删除 PDF 元数据",
+        description:
+          "在线删除 PDF 中的作者、标题、关键词、日期和 XMP 元数据，并下载新副本。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 中繼資料",
+        description:
+          "線上移除 PDF 的作者、標題、關鍵字、日期和 XMP 中繼資料，並下載新的副本。檔案全程在瀏覽器中處理。",
+      },
+    },
+  },
+  {
     slug: "pdf-page-number-adder",
     category: "pdf",
     icon: "file-text",
@@ -69811,6 +69943,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 合併器",
         description:
           "在瀏覽器中將多個 PDF 檔案合併成一份文件，並提供預覽、排序控制和自訂檔名。",
+      },
+    },
+  },
+  "pdf-metadata-remover": {
+    slug: "pdf-metadata-remover",
+    category: "pdf",
+    icon: "eraser",
+    tags: [
+      "pdf",
+      "metadata",
+      "remove",
+      "author",
+      "document properties",
+      "xmp",
+      "privacy",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة البيانات الوصفية من ملف PDF",
+        description:
+          "احذف اسم المؤلف والعنوان والكلمات المفتاحية والتواريخ وبيانات XMP من ملف PDF. نزّل نسخة جديدة بعد معالجة الملف داخل متصفحك.",
+      },
+      de: {
+        name: "PDF-Metadaten entfernen",
+        description:
+          "Entferne Autor, Titel, Schlüsselwörter, Datumsangaben und XMP-Metadaten aus einer PDF. Lade die bereinigte Kopie herunter, ganz ohne Upload.",
+      },
+      en: {
+        name: "Remove PDF Metadata",
+        description:
+          "Remove author, title, keywords, dates, and XMP metadata from a PDF online. Download a new copy. Your file stays in your browser.",
+      },
+      es: {
+        name: "Eliminar metadatos de un PDF",
+        description:
+          "Elimina el autor, el título, las palabras clave, las fechas y los metadatos XMP de un PDF en línea. Descarga una copia sin subir el archivo.",
+      },
+      fr: {
+        name: "Supprimer les métadonnées d’un PDF",
+        description:
+          "Supprimez l’auteur, le titre, les mots-clés, les dates et les métadonnées XMP d’un PDF en ligne. Téléchargez une copie sans envoyer votre fichier.",
+      },
+      he: {
+        name: "הסרת מטא-נתונים מקובץ PDF",
+        description:
+          "הסירו מקובץ PDF את שם המחבר, הכותרת, מילות המפתח, התאריכים ונתוני XMP. הקובץ מעובד בדפדפן ועותק חדש זמין להורדה.",
+      },
+      hi: {
+        name: "PDF का मेटाडेटा हटाएँ",
+        description:
+          "PDF से लेखक का नाम, शीर्षक, कीवर्ड, तारीखें और XMP मेटाडेटा हटाएँ। फ़ाइल आपके ब्राउज़र में ही प्रोसेस होती है और आप नई कॉपी डाउनलोड कर सकते हैं।",
+      },
+      id: {
+        name: "Hapus Metadata PDF",
+        description:
+          "Hapus nama penulis, judul, kata kunci, tanggal, dan metadata XMP dari PDF. Unduh salinan baru setelah file diproses di browser Anda.",
+      },
+      it: {
+        name: "Rimuovere i metadati da un PDF",
+        description:
+          "Rimuovi autore, titolo, parole chiave, date e metadati XMP da un PDF online. Scarica una nuova copia senza inviare il file.",
+      },
+      ja: {
+        name: "PDF のメタデータを削除",
+        description:
+          "PDF の作成者、タイトル、キーワード、作成・更新日時、XMP メタデータをオンラインで削除できます。ファイルをアップロードせず、ブラウザ内で処理した PDF を別のファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 메타데이터 제거",
+        description:
+          "PDF에서 작성자, 제목, 키워드, 날짜와 XMP 메타데이터를 제거하고 새 사본을 다운로드하세요. 파일은 브라우저에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Buang Metadata PDF",
+        description:
+          "Buang nama pengarang, tajuk, kata kunci, tarikh dan metadata XMP daripada PDF. Muat turun salinan baharu selepas fail diproses dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-metadata verwijderen",
+        description:
+          "Verwijder online de auteur, titel, trefwoorden, datums en XMP-metadata uit een PDF. Download een nieuwe kopie zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Fjern PDF-metadata",
+        description:
+          "Fjern forfatter, tittel, nøkkelord, datoer og XMP-metadata fra en PDF. Last ned en ny kopi i nettleseren uten å laste opp filen.",
+      },
+      pl: {
+        name: "Usuń metadane PDF",
+        description:
+          "Usuń z PDF autora, tytuł, słowa kluczowe, daty i metadane XMP. Pobierz nową kopię. Plik zostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover metadados de PDF",
+        description:
+          "Remova o autor, o título, as palavras-chave, as datas e os metadados XMP de um PDF online. Baixe uma nova cópia sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Удаление метаданных PDF",
+        description:
+          "Удалите автора, название, ключевые слова, даты и метаданные XMP из PDF. Скачайте новую копию. Файл обрабатывается в браузере.",
+      },
+      sv: {
+        name: "Ta bort PDF-metadata",
+        description:
+          "Ta bort författare, titel, nyckelord, datum och XMP-metadata från en PDF. Ladda ned en ny kopia direkt i webbläsaren utan att ladda upp filen.",
+      },
+      th: {
+        name: "ลบเมตาดาตาของ PDF",
+        description:
+          "ลบผู้เขียน ชื่อเรื่อง คำสำคัญ วันที่ และเมตาดาตา XMP จาก PDF แล้วดาวน์โหลดสำเนาใหม่ ไฟล์ยังคงอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "PDF Meta Verilerini Kaldır",
+        description:
+          "PDF'den yazar adı, başlık, anahtar kelimeler, tarihler ve XMP meta verilerini kaldırın. Dosyayı yüklemeden yeni bir kopya indirin.",
+      },
+      vi: {
+        name: "Xóa siêu dữ liệu PDF",
+        description:
+          "Xóa tác giả, tiêu đề, từ khóa, ngày tháng và siêu dữ liệu XMP khỏi PDF rồi tải bản sao mới. Tệp của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "删除 PDF 元数据",
+        description:
+          "在线删除 PDF 中的作者、标题、关键词、日期和 XMP 元数据，并下载新副本。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 中繼資料",
+        description:
+          "線上移除 PDF 的作者、標題、關鍵字、日期和 XMP 中繼資料，並下載新的副本。檔案全程在瀏覽器中處理。",
       },
     },
   },

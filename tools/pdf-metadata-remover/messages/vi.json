@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Chọn PDF",
+  "dropPdf": "hoặc thả PDF vào đây",
+  "changePdf": "Chọn PDF khác",
+  "privacy": "Xử lý trong trình duyệt, không tải tệp lên.",
+  "removeMetadata": "Xóa siêu dữ liệu",
+  "removingMetadata": "Đang xóa siêu dữ liệu…",
+  "success": "PDF đã sẵn sàng để tải xuống.",
+  "downloadPdf": "Tải PDF xuống",
+  "oneFile": "Mỗi lần chỉ chọn một tệp PDF.",
+  "encryptedPdf": "PDF này được mã hóa. Hãy mở và lưu một bản sao đã mở khóa rồi thử lại.",
+  "invalidPdf": "Không thể xử lý tệp này. Hãy chọn một tệp PDF có thể đọc được."
+}
