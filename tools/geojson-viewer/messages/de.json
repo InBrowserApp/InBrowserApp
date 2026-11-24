@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON öffnen",
+  "example": "Beispiel ausprobieren",
+  "paste": "GeoJSON einfügen",
+  "render": "Auf Karte anzeigen",
+  "map": "GeoJSON-Karte",
+  "fit": "Auf Daten zoomen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "features": "Objekte",
+  "properties": "Eigenschaften",
+  "empty": "Öffne eine .geojson- oder .json-Datei oder füge GeoJSON ein.",
+  "noGeometry": "Dieses GeoJSON enthält keine Geometrien zur Anzeige.",
+  "noProperties": "Dieses Objekt hat keine Eigenschaften.",
+  "invalid": "GeoJSON konnte nicht geöffnet werden. Prüfe, ob es gültige GeoJSON-Geometrien enthält.",
+  "feature": "Objekt {number}"
+}

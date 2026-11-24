@@ -1,0 +1,17 @@
+{
+  "openFile": "Öppna GeoJSON",
+  "example": "Prova ett exempel",
+  "paste": "Klistra in GeoJSON",
+  "render": "Visa på kartan",
+  "map": "GeoJSON-karta",
+  "fit": "Anpassa till data",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "features": "Objekt",
+  "properties": "Attribut",
+  "empty": "Öppna en .geojson- eller .json-fil eller klistra in GeoJSON för att börja.",
+  "noGeometry": "Denna GeoJSON innehåller inga geometrier att visa.",
+  "noProperties": "Detta objekt har inga attribut.",
+  "invalid": "Det gick inte att öppna denna GeoJSON. Kontrollera att den innehåller giltig GeoJSON-geometri.",
+  "feature": "Objekt {number}"
+}

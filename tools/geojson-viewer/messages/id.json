@@ -1,0 +1,17 @@
+{
+  "openFile": "Buka GeoJSON",
+  "example": "Coba contoh",
+  "paste": "Tempel GeoJSON",
+  "render": "Tampilkan di peta",
+  "map": "Peta GeoJSON",
+  "fit": "Sesuaikan tampilan dengan data",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "features": "Fitur",
+  "properties": "Atribut",
+  "empty": "Buka berkas .geojson atau .json, atau tempel GeoJSON untuk memulai.",
+  "noGeometry": "GeoJSON ini tidak memiliki geometri yang bisa ditampilkan.",
+  "noProperties": "Fitur ini tidak memiliki atribut.",
+  "invalid": "GeoJSON ini tidak dapat dibuka. Pastikan geometrinya valid.",
+  "feature": "Fitur {number}"
+}

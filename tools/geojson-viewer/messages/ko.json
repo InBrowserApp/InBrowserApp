@@ -1,0 +1,17 @@
+{
+  "openFile": "GeoJSON 열기",
+  "example": "예제 사용하기",
+  "paste": "GeoJSON 붙여넣기",
+  "render": "지도에 표시",
+  "map": "GeoJSON 지도",
+  "fit": "데이터에 맞추기",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "features": "피처",
+  "properties": "속성",
+  "empty": ".geojson 또는 .json 파일을 열거나 GeoJSON을 붙여 넣어 시작하세요.",
+  "noGeometry": "이 GeoJSON에는 표시할 도형이 없습니다.",
+  "noProperties": "이 피처에는 속성이 없습니다.",
+  "invalid": "이 GeoJSON을 열 수 없습니다. 유효한 GeoJSON 지오메트리가 포함되어 있는지 확인하세요.",
+  "feature": "피처 {number}"
+}

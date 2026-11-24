@@ -1,0 +1,4 @@
+{
+  "name": "Penampil GeoJSON",
+  "description": "Buka atau tempel GeoJSON untuk melihat titik, garis, dan poligon pada peta interaktif luring serta memeriksa atribut fitur. Berkas tetap berada di browser."
+}

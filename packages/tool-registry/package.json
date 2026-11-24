@@ -115,6 +115,7 @@
     "@tool/file-type-detector": "workspace:*",
     "@tool/font-subset-generator": "workspace:*",
     "@tool/gamepad-tester": "workspace:*",
+    "@tool/geojson-viewer": "workspace:*",
     "@tool/gif-maker": "workspace:*",
     "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",

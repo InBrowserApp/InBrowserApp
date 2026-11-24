@@ -74,6 +74,7 @@ export {
   Lock,
   List,
   Mic,
+  Map,
   Mail,
   Paperclip,
   MicOff,
