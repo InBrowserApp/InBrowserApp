@@ -164,3 +164,19 @@ test("detects a UTF-16 BOM and rejects unreadable input instead of fabricating a
     "Unsupported file"
   )
 })
+
+test("reads Excel files written with a raw BIFF workbook", () => {
+  const workbook = utils.book_new()
+  utils.book_append_sheet(
+    workbook,
+    utils.aoa_to_sheet([["name"], ["Ana"]]),
+    "Sheet1"
+  )
+  const bytes = new Uint8Array(
+    write(workbook, { type: "array", bookType: "biff2" })
+  )
+  expect(readSpreadsheet(bytes, "legacy.xls")[0]?.rows).toEqual([
+    ["name"],
+    ["Ana"],
+  ])
+})

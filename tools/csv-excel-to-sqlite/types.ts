@@ -3,14 +3,14 @@ import type messages from "./messages/en.json"
 export type Messages = typeof messages
 export type Cell = string | number | null
 export type Rows = Cell[][]
-export type Preview = {
+type Preview = {
   label: string
   rows: Rows
   width: number
 }
 export type TableOptions = { name: string; header: boolean }
 export type Source = { id: number; file: File }
-export type TableSelection = TableOptions & { id: number; index: number }
+type TableSelection = TableOptions & { id: number; index: number }
 export type Request =
   | { kind: "read"; sources: Source[] }
   | { kind: "remove"; id: number }

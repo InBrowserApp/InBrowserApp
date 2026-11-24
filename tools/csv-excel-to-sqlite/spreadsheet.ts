@@ -12,9 +12,10 @@ export function readSpreadsheet(bytes: Uint8Array, name: string) {
       bytes.byteOffset,
       bytes.byteLength
     )
+    const biff = bytes[0] === 0x09 && bytes[1]! <= 8
     if (
       bytes.length < 4 ||
-      ![0x504b0304, 0xd0cf11e0].includes(signature.getUint32(0))
+      (!biff && ![0x504b0304, 0xd0cf11e0].includes(signature.getUint32(0)))
     ) {
       throw new Error("Invalid Excel workbook")
     }
