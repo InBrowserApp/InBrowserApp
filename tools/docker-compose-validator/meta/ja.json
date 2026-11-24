@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose バリデーター",
+  "description": "compose.yaml や docker-compose.yml をオンラインで検証します。YAML の構文エラーや Docker Compose のフィールドの誤りを行番号と列番号で確認できます。"
+}

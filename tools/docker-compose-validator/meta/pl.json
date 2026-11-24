@@ -1,0 +1,4 @@
+{
+  "name": "Walidator Docker Compose",
+  "description": "Sprawdź online plik compose.yaml lub docker-compose.yml. Znajdź błędy składni YAML i nieprawidłowe pola Docker Compose wraz z numerami wierszy i kolumn."
+}

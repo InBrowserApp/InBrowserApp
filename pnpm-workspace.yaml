@@ -324,6 +324,7 @@ catalog:
   xlsx: 0.20.3
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
+  yaml: ^2.8.3
   zod: ^4.6.7
 
 # pnpm 10 catalogs do not support file: specifiers. Resolve the catalog's

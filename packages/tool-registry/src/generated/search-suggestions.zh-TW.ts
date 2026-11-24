@@ -444,6 +444,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Docker Compose 驗證器",
+    slug: "docker-compose-validator",
+  },
+  {
+    category: "developer",
     name: "Docker Run 轉 Compose 轉換器",
     slug: "docker-run-to-compose-converter",
   },

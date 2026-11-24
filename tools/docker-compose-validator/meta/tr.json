@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose Doğrulayıcı",
+  "description": "compose.yaml veya docker-compose.yml dosyasını çevrimiçi doğrulayın. YAML sözdizimi hatalarını ve geçersiz Docker Compose alanlarını satır ve sütun numaralarıyla bulun."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose 검증기",
+  "description": "compose.yaml 또는 docker-compose.yml을 온라인에서 검증하세요. YAML 구문 오류와 잘못된 Docker Compose 필드를 줄과 열 번호로 찾을 수 있습니다."
+}

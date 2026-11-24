@@ -1,0 +1,4 @@
+{
+  "name": "ตัวตรวจสอบ Docker Compose",
+  "description": "ตรวจสอบ compose.yaml หรือ docker-compose.yml ออนไลน์ ค้นหาข้อผิดพลาดทางไวยากรณ์ YAML และฟิลด์ Docker Compose ที่ไม่ถูกต้อง พร้อมระบุบรรทัดและคอลัมน์"
+}

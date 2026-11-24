@@ -49,6 +49,7 @@ export {
   Minus,
   File,
   FileArchive,
+  FileCheck,
   FileCog,
   FileImage,
   FileJson2,

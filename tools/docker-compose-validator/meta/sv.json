@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose-validerare",
+  "description": "Validera compose.yaml eller docker-compose.yml online. Hitta YAML-syntaxfel och ogiltiga Docker Compose-fält med rad- och kolumnnummer."
+}

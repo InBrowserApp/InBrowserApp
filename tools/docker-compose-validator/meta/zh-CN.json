@@ -1,0 +1,4 @@
+{
+  "name": "Docker Compose 校验器",
+  "description": "在线校验 compose.yaml 或 docker-compose.yml，查找 YAML 语法错误和无效的 Docker Compose 字段，并查看错误所在的行和列。"
+}
