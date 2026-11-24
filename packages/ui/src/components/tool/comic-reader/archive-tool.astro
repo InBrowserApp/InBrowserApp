@@ -35,7 +35,7 @@ const toolsPath = lang === "en" ? "/tools" : `/${lang}/tools`
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ArchiveClient client:load kind={kind} messages={messages} />
-  <ToolArticle className="[&_ol]:ms-6 [&_ol]:ml-0">
+  <ToolArticle className="[&_ol]:ml-0 [&_ol]:ps-6">
     <h2>{text(copy.howTitle)}</h2>
     <ol>
       {copy.how.map((step) => <li>{text(step)}</li>)}

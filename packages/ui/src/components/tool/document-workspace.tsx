@@ -221,8 +221,7 @@ export function DocumentWorkspace({
           ref={picker}
           type="file"
           accept={accept}
-          className="sr-only"
-          tabIndex={-1}
+          hidden
           aria-label={m.open}
           onChange={(event) => {
             const next = event.target.files?.[0]

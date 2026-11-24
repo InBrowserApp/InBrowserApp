@@ -58,7 +58,7 @@ export default function ArchiveClient({
             <div className="grid size-12 place-items-center rounded-xl border bg-background text-primary shadow-xs">
               <BookOpen className="size-6" aria-hidden="true" />
             </div>
-            <Button data-file-open onClick={choose}>
+            <Button data-file-open className="min-h-11 px-4" onClick={choose}>
               <Folder data-icon="inline-start" aria-hidden="true" />
               {m.open}
             </Button>
