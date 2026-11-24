@@ -1,0 +1,23 @@
+{
+  "openFile": "開啟檔案",
+  "replaceFile": "替換檔案",
+  "trySample": "試用範例",
+  "dropFile": "將檔案拖放至此，檢視及編輯其中的位元組。",
+  "download": "下載副本",
+  "emptyFile": "此檔案沒有可顯示的位元組。",
+  "readError": "無法讀取檔案的這個部分。請嘗試重新開啟檔案。",
+  "loading": "正在讀取位元組…",
+  "offset": "偏移量",
+  "jumpOffset": "跳至偏移量",
+  "go": "前往",
+  "offsetError": "請輸入檔案範圍內的十六進位偏移量。",
+  "hex": "十六進位",
+  "ascii": "ASCII",
+  "byteValue": "偏移量 {offset} 的位元組",
+  "editHint": "選取位元組並輸入兩位十六進位數字即可覆寫。",
+  "undo": "復原",
+  "redo": "重做",
+  "previousPage": "上一頁",
+  "nextPage": "下一頁",
+  "page": "第 {current} 頁，共 {total} 頁"
+}

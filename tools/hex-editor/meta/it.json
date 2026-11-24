@@ -1,0 +1,4 @@
+{
+  "name": "Editor esadecimale",
+  "description": "Visualizza e modifica file binari online in esadecimale e ASCII. Vai a un offset, sovrascrivi i byte e scarica la copia modificata. I file restano nel browser."
+}

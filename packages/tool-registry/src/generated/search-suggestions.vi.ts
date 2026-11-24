@@ -613,6 +613,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "developer",
+    name: "Trình chỉnh sửa hex",
+    slug: "hex-editor",
+  },
+  {
     category: "crypto",
     name: "Băm văn bản hoặc tệp bằng HighwayHash",
     slug: "highwayhash-hash-text-or-file",

@@ -1,0 +1,23 @@
+{
+  "openFile": "Dosya aç",
+  "replaceFile": "Dosyayı değiştir",
+  "trySample": "Örneği dene",
+  "dropFile": "Baytlarını görüntülemek ve düzenlemek için bir dosyayı buraya bırakın.",
+  "download": "Kopyayı indir",
+  "emptyFile": "Bu dosyada görüntülenecek bayt yok.",
+  "readError": "Dosyanın bu bölümü okunamadı. Dosyayı yeniden açmayı deneyin.",
+  "loading": "Baytlar okunuyor…",
+  "offset": "Ofset",
+  "jumpOffset": "Ofsete atla",
+  "go": "Git",
+  "offsetError": "Dosya sınırları içinde onaltılık bir ofset girin.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "{offset} konumundaki bayt",
+  "editHint": "Bir bayt seçin ve üzerine yazmak için iki onaltılık rakam girin.",
+  "undo": "Geri al",
+  "redo": "Yinele",
+  "previousPage": "Önceki sayfa",
+  "nextPage": "Sonraki sayfa",
+  "page": "Sayfa {current} / {total}"
+}

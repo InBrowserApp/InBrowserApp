@@ -1,0 +1,23 @@
+{
+  "openFile": "Otwórz plik",
+  "replaceFile": "Zastąp plik",
+  "trySample": "Otwórz przykład",
+  "dropFile": "Upuść plik tutaj, aby przeglądać i edytować jego bajty.",
+  "download": "Pobierz kopię",
+  "emptyFile": "Ten plik nie zawiera żadnych bajtów.",
+  "readError": "Nie udało się odczytać tej części pliku. Spróbuj otworzyć plik ponownie.",
+  "loading": "Odczytywanie bajtów…",
+  "offset": "Przesunięcie",
+  "jumpOffset": "Przesunięcie docelowe",
+  "go": "Przejdź",
+  "offsetError": "Podaj pozycję w pliku jako liczbę szesnastkową.",
+  "hex": "Hex",
+  "ascii": "ASCII",
+  "byteValue": "Bajt na pozycji {offset}",
+  "editHint": "Wybierz bajt i wpisz dwie cyfry szesnastkowe, aby go nadpisać.",
+  "undo": "Cofnij",
+  "redo": "Ponów",
+  "previousPage": "Poprzednia strona",
+  "nextPage": "Następna strona",
+  "page": "Strona {current} z {total}"
+}

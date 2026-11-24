@@ -15571,6 +15571,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "hex-editor",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "hex",
+      "hexadecimal",
+      "binary",
+      "ascii",
+      "byte",
+      "offset",
+      "editor",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر سداسي عشري",
+        description:
+          "اعرض الملفات الثنائية وحرّرها بالنظام السداسي العشري (Hex) مع عرض ASCII. انتقل إلى إزاحة، وعدّل البايتات، ونزّل نسخة. تبقى ملفاتك في المتصفح.",
+      },
+      de: {
+        name: "Hex-Editor",
+        description:
+          "Binärdateien online in Hex und ASCII ansehen und bearbeiten. Zu einem Byte-Offset springen, Werte überschreiben und eine bearbeitete Kopie herunterladen. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "Hex Editor",
+        description:
+          "View and edit binary files online in hex and ASCII. Jump to a byte offset, overwrite values, and download an edited copy. Files stay in your browser.",
+      },
+      es: {
+        name: "Editor hexadecimal",
+        description:
+          "Inspecciona archivos binarios en hexadecimal y ASCII. Ve a un desplazamiento, edita bytes y descarga una copia. Todo se hace en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur hexadécimal",
+        description:
+          "Affichez et modifiez des fichiers binaires en ligne, en hexadécimal et en ASCII. Accédez à un octet, remplacez sa valeur et téléchargez une copie modifiée. Tout se passe dans votre navigateur.",
+      },
+      he: {
+        name: "עורך הקסדצימלי",
+        description:
+          "הציגו קבצים בינאריים בהקסדצימלי וב־ASCII, עברו להיסט, ערכו בתים והורידו עותק. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "हेक्स एडिटर",
+        description:
+          "बाइनरी फ़ाइलें ऑनलाइन हेक्स और ASCII में देखें और संपादित करें। किसी भी बाइट के ऑफ़सेट पर जाएँ, उसका मान बदलें और संपादित कॉपी डाउनलोड करें। फ़ाइलें आपके ब्राउज़र में रहती हैं।",
+      },
+      id: {
+        name: "Editor Heksadesimal",
+        description:
+          "Lihat dan edit file biner secara online dalam heksadesimal dan ASCII. Lompat ke offset byte, timpa nilai, dan unduh salinan yang telah diedit. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Editor esadecimale",
+        description:
+          "Visualizza e modifica file binari online in esadecimale e ASCII. Vai a un offset, sovrascrivi i byte e scarica la copia modificata. I file restano nel browser.",
+      },
+      ja: {
+        name: "バイナリエディター",
+        description:
+          "バイナリファイルをオンラインで開き、16進数（Hex）とASCIIで表示・編集できます。指定したオフセットに移動し、バイトを上書きして編集済みのコピーをダウンロードできます。ファイルの処理はブラウザー内で完結します。",
+      },
+      ko: {
+        name: "16진수 편집기",
+        description:
+          "온라인에서 바이너리 파일을 16진수와 ASCII로 확인하고 편집하세요. 원하는 바이트 오프셋으로 이동해 값을 덮어쓰고 수정한 복사본을 다운로드할 수 있습니다. 파일은 브라우저에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Penyunting Heksadesimal",
+        description:
+          "Lihat dan sunting fail binari dalam paparan heksadesimal dan ASCII secara dalam talian. Pergi ke ofset bait, tulis ganti nilai dan muat turun salinan yang disunting. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Hex-editor",
+        description:
+          "Bekijk en bewerk binaire bestanden online in hexadecimale notatie en ASCII. Spring naar een bytepositie, overschrijf waarden en download een aangepaste kopie. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "Hex-editor",
+        description:
+          "Vis og rediger binærfiler i heksadesimalt format og ASCII. Hopp til en byteposisjon, endre verdier og last ned en kopi. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor szesnastkowy",
+        description:
+          "Przeglądaj i edytuj pliki binarne online w zapisie szesnastkowym i ASCII. Przejdź do wybranego bajtu, nadpisz jego wartość i pobierz zmienioną kopię. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor hexadecimal",
+        description:
+          "Visualize e edite arquivos binários online em hexadecimal e ASCII. Vá até um deslocamento, sobrescreva bytes e baixe uma cópia editada. Os arquivos ficam no seu navegador.",
+      },
+      ru: {
+        name: "Hex-редактор",
+        description:
+          "Просматривайте и редактируйте двоичные файлы онлайн в шестнадцатеричном виде и ASCII. Переходите к нужному смещению, меняйте значения байтов и скачивайте изменённую копию. Файлы обрабатываются в браузере.",
+      },
+      sv: {
+        name: "Hexredigerare",
+        description:
+          "Visa och redigera binärfiler online i hex och ASCII. Hoppa till ett offset, skriv över bytevärden och ladda ner en redigerad kopia. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขไฟล์เลขฐานสิบหก",
+        description:
+          "ดูและแก้ไขไฟล์ไบนารีออนไลน์ในรูปแบบเลขฐานสิบหกและ ASCII ข้ามไปยังออฟเซตที่ต้องการ เขียนทับค่าไบต์ และดาวน์โหลดสำเนาที่แก้ไขแล้ว ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Onaltılık Düzenleyici",
+        description:
+          "İkili dosyaları çevrimiçi olarak onaltılık ve ASCII biçiminde görüntüleyin ve düzenleyin. Bir bayt ofsetine atlayın, değerlerin üzerine yazın ve düzenlenmiş bir kopya indirin. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa hex",
+        description:
+          "Xem và chỉnh sửa tệp nhị phân trực tuyến dưới dạng hex và ASCII. Đến vị trí byte cần sửa, ghi đè giá trị rồi tải xuống bản sao. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "十六进制编辑器",
+        description:
+          "在线查看和编辑二进制文件，并排显示十六进制字节和 ASCII 字符。可跳转到指定偏移量、改写字节并下载编辑后的副本。文件仅在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "十六進位編輯器",
+        description:
+          "在線上以十六進位和 ASCII 檢視及編輯二進位檔案。跳至指定的位元組偏移量、覆寫數值，並下載編輯後的副本。檔案會留在瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",

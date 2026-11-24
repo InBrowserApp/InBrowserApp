@@ -1,0 +1,23 @@
+{
+  "openFile": "Abrir arquivo",
+  "replaceFile": "Substituir arquivo",
+  "trySample": "Abrir exemplo",
+  "dropFile": "Solte um arquivo aqui para ver e editar seus bytes.",
+  "download": "Baixar cópia",
+  "emptyFile": "Este arquivo não tem bytes para exibir.",
+  "readError": "Não foi possível ler esta parte do arquivo. Tente abri-lo novamente.",
+  "loading": "Lendo bytes…",
+  "offset": "Deslocamento",
+  "jumpOffset": "Ir para o deslocamento",
+  "go": "Ir",
+  "offsetError": "Digite um deslocamento hexadecimal dentro do intervalo do arquivo.",
+  "hex": "Hexadecimal",
+  "ascii": "ASCII",
+  "byteValue": "Byte no deslocamento {offset}",
+  "editHint": "Selecione um byte e digite dois dígitos hexadecimais para sobrescrevê-lo.",
+  "undo": "Desfazer",
+  "redo": "Refazer",
+  "previousPage": "Página anterior",
+  "nextPage": "Próxima página",
+  "page": "Página {current} de {total}"
+}
