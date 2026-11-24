@@ -1718,6 +1718,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "whirlpool-hash-text-or-file",
   },
   {
+    category: "json",
+    name: "WKT ↔ GeoJSON Dönüştürücü",
+    slug: "wkt-geojson-converter",
+  },
+  {
     category: "document",
     name: "XLS’ten XLSX’e Dönüştürücü",
     slug: "xls-to-xlsx-converter",

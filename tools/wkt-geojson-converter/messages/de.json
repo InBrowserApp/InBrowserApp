@@ -1,0 +1,12 @@
+{
+  "direction": "Konvertierungsrichtung",
+  "example": "Beispiel ausprobieren",
+  "openFile": "Datei öffnen",
+  "convert": "Konvertieren",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "download": "Herunterladen",
+  "empty": "Hier erscheint das Ergebnis der Konvertierung.",
+  "invalid": "Die Daten konnten nicht konvertiert werden. Prüfe Dateiformat und Geometrie.",
+  "swap": "Ergebnis als Eingabe verwenden"
+}

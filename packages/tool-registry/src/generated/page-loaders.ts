@@ -425,6 +425,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
+  "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),
   "xls-to-xlsx-converter": () => import("@tool/xls-to-xlsx-converter/page"),
   "xlsx-to-ods-converter": () => import("@tool/xlsx-to-ods-converter/page"),
   "xlsx-viewer": () => import("@tool/xlsx-viewer/page"),

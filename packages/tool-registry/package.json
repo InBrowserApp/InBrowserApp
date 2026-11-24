@@ -350,6 +350,7 @@
     "@tool/video-trimmer": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
+    "@tool/wkt-geojson-converter": "workspace:*",
     "@tool/xls-to-xlsx-converter": "workspace:*",
     "@tool/xlsx-to-ods-converter": "workspace:*",
     "@tool/xlsx-viewer": "workspace:*",

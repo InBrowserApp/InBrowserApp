@@ -43491,6 +43491,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "wkt-geojson-converter",
+    category: "json",
+    icon: "braces",
+    tags: [
+      "wkt",
+      "well-known-text",
+      "geojson",
+      "gis",
+      "geometry",
+      "converter",
+      "postgis",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل بين WKT وGeoJSON",
+        description:
+          "حوّل الأشكال الهندسية من صيغة Well-Known Text (WKT) إلى GeoJSON أو بالعكس. ألصق النص أو افتح ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "WKT ↔ GeoJSON-Konverter",
+        description:
+          "Geometrien zwischen Well-Known Text (WKT) und GeoJSON umwandeln. Füge Text ein oder öffne eine Datei und kopiere die Geometrie oder lade sie herunter.",
+      },
+      en: {
+        name: "WKT ↔ GeoJSON Converter",
+        description:
+          "Convert Well-Known Text (WKT) geometries to GeoJSON and back. Paste text or open a file, then copy or download the converted geometry.",
+      },
+      es: {
+        name: "Convertidor WKT ↔ GeoJSON",
+        description:
+          "Convierte geometrías en Well-Known Text (WKT) a GeoJSON y viceversa. Pega el texto o abre un archivo y luego copia o descarga la geometría convertida.",
+      },
+      fr: {
+        name: "Convertisseur WKT ↔ GeoJSON",
+        description:
+          "Convertissez des géométries Well-Known Text (WKT) en GeoJSON et inversement. Collez du texte ou ouvrez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר WKT ↔ GeoJSON",
+        description:
+          "המירו גאומטריות מ־Well-Known Text (WKT) ל־GeoJSON ובחזרה. הדביקו טקסט או פתחו קובץ, ואז העתיקו או הורידו את הגאומטריה שהומרה.",
+      },
+      hi: {
+        name: "WKT ↔ GeoJSON कन्वर्टर",
+        description:
+          "Well-Known Text (WKT) और GeoJSON के बीच ज्यामिति बदलें। टेक्स्ट पेस्ट करें या फ़ाइल खोलें, फिर बदली गई ज्यामिति कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WKT ↔ GeoJSON",
+        description:
+          "Konversi geometri Well-Known Text (WKT) ke GeoJSON atau sebaliknya. Tempel teks atau buka berkas, lalu salin atau unduh geometri hasil konversi.",
+      },
+      it: {
+        name: "Convertitore WKT ↔ GeoJSON",
+        description:
+          "Converti geometrie Well-Known Text (WKT) in GeoJSON e viceversa. Incolla il testo o apri un file, poi copia o scarica la geometria convertita.",
+      },
+      ja: {
+        name: "WKT ↔ GeoJSON 変換",
+        description:
+          "Well-Known Text（WKT）と GeoJSON のジオメトリを相互変換できます。テキストを貼り付けるかファイルを開き、変換結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "WKT ↔ GeoJSON 변환기",
+        description:
+          "Well-Known Text(WKT) 지오메트리와 GeoJSON을 서로 변환하세요. 텍스트를 붙여 넣거나 파일을 열고 변환된 지오메트리를 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WKT ↔ GeoJSON",
+        description:
+          "Tukar geometri Well-Known Text (WKT) kepada GeoJSON dan sebaliknya. Tampal teks atau buka fail, kemudian salin atau muat turun geometri yang ditukar.",
+      },
+      nl: {
+        name: "WKT ↔ GeoJSON-converter",
+        description:
+          "Zet geometrieën om van Well-Known Text (WKT) naar GeoJSON of andersom. Plak tekst of open een bestand en kopieer of download de geometrie.",
+      },
+      no: {
+        name: "WKT ↔ GeoJSON-omformer",
+        description:
+          "Konverter geometrier fra Well-Known Text (WKT) til GeoJSON eller omvendt. Lim inn tekst eller åpne en fil, og kopier eller last ned geometrien.",
+      },
+      pl: {
+        name: "Konwerter WKT ↔ GeoJSON",
+        description:
+          "Konwertuj geometrie Well-Known Text (WKT) na GeoJSON i odwrotnie. Wklej tekst lub otwórz plik, a następnie skopiuj lub pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor WKT ↔ GeoJSON",
+        description:
+          "Converta geometrias no formato Well-Known Text (WKT) para GeoJSON e vice-versa. Cole o texto ou abra um arquivo e copie ou baixe a geometria convertida.",
+      },
+      ru: {
+        name: "Конвертер WKT ↔ GeoJSON",
+        description:
+          "Преобразуйте геометрии из Well-Known Text (WKT) в GeoJSON и обратно. Вставьте текст или откройте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "WKT ↔ GeoJSON-konverterare",
+        description:
+          "Konvertera Well-Known Text-geometrier (WKT) till GeoJSON och tillbaka. Klistra in text eller öppna en fil och kopiera eller ladda ned den konverterade geometrin.",
+      },
+      th: {
+        name: "เครื่องมือแปลง WKT ↔ GeoJSON",
+        description:
+          "แปลงข้อมูลเรขาคณิตจาก Well-Known Text (WKT) เป็น GeoJSON หรือแปลงย้อนกลับ วางข้อความหรือเปิดไฟล์ แล้วคัดลอกหรือดาวน์โหลดข้อมูลที่แปลงแล้ว",
+      },
+      tr: {
+        name: "WKT ↔ GeoJSON Dönüştürücü",
+        description:
+          "Well-Known Text (WKT) geometrilerini GeoJSON’a veya GeoJSON’u WKT’ye dönüştürün. Metni yapıştırın ya da dosyayı açın, ardından geometriyi kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WKT ↔ GeoJSON",
+        description:
+          "Chuyển đổi qua lại giữa hình học Well-Known Text (WKT) và GeoJSON. Dán văn bản hoặc mở tệp, sau đó sao chép hoặc tải hình học đã chuyển đổi.",
+      },
+      "zh-CN": {
+        name: "WKT ↔ GeoJSON 转换器",
+        description:
+          "在 Well-Known Text（WKT）几何图形和 GeoJSON 之间相互转换。粘贴文本或打开文件，然后复制或下载转换后的几何图形。",
+      },
+      "zh-TW": {
+        name: "WKT ↔ GeoJSON 轉換器",
+        description:
+          "在 Well-Known Text（WKT）與 GeoJSON 之間雙向轉換幾何資料。貼上文字或開啟檔案，再複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "xls-to-xlsx-converter",
     category: "document",
     icon: "file-text",

@@ -1,0 +1,12 @@
+{
+  "direction": "Chiều chuyển đổi",
+  "example": "Dùng thử ví dụ",
+  "openFile": "Mở tệp",
+  "convert": "Chuyển đổi",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "download": "Tải xuống",
+  "empty": "Tệp đã chuyển đổi sẽ xuất hiện ở đây.",
+  "invalid": "Không thể chuyển đổi dữ liệu đầu vào. Hãy kiểm tra định dạng tệp và hình học.",
+  "swap": "Dùng kết quả làm đầu vào"
+}
