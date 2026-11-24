@@ -27,7 +27,7 @@ const messages = resolveLocale<typeof EnglishMessages>(
     <p>{messages.coverageBody.replace("{version}", kubernetesVersion)}</p>
     <h2>{messages.cliTitle}</h2>
     <p>{messages.cliBody}</p>
-    <pre><code>kubectl apply --dry-run=server -f manifest.yaml</code></pre>
+    <pre dir="ltr" class="whitespace-pre-wrap break-words"><code>kubectl apply --dry-run=server -f manifest.yaml</code></pre>
     <p><a href="https://kubernetes.io/docs/reference/kubernetes-api/">{messages.reference}</a></p>
   </ToolArticle>
 </ToolPageShell>

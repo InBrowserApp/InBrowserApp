@@ -230,7 +230,7 @@ function YamlValidationWorkspace({
                 <li key={JSON.stringify([location.offset, path, message])}>
                   <button
                     type="button"
-                    className="grid w-full gap-1 rounded-md border bg-muted/30 p-3 text-start text-sm break-all hover:bg-muted focus-visible:outline-2 focus-visible:outline-ring"
+                    className="grid w-full gap-1 rounded-md border bg-muted/30 p-3 text-start text-sm hover:bg-muted focus-visible:outline-2 focus-visible:outline-ring"
                     onClick={() => goToIssue(location.offset, location.line)}
                   >
                     <span className="text-xs text-muted-foreground">
@@ -239,7 +239,10 @@ function YamlValidationWorkspace({
                         .replace("{column}", String(location.column))}
                     </span>
                     {path ? (
-                      <code dir="ltr" className="w-fit max-w-full font-medium">
+                      <code
+                        dir="ltr"
+                        className="w-fit max-w-full font-medium break-all"
+                      >
                         {path}
                       </code>
                     ) : null}
@@ -247,12 +250,12 @@ function YamlValidationWorkspace({
                       <bdi
                         dir="ltr"
                         lang={language}
-                        className="block text-left wrap-break-word"
+                        className="block min-w-0 text-left wrap-anywhere"
                       >
                         {message}
                       </bdi>
                     ) : (
-                      <span>{message}</span>
+                      <span className="min-w-0 wrap-anywhere">{message}</span>
                     )}
                   </button>
                 </li>
