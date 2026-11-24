@@ -26892,6 +26892,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-form-filler",
+    category: "pdf",
+    icon: "file-pen-line",
+    tags: ["pdf", "form", "fill", "fillable", "acroform", "flatten", "offline"],
+    locales: {
+      ar: {
+        name: "تعبئة نماذج PDF",
+        description:
+          "عبّئ نماذج PDF مباشرةً في متصفحك. نزّل نسخة بحقول قابلة للتعديل، أو سطّح النموذج لتثبيت إجاباتك على الصفحة. تتم المعالجة محليًا دون رفع الملفات.",
+      },
+      de: {
+        name: "PDF-Formular ausfüllen",
+        description:
+          "Fülle PDF-Formulare direkt im Browser aus. Lade eine Kopie mit ausfüllbaren Feldern herunter oder speichere deine Eingaben fest auf der Seite. Ohne Datei-Upload.",
+      },
+      en: {
+        name: "PDF Form Filler",
+        description:
+          "Fill PDF forms directly in your browser. Download a copy with editable fields or flatten the form to fix your answers onto the page. No file uploads.",
+      },
+      es: {
+        name: "Rellenar formularios PDF",
+        description:
+          "Rellena formularios PDF en tu navegador. Descarga una copia con campos editables o aplana el formulario para fijar las respuestas en la página. Sin subir archivos.",
+      },
+      fr: {
+        name: "Remplir un formulaire PDF",
+        description:
+          "Remplissez vos formulaires PDF dans votre navigateur. Téléchargez une copie aux champs modifiables ou aplatissez le formulaire pour intégrer vos réponses à la page. Aucun fichier envoyé.",
+      },
+      he: {
+        name: "מילוי טופסי PDF",
+        description:
+          "מלאו טופסי PDF ישירות בדפדפן. הורידו עותק עם שדות שניתן לערוך, או השטיחו את הטופס כדי לקבע את התשובות בעמוד. העיבוד מקומי, בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "PDF फ़ॉर्म भरें",
+        description:
+          "अपने ब्राउज़र में सीधे PDF फ़ॉर्म भरें। संपादन योग्य फ़ील्ड वाली कॉपी डाउनलोड करें या जवाबों को पेज का हिस्सा बनाने के लिए फ़ॉर्म फ़्लैटन करें। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Isi Formulir PDF",
+        description:
+          "Isi formulir PDF langsung di browser. Unduh PDF yang masih bisa diisi atau ratakan formulir untuk menyatukan jawaban dengan halaman. Tanpa unggah file.",
+      },
+      it: {
+        name: "Compila moduli PDF",
+        description:
+          "Compila moduli PDF nel browser. Scarica una copia con campi modificabili o appiattisci il modulo per fissare le risposte sulla pagina. Nessun caricamento di file.",
+      },
+      ja: {
+        name: "PDFフォーム入力",
+        description:
+          "ブラウザーでPDFフォームに直接入力できます。入力欄を残したPDFをダウンロードするか、フォームをフラット化して入力内容をページに固定できます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "PDF 양식 채우기",
+        description:
+          "브라우저에서 PDF 양식을 직접 작성하세요. 입력란을 유지한 PDF를 다운로드하거나 양식을 병합해 입력 내용을 페이지에 고정할 수 있습니다. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Isi Borang PDF",
+        description:
+          "Isi borang PDF terus dalam pelayar. Muat turun salinan yang masih boleh diisi atau ratakan borang untuk menjadikan jawapan sebahagian daripada halaman. Tiada muat naik fail.",
+      },
+      nl: {
+        name: "PDF-formulier invullen",
+        description:
+          "Vul PDF-formulieren direct in je browser in. Download een kopie met invulbare velden of vlak het formulier af zodat je antwoorden op de pagina vaststaan. Zonder upload.",
+      },
+      no: {
+        name: "Fyll ut PDF-skjema",
+        description:
+          "Fyll ut PDF-skjemaer direkte i nettleseren. Last ned en kopi med utfyllbare felt, eller flat ut skjemaet slik at svarene blir en fast del av siden. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wypełnij formularz PDF",
+        description:
+          "Wypełnij formularz PDF bezpośrednio w przeglądarce. Pobierz kopię z edytowalnymi polami lub spłaszcz formularz, aby utrwalić odpowiedzi na stronie. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Preencher formulários PDF",
+        description:
+          "Preencha formulários PDF no navegador. Baixe uma cópia com campos editáveis ou achate o formulário para incorporar as respostas à página. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Заполнить PDF-форму",
+        description:
+          "Заполняйте PDF-формы прямо в браузере. Скачайте копию с редактируемыми полями или закрепите ответы на странице с помощью сведения полей. Файлы обрабатываются локально.",
+      },
+      sv: {
+        name: "Fyll i PDF-formulär",
+        description:
+          "Fyll i PDF-formulär direkt i webbläsaren. Ladda ner en kopia med ifyllbara fält eller platta till formuläret så att svaren blir en fast del av sidan. Ingen uppladdning.",
+      },
+      th: {
+        name: "กรอกแบบฟอร์ม PDF",
+        description:
+          "กรอกแบบฟอร์ม PDF ได้โดยตรงในเบราว์เซอร์ ดาวน์โหลดไฟล์ที่กรอกต่อได้ หรือฝังคำตอบลงในหน้า PDF ไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Formu Doldurma",
+        description:
+          "PDF formlarını tarayıcınızda doldurun. Düzenlenebilir alanları olan bir kopya indirin veya formu düzleştirerek yanıtları sayfaya sabitleyin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Điền biểu mẫu PDF",
+        description:
+          "Điền biểu mẫu PDF ngay trong trình duyệt. Tải bản PDF có thể điền tiếp hoặc làm phẳng biểu mẫu để cố định nội dung đã điền trên trang. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "PDF 表单填写",
+        description:
+          "直接在浏览器中填写 PDF 表单。下载保留可填写字段的 PDF，或拼合表单，将填写内容固定到页面。文件无需上传。",
+      },
+      "zh-TW": {
+        name: "PDF 表單填寫",
+        description:
+          "直接在瀏覽器中填寫 PDF 表單。下載保留可填寫欄位的 PDF，或將表單平面化，把填寫內容固定在頁面上。不需上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "pdf-image-extractor",
     category: "pdf",
     icon: "file-image",

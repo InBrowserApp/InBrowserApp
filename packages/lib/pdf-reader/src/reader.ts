@@ -1,4 +1,5 @@
 import {
+  AnnotationEditorType,
   AnnotationMode,
   getDocument,
   GlobalWorkerOptions,
@@ -25,6 +26,7 @@ type Options = {
   onChange: (state: Partial<ReaderState>) => void
   onPassword: (submit: (password: string) => void, incorrect: boolean) => void
   onError: () => void
+  prepareForm?: (document: PDFDocumentProxy) => Promise<void>
 }
 
 export async function openReader({
@@ -34,6 +36,7 @@ export async function openReader({
   onChange,
   onPassword,
   onError,
+  prepareForm,
 }: Options): Promise<Reader> {
   callerSignal.throwIfAborted()
   const lifetime = new AbortController()
@@ -59,7 +62,12 @@ export async function openReader({
     eventBus: bus,
     linkService: links,
     findController: find,
-    annotationMode: AnnotationMode.ENABLE,
+    annotationMode: prepareForm
+      ? AnnotationMode.ENABLE_FORMS
+      : AnnotationMode.ENABLE,
+    ...(prepareForm
+      ? { annotationEditorMode: AnnotationEditorType.DISABLE }
+      : {}),
     maxCanvasPixels: 16_000_000,
     maxCanvasDim: 8192,
     enableAutoLinking: false,
@@ -132,12 +140,31 @@ export async function openReader({
   bus.on("pagerendered", ({ error }: { error?: unknown }) => {
     if (error && !signal.aborted) onError()
   })
+  if (prepareForm) {
+    bus.on(
+      "annotationlayerrendered",
+      ({ source }: { source: { div: HTMLElement } }) => {
+        const fields = source.div.querySelectorAll<HTMLInputElement>(
+          ".annotationLayer :is(input[name], textarea[name], select[name])"
+        )
+        for (const field of fields) {
+          if (field.matches("[aria-label], [aria-labelledby]")) continue
+          const label = field.closest("section")?.title || field.name
+          if (label) field.setAttribute("aria-label", label)
+        }
+      }
+    )
+  }
   task.onPassword = (submit: (password: string) => void, reason: number) =>
     onPassword(submit, reason === PasswordResponses.INCORRECT_PASSWORD)
   let document: PDFDocumentProxy
   try {
     document = await task.promise
     signal.throwIfAborted()
+    if (prepareForm) {
+      await prepareForm(document)
+      signal.throwIfAborted()
+    }
     links.setDocument(document)
     viewer.setDocument(document)
     await viewer.firstPagePromise

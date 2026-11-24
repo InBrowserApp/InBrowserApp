@@ -49,6 +49,7 @@ export {
   FileCog,
   FileImage,
   FileJson2,
+  FilePenLine,
   FileText,
   Film,
   Flashlight,

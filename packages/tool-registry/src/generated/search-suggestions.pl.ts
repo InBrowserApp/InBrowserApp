@@ -1069,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Wypełnij formularz PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Wyodrębnianie obrazów z PDF",
     slug: "pdf-image-extractor",
   },

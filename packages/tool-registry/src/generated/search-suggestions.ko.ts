@@ -1069,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 양식 채우기",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "PDF에서 이미지 추출",
     slug: "pdf-image-extractor",
   },
