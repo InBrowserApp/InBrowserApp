@@ -16010,6 +16010,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipfs-cid-calculator",
+    language: "ar",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "de",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "en",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "es",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "fr",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "he",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "hi",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "id",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "it",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "ja",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "ko",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "ms",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "nl",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "no",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "pl",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "pt",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "ru",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "sv",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "th",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "tr",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "vi",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipfs-cid-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     language: "ar",
   },

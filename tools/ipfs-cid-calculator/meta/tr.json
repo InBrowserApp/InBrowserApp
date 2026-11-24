@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CID Hesaplayıcısı",
+  "description": "Dosya veya klasörü yüklemeden IPFS CID değerini hesaplayın. Mevcut bir CID ile karşılaştırın ve Kubo içe aktarma ayarlarıyla aynı sonucu elde edin."
+}

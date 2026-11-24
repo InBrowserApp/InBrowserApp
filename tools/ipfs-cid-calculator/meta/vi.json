@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tính CID IPFS",
+  "description": "Tính CID IPFS cho tệp hoặc thư mục mà không cần tải lên. So sánh với CID có sẵn và tái tạo kết quả bằng thiết lập nhập của Kubo."
+}
