@@ -1,0 +1,15 @@
+Video Subtitle Generator third-party notices
+
+The FFmpeg WebAssembly core is @ffmpeg/core 0.12.10 (GPL-2.0-or-later).
+See FFmpeg-GPL-2.txt. The core is served as separate JavaScript and WebAssembly
+assets. The WebAssembly asset is gzip-compressed for delivery.
+
+Core source and build scripts:
+https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v0.12.10
+https://github.com/ffmpegwasm/ffmpeg.wasm/blob/v0.12.10/Dockerfile
+
+The upstream Dockerfile identifies the FFmpeg source revision, the source
+repositories and revisions of the bundled libraries, and their build scripts.
+
+The FFmpeg JavaScript worker wrapper is @ffmpeg/ffmpeg 0.12.15 (MIT).
+See FFmpeg-wasm-MIT.txt.
