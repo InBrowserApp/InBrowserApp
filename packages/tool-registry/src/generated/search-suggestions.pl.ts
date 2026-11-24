@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Kalkulator procentu składanego",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Parser Cookie",
     slug: "cookie-parser",

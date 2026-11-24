@@ -1,0 +1,33 @@
+{
+  "assumptions": "Sparplan",
+  "initialAmount": "Startbelopp",
+  "monthlyContribution": "Månadssparande",
+  "annualRate": "Årsränta",
+  "years": "Spartid",
+  "yearsUnit": "år",
+  "frequency": "Hur ofta läggs räntan till?",
+  "frequencies": {
+    "daily": "Varje dag",
+    "monthly": "Varje månad",
+    "quarterly": "Varje kvartal",
+    "semiannually": "Varje halvår",
+    "annually": "Varje år"
+  },
+  "timing": "När sätts pengarna in?",
+  "timings": {
+    "end": "I slutet av månaden",
+    "start": "I början av månaden"
+  },
+  "reset": "Återställ exempel",
+  "endingBalance": "Beräknat slutsaldo",
+  "totalContributed": "Totala insättningar",
+  "interestEarned": "Intjänad ränta",
+  "growth": "Utveckling över tid",
+  "breakdown": "Sammanställning år för år",
+  "year": "År",
+  "amountError": "Ange ett belopp som är noll eller högre.",
+  "rateError": "Ange en årsränta mellan −100 % och 100 %.",
+  "yearsError": "Ange ett heltal mellan 1 och 100.",
+  "resultError": "Beloppen är för stora för att räkna med. Försök med mindre belopp.",
+  "resultPending": "Kontrollera de markerade fälten för att se din prognos."
+}

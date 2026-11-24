@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Kalkulator bunga majemuk",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Pengurai Cookie",
     slug: "cookie-parser",

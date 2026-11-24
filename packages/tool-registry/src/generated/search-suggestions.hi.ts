@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "कुकी पार्सर",
     slug: "cookie-parser",

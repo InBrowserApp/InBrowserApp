@@ -1,6 +1,6 @@
 import { createDefaultUnits, STORAGE_KEY, STORAGE_VERSION } from "./constants"
 import { formatNumber, PRECISION_OPTIONS } from "../core/format"
-import { parseNumber } from "../core/parse"
+import { parseNumber } from "@workspace/localized-number"
 import { CATEGORY_IDS, findUnit, getCategory } from "../core/units"
 
 import type { PrecisionOption, StoredUnits } from "./constants"

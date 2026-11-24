@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "เครื่องคำนวณดอกเบี้ยทบต้น",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "ตัวแยกวิเคราะห์คุกกี้",
     slug: "cookie-parser",

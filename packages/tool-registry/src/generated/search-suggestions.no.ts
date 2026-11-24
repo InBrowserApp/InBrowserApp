@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Kalkulator for rentes rente",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie-parser",
     slug: "cookie-parser",

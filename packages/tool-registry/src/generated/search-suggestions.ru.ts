@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Калькулятор сложного процента",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Парсер Cookie",
     slug: "cookie-parser",

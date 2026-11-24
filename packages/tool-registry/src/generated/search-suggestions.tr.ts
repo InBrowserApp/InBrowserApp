@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Bileşik Faiz Hesaplayıcı",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Cookie Ayrıştırıcı",
     slug: "cookie-parser",

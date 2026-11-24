@@ -313,6 +313,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "misc",
+    name: "Kalkulator faedah kompaun",
+    slug: "compound-interest-calculator",
+  },
+  {
     category: "web",
     name: "Penghurai Cookie",
     slug: "cookie-parser",

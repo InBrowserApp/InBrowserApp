@@ -69,6 +69,7 @@
     "@tool/color-contrast-checker": "workspace:*",
     "@tool/color-converter": "workspace:*",
     "@tool/color-picker": "workspace:*",
+    "@tool/compound-interest-calculator": "workspace:*",
     "@tool/cookie-parser": "workspace:*",
     "@tool/crc-checksum-calculator": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
