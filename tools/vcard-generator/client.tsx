@@ -105,10 +105,12 @@ export default function Client({
           <CardTitle>{m.details}</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-5">
-          <div className="grid gap-4 sm:grid-cols-2">
-            {names.map(field)}
-            {field("phone")}
-            {field("email")}
+          <div className="grid gap-4">
+            <div className="grid grid-cols-2 gap-4">{names.map(field)}</div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {field("phone")}
+              {field("email")}
+            </div>
           </div>
           <details className="group border-t pt-4">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-sm text-sm font-medium focus-visible:outline-2 focus-visible:outline-ring [&::-webkit-details-marker]:hidden">
