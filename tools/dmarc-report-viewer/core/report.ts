@@ -37,6 +37,7 @@ type ReportResult =
   | { status: "error"; error: ErrorCode }
 
 const XML_PARSE_ERROR = "http://www.mozilla.org/newlayout/xml/parsererror.xml"
+const LEGACY_NAMESPACE = "http://dmarc.org/dmarc-xml/0.1"
 const POLICY_FIELDS = [
   "p",
   "sp",
@@ -52,7 +53,10 @@ const POLICY_FIELDS = [
 function elements(parent: Element | undefined) {
   return parent
     ? Array.from(parent.children).filter(
-        (element) => element.namespaceURI === parent.namespaceURI
+        (element) =>
+          element.namespaceURI === parent.namespaceURI ||
+          (parent.namespaceURI === LEGACY_NAMESPACE &&
+            element.namespaceURI === null)
       )
     : []
 }

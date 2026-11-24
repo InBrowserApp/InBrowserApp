@@ -13,15 +13,11 @@ import type english from "./messages/en.json"
 
 export type Messages = typeof english
 
-type State =
-  | { status: "idle" }
-  | { status: "reading"; filename: string }
-  | (ReportResult & { filename?: string })
-  | {
-      status: "error"
-      error: "readError" | "archiveContents"
-      filename: string
-    }
+type State = (
+  | { status: "idle" | "reading" }
+  | ReportResult
+  | { status: "error"; error: "readError" | "archiveContents" }
+) & { filename?: string }
 
 export default function Client({
   messages,
@@ -35,7 +31,7 @@ export default function Client({
   const [state, setState] = useState<State>({ status: "idle" })
   const [xml, setXml] = useState("")
   const [query, setQuery] = useState("")
-  const filename = "filename" in state ? state.filename : undefined
+  const { filename } = state
 
   function show(source: string) {
     operation.current++

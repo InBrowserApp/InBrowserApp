@@ -125,9 +125,10 @@ test("displays unknown alignment and readable raw results from partial legacy re
   input(
     messages.xml,
     `<feedback><report_metadata/><policy_published><domain>example.org</domain></policy_published><record>
-    <row><source_ip>192.0.2.19</source_ip><count>4</count><policy_evaluated><spf>fail</spf></policy_evaluated></row>
+    <row><source_ip>192.0.2.19</source_ip><count>4</count><policy_evaluated><spf>fail</spf><reason><type>local_policy</type></reason></policy_evaluated></row>
     <auth_results><dkim/></auth_results></record></feedback>`
   )
   click(messages.view)
   expect(screen.getAllByText(messages.unknown)).toHaveLength(3)
+  expect(screen.getByText(messages.reason)).toBeTruthy()
 })

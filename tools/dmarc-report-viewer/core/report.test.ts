@@ -72,6 +72,23 @@ describe("readReport", () => {
     })
   })
 
+  test("reads RFC 7489 when only the report root belongs to the DMARC namespace", () => {
+    const source = report(record("192.0.2.25", "18", "<spf>pass</spf>"))
+      .replace(
+        "<feedback>",
+        '<d:feedback xmlns:d="http://dmarc.org/dmarc-xml/0.1" xmlns:ext="urn:example"><ext:record/>'
+      )
+      .replace("</feedback>", "</d:feedback>")
+    expect(readReport(source)).toMatchObject({
+      status: "ready",
+      report: {
+        domain: "example.org",
+        totals: { total: 18n, passed: 18n },
+        records: [{ ip: "192.0.2.25" }],
+      },
+    })
+  })
+
   test("preserves precise legacy message counts, unknown results, and stable sorting", () => {
     const rows =
       record("192.0.2.3", "7", "<dkim>fail</dkim><spf>other</spf>") +
