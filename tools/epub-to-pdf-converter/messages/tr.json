@@ -1,0 +1,23 @@
+{
+  "open": "EPUB dosyası seç",
+  "replace": "Başka bir EPUB seç",
+  "drop": "veya .epub dosyasını buraya bırakın",
+  "privacy": "Kitabınız bu cihazda kalır.",
+  "loading": "Kitap önizlemesi hazırlanıyor…",
+  "cancel": "İptal et",
+  "pageSize": "Kâğıt boyutu",
+  "letter": "US Letter",
+  "save": "PDF olarak kaydet",
+  "saveHelp": "Yazdırma penceresinde PDF olarak kaydet seçeneğini belirleyin. Sade bir çıktı için üstbilgi ve altbilgileri kapatın.",
+  "preview": "Kitap önizlemesi",
+  "chapter": "Bölüm",
+  "contents": "İçindekiler",
+  "supportingSections": "Notlar ve ek bölümler",
+  "imageUnavailable": "Görsel kullanılamıyor",
+  "missingResources": "Bazı görseller veya diğer kaynaklar eklenemedi.",
+  "unsupported": "Devam etmek için bir .epub dosyası seçin.",
+  "invalid": "Bu EPUB okunamadı. Kitabın başka bir kopyasını deneyin.",
+  "protected": "Bu EPUB korumalı. DRM koruması olmayan bir kopya seçin.",
+  "unsupportedLayout": "Bu EPUB sabit sayfa düzenine sahip. Uyarlanabilir bir EPUB seçin.",
+  "printUnavailable": "Bu tarayıcıda yazdırma kullanılamıyor. Aracı PDF olarak yazdırmayı destekleyen bir tarayıcıda açın."
+}

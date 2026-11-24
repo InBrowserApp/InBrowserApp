@@ -13,7 +13,10 @@ const policy =
   "default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"
 const readingStyle = `html{color-scheme:light dark}body{font:18px/1.75 system-ui,sans-serif;max-width:76ch;margin:0 auto;padding:24px;overflow-wrap:anywhere}img{max-width:100%;height:auto}table{display:block;overflow:auto;border-collapse:collapse}td,th{border:1px solid #8888;padding:.4em}pre{white-space:pre-wrap;tab-size:4}a{color:LinkText}section{margin-block:2.5em}blockquote{border-inline-start:3px solid #8888;margin-inline:0;padding-inline:1em}h1,h2,h3{line-height:1.3}aside{font-size:.85em;opacity:.8}nav ul{padding-inline-start:1.5em}`
 
-export function readingDocument(book: BookSnapshot, m: ReadingMessages) {
+export function createReadingDocument(
+  book: BookSnapshot,
+  m: Pick<ReadingMessages, "contents" | "supportingSections">
+) {
   const doc = document.implementation.createHTMLDocument(book.title)
   const csp = doc.createElement("meta")
   csp.httpEquiv = "Content-Security-Policy"
@@ -77,6 +80,11 @@ export function readingDocument(book: BookSnapshot, m: ReadingMessages) {
     cover.alt = book.title
     header.append(cover)
   }
+  return doc
+}
+
+export function readingDocument(book: BookSnapshot, m: ReadingMessages) {
+  const doc = createReadingDocument(book, m)
   const notes = [m.styleNotice, m.safePreview]
   if (book.missing) notes.push(m.missingResources)
   if (book.unresolved) notes.push(m.unresolvedLinks)

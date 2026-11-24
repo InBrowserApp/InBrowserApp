@@ -1,0 +1,23 @@
+{
+  "open": "Velg EPUB-fil",
+  "replace": "Velg en annen EPUB-fil",
+  "drop": "eller slipp en .epub-fil her",
+  "privacy": "Boken blir på enheten din.",
+  "loading": "Klargjør forhåndsvisningen…",
+  "cancel": "Avbryt",
+  "pageSize": "Papirstørrelse",
+  "letter": "US Letter",
+  "save": "Lagre som PDF",
+  "saveHelp": "Velg Lagre som PDF i utskriftsdialogen. Slå av topptekst og bunntekst hvis du bare vil ha med bokinnholdet.",
+  "preview": "Forhåndsvisning av boken",
+  "chapter": "Kapittel",
+  "contents": "Innholdsfortegnelse",
+  "supportingSections": "Noter og tilleggsdeler",
+  "imageUnavailable": "Bildet er ikke tilgjengelig",
+  "missingResources": "Noen bilder eller andre ressurser kunne ikke tas med.",
+  "unsupported": "Velg en .epub-fil for å fortsette.",
+  "invalid": "Kunne ikke lese EPUB-filen. Prøv en annen kopi av boken.",
+  "protected": "Denne EPUB-filen er beskyttet. Velg en kopi uten DRM.",
+  "unsupportedLayout": "Denne EPUB-filen har fast oppsett. Velg en EPUB-fil med flytende tekst.",
+  "printUnavailable": "Utskrift er ikke tilgjengelig i denne nettleseren. Åpne verktøyet i en nettleser som kan lagre utskrifter som PDF."
+}

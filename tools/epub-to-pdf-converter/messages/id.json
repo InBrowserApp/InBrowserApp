@@ -1,0 +1,23 @@
+{
+  "open": "Pilih file EPUB",
+  "replace": "Pilih EPUB lain",
+  "drop": "atau seret file .epub ke sini",
+  "privacy": "Buku Anda tetap di perangkat ini.",
+  "loading": "Menyiapkan pratinjau buku…",
+  "cancel": "Batal",
+  "pageSize": "Ukuran kertas",
+  "letter": "US Letter",
+  "save": "Simpan sebagai PDF",
+  "saveHelp": "Pilih Simpan sebagai PDF di dialog cetak. Nonaktifkan header dan footer agar tanggal dan alamat web tidak tercetak.",
+  "preview": "Pratinjau buku",
+  "chapter": "Bab",
+  "contents": "Daftar isi",
+  "supportingSections": "Catatan dan bagian pelengkap",
+  "imageUnavailable": "Gambar tidak tersedia",
+  "missingResources": "Beberapa gambar atau sumber daya lain tidak dapat disertakan.",
+  "unsupported": "Pilih file .epub untuk melanjutkan.",
+  "invalid": "File EPUB ini tidak dapat dibaca. Coba salinan buku yang lain.",
+  "protected": "File EPUB ini dilindungi. Pilih salinan tanpa DRM.",
+  "unsupportedLayout": "EPUB ini menggunakan tata letak tetap. Pilih EPUB dengan teks yang dapat menyesuaikan ukuran halaman.",
+  "printUnavailable": "Pencetakan tidak tersedia di browser ini. Buka alat ini di browser yang mendukung pencetakan ke PDF."
+}

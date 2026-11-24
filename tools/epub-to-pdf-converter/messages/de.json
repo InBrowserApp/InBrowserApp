@@ -1,0 +1,23 @@
+{
+  "open": "EPUB-Datei auswählen",
+  "replace": "Andere EPUB-Datei auswählen",
+  "drop": "oder eine .epub-Datei hierher ziehen",
+  "privacy": "Dein Buch bleibt auf diesem Gerät.",
+  "loading": "Buchvorschau wird vorbereitet …",
+  "cancel": "Abbrechen",
+  "pageSize": "Papierformat",
+  "letter": "US Letter",
+  "save": "Als PDF speichern",
+  "saveHelp": "Wähle im Druckdialog „Als PDF speichern“. Deaktiviere Kopf- und Fußzeilen, wenn du nur den Buchinhalt möchtest.",
+  "preview": "Buchvorschau",
+  "chapter": "Kapitel",
+  "contents": "Inhaltsverzeichnis",
+  "supportingSections": "Anmerkungen und ergänzende Abschnitte",
+  "imageUnavailable": "Bild nicht verfügbar",
+  "missingResources": "Einige Bilder oder andere Inhalte konnten nicht übernommen werden.",
+  "unsupported": "Wähle eine .epub-Datei aus.",
+  "invalid": "Diese EPUB-Datei konnte nicht gelesen werden. Versuche es mit einer anderen Kopie des Buchs.",
+  "protected": "Diese EPUB-Datei ist geschützt. Wähle eine Kopie ohne DRM.",
+  "unsupportedLayout": "Diese EPUB-Datei hat ein festes Layout. Wähle eine EPUB-Datei mit flexiblem Layout.",
+  "printUnavailable": "In diesem Browser ist Drucken nicht verfügbar. Öffne das Tool in einem Browser, der das Speichern als PDF unterstützt."
+}
