@@ -11,6 +11,7 @@ vi.mock("@huggingface/transformers", () => ({
   env: {},
   pipeline,
   Tensor: class {},
+  TextStreamer: class {},
 }))
 
 const send = vi.fn()
