@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest"
+import { afterEach, expect, test, vi } from "vitest"
 
 import { encryptPdf } from "./encrypt"
 
@@ -7,6 +7,8 @@ vi.mock("@jspawn/qpdf-wasm/qpdf.js", () => ({ default: createModule }))
 vi.mock("@jspawn/qpdf-wasm/qpdf.wasm?url", () => ({
   default: "fake-qpdf.wasm",
 }))
+
+afterEach(() => vi.restoreAllMocks())
 
 function mockQpdf(exitCode: number) {
   const qpdf = {
@@ -37,7 +39,7 @@ test("passes option-like Unicode passwords as UTF-8 hex to AES-256 encryption", 
     "--password-mode=hex-bytes",
     "--encrypt",
     "40e5af86e7a2bc",
-    expect.stringMatching(/^[0-9a-f]{64}$/),
+    expect.stringMatching(/^[0-9a-f]{128}$/),
     "256",
     "--",
     "/working/input.pdf",
@@ -45,6 +47,18 @@ test("passes option-like Unicode passwords as UTF-8 hex to AES-256 encryption", 
   ])
   expect(encrypted.type).toBe("application/pdf")
   expect(await encrypted.text()).toBe("%PDF")
+})
+
+test("keeps the owner password printable when randomness starts with zero", async () => {
+  const qpdf = mockQpdf(0)
+  const randomBytes = new Uint8Array(32).fill(0xff)
+  randomBytes[0] = 0
+  vi.spyOn(crypto, "getRandomValues").mockReturnValue(randomBytes)
+
+  await encryptPdf(new Blob(), "opening password")
+
+  // qpdf decodes this CLI argument as the ASCII password 00ffff…
+  expect(qpdf.callMain.mock.calls[0]?.[0][3]).toBe(`3030${"6666".repeat(31)}`)
 })
 
 test.each(["", "\0abc", "密".repeat(43)])(

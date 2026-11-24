@@ -1,6 +1,5 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react"
 
-import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Card, CardContent } from "@workspace/ui/components/ui/card"
 import {
@@ -18,38 +17,45 @@ import {
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Eye, EyeOff, FileText, Lock, Shield } from "@workspace/ui/icons"
 
+import { encodePdfPassword } from "./core/password"
 import { PdfDropzone } from "./pdf-dropzone"
+import { ProtectedPdf } from "./protected-pdf"
 
 import type { ProtectRequest } from "./encrypt.worker"
 import type englishMessages from "./messages/en.json"
 
 export type Messages = typeof englishMessages
 
+type SelectedPdf = {
+  file: File
+  result?: Blob
+}
+
 export default function ProtectPdf({ messages }: { messages: Messages }) {
   const picker = useRef<HTMLInputElement>(null)
   const chooseButton = useRef<HTMLButtonElement>(null)
   const passwordInput = useRef<HTMLInputElement>(null)
   const confirmationInput = useRef<HTMLInputElement>(null)
+  const protectButton = useRef<HTMLButtonElement>(null)
   const resultHeading = useRef<HTMLHeadingElement>(null)
   const worker = useRef<Worker | null>(null)
   const id = useId()
-  const [file, setFile] = useState<File | null>(null)
+  const [selectedPdf, setSelectedPdf] = useState<SelectedPdf | null>(null)
   const [visible, setVisible] = useState(false)
   const [busy, setBusy] = useState(false)
-  const [result, setResult] = useState<Blob | null>(null)
   const [error, setError] = useState<keyof Messages | null>(null)
   const passwordError =
     error === "passwordTooLong" || error === "passwordInvalid"
   const mismatch = error === "passwordMismatch"
-  const filename = file
-    ? `${file.name.replace(/\.pdf$/i, "")}-protected.pdf`
+  const filename = selectedPdf
+    ? `${selectedPdf.file.name.replace(/\.pdf$/i, "")}-protected.pdf`
     : ""
 
   useEffect(() => () => worker.current?.terminate(), [])
   useEffect(() => {
-    if (result) resultHeading.current?.focus()
-    else if (file) passwordInput.current?.focus()
-  }, [file, result])
+    if (selectedPdf?.result) resultHeading.current?.focus()
+    else if (selectedPdf) passwordInput.current?.focus()
+  }, [selectedPdf])
 
   function selectFile(files: FileList | null) {
     if (!files || worker.current) return
@@ -67,21 +73,18 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
       return
     }
     setError(null)
-    setFile(next)
+    setSelectedPdf({ file: next })
   }
 
   function protect(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!file || worker.current) return
+    if (!selectedPdf || worker.current) return
+    const { file } = selectedPdf
     const password = passwordInput.current!.value
     const confirmation = confirmationInput.current!.value
-    if (password.includes("\0")) {
-      setError("passwordInvalid")
-      passwordInput.current?.focus()
-      return
-    }
-    if (new TextEncoder().encode(password).length > 127) {
-      setError("passwordTooLong")
+    const passwordBytes = encodePdfPassword(password)
+    if (typeof passwordBytes === "string") {
+      setError(passwordBytes)
       passwordInput.current?.focus()
       return
     }
@@ -92,13 +95,14 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
     }
 
     setError(null)
+    protectButton.current?.focus()
     setBusy(true)
     function finish(blob: Blob | null) {
       worker.current?.terminate()
       worker.current = null
       setBusy(false)
       if (blob) {
-        setResult(blob)
+        setSelectedPdf({ file, result: blob })
         setVisible(false)
       } else {
         setError("protectionFailed")
@@ -138,46 +142,18 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
       />
       <Card className="py-0">
         <CardContent className="p-4 sm:p-6">
-          {result && file ? (
-            <div className="flex min-w-0 flex-col items-center gap-4 px-2 py-8 text-center">
-              <span className="rounded-xl border bg-muted/50 p-3 text-primary">
-                <Lock className="size-6" aria-hidden="true" />
-              </span>
-              <div className="min-w-0 space-y-1">
-                <h2
-                  ref={resultHeading}
-                  tabIndex={-1}
-                  className="text-lg font-semibold outline-none"
-                >
-                  {messages.protected}
-                </h2>
-                <p
-                  className="text-sm wrap-anywhere text-muted-foreground"
-                  dir="auto"
-                >
-                  {filename}
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <DocumentDownload
-                  file={result}
-                  filename={filename}
-                  label={messages.downloadPdf}
-                />
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => {
-                    setResult(null)
-                    setFile(null)
-                    requestAnimationFrame(() => chooseButton.current?.focus())
-                  }}
-                >
-                  {messages.startOver}
-                </Button>
-              </div>
-            </div>
-          ) : file ? (
+          {selectedPdf?.result ? (
+            <ProtectedPdf
+              file={selectedPdf.result}
+              filename={filename}
+              headingRef={resultHeading}
+              messages={messages}
+              onStartOver={() => {
+                setSelectedPdf(null)
+                requestAnimationFrame(() => chooseButton.current?.focus())
+              }}
+            />
+          ) : selectedPdf ? (
             <form
               onSubmit={protect}
               className="mx-auto flex w-full max-w-xl flex-col gap-5"
@@ -188,10 +164,11 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
                   aria-hidden="true"
                 />
                 <span
-                  className="min-w-0 flex-1 text-sm font-medium wrap-anywhere"
+                  className="line-clamp-2 min-w-0 flex-1 text-sm font-medium wrap-anywhere"
                   dir="auto"
+                  title={selectedPdf.file.name}
                 >
-                  {file.name}
+                  {selectedPdf.file.name}
                 </span>
                 <Button
                   type="button"
@@ -215,6 +192,8 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
                     required
                     disabled={busy}
                     autoComplete="new-password"
+                    autoCapitalize="none"
+                    autoCorrect="off"
                     spellCheck={false}
                     aria-invalid={passwordError || undefined}
                     aria-describedby={passwordError ? `${id}-error` : undefined}
@@ -253,6 +232,8 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
                   required
                   disabled={busy}
                   autoComplete="new-password"
+                  autoCapitalize="none"
+                  autoCorrect="off"
                   spellCheck={false}
                   aria-invalid={mismatch || undefined}
                   aria-describedby={mismatch ? `${id}-error` : undefined}
@@ -265,10 +246,11 @@ export default function ProtectPdf({ messages }: { messages: Messages }) {
                 )}
               </Field>
               <Button
+                ref={protectButton}
                 type="submit"
                 size="lg"
-                disabled={busy}
-                className="w-full sm:w-fit"
+                aria-disabled={busy}
+                className="h-11 w-full aria-disabled:cursor-wait aria-disabled:opacity-50 sm:w-fit"
               >
                 {busy ? (
                   <Spinner aria-hidden="true" />

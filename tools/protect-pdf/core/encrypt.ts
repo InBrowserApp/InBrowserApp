@@ -1,6 +1,8 @@
 import createQpdfModule from "@jspawn/qpdf-wasm/qpdf.js"
 import qpdfWasmUrl from "@jspawn/qpdf-wasm/qpdf.wasm?url"
 
+import { encodePdfPassword } from "./password"
+
 function toHex(bytes: Uint8Array) {
   return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join(
     ""
@@ -8,8 +10,8 @@ function toHex(bytes: Uint8Array) {
 }
 
 export async function encryptPdf(file: Blob, password: string) {
-  const passwordBytes = new TextEncoder().encode(password)
-  if (!password || password.includes("\0") || passwordBytes.length > 127) {
+  const passwordBytes = encodePdfPassword(password)
+  if (typeof passwordBytes === "string" || !passwordBytes.length) {
     throw new Error("Invalid PDF opening password")
   }
   const qpdf = await createQpdfModule({ locateFile: () => qpdfWasmUrl })
@@ -20,14 +22,14 @@ export async function encryptPdf(file: Blob, password: string) {
     "/working"
   )
 
-  // An empty owner password would let a reader open the PDF without a password.
-  const ownerPassword = crypto.getRandomValues(new Uint8Array(32))
+  // qpdf truncates at null bytes, so generate the owner password as printable text.
+  const ownerPassword = toHex(crypto.getRandomValues(new Uint8Array(32)))
   const exitCode = await qpdf.callMain([
     // Hex prevents qpdf from reading passwords such as @file as CLI arguments.
     "--password-mode=hex-bytes",
     "--encrypt",
     toHex(passwordBytes),
-    toHex(ownerPassword),
+    toHex(new TextEncoder().encode(ownerPassword)),
     "256",
     "--",
     "/working/input.pdf",

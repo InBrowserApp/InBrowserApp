@@ -87,7 +87,11 @@ test("checks the passwords and offers a new PDF download after encryption", () =
   submit()
   const worker = MockWorker.instances[0]!
   expect(worker.postMessage).toHaveBeenCalledWith({ file, password: "@開啟" })
-  expect(screen.getByRole("button", { name: messages.protecting })).toBeTruthy()
+  const working = screen.getByRole("button", { name: messages.protecting })
+  expect(working.getAttribute("aria-disabled")).toBe("true")
+  expect(document.activeElement).toBe(working)
+  fireEvent.click(working)
+  expect(MockWorker.instances).toHaveLength(1)
   expect(screen.queryByRole("link")).toBeNull()
   act(() => worker.onmessage?.({ data: new Blob(["encrypted"]) }))
   expect(worker.terminate).toHaveBeenCalledOnce()
@@ -116,6 +120,9 @@ test("keeps the input when processing fails and accepts a replacement PDF", () =
   submit()
   act(() => MockWorker.instances[0]?.onerror?.())
   expect(screen.getByRole("alert").textContent).toBe(messages.protectionFailed)
+  expect(document.activeElement).toBe(
+    screen.getByRole("button", { name: messages.protectPdf })
+  )
   expect(screen.getByLabelText(messages.password)).toHaveProperty(
     "value",
     "retry passphrase"

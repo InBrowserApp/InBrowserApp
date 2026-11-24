@@ -4,11 +4,11 @@
 2. Gib das Passwort ein, mit dem die Empfänger die PDF öffnen sollen. Gib es zur Bestätigung erneut ein. Über das Augensymbol kannst du deine Eingabe überprüfen.
 3. Wähle **PDF schützen** und dann **Geschützte PDF herunterladen**. Öffne die Kopie in einem PDF-Reader und prüfe, ob er nach deinem Passwort fragt.
 
-Das Tool erstellt eine separate Datei. Aus `invoice.pdf` wird zum Beispiel `invoice-protected.pdf`. Deine ursprüngliche PDF bleibt erhalten.
+Das Tool erstellt eine separate Datei. Aus `invoice.pdf` wird zum Beispiel `invoice-protected.pdf`. Wenn du die PDF digital signieren möchtest, lege zuerst das Passwort fest und signiere anschließend die geschützte Kopie.
 
 ## Was schützt das Passwort zum Öffnen einer PDF?
 
-Das Passwort zum Öffnen bestimmt, wer die verschlüsselte PDF ansehen kann. Das Tool verschlüsselt die heruntergeladene Kopie mit AES-256. Wer die Datei mit dem Passwort öffnet, kann sie drucken oder Inhalte daraus kopieren. Einschränkungen beim Drucken und Bearbeiten werden separat in der PDF festgelegt.
+Das Passwort zum Öffnen bestimmt, wer die verschlüsselte PDF ansehen kann. Das Tool verschlüsselt die heruntergeladene Kopie mit AES-256. Wer die Datei mit dem Passwort öffnet, kann sie bearbeiten, drucken und Inhalte daraus kopieren. Beim Erstellen der geschützten Kopie hebt das Tool vorhandene Berechtigungsbeschränkungen auf.
 
 So kannst du zum Beispiel eine Gehaltsabrechnung, einen Kontoauszug, einen Vertrag oder ein ausgefülltes Formular geschützt weitergeben. Verwende ein starkes Passwort, das du nur für diese Datei nutzt. Teile es getrennt von der PDF, etwa in einer sicheren Nachricht. Bewahre das Original auf, falls du später ohne das Passwort auf die Datei zugreifen musst.
 
