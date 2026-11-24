@@ -1,0 +1,4 @@
+{
+  "name": "Comparador de carpetas de IPFS",
+  "description": "Compara dos carpetas de IPFS mediante su CID o URL de pasarela. Consulta qué rutas se han añadido, eliminado o modificado y descarga la comparación en JSON."
+}

@@ -903,6 +903,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ipfs-downloader",
   },
   {
+    category: "ipfs",
+    name: "השוואת תיקיות IPFS",
+    slug: "ipfs-folder-diff",
+  },
+  {
     category: "network",
     name: "ממיר כתובת IPv6 לכתובת MAC",
     slug: "ipv6-address-to-mac-address-converter",

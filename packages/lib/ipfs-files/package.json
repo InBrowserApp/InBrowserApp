@@ -5,6 +5,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./gateway": "./src/gateway.ts",
     "./import": "./src/import-unixfs.ts"
   },
   "dependencies": {

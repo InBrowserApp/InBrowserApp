@@ -1,0 +1,4 @@
+{
+  "name": "Comparateur de dossiers IPFS",
+  "description": "Comparez deux dossiers IPFS à partir de leur CID ou de leur URL de passerelle. Repérez les chemins ajoutés, supprimés ou modifiés et téléchargez la comparaison au format JSON."
+}

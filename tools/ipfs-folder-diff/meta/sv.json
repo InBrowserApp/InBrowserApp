@@ -1,0 +1,4 @@
+{
+  "name": "Jämför IPFS-mappar",
+  "description": "Jämför två IPFS-mappar med CID eller gateway-URL. Se vilka sökvägar som har lagts till, tagits bort eller ändrats och ladda ner jämförelsen som JSON."
+}

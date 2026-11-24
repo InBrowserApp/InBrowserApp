@@ -1,15 +1,10 @@
+import { gatewayStore, parseIpfsAddress } from "@workspace/ipfs-files/gateway"
 import { CID } from "multiformats/cid"
 import { identity } from "multiformats/hashes/identity"
 import { expect, it, vi } from "vitest"
 
 import fixture from "../fixtures/blocks.json"
-import {
-  addressView,
-  entryView,
-  gatewayStore,
-  IpfsPathError,
-  parseIpfsAddress,
-} from "./gateway"
+import { addressView, entryView, IpfsPathError } from "./gateway"
 
 const blocks: Record<string, string> = fixture.blocks
 const hello = "bafkreicysg23kiwv34eg2d7qweipxwosdo2py4ldv42nbauguluen5v6am"

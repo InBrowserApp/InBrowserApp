@@ -22964,6 +22964,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ipfs-folder-diff",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: ["ipfs", "unixfs", "folder", "directory", "compare", "diff", "cid"],
+    locales: {
+      ar: {
+        name: "مقارنة مجلدات IPFS",
+        description:
+          "قارن مجلدين في IPFS باستخدام معرّفَي CID أو رابطَي بوابة. اعرف المسارات التي أُضيفت أو أُزيلت أو تغيّرت، ونزّل المقارنة بصيغة JSON.",
+      },
+      de: {
+        name: "IPFS-Ordnervergleich",
+        description:
+          "Vergleichen Sie zwei IPFS-Ordner per CID oder Gateway-URL. Sehen Sie, welche Pfade hinzugefügt, entfernt oder geändert wurden, und laden Sie den Vergleich als JSON herunter.",
+      },
+      en: {
+        name: "IPFS Folder Diff",
+        description:
+          "Compare two IPFS folders by CID or gateway URL. See which paths were added, removed, or changed, and download the comparison as JSON.",
+      },
+      es: {
+        name: "Comparador de carpetas de IPFS",
+        description:
+          "Compara dos carpetas de IPFS mediante su CID o URL de pasarela. Consulta qué rutas se han añadido, eliminado o modificado y descarga la comparación en JSON.",
+      },
+      fr: {
+        name: "Comparateur de dossiers IPFS",
+        description:
+          "Comparez deux dossiers IPFS à partir de leur CID ou de leur URL de passerelle. Repérez les chemins ajoutés, supprimés ou modifiés et téléchargez la comparaison au format JSON.",
+      },
+      he: {
+        name: "השוואת תיקיות IPFS",
+        description:
+          "השוו שתי תיקיות IPFS לפי מזהי CID או קישורים לשער. ראו אילו נתיבים נוספו, הוסרו או השתנו והורידו את ההשוואה כ-JSON.",
+      },
+      hi: {
+        name: "IPFS फ़ोल्डर तुलना",
+        description:
+          "CID या गेटवे URL से दो IPFS फ़ोल्डर की तुलना करें। देखें कि कौन-से पाथ जोड़े गए, हटाए गए या बदले हैं और तुलना के नतीजे JSON में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembanding Folder IPFS",
+        description:
+          "Bandingkan dua folder IPFS dengan CID atau URL gateway. Lihat jalur yang ditambahkan, dihapus, atau diubah, lalu unduh hasil perbandingan sebagai JSON.",
+      },
+      it: {
+        name: "Confronto cartelle IPFS",
+        description:
+          "Confronta due cartelle IPFS tramite CID o URL del gateway. Scopri quali percorsi sono stati aggiunti, rimossi o modificati e scarica il confronto come JSON.",
+      },
+      ja: {
+        name: "IPFS フォルダー比較",
+        description:
+          "CID やゲートウェイ URL を使って 2 つの IPFS フォルダーを比較できます。追加、削除、変更されたパスを確認し、比較結果を JSON でダウンロードできます。",
+      },
+      ko: {
+        name: "IPFS 폴더 비교",
+        description:
+          "CID나 게이트웨이 URL로 IPFS 폴더 두 개를 비교하세요. 추가, 삭제, 변경된 경로를 확인하고 비교 결과를 JSON으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembanding Folder IPFS",
+        description:
+          "Bandingkan dua folder IPFS menggunakan CID atau URL get laluan. Lihat laluan yang ditambah, dibuang atau diubah, kemudian muat turun hasil perbandingan sebagai JSON.",
+      },
+      nl: {
+        name: "IPFS-mappen vergelijken",
+        description:
+          "Vergelijk twee IPFS-mappen via CID of gateway-URL. Bekijk welke paden zijn toegevoegd, verwijderd of gewijzigd en download de vergelijking als JSON.",
+      },
+      no: {
+        name: "Sammenlign IPFS-mapper",
+        description:
+          "Sammenlign to IPFS-mapper med CID eller gateway-URL. Se hvilke stier som er lagt til, fjernet eller endret, og last ned sammenligningen som JSON.",
+      },
+      pl: {
+        name: "Porównywanie folderów IPFS",
+        description:
+          "Porównaj dwa foldery IPFS na podstawie CID lub adresów bramy. Sprawdź, które ścieżki dodano, usunięto lub zmieniono, i pobierz porównanie w formacie JSON.",
+      },
+      pt: {
+        name: "Comparador de pastas do IPFS",
+        description:
+          "Compare duas pastas do IPFS pelo CID ou URL do gateway. Veja que caminhos foram adicionados, removidos ou alterados e descarregue a comparação em JSON.",
+      },
+      ru: {
+        name: "Сравнение папок IPFS",
+        description:
+          "Сравните две папки IPFS по CID или ссылкам на шлюз. Узнайте, какие пути добавили, удалили или изменили, и скачайте результаты в формате JSON.",
+      },
+      sv: {
+        name: "Jämför IPFS-mappar",
+        description:
+          "Jämför två IPFS-mappar med CID eller gateway-URL. Se vilka sökvägar som har lagts till, tagits bort eller ändrats och ladda ner jämförelsen som JSON.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบโฟลเดอร์ IPFS",
+        description:
+          "เปรียบเทียบสองโฟลเดอร์ IPFS ด้วย CID หรือ URL ของเกตเวย์ ดูว่าพาธใดถูกเพิ่ม ลบ หรือเปลี่ยนแปลง แล้วดาวน์โหลดผลเปรียบเทียบเป็น JSON",
+      },
+      tr: {
+        name: "IPFS Klasör Karşılaştırma",
+        description:
+          "İki IPFS klasörünü CID veya ağ geçidi adresiyle karşılaştırın. Hangi yolların eklendiğini, kaldırıldığını veya değiştiğini görün ve karşılaştırmayı JSON olarak indirin.",
+      },
+      vi: {
+        name: "Trình so sánh thư mục IPFS",
+        description:
+          "So sánh hai thư mục IPFS bằng CID hoặc URL cổng truy cập. Xem các đường dẫn được thêm, xóa hoặc thay đổi và tải kết quả so sánh dưới dạng JSON.",
+      },
+      "zh-CN": {
+        name: "IPFS 文件夹对比",
+        description:
+          "通过 CID 或网关 URL 对比两个 IPFS 文件夹。查看新增、删除和变更的路径，并将对比结果下载为 JSON。",
+      },
+      "zh-TW": {
+        name: "IPFS 資料夾比較",
+        description:
+          "透過 CID 或閘道網址比較兩個 IPFS 資料夾。查看新增、移除及變更的路徑，並將比較結果下載為 JSON。",
+      },
+    },
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     category: "network",
     icon: "network",
@@ -72686,6 +72809,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IPFS 下載工具",
         description:
           "透過 CID 或連結下載 IPFS 檔案。可瀏覽 UnixFS 資料夾、儲存個別檔案，或將整個 IPFS 資料夾下載成 ZIP。",
+      },
+    },
+  },
+  "ipfs-folder-diff": {
+    slug: "ipfs-folder-diff",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: ["ipfs", "unixfs", "folder", "directory", "compare", "diff", "cid"],
+    locales: {
+      ar: {
+        name: "مقارنة مجلدات IPFS",
+        description:
+          "قارن مجلدين في IPFS باستخدام معرّفَي CID أو رابطَي بوابة. اعرف المسارات التي أُضيفت أو أُزيلت أو تغيّرت، ونزّل المقارنة بصيغة JSON.",
+      },
+      de: {
+        name: "IPFS-Ordnervergleich",
+        description:
+          "Vergleichen Sie zwei IPFS-Ordner per CID oder Gateway-URL. Sehen Sie, welche Pfade hinzugefügt, entfernt oder geändert wurden, und laden Sie den Vergleich als JSON herunter.",
+      },
+      en: {
+        name: "IPFS Folder Diff",
+        description:
+          "Compare two IPFS folders by CID or gateway URL. See which paths were added, removed, or changed, and download the comparison as JSON.",
+      },
+      es: {
+        name: "Comparador de carpetas de IPFS",
+        description:
+          "Compara dos carpetas de IPFS mediante su CID o URL de pasarela. Consulta qué rutas se han añadido, eliminado o modificado y descarga la comparación en JSON.",
+      },
+      fr: {
+        name: "Comparateur de dossiers IPFS",
+        description:
+          "Comparez deux dossiers IPFS à partir de leur CID ou de leur URL de passerelle. Repérez les chemins ajoutés, supprimés ou modifiés et téléchargez la comparaison au format JSON.",
+      },
+      he: {
+        name: "השוואת תיקיות IPFS",
+        description:
+          "השוו שתי תיקיות IPFS לפי מזהי CID או קישורים לשער. ראו אילו נתיבים נוספו, הוסרו או השתנו והורידו את ההשוואה כ-JSON.",
+      },
+      hi: {
+        name: "IPFS फ़ोल्डर तुलना",
+        description:
+          "CID या गेटवे URL से दो IPFS फ़ोल्डर की तुलना करें। देखें कि कौन-से पाथ जोड़े गए, हटाए गए या बदले हैं और तुलना के नतीजे JSON में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembanding Folder IPFS",
+        description:
+          "Bandingkan dua folder IPFS dengan CID atau URL gateway. Lihat jalur yang ditambahkan, dihapus, atau diubah, lalu unduh hasil perbandingan sebagai JSON.",
+      },
+      it: {
+        name: "Confronto cartelle IPFS",
+        description:
+          "Confronta due cartelle IPFS tramite CID o URL del gateway. Scopri quali percorsi sono stati aggiunti, rimossi o modificati e scarica il confronto come JSON.",
+      },
+      ja: {
+        name: "IPFS フォルダー比較",
+        description:
+          "CID やゲートウェイ URL を使って 2 つの IPFS フォルダーを比較できます。追加、削除、変更されたパスを確認し、比較結果を JSON でダウンロードできます。",
+      },
+      ko: {
+        name: "IPFS 폴더 비교",
+        description:
+          "CID나 게이트웨이 URL로 IPFS 폴더 두 개를 비교하세요. 추가, 삭제, 변경된 경로를 확인하고 비교 결과를 JSON으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembanding Folder IPFS",
+        description:
+          "Bandingkan dua folder IPFS menggunakan CID atau URL get laluan. Lihat laluan yang ditambah, dibuang atau diubah, kemudian muat turun hasil perbandingan sebagai JSON.",
+      },
+      nl: {
+        name: "IPFS-mappen vergelijken",
+        description:
+          "Vergelijk twee IPFS-mappen via CID of gateway-URL. Bekijk welke paden zijn toegevoegd, verwijderd of gewijzigd en download de vergelijking als JSON.",
+      },
+      no: {
+        name: "Sammenlign IPFS-mapper",
+        description:
+          "Sammenlign to IPFS-mapper med CID eller gateway-URL. Se hvilke stier som er lagt til, fjernet eller endret, og last ned sammenligningen som JSON.",
+      },
+      pl: {
+        name: "Porównywanie folderów IPFS",
+        description:
+          "Porównaj dwa foldery IPFS na podstawie CID lub adresów bramy. Sprawdź, które ścieżki dodano, usunięto lub zmieniono, i pobierz porównanie w formacie JSON.",
+      },
+      pt: {
+        name: "Comparador de pastas do IPFS",
+        description:
+          "Compare duas pastas do IPFS pelo CID ou URL do gateway. Veja que caminhos foram adicionados, removidos ou alterados e descarregue a comparação em JSON.",
+      },
+      ru: {
+        name: "Сравнение папок IPFS",
+        description:
+          "Сравните две папки IPFS по CID или ссылкам на шлюз. Узнайте, какие пути добавили, удалили или изменили, и скачайте результаты в формате JSON.",
+      },
+      sv: {
+        name: "Jämför IPFS-mappar",
+        description:
+          "Jämför två IPFS-mappar med CID eller gateway-URL. Se vilka sökvägar som har lagts till, tagits bort eller ändrats och ladda ner jämförelsen som JSON.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบโฟลเดอร์ IPFS",
+        description:
+          "เปรียบเทียบสองโฟลเดอร์ IPFS ด้วย CID หรือ URL ของเกตเวย์ ดูว่าพาธใดถูกเพิ่ม ลบ หรือเปลี่ยนแปลง แล้วดาวน์โหลดผลเปรียบเทียบเป็น JSON",
+      },
+      tr: {
+        name: "IPFS Klasör Karşılaştırma",
+        description:
+          "İki IPFS klasörünü CID veya ağ geçidi adresiyle karşılaştırın. Hangi yolların eklendiğini, kaldırıldığını veya değiştiğini görün ve karşılaştırmayı JSON olarak indirin.",
+      },
+      vi: {
+        name: "Trình so sánh thư mục IPFS",
+        description:
+          "So sánh hai thư mục IPFS bằng CID hoặc URL cổng truy cập. Xem các đường dẫn được thêm, xóa hoặc thay đổi và tải kết quả so sánh dưới dạng JSON.",
+      },
+      "zh-CN": {
+        name: "IPFS 文件夹对比",
+        description:
+          "通过 CID 或网关 URL 对比两个 IPFS 文件夹。查看新增、删除和变更的路径，并将对比结果下载为 JSON。",
+      },
+      "zh-TW": {
+        name: "IPFS 資料夾比較",
+        description:
+          "透過 CID 或閘道網址比較兩個 IPFS 資料夾。查看新增、移除及變更的路徑，並將比較結果下載為 JSON。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "IPFS Folder Diff",
+  "description": "Compare two IPFS folders by CID or gateway URL. See which paths were added, removed, or changed, and download the comparison as JSON."
+}

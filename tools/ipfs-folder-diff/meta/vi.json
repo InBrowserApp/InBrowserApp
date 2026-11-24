@@ -1,0 +1,4 @@
+{
+  "name": "Trình so sánh thư mục IPFS",
+  "description": "So sánh hai thư mục IPFS bằng CID hoặc URL cổng truy cập. Xem các đường dẫn được thêm, xóa hoặc thay đổi và tải kết quả so sánh dưới dạng JSON."
+}

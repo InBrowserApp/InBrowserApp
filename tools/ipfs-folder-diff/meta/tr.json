@@ -1,0 +1,4 @@
+{
+  "name": "IPFS Klasör Karşılaştırma",
+  "description": "İki IPFS klasörünü CID veya ağ geçidi adresiyle karşılaştırın. Hangi yolların eklendiğini, kaldırıldığını veya değiştiğini görün ve karşılaştırmayı JSON olarak indirin."
+}

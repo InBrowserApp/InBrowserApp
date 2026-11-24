@@ -1,0 +1,4 @@
+{
+  "name": "Porównywanie folderów IPFS",
+  "description": "Porównaj dwa foldery IPFS na podstawie CID lub adresów bramy. Sprawdź, które ścieżki dodano, usunięto lub zmieniono, i pobierz porównanie w formacie JSON."
+}

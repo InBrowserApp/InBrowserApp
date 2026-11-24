@@ -187,6 +187,7 @@
     "@tool/ipfs-car-extractor": "workspace:*",
     "@tool/ipfs-cid-calculator": "workspace:*",
     "@tool/ipfs-downloader": "workspace:*",
+    "@tool/ipfs-folder-diff": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/ipv6-ula-generator": "workspace:*",
     "@tool/isbn-validator": "workspace:*",

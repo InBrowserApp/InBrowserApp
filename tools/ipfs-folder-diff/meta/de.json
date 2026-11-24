@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-Ordnervergleich",
+  "description": "Vergleichen Sie zwei IPFS-Ordner per CID oder Gateway-URL. Sehen Sie, welche Pfade hinzugefügt, entfernt oder geändert wurden, und laden Sie den Vergleich als JSON herunter."
+}
