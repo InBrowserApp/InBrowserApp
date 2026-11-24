@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur CSV et Excel en SQLite",
+  "description": "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes."
+}

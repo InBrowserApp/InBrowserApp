@@ -89,6 +89,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/css-box-shadow-generator/page"),
   "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),
   "csv-editor": () => import("@tool/csv-editor/page"),
+  "csv-excel-to-sqlite": () => import("@tool/csv-excel-to-sqlite/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "csv-to-xlsx-converter": () => import("@tool/csv-to-xlsx-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
@@ -116,6 +117,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "email-viewer": () => import("@tool/email-viewer/page"),
   "env-converter": () => import("@tool/env-converter/page"),
+  "epub-metadata-editor": () => import("@tool/epub-metadata-editor/page"),
   "epub-reader": () => import("@tool/epub-reader/page"),
   "epub-to-pdf-converter": () => import("@tool/epub-to-pdf-converter/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
@@ -250,6 +252,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
+  "pdf-bookmark-editor": () => import("@tool/pdf-bookmark-editor/page"),
   "pdf-compressor": () => import("@tool/pdf-compressor/page"),
   "pdf-image-extractor": () => import("@tool/pdf-image-extractor/page"),
   "pdf-info-viewer": () => import("@tool/pdf-info-viewer/page"),

@@ -6166,6 +6166,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-excel-to-sqlite",
+    language: "ar",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "de",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "en",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "es",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "fr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "he",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "hi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "id",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "it",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ja",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ko",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ms",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "nl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "no",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pl",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "pt",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "ru",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "sv",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "th",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "tr",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "vi",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-to-json-converter",
     language: "ar",
   },
@@ -8279,6 +8371,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "env-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ar",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "de",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "en",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "es",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "fr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "he",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "hi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "id",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "it",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ja",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ko",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ms",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "nl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "no",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pt",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ru",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "sv",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "th",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "tr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "vi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-metadata-editor",
     language: "zh-TW",
   },
   {
@@ -18583,6 +18767,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pbkdf2-key-derivation",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "de",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "en",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "es",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "he",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "id",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "it",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "no",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "th",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-bookmark-editor",
     language: "zh-TW",
   },
   {

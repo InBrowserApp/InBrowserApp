@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "CSV·Excel을 SQLite로 변환",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON 변환기",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env 변환기",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "EPUB 메타데이터 편집기",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2 키 파생",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "PDF 책갈피 편집기",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

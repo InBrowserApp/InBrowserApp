@@ -8587,6 +8587,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي ⁦.xlsx⁩ و⁦.xls⁩ إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف ⁦.sqlite⁩ أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (⁦.xlsx⁩, ⁦.xls⁩) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־⁦.sqlite⁩ או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
+      },
+    },
+  },
+  {
     slug: "csv-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -11485,6 +11619,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: ".env 轉換器",
         description:
           "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
+      },
+    },
+  },
+  {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
       },
     },
   },
@@ -25479,6 +25736,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "PBKDF2 金鑰派生",
         description:
           "使用 PBKDF2 從密碼和鹽派生金鑰。可設定迭代次數、雜湊演算法與輸出長度，支援十六進位或 Base64 輸出。",
+      },
+    },
+  },
+  {
+    slug: "pdf-bookmark-editor",
+    category: "pdf",
+    icon: "bookmark",
+    tags: [
+      "pdf",
+      "bookmark",
+      "outline",
+      "table of contents",
+      "navigation",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محرر الإشارات المرجعية لملفات PDF",
+        description:
+          "أضف إشارات مرجعية إلى ملف PDF وغيّر أسماءها ورتّبها ضمن مستويات. عاين الصفحات المرتبطة بها ونزّل الملف المعدّل مباشرةً من متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF-Lesezeichen bearbeiten",
+        description:
+          "Füge PDF-Lesezeichen online hinzu, benenne sie um und ordne sie neu oder hierarchisch an. Prüfe die Zielseiten in der Vorschau und lade die bearbeitete PDF ohne Upload herunter.",
+      },
+      en: {
+        name: "PDF Bookmark Editor",
+        description:
+          "Add, rename, reorder, and nest PDF bookmarks online. Preview destination pages and download the edited PDF without uploading your file.",
+      },
+      es: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Añade, renombra, reordena y anida marcadores de PDF en línea. Previsualiza las páginas de destino y descarga el PDF editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de signets PDF",
+        description:
+          "Ajoutez, renommez, réorganisez et imbriquez les signets d’un PDF en ligne. Prévisualisez les pages cibles et téléchargez le PDF modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך סימניות PDF",
+        description:
+          "הוסיפו סימניות לקובץ PDF, שנו את שמן, סדרו אותן מחדש וקבצו אותן לפי פרקים. צפו בעמודי היעד והורידו את הקובץ הערוך בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "PDF बुकमार्क एडिटर",
+        description:
+          "PDF बुकमार्क ऑनलाइन जोड़ें, उनके नाम और क्रम बदलें या उन्हें एक-दूसरे के नीचे रखें। लिंक किए गए पेज का प्रीव्यू देखें और फ़ाइल अपलोड किए बिना संपादित PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Markah PDF",
+        description:
+          "Tambah, ganti nama, atur urutan, dan kelompokkan markah PDF (bookmark) secara online. Lihat pratinjau halaman tujuan dan unduh hasil edit tanpa mengunggah file.",
+      },
+      it: {
+        name: "Editor di segnalibri PDF",
+        description:
+          "Aggiungi, rinomina e organizza i segnalibri PDF online. Visualizza le pagine di destinazione e scarica il PDF modificato senza caricare il file.",
+      },
+      ja: {
+        name: "PDF のしおり編集ツール",
+        description:
+          "オンラインで PDF のしおりを追加し、タイトルや順序、階層を変更できます。リンク先のページをプレビューし、ファイルをアップロードせずに編集済みの PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 책갈피 편집기",
+        description:
+          "온라인에서 PDF 책갈피를 추가하고, 이름과 순서를 바꾸고, 하위 책갈피로 정리하세요. 대상 페이지를 미리 보고 파일 업로드 없이 편집한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Penanda Buku PDF",
+        description:
+          "Tambah, namakan semula dan susun penanda buku PDF mengikut aras dalam talian. Pratonton halaman sasaran dan muat turun PDF yang disunting tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF-bladwijzers bewerken",
+        description:
+          "Voeg PDF-bladwijzers online toe, hernoem, verplaats of nest ze. Bekijk de doelpagina’s en download de bewerkte PDF zonder upload.",
+      },
+      no: {
+        name: "Rediger PDF-bokmerker",
+        description:
+          "Legg til og organiser bokmerker i PDF-filer. Endre navn og struktur, forhåndsvis målsider og last ned den redigerte PDF-filen uten opplasting.",
+      },
+      pl: {
+        name: "Edytor zakładek PDF",
+        description:
+          "Dodawaj i edytuj zakładki w PDF online. Zmieniaj ich kolejność, grupuj je i sprawdzaj strony docelowe. Pobierz zmieniony PDF bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Adicione, renomeie, reordene e aninhe marcadores de PDF online. Confira as páginas de destino e baixe o PDF editado sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Редактор закладок PDF",
+        description:
+          "Добавляйте, переименовывайте и группируйте закладки PDF онлайн. Меняйте их порядок, просматривайте страницы и скачивайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigera PDF-bokmärken",
+        description:
+          "Lägg till, byt namn på och ordna PDF-bokmärken i flera nivåer. Förhandsvisa målsidorna och ladda ner den redigerade PDF-filen utan att ladda upp den.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+        description:
+          "เพิ่ม เปลี่ยนชื่อ จัดลำดับ และสร้างบุ๊กมาร์กย่อยใน PDF ออนไลน์ ดูตัวอย่างหน้าปลายทางแล้วดาวน์โหลด PDF ที่แก้ไขแล้วโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Yer İmi Düzenleyici",
+        description:
+          "PDF yer imleri ekleyin, adlarını ve sıralarını değiştirin, iç içe yerleştirin. Hedef sayfaları önizleyin ve dosyanızı yüklemeden düzenlenmiş PDF'yi indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa dấu trang PDF",
+        description:
+          "Thêm, đổi tên, sắp xếp và tạo dấu trang con trong PDF trực tuyến. Xem trước trang đích rồi tải xuống bản PDF đã sửa ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 书签编辑器",
+        description:
+          "在线添加、重命名、排序和嵌套 PDF 书签。预览目标页面并下载编辑后的 PDF，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PDF 書籤編輯器",
+        description:
+          "線上新增、重新命名、排序 PDF 書籤，並建立多層書籤。預覽書籤指向的頁面，再下載編輯後的 PDF，檔案無須上傳。",
       },
     },
   },
@@ -49861,6 +50248,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "csv-excel-to-sqlite": {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي ⁦.xlsx⁩ و⁦.xls⁩ إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف ⁦.sqlite⁩ أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (⁦.xlsx⁩, ⁦.xls⁩) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־⁦.sqlite⁩ או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
+      },
+    },
+  },
   "csv-to-json-converter": {
     slug: "csv-to-json-converter",
     category: "json",
@@ -52760,6 +53281,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: ".env 轉換器",
         description:
           "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
+      },
+    },
+  },
+  "epub-metadata-editor": {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
       },
     },
   },
@@ -66754,6 +67398,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PBKDF2 金鑰派生",
         description:
           "使用 PBKDF2 從密碼和鹽派生金鑰。可設定迭代次數、雜湊演算法與輸出長度，支援十六進位或 Base64 輸出。",
+      },
+    },
+  },
+  "pdf-bookmark-editor": {
+    slug: "pdf-bookmark-editor",
+    category: "pdf",
+    icon: "bookmark",
+    tags: [
+      "pdf",
+      "bookmark",
+      "outline",
+      "table of contents",
+      "navigation",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محرر الإشارات المرجعية لملفات PDF",
+        description:
+          "أضف إشارات مرجعية إلى ملف PDF وغيّر أسماءها ورتّبها ضمن مستويات. عاين الصفحات المرتبطة بها ونزّل الملف المعدّل مباشرةً من متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF-Lesezeichen bearbeiten",
+        description:
+          "Füge PDF-Lesezeichen online hinzu, benenne sie um und ordne sie neu oder hierarchisch an. Prüfe die Zielseiten in der Vorschau und lade die bearbeitete PDF ohne Upload herunter.",
+      },
+      en: {
+        name: "PDF Bookmark Editor",
+        description:
+          "Add, rename, reorder, and nest PDF bookmarks online. Preview destination pages and download the edited PDF without uploading your file.",
+      },
+      es: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Añade, renombra, reordena y anida marcadores de PDF en línea. Previsualiza las páginas de destino y descarga el PDF editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de signets PDF",
+        description:
+          "Ajoutez, renommez, réorganisez et imbriquez les signets d’un PDF en ligne. Prévisualisez les pages cibles et téléchargez le PDF modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך סימניות PDF",
+        description:
+          "הוסיפו סימניות לקובץ PDF, שנו את שמן, סדרו אותן מחדש וקבצו אותן לפי פרקים. צפו בעמודי היעד והורידו את הקובץ הערוך בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "PDF बुकमार्क एडिटर",
+        description:
+          "PDF बुकमार्क ऑनलाइन जोड़ें, उनके नाम और क्रम बदलें या उन्हें एक-दूसरे के नीचे रखें। लिंक किए गए पेज का प्रीव्यू देखें और फ़ाइल अपलोड किए बिना संपादित PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Markah PDF",
+        description:
+          "Tambah, ganti nama, atur urutan, dan kelompokkan markah PDF (bookmark) secara online. Lihat pratinjau halaman tujuan dan unduh hasil edit tanpa mengunggah file.",
+      },
+      it: {
+        name: "Editor di segnalibri PDF",
+        description:
+          "Aggiungi, rinomina e organizza i segnalibri PDF online. Visualizza le pagine di destinazione e scarica il PDF modificato senza caricare il file.",
+      },
+      ja: {
+        name: "PDF のしおり編集ツール",
+        description:
+          "オンラインで PDF のしおりを追加し、タイトルや順序、階層を変更できます。リンク先のページをプレビューし、ファイルをアップロードせずに編集済みの PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 책갈피 편집기",
+        description:
+          "온라인에서 PDF 책갈피를 추가하고, 이름과 순서를 바꾸고, 하위 책갈피로 정리하세요. 대상 페이지를 미리 보고 파일 업로드 없이 편집한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Penanda Buku PDF",
+        description:
+          "Tambah, namakan semula dan susun penanda buku PDF mengikut aras dalam talian. Pratonton halaman sasaran dan muat turun PDF yang disunting tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF-bladwijzers bewerken",
+        description:
+          "Voeg PDF-bladwijzers online toe, hernoem, verplaats of nest ze. Bekijk de doelpagina’s en download de bewerkte PDF zonder upload.",
+      },
+      no: {
+        name: "Rediger PDF-bokmerker",
+        description:
+          "Legg til og organiser bokmerker i PDF-filer. Endre navn og struktur, forhåndsvis målsider og last ned den redigerte PDF-filen uten opplasting.",
+      },
+      pl: {
+        name: "Edytor zakładek PDF",
+        description:
+          "Dodawaj i edytuj zakładki w PDF online. Zmieniaj ich kolejność, grupuj je i sprawdzaj strony docelowe. Pobierz zmieniony PDF bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Adicione, renomeie, reordene e aninhe marcadores de PDF online. Confira as páginas de destino e baixe o PDF editado sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Редактор закладок PDF",
+        description:
+          "Добавляйте, переименовывайте и группируйте закладки PDF онлайн. Меняйте их порядок, просматривайте страницы и скачивайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigera PDF-bokmärken",
+        description:
+          "Lägg till, byt namn på och ordna PDF-bokmärken i flera nivåer. Förhandsvisa målsidorna och ladda ner den redigerade PDF-filen utan att ladda upp den.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+        description:
+          "เพิ่ม เปลี่ยนชื่อ จัดลำดับ และสร้างบุ๊กมาร์กย่อยใน PDF ออนไลน์ ดูตัวอย่างหน้าปลายทางแล้วดาวน์โหลด PDF ที่แก้ไขแล้วโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Yer İmi Düzenleyici",
+        description:
+          "PDF yer imleri ekleyin, adlarını ve sıralarını değiştirin, iç içe yerleştirin. Hedef sayfaları önizleyin ve dosyanızı yüklemeden düzenlenmiş PDF'yi indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa dấu trang PDF",
+        description:
+          "Thêm, đổi tên, sắp xếp và tạo dấu trang con trong PDF trực tuyến. Xem trước trang đích rồi tải xuống bản PDF đã sửa ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 书签编辑器",
+        description:
+          "在线添加、重命名、排序和嵌套 PDF 书签。预览目标页面并下载编辑后的 PDF，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PDF 書籤編輯器",
+        description:
+          "線上新增、重新命名、排序 PDF 書籤，並建立多層書籤。預覽書籤指向的頁面，再下載編輯後的 PDF，檔案無須上傳。",
       },
     },
   },

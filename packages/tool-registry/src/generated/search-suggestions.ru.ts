@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "Конвертер CSV и Excel в SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "Конвертер CSV → JSON",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Конвертер .env",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "Редактор метаданных EPUB",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Вывод ключей PBKDF2",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "Редактор закладок PDF",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

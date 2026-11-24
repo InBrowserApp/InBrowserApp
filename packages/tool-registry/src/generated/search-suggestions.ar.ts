@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "تحويل CSV وExcel إلى SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "محول CSV → JSON",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "محوّل .env",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "محرر بيانات EPUB الوصفية",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "اشتقاق مفاتيح PBKDF2",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "محرر الإشارات المرجعية لملفات PDF",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "Tukar CSV dan Excel kepada SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "Penukar CSV → JSON",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Penukar .env",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "Penyunting Metadata EPUB",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Derivasi Kunci PBKDF2",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "Penyunting Penanda Buku PDF",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

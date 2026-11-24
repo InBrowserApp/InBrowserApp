@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON Dönüştürücü",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env Dönüştürücü",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "EPUB Meta Veri Düzenleyicisi",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2 Anahtar Türetme",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "PDF Yer İmi Düzenleyici",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

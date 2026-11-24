@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "Konverter CSV og Excel til SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON-omformer",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env-konverterer",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "Redigering av EPUB-metadata",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2-nøkkelavledning",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "Rediger PDF-bokmerker",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

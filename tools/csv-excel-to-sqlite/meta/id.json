@@ -1,0 +1,4 @@
+{
+  "name": "Konverter CSV dan Excel ke SQLite",
+  "description": "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite."
+}

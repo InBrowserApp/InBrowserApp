@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "ממיר CSV ו־Excel ל־SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "ממיר CSV → JSON",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ממיר .env",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "עורך מטא־נתונים ל־EPUB",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "נגזרת מפתח PBKDF2",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "עורך סימניות PDF",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

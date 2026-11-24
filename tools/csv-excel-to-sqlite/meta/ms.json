@@ -1,0 +1,4 @@
+{
+  "name": "Tukar CSV dan Excel kepada SQLite",
+  "description": "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite."
+}

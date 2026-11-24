@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "CSV 和 Excel 转 SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV 转 JSON 转换器",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env 转换器",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "EPUB 元数据编辑器",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2 密钥派生",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "PDF 书签编辑器",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

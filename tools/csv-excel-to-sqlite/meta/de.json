@@ -1,0 +1,4 @@
+{
+  "name": "CSV und Excel in SQLite umwandeln",
+  "description": "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen."
+}

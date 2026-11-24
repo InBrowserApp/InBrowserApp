@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "CSV en Excel naar SQLite converteren",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON-converter",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env-converter",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "EPUB-metadata-editor",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2-sleutelafleiding",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "PDF-bladwijzers bewerken",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

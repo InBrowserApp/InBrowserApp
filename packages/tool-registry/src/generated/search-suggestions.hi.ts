@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "CSV और Excel को SQLite में बदलें",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON परिवर्तक",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".env कन्वर्टर",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "EPUB मेटाडेटा एडिटर",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "PBKDF2 कुंजी व्युत्पत्ति",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "PDF बुकमार्क एडिटर",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",

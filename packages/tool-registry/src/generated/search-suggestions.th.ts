@@ -338,6 +338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "csv-editor",
   },
   {
+    category: "developer",
+    name: "แปลง CSV และ Excel เป็น SQLite",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "ตัวแปลง CSV → JSON",
     slug: "csv-to-json-converter",
@@ -451,6 +456,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวแปลง .env",
     slug: "env-converter",
+  },
+  {
+    category: "document",
+    name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+    slug: "epub-metadata-editor",
   },
   {
     category: "document",
@@ -1011,6 +1021,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "การสร้างคีย์ PBKDF2",
     slug: "pbkdf2-key-derivation",
+  },
+  {
+    category: "pdf",
+    name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+    slug: "pdf-bookmark-editor",
   },
   {
     category: "pdf",
