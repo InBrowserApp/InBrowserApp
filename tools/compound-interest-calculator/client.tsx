@@ -183,7 +183,10 @@ export default function Calculator({
                       }}
                     />
                     {suffix && (
-                      <InputGroupAddon align="inline-end">
+                      <InputGroupAddon
+                        align="inline-end"
+                        className="rtl:pr-0 rtl:pl-2"
+                      >
                         <InputGroupText id={fieldId + "-unit"}>
                           {suffix}
                         </InputGroupText>
