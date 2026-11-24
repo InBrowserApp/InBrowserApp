@@ -15980,6 +15980,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-histogram",
+    category: "image",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "photo",
+      "histogram",
+      "rgb",
+      "color channels",
+      "brightness",
+      "luminance",
+      "exposure",
+      "clipping",
+    ],
+    locales: {
+      ar: {
+        name: "عارض المدرج التكراري للصور",
+        description:
+          "اعرض المدرج التكراري للسطوع وقنوات RGB في صورك. افحص الظلال والمناطق الساطعة وكل قناة لونية مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für Bildhistogramme",
+        description:
+          "Sieh dir das Helligkeits- und RGB-Histogramm eines Fotos oder Bildes an. Prüfe Tiefen, Lichter und einzelne Farbkanäle direkt im Browser.",
+      },
+      en: {
+        name: "Image Histogram Viewer",
+        description:
+          "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser.",
+      },
+      es: {
+        name: "Visor de histogramas de imágenes",
+        description:
+          "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’histogrammes d’images",
+        description:
+          "Affichez les histogrammes de luminosité et RVB d’une photo ou d’une image. Inspectez les ombres, les hautes lumières et chaque canal de couleur dans votre navigateur.",
+      },
+      he: {
+        name: "מציג היסטוגרמה לתמונות",
+        description:
+          "הציגו היסטוגרמות בהירות וערוצי RGB של צילומים ותמונות. בדקו צללים, אזורים בהירים וערוצי צבע נפרדים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज हिस्टोग्राम व्यूअर",
+        description:
+          "फ़ोटो या इमेज की चमक और RGB के हिस्टोग्राम देखें। गहरे और उजले टोन और अलग-अलग रंग चैनल सीधे अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Histogram Gambar",
+        description:
+          "Lihat histogram kecerahan dan RGB untuk foto atau gambar. Periksa bayangan, sorotan, dan tiap saluran warna langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di istogrammi di immagini",
+        description:
+          "Visualizza gli istogrammi di luminosità e RGB di una foto o immagine. Esamina ombre, luci e singoli canali di colore direttamente nel browser.",
+      },
+      ja: {
+        name: "画像ヒストグラムビューアー",
+        description:
+          "写真や画像の明るさと RGB のヒストグラムをブラウザーで表示し、シャドウ、ハイライト、各色のチャンネルを確認できます。",
+      },
+      ko: {
+        name: "이미지 히스토그램 뷰어",
+        description:
+          "사진이나 이미지의 밝기와 RGB 히스토그램을 확인하세요. 어두운 영역, 밝은 영역, 개별 색상 채널을 브라우저에서 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Histogram Imej",
+        description:
+          "Lihat histogram kecerahan dan RGB bagi foto atau imej. Semak bahagian gelap dan cerah serta setiap saluran warna terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Histogramviewer voor afbeeldingen",
+        description:
+          "Bekijk de helderheids- en RGB-histogrammen van een foto of afbeelding. Controleer schaduwen, hooglichten en afzonderlijke kleurkanalen in je browser.",
+      },
+      no: {
+        name: "Histogramviser for bilder",
+        description:
+          "Vis histogrammer for lysstyrke og RGB i bilder og fotografier. Undersøk skygger, høylys og enkeltkanaler direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka histogramów obrazów",
+        description:
+          "Wyświetl histogramy jasności i RGB zdjęcia lub innego obrazu. Sprawdź cienie, światła i poszczególne kanały kolorów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de histogramas de imagens",
+        description:
+          "Veja os histogramas de brilho e RGB de uma foto ou imagem. Confira as sombras, os realces e cada canal de cor diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр гистограмм изображений",
+        description:
+          "Просматривайте гистограммы яркости и RGB для фотографий и других изображений. Проверяйте тени, света и отдельные цветовые каналы прямо в браузере.",
+      },
+      sv: {
+        name: "Histogramvisare för bilder",
+        description:
+          "Visa ljusstyrke- och RGB-histogram för foton och andra bilder. Granska skuggor, högdagrar och enskilda färgkanaler direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+        description:
+          "ดูฮิสโตแกรมความสว่างและ RGB ของรูปภาพ ตรวจสอบส่วนมืด ส่วนสว่าง และแต่ละช่องสีได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görsel Histogramı Görüntüleyicisi",
+        description:
+          "Fotoğraf ve görsellerin parlaklık ve RGB histogramlarını görüntüleyin. Gölgeleri, açık tonları ve renk kanallarını doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem histogram ảnh",
+        description:
+          "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu.",
+      },
+      "zh-CN": {
+        name: "图像直方图查看器",
+        description:
+          "直接在浏览器中查看照片或图片的亮度和 RGB 直方图，检查阴影、高光及各个颜色通道。",
+      },
+      "zh-TW": {
+        name: "影像色階分佈圖檢視器",
+        description:
+          "直接在瀏覽器中查看照片或圖片的亮度與 RGB 色階分佈圖，檢查陰影、亮部及個別色版。",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",

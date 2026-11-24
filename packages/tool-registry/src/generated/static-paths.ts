@@ -11594,6 +11594,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-histogram",
+    language: "ar",
+  },
+  {
+    slug: "image-histogram",
+    language: "de",
+  },
+  {
+    slug: "image-histogram",
+    language: "en",
+  },
+  {
+    slug: "image-histogram",
+    language: "es",
+  },
+  {
+    slug: "image-histogram",
+    language: "fr",
+  },
+  {
+    slug: "image-histogram",
+    language: "he",
+  },
+  {
+    slug: "image-histogram",
+    language: "hi",
+  },
+  {
+    slug: "image-histogram",
+    language: "id",
+  },
+  {
+    slug: "image-histogram",
+    language: "it",
+  },
+  {
+    slug: "image-histogram",
+    language: "ja",
+  },
+  {
+    slug: "image-histogram",
+    language: "ko",
+  },
+  {
+    slug: "image-histogram",
+    language: "ms",
+  },
+  {
+    slug: "image-histogram",
+    language: "nl",
+  },
+  {
+    slug: "image-histogram",
+    language: "no",
+  },
+  {
+    slug: "image-histogram",
+    language: "pl",
+  },
+  {
+    slug: "image-histogram",
+    language: "pt",
+  },
+  {
+    slug: "image-histogram",
+    language: "ru",
+  },
+  {
+    slug: "image-histogram",
+    language: "sv",
+  },
+  {
+    slug: "image-histogram",
+    language: "th",
+  },
+  {
+    slug: "image-histogram",
+    language: "tr",
+  },
+  {
+    slug: "image-histogram",
+    language: "vi",
+  },
+  {
+    slug: "image-histogram",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-histogram",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },

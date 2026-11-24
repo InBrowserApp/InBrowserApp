@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Pemapar Histogram Imej",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Pembersih Metadata Imej (EXIF)",
     slug: "image-metadata-cleaner",
   },

@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Trình xem histogram ảnh",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Trình dọn siêu dữ liệu ảnh (EXIF)",
     slug: "image-metadata-cleaner",
   },

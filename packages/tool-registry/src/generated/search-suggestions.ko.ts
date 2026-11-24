@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 히스토그램 뷰어",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "이미지 메타데이터 클리너 (EXIF)",
     slug: "image-metadata-cleaner",
   },

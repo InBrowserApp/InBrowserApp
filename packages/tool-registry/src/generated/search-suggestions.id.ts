@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Penampil Histogram Gambar",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Pembersih Metadata Gambar (EXIF)",
     slug: "image-metadata-cleaner",
   },

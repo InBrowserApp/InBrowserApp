@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Przeglądarka histogramów obrazów",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Czyściciel metadanych obrazu (EXIF)",
     slug: "image-metadata-cleaner",
   },

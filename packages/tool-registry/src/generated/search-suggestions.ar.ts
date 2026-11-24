@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "عارض المدرج التكراري للصور",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "منظف بيانات الصور (EXIF)",
     slug: "image-metadata-cleaner",
   },

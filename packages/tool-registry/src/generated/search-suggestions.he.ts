@@ -634,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "מציג היסטוגרמה לתמונות",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "מנקה מטא-נתונים לתמונות (EXIF)",
     slug: "image-metadata-cleaner",
   },
