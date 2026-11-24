@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV संपादक",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV और Excel को SQLite में बदलें",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF फ़ॉर्म भरें",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "PDF से इमेज निकालें",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF का मेटाडेटा हटाएँ",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR — स्कैन की गई PDF को खोजने योग्य बनाएँ",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF पेज ऑर्गनाइज़र",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDF से संवेदनशील जानकारी हटाएँ",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

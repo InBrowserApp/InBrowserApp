@@ -1,0 +1,13 @@
+{
+  "choosePdf": "PDF seç",
+  "dropPdf": "veya PDF'yi buraya sürükleyip bırakın",
+  "changePdf": "Başka bir PDF seç",
+  "privacy": "Dosya sunucuya yüklenmeden tarayıcınızda işlenir.",
+  "removeMetadata": "Meta verileri kaldır",
+  "removingMetadata": "Meta veriler kaldırılıyor…",
+  "success": "PDF'niz indirilmeye hazır.",
+  "downloadPdf": "PDF'yi indir",
+  "oneFile": "Her seferinde bir PDF seçin.",
+  "encryptedPdf": "Bu PDF şifreli. Dosyayı açın, şifresiz bir kopyasını kaydedin ve tekrar deneyin.",
+  "invalidPdf": "Dosya işlenemedi. Açılabilen bir PDF seçin."
+}

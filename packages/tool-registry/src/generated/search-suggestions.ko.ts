@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV 편집기",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV·Excel을 SQLite로 변환",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 양식 채우기",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "PDF에서 이미지 추출",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 메타데이터 제거",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR — 스캔한 PDF를 검색 가능하게 만들기",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF 페이지 정리 도구",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDF 민감 정보 가리기",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

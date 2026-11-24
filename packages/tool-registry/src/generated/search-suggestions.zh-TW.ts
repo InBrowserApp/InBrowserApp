@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV 編輯器",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV 與 Excel 轉 SQLite",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 表單填寫",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "從 PDF 擷取圖片",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "移除 PDF 中繼資料",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR — 將掃描檔轉成可搜尋的 PDF",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF 頁面整理器",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDF 內容遮蔽",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

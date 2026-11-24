@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSVエディタ",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV・ExcelをSQLiteに変換",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDFフォーム入力",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "PDFから画像を抽出",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF のメタデータを削除",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "スキャンした PDF を検索可能に（OCR）",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF ページ整理ツール",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDFの墨消し",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

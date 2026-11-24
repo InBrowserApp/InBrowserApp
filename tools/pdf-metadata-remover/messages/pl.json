@@ -1,0 +1,13 @@
+{
+  "choosePdf": "Wybierz PDF",
+  "dropPdf": "lub upuść tutaj plik PDF",
+  "changePdf": "Wybierz inny PDF",
+  "privacy": "Plik jest przetwarzany w przeglądarce bez wysyłania na serwer.",
+  "removeMetadata": "Usuń metadane",
+  "removingMetadata": "Usuwanie metadanych…",
+  "success": "Twój PDF jest gotowy do pobrania.",
+  "downloadPdf": "Pobierz PDF",
+  "oneFile": "Wybierz tylko jeden plik PDF.",
+  "encryptedPdf": "Ten PDF jest zaszyfrowany. Otwórz go, zapisz kopię bez szyfrowania i spróbuj ponownie.",
+  "invalidPdf": "Nie udało się przetworzyć pliku. Wybierz PDF, który można otworzyć."
+}

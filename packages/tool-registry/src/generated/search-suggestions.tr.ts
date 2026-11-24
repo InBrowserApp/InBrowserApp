@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV Düzenleyici",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV ve Excel'den SQLite'a Dönüştürücü",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF Formu Doldurma",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "PDF'den Görüntü Çıkarma",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF Meta Verilerini Kaldır",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR — Taranmış PDF'leri aranabilir yapın",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF Sayfa Düzenleyici",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDF Karartma",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

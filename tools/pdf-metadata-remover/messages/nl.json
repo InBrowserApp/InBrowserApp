@@ -1,0 +1,13 @@
+{
+  "choosePdf": "PDF kiezen",
+  "dropPdf": "of sleep hier een PDF naartoe",
+  "changePdf": "Andere PDF kiezen",
+  "privacy": "Je browser verwerkt de PDF zonder deze te uploaden.",
+  "removeMetadata": "Metadata verwijderen",
+  "removingMetadata": "Metadata worden verwijderd…",
+  "success": "Je PDF is klaar om te downloaden.",
+  "downloadPdf": "PDF downloaden",
+  "oneFile": "Kies één PDF tegelijk.",
+  "encryptedPdf": "Deze PDF is versleuteld. Open het bestand, sla een ontgrendelde kopie op en probeer het opnieuw.",
+  "invalidPdf": "Dit bestand kon niet worden verwerkt. Kies een PDF die je kunt openen."
+}

@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV-redigerare",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "Konvertera CSV och Excel till SQLite",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Fyll i PDF-formulär",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Extrahera bilder från PDF",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Ta bort PDF-metadata",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR – Gör skannade PDF-filer sökbara",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Ordna PDF-sidor",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "Maskera PDF",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

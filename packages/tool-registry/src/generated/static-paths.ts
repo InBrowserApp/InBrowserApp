@@ -6350,6 +6350,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-editor",
+    language: "ar",
+  },
+  {
+    slug: "csv-editor",
+    language: "de",
+  },
+  {
+    slug: "csv-editor",
+    language: "en",
+  },
+  {
+    slug: "csv-editor",
+    language: "es",
+  },
+  {
+    slug: "csv-editor",
+    language: "fr",
+  },
+  {
+    slug: "csv-editor",
+    language: "he",
+  },
+  {
+    slug: "csv-editor",
+    language: "hi",
+  },
+  {
+    slug: "csv-editor",
+    language: "id",
+  },
+  {
+    slug: "csv-editor",
+    language: "it",
+  },
+  {
+    slug: "csv-editor",
+    language: "ja",
+  },
+  {
+    slug: "csv-editor",
+    language: "ko",
+  },
+  {
+    slug: "csv-editor",
+    language: "ms",
+  },
+  {
+    slug: "csv-editor",
+    language: "nl",
+  },
+  {
+    slug: "csv-editor",
+    language: "no",
+  },
+  {
+    slug: "csv-editor",
+    language: "pl",
+  },
+  {
+    slug: "csv-editor",
+    language: "pt",
+  },
+  {
+    slug: "csv-editor",
+    language: "ru",
+  },
+  {
+    slug: "csv-editor",
+    language: "sv",
+  },
+  {
+    slug: "csv-editor",
+    language: "th",
+  },
+  {
+    slug: "csv-editor",
+    language: "tr",
+  },
+  {
+    slug: "csv-editor",
+    language: "vi",
+  },
+  {
+    slug: "csv-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-excel-to-sqlite",
     language: "ar",
   },
@@ -19506,6 +19598,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-form-filler",
+    language: "ar",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "de",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "en",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "es",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "fr",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "he",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "hi",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "id",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "it",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ja",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ko",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ms",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "nl",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "no",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "pl",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "pt",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "ru",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "sv",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "th",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "tr",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "vi",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-form-filler",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-image-extractor",
     language: "ar",
   },
@@ -19782,6 +19966,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-metadata-remover",
+    language: "ar",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "de",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "en",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "es",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "fr",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "he",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "hi",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "id",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "it",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ja",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ko",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ms",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "nl",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "no",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "pl",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "pt",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "ru",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "sv",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "th",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "tr",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "vi",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-metadata-remover",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-ocr",
     language: "ar",
   },
@@ -20055,6 +20331,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pdf-page-organizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "de",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "en",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "es",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "he",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "id",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "it",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "no",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "th",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-redactor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-redactor",
     language: "zh-TW",
   },
   {

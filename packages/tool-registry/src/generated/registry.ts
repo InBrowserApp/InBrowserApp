@@ -8841,6 +8841,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csv-editor",
+    category: "document",
+    icon: "table-2",
+    tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
+    locales: {
+      ar: {
+        name: "محرّر CSV",
+        description:
+          "حرّر ملفات CSV وTSV عبر الإنترنت. عدّل الخلايا، ورتّب الصفوف وصفِّها، وأعد ترتيب الأعمدة، ثم نزّل الملف بصيغته الأصلية. تبقى ملفاتك في متصفحك.",
+      },
+      de: {
+        name: "CSV-Editor",
+        description:
+          "CSV und TSV online bearbeiten. Zellen ändern, Zeilen sortieren und filtern, Spalten verschieben und im Originalformat speichern. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "CSV Editor",
+        description:
+          "Edit CSV and TSV files online. Change cells, sort and filter rows, reorder columns, and download in the original format. Your files stay in your browser.",
+      },
+      es: {
+        name: "Editor de CSV",
+        description:
+          "Edita archivos CSV y TSV en línea. Cambia celdas, ordena y filtra filas, reordena columnas y descarga el archivo en su formato original. Todo en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur CSV",
+        description:
+          "Modifiez vos fichiers CSV et TSV en ligne. Éditez les cellules, triez et filtrez les lignes, réorganisez les colonnes et téléchargez le résultat au format d’origine. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "עורך CSV",
+        description:
+          "עריכת קובצי CSV ו-TSV באינטרנט. אפשר לערוך תאים, למיין ולסנן שורות, לשנות את סדר העמודות ולהוריד את הקובץ בפורמט המקורי. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "CSV संपादक",
+        description:
+          "CSV और TSV फ़ाइलें ऑनलाइन संपादित करें। सेल बदलें, पंक्तियाँ क्रमबद्ध और फ़िल्टर करें, कॉलम का क्रम बदलें और फ़ाइल मूल फ़ॉर्मैट में डाउनलोड करें। आपकी फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Editor CSV",
+        description:
+          "Edit file CSV dan TSV secara online. Ubah isi sel, urutkan dan filter baris, atur ulang kolom, lalu unduh dalam format asli. File tetap di browser Anda.",
+      },
+      it: {
+        name: "Editor CSV",
+        description:
+          "Modifica file CSV e TSV online. Aggiorna le celle, ordina e filtra le righe, sposta le colonne e scarica nel formato originale. I file restano nel browser.",
+      },
+      ja: {
+        name: "CSVエディタ",
+        description:
+          "CSV・TSVファイルをブラウザーで編集できます。セルの編集、行の並べ替えや絞り込み、列の移動ができ、元の形式でダウンロードできます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "CSV 편집기",
+        description:
+          "온라인에서 CSV와 TSV 파일을 편집하세요. 셀을 수정하고, 행을 정렬하거나 필터링하고, 열 순서를 바꿀 수 있습니다. 파일은 브라우저에서 처리되며 원래 형식으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting CSV",
+        description:
+          "Sunting fail CSV dan TSV dalam talian. Ubah kandungan sel, isih dan tapis baris, tukar susunan lajur, kemudian muat turun dalam format asal. Fail anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "CSV-editor",
+        description:
+          "Bewerk CSV- en TSV-bestanden online. Pas cellen aan, sorteer en filter rijen, verplaats kolommen en download in het oorspronkelijke formaat. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "CSV-redigerer",
+        description:
+          "Rediger CSV- og TSV-filer på nett. Endre celler, sorter og filtrer rader, flytt kolonner og last ned i originalformatet. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor CSV",
+        description:
+          "Edytuj pliki CSV i TSV online. Zmieniaj komórki, sortuj i filtruj wiersze, przestawiaj kolumny i pobieraj pliki w oryginalnym formacie. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor de CSV",
+        description:
+          "Edite arquivos CSV e TSV online. Altere células, ordene e filtre linhas, reorganize colunas e baixe no formato original. Seus arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Редактор CSV",
+        description:
+          "Редактируйте CSV и TSV онлайн. Меняйте ячейки, сортируйте и фильтруйте строки, переставляйте столбцы и скачивайте файлы в исходном формате. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "CSV-redigerare",
+        description:
+          "Redigera CSV- och TSV-filer online. Ändra celler, sortera och filtrera rader, flytta kolumner och ladda ner i originalformatet. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแก้ไข CSV",
+        description:
+          "แก้ไขไฟล์ CSV และ TSV ออนไลน์ เปลี่ยนค่าในเซลล์ เรียงและกรองแถว ย้ายคอลัมน์ แล้วดาวน์โหลดในรูปแบบเดิม ไฟล์ของคุณอยู่ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "CSV Düzenleyici",
+        description:
+          "CSV ve TSV dosyalarını çevrimiçi düzenleyin. Hücreleri değiştirin, satırları sıralayıp filtreleyin, sütunları taşıyın ve dosyanızı özgün biçiminde indirin. Dosyalarınız tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa CSV",
+        description:
+          "Chỉnh sửa tệp CSV và TSV trực tuyến. Sửa ô, sắp xếp và lọc hàng, đổi thứ tự cột rồi tải xuống theo định dạng gốc. Tệp luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CSV 编辑器",
+        description:
+          "在线编辑 CSV 和 TSV 文件。修改单元格、排序和筛选行、调整列顺序，并以原格式下载。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "CSV 編輯器",
+        description:
+          "在線上編輯 CSV 與 TSV 檔案。修改儲存格、排序及篩選資料列、調整欄順序，再以原格式下載。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
+  {
     slug: "csv-excel-to-sqlite",
     category: "developer",
     icon: "database",
@@ -26769,6 +26892,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-form-filler",
+    category: "pdf",
+    icon: "file-pen-line",
+    tags: ["pdf", "form", "fill", "fillable", "acroform", "flatten", "offline"],
+    locales: {
+      ar: {
+        name: "تعبئة نماذج PDF",
+        description:
+          "عبّئ نماذج PDF مباشرةً في متصفحك. نزّل نسخة بحقول قابلة للتعديل، أو سطّح النموذج لتثبيت إجاباتك على الصفحة. تتم المعالجة محليًا دون رفع الملفات.",
+      },
+      de: {
+        name: "PDF-Formular ausfüllen",
+        description:
+          "Fülle PDF-Formulare direkt im Browser aus. Lade eine Kopie mit ausfüllbaren Feldern herunter oder speichere deine Eingaben fest auf der Seite. Ohne Datei-Upload.",
+      },
+      en: {
+        name: "PDF Form Filler",
+        description:
+          "Fill PDF forms directly in your browser. Download a copy with editable fields or flatten the form to fix your answers onto the page. No file uploads.",
+      },
+      es: {
+        name: "Rellenar formularios PDF",
+        description:
+          "Rellena formularios PDF en tu navegador. Descarga una copia con campos editables o aplana el formulario para fijar las respuestas en la página. Sin subir archivos.",
+      },
+      fr: {
+        name: "Remplir un formulaire PDF",
+        description:
+          "Remplissez vos formulaires PDF dans votre navigateur. Téléchargez une copie aux champs modifiables ou aplatissez le formulaire pour intégrer vos réponses à la page. Aucun fichier envoyé.",
+      },
+      he: {
+        name: "מילוי טופסי PDF",
+        description:
+          "מלאו טופסי PDF ישירות בדפדפן. הורידו עותק עם שדות שניתן לערוך, או השטיחו את הטופס כדי לקבע את התשובות בעמוד. העיבוד מקומי, בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "PDF फ़ॉर्म भरें",
+        description:
+          "अपने ब्राउज़र में सीधे PDF फ़ॉर्म भरें। संपादन योग्य फ़ील्ड वाली कॉपी डाउनलोड करें या जवाबों को पेज का हिस्सा बनाने के लिए फ़ॉर्म फ़्लैटन करें। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Isi Formulir PDF",
+        description:
+          "Isi formulir PDF langsung di browser. Unduh PDF yang masih bisa diisi atau ratakan formulir untuk menyatukan jawaban dengan halaman. Tanpa unggah file.",
+      },
+      it: {
+        name: "Compila moduli PDF",
+        description:
+          "Compila moduli PDF nel browser. Scarica una copia con campi modificabili o appiattisci il modulo per fissare le risposte sulla pagina. Nessun caricamento di file.",
+      },
+      ja: {
+        name: "PDFフォーム入力",
+        description:
+          "ブラウザーでPDFフォームに直接入力できます。入力欄を残したPDFをダウンロードするか、フォームをフラット化して入力内容をページに固定できます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "PDF 양식 채우기",
+        description:
+          "브라우저에서 PDF 양식을 직접 작성하세요. 입력란을 유지한 PDF를 다운로드하거나 양식을 병합해 입력 내용을 페이지에 고정할 수 있습니다. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Isi Borang PDF",
+        description:
+          "Isi borang PDF terus dalam pelayar. Muat turun salinan yang masih boleh diisi atau ratakan borang untuk menjadikan jawapan sebahagian daripada halaman. Tiada muat naik fail.",
+      },
+      nl: {
+        name: "PDF-formulier invullen",
+        description:
+          "Vul PDF-formulieren direct in je browser in. Download een kopie met invulbare velden of vlak het formulier af zodat je antwoorden op de pagina vaststaan. Zonder upload.",
+      },
+      no: {
+        name: "Fyll ut PDF-skjema",
+        description:
+          "Fyll ut PDF-skjemaer direkte i nettleseren. Last ned en kopi med utfyllbare felt, eller flat ut skjemaet slik at svarene blir en fast del av siden. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wypełnij formularz PDF",
+        description:
+          "Wypełnij formularz PDF bezpośrednio w przeglądarce. Pobierz kopię z edytowalnymi polami lub spłaszcz formularz, aby utrwalić odpowiedzi na stronie. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Preencher formulários PDF",
+        description:
+          "Preencha formulários PDF no navegador. Baixe uma cópia com campos editáveis ou achate o formulário para incorporar as respostas à página. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Заполнить PDF-форму",
+        description:
+          "Заполняйте PDF-формы прямо в браузере. Скачайте копию с редактируемыми полями или закрепите ответы на странице с помощью сведения полей. Файлы обрабатываются локально.",
+      },
+      sv: {
+        name: "Fyll i PDF-formulär",
+        description:
+          "Fyll i PDF-formulär direkt i webbläsaren. Ladda ner en kopia med ifyllbara fält eller platta till formuläret så att svaren blir en fast del av sidan. Ingen uppladdning.",
+      },
+      th: {
+        name: "กรอกแบบฟอร์ม PDF",
+        description:
+          "กรอกแบบฟอร์ม PDF ได้โดยตรงในเบราว์เซอร์ ดาวน์โหลดไฟล์ที่กรอกต่อได้ หรือฝังคำตอบลงในหน้า PDF ไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Formu Doldurma",
+        description:
+          "PDF formlarını tarayıcınızda doldurun. Düzenlenebilir alanları olan bir kopya indirin veya formu düzleştirerek yanıtları sayfaya sabitleyin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Điền biểu mẫu PDF",
+        description:
+          "Điền biểu mẫu PDF ngay trong trình duyệt. Tải bản PDF có thể điền tiếp hoặc làm phẳng biểu mẫu để cố định nội dung đã điền trên trang. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "PDF 表单填写",
+        description:
+          "直接在浏览器中填写 PDF 表单。下载保留可填写字段的 PDF，或拼合表单，将填写内容固定到页面。文件无需上传。",
+      },
+      "zh-TW": {
+        name: "PDF 表單填寫",
+        description:
+          "直接在瀏覽器中填寫 PDF 表單。下載保留可填寫欄位的 PDF，或將表單平面化，把填寫內容固定在頁面上。不需上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "pdf-image-extractor",
     category: "pdf",
     icon: "file-image",
@@ -27138,6 +27384,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-metadata-remover",
+    category: "pdf",
+    icon: "eraser",
+    tags: [
+      "pdf",
+      "metadata",
+      "remove",
+      "author",
+      "document properties",
+      "xmp",
+      "privacy",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة البيانات الوصفية من ملف PDF",
+        description:
+          "احذف اسم المؤلف والعنوان والكلمات المفتاحية والتواريخ وبيانات XMP من ملف PDF. نزّل نسخة جديدة بعد معالجة الملف داخل متصفحك.",
+      },
+      de: {
+        name: "PDF-Metadaten entfernen",
+        description:
+          "Entferne Autor, Titel, Schlüsselwörter, Datumsangaben und XMP-Metadaten aus einer PDF. Lade die bereinigte Kopie herunter, ganz ohne Upload.",
+      },
+      en: {
+        name: "Remove PDF Metadata",
+        description:
+          "Remove author, title, keywords, dates, and XMP metadata from a PDF online. Download a new copy. Your file stays in your browser.",
+      },
+      es: {
+        name: "Eliminar metadatos de un PDF",
+        description:
+          "Elimina el autor, el título, las palabras clave, las fechas y los metadatos XMP de un PDF en línea. Descarga una copia sin subir el archivo.",
+      },
+      fr: {
+        name: "Supprimer les métadonnées d’un PDF",
+        description:
+          "Supprimez l’auteur, le titre, les mots-clés, les dates et les métadonnées XMP d’un PDF en ligne. Téléchargez une copie sans envoyer votre fichier.",
+      },
+      he: {
+        name: "הסרת מטא-נתונים מקובץ PDF",
+        description:
+          "הסירו מקובץ PDF את שם המחבר, הכותרת, מילות המפתח, התאריכים ונתוני XMP. הקובץ מעובד בדפדפן ועותק חדש זמין להורדה.",
+      },
+      hi: {
+        name: "PDF का मेटाडेटा हटाएँ",
+        description:
+          "PDF से लेखक का नाम, शीर्षक, कीवर्ड, तारीखें और XMP मेटाडेटा हटाएँ। फ़ाइल आपके ब्राउज़र में ही प्रोसेस होती है और आप नई कॉपी डाउनलोड कर सकते हैं।",
+      },
+      id: {
+        name: "Hapus Metadata PDF",
+        description:
+          "Hapus nama penulis, judul, kata kunci, tanggal, dan metadata XMP dari PDF. Unduh salinan baru setelah file diproses di browser Anda.",
+      },
+      it: {
+        name: "Rimuovere i metadati da un PDF",
+        description:
+          "Rimuovi autore, titolo, parole chiave, date e metadati XMP da un PDF online. Scarica una nuova copia senza inviare il file.",
+      },
+      ja: {
+        name: "PDF のメタデータを削除",
+        description:
+          "PDF の作成者、タイトル、キーワード、作成・更新日時、XMP メタデータをオンラインで削除できます。ファイルをアップロードせず、ブラウザ内で処理した PDF を別のファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 메타데이터 제거",
+        description:
+          "PDF에서 작성자, 제목, 키워드, 날짜와 XMP 메타데이터를 제거하고 새 사본을 다운로드하세요. 파일은 브라우저에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Buang Metadata PDF",
+        description:
+          "Buang nama pengarang, tajuk, kata kunci, tarikh dan metadata XMP daripada PDF. Muat turun salinan baharu selepas fail diproses dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-metadata verwijderen",
+        description:
+          "Verwijder online de auteur, titel, trefwoorden, datums en XMP-metadata uit een PDF. Download een nieuwe kopie zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Fjern PDF-metadata",
+        description:
+          "Fjern forfatter, tittel, nøkkelord, datoer og XMP-metadata fra en PDF. Last ned en ny kopi i nettleseren uten å laste opp filen.",
+      },
+      pl: {
+        name: "Usuń metadane PDF",
+        description:
+          "Usuń z PDF autora, tytuł, słowa kluczowe, daty i metadane XMP. Pobierz nową kopię. Plik zostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover metadados de PDF",
+        description:
+          "Remova o autor, o título, as palavras-chave, as datas e os metadados XMP de um PDF online. Baixe uma nova cópia sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Удаление метаданных PDF",
+        description:
+          "Удалите автора, название, ключевые слова, даты и метаданные XMP из PDF. Скачайте новую копию. Файл обрабатывается в браузере.",
+      },
+      sv: {
+        name: "Ta bort PDF-metadata",
+        description:
+          "Ta bort författare, titel, nyckelord, datum och XMP-metadata från en PDF. Ladda ned en ny kopia direkt i webbläsaren utan att ladda upp filen.",
+      },
+      th: {
+        name: "ลบเมตาดาตาของ PDF",
+        description:
+          "ลบผู้เขียน ชื่อเรื่อง คำสำคัญ วันที่ และเมตาดาตา XMP จาก PDF แล้วดาวน์โหลดสำเนาใหม่ ไฟล์ยังคงอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "PDF Meta Verilerini Kaldır",
+        description:
+          "PDF'den yazar adı, başlık, anahtar kelimeler, tarihler ve XMP meta verilerini kaldırın. Dosyayı yüklemeden yeni bir kopya indirin.",
+      },
+      vi: {
+        name: "Xóa siêu dữ liệu PDF",
+        description:
+          "Xóa tác giả, tiêu đề, từ khóa, ngày tháng và siêu dữ liệu XMP khỏi PDF rồi tải bản sao mới. Tệp của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "删除 PDF 元数据",
+        description:
+          "在线删除 PDF 中的作者、标题、关键词、日期和 XMP 元数据，并下载新副本。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 中繼資料",
+        description:
+          "線上移除 PDF 的作者、標題、關鍵字、日期和 XMP 中繼資料，並下載新的副本。檔案全程在瀏覽器中處理。",
+      },
+    },
+  },
+  {
     slug: "pdf-ocr",
     category: "pdf",
     icon: "scan-text",
@@ -27503,6 +27881,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "PDF 頁面整理器",
         description:
           "拖曳 PDF 頁面以重新排序、旋轉掃描頁面，或移除不需要的頁面，再下載新的 PDF。在瀏覽器中免費處理，保護你的隱私。",
+      },
+    },
+  },
+  {
+    slug: "pdf-redactor",
+    category: "pdf",
+    icon: "eye-off",
+    tags: [
+      "pdf",
+      "redact",
+      "black out",
+      "privacy",
+      "sensitive information",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حجب محتوى PDF",
+        description:
+          "احجب المعلومات الحساسة في ملفات PDF عبر الإنترنت. ارسم مستطيلات سوداء فوق الأسماء أو العناوين أو مبالغ العقود أو التوقيعات، ونزّل نسخة أُزيل منها المحتوى المحدد نهائيًا. تتم المعالجة بالكامل في متصفحك.",
+      },
+      de: {
+        name: "PDF schwärzen",
+        description:
+          "Schwärze PDF-Dateien online. Ziehe schwarze Rechtecke über Namen, Adressen, Vertragsbeträge oder Unterschriften und lade eine PDF-Datei herunter, aus der die markierten Inhalte dauerhaft entfernt wurden. Die Verarbeitung erfolgt in deinem Browser.",
+      },
+      en: {
+        name: "PDF Redactor",
+        description:
+          "Redact PDFs online. Draw black boxes over names, addresses, contract amounts, or signatures and download a PDF with the selected content permanently removed. All processing stays in your browser.",
+      },
+      es: {
+        name: "Censurar PDF",
+        description:
+          "Censura un PDF en línea. Traza recuadros negros sobre nombres, direcciones, importes de contratos o firmas y descarga una copia con esos datos eliminados de forma permanente. Todo se procesa en tu navegador.",
+      },
+      fr: {
+        name: "Noircir un PDF",
+        description:
+          "Noircissez un PDF en ligne. Tracez des rectangles sur les noms, adresses, montants des contrats ou signatures à supprimer définitivement, puis téléchargez une copie. Le fichier est traité dans votre navigateur.",
+      },
+      he: {
+        name: "השחרת PDF",
+        description:
+          "השחירו מידע רגיש בקובצי PDF באופן מקוון. סמנו שמות, כתובות, סכומים בחוזים או חתימות במלבנים שחורים והורידו עותק שממנו הוסר המידע שסימנתם לצמיתות. כל העיבוד נעשה בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF से संवेदनशील जानकारी हटाएँ",
+        description:
+          "PDF से संवेदनशील जानकारी ऑनलाइन हटाएँ। नाम, पते, अनुबंध की रकम या हस्ताक्षर पर काले बॉक्स बनाएँ। चुनी हुई जानकारी हमेशा के लिए हटाकर PDF डाउनलोड करें। पूरी प्रोसेसिंग आपके ब्राउज़र में होती है।",
+      },
+      id: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan bagian sensitif PDF secara online. Tandai nama, alamat, nilai kontrak, atau tanda tangan dengan kotak hitam, lalu unduh PDF dengan konten yang ditandai terhapus secara permanen. Semua proses berlangsung di browser Anda.",
+      },
+      it: {
+        name: "Oscurare PDF",
+        description:
+          "Oscura un PDF online. Traccia rettangoli neri su nomi, indirizzi, importi contrattuali o firme e scarica un PDF da cui i contenuti selezionati sono stati rimossi definitivamente. Tutto avviene nel browser.",
+      },
+      ja: {
+        name: "PDFの墨消し",
+        description:
+          "PDFをオンラインで墨消し。氏名、住所、契約金額、署名などをドラッグで囲み、黒く塗りつぶした範囲の情報を完全に削除したPDFをダウンロードできます。処理はすべてブラウザー内で行われます。",
+      },
+      ko: {
+        name: "PDF 민감 정보 가리기",
+        description:
+          "온라인에서 PDF의 민감 정보를 가리세요. 이름, 주소, 계약 금액, 서명 등에 검은 상자를 그려 선택한 내용을 영구 삭제한 PDF를 다운로드합니다. 모든 처리는 브라우저에서 이루어집니다.",
+      },
+      ms: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan maklumat dalam PDF secara dalam talian. Lukis kotak hitam pada nama, alamat, jumlah kontrak atau tandatangan dan muat turun PDF dengan kandungan yang dipilih dibuang secara kekal. Semua pemprosesan dilakukan dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF zwartlakken",
+        description:
+          "Lak online gegevens in PDF-bestanden zwart. Teken zwarte vlakken over namen, adressen, contractbedragen of handtekeningen en download een PDF waarin de geselecteerde inhoud definitief is verwijderd. De verwerking gebeurt volledig in uw browser.",
+      },
+      no: {
+        name: "Sladd PDF",
+        description:
+          "Sladd PDF-filer på nett. Tegn svarte bokser over navn, adresser, kontraktsbeløp eller signaturer, og last ned en PDF der det markerte innholdet er fjernet permanent. Alt behandles i nettleseren din.",
+      },
+      pl: {
+        name: "Zaczernianie PDF",
+        description:
+          "Zaczerniaj pliki PDF online. Zakryj imiona i nazwiska, adresy, kwoty z umów lub podpisy czarnymi prostokątami i pobierz PDF z trwale usuniętymi danymi. Całe przetwarzanie odbywa się w przeglądarce.",
+      },
+      pt: {
+        name: "Censurar PDF",
+        description:
+          "Censure PDFs online. Desenhe retângulos pretos sobre nomes, endereços, valores de contratos ou assinaturas e baixe um PDF com o conteúdo selecionado removido de forma permanente. Todo o processamento ocorre no navegador.",
+      },
+      ru: {
+        name: "Зачернение данных в PDF",
+        description:
+          "Зачерните данные в PDF онлайн. Отметьте имена, адреса, суммы по договорам или подписи чёрными прямоугольниками и скачайте PDF, из которого эти данные удалены безвозвратно. Файл обрабатывается в вашем браузере.",
+      },
+      sv: {
+        name: "Maskera PDF",
+        description:
+          "Maskera PDF-filer online. Rita svarta rutor över namn, adresser, avtalsbelopp eller underskrifter och ladda ner en PDF där det markerade innehållet har tagits bort permanent. All bearbetning sker i din webbläsare.",
+      },
+      th: {
+        name: "ปกปิดข้อมูลใน PDF",
+        description:
+          "ปกปิดข้อมูลใน PDF ออนไลน์ ลากกรอบดำทับชื่อ ที่อยู่ ยอดเงินในสัญญา หรือลายเซ็น แล้วดาวน์โหลด PDF ที่ลบเนื้อหาที่เลือกออกอย่างถาวร ไฟล์จะประมวลผลในเบราว์เซอร์ของคุณตลอดทั้งขั้นตอน",
+      },
+      tr: {
+        name: "PDF Karartma",
+        description:
+          "PDF dosyalarını çevrimiçi karartın. Adların, adreslerin, sözleşme tutarlarının veya imzaların üzerine siyah kutular çizin. Seçili bilgilerin kalıcı olarak silindiği PDF kopyasını indirin. Tüm işlemler tarayıcınızda gerçekleşir.",
+      },
+      vi: {
+        name: "Che thông tin trong PDF",
+        description:
+          "Che thông tin trong PDF trực tuyến. Vẽ khung đen lên tên, địa chỉ, số tiền trong hợp đồng hoặc chữ ký rồi tải bản PDF đã xóa vĩnh viễn các nội dung đã chọn. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 脱敏",
+        description:
+          "在线为 PDF 脱敏。框选并涂黑姓名、地址、合同金额或签名，下载永久移除了所选内容的 PDF。文件全程在浏览器本地处理。",
+      },
+      "zh-TW": {
+        name: "PDF 內容遮蔽",
+        description:
+          "線上遮蔽 PDF 內容。框選姓名、地址、合約金額或簽名，下載永久移除所選內容的 PDF。檔案全程在瀏覽器中處理。",
       },
     },
   },
@@ -51394,6 +51902,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "csv-editor": {
+    slug: "csv-editor",
+    category: "document",
+    icon: "table-2",
+    tags: ["csv", "tsv", "spreadsheet", "table", "editor", "sort", "filter"],
+    locales: {
+      ar: {
+        name: "محرّر CSV",
+        description:
+          "حرّر ملفات CSV وTSV عبر الإنترنت. عدّل الخلايا، ورتّب الصفوف وصفِّها، وأعد ترتيب الأعمدة، ثم نزّل الملف بصيغته الأصلية. تبقى ملفاتك في متصفحك.",
+      },
+      de: {
+        name: "CSV-Editor",
+        description:
+          "CSV und TSV online bearbeiten. Zellen ändern, Zeilen sortieren und filtern, Spalten verschieben und im Originalformat speichern. Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "CSV Editor",
+        description:
+          "Edit CSV and TSV files online. Change cells, sort and filter rows, reorder columns, and download in the original format. Your files stay in your browser.",
+      },
+      es: {
+        name: "Editor de CSV",
+        description:
+          "Edita archivos CSV y TSV en línea. Cambia celdas, ordena y filtra filas, reordena columnas y descarga el archivo en su formato original. Todo en tu navegador.",
+      },
+      fr: {
+        name: "Éditeur CSV",
+        description:
+          "Modifiez vos fichiers CSV et TSV en ligne. Éditez les cellules, triez et filtrez les lignes, réorganisez les colonnes et téléchargez le résultat au format d’origine. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "עורך CSV",
+        description:
+          "עריכת קובצי CSV ו-TSV באינטרנט. אפשר לערוך תאים, למיין ולסנן שורות, לשנות את סדר העמודות ולהוריד את הקובץ בפורמט המקורי. הקבצים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "CSV संपादक",
+        description:
+          "CSV और TSV फ़ाइलें ऑनलाइन संपादित करें। सेल बदलें, पंक्तियाँ क्रमबद्ध और फ़िल्टर करें, कॉलम का क्रम बदलें और फ़ाइल मूल फ़ॉर्मैट में डाउनलोड करें। आपकी फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Editor CSV",
+        description:
+          "Edit file CSV dan TSV secara online. Ubah isi sel, urutkan dan filter baris, atur ulang kolom, lalu unduh dalam format asli. File tetap di browser Anda.",
+      },
+      it: {
+        name: "Editor CSV",
+        description:
+          "Modifica file CSV e TSV online. Aggiorna le celle, ordina e filtra le righe, sposta le colonne e scarica nel formato originale. I file restano nel browser.",
+      },
+      ja: {
+        name: "CSVエディタ",
+        description:
+          "CSV・TSVファイルをブラウザーで編集できます。セルの編集、行の並べ替えや絞り込み、列の移動ができ、元の形式でダウンロードできます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "CSV 편집기",
+        description:
+          "온라인에서 CSV와 TSV 파일을 편집하세요. 셀을 수정하고, 행을 정렬하거나 필터링하고, 열 순서를 바꿀 수 있습니다. 파일은 브라우저에서 처리되며 원래 형식으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting CSV",
+        description:
+          "Sunting fail CSV dan TSV dalam talian. Ubah kandungan sel, isih dan tapis baris, tukar susunan lajur, kemudian muat turun dalam format asal. Fail anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "CSV-editor",
+        description:
+          "Bewerk CSV- en TSV-bestanden online. Pas cellen aan, sorteer en filter rijen, verplaats kolommen en download in het oorspronkelijke formaat. Je bestanden blijven in je browser.",
+      },
+      no: {
+        name: "CSV-redigerer",
+        description:
+          "Rediger CSV- og TSV-filer på nett. Endre celler, sorter og filtrer rader, flytt kolonner og last ned i originalformatet. Filene blir i nettleseren.",
+      },
+      pl: {
+        name: "Edytor CSV",
+        description:
+          "Edytuj pliki CSV i TSV online. Zmieniaj komórki, sortuj i filtruj wiersze, przestawiaj kolumny i pobieraj pliki w oryginalnym formacie. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Editor de CSV",
+        description:
+          "Edite arquivos CSV e TSV online. Altere células, ordene e filtre linhas, reorganize colunas e baixe no formato original. Seus arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Редактор CSV",
+        description:
+          "Редактируйте CSV и TSV онлайн. Меняйте ячейки, сортируйте и фильтруйте строки, переставляйте столбцы и скачивайте файлы в исходном формате. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "CSV-redigerare",
+        description:
+          "Redigera CSV- och TSV-filer online. Ändra celler, sortera och filtrera rader, flytta kolumner och ladda ner i originalformatet. Filerna stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแก้ไข CSV",
+        description:
+          "แก้ไขไฟล์ CSV และ TSV ออนไลน์ เปลี่ยนค่าในเซลล์ เรียงและกรองแถว ย้ายคอลัมน์ แล้วดาวน์โหลดในรูปแบบเดิม ไฟล์ของคุณอยู่ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "CSV Düzenleyici",
+        description:
+          "CSV ve TSV dosyalarını çevrimiçi düzenleyin. Hücreleri değiştirin, satırları sıralayıp filtreleyin, sütunları taşıyın ve dosyanızı özgün biçiminde indirin. Dosyalarınız tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa CSV",
+        description:
+          "Chỉnh sửa tệp CSV và TSV trực tuyến. Sửa ô, sắp xếp và lọc hàng, đổi thứ tự cột rồi tải xuống theo định dạng gốc. Tệp luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CSV 编辑器",
+        description:
+          "在线编辑 CSV 和 TSV 文件。修改单元格、排序和筛选行、调整列顺序，并以原格式下载。文件始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "CSV 編輯器",
+        description:
+          "在線上編輯 CSV 與 TSV 檔案。修改儲存格、排序及篩選資料列、調整欄順序，再以原格式下載。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
   "csv-excel-to-sqlite": {
     slug: "csv-excel-to-sqlite",
     category: "developer",
@@ -69322,6 +69953,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "pdf-form-filler": {
+    slug: "pdf-form-filler",
+    category: "pdf",
+    icon: "file-pen-line",
+    tags: ["pdf", "form", "fill", "fillable", "acroform", "flatten", "offline"],
+    locales: {
+      ar: {
+        name: "تعبئة نماذج PDF",
+        description:
+          "عبّئ نماذج PDF مباشرةً في متصفحك. نزّل نسخة بحقول قابلة للتعديل، أو سطّح النموذج لتثبيت إجاباتك على الصفحة. تتم المعالجة محليًا دون رفع الملفات.",
+      },
+      de: {
+        name: "PDF-Formular ausfüllen",
+        description:
+          "Fülle PDF-Formulare direkt im Browser aus. Lade eine Kopie mit ausfüllbaren Feldern herunter oder speichere deine Eingaben fest auf der Seite. Ohne Datei-Upload.",
+      },
+      en: {
+        name: "PDF Form Filler",
+        description:
+          "Fill PDF forms directly in your browser. Download a copy with editable fields or flatten the form to fix your answers onto the page. No file uploads.",
+      },
+      es: {
+        name: "Rellenar formularios PDF",
+        description:
+          "Rellena formularios PDF en tu navegador. Descarga una copia con campos editables o aplana el formulario para fijar las respuestas en la página. Sin subir archivos.",
+      },
+      fr: {
+        name: "Remplir un formulaire PDF",
+        description:
+          "Remplissez vos formulaires PDF dans votre navigateur. Téléchargez une copie aux champs modifiables ou aplatissez le formulaire pour intégrer vos réponses à la page. Aucun fichier envoyé.",
+      },
+      he: {
+        name: "מילוי טופסי PDF",
+        description:
+          "מלאו טופסי PDF ישירות בדפדפן. הורידו עותק עם שדות שניתן לערוך, או השטיחו את הטופס כדי לקבע את התשובות בעמוד. העיבוד מקומי, בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "PDF फ़ॉर्म भरें",
+        description:
+          "अपने ब्राउज़र में सीधे PDF फ़ॉर्म भरें। संपादन योग्य फ़ील्ड वाली कॉपी डाउनलोड करें या जवाबों को पेज का हिस्सा बनाने के लिए फ़ॉर्म फ़्लैटन करें। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Isi Formulir PDF",
+        description:
+          "Isi formulir PDF langsung di browser. Unduh PDF yang masih bisa diisi atau ratakan formulir untuk menyatukan jawaban dengan halaman. Tanpa unggah file.",
+      },
+      it: {
+        name: "Compila moduli PDF",
+        description:
+          "Compila moduli PDF nel browser. Scarica una copia con campi modificabili o appiattisci il modulo per fissare le risposte sulla pagina. Nessun caricamento di file.",
+      },
+      ja: {
+        name: "PDFフォーム入力",
+        description:
+          "ブラウザーでPDFフォームに直接入力できます。入力欄を残したPDFをダウンロードするか、フォームをフラット化して入力内容をページに固定できます。ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "PDF 양식 채우기",
+        description:
+          "브라우저에서 PDF 양식을 직접 작성하세요. 입력란을 유지한 PDF를 다운로드하거나 양식을 병합해 입력 내용을 페이지에 고정할 수 있습니다. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Isi Borang PDF",
+        description:
+          "Isi borang PDF terus dalam pelayar. Muat turun salinan yang masih boleh diisi atau ratakan borang untuk menjadikan jawapan sebahagian daripada halaman. Tiada muat naik fail.",
+      },
+      nl: {
+        name: "PDF-formulier invullen",
+        description:
+          "Vul PDF-formulieren direct in je browser in. Download een kopie met invulbare velden of vlak het formulier af zodat je antwoorden op de pagina vaststaan. Zonder upload.",
+      },
+      no: {
+        name: "Fyll ut PDF-skjema",
+        description:
+          "Fyll ut PDF-skjemaer direkte i nettleseren. Last ned en kopi med utfyllbare felt, eller flat ut skjemaet slik at svarene blir en fast del av siden. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wypełnij formularz PDF",
+        description:
+          "Wypełnij formularz PDF bezpośrednio w przeglądarce. Pobierz kopię z edytowalnymi polami lub spłaszcz formularz, aby utrwalić odpowiedzi na stronie. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Preencher formulários PDF",
+        description:
+          "Preencha formulários PDF no navegador. Baixe uma cópia com campos editáveis ou achate o formulário para incorporar as respostas à página. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Заполнить PDF-форму",
+        description:
+          "Заполняйте PDF-формы прямо в браузере. Скачайте копию с редактируемыми полями или закрепите ответы на странице с помощью сведения полей. Файлы обрабатываются локально.",
+      },
+      sv: {
+        name: "Fyll i PDF-formulär",
+        description:
+          "Fyll i PDF-formulär direkt i webbläsaren. Ladda ner en kopia med ifyllbara fält eller platta till formuläret så att svaren blir en fast del av sidan. Ingen uppladdning.",
+      },
+      th: {
+        name: "กรอกแบบฟอร์ม PDF",
+        description:
+          "กรอกแบบฟอร์ม PDF ได้โดยตรงในเบราว์เซอร์ ดาวน์โหลดไฟล์ที่กรอกต่อได้ หรือฝังคำตอบลงในหน้า PDF ไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Formu Doldurma",
+        description:
+          "PDF formlarını tarayıcınızda doldurun. Düzenlenebilir alanları olan bir kopya indirin veya formu düzleştirerek yanıtları sayfaya sabitleyin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Điền biểu mẫu PDF",
+        description:
+          "Điền biểu mẫu PDF ngay trong trình duyệt. Tải bản PDF có thể điền tiếp hoặc làm phẳng biểu mẫu để cố định nội dung đã điền trên trang. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "PDF 表单填写",
+        description:
+          "直接在浏览器中填写 PDF 表单。下载保留可填写字段的 PDF，或拼合表单，将填写内容固定到页面。文件无需上传。",
+      },
+      "zh-TW": {
+        name: "PDF 表單填寫",
+        description:
+          "直接在瀏覽器中填寫 PDF 表單。下載保留可填寫欄位的 PDF，或將表單平面化，把填寫內容固定在頁面上。不需上傳檔案。",
+      },
+    },
+  },
   "pdf-image-extractor": {
     slug: "pdf-image-extractor",
     category: "pdf",
@@ -69691,6 +70445,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "pdf-metadata-remover": {
+    slug: "pdf-metadata-remover",
+    category: "pdf",
+    icon: "eraser",
+    tags: [
+      "pdf",
+      "metadata",
+      "remove",
+      "author",
+      "document properties",
+      "xmp",
+      "privacy",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة البيانات الوصفية من ملف PDF",
+        description:
+          "احذف اسم المؤلف والعنوان والكلمات المفتاحية والتواريخ وبيانات XMP من ملف PDF. نزّل نسخة جديدة بعد معالجة الملف داخل متصفحك.",
+      },
+      de: {
+        name: "PDF-Metadaten entfernen",
+        description:
+          "Entferne Autor, Titel, Schlüsselwörter, Datumsangaben und XMP-Metadaten aus einer PDF. Lade die bereinigte Kopie herunter, ganz ohne Upload.",
+      },
+      en: {
+        name: "Remove PDF Metadata",
+        description:
+          "Remove author, title, keywords, dates, and XMP metadata from a PDF online. Download a new copy. Your file stays in your browser.",
+      },
+      es: {
+        name: "Eliminar metadatos de un PDF",
+        description:
+          "Elimina el autor, el título, las palabras clave, las fechas y los metadatos XMP de un PDF en línea. Descarga una copia sin subir el archivo.",
+      },
+      fr: {
+        name: "Supprimer les métadonnées d’un PDF",
+        description:
+          "Supprimez l’auteur, le titre, les mots-clés, les dates et les métadonnées XMP d’un PDF en ligne. Téléchargez une copie sans envoyer votre fichier.",
+      },
+      he: {
+        name: "הסרת מטא-נתונים מקובץ PDF",
+        description:
+          "הסירו מקובץ PDF את שם המחבר, הכותרת, מילות המפתח, התאריכים ונתוני XMP. הקובץ מעובד בדפדפן ועותק חדש זמין להורדה.",
+      },
+      hi: {
+        name: "PDF का मेटाडेटा हटाएँ",
+        description:
+          "PDF से लेखक का नाम, शीर्षक, कीवर्ड, तारीखें और XMP मेटाडेटा हटाएँ। फ़ाइल आपके ब्राउज़र में ही प्रोसेस होती है और आप नई कॉपी डाउनलोड कर सकते हैं।",
+      },
+      id: {
+        name: "Hapus Metadata PDF",
+        description:
+          "Hapus nama penulis, judul, kata kunci, tanggal, dan metadata XMP dari PDF. Unduh salinan baru setelah file diproses di browser Anda.",
+      },
+      it: {
+        name: "Rimuovere i metadati da un PDF",
+        description:
+          "Rimuovi autore, titolo, parole chiave, date e metadati XMP da un PDF online. Scarica una nuova copia senza inviare il file.",
+      },
+      ja: {
+        name: "PDF のメタデータを削除",
+        description:
+          "PDF の作成者、タイトル、キーワード、作成・更新日時、XMP メタデータをオンラインで削除できます。ファイルをアップロードせず、ブラウザ内で処理した PDF を別のファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 메타데이터 제거",
+        description:
+          "PDF에서 작성자, 제목, 키워드, 날짜와 XMP 메타데이터를 제거하고 새 사본을 다운로드하세요. 파일은 브라우저에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Buang Metadata PDF",
+        description:
+          "Buang nama pengarang, tajuk, kata kunci, tarikh dan metadata XMP daripada PDF. Muat turun salinan baharu selepas fail diproses dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-metadata verwijderen",
+        description:
+          "Verwijder online de auteur, titel, trefwoorden, datums en XMP-metadata uit een PDF. Download een nieuwe kopie zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Fjern PDF-metadata",
+        description:
+          "Fjern forfatter, tittel, nøkkelord, datoer og XMP-metadata fra en PDF. Last ned en ny kopi i nettleseren uten å laste opp filen.",
+      },
+      pl: {
+        name: "Usuń metadane PDF",
+        description:
+          "Usuń z PDF autora, tytuł, słowa kluczowe, daty i metadane XMP. Pobierz nową kopię. Plik zostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover metadados de PDF",
+        description:
+          "Remova o autor, o título, as palavras-chave, as datas e os metadados XMP de um PDF online. Baixe uma nova cópia sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Удаление метаданных PDF",
+        description:
+          "Удалите автора, название, ключевые слова, даты и метаданные XMP из PDF. Скачайте новую копию. Файл обрабатывается в браузере.",
+      },
+      sv: {
+        name: "Ta bort PDF-metadata",
+        description:
+          "Ta bort författare, titel, nyckelord, datum och XMP-metadata från en PDF. Ladda ned en ny kopia direkt i webbläsaren utan att ladda upp filen.",
+      },
+      th: {
+        name: "ลบเมตาดาตาของ PDF",
+        description:
+          "ลบผู้เขียน ชื่อเรื่อง คำสำคัญ วันที่ และเมตาดาตา XMP จาก PDF แล้วดาวน์โหลดสำเนาใหม่ ไฟล์ยังคงอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "PDF Meta Verilerini Kaldır",
+        description:
+          "PDF'den yazar adı, başlık, anahtar kelimeler, tarihler ve XMP meta verilerini kaldırın. Dosyayı yüklemeden yeni bir kopya indirin.",
+      },
+      vi: {
+        name: "Xóa siêu dữ liệu PDF",
+        description:
+          "Xóa tác giả, tiêu đề, từ khóa, ngày tháng và siêu dữ liệu XMP khỏi PDF rồi tải bản sao mới. Tệp của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "删除 PDF 元数据",
+        description:
+          "在线删除 PDF 中的作者、标题、关键词、日期和 XMP 元数据，并下载新副本。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 中繼資料",
+        description:
+          "線上移除 PDF 的作者、標題、關鍵字、日期和 XMP 中繼資料，並下載新的副本。檔案全程在瀏覽器中處理。",
+      },
+    },
+  },
   "pdf-ocr": {
     slug: "pdf-ocr",
     category: "pdf",
@@ -70057,6 +70943,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 頁面整理器",
         description:
           "拖曳 PDF 頁面以重新排序、旋轉掃描頁面，或移除不需要的頁面，再下載新的 PDF。在瀏覽器中免費處理，保護你的隱私。",
+      },
+    },
+  },
+  "pdf-redactor": {
+    slug: "pdf-redactor",
+    category: "pdf",
+    icon: "eye-off",
+    tags: [
+      "pdf",
+      "redact",
+      "black out",
+      "privacy",
+      "sensitive information",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حجب محتوى PDF",
+        description:
+          "احجب المعلومات الحساسة في ملفات PDF عبر الإنترنت. ارسم مستطيلات سوداء فوق الأسماء أو العناوين أو مبالغ العقود أو التوقيعات، ونزّل نسخة أُزيل منها المحتوى المحدد نهائيًا. تتم المعالجة بالكامل في متصفحك.",
+      },
+      de: {
+        name: "PDF schwärzen",
+        description:
+          "Schwärze PDF-Dateien online. Ziehe schwarze Rechtecke über Namen, Adressen, Vertragsbeträge oder Unterschriften und lade eine PDF-Datei herunter, aus der die markierten Inhalte dauerhaft entfernt wurden. Die Verarbeitung erfolgt in deinem Browser.",
+      },
+      en: {
+        name: "PDF Redactor",
+        description:
+          "Redact PDFs online. Draw black boxes over names, addresses, contract amounts, or signatures and download a PDF with the selected content permanently removed. All processing stays in your browser.",
+      },
+      es: {
+        name: "Censurar PDF",
+        description:
+          "Censura un PDF en línea. Traza recuadros negros sobre nombres, direcciones, importes de contratos o firmas y descarga una copia con esos datos eliminados de forma permanente. Todo se procesa en tu navegador.",
+      },
+      fr: {
+        name: "Noircir un PDF",
+        description:
+          "Noircissez un PDF en ligne. Tracez des rectangles sur les noms, adresses, montants des contrats ou signatures à supprimer définitivement, puis téléchargez une copie. Le fichier est traité dans votre navigateur.",
+      },
+      he: {
+        name: "השחרת PDF",
+        description:
+          "השחירו מידע רגיש בקובצי PDF באופן מקוון. סמנו שמות, כתובות, סכומים בחוזים או חתימות במלבנים שחורים והורידו עותק שממנו הוסר המידע שסימנתם לצמיתות. כל העיבוד נעשה בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF से संवेदनशील जानकारी हटाएँ",
+        description:
+          "PDF से संवेदनशील जानकारी ऑनलाइन हटाएँ। नाम, पते, अनुबंध की रकम या हस्ताक्षर पर काले बॉक्स बनाएँ। चुनी हुई जानकारी हमेशा के लिए हटाकर PDF डाउनलोड करें। पूरी प्रोसेसिंग आपके ब्राउज़र में होती है।",
+      },
+      id: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan bagian sensitif PDF secara online. Tandai nama, alamat, nilai kontrak, atau tanda tangan dengan kotak hitam, lalu unduh PDF dengan konten yang ditandai terhapus secara permanen. Semua proses berlangsung di browser Anda.",
+      },
+      it: {
+        name: "Oscurare PDF",
+        description:
+          "Oscura un PDF online. Traccia rettangoli neri su nomi, indirizzi, importi contrattuali o firme e scarica un PDF da cui i contenuti selezionati sono stati rimossi definitivamente. Tutto avviene nel browser.",
+      },
+      ja: {
+        name: "PDFの墨消し",
+        description:
+          "PDFをオンラインで墨消し。氏名、住所、契約金額、署名などをドラッグで囲み、黒く塗りつぶした範囲の情報を完全に削除したPDFをダウンロードできます。処理はすべてブラウザー内で行われます。",
+      },
+      ko: {
+        name: "PDF 민감 정보 가리기",
+        description:
+          "온라인에서 PDF의 민감 정보를 가리세요. 이름, 주소, 계약 금액, 서명 등에 검은 상자를 그려 선택한 내용을 영구 삭제한 PDF를 다운로드합니다. 모든 처리는 브라우저에서 이루어집니다.",
+      },
+      ms: {
+        name: "Hitamkan PDF",
+        description:
+          "Hitamkan maklumat dalam PDF secara dalam talian. Lukis kotak hitam pada nama, alamat, jumlah kontrak atau tandatangan dan muat turun PDF dengan kandungan yang dipilih dibuang secara kekal. Semua pemprosesan dilakukan dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF zwartlakken",
+        description:
+          "Lak online gegevens in PDF-bestanden zwart. Teken zwarte vlakken over namen, adressen, contractbedragen of handtekeningen en download een PDF waarin de geselecteerde inhoud definitief is verwijderd. De verwerking gebeurt volledig in uw browser.",
+      },
+      no: {
+        name: "Sladd PDF",
+        description:
+          "Sladd PDF-filer på nett. Tegn svarte bokser over navn, adresser, kontraktsbeløp eller signaturer, og last ned en PDF der det markerte innholdet er fjernet permanent. Alt behandles i nettleseren din.",
+      },
+      pl: {
+        name: "Zaczernianie PDF",
+        description:
+          "Zaczerniaj pliki PDF online. Zakryj imiona i nazwiska, adresy, kwoty z umów lub podpisy czarnymi prostokątami i pobierz PDF z trwale usuniętymi danymi. Całe przetwarzanie odbywa się w przeglądarce.",
+      },
+      pt: {
+        name: "Censurar PDF",
+        description:
+          "Censure PDFs online. Desenhe retângulos pretos sobre nomes, endereços, valores de contratos ou assinaturas e baixe um PDF com o conteúdo selecionado removido de forma permanente. Todo o processamento ocorre no navegador.",
+      },
+      ru: {
+        name: "Зачернение данных в PDF",
+        description:
+          "Зачерните данные в PDF онлайн. Отметьте имена, адреса, суммы по договорам или подписи чёрными прямоугольниками и скачайте PDF, из которого эти данные удалены безвозвратно. Файл обрабатывается в вашем браузере.",
+      },
+      sv: {
+        name: "Maskera PDF",
+        description:
+          "Maskera PDF-filer online. Rita svarta rutor över namn, adresser, avtalsbelopp eller underskrifter och ladda ner en PDF där det markerade innehållet har tagits bort permanent. All bearbetning sker i din webbläsare.",
+      },
+      th: {
+        name: "ปกปิดข้อมูลใน PDF",
+        description:
+          "ปกปิดข้อมูลใน PDF ออนไลน์ ลากกรอบดำทับชื่อ ที่อยู่ ยอดเงินในสัญญา หรือลายเซ็น แล้วดาวน์โหลด PDF ที่ลบเนื้อหาที่เลือกออกอย่างถาวร ไฟล์จะประมวลผลในเบราว์เซอร์ของคุณตลอดทั้งขั้นตอน",
+      },
+      tr: {
+        name: "PDF Karartma",
+        description:
+          "PDF dosyalarını çevrimiçi karartın. Adların, adreslerin, sözleşme tutarlarının veya imzaların üzerine siyah kutular çizin. Seçili bilgilerin kalıcı olarak silindiği PDF kopyasını indirin. Tüm işlemler tarayıcınızda gerçekleşir.",
+      },
+      vi: {
+        name: "Che thông tin trong PDF",
+        description:
+          "Che thông tin trong PDF trực tuyến. Vẽ khung đen lên tên, địa chỉ, số tiền trong hợp đồng hoặc chữ ký rồi tải bản PDF đã xóa vĩnh viễn các nội dung đã chọn. Tệp được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 脱敏",
+        description:
+          "在线为 PDF 脱敏。框选并涂黑姓名、地址、合同金额或签名，下载永久移除了所选内容的 PDF。文件全程在浏览器本地处理。",
+      },
+      "zh-TW": {
+        name: "PDF 內容遮蔽",
+        description:
+          "線上遮蔽 PDF 內容。框選姓名、地址、合約金額或簽名，下載永久移除所選內容的 PDF。檔案全程在瀏覽器中處理。",
       },
     },
   },

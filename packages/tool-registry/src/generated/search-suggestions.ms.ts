@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "Penyunting CSV",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "Tukar CSV dan Excel kepada SQLite",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Isi Borang PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Ekstrak Imej daripada PDF",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Buang Metadata PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "OCR PDF — Jadikan PDF Imbasan Boleh Dicari",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Penyusun Halaman PDF",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "Hitamkan PDF",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

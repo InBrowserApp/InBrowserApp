@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "CSV-Editor",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "CSV und Excel in SQLite umwandeln",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF-Formular ausfüllen",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Bilder aus PDF extrahieren",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF-Metadaten entfernen",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF-OCR – Gescannte PDFs durchsuchbar machen",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF-Seitenorganisator",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "PDF schwärzen",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

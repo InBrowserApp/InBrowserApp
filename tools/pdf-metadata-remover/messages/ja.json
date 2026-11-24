@@ -1,0 +1,13 @@
+{
+  "choosePdf": "PDF を選択",
+  "dropPdf": "またはここに PDF をドロップ",
+  "changePdf": "別の PDF を選択",
+  "privacy": "ブラウザ内で処理します。ファイルはアップロードされません。",
+  "removeMetadata": "メタデータを削除",
+  "removingMetadata": "メタデータを削除しています…",
+  "success": "PDF をダウンロードできます。",
+  "downloadPdf": "PDF をダウンロード",
+  "oneFile": "PDF は一度に 1 つ選んでください。",
+  "encryptedPdf": "この PDF は暗号化されています。PDF を開き、暗号化を解除したコピーを保存してから、もう一度お試しください。",
+  "invalidPdf": "このファイルを処理できませんでした。正常に開ける PDF を選んでください。"
+}

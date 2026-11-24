@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "Trình chỉnh sửa CSV",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "Chuyển đổi CSV và Excel sang SQLite",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Điền biểu mẫu PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "Trích xuất ảnh từ PDF",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Xóa siêu dữ liệu PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "OCR PDF — Tạo PDF có thể tìm kiếm từ bản quét",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Trình sắp xếp trang PDF",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "Che thông tin trong PDF",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",

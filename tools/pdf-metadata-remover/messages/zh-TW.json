@@ -1,0 +1,13 @@
+{
+  "choosePdf": "選擇 PDF",
+  "dropPdf": "或將 PDF 拖曳到這裡",
+  "changePdf": "更換 PDF",
+  "privacy": "在瀏覽器中處理，檔案不會上傳。",
+  "removeMetadata": "移除中繼資料",
+  "removingMetadata": "正在移除中繼資料…",
+  "success": "PDF 已可下載。",
+  "downloadPdf": "下載 PDF",
+  "oneFile": "請一次選擇一個 PDF。",
+  "encryptedPdf": "這份 PDF 已加密。請先開啟並另存未加密的副本，再試一次。",
+  "invalidPdf": "無法處理這份檔案。請選擇可正常開啟的 PDF。"
+}

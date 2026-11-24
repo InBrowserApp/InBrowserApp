@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "document",
+    name: "โปรแกรมแก้ไข CSV",
+    slug: "csv-editor",
+  },
+  {
     category: "developer",
     name: "แปลง CSV และ Excel เป็น SQLite",
     slug: "csv-excel-to-sqlite",
@@ -1064,6 +1069,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "กรอกแบบฟอร์ม PDF",
+    slug: "pdf-form-filler",
+  },
+  {
+    category: "pdf",
     name: "แยกรูปภาพจาก PDF",
     slug: "pdf-image-extractor",
   },
@@ -1079,6 +1089,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "ลบเมตาดาตาของ PDF",
+    slug: "pdf-metadata-remover",
+  },
+  {
+    category: "pdf",
     name: "PDF OCR — แปลง PDF ที่สแกนให้ค้นหาข้อความได้",
     slug: "pdf-ocr",
   },
@@ -1091,6 +1106,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "เครื่องมือจัดระเบียบหน้า PDF",
     slug: "pdf-page-organizer",
+  },
+  {
+    category: "pdf",
+    name: "ปกปิดข้อมูลใน PDF",
+    slug: "pdf-redactor",
   },
   {
     category: "pdf",
