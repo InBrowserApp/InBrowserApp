@@ -1,0 +1,22 @@
+{
+  "address": "CID 或 IPFS 連結",
+  "open": "開啟內容",
+  "example": "試用範例資料夾",
+  "opening": "正在取得內容…",
+  "contents": "內容",
+  "back": "返回",
+  "download": "下載檔案",
+  "zip": "下載 ZIP",
+  "preparing": "正在準備下載…",
+  "cancel": "取消",
+  "empty": "此資料夾沒有內容。",
+  "invalid": "請輸入有效的 CID、IPFS URI 或 IPFS 閘道連結。",
+  "missing": "無法從閘道取得內容。",
+  "pathMissing": "在這個 CID 下找不到此路徑。",
+  "corrupt": "閘道傳回的區塊與其 CID 不符。",
+  "unsupported": "無法將這個內容當作 UnixFS 檔案或資料夾開啟。",
+  "failed": "無法完成下載。請重試或選擇較小的資料夾。",
+  "incomplete": "有些路徑無法下載。",
+  "available": "下載已取得的檔案",
+  "progress": "正在準備 {path}"
+}

@@ -101,14 +101,36 @@ export async function zipIpfsDirectory(
   store: ReadableStorage,
   signal: AbortSignal
 ) {
-  const { BlobWriter, ZipWriter } = await import("@zip.js/zip.js")
+  return (await packDirectory(directory, store, signal)).blob
+}
+
+export function zipAvailableIpfsDirectory(
+  directory: UnixFSDirectory,
+  store: ReadableStorage,
+  signal: AbortSignal,
+  onPath: (path: string) => void
+) {
+  return packDirectory(directory, store, signal, onPath)
+}
+
+async function packDirectory(
+  directory: UnixFSDirectory,
+  store: ReadableStorage,
+  signal: AbortSignal,
+  onPath?: (path: string) => void
+) {
+  const { BlobReader, BlobWriter, ZipWriter } = await import("@zip.js/zip.js")
   const writer = new ZipWriter(new BlobWriter("application/zip"), {
     bufferedWrite: false,
   })
+  const failed: string[] = []
+  let saved = 0
 
   async function addFolder(folder: UnixFSDirectory, parent: string) {
     for await (const { name, cid } of folder.entries({ signal })) {
       signal.throwIfAborted()
+      const member = parent + name
+      onPath?.(member)
       try {
         const path = zipPath(parent, name)
         const entry = await openIpfsEntry(cid, store, signal)
@@ -116,15 +138,21 @@ export async function zipIpfsDirectory(
           await writer.add(path + "/", undefined, { directory: true, signal })
           await addFolder(entry, path + "/")
         } else {
-          await writer.add(path, fileStream(entry, signal), {
-            signal,
-            level: 0,
-          })
+          // In partial mode, finish reading this file before writing to the ZIP.
+          const input = onPath
+            ? new BlobReader(await readIpfsFile(entry, signal))
+            : fileStream(entry, signal)
+          await writer.add(path, input, { signal, level: 0 })
+          saved++
         }
       } catch (error) {
         const problem = error instanceof IpfsFileError ? error : null
         if (signal.aborted || problem?.path !== undefined) throw error
-        throw new IpfsFileError(problem?.code ?? "failed", parent + name, {
+        if (onPath && problem) {
+          failed.push(member)
+          continue
+        }
+        throw new IpfsFileError(problem?.code ?? "failed", member, {
           cause: error,
         })
       }
@@ -137,7 +165,7 @@ export async function zipIpfsDirectory(
     await writer.close().catch(() => {})
     throw error
   }
-  const zip = await writer.close()
+  const blob = await writer.close()
   signal.throwIfAborted()
-  return zip
+  return { blob, failed, saved }
 }

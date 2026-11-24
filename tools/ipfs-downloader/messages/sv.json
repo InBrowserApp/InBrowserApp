@@ -1,0 +1,22 @@
+{
+  "address": "CID eller IPFS-länk",
+  "open": "Öppna innehåll",
+  "example": "Prova en exempelmapp",
+  "opening": "Hämtar innehåll…",
+  "contents": "Innehåll",
+  "back": "Tillbaka",
+  "download": "Ladda ner fil",
+  "zip": "Ladda ner ZIP",
+  "preparing": "Förbereder nedladdning…",
+  "cancel": "Avbryt",
+  "empty": "Mappen är tom.",
+  "invalid": "Ange en giltig CID, IPFS-URI eller IPFS-gatewaylänk.",
+  "missing": "Innehållet kunde inte hämtas från gatewayservrarna.",
+  "pathMissing": "Sökvägen hittades inte under CID:n.",
+  "corrupt": "Det returnerade blocket matchade inte sin CID.",
+  "unsupported": "Innehållet kan inte öppnas som en UnixFS-fil eller -mapp.",
+  "failed": "Det gick inte att slutföra nedladdningen. Försök igen eller välj en mindre mapp.",
+  "incomplete": "Vissa sökvägar kunde inte laddas ner.",
+  "available": "Ladda ner tillgängliga filer",
+  "progress": "Förbereder {path}"
+}

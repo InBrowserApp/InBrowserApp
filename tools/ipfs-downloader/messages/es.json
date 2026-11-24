@@ -1,0 +1,22 @@
+{
+  "address": "CID o enlace de IPFS",
+  "open": "Abrir contenido",
+  "example": "Abrir una carpeta de ejemplo",
+  "opening": "Recuperando contenido…",
+  "contents": "Contenido",
+  "back": "Volver",
+  "download": "Descargar archivo",
+  "zip": "Descargar ZIP",
+  "preparing": "Preparando la descarga…",
+  "cancel": "Cancelar",
+  "empty": "Esta carpeta está vacía.",
+  "invalid": "Introduce un CID, un URI de IPFS o un enlace de pasarela IPFS válido.",
+  "missing": "No se pudo recuperar el contenido desde las pasarelas.",
+  "pathMissing": "No se encontró esta ruta bajo el CID.",
+  "corrupt": "El bloque recibido no coincide con su CID.",
+  "unsupported": "Este contenido no se puede abrir como archivo o carpeta de UnixFS.",
+  "failed": "No se pudo completar la descarga. Vuelve a intentarlo o selecciona una carpeta más pequeña.",
+  "incomplete": "Algunas rutas no se pudieron descargar.",
+  "available": "Descargar archivos disponibles",
+  "progress": "Preparando {path}"
+}

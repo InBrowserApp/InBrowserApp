@@ -1,0 +1,4 @@
+{
+  "name": "Alat Muat Turun IPFS",
+  "description": "Muat turun fail IPFS menggunakan CID atau pautan. Semak imbas folder UnixFS, simpan fail satu demi satu atau muat turun seluruh folder IPFS sebagai ZIP."
+}

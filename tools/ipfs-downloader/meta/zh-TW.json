@@ -1,0 +1,4 @@
+{
+  "name": "IPFS 下載工具",
+  "description": "透過 CID 或連結下載 IPFS 檔案。可瀏覽 UnixFS 資料夾、儲存個別檔案，或將整個 IPFS 資料夾下載成 ZIP。"
+}

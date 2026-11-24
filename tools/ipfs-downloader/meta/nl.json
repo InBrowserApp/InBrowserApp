@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-downloader",
+  "description": "Download een IPFS-bestand via CID of link. Blader door UnixFS-mappen, sla afzonderlijke bestanden op en download een volledige IPFS-map als ZIP."
+}

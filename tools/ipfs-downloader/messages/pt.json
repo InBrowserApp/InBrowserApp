@@ -1,0 +1,22 @@
+{
+  "address": "CID ou ligação IPFS",
+  "open": "Abrir conteúdo",
+  "example": "Abrir uma pasta de exemplo",
+  "opening": "A obter o conteúdo…",
+  "contents": "Conteúdo",
+  "back": "Voltar",
+  "download": "Descarregar ficheiro",
+  "zip": "Descarregar ZIP",
+  "preparing": "A preparar a transferência…",
+  "cancel": "Cancelar",
+  "empty": "Esta pasta está vazia.",
+  "invalid": "Introduza um CID, um URI IPFS ou uma ligação válida para um gateway IPFS.",
+  "missing": "Não foi possível obter o conteúdo através dos gateways.",
+  "pathMissing": "Não foi possível encontrar este caminho no CID.",
+  "corrupt": "O bloco recebido não corresponde ao respetivo CID.",
+  "unsupported": "Não é possível abrir este conteúdo como ficheiro ou pasta UnixFS.",
+  "failed": "Não foi possível concluir a transferência. Tente novamente ou selecione uma pasta mais pequena.",
+  "incomplete": "Não foi possível descarregar alguns caminhos.",
+  "available": "Descarregar ficheiros disponíveis",
+  "progress": "A preparar {path}"
+}

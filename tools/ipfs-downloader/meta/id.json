@@ -1,0 +1,4 @@
+{
+  "name": "Pengunduh IPFS",
+  "description": "Unduh file dari IPFS dengan CID atau tautan. Jelajahi folder UnixFS, simpan file satu per satu, atau unduh seluruh folder IPFS sebagai ZIP."
+}

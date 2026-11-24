@@ -1,0 +1,4 @@
+{
+  "name": "IPFS Dosya İndirme Aracı",
+  "description": "IPFS dosyalarını CID veya bağlantıyla indirin. UnixFS klasörlerine göz atın, dosyaları tek tek kaydedin veya IPFS klasörünün tamamını ZIP olarak indirin."
+}

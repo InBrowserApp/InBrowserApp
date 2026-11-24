@@ -184,6 +184,7 @@
     "@tool/ip-range-to-cidr-converter": "workspace:*",
     "@tool/ipfs-car-extractor": "workspace:*",
     "@tool/ipfs-cid-calculator": "workspace:*",
+    "@tool/ipfs-downloader": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/ipv6-ula-generator": "workspace:*",
     "@tool/isbn-validator": "workspace:*",

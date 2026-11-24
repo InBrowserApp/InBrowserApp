@@ -1,0 +1,22 @@
+{
+  "address": "CID veya IPFS bağlantısı",
+  "open": "İçeriği aç",
+  "example": "Örnek klasörü dene",
+  "opening": "İçerik alınıyor…",
+  "contents": "İçindekiler",
+  "back": "Geri",
+  "download": "Dosyayı indir",
+  "zip": "ZIP indir",
+  "preparing": "İndirme hazırlanıyor…",
+  "cancel": "İptal",
+  "empty": "Bu klasör boş.",
+  "invalid": "Geçerli bir CID, IPFS URI'si veya IPFS ağ geçidi bağlantısı girin.",
+  "missing": "İçerik ağ geçitlerinden alınamadı.",
+  "pathMissing": "Bu yol belirtilen CID altında bulunamadı.",
+  "corrupt": "Alınan blok kendi CID değeriyle eşleşmedi.",
+  "unsupported": "Bu içerik UnixFS dosyası veya klasörü olarak açılamıyor.",
+  "failed": "İndirme tamamlanamadı. Tekrar deneyin veya daha küçük bir klasör seçin.",
+  "incomplete": "Bazı yollardaki içerik indirilemedi.",
+  "available": "Alınabilen dosyaları indir",
+  "progress": "{path} hazırlanıyor"
+}

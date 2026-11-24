@@ -1,0 +1,22 @@
+{
+  "address": "CID oder IPFS-Link",
+  "open": "Inhalt öffnen",
+  "example": "Beispielordner öffnen",
+  "opening": "Inhalt wird abgerufen…",
+  "contents": "Inhalt",
+  "back": "Zurück",
+  "download": "Datei herunterladen",
+  "zip": "ZIP herunterladen",
+  "preparing": "Download wird vorbereitet…",
+  "cancel": "Abbrechen",
+  "empty": "Dieser Ordner ist leer.",
+  "invalid": "Geben Sie eine gültige CID, IPFS-URI oder einen gültigen IPFS-Gateway-Link ein.",
+  "missing": "Der Inhalt konnte nicht über die Gateways abgerufen werden.",
+  "pathMissing": "Dieser Pfad wurde unter der CID nicht gefunden.",
+  "corrupt": "Der empfangene Block stimmt nicht mit seiner CID überein.",
+  "unsupported": "Dieser Inhalt lässt sich nicht als UnixFS-Datei oder -Ordner öffnen.",
+  "failed": "Der Download konnte nicht abgeschlossen werden. Versuchen Sie es erneut oder wählen Sie einen kleineren Ordner.",
+  "incomplete": "Einige Pfade konnten nicht heruntergeladen werden.",
+  "available": "Verfügbare Dateien herunterladen",
+  "progress": "{path} wird vorbereitet"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IPFS-Dateien herunterladen",
+  "description": "Laden Sie eine IPFS-Datei per CID oder Link herunter. Durchsuchen Sie UnixFS-Ordner, speichern Sie einzelne Dateien und laden Sie einen ganzen IPFS-Ordner als ZIP herunter."
+}

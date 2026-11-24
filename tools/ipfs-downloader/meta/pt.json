@@ -1,0 +1,4 @@
+{
+  "name": "Descarregar ficheiros do IPFS",
+  "description": "Descarregue um ficheiro do IPFS através de um CID ou de uma ligação. Explore pastas UnixFS, guarde ficheiros individuais ou descarregue uma pasta IPFS inteira em ZIP."
+}

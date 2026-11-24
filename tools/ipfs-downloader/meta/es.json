@@ -1,0 +1,4 @@
+{
+  "name": "Descargar archivos de IPFS",
+  "description": "Descarga un archivo de IPFS con su CID o enlace. Explora carpetas de UnixFS, guarda archivos individuales y descarga una carpeta entera de IPFS en ZIP."
+}

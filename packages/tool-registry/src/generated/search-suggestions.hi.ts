@@ -888,6 +888,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ipfs-cid-calculator",
   },
   {
+    category: "ipfs",
+    name: "IPFS डाउनलोडर",
+    slug: "ipfs-downloader",
+  },
+  {
     category: "network",
     name: "IPv6 पते से MAC पता कनवर्टर",
     slug: "ipv6-address-to-mac-address-converter",

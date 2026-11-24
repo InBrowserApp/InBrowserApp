@@ -1,0 +1,22 @@
+{
+  "address": "CID atau tautan IPFS",
+  "open": "Buka konten",
+  "example": "Coba folder contoh",
+  "opening": "Mengambil konten…",
+  "contents": "Isi",
+  "back": "Kembali",
+  "download": "Unduh file",
+  "zip": "Unduh ZIP",
+  "preparing": "Menyiapkan unduhan…",
+  "cancel": "Batal",
+  "empty": "Folder ini kosong.",
+  "invalid": "Masukkan CID, URI IPFS, atau tautan gateway IPFS yang valid.",
+  "missing": "Konten tidak dapat diambil dari gateway.",
+  "pathMissing": "Jalur ini tidak ditemukan dalam konten yang dirujuk CID.",
+  "corrupt": "Blok yang diterima tidak cocok dengan CID-nya.",
+  "unsupported": "Konten ini tidak dapat dibuka sebagai file atau folder UnixFS.",
+  "failed": "Unduhan tidak selesai. Coba lagi atau pilih folder yang lebih kecil.",
+  "incomplete": "Unduhan gagal untuk beberapa jalur.",
+  "available": "Unduh file yang tersedia",
+  "progress": "Menyiapkan {path}"
+}

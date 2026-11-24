@@ -89,7 +89,7 @@
       "ebook": "Les EPUB, MOBI, FB2 og tegneseriearkiver i nettleseren din. Konverter e-bøker, rediger EPUB-metadata eller eksporter innhold fra bøker.",
       "geo": "Vis kart og GPS-spor, regn om koordinater mellom koordinatsystemer og arbeid med GeoJSON-, GPX-, KML- og WKT-filer.",
       "image": "Konverter, endre størrelse på og undersøk bilder i nettleseren din. Optimaliser bildefiler, vis metadata, lag strekkoder og arbeid med animerte bildeformater.",
-      "ipfs": "Beregn innholdsidentifikatorer for filer og mapper og gjenskap resultater fra IPFS-importer i nettleseren.",
+      "ipfs": "Beregn IPFS-CID-er, konfigurer DNSLink, pakk ut CAR-arkiver og last ned IPFS-filer og -mapper i nettleseren.",
       "json": "Formater, valider, sammenlign og konverter strukturerte data. Arbeid med JSON, YAML, TOML, XML og CSV ved hjelp av verktøy som kjører i nettleseren din.",
       "misc": "Bruk kameraet, test tastaturet eller spillkontrolleren og se enhetsinformasjon. Her finner du nettleserverktøy for hverdagsoppgaver.",
       "network": "Slå opp DNS- og IP-informasjon, beregn delnett og undersøk sertifikater. Finn verktøy for nettverksadresser, protokoller og feilsøking.",

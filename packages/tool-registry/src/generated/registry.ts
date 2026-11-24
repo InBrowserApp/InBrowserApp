@@ -22588,6 +22588,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ipfs-downloader",
+    category: "ipfs",
+    icon: "download",
+    tags: ["ipfs", "cid", "download", "folder", "zip", "gateway", "unixfs"],
+    locales: {
+      ar: {
+        name: "تنزيل ملفات IPFS",
+        description:
+          "نزّل ملفًا من IPFS باستخدام معرّف CID أو رابط. تصفّح مجلدات UnixFS واحفظ ملفات منفردة أو نزّل مجلد IPFS كاملًا بصيغة ZIP.",
+      },
+      de: {
+        name: "IPFS-Dateien herunterladen",
+        description:
+          "Laden Sie eine IPFS-Datei per CID oder Link herunter. Durchsuchen Sie UnixFS-Ordner, speichern Sie einzelne Dateien und laden Sie einen ganzen IPFS-Ordner als ZIP herunter.",
+      },
+      en: {
+        name: "IPFS Downloader",
+        description:
+          "Download an IPFS file by CID or link. Browse UnixFS folders, save individual files, and download an entire IPFS folder as ZIP.",
+      },
+      es: {
+        name: "Descargar archivos de IPFS",
+        description:
+          "Descarga un archivo de IPFS con su CID o enlace. Explora carpetas de UnixFS, guarda archivos individuales y descarga una carpeta entera de IPFS en ZIP.",
+      },
+      fr: {
+        name: "Télécharger des fichiers IPFS",
+        description:
+          "Téléchargez un fichier IPFS à partir de son CID ou d’un lien. Parcourez les dossiers UnixFS, enregistrez des fichiers séparément ou téléchargez un dossier IPFS complet en ZIP.",
+      },
+      he: {
+        name: "הורדת קבצים מ-IPFS",
+        description:
+          "הורידו קובץ מ-IPFS לפי CID או קישור. עיינו בתיקיות UnixFS, שמרו קבצים בודדים או הורידו תיקיית IPFS שלמה כ-ZIP.",
+      },
+      hi: {
+        name: "IPFS डाउनलोडर",
+        description:
+          "CID या लिंक से IPFS फ़ाइल डाउनलोड करें। UnixFS फ़ोल्डर देखें, अलग-अलग फ़ाइलें सेव करें या पूरा IPFS फ़ोल्डर ZIP के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengunduh IPFS",
+        description:
+          "Unduh file dari IPFS dengan CID atau tautan. Jelajahi folder UnixFS, simpan file satu per satu, atau unduh seluruh folder IPFS sebagai ZIP.",
+      },
+      it: {
+        name: "Downloader IPFS",
+        description:
+          "Scarica un file IPFS tramite CID o link. Esplora le cartelle UnixFS, salva singoli file e scarica un’intera cartella IPFS come ZIP.",
+      },
+      ja: {
+        name: "IPFS ダウンロードツール",
+        description:
+          "CID やリンクから IPFS のファイルをダウンロードできます。UnixFS フォルダーを閲覧し、個別のファイルを保存したり、フォルダー全体を ZIP としてダウンロードしたりできます。",
+      },
+      ko: {
+        name: "IPFS 다운로드 도구",
+        description:
+          "CID나 링크로 IPFS 파일을 다운로드하세요. UnixFS 폴더를 탐색하고, 개별 파일을 저장하거나 IPFS 폴더 전체를 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Alat Muat Turun IPFS",
+        description:
+          "Muat turun fail IPFS menggunakan CID atau pautan. Semak imbas folder UnixFS, simpan fail satu demi satu atau muat turun seluruh folder IPFS sebagai ZIP.",
+      },
+      nl: {
+        name: "IPFS-downloader",
+        description:
+          "Download een IPFS-bestand via CID of link. Blader door UnixFS-mappen, sla afzonderlijke bestanden op en download een volledige IPFS-map als ZIP.",
+      },
+      no: {
+        name: "IPFS-nedlaster",
+        description:
+          "Last ned en IPFS-fil med CID eller lenke. Bla i UnixFS-mapper, lagre enkeltfiler og last ned en hel IPFS-mappe som ZIP.",
+      },
+      pl: {
+        name: "Pobieranie plików z IPFS",
+        description:
+          "Pobieraj pliki z IPFS za pomocą identyfikatora CID lub linku. Przeglądaj foldery UnixFS, zapisuj pojedyncze pliki lub pobierz cały folder z IPFS jako ZIP.",
+      },
+      pt: {
+        name: "Descarregar ficheiros do IPFS",
+        description:
+          "Descarregue um ficheiro do IPFS através de um CID ou de uma ligação. Explore pastas UnixFS, guarde ficheiros individuais ou descarregue uma pasta IPFS inteira em ZIP.",
+      },
+      ru: {
+        name: "Скачивание файлов из IPFS",
+        description:
+          "Скачивайте файлы из IPFS по CID или ссылке. Просматривайте папки UnixFS, сохраняйте отдельные файлы или скачивайте целую папку из IPFS в ZIP.",
+      },
+      sv: {
+        name: "IPFS-nedladdare",
+        description:
+          "Ladda ner en IPFS-fil med CID eller länk. Bläddra i UnixFS-mappar, spara enskilda filer och ladda ner en hel IPFS-mapp som ZIP.",
+      },
+      th: {
+        name: "เครื่องมือดาวน์โหลดจาก IPFS",
+        description:
+          "ดาวน์โหลดไฟล์ IPFS ด้วย CID หรือลิงก์ เลือกดูโฟลเดอร์ UnixFS บันทึกทีละไฟล์ หรือดาวน์โหลดทั้งโฟลเดอร์ IPFS เป็น ZIP",
+      },
+      tr: {
+        name: "IPFS Dosya İndirme Aracı",
+        description:
+          "IPFS dosyalarını CID veya bağlantıyla indirin. UnixFS klasörlerine göz atın, dosyaları tek tek kaydedin veya IPFS klasörünün tamamını ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Công cụ tải xuống IPFS",
+        description:
+          "Tải tệp từ IPFS bằng CID hoặc liên kết. Duyệt thư mục UnixFS, lưu từng tệp hoặc tải trọn một thư mục IPFS dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "IPFS 下载工具",
+        description:
+          "通过 CID 或链接下载 IPFS 文件。支持浏览 UnixFS 文件夹、保存单个文件，或将整个 IPFS 文件夹下载为 ZIP。",
+      },
+      "zh-TW": {
+        name: "IPFS 下載工具",
+        description:
+          "透過 CID 或連結下載 IPFS 檔案。可瀏覽 UnixFS 資料夾、儲存個別檔案，或將整個 IPFS 資料夾下載成 ZIP。",
+      },
+    },
+  },
+  {
     slug: "ipv6-address-to-mac-address-converter",
     category: "network",
     icon: "network",
@@ -71934,6 +72057,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IPFS CID 計算器",
         description:
           "在瀏覽器中計算檔案或資料夾的 IPFS CID，無須上傳。可比對現有 CID，並使用相同的 Kubo 匯入設定重現結果。",
+      },
+    },
+  },
+  "ipfs-downloader": {
+    slug: "ipfs-downloader",
+    category: "ipfs",
+    icon: "download",
+    tags: ["ipfs", "cid", "download", "folder", "zip", "gateway", "unixfs"],
+    locales: {
+      ar: {
+        name: "تنزيل ملفات IPFS",
+        description:
+          "نزّل ملفًا من IPFS باستخدام معرّف CID أو رابط. تصفّح مجلدات UnixFS واحفظ ملفات منفردة أو نزّل مجلد IPFS كاملًا بصيغة ZIP.",
+      },
+      de: {
+        name: "IPFS-Dateien herunterladen",
+        description:
+          "Laden Sie eine IPFS-Datei per CID oder Link herunter. Durchsuchen Sie UnixFS-Ordner, speichern Sie einzelne Dateien und laden Sie einen ganzen IPFS-Ordner als ZIP herunter.",
+      },
+      en: {
+        name: "IPFS Downloader",
+        description:
+          "Download an IPFS file by CID or link. Browse UnixFS folders, save individual files, and download an entire IPFS folder as ZIP.",
+      },
+      es: {
+        name: "Descargar archivos de IPFS",
+        description:
+          "Descarga un archivo de IPFS con su CID o enlace. Explora carpetas de UnixFS, guarda archivos individuales y descarga una carpeta entera de IPFS en ZIP.",
+      },
+      fr: {
+        name: "Télécharger des fichiers IPFS",
+        description:
+          "Téléchargez un fichier IPFS à partir de son CID ou d’un lien. Parcourez les dossiers UnixFS, enregistrez des fichiers séparément ou téléchargez un dossier IPFS complet en ZIP.",
+      },
+      he: {
+        name: "הורדת קבצים מ-IPFS",
+        description:
+          "הורידו קובץ מ-IPFS לפי CID או קישור. עיינו בתיקיות UnixFS, שמרו קבצים בודדים או הורידו תיקיית IPFS שלמה כ-ZIP.",
+      },
+      hi: {
+        name: "IPFS डाउनलोडर",
+        description:
+          "CID या लिंक से IPFS फ़ाइल डाउनलोड करें। UnixFS फ़ोल्डर देखें, अलग-अलग फ़ाइलें सेव करें या पूरा IPFS फ़ोल्डर ZIP के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengunduh IPFS",
+        description:
+          "Unduh file dari IPFS dengan CID atau tautan. Jelajahi folder UnixFS, simpan file satu per satu, atau unduh seluruh folder IPFS sebagai ZIP.",
+      },
+      it: {
+        name: "Downloader IPFS",
+        description:
+          "Scarica un file IPFS tramite CID o link. Esplora le cartelle UnixFS, salva singoli file e scarica un’intera cartella IPFS come ZIP.",
+      },
+      ja: {
+        name: "IPFS ダウンロードツール",
+        description:
+          "CID やリンクから IPFS のファイルをダウンロードできます。UnixFS フォルダーを閲覧し、個別のファイルを保存したり、フォルダー全体を ZIP としてダウンロードしたりできます。",
+      },
+      ko: {
+        name: "IPFS 다운로드 도구",
+        description:
+          "CID나 링크로 IPFS 파일을 다운로드하세요. UnixFS 폴더를 탐색하고, 개별 파일을 저장하거나 IPFS 폴더 전체를 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Alat Muat Turun IPFS",
+        description:
+          "Muat turun fail IPFS menggunakan CID atau pautan. Semak imbas folder UnixFS, simpan fail satu demi satu atau muat turun seluruh folder IPFS sebagai ZIP.",
+      },
+      nl: {
+        name: "IPFS-downloader",
+        description:
+          "Download een IPFS-bestand via CID of link. Blader door UnixFS-mappen, sla afzonderlijke bestanden op en download een volledige IPFS-map als ZIP.",
+      },
+      no: {
+        name: "IPFS-nedlaster",
+        description:
+          "Last ned en IPFS-fil med CID eller lenke. Bla i UnixFS-mapper, lagre enkeltfiler og last ned en hel IPFS-mappe som ZIP.",
+      },
+      pl: {
+        name: "Pobieranie plików z IPFS",
+        description:
+          "Pobieraj pliki z IPFS za pomocą identyfikatora CID lub linku. Przeglądaj foldery UnixFS, zapisuj pojedyncze pliki lub pobierz cały folder z IPFS jako ZIP.",
+      },
+      pt: {
+        name: "Descarregar ficheiros do IPFS",
+        description:
+          "Descarregue um ficheiro do IPFS através de um CID ou de uma ligação. Explore pastas UnixFS, guarde ficheiros individuais ou descarregue uma pasta IPFS inteira em ZIP.",
+      },
+      ru: {
+        name: "Скачивание файлов из IPFS",
+        description:
+          "Скачивайте файлы из IPFS по CID или ссылке. Просматривайте папки UnixFS, сохраняйте отдельные файлы или скачивайте целую папку из IPFS в ZIP.",
+      },
+      sv: {
+        name: "IPFS-nedladdare",
+        description:
+          "Ladda ner en IPFS-fil med CID eller länk. Bläddra i UnixFS-mappar, spara enskilda filer och ladda ner en hel IPFS-mapp som ZIP.",
+      },
+      th: {
+        name: "เครื่องมือดาวน์โหลดจาก IPFS",
+        description:
+          "ดาวน์โหลดไฟล์ IPFS ด้วย CID หรือลิงก์ เลือกดูโฟลเดอร์ UnixFS บันทึกทีละไฟล์ หรือดาวน์โหลดทั้งโฟลเดอร์ IPFS เป็น ZIP",
+      },
+      tr: {
+        name: "IPFS Dosya İndirme Aracı",
+        description:
+          "IPFS dosyalarını CID veya bağlantıyla indirin. UnixFS klasörlerine göz atın, dosyaları tek tek kaydedin veya IPFS klasörünün tamamını ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Công cụ tải xuống IPFS",
+        description:
+          "Tải tệp từ IPFS bằng CID hoặc liên kết. Duyệt thư mục UnixFS, lưu từng tệp hoặc tải trọn một thư mục IPFS dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "IPFS 下载工具",
+        description:
+          "通过 CID 或链接下载 IPFS 文件。支持浏览 UnixFS 文件夹、保存单个文件，或将整个 IPFS 文件夹下载为 ZIP。",
+      },
+      "zh-TW": {
+        name: "IPFS 下載工具",
+        description:
+          "透過 CID 或連結下載 IPFS 檔案。可瀏覽 UnixFS 資料夾、儲存個別檔案，或將整個 IPFS 資料夾下載成 ZIP。",
       },
     },
   },
