@@ -15,6 +15,7 @@ import {
   CaseSensitive,
   Clock3,
   Columns2,
+  ContactRound,
   CreditCard,
   Cpu,
   Database,
@@ -50,6 +51,7 @@ import {
 
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
+  "contact-round": ContactRound,
   binary: Binary,
   blocks: Blocks,
   bookmark: Bookmark,

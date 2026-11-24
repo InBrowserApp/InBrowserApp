@@ -1,0 +1,19 @@
+{
+  "details": "Dati di contatto",
+  "preview": "Anteprima del contatto",
+  "empty": "Inserisci un nome per iniziare a creare la scheda di contatto.",
+  "firstName": "Nome",
+  "lastName": "Cognome",
+  "phone": "Telefono",
+  "email": "Email",
+  "company": "Azienda",
+  "jobTitle": "Qualifica",
+  "website": "Sito web",
+  "address": "Indirizzo",
+  "notes": "Note",
+  "more": "Altri dati di contatto",
+  "copy": "Copia vCard",
+  "copied": "Copiato",
+  "copyFailed": "Impossibile copiare",
+  "download": "Scarica VCF"
+}

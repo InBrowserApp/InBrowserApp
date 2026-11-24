@@ -41147,6 +41147,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "vcard-generator",
+    category: "document",
+    icon: "contact-round",
+    tags: [
+      "vcard",
+      "vcf",
+      "contact",
+      "contact card",
+      "address book",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد vCard",
+        description:
+          "أنشئ بطاقة اتصال رقمية ونزّلها بصيغة vCard ‏(.vcf). أضف اسمك ورقم هاتفك وبريدك الإلكتروني وغيرها من بيانات الاتصال مع معاينة فورية.",
+      },
+      de: {
+        name: "vCard-Generator",
+        description:
+          "Erstellen Sie eine digitale Kontaktkarte und laden Sie sie als vCard (.vcf) herunter. Name, Telefon, E-Mail und weitere Kontaktdaten erscheinen direkt in der Vorschau.",
+      },
+      en: {
+        name: "vCard Generator",
+        description:
+          "Create a digital contact card and download it as a vCard (.vcf). Add your name, phone, email, and other contact details with a live preview.",
+      },
+      es: {
+        name: "Generador de vCard",
+        description:
+          "Crea una tarjeta de contacto digital y descárgala como vCard (.vcf). Añade tu nombre, teléfono, correo y otros datos con una vista previa en tiempo real.",
+      },
+      fr: {
+        name: "Générateur de vCard",
+        description:
+          "Créez une fiche de contact et téléchargez-la au format vCard (.vcf). Ajoutez votre nom, votre téléphone, votre e-mail et d’autres coordonnées avec un aperçu en direct.",
+      },
+      he: {
+        name: "מחולל vCard",
+        description:
+          "צרו כרטיס איש קשר דיגיטלי והורידו אותו כקובץ vCard ‏(.vcf). הוסיפו שם, טלפון, דוא״ל ופרטים נוספים, וצפו בכרטיס תוך כדי עריכה.",
+      },
+      hi: {
+        name: "vCard जनरेटर",
+        description:
+          "डिजिटल संपर्क कार्ड बनाएँ और उसे vCard (.vcf) फ़ाइल के रूप में डाउनलोड करें। नाम, फ़ोन, ईमेल और अन्य संपर्क विवरण जोड़ें और साथ-साथ कार्ड देखें।",
+      },
+      id: {
+        name: "Pembuat vCard",
+        description:
+          "Buat kartu kontak digital dan unduh sebagai vCard (.vcf). Tambahkan nama, nomor telepon, email, dan detail kontak lain dengan pratinjau yang diperbarui saat Anda mengetik.",
+      },
+      it: {
+        name: "Generatore di vCard",
+        description:
+          "Crea una scheda di contatto digitale e scaricala come vCard (.vcf). Aggiungi nome, telefono, email e altri recapiti con un’anteprima in tempo reale.",
+      },
+      ja: {
+        name: "vCard 名刺作成ツール",
+        description:
+          "名前や電話番号、メールアドレスなどを入力してデジタル名刺を作成。プレビューを確認して vCard（.vcf）をダウンロードできます。",
+      },
+      ko: {
+        name: "vCard 명함 생성기",
+        description:
+          "이름, 전화번호, 이메일 등 연락처 정보를 입력해 디지털 명함을 만드세요. 미리보기로 확인하고 vCard(.vcf) 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana vCard",
+        description:
+          "Cipta kad kenalan digital dan muat turun sebagai vCard (.vcf). Tambah nama, nombor telefon, e-mel dan butiran kenalan lain dengan pratonton semasa anda menaip.",
+      },
+      nl: {
+        name: "vCard-generator",
+        description:
+          "Maak een digitaal visitekaartje en download het als vCard (.vcf). Voeg je naam, telefoonnummer, e-mailadres en andere contactgegevens toe en zie meteen hoe het kaartje eruitziet.",
+      },
+      no: {
+        name: "vCard-generator",
+        description:
+          "Lag et digitalt kontaktkort og last det ned som vCard (.vcf). Legg til navn, telefonnummer, e-post og andre kontaktopplysninger, og se en forhåndsvisning mens du skriver.",
+      },
+      pl: {
+        name: "Generator vCard",
+        description:
+          "Utwórz cyfrową wizytówkę i pobierz ją jako plik vCard (.vcf). Dodaj imię, nazwisko, telefon, e-mail i inne dane kontaktowe, korzystając z podglądu na żywo.",
+      },
+      pt: {
+        name: "Gerador de vCard",
+        description:
+          "Crie um cartão de contato digital e baixe-o como vCard (.vcf). Adicione nome, telefone, e-mail e outros dados com uma prévia em tempo real.",
+      },
+      ru: {
+        name: "Генератор vCard",
+        description:
+          "Создайте цифровую карточку контакта и скачайте её в формате vCard (.vcf). Добавьте имя, телефон, почту и другие данные и сразу посмотрите, как выглядит карточка.",
+      },
+      sv: {
+        name: "vCard-generator",
+        description:
+          "Skapa ett digitalt kontaktkort och ladda ner det som vCard (.vcf). Lägg till namn, telefonnummer, e-post och andra uppgifter och se direkt hur kortet blir.",
+      },
+      th: {
+        name: "ตัวสร้าง vCard",
+        description:
+          "สร้างบัตรข้อมูลติดต่อดิจิทัลและดาวน์โหลดเป็น vCard (.vcf) เพิ่มชื่อ เบอร์โทร อีเมล และข้อมูลติดต่ออื่น ๆ พร้อมดูตัวอย่างขณะกรอก",
+      },
+      tr: {
+        name: "vCard Oluşturucu",
+        description:
+          "Dijital kişi kartı oluşturun ve vCard (.vcf) dosyası olarak indirin. Adınızı, telefonunuzu, e-posta adresinizi ve diğer iletişim bilgilerinizi eklerken kartınızı önizleyin.",
+      },
+      vi: {
+        name: "Trình tạo vCard",
+        description:
+          "Tạo thẻ liên hệ kỹ thuật số và tải xuống dưới dạng vCard (.vcf). Thêm tên, số điện thoại, email và các thông tin liên hệ khác, rồi xem trước ngay khi nhập.",
+      },
+      "zh-CN": {
+        name: "vCard 名片生成器",
+        description:
+          "创建电子名片并下载为 vCard（.vcf）文件。填写姓名、电话、邮箱等联系信息，实时预览名片。",
+      },
+      "zh-TW": {
+        name: "vCard 名片產生器",
+        description:
+          "建立電子名片，並下載為 vCard（.vcf）檔案。輸入姓名、電話、電子郵件等聯絡資訊，即可即時預覽。",
+      },
+    },
+  },
+  {
     slug: "video-audio-extractor",
     category: "misc",
     icon: "film",

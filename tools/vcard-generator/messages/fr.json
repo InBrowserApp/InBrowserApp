@@ -1,0 +1,19 @@
+{
+  "details": "Coordonnées",
+  "preview": "Aperçu de la fiche de contact",
+  "empty": "Saisissez un nom pour commencer à créer la fiche de contact.",
+  "firstName": "Prénom",
+  "lastName": "Nom de famille",
+  "phone": "Téléphone",
+  "email": "Adresse e-mail",
+  "company": "Entreprise",
+  "jobTitle": "Fonction",
+  "website": "Site web",
+  "address": "Adresse",
+  "notes": "Notes",
+  "more": "Autres coordonnées",
+  "copy": "Copier la vCard",
+  "copied": "Copié",
+  "copyFailed": "Impossible de copier",
+  "download": "Télécharger le VCF"
+}

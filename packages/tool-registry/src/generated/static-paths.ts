@@ -29902,6 +29902,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vcard-generator",
+    language: "ar",
+  },
+  {
+    slug: "vcard-generator",
+    language: "de",
+  },
+  {
+    slug: "vcard-generator",
+    language: "en",
+  },
+  {
+    slug: "vcard-generator",
+    language: "es",
+  },
+  {
+    slug: "vcard-generator",
+    language: "fr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "he",
+  },
+  {
+    slug: "vcard-generator",
+    language: "hi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "id",
+  },
+  {
+    slug: "vcard-generator",
+    language: "it",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ja",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ko",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ms",
+  },
+  {
+    slug: "vcard-generator",
+    language: "nl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "no",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pl",
+  },
+  {
+    slug: "vcard-generator",
+    language: "pt",
+  },
+  {
+    slug: "vcard-generator",
+    language: "ru",
+  },
+  {
+    slug: "vcard-generator",
+    language: "sv",
+  },
+  {
+    slug: "vcard-generator",
+    language: "th",
+  },
+  {
+    slug: "vcard-generator",
+    language: "tr",
+  },
+  {
+    slug: "vcard-generator",
+    language: "vi",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "video-audio-extractor",
     language: "ar",
   },

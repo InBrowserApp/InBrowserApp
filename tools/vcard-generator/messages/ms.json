@@ -1,0 +1,19 @@
+{
+  "details": "Butiran kenalan",
+  "preview": "Pratonton kad kenalan",
+  "empty": "Masukkan nama pertama atau nama keluarga untuk mula mencipta kad kenalan.",
+  "firstName": "Nama pertama",
+  "lastName": "Nama keluarga",
+  "phone": "Telefon",
+  "email": "E-mel",
+  "company": "Syarikat",
+  "jobTitle": "Jawatan",
+  "website": "Laman web",
+  "address": "Alamat",
+  "notes": "Nota",
+  "more": "Butiran kenalan tambahan",
+  "copy": "Salin vCard",
+  "copied": "Disalin",
+  "copyFailed": "Tidak dapat menyalin",
+  "download": "Muat turun VCF"
+}

@@ -403,6 +403,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "vcard-generator": () => import("@tool/vcard-generator/page"),
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),

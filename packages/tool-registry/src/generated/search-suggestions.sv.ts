@@ -1628,6 +1628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "document",
+    name: "vCard-generator",
+    slug: "vcard-generator",
+  },
+  {
     category: "misc",
     name: "Extrahera ljud från video",
     slug: "video-audio-extractor",
