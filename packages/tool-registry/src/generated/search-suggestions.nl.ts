@@ -333,6 +333,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "css-gradient-generator",
   },
   {
+    category: "developer",
+    name: "CSV en Excel naar SQLite converteren",
+    slug: "csv-excel-to-sqlite",
+  },
+  {
     category: "json",
     name: "CSV → JSON-converter",
     slug: "csv-to-json-converter",
