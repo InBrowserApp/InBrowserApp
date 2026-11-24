@@ -15,3 +15,5 @@ Tekan dan lepaskan setiap butang. Butang digital yang berfungsi biasanya bertuka
 ## Mengapakah alat kawalan permainan saya tidak dikesan?
 
 Pastikan peranti anda mengesan alat kawalan, kemudian kembali ke tab ini dan tekan butang pada alat kawalan sekali lagi. Jika sambungan Bluetooth tidak stabil, cuba kabel USB yang menyokong pemindahan data. Jika alat kawalan berfungsi dalam aplikasi lain, cuba buka halaman ujian ini terus dalam pelayar yang dikemas kini. Input yang boleh dibaca pada halaman ini bergantung pada maklumat yang disediakan oleh pelayar dan sistem pengendalian.
+
+[Penguji tetikus](../mouse-tester/)

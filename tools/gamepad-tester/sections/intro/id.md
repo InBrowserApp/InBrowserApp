@@ -15,3 +15,5 @@ Tekan dan lepaskan tiap tombol. Tombol digital yang berfungsi biasanya berganti 
 ## Mengapa gamepad saya tidak terdeteksi?
 
 Pastikan perangkat mengenali gamepad, lalu kembali ke tab ini dan tekan tombol pada gamepad sekali lagi. Jika sambungan Bluetooth tidak stabil, coba kabel USB yang mendukung transfer data. Jika gamepad berfungsi di aplikasi lain, coba buka halaman penguji ini langsung di browser yang sudah diperbarui. Input yang dapat dibaca halaman ini bergantung pada data yang disediakan oleh browser dan sistem operasi.
+
+[Penguji Mouse](../mouse-tester/)

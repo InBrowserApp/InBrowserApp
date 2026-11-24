@@ -15,3 +15,5 @@ Choose **Start test** again if you clicked elsewhere or used Tab or Esc to leave
 ## Why does a different key light up?
 
 The diagram uses physical positions from a full-size ANSI keyboard. On a French AZERTY layout, pressing `A` can light up `Q` on the diagram. **Last key** still shows the value your layout produces, `a`, beside the physical code `KeyQ`. On a compact keyboard, focus on the keys your keyboard actually has. [MDN’s guide to physical key codes](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Mouse Tester](../mouse-tester/)

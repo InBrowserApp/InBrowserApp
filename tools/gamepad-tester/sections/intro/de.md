@@ -15,3 +15,5 @@ Drücke jede Taste und lass sie wieder los. Eine funktionierende digitale Taste 
 ## Warum wird mein Gamepad nicht erkannt?
 
 Prüfe, ob dein Gerät das Gamepad erkennt. Wechsle dann zurück zu diesem Tab und drücke erneut eine Taste. Bei einer instabilen Bluetooth-Verbindung kannst du ein USB-Kabel mit Datenübertragung versuchen. Funktioniert das Gamepad in einer anderen App, öffne den Tester direkt in einem aktuellen Browser. Welche Eingaben die Seite lesen kann, hängt vom Browser und Betriebssystem ab.
+
+[Maustester](../mouse-tester/)

@@ -15,3 +15,5 @@ Selecione **Iniciar teste** novamente se você clicou fora da área de teste ou 
 ## Por que uma tecla diferente se ilumina?
 
 O diagrama utiliza as posições físicas de um teclado ANSI de tamanho completo. No layout AZERTY francês, pressionar `A` pode iluminar `Q` no diagrama. Em **Última tecla**, você vê o valor gerado pelo seu layout, `a`, ao lado do código físico `KeyQ`. Se seu teclado for compacto, teste as teclas que ele tem. [Guia da MDN sobre códigos físicos de teclas](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Testador de mouse](../mouse-tester/)

@@ -15,3 +15,5 @@ Başka bir yere tıkladıysanız veya Tab ya da Esc ile test alanından çıktı
 ## Neden farklı bir tuş yanıyor?
 
 Şema, tam boyutlu ANSI klavyedeki fiziksel konumları gösterir. Fransızca AZERTY düzeninde `A` tuşuna bastığınızda şemadaki `Q` yanabilir. **Son tuş** alanında, düzeninizin ürettiği `a` değeri fiziksel konumun kodu olan `KeyQ` ile birlikte gösterilir. Kompakt bir klavyeniz varsa klavyenizde bulunan tuşları deneyin. [MDN’in fiziksel tuş kodları kılavuzu](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Fare Testi](../mouse-tester/)

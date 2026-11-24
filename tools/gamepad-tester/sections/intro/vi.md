@@ -15,3 +15,5 @@ Nhấn rồi thả từng nút. Nút kỹ thuật số hoạt động bình thư
 ## Vì sao trình duyệt không phát hiện tay cầm?
 
 Kiểm tra xem thiết bị đã nhận tay cầm chưa, sau đó quay lại thẻ này và nhấn một nút lần nữa. Nếu Bluetooth không ổn định, thử dùng cáp USB có hỗ trợ truyền dữ liệu. Nếu tay cầm hoạt động trong ứng dụng khác, hãy mở trực tiếp công cụ này trong trình duyệt đã cập nhật. Trang chỉ đọc được những tín hiệu mà trình duyệt và hệ điều hành cung cấp.
+
+[Công cụ kiểm tra chuột](../mouse-tester/)

@@ -15,3 +15,5 @@ Appuyez sur chaque bouton, puis relâchez-le. Un bouton numérique passe génér
 ## Pourquoi ma manette n’est-elle pas détectée ?
 
 Vérifiez que votre appareil reconnaît la manette, puis revenez dans cet onglet et appuyez de nouveau sur un bouton. Si le Bluetooth est instable, essayez un câble USB qui prend en charge le transfert de données. Si la manette fonctionne dans une autre application, essayez d’ouvrir le test directement dans un navigateur à jour. Les entrées disponibles dépendent du navigateur et du système d’exploitation.
+
+[Testeur de souris](../mouse-tester/)

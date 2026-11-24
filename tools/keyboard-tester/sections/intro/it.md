@@ -15,3 +15,5 @@ Seleziona di nuovo **Avvia il test** se hai fatto clic altrove o hai usato Tab o
 ## Perché si illumina un tasto diverso?
 
 Lo schema riproduce le posizioni fisiche di una tastiera ANSI in formato completo. Con il layout AZERTY francese, premere `A` può illuminare `Q` nello schema. In **Ultimo tasto** trovi il valore prodotto dal tuo layout, `a`, accanto al codice fisico `KeyQ`. Se usi una tastiera compatta, prova i tasti che ha. [Guida di MDN ai codici fisici dei tasti](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Test del mouse](../mouse-tester/)

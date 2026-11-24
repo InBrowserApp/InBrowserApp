@@ -15,3 +15,5 @@ Pilih **Mulai tes** lagi jika Anda mengeklik area lain atau menekan Tab atau Esc
 ## Mengapa tombol lain yang menyala?
 
 Diagram mengacu pada posisi fisik tombol pada keyboard ANSI ukuran penuh. Pada tata letak AZERTY Prancis, menekan `A` dapat membuat `Q` menyala pada diagram. **Tombol terakhir** tetap menampilkan nilai dari tata letak yang Anda gunakan, yaitu `a`, bersama kode posisi fisik `KeyQ`. Jika memakai keyboard ringkas, fokuslah pada tombol yang memang tersedia. [Panduan MDN tentang kode posisi fisik tombol](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Penguji Mouse](../mouse-tester/)

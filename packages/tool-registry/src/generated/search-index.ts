@@ -29569,6 +29569,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mouse-tester",
+    category: "misc",
+    icon: "mouse",
+    tags: [
+      "mouse",
+      "mouse buttons",
+      "double click",
+      "scroll wheel",
+      "drag",
+      "pointer",
+      "trackpad",
+      "hardware",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار الماوس",
+        description:
+          "اختبر أزرار الماوس والأزرار الجانبية والنقر المزدوج والسحب والتمرير الأفقي أو الرأسي. تابع مسار المؤشر في المتصفح.",
+      },
+      de: {
+        name: "Maustester",
+        description:
+          "Teste Maustasten, Seitentasten, Doppelklicks, Ziehen und horizontales oder vertikales Scrollen. Verfolge die Spur deines Mauszeigers im Browser.",
+      },
+      en: {
+        name: "Mouse Tester",
+        description:
+          "Test mouse buttons, side buttons, double-clicks, dragging, and horizontal or vertical scrolling. Follow your pointer trail in the browser.",
+      },
+      es: {
+        name: "Comprobador de ratón",
+        description:
+          "Comprueba los botones del ratón y los botones laterales, los dobles clics, el arrastre y el desplazamiento horizontal o vertical. Sigue el recorrido del puntero en el navegador.",
+      },
+      fr: {
+        name: "Testeur de souris",
+        description:
+          "Testez les boutons de la souris, les boutons latéraux, les doubles-clics, le glissement et le défilement horizontal ou vertical. Suivez la trace de votre pointeur dans le navigateur.",
+      },
+      he: {
+        name: "בודק עכבר",
+        description:
+          "בדקו לחצני עכבר ולחצני צד, לחיצות כפולות, גרירה וגלילה אופקית או אנכית. עקבו אחר מסלול המצביע בדפדפן.",
+      },
+      hi: {
+        name: "माउस टेस्टर",
+        description:
+          "माउस के बटन, साइड बटन, डबल-क्लिक, ड्रैग और आड़े या लंबवत स्क्रॉल की जाँच करें। ब्राउज़र में पॉइंटर की राह देखें।",
+      },
+      id: {
+        name: "Penguji Mouse",
+        description:
+          "Uji tombol mouse, tombol samping, klik ganda, seret, serta gulir horizontal atau vertikal. Lihat jejak penunjuk di browser.",
+      },
+      it: {
+        name: "Test del mouse",
+        description:
+          "Prova i pulsanti del mouse, quelli laterali, il doppio clic, il trascinamento e lo scorrimento orizzontale o verticale. Segui la traccia del puntatore nel browser.",
+      },
+      ja: {
+        name: "マウステスター",
+        description:
+          "マウスのボタンやサイドボタン、ダブルクリック、ドラッグ、水平・垂直スクロールをテストします。ブラウザーでポインターの軌跡を確認できます。",
+      },
+      ko: {
+        name: "마우스 테스터",
+        description:
+          "마우스 버튼과 측면 버튼, 더블 클릭, 드래그, 가로 및 세로 스크롤을 테스트하세요. 브라우저에서 포인터 이동 궤적을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji tetikus",
+        description:
+          "Uji butang tetikus, butang sisi, dwiklik, seretan dan penatalan mendatar atau menegak. Ikuti jejak penuding dalam pelayar.",
+      },
+      nl: {
+        name: "Muistester",
+        description:
+          "Test muisknoppen, zijknoppen, dubbelklikken, slepen en horizontaal of verticaal scrollen. Volg het spoor van je muisaanwijzer in de browser.",
+      },
+      no: {
+        name: "Mustester",
+        description:
+          "Test museknapper, sideknapper, dobbeltklikk, draing og vannrett eller loddrett rulling. Følg musepekerens spor i nettleseren.",
+      },
+      pl: {
+        name: "Tester myszy",
+        description:
+          "Sprawdź przyciski myszy i przyciski boczne, dwukrotne kliknięcia, przeciąganie oraz przewijanie w poziomie i w pionie. Śledź ruch wskaźnika w przeglądarce.",
+      },
+      pt: {
+        name: "Testador de mouse",
+        description:
+          "Teste os botões do mouse, botões laterais, cliques duplos, arraste e rolagem horizontal ou vertical. Acompanhe o rastro do ponteiro no navegador.",
+      },
+      ru: {
+        name: "Тест мыши",
+        description:
+          "Проверьте кнопки мыши, включая боковые, двойные щелчки, перетаскивание и прокрутку по горизонтали и вертикали. Следите за траекторией указателя в браузере.",
+      },
+      sv: {
+        name: "Mustestare",
+        description:
+          "Testa musknappar, sidoknappar, dubbelklick, dragning och horisontell eller vertikal rullning. Följ muspekarens spår i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบเมาส์",
+        description:
+          "ทดสอบปุ่มเมาส์ ปุ่มด้านข้าง การดับเบิลคลิก การลาก และการเลื่อนแนวนอนหรือแนวตั้ง พร้อมดูรอยการเคลื่อนที่ของตัวชี้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Fare Testi",
+        description:
+          "Fare düğmelerini, yan düğmeleri, çift tıklamayı, sürüklemeyi ve yatay veya dikey kaydırmayı test edin. İşaretçinizin izini tarayıcıda takip edin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra chuột",
+        description:
+          "Kiểm tra các nút chuột, nút bên hông, thao tác nhấp đúp, kéo và cuộn ngang hoặc dọc. Theo dõi vệt di chuyển của con trỏ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "鼠标测试器",
+        description:
+          "测试鼠标按键、侧键、双击、拖动以及水平或垂直滚动。在浏览器中查看鼠标指针轨迹。",
+      },
+      "zh-TW": {
+        name: "滑鼠測試器",
+        description:
+          "測試滑鼠按鍵、側鍵、連按兩下、拖曳及水平或垂直捲動，並在瀏覽器中查看指標軌跡。",
+      },
+    },
+  },
+  {
     slug: "murmurhash3-x64-128-hash-text-or-file",
     category: "crypto",
     icon: "lock",

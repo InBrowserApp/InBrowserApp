@@ -15,3 +15,5 @@
 ## 为什么亮起的是另一个键？
 
 示意图按全尺寸 ANSI 键盘的物理键位排列。在法语 AZERTY 布局上，按 `A` 可能会点亮图中的 `Q`。**最近一次按键** 仍会显示你的布局产生的键值 `a`，旁边是物理键位代码 `KeyQ`。如果你用的是紧凑型键盘，测试键盘上实际有的键即可。[MDN 的物理键位代码说明](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[鼠标测试器](../mouse-tester/)

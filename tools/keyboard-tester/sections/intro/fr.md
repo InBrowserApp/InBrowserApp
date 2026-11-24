@@ -15,3 +15,5 @@ Sélectionnez à nouveau **Lancer le test** si vous avez cliqué ailleurs ou si 
 ## Pourquoi une autre touche s’allume-t-elle ?
 
 Le schéma reprend les positions physiques d’un clavier ANSI avec pavé numérique. Avec la disposition française AZERTY, appuyer sur `A` peut allumer `Q` sur le schéma. Sous **Dernière touche**, la valeur produite par votre disposition, `a`, s’affiche à côté du code physique `KeyQ`. Si votre clavier est compact, testez les touches dont il dispose. [Guide MDN sur les codes des touches physiques](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Testeur de souris](../mouse-tester/)

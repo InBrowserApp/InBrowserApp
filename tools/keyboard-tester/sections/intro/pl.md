@@ -15,3 +15,5 @@ Wybierz ponownie **Rozpocznij test**, jeśli klikniesz poza obszarem testu lub o
 ## Dlaczego podświetla się inny klawisz?
 
 Schemat pokazuje położenie klawiszy pełnowymiarowej klawiatury ANSI. Przy francuskim układzie AZERTY naciśnięcie `A` może podświetlić `Q` na schemacie. Pole **Ostatni klawisz** pokazuje znak `a` z używanego układu obok kodu fizycznego klawisza `KeyQ`. Jeśli korzystasz z kompaktowej klawiatury, sprawdź klawisze, które faktycznie się na niej znajdują. [Przewodnik MDN po kodach fizycznych klawiszy](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Tester myszy](../mouse-tester/)

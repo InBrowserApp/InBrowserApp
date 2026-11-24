@@ -15,3 +15,5 @@ Pilih **Mulakan ujian** sekali lagi jika anda mengklik di luar ruang ujian atau 
 ## Mengapa kekunci lain menyala?
 
 Rajah mengikut kedudukan fizikal kekunci pada papan kekunci ANSI bersaiz penuh. Pada susun atur AZERTY Perancis, menekan `A` boleh menyalakan `Q` pada rajah. **Kekunci terakhir** masih memaparkan nilai daripada susun atur anda, iaitu `a`, bersama kod kedudukan fizikal `KeyQ`. Jika menggunakan papan kekunci kompak, uji kekunci yang ada pada papan kekunci anda. [Panduan MDN tentang kod kedudukan fizikal kekunci](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Penguji tetikus](../mouse-tester/)

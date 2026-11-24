@@ -15,3 +15,5 @@ Kies opnieuw **Test starten** als je ergens anders hebt geklikt of de testzone m
 ## Waarom licht er een andere toets op?
 
 De afbeelding toont de fysieke toetsposities van een volledig ANSI-toetsenbord. Als je op een Frans AZERTY-toetsenbord op `A` drukt, kan op de afbeelding `Q` oplichten. Bij **Laatste toets** zie je de waarde van jouw toetsenbordindeling, `a`, naast de code voor de fysieke toetspositie, `KeyQ`. Gebruik je een compact toetsenbord, test dan de toetsen die daarop aanwezig zijn. [MDN-documentatie over fysieke toetscodes](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[Muistester](../mouse-tester/)

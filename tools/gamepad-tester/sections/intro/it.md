@@ -15,3 +15,5 @@ Premi e rilascia ogni pulsante. Un pulsante digitale di solito passa da 0% a 100
 ## Perché il controller non viene rilevato?
 
 Verifica che il dispositivo riconosca il controller, poi torna in questa scheda e premi di nuovo un pulsante. Se la connessione Bluetooth è instabile, prova un cavo USB che supporti il trasferimento dei dati. Se il controller funziona in un’altra app, prova ad aprire il test direttamente in un browser aggiornato. Gli input disponibili dipendono dal browser e dal sistema operativo.
+
+[Test del mouse](../mouse-tester/)

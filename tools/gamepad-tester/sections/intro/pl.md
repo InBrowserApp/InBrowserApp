@@ -15,3 +15,5 @@ Wciśnij i puść każdy przycisk. Sprawny przycisk cyfrowy zwykle przełącza s
 ## Dlaczego przeglądarka nie wykrywa mojego pada?
 
 Sprawdź, czy urządzenie rozpoznaje pada, wróć do tej karty i ponownie naciśnij przycisk. Jeśli połączenie Bluetooth jest niestabilne, wypróbuj kabel USB obsługujący przesyłanie danych. Jeśli pad działa w innej aplikacji, spróbuj otworzyć tester bezpośrednio w aktualnej przeglądarce. Zakres odczytywanych danych zależy od przeglądarki i systemu operacyjnego.
+
+[Tester myszy](../mouse-tester/)

@@ -15,3 +15,5 @@
 ## 為什麼亮起的是另一個鍵？
 
 示意圖依全尺寸 ANSI 鍵盤的實體鍵位排列。使用法文 AZERTY 配置時，按 `A` 可能會點亮圖中的 `Q`。**上次按鍵** 仍會顯示鍵盤配置輸出的鍵值 `a`，旁邊是實體鍵位代碼 `KeyQ`。如果你用的是精簡型鍵盤，測試鍵盤上實際有的鍵即可。[MDN 的實體鍵位代碼說明](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+[滑鼠測試器](../mouse-tester/)
