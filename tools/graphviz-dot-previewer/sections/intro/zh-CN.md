@@ -9,3 +9,7 @@
 ## 理解错误和布局提示
 
 边运算符与图形类型不匹配、缺少花括号或引号都可能报错；请检查提示行及其上一行。某些属性无法应用时仍可能显示预览和提示。如果源码指定了 `layout` 属性，Graphviz 会使用该引擎。详情参阅 [DOT 语言参考](https://graphviz.org/doc/info/lang.html)和 [Graphviz 布局指南](https://graphviz.org/docs/layouts/)。
+
+## 将图形下载为 SVG
+
+选择**下载 SVG**可将当前布局保存为矢量图像。**适应视图**和**实际大小**只改变预览效果。保留 DOT 源码，以便日后编辑图形。

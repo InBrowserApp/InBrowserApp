@@ -9,3 +9,7 @@ Mulai dengan `dot` untuk graf berlapis, seperti dependensi build. Coba `neato` a
 ## Pahami catatan tata letak dan kesalahan sintaks
 
 Graphviz dapat melaporkan kesalahan jika operator sisi tidak cocok dengan jenis graf atau jika tanda kurung kurawal atau tanda kutip tidak lengkap. Periksa baris yang dilaporkan dan baris sebelumnya. Pratinjau juga dapat disertai catatan tentang atribut yang tidak bisa diterapkan. Jika graf menentukan atribut `layout`, Graphviz menggunakan mesin yang tercantum di sana. Baca [referensi bahasa DOT](https://graphviz.org/doc/info/lang.html) dan [panduan tata letak Graphviz](https://graphviz.org/docs/layouts/) untuk detail sintaks dan mesin.
+
+## Unduh graf sebagai SVG
+
+Pilih **Unduh SVG** untuk menyimpan tata letak saat ini sebagai gambar vektor. **Sesuaikan dengan tampilan** dan **Ukuran sebenarnya** hanya mengubah pratinjau. Simpan kode DOT agar bisa mengedit graf lagi nanti.

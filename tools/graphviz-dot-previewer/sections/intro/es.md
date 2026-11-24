@@ -9,3 +9,7 @@ Empieza con `dot` para grafos por niveles, como las dependencias de compilación
 ## Cómo interpretar los avisos de disposición y los errores de sintaxis
 
 Graphviz puede indicar un error si el operador de una arista no coincide con el tipo de grafo o si falta una llave o una comilla. Revisa la línea indicada y la anterior. La vista previa también puede aparecer junto a avisos sobre atributos que Graphviz no pudo aplicar. Si el grafo ya define el atributo `layout`, Graphviz usa el motor indicado en él. Consulta la [referencia del lenguaje DOT](https://graphviz.org/doc/info/lang.html) y la [guía de disposición de Graphviz](https://graphviz.org/docs/layouts/) para ver los detalles de sintaxis y de cada motor.
+
+## Descargar un grafo en SVG
+
+Elige **Descargar SVG** para guardar la disposición actual como imagen vectorial. **Ajustar a la vista** y **Tamaño real** solo cambian la vista previa. Conserva el código DOT para editar el grafo más adelante.

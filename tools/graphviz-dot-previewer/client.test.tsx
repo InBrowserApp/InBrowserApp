@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import {
   act,
   cleanup,
@@ -27,7 +28,8 @@ class GraphWorker extends EventTarget {
   }
 }
 
-const svg = '<svg xmlns="http://www.w3.org/2000/svg" />'
+const svg =
+  '<svg xmlns="http://www.w3.org/2000/svg" onload=""><text>A</text></svg>'
 
 beforeEach(() => vi.stubGlobal("Worker", GraphWorker))
 afterEach(() => {
@@ -45,6 +47,7 @@ test("ignores obsolete previews and shows the parser error until the user correc
   fireEvent.change(input, { target: { value: "digraph {" } })
   worker.receive({ ...examples.dependencies, svg, notes: [] })
   expect(screen.queryByRole("img", { name: m.preview })).toBeNull()
+  expect(screen.queryByRole("link", { name: m.downloadSvg })).toBeNull()
   worker.receive({
     source: "digraph {",
     engine: "dot",
@@ -62,8 +65,14 @@ test("ignores obsolete previews and shows the parser error until the user correc
   })
   expect(screen.getByRole("img", { name: m.preview })).toBeTruthy()
   expect(screen.getByText(m.warnings)).toBeTruthy()
+  const download = screen.getByRole("link", { name: m.downloadSvg })
+  expect(download.getAttribute("download")).toBe("graphviz-graph.svg")
+  const renderedSvg = decodeURIComponent(download.getAttribute("href")!)
+  expect(renderedSvg).toContain("<text>A</text>")
+  expect(renderedSvg).not.toContain("onload")
   fireEvent.change(input, { target: { value: "" } })
   expect(screen.getByText(m.empty)).toBeTruthy()
+  expect(screen.queryByRole("link", { name: m.downloadSvg })).toBeNull()
   unmount()
   expect(worker.terminate).toHaveBeenCalledOnce()
 })

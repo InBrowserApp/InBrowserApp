@@ -14402,117 +14402,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "معاين Graphviz DOT",
         description:
-          "ارسم الرسوم البيانية من شيفرة Graphviz DOT عبر الإنترنت. عاين الرسوم الموجّهة وغير الموجّهة أثناء التحرير وقارن بين محرّكات التخطيط في Graphviz.",
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
       },
       de: {
         name: "Graphviz-DOT-Vorschau",
         description:
-          "Lass Graphviz-DOT-Code online rendern. Sieh dir gerichtete und ungerichtete Graphen schon beim Bearbeiten an und vergleiche die Layout-Engines von Graphviz.",
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
       },
       en: {
         name: "Graphviz DOT Previewer",
         description:
-          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit and compare Graphviz layout engines.",
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
       },
       es: {
         name: "Vista previa de Graphviz DOT",
         description:
-          "Renderiza código Graphviz DOT en línea. Obtén una vista previa de grafos dirigidos y no dirigidos mientras editas y compara los motores de disposición de Graphviz.",
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
       },
       fr: {
         name: "Aperçu Graphviz DOT",
         description:
-          "Affichez du code Graphviz DOT en ligne. Prévisualisez les graphes orientés et non orientés pendant la saisie et comparez les moteurs de disposition de Graphviz.",
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
       },
       he: {
         name: "תצוגה מקדימה של Graphviz DOT",
         description:
-          "הציגו גרפים מקוד Graphviz DOT בדפדפן. צפו בגרפים מכוונים ולא מכוונים שמתעדכנים תוך כדי עריכה והשוו בין מנועי הפריסה של Graphviz.",
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
       },
       hi: {
         name: "Graphviz DOT प्रीव्यूअर",
         description:
-          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें।",
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Graphviz DOT",
         description:
-          "Tampilkan graf dari kode Graphviz DOT secara online. Lihat graf berarah dan tak berarah saat mengedit kode, lalu bandingkan mesin tata letak Graphviz.",
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
       },
       it: {
         name: "Anteprima Graphviz DOT",
         description:
-          "Visualizza il codice Graphviz DOT online. Guarda l’anteprima di grafi orientati e non orientati mentre scrivi e confronta i motori di layout di Graphviz.",
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
       },
       ja: {
         name: "Graphviz DOT プレビューアー",
         description:
-          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。",
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
       },
       ko: {
         name: "Graphviz DOT 미리보기",
         description:
-          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다.",
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Graphviz DOT",
         description:
-          "Paparkan graf daripada kod Graphviz DOT dalam talian. Pratonton graf berarah dan tak berarah sambil menyunting kod, kemudian bandingkan enjin susun atur Graphviz.",
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
       },
       nl: {
         name: "Graphviz DOT-voorvertoner",
         description:
-          "Zet Graphviz DOT-code online om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt en vergelijk de indelingsalgoritmen van Graphviz.",
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
       },
       no: {
         name: "Graphviz DOT-forhåndsviser",
         description:
-          "Tegn grafer fra Graphviz DOT-kode i nettleseren. Forhåndsvis rettede og urettede grafer mens du skriver, og sammenlign layoutmotorene i Graphviz.",
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
       },
       pl: {
         name: "Podgląd Graphviz DOT",
         description:
-          "Rysuj grafy na podstawie kodu Graphviz DOT online. Wyświetlaj grafy skierowane i nieskierowane podczas pisania oraz porównuj silniki układu Graphviz.",
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
       },
       pt: {
         name: "Pré-visualizador de Graphviz DOT",
         description:
-          "Renderize código Graphviz DOT online. Veja grafos direcionados e não direcionados enquanto edita e compare os mecanismos de layout do Graphviz.",
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
       },
       ru: {
         name: "Предпросмотр Graphviz DOT",
         description:
-          "Стройте графы по коду Graphviz DOT прямо в браузере. Смотрите, как меняются ориентированные и неориентированные графы во время редактирования, и сравнивайте способы компоновки.",
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
       },
       sv: {
         name: "Graphviz DOT-förhandsgranskare",
         description:
-          "Rita grafer från Graphviz DOT-kod direkt i webbläsaren. Förhandsvisa riktade och oriktade grafer medan du skriver och jämför Graphviz layoutmotorer.",
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
         description:
-          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง",
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
       },
       tr: {
         name: "Graphviz DOT Önizleyici",
         description:
-          "Graphviz DOT kodunu çevrimiçi görselleştirin. Düzenleme sırasında yönlü ve yönsüz grafları önizleyin ve Graphviz yerleşim motorlarını karşılaştırın.",
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Graphviz DOT",
         description:
-          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục.",
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
       },
       "zh-CN": {
         name: "Graphviz DOT 预览器",
         description:
-          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。",
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
       },
       "zh-TW": {
         name: "Graphviz DOT 預覽器",
         description:
-          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。",
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
       },
     },
   },
@@ -57988,117 +57988,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "معاين Graphviz DOT",
         description:
-          "ارسم الرسوم البيانية من شيفرة Graphviz DOT عبر الإنترنت. عاين الرسوم الموجّهة وغير الموجّهة أثناء التحرير وقارن بين محرّكات التخطيط في Graphviz.",
+          "عاين الرسوم البيانية الموجّهة وغير الموجّهة أثناء تحرير شيفرة Graphviz DOT في المتصفح. قارن بين محرّكات التخطيط ونزّل النتيجة بصيغة SVG.",
       },
       de: {
         name: "Graphviz-DOT-Vorschau",
         description:
-          "Lass Graphviz-DOT-Code online rendern. Sieh dir gerichtete und ungerichtete Graphen schon beim Bearbeiten an und vergleiche die Layout-Engines von Graphviz.",
+          "Sieh dir gerichtete und ungerichtete Graphen aus Graphviz-DOT-Code an. Vergleiche Layout-Engines und lade den Graphen als SVG herunter.",
       },
       en: {
         name: "Graphviz DOT Previewer",
         description:
-          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit and compare Graphviz layout engines.",
+          "Render Graphviz DOT code online. Preview directed and undirected graphs as you edit, compare layout engines, and download SVG.",
       },
       es: {
         name: "Vista previa de Graphviz DOT",
         description:
-          "Renderiza código Graphviz DOT en línea. Obtén una vista previa de grafos dirigidos y no dirigidos mientras editas y compara los motores de disposición de Graphviz.",
+          "Previsualiza grafos dirigidos y no dirigidos a partir de código Graphviz DOT. Compara motores de disposición y descarga el grafo en SVG.",
       },
       fr: {
         name: "Aperçu Graphviz DOT",
         description:
-          "Affichez du code Graphviz DOT en ligne. Prévisualisez les graphes orientés et non orientés pendant la saisie et comparez les moteurs de disposition de Graphviz.",
+          "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG.",
       },
       he: {
         name: "תצוגה מקדימה של Graphviz DOT",
         description:
-          "הציגו גרפים מקוד Graphviz DOT בדפדפן. צפו בגרפים מכוונים ולא מכוונים שמתעדכנים תוך כדי עריכה והשוו בין מנועי הפריסה של Graphviz.",
+          "ערכו קוד Graphviz DOT וצפו בתצוגה מקדימה של גרפים מכוונים ולא מכוונים. השוו בין מנועי פריסה והורידו את הגרף כ-SVG.",
       },
       hi: {
         name: "Graphviz DOT प्रीव्यूअर",
         description:
-          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें।",
+          "Graphviz DOT कोड ऑनलाइन रेंडर करें। संपादन के दौरान दिशायुक्त और दिशारहित ग्राफ़ देखें और लेआउट इंजन की तुलना करें। मौजूदा ग्राफ़ SVG के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Pratinjau Graphviz DOT",
         description:
-          "Tampilkan graf dari kode Graphviz DOT secara online. Lihat graf berarah dan tak berarah saat mengedit kode, lalu bandingkan mesin tata letak Graphviz.",
+          "Pratinjau graf berarah dan tak berarah dari kode Graphviz DOT saat mengeditnya. Bandingkan mesin tata letak dan unduh hasilnya sebagai SVG.",
       },
       it: {
         name: "Anteprima Graphviz DOT",
         description:
-          "Visualizza il codice Graphviz DOT online. Guarda l’anteprima di grafi orientati e non orientati mentre scrivi e confronta i motori di layout di Graphviz.",
+          "Visualizza in anteprima grafi orientati e non orientati da codice Graphviz DOT. Confronta i motori di layout e scarica il grafo in SVG.",
       },
       ja: {
         name: "Graphviz DOT プレビューアー",
         description:
-          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。",
+          "Graphviz DOT コードをオンラインで描画。有向グラフや無向グラフを編集しながら確認し、レイアウトエンジンを比較できます。 現在のグラフを SVG でダウンロードできます。",
       },
       ko: {
         name: "Graphviz DOT 미리보기",
         description:
-          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다.",
+          "Graphviz DOT 코드를 온라인으로 렌더링하세요. 편집하면서 방향 및 무방향 그래프를 미리 보고 레이아웃 엔진을 비교할 수 있습니다. 현재 그래프를 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Graphviz DOT",
         description:
-          "Paparkan graf daripada kod Graphviz DOT dalam talian. Pratonton graf berarah dan tak berarah sambil menyunting kod, kemudian bandingkan enjin susun atur Graphviz.",
+          "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG.",
       },
       nl: {
         name: "Graphviz DOT-voorvertoner",
         description:
-          "Zet Graphviz DOT-code online om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt en vergelijk de indelingsalgoritmen van Graphviz.",
+          "Zet Graphviz DOT-code om in een graaf. Bekijk gerichte en ongerichte grafen terwijl je typt, vergelijk indelingsalgoritmen en download het resultaat als SVG.",
       },
       no: {
         name: "Graphviz DOT-forhåndsviser",
         description:
-          "Tegn grafer fra Graphviz DOT-kode i nettleseren. Forhåndsvis rettede og urettede grafer mens du skriver, og sammenlign layoutmotorene i Graphviz.",
+          "Forhåndsvis rettede og urettede grafer fra Graphviz DOT-kode mens du skriver. Sammenlign layoutmotorer og last ned grafen som SVG.",
       },
       pl: {
         name: "Podgląd Graphviz DOT",
         description:
-          "Rysuj grafy na podstawie kodu Graphviz DOT online. Wyświetlaj grafy skierowane i nieskierowane podczas pisania oraz porównuj silniki układu Graphviz.",
+          "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG.",
       },
       pt: {
         name: "Pré-visualizador de Graphviz DOT",
         description:
-          "Renderize código Graphviz DOT online. Veja grafos direcionados e não direcionados enquanto edita e compare os mecanismos de layout do Graphviz.",
+          "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG.",
       },
       ru: {
         name: "Предпросмотр Graphviz DOT",
         description:
-          "Стройте графы по коду Graphviz DOT прямо в браузере. Смотрите, как меняются ориентированные и неориентированные графы во время редактирования, и сравнивайте способы компоновки.",
+          "Просматривайте ориентированные и неориентированные графы прямо во время редактирования кода Graphviz DOT. Сравнивайте способы компоновки и скачивайте граф в SVG.",
       },
       sv: {
         name: "Graphviz DOT-förhandsgranskare",
         description:
-          "Rita grafer från Graphviz DOT-kod direkt i webbläsaren. Förhandsvisa riktade och oriktade grafer medan du skriver och jämför Graphviz layoutmotorer.",
+          "Förhandsvisa riktade och oriktade grafer från Graphviz DOT-kod medan du skriver. Jämför layoutmotorer och ladda ned grafen som SVG.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่าง Graphviz DOT",
         description:
-          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง",
+          "แสดงโค้ด Graphviz DOT ออนไลน์ ดูตัวอย่างกราฟแบบมีทิศทางและไม่มีทิศทางขณะแก้ไข และเปรียบเทียบเอนจินจัดวาง ดาวน์โหลดกราฟปัจจุบันเป็น SVG",
       },
       tr: {
         name: "Graphviz DOT Önizleyici",
         description:
-          "Graphviz DOT kodunu çevrimiçi görselleştirin. Düzenleme sırasında yönlü ve yönsüz grafları önizleyin ve Graphviz yerleşim motorlarını karşılaştırın.",
+          "Graphviz DOT kodunu düzenlerken yönlü ve yönsüz grafları çevrimiçi önizleyin. Yerleşim motorlarını karşılaştırın ve grafı SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem trước Graphviz DOT",
         description:
-          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục.",
+          "Kết xuất mã Graphviz DOT trực tuyến. Xem trước đồ thị có hướng và vô hướng khi chỉnh sửa, đồng thời so sánh các bộ máy bố cục. Tải đồ thị hiện tại dưới dạng SVG.",
       },
       "zh-CN": {
         name: "Graphviz DOT 预览器",
         description:
-          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。",
+          "在线渲染 Graphviz DOT 代码，编辑时预览有向图和无向图，并比较布局引擎。 下载当前图形的 SVG。",
       },
       "zh-TW": {
         name: "Graphviz DOT 預覽器",
         description:
-          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。",
+          "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。",
       },
     },
   },

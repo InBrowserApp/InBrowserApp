@@ -9,3 +9,7 @@ Zacznij od `dot` w przypadku grafów warstwowych, na przykład grafu zależnośc
 ## Odczytuj komunikaty o układzie i składni
 
 Graphviz może zgłosić błąd, gdy operator krawędzi nie pasuje do typu grafu lub brakuje nawiasu klamrowego czy cudzysłowu. Sprawdź wiersz wskazany w komunikacie i wiersz powyżej. Graphviz może też wyświetlić graf z informacją o atrybutach, których nie udało się zastosować. Jeśli graf ma własny atrybut `layout`, Graphviz użyje wskazanego w nim silnika. Więcej informacji znajdziesz w [opisie języka DOT](https://graphviz.org/doc/info/lang.html) i [przewodniku po układach Graphviz](https://graphviz.org/docs/layouts/).
+
+## Pobierz graf w formacie SVG
+
+Wybierz **Pobierz SVG**, aby zapisać bieżący układ jako grafikę wektorową. Opcje **Dopasuj do widoku** i **Rzeczywisty rozmiar** zmieniają tylko podgląd. Zachowaj kod DOT, aby móc później edytować graf.

@@ -1,4 +1,4 @@
 {
   "name": "Pratonton Graphviz DOT",
-  "description": "Paparkan graf daripada kod Graphviz DOT dalam talian. Pratonton graf berarah dan tak berarah sambil menyunting kod, kemudian bandingkan enjin susun atur Graphviz."
+  "description": "Pratonton graf berarah dan tak berarah semasa menyunting kod Graphviz DOT dalam pelayar. Bandingkan enjin susun atur dan muat turun hasilnya sebagai SVG."
 }

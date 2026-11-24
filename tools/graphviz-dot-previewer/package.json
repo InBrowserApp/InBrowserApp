@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@viz-js/viz": "catalog:"
+    "@viz-js/viz": "catalog:",
+    "dompurify": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",

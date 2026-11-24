@@ -9,3 +9,7 @@ Mulakan dengan `dot` untuk graf berlapis, seperti graf kebergantungan binaan per
 ## Fahami nota susun atur dan ralat sintaks
 
 Graphviz boleh melaporkan ralat apabila operator sisi tidak sepadan dengan jenis graf atau apabila kurungan berombak atau tanda petik tidak lengkap. Semak baris yang dilaporkan dan baris sebelumnya. Pratonton juga mungkin disertakan nota tentang atribut yang tidak dapat digunakan. Jika graf mempunyai atribut `layout`, Graphviz akan menggunakan enjin yang dinyatakan di situ. Lihat [rujukan bahasa DOT](https://graphviz.org/doc/info/lang.html) dan [panduan susun atur Graphviz](https://graphviz.org/docs/layouts/) untuk butiran sintaks dan enjin.
+
+## Muat turun graf sebagai SVG
+
+Pilih **Muat turun SVG** untuk menyimpan susun atur semasa sebagai imej vektor. **Muatkan pada paparan** dan **Saiz sebenar** hanya mengubah pratonton. Simpan kod DOT untuk menyunting graf semula kemudian.

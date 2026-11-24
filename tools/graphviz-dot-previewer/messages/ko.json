@@ -11,5 +11,6 @@
   "invalid": "DOT 그래프를 렌더링할 수 없습니다. 구문을 확인하고 다시 시도하세요.",
   "warnings": "Graphviz 레이아웃 알림",
   "fit": "화면에 맞추기",
-  "actualSize": "실제 크기"
+  "actualSize": "실제 크기",
+  "downloadSvg": "SVG 다운로드"
 }

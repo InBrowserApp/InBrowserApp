@@ -11,5 +11,6 @@
   "invalid": "無法轉譯此 DOT 圖形。請檢查語法後再試。",
   "warnings": "Graphviz 佈局提示",
   "fit": "符合檢視範圍",
-  "actualSize": "實際大小"
+  "actualSize": "實際大小",
+  "downloadSvg": "下載 SVG"
 }

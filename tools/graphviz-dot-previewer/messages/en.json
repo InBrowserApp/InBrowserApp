@@ -11,5 +11,6 @@
   "invalid": "Could not render this DOT graph. Check the syntax and try again.",
   "warnings": "Graphviz layout notes",
   "fit": "Fit to view",
-  "actualSize": "Actual size"
+  "actualSize": "Actual size",
+  "downloadSvg": "Download SVG"
 }

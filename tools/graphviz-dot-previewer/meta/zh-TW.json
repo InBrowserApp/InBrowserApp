@@ -1,4 +1,4 @@
 {
   "name": "Graphviz DOT 預覽器",
-  "description": "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。"
+  "description": "在線上轉譯 Graphviz DOT 程式碼，編輯時預覽有向圖與無向圖，並比較佈局引擎。 下載目前圖形的 SVG。"
 }

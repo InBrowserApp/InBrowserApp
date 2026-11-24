@@ -11,5 +11,6 @@
   "invalid": "Det gick inte att rita DOT-grafen. Kontrollera syntaxen och försök igen.",
   "warnings": "Kommentarer om Graphviz layout",
   "fit": "Anpassa till vyn",
-  "actualSize": "Faktisk storlek"
+  "actualSize": "Faktisk storlek",
+  "downloadSvg": "Ladda ned SVG"
 }

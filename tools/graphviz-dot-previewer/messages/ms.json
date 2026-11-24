@@ -11,5 +11,6 @@
   "invalid": "Graf DOT ini tidak dapat dipaparkan. Semak sintaks dan cuba lagi.",
   "warnings": "Nota susun atur Graphviz",
   "fit": "Muatkan pada paparan",
-  "actualSize": "Saiz sebenar"
+  "actualSize": "Saiz sebenar",
+  "downloadSvg": "Muat turun SVG"
 }

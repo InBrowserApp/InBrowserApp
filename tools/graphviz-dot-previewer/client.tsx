@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react"
+import { useEffect, useId, useMemo, useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -9,8 +9,9 @@ import {
   SelectValue,
 } from "@workspace/ui/components/ui/select"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Code, Eye, Maximize2 } from "@workspace/ui/icons"
+import { Code, Download, Eye, Maximize2 } from "@workspace/ui/icons"
 import { examples } from "./examples"
+import { graphSvgUrl } from "./graph-svg"
 
 import type { GraphInput, GraphResult } from "./graph-worker"
 import type Messages from "./messages/en.json"
@@ -40,6 +41,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
   const current =
     result?.source === source && result.engine === engine ? result : undefined
   const svg = current?.svg
+  const url = useMemo(() => (svg ? graphSvgUrl(svg) : undefined), [svg])
   const notes = current?.notes.join("\n")
 
   useEffect(() => {
@@ -128,7 +130,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
           <div className="flex flex-wrap items-center gap-2">
             <DocumentIconButton
               label={m.fit}
-              disabled={!svg}
+              disabled={!url}
               aria-pressed={!actualSize}
               className="aria-pressed:bg-accent"
               onClick={() => setActualSize(false)}
@@ -140,7 +142,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
               variant="ghost"
               aria-label={m.actualSize}
               title={m.actualSize}
-              disabled={!svg}
+              disabled={!url}
               aria-pressed={actualSize}
               className="aria-pressed:bg-accent"
               onClick={() => setActualSize(true)}
@@ -167,10 +169,29 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
                 ))}
               </SelectContent>
             </Select>
+            <Button
+              asChild={Boolean(url)}
+              variant="outline"
+              size="sm"
+              disabled={!url}
+            >
+              {url ? (
+                <a
+                  href={url}
+                  download="graphviz-graph.svg"
+                  data-astro-prefetch="false"
+                >
+                  <Download data-icon="inline-start" aria-hidden="true" />
+                  {m.downloadSvg}
+                </a>
+              ) : (
+                <span>{m.downloadSvg}</span>
+              )}
+            </Button>
           </div>
         </div>
         <div className="relative min-h-56 flex-1 bg-white text-zinc-700 sm:min-h-72 lg:min-h-96">
-          {svg ? (
+          {url ? (
             <div
               role="group"
               aria-labelledby={previewId}
@@ -187,7 +208,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
                 }
               >
                 <img
-                  src={`data:image/svg+xml,${encodeURIComponent(svg)}`}
+                  src={url}
                   alt={m.preview}
                   className={
                     actualSize
@@ -222,7 +243,7 @@ export default function Client({ messages: m }: { messages: typeof Messages }) {
             </div>
           )}
         </div>
-        {svg && notes && (
+        {url && notes && (
           <details className="border-t px-4 py-2 text-sm">
             <summary className="cursor-pointer">{m.warnings}</summary>
             <pre

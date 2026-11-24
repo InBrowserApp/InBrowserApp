@@ -11,5 +11,6 @@
   "invalid": "Impossible d’afficher ce graphe DOT. Vérifiez la syntaxe et réessayez.",
   "warnings": "Remarques de Graphviz sur la disposition",
   "fit": "Ajuster à la vue",
-  "actualSize": "Taille réelle"
+  "actualSize": "Taille réelle",
+  "downloadSvg": "Télécharger le SVG"
 }

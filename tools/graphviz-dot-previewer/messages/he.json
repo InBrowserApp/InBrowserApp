@@ -11,5 +11,6 @@
   "invalid": "לא ניתן להציג את גרף ה-DOT. יש לבדוק את התחביר ולנסות שוב.",
   "warnings": "הערות פריסה של Graphviz",
   "fit": "התאמה לתצוגה",
-  "actualSize": "גודל בפועל"
+  "actualSize": "גודל בפועל",
+  "downloadSvg": "הורדת SVG"
 }

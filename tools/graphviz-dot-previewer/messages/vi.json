@@ -11,5 +11,6 @@
   "invalid": "Không thể kết xuất đồ thị DOT này. Hãy kiểm tra cú pháp và thử lại.",
   "warnings": "Lưu ý về bố cục Graphviz",
   "fit": "Vừa khung xem",
-  "actualSize": "Kích thước thực"
+  "actualSize": "Kích thước thực",
+  "downloadSvg": "Tải SVG"
 }

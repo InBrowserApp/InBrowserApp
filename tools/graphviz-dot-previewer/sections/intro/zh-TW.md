@@ -9,3 +9,7 @@
 ## 了解錯誤與佈局提示
 
 邊運算子與圖形類型不符、缺少大括號或引號都可能報錯；請檢查提示行及其上一行。某些屬性無法套用時仍可能顯示預覽及提示。如果原始碼指定 `layout` 屬性，Graphviz 會使用該引擎。詳見 [DOT 語言參考](https://graphviz.org/doc/info/lang.html)和 [Graphviz 佈局指南](https://graphviz.org/docs/layouts/)。
+
+## 將圖形下載為 SVG
+
+選擇**下載 SVG**可將目前的佈局儲存為向量影像。**符合檢視範圍**和**實際大小**只會改變預覽效果。保留 DOT 原始碼，以便日後編輯圖形。

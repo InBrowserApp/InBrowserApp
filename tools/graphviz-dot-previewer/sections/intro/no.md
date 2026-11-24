@@ -9,3 +9,7 @@ Begynn med `dot` for grafer i lag, for eksempel avhengigheter i et byggesystem. 
 ## Forstå meldinger om layout og syntaks
 
 Graphviz kan melde om en feil når kantoperatoren ikke passer til graftypen, eller når det mangler en krøllparentes eller et anførselstegn. Sjekk linjen i feilmeldingen og linjen over. Graphviz kan også vise grafen med merknader om attributter som ikke kunne brukes. Hvis grafen har sitt eget `layout`-attributt, bruker Graphviz motoren som er angitt der. Se [referansen for DOT-språket](https://graphviz.org/doc/info/lang.html) og [veiledningen til Graphviz-layout](https://graphviz.org/docs/layouts/) for detaljer.
+
+## Last ned en graf som SVG
+
+Velg **Last ned SVG** for å lagre det gjeldende oppsettet som et vektorbilde. **Tilpass til visningen** og **Faktisk størrelse** endrer bare forhåndsvisningen. Behold DOT-kildekoden hvis du vil redigere grafen senere.

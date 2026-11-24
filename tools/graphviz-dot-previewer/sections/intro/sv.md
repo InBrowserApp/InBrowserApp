@@ -9,3 +9,7 @@ Börja med `dot` för grafer i lager, till exempel byggberoenden. Prova `neato` 
 ## Tolka meddelanden om layout och syntax
 
 Graphviz kan rapportera fel om kantoperatorn inte stämmer med graftypen eller om en klammerparentes eller ett citattecken saknas. Kontrollera raden som anges i felmeddelandet och raden ovanför. Graphviz kan också visa grafen tillsammans med information om attribut som inte kunde användas. Om grafen har ett eget `layout`-attribut använder Graphviz den motor som anges där. Läs [referensen för DOT-språket](https://graphviz.org/doc/info/lang.html) och [Graphviz layoutguide](https://graphviz.org/docs/layouts/) för mer information.
+
+## Ladda ned en graf som SVG
+
+Välj **Ladda ned SVG** för att spara den aktuella layouten som en vektorbild. **Anpassa till vyn** och **Faktisk storlek** påverkar bara förhandsvisningen. Spara DOT-källkoden om du vill redigera grafen senare.

@@ -11,5 +11,6 @@
   "invalid": "DOT grafı oluşturulamadı. Söz dizimini kontrol edip yeniden deneyin.",
   "warnings": "Graphviz yerleşim notları",
   "fit": "Ekrana sığdır",
-  "actualSize": "Gerçek boyut"
+  "actualSize": "Gerçek boyut",
+  "downloadSvg": "SVG indir"
 }

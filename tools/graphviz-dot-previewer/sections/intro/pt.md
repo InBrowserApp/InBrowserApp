@@ -9,3 +9,7 @@ Comece com `dot` para grafos em camadas, como os de dependências de compilaçã
 ## Entender avisos de layout e erros de sintaxe
 
 O Graphviz pode apontar um erro se um operador de aresta não corresponde ao tipo de grafo ou se falta uma chave ou uma aspa. Confira a linha indicada e a anterior. A prévia também pode aparecer junto com avisos sobre atributos que o Graphviz não conseguiu aplicar. Se o grafo define o próprio atributo `layout`, o Graphviz usa o mecanismo indicado nele. Para mais detalhes, consulte a [referência da linguagem DOT](https://graphviz.org/doc/info/lang.html) e o [guia de layouts do Graphviz](https://graphviz.org/docs/layouts/).
+
+## Baixar um grafo em SVG
+
+Selecione **Baixar SVG** para salvar o layout atual como imagem vetorial. **Ajustar à janela** e **Tamanho real** alteram apenas a prévia. Guarde o código DOT para editar o grafo mais tarde.

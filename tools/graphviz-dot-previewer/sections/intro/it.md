@@ -9,3 +9,7 @@ Parti da `dot` per i grafi a livelli, come le dipendenze di compilazione. Prova 
 ## Interpretare gli avvisi sul layout e gli errori di sintassi
 
 Graphviz può segnalare un errore quando l’operatore di un arco non corrisponde al tipo di grafo o quando manca una parentesi graffa o una virgoletta. Controlla la riga indicata e quella precedente. L’anteprima può anche mostrare avvisi sugli attributi che Graphviz non ha potuto applicare. Se il grafo specifica un attributo `layout`, Graphviz usa il motore indicato in quell’attributo. Consulta il [riferimento del linguaggio DOT](https://graphviz.org/doc/info/lang.html) e la [guida ai layout di Graphviz](https://graphviz.org/docs/layouts/) per maggiori dettagli.
+
+## Scaricare un grafo in SVG
+
+Seleziona **Scarica SVG** per salvare il layout corrente come immagine vettoriale. **Adatta alla vista** e **Dimensioni reali** cambiano solo l’anteprima. Conserva il codice DOT per modificare il grafo in seguito.

@@ -1,4 +1,4 @@
 {
   "name": "Podgląd Graphviz DOT",
-  "description": "Rysuj grafy na podstawie kodu Graphviz DOT online. Wyświetlaj grafy skierowane i nieskierowane podczas pisania oraz porównuj silniki układu Graphviz."
+  "description": "Wyświetlaj podgląd grafów skierowanych i nieskierowanych z kodu Graphviz DOT podczas pisania. Porównuj silniki układu i pobierz graf w formacie SVG."
 }

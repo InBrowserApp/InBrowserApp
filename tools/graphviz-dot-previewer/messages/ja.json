@@ -11,5 +11,6 @@
   "invalid": "DOT グラフを描画できませんでした。構文を確認してもう一度お試しください。",
   "warnings": "Graphviz のレイアウトに関する通知",
   "fit": "画面に合わせる",
-  "actualSize": "実寸"
+  "actualSize": "実寸",
+  "downloadSvg": "SVG をダウンロード"
 }

@@ -1,4 +1,4 @@
 {
   "name": "Pré-visualizador de Graphviz DOT",
-  "description": "Renderize código Graphviz DOT online. Veja grafos direcionados e não direcionados enquanto edita e compare os mecanismos de layout do Graphviz."
+  "description": "Veja grafos direcionados e não direcionados a partir de código Graphviz DOT. Compare mecanismos de layout e baixe o grafo em SVG."
 }

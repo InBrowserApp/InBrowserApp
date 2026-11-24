@@ -11,5 +11,6 @@
   "invalid": "Nie udało się wyświetlić grafu DOT. Sprawdź składnię i spróbuj ponownie.",
   "warnings": "Komunikaty Graphviz o układzie",
   "fit": "Dopasuj do widoku",
-  "actualSize": "Rzeczywisty rozmiar"
+  "actualSize": "Rzeczywisty rozmiar",
+  "downloadSvg": "Pobierz SVG"
 }

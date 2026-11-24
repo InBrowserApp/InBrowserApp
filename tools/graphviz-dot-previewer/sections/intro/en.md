@@ -9,3 +9,7 @@ Start with `dot` for layered graphs such as build dependencies. Try `neato` or `
 ## Understand layout and syntax feedback
 
 Graphviz can report an error when an edge operator does not match the graph type or when a brace or quote is missing. Check the reported line and the line before it. Graphviz can also produce a preview with notes about attributes it could not apply. If your graph specifies its own `layout` attribute, Graphviz uses that engine. See the [DOT language reference](https://graphviz.org/doc/info/lang.html) and [Graphviz layout guide](https://graphviz.org/docs/layouts/) for syntax and engine details.
+
+## Download a graph as SVG
+
+Choose **Download SVG** to save the current layout as a vector image. **Fit to view** and **Actual size** only change the on-screen preview. Keep your DOT source if you want to edit the graph later.

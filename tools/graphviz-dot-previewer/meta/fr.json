@@ -1,4 +1,4 @@
 {
   "name": "Aperçu Graphviz DOT",
-  "description": "Affichez du code Graphviz DOT en ligne. Prévisualisez les graphes orientés et non orientés pendant la saisie et comparez les moteurs de disposition de Graphviz."
+  "description": "Prévisualisez des graphes orientés ou non à partir de code Graphviz DOT. Comparez les moteurs de disposition et téléchargez le graphe en SVG."
 }

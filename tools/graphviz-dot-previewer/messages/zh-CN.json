@@ -11,5 +11,6 @@
   "invalid": "无法渲染此 DOT 图形。请检查语法后重试。",
   "warnings": "Graphviz 布局提示",
   "fit": "适应视图",
-  "actualSize": "实际大小"
+  "actualSize": "实际大小",
+  "downloadSvg": "下载 SVG"
 }
