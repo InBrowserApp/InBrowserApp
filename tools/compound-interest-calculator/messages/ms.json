@@ -1,0 +1,33 @@
+{
+  "assumptions": "Pelan simpanan",
+  "initialAmount": "Baki permulaan",
+  "monthlyContribution": "Deposit bulanan",
+  "annualRate": "Kadar faedah tahunan",
+  "years": "Tempoh simpanan",
+  "yearsUnit": "tahun",
+  "frequency": "Kekerapan pengkompaunan",
+  "frequencies": {
+    "daily": "Harian",
+    "monthly": "Bulanan",
+    "quarterly": "Suku tahunan",
+    "semiannually": "Dua kali setahun",
+    "annually": "Tahunan"
+  },
+  "timing": "Masa deposit bulanan",
+  "timings": {
+    "end": "Akhir bulan",
+    "start": "Awal bulan"
+  },
+  "reset": "Pulihkan nilai contoh",
+  "endingBalance": "Anggaran baki",
+  "totalContributed": "Jumlah deposit",
+  "interestEarned": "Faedah terkumpul",
+  "growth": "Pertumbuhan simpanan",
+  "breakdown": "Pecahan mengikut tahun",
+  "year": "Tahun",
+  "amountError": "Masukkan amaun 0 atau lebih.",
+  "rateError": "Masukkan kadar faedah tahunan antara −100% dengan 100%.",
+  "yearsError": "Masukkan nombor bulat antara 1 dengan 100.",
+  "resultError": "Amaun terlalu besar untuk dikira. Cuba nilai yang lebih kecil.",
+  "resultPending": "Semak ruangan yang ditandakan untuk melihat anggaran anda."
+}

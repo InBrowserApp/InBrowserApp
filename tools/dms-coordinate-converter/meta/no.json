@@ -1,0 +1,4 @@
+{
+  "name": "Koordinatomregner for desimalgrader og DMS",
+  "description": "Regn om breddegrad og lengdegrad mellom desimalgrader (DD) og grader, minutter og sekunder (DMS). Kopier GPS-koordinatene i ønsket format."
+}

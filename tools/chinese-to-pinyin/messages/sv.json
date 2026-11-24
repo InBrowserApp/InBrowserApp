@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Kinesisk text",
+  "inputPlaceholder": "Skriv eller klistra in kinesisk text",
+  "exampleLabel": "Prova ett exempel",
+  "clearLabel": "Rensa",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Här visas texten i pinyin",
+  "formatLabel": "Tonangivelse",
+  "marksLabel": "Tontecken",
+  "numbersLabel": "Tonsiffror",
+  "plainLabel": "Utan toner",
+  "copyLabel": "Kopiera pinyin",
+  "copiedLabel": "Kopierat",
+  "copyFailedLabel": "Det gick inte att kopiera"
+}

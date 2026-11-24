@@ -1,0 +1,18 @@
+{
+  "decimal": "Darjah perpuluhan (DD)",
+  "dms": "Darjah, minit dan saat (DMS)",
+  "latitude": "Latitud",
+  "longitude": "Longitud",
+  "degrees": "Darjah",
+  "minutes": "Minit",
+  "seconds": "Saat",
+  "hemisphere": "Hemisfera",
+  "north": "Utara (N)",
+  "south": "Selatan (S)",
+  "east": "Timur (E)",
+  "west": "Barat (W)",
+  "example": "Cuba contoh",
+  "copy": "Salin koordinat",
+  "copied": "Disalin",
+  "invalid": "Latitud mestilah dalam julat ±90° dan longitud dalam julat ±180°. Minit dan saat mestilah kurang daripada 60."
+}

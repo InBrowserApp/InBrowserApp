@@ -258,6 +258,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "certificate-public-key-parser",
   },
   {
+    category: "text",
+    name: "सरलीकृत और पारंपरिक चीनी लिपि कन्वर्टर",
+    slug: "chinese-text-converter",
+  },
+  {
+    category: "text",
+    name: "चीनी से पिनयिन कन्वर्टर",
+    slug: "chinese-to-pinyin",
+  },
+  {
     category: "misc",
     name: "संख्या ↔ चीनी वित्तीय अंक कन्वर्टर",
     slug: "chinese-uppercase-number-converter",
@@ -306,6 +316,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "कलर पिकर",
     slug: "color-picker",
+  },
+  {
+    category: "misc",
+    name: "चक्रवृद्धि ब्याज कैलकुलेटर",
+    slug: "compound-interest-calculator",
   },
   {
     category: "web",
@@ -401,6 +416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DjVu व्यूअर",
     slug: "djvu-viewer",
+  },
+  {
+    category: "misc",
+    name: "अक्षांश और देशांतर का DMS कन्वर्टर",
+    slug: "dms-coordinate-converter",
   },
   {
     category: "network",
@@ -626,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal इवेंट जेनरेटर",
     slug: "ical-event-generator",
+  },
+  {
+    category: "time",
+    name: "ICS कैलेंडर फ़ाइल व्यूअर",
+    slug: "ics-calendar-viewer",
   },
   {
     category: "image",

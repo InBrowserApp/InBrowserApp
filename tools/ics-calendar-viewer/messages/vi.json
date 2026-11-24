@@ -1,0 +1,20 @@
+{
+  "openFile": "Mở tệp",
+  "sample": "Thử ví dụ",
+  "input": "Văn bản nguồn",
+  "readError": "Không đọc được tệp. Hãy chọn lại tệp hoặc dán văn bản.",
+  "paste": "Dán văn bản ICS",
+  "view": "Xem sự kiện",
+  "placeholder": "Dán nội dung tệp iCalendar vào đây",
+  "search": "Tìm sự kiện",
+  "empty": "Mở tệp ICS hoặc thử ví dụ để xem các sự kiện.",
+  "invalid": "Không đọc được tệp iCalendar này. Hãy kiểm tra nội dung ICS rồi thử lại.",
+  "noEvents": "Lịch này không có sự kiện.",
+  "noMatches": "Không tìm thấy sự kiện phù hợp.",
+  "untitled": "Sự kiện chưa có tiêu đề",
+  "allDay": "Cả ngày",
+  "floating": "Giờ địa phương",
+  "recurring": "Lặp lại",
+  "occurrence": "Lần diễn ra đã chỉnh sửa",
+  "count": "Số sự kiện: {count}"
+}

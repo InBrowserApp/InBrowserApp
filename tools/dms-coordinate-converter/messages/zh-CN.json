@@ -1,0 +1,18 @@
+{
+  "decimal": "十进制度（DD）",
+  "dms": "度分秒（DMS）",
+  "latitude": "纬度",
+  "longitude": "经度",
+  "degrees": "度",
+  "minutes": "分",
+  "seconds": "秒",
+  "hemisphere": "半球",
+  "north": "北（N）",
+  "south": "南（S）",
+  "east": "东（E）",
+  "west": "西（W）",
+  "example": "试用示例",
+  "copy": "复制坐标",
+  "copied": "已复制",
+  "invalid": "纬度必须在 ±90° 范围内，经度必须在 ±180° 范围内。分和秒必须小于 60。"
+}

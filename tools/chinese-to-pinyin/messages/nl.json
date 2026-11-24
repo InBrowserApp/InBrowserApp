@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Chinese tekst",
+  "inputPlaceholder": "Typ of plak Chinese tekst",
+  "exampleLabel": "Voorbeeld laden",
+  "clearLabel": "Wissen",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Hier verschijnt je tekst in pinyin",
+  "formatLabel": "Toonweergave",
+  "marksLabel": "Toontekens",
+  "numbersLabel": "Tooncijfers",
+  "plainLabel": "Zonder tonen",
+  "copyLabel": "Kopieer pinyin",
+  "copiedLabel": "Gekopieerd",
+  "copyFailedLabel": "Kopiëren mislukt"
+}

@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Kinesisk tekst",
+  "inputPlaceholder": "Skriv eller lim inn kinesisk tekst",
+  "exampleLabel": "Prøv et eksempel",
+  "clearLabel": "Tøm",
+  "outputLabel": "Pinyin",
+  "outputPlaceholder": "Her vises teksten i pinyin",
+  "formatLabel": "Toneangivelse",
+  "marksLabel": "Tonetegn",
+  "numbersLabel": "Tonetall",
+  "plainLabel": "Uten toner",
+  "copyLabel": "Kopier pinyin",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kunne ikke kopiere"
+}

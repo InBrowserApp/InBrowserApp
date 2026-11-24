@@ -1,0 +1,18 @@
+{
+  "decimal": "Decimal degrees (DD)",
+  "dms": "Degrees, minutes, seconds (DMS)",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "degrees": "Degrees",
+  "minutes": "Minutes",
+  "seconds": "Seconds",
+  "hemisphere": "Hemisphere",
+  "north": "North (N)",
+  "south": "South (S)",
+  "east": "East (E)",
+  "west": "West (W)",
+  "example": "Try an example",
+  "copy": "Copy coordinates",
+  "copied": "Copied",
+  "invalid": "Latitude must be within ±90° and longitude within ±180°. Minutes and seconds must be less than 60."
+}

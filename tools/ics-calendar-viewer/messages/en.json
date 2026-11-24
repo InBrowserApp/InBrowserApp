@@ -1,0 +1,20 @@
+{
+  "openFile": "Open file",
+  "sample": "Try an example",
+  "input": "Source text",
+  "readError": "Could not read the file. Choose it again or paste the text.",
+  "paste": "Paste ICS text",
+  "view": "View events",
+  "placeholder": "Paste iCalendar file contents here",
+  "search": "Search events",
+  "empty": "Open an ICS file or try the example to see its events.",
+  "invalid": "Could not read this iCalendar file. Check the ICS contents and try again.",
+  "noEvents": "This calendar has no events.",
+  "noMatches": "No events match your search.",
+  "untitled": "Untitled event",
+  "allDay": "All day",
+  "floating": "Local time",
+  "recurring": "Repeats",
+  "occurrence": "Edited occurrence",
+  "count": "Events: {count}"
+}

@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Dönüştürme yönü",
+  "toTraditional": "Basitleştirilmişten geleneksele",
+  "toSimplified": "Gelenekselden basitleştirilmişe",
+  "variantLabel": "Geleneksel Çince yazımı",
+  "variants": {
+    "t": "Standart geleneksel",
+    "tw": "Tayvan karakterleri",
+    "twp": "Tayvan karakterleri ve sözcükleri",
+    "hk": "Hong Kong karakterleri"
+  },
+  "inputLabel": "Kaynak metin",
+  "inputPlaceholder": "Çince metin yazın veya yapıştırın",
+  "exampleLabel": "Bir örnek deneyin",
+  "clearLabel": "Temizle",
+  "outputLabel": "Dönüştürülen metin",
+  "outputPlaceholder": "Sonuç burada görünür",
+  "copyLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "copyFailedLabel": "Kopyalanamadı",
+  "loading": "Dönüştürme sözlüğü yükleniyor…",
+  "loadError": "Sözlük yüklenemedi. Sayfayı yenilemeden önce kaynak metni kopyalayın."
+}

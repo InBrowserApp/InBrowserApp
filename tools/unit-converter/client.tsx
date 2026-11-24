@@ -26,7 +26,7 @@ import { PrecisionControl } from "./client/precision-control"
 import { readStoredState, writeStoredState } from "./client/storage"
 import { convertByIds, convertToAll } from "./core/convert"
 import { formatNumber } from "./core/format"
-import { parseNumber } from "./core/parse"
+import { parseNumber } from "@workspace/localized-number"
 import { DEFAULT_PAIRS, getCategory } from "./core/units"
 
 import type { PrecisionOption, StoredUnits } from "./client/constants"

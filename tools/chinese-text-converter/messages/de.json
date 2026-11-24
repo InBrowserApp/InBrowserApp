@@ -1,0 +1,23 @@
+{
+  "directionLabel": "Umwandlungsrichtung",
+  "toTraditional": "Vereinfacht → Traditionell",
+  "toSimplified": "Traditionell → Vereinfacht",
+  "variantLabel": "Traditionelle Schriftvariante",
+  "variants": {
+    "t": "Traditionell (Standard)",
+    "tw": "Taiwan (Zeichen)",
+    "twp": "Taiwan (Zeichen und Begriffe)",
+    "hk": "Hongkong (Zeichen)"
+  },
+  "inputLabel": "Originaltext",
+  "inputPlaceholder": "Chinesischen Text eingeben oder einfügen",
+  "exampleLabel": "Beispiel ausprobieren",
+  "clearLabel": "Leeren",
+  "outputLabel": "Umgewandelter Text",
+  "outputPlaceholder": "Hier erscheint das Ergebnis",
+  "copyLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kopieren fehlgeschlagen",
+  "loading": "Wörterbuch wird geladen …",
+  "loadError": "Das Wörterbuch konnte nicht geladen werden. Kopiere deinen Originaltext, bevor du die Seite neu lädst."
+}

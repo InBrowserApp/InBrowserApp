@@ -1,0 +1,18 @@
+{
+  "decimal": "Gradi decimali (DD)",
+  "dms": "Gradi, primi e secondi (DMS)",
+  "latitude": "Latitudine",
+  "longitude": "Longitudine",
+  "degrees": "Gradi",
+  "minutes": "Primi",
+  "seconds": "Secondi",
+  "hemisphere": "Emisfero",
+  "north": "Nord (N)",
+  "south": "Sud (S)",
+  "east": "Est (E)",
+  "west": "Ovest (W)",
+  "example": "Prova un esempio",
+  "copy": "Copia coordinate",
+  "copied": "Copiato",
+  "invalid": "La latitudine deve essere compresa tra −90° e 90° e la longitudine tra −180° e 180°. I primi e i secondi devono essere inferiori a 60."
+}

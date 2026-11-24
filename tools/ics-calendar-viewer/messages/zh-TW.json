@@ -1,0 +1,20 @@
+{
+  "openFile": "開啟檔案",
+  "sample": "試用範例",
+  "input": "來源文字",
+  "readError": "無法讀取檔案。請重新選取檔案，或直接貼上文字。",
+  "paste": "貼上 ICS 文字",
+  "view": "查看行程",
+  "placeholder": "在此貼上 iCalendar 檔案內容",
+  "search": "搜尋行程",
+  "empty": "開啟 ICS 檔案或試用範例，即可查看行程。",
+  "invalid": "無法讀取這個 iCalendar 檔案。請確認 ICS 內容後再試一次。",
+  "noEvents": "這個行事曆沒有行程。",
+  "noMatches": "找不到符合搜尋條件的行程。",
+  "untitled": "未命名行程",
+  "allDay": "全天",
+  "floating": "本地時間",
+  "recurring": "重複行程",
+  "occurrence": "已編輯的單次行程",
+  "count": "行程數：{count}"
+}

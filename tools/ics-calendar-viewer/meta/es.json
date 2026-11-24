@@ -1,0 +1,4 @@
+{
+  "name": "Visor de archivos ICS",
+  "description": "Abre un archivo iCalendar (.ics) y busca sus eventos. Consulta fechas, zonas horarias, ubicaciones y descripciones desde el navegador."
+}

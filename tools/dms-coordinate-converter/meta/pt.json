@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de latitude e longitude para DMS",
+  "description": "Converta latitude e longitude entre graus decimais (DD) e graus, minutos e segundos (DMS). Copie as coordenadas GPS nos dois formatos."
+}

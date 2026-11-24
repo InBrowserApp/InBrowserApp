@@ -1,0 +1,15 @@
+{
+  "inputLabel": "चीनी टेक्स्ट",
+  "inputPlaceholder": "चीनी टेक्स्ट टाइप या पेस्ट करें",
+  "exampleLabel": "उदाहरण आज़माएँ",
+  "clearLabel": "साफ़ करें",
+  "outputLabel": "पिनयिन",
+  "outputPlaceholder": "पिनयिन यहाँ दिखेगा",
+  "formatLabel": "टोन दिखाने का तरीका",
+  "marksLabel": "टोन चिह्न",
+  "numbersLabel": "टोन की संख्याएँ",
+  "plainLabel": "बिना टोन",
+  "copyLabel": "पिनयिन कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "copyFailedLabel": "कॉपी नहीं हो सका"
+}

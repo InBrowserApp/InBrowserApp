@@ -1,0 +1,15 @@
+{
+  "inputLabel": "중국어 텍스트",
+  "inputPlaceholder": "중국어를 입력하거나 붙여 넣으세요",
+  "exampleLabel": "예제 사용",
+  "clearLabel": "지우기",
+  "outputLabel": "병음",
+  "outputPlaceholder": "여기에 병음이 표시됩니다",
+  "formatLabel": "성조 표기",
+  "marksLabel": "성조 기호",
+  "numbersLabel": "성조 숫자",
+  "plainLabel": "성조 없음",
+  "copyLabel": "병음 복사",
+  "copiedLabel": "복사됨",
+  "copyFailedLabel": "복사 실패"
+}

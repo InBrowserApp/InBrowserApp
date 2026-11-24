@@ -1,0 +1,18 @@
+{
+  "decimal": "Derajat desimal (DD)",
+  "dms": "Derajat, menit, detik (DMS)",
+  "latitude": "Lintang",
+  "longitude": "Bujur",
+  "degrees": "Derajat",
+  "minutes": "Menit",
+  "seconds": "Detik",
+  "hemisphere": "Belahan bumi",
+  "north": "Utara (N)",
+  "south": "Selatan (S)",
+  "east": "Timur (E)",
+  "west": "Barat (W)",
+  "example": "Coba contoh",
+  "copy": "Salin koordinat",
+  "copied": "Disalin",
+  "invalid": "Lintang harus berada dalam rentang ±90° dan bujur dalam rentang ±180°. Menit dan detik harus kurang dari 60."
+}
