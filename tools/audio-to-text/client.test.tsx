@@ -113,9 +113,20 @@ it("transcribes a dropped file, then plays, edits, copies and exports its timed 
   )
   const worker = workers[0]!
   worker.emit({ type: "loading", backend: "webgpu", progress: 0.42 })
-  expect(screen.getByRole("progressbar").getAttribute("value")).toBe("0.42")
-  worker.emit({ type: "transcribing", backend: "webgpu" })
+  expect(
+    screen
+      .getByRole("progressbar", { name: messages.loading })
+      .getAttribute("value")
+  ).toBe("0.42")
+  worker.emit({ type: "transcribing", backend: "webgpu", progress: 0.675 })
+  expect(
+    screen
+      .getByRole("progressbar", { name: messages.transcribing })
+      .getAttribute("value")
+  ).toBe("0.675")
+  expect(screen.getByText("67.5%")).toBeDefined()
   worker.emit({ type: "done", segments })
+  expect(screen.queryByRole("progressbar")).toBeNull()
   expect(worker.terminate).toHaveBeenCalledOnce()
   fireEvent.click(
     screen.getByRole("button", { name: "Play from 00:00:00.250" })
@@ -168,8 +179,13 @@ it("retries with the same samples on CPU and ignores results from a canceled run
     [decoded.buffer]
   )
   expect(screen.getByText(messages.cpuFallback)).toBeDefined()
+  workers[0]!.emit({ type: "transcribing", backend: "webgpu", progress: 0.9 })
+  expect(screen.queryByRole("progressbar")).toBeNull()
+  cpu.emit({ type: "transcribing", backend: "wasm", progress: 0.25 })
+  expect(screen.getByText("25%")).toBeDefined()
   fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
   expect(cpu.terminate).toHaveBeenCalledOnce()
+  expect(screen.queryByRole("progressbar")).toBeNull()
   cpu.emit({ type: "done", segments })
   expect(screen.queryByRole("textbox")).toBeNull()
   expect(screen.getByText(file.name)).toBeDefined()

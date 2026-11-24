@@ -59,14 +59,17 @@ export default function Client({
   }
 
   const statusText = status ? m[status.type] : ""
-  const progress = status?.type === "loading" ? status.progress : undefined
-  const progressLabel =
+  const progress =
+    status && status.type !== "decoding" ? status.progress : undefined
+  const percent =
     progress === undefined
-      ? statusText
-      : m.loadingPercent.replace(
-          "{percent}",
-          new Intl.NumberFormat(lang, { style: "percent" }).format(progress)
-        )
+      ? undefined
+      : new Intl.NumberFormat(lang, {
+          style: "percent",
+          maximumFractionDigits: 1,
+        }).format(Math.floor(progress * 1000) / 1000)
+  const showDownloadPercent =
+    status?.type === "loading" && percent !== undefined
   const backend =
     status && status.type !== "decoding"
       ? fallback
@@ -170,13 +173,15 @@ export default function Client({
                     className="size-4 shrink-0 motion-safe:animate-spin"
                     aria-hidden="true"
                   />
-                  {progress === undefined ? (
-                    statusText
-                  ) : (
-                    <>
-                      <span className="sr-only">{statusText}</span>
-                      <span aria-hidden="true">{progressLabel}</span>
-                    </>
+                  <span className={showDownloadPercent ? "sr-only" : undefined}>
+                    {statusText}
+                  </span>
+                  {percent !== undefined && (
+                    <bdi aria-hidden="true">
+                      {showDownloadPercent
+                        ? m.loadingPercent.replace("{percent}", percent)
+                        : percent}
+                    </bdi>
                   )}
                 </p>
                 {backend && (
@@ -186,7 +191,7 @@ export default function Client({
             )}
             {progress !== undefined && (
               <progress
-                aria-label={m.loading}
+                aria-label={statusText}
                 max={1}
                 value={progress}
                 className="h-1.5 w-full accent-primary"

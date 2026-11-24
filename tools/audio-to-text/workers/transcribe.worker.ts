@@ -10,6 +10,9 @@ import type {
 
 env.allowLocalModels = false
 
+const WINDOW_SECONDS = 30
+const OVERLAP_SECONDS = 5
+
 function send(message: TranscriptionResponse, transfer: Transferable[] = []) {
   self.postMessage(message, { transfer })
 }
@@ -46,7 +49,7 @@ async function detectLanguagePrompt(
   }
   const start = config.decoder_start_token_id
   const features = await transcribe.processor(
-    audio.subarray(0, 30 * SAMPLE_RATE)
+    audio.subarray(0, WINDOW_SECONDS * SAMPLE_RATE)
   )
   const tokens = new Tensor("int64", BigInt64Array.of(BigInt(start)), [1, 1])
   const output: { logits: Tensor } & Record<string, Tensor> =
@@ -111,21 +114,35 @@ self.onmessage = async ({ data }: MessageEvent<TranscriptionRequest>) => {
       }
     )
     stage = "transcriptionError"
-    send({ type: "transcribing", backend })
+    send({ type: "transcribing", backend, progress: 0 })
     const prompt = language
       ? { language }
       : { decoder_input_ids: await detectLanguagePrompt(transcribe, audio) }
-    const result = await transcribe(audio, {
+    const duration = audio.length / SAMPLE_RATE
+    let windowEnd = WINDOW_SECONDS
+    const options = {
       ...prompt,
       task: "transcribe",
       return_timestamps: true,
-      chunk_length_s: 30,
-      stride_length_s: 5,
-    })
+      chunk_length_s: WINDOW_SECONDS,
+      stride_length_s: OVERLAP_SECONDS,
+      streamer: {
+        put() {},
+        end() {
+          // Whisper calls end once per window. Its trailing overlap is
+          // processed in the next window, except at the end of the recording.
+          const covered =
+            windowEnd >= duration ? duration : windowEnd - OVERLAP_SECONDS
+          send({ type: "transcribing", backend, progress: covered / duration })
+          windowEnd += WINDOW_SECONDS - 2 * OVERLAP_SECONDS
+        },
+      },
+    }
+    const result = await transcribe(audio, options)
     const output = Array.isArray(result) ? result[0] : result
     send({
       type: "done",
-      segments: toSegments(output?.chunks ?? [], audio.length / SAMPLE_RATE),
+      segments: toSegments(output?.chunks ?? [], duration),
     })
   } catch {
     if (adapter) {

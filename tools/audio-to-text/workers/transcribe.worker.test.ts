@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
+import { SAMPLE_RATE } from "../worker-messages"
 
 const { pipeline, processor, forward, transcribe } = vi.hoisted(() => ({
   pipeline: vi.fn(),
@@ -88,6 +89,31 @@ describe("local transcription worker", () => {
       },
       { transfer: [] }
     )
+  })
+
+  it("reports completed audio across overlapping windows, including the final tail", async () => {
+    const longAudio = new Float32Array(65 * SAMPLE_RATE)
+    longAudio[0] = 0.2
+    transcribe.mockImplementationOnce(async (_audio, { streamer }) => {
+      streamer.put([[1n]])
+      streamer.end()
+      streamer.end()
+      streamer.end()
+      return { chunks: [{ timestamp: [62, 64], text: "Finished" }] }
+    })
+
+    await run({ audio: longAudio, language: "en" })
+
+    const events = send.mock.calls.map(([event]) => event)
+    expect(
+      events
+        .filter((event) => event.type === "transcribing")
+        .map((event) => event.progress)
+    ).toEqual([0, 25 / 65, 45 / 65, 1])
+    expect(events.at(-1)).toEqual({
+      type: "done",
+      segments: [{ start: 62000, end: 64000, text: "Finished" }],
+    })
   })
 
   it("passes an explicit language and reports the quantized GPU download", async () => {

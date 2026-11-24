@@ -10,7 +10,7 @@ export type TranscriptionRequest = {
 }
 export type TranscriptionResponse =
   | { type: "loading"; backend: Backend; progress?: number }
-  | { type: "transcribing"; backend: Backend }
+  | { type: "transcribing"; backend: Backend; progress: number }
   | { type: "done"; segments: Segment[] }
   | { type: "retry"; audio: Float32Array<ArrayBuffer> }
   | { type: "error"; stage: "modelError" | "transcriptionError" }

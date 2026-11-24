@@ -79,7 +79,7 @@ function useTranscription() {
         )
         job.worker = worker
         worker.onmessage = ({ data }: MessageEvent<TranscriptionResponse>) => {
-          if (active.current !== job) return
+          if (active.current !== job || job.worker !== worker) return
           switch (data.type) {
             case "loading":
             case "transcribing":
@@ -101,7 +101,9 @@ function useTranscription() {
           }
         }
         worker.onerror = () => {
-          if (active.current === job) fail("transcriptionError")
+          if (active.current === job && job.worker === worker) {
+            fail("transcriptionError")
+          }
         }
         const request: TranscriptionRequest = {
           audio,
