@@ -21,5 +21,7 @@
   "previous": "Vorige",
   "next": "Volgende",
   "trackers": "Trackers",
-  "webSeeds": "Webseeds"
+  "webSeeds": "Webseeds",
+  "publicTrackers": "Zo nodig openbare WebRTC-trackers gebruiken",
+  "publicTrackersHint": "Openbare trackers kunnen je IP-adres en infohash zien. Of een magnetlink privé is, kan pas duidelijk worden nadat de metadata zijn ontvangen."
 }

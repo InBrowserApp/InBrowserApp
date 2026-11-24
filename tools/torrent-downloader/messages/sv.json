@@ -3,8 +3,6 @@
   "open": "Öppna torrent",
   "choose": "Välj .torrent-fil",
   "example": "Prova ett exempel",
-  "publicTrackers": "Använd offentliga WebRTC-spårare vid behov",
-  "publicTrackersHint": "Offentliga spårare kan se din IP-adress och infohash. Om en magnetlänk är privat kan bli känt först när dess metadata tas emot.",
   "network": "Filer hämtas från WebTorrent-peers eller webbseedrar. Låt fliken vara öppen tills filen har sparats.",
   "opening": "Söker efter torrentens metadata…",
   "stop": "Stäng torrent",

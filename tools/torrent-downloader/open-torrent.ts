@@ -2,7 +2,10 @@ import { readMagnet } from "@workspace/bittorrent"
 import type { Instance } from "parse-torrent"
 import type { Torrent } from "webtorrent"
 import { selectStore } from "./chunk-store"
-import { schedulePublicTrackers } from "./public-trackers"
+import {
+  schedulePublicTrackers,
+  websocketTrackers,
+} from "@workspace/bittorrent/public-trackers"
 
 class InvalidTorrentError extends Error {}
 
@@ -34,15 +37,6 @@ function readFile(file: File, signal: AbortSignal) {
   })
 }
 
-const websocketTrackers = (urls: string[]) =>
-  urls.filter((url) => {
-    if (!URL.canParse(url)) return false
-    const { protocol } = new URL(url)
-    return (
-      protocol === "wss:" ||
-      (protocol === "ws:" && window.location.protocol !== "https:")
-    )
-  })
 const webSeeds = (urls: string[]) =>
   urls.filter((url) => /^https?:\/\//i.test(url))
 
@@ -95,13 +89,11 @@ async function openTorrent(
   return new Promise<Torrent>((resolve, reject) => {
     const client = new WebTorrent({ dht: false, lsd: false })
     let ready = false
-    let stopFallback: (() => void) | undefined
 
     const onAbort = () => fail(signal.reason)
 
     function fail(error: unknown) {
       signal.removeEventListener("abort", onAbort)
-      stopFallback?.()
       if (!client.destroyed) client.destroy()
       if (!ready) reject(error)
       else if (!signal.aborted) disconnected()
@@ -120,7 +112,7 @@ async function openTorrent(
         // For a magnet, discovery starts in the same turn as the infoHash event.
         // A local file starts discovery when its storage is ready.
         torrent.once(source.info ? "ready" : "infoHash", () => {
-          stopFallback = schedulePublicTrackers(
+          schedulePublicTrackers(
             torrent,
             client.peerId,
             originalTrackers,

@@ -21,5 +21,7 @@
   "previous": "Zurück",
   "next": "Weiter",
   "trackers": "Tracker",
-  "webSeeds": "Webseeds"
+  "webSeeds": "Webseeds",
+  "publicTrackers": "Öffentliche WebRTC-Tracker bei Bedarf verwenden",
+  "publicTrackersHint": "Öffentliche Tracker können deine IP-Adresse und den Info-Hash sehen. Ob ein Magnet-Link privat ist, kann sich erst nach Empfang der Metadaten zeigen."
 }

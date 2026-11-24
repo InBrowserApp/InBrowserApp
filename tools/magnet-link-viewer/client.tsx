@@ -1,3 +1,4 @@
+import { PublicTrackerOption } from "@workspace/ui/components/tool/public-tracker-option"
 import { useEffect, useId, useRef, useState } from "react"
 import { TorrentDetails } from "@workspace/ui/components/tool/torrent-details"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
@@ -33,6 +34,7 @@ function MagnetLinkViewer({
   const inputId = useId()
   const current = useRef<AbortController>(null)
   const [input, setInput] = useState("")
+  const [publicTrackers, setPublicTrackers] = useState(true)
   const [result, setResult] = useState<Result>()
   const [error, setError] = useState<"invalid" | "unavailable" | "timeout">()
   const [loading, setLoading] = useState(false)
@@ -64,7 +66,11 @@ function MagnetLinkViewer({
       link = await readMagnet(value)
       if (request.signal.aborted) return
       setResult(link)
-      const metadata = await lookupMetadata(link, request.signal)
+      const metadata = await lookupMetadata(
+        link,
+        request.signal,
+        publicTrackers
+      )
       if (!request.signal.aborted) setResult({ ...link, metadata })
     } catch {
       if (!request.signal.aborted) setError(link ? "unavailable" : "invalid")
@@ -136,6 +142,12 @@ function MagnetLinkViewer({
                 {m.example}
               </Button>
             </div>
+            <PublicTrackerOption
+              checked={publicTrackers}
+              onChange={setPublicTrackers}
+              disabled={loading}
+              messages={shared}
+            />
           </form>
         </CardContent>
       </Card>

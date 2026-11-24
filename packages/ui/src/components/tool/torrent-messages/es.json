@@ -21,5 +21,7 @@
   "previous": "Anterior",
   "next": "Siguiente",
   "trackers": "Rastreadores",
-  "webSeeds": "Semillas web"
+  "webSeeds": "Semillas web",
+  "publicTrackers": "Usar rastreadores WebRTC públicos como alternativa",
+  "publicTrackersHint": "Los rastreadores públicos pueden ver tu IP y el hash del torrent. Puede que solo se sepa si el enlace magnet es privado al recibir sus metadatos."
 }

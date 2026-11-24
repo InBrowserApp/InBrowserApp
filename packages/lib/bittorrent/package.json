@@ -4,12 +4,15 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/magnet.ts"
+    ".": "./src/magnet.ts",
+    "./public-trackers": "./src/public-trackers.ts"
   },
   "dependencies": {
     "parse-torrent": "catalog:"
   },
   "devDependencies": {
-    "@types/parse-torrent": "catalog:"
+    "@types/parse-torrent": "catalog:",
+    "@types/webtorrent": "catalog:",
+    "vitest": "catalog:"
   }
 }

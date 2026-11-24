@@ -21,5 +21,7 @@
   "previous": "Anterior",
   "next": "Próximo",
   "trackers": "Trackers",
-  "webSeeds": "Web seeds"
+  "webSeeds": "Web seeds",
+  "publicTrackers": "Usar trackers WebRTC públicos como alternativa",
+  "publicTrackersHint": "Trackers públicos podem ver seu IP e o hash de informação. Só é possível saber se alguns links magnet são privados depois que os metadados chegam."
 }

@@ -21,5 +21,7 @@
   "previous": "Önceki",
   "next": "Sonraki",
   "trackers": "İzleyiciler",
-  "webSeeds": "Web kaynakları"
+  "webSeeds": "Web kaynakları",
+  "publicTrackers": "Gerektiğinde herkese açık WebRTC izleyicilerini kullan",
+  "publicTrackersHint": "Herkese açık izleyiciler IP adresinizi ve info hash değerini görebilir. Bir magnet bağlantısının özel olup olmadığı ancak meta veriler gelince anlaşılabilir."
 }

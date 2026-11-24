@@ -3,8 +3,6 @@
   "open": "토렌트 열기",
   "choose": ".torrent 파일 선택",
   "example": "예제 사용",
-  "publicTrackers": "대체 수단으로 공개 WebRTC 트래커 사용",
-  "publicTrackersHint": "공개 트래커는 IP 주소와 정보 해시를 볼 수 있습니다. 마그넷 링크의 비공개 여부는 메타데이터를 받은 뒤에 확인될 수 있습니다.",
   "network": "WebTorrent 피어 또는 웹 시드에서 다운로드합니다. 파일이 저장될 때까지 이 탭을 열어 두세요.",
   "opening": "토렌트 메타데이터를 찾는 중…",
   "stop": "토렌트 닫기",

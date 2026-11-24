@@ -21,5 +21,7 @@
   "previous": "前へ",
   "next": "次へ",
   "trackers": "トラッカー",
-  "webSeeds": "ウェブシード"
+  "webSeeds": "ウェブシード",
+  "publicTrackers": "必要に応じて公開 WebRTC トラッカーを使う",
+  "publicTrackersHint": "公開トラッカーには IP アドレスと情報ハッシュが伝わります。マグネットリンクがプライベートかどうかは、メタデータの取得後に判明することがあります。"
 }

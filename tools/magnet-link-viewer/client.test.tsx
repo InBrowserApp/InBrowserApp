@@ -84,3 +84,24 @@ test("the example starts a lookup and cancel aborts it", async () => {
   expect(screen.queryByText(messages.loading)).toBeNull()
   expect(screen.getByText(hash)).toBeTruthy()
 })
+
+test("shows the default tracker preference and waits for an explicit lookup", async () => {
+  vi.mocked(lookupMetadata).mockRejectedValue(new Error("No sources"))
+  const input = renderViewer()
+  const option = screen.getByRole<HTMLInputElement>("checkbox", {
+    name: shared.publicTrackers,
+  })
+  expect(option.checked).toBe(true)
+  fireEvent.change(input, { target: { value: uri } })
+  expect(lookupMetadata).not.toHaveBeenCalled()
+  fireEvent.click(option)
+  expect(lookupMetadata).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByRole("button", { name: messages.inspect }))
+  await screen.findByText(messages.unavailable)
+  expect(lookupMetadata).toHaveBeenCalledWith(
+    expect.any(Object),
+    expect.any(AbortSignal),
+    false
+  )
+  expect(screen.getByText(messages.linkDetails)).toBeTruthy()
+})

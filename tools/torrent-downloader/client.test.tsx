@@ -1,3 +1,4 @@
+import { getTorrentMessages } from "@workspace/ui/torrent-messages"
 import {
   cleanup,
   fireEvent,
@@ -15,6 +16,7 @@ import type { Torrent } from "webtorrent"
 vi.mock("./open-torrent", { spy: true })
 vi.mock("./save-file", { spy: true })
 
+const trackerMessages = getTorrentMessages("en")
 const poster = { name: "poster.jpg", path: "Sintel/poster.jpg", length: 100 }
 const captions = {
   name: "Sintel.en.srt",
@@ -35,7 +37,13 @@ afterEach(() => {
 test("opens the example, filters its files, then downloads the selected row only", async () => {
   vi.mocked(openTorrent).mockResolvedValue(torrent)
   vi.mocked(saveTorrentFile).mockResolvedValue("saved")
-  render(<Client language="en" messages={messages} />)
+  render(
+    <Client
+      language="en"
+      messages={messages}
+      trackerMessages={trackerMessages}
+    />
+  )
   fireEvent.click(screen.getByRole("button", { name: messages.example }))
 
   const files = await screen.findByRole("table", { name: messages.files })
@@ -59,7 +67,13 @@ test("retains invalid text for correction and accepts a selected torrent file", 
   vi.mocked(openTorrent)
     .mockRejectedValueOnce(new InvalidTorrentError())
     .mockResolvedValueOnce(torrent)
-  render(<Client language="en" messages={messages} />)
+  render(
+    <Client
+      language="en"
+      messages={messages}
+      trackerMessages={trackerMessages}
+    />
+  )
   const magnet = screen.getByRole("textbox", { name: messages.magnet })
   fireEvent.change(magnet, { target: { value: "invalid" } })
   fireEvent.click(screen.getByRole("button", { name: messages.open }))
@@ -87,9 +101,15 @@ test("retains invalid text for correction and accepts a selected torrent file", 
 
 test("public trackers are checked by default and can be turned off before opening", async () => {
   vi.mocked(openTorrent).mockResolvedValue(torrent)
-  render(<Client language="en" messages={messages} />)
+  render(
+    <Client
+      language="en"
+      messages={messages}
+      trackerMessages={trackerMessages}
+    />
+  )
   const setting = screen.getByRole<HTMLInputElement>("checkbox", {
-    name: messages.publicTrackers,
+    name: trackerMessages.publicTrackers,
   })
   expect(setting.checked).toBe(true)
   fireEvent.click(setting)
