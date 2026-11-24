@@ -21,5 +21,7 @@
   "previous": "Trước",
   "next": "Tiếp",
   "trackers": "Tracker",
-  "webSeeds": "Web seed"
+  "webSeeds": "Web seed",
+  "publicTrackers": "Dùng tracker WebRTC công cộng khi cần",
+  "publicTrackersHint": "Tracker công cộng có thể thấy địa chỉ IP và mã băm thông tin của bạn. Có thể phải chờ nhận siêu dữ liệu mới biết liên kết magnet có dẫn đến torrent riêng tư hay không."
 }

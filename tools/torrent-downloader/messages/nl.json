@@ -3,8 +3,6 @@
   "open": "Torrent openen",
   "choose": ".torrent-bestand kiezen",
   "example": "Voorbeeld proberen",
-  "publicTrackers": "Zo nodig openbare WebRTC-trackers gebruiken",
-  "publicTrackersHint": "Openbare trackers kunnen je IP-adres en infohash zien. Of een magnetlink privé is, kan pas duidelijk worden nadat de metadata zijn ontvangen.",
   "network": "Downloads verlopen via WebTorrent-peers of webseeds. Laat dit tabblad open tot het bestand is opgeslagen.",
   "opening": "Torrentmetadata zoeken…",
   "stop": "Torrent sluiten",

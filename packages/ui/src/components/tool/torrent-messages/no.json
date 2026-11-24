@@ -21,5 +21,7 @@
   "previous": "Forrige",
   "next": "Neste",
   "trackers": "Trackere",
-  "webSeeds": "Web seeds"
+  "webSeeds": "Web seeds",
+  "publicTrackers": "Bruk offentlige WebRTC-trackere ved behov",
+  "publicTrackersHint": "Offentlige trackere kan se IP-adressen og infohashen din. Om en magnetlenke er privat, kan først bli klart når metadataene er mottatt."
 }

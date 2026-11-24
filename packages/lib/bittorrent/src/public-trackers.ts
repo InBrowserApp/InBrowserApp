@@ -43,6 +43,7 @@ function schedulePublicTrackers(
     closed = true
     window.clearTimeout(timer)
     torrent.removeListener("metadata", enforcePrivacy)
+    torrent.removeListener("close", stop)
     tracker?.stop()
     tracker?.destroy()
     if (!torrent.destroyed) {
@@ -107,7 +108,17 @@ function schedulePublicTrackers(
     tryOriginalFirst ? FALLBACK_DELAY_MS : 0
   )
   torrent.on("metadata", enforcePrivacy)
-  return stop
+  torrent.once("close", stop)
 }
 
-export { schedulePublicTrackers }
+const websocketTrackers = (urls: string[]) =>
+  urls.filter((url) => {
+    if (!URL.canParse(url)) return false
+    const { protocol } = new URL(url)
+    return (
+      protocol === "wss:" ||
+      (protocol === "ws:" && window.location.protocol !== "https:")
+    )
+  })
+
+export { schedulePublicTrackers, websocketTrackers }

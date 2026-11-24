@@ -21,5 +21,7 @@
   "previous": "Wstecz",
   "next": "Dalej",
   "trackers": "Trackery",
-  "webSeeds": "Web seedy"
+  "webSeeds": "Web seedy",
+  "publicTrackers": "W razie potrzeby używaj publicznych trackerów WebRTC",
+  "publicTrackersHint": "Publiczne trackery mogą zobaczyć Twój adres IP i info hash. Informacja o tym, czy link magnet prowadzi do prywatnego torrenta, może być dostępna dopiero po odebraniu metadanych."
 }

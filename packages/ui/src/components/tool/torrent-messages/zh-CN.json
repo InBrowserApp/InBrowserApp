@@ -21,5 +21,7 @@
   "previous": "上一页",
   "next": "下一页",
   "trackers": "Tracker",
-  "webSeeds": "Web 种子"
+  "webSeeds": "Web 种子",
+  "publicTrackers": "使用公共 WebRTC Tracker 作为后备",
+  "publicTrackersHint": "公共 Tracker 可看到你的 IP 和种子的信息哈希。磁力链接可能要等元数据到达后才能确认是否私有。"
 }

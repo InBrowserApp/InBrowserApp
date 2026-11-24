@@ -3,8 +3,6 @@
   "open": "開啟種子",
   "choose": "選擇 .torrent 檔案",
   "example": "試用範例",
-  "publicTrackers": "使用公開 WebRTC Tracker 作為備援",
-  "publicTrackersHint": "公開 Tracker 可看到你的 IP 與種子的資訊雜湊值。磁力連結可能要等收到中繼資料後，才能確認是否為私人種子。",
   "network": "透過 WebTorrent 節點或網頁種子下載。請保持此分頁開啟，直到檔案儲存完成。",
   "opening": "正在查詢種子中繼資料…",
   "stop": "關閉種子",

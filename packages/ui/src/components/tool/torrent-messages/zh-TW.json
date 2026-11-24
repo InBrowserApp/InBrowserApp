@@ -21,5 +21,7 @@
   "previous": "上一頁",
   "next": "下一頁",
   "trackers": "Tracker",
-  "webSeeds": "網頁種子"
+  "webSeeds": "網頁種子",
+  "publicTrackers": "使用公開 WebRTC Tracker 作為備援",
+  "publicTrackersHint": "公開 Tracker 可看到你的 IP 與種子的資訊雜湊值。磁力連結可能要等收到中繼資料後，才能確認是否為私人種子。"
 }

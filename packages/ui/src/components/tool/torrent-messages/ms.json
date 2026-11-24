@@ -21,5 +21,7 @@
   "previous": "Sebelumnya",
   "next": "Seterusnya",
   "trackers": "Penjejak",
-  "webSeeds": "Web seed"
+  "webSeeds": "Web seed",
+  "publicTrackers": "Gunakan penjejak WebRTC awam apabila perlu",
+  "publicTrackersHint": "Penjejak awam boleh melihat alamat IP dan cincangan maklumat anda. Status peribadi pautan magnet mungkin hanya diketahui selepas metadata diterima."
 }

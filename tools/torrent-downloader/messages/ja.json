@@ -3,8 +3,6 @@
   "open": "Torrentを開く",
   "choose": ".torrentファイルを選択",
   "example": "サンプルを試す",
-  "publicTrackers": "必要に応じて公開 WebRTC トラッカーを使う",
-  "publicTrackersHint": "公開トラッカーには IP アドレスと情報ハッシュが伝わります。マグネットリンクがプライベートかどうかは、メタデータの取得後に判明することがあります。",
   "network": "ダウンロードにはWebTorrentのピアまたはウェブシードを使用します。ファイルの保存が完了するまで、このタブを開いたままにしてください。",
   "opening": "Torrentのメタデータを検索中…",
   "stop": "Torrentを閉じる",

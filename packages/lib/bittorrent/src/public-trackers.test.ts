@@ -42,7 +42,7 @@ afterEach(() => {
 
 test("waits for the original trackers and removes duplicate fallback addresses", () => {
   const torrent = makeTorrent()
-  const dispose = schedulePublicTrackers(
+  schedulePublicTrackers(
     torrent as unknown as Parameters<typeof schedulePublicTrackers>[0],
     "peer",
     torrent.announce,
@@ -62,7 +62,7 @@ test("waits for the original trackers and removes duplicate fallback addresses",
     })
   )
   expect(start).toHaveBeenCalledOnce()
-  dispose()
+  torrent.emit("close")
   expect(stop).toHaveBeenCalledOnce()
   expect(destroy).toHaveBeenCalledOnce()
 })
@@ -70,7 +70,7 @@ test("waits for the original trackers and removes duplicate fallback addresses",
 test("starts immediately if there is no original source, and disconnects fallback peers if metadata is private", () => {
   const torrent = makeTorrent()
   torrent.announce = []
-  const dispose = schedulePublicTrackers(
+  schedulePublicTrackers(
     torrent as unknown as Parameters<typeof schedulePublicTrackers>[0],
     "peer",
     [],
@@ -84,7 +84,7 @@ test("starts immediately if there is no original source, and disconnects fallbac
   torrent.private = true
   torrent.emit("metadata")
   expect(torrent.removePeer).toHaveBeenCalledWith(peer)
-  dispose()
+  torrent.emit("close")
   expect(stop).toHaveBeenCalledOnce()
 })
 
@@ -95,16 +95,17 @@ test("does not announce with a connected WebRTC peer, known private metadata, or
   const privateTorrent = makeTorrent()
   privateTorrent.private = true
   const canceled = makeTorrent()
-  const dispose = [connected, privateTorrent, canceled].map((torrent) =>
+  for (const torrent of [connected, privateTorrent, canceled]) {
     schedulePublicTrackers(
       torrent as unknown as Parameters<typeof schedulePublicTrackers>[0],
       "peer",
       torrent.announce,
       true
     )
-  )
-  dispose[2]!()
+  }
+  canceled.emit("close")
   vi.runAllTimers()
   expect(create).not.toHaveBeenCalled()
-  for (const close of dispose) close()
+  connected.emit("close")
+  privateTorrent.emit("close")
 })

@@ -21,5 +21,7 @@
   "previous": "Föregående",
   "next": "Nästa",
   "trackers": "Spårare",
-  "webSeeds": "Webbseedrar"
+  "webSeeds": "Webbseedrar",
+  "publicTrackers": "Använd offentliga WebRTC-spårare vid behov",
+  "publicTrackersHint": "Offentliga spårare kan se din IP-adress och infohash. Om en magnetlänk är privat kan bli känt först när dess metadata tas emot."
 }

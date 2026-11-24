@@ -1,3 +1,7 @@
+import {
+  schedulePublicTrackers,
+  websocketTrackers,
+} from "@workspace/bittorrent/public-trackers"
 import { readMagnet } from "@workspace/bittorrent"
 import type { TorrentMetadata } from "@workspace/ui/components/tool/torrent-details"
 import type { Torrent } from "webtorrent"
@@ -6,10 +10,12 @@ type MagnetLink = Awaited<ReturnType<typeof readMagnet>>
 
 async function lookupMetadata(
   { identity, sources }: MagnetLink,
-  signal: AbortSignal
+  signal: AbortSignal,
+  publicTrackers: boolean
 ) {
-  const announce = identity.announce.filter((url) => /^wss?:\/\//i.test(url))
-  if (!announce.length && !sources.length) {
+  const announce = websocketTrackers(identity.announce)
+  const hasOriginalDiscovery = Boolean(announce.length || sources.length)
+  if (!hasOriginalDiscovery && !publicTrackers) {
     throw new Error("No browser-compatible discovery source")
   }
 
@@ -19,6 +25,10 @@ async function lookupMetadata(
       import("memory-chunk-store"),
     ])
   signal.throwIfAborted()
+  const fallback = publicTrackers && WebTorrent.WEBRTC_SUPPORT
+  if (!hasOriginalDiscovery && !fallback) {
+    throw new Error("This browser cannot use WebRTC trackers")
+  }
 
   return new Promise<TorrentMetadata>((resolve, reject) => {
     const client = new WebTorrent({ dht: false, lsd: false, webSeeds: false })
@@ -43,6 +53,16 @@ async function lookupMetadata(
         { infoHash: identity.infoHash, announce, xs: sources },
         { deselect: true, store: MemoryChunkStore, storeCacheSlots: 0 }
       )
+      if (fallback) {
+        torrent.once("infoHash", () => {
+          schedulePublicTrackers(
+            torrent,
+            client.peerId,
+            announce,
+            hasOriginalDiscovery
+          )
+        })
+      }
       torrent.on("error", fail)
       torrent.once("metadata", () => {
         resolve({
