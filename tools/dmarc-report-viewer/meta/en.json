@@ -1,0 +1,4 @@
+{
+  "name": "DMARC Aggregate Report Viewer",
+  "description": "Read DMARC aggregate XML reports in your browser. Inspect sending IPs, message counts, SPF and DKIM alignment, and applied dispositions."
+}

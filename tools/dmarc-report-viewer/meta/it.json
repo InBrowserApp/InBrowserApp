@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore di report aggregati DMARC",
+  "description": "Leggi nel browser i report XML aggregati DMARC. Consulta IP di origine, conteggi dei messaggi, allineamento SPF e DKIM e azioni applicate."
+}

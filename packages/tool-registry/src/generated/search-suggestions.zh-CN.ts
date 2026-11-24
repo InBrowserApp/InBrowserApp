@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "DMARC 汇总报告查看器",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "经纬度与度分秒转换器",
     slug: "dms-coordinate-converter",

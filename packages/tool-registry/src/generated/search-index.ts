@@ -11400,6 +11400,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dmarc-report-viewer",
+    category: "network",
+    icon: "table-2",
+    tags: [
+      "dmarc",
+      "rua",
+      "xml",
+      "report",
+      "email",
+      "spf",
+      "dkim",
+      "authentication",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض تقارير DMARC المجمّعة",
+        description:
+          "اقرأ تقارير DMARC المجمّعة بتنسيق XML في متصفّحك. راجع عناوين IP المرسلة وأعداد الرسائل ومحاذاة SPF وDKIM والإجراءات المُطبّقة.",
+      },
+      de: {
+        name: "Betrachter für DMARC-Sammelberichte",
+        description:
+          "Lies DMARC-Sammelberichte im XML-Format direkt im Browser. Prüfe Absender-IP-Adressen, Nachrichtenanzahl, SPF- und DKIM-Domainabgleich sowie angewandte Maßnahmen.",
+      },
+      en: {
+        name: "DMARC Aggregate Report Viewer",
+        description:
+          "Read DMARC aggregate XML reports in your browser. Inspect sending IPs, message counts, SPF and DKIM alignment, and applied dispositions.",
+      },
+      es: {
+        name: "Visor de informes agregados DMARC",
+        description:
+          "Lee informes agregados DMARC en XML desde el navegador. Consulta las IP de origen, el número de mensajes, la alineación de SPF y DKIM y la medida aplicada.",
+      },
+      fr: {
+        name: "Visionneuse de rapports agrégés DMARC",
+        description:
+          "Lisez les rapports XML agrégés DMARC dans votre navigateur. Consultez les IP sources, le nombre de messages, l’alignement SPF et DKIM et le traitement appliqué.",
+      },
+      he: {
+        name: "מציג דוחות DMARC מצטברים",
+        description:
+          "קראו דוחות XML מצטברים של DMARC בדפדפן. בדקו כתובות IP של מקורות שליחה, ספירות הודעות, התאמת דומיינים ב־SPF וב־DKIM והפעולות שננקטו.",
+      },
+      hi: {
+        name: "DMARC एग्रीगेट रिपोर्ट व्यूअर",
+        description:
+          "DMARC की एग्रीगेट XML रिपोर्ट ब्राउज़र में पढ़ें। भेजने वाले IP पते, संदेशों की गिनती, SPF और DKIM अलाइनमेंट और लागू कार्रवाइयाँ देखें।",
+      },
+      id: {
+        name: "Penampil Laporan Agregat DMARC",
+        description:
+          "Baca laporan agregat DMARC dalam format XML langsung di browser. Periksa IP pengirim, jumlah pesan, keselarasan SPF dan DKIM, serta tindakan yang diterapkan.",
+      },
+      it: {
+        name: "Visualizzatore di report aggregati DMARC",
+        description:
+          "Leggi nel browser i report XML aggregati DMARC. Consulta IP di origine, conteggi dei messaggi, allineamento SPF e DKIM e azioni applicate.",
+      },
+      ja: {
+        name: "DMARC集計レポートビューアー",
+        description:
+          "DMARC集計XMLレポートをブラウザで読み取り、送信元IP、メール数、SPF・DKIMのアライメント、実際の処理結果を確認できます。",
+      },
+      ko: {
+        name: "DMARC 집계 보고서 뷰어",
+        description:
+          "브라우저에서 DMARC 집계 XML 보고서를 읽으세요. 발신 IP, 메일 수, SPF 및 DKIM 도메인 일치 여부, 수신 서버가 적용한 처리 방식을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Laporan Agregat DMARC",
+        description:
+          "Baca laporan agregat DMARC dalam format XML terus dalam pelayar. Semak IP penghantar, bilangan mesej, kesepadanan SPF dan DKIM serta tindakan yang diambil.",
+      },
+      nl: {
+        name: "Viewer voor geaggregeerde DMARC-rapporten",
+        description:
+          "Lees geaggregeerde DMARC-rapporten in XML-formaat in je browser. Bekijk verzendende IP-adressen, aantallen berichten, SPF- en DKIM-domeinafstemming en toegepaste maatregelen.",
+      },
+      no: {
+        name: "Viser for aggregerte DMARC-rapporter",
+        description:
+          "Les aggregerte DMARC-rapporter i XML-format i nettleseren. Se avsenderens IP-adresser, antall meldinger, domenesamsvar for SPF og DKIM og mottakerens tiltak.",
+      },
+      pl: {
+        name: "Przeglądarka raportów zbiorczych DMARC",
+        description:
+          "Otwórz zbiorczy raport DMARC w formacie XML w przeglądarce. Sprawdź adresy IP nadawców, liczbę wiadomości, zgodność domen SPF i DKIM oraz zastosowane działania.",
+      },
+      pt: {
+        name: "Visualizador de relatórios agregados DMARC",
+        description:
+          "Leia relatórios agregados DMARC em XML no navegador. Confira IPs de origem, contagens de mensagens, alinhamento de SPF e DKIM e ações aplicadas.",
+      },
+      ru: {
+        name: "Просмотр агрегированных отчётов DMARC",
+        description:
+          "Открывайте агрегированные XML-отчёты DMARC в браузере. Проверяйте IP-адреса отправителей, число писем, выравнивание SPF и DKIM и действия получателей.",
+      },
+      sv: {
+        name: "Visare för aggregerade DMARC-rapporter",
+        description:
+          "Läs aggregerade DMARC-rapporter i XML-format i webbläsaren. Granska avsändar-IP, antal meddelanden, domänmatchning för SPF och DKIM samt mottagarens åtgärder.",
+      },
+      th: {
+        name: "โปรแกรมดูรายงานสรุปรวม DMARC",
+        description:
+          "อ่านรายงานสรุปรวม DMARC แบบ XML ในเบราว์เซอร์ ดู IP ต้นทาง จำนวนอีเมล ผลการจับคู่โดเมนของ SPF และ DKIM และวิธีที่ผู้รับจัดการอีเมล",
+      },
+      tr: {
+        name: "DMARC Toplu Rapor Görüntüleyicisi",
+        description:
+          "DMARC toplu XML raporlarını tarayıcınızda okuyun. Kaynak IP adreslerini, ileti sayılarını, SPF ve DKIM uyumunu ve uygulanan işlemleri inceleyin.",
+      },
+      vi: {
+        name: "Trình xem báo cáo tổng hợp DMARC",
+        description:
+          "Đọc báo cáo tổng hợp DMARC dạng XML ngay trong trình duyệt. Xem IP gửi, số thư, kết quả đối chiếu miền SPF và DKIM, cùng cách máy chủ nhận đã xử lý thư.",
+      },
+      "zh-CN": {
+        name: "DMARC 汇总报告查看器",
+        description:
+          "在浏览器中读取 DMARC 汇总 XML 报告，查看发送方 IP、邮件数量、SPF 和 DKIM 对齐结果及实际处理结果。",
+      },
+      "zh-TW": {
+        name: "DMARC 彙總報告檢視器",
+        description:
+          "在瀏覽器中讀取 DMARC 彙總 XML 報告，查看寄件來源 IP、郵件數、SPF 和 DKIM 對齊結果及實際處理結果。",
+      },
+    },
+  },
+  {
     slug: "dms-coordinate-converter",
     category: "misc",
     icon: "compass",

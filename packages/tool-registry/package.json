@@ -96,6 +96,7 @@
     "@tool/device-information": "workspace:*",
     "@tool/dicom-viewer": "workspace:*",
     "@tool/djvu-viewer": "workspace:*",
+    "@tool/dmarc-report-viewer": "workspace:*",
     "@tool/dms-coordinate-converter": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
     "@tool/dns-zone-file-parser": "workspace:*",

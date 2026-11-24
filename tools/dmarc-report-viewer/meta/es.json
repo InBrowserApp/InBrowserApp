@@ -1,0 +1,4 @@
+{
+  "name": "Visor de informes agregados DMARC",
+  "description": "Lee informes agregados DMARC en XML desde el navegador. Consulta las IP de origen, el número de mensajes, la alineación de SPF y DKIM y la medida aplicada."
+}

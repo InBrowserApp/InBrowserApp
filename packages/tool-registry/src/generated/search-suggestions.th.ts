@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "djvu-viewer",
   },
   {
+    category: "network",
+    name: "โปรแกรมดูรายงานสรุปรวม DMARC",
+    slug: "dmarc-report-viewer",
+  },
+  {
     category: "misc",
     name: "เครื่องมือแปลงละติจูดและลองจิจูด ↔ DMS",
     slug: "dms-coordinate-converter",

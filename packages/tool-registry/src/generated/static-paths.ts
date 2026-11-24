@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dmarc-report-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "de",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "en",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "es",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "he",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "id",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "it",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "no",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "th",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dmarc-report-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "dms-coordinate-converter",
     language: "ar",
   },

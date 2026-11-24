@@ -1,0 +1,4 @@
+{
+  "name": "Pemapar Laporan Agregat DMARC",
+  "description": "Baca laporan agregat DMARC dalam format XML terus dalam pelayar. Semak IP penghantar, bilangan mesej, kesepadanan SPF dan DKIM serta tindakan yang diambil."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Viewer voor geaggregeerde DMARC-rapporten",
+  "description": "Lees geaggregeerde DMARC-rapporten in XML-formaat in je browser. Bekijk verzendende IP-adressen, aantallen berichten, SPF- en DKIM-domeinafstemming en toegepaste maatregelen."
+}
