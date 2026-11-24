@@ -1513,6 +1513,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "image",
+    name: "STEP-viser",
+    slug: "step-viewer",
+  },
+  {
     category: "misc",
     name: "Del stereolyd i to monofiler",
     slug: "stereo-channel-splitter",

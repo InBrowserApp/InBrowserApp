@@ -1513,6 +1513,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "image",
+    name: "Przeglądarka plików STEP",
+    slug: "step-viewer",
+  },
+  {
     category: "misc",
     name: "Rozdzielanie kanałów stereo",
     slug: "stereo-channel-splitter",

@@ -38317,6 +38317,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "step-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "step",
+      "stp",
+      "cad",
+      "3d",
+      "model",
+      "assembly",
+      "measure",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض STEP",
+        description:
+          "افتح ملفات CAD بامتداد STEP أو STP في متصفحك. افحص القطع والتجميعات ثلاثية الأبعاد، وقِس المسافات والأبعاد الكلية، واحفظ لقطة شاشة بصيغة PNG.",
+      },
+      de: {
+        name: "STEP-Betrachter",
+        description:
+          "Öffne STEP- und STP-CAD-Dateien im Browser. Sieh dir Bauteile und Baugruppen in 3D an, miss Abstände und Gesamtabmessungen und speichere einen Screenshot als PNG.",
+      },
+      en: {
+        name: "STEP Viewer",
+        description:
+          "Open STEP and STP CAD files in your browser. Inspect parts and assemblies in 3D, measure distances and overall dimensions, and save a PNG screenshot.",
+      },
+      es: {
+        name: "Visor de STEP",
+        description:
+          "Abre archivos CAD STEP y STP en tu navegador. Explora piezas y ensamblajes en 3D, mide distancias y dimensiones totales y guarda una captura en PNG.",
+      },
+      fr: {
+        name: "Visionneuse STEP",
+        description:
+          "Ouvrez des fichiers de CAO STEP et STP dans votre navigateur. Inspectez vos pièces et assemblages en 3D, mesurez les distances et les dimensions hors tout, puis enregistrez une capture en PNG.",
+      },
+      he: {
+        name: "מציג STEP",
+        description:
+          "פתחו קובצי CAD בפורמט STEP או STP בדפדפן. בדקו חלקים ומכלולים בתלת־ממד, מדדו מרחקים ומידות כוללות ושמרו צילום מסך כקובץ PNG.",
+      },
+      hi: {
+        name: "STEP व्यूअर",
+        description:
+          "अपने ब्राउज़र में STEP और STP CAD फ़ाइलें खोलें। पुर्ज़े और असेंबली 3D में देखें, दूरी और कुल आयाम मापें और PNG स्क्रीनशॉट सहेजें।",
+      },
+      id: {
+        name: "Penampil STEP",
+        description:
+          "Buka file CAD STEP dan STP di browser. Lihat komponen dan rakitan dalam 3D, ukur jarak dan dimensi keseluruhan, lalu simpan tangkapan layar PNG.",
+      },
+      it: {
+        name: "Visualizzatore STEP",
+        description:
+          "Apri file CAD STEP e STP nel browser. Esamina parti e assiemi in 3D, misura distanze e dimensioni d’ingombro e salva uno screenshot in PNG.",
+      },
+      ja: {
+        name: "STEP ビューアー",
+        description:
+          "STEP・STP 形式の CAD ファイルをブラウザーで開けます。部品やアセンブリを 3D で確認し、距離や全体寸法を計測して、表示中のモデルを PNG 画像として保存できます。",
+      },
+      ko: {
+        name: "STEP 뷰어",
+        description:
+          "브라우저에서 STEP 및 STP CAD 파일을 열어 부품과 조립품을 3D로 확인하고, 거리와 전체 치수를 측정하거나 화면을 PNG로 저장하세요.",
+      },
+      ms: {
+        name: "Pemapar STEP",
+        description:
+          "Buka fail CAD STEP dan STP dalam pelayar. Periksa komponen dan model pemasangan dalam 3D, ukur jarak dan dimensi keseluruhan, serta simpan tangkapan skrin PNG.",
+      },
+      nl: {
+        name: "STEP-viewer",
+        description:
+          "Open STEP- en STP-bestanden in je browser. Bekijk CAD-onderdelen en samenstellingen in 3D, meet afstanden en buitenmaten en sla een schermafbeelding op als PNG.",
+      },
+      no: {
+        name: "STEP-viser",
+        description:
+          "Åpne STEP- og STP-filer i nettleseren. Se CAD-deler og sammenstillinger i 3D, mål avstander og ytterdimensjoner, og lagre et skjermbilde som PNG.",
+      },
+      pl: {
+        name: "Przeglądarka plików STEP",
+        description:
+          "Otwieraj pliki CAD STEP i STP w przeglądarce. Oglądaj części i zespoły w 3D, mierz odległości i wymiary całkowite oraz zapisuj zrzuty ekranu w formacie PNG.",
+      },
+      pt: {
+        name: "Visualizador de STEP",
+        description:
+          "Abra arquivos CAD STEP e STP no navegador. Examine peças e montagens em 3D, meça distâncias e dimensões totais e salve uma captura de tela em PNG.",
+      },
+      ru: {
+        name: "Просмотр STEP",
+        description:
+          "Открывайте файлы САПР с расширениями STEP и STP прямо в браузере. Просматривайте детали и сборки в 3D, измеряйте расстояния, проверяйте габариты и сохраняйте снимки в PNG.",
+      },
+      sv: {
+        name: "STEP-visare",
+        description:
+          "Öppna CAD-filer i STEP- eller STP-format i webbläsaren. Granska detaljer och sammanställningar i 3D, mät avstånd och yttermått och spara skärmbilder som PNG.",
+      },
+      th: {
+        name: "โปรแกรมดู STEP",
+        description:
+          "เปิดไฟล์ CAD นามสกุล .step และ .stp ในเบราว์เซอร์ ดูชิ้นส่วนและชุดประกอบแบบ 3 มิติ วัดระยะและขนาดโดยรวม แล้วบันทึกภาพเป็น PNG",
+      },
+      tr: {
+        name: "STEP Görüntüleyici",
+        description:
+          "STEP ve STP CAD dosyalarını tarayıcınızda açın. Parçaları ve montajları 3B olarak inceleyin, mesafeleri ve genel boyutları ölçün, ekran görüntüsünü PNG olarak kaydedin.",
+      },
+      vi: {
+        name: "Trình xem STEP",
+        description:
+          "Mở tệp CAD STEP và STP trong trình duyệt. Xem chi tiết và cụm lắp ráp ở dạng 3D, đo khoảng cách và kích thước tổng thể, rồi lưu ảnh chụp PNG.",
+      },
+      "zh-CN": {
+        name: "STEP 查看器",
+        description:
+          "在浏览器中打开 STEP 和 STP CAD 文件，以 3D 方式查看零件和装配体、测量距离和整体尺寸，并保存 PNG 截图。",
+      },
+      "zh-TW": {
+        name: "STEP 檢視器",
+        description:
+          "在瀏覽器中開啟 STEP 和 STP CAD 檔案。以 3D 檢視零件與組合件、量測距離與整體尺寸，並儲存 PNG 截圖。",
+      },
+    },
+  },
+  {
     slug: "stereo-channel-splitter",
     category: "misc",
     icon: "split",
@@ -84644,6 +84776,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SSH 公開金鑰指紋",
         description:
           "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
+      },
+    },
+  },
+  "step-viewer": {
+    slug: "step-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "step",
+      "stp",
+      "cad",
+      "3d",
+      "model",
+      "assembly",
+      "measure",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض STEP",
+        description:
+          "افتح ملفات CAD بامتداد STEP أو STP في متصفحك. افحص القطع والتجميعات ثلاثية الأبعاد، وقِس المسافات والأبعاد الكلية، واحفظ لقطة شاشة بصيغة PNG.",
+      },
+      de: {
+        name: "STEP-Betrachter",
+        description:
+          "Öffne STEP- und STP-CAD-Dateien im Browser. Sieh dir Bauteile und Baugruppen in 3D an, miss Abstände und Gesamtabmessungen und speichere einen Screenshot als PNG.",
+      },
+      en: {
+        name: "STEP Viewer",
+        description:
+          "Open STEP and STP CAD files in your browser. Inspect parts and assemblies in 3D, measure distances and overall dimensions, and save a PNG screenshot.",
+      },
+      es: {
+        name: "Visor de STEP",
+        description:
+          "Abre archivos CAD STEP y STP en tu navegador. Explora piezas y ensamblajes en 3D, mide distancias y dimensiones totales y guarda una captura en PNG.",
+      },
+      fr: {
+        name: "Visionneuse STEP",
+        description:
+          "Ouvrez des fichiers de CAO STEP et STP dans votre navigateur. Inspectez vos pièces et assemblages en 3D, mesurez les distances et les dimensions hors tout, puis enregistrez une capture en PNG.",
+      },
+      he: {
+        name: "מציג STEP",
+        description:
+          "פתחו קובצי CAD בפורמט STEP או STP בדפדפן. בדקו חלקים ומכלולים בתלת־ממד, מדדו מרחקים ומידות כוללות ושמרו צילום מסך כקובץ PNG.",
+      },
+      hi: {
+        name: "STEP व्यूअर",
+        description:
+          "अपने ब्राउज़र में STEP और STP CAD फ़ाइलें खोलें। पुर्ज़े और असेंबली 3D में देखें, दूरी और कुल आयाम मापें और PNG स्क्रीनशॉट सहेजें।",
+      },
+      id: {
+        name: "Penampil STEP",
+        description:
+          "Buka file CAD STEP dan STP di browser. Lihat komponen dan rakitan dalam 3D, ukur jarak dan dimensi keseluruhan, lalu simpan tangkapan layar PNG.",
+      },
+      it: {
+        name: "Visualizzatore STEP",
+        description:
+          "Apri file CAD STEP e STP nel browser. Esamina parti e assiemi in 3D, misura distanze e dimensioni d’ingombro e salva uno screenshot in PNG.",
+      },
+      ja: {
+        name: "STEP ビューアー",
+        description:
+          "STEP・STP 形式の CAD ファイルをブラウザーで開けます。部品やアセンブリを 3D で確認し、距離や全体寸法を計測して、表示中のモデルを PNG 画像として保存できます。",
+      },
+      ko: {
+        name: "STEP 뷰어",
+        description:
+          "브라우저에서 STEP 및 STP CAD 파일을 열어 부품과 조립품을 3D로 확인하고, 거리와 전체 치수를 측정하거나 화면을 PNG로 저장하세요.",
+      },
+      ms: {
+        name: "Pemapar STEP",
+        description:
+          "Buka fail CAD STEP dan STP dalam pelayar. Periksa komponen dan model pemasangan dalam 3D, ukur jarak dan dimensi keseluruhan, serta simpan tangkapan skrin PNG.",
+      },
+      nl: {
+        name: "STEP-viewer",
+        description:
+          "Open STEP- en STP-bestanden in je browser. Bekijk CAD-onderdelen en samenstellingen in 3D, meet afstanden en buitenmaten en sla een schermafbeelding op als PNG.",
+      },
+      no: {
+        name: "STEP-viser",
+        description:
+          "Åpne STEP- og STP-filer i nettleseren. Se CAD-deler og sammenstillinger i 3D, mål avstander og ytterdimensjoner, og lagre et skjermbilde som PNG.",
+      },
+      pl: {
+        name: "Przeglądarka plików STEP",
+        description:
+          "Otwieraj pliki CAD STEP i STP w przeglądarce. Oglądaj części i zespoły w 3D, mierz odległości i wymiary całkowite oraz zapisuj zrzuty ekranu w formacie PNG.",
+      },
+      pt: {
+        name: "Visualizador de STEP",
+        description:
+          "Abra arquivos CAD STEP e STP no navegador. Examine peças e montagens em 3D, meça distâncias e dimensões totais e salve uma captura de tela em PNG.",
+      },
+      ru: {
+        name: "Просмотр STEP",
+        description:
+          "Открывайте файлы САПР с расширениями STEP и STP прямо в браузере. Просматривайте детали и сборки в 3D, измеряйте расстояния, проверяйте габариты и сохраняйте снимки в PNG.",
+      },
+      sv: {
+        name: "STEP-visare",
+        description:
+          "Öppna CAD-filer i STEP- eller STP-format i webbläsaren. Granska detaljer och sammanställningar i 3D, mät avstånd och yttermått och spara skärmbilder som PNG.",
+      },
+      th: {
+        name: "โปรแกรมดู STEP",
+        description:
+          "เปิดไฟล์ CAD นามสกุล .step และ .stp ในเบราว์เซอร์ ดูชิ้นส่วนและชุดประกอบแบบ 3 มิติ วัดระยะและขนาดโดยรวม แล้วบันทึกภาพเป็น PNG",
+      },
+      tr: {
+        name: "STEP Görüntüleyici",
+        description:
+          "STEP ve STP CAD dosyalarını tarayıcınızda açın. Parçaları ve montajları 3B olarak inceleyin, mesafeleri ve genel boyutları ölçün, ekran görüntüsünü PNG olarak kaydedin.",
+      },
+      vi: {
+        name: "Trình xem STEP",
+        description:
+          "Mở tệp CAD STEP và STP trong trình duyệt. Xem chi tiết và cụm lắp ráp ở dạng 3D, đo khoảng cách và kích thước tổng thể, rồi lưu ảnh chụp PNG.",
+      },
+      "zh-CN": {
+        name: "STEP 查看器",
+        description:
+          "在浏览器中打开 STEP 和 STP CAD 文件，以 3D 方式查看零件和装配体、测量距离和整体尺寸，并保存 PNG 截图。",
+      },
+      "zh-TW": {
+        name: "STEP 檢視器",
+        description:
+          "在瀏覽器中開啟 STEP 和 STP CAD 檔案。以 3D 檢視零件與組合件、量測距離與整體尺寸，並儲存 PNG 截圖。",
       },
     },
   },

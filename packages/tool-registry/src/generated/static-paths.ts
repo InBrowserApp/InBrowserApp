@@ -27786,6 +27786,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "step-viewer",
+    language: "ar",
+  },
+  {
+    slug: "step-viewer",
+    language: "de",
+  },
+  {
+    slug: "step-viewer",
+    language: "en",
+  },
+  {
+    slug: "step-viewer",
+    language: "es",
+  },
+  {
+    slug: "step-viewer",
+    language: "fr",
+  },
+  {
+    slug: "step-viewer",
+    language: "he",
+  },
+  {
+    slug: "step-viewer",
+    language: "hi",
+  },
+  {
+    slug: "step-viewer",
+    language: "id",
+  },
+  {
+    slug: "step-viewer",
+    language: "it",
+  },
+  {
+    slug: "step-viewer",
+    language: "ja",
+  },
+  {
+    slug: "step-viewer",
+    language: "ko",
+  },
+  {
+    slug: "step-viewer",
+    language: "ms",
+  },
+  {
+    slug: "step-viewer",
+    language: "nl",
+  },
+  {
+    slug: "step-viewer",
+    language: "no",
+  },
+  {
+    slug: "step-viewer",
+    language: "pl",
+  },
+  {
+    slug: "step-viewer",
+    language: "pt",
+  },
+  {
+    slug: "step-viewer",
+    language: "ru",
+  },
+  {
+    slug: "step-viewer",
+    language: "sv",
+  },
+  {
+    slug: "step-viewer",
+    language: "th",
+  },
+  {
+    slug: "step-viewer",
+    language: "tr",
+  },
+  {
+    slug: "step-viewer",
+    language: "vi",
+  },
+  {
+    slug: "step-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "step-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "stereo-channel-splitter",
     language: "ar",
   },

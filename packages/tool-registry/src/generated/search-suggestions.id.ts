@@ -1513,6 +1513,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "image",
+    name: "Penampil STEP",
+    slug: "step-viewer",
+  },
+  {
     category: "misc",
     name: "Pemisah Kanal Audio Stereo",
     slug: "stereo-channel-splitter",
