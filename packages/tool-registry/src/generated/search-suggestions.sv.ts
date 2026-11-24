@@ -228,6 +228,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "blake3-hash-text-or-file",
   },
   {
+    category: "developer",
+    name: "Bluetooth LE-utforskare",
+    slug: "bluetooth-le-explorer",
+  },
+  {
     category: "audio",
     name: "BPM-detektor",
     slug: "bpm-detector",

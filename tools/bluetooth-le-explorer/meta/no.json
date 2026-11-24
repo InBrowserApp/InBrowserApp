@@ -1,0 +1,4 @@
+{
+  "name": "Bluetooth LE-utforsker",
+  "description": "Koble til en Bluetooth Low Energy-enhet i nettleseren. Utforsk GATT-tjenester, les karakteristikkverdier som hex eller tekst, og loggfør varsler."
+}

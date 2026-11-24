@@ -1,0 +1,4 @@
+{
+  "name": "Eksplorator Bluetooth LE",
+  "description": "Połącz się z urządzeniem Bluetooth Low Energy w przeglądarce. Przeglądaj usługi GATT, odczytuj wartości charakterystyk jako tekst lub dane szesnastkowe i zapisuj powiadomienia."
+}

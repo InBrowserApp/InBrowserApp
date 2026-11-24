@@ -1,0 +1,4 @@
+{
+  "name": "Penjelajah Bluetooth LE",
+  "description": "Sambungkan peranti Bluetooth Low Energy dalam pelayar. Terokai perkhidmatan GATT, baca nilai ciri sebagai heks atau teks, dan log pemberitahuan."
+}

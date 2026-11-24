@@ -13,6 +13,7 @@ export {
   AudioLines,
   BadgeCheck,
   Binary,
+  Bluetooth,
   Blocks,
   Bookmark,
   BookOpen,
