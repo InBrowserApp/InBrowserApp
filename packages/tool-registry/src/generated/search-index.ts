@@ -2307,6 +2307,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-silence-remover",
+    category: "misc",
+    icon: "scissors",
+    tags: ["audio", "silence", "remove", "trim", "pauses", "podcast", "wav"],
+    locales: {
+      ar: {
+        name: "إزالة الصمت من الصوت",
+        description:
+          "اكتشف فترات الصمت الطويلة واختصرها في حلقات البودكاست والمقابلات والتسجيلات الصوتية. اضبط عتبة الصمت، واستمع إلى النتيجة ونزّلها بصيغة WAV على جهازك.",
+      },
+      de: {
+        name: "Lange Audiopausen kürzen",
+        description:
+          "Erkenne und kürze lange Pausen in Podcasts, Interviews und Sprachaufnahmen. Passe den Schwellenwert an, höre das Ergebnis an und lade es als WAV herunter.",
+      },
+      en: {
+        name: "Audio Silence Remover",
+        description:
+          "Find and shorten long silences in podcasts, interviews, and voice recordings. Adjust the silence threshold, preview the edit, and download WAV locally.",
+      },
+      es: {
+        name: "Eliminar silencios del audio",
+        description:
+          "Detecta y acorta silencios largos en pódcast, entrevistas y grabaciones de voz. Ajusta el umbral, escucha el resultado y descarga el WAV desde el navegador.",
+      },
+      fr: {
+        name: "Suppression des silences audio",
+        description:
+          "Détectez et raccourcissez les longs silences dans vos podcasts, interviews et enregistrements vocaux. Réglez le seuil, écoutez le montage et téléchargez-le en WAV.",
+      },
+      he: {
+        name: "הסרת קטעי שקט מהקלטות",
+        description:
+          "זהו וקצרו הפסקות ארוכות בפודקאסטים, בראיונות ובהקלטות קול. התאימו את סף השקט, האזינו לעריכה והורידו קובץ WAV ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+        description:
+          "पॉडकास्ट, इंटरव्यू और वॉइस रिकॉर्डिंग में लंबे ठहराव ढूँढकर छोटे करें। सन्नाटे की सीमा बदलें, संपादित ऑडियो सुनें और अपने डिवाइस पर WAV डाउनलोड करें।",
+      },
+      id: {
+        name: "Penghapus Jeda Hening Audio",
+        description:
+          "Temukan dan persingkat jeda hening panjang dalam podcast, wawancara, serta rekaman suara. Sesuaikan ambang hening, dengarkan hasil edit, lalu unduh WAV dari browser.",
+      },
+      it: {
+        name: "Rimuovi i silenzi dall’audio",
+        description:
+          "Rileva e accorcia i silenzi lunghi in podcast, interviste e registrazioni vocali. Regola la soglia, ascolta il risultato e scarica il WAV dal browser.",
+      },
+      ja: {
+        name: "音声の無音部分を削除",
+        description:
+          "ポッドキャスト、インタビュー、音声録音の長い無音部分を検出して短縮します。無音判定のしきい値を調整し、結果を試聴してWAVをダウンロードできます。処理は端末内で行われます。",
+      },
+      ko: {
+        name: "오디오 무음 제거",
+        description:
+          "팟캐스트, 인터뷰, 음성 녹음에서 긴 무음 구간을 찾아 줄입니다. 무음 감지 임계값을 조정하고, 편집 결과를 들어 본 뒤 기기에서 WAV로 다운로드하세요.",
+      },
+      ms: {
+        name: "Buang Jeda Senyap daripada Audio",
+        description:
+          "Kesan dan pendekkan jeda senyap yang panjang dalam podsiar, temu bual dan rakaman suara. Laraskan ambang senyap, dengar suntingan dan muat turun WAV dalam pelayar.",
+      },
+      nl: {
+        name: "Stiltes uit audio verwijderen",
+        description:
+          "Vind en verkort lange stiltes in podcasts, interviews en spraakopnamen. Stel de stiltedrempel in, beluister de montage en download het resultaat als WAV.",
+      },
+      no: {
+        name: "Fjern stillhet fra lyd",
+        description:
+          "Finn og kort ned lange pauser i podkaster, intervjuer og taleopptak. Juster terskelen for stillhet, lytt til resultatet og last ned WAV.",
+      },
+      pl: {
+        name: "Usuwanie ciszy z nagrań",
+        description:
+          "Wykryj i skróć długie pauzy w podcastach, wywiadach i nagraniach głosowych. Ustaw próg ciszy, odsłuchaj efekt i pobierz plik WAV w przeglądarce.",
+      },
+      pt: {
+        name: "Remover silêncios do áudio",
+        description:
+          "Detete e encurte silêncios longos em podcasts, entrevistas e gravações de voz. Ajuste o limiar, ouça o resultado e transfira o WAV no navegador.",
+      },
+      ru: {
+        name: "Удаление тишины из аудио",
+        description:
+          "Находите и сокращайте длинные паузы в подкастах, интервью и голосовых записях. Настройте порог тишины, прослушайте результат и скачайте WAV в браузере.",
+      },
+      sv: {
+        name: "Ta bort tystnad ur ljud",
+        description:
+          "Hitta och korta ned långa pauser i poddar, intervjuer och röstinspelningar. Justera tröskeln för tystnad, lyssna på klippet och ladda ned en WAV-fil.",
+      },
+      th: {
+        name: "ตัดช่วงเงียบในไฟล์เสียง",
+        description:
+          "ตรวจหาและย่นช่วงเงียบยาวในพอดแคสต์ บทสัมภาษณ์ และเสียงบันทึก ปรับเกณฑ์ความเงียบ ฟังผลหลังตัด และดาวน์โหลด WAV ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ses Kaydından Sessizliği Kaldırma",
+        description:
+          "Podcast, röportaj ve ses kayıtlarındaki uzun duraklamaları bulun ve kısaltın. Sessizlik eşiğini ayarlayın, sonucu dinleyin ve tarayıcıdan WAV indirin.",
+      },
+      vi: {
+        name: "Cắt khoảng lặng trong âm thanh",
+        description:
+          "Phát hiện và rút ngắn khoảng lặng dài trong podcast, phỏng vấn và bản ghi giọng nói. Chỉnh ngưỡng, nghe thử rồi tải WAV ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频静音去除",
+        description:
+          "检测并缩短播客、访谈和语音录音中的长静音。调整静音阈值，预听剪辑结果，并在本地下载 WAV。",
+      },
+      "zh-TW": {
+        name: "音訊靜音移除",
+        description:
+          "偵測並縮短 Podcast、訪談和語音錄音中的長時間靜音。調整靜音閾值、預聽剪輯結果，並在本機下載 WAV。",
+      },
+    },
+  },
+  {
     slug: "audio-to-text",
     category: "misc",
     icon: "captions",
@@ -24267,6 +24390,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "kubernetes-yaml-validator",
+    category: "developer",
+    icon: "layers",
+    tags: ["kubernetes", "k8s", "yaml", "manifest", "validator", "devops"],
+    locales: {
+      ar: {
+        name: "مدقق Kubernetes YAML",
+        description:
+          "تحقّق من ملفات تعريف Kubernetes بصيغة YAML عبر الإنترنت. افحص عدة موارد باستخدام المخططات المضمّنة وانتقل إلى الحقول غير الصالحة وفق رقم السطر والعمود.",
+      },
+      de: {
+        name: "Kubernetes-YAML-Validator",
+        description:
+          "Validieren Sie Kubernetes-Manifeste im YAML-Format online. Prüfen Sie mehrere Ressourcen mit integrierten Schemas und springen Sie per Zeilen- und Spaltenangabe zu ungültigen Feldern.",
+      },
+      en: {
+        name: "Kubernetes YAML Validator",
+        description:
+          "Validate Kubernetes YAML manifests online. Check multiple resources against built-in schemas and jump to invalid fields by line and column.",
+      },
+      es: {
+        name: "Validador de YAML de Kubernetes",
+        description:
+          "Valida manifiestos YAML de Kubernetes en línea. Comprueba varios recursos con esquemas integrados y salta a los campos no válidos por línea y columna.",
+      },
+      fr: {
+        name: "Validateur YAML Kubernetes",
+        description:
+          "Validez vos manifestes YAML Kubernetes en ligne. Vérifiez plusieurs ressources à l’aide des schémas intégrés et repérez les champs non valides par ligne et colonne.",
+      },
+      he: {
+        name: "מאמת Kubernetes YAML",
+        description:
+          "אימות מקוון למניפסטים של Kubernetes בפורמט YAML. אפשר לבדוק כמה משאבים מול סכמות מובנות ולעבור לשדות לא תקינים לפי שורה ועמודה.",
+      },
+      hi: {
+        name: "Kubernetes YAML वैलिडेटर",
+        description:
+          "Kubernetes के YAML मैनिफ़ेस्ट ऑनलाइन सत्यापित करें। बिल्ट-इन स्कीमा से कई रिसोर्स जाँचें और पंक्ति व कॉलम नंबर की मदद से अमान्य फ़ील्ड तक जाएँ।",
+      },
+      id: {
+        name: "Validator YAML Kubernetes",
+        description:
+          "Validasi manifes YAML Kubernetes secara online. Periksa beberapa resource dengan skema bawaan dan langsung buka baris serta kolom properti yang tidak valid.",
+      },
+      it: {
+        name: "Validatore YAML per Kubernetes",
+        description:
+          "Convalida online i manifest YAML di Kubernetes. Verifica più risorse con gli schemi integrati e vai ai campi non validi tramite riga e colonna.",
+      },
+      ja: {
+        name: "Kubernetes YAML バリデーター",
+        description:
+          "Kubernetes の YAML マニフェストをオンラインで検証します。内蔵スキーマで複数のリソースを一度に確認し、誤りのあるフィールドに行番号と列番号から移動できます。",
+      },
+      ko: {
+        name: "Kubernetes YAML 검증기",
+        description:
+          "Kubernetes YAML 매니페스트를 온라인으로 검증하세요. 내장 스키마로 여러 리소스를 한 번에 확인하고 줄과 열 번호로 잘못된 필드 위치를 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah YAML Kubernetes",
+        description:
+          "Sahkan manifes YAML Kubernetes dalam talian. Semak beberapa sumber menggunakan skema terbina dalam dan terus ke baris serta lajur medan yang tidak sah.",
+      },
+      nl: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valideer Kubernetes-manifesten in YAML online. Controleer meerdere resources met ingebouwde schema’s en ga via het regel- en kolomnummer naar ongeldige velden.",
+      },
+      no: {
+        name: "Kubernetes YAML-validator",
+        description:
+          "Valider Kubernetes-manifester i YAML på nett. Sjekk flere ressurser mot innebygde skjemaer og gå til ugyldige felt med linje- og kolonnenummer.",
+      },
+      pl: {
+        name: "Walidator YAML Kubernetes",
+        description:
+          "Sprawdzaj manifesty YAML Kubernetes online. Zweryfikuj wiele zasobów według wbudowanych schematów i przejdź do błędnych pól po numerze wiersza i kolumny.",
+      },
+      pt: {
+        name: "Validador de YAML do Kubernetes",
+        description:
+          "Valide manifestos YAML do Kubernetes online. Confira vários recursos com esquemas integrados e vá direto aos campos inválidos pela linha e coluna.",
+      },
+      ru: {
+        name: "Валидатор YAML для Kubernetes",
+        description:
+          "Проверяйте YAML-манифесты Kubernetes онлайн. Сверяйте несколько ресурсов со встроенными схемами и переходите к ошибочным полям по строке и столбцу.",
+      },
+      sv: {
+        name: "Kubernetes YAML-validerare",
+        description:
+          "Validera Kubernetes-manifest i YAML online. Kontrollera flera resurser mot inbyggda scheman och hoppa till ogiltiga fält med rad- och kolumnnummer.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+        description:
+          "ตรวจสอบมานิเฟสต์ YAML ของ Kubernetes ออนไลน์ ตรวจหลายทรัพยากรกับสคีมาในตัวและไปยังบรรทัดและคอลัมน์ของฟิลด์ที่ไม่ถูกต้องได้ทันที",
+      },
+      tr: {
+        name: "Kubernetes YAML Doğrulayıcı",
+        description:
+          "Kubernetes YAML manifestlerini çevrimiçi doğrulayın. Birden fazla kaynağı yerleşik şemalarla denetleyin ve geçersiz alanlara satır ve sütun numaralarıyla gidin.",
+      },
+      vi: {
+        name: "Trình xác thực YAML Kubernetes",
+        description:
+          "Xác thực tệp kê khai YAML Kubernetes trực tuyến. Kiểm tra nhiều tài nguyên theo lược đồ tích hợp và chuyển đến dòng, cột của trường không hợp lệ.",
+      },
+      "zh-CN": {
+        name: "Kubernetes YAML 校验器",
+        description:
+          "在线校验 Kubernetes YAML 清单，根据内置模式检查多个资源，并按行和列跳转到无效字段。",
+      },
+      "zh-TW": {
+        name: "Kubernetes YAML 驗證器",
+        description:
+          "線上驗證 Kubernetes YAML 資源清單。使用內建結構描述檢查多個資源，並依行號與欄位位置跳到無效的欄位。",
+      },
+    },
+  },
+  {
     slug: "latex-previewer",
     category: "document",
     icon: "file-text",
@@ -37919,6 +38165,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SM3 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 SM3 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "spf-record-validator",
+    category: "network",
+    icon: "mail",
+    tags: [
+      "spf",
+      "dns",
+      "txt",
+      "email",
+      "authentication",
+      "rfc-7208",
+      "syntax",
+      "validator",
+    ],
+    locales: {
+      ar: {
+        name: "مدقّق صياغة سجلات SPF",
+        description:
+          "تحقّق من صياغة سجل TXT الخاص بـ SPF وفق RFC 7208. راجع الآليات والمؤهلات والمعدِّلات والعناصر التي قد تؤدي إلى استعلامات DNS مباشرةً في متصفّحك.",
+      },
+      de: {
+        name: "SPF-Syntaxprüfung",
+        description:
+          "Prüfe einen eingefügten SPF-TXT-Eintrag nach RFC 7208. Sieh dir Mechanismen, Qualifizierer, Modifikatoren und mögliche DNS-Abfragen direkt im Browser an.",
+      },
+      en: {
+        name: "SPF Record Syntax Checker",
+        description:
+          "Check a pasted SPF TXT record against RFC 7208. Review mechanisms, qualifiers, modifiers, and potential DNS lookup terms directly in your browser.",
+      },
+      es: {
+        name: "Comprobador de sintaxis de registros SPF",
+        description:
+          "Comprueba si un registro TXT de SPF cumple la sintaxis de RFC 7208. Revisa mecanismos, calificadores, modificadores y posibles consultas DNS en tu navegador.",
+      },
+      fr: {
+        name: "Vérificateur de syntaxe SPF",
+        description:
+          "Collez un enregistrement TXT SPF pour vérifier sa syntaxe selon la RFC 7208. Examinez les mécanismes, qualificateurs, modificateurs et termes qui peuvent déclencher des requêtes DNS.",
+      },
+      he: {
+        name: "בודק תחביר רשומות SPF",
+        description:
+          "בדקו תחביר של רשומת SPF מסוג TXT לפי RFC 7208. סקרו מנגנונים, מסייגים, משנים ורכיבים שעשויים לגרום לשאילתות DNS ישירות בדפדפן.",
+      },
+      hi: {
+        name: "SPF रिकॉर्ड सिंटैक्स चेकर",
+        description:
+          "SPF TXT रिकॉर्ड पेस्ट करके RFC 7208 के अनुसार उसका सिंटैक्स जाँचें। मैकेनिज़्म, क्वालिफ़ायर, मॉडिफ़ायर और DNS लुकअप करा सकने वाले टर्म सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Pemeriksa Sintaks Record SPF",
+        description:
+          "Periksa sintaks record TXT SPF yang ditempel berdasarkan RFC 7208. Lihat mekanisme, kualifikator, pengubah, dan komponen yang dapat memicu kueri DNS langsung di browser.",
+      },
+      it: {
+        name: "Verifica della sintassi SPF",
+        description:
+          "Incolla un record TXT SPF e verificane la sintassi secondo RFC 7208. Esamina nel browser meccanismi, qualificatori, modificatori e termini che possono richiedere query DNS.",
+      },
+      ja: {
+        name: "SPFレコード構文チェックツール",
+        description:
+          "貼り付けたSPF TXTレコードをRFC 7208に照らしてチェック。メカニズム、限定子、修飾子、DNS参照を伴う可能性のある項目をブラウザで確認できます。",
+      },
+      ko: {
+        name: "SPF 레코드 구문 검사기",
+        description:
+          "붙여넣은 SPF TXT 레코드의 구문을 RFC 7208 기준으로 검사하세요. 메커니즘, 한정자, 수정자, DNS 조회를 유발할 수 있는 항목을 브라우저에서 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyemak Sintaks Rekod SPF",
+        description:
+          "Semak sintaks rekod TXT SPF yang ditampal mengikut RFC 7208. Lihat mekanisme, penentu, pengubah dan komponen yang boleh mencetuskan carian DNS terus dalam pelayar.",
+      },
+      nl: {
+        name: "Syntaxcontrole voor SPF-records",
+        description:
+          "Controleer een geplakt SPF TXT-record volgens RFC 7208. Bekijk mechanismen, kwalificatoren, modifiers en termen die een DNS-opzoeking kunnen veroorzaken in je browser.",
+      },
+      no: {
+        name: "Syntakskontroll for SPF-poster",
+        description:
+          "Kontroller en innlimt SPF-post av typen TXT mot RFC 7208. Se mekanismer, kvalifikatorer, modifikatorer og ledd som kan utløse DNS-oppslag, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Sprawdzanie składni rekordu SPF",
+        description:
+          "Sprawdź składnię wklejonego rekordu TXT SPF według RFC 7208. Zobacz w przeglądarce jego mechanizmy, kwalifikatory, modyfikatory i elementy mogące wywołać zapytanie DNS.",
+      },
+      pt: {
+        name: "Verificador de sintaxe de registros SPF",
+        description:
+          "Confira se a sintaxe de um registro TXT de SPF segue a RFC 7208. Veja mecanismos, qualificadores, modificadores e possíveis consultas DNS no navegador.",
+      },
+      ru: {
+        name: "Проверка синтаксиса SPF-записей",
+        description:
+          "Проверьте синтаксис SPF-записи TXT по RFC 7208. Посмотрите механизмы, квалификаторы, модификаторы и элементы, которые могут вызвать DNS-запросы, прямо в браузере.",
+      },
+      sv: {
+        name: "Syntaxkontroll för SPF-poster",
+        description:
+          "Kontrollera en inklistrad SPF-post av typen TXT enligt RFC 7208. Granska mekanismer, kvalificerare, modifierare och termer som kan orsaka DNS-uppslagningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบไวยากรณ์ระเบียน SPF",
+        description:
+          "วางค่าระเบียน TXT ของ SPF เพื่อตรวจสอบตาม RFC 7208 ดูกลไก ตัวระบุผล ตัวปรับแต่ง และรายการที่อาจทำให้เกิดการค้นหา DNS ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "SPF Kaydı Sözdizimi Denetleyicisi",
+        description:
+          "SPF TXT kaydını yapıştırıp RFC 7208’e göre denetleyin. Mekanizmaları, niteleyicileri, değiştiricileri ve DNS sorgusu gerektirebilecek terimleri tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Kiểm tra cú pháp bản ghi SPF",
+        description:
+          "Dán bản ghi TXT chứa SPF để kiểm tra cú pháp theo RFC 7208. Xem các cơ chế, tiền tố kết quả, tham số điều chỉnh và các mục có thể phát sinh truy vấn DNS ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "SPF 记录语法检查器",
+        description:
+          "根据 RFC 7208 检查粘贴的 SPF TXT 记录，直接在浏览器中查看机制、限定符、修饰符和可能触发 DNS 查询的项。",
+      },
+      "zh-TW": {
+        name: "SPF 記錄語法檢查工具",
+        description:
+          "根據 RFC 7208 檢查貼上的 SPF TXT 記錄，直接在瀏覽器中查看機制、限定詞、修飾符及可能觸發 DNS 查詢的項目。",
       },
     },
   },

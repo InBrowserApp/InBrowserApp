@@ -28,6 +28,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "audio-loudness-normalizer": () =>
     import("@tool/audio-loudness-normalizer/page"),
   "audio-recorder": () => import("@tool/audio-recorder/page"),
+  "audio-silence-remover": () => import("@tool/audio-silence-remover/page"),
   "audio-to-text": () => import("@tool/audio-to-text/page"),
   "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
@@ -232,6 +233,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "keyboard-tester": () => import("@tool/keyboard-tester/page"),
   "kml-geojson-converter": () => import("@tool/kml-geojson-converter/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
+  "kubernetes-yaml-validator": () =>
+    import("@tool/kubernetes-yaml-validator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
   "legacy-motorola-system-key-generator": () =>
     import("@tool/legacy-motorola-system-key-generator/page"),
@@ -375,6 +378,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sitemap-xml-generator": () => import("@tool/sitemap-xml-generator/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
   "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
+  "spf-record-validator": () => import("@tool/spf-record-validator/page"),
   "spreadsheet-data-export": () => import("@tool/spreadsheet-data-export/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),

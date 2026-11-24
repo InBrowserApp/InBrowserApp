@@ -1,0 +1,4 @@
+{
+  "name": "Walidator YAML Kubernetes",
+  "description": "Sprawdzaj manifesty YAML Kubernetes online. Zweryfikuj wiele zasobów według wbudowanych schematów i przejdź do błędnych pól po numerze wiersza i kolumny."
+}

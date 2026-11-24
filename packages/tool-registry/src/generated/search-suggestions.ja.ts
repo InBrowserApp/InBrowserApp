@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音声の無音部分を削除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "音声文字起こし",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML バリデーター",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX プレビューアー",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3 ハッシュ テキストまたはファイル",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "SPFレコード構文チェックツール",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

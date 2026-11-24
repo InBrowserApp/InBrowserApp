@@ -1658,6 +1658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-silence-remover",
+    language: "ar",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "de",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "en",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "es",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "fr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "he",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "hi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "id",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "it",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ja",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ko",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ms",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "nl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "no",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pl",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "pt",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "ru",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "sv",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "th",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "tr",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "vi",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-silence-remover",
+    language: "zh-TW",
+  },
+  {
     slug: "audio-to-text",
     language: "ar",
   },
@@ -17574,6 +17666,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "kubernetes-yaml-validator",
+    language: "ar",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "de",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "en",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "es",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "fr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "he",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "hi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "id",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "it",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ja",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ko",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ms",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "nl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "no",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pl",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "pt",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "ru",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "sv",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "th",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "tr",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "vi",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "kubernetes-yaml-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "latex-previewer",
     language: "ar",
   },
@@ -27507,6 +27691,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sm3-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ar",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "de",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "en",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "es",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "fr",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "he",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "hi",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "id",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "it",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ja",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ko",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ms",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "nl",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "no",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "pl",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "pt",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "ru",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "sv",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "th",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "tr",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "vi",
+  },
+  {
+    slug: "spf-record-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "spf-record-validator",
     language: "zh-TW",
   },
   {

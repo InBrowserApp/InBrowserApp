@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ses Kaydından Sessizliği Kaldırma",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Sesi Metne Dönüştürme",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML Doğrulayıcı",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX Önizleyici",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3 Hash Metin veya Dosya",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "SPF Kaydı Sözdizimi Denetleyicisi",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

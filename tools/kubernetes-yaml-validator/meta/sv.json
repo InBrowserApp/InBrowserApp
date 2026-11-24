@@ -1,0 +1,4 @@
+{
+  "name": "Kubernetes YAML-validerare",
+  "description": "Validera Kubernetes-manifest i YAML online. Kontrollera flera resurser mot inbyggda scheman och hoppa till ogiltiga fält med rad- och kolumnnummer."
+}

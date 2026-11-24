@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Buang Jeda Senyap daripada Audio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio kepada Teks",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Pengesah YAML Kubernetes",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "Pratonton LaTeX",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash SM3 Teks atau Fail",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "Penyemak Sintaks Rekod SPF",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

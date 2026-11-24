@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Fjern stillhet fra lyd",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Lyd til tekst",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML-validator",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX-forhåndsviser",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3-hash tekst eller fil",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "Syntakskontroll for SPF-poster",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

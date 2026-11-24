@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "音訊靜音移除",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "錄音轉文字",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML 驗證器",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX 預覽器",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3 雜湊文字或檔案",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "SPF 記錄語法檢查工具",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

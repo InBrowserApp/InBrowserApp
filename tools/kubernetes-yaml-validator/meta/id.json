@@ -1,0 +1,4 @@
+{
+  "name": "Validator YAML Kubernetes",
+  "description": "Validasi manifes YAML Kubernetes secara online. Periksa beberapa resource dengan skema bawaan dan langsung buka baris serta kolom properti yang tidak valid."
+}

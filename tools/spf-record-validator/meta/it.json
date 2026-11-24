@@ -1,0 +1,4 @@
+{
+  "name": "Verifica della sintassi SPF",
+  "description": "Incolla un record TXT SPF e verificane la sintassi secondo RFC 7208. Esamina nel browser meccanismi, qualificatori, modificatori e termini che possono richiedere query DNS."
+}

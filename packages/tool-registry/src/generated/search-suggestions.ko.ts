@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "오디오 무음 제거",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "음성을 텍스트로 변환",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML 검증기",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX 미리보기",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3 해시 텍스트 또는 파일",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "SPF 레코드 구문 검사기",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

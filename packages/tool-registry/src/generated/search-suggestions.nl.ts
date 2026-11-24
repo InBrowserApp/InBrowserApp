@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Stiltes uit audio verwijderen",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio naar tekst",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML-validator",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX-voorvertoner",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3-hash tekst of bestand",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "Syntaxcontrole voor SPF-records",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

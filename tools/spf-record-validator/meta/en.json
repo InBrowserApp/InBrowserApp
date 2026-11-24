@@ -1,0 +1,4 @@
+{
+  "name": "SPF Record Syntax Checker",
+  "description": "Check a pasted SPF TXT record against RFC 7208. Review mechanisms, qualifiers, modifiers, and potential DNS lookup terms directly in your browser."
+}

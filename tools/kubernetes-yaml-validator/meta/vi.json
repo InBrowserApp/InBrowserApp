@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực YAML Kubernetes",
+  "description": "Xác thực tệp kê khai YAML Kubernetes trực tuyến. Kiểm tra nhiều tài nguyên theo lược đồ tích hợp và chuyển đến dòng, cột của trường không hợp lệ."
+}

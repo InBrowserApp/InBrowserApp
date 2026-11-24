@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Cắt khoảng lặng trong âm thanh",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Chuyển âm thanh thành văn bản",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Trình xác thực YAML Kubernetes",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "Trình xem trước LaTeX",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash SM3 văn bản hoặc tệp",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "Kiểm tra cú pháp bản ghi SPF",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

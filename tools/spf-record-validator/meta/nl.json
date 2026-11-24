@@ -1,0 +1,4 @@
+{
+  "name": "Syntaxcontrole voor SPF-records",
+  "description": "Controleer een geplakt SPF TXT-record volgens RFC 7208. Bekijk mechanismen, kwalificatoren, modifiers en termen die een DNS-opzoeking kunnen veroorzaken in je browser."
+}

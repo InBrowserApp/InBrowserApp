@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ตัดช่วงเงียบในไฟล์เสียง",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "แปลงเสียงเป็นข้อความ",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "ตัวตรวจสอบ YAML ของ Kubernetes",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "โปรแกรมดูตัวอย่าง LaTeX",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "แฮช SM3 ข้อความหรือไฟล์",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "เครื่องมือตรวจสอบไวยากรณ์ระเบียน SPF",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

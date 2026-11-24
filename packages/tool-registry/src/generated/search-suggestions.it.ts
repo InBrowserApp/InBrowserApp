@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Rimuovi i silenzi dall’audio",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "Audio in testo",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Validatore YAML per Kubernetes",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "Anteprima LaTeX",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash SM3 di Testo o File",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "Verifica della sintassi SPF",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

@@ -1,0 +1,4 @@
+{
+  "name": "Syntakskontroll for SPF-poster",
+  "description": "Kontroller en innlimt SPF-post av typen TXT mot RFC 7208. Se mekanismer, kvalifikatorer, modifikatorer og ledd som kan utløse DNS-oppslag, direkte i nettleseren."
+}

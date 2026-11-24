@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "إزالة الصمت من الصوت",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "تحويل الصوت إلى نص",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "مدقق Kubernetes YAML",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "معاين LaTeX",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "تجزئة SM3 للنص أو الملف",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "مدقّق صياغة سجلات SPF",
+    slug: "spf-record-validator",
   },
   {
     category: "document",

@@ -94,6 +94,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ऑडियो से लंबी चुप्पियाँ हटाएँ",
+    slug: "audio-silence-remover",
+  },
+  {
+    category: "misc",
     name: "ऑडियो से टेक्स्ट",
     slug: "audio-to-text",
   },
@@ -958,6 +963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ksuid-generator",
   },
   {
+    category: "developer",
+    name: "Kubernetes YAML वैलिडेटर",
+    slug: "kubernetes-yaml-validator",
+  },
+  {
     category: "document",
     name: "LaTeX प्रीव्यूअर",
     slug: "latex-previewer",
@@ -1496,6 +1506,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "SM3 हैश टेक्स्ट या फ़ाइल",
     slug: "sm3-hash-text-or-file",
+  },
+  {
+    category: "network",
+    name: "SPF रिकॉर्ड सिंटैक्स चेकर",
+    slug: "spf-record-validator",
   },
   {
     category: "document",
