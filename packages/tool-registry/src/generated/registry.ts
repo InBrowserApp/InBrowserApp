@@ -42468,6 +42468,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "vcard-csv-converter",
+    category: "document",
+    icon: "arrow-left-right",
+    tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل vCard وCSV",
+        description:
+          "حوّل جهات الاتصال بين vCard ‏(.vcf) وCSV. افتح ملفًا أو الصق النص، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "vCard-CSV-Konverter",
+        description:
+          "Konvertieren Sie Kontakte zwischen vCard (.vcf) und CSV. Öffnen Sie eine Datei oder fügen Sie Text ein, prüfen Sie das Ergebnis und laden Sie es direkt im Browser herunter.",
+      },
+      en: {
+        name: "vCard ↔ CSV Converter",
+        description:
+          "Convert contacts between vCard (.vcf) and CSV. Open a file or paste text, preview the conversion, and download the result in your browser.",
+      },
+      es: {
+        name: "Convertidor vCard ↔ CSV",
+        description:
+          "Convierte contactos entre vCard (.vcf) y CSV. Abre un archivo o pega el texto, revisa la vista previa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur vCard ↔ CSV",
+        description:
+          "Convertissez vos contacts entre vCard (.vcf) et CSV. Ouvrez un fichier ou collez du texte, vérifiez l’aperçu et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר vCard ו-CSV",
+        description:
+          "המירו רשימות אנשי קשר בין vCard ‏(.vcf) ל-CSV. פתחו קובץ או הדביקו טקסט, צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "vCard ↔ CSV कन्वर्टर",
+        description:
+          "संपर्कों को vCard (.vcf) से CSV या CSV से vCard में बदलें। फ़ाइल खोलें या टेक्स्ट पेस्ट करें, नतीजे का पूर्वावलोकन करें और उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi vCard ↔ CSV",
+        description:
+          "Konversi kontak antara vCard (.vcf) dan CSV. Buka file atau tempel teks, lihat pratinjau, lalu unduh hasilnya langsung di browser.",
+      },
+      it: {
+        name: "Convertitore vCard ↔ CSV",
+        description:
+          "Converti i contatti tra vCard (.vcf) e CSV. Apri un file o incolla il testo, controlla l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "vCard・CSV 相互変換ツール",
+        description:
+          "連絡先を vCard（.vcf）と CSV の間で相互変換します。ファイルを開くかテキストを貼り付け、ブラウザーで結果を確認してダウンロードできます。",
+      },
+      ko: {
+        name: "vCard·CSV 변환기",
+        description:
+          "연락처를 vCard(.vcf)와 CSV 사이에서 양방향으로 변환합니다. 파일을 열거나 텍스트를 붙여넣고 브라우저에서 결과를 확인해 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar vCard ↔ CSV",
+        description:
+          "Tukar senarai kenalan antara vCard (.vcf) dengan CSV. Buka fail atau tampal teks, semak pratonton, kemudian muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "vCard-CSV-converter",
+        description:
+          "Zet contacten om tussen vCard (.vcf) en CSV. Open een bestand of plak tekst, bekijk het resultaat en download het rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom vCard og CSV",
+        description:
+          "Konverter kontakter mellom vCard (.vcf) og CSV. Åpne en fil eller lim inn tekst, se en forhåndsvisning og last ned resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter vCard i CSV",
+        description:
+          "Konwertuj kontakty między vCard (.vcf) a CSV. Otwórz plik lub wklej tekst, sprawdź podgląd i pobierz wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor vCard ↔ CSV",
+        description:
+          "Converta contatos entre vCard (.vcf) e CSV. Abra um arquivo ou cole o texto, confira a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер vCard ↔ CSV",
+        description:
+          "Преобразуйте списки контактов из vCard (.vcf) в CSV и обратно. Откройте файл или вставьте текст, проверьте результат и скачайте его из браузера.",
+      },
+      sv: {
+        name: "Konverterare för vCard och CSV",
+        description:
+          "Konvertera kontakter mellan vCard (.vcf) och CSV. Öppna en fil eller klistra in text, förhandsgranska resultatet och ladda ner det i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง vCard ↔ CSV",
+        description:
+          "แปลงรายชื่อติดต่อระหว่าง vCard (.vcf) กับ CSV เปิดไฟล์หรือวางข้อความ แล้วดูตัวอย่างและดาวน์โหลดผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "vCard ↔ CSV Dönüştürücü",
+        description:
+          "Kişi listelerini vCard (.vcf) ile CSV arasında dönüştürün. Dosya açın veya metin yapıştırın, sonucu önizleyin ve tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi vCard ↔ CSV",
+        description:
+          "Chuyển đổi danh bạ giữa vCard (.vcf) và CSV. Mở tệp hoặc dán văn bản, xem trước và tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "vCard 与 CSV 互转",
+        description:
+          "在浏览器中将联系人文件在 vCard（.vcf）与 CSV 之间互转。打开文件或粘贴文本，即可预览并下载转换结果。",
+      },
+      "zh-TW": {
+        name: "vCard 與 CSV 互轉",
+        description:
+          "在瀏覽器中互轉 vCard（.vcf）與 CSV 聯絡人檔案。開啟檔案或貼上文字，即可預覽並下載轉換結果。",
+      },
+    },
+  },
+  {
     slug: "vcard-generator",
     category: "document",
     icon: "contact-round",
@@ -87241,6 +87364,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  "vcard-csv-converter": {
+    slug: "vcard-csv-converter",
+    category: "document",
+    icon: "arrow-left-right",
+    tags: ["vcard", "vcf", "csv", "contacts", "address book", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل vCard وCSV",
+        description:
+          "حوّل جهات الاتصال بين vCard ‏(.vcf) وCSV. افتح ملفًا أو الصق النص، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "vCard-CSV-Konverter",
+        description:
+          "Konvertieren Sie Kontakte zwischen vCard (.vcf) und CSV. Öffnen Sie eine Datei oder fügen Sie Text ein, prüfen Sie das Ergebnis und laden Sie es direkt im Browser herunter.",
+      },
+      en: {
+        name: "vCard ↔ CSV Converter",
+        description:
+          "Convert contacts between vCard (.vcf) and CSV. Open a file or paste text, preview the conversion, and download the result in your browser.",
+      },
+      es: {
+        name: "Convertidor vCard ↔ CSV",
+        description:
+          "Convierte contactos entre vCard (.vcf) y CSV. Abre un archivo o pega el texto, revisa la vista previa y descarga el resultado desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur vCard ↔ CSV",
+        description:
+          "Convertissez vos contacts entre vCard (.vcf) et CSV. Ouvrez un fichier ou collez du texte, vérifiez l’aperçu et téléchargez le résultat depuis le navigateur.",
+      },
+      he: {
+        name: "ממיר vCard ו-CSV",
+        description:
+          "המירו רשימות אנשי קשר בין vCard ‏(.vcf) ל-CSV. פתחו קובץ או הדביקו טקסט, צפו בתוצאה והורידו אותה מהדפדפן.",
+      },
+      hi: {
+        name: "vCard ↔ CSV कन्वर्टर",
+        description:
+          "संपर्कों को vCard (.vcf) से CSV या CSV से vCard में बदलें। फ़ाइल खोलें या टेक्स्ट पेस्ट करें, नतीजे का पूर्वावलोकन करें और उसे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi vCard ↔ CSV",
+        description:
+          "Konversi kontak antara vCard (.vcf) dan CSV. Buka file atau tempel teks, lihat pratinjau, lalu unduh hasilnya langsung di browser.",
+      },
+      it: {
+        name: "Convertitore vCard ↔ CSV",
+        description:
+          "Converti i contatti tra vCard (.vcf) e CSV. Apri un file o incolla il testo, controlla l’anteprima e scarica il risultato dal browser.",
+      },
+      ja: {
+        name: "vCard・CSV 相互変換ツール",
+        description:
+          "連絡先を vCard（.vcf）と CSV の間で相互変換します。ファイルを開くかテキストを貼り付け、ブラウザーで結果を確認してダウンロードできます。",
+      },
+      ko: {
+        name: "vCard·CSV 변환기",
+        description:
+          "연락처를 vCard(.vcf)와 CSV 사이에서 양방향으로 변환합니다. 파일을 열거나 텍스트를 붙여넣고 브라우저에서 결과를 확인해 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar vCard ↔ CSV",
+        description:
+          "Tukar senarai kenalan antara vCard (.vcf) dengan CSV. Buka fail atau tampal teks, semak pratonton, kemudian muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "vCard-CSV-converter",
+        description:
+          "Zet contacten om tussen vCard (.vcf) en CSV. Open een bestand of plak tekst, bekijk het resultaat en download het rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Konvertering mellom vCard og CSV",
+        description:
+          "Konverter kontakter mellom vCard (.vcf) og CSV. Åpne en fil eller lim inn tekst, se en forhåndsvisning og last ned resultatet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter vCard i CSV",
+        description:
+          "Konwertuj kontakty między vCard (.vcf) a CSV. Otwórz plik lub wklej tekst, sprawdź podgląd i pobierz wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor vCard ↔ CSV",
+        description:
+          "Converta contatos entre vCard (.vcf) e CSV. Abra um arquivo ou cole o texto, confira a prévia e baixe o resultado no navegador.",
+      },
+      ru: {
+        name: "Конвертер vCard ↔ CSV",
+        description:
+          "Преобразуйте списки контактов из vCard (.vcf) в CSV и обратно. Откройте файл или вставьте текст, проверьте результат и скачайте его из браузера.",
+      },
+      sv: {
+        name: "Konverterare för vCard och CSV",
+        description:
+          "Konvertera kontakter mellan vCard (.vcf) och CSV. Öppna en fil eller klistra in text, förhandsgranska resultatet och ladda ner det i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง vCard ↔ CSV",
+        description:
+          "แปลงรายชื่อติดต่อระหว่าง vCard (.vcf) กับ CSV เปิดไฟล์หรือวางข้อความ แล้วดูตัวอย่างและดาวน์โหลดผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "vCard ↔ CSV Dönüştürücü",
+        description:
+          "Kişi listelerini vCard (.vcf) ile CSV arasında dönüştürün. Dosya açın veya metin yapıştırın, sonucu önizleyin ve tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi vCard ↔ CSV",
+        description:
+          "Chuyển đổi danh bạ giữa vCard (.vcf) và CSV. Mở tệp hoặc dán văn bản, xem trước và tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "vCard 与 CSV 互转",
+        description:
+          "在浏览器中将联系人文件在 vCard（.vcf）与 CSV 之间互转。打开文件或粘贴文本，即可预览并下载转换结果。",
+      },
+      "zh-TW": {
+        name: "vCard 與 CSV 互轉",
+        description:
+          "在瀏覽器中互轉 vCard（.vcf）與 CSV 聯絡人檔案。開啟檔案或貼上文字，即可預覽並下載轉換結果。",
       },
     },
   },

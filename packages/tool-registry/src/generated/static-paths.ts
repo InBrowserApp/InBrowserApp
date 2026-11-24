@@ -30822,6 +30822,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "vcard-csv-converter",
+    language: "ar",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "de",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "en",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "es",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "fr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "he",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "hi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "id",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "it",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ja",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ko",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ms",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "nl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "no",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pl",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "pt",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "ru",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "sv",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "th",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "tr",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "vi",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "vcard-csv-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "vcard-generator",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "vCard ↔ CSV Converter",
+  "description": "Convert contacts between vCard (.vcf) and CSV. Open a file or paste text, preview the conversion, and download the result in your browser."
+}

@@ -1679,6 +1679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "vCard·CSV 변환기",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "vCard 명함 생성기",
     slug: "vcard-generator",
   },

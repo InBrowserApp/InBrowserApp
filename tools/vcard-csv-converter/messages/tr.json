@@ -1,0 +1,28 @@
+{
+  "openFile": "Dosya aç",
+  "sample": "Örnek dene",
+  "input": "Kaynak metin",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "readError": "Dosya okunamadı. Dosyayı yeniden seçin veya metni yapıştırın.",
+  "result": "Dönüştürme sonucu",
+  "empty": "Bir dosya ekleyin veya metin yapıştırın. Dönüştürünce sonucu burada görebilirsiniz.",
+  "convert": "Dönüştür",
+  "preview": "Sonuç önizlemesi",
+  "invalid": "Dosya biçimini ve aşağıdaki örnekleri kontrol edip yeniden deneyin.",
+  "noRows": "Dönüştürülecek kayıt yok. Girdiyi ve sütun başlıklarını kontrol edin.",
+  "rowError": "CSV dosyasındaki {row}. satırın değerlerini kontrol edin.",
+  "count": "Kayıt sayısı: {count}",
+  "paste": "Dosya içeriğini buraya yapıştırın",
+  "forward": "vCard’dan CSV’ye",
+  "reverse": "CSV’den vCard’a",
+  "downloadForward": "CSV indir",
+  "downloadReverse": "VCF indir",
+  "columns": {
+    "Full Name": "Ad soyad",
+    "Email": "E-posta",
+    "Phone": "Telefon",
+    "Company": "Şirket"
+  }
+}

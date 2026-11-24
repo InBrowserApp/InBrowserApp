@@ -1679,6 +1679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "vCard・CSV 相互変換ツール",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "vCard 名刺作成ツール",
     slug: "vcard-generator",
   },

@@ -1679,6 +1679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "vCard 与 CSV 互转",
+    slug: "vcard-csv-converter",
+  },
+  {
+    category: "document",
     name: "vCard 名片生成器",
     slug: "vcard-generator",
   },
