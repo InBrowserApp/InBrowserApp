@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Trình đọc truyện tranh CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Trình chuyển đổi CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Trình đọc truyện tranh CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",

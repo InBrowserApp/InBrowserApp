@@ -5811,6 +5811,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "cbor-messagepack-converter",
     category: "json",
     icon: "binary",
@@ -5939,6 +6062,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },
@@ -46577,6 +46823,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "cb7-reader": {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
   "cbor-messagepack-converter": {
     slug: "cbor-messagepack-converter",
     category: "json",
@@ -46706,6 +47075,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  "cbr-reader": {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },

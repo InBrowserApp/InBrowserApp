@@ -1,0 +1,21 @@
+{
+  "readerName": "{format} Çizgi Roman Okuyucu",
+  "choose": "Bir {format} dosyası seçin",
+  "drop": "Veya buraya bir {format} ya da {archive} dosyası bırakın.",
+  "privacy": "Çizgi romanınız bu cihazda kalır.",
+  "invalid": "Bir {format} veya {archive} dosyası seçin.",
+  "damaged": "Arşiv okunamadı. Hasarlı olabilir veya desteklenmeyen {archive} özellikleri kullanıyor olabilir.",
+  "howTitle": "{format} dosyası nasıl açılır?",
+  "how": [
+    "Bir {format} dosyası seçin veya okuyucuya sürükleyin. Çizgi roman sayfalarının görsellerini içeren bir {archive} arşivi de açabilirsiniz.",
+    "Sayfaları çevirmek için okları kullanın, belirli bir sayfaya gitmek için sayfa numarasını girin veya bir sahneyi bulmak için küçük resim ızgarasını açın.",
+    "Görselin tamamını görmek için ‘Sayfayı sığdır’ seçeneğini kullanın; küçük yazıları okumak için ‘Genişliğe sığdır’ seçeneğini ve yakınlaştırmayı kullanın. Mangalar için sağdan sola okumaya geçin veya çizgi romana daha fazla alan ayırmak için odaklı okumayı kullanın."
+  ],
+  "formatTitle": "{format} dosyası nedir?",
+  "formatBody": "{format} dosyası, {archive} sıkıştırması kullanan bir çizgi roman arşividir. Sayfaları genellikle bölüm klasörlerinde görsel olarak saklar. Okuyucu tam dosya yollarını doğal sırayla sıralar; böylece 2. sayfa 10. sayfadan önce gelir. Gizli dosyalar ve görsel olmayan dosyalar atlanır.",
+  "compatibilityTitle": "Desteklenen görseller ve arşivler",
+  "compatibilityBody": "JPEG, PNG, GIF, WebP ve BMP sayfaları içeren çizgi romanların yanı sıra tarayıcının desteklediği AVIF görsellerini okuyun. Parola korumalı veya parçalara bölünmüş arşivler önce çıkarılmalıdır. Birden fazla görsel aynı sıkıştırılmış bloğu paylaşabildiğinden büyük katı arşivlerin açılması ve sayfalarının çevrilmesi daha uzun sürebilir.",
+  "privacyTitle": "Tarayıcınızda gizli okuyun",
+  "privacyBody": "Tarayıcınız arşivi cihazınızda açar. Dosya yüklemesi, hesap veya kurulum gerekmez. ZIP tabanlı bir çizgi roman okumak için CBZ okuyucuyu kullanın.",
+  "relatedTitle": "İlgili araçlar"
+}

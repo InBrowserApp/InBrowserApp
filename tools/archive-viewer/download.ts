@@ -1,6 +1,6 @@
-import { safeDownloadName } from "./core/path"
+import { safeDownloadName } from "@workspace/archive/path"
 
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 
 async function downloadArchiveEntry(
   handle: ArchiveHandle,

@@ -16,11 +16,11 @@ import {
 import { Input } from "@workspace/ui/components/ui/input"
 import { ChevronRight, ChevronUp, Folder, Search } from "@workspace/ui/icons"
 
-import { splitPathSegments, toDirectoryPath } from "../core/path"
+import { splitPathSegments, toDirectoryPath } from "@workspace/archive/path"
 import { ExplorerTableRow } from "./explorer-table-row"
 
 import type { ArchiveExplorerRow } from "../core/explorer"
-import type { ArchiveEntryKind } from "../core/types"
+import type { ArchiveEntryKind } from "@workspace/archive/types"
 import type { ArchiveViewerMessages } from "../types"
 
 type ExplorerCardProps = Readonly<{

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { RefObject } from "react"
 import type { Reader, ReaderState } from "@workspace/pdf-reader"
-import { failureMessage } from "@workspace/cbz/errors"
+import { failureMessage } from "@workspace/comic/errors"
 import type { Messages } from "./types"
 
 const initial: ReaderState = {
@@ -49,7 +49,7 @@ export function useDocument(
       controller.abort()
     }
     setStatus(m.pdfExport.reading)
-    void import("@workspace/cbz/pdf")
+    void import("@workspace/comic/pdf")
       .then(async ({ preparePdf }) => {
         signal.throwIfAborted()
         const result = await preparePdf(file, signal, (progress) => {

@@ -1,0 +1,21 @@
+{
+  "readerName": "Lector de cómics {format}",
+  "choose": "Elegir un archivo {format}",
+  "drop": "O arrastra aquí un archivo {format} o {archive}.",
+  "privacy": "Tu cómic se queda en este dispositivo.",
+  "invalid": "Elige un archivo {format} o {archive}.",
+  "damaged": "No se pudo leer el archivo. Puede estar dañado o usar funciones {archive} no compatibles.",
+  "howTitle": "Cómo abrir un archivo {format}",
+  "how": [
+    "Selecciona un archivo {format} o arrástralo al lector. También puedes abrir un archivo {archive} que contenga las imágenes de un cómic.",
+    "Usa las flechas para pasar de página, escribe un número para ir a esa página o abre las miniaturas para encontrar una escena.",
+    "Selecciona Ajustar página para ver la imagen completa, o usa Ajustar al ancho y el zoom para leer texto pequeño. Cambia la dirección de lectura a De derecha a izquierda para leer manga, o activa Lectura centrada para dejar más espacio al cómic."
+  ],
+  "formatTitle": "¿Qué es un archivo {format}?",
+  "formatBody": "Un archivo {format} es un cómic comprimido en formato {archive}. Guarda las páginas como imágenes, a menudo en carpetas por capítulos. El lector ordena las páginas por la ruta completa de cada imagen y tiene en cuenta el valor de los números, así que la página 2 aparece antes que la 10. Omite los archivos ocultos y los que no son imágenes.",
+  "compatibilityTitle": "Formatos de imagen y archivos compatibles",
+  "compatibilityBody": "Puedes leer cómics con páginas en JPEG, PNG, GIF, WebP y BMP, además de AVIF si tu navegador admite este formato. Si el archivo está protegido con contraseña o dividido en partes, extráelo primero. Los archivos grandes con compresión sólida pueden tardar más en abrirse o al cambiar de página, ya que varias imágenes pueden compartir el mismo bloque comprimido.",
+  "privacyTitle": "Lee en privado desde tu navegador",
+  "privacyBody": "El navegador abre el archivo directamente en tu dispositivo. Puedes leer sin subir archivos, crear una cuenta ni instalar una aplicación. Para leer un cómic comprimido en ZIP, usa el lector de cómics CBZ.",
+  "relatedTitle": "Herramientas relacionadas"
+}

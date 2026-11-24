@@ -13,10 +13,10 @@ import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Download, FileText, ImageIcon } from "@workspace/ui/icons"
 
 import { formatBytes } from "../core/format"
-import { safeDownloadName } from "../core/path"
+import { safeDownloadName } from "@workspace/archive/path"
 import { HighlightedPreview } from "./highlighted-preview"
 
-import type { ArchiveEntry } from "../core/types"
+import type { ArchiveEntry } from "@workspace/archive/types"
 import type { ArchiveViewerMessages } from "../types"
 
 type PreviewState =

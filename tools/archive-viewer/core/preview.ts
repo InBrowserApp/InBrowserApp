@@ -1,4 +1,4 @@
-import type { ArchiveEntry } from "./types"
+import type { ArchiveEntry } from "@workspace/archive/types"
 
 const MAX_TEXT_PREVIEW_BYTES = 1024 * 1024
 

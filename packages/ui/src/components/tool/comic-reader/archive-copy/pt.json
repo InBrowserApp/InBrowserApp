@@ -1,0 +1,21 @@
+{
+  "readerName": "Leitor de quadrinhos {format}",
+  "choose": "Escolher arquivo {format}",
+  "drop": "Ou solte um arquivo {format} ou {archive} aqui.",
+  "privacy": "Seu quadrinho fica neste dispositivo.",
+  "invalid": "Escolha um arquivo {format} ou {archive}.",
+  "damaged": "Não foi possível ler o arquivo compactado. Ele pode estar danificado ou usar recursos {archive} não compatíveis.",
+  "howTitle": "Como abrir um arquivo {format}",
+  "how": [
+    "Escolha um arquivo {format} ou arraste-o para o leitor. Você também pode abrir um arquivo {archive} que contenha as imagens das páginas de um quadrinho.",
+    "Use as setas para virar as páginas, digite um número para ir direto à página ou abra a grade de miniaturas para encontrar uma cena.",
+    "Use Ajustar à página para ver a imagem inteira ou combine Ajustar à largura com o zoom para ler textos pequenos. Para ler mangás, selecione a leitura da direita para a esquerda. Use a leitura focada para dar mais espaço às páginas."
+  ],
+  "formatTitle": "O que é um arquivo {format}?",
+  "formatBody": "Um arquivo {format} é um quadrinho compactado no formato {archive}. As páginas são armazenadas como imagens, muitas vezes em pastas por capítulo. O leitor ordena os caminhos completos dos arquivos considerando os números, assim a página 2 vem antes da página 10. Arquivos ocultos e arquivos que não são imagens são ignorados.",
+  "compatibilityTitle": "Imagens e arquivos compatíveis",
+  "compatibilityBody": "Você pode ler quadrinhos com páginas em JPEG, PNG, GIF, WebP e BMP. Páginas em AVIF também funcionam em navegadores compatíveis. Extraia antes os arquivos compactados protegidos por senha ou divididos em partes. Arquivos grandes com compressão sólida podem demorar mais para abrir e virar páginas, pois várias imagens podem compartilhar o mesmo bloco compactado.",
+  "privacyTitle": "Leia com privacidade no navegador",
+  "privacyBody": "O navegador abre o arquivo compactado diretamente no seu dispositivo. Não é preciso enviar arquivos, criar uma conta ou instalar programas. Para ler um quadrinho compactado em ZIP, use o leitor de quadrinhos CBZ.",
+  "relatedTitle": "Ferramentas relacionadas"
+}

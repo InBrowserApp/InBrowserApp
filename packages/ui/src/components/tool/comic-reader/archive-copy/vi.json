@@ -1,0 +1,21 @@
+{
+  "readerName": "Trình đọc truyện tranh {format}",
+  "choose": "Chọn tệp {format}",
+  "drop": "Hoặc kéo và thả tệp {format} hay {archive} vào đây.",
+  "privacy": "Truyện của bạn vẫn ở trên thiết bị này.",
+  "invalid": "Chọn tệp {format} hoặc {archive}.",
+  "damaged": "Không thể đọc tệp nén. Tệp có thể bị hỏng hoặc sử dụng tính năng {archive} không được hỗ trợ.",
+  "howTitle": "Cách mở tệp {format}",
+  "how": [
+    "Chọn tệp {format} hoặc kéo tệp vào trình đọc. Bạn cũng có thể mở tệp nén {archive} chứa ảnh các trang truyện.",
+    "Dùng các nút mũi tên để lật trang, nhập số trang để chuyển thẳng đến trang đó hoặc mở ảnh thu nhỏ để tìm đoạn truyện muốn xem.",
+    "Chọn “Vừa trang” để xem toàn bộ ảnh, hoặc dùng “Vừa chiều rộng” và thu phóng để đọc chữ nhỏ. Chuyển sang hướng đọc phải sang trái cho manga, hoặc dùng chế độ đọc tập trung để có thêm không gian xem truyện."
+  ],
+  "formatTitle": "Tệp {format} là gì?",
+  "formatBody": "Tệp {format} là tệp truyện tranh nén theo định dạng {archive}. Các trang được lưu dưới dạng ảnh, thường chia thành thư mục theo chương. Trình đọc sắp xếp theo đường dẫn đầy đủ của tệp, tính đến thứ tự số để trang 2 đứng trước trang 10. Tệp ẩn và tệp không phải ảnh được bỏ qua.",
+  "compatibilityTitle": "Định dạng ảnh và tệp nén được hỗ trợ",
+  "compatibilityBody": "Bạn có thể đọc truyện gồm các trang JPEG, PNG, GIF, WebP và BMP, cũng như AVIF nếu trình duyệt hỗ trợ. Hãy giải nén trước các tệp được bảo vệ bằng mật khẩu hoặc được chia thành nhiều phần. Tệp lớn dùng chế độ nén liền khối có thể mở và lật trang chậm hơn vì nhiều ảnh có thể nằm chung một khối dữ liệu nén.",
+  "privacyTitle": "Đọc riêng tư ngay trong trình duyệt",
+  "privacyBody": "Trình duyệt mở tệp nén trực tiếp trên thiết bị của bạn. Không cần tải tệp lên, tạo tài khoản hay cài đặt phần mềm. Với truyện nén theo định dạng ZIP, hãy dùng trình đọc truyện tranh CBZ.",
+  "relatedTitle": "Công cụ liên quan"
+}

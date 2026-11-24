@@ -14,10 +14,14 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { ImageIcon } from "@workspace/ui/icons"
-import { Reader } from "./components/reader"
-import { useComic } from "./use-comic"
+import { Reader } from "@workspace/ui/components/tool/comic-reader/reader"
+import { useComic } from "@workspace/ui/comic-reader/use-comic"
 import { PdfExport } from "./pdf-export"
 import type { Messages } from "./types"
+
+const extensions = [".cbz"]
+const open = (file: File, signal: AbortSignal) =>
+  import("@workspace/comic").then(({ openComic }) => openComic(file, signal))
 
 export default function Client({ messages: m }: { messages: Messages }) {
   const [selection, setSelection] = useState<{ file: File | null; id: number }>(
@@ -26,7 +30,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const { file } = selection
   const setFile = (next: File | null) =>
     setSelection((value) => ({ file: next, id: value.id + 1 }))
-  const { opened, error, loading } = useComic(file)
+  const { opened, error, loading } = useComic(file, extensions, open)
   return (
     <>
       <DocumentWorkspace

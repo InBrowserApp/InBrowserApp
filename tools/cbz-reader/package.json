@@ -10,7 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@workspace/cbz": "workspace:*"
+    "@workspace/comic": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

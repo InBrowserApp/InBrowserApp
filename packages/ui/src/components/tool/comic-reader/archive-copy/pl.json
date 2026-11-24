@@ -1,0 +1,21 @@
+{
+  "readerName": "Czytnik komiksów {format}",
+  "choose": "Wybierz plik {format}",
+  "drop": "Możesz też upuścić tutaj plik {format} lub {archive}.",
+  "privacy": "Twój komiks pozostaje na tym urządzeniu.",
+  "invalid": "Wybierz plik {format} lub {archive}.",
+  "damaged": "Nie udało się odczytać archiwum. Może być uszkodzone lub korzystać z nieobsługiwanych funkcji {archive}.",
+  "howTitle": "Jak otworzyć plik {format}",
+  "how": [
+    "Wybierz plik {format} lub przeciągnij go do czytnika. Możesz też otworzyć archiwum {archive} z obrazami stron komiksu.",
+    "Użyj strzałek, aby zmieniać strony, wpisz numer strony, aby od razu do niej przejść, albo otwórz siatkę miniatur, aby znaleźć scenę.",
+    "Użyj opcji „Dopasuj stronę”, by zobaczyć cały obraz, lub „Dopasuj szerokość” i powiększenia, by odczytać drobny tekst. Przy czytaniu mangi wybierz kierunek od prawej do lewej. Tryb skupienia daje więcej miejsca na komiks."
+  ],
+  "formatTitle": "Co to jest plik {format}?",
+  "formatBody": "{format} to archiwum komiksu skompresowane w formacie {archive}. Zawiera strony jako obrazy, często podzielone na foldery według rozdziałów. Czytnik sortuje pełne ścieżki plików w naturalnej kolejności, więc strona 2 pojawia się przed stroną 10. Pomija pliki ukryte oraz pliki, które nie są obrazami.",
+  "compatibilityTitle": "Obsługiwane obrazy i archiwa",
+  "compatibilityBody": "Możesz czytać komiksy ze stronami w formatach JPEG, PNG, GIF, WebP i BMP, a także AVIF w obsługujących go przeglądarkach. Archiwa chronione hasłem lub podzielone na części trzeba najpierw rozpakować. Otwieranie dużych archiwów ciągłych i zmiana stron mogą trwać dłużej, ponieważ kilka obrazów może należeć do tego samego bloku danych skompresowanych.",
+  "privacyTitle": "Czytaj w przeglądarce z zachowaniem prywatności",
+  "privacyBody": "Przeglądarka otwiera archiwum na Twoim urządzeniu. Nie musisz przesyłać pliku, zakładać konta ani niczego instalować. Komiks zapisany w formacie ZIP możesz otworzyć w czytniku komiksów CBZ.",
+  "relatedTitle": "Powiązane narzędzia"
+}

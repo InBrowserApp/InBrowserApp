@@ -9,12 +9,16 @@ import {
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import Client from "./client"
-import m from "./messages/en.json"
+import { comicReaderMessages } from "@workspace/ui/comic-reader/locales"
+import messages from "./messages/en.json"
 import type { Comic } from "./types"
 
 const mock = vi.hoisted(() => ({ open: vi.fn(), decode: vi.fn() }))
-vi.mock("@workspace/cbz", () => ({ openComic: mock.open }))
-vi.mock("./image", () => ({ decodeImage: mock.decode }))
+const m = { ...comicReaderMessages("en"), ...messages }
+vi.mock("@workspace/comic", () => ({ openComic: mock.open }))
+vi.mock("@workspace/ui/comic-reader/image", () => ({
+  decodeImage: mock.decode,
+}))
 let book: Comic
 let serial = 0
 function makeBook(count = 12): Comic {
