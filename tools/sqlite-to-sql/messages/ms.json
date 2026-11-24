@@ -1,0 +1,23 @@
+{
+  "open": "Pilih fail SQLite",
+  "replace": "Gantikan fail SQLite",
+  "clear": "Tutup pangkalan data",
+  "reader": "Ruang kerja eksport SQLite ke SQL",
+  "privacy": "Pangkalan data kekal pada peranti anda.",
+  "releaseFile": "Lepaskan untuk membuka pangkalan data",
+  "drop": "Lepaskan pangkalan data SQLite di sini",
+  "formats": "Pangkalan data SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Cuba contoh",
+  "schemaOnly": "Skema sahaja",
+  "schemaNote": "Eksport struktur pangkalan data tanpa kandungan jadual.",
+  "working": "Menjana skrip SQL…",
+  "preview": "Pratonton SQL",
+  "previewLimit": "Pratonton hanya menunjukkan sebahagian kandungan. Fail yang dimuat turun mengandungi skrip SQL penuh.",
+  "copy": "Salin SQL",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun .sql",
+  "invalid": "Pilih fail pangkalan data SQLite 3 yang boleh dibaca.",
+  "failed": "Pangkalan data ini tidak dapat dieksport. Cuba eksport salinan lengkap daripada aplikasi asal.",
+  "unsupportedSchema": "Skema jadual maya ini tidak boleh dieksport secara berasingan. Matikan pilihan “Skema sahaja” untuk mengeksport seluruh pangkalan data."
+}

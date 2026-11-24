@@ -1504,6 +1504,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "แปลง SQLite เป็นไฟล์ดัมป์ SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "โปรแกรมดู SQLite",
     slug: "sqlite-viewer",
   },

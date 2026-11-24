@@ -1,0 +1,23 @@
+{
+  "open": "SQLite-bestand kiezen",
+  "replace": "SQLite-bestand vervangen",
+  "clear": "Database sluiten",
+  "reader": "SQLite-export naar SQL",
+  "privacy": "Je database blijft op je apparaat.",
+  "releaseFile": "Laat los om de database te openen",
+  "drop": "Sleep een SQLite-database hierheen",
+  "formats": "SQLite 3-databases (.db, .sqlite, .sqlite3)",
+  "sample": "Voorbeeld proberen",
+  "schemaOnly": "Alleen het schema",
+  "schemaNote": "Exporteer de databasestructuur zonder de tabelrijen.",
+  "working": "SQL-dump maken…",
+  "preview": "Voorbeeld van de SQL-code",
+  "previewLimit": "Deze weergave toont een deel van de SQL-code. De download bevat de volledige SQL-dump.",
+  "copy": "SQL kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": ".sql downloaden",
+  "invalid": "Kies een leesbaar SQLite 3-databasebestand.",
+  "failed": "Deze database kon niet worden geëxporteerd. Probeer een zelfstandige kopie uit de toepassing die de database heeft gemaakt.",
+  "unsupportedSchema": "Je kunt het schema van deze virtuele tabel niet apart exporteren. Schakel ‘Alleen het schema’ uit om de hele database te exporteren."
+}

@@ -1,0 +1,23 @@
+{
+  "open": "Elegir archivo SQLite",
+  "replace": "Reemplazar archivo SQLite",
+  "clear": "Cerrar base de datos",
+  "reader": "Exportación de SQLite a SQL",
+  "privacy": "Tu base de datos se queda en tu dispositivo.",
+  "releaseFile": "Suelta el archivo para abrir la base de datos",
+  "drop": "Arrastra aquí una base de datos SQLite",
+  "formats": "Bases de datos SQLite 3 (.db, .sqlite, .sqlite3)",
+  "sample": "Probar con un ejemplo",
+  "schemaOnly": "Solo el esquema",
+  "schemaNote": "Exporta la estructura de la base de datos sin las filas de las tablas.",
+  "working": "Generando el volcado SQL…",
+  "preview": "Vista previa del SQL",
+  "previewLimit": "La vista previa muestra solo una parte. La descarga incluye el volcado SQL completo.",
+  "copy": "Copiar SQL",
+  "copied": "Copiado",
+  "copyFailed": "No se pudo copiar",
+  "download": "Descargar .sql",
+  "invalid": "Elige un archivo de base de datos SQLite 3 que se pueda leer.",
+  "failed": "No se pudo exportar esta base de datos. Prueba con una copia independiente creada desde la aplicación de origen.",
+  "unsupportedSchema": "Esta tabla virtual no admite la exportación del esquema por separado. Desactiva «Solo el esquema» para exportar toda la base de datos."
+}

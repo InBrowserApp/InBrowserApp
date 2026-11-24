@@ -27602,6 +27602,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sqlite-to-sql",
+    language: "ar",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "de",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "en",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "es",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "fr",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "he",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "hi",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "id",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "it",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ja",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ko",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ms",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "nl",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "no",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "pl",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "pt",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "ru",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "sv",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "th",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "tr",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "vi",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "zh-CN",
+  },
+  {
+    slug: "sqlite-to-sql",
+    language: "zh-TW",
+  },
+  {
     slug: "sqlite-viewer",
     language: "ar",
   },

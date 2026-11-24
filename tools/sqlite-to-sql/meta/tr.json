@@ -1,0 +1,4 @@
+{
+  "name": "SQLite'tan SQL'e Dönüştürücü",
+  "description": "SQLite veritabanını (.db, .sqlite veya .sqlite3) indirilebilir bir SQL dökümüne dönüştürün. Şemayı tek başına veya verilerle birlikte doğrudan tarayıcınızda dışa aktarın."
+}

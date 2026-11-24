@@ -1,0 +1,4 @@
+{
+  "name": "SQLite를 SQL 덤프로 변환",
+  "description": "SQLite 데이터베이스(.db, .sqlite, .sqlite3)를 SQL 덤프 파일로 변환해 다운로드하세요. 브라우저에서 스키마와 데이터를 함께 내보내거나 스키마만 내보낼 수 있습니다."
+}

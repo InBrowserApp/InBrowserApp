@@ -1504,6 +1504,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "SQLite को SQL डंप में बदलें",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "SQLite व्यूअर",
     slug: "sqlite-viewer",
   },

@@ -377,6 +377,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "spreadsheet-data-export": () => import("@tool/spreadsheet-data-export/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
+  "sqlite-to-sql": () => import("@tool/sqlite-to-sql/page"),
   "sqlite-viewer": () => import("@tool/sqlite-viewer/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   "ssh-key-generator": () => import("@tool/ssh-key-generator/page"),

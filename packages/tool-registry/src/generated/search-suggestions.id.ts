@@ -1504,6 +1504,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Ekspor SQLite ke SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Penampil SQLite",
     slug: "sqlite-viewer",
   },

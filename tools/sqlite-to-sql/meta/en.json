@@ -1,0 +1,4 @@
+{
+  "name": "SQLite to SQL Dump",
+  "description": "Convert a SQLite database (.db, .sqlite, or .sqlite3) to a downloadable SQL dump. Export schema and data or schema only, right in your browser."
+}

@@ -38045,6 +38045,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "sqlite-to-sql",
+    category: "developer",
+    icon: "database",
+    tags: ["sqlite", "sql", "dump", "database", "schema", "export", "backup"],
+    locales: {
+      ar: {
+        name: "تحويل SQLite إلى ملف SQL",
+        description:
+          "حوّل قاعدة بيانات SQLite (بامتداد ⁦.db⁩ أو ⁦.sqlite⁩ أو ⁦.sqlite3⁩) إلى ملف SQL قابل للتنزيل. صدّر المخطط وحده أو مع البيانات مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "SQLite als SQL-Dump exportieren",
+        description:
+          "Exportieren Sie eine SQLite-Datenbank (.db, .sqlite oder .sqlite3) als SQL-Dump zum Herunterladen. Wählen Sie zwischen Schema mit Daten und reinem Schemaexport, direkt im Browser.",
+      },
+      en: {
+        name: "SQLite to SQL Dump",
+        description:
+          "Convert a SQLite database (.db, .sqlite, or .sqlite3) to a downloadable SQL dump. Export schema and data or schema only, right in your browser.",
+      },
+      es: {
+        name: "Conversor de SQLite a SQL",
+        description:
+          "Convierte una base de datos SQLite (.db, .sqlite o .sqlite3) en un volcado SQL descargable. Exporta el esquema con o sin datos desde tu navegador.",
+      },
+      fr: {
+        name: "Convertir SQLite en SQL",
+        description:
+          "Convertissez une base SQLite (.db, .sqlite ou .sqlite3) en fichier SQL téléchargeable. Exportez le schéma seul ou avec les données, directement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת SQLite לקובץ SQL",
+        description:
+          "המרת מסד נתונים של SQLite (⁦.db, .sqlite, .sqlite3⁩) לקובץ SQL להורדה. אפשר לייצא את הסכמה בלבד או יחד עם הנתונים, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "SQLite को SQL डंप में बदलें",
+        description:
+          "SQLite डेटाबेस (.db, .sqlite या .sqlite3) को डाउनलोड करने योग्य SQL डंप में बदलें। अपने ब्राउज़र में स्कीमा और डेटा दोनों या सिर्फ़ स्कीमा निर्यात करें।",
+      },
+      id: {
+        name: "Ekspor SQLite ke SQL",
+        description:
+          "Ekspor basis data SQLite (.db, .sqlite, atau .sqlite3) ke file SQL yang bisa diunduh. Sertakan skema dan data atau skema saja, langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da SQLite a SQL",
+        description:
+          "Converti un database SQLite (.db, .sqlite o .sqlite3) in un dump SQL scaricabile. Esporta lo schema con o senza i dati direttamente nel browser.",
+      },
+      ja: {
+        name: "SQLite を SQL ダンプに変換",
+        description:
+          "SQLite データベース（.db、.sqlite、.sqlite3）をブラウザーで SQL ダンプに変換し、.sql ファイルとして保存できます。スキーマとデータをまとめて、またはスキーマだけをエクスポートできます。",
+      },
+      ko: {
+        name: "SQLite를 SQL 덤프로 변환",
+        description:
+          "SQLite 데이터베이스(.db, .sqlite, .sqlite3)를 SQL 덤프 파일로 변환해 다운로드하세요. 브라우저에서 스키마와 데이터를 함께 내보내거나 스키마만 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Eksport SQLite ke SQL",
+        description:
+          "Eksport pangkalan data SQLite (.db, .sqlite atau .sqlite3) sebagai fail SQL yang boleh dimuat turun. Eksport skema dan data atau skema sahaja terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "SQLite naar SQL converteren",
+        description:
+          "Converteer een SQLite-database (.db, .sqlite of .sqlite3) naar een downloadbare SQL-dump. Exporteer het schema met of zonder gegevens in je browser.",
+      },
+      no: {
+        name: "SQLite til SQL-dump",
+        description:
+          "Konverter en SQLite-database (.db, .sqlite eller .sqlite3) til en nedlastbar SQL-dump. Eksporter skjema og data eller bare skjemaet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Eksport SQLite do SQL",
+        description:
+          "Zapisz bazę SQLite (.db, .sqlite lub .sqlite3) jako zrzut SQL. Wyeksportuj schemat z danymi albo sam schemat bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de SQLite para SQL",
+        description:
+          "Converta um banco de dados SQLite (.db, .sqlite ou .sqlite3) em um dump SQL para download. Exporte o esquema com ou sem os dados direto no navegador.",
+      },
+      ru: {
+        name: "Экспорт SQLite в SQL-дамп",
+        description:
+          "Сохраните базу SQLite (.db, .sqlite или .sqlite3) в виде SQL-дампа. Экспортируйте схему с данными или только схему прямо в браузере.",
+      },
+      sv: {
+        name: "SQLite till SQL-dump",
+        description:
+          "Konvertera en SQLite-databas (.db, .sqlite eller .sqlite3) till en nedladdningsbar SQL-dump. Exportera schema och data eller bara schemat direkt i webbläsaren.",
+      },
+      th: {
+        name: "แปลง SQLite เป็นไฟล์ดัมป์ SQL",
+        description:
+          "แปลงฐานข้อมูล SQLite (.db, .sqlite หรือ .sqlite3) เป็นไฟล์ดัมป์ SQL สำหรับดาวน์โหลด เลือกส่งออกทั้งสคีมาและข้อมูลหรือเฉพาะสคีมาได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "SQLite'tan SQL'e Dönüştürücü",
+        description:
+          "SQLite veritabanını (.db, .sqlite veya .sqlite3) indirilebilir bir SQL dökümüne dönüştürün. Şemayı tek başına veya verilerle birlikte doğrudan tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển SQLite sang tệp SQL",
+        description:
+          "Chuyển cơ sở dữ liệu SQLite (.db, .sqlite hoặc .sqlite3) thành bản kết xuất SQL để tải xuống. Xuất cả lược đồ và dữ liệu hoặc chỉ lược đồ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "SQLite 转 SQL",
+        description:
+          "将 SQLite 数据库（.db、.sqlite 或 .sqlite3）转换为可下载的 SQL 转储文件。在浏览器中导出数据库结构和数据，或仅导出结构。",
+      },
+      "zh-TW": {
+        name: "SQLite 轉 SQL",
+        description:
+          "在瀏覽器中將 SQLite 資料庫（.db、.sqlite 或 .sqlite3）匯出成可下載的 SQL 檔案。可匯出完整的結構與資料，也可只匯出結構。",
+      },
+    },
+  },
+  {
     slug: "sqlite-viewer",
     category: "developer",
     icon: "layout-grid",
@@ -84767,6 +84890,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  "sqlite-to-sql": {
+    slug: "sqlite-to-sql",
+    category: "developer",
+    icon: "database",
+    tags: ["sqlite", "sql", "dump", "database", "schema", "export", "backup"],
+    locales: {
+      ar: {
+        name: "تحويل SQLite إلى ملف SQL",
+        description:
+          "حوّل قاعدة بيانات SQLite (بامتداد ⁦.db⁩ أو ⁦.sqlite⁩ أو ⁦.sqlite3⁩) إلى ملف SQL قابل للتنزيل. صدّر المخطط وحده أو مع البيانات مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "SQLite als SQL-Dump exportieren",
+        description:
+          "Exportieren Sie eine SQLite-Datenbank (.db, .sqlite oder .sqlite3) als SQL-Dump zum Herunterladen. Wählen Sie zwischen Schema mit Daten und reinem Schemaexport, direkt im Browser.",
+      },
+      en: {
+        name: "SQLite to SQL Dump",
+        description:
+          "Convert a SQLite database (.db, .sqlite, or .sqlite3) to a downloadable SQL dump. Export schema and data or schema only, right in your browser.",
+      },
+      es: {
+        name: "Conversor de SQLite a SQL",
+        description:
+          "Convierte una base de datos SQLite (.db, .sqlite o .sqlite3) en un volcado SQL descargable. Exporta el esquema con o sin datos desde tu navegador.",
+      },
+      fr: {
+        name: "Convertir SQLite en SQL",
+        description:
+          "Convertissez une base SQLite (.db, .sqlite ou .sqlite3) en fichier SQL téléchargeable. Exportez le schéma seul ou avec les données, directement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת SQLite לקובץ SQL",
+        description:
+          "המרת מסד נתונים של SQLite (⁦.db, .sqlite, .sqlite3⁩) לקובץ SQL להורדה. אפשר לייצא את הסכמה בלבד או יחד עם הנתונים, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "SQLite को SQL डंप में बदलें",
+        description:
+          "SQLite डेटाबेस (.db, .sqlite या .sqlite3) को डाउनलोड करने योग्य SQL डंप में बदलें। अपने ब्राउज़र में स्कीमा और डेटा दोनों या सिर्फ़ स्कीमा निर्यात करें।",
+      },
+      id: {
+        name: "Ekspor SQLite ke SQL",
+        description:
+          "Ekspor basis data SQLite (.db, .sqlite, atau .sqlite3) ke file SQL yang bisa diunduh. Sertakan skema dan data atau skema saja, langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da SQLite a SQL",
+        description:
+          "Converti un database SQLite (.db, .sqlite o .sqlite3) in un dump SQL scaricabile. Esporta lo schema con o senza i dati direttamente nel browser.",
+      },
+      ja: {
+        name: "SQLite を SQL ダンプに変換",
+        description:
+          "SQLite データベース（.db、.sqlite、.sqlite3）をブラウザーで SQL ダンプに変換し、.sql ファイルとして保存できます。スキーマとデータをまとめて、またはスキーマだけをエクスポートできます。",
+      },
+      ko: {
+        name: "SQLite를 SQL 덤프로 변환",
+        description:
+          "SQLite 데이터베이스(.db, .sqlite, .sqlite3)를 SQL 덤프 파일로 변환해 다운로드하세요. 브라우저에서 스키마와 데이터를 함께 내보내거나 스키마만 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Eksport SQLite ke SQL",
+        description:
+          "Eksport pangkalan data SQLite (.db, .sqlite atau .sqlite3) sebagai fail SQL yang boleh dimuat turun. Eksport skema dan data atau skema sahaja terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "SQLite naar SQL converteren",
+        description:
+          "Converteer een SQLite-database (.db, .sqlite of .sqlite3) naar een downloadbare SQL-dump. Exporteer het schema met of zonder gegevens in je browser.",
+      },
+      no: {
+        name: "SQLite til SQL-dump",
+        description:
+          "Konverter en SQLite-database (.db, .sqlite eller .sqlite3) til en nedlastbar SQL-dump. Eksporter skjema og data eller bare skjemaet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Eksport SQLite do SQL",
+        description:
+          "Zapisz bazę SQLite (.db, .sqlite lub .sqlite3) jako zrzut SQL. Wyeksportuj schemat z danymi albo sam schemat bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de SQLite para SQL",
+        description:
+          "Converta um banco de dados SQLite (.db, .sqlite ou .sqlite3) em um dump SQL para download. Exporte o esquema com ou sem os dados direto no navegador.",
+      },
+      ru: {
+        name: "Экспорт SQLite в SQL-дамп",
+        description:
+          "Сохраните базу SQLite (.db, .sqlite или .sqlite3) в виде SQL-дампа. Экспортируйте схему с данными или только схему прямо в браузере.",
+      },
+      sv: {
+        name: "SQLite till SQL-dump",
+        description:
+          "Konvertera en SQLite-databas (.db, .sqlite eller .sqlite3) till en nedladdningsbar SQL-dump. Exportera schema och data eller bara schemat direkt i webbläsaren.",
+      },
+      th: {
+        name: "แปลง SQLite เป็นไฟล์ดัมป์ SQL",
+        description:
+          "แปลงฐานข้อมูล SQLite (.db, .sqlite หรือ .sqlite3) เป็นไฟล์ดัมป์ SQL สำหรับดาวน์โหลด เลือกส่งออกทั้งสคีมาและข้อมูลหรือเฉพาะสคีมาได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "SQLite'tan SQL'e Dönüştürücü",
+        description:
+          "SQLite veritabanını (.db, .sqlite veya .sqlite3) indirilebilir bir SQL dökümüne dönüştürün. Şemayı tek başına veya verilerle birlikte doğrudan tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển SQLite sang tệp SQL",
+        description:
+          "Chuyển cơ sở dữ liệu SQLite (.db, .sqlite hoặc .sqlite3) thành bản kết xuất SQL để tải xuống. Xuất cả lược đồ và dữ liệu hoặc chỉ lược đồ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "SQLite 转 SQL",
+        description:
+          "将 SQLite 数据库（.db、.sqlite 或 .sqlite3）转换为可下载的 SQL 转储文件。在浏览器中导出数据库结构和数据，或仅导出结构。",
+      },
+      "zh-TW": {
+        name: "SQLite 轉 SQL",
+        description:
+          "在瀏覽器中將 SQLite 資料庫（.db、.sqlite 或 .sqlite3）匯出成可下載的 SQL 檔案。可匯出完整的結構與資料，也可只匯出結構。",
       },
     },
   },

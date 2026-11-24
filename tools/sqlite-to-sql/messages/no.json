@@ -1,0 +1,23 @@
+{
+  "open": "Velg SQLite-fil",
+  "replace": "Bytt SQLite-fil",
+  "clear": "Lukk databasen",
+  "reader": "SQLite-eksport til SQL",
+  "privacy": "Databasen blir på enheten din.",
+  "releaseFile": "Slipp filen for å åpne databasen",
+  "drop": "Slipp en SQLite-database her",
+  "formats": "SQLite 3-databaser (.db, .sqlite, .sqlite3)",
+  "sample": "Prøv et eksempel",
+  "schemaOnly": "Bare skjema",
+  "schemaNote": "Eksporter databasestrukturen uten tabellrader.",
+  "working": "Genererer SQL-dump …",
+  "preview": "Forhåndsvisning av SQL",
+  "previewLimit": "Forhåndsvisningen er forkortet. Den nedlastede filen inneholder hele SQL-dumpen.",
+  "copy": "Kopier SQL",
+  "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
+  "download": "Last ned .sql",
+  "invalid": "Velg en SQLite 3-databasefil som kan leses.",
+  "failed": "Kunne ikke eksportere databasen. Lag en frittstående kopi i programmet som opprettet databasen, og prøv igjen.",
+  "unsupportedSchema": "Du kan ikke eksportere bare skjemaet for denne virtuelle tabellen. Slå av «Bare skjema» for å eksportere hele databasen."
+}

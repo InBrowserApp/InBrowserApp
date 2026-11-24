@@ -1504,6 +1504,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Chuyển SQLite sang tệp SQL",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Trình xem SQLite",
     slug: "sqlite-viewer",
   },

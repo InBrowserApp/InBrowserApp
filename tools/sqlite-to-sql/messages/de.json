@@ -1,0 +1,23 @@
+{
+  "open": "SQLite-Datei auswählen",
+  "replace": "SQLite-Datei ersetzen",
+  "clear": "Datenbank schließen",
+  "reader": "SQLite-Export als SQL-Dump",
+  "privacy": "Ihre Datenbank bleibt auf Ihrem Gerät.",
+  "releaseFile": "Zum Öffnen der Datenbank loslassen",
+  "drop": "SQLite-Datenbank hierher ziehen",
+  "formats": "SQLite-3-Datenbanken (.db, .sqlite, .sqlite3)",
+  "sample": "Beispiel ausprobieren",
+  "schemaOnly": "Nur Schema",
+  "schemaNote": "Exportiert die Datenbankstruktur ohne Tabellenzeilen.",
+  "working": "SQL-Dump wird erstellt…",
+  "preview": "SQL-Vorschau",
+  "previewLimit": "Die Vorschau ist gekürzt. Der Download enthält den vollständigen SQL-Dump.",
+  "copy": "SQL kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": ".sql-Datei herunterladen",
+  "invalid": "Wählen Sie eine lesbare SQLite-3-Datenbankdatei.",
+  "failed": "Die Datenbank konnte nicht exportiert werden. Erstellen Sie in der ursprünglichen Anwendung eine eigenständige Datenbankkopie und versuchen Sie es erneut.",
+  "unsupportedSchema": "Für diese virtuelle Tabelle ist kein reiner Schemaexport verfügbar. Deaktiviere „Nur Schema“, um die gesamte Datenbank zu exportieren."
+}

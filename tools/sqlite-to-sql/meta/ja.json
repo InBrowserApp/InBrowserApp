@@ -1,0 +1,4 @@
+{
+  "name": "SQLite を SQL ダンプに変換",
+  "description": "SQLite データベース（.db、.sqlite、.sqlite3）をブラウザーで SQL ダンプに変換し、.sql ファイルとして保存できます。スキーマとデータをまとめて、またはスキーマだけをエクスポートできます。"
+}

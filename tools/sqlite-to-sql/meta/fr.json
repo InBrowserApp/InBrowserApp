@@ -1,0 +1,4 @@
+{
+  "name": "Convertir SQLite en SQL",
+  "description": "Convertissez une base SQLite (.db, .sqlite ou .sqlite3) en fichier SQL téléchargeable. Exportez le schéma seul ou avec les données, directement dans votre navigateur."
+}

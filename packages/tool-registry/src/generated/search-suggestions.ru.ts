@@ -1504,6 +1504,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "Экспорт SQLite в SQL-дамп",
+    slug: "sqlite-to-sql",
+  },
+  {
+    category: "developer",
     name: "Просмотр SQLite",
     slug: "sqlite-viewer",
   },
