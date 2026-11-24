@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 Çizgi Roman Okuyucu",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack Dönüştürücü",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR Çizgi Roman Okuyucu",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM Görüntüleyici",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS Gradyan Oluşturucu",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB Meta Veri Düzenleyicisi",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB Okuyucu",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB'dan PDF'ye Dönüştürücü",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Görsel Histogramı Görüntüleyicisi",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Görüntü Meta Verisi Temizleyici (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → CSV Dönüştürücü",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "JSON’dan Excel’e Dönüştürücü",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF Yer İmi Düzenleyici",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF Sıkıştırıcı",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "PDF'den Görüntü Çıkarma",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier Kod Biçimlendirici",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "PDF’yi Parolayla Koru",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG'den Görüntü Dönüştürücü",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG'den PDF'ye Dönüştürücü",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

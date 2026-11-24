@@ -8,12 +8,12 @@ import {
   type DragEvent,
 } from "react"
 
-import { openArchive } from "./core/archive"
-import { acceptedArchiveTypes } from "./core/formats"
+import { openArchive } from "@workspace/archive/archive"
+import { acceptedArchiveTypes } from "@workspace/archive/formats"
 import { buildRowIndex, getRowsForDirectory } from "./core/explorer"
 import { formatBytes, summarizeEntries } from "./core/format"
-import { normalizeDirectoryPath } from "./core/path"
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import { normalizeDirectoryPath } from "@workspace/archive/path"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 import { resolveArchiveError } from "./archive-errors"
 import { downloadArchiveEntry } from "./download"
 import {

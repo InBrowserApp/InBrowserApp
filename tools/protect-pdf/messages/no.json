@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Velg PDF",
+  "dropPdf": "eller dra en PDF-fil hit",
+  "changePdf": "Velg en annen PDF",
+  "privacy": "PDF-filen og passordet blir i nettleseren din.",
+  "password": "Passord for å åpne PDF-filen",
+  "confirmPassword": "Bekreft passord",
+  "showPasswords": "Vis passordene",
+  "hidePasswords": "Skjul passordene",
+  "protectPdf": "Beskytt PDF",
+  "protecting": "Beskytter PDF-filen …",
+  "protected": "Den beskyttede PDF-filen er klar",
+  "downloadPdf": "Last ned beskyttet PDF",
+  "startOver": "Beskytt en PDF til",
+  "onePdf": "Velg én PDF-fil om gangen.",
+  "invalidPdf": "Velg en PDF-fil som ikke er tom.",
+  "passwordTooLong": "Bruk et kortere passord. Passord for PDF-filer kan være opptil 127 byte lange.",
+  "passwordInvalid": "Bruk et passord uten usynlige kontrolltegn.",
+  "passwordMismatch": "Passordene er ikke like.",
+  "protectionFailed": "PDF-filen kunne ikke beskyttes. Prøv å åpne den i en PDF-leser og velg en kopi som kan åpnes uten passord."
+}

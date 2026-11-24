@@ -1,0 +1,4 @@
+{
+  "name": "Proteger un PDF con contraseña",
+  "description": "Añade una contraseña a un PDF para que solo puedan abrirlo quienes la conozcan. Cifra el archivo y descarga una copia protegida en tu navegador, sin subir el PDF."
+}

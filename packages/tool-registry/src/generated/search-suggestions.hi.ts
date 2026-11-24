@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 कॉमिक रीडर",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack कन्वर्टर",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR कॉमिक रीडर",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "संख्या ↔ चीनी वित्तीय अंक कन्वर्टर",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM व्यूअर",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS ग्रेडिएंट जनरेटर",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV और Excel को SQLite में बदलें",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB मेटाडेटा एडिटर",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB रीडर",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB से PDF कन्वर्टर",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "इमेज हिस्टोग्राम व्यूअर",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "छवि मेटाडेटा क्लीनर (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → CSV परिवर्तक",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "JSON से Excel कन्वर्टर",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF बुकमार्क एडिटर",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF कंप्रेसर",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "PDF से इमेज निकालें",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier कोड फ़ॉर्मैटर",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "PDF में पासवर्ड लगाएँ",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG से इमेज कन्वर्टर",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG से PDF कन्वर्टर",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

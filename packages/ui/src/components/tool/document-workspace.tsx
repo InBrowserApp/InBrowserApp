@@ -26,6 +26,7 @@ export function DocumentWorkspace({
   fitContent = false,
   messages: m,
   children,
+  renderEmpty,
 }: {
   tool: string
   file: File | null
@@ -35,10 +36,12 @@ export function DocumentWorkspace({
   fitContent?: boolean
   messages: Messages
   children: ReactNode
+  renderEmpty?: (chooseFile: () => void) => ReactNode
 }) {
   const frame = useRef<HTMLDialogElement>(null)
   const picker = useRef<HTMLInputElement>(null)
   const focusButton = useRef<HTMLButtonElement>(null)
+  const restoreOpenFocus = useRef(false)
   const dragDepth = useRef(0)
   const [dragging, setDragging] = useState(false)
   const [focused, setFocused] = useState(false)
@@ -63,6 +66,13 @@ export function DocumentWorkspace({
   useEffect(() => {
     if (!active && focused) exitFocus()
   }, [active, focused])
+  useEffect(() => {
+    if (file || !restoreOpenFocus.current) return
+    restoreOpenFocus.current = false
+    frame.current
+      ?.querySelector<HTMLButtonElement>("[data-file-open]")
+      ?.focus({ preventScroll: true })
+  }, [file])
   useEffect(() => {
     if (!focused) return
     const previous = document.body.style.overflow
@@ -102,6 +112,7 @@ export function DocumentWorkspace({
         maximumFractionDigits: 1,
       }).format(file.size / divisor)
     : ""
+  const chooseFile = () => picker.current?.click()
   return (
     <section
       data-tool={tool}
@@ -153,63 +164,71 @@ export function DocumentWorkspace({
             : "relative rounded-xl border"
         )}
       >
-        <div className="flex shrink-0 items-center gap-2 border-b px-3 py-2">
-          {file ? (
-            <DocumentIconButton
-              label={m.replace}
-              onClick={() => picker.current?.click()}
-            >
-              <Folder aria-hidden="true" />
-            </DocumentIconButton>
-          ) : (
-            <Button data-file-open onClick={() => picker.current?.click()}>
-              <Folder data-icon="inline-start" aria-hidden="true" />
-              {m.open}
-            </Button>
-          )}
-          {file ? (
-            <span
-              dir="auto"
-              className="min-w-0 flex-1 truncate text-sm"
-              title={`${file.name}\n${m.privacy}`}
-            >
-              {file.name}
-              <span className="ms-2 text-xs text-muted-foreground">{size}</span>
-            </span>
-          ) : null}
-          {active ? (
-            <DocumentIconButton
-              ref={focusButton}
-              label={focused ? m.exitFocus : m.focus}
-              aria-pressed={focused}
-              onClick={focused ? exitFocus : enterFocus}
-            >
-              {focused ? (
-                <Minimize2 aria-hidden="true" />
-              ) : (
-                <Maximize2 aria-hidden="true" />
-              )}
-            </DocumentIconButton>
-          ) : null}
-          {file ? (
-            <DocumentIconButton label={m.clear} onClick={() => onFile(null)}>
-              <X aria-hidden="true" />
-            </DocumentIconButton>
-          ) : null}
-          <input
-            ref={picker}
-            type="file"
-            accept={accept}
-            className="sr-only"
-            tabIndex={-1}
-            aria-label={m.open}
-            onChange={(event) => {
-              const next = event.target.files?.[0]
-              if (next) onFile(next)
-              event.target.value = ""
-            }}
-          />
-        </div>
+        {!file && renderEmpty ? (
+          renderEmpty(chooseFile)
+        ) : (
+          <div className="flex shrink-0 items-center gap-2 border-b px-3 py-2">
+            {file ? (
+              <DocumentIconButton label={m.replace} onClick={chooseFile}>
+                <Folder aria-hidden="true" />
+              </DocumentIconButton>
+            ) : (
+              <Button data-file-open onClick={chooseFile}>
+                <Folder data-icon="inline-start" aria-hidden="true" />
+                {m.open}
+              </Button>
+            )}
+            {file ? (
+              <span
+                dir="auto"
+                className="min-w-0 flex-1 truncate text-sm"
+                title={`${file.name}\n${m.privacy}`}
+              >
+                {file.name}
+                <span className="ms-2 text-xs text-muted-foreground">
+                  {size}
+                </span>
+              </span>
+            ) : null}
+            {active ? (
+              <DocumentIconButton
+                ref={focusButton}
+                label={focused ? m.exitFocus : m.focus}
+                aria-pressed={focused}
+                onClick={focused ? exitFocus : enterFocus}
+              >
+                {focused ? (
+                  <Minimize2 aria-hidden="true" />
+                ) : (
+                  <Maximize2 aria-hidden="true" />
+                )}
+              </DocumentIconButton>
+            ) : null}
+            {file ? (
+              <DocumentIconButton
+                label={m.clear}
+                onClick={() => {
+                  restoreOpenFocus.current = true
+                  onFile(null)
+                }}
+              >
+                <X aria-hidden="true" />
+              </DocumentIconButton>
+            ) : null}
+          </div>
+        )}
+        <input
+          ref={picker}
+          type="file"
+          accept={accept}
+          hidden
+          aria-label={m.open}
+          onChange={(event) => {
+            const next = event.target.files?.[0]
+            if (next) onFile(next)
+            event.target.value = ""
+          }}
+        />
         {children}
         {dragging ? (
           <div

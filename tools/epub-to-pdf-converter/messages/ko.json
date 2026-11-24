@@ -1,0 +1,23 @@
+{
+  "open": "EPUB 파일 선택",
+  "replace": "다른 EPUB 선택",
+  "drop": "또는 여기에 .epub 파일을 놓으세요",
+  "privacy": "책은 이 기기에 보관됩니다.",
+  "loading": "책 미리보기를 준비하는 중…",
+  "cancel": "취소",
+  "pageSize": "용지 크기",
+  "letter": "US Letter",
+  "save": "PDF로 저장",
+  "saveHelp": "인쇄 대화상자에서 PDF로 저장을 선택하세요. 머리글과 바닥글을 끄면 더 깔끔하게 저장할 수 있습니다.",
+  "preview": "책 미리보기",
+  "chapter": "장",
+  "contents": "목차",
+  "supportingSections": "주석 및 보조 섹션",
+  "imageUnavailable": "이미지를 표시할 수 없음",
+  "missingResources": "일부 이미지나 기타 리소스를 포함할 수 없습니다.",
+  "unsupported": "계속하려면 .epub 파일을 선택하세요.",
+  "invalid": "이 EPUB을 읽을 수 없습니다. 책의 다른 사본을 사용해 보세요.",
+  "protected": "보호된 EPUB입니다. DRM이 없는 사본을 선택하세요.",
+  "unsupportedLayout": "이 EPUB은 고정 레이아웃을 사용합니다. 리플로우형 EPUB을 선택하세요.",
+  "printUnavailable": "이 브라우저에서는 인쇄할 수 없습니다. PDF 인쇄를 지원하는 브라우저에서 이 도구를 여세요."
+}

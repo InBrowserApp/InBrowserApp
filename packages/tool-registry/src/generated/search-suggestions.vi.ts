@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Trình đọc truyện tranh CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Trình chuyển đổi CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Trình đọc truyện tranh CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Trình xem CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Trình tạo Gradient CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Chuyển đổi CSV và Excel sang SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "Trình đọc EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Chuyển EPUB sang PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Trình xem histogram ảnh",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Trình dọn siêu dữ liệu ảnh (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Trình chuyển JSON → CSV",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "Trình chuyển đổi JSON sang Excel",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Trình chỉnh sửa dấu trang PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "Nén PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Trích xuất ảnh từ PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình định dạng mã Prettier",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Đặt mật khẩu cho PDF",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Trình chuyển SVG sang ảnh",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Trình chuyển SVG sang PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

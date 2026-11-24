@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7-serieläsare",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack-konverterare",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR-serieläsare",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Omvandlare för tal ↔ kinesiska finansiella siffror",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM-visare",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS-Gradientgenerator",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Konvertera CSV och Excel till SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Redigerare för EPUB-metadata",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB-läsare",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Konvertera EPUB till PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Histogramvisare för bilder",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Bildmetadata-rensare (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → CSV-omvandlare",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "Konvertera JSON till Excel",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Redigera PDF-bokmärken",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF-komprimering",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Extrahera bilder från PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier-kodformaterare",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Lösenordsskydda PDF",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG-till-bild-konverterare",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Konvertera SVG till PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

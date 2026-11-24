@@ -1,0 +1,23 @@
+{
+  "open": "Choose EPUB file",
+  "replace": "Choose another EPUB",
+  "drop": "or drop an .epub file here",
+  "privacy": "Your book stays on this device.",
+  "loading": "Preparing book preview…",
+  "cancel": "Cancel",
+  "pageSize": "Paper size",
+  "letter": "US Letter",
+  "save": "Save as PDF",
+  "saveHelp": "Choose Save as PDF in the print dialog. Turn off headers and footers for a clean copy.",
+  "preview": "Book preview",
+  "chapter": "Chapter",
+  "contents": "Contents",
+  "supportingSections": "Notes and supporting sections",
+  "imageUnavailable": "Image unavailable",
+  "missingResources": "Some images or other resources could not be included.",
+  "unsupported": "Choose an .epub file to continue.",
+  "invalid": "This EPUB could not be read. Try another copy of the book.",
+  "protected": "This EPUB is protected. Choose a DRM-free copy.",
+  "unsupportedLayout": "This EPUB uses a fixed layout. Choose a reflowable EPUB.",
+  "printUnavailable": "Printing is unavailable in this browser. Open this tool in a browser with PDF printing."
+}

@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Czytnik komiksów CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Konwerter CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Czytnik komiksów CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Konwerter liczb ↔ chiński zapis finansowy",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Przeglądarka CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Generator Gradientów CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Konwerter plików CSV i Excel do SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Edytor metadanych EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "Czytnik EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Konwerter EPUB na PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Przeglądarka histogramów obrazów",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Czyściciel metadanych obrazu (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Konwerter JSON → CSV",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "Konwerter JSON na Excel",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Edytor zakładek PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "Kompresor PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Wyodrębnianie obrazów z PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Formatowanie kodu Prettier",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Zabezpiecz PDF hasłem",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Konwerter SVG na obraz",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Konwerter SVG na PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

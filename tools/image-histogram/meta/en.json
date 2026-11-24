@@ -1,0 +1,4 @@
+{
+  "name": "Image Histogram Viewer",
+  "description": "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser."
+}

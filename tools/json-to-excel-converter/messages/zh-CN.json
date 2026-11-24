@@ -1,0 +1,20 @@
+{
+  "input": "JSON 输入",
+  "inputHint": "粘贴 JSON 对象数组，或打开 JSON 文件。",
+  "openFile": "打开文件",
+  "example": "加载示例",
+  "clear": "清空",
+  "preview": "表格预览",
+  "flatten": "展开嵌套字段",
+  "flattenHint": "将嵌套对象展开成 contact.city 这样的列。数组保存在单个单元格中。",
+  "emptyPreview": "输入 JSON 或加载示例，即可在这里预览表格。",
+  "previewCount": "显示 {totalRows} 行中的 {rows} 行、{totalColumns} 列中的 {columns} 列。",
+  "download": "下载 XLSX",
+  "invalidJson": "请检查 JSON 语法后重试。",
+  "invalidRecords": "请输入非空的对象数组，例如 [{\"name\":\"Maya\"}]。",
+  "noColumns": "请至少添加一个字段，用于生成表格列。",
+  "sheetLimit": "请拆分数据。Excel 最多支持 1,048,576 行（含表头）和 16,384 列。",
+  "cellLimit": "请缩短超出 Excel 单元格上限（32,767 个字符）的字段名或值。",
+  "readError": "无法读取文件。请重新打开文件，或粘贴文件内容。",
+  "downloadError": "无法生成 Excel 文件。请重新下载，或减少记录后重试。"
+}

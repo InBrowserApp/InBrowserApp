@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Släpp en SVG-fil här",
+  "chooseSvg": "Välj SVG-fil",
+  "tryExample": "Prova ett exempel",
+  "reading": "Läser SVG-filen…",
+  "preview": "Förhandsvisning av SVG",
+  "changeSvg": "Byt SVG-fil",
+  "pageSize": "Sidstorlek för PDF",
+  "original": "SVG-filens originalstorlek",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Anpassar grafiken efter sidans mått med plats för marginaler.",
+  "download": "Ladda ner PDF",
+  "converting": "Skapar PDF…",
+  "downloadReady": "PDF-filen är klar.",
+  "invalidSvg": "Filen gick inte att öppna som SVG. Välj en giltig SVG-fil och försök igen.",
+  "conversionFailed": "Det gick inte att skapa PDF-filen. Prova att exportera en enklare SVG-fil från ditt ritprogram."
+}

@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7-striplezer",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack-converter",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR-striplezer",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Omzetter getal ↔ Chinese financiële cijfers",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM-viewer",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS-Gradientgenerator",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV en Excel naar SQLite converteren",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB-metadata-editor",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB-lezer",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB naar PDF-converter",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Histogramviewer voor afbeeldingen",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Afbeeldingsmetadata-opschoner (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → CSV-converter",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "JSON-naar-Excel-converter",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF-bladwijzers bewerken",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF comprimeren",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Afbeeldingen uit PDF halen",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier-codeformatter",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "PDF beveiligen met een wachtwoord",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG-naar-afbeelding converter",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG naar PDF converteren",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

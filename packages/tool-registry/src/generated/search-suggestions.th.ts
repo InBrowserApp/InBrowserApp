@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "ตัวแปลง CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมอ่านการ์ตูน CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "ตัวสร้างไล่สี CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "แปลง CSV และ Excel เป็น SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "โปรแกรมอ่าน EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมแปลง EPUB เป็น PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "ตัวล้างข้อมูลเมตาของภาพ (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "ตัวแปลง JSON → CSV",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "เครื่องมือแปลง JSON เป็น Excel",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "บีบอัด PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "แยกรูปภาพจาก PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier ตัวจัดรูปแบบโค้ด",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "ตั้งรหัสผ่านให้ PDF",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "ตัวแปลง SVG เป็นรูปภาพ",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "ตัวแปลง SVG เป็น PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

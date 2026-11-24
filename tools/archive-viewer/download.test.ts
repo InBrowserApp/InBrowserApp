@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import { downloadArchiveEntry } from "./download"
 
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 
 const createObjectUrlMock = vi.fn(() => "blob:download")
 const revokeObjectUrlMock = vi.fn()

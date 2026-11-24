@@ -1,0 +1,24 @@
+diff --git a/dist/security.js b/dist/security.js
+--- a/dist/security.js
++++ b/dist/security.js
+@@ -204,7 +204,8 @@
+     const baseDirectory = normalizedBase.includes('/')
+         ? normalizedBase.slice(0, normalizedBase.lastIndexOf('/') + 1)
+         : '';
+-    const joined = rawPath.startsWith('/') ? rawPath : `${baseDirectory}${rawPath}`;
++    const archivePath = rawPath.replace(/\\/g, '/');
++    const joined = archivePath.startsWith('/') ? archivePath : `${baseDirectory}${archivePath}`;
+     const path = normalizeChmPath(joined);
+     if (path == null || path === '/')
+         return { kind: 'blocked' };
+@@ -809,7 +810,9 @@
+             element.setAttribute('style', sanitizeCss(inlineStyle, basePath, resources, MAX_CHM_TOPIC_RESOURCE_PATHS));
+         }
+         for (const attribute of Array.from(element.attributes)) {
+-            if (attribute.name.toLowerCase() === 'style')
++            // URI attributes use CHM path syntax, including Windows separators.
++            // They are resolved separately below, so don't apply CSS escapes.
++            if (['style', 'href', 'xlink:href', 'src', 'poster', 'background', 'lowsrc', 'dynsrc'].includes(attribute.name.toLowerCase()))
+                 continue;
+             if (/(?:url\s*\(|@import\b|expression\s*\(|behavior\s*:|-moz-binding|\\|\/\*)/i.test(attribute.value)) {
+                 element.setAttribute(attribute.name, sanitizeEmbeddedCssAttribute(attribute.value, basePath));

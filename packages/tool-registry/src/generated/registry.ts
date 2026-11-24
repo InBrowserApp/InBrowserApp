@@ -5811,6 +5811,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "cbor-messagepack-converter",
     category: "json",
     icon: "binary",
@@ -5939,6 +6062,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },
@@ -6440,6 +6686,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "國字大寫轉換器",
         description:
           "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
+      },
+    },
+  },
+  {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
       },
     },
   },
@@ -8460,6 +8837,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "CSS 漸層產生器",
         description:
           "建立可拖曳色標的線性、放射與圓錐漸層，支援混合模式並輸出可直接使用的 CSS。",
+      },
+    },
+  },
+  {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي ⁦.xlsx⁩ و⁦.xls⁩ إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف ⁦.sqlite⁩ أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (⁦.xlsx⁩, ⁦.xls⁩) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־⁦.sqlite⁩ או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
       },
     },
   },
@@ -11366,6 +11877,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
+      },
+    },
+  },
+  {
     slug: "epub-reader",
     category: "document",
     icon: "book-open",
@@ -11485,6 +12119,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "EPUB 閱讀器",
         description:
           "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
       },
     },
   },
@@ -15215,6 +15980,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-histogram",
+    category: "image",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "photo",
+      "histogram",
+      "rgb",
+      "color channels",
+      "brightness",
+      "luminance",
+      "exposure",
+      "clipping",
+    ],
+    locales: {
+      ar: {
+        name: "عارض المدرج التكراري للصور",
+        description:
+          "اعرض المدرج التكراري للسطوع وقنوات RGB في صورك. افحص الظلال والمناطق الساطعة وكل قناة لونية مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für Bildhistogramme",
+        description:
+          "Sieh dir das Helligkeits- und RGB-Histogramm eines Fotos oder Bildes an. Prüfe Tiefen, Lichter und einzelne Farbkanäle direkt im Browser.",
+      },
+      en: {
+        name: "Image Histogram Viewer",
+        description:
+          "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser.",
+      },
+      es: {
+        name: "Visor de histogramas de imágenes",
+        description:
+          "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’histogrammes d’images",
+        description:
+          "Affichez les histogrammes de luminosité et RVB d’une photo ou d’une image. Inspectez les ombres, les hautes lumières et chaque canal de couleur dans votre navigateur.",
+      },
+      he: {
+        name: "מציג היסטוגרמה לתמונות",
+        description:
+          "הציגו היסטוגרמות בהירות וערוצי RGB של צילומים ותמונות. בדקו צללים, אזורים בהירים וערוצי צבע נפרדים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज हिस्टोग्राम व्यूअर",
+        description:
+          "फ़ोटो या इमेज की चमक और RGB के हिस्टोग्राम देखें। गहरे और उजले टोन और अलग-अलग रंग चैनल सीधे अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Histogram Gambar",
+        description:
+          "Lihat histogram kecerahan dan RGB untuk foto atau gambar. Periksa bayangan, sorotan, dan tiap saluran warna langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di istogrammi di immagini",
+        description:
+          "Visualizza gli istogrammi di luminosità e RGB di una foto o immagine. Esamina ombre, luci e singoli canali di colore direttamente nel browser.",
+      },
+      ja: {
+        name: "画像ヒストグラムビューアー",
+        description:
+          "写真や画像の明るさと RGB のヒストグラムをブラウザーで表示し、シャドウ、ハイライト、各色のチャンネルを確認できます。",
+      },
+      ko: {
+        name: "이미지 히스토그램 뷰어",
+        description:
+          "사진이나 이미지의 밝기와 RGB 히스토그램을 확인하세요. 어두운 영역, 밝은 영역, 개별 색상 채널을 브라우저에서 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Histogram Imej",
+        description:
+          "Lihat histogram kecerahan dan RGB bagi foto atau imej. Semak bahagian gelap dan cerah serta setiap saluran warna terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Histogramviewer voor afbeeldingen",
+        description:
+          "Bekijk de helderheids- en RGB-histogrammen van een foto of afbeelding. Controleer schaduwen, hooglichten en afzonderlijke kleurkanalen in je browser.",
+      },
+      no: {
+        name: "Histogramviser for bilder",
+        description:
+          "Vis histogrammer for lysstyrke og RGB i bilder og fotografier. Undersøk skygger, høylys og enkeltkanaler direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka histogramów obrazów",
+        description:
+          "Wyświetl histogramy jasności i RGB zdjęcia lub innego obrazu. Sprawdź cienie, światła i poszczególne kanały kolorów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de histogramas de imagens",
+        description:
+          "Veja os histogramas de brilho e RGB de uma foto ou imagem. Confira as sombras, os realces e cada canal de cor diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр гистограмм изображений",
+        description:
+          "Просматривайте гистограммы яркости и RGB для фотографий и других изображений. Проверяйте тени, света и отдельные цветовые каналы прямо в браузере.",
+      },
+      sv: {
+        name: "Histogramvisare för bilder",
+        description:
+          "Visa ljusstyrke- och RGB-histogram för foton och andra bilder. Granska skuggor, högdagrar och enskilda färgkanaler direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+        description:
+          "ดูฮิสโตแกรมความสว่างและ RGB ของรูปภาพ ตรวจสอบส่วนมืด ส่วนสว่าง และแต่ละช่องสีได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görsel Histogramı Görüntüleyicisi",
+        description:
+          "Fotoğraf ve görsellerin parlaklık ve RGB histogramlarını görüntüleyin. Gölgeleri, açık tonları ve renk kanallarını doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem histogram ảnh",
+        description:
+          "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu.",
+      },
+      "zh-CN": {
+        name: "图像直方图查看器",
+        description:
+          "直接在浏览器中查看照片或图片的亮度和 RGB 直方图，检查阴影、高光及各个颜色通道。",
+      },
+      "zh-TW": {
+        name: "影像色階分佈圖檢視器",
+        description:
+          "直接在瀏覽器中查看照片或圖片的亮度與 RGB 色階分佈圖，檢查陰影、亮部及個別色版。",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",
@@ -18690,6 +19587,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "JSON 轉 CSV 轉換器",
         description:
           "將 JSON 轉為 CSV。貼上 JSON 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "json-to-excel-converter",
+    category: "json",
+    icon: "table-2",
+    tags: [
+      "json",
+      "excel",
+      "xlsx",
+      "spreadsheet",
+      "nested",
+      "flatten",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل JSON إلى Excel",
+        description:
+          "حوّل مصفوفة JSON إلى ملف Excel ⁦(.xlsx)⁩. الصق بيانات JSON أو افتح ملفًا، وعاين الجدول، ووسّع الحقول المتداخلة إلى أعمدة مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "JSON-zu-Excel-Konverter",
+        description:
+          "Wandeln Sie ein JSON-Array in Excel (.xlsx) um. Fügen Sie JSON ein oder öffnen Sie eine Datei, prüfen Sie die Vorschau und teilen Sie verschachtelte Felder direkt im Browser in Spalten auf.",
+      },
+      en: {
+        name: "JSON to Excel Converter",
+        description:
+          "Convert a JSON array to Excel (.xlsx). Paste JSON or open a file, preview the spreadsheet, and expand nested fields into columns right in your browser.",
+      },
+      es: {
+        name: "Conversor de JSON a Excel",
+        description:
+          "Convierte un array JSON a Excel (.xlsx). Pega el JSON o abre un archivo para ver la hoja y expandir los campos anidados desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers Excel",
+        description:
+          "Convertissez un tableau JSON en fichier Excel (.xlsx). Collez le JSON ou ouvrez un fichier, prévisualisez la feuille et développez les champs imbriqués dans le navigateur.",
+      },
+      he: {
+        name: "ממיר JSON ל-Excel",
+        description:
+          "המירו מערך JSON לקובץ Excel ⁦(.xlsx)⁩. הדביקו JSON או פתחו קובץ, צפו בתצוגה מקדימה והרחיבו שדות מקוננים לעמודות, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "JSON से Excel कन्वर्टर",
+        description:
+          "JSON ऐरे को Excel (.xlsx) में बदलें। JSON पेस्ट करें या फ़ाइल खोलें, स्प्रेडशीट का पूर्वावलोकन देखें और नेस्टेड फ़ील्ड को सीधे ब्राउज़र में अलग कॉलम में बाँटें।",
+      },
+      id: {
+        name: "Konverter JSON ke Excel",
+        description:
+          "Konversi array JSON ke Excel (.xlsx). Tempel JSON atau buka file, lihat pratinjau tabel, dan uraikan bidang bersarang menjadi kolom langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da JSON a Excel",
+        description:
+          "Converti un array JSON in Excel (.xlsx). Incolla il JSON o apri un file, controlla il foglio in anteprima ed espandi i campi annidati nel browser.",
+      },
+      ja: {
+        name: "JSON Excel 変換",
+        description:
+          "JSON 配列を Excel（.xlsx）に変換します。JSON を貼り付けるかファイルを開き、表をプレビューして、ネストされたフィールドをブラウザー内で列に展開できます。",
+      },
+      ko: {
+        name: "JSON Excel 변환기",
+        description:
+          "JSON 배열을 Excel(.xlsx)로 변환하세요. JSON을 붙여 넣거나 파일을 열어 스프레드시트를 미리 보고 브라우저에서 중첩 필드를 열로 펼칠 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar JSON ke Excel",
+        description:
+          "Tukar tatasusunan JSON kepada Excel (.xlsx). Tampal JSON atau buka fail, lihat pratonton hamparan dan pecahkan medan bersarang kepada lajur terus dalam pelayar.",
+      },
+      nl: {
+        name: "JSON-naar-Excel-converter",
+        description:
+          "Zet een JSON-array om naar Excel (.xlsx). Plak JSON of open een bestand, bekijk het resultaat en vouw geneste velden uit tot kolommen. Alles kan direct in je browser.",
+      },
+      no: {
+        name: "Konverter JSON til Excel",
+        description:
+          "Konverter en JSON-array til Excel (.xlsx). Lim inn JSON eller åpne en fil, forhåndsvis regnearket og utvid nestede felt til kolonner direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter JSON na Excel",
+        description:
+          "Zamień tablicę JSON na plik Excel (.xlsx). Wklej JSON lub otwórz plik, sprawdź podgląd arkusza i rozwiń zagnieżdżone pola na kolumny w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de JSON para Excel",
+        description:
+          "Converta um array JSON para Excel (.xlsx). Cole o JSON ou abra um arquivo, veja a prévia da planilha e expanda campos aninhados no navegador.",
+      },
+      ru: {
+        name: "Конвертер JSON в Excel",
+        description:
+          "Преобразуйте массив JSON в Excel (.xlsx). Вставьте JSON или откройте файл, просмотрите таблицу и разверните вложенные поля в столбцы прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera JSON till Excel",
+        description:
+          "Konvertera en JSON-array till Excel (.xlsx). Klistra in JSON eller öppna en fil, förhandsgranska kalkylbladet och expandera kapslade fält till kolumner direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลง JSON เป็น Excel",
+        description:
+          "แปลงอาร์เรย์ JSON เป็น Excel (.xlsx) วาง JSON หรือเปิดไฟล์ ดูตัวอย่างตาราง และแยกฟิลด์ที่ซ้อนกันเป็นคอลัมน์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "JSON’dan Excel’e Dönüştürücü",
+        description:
+          "JSON dizisini Excel (.xlsx) dosyasına dönüştürün. JSON yapıştırın veya bir dosya açın, tabloyu önizleyin ve iç içe alanları tarayıcınızda sütunlara açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi JSON sang Excel",
+        description:
+          "Chuyển mảng JSON sang Excel (.xlsx). Dán JSON hoặc mở tệp, xem trước bảng tính và mở rộng các trường lồng nhau thành cột ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "JSON 转 Excel",
+        description:
+          "在线将 JSON 对象数组转为 Excel（.xlsx）。粘贴 JSON 或打开文件，可预览表格、将嵌套字段展开为列，整个转换都在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 Excel 轉換器",
+        description:
+          "將 JSON 陣列轉換為 Excel（.xlsx）。貼上 JSON 或開啟檔案，即可在瀏覽器中預覽試算表，並將巢狀欄位展開成欄。",
       },
     },
   },
@@ -25229,6 +26257,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-bookmark-editor",
+    category: "pdf",
+    icon: "bookmark",
+    tags: [
+      "pdf",
+      "bookmark",
+      "outline",
+      "table of contents",
+      "navigation",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محرر الإشارات المرجعية لملفات PDF",
+        description:
+          "أضف إشارات مرجعية إلى ملف PDF وغيّر أسماءها ورتّبها ضمن مستويات. عاين الصفحات المرتبطة بها ونزّل الملف المعدّل مباشرةً من متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF-Lesezeichen bearbeiten",
+        description:
+          "Füge PDF-Lesezeichen online hinzu, benenne sie um und ordne sie neu oder hierarchisch an. Prüfe die Zielseiten in der Vorschau und lade die bearbeitete PDF ohne Upload herunter.",
+      },
+      en: {
+        name: "PDF Bookmark Editor",
+        description:
+          "Add, rename, reorder, and nest PDF bookmarks online. Preview destination pages and download the edited PDF without uploading your file.",
+      },
+      es: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Añade, renombra, reordena y anida marcadores de PDF en línea. Previsualiza las páginas de destino y descarga el PDF editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de signets PDF",
+        description:
+          "Ajoutez, renommez, réorganisez et imbriquez les signets d’un PDF en ligne. Prévisualisez les pages cibles et téléchargez le PDF modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך סימניות PDF",
+        description:
+          "הוסיפו סימניות לקובץ PDF, שנו את שמן, סדרו אותן מחדש וקבצו אותן לפי פרקים. צפו בעמודי היעד והורידו את הקובץ הערוך בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "PDF बुकमार्क एडिटर",
+        description:
+          "PDF बुकमार्क ऑनलाइन जोड़ें, उनके नाम और क्रम बदलें या उन्हें एक-दूसरे के नीचे रखें। लिंक किए गए पेज का प्रीव्यू देखें और फ़ाइल अपलोड किए बिना संपादित PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Markah PDF",
+        description:
+          "Tambah, ganti nama, atur urutan, dan kelompokkan markah PDF (bookmark) secara online. Lihat pratinjau halaman tujuan dan unduh hasil edit tanpa mengunggah file.",
+      },
+      it: {
+        name: "Editor di segnalibri PDF",
+        description:
+          "Aggiungi, rinomina e organizza i segnalibri PDF online. Visualizza le pagine di destinazione e scarica il PDF modificato senza caricare il file.",
+      },
+      ja: {
+        name: "PDF のしおり編集ツール",
+        description:
+          "オンラインで PDF のしおりを追加し、タイトルや順序、階層を変更できます。リンク先のページをプレビューし、ファイルをアップロードせずに編集済みの PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 책갈피 편집기",
+        description:
+          "온라인에서 PDF 책갈피를 추가하고, 이름과 순서를 바꾸고, 하위 책갈피로 정리하세요. 대상 페이지를 미리 보고 파일 업로드 없이 편집한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Penanda Buku PDF",
+        description:
+          "Tambah, namakan semula dan susun penanda buku PDF mengikut aras dalam talian. Pratonton halaman sasaran dan muat turun PDF yang disunting tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF-bladwijzers bewerken",
+        description:
+          "Voeg PDF-bladwijzers online toe, hernoem, verplaats of nest ze. Bekijk de doelpagina’s en download de bewerkte PDF zonder upload.",
+      },
+      no: {
+        name: "Rediger PDF-bokmerker",
+        description:
+          "Legg til og organiser bokmerker i PDF-filer. Endre navn og struktur, forhåndsvis målsider og last ned den redigerte PDF-filen uten opplasting.",
+      },
+      pl: {
+        name: "Edytor zakładek PDF",
+        description:
+          "Dodawaj i edytuj zakładki w PDF online. Zmieniaj ich kolejność, grupuj je i sprawdzaj strony docelowe. Pobierz zmieniony PDF bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Adicione, renomeie, reordene e aninhe marcadores de PDF online. Confira as páginas de destino e baixe o PDF editado sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Редактор закладок PDF",
+        description:
+          "Добавляйте, переименовывайте и группируйте закладки PDF онлайн. Меняйте их порядок, просматривайте страницы и скачивайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigera PDF-bokmärken",
+        description:
+          "Lägg till, byt namn på och ordna PDF-bokmärken i flera nivåer. Förhandsvisa målsidorna och ladda ner den redigerade PDF-filen utan att ladda upp den.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+        description:
+          "เพิ่ม เปลี่ยนชื่อ จัดลำดับ และสร้างบุ๊กมาร์กย่อยใน PDF ออนไลน์ ดูตัวอย่างหน้าปลายทางแล้วดาวน์โหลด PDF ที่แก้ไขแล้วโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Yer İmi Düzenleyici",
+        description:
+          "PDF yer imleri ekleyin, adlarını ve sıralarını değiştirin, iç içe yerleştirin. Hedef sayfaları önizleyin ve dosyanızı yüklemeden düzenlenmiş PDF'yi indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa dấu trang PDF",
+        description:
+          "Thêm, đổi tên, sắp xếp và tạo dấu trang con trong PDF trực tuyến. Xem trước trang đích rồi tải xuống bản PDF đã sửa ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 书签编辑器",
+        description:
+          "在线添加、重命名、排序和嵌套 PDF 书签。预览目标页面并下载编辑后的 PDF，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PDF 書籤編輯器",
+        description:
+          "線上新增、重新命名、排序 PDF 書籤，並建立多層書籤。預覽書籤指向的頁面，再下載編輯後的 PDF，檔案無須上傳。",
+      },
+    },
+  },
+  {
     slug: "pdf-compressor",
     category: "pdf",
     icon: "archive",
@@ -25355,6 +26513,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "PDF 壓縮器",
         description:
           "在瀏覽器中壓縮掃描版和含大量圖片的 PDF。保留原本可選取的文字，下載前可比較檔案大小。",
+      },
+    },
+  },
+  {
+    slug: "pdf-image-extractor",
+    category: "pdf",
+    icon: "file-image",
+    tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
+    locales: {
+      ar: {
+        name: "استخراج الصور من PDF",
+        description:
+          "استخرج الصور المضمّنة في ملفات PDF بالدقة التي حُفظت بها. عاين الصور ونزّلها كلًّا على حدة بصيغة JPG أو PNG، أو نزّلها كلها في ملف ZIP. لا حاجة إلى رفع الملف.",
+      },
+      de: {
+        name: "Bilder aus PDF extrahieren",
+        description:
+          "Hole Fotos und andere eingebettete Bilder aus PDF-Dateien in der gespeicherten Auflösung. Sieh sie in der Vorschau an und lade sie einzeln als JPG oder PNG oder zusammen als ZIP herunter. Kein Upload nötig.",
+      },
+      en: {
+        name: "Extract Images from PDF",
+        description:
+          "Extract photos and other embedded images from PDF files at their stored resolution. Preview and save JPG or PNG files individually or download them all as a ZIP. No upload required.",
+      },
+      es: {
+        name: "Extraer imágenes de un PDF",
+        description:
+          "Extrae fotos e imágenes incrustadas en un PDF sin cambiar su resolución. Previsualiza y descarga archivos JPG o PNG por separado o en un ZIP, sin subir el PDF.",
+      },
+      fr: {
+        name: "Extraire les images d’un PDF",
+        description:
+          "Extrayez les photos et autres images intégrées aux PDF dans leur résolution enregistrée. Prévisualisez et enregistrez les fichiers JPG ou PNG individuellement, ou téléchargez-les dans un fichier ZIP. Sans téléversement.",
+      },
+      he: {
+        name: "חילוץ תמונות מ־PDF",
+        description:
+          "חלצו תמונות ותצלומים שמוטמעים בקובצי PDF ברזולוציה שבה נשמרו. צפו בתמונות והורידו כל אחת כ־JPG או PNG, או את כולן בקובץ ZIP אחד. אין צורך בהעלאה.",
+      },
+      hi: {
+        name: "PDF से इमेज निकालें",
+        description:
+          "PDF में मौजूद फ़ोटो और दूसरी एम्बेड की गई इमेज उनके मूल पिक्सेल आकार में निकालें। पहले इमेज देखें, फिर अलग-अलग JPG या PNG डाउनलोड करें या सभी को एक ZIP में लें। फ़ाइल अपलोड करने की ज़रूरत नहीं है।",
+      },
+      id: {
+        name: "Ekstrak Gambar dari PDF",
+        description:
+          "Ekstrak foto dan gambar yang tertanam dalam PDF dengan resolusi yang tersimpan. Pratinjau dan simpan sebagai JPG atau PNG, atau unduh semuanya dalam satu ZIP. Tidak perlu mengunggah PDF.",
+      },
+      it: {
+        name: "Estrarre immagini da PDF",
+        description:
+          "Estrai foto e altre immagini incorporate nei PDF alla risoluzione a cui sono salvate. Guarda l’anteprima e scaricale singolarmente in JPG o PNG, oppure tutte insieme in un file ZIP. Non serve caricare il PDF online.",
+      },
+      ja: {
+        name: "PDFから画像を抽出",
+        description:
+          "PDFに埋め込まれた写真や画像を、保存されている解像度のまま抽出します。プレビューしてJPG・PNGを個別に保存したり、すべてをZIPでまとめてダウンロードしたりできます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PDF에서 이미지 추출",
+        description:
+          "PDF에 포함된 사진과 이미지를 저장된 해상도로 추출하세요. 미리 본 뒤 JPG 또는 PNG로 개별 저장하거나, ZIP 파일로 한꺼번에 다운로드할 수 있습니다. 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Ekstrak Imej daripada PDF",
+        description:
+          "Ekstrak foto dan imej terbenam daripada PDF pada resolusi yang tersimpan. Pratonton dan simpan sebagai JPG atau PNG, atau muat turun semuanya sebagai ZIP. Tidak perlu memuat naik fail.",
+      },
+      nl: {
+        name: "Afbeeldingen uit PDF halen",
+        description:
+          "Haal foto's en andere ingesloten afbeeldingen uit PDF-bestanden op de opgeslagen resolutie. Bekijk en download JPG- of PNG-bestanden afzonderlijk of samen in een ZIP-bestand. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Trekk ut bilder fra PDF",
+        description:
+          "Trekk ut bilder og annen innebygd grafikk fra PDF-filer i oppløsningen de er lagret i. Forhåndsvis og last ned JPG eller PNG enkeltvis, eller last ned alle i én ZIP-fil. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wyodrębnianie obrazów z PDF",
+        description:
+          "Wyodrębniaj zdjęcia i inne obrazy osadzone w plikach PDF w zapisanej rozdzielczości. Przeglądaj je i zapisuj pojedynczo jako JPG lub PNG albo pobierz wszystkie w archiwum ZIP. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Extrair imagens de PDF",
+        description:
+          "Extraia fotos e outras imagens incorporadas em PDFs na resolução em que foram salvas. Veja a prévia e baixe cada imagem em JPG ou PNG, ou baixe todas em um ZIP. Sem upload.",
+      },
+      ru: {
+        name: "Извлечение изображений из PDF",
+        description:
+          "Извлекайте фотографии и другие встроенные изображения из PDF в сохранённом разрешении. Просматривайте и сохраняйте файлы JPG или PNG по отдельности либо скачивайте все изображения в ZIP. Загрузка на сервер не нужна.",
+      },
+      sv: {
+        name: "Extrahera bilder från PDF",
+        description:
+          "Extrahera foton och andra inbäddade bilder från PDF-filer i den upplösning de sparats med. Förhandsvisa och ladda ner JPG eller PNG separat eller alla bilder i en ZIP-fil. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "แยกรูปภาพจาก PDF",
+        description:
+          "แยกภาพถ่ายและรูปภาพที่ฝังใน PDF ตามความละเอียดที่บันทึกไว้ ดูตัวอย่างแล้วบันทึกเป็น JPG หรือ PNG ทีละรูป หรือดาวน์โหลดทั้งหมดเป็น ZIP โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF'den Görüntü Çıkarma",
+        description:
+          "PDF'ye gömülü fotoğrafları ve diğer görüntüleri kaydedildikleri çözünürlükte çıkarın. Önizleyin, JPG veya PNG olarak tek tek ya da hepsini ZIP olarak indirin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Trích xuất ảnh từ PDF",
+        description:
+          "Trích xuất ảnh chụp và hình ảnh nhúng trong PDF ở độ phân giải được lưu trong tệp. Xem trước và lưu từng ảnh dạng JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "从 PDF 中提取图片",
+        description:
+          "提取 PDF 中嵌入的照片和其他图片，保留原始像素尺寸。支持预览、单张下载 JPG 或 PNG，以及打包下载 ZIP。无需上传文件。",
+      },
+      "zh-TW": {
+        name: "從 PDF 擷取圖片",
+        description:
+          "以 PDF 內儲存的解析度擷取照片與其他嵌入的圖片。支援預覽、逐張下載 JPG 或 PNG，也能將所有圖片打包成 ZIP，無須上傳。",
       },
     },
   },
@@ -28011,6 +29292,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  {
+    slug: "protect-pdf",
+    category: "pdf",
+    icon: "lock",
+    tags: [
+      "pdf",
+      "password",
+      "protect",
+      "encrypt",
+      "lock",
+      "aes-256",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حماية ملف PDF بكلمة مرور",
+        description:
+          "أضف كلمة مرور إلى ملف PDF ليحتاج إليها المستلمون عند فتحه. شفّر الملف ونزّل نسخة محمية مباشرةً في متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF mit Passwort schützen",
+        description:
+          "Lege ein Passwort zum Öffnen deiner PDF fest. Verschlüssele die Datei direkt im Browser und lade die geschützte Kopie herunter. Die Datei bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "Password Protect PDF",
+        description:
+          "Add a password to a PDF so recipients need it to open the file. Encrypt and download a protected copy directly in your browser, with no file upload.",
+      },
+      es: {
+        name: "Proteger un PDF con contraseña",
+        description:
+          "Añade una contraseña a un PDF para que solo puedan abrirlo quienes la conozcan. Cifra el archivo y descarga una copia protegida en tu navegador, sin subir el PDF.",
+      },
+      fr: {
+        name: "Protéger un PDF par mot de passe",
+        description:
+          "Ajoutez un mot de passe à un PDF pour en contrôler l’ouverture. Chiffrez le fichier et téléchargez une copie protégée dans votre navigateur, sans envoyer le PDF.",
+      },
+      he: {
+        name: "הוספת סיסמה ל-PDF",
+        description:
+          "הוסיפו סיסמה לקובץ PDF כדי שרק מי שיודע אותה יוכל לפתוח אותו. הצפינו והורידו עותק מוגן ישירות בדפדפן, בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "PDF में पासवर्ड लगाएँ",
+        description:
+          "PDF में पासवर्ड लगाएँ ताकि फ़ाइल खोलने के लिए उसकी ज़रूरत हो। फ़ाइल अपलोड किए बिना उसे एन्क्रिप्ट करें और सुरक्षित कॉपी सीधे ब्राउज़र में डाउनलोड करें।",
+      },
+      id: {
+        name: "Lindungi PDF dengan Kata Sandi",
+        description:
+          "Tambahkan kata sandi ke PDF agar penerima perlu memasukkannya untuk membuka file. Enkripsi dan unduh salinan yang terlindungi langsung di browser, tanpa mengunggah file.",
+      },
+      it: {
+        name: "Proteggi PDF con password",
+        description:
+          "Aggiungi una password a un PDF per consentire l’apertura solo a chi la conosce. Cifra e scarica una copia protetta nel browser, senza caricare il file online.",
+      },
+      ja: {
+        name: "PDFをパスワードで保護",
+        description:
+          "PDFにパスワードを設定して、受信者が開くときに入力を求めます。ファイルをアップロードせず、ブラウザで直接暗号化したコピーをダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 암호 설정",
+        description:
+          "PDF를 열 때 필요한 암호를 설정하세요. 파일을 업로드하지 않고 브라우저에서 직접 암호화한 사본을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Lindungi PDF dengan Kata Laluan",
+        description:
+          "Tetapkan kata laluan pada fail PDF supaya penerima perlu memasukkannya untuk membuka fail. Sulitkan dan muat turun salinan daripada pelayar, tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF beveiligen met een wachtwoord",
+        description:
+          "Stel een wachtwoord in dat nodig is om je PDF te openen. Versleutel het bestand in je browser en download een beveiligde kopie. Het bestand blijft op je apparaat.",
+      },
+      no: {
+        name: "Passordbeskytt PDF",
+        description:
+          "Legg til et passord som kreves for å åpne PDF-filen. Krypter den i nettleseren og last ned en beskyttet kopi. Filen blir på enheten din.",
+      },
+      pl: {
+        name: "Zabezpiecz PDF hasłem",
+        description:
+          "Dodaj hasło wymagane do otwarcia pliku PDF. Zaszyfruj i pobierz zabezpieczoną kopię w przeglądarce, bez wysyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Proteger PDF com senha",
+        description:
+          "Adicione uma senha ao PDF para que só quem a conhece possa abrir o arquivo. Criptografe e baixe uma cópia protegida no navegador, sem enviar o PDF.",
+      },
+      ru: {
+        name: "Защитить PDF паролем",
+        description:
+          "Установите пароль, который нужно будет ввести при открытии PDF. Зашифруйте и скачайте копию документа прямо в браузере, без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Lösenordsskydda PDF",
+        description:
+          "Lägg till ett lösenord som krävs för att öppna din PDF. Kryptera filen direkt i webbläsaren och ladda ner en skyddad kopia. Filen stannar på din enhet.",
+      },
+      th: {
+        name: "ตั้งรหัสผ่านให้ PDF",
+        description:
+          "ตั้งรหัสผ่านให้ไฟล์ PDF เพื่อให้ผู้รับต้องใส่รหัสก่อนเปิดไฟล์ เข้ารหัสและดาวน์โหลดสำเนาที่มีรหัสผ่านได้ในเบราว์เซอร์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF’yi Parolayla Koru",
+        description:
+          "PDF dosyanıza açılırken sorulacak bir parola ekleyin. Dosyayı sunucuya yüklemeden tarayıcınızda şifreleyin ve korumalı kopyasını indirin.",
+      },
+      vi: {
+        name: "Đặt mật khẩu cho PDF",
+        description:
+          "Đặt mật khẩu cho tệp PDF để người nhận phải nhập mật khẩu khi mở. Mã hóa và tải bản sao được bảo vệ ngay trong trình duyệt, không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "为 PDF 添加密码",
+        description:
+          "为 PDF 添加打开密码，收件人输入密码后才能查看文件。直接在浏览器中加密并下载受保护的副本，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "為 PDF 設定密碼",
+        description:
+          "為 PDF 設定開啟密碼，收件者輸入密碼後才能檢視檔案。直接在瀏覽器中加密並下載受保護的副本，無須上傳檔案。",
       },
     },
   },
@@ -34010,6 +35422,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "SVG 轉圖片轉換器",
         description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
+  {
+    slug: "svg-to-pdf-converter",
+    category: "image",
+    icon: "file-text",
+    tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
+    locales: {
+      ar: {
+        name: "محوّل SVG إلى PDF",
+        description:
+          "حوّل ملفات SVG إلى PDF متجهي في متصفحك. حافظ على وضوح الرسم بأبعاده الأصلية، أو لائمه مع ورق A4 أو US Letter.",
+      },
+      de: {
+        name: "SVG-zu-PDF-Konverter",
+        description:
+          "Wandle SVG-Dateien im Browser in Vektor-PDFs um. Die Grafik bleibt scharf, ob in Originalgröße, auf A4 oder auf US Letter.",
+      },
+      en: {
+        name: "SVG to PDF Converter",
+        description:
+          "Convert SVG to vector PDF in your browser. Preserve sharp artwork at the original canvas size, or fit it to A4 or US Letter.",
+      },
+      es: {
+        name: "Convertidor de SVG a PDF",
+        description:
+          "Convierte SVG a PDF vectorial en tu navegador. Conserva la nitidez y el tamaño del lienzo original o ajusta el diseño a A4 o carta.",
+      },
+      fr: {
+        name: "Convertisseur SVG en PDF",
+        description:
+          "Convertissez vos SVG en PDF vectoriels dans votre navigateur. Conservez les dimensions d’origine ou adaptez le dessin au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר SVG ל-PDF",
+        description:
+          "המרת SVG ל-PDF וקטורי בדפדפן. אפשר לשמור על חדות האיור במידות המקוריות של משטח הציור או להתאים אותו לדף A4 או US Letter.",
+      },
+      hi: {
+        name: "SVG से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में SVG को वेक्टर PDF में बदलें। चित्र को मूल कैनवस के आकार में साफ़ रखें या A4 या US Letter पन्ने पर फ़िट करें।",
+      },
+      id: {
+        name: "Konverter SVG ke PDF",
+        description:
+          "Ubah SVG menjadi PDF vektor langsung di browser. Jaga gambar tetap tajam pada ukuran kanvas asli atau sesuaikan dengan kertas A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da SVG a PDF",
+        description:
+          "Converti SVG in PDF vettoriali nel browser. Mantieni la grafica nitida alle dimensioni originali o adattala a un foglio A4 o Lettera USA.",
+      },
+      ja: {
+        name: "SVGをPDFに変換",
+        description:
+          "ブラウザーでSVGをベクターPDFに変換します。図形の鮮明さを保ったまま、元のサイズで書き出したり、A4やUSレターに収めたりできます。",
+      },
+      ko: {
+        name: "SVG PDF 변환기",
+        description:
+          "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar SVG ke PDF",
+        description:
+          "Tukar SVG kepada PDF vektor terus dalam pelayar. Kekalkan ketajaman grafik pada saiz kanvas asal atau sesuaikannya dengan kertas A4 atau US Letter.",
+      },
+      nl: {
+        name: "SVG naar PDF converteren",
+        description:
+          "Zet SVG om naar een vector-PDF in je browser. Behoud de oorspronkelijke afmetingen of laat de afbeelding op A4 of US Letter passen.",
+      },
+      no: {
+        name: "Konverterer fra SVG til PDF",
+        description:
+          "Konverter SVG til vektorbasert PDF i nettleseren. Behold skarpheten og den opprinnelige størrelsen, eller tilpass illustrasjonen til A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter SVG na PDF",
+        description:
+          "Konwertuj SVG na wektorowy PDF w przeglądarce. Zachowaj ostrość i oryginalne wymiary grafiki lub dopasuj ją do formatu A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de SVG para PDF",
+        description:
+          "Converta SVG em PDF vetorial no navegador. Preserve a nitidez e o tamanho original da ilustração ou ajuste-a para A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер SVG в PDF",
+        description:
+          "Преобразуйте SVG в векторный PDF прямо в браузере. Сохраните чёткость графики при исходном размере или разместите её на листе A4 или US Letter.",
+      },
+      sv: {
+        name: "Konvertera SVG till PDF",
+        description:
+          "Konvertera SVG till vektor-PDF i webbläsaren. Behåll skärpan och originalmåtten eller anpassa grafiken till A4 eller US Letter.",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็น PDF",
+        description:
+          "แปลง SVG เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ คงความคมชัดที่ขนาดเดิม หรือปรับให้พอดีกับกระดาษ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "SVG'den PDF'ye Dönüştürücü",
+        description:
+          "SVG dosyalarını tarayıcınızda vektörel PDF'ye dönüştürün. Çizimin netliğini ve özgün tuval boyutunu koruyun veya çizimi A4 ya da US Letter sayfasına sığdırın.",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang PDF",
+        description:
+          "Chuyển SVG sang PDF vectơ ngay trong trình duyệt. Giữ đồ họa sắc nét ở kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "SVG 转 PDF 转换器",
+        description:
+          "在浏览器中将 SVG 转为矢量 PDF，放大依然清晰。可保留原始画布尺寸，也可适配 A4 或 US Letter 纸张。",
+      },
+      "zh-TW": {
+        name: "SVG 轉 PDF 轉換器",
+        description:
+          "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。",
       },
     },
   },
@@ -46584,6 +48119,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "cb7-reader": {
+    slug: "cb7-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cb7", "7z", "7-zip", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CB7",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CB7 (7z) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CB7-Comic-Reader",
+        description:
+          "Lies CB7-Comics und Manga (7z) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CB7 Comic Reader",
+        description:
+          "Open CB7 (7z) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CB7",
+        description:
+          "Abre cómics y manga CB7 (7z) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CB7",
+        description:
+          "Ouvrez vos BD et mangas CB7 (7z) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CB7",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CB7 (7z) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CB7 कॉमिक रीडर",
+        description:
+          "CB7 (7z) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CB7",
+        description:
+          "Leggi fumetti e manga CB7 (7z) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CB7 コミックリーダー",
+        description:
+          "CB7（7z）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CB7 만화 리더",
+        description:
+          "브라우저에서 CB7 (7z) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CB7",
+        description:
+          "Buka komik dan manga CB7 (7z) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CB7-striplezer",
+        description:
+          "Open CB7-strips en manga (7z) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CB7-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CB7-format (7z) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CB7",
+        description:
+          "Czytaj komiksy i mangę w formacie CB7 (7z) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CB7",
+        description:
+          "Leia quadrinhos e mangás CB7 (7z) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CB7",
+        description:
+          "Открывайте комиксы и мангу в формате CB7 (7z) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CB7-serieläsare",
+        description:
+          "Läs serier och manga i formatet CB7 (7z) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CB7",
+        description:
+          "เปิดการ์ตูนและมังงะ CB7 (7z) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CB7 Çizgi Roman Okuyucu",
+        description:
+          "CB7 (7z) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CB7",
+        description:
+          "Mở truyện tranh và manga CB7 (7z) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CB7 漫画阅读器",
+        description:
+          "在线打开 CB7（7z）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CB7 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
   "cbor-messagepack-converter": {
     slug: "cbor-messagepack-converter",
     category: "json",
@@ -46713,6 +48371,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CBOR / MessagePack 轉換器",
         description:
           "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  "cbr-reader": {
+    slug: "cbr-reader",
+    category: "image",
+    icon: "book-open",
+    tags: ["cbr", "rar", "comic", "manga", "reader"],
+    locales: {
+      ar: {
+        name: "قارئ القصص المصوّرة CBR",
+        description:
+          "افتح القصص المصوّرة والمانغا بتنسيق CBR (RAR) في متصفحك. قلّب الصفحات وتنقّل بالمصغّرات وكبّر الصور واقرأ من اليمين إلى اليسار. تبقى ملفاتك على جهازك.",
+      },
+      de: {
+        name: "CBR-Comic-Reader",
+        description:
+          "Lies CBR-Comics und Manga (RAR) im Browser. Blättere, springe über Seitenvorschauen, zoome oder lies von rechts nach links. Deine Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR Comic Reader",
+        description:
+          "Open CBR (RAR) comics and manga online. Turn pages, jump with thumbnails, zoom, and read right to left. Your files stay on your device.",
+      },
+      es: {
+        name: "Lector de cómics CBR",
+        description:
+          "Abre cómics y manga CBR (RAR) en línea. Pasa páginas, salta a otra con las miniaturas, ajusta el zoom y lee de derecha a izquierda. Tus archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Lecteur de BD CBR",
+        description:
+          "Ouvrez vos BD et mangas CBR (RAR) en ligne. Tournez les pages, naviguez par miniatures, zoomez et lisez de droite à gauche. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "קורא קומיקס CBR",
+        description:
+          "פתחו קובצי קומיקס ומאנגה בפורמט CBR (RAR) בדפדפן. אפשר לדפדף, לדלג בין עמודים בעזרת תמונות ממוזערות, להגדיל ולקרוא מימין לשמאל. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "CBR कॉमिक रीडर",
+        description:
+          "CBR (RAR) फ़ॉर्मैट की कॉमिक और मांगा ऑनलाइन खोलें। पृष्ठ पलटें, थंबनेल से किसी पृष्ठ पर जाएँ, ज़ूम करें और दाएँ से बाएँ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) secara online. Balik halaman, lompat melalui pratinjau, perbesar, dan baca dari kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Lettore di fumetti CBR",
+        description:
+          "Leggi fumetti e manga CBR (RAR) online. Sfoglia le pagine, usa le miniature per orientarti, ingrandisci e leggi da destra a sinistra. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBR コミックリーダー",
+        description:
+          "CBR（RAR）形式の漫画やコミックをブラウザーで読めます。ページめくり、サムネイルからの移動、拡大縮小、右から左への閲覧に対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBR 만화 리더",
+        description:
+          "브라우저에서 CBR (RAR) 만화 파일을 여세요. 페이지를 넘기고 미리보기로 원하는 페이지로 이동하거나 확대하고, 오른쪽에서 왼쪽으로 읽을 수 있습니다. 파일은 기기에만 남습니다.",
+      },
+      ms: {
+        name: "Pembaca Komik CBR",
+        description:
+          "Buka komik dan manga CBR (RAR) dalam talian. Selak halaman, lompat menggunakan lakaran kecil, zum dan baca dari kanan ke kiri. Fail anda kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBR-striplezer",
+        description:
+          "Open CBR-strips en manga (RAR) online. Blader, spring naar pagina’s met miniaturen, zoom in en lees van rechts naar links. Je bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBR-tegneserieleser",
+        description:
+          "Les tegneserier og manga i CBR-format (RAR) direkte i nettleseren. Bla, hopp mellom sider med miniatyrbilder, zoom og les fra høyre mot venstre. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Czytnik komiksów CBR",
+        description:
+          "Czytaj komiksy i mangę w formacie CBR (RAR) w przeglądarce. Przewracaj strony, korzystaj z miniatur i powiększenia oraz czytaj od prawej do lewej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Leitor de quadrinhos CBR",
+        description:
+          "Leia quadrinhos e mangás CBR (RAR) no navegador. Vire páginas, navegue pelas miniaturas, use o zoom e leia da direita para a esquerda. Seus arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Читалка комиксов CBR",
+        description:
+          "Открывайте комиксы и мангу в формате CBR (RAR) прямо в браузере. Листайте страницы, переходите по миниатюрам, меняйте масштаб и читайте справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBR-serieläsare",
+        description:
+          "Läs serier och manga i formatet CBR (RAR) direkt i webbläsaren. Bläddra, hoppa mellan sidor med miniatyrer, zooma och läs från höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมอ่านการ์ตูน CBR",
+        description:
+          "เปิดการ์ตูนและมังงะ CBR (RAR) ออนไลน์ พลิกหน้า ข้ามหน้าด้วยภาพย่อ ซูม และอ่านจากขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBR Çizgi Roman Okuyucu",
+        description:
+          "CBR (RAR) çizgi roman ve mangalarını çevrimiçi açın. Sayfaları çevirin, küçük resimlerle sayfalara atlayın, yakınlaştırın ve sağdan sola okuyun. Dosyalarınız cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình đọc truyện tranh CBR",
+        description:
+          "Mở truyện tranh và manga CBR (RAR) ngay trong trình duyệt. Lật trang, chuyển trang bằng ảnh thu nhỏ, thu phóng và đọc từ phải sang trái. Tệp vẫn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBR 漫画阅读器",
+        description:
+          "在线打开 CBR（RAR）漫画，支持翻页、通过缩略图跳转、缩放和从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBR 漫畫閱讀器",
+        description:
+          "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },
@@ -47214,6 +48995,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "國字大寫轉換器",
         description:
           "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
+      },
+    },
+  },
+  "chm-viewer": {
+    slug: "chm-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "chm",
+      "compiled html help",
+      "windows help",
+      "manual",
+      "ebook",
+      "viewer",
+      "reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض CHM",
+        description:
+          "افتح ملفات CHM في متصفحك. اقرأ ملفات تعليمات Windows وأدلة البرامج وكتب CHM باستخدام جدول المحتويات، دون رفع الملفات أو تثبيت برامج.",
+      },
+      de: {
+        name: "CHM-Betrachter",
+        description:
+          "Öffne CHM-Dateien in deinem Browser. Lies Windows-Hilfedateien, Softwarehandbücher und CHM-Bücher mit Inhaltsverzeichnis. Ohne Upload oder Installation.",
+      },
+      en: {
+        name: "CHM Viewer",
+        description:
+          "Open CHM files in your browser. Read Windows help files, software manuals, and CHM books with a table of contents. No upload or installation required.",
+      },
+      es: {
+        name: "Visor CHM",
+        description:
+          "Abre archivos CHM en el navegador. Lee archivos de ayuda de Windows, manuales de software y libros CHM con un índice de contenido. Sin cargas ni instalaciones.",
+      },
+      fr: {
+        name: "Visionneuse CHM",
+        description:
+          "Ouvrez des fichiers CHM dans votre navigateur. Consultez des fichiers d’aide Windows, des manuels logiciels et des livres CHM à l’aide d’un sommaire. Sans transfert ni installation.",
+      },
+      he: {
+        name: "מציג CHM",
+        description:
+          "פתיחת קובצי CHM בדפדפן. אפשר לקרוא קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM עם תוכן עניינים, ללא העלאה או התקנה.",
+      },
+      hi: {
+        name: "CHM व्यूअर",
+        description:
+          "अपने ब्राउज़र में CHM फ़ाइलें खोलें। विषय-सूची के साथ Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM पुस्तकें पढ़ें। अपलोड या इंस्टॉलेशन की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil CHM",
+        description:
+          "Buka berkas CHM di browser. Baca berkas bantuan Windows, panduan perangkat lunak, dan buku CHM dengan daftar isi. Tanpa mengunggah atau memasang aplikasi.",
+      },
+      it: {
+        name: "Visualizzatore CHM",
+        description:
+          "Apri file CHM nel browser. Leggi file della guida di Windows, manuali software e libri CHM usando l'indice. Nessun caricamento o installazione necessari.",
+      },
+      ja: {
+        name: "CHM ビューアー",
+        description:
+          "ブラウザーで CHM ファイルを開き、Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍を目次から閲覧できます。アップロードやインストールは不要です。",
+      },
+      ko: {
+        name: "CHM 뷰어",
+        description:
+          "브라우저에서 CHM 파일을 여세요. Windows 도움말, 소프트웨어 설명서, CHM 책을 목차와 함께 읽을 수 있습니다. 업로드나 설치가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar CHM",
+        description:
+          "Buka fail CHM dalam pelayar anda. Baca fail bantuan Windows, manual perisian dan buku CHM dengan senarai kandungan. Tidak perlu memuat naik fail atau memasang perisian.",
+      },
+      nl: {
+        name: "CHM-viewer",
+        description:
+          "Open CHM-bestanden in je browser. Lees Windows-helpbestanden, softwarehandleidingen en CHM-boeken met een inhoudsopgave. Uploaden of installeren is niet nodig.",
+      },
+      no: {
+        name: "CHM-viser",
+        description:
+          "Åpne CHM-filer i nettleseren. Les Windows-hjelpefiler, programvarehåndbøker og CHM-bøker med innholdsfortegnelse. Ingen opplasting eller installasjon nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka CHM",
+        description:
+          "Otwieraj pliki CHM w przeglądarce. Czytaj pliki pomocy Windows, instrukcje programów i książki CHM ze spisem treści. Bez przesyłania pliku i instalacji.",
+      },
+      pt: {
+        name: "Visualizador de CHM",
+        description:
+          "Abra arquivos CHM no navegador. Leia arquivos de ajuda do Windows, manuais de software e livros CHM com sumário. Sem upload ou instalação.",
+      },
+      ru: {
+        name: "Просмотр CHM",
+        description:
+          "Открывайте файлы CHM в браузере. Читайте справочные файлы Windows, руководства к программам и книги CHM с оглавлением. Без загрузки файла на сервер и установки.",
+      },
+      sv: {
+        name: "CHM-visare",
+        description:
+          "Öppna CHM-filer i webbläsaren. Läs Windows-hjälpfiler, programhandböcker och CHM-böcker med en innehållsförteckning. Ingen uppladdning eller installation krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู CHM",
+        description:
+          "เปิดไฟล์ CHM ในเบราว์เซอร์ อ่านไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และหนังสือ CHM พร้อมสารบัญ โดยไม่ต้องอัปโหลดหรือติดตั้ง",
+      },
+      tr: {
+        name: "CHM Görüntüleyici",
+        description:
+          "CHM dosyalarını tarayıcınızda açın. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM kitaplarını içindekiler tablosuyla okuyun. Yükleme veya kurulum gerekmez.",
+      },
+      vi: {
+        name: "Trình xem CHM",
+        description:
+          "Mở tệp CHM trong trình duyệt. Đọc tệp trợ giúp Windows, hướng dẫn phần mềm và sách CHM với mục lục. Không cần tải tệp lên hay cài đặt.",
+      },
+      "zh-CN": {
+        name: "CHM 查看器",
+        description:
+          "在浏览器中打开 CHM 文件，通过目录阅读 Windows 帮助文件、软件手册和 CHM 电子书。无需上传或安装。",
+      },
+      "zh-TW": {
+        name: "CHM 檢視器",
+        description:
+          "在瀏覽器中開啟 CHM 檔案，透過目錄閱讀 Windows 說明檔、軟體手冊和 CHM 電子書，無須上傳或安裝。",
       },
     },
   },
@@ -49234,6 +51146,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CSS 漸層產生器",
         description:
           "建立可拖曳色標的線性、放射與圓錐漸層，支援混合模式並輸出可直接使用的 CSS。",
+      },
+    },
+  },
+  "csv-excel-to-sqlite": {
+    slug: "csv-excel-to-sqlite",
+    category: "developer",
+    icon: "database",
+    tags: [
+      "csv",
+      "excel",
+      "xlsx",
+      "xls",
+      "spreadsheet",
+      "sqlite",
+      "sql",
+      "database",
+      "converter",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CSV وExcel إلى SQLite",
+        description:
+          "حوّل ملفات CSV وExcel بامتدادَي ⁦.xlsx⁩ و⁦.xls⁩ إلى قاعدة بيانات SQLite واحدة. عاين الجداول وأعد تسميتها، ثم نزّل ملف ⁦.sqlite⁩ أو استعلم عنه في عارض SQLite.",
+      },
+      de: {
+        name: "CSV und Excel in SQLite umwandeln",
+        description:
+          "CSV- und Excel-Dateien (.xlsx, .xls) in einer SQLite-Datenbank zusammenführen. Tabellen prüfen und umbenennen, die .sqlite-Datei herunterladen oder im SQLite-Betrachter abfragen.",
+      },
+      en: {
+        name: "CSV and Excel to SQLite Converter",
+        description:
+          "Convert CSV and Excel (.xlsx, .xls) files into one SQLite database. Preview and rename tables, download the .sqlite file, or query it in SQLite Viewer.",
+      },
+      es: {
+        name: "Conversor de CSV y Excel a SQLite",
+        description:
+          "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite.",
+      },
+      fr: {
+        name: "Convertisseur CSV et Excel en SQLite",
+        description:
+          "Réunissez vos fichiers CSV et Excel (.xlsx, .xls) dans une seule base SQLite. Prévisualisez et renommez les tables, puis téléchargez le fichier .sqlite ou ouvrez-le dans la Visionneuse SQLite pour lancer des requêtes.",
+      },
+      he: {
+        name: "ממיר CSV ו־Excel ל־SQLite",
+        description:
+          "המרת קובצי CSV ו־Excel (⁦.xlsx⁩, ⁦.xls⁩) למסד נתונים אחד של SQLite. אפשר לבדוק את הטבלאות, לשנות את שמותיהן, להוריד את קובץ ה־⁦.sqlite⁩ או להריץ עליו שאילתות במציג SQLite.",
+      },
+      hi: {
+        name: "CSV और Excel को SQLite में बदलें",
+        description:
+          "CSV और Excel (.xlsx, .xls) फ़ाइलों को एक SQLite डेटाबेस में बदलें। टेबल देखें, उनके नाम बदलें, .sqlite फ़ाइल डाउनलोड करें या SQLite व्यूअर में क्वेरी चलाएँ।",
+      },
+      id: {
+        name: "Konverter CSV dan Excel ke SQLite",
+        description:
+          "Konversi file CSV dan Excel (.xlsx, .xls) menjadi satu basis data SQLite. Pratinjau dan ubah nama tabel, unduh file .sqlite, atau jalankan kueri di Penampil SQLite.",
+      },
+      it: {
+        name: "Convertitore da CSV ed Excel a SQLite",
+        description:
+          "Converti file CSV ed Excel (.xlsx, .xls) in un unico database SQLite. Visualizza l’anteprima, rinomina le tabelle, scarica il file .sqlite o esegui query nel Visualizzatore SQLite.",
+      },
+      ja: {
+        name: "CSV・ExcelをSQLiteに変換",
+        description:
+          "CSV・Excelファイル（.xlsx、.xls）をまとめて1つのSQLiteデータベースに変換できます。テーブルをプレビューして名前を変更し、.sqliteファイルをダウンロードするか、SQLite ビューアーでクエリを実行できます。",
+      },
+      ko: {
+        name: "CSV·Excel을 SQLite로 변환",
+        description:
+          "CSV와 Excel(.xlsx, .xls) 파일을 하나의 SQLite 데이터베이스로 변환하세요. 테이블을 미리 보고 이름을 바꾼 뒤 .sqlite 파일을 다운로드하거나 SQLite 뷰어에서 바로 쿼리할 수 있습니다.",
+      },
+      ms: {
+        name: "Tukar CSV dan Excel kepada SQLite",
+        description:
+          "Tukar fail CSV dan Excel (.xlsx, .xls) kepada satu pangkalan data SQLite. Pratonton dan namakan semula jadual, muat turun fail .sqlite atau jalankan pertanyaan dalam Pemapar SQLite.",
+      },
+      nl: {
+        name: "CSV en Excel naar SQLite converteren",
+        description:
+          "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer.",
+      },
+      no: {
+        name: "Konverter CSV og Excel til SQLite",
+        description:
+          "Samle CSV- og Excel-filer (.xlsx, .xls) i én SQLite-database. Forhåndsvis og gi nytt navn til tabeller, last ned .sqlite-filen eller kjør spørringer i SQLite-viseren.",
+      },
+      pl: {
+        name: "Konwerter plików CSV i Excel do SQLite",
+        description:
+          "Konwertuj pliki CSV i Excel (.xlsx, .xls) do jednej bazy SQLite. Sprawdź i zmień nazwy tabel, pobierz plik .sqlite lub wykonaj zapytanie w Przeglądarce SQLite.",
+      },
+      pt: {
+        name: "Conversor de CSV e Excel para SQLite",
+        description:
+          "Converta arquivos CSV e Excel (.xlsx, .xls) em um único banco SQLite. Confira e renomeie as tabelas, baixe o arquivo .sqlite ou consulte os dados no Visualizador SQLite.",
+      },
+      ru: {
+        name: "Конвертер CSV и Excel в SQLite",
+        description:
+          "Преобразуйте файлы CSV и Excel (.xlsx, .xls) в одну базу данных SQLite. Просматривайте и переименовывайте таблицы, скачивайте файл .sqlite или выполняйте запросы в инструменте «Просмотр SQLite».",
+      },
+      sv: {
+        name: "Konvertera CSV och Excel till SQLite",
+        description:
+          "Samla CSV- och Excel-filer (.xlsx, .xls) i en SQLite-databas. Förhandsgranska och byt namn på tabeller, ladda ned .sqlite-filen eller kör frågor i SQLite-visaren.",
+      },
+      th: {
+        name: "แปลง CSV และ Excel เป็น SQLite",
+        description:
+          "แปลงไฟล์ CSV และ Excel (.xlsx, .xls) ให้เป็นฐานข้อมูล SQLite เดียว ดูตัวอย่างและเปลี่ยนชื่อตาราง ดาวน์โหลดไฟล์ .sqlite หรือเปิดในโปรแกรมดู SQLite เพื่อรันคำสั่ง SQL",
+      },
+      tr: {
+        name: "CSV ve Excel'den SQLite'a Dönüştürücü",
+        description:
+          "CSV ve Excel (.xlsx, .xls) dosyalarını tek bir SQLite veritabanına dönüştürün. Tabloları önizleyip yeniden adlandırın, .sqlite dosyasını indirin veya SQLite Görüntüleyici'de sorgulayın.",
+      },
+      vi: {
+        name: "Chuyển đổi CSV và Excel sang SQLite",
+        description:
+          "Chuyển tệp CSV và Excel (.xlsx, .xls) thành một cơ sở dữ liệu SQLite. Xem trước và đổi tên bảng, tải tệp .sqlite xuống hoặc truy vấn trong Trình xem SQLite.",
+      },
+      "zh-CN": {
+        name: "CSV 和 Excel 转 SQLite",
+        description:
+          "将 CSV 和 Excel（.xlsx、.xls）文件转换为一个 SQLite 数据库。预览和重命名数据表，下载 .sqlite 文件，或在 SQLite 查看器中查询。",
+      },
+      "zh-TW": {
+        name: "CSV 與 Excel 轉 SQLite",
+        description:
+          "將 CSV 與 Excel（.xlsx、.xls）檔案轉成一個 SQLite 資料庫。可預覽與重新命名資料表、下載 .sqlite 檔案，或在 SQLite 檢視器中查詢。",
       },
     },
   },
@@ -52139,6 +54185,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "epub-metadata-editor": {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
+      },
+    },
+  },
   "epub-reader": {
     slug: "epub-reader",
     category: "document",
@@ -52259,6 +54428,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EPUB 閱讀器",
         description:
           "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  "epub-to-pdf-converter": {
+    slug: "epub-to-pdf-converter",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "epub",
+      "pdf",
+      "ebook",
+      "epub to pdf",
+      "convert epub",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل EPUB إلى PDF",
+        description:
+          "حوّل كتب EPUB إلى PDF في متصفحك. عاين الكتاب، واختر مقاس الورق A4 أو A5 أو US Letter، واحفظ ملف PDF بنص قابل للتحديد. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-zu-PDF-Konverter",
+        description:
+          "Wandle EPUB-E-Books direkt im Browser in PDF um. Prüfe die Vorschau, wähle A4, A5 oder US Letter und speichere ein PDF mit auswählbarem Text. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB to PDF Converter",
+        description:
+          "Convert EPUB ebooks to PDF in your browser. Preview the book, choose A4, A5 or US Letter, and save a PDF with selectable text. No upload needed.",
+      },
+      es: {
+        name: "Convertidor de EPUB a PDF",
+        description:
+          "Convierte libros EPUB a PDF en tu navegador. Previsualiza el libro, elige A4, A5 o Carta y guarda un PDF con texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en PDF",
+        description:
+          "Convertissez vos livres EPUB en PDF dans votre navigateur. Prévisualisez le livre, choisissez le format A4, A5 ou Lettre US et enregistrez un PDF avec du texte sélectionnable. Aucun envoi requis.",
+      },
+      he: {
+        name: "ממיר EPUB ל־PDF",
+        description:
+          "המרת ספרי EPUB ל־PDF בדפדפן. אפשר להציג את הספר בתצוגה מקדימה, לבחור A4, A5 או US Letter ולשמור PDF עם טקסט שניתן לסמן. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में EPUB ईबुक को PDF में बदलें। किताब का प्रीव्यू देखें, A4, A5 या US Letter चुनें और ऐसा PDF सेव करें जिसमें टेक्स्ट चुना जा सके। फ़ाइल अपलोड करने की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Konverter EPUB ke PDF",
+        description:
+          "Ubah buku EPUB ke PDF di browser. Tinjau buku, pilih A4, A5, atau US Letter, lalu simpan PDF dengan teks yang bisa diseleksi. Tak perlu mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da EPUB a PDF",
+        description:
+          "Converti ebook EPUB in PDF nel browser. Controlla l’anteprima, scegli il formato A4, A5 o Letter USA e salva un PDF con testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB PDF変換",
+        description:
+          "ブラウザーでEPUB電子書籍をPDFに変換。書籍をプレビューし、A4・A5・US Letterから用紙を選んで、テキストを選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB PDF 변환기",
+        description:
+          "브라우저에서 EPUB 전자책을 PDF로 변환하세요. 책을 미리 보고 A4, A5 또는 US Letter를 선택해 텍스트를 선택할 수 있는 PDF로 저장합니다. 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada PDF",
+        description:
+          "Tukar e-buku EPUB kepada PDF dalam pelayar anda. Lihat pratonton, pilih A4, A5 atau US Letter, kemudian simpan PDF dengan teks yang boleh dipilih. Tanpa muat naik.",
+      },
+      nl: {
+        name: "EPUB naar PDF-converter",
+        description:
+          "Zet EPUB-boeken om naar PDF in je browser. Bekijk het boek, kies A4, A5 of US Letter en sla een PDF met selecteerbare tekst op. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Konverter EPUB til PDF",
+        description:
+          "Konverter EPUB-bøker til PDF i nettleseren. Forhåndsvis boken, velg A4, A5 eller US Letter og lagre en PDF med tekst som kan markeres. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Konwerter EPUB na PDF",
+        description:
+          "Konwertuj e-booki EPUB na PDF w przeglądarce. Wyświetl podgląd, wybierz A4, A5 lub US Letter i zapisz PDF z tekstem, który można zaznaczać. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de EPUB para PDF",
+        description:
+          "Converta e-books EPUB em PDF no navegador. Confira a prévia, escolha A4, A5 ou Carta e salve um PDF com texto selecionável. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер EPUB в PDF",
+        description:
+          "Конвертируйте книги EPUB в PDF прямо в браузере. Просмотрите книгу, выберите A4, A5 или Letter и сохраните PDF с выделяемым текстом. Без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera EPUB till PDF",
+        description:
+          "Konvertera EPUB-böcker till PDF i webbläsaren. Förhandsgranska boken, välj A4, A5 eller US Letter och spara en PDF med markerbar text. Ingen uppladdning behövs.",
+      },
+      th: {
+        name: "โปรแกรมแปลง EPUB เป็น PDF",
+        description:
+          "แปลงอีบุ๊ก EPUB เป็น PDF ในเบราว์เซอร์ ดูตัวอย่าง เลือกกระดาษ A4, A5 หรือ US Letter แล้วบันทึก PDF ที่เลือกข้อความได้ โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB'dan PDF'ye Dönüştürücü",
+        description:
+          "EPUB e-kitapları tarayıcınızda PDF'ye dönüştürün. Kitabı önizleyin, A4, A5 veya US Letter boyutunu seçin ve metni seçilebilen bir PDF kaydedin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang PDF",
+        description:
+          "Chuyển sách EPUB sang PDF ngay trong trình duyệt. Xem trước sách, chọn khổ A4, A5 hoặc US Letter và lưu PDF có thể chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 PDF",
+        description:
+          "在浏览器中将 EPUB 电子书转换为 PDF。预览内容，选择 A4、A5 或美式信纸，保存后可选中和搜索正文。无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 PDF",
+        description:
+          "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
       },
     },
   },
@@ -55988,6 +58288,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "image-histogram": {
+    slug: "image-histogram",
+    category: "image",
+    icon: "chart-no-axes-column-increasing",
+    tags: [
+      "photo",
+      "histogram",
+      "rgb",
+      "color channels",
+      "brightness",
+      "luminance",
+      "exposure",
+      "clipping",
+    ],
+    locales: {
+      ar: {
+        name: "عارض المدرج التكراري للصور",
+        description:
+          "اعرض المدرج التكراري للسطوع وقنوات RGB في صورك. افحص الظلال والمناطق الساطعة وكل قناة لونية مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Betrachter für Bildhistogramme",
+        description:
+          "Sieh dir das Helligkeits- und RGB-Histogramm eines Fotos oder Bildes an. Prüfe Tiefen, Lichter und einzelne Farbkanäle direkt im Browser.",
+      },
+      en: {
+        name: "Image Histogram Viewer",
+        description:
+          "View the brightness and RGB histograms of a photo or image. Check shadows, highlights, and individual color channels directly in your browser.",
+      },
+      es: {
+        name: "Visor de histogramas de imágenes",
+        description:
+          "Consulta los histogramas de luminosidad y RGB de una foto o imagen. Examina las sombras, las altas luces y cada canal de color desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’histogrammes d’images",
+        description:
+          "Affichez les histogrammes de luminosité et RVB d’une photo ou d’une image. Inspectez les ombres, les hautes lumières et chaque canal de couleur dans votre navigateur.",
+      },
+      he: {
+        name: "מציג היסטוגרמה לתמונות",
+        description:
+          "הציגו היסטוגרמות בהירות וערוצי RGB של צילומים ותמונות. בדקו צללים, אזורים בהירים וערוצי צבע נפרדים ישירות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज हिस्टोग्राम व्यूअर",
+        description:
+          "फ़ोटो या इमेज की चमक और RGB के हिस्टोग्राम देखें। गहरे और उजले टोन और अलग-अलग रंग चैनल सीधे अपने ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Histogram Gambar",
+        description:
+          "Lihat histogram kecerahan dan RGB untuk foto atau gambar. Periksa bayangan, sorotan, dan tiap saluran warna langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di istogrammi di immagini",
+        description:
+          "Visualizza gli istogrammi di luminosità e RGB di una foto o immagine. Esamina ombre, luci e singoli canali di colore direttamente nel browser.",
+      },
+      ja: {
+        name: "画像ヒストグラムビューアー",
+        description:
+          "写真や画像の明るさと RGB のヒストグラムをブラウザーで表示し、シャドウ、ハイライト、各色のチャンネルを確認できます。",
+      },
+      ko: {
+        name: "이미지 히스토그램 뷰어",
+        description:
+          "사진이나 이미지의 밝기와 RGB 히스토그램을 확인하세요. 어두운 영역, 밝은 영역, 개별 색상 채널을 브라우저에서 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Histogram Imej",
+        description:
+          "Lihat histogram kecerahan dan RGB bagi foto atau imej. Semak bahagian gelap dan cerah serta setiap saluran warna terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Histogramviewer voor afbeeldingen",
+        description:
+          "Bekijk de helderheids- en RGB-histogrammen van een foto of afbeelding. Controleer schaduwen, hooglichten en afzonderlijke kleurkanalen in je browser.",
+      },
+      no: {
+        name: "Histogramviser for bilder",
+        description:
+          "Vis histogrammer for lysstyrke og RGB i bilder og fotografier. Undersøk skygger, høylys og enkeltkanaler direkte i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka histogramów obrazów",
+        description:
+          "Wyświetl histogramy jasności i RGB zdjęcia lub innego obrazu. Sprawdź cienie, światła i poszczególne kanały kolorów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de histogramas de imagens",
+        description:
+          "Veja os histogramas de brilho e RGB de uma foto ou imagem. Confira as sombras, os realces e cada canal de cor diretamente no navegador.",
+      },
+      ru: {
+        name: "Просмотр гистограмм изображений",
+        description:
+          "Просматривайте гистограммы яркости и RGB для фотографий и других изображений. Проверяйте тени, света и отдельные цветовые каналы прямо в браузере.",
+      },
+      sv: {
+        name: "Histogramvisare för bilder",
+        description:
+          "Visa ljusstyrke- och RGB-histogram för foton och andra bilder. Granska skuggor, högdagrar och enskilda färgkanaler direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูฮิสโตแกรมรูปภาพ",
+        description:
+          "ดูฮิสโตแกรมความสว่างและ RGB ของรูปภาพ ตรวจสอบส่วนมืด ส่วนสว่าง และแต่ละช่องสีได้โดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görsel Histogramı Görüntüleyicisi",
+        description:
+          "Fotoğraf ve görsellerin parlaklık ve RGB histogramlarını görüntüleyin. Gölgeleri, açık tonları ve renk kanallarını doğrudan tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem histogram ảnh",
+        description:
+          "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu.",
+      },
+      "zh-CN": {
+        name: "图像直方图查看器",
+        description:
+          "直接在浏览器中查看照片或图片的亮度和 RGB 直方图，检查阴影、高光及各个颜色通道。",
+      },
+      "zh-TW": {
+        name: "影像色階分佈圖檢視器",
+        description:
+          "直接在瀏覽器中查看照片或圖片的亮度與 RGB 色階分佈圖，檢查陰影、亮部及個別色版。",
+      },
+    },
+  },
   "image-metadata-cleaner": {
     slug: "image-metadata-cleaner",
     category: "image",
@@ -59464,6 +61896,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 轉 CSV 轉換器",
         description:
           "將 JSON 轉為 CSV。貼上 JSON 或匯入檔案；調整選項、預覽、複製並下載。",
+      },
+    },
+  },
+  "json-to-excel-converter": {
+    slug: "json-to-excel-converter",
+    category: "json",
+    icon: "table-2",
+    tags: [
+      "json",
+      "excel",
+      "xlsx",
+      "spreadsheet",
+      "nested",
+      "flatten",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل JSON إلى Excel",
+        description:
+          "حوّل مصفوفة JSON إلى ملف Excel ⁦(.xlsx)⁩. الصق بيانات JSON أو افتح ملفًا، وعاين الجدول، ووسّع الحقول المتداخلة إلى أعمدة مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "JSON-zu-Excel-Konverter",
+        description:
+          "Wandeln Sie ein JSON-Array in Excel (.xlsx) um. Fügen Sie JSON ein oder öffnen Sie eine Datei, prüfen Sie die Vorschau und teilen Sie verschachtelte Felder direkt im Browser in Spalten auf.",
+      },
+      en: {
+        name: "JSON to Excel Converter",
+        description:
+          "Convert a JSON array to Excel (.xlsx). Paste JSON or open a file, preview the spreadsheet, and expand nested fields into columns right in your browser.",
+      },
+      es: {
+        name: "Conversor de JSON a Excel",
+        description:
+          "Convierte un array JSON a Excel (.xlsx). Pega el JSON o abre un archivo para ver la hoja y expandir los campos anidados desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers Excel",
+        description:
+          "Convertissez un tableau JSON en fichier Excel (.xlsx). Collez le JSON ou ouvrez un fichier, prévisualisez la feuille et développez les champs imbriqués dans le navigateur.",
+      },
+      he: {
+        name: "ממיר JSON ל-Excel",
+        description:
+          "המירו מערך JSON לקובץ Excel ⁦(.xlsx)⁩. הדביקו JSON או פתחו קובץ, צפו בתצוגה מקדימה והרחיבו שדות מקוננים לעמודות, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "JSON से Excel कन्वर्टर",
+        description:
+          "JSON ऐरे को Excel (.xlsx) में बदलें। JSON पेस्ट करें या फ़ाइल खोलें, स्प्रेडशीट का पूर्वावलोकन देखें और नेस्टेड फ़ील्ड को सीधे ब्राउज़र में अलग कॉलम में बाँटें।",
+      },
+      id: {
+        name: "Konverter JSON ke Excel",
+        description:
+          "Konversi array JSON ke Excel (.xlsx). Tempel JSON atau buka file, lihat pratinjau tabel, dan uraikan bidang bersarang menjadi kolom langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da JSON a Excel",
+        description:
+          "Converti un array JSON in Excel (.xlsx). Incolla il JSON o apri un file, controlla il foglio in anteprima ed espandi i campi annidati nel browser.",
+      },
+      ja: {
+        name: "JSON Excel 変換",
+        description:
+          "JSON 配列を Excel（.xlsx）に変換します。JSON を貼り付けるかファイルを開き、表をプレビューして、ネストされたフィールドをブラウザー内で列に展開できます。",
+      },
+      ko: {
+        name: "JSON Excel 변환기",
+        description:
+          "JSON 배열을 Excel(.xlsx)로 변환하세요. JSON을 붙여 넣거나 파일을 열어 스프레드시트를 미리 보고 브라우저에서 중첩 필드를 열로 펼칠 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar JSON ke Excel",
+        description:
+          "Tukar tatasusunan JSON kepada Excel (.xlsx). Tampal JSON atau buka fail, lihat pratonton hamparan dan pecahkan medan bersarang kepada lajur terus dalam pelayar.",
+      },
+      nl: {
+        name: "JSON-naar-Excel-converter",
+        description:
+          "Zet een JSON-array om naar Excel (.xlsx). Plak JSON of open een bestand, bekijk het resultaat en vouw geneste velden uit tot kolommen. Alles kan direct in je browser.",
+      },
+      no: {
+        name: "Konverter JSON til Excel",
+        description:
+          "Konverter en JSON-array til Excel (.xlsx). Lim inn JSON eller åpne en fil, forhåndsvis regnearket og utvid nestede felt til kolonner direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter JSON na Excel",
+        description:
+          "Zamień tablicę JSON na plik Excel (.xlsx). Wklej JSON lub otwórz plik, sprawdź podgląd arkusza i rozwiń zagnieżdżone pola na kolumny w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de JSON para Excel",
+        description:
+          "Converta um array JSON para Excel (.xlsx). Cole o JSON ou abra um arquivo, veja a prévia da planilha e expanda campos aninhados no navegador.",
+      },
+      ru: {
+        name: "Конвертер JSON в Excel",
+        description:
+          "Преобразуйте массив JSON в Excel (.xlsx). Вставьте JSON или откройте файл, просмотрите таблицу и разверните вложенные поля в столбцы прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera JSON till Excel",
+        description:
+          "Konvertera en JSON-array till Excel (.xlsx). Klistra in JSON eller öppna en fil, förhandsgranska kalkylbladet och expandera kapslade fält till kolumner direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลง JSON เป็น Excel",
+        description:
+          "แปลงอาร์เรย์ JSON เป็น Excel (.xlsx) วาง JSON หรือเปิดไฟล์ ดูตัวอย่างตาราง และแยกฟิลด์ที่ซ้อนกันเป็นคอลัมน์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "JSON’dan Excel’e Dönüştürücü",
+        description:
+          "JSON dizisini Excel (.xlsx) dosyasına dönüştürün. JSON yapıştırın veya bir dosya açın, tabloyu önizleyin ve iç içe alanları tarayıcınızda sütunlara açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi JSON sang Excel",
+        description:
+          "Chuyển mảng JSON sang Excel (.xlsx). Dán JSON hoặc mở tệp, xem trước bảng tính và mở rộng các trường lồng nhau thành cột ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "JSON 转 Excel",
+        description:
+          "在线将 JSON 对象数组转为 Excel（.xlsx）。粘贴 JSON 或打开文件，可预览表格、将嵌套字段展开为列，整个转换都在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 Excel 轉換器",
+        description:
+          "將 JSON 陣列轉換為 Excel（.xlsx）。貼上 JSON 或開啟檔案，即可在瀏覽器中預覽試算表，並將巢狀欄位展開成欄。",
       },
     },
   },
@@ -66002,6 +68565,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "pdf-bookmark-editor": {
+    slug: "pdf-bookmark-editor",
+    category: "pdf",
+    icon: "bookmark",
+    tags: [
+      "pdf",
+      "bookmark",
+      "outline",
+      "table of contents",
+      "navigation",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محرر الإشارات المرجعية لملفات PDF",
+        description:
+          "أضف إشارات مرجعية إلى ملف PDF وغيّر أسماءها ورتّبها ضمن مستويات. عاين الصفحات المرتبطة بها ونزّل الملف المعدّل مباشرةً من متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF-Lesezeichen bearbeiten",
+        description:
+          "Füge PDF-Lesezeichen online hinzu, benenne sie um und ordne sie neu oder hierarchisch an. Prüfe die Zielseiten in der Vorschau und lade die bearbeitete PDF ohne Upload herunter.",
+      },
+      en: {
+        name: "PDF Bookmark Editor",
+        description:
+          "Add, rename, reorder, and nest PDF bookmarks online. Preview destination pages and download the edited PDF without uploading your file.",
+      },
+      es: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Añade, renombra, reordena y anida marcadores de PDF en línea. Previsualiza las páginas de destino y descarga el PDF editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de signets PDF",
+        description:
+          "Ajoutez, renommez, réorganisez et imbriquez les signets d’un PDF en ligne. Prévisualisez les pages cibles et téléchargez le PDF modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך סימניות PDF",
+        description:
+          "הוסיפו סימניות לקובץ PDF, שנו את שמן, סדרו אותן מחדש וקבצו אותן לפי פרקים. צפו בעמודי היעד והורידו את הקובץ הערוך בלי להעלות אותו לשרת.",
+      },
+      hi: {
+        name: "PDF बुकमार्क एडिटर",
+        description:
+          "PDF बुकमार्क ऑनलाइन जोड़ें, उनके नाम और क्रम बदलें या उन्हें एक-दूसरे के नीचे रखें। लिंक किए गए पेज का प्रीव्यू देखें और फ़ाइल अपलोड किए बिना संपादित PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Markah PDF",
+        description:
+          "Tambah, ganti nama, atur urutan, dan kelompokkan markah PDF (bookmark) secara online. Lihat pratinjau halaman tujuan dan unduh hasil edit tanpa mengunggah file.",
+      },
+      it: {
+        name: "Editor di segnalibri PDF",
+        description:
+          "Aggiungi, rinomina e organizza i segnalibri PDF online. Visualizza le pagine di destinazione e scarica il PDF modificato senza caricare il file.",
+      },
+      ja: {
+        name: "PDF のしおり編集ツール",
+        description:
+          "オンラインで PDF のしおりを追加し、タイトルや順序、階層を変更できます。リンク先のページをプレビューし、ファイルをアップロードせずに編集済みの PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 책갈피 편집기",
+        description:
+          "온라인에서 PDF 책갈피를 추가하고, 이름과 순서를 바꾸고, 하위 책갈피로 정리하세요. 대상 페이지를 미리 보고 파일 업로드 없이 편집한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Penanda Buku PDF",
+        description:
+          "Tambah, namakan semula dan susun penanda buku PDF mengikut aras dalam talian. Pratonton halaman sasaran dan muat turun PDF yang disunting tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF-bladwijzers bewerken",
+        description:
+          "Voeg PDF-bladwijzers online toe, hernoem, verplaats of nest ze. Bekijk de doelpagina’s en download de bewerkte PDF zonder upload.",
+      },
+      no: {
+        name: "Rediger PDF-bokmerker",
+        description:
+          "Legg til og organiser bokmerker i PDF-filer. Endre navn og struktur, forhåndsvis målsider og last ned den redigerte PDF-filen uten opplasting.",
+      },
+      pl: {
+        name: "Edytor zakładek PDF",
+        description:
+          "Dodawaj i edytuj zakładki w PDF online. Zmieniaj ich kolejność, grupuj je i sprawdzaj strony docelowe. Pobierz zmieniony PDF bez wysyłania pliku.",
+      },
+      pt: {
+        name: "Editor de marcadores de PDF",
+        description:
+          "Adicione, renomeie, reordene e aninhe marcadores de PDF online. Confira as páginas de destino e baixe o PDF editado sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Редактор закладок PDF",
+        description:
+          "Добавляйте, переименовывайте и группируйте закладки PDF онлайн. Меняйте их порядок, просматривайте страницы и скачивайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigera PDF-bokmärken",
+        description:
+          "Lägg till, byt namn på och ordna PDF-bokmärken i flera nivåer. Förhandsvisa målsidorna och ladda ner den redigerade PDF-filen utan att ladda upp den.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขบุ๊กมาร์ก PDF",
+        description:
+          "เพิ่ม เปลี่ยนชื่อ จัดลำดับ และสร้างบุ๊กมาร์กย่อยใน PDF ออนไลน์ ดูตัวอย่างหน้าปลายทางแล้วดาวน์โหลด PDF ที่แก้ไขแล้วโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF Yer İmi Düzenleyici",
+        description:
+          "PDF yer imleri ekleyin, adlarını ve sıralarını değiştirin, iç içe yerleştirin. Hedef sayfaları önizleyin ve dosyanızı yüklemeden düzenlenmiş PDF'yi indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa dấu trang PDF",
+        description:
+          "Thêm, đổi tên, sắp xếp và tạo dấu trang con trong PDF trực tuyến. Xem trước trang đích rồi tải xuống bản PDF đã sửa ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 书签编辑器",
+        description:
+          "在线添加、重命名、排序和嵌套 PDF 书签。预览目标页面并下载编辑后的 PDF，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PDF 書籤編輯器",
+        description:
+          "線上新增、重新命名、排序 PDF 書籤，並建立多層書籤。預覽書籤指向的頁面，再下載編輯後的 PDF，檔案無須上傳。",
+      },
+    },
+  },
   "pdf-compressor": {
     slug: "pdf-compressor",
     category: "pdf",
@@ -66129,6 +68822,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 壓縮器",
         description:
           "在瀏覽器中壓縮掃描版和含大量圖片的 PDF。保留原本可選取的文字，下載前可比較檔案大小。",
+      },
+    },
+  },
+  "pdf-image-extractor": {
+    slug: "pdf-image-extractor",
+    category: "pdf",
+    icon: "file-image",
+    tags: ["pdf", "image", "extractor", "embedded", "jpg", "png", "zip"],
+    locales: {
+      ar: {
+        name: "استخراج الصور من PDF",
+        description:
+          "استخرج الصور المضمّنة في ملفات PDF بالدقة التي حُفظت بها. عاين الصور ونزّلها كلًّا على حدة بصيغة JPG أو PNG، أو نزّلها كلها في ملف ZIP. لا حاجة إلى رفع الملف.",
+      },
+      de: {
+        name: "Bilder aus PDF extrahieren",
+        description:
+          "Hole Fotos und andere eingebettete Bilder aus PDF-Dateien in der gespeicherten Auflösung. Sieh sie in der Vorschau an und lade sie einzeln als JPG oder PNG oder zusammen als ZIP herunter. Kein Upload nötig.",
+      },
+      en: {
+        name: "Extract Images from PDF",
+        description:
+          "Extract photos and other embedded images from PDF files at their stored resolution. Preview and save JPG or PNG files individually or download them all as a ZIP. No upload required.",
+      },
+      es: {
+        name: "Extraer imágenes de un PDF",
+        description:
+          "Extrae fotos e imágenes incrustadas en un PDF sin cambiar su resolución. Previsualiza y descarga archivos JPG o PNG por separado o en un ZIP, sin subir el PDF.",
+      },
+      fr: {
+        name: "Extraire les images d’un PDF",
+        description:
+          "Extrayez les photos et autres images intégrées aux PDF dans leur résolution enregistrée. Prévisualisez et enregistrez les fichiers JPG ou PNG individuellement, ou téléchargez-les dans un fichier ZIP. Sans téléversement.",
+      },
+      he: {
+        name: "חילוץ תמונות מ־PDF",
+        description:
+          "חלצו תמונות ותצלומים שמוטמעים בקובצי PDF ברזולוציה שבה נשמרו. צפו בתמונות והורידו כל אחת כ־JPG או PNG, או את כולן בקובץ ZIP אחד. אין צורך בהעלאה.",
+      },
+      hi: {
+        name: "PDF से इमेज निकालें",
+        description:
+          "PDF में मौजूद फ़ोटो और दूसरी एम्बेड की गई इमेज उनके मूल पिक्सेल आकार में निकालें। पहले इमेज देखें, फिर अलग-अलग JPG या PNG डाउनलोड करें या सभी को एक ZIP में लें। फ़ाइल अपलोड करने की ज़रूरत नहीं है।",
+      },
+      id: {
+        name: "Ekstrak Gambar dari PDF",
+        description:
+          "Ekstrak foto dan gambar yang tertanam dalam PDF dengan resolusi yang tersimpan. Pratinjau dan simpan sebagai JPG atau PNG, atau unduh semuanya dalam satu ZIP. Tidak perlu mengunggah PDF.",
+      },
+      it: {
+        name: "Estrarre immagini da PDF",
+        description:
+          "Estrai foto e altre immagini incorporate nei PDF alla risoluzione a cui sono salvate. Guarda l’anteprima e scaricale singolarmente in JPG o PNG, oppure tutte insieme in un file ZIP. Non serve caricare il PDF online.",
+      },
+      ja: {
+        name: "PDFから画像を抽出",
+        description:
+          "PDFに埋め込まれた写真や画像を、保存されている解像度のまま抽出します。プレビューしてJPG・PNGを個別に保存したり、すべてをZIPでまとめてダウンロードしたりできます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PDF에서 이미지 추출",
+        description:
+          "PDF에 포함된 사진과 이미지를 저장된 해상도로 추출하세요. 미리 본 뒤 JPG 또는 PNG로 개별 저장하거나, ZIP 파일로 한꺼번에 다운로드할 수 있습니다. 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Ekstrak Imej daripada PDF",
+        description:
+          "Ekstrak foto dan imej terbenam daripada PDF pada resolusi yang tersimpan. Pratonton dan simpan sebagai JPG atau PNG, atau muat turun semuanya sebagai ZIP. Tidak perlu memuat naik fail.",
+      },
+      nl: {
+        name: "Afbeeldingen uit PDF halen",
+        description:
+          "Haal foto's en andere ingesloten afbeeldingen uit PDF-bestanden op de opgeslagen resolutie. Bekijk en download JPG- of PNG-bestanden afzonderlijk of samen in een ZIP-bestand. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "Trekk ut bilder fra PDF",
+        description:
+          "Trekk ut bilder og annen innebygd grafikk fra PDF-filer i oppløsningen de er lagret i. Forhåndsvis og last ned JPG eller PNG enkeltvis, eller last ned alle i én ZIP-fil. Ingen opplasting.",
+      },
+      pl: {
+        name: "Wyodrębnianie obrazów z PDF",
+        description:
+          "Wyodrębniaj zdjęcia i inne obrazy osadzone w plikach PDF w zapisanej rozdzielczości. Przeglądaj je i zapisuj pojedynczo jako JPG lub PNG albo pobierz wszystkie w archiwum ZIP. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Extrair imagens de PDF",
+        description:
+          "Extraia fotos e outras imagens incorporadas em PDFs na resolução em que foram salvas. Veja a prévia e baixe cada imagem em JPG ou PNG, ou baixe todas em um ZIP. Sem upload.",
+      },
+      ru: {
+        name: "Извлечение изображений из PDF",
+        description:
+          "Извлекайте фотографии и другие встроенные изображения из PDF в сохранённом разрешении. Просматривайте и сохраняйте файлы JPG или PNG по отдельности либо скачивайте все изображения в ZIP. Загрузка на сервер не нужна.",
+      },
+      sv: {
+        name: "Extrahera bilder från PDF",
+        description:
+          "Extrahera foton och andra inbäddade bilder från PDF-filer i den upplösning de sparats med. Förhandsvisa och ladda ner JPG eller PNG separat eller alla bilder i en ZIP-fil. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "แยกรูปภาพจาก PDF",
+        description:
+          "แยกภาพถ่ายและรูปภาพที่ฝังใน PDF ตามความละเอียดที่บันทึกไว้ ดูตัวอย่างแล้วบันทึกเป็น JPG หรือ PNG ทีละรูป หรือดาวน์โหลดทั้งหมดเป็น ZIP โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF'den Görüntü Çıkarma",
+        description:
+          "PDF'ye gömülü fotoğrafları ve diğer görüntüleri kaydedildikleri çözünürlükte çıkarın. Önizleyin, JPG veya PNG olarak tek tek ya da hepsini ZIP olarak indirin. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Trích xuất ảnh từ PDF",
+        description:
+          "Trích xuất ảnh chụp và hình ảnh nhúng trong PDF ở độ phân giải được lưu trong tệp. Xem trước và lưu từng ảnh dạng JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "从 PDF 中提取图片",
+        description:
+          "提取 PDF 中嵌入的照片和其他图片，保留原始像素尺寸。支持预览、单张下载 JPG 或 PNG，以及打包下载 ZIP。无需上传文件。",
+      },
+      "zh-TW": {
+        name: "從 PDF 擷取圖片",
+        description:
+          "以 PDF 內儲存的解析度擷取照片與其他嵌入的圖片。支援預覽、逐張下載 JPG 或 PNG，也能將所有圖片打包成 ZIP，無須上傳。",
       },
     },
   },
@@ -68785,6 +71601,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  "protect-pdf": {
+    slug: "protect-pdf",
+    category: "pdf",
+    icon: "lock",
+    tags: [
+      "pdf",
+      "password",
+      "protect",
+      "encrypt",
+      "lock",
+      "aes-256",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "حماية ملف PDF بكلمة مرور",
+        description:
+          "أضف كلمة مرور إلى ملف PDF ليحتاج إليها المستلمون عند فتحه. شفّر الملف ونزّل نسخة محمية مباشرةً في متصفحك دون رفعه.",
+      },
+      de: {
+        name: "PDF mit Passwort schützen",
+        description:
+          "Lege ein Passwort zum Öffnen deiner PDF fest. Verschlüssele die Datei direkt im Browser und lade die geschützte Kopie herunter. Die Datei bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "Password Protect PDF",
+        description:
+          "Add a password to a PDF so recipients need it to open the file. Encrypt and download a protected copy directly in your browser, with no file upload.",
+      },
+      es: {
+        name: "Proteger un PDF con contraseña",
+        description:
+          "Añade una contraseña a un PDF para que solo puedan abrirlo quienes la conozcan. Cifra el archivo y descarga una copia protegida en tu navegador, sin subir el PDF.",
+      },
+      fr: {
+        name: "Protéger un PDF par mot de passe",
+        description:
+          "Ajoutez un mot de passe à un PDF pour en contrôler l’ouverture. Chiffrez le fichier et téléchargez une copie protégée dans votre navigateur, sans envoyer le PDF.",
+      },
+      he: {
+        name: "הוספת סיסמה ל-PDF",
+        description:
+          "הוסיפו סיסמה לקובץ PDF כדי שרק מי שיודע אותה יוכל לפתוח אותו. הצפינו והורידו עותק מוגן ישירות בדפדפן, בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "PDF में पासवर्ड लगाएँ",
+        description:
+          "PDF में पासवर्ड लगाएँ ताकि फ़ाइल खोलने के लिए उसकी ज़रूरत हो। फ़ाइल अपलोड किए बिना उसे एन्क्रिप्ट करें और सुरक्षित कॉपी सीधे ब्राउज़र में डाउनलोड करें।",
+      },
+      id: {
+        name: "Lindungi PDF dengan Kata Sandi",
+        description:
+          "Tambahkan kata sandi ke PDF agar penerima perlu memasukkannya untuk membuka file. Enkripsi dan unduh salinan yang terlindungi langsung di browser, tanpa mengunggah file.",
+      },
+      it: {
+        name: "Proteggi PDF con password",
+        description:
+          "Aggiungi una password a un PDF per consentire l’apertura solo a chi la conosce. Cifra e scarica una copia protetta nel browser, senza caricare il file online.",
+      },
+      ja: {
+        name: "PDFをパスワードで保護",
+        description:
+          "PDFにパスワードを設定して、受信者が開くときに入力を求めます。ファイルをアップロードせず、ブラウザで直接暗号化したコピーをダウンロードできます。",
+      },
+      ko: {
+        name: "PDF 암호 설정",
+        description:
+          "PDF를 열 때 필요한 암호를 설정하세요. 파일을 업로드하지 않고 브라우저에서 직접 암호화한 사본을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Lindungi PDF dengan Kata Laluan",
+        description:
+          "Tetapkan kata laluan pada fail PDF supaya penerima perlu memasukkannya untuk membuka fail. Sulitkan dan muat turun salinan daripada pelayar, tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "PDF beveiligen met een wachtwoord",
+        description:
+          "Stel een wachtwoord in dat nodig is om je PDF te openen. Versleutel het bestand in je browser en download een beveiligde kopie. Het bestand blijft op je apparaat.",
+      },
+      no: {
+        name: "Passordbeskytt PDF",
+        description:
+          "Legg til et passord som kreves for å åpne PDF-filen. Krypter den i nettleseren og last ned en beskyttet kopi. Filen blir på enheten din.",
+      },
+      pl: {
+        name: "Zabezpiecz PDF hasłem",
+        description:
+          "Dodaj hasło wymagane do otwarcia pliku PDF. Zaszyfruj i pobierz zabezpieczoną kopię w przeglądarce, bez wysyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Proteger PDF com senha",
+        description:
+          "Adicione uma senha ao PDF para que só quem a conhece possa abrir o arquivo. Criptografe e baixe uma cópia protegida no navegador, sem enviar o PDF.",
+      },
+      ru: {
+        name: "Защитить PDF паролем",
+        description:
+          "Установите пароль, который нужно будет ввести при открытии PDF. Зашифруйте и скачайте копию документа прямо в браузере, без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Lösenordsskydda PDF",
+        description:
+          "Lägg till ett lösenord som krävs för att öppna din PDF. Kryptera filen direkt i webbläsaren och ladda ner en skyddad kopia. Filen stannar på din enhet.",
+      },
+      th: {
+        name: "ตั้งรหัสผ่านให้ PDF",
+        description:
+          "ตั้งรหัสผ่านให้ไฟล์ PDF เพื่อให้ผู้รับต้องใส่รหัสก่อนเปิดไฟล์ เข้ารหัสและดาวน์โหลดสำเนาที่มีรหัสผ่านได้ในเบราว์เซอร์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PDF’yi Parolayla Koru",
+        description:
+          "PDF dosyanıza açılırken sorulacak bir parola ekleyin. Dosyayı sunucuya yüklemeden tarayıcınızda şifreleyin ve korumalı kopyasını indirin.",
+      },
+      vi: {
+        name: "Đặt mật khẩu cho PDF",
+        description:
+          "Đặt mật khẩu cho tệp PDF để người nhận phải nhập mật khẩu khi mở. Mã hóa và tải bản sao được bảo vệ ngay trong trình duyệt, không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "为 PDF 添加密码",
+        description:
+          "为 PDF 添加打开密码，收件人输入密码后才能查看文件。直接在浏览器中加密并下载受保护的副本，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "為 PDF 設定密碼",
+        description:
+          "為 PDF 設定開啟密碼，收件者輸入密碼後才能檢視檔案。直接在瀏覽器中加密並下載受保護的副本，無須上傳檔案。",
       },
     },
   },
@@ -74784,6 +77731,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "SVG 轉圖片轉換器",
         description: "將 SVG 檔案轉換為 PNG、JPEG 或 WebP 圖片",
+      },
+    },
+  },
+  "svg-to-pdf-converter": {
+    slug: "svg-to-pdf-converter",
+    category: "image",
+    icon: "file-text",
+    tags: ["svg", "pdf", "vector", "convert", "print", "a4", "letter"],
+    locales: {
+      ar: {
+        name: "محوّل SVG إلى PDF",
+        description:
+          "حوّل ملفات SVG إلى PDF متجهي في متصفحك. حافظ على وضوح الرسم بأبعاده الأصلية، أو لائمه مع ورق A4 أو US Letter.",
+      },
+      de: {
+        name: "SVG-zu-PDF-Konverter",
+        description:
+          "Wandle SVG-Dateien im Browser in Vektor-PDFs um. Die Grafik bleibt scharf, ob in Originalgröße, auf A4 oder auf US Letter.",
+      },
+      en: {
+        name: "SVG to PDF Converter",
+        description:
+          "Convert SVG to vector PDF in your browser. Preserve sharp artwork at the original canvas size, or fit it to A4 or US Letter.",
+      },
+      es: {
+        name: "Convertidor de SVG a PDF",
+        description:
+          "Convierte SVG a PDF vectorial en tu navegador. Conserva la nitidez y el tamaño del lienzo original o ajusta el diseño a A4 o carta.",
+      },
+      fr: {
+        name: "Convertisseur SVG en PDF",
+        description:
+          "Convertissez vos SVG en PDF vectoriels dans votre navigateur. Conservez les dimensions d’origine ou adaptez le dessin au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר SVG ל-PDF",
+        description:
+          "המרת SVG ל-PDF וקטורי בדפדפן. אפשר לשמור על חדות האיור במידות המקוריות של משטח הציור או להתאים אותו לדף A4 או US Letter.",
+      },
+      hi: {
+        name: "SVG से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में SVG को वेक्टर PDF में बदलें। चित्र को मूल कैनवस के आकार में साफ़ रखें या A4 या US Letter पन्ने पर फ़िट करें।",
+      },
+      id: {
+        name: "Konverter SVG ke PDF",
+        description:
+          "Ubah SVG menjadi PDF vektor langsung di browser. Jaga gambar tetap tajam pada ukuran kanvas asli atau sesuaikan dengan kertas A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da SVG a PDF",
+        description:
+          "Converti SVG in PDF vettoriali nel browser. Mantieni la grafica nitida alle dimensioni originali o adattala a un foglio A4 o Lettera USA.",
+      },
+      ja: {
+        name: "SVGをPDFに変換",
+        description:
+          "ブラウザーでSVGをベクターPDFに変換します。図形の鮮明さを保ったまま、元のサイズで書き出したり、A4やUSレターに収めたりできます。",
+      },
+      ko: {
+        name: "SVG PDF 변환기",
+        description:
+          "브라우저에서 SVG를 벡터 PDF로 변환하세요. 원본 캔버스 크기를 유지하거나 A4 또는 US Letter 용지에 맞춰 선명하게 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar SVG ke PDF",
+        description:
+          "Tukar SVG kepada PDF vektor terus dalam pelayar. Kekalkan ketajaman grafik pada saiz kanvas asal atau sesuaikannya dengan kertas A4 atau US Letter.",
+      },
+      nl: {
+        name: "SVG naar PDF converteren",
+        description:
+          "Zet SVG om naar een vector-PDF in je browser. Behoud de oorspronkelijke afmetingen of laat de afbeelding op A4 of US Letter passen.",
+      },
+      no: {
+        name: "Konverterer fra SVG til PDF",
+        description:
+          "Konverter SVG til vektorbasert PDF i nettleseren. Behold skarpheten og den opprinnelige størrelsen, eller tilpass illustrasjonen til A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter SVG na PDF",
+        description:
+          "Konwertuj SVG na wektorowy PDF w przeglądarce. Zachowaj ostrość i oryginalne wymiary grafiki lub dopasuj ją do formatu A4 albo US Letter.",
+      },
+      pt: {
+        name: "Conversor de SVG para PDF",
+        description:
+          "Converta SVG em PDF vetorial no navegador. Preserve a nitidez e o tamanho original da ilustração ou ajuste-a para A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер SVG в PDF",
+        description:
+          "Преобразуйте SVG в векторный PDF прямо в браузере. Сохраните чёткость графики при исходном размере или разместите её на листе A4 или US Letter.",
+      },
+      sv: {
+        name: "Konvertera SVG till PDF",
+        description:
+          "Konvertera SVG till vektor-PDF i webbläsaren. Behåll skärpan och originalmåtten eller anpassa grafiken till A4 eller US Letter.",
+      },
+      th: {
+        name: "ตัวแปลง SVG เป็น PDF",
+        description:
+          "แปลง SVG เป็น PDF แบบเวกเตอร์ในเบราว์เซอร์ คงความคมชัดที่ขนาดเดิม หรือปรับให้พอดีกับกระดาษ A4 หรือ US Letter",
+      },
+      tr: {
+        name: "SVG'den PDF'ye Dönüştürücü",
+        description:
+          "SVG dosyalarını tarayıcınızda vektörel PDF'ye dönüştürün. Çizimin netliğini ve özgün tuval boyutunu koruyun veya çizimi A4 ya da US Letter sayfasına sığdırın.",
+      },
+      vi: {
+        name: "Trình chuyển SVG sang PDF",
+        description:
+          "Chuyển SVG sang PDF vectơ ngay trong trình duyệt. Giữ đồ họa sắc nét ở kích thước gốc hoặc căn vừa khổ A4 hay US Letter.",
+      },
+      "zh-CN": {
+        name: "SVG 转 PDF 转换器",
+        description:
+          "在浏览器中将 SVG 转为矢量 PDF，放大依然清晰。可保留原始画布尺寸，也可适配 A4 或 US Letter 纸张。",
+      },
+      "zh-TW": {
+        name: "SVG 轉 PDF 轉換器",
+        description:
+          "直接在瀏覽器中將 SVG 轉成向量 PDF，保留圖稿的清晰度。可使用原始畫布尺寸，或將圖稿調整至 A4 或 US Letter 紙張。",
       },
     },
   },

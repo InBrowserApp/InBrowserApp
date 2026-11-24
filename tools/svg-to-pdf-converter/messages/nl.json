@@ -1,0 +1,19 @@
+{
+  "dropSvg": "Sleep een SVG-bestand hierheen",
+  "chooseSvg": "SVG kiezen",
+  "tryExample": "Voorbeeld proberen",
+  "reading": "SVG wordt gelezen…",
+  "preview": "SVG-voorvertoning",
+  "changeSvg": "Andere SVG kiezen",
+  "pageSize": "PDF-paginaformaat",
+  "original": "Originele SVG-afmetingen",
+  "a4": "A4",
+  "letter": "US Letter",
+  "dimensions": "{width} × {height} mm",
+  "fitPaper": "Schaalt de afbeelding zodat die binnen de paginamarges past.",
+  "download": "PDF downloaden",
+  "converting": "PDF wordt gemaakt…",
+  "downloadReady": "Je PDF is klaar.",
+  "invalidSvg": "Dit bestand kon niet als SVG worden geopend. Kies een geldig SVG-bestand en probeer het opnieuw.",
+  "conversionFailed": "De PDF kon niet worden gemaakt. Probeer een eenvoudigere SVG uit je ontwerpprogramma te exporteren."
+}

@@ -1,0 +1,20 @@
+{
+  "input": "JSON-invoer",
+  "inputHint": "Plak een array met JSON-objecten of open een JSON-bestand.",
+  "openFile": "Bestand openen",
+  "example": "Voorbeeld laden",
+  "clear": "Wissen",
+  "preview": "Voorbeeld van het werkblad",
+  "flatten": "Geneste velden uitvouwen",
+  "flattenHint": "Geneste objecten komen in aparte kolommen, zoals contact.city. Arrays blijven in één cel.",
+  "emptyPreview": "Voeg JSON toe of laad het voorbeeld om hier het werkblad te bekijken.",
+  "previewCount": "Je ziet {rows} van {totalRows} rijen en {columns} van {totalColumns} kolommen.",
+  "download": "XLSX downloaden",
+  "invalidJson": "Controleer de JSON-syntaxis en probeer het opnieuw.",
+  "invalidRecords": "Voer een array met minstens één object in, bijvoorbeeld [{\"name\":\"Maya\"}].",
+  "noColumns": "Voeg minstens één veld toe om een kolom te maken.",
+  "sheetLimit": "Splits de gegevens op. In Excel passen per werkblad maximaal 1.048.576 rijen (inclusief de koprij) en 16.384 kolommen.",
+  "cellLimit": "Kort veldnamen of waarden in die langer zijn dan de Excel-limiet van 32.767 tekens per cel.",
+  "readError": "Het bestand kon niet worden gelezen. Open het opnieuw of plak de inhoud.",
+  "downloadError": "Het Excel-bestand kon niet worden gemaakt. Probeer het opnieuw of gebruik minder records."
+}

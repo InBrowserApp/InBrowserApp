@@ -1,0 +1,21 @@
+{
+  "readerName": "{format} Comic Reader",
+  "choose": "Choose a {format} file",
+  "drop": "Or drop a {format} or {archive} file here.",
+  "privacy": "Your comic stays on this device.",
+  "invalid": "Choose a {format} or {archive} file.",
+  "damaged": "The archive could not be read. It may be damaged or use unsupported {archive} features.",
+  "howTitle": "How to open a {format} file",
+  "how": [
+    "Choose a {format} file or drag it into the reader. You can also open a {archive} archive that contains comic page images.",
+    "Use the arrows to turn pages, enter a page number to jump there, or open the thumbnail grid to find a scene.",
+    "Choose Fit page to see the whole image or Fit width and zoom to read small text. Switch to right-to-left reading for manga, or use focus mode to give the comic more room."
+  ],
+  "formatTitle": "What is a {format} file?",
+  "formatBody": "A {format} file is a comic book archive that uses {archive} compression. It stores pages as images, often in chapter folders. The reader sorts the full filenames in natural order, so page 2 comes before page 10, and skips hidden files and files that aren't images.",
+  "compatibilityTitle": "Supported images and archives",
+  "compatibilityBody": "Read comics with JPEG, PNG, GIF, WebP and BMP pages, plus AVIF in browsers that support it. Password-protected or split archives need to be unpacked first. Large solid archives can take longer to open and turn pages because several images may share the same compressed block.",
+  "privacyTitle": "Read privately in your browser",
+  "privacyBody": "Your browser opens the archive on your device. There is no upload, account or installation. To read a ZIP-based comic, use the CBZ reader.",
+  "relatedTitle": "Related tools"
+}

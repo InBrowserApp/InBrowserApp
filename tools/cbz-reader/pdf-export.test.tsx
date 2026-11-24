@@ -7,12 +7,12 @@ import {
   waitFor,
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import { ConversionError } from "@workspace/cbz/errors"
+import { ConversionError } from "@workspace/comic/errors"
 import { PdfExport } from "./pdf-export"
 import messages from "./messages/en.json"
 const m = messages.pdfExport
 const prepare = vi.hoisted(() => vi.fn())
-vi.mock("@workspace/cbz/pdf", () => ({ preparePdf: prepare }))
+vi.mock("@workspace/comic/pdf", () => ({ preparePdf: prepare }))
 const file = new File(["zip"], "comic.cbz"),
   pdf = new Blob(["pdf"])
 beforeEach(() => {

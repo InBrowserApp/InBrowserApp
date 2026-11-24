@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 漫畫閱讀器",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack 轉換器",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR 漫畫閱讀器",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM 檢視器",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS 漸層產生器",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV 與 Excel 轉 SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB 中繼資料編輯器",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB 閱讀器",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB 轉 PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "影像色階分佈圖檢視器",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "圖片元資料清理器（EXIF）",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON 轉 CSV 轉換器",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "JSON 轉 Excel 轉換器",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 書籤編輯器",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF 壓縮器",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "從 PDF 擷取圖片",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier 程式碼格式化工具",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "為 PDF 設定密碼",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG 轉圖片轉換器",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVG 轉 PDF 轉換器",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

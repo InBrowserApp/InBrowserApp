@@ -1,0 +1,21 @@
+{
+  "readerName": "Pembaca Komik {format}",
+  "choose": "Pilih fail {format}",
+  "drop": "Atau lepaskan fail {format} atau {archive} di sini.",
+  "privacy": "Komik anda kekal pada peranti ini.",
+  "invalid": "Pilih fail {format} atau {archive}.",
+  "damaged": "Arkib tidak dapat dibaca. Arkib mungkin rosak atau menggunakan ciri {archive} yang tidak disokong.",
+  "howTitle": "Cara membuka fail {format}",
+  "how": [
+    "Pilih fail {format} atau seretnya ke dalam pembaca. Anda juga boleh membuka arkib {archive} yang mengandungi imej halaman komik.",
+    "Gunakan anak panah untuk menyelak halaman, masukkan nombor halaman untuk melompat ke sana atau buka grid lakaran kecil untuk mencari adegan.",
+    "Pilih ‘Muat halaman’ untuk melihat seluruh imej, atau gunakan ‘Muat lebar’ dan zum untuk membaca teks kecil. Tukar arah bacaan kepada kanan ke kiri untuk manga, atau gunakan bacaan fokus untuk memberi lebih ruang kepada komik."
+  ],
+  "formatTitle": "Apakah fail {format}?",
+  "formatBody": "Fail {format} ialah arkib komik yang menggunakan pemampatan {archive}. Halamannya disimpan sebagai imej, selalunya dalam folder mengikut bab. Pembaca menyusun laluan penuh fail mengikut susunan semula jadi, jadi halaman 2 muncul sebelum halaman 10. Fail tersembunyi dan fail yang bukan imej dilangkau.",
+  "compatibilityTitle": "Imej dan arkib yang disokong",
+  "compatibilityBody": "Baca komik dengan halaman JPEG, PNG, GIF, WebP dan BMP, serta AVIF dalam pelayar yang menyokongnya. Arkib yang dilindungi kata laluan atau dibahagikan kepada beberapa bahagian perlu diekstrak dahulu. Arkib solid yang besar mungkin mengambil masa lebih lama untuk dibuka dan diselak kerana beberapa imej boleh berkongsi blok termampat yang sama.",
+  "privacyTitle": "Baca secara peribadi dalam pelayar anda",
+  "privacyBody": "Pelayar anda membuka arkib pada peranti anda tanpa muat naik, akaun atau pemasangan. Untuk membaca komik berasaskan ZIP, gunakan pembaca CBZ.",
+  "relatedTitle": "Alat berkaitan"
+}

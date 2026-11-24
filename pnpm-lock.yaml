@@ -215,6 +215,9 @@ catalogs:
     '@file-viewer/doc':
       specifier: 3.3.4
       version: 3.3.4
+    '@file-viewer/renderer-chm':
+      specifier: 3.3.4
+      version: 3.3.4
     '@imagemagick/magick-wasm':
       specifier: 0.0.46
       version: 0.0.46
@@ -845,6 +848,9 @@ catalogs:
     jsonpath-plus:
       specifier: ^11.3.0
       version: 11.3.0
+    jspdf:
+      specifier: ^4.2.1
+      version: 4.2.1
     jsqr:
       specifier: ^1.4.0
       version: 1.4.0
@@ -974,6 +980,9 @@ catalogs:
     svelte:
       specifier: ^5.57.3
       version: 5.57.3
+    svg2pdf.js:
+      specifier: ^2.9.0
+      version: 2.9.0
     svgo:
       specifier: ^4.1.0
       version: 4.1.0
@@ -1045,6 +1054,7 @@ overrides:
 patchedDependencies:
   '@extend-ai/react-pptx@0.6.0': d17f19e4e5a44fcf55c5938db46c36c97a92c20a367089e95a08fa6595a34cc8
   '@file-viewer/doc@3.3.4': 11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649
+  '@file-viewer/renderer-chm@3.3.4': f3b152073e61239eac3ff1d13086cf8514bc9324f0a1a402af2e9c6cab39212c
   '@matbee/libreoffice-converter@2.7.2': 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
   '@rhwp/core@0.9.0': 38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6
   '@silurus/ooxml@0.90.1': 400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226
@@ -1053,7 +1063,7 @@ patchedDependencies:
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
   hyparquet@1.33.1: f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
-  xlsx@0.20.3: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
+  xlsx@0.20.3: d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79
 
 importers:
 
@@ -1166,6 +1176,16 @@ importers:
         specifier: 'catalog:'
         version: 4.164.0(@types/node@26.6.6)
 
+  packages/lib/archive:
+    dependencies:
+      '@zip.js/zip.js':
+        specifier: 'catalog:'
+        version: 2.25.0
+    devDependencies:
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   packages/lib/asciidoc:
     dependencies:
       '@asciidoctor/core':
@@ -1192,8 +1212,11 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
-  packages/lib/cbz:
+  packages/lib/comic:
     dependencies:
+      '@workspace/archive':
+        specifier: workspace:*
+        version: link:../archive
       '@zip.js/zip.js':
         specifier: 'catalog:'
         version: 2.25.0
@@ -1773,7 +1796,7 @@ importers:
     dependencies:
       xlsx:
         specifier: file:../../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
 
   packages/lib/spreadsheet-export:
     dependencies:
@@ -1782,7 +1805,7 @@ importers:
         version: 0.8.3
       xlsx:
         specifier: file:../../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@types/papaparse':
         specifier: 'catalog:'
@@ -1969,9 +1992,15 @@ importers:
       '@tool/case-converter':
         specifier: workspace:*
         version: link:../../tools/case-converter
+      '@tool/cb7-reader':
+        specifier: workspace:*
+        version: link:../../tools/cb7-reader
       '@tool/cbor-messagepack-converter':
         specifier: workspace:*
         version: link:../../tools/cbor-messagepack-converter
+      '@tool/cbr-reader':
+        specifier: workspace:*
+        version: link:../../tools/cbr-reader
       '@tool/cbz-reader':
         specifier: workspace:*
         version: link:../../tools/cbz-reader
@@ -1984,6 +2013,9 @@ importers:
       '@tool/chinese-uppercase-number-converter':
         specifier: workspace:*
         version: link:../../tools/chinese-uppercase-number-converter
+      '@tool/chm-viewer':
+        specifier: workspace:*
+        version: link:../../tools/chm-viewer
       '@tool/chmod-calculator':
         specifier: workspace:*
         version: link:../../tools/chmod-calculator
@@ -2032,6 +2064,9 @@ importers:
       '@tool/css-gradient-generator':
         specifier: workspace:*
         version: link:../../tools/css-gradient-generator
+      '@tool/csv-excel-to-sqlite':
+        specifier: workspace:*
+        version: link:../../tools/csv-excel-to-sqlite
       '@tool/csv-to-json-converter':
         specifier: workspace:*
         version: link:../../tools/csv-to-json-converter
@@ -2101,9 +2136,15 @@ importers:
       '@tool/env-converter':
         specifier: workspace:*
         version: link:../../tools/env-converter
+      '@tool/epub-metadata-editor':
+        specifier: workspace:*
+        version: link:../../tools/epub-metadata-editor
       '@tool/epub-reader':
         specifier: workspace:*
         version: link:../../tools/epub-reader
+      '@tool/epub-to-pdf-converter':
+        specifier: workspace:*
+        version: link:../../tools/epub-to-pdf-converter
       '@tool/eu-vat-number-validator':
         specifier: workspace:*
         version: link:../../tools/eu-vat-number-validator
@@ -2194,6 +2235,9 @@ importers:
       '@tool/image-cropper':
         specifier: workspace:*
         version: link:../../tools/image-cropper
+      '@tool/image-histogram':
+        specifier: workspace:*
+        version: link:../../tools/image-histogram
       '@tool/image-metadata-cleaner':
         specifier: workspace:*
         version: link:../../tools/image-metadata-cleaner
@@ -2278,6 +2322,9 @@ importers:
       '@tool/json-to-csv-converter':
         specifier: workspace:*
         version: link:../../tools/json-to-csv-converter
+      '@tool/json-to-excel-converter':
+        specifier: workspace:*
+        version: link:../../tools/json-to-excel-converter
       '@tool/json-to-toml-converter':
         specifier: workspace:*
         version: link:../../tools/json-to-toml-converter
@@ -2434,9 +2481,15 @@ importers:
       '@tool/pbkdf2-key-derivation':
         specifier: workspace:*
         version: link:../../tools/pbkdf2-key-derivation
+      '@tool/pdf-bookmark-editor':
+        specifier: workspace:*
+        version: link:../../tools/pdf-bookmark-editor
       '@tool/pdf-compressor':
         specifier: workspace:*
         version: link:../../tools/pdf-compressor
+      '@tool/pdf-image-extractor':
+        specifier: workspace:*
+        version: link:../../tools/pdf-image-extractor
       '@tool/pdf-info-viewer':
         specifier: workspace:*
         version: link:../../tools/pdf-info-viewer
@@ -2500,6 +2553,9 @@ importers:
       '@tool/prettier-code-formatter':
         specifier: workspace:*
         version: link:../../tools/prettier-code-formatter
+      '@tool/protect-pdf':
+        specifier: workspace:*
+        version: link:../../tools/protect-pdf
       '@tool/qr-code-generator':
         specifier: workspace:*
         version: link:../../tools/qr-code-generator
@@ -2641,6 +2697,9 @@ importers:
       '@tool/svg-to-image-converter':
         specifier: workspace:*
         version: link:../../tools/svg-to-image-converter
+      '@tool/svg-to-pdf-converter':
+        specifier: workspace:*
+        version: link:../../tools/svg-to-pdf-converter
       '@tool/svg-viewer':
         specifier: workspace:*
         version: link:../../tools/svg-viewer
@@ -2826,12 +2885,18 @@ importers:
 
   packages/ui:
     dependencies:
+      '@workspace/comic':
+        specifier: workspace:*
+        version: link:../lib/comic
       '@workspace/raster-image':
         specifier: workspace:*
         version: link:../lib/raster-image
       '@workspace/spreadsheet-conversion':
         specifier: workspace:*
         version: link:../lib/spreadsheet-conversion
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../tool-sdk
       class-variance-authority:
         specifier: 'catalog:'
         version: 0.7.1
@@ -3088,15 +3153,15 @@ importers:
 
   tools/archive-viewer:
     dependencies:
+      '@workspace/archive':
+        specifier: workspace:*
+        version: link:../../packages/lib/archive
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@zip.js/zip.js':
-        specifier: 'catalog:'
-        version: 2.25.0
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
@@ -4113,6 +4178,24 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/cb7-reader:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+
   tools/cbor-messagepack-converter:
     dependencies:
       '@msgpack/msgpack':
@@ -4147,11 +4230,29 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/cbr-reader:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+
   tools/cbz-reader:
     dependencies:
-      '@workspace/cbz':
+      '@workspace/comic':
         specifier: workspace:*
-        version: link:../../packages/lib/cbz
+        version: link:../../packages/lib/comic
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -4180,9 +4281,9 @@ importers:
 
   tools/cbz-to-pdf-converter:
     dependencies:
-      '@workspace/cbz':
+      '@workspace/comic':
         specifier: workspace:*
-        version: link:../../packages/lib/cbz
+        version: link:../../packages/lib/comic
       '@workspace/pdf-reader':
         specifier: workspace:*
         version: link:../../packages/lib/pdf-reader
@@ -4248,6 +4349,37 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/chm-viewer:
+    dependencies:
+      '@file-viewer/renderer-chm':
+        specifier: 'catalog:'
+        version: 3.3.4(patch_hash=f3b152073e61239eac3ff1d13086cf8514bc9324f0a1a402af2e9c6cab39212c)
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@workspace/web-document':
+        specifier: workspace:*
+        version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
@@ -4701,6 +4833,46 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/csv-excel-to-sqlite:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      papaparse:
+        specifier: 'catalog:'
+        version: 5.7.1
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      sql.js:
+        specifier: 'catalog:'
+        version: 1.16.0
+      xlsx:
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@types/papaparse':
+        specifier: 'catalog:'
+        version: 5.5.2
+      '@types/sql.js':
+        specifier: 'catalog:'
+        version: 1.4.11
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/csv-to-json-converter:
     dependencies:
       '@workspace/tool-sdk':
@@ -4760,7 +4932,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -5411,7 +5583,63 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/epub-metadata-editor:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@zip.js/zip.js':
+        specifier: 'catalog:'
+        version: 2.25.0
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/epub-reader:
+    dependencies:
+      '@workspace/ebook':
+        specifier: workspace:*
+        version: link:../../packages/lib/ebook
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/epub-to-pdf-converter:
     dependencies:
       '@workspace/ebook':
         specifier: workspace:*
@@ -6303,6 +6531,31 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/image-histogram:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/image-metadata-cleaner:
     dependencies:
       '@workspace/tool-sdk':
@@ -7074,6 +7327,37 @@ importers:
       '@types/papaparse':
         specifier: 'catalog:'
         version: 5.5.2
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/json-to-excel-converter:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      lossless-json:
+        specifier: 'catalog:'
+        version: 4.3.3
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      xlsx:
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -8312,7 +8596,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -8352,7 +8636,7 @@ importers:
         version: 6.0.0
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -8621,6 +8905,40 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/pdf-bookmark-editor:
+    dependencies:
+      '@workspace/pdf-reader':
+        specifier: workspace:*
+        version: link:../../packages/lib/pdf-reader
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 6.5.438
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/pdf-compressor:
     dependencies:
       '@workspace/tool-sdk':
@@ -8635,6 +8953,43 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/pdf-image-extractor:
+    dependencies:
+      '@workspace/pdf-reader':
+        specifier: workspace:*
+        version: link:../../packages/lib/pdf-reader
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      fflate:
+        specifier: 'catalog:'
+        version: 0.8.3
+      pdf-lib:
+        specifier: 'catalog:'
+        version: 1.17.1
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9280,6 +9635,34 @@ importers:
       svelte:
         specifier: 'catalog:'
         version: 5.57.3
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/protect-pdf:
+    dependencies:
+      '@jspawn/qpdf-wasm':
+        specifier: 'catalog:'
+        version: 0.0.2
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -10574,6 +10957,37 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/svg-to-pdf-converter:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      jspdf:
+        specifier: 'catalog:'
+        version: 4.2.1
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      svg2pdf.js:
+        specifier: 'catalog:'
+        version: 2.9.0(jspdf@4.2.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/svg-viewer:
     dependencies:
       '@workspace/tool-sdk':
@@ -11727,7 +12141,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -11767,7 +12181,7 @@ importers:
         version: 6.0.0
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -11810,7 +12224,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       xlsx:
         specifier: file:../../vendor/xlsx-0.20.3.tgz
-        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79)
       xml-js:
         specifier: 'catalog:'
         version: 1.6.11
@@ -12835,8 +13249,14 @@ packages:
     resolution: {integrity: sha512-3RQHgEtvL1Frl/d1cSreo7qhJ3Gk1OdNUai/CtZ8G+wYeRQnJih3s9xJ9/kgYekPQRdwgh0HXRPqMlzWGwivIQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0, npm: '>=10'}
 
+  '@file-viewer/core@3.3.4':
+    resolution: {integrity: sha512-OUCmt/CqppVPtBdP2KbWO4z+Ov0GlCo4ug2UB7LJB36e5tsBDAXArsGPeN2qnj2Y0VhaszHR3LfUtxGjDrgv1w==}
+
   '@file-viewer/doc@3.3.4':
     resolution: {integrity: sha512-T5b+Q/iIWDm6DoMcYLGBRIYP8O6XWdXcpr4T0iyw6TygGkdM0WhZWXEF3YupoxDsBajmFWnDnkud+q/onFyR1w==}
+
+  '@file-viewer/renderer-chm@3.3.4':
+    resolution: {integrity: sha512-QDcezN+rTZl5qfgHDeDKSH5JEp066aVpWuDV1+Ntvu06sHxbHERillOR1nF94G5FX386yr+tNWnj8CvcOYa0eQ==}
 
   '@floating-ui/core@1.8.0':
     resolution: {integrity: sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==}
@@ -15472,6 +15892,9 @@ packages:
   '@types/offscreencanvas@2019.7.3':
     resolution: {integrity: sha512-ieXiYmgSRXUDeOntE1InxjWyvEelZGP63M+cGuquuRLuIKKT1osnkXjxev9B7d1nXSug5vpunx+gNlbVxMlC9A==}
 
+  '@types/pako@2.0.4':
+    resolution: {integrity: sha512-VWDCbrLeVXJM9fihYodcLiIv0ku+AlOa/TQ1SvYOaBuyrSKgEcro95LJyIsJ4vSo6BXIxOKxiJAat04CmST9Fw==}
+
   '@types/papaparse@5.5.2':
     resolution: {integrity: sha512-gFnFp/JMzLHCwRf7tQHrNnfhN4eYBVYYI897CGX4MY1tzY9l2aLkVyx2IlKZ/SAqDbB3I1AOZW5gTMGGsqWliA==}
 
@@ -15480,6 +15903,9 @@ packages:
 
   '@types/qrcode@1.5.6':
     resolution: {integrity: sha512-te7NQcV2BOvdj2b1hCAHzAoMNuj65kNBMz0KBaxM6c3VGBOhU0dURQKOtH8CFNI/dsKkwlv32p26qYQTWoB5bw==}
+
+  '@types/raf@3.4.3':
+    resolution: {integrity: sha512-c4YAvMedbPZ5tEyxzQdMoOhhJ4RD3rngZIdwC2/qDN3d7JpEhB6fiBRKVY1lg5B7Wk+uPBjn5f39j1/2MY1oOw==}
 
   '@types/react-dom@19.3.0':
     resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
@@ -15924,6 +16350,10 @@ packages:
   caniuse-lite@1.0.30001826:
     resolution: {integrity: sha512-wTB+9tIbLro/BCXwLuNV1meHE4L9dS6dArMDwgYfNBPMYScqClHyGunhkCSDtHhe/69Xl0sHlKgBVZ+fNsYtWA==}
 
+  canvg@3.0.11:
+    resolution: {integrity: sha512-5ON+q7jCTgMp9cjpu4Jo6XbvfYwSB2Ow3kzHKfIyJfaCAOHLbdKPQqGKgfED/R5B+3TFFfe8pegYA+b423SRyA==}
+    engines: {node: '>=10.0.0'}
+
   cborg@7.0.0:
     resolution: {integrity: sha512-YYXJ+ozY26INm46oz2P+iOww/LhrfgPz2CuHaskDcitt0rKyh6LlWhNCfMlxxcdD+k7m0TspkRvcPPXAGYzZ8w==}
     hasBin: true
@@ -16145,6 +16575,9 @@ packages:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 
+  core-js@3.51.0:
+    resolution: {integrity: sha512-7bDKx/5jm5MxzsXxc93g6Z2+4ZsuT/MddrfRmTDJNAkWsYWHU8EVNEsBiIEWnMAMCHMmRfUEjkuo3jeNBOIHRw==}
+
   cosmiconfig@9.0.2:
     resolution: {integrity: sha512-gtTZxTDau1wL7Y7zifc2dd8jHSK/k6BTx/2Xp/BpdlAdnlYWFVt7qhJqgwi7637yRwRQ3qL4ZidbB4I8tA5VOg==}
     engines: {node: '>=14'}
@@ -16202,6 +16635,11 @@ packages:
   css-what@7.0.0:
     resolution: {integrity: sha512-wD5oz5xibMOPHzy13CyGmogB3phdvcDaB5t0W/Nr5Z2O/agcB8YwOz6e2Lsp10pNDzBoDO9nVa3RGs/2BttpHQ==}
     engines: {node: '>= 6'}
+
+  cssesc@3.0.0:
+    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
+    engines: {node: '>=4'}
+    hasBin: true
 
   csso@5.0.5:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
@@ -16573,6 +17011,9 @@ packages:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
 
+  fast-png@6.4.0:
+    resolution: {integrity: sha512-kAqZq1TlgBjZcLr5mcN6NP5Rv4V2f22z00c3g8vRrwkcqjerx7BEhPbOnWCPqaHUl2XWQBJQvOT/FQhdMT7X/Q==}
+
   fast-string-truncated-width@3.0.3:
     resolution: {integrity: sha512-0jjjIEL6+0jag3l2XWWizO64/aZVtpiGE3t0Zgqxv0DPuxiMjvB3M24fCyhZUO4KomJQPj3LTSUnDP3GpdwC0g==}
 
@@ -16648,6 +17089,9 @@ packages:
 
   foliate-js@1.0.1:
     resolution: {integrity: sha512-Cj4h2ub5aVA+yUgbhvVhCyxwi0GPF4pyNBa6Lw9+6WKY1ReBxipItn2kEBO6u7Vu/xYXjK711R74+t+yW/0u5w==}
+
+  font-family-papandreou@0.2.0-patch2:
+    resolution: {integrity: sha512-l/YiRdBSH/eWv6OF3sLGkwErL+n0MqCICi9mppTZBOCL5vixWGDqCYvRcuxB2h7RGCTzaTKOHT2caHvCXQPRlw==}
 
   fontace@0.4.1:
     resolution: {integrity: sha512-lDMvbAzSnHmbYMTEld5qdtvNH2/pWpICOqpean9IgC7vUbUJc3k+k5Dokp85CegamqQpFbXf0rAVkbzpyTA8aw==}
@@ -16941,6 +17385,9 @@ packages:
   intl-messageformat@10.7.18:
     resolution: {integrity: sha512-m3Ofv/X/tV8Y3tHXLohcuVuhWKo7BBq62cqY15etqmLxg2DZ34AGGgQDeR+SCta2+zICb1NX83af0GJmbQ1++g==}
 
+  iobuffer@5.4.0:
+    resolution: {integrity: sha512-DRebOWuqDvxunfkNJAlc3IzWIPD5xVxwUNbHr7xKB8E6aLJxIPfNX3CoMJghcFjpv6RWQsrcJbghtEwSPoJqMA==}
+
   ip-address@10.7.6:
     resolution: {integrity: sha512-00LYkM6byILa9eQIx6qoaXCM40xTLd56AZ4vyaPW3YTyb49VZYPo5xsiAq4tuQ54GH4R7gVdYScJ1B7B77PuTg==}
     engines: {node: '>= 12'}
@@ -17189,6 +17636,9 @@ packages:
     resolution: {integrity: sha512-l7zpg7itqXMNbyVXrPWvR0976Rx2cirJ1Stqt3Xf/2VYPlMMefgnAGJ7WQNMkvO5nxhTspZdlGE/p5SH3cW8mw==}
     engines: {node: '>=22.0.0'}
     hasBin: true
+
+  jspdf@4.2.1:
+    resolution: {integrity: sha512-YyAXyvnmjTbR4bHQRLzex3CuINCDlQnBqoSYyjJwTP2x9jDLuKDzy7aKUl0hgx3uhcl7xzg32agn5vlie6HIlQ==}
 
   jsqr@1.4.0:
     resolution: {integrity: sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==}
@@ -17772,6 +18222,9 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
+  pako@2.2.0:
+    resolution: {integrity: sha512-zJq6RP/5q+TO2OpFV3FHzlPnFjmkb7Nc99a5SNjJE+uu/PkpChs+NIZSSzbBoD+6kjiISXjfYdwj1ZRQ81dz/w==}
+
   papaparse@5.7.1:
     resolution: {integrity: sha512-qOR+UDWv6D3hMxnWWOk0ZpBdCkd+kw5Yh7aXOaNSQU8A+73EA2bhW7EiUix/hY0yulUi5FRvt7PpYSI2VDvY0g==}
 
@@ -17846,6 +18299,9 @@ packages:
   pdfjs-dist@6.5.438:
     resolution: {integrity: sha512-vg8Pw1x+AFKy4AMDvhuWl5cOYV8d698UoEANoFFhc79hqXDnZQqnOXoxw3HG907WHOg1JYOvLhP756boddFxpA==}
     engines: {node: '>=22.13.0 || >=24'}
+
+  performance-now@2.1.0:
+    resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
 
   piccolore@0.1.3:
     resolution: {integrity: sha512-o8bTeDWjE086iwKrROaDf31K0qC/BENdm15/uH9usSC/uZjJOKb2YGiVHfLY4GhwsERiPI1jmwI2XrA7ACOxVw==}
@@ -17994,6 +18450,9 @@ packages:
 
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
+
+  raf@3.4.1:
+    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
 
   railroad-diagrams@1.0.0:
     resolution: {integrity: sha512-cz93DjNeLY0idrCNOH6PviZGRN9GJhsdm9hpn1YCS879fj4W+x5IFJhhkRZcwVgMmFF7R82UA/7Oh+R8lLZg6A==}
@@ -18146,6 +18605,10 @@ packages:
   reusify@1.1.0:
     resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rgbcolor@1.0.1:
+    resolution: {integrity: sha512-9aZLIrhRaD97sgVhtJOW6ckOEh6/GnvQtdVNfdZ6s67+3/XwLS9lBcQYzEEhYVeUowN7pRzMLsyGhK2i/xvWbw==}
+    engines: {node: '>= 0.8.15'}
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
@@ -18320,6 +18783,10 @@ packages:
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
 
+  specificity@0.4.1:
+    resolution: {integrity: sha512-1klA3Gi5PD1Wv9Q0wUoOQN1IWAuPu0D1U03ThXTr0cJ20+/iq2tHSDnK7Kk/0LXJ1ztUB2/1Os0wKmfyNgUQfg==}
+    hasBin: true
+
   speedline-core@1.4.3:
     resolution: {integrity: sha512-DI7/OuAUD+GMpR6dmu8lliO2Wg5zfeh+/xsdyJZCzd8o5JgFUjCeLsBDuZjIQJdwXS3J0L/uZYrELKYqx+PXog==}
     engines: {node: '>=8.0'}
@@ -18333,6 +18800,10 @@ packages:
 
   sql.js@1.16.0:
     resolution: {integrity: sha512-q/JOZuJfmVh8Zf8Eo+cMJvtxAWeWBqTfJ6AQYGXZmcaLGHMwhA2niH3fQYHrBtPeOss1ttzHec07K5+rHaMRMw==}
+
+  stackblur-canvas@2.7.0:
+    resolution: {integrity: sha512-yf7OENo23AGJhBriGx0QivY5JP6Y1HbrrDI6WLt6C5auYZXlQrheoY8hD4ibekFKz1HOfE48Ww8kMWMnJD/zcQ==}
+    engines: {node: '>=0.1.14'}
 
   statuses@2.0.2:
     resolution: {integrity: sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==}
@@ -18425,10 +18896,22 @@ packages:
     resolution: {integrity: sha512-5mAftM3SoDV9X0zdF386F9p2pv8iKOwi/KfBS1XnBAkVCKFzVOLHUoa8iGWAt4buoicLmyWVRpuuD5wplXOQsg==}
     engines: {node: '>=18'}
 
+  svg-pathdata@6.0.3:
+    resolution: {integrity: sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==}
+    engines: {node: '>=12.0.0'}
+
+  svg2pdf.js@2.9.0:
+    resolution: {integrity: sha512-rjxgZ4k4JlgPqAvdBPFU+GMUVIEJm7AeSGAFysKUrmbF2FhKw2pdhgcwb8CinA3Gc8o84aQMpQsGeMNzqA1YyQ==}
+    peerDependencies:
+      jspdf: ^4.0.0 || ^3.0.0 || ^2.0.0
+
   svgo@4.1.0:
     resolution: {integrity: sha512-bkxnTg1kSU0guhIBmibA6UUhrQmPVA1XsQLN+ylCd+UWzbnLkySOcXpyk1mrl05f+pcaCx2eHb+sp6BgMZWX+Q==}
     engines: {node: '>=16'}
     hasBin: true
+
+  svgpath@2.6.0:
+    resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
 
   sync-fetch-undici@0.7.1:
     resolution: {integrity: sha512-t/rJBTRr3/WCs/04MnLStgGGFac1Ge6WDugNxO+KoMqtfmWENMPJbtAmGqIWnwsXi+B7Uh0P0ea2QRkKIZTIPg==}
@@ -20094,9 +20577,17 @@ snapshots:
 
   '@faker-js/faker@10.6.0': {}
 
+  '@file-viewer/core@3.3.4':
+    dependencies:
+      dompurify: 3.4.18
+
   '@file-viewer/doc@3.3.4(patch_hash=11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649)':
     dependencies:
       dompurify: 3.4.18
+
+  '@file-viewer/renderer-chm@3.3.4(patch_hash=f3b152073e61239eac3ff1d13086cf8514bc9324f0a1a402af2e9c6cab39212c)':
+    dependencies:
+      '@file-viewer/core': 3.3.4
 
   '@floating-ui/core@1.8.0':
     dependencies:
@@ -22311,6 +22802,8 @@ snapshots:
 
   '@types/offscreencanvas@2019.7.3': {}
 
+  '@types/pako@2.0.4': {}
+
   '@types/papaparse@5.5.2':
     dependencies:
       '@types/node': 26.6.6
@@ -22320,6 +22813,9 @@ snapshots:
   '@types/qrcode@1.5.6':
     dependencies:
       '@types/node': 26.6.6
+
+  '@types/raf@3.4.3':
+    optional: true
 
   '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
@@ -22927,6 +23423,18 @@ snapshots:
 
   caniuse-lite@1.0.30001826: {}
 
+  canvg@3.0.11:
+    dependencies:
+      '@babel/runtime': 7.29.14
+      '@types/raf': 3.4.3
+      core-js: 3.51.0
+      raf: 3.4.1
+      regenerator-runtime: 0.13.11
+      rgbcolor: 1.0.1
+      stackblur-canvas: 2.7.0
+      svg-pathdata: 6.0.3
+    optional: true
+
   cborg@7.0.0: {}
 
   ccount@2.0.1: {}
@@ -23134,6 +23642,9 @@ snapshots:
 
   core-js@2.6.12: {}
 
+  core-js@3.51.0:
+    optional: true
+
   cosmiconfig@9.0.2(typescript@5.9.3):
     dependencies:
       env-paths: 2.2.1
@@ -23193,6 +23704,8 @@ snapshots:
       source-map-js: 1.2.2
 
   css-what@7.0.0: {}
+
+  cssesc@3.0.0: {}
 
   csso@5.0.5:
     dependencies:
@@ -23600,6 +24113,12 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
+  fast-png@6.4.0:
+    dependencies:
+      '@types/pako': 2.0.4
+      iobuffer: 5.4.0
+      pako: 2.2.0
+
   fast-string-truncated-width@3.0.3: {}
 
   fast-string-width@3.0.2:
@@ -23681,6 +24200,8 @@ snapshots:
   foliate-js@1.0.1(patch_hash=d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236):
     dependencies:
       construct-style-sheets-polyfill: 3.1.0
+
+  font-family-papandreou@0.2.0-patch2: {}
 
   fontace@0.4.1:
     dependencies:
@@ -24005,6 +24526,8 @@ snapshots:
       '@formatjs/icu-messageformat-parser': 2.11.4
       tslib: 2.9.1
 
+  iobuffer@5.4.0: {}
+
   ip-address@10.7.6: {}
 
   ip-regex@5.0.0: {}
@@ -24195,6 +24718,17 @@ snapshots:
       '@jsep-plugin/assignment': 1.4.0(jsep@1.6.0)
       '@jsep-plugin/regex': 1.1.0(jsep@1.6.0)
       jsep: 1.6.0
+
+  jspdf@4.2.1:
+    dependencies:
+      '@babel/runtime': 7.29.14
+      fast-png: 6.4.0
+      fflate: 0.8.3
+    optionalDependencies:
+      canvg: 3.0.11
+      core-js: 3.51.0
+      dompurify: 3.4.18
+      html2canvas: 1.4.1
 
   jsqr@1.4.0: {}
 
@@ -24846,6 +25380,8 @@ snapshots:
 
   pako@1.0.11: {}
 
+  pako@2.2.0: {}
+
   papaparse@5.7.1: {}
 
   parent-module@1.0.1:
@@ -24912,6 +25448,9 @@ snapshots:
   pdfjs-dist@6.5.438:
     optionalDependencies:
       '@napi-rs/canvas': 1.1.1
+
+  performance-now@2.1.0:
+    optional: true
 
   piccolore@0.1.3: {}
 
@@ -25100,6 +25639,11 @@ snapshots:
 
   radix3@1.1.2: {}
 
+  raf@3.4.1:
+    dependencies:
+      performance-now: 2.1.0
+    optional: true
+
   railroad-diagrams@1.0.0: {}
 
   randexp@0.4.6:
@@ -25236,6 +25780,9 @@ snapshots:
       unist-util-visit: 5.2.0
 
   reusify@1.1.0: {}
+
+  rgbcolor@1.0.1:
+    optional: true
 
   rimraf@3.0.2:
     dependencies:
@@ -25508,6 +26055,8 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
+  specificity@0.4.1: {}
+
   speedline-core@1.4.3:
     dependencies:
       '@types/node': 26.6.6
@@ -25522,6 +26071,9 @@ snapshots:
       nearley: 2.20.1
 
   sql.js@1.16.0: {}
+
+  stackblur-canvas@2.7.0:
+    optional: true
 
   statuses@2.0.2: {}
 
@@ -25623,6 +26175,17 @@ snapshots:
     transitivePeerDependencies:
       - '@typescript-eslint/types'
 
+  svg-pathdata@6.0.3:
+    optional: true
+
+  svg2pdf.js@2.9.0(jspdf@4.2.1):
+    dependencies:
+      cssesc: 3.0.0
+      font-family-papandreou: 0.2.0-patch2
+      jspdf: 4.2.1
+      specificity: 0.4.1
+      svgpath: 2.6.0
+
   svgo@4.1.0:
     dependencies:
       commander: 11.1.0
@@ -25632,6 +26195,8 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
       sax: 1.6.1
+
+  svgpath@2.6.0: {}
 
   sync-fetch-undici@0.7.1:
     dependencies:
@@ -26268,7 +26833,7 @@ snapshots:
 
   xdg-basedir@5.1.0: {}
 
-  xlsx@file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45): {}
+  xlsx@file:vendor/xlsx-0.20.3.tgz(patch_hash=d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79): {}
 
   xml-js@1.6.11:
     dependencies:

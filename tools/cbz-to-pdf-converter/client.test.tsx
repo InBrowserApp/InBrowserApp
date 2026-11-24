@@ -7,12 +7,12 @@ import {
   waitFor,
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import { ConversionError } from "@workspace/cbz/errors"
+import { ConversionError } from "@workspace/comic/errors"
 import Client from "./client"
 import m from "./messages/en.json"
 
 const mock = vi.hoisted(() => ({ prepare: vi.fn(), open: vi.fn() }))
-vi.mock("@workspace/cbz/pdf", () => ({ preparePdf: mock.prepare }))
+vi.mock("@workspace/comic/pdf", () => ({ preparePdf: mock.prepare }))
 vi.mock("@workspace/pdf-reader", () => ({ openReader: mock.open }))
 const result = {
   pdf: new Blob(["%PDF-output"], { type: "application/pdf" }),

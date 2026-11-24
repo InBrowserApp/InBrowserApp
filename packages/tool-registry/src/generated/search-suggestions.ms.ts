@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "Pembaca Komik CB7",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "Penukar CBOR / MessagePack",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "Pembaca Komik CBR",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Penukar Nombor ↔ Angka Kewangan Cina",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "Pemapar CHM",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Penjana Gradien CSS",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "Tukar CSV dan Excel kepada SQLite",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Penyunting Metadata EPUB",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "Pembaca EPUB",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "Penukar EPUB kepada PDF",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Pemapar Histogram Imej",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "Pembersih Metadata Imej (EXIF)",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Penukar JSON → CSV",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "Penukar JSON ke Excel",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Penyunting Penanda Buku PDF",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "Pemampat PDF",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "Ekstrak Imej daripada PDF",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Pemformat Kod Prettier",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "Lindungi PDF dengan Kata Laluan",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Penukar SVG ke imej",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "Penukar SVG ke PDF",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

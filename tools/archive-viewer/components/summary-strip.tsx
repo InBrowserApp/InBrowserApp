@@ -1,4 +1,4 @@
-import type { ArchiveHandle } from "../core/types"
+import type { ArchiveHandle } from "@workspace/archive/types"
 import { getFormatLabel, type ArchiveSummary } from "../core/format"
 import type { ArchiveViewerMessages } from "../types"
 

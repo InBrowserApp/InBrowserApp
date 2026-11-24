@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de CSV y Excel a SQLite",
+  "description": "Convierte archivos CSV y Excel (.xlsx, .xls) en una sola base de datos SQLite. Revisa y renombra las tablas, descarga el archivo .sqlite o consúltalo en el Visor de SQLite."
+}

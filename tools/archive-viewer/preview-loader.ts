@@ -5,10 +5,10 @@ import {
   isTextEntry,
   resolveTextPreviewLanguage,
 } from "./core/preview"
-import { withGuessedMimeType } from "./core/mime"
+import { withGuessedMimeType } from "@workspace/archive/mime"
 
 import type { PreviewState } from "./components/preview-dialog"
-import type { ArchiveEntry, ArchiveHandle } from "./core/types"
+import type { ArchiveEntry, ArchiveHandle } from "@workspace/archive/types"
 import type { ArchiveViewerMessages } from "./types"
 
 type LoadedPreview = Readonly<{

@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Chọn tệp PDF",
+  "dropPdf": "hoặc thả tệp PDF vào đây",
+  "changePdf": "Đổi tệp PDF",
+  "privacy": "Tệp PDF và mật khẩu luôn ở trong trình duyệt của bạn.",
+  "password": "Mật khẩu để mở PDF",
+  "confirmPassword": "Xác nhận mật khẩu",
+  "showPasswords": "Hiện mật khẩu",
+  "hidePasswords": "Ẩn mật khẩu",
+  "protectPdf": "Đặt mật khẩu cho PDF",
+  "protecting": "Đang mã hóa PDF…",
+  "protected": "Tệp PDF có mật khẩu đã sẵn sàng",
+  "downloadPdf": "Tải xuống PDF đã đặt mật khẩu",
+  "startOver": "Đặt mật khẩu cho PDF khác",
+  "onePdf": "Chỉ chọn một tệp PDF mỗi lần.",
+  "invalidPdf": "Hãy chọn một tệp PDF có nội dung.",
+  "passwordTooLong": "Hãy dùng mật khẩu ngắn hơn. Mật khẩu PDF có độ dài tối đa 127 byte.",
+  "passwordInvalid": "Hãy dùng mật khẩu không chứa ký tự điều khiển vô hình.",
+  "passwordMismatch": "Hai mật khẩu không khớp.",
+  "protectionFailed": "Không thể đặt mật khẩu cho tệp PDF này. Hãy thử mở tệp trong trình đọc PDF rồi chọn một bản sao mở được mà không cần mật khẩu."
+}

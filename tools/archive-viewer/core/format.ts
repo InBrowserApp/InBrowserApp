@@ -1,6 +1,10 @@
-import { archiveFormats } from "./formats"
+import { archiveFormats } from "@workspace/archive/formats"
 
-import type { ArchiveEntry, ArchiveEntryKind, ArchiveFormat } from "./types"
+import type {
+  ArchiveEntry,
+  ArchiveEntryKind,
+  ArchiveFormat,
+} from "@workspace/archive/types"
 
 type ArchiveSummary = Readonly<{
   entries: number

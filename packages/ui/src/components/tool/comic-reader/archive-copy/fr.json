@@ -1,0 +1,21 @@
+{
+  "readerName": "Lecteur de BD {format}",
+  "choose": "Choisir un fichier {format}",
+  "drop": "Ou déposez ici un fichier {format} ou {archive}.",
+  "privacy": "Votre BD reste sur cet appareil.",
+  "invalid": "Choisissez un fichier {format} ou {archive}.",
+  "damaged": "L’archive n’a pas pu être lue. Elle est peut-être endommagée ou utilise des fonctions {archive} non prises en charge.",
+  "howTitle": "Comment ouvrir un fichier {format}",
+  "how": [
+    "Choisissez un fichier {format} ou faites-le glisser dans le lecteur. Vous pouvez aussi ouvrir une archive {archive} contenant des pages de BD sous forme d’images.",
+    "Utilisez les flèches pour tourner les pages, saisissez un numéro de page pour y accéder ou ouvrez la grille de miniatures pour retrouver une scène.",
+    "Choisissez « Page entière » pour voir toute l’image, ou « Pleine largeur » et le zoom pour lire les petits caractères. Pour les mangas, passez à la lecture de droite à gauche ; le mode Lecture concentrée laisse plus de place à la BD."
+  ],
+  "formatTitle": "Qu’est-ce qu’un fichier {format} ?",
+  "formatBody": "Un fichier {format} est une archive de BD utilisant la compression {archive}. Ses pages sont enregistrées sous forme d’images, souvent dans des dossiers par chapitre. Le lecteur trie les chemins complets des fichiers dans l’ordre naturel : la page 2 précède ainsi la page 10. Il ignore les fichiers cachés et les fichiers qui ne sont pas des images.",
+  "compatibilityTitle": "Images et archives prises en charge",
+  "compatibilityBody": "Lisez les BD dont les pages sont aux formats JPEG, PNG, GIF, WebP et BMP, ainsi qu’AVIF lorsque le navigateur le prend en charge. Les archives protégées par mot de passe ou divisées en plusieurs parties doivent d’abord être décompressées. Les grandes archives solides peuvent prendre plus de temps à s’ouvrir et à parcourir, car plusieurs images peuvent partager le même bloc compressé.",
+  "privacyTitle": "Lisez en toute confidentialité dans votre navigateur",
+  "privacyBody": "Votre navigateur ouvre l’archive sur votre appareil, sans envoi de fichier, compte ni installation. Pour lire une BD au format ZIP, utilisez le lecteur CBZ.",
+  "relatedTitle": "Outils associés"
+}

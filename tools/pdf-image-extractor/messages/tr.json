@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF seç",
+  "dropPdf": "PDF dosyasını buraya bırakın",
+  "localProcessing": "PDF dosyanız cihazınızda kalır.",
+  "changePdf": "PDF değiştir",
+  "opening": "PDF açılıyor…",
+  "scanning": "Sayfa taranıyor ({page}/{total})…",
+  "results": "Çıkarılan görüntüler",
+  "firstPage": "İlk görüldüğü sayfa {page}",
+  "download": "İndir",
+  "downloadImage": "{name} dosyasını indir",
+  "downloadZip": "Tümünü ZIP olarak indir",
+  "preparingZip": "ZIP hazırlanıyor…",
+  "emptyTitle": "Gömülü görüntü bulunamadı",
+  "emptyDescription": "Bu PDF yalnızca metin veya vektör grafikleri içeriyor olabilir. Sayfaların tamamını görüntü olarak kaydetmek için PDF'den Görüntüye Dönüştürücü aracını kullanın.",
+  "invalidFile": "Görüntülerini çıkarmak için bir PDF dosyası seçin.",
+  "lockedPdf": "Bu PDF parola korumalı. Dosyayı parolasıyla açıp korumasız bir kopyasını kaydedin ve yeniden deneyin.",
+  "readError": "Bu PDF okunamadı. Başka bir kopyayı açmayı deneyin.",
+  "skippedImages": "Bu PDF'deki bazı görüntüler çıkarılamadı.",
+  "zipError": "ZIP dosyası oluşturulamadı. Görüntüleri tek tek indirebilirsiniz."
+}

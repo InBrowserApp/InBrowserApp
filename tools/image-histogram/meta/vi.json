@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem histogram ảnh",
+  "description": "Xem histogram độ sáng và RGB của ảnh ngay trong trình duyệt. Kiểm tra vùng tối, vùng sáng và từng kênh màu."
+}

@@ -1,0 +1,20 @@
+{
+  "input": "JSON-Eingabe",
+  "inputHint": "Fügen Sie ein Array aus JSON-Objekten ein oder öffnen Sie eine JSON-Datei.",
+  "openFile": "Datei öffnen",
+  "example": "Beispiel laden",
+  "clear": "Leeren",
+  "preview": "Tabellenvorschau",
+  "flatten": "Verschachtelte Felder aufteilen",
+  "flattenHint": "Verschachtelte Objekte ergeben eigene Spalten wie contact.city. Arrays bleiben in einer Zelle.",
+  "emptyPreview": "Fügen Sie JSON ein oder laden Sie das Beispiel, um die Tabelle hier anzuzeigen.",
+  "previewCount": "{rows} von {totalRows} Zeilen und {columns} von {totalColumns} Spalten werden angezeigt.",
+  "download": "XLSX herunterladen",
+  "invalidJson": "Prüfen Sie die JSON-Syntax und versuchen Sie es erneut.",
+  "invalidRecords": "Geben Sie ein nicht leeres Array aus Objekten ein, etwa [{\"name\":\"Maya\"}].",
+  "noColumns": "Fügen Sie mindestens ein Feld hinzu, damit eine Spalte erstellt werden kann.",
+  "sheetLimit": "Teilen Sie die Daten auf. Excel unterstützt höchstens 1.048.576 Zeilen (einschließlich Kopfzeile) und 16.384 Spalten pro Arbeitsblatt.",
+  "cellLimit": "Kürzen Sie Feldnamen oder Werte, die das Excel-Limit von 32.767 Zeichen pro Zelle überschreiten.",
+  "readError": "Die Datei konnte nicht gelesen werden. Öffnen Sie sie erneut oder fügen Sie den Inhalt ein.",
+  "downloadError": "Die Excel-Datei konnte nicht erstellt werden. Versuchen Sie den Download erneut oder verwenden Sie weniger Datensätze."
+}

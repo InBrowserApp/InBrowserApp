@@ -1,0 +1,4 @@
+{
+  "name": "CSV en Excel naar SQLite converteren",
+  "description": "Voeg CSV- en Excel-bestanden (.xlsx, .xls) samen in één SQLite-database. Bekijk en hernoem tabellen, download het .sqlite-bestand of voer query's uit in de SQLite-viewer."
+}

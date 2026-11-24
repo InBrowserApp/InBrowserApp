@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da JSON a Excel",
+  "description": "Converti un array JSON in Excel (.xlsx). Incolla il JSON o apri un file, controlla il foglio in anteprima ed espandi i campi annidati nel browser."
+}

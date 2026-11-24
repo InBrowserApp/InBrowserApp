@@ -228,9 +228,19 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "case-converter",
   },
   {
+    category: "image",
+    name: "CB7 コミックリーダー",
+    slug: "cb7-reader",
+  },
+  {
     category: "json",
     name: "CBOR / MessagePack 変換ツール",
     slug: "cbor-messagepack-converter",
+  },
+  {
+    category: "image",
+    name: "CBR コミックリーダー",
+    slug: "cbr-reader",
   },
   {
     category: "image",
@@ -251,6 +261,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "数値・中国語大字変換ツール",
     slug: "chinese-uppercase-number-converter",
+  },
+  {
+    category: "document",
+    name: "CHM ビューアー",
+    slug: "chm-viewer",
   },
   {
     category: "developer",
@@ -331,6 +346,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "CSS グラデーションジェネレーター",
     slug: "css-gradient-generator",
+  },
+  {
+    category: "developer",
+    name: "CSV・ExcelをSQLiteに変換",
+    slug: "csv-excel-to-sqlite",
   },
   {
     category: "json",
@@ -449,8 +469,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUBメタデータエディター",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB リーダー",
     slug: "epub-reader",
+  },
+  {
+    category: "document",
+    name: "EPUB PDF変換",
+    slug: "epub-to-pdf-converter",
   },
   {
     category: "text",
@@ -604,6 +634,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "画像ヒストグラムビューアー",
+    slug: "image-histogram",
+  },
+  {
+    category: "image",
     name: "画像メタデータクリーナー（EXIF）",
     slug: "image-metadata-cleaner",
   },
@@ -741,6 +776,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → CSV 変換",
     slug: "json-to-csv-converter",
+  },
+  {
+    category: "json",
+    name: "JSON Excel 変換",
+    slug: "json-to-excel-converter",
   },
   {
     category: "json",
@@ -1004,8 +1044,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF のしおり編集ツール",
+    slug: "pdf-bookmark-editor",
+  },
+  {
+    category: "pdf",
     name: "PDF 圧縮ツール",
     slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
+    name: "PDFから画像を抽出",
+    slug: "pdf-image-extractor",
   },
   {
     category: "pdf",
@@ -1111,6 +1161,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Prettier コードフォーマッター",
     slug: "prettier-code-formatter",
+  },
+  {
+    category: "pdf",
+    name: "PDFをパスワードで保護",
+    slug: "protect-pdf",
   },
   {
     category: "image",
@@ -1346,6 +1401,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "SVG 画像コンバーター",
     slug: "svg-to-image-converter",
+  },
+  {
+    category: "image",
+    name: "SVGをPDFに変換",
+    slug: "svg-to-pdf-converter",
   },
   {
     category: "image",

@@ -1,0 +1,20 @@
+{
+  "input": "JSON-indata",
+  "inputHint": "Klistra in en array med JSON-objekt eller öppna en JSON-fil.",
+  "openFile": "Öppna fil",
+  "example": "Läs in exempel",
+  "clear": "Rensa",
+  "preview": "Förhandsvisning av kalkylblad",
+  "flatten": "Expandera kapslade fält",
+  "flattenHint": "Kapslade objekt blir kolumner som contact.city. Arrayer ligger kvar i en enda cell.",
+  "emptyPreview": "Lägg till JSON eller läs in exemplet för att visa kalkylbladet här.",
+  "previewCount": "Visar {rows} av {totalRows} rader och {columns} av {totalColumns} kolumner.",
+  "download": "Ladda ner XLSX",
+  "invalidJson": "Kontrollera JSON-syntaxen och försök igen.",
+  "invalidRecords": "Ange en array med minst ett objekt, till exempel [{\"name\":\"Maya\"}].",
+  "noColumns": "Lägg till minst ett fält för att skapa en kolumn.",
+  "sheetLimit": "Dela upp dina data. Excel har plats för högst 1 048 576 rader (inklusive rubrikraden) och 16 384 kolumner per kalkylblad.",
+  "cellLimit": "Korta ned fältnamn eller värden som överskrider Excels gräns på 32 767 tecken per cell.",
+  "readError": "Filen gick inte att läsa. Öppna den igen eller klistra in innehållet.",
+  "downloadError": "Excel-filen gick inte att skapa. Försök ladda ner igen eller använd färre poster."
+}

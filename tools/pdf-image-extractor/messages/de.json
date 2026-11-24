@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF auswählen",
+  "dropPdf": "PDF hier ablegen",
+  "localProcessing": "Deine PDF bleibt auf deinem Gerät.",
+  "changePdf": "Andere PDF auswählen",
+  "opening": "PDF wird geöffnet…",
+  "scanning": "Seite {page} von {total} wird durchsucht…",
+  "results": "Extrahierte Bilder",
+  "firstPage": "Erstmals auf Seite {page}",
+  "download": "Herunterladen",
+  "downloadImage": "{name} herunterladen",
+  "downloadZip": "Alle als ZIP herunterladen",
+  "preparingZip": "ZIP wird erstellt…",
+  "emptyTitle": "Keine eingebetteten Bilder gefunden",
+  "emptyDescription": "Diese PDF enthält möglicherweise nur Text oder Vektorgrafiken. Mit dem PDF-zu-Bild-Konverter kannst du ganze Seiten als Bilder speichern.",
+  "invalidFile": "Wähle eine PDF-Datei aus, um ihre Bilder zu extrahieren.",
+  "lockedPdf": "Diese PDF ist passwortgeschützt. Öffne sie mit dem Passwort und speichere eine Kopie ohne Passwortschutz. Versuche es dann erneut.",
+  "readError": "Diese PDF konnte nicht gelesen werden. Versuche es mit einer anderen Kopie.",
+  "skippedImages": "Einige Bilder konnten nicht aus dieser PDF extrahiert werden.",
+  "zipError": "Die ZIP-Datei konnte nicht erstellt werden. Du kannst die Bilder weiterhin einzeln herunterladen."
+}

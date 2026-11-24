@@ -1,0 +1,23 @@
+{
+  "open": "Choisir un fichier EPUB",
+  "replace": "Choisir un autre EPUB",
+  "drop": "ou déposez un fichier .epub ici",
+  "privacy": "Votre livre reste sur cet appareil.",
+  "loading": "Préparation de l’aperçu du livre…",
+  "cancel": "Annuler",
+  "pageSize": "Format du papier",
+  "letter": "Lettre US",
+  "save": "Enregistrer au format PDF",
+  "saveHelp": "Choisissez « Enregistrer au format PDF » dans la boîte de dialogue d’impression. Désactivez les en-têtes et pieds de page pour ne garder que le contenu du livre.",
+  "preview": "Aperçu du livre",
+  "chapter": "Chapitre",
+  "contents": "Table des matières",
+  "supportingSections": "Notes et sections complémentaires",
+  "imageUnavailable": "Image indisponible",
+  "missingResources": "Certaines images ou autres ressources n’ont pas pu être intégrées.",
+  "unsupported": "Choisissez un fichier .epub pour continuer.",
+  "invalid": "Impossible de lire ce fichier EPUB. Essayez une autre copie du livre.",
+  "protected": "Ce fichier EPUB est protégé. Choisissez une copie sans DRM.",
+  "unsupportedLayout": "Ce fichier EPUB a une mise en page fixe. Choisissez un EPUB à mise en page adaptable.",
+  "printUnavailable": "L’impression est indisponible dans ce navigateur. Ouvrez cet outil dans un navigateur qui permet d’enregistrer en PDF."
+}
