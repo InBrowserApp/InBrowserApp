@@ -23,7 +23,7 @@ export class FolderInputError extends Error {
   }
 }
 
-export interface Change {
+interface Change {
   kind: ChangeKind
   path: string
   before?: string
