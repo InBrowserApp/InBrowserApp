@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "developer",
+    name: "مدقق سير عمل GitHub Actions",
+    slug: "github-actions-workflow-validator",
+  },
+  {
+    category: "developer",
     name: "مولد .gitignore",
     slug: "gitignore-generator",
   },

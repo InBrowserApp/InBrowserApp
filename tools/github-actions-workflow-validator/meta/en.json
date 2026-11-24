@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions Workflow Validator",
+  "description": "Validate GitHub Actions workflow YAML online with actionlint. Find syntax errors, invalid expressions, and job dependencies by line and column."
+}

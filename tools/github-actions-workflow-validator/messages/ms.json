@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML aliran kerja",
+  "placeholder": "Tampal kandungan fail daripada .github/workflows di sini…",
+  "openFile": "Buka fail",
+  "example": "Muatkan contoh",
+  "clear": "Kosongkan",
+  "validate": "Sahkan",
+  "results": "Hasil pengesahan",
+  "idle": "Tampal YAML aliran kerja atau buka fail pada peranti untuk menyemaknya.",
+  "valid": "Aliran kerja ini lulus semakan actionlint.",
+  "invalid": "Semak masalah di bawah.",
+  "location": "Baris {line}, lajur {column}",
+  "fileError": "Fail tidak dapat dibuka.",
+  "checkError": "Pengesahan tidak dapat diselesaikan.",
+  "singleDocument": "Fail aliran kerja mesti mengandungi satu dokumen YAML.",
+  "introTitle": "Cara mengesahkan aliran kerja GitHub Actions",
+  "introBody": "Tampal kandungan aliran kerja daripada .github/workflows atau buka fail .yaml atau .yml pada peranti anda, kemudian pilih Sahkan. Pilih Muatkan contoh untuk melihat aliran kerja CI yang berfungsi. Pilih masalah untuk pergi terus ke baris dan lajurnya. Pelayar memproses aliran kerja pada peranti anda.",
+  "coverageTitle": "Apakah yang disemak oleh pengesah GitHub Actions?",
+  "coverageBody": "Pengesah menggunakan actionlint {version} untuk menyemak sintaks YAML, pencetus, kebergantungan tugas, label pelaksana, langkah dan ungkapan GitHub Actions. Masalah lazim termasuk tugas yang tidak ditakrifkan dalam needs, ejaan salah pada nama konteks seperti github atau steps, dan rujukan uses yang tidak sah.",
+  "cliTitle": "Semak aliran kerja dalam repositori anda",
+  "cliBody": "Jalankan actionlint daripada repositori anda untuk turut menyemak tetapan projek dan rujukan kepada tindakan setempat atau aliran kerja yang boleh digunakan semula. Alat baris perintah pada peranti juga boleh menggunakan ShellCheck dan Pyflakes untuk menganalisis skrip jika kedua-duanya dipasang.",
+  "reference": "Rujukan sintaks aliran kerja GitHub Actions"
+}

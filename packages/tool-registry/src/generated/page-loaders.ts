@@ -159,6 +159,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
+  "github-actions-workflow-validator": () =>
+    import("@tool/github-actions-workflow-validator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),

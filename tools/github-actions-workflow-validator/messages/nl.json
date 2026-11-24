@@ -1,0 +1,23 @@
+{
+  "inputLabel": "Workflow-YAML",
+  "placeholder": "Plak hier de inhoud van een bestand uit .github/workflows…",
+  "openFile": "Bestand openen",
+  "example": "Voorbeeld laden",
+  "clear": "Wissen",
+  "validate": "Valideren",
+  "results": "Validatieresultaten",
+  "idle": "Plak workflow-YAML of open een lokaal bestand om het te controleren.",
+  "valid": "Deze workflow doorstaat de controles van actionlint.",
+  "invalid": "Bekijk de problemen hieronder.",
+  "location": "Regel {line}, kolom {column}",
+  "fileError": "Het bestand kon niet worden geopend.",
+  "checkError": "De controle kon niet worden voltooid.",
+  "singleDocument": "Een workflowbestand moet één YAML-document bevatten.",
+  "introTitle": "Een GitHub Actions-workflow valideren",
+  "introBody": "Plak een workflow uit .github/workflows of open een lokaal .yaml- of .yml-bestand. Kies daarna ‘Valideren’. Met ‘Voorbeeld laden’ zie je een werkende CI-workflow. Selecteer een probleem om naar de betreffende regel en kolom te gaan. Je browser verwerkt de workflow lokaal.",
+  "coverageTitle": "Wat controleert de GitHub Actions-validator?",
+  "coverageBody": "De validator gebruikt actionlint {version} om YAML-syntaxis, triggers, jobafhankelijkheden, runnerlabels, stappen en GitHub Actions-expressies te controleren. Veelvoorkomende problemen zijn een niet-gedefinieerde job in needs, een typefout in een contextnaam zoals github of steps, en een ongeldige verwijzing in uses.",
+  "cliTitle": "Workflows in je repository controleren",
+  "cliBody": "Voer actionlint uit in je repository om projectinstellingen en verwijzingen naar lokale actions of herbruikbare workflows mee te nemen. Als ShellCheck en Pyflakes geïnstalleerd zijn, kan de lokale CLI ze ook gebruiken om scripts te analyseren.",
+  "reference": "Naslag voor de GitHub Actions-workflowsyntaxis"
+}

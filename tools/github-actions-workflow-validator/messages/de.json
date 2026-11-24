@@ -1,0 +1,23 @@
+{
+  "inputLabel": "Workflow-YAML",
+  "placeholder": "Inhalt einer Datei aus .github/workflows hier einfügen …",
+  "openFile": "Datei öffnen",
+  "example": "Beispiel laden",
+  "clear": "Leeren",
+  "validate": "Validieren",
+  "results": "Validierungsergebnisse",
+  "idle": "Fügen Sie Workflow-YAML ein oder öffnen Sie eine lokale Datei.",
+  "valid": "Dieser Workflow hat die actionlint-Prüfung bestanden.",
+  "invalid": "Prüfen Sie die unten aufgeführten Probleme.",
+  "location": "Zeile {line}, Spalte {column}",
+  "fileError": "Die Datei konnte nicht geöffnet werden.",
+  "checkError": "Die Prüfung konnte nicht abgeschlossen werden.",
+  "singleDocument": "Eine Workflow-Datei muss genau ein YAML-Dokument enthalten.",
+  "introTitle": "So validieren Sie einen GitHub-Actions-Workflow",
+  "introBody": "Fügen Sie einen Workflow aus .github/workflows ein oder öffnen Sie eine lokale .yaml- oder .yml-Datei. Wählen Sie dann „Validieren“. „Beispiel laden“ zeigt einen funktionierenden CI-Workflow. Wählen Sie ein Problem aus, um zur betroffenen Zeile und Spalte zu springen. Ihr Browser verarbeitet den Workflow lokal.",
+  "coverageTitle": "Was prüft der GitHub-Actions-Validator?",
+  "coverageBody": "Der Validator verwendet actionlint {version}, um die YAML-Syntax, Auslöser, Job-Abhängigkeiten, Runner-Labels, Schritte und GitHub-Actions-Ausdrücke zu prüfen. Typische Probleme sind ein nicht definierter Job in needs, ein Tippfehler im Kontextnamen github oder steps und eine ungültige Referenz in uses.",
+  "cliTitle": "Workflows im eigenen Repository prüfen",
+  "cliBody": "Führen Sie actionlint in Ihrem Repository aus, damit auch Projekteinstellungen, Verweise auf lokale Actions und Verweise auf wiederverwendbare Workflows in die Prüfung einfließen. Wenn ShellCheck und Pyflakes installiert sind, kann die lokale CLI sie zur Skriptanalyse verwenden.",
+  "reference": "GitHub-Actions-Referenz zur Workflow-Syntax"
+}

@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML do fluxo de trabalho",
+  "placeholder": "Cole aqui o conteúdo de um arquivo de .github/workflows…",
+  "openFile": "Abrir arquivo",
+  "example": "Carregar exemplo",
+  "clear": "Limpar",
+  "validate": "Validar",
+  "results": "Resultados da validação",
+  "idle": "Cole o YAML do fluxo de trabalho ou abra um arquivo deste dispositivo para validar.",
+  "valid": "O fluxo de trabalho passou nas verificações do actionlint.",
+  "invalid": "Revise os problemas indicados abaixo.",
+  "location": "Linha {line}, coluna {column}",
+  "fileError": "Não foi possível abrir o arquivo.",
+  "checkError": "Não foi possível concluir a validação.",
+  "singleDocument": "Um arquivo de fluxo de trabalho deve conter um único documento YAML.",
+  "introTitle": "Como validar um fluxo de trabalho do GitHub Actions",
+  "introBody": "Cole o conteúdo de um arquivo de .github/workflows ou abra um arquivo .yaml ou .yml deste dispositivo e selecione Validar. Selecione Carregar exemplo para ver um fluxo de trabalho válido de integração contínua (CI). Selecione um problema para ir à linha e à coluna correspondentes. O fluxo de trabalho é processado no seu navegador.",
+  "coverageTitle": "O que o validador do GitHub Actions verifica?",
+  "coverageBody": "O validador usa actionlint {version} para verificar a sintaxe YAML, os gatilhos, as dependências entre jobs, os rótulos dos executores, as etapas e as expressões do GitHub Actions. Problemas comuns incluem um job não definido em needs, um contexto digitado incorretamente, como github ou steps, e uma referência uses inválida.",
+  "cliTitle": "Como verificar os fluxos de trabalho no seu repositório",
+  "cliBody": "Execute actionlint no seu repositório para levar em conta as configurações do projeto e as referências a ações locais ou a fluxos de trabalho reutilizáveis. A CLI também pode analisar scripts com ShellCheck e Pyflakes quando essas ferramentas estão instaladas.",
+  "reference": "Referência da sintaxe de fluxos de trabalho do GitHub Actions"
+}

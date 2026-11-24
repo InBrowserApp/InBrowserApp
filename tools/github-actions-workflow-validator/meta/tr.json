@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions İş Akışı Doğrulayıcı",
+  "description": "GitHub Actions iş akışı YAML dosyalarını actionlint ile çevrimiçi doğrulayın. Sözdizimi hatalarını, geçersiz ifadeleri ve iş bağımlılığı sorunlarını satır ve sütun numaralarıyla bulun."
+}

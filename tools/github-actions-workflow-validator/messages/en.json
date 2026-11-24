@@ -1,0 +1,23 @@
+{
+  "inputLabel": "Workflow YAML",
+  "placeholder": "Paste a file from .github/workflows here…",
+  "openFile": "Open file",
+  "example": "Load example",
+  "clear": "Clear",
+  "validate": "Validate",
+  "results": "Validation results",
+  "idle": "Paste workflow YAML or open a local file to check.",
+  "valid": "This workflow passes the actionlint checks.",
+  "invalid": "Review the issues below.",
+  "location": "Line {line}, column {column}",
+  "fileError": "Could not open the file.",
+  "checkError": "Could not complete the check.",
+  "singleDocument": "A workflow file must contain one YAML document.",
+  "introTitle": "How to validate a GitHub Actions workflow",
+  "introBody": "Paste a workflow from .github/workflows or open a local .yaml or .yml file, then select Validate. Load example shows a working CI workflow. Select an issue to jump to its line and column. The workflow is processed in your browser.",
+  "coverageTitle": "What does the GitHub Actions validator check?",
+  "coverageBody": "The validator uses actionlint {version} to check YAML syntax, triggers, job dependencies, runner labels, steps, and GitHub Actions expressions. Common problems include an undefined job in needs, a misspelled context such as github or steps, and an invalid uses reference.",
+  "cliTitle": "Check workflows in your repository",
+  "cliBody": "Run actionlint from your repository to include project settings and local action or reusable workflow references. The desktop CLI can also use ShellCheck and Pyflakes to analyze scripts when those tools are installed.",
+  "reference": "GitHub Actions workflow syntax reference"
+}

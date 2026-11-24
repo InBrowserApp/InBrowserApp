@@ -1,0 +1,23 @@
+{
+  "inputLabel": "工作流程 YAML",
+  "placeholder": "在這裡貼上 .github/workflows 中的檔案內容…",
+  "openFile": "開啟檔案",
+  "example": "載入範例",
+  "clear": "清空",
+  "validate": "驗證",
+  "results": "驗證結果",
+  "idle": "貼上工作流程 YAML 或開啟裝置中的檔案，即可驗證。",
+  "valid": "這個工作流程已通過 actionlint 檢查。",
+  "invalid": "請查看下方的問題。",
+  "location": "第 {line} 行，第 {column} 欄",
+  "fileError": "無法開啟檔案。",
+  "checkError": "無法完成驗證。",
+  "singleDocument": "一個工作流程檔案必須包含一份 YAML 文件。",
+  "introTitle": "如何驗證 GitHub Actions 工作流程",
+  "introBody": "貼上 .github/workflows 中的工作流程，或開啟裝置中的 .yaml 或 .yml 檔案，再選取「驗證」。「載入範例」會顯示可正常執行的 CI 工作流程。選取任一問題可跳到對應的行與欄。工作流程會在瀏覽器中處理。",
+  "coverageTitle": "GitHub Actions 驗證器會檢查哪些內容？",
+  "coverageBody": "驗證器使用 actionlint {version} 檢查 YAML 語法、觸發事件、作業相依關係、執行器標籤、步驟和 GitHub Actions 運算式。常見問題包括 needs 指向未定義的作業、拼錯 github 或 steps 等上下文名稱，以及 uses 參照無效。",
+  "cliTitle": "檢查存放庫中的工作流程",
+  "cliBody": "在存放庫中執行 actionlint，即可一併檢查專案設定，以及本機動作或可重複使用工作流程的參照。如果已安裝 ShellCheck 和 Pyflakes，也可以用本機的命令列工具分析指令碼。",
+  "reference": "GitHub Actions 工作流程語法參考文件"
+}

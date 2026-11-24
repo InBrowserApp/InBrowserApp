@@ -1,0 +1,4 @@
+{
+  "name": "GitHub Actions 工作流校验器",
+  "description": "使用 actionlint 在线校验 GitHub Actions 工作流 YAML，按行和列查找语法错误、无效表达式和作业依赖问题。"
+}

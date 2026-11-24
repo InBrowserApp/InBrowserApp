@@ -1,0 +1,4 @@
+{
+  "name": "Validator Alur Kerja GitHub Actions",
+  "description": "Validasi YAML alur kerja GitHub Actions secara online dengan actionlint. Temukan kesalahan sintaks, ekspresi yang tidak valid, dan masalah dependensi job beserta baris dan kolomnya."
+}

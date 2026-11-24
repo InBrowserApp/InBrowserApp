@@ -1,0 +1,23 @@
+{
+  "inputLabel": "YAML của quy trình làm việc",
+  "placeholder": "Dán nội dung tệp từ .github/workflows vào đây…",
+  "openFile": "Mở tệp",
+  "example": "Nạp ví dụ",
+  "clear": "Xóa",
+  "validate": "Xác thực",
+  "results": "Kết quả xác thực",
+  "idle": "Dán YAML của quy trình làm việc hoặc mở tệp trên thiết bị để kiểm tra.",
+  "valid": "Quy trình làm việc này đã vượt qua các bước kiểm tra của actionlint.",
+  "invalid": "Xem các vấn đề bên dưới.",
+  "location": "Dòng {line}, cột {column}",
+  "fileError": "Không mở được tệp.",
+  "checkError": "Không thể hoàn tất quá trình xác thực.",
+  "singleDocument": "Tệp quy trình làm việc phải chứa đúng một tài liệu YAML.",
+  "introTitle": "Cách xác thực quy trình làm việc GitHub Actions",
+  "introBody": "Dán nội dung quy trình làm việc từ .github/workflows hoặc mở tệp .yaml hay .yml trên thiết bị, rồi chọn Xác thực. Nạp ví dụ sẽ hiển thị một quy trình CI hoạt động được. Chọn một vấn đề để chuyển đến dòng và cột tương ứng. Trình duyệt xử lý quy trình ngay trên thiết bị của bạn.",
+  "coverageTitle": "Trình xác thực GitHub Actions kiểm tra những gì?",
+  "coverageBody": "Công cụ dùng actionlint {version} để kiểm tra cú pháp YAML, điều kiện kích hoạt, quan hệ phụ thuộc giữa các job, nhãn runner, các bước và biểu thức GitHub Actions. Lỗi thường gặp gồm needs tham chiếu đến job chưa được định nghĩa, viết sai tên ngữ cảnh như github hoặc steps, và tham chiếu uses không hợp lệ.",
+  "cliTitle": "Kiểm tra quy trình làm việc trong kho lưu trữ",
+  "cliBody": "Chạy actionlint trong kho lưu trữ để kiểm tra cả thiết lập dự án và các tham chiếu đến action cục bộ hoặc quy trình làm việc có thể tái sử dụng. Nếu đã cài ShellCheck và Pyflakes, công cụ dòng lệnh trên máy cũng có thể dùng chúng để phân tích tập lệnh.",
+  "reference": "Tài liệu tham chiếu cú pháp quy trình làm việc GitHub Actions"
+}
