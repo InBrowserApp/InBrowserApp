@@ -18,15 +18,17 @@ import { analyzeJson, type Spreadsheet } from "./core/table"
 import type { Messages } from "./types"
 import { Preview } from "./preview"
 
-const example = JSON.stringify(
-  [
-    { name: "Maya", contact: { city: "Oslo" }, active: true, visits: 12 },
-    { name: "Leo", contact: { city: "Lisbon" }, active: false, visits: 7 },
-    { name: "Sam", contact: { city: "Seoul" }, active: true, visits: 19 },
-  ],
-  null,
-  2
-)
+const example = `[
+  {
+    "name": "Maya",
+    "contact": { "city": "Oslo" },
+    "tags": ["retail", "online"]
+  },
+  {
+    "name": "Leo",
+    "contact": { "city": "Lisbon" }
+  }
+]`
 
 export default function Client({
   messages: m,
@@ -56,6 +58,7 @@ export default function Client({
     () => analyzeJson(deferredText, expand),
     [deferredText, expand]
   )
+  const hasInput = Boolean(text)
   const current = text === deferredText
   const table = current && result.state === "ready" ? result.table : null
   const inputError =
@@ -129,32 +132,18 @@ export default function Client({
                 if (file) void openFile(file)
               }}
             />
-            {text.trim() ? (
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="ms-auto"
-                onClick={() => {
-                  updateInput("", "")
-                  editor.current?.focus()
-                }}
-              >
-                {m.clear}
-              </Button>
-            ) : (
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => {
-                  updateInput(example, "")
-                  editor.current?.focus({ preventScroll: true })
-                }}
-              >
-                {m.example}
-              </Button>
-            )}
+            <Button
+              type="button"
+              variant={hasInput ? "ghost" : "outline"}
+              size="sm"
+              className={hasInput ? "ms-auto" : undefined}
+              onClick={() => {
+                updateInput(hasInput ? "" : example, "")
+                if (hasInput) editor.current?.focus()
+              }}
+            >
+              {hasInput ? m.clear : m.example}
+            </Button>
           </div>
           <Textarea
             ref={editor}
@@ -165,12 +154,12 @@ export default function Client({
             autoComplete="off"
             aria-invalid={Boolean(inputError)}
             aria-describedby={error ? `${hintId} ${errorId}` : hintId}
-            className="min-h-56 flex-1 resize-y font-mono text-sm sm:min-h-72"
+            className="field-sizing-fixed min-h-52 flex-1 resize-y text-left font-mono text-sm sm:min-h-72"
             value={text}
             onChange={(event) => updateInput(event.target.value)}
           />
           {error ? (
-            <Alert variant="destructive">
+            <Alert variant="destructive" className="text-start">
               <AlertDescription id={errorId}>{error}</AlertDescription>
             </Alert>
           ) : null}
@@ -216,7 +205,7 @@ export default function Client({
             </div>
           )}
           {downloadStatus === "error" ? (
-            <Alert variant="destructive">
+            <Alert variant="destructive" className="text-start">
               <AlertDescription>{m.downloadError}</AlertDescription>
             </Alert>
           ) : null}
