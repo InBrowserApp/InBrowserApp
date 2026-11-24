@@ -101,6 +101,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/data-uri-to-file-converter/page"),
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
+  "djvu-viewer": () => import("@tool/djvu-viewer/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
   "doc-viewer": () => import("@tool/doc-viewer/page"),
@@ -155,6 +156,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "image-background-remover": () =>
+    import("@tool/image-background-remover/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),
   "image-comparator": () => import("@tool/image-comparator/page"),
   "image-cropper": () => import("@tool/image-cropper/page"),

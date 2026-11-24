@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Bild auswählen",
+  "dropImage": "oder hierher ziehen",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Bild wechseln",
+  "original": "Original",
+  "result": "Ohne Hintergrund",
+  "download": "PNG herunterladen",
+  "preparing": "Modell zum Freistellen wird geladen…",
+  "processing": "Hintergrund wird entfernt…",
+  "invalidImage": "Das Bild konnte nicht geöffnet werden. Wähle eine JPG-, PNG- oder WebP-Datei.",
+  "modelFailed": "Das Modell konnte nicht geladen werden. Prüfe deine Internetverbindung und versuche es erneut.",
+  "processingFailed": "Der Hintergrund konnte nicht entfernt werden. Versuche es erneut oder wähle ein anderes Bild.",
+  "retry": "Erneut versuchen"
+}

@@ -16,11 +16,13 @@
         "couldNotResolve": true,
         "pathNot": [
           "^astro:",
+          "^djvu-rs/(scalar|simd128)/djvu_rs_bg[.]wasm[?]url$",
           "^mediainfo[.]js/MediaInfoModule[.]wasm[?]url$",
           "^hb-subset-wasm/hb-subset[.]wasm[?]url$",
           "^@imagemagick/magick-wasm/magick[.]wasm[?]url$",
           "^@resvg/resvg-wasm/index_bg[.]wasm[?]url$",
           "^@file-viewer/renderer-chm/(worker/chm[.]worker[.]js|wasm/chm_wasm([.]js|_bg[.]wasm))[?]url&no-inline$",
+          "^onnxruntime-web/ort-wasm-simd-threaded[.]wasm[?]url$",
           "^wasm-media-encoders/wasm/(mp3|ogg)[?]url$"
         ]
       }

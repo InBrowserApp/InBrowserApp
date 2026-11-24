@@ -1,0 +1,15 @@
+{
+  "chooseImage": "选择图片",
+  "dropImage": "或将图片拖到这里",
+  "formats": "JPG、PNG、WebP",
+  "changeImage": "更换图片",
+  "original": "原图",
+  "result": "去背景后",
+  "download": "下载 PNG",
+  "preparing": "正在加载去背景模型…",
+  "processing": "正在去除背景…",
+  "invalidImage": "无法打开这张图片。请选择 JPG、PNG 或 WebP 文件。",
+  "modelFailed": "模型加载失败。请检查网络连接后重试。",
+  "processingFailed": "无法去除背景。请重试或更换图片。",
+  "retry": "重试"
+}

@@ -7178,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "djvu-viewer",
+    language: "ar",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "de",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "en",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "es",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "fr",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "he",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "hi",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "id",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "it",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ja",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ko",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ms",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "nl",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "no",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "pl",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "pt",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "ru",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "sv",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "th",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "tr",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "vi",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "djvu-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "dns-lookup",
     language: "ar",
   },
@@ -11315,6 +11407,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ical-event-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ar",
+  },
+  {
+    slug: "image-background-remover",
+    language: "de",
+  },
+  {
+    slug: "image-background-remover",
+    language: "en",
+  },
+  {
+    slug: "image-background-remover",
+    language: "es",
+  },
+  {
+    slug: "image-background-remover",
+    language: "fr",
+  },
+  {
+    slug: "image-background-remover",
+    language: "he",
+  },
+  {
+    slug: "image-background-remover",
+    language: "hi",
+  },
+  {
+    slug: "image-background-remover",
+    language: "id",
+  },
+  {
+    slug: "image-background-remover",
+    language: "it",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ja",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ko",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ms",
+  },
+  {
+    slug: "image-background-remover",
+    language: "nl",
+  },
+  {
+    slug: "image-background-remover",
+    language: "no",
+  },
+  {
+    slug: "image-background-remover",
+    language: "pl",
+  },
+  {
+    slug: "image-background-remover",
+    language: "pt",
+  },
+  {
+    slug: "image-background-remover",
+    language: "ru",
+  },
+  {
+    slug: "image-background-remover",
+    language: "sv",
+  },
+  {
+    slug: "image-background-remover",
+    language: "th",
+  },
+  {
+    slug: "image-background-remover",
+    language: "tr",
+  },
+  {
+    slug: "image-background-remover",
+    language: "vi",
+  },
+  {
+    slug: "image-background-remover",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-background-remover",
     language: "zh-TW",
   },
   {

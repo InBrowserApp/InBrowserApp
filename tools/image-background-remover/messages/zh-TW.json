@@ -1,0 +1,15 @@
+{
+  "chooseImage": "選擇圖片",
+  "dropImage": "或將圖片拖曳到這裡",
+  "formats": "JPG、PNG、WebP",
+  "changeImage": "更換圖片",
+  "original": "原圖",
+  "result": "去背後",
+  "download": "下載 PNG",
+  "preparing": "正在載入去背模型…",
+  "processing": "正在去背…",
+  "invalidImage": "無法開啟這張圖片。請選擇 JPG、PNG 或 WebP 檔案。",
+  "modelFailed": "無法載入模型。請確認網路連線後再試一次。",
+  "processingFailed": "無法完成去背。請再試一次或更換圖片。",
+  "retry": "再試一次"
+}

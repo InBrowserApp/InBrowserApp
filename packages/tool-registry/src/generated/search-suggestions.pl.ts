@@ -393,6 +393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "document",
+    name: "Przeglądarka DjVu",
+    slug: "djvu-viewer",
+  },
+  {
     category: "network",
     name: "Wyszukiwanie DNS",
     slug: "dns-lookup",
@@ -616,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Generator wydarzeń iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "Usuwanie tła ze zdjęć",
+    slug: "image-background-remover",
   },
   {
     category: "image",

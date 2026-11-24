@@ -1,0 +1,15 @@
+{
+  "chooseImage": "이미지 선택",
+  "dropImage": "또는 여기에 끌어다 놓기",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "이미지 바꾸기",
+  "original": "원본",
+  "result": "배경 제거 결과",
+  "download": "PNG 다운로드",
+  "preparing": "배경 제거 모델을 불러오는 중…",
+  "processing": "배경을 제거하는 중…",
+  "invalidImage": "이미지를 열 수 없습니다. JPG, PNG 또는 WebP 파일을 선택해 주세요.",
+  "modelFailed": "모델을 불러오지 못했습니다. 인터넷 연결을 확인하고 다시 시도해 주세요.",
+  "processingFailed": "배경을 제거하지 못했습니다. 다시 시도하거나 다른 이미지를 선택해 주세요.",
+  "retry": "다시 시도"
+}

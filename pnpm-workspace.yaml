@@ -12,8 +12,9 @@ catalog:
   "@citation-js/core": 0.9.0
   "@citation-js/plugin-bibtex": 0.9.0
   "@citation-js/plugin-ris": 0.9.0
+  djvu-rs: 0.46.0
   mediabunny: 1.66.0
-  bidi-js: 1.0.3
+  onnxruntime-web: 1.31.1
   tesseract.js: 7.0.0
   tesseract.js-core: 7.0.0
   "@tesseract.js-data/afr": 1.0.0
@@ -218,6 +219,7 @@ catalog:
   astro: ^7.4.12
   bcrypt-ts: ^9.0.3
   basic-ftp: ^6.2.6
+  bidi-js: 1.0.3
   bip39: ^3.1.2
   # v3 depends on the unpublished @c4312/blake3-internal@2.1.7.
   blake3-wasm: 2.1.5
@@ -323,6 +325,7 @@ allowBuilds:
   es5-ext: false
   esbuild: true
   msw: true
+  protobufjs: false
   sharp: true
   tesseract.js: false
   tree-sitter: false
@@ -337,6 +340,7 @@ publicHoistPattern:
   - "@types/*"
 
 patchedDependencies:
+  djvu-rs@0.46.0: patches/djvu-rs@0.46.0.patch
   "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch"
   "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch"
   "caj2pdf-rust@0.8.1": "patches/caj2pdf-rust@0.8.1.patch"

@@ -1,0 +1,15 @@
+{
+  "chooseImage": "בחירת תמונה",
+  "dropImage": "או גררו אותה לכאן",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "החלפת תמונה",
+  "original": "תמונה מקורית",
+  "result": "תמונה ללא רקע",
+  "download": "הורדת PNG",
+  "preparing": "מודל הסרת הרקע נטען…",
+  "processing": "מסירים את הרקע…",
+  "invalidImage": "לא ניתן לפתוח את התמונה. בחרו קובץ JPG, PNG או WebP.",
+  "modelFailed": "טעינת המודל נכשלה. בדקו את החיבור לאינטרנט ונסו שוב.",
+  "processingFailed": "הסרת הרקע נכשלה. נסו שוב או בחרו תמונה אחרת.",
+  "retry": "ניסיון נוסף"
+}

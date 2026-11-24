@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Choose image",
+  "dropImage": "or drop it here",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Change image",
+  "original": "Original",
+  "result": "Background removed",
+  "download": "Download PNG",
+  "preparing": "Loading the background removal model…",
+  "processing": "Removing background…",
+  "invalidImage": "This image couldn't be opened. Choose a JPG, PNG, or WebP file.",
+  "modelFailed": "The model couldn't load. Check your connection and try again.",
+  "processingFailed": "The background couldn't be removed. Try again or choose another image.",
+  "retry": "Try again"
+}

@@ -1,0 +1,15 @@
+{
+  "chooseImage": "Chọn ảnh",
+  "dropImage": "hoặc thả ảnh vào đây",
+  "formats": "JPG, PNG, WebP",
+  "changeImage": "Đổi ảnh",
+  "original": "Ảnh gốc",
+  "result": "Ảnh đã xóa nền",
+  "download": "Tải PNG",
+  "preparing": "Đang tải mô hình xóa nền…",
+  "processing": "Đang xóa nền…",
+  "invalidImage": "Không mở được ảnh này. Hãy chọn tệp JPG, PNG hoặc WebP.",
+  "modelFailed": "Không tải được mô hình. Hãy kiểm tra kết nối mạng rồi thử lại.",
+  "processingFailed": "Không xóa được nền ảnh. Hãy thử lại hoặc chọn ảnh khác.",
+  "retry": "Thử lại"
+}

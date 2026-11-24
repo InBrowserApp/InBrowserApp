@@ -9972,6 +9972,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "djvu-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: ["djvu", "djv", "viewer", "reader", "scanned", "book", "document"],
+    locales: {
+      ar: {
+        name: "عارض DjVu",
+        description:
+          "افتح ملفات ⁦.djvu⁩ و⁦.djv⁩ واقرأها عبر الإنترنت. قلّب الصفحات، وانتقل إلى أي صفحة برقمها، وكبّر تفاصيل الكتب والمستندات الممسوحة ضوئيًا. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "DjVu-Betrachter",
+        description:
+          "Öffnen und lesen Sie .djvu- und .djv-Dateien online. Blättern Sie, springen Sie direkt zu einer Seite und vergrößern Sie Scans. Die Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "DjVu Viewer",
+        description:
+          "Open and read .djvu and .djv files online. Turn pages, jump to a page number, and zoom in on scanned books and documents. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de DjVu",
+        description:
+          "Abre y lee archivos .djvu y .djv en línea. Pasa páginas, salta a una página concreta y amplía libros y documentos escaneados. Los archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse DjVu",
+        description:
+          "Ouvrez et lisez les fichiers .djvu et .djv en ligne. Tournez les pages, accédez à une page précise et zoomez sur vos livres et documents numérisés. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג DjVu",
+        description:
+          "פתחו וקראו קובצי ⁦.djvu⁩ ו־⁦.djv⁩ באינטרנט. דפדפו, עברו ישירות לעמוד לפי מספרו והגדילו פרטים בספרים ובמסמכים סרוקים. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "DjVu व्यूअर",
+        description:
+          "ऑनलाइन .djvu और .djv फ़ाइलें खोलें और पढ़ें। पेज पलटें, सीधे किसी पेज पर जाएँ और स्कैन की गई किताबों व दस्तावेज़ों को ज़ूम करके देखें। फ़ाइलें आपके डिवाइस पर ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil DjVu",
+        description:
+          "Buka dan baca file .djvu dan .djv secara online. Pindah ke halaman yang diinginkan dan perbesar pindaian buku atau dokumen. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore DjVu",
+        description:
+          "Apri e leggi file .djvu e .djv online. Sfoglia le pagine, vai direttamente a quella che cerchi e ingrandisci libri e documenti scansionati. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "DjVu ビューアー",
+        description:
+          ".djvu・.djv ファイルをオンラインで開いて読めます。ページの移動や指定、スキャンされた書籍や文書の拡大表示に対応。ファイルはお使いの端末内に保持されます。",
+      },
+      ko: {
+        name: "DjVu 뷰어",
+        description:
+          ".djvu 및 .djv 파일을 온라인에서 열고 읽으세요. 페이지를 넘기거나 지정한 페이지로 이동하고 스캔한 책과 문서를 확대할 수 있습니다. 파일은 기기에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Pemapar DjVu",
+        description:
+          "Buka dan baca fail .djvu dan .djv dalam talian. Selak halaman, lompat ke halaman tertentu dan zum buku atau dokumen imbasan. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "DjVu-viewer",
+        description:
+          "Open .djvu- en .djv-bestanden online. Blader door gescande boeken en documenten, ga direct naar een pagina en zoom in. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "DjVu-viser",
+        description:
+          "Åpne .djvu- og .djv-filer på nett. Bla i skannede bøker og dokumenter, gå rett til en side og zoom inn på detaljer. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka DjVu",
+        description:
+          "Otwieraj pliki .djvu i .djv online. Przeglądaj skany książek i dokumentów, przechodź do wybranej strony i powiększaj szczegóły. Pliki pozostają na urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de DjVu",
+        description:
+          "Abra e leia arquivos .djvu e .djv online. Passe de página, vá direto à página desejada e amplie livros e documentos digitalizados. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр DjVu",
+        description:
+          "Открывайте файлы .djvu и .djv онлайн, листайте страницы, переходите по номеру и увеличивайте сканы книг и документов. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "DjVu-visare",
+        description:
+          "Öppna .djvu- och .djv-filer online. Bläddra bland skannade sidor, gå direkt till en sida och zooma in på detaljer. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดู DjVu",
+        description:
+          "เปิดและอ่านไฟล์ .djvu และ .djv ออนไลน์ พลิกหน้า ข้ามไปยังหน้าที่ต้องการ และซูมดูหนังสือหรือเอกสารสแกน ไฟล์จะอยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DjVu Görüntüleyici",
+        description:
+          ".djvu ve .djv dosyalarını çevrimiçi açıp okuyun. Taranmış kitaplarda ve belgelerde sayfa çevirin, istediğiniz sayfaya geçin ve yakınlaştırın. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem DjVu",
+        description:
+          "Mở và đọc tệp .djvu và .djv trực tuyến. Lật trang, đến thẳng trang cần đọc và phóng to sách, tài liệu quét. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DjVu 查看器",
+        description:
+          "在线打开并阅读 .djvu 和 .djv 文件。翻页、跳转到指定页码，并放大查看扫描书籍和文档。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "DjVu 檢視器",
+        description:
+          "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "dns-lookup",
     category: "network",
     icon: "globe",
@@ -15600,6 +15723,135 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  {
+    slug: "image-background-remover",
+    category: "image",
+    icon: "scissors",
+    tags: [
+      "background removal",
+      "transparent png",
+      "cutout",
+      "product photo",
+      "portrait",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة خلفية الصورة",
+        description:
+          "أزل خلفية صور المنتجات والصور الشخصية والرسومات تلقائيًا. عاين النتيجة ونزّلها بصيغة PNG بخلفية شفافة وبالأبعاد الأصلية. تبقى الصورة في متصفحك.",
+      },
+      de: {
+        name: "Bildhintergrund entfernen",
+        description:
+          "Entferne automatisch den Hintergrund von Produktfotos, Porträts und Grafiken. Prüfe die Vorschau und lade ein transparentes PNG in Originalgröße herunter. Dein Bild bleibt im Browser.",
+      },
+      en: {
+        name: "Image Background Remover",
+        description:
+          "Automatically remove the background from product photos, portraits, and graphics. Preview and download a transparent PNG at the original size. Your image stays in your browser.",
+      },
+      es: {
+        name: "Quitar fondo de imágenes",
+        description:
+          "Quita automáticamente el fondo de fotos de productos, retratos y gráficos. Previsualiza y descarga un PNG transparente con las dimensiones originales. Tu imagen se queda en el navegador.",
+      },
+      fr: {
+        name: "Supprimer l’arrière-plan d’une image",
+        description:
+          "Supprimez automatiquement l’arrière-plan de vos photos de produits, portraits et visuels. Prévisualisez et téléchargez un PNG transparent aux dimensions d’origine. L’image reste dans votre navigateur.",
+      },
+      he: {
+        name: "הסרת רקע מתמונה",
+        description:
+          "הסירו אוטומטית רקע מתמונות מוצר, דיוקנאות וגרפיקה. בדקו את התוצאה והורידו קובץ PNG עם רקע שקוף בגודל המקורי. התמונה נשארת בדפדפן שלכם.",
+      },
+      hi: {
+        name: "फ़ोटो का बैकग्राउंड हटाएँ",
+        description:
+          "प्रोडक्ट फ़ोटो, पोर्ट्रेट और ग्राफ़िक्स से बैकग्राउंड अपने आप हटाएँ। नतीजा देखें और मूल आकार में पारदर्शी बैकग्राउंड वाली PNG डाउनलोड करें। इमेज आपके ब्राउज़र में ही रहती है।",
+      },
+      id: {
+        name: "Hapus Latar Belakang Gambar",
+        description:
+          "Hapus latar belakang foto produk, potret, dan grafis secara otomatis. Pratinjau hasilnya dan unduh PNG transparan dalam ukuran asli. Gambar tetap di browser Anda.",
+      },
+      it: {
+        name: "Rimuovi lo sfondo dalle immagini",
+        description:
+          "Rimuovi automaticamente lo sfondo da foto di prodotti, ritratti e grafiche. Controlla l’anteprima e scarica un PNG trasparente che mantiene le dimensioni originali. L’immagine resta nel browser.",
+      },
+      ja: {
+        name: "画像の背景を削除",
+        description:
+          "商品写真やポートレート、イラストの背景を自動で削除。仕上がりをプレビューし、元のサイズの透過 PNG をダウンロードできます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 배경 제거",
+        description:
+          "상품 사진, 인물 사진, 그래픽의 배경을 자동으로 제거합니다. 결과를 미리 보고 원본 크기의 투명 배경 PNG를 다운로드하세요. 이미지는 브라우저 안에서 처리됩니다.",
+      },
+      ms: {
+        name: "Buang Latar Belakang Imej",
+        description:
+          "Buang latar belakang foto produk, potret dan grafik secara automatik. Semak pratonton dan muat turun PNG berlatar lutsinar dalam saiz asal. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Achtergrond van afbeelding verwijderen",
+        description:
+          "Verwijder automatisch de achtergrond van productfoto’s, portretten en afbeeldingen. Bekijk het resultaat en download een transparante PNG op origineel formaat. Je afbeelding blijft in je browser.",
+      },
+      no: {
+        name: "Fjern bakgrunn fra bilde",
+        description:
+          "Fjern automatisk bakgrunnen fra produktbilder, portretter og grafikk. Forhåndsvis resultatet og last ned en PNG med gjennomsiktig bakgrunn i original størrelse. Bildet blir i nettleseren din.",
+      },
+      pl: {
+        name: "Usuwanie tła ze zdjęć",
+        description:
+          "Automatycznie usuwaj tło ze zdjęć produktów, portretów i grafik. Sprawdź podgląd i pobierz plik PNG z przezroczystym tłem w oryginalnym rozmiarze. Obraz pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover fundo de imagem",
+        description:
+          "Remova automaticamente o fundo de fotos de produtos, retratos e artes. Confira a prévia e baixe um PNG transparente nas dimensões originais. Sua imagem fica no navegador.",
+      },
+      ru: {
+        name: "Удаление фона с изображения",
+        description:
+          "Автоматически удаляйте фон с фотографий товаров, портретов и графики. Просматривайте результат и скачивайте PNG с прозрачным фоном в исходном размере. Изображение остаётся в браузере.",
+      },
+      sv: {
+        name: "Ta bort bakgrund från bild",
+        description:
+          "Ta automatiskt bort bakgrunden från produktfoton, porträtt och grafik. Förhandsgranska resultatet och ladda ned en PNG med transparent bakgrund i originalstorlek. Bilden stannar i din webbläsare.",
+      },
+      th: {
+        name: "ลบพื้นหลังรูปภาพ",
+        description:
+          "ลบพื้นหลังภาพสินค้า ภาพบุคคล และภาพกราฟิกโดยอัตโนมัติ ดูตัวอย่างแล้วดาวน์โหลด PNG พื้นหลังโปร่งใสขนาดเท่าต้นฉบับ รูปภาพประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görsel Arka Planını Kaldırma",
+        description:
+          "Ürün fotoğraflarının, portrelerin ve grafiklerin arka planını otomatik olarak kaldırın. Sonucu önizleyin ve orijinal boyutunda şeffaf PNG olarak indirin. Görseliniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Xóa nền ảnh",
+        description:
+          "Tự động xóa nền ảnh sản phẩm, ảnh chân dung và hình đồ họa. Xem trước rồi tải ảnh PNG nền trong suốt ở kích thước gốc. Ảnh được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片去背景",
+        description:
+          "自动为商品照、人像和素材去背景。在浏览器中预览并下载原尺寸透明 PNG，无需上传图片。",
+      },
+      "zh-TW": {
+        name: "圖片去背",
+        description:
+          "在瀏覽器內為商品照、人像和設計素材自動去背。預覽去背效果並下載原始尺寸的透明 PNG，無須上傳圖片。",
       },
     },
   },
@@ -52273,6 +52525,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "djvu-viewer": {
+    slug: "djvu-viewer",
+    category: "document",
+    icon: "book-open",
+    tags: ["djvu", "djv", "viewer", "reader", "scanned", "book", "document"],
+    locales: {
+      ar: {
+        name: "عارض DjVu",
+        description:
+          "افتح ملفات ⁦.djvu⁩ و⁦.djv⁩ واقرأها عبر الإنترنت. قلّب الصفحات، وانتقل إلى أي صفحة برقمها، وكبّر تفاصيل الكتب والمستندات الممسوحة ضوئيًا. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "DjVu-Betrachter",
+        description:
+          "Öffnen und lesen Sie .djvu- und .djv-Dateien online. Blättern Sie, springen Sie direkt zu einer Seite und vergrößern Sie Scans. Die Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "DjVu Viewer",
+        description:
+          "Open and read .djvu and .djv files online. Turn pages, jump to a page number, and zoom in on scanned books and documents. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de DjVu",
+        description:
+          "Abre y lee archivos .djvu y .djv en línea. Pasa páginas, salta a una página concreta y amplía libros y documentos escaneados. Los archivos se quedan en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse DjVu",
+        description:
+          "Ouvrez et lisez les fichiers .djvu et .djv en ligne. Tournez les pages, accédez à une page précise et zoomez sur vos livres et documents numérisés. Vos fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג DjVu",
+        description:
+          "פתחו וקראו קובצי ⁦.djvu⁩ ו־⁦.djv⁩ באינטרנט. דפדפו, עברו ישירות לעמוד לפי מספרו והגדילו פרטים בספרים ובמסמכים סרוקים. הקבצים נשארים במכשיר שלכם.",
+      },
+      hi: {
+        name: "DjVu व्यूअर",
+        description:
+          "ऑनलाइन .djvu और .djv फ़ाइलें खोलें और पढ़ें। पेज पलटें, सीधे किसी पेज पर जाएँ और स्कैन की गई किताबों व दस्तावेज़ों को ज़ूम करके देखें। फ़ाइलें आपके डिवाइस पर ही रहती हैं।",
+      },
+      id: {
+        name: "Penampil DjVu",
+        description:
+          "Buka dan baca file .djvu dan .djv secara online. Pindah ke halaman yang diinginkan dan perbesar pindaian buku atau dokumen. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore DjVu",
+        description:
+          "Apri e leggi file .djvu e .djv online. Sfoglia le pagine, vai direttamente a quella che cerchi e ingrandisci libri e documenti scansionati. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "DjVu ビューアー",
+        description:
+          ".djvu・.djv ファイルをオンラインで開いて読めます。ページの移動や指定、スキャンされた書籍や文書の拡大表示に対応。ファイルはお使いの端末内に保持されます。",
+      },
+      ko: {
+        name: "DjVu 뷰어",
+        description:
+          ".djvu 및 .djv 파일을 온라인에서 열고 읽으세요. 페이지를 넘기거나 지정한 페이지로 이동하고 스캔한 책과 문서를 확대할 수 있습니다. 파일은 기기에 그대로 남습니다.",
+      },
+      ms: {
+        name: "Pemapar DjVu",
+        description:
+          "Buka dan baca fail .djvu dan .djv dalam talian. Selak halaman, lompat ke halaman tertentu dan zum buku atau dokumen imbasan. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "DjVu-viewer",
+        description:
+          "Open .djvu- en .djv-bestanden online. Blader door gescande boeken en documenten, ga direct naar een pagina en zoom in. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "DjVu-viser",
+        description:
+          "Åpne .djvu- og .djv-filer på nett. Bla i skannede bøker og dokumenter, gå rett til en side og zoom inn på detaljer. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka DjVu",
+        description:
+          "Otwieraj pliki .djvu i .djv online. Przeglądaj skany książek i dokumentów, przechodź do wybranej strony i powiększaj szczegóły. Pliki pozostają na urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de DjVu",
+        description:
+          "Abra e leia arquivos .djvu e .djv online. Passe de página, vá direto à página desejada e amplie livros e documentos digitalizados. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр DjVu",
+        description:
+          "Открывайте файлы .djvu и .djv онлайн, листайте страницы, переходите по номеру и увеличивайте сканы книг и документов. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "DjVu-visare",
+        description:
+          "Öppna .djvu- och .djv-filer online. Bläddra bland skannade sidor, gå direkt till en sida och zooma in på detaljer. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดู DjVu",
+        description:
+          "เปิดและอ่านไฟล์ .djvu และ .djv ออนไลน์ พลิกหน้า ข้ามไปยังหน้าที่ต้องการ และซูมดูหนังสือหรือเอกสารสแกน ไฟล์จะอยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DjVu Görüntüleyici",
+        description:
+          ".djvu ve .djv dosyalarını çevrimiçi açıp okuyun. Taranmış kitaplarda ve belgelerde sayfa çevirin, istediğiniz sayfaya geçin ve yakınlaştırın. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem DjVu",
+        description:
+          "Mở và đọc tệp .djvu và .djv trực tuyến. Lật trang, đến thẳng trang cần đọc và phóng to sách, tài liệu quét. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DjVu 查看器",
+        description:
+          "在线打开并阅读 .djvu 和 .djv 文件。翻页、跳转到指定页码，并放大查看扫描书籍和文档。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "DjVu 檢視器",
+        description:
+          "線上開啟並閱讀 .djvu 和 .djv 檔案。翻頁、跳至指定頁碼，並放大檢視掃描書籍和文件。檔案會留在您的裝置上。",
+      },
+    },
+  },
   "dns-lookup": {
     slug: "dns-lookup",
     category: "network",
@@ -57902,6 +58277,135 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  "image-background-remover": {
+    slug: "image-background-remover",
+    category: "image",
+    icon: "scissors",
+    tags: [
+      "background removal",
+      "transparent png",
+      "cutout",
+      "product photo",
+      "portrait",
+    ],
+    locales: {
+      ar: {
+        name: "إزالة خلفية الصورة",
+        description:
+          "أزل خلفية صور المنتجات والصور الشخصية والرسومات تلقائيًا. عاين النتيجة ونزّلها بصيغة PNG بخلفية شفافة وبالأبعاد الأصلية. تبقى الصورة في متصفحك.",
+      },
+      de: {
+        name: "Bildhintergrund entfernen",
+        description:
+          "Entferne automatisch den Hintergrund von Produktfotos, Porträts und Grafiken. Prüfe die Vorschau und lade ein transparentes PNG in Originalgröße herunter. Dein Bild bleibt im Browser.",
+      },
+      en: {
+        name: "Image Background Remover",
+        description:
+          "Automatically remove the background from product photos, portraits, and graphics. Preview and download a transparent PNG at the original size. Your image stays in your browser.",
+      },
+      es: {
+        name: "Quitar fondo de imágenes",
+        description:
+          "Quita automáticamente el fondo de fotos de productos, retratos y gráficos. Previsualiza y descarga un PNG transparente con las dimensiones originales. Tu imagen se queda en el navegador.",
+      },
+      fr: {
+        name: "Supprimer l’arrière-plan d’une image",
+        description:
+          "Supprimez automatiquement l’arrière-plan de vos photos de produits, portraits et visuels. Prévisualisez et téléchargez un PNG transparent aux dimensions d’origine. L’image reste dans votre navigateur.",
+      },
+      he: {
+        name: "הסרת רקע מתמונה",
+        description:
+          "הסירו אוטומטית רקע מתמונות מוצר, דיוקנאות וגרפיקה. בדקו את התוצאה והורידו קובץ PNG עם רקע שקוף בגודל המקורי. התמונה נשארת בדפדפן שלכם.",
+      },
+      hi: {
+        name: "फ़ोटो का बैकग्राउंड हटाएँ",
+        description:
+          "प्रोडक्ट फ़ोटो, पोर्ट्रेट और ग्राफ़िक्स से बैकग्राउंड अपने आप हटाएँ। नतीजा देखें और मूल आकार में पारदर्शी बैकग्राउंड वाली PNG डाउनलोड करें। इमेज आपके ब्राउज़र में ही रहती है।",
+      },
+      id: {
+        name: "Hapus Latar Belakang Gambar",
+        description:
+          "Hapus latar belakang foto produk, potret, dan grafis secara otomatis. Pratinjau hasilnya dan unduh PNG transparan dalam ukuran asli. Gambar tetap di browser Anda.",
+      },
+      it: {
+        name: "Rimuovi lo sfondo dalle immagini",
+        description:
+          "Rimuovi automaticamente lo sfondo da foto di prodotti, ritratti e grafiche. Controlla l’anteprima e scarica un PNG trasparente che mantiene le dimensioni originali. L’immagine resta nel browser.",
+      },
+      ja: {
+        name: "画像の背景を削除",
+        description:
+          "商品写真やポートレート、イラストの背景を自動で削除。仕上がりをプレビューし、元のサイズの透過 PNG をダウンロードできます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 배경 제거",
+        description:
+          "상품 사진, 인물 사진, 그래픽의 배경을 자동으로 제거합니다. 결과를 미리 보고 원본 크기의 투명 배경 PNG를 다운로드하세요. 이미지는 브라우저 안에서 처리됩니다.",
+      },
+      ms: {
+        name: "Buang Latar Belakang Imej",
+        description:
+          "Buang latar belakang foto produk, potret dan grafik secara automatik. Semak pratonton dan muat turun PNG berlatar lutsinar dalam saiz asal. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Achtergrond van afbeelding verwijderen",
+        description:
+          "Verwijder automatisch de achtergrond van productfoto’s, portretten en afbeeldingen. Bekijk het resultaat en download een transparante PNG op origineel formaat. Je afbeelding blijft in je browser.",
+      },
+      no: {
+        name: "Fjern bakgrunn fra bilde",
+        description:
+          "Fjern automatisk bakgrunnen fra produktbilder, portretter og grafikk. Forhåndsvis resultatet og last ned en PNG med gjennomsiktig bakgrunn i original størrelse. Bildet blir i nettleseren din.",
+      },
+      pl: {
+        name: "Usuwanie tła ze zdjęć",
+        description:
+          "Automatycznie usuwaj tło ze zdjęć produktów, portretów i grafik. Sprawdź podgląd i pobierz plik PNG z przezroczystym tłem w oryginalnym rozmiarze. Obraz pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Remover fundo de imagem",
+        description:
+          "Remova automaticamente o fundo de fotos de produtos, retratos e artes. Confira a prévia e baixe um PNG transparente nas dimensões originais. Sua imagem fica no navegador.",
+      },
+      ru: {
+        name: "Удаление фона с изображения",
+        description:
+          "Автоматически удаляйте фон с фотографий товаров, портретов и графики. Просматривайте результат и скачивайте PNG с прозрачным фоном в исходном размере. Изображение остаётся в браузере.",
+      },
+      sv: {
+        name: "Ta bort bakgrund från bild",
+        description:
+          "Ta automatiskt bort bakgrunden från produktfoton, porträtt och grafik. Förhandsgranska resultatet och ladda ned en PNG med transparent bakgrund i originalstorlek. Bilden stannar i din webbläsare.",
+      },
+      th: {
+        name: "ลบพื้นหลังรูปภาพ",
+        description:
+          "ลบพื้นหลังภาพสินค้า ภาพบุคคล และภาพกราฟิกโดยอัตโนมัติ ดูตัวอย่างแล้วดาวน์โหลด PNG พื้นหลังโปร่งใสขนาดเท่าต้นฉบับ รูปภาพประมวลผลในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görsel Arka Planını Kaldırma",
+        description:
+          "Ürün fotoğraflarının, portrelerin ve grafiklerin arka planını otomatik olarak kaldırın. Sonucu önizleyin ve orijinal boyutunda şeffaf PNG olarak indirin. Görseliniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Xóa nền ảnh",
+        description:
+          "Tự động xóa nền ảnh sản phẩm, ảnh chân dung và hình đồ họa. Xem trước rồi tải ảnh PNG nền trong suốt ở kích thước gốc. Ảnh được xử lý ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片去背景",
+        description:
+          "自动为商品照、人像和素材去背景。在浏览器中预览并下载原尺寸透明 PNG，无需上传图片。",
+      },
+      "zh-TW": {
+        name: "圖片去背",
+        description:
+          "在瀏覽器內為商品照、人像和設計素材自動去背。預覽去背效果並下載原始尺寸的透明 PNG，無須上傳圖片。",
       },
     },
   },

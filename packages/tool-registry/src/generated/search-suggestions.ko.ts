@@ -393,6 +393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "device-information",
   },
   {
+    category: "document",
+    name: "DjVu 뷰어",
+    slug: "djvu-viewer",
+  },
+  {
     category: "network",
     name: "DNS 조회",
     slug: "dns-lookup",
@@ -616,6 +621,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 이벤트 생성기",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "이미지 배경 제거",
+    slug: "image-background-remover",
   },
   {
     category: "image",
