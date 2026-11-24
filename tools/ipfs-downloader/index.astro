@@ -29,5 +29,5 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <IpfsDownloader client:load messages={messages} language={lang} />
-  <ToolArticle><Intro /></ToolArticle>
+  <ToolArticle className="[&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]"><Intro /></ToolArticle>
 </ToolPageShell>

@@ -2,6 +2,7 @@ import {
   IpfsFileError,
   listIpfsDirectory,
   openIpfsEntry,
+  resolveIpfsPath,
   verifyBlock,
   type IpfsReference,
   type ReadableStorage,
@@ -103,15 +104,7 @@ export async function addressView(
   store: ReadableStorage,
   signal: AbortSignal
 ) {
-  const path: IpfsReference[] = [
-    { cid: address.cid, name: address.cid.toString() },
-  ]
-  let view = await entryView([...path], store, signal)
-  for (const segment of address.parts) {
-    const child = view.children.find(({ name }) => segment === name)
-    if (!child) throw new IpfsPathError()
-    path.push(child)
-    view = await entryView([...path], store, signal)
-  }
-  return view
+  const path = await resolveIpfsPath(address.cid, address.parts, store, signal)
+  if (!path) throw new IpfsPathError()
+  return entryView(path, store, signal)
 }

@@ -18,7 +18,7 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { LoaderCircle, Search } from "@workspace/ui/icons"
+import { Search } from "@workspace/ui/icons"
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
 
 import {
@@ -31,13 +31,12 @@ import {
 } from "./core/gateway"
 import {
   DownloadFeedback,
-  type Feedback,
-  type PartialDownload,
+  type DownloadOutcome,
+  type DownloadOperation,
 } from "./feedback"
 import type EnglishMessages from "./messages/en.json"
 
 type View = Awaited<ReturnType<typeof entryView>>
-type Job = "opening" | "preparing"
 
 export default function IpfsDownloader({
   language,
@@ -52,37 +51,38 @@ export default function IpfsDownloader({
   const [address, setAddress] = useState("")
   const [invalid, setInvalid] = useState(false)
   const [view, setView] = useState<View | null>(null)
-  const [job, setJob] = useState<Job | null>(null)
-  const [error, setError] = useState<Feedback | null>(null)
-  const [partial, setPartial] = useState<PartialDownload | null>(null)
-  const [progress, setProgress] = useState("")
+  const [operation, setOperation] = useState<DownloadOperation | null>(null)
+  const [outcome, setOutcome] = useState<DownloadOutcome | null>(null)
 
   useEffect(() => () => active.current?.abort(), [])
 
   function cancel() {
     active.current?.abort()
     active.current = null
-    setJob(null)
-    setProgress("")
+    setOperation(null)
   }
 
   async function run(
-    status: Job,
+    status: DownloadOperation["status"],
     action: (signal: AbortSignal) => Promise<void>
   ) {
     active.current?.abort()
     const controller = new AbortController()
     active.current = controller
-    setJob(status)
-    setError(null)
-    setPartial(null)
-    setProgress("")
+    setOperation({ status })
+    setOutcome((previous) =>
+      status === "preparing" && previous?.kind === "partial" ? previous : null
+    )
     try {
       await action(controller.signal)
     } catch (error) {
       if (!controller.signal.aborted) {
         if (error instanceof IpfsFileError) {
-          setError({ message: messages[error.code], path: error.path })
+          setOutcome({
+            kind: "error",
+            message: messages[error.code],
+            path: error.path,
+          })
         } else {
           const key =
             error instanceof IpfsPathError
@@ -90,14 +90,13 @@ export default function IpfsDownloader({
               : status === "opening"
                 ? "unsupported"
                 : "failed"
-          setError({ message: messages[key] })
+          setOutcome({ kind: "error", message: messages[key] })
         }
       }
     } finally {
       if (active.current === controller) {
         active.current = null
-        setJob(null)
-        setProgress("")
+        setOperation(null)
       }
     }
   }
@@ -130,6 +129,7 @@ export default function IpfsDownloader({
       if (entry.type !== "directory") {
         const file = await readIpfsFile(entry, signal)
         signal.throwIfAborted()
+        setOutcome(null)
         downloadBlob(file, name)
         return
       }
@@ -137,16 +137,20 @@ export default function IpfsDownloader({
         entry,
         store,
         signal,
-        setProgress
+        (path) => {
+          if (!signal.aborted) setOperation({ status: "preparing", path })
+        }
       )
       signal.throwIfAborted()
       if (result.failed.length > 0) {
-        setPartial({
+        setOutcome({
+          kind: "partial",
           file: result.saved ? result.blob : null,
           paths: result.failed,
           name: `${name}.partial.zip`,
         })
       } else {
+        setOutcome(null)
         downloadBlob(result.blob, `${name}.zip`)
       }
     })
@@ -154,15 +158,8 @@ export default function IpfsDownloader({
 
   const feedback = (
     <DownloadFeedback
-      status={
-        job
-          ? progress
-            ? messages.progress.replace("{path}", () => progress)
-            : messages[job]
-          : null
-      }
-      error={error}
-      partial={partial}
+      operation={operation}
+      outcome={outcome}
       messages={messages}
       cancel={cancel}
     />
@@ -201,16 +198,8 @@ export default function IpfsDownloader({
               )}
             </Field>
             <div className="flex flex-wrap gap-2">
-              <Button type="submit" disabled={job === "opening"}>
-                {job === "opening" ? (
-                  <LoaderCircle
-                    data-icon="inline-start"
-                    className="animate-spin"
-                    aria-hidden="true"
-                  />
-                ) : (
-                  <Search data-icon="inline-start" aria-hidden="true" />
-                )}
+              <Button type="submit" disabled={operation?.status === "opening"}>
+                <Search data-icon="inline-start" aria-hidden="true" />
                 {messages.open}
               </Button>
               <Button
@@ -245,7 +234,7 @@ export default function IpfsDownloader({
                 }).format(view.entry.size)
           }
           labels={messages}
-          busy={Boolean(job)}
+          busy={Boolean(operation)}
           feedback={feedback}
           onBack={
             view.path.length > 1

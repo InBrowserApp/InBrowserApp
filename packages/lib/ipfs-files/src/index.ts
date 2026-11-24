@@ -1,5 +1,9 @@
 import {
   exporter,
+  NotFoundError,
+  NoResolverError,
+  NotUnixFSError,
+  walkPath,
   type UnixFSEntry,
   type UnixFSDirectory,
   type ReadableStorage,
@@ -39,7 +43,14 @@ export async function openIpfsEntry(
   store: ReadableStorage,
   signal: AbortSignal
 ) {
-  const entry = await exporter(cid, store, { signal })
+  const entry = await exporter(cid, store, { signal }).catch(
+    (error: unknown) => {
+      if (error instanceof NoResolverError || error instanceof NotUnixFSError) {
+        throw new IpfsFileError("unsupported", undefined, { cause: error })
+      }
+      throw error
+    }
+  )
   if (
     entry.type === "object" ||
     (entry.type === "file" && entry.unixfs.type === "symlink")
@@ -53,6 +64,28 @@ export type IpfsEntry = Exclude<UnixFSEntry, { type: "object" }>
 type IpfsFile = Exclude<IpfsEntry, UnixFSDirectory>
 
 export type IpfsReference = { cid: CID; name: string }
+
+export async function resolveIpfsPath(
+  cid: CID,
+  parts: readonly string[],
+  store: ReadableStorage,
+  signal: AbortSignal
+) {
+  const path: IpfsReference[] = []
+  try {
+    for await (const { cid: resolved, name } of walkPath(
+      [cid.toString(), ...parts].join("/"),
+      store,
+      { signal }
+    )) {
+      path.push({ cid: resolved, name })
+    }
+  } catch (error) {
+    if (error instanceof NotFoundError) return null
+    throw error
+  }
+  return path.length === parts.length + 1 ? path : null
+}
 
 export async function listIpfsDirectory(
   directory: UnixFSDirectory,

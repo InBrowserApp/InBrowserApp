@@ -130,3 +130,33 @@ it("resolves nested paths and distinguishes a nonexistent path", async () => {
     )
   ).rejects.toBeInstanceOf(IpfsPathError)
 })
+
+it("opens a reachable HAMT entry without enumerating unavailable sibling shards", async () => {
+  const { default: hamt } = await import("../fixtures/hamt.json")
+  const available: Record<string, string> = hamt.blocks
+  const fetcher = vi.fn<typeof fetch>().mockImplementation(async (url) => {
+    const cid = new URL(String(url)).pathname.split("/").at(-1)!
+    const block = available[cid]
+    return block
+      ? new Response(new Uint8Array(Buffer.from(block, "base64")))
+      : new Response(null, { status: 404 })
+  })
+  const result = await addressView(
+    parseIpfsAddress(`ipfs://${hamt.root}/${hamt.name}`)!,
+    gatewayStore(fetcher),
+    signal
+  )
+  expect(result.path.map(({ name }) => name)).toEqual([hamt.root, hamt.name])
+  expect(result.entry.cid.toString()).toBe(hamt.leaf)
+  expect(fetcher).toHaveBeenCalledTimes(2)
+})
+
+it("rejects an extra component after a file", async () => {
+  await expect(
+    addressView(
+      parseIpfsAddress(`ipfs://${fixture.root}/hello.txt/extra`)!,
+      gatewayStore(async (url) => fixtureResponse(String(url))),
+      signal
+    )
+  ).rejects.toBeInstanceOf(IpfsPathError)
+})
