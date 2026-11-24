@@ -1118,6 +1118,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "PDF में पासवर्ड लगाएँ",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "QR कोड जेनरेटर",
     slug: "qr-code-generator",

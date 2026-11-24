@@ -273,6 +273,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pptx-viewer": () => import("@tool/pptx-viewer/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
+  "protect-pdf": () => import("@tool/protect-pdf/page"),
   "qr-code-generator": () => import("@tool/qr-code-generator/page"),
   "qr-code-reader": () => import("@tool/qr-code-reader/page"),
   "radio-timecode": () => import("@tool/radio-timecode/page"),

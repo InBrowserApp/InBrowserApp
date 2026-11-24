@@ -1118,6 +1118,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "Lindungi PDF dengan Kata Laluan",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "Penjana Kod QR",
     slug: "qr-code-generator",

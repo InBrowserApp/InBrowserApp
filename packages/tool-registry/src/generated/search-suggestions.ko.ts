@@ -1118,6 +1118,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "PDF 암호 설정",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "QR 코드 생성기",
     slug: "qr-code-generator",

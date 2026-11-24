@@ -20518,6 +20518,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "protect-pdf",
+    language: "ar",
+  },
+  {
+    slug: "protect-pdf",
+    language: "de",
+  },
+  {
+    slug: "protect-pdf",
+    language: "en",
+  },
+  {
+    slug: "protect-pdf",
+    language: "es",
+  },
+  {
+    slug: "protect-pdf",
+    language: "fr",
+  },
+  {
+    slug: "protect-pdf",
+    language: "he",
+  },
+  {
+    slug: "protect-pdf",
+    language: "hi",
+  },
+  {
+    slug: "protect-pdf",
+    language: "id",
+  },
+  {
+    slug: "protect-pdf",
+    language: "it",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ja",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ko",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ms",
+  },
+  {
+    slug: "protect-pdf",
+    language: "nl",
+  },
+  {
+    slug: "protect-pdf",
+    language: "no",
+  },
+  {
+    slug: "protect-pdf",
+    language: "pl",
+  },
+  {
+    slug: "protect-pdf",
+    language: "pt",
+  },
+  {
+    slug: "protect-pdf",
+    language: "ru",
+  },
+  {
+    slug: "protect-pdf",
+    language: "sv",
+  },
+  {
+    slug: "protect-pdf",
+    language: "th",
+  },
+  {
+    slug: "protect-pdf",
+    language: "tr",
+  },
+  {
+    slug: "protect-pdf",
+    language: "vi",
+  },
+  {
+    slug: "protect-pdf",
+    language: "zh-CN",
+  },
+  {
+    slug: "protect-pdf",
+    language: "zh-TW",
+  },
+  {
     slug: "qr-code-generator",
     language: "ar",
   },

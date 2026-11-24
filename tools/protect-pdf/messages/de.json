@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF auswählen",
+  "dropPdf": "oder eine PDF hierher ziehen",
+  "changePdf": "Andere PDF auswählen",
+  "privacy": "Deine PDF und dein Passwort bleiben in deinem Browser.",
+  "password": "Passwort zum Öffnen der PDF",
+  "confirmPassword": "Passwort bestätigen",
+  "showPasswords": "Passwörter anzeigen",
+  "hidePasswords": "Passwörter ausblenden",
+  "protectPdf": "PDF schützen",
+  "protecting": "PDF wird geschützt …",
+  "protected": "Deine geschützte PDF ist fertig",
+  "downloadPdf": "Geschützte PDF herunterladen",
+  "startOver": "Weitere PDF schützen",
+  "onePdf": "Wähle jeweils eine PDF aus.",
+  "invalidPdf": "Wähle eine PDF-Datei mit Inhalt aus.",
+  "passwordTooLong": "Verwende ein kürzeres Passwort. Ein PDF-Passwort darf höchstens 127 Byte lang sein.",
+  "passwordInvalid": "Verwende ein Passwort ohne unsichtbare Steuerzeichen.",
+  "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+  "protectionFailed": "Diese PDF konnte nicht geschützt werden. Öffne sie zur Prüfung in einem PDF-Reader und wähle eine Kopie aus, die sich ohne Passwort öffnen lässt."
+}

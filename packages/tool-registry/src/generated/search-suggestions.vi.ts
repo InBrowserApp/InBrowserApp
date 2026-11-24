@@ -1118,6 +1118,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "prettier-code-formatter",
   },
   {
+    category: "pdf",
+    name: "Đặt mật khẩu cho PDF",
+    slug: "protect-pdf",
+  },
+  {
     category: "image",
     name: "Trình tạo mã QR",
     slug: "qr-code-generator",

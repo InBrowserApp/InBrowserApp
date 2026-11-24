@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDF kiezen",
+  "dropPdf": "of sleep hier een PDF naartoe",
+  "changePdf": "Andere PDF kiezen",
+  "privacy": "Je PDF en wachtwoord blijven in je browser.",
+  "password": "Wachtwoord om de PDF te openen",
+  "confirmPassword": "Wachtwoord bevestigen",
+  "showPasswords": "Wachtwoorden tonen",
+  "hidePasswords": "Wachtwoorden verbergen",
+  "protectPdf": "PDF beveiligen",
+  "protecting": "PDF wordt beveiligd…",
+  "protected": "Je beveiligde PDF is klaar",
+  "downloadPdf": "Beveiligde PDF downloaden",
+  "startOver": "Nog een PDF beveiligen",
+  "onePdf": "Kies één PDF tegelijk.",
+  "invalidPdf": "Kies een PDF-bestand dat niet leeg is.",
+  "passwordTooLong": "Gebruik een korter wachtwoord. Een PDF-wachtwoord mag maximaal 127 bytes lang zijn.",
+  "passwordInvalid": "Gebruik een wachtwoord zonder onzichtbare controletekens.",
+  "passwordMismatch": "De wachtwoorden komen niet overeen.",
+  "protectionFailed": "Deze PDF kon niet worden beveiligd. Probeer het bestand te openen in een PDF-lezer en kies een kopie die zonder wachtwoord opengaat."
+}
