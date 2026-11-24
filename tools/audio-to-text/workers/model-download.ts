@@ -46,7 +46,7 @@ function modelDownloader(
     if (!response.ok || !response.body) throw new Error("Model download failed")
 
     const writer = !cached
-      ? await fileHandle?.createWritable().catch(() => undefined)
+      ? await fileHandle?.createWritable?.().catch(() => undefined)
       : undefined
     const store =
       !cached &&
