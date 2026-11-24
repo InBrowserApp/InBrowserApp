@@ -1,0 +1,4 @@
+{
+  "name": "Pulizia dei file HAR",
+  "description": "Rimuovi cookie, token e altri dati sensibili dai file HAR nel browser. Scarica una copia ripulita da condividere, con i tempi delle richieste e i codici di stato."
+}

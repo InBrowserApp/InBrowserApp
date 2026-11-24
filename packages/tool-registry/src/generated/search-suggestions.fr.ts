@@ -608,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "Nettoyage de fichiers HAR",
+    slug: "har-sanitizer",
+  },
+  {
     category: "crypto",
     name: "Hachage HighwayHash de texte ou de fichier",
     slug: "highwayhash-hash-text-or-file",

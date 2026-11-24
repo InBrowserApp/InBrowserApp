@@ -1,0 +1,19 @@
+{
+  "open": "Apri file HAR",
+  "drop": "Oppure trascina qui un file .har o .json",
+  "example": "Prova un esempio",
+  "privacy": "I file restano nel browser.",
+  "options": "Opzioni di pulizia",
+  "credentials": "I cookie e le intestazioni di autenticazione più comuni vengono sempre rimossi.",
+  "parameters": "Oscura i valori dei parametri URL",
+  "bodies": "Rimuovi i corpi HTTP e i dati WebSocket",
+  "reading": "Preparazione del file HAR ripulito…",
+  "invalid": "Impossibile leggere questo file come HAR. Esporta un nuovo file HAR dal pannello Rete del browser e riprova.",
+  "failed": "Impossibile preparare il file. Riaprilo o esporta una registrazione più breve.",
+  "result": "File HAR ripulito",
+  "requests": "Richieste conservate",
+  "removedCredentials": "Campi di autenticazione rimossi",
+  "maskedParameters": "Valori URL oscurati",
+  "removedBodies": "Contenuti rimossi",
+  "download": "Scarica il file HAR ripulito"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "HAR-bestanden opschonen",
+  "description": "Verwijder cookies, tokens en andere gevoelige gegevens uit HAR-bestanden in je browser. Download een opgeschoond HAR-bestand om te delen, met behoud van tijdsmetingen en statuscodes."
+}

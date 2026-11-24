@@ -11134,6 +11134,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "har-sanitizer",
+    language: "ar",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "de",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "en",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "es",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "fr",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "he",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "hi",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "id",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "it",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ja",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ko",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ms",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "nl",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "no",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "pl",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "pt",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "ru",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "sv",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "th",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "tr",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "vi",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "har-sanitizer",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

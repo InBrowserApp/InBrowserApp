@@ -608,6 +608,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "har-analyzer",
   },
   {
+    category: "network",
+    name: "Pembersih Fail HAR",
+    slug: "har-sanitizer",
+  },
+  {
     category: "crypto",
     name: "Hash HighwayHash Teks atau Fail",
     slug: "highwayhash-hash-text-or-file",

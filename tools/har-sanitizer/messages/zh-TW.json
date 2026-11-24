@@ -1,0 +1,19 @@
+{
+  "open": "開啟 HAR 檔案",
+  "drop": "或將 .har 或 .json 檔案拖放至此",
+  "example": "試用範例",
+  "privacy": "檔案不會離開您的瀏覽器。",
+  "options": "清理選項",
+  "credentials": "Cookie 和常見的驗證標頭一律會被移除。",
+  "parameters": "遮蔽 URL 參數值",
+  "bodies": "移除請求、回應及 WebSocket 內容",
+  "reading": "正在產生清理後的 HAR…",
+  "invalid": "無法將此檔案讀取為 HAR。請從瀏覽器的「網路」面板重新匯出 HAR 後再試一次。",
+  "failed": "無法處理此檔案。請重新開啟，或匯出較短的紀錄後再試一次。",
+  "result": "清理後的 HAR",
+  "requests": "保留的請求",
+  "removedCredentials": "移除的憑證欄位",
+  "maskedParameters": "遮蔽的 URL 值",
+  "removedBodies": "移除的內容",
+  "download": "下載清理後的 HAR"
+}

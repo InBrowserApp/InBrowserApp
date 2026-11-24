@@ -153,6 +153,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
   "har-analyzer": () => import("@tool/har-analyzer/page"),
+  "har-sanitizer": () => import("@tool/har-sanitizer/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),

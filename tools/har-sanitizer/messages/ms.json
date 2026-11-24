@@ -1,0 +1,19 @@
+{
+  "open": "Buka fail HAR",
+  "drop": "Atau seret dan lepaskan fail .har atau .json di sini",
+  "example": "Cuba fail contoh",
+  "privacy": "Fail kekal dalam pelayar anda.",
+  "options": "Pilihan penyamaran data",
+  "credentials": "Kuki dan pengepala pengesahan yang lazim sentiasa dibuang.",
+  "parameters": "Samarkan nilai parameter URL",
+  "bodies": "Buang kandungan permintaan, respons dan WebSocket",
+  "reading": "Sedang menyediakan salinan HAR yang telah dibersihkan…",
+  "invalid": "Fail ini tidak dapat dibaca sebagai HAR. Eksport fail HAR yang baharu daripada panel Rangkaian dalam pelayar dan cuba lagi.",
+  "failed": "Fail ini tidak dapat diproses. Cuba buka semula atau eksport rakaman yang lebih pendek.",
+  "result": "HAR yang telah dibersihkan",
+  "requests": "Permintaan yang dikekalkan",
+  "removedCredentials": "Medan kelayakan yang dibuang",
+  "maskedParameters": "Nilai URL yang disamarkan",
+  "removedBodies": "Kandungan yang dibuang",
+  "download": "Muat turun HAR yang telah dibersihkan"
+}

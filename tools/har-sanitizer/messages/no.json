@@ -1,0 +1,19 @@
+{
+  "open": "Åpne HAR-fil",
+  "drop": "Eller slipp en .har- eller .json-fil her",
+  "example": "Prøv et eksempel",
+  "privacy": "Filene blir i nettleseren din.",
+  "options": "Innstillinger for rensing",
+  "credentials": "Informasjonskapsler og vanlige autentiseringshoder fjernes alltid.",
+  "parameters": "Masker verdier i URL-parametere",
+  "bodies": "Fjern HTTP- og WebSocket-innhold",
+  "reading": "Klargjør den rensede HAR-filen …",
+  "invalid": "Filen kunne ikke leses som HAR. Eksporter en ny HAR-fil fra nettverkspanelet i nettleseren og prøv igjen.",
+  "failed": "Filen kunne ikke klargjøres. Åpne den på nytt eller eksporter et kortere opptak.",
+  "result": "Renset HAR-fil",
+  "requests": "Beholdte forespørsler",
+  "removedCredentials": "Fjernede autentiseringsfelt",
+  "maskedParameters": "Maskerte URL-verdier",
+  "removedBodies": "Fjernet meldingsinnhold",
+  "download": "Last ned renset HAR-fil"
+}

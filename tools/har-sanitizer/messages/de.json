@@ -1,0 +1,19 @@
+{
+  "open": "HAR-Datei öffnen",
+  "drop": "Oder eine .har- oder .json-Datei hier ablegen",
+  "example": "Beispiel ausprobieren",
+  "privacy": "Die Dateien bleiben in deinem Browser.",
+  "options": "Einstellungen zur Bereinigung",
+  "credentials": "Cookies und gängige Authentifizierungsheader werden immer entfernt.",
+  "parameters": "Werte von URL-Parametern maskieren",
+  "bodies": "HTTP-Inhalte und WebSocket-Daten entfernen",
+  "reading": "Bereinigte HAR-Datei wird vorbereitet …",
+  "invalid": "Die Datei lässt sich nicht als HAR lesen. Exportiere eine neue HAR-Datei aus dem Netzwerkbereich deines Browsers und versuche es erneut.",
+  "failed": "Die Datei konnte nicht verarbeitet werden. Öffne sie erneut oder exportiere eine kürzere Aufzeichnung.",
+  "result": "Bereinigte HAR-Datei",
+  "requests": "Anfragen im Export",
+  "removedCredentials": "Entfernte Anmeldedatenfelder",
+  "maskedParameters": "Maskierte URL-Werte",
+  "removedBodies": "Entfernte Inhalte",
+  "download": "Bereinigte HAR-Datei herunterladen"
+}
