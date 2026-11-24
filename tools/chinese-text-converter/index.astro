@@ -29,7 +29,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ChineseTextConverterClient client:load lang={lang} messages={messages} />
-  <ToolArticle className="rtl:[&_ul]:ml-0 rtl:[&_ul]:mr-6">
+  <ToolArticle className="[&_bdi]:whitespace-nowrap [&_code]:whitespace-nowrap rtl:[&_ul]:ml-0 rtl:[&_ul]:mr-6">
     <Intro />
     <p class="text-xs text-muted-foreground">
       <a href="/licenses/opencc-js.txt">OpenCC.js · MIT / Apache-2.0</a>

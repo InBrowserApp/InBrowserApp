@@ -6694,7 +6694,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-CN": {
         name: "中文简繁转换器",
         description:
-          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可同时转换台湾用语）和香港字形，文本在浏览器内转换。",
+          "简体转繁体、繁体转简体。支持通用繁体、台湾字形（可转换用语）和香港字形。全程在浏览器内完成。",
       },
       "zh-TW": {
         name: "繁簡轉換器",
