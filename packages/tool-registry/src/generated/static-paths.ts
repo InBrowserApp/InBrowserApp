@@ -8834,6 +8834,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epsg-coordinate-transformer",
+    language: "ar",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "de",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "en",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "es",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "fr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "he",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "hi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "id",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "it",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ja",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ko",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ms",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "nl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "no",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pl",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "pt",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "ru",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "sv",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "th",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "tr",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "vi",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-CN",
+  },
+  {
+    slug: "epsg-coordinate-transformer",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-metadata-editor",
     language: "ar",
   },

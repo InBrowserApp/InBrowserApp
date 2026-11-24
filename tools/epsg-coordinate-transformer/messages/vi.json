@@ -1,0 +1,17 @@
+{
+  "source": "Hệ tọa độ nguồn",
+  "target": "Hệ tọa độ đích",
+  "search": "Tìm theo mã EPSG hoặc tên",
+  "noSystems": "Không tìm thấy hệ tọa độ phù hợp.",
+  "longitude": "Kinh độ (°)",
+  "latitude": "Vĩ độ (°)",
+  "easting": "Tọa độ hướng Đông",
+  "northing": "Tọa độ hướng Bắc",
+  "meters": "Mét",
+  "example": "Dùng thử ví dụ",
+  "swap": "Đảo chiều chuyển đổi",
+  "copy": "Sao chép tọa độ",
+  "copied": "Đã sao chép",
+  "invalid": "Không thể chuyển đổi các tọa độ này. Hãy kiểm tra giá trị và hệ tọa độ nguồn.",
+  "axisHelp": "Tọa độ địa lý nhập kinh độ trước, vĩ độ sau. Tọa độ phẳng nhập tọa độ hướng Đông trước, hướng Bắc sau."
+}

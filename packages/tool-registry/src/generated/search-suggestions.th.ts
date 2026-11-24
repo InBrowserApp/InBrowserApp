@@ -483,6 +483,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "env-converter",
   },
   {
+    category: "misc",
+    name: "เครื่องมือแปลงระบบพิกัด EPSG",
+    slug: "epsg-coordinate-transformer",
+  },
+  {
     category: "document",
     name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
     slug: "epub-metadata-editor",

@@ -938,6 +938,9 @@ catalogs:
     prettier-plugin-svelte:
       specifier: ^4.1.1
       version: 4.1.1
+    proj4:
+      specifier: ^2.23.0
+      version: 2.23.0
     protobufjs:
       specifier: ^8.8.1
       version: 8.8.1
@@ -2164,6 +2167,9 @@ importers:
       '@tool/env-converter':
         specifier: workspace:*
         version: link:../../tools/env-converter
+      '@tool/epsg-coordinate-transformer':
+        specifier: workspace:*
+        version: link:../../tools/epsg-coordinate-transformer
       '@tool/epub-metadata-editor':
         specifier: workspace:*
         version: link:../../tools/epub-metadata-editor
@@ -5705,6 +5711,34 @@ importers:
       js-yaml:
         specifier: 'catalog:'
         version: 5.5.0
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/epsg-coordinate-transformer:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      proj4:
+        specifier: 'catalog:'
+        version: 2.23.0
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -18234,6 +18268,9 @@ packages:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
 
+  mgrs@1.0.0:
+    resolution: {integrity: sha512-awNbTOqCxK1DBGjalK3xqWIstBZgN6fxsMSiXLs9/spqWkF2pAhb2rrYCFSsr1/tT7PhcDGjZndG8SWYn0byYA==}
+
   mhtml-to-html@2.2.1:
     resolution: {integrity: sha512-uNvqm04yIqYOL0WWSHp7J2zxA2BIuXuXA8pHbEawY/RKTVqNeRjkRUGv/5e15rduJolXfKcEZvU1uic+qQl54Q==}
     hasBin: true
@@ -18751,6 +18788,14 @@ packages:
   process-ancestry@0.1.0:
     resolution: {integrity: sha512-tGqJW/UnclpYASFcM6Xh8D8l/BMtaQ9+CSG0vlJSJTcdMM4lDRv4c6H0Pdcsfted+bVczdYSfk2fdukg2gQkZg==}
     engines: {node: '>=18.0.0'}
+
+  proj4@2.23.0:
+    resolution: {integrity: sha512-vb1Z/dOztEyXg5JC2LgKc2ye+md4qUdwH/RLS0EUUMKzoIsAC2PT1IGKPIDv9qg51p7uONn93qTh9gtfh+GmOQ==}
+    peerDependencies:
+      geotiff: '*'
+    peerDependenciesMeta:
+      geotiff:
+        optional: true
 
   promise-controller@0.3.0:
     resolution: {integrity: sha512-w1RTaOwD5bNtYjIj5L8+ruDtMgnKC0pLtOogA3kcS4LRtiwLOpAdokjYbkjJMa6AGV0oasHa8RRNa8qEpG1qyw==}
@@ -19979,6 +20024,9 @@ packages:
     resolution: {integrity: sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==}
     engines: {node: '>=20.11'}
     hasBin: true
+
+  wkt-parser@1.9.0:
+    resolution: {integrity: sha512-0muBykCBpbUgMPqmH+2rlvFlFwwH1kdgIMa0YbaQ/JZAlyWCv8Fa4HFSbEvZs2gYRaqJP/0D8xSI1G7Z4tn0vw==}
 
   woff2-encoder@2.0.0:
     resolution: {integrity: sha512-wH1rcskczCP5+BJABM88aM3hoEX1VUW6U+Ksx/7bmXvctWGqF+O/YQdC6vWQ7lJS7ny21a0MkAqcZyOP2O8CAg==}
@@ -25374,6 +25422,8 @@ snapshots:
 
   methods@1.1.2: {}
 
+  mgrs@1.0.0: {}
+
   mhtml-to-html@2.2.1:
     dependencies:
       glob: 14.0.6
@@ -25930,6 +25980,11 @@ snapshots:
   prismjs@1.30.0: {}
 
   process-ancestry@0.1.0: {}
+
+  proj4@2.23.0:
+    dependencies:
+      mgrs: 1.0.0
+      wkt-parser: 1.9.0
 
   promise-controller@0.3.0: {}
 
@@ -27220,6 +27275,8 @@ snapshots:
       isexe: 3.1.5
 
   why-is-node-running@3.2.1: {}
+
+  wkt-parser@1.9.0: {}
 
   woff2-encoder@2.0.0: {}
 

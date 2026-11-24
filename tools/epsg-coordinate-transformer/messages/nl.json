@@ -1,0 +1,17 @@
+{
+  "source": "Broncoördinatenstelsel",
+  "target": "Doelcoördinatenstelsel",
+  "search": "Zoeken op EPSG-code of naam",
+  "noSystems": "Geen passende coördinatenstelsels gevonden.",
+  "longitude": "Lengtegraad (°)",
+  "latitude": "Breedtegraad (°)",
+  "easting": "Oostwaarde",
+  "northing": "Noordwaarde",
+  "meters": "Meter",
+  "example": "Voorbeeld proberen",
+  "swap": "Transformatie omkeren",
+  "copy": "Coördinaten kopiëren",
+  "copied": "Gekopieerd",
+  "invalid": "Kan deze coördinaten niet transformeren. Controleer de waarden en het broncoördinatenstelsel.",
+  "axisHelp": "Bij geografische coördinaten komt de lengtegraad vóór de breedtegraad. Bij geprojecteerde coördinaten komt de oostwaarde vóór de noordwaarde."
+}

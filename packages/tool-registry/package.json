@@ -103,6 +103,7 @@
     "@tool/email-validator": "workspace:*",
     "@tool/email-viewer": "workspace:*",
     "@tool/env-converter": "workspace:*",
+    "@tool/epsg-coordinate-transformer": "workspace:*",
     "@tool/epub-metadata-editor": "workspace:*",
     "@tool/epub-reader": "workspace:*",
     "@tool/epub-to-pdf-converter": "workspace:*",

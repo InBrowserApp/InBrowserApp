@@ -1,0 +1,4 @@
+{
+  "name": "EPSG 坐标转换器",
+  "description": "在 WGS 84、Web 墨卡托和 UTM 等 EPSG 参考系统之间转换坐标。复制结果前可查看坐标轴顺序和单位。"
+}

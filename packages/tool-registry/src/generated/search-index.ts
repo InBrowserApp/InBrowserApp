@@ -12260,6 +12260,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "epsg-coordinate-transformer",
+    category: "misc",
+    icon: "globe",
+    tags: [
+      "epsg",
+      "crs",
+      "coordinates",
+      "projection",
+      "wgs84",
+      "utm",
+      "web-mercator",
+      "gis",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل إحداثيات EPSG",
+        description:
+          "حوّل الإحداثيات بين الأنظمة المرجعية ذات رموز EPSG، مثل WGS 84 وWeb Mercator وUTM. تحقّق من ترتيب المحاور والوحدات قبل نسخ النتيجة.",
+      },
+      de: {
+        name: "EPSG-Koordinatentransformation",
+        description:
+          "Transformiere Koordinaten zwischen EPSG-Bezugssystemen wie WGS 84, Web Mercator und UTM. Prüfe die Achsenreihenfolge und Einheiten vor dem Kopieren.",
+      },
+      en: {
+        name: "EPSG Coordinate Transformer",
+        description:
+          "Transform coordinates between EPSG reference systems such as WGS 84, Web Mercator and UTM. See axis order and units before copying the result.",
+      },
+      es: {
+        name: "Transformador de coordenadas EPSG",
+        description:
+          "Transforma coordenadas entre sistemas de referencia EPSG como WGS 84, Web Mercator y UTM. Consulta el orden de los ejes y las unidades antes de copiar el resultado.",
+      },
+      fr: {
+        name: "Transformateur de coordonnées EPSG",
+        description:
+          "Transformez des coordonnées entre systèmes EPSG tels que WGS 84, Web Mercator et UTM. Vérifiez l’ordre des axes et les unités avant de copier le résultat.",
+      },
+      he: {
+        name: "ממיר קואורדינטות EPSG",
+        description:
+          "המירו קואורדינטות בין מערכות ייחוס של EPSG, כמו WGS 84, ‏Web Mercator ו־UTM. בדקו את סדר הצירים והיחידות לפני העתקת התוצאה.",
+      },
+      hi: {
+        name: "EPSG निर्देशांक कन्वर्टर",
+        description:
+          "WGS 84, Web Mercator और UTM जैसी EPSG संदर्भ प्रणालियों के बीच निर्देशांक बदलें। नतीजा कॉपी करने से पहले अक्षों का क्रम और इकाइयाँ देखें।",
+      },
+      id: {
+        name: "Transformasi Koordinat EPSG",
+        description:
+          "Transformasikan koordinat antara sistem referensi EPSG seperti WGS 84, Web Mercator, dan UTM. Periksa urutan sumbu dan satuan sebelum menyalin hasil.",
+      },
+      it: {
+        name: "Trasformazione di coordinate EPSG",
+        description:
+          "Trasforma coordinate tra sistemi di riferimento EPSG come WGS 84, Web Mercator e UTM. Controlla l’ordine degli assi e le unità prima di copiare il risultato.",
+      },
+      ja: {
+        name: "EPSG 座標系変換",
+        description:
+          "WGS 84、Web メルカトル、UTM など、EPSG コードで指定した座標参照系の間で座標を変換できます。軸の順序と単位を確認して、変換結果をコピーできます。",
+      },
+      ko: {
+        name: "EPSG 좌표 변환기",
+        description:
+          "WGS 84, 웹 메르카토르, UTM 등 EPSG 좌표 참조계 사이에서 좌표를 변환하세요. 결과를 복사하기 전에 축 순서와 단위를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sistem Koordinat EPSG",
+        description:
+          "Tukar koordinat antara sistem rujukan EPSG seperti WGS 84, Web Mercator dan UTM. Semak susunan paksi dan unit sebelum menyalin hasil.",
+      },
+      nl: {
+        name: "EPSG-coördinaten transformeren",
+        description:
+          "Transformeer coördinaten tussen EPSG-referentiestelsels zoals WGS 84, Web Mercator en UTM. Bekijk de asvolgorde en eenheden voor je het resultaat kopieert.",
+      },
+      no: {
+        name: "EPSG-koordinattransformasjon",
+        description:
+          "Transformer koordinater mellom EPSG-referansesystemer som WGS 84, Web Mercator og UTM. Se akserekkefølgen og enhetene før du kopierer resultatet.",
+      },
+      pl: {
+        name: "Transformacja współrzędnych EPSG",
+        description:
+          "Przelicz współrzędne między układami EPSG, takimi jak WGS 84, Web Mercator i UTM. Sprawdź kolejność osi i jednostki przed skopiowaniem wyniku.",
+      },
+      pt: {
+        name: "Transformador de coordenadas EPSG",
+        description:
+          "Transforme coordenadas entre sistemas de referência EPSG, como WGS 84, Web Mercator e UTM. Confira a ordem dos eixos e as unidades antes de copiar o resultado.",
+      },
+      ru: {
+        name: "Преобразование координат по кодам EPSG",
+        description:
+          "Преобразуйте координаты между системами EPSG, в том числе WGS 84, Web Mercator и UTM. Проверьте порядок осей и единицы измерения, затем скопируйте результат.",
+      },
+      sv: {
+        name: "EPSG-koordinattransformerare",
+        description:
+          "Transformera koordinater mellan EPSG-referenssystem som WGS 84, Web Mercator och UTM. Se axelordning och enheter innan du kopierar resultatet.",
+      },
+      th: {
+        name: "เครื่องมือแปลงระบบพิกัด EPSG",
+        description:
+          "แปลงพิกัดระหว่างระบบอ้างอิง EPSG เช่น WGS 84, Web Mercator และ UTM ตรวจสอบลำดับแกนและหน่วยก่อนคัดลอกผลลัพธ์",
+      },
+      tr: {
+        name: "EPSG Koordinat Dönüştürücü",
+        description:
+          "WGS 84, Web Mercator ve UTM gibi EPSG referans sistemleri arasında koordinat dönüştürün. Sonucu kopyalamadan önce eksen sırasını ve birimleri kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tọa độ EPSG",
+        description:
+          "Chuyển đổi tọa độ giữa các hệ quy chiếu EPSG như WGS 84, Web Mercator và UTM. Xem thứ tự trục và đơn vị trước khi sao chép kết quả.",
+      },
+      "zh-CN": {
+        name: "EPSG 坐标转换器",
+        description:
+          "在 WGS 84、Web 墨卡托和 UTM 等 EPSG 参考系统之间转换坐标。复制结果前可查看坐标轴顺序和单位。",
+      },
+      "zh-TW": {
+        name: "EPSG 座標系統轉換器",
+        description:
+          "在 WGS 84、Web Mercator、UTM 等 EPSG 座標參考系統之間轉換座標，並在複製結果前查看座標軸順序與單位。",
+      },
+    },
+  },
+  {
     slug: "epub-metadata-editor",
     category: "document",
     icon: "file-cog",

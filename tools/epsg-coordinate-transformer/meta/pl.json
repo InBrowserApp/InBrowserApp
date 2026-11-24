@@ -1,0 +1,4 @@
+{
+  "name": "Transformacja współrzędnych EPSG",
+  "description": "Przelicz współrzędne między układami EPSG, takimi jak WGS 84, Web Mercator i UTM. Sprawdź kolejność osi i jednostki przed skopiowaniem wyniku."
+}

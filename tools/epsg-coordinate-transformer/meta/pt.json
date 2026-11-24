@@ -1,0 +1,4 @@
+{
+  "name": "Transformador de coordenadas EPSG",
+  "description": "Transforme coordenadas entre sistemas de referência EPSG, como WGS 84, Web Mercator e UTM. Confira a ordem dos eixos e as unidades antes de copiar o resultado."
+}

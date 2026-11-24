@@ -1,0 +1,17 @@
+{
+  "source": "Koordinatsystem for inndata",
+  "target": "Koordinatsystem for resultat",
+  "search": "Søk på EPSG-kode eller navn",
+  "noSystems": "Fant ingen koordinatsystemer som passer søket.",
+  "longitude": "Lengdegrad (°)",
+  "latitude": "Breddegrad (°)",
+  "easting": "Østverdi",
+  "northing": "Nordverdi",
+  "meters": "Meter",
+  "example": "Prøv et eksempel",
+  "swap": "Snu transformasjonen",
+  "copy": "Kopier koordinater",
+  "copied": "Kopiert",
+  "invalid": "Kunne ikke transformere koordinatene. Sjekk verdiene og koordinatsystemet for inndata.",
+  "axisHelp": "Geografiske koordinater oppgis med lengdegrad først og breddegrad etterpå. Projiserte koordinater oppgis med østverdi først og nordverdi etterpå."
+}

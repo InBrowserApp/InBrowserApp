@@ -1,0 +1,4 @@
+{
+  "name": "Penukar Sistem Koordinat EPSG",
+  "description": "Tukar koordinat antara sistem rujukan EPSG seperti WGS 84, Web Mercator dan UTM. Semak susunan paksi dan unit sebelum menyalin hasil."
+}

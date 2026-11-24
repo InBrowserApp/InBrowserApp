@@ -1,0 +1,17 @@
+{
+  "source": "Quellkoordinatensystem",
+  "target": "Zielkoordinatensystem",
+  "search": "Nach EPSG-Code oder Name suchen",
+  "noSystems": "Keine passenden Koordinatensysteme gefunden.",
+  "longitude": "Längengrad (°)",
+  "latitude": "Breitengrad (°)",
+  "easting": "Ostwert",
+  "northing": "Nordwert",
+  "meters": "Meter",
+  "example": "Beispiel ausprobieren",
+  "swap": "Transformation umkehren",
+  "copy": "Koordinaten kopieren",
+  "copied": "Kopiert",
+  "invalid": "Diese Koordinaten konnten nicht transformiert werden. Prüfe die Werte und das Quellkoordinatensystem.",
+  "axisHelp": "Bei geografischen Koordinaten steht der Längengrad vor dem Breitengrad. Bei projizierten Koordinaten steht der Ostwert vor dem Nordwert."
+}
