@@ -115,6 +115,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "email-viewer": () => import("@tool/email-viewer/page"),
   "env-converter": () => import("@tool/env-converter/page"),
+  "epub-metadata-editor": () => import("@tool/epub-metadata-editor/page"),
   "epub-reader": () => import("@tool/epub-reader/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
   "exif-viewer": () => import("@tool/exif-viewer/page"),

@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epub-metadata-editor",
+    language: "ar",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "de",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "en",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "es",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "fr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "he",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "hi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "id",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "it",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ja",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ko",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ms",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "nl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "no",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pl",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "pt",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "ru",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "sv",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "th",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "tr",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "vi",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-metadata-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-reader",
     language: "ar",
   },

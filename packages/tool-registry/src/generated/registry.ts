@@ -11366,6 +11366,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
+      },
+    },
+  },
+  {
     slug: "epub-reader",
     category: "document",
     icon: "book-open",
@@ -52006,6 +52129,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: ".env 轉換器",
         description:
           "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
+      },
+    },
+  },
+  "epub-metadata-editor": {
+    slug: "epub-metadata-editor",
+    category: "document",
+    icon: "file-cog",
+    tags: ["epub", "ebook", "book", "metadata", "editor", "cover", "author"],
+    locales: {
+      ar: {
+        name: "محرر بيانات EPUB الوصفية",
+        description:
+          "عدّل عنوان كتاب EPUB وأسماء مؤلفيه ولغته وناشره وموضوعاته ووصفه، أو غيّر غلافه. نزّل الكتاب المعدّل دون رفع ملفك.",
+      },
+      de: {
+        name: "EPUB-Metadaten-Editor",
+        description:
+          "Ändere Titel, Autoren, Sprache, Verlag, Schlagwörter, Beschreibung oder Cover einer EPUB-Datei. Lade das bearbeitete E-Book ohne Upload herunter.",
+      },
+      en: {
+        name: "EPUB Metadata Editor",
+        description:
+          "Edit an EPUB’s title, authors, language, publisher, subjects, and description, or change its cover. Download the edited ebook without uploading your file.",
+      },
+      es: {
+        name: "Editor de metadatos EPUB",
+        description:
+          "Edita el título, los autores, el idioma, la editorial, los temas y la descripción de un EPUB, o cambia la portada. Descarga el libro editado sin subir el archivo.",
+      },
+      fr: {
+        name: "Éditeur de métadonnées EPUB",
+        description:
+          "Modifiez le titre, les auteurs, la langue, l’éditeur, les sujets, la description ou la couverture d’un EPUB. Téléchargez le livre modifié sans envoyer votre fichier.",
+      },
+      he: {
+        name: "עורך מטא־נתונים ל־EPUB",
+        description:
+          "אפשר לערוך את הכותרת, המחברים, השפה, ההוצאה לאור, הנושאים והתיאור של ספר EPUB, או להחליף את הכריכה. הספר הערוך זמין להורדה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "EPUB मेटाडेटा एडिटर",
+        description:
+          "EPUB किताब का शीर्षक, लेखक, भाषा, प्रकाशक, विषय और विवरण संपादित करें या उसका कवर बदलें। फ़ाइल अपलोड किए बिना संपादित ई-बुक डाउनलोड करें।",
+      },
+      id: {
+        name: "Editor Metadata EPUB",
+        description:
+          "Edit judul, penulis, bahasa, penerbit, subjek, dan deskripsi buku EPUB, atau ganti sampulnya. Unduh hasil edit tanpa perlu mengunggah berkas.",
+      },
+      it: {
+        name: "Editor di metadati EPUB",
+        description:
+          "Modifica titolo, autori, lingua, editore, argomenti, descrizione o copertina di un EPUB. Scarica l’ebook modificato senza caricare il file.",
+      },
+      ja: {
+        name: "EPUBメタデータエディター",
+        description:
+          "EPUBの書名、著者、言語、出版社、主題、説明文を編集し、表紙を変更できます。ファイルをアップロードせずに編集後の電子書籍をダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB 메타데이터 편집기",
+        description:
+          "EPUB의 제목, 저자, 언어, 출판사, 주제와 설명을 수정하거나 표지를 변경하세요. 파일을 업로드하지 않고 편집한 전자책을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting Metadata EPUB",
+        description:
+          "Sunting tajuk, pengarang, bahasa, penerbit, subjek dan perihalan EPUB atau tukar kulit bukunya. Muat turun e-buku yang disunting tanpa perlu memuat naik fail.",
+      },
+      nl: {
+        name: "EPUB-metadata-editor",
+        description:
+          "Bewerk de titel, auteurs, taal, uitgever, onderwerpen en beschrijving van een EPUB of wijzig het omslag. Download het aangepaste e-boek zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Redigering av EPUB-metadata",
+        description:
+          "Endre tittel, forfattere, språk, forlag, emner og beskrivelse i en EPUB, eller bytt omslag. Last ned den redigerte e-boken uten å laste opp filen.",
+      },
+      pl: {
+        name: "Edytor metadanych EPUB",
+        description:
+          "Zmień tytuł, autorów, język, wydawcę, tematy, opis lub okładkę e-booka EPUB. Pobierz edytowany plik bez przesyłania go na serwer.",
+      },
+      pt: {
+        name: "Editor de metadados de EPUB",
+        description:
+          "Edite o título, os autores, o idioma, a editora, os assuntos, a descrição ou a capa de um EPUB. Baixe o livro editado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Редактор метаданных EPUB",
+        description:
+          "Измените название, авторов, язык, издательство, темы и описание книги EPUB или замените обложку. Скачайте готовую книгу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Redigerare för EPUB-metadata",
+        description:
+          "Ändra titel, författare, språk, förlag, ämnen och beskrivning för en EPUB-bok eller byt omslag. Ladda ner den redigerade e-boken utan att ladda upp filen.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไขข้อมูลเมตา EPUB",
+        description:
+          "แก้ไขชื่อหนังสือ ผู้แต่ง ภาษา สำนักพิมพ์ หัวเรื่อง และคำอธิบาย หรือเปลี่ยนหน้าปก EPUB แล้วดาวน์โหลดหนังสือที่แก้ไขได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "EPUB Meta Veri Düzenleyicisi",
+        description:
+          "EPUB kitabının başlığını, yazarlarını, dilini, yayınevini, konularını ve açıklamasını düzenleyin veya kapağını değiştirin. Dosya yüklemeden düzenlenen e-kitabı indirin.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa siêu dữ liệu EPUB",
+        description:
+          "Chỉnh sửa tên sách, tác giả, ngôn ngữ, nhà xuất bản, chủ đề và mô tả của EPUB hoặc đổi ảnh bìa. Tải sách đã chỉnh sửa xuống ngay trên trình duyệt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 元数据编辑器",
+        description:
+          "编辑 EPUB 的书名、作者、语言、出版社、主题和简介，或更换封面。无需上传文件即可下载编辑后的电子书。",
+      },
+      "zh-TW": {
+        name: "EPUB 中繼資料編輯器",
+        description:
+          "編輯 EPUB 的書名、作者、語言、出版社、主題和簡介，或更換封面。無須上傳檔案即可下載編輯後的電子書。",
       },
     },
   },

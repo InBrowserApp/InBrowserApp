@@ -449,6 +449,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "محرر بيانات EPUB الوصفية",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "قارئ EPUB",
     slug: "epub-reader",
   },

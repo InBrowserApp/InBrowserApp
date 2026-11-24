@@ -449,6 +449,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "EPUB 메타데이터 편집기",
+    slug: "epub-metadata-editor",
+  },
+  {
+    category: "document",
     name: "EPUB 리더",
     slug: "epub-reader",
   },
