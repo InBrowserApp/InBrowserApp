@@ -1009,6 +1009,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "แยกรูปภาพจาก PDF",
+    slug: "pdf-image-extractor",
+  },
+  {
+    category: "pdf",
     name: "โปรแกรมดูข้อมูล PDF",
     slug: "pdf-info-viewer",
   },

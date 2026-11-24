@@ -1,0 +1,21 @@
+{
+  "choosePdf": "選擇 PDF",
+  "dropPdf": "將 PDF 拖放到這裡",
+  "localProcessing": "PDF 會留在你的裝置上。",
+  "changePdf": "更換 PDF",
+  "opening": "正在開啟 PDF…",
+  "scanning": "正在檢查第 {page} 頁，共 {total} 頁…",
+  "results": "已擷取的圖片",
+  "firstPage": "首次出現在第 {page} 頁",
+  "download": "下載",
+  "downloadImage": "下載 {name}",
+  "downloadZip": "下載全部圖片（ZIP）",
+  "preparingZip": "正在建立 ZIP…",
+  "emptyTitle": "找不到嵌入的圖片",
+  "emptyDescription": "這份 PDF 可能只有文字或向量圖形。若要將整頁存成圖片，請使用 PDF 轉圖片轉換器。",
+  "invalidFile": "請選擇要擷取圖片的 PDF 檔案。",
+  "lockedPdf": "這份 PDF 受密碼保護。請使用密碼開啟檔案，另存一份未鎖定的副本後再試一次。",
+  "readError": "無法讀取這份 PDF。請試試其他副本。",
+  "skippedImages": "這份 PDF 中有部分圖片無法擷取。",
+  "zipError": "無法建立 ZIP 檔。你仍可逐張下載圖片。"
+}

@@ -1,0 +1,21 @@
+{
+  "choosePdf": "PDFを選択",
+  "dropPdf": "ここにPDFをドロップ",
+  "localProcessing": "PDFはお使いの端末内で処理されます。",
+  "changePdf": "PDFを変更",
+  "opening": "PDFを開いています…",
+  "scanning": "全{total}ページ中、{page}ページ目を確認しています…",
+  "results": "抽出した画像",
+  "firstPage": "最初の掲載ページは{page}ページ目",
+  "download": "ダウンロード",
+  "downloadImage": "{name}をダウンロード",
+  "downloadZip": "まとめてZIPで保存",
+  "preparingZip": "ZIPを作成しています…",
+  "emptyTitle": "埋め込み画像が見つかりませんでした",
+  "emptyDescription": "このPDFにはテキストやベクター図形だけが含まれている場合があります。ページ全体を画像として保存するには「PDF から画像への変換」を使ってください。",
+  "invalidFile": "画像を抽出するPDFファイルを選択してください。",
+  "lockedPdf": "このPDFはパスワードで保護されています。パスワードで開き、保護を解除したコピーを保存してから、もう一度お試しください。",
+  "readError": "このPDFを読み込めませんでした。別のコピーをお試しください。",
+  "skippedImages": "このPDFから抽出できなかった画像があります。",
+  "zipError": "ZIPを作成できませんでした。画像は個別にダウンロードできます。"
+}

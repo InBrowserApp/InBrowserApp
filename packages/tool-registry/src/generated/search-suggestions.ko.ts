@@ -1009,6 +1009,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF에서 이미지 추출",
+    slug: "pdf-image-extractor",
+  },
+  {
+    category: "pdf",
     name: "PDF 정보 뷰어",
     slug: "pdf-info-viewer",
   },

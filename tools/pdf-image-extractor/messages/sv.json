@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Välj PDF",
+  "dropPdf": "Släpp en PDF här",
+  "localProcessing": "PDF-filen stannar på din enhet.",
+  "changePdf": "Välj en annan PDF",
+  "opening": "Öppnar PDF…",
+  "scanning": "Söker efter bilder på sida {page} av {total}…",
+  "results": "Extraherade bilder",
+  "firstPage": "Visas först på sida {page}",
+  "download": "Ladda ner",
+  "downloadImage": "Ladda ner {name}",
+  "downloadZip": "Ladda ner alla som ZIP",
+  "preparingZip": "Förbereder ZIP-fil…",
+  "emptyTitle": "Inga inbäddade bilder hittades",
+  "emptyDescription": "PDF-filen kan innehålla enbart text eller vektorgrafik. Använd PDF-till-bild-konverterare för att spara hela sidor som bilder.",
+  "invalidFile": "Välj en PDF-fil för att extrahera bilderna.",
+  "lockedPdf": "PDF-filen är lösenordsskyddad. Öppna den med lösenordet, spara en oskyddad kopia och försök igen.",
+  "readError": "Det gick inte att läsa PDF-filen. Prova att öppna en annan kopia.",
+  "skippedImages": "Det gick inte att extrahera vissa bilder ur PDF-filen.",
+  "zipError": "Det gick inte att skapa ZIP-filen. Du kan fortfarande ladda ner bilderna separat."
+}

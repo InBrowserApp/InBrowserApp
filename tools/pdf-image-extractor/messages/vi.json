@@ -1,0 +1,21 @@
+{
+  "choosePdf": "Chọn PDF",
+  "dropPdf": "Thả tệp PDF vào đây",
+  "localProcessing": "Tệp PDF luôn nằm trên thiết bị của bạn.",
+  "changePdf": "Đổi tệp PDF",
+  "opening": "Đang mở PDF…",
+  "scanning": "Đang kiểm tra trang {page} trên {total}…",
+  "results": "Ảnh đã trích xuất",
+  "firstPage": "Xuất hiện lần đầu ở trang {page}",
+  "download": "Tải xuống",
+  "downloadImage": "Tải xuống {name}",
+  "downloadZip": "Tải tất cả dưới dạng ZIP",
+  "preparingZip": "Đang chuẩn bị tệp ZIP…",
+  "emptyTitle": "Không tìm thấy ảnh nhúng",
+  "emptyDescription": "PDF này có thể chỉ chứa văn bản hoặc đồ họa vectơ. Để lưu nguyên trang dưới dạng ảnh, hãy dùng Trình chuyển đổi PDF sang hình ảnh.",
+  "invalidFile": "Chọn tệp PDF để trích xuất ảnh.",
+  "lockedPdf": "PDF này được bảo vệ bằng mật khẩu. Hãy mở tệp bằng mật khẩu, lưu một bản không khóa rồi thử lại.",
+  "readError": "Không đọc được PDF này. Hãy thử mở một bản sao khác.",
+  "skippedImages": "Không trích xuất được một số ảnh trong PDF này.",
+  "zipError": "Không tạo được tệp ZIP. Bạn vẫn có thể tải từng ảnh xuống."
+}

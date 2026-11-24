@@ -1009,6 +1009,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Извлечение изображений из PDF",
+    slug: "pdf-image-extractor",
+  },
+  {
+    category: "pdf",
     name: "Просмотр сведений о PDF",
     slug: "pdf-info-viewer",
   },

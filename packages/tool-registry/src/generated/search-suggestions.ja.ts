@@ -1009,6 +1009,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDFから画像を抽出",
+    slug: "pdf-image-extractor",
+  },
+  {
+    category: "pdf",
     name: "PDF 情報ビューアー",
     slug: "pdf-info-viewer",
   },
