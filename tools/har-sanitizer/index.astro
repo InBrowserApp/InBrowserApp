@@ -28,5 +28,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <HarSanitizer client:load messages={messages} lang={lang} />
-  <ToolArticle><Intro /></ToolArticle>
+  <ToolArticle className="rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0 rtl:[&_code]:[direction:ltr] rtl:[&_code]:[unicode-bidi:isolate]">
+    <Intro />
+  </ToolArticle>
 </ToolPageShell>
