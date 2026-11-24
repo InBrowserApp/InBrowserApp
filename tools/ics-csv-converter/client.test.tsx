@@ -13,8 +13,7 @@ afterEach(cleanup)
 
 test("shows localized calendar preview and replaces an error after correcting CSV input", () => {
   render(<Client language="zh-TW" messages={messages} />)
-  const button = (name: string) =>
-    screen.getByRole("button", { name, exact: true })
+  const button = (name: string) => screen.getByRole("button", { name })
   const source = screen.getByRole("textbox", { name: messages.input })
   fireEvent.click(button(messages.reverse))
   fireEvent.change(source, {
