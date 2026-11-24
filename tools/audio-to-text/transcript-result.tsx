@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -9,30 +9,74 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, Play } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 import { FORMATS, formatTranscript, timestamp } from "./core/transcript"
 import { NativeSelect } from "./input-fields"
 import type { Format, Segment } from "./core/transcript"
 import type { Messages } from "./types"
+import type { RefObject } from "react"
+
+const PLAYBACK_EVENTS = ["play", "pause", "timeupdate", "seeking", "ended"]
+
+function findCurrentSegment(segments: Segment[], milliseconds: number) {
+  for (let index = segments.length - 1; index >= 0; index--) {
+    const { start, end } = segments[index]!
+    if (start <= milliseconds && milliseconds < end) return index
+  }
+  return -1
+}
 
 export function TranscriptResult({
   filename,
   messages: m,
   segments,
+  audioRef,
   onEdit,
-  onPlay,
 }: {
   filename: string
   messages: Messages
   segments: Segment[]
+  audioRef: RefObject<HTMLAudioElement | null>
   onEdit: (index: number, text: string) => void
-  onPlay: (milliseconds: number) => void
 }) {
   const [format, setFormat] = useState<Format>("txt")
+  const [currentSegment, setCurrentSegment] = useState(-1)
   const textToCopy = useMemo(
     () => formatTranscript(segments, "txt"),
     [segments]
   )
   const hasText = segments.some(({ text }) => text.trim())
+
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    const updateCurrentSegment = () => {
+      const time = audio.currentTime * 1000
+      const index =
+        audio.ended || (audio.paused && time === 0)
+          ? -1
+          : findCurrentSegment(segments, time)
+      setCurrentSegment(index)
+    }
+
+    updateCurrentSegment()
+    for (const event of PLAYBACK_EVENTS) {
+      audio.addEventListener(event, updateCurrentSegment)
+    }
+    return () => {
+      for (const event of PLAYBACK_EVENTS) {
+        audio.removeEventListener(event, updateCurrentSegment)
+      }
+    }
+  }, [audioRef, segments])
+
+  function playFrom(milliseconds: number) {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.currentTime = milliseconds / 1000
+    void audio.play().catch(() => audio.focus())
+  }
 
   function download() {
     const url = URL.createObjectURL(
@@ -96,19 +140,27 @@ export function TranscriptResult({
         <ol className="max-h-[36rem] divide-y overflow-y-auto rounded-lg border">
           {segments.map(({ start, end, text }, index) => {
             const time = timestamp(start)
+            const current = index === currentSegment
             return (
               <li
                 key={`${start}-${end}-${index}`}
-                className="flex flex-wrap items-start gap-2 px-3 py-2 sm:flex-nowrap"
+                className={cn(
+                  "grid items-start gap-x-2 border-s-2 border-s-transparent px-3 py-1.5 sm:grid-cols-[auto_minmax(0,1fr)]",
+                  current && "border-s-primary bg-muted"
+                )}
               >
                 <Button
                   type="button"
                   size="sm"
                   variant="ghost"
                   dir="ltr"
-                  className="font-mono text-xs text-muted-foreground tabular-nums"
+                  className={cn(
+                    "h-auto justify-self-start py-2 font-mono text-xs leading-5 tabular-nums",
+                    !current && "text-muted-foreground"
+                  )}
                   aria-label={m.playFrom.replace("{time}", time)}
-                  onClick={() => onPlay(start)}
+                  aria-current={current ? "time" : undefined}
+                  onClick={() => playFrom(start)}
                 >
                   <Play data-icon="inline-start" aria-hidden="true" />
                   {time}
@@ -117,7 +169,7 @@ export function TranscriptResult({
                   aria-label={m.editSegment.replace("{time}", time)}
                   dir="auto"
                   rows={1}
-                  className="min-h-9 min-w-0 flex-1 basis-full resize-y border-transparent px-2.5 text-start hover:bg-muted/40 supports-[field-sizing:content]:resize-none sm:basis-auto"
+                  className="min-h-9 min-w-0 resize-y border-transparent text-start leading-5 hover:bg-muted/40 supports-[field-sizing:content]:resize-none dark:bg-transparent"
                   value={text}
                   onChange={(event) => onEdit(index, event.currentTarget.value)}
                 />

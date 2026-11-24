@@ -192,6 +192,54 @@ it("retries with the same samples on CPU and ignores results from a canceled run
   expect(view.start.disabled).toBe(false)
 })
 
+it("highlights the current cue during playback and seeking without taking editor focus", async () => {
+  const view = renderTool()
+  choose(view.input)
+  fireEvent.click(view.start)
+  await waitFor(() => expect(workers).toHaveLength(1))
+  workers[0]!.emit({
+    type: "done",
+    segments: [
+      { start: 0, end: 1000, text: "Opening" },
+      { start: 800, end: 1400, text: "Next topic" },
+      { start: 2000, end: 2700, text: "Wrap up" },
+    ],
+  })
+
+  const audio = view.container.querySelector("audio")!
+  const opening = screen.getByRole("button", { name: "Play from 00:00:00.000" })
+  const next = screen.getByRole("button", { name: "Play from 00:00:00.800" })
+  const wrap = screen.getByRole("button", { name: "Play from 00:00:02.000" })
+  const editor = screen.getByRole("textbox", {
+    name: "Transcript at 00:00:00.000",
+  })
+
+  expect(opening.getAttribute("aria-current")).toBeNull()
+  const paused = vi.spyOn(audio, "paused", "get").mockReturnValue(false)
+  fireEvent.play(audio)
+  expect(opening.getAttribute("aria-current")).toBe("time")
+  editor.focus()
+
+  audio.currentTime = 0.8
+  fireEvent.timeUpdate(audio)
+  expect(opening.getAttribute("aria-current")).toBeNull()
+  expect(next.getAttribute("aria-current")).toBe("time")
+  expect(document.activeElement).toBe(editor)
+
+  audio.currentTime = 1.4
+  fireEvent.timeUpdate(audio)
+  expect(next.getAttribute("aria-current")).toBeNull()
+
+  paused.mockReturnValue(true)
+  audio.currentTime = 2
+  fireEvent.seeking(audio)
+  expect(wrap.getAttribute("aria-current")).toBe("time")
+
+  vi.spyOn(audio, "ended", "get").mockReturnValue(true)
+  fireEvent.ended(audio)
+  expect(wrap.getAttribute("aria-current")).toBeNull()
+})
+
 it("keeps the chosen file through decode, model and empty-result failures", async () => {
   const view = renderTool()
   choose(view.input)

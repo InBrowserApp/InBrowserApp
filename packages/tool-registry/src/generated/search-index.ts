@@ -2051,6 +2051,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "audio",
       "recording",
       "audio transcription",
+      "audio transcriber",
       "speech to text",
       "whisper",
       "meeting recording",

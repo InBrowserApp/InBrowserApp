@@ -7,6 +7,7 @@ export const tool = defineTool({
     "audio",
     "recording",
     "audio transcription",
+    "audio transcriber",
     "speech to text",
     "whisper",
     "meeting recording",

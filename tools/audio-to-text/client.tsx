@@ -50,14 +50,6 @@ export default function Client({
     setSource({ file, url: URL.createObjectURL(file) })
   }
 
-  function playFrom(milliseconds: number) {
-    if (audio.current) {
-      audio.current.currentTime = milliseconds / 1000
-      const player = audio.current
-      void player.play().catch(() => player.focus())
-    }
-  }
-
   const statusText = status ? m[status.type] : ""
   const progress =
     status && status.type !== "decoding" ? status.progress : undefined
@@ -221,6 +213,7 @@ export default function Client({
           filename={source.file.name}
           messages={m}
           segments={segments}
+          audioRef={audio}
           onEdit={(index, text) => {
             transcription.setSegments((previous) =>
               previous.map((segment, i) =>
@@ -228,7 +221,6 @@ export default function Client({
               )
             )
           }}
-          onPlay={playFrom}
         />
       )}
     </div>
