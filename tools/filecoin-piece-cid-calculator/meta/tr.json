@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Piece CID Hesaplayıcısı",
+  "description": "Bir CAR arşivi veya herhangi bir dosya için Filecoin Piece CID ve eski biçimdeki CommP değerlerini hesaplayın. Dolgu sonrası parça boyutunu öğrenin ve taahhüdü tarayıcınızda doğrulayın."
+}

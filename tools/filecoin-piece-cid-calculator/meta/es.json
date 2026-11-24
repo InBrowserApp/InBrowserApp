@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de Piece CID de Filecoin",
+  "description": "Calcula el Piece CID de Filecoin y el CommP anterior de un archivo CAR o de cualquier otro archivo. Obtén el tamaño de la pieza tras el relleno y verifica un compromiso en tu navegador."
+}

@@ -1,0 +1,22 @@
+{
+  "input": "File or CAR archive",
+  "drop": "Drop a file here",
+  "chooseFile": "Choose file",
+  "calculate": "Calculate Piece CID",
+  "calculating": "Calculating Piece CID…",
+  "cancel": "Cancel",
+  "result": "Piece commitment",
+  "empty": "Choose a file to calculate its Piece CID and legacy CommP.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "Legacy CommP (v1)",
+  "paddedSize": "Padded piece size",
+  "copy": "Copy",
+  "copied": "Copied",
+  "compare": "Compare with an existing Piece CID",
+  "check": "Check",
+  "match": "The Piece CIDs match.",
+  "different": "The Piece CIDs differ. Check that you selected the exact file used for the commitment.",
+  "invalid": "Enter a valid Filecoin Piece CID or legacy CommP.",
+  "singleFile": "Choose or drop one file at a time.",
+  "failed": "Could not calculate the Piece CID. Check that the file is readable and try again."
+}

@@ -157,6 +157,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
+  "filecoin-piece-cid-calculator": () =>
+    import("@tool/filecoin-piece-cid-calculator/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),

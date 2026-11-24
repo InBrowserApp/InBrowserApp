@@ -1,0 +1,22 @@
+{
+  "input": "Dosya veya CAR arşivi",
+  "drop": "Dosyayı buraya bırakın",
+  "chooseFile": "Dosya seç",
+  "calculate": "Piece CID hesapla",
+  "calculating": "Piece CID hesaplanıyor…",
+  "cancel": "İptal",
+  "result": "Parça taahhüdü",
+  "empty": "Piece CID ve eski biçimdeki CommP değerlerini hesaplamak için bir dosya seçin.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "Eski biçimde CommP (v1)",
+  "paddedSize": "Dolgu sonrası parça boyutu",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "compare": "Mevcut Piece CID ile karşılaştır",
+  "check": "Kontrol et",
+  "match": "Piece CID değerleri eşleşiyor.",
+  "different": "Piece CID değerleri farklı. Taahhüt hesaplanırken kullanılan dosyanın aynısını seçtiğinizden emin olun.",
+  "invalid": "Geçerli bir Filecoin Piece CID veya eski biçimde bir CommP değeri girin.",
+  "singleFile": "Her seferinde bir dosya seçin veya sürükleyip bırakın.",
+  "failed": "Piece CID hesaplanamadı. Dosyanın okunabildiğini kontrol edip tekrar deneyin."
+}

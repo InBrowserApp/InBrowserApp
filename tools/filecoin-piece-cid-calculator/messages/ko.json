@@ -1,0 +1,22 @@
+{
+  "input": "파일 또는 CAR 보관 파일",
+  "drop": "여기에 파일을 놓으세요",
+  "chooseFile": "파일 선택",
+  "calculate": "Piece CID 계산",
+  "calculating": "Piece CID 계산 중…",
+  "cancel": "취소",
+  "result": "피스 커밋먼트",
+  "empty": "파일을 선택해 Piece CID와 이전 형식의 CommP를 계산하세요.",
+  "pieceCid": "Piece CID(v2)",
+  "legacyCid": "이전 형식의 CommP(v1)",
+  "paddedSize": "패딩된 피스 크기",
+  "copy": "복사",
+  "copied": "복사됨",
+  "compare": "기존 Piece CID와 비교",
+  "check": "확인",
+  "match": "두 Piece CID가 일치합니다.",
+  "different": "두 Piece CID가 다릅니다. 커밋먼트를 계산할 때 사용한 파일과 정확히 같은 파일을 선택했는지 확인하세요.",
+  "invalid": "유효한 Filecoin Piece CID 또는 이전 형식의 CommP를 입력하세요.",
+  "singleFile": "한 번에 파일 하나만 선택하거나 끌어 놓으세요.",
+  "failed": "Piece CID를 계산할 수 없습니다. 파일을 읽을 수 있는지 확인한 뒤 다시 시도하세요."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tính Piece CID Filecoin",
+  "description": "Tính Piece CID Filecoin và CommP phiên bản cũ cho tệp lưu trữ CAR hoặc bất kỳ tệp nào. Xem kích thước piece sau khi đệm và xác minh giá trị cam kết ngay trong trình duyệt."
+}

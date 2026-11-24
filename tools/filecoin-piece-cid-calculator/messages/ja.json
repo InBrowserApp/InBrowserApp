@@ -1,0 +1,22 @@
+{
+  "input": "ファイルまたは CAR アーカイブ",
+  "drop": "ここにファイルをドロップ",
+  "chooseFile": "ファイルを選択",
+  "calculate": "Piece CID を計算",
+  "calculating": "Piece CID を計算中…",
+  "cancel": "キャンセル",
+  "result": "ピースコミットメント",
+  "empty": "ファイルを選択して、Piece CID と従来の CommP を計算してください。",
+  "pieceCid": "Piece CID（v2）",
+  "legacyCid": "従来の CommP（v1）",
+  "paddedSize": "パディング後のピースサイズ",
+  "copy": "コピー",
+  "copied": "コピーしました",
+  "compare": "既存の Piece CID と照合",
+  "check": "照合",
+  "match": "Piece CID が一致しました。",
+  "different": "Piece CID が一致しません。コミットメントの計算に使ったものと同一のファイルを選んでください。",
+  "invalid": "有効な Filecoin の Piece CID または従来の CommP を入力してください。",
+  "singleFile": "選択またはドロップできるファイルは一度に 1 つです。",
+  "failed": "Piece CID を計算できませんでした。ファイルを読み取れることを確認して、やり直してください。"
+}

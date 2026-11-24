@@ -1,0 +1,22 @@
+{
+  "input": "Fil eller CAR-arkiv",
+  "drop": "Slipp en fil her",
+  "chooseFile": "Velg fil",
+  "calculate": "Beregn Piece CID",
+  "calculating": "Beregner Piece CID…",
+  "cancel": "Avbryt",
+  "result": "Piece-commitment",
+  "empty": "Velg en fil for å beregne Piece CID og eldre CommP.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "Eldre CommP (v1)",
+  "paddedSize": "Utfylt piece-størrelse",
+  "copy": "Kopier",
+  "copied": "Kopiert",
+  "compare": "Sammenlign med en eksisterende Piece CID",
+  "check": "Kontroller",
+  "match": "Piece CID-ene samsvarer.",
+  "different": "Piece CID-ene er forskjellige. Kontroller at du valgte nøyaktig filen som ble brukt for commitmenten.",
+  "invalid": "Skriv inn en gyldig Filecoin Piece CID eller eldre CommP.",
+  "singleFile": "Velg eller slipp én fil om gangen.",
+  "failed": "Kunne ikke beregne Piece CID. Kontroller at filen kan leses, og prøv igjen."
+}

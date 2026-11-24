@@ -1,0 +1,22 @@
+{
+  "input": "ไฟล์หรืออาร์ไคฟ์ CAR",
+  "drop": "วางไฟล์ที่นี่",
+  "chooseFile": "เลือกไฟล์",
+  "calculate": "คำนวณ Piece CID",
+  "calculating": "กำลังคำนวณ Piece CID…",
+  "cancel": "ยกเลิก",
+  "result": "ค่า commitment ของ Piece",
+  "empty": "เลือกไฟล์เพื่อคำนวณ Piece CID และ CommP รุ่นเดิม",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP รุ่นเดิม (v1)",
+  "paddedSize": "ขนาด Piece หลังเติมข้อมูล",
+  "copy": "คัดลอก",
+  "copied": "คัดลอกแล้ว",
+  "compare": "เปรียบเทียบกับ Piece CID ที่มีอยู่",
+  "check": "ตรวจสอบ",
+  "match": "Piece CID ทั้งสองค่าตรงกัน",
+  "different": "Piece CID ต่างกัน ตรวจสอบว่าเลือกไฟล์เดียวกับที่ใช้คำนวณค่า commitment",
+  "invalid": "ป้อน Piece CID ของ Filecoin หรือ CommP รุ่นเดิมที่ถูกต้อง",
+  "singleFile": "เลือกหรือวางไฟล์ทีละไฟล์",
+  "failed": "คำนวณ Piece CID ไม่สำเร็จ ตรวจสอบว่าอ่านไฟล์ได้ แล้วลองอีกครั้ง"
+}

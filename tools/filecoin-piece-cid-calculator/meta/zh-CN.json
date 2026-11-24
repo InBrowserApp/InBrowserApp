@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Piece CID 计算器",
+  "description": "计算 CAR 归档或任意文件的 Filecoin Piece CID 和旧版 CommP。在浏览器中查看填充后的 Piece 大小并验证承诺值。"
+}

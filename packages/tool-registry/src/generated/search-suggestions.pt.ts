@@ -618,6 +618,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "file-type-detector",
   },
   {
+    category: "ipfs",
+    name: "Calculadora de Piece CID do Filecoin",
+    slug: "filecoin-piece-cid-calculator",
+  },
+  {
     category: "web",
     name: "Gerador de subconjuntos de fontes",
     slug: "font-subset-generator",

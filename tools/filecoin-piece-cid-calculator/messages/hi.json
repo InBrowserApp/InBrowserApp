@@ -1,0 +1,22 @@
+{
+  "input": "फ़ाइल या CAR आर्काइव",
+  "drop": "फ़ाइल यहाँ खींचकर छोड़ें",
+  "chooseFile": "फ़ाइल चुनें",
+  "calculate": "Piece CID निकालें",
+  "calculating": "Piece CID निकाला जा रहा है…",
+  "cancel": "रद्द करें",
+  "result": "पीस कमिटमेंट",
+  "empty": "Piece CID और पुराने फ़ॉर्मैट का CommP निकालने के लिए फ़ाइल चुनें।",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "पुराने फ़ॉर्मैट का CommP (v1)",
+  "paddedSize": "पैडिंग के बाद पीस का आकार",
+  "copy": "कॉपी करें",
+  "copied": "कॉपी हो गया",
+  "compare": "मौजूदा Piece CID से तुलना करें",
+  "check": "जाँचें",
+  "match": "दोनों Piece CID एक जैसे हैं।",
+  "different": "Piece CID अलग हैं। जाँचें कि आपने वही फ़ाइल चुनी है जिसका कमिटमेंट निकाला गया था।",
+  "invalid": "मान्य Filecoin Piece CID या पुराने फ़ॉर्मैट का CommP दर्ज करें।",
+  "singleFile": "एक बार में एक फ़ाइल चुनें या खींचकर छोड़ें।",
+  "failed": "Piece CID नहीं निकाला जा सका। जाँचें कि फ़ाइल पढ़ी जा सकती है और फिर कोशिश करें।"
+}

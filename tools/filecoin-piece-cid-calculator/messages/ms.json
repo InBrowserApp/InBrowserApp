@@ -1,0 +1,22 @@
+{
+  "input": "Fail atau arkib CAR",
+  "drop": "Seret dan lepas fail di sini",
+  "chooseFile": "Pilih fail",
+  "calculate": "Kira Piece CID",
+  "calculating": "Sedang mengira Piece CID…",
+  "cancel": "Batal",
+  "result": "Komitmen piece",
+  "empty": "Pilih fail untuk mengira Piece CID dan CommP versi lama.",
+  "pieceCid": "Piece CID (v2)",
+  "legacyCid": "CommP versi lama (v1)",
+  "paddedSize": "Saiz piece selepas pengisian",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "compare": "Bandingkan dengan Piece CID sedia ada",
+  "check": "Semak",
+  "match": "Kedua-dua Piece CID sepadan.",
+  "different": "Piece CID berbeza. Pastikan anda memilih fail yang digunakan untuk mengira komitmen.",
+  "invalid": "Masukkan Piece CID Filecoin atau CommP versi lama yang sah.",
+  "singleFile": "Pilih atau lepaskan satu fail pada satu masa.",
+  "failed": "Piece CID tidak dapat dikira. Pastikan fail boleh dibaca, kemudian cuba lagi."
+}
