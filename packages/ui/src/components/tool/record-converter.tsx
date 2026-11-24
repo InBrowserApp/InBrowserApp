@@ -181,7 +181,7 @@ export function RecordConverter({
             <Textarea
               id={id}
               dir="ltr"
-              className="min-h-40 font-mono text-sm"
+              className="field-sizing-fixed h-36 resize-y font-mono sm:h-48"
               placeholder={m.paste}
               value={draft.source}
               onChange={(event) => {
