@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR Arşivi Açma Aracı",
+  "description": "IPFS veya Filecoin CAR dosyalarını tarayıcınızda açın. Arşivi yüklemeden UnixFS klasörlerine göz atın, dosyaları tek tek indirin veya klasörü ZIP olarak dışa aktarın."
+}

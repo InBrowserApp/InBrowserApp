@@ -1,0 +1,4 @@
+{
+  "name": "Estrattore CAR IPFS",
+  "description": "Apri un file CAR di IPFS o Filecoin nel browser. Esplora le cartelle UnixFS, scarica singoli file o estrai una cartella come ZIP senza caricare l’archivio."
+}

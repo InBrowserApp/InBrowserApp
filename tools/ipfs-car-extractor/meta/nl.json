@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR-extractor",
+  "description": "Open een IPFS- of Filecoin-CAR-bestand in je browser. Blader door UnixFS-mappen, download afzonderlijke bestanden of pak een map uit als ZIP zonder het archief te uploaden."
+}

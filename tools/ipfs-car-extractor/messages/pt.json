@@ -1,0 +1,21 @@
+{
+  "archive": "Arquivo CAR",
+  "choose": "Escolher ficheiro CAR",
+  "drop": "Largue aqui um ficheiro CAR do IPFS ou do Filecoin",
+  "reading": "A ler o arquivo…",
+  "roots": "CID de raiz",
+  "rootsMissing": "Este arquivo não tem CID de raiz.",
+  "contents": "Conteúdo",
+  "folder": "Pasta",
+  "back": "Voltar",
+  "download": "Descarregar ficheiro",
+  "zip": "Descarregar ZIP",
+  "preparing": "A preparar a transferência…",
+  "cancel": "Cancelar",
+  "empty": "Esta pasta está vazia.",
+  "missing": "Falta um bloco necessário no arquivo.",
+  "corrupt": "Um bloco não corresponde ao respetivo CID.",
+  "unsupported": "Não é possível extrair esta entrada como ficheiro ou pasta UnixFS.",
+  "invalid": "Não foi possível ler este arquivo CAR do IPFS.",
+  "failed": "Não foi possível concluir a transferência. Tente novamente ou selecione uma pasta mais pequena."
+}

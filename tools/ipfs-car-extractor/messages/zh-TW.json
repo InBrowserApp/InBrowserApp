@@ -1,0 +1,21 @@
+{
+  "archive": "CAR 封存檔",
+  "choose": "選擇 CAR 檔案",
+  "drop": "將 IPFS 或 Filecoin 的 CAR 檔案拖曳到此處",
+  "reading": "正在讀取封存檔…",
+  "roots": "根 CID",
+  "rootsMissing": "此封存檔沒有根 CID。",
+  "contents": "內容",
+  "folder": "資料夾",
+  "back": "返回",
+  "download": "下載檔案",
+  "zip": "下載 ZIP",
+  "preparing": "正在準備下載…",
+  "cancel": "取消",
+  "empty": "此資料夾沒有內容。",
+  "missing": "此封存檔缺少必要的區塊。",
+  "corrupt": "有一個區塊與其 CID 不符。",
+  "unsupported": "無法將此項目擷取為 UnixFS 檔案或資料夾。",
+  "invalid": "無法讀取此 IPFS CAR 封存檔。",
+  "failed": "無法完成下載。請重試或選擇較小的資料夾。"
+}

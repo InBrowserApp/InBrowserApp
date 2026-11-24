@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR-utpakker",
+  "description": "Åpne en IPFS- eller Filecoin-CAR-fil i nettleseren. Bla i UnixFS-mapper, last ned enkeltfiler eller pakk ut en mappe som ZIP uten å laste opp arkivet."
+}

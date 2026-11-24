@@ -182,6 +182,7 @@
     "@tool/ip-cidr-normalizer": "workspace:*",
     "@tool/ip-info-lookup": "workspace:*",
     "@tool/ip-range-to-cidr-converter": "workspace:*",
+    "@tool/ipfs-car-extractor": "workspace:*",
     "@tool/ipfs-cid-calculator": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/ipv6-ula-generator": "workspace:*",

@@ -1,0 +1,27 @@
+{
+  "name": "@tool/ipfs-car-extractor",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@ipld/car": "catalog:",
+    "@workspace/ipfs-files": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "multiformats": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@zip.js/zip.js": "catalog:",
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "archive": "Arkib CAR",
+  "choose": "Pilih fail CAR",
+  "drop": "Seret dan lepas fail CAR IPFS atau Filecoin di sini",
+  "reading": "Sedang membaca arkib…",
+  "roots": "CID akar",
+  "rootsMissing": "Arkib ini tiada CID akar.",
+  "contents": "Kandungan",
+  "folder": "Folder",
+  "back": "Kembali",
+  "download": "Muat turun fail",
+  "zip": "Muat turun ZIP",
+  "preparing": "Sedang menyediakan muat turun…",
+  "cancel": "Batal",
+  "empty": "Folder ini kosong.",
+  "missing": "Salah satu blok yang diperlukan tiada dalam arkib.",
+  "corrupt": "Terdapat blok yang tidak sepadan dengan CID-nya.",
+  "unsupported": "Entri ini tidak boleh diekstrak sebagai fail atau folder UnixFS.",
+  "invalid": "Arkib CAR IPFS ini tidak dapat dibaca.",
+  "failed": "Muat turun tidak dapat diselesaikan. Cuba lagi atau pilih folder yang lebih kecil."
+}

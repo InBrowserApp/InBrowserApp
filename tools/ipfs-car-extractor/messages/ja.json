@@ -1,0 +1,21 @@
+{
+  "archive": "CAR アーカイブ",
+  "choose": "CAR ファイルを選択",
+  "drop": "IPFS または Filecoin の CAR ファイルをここにドロップ",
+  "reading": "アーカイブを読み込み中…",
+  "roots": "ルート CID",
+  "rootsMissing": "このアーカイブにはルート CID がありません。",
+  "contents": "内容",
+  "folder": "フォルダー",
+  "back": "戻る",
+  "download": "ファイルをダウンロード",
+  "zip": "ZIP をダウンロード",
+  "preparing": "ダウンロードを準備中…",
+  "cancel": "キャンセル",
+  "empty": "このフォルダーは空です。",
+  "missing": "必要なブロックがアーカイブに含まれていません。",
+  "corrupt": "CID と一致しないブロックが見つかりました。",
+  "unsupported": "この項目を UnixFS のファイルまたはフォルダーとして取り出せません。",
+  "invalid": "この IPFS CAR アーカイブを読み込めませんでした。",
+  "failed": "ダウンロードできませんでした。再試行するか、小さいフォルダーを選んでください。"
+}

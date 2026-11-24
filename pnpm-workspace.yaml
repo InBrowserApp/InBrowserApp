@@ -18,6 +18,8 @@ catalog:
   webtorrent: 3.0.21
   "@ffmpeg/core": 0.12.10
   "@ffmpeg/ffmpeg": 0.12.15
+  "@ipld/car": ^6.2.0
+  ipfs-unixfs-exporter: ^16.2.3
   ipfs-unixfs-importer: ^17.1.1
   multiformats: ^14.0.0
   "@aws-sdk/client-s3": 3.1174.0

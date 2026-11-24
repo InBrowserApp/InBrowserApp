@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR ファイル展開ツール",
+  "description": "IPFS や Filecoin の CAR ファイルをブラウザで開きます。アーカイブをアップロードせずに UnixFS フォルダーを参照し、個別のファイルやフォルダーの ZIP をダウンロードできます。"
+}

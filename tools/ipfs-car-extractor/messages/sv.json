@@ -1,0 +1,21 @@
+{
+  "archive": "CAR-arkiv",
+  "choose": "Välj CAR-fil",
+  "drop": "Släpp en IPFS- eller Filecoin-CAR-fil här",
+  "reading": "Läser arkivet…",
+  "roots": "Rot-CID",
+  "rootsMissing": "Arkivet har ingen rot-CID.",
+  "contents": "Innehåll",
+  "folder": "Mapp",
+  "back": "Tillbaka",
+  "download": "Ladda ner fil",
+  "zip": "Ladda ner ZIP",
+  "preparing": "Förbereder nedladdning…",
+  "cancel": "Avbryt",
+  "empty": "Mappen är tom.",
+  "missing": "Ett block som behövs saknas i arkivet.",
+  "corrupt": "Ett block matchade inte sin CID.",
+  "unsupported": "Posten kan inte extraheras som en UnixFS-fil eller -mapp.",
+  "invalid": "Det gick inte att läsa IPFS CAR-arkivet.",
+  "failed": "Det gick inte att slutföra nedladdningen. Försök igen eller välj en mindre mapp."
+}

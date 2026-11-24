@@ -1,0 +1,4 @@
+{
+  "name": "IPFS CAR 文件提取工具",
+  "description": "在浏览器中打开 IPFS 或 Filecoin 的 CAR 文件。无需上传归档，即可浏览 UnixFS 文件夹、下载单个文件，或将文件夹提取为 ZIP。"
+}

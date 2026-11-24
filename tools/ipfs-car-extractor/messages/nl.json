@@ -1,0 +1,21 @@
+{
+  "archive": "CAR-archief",
+  "choose": "CAR-bestand kiezen",
+  "drop": "Sleep hier een IPFS- of Filecoin-CAR-bestand naartoe",
+  "reading": "Archief lezen…",
+  "roots": "Root-CID",
+  "rootsMissing": "Dit archief heeft geen root-CID.",
+  "contents": "Inhoud",
+  "folder": "Map",
+  "back": "Terug",
+  "download": "Bestand downloaden",
+  "zip": "ZIP downloaden",
+  "preparing": "Download voorbereiden…",
+  "cancel": "Annuleren",
+  "empty": "Deze map is leeg.",
+  "missing": "Een vereist blok ontbreekt in het archief.",
+  "corrupt": "Een blok kwam niet overeen met zijn CID.",
+  "unsupported": "Dit item kan niet als UnixFS-bestand of -map worden uitgepakt.",
+  "invalid": "Dit IPFS CAR-archief kon niet worden gelezen.",
+  "failed": "De download kon niet worden voltooid. Probeer het opnieuw of selecteer een kleinere map."
+}

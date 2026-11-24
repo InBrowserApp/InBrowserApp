@@ -1,0 +1,21 @@
+{
+  "archive": "Archiwum CAR",
+  "choose": "Wybierz plik CAR",
+  "drop": "Upuść tutaj plik CAR z IPFS lub Filecoin",
+  "reading": "Odczytywanie archiwum…",
+  "roots": "Główny CID",
+  "rootsMissing": "To archiwum nie ma głównego CID.",
+  "contents": "Zawartość",
+  "folder": "Folder",
+  "back": "Wstecz",
+  "download": "Pobierz plik",
+  "zip": "Pobierz ZIP",
+  "preparing": "Przygotowywanie pobierania…",
+  "cancel": "Anuluj",
+  "empty": "Ten folder jest pusty.",
+  "missing": "W archiwum brakuje wymaganego bloku.",
+  "corrupt": "Jeden z bloków nie odpowiada swojemu CID.",
+  "unsupported": "Tego elementu nie można wyodrębnić jako pliku ani folderu UnixFS.",
+  "invalid": "Nie udało się odczytać tego archiwum CAR IPFS.",
+  "failed": "Nie udało się ukończyć pobierania. Spróbuj ponownie lub wybierz mniejszy folder."
+}

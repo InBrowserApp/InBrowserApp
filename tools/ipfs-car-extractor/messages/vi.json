@@ -1,0 +1,21 @@
+{
+  "archive": "Tệp lưu trữ CAR",
+  "choose": "Chọn tệp CAR",
+  "drop": "Thả tệp CAR của IPFS hoặc Filecoin vào đây",
+  "reading": "Đang đọc tệp lưu trữ…",
+  "roots": "CID gốc",
+  "rootsMissing": "Tệp lưu trữ này không có CID gốc.",
+  "contents": "Nội dung",
+  "folder": "Thư mục",
+  "back": "Quay lại",
+  "download": "Tải tệp xuống",
+  "zip": "Tải ZIP xuống",
+  "preparing": "Đang chuẩn bị tải xuống…",
+  "cancel": "Hủy",
+  "empty": "Thư mục này trống.",
+  "missing": "Tệp lưu trữ thiếu một khối dữ liệu cần thiết.",
+  "corrupt": "Có khối dữ liệu không khớp với CID của khối đó.",
+  "unsupported": "Không thể trích xuất mục này thành tệp hoặc thư mục UnixFS.",
+  "invalid": "Không thể đọc tệp lưu trữ CAR IPFS này.",
+  "failed": "Không thể hoàn tất tải xuống. Hãy thử lại hoặc chọn thư mục nhỏ hơn."
+}

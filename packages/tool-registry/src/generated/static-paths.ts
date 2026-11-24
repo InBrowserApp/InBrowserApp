@@ -16102,6 +16102,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipfs-car-extractor",
+    language: "ar",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "de",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "en",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "es",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "fr",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "he",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "hi",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "id",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "it",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "ja",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "ko",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "ms",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "nl",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "no",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "pl",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "pt",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "ru",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "sv",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "th",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "tr",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "vi",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipfs-car-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "ipfs-cid-calculator",
     language: "ar",
   },

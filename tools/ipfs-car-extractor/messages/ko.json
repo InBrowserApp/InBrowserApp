@@ -1,0 +1,21 @@
+{
+  "archive": "CAR 보관 파일",
+  "choose": "CAR 파일 선택",
+  "drop": "여기에 IPFS 또는 Filecoin CAR 파일을 놓으세요",
+  "reading": "보관 파일을 읽는 중…",
+  "roots": "루트 CID",
+  "rootsMissing": "이 보관 파일에는 루트 CID가 없습니다.",
+  "contents": "내용",
+  "folder": "폴더",
+  "back": "뒤로",
+  "download": "파일 다운로드",
+  "zip": "ZIP 다운로드",
+  "preparing": "다운로드 준비 중…",
+  "cancel": "취소",
+  "empty": "빈 폴더입니다.",
+  "missing": "보관 파일에 필요한 블록이 없습니다.",
+  "corrupt": "블록이 해당 CID와 일치하지 않습니다.",
+  "unsupported": "이 항목을 UnixFS 파일이나 폴더로 추출할 수 없습니다.",
+  "invalid": "이 IPFS CAR 보관 파일을 읽을 수 없습니다.",
+  "failed": "다운로드를 완료하지 못했습니다. 다시 시도하거나 더 작은 폴더를 선택하세요."
+}

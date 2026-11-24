@@ -1,0 +1,4 @@
+{
+  "name": "Extrator de ficheiros CAR do IPFS",
+  "description": "Abra um ficheiro CAR do IPFS ou do Filecoin no seu navegador. Explore pastas UnixFS, descarregue ficheiros individuais ou extraia uma pasta em ZIP sem enviar o arquivo."
+}

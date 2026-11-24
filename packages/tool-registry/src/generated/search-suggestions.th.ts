@@ -879,6 +879,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "เครื่องมือดึงไฟล์จาก CAR ของ IPFS",
+    slug: "ipfs-car-extractor",
+  },
+  {
+    category: "ipfs",
     name: "เครื่องมือคำนวณ CID ของ IPFS",
     slug: "ipfs-cid-calculator",
   },
