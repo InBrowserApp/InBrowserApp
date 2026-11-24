@@ -7,6 +7,7 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
 import { ChevronDown, FileJson2, ImageIcon } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 
 import type { TokenUri } from "./core/ethereum"
 import type { MetadataProblem, TokenMetadata } from "./core/metadata"
@@ -91,12 +92,13 @@ export default function ViewerResult({
 }) {
   const heading = useId()
   const { reference, metadata, problem } = result
+  const image = metadata?.image
   const json = metadata?.json ?? result.json
   return (
     <ToolPanelCard role="region" aria-labelledby={heading}>
       <CardHeader className="flex flex-wrap items-center justify-between gap-2">
-        <CardTitle id={heading} role="heading" aria-level={2}>
-          {messages.result}
+        <CardTitle>
+          <h2 id={heading}>{messages.result}</h2>
         </CardTitle>
         <span
           dir="ltr"
@@ -108,16 +110,15 @@ export default function ViewerResult({
       <ToolPanelCardContent className="gap-4">
         {metadata && (
           <div
-            className={
-              metadata.image
-                ? "grid min-w-0 gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
-                : "grid min-w-0 gap-4"
-            }
+            className={cn(
+              "grid min-w-0 gap-4",
+              image && "md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
+            )}
           >
-            {metadata.image && (
+            {image && (
               <Preview
-                key={metadata.image}
-                source={metadata.image}
+                key={image}
+                source={image}
                 label={metadata.name || messages.preview}
                 failedLabel={messages.imageFailed}
               />
@@ -136,29 +137,37 @@ export default function ViewerResult({
                   {metadata.description}
                 </p>
               )}
+              {!image && (
+                <p className="text-sm text-muted-foreground">
+                  {messages.imageFailed}
+                </p>
+              )}
               {metadata.traits.length > 0 && (
                 <div className="grid gap-2">
                   <h4 className="text-sm font-medium">{messages.traits}</h4>
-                  <dl className="grid grid-cols-2 gap-2 xl:grid-cols-3">
+                  <ul
+                    role="list"
+                    className="grid grid-cols-2 gap-2 xl:grid-cols-3"
+                  >
                     {metadata.traits.map(({ label, value }, index) => (
-                      <div
+                      <li
                         key={index}
                         className="grid min-w-0 content-start gap-1 rounded-lg border p-2.5"
                       >
                         {label && (
-                          <dt
+                          <p
                             dir="auto"
                             className="text-xs wrap-anywhere text-muted-foreground"
                           >
                             {label}
-                          </dt>
+                          </p>
                         )}
-                        <dd dir="auto" className="text-sm wrap-anywhere">
+                        <p dir="auto" className="text-sm wrap-anywhere">
                           {value}
-                        </dd>
-                      </div>
+                        </p>
+                      </li>
                     ))}
-                  </dl>
+                  </ul>
                 </div>
               )}
             </div>
@@ -194,14 +203,13 @@ export default function ViewerResult({
               />
             </summary>
             <div className="grid gap-2 border-t bg-muted/20 p-3">
-              <div className="justify-self-end">
-                <ToolCopyButton
-                  value={json}
-                  copyLabel={messages.copy}
-                  copiedLabel={messages.copied}
-                  ariaLabel={`${messages.copy} · ${messages.rawJson}`}
-                />
-              </div>
+              <ToolCopyButton
+                className="justify-self-end"
+                value={json}
+                copyLabel={messages.copy}
+                copiedLabel={messages.copied}
+                ariaLabel={`${messages.copy} · ${messages.rawJson}`}
+              />
               <pre
                 dir="ltr"
                 className="max-h-96 overflow-auto rounded-md bg-muted p-2.5 text-xs wrap-anywhere whitespace-pre-wrap"

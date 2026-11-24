@@ -68,9 +68,11 @@ function imageUrl(value: Record<string, unknown>, base: URL) {
     }
   }
   const embedded = value.image_data
-  return typeof embedded === "string" && /^\s*<svg[\s/>]/i.test(embedded)
-    ? "data:image/svg+xml," + encodeURIComponent(embedded.toWellFormed())
-    : null
+  if (typeof embedded !== "string" || !/^\s*<svg[\s/>]/i.test(embedded)) {
+    return null
+  }
+  const svg = new TextDecoder().decode(new TextEncoder().encode(embedded))
+  return "data:image/svg+xml," + encodeURIComponent(svg)
 }
 
 export async function readTokenMetadata(
