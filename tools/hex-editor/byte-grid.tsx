@@ -229,7 +229,7 @@ function ByteInput({
         }
       }}
       className={cn(
-        "block h-7 w-full min-w-5 rounded-sm bg-transparent text-center outline-none hover:bg-accent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset sm:min-w-7 pointer-coarse:text-base",
+        "block h-7 w-full min-w-5 rounded-sm bg-transparent text-center outline-none hover:bg-accent focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset sm:min-w-7 pointer-coarse:focus:text-base",
         edited &&
           "font-bold text-primary underline decoration-dotted underline-offset-4",
         selected && "bg-primary/15 text-primary"
