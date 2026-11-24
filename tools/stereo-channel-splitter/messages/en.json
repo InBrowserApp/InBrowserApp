@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Choose stereo audio",
+  "dropHint": "or drop an audio file here",
+  "formats": "WAV, MP3, M4A, FLAC, OGG and other browser-supported audio",
+  "privacy": "Your audio stays on your device.",
+  "changeFile": "Change file",
+  "processing": "Splitting stereo audio…",
+  "ready": "Left and right channels are ready.",
+  "left": "Left channel",
+  "right": "Right channel",
+  "downloadLeft": "Download left WAV",
+  "downloadRight": "Download right WAV",
+  "monoError": "This file has one audio channel. Choose a stereo file with left and right channels.",
+  "multichannelError": "This file has more than two audio channels. Choose a two-channel stereo file.",
+  "readError": "This audio file could not be opened. Try another file or export it as a stereo WAV."
+}

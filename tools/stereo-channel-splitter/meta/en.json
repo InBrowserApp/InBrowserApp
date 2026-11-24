@@ -1,0 +1,4 @@
+{
+  "name": "Stereo Channel Splitter",
+  "description": "Split stereo audio into separate left and right mono WAV files. Preview and download each channel directly in your browser."
+}

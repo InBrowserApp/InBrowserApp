@@ -1,0 +1,4 @@
+{
+  "name": "Separera stereokanaler",
+  "description": "Spara vänster och höger kanal i en stereoinspelning som separata WAV-filer i mono. Lyssna på och ladda ner varje kanal direkt i webbläsaren."
+}

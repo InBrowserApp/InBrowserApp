@@ -1,0 +1,4 @@
+{
+  "name": "Stereokanäle trennen",
+  "description": "Trenne Stereoaufnahmen in zwei Mono-WAV-Dateien für den linken und rechten Kanal. Höre die Kanäle direkt im Browser an und lade sie einzeln herunter."
+}

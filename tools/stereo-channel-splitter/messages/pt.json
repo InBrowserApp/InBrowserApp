@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Escolher áudio estéreo",
+  "dropHint": "ou largue aqui um ficheiro de áudio",
+  "formats": "WAV, MP3, M4A, FLAC, OGG e outros formatos suportados pelo navegador",
+  "privacy": "O áudio fica no seu dispositivo.",
+  "changeFile": "Alterar ficheiro",
+  "processing": "A separar os canais estéreo…",
+  "ready": "Os canais esquerdo e direito estão prontos.",
+  "left": "Canal esquerdo",
+  "right": "Canal direito",
+  "downloadLeft": "Transferir WAV esquerdo",
+  "downloadRight": "Transferir WAV direito",
+  "monoError": "Este ficheiro tem apenas um canal de áudio. Escolha um ficheiro estéreo com um canal esquerdo e outro direito.",
+  "multichannelError": "Este ficheiro tem mais de dois canais de áudio. Escolha um ficheiro estéreo de dois canais.",
+  "readError": "Não foi possível abrir este ficheiro de áudio. Experimente outro ficheiro ou exporte-o em WAV estéreo."
+}

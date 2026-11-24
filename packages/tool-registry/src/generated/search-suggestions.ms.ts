@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Pemisah Saluran Audio Stereo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Jam randik",
     slug: "stopwatch",

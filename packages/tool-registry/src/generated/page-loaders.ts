@@ -356,6 +356,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ssh-key-generator": () => import("@tool/ssh-key-generator/page"),
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
+  "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),

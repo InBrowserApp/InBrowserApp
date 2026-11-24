@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "ステレオ音声の左右チャンネル分割",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "ストップウォッチ",
     slug: "stopwatch",

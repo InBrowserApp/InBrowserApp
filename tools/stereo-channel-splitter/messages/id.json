@@ -1,0 +1,16 @@
+{
+  "chooseFile": "Pilih file audio stereo",
+  "dropHint": "atau seret dan lepas file audio di sini",
+  "formats": "WAV, MP3, M4A, FLAC, OGG, dan format audio lain yang didukung browser",
+  "privacy": "Audio Anda tetap berada di perangkat.",
+  "changeFile": "Ganti file",
+  "processing": "Memisahkan kanal audio stereo…",
+  "ready": "Kanal kiri dan kanan siap digunakan.",
+  "left": "Kanal kiri",
+  "right": "Kanal kanan",
+  "downloadLeft": "Unduh WAV kiri",
+  "downloadRight": "Unduh WAV kanan",
+  "monoError": "File ini hanya memiliki satu kanal audio. Pilih file stereo dengan kanal kiri dan kanan.",
+  "multichannelError": "File ini memiliki lebih dari dua kanal audio. Pilih file stereo dua kanal.",
+  "readError": "File audio ini tidak dapat dibuka. Coba file lain atau ekspor file ini sebagai WAV stereo."
+}

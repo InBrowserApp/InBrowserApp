@@ -26038,6 +26038,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "stereo-channel-splitter",
+    language: "ar",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "de",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "en",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "es",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "fr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "he",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "hi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "id",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "it",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ja",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ko",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ms",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "nl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "no",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pl",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "pt",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "ru",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "sv",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "th",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "tr",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "vi",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
     slug: "stopwatch",
     language: "ar",
   },

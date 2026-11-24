@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Separador de canales estéreo",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Cronómetro",
     slug: "stopwatch",

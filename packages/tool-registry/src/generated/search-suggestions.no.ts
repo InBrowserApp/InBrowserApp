@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
+    category: "misc",
+    name: "Del stereolyd i to monofiler",
+    slug: "stereo-channel-splitter",
+  },
+  {
     category: "developer",
     name: "Stoppeklokke",
     slug: "stopwatch",
