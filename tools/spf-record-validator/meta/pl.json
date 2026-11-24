@@ -1,0 +1,4 @@
+{
+  "name": "Sprawdzanie składni rekordu SPF",
+  "description": "Sprawdź składnię wklejonego rekordu TXT SPF według RFC 7208. Zobacz w przeglądarce jego mechanizmy, kwalifikatory, modyfikatory i elementy mogące wywołać zapytanie DNS."
+}

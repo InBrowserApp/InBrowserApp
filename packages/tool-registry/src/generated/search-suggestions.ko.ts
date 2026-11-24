@@ -1493,6 +1493,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "SPF 레코드 구문 검사기",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "스프레드시트 데이터 내보내기",
     slug: "spreadsheet-data-export",

@@ -1,0 +1,4 @@
+{
+  "name": "Comprobador de sintaxis de registros SPF",
+  "description": "Comprueba si un registro TXT de SPF cumple la sintaxis de RFC 7208. Revisa mecanismos, calificadores, modificadores y posibles consultas DNS en tu navegador."
+}

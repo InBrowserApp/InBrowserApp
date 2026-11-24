@@ -37786,6 +37786,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "spf-record-validator",
+    category: "network",
+    icon: "mail",
+    tags: [
+      "spf",
+      "dns",
+      "txt",
+      "email",
+      "authentication",
+      "rfc-7208",
+      "syntax",
+      "validator",
+    ],
+    locales: {
+      ar: {
+        name: "مدقّق صياغة سجلات SPF",
+        description:
+          "تحقّق من صياغة سجل TXT الخاص بـ SPF وفق RFC 7208. راجع الآليات والمؤهلات والمعدِّلات والعناصر التي قد تؤدي إلى استعلامات DNS مباشرةً في متصفّحك.",
+      },
+      de: {
+        name: "SPF-Syntaxprüfung",
+        description:
+          "Prüfe einen eingefügten SPF-TXT-Eintrag nach RFC 7208. Sieh dir Mechanismen, Qualifizierer, Modifikatoren und mögliche DNS-Abfragen direkt im Browser an.",
+      },
+      en: {
+        name: "SPF Record Syntax Checker",
+        description:
+          "Check a pasted SPF TXT record against RFC 7208. Review mechanisms, qualifiers, modifiers, and potential DNS lookup terms directly in your browser.",
+      },
+      es: {
+        name: "Comprobador de sintaxis de registros SPF",
+        description:
+          "Comprueba si un registro TXT de SPF cumple la sintaxis de RFC 7208. Revisa mecanismos, calificadores, modificadores y posibles consultas DNS en tu navegador.",
+      },
+      fr: {
+        name: "Vérificateur de syntaxe SPF",
+        description:
+          "Collez un enregistrement TXT SPF pour vérifier sa syntaxe selon la RFC 7208. Examinez les mécanismes, qualificateurs, modificateurs et termes qui peuvent déclencher des requêtes DNS.",
+      },
+      he: {
+        name: "בודק תחביר רשומות SPF",
+        description:
+          "בדקו תחביר של רשומת SPF מסוג TXT לפי RFC 7208. סקרו מנגנונים, מסייגים, משנים ורכיבים שעשויים לגרום לשאילתות DNS ישירות בדפדפן.",
+      },
+      hi: {
+        name: "SPF रिकॉर्ड सिंटैक्स चेकर",
+        description:
+          "SPF TXT रिकॉर्ड पेस्ट करके RFC 7208 के अनुसार उसका सिंटैक्स जाँचें। मैकेनिज़्म, क्वालिफ़ायर, मॉडिफ़ायर और DNS लुकअप करा सकने वाले टर्म सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Pemeriksa Sintaks Record SPF",
+        description:
+          "Periksa sintaks record TXT SPF yang ditempel berdasarkan RFC 7208. Lihat mekanisme, kualifikator, pengubah, dan komponen yang dapat memicu kueri DNS langsung di browser.",
+      },
+      it: {
+        name: "Verifica della sintassi SPF",
+        description:
+          "Incolla un record TXT SPF e verificane la sintassi secondo RFC 7208. Esamina nel browser meccanismi, qualificatori, modificatori e termini che possono richiedere query DNS.",
+      },
+      ja: {
+        name: "SPFレコード構文チェックツール",
+        description:
+          "貼り付けたSPF TXTレコードをRFC 7208に照らしてチェック。メカニズム、限定子、修飾子、DNS参照を伴う可能性のある項目をブラウザで確認できます。",
+      },
+      ko: {
+        name: "SPF 레코드 구문 검사기",
+        description:
+          "붙여넣은 SPF TXT 레코드의 구문을 RFC 7208 기준으로 검사하세요. 메커니즘, 한정자, 수정자, DNS 조회를 유발할 수 있는 항목을 브라우저에서 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyemak Sintaks Rekod SPF",
+        description:
+          "Semak sintaks rekod TXT SPF yang ditampal mengikut RFC 7208. Lihat mekanisme, penentu, pengubah dan komponen yang boleh mencetuskan carian DNS terus dalam pelayar.",
+      },
+      nl: {
+        name: "Syntaxcontrole voor SPF-records",
+        description:
+          "Controleer een geplakt SPF TXT-record volgens RFC 7208. Bekijk mechanismen, kwalificatoren, modifiers en termen die een DNS-opzoeking kunnen veroorzaken in je browser.",
+      },
+      no: {
+        name: "Syntakskontroll for SPF-poster",
+        description:
+          "Kontroller en innlimt SPF-post av typen TXT mot RFC 7208. Se mekanismer, kvalifikatorer, modifikatorer og ledd som kan utløse DNS-oppslag, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Sprawdzanie składni rekordu SPF",
+        description:
+          "Sprawdź składnię wklejonego rekordu TXT SPF według RFC 7208. Zobacz w przeglądarce jego mechanizmy, kwalifikatory, modyfikatory i elementy mogące wywołać zapytanie DNS.",
+      },
+      pt: {
+        name: "Verificador de sintaxe de registros SPF",
+        description:
+          "Confira se a sintaxe de um registro TXT de SPF segue a RFC 7208. Veja mecanismos, qualificadores, modificadores e possíveis consultas DNS no navegador.",
+      },
+      ru: {
+        name: "Проверка синтаксиса SPF-записей",
+        description:
+          "Проверьте синтаксис SPF-записи TXT по RFC 7208. Посмотрите механизмы, квалификаторы, модификаторы и элементы, которые могут вызвать DNS-запросы, прямо в браузере.",
+      },
+      sv: {
+        name: "Syntaxkontroll för SPF-poster",
+        description:
+          "Kontrollera en inklistrad SPF-post av typen TXT enligt RFC 7208. Granska mekanismer, kvalificerare, modifierare och termer som kan orsaka DNS-uppslagningar direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบไวยากรณ์ระเบียน SPF",
+        description:
+          "วางค่าระเบียน TXT ของ SPF เพื่อตรวจสอบตาม RFC 7208 ดูกลไก ตัวระบุผล ตัวปรับแต่ง และรายการที่อาจทำให้เกิดการค้นหา DNS ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "SPF Kaydı Sözdizimi Denetleyicisi",
+        description:
+          "SPF TXT kaydını yapıştırıp RFC 7208’e göre denetleyin. Mekanizmaları, niteleyicileri, değiştiricileri ve DNS sorgusu gerektirebilecek terimleri tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Kiểm tra cú pháp bản ghi SPF",
+        description:
+          "Dán bản ghi TXT chứa SPF để kiểm tra cú pháp theo RFC 7208. Xem các cơ chế, tiền tố kết quả, tham số điều chỉnh và các mục có thể phát sinh truy vấn DNS ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "SPF 记录语法检查器",
+        description:
+          "根据 RFC 7208 检查粘贴的 SPF TXT 记录，直接在浏览器中查看机制、限定符、修饰符和可能触发 DNS 查询的项。",
+      },
+      "zh-TW": {
+        name: "SPF 記錄語法檢查工具",
+        description:
+          "根據 RFC 7208 檢查貼上的 SPF TXT 記錄，直接在瀏覽器中查看機制、限定詞、修飾符及可能觸發 DNS 查詢的項目。",
+      },
+    },
+  },
+  {
     slug: "spreadsheet-data-export",
     category: "document",
     icon: "file-text",

@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa Sintaks Record SPF",
+  "description": "Periksa sintaks record TXT SPF yang ditempel berdasarkan RFC 7208. Lihat mekanisme, kualifikator, pengubah, dan komponen yang dapat memicu kueri DNS langsung di browser."
+}

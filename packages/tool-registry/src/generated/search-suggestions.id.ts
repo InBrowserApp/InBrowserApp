@@ -1493,6 +1493,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "Pemeriksa Sintaks Record SPF",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "Pengekspor Data Lembar Bentang",
     slug: "spreadsheet-data-export",

@@ -1,0 +1,4 @@
+{
+  "name": "Kiểm tra cú pháp bản ghi SPF",
+  "description": "Dán bản ghi TXT chứa SPF để kiểm tra cú pháp theo RFC 7208. Xem các cơ chế, tiền tố kết quả, tham số điều chỉnh và các mục có thể phát sinh truy vấn DNS ngay trong trình duyệt."
+}

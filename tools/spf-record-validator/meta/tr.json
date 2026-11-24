@@ -1,0 +1,4 @@
+{
+  "name": "SPF Kaydı Sözdizimi Denetleyicisi",
+  "description": "SPF TXT kaydını yapıştırıp RFC 7208’e göre denetleyin. Mekanizmaları, niteleyicileri, değiştiricileri ve DNS sorgusu gerektirebilecek terimleri tarayıcınızda inceleyin."
+}

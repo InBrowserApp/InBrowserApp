@@ -1493,6 +1493,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "sm3-hash-text-or-file",
   },
   {
+    category: "network",
+    name: "בודק תחביר רשומות SPF",
+    slug: "spf-record-validator",
+  },
+  {
     category: "document",
     name: "כלי לייצוא נתוני גיליונות אלקטרוניים",
     slug: "spreadsheet-data-export",
