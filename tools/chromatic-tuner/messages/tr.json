@@ -1,0 +1,21 @@
+{
+  "start": "Mikrofonu aç",
+  "stop": "Mikrofonu kapat",
+  "starting": "Mikrofon izni bekleniyor",
+  "listenHint": "Mikrofonu açın, ardından tek bir notayı sabit tutarak çalın.",
+  "playHint": "Tek bir notayı sabit tutarak çalın.",
+  "microphoneError": "Mikrofon kullanılamıyor. Tarayıcı izinlerinizi kontrol edin veya bağlı bir mikrofon seçin, ardından tekrar deneyin.",
+  "mode": "Akort modu",
+  "chromatic": "Kromatik",
+  "guitar": "Gitar",
+  "ukulele": "Ukulele",
+  "strings": "Akort edilecek tel",
+  "reference": "A4 referansı (Hz)",
+  "playReference": "Referans sesini çal",
+  "toneError": "Referans sesi çalınamadı. Tekrar deneyin.",
+  "flat": "Pes",
+  "inTune": "Akort doğru",
+  "sharp": "Tiz",
+  "cents": "{value} sent",
+  "frequency": "{value} Hz"
+}

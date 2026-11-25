@@ -1,0 +1,21 @@
+{
+  "start": "Activar micrófono",
+  "stop": "Desactivar micrófono",
+  "starting": "Esperando permiso para usar el micrófono",
+  "listenHint": "Activa el micrófono y toca una nota sostenida.",
+  "playHint": "Toca una nota sostenida.",
+  "microphoneError": "El micrófono no está disponible. Revisa los permisos del navegador o elige un micrófono conectado y vuelve a intentarlo.",
+  "mode": "Modo de afinación",
+  "chromatic": "Cromático",
+  "guitar": "Guitarra",
+  "ukulele": "Ukelele",
+  "strings": "Cuerda que quieres afinar",
+  "reference": "Frecuencia de referencia (A4, Hz)",
+  "playReference": "Reproducir tono de referencia",
+  "toneError": "No se pudo reproducir el tono de referencia. Inténtalo de nuevo.",
+  "flat": "Demasiado grave",
+  "inTune": "Afinada",
+  "sharp": "Demasiado aguda",
+  "cents": "{value} cents",
+  "frequency": "{value} Hz"
+}

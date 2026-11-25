@@ -1,0 +1,21 @@
+{
+  "start": "Włącz mikrofon",
+  "stop": "Wyłącz mikrofon",
+  "starting": "Oczekiwanie na dostęp do mikrofonu",
+  "listenHint": "Włącz mikrofon, a potem zagraj jeden równy dźwięk.",
+  "playHint": "Zagraj jeden równy dźwięk.",
+  "microphoneError": "Mikrofon jest niedostępny. Sprawdź uprawnienia przeglądarki lub wybierz podłączony mikrofon i spróbuj ponownie.",
+  "mode": "Tryb strojenia",
+  "chromatic": "Chromatyczny",
+  "guitar": "Gitara",
+  "ukulele": "Ukulele",
+  "strings": "Strojona struna",
+  "reference": "Częstotliwość A4 (Hz)",
+  "playReference": "Odtwórz dźwięk wzorcowy",
+  "toneError": "Nie udało się odtworzyć dźwięku wzorcowego. Spróbuj ponownie.",
+  "flat": "Za nisko",
+  "inTune": "Właściwa wysokość",
+  "sharp": "Za wysoko",
+  "cents": "{value} (w centach)",
+  "frequency": "{value} Hz"
+}

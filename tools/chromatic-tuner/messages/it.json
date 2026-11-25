@@ -1,0 +1,21 @@
+{
+  "start": "Attiva microfono",
+  "stop": "Disattiva microfono",
+  "starting": "In attesa del permesso di usare il microfono",
+  "listenHint": "Attiva il microfono, poi suona una nota tenuta.",
+  "playHint": "Suona una nota tenuta.",
+  "microphoneError": "Il microfono non è disponibile. Controlla le autorizzazioni del browser o scegli un microfono collegato, poi riprova.",
+  "mode": "Modalità di accordatura",
+  "chromatic": "Cromatica",
+  "guitar": "Chitarra",
+  "ukulele": "Ukulele",
+  "strings": "Corda da accordare",
+  "reference": "Frequenza di riferimento (A4, Hz)",
+  "playReference": "Riproduci nota di riferimento",
+  "toneError": "Impossibile riprodurre la nota di riferimento. Riprova.",
+  "flat": "Calante",
+  "inTune": "Intonata",
+  "sharp": "Crescente",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

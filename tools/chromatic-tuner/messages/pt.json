@@ -1,0 +1,21 @@
+{
+  "start": "Ativar microfone",
+  "stop": "Desativar microfone",
+  "starting": "Aguardando permissão para usar o microfone",
+  "listenHint": "Ative o microfone e toque uma nota sustentada.",
+  "playHint": "Toque uma nota sustentada.",
+  "microphoneError": "O microfone está indisponível. Confira as permissões do navegador ou selecione um microfone conectado e tente novamente.",
+  "mode": "Modo de afinação",
+  "chromatic": "Cromático",
+  "guitar": "Violão ou guitarra",
+  "ukulele": "Ukulele",
+  "strings": "Corda a afinar",
+  "reference": "Frequência de referência (A4, Hz)",
+  "playReference": "Reproduzir tom de referência",
+  "toneError": "Não foi possível reproduzir o tom de referência. Tente novamente.",
+  "flat": "Grave demais",
+  "inTune": "Afinada",
+  "sharp": "Aguda demais",
+  "cents": "{value} cents",
+  "frequency": "{value} Hz"
+}

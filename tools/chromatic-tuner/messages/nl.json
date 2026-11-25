@@ -1,0 +1,21 @@
+{
+  "start": "Microfoon starten",
+  "stop": "Microfoon stoppen",
+  "starting": "Wachten op microfoontoegang",
+  "listenHint": "Start de microfoon en speel één gelijkmatige toon.",
+  "playHint": "Speel één gelijkmatige toon.",
+  "microphoneError": "De microfoon is niet beschikbaar. Controleer de browsermachtigingen of kies een aangesloten microfoon en probeer het opnieuw.",
+  "mode": "Stemmodus",
+  "chromatic": "Chromatisch",
+  "guitar": "Gitaar",
+  "ukulele": "Ukelele",
+  "strings": "Te stemmen snaar",
+  "reference": "A4-referentie (Hz)",
+  "playReference": "Referentietoon afspelen",
+  "toneError": "De referentietoon kan niet worden afgespeeld. Probeer het opnieuw.",
+  "flat": "Te laag",
+  "inTune": "Zuiver",
+  "sharp": "Te hoog",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

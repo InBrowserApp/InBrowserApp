@@ -1,0 +1,21 @@
+{
+  "start": "Bật micro",
+  "stop": "Tắt micro",
+  "starting": "Đang chờ quyền dùng micro",
+  "listenHint": "Bật micro, sau đó chơi một nốt đều và giữ ổn định.",
+  "playHint": "Hãy chơi một nốt đều và giữ ổn định.",
+  "microphoneError": "Không thể dùng micro. Hãy kiểm tra quyền của trình duyệt hoặc chọn micro đã kết nối, rồi thử lại.",
+  "mode": "Chế độ chỉnh âm",
+  "chromatic": "Chromatic",
+  "guitar": "Guitar",
+  "ukulele": "Ukulele",
+  "strings": "Dây cần chỉnh",
+  "reference": "Tần số chuẩn A4 (Hz)",
+  "playReference": "Phát âm chuẩn",
+  "toneError": "Không thể phát âm chuẩn. Hãy thử lại.",
+  "flat": "Thấp",
+  "inTune": "Đúng cao độ",
+  "sharp": "Cao",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

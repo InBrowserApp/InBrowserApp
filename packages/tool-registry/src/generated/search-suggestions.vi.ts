@@ -393,6 +393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chmod-calculator",
   },
   {
+    category: "music",
+    name: "Máy lên dây chromatic trực tuyến",
+    slug: "chromatic-tuner",
+  },
+  {
     category: "network",
     name: "Trình phân tích CIDR",
     slug: "cidr-parser",

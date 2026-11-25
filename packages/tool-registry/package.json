@@ -85,6 +85,7 @@
     "@tool/chm-to-pdf-converter": "workspace:*",
     "@tool/chm-viewer": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",
+    "@tool/chromatic-tuner": "workspace:*",
     "@tool/cidr-parser": "workspace:*",
     "@tool/cidrs-merger-excluder": "workspace:*",
     "@tool/cityhash64-hash-text-or-file": "workspace:*",

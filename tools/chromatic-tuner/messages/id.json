@@ -1,0 +1,21 @@
+{
+  "start": "Aktifkan mikrofon",
+  "stop": "Nonaktifkan mikrofon",
+  "starting": "Menunggu izin mikrofon",
+  "listenHint": "Aktifkan mikrofon, lalu mainkan satu nada yang stabil.",
+  "playHint": "Mainkan satu nada yang stabil.",
+  "microphoneError": "Mikrofon tidak tersedia. Periksa izin browser atau pilih mikrofon yang terhubung, lalu coba lagi.",
+  "mode": "Mode penyeteman",
+  "chromatic": "Kromatik",
+  "guitar": "Gitar",
+  "ukulele": "Ukulele",
+  "strings": "Senar target",
+  "reference": "Acuan A4 (Hz)",
+  "playReference": "Putar nada acuan",
+  "toneError": "Nada acuan tidak dapat diputar. Coba lagi.",
+  "flat": "Terlalu rendah",
+  "inTune": "Pas",
+  "sharp": "Terlalu tinggi",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

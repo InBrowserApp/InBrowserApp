@@ -7178,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chromatic-tuner",
+    language: "ar",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "de",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "en",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "es",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "fr",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "he",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "hi",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "id",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "it",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "ja",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "ko",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "ms",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "nl",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "no",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "pl",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "pt",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "ru",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "sv",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "th",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "tr",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "vi",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "zh-CN",
+  },
+  {
+    slug: "chromatic-tuner",
+    language: "zh-TW",
+  },
+  {
     slug: "cidr-parser",
     language: "ar",
   },

@@ -1,0 +1,21 @@
+{
+  "start": "Starta mikrofonen",
+  "stop": "Stäng av mikrofonen",
+  "starting": "Väntar på mikrofonåtkomst",
+  "listenHint": "Starta mikrofonen och spela sedan en jämn ton.",
+  "playHint": "Spela en jämn ton.",
+  "microphoneError": "Mikrofonen är inte tillgänglig. Kontrollera webbläsarens behörigheter eller välj en ansluten mikrofon och försök igen.",
+  "mode": "Stämläge",
+  "chromatic": "Kromatisk",
+  "guitar": "Gitarr",
+  "ukulele": "Ukulele",
+  "strings": "Sträng att stämma",
+  "reference": "A4-referens (Hz)",
+  "playReference": "Spela referenston",
+  "toneError": "Referenstonen kunde inte spelas upp. Försök igen.",
+  "flat": "För låg",
+  "inTune": "Rätt tonhöjd",
+  "sharp": "För hög",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

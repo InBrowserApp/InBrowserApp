@@ -1,0 +1,21 @@
+{
+  "start": "啟動麥克風",
+  "stop": "停止麥克風",
+  "starting": "正在等待麥克風存取權限",
+  "listenHint": "啟動麥克風，然後持續演奏一個穩定的音。",
+  "playHint": "請持續演奏一個穩定的音。",
+  "microphoneError": "無法使用麥克風。請檢查瀏覽器權限或選擇已連接的麥克風，然後再試一次。",
+  "mode": "調音模式",
+  "chromatic": "半音階",
+  "guitar": "吉他",
+  "ukulele": "烏克麗麗",
+  "strings": "目標琴弦",
+  "reference": "A4 基準頻率（Hz）",
+  "playReference": "播放參考音",
+  "toneError": "無法播放參考音，請再試一次。",
+  "flat": "偏低",
+  "inTune": "音準",
+  "sharp": "偏高",
+  "cents": "{value} 音分",
+  "frequency": "{value} Hz"
+}
