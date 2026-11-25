@@ -27,7 +27,7 @@ let destroy = () => {}
 const load = vi.fn<() => Promise<readonly SearchSuggestionEntry[]>>()
 const navigate = vi.fn()
 
-async function renderSearch() {
+async function renderSearch(popover = false) {
   const container = await AstroContainer.create()
   const html = await container.renderToString(SearchCombobox, {
     props: {
@@ -41,13 +41,18 @@ async function renderSearch() {
   const root = document.createElement("div")
   root.lang = "de"
   root.innerHTML = html
+  const form = root.querySelector("form")!
+  if (popover) {
+    form.setAttribute("popover", "")
+    form.querySelector("[data-search-shortcut]")!.remove()
+  }
   document.body.append(root)
   const search = setupSearch(root, { entries: null, loadEntries: load })
   destroy = search.destroy
   return {
     root,
     input: screen.getByRole<HTMLInputElement>("combobox"),
-    form: root.querySelector("form")!,
+    form,
     panel: root.querySelector<HTMLElement>("[data-search-panel]")!,
   }
 }
@@ -64,6 +69,18 @@ afterEach(() => {
 })
 
 describe("Astro search", () => {
+  it("lets the popover handle Escape after the suggestions are dismissed", async () => {
+    load.mockResolvedValue(entries)
+    const { input, panel } = await renderSearch(true)
+    input.focus()
+    fireEvent.input(input, { target: { value: "json" } })
+    await waitFor(() => expect(panel.hidden).toBe(false))
+
+    expect(fireEvent.keyDown(input, { key: "Escape" })).toBe(false)
+    expect(panel.hidden).toBe(true)
+    expect(fireEvent.keyDown(input, { key: "Escape" })).toBe(true)
+  })
+
   it("renders a labeled native GET form without an island or an embedded index", async () => {
     const { root, form, input } = await renderSearch()
     expect(form.getAttribute("action")).toBe("/de/tools/")

@@ -22,7 +22,8 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
   const form = root.querySelector<HTMLFormElement>("form")!
   const input = form.querySelector<HTMLInputElement>("input")!
   const clear = form.querySelector<HTMLButtonElement>("[data-search-clear]")!
-  const shortcut = form.querySelector<HTMLElement>("[data-search-shortcut]")!
+  const shortcut = form.querySelector<HTMLElement>("[data-search-shortcut]")
+  const popover = form.hasAttribute("popover")
   const panel = form.querySelector<HTMLElement>("[data-search-panel]")!
   const language = root.lang as SiteLanguage
   // The directory is already showing full results as the user types.
@@ -52,7 +53,7 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     input.setAttribute("aria-expanded", String(open))
     highlightSuggestion(root, active, open)
     clear.hidden = query.length === 0
-    shortcut.hidden = !clear.hidden
+    if (shortcut) shortcut.hidden = !clear.hidden
   }
 
   function setQuery(value: string) {
@@ -129,6 +130,7 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
       if (composing || event.isComposing) return
       const items = form.querySelectorAll<HTMLAnchorElement>("[role=option]")
       if (event.key === "Escape") {
+        if (popover && !isOpen()) return
         event.preventDefault()
         dismissed = true
         refresh()
@@ -195,28 +197,30 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     },
     { signal }
   )
-  document.addEventListener(
-    "keydown",
-    (event) => {
-      if (event.defaultPrevented || composing || event.isComposing) return
-      const command =
-        (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k"
-      const slash =
-        event.key === "/" &&
-        !event.ctrlKey &&
-        !event.metaKey &&
-        !event.altKey &&
-        !isEditable(event.target)
-      if (!command && !slash) return
-      event.preventDefault()
-      input.focus()
-      input.select()
-    },
-    { signal }
-  )
-  shortcut.textContent = /Mac|iPhone|iPad|iPod/i.test(navigator.userAgent)
-    ? "⌘K"
-    : "Ctrl K"
+  if (shortcut) {
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.defaultPrevented || composing || event.isComposing) return
+        const command =
+          (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k"
+        const slash =
+          event.key === "/" &&
+          !event.ctrlKey &&
+          !event.metaKey &&
+          !event.altKey &&
+          !isEditable(event.target)
+        if (!command && !slash) return
+        event.preventDefault()
+        input.focus()
+        input.select()
+      },
+      { signal }
+    )
+    shortcut.textContent = /Mac|iPhone|iPad|iPod/i.test(navigator.userAgent)
+      ? "⌘K"
+      : "Ctrl K"
+  }
   refresh()
   if (document.activeElement === input) void focus()
   return { setQuery, destroy: () => events.abort() }

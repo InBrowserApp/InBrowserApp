@@ -1,0 +1,45 @@
+---
+import type { SearchMessages } from "./search-types"
+
+interface Props {
+  id: string
+  messages: SearchMessages
+  compact?: boolean
+}
+
+const { id, messages, compact = false } = Astro.props
+---
+
+<div data-search-panel hidden class:list={[
+  "absolute inset-x-0 z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]",
+  compact ? "top-full md:pointer-fine:top-[calc(100%+0.5rem)]" : "top-[calc(100%+0.5rem)]",
+]}>
+  <ul role="listbox" id={`${id}-suggestions`} tabindex="-1" aria-label={messages.suggestionsLabel} class:list={["m-0 flex list-none flex-col overflow-y-auto overscroll-contain p-0", compact ? "max-h-[min(11rem,30dvh)] sm:pointer-fine:max-h-[min(20rem,40dvh)]" : "max-h-44 sm:max-h-80"]}></ul>
+  <div data-search-empty hidden class="px-3 py-4 text-center">
+    <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
+    <p class="mt-1 text-xs text-muted-foreground">{messages.emptySearchDescription}</p>
+  </div>
+  <div data-search-footer class:list={[
+    "mt-1.5 flex border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70",
+    compact ? "flex-col gap-1" : "items-center justify-between gap-3",
+  ]}>
+    <span data-search-count data-one={messages.suggestionMatchCountOne} data-many={messages.suggestionMatchCount}></span>
+    <span class:list={["max-sm:hidden pointer-coarse:hidden", !compact && "truncate"]}>{messages.suggestionsHint}</span>
+  </div>
+  {messages.viewAllResults && (
+    <button type="submit" class="mt-1 flex min-h-11 w-full items-center rounded-lg px-3 text-start text-sm font-medium text-popover-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring">
+      {messages.viewAllResults}
+    </button>
+  )}
+</div>
+<template data-search-option>
+  <li role="presentation">
+    <a role="option" tabindex="-1" aria-selected="false" data-astro-prefetch="false" class="group/option flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-[9px] hover:bg-muted aria-selected:bg-muted">
+      <span class="min-w-0 truncate text-sm text-popover-foreground"><span data-pre></span><mark data-match class="rounded-[3px] bg-muted font-semibold text-inherit group-aria-selected/option:bg-border/70"></mark><span data-post></span></span>
+      <span class="flex shrink-0 items-center gap-2">
+        <span data-category class:list={["text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase", compact && "max-sm:hidden pointer-coarse:hidden"]}></span>
+        <kbd aria-hidden="true" class="invisible rounded-[5px] border border-border px-1 font-mono text-[10px] font-medium text-muted-foreground group-aria-selected/option:visible max-sm:hidden pointer-coarse:hidden">↵</kbd>
+      </span>
+    </a>
+  </li>
+</template>

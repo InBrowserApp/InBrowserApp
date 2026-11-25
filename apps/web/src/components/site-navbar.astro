@@ -1,5 +1,7 @@
 ---
 import LanguageSwitcher from "./language-switcher.astro"
+import NavbarSearch from "./navbar-search.astro"
+import PwaInstallButton from "./pwa-install-button.astro"
 import ThemeToggle from "./theme-toggle.astro"
 import {
   createLanguageOptions,
@@ -7,7 +9,6 @@ import {
   type SiteLanguage,
 } from "@/lib/site"
 import { loadSiteMessages } from "@/lib/site-messages"
-import PwaInstallButton from "./pwa-install-button.astro"
 
 interface Props {
   language: SiteLanguage
@@ -23,9 +24,7 @@ const languageOptions = createLanguageOptions(
   language,
   availableLanguages
 )
-const navItems = [
-  { id: "tools" as const, href: localizePath("/tools", language), label: catalog.site.navigation.tools },
-]
+const toolsHref = localizePath("/tools", language)
 ---
 
 <nav class="flex flex-wrap items-center justify-between gap-2">
@@ -36,19 +35,19 @@ const navItems = [
     >
       {catalog.site.name}
     </a>
-    {navItems.map((item) => (
-      <a
-        href={item.href}
-        class:list={[
-          "text-sm transition-colors hover:text-foreground",
-          item.id === current ? "text-foreground" : "text-muted-foreground",
-        ]}
-      >
-        {item.label}
-      </a>
-    ))}
+    <a
+      href={toolsHref}
+      class:list={[
+        "text-sm transition-colors hover:text-foreground",
+        current === "tools" ? "text-foreground" : "text-muted-foreground",
+      ]}
+    >
+      {catalog.site.navigation.tools}
+    </a>
   </div>
   <div class="ms-auto flex items-center gap-1">
+    <NavbarSearch language={language} action={toolsHref} />
+    <div class="mx-1 hidden h-4 w-px bg-border supports-[selector(:popover-open)]:block" aria-hidden="true" />
     <PwaInstallButton label={catalog.site.installApp} />
     <ThemeToggle
       labelLight={catalog.site.themeLight}
