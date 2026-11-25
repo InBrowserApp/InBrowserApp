@@ -1,7 +1,6 @@
 import { decodeChmText, openChm, sanitizeChmHtmlDocument } from "@workspace/chm"
 import type { Topic } from "@workspace/chm"
-import { renderPdf } from "@workspace/html-pdf"
-import type { Progress } from "@workspace/html-pdf"
+import { prepareWebDocument } from "@workspace/web-document"
 
 type Archive = NonNullable<Awaited<ReturnType<typeof openChm>>>
 const rasterTypes: Record<string, string> = {
@@ -14,11 +13,25 @@ const rasterTypes: Record<string, string> = {
   webp: "image/webp",
 }
 
-export async function convert(
-  file: File,
-  signal: AbortSignal,
-  progress: (update: Progress) => void
-) {
+const printStyles = `
+  @page { size: A4; margin: 18mm; }
+  html { color-scheme: light; }
+  body { color: #171717; background: #fff; font: 11pt/1.45 serif; overflow-wrap: anywhere; }
+  @media screen {
+    body { max-width: 50rem; margin: 0 auto; padding: 24px; }
+  }
+  @media print { body { margin: 0; } }
+  section + section { margin-block-start: 1.75em; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  p { orphans: 2; widows: 2; }
+  pre, code, nobr { white-space: pre-wrap; overflow-wrap: anywhere; }
+  table { max-width: 100%; width: 100%; table-layout: fixed; }
+  th, td { overflow-wrap: anywhere; }
+  img { max-width: 100%; height: auto; max-height: 215mm;
+    object-fit: contain; break-inside: avoid; }
+`
+
+export async function prepareDocument(file: File, signal: AbortSignal) {
   const archive = await openChm(file, signal)
   if (!archive) throw new Error("No CHM topics")
 
@@ -43,19 +56,17 @@ export async function convert(
     archive.close()
   }
 
-  return renderPdf(
-    {
-      html,
-      css: `
-        section + section { margin-top: 1.75em; }
-        pre { white-space: pre-wrap; overflow-wrap: anywhere; }
-        img { max-height: 220mm; object-fit: contain; break-inside: avoid; }
-      `,
-      omitUnsupportedElements: true,
-    },
-    signal,
-    progress
-  )
+  signal.throwIfAborted()
+  const title = document.createElement("title")
+  title.textContent = file.name.replace(/\.chm$/i, "")
+  const preview = prepareWebDocument(title.outerHTML + html, {
+    emptyText: "",
+    headingText: "",
+    print: true,
+    styles: printStyles,
+  })
+  if (preview.empty) throw new Error("No readable CHM topics")
+  return preview.html
 }
 
 async function readTopic(
@@ -78,9 +89,16 @@ async function readTopic(
   ))
     element.remove()
   for (const element of body.querySelectorAll(
-    "[style], [background], [poster], [id]"
+    "[style], [background], [poster], [id], a[name], img[loading]"
   )) {
-    for (const attr of ["style", "background", "poster", "id"])
+    for (const attr of [
+      "style",
+      "background",
+      "poster",
+      "id",
+      "name",
+      "loading",
+    ])
       element.removeAttribute(attr)
   }
   for (const image of body.querySelectorAll("img")) {
@@ -100,7 +118,12 @@ async function readTopic(
       image.replaceWith(document.createTextNode(image.alt))
     }
   }
-  return body.innerHTML.trim() ? `<section>${body.innerHTML}</section>` : ""
+  if (!body.hasChildNodes()) return ""
+  const section = document.createElement("section")
+  section.dir = body.dir || document.documentElement.dir || "auto"
+  section.lang = body.lang || document.documentElement.lang
+  section.append(...body.childNodes)
+  return section.outerHTML
 }
 
 async function imageDataUrl(

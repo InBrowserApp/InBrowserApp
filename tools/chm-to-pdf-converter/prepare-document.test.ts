@@ -1,14 +1,12 @@
 // @vitest-environment jsdom
 import { afterEach, expect, test, vi } from "vitest"
 import { openChm } from "@workspace/chm"
-import { renderPdf } from "@workspace/html-pdf"
-import { convert } from "./convert"
+import { prepareDocument } from "./prepare-document"
 
 vi.mock("@workspace/chm", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@workspace/chm")>()),
   openChm: vi.fn(),
 }))
-vi.mock("@workspace/html-pdf", () => ({ renderPdf: vi.fn() }))
 
 const file = new File([], "manual.chm")
 const topic = (path: string) => ({
@@ -42,13 +40,7 @@ test("includes topics once in contents order and restores only local images", as
     read,
     close,
   })
-  const result = { pages: 1, pdf: new Blob() }
-  vi.mocked(renderPdf).mockResolvedValue(result)
-
-  await expect(
-    convert(file, new AbortController().signal, vi.fn())
-  ).resolves.toBe(result)
-  const [{ html }] = vi.mocked(renderPdf).mock.calls[0]!
+  const html = await prepareDocument(file, new AbortController().signal)
   const doc = new DOMParser().parseFromString(html, "text/html")
   expect(
     [...doc.querySelectorAll("h1")].map((node) => node.textContent)
@@ -58,6 +50,13 @@ test("includes topics once in contents order and restores only local images", as
     "data:image/png;base64,aW1hZ2UgYnl0ZXM=",
     expect.stringMatching(/^data:image\/gif;base64,/),
   ])
+  expect(doc.title).toBe("manual")
+  expect(
+    doc
+      .querySelector('meta[http-equiv="Content-Security-Policy"]')
+      ?.getAttribute("content")
+  ).toContain("img-src data:")
+  expect(doc.querySelector("style")?.textContent).toContain("@page { size: A4")
   expect(doc.body.textContent).toContain("Unavailable")
   expect(doc.querySelector("script, video")).toBeNull()
   expect(read.mock.calls.map(([path]) => path)).toEqual([
@@ -81,16 +80,34 @@ test("closes the worker if a topic cannot be read", async () => {
     close,
   })
   await expect(
-    convert(file, new AbortController().signal, vi.fn())
+    prepareDocument(file, new AbortController().signal)
   ).rejects.toThrow("Unreadable topic")
   expect(close).toHaveBeenCalledOnce()
-  expect(renderPdf).not.toHaveBeenCalled()
 })
 
 test("rejects archives without any topics", async () => {
   vi.mocked(openChm).mockResolvedValue(null)
   await expect(
-    convert(file, new AbortController().signal, vi.fn())
+    prepareDocument(file, new AbortController().signal)
   ).rejects.toThrow("No CHM topics")
-  expect(renderPdf).not.toHaveBeenCalled()
+})
+
+test("rejects a CHM with only blank or unsupported content", async () => {
+  const close = vi.fn()
+  vi.mocked(openChm).mockResolvedValue({
+    encoding: "utf-8",
+    topics: [topic("/start.htm")],
+    contents: [],
+    home: { path: "/start.htm" },
+    lookup: () => undefined,
+    lookupTopic: () => undefined,
+    read: vi
+      .fn()
+      .mockResolvedValue(new TextEncoder().encode("<script>alert(1)</script>")),
+    close,
+  })
+  await expect(
+    prepareDocument(file, new AbortController().signal)
+  ).rejects.toThrow("No readable CHM topics")
+  expect(close).toHaveBeenCalledOnce()
 })
