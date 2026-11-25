@@ -1,0 +1,16 @@
+{
+  "locale": "名前の言語または地域",
+  "quantity": "生成数",
+  "nameType": "名前の種類",
+  "full": "フルネーム",
+  "given": "名",
+  "family": "姓",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "名前",
+  "placeholder": "生成された名前がここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "download": "TXT をダウンロード",
+  "error": "名前を生成できませんでした。もう一度お試しください。"
+}

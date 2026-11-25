@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Generator for tilfeldige navn",
+    slug: "random-name-generator",
+  },
+  {
+    category: "random",
     name: "Tilfeldig tallgenerator",
     slug: "random-number-generator",
   },

@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "מחולל שמות אקראיים",
+    slug: "random-name-generator",
+  },
+  {
+    category: "random",
     name: "מחולל מספרים אקראיים",
     slug: "random-number-generator",
   },

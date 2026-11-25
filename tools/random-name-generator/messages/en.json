@@ -1,0 +1,16 @@
+{
+  "locale": "Name language or region",
+  "quantity": "Quantity",
+  "nameType": "Name type",
+  "full": "Full name",
+  "given": "Given name",
+  "family": "Family name",
+  "generate": "Generate",
+  "generating": "Generating…",
+  "results": "Names",
+  "placeholder": "Generated names will appear here.",
+  "copy": "Copy all",
+  "copied": "Copied",
+  "download": "Download TXT",
+  "error": "Could not generate names. Try again."
+}

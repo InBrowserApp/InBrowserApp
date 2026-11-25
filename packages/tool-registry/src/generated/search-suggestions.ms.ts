@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana nama rawak",
+    slug: "random-name-generator",
+  },
+  {
+    category: "random",
     name: "Penjana nombor rawak",
     slug: "random-number-generator",
   },

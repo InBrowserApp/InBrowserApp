@@ -31098,6 +31098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-name-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-name-generator",
+    language: "de",
+  },
+  {
+    slug: "random-name-generator",
+    language: "en",
+  },
+  {
+    slug: "random-name-generator",
+    language: "es",
+  },
+  {
+    slug: "random-name-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-name-generator",
+    language: "he",
+  },
+  {
+    slug: "random-name-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-name-generator",
+    language: "id",
+  },
+  {
+    slug: "random-name-generator",
+    language: "it",
+  },
+  {
+    slug: "random-name-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-name-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-name-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-name-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-name-generator",
+    language: "no",
+  },
+  {
+    slug: "random-name-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-name-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-name-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-name-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-name-generator",
+    language: "th",
+  },
+  {
+    slug: "random-name-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-name-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-name-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-name-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-number-generator",
     language: "ar",
   },

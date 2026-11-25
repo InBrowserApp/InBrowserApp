@@ -1,0 +1,16 @@
+{
+  "locale": "Język lub region",
+  "quantity": "Liczba wyników",
+  "nameType": "Rodzaj wyniku",
+  "full": "Imię i nazwisko",
+  "given": "Imię",
+  "family": "Nazwisko",
+  "generate": "Generuj",
+  "generating": "Generowanie…",
+  "results": "Wyniki",
+  "placeholder": "Tutaj pojawi się lista wyników.",
+  "copy": "Kopiuj wszystko",
+  "copied": "Skopiowano",
+  "download": "Pobierz TXT",
+  "error": "Nie udało się wygenerować listy. Spróbuj ponownie."
+}

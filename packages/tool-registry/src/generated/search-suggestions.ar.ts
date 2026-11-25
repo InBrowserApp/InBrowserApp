@@ -1694,6 +1694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "مولّد أسماء عشوائية",
+    slug: "random-name-generator",
+  },
+  {
+    category: "random",
     name: "مولد أرقام عشوائية",
     slug: "random-number-generator",
   },

@@ -1,0 +1,16 @@
+{
+  "locale": "Taal of regio",
+  "quantity": "Aantal",
+  "nameType": "Type naam",
+  "full": "Volledige naam",
+  "given": "Voornaam",
+  "family": "Achternaam",
+  "generate": "Genereren",
+  "generating": "Bezig met genereren…",
+  "results": "Namen",
+  "placeholder": "Hier verschijnen de gegenereerde namen.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "download": "TXT downloaden",
+  "error": "De namen konden niet worden gegenereerd. Probeer het opnieuw."
+}

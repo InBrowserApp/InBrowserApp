@@ -1,0 +1,16 @@
+{
+  "locale": "Ngôn ngữ hoặc khu vực của tên",
+  "quantity": "Số lượng",
+  "nameType": "Loại tên",
+  "full": "Họ và tên",
+  "given": "Tên",
+  "family": "Họ",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Danh sách tên",
+  "placeholder": "Các tên đã tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tạo tên. Hãy thử lại."
+}
