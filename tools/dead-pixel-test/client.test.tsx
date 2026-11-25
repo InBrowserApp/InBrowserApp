@@ -11,8 +11,12 @@ import { afterEach, describe, expect, it, vi } from "vitest"
 import DeadPixelTest from "./client"
 import messages from "./messages/en.json"
 
-function launch() {
-  const { container } = render(<DeadPixelTest messages={messages} />)
+function launch(dir: "ltr" | "rtl" = "ltr") {
+  const { container } = render(
+    <div dir={dir}>
+      <DeadPixelTest messages={messages} />
+    </div>
+  )
   return {
     dialog: container.querySelector("dialog")!,
     start: screen.getByRole("button", { name: messages.fullscreen }),
@@ -98,6 +102,17 @@ describe("DeadPixelTest", () => {
     expect(dialog.open).toBe(false)
   })
 
+  it("uses the mirrored horizontal directions in right-to-left layouts", () => {
+    const { start, dialog } = launch("rtl")
+    fireEvent.click(start)
+    const fullscreen = within(dialog)
+
+    fireEvent.keyDown(dialog, { key: "ArrowLeft" })
+    expect(fullscreen.getByText(messages.black)).toBeTruthy()
+    fireEvent.keyDown(dialog, { key: "ArrowRight" })
+    expect(fullscreen.getByText(messages.white)).toBeTruthy()
+  })
+
   it("uses native fullscreen when available and closes the dialog on browser exit", () => {
     const { request, exit, change } = useMockFullscreen()
     const { start, dialog } = launch()
@@ -110,6 +125,24 @@ describe("DeadPixelTest", () => {
     change(dialog.firstElementChild)
     fireEvent.click(within(dialog).getByRole("button", { name: messages.exit }))
     expect(exit).toHaveBeenCalledOnce()
+    expect(dialog.open).toBe(true)
+    change(null)
+    expect(dialog.open).toBe(false)
+  })
+
+  it("exits native fullscreen before closing the dialog on Escape", () => {
+    const { exit, change } = useMockFullscreen()
+    const { start, dialog } = launch()
+    fireEvent.click(start)
+    change(dialog.firstElementChild)
+    const cancelled = fireEvent(
+      dialog,
+      new Event("cancel", { cancelable: true })
+    )
+    expect(cancelled).toBe(false)
+    expect(exit).toHaveBeenCalledOnce()
+    expect(dialog.open).toBe(true)
+    change(null)
     expect(dialog.open).toBe(false)
   })
 

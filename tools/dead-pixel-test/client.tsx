@@ -2,13 +2,14 @@ import { useEffect, useId, useRef, useState } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  ChevronRight,
   ChevronLeft,
+  ChevronRight,
   EyeOff,
   Maximize2,
   Minimize2,
 } from "@workspace/ui/icons"
 
+import type { MouseEvent } from "react"
 import type English from "./messages/en.json"
 
 const colors = [
@@ -18,6 +19,8 @@ const colors = [
   { name: "green", hex: "#00ff00" },
   { name: "blue", hex: "#0000ff" },
 ] as const
+
+const toolbarButton = "size-11 hover:bg-white/20 hover:text-white"
 
 export default function DeadPixelTest({
   messages,
@@ -50,16 +53,20 @@ export default function DeadPixelTest({
     )
   }
 
-  function startFullscreen() {
+  function startFullscreen(event: MouseEvent<HTMLButtonElement>) {
+    event.currentTarget.focus()
     setControlsVisible(true)
     dialog.current?.showModal()
     // The dialog also works when the browser does not offer native fullscreen.
     void surface.current?.requestFullscreen?.().catch(() => {})
   }
 
-  function exitNativeFullscreen() {
+  function closeTest() {
     if (document.fullscreenElement === surface.current) {
+      // Keep the dialog open until fullscreenchange so it can restore focus.
       void document.exitFullscreen()
+    } else {
+      dialog.current?.close()
     }
   }
 
@@ -108,12 +115,20 @@ export default function DeadPixelTest({
         aria-label={messages.fullscreenLabel}
         aria-describedby={helpId}
         className="fixed inset-0 m-0 h-dvh max-h-none w-dvw max-w-none overflow-hidden border-0 p-0"
-        onClose={exitNativeFullscreen}
+        onCancel={(event) => {
+          event.preventDefault()
+          closeTest()
+        }}
         onKeyDown={(event) => {
-          if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          const { currentTarget, key } = event
+          const rtl =
+            currentTarget.closest("[dir]")?.getAttribute("dir") === "rtl"
+          const previous = rtl ? "ArrowRight" : "ArrowLeft"
+          const next = rtl ? "ArrowLeft" : "ArrowRight"
+          if (key === previous || key === "ArrowUp") {
             event.preventDefault()
             step(-1)
-          } else if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          } else if (key === next || key === "ArrowDown") {
             event.preventDefault()
             step(1)
           }
@@ -125,13 +140,13 @@ export default function DeadPixelTest({
           style={{ backgroundColor: color.hex }}
         >
           {controlsVisible && (
-            <div className="absolute inset-x-0 top-0 z-10 flex justify-center p-3">
-              <div className="flex max-w-full flex-wrap items-center justify-center gap-1 rounded-xl bg-neutral-950 p-1 text-white shadow-lg">
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-center p-3">
+              <div className="pointer-events-auto flex max-w-full flex-wrap items-center justify-center gap-1 rounded-xl bg-neutral-950 p-1 text-white shadow-lg">
                 <Button
                   type="button"
                   size="icon"
                   variant="ghost"
-                  className="size-11 hover:bg-white/20 hover:text-white"
+                  className={toolbarButton}
                   aria-label={messages.previous}
                   title={messages.previous}
                   onClick={() => step(-1)}
@@ -145,7 +160,7 @@ export default function DeadPixelTest({
                   type="button"
                   size="icon"
                   variant="ghost"
-                  className="size-11 hover:bg-white/20 hover:text-white"
+                  className={toolbarButton}
                   aria-label={messages.next}
                   title={messages.next}
                   onClick={() => step(1)}
@@ -156,7 +171,7 @@ export default function DeadPixelTest({
                   type="button"
                   size="icon"
                   variant="ghost"
-                  className="size-11 hover:bg-white/20 hover:text-white"
+                  className={toolbarButton}
                   aria-label={messages.hideControls}
                   title={messages.hideControls}
                   onClick={() => {
@@ -170,10 +185,10 @@ export default function DeadPixelTest({
                   type="button"
                   size="icon"
                   variant="ghost"
-                  className="size-11 hover:bg-white/20 hover:text-white"
+                  className={toolbarButton}
                   aria-label={messages.exit}
                   title={messages.exit}
-                  onClick={() => dialog.current?.close()}
+                  onClick={closeTest}
                 >
                   <Minimize2 aria-hidden="true" />
                 </Button>
@@ -183,7 +198,11 @@ export default function DeadPixelTest({
           <button
             ref={canvasButton}
             type="button"
-            className="absolute inset-0 cursor-pointer focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"
+            className={`absolute inset-0 cursor-pointer ${
+              controlsVisible
+                ? "focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"
+                : "outline-none"
+            }`}
             aria-label={controlsVisible ? messages.next : messages.showControls}
             onClick={() => {
               if (controlsVisible) step(1)
