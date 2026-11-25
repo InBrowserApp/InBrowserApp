@@ -19,9 +19,12 @@ const { id, messages, compact = false } = Astro.props
     <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
     <p class="mt-1 text-xs text-muted-foreground">{messages.emptySearchDescription}</p>
   </div>
-  <div data-search-footer class="mt-1.5 flex items-center justify-between gap-3 border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70">
+  <div data-search-footer class:list={[
+    "mt-1.5 flex border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70",
+    compact ? "flex-col gap-1" : "items-center justify-between gap-3",
+  ]}>
     <span data-search-count data-one={messages.suggestionMatchCountOne} data-many={messages.suggestionMatchCount}></span>
-    <span class="truncate max-sm:hidden pointer-coarse:hidden">{messages.suggestionsHint}</span>
+    <span class:list={["max-sm:hidden pointer-coarse:hidden", !compact && "truncate"]}>{messages.suggestionsHint}</span>
   </div>
   {messages.viewAllResults && (
     <button type="submit" class="mt-1 flex min-h-11 w-full items-center rounded-lg px-3 text-start text-sm font-medium text-popover-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring">

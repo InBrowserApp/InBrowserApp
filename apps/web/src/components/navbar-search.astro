@@ -37,87 +37,127 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
     data-search-form
     data-category-labels={JSON.stringify(categories)}
   >
-    <div class="search-field flex items-center overflow-clip rounded-lg border border-input bg-popover text-popover-foreground shadow-sm focus-within:ring-2 focus-within:ring-ring/50">
-      <Search aria-hidden="true" className="size-4 shrink-0" />
-      <div class="search-entry flex h-full min-w-0 flex-1 items-center gap-1 pe-1">
-        <input
-          type="text"
-          name="query"
-          role="combobox"
-          aria-label={searchLabel}
-          aria-expanded="false"
-          aria-controls="navbar-search-suggestions"
-          aria-autocomplete="list"
-          placeholder={searchLabel}
-          inputmode="search"
-          enterkeyhint="search"
-          autocomplete="off"
-          autofocus
-          required
-          class="h-full min-w-0 flex-1 ps-2 text-base outline-none placeholder:text-muted-foreground pointer-fine:md:text-sm"
-        />
-        <button type="button" data-search-clear hidden aria-label={catalog.tools.clearSearchLabel} class={iconButton}>
-          <X aria-hidden="true" />
-        </button>
-        <button type="submit" aria-label={searchLabel} class={iconButton}>
-          <ArrowRight aria-hidden="true" className="rtl:-scale-x-100" />
-        </button>
-      </div>
+    <div class="search-entry flex h-full min-w-0 items-center gap-1 overflow-clip ps-[1.375rem] pe-[0.3125rem]">
+      <input
+        type="text"
+        name="query"
+        role="combobox"
+        aria-label={searchLabel}
+        aria-expanded="false"
+        aria-controls="navbar-search-suggestions"
+        aria-autocomplete="list"
+        placeholder={searchLabel}
+        inputmode="search"
+        enterkeyhint="search"
+        autocomplete="off"
+        autofocus
+        required
+        class="h-full min-w-0 flex-1 ps-2 text-base outline-none placeholder:text-muted-foreground pointer-fine:md:text-sm"
+      />
+      <button type="button" data-search-clear hidden aria-label={catalog.tools.clearSearchLabel} class={iconButton}>
+        <X aria-hidden="true" />
+      </button>
+      <button type="submit" aria-label={searchLabel} class={iconButton}>
+        <ArrowRight aria-hidden="true" className="rtl:-scale-x-100" />
+      </button>
     </div>
     <SearchSuggestions id="navbar-search" messages={catalog.tools} compact />
   </form>
+  <div aria-hidden="true" class="search-frame flex items-center rounded-lg border border-input bg-popover text-popover-foreground shadow-sm">
+    <Search className="size-4" />
+  </div>
 </navbar-search>
 
 <style>
   @property --navbar-search-progress {
     syntax: "<number>";
-    inherits: false;
-    initial-value: 1;
+    inherits: true;
+    initial-value: 0;
+  }
+
+  navbar-search {
+    --navbar-search-progress: 0;
+    --motion-duration: 220ms;
+    --motion: var(--motion-duration) cubic-bezier(0.2, 0.75, 0.3, 1);
+    --gutter: max(var(--spacing-page-x), (100% - 24rem) / 2);
+    --trigger-size: 1.75rem;
+    --field-height: 2.75rem;
+    --expanded-width: calc(100% - 2 * var(--gutter));
   }
 
   .search-trigger,
-  .search-close-icon,
-  form {
+  form,
+  .search-frame {
     display: none;
   }
 
   @supports selector(:popover-open) {
     .search-trigger {
-      display: inline-flex;
+      display: inline-grid;
+      place-items: center;
       anchor-name: --navbar-search-trigger;
       transition-property: background-color;
     }
 
-    .search-trigger:has(+ :popover-open) .search-trigger-icon {
-      display: none;
+    .search-trigger > span {
+      grid-area: 1 / 1;
     }
 
-    .search-trigger:has(+ :popover-open) .search-close-icon,
+    .search-close-icon,
+    .search-trigger:has(+ :popover-open) .search-trigger-icon {
+      opacity: 0;
+    }
+
+    .search-trigger:has(+ :popover-open) .search-close-icon {
+      opacity: 1;
+    }
+
+    navbar-search:has(> :popover-open) {
+      --navbar-search-progress: 1;
+    }
+
     form:popover-open {
       display: block;
     }
+
+    .search-frame {
+      display: flex;
+      visibility: hidden;
+    }
+
+    form:popover-open + .search-frame {
+      visibility: visible;
+    }
   }
 
-  form {
-    --navbar-search-progress: 1;
-    --gutter: max(var(--spacing-page-x), (100% - 24rem) / 2);
-    --trigger-size: 1.75rem;
-    --field-height: 2.75rem;
-    --expanded-width: calc(100% - 2 * var(--gutter));
+  form,
+  .search-frame {
+    position: fixed;
     inset: auto;
     inset-block-start: calc(var(--spacing-page-y) + 4rem);
     inset-inline-end: var(--gutter);
+    block-size: var(--field-height);
     inline-size: var(--expanded-width);
     margin: 0;
+  }
+
+  form {
     padding: 0;
     overflow: visible;
     border: 0;
     background: transparent;
   }
 
-  .search-field {
-    block-size: var(--field-height);
+  /* The frame can keep animating after the browser dismisses the native form. */
+  .search-frame {
+    z-index: 50;
+    pointer-events: none;
     padding-inline-start: 0.3125rem;
+    outline: 2px solid transparent;
+  }
+
+  form:focus-within + .search-frame {
+    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
   }
 
   @media (pointer: coarse) {
@@ -128,7 +168,8 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
   }
 
   @supports (inset-inline-end: anchor(end)) {
-    form {
+    form,
+    .search-frame {
       position-anchor: --navbar-search-trigger;
       /* Resolve the anchor and viewport offsets at each animation step. */
       inset-block-start: calc(
@@ -144,26 +185,40 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
     }
 
     @media (width >= 48rem) and (pointer: fine) {
+      navbar-search {
+        --field-height: 2.25rem;
+        --expanded-width: 20rem;
+      }
+
+      .search-close-icon {
+        display: none;
+      }
+
       .search-trigger:has(+ :popover-open) {
         opacity: 0;
       }
 
-      form {
-        --field-height: 2.25rem;
-        --expanded-width: 20rem;
+      form,
+      .search-frame {
         inset-block-start: calc(anchor(center) - var(--field-height) / 2);
         inset-inline-end: anchor(end);
       }
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      form {
-        --expand: 220ms cubic-bezier(0.2, 0.75, 0.3, 1);
-        transition: --navbar-search-progress var(--expand);
+      navbar-search {
+        transition: --navbar-search-progress var(--motion);
       }
 
-      .search-field {
-        transition: background-color var(--expand), border-color var(--expand), box-shadow var(--expand);
+      .search-frame {
+        transition: background-color var(--motion), border-color var(--motion), outline-color var(--motion), box-shadow var(--motion), visibility 0s;
+      }
+
+      form:not(:popover-open) + .search-frame {
+        transition-delay: 0s, 0s, 0s, 0s, var(--motion-duration);
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
       }
 
       .search-entry {
@@ -171,24 +226,22 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
       }
 
       .search-close-icon {
+        transition: opacity 100ms ease-out;
+      }
+
+      .search-trigger:has(+ :popover-open) .search-close-icon {
         transition: opacity 120ms ease-out 80ms;
       }
 
+      .search-trigger-icon {
+        transition: opacity 0s var(--motion-duration);
+      }
+
+      .search-trigger:has(+ :popover-open) .search-trigger-icon {
+        transition-delay: 0s;
+      }
+
       @starting-style {
-        .search-trigger:has(+ :popover-open) .search-close-icon {
-          opacity: 0;
-        }
-
-        form:popover-open {
-          --navbar-search-progress: 0;
-        }
-
-        form:popover-open .search-field {
-          background-color: transparent;
-          border-color: transparent;
-          box-shadow: none;
-        }
-
         form:popover-open .search-entry {
           opacity: 0;
         }
