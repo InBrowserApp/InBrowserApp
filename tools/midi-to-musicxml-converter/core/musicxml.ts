@@ -72,7 +72,7 @@ const drumDisplay: Record<number, string> = {
 }
 
 function escapeXml(value: string) {
-  return value.replace(
+  return value.replaceAll(/\p{Cc}/gu, "").replace(
     /[<>&"']/g,
     (character) =>
       ({
@@ -101,21 +101,24 @@ function writeDrum(pitch: number) {
   return `<unpitched><display-step>${display[0]}</display-step><display-octave>${display[1]}</display-octave></unpitched>`
 }
 
+type WrittenDuration = (typeof durations)[number]
+type NoteDetails = {
+  chord?: boolean
+  tieIn?: boolean
+  tieOut?: boolean
+  instrument?: string
+}
+
 function writeNote(
   notation: string,
-  duration: number,
+  duration: WrittenDuration,
   voice: number,
-  type: string,
-  dotted: boolean,
-  chord: boolean,
-  tieIn: boolean,
-  tieOut: boolean,
-  instrument = ""
+  { chord, tieIn, tieOut, instrument = "" }: NoteDetails = {}
 ) {
   const tied =
     (tieIn ? '<tied type="stop"/>' : "") +
     (tieOut ? '<tied type="start"/>' : "")
-  return `<note>${chord ? "<chord/>" : ""}${notation}<duration>${duration}</duration>${tieIn ? '<tie type="stop"/>' : ""}${tieOut ? '<tie type="start"/>' : ""}${instrument}<voice>${voice}</voice><type>${type}</type>${dotted ? "<dot/>" : ""}${tied ? `<notations>${tied}</notations>` : ""}</note>`
+  return `<note>${chord ? "<chord/>" : ""}${notation}<duration>${duration.length}</duration>${tieIn ? '<tie type="stop"/>' : ""}${tieOut ? '<tie type="start"/>' : ""}${instrument}<voice>${voice}</voice><type>${duration.type}</type>${duration.dotted ? "<dot/>" : ""}${tied ? `<notations>${tied}</notations>` : ""}</note>`
 }
 
 function writeSpan(
@@ -133,32 +136,16 @@ function writeSpan(
       for (const [index, pitch] of chord.pitches.entries()) {
         const notation = drumId ? writeDrum(pitch) : writePitch(pitch, flats)
         bits.push(
-          writeNote(
-            notation,
-            duration.length,
-            voice,
-            duration.type,
-            duration.dotted,
-            index > 0,
-            position > chord.start,
-            position + duration.length < chord.end,
-            drumId ? `<instrument id="${drumId}-D${pitch}"/>` : ""
-          )
+          writeNote(notation, duration, voice, {
+            chord: index > 0,
+            tieIn: position > chord.start,
+            tieOut: position + duration.length < chord.end,
+            instrument: drumId ? `<instrument id="${drumId}-D${pitch}"/>` : "",
+          })
         )
       }
     } else {
-      bits.push(
-        writeNote(
-          "<rest/>",
-          duration.length,
-          voice,
-          duration.type,
-          duration.dotted,
-          false,
-          false,
-          false
-        )
-      )
+      bits.push(writeNote("<rest/>", duration, voice))
     }
     position += duration.length
   }
@@ -233,7 +220,13 @@ function writePart(
     }
     if (bar.meter)
       attributes += `<time><beats>${bar.meter.numerator}</beats><beat-type>${bar.meter.denominator}</beat-type></time>`
-    if (index === 0) attributes += `<clef>${clef}</clef>`
+    if (index === 0) {
+      attributes += `<clef>${clef}</clef>`
+      if (part.transposeDownOctave) {
+        attributes +=
+          "<transpose><chromatic>0</chromatic><octave-change>-1</octave-change></transpose>"
+      }
+    }
     if (attributes) xml.push(`<attributes>${attributes}</attributes>`)
     const spellWithFlats = useFlats
     while (keyIndex < keys.length && keys[keyIndex]![0] < bar.end) {
@@ -250,7 +243,7 @@ function writePart(
         const [tick, bpm] = tempos[tempoIndex++]!
         const tempo = Math.round(bpm * 1000) / 1000
         xml.push(
-          `<direction placement="above"><direction-type><metronome><beat-unit>quarter</beat-unit><per-minute>${tempo}</per-minute></metronome></direction-type><offset>${tick - bar.start}</offset><sound tempo="${tempo}"/></direction>`
+          `<direction placement="above"><direction-type><metronome><beat-unit>quarter</beat-unit><per-minute>${tempo}</per-minute></metronome></direction-type><offset sound="yes">${tick - bar.start}</offset><sound tempo="${tempo}"/></direction>`
         )
       }
     }

@@ -98,7 +98,7 @@ describe("MIDI to MusicXML conversion", () => {
     expect(
       [...score.querySelectorAll("part-name")].map((item) => item.textContent)
     ).toEqual(["Lead & notes", "Part 2", "Part 3"])
-    expect(score.querySelector("midi-program")?.textContent).toBe("7")
+    expect(score.querySelector("midi-program")?.textContent).toBe("13")
     expect(score.querySelectorAll("chord").length).toBeGreaterThan(0)
     expect(score.querySelector("tie[type='start']")).toBeTruthy()
     expect(score.querySelector("tie[type='stop']")).toBeTruthy()
@@ -123,6 +123,12 @@ describe("MIDI to MusicXML conversion", () => {
     )
     expect(score.querySelector("rest[measure='yes']")).toBeTruthy()
     expect(score.querySelector("per-minute")?.textContent).toBe("120")
+    expect(
+      score.querySelector("direction > offset[sound='yes']")?.textContent
+    ).toBe("0")
+    expect(
+      score.querySelectorAll("direction > offset[sound='yes']")[1]?.textContent
+    ).toBe("20")
     expect(
       [...score.querySelectorAll("per-minute")].map((item) => item.textContent)
     ).toEqual(["120", "100"])
@@ -177,6 +183,42 @@ describe("MIDI to MusicXML conversion", () => {
       "64"
     )
     expect(measures[2]?.querySelectorAll("chord")).toHaveLength(0)
+  })
+
+  it("keeps UTF-8 and legacy track names readable and strips invalid XML characters", () => {
+    const utf8 = String.fromCharCode(...new TextEncoder().encode("ピアノ"), 0)
+    const named = (text: string): MidiEvent => ({
+      type: "trackName",
+      deltaTime: 0,
+      text,
+    })
+    const score = xml(
+      midi([
+        [named(utf8), on(60), off(60, 480)],
+        [named("Café"), on(60), off(60, 480)],
+      ])
+    )
+    expect(
+      [...score.querySelectorAll("part-name")].map((tag) => tag.textContent)
+    ).toEqual(["ピアノ", "Café"])
+  })
+
+  it("preserves MIDI pitches beyond the lowest written octave", () => {
+    const input = midi([
+      [on(0), on(127), off(0, 480), off(127)],
+      [on(5), off(5, 480)],
+    ])
+    const score = xml(input)
+    expect(
+      [...score.querySelectorAll("part > measure:first-child")].map((bar) => ({
+        octave: bar.querySelector("pitch > octave")?.textContent,
+        transpose: bar.querySelector("octave-change")?.textContent,
+      }))
+    ).toEqual([
+      { octave: "0", transpose: "-1" },
+      { octave: "9", transpose: undefined },
+      { octave: "0", transpose: "-1" },
+    ])
   })
 
   it("rejects invalid data or timing and unusually long scores", () => {
