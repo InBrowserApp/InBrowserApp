@@ -66,7 +66,7 @@ export default function ModelPanel({
     }
   }, [model])
 
-  if (viewportState === "error") {
+  if (viewportState === "error")
     return (
       <>
         {focus.focused && (
@@ -79,14 +79,10 @@ export default function ModelPanel({
         </Alert>
       </>
     )
-  }
 
   const animations = model.animations ?? []
   const numberFormat = new Intl.NumberFormat(lang)
   const formatLength = modelLengthFormat(lang, model.unit, unit)
-  const dimensions = (["x", "y", "z"] as const)
-    .map((axis) => `${axis.toUpperCase()} ${formatLength(model.size[axis])}`)
-    .join(" · ")
   const distance =
     measurement.distance === undefined
       ? undefined
@@ -277,7 +273,11 @@ export default function ModelPanel({
           <p>
             {m.overall}{" "}
             <bdi className="font-mono text-foreground" dir="ltr">
-              {dimensions}
+              {(["x", "y", "z"] as const).map((axis) => (
+                <span key={axis} className="inline-block whitespace-nowrap">
+                  {`${axis.toUpperCase()} ${formatLength(model.size[axis])}${axis === "z" ? "" : " · "}`}
+                </span>
+              ))}
             </bdi>
           </p>
           {model.unit ? (
