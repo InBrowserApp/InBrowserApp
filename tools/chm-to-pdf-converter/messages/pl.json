@@ -1,0 +1,27 @@
+{
+  "choose": "Wybierz plik CHM",
+  "drop": "Lub upuść tutaj plik .chm",
+  "privacy": "Plik pozostaje na Twoim urządzeniu.",
+  "reading": "Odczytywanie tematów z pliku CHM…",
+  "rendering": "Tworzenie strony {page} z {total}…",
+  "saving": "Zapisywanie PDF…",
+  "ready": "Twój PDF jest gotowy",
+  "pageCount": "Liczba stron: {total}",
+  "download": "Pobierz PDF",
+  "cancel": "Anuluj",
+  "error": "Nie udało się przekonwertować pliku CHM",
+  "errorHelp": "Spróbuj otworzyć plik w Przeglądarce CHM, aby sprawdzić, czy zawiera tematy, które można odczytać, lub wybierz inny plik .chm.",
+  "article": {
+    "howTitle": "Jak przekonwertować CHM na PDF",
+    "chooseStep": "Wybierz lub upuść plik .chm. Konwerter otworzy go i automatycznie rozpocznie tworzenie PDF.",
+    "waitStep": "Poczekaj na utworzenie wszystkich stron. Konwersja obszernych instrukcji może potrwać dłużej.",
+    "downloadStep": "Kliknij „Pobierz PDF”, aby zapisać wynik. Plik możesz otworzyć w czytniku PDF, udostępnić lub wydrukować.",
+    "whatTitle": "Co to jest plik CHM?",
+    "what": "CHM to skrót od Compiled HTML Help. Ten format firmy Microsoft łączy tematy w formacie HTML, obrazy i spis treści w jednym pliku. Można go spotkać w starszych plikach pomocy Windows, instrukcjach programów i niektórych e-bookach. PDF łatwiej otworzyć na różnych urządzeniach, a przy drukowaniu zachowuje stały układ stron.",
+    "layoutTitle": "Co znajdzie się w pliku PDF?",
+    "layout": "Konwerter łączy tematy pomocy w jeden plik PDF w formacie A4 i porządkuje je według spisu treści, jeśli jest dostępny. Uwzględnia nagłówki, akapity, listy, tabele, kod i obsługiwane osadzone obrazy. Strony są przygotowane do druku, więc ich wygląd i nawigacja mogą różnić się od oryginału. Strony są zapisywane jako obrazy, dlatego w PDF nie można zaznaczać ani wyszukiwać tekstu ani otwierać linków.",
+    "privacyTitle": "Czy plik CHM jest przesyłany na serwer?",
+    "privacy": "Konwersja przebiega w całości w przeglądarce. Pliki CHM i PDF pozostają na Twoim urządzeniu, a zewnętrzne zasoby z pliku pomocy nie są pobierane.",
+    "viewer": "Otwórz plik CHM bez konwersji"
+  }
+}

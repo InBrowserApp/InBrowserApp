@@ -1,0 +1,27 @@
+{
+  "choose": "Escolher arquivo CHM",
+  "drop": "Ou solte um arquivo .chm aqui",
+  "privacy": "Seu arquivo permanece neste dispositivo.",
+  "reading": "Lendo os tópicos do CHM…",
+  "rendering": "Gerando a página {page} de {total}…",
+  "saving": "Salvando PDF…",
+  "ready": "Seu PDF está pronto",
+  "pageCount": "Páginas: {total}",
+  "download": "Baixar PDF",
+  "cancel": "Cancelar",
+  "error": "Não foi possível converter este arquivo CHM",
+  "errorHelp": "Abra o arquivo no visualizador de CHM para verificar se ele contém tópicos legíveis ou escolha outro arquivo .chm.",
+  "article": {
+    "howTitle": "Como converter CHM para PDF",
+    "chooseStep": "Escolha ou solte um arquivo .chm. O conversor abre o arquivo e começa a gerar o PDF automaticamente.",
+    "waitStep": "Aguarde até que as páginas sejam geradas. Manuais grandes podem demorar mais.",
+    "downloadStep": "Selecione Baixar PDF para salvar o resultado. Você pode abrir o arquivo em um leitor de PDF, compartilhar ou imprimir.",
+    "whatTitle": "O que é um arquivo CHM?",
+    "what": "CHM significa Compiled HTML Help, um formato da Microsoft que reúne tópicos em HTML, imagens e um sumário em um único arquivo. É comum em arquivos de ajuda antigos do Windows, manuais de software e alguns e-books. O PDF é mais fácil de abrir em diferentes dispositivos e mantém o layout fixo para impressão.",
+    "layoutTitle": "O que o PDF inclui?",
+    "layout": "O conversor reúne os tópicos de ajuda em um único PDF no formato A4, na ordem do sumário quando disponível. O resultado inclui títulos, parágrafos, listas, tabelas, código e imagens incorporadas compatíveis. As páginas são formatadas para impressão, por isso a aparência e a navegação podem mudar. As páginas do PDF são imagens e, por isso, não é possível selecionar ou pesquisar texto nem clicar em links.",
+    "privacyTitle": "O arquivo CHM é enviado a um servidor?",
+    "privacy": "A conversão acontece inteiramente no navegador. Os arquivos CHM e PDF ficam no seu dispositivo, e os recursos remotos do arquivo de ajuda não são carregados.",
+    "viewer": "Abrir um arquivo CHM sem converter"
+  }
+}

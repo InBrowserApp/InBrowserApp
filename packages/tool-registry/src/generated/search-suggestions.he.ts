@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "ממיר CHM ל־PDF",
+    slug: "chm-to-pdf-converter",
+  },
+  {
+    category: "document",
     name: "מציג CHM",
     slug: "chm-viewer",
   },

@@ -1,0 +1,27 @@
+{
+  "choose": "Choose CHM file",
+  "drop": "Or drop a .chm file here",
+  "privacy": "Your file stays on this device.",
+  "reading": "Reading CHM topics…",
+  "rendering": "Rendering page {page} of {total}…",
+  "saving": "Saving PDF…",
+  "ready": "Your PDF is ready",
+  "pageCount": "Pages: {total}",
+  "download": "Download PDF",
+  "cancel": "Cancel",
+  "error": "Couldn’t convert this CHM file",
+  "errorHelp": "Try opening the file in the CHM Viewer to check whether it contains readable topics, or choose another .chm file.",
+  "article": {
+    "howTitle": "How to convert CHM to PDF",
+    "chooseStep": "Choose or drop a .chm file. The converter opens it and starts building the PDF automatically.",
+    "waitStep": "Wait for the pages to finish rendering. Large manuals may take longer.",
+    "downloadStep": "Select Download PDF to save the result. You can open it in a PDF reader, share it, or print it.",
+    "whatTitle": "What is a CHM file?",
+    "what": "CHM stands for Compiled HTML Help, a Microsoft format that packages HTML topics, images, and a table of contents into one file. It is common in older Windows help files, software manuals, and some ebooks. PDF is easier to open across devices and keeps a fixed layout for printing.",
+    "layoutTitle": "What does the PDF include?",
+    "layout": "The converter puts the help topics into one A4 PDF, using the table of contents to order them when available. It includes basic headings, paragraphs, lists, tables, code, and supported embedded images. The pages use a print layout, so the original styling and navigation can look different. The PDF contains images of the pages, so text selection, search, and clickable links are unavailable.",
+    "privacyTitle": "Is the CHM file uploaded?",
+    "privacy": "The conversion runs entirely in your browser. Your CHM and PDF stay on your device, and remote resources in the help file are not loaded.",
+    "viewer": "Open a CHM without converting it"
+  }
+}

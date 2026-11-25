@@ -1,0 +1,12 @@
+{
+  "name": "@workspace/chm",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/archive.ts"
+  },
+  "dependencies": {
+    "@file-viewer/renderer-chm": "catalog:"
+  }
+}

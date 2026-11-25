@@ -1,4 +1,8 @@
-export type Source = { html: string; css: string }
+export type Source = {
+  html: string
+  css: string
+  omitUnsupportedElements?: boolean
+}
 export type Progress = { page: number; pages: number; saving?: boolean }
 export type Result = { pdf: Blob; pages: number }
 export type Reply =

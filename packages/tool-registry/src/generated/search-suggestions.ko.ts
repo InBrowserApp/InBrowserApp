@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "CHM PDF 변환기",
+    slug: "chm-to-pdf-converter",
+  },
+  {
+    category: "document",
     name: "CHM 뷰어",
     slug: "chm-viewer",
   },

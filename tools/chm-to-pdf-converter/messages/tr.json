@@ -1,0 +1,27 @@
+{
+  "choose": "CHM dosyası seçin",
+  "drop": "Veya .chm dosyasını buraya sürükleyip bırakın",
+  "privacy": "Dosyanız bu cihazda kalır.",
+  "reading": "CHM konuları okunuyor…",
+  "rendering": "Sayfalar hazırlanıyor ({page}/{total})…",
+  "saving": "PDF kaydediliyor…",
+  "ready": "PDF dosyanız hazır",
+  "pageCount": "Sayfa sayısı: {total}",
+  "download": "PDF’yi indir",
+  "cancel": "İptal et",
+  "error": "Bu CHM dosyası dönüştürülemedi",
+  "errorHelp": "Dosyayı CHM Görüntüleyici’de açıp okunabilir konular içerip içermediğini kontrol edin veya başka bir .chm dosyası seçin.",
+  "article": {
+    "howTitle": "CHM dosyası PDF’ye nasıl dönüştürülür?",
+    "chooseStep": "Bir .chm dosyası seçin veya buraya sürükleyip bırakın. Dönüştürücü dosyayı açar ve PDF oluşturmaya otomatik olarak başlar.",
+    "waitStep": "Sayfaların hazırlanmasını bekleyin. Büyük kılavuzların dönüştürülmesi daha uzun sürebilir.",
+    "downloadStep": "Sonucu kaydetmek için “PDF’yi indir” düğmesine tıklayın. Dosyayı bir PDF okuyucuda açabilir, paylaşabilir veya yazdırabilirsiniz.",
+    "whatTitle": "CHM dosyası nedir?",
+    "what": "CHM, Compiled HTML Help ifadesinin kısaltmasıdır. Microsoft’un bu dosya biçimi, HTML konularını, görselleri ve içindekiler tablosunu tek dosyada bir araya getirir. Eski Windows yardım dosyalarında, yazılım kılavuzlarında ve bazı e-kitaplarda sıkça kullanılır. PDF’yi farklı cihazlarda açmak daha kolaydır ve sabit sayfa düzeni yazdırmayı kolaylaştırır.",
+    "layoutTitle": "PDF hangi içerikleri içerir?",
+    "layout": "Dönüştürücü, yardım konularını tek bir A4 boyutunda PDF dosyasında birleştirir. İçindekiler tablosu varsa konular bu tabloya göre sıralanır. Dosyaya temel başlıklar, paragraflar, listeler, tablolar, kod blokları ve desteklenen gömülü görseller eklenir. Sayfalar yazdırmaya uygun olarak düzenlenir, bu nedenle özgün görünüm ve gezinme öğeleri farklı olabilir. Sayfalar PDF’ye görsel olarak eklenir. Bu nedenle metin seçilemez, arama yapılamaz ve bağlantılar tıklanamaz.",
+    "privacyTitle": "CHM dosyası sunucuya yüklenir mi?",
+    "privacy": "Dönüştürme işlemi tamamen tarayıcınızda gerçekleşir. CHM ve PDF dosyalarınız cihazınızda kalır. Yardım dosyasının başvurduğu uzak kaynaklar yüklenmez.",
+    "viewer": "CHM dosyasını dönüştürmeden açın"
+  }
+}

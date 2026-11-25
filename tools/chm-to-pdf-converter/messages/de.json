@@ -1,0 +1,27 @@
+{
+  "choose": "CHM-Datei auswählen",
+  "drop": "Oder eine .chm-Datei hier ablegen",
+  "privacy": "Deine Datei bleibt auf diesem Gerät.",
+  "reading": "CHM-Themen werden gelesen …",
+  "rendering": "Seite {page} von {total} wird erstellt …",
+  "saving": "PDF wird gespeichert …",
+  "ready": "Deine PDF-Datei ist fertig",
+  "pageCount": "Seitenzahl: {total}",
+  "download": "PDF herunterladen",
+  "cancel": "Abbrechen",
+  "error": "Diese CHM-Datei konnte nicht konvertiert werden",
+  "errorHelp": "Öffne die Datei im CHM-Betrachter, um zu prüfen, ob sie lesbare Themen enthält, oder wähle eine andere .chm-Datei aus.",
+  "article": {
+    "howTitle": "So wandelst du CHM in PDF um",
+    "chooseStep": "Wähle eine .chm-Datei aus oder ziehe sie in das Feld. Der Konverter öffnet die Datei und erstellt automatisch die PDF.",
+    "waitStep": "Warte, bis alle Seiten erstellt sind. Bei umfangreichen Handbüchern kann das etwas länger dauern.",
+    "downloadStep": "Klicke auf „PDF herunterladen“, um das Ergebnis zu speichern. Du kannst die Datei mit einem PDF-Reader öffnen, teilen oder drucken.",
+    "whatTitle": "Was ist eine CHM-Datei?",
+    "what": "CHM steht für Compiled HTML Help. Das Microsoft-Format fasst HTML-Themen, Bilder und ein Inhaltsverzeichnis in einer Datei zusammen. Es findet sich häufig in älteren Windows-Hilfedateien, Softwarehandbüchern und manchen E-Books. PDF-Dateien lassen sich auf verschiedenen Geräten leichter öffnen und behalten beim Drucken ein festes Layout.",
+    "layoutTitle": "Was enthält die PDF-Datei?",
+    "layout": "Der Konverter fasst die Hilfethemen in einer PDF-Datei im A4-Format zusammen. Wenn ein Inhaltsverzeichnis vorhanden ist, bestimmt es die Reihenfolge. Die PDF-Datei enthält Überschriften, Absätze, Listen, Tabellen, Code und unterstützte eingebettete Bilder. Das Drucklayout kann sich vom ursprünglichen Design und der Navigation unterscheiden. Die Seiten liegen als Bilder vor. Text lässt sich daher weder markieren noch durchsuchen, und Links sind nicht anklickbar.",
+    "privacyTitle": "Wird die CHM-Datei hochgeladen?",
+    "privacy": "Die Umwandlung läuft vollständig in deinem Browser. Die CHM- und PDF-Dateien bleiben auf deinem Gerät. Externe Inhalte aus der Hilfedatei werden nicht geladen.",
+    "viewer": "CHM-Datei ohne Umwandlung öffnen"
+  }
+}

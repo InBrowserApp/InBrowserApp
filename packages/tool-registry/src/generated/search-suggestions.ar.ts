@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "محوّل CHM إلى PDF",
+    slug: "chm-to-pdf-converter",
+  },
+  {
+    category: "document",
     name: "عارض CHM",
     slug: "chm-viewer",
   },

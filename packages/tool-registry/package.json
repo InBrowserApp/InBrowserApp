@@ -70,6 +70,7 @@
     "@tool/chinese-text-converter": "workspace:*",
     "@tool/chinese-to-pinyin": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
+    "@tool/chm-to-pdf-converter": "workspace:*",
     "@tool/chm-viewer": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",
     "@tool/cidr-parser": "workspace:*",

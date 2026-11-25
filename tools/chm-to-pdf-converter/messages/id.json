@@ -1,0 +1,27 @@
+{
+  "choose": "Pilih berkas CHM",
+  "drop": "Atau letakkan berkas .chm di sini",
+  "privacy": "Berkas tetap berada di perangkat ini.",
+  "reading": "Membaca topik CHM…",
+  "rendering": "Merender halaman {page} dari {total}…",
+  "saving": "Menyimpan PDF…",
+  "ready": "PDF siap diunduh",
+  "pageCount": "Halaman: {total}",
+  "download": "Unduh PDF",
+  "cancel": "Batal",
+  "error": "Berkas CHM ini tidak dapat dikonversi",
+  "errorHelp": "Coba buka berkas di Penampil CHM untuk memeriksa apakah ada topik yang dapat dibaca, atau pilih berkas .chm lain.",
+  "article": {
+    "howTitle": "Cara mengonversi CHM ke PDF",
+    "chooseStep": "Pilih atau letakkan berkas .chm. Konverter akan membukanya dan mulai membuat PDF secara otomatis.",
+    "waitStep": "Tunggu hingga halaman selesai dirender. Panduan yang besar mungkin memerlukan waktu lebih lama.",
+    "downloadStep": "Pilih Unduh PDF untuk menyimpan hasilnya. Anda dapat membukanya di pembaca PDF, membagikannya, atau mencetaknya.",
+    "whatTitle": "Apa itu berkas CHM?",
+    "what": "CHM adalah singkatan dari Compiled HTML Help, format Microsoft yang mengemas topik HTML, gambar, dan daftar isi ke dalam satu berkas. Format ini umum digunakan pada berkas bantuan Windows lama, panduan perangkat lunak, dan beberapa buku digital. PDF lebih mudah dibuka di berbagai perangkat dan memiliki tata letak tetap untuk dicetak.",
+    "layoutTitle": "Apa saja isi PDF?",
+    "layout": "Konverter menggabungkan topik bantuan ke dalam satu PDF berukuran A4, mengikuti urutan daftar isi jika tersedia. PDF memuat judul, paragraf, daftar, tabel, kode, dan gambar tertanam yang didukung. Halaman menggunakan tata letak cetak, sehingga gaya dan navigasinya dapat tampak berbeda dari aslinya. PDF berisi gambar halaman, sehingga teks tidak dapat dipilih atau dicari dan tautan tidak dapat diklik.",
+    "privacyTitle": "Apakah berkas CHM diunggah?",
+    "privacy": "Konversi sepenuhnya berlangsung di browser. CHM dan PDF tetap berada di perangkat Anda, dan sumber daya jarak jauh dalam berkas bantuan tidak dimuat.",
+    "viewer": "Buka CHM tanpa mengonversinya"
+  }
+}

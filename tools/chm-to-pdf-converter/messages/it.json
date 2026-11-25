@@ -1,0 +1,27 @@
+{
+  "choose": "Scegli un file CHM",
+  "drop": "Oppure trascina qui un file .chm",
+  "privacy": "Il file rimane su questo dispositivo.",
+  "reading": "Lettura degli argomenti del file CHM…",
+  "rendering": "Generazione della pagina {page} di {total}…",
+  "saving": "Salvataggio del PDF…",
+  "ready": "Il PDF è pronto",
+  "pageCount": "Pagine: {total}",
+  "download": "Scarica PDF",
+  "cancel": "Annulla",
+  "error": "Impossibile convertire questo file CHM",
+  "errorHelp": "Prova ad aprire il file nel visualizzatore CHM per verificare che contenga argomenti leggibili oppure scegli un altro file .chm.",
+  "article": {
+    "howTitle": "Come convertire un file CHM in PDF",
+    "chooseStep": "Scegli o trascina un file .chm. Il convertitore lo apre e avvia automaticamente la creazione del PDF.",
+    "waitStep": "Attendi la fine della generazione delle pagine. I manuali più grandi possono richiedere più tempo.",
+    "downloadStep": "Seleziona Scarica PDF per salvare il risultato. Puoi aprirlo in un lettore PDF, condividerlo o stamparlo.",
+    "whatTitle": "Che cos’è un file CHM?",
+    "what": "CHM sta per Compiled HTML Help, un formato Microsoft che raccoglie argomenti in HTML, immagini e un indice in un unico file. È comune nei vecchi file della guida di Windows, nei manuali software e in alcuni ebook. I PDF sono più facili da aprire su dispositivi diversi e mantengono un’impaginazione fissa per la stampa.",
+    "layoutTitle": "Che cosa contiene il PDF?",
+    "layout": "Il convertitore riunisce gli argomenti della guida in un unico PDF in formato A4 seguendo, quando disponibile, l’ordine dell’indice. Include titoli, paragrafi, elenchi, tabelle, codice e immagini incorporate compatibili. Le pagine sono impaginate per la stampa, quindi l’aspetto e la navigazione possono differire dall’originale. Le pagine del PDF sono immagini, perciò non è possibile selezionare o cercare testo né fare clic sui collegamenti.",
+    "privacyTitle": "Il file CHM viene caricato su un server?",
+    "privacy": "La conversione avviene interamente nel browser. I file CHM e PDF rimangono sul dispositivo e le risorse remote del file della guida non vengono caricate.",
+    "viewer": "Apri un file CHM senza convertirlo"
+  }
+}
