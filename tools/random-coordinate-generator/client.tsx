@@ -128,7 +128,7 @@ export default function RandomCoordinateClient({ lang, messages }: Props) {
             disabled={area !== "nearby"}
             className="min-w-0 sm:col-span-full"
           >
-            <FieldGroup className="grid gap-4 sm:grid-cols-3">
+            <FieldGroup className="grid items-end gap-4 sm:grid-cols-3">
               <Field>
                 <FieldLabel htmlFor={latitudeId}>
                   {messages.latitude}
@@ -137,7 +137,7 @@ export default function RandomCoordinateClient({ lang, messages }: Props) {
                   id={latitudeId}
                   name="latitude"
                   type="number"
-                  inputMode="decimal"
+                  inputMode="text"
                   min={-90}
                   max={90}
                   step="any"
@@ -154,7 +154,7 @@ export default function RandomCoordinateClient({ lang, messages }: Props) {
                   id={longitudeId}
                   name="longitude"
                   type="number"
-                  inputMode="decimal"
+                  inputMode="text"
                   min={-180}
                   max={180}
                   step="any"
@@ -207,13 +207,12 @@ export default function RandomCoordinateClient({ lang, messages }: Props) {
             {messages.results}
             {result && ` · ${messages[result.request.area]}`}
             {result?.request.area === "nearby" && (
-              <>
-                {" · "}
+              <span className="mt-1 block text-sm font-normal wrap-anywhere text-muted-foreground">
                 <bdi dir="ltr">
                   {result.request.latitude}, {result.request.longitude} ·{" "}
                   {result.request.radius} km
                 </bdi>
-              </>
+              </span>
             )}
           </h2>
         </CardTitle>
