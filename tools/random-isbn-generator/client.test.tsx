@@ -61,9 +61,7 @@ describe("Random ISBN Generator", () => {
     fireEvent.keyDown(screen.getByRole("combobox", { name: messages.format }), {
       key: "ArrowDown",
     })
-    fireEvent.click(
-      screen.getByRole("option", { name: "ISBN-10", exact: true })
-    )
+    fireEvent.click(screen.getByRole("option", { name: "ISBN-10" }))
     fireEvent.click(screen.getByRole("checkbox", { name: messages.hyphens }))
     expect(output().value).toBe(isbn13)
     expect(screen.getByRole("heading", { name: /ISBN-13/ })).toBeTruthy()
