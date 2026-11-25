@@ -24,7 +24,7 @@ function formatBinaryDocument(document: XMLDocument) {
     const children = Array.from(element.childNodes)
     if (
       !children.length ||
-      children.some((node) => node.nodeType === Node.CDATA_SECTION_NODE)
+      children.some((node) => node.nodeType === Node.TEXT_NODE)
     )
       return
     for (const child of children) {
@@ -42,6 +42,21 @@ function formatBinaryDocument(document: XMLDocument) {
     new XMLSerializer().serializeToString(document) +
     "\n"
   )
+}
+
+function versionCode(root: Element) {
+  const minor = root.getAttributeNS(android, "versionCode")
+  const major = root.getAttributeNS(android, "versionCodeMajor")
+  if (!major || !minor) return minor
+  try {
+    // Android PackageInfo.getLongVersionCode combines these two 32-bit fields.
+    return (
+      (BigInt(major) << 32n) |
+      BigInt.asUintN(32, BigInt(minor))
+    ).toString()
+  } catch {
+    return minor
+  }
 }
 
 export function readManifestBytes(bytes: Uint8Array) {
@@ -68,7 +83,7 @@ export function readManifestBytes(bytes: Uint8Array) {
   return {
     packageName: root.getAttribute("package"),
     versionName: root.getAttributeNS(android, "versionName"),
-    versionCode: root.getAttributeNS(android, "versionCode"),
+    versionCode: versionCode(root),
     minSdk: sdk?.getAttributeNS(android, "minSdkVersion"),
     targetSdk: sdk?.getAttributeNS(android, "targetSdkVersion"),
     permissions,

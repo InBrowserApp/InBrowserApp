@@ -221,7 +221,7 @@ function ManifestDetails({
         </div>
         <pre
           dir="ltr"
-          className="max-h-[32rem] min-h-0 flex-1 overflow-auto p-4 font-mono text-sm group-data-[focus=true]/workspace:max-h-none"
+          className="max-h-[32rem] min-h-0 flex-1 overflow-auto p-4 font-mono text-sm wrap-anywhere whitespace-pre-wrap group-data-[focus=true]/workspace:max-h-none"
         >
           {output.xml}
         </pre>

@@ -241,7 +241,7 @@ function utf8Manifest() {
     return { bytes, view }
   }
   const packageName = "org.example." + "ä".repeat(140)
-  const strings = ["manifest", "package", packageName, "Original text"]
+  const strings = ["manifest", "package", packageName, "Original ]]> text"]
   const length = (size: number) =>
     size < 128 ? [size] : [0x80 | (size >> 8), size & 0xff]
   const stringBytes = strings.map((value) => {
@@ -299,11 +299,23 @@ function utf8Manifest() {
   return { bytes: document.bytes, packageName }
 }
 
-test("reads multi-byte UTF-8 string lengths and preserves CDATA without adding whitespace", () => {
+test("reads multi-byte UTF-8 string lengths and preserves text chunks without adding whitespace", () => {
   const { bytes, packageName } = utf8Manifest()
   const output = readManifestBytes(bytes)
   expect(output.packageName).toBe(packageName)
   const parsed = new DOMParser().parseFromString(output.xml, "application/xml")
-  expect(parsed.documentElement.textContent).toBe("Original text")
-  expect(output.xml).toContain("<![CDATA[Original text]]>")
+  expect(parsed.documentElement.textContent).toBe("Original ]]> text")
+  expect(output.xml).toContain("Original ]]&gt; text")
+})
+
+test("uses Android's combined long version code without losing precision", () => {
+  const encoder = new TextEncoder()
+  const manifest = (major: string) =>
+    encoder.encode(
+      `<manifest xmlns:android="${android}" android:versionCode="13" android:versionCodeMajor="${major}"/>`
+    )
+  const version = readManifestBytes(manifest("2147483647"))
+  expect(version.versionCode).toBe("9223372032559808525")
+  expect(version.xml).toContain('android:versionCodeMajor="2147483647"')
+  expect(readManifestBytes(manifest("@string/version")).versionCode).toBe("13")
 })

@@ -189,7 +189,7 @@ export function decodeBinaryXml(bytes: Uint8Array) {
       if (at + 12 > node.end) return invalid()
       const parent = stack.at(-1)
       if (!parent) return invalid()
-      parent.append(document.createCDATASection(ref(at) ?? ""))
+      parent.append(document.createTextNode(ref(at) ?? ""))
     }
   }
   if (stack.length || !document.documentElement) return invalid()
