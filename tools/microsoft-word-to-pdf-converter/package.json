@@ -1,0 +1,29 @@
+{
+  "name": "@tool/microsoft-word-to-pdf-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "fflate": "catalog:",
+    "pdf-lib": "catalog:",
+    "@silurus/ooxml": "catalog:",
+    "@workspace/document-reader": "workspace:*",
+    "@workspace/legacy-doc": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:",
+    "@workspace/pdf-reader": "workspace:*"
+  }
+}

@@ -12,7 +12,7 @@ import {
 import { Button } from "../../ui/button"
 import { Spinner } from "../../ui/spinner"
 import { FileText, Folder } from "../../../icons"
-import { Toolbar } from "./toolbar"
+import { PdfPreviewToolbar } from "../pdf-preview-toolbar"
 import { useDocument } from "./use-document"
 import type { ComicPdfFormat, Messages } from "./types"
 
@@ -101,7 +101,7 @@ export default function Client({
                   label={m.pdfExport.download}
                 />
               </div>
-              <Toolbar reader={output.reader} state={state} m={m} />
+              <PdfPreviewToolbar reader={output.reader} state={state} m={m} />
             </>
           ) : null}
           {status ? (

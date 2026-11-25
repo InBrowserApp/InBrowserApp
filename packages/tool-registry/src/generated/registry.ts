@@ -14252,253 +14252,6 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
-    slug: "doc-to-pdf-converter",
-    category: "document",
-    secondaryCategories: ["pdf"],
-    icon: "file-text",
-    tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
-    locales: {
-      ar: {
-        name: "محول DOC وWPS إلى PDF",
-        description:
-          "حوّل مستندات Word وWPS القديمة المدعومة إلى ملف PDF قابل للتنزيل مع إعادة توزيع المحتوى، محليًا في متصفحك.",
-      },
-      de: {
-        name: "DOC/WPS-zu-PDF-Konverter",
-        description:
-          "Konvertiere unterstützte ältere Word- und WPS-Dokumente lokal im Browser in eine neu umbrochene PDF zum Herunterladen.",
-      },
-      en: {
-        name: "DOC / WPS to PDF Converter",
-        description:
-          "Convert supported legacy Word and WPS documents to a downloadable, reflowed PDF locally in your browser.",
-      },
-      es: {
-        name: "Conversor de DOC / WPS a PDF",
-        description:
-          "Convierte documentos antiguos de Word y WPS compatibles en un PDF descargable con el contenido redistribuido, de forma local en tu navegador.",
-      },
-      fr: {
-        name: "Convertisseur DOC et WPS en PDF",
-        description:
-          "Convertissez les anciens documents Word et WPS pris en charge en PDF remis en page et téléchargeables, localement dans votre navigateur.",
-      },
-      he: {
-        name: "ממיר DOC / WPS ל-PDF",
-        description:
-          "המרת מסמכי Word ו־WPS ישנים ונתמכים ל־PDF בפריסה מחודשת שניתן להוריד, באופן מקומי בדפדפן.",
-      },
-      hi: {
-        name: "DOC और WPS से PDF कन्वर्टर",
-        description:
-          "समर्थित पुराने Word और WPS दस्तावेज़ों को अपने ब्राउज़र में स्थानीय रूप से नए सिरे से व्यवस्थित, डाउनलोड करने योग्य PDF में बदलें।",
-      },
-      id: {
-        name: "Konverter DOC dan WPS ke PDF",
-        description:
-          "Konversikan dokumen Word dan WPS lama yang didukung menjadi PDF yang ditata ulang dan dapat diunduh, secara lokal di browser Anda.",
-      },
-      it: {
-        name: "Convertitore da DOC / WPS a PDF",
-        description:
-          "Converti documenti Word e WPS di formati precedenti supportati in un PDF reimpaginato e scaricabile, in locale nel browser.",
-      },
-      ja: {
-        name: "DOC・WPSからPDFへの変換ツール",
-        description:
-          "対応する従来のWord文書やWPS文書をブラウザー内でローカルに再配置し、ダウンロード可能なPDFに変換します。",
-      },
-      ko: {
-        name: "DOC / WPS → PDF 변환기",
-        description:
-          "지원되는 이전 버전의 Word 및 WPS 문서를 브라우저에서 로컬로 재배치하여 다운로드할 수 있는 PDF로 변환하세요.",
-      },
-      ms: {
-        name: "Penukar DOC dan WPS kepada PDF",
-        description:
-          "Tukar dokumen Word dan WPS lama yang disokong kepada PDF dengan kandungan yang disusun semula dan boleh dimuat turun, secara setempat dalam pelayar anda.",
-      },
-      nl: {
-        name: "DOC/WPS-naar-PDF-converter",
-        description:
-          "Zet ondersteunde oudere Word- en WPS-documenten lokaal in je browser om in een opnieuw ingedeelde PDF die je kunt downloaden.",
-      },
-      no: {
-        name: "Konverterer fra DOC / WPS til PDF",
-        description:
-          "Konverter eldre Word- og WPS-dokumenter som støttes, til en nedlastbar PDF med nytt sideoppsett, lokalt i nettleseren.",
-      },
-      pl: {
-        name: "Konwerter DOC / WPS na PDF",
-        description:
-          "Konwertuj obsługiwane dokumenty w starszych formatach Word i WPS na gotowy do pobrania plik PDF z ponownie rozmieszczoną treścią, lokalnie w przeglądarce.",
-      },
-      pt: {
-        name: "Conversor de DOC / WPS para PDF",
-        description:
-          "Converta documentos antigos compatíveis do Word e do WPS em um PDF para download com o conteúdo redistribuído, localmente no navegador.",
-      },
-      ru: {
-        name: "Конвертер DOC / WPS в PDF",
-        description:
-          "Преобразуйте поддерживаемые документы Word и WPS старых форматов в PDF с новой вёрсткой для скачивания. Обработка выполняется локально в браузере.",
-      },
-      sv: {
-        name: "Konverterare från DOC och WPS till PDF",
-        description:
-          "Konvertera äldre Word- och WPS-dokument som stöds till en nedladdningsbar PDF med omflödat innehåll, lokalt i webbläsaren.",
-      },
-      th: {
-        name: "โปรแกรมแปลง DOC / WPS เป็น PDF",
-        description:
-          "แปลงเอกสาร Word และ WPS รุ่นเก่าที่รองรับเป็น PDF ที่จัดวางเนื้อหาใหม่และดาวน์โหลดได้ โดยประมวลผลบนอุปกรณ์ในเบราว์เซอร์",
-      },
-      tr: {
-        name: "DOC ve WPS’ten PDF’ye Dönüştürücü",
-        description:
-          "Desteklenen eski Word ve WPS belgelerini tarayıcınızda yerel olarak içeriği yeniden sayfalara yerleştirilmiş, indirilebilir PDF’lere dönüştürün.",
-      },
-      vi: {
-        name: "Trình chuyển đổi DOC và WPS sang PDF",
-        description:
-          "Chuyển tài liệu Word và WPS định dạng cũ được hỗ trợ thành PDF được dàn trang lại và có thể tải xuống, xử lý ngay trong trình duyệt trên thiết bị của bạn.",
-      },
-      "zh-CN": {
-        name: "DOC / WPS 转 PDF 转换器",
-        description:
-          "在浏览器本地将受支持的旧版 Word 和 WPS 文档重新排版并转换为可下载的 PDF。",
-      },
-      "zh-TW": {
-        name: "DOC / WPS 轉 PDF 轉換器",
-        description:
-          "在瀏覽器本機將支援的舊版 Word 與 WPS 文件轉換為可下載、重新排版的 PDF。",
-      },
-    },
-  },
-  {
-    slug: "doc-viewer",
-    category: "document",
-    icon: "file-text",
-    tags: ["doc", "wps", "wpt", "word", "document", "viewer"],
-    locales: {
-      ar: {
-        name: "عارض DOC وWPS",
-        description:
-          "اقرأ مستندات Word DOC القديمة ومستندات وقوالب WPS Writer المتوافقة محليًا في متصفحك.",
-      },
-      de: {
-        name: "DOC- und WPS-Betrachter",
-        description:
-          "Lesen Sie ältere Word-DOC-Dokumente sowie kompatible WPS-Writer-Dokumente und -Vorlagen lokal in Ihrem Browser.",
-      },
-      en: {
-        name: "DOC and WPS Viewer",
-        description:
-          "Read legacy Word DOC documents and compatible WPS Writer documents and templates locally in your browser.",
-      },
-      es: {
-        name: "Visor de DOC y WPS",
-        description:
-          "Lee documentos DOC de Word antiguos y documentos y plantillas compatibles de WPS Writer de forma local en tu navegador.",
-      },
-      fr: {
-        name: "Visionneuse DOC et WPS",
-        description:
-          "Lisez les anciens documents Word DOC et les documents et modèles WPS Writer compatibles localement dans votre navigateur.",
-      },
-      he: {
-        name: "מציג קובצי DOC ו-WPS",
-        description:
-          "קריאת מסמכי Word ישנים בפורמט DOC ומסמכים ותבניות תואמים של WPS Writer באופן מקומי בדפדפן.",
-      },
-      hi: {
-        name: "DOC और WPS व्यूअर",
-        description:
-          "पुराने Word DOC दस्तावेज़ और संगत WPS Writer दस्तावेज़ व टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
-      },
-      id: {
-        name: "Penampil DOC dan WPS",
-        description:
-          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang kompatibel secara lokal di browser Anda.",
-      },
-      it: {
-        name: "Visualizzatore DOC e WPS",
-        description:
-          "Leggi documenti Word DOC precedenti e documenti e modelli WPS Writer compatibili in locale nel browser.",
-      },
-      ja: {
-        name: "DOC・WPS ビューアー",
-        description:
-          "従来のWord DOC文書や互換性のあるWPS Writer文書・テンプレートを、ブラウザー内でローカルに閲覧できます。",
-      },
-      ko: {
-        name: "DOC 및 WPS 뷰어",
-        description:
-          "이전 버전의 Word DOC 문서와 호환되는 WPS Writer 문서 및 서식 파일을 브라우저에서 로컬로 읽어 보세요.",
-      },
-      ms: {
-        name: "Pemapar DOC dan WPS",
-        description:
-          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang serasi secara setempat dalam pelayar anda.",
-      },
-      nl: {
-        name: "DOC- en WPS-viewer",
-        description:
-          "Lees oudere Word DOC-documenten en compatibele WPS Writer-documenten en -sjablonen lokaal in je browser.",
-      },
-      no: {
-        name: "DOC- og WPS-viser",
-        description:
-          "Les eldre Word DOC-dokumenter og kompatible WPS Writer-dokumenter og -maler lokalt i nettleseren.",
-      },
-      pl: {
-        name: "Przeglądarka DOC i WPS",
-        description:
-          "Czytaj dokumenty w starszym formacie Word DOC oraz zgodne dokumenty i szablony WPS Writer lokalnie w przeglądarce.",
-      },
-      pt: {
-        name: "Visualizador de DOC e WPS",
-        description:
-          "Leia documentos antigos do Word em DOC e documentos e modelos compatíveis do WPS Writer localmente no navegador.",
-      },
-      ru: {
-        name: "Просмотр DOC и WPS",
-        description:
-          "Читайте документы Word старого формата DOC, а также совместимые документы и шаблоны WPS Writer локально в браузере.",
-      },
-      sv: {
-        name: "DOC- och WPS-visare",
-        description:
-          "Läs äldre Word DOC-dokument och kompatibla WPS Writer-dokument och mallar lokalt i webbläsaren.",
-      },
-      th: {
-        name: "โปรแกรมดู DOC และ WPS",
-        description:
-          "อ่านเอกสาร Word DOC รุ่นเก่า รวมถึงเอกสารและแม่แบบ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
-      },
-      tr: {
-        name: "DOC ve WPS Görüntüleyici",
-        description:
-          "Eski Word DOC belgelerini ve uyumlu WPS Writer belgeleri ile şablonlarını tarayıcınızda yerel olarak okuyun.",
-      },
-      vi: {
-        name: "Trình xem DOC và WPS",
-        description:
-          "Đọc tài liệu Word DOC định dạng cũ cùng tài liệu và mẫu WPS Writer tương thích ngay trong trình duyệt trên thiết bị của bạn.",
-      },
-      "zh-CN": {
-        name: "DOC 和 WPS 查看器",
-        description:
-          "在浏览器本地阅读旧版 Word DOC 文档以及兼容的 WPS 文字文档和模板。",
-      },
-      "zh-TW": {
-        name: "DOC 與 WPS 檢視器",
-        description:
-          "在瀏覽器本機閱讀舊版 Word DOC 文件，以及相容的 WPS Writer 文件與範本。",
-      },
-    },
-  },
-  {
     slug: "docker-compose-validator",
     category: "developer",
     icon: "file-check",
@@ -14873,274 +14626,6 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "DOCX 轉 Markdown 轉換器",
         description:
           "在瀏覽器中將 Word 文件與範本轉換為 Markdown。預覽或複製文字，或下載 UTF-8 檔案，無須上傳文件。",
-      },
-    },
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    category: "document",
-    secondaryCategories: ["pdf"],
-    icon: "file-text",
-    tags: [
-      "docx",
-      "docm",
-      "dotx",
-      "dotm",
-      "word",
-      "pdf",
-      "document",
-      "converter",
-    ],
-    locales: {
-      ar: {
-        name: "محول DOCX إلى PDF",
-        description:
-          "حوّل مستندات Word وقوالبه المحلية المدعومة إلى ملفات PDF قائمة على الصور. عاين الصفحات وتحقّق من مظهرها ثم نزّل النتيجة دون رفع ملفك.",
-      },
-      de: {
-        name: "DOCX-zu-PDF-Konverter",
-        description:
-          "Konvertiere unterstützte lokale Word-Dokumente und -Vorlagen in bildbasierte PDFs. Sieh dir die Seiten in der Vorschau an, prüfe ihr Aussehen und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
-      },
-      en: {
-        name: "DOCX to PDF Converter",
-        description:
-          "Convert supported local Word documents and templates to image-based PDFs. Preview the pages, check their appearance, and download without uploading your file.",
-      },
-      es: {
-        name: "Conversor de DOCX a PDF",
-        description:
-          "Convierte documentos y plantillas de Word locales compatibles en PDF basados en imágenes. Revisa las páginas, comprueba su aspecto y descarga el resultado sin subir el archivo.",
-      },
-      fr: {
-        name: "Convertisseur DOCX en PDF",
-        description:
-          "Convertissez les documents et modèles Word locaux pris en charge en PDF composés d’images. Prévisualisez les pages, vérifiez leur apparence et téléchargez le résultat sans envoyer votre fichier à un serveur.",
-      },
-      he: {
-        name: "ממיר DOCX ל-PDF",
-        description:
-          "המרת מסמכים ותבניות Word מקומיים ונתמכים לקובצי PDF מבוססי תמונות. אפשר לצפות בעמודים, לבדוק את המראה שלהם ולהוריד את התוצאה ללא העלאת הקובץ.",
-      },
-      hi: {
-        name: "DOCX से PDF कन्वर्टर",
-        description:
-          "समर्थित स्थानीय Word दस्तावेज़ों और टेम्पलेट को चित्र-आधारित PDF में बदलें। फ़ाइल अपलोड किए बिना पृष्ठों का पूर्वावलोकन करें, उनका रूप जाँचें और परिणाम डाउनलोड करें।",
-      },
-      id: {
-        name: "Konverter DOCX ke PDF",
-        description:
-          "Konversikan dokumen dan templat Word lokal yang didukung ke PDF berbasis gambar. Pratinjau halaman, periksa tampilannya, dan unduh hasilnya tanpa mengunggah file Anda.",
-      },
-      it: {
-        name: "Convertitore da DOCX a PDF",
-        description:
-          "Converti documenti e modelli Word locali supportati in PDF basati su immagini. Visualizza le pagine in anteprima, controllane l’aspetto e scarica il risultato senza caricare il file online.",
-      },
-      ja: {
-        name: "DOCXからPDFへの変換ツール",
-        description:
-          "対応するローカルのWord文書やテンプレートを画像ベースのPDFに変換します。ファイルをアップロードせずに、ページをプレビューして表示を確認し、ダウンロードできます。",
-      },
-      ko: {
-        name: "DOCX → PDF 변환기",
-        description:
-          "지원되는 Word 문서와 서식 파일을 기기에서 이미지 기반 PDF로 변환하세요. 파일을 업로드하지 않고 페이지를 미리 보고 모양을 확인한 후 다운로드할 수 있습니다.",
-      },
-      ms: {
-        name: "Penukar DOCX kepada PDF",
-        description:
-          "Tukar dokumen dan templat Word setempat yang disokong kepada PDF berasaskan imej. Pratonton halaman, semak rupanya dan muat turun tanpa memuat naik fail anda.",
-      },
-      nl: {
-        name: "DOCX-naar-PDF-converter",
-        description:
-          "Zet ondersteunde lokale Word-documenten en -sjablonen om in PDF’s met afbeeldingspagina’s. Bekijk de pagina’s, controleer hoe ze eruitzien en download het resultaat zonder je bestand te uploaden.",
-      },
-      no: {
-        name: "Konverterer fra DOCX til PDF",
-        description:
-          "Konverter lokale Word-dokumenter og maler som støttes, til bildebaserte PDF-er. Forhåndsvis sidene, kontroller utseendet og last ned uten å laste opp filen.",
-      },
-      pl: {
-        name: "Konwerter DOCX na PDF",
-        description:
-          "Konwertuj obsługiwane lokalne dokumenty i szablony Word na pliki PDF oparte na obrazach. Przejrzyj strony, sprawdź ich wygląd i pobierz wynik bez przesyłania pliku na serwer.",
-      },
-      pt: {
-        name: "Conversor de DOCX para PDF",
-        description:
-          "Converta documentos e modelos locais compatíveis do Word em PDFs baseados em imagens. Visualize as páginas, confira sua aparência e baixe o resultado sem enviar seu arquivo.",
-      },
-      ru: {
-        name: "Конвертер DOCX в PDF",
-        description:
-          "Преобразуйте поддерживаемые локальные документы и шаблоны Word в PDF из изображений. Просмотрите страницы, проверьте их вид и скачайте результат без отправки файла на сервер.",
-      },
-      sv: {
-        name: "Konverterare från DOCX till PDF",
-        description:
-          "Konvertera lokala Word-dokument och mallar som stöds till bildbaserade PDF-filer. Förhandsvisa sidorna, kontrollera hur de ser ut och ladda ner resultatet utan att ladda upp filen.",
-      },
-      th: {
-        name: "โปรแกรมแปลง DOCX เป็น PDF",
-        description:
-          "แปลงเอกสารและแม่แบบ Word ในเครื่องที่รองรับเป็น PDF แบบภาพ ดูตัวอย่างหน้า ตรวจสอบรูปลักษณ์ และดาวน์โหลดโดยไม่ต้องอัปโหลดไฟล์",
-      },
-      tr: {
-        name: "DOCX’ten PDF’ye Dönüştürücü",
-        description:
-          "Desteklenen yerel Word belgelerini ve şablonlarını görsel tabanlı PDF’lere dönüştürün. Sayfaları önizleyin, görünümlerini kontrol edin ve dosyanızı yüklemeden sonucu indirin.",
-      },
-      vi: {
-        name: "Trình chuyển đổi DOCX sang PDF",
-        description:
-          "Chuyển tài liệu và mẫu Word được hỗ trợ từ thiết bị của bạn sang PDF dạng hình ảnh. Xem trước các trang, kiểm tra cách hiển thị và tải xuống mà không tải tệp lên.",
-      },
-      "zh-CN": {
-        name: "DOCX 转 PDF 转换器",
-        description:
-          "将受支持的本地 Word 文档和模板转换为由图像页面组成的 PDF。无需上传文件，即可预览页面、检查显示效果并下载。",
-      },
-      "zh-TW": {
-        name: "DOCX 轉 PDF 轉換器",
-        description:
-          "將本機支援的 Word 文件與範本轉換為圖片式 PDF。預覽頁面、檢查外觀並下載，無須上傳檔案。",
-      },
-    },
-  },
-  {
-    slug: "docx-viewer",
-    category: "document",
-    icon: "file-text",
-    tags: [
-      "docx",
-      "docm",
-      "dotx",
-      "dotm",
-      "word",
-      "template",
-      "viewer",
-      "reader",
-      "document",
-      "search",
-      "offline",
-    ],
-    locales: {
-      ar: {
-        name: "عارض DOCX",
-        description:
-          "اقرأ مستندات Word وقوالبه بصيغ DOCX وDOCM وDOTX وDOTM محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
-      },
-      de: {
-        name: "DOCX-Betrachter",
-        description:
-          "Lesen Sie Word-Dokumente und -Vorlagen in den Formaten DOCX, DOCM, DOTX und DOTM lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
-      },
-      en: {
-        name: "DOCX Viewer",
-        description:
-          "Read Word DOCX, DOCM, DOTX, and DOTM documents and templates locally with page navigation, zoom, text selection, and search. No uploads or macro execution.",
-      },
-      es: {
-        name: "Visor de DOCX",
-        description:
-          "Lee documentos y plantillas de Word DOCX, DOCM, DOTX y DOTM localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
-      },
-      fr: {
-        name: "Visionneuse DOCX",
-        description:
-          "Lisez vos documents et modèles Word DOCX, DOCM, DOTX et DOTM en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
-      },
-      he: {
-        name: "מציג DOCX",
-        description:
-          "קריאת מסמכים ותבניות Word מסוג DOCX, DOCM, DOTX ו-DOTM באופן מקומי עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים או הרצת פקודות מאקרו.",
-      },
-      hi: {
-        name: "DOCX व्यूअर",
-        description:
-          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX, DOCM, DOTX और DOTM दस्तावेज़ और टेम्पलेट स्थानीय रूप से पढ़ें। कोई अपलोड नहीं और मैक्रो नहीं चलते।",
-      },
-      id: {
-        name: "Penampil DOCX",
-        description:
-          "Baca dokumen dan templat Word DOCX, DOCM, DOTX, dan DOTM secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro.",
-      },
-      it: {
-        name: "Visualizzatore DOCX",
-        description:
-          "Leggi documenti e modelli Word DOCX, DOCM, DOTX e DOTM in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
-      },
-      ja: {
-        name: "DOCX ビューアー",
-        description:
-          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCX、DOCM、DOTX、DOTM文書やテンプレートをローカルで閲覧できます。アップロードもマクロの実行も行いません。",
-      },
-      ko: {
-        name: "DOCX 뷰어",
-        description:
-          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX, DOCM, DOTX, DOTM 문서와 서식 파일을 기기에서 읽으세요. 파일을 업로드하거나 매크로를 실행하지 않습니다.",
-      },
-      ms: {
-        name: "Pemapar DOCX",
-        description:
-          "Baca dokumen dan templat Word DOCX, DOCM, DOTX dan DOTM secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro.",
-      },
-      nl: {
-        name: "DOCX-viewer",
-        description:
-          "Lees Word-documenten en -sjablonen in DOCX-, DOCM-, DOTX- en DOTM-formaat lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's.",
-      },
-      no: {
-        name: "DOCX-viser",
-        description:
-          "Les Word-dokumenter og -maler i DOCX-, DOCM-, DOTX- og DOTM-format lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer.",
-      },
-      pl: {
-        name: "Przeglądarka DOCX",
-        description:
-          "Czytaj lokalnie dokumenty i szablony Word DOCX, DOCM, DOTX i DOTM, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr.",
-      },
-      pt: {
-        name: "Visualizador de DOCX",
-        description:
-          "Leia documentos e modelos DOCX, DOCM, DOTX e DOTM do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros.",
-      },
-      ru: {
-        name: "Просмотр DOCX",
-        description:
-          "Читайте документы и шаблоны Word DOCX, DOCM, DOTX и DOTM локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер и запуска макросов.",
-      },
-      sv: {
-        name: "DOCX-visare",
-        description:
-          "Läs Word-dokument och mallar i DOCX-, DOCM-, DOTX- och DOTM-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron.",
-      },
-      th: {
-        name: "โปรแกรมดู DOCX",
-        description:
-          "อ่านเอกสารและแม่แบบ Word DOCX, DOCM, DOTX และ DOTM ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลดหรือเรียกใช้แมโคร",
-      },
-      tr: {
-        name: "DOCX Görüntüleyici",
-        description:
-          "Word DOCX, DOCM, DOTX ve DOTM belgelerini ve şablonlarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz.",
-      },
-      vi: {
-        name: "Trình xem DOCX",
-        description:
-          "Đọc tài liệu và mẫu Word DOCX, DOCM, DOTX và DOTM ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
-      },
-      "zh-CN": {
-        name: "DOCX 查看器",
-        description:
-          "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。",
-      },
-      "zh-TW": {
-        name: "DOCX 檢視器",
-        description:
-          "在本機閱讀 Word DOCX、DOCM、DOTX 與 DOTM 文件和範本，支援頁面導覽、縮放、文字選取與搜尋。無須上傳，也不會執行巨集。",
       },
     },
   },
@@ -32861,6 +32346,278 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "麥克風與喇叭測試",
         description:
           "在線上測試麥克風、即時聽見自己的聲音，並檢查喇叭或耳機的左右聲道。",
+      },
+    },
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    category: "document",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: [
+      "doc",
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "microsoft word",
+      "pdf",
+      "document",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول Microsoft Word (DOC وDOCX) إلى PDF",
+        description:
+          "حوّل ملفات Microsoft Word بصيغتي DOC وDOCX إلى PDF محليًا. عاين الملف الناتج قبل تنزيله.",
+      },
+      de: {
+        name: "PDF-Konverter für Microsoft Word (DOC und DOCX)",
+        description:
+          "Konvertiere DOC- und DOCX-Dateien aus Microsoft Word lokal in PDF. Prüfe das Ergebnis vor dem Herunterladen in der Vorschau.",
+      },
+      en: {
+        name: "Microsoft Word (DOC & DOCX) to PDF Converter",
+        description:
+          "Convert Microsoft Word DOC and DOCX files to PDF locally. Preview the result before downloading.",
+      },
+      es: {
+        name: "Conversor de Microsoft Word a PDF (DOC y DOCX)",
+        description:
+          "Convierte archivos DOC y DOCX de Microsoft Word a PDF en tu navegador. Revisa el resultado antes de descargarlo.",
+      },
+      fr: {
+        name: "Convertisseur Microsoft Word (DOC et DOCX) en PDF",
+        description:
+          "Convertissez vos fichiers Microsoft Word DOC et DOCX en PDF en local. Vérifiez le résultat dans l’aperçu avant de le télécharger.",
+      },
+      he: {
+        name: "ממיר קובצי Microsoft Word (DOC ו־DOCX) ל־PDF",
+        description:
+          "המרת קובצי Microsoft Word מסוג DOC ו־DOCX ל־PDF באופן מקומי. אפשר לבדוק את התוצאה בתצוגה מקדימה לפני ההורדה.",
+      },
+      hi: {
+        name: "Microsoft Word (DOC और DOCX) से PDF कन्वर्टर",
+        description:
+          "Microsoft Word की DOC और DOCX फ़ाइलों को अपने ब्राउज़र में PDF में बदलें। डाउनलोड करने से पहले नतीजे का पूर्वावलोकन करें।",
+      },
+      id: {
+        name: "Konverter Microsoft Word (DOC dan DOCX) ke PDF",
+        description:
+          "Konversikan file Microsoft Word dalam format DOC dan DOCX ke PDF secara lokal. Pratinjau hasilnya sebelum mengunduh.",
+      },
+      it: {
+        name: "Convertitore da Microsoft Word (DOC e DOCX) a PDF",
+        description:
+          "Converti in locale i file Microsoft Word DOC e DOCX in PDF. Visualizza il risultato in anteprima prima di scaricarlo.",
+      },
+      ja: {
+        name: "Microsoft Word（DOC・DOCX）からPDFへの変換ツール",
+        description:
+          "Microsoft WordのDOC・DOCXファイルをブラウザー内でPDFに変換できます。ダウンロード前に変換結果をプレビューできます。",
+      },
+      ko: {
+        name: "Microsoft Word(DOC 및 DOCX) → PDF 변환기",
+        description:
+          "Microsoft Word DOC 및 DOCX 파일을 기기에서 PDF로 변환하세요. 다운로드하기 전에 결과를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Microsoft Word (DOC & DOCX) kepada PDF",
+        description:
+          "Tukar fail Microsoft Word DOC dan DOCX kepada PDF secara setempat. Pratonton hasilnya sebelum memuat turun.",
+      },
+      nl: {
+        name: "Microsoft Word-naar-PDF-converter (DOC en DOCX)",
+        description:
+          "Zet Microsoft Word-bestanden in DOC- en DOCX-formaat lokaal om naar PDF. Bekijk het resultaat voordat je het downloadt.",
+      },
+      no: {
+        name: "Konverterer fra Microsoft Word (DOC og DOCX) til PDF",
+        description:
+          "Konverter Microsoft Word-filer i DOC- og DOCX-format til PDF lokalt. Forhåndsvis resultatet før du laster det ned.",
+      },
+      pl: {
+        name: "Konwerter Microsoft Word (DOC i DOCX) na PDF",
+        description:
+          "Konwertuj pliki Microsoft Word w formatach DOC i DOCX na PDF lokalnie. Sprawdź podgląd przed pobraniem.",
+      },
+      pt: {
+        name: "Conversor de Microsoft Word (DOC e DOCX) para PDF",
+        description:
+          "Converta arquivos DOC e DOCX do Microsoft Word em PDF localmente. Confira o resultado antes de baixar.",
+      },
+      ru: {
+        name: "Конвертер Microsoft Word (DOC и DOCX) в PDF",
+        description:
+          "Преобразуйте файлы Microsoft Word в форматах DOC и DOCX в PDF локально. Проверьте результат перед скачиванием.",
+      },
+      sv: {
+        name: "Konverterare från Microsoft Word (DOC och DOCX) till PDF",
+        description:
+          "Konvertera Microsoft Word-filer i DOC- och DOCX-format till PDF lokalt. Förhandsvisa resultatet innan du laddar ner det.",
+      },
+      th: {
+        name: "โปรแกรมแปลง Microsoft Word (DOC และ DOCX) เป็น PDF",
+        description:
+          "แปลงไฟล์ Microsoft Word รูปแบบ DOC และ DOCX เป็น PDF บนอุปกรณ์ของคุณ ดูตัวอย่างผลลัพธ์ก่อนดาวน์โหลดได้",
+      },
+      tr: {
+        name: "Microsoft Word’den PDF’ye Dönüştürücü (DOC ve DOCX)",
+        description:
+          "Microsoft Word DOC ve DOCX dosyalarını yerel olarak PDF’ye dönüştürün. İndirmeden önce sonucu önizleyin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Microsoft Word (DOC và DOCX) sang PDF",
+        description:
+          "Chuyển tệp Microsoft Word định dạng DOC và DOCX sang PDF ngay trên thiết bị. Xem trước kết quả rồi tải xuống.",
+      },
+      "zh-CN": {
+        name: "Microsoft Word（DOC 和 DOCX）转 PDF 转换器",
+        description:
+          "在本地将 Microsoft Word 的 DOC 和 DOCX 文件转换为 PDF，下载前可预览转换结果。",
+      },
+      "zh-TW": {
+        name: "Microsoft Word（DOC 與 DOCX）轉 PDF 轉換器",
+        description:
+          "在本機將 Microsoft Word 的 DOC 與 DOCX 檔案轉換為 PDF，並在下載前預覽結果。",
+      },
+    },
+  },
+  {
+    slug: "microsoft-word-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "doc",
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "microsoft word",
+      "template",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Microsoft Word (DOC وDOCX)",
+        description:
+          "افتح مستندات Microsoft Word بصيغتي DOC وDOCX في متصفحك. يدعم العارض أيضًا صيغ DOCM وDOTX وDOTM.",
+      },
+      de: {
+        name: "Betrachter für Microsoft Word (DOC und DOCX)",
+        description:
+          "Öffnen Sie DOC- und DOCX-Dokumente aus Microsoft Word in Ihrem Browser. DOCM, DOTX und DOTM werden ebenfalls unterstützt.",
+      },
+      en: {
+        name: "Microsoft Word (DOC & DOCX) Viewer",
+        description:
+          "Open Microsoft Word DOC and DOCX documents in your browser. DOCM, DOTX, and DOTM are also supported.",
+      },
+      es: {
+        name: "Visor de Microsoft Word (DOC y DOCX)",
+        description:
+          "Abre documentos DOC y DOCX de Microsoft Word en tu navegador. También admite DOCM, DOTX y DOTM.",
+      },
+      fr: {
+        name: "Visionneuse Microsoft Word (DOC et DOCX)",
+        description:
+          "Ouvrez vos documents Microsoft Word aux formats DOC et DOCX dans votre navigateur. Les formats DOCM, DOTX et DOTM sont également pris en charge.",
+      },
+      he: {
+        name: "מציג קובצי Microsoft Word (DOC ו־DOCX)",
+        description:
+          "פתיחת מסמכי Microsoft Word מסוג DOC ו־DOCX בדפדפן. קובצי DOCM, DOTX ו־DOTM נתמכים גם הם.",
+      },
+      hi: {
+        name: "Microsoft Word (DOC और DOCX) व्यूअर",
+        description:
+          "Microsoft Word के DOC और DOCX दस्तावेज़ अपने ब्राउज़र में खोलें। DOCM, DOTX और DOTM भी समर्थित हैं।",
+      },
+      id: {
+        name: "Penampil Microsoft Word (DOC dan DOCX)",
+        description:
+          "Buka dokumen Microsoft Word dalam format DOC dan DOCX di browser Anda. Format DOCM, DOTX, dan DOTM juga didukung.",
+      },
+      it: {
+        name: "Visualizzatore Microsoft Word (DOC e DOCX)",
+        description:
+          "Apri i documenti Microsoft Word DOC e DOCX nel browser. Puoi aprire anche i file DOCM, DOTX e DOTM.",
+      },
+      ja: {
+        name: "Microsoft Word（DOC・DOCX）ビューアー",
+        description:
+          "Microsoft WordのDOC・DOCX文書をブラウザーで開けます。DOCM、DOTX、DOTMにも対応しています。",
+      },
+      ko: {
+        name: "Microsoft Word(DOC 및 DOCX) 뷰어",
+        description:
+          "브라우저에서 Microsoft Word DOC 및 DOCX 문서를 여세요. DOCM, DOTX, DOTM도 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar Microsoft Word (DOC & DOCX)",
+        description:
+          "Buka dokumen Microsoft Word DOC dan DOCX dalam pelayar anda. Format DOCM, DOTX dan DOTM turut disokong.",
+      },
+      nl: {
+        name: "Microsoft Word-viewer (DOC en DOCX)",
+        description:
+          "Open Microsoft Word-documenten in DOC- en DOCX-formaat in je browser. Ook DOCM, DOTX en DOTM worden ondersteund.",
+      },
+      no: {
+        name: "Microsoft Word-viser (DOC og DOCX)",
+        description:
+          "Åpne Microsoft Word-dokumenter i DOC- og DOCX-format i nettleseren. DOCM, DOTX og DOTM støttes også.",
+      },
+      pl: {
+        name: "Przeglądarka Microsoft Word (DOC i DOCX)",
+        description:
+          "Otwieraj dokumenty Microsoft Word w formatach DOC i DOCX w przeglądarce. Obsługiwane są także formaty DOCM, DOTX i DOTM.",
+      },
+      pt: {
+        name: "Visualizador do Microsoft Word (DOC e DOCX)",
+        description:
+          "Abra documentos DOC e DOCX do Microsoft Word no navegador. Também são compatíveis os formatos DOCM, DOTX e DOTM.",
+      },
+      ru: {
+        name: "Просмотр Microsoft Word (DOC и DOCX)",
+        description:
+          "Открывайте документы Microsoft Word в форматах DOC и DOCX прямо в браузере. Также поддерживаются DOCM, DOTX и DOTM.",
+      },
+      sv: {
+        name: "Visare för Microsoft Word (DOC och DOCX)",
+        description:
+          "Öppna Microsoft Word-dokument i DOC- och DOCX-format i webbläsaren. DOCM, DOTX och DOTM stöds också.",
+      },
+      th: {
+        name: "โปรแกรมดู Microsoft Word (DOC และ DOCX)",
+        description:
+          "เปิดเอกสาร Microsoft Word รูปแบบ DOC และ DOCX ในเบราว์เซอร์ รองรับ DOCM, DOTX และ DOTM ด้วย",
+      },
+      tr: {
+        name: "Microsoft Word Görüntüleyici (DOC ve DOCX)",
+        description:
+          "Microsoft Word DOC ve DOCX belgelerini tarayıcınızda açın. DOCM, DOTX ve DOTM biçimleri de desteklenir.",
+      },
+      vi: {
+        name: "Trình xem Microsoft Word (DOC và DOCX)",
+        description:
+          "Mở tài liệu Microsoft Word định dạng DOC và DOCX ngay trong trình duyệt. Công cụ cũng hỗ trợ DOCM, DOTX và DOTM.",
+      },
+      "zh-CN": {
+        name: "Microsoft Word（DOC 和 DOCX）查看器",
+        description:
+          "在浏览器中打开 Microsoft Word 的 DOC 和 DOCX 文档，同时支持 DOCM、DOTX 和 DOTM 文件。",
+      },
+      "zh-TW": {
+        name: "Microsoft Word（DOC 與 DOCX）檢視器",
+        description:
+          "在瀏覽器中開啟 Microsoft Word 的 DOC 與 DOCX 文件。也支援 DOCM、DOTX 與 DOTM 檔案。",
       },
     },
   },
@@ -56147,6 +55904,253 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "wps-to-pdf-converter",
+    category: "document",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: ["wps", "wpt", "wps writer", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محول WPS إلى PDF",
+        description:
+          "حوّل مستندات WPS Writer المتوافقة (.wps) وقوالبه (.wpt) إلى PDF محليًا في متصفحك.",
+      },
+      de: {
+        name: "WPS-zu-PDF-Konverter",
+        description:
+          "Konvertiere kompatible WPS-Writer-Dokumente (.wps) und -Vorlagen (.wpt) lokal im Browser in PDF.",
+      },
+      en: {
+        name: "WPS to PDF Converter",
+        description:
+          "Convert compatible WPS Writer documents (.wps) and templates (.wpt) to PDF locally in your browser.",
+      },
+      es: {
+        name: "Conversor de WPS a PDF",
+        description:
+          "Convierte documentos (.wps) y plantillas (.wpt) compatibles de WPS Writer a PDF de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur WPS en PDF",
+        description:
+          "Convertissez en PDF les documents (.wps) et les modèles (.wpt) WPS Writer compatibles directement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר WPS ל־PDF",
+        description:
+          "המרת מסמכי WPS Writer תואמים (.wps) ותבניות (.wpt) ל־PDF באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "WPS से PDF कन्वर्टर",
+        description:
+          "संगत WPS Writer दस्तावेज़ (.wps) और टेम्पलेट (.wpt) अपने ब्राउज़र में स्थानीय रूप से PDF में बदलें।",
+      },
+      id: {
+        name: "Konverter WPS ke PDF",
+        description:
+          "Konversikan dokumen (.wps) dan templat (.wpt) WPS Writer yang kompatibel ke PDF secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da WPS a PDF",
+        description:
+          "Converti i documenti (.wps) e i modelli (.wpt) WPS Writer compatibili in PDF, in locale nel browser.",
+      },
+      ja: {
+        name: "WPSからPDFへの変換ツール",
+        description:
+          "互換性のあるWPS Writer文書（.wps）とテンプレート（.wpt）をブラウザー内でPDFに変換できます。",
+      },
+      ko: {
+        name: "WPS → PDF 변환기",
+        description:
+          "호환되는 WPS Writer 문서(.wps)와 서식 파일(.wpt)을 브라우저에서 PDF로 변환하세요. 파일은 기기에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar WPS kepada PDF",
+        description:
+          "Tukar dokumen (.wps) dan templat (.wpt) WPS Writer yang serasi kepada PDF secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "WPS-naar-PDF-converter",
+        description:
+          "Zet compatibele WPS Writer-documenten (.wps) en -sjablonen (.wpt) lokaal in je browser om naar PDF.",
+      },
+      no: {
+        name: "Konverterer fra WPS til PDF",
+        description:
+          "Konverter kompatible WPS Writer-dokumenter (.wps) og -maler (.wpt) til PDF lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter WPS na PDF",
+        description:
+          "Konwertuj zgodne dokumenty (.wps) i szablony (.wpt) programu WPS Writer na PDF lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de WPS para PDF",
+        description:
+          "Converta documentos (.wps) e modelos (.wpt) compatíveis do WPS Writer em PDF localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер WPS в PDF",
+        description:
+          "Преобразуйте совместимые документы (.wps) и шаблоны (.wpt) WPS Writer в PDF локально в браузере.",
+      },
+      sv: {
+        name: "Konverterare från WPS till PDF",
+        description:
+          "Konvertera kompatibla WPS Writer-dokument (.wps) och mallar (.wpt) till PDF lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง WPS เป็น PDF",
+        description:
+          "แปลงเอกสาร (.wps) และแม่แบบ (.wpt) ของ WPS Writer ที่รองรับเป็น PDF ในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "WPS’ten PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu WPS Writer belgelerini (.wps) ve şablonlarını (.wpt) tarayıcınızda yerel olarak PDF’ye dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WPS sang PDF",
+        description:
+          "Chuyển tài liệu (.wps) và mẫu (.wpt) tương thích của WPS Writer sang PDF ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "WPS 转 PDF 转换器",
+        description:
+          "在浏览器中本地将兼容的 WPS 文字文档（.wps）和模板（.wpt）转换为 PDF。",
+      },
+      "zh-TW": {
+        name: "WPS 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將相容的 WPS Writer 文件（.wps）與範本（.wpt）轉換為 PDF，檔案全程在本機處理。",
+      },
+    },
+  },
+  {
+    slug: "wps-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["wps", "wpt", "wps writer", "document", "template", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض WPS",
+        description:
+          "اقرأ مستندات WPS Writer المتوافقة (.wps) وقوالبه (.wpt) محليًا في متصفحك.",
+      },
+      de: {
+        name: "WPS-Betrachter",
+        description:
+          "Lesen Sie kompatible WPS-Writer-Dokumente (.wps) und -Vorlagen (.wpt) lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "WPS Viewer",
+        description:
+          "Read compatible WPS Writer documents (.wps) and templates (.wpt) locally in your browser.",
+      },
+      es: {
+        name: "Visor de WPS",
+        description:
+          "Lee documentos (.wps) y plantillas (.wpt) compatibles de WPS Writer de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse WPS",
+        description:
+          "Lisez les documents (.wps) et les modèles (.wpt) WPS Writer compatibles directement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי WPS",
+        description:
+          "קריאת מסמכי WPS Writer תואמים (.wps) ותבניות (.wpt) באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "WPS व्यूअर",
+        description:
+          "संगत WPS Writer दस्तावेज़ (.wps) और टेम्पलेट (.wpt) अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil WPS",
+        description:
+          "Baca dokumen (.wps) dan templat (.wpt) WPS Writer yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore WPS",
+        description:
+          "Leggi i documenti (.wps) e i modelli (.wpt) WPS Writer compatibili in locale nel browser.",
+      },
+      ja: {
+        name: "WPS ビューアー",
+        description:
+          "互換性のあるWPS Writer文書（.wps）とテンプレート（.wpt）をブラウザー内で閲覧できます。",
+      },
+      ko: {
+        name: "WPS 뷰어",
+        description:
+          "호환되는 WPS Writer 문서(.wps)와 서식 파일(.wpt)을 브라우저에서 여세요. 파일은 기기에서 처리됩니다.",
+      },
+      ms: {
+        name: "Pemapar WPS",
+        description:
+          "Baca dokumen (.wps) dan templat (.wpt) WPS Writer yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "WPS-viewer",
+        description:
+          "Lees compatibele WPS Writer-documenten (.wps) en -sjablonen (.wpt) lokaal in je browser.",
+      },
+      no: {
+        name: "WPS-viser",
+        description:
+          "Les kompatible WPS Writer-dokumenter (.wps) og -maler (.wpt) lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka WPS",
+        description:
+          "Czytaj zgodne dokumenty (.wps) i szablony (.wpt) programu WPS Writer lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de WPS",
+        description:
+          "Leia documentos (.wps) e modelos (.wpt) compatíveis do WPS Writer localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр WPS",
+        description:
+          "Читайте совместимые документы (.wps) и шаблоны (.wpt) WPS Writer локально в браузере.",
+      },
+      sv: {
+        name: "WPS-visare",
+        description:
+          "Läs kompatibla WPS Writer-dokument (.wps) och mallar (.wpt) lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู WPS",
+        description:
+          "อ่านเอกสาร (.wps) และแม่แบบ (.wpt) ของ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "WPS Görüntüleyici",
+        description:
+          "Uyumlu WPS Writer belgelerini (.wps) ve şablonlarını (.wpt) tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem WPS",
+        description:
+          "Đọc tài liệu (.wps) và mẫu (.wpt) tương thích của WPS Writer ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "WPS 查看器",
+        description:
+          "在浏览器中本地阅读兼容的 WPS 文字文档（.wps）和模板（.wpt）。",
+      },
+      "zh-TW": {
+        name: "WPS 檢視器",
+        description:
+          "在瀏覽器中閱讀相容的 WPS Writer 文件（.wps）與範本（.wpt），檔案全程在本機處理。",
+      },
+    },
+  },
+  {
     slug: "xls-to-xlsx-converter",
     category: "spreadsheet",
     icon: "file-text",
@@ -71807,253 +71811,6 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
-  "doc-to-pdf-converter": {
-    slug: "doc-to-pdf-converter",
-    category: "document",
-    secondaryCategories: ["pdf"],
-    icon: "file-text",
-    tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
-    locales: {
-      ar: {
-        name: "محول DOC وWPS إلى PDF",
-        description:
-          "حوّل مستندات Word وWPS القديمة المدعومة إلى ملف PDF قابل للتنزيل مع إعادة توزيع المحتوى، محليًا في متصفحك.",
-      },
-      de: {
-        name: "DOC/WPS-zu-PDF-Konverter",
-        description:
-          "Konvertiere unterstützte ältere Word- und WPS-Dokumente lokal im Browser in eine neu umbrochene PDF zum Herunterladen.",
-      },
-      en: {
-        name: "DOC / WPS to PDF Converter",
-        description:
-          "Convert supported legacy Word and WPS documents to a downloadable, reflowed PDF locally in your browser.",
-      },
-      es: {
-        name: "Conversor de DOC / WPS a PDF",
-        description:
-          "Convierte documentos antiguos de Word y WPS compatibles en un PDF descargable con el contenido redistribuido, de forma local en tu navegador.",
-      },
-      fr: {
-        name: "Convertisseur DOC et WPS en PDF",
-        description:
-          "Convertissez les anciens documents Word et WPS pris en charge en PDF remis en page et téléchargeables, localement dans votre navigateur.",
-      },
-      he: {
-        name: "ממיר DOC / WPS ל-PDF",
-        description:
-          "המרת מסמכי Word ו־WPS ישנים ונתמכים ל־PDF בפריסה מחודשת שניתן להוריד, באופן מקומי בדפדפן.",
-      },
-      hi: {
-        name: "DOC और WPS से PDF कन्वर्टर",
-        description:
-          "समर्थित पुराने Word और WPS दस्तावेज़ों को अपने ब्राउज़र में स्थानीय रूप से नए सिरे से व्यवस्थित, डाउनलोड करने योग्य PDF में बदलें।",
-      },
-      id: {
-        name: "Konverter DOC dan WPS ke PDF",
-        description:
-          "Konversikan dokumen Word dan WPS lama yang didukung menjadi PDF yang ditata ulang dan dapat diunduh, secara lokal di browser Anda.",
-      },
-      it: {
-        name: "Convertitore da DOC / WPS a PDF",
-        description:
-          "Converti documenti Word e WPS di formati precedenti supportati in un PDF reimpaginato e scaricabile, in locale nel browser.",
-      },
-      ja: {
-        name: "DOC・WPSからPDFへの変換ツール",
-        description:
-          "対応する従来のWord文書やWPS文書をブラウザー内でローカルに再配置し、ダウンロード可能なPDFに変換します。",
-      },
-      ko: {
-        name: "DOC / WPS → PDF 변환기",
-        description:
-          "지원되는 이전 버전의 Word 및 WPS 문서를 브라우저에서 로컬로 재배치하여 다운로드할 수 있는 PDF로 변환하세요.",
-      },
-      ms: {
-        name: "Penukar DOC dan WPS kepada PDF",
-        description:
-          "Tukar dokumen Word dan WPS lama yang disokong kepada PDF dengan kandungan yang disusun semula dan boleh dimuat turun, secara setempat dalam pelayar anda.",
-      },
-      nl: {
-        name: "DOC/WPS-naar-PDF-converter",
-        description:
-          "Zet ondersteunde oudere Word- en WPS-documenten lokaal in je browser om in een opnieuw ingedeelde PDF die je kunt downloaden.",
-      },
-      no: {
-        name: "Konverterer fra DOC / WPS til PDF",
-        description:
-          "Konverter eldre Word- og WPS-dokumenter som støttes, til en nedlastbar PDF med nytt sideoppsett, lokalt i nettleseren.",
-      },
-      pl: {
-        name: "Konwerter DOC / WPS na PDF",
-        description:
-          "Konwertuj obsługiwane dokumenty w starszych formatach Word i WPS na gotowy do pobrania plik PDF z ponownie rozmieszczoną treścią, lokalnie w przeglądarce.",
-      },
-      pt: {
-        name: "Conversor de DOC / WPS para PDF",
-        description:
-          "Converta documentos antigos compatíveis do Word e do WPS em um PDF para download com o conteúdo redistribuído, localmente no navegador.",
-      },
-      ru: {
-        name: "Конвертер DOC / WPS в PDF",
-        description:
-          "Преобразуйте поддерживаемые документы Word и WPS старых форматов в PDF с новой вёрсткой для скачивания. Обработка выполняется локально в браузере.",
-      },
-      sv: {
-        name: "Konverterare från DOC och WPS till PDF",
-        description:
-          "Konvertera äldre Word- och WPS-dokument som stöds till en nedladdningsbar PDF med omflödat innehåll, lokalt i webbläsaren.",
-      },
-      th: {
-        name: "โปรแกรมแปลง DOC / WPS เป็น PDF",
-        description:
-          "แปลงเอกสาร Word และ WPS รุ่นเก่าที่รองรับเป็น PDF ที่จัดวางเนื้อหาใหม่และดาวน์โหลดได้ โดยประมวลผลบนอุปกรณ์ในเบราว์เซอร์",
-      },
-      tr: {
-        name: "DOC ve WPS’ten PDF’ye Dönüştürücü",
-        description:
-          "Desteklenen eski Word ve WPS belgelerini tarayıcınızda yerel olarak içeriği yeniden sayfalara yerleştirilmiş, indirilebilir PDF’lere dönüştürün.",
-      },
-      vi: {
-        name: "Trình chuyển đổi DOC và WPS sang PDF",
-        description:
-          "Chuyển tài liệu Word và WPS định dạng cũ được hỗ trợ thành PDF được dàn trang lại và có thể tải xuống, xử lý ngay trong trình duyệt trên thiết bị của bạn.",
-      },
-      "zh-CN": {
-        name: "DOC / WPS 转 PDF 转换器",
-        description:
-          "在浏览器本地将受支持的旧版 Word 和 WPS 文档重新排版并转换为可下载的 PDF。",
-      },
-      "zh-TW": {
-        name: "DOC / WPS 轉 PDF 轉換器",
-        description:
-          "在瀏覽器本機將支援的舊版 Word 與 WPS 文件轉換為可下載、重新排版的 PDF。",
-      },
-    },
-  },
-  "doc-viewer": {
-    slug: "doc-viewer",
-    category: "document",
-    icon: "file-text",
-    tags: ["doc", "wps", "wpt", "word", "document", "viewer"],
-    locales: {
-      ar: {
-        name: "عارض DOC وWPS",
-        description:
-          "اقرأ مستندات Word DOC القديمة ومستندات وقوالب WPS Writer المتوافقة محليًا في متصفحك.",
-      },
-      de: {
-        name: "DOC- und WPS-Betrachter",
-        description:
-          "Lesen Sie ältere Word-DOC-Dokumente sowie kompatible WPS-Writer-Dokumente und -Vorlagen lokal in Ihrem Browser.",
-      },
-      en: {
-        name: "DOC and WPS Viewer",
-        description:
-          "Read legacy Word DOC documents and compatible WPS Writer documents and templates locally in your browser.",
-      },
-      es: {
-        name: "Visor de DOC y WPS",
-        description:
-          "Lee documentos DOC de Word antiguos y documentos y plantillas compatibles de WPS Writer de forma local en tu navegador.",
-      },
-      fr: {
-        name: "Visionneuse DOC et WPS",
-        description:
-          "Lisez les anciens documents Word DOC et les documents et modèles WPS Writer compatibles localement dans votre navigateur.",
-      },
-      he: {
-        name: "מציג קובצי DOC ו-WPS",
-        description:
-          "קריאת מסמכי Word ישנים בפורמט DOC ומסמכים ותבניות תואמים של WPS Writer באופן מקומי בדפדפן.",
-      },
-      hi: {
-        name: "DOC और WPS व्यूअर",
-        description:
-          "पुराने Word DOC दस्तावेज़ और संगत WPS Writer दस्तावेज़ व टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
-      },
-      id: {
-        name: "Penampil DOC dan WPS",
-        description:
-          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang kompatibel secara lokal di browser Anda.",
-      },
-      it: {
-        name: "Visualizzatore DOC e WPS",
-        description:
-          "Leggi documenti Word DOC precedenti e documenti e modelli WPS Writer compatibili in locale nel browser.",
-      },
-      ja: {
-        name: "DOC・WPS ビューアー",
-        description:
-          "従来のWord DOC文書や互換性のあるWPS Writer文書・テンプレートを、ブラウザー内でローカルに閲覧できます。",
-      },
-      ko: {
-        name: "DOC 및 WPS 뷰어",
-        description:
-          "이전 버전의 Word DOC 문서와 호환되는 WPS Writer 문서 및 서식 파일을 브라우저에서 로컬로 읽어 보세요.",
-      },
-      ms: {
-        name: "Pemapar DOC dan WPS",
-        description:
-          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang serasi secara setempat dalam pelayar anda.",
-      },
-      nl: {
-        name: "DOC- en WPS-viewer",
-        description:
-          "Lees oudere Word DOC-documenten en compatibele WPS Writer-documenten en -sjablonen lokaal in je browser.",
-      },
-      no: {
-        name: "DOC- og WPS-viser",
-        description:
-          "Les eldre Word DOC-dokumenter og kompatible WPS Writer-dokumenter og -maler lokalt i nettleseren.",
-      },
-      pl: {
-        name: "Przeglądarka DOC i WPS",
-        description:
-          "Czytaj dokumenty w starszym formacie Word DOC oraz zgodne dokumenty i szablony WPS Writer lokalnie w przeglądarce.",
-      },
-      pt: {
-        name: "Visualizador de DOC e WPS",
-        description:
-          "Leia documentos antigos do Word em DOC e documentos e modelos compatíveis do WPS Writer localmente no navegador.",
-      },
-      ru: {
-        name: "Просмотр DOC и WPS",
-        description:
-          "Читайте документы Word старого формата DOC, а также совместимые документы и шаблоны WPS Writer локально в браузере.",
-      },
-      sv: {
-        name: "DOC- och WPS-visare",
-        description:
-          "Läs äldre Word DOC-dokument och kompatibla WPS Writer-dokument och mallar lokalt i webbläsaren.",
-      },
-      th: {
-        name: "โปรแกรมดู DOC และ WPS",
-        description:
-          "อ่านเอกสาร Word DOC รุ่นเก่า รวมถึงเอกสารและแม่แบบ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
-      },
-      tr: {
-        name: "DOC ve WPS Görüntüleyici",
-        description:
-          "Eski Word DOC belgelerini ve uyumlu WPS Writer belgeleri ile şablonlarını tarayıcınızda yerel olarak okuyun.",
-      },
-      vi: {
-        name: "Trình xem DOC và WPS",
-        description:
-          "Đọc tài liệu Word DOC định dạng cũ cùng tài liệu và mẫu WPS Writer tương thích ngay trong trình duyệt trên thiết bị của bạn.",
-      },
-      "zh-CN": {
-        name: "DOC 和 WPS 查看器",
-        description:
-          "在浏览器本地阅读旧版 Word DOC 文档以及兼容的 WPS 文字文档和模板。",
-      },
-      "zh-TW": {
-        name: "DOC 與 WPS 檢視器",
-        description:
-          "在瀏覽器本機閱讀舊版 Word DOC 文件，以及相容的 WPS Writer 文件與範本。",
-      },
-    },
-  },
   "docker-compose-validator": {
     slug: "docker-compose-validator",
     category: "developer",
@@ -72429,274 +72186,6 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DOCX 轉 Markdown 轉換器",
         description:
           "在瀏覽器中將 Word 文件與範本轉換為 Markdown。預覽或複製文字，或下載 UTF-8 檔案，無須上傳文件。",
-      },
-    },
-  },
-  "docx-to-pdf-converter": {
-    slug: "docx-to-pdf-converter",
-    category: "document",
-    secondaryCategories: ["pdf"],
-    icon: "file-text",
-    tags: [
-      "docx",
-      "docm",
-      "dotx",
-      "dotm",
-      "word",
-      "pdf",
-      "document",
-      "converter",
-    ],
-    locales: {
-      ar: {
-        name: "محول DOCX إلى PDF",
-        description:
-          "حوّل مستندات Word وقوالبه المحلية المدعومة إلى ملفات PDF قائمة على الصور. عاين الصفحات وتحقّق من مظهرها ثم نزّل النتيجة دون رفع ملفك.",
-      },
-      de: {
-        name: "DOCX-zu-PDF-Konverter",
-        description:
-          "Konvertiere unterstützte lokale Word-Dokumente und -Vorlagen in bildbasierte PDFs. Sieh dir die Seiten in der Vorschau an, prüfe ihr Aussehen und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
-      },
-      en: {
-        name: "DOCX to PDF Converter",
-        description:
-          "Convert supported local Word documents and templates to image-based PDFs. Preview the pages, check their appearance, and download without uploading your file.",
-      },
-      es: {
-        name: "Conversor de DOCX a PDF",
-        description:
-          "Convierte documentos y plantillas de Word locales compatibles en PDF basados en imágenes. Revisa las páginas, comprueba su aspecto y descarga el resultado sin subir el archivo.",
-      },
-      fr: {
-        name: "Convertisseur DOCX en PDF",
-        description:
-          "Convertissez les documents et modèles Word locaux pris en charge en PDF composés d’images. Prévisualisez les pages, vérifiez leur apparence et téléchargez le résultat sans envoyer votre fichier à un serveur.",
-      },
-      he: {
-        name: "ממיר DOCX ל-PDF",
-        description:
-          "המרת מסמכים ותבניות Word מקומיים ונתמכים לקובצי PDF מבוססי תמונות. אפשר לצפות בעמודים, לבדוק את המראה שלהם ולהוריד את התוצאה ללא העלאת הקובץ.",
-      },
-      hi: {
-        name: "DOCX से PDF कन्वर्टर",
-        description:
-          "समर्थित स्थानीय Word दस्तावेज़ों और टेम्पलेट को चित्र-आधारित PDF में बदलें। फ़ाइल अपलोड किए बिना पृष्ठों का पूर्वावलोकन करें, उनका रूप जाँचें और परिणाम डाउनलोड करें।",
-      },
-      id: {
-        name: "Konverter DOCX ke PDF",
-        description:
-          "Konversikan dokumen dan templat Word lokal yang didukung ke PDF berbasis gambar. Pratinjau halaman, periksa tampilannya, dan unduh hasilnya tanpa mengunggah file Anda.",
-      },
-      it: {
-        name: "Convertitore da DOCX a PDF",
-        description:
-          "Converti documenti e modelli Word locali supportati in PDF basati su immagini. Visualizza le pagine in anteprima, controllane l’aspetto e scarica il risultato senza caricare il file online.",
-      },
-      ja: {
-        name: "DOCXからPDFへの変換ツール",
-        description:
-          "対応するローカルのWord文書やテンプレートを画像ベースのPDFに変換します。ファイルをアップロードせずに、ページをプレビューして表示を確認し、ダウンロードできます。",
-      },
-      ko: {
-        name: "DOCX → PDF 변환기",
-        description:
-          "지원되는 Word 문서와 서식 파일을 기기에서 이미지 기반 PDF로 변환하세요. 파일을 업로드하지 않고 페이지를 미리 보고 모양을 확인한 후 다운로드할 수 있습니다.",
-      },
-      ms: {
-        name: "Penukar DOCX kepada PDF",
-        description:
-          "Tukar dokumen dan templat Word setempat yang disokong kepada PDF berasaskan imej. Pratonton halaman, semak rupanya dan muat turun tanpa memuat naik fail anda.",
-      },
-      nl: {
-        name: "DOCX-naar-PDF-converter",
-        description:
-          "Zet ondersteunde lokale Word-documenten en -sjablonen om in PDF’s met afbeeldingspagina’s. Bekijk de pagina’s, controleer hoe ze eruitzien en download het resultaat zonder je bestand te uploaden.",
-      },
-      no: {
-        name: "Konverterer fra DOCX til PDF",
-        description:
-          "Konverter lokale Word-dokumenter og maler som støttes, til bildebaserte PDF-er. Forhåndsvis sidene, kontroller utseendet og last ned uten å laste opp filen.",
-      },
-      pl: {
-        name: "Konwerter DOCX na PDF",
-        description:
-          "Konwertuj obsługiwane lokalne dokumenty i szablony Word na pliki PDF oparte na obrazach. Przejrzyj strony, sprawdź ich wygląd i pobierz wynik bez przesyłania pliku na serwer.",
-      },
-      pt: {
-        name: "Conversor de DOCX para PDF",
-        description:
-          "Converta documentos e modelos locais compatíveis do Word em PDFs baseados em imagens. Visualize as páginas, confira sua aparência e baixe o resultado sem enviar seu arquivo.",
-      },
-      ru: {
-        name: "Конвертер DOCX в PDF",
-        description:
-          "Преобразуйте поддерживаемые локальные документы и шаблоны Word в PDF из изображений. Просмотрите страницы, проверьте их вид и скачайте результат без отправки файла на сервер.",
-      },
-      sv: {
-        name: "Konverterare från DOCX till PDF",
-        description:
-          "Konvertera lokala Word-dokument och mallar som stöds till bildbaserade PDF-filer. Förhandsvisa sidorna, kontrollera hur de ser ut och ladda ner resultatet utan att ladda upp filen.",
-      },
-      th: {
-        name: "โปรแกรมแปลง DOCX เป็น PDF",
-        description:
-          "แปลงเอกสารและแม่แบบ Word ในเครื่องที่รองรับเป็น PDF แบบภาพ ดูตัวอย่างหน้า ตรวจสอบรูปลักษณ์ และดาวน์โหลดโดยไม่ต้องอัปโหลดไฟล์",
-      },
-      tr: {
-        name: "DOCX’ten PDF’ye Dönüştürücü",
-        description:
-          "Desteklenen yerel Word belgelerini ve şablonlarını görsel tabanlı PDF’lere dönüştürün. Sayfaları önizleyin, görünümlerini kontrol edin ve dosyanızı yüklemeden sonucu indirin.",
-      },
-      vi: {
-        name: "Trình chuyển đổi DOCX sang PDF",
-        description:
-          "Chuyển tài liệu và mẫu Word được hỗ trợ từ thiết bị của bạn sang PDF dạng hình ảnh. Xem trước các trang, kiểm tra cách hiển thị và tải xuống mà không tải tệp lên.",
-      },
-      "zh-CN": {
-        name: "DOCX 转 PDF 转换器",
-        description:
-          "将受支持的本地 Word 文档和模板转换为由图像页面组成的 PDF。无需上传文件，即可预览页面、检查显示效果并下载。",
-      },
-      "zh-TW": {
-        name: "DOCX 轉 PDF 轉換器",
-        description:
-          "將本機支援的 Word 文件與範本轉換為圖片式 PDF。預覽頁面、檢查外觀並下載，無須上傳檔案。",
-      },
-    },
-  },
-  "docx-viewer": {
-    slug: "docx-viewer",
-    category: "document",
-    icon: "file-text",
-    tags: [
-      "docx",
-      "docm",
-      "dotx",
-      "dotm",
-      "word",
-      "template",
-      "viewer",
-      "reader",
-      "document",
-      "search",
-      "offline",
-    ],
-    locales: {
-      ar: {
-        name: "عارض DOCX",
-        description:
-          "اقرأ مستندات Word وقوالبه بصيغ DOCX وDOCM وDOTX وDOTM محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
-      },
-      de: {
-        name: "DOCX-Betrachter",
-        description:
-          "Lesen Sie Word-Dokumente und -Vorlagen in den Formaten DOCX, DOCM, DOTX und DOTM lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
-      },
-      en: {
-        name: "DOCX Viewer",
-        description:
-          "Read Word DOCX, DOCM, DOTX, and DOTM documents and templates locally with page navigation, zoom, text selection, and search. No uploads or macro execution.",
-      },
-      es: {
-        name: "Visor de DOCX",
-        description:
-          "Lee documentos y plantillas de Word DOCX, DOCM, DOTX y DOTM localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
-      },
-      fr: {
-        name: "Visionneuse DOCX",
-        description:
-          "Lisez vos documents et modèles Word DOCX, DOCM, DOTX et DOTM en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
-      },
-      he: {
-        name: "מציג DOCX",
-        description:
-          "קריאת מסמכים ותבניות Word מסוג DOCX, DOCM, DOTX ו-DOTM באופן מקומי עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים או הרצת פקודות מאקרו.",
-      },
-      hi: {
-        name: "DOCX व्यूअर",
-        description:
-          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX, DOCM, DOTX और DOTM दस्तावेज़ और टेम्पलेट स्थानीय रूप से पढ़ें। कोई अपलोड नहीं और मैक्रो नहीं चलते।",
-      },
-      id: {
-        name: "Penampil DOCX",
-        description:
-          "Baca dokumen dan templat Word DOCX, DOCM, DOTX, dan DOTM secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro.",
-      },
-      it: {
-        name: "Visualizzatore DOCX",
-        description:
-          "Leggi documenti e modelli Word DOCX, DOCM, DOTX e DOTM in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
-      },
-      ja: {
-        name: "DOCX ビューアー",
-        description:
-          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCX、DOCM、DOTX、DOTM文書やテンプレートをローカルで閲覧できます。アップロードもマクロの実行も行いません。",
-      },
-      ko: {
-        name: "DOCX 뷰어",
-        description:
-          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX, DOCM, DOTX, DOTM 문서와 서식 파일을 기기에서 읽으세요. 파일을 업로드하거나 매크로를 실행하지 않습니다.",
-      },
-      ms: {
-        name: "Pemapar DOCX",
-        description:
-          "Baca dokumen dan templat Word DOCX, DOCM, DOTX dan DOTM secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro.",
-      },
-      nl: {
-        name: "DOCX-viewer",
-        description:
-          "Lees Word-documenten en -sjablonen in DOCX-, DOCM-, DOTX- en DOTM-formaat lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's.",
-      },
-      no: {
-        name: "DOCX-viser",
-        description:
-          "Les Word-dokumenter og -maler i DOCX-, DOCM-, DOTX- og DOTM-format lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer.",
-      },
-      pl: {
-        name: "Przeglądarka DOCX",
-        description:
-          "Czytaj lokalnie dokumenty i szablony Word DOCX, DOCM, DOTX i DOTM, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr.",
-      },
-      pt: {
-        name: "Visualizador de DOCX",
-        description:
-          "Leia documentos e modelos DOCX, DOCM, DOTX e DOTM do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros.",
-      },
-      ru: {
-        name: "Просмотр DOCX",
-        description:
-          "Читайте документы и шаблоны Word DOCX, DOCM, DOTX и DOTM локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер и запуска макросов.",
-      },
-      sv: {
-        name: "DOCX-visare",
-        description:
-          "Läs Word-dokument och mallar i DOCX-, DOCM-, DOTX- och DOTM-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron.",
-      },
-      th: {
-        name: "โปรแกรมดู DOCX",
-        description:
-          "อ่านเอกสารและแม่แบบ Word DOCX, DOCM, DOTX และ DOTM ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลดหรือเรียกใช้แมโคร",
-      },
-      tr: {
-        name: "DOCX Görüntüleyici",
-        description:
-          "Word DOCX, DOCM, DOTX ve DOTM belgelerini ve şablonlarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz.",
-      },
-      vi: {
-        name: "Trình xem DOCX",
-        description:
-          "Đọc tài liệu và mẫu Word DOCX, DOCM, DOTX và DOTM ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
-      },
-      "zh-CN": {
-        name: "DOCX 查看器",
-        description:
-          "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。",
-      },
-      "zh-TW": {
-        name: "DOCX 檢視器",
-        description:
-          "在本機閱讀 Word DOCX、DOCM、DOTX 與 DOTM 文件和範本，支援頁面導覽、縮放、文字選取與搜尋。無須上傳，也不會執行巨集。",
       },
     },
   },
@@ -90417,6 +89906,278 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "麥克風與喇叭測試",
         description:
           "在線上測試麥克風、即時聽見自己的聲音，並檢查喇叭或耳機的左右聲道。",
+      },
+    },
+  },
+  "microsoft-word-to-pdf-converter": {
+    slug: "microsoft-word-to-pdf-converter",
+    category: "document",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: [
+      "doc",
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "microsoft word",
+      "pdf",
+      "document",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول Microsoft Word (DOC وDOCX) إلى PDF",
+        description:
+          "حوّل ملفات Microsoft Word بصيغتي DOC وDOCX إلى PDF محليًا. عاين الملف الناتج قبل تنزيله.",
+      },
+      de: {
+        name: "PDF-Konverter für Microsoft Word (DOC und DOCX)",
+        description:
+          "Konvertiere DOC- und DOCX-Dateien aus Microsoft Word lokal in PDF. Prüfe das Ergebnis vor dem Herunterladen in der Vorschau.",
+      },
+      en: {
+        name: "Microsoft Word (DOC & DOCX) to PDF Converter",
+        description:
+          "Convert Microsoft Word DOC and DOCX files to PDF locally. Preview the result before downloading.",
+      },
+      es: {
+        name: "Conversor de Microsoft Word a PDF (DOC y DOCX)",
+        description:
+          "Convierte archivos DOC y DOCX de Microsoft Word a PDF en tu navegador. Revisa el resultado antes de descargarlo.",
+      },
+      fr: {
+        name: "Convertisseur Microsoft Word (DOC et DOCX) en PDF",
+        description:
+          "Convertissez vos fichiers Microsoft Word DOC et DOCX en PDF en local. Vérifiez le résultat dans l’aperçu avant de le télécharger.",
+      },
+      he: {
+        name: "ממיר קובצי Microsoft Word (DOC ו־DOCX) ל־PDF",
+        description:
+          "המרת קובצי Microsoft Word מסוג DOC ו־DOCX ל־PDF באופן מקומי. אפשר לבדוק את התוצאה בתצוגה מקדימה לפני ההורדה.",
+      },
+      hi: {
+        name: "Microsoft Word (DOC और DOCX) से PDF कन्वर्टर",
+        description:
+          "Microsoft Word की DOC और DOCX फ़ाइलों को अपने ब्राउज़र में PDF में बदलें। डाउनलोड करने से पहले नतीजे का पूर्वावलोकन करें।",
+      },
+      id: {
+        name: "Konverter Microsoft Word (DOC dan DOCX) ke PDF",
+        description:
+          "Konversikan file Microsoft Word dalam format DOC dan DOCX ke PDF secara lokal. Pratinjau hasilnya sebelum mengunduh.",
+      },
+      it: {
+        name: "Convertitore da Microsoft Word (DOC e DOCX) a PDF",
+        description:
+          "Converti in locale i file Microsoft Word DOC e DOCX in PDF. Visualizza il risultato in anteprima prima di scaricarlo.",
+      },
+      ja: {
+        name: "Microsoft Word（DOC・DOCX）からPDFへの変換ツール",
+        description:
+          "Microsoft WordのDOC・DOCXファイルをブラウザー内でPDFに変換できます。ダウンロード前に変換結果をプレビューできます。",
+      },
+      ko: {
+        name: "Microsoft Word(DOC 및 DOCX) → PDF 변환기",
+        description:
+          "Microsoft Word DOC 및 DOCX 파일을 기기에서 PDF로 변환하세요. 다운로드하기 전에 결과를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Microsoft Word (DOC & DOCX) kepada PDF",
+        description:
+          "Tukar fail Microsoft Word DOC dan DOCX kepada PDF secara setempat. Pratonton hasilnya sebelum memuat turun.",
+      },
+      nl: {
+        name: "Microsoft Word-naar-PDF-converter (DOC en DOCX)",
+        description:
+          "Zet Microsoft Word-bestanden in DOC- en DOCX-formaat lokaal om naar PDF. Bekijk het resultaat voordat je het downloadt.",
+      },
+      no: {
+        name: "Konverterer fra Microsoft Word (DOC og DOCX) til PDF",
+        description:
+          "Konverter Microsoft Word-filer i DOC- og DOCX-format til PDF lokalt. Forhåndsvis resultatet før du laster det ned.",
+      },
+      pl: {
+        name: "Konwerter Microsoft Word (DOC i DOCX) na PDF",
+        description:
+          "Konwertuj pliki Microsoft Word w formatach DOC i DOCX na PDF lokalnie. Sprawdź podgląd przed pobraniem.",
+      },
+      pt: {
+        name: "Conversor de Microsoft Word (DOC e DOCX) para PDF",
+        description:
+          "Converta arquivos DOC e DOCX do Microsoft Word em PDF localmente. Confira o resultado antes de baixar.",
+      },
+      ru: {
+        name: "Конвертер Microsoft Word (DOC и DOCX) в PDF",
+        description:
+          "Преобразуйте файлы Microsoft Word в форматах DOC и DOCX в PDF локально. Проверьте результат перед скачиванием.",
+      },
+      sv: {
+        name: "Konverterare från Microsoft Word (DOC och DOCX) till PDF",
+        description:
+          "Konvertera Microsoft Word-filer i DOC- och DOCX-format till PDF lokalt. Förhandsvisa resultatet innan du laddar ner det.",
+      },
+      th: {
+        name: "โปรแกรมแปลง Microsoft Word (DOC และ DOCX) เป็น PDF",
+        description:
+          "แปลงไฟล์ Microsoft Word รูปแบบ DOC และ DOCX เป็น PDF บนอุปกรณ์ของคุณ ดูตัวอย่างผลลัพธ์ก่อนดาวน์โหลดได้",
+      },
+      tr: {
+        name: "Microsoft Word’den PDF’ye Dönüştürücü (DOC ve DOCX)",
+        description:
+          "Microsoft Word DOC ve DOCX dosyalarını yerel olarak PDF’ye dönüştürün. İndirmeden önce sonucu önizleyin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Microsoft Word (DOC và DOCX) sang PDF",
+        description:
+          "Chuyển tệp Microsoft Word định dạng DOC và DOCX sang PDF ngay trên thiết bị. Xem trước kết quả rồi tải xuống.",
+      },
+      "zh-CN": {
+        name: "Microsoft Word（DOC 和 DOCX）转 PDF 转换器",
+        description:
+          "在本地将 Microsoft Word 的 DOC 和 DOCX 文件转换为 PDF，下载前可预览转换结果。",
+      },
+      "zh-TW": {
+        name: "Microsoft Word（DOC 與 DOCX）轉 PDF 轉換器",
+        description:
+          "在本機將 Microsoft Word 的 DOC 與 DOCX 檔案轉換為 PDF，並在下載前預覽結果。",
+      },
+    },
+  },
+  "microsoft-word-viewer": {
+    slug: "microsoft-word-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "doc",
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "microsoft word",
+      "template",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Microsoft Word (DOC وDOCX)",
+        description:
+          "افتح مستندات Microsoft Word بصيغتي DOC وDOCX في متصفحك. يدعم العارض أيضًا صيغ DOCM وDOTX وDOTM.",
+      },
+      de: {
+        name: "Betrachter für Microsoft Word (DOC und DOCX)",
+        description:
+          "Öffnen Sie DOC- und DOCX-Dokumente aus Microsoft Word in Ihrem Browser. DOCM, DOTX und DOTM werden ebenfalls unterstützt.",
+      },
+      en: {
+        name: "Microsoft Word (DOC & DOCX) Viewer",
+        description:
+          "Open Microsoft Word DOC and DOCX documents in your browser. DOCM, DOTX, and DOTM are also supported.",
+      },
+      es: {
+        name: "Visor de Microsoft Word (DOC y DOCX)",
+        description:
+          "Abre documentos DOC y DOCX de Microsoft Word en tu navegador. También admite DOCM, DOTX y DOTM.",
+      },
+      fr: {
+        name: "Visionneuse Microsoft Word (DOC et DOCX)",
+        description:
+          "Ouvrez vos documents Microsoft Word aux formats DOC et DOCX dans votre navigateur. Les formats DOCM, DOTX et DOTM sont également pris en charge.",
+      },
+      he: {
+        name: "מציג קובצי Microsoft Word (DOC ו־DOCX)",
+        description:
+          "פתיחת מסמכי Microsoft Word מסוג DOC ו־DOCX בדפדפן. קובצי DOCM, DOTX ו־DOTM נתמכים גם הם.",
+      },
+      hi: {
+        name: "Microsoft Word (DOC और DOCX) व्यूअर",
+        description:
+          "Microsoft Word के DOC और DOCX दस्तावेज़ अपने ब्राउज़र में खोलें। DOCM, DOTX और DOTM भी समर्थित हैं।",
+      },
+      id: {
+        name: "Penampil Microsoft Word (DOC dan DOCX)",
+        description:
+          "Buka dokumen Microsoft Word dalam format DOC dan DOCX di browser Anda. Format DOCM, DOTX, dan DOTM juga didukung.",
+      },
+      it: {
+        name: "Visualizzatore Microsoft Word (DOC e DOCX)",
+        description:
+          "Apri i documenti Microsoft Word DOC e DOCX nel browser. Puoi aprire anche i file DOCM, DOTX e DOTM.",
+      },
+      ja: {
+        name: "Microsoft Word（DOC・DOCX）ビューアー",
+        description:
+          "Microsoft WordのDOC・DOCX文書をブラウザーで開けます。DOCM、DOTX、DOTMにも対応しています。",
+      },
+      ko: {
+        name: "Microsoft Word(DOC 및 DOCX) 뷰어",
+        description:
+          "브라우저에서 Microsoft Word DOC 및 DOCX 문서를 여세요. DOCM, DOTX, DOTM도 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar Microsoft Word (DOC & DOCX)",
+        description:
+          "Buka dokumen Microsoft Word DOC dan DOCX dalam pelayar anda. Format DOCM, DOTX dan DOTM turut disokong.",
+      },
+      nl: {
+        name: "Microsoft Word-viewer (DOC en DOCX)",
+        description:
+          "Open Microsoft Word-documenten in DOC- en DOCX-formaat in je browser. Ook DOCM, DOTX en DOTM worden ondersteund.",
+      },
+      no: {
+        name: "Microsoft Word-viser (DOC og DOCX)",
+        description:
+          "Åpne Microsoft Word-dokumenter i DOC- og DOCX-format i nettleseren. DOCM, DOTX og DOTM støttes også.",
+      },
+      pl: {
+        name: "Przeglądarka Microsoft Word (DOC i DOCX)",
+        description:
+          "Otwieraj dokumenty Microsoft Word w formatach DOC i DOCX w przeglądarce. Obsługiwane są także formaty DOCM, DOTX i DOTM.",
+      },
+      pt: {
+        name: "Visualizador do Microsoft Word (DOC e DOCX)",
+        description:
+          "Abra documentos DOC e DOCX do Microsoft Word no navegador. Também são compatíveis os formatos DOCM, DOTX e DOTM.",
+      },
+      ru: {
+        name: "Просмотр Microsoft Word (DOC и DOCX)",
+        description:
+          "Открывайте документы Microsoft Word в форматах DOC и DOCX прямо в браузере. Также поддерживаются DOCM, DOTX и DOTM.",
+      },
+      sv: {
+        name: "Visare för Microsoft Word (DOC och DOCX)",
+        description:
+          "Öppna Microsoft Word-dokument i DOC- och DOCX-format i webbläsaren. DOCM, DOTX och DOTM stöds också.",
+      },
+      th: {
+        name: "โปรแกรมดู Microsoft Word (DOC และ DOCX)",
+        description:
+          "เปิดเอกสาร Microsoft Word รูปแบบ DOC และ DOCX ในเบราว์เซอร์ รองรับ DOCM, DOTX และ DOTM ด้วย",
+      },
+      tr: {
+        name: "Microsoft Word Görüntüleyici (DOC ve DOCX)",
+        description:
+          "Microsoft Word DOC ve DOCX belgelerini tarayıcınızda açın. DOCM, DOTX ve DOTM biçimleri de desteklenir.",
+      },
+      vi: {
+        name: "Trình xem Microsoft Word (DOC và DOCX)",
+        description:
+          "Mở tài liệu Microsoft Word định dạng DOC và DOCX ngay trong trình duyệt. Công cụ cũng hỗ trợ DOCM, DOTX và DOTM.",
+      },
+      "zh-CN": {
+        name: "Microsoft Word（DOC 和 DOCX）查看器",
+        description:
+          "在浏览器中打开 Microsoft Word 的 DOC 和 DOCX 文档，同时支持 DOCM、DOTX 和 DOTM 文件。",
+      },
+      "zh-TW": {
+        name: "Microsoft Word（DOC 與 DOCX）檢視器",
+        description:
+          "在瀏覽器中開啟 Microsoft Word 的 DOC 與 DOCX 文件。也支援 DOCM、DOTX 與 DOTM 檔案。",
       },
     },
   },
@@ -113699,6 +113460,253 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "WKT ↔ GeoJSON 轉換器",
         description:
           "在 Well-Known Text（WKT）與 GeoJSON 之間雙向轉換幾何資料。貼上文字或開啟檔案，再複製或下載結果。",
+      },
+    },
+  },
+  "wps-to-pdf-converter": {
+    slug: "wps-to-pdf-converter",
+    category: "document",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: ["wps", "wpt", "wps writer", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محول WPS إلى PDF",
+        description:
+          "حوّل مستندات WPS Writer المتوافقة (.wps) وقوالبه (.wpt) إلى PDF محليًا في متصفحك.",
+      },
+      de: {
+        name: "WPS-zu-PDF-Konverter",
+        description:
+          "Konvertiere kompatible WPS-Writer-Dokumente (.wps) und -Vorlagen (.wpt) lokal im Browser in PDF.",
+      },
+      en: {
+        name: "WPS to PDF Converter",
+        description:
+          "Convert compatible WPS Writer documents (.wps) and templates (.wpt) to PDF locally in your browser.",
+      },
+      es: {
+        name: "Conversor de WPS a PDF",
+        description:
+          "Convierte documentos (.wps) y plantillas (.wpt) compatibles de WPS Writer a PDF de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur WPS en PDF",
+        description:
+          "Convertissez en PDF les documents (.wps) et les modèles (.wpt) WPS Writer compatibles directement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר WPS ל־PDF",
+        description:
+          "המרת מסמכי WPS Writer תואמים (.wps) ותבניות (.wpt) ל־PDF באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "WPS से PDF कन्वर्टर",
+        description:
+          "संगत WPS Writer दस्तावेज़ (.wps) और टेम्पलेट (.wpt) अपने ब्राउज़र में स्थानीय रूप से PDF में बदलें।",
+      },
+      id: {
+        name: "Konverter WPS ke PDF",
+        description:
+          "Konversikan dokumen (.wps) dan templat (.wpt) WPS Writer yang kompatibel ke PDF secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da WPS a PDF",
+        description:
+          "Converti i documenti (.wps) e i modelli (.wpt) WPS Writer compatibili in PDF, in locale nel browser.",
+      },
+      ja: {
+        name: "WPSからPDFへの変換ツール",
+        description:
+          "互換性のあるWPS Writer文書（.wps）とテンプレート（.wpt）をブラウザー内でPDFに変換できます。",
+      },
+      ko: {
+        name: "WPS → PDF 변환기",
+        description:
+          "호환되는 WPS Writer 문서(.wps)와 서식 파일(.wpt)을 브라우저에서 PDF로 변환하세요. 파일은 기기에서 처리됩니다.",
+      },
+      ms: {
+        name: "Penukar WPS kepada PDF",
+        description:
+          "Tukar dokumen (.wps) dan templat (.wpt) WPS Writer yang serasi kepada PDF secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "WPS-naar-PDF-converter",
+        description:
+          "Zet compatibele WPS Writer-documenten (.wps) en -sjablonen (.wpt) lokaal in je browser om naar PDF.",
+      },
+      no: {
+        name: "Konverterer fra WPS til PDF",
+        description:
+          "Konverter kompatible WPS Writer-dokumenter (.wps) og -maler (.wpt) til PDF lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter WPS na PDF",
+        description:
+          "Konwertuj zgodne dokumenty (.wps) i szablony (.wpt) programu WPS Writer na PDF lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de WPS para PDF",
+        description:
+          "Converta documentos (.wps) e modelos (.wpt) compatíveis do WPS Writer em PDF localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер WPS в PDF",
+        description:
+          "Преобразуйте совместимые документы (.wps) и шаблоны (.wpt) WPS Writer в PDF локально в браузере.",
+      },
+      sv: {
+        name: "Konverterare från WPS till PDF",
+        description:
+          "Konvertera kompatibla WPS Writer-dokument (.wps) och mallar (.wpt) till PDF lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง WPS เป็น PDF",
+        description:
+          "แปลงเอกสาร (.wps) และแม่แบบ (.wpt) ของ WPS Writer ที่รองรับเป็น PDF ในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "WPS’ten PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu WPS Writer belgelerini (.wps) ve şablonlarını (.wpt) tarayıcınızda yerel olarak PDF’ye dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WPS sang PDF",
+        description:
+          "Chuyển tài liệu (.wps) và mẫu (.wpt) tương thích của WPS Writer sang PDF ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "WPS 转 PDF 转换器",
+        description:
+          "在浏览器中本地将兼容的 WPS 文字文档（.wps）和模板（.wpt）转换为 PDF。",
+      },
+      "zh-TW": {
+        name: "WPS 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將相容的 WPS Writer 文件（.wps）與範本（.wpt）轉換為 PDF，檔案全程在本機處理。",
+      },
+    },
+  },
+  "wps-viewer": {
+    slug: "wps-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["wps", "wpt", "wps writer", "document", "template", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض WPS",
+        description:
+          "اقرأ مستندات WPS Writer المتوافقة (.wps) وقوالبه (.wpt) محليًا في متصفحك.",
+      },
+      de: {
+        name: "WPS-Betrachter",
+        description:
+          "Lesen Sie kompatible WPS-Writer-Dokumente (.wps) und -Vorlagen (.wpt) lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "WPS Viewer",
+        description:
+          "Read compatible WPS Writer documents (.wps) and templates (.wpt) locally in your browser.",
+      },
+      es: {
+        name: "Visor de WPS",
+        description:
+          "Lee documentos (.wps) y plantillas (.wpt) compatibles de WPS Writer de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse WPS",
+        description:
+          "Lisez les documents (.wps) et les modèles (.wpt) WPS Writer compatibles directement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי WPS",
+        description:
+          "קריאת מסמכי WPS Writer תואמים (.wps) ותבניות (.wpt) באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "WPS व्यूअर",
+        description:
+          "संगत WPS Writer दस्तावेज़ (.wps) और टेम्पलेट (.wpt) अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil WPS",
+        description:
+          "Baca dokumen (.wps) dan templat (.wpt) WPS Writer yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore WPS",
+        description:
+          "Leggi i documenti (.wps) e i modelli (.wpt) WPS Writer compatibili in locale nel browser.",
+      },
+      ja: {
+        name: "WPS ビューアー",
+        description:
+          "互換性のあるWPS Writer文書（.wps）とテンプレート（.wpt）をブラウザー内で閲覧できます。",
+      },
+      ko: {
+        name: "WPS 뷰어",
+        description:
+          "호환되는 WPS Writer 문서(.wps)와 서식 파일(.wpt)을 브라우저에서 여세요. 파일은 기기에서 처리됩니다.",
+      },
+      ms: {
+        name: "Pemapar WPS",
+        description:
+          "Baca dokumen (.wps) dan templat (.wpt) WPS Writer yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "WPS-viewer",
+        description:
+          "Lees compatibele WPS Writer-documenten (.wps) en -sjablonen (.wpt) lokaal in je browser.",
+      },
+      no: {
+        name: "WPS-viser",
+        description:
+          "Les kompatible WPS Writer-dokumenter (.wps) og -maler (.wpt) lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka WPS",
+        description:
+          "Czytaj zgodne dokumenty (.wps) i szablony (.wpt) programu WPS Writer lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de WPS",
+        description:
+          "Leia documentos (.wps) e modelos (.wpt) compatíveis do WPS Writer localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр WPS",
+        description:
+          "Читайте совместимые документы (.wps) и шаблоны (.wpt) WPS Writer локально в браузере.",
+      },
+      sv: {
+        name: "WPS-visare",
+        description:
+          "Läs kompatibla WPS Writer-dokument (.wps) och mallar (.wpt) lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู WPS",
+        description:
+          "อ่านเอกสาร (.wps) และแม่แบบ (.wpt) ของ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "WPS Görüntüleyici",
+        description:
+          "Uyumlu WPS Writer belgelerini (.wps) ve şablonlarını (.wpt) tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem WPS",
+        description:
+          "Đọc tài liệu (.wps) và mẫu (.wpt) tương thích của WPS Writer ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "WPS 查看器",
+        description:
+          "在浏览器中本地阅读兼容的 WPS 文字文档（.wps）和模板（.wpt）。",
+      },
+      "zh-TW": {
+        name: "WPS 檢視器",
+        description:
+          "在瀏覽器中閱讀相容的 WPS Writer 文件（.wps）與範本（.wpt），檔案全程在本機處理。",
       },
     },
   },

@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC / WPS → PDF 변환기",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC 및 WPS 뷰어",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose 검증기",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX → Markdown 변환기",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX → PDF 변환기",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX 뷰어",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "마이크 및 스피커 테스트",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word(DOC 및 DOCX) → PDF 변환기",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word(DOC 및 DOCX) 뷰어",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2201,6 +2191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON 변환기",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS → PDF 변환기",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS 뷰어",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

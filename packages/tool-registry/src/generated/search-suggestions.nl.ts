@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC/WPS-naar-PDF-converter",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC- en WPS-viewer",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose-validator",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX-naar-Markdown-converter",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX-naar-PDF-converter",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX-viewer",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Microfoon- en luidsprekertest",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word-naar-PDF-converter (DOC en DOCX)",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word-viewer (DOC en DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2201,6 +2191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON-converter",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS-naar-PDF-converter",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS-viewer",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

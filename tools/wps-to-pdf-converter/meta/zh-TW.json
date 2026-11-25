@@ -1,0 +1,4 @@
+{
+  "name": "WPS 轉 PDF 轉換器",
+  "description": "在瀏覽器中將相容的 WPS Writer 文件（.wps）與範本（.wpt）轉換為 PDF，檔案全程在本機處理。"
+}

@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "Penukar DOC dan WPS kepada PDF",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "Pemapar DOC dan WPS",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Pengesah Docker Compose",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Penukar DOCX kepada Markdown",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "Penukar DOCX kepada PDF",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "Pemapar DOCX",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Ujian Mikrofon dan Pembesar Suara",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Penukar Microsoft Word (DOC & DOCX) kepada PDF",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Pemapar Microsoft Word (DOC & DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2201,6 +2191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "Penukar WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "Penukar WPS kepada PDF",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Pemapar WPS",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

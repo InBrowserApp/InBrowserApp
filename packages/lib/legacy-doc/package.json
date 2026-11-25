@@ -4,9 +4,23 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./formats": "./src/formats.ts",
+    "./viewer/failure": "./src/viewer/failure.ts",
+    "./viewer/open-document": "./src/viewer/open-document.ts",
+    "./viewer/preview": "./src/viewer/preview.ts",
+    "./viewer/types": "./src/viewer/types.ts",
+    "./pdf": "./src/pdf/convert.ts",
+    "./pdf/errors": "./src/pdf/errors.ts"
   },
   "dependencies": {
-    "cfb": "catalog:"
+    "cfb": "catalog:",
+    "@file-viewer/doc": "catalog:",
+    "dompurify": "catalog:",
+    "@workspace/html-pdf": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "catalog:",
+    "jsdom": "catalog:"
   }
 }

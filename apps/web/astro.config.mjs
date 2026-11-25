@@ -24,10 +24,31 @@ import {
 } from "./src/lib/site.ts"
 import { addXDefaultHreflang } from "./src/lib/sitemap-serialize.ts"
 
+const wordRedirectSlugs = {
+  "doc-viewer": "microsoft-word-viewer",
+  "docx-viewer": "microsoft-word-viewer",
+  "doc-to-pdf-converter": "microsoft-word-to-pdf-converter",
+  "docx-to-pdf-converter": "microsoft-word-to-pdf-converter",
+}
+
+const wordRedirects = Object.fromEntries(
+  SUPPORTED_SITE_LANGUAGES.flatMap((language) => {
+    const prefix = language === DEFAULT_SITE_LANGUAGE ? "" : `/${language}`
+    return Object.entries(wordRedirectSlugs).map(([oldSlug, newSlug]) => [
+      `${prefix}/tools/${oldSlug}/`,
+      {
+        destination: `${prefix}/tools/${newSlug}/`,
+        status: /** @type {const} */ (301),
+      },
+    ])
+  })
+)
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://inbrowser.app",
   trailingSlash: "always",
+  redirects: wordRedirects,
   compressHTML: true,
   markdown: {
     shikiConfig: {
@@ -80,6 +101,7 @@ export default defineConfig({
     sitemap({
       // Leave headroom under Cloudflare's 25 MiB asset limit for hreflang links.
       entryLimit: 5_000,
+      filter: (url) => !Object.hasOwn(wordRedirects, new URL(url).pathname),
       i18n: {
         defaultLocale: DEFAULT_SITE_LANGUAGE,
         locales: Object.fromEntries(

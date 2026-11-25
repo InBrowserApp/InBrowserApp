@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "โปรแกรมแปลง DOC / WPS เป็น PDF",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "โปรแกรมดู DOC และ WPS",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "ตัวตรวจสอบ Docker Compose",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "โปรแกรมแปลง DOCX เป็น Markdown",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "โปรแกรมแปลง DOCX เป็น PDF",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "โปรแกรมดู DOCX",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "ทดสอบไมโครโฟนและลำโพง",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมแปลง Microsoft Word (DOC และ DOCX) เป็น PDF",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู Microsoft Word (DOC และ DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2201,6 +2191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "เครื่องมือแปลง WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมแปลง WPS เป็น PDF",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู WPS",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

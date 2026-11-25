@@ -141,16 +141,12 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "dns-zone-file-parser": () => import("@tool/dns-zone-file-parser/page"),
   "dnslink-generator-checker": () =>
     import("@tool/dnslink-generator-checker/page"),
-  "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),
-  "doc-viewer": () => import("@tool/doc-viewer/page"),
   "docker-compose-validator": () =>
     import("@tool/docker-compose-validator/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "docx-to-markdown-converter": () =>
     import("@tool/docx-to-markdown-converter/page"),
-  "docx-to-pdf-converter": () => import("@tool/docx-to-pdf-converter/page"),
-  "docx-viewer": () => import("@tool/docx-viewer/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "dxf-viewer": () => import("@tool/dxf-viewer/page"),
   "ebook-text-html-export": () => import("@tool/ebook-text-html-export/page"),
@@ -318,6 +314,9 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
   "microphone-test": () => import("@tool/microphone-test/page"),
+  "microsoft-word-to-pdf-converter": () =>
+    import("@tool/microsoft-word-to-pdf-converter/page"),
+  "microsoft-word-viewer": () => import("@tool/microsoft-word-viewer/page"),
   "midi-monitor": () => import("@tool/midi-monitor/page"),
   "midi-to-musicxml-converter": () =>
     import("@tool/midi-to-musicxml-converter/page"),
@@ -542,6 +541,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),
+  "wps-to-pdf-converter": () => import("@tool/wps-to-pdf-converter/page"),
+  "wps-viewer": () => import("@tool/wps-viewer/page"),
   "xls-to-xlsx-converter": () => import("@tool/xls-to-xlsx-converter/page"),
   "xlsx-to-ods-converter": () => import("@tool/xlsx-to-ods-converter/page"),
   "xlsx-viewer": () => import("@tool/xlsx-viewer/page"),

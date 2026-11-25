@@ -1,0 +1,8 @@
+/tools/doc-viewer/ /tools/microsoft-word-viewer/ 301
+/tools/docx-viewer/ /tools/microsoft-word-viewer/ 301
+/tools/doc-to-pdf-converter/ /tools/microsoft-word-to-pdf-converter/ 301
+/tools/docx-to-pdf-converter/ /tools/microsoft-word-to-pdf-converter/ 301
+/:lang/tools/doc-viewer/ /:lang/tools/microsoft-word-viewer/ 301
+/:lang/tools/docx-viewer/ /:lang/tools/microsoft-word-viewer/ 301
+/:lang/tools/doc-to-pdf-converter/ /:lang/tools/microsoft-word-to-pdf-converter/ 301
+/:lang/tools/docx-to-pdf-converter/ /:lang/tools/microsoft-word-to-pdf-converter/ 301

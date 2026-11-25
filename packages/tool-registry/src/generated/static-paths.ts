@@ -10214,190 +10214,6 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
-    slug: "doc-to-pdf-converter",
-    language: "ar",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "de",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "en",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "es",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "fr",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "he",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "hi",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "id",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "it",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "ja",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "ko",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "ms",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "nl",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "no",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "pl",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "pt",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "ru",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "sv",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "th",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "tr",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "vi",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "zh-CN",
-  },
-  {
-    slug: "doc-to-pdf-converter",
-    language: "zh-TW",
-  },
-  {
-    slug: "doc-viewer",
-    language: "ar",
-  },
-  {
-    slug: "doc-viewer",
-    language: "de",
-  },
-  {
-    slug: "doc-viewer",
-    language: "en",
-  },
-  {
-    slug: "doc-viewer",
-    language: "es",
-  },
-  {
-    slug: "doc-viewer",
-    language: "fr",
-  },
-  {
-    slug: "doc-viewer",
-    language: "he",
-  },
-  {
-    slug: "doc-viewer",
-    language: "hi",
-  },
-  {
-    slug: "doc-viewer",
-    language: "id",
-  },
-  {
-    slug: "doc-viewer",
-    language: "it",
-  },
-  {
-    slug: "doc-viewer",
-    language: "ja",
-  },
-  {
-    slug: "doc-viewer",
-    language: "ko",
-  },
-  {
-    slug: "doc-viewer",
-    language: "ms",
-  },
-  {
-    slug: "doc-viewer",
-    language: "nl",
-  },
-  {
-    slug: "doc-viewer",
-    language: "no",
-  },
-  {
-    slug: "doc-viewer",
-    language: "pl",
-  },
-  {
-    slug: "doc-viewer",
-    language: "pt",
-  },
-  {
-    slug: "doc-viewer",
-    language: "ru",
-  },
-  {
-    slug: "doc-viewer",
-    language: "sv",
-  },
-  {
-    slug: "doc-viewer",
-    language: "th",
-  },
-  {
-    slug: "doc-viewer",
-    language: "tr",
-  },
-  {
-    slug: "doc-viewer",
-    language: "vi",
-  },
-  {
-    slug: "doc-viewer",
-    language: "zh-CN",
-  },
-  {
-    slug: "doc-viewer",
-    language: "zh-TW",
-  },
-  {
     slug: "docker-compose-validator",
     language: "ar",
   },
@@ -10671,190 +10487,6 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "docx-to-markdown-converter",
-    language: "zh-TW",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "ar",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "de",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "en",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "es",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "fr",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "he",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "hi",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "id",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "it",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "ja",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "ko",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "ms",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "nl",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "no",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "pl",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "pt",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "ru",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "sv",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "th",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "tr",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "vi",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "zh-CN",
-  },
-  {
-    slug: "docx-to-pdf-converter",
-    language: "zh-TW",
-  },
-  {
-    slug: "docx-viewer",
-    language: "ar",
-  },
-  {
-    slug: "docx-viewer",
-    language: "de",
-  },
-  {
-    slug: "docx-viewer",
-    language: "en",
-  },
-  {
-    slug: "docx-viewer",
-    language: "es",
-  },
-  {
-    slug: "docx-viewer",
-    language: "fr",
-  },
-  {
-    slug: "docx-viewer",
-    language: "he",
-  },
-  {
-    slug: "docx-viewer",
-    language: "hi",
-  },
-  {
-    slug: "docx-viewer",
-    language: "id",
-  },
-  {
-    slug: "docx-viewer",
-    language: "it",
-  },
-  {
-    slug: "docx-viewer",
-    language: "ja",
-  },
-  {
-    slug: "docx-viewer",
-    language: "ko",
-  },
-  {
-    slug: "docx-viewer",
-    language: "ms",
-  },
-  {
-    slug: "docx-viewer",
-    language: "nl",
-  },
-  {
-    slug: "docx-viewer",
-    language: "no",
-  },
-  {
-    slug: "docx-viewer",
-    language: "pl",
-  },
-  {
-    slug: "docx-viewer",
-    language: "pt",
-  },
-  {
-    slug: "docx-viewer",
-    language: "ru",
-  },
-  {
-    slug: "docx-viewer",
-    language: "sv",
-  },
-  {
-    slug: "docx-viewer",
-    language: "th",
-  },
-  {
-    slug: "docx-viewer",
-    language: "tr",
-  },
-  {
-    slug: "docx-viewer",
-    language: "vi",
-  },
-  {
-    slug: "docx-viewer",
-    language: "zh-CN",
-  },
-  {
-    slug: "docx-viewer",
     language: "zh-TW",
   },
   {
@@ -23735,6 +23367,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "microphone-test",
+    language: "zh-TW",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "microsoft-word-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "ar",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "de",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "en",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "es",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "fr",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "he",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "hi",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "id",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "it",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "ja",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "ko",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "ms",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "nl",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "no",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "pl",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "pt",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "ru",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "sv",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "th",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "tr",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "vi",
+  },
+  {
+    slug: "microsoft-word-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "microsoft-word-viewer",
     language: "zh-TW",
   },
   {
@@ -40479,6 +40295,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "wkt-geojson-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "wps-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "wps-viewer",
+    language: "ar",
+  },
+  {
+    slug: "wps-viewer",
+    language: "de",
+  },
+  {
+    slug: "wps-viewer",
+    language: "en",
+  },
+  {
+    slug: "wps-viewer",
+    language: "es",
+  },
+  {
+    slug: "wps-viewer",
+    language: "fr",
+  },
+  {
+    slug: "wps-viewer",
+    language: "he",
+  },
+  {
+    slug: "wps-viewer",
+    language: "hi",
+  },
+  {
+    slug: "wps-viewer",
+    language: "id",
+  },
+  {
+    slug: "wps-viewer",
+    language: "it",
+  },
+  {
+    slug: "wps-viewer",
+    language: "ja",
+  },
+  {
+    slug: "wps-viewer",
+    language: "ko",
+  },
+  {
+    slug: "wps-viewer",
+    language: "ms",
+  },
+  {
+    slug: "wps-viewer",
+    language: "nl",
+  },
+  {
+    slug: "wps-viewer",
+    language: "no",
+  },
+  {
+    slug: "wps-viewer",
+    language: "pl",
+  },
+  {
+    slug: "wps-viewer",
+    language: "pt",
+  },
+  {
+    slug: "wps-viewer",
+    language: "ru",
+  },
+  {
+    slug: "wps-viewer",
+    language: "sv",
+  },
+  {
+    slug: "wps-viewer",
+    language: "th",
+  },
+  {
+    slug: "wps-viewer",
+    language: "tr",
+  },
+  {
+    slug: "wps-viewer",
+    language: "vi",
+  },
+  {
+    slug: "wps-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "wps-viewer",
     language: "zh-TW",
   },
   {

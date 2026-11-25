@@ -1,0 +1,4 @@
+{
+  "name": "WPSからPDFへの変換ツール",
+  "description": "互換性のあるWPS Writer文書（.wps）とテンプレート（.wpt）をブラウザー内でPDFに変換できます。"
+}

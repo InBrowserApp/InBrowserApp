@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "Konverterer fra DOC / WPS til PDF",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC- og WPS-viser",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose-validator",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX til Markdown-konverterer",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "Konverterer fra DOCX til PDF",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX-viser",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Mikrofon- og høyttalertest",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Konverterer fra Microsoft Word (DOC og DOCX) til PDF",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word-viser (DOC og DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2201,6 +2191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON-omformer",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "Konverterer fra WPS til PDF",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS-viser",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",
