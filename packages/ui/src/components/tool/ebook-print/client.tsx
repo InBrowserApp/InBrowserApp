@@ -1,24 +1,35 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
-import { Button } from "@workspace/ui/components/ui/button"
-import { EmptyDescription, EmptyMedia } from "@workspace/ui/components/ui/empty"
-import { Label } from "@workspace/ui/components/ui/label"
-import { Spinner } from "@workspace/ui/components/ui/spinner"
-import { BookOpen, Folder, Printer } from "@workspace/ui/icons"
-import { cn } from "@workspace/ui/lib/utils"
-import type { Messages } from "./messages"
+import { Alert, AlertDescription } from "../../ui/alert"
+import { Button } from "../../ui/button"
+import { EmptyDescription, EmptyMedia } from "../../ui/empty"
+import { Label } from "../../ui/label"
+import { Spinner } from "../../ui/spinner"
+import { BookOpen, Folder, Printer } from "../../../icons"
+import { cn } from "../../../lib/utils"
+import type { BookPrintFormat, Messages } from "./messages"
 
 const paperSizes = ["A4", "A5", "letter"] as const
+
+const formats = {
+  epub: { accept: ".epub,application/epub+zip", extension: /\.epub$/i },
+  fb2: {
+    accept: ".fb2,.fbz,.fb2.zip,application/x-fictionbook+xml",
+    extension: /\.(?:fb2|fbz|fb2\.zip)$/i,
+  },
+} as const
 
 type Result = { url: string; missing: boolean } | { error: string }
 
 export default function Client({
   lang,
+  format,
   messages: m,
 }: {
   lang: string
+  format: BookPrintFormat
   messages: Messages
 }) {
+  const { accept, extension } = formats[format]
   const picker = useRef<HTMLInputElement>(null)
   const chooseButton = useRef<HTMLButtonElement>(null)
   const preview = useRef<HTMLIFrameElement>(null)
@@ -35,6 +46,10 @@ export default function Client({
 
   useEffect(() => {
     if (!file) return
+    if (!extension.test(file.name)) {
+      setResult({ error: m.unsupported })
+      return
+    }
     const task = new AbortController()
     let url: string | undefined
     async function load(input: File) {
@@ -49,21 +64,23 @@ export default function Client({
       } catch (reason) {
         if (task.signal.aborted) return
         const code = reason instanceof Error ? reason.message : ""
-        setResult({
-          error:
-            code === "protected" || code === "unsupportedLayout"
-              ? m[code]
-              : m.invalid,
-        })
+        const detail =
+          code === "protected" ||
+          code === "unsupportedLayout" ||
+          code === "ambiguous" ||
+          code === "noBook" ||
+          code === "encoding"
+            ? m[code]
+            : undefined
+        setResult({ error: detail ?? m.invalid })
       }
     }
-    if (/\.epub$/i.test(file.name)) void load(file)
-    else setResult({ error: m.unsupported })
+    void load(file)
     return () => {
       task.abort()
       if (url) URL.revokeObjectURL(url)
     }
-  }, [file, lang, m])
+  }, [file, lang, m, extension])
 
   function selectFile(next: File | null) {
     setFile(next)
@@ -110,7 +127,7 @@ export default function Client({
       <input
         ref={picker}
         type="file"
-        accept=".epub,application/epub+zip"
+        accept={accept}
         hidden
         onChange={(event) => {
           const next = event.currentTarget.files?.[0]

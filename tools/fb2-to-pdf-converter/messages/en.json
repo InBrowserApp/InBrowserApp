@@ -1,0 +1,11 @@
+{
+  "open": "Open FB2 book",
+  "replace": "Replace book",
+  "drop": "Drop an FB2 or FBZ book here",
+  "unsupported": "Choose a local FB2 book or an FBZ / FB2.ZIP archive containing one FB2 book.",
+  "invalid": "This book may be damaged or incomplete. Choose another copy.",
+  "protected": "This archive is encrypted. Choose an unencrypted copy.",
+  "ambiguous": "This archive contains more than one FB2 book. Extract it and open the book you want.",
+  "noBook": "This archive contains no FB2 book. Choose another file.",
+  "encoding": "This book declares an unsupported text encoding. Choose a UTF-8 copy."
+}

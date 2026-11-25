@@ -132,6 +132,7 @@
     "@tool/favicon-assets-generator": "workspace:*",
     "@tool/fb2-reader": "workspace:*",
     "@tool/fb2-to-epub-converter": "workspace:*",
+    "@tool/fb2-to-pdf-converter": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/file-type-detector": "workspace:*",
     "@tool/filecoin-address-converter": "workspace:*",

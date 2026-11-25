@@ -1,0 +1,4 @@
+{
+  "name": "FB2 PDF変換",
+  "description": "ブラウザーでFictionBook（FB2、FB2.ZIP、FBZ）をPDFに変換します。章をプレビューし、用紙サイズを指定して、文字を選択できるPDFとして保存できます。アップロードは不要です。"
+}
