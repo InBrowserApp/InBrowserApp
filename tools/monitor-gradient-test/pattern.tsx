@@ -37,10 +37,8 @@ export function Pattern({
         <div
           role="img"
           aria-label={messages.smoothGrayscale}
-          style={{
-            backgroundImage: ramp("#ffffff"),
-            forcedColorAdjust: "none",
-          }}
+          className="forced-color-adjust-none"
+          style={{ backgroundImage: ramp("#ffffff") }}
         />
         <div className="pt-2 text-sm font-medium">
           {messages.grayscaleSteps}
@@ -49,8 +47,7 @@ export function Pattern({
           dir="ltr"
           role="img"
           aria-label={messages.grayscaleSteps}
-          className="grid grid-cols-16"
-          style={{ forcedColorAdjust: "none" }}
+          className="grid grid-cols-16 forced-color-adjust-none"
         >
           {graySteps.map((level) => (
             <span key={level} style={{ backgroundColor: gray(level) }} />
@@ -69,8 +66,8 @@ export function Pattern({
             <div
               role="img"
               aria-label={messages[label]}
-              className="flex-1"
-              style={{ backgroundImage: ramp(end), forcedColorAdjust: "none" }}
+              className="flex-1 forced-color-adjust-none"
+              style={{ backgroundImage: ramp(end) }}
             />
           </div>
         ))}
@@ -84,11 +81,10 @@ export function Pattern({
     <div
       role="group"
       aria-label={messages[selected]}
-      className="flex h-full flex-col justify-center gap-3 p-4"
+      className="flex h-full flex-col justify-center gap-3 p-4 forced-color-adjust-none"
       style={{
         backgroundColor: isBlack ? "#000000" : "#ffffff",
         color: isBlack ? "#ffffff" : "#000000",
-        forcedColorAdjust: "none",
       }}
     >
       <div

@@ -8,7 +8,6 @@ import {
   Maximize2,
   Minimize2,
 } from "@workspace/ui/icons"
-
 import { useFullscreenDialog } from "@workspace/ui/lib/use-fullscreen-dialog"
 
 import type { MouseEvent } from "react"
@@ -52,8 +51,8 @@ export default function DeadPixelTest({
       <button
         type="button"
         aria-label={messages.next}
-        className="block min-h-56 w-full cursor-pointer rounded-xl border border-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:min-h-72"
-        style={{ backgroundColor: color.hex, forcedColorAdjust: "none" }}
+        className="block min-h-56 w-full cursor-pointer rounded-xl border border-border forced-color-adjust-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:min-h-72"
+        style={{ backgroundColor: color.hex }}
         onClick={() => step(1)}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -73,7 +72,7 @@ export default function DeadPixelTest({
             >
               <span
                 aria-hidden="true"
-                className="size-3.5 shrink-0 rounded-full border border-neutral-400"
+                className="size-3.5 shrink-0 rounded-full border border-neutral-400 forced-color-adjust-none"
                 style={{ backgroundColor: item.hex }}
               />
               {messages[item.name]}
@@ -112,14 +111,11 @@ export default function DeadPixelTest({
       >
         <div
           ref={surface}
-          className="relative size-full"
-          style={{ backgroundColor: color.hex, forcedColorAdjust: "none" }}
+          className="relative size-full forced-color-adjust-none"
+          style={{ backgroundColor: color.hex }}
         >
           {controlsVisible && (
-            <div
-              className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-center p-3"
-              style={{ forcedColorAdjust: "auto" }}
-            >
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-center p-3 forced-color-adjust-auto">
               <div className="pointer-events-auto flex max-w-full flex-wrap items-center justify-center gap-1 rounded-xl bg-neutral-950 p-1 text-white shadow-lg">
                 <Button
                   type="button"

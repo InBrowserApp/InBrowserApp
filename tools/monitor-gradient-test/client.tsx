@@ -21,7 +21,7 @@ export default function MonitorGradientTest({
   const number = new Intl.NumberFormat(language, { useGrouping: false })
   const hint = messages[`${selected}Hint`]
 
-  const tabs = (
+  const patternButtons = (
     <div
       role="group"
       aria-label={messages.patterns}
@@ -45,7 +45,7 @@ export default function MonitorGradientTest({
   return (
     <section className="space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        {tabs}
+        {patternButtons}
         <Button
           type="button"
           variant="outline"
@@ -74,7 +74,7 @@ export default function MonitorGradientTest({
           className="flex size-full flex-col gap-3 overflow-auto bg-background p-4 text-foreground"
         >
           <div className="flex flex-wrap items-center justify-between gap-3">
-            {tabs}
+            {patternButtons}
             <Button
               type="button"
               variant="outline"

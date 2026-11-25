@@ -65,7 +65,7 @@ describe("MonitorGradientTest", () => {
     choose(messages.black)
     let panel = screen.getByRole("group", { name: messages.black })
     expect(
-      [...panel.querySelectorAll("[aria-hidden] span")].map(
+      [...panel.querySelectorAll<HTMLSpanElement>("[aria-hidden] span")].map(
         (patch) => patch.style.backgroundColor
       )
     ).toEqual(
@@ -77,7 +77,7 @@ describe("MonitorGradientTest", () => {
     choose(messages.white)
     panel = screen.getByRole("group", { name: messages.white })
     expect(
-      [...panel.querySelectorAll("[aria-hidden] span")].map(
+      [...panel.querySelectorAll<HTMLSpanElement>("[aria-hidden] span")].map(
         (patch) => patch.style.backgroundColor
       )
     ).toEqual(
