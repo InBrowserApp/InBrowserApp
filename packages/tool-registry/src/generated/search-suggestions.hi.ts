@@ -724,6 +724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GPX से GeoJSON कन्वर्टर",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "GPX व्यूअर और ऊँचाई प्रोफ़ाइल",
     slug: "gpx-viewer",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Omformer fra GPX til GeoJSON",
+  "description": "Konverter GPX-spor, ruter og veipunkter til GeoJSON i nettleseren. Åpne en .gpx-fil eller lim inn GPX-XML, og kopier eller last ned resultatet."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konverterare från GPX till GeoJSON",
+  "description": "Konvertera GPX-spår, rutter och waypoints till GeoJSON i webbläsaren. Öppna en .gpx-fil eller klistra in GPX-XML och kopiera eller ladda ned resultatet."
+}

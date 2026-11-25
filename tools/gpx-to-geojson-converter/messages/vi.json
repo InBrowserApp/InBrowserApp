@@ -1,0 +1,10 @@
+{
+  "example": "Dùng thử ví dụ",
+  "openFile": "Mở GPX",
+  "convert": "Chuyển sang GeoJSON",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép",
+  "download": "Tải xuống GeoJSON",
+  "empty": "Kết quả GeoJSON sẽ xuất hiện ở đây.",
+  "invalid": "Không chuyển đổi được GPX này. Hãy kiểm tra XML và vĩ độ, kinh độ của các điểm."
+}

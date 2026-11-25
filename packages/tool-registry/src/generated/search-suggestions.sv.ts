@@ -724,6 +724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Konverterare från GPX till GeoJSON",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "GPX-visare och höjdprofil",
     slug: "gpx-viewer",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Penukar GPX kepada GeoJSON",
+  "description": "Tukar trek, laluan dan titik laluan GPX kepada GeoJSON dalam pelayar anda. Buka fail .gpx atau tampal XML GPX, kemudian salin atau muat turun hasilnya."
+}

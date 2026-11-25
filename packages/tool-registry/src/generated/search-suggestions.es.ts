@@ -724,6 +724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Conversor de GPX a GeoJSON",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "Visor GPX con perfil de elevación",
     slug: "gpx-viewer",
   },

@@ -1,34 +1,12 @@
 import { parseXml } from "@workspace/geospatial/xml"
+import {
+  gpxChildren as children,
+  readGpxPosition as position,
+} from "@workspace/geospatial/gpx"
+import type { GpxPoint as Point } from "@workspace/geospatial/gpx"
 import type { Feature } from "geojson"
 
-type Point = Readonly<{ lon: number; lat: number; elevation?: number }>
 type Sample = Point & Readonly<{ distance: number; elevation: number }>
-
-function children(element: Element, name: string) {
-  return Array.from(element.children).filter(
-    (child) =>
-      child.localName === name && child.namespaceURI === element.namespaceURI
-  )
-}
-
-function numeric(text: string | null | undefined) {
-  return text?.trim() ? Number(text) : Number.NaN
-}
-
-function position(element: Element): Point {
-  const lat = numeric(element.getAttribute("lat"))
-  const lon = numeric(element.getAttribute("lon"))
-  if (
-    !Number.isFinite(lat) ||
-    Math.abs(lat) > 90 ||
-    !Number.isFinite(lon) ||
-    Math.abs(lon) > 180
-  ) {
-    throw new Error("Invalid GPX coordinates")
-  }
-  const elevation = numeric(children(element, "ele")[0]?.textContent)
-  return Number.isFinite(elevation) ? { lat, lon, elevation } : { lat, lon }
-}
 
 function distanceBetween(first: Point, second: Point) {
   const radians = Math.PI / 180

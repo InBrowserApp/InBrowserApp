@@ -1,0 +1,10 @@
+{
+  "example": "טעינת דוגמה",
+  "openFile": "פתיחת GPX",
+  "convert": "המרה ל־GeoJSON",
+  "copy": "העתקה",
+  "copied": "הועתק",
+  "download": "הורדת GeoJSON",
+  "empty": "התוצאה בפורמט GeoJSON תופיע כאן.",
+  "invalid": "לא ניתן להמיר את ה־GPX. בדקו את מבנה ה־XML ואת קווי הרוחב והאורך של הנקודות."
+}

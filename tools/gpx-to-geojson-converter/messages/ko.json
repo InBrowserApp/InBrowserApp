@@ -1,0 +1,10 @@
+{
+  "example": "예제 사용하기",
+  "openFile": "GPX 열기",
+  "convert": "GeoJSON으로 변환",
+  "copy": "복사",
+  "copied": "복사됨",
+  "download": "GeoJSON 다운로드",
+  "empty": "GeoJSON 결과가 여기에 표시됩니다.",
+  "invalid": "이 GPX를 변환할 수 없습니다. XML과 각 지점의 위도 및 경도를 확인하세요."
+}

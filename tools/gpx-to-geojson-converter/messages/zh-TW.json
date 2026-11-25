@@ -1,0 +1,10 @@
+{
+  "example": "試用範例",
+  "openFile": "開啟 GPX",
+  "convert": "轉換為 GeoJSON",
+  "copy": "複製",
+  "copied": "已複製",
+  "download": "下載 GeoJSON",
+  "empty": "GeoJSON 結果會顯示在這裡。",
+  "invalid": "無法轉換此 GPX。請檢查 XML 及各點的緯度與經度。"
+}

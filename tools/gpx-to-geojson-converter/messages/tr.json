@@ -1,0 +1,10 @@
+{
+  "example": "Örneği dene",
+  "openFile": "GPX aç",
+  "convert": "GeoJSON’a dönüştür",
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "download": "GeoJSON indir",
+  "empty": "GeoJSON sonucu burada görünecek.",
+  "invalid": "Bu GPX dönüştürülemedi. XML yapısını ve noktaların enlem ve boylamlarını kontrol edin."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konverter GPX ke GeoJSON",
+  "description": "Konversi jejak, rute, dan titik penanda GPX ke GeoJSON di browser. Buka berkas .gpx atau tempel XML GPX, lalu salin atau unduh hasilnya."
+}

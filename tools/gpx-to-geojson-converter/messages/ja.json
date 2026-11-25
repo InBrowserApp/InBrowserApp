@@ -1,0 +1,10 @@
+{
+  "example": "サンプルを試す",
+  "openFile": "GPX を開く",
+  "convert": "GeoJSON に変換",
+  "copy": "コピー",
+  "copied": "コピーしました",
+  "download": "GeoJSON をダウンロード",
+  "empty": "GeoJSON の結果がここに表示されます。",
+  "invalid": "この GPX を変換できませんでした。XML と各ポイントの緯度・経度を確認してください。"
+}

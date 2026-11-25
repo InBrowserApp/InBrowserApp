@@ -1,0 +1,10 @@
+{
+  "example": "تجربة مثال",
+  "openFile": "فتح ملف GPX",
+  "convert": "التحويل إلى GeoJSON",
+  "copy": "نسخ",
+  "copied": "تم النسخ",
+  "download": "تنزيل GeoJSON",
+  "empty": "ستظهر نتيجة GeoJSON هنا.",
+  "invalid": "تعذّر تحويل ملف GPX هذا. تحقّق من بنية XML ومن خطوط العرض والطول للنقاط."
+}

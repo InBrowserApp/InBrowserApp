@@ -724,6 +724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GPX → GeoJSON 변환기",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "GPX 뷰어와 고도 프로파일",
     slug: "gpx-viewer",
   },

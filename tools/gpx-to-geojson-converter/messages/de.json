@@ -1,0 +1,10 @@
+{
+  "example": "Beispiel ausprobieren",
+  "openFile": "GPX öffnen",
+  "convert": "Zu GeoJSON konvertieren",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "download": "GeoJSON herunterladen",
+  "empty": "Hier erscheint das Ergebnis im GeoJSON-Format.",
+  "invalid": "Diese GPX-Daten konnten nicht konvertiert werden. Prüfe das XML und die Breiten- und Längengrade der Punkte."
+}

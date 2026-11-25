@@ -1,0 +1,10 @@
+{
+  "example": "Coba contoh",
+  "openFile": "Buka GPX",
+  "convert": "Konversi ke GeoJSON",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Unduh GeoJSON",
+  "empty": "Hasil GeoJSON akan muncul di sini.",
+  "invalid": "GPX ini tidak dapat dikonversi. Periksa XML serta lintang dan bujur setiap titik."
+}
