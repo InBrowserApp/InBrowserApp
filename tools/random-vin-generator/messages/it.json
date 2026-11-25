@@ -1,0 +1,12 @@
+{
+  "quantity": "Quantità",
+  "generate": "Genera",
+  "generating": "Generazione…",
+  "results": "Numeri di identificazione del veicolo (VIN)",
+  "placeholder": "I VIN generati appariranno qui.",
+  "copy": "Copia tutto",
+  "copied": "Copiato",
+  "copyFailed": "Copia non riuscita",
+  "download": "Scarica TXT",
+  "error": "Impossibile caricare il generatore di VIN. Ricarica la pagina per riprovare."
+}

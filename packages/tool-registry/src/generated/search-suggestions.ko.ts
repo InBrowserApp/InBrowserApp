@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "무작위 VIN 생성기",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "화면 주사율 테스트",
     slug: "refresh-rate-test",

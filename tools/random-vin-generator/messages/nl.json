@@ -1,0 +1,12 @@
+{
+  "quantity": "Aantal",
+  "generate": "Genereren",
+  "generating": "Genereren…",
+  "results": "Voertuigidentificatienummers (VIN’s)",
+  "placeholder": "De gegenereerde VIN's verschijnen hier.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "TXT downloaden",
+  "error": "De VIN-generator kon niet worden geladen. Vernieuw de pagina om het opnieuw te proberen."
+}

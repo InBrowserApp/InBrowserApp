@@ -1,0 +1,12 @@
+{
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Nomor identifikasi kendaraan (VIN)",
+  "placeholder": "VIN yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Tersalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "error": "Generator VIN tidak dapat dimuat. Muat ulang halaman untuk mencoba lagi."
+}

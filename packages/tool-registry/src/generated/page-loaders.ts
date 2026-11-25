@@ -433,6 +433,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/random-phone-number-generator/page"),
   "random-postal-code-generator": () =>
     import("@tool/random-postal-code-generator/page"),
+  "random-vin-generator": () => import("@tool/random-vin-generator/page"),
   "refresh-rate-test": () => import("@tool/refresh-rate-test/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "remove-pdf-owner-password": () =>

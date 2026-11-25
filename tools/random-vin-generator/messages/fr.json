@@ -1,0 +1,12 @@
+{
+  "quantity": "Quantité",
+  "generate": "Générer",
+  "generating": "Génération…",
+  "results": "Numéros d’identification de véhicule (NIV)",
+  "placeholder": "Les NIV générés apparaîtront ici.",
+  "copy": "Tout copier",
+  "copied": "Copié",
+  "copyFailed": "Échec de la copie",
+  "download": "Télécharger en TXT",
+  "error": "Impossible de charger le générateur de NIV. Rechargez la page pour réessayer."
+}

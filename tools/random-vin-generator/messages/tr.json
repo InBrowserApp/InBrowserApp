@@ -1,0 +1,12 @@
+{
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Araç kimlik numaraları (VIN)",
+  "placeholder": "Oluşturulan VIN’ler burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalama başarısız",
+  "download": "TXT indir",
+  "error": "VIN oluşturucu yüklenemedi. Tekrar denemek için sayfayı yeniden yükleyin."
+}

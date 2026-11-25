@@ -1,0 +1,4 @@
+{
+  "name": "Zufällige VIN generieren",
+  "description": "Zufällige Fahrzeug-Identifizierungsnummern mit 17 Zeichen und passender Prüfziffer für Tests generieren. VINs gesammelt kopieren oder als TXT-Datei herunterladen."
+}

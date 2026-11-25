@@ -45048,6 +45048,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-vin-generator",
+    category: "random",
+    icon: "car",
+    tags: [
+      "random",
+      "vin",
+      "vehicle identification number",
+      "generator",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أرقام VIN عشوائية",
+        description:
+          "أنشئ أرقام تعريف مركبات عشوائية من 17 خانة بأرقام تحقق مطابقة للاختبار. انسخ الأرقام دفعة واحدة أو نزّل ملف TXT.",
+      },
+      de: {
+        name: "Zufällige VIN generieren",
+        description:
+          "Zufällige Fahrzeug-Identifizierungsnummern mit 17 Zeichen und passender Prüfziffer für Tests generieren. VINs gesammelt kopieren oder als TXT-Datei herunterladen.",
+      },
+      en: {
+        name: "Random VIN Generator",
+        description:
+          "Generate random 17-character vehicle identification numbers with matching check digits for testing. Copy VINs in batches or download a TXT file.",
+      },
+      es: {
+        name: "Generador de VIN aleatorios",
+        description:
+          "Genera números de identificación vehicular de 17 caracteres con dígitos de control válidos para pruebas. Copia lotes de VIN o descarga un archivo TXT.",
+      },
+      fr: {
+        name: "Générateur de NIV aléatoires",
+        description:
+          "Générez des numéros d’identification de véhicule à 17 caractères avec un chiffre de contrôle valide pour vos tests. Copiez les NIV en lot ou téléchargez un fichier TXT.",
+      },
+      he: {
+        name: "מחולל מספרי VIN אקראיים",
+        description:
+          "יצירת מספרי זיהוי רכב אקראיים בני 17 תווים עם ספרות ביקורת תואמות לצורכי בדיקה. אפשר להעתיק מספרים יחד או להוריד קובץ TXT.",
+      },
+      hi: {
+        name: "रैंडम VIN जनरेटर",
+        description:
+          "जाँच के लिए मेल खाते चेक डिजिट वाले 17 वर्णों के रैंडम वाहन पहचान नंबर बनाएँ। VIN एक साथ कॉपी करें या TXT फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator VIN Acak",
+        description:
+          "Buat nomor identifikasi kendaraan acak sepanjang 17 karakter dengan digit cek yang cocok untuk pengujian. Salin VIN sekaligus atau unduh file TXT.",
+      },
+      it: {
+        name: "Generatore di VIN casuali",
+        description:
+          "Genera numeri di identificazione del veicolo casuali di 17 caratteri con cifra di controllo corrispondente per i test. Copia gruppi di VIN o scarica un file TXT.",
+      },
+      ja: {
+        name: "ランダムVIN生成ツール",
+        description:
+          "チェックディジットが一致する17文字の車両識別番号（VIN）をランダムに生成し、テストに使用できます。まとめてコピーするか、TXTファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 VIN 생성기",
+        description:
+          "테스트에 사용할 수 있도록 체크 디짓이 일치하는 17자리 차량 식별 번호(VIN)를 무작위로 생성합니다. VIN을 일괄 복사하거나 TXT 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana VIN Rawak",
+        description:
+          "Jana nombor pengenalan kenderaan rawak sepanjang 17 aksara dengan digit semak yang sepadan untuk ujian. Salin VIN secara kelompok atau muat turun fail TXT.",
+      },
+      nl: {
+        name: "Willekeurige VIN-generator",
+        description:
+          "Genereer willekeurige voertuigidentificatienummers van 17 tekens met een passend controlecijfer voor tests. Kopieer VIN's in groepen of download een TXT-bestand.",
+      },
+      no: {
+        name: "Tilfeldig VIN-generator",
+        description:
+          "Generer tilfeldige kjøretøyidentifikasjonsnumre på 17 tegn med riktige kontrollsifre til testing. Kopier flere VIN-er samtidig eller last ned en TXT-fil.",
+      },
+      pl: {
+        name: "Generator losowych numerów VIN",
+        description:
+          "Generuj losowe, 17-znakowe numery identyfikacyjne pojazdów z pasującą cyfrą kontrolną do testów. Kopiuj numery VIN grupami lub pobierz plik TXT.",
+      },
+      pt: {
+        name: "Gerador de VIN aleatórios",
+        description:
+          "Gere números de identificação de veículos com 17 caracteres e dígitos verificadores válidos para testes. Copie VINs em lote ou baixe um arquivo TXT.",
+      },
+      ru: {
+        name: "Генератор случайных VIN",
+        description:
+          "Создавайте случайные 17-символьные идентификационные номера транспортных средств с соответствующей контрольной цифрой для тестирования. Копируйте VIN группами или скачивайте файл TXT.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga VIN",
+        description:
+          "Generera slumpmässiga fordonsidentifieringsnummer med 17 tecken och matchande kontrollsiffra för testning. Kopiera flera VIN eller ladda ner en TXT-fil.",
+      },
+      th: {
+        name: "โปรแกรมสร้าง VIN แบบสุ่ม",
+        description:
+          "สร้างหมายเลขประจำตัวรถแบบสุ่ม 17 อักขระที่มีเลขตรวจสอบตรงกันสำหรับการทดสอบ คัดลอก VIN หลายรายการหรือดาวน์โหลดไฟล์ TXT",
+      },
+      tr: {
+        name: "Rastgele VIN Oluşturucu",
+        description:
+          "Test için kontrol basamakları eşleşen 17 karakterli rastgele araç kimlik numaraları oluşturun. VIN’leri topluca kopyalayın veya TXT dosyası indirin.",
+      },
+      vi: {
+        name: "Trình tạo VIN ngẫu nhiên",
+        description:
+          "Tạo mã số nhận dạng xe ngẫu nhiên gồm 17 ký tự với chữ số kiểm tra khớp để thử nghiệm. Sao chép hàng loạt VIN hoặc tải tệp TXT.",
+      },
+      "zh-CN": {
+        name: "随机 VIN 生成器",
+        description:
+          "生成带有匹配校验位的随机 17 位车辆识别号（VIN），用于测试。批量复制 VIN 或下载 TXT 文件。",
+      },
+      "zh-TW": {
+        name: "隨機 VIN 產生器",
+        description:
+          "產生校驗碼相符的隨機 17 碼車輛識別號碼（VIN）供測試使用。批次複製 VIN 或下載 TXT 檔案。",
+      },
+    },
+  },
+  {
     slug: "refresh-rate-test",
     category: "misc",
     icon: "activity",

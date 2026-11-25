@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "Penjana VIN Rawak",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "Ujian Kadar Segar Semula Skrin",
     slug: "refresh-rate-test",

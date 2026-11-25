@@ -1,0 +1,12 @@
+{
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "車輛識別號碼（VIN）",
+  "placeholder": "產生的 VIN 會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "error": "無法載入 VIN 產生器。請重新載入頁面後再試一次。"
+}

@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "Generator VIN Acak",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "Tes Refresh Rate Layar",
     slug: "refresh-rate-test",

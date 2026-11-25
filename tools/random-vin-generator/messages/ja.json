@@ -1,0 +1,12 @@
+{
+  "quantity": "生成数",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "車両識別番号（VIN）",
+  "placeholder": "生成されたVINがここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーに失敗しました",
+  "download": "TXTをダウンロード",
+  "error": "VIN生成ツールを読み込めませんでした。ページを再読み込みしてからもう一度お試しください。"
+}
