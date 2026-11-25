@@ -11594,6 +11594,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "filecoin-storage-cost-calculator",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "de",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "en",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "es",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "he",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "id",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "it",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "no",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "th",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-storage-cost-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "font-subset-generator",
     language: "ar",
   },

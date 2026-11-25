@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur de coûts de stockage Filecoin",
+  "description": "Estimez en USDFC les coûts de stockage sur Filecoin Onchain Cloud selon la taille des données, la durée de conservation et le nombre de copies. Comparez les dépenses et la réserve, avec la possibilité d’utiliser les tarifs en vigueur sur le réseau principal."
+}

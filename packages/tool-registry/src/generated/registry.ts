@@ -16159,6 +16159,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "filecoin-storage-cost-calculator",
+    category: "ipfs",
+    icon: "database",
+    tags: [
+      "filecoin",
+      "onchain cloud",
+      "storage",
+      "cost",
+      "pricing",
+      "pdp",
+      "usdfc",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة تكلفة تخزين Filecoin",
+        description:
+          "قدّر تكاليف التخزين في Filecoin Onchain Cloud بعملة USDFC بحسب حجم البيانات ومدة الاحتفاظ وعدد النسخ. قارن المصروفات والرصيد الاحتياطي مع خيار جلب أسعار الشبكة الرئيسية الحالية.",
+      },
+      de: {
+        name: "Filecoin-Speicherkostenrechner",
+        description:
+          "Schätzen Sie die Speicherkosten in Filecoin Onchain Cloud in USDFC anhand von Datengröße, Speicherdauer und Anzahl der Kopien. Vergleichen Sie Ausgaben und Rücklagen auf Wunsch mit aktuellen Mainnet-Tarifen.",
+      },
+      en: {
+        name: "Filecoin Storage Cost Calculator",
+        description:
+          "Estimate Filecoin Onchain Cloud storage costs in USDFC from data size, retention, and replica count. Compare spending and reserves with optional live mainnet rates.",
+      },
+      es: {
+        name: "Calculadora de costes de almacenamiento de Filecoin",
+        description:
+          "Estima en USDFC el coste de almacenamiento en Filecoin Onchain Cloud según el tamaño de los datos, el plazo y el número de copias. Consulta los gastos y la reserva con la opción de usar las tarifas vigentes de la red principal.",
+      },
+      fr: {
+        name: "Calculateur de coûts de stockage Filecoin",
+        description:
+          "Estimez en USDFC les coûts de stockage sur Filecoin Onchain Cloud selon la taille des données, la durée de conservation et le nombre de copies. Comparez les dépenses et la réserve, avec la possibilité d’utiliser les tarifs en vigueur sur le réseau principal.",
+      },
+      he: {
+        name: "מחשבון עלויות אחסון ב-Filecoin",
+        description:
+          "העריכו את עלות האחסון ב-Filecoin Onchain Cloud ב-USDFC לפי נפח הנתונים, תקופת האחסון ומספר העותקים. השוו בין ההוצאה הצפויה ליתרה השמורה, עם אפשרות לקבל תעריפים עדכניים מהרשת הראשית.",
+      },
+      hi: {
+        name: "Filecoin स्टोरेज लागत कैलकुलेटर",
+        description:
+          "डेटा के आकार, स्टोरेज की अवधि और कॉपी की संख्या से Filecoin Onchain Cloud की लागत USDFC में निकालें। चाहें तो खर्च और रिज़र्व की तुलना के लिए मेननेट की मौजूदा दरें इस्तेमाल करें।",
+      },
+      id: {
+        name: "Kalkulator Biaya Penyimpanan Filecoin",
+        description:
+          "Perkirakan biaya penyimpanan Filecoin Onchain Cloud dalam USDFC berdasarkan ukuran data, masa simpan, dan jumlah salinan. Bandingkan pengeluaran dan cadangan dengan opsi tarif terbaru dari mainnet.",
+      },
+      it: {
+        name: "Calcolatore dei costi di archiviazione Filecoin",
+        description:
+          "Stima i costi di archiviazione di Filecoin Onchain Cloud in USDFC in base alle dimensioni dei dati, al periodo di conservazione e al numero di copie. Confronta spese e riserve usando, se disponibili, le tariffe aggiornate della rete principale.",
+      },
+      ja: {
+        name: "Filecoin ストレージ料金計算ツール",
+        description:
+          "データサイズ、保存期間、コピー数から Filecoin Onchain Cloud のストレージ料金を USDFC で見積もります。参考料金やメインネットの最新料金で、概算費用と準備金を確認できます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 비용 계산기",
+        description:
+          "데이터 크기, 보존 기간, 복제본 수를 바탕으로 Filecoin Onchain Cloud 스토리지 비용을 USDFC로 추정하세요. 기준 요율이나 실시간 메인넷 요율을 사용해 예상 지출액과 예치금을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Kos Storan Filecoin",
+        description:
+          "Anggarkan kos storan Filecoin Onchain Cloud dalam USDFC berdasarkan saiz data, tempoh penyimpanan dan bilangan salinan. Bandingkan perbelanjaan dengan rizab dan pilih kadar terkini daripada mainnet jika perlu.",
+      },
+      nl: {
+        name: "Filecoin-opslagkostencalculator",
+        description:
+          "Schat de opslagkosten van Filecoin Onchain Cloud in USDFC op basis van datagrootte, bewaartermijn en aantal kopieën. Vergelijk uitgaven en reserves met optionele actuele mainnettarieven.",
+      },
+      no: {
+        name: "Kalkulator for Filecoin-lagringskostnader",
+        description:
+          "Beregn et anslag for lagringskostnader i Filecoin Onchain Cloud i USDFC ut fra datastørrelse, lagringstid og antall kopier. Sammenlign utgifter og reserver med valgfrie oppdaterte hovednettpriser.",
+      },
+      pl: {
+        name: "Kalkulator kosztów przechowywania Filecoin",
+        description:
+          "Oszacuj koszt przechowywania w Filecoin Onchain Cloud w USDFC na podstawie rozmiaru danych, czasu przechowywania i liczby kopii. Porównaj wydatki i rezerwę według stawek orientacyjnych lub bieżących stawek sieci głównej.",
+      },
+      pt: {
+        name: "Calculadora de custos de armazenamento do Filecoin",
+        description:
+          "Estime em USDFC os custos de armazenamento na Filecoin Onchain Cloud com base no tamanho dos dados, no período de conservação e no número de cópias. Compare despesas e reservas com a opção de usar as tarifas atuais da rede principal.",
+      },
+      ru: {
+        name: "Калькулятор стоимости хранения Filecoin",
+        description:
+          "Оцените стоимость хранения в Filecoin Onchain Cloud в USDFC по объёму данных, сроку и числу копий. Сравните расходы и резерв по справочным или текущим тарифам основной сети.",
+      },
+      sv: {
+        name: "Kalkylator för Filecoin-lagringskostnader",
+        description:
+          "Uppskatta lagringskostnader i Filecoin Onchain Cloud i USDFC utifrån datastorlek, lagringstid och antal kopior. Jämför utgifter och reserver med aktuella huvudnätstariffer som tillval.",
+      },
+      th: {
+        name: "เครื่องมือคำนวณค่าจัดเก็บข้อมูล Filecoin",
+        description:
+          "ประเมินค่าจัดเก็บข้อมูลบน Filecoin Onchain Cloud เป็น USDFC จากขนาดข้อมูล ระยะเวลาเก็บรักษา และจำนวนสำเนา ดูค่าใช้จ่ายและเงินสำรอง พร้อมเลือกใช้อัตราล่าสุดจากเครือข่ายหลักได้",
+      },
+      tr: {
+        name: "Filecoin Depolama Maliyeti Hesaplayıcısı",
+        description:
+          "Veri boyutuna, saklama süresine ve kopya sayısına göre Filecoin Onchain Cloud depolama maliyetini USDFC cinsinden tahmin edin. Tahmini harcama ve rezervi isterseniz güncel ana ağ tarifeleriyle karşılaştırın.",
+      },
+      vi: {
+        name: "Công cụ tính chi phí lưu trữ Filecoin",
+        description:
+          "Ước tính chi phí lưu trữ Filecoin Onchain Cloud bằng USDFC theo dung lượng, thời gian lưu và số bản sao. Xem riêng chi phí và khoản dự phòng, rồi cập nhật đơn giá từ mạng chính khi cần.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储费用计算器",
+        description:
+          "根据数据大小、保留期限和副本数，估算 Filecoin Onchain Cloud 的存储费用，金额以 USDFC 计。可选用主网实时费率，查看预计支出和预留金。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存費用計算器",
+        description:
+          "依資料大小、保留期限及複本數量估算 Filecoin Onchain Cloud 儲存費用，金額以 USDFC 計算。可選用主網即時費率，查看預估支出與準備金。",
+      },
+    },
+  },
+  {
     slug: "font-subset-generator",
     category: "web",
     icon: "case-sensitive",
@@ -67190,6 +67321,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Filecoin Piece CID 計算器",
         description:
           "計算 CAR 封存檔或任何檔案的 Filecoin Piece CID 和舊版 CommP。在瀏覽器中查看填補後的 Piece 大小，並驗證承諾值。",
+      },
+    },
+  },
+  "filecoin-storage-cost-calculator": {
+    slug: "filecoin-storage-cost-calculator",
+    category: "ipfs",
+    icon: "database",
+    tags: [
+      "filecoin",
+      "onchain cloud",
+      "storage",
+      "cost",
+      "pricing",
+      "pdp",
+      "usdfc",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة تكلفة تخزين Filecoin",
+        description:
+          "قدّر تكاليف التخزين في Filecoin Onchain Cloud بعملة USDFC بحسب حجم البيانات ومدة الاحتفاظ وعدد النسخ. قارن المصروفات والرصيد الاحتياطي مع خيار جلب أسعار الشبكة الرئيسية الحالية.",
+      },
+      de: {
+        name: "Filecoin-Speicherkostenrechner",
+        description:
+          "Schätzen Sie die Speicherkosten in Filecoin Onchain Cloud in USDFC anhand von Datengröße, Speicherdauer und Anzahl der Kopien. Vergleichen Sie Ausgaben und Rücklagen auf Wunsch mit aktuellen Mainnet-Tarifen.",
+      },
+      en: {
+        name: "Filecoin Storage Cost Calculator",
+        description:
+          "Estimate Filecoin Onchain Cloud storage costs in USDFC from data size, retention, and replica count. Compare spending and reserves with optional live mainnet rates.",
+      },
+      es: {
+        name: "Calculadora de costes de almacenamiento de Filecoin",
+        description:
+          "Estima en USDFC el coste de almacenamiento en Filecoin Onchain Cloud según el tamaño de los datos, el plazo y el número de copias. Consulta los gastos y la reserva con la opción de usar las tarifas vigentes de la red principal.",
+      },
+      fr: {
+        name: "Calculateur de coûts de stockage Filecoin",
+        description:
+          "Estimez en USDFC les coûts de stockage sur Filecoin Onchain Cloud selon la taille des données, la durée de conservation et le nombre de copies. Comparez les dépenses et la réserve, avec la possibilité d’utiliser les tarifs en vigueur sur le réseau principal.",
+      },
+      he: {
+        name: "מחשבון עלויות אחסון ב-Filecoin",
+        description:
+          "העריכו את עלות האחסון ב-Filecoin Onchain Cloud ב-USDFC לפי נפח הנתונים, תקופת האחסון ומספר העותקים. השוו בין ההוצאה הצפויה ליתרה השמורה, עם אפשרות לקבל תעריפים עדכניים מהרשת הראשית.",
+      },
+      hi: {
+        name: "Filecoin स्टोरेज लागत कैलकुलेटर",
+        description:
+          "डेटा के आकार, स्टोरेज की अवधि और कॉपी की संख्या से Filecoin Onchain Cloud की लागत USDFC में निकालें। चाहें तो खर्च और रिज़र्व की तुलना के लिए मेननेट की मौजूदा दरें इस्तेमाल करें।",
+      },
+      id: {
+        name: "Kalkulator Biaya Penyimpanan Filecoin",
+        description:
+          "Perkirakan biaya penyimpanan Filecoin Onchain Cloud dalam USDFC berdasarkan ukuran data, masa simpan, dan jumlah salinan. Bandingkan pengeluaran dan cadangan dengan opsi tarif terbaru dari mainnet.",
+      },
+      it: {
+        name: "Calcolatore dei costi di archiviazione Filecoin",
+        description:
+          "Stima i costi di archiviazione di Filecoin Onchain Cloud in USDFC in base alle dimensioni dei dati, al periodo di conservazione e al numero di copie. Confronta spese e riserve usando, se disponibili, le tariffe aggiornate della rete principale.",
+      },
+      ja: {
+        name: "Filecoin ストレージ料金計算ツール",
+        description:
+          "データサイズ、保存期間、コピー数から Filecoin Onchain Cloud のストレージ料金を USDFC で見積もります。参考料金やメインネットの最新料金で、概算費用と準備金を確認できます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 비용 계산기",
+        description:
+          "데이터 크기, 보존 기간, 복제본 수를 바탕으로 Filecoin Onchain Cloud 스토리지 비용을 USDFC로 추정하세요. 기준 요율이나 실시간 메인넷 요율을 사용해 예상 지출액과 예치금을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Kalkulator Kos Storan Filecoin",
+        description:
+          "Anggarkan kos storan Filecoin Onchain Cloud dalam USDFC berdasarkan saiz data, tempoh penyimpanan dan bilangan salinan. Bandingkan perbelanjaan dengan rizab dan pilih kadar terkini daripada mainnet jika perlu.",
+      },
+      nl: {
+        name: "Filecoin-opslagkostencalculator",
+        description:
+          "Schat de opslagkosten van Filecoin Onchain Cloud in USDFC op basis van datagrootte, bewaartermijn en aantal kopieën. Vergelijk uitgaven en reserves met optionele actuele mainnettarieven.",
+      },
+      no: {
+        name: "Kalkulator for Filecoin-lagringskostnader",
+        description:
+          "Beregn et anslag for lagringskostnader i Filecoin Onchain Cloud i USDFC ut fra datastørrelse, lagringstid og antall kopier. Sammenlign utgifter og reserver med valgfrie oppdaterte hovednettpriser.",
+      },
+      pl: {
+        name: "Kalkulator kosztów przechowywania Filecoin",
+        description:
+          "Oszacuj koszt przechowywania w Filecoin Onchain Cloud w USDFC na podstawie rozmiaru danych, czasu przechowywania i liczby kopii. Porównaj wydatki i rezerwę według stawek orientacyjnych lub bieżących stawek sieci głównej.",
+      },
+      pt: {
+        name: "Calculadora de custos de armazenamento do Filecoin",
+        description:
+          "Estime em USDFC os custos de armazenamento na Filecoin Onchain Cloud com base no tamanho dos dados, no período de conservação e no número de cópias. Compare despesas e reservas com a opção de usar as tarifas atuais da rede principal.",
+      },
+      ru: {
+        name: "Калькулятор стоимости хранения Filecoin",
+        description:
+          "Оцените стоимость хранения в Filecoin Onchain Cloud в USDFC по объёму данных, сроку и числу копий. Сравните расходы и резерв по справочным или текущим тарифам основной сети.",
+      },
+      sv: {
+        name: "Kalkylator för Filecoin-lagringskostnader",
+        description:
+          "Uppskatta lagringskostnader i Filecoin Onchain Cloud i USDFC utifrån datastorlek, lagringstid och antal kopior. Jämför utgifter och reserver med aktuella huvudnätstariffer som tillval.",
+      },
+      th: {
+        name: "เครื่องมือคำนวณค่าจัดเก็บข้อมูล Filecoin",
+        description:
+          "ประเมินค่าจัดเก็บข้อมูลบน Filecoin Onchain Cloud เป็น USDFC จากขนาดข้อมูล ระยะเวลาเก็บรักษา และจำนวนสำเนา ดูค่าใช้จ่ายและเงินสำรอง พร้อมเลือกใช้อัตราล่าสุดจากเครือข่ายหลักได้",
+      },
+      tr: {
+        name: "Filecoin Depolama Maliyeti Hesaplayıcısı",
+        description:
+          "Veri boyutuna, saklama süresine ve kopya sayısına göre Filecoin Onchain Cloud depolama maliyetini USDFC cinsinden tahmin edin. Tahmini harcama ve rezervi isterseniz güncel ana ağ tarifeleriyle karşılaştırın.",
+      },
+      vi: {
+        name: "Công cụ tính chi phí lưu trữ Filecoin",
+        description:
+          "Ước tính chi phí lưu trữ Filecoin Onchain Cloud bằng USDFC theo dung lượng, thời gian lưu và số bản sao. Xem riêng chi phí và khoản dự phòng, rồi cập nhật đơn giá từ mạng chính khi cần.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储费用计算器",
+        description:
+          "根据数据大小、保留期限和副本数，估算 Filecoin Onchain Cloud 的存储费用，金额以 USDFC 计。可选用主网实时费率，查看预计支出和预留金。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存費用計算器",
+        description:
+          "依資料大小、保留期限及複本數量估算 Filecoin Onchain Cloud 儲存費用，金額以 USDFC 計算。可選用主網即時費率，查看預估支出與準備金。",
       },
     },
   },

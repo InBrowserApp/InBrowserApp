@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 存储费用计算器",
+  "description": "根据数据大小、保留期限和副本数，估算 Filecoin Onchain Cloud 的存储费用，金额以 USDFC 计。可选用主网实时费率，查看预计支出和预留金。"
+}

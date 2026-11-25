@@ -1,0 +1,4 @@
+{
+  "name": "Kalkylator för Filecoin-lagringskostnader",
+  "description": "Uppskatta lagringskostnader i Filecoin Onchain Cloud i USDFC utifrån datastorlek, lagringstid och antal kopior. Jämför utgifter och reserver med aktuella huvudnätstariffer som tillval."
+}

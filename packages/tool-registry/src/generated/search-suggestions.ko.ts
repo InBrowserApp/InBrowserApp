@@ -633,6 +633,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "filecoin-piece-cid-calculator",
   },
   {
+    category: "ipfs",
+    name: "Filecoin 스토리지 비용 계산기",
+    slug: "filecoin-storage-cost-calculator",
+  },
+  {
     category: "web",
     name: "글꼴 서브셋 생성기",
     slug: "font-subset-generator",

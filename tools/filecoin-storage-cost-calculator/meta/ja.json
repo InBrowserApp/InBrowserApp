@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin ストレージ料金計算ツール",
+  "description": "データサイズ、保存期間、コピー数から Filecoin Onchain Cloud のストレージ料金を USDFC で見積もります。参考料金やメインネットの最新料金で、概算費用と準備金を確認できます。"
+}

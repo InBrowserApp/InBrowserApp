@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-opslagkostencalculator",
+  "description": "Schat de opslagkosten van Filecoin Onchain Cloud in USDFC op basis van datagrootte, bewaartermijn en aantal kopieën. Vergelijk uitgaven en reserves met optionele actuele mainnettarieven."
+}

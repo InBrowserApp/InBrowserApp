@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 儲存費用計算器",
+  "description": "依資料大小、保留期限及複本數量估算 Filecoin Onchain Cloud 儲存費用，金額以 USDFC 計算。可選用主網即時費率，查看預估支出與準備金。"
+}

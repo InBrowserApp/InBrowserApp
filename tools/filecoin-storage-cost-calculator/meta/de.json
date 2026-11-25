@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-Speicherkostenrechner",
+  "description": "Schätzen Sie die Speicherkosten in Filecoin Onchain Cloud in USDFC anhand von Datengröße, Speicherdauer und Anzahl der Kopien. Vergleichen Sie Ausgaben und Rücklagen auf Wunsch mit aktuellen Mainnet-Tarifen."
+}

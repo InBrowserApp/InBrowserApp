@@ -161,6 +161,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "filecoin-piece-cid-calculator": () =>
     import("@tool/filecoin-piece-cid-calculator/page"),
+  "filecoin-storage-cost-calculator": () =>
+    import("@tool/filecoin-storage-cost-calculator/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
