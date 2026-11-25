@@ -274,7 +274,7 @@ export default function ModelPanel({
             {m.overall}{" "}
             <bdi className="font-mono text-foreground" dir="ltr">
               {(["x", "y", "z"] as const).map((axis) => (
-                <span key={axis} className="inline-block whitespace-nowrap">
+                <span key={axis} className="inline-block whitespace-pre">
                   {`${axis.toUpperCase()} ${formatLength(model.size[axis])}${axis === "z" ? "" : " · "}`}
                 </span>
               ))}
