@@ -1,0 +1,26 @@
+{
+  "name": "@tool/musicxml-to-midi-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/score-export": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "midi-file": "catalog:",
+    "verovio": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "fflate": "catalog:",
+    "vitest": "catalog:"
+  }
+}

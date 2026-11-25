@@ -358,6 +358,7 @@ catalog:
   typescript: ^5.9.3
   ua-parser-js: ^2.0.10
   upng-js: ^2.1.0
+  verovio: 6.4.1
   vitest: ^5.1.0
   webrtc-ips: ^0.2.0
   wrangler: 4.164.0

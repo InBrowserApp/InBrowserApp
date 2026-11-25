@@ -1408,6 +1408,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "musicxml-to-image-converter",
   },
   {
+    category: "music",
+    name: "Conversor de MusicXML a MIDI",
+    slug: "musicxml-to-midi-converter",
+  },
+  {
     category: "pdf",
     name: "Conversor de MusicXML a PDF",
     slug: "musicxml-to-pdf-converter",

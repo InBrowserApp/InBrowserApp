@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Buka fail MusicXML",
+  "changeFile": "Tukar fail",
+  "dropHint": "Lepaskan skor MusicXML atau MXL di sini",
+  "privacy": "Skor anda kekal dalam pelayar ini.",
+  "example": "Cuba contoh",
+  "preview": "Pratonton skor muzik",
+  "page": "Halaman {page} daripada {total}",
+  "previous": "Halaman sebelumnya",
+  "next": "Halaman seterusnya",
+  "loading": "Menyusun atur skor muzik…",
+  "invalidScore": "Pratonton skor tidak dapat dipaparkan. Simpan dalam format MusicXML partwise untuk melihat pratonton.",
+  "download": "Muat turun MIDI",
+  "downloadBusy": "Menyediakan MIDI…",
+  "downloadError": "Fail MIDI tidak dapat dihasilkan. Pastikan skor mengandungi not, kemudian cuba lagi.",
+  "listen": "Dengar",
+  "audioLoading": "Menyediakan audio…",
+  "audioError": "Audio tidak dapat disediakan. Cuba dengar sekali lagi.",
+  "audioPreview": "Pratonton audio"
+}

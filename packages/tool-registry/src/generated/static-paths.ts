@@ -25854,6 +25854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "musicxml-to-midi-converter",
+    language: "ar",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "de",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "en",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "es",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "fr",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "he",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "hi",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "id",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "it",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "ja",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "ko",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "ms",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "nl",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "no",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "pl",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "pt",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "ru",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "sv",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "th",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "tr",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "vi",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "musicxml-to-midi-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "musicxml-to-pdf-converter",
     language: "ar",
   },

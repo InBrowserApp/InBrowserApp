@@ -1,0 +1,20 @@
+{
+  "chooseFile": "MusicXML dosyası aç",
+  "changeFile": "Dosyayı değiştir",
+  "dropHint": "MusicXML veya MXL partisyonunu buraya bırakın",
+  "privacy": "Partisyonunuz tarayıcınızda kalır.",
+  "example": "Bir örnek deneyin",
+  "preview": "Nota önizlemesi",
+  "page": "Sayfa {page} / {total}",
+  "previous": "Önceki sayfa",
+  "next": "Sonraki sayfa",
+  "loading": "Notalar sayfalara yerleştiriliyor…",
+  "invalidScore": "Partisyon önizlemesi oluşturulamadı. Önizlemek için partisyonu parti bazlı (partwise) MusicXML olarak kaydedin.",
+  "download": "MIDI dosyasını indir",
+  "downloadBusy": "MIDI hazırlanıyor…",
+  "downloadError": "MIDI dosyası oluşturulamadı. Partisyonda nota olduğundan emin olup tekrar deneyin.",
+  "listen": "Dinle",
+  "audioLoading": "Ses hazırlanıyor…",
+  "audioError": "Ses hazırlanamadı. Tekrar dinlemeyi deneyin.",
+  "audioPreview": "Ses önizlemesi"
+}

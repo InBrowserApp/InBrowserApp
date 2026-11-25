@@ -11,7 +11,10 @@ import { Label } from "@workspace/ui/components/ui/label"
 import { Download, LoaderCircle } from "@workspace/ui/icons"
 import { useScoreDownload } from "@workspace/ui/lib/use-score-download"
 import { AbcSourceEditor } from "./source-editor"
-import { AbcMidiListen, type ListenMessages } from "./midi-listen"
+import {
+  MidiListen,
+  type ListenMessages,
+} from "@workspace/ui/components/tool/midi-listen"
 import { TuneSelection } from "./tune-selection"
 import { useAbcBook, useAbcArtwork } from "./use-abc"
 
@@ -196,9 +199,13 @@ export function AbcScoreConverter(props: Props) {
               />
             )}
             {props.mode === "midi" && activeTune && (
-              <AbcMidiListen
+              <MidiListen
                 key={activeIndex}
-                tune={activeTune}
+                readMidi={async () => {
+                  const { compileAbcMidi } =
+                    await import("@workspace/score-export/abc-midi")
+                  return compileAbcMidi(activeTune)
+                }}
                 messages={props.messages}
               />
             )}

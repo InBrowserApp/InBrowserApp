@@ -1,0 +1,20 @@
+{
+  "chooseFile": "MusicXMLファイルを開く",
+  "changeFile": "ファイルを変更",
+  "dropHint": "MusicXMLまたはMXLの楽譜をここにドロップ",
+  "privacy": "楽譜はブラウザ内に留まります。",
+  "example": "サンプルを試す",
+  "preview": "楽譜プレビュー",
+  "page": "{total}ページ中{page}ページ",
+  "previous": "前のページ",
+  "next": "次のページ",
+  "loading": "楽譜をレイアウトしています…",
+  "invalidScore": "楽譜プレビューを描画できませんでした。プレビューするには、パート単位の MusicXML として保存してください。",
+  "download": "MIDI をダウンロード",
+  "downloadBusy": "MIDI を準備しています…",
+  "downloadError": "MIDI ファイルを作成できませんでした。楽譜に音符が含まれているか確認して、もう一度お試しください。",
+  "listen": "試聴",
+  "audioLoading": "音声を準備しています…",
+  "audioError": "音声を準備できませんでした。もう一度試聴してください。",
+  "audioPreview": "音声プレビュー"
+}

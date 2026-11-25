@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML til MIDI-konverterer",
+  "description": "Konverter MusicXML-partiturer eller komprimerte MXL-filer til MIDI. Åpne et partitur, se gjennom sidene, lytt til resultatet og last ned en .mid-fil i nettleseren."
+}
