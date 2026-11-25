@@ -14,5 +14,8 @@
   "zoomIn": "Inzoomen",
   "zoomOut": "Uitzoomen",
   "resetZoom": "Zoom herstellen",
-  "invalidScore": "Deze partituur kan niet worden weergegeven. Kies een .musicxml-, .xml- of .mxl-bestand dat per partij is opgebouwd (partwise)."
+  "invalidScore": "Deze partituur kan niet worden weergegeven. Kies een .musicxml-, .xml- of .mxl-bestand dat per partij is opgebouwd (partwise).",
+  "download": "Downloaden",
+  "downloadBusy": "Download voorbereiden…",
+  "downloadError": "De partituur kan niet worden geëxporteerd. Probeer het opnieuw of kies een ander formaat."
 }

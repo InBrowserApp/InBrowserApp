@@ -9,5 +9,9 @@
   "loading": "Bladmuziek weergeven…",
   "invalid": "De partituur kan niet worden weergegeven. Controleer de ABC-notatie en probeer het opnieuw.",
   "fileError": "Dit bestand kan niet worden gelezen. Probeer het opnieuw te openen of plak de ABC-tekst.",
-  "warnings": "Meldingen over ABC-notatie"
+  "warnings": "Meldingen over ABC-notatie",
+  "download": "Downloaden",
+  "downloadBusy": "Download voorbereiden…",
+  "downloadError": "De partituur kan niet worden geëxporteerd. Probeer het opnieuw of kies een ander formaat.",
+  "downloadSource": "ABC-brontekst"
 }

@@ -9,5 +9,9 @@
   "loading": "Notalar çiziliyor…",
   "invalid": "Partisyon çizilemedi. ABC nota yazımını kontrol edip tekrar deneyin.",
   "fileError": "Dosya okunamadı. Tekrar açmayı deneyin veya ABC metnini yapıştırın.",
-  "warnings": "ABC nota yazımı bildirimleri"
+  "warnings": "ABC nota yazımı bildirimleri",
+  "download": "İndir",
+  "downloadBusy": "İndirme hazırlanıyor…",
+  "downloadError": "Partisyon dışa aktarılamadı. Tekrar deneyin veya başka bir biçim seçin.",
+  "downloadSource": "ABC kaynak metni"
 }

@@ -1,4 +1,4 @@
 {
   "name": "MusicXML ビューアー",
-  "description": "MusicXML と圧縮された MXL ファイルを楽譜として表示します。拡大表示や集中モードを使ってブラウザーで楽譜を読めます。"
+  "description": "MusicXML と MXL の楽譜をブラウザーで開きます。拡大や集中モードで読み、PDF、PNG、SVG でダウンロードできます。"
 }

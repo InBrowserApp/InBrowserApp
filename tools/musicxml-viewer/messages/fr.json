@@ -14,5 +14,8 @@
   "zoomIn": "Agrandir",
   "zoomOut": "Réduire",
   "resetZoom": "Réinitialiser le zoom",
-  "invalidScore": "Impossible d’afficher la partition. Choisissez un fichier .musicxml, .xml ou .mxl exporté au format MusicXML structuré par partie (partwise)."
+  "invalidScore": "Impossible d’afficher la partition. Choisissez un fichier .musicxml, .xml ou .mxl exporté au format MusicXML structuré par partie (partwise).",
+  "download": "Télécharger",
+  "downloadBusy": "Préparation du téléchargement…",
+  "downloadError": "Impossible d’exporter la partition. Réessayez ou choisissez un autre format."
 }

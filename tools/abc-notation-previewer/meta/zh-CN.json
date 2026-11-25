@@ -1,4 +1,4 @@
 {
   "name": "ABC 记谱预览器",
-  "description": "粘贴 ABC 记谱文本或打开 .abc 文件，实时查看乐谱。直接在浏览器中预览单首曲目或曲集。"
+  "description": "粘贴 ABC 记谱文本或打开 .abc 文件，实时预览乐谱。将乐谱下载为 PDF、PNG 或 SVG，并保存可编辑的 ABC 源文本。"
 }

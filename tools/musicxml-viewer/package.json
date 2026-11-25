@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/score-export": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "opensheetmusicdisplay": "catalog:"

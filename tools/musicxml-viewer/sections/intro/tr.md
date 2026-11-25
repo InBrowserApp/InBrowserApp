@@ -9,3 +9,7 @@ Yoğun bir pasajı okumak için yakınlaştırın, daha fazla ölçüyü bir bak
 ## MusicXML, XML ve MXL dosyaları
 
 MusicXML partisyonları .musicxml veya .xml uzantılı olabilir. .mxl, doğrudan açılabilen sıkıştırılmış bir MusicXML paketidir. Partisyon açılmazsa nota yazım programınızdan tekrar parti bazlı (partwise) MusicXML olarak dışa aktarın. Nota yazım programları aynı partisyonu farklı biçimlerde düzenleyebilir, bu yüzden satır sonları ve boşluklar değişebilir. Görüntüleyici dosyayı tarayıcınızda okuyup nota olarak gösterir.
+
+## Notaları indirin
+
+Partisyonu A4 sayfalarına kaydetmek için **İndir** düğmesini kullanın. Yazdırmak için PDF, net bir görsel paylaşmak için PNG, ayrıntıları kaybetmeden yeniden boyutlandırmak için SVG seçin. Partisyon birden fazla sayfaysa PNG veya SVG indirmesi, ZIP arşivinde her sayfa için ayrı bir dosya içerir. Dışa aktarılan sayfaların düzeni telefonda ve bilgisayarda aynıdır.

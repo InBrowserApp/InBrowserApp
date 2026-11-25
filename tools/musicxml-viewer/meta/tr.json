@@ -1,4 +1,4 @@
 {
   "name": "MusicXML Görüntüleyici",
-  "description": "MusicXML dosyalarını ve sıkıştırılmış MXL dosyalarını nota olarak açın. Notaları tarayıcıda okumak için yakınlaştırın veya odak modunu kullanın."
+  "description": "MusicXML ve MXL nota dosyalarını tarayıcıda açın. Yakınlaştırın, odak modunda okuyun ve partisyonu PDF, PNG veya SVG olarak indirin."
 }

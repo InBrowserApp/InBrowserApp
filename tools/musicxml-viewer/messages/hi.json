@@ -14,5 +14,8 @@
   "zoomIn": "ज़ूम बढ़ाएँ",
   "zoomOut": "ज़ूम घटाएँ",
   "resetZoom": "ज़ूम रीसेट करें",
-  "invalidScore": "यह स्कोर दिखाया नहीं जा सका। partwise MusicXML स्कोर के रूप में एक्सपोर्ट की गई .musicxml, .xml या .mxl फ़ाइल चुनें।"
+  "invalidScore": "यह स्कोर दिखाया नहीं जा सका। partwise MusicXML स्कोर के रूप में एक्सपोर्ट की गई .musicxml, .xml या .mxl फ़ाइल चुनें।",
+  "download": "डाउनलोड करें",
+  "downloadBusy": "डाउनलोड तैयार हो रहा है…",
+  "downloadError": "स्कोर एक्सपोर्ट नहीं हो सका। फिर से कोशिश करें या दूसरा फ़ॉर्मैट चुनें।"
 }

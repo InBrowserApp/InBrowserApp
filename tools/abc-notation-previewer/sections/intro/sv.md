@@ -11,3 +11,7 @@ Skriv noter med bokstäver, skilj takterna åt med `|` och använd `z` för en p
 ## Kontrollera ofullständig eller oväntad notation
 
 Om en del av partituret ser annorlunda ut än du väntat dig, kontrollera först taktart, notvärden och taktstreck. Öppna **Meddelanden om ABC-notation** om avsnittet visas för att se vilka delar av koden som inte gick att tolka. De läsbara delarna kan fortfarande visas medan du rättar källtexten.
+
+## Ladda ner noterna
+
+Välj **Ladda ner** för att spara partituret på sidor i A4-format. Välj PDF för utskrift, PNG för att dela en skarp bild eller SVG för en bild som kan skalas utan kvalitetsförlust. Om partituret omfattar flera sidor innehåller PNG- eller SVG-nedladdningen en fil per sida i ett ZIP-arkiv. Välj **ABC-källtext** för att spara texten i redigeraren som en .abc-fil och fortsätta redigera senare.

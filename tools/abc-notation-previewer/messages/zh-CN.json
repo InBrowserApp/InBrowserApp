@@ -9,5 +9,9 @@
   "loading": "正在绘制乐谱…",
   "invalid": "无法绘制乐谱。请检查 ABC 记谱文本后重试。",
   "fileError": "无法读取此文件。请尝试重新打开或粘贴 ABC 文本。",
-  "warnings": "ABC 记谱消息"
+  "warnings": "ABC 记谱消息",
+  "download": "下载",
+  "downloadBusy": "正在准备下载…",
+  "downloadError": "无法导出乐谱。请重试或选择其他格式。",
+  "downloadSource": "ABC 源文本"
 }

@@ -11,3 +11,7 @@ Scrivi le note con le lettere, separa le battute con `|` e usa `z` per scrivere 
 ## Controllare la notazione incompleta o inattesa
 
 Se una parte dello spartito è diversa da come te l’aspettavi, controlla prima il metro, la durata delle note e le stanghette di battuta. Quando compare **Messaggi sulla notazione ABC**, apri la sezione per trovare gli elementi della sintassi che lo strumento non è riuscito a interpretare. L’anteprima può continuare a mostrare le parti leggibili mentre correggi il testo.
+
+## Scaricare lo spartito
+
+Usa **Scarica** per salvare lo spartito su pagine in formato A4. Scegli il PDF per la stampa, il PNG per condividere un’immagine nitida o l’SVG per ridimensionarla senza perdere dettagli. Se lo spartito occupa più di una pagina, il download in PNG o SVG contiene un file per pagina in un archivio ZIP. Scegli **Sorgente ABC** per salvare il testo dell’editor in un file .abc e modificarlo in seguito.

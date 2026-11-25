@@ -282,117 +282,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "معاين التدوين الموسيقي ABC",
         description:
-          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لترى النوتة فورًا. عاين لحنًا واحدًا أو مجموعة ألحان مباشرةً في متصفحك.",
+          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لمعاينة النوتة فورًا. نزّل النوتة بتنسيق PDF أو PNG أو SVG، واحفظ نص ABC القابل للتحرير.",
       },
       de: {
         name: "Vorschau für ABC-Notation",
         description:
-          "Füge ABC-Notation ein oder öffne eine .abc-Datei und sieh sofort die Noten. Einzelne Melodien und ganze Melodiesammlungen lassen sich direkt im Browser ansehen.",
+          "Füge ABC-Notation ein oder öffne eine .abc-Datei für eine Vorschau, die sich beim Schreiben aktualisiert. Lade die Noten als PDF, PNG oder SVG herunter und speichere den bearbeitbaren ABC-Quelltext.",
       },
       en: {
         name: "ABC Notation Previewer",
         description:
-          "Paste ABC notation or open an .abc file to see live sheet music. Preview individual tunes and tune books directly in your browser.",
+          "Paste ABC notation or open an .abc file to preview sheet music live. Download scores as PDF, PNG, or SVG, and save the editable ABC source.",
       },
       es: {
         name: "Vista previa de notación ABC",
         description:
-          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Consulta melodías sueltas y colecciones en el navegador.",
+          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Descarga partituras en PDF, PNG o SVG y guarda el texto ABC editable.",
       },
       fr: {
         name: "Aperçu de la notation ABC",
         description:
-          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Consultez des airs ou des recueils dans votre navigateur.",
+          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Téléchargez-la en PDF, PNG ou SVG et enregistrez la source ABC modifiable.",
       },
       he: {
         name: "תצוגה מקדימה של תיווי ABC",
         description:
-          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות את התווים מתעדכנים מיד. הציגו מנגינה בודדת או אוסף מנגינות ישירות בדפדפן.",
+          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות תצוגה מקדימה שמתעדכנת מיד. הורידו את התווים כ־PDF,‏ PNG או SVG ושמרו את מקור ה־ABC לעריכה.",
       },
       hi: {
         name: "ABC नोटेशन प्रीव्यूअर",
         description:
-          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। एक धुन या धुनों का पूरा संग्रह सीधे ब्राउज़र में देखें।",
+          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। स्कोर को PDF, PNG या SVG में डाउनलोड करें और संपादन योग्य ABC टेक्स्ट सहेजें।",
       },
       id: {
         name: "Pratinjau Notasi ABC",
         description:
-          "Tempel notasi ABC atau buka file .abc untuk langsung melihat partitur. Pratinjau satu lagu atau kumpulan lagu di browser.",
+          "Tempel notasi ABC atau buka file .abc untuk melihat pratinjau partitur secara langsung. Unduh partitur sebagai PDF, PNG, atau SVG dan simpan teks sumber ABC yang dapat disunting.",
       },
       it: {
         name: "Anteprima della notazione ABC",
         description:
-          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Visualizza singoli brani o intere raccolte nel browser.",
+          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Scaricalo in PDF, PNG o SVG e salva il sorgente ABC modificabile.",
       },
       ja: {
         name: "ABC 記譜プレビューアー",
         description:
-          "ABC 記譜を貼り付けるか .abc ファイルを開いて、楽譜をリアルタイムで表示します。1 曲ずつ、または曲集をブラウザーで直接プレビューできます。",
+          "ABC 記譜を貼り付けるか .abc ファイルを開いて楽譜をリアルタイムでプレビューします。楽譜を PDF、PNG、SVG でダウンロードし、編集可能な ABC ソースも保存できます。",
       },
       ko: {
         name: "ABC 기보법 미리보기",
         description:
-          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 확인하세요. 브라우저에서 개별 곡과 곡집을 바로 미리 볼 수 있습니다.",
+          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 미리 보세요. 악보를 PDF, PNG 또는 SVG로 다운로드하고 편집 가능한 ABC 원본을 저장할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Notasi ABC",
         description:
-          "Tampal notasi ABC atau buka fail .abc untuk melihat skor muzik secara langsung. Pratonton sebuah lagu atau himpunan lagu dalam pelayar anda.",
+          "Tampal notasi ABC atau buka fail .abc untuk melihat pratonton skor muzik secara langsung. Muat turun skor sebagai PDF, PNG atau SVG dan simpan teks sumber ABC yang boleh disunting.",
       },
       nl: {
         name: "Voorvertoner voor ABC-notatie",
         description:
-          "Plak ABC-notatie of open een .abc-bestand en zie meteen de bladmuziek. Bekijk losse melodieën en volledige melodiebundels rechtstreeks in je browser.",
+          "Plak ABC-notatie of open een .abc-bestand en bekijk de bladmuziek terwijl je typt. Download de partituur als PDF, PNG of SVG en bewaar de bewerkbare ABC-brontekst.",
       },
       no: {
         name: "Forhåndsviser for ABC-notasjon",
         description:
-          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene med en gang. Forhåndsvis enkeltmelodier og hele melodisamlinger i nettleseren.",
+          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene mens du skriver. Last ned partituret som PDF, PNG eller SVG og lagre den redigerbare ABC-kildeteksten.",
       },
       pl: {
         name: "Podgląd notacji ABC",
         description:
-          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby od razu zobaczyć nuty. Przeglądaj pojedyncze melodie i całe zbiory bezpośrednio w przeglądarce.",
+          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby na bieżąco widzieć nuty. Pobierz zapis nutowy jako PDF, PNG lub SVG i zapisz edytowalny plik źródłowy ABC.",
       },
       pt: {
         name: "Pré-visualizador de notação ABC",
         description:
-          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Confira melodias individuais ou coleções no navegador.",
+          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Baixe partituras em PDF, PNG ou SVG e salve o texto ABC editável.",
       },
       ru: {
         name: "Предпросмотр нотации ABC",
         description:
-          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы сразу увидеть ноты. Просматривайте отдельные мелодии и целые сборники прямо в браузере.",
+          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы видеть ноты по мере редактирования. Скачивайте ноты в PDF, PNG или SVG и сохраняйте исходный текст ABC для дальнейших правок.",
       },
       sv: {
         name: "Förhandsgranskare för ABC-notation",
         description:
-          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna direkt. Förhandsgranska enskilda melodier och hela melodisamlingar i webbläsaren.",
+          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna medan du skriver. Ladda ner partituret som PDF, PNG eller SVG och spara den redigerbara ABC-källtexten.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่างโน้ต ABC",
         description:
-          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูโน้ตเพลงที่อัปเดตทันที ดูได้ทั้งเพลงเดียวและชุดเพลงในเบราว์เซอร์",
+          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูตัวอย่างโน้ตเพลงที่อัปเดตทันที ดาวน์โหลดโน้ตเพลงเป็น PDF, PNG หรือ SVG และบันทึกข้อความ ABC ต้นฉบับไว้แก้ไขต่อได้",
       },
       tr: {
         name: "ABC Nota Önizleyicisi",
         description:
-          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Tek bir ezgiyi veya bir ezgi derlemesini doğrudan tarayıcınızda önizleyin.",
+          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Partisyonu PDF, PNG veya SVG olarak indirin ve düzenlenebilir ABC kaynak metnini kaydedin.",
       },
       vi: {
         name: "Trình xem trước ký âm ABC",
         description:
-          "Dán ký âm ABC hoặc mở tệp .abc để xem bản nhạc cập nhật trực tiếp. Xem trước từng bài hoặc tuyển tập ngay trong trình duyệt.",
+          "Dán ký âm ABC hoặc mở tệp .abc để xem trước bản nhạc trực tiếp. Tải bản nhạc dưới dạng PDF, PNG hoặc SVG và lưu nguồn ABC có thể chỉnh sửa.",
       },
       "zh-CN": {
         name: "ABC 记谱预览器",
         description:
-          "粘贴 ABC 记谱文本或打开 .abc 文件，实时查看乐谱。直接在浏览器中预览单首曲目或曲集。",
+          "粘贴 ABC 记谱文本或打开 .abc 文件，实时预览乐谱。将乐谱下载为 PDF、PNG 或 SVG，并保存可编辑的 ABC 源文本。",
       },
       "zh-TW": {
         name: "ABC 記譜預覽器",
         description:
-          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時查看樂譜。直接在瀏覽器中預覽單首曲目或曲集。",
+          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時預覽樂譜。將樂譜下載為 PDF、PNG 或 SVG，並儲存可編輯的 ABC 原始文字。",
       },
     },
   },
@@ -33392,117 +33392,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "عارض MusicXML",
         description:
-          "افتح ملفات MusicXML وMXL المضغوطة واعرضها كنوتة موسيقية. كبّر العرض أو استخدم وضع التركيز لقراءة النوتة في متصفحك.",
+          "افتح نوتات MusicXML وMXL في متصفحك. كبّر النوتة أو اقرأها في وضع التركيز ونزّلها بتنسيق PDF أو PNG أو SVG.",
       },
       de: {
         name: "MusicXML-Betrachter",
         description:
-          "Öffne MusicXML-Dateien und komprimierte MXL-Dateien als Noten. Vergrößere die Ansicht oder nutze den Fokusmodus, um die Partitur im Browser zu lesen.",
+          "Öffne Noten im MusicXML- oder MXL-Format im Browser. Vergrößere die Ansicht, nutze den Fokusmodus und lade die Partitur als PDF, PNG oder SVG herunter.",
       },
       en: {
         name: "MusicXML Viewer",
         description:
-          "Open MusicXML and compressed MXL files as readable sheet music. Zoom in or use focus mode to read the score in your browser.",
+          "Open MusicXML and MXL sheet music in your browser. Zoom in, read in focus mode, and download the score as PDF, PNG, or SVG.",
       },
       es: {
         name: "Visor de partituras MusicXML",
         description:
-          "Abre partituras en formato MusicXML o en archivos MXL comprimidos. Usa el zoom o el modo de lectura para verlas en el navegador.",
+          "Abre partituras MusicXML y MXL en el navegador. Usa el zoom o el modo de lectura y descarga la partitura como PDF, PNG o SVG.",
       },
       fr: {
         name: "Visionneuse de partitions MusicXML",
         description:
-          "Ouvrez vos partitions aux formats MusicXML et MXL compressé. Utilisez le zoom ou la lecture sans distraction dans votre navigateur.",
+          "Ouvrez des partitions MusicXML et MXL dans votre navigateur. Zoomez, lisez sans distraction et téléchargez la partition en PDF, PNG ou SVG.",
       },
       he: {
         name: "מציג MusicXML",
         description:
-          "פתחו קובצי MusicXML וקובצי MXL דחוסים וקראו אותם כתווים. הגדילו את התצוגה או הפעילו מצב מיקוד כדי לקרוא את התווים בדפדפן.",
+          "פתחו תווים בפורמט MusicXML ו־MXL בדפדפן. הגדילו את התצוגה או קראו במצב מיקוד והורידו את התווים כ־PDF,‏ PNG או SVG.",
       },
       hi: {
         name: "MusicXML व्यूअर",
         description:
-          "MusicXML और कंप्रेस की गई MXL फ़ाइलों को शीट म्यूज़िक के रूप में खोलें। ब्राउज़र में संगीत स्कोर पढ़ने के लिए ज़ूम करें या फ़ोकस मोड इस्तेमाल करें।",
+          "ब्राउज़र में MusicXML और MXL शीट म्यूज़िक खोलें। ज़ूम करें, फ़ोकस मोड में पढ़ें और स्कोर को PDF, PNG या SVG के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Penampil MusicXML",
         description:
-          "Buka file MusicXML dan file MXL terkompresi untuk membaca partitur. Perbesar tampilan atau gunakan mode fokus untuk membaca partitur di browser.",
+          "Buka partitur MusicXML dan MXL di browser. Perbesar tampilan, baca dalam mode fokus, dan unduh partitur sebagai PDF, PNG, atau SVG.",
       },
       it: {
         name: "Visualizzatore di spartiti MusicXML",
         description:
-          "Apri spartiti in formato MusicXML o in file MXL compressi. Usa lo zoom o la lettura senza distrazioni per leggerli nel browser.",
+          "Apri spartiti MusicXML e MXL nel browser. Usa lo zoom e la lettura senza distrazioni, poi scarica lo spartito in PDF, PNG o SVG.",
       },
       ja: {
         name: "MusicXML ビューアー",
         description:
-          "MusicXML と圧縮された MXL ファイルを楽譜として表示します。拡大表示や集中モードを使ってブラウザーで楽譜を読めます。",
+          "MusicXML と MXL の楽譜をブラウザーで開きます。拡大や集中モードで読み、PDF、PNG、SVG でダウンロードできます。",
       },
       ko: {
         name: "MusicXML 뷰어",
         description:
-          "MusicXML과 압축된 MXL 파일을 읽기 쉬운 악보로 엽니다. 확대하거나 집중 모드를 사용해 브라우저에서 악보를 읽으세요.",
+          "브라우저에서 MusicXML과 MXL 악보를 여세요. 확대하거나 집중 모드로 읽고 악보를 PDF, PNG 또는 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemapar MusicXML",
         description:
-          "Buka fail MusicXML dan fail MXL termampat untuk membaca skor muzik. Zum masuk atau gunakan mod fokus untuk membaca skor dalam pelayar.",
+          "Buka skor muzik MusicXML dan MXL dalam pelayar. Zum masuk, baca dalam mod fokus dan muat turun skor sebagai PDF, PNG atau SVG.",
       },
       nl: {
         name: "MusicXML-viewer",
         description:
-          "Open MusicXML-bestanden en gecomprimeerde MXL-bestanden als bladmuziek. Zoom in of gebruik de focusmodus om de partituur in je browser te lezen.",
+          "Open bladmuziek in MusicXML- of MXL-formaat in je browser. Zoom in, lees in de focusmodus en download de partituur als PDF, PNG of SVG.",
       },
       no: {
         name: "MusicXML-viser",
         description:
-          "Åpne MusicXML-filer og komprimerte MXL-filer som noter. Zoom inn eller bruk fokusmodus for å lese partituret i nettleseren.",
+          "Åpne noter i MusicXML- eller MXL-format i nettleseren. Zoom inn, les i fokusmodus og last ned partituret som PDF, PNG eller SVG.",
       },
       pl: {
         name: "Przeglądarka MusicXML",
         description:
-          "Otwieraj pliki MusicXML i skompresowane pliki MXL jako zapis nutowy. Powiększ zapis lub włącz tryb skupienia, aby wygodnie czytać partyturę w przeglądarce.",
+          "Otwieraj partytury MusicXML i MXL w przeglądarce. Powiększ zapis, czytaj w trybie skupienia i pobierz nuty jako PDF, PNG lub SVG.",
       },
       pt: {
         name: "Visualizador de partituras MusicXML",
         description:
-          "Abra partituras no formato MusicXML ou em arquivos MXL compactados. Use o zoom ou a leitura focada para ler no navegador.",
+          "Abra partituras MusicXML e MXL no navegador. Use o zoom ou a leitura focada e baixe a partitura em PDF, PNG ou SVG.",
       },
       ru: {
         name: "Просмотр MusicXML",
         description:
-          "Открывайте файлы MusicXML и сжатые файлы MXL в виде нот. Меняйте масштаб или включайте режим чтения, чтобы рассмотреть партитуру в браузере.",
+          "Открывайте ноты MusicXML и MXL в браузере. Меняйте масштаб, используйте режим чтения и скачивайте партитуры в PDF, PNG или SVG.",
       },
       sv: {
         name: "MusicXML-visare",
         description:
-          "Öppna MusicXML-filer och komprimerade MXL-filer som noter. Zooma in eller använd fokusläget för att läsa partituret i webbläsaren.",
+          "Öppna noter i MusicXML- eller MXL-format i webbläsaren. Zooma in, läs i fokusläge och ladda ner partituret som PDF, PNG eller SVG.",
       },
       th: {
         name: "โปรแกรมดูโน้ตเพลง MusicXML",
         description:
-          "เปิดไฟล์ MusicXML และไฟล์ MXL แบบบีบอัดเพื่ออ่านโน้ตเพลง ซูมเข้าหรือใช้โหมดโฟกัสเพื่ออ่านโน้ตในเบราว์เซอร์",
+          "เปิดโน้ตเพลง MusicXML และ MXL ในเบราว์เซอร์ ซูมเข้า อ่านในโหมดโฟกัส และดาวน์โหลดโน้ตเพลงเป็น PDF, PNG หรือ SVG",
       },
       tr: {
         name: "MusicXML Görüntüleyici",
         description:
-          "MusicXML dosyalarını ve sıkıştırılmış MXL dosyalarını nota olarak açın. Notaları tarayıcıda okumak için yakınlaştırın veya odak modunu kullanın.",
+          "MusicXML ve MXL nota dosyalarını tarayıcıda açın. Yakınlaştırın, odak modunda okuyun ve partisyonu PDF, PNG veya SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem MusicXML",
         description:
-          "Mở tệp MusicXML và MXL nén dưới dạng bản nhạc dễ đọc. Phóng to hoặc dùng chế độ tập trung để đọc bản nhạc trong trình duyệt.",
+          "Mở bản nhạc MusicXML và MXL trong trình duyệt. Phóng to, đọc ở chế độ tập trung và tải bản nhạc dưới dạng PDF, PNG hoặc SVG.",
       },
       "zh-CN": {
         name: "MusicXML 查看器",
         description:
-          "将 MusicXML 和压缩的 MXL 文件打开为易读的乐谱。放大或使用专注模式，在浏览器中阅读乐谱。",
+          "在浏览器中打开 MusicXML 和 MXL 乐谱。放大、使用专注模式阅读，并将乐谱下载为 PDF、PNG 或 SVG。",
       },
       "zh-TW": {
         name: "MusicXML 檢視器",
         description:
-          "將 MusicXML 和壓縮的 MXL 檔案開啟為易於閱讀的樂譜。放大或使用專注模式，在瀏覽器中閱讀樂譜。",
+          "在瀏覽器中開啟 MusicXML 和 MXL 樂譜。放大、使用專注模式閱讀，並將樂譜下載為 PDF、PNG 或 SVG。",
       },
     },
   },
@@ -55762,117 +55762,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "معاين التدوين الموسيقي ABC",
         description:
-          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لترى النوتة فورًا. عاين لحنًا واحدًا أو مجموعة ألحان مباشرةً في متصفحك.",
+          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لمعاينة النوتة فورًا. نزّل النوتة بتنسيق PDF أو PNG أو SVG، واحفظ نص ABC القابل للتحرير.",
       },
       de: {
         name: "Vorschau für ABC-Notation",
         description:
-          "Füge ABC-Notation ein oder öffne eine .abc-Datei und sieh sofort die Noten. Einzelne Melodien und ganze Melodiesammlungen lassen sich direkt im Browser ansehen.",
+          "Füge ABC-Notation ein oder öffne eine .abc-Datei für eine Vorschau, die sich beim Schreiben aktualisiert. Lade die Noten als PDF, PNG oder SVG herunter und speichere den bearbeitbaren ABC-Quelltext.",
       },
       en: {
         name: "ABC Notation Previewer",
         description:
-          "Paste ABC notation or open an .abc file to see live sheet music. Preview individual tunes and tune books directly in your browser.",
+          "Paste ABC notation or open an .abc file to preview sheet music live. Download scores as PDF, PNG, or SVG, and save the editable ABC source.",
       },
       es: {
         name: "Vista previa de notación ABC",
         description:
-          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Consulta melodías sueltas y colecciones en el navegador.",
+          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Descarga partituras en PDF, PNG o SVG y guarda el texto ABC editable.",
       },
       fr: {
         name: "Aperçu de la notation ABC",
         description:
-          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Consultez des airs ou des recueils dans votre navigateur.",
+          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Téléchargez-la en PDF, PNG ou SVG et enregistrez la source ABC modifiable.",
       },
       he: {
         name: "תצוגה מקדימה של תיווי ABC",
         description:
-          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות את התווים מתעדכנים מיד. הציגו מנגינה בודדת או אוסף מנגינות ישירות בדפדפן.",
+          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות תצוגה מקדימה שמתעדכנת מיד. הורידו את התווים כ־PDF,‏ PNG או SVG ושמרו את מקור ה־ABC לעריכה.",
       },
       hi: {
         name: "ABC नोटेशन प्रीव्यूअर",
         description:
-          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। एक धुन या धुनों का पूरा संग्रह सीधे ब्राउज़र में देखें।",
+          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। स्कोर को PDF, PNG या SVG में डाउनलोड करें और संपादन योग्य ABC टेक्स्ट सहेजें।",
       },
       id: {
         name: "Pratinjau Notasi ABC",
         description:
-          "Tempel notasi ABC atau buka file .abc untuk langsung melihat partitur. Pratinjau satu lagu atau kumpulan lagu di browser.",
+          "Tempel notasi ABC atau buka file .abc untuk melihat pratinjau partitur secara langsung. Unduh partitur sebagai PDF, PNG, atau SVG dan simpan teks sumber ABC yang dapat disunting.",
       },
       it: {
         name: "Anteprima della notazione ABC",
         description:
-          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Visualizza singoli brani o intere raccolte nel browser.",
+          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Scaricalo in PDF, PNG o SVG e salva il sorgente ABC modificabile.",
       },
       ja: {
         name: "ABC 記譜プレビューアー",
         description:
-          "ABC 記譜を貼り付けるか .abc ファイルを開いて、楽譜をリアルタイムで表示します。1 曲ずつ、または曲集をブラウザーで直接プレビューできます。",
+          "ABC 記譜を貼り付けるか .abc ファイルを開いて楽譜をリアルタイムでプレビューします。楽譜を PDF、PNG、SVG でダウンロードし、編集可能な ABC ソースも保存できます。",
       },
       ko: {
         name: "ABC 기보법 미리보기",
         description:
-          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 확인하세요. 브라우저에서 개별 곡과 곡집을 바로 미리 볼 수 있습니다.",
+          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 미리 보세요. 악보를 PDF, PNG 또는 SVG로 다운로드하고 편집 가능한 ABC 원본을 저장할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Notasi ABC",
         description:
-          "Tampal notasi ABC atau buka fail .abc untuk melihat skor muzik secara langsung. Pratonton sebuah lagu atau himpunan lagu dalam pelayar anda.",
+          "Tampal notasi ABC atau buka fail .abc untuk melihat pratonton skor muzik secara langsung. Muat turun skor sebagai PDF, PNG atau SVG dan simpan teks sumber ABC yang boleh disunting.",
       },
       nl: {
         name: "Voorvertoner voor ABC-notatie",
         description:
-          "Plak ABC-notatie of open een .abc-bestand en zie meteen de bladmuziek. Bekijk losse melodieën en volledige melodiebundels rechtstreeks in je browser.",
+          "Plak ABC-notatie of open een .abc-bestand en bekijk de bladmuziek terwijl je typt. Download de partituur als PDF, PNG of SVG en bewaar de bewerkbare ABC-brontekst.",
       },
       no: {
         name: "Forhåndsviser for ABC-notasjon",
         description:
-          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene med en gang. Forhåndsvis enkeltmelodier og hele melodisamlinger i nettleseren.",
+          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene mens du skriver. Last ned partituret som PDF, PNG eller SVG og lagre den redigerbare ABC-kildeteksten.",
       },
       pl: {
         name: "Podgląd notacji ABC",
         description:
-          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby od razu zobaczyć nuty. Przeglądaj pojedyncze melodie i całe zbiory bezpośrednio w przeglądarce.",
+          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby na bieżąco widzieć nuty. Pobierz zapis nutowy jako PDF, PNG lub SVG i zapisz edytowalny plik źródłowy ABC.",
       },
       pt: {
         name: "Pré-visualizador de notação ABC",
         description:
-          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Confira melodias individuais ou coleções no navegador.",
+          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Baixe partituras em PDF, PNG ou SVG e salve o texto ABC editável.",
       },
       ru: {
         name: "Предпросмотр нотации ABC",
         description:
-          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы сразу увидеть ноты. Просматривайте отдельные мелодии и целые сборники прямо в браузере.",
+          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы видеть ноты по мере редактирования. Скачивайте ноты в PDF, PNG или SVG и сохраняйте исходный текст ABC для дальнейших правок.",
       },
       sv: {
         name: "Förhandsgranskare för ABC-notation",
         description:
-          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna direkt. Förhandsgranska enskilda melodier och hela melodisamlingar i webbläsaren.",
+          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna medan du skriver. Ladda ner partituret som PDF, PNG eller SVG och spara den redigerbara ABC-källtexten.",
       },
       th: {
         name: "โปรแกรมดูตัวอย่างโน้ต ABC",
         description:
-          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูโน้ตเพลงที่อัปเดตทันที ดูได้ทั้งเพลงเดียวและชุดเพลงในเบราว์เซอร์",
+          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูตัวอย่างโน้ตเพลงที่อัปเดตทันที ดาวน์โหลดโน้ตเพลงเป็น PDF, PNG หรือ SVG และบันทึกข้อความ ABC ต้นฉบับไว้แก้ไขต่อได้",
       },
       tr: {
         name: "ABC Nota Önizleyicisi",
         description:
-          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Tek bir ezgiyi veya bir ezgi derlemesini doğrudan tarayıcınızda önizleyin.",
+          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Partisyonu PDF, PNG veya SVG olarak indirin ve düzenlenebilir ABC kaynak metnini kaydedin.",
       },
       vi: {
         name: "Trình xem trước ký âm ABC",
         description:
-          "Dán ký âm ABC hoặc mở tệp .abc để xem bản nhạc cập nhật trực tiếp. Xem trước từng bài hoặc tuyển tập ngay trong trình duyệt.",
+          "Dán ký âm ABC hoặc mở tệp .abc để xem trước bản nhạc trực tiếp. Tải bản nhạc dưới dạng PDF, PNG hoặc SVG và lưu nguồn ABC có thể chỉnh sửa.",
       },
       "zh-CN": {
         name: "ABC 记谱预览器",
         description:
-          "粘贴 ABC 记谱文本或打开 .abc 文件，实时查看乐谱。直接在浏览器中预览单首曲目或曲集。",
+          "粘贴 ABC 记谱文本或打开 .abc 文件，实时预览乐谱。将乐谱下载为 PDF、PNG 或 SVG，并保存可编辑的 ABC 源文本。",
       },
       "zh-TW": {
         name: "ABC 記譜預覽器",
         description:
-          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時查看樂譜。直接在瀏覽器中預覽單首曲目或曲集。",
+          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時預覽樂譜。將樂譜下載為 PDF、PNG 或 SVG，並儲存可編輯的 ABC 原始文字。",
       },
     },
   },
@@ -88872,117 +88872,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "عارض MusicXML",
         description:
-          "افتح ملفات MusicXML وMXL المضغوطة واعرضها كنوتة موسيقية. كبّر العرض أو استخدم وضع التركيز لقراءة النوتة في متصفحك.",
+          "افتح نوتات MusicXML وMXL في متصفحك. كبّر النوتة أو اقرأها في وضع التركيز ونزّلها بتنسيق PDF أو PNG أو SVG.",
       },
       de: {
         name: "MusicXML-Betrachter",
         description:
-          "Öffne MusicXML-Dateien und komprimierte MXL-Dateien als Noten. Vergrößere die Ansicht oder nutze den Fokusmodus, um die Partitur im Browser zu lesen.",
+          "Öffne Noten im MusicXML- oder MXL-Format im Browser. Vergrößere die Ansicht, nutze den Fokusmodus und lade die Partitur als PDF, PNG oder SVG herunter.",
       },
       en: {
         name: "MusicXML Viewer",
         description:
-          "Open MusicXML and compressed MXL files as readable sheet music. Zoom in or use focus mode to read the score in your browser.",
+          "Open MusicXML and MXL sheet music in your browser. Zoom in, read in focus mode, and download the score as PDF, PNG, or SVG.",
       },
       es: {
         name: "Visor de partituras MusicXML",
         description:
-          "Abre partituras en formato MusicXML o en archivos MXL comprimidos. Usa el zoom o el modo de lectura para verlas en el navegador.",
+          "Abre partituras MusicXML y MXL en el navegador. Usa el zoom o el modo de lectura y descarga la partitura como PDF, PNG o SVG.",
       },
       fr: {
         name: "Visionneuse de partitions MusicXML",
         description:
-          "Ouvrez vos partitions aux formats MusicXML et MXL compressé. Utilisez le zoom ou la lecture sans distraction dans votre navigateur.",
+          "Ouvrez des partitions MusicXML et MXL dans votre navigateur. Zoomez, lisez sans distraction et téléchargez la partition en PDF, PNG ou SVG.",
       },
       he: {
         name: "מציג MusicXML",
         description:
-          "פתחו קובצי MusicXML וקובצי MXL דחוסים וקראו אותם כתווים. הגדילו את התצוגה או הפעילו מצב מיקוד כדי לקרוא את התווים בדפדפן.",
+          "פתחו תווים בפורמט MusicXML ו־MXL בדפדפן. הגדילו את התצוגה או קראו במצב מיקוד והורידו את התווים כ־PDF,‏ PNG או SVG.",
       },
       hi: {
         name: "MusicXML व्यूअर",
         description:
-          "MusicXML और कंप्रेस की गई MXL फ़ाइलों को शीट म्यूज़िक के रूप में खोलें। ब्राउज़र में संगीत स्कोर पढ़ने के लिए ज़ूम करें या फ़ोकस मोड इस्तेमाल करें।",
+          "ब्राउज़र में MusicXML और MXL शीट म्यूज़िक खोलें। ज़ूम करें, फ़ोकस मोड में पढ़ें और स्कोर को PDF, PNG या SVG के रूप में डाउनलोड करें।",
       },
       id: {
         name: "Penampil MusicXML",
         description:
-          "Buka file MusicXML dan file MXL terkompresi untuk membaca partitur. Perbesar tampilan atau gunakan mode fokus untuk membaca partitur di browser.",
+          "Buka partitur MusicXML dan MXL di browser. Perbesar tampilan, baca dalam mode fokus, dan unduh partitur sebagai PDF, PNG, atau SVG.",
       },
       it: {
         name: "Visualizzatore di spartiti MusicXML",
         description:
-          "Apri spartiti in formato MusicXML o in file MXL compressi. Usa lo zoom o la lettura senza distrazioni per leggerli nel browser.",
+          "Apri spartiti MusicXML e MXL nel browser. Usa lo zoom e la lettura senza distrazioni, poi scarica lo spartito in PDF, PNG o SVG.",
       },
       ja: {
         name: "MusicXML ビューアー",
         description:
-          "MusicXML と圧縮された MXL ファイルを楽譜として表示します。拡大表示や集中モードを使ってブラウザーで楽譜を読めます。",
+          "MusicXML と MXL の楽譜をブラウザーで開きます。拡大や集中モードで読み、PDF、PNG、SVG でダウンロードできます。",
       },
       ko: {
         name: "MusicXML 뷰어",
         description:
-          "MusicXML과 압축된 MXL 파일을 읽기 쉬운 악보로 엽니다. 확대하거나 집중 모드를 사용해 브라우저에서 악보를 읽으세요.",
+          "브라우저에서 MusicXML과 MXL 악보를 여세요. 확대하거나 집중 모드로 읽고 악보를 PDF, PNG 또는 SVG로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemapar MusicXML",
         description:
-          "Buka fail MusicXML dan fail MXL termampat untuk membaca skor muzik. Zum masuk atau gunakan mod fokus untuk membaca skor dalam pelayar.",
+          "Buka skor muzik MusicXML dan MXL dalam pelayar. Zum masuk, baca dalam mod fokus dan muat turun skor sebagai PDF, PNG atau SVG.",
       },
       nl: {
         name: "MusicXML-viewer",
         description:
-          "Open MusicXML-bestanden en gecomprimeerde MXL-bestanden als bladmuziek. Zoom in of gebruik de focusmodus om de partituur in je browser te lezen.",
+          "Open bladmuziek in MusicXML- of MXL-formaat in je browser. Zoom in, lees in de focusmodus en download de partituur als PDF, PNG of SVG.",
       },
       no: {
         name: "MusicXML-viser",
         description:
-          "Åpne MusicXML-filer og komprimerte MXL-filer som noter. Zoom inn eller bruk fokusmodus for å lese partituret i nettleseren.",
+          "Åpne noter i MusicXML- eller MXL-format i nettleseren. Zoom inn, les i fokusmodus og last ned partituret som PDF, PNG eller SVG.",
       },
       pl: {
         name: "Przeglądarka MusicXML",
         description:
-          "Otwieraj pliki MusicXML i skompresowane pliki MXL jako zapis nutowy. Powiększ zapis lub włącz tryb skupienia, aby wygodnie czytać partyturę w przeglądarce.",
+          "Otwieraj partytury MusicXML i MXL w przeglądarce. Powiększ zapis, czytaj w trybie skupienia i pobierz nuty jako PDF, PNG lub SVG.",
       },
       pt: {
         name: "Visualizador de partituras MusicXML",
         description:
-          "Abra partituras no formato MusicXML ou em arquivos MXL compactados. Use o zoom ou a leitura focada para ler no navegador.",
+          "Abra partituras MusicXML e MXL no navegador. Use o zoom ou a leitura focada e baixe a partitura em PDF, PNG ou SVG.",
       },
       ru: {
         name: "Просмотр MusicXML",
         description:
-          "Открывайте файлы MusicXML и сжатые файлы MXL в виде нот. Меняйте масштаб или включайте режим чтения, чтобы рассмотреть партитуру в браузере.",
+          "Открывайте ноты MusicXML и MXL в браузере. Меняйте масштаб, используйте режим чтения и скачивайте партитуры в PDF, PNG или SVG.",
       },
       sv: {
         name: "MusicXML-visare",
         description:
-          "Öppna MusicXML-filer och komprimerade MXL-filer som noter. Zooma in eller använd fokusläget för att läsa partituret i webbläsaren.",
+          "Öppna noter i MusicXML- eller MXL-format i webbläsaren. Zooma in, läs i fokusläge och ladda ner partituret som PDF, PNG eller SVG.",
       },
       th: {
         name: "โปรแกรมดูโน้ตเพลง MusicXML",
         description:
-          "เปิดไฟล์ MusicXML และไฟล์ MXL แบบบีบอัดเพื่ออ่านโน้ตเพลง ซูมเข้าหรือใช้โหมดโฟกัสเพื่ออ่านโน้ตในเบราว์เซอร์",
+          "เปิดโน้ตเพลง MusicXML และ MXL ในเบราว์เซอร์ ซูมเข้า อ่านในโหมดโฟกัส และดาวน์โหลดโน้ตเพลงเป็น PDF, PNG หรือ SVG",
       },
       tr: {
         name: "MusicXML Görüntüleyici",
         description:
-          "MusicXML dosyalarını ve sıkıştırılmış MXL dosyalarını nota olarak açın. Notaları tarayıcıda okumak için yakınlaştırın veya odak modunu kullanın.",
+          "MusicXML ve MXL nota dosyalarını tarayıcıda açın. Yakınlaştırın, odak modunda okuyun ve partisyonu PDF, PNG veya SVG olarak indirin.",
       },
       vi: {
         name: "Trình xem MusicXML",
         description:
-          "Mở tệp MusicXML và MXL nén dưới dạng bản nhạc dễ đọc. Phóng to hoặc dùng chế độ tập trung để đọc bản nhạc trong trình duyệt.",
+          "Mở bản nhạc MusicXML và MXL trong trình duyệt. Phóng to, đọc ở chế độ tập trung và tải bản nhạc dưới dạng PDF, PNG hoặc SVG.",
       },
       "zh-CN": {
         name: "MusicXML 查看器",
         description:
-          "将 MusicXML 和压缩的 MXL 文件打开为易读的乐谱。放大或使用专注模式，在浏览器中阅读乐谱。",
+          "在浏览器中打开 MusicXML 和 MXL 乐谱。放大、使用专注模式阅读，并将乐谱下载为 PDF、PNG 或 SVG。",
       },
       "zh-TW": {
         name: "MusicXML 檢視器",
         description:
-          "將 MusicXML 和壓縮的 MXL 檔案開啟為易於閱讀的樂譜。放大或使用專注模式，在瀏覽器中閱讀樂譜。",
+          "在瀏覽器中開啟 MusicXML 和 MXL 樂譜。放大、使用專注模式閱讀，並將樂譜下載為 PDF、PNG 或 SVG。",
       },
     },
   },

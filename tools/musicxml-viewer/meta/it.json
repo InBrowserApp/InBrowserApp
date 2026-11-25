@@ -1,4 +1,4 @@
 {
   "name": "Visualizzatore di spartiti MusicXML",
-  "description": "Apri spartiti in formato MusicXML o in file MXL compressi. Usa lo zoom o la lettura senza distrazioni per leggerli nel browser."
+  "description": "Apri spartiti MusicXML e MXL nel browser. Usa lo zoom e la lettura senza distrazioni, poi scarica lo spartito in PDF, PNG o SVG."
 }

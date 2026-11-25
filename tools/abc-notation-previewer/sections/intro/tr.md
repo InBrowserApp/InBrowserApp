@@ -11,3 +11,7 @@ Notaları harflerle yazın, ölçüleri `|` ile ayırın ve sus için `z` kullan
 ## Eksik veya beklenmedik nota yazımını kontrol edin
 
 Partisyonun bir bölümü beklediğinizden farklı görünüyorsa önce ölçü işaretini, nota değerlerini ve ölçü çizgilerini gözden geçirin. Göründüğünde **ABC nota yazımı bildirimleri** bölümünü açarak aracın yorumlayamadığı kodu bulun. Kaynak metni düzeltirken önizlemede okunabilen bölümler görünmeye devam edebilir.
+
+## Notaları indirin
+
+Partisyonu A4 sayfalarına kaydetmek için **İndir** düğmesini kullanın. Yazdırmak için PDF, net bir görsel paylaşmak için PNG, ayrıntıları kaybetmeden yeniden boyutlandırmak için SVG seçin. Partisyon birden fazla sayfaysa PNG veya SVG indirmesi, ZIP arşivinde her sayfa için ayrı bir dosya içerir. Düzenleyicideki metni daha sonra düzenlemek üzere .abc dosyası olarak kaydetmek için **ABC kaynak metni** seçeneğini kullanın.

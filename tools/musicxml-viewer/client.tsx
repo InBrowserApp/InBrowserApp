@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
+import { ScoreDownloadMenu } from "@workspace/ui/components/tool/score-download-menu"
 import { Button } from "@workspace/ui/components/ui/button"
 import { FileMusic, Upload, ZoomIn, ZoomOut } from "@workspace/ui/icons"
 import example from "./fixtures/morning-steps.musicxml?raw"
@@ -136,8 +137,8 @@ export default function MusicXmlViewer({
           {m.invalidScore}
         </p>
       )}
-      {status === "ready" && (
-        <div className="flex shrink-0 items-center justify-end gap-1 border-b px-2 py-1">
+      {status === "ready" && file && (
+        <div className="flex shrink-0 flex-wrap items-center justify-end gap-1 border-b px-2 py-1">
           <DocumentIconButton
             label={m.zoomOut}
             disabled={zoom <= 60}
@@ -162,6 +163,13 @@ export default function MusicXmlViewer({
           >
             <ZoomIn aria-hidden="true" />
           </DocumentIconButton>
+          <ScoreDownloadMenu
+            messages={m}
+            onScore={async (format) => {
+              const { exportMusicXml } = await import("./export-score")
+              return exportMusicXml(file, format, language)
+            }}
+          />
         </div>
       )}
       <div

@@ -14,5 +14,8 @@
   "zoomIn": "Powiększ",
   "zoomOut": "Pomniejsz",
   "resetZoom": "Przywróć domyślne powiększenie",
-  "invalidScore": "Nie udało się wyświetlić partytury. Wybierz plik .musicxml, .xml lub .mxl wyeksportowany jako MusicXML z podziałem na partie (score-partwise)."
+  "invalidScore": "Nie udało się wyświetlić partytury. Wybierz plik .musicxml, .xml lub .mxl wyeksportowany jako MusicXML z podziałem na partie (score-partwise).",
+  "download": "Pobierz",
+  "downloadBusy": "Przygotowywanie pliku…",
+  "downloadError": "Nie udało się wyeksportować nut. Spróbuj ponownie lub wybierz inny format."
 }

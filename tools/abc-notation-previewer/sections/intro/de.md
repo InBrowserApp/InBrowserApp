@@ -11,3 +11,7 @@ Schreibe Noten als Buchstaben, trenne Takte mit `|` und verwende `z` für eine P
 ## Unvollständige oder unerwartete Notation prüfen
 
 Sieht ein Teil der Partitur anders aus als erwartet, prüfe zuerst Taktart, Notenlängen und Taktstriche. Sobald der Bereich **Hinweise zur ABC-Notation** erscheint, öffne ihn, um Stellen zu finden, die sich nicht auswerten ließen. Die Vorschau kann lesbare Teile weiter anzeigen, während du den Quelltext korrigierst.
+
+## Noten herunterladen
+
+Wähle **Herunterladen**, um die Partitur auf A4-Seiten zu speichern. Wähle PDF zum Drucken, PNG für ein scharfes Bild zum Teilen oder SVG für eine Grafik, die du ohne Qualitätsverlust skalieren kannst. Umfasst die Partitur mehrere Seiten, enthält der PNG- oder SVG-Download eine Datei pro Seite in einem ZIP-Archiv. Wähle **ABC-Quelltext**, um den Text im Editor als .abc-Datei zu speichern und später weiterzubearbeiten.

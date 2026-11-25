@@ -1,4 +1,4 @@
 {
   "name": "Vorschau für ABC-Notation",
-  "description": "Füge ABC-Notation ein oder öffne eine .abc-Datei und sieh sofort die Noten. Einzelne Melodien und ganze Melodiesammlungen lassen sich direkt im Browser ansehen."
+  "description": "Füge ABC-Notation ein oder öffne eine .abc-Datei für eine Vorschau, die sich beim Schreiben aktualisiert. Lade die Noten als PDF, PNG oder SVG herunter und speichere den bearbeitbaren ABC-Quelltext."
 }

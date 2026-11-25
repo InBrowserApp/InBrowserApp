@@ -14,5 +14,8 @@
   "zoomIn": "הגדלה",
   "zoomOut": "הקטנה",
   "resetZoom": "איפוס גודל התצוגה",
-  "invalidScore": "לא ניתן להציג את התווים. בחרו קובץ ‎.musicxml,‏ ‎.xml או ‎.mxl שיוצא כ־MusicXML במבנה לפי תפקידים (partwise)."
+  "invalidScore": "לא ניתן להציג את התווים. בחרו קובץ ‎.musicxml,‏ ‎.xml או ‎.mxl שיוצא כ־MusicXML במבנה לפי תפקידים (partwise).",
+  "download": "הורדה",
+  "downloadBusy": "מכינים את ההורדה…",
+  "downloadError": "לא ניתן לייצא את התווים. נסו שוב או בחרו פורמט אחר."
 }

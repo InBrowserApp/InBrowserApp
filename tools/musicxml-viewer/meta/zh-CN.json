@@ -1,4 +1,4 @@
 {
   "name": "MusicXML 查看器",
-  "description": "将 MusicXML 和压缩的 MXL 文件打开为易读的乐谱。放大或使用专注模式，在浏览器中阅读乐谱。"
+  "description": "在浏览器中打开 MusicXML 和 MXL 乐谱。放大、使用专注模式阅读，并将乐谱下载为 PDF、PNG 或 SVG。"
 }

@@ -11,3 +11,7 @@ Un air en notation ABC commence généralement par `X:` pour le numéro de réf�
 ## Vérifier une notation incomplète ou un résultat inattendu
 
 Si une partie de la partition diffère de ce que vous attendiez, vérifiez d’abord la mesure, la durée des notes et les barres de mesure. Ouvrez **Messages de notation ABC** lorsque la rubrique apparaît pour repérer les éléments de syntaxe que l’outil n’a pas pu interpréter. L’aperçu peut continuer à afficher les passages lisibles pendant que vous corrigez le texte.
+
+## Télécharger la partition
+
+Utilisez **Télécharger** pour enregistrer la partition sur des pages au format A4. Choisissez le PDF pour l’impression, le PNG pour partager une image nette ou le SVG pour la redimensionner sans perte de détail. Si la partition s’étend sur plusieurs pages, un téléchargement en PNG ou SVG contient un fichier par page dans une archive ZIP. Choisissez **Source ABC** pour enregistrer le texte de l’éditeur dans un fichier .abc et le modifier plus tard.

@@ -9,3 +9,7 @@ Vergrößere mit den Zoom-Schaltflächen dicht gesetzte Passagen oder verkleiner
 ## MusicXML-, XML- und MXL-Dateien
 
 Eine MusicXML-Partitur kann die Endung .musicxml oder .xml haben. Eine .mxl-Datei ist ein komprimiertes MusicXML-Paket und lässt sich direkt öffnen. Lässt sich eine Partitur nicht öffnen, exportiere sie mit deinem Notensatzprogramm erneut als nach Stimmen gegliedertes MusicXML (Partwise). Notensatzprogramme können dieselbe Partitur unterschiedlich setzen. Daher können Systemumbrüche und Abstände abweichen. Der Betrachter liest und zeichnet die Datei in deinem Browser.
+
+## Noten herunterladen
+
+Wähle **Herunterladen**, um die Partitur auf A4-Seiten zu speichern. Wähle PDF zum Drucken, PNG für ein scharfes Bild zum Teilen oder SVG für eine Grafik, die du ohne Qualitätsverlust skalieren kannst. Umfasst die Partitur mehrere Seiten, enthält der PNG- oder SVG-Download eine Datei pro Seite in einem ZIP-Archiv. Das Layout der exportierten Seiten ist auf dem Smartphone und dem Computer gleich.

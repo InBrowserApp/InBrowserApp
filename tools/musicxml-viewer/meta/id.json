@@ -1,4 +1,4 @@
 {
   "name": "Penampil MusicXML",
-  "description": "Buka file MusicXML dan file MXL terkompresi untuk membaca partitur. Perbesar tampilan atau gunakan mode fokus untuk membaca partitur di browser."
+  "description": "Buka partitur MusicXML dan MXL di browser. Perbesar tampilan, baca dalam mode fokus, dan unduh partitur sebagai PDF, PNG, atau SVG."
 }

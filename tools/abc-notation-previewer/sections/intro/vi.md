@@ -11,3 +11,7 @@ Viết nốt bằng chữ cái, ngăn các ô nhịp bằng `|` và dùng `z` ch
 ## Kiểm tra ký âm chưa hoàn chỉnh hoặc hiển thị bất thường
 
 Nếu một phần bản nhạc trông khác dự kiến, trước tiên hãy kiểm tra số chỉ nhịp, trường độ nốt và vạch nhịp. Khi **Thông báo ký âm ABC** xuất hiện, hãy mở để tìm cú pháp mà trình hiển thị không thể diễn giải. Bản xem trước vẫn có thể hiển thị các phần đọc được trong khi bạn sửa nguồn.
+
+## Tải bản nhạc
+
+Dùng **Tải xuống** để lưu bản nhạc trên các trang A4. Chọn PDF để in, PNG để chia sẻ hình ảnh sắc nét hoặc SVG để thay đổi kích thước mà không mất chi tiết. Nếu bản nhạc có nhiều trang, tệp PNG hoặc SVG tải xuống sẽ nằm trong một tệp ZIP, mỗi trang là một tệp riêng. Chọn **Nguồn ABC** để lưu văn bản trong trình biên tập thành tệp .abc nhằm chỉnh sửa sau này.

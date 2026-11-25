@@ -9,5 +9,9 @@
   "loading": "Generazione dello spartito…",
   "invalid": "Impossibile mostrare lo spartito. Controlla la notazione ABC e riprova.",
   "fileError": "Impossibile leggere il file. Prova a riaprirlo o incolla il testo ABC.",
-  "warnings": "Messaggi sulla notazione ABC"
+  "warnings": "Messaggi sulla notazione ABC",
+  "download": "Scarica",
+  "downloadBusy": "Preparazione del download…",
+  "downloadError": "Impossibile esportare lo spartito. Riprova o scegli un altro formato.",
+  "downloadSource": "Sorgente ABC"
 }

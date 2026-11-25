@@ -1,4 +1,4 @@
 {
   "name": "MusicXML-viser",
-  "description": "Åpne MusicXML-filer og komprimerte MXL-filer som noter. Zoom inn eller bruk fokusmodus for å lese partituret i nettleseren."
+  "description": "Åpne noter i MusicXML- eller MXL-format i nettleseren. Zoom inn, les i fokusmodus og last ned partituret som PDF, PNG eller SVG."
 }

@@ -14,5 +14,8 @@
   "zoomIn": "Ampliar",
   "zoomOut": "Reduzir",
   "resetZoom": "Redefinir zoom",
-  "invalidScore": "Não foi possível exibir a partitura. Escolha um arquivo .musicxml, .xml ou .mxl exportado como MusicXML estruturado por partes (partwise)."
+  "invalidScore": "Não foi possível exibir a partitura. Escolha um arquivo .musicxml, .xml ou .mxl exportado como MusicXML estruturado por partes (partwise).",
+  "download": "Baixar",
+  "downloadBusy": "Preparando o download…",
+  "downloadError": "Não foi possível exportar a partitura. Tente novamente ou escolha outro formato."
 }

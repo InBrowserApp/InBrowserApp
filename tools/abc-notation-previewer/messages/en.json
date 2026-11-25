@@ -9,5 +9,9 @@
   "loading": "Drawing sheet music…",
   "invalid": "The score could not be drawn. Check the ABC notation and try again.",
   "fileError": "This file could not be read. Try opening it again or paste the ABC text.",
-  "warnings": "ABC notation messages"
+  "warnings": "ABC notation messages",
+  "download": "Download",
+  "downloadBusy": "Preparing download…",
+  "downloadError": "Could not export the score. Try again or choose another format.",
+  "downloadSource": "ABC source"
 }

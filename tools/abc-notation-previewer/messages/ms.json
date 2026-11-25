@@ -9,5 +9,9 @@
   "loading": "Memaparkan skor muzik…",
   "invalid": "Skor tidak dapat dipaparkan. Semak notasi ABC dan cuba lagi.",
   "fileError": "Fail ini tidak dapat dibaca. Cuba buka semula atau tampal teks ABC.",
-  "warnings": "Mesej notasi ABC"
+  "warnings": "Mesej notasi ABC",
+  "download": "Muat turun",
+  "downloadBusy": "Menyediakan muat turun…",
+  "downloadError": "Skor tidak dapat dieksport. Cuba lagi atau pilih format lain.",
+  "downloadSource": "Teks sumber ABC"
 }

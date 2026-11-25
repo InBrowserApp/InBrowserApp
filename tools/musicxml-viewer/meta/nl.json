@@ -1,4 +1,4 @@
 {
   "name": "MusicXML-viewer",
-  "description": "Open MusicXML-bestanden en gecomprimeerde MXL-bestanden als bladmuziek. Zoom in of gebruik de focusmodus om de partituur in je browser te lezen."
+  "description": "Open bladmuziek in MusicXML- of MXL-formaat in je browser. Zoom in, lees in de focusmodus en download de partituur als PDF, PNG of SVG."
 }

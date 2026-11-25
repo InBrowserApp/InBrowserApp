@@ -14,5 +14,8 @@
   "zoomIn": "拡大",
   "zoomOut": "縮小",
   "resetZoom": "ズームをリセット",
-  "invalidScore": "この楽譜を表示できませんでした。パート単位（partwise）の MusicXML 楽譜として書き出された .musicxml、.xml、または .mxl ファイルを選択してください。"
+  "invalidScore": "この楽譜を表示できませんでした。パート単位（partwise）の MusicXML 楽譜として書き出された .musicxml、.xml、または .mxl ファイルを選択してください。",
+  "download": "ダウンロード",
+  "downloadBusy": "ダウンロードを準備中…",
+  "downloadError": "楽譜をエクスポートできませんでした。もう一度試すか、別の形式を選んでください。"
 }

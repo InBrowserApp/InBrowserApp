@@ -1,4 +1,4 @@
 {
   "name": "ABC 記譜預覽器",
-  "description": "貼上 ABC 記譜文字或開啟 .abc 檔案，即時查看樂譜。直接在瀏覽器中預覽單首曲目或曲集。"
+  "description": "貼上 ABC 記譜文字或開啟 .abc 檔案，即時預覽樂譜。將樂譜下載為 PDF、PNG 或 SVG，並儲存可編輯的 ABC 原始文字。"
 }

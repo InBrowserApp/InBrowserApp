@@ -14,5 +14,8 @@
   "zoomIn": "Zum masuk",
   "zoomOut": "Zum keluar",
   "resetZoom": "Tetapkan semula zum",
-  "invalidScore": "Skor ini tidak dapat dipaparkan. Pilih fail .musicxml, .xml atau .mxl yang dieksport dalam format MusicXML partwise."
+  "invalidScore": "Skor ini tidak dapat dipaparkan. Pilih fail .musicxml, .xml atau .mxl yang dieksport dalam format MusicXML partwise.",
+  "download": "Muat turun",
+  "downloadBusy": "Menyediakan muat turun…",
+  "downloadError": "Skor tidak dapat dieksport. Cuba lagi atau pilih format lain."
 }

@@ -9,3 +9,7 @@ Use os controles de zoom para ler um trecho com muitas notas ou ver mais compass
 ## Arquivos MusicXML, XML e MXL
 
 Uma partitura MusicXML pode ter a extensão .musicxml ou .xml. Um arquivo .mxl é um pacote MusicXML compactado que pode ser aberto diretamente. Se a partitura não abrir, exporte-a novamente do seu programa de notação como MusicXML estruturado por partes (partwise). Cada programa pode diagramar a mesma partitura de um jeito diferente, por isso as quebras de sistema e o espaçamento podem variar. O visualizador lê e exibe o arquivo no navegador.
+
+## Como baixar a partitura
+
+Use **Baixar** para salvar a partitura em páginas A4. Escolha PDF para imprimir, PNG para compartilhar uma imagem nítida ou SVG para redimensioná-la sem perder detalhes. Se a partitura ocupar mais de uma página, o download em PNG ou SVG inclui um arquivo por página dentro de um ZIP. As páginas exportadas mantêm a mesma formatação no celular e no computador.

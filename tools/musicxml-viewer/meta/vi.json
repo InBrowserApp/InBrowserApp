@@ -1,4 +1,4 @@
 {
   "name": "Trình xem MusicXML",
-  "description": "Mở tệp MusicXML và MXL nén dưới dạng bản nhạc dễ đọc. Phóng to hoặc dùng chế độ tập trung để đọc bản nhạc trong trình duyệt."
+  "description": "Mở bản nhạc MusicXML và MXL trong trình duyệt. Phóng to, đọc ở chế độ tập trung và tải bản nhạc dưới dạng PDF, PNG hoặc SVG."
 }

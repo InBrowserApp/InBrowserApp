@@ -9,5 +9,9 @@
   "loading": "Noten werden gesetzt…",
   "invalid": "Die Partitur ließ sich nicht darstellen. Prüfe die ABC-Notation und versuche es erneut.",
   "fileError": "Diese Datei ließ sich nicht lesen. Versuche, sie erneut zu öffnen, oder füge den ABC-Text ein.",
-  "warnings": "Hinweise zur ABC-Notation"
+  "warnings": "Hinweise zur ABC-Notation",
+  "download": "Herunterladen",
+  "downloadBusy": "Download wird vorbereitet…",
+  "downloadError": "Die Partitur ließ sich nicht exportieren. Versuche es erneut oder wähle ein anderes Format.",
+  "downloadSource": "ABC-Quelltext"
 }

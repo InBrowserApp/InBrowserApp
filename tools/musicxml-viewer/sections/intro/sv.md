@@ -9,3 +9,7 @@ Använd zoomknapparna för att läsa en tätt noterad passage eller se fler takt
 ## MusicXML-, XML- och MXL-filer
 
 Ett MusicXML-partitur kan ha filändelsen .musicxml eller .xml. En .mxl-fil är ett komprimerat MusicXML-paket som kan öppnas direkt. Om partituret inte går att öppna, exportera det på nytt från ditt notskrivningsprogram som MusicXML med stämmorna var för sig (partwise). Notskrivningsprogram kan sätta samma partitur på olika sätt. Därför kan radbrytningar och avstånd mellan noterna variera. Visaren läser filen och visar partituret i webbläsaren.
+
+## Ladda ner noterna
+
+Välj **Ladda ner** för att spara partituret på sidor i A4-format. Välj PDF för utskrift, PNG för att dela en skarp bild eller SVG för en bild som kan skalas utan kvalitetsförlust. Om partituret omfattar flera sidor innehåller PNG- eller SVG-nedladdningen en fil per sida i ett ZIP-arkiv. De exporterade sidorna har samma layout på mobilen och datorn.

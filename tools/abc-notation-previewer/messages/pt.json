@@ -9,5 +9,9 @@
   "loading": "Gerando a partitura…",
   "invalid": "Não foi possível exibir a partitura. Confira a notação ABC e tente novamente.",
   "fileError": "Não foi possível ler este arquivo. Tente abri-lo novamente ou cole o texto ABC.",
-  "warnings": "Mensagens sobre a notação ABC"
+  "warnings": "Mensagens sobre a notação ABC",
+  "download": "Baixar",
+  "downloadBusy": "Preparando o download…",
+  "downloadError": "Não foi possível exportar a partitura. Tente novamente ou escolha outro formato.",
+  "downloadSource": "Texto ABC"
 }

@@ -11,3 +11,7 @@ Zapisuj nuty literami, oddzielaj takty znakiem `|`, a pauzę oznaczaj literą `z
 ## Jak sprawdzić niepełny lub nieoczekiwany zapis
 
 Jeśli część nut wygląda inaczej, niż oczekujesz, najpierw sprawdź metrum, wartości rytmiczne i kreski taktowe. Gdy pojawi się sekcja **Komunikaty dotyczące notacji ABC**, otwórz ją, aby znaleźć fragmenty zapisu, których podgląd nie potrafił zinterpretować. Poprawnie odczytane fragmenty mogą nadal być widoczne podczas poprawiania tekstu.
+
+## Pobieranie zapisu nutowego
+
+Kliknij **Pobierz**, aby zapisać nuty na stronach w formacie A4. Wybierz PDF do druku, PNG, aby udostępnić wyraźny obraz, lub SVG, jeśli chcesz zmieniać wymiary obrazu bez utraty szczegółów. Jeśli zapis zajmuje więcej niż jedną stronę, otrzymasz archiwum ZIP z oddzielnym plikiem PNG lub SVG dla każdej strony. Wybierz **Plik źródłowy ABC**, aby zapisać tekst z edytora w pliku .abc do dalszej edycji.

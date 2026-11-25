@@ -9,5 +9,9 @@
   "loading": "楽譜を描画中…",
   "invalid": "楽譜を描画できませんでした。ABC 記譜を確認してもう一度お試しください。",
   "fileError": "このファイルを読み込めませんでした。もう一度開くか、ABC テキストを貼り付けてください。",
-  "warnings": "ABC 記譜のメッセージ"
+  "warnings": "ABC 記譜のメッセージ",
+  "download": "ダウンロード",
+  "downloadBusy": "ダウンロードを準備中…",
+  "downloadError": "楽譜をエクスポートできませんでした。もう一度試すか、別の形式を選んでください。",
+  "downloadSource": "ABC ソース"
 }

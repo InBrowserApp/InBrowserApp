@@ -14,5 +14,8 @@
   "zoomIn": "Phóng to",
   "zoomOut": "Thu nhỏ",
   "resetZoom": "Đặt lại mức thu phóng",
-  "invalidScore": "Không thể hiển thị bản nhạc này. Hãy chọn tệp .musicxml, .xml hoặc .mxl được xuất dưới dạng bản nhạc MusicXML theo từng bè (partwise)."
+  "invalidScore": "Không thể hiển thị bản nhạc này. Hãy chọn tệp .musicxml, .xml hoặc .mxl được xuất dưới dạng bản nhạc MusicXML theo từng bè (partwise).",
+  "download": "Tải xuống",
+  "downloadBusy": "Đang chuẩn bị tải xuống…",
+  "downloadError": "Không thể xuất bản nhạc. Hãy thử lại hoặc chọn định dạng khác."
 }

@@ -9,5 +9,9 @@
   "loading": "Đang vẽ bản nhạc…",
   "invalid": "Không thể vẽ bản nhạc. Hãy kiểm tra ký âm ABC và thử lại.",
   "fileError": "Không thể đọc tệp này. Hãy thử mở lại hoặc dán văn bản ABC.",
-  "warnings": "Thông báo ký âm ABC"
+  "warnings": "Thông báo ký âm ABC",
+  "download": "Tải xuống",
+  "downloadBusy": "Đang chuẩn bị tải xuống…",
+  "downloadError": "Không thể xuất bản nhạc. Hãy thử lại hoặc chọn định dạng khác.",
+  "downloadSource": "Nguồn ABC"
 }
