@@ -36,7 +36,7 @@ function upload(file: File) {
 }
 
 function press(name: string) {
-  fireEvent.click(screen.getByRole("button", { name, exact: true }))
+  fireEvent.click(screen.getByRole("button", { name }))
 }
 
 beforeEach(() => {

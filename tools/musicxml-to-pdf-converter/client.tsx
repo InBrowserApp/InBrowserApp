@@ -26,6 +26,7 @@ export default function MusicXmlToPdf({
   language: string
 }) {
   const paperId = useId()
+  const paperControl = useRef<HTMLSelectElement>(null)
   const [file, setFile] = useState<File>()
   const [paper, setPaper] = useState<ScorePaper>("a4")
   const [score, setScore] = useState<Score>()
@@ -54,6 +55,12 @@ export default function MusicXmlToPdf({
       cancelled = true
     }
   }, [file, paper])
+
+  useEffect(() => {
+    if (file && document.activeElement === document.body) {
+      paperControl.current?.focus({ preventScroll: true })
+    }
+  }, [file])
 
   function resetDownload() {
     exportRevision.current++
@@ -104,11 +111,12 @@ export default function MusicXmlToPdf({
       />
       {file && (
         <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
-          <ToolPanelCard className="lg:col-start-2 lg:row-start-1">
+          <ToolPanelCard className="h-auto lg:col-start-2 lg:row-start-1">
             <ToolPanelCardContent className="gap-3">
               <div className="grid gap-2">
                 <Label htmlFor={paperId}>{m.paper}</Label>
                 <select
+                  ref={paperControl}
                   id={paperId}
                   value={paper}
                   onChange={(event) => {
