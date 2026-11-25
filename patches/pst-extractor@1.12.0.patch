@@ -1,0 +1,98 @@
+diff --git a/dist/PSTFile.class.d.ts b/dist/PSTFile.class.d.ts
+index 052825cd..74dd2888 100644
+--- a/dist/PSTFile.class.d.ts
++++ b/dist/PSTFile.class.d.ts
+@@ -37,6 +37,7 @@ export declare class PSTFile {
+     private static nodeMap;
+     private pstFD;
+     private pstBuffer;
++    private byteSource;
+     private position;
+     /**
+      * Creates an instance of PSTFile.  File is opened in constructor.
+@@ -44,7 +45,12 @@ export declare class PSTFile {
+      * @memberof PSTFile
+      */
+     constructor(pstBuffer: Buffer);
++    constructor(source: {
++        read(target: Buffer, length: number, position: number): number;
++        unzip(data: Buffer): Buffer;
++    });
+     constructor(fileName: string);
++    unzipSync(data: Buffer): Buffer;
+     /**
+      * Close the file.
+      * @memberof PSTFile
+diff --git a/dist/PSTFile.class.js b/dist/PSTFile.class.js
+index e356b2a3..4b116ea8 100644
+--- a/dist/PSTFile.class.js
++++ b/dist/PSTFile.class.js
+@@ -38,6 +38,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.PSTFile = void 0;
+ const fs = __importStar(require("fs"));
++const zlib = __importStar(require("zlib"));
+ const long_1 = __importDefault(require("long"));
+ const DescriptorIndexNode_class_1 = require("./DescriptorIndexNode.class");
+ const OffsetIndexItem_class_1 = require("./OffsetIndexItem.class");
+@@ -94,6 +95,10 @@ class PSTFile {
+             this.pstBuffer = arg;
+             this.pstFD = -1;
+         }
++        else if (typeof arg === "object") {
++            this.byteSource = arg;
++            this.pstFD = -1;
++        }
+         else {
+             // use PST in filesystem
+             this._pstFilename = arg;
+@@ -803,6 +808,9 @@ class PSTFile {
+      * @memberof PSTFile
+      */
+     readSync(buffer, length, position) {
++        if (this.byteSource) {
++            return this.byteSource.read(buffer, length, position);
++        }
+         if (this.pstFD > 0) {
+             // read from file system
+             return fs.readSync(this.pstFD, buffer, 0, length, position);
+@@ -813,6 +821,9 @@ class PSTFile {
+             return length;
+         }
+     }
++    unzipSync(data) {
++        return this.byteSource ? this.byteSource.unzip(data) : zlib.unzipSync(data);
++    }
+     /**
+      * Seek to a specific position in PST file.
+      * @param {long} index
+diff --git a/dist/PSTNodeInputStream.class.js b/dist/PSTNodeInputStream.class.js
+index e263e201..01239ae5 100644
+--- a/dist/PSTNodeInputStream.class.js
++++ b/dist/PSTNodeInputStream.class.js
+@@ -39,7 +39,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.PSTNodeInputStream = void 0;
+ /* eslint-disable @typescript-eslint/no-explicit-any */
+ const long_1 = __importDefault(require("long"));
+-const zlib = __importStar(require("zlib"));
+ const PSTDescriptorItem_class_1 = require("./PSTDescriptorItem.class");
+ const PSTUtil_class_1 = require("./PSTUtil.class");
+ const OffsetIndexItem_class_1 = require("./OffsetIndexItem.class");
+@@ -131,7 +130,7 @@ class PSTNodeInputStream {
+                         const inData = Buffer.alloc(i.size);
+                         this.pstFile.seek(i.fileOffset);
+                         this.pstFile.readCompletely(inData);
+-                        const buf = zlib.unzipSync(inData);
++                        const buf = this.pstFile.unzipSync(inData);
+                         outputStream = outputStream ? Buffer.concat([outputStream, buf]) : buf;
+                     }
+                     this.indexItems = [];
+@@ -148,7 +147,7 @@ class PSTNodeInputStream {
+                     const inData = Buffer.alloc(compressedLength);
+                     this.seek(long_1.default.ZERO);
+                     this.readCompletely(inData);
+-                    outputStream = zlib.unzipSync(inData);
++                    outputStream = this.pstFile.unzipSync(inData);
+                 }
+                 this.allData = outputStream;
+                 this.currentLocation = long_1.default.ZERO;

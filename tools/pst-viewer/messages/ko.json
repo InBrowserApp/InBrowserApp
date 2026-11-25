@@ -1,0 +1,12 @@
+{
+  "open": "PST 파일 열기",
+  "replace": "다른 PST 파일 열기",
+  "releaseFile": "놓아서 PST 파일 열기",
+  "drop": "여기에 PST 파일을 놓으세요",
+  "formats": "사서함에서 내보내거나 백업 또는 보관한 Outlook 데이터 파일(.pst)을 엽니다.",
+  "invalid": "이 PST 파일을 읽을 수 없습니다. Outlook 데이터 파일(.pst)을 선택하거나 Outlook에서 새 복사본을 내보내세요.",
+  "empty": "이 PST 파일에 읽을 수 있는 전자 메일이 없습니다.",
+  "folders": "메일 폴더",
+  "allFolders": "모든 폴더",
+  "emptyFolder": "이 폴더에 전자 메일이 없습니다."
+}

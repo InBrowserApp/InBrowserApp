@@ -1493,6 +1493,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "protect-pdf",
   },
   {
+    category: "document",
+    name: "Visualizzatore PST",
+    slug: "pst-viewer",
+  },
+  {
     category: "image",
     name: "Generatore di codici QR",
     slug: "qr-code-generator",

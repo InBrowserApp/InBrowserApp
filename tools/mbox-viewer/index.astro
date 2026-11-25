@@ -5,6 +5,7 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import Client from "./client"
+import { archiveMessages } from "@workspace/ui/email-archive-messages"
 import type messages from "./messages/en.json"
 
 interface Props { lang: string }
@@ -14,6 +15,6 @@ const copy = resolveLocale<typeof messages>(import.meta.glob("./messages/*.json"
 const Intro = resolveLocale<AstroComponentFactory>(import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }), lang)!
 ---
 <ToolPageShell title={meta.name} description={meta.description}>
-  <Client client:load title={meta.name} lang={lang} messages={copy} />
+  <Client client:load title={meta.name} lang={lang} messages={{ ...archiveMessages(lang), ...copy }} />
   <ToolArticle><Intro /></ToolArticle>
 </ToolPageShell>

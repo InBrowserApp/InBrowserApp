@@ -2,18 +2,21 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import type { Email } from "@workspace/email"
 import Client from "./client"
-import m from "./messages/en.json"
-import type { Reply } from "./worker"
+import own from "./messages/en.json"
+import { archiveMessages } from "@workspace/ui/email-archive-messages"
+import type { ArchiveReply } from "@workspace/email/archive"
+
+const m = { ...archiveMessages("en"), ...own }
 
 let instances: TestWorker[]
 class TestWorker {
-  onmessage?: (event: MessageEvent<Reply>) => void
+  onmessage?: (event: MessageEvent<ArchiveReply>) => void
   postMessage = vi.fn()
   terminate = vi.fn()
   constructor() {
     instances.push(this)
   }
-  reply(data: Reply) {
+  reply(data: ArchiveReply) {
     this.onmessage?.(new MessageEvent("message", { data }))
   }
 }

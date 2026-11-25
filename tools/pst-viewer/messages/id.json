@@ -1,0 +1,12 @@
+{
+  "open": "Buka file PST",
+  "replace": "Buka file PST lain",
+  "releaseFile": "Lepaskan untuk membuka file PST",
+  "drop": "Seret dan lepas file PST di sini",
+  "formats": "Buka File Data Outlook (.pst) dari hasil ekspor kotak surat, cadangan, atau arsip.",
+  "invalid": "File PST ini tidak dapat dibaca. Pilih File Data Outlook (.pst) atau ekspor salinan baru dari Outlook.",
+  "empty": "File PST ini tidak berisi email yang bisa dibaca.",
+  "folders": "Folder email",
+  "allFolders": "Semua folder",
+  "emptyFolder": "Tidak ada email di folder ini."
+}

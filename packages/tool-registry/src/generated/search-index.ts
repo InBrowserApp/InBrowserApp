@@ -37915,6 +37915,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pst-viewer",
+    category: "document",
+    icon: "archive",
+    tags: [
+      "pst",
+      "outlook",
+      "email",
+      "mailbox",
+      "archive",
+      "backup",
+      "attachment",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PST",
+        description:
+          "افتح ملفات Outlook بتنسيق PST في متصفحك. تصفّح مجلدات البريد وابحث عن الرسائل واقرأها ونزّل المرفقات من دون رفع الأرشيف.",
+      },
+      de: {
+        name: "PST-Betrachter",
+        description:
+          "Öffne PST-Dateien aus Outlook im Browser. Durchsuche E-Mail-Ordner, lies Nachrichten und lade Anhänge herunter. Das Archiv bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "PST Viewer",
+        description:
+          "Open Outlook PST files in your browser. Browse mail folders, search messages, read email, and download attachments without uploading your archive.",
+      },
+      es: {
+        name: "Visor PST",
+        description:
+          "Abre archivos PST de Outlook en tu navegador. Explora carpetas de correo, busca y lee mensajes y descarga adjuntos sin subir el archivo.",
+      },
+      fr: {
+        name: "Visionneuse PST",
+        description:
+          "Ouvrez vos fichiers PST Outlook dans le navigateur. Parcourez les dossiers, recherchez et lisez vos e-mails, puis téléchargez les pièces jointes sans envoyer l’archive.",
+      },
+      he: {
+        name: "מציג PST",
+        description:
+          "פתחו קובצי PST של Outlook בדפדפן. עיינו בתיקיות דואר, חפשו וקראו הודעות והורידו קבצים מצורפים בלי להעלות את הארכיון.",
+      },
+      hi: {
+        name: "PST व्यूअर",
+        description:
+          "Outlook की PST फ़ाइलें अपने ब्राउज़र में खोलें। आर्काइव अपलोड किए बिना मेल फ़ोल्डर देखें, संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil PST",
+        description:
+          "Buka file PST Outlook di browser. Jelajahi folder, cari dan baca email, serta unduh lampiran tanpa perlu mengunggah arsip Anda.",
+      },
+      it: {
+        name: "Visualizzatore PST",
+        description:
+          "Apri i file PST di Outlook nel browser. Sfoglia le cartelle di posta, cerca e leggi i messaggi e scarica gli allegati senza caricare l’archivio online.",
+      },
+      ja: {
+        name: "PST ビューアー",
+        description:
+          "ブラウザーで Outlook の PST ファイルを開きます。アーカイブをアップロードせずに、メールフォルダーの閲覧、メッセージの検索と表示、添付ファイルのダウンロードができます。",
+      },
+      ko: {
+        name: "PST 뷰어",
+        description:
+          "브라우저에서 Outlook PST 파일을 열어 보세요. 보관 파일을 업로드하지 않고 메일 폴더를 탐색하고, 메시지를 검색하고 읽으며, 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar PST",
+        description:
+          "Buka fail PST Outlook dalam pelayar. Semak folder, cari dan baca e-mel, serta muat turun lampiran tanpa memuat naik arkib anda.",
+      },
+      nl: {
+        name: "PST-viewer",
+        description:
+          "Open Outlook-PST-bestanden in je browser. Blader door e-mailmappen, zoek en lees berichten en download bijlagen zonder je archief te uploaden.",
+      },
+      no: {
+        name: "PST-viser",
+        description:
+          "Åpne Outlooks PST-filer i nettleseren. Bla i e-postmapper, søk etter meldinger, les e-post og last ned vedlegg uten å laste opp arkivet.",
+      },
+      pl: {
+        name: "Przeglądarka PST",
+        description:
+          "Otwieraj pliki PST programu Outlook w przeglądarce. Przeglądaj foldery poczty, wyszukuj i czytaj wiadomości oraz pobieraj załączniki bez przesyłania archiwum.",
+      },
+      pt: {
+        name: "Visualizador PST",
+        description:
+          "Abra arquivos PST do Outlook no navegador. Navegue pelas pastas, pesquise e leia e-mails e baixe anexos sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Просмотр PST",
+        description:
+          "Открывайте файлы Outlook PST в браузере. Просматривайте почтовые папки, ищите и читайте письма и скачивайте вложения без загрузки архива на сервер.",
+      },
+      sv: {
+        name: "PST-visare",
+        description:
+          "Öppna Outlooks PST-filer i webbläsaren. Bläddra bland e-postmappar, sök och läs meddelanden och ladda ner bilagor utan att ladda upp arkivet.",
+      },
+      th: {
+        name: "โปรแกรมดู PST",
+        description:
+          "เปิดไฟล์ PST ของ Outlook ในเบราว์เซอร์ เรียกดูโฟลเดอร์ ค้นหาและอ่านอีเมล หรือดาวน์โหลดไฟล์แนบโดยไม่ต้องอัปโหลดไฟล์ PST",
+      },
+      tr: {
+        name: "PST Görüntüleyici",
+        description:
+          "Outlook PST dosyalarını tarayıcınızda açın. Arşivinizi yüklemeden posta klasörlerine göz atın, iletileri arayıp okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem PST",
+        description:
+          "Mở tệp PST của Outlook ngay trong trình duyệt. Duyệt thư mục, tìm và đọc thư, tải tệp đính kèm mà không cần tải tệp lưu trữ lên.",
+      },
+      "zh-CN": {
+        name: "PST 查看器",
+        description:
+          "在浏览器中打开 Outlook PST 文件。浏览邮件文件夹、搜索和阅读邮件、下载附件，无需上传存档。",
+      },
+      "zh-TW": {
+        name: "PST 檢視器",
+        description:
+          "在瀏覽器中開啟 Outlook PST 檔案。瀏覽郵件資料夾、搜尋和閱讀郵件、下載附件，無須上傳封存檔。",
+      },
+    },
+  },
+  {
     slug: "qr-code-generator",
     category: "image",
     icon: "image",

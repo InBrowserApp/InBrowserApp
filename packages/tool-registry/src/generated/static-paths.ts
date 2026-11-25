@@ -27418,6 +27418,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pst-viewer",
+    language: "ar",
+  },
+  {
+    slug: "pst-viewer",
+    language: "de",
+  },
+  {
+    slug: "pst-viewer",
+    language: "en",
+  },
+  {
+    slug: "pst-viewer",
+    language: "es",
+  },
+  {
+    slug: "pst-viewer",
+    language: "fr",
+  },
+  {
+    slug: "pst-viewer",
+    language: "he",
+  },
+  {
+    slug: "pst-viewer",
+    language: "hi",
+  },
+  {
+    slug: "pst-viewer",
+    language: "id",
+  },
+  {
+    slug: "pst-viewer",
+    language: "it",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ja",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ko",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ms",
+  },
+  {
+    slug: "pst-viewer",
+    language: "nl",
+  },
+  {
+    slug: "pst-viewer",
+    language: "no",
+  },
+  {
+    slug: "pst-viewer",
+    language: "pl",
+  },
+  {
+    slug: "pst-viewer",
+    language: "pt",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ru",
+  },
+  {
+    slug: "pst-viewer",
+    language: "sv",
+  },
+  {
+    slug: "pst-viewer",
+    language: "th",
+  },
+  {
+    slug: "pst-viewer",
+    language: "tr",
+  },
+  {
+    slug: "pst-viewer",
+    language: "vi",
+  },
+  {
+    slug: "pst-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pst-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "qr-code-generator",
     language: "ar",
   },

@@ -1,0 +1,12 @@
+{
+  "open": "Open PST file",
+  "replace": "Open another PST file",
+  "releaseFile": "Release to open the PST file",
+  "drop": "Drop a PST file here",
+  "formats": "Open an Outlook Data File (.pst) from a mailbox export, backup, or archive.",
+  "invalid": "Could not read this PST file. Choose an Outlook Data File (.pst) or export a new copy from Outlook.",
+  "empty": "This PST has no readable email messages.",
+  "folders": "Mail folders",
+  "allFolders": "All folders",
+  "emptyFolder": "There are no email messages in this folder."
+}

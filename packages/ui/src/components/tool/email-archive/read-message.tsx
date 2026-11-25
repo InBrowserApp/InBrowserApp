@@ -6,7 +6,7 @@ import { fileSizeFormatter } from "@workspace/ui/lib/format-file-size"
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Download, Paperclip } from "@workspace/ui/icons"
-import type { Messages } from "./types"
+import type { ArchiveMessages } from "./copy"
 
 export function ReadMessage({
   email,
@@ -15,7 +15,7 @@ export function ReadMessage({
 }: {
   email: Email
   lang: string
-  messages: Messages
+  messages: ArchiveMessages
 }) {
   const [preview, setPreview] = useState<
     ReturnType<typeof preparePreview> | false | null
@@ -36,6 +36,14 @@ export function ReadMessage({
     bytes ? [{ bytes, name: name || m.attachmentFallback }] : []
   )
   const formatSize = fileSizeFormatter(lang)
+  const date =
+    email.format === "PST" && email.date
+      ? new Intl.DateTimeFormat(lang, {
+          dateStyle: "medium",
+          timeStyle: "long",
+          timeZone: "UTC",
+        }).format(new Date(email.date))
+      : email.date
   return (
     <>
       <header className="max-h-[44%] shrink-0 space-y-2 overflow-auto border-b px-4 py-3 sm:px-5">
@@ -46,17 +54,20 @@ export function ReadMessage({
           {email.subject || m.subjectFallback}
         </h2>
         <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 text-xs">
-          {(["from", "to", "date"] as const)
+          {(["from", "to", "cc", "bcc", "date"] as const)
             .filter((field) => email[field])
             .map((field) => (
               <div key={field} className="contents">
                 <dt className="text-muted-foreground">{m[field]}</dt>
                 <dd dir="auto" className="wrap-anywhere">
-                  {email[field]}
+                  {field === "date" ? date : email[field]}
                 </dd>
               </div>
             ))}
         </dl>
+        {email.notices.includes("attachmentError") && (
+          <p className="text-xs text-muted-foreground">{m.attachmentError}</p>
+        )}
         {attachments.length > 0 && (
           <details>
             <summary className="cursor-pointer text-sm font-medium">
@@ -120,7 +131,9 @@ export function ReadMessage({
         ) : preview === false ? (
           <p className="p-4 text-sm text-muted-foreground">{m.messageError}</p>
         ) : !email.html ? (
-          <p className="p-4 text-sm text-muted-foreground">{m.noBody}</p>
+          <p className="p-4 text-sm text-muted-foreground">
+            {email.notices.includes("rtfOnly") ? m.rtfOnly : m.noBody}
+          </p>
         ) : null}
       </div>
     </>

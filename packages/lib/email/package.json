@@ -6,10 +6,15 @@
   "exports": {
     ".": "./src/index.ts",
     "./document": "./src/document.ts",
-    "./mbox": "./src/mbox.ts"
+    "./mbox": "./src/mbox.ts",
+    "./archive": "./src/archive.ts",
+    "./pst": "./src/pst.ts"
   },
   "dependencies": {
     "postal-mime": "catalog:",
+    "pst-extractor": "catalog:",
+    "fflate": "catalog:",
+    "buffer": "catalog:",
     "@kenjiuno/msgreader": "catalog:",
     "@workspace/web-document": "workspace:*"
   },

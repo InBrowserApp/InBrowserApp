@@ -305,6 +305,7 @@
     "@tool/prc-id-validator": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
     "@tool/protect-pdf": "workspace:*",
+    "@tool/pst-viewer": "workspace:*",
     "@tool/qr-code-generator": "workspace:*",
     "@tool/qr-code-reader": "workspace:*",
     "@tool/radio-timecode": "workspace:*",
