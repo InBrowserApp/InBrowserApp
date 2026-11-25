@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF-visare",
+  "description": "Öppna en GeoTIFF-fil (.tif eller .tiff), förhandsgranska rasterband och kontrollera pixelmått, koordinatreferenssystem och utbredning i webbläsaren."
+}

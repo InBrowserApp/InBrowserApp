@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem GeoTIFF",
+  "description": "Mở GeoTIFF (.tif hoặc .tiff), xem trước các kênh raster và kiểm tra kích thước pixel, hệ quy chiếu tọa độ và phạm vi tọa độ ngay trong trình duyệt."
+}

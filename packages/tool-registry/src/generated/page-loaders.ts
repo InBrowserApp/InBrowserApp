@@ -167,6 +167,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
   "geojson-viewer": () => import("@tool/geojson-viewer/page"),
+  "geotiff-viewer": () => import("@tool/geotiff-viewer/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),

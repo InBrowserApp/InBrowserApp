@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF Viewer",
+  "description": "Open a GeoTIFF (.tif or .tiff), preview raster bands, and inspect its pixel dimensions, coordinate reference system and bounds in your browser."
+}

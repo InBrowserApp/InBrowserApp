@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF-viewer",
+  "description": "Open een GeoTIFF-bestand (.tif of .tiff), bekijk rasterbanden en controleer de pixelafmetingen, het coördinatenreferentiesysteem en het ruimtelijk bereik in je browser."
+}

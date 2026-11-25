@@ -1,0 +1,4 @@
+{
+  "name": "Penampil GeoTIFF",
+  "description": "Buka GeoTIFF (.tif atau .tiff), pratinjau kanal raster, serta periksa dimensi piksel, sistem referensi koordinat, dan batas cakupan di browser."
+}

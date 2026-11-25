@@ -1,0 +1,4 @@
+{
+  "name": "Visor de GeoTIFF",
+  "description": "Abre un GeoTIFF (.tif o .tiff) en tu navegador. Visualiza sus bandas ráster y consulta las dimensiones en píxeles, el sistema de referencia de coordenadas y la extensión."
+}

@@ -12054,6 +12054,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geotiff-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "de",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "en",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "es",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "he",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "id",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "it",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "no",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "th",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geotiff-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-maker",
     language: "ar",
   },

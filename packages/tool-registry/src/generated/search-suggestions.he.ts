@@ -658,6 +658,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "geojson-viewer",
   },
   {
+    category: "geo",
+    name: "מציג GeoTIFF",
+    slug: "geotiff-viewer",
+  },
+  {
     category: "image",
     name: "יוצר GIF",
     slug: "gif-maker",
