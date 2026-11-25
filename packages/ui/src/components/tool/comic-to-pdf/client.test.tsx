@@ -43,7 +43,7 @@ afterEach(() => {
   vi.restoreAllMocks()
 })
 test("previews exact output bytes with source filenames, navigation, fit and download", async () => {
-  render(<Client messages={m} />)
+  render(<Client messages={m} format="cbz" />)
   expect(screen.getByText(m.drop)).toBeTruthy()
   upload()
   const download = await screen.findByRole("link", {
@@ -73,7 +73,7 @@ test("previews exact output bytes with source filenames, navigation, fit and dow
   expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf")
 })
 test("replacing the same name removes downloads and cancels stale conversions", async () => {
-  render(<Client messages={m} />)
+  render(<Client messages={m} format="cbz" />)
   upload()
   await screen.findByRole("link", { name: m.pdfExport.download })
   let finish!: (value: typeof result) => void
@@ -92,7 +92,7 @@ test("replacing the same name removes downloads and cancels stale conversions", 
   expect(screen.queryByRole("link", { name: m.pdfExport.download })).toBeNull()
 })
 test("validates the extension and maps failed page/resource errors", async () => {
-  render(<Client messages={m} />)
+  render(<Client messages={m} format="cbz" />)
   upload("wrong.cbr")
   await screen.findByText(m.invalid)
   upload("empty.cbz", "")
@@ -111,7 +111,7 @@ test("validates the extension and maps failed page/resource errors", async () =>
 test.each(["onError", "onPassword"])(
   "revokes results after preview %s",
   async (callback) => {
-    render(<Client messages={m} />)
+    render(<Client messages={m} format="cbz" />)
     upload()
     await screen.findByRole("link", { name: m.pdfExport.download })
     act(() => mock.open.mock.calls[0]![0][callback]())
@@ -129,7 +129,7 @@ test("disposes late readers and suppresses progress/errors after closing", async
         finish = resolve
       })
   )
-  render(<Client messages={m} />)
+  render(<Client messages={m} format="cbz" />)
   upload()
   await waitFor(() => expect(mock.open).toHaveBeenCalledOnce())
   fireEvent.click(screen.getByRole("button", { name: m.clear }))
@@ -156,4 +156,34 @@ test("disposes late readers and suppresses progress/errors after closing", async
   })
   expect(screen.queryByRole("alert")).toBeNull()
   expect(screen.getByText(m.drop)).toBeTruthy()
+})
+
+test("accepts CBR and RAR with a PDF filename and cancels via the file toolbar", async () => {
+  render(<Client messages={{ ...m, open: "Choose a CBR file" }} format="cbr" />)
+  const picker = screen.getByLabelText("Choose a CBR file", {
+    selector: "input",
+  })
+  const select = (name: string) =>
+    fireEvent.change(picker, { target: { files: [new File(["rar"], name)] } })
+
+  select("volume-01.CBR")
+  const pdf = await screen.findByRole("link", { name: m.pdfExport.download })
+  expect(pdf.getAttribute("download")).toBe("volume-01.pdf")
+
+  mock.prepare.mockImplementationOnce(
+    (_file, signal: AbortSignal) =>
+      new Promise((_resolve, reject) =>
+        signal.addEventListener("abort", () => reject(signal.reason), {
+          once: true,
+        })
+      )
+  )
+  select("volume-02.rar")
+  await waitFor(() => expect(mock.prepare).toHaveBeenCalledTimes(2))
+  fireEvent.click(screen.getByRole("button", { name: m.pdfExport.cancel }))
+  expect(mock.prepare.mock.calls[1]![1].aborted).toBe(true)
+  expect(screen.queryByRole("link", { name: m.pdfExport.download })).toBeNull()
+  expect(document.activeElement).toBe(
+    screen.getByRole("button", { name: "Choose a CBR file" })
+  )
 })

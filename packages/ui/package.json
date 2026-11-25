@@ -18,6 +18,7 @@
     "@workspace/raster-image": "workspace:*",
     "@workspace/ocr-models": "workspace:*",
     "@workspace/comic": "workspace:*",
+    "@workspace/pdf-reader": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@types/geojson": "catalog:",
     "@types/leaflet": "catalog:",
@@ -49,6 +50,7 @@
     "./components/*": "./src/components/*.tsx",
     "./astro/torrent-page": "./src/components/tool/torrent-page.astro",
     "./torrent-messages": "./src/components/tool/torrent-messages.ts",
+    "./astro/comic-to-pdf-page": "./src/components/tool/comic-to-pdf/page.astro",
     "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
     "./comic-reader/*": "./src/components/tool/comic-reader/*.ts",
     "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts"

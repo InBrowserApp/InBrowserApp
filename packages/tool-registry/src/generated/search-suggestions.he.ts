@@ -294,6 +294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "ממיר CBR ל־PDF",
+    slug: "cbr-to-pdf-converter",
+  },
+  {
+    category: "ebook",
     name: "קורא קומיקס CBZ",
     slug: "cbz-reader",
   },

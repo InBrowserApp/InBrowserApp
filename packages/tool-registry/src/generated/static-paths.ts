@@ -5338,6 +5338,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbr-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbr-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbz-reader",
     language: "ar",
   },

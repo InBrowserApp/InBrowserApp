@@ -9,17 +9,11 @@
   },
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*",
-    "@workspace/pdf-reader": "workspace:*",
-    "@workspace/comic": "workspace:*"
+    "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
-  },
-  "devDependencies": {
-    "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
   }
 }

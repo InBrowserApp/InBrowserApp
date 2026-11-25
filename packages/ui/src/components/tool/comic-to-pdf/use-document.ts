@@ -17,7 +17,8 @@ const initial: ReaderState = {
 export function useDocument(
   file: File | null,
   container: RefObject<HTMLDivElement | null>,
-  m: Messages
+  m: Messages,
+  extension: RegExp
 ) {
   const [output, setOutput] = useState<{
     source: File
@@ -34,7 +35,7 @@ export function useDocument(
     setError("")
     setStatus("")
     if (!file || !container.current) return
-    if (!/\.cbz$/i.test(file.name) || !file.size) {
+    if (!extension.test(file.name) || !file.size) {
       setError(m.invalid)
       return
     }
@@ -88,7 +89,7 @@ export function useDocument(
       })
       .catch((reason: unknown) => fail(failureMessage(reason, m.pdfExport)))
     return () => controller.abort()
-  }, [file, container, m])
+  }, [file, container, m, extension])
   return {
     state,
     status,

@@ -294,6 +294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "Trình chuyển đổi CBR sang PDF",
+    slug: "cbr-to-pdf-converter",
+  },
+  {
+    category: "ebook",
     name: "Trình đọc truyện tranh CBZ",
     slug: "cbz-reader",
   },

@@ -1,37 +1,55 @@
 import { useRef, useState } from "react"
-import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
-import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/ui/alert"
+import { DocumentWorkspace } from "../document-workspace"
+import { DocumentDownload } from "../document-download"
+import { Alert, AlertDescription, AlertTitle } from "../../ui/alert"
 import {
   Empty,
   EmptyDescription,
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@workspace/ui/components/ui/empty"
-import { Spinner } from "@workspace/ui/components/ui/spinner"
-import { FileText } from "@workspace/ui/icons"
+} from "../../ui/empty"
+import { Spinner } from "../../ui/spinner"
+import { FileText } from "../../../icons"
 import { Toolbar } from "./toolbar"
 import { useDocument } from "./use-document"
-import type { Messages } from "./types"
+import type { ComicPdfFormat, Messages } from "./types"
 
-export default function Client({ messages: m }: { messages: Messages }) {
+const inputFormats = {
+  cbz: { accept: ".cbz,application/vnd.comicbook+zip", extension: /\.cbz$/i },
+  cbr: {
+    accept: ".cbr,.rar,application/vnd.comicbook-rar,application/vnd.rar",
+    extension: /\.(?:cbr|rar)$/i,
+  },
+} as const
+
+export default function Client({
+  messages: m,
+  format,
+}: {
+  messages: Messages
+  format: ComicPdfFormat
+}) {
+  const { accept, extension } = inputFormats[format]
   const [file, setFile] = useState<File | null>(null)
   const container = useRef<HTMLDivElement>(null)
-  const { state, status, error, output } = useDocument(file, container, m)
+  const { state, status, error, output } = useDocument(
+    file,
+    container,
+    m,
+    extension
+  )
   return (
     <>
       <DocumentWorkspace
-        tool="cbz-to-pdf-converter"
+        tool={`${format}-to-pdf-converter`}
         file={file}
         onFile={setFile}
-        accept=".cbz,application/vnd.comicbook+zip"
+        accept={accept}
         active={Boolean(file && !error)}
-        messages={m}
+        messages={
+          format === "cbr" && status ? { ...m, clear: m.pdfExport.cancel } : m
+        }
       >
         {error ? (
           <Alert variant="destructive">
@@ -66,7 +84,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
                 </p>
                 <DocumentDownload
                   file={output.pdf}
-                  filename={file!.name.replace(/\.cbz$/i, ".pdf")}
+                  filename={output.source.name.replace(extension, ".pdf")}
                   label={m.pdfExport.download}
                 />
               </div>
@@ -74,13 +92,15 @@ export default function Client({ messages: m }: { messages: Messages }) {
             </>
           ) : null}
           {status ? (
-            <p
-              role="status"
-              className="flex items-center justify-center gap-2 p-4 text-sm wrap-anywhere"
-            >
-              <Spinner className="shrink-0" />
-              {status}
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 p-4">
+              <p
+                role="status"
+                className="flex min-w-0 items-center gap-2 text-sm"
+              >
+                <Spinner className="shrink-0" />
+                <span className="min-w-0 wrap-anywhere">{status}</span>
+              </p>
+            </div>
           ) : null}
           <div className="relative min-h-32 min-w-0 flex-1 bg-muted">
             <div
@@ -108,8 +128,14 @@ export default function Client({ messages: m }: { messages: Messages }) {
           ) : null}
         </div>
       </DocumentWorkspace>
-      <p className="mt-2 text-xs text-muted-foreground">{m.order}</p>
-      <p className="mt-2 text-xs text-muted-foreground">{m.pdfExport.note}</p>
+      {format === "cbz" ? (
+        <>
+          <p className="mt-2 text-xs text-muted-foreground">{m.order}</p>
+          <p className="mt-2 text-xs text-muted-foreground">
+            {m.pdfExport.note}
+          </p>
+        </>
+      ) : null}
     </>
   )
 }

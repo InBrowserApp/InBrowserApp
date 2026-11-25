@@ -9,7 +9,11 @@ export async function convertPdf(
   signal: AbortSignal,
   progress: (value: Progress) => void
 ): Promise<PdfResult> {
-  const comic = await openComic(file, signal)
+  const comic = /\.(?:cbr|rar)$/i.test(file.name)
+    ? await (
+        await import("./compressed")
+      ).openCompressedComic(file, "rar", signal)
+    : await openComic(file, signal)
   try {
     signal.throwIfAborted()
     if (!comic.pages.length) throw new ConversionError({ code: "empty" })
