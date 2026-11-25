@@ -1,0 +1,4 @@
+{
+  "name": "WARC Viewer",
+  "description": "Open WARC and WARC.GZ web archives in your browser. Search captured URLs, preview saved web pages, and inspect capture dates and HTTP headers."
+}

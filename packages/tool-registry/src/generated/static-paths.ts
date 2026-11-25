@@ -36066,6 +36066,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "warc-viewer",
+    language: "ar",
+  },
+  {
+    slug: "warc-viewer",
+    language: "de",
+  },
+  {
+    slug: "warc-viewer",
+    language: "en",
+  },
+  {
+    slug: "warc-viewer",
+    language: "es",
+  },
+  {
+    slug: "warc-viewer",
+    language: "fr",
+  },
+  {
+    slug: "warc-viewer",
+    language: "he",
+  },
+  {
+    slug: "warc-viewer",
+    language: "hi",
+  },
+  {
+    slug: "warc-viewer",
+    language: "id",
+  },
+  {
+    slug: "warc-viewer",
+    language: "it",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ja",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ko",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ms",
+  },
+  {
+    slug: "warc-viewer",
+    language: "nl",
+  },
+  {
+    slug: "warc-viewer",
+    language: "no",
+  },
+  {
+    slug: "warc-viewer",
+    language: "pl",
+  },
+  {
+    slug: "warc-viewer",
+    language: "pt",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ru",
+  },
+  {
+    slug: "warc-viewer",
+    language: "sv",
+  },
+  {
+    slug: "warc-viewer",
+    language: "th",
+  },
+  {
+    slug: "warc-viewer",
+    language: "tr",
+  },
+  {
+    slug: "warc-viewer",
+    language: "vi",
+  },
+  {
+    slug: "warc-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "warc-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },

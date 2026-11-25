@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem WARC",
+  "description": "Mở tệp lưu trữ web WARC và WARC.GZ ngay trong trình duyệt. Tìm URL đã thu thập, xem trước trang đã lưu và kiểm tra thời điểm thu thập cùng tiêu đề HTTP."
+}

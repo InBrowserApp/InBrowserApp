@@ -1,0 +1,4 @@
+{
+  "name": "WARC-viser",
+  "description": "Åpne nettarkiver i WARC- og WARC.GZ-format i nettleseren. Søk etter arkiverte nettadresser, se lagrede nettsider og undersøk arkiveringstidspunkter og HTTP-hoder."
+}

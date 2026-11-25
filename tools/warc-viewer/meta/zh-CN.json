@@ -1,0 +1,4 @@
+{
+  "name": "WARC 查看器",
+  "description": "在浏览器中打开 WARC 和 WARC.GZ 网页归档。搜索已采集的网址，预览保存的网页，并查看采集时间和 HTTP 标头。"
+}

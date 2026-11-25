@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka WARC",
+  "description": "Otwieraj archiwa stron WARC i WARC.GZ w przeglądarce. Wyszukuj zapisane adresy URL, wyświetlaj podgląd stron i sprawdzaj daty zapisu oraz nagłówki HTTP."
+}

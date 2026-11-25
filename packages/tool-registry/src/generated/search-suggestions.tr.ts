@@ -1963,6 +1963,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vlsm-calculator",
   },
   {
+    category: "document",
+    name: "WARC Görüntüleyici",
+    slug: "warc-viewer",
+  },
+  {
     category: "crypto",
     name: "Whirlpool Hash Metin veya Dosya",
     slug: "whirlpool-hash-text-or-file",

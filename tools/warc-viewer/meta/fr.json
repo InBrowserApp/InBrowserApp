@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse WARC",
+  "description": "Ouvre des archives web WARC et WARC.GZ dans ton navigateur. Recherche les URL capturées, affiche les pages enregistrées et consulte les dates de capture et les en-têtes HTTP."
+}
