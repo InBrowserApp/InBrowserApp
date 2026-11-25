@@ -31,7 +31,11 @@ function bookmark(name: string) {
 
 function destination(url?: string | null, bookmarkName?: string | null) {
   const external = url?.trim()
-  if (external && /^(?:https?:\/\/|mailto:)/i.test(external)) return external
+  if (external && /^(?:https?:\/\/|mailto:)/i.test(external)) {
+    return bookmarkName
+      ? `${external}#${encodeURIComponent(bookmarkName)}`
+      : external
+  }
   const anchor =
     bookmarkName || (external?.startsWith("#") ? external.slice(1) : "")
   return anchor ? `#${bookmark(anchor)}` : undefined
