@@ -5,7 +5,11 @@ declare module "bidi-js" {
   }
 
   export default function bidiFactory(): {
-    getEmbeddingLevels(text: string, direction: "ltr" | "rtl"): EmbeddingLevels
+    getEmbeddingLevels(
+      text: string,
+      direction?: "ltr" | "rtl" | "auto"
+    ): EmbeddingLevels
+    getReorderedIndices(text: string, levels: EmbeddingLevels): number[]
     getReorderedString(text: string, levels: EmbeddingLevels): string
   }
 }

@@ -108,6 +108,7 @@
     "@tool/dead-pixel-test": "workspace:*",
     "@tool/device-information": "workspace:*",
     "@tool/dicom-viewer": "workspace:*",
+    "@tool/djvu-to-pdf-converter": "workspace:*",
     "@tool/djvu-viewer": "workspace:*",
     "@tool/dmarc-report-viewer": "workspace:*",
     "@tool/dms-coordinate-converter": "workspace:*",

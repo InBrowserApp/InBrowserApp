@@ -508,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dicom-viewer",
   },
   {
+    category: "ebook",
+    name: "ממיר DjVu ל־PDF",
+    slug: "djvu-to-pdf-converter",
+  },
+  {
     category: "document",
     name: "מציג DjVu",
     slug: "djvu-viewer",

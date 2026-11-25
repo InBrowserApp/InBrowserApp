@@ -9294,6 +9294,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "djvu-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "djvu-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "djvu-viewer",
     language: "ar",
   },

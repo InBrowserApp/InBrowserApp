@@ -508,6 +508,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dicom-viewer",
   },
   {
+    category: "ebook",
+    name: "โปรแกรมแปลง DjVu เป็น PDF",
+    slug: "djvu-to-pdf-converter",
+  },
+  {
     category: "document",
     name: "โปรแกรมดู DjVu",
     slug: "djvu-viewer",
