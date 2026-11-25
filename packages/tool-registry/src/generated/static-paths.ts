@@ -5522,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cb7-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cb7-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbor-messagepack-converter",
     language: "ar",
   },

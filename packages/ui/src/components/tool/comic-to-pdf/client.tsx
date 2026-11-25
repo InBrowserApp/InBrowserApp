@@ -18,6 +18,10 @@ import type { ComicPdfFormat, Messages } from "./types"
 
 const inputFormats = {
   cbz: { accept: ".cbz,application/vnd.comicbook+zip", extension: /\.cbz$/i },
+  cb7: {
+    accept: ".cb7,.7z,application/x-7z-compressed",
+    extension: /\.(?:cb7|7z)$/i,
+  },
   cbr: {
     accept: ".cbr,.rar,application/vnd.comicbook-rar,application/vnd.rar",
     extension: /\.(?:cbr|rar)$/i,
@@ -49,7 +53,7 @@ export default function Client({
         accept={accept}
         active={Boolean(file && !error)}
         messages={
-          format === "cbr" && status ? { ...m, clear: m.pdfExport.cancel } : m
+          format !== "cbz" && status ? { ...m, clear: m.pdfExport.cancel } : m
         }
         renderEmpty={(chooseFile) => (
           <Empty className="min-h-60 bg-muted/30">
@@ -101,15 +105,13 @@ export default function Client({
             </>
           ) : null}
           {status ? (
-            <div className="flex flex-wrap items-center justify-center gap-3 p-4">
-              <p
-                role="status"
-                className="flex min-w-0 items-center gap-2 text-sm"
-              >
-                <Spinner className="shrink-0" />
-                <span className="min-w-0 wrap-anywhere">{status}</span>
-              </p>
-            </div>
+            <p
+              role="status"
+              className="flex min-w-0 items-center justify-center gap-2 p-4 text-sm"
+            >
+              <Spinner className="shrink-0" />
+              <span className="min-w-0 wrap-anywhere">{status}</span>
+            </p>
           ) : null}
           <div className="relative min-h-32 min-w-0 flex-1 bg-muted">
             <div

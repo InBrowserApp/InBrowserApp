@@ -77,6 +77,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "cb7-reader": () => import("@tool/cb7-reader/page"),
+  "cb7-to-pdf-converter": () => import("@tool/cb7-to-pdf-converter/page"),
   "cbor-messagepack-converter": () =>
     import("@tool/cbor-messagepack-converter/page"),
   "cbr-reader": () => import("@tool/cbr-reader/page"),
