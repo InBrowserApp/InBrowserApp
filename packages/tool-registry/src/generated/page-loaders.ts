@@ -258,6 +258,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ipv6-address-to-mac-address-converter": () =>
     import("@tool/ipv6-address-to-mac-address-converter/page"),
   "ipv6-ula-generator": () => import("@tool/ipv6-ula-generator/page"),
+  "ipynb-to-pdf-converter": () => import("@tool/ipynb-to-pdf-converter/page"),
   "isbn-validator": () => import("@tool/isbn-validator/page"),
   "jmespath-tester": () => import("@tool/jmespath-tester/page"),
   "json-diff-path": () => import("@tool/json-diff-path/page"),

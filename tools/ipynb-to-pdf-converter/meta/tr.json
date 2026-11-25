@@ -1,0 +1,4 @@
+{
+  "name": "IPYNB’den PDF’ye Dönüştürücü",
+  "description": "Kaydedilmiş bir Jupyter not defterini (.ipynb) PDF’ye dönüştürün. Markdown içeriğini, kodu ve kaydedilmiş çıktıları önizleyip yazdırılabilir bir kopyayı doğrudan tarayıcınızda kaydedin."
+}

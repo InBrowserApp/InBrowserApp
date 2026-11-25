@@ -11,8 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@workspace/notebook": "workspace:*",
-    "turndown": "catalog:",
-    "@workspace/web-document": "workspace:*"
+    "turndown": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -22,6 +21,7 @@
   "devDependencies": {
     "@testing-library/react": "catalog:",
     "vitest": "catalog:",
-    "@types/turndown": "catalog:"
+    "@types/turndown": "catalog:",
+    "@workspace/web-document": "workspace:*"
   }
 }

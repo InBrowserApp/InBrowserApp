@@ -8,7 +8,8 @@ export function fragment(
   html: string,
   attachments: Record<string, Bundle>,
   m: Messages,
-  svg?: string
+  svg?: string,
+  links: "inert" | "direct" = "inert"
 ) {
   const inert = document.createElement("template").content.ownerDocument
   const root = inert.createElement("div")
@@ -60,6 +61,7 @@ export function fragment(
   const clean = prepareWebDocument(root.innerHTML, {
     emptyText: "",
     headingText: m.markdown,
+    links,
   })
   const doc = new DOMParser().parseFromString(clean.html, "text/html")
   // Output styles must not restyle other cells or the reader controls.

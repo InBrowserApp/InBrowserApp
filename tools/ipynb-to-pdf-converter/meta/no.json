@@ -1,0 +1,4 @@
+{
+  "name": "Konverter IPYNB til PDF",
+  "description": "Konverter en lagret Jupyter-notatbok (.ipynb) til PDF. Forhåndsvis Markdown, kode og lagrede utdata, og lagre en utskriftsklar kopi lokalt i nettleseren."
+}

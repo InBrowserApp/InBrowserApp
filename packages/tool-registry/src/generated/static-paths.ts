@@ -19230,6 +19230,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipynb-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipynb-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

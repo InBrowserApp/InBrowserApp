@@ -1,0 +1,4 @@
+{
+  "name": "IPYNBをPDFに変換",
+  "description": "保存した Jupyter Notebook（.ipynb）を PDF に変換します。Markdown、コード、保存済みの出力をプレビューし、印刷用の PDF をブラウザーで端末に保存できます。"
+}

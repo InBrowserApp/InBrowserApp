@@ -1,7 +1,5 @@
-import { preparePreview } from "@workspace/notebook"
-import type { Notebook } from "@workspace/notebook"
+import { prepareNotebookDocument, type Notebook } from "@workspace/notebook"
 import type { Messages } from "../types"
-import { readableImage } from "@workspace/web-document"
 
 export async function notebookDocument(
   notebook: Notebook,
@@ -9,36 +7,12 @@ export async function notebookDocument(
   signal: AbortSignal,
   m: Messages
 ) {
-  const preview = await preparePreview(notebook, m, signal)
-  const doc = new DOMParser().parseFromString(preview.html, "text/html")
-  doc.title = title
-  let unavailableImage = false
-  const decoded = new Map<string, boolean>()
-  for (const image of doc.querySelectorAll("img")) {
-    const src = image.getAttribute("src") || ""
-    if (!src) {
-      const placeholder = doc.createElement("p")
-      placeholder.className = "nb-notice"
-      placeholder.textContent = image.alt || m.missingAttachment
-      image.replaceWith(placeholder)
-      continue
-    }
-    let readable = decoded.get(src)
-    if (readable === undefined) {
-      readable = await readableImage(src, signal)
-      decoded.set(src, readable)
-    }
-    if (!readable) {
-      const placeholder = doc.createElement("p")
-      placeholder.className = "nb-notice"
-      placeholder.textContent = [image.alt, m.imageUnavailable]
-        .filter(Boolean)
-        .join(" · ")
-      image.replaceWith(placeholder)
-      unavailableImage = true
-    }
-  }
-  signal.throwIfAborted()
+  const { preview, doc, unavailableImage } = await prepareNotebookDocument(
+    notebook,
+    title,
+    signal,
+    m
+  )
   const notes = [m.safePreview, m.layoutNotice]
   if (preview.notes.local) notes.push(m.localResources)
   if (preview.notes.remote) notes.push(m.remoteResources)

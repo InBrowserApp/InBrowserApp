@@ -1,0 +1,57 @@
+// @vitest-environment jsdom
+import { expect, it, vi } from "vitest"
+import { openNotebook } from "@workspace/notebook"
+import messages from "./messages/en.json"
+import { prepareNotebookPrint } from "./print-document"
+
+vi.mock("@workspace/notebook", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@workspace/notebook")>()),
+  openNotebook: vi.fn(),
+}))
+
+it("keeps code and saved results visible in a printable document", async () => {
+  const signal = new AbortController().signal
+  const file = new File(["notebook"], "Quarterly <review>.ipynb")
+  vi.mocked(openNotebook).mockResolvedValue({
+    cells: [
+      {
+        kind: "code",
+        html: '<h2 id="sample">Sample</h2><pre><code>print(42)</code></pre><a href="HTTPS://example.com/page">Report</a><a href="#sample">Jump</a><img src="missing.png" alt="Unavailable chart"><details class="nb-section"><p>Authored details</p></details>',
+        attachments: {},
+        count: 1,
+        outputs: [
+          {
+            label: "stdout",
+            html: "<pre>42</pre>",
+            interactive: false,
+            unsupported: false,
+          },
+        ],
+      },
+    ],
+  })
+
+  const html = await prepareNotebookPrint(file, "en", messages, signal)
+  const doc = new DOMParser().parseFromString(html, "text/html")
+
+  expect(openNotebook).toHaveBeenCalledWith(file, signal)
+  expect(doc.documentElement.lang).toBe("en")
+  expect(doc.title).toBe("Quarterly <review>")
+  expect(doc.querySelector("body > .nb-cell > details")).toBeNull()
+  expect(doc.querySelector(".nb-content details")?.textContent).toBe(
+    "Authored details"
+  )
+  expect(doc.querySelector("code")?.textContent).toBe("print(42)")
+  expect(doc.querySelector("a")?.href).toBe("https://example.com/page")
+  expect(doc.querySelector('a[href^="#"]')?.getAttribute("href")).toBe(
+    "#" + doc.querySelector("h2")?.id
+  )
+  expect(doc.querySelector("img")).toBeNull()
+  expect(doc.body.textContent).toContain("Unavailable chart")
+  expect(doc.querySelector(".nb-output pre")?.textContent).toBe("42")
+  expect(
+    doc
+      .querySelector('meta[http-equiv="Content-Security-Policy"]')
+      ?.getAttribute("content")
+  ).toContain("script-src 'none'")
+})

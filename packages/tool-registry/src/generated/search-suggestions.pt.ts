@@ -1048,6 +1048,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ipv6-ula-generator",
   },
   {
+    category: "pdf",
+    name: "Converter IPYNB em PDF",
+    slug: "ipynb-to-pdf-converter",
+  },
+  {
     category: "text",
     name: "Validador de ISBN",
     slug: "isbn-validator",

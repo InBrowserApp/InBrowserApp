@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter IPYNB na PDF",
+  "description": "Konwertuj zapisany notatnik Jupyter (.ipynb) na PDF. Sprawdź podgląd Markdown, kodu i zapisanych wyników, a następnie zapisz w przeglądarce kopię do druku."
+}
