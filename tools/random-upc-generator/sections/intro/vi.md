@@ -8,4 +8,4 @@ Mã vạch UPC-A biểu diễn mã định danh sản phẩm gồm 12 chữ số
 
 ## Dùng mã để thử nghiệm bán lẻ
 
-Dùng các mã mẫu này để thử nghiệm biểu mẫu sản phẩm, nhập dữ liệu tồn kho hoặc kiểm tra tính hợp lệ của UPC. Lưu chúng dưới dạng văn bản để giữ nguyên các số 0 ở đầu. Để in hình ảnh mã vạch thử nghiệm, hãy dán mã đã tạo vào [Trình tạo mã vạch](/tools/barcode-generator/) và chọn `UPC`. Đối với danh sách sản phẩm đang bán hoặc bao bì, hãy dùng GTIN được cấp cho sản phẩm.
+Dùng các mã mẫu này để thử nghiệm biểu mẫu sản phẩm, nhập dữ liệu tồn kho hoặc kiểm tra tính hợp lệ của UPC. Lưu chúng dưới dạng văn bản để giữ nguyên các số 0 ở đầu. Để in hình ảnh mã vạch thử nghiệm, hãy dán mã đã tạo vào [Trình tạo mã vạch](/vi/tools/barcode-generator/) và chọn `UPC`. Đối với danh sách sản phẩm đang bán hoặc bao bì, hãy dùng GTIN được cấp cho sản phẩm.

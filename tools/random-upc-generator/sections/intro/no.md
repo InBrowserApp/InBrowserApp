@@ -8,4 +8,4 @@ En UPC-A-strekkode representerer en 12-sifret produktidentifikator kalt `GTIN-12
 
 ## Bruk kodene til testing i varehandelen
 
-Bruk disse eksempelkodene til å teste produktskjemaer, lagerimport eller UPC-validering. Lagre dem som tekst slik at eventuelle innledende nuller bevares. For å skrive ut et strekkodebilde til testing, limer du inn en generert kode i [strekkodegeneratoren](/tools/barcode-generator/) og velger `UPC`. For en faktisk produktoppføring eller emballasje bruker du GTIN-nummeret som er tildelt produktet.
+Bruk disse eksempelkodene til å teste produktskjemaer, lagerimport eller UPC-validering. Lagre dem som tekst slik at eventuelle innledende nuller bevares. For å skrive ut et strekkodebilde til testing, limer du inn en generert kode i [strekkodegeneratoren](/no/tools/barcode-generator/) og velger `UPC`. For en faktisk produktoppføring eller emballasje bruker du GTIN-nummeret som er tildelt produktet.

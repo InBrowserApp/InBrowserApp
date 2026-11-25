@@ -8,4 +8,4 @@ Kod kreskowy UPC-A przedstawia 12-cyfrowy identyfikator produktu `GTIN-12`. Osta
 
 ## Używanie kodów do testów handlu detalicznego
 
-Użyj tych przykładowych kodów do testowania formularzy produktów, importu danych magazynowych lub walidacji UPC. Zapisuj je jako tekst, aby zachować zera na początku. Aby wydrukować testowy obraz kodu kreskowego, wklej wygenerowany kod do [generatora kodów kreskowych](/tools/barcode-generator/) i wybierz `UPC`. W rzeczywistej ofercie produktu lub na opakowaniu użyj numeru GTIN przypisanego produktowi.
+Użyj tych przykładowych kodów do testowania formularzy produktów, importu danych magazynowych lub walidacji UPC. Zapisuj je jako tekst, aby zachować zera na początku. Aby wydrukować testowy obraz kodu kreskowego, wklej wygenerowany kod do [generatora kodów kreskowych](/pl/tools/barcode-generator/) i wybierz `UPC`. W rzeczywistej ofercie produktu lub na opakowaniu użyj numeru GTIN przypisanego produktowi.

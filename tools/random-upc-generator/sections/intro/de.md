@@ -8,4 +8,4 @@ Ein UPC-A-Barcode stellt eine 12-stellige Produktkennung namens `GTIN-12` dar. D
 
 ## Codes für Handelstests verwenden
 
-Verwenden Sie diese Beispielcodes, um Produktformulare, Inventarimporte oder die UPC-Validierung zu testen. Speichern Sie sie als Text, damit führende Nullen erhalten bleiben. Um ein Testbarcode-Bild zu drucken, fügen Sie einen generierten Code in den [Barcode-Generator](/tools/barcode-generator/) ein und wählen Sie `UPC`. Verwenden Sie für ein tatsächliches Produktangebot oder eine Verpackung die dem Produkt zugewiesene GTIN.
+Verwenden Sie diese Beispielcodes, um Produktformulare, Inventarimporte oder die UPC-Validierung zu testen. Speichern Sie sie als Text, damit führende Nullen erhalten bleiben. Um ein Testbarcode-Bild zu drucken, fügen Sie einen generierten Code in den [Barcode-Generator](/de/tools/barcode-generator/) ein und wählen Sie `UPC`. Verwenden Sie für ein tatsächliches Produktangebot oder eine Verpackung die dem Produkt zugewiesene GTIN.

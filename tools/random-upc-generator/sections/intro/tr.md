@@ -8,4 +8,4 @@ UPC-A barkodu, `GTIN-12` adı verilen 12 basamaklı bir ürün tanımlayıcısı
 
 ## Kodları perakende testlerinde kullanın
 
-Bu örnek kodlarla ürün formlarını, envanter içe aktarımlarını veya UPC doğrulamasını test edin. Baştaki sıfırların korunması için kodları metin olarak saklayın. Test amaçlı bir barkod görseli yazdırmak için oluşturulan kodu [Barkod Oluşturucu](/tools/barcode-generator/) aracına yapıştırın ve `UPC` seçin. Gerçek bir ürün listesi veya ambalajı için ürüne atanmış GTIN'i kullanın.
+Bu örnek kodlarla ürün formlarını, envanter içe aktarımlarını veya UPC doğrulamasını test edin. Baştaki sıfırların korunması için kodları metin olarak saklayın. Test amaçlı bir barkod görseli yazdırmak için oluşturulan kodu [Barkod Oluşturucu](/tr/tools/barcode-generator/) aracına yapıştırın ve `UPC` seçin. Gerçek bir ürün listesi veya ambalajı için ürüne atanmış GTIN'i kullanın.

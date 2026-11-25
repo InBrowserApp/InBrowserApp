@@ -8,4 +8,4 @@ Kod bar UPC-A mewakili pengecam produk 12 digit yang dipanggil `GTIN-12`. Digit 
 
 ## Gunakan kod untuk ujian runcit
 
-Gunakan kod contoh ini untuk menguji borang produk, import inventori atau pengesahan UPC. Simpannya sebagai teks supaya sifar di hadapan dikekalkan. Untuk mencetak imej kod bar ujian, tampal kod yang dijana ke dalam [Penjana Kod Bar](/tools/barcode-generator/) dan pilih `UPC`. Untuk penyenaraian produk sebenar atau pembungkusan, gunakan GTIN yang diberikan kepada produk tersebut.
+Gunakan kod contoh ini untuk menguji borang produk, import inventori atau pengesahan UPC. Simpannya sebagai teks supaya sifar di hadapan dikekalkan. Untuk mencetak imej kod bar ujian, tampal kod yang dijana ke dalam [Penjana Kod Bar](/ms/tools/barcode-generator/) dan pilih `UPC`. Untuk penyenaraian produk sebenar atau pembungkusan, gunakan GTIN yang diberikan kepada produk tersebut.

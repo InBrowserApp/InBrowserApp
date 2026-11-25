@@ -8,4 +8,4 @@ En UPC-A-streckkod representerar en produktidentifierare med 12 siffror som kall
 
 ## Använd koderna för tester inom detaljhandeln
 
-Använd exempelkoderna för att testa produktformulär, lagerimporter eller UPC-validering. Spara dem som text så att eventuella inledande nollor behålls. För att skriva ut en testbild av en streckkod, klistra in en genererad kod i [streckkodsgeneratorn](/tools/barcode-generator/) och välj `UPC`. Använd det GTIN som tilldelats produkten för en faktisk produktlistning eller förpackning.
+Använd exempelkoderna för att testa produktformulär, lagerimporter eller UPC-validering. Spara dem som text så att eventuella inledande nollor behålls. För att skriva ut en testbild av en streckkod, klistra in en genererad kod i [streckkodsgeneratorn](/sv/tools/barcode-generator/) och välj `UPC`. Använd det GTIN som tilldelats produkten för en faktisk produktlistning eller förpackning.

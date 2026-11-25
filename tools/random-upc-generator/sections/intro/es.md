@@ -8,4 +8,4 @@ Un código de barras UPC-A representa un identificador de producto de 12 dígito
 
 ## Usar los códigos para pruebas comerciales
 
-Usa estos códigos de ejemplo para probar formularios de productos, importaciones de inventario o la validación de UPC. Guárdalos como texto para conservar los ceros iniciales. Para imprimir una imagen de código de barras de prueba, pega un código generado en el [Generador de Códigos de Barras](/tools/barcode-generator/) y selecciona `UPC`. Para una ficha de producto real o su embalaje, utiliza el GTIN asignado al producto.
+Usa estos códigos de ejemplo para probar formularios de productos, importaciones de inventario o la validación de UPC. Guárdalos como texto para conservar los ceros iniciales. Para imprimir una imagen de código de barras de prueba, pega un código generado en el [Generador de Códigos de Barras](/es/tools/barcode-generator/) y selecciona `UPC`. Para una ficha de producto real o su embalaje, utiliza el GTIN asignado al producto.

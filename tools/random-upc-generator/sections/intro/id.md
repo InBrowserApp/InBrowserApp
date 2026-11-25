@@ -8,4 +8,4 @@ Kode batang UPC-A merepresentasikan pengenal produk 12 digit yang disebut `GTIN-
 
 ## Gunakan kode untuk pengujian ritel
 
-Gunakan kode contoh ini untuk menguji formulir produk, impor inventaris, atau validasi UPC. Simpan sebagai teks agar angka nol di depan tetap ada. Untuk mencetak gambar kode batang pengujian, tempel kode yang dihasilkan ke [Generator Kode Batang](/tools/barcode-generator/) dan pilih `UPC`. Untuk daftar produk yang dijual atau kemasan, gunakan GTIN yang ditetapkan untuk produk tersebut.
+Gunakan kode contoh ini untuk menguji formulir produk, impor inventaris, atau validasi UPC. Simpan sebagai teks agar angka nol di depan tetap ada. Untuk mencetak gambar kode batang pengujian, tempel kode yang dihasilkan ke [Generator Kode Batang](/id/tools/barcode-generator/) dan pilih `UPC`. Untuk daftar produk yang dijual atau kemasan, gunakan GTIN yang ditetapkan untuk produk tersebut.
