@@ -12698,6 +12698,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gltf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "de",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "en",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "es",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "he",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "id",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "it",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "no",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "th",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "gpu-information",
     language: "ar",
   },

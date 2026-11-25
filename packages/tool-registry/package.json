@@ -145,6 +145,7 @@
     "@tool/gif-to-apng-converter": "workspace:*",
     "@tool/github-actions-workflow-validator": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
+    "@tool/gltf-viewer": "workspace:*",
     "@tool/gpu-information": "workspace:*",
     "@tool/gpx-viewer": "workspace:*",
     "@tool/graphviz-dot-previewer": "workspace:*",

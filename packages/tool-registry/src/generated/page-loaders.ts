@@ -176,6 +176,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "github-actions-workflow-validator": () =>
     import("@tool/github-actions-workflow-validator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
+  "gltf-viewer": () => import("@tool/gltf-viewer/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
   "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),

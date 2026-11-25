@@ -6,7 +6,8 @@
   "exports": {
     "./stl": "./src/stl.ts",
     "./obj": "./src/obj.ts",
-    "./dispose": "./src/dispose.ts"
+    "./dispose": "./src/dispose.ts",
+    "./gltf": "./src/gltf.ts"
   },
   "dependencies": {
     "three": "catalog:"

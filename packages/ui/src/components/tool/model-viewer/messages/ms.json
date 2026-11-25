@@ -16,5 +16,12 @@
   "controls": "Seret untuk putar · Tatal untuk zum · Seret dengan butang kanan untuk alih pandangan",
   "touchControls": "Seret untuk putar · Cubit untuk zum · Seret dengan dua jari untuk alih pandangan",
   "keyboardControls": "Gunakan kekunci anak panah untuk memutar model dan + atau − untuk zum. Tekan dan tahan Shift sambil menggunakan kekunci anak panah untuk mengalih pandangan.",
-  "missingResources": "Sesetengah bahan atau tekstur tiada. Buka semula model bersama-sama fail iringannya."
+  "missingResources": "Sesetengah bahan atau tekstur tiada. Buka semula model bersama-sama fail iringannya.",
+  "companionHelp": "Pilih model bersama-sama fail iringannya.",
+  "missingCompanions": "Sumber model tiada. Buka model bersama-sama fail penimbal dan imej tekstur yang dirujuknya.",
+  "animation": "Animasi",
+  "clip": "Klip {number}",
+  "playAnimation": "Mainkan animasi",
+  "pauseAnimation": "Jeda animasi",
+  "openFolder": "Buka folder"
 }

@@ -2,7 +2,22 @@ import { useEffect, useId, useRef, useState } from "react"
 import { DocumentIconButton } from "../document-icon-button"
 import { Alert, AlertDescription } from "../../ui/alert"
 import { Button } from "../../ui/button"
-import { LayoutGrid, Maximize2, ZoomIn, ZoomOut } from "../../../icons"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../ui/select"
+import {
+  LayoutGrid,
+  Maximize2,
+  Pause,
+  Play,
+  ZoomIn,
+  ZoomOut,
+} from "../../../icons"
 import { createModelViewport } from "./viewport"
 import type { KeyboardEvent } from "react"
 import type { OpenModel } from "./load-model"
@@ -30,6 +45,8 @@ export default function ModelPanel({
     ReturnType<typeof createModelViewport> | "error"
   >()
   const [wireframe, setWireframe] = useState(false)
+  const [clip, setClip] = useState(0)
+  const [playing, setPlaying] = useState(false)
   useEffect(() => {
     try {
       const view = createModelViewport(host.current!, model)
@@ -48,8 +65,15 @@ export default function ModelPanel({
       </Alert>
     )
   }
+  const animations = model.animations ?? []
+  const numberFormat = new Intl.NumberFormat(lang)
   const dimensions = new Intl.NumberFormat(lang, {
     maximumSignificantDigits: 5,
+    ...(model.unit && {
+      style: "unit",
+      unit: model.unit,
+      unitDisplay: "short",
+    }),
   })
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     if (!viewport || viewport === "error") return
@@ -92,6 +116,53 @@ export default function ModelPanel({
           <LayoutGrid data-icon="inline-start" aria-hidden="true" />
           {m.wireframe}
         </Button>
+        {animations.length > 0 && (
+          <div className="ms-auto flex min-w-0 flex-wrap items-center justify-end gap-1.5">
+            <Select
+              value={String(clip)}
+              onValueChange={(value) => {
+                const index = Number(value)
+                setClip(index)
+                viewport?.setPlayback(index, playing)
+              }}
+            >
+              <SelectTrigger
+                size="sm"
+                className="max-w-44"
+                aria-label={m.animation}
+              >
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  {animations.map((animation, index) => (
+                    <SelectItem key={animation.uuid} value={String(index)}>
+                      {animation.name ||
+                        m.clip.replace(
+                          "{number}",
+                          numberFormat.format(index + 1)
+                        )}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <DocumentIconButton
+              label={playing ? m.pauseAnimation : m.playAnimation}
+              disabled={!viewport}
+              onClick={() => {
+                viewport?.setPlayback(clip, !playing)
+                setPlaying(!playing)
+              }}
+            >
+              {playing ? (
+                <Pause aria-hidden="true" />
+              ) : (
+                <Play aria-hidden="true" />
+              )}
+            </DocumentIconButton>
+          </div>
+        )}
       </div>
       <div
         ref={host}

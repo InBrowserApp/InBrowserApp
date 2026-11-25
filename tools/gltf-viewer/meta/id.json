@@ -1,0 +1,4 @@
+{
+  "name": "Penampil GLB / glTF",
+  "description": "Buka model GLB dan glTF 2.0 di browser. Periksa geometri, material, dan tekstur, serta putar animasi model."
+}

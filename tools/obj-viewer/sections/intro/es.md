@@ -11,3 +11,5 @@ Puedes abrir un OBJ aunque falten archivos asociados. Las superficies afectadas 
 ## Ver otros formatos 3D
 
 Si tienes una malla triangular exportada para impresión 3D, usa el [Visor de STL](../stl-viewer/). Si la pieza o el ensamblaje CAD original está en un archivo `.step` o `.stp`, ábrelo con el [Visor de STEP](../step-viewer/).
+
+- [Visor de GLB / glTF](../gltf-viewer/)

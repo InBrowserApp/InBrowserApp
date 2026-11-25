@@ -11,3 +11,5 @@ Die Gesamtabmessungen zeigen die Ausdehnung in X-, Y- und Z-Richtung. STL speich
 ## Weitere 3D-Dateiformate öffnen
 
 STL beschreibt die Oberfläche eines Bauteils mit Dreiecken. Für eine Wavefront-Datei mit zugehöriger Materialbibliothek eignet sich der [OBJ-Betrachter](../obj-viewer/). CAD-Austauschdateien mit einer Baugruppe oder einem Volumenmodell kannst du im [STEP-Betrachter](../step-viewer/) öffnen.
+
+- [GLB- und glTF-Betrachter](../gltf-viewer/)

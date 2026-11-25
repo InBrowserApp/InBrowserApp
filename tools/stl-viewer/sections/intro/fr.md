@@ -11,3 +11,5 @@ Les dimensions hors tout indiquent l’étendue du modèle sur les axes X, Y et 
 ## Ouvrir d’autres formats 3D
 
 Le STL représente la surface d’une pièce par des triangles. Pour ouvrir un fichier Wavefront et sa bibliothèque de matériaux, utilisez la [Visionneuse OBJ](../obj-viewer/). Pour un fichier d’échange CAO contenant un assemblage ou un solide, utilisez la [Visionneuse STEP](../step-viewer/).
+
+- [Visionneuse GLB / glTF](../gltf-viewer/)

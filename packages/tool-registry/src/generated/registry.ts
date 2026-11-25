@@ -17699,6 +17699,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gltf-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "glb",
+      "gltf",
+      "3d",
+      "model",
+      "khronos",
+      "textures",
+      "animation",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GLB / glTF",
+        description:
+          "افتح نماذج GLB وglTF 2.0 في متصفحك. افحص هندسة النموذج ومواده وصور خاماته، وشغّل حركاته.",
+      },
+      de: {
+        name: "GLB- und glTF-Betrachter",
+        description:
+          "Öffne GLB- und glTF-2.0-Modelle im Browser. Sieh dir Geometrie, Materialien und Texturen an und spiele die Animationen des Modells ab.",
+      },
+      en: {
+        name: "GLB / glTF Viewer",
+        description:
+          "Open GLB and glTF 2.0 models in your browser. Inspect geometry, materials and textures, and play the model’s animations.",
+      },
+      es: {
+        name: "Visor de GLB / glTF",
+        description:
+          "Abre modelos GLB y glTF 2.0 en tu navegador. Inspecciona la geometría, los materiales y las texturas, y reproduce las animaciones del modelo.",
+      },
+      fr: {
+        name: "Visionneuse GLB / glTF",
+        description:
+          "Ouvrez des modèles GLB et glTF 2.0 dans votre navigateur. Examinez leur géométrie, leurs matériaux et leurs textures, puis lancez leurs animations.",
+      },
+      he: {
+        name: "מציג GLB / glTF",
+        description:
+          "פתחו מודלים בפורמט GLB או glTF 2.0 בדפדפן. בדקו את הגאומטריה, החומרים והמרקמים והפעילו את האנימציות של המודל.",
+      },
+      hi: {
+        name: "GLB / glTF व्यूअर",
+        description:
+          "अपने ब्राउज़र में GLB और glTF 2.0 मॉडल खोलें। ज्यामिति, मटीरियल और टेक्सचर देखें और मॉडल के ऐनिमेशन चलाएँ।",
+      },
+      id: {
+        name: "Penampil GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 di browser. Periksa geometri, material, dan tekstur, serta putar animasi model.",
+      },
+      it: {
+        name: "Visualizzatore GLB / glTF",
+        description:
+          "Apri modelli GLB e glTF 2.0 nel browser. Esamina geometria, materiali e texture e riproduci le animazioni del modello.",
+      },
+      ja: {
+        name: "GLB / glTF ビューアー",
+        description:
+          "GLB および glTF 2.0 モデルをブラウザーで開きます。形状、マテリアル、テクスチャを確認し、モデルのアニメーションを再生できます。",
+      },
+      ko: {
+        name: "GLB / glTF 뷰어",
+        description:
+          "브라우저에서 GLB 및 glTF 2.0 모델을 여세요. 형상, 재질, 텍스처를 살펴보고 모델의 애니메이션을 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 dalam pelayar. Periksa geometri, bahan dan tekstur, serta mainkan animasi model.",
+      },
+      nl: {
+        name: "GLB- en glTF-viewer",
+        description:
+          "Open GLB- en glTF 2.0-modellen in je browser. Bekijk de geometrie, materialen en texturen en speel de animaties van het model af.",
+      },
+      no: {
+        name: "GLB- og glTF-viser",
+        description:
+          "Åpne GLB- og glTF 2.0-modeller i nettleseren. Se på geometri, materialer og teksturer, og spill av animasjonene i modellen.",
+      },
+      pl: {
+        name: "Przeglądarka plików GLB i glTF",
+        description:
+          "Otwieraj modele GLB i glTF 2.0 w przeglądarce. Oglądaj geometrię, materiały i tekstury oraz odtwarzaj animacje modelu.",
+      },
+      pt: {
+        name: "Visualizador de GLB / glTF",
+        description:
+          "Abra modelos GLB e glTF 2.0 no navegador. Inspecione a geometria, os materiais e as texturas e reproduza as animações do modelo.",
+      },
+      ru: {
+        name: "Просмотр GLB / glTF",
+        description:
+          "Открывайте модели GLB и glTF 2.0 прямо в браузере. Просматривайте геометрию, материалы и текстуры и воспроизводите анимации модели.",
+      },
+      sv: {
+        name: "GLB- och glTF-visare",
+        description:
+          "Öppna GLB- och glTF 2.0-modeller i webbläsaren. Granska geometri, material och texturer och spela upp modellens animationer.",
+      },
+      th: {
+        name: "โปรแกรมดู GLB / glTF",
+        description:
+          "เปิดโมเดล GLB และ glTF 2.0 ในเบราว์เซอร์ ตรวจสอบรูปทรง วัสดุ และเท็กซ์เจอร์ พร้อมเล่นแอนิเมชันของโมเดล",
+      },
+      tr: {
+        name: "GLB / glTF Görüntüleyici",
+        description:
+          "GLB ve glTF 2.0 modellerini tarayıcınızda açın. Geometriyi, malzemeleri ve dokuları inceleyin, modelin animasyonlarını oynatın.",
+      },
+      vi: {
+        name: "Trình xem GLB / glTF",
+        description:
+          "Mở mô hình GLB và glTF 2.0 trong trình duyệt. Kiểm tra hình học, vật liệu và họa tiết, đồng thời phát hoạt ảnh của mô hình.",
+      },
+      "zh-CN": {
+        name: "GLB / glTF 查看器",
+        description:
+          "在浏览器中打开 GLB 和 glTF 2.0 模型。检查几何形状、材质和纹理，并播放模型动画。",
+      },
+      "zh-TW": {
+        name: "GLB / glTF 檢視器",
+        description:
+          "在瀏覽器中開啟 GLB 和 glTF 2.0 模型。檢查幾何形狀、材質與貼圖，並播放模型動畫。",
+      },
+    },
+  },
+  {
     slug: "gpu-information",
     category: "web",
     icon: "cpu",
@@ -69521,6 +69653,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "gltf-viewer": {
+    slug: "gltf-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "glb",
+      "gltf",
+      "3d",
+      "model",
+      "khronos",
+      "textures",
+      "animation",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GLB / glTF",
+        description:
+          "افتح نماذج GLB وglTF 2.0 في متصفحك. افحص هندسة النموذج ومواده وصور خاماته، وشغّل حركاته.",
+      },
+      de: {
+        name: "GLB- und glTF-Betrachter",
+        description:
+          "Öffne GLB- und glTF-2.0-Modelle im Browser. Sieh dir Geometrie, Materialien und Texturen an und spiele die Animationen des Modells ab.",
+      },
+      en: {
+        name: "GLB / glTF Viewer",
+        description:
+          "Open GLB and glTF 2.0 models in your browser. Inspect geometry, materials and textures, and play the model’s animations.",
+      },
+      es: {
+        name: "Visor de GLB / glTF",
+        description:
+          "Abre modelos GLB y glTF 2.0 en tu navegador. Inspecciona la geometría, los materiales y las texturas, y reproduce las animaciones del modelo.",
+      },
+      fr: {
+        name: "Visionneuse GLB / glTF",
+        description:
+          "Ouvrez des modèles GLB et glTF 2.0 dans votre navigateur. Examinez leur géométrie, leurs matériaux et leurs textures, puis lancez leurs animations.",
+      },
+      he: {
+        name: "מציג GLB / glTF",
+        description:
+          "פתחו מודלים בפורמט GLB או glTF 2.0 בדפדפן. בדקו את הגאומטריה, החומרים והמרקמים והפעילו את האנימציות של המודל.",
+      },
+      hi: {
+        name: "GLB / glTF व्यूअर",
+        description:
+          "अपने ब्राउज़र में GLB और glTF 2.0 मॉडल खोलें। ज्यामिति, मटीरियल और टेक्सचर देखें और मॉडल के ऐनिमेशन चलाएँ।",
+      },
+      id: {
+        name: "Penampil GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 di browser. Periksa geometri, material, dan tekstur, serta putar animasi model.",
+      },
+      it: {
+        name: "Visualizzatore GLB / glTF",
+        description:
+          "Apri modelli GLB e glTF 2.0 nel browser. Esamina geometria, materiali e texture e riproduci le animazioni del modello.",
+      },
+      ja: {
+        name: "GLB / glTF ビューアー",
+        description:
+          "GLB および glTF 2.0 モデルをブラウザーで開きます。形状、マテリアル、テクスチャを確認し、モデルのアニメーションを再生できます。",
+      },
+      ko: {
+        name: "GLB / glTF 뷰어",
+        description:
+          "브라우저에서 GLB 및 glTF 2.0 모델을 여세요. 형상, 재질, 텍스처를 살펴보고 모델의 애니메이션을 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 dalam pelayar. Periksa geometri, bahan dan tekstur, serta mainkan animasi model.",
+      },
+      nl: {
+        name: "GLB- en glTF-viewer",
+        description:
+          "Open GLB- en glTF 2.0-modellen in je browser. Bekijk de geometrie, materialen en texturen en speel de animaties van het model af.",
+      },
+      no: {
+        name: "GLB- og glTF-viser",
+        description:
+          "Åpne GLB- og glTF 2.0-modeller i nettleseren. Se på geometri, materialer og teksturer, og spill av animasjonene i modellen.",
+      },
+      pl: {
+        name: "Przeglądarka plików GLB i glTF",
+        description:
+          "Otwieraj modele GLB i glTF 2.0 w przeglądarce. Oglądaj geometrię, materiały i tekstury oraz odtwarzaj animacje modelu.",
+      },
+      pt: {
+        name: "Visualizador de GLB / glTF",
+        description:
+          "Abra modelos GLB e glTF 2.0 no navegador. Inspecione a geometria, os materiais e as texturas e reproduza as animações do modelo.",
+      },
+      ru: {
+        name: "Просмотр GLB / glTF",
+        description:
+          "Открывайте модели GLB и glTF 2.0 прямо в браузере. Просматривайте геометрию, материалы и текстуры и воспроизводите анимации модели.",
+      },
+      sv: {
+        name: "GLB- och glTF-visare",
+        description:
+          "Öppna GLB- och glTF 2.0-modeller i webbläsaren. Granska geometri, material och texturer och spela upp modellens animationer.",
+      },
+      th: {
+        name: "โปรแกรมดู GLB / glTF",
+        description:
+          "เปิดโมเดล GLB และ glTF 2.0 ในเบราว์เซอร์ ตรวจสอบรูปทรง วัสดุ และเท็กซ์เจอร์ พร้อมเล่นแอนิเมชันของโมเดล",
+      },
+      tr: {
+        name: "GLB / glTF Görüntüleyici",
+        description:
+          "GLB ve glTF 2.0 modellerini tarayıcınızda açın. Geometriyi, malzemeleri ve dokuları inceleyin, modelin animasyonlarını oynatın.",
+      },
+      vi: {
+        name: "Trình xem GLB / glTF",
+        description:
+          "Mở mô hình GLB và glTF 2.0 trong trình duyệt. Kiểm tra hình học, vật liệu và họa tiết, đồng thời phát hoạt ảnh của mô hình.",
+      },
+      "zh-CN": {
+        name: "GLB / glTF 查看器",
+        description:
+          "在浏览器中打开 GLB 和 glTF 2.0 模型。检查几何形状、材质和纹理，并播放模型动画。",
+      },
+      "zh-TW": {
+        name: "GLB / glTF 檢視器",
+        description:
+          "在瀏覽器中開啟 GLB 和 glTF 2.0 模型。檢查幾何形狀、材質與貼圖，並播放模型動畫。",
       },
     },
   },

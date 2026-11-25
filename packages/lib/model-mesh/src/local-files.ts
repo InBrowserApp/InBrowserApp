@@ -1,3 +1,7 @@
+export function localFolder(file: File) {
+  return (file.webkitRelativePath || "").replace(/[^/]*$/, "")
+}
+
 const modelBase = "https://model.invalid/"
 
 function matchPath(files: File[], path: string) {
