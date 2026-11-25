@@ -6,9 +6,9 @@ import {
   Mesh,
   MeshStandardMaterial,
 } from "three"
-import type { StepMesh, Triple } from "./step-data"
+import type { CadMesh, Triple } from "./cad-data"
 
-export function makeMesh(data: StepMesh, baseColor: Color) {
+export function makeCadMesh(data: CadMesh, baseColor: Color) {
   const geometry = new BufferGeometry()
   geometry.setAttribute("position", new BufferAttribute(data.positions, 3))
   geometry.setIndex(new BufferAttribute(data.indices, 1))

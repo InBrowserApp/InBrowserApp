@@ -10,7 +10,7 @@ import { Plus, X } from "@workspace/ui/icons"
 import { ViewerToolbar } from "./viewer-toolbar"
 import { createViewport } from "./viewport"
 import type Messages from "./messages/en.json"
-import type { StepModel } from "./step-data"
+import type { CadModel } from "@workspace/model-mesh/cad-data"
 import type { Viewport } from "./viewport"
 import type { KeyboardEvent } from "react"
 
@@ -31,7 +31,7 @@ export default function ModelPanel({
   messages: m,
   focusOnOpen,
 }: {
-  model: StepModel
+  model: CadModel
   file: File
   lang: string
   messages: typeof Messages

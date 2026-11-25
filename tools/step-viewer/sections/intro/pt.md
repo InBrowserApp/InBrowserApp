@@ -17,3 +17,5 @@ Ajuste o ângulo e o zoom e selecione **Salvar PNG**. A imagem mostra o modelo c
 - [Visualizador de DXF](../dxf-viewer/)
 
 Use o [Conversor de STEP para STL](../step-to-stl-converter/) para preparar um STL binário com coordenadas em milímetros para o fatiador.
+
+Abra uma versão `.igs` ou `.iges` do modelo CAD no [Visualizador de IGES](../iges-viewer/) para examinar as superfícies, medir distâncias e salvar uma imagem PNG.

@@ -17,3 +17,5 @@ Atur sudut pandang dan tingkat perbesaran sesuai kebutuhan, lalu pilih **Simpan 
 - [Penampil DXF](../dxf-viewer/)
 
 Gunakan [Konverter STEP ke STL](../step-to-stl-converter/) untuk menyiapkan STL biner dengan koordinat dalam milimeter bagi aplikasi slicer.
+
+Buka file CAD `.igs` atau `.iges` di [Penampil IGES](../iges-viewer/) untuk memeriksa permukaan, mengukur jarak, dan menyimpan PNG.

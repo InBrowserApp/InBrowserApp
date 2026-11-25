@@ -17,3 +17,5 @@ Kies de gewenste kijkhoek en zoomstand en klik op **PNG opslaan**. De afbeelding
 - [DXF-viewer](../dxf-viewer/)
 
 Gebruik de [STEP naar STL-converter](../step-to-stl-converter/) om een binair STL-bestand met coördinaten in millimeters klaar te maken voor je slicer.
+
+Open een `.igs`- of `.iges`-versie van een CAD-model in de [IGES-viewer](../iges-viewer/) om oppervlakken te bekijken, afstanden te meten en een PNG op te slaan.

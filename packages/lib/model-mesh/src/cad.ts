@@ -12,11 +12,22 @@ export type ImportedMesh = {
   }[]
 }
 
-export async function readStep(data: ArrayBuffer) {
+export type CadFormat = "step" | "iges"
+
+export async function readCad(data: ArrayBuffer, format: CadFormat) {
   const occt = await initialize({ locateFile: () => wasmUrl })
-  const result = occt.ReadStepFile(new Uint8Array(data), {
+  const bytes = new Uint8Array(data)
+  const options = {
     linearUnit: "millimeter",
     angularDeflection: 0.2,
-  })
+  } as const
+  const result =
+    format === "iges"
+      ? occt.ReadIgesFile(bytes, options)
+      : occt.ReadStepFile(bytes, options)
   return result.success ? result.meshes : null
+}
+
+export function readStep(data: ArrayBuffer) {
+  return readCad(data, "step")
 }

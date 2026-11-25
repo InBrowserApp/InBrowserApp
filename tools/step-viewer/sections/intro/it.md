@@ -17,3 +17,5 @@ Regola l’angolazione e lo zoom, quindi seleziona **Salva PNG**. L’immagine s
 - [Visualizzatore DXF](../dxf-viewer/)
 
 Usa il [Convertitore da STEP a STL](../step-to-stl-converter/) per preparare un STL binario con coordinate in millimetri per lo slicer.
+
+Apri un modello CAD in formato `.igs` o `.iges` nel [Visualizzatore IGES](../iges-viewer/) per esaminare le superfici, misurare le distanze e salvare un’immagine PNG.

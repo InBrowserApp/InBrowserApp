@@ -13,7 +13,11 @@ type FormatOptions = {
   example: { name: string; read: () => Promise<BlobPart> }
   zUp: boolean
   unit?: LengthUnit
-  parse: (file: File, files: File[]) => Promise<ParsedModel>
+  parse: (
+    file: File,
+    files: File[],
+    signal: AbortSignal
+  ) => Promise<ParsedModel>
 }
 
 const formats = {
@@ -86,6 +90,30 @@ const formats = {
       return { object: await load3mf(await file.arrayBuffer()) }
     },
   },
+  iges: {
+    extensions: [".igs", ".iges"],
+    unit: "millimeter",
+    example: {
+      name: "stepped-part.igs",
+      read: async () =>
+        (await import("@workspace/model-mesh/iges-example")).readIgesExample(),
+    },
+    zUp: true,
+    async parse(file, _files, signal) {
+      const [{ loadCadModel }, { makeCadMesh }, { Color, Group }] =
+        await Promise.all([
+          import("@workspace/model-mesh/cad-loader"),
+          import("@workspace/model-mesh/cad-scene"),
+          import("three"),
+        ])
+      const model = await loadCadModel(file, "iges", signal)
+      if (!model) throw new Error("No IGES surfaces")
+      const object = new Group()
+      const color = new Color(0x659ce8)
+      for (const mesh of model.meshes) object.add(makeCadMesh(mesh, color))
+      return { object }
+    },
+  },
 } satisfies Record<string, FormatOptions>
 
 export type ModelFormat = keyof typeof formats
@@ -112,8 +140,10 @@ export async function exampleFile(format: ModelFormat) {
 
 export async function loadModel(
   files: File[],
-  format: ModelFormat
+  format: ModelFormat,
+  signal: AbortSignal
 ): Promise<OpenModel> {
+  signal.throwIfAborted()
   const options = getModelFormat(format)
   const file = files.find((candidate) => {
     const name = candidate.name.toLowerCase()
@@ -126,7 +156,7 @@ export async function loadModel(
     { Box3, Vector3 },
     { disposeModel },
   ] = await Promise.all([
-    options.parse(file, files),
+    options.parse(file, files, signal),
     import("three"),
     import("@workspace/model-mesh/dispose"),
   ])

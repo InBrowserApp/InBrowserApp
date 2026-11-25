@@ -913,6 +913,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-csv-converter",
   },
   {
+    category: "3d-cad",
+    name: "IGES 뷰어",
+    slug: "iges-viewer",
+  },
+  {
     category: "image",
     name: "이미지 배경 제거",
     slug: "image-background-remover",

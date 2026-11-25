@@ -1,0 +1,4 @@
+{
+  "name": "IGES-Betrachter",
+  "description": "Öffne IGS- und IGES-CAD-Dateien im Browser. Untersuche Modellflächen in 3D, miss Abstände, wechsle die Maßeinheit und speichere ein PNG."
+}

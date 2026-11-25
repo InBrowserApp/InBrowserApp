@@ -1,0 +1,4 @@
+{
+  "name": "IGES-visare",
+  "description": "Öppna CAD-filer i IGS- eller IGES-format i webbläsaren. Granska modellens ytor i 3D, mät avstånd, byt måttenhet och spara en PNG-bild."
+}

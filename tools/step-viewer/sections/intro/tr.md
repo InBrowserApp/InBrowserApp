@@ -17,3 +17,5 @@ Modeli döndürmek için sürükleyin. Yakınlaştırıp uzaklaştırmak için f
 - [DXF Görüntüleyici](../dxf-viewer/)
 
 Dilimleme yazılımı için koordinatları milimetre cinsinden olan ikili bir STL dosyası oluşturmak üzere [STEP’ten STL’ye Dönüştürücü](../step-to-stl-converter/) aracını kullanın.
+
+Yüzeyleri incelemek, mesafeleri ölçmek ve PNG olarak kaydetmek için CAD modelinin `.igs` veya `.iges` sürümünü [IGES Görüntüleyici](../iges-viewer/) aracında açın.

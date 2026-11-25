@@ -17,3 +17,5 @@ Réglez l’angle et le zoom, puis cliquez sur **Enregistrer en PNG**. L’image
 - [Visionneuse DXF](../dxf-viewer/)
 
 Utilisez le [Convertisseur STEP en STL](../step-to-stl-converter/) pour préparer un STL binaire avec des coordonnées en millimètres pour votre logiciel de tranchage.
+
+Ouvrez un modèle de CAO au format `.igs` ou `.iges` dans la [Visionneuse IGES](../iges-viewer/) pour examiner ses surfaces, mesurer des distances et enregistrer une image PNG.

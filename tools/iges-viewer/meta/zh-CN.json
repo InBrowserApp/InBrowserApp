@@ -1,0 +1,4 @@
+{
+  "name": "IGES 查看器",
+  "description": "在浏览器中打开 IGS 和 IGES CAD 文件。以 3D 方式检查模型曲面、测量距离、切换显示单位并保存 PNG。"
+}

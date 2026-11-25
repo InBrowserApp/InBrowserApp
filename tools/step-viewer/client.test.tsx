@@ -5,7 +5,7 @@ import Client from "./client"
 import m from "./messages/en.json"
 
 const mock = vi.hoisted(() => ({
-  loadStep: vi.fn(),
+  loadCadModel: vi.fn(),
   createViewport: vi.fn(),
   view: {
     fit: vi.fn(),
@@ -19,12 +19,14 @@ const mock = vi.hoisted(() => ({
     dispose: vi.fn(),
   },
 }))
-vi.mock("./load-step", () => ({ loadStep: mock.loadStep }))
+vi.mock("@workspace/model-mesh/cad-loader", () => ({
+  loadCadModel: mock.loadCadModel,
+}))
 vi.mock("./viewport", () => ({ createViewport: mock.createViewport }))
 
 beforeEach(() => {
   vi.resetAllMocks()
-  mock.loadStep.mockResolvedValue({ size: [60, 36, 36], meshes: [] })
+  mock.loadCadModel.mockResolvedValue({ size: [60, 36, 36], meshes: [] })
   mock.createViewport.mockReturnValue(mock.view)
   mock.view.save.mockResolvedValue(undefined)
 })
@@ -41,7 +43,7 @@ test("opens a sample, measures with the keyboard, converts units, and exports th
   render(<Client messages={m} lang="en" />)
   fireEvent.click(button(m.example))
   const viewport = await screen.findByRole("region", { name: m.viewport })
-  expect(mock.loadStep.mock.calls[0]?.[0]).toMatchObject({
+  expect(mock.loadCadModel.mock.calls[0]?.[0]).toMatchObject({
     name: "mounting-bracket.step",
   })
   expect(await screen.findByText("60 mm")).toBeTruthy()
@@ -90,19 +92,19 @@ test("opens a sample, measures with the keyboard, converts units, and exports th
 
 test("dismisses a stale parse and can recover from an unreadable model", async () => {
   let complete: (model: unknown) => void = () => undefined
-  mock.loadStep.mockImplementationOnce(
+  mock.loadCadModel.mockImplementationOnce(
     () =>
       new Promise((resolve) => {
         complete = resolve
       })
   )
-  mock.loadStep.mockResolvedValueOnce(null)
+  mock.loadCadModel.mockResolvedValueOnce(null)
   render(<Client messages={m} lang="en" />)
   choose("slow.step")
   expect(screen.getByText(m.loading)).toBeTruthy()
   choose("invalid.stp")
   await screen.findByText(m.invalid)
-  const firstSignal = mock.loadStep.mock.calls[0]?.[1] as AbortSignal
+  const firstSignal = mock.loadCadModel.mock.calls[0]?.[2] as AbortSignal
   expect(firstSignal.aborted).toBe(true)
   complete({ size: [1, 1, 1], meshes: [] })
   expect(screen.queryByRole("region", { name: m.viewport })).toBeNull()
@@ -111,7 +113,7 @@ test("dismisses a stale parse and can recover from an unreadable model", async (
 })
 
 test("shows separate file and WebGL errors with the file available for replacement", async () => {
-  mock.loadStep.mockRejectedValueOnce(new Error("reader error"))
+  mock.loadCadModel.mockRejectedValueOnce(new Error("reader error"))
   mock.createViewport.mockImplementationOnce(() => {
     throw new Error("WebGL unavailable")
   })

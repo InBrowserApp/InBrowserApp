@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore IGES",
+  "description": "Apri file CAD IGS e IGES nel browser. Esamina le superfici in 3D, misura le distanze, cambia l’unità di misura e salva un’immagine PNG."
+}
