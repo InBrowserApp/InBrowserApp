@@ -1383,6 +1383,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "geo",
+    name: "Aperçu OSM PBF",
+    slug: "osm-pbf-preview",
+  },
+  {
     category: "developer",
     name: "Visionneuse Parquet",
     slug: "parquet-viewer",

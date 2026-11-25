@@ -1,0 +1,22 @@
+{
+  "open": "OSM PBF openen",
+  "example": "Voorbeeld proberen",
+  "drop": "Sleep een OSM PBF-bestand hierheen",
+  "formats": "Kies een OpenStreetMap-extract (.osm.pbf of .pbf). Je bestand blijft op dit apparaat.",
+  "loading": "OSM PBF-bestand scannen…",
+  "invalid": "Kan dit bestand niet lezen. Kies een OpenStreetMap-extract in .osm.pbf-indeling.",
+  "nodes": "Knopen",
+  "ways": "Wegen",
+  "relations": "Relaties",
+  "map": "Voorvertoning van OpenStreetMap-gegevens",
+  "fit": "Zoomen naar gegevens",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "sample": "De kaart toont een selectie van knopen en wegen met tags. De tellingen hierboven gelden voor het hele bestand.",
+  "features": "Objecten op de kaart",
+  "feature": "Object {number}",
+  "attributes": "OSM-tags",
+  "noAttributes": "Dit object heeft geen tags.",
+  "noFeatures": "De kaart kon geen knopen met tags of complete wegen met tags weergeven.",
+  "attribution": "© OpenStreetMap-bijdragers"
+}

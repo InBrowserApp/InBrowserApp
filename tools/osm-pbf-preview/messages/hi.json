@@ -1,0 +1,22 @@
+{
+  "open": "OSM PBF खोलें",
+  "example": "उदाहरण आज़माएँ",
+  "drop": "OSM PBF फ़ाइल यहाँ छोड़ें",
+  "formats": "OpenStreetMap का .osm.pbf या .pbf डेटा अंश चुनें। आपकी फ़ाइल इसी डिवाइस पर रहती है।",
+  "loading": "OSM PBF फ़ाइल स्कैन हो रही है…",
+  "invalid": "यह फ़ाइल पढ़ी नहीं जा सकी। OpenStreetMap की .osm.pbf डेटा फ़ाइल चुनें।",
+  "nodes": "नोड",
+  "ways": "पथ",
+  "relations": "संबंध",
+  "map": "OpenStreetMap डेटा का पूर्वावलोकन",
+  "fit": "सारा डेटा दिखाएँ",
+  "zoomIn": "ज़ूम इन",
+  "zoomOut": "ज़ूम आउट",
+  "sample": "मानचित्र पर टैग वाले नोड और पथों का नमूना दिखता है। ऊपर दी गई संख्याएँ पूरी फ़ाइल की हैं।",
+  "features": "पूर्वावलोकन के फ़ीचर",
+  "feature": "फ़ीचर {number}",
+  "attributes": "OSM टैग",
+  "noAttributes": "इस फ़ीचर में कोई टैग नहीं है।",
+  "noFeatures": "मानचित्र पर दिखाने के लिए टैग वाले नोड या पूरे पथ नहीं मिले।",
+  "attribution": "© OpenStreetMap के योगदानकर्ता"
+}

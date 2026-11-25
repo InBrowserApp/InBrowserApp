@@ -1,0 +1,22 @@
+{
+  "open": "OSM PBF を開く",
+  "example": "サンプルを試す",
+  "drop": "OSM PBF ファイルをここにドロップ",
+  "formats": "OpenStreetMap の .osm.pbf または .pbf 抽出データを使用してください。ファイルはこのデバイス内に保持されます。",
+  "loading": "OSM PBF ファイルをスキャン中…",
+  "invalid": "ファイルを読み込めませんでした。OpenStreetMap の .osm.pbf 抽出データを選択してください。",
+  "nodes": "ノード",
+  "ways": "ウェイ",
+  "relations": "リレーション",
+  "map": "OpenStreetMap データのプレビュー",
+  "fit": "データ全体を表示",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "sample": "地図にはタグ付きノードとウェイのサンプルが表示されます。上の件数はファイル全体のものです。",
+  "features": "プレビューの地物",
+  "feature": "地物 {number}",
+  "attributes": "OSM タグ",
+  "noAttributes": "この地物にタグはありません。",
+  "noFeatures": "地図上に配置できるタグ付きノードまたは完全なタグ付きウェイはありません。",
+  "attribution": "© OpenStreetMap 貢献者"
+}

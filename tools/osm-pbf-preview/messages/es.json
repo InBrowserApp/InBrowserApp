@@ -1,0 +1,22 @@
+{
+  "open": "Abrir OSM PBF",
+  "example": "Probar un ejemplo",
+  "drop": "Suelta aquí un archivo OSM PBF",
+  "formats": "Usa un extracto de OpenStreetMap en formato .osm.pbf o .pbf. El archivo se queda en este dispositivo.",
+  "loading": "Analizando el archivo OSM PBF…",
+  "invalid": "No se pudo leer el archivo. Elige un extracto de OpenStreetMap en formato .osm.pbf.",
+  "nodes": "Nodos",
+  "ways": "Vías",
+  "relations": "Relaciones",
+  "map": "Vista previa de datos de OpenStreetMap",
+  "fit": "Ajustar vista a los datos",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "sample": "En el mapa se ve una selección de nodos y vías con etiquetas. Los recuentos incluyen todo el archivo.",
+  "features": "Elementos de la vista previa",
+  "feature": "Elemento {number}",
+  "attributes": "Etiquetas de OSM",
+  "noAttributes": "Este elemento no tiene etiquetas.",
+  "noFeatures": "No se pudieron situar en el mapa nodos ni vías completas con etiquetas.",
+  "attribution": "© colaboradores de OpenStreetMap"
+}

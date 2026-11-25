@@ -283,6 +283,7 @@
     "@tool/ofd-to-pdf-converter": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
+    "@tool/osm-pbf-preview": "workspace:*",
     "@tool/parquet-viewer": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
     "@tool/pbkdf2-key-derivation": "workspace:*",

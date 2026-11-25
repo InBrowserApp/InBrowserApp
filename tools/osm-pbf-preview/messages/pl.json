@@ -1,0 +1,22 @@
+{
+  "open": "Otwórz OSM PBF",
+  "example": "Wypróbuj przykład",
+  "drop": "Upuść tutaj plik OSM PBF",
+  "formats": "Wybierz wyciąg OpenStreetMap w formacie .osm.pbf lub .pbf. Plik pozostaje na tym urządzeniu.",
+  "loading": "Analizowanie pliku OSM PBF…",
+  "invalid": "Nie udało się odczytać pliku. Wybierz wyciąg OpenStreetMap w formacie .osm.pbf.",
+  "nodes": "Węzły",
+  "ways": "Linie",
+  "relations": "Relacje",
+  "map": "Podgląd danych OpenStreetMap",
+  "fit": "Dopasuj widok do danych",
+  "zoomIn": "Przybliż",
+  "zoomOut": "Oddal",
+  "sample": "Mapa pokazuje wybrane węzły i linie z tagami. Powyższe liczby dotyczą całego pliku.",
+  "features": "Obiekty w podglądzie",
+  "feature": "Obiekt {number}",
+  "attributes": "Tagi OSM",
+  "noAttributes": "Ten obiekt nie ma tagów.",
+  "noFeatures": "Na mapie nie udało się wyświetlić żadnych węzłów z tagami ani kompletnych linii z tagami.",
+  "attribution": "© autorzy OpenStreetMap"
+}

@@ -35151,6 +35151,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "osm-pbf-preview",
+    category: "geo",
+    icon: "map",
+    tags: [
+      "openstreetmap",
+      "osm",
+      "pbf",
+      "osm.pbf",
+      "extract",
+      "map",
+      "preview",
+      "viewer",
+      "nodes",
+      "ways",
+      "relations",
+    ],
+    locales: {
+      ar: {
+        name: "معاينة OSM PBF",
+        description:
+          "افتح مقتطف بيانات OpenStreetMap محليًا بصيغة .osm.pbf أو .pbf في متصفحك. اطّلع على أعداد العقد والطرق والعلاقات واستكشف عيّنة من المعالم ووسومها على خريطة تعمل دون اتصال.",
+      },
+      de: {
+        name: "OSM-PBF-Vorschau",
+        description:
+          "Öffne einen lokalen OpenStreetMap-Auszug (.osm.pbf oder .pbf) im Browser. Zähle Knoten, Wege und Relationen und prüfe ausgewählte Objekte und ihre Tags auf einer Offline-Karte.",
+      },
+      en: {
+        name: "OSM PBF Preview",
+        description:
+          "Open a local OpenStreetMap .osm.pbf or .pbf extract in your browser. Count nodes, ways and relations, and inspect a sample and its tags on an offline map.",
+      },
+      es: {
+        name: "Vista previa de OSM PBF",
+        description:
+          "Abre un extracto local de OpenStreetMap (.osm.pbf o .pbf) en tu navegador. Cuenta nodos, vías y relaciones y consulta las etiquetas de una selección de elementos en un mapa sin conexión.",
+      },
+      fr: {
+        name: "Aperçu OSM PBF",
+        description:
+          "Ouvrez un extrait OpenStreetMap local (.osm.pbf ou .pbf). Comptez les nœuds, les chemins et les relations et examinez un échantillon et ses attributs sur une carte hors ligne.",
+      },
+      he: {
+        name: "תצוגה מקדימה של OSM PBF",
+        description:
+          "פתחו בדפדפן קובץ נתונים מקומי של OpenStreetMap בסיומת ‎.osm.pbf או ‎.pbf. בדקו את מספר הצמתים, הדרכים והיחסים ועיינו במדגם ובתגיות שלו במפה שעובדת בלי אינטרנט.",
+      },
+      hi: {
+        name: "OSM PBF का पूर्वावलोकन",
+        description:
+          "ब्राउज़र में स्थानीय OpenStreetMap .osm.pbf या .pbf डेटा अंश खोलें। नोड, पथ और संबंधों की संख्या देखें और ऑफ़लाइन मानचित्र पर डेटा के नमूने और उसके टैग जाँचें।",
+      },
+      id: {
+        name: "Pratinjau OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf dari perangkat Anda di browser. Hitung simpul, garis, dan relasi, lalu periksa sampel beserta tagnya pada peta luring.",
+      },
+      it: {
+        name: "Anteprima OSM PBF",
+        description:
+          "Apri un estratto locale di OpenStreetMap (.osm.pbf o .pbf) nel browser. Conta nodi, percorsi e relazioni ed esamina un campione e i suoi tag su una mappa offline.",
+      },
+      ja: {
+        name: "OSM PBF プレビュー",
+        description:
+          "ローカルの OpenStreetMap .osm.pbf または .pbf 抽出データをブラウザーで開きます。ノード、ウェイ、リレーションを数え、サンプルとそのタグをオフライン地図で確認できます。",
+      },
+      ko: {
+        name: "OSM PBF 미리보기",
+        description:
+          "기기에 저장된 OpenStreetMap .osm.pbf 또는 .pbf 추출 데이터를 브라우저에서 여세요. 노드, 웨이, 관계를 집계하고 오프라인 지도에서 표본과 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf daripada peranti anda dalam pelayar. Kira nod, jalan dan hubungan, kemudian semak sampel data serta tagnya pada peta luar talian.",
+      },
+      nl: {
+        name: "OSM PBF-voorvertoner",
+        description:
+          "Open een lokaal OpenStreetMap-extract (.osm.pbf of .pbf) in je browser. Tel knopen, wegen en relaties en bekijk een selectie met de bijbehorende tags op een offlinekaart.",
+      },
+      no: {
+        name: "OSM PBF-forhåndsvisning",
+        description:
+          "Åpne et lokalt OpenStreetMap-uttrekk (.osm.pbf eller .pbf) i nettleseren. Tell noder, veger og relasjoner, og se et utvalg av objekter med merker på et kart uten nett.",
+      },
+      pl: {
+        name: "Podgląd OSM PBF",
+        description:
+          "Otwórz lokalny wyciąg OpenStreetMap (.osm.pbf lub .pbf) w przeglądarce. Policz węzły, linie i relacje, a wybrane obiekty i ich tagi obejrzyj na mapie offline.",
+      },
+      pt: {
+        name: "Prévia de OSM PBF",
+        description:
+          "Abra um extrato local do OpenStreetMap (.osm.pbf ou .pbf) no navegador. Conte nós, caminhos e relações e confira uma amostra com suas etiquetas em um mapa offline.",
+      },
+      ru: {
+        name: "Предпросмотр OSM PBF",
+        description:
+          "Откройте локальную выгрузку OpenStreetMap (.osm.pbf или .pbf) в браузере. Узнайте число точек, линий и отношений, просмотрите выборку объектов и их теги на офлайн-карте.",
+      },
+      sv: {
+        name: "Förhandsgranskning av OSM PBF",
+        description:
+          "Öppna ett lokalt OpenStreetMap-utdrag (.osm.pbf eller .pbf) i webbläsaren. Räkna noder, vägar och relationer och granska ett urval av objekt med deras attribut på en offlinekarta.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง OSM PBF",
+        description:
+          "เปิดไฟล์ข้อมูลบางพื้นที่ของ OpenStreetMap นามสกุล .osm.pbf หรือ .pbf จากอุปกรณ์ในเบราว์เซอร์ นับโหนด ทาง และความสัมพันธ์ พร้อมดูตัวอย่างข้อมูลและแท็กบนแผนที่ออฟไลน์",
+      },
+      tr: {
+        name: "OSM PBF Önizlemesi",
+        description:
+          "Tarayıcınızda yerel bir OpenStreetMap .osm.pbf veya .pbf veri kesiti açın. Düğüm, yol ve ilişki sayılarını görün, örnek verileri ve etiketlerini çevrimdışı haritada inceleyin.",
+      },
+      vi: {
+        name: "Trình xem trước OSM PBF",
+        description:
+          "Mở tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf từ thiết bị ngay trong trình duyệt. Đếm nốt, lối và quan hệ, rồi xem một phần dữ liệu cùng các thẻ trên bản đồ ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "OSM PBF 预览",
+        description:
+          "在浏览器中打开本地 OpenStreetMap .osm.pbf 或 .pbf 区域提取文件。统计节点、路径和关系，并在离线地图上查看样本及其标签。",
+      },
+      "zh-TW": {
+        name: "OSM PBF 預覽",
+        description:
+          "在瀏覽器中開啟本機的 OpenStreetMap .osm.pbf 或 .pbf 區域擷取檔案。統計節點、路徑和關聯，並在離線地圖上查看樣本及其標籤。",
+      },
+    },
+  },
+  {
     slug: "parquet-viewer",
     category: "developer",
     icon: "table-2",
@@ -89976,6 +90111,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  "osm-pbf-preview": {
+    slug: "osm-pbf-preview",
+    category: "geo",
+    icon: "map",
+    tags: [
+      "openstreetmap",
+      "osm",
+      "pbf",
+      "osm.pbf",
+      "extract",
+      "map",
+      "preview",
+      "viewer",
+      "nodes",
+      "ways",
+      "relations",
+    ],
+    locales: {
+      ar: {
+        name: "معاينة OSM PBF",
+        description:
+          "افتح مقتطف بيانات OpenStreetMap محليًا بصيغة .osm.pbf أو .pbf في متصفحك. اطّلع على أعداد العقد والطرق والعلاقات واستكشف عيّنة من المعالم ووسومها على خريطة تعمل دون اتصال.",
+      },
+      de: {
+        name: "OSM-PBF-Vorschau",
+        description:
+          "Öffne einen lokalen OpenStreetMap-Auszug (.osm.pbf oder .pbf) im Browser. Zähle Knoten, Wege und Relationen und prüfe ausgewählte Objekte und ihre Tags auf einer Offline-Karte.",
+      },
+      en: {
+        name: "OSM PBF Preview",
+        description:
+          "Open a local OpenStreetMap .osm.pbf or .pbf extract in your browser. Count nodes, ways and relations, and inspect a sample and its tags on an offline map.",
+      },
+      es: {
+        name: "Vista previa de OSM PBF",
+        description:
+          "Abre un extracto local de OpenStreetMap (.osm.pbf o .pbf) en tu navegador. Cuenta nodos, vías y relaciones y consulta las etiquetas de una selección de elementos en un mapa sin conexión.",
+      },
+      fr: {
+        name: "Aperçu OSM PBF",
+        description:
+          "Ouvrez un extrait OpenStreetMap local (.osm.pbf ou .pbf). Comptez les nœuds, les chemins et les relations et examinez un échantillon et ses attributs sur une carte hors ligne.",
+      },
+      he: {
+        name: "תצוגה מקדימה של OSM PBF",
+        description:
+          "פתחו בדפדפן קובץ נתונים מקומי של OpenStreetMap בסיומת ‎.osm.pbf או ‎.pbf. בדקו את מספר הצמתים, הדרכים והיחסים ועיינו במדגם ובתגיות שלו במפה שעובדת בלי אינטרנט.",
+      },
+      hi: {
+        name: "OSM PBF का पूर्वावलोकन",
+        description:
+          "ब्राउज़र में स्थानीय OpenStreetMap .osm.pbf या .pbf डेटा अंश खोलें। नोड, पथ और संबंधों की संख्या देखें और ऑफ़लाइन मानचित्र पर डेटा के नमूने और उसके टैग जाँचें।",
+      },
+      id: {
+        name: "Pratinjau OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf dari perangkat Anda di browser. Hitung simpul, garis, dan relasi, lalu periksa sampel beserta tagnya pada peta luring.",
+      },
+      it: {
+        name: "Anteprima OSM PBF",
+        description:
+          "Apri un estratto locale di OpenStreetMap (.osm.pbf o .pbf) nel browser. Conta nodi, percorsi e relazioni ed esamina un campione e i suoi tag su una mappa offline.",
+      },
+      ja: {
+        name: "OSM PBF プレビュー",
+        description:
+          "ローカルの OpenStreetMap .osm.pbf または .pbf 抽出データをブラウザーで開きます。ノード、ウェイ、リレーションを数え、サンプルとそのタグをオフライン地図で確認できます。",
+      },
+      ko: {
+        name: "OSM PBF 미리보기",
+        description:
+          "기기에 저장된 OpenStreetMap .osm.pbf 또는 .pbf 추출 데이터를 브라우저에서 여세요. 노드, 웨이, 관계를 집계하고 오프라인 지도에서 표본과 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf daripada peranti anda dalam pelayar. Kira nod, jalan dan hubungan, kemudian semak sampel data serta tagnya pada peta luar talian.",
+      },
+      nl: {
+        name: "OSM PBF-voorvertoner",
+        description:
+          "Open een lokaal OpenStreetMap-extract (.osm.pbf of .pbf) in je browser. Tel knopen, wegen en relaties en bekijk een selectie met de bijbehorende tags op een offlinekaart.",
+      },
+      no: {
+        name: "OSM PBF-forhåndsvisning",
+        description:
+          "Åpne et lokalt OpenStreetMap-uttrekk (.osm.pbf eller .pbf) i nettleseren. Tell noder, veger og relasjoner, og se et utvalg av objekter med merker på et kart uten nett.",
+      },
+      pl: {
+        name: "Podgląd OSM PBF",
+        description:
+          "Otwórz lokalny wyciąg OpenStreetMap (.osm.pbf lub .pbf) w przeglądarce. Policz węzły, linie i relacje, a wybrane obiekty i ich tagi obejrzyj na mapie offline.",
+      },
+      pt: {
+        name: "Prévia de OSM PBF",
+        description:
+          "Abra um extrato local do OpenStreetMap (.osm.pbf ou .pbf) no navegador. Conte nós, caminhos e relações e confira uma amostra com suas etiquetas em um mapa offline.",
+      },
+      ru: {
+        name: "Предпросмотр OSM PBF",
+        description:
+          "Откройте локальную выгрузку OpenStreetMap (.osm.pbf или .pbf) в браузере. Узнайте число точек, линий и отношений, просмотрите выборку объектов и их теги на офлайн-карте.",
+      },
+      sv: {
+        name: "Förhandsgranskning av OSM PBF",
+        description:
+          "Öppna ett lokalt OpenStreetMap-utdrag (.osm.pbf eller .pbf) i webbläsaren. Räkna noder, vägar och relationer och granska ett urval av objekt med deras attribut på en offlinekarta.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง OSM PBF",
+        description:
+          "เปิดไฟล์ข้อมูลบางพื้นที่ของ OpenStreetMap นามสกุล .osm.pbf หรือ .pbf จากอุปกรณ์ในเบราว์เซอร์ นับโหนด ทาง และความสัมพันธ์ พร้อมดูตัวอย่างข้อมูลและแท็กบนแผนที่ออฟไลน์",
+      },
+      tr: {
+        name: "OSM PBF Önizlemesi",
+        description:
+          "Tarayıcınızda yerel bir OpenStreetMap .osm.pbf veya .pbf veri kesiti açın. Düğüm, yol ve ilişki sayılarını görün, örnek verileri ve etiketlerini çevrimdışı haritada inceleyin.",
+      },
+      vi: {
+        name: "Trình xem trước OSM PBF",
+        description:
+          "Mở tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf từ thiết bị ngay trong trình duyệt. Đếm nốt, lối và quan hệ, rồi xem một phần dữ liệu cùng các thẻ trên bản đồ ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "OSM PBF 预览",
+        description:
+          "在浏览器中打开本地 OpenStreetMap .osm.pbf 或 .pbf 区域提取文件。统计节点、路径和关系，并在离线地图上查看样本及其标签。",
+      },
+      "zh-TW": {
+        name: "OSM PBF 預覽",
+        description:
+          "在瀏覽器中開啟本機的 OpenStreetMap .osm.pbf 或 .pbf 區域擷取檔案。統計節點、路徑和關聯，並在離線地圖上查看樣本及其標籤。",
       },
     },
   },

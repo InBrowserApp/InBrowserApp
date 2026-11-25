@@ -1,0 +1,22 @@
+{
+  "open": "פתיחת OSM PBF",
+  "example": "טעינת דוגמה",
+  "drop": "גררו לכאן קובץ OSM PBF",
+  "formats": "בחרו קובץ נתונים של OpenStreetMap בסיומת ‎.osm.pbf או ‎.pbf. הקובץ נשאר במכשיר.",
+  "loading": "קובץ ה־OSM PBF נסרק…",
+  "invalid": "לא ניתן לקרוא את הקובץ. בחרו קובץ נתונים של OpenStreetMap בסיומת ‎.osm.pbf.",
+  "nodes": "צמתים",
+  "ways": "דרכים",
+  "relations": "יחסים",
+  "map": "תצוגה מקדימה של נתוני OpenStreetMap",
+  "fit": "התאמת המפה לנתונים",
+  "zoomIn": "התקרבות",
+  "zoomOut": "התרחקות",
+  "sample": "במפה מוצג מדגם של צמתים ודרכים עם תגיות. הספירות למעלה כוללות את הקובץ כולו.",
+  "features": "ישויות בתצוגה המקדימה",
+  "feature": "ישות {number}",
+  "attributes": "תגיות OSM",
+  "noAttributes": "לישות הזאת אין תגיות.",
+  "noFeatures": "לא נמצאו צמתים מתויגים או דרכים מתויגות שלמות שאפשר להציג במפה.",
+  "attribution": "© תורמי OpenStreetMap"
+}

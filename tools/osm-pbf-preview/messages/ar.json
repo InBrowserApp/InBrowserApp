@@ -1,0 +1,22 @@
+{
+  "open": "فتح OSM PBF",
+  "example": "تجربة مثال",
+  "drop": "أفلِت ملف OSM PBF هنا",
+  "formats": "اختر مقتطف بيانات OpenStreetMap بصيغة .osm.pbf أو .pbf. يبقى ملفك على هذا الجهاز.",
+  "loading": "جارٍ فحص ملف OSM PBF…",
+  "invalid": "تعذّرت قراءة هذا الملف. اختر مقتطف بيانات OpenStreetMap بصيغة .osm.pbf.",
+  "nodes": "العقد",
+  "ways": "الطرق",
+  "relations": "العلاقات",
+  "map": "معاينة بيانات OpenStreetMap",
+  "fit": "ملاءمة عرض الخريطة للبيانات",
+  "zoomIn": "تكبير",
+  "zoomOut": "تصغير",
+  "sample": "تعرض الخريطة عيّنة من العقد والطرق التي تحمل وسومًا. تشمل الأعداد أعلاه الملف بأكمله.",
+  "features": "المعالم في المعاينة",
+  "feature": "المعلم {number}",
+  "attributes": "وسوم OSM",
+  "noAttributes": "لا يحمل هذا المعلم أي وسوم.",
+  "noFeatures": "تعذّر عرض أي عقد ذات وسوم أو طرق مكتملة ذات وسوم على الخريطة.",
+  "attribution": "© المساهمون في OpenStreetMap"
+}

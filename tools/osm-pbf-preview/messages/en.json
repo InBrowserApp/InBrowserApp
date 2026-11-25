@@ -1,0 +1,22 @@
+{
+  "open": "Open OSM PBF",
+  "example": "Try an example",
+  "drop": "Drop an OSM PBF file here",
+  "formats": "Use an OpenStreetMap .osm.pbf or .pbf extract. Your file stays on this device.",
+  "loading": "Scanning the OSM PBF file…",
+  "invalid": "Could not read this file. Choose an OpenStreetMap .osm.pbf extract.",
+  "nodes": "Nodes",
+  "ways": "Ways",
+  "relations": "Relations",
+  "map": "OpenStreetMap data preview",
+  "fit": "Fit to data",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "sample": "The map shows a sample of tagged nodes and ways. The counts above cover the entire file.",
+  "features": "Preview features",
+  "feature": "Feature {number}",
+  "attributes": "OSM tags",
+  "noAttributes": "This feature has no tags.",
+  "noFeatures": "No tagged nodes or complete tagged ways could be placed on the map.",
+  "attribution": "© OpenStreetMap contributors"
+}

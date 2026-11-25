@@ -1,0 +1,4 @@
+{
+  "name": "Podgląd OSM PBF",
+  "description": "Otwórz lokalny wyciąg OpenStreetMap (.osm.pbf lub .pbf) w przeglądarce. Policz węzły, linie i relacje, a wybrane obiekty i ich tagi obejrzyj na mapie offline."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OSM PBF-forhåndsvisning",
+  "description": "Åpne et lokalt OpenStreetMap-uttrekk (.osm.pbf eller .pbf) i nettleseren. Tell noder, veger og relasjoner, og se et utvalg av objekter med merker på et kart uten nett."
+}

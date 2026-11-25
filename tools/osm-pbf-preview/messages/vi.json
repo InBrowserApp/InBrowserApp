@@ -1,0 +1,22 @@
+{
+  "open": "Mở OSM PBF",
+  "example": "Dùng thử ví dụ",
+  "drop": "Thả tệp OSM PBF vào đây",
+  "formats": "Dùng tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf. Tệp của bạn được giữ trên thiết bị này.",
+  "loading": "Đang quét tệp OSM PBF…",
+  "invalid": "Không đọc được tệp này. Hãy chọn tệp trích xuất OpenStreetMap .osm.pbf.",
+  "nodes": "Nốt",
+  "ways": "Lối",
+  "relations": "Quan hệ",
+  "map": "Bản xem trước dữ liệu OpenStreetMap",
+  "fit": "Vừa với dữ liệu",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "sample": "Bản đồ hiển thị một phần các nốt và lối có gắn thẻ. Số liệu ở trên bao quát toàn bộ tệp.",
+  "features": "Đối tượng xem trước",
+  "feature": "Đối tượng {number}",
+  "attributes": "Thẻ OSM",
+  "noAttributes": "Đối tượng này không có thẻ.",
+  "noFeatures": "Không có nốt gắn thẻ hoặc lối gắn thẻ đủ dữ liệu để hiển thị trên bản đồ.",
+  "attribution": "© Những người đóng góp cho OpenStreetMap"
+}

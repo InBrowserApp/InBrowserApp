@@ -1,0 +1,4 @@
+{
+  "name": "Aperçu OSM PBF",
+  "description": "Ouvrez un extrait OpenStreetMap local (.osm.pbf ou .pbf). Comptez les nœuds, les chemins et les relations et examinez un échantillon et ses attributs sur une carte hors ligne."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OSM PBF Preview",
+  "description": "Open a local OpenStreetMap .osm.pbf or .pbf extract in your browser. Count nodes, ways and relations, and inspect a sample and its tags on an offline map."
+}

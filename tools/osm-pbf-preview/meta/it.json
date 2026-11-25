@@ -1,0 +1,4 @@
+{
+  "name": "Anteprima OSM PBF",
+  "description": "Apri un estratto locale di OpenStreetMap (.osm.pbf o .pbf) nel browser. Conta nodi, percorsi e relazioni ed esamina un campione e i suoi tag su una mappa offline."
+}
