@@ -14,7 +14,6 @@
     "postal-mime": "catalog:",
     "pst-extractor": "catalog:",
     "fflate": "catalog:",
-    "buffer": "catalog:",
     "@kenjiuno/msgreader": "catalog:",
     "@workspace/web-document": "workspace:*"
   },
