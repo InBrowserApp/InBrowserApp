@@ -297,6 +297,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
   "microphone-test": () => import("@tool/microphone-test/page"),
   "midi-monitor": () => import("@tool/midi-monitor/page"),
+  "midi-to-musicxml-converter": () =>
+    import("@tool/midi-to-musicxml-converter/page"),
   "midi-to-wav-converter": () => import("@tool/midi-to-wav-converter/page"),
   "midi-transposer": () => import("@tool/midi-transposer/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),

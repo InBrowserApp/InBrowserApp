@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter MIDI na MusicXML",
+  "description": "Zamień plik MIDI na edytowalny zapis nutowy. Wybierz siatkę rytmiczną, pobierz plik MusicXML i otwórz partyturę w edytorze nut."
+}

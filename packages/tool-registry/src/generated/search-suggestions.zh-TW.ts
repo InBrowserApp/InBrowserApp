@@ -1209,6 +1209,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI 轉 MusicXML 轉換器",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI 轉 WAV 轉換器",
     slug: "midi-to-wav-converter",
   },

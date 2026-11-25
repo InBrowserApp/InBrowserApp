@@ -1209,6 +1209,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "โปรแกรมแปลง MIDI เป็น MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "โปรแกรมแปลง MIDI เป็น WAV",
     slug: "midi-to-wav-converter",
   },

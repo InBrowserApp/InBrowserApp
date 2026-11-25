@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de MIDI para MusicXML",
+  "description": "Converta um arquivo MIDI em uma partitura editável. Escolha uma grade rítmica, baixe o MusicXML e abra a partitura no seu editor de partituras."
+}

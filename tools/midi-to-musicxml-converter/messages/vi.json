@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Chọn tệp MIDI",
+  "changeFile": "Đổi tệp",
+  "dropHint": "hoặc thả tệp MIDI vào đây",
+  "privacy": "Tệp của bạn được giữ trong trình duyệt này.",
+  "quantization": "Lưới lượng tử hóa",
+  "quantizationHint": "Lưới mịn hơn giữ được các nốt ngắn hơn. Lưới thưa hơn có thể giúp bản trình diễn đã thu dễ đọc hơn.",
+  "eighth": "Nốt móc đơn (1/8)",
+  "sixteenth": "Nốt móc kép (1/16)",
+  "thirtySecond": "Nốt móc ba (1/32)",
+  "download": "Tải MusicXML",
+  "part": "Bè",
+  "invalidMidi": "Không thể đọc tệp này dưới dạng tệp MIDI chuẩn. Hãy chọn tệp .mid hoặc .midi khác.",
+  "unsupportedTiming": "Hãy xuất tệp này thành tệp MIDI dựa trên phách (định dạng 0 hoặc 1), rồi thử lại.",
+  "noNotes": "Tệp MIDI này không có nốt nào để đưa vào bản nhạc.",
+  "tooManyMeasures": "Bản nhạc có quá nhiều ô nhịp để chuyển đổi trong một lần. Hãy thử đoạn ngắn hơn."
+}

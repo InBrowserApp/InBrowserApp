@@ -1209,6 +1209,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI-naar-MusicXML-converter",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI-naar-WAV-converter",
     slug: "midi-to-wav-converter",
   },

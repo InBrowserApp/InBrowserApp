@@ -1,0 +1,4 @@
+{
+  "name": "MIDI to MusicXML Converter",
+  "description": "Turn a MIDI file into editable sheet music. Choose a rhythm grid, download MusicXML, and open the score in your notation software."
+}

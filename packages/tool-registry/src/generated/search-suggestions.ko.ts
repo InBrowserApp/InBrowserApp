@@ -1209,6 +1209,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI를 MusicXML로 변환",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI를 WAV로 변환",
     slug: "midi-to-wav-converter",
   },

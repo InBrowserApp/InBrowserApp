@@ -1209,6 +1209,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Convertisseur MIDI vers MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "Convertisseur MIDI vers WAV",
     slug: "midi-to-wav-converter",
   },

@@ -30664,6 +30664,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "midi-to-musicxml-converter",
+    category: "misc",
+    icon: "arrow-left-right",
+    tags: [
+      "midi",
+      "musicxml",
+      "midi to sheet music",
+      "notation",
+      "quantization",
+      "score",
+      "midi converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MIDI إلى MusicXML",
+        description:
+          "حوّل ملف MIDI إلى نوتة موسيقية قابلة للتحرير. اختر شبكة إيقاعية، ونزّل ملف MusicXML، وافتح النوتة في برنامج التدوين الموسيقي.",
+      },
+      de: {
+        name: "MIDI-zu-MusicXML-Konverter",
+        description:
+          "Wandle eine MIDI-Datei in bearbeitbare Noten um. Wähle ein Rhythmusraster, lade die MusicXML-Datei herunter und öffne die Partitur in deinem Notensatzprogramm.",
+      },
+      en: {
+        name: "MIDI to MusicXML Converter",
+        description:
+          "Turn a MIDI file into editable sheet music. Choose a rhythm grid, download MusicXML, and open the score in your notation software.",
+      },
+      es: {
+        name: "Conversor de MIDI a MusicXML",
+        description:
+          "Convierte un archivo MIDI en una partitura editable. Elige una rejilla rítmica, descarga el MusicXML y abre la partitura en tu editor de partituras.",
+      },
+      fr: {
+        name: "Convertisseur MIDI vers MusicXML",
+        description:
+          "Transformez un fichier MIDI en partition modifiable. Choisissez une grille rythmique, téléchargez le MusicXML et ouvrez la partition dans votre logiciel de notation.",
+      },
+      he: {
+        name: "ממיר MIDI ל־MusicXML",
+        description:
+          "הפכו קובץ MIDI לתווים שאפשר לערוך. בחרו רשת קצב, הורידו קובץ MusicXML ופתחו אותו בתוכנת התיווי שלכם.",
+      },
+      hi: {
+        name: "MIDI से MusicXML कन्वर्टर",
+        description:
+          "MIDI फ़ाइल को संपादन योग्य शीट म्यूज़िक में बदलें। लय का ग्रिड चुनें, MusicXML डाउनलोड करें और स्कोर को अपने नोटेशन सॉफ़्टवेयर में खोलें।",
+      },
+      id: {
+        name: "Konverter MIDI ke MusicXML",
+        description:
+          "Ubah file MIDI menjadi partitur yang dapat disunting. Pilih grid ritme, unduh MusicXML, lalu buka partitur di program notasi Anda.",
+      },
+      it: {
+        name: "Convertitore da MIDI a MusicXML",
+        description:
+          "Trasforma un file MIDI in uno spartito modificabile. Scegli una griglia ritmica, scarica il MusicXML e apri lo spartito nel tuo programma di notazione.",
+      },
+      ja: {
+        name: "MIDI MusicXML 変換",
+        description:
+          "MIDI ファイルを編集可能な楽譜に変換します。リズムのグリッドを選び、MusicXML をダウンロードして楽譜作成ソフトで開けます。",
+      },
+      ko: {
+        name: "MIDI를 MusicXML로 변환",
+        description:
+          "MIDI 파일을 편집 가능한 악보로 변환합니다. 리듬 격자를 선택하고 MusicXML을 다운로드해 악보 작성 프로그램에서 여세요.",
+      },
+      ms: {
+        name: "Penukar MIDI kepada MusicXML",
+        description:
+          "Tukar fail MIDI kepada skor muzik yang boleh disunting. Pilih grid ritma, muat turun MusicXML dan buka skor dalam perisian notasi anda.",
+      },
+      nl: {
+        name: "MIDI-naar-MusicXML-converter",
+        description:
+          "Zet een MIDI-bestand om naar bewerkbare bladmuziek. Kies een ritmeraster, download het MusicXML-bestand en open de partituur in je muzieknotatieprogramma.",
+      },
+      no: {
+        name: "MIDI til MusicXML-konverterer",
+        description:
+          "Gjør om en MIDI-fil til redigerbare noter. Velg et rytmerutenett, last ned MusicXML og åpne partituret i noteprogrammet ditt.",
+      },
+      pl: {
+        name: "Konwerter MIDI na MusicXML",
+        description:
+          "Zamień plik MIDI na edytowalny zapis nutowy. Wybierz siatkę rytmiczną, pobierz plik MusicXML i otwórz partyturę w edytorze nut.",
+      },
+      pt: {
+        name: "Conversor de MIDI para MusicXML",
+        description:
+          "Converta um arquivo MIDI em uma partitura editável. Escolha uma grade rítmica, baixe o MusicXML e abra a partitura no seu editor de partituras.",
+      },
+      ru: {
+        name: "Конвертер MIDI в MusicXML",
+        description:
+          "Преобразуйте MIDI-файл в редактируемые ноты. Выберите ритмическую сетку, скачайте MusicXML и откройте партитуру в нотном редакторе.",
+      },
+      sv: {
+        name: "MIDI till MusicXML-konverterare",
+        description:
+          "Gör om en MIDI-fil till redigerbara noter. Välj ett rytmrutnät, ladda ner MusicXML och öppna partituret i ditt notskrivningsprogram.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MIDI เป็น MusicXML",
+        description:
+          "แปลงไฟล์ MIDI เป็นโน้ตเพลงที่แก้ไขได้ เลือกกริดจังหวะ ดาวน์โหลด MusicXML แล้วเปิดโน้ตในโปรแกรมเขียนโน้ตของคุณ",
+      },
+      tr: {
+        name: "MIDI'den MusicXML'e Dönüştürücü",
+        description:
+          "MIDI dosyanızı düzenlenebilir notalara dönüştürün. Bir ritim ızgarası seçin, MusicXML dosyasını indirin ve partisyonu nota yazım programınızda açın.",
+      },
+      vi: {
+        name: "Chuyển MIDI sang MusicXML",
+        description:
+          "Chuyển tệp MIDI thành bản nhạc có thể chỉnh sửa. Chọn lưới nhịp, tải MusicXML và mở bản nhạc trong phần mềm ký âm.",
+      },
+      "zh-CN": {
+        name: "MIDI 转 MusicXML 转换器",
+        description:
+          "将 MIDI 文件转换为可编辑的乐谱。选择节奏网格，下载 MusicXML，然后在记谱软件中打开乐谱。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉 MusicXML 轉換器",
+        description:
+          "將 MIDI 檔案轉換為可編輯的樂譜。選擇節奏網格、下載 MusicXML，然後在記譜軟體中開啟樂譜。",
+      },
+    },
+  },
+  {
     slug: "midi-to-wav-converter",
     category: "misc",
     icon: "audio-lines",

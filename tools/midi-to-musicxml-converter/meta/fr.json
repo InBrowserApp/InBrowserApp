@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur MIDI vers MusicXML",
+  "description": "Transformez un fichier MIDI en partition modifiable. Choisissez une grille rythmique, téléchargez le MusicXML et ouvrez la partition dans votre logiciel de notation."
+}

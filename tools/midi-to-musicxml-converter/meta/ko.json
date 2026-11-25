@@ -1,0 +1,4 @@
+{
+  "name": "MIDI를 MusicXML로 변환",
+  "description": "MIDI 파일을 편집 가능한 악보로 변환합니다. 리듬 격자를 선택하고 MusicXML을 다운로드해 악보 작성 프로그램에서 여세요."
+}

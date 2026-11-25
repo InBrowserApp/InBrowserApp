@@ -1,0 +1,17 @@
+{
+  "chooseFile": "MIDI-bestand kiezen",
+  "changeFile": "Ander bestand kiezen",
+  "dropHint": "of sleep een MIDI-bestand hierheen",
+  "privacy": "Je bestand blijft in deze browser.",
+  "quantization": "Kwantisatieraster",
+  "quantizationHint": "Een fijner raster behoudt kortere noten. Een grover raster kan een ingespeeld stuk leesbaarder maken.",
+  "eighth": "Achtste noot (1/8)",
+  "sixteenth": "Zestiende noot (1/16)",
+  "thirtySecond": "Tweeëndertigste noot (1/32)",
+  "download": "MusicXML downloaden",
+  "part": "Partij",
+  "invalidMidi": "Dit bestand kan niet worden gelezen als standaard MIDI-bestand. Kies een ander .mid- of .midi-bestand.",
+  "unsupportedTiming": "Exporteer dit bestand als MIDI-bestand met een muzikale tijdbasis (formaat 0 of 1) en probeer het opnieuw.",
+  "noNotes": "Dit MIDI-bestand bevat geen noten om in de partituur op te nemen.",
+  "tooManyMeasures": "Deze partituur bevat te veel maten om in één keer om te zetten. Probeer een korter fragment."
+}

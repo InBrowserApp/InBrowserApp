@@ -1,0 +1,4 @@
+{
+  "name": "MIDI 轉 MusicXML 轉換器",
+  "description": "將 MIDI 檔案轉換為可編輯的樂譜。選擇節奏網格、下載 MusicXML，然後在記譜軟體中開啟樂譜。"
+}
