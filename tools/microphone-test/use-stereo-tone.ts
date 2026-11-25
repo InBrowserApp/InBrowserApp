@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from "react"
 
 const pan = { left: -1, both: 0, right: 1 } as const
 type Channel = keyof typeof pan
+type Tone = { channel: Channel; oscillator?: OscillatorNode }
 
 export function useStereoTone() {
   const audio = useRef<AudioContext | null>(null)
-  const active = useRef<OscillatorNode | null>(null)
+  const active = useRef<Tone | null>(null)
   const [channel, setChannel] = useState<Channel | null>(null)
   const [error, setError] = useState(false)
 
@@ -20,23 +21,31 @@ export function useStereoTone() {
   )
 
   async function play(nextChannel: Channel) {
-    let oscillator: OscillatorNode | undefined
+    const previous = active.current
+    active.current = null
+    previous?.oscillator?.stop()
+    setError(false)
+    if (previous?.channel === nextChannel) {
+      setChannel(null)
+      return
+    }
+
+    const tone: Tone = { channel: nextChannel }
+    active.current = tone
+    setChannel(nextChannel)
+
+    function finish() {
+      if (active.current !== tone) return
+      active.current = null
+      setChannel(null)
+    }
+
     try {
-      setError(false)
       const context = (audio.current ??= new AudioContext())
-      if (active.current) {
-        active.current.stop()
-        active.current = null
-      }
-      if (channel === nextChannel) {
-        setChannel(null)
-        return
-      }
+      await context.resume()
+      if (active.current !== tone) return
 
-      oscillator = context.createOscillator()
-      active.current = oscillator
-      setChannel(nextChannel)
-
+      const oscillator = context.createOscillator()
       const panner = context.createStereoPanner()
       panner.pan.value = pan[nextChannel]
       const gain = context.createGain()
@@ -49,20 +58,15 @@ export function useStereoTone() {
       oscillator.connect(gain).connect(panner).connect(context.destination)
       oscillator.onended = () => {
         panner.disconnect()
-        if (active.current === oscillator) {
-          active.current = null
-          setChannel(null)
-        }
+        finish()
       }
       oscillator.start(start)
       oscillator.stop(start + 0.75)
-      await context.resume()
+      tone.oscillator = oscillator
     } catch {
-      if (!oscillator || active.current === oscillator) {
-        active.current = null
-        setChannel(null)
-        setError(true)
-      }
+      if (active.current !== tone) return
+      finish()
+      setError(true)
     }
   }
 

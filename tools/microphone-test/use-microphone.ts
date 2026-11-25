@@ -25,6 +25,7 @@ export function useMicrophone() {
   useEffect(() => () => release(session), [])
 
   async function start() {
+    if (session.current) return
     setStatus("starting")
     let pending: MicrophoneSession | undefined
     try {
@@ -76,7 +77,13 @@ export function useMicrophone() {
       }
       active.frame = requestAnimationFrame(readLevel)
       for (const track of stream.getTracks()) {
-        track.addEventListener("ended", () => stop("error"), { once: true })
+        track.addEventListener(
+          "ended",
+          () => {
+            if (session.current === active) stop("error")
+          },
+          { once: true }
+        )
       }
       setStatus("active")
     } catch {

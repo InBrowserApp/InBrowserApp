@@ -85,14 +85,18 @@ describe("MicrophoneTest", () => {
     const monitor = screen.getByRole("button", { name: messages.monitor })
     expect(monitor).toHaveProperty("disabled", true)
 
+    const start = screen.getByRole("button", { name: messages.start })
+    start.focus()
     click(messages.start)
-    expect(
-      screen.getByRole("button", { name: messages.starting })
-    ).toHaveProperty("disabled", true)
+    expect(start.getAttribute("aria-disabled")).toBe("true")
+    expect(document.activeElement).toBe(start)
+    click(messages.starting)
+    expect(audio.getUserMedia).toHaveBeenCalledOnce()
     await screen.findByRole("button", { name: messages.stop })
+    expect(document.activeElement).toBe(start)
     expect(audio.gain.value).toBe(0)
 
-    act(() => audio.frame.mock.calls[0][0](0))
+    act(() => audio.frame.mock.lastCall?.[0](0))
     expect(screen.getByRole("meter").getAttribute("aria-valuenow")).toBe("60")
     click(messages.monitor)
     expect(monitor.getAttribute("aria-pressed")).toBe("true")
@@ -177,7 +181,9 @@ describe("MicrophoneTest", () => {
     expect((await screen.findByRole("alert")).textContent).toBe(
       messages.speakerError
     )
+    expect(audio.oscillator.start).not.toHaveBeenCalled()
     await act(async () => click(messages.both))
+    expect(audio.oscillator.start).toHaveBeenCalledOnce()
     expect(screen.queryByRole("alert")).toBeNull()
     click(messages.both)
     expect(
@@ -185,5 +191,18 @@ describe("MicrophoneTest", () => {
         .getByRole("button", { name: messages.both })
         .getAttribute("aria-pressed")
     ).toBe("false")
+  })
+
+  it("only plays the latest channel when audio resumes after a new choice", async () => {
+    const pending = Promise.withResolvers<void>()
+    audio.context.resume.mockReturnValueOnce(pending.promise)
+    render(<MicrophoneTest messages={messages} />)
+
+    click(messages.left)
+    await act(async () => click(messages.right))
+    await act(async () => pending.resolve())
+
+    expect(audio.panner.pan.value).toBe(1)
+    expect(audio.oscillator.start).toHaveBeenCalledOnce()
   })
 })

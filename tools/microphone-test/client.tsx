@@ -61,7 +61,8 @@ export default function MicrophoneTest({
           <div className="flex flex-wrap gap-2">
             <Button
               type="button"
-              disabled={starting}
+              aria-disabled={starting}
+              className="aria-disabled:opacity-50"
               onClick={() => {
                 if (listening) microphone.stop()
                 else void microphone.start()
