@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@workspace/chm": "workspace:*",
-    "@workspace/html-pdf": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "@workspace/web-document": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -12,13 +12,13 @@ const meta = resolveLocale<ToolMeta>(import.meta.glob("./meta/*.json", { eager: 
 const { article, ...messages } = resolveLocale<typeof Messages>(import.meta.glob("./messages/*.json", { eager: true, import: "default" }), lang)!
 ---
 <ToolPageShell title={meta.name} description={meta.description}>
-  <Client client:load messages={messages} lang={lang} />
+  <Client client:load messages={messages} />
   <ToolArticle>
     <h2>{article.howTitle}</h2>
     <ol class="ps-2">
       <li>{article.chooseStep}</li>
       <li>{article.waitStep}</li>
-      <li>{article.downloadStep}</li>
+      <li>{article.saveStep}</li>
     </ol>
     <h2>{article.whatTitle}</h2>
     <p>{article.what}</p>

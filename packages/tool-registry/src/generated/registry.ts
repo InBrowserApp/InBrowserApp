@@ -8160,117 +8160,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "محوّل CHM إلى PDF",
         description:
-          "حوّل ملفات CHM إلى PDF مجانًا عبر الإنترنت. احفظ ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية بصيغة PDF مباشرةً في متصفحك.",
+          "حوّل ملفات CHM مجانًا إلى ملفات PDF قابلة للبحث. عاين ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية، ثم احفظها بتنسيق PDF مع إمكانية تحديد النص.",
       },
       de: {
         name: "CHM-zu-PDF-Konverter",
         description:
-          "Wandle CHM-Dateien kostenlos online in PDF um. Speichere Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books direkt im Browser als PDF.",
+          "Wandle CHM-Dateien kostenlos in durchsuchbare PDFs um. Sieh dir Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books an und speichere sie als PDF mit markierbarem Text.",
       },
       en: {
         name: "CHM to PDF Converter",
         description:
-          "Convert CHM files to PDF online for free. Save Windows help files, software manuals, and CHM ebooks as PDFs directly in your browser.",
+          "Convert CHM files to searchable PDFs for free. Preview Windows help files, software manuals, and CHM ebooks, then save as PDF with selectable text.",
       },
       es: {
         name: "Conversor de CHM a PDF",
         description:
-          "Convierte archivos CHM a PDF gratis en línea. Guarda archivos de ayuda de Windows, manuales de software y libros electrónicos CHM como PDF desde tu navegador.",
+          "Convierte gratis archivos CHM a PDF con texto que puedes buscar y seleccionar. Revisa la vista previa de la ayuda de Windows, los manuales y los libros electrónicos CHM antes de guardarlos.",
       },
       fr: {
         name: "Convertisseur CHM en PDF",
         description:
-          "Convertissez gratuitement vos fichiers CHM en PDF en ligne. Enregistrez des fichiers d’aide Windows, des manuels de logiciels et des livres numériques CHM en PDF directement dans votre navigateur.",
+          "Convertissez gratuitement vos fichiers CHM en PDF. Prévisualisez vos fichiers d’aide Windows, manuels et livres numériques CHM, puis enregistrez un PDF avec sélection et recherche de texte.",
       },
       he: {
         name: "ממיר CHM ל־PDF",
         description:
-          "המרת קובצי CHM ל־PDF בחינם באינטרנט. אפשר לשמור קובצי עזרה של Windows, מדריכי תוכנה וספרים דיגיטליים בפורמט CHM כקובצי PDF ישירות בדפדפן.",
+          "המרת קובצי CHM לקובצי PDF שאפשר לחפש בהם, בחינם. בדקו בתצוגה מקדימה קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM, ושמרו כ־PDF עם טקסט שאפשר לסמן.",
       },
       hi: {
         name: "CHM से PDF कन्वर्टर",
         description:
-          "CHM फ़ाइलें मुफ़्त में ऑनलाइन PDF में बदलें। Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकें सीधे अपने ब्राउज़र में PDF के रूप में सहेजें।",
+          "CHM फ़ाइलें मुफ़्त में ऐसी PDF में बदलें जिनमें आप खोज सकें। Windows सहायता फ़ाइलों, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकों का प्रीव्यू देखें, फिर उन्हें ऐसी PDF में सेव करें जिसमें टेक्स्ट चुना जा सके।",
       },
       id: {
         name: "Konverter CHM ke PDF",
         description:
-          "Konversi berkas CHM ke PDF secara gratis. Simpan berkas bantuan Windows, panduan perangkat lunak, dan buku digital CHM sebagai PDF langsung di browser.",
+          "Konversi berkas CHM menjadi PDF yang dapat dicari secara gratis. Pratinjau bantuan Windows, panduan perangkat lunak, dan buku digital CHM, lalu simpan sebagai PDF dengan teks yang dapat dipilih.",
       },
       it: {
         name: "Convertitore da CHM a PDF",
         description:
-          "Converti gratis i file CHM in PDF online. Salva file della guida di Windows, manuali software ed ebook CHM in formato PDF direttamente nel browser.",
+          "Converti gratis i file CHM in PDF ricercabili. Apri l’anteprima di guide di Windows, manuali software ed ebook CHM, poi salva un PDF con testo selezionabile.",
       },
       ja: {
         name: "CHM PDF 変換",
         description:
-          "CHM ファイルを無料で PDF に変換。Windows のヘルプファイル、ソフトウェアのマニュアル、CHM 形式の書籍をブラウザーで直接 PDF に保存できます。",
+          "CHM ファイルを検索可能な PDF に無料で変換。Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍をプレビューし、テキストを選択できる PDF として保存できます。",
       },
       ko: {
         name: "CHM PDF 변환기",
         description:
-          "CHM 파일을 무료로 PDF로 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 브라우저에서 바로 PDF로 저장할 수 있습니다.",
+          "CHM 파일을 검색 가능한 PDF로 무료 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 미리 보고 텍스트를 선택할 수 있는 PDF로 저장합니다.",
       },
       ms: {
         name: "Penukar CHM kepada PDF",
         description:
-          "Tukar fail CHM kepada PDF secara percuma. Simpan fail bantuan Windows, manual perisian dan e-buku CHM sebagai PDF terus dalam pelayar anda.",
+          "Tukar fail CHM kepada PDF yang boleh dicari secara percuma. Pratonton bantuan Windows, manual perisian dan e-buku CHM, kemudian simpan sebagai PDF dengan teks yang boleh dipilih.",
       },
       nl: {
         name: "CHM-naar-PDF-converter",
         description:
-          "Converteer CHM-bestanden gratis online naar PDF. Sla Windows-helpbestanden, softwarehandleidingen en CHM-e-books rechtstreeks vanuit je browser op als PDF.",
+          "Converteer CHM-bestanden gratis naar doorzoekbare PDF’s. Bekijk Windows-helpbestanden, softwarehandleidingen en CHM-e-books en sla ze op als PDF met selecteerbare tekst.",
       },
       no: {
         name: "Konverter CHM til PDF",
         description:
-          "Konverter CHM-filer til PDF gratis på nett. Lagre Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker som PDF direkte i nettleseren.",
+          "Konverter CHM-filer gratis til søkbare PDF-er. Forhåndsvis Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker og lagre dem som PDF med tekst du kan merke.",
       },
       pl: {
         name: "Konwerter CHM na PDF",
         description:
-          "Konwertuj pliki CHM na PDF bezpłatnie online. Zapisuj pliki pomocy Windows, instrukcje programów i e-booki CHM jako PDF bezpośrednio w przeglądarce.",
+          "Konwertuj pliki CHM na PDF z możliwością wyszukiwania tekstu. Wyświetl podgląd plików pomocy Windows, instrukcji i e-booków CHM, a potem zapisz je za darmo jako PDF z tekstem, który można zaznaczać.",
       },
       pt: {
         name: "Conversor de CHM para PDF",
         description:
-          "Converta arquivos CHM para PDF online e grátis. Salve arquivos de ajuda do Windows, manuais de software e e-books CHM como PDFs direto no navegador.",
+          "Converta arquivos CHM em PDFs pesquisáveis de graça. Confira a prévia de arquivos de ajuda do Windows, manuais de software e e-books CHM e salve um PDF com texto selecionável.",
       },
       ru: {
         name: "Конвертер CHM в PDF",
         description:
-          "Бесплатно конвертируйте файлы CHM в PDF онлайн. Сохраняйте справку Windows, руководства к программам и электронные книги CHM в формате PDF прямо в браузере.",
+          "Бесплатно преобразуйте файлы CHM в PDF с поиском по тексту. Просматривайте справку Windows, руководства и электронные книги CHM, а затем сохраняйте их в PDF, где можно выделять текст.",
       },
       sv: {
         name: "Konvertera CHM till PDF",
         description:
-          "Konvertera CHM-filer till PDF gratis online. Spara Windows-hjälpfiler, programhandböcker och CHM-e-böcker som PDF direkt i webbläsaren.",
+          "Konvertera CHM-filer till sökbara PDF-filer gratis. Förhandsgranska Windows-hjälpfiler, programhandböcker och CHM-e-böcker och spara dem som PDF med text som går att markera.",
       },
       th: {
         name: "แปลง CHM เป็น PDF",
         description:
-          "แปลงไฟล์ CHM เป็น PDF ออนไลน์ฟรี บันทึกไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM เป็น PDF ได้จากเบราว์เซอร์",
+          "แปลงไฟล์ CHM เป็น PDF ที่ค้นหาข้อความได้ฟรี ดูตัวอย่างไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM แล้วบันทึกเป็น PDF ที่เลือกข้อความได้",
       },
       tr: {
         name: "CHM’den PDF’ye Dönüştürücü",
         description:
-          "CHM dosyalarını ücretsiz olarak çevrimiçi PDF’ye dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını doğrudan tarayıcınızda PDF olarak kaydedin.",
+          "CHM dosyalarını ücretsiz olarak arama yapılabilir PDF’lere dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını önizleyin, ardından seçilebilir metin içeren bir PDF olarak kaydedin.",
       },
       vi: {
         name: "Chuyển CHM sang PDF",
         description:
-          "Chuyển tệp CHM sang PDF trực tuyến miễn phí. Lưu tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM dưới dạng PDF ngay trong trình duyệt.",
+          "Chuyển tệp CHM sang PDF có thể tìm kiếm miễn phí. Xem trước tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM, rồi lưu thành PDF có thể chọn văn bản.",
       },
       "zh-CN": {
         name: "CHM 转 PDF",
         description:
-          "免费在线将 CHM 转为 PDF。直接在浏览器中把 Windows 帮助文件、软件手册和 CHM 电子书保存为 PDF。",
+          "免费将 CHM 文件转换为可搜索的 PDF。预览 Windows 帮助文件、软件手册和 CHM 电子书，再保存为可选中文本的 PDF。",
       },
       "zh-TW": {
         name: "CHM 轉 PDF",
         description:
-          "免費線上將 CHM 檔轉成 PDF。在瀏覽器中直接將 Windows 說明檔、軟體手冊和 CHM 電子書儲存為 PDF。",
+          "免費將 CHM 檔案轉成可搜尋的 PDF。預覽 Windows 說明檔、軟體手冊和 CHM 電子書，再儲存為可選取文字的 PDF。",
       },
     },
   },
@@ -60118,117 +60118,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "محوّل CHM إلى PDF",
         description:
-          "حوّل ملفات CHM إلى PDF مجانًا عبر الإنترنت. احفظ ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية بصيغة PDF مباشرةً في متصفحك.",
+          "حوّل ملفات CHM مجانًا إلى ملفات PDF قابلة للبحث. عاين ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية، ثم احفظها بتنسيق PDF مع إمكانية تحديد النص.",
       },
       de: {
         name: "CHM-zu-PDF-Konverter",
         description:
-          "Wandle CHM-Dateien kostenlos online in PDF um. Speichere Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books direkt im Browser als PDF.",
+          "Wandle CHM-Dateien kostenlos in durchsuchbare PDFs um. Sieh dir Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books an und speichere sie als PDF mit markierbarem Text.",
       },
       en: {
         name: "CHM to PDF Converter",
         description:
-          "Convert CHM files to PDF online for free. Save Windows help files, software manuals, and CHM ebooks as PDFs directly in your browser.",
+          "Convert CHM files to searchable PDFs for free. Preview Windows help files, software manuals, and CHM ebooks, then save as PDF with selectable text.",
       },
       es: {
         name: "Conversor de CHM a PDF",
         description:
-          "Convierte archivos CHM a PDF gratis en línea. Guarda archivos de ayuda de Windows, manuales de software y libros electrónicos CHM como PDF desde tu navegador.",
+          "Convierte gratis archivos CHM a PDF con texto que puedes buscar y seleccionar. Revisa la vista previa de la ayuda de Windows, los manuales y los libros electrónicos CHM antes de guardarlos.",
       },
       fr: {
         name: "Convertisseur CHM en PDF",
         description:
-          "Convertissez gratuitement vos fichiers CHM en PDF en ligne. Enregistrez des fichiers d’aide Windows, des manuels de logiciels et des livres numériques CHM en PDF directement dans votre navigateur.",
+          "Convertissez gratuitement vos fichiers CHM en PDF. Prévisualisez vos fichiers d’aide Windows, manuels et livres numériques CHM, puis enregistrez un PDF avec sélection et recherche de texte.",
       },
       he: {
         name: "ממיר CHM ל־PDF",
         description:
-          "המרת קובצי CHM ל־PDF בחינם באינטרנט. אפשר לשמור קובצי עזרה של Windows, מדריכי תוכנה וספרים דיגיטליים בפורמט CHM כקובצי PDF ישירות בדפדפן.",
+          "המרת קובצי CHM לקובצי PDF שאפשר לחפש בהם, בחינם. בדקו בתצוגה מקדימה קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM, ושמרו כ־PDF עם טקסט שאפשר לסמן.",
       },
       hi: {
         name: "CHM से PDF कन्वर्टर",
         description:
-          "CHM फ़ाइलें मुफ़्त में ऑनलाइन PDF में बदलें। Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकें सीधे अपने ब्राउज़र में PDF के रूप में सहेजें।",
+          "CHM फ़ाइलें मुफ़्त में ऐसी PDF में बदलें जिनमें आप खोज सकें। Windows सहायता फ़ाइलों, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकों का प्रीव्यू देखें, फिर उन्हें ऐसी PDF में सेव करें जिसमें टेक्स्ट चुना जा सके।",
       },
       id: {
         name: "Konverter CHM ke PDF",
         description:
-          "Konversi berkas CHM ke PDF secara gratis. Simpan berkas bantuan Windows, panduan perangkat lunak, dan buku digital CHM sebagai PDF langsung di browser.",
+          "Konversi berkas CHM menjadi PDF yang dapat dicari secara gratis. Pratinjau bantuan Windows, panduan perangkat lunak, dan buku digital CHM, lalu simpan sebagai PDF dengan teks yang dapat dipilih.",
       },
       it: {
         name: "Convertitore da CHM a PDF",
         description:
-          "Converti gratis i file CHM in PDF online. Salva file della guida di Windows, manuali software ed ebook CHM in formato PDF direttamente nel browser.",
+          "Converti gratis i file CHM in PDF ricercabili. Apri l’anteprima di guide di Windows, manuali software ed ebook CHM, poi salva un PDF con testo selezionabile.",
       },
       ja: {
         name: "CHM PDF 変換",
         description:
-          "CHM ファイルを無料で PDF に変換。Windows のヘルプファイル、ソフトウェアのマニュアル、CHM 形式の書籍をブラウザーで直接 PDF に保存できます。",
+          "CHM ファイルを検索可能な PDF に無料で変換。Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍をプレビューし、テキストを選択できる PDF として保存できます。",
       },
       ko: {
         name: "CHM PDF 변환기",
         description:
-          "CHM 파일을 무료로 PDF로 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 브라우저에서 바로 PDF로 저장할 수 있습니다.",
+          "CHM 파일을 검색 가능한 PDF로 무료 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 미리 보고 텍스트를 선택할 수 있는 PDF로 저장합니다.",
       },
       ms: {
         name: "Penukar CHM kepada PDF",
         description:
-          "Tukar fail CHM kepada PDF secara percuma. Simpan fail bantuan Windows, manual perisian dan e-buku CHM sebagai PDF terus dalam pelayar anda.",
+          "Tukar fail CHM kepada PDF yang boleh dicari secara percuma. Pratonton bantuan Windows, manual perisian dan e-buku CHM, kemudian simpan sebagai PDF dengan teks yang boleh dipilih.",
       },
       nl: {
         name: "CHM-naar-PDF-converter",
         description:
-          "Converteer CHM-bestanden gratis online naar PDF. Sla Windows-helpbestanden, softwarehandleidingen en CHM-e-books rechtstreeks vanuit je browser op als PDF.",
+          "Converteer CHM-bestanden gratis naar doorzoekbare PDF’s. Bekijk Windows-helpbestanden, softwarehandleidingen en CHM-e-books en sla ze op als PDF met selecteerbare tekst.",
       },
       no: {
         name: "Konverter CHM til PDF",
         description:
-          "Konverter CHM-filer til PDF gratis på nett. Lagre Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker som PDF direkte i nettleseren.",
+          "Konverter CHM-filer gratis til søkbare PDF-er. Forhåndsvis Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker og lagre dem som PDF med tekst du kan merke.",
       },
       pl: {
         name: "Konwerter CHM na PDF",
         description:
-          "Konwertuj pliki CHM na PDF bezpłatnie online. Zapisuj pliki pomocy Windows, instrukcje programów i e-booki CHM jako PDF bezpośrednio w przeglądarce.",
+          "Konwertuj pliki CHM na PDF z możliwością wyszukiwania tekstu. Wyświetl podgląd plików pomocy Windows, instrukcji i e-booków CHM, a potem zapisz je za darmo jako PDF z tekstem, który można zaznaczać.",
       },
       pt: {
         name: "Conversor de CHM para PDF",
         description:
-          "Converta arquivos CHM para PDF online e grátis. Salve arquivos de ajuda do Windows, manuais de software e e-books CHM como PDFs direto no navegador.",
+          "Converta arquivos CHM em PDFs pesquisáveis de graça. Confira a prévia de arquivos de ajuda do Windows, manuais de software e e-books CHM e salve um PDF com texto selecionável.",
       },
       ru: {
         name: "Конвертер CHM в PDF",
         description:
-          "Бесплатно конвертируйте файлы CHM в PDF онлайн. Сохраняйте справку Windows, руководства к программам и электронные книги CHM в формате PDF прямо в браузере.",
+          "Бесплатно преобразуйте файлы CHM в PDF с поиском по тексту. Просматривайте справку Windows, руководства и электронные книги CHM, а затем сохраняйте их в PDF, где можно выделять текст.",
       },
       sv: {
         name: "Konvertera CHM till PDF",
         description:
-          "Konvertera CHM-filer till PDF gratis online. Spara Windows-hjälpfiler, programhandböcker och CHM-e-böcker som PDF direkt i webbläsaren.",
+          "Konvertera CHM-filer till sökbara PDF-filer gratis. Förhandsgranska Windows-hjälpfiler, programhandböcker och CHM-e-böcker och spara dem som PDF med text som går att markera.",
       },
       th: {
         name: "แปลง CHM เป็น PDF",
         description:
-          "แปลงไฟล์ CHM เป็น PDF ออนไลน์ฟรี บันทึกไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM เป็น PDF ได้จากเบราว์เซอร์",
+          "แปลงไฟล์ CHM เป็น PDF ที่ค้นหาข้อความได้ฟรี ดูตัวอย่างไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM แล้วบันทึกเป็น PDF ที่เลือกข้อความได้",
       },
       tr: {
         name: "CHM’den PDF’ye Dönüştürücü",
         description:
-          "CHM dosyalarını ücretsiz olarak çevrimiçi PDF’ye dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını doğrudan tarayıcınızda PDF olarak kaydedin.",
+          "CHM dosyalarını ücretsiz olarak arama yapılabilir PDF’lere dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını önizleyin, ardından seçilebilir metin içeren bir PDF olarak kaydedin.",
       },
       vi: {
         name: "Chuyển CHM sang PDF",
         description:
-          "Chuyển tệp CHM sang PDF trực tuyến miễn phí. Lưu tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM dưới dạng PDF ngay trong trình duyệt.",
+          "Chuyển tệp CHM sang PDF có thể tìm kiếm miễn phí. Xem trước tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM, rồi lưu thành PDF có thể chọn văn bản.",
       },
       "zh-CN": {
         name: "CHM 转 PDF",
         description:
-          "免费在线将 CHM 转为 PDF。直接在浏览器中把 Windows 帮助文件、软件手册和 CHM 电子书保存为 PDF。",
+          "免费将 CHM 文件转换为可搜索的 PDF。预览 Windows 帮助文件、软件手册和 CHM 电子书，再保存为可选中文本的 PDF。",
       },
       "zh-TW": {
         name: "CHM 轉 PDF",
         description:
-          "免費線上將 CHM 檔轉成 PDF。在瀏覽器中直接將 Windows 說明檔、軟體手冊和 CHM 電子書儲存為 PDF。",
+          "免費將 CHM 檔案轉成可搜尋的 PDF。預覽 Windows 說明檔、軟體手冊和 CHM 電子書，再儲存為可選取文字的 PDF。",
       },
     },
   },

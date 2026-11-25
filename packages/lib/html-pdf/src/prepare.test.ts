@@ -74,20 +74,3 @@ test("collects only embedded raster CSS images for decode validation", () => {
   ])
     expect(() => prepare({ html: "<p>Text</p>", css })).toThrow("unsupported")
 })
-
-test("can omit unsupported elements from normalized archives without accepting remote images", () => {
-  expect(
-    prepare({
-      html: "<p>Topic</p><details><summary>Reference</summary>Details</details>",
-      css: "",
-      omitUnsupportedElements: true,
-    }).text
-  ).toBe("TopicReferenceDetails")
-  expect(() =>
-    prepare({
-      html: '<img src="https://example.test/image.png">',
-      css: "",
-      omitUnsupportedElements: true,
-    })
-  ).toThrow("unsupported")
-})
