@@ -10858,6 +10858,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docx-to-epub-converter",
+    language: "ar",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "de",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "en",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "es",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "fr",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "he",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "hi",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "id",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "it",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "ja",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "ko",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "ms",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "nl",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "no",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "pl",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "pt",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "ru",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "sv",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "th",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "tr",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "vi",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "docx-to-epub-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "docx-to-markdown-converter",
     language: "ar",
   },

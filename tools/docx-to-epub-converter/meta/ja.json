@@ -1,0 +1,4 @@
+{
+  "name": "DOCXをEPUBに変換",
+  "description": "Microsoft Word の DOCX をブラウザーでリフロー型の EPUB に変換します。選択できる本文、見出し、リスト、リンク、表、挿絵を引き継ぎ、目次付きの電子書籍にできます。"
+}

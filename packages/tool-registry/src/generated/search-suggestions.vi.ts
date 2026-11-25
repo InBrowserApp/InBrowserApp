@@ -593,6 +593,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "docker-run-to-compose-converter",
   },
   {
+    category: "ebook",
+    name: "Chuyển Word (DOCX) sang EPUB",
+    slug: "docx-to-epub-converter",
+  },
+  {
     category: "document",
     name: "Trình chuyển đổi DOCX sang Markdown",
     slug: "docx-to-markdown-converter",

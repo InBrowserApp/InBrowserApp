@@ -151,6 +151,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-compose-validator/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
+  "docx-to-epub-converter": () => import("@tool/docx-to-epub-converter/page"),
   "docx-to-markdown-converter": () =>
     import("@tool/docx-to-markdown-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),

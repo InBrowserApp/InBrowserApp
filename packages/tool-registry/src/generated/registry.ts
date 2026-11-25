@@ -15149,6 +15149,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "docx-to-epub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: [
+      "docx",
+      "microsoft word",
+      "word",
+      "epub",
+      "ebook",
+      "reflowable",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل DOCX إلى EPUB",
+        description:
+          "حوّل مستندات Microsoft Word بتنسيق DOCX إلى EPUB بتخطيط يتكيّف مع الشاشة، مباشرةً في متصفحك. احتفظ بالنص القابل للتحديد والعناوين والقوائم والروابط والجداول والرسوم، مع فهرس محتويات لكتابك الإلكتروني.",
+      },
+      de: {
+        name: "DOCX in EPUB umwandeln",
+        description:
+          "Wandle DOCX-Dateien aus Microsoft Word im Browser in EPUB mit anpassbarem Textfluss um. Markierbarer Text, Überschriften, Listen, Links, Tabellen und Abbildungen bleiben erhalten. Ein Inhaltsverzeichnis erleichtert die Navigation.",
+      },
+      en: {
+        name: "DOCX to EPUB Converter",
+        description:
+          "Convert Microsoft Word DOCX to reflowable EPUB in your browser. Keep selectable text, headings, lists, links, tables and illustrations, with a table of contents for your ebook.",
+      },
+      es: {
+        name: "Convertidor de DOCX a EPUB",
+        description:
+          "Convierte documentos DOCX de Microsoft Word en EPUB de diseño adaptable desde tu navegador. Conserva el texto seleccionable, los títulos, las listas, los enlaces, las tablas y las ilustraciones. El libro incluye un índice.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en EPUB",
+        description:
+          "Convertissez un document Microsoft Word (DOCX) en EPUB à mise en page adaptable dans votre navigateur. Conservez le texte sélectionnable, les titres, les listes, les liens, les tableaux et les illustrations, avec une table des matières.",
+      },
+      he: {
+        name: "ממיר DOCX ל־EPUB",
+        description:
+          "המירו מסמכי Microsoft Word בפורמט DOCX ל־EPUB בפריסה גמישה בדפדפן. הממיר שומר על טקסט שאפשר לסמן, כותרות, רשימות, קישורים, טבלאות ואיורים, ויוצר תוכן עניינים לספר.",
+      },
+      hi: {
+        name: "Word (DOCX) से EPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में Microsoft Word की DOCX फ़ाइल को ऐसे EPUB में बदलें जिसका टेक्स्ट स्क्रीन के अनुसार ढलता है। चुनने योग्य टेक्स्ट, हेडिंग, सूचियाँ, लिंक, टेबल और चित्र बने रहते हैं। ईबुक में विषय सूची भी जुड़ती है।",
+      },
+      id: {
+        name: "Konverter Word (DOCX) ke EPUB",
+        description:
+          "Konversi dokumen Microsoft Word DOCX di browser menjadi EPUB dengan tata letak yang menyesuaikan layar. Pertahankan teks yang bisa dipilih, judul bagian, daftar, tautan, tabel, dan ilustrasi. Hasilnya dilengkapi daftar isi.",
+      },
+      it: {
+        name: "Convertitore da DOCX a EPUB",
+        description:
+          "Converti documenti DOCX di Microsoft Word in EPUB a impaginazione adattabile nel browser. Conserva testo selezionabile, titoli, elenchi, link, tabelle e illustrazioni, con un indice per il tuo ebook.",
+      },
+      ja: {
+        name: "DOCXをEPUBに変換",
+        description:
+          "Microsoft Word の DOCX をブラウザーでリフロー型の EPUB に変換します。選択できる本文、見出し、リスト、リンク、表、挿絵を引き継ぎ、目次付きの電子書籍にできます。",
+      },
+      ko: {
+        name: "DOCX → EPUB 변환기",
+        description:
+          "Microsoft Word의 DOCX 문서를 브라우저에서 화면에 맞춰 재배치되는 EPUB으로 변환하세요. 선택할 수 있는 텍스트와 제목, 목록, 링크, 표, 삽화를 유지하고 전자책에 목차를 넣습니다.",
+      },
+      ms: {
+        name: "Penukar Word (DOCX) kepada EPUB",
+        description:
+          "Tukar fail DOCX Microsoft Word kepada EPUB dengan susun atur boleh alir semula dalam pelayar anda. Kekalkan teks yang boleh dipilih, tajuk, senarai, pautan, jadual dan ilustrasi, serta sediakan isi kandungan untuk e-buku anda.",
+      },
+      nl: {
+        name: "Word (DOCX) naar EPUB converteren",
+        description:
+          "Zet DOCX-documenten uit Microsoft Word in je browser om naar EPUB met een aanpasbare indeling. Behoud selecteerbare tekst, koppen, lijsten, links, tabellen en illustraties. Je e-book krijgt een inhoudsopgave.",
+      },
+      no: {
+        name: "Konverter Word (DOCX) til EPUB",
+        description:
+          "Konverter Microsoft Word-filer i DOCX-format til EPUB med flytende tekst i nettleseren. Behold tekst som kan markeres, overskrifter, lister, lenker, tabeller og illustrasjoner, og få en e-bok med innholdsfortegnelse.",
+      },
+      pl: {
+        name: "Konwerter DOCX na EPUB",
+        description:
+          "Konwertuj dokumenty Microsoft Word w formacie DOCX na EPUB w przeglądarce. E-book z układem dopasowującym się do ekranu zachowa tekst, który można zaznaczać, nagłówki, listy, linki, tabele i ilustracje oraz otrzyma spis treści.",
+      },
+      pt: {
+        name: "Conversor de DOCX para EPUB",
+        description:
+          "Converta arquivos DOCX do Microsoft Word em EPUB com layout adaptável no navegador. Preserve o texto selecionável, os títulos, as listas, os links, as tabelas e as ilustrações. O e-book inclui um sumário.",
+      },
+      ru: {
+        name: "Конвертер DOCX в EPUB",
+        description:
+          "Преобразуйте документы Microsoft Word (DOCX) в EPUB с адаптивной вёрсткой в браузере. Сохраняются текст с возможностью выделения, заголовки, списки, ссылки, таблицы и иллюстрации. Для книги создаётся оглавление.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till EPUB",
+        description:
+          "Konvertera Microsoft Word-dokument i DOCX-format till EPUB med flödande text i webbläsaren. Bevara markerbar text, rubriker, listor, länkar, tabeller och illustrationer. E-boken får en innehållsförteckning.",
+      },
+      th: {
+        name: "แปลง Word (DOCX) เป็น EPUB",
+        description:
+          "แปลงไฟล์ Microsoft Word รูปแบบ DOCX เป็น EPUB ที่ปรับการจัดข้อความตามหน้าจอได้ในเบราว์เซอร์ คงข้อความที่เลือกได้ หัวเรื่อง รายการ ลิงก์ ตาราง และภาพประกอบ พร้อมสารบัญสำหรับอีบุ๊ก",
+      },
+      tr: {
+        name: "DOCX’ten EPUB’a Dönüştürücü",
+        description:
+          "Microsoft Word DOCX belgelerini tarayıcınızda metni ekrana uyarlanan EPUB dosyalarına dönüştürün. Seçilebilir metni, başlıkları, listeleri, bağlantıları, tabloları ve görselleri koruyun. E-kitabınız içindekiler listesiyle birlikte oluşturulur.",
+      },
+      vi: {
+        name: "Chuyển Word (DOCX) sang EPUB",
+        description:
+          "Chuyển tài liệu DOCX của Microsoft Word sang EPUB có bố cục linh hoạt ngay trong trình duyệt. Giữ văn bản có thể chọn, tiêu đề, danh sách, liên kết, bảng và hình minh họa, đồng thời tạo mục lục cho sách điện tử.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 EPUB 转换器",
+        description:
+          "在浏览器中将 Microsoft Word 的 DOCX 文档转为可重排版的 EPUB。保留可选中的文字、标题、列表、链接、表格和插图，并生成电子书目录。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 EPUB",
+        description:
+          "在瀏覽器中將 Microsoft Word DOCX 文件轉成可重排版面的 EPUB。保留可選取的文字、標題、清單、連結、表格與支援的插圖，並建立電子書目錄。",
+      },
+    },
+  },
+  {
     slug: "docx-to-markdown-converter",
     category: "document",
     icon: "file-text",
@@ -75021,6 +75152,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Docker Run 轉 Compose 轉換器",
         description: "將 docker run 命令轉換為 docker-compose.yml 檔案。",
+      },
+    },
+  },
+  "docx-to-epub-converter": {
+    slug: "docx-to-epub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: [
+      "docx",
+      "microsoft word",
+      "word",
+      "epub",
+      "ebook",
+      "reflowable",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل DOCX إلى EPUB",
+        description:
+          "حوّل مستندات Microsoft Word بتنسيق DOCX إلى EPUB بتخطيط يتكيّف مع الشاشة، مباشرةً في متصفحك. احتفظ بالنص القابل للتحديد والعناوين والقوائم والروابط والجداول والرسوم، مع فهرس محتويات لكتابك الإلكتروني.",
+      },
+      de: {
+        name: "DOCX in EPUB umwandeln",
+        description:
+          "Wandle DOCX-Dateien aus Microsoft Word im Browser in EPUB mit anpassbarem Textfluss um. Markierbarer Text, Überschriften, Listen, Links, Tabellen und Abbildungen bleiben erhalten. Ein Inhaltsverzeichnis erleichtert die Navigation.",
+      },
+      en: {
+        name: "DOCX to EPUB Converter",
+        description:
+          "Convert Microsoft Word DOCX to reflowable EPUB in your browser. Keep selectable text, headings, lists, links, tables and illustrations, with a table of contents for your ebook.",
+      },
+      es: {
+        name: "Convertidor de DOCX a EPUB",
+        description:
+          "Convierte documentos DOCX de Microsoft Word en EPUB de diseño adaptable desde tu navegador. Conserva el texto seleccionable, los títulos, las listas, los enlaces, las tablas y las ilustraciones. El libro incluye un índice.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en EPUB",
+        description:
+          "Convertissez un document Microsoft Word (DOCX) en EPUB à mise en page adaptable dans votre navigateur. Conservez le texte sélectionnable, les titres, les listes, les liens, les tableaux et les illustrations, avec une table des matières.",
+      },
+      he: {
+        name: "ממיר DOCX ל־EPUB",
+        description:
+          "המירו מסמכי Microsoft Word בפורמט DOCX ל־EPUB בפריסה גמישה בדפדפן. הממיר שומר על טקסט שאפשר לסמן, כותרות, רשימות, קישורים, טבלאות ואיורים, ויוצר תוכן עניינים לספר.",
+      },
+      hi: {
+        name: "Word (DOCX) से EPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में Microsoft Word की DOCX फ़ाइल को ऐसे EPUB में बदलें जिसका टेक्स्ट स्क्रीन के अनुसार ढलता है। चुनने योग्य टेक्स्ट, हेडिंग, सूचियाँ, लिंक, टेबल और चित्र बने रहते हैं। ईबुक में विषय सूची भी जुड़ती है।",
+      },
+      id: {
+        name: "Konverter Word (DOCX) ke EPUB",
+        description:
+          "Konversi dokumen Microsoft Word DOCX di browser menjadi EPUB dengan tata letak yang menyesuaikan layar. Pertahankan teks yang bisa dipilih, judul bagian, daftar, tautan, tabel, dan ilustrasi. Hasilnya dilengkapi daftar isi.",
+      },
+      it: {
+        name: "Convertitore da DOCX a EPUB",
+        description:
+          "Converti documenti DOCX di Microsoft Word in EPUB a impaginazione adattabile nel browser. Conserva testo selezionabile, titoli, elenchi, link, tabelle e illustrazioni, con un indice per il tuo ebook.",
+      },
+      ja: {
+        name: "DOCXをEPUBに変換",
+        description:
+          "Microsoft Word の DOCX をブラウザーでリフロー型の EPUB に変換します。選択できる本文、見出し、リスト、リンク、表、挿絵を引き継ぎ、目次付きの電子書籍にできます。",
+      },
+      ko: {
+        name: "DOCX → EPUB 변환기",
+        description:
+          "Microsoft Word의 DOCX 문서를 브라우저에서 화면에 맞춰 재배치되는 EPUB으로 변환하세요. 선택할 수 있는 텍스트와 제목, 목록, 링크, 표, 삽화를 유지하고 전자책에 목차를 넣습니다.",
+      },
+      ms: {
+        name: "Penukar Word (DOCX) kepada EPUB",
+        description:
+          "Tukar fail DOCX Microsoft Word kepada EPUB dengan susun atur boleh alir semula dalam pelayar anda. Kekalkan teks yang boleh dipilih, tajuk, senarai, pautan, jadual dan ilustrasi, serta sediakan isi kandungan untuk e-buku anda.",
+      },
+      nl: {
+        name: "Word (DOCX) naar EPUB converteren",
+        description:
+          "Zet DOCX-documenten uit Microsoft Word in je browser om naar EPUB met een aanpasbare indeling. Behoud selecteerbare tekst, koppen, lijsten, links, tabellen en illustraties. Je e-book krijgt een inhoudsopgave.",
+      },
+      no: {
+        name: "Konverter Word (DOCX) til EPUB",
+        description:
+          "Konverter Microsoft Word-filer i DOCX-format til EPUB med flytende tekst i nettleseren. Behold tekst som kan markeres, overskrifter, lister, lenker, tabeller og illustrasjoner, og få en e-bok med innholdsfortegnelse.",
+      },
+      pl: {
+        name: "Konwerter DOCX na EPUB",
+        description:
+          "Konwertuj dokumenty Microsoft Word w formacie DOCX na EPUB w przeglądarce. E-book z układem dopasowującym się do ekranu zachowa tekst, który można zaznaczać, nagłówki, listy, linki, tabele i ilustracje oraz otrzyma spis treści.",
+      },
+      pt: {
+        name: "Conversor de DOCX para EPUB",
+        description:
+          "Converta arquivos DOCX do Microsoft Word em EPUB com layout adaptável no navegador. Preserve o texto selecionável, os títulos, as listas, os links, as tabelas e as ilustrações. O e-book inclui um sumário.",
+      },
+      ru: {
+        name: "Конвертер DOCX в EPUB",
+        description:
+          "Преобразуйте документы Microsoft Word (DOCX) в EPUB с адаптивной вёрсткой в браузере. Сохраняются текст с возможностью выделения, заголовки, списки, ссылки, таблицы и иллюстрации. Для книги создаётся оглавление.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till EPUB",
+        description:
+          "Konvertera Microsoft Word-dokument i DOCX-format till EPUB med flödande text i webbläsaren. Bevara markerbar text, rubriker, listor, länkar, tabeller och illustrationer. E-boken får en innehållsförteckning.",
+      },
+      th: {
+        name: "แปลง Word (DOCX) เป็น EPUB",
+        description:
+          "แปลงไฟล์ Microsoft Word รูปแบบ DOCX เป็น EPUB ที่ปรับการจัดข้อความตามหน้าจอได้ในเบราว์เซอร์ คงข้อความที่เลือกได้ หัวเรื่อง รายการ ลิงก์ ตาราง และภาพประกอบ พร้อมสารบัญสำหรับอีบุ๊ก",
+      },
+      tr: {
+        name: "DOCX’ten EPUB’a Dönüştürücü",
+        description:
+          "Microsoft Word DOCX belgelerini tarayıcınızda metni ekrana uyarlanan EPUB dosyalarına dönüştürün. Seçilebilir metni, başlıkları, listeleri, bağlantıları, tabloları ve görselleri koruyun. E-kitabınız içindekiler listesiyle birlikte oluşturulur.",
+      },
+      vi: {
+        name: "Chuyển Word (DOCX) sang EPUB",
+        description:
+          "Chuyển tài liệu DOCX của Microsoft Word sang EPUB có bố cục linh hoạt ngay trong trình duyệt. Giữ văn bản có thể chọn, tiêu đề, danh sách, liên kết, bảng và hình minh họa, đồng thời tạo mục lục cho sách điện tử.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 EPUB 转换器",
+        description:
+          "在浏览器中将 Microsoft Word 的 DOCX 文档转为可重排版的 EPUB。保留可选中的文字、标题、列表、链接、表格和插图，并生成电子书目录。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 EPUB",
+        description:
+          "在瀏覽器中將 Microsoft Word DOCX 文件轉成可重排版面的 EPUB。保留可選取的文字、標題、清單、連結、表格與支援的插圖，並建立電子書目錄。",
       },
     },
   },
