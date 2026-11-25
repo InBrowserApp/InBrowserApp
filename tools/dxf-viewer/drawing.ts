@@ -66,6 +66,8 @@ export async function openDrawing(
       sceneOptions: { suppressPaperSpace: true },
     })
     if (!viewer.HasRenderer()) throw new Error("WebGL unavailable")
+    // Auto-resize sets inline positioning. Keep the host stretched over the stage.
+    host.style.removeProperty("position")
   } catch {
     host.remove()
     throw new Error("Could not start DXF renderer", { cause: "webgl" })
@@ -89,23 +91,27 @@ export async function openDrawing(
   }
 
   const url = URL.createObjectURL(file)
-  const cancel = () => {
-    dispose()
-    URL.revokeObjectURL(url)
-  }
+  // Destroying the viewer terminates its worker without settling a pending Load.
+  let cancel!: () => void
+  const aborted = new Promise<never>((_, reject) => {
+    cancel = () => reject(signal.reason)
+  })
   signal.addEventListener("abort", cancel, { once: true })
   try {
     viewer.GetCanvas().setAttribute("aria-hidden", "true")
     viewer.GetCanvas().style.touchAction = "none"
     applyTheme()
-    await viewer.Load({
-      url,
-      fonts,
-      workerFactory: () =>
-        new Worker(new URL("./dxf.worker.ts", import.meta.url), {
-          type: "module",
-        }),
-    })
+    await Promise.race([
+      viewer.Load({
+        url,
+        fonts,
+        workerFactory: () =>
+          new Worker(new URL("./dxf.worker.ts", import.meta.url), {
+            type: "module",
+          }),
+      }),
+      aborted,
+    ])
     signal.throwIfAborted()
     if (!viewer.GetBounds()) throw new Error("Empty DXF", { cause: "empty" })
     theme.observe(document.documentElement, { attributeFilter: ["class"] })
