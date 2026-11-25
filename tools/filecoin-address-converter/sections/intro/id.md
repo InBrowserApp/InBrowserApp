@@ -4,7 +4,7 @@ Tempel alamat `f410` atau `t410`, lalu pilih **Konversi alamat**. Konverter meme
 
 ## Konversi alamat 0x ke Filecoin
 
-Tempel alamat `0x` dengan 40 digit heksadesimal. Pilih **Mainnet** untuk alamat `f410` atau **Testnet Calibration** untuk alamat `t410`. Format `0x` tidak memiliki awalan jaringan, sehingga rangkaian byte yang sama dapat ditulis dengan salah satu dari kedua awalan Filecoin. Pilih jaringan yang dipakai dompet, penjelajah blok, atau bursa Anda. Input heksadesimal boleh seluruhnya dalam huruf kecil atau huruf besar. Input yang mencampur keduanya harus lulus pemeriksaan checksum EIP-55.
+Tempel alamat `0x` dengan 40 digit heksadesimal. Pilih **Mainnet** untuk alamat `f410` atau **Testnet** untuk alamat `t410`. Calibration menggunakan awalan `t410` yang sama dengan testnet Filecoin lainnya. Format `0x` tidak memiliki awalan jaringan, sehingga rangkaian byte yang sama dapat ditulis dengan salah satu dari kedua awalan Filecoin. Pilih jaringan yang dipakai dompet, penjelajah blok, atau bursa Anda. Input heksadesimal boleh seluruhnya dalam huruf kecil atau huruf besar. Input yang mencampur keduanya harus lulus pemeriksaan checksum EIP-55.
 
 ## Apa arti f410 dan t410?
 

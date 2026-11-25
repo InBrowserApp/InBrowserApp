@@ -18,10 +18,7 @@ import { convertAddress, type Network } from "./core/address"
 import type EnglishMessages from "./messages/en.json"
 
 const example = "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed"
-const networks = [
-  { value: "f", label: "mainnet", prefix: "f410" },
-  { value: "t", label: "calibration", prefix: "t410" },
-] as const
+const networkLabels = { f: "mainnet", t: "testnet" } as const
 
 export default function FilecoinAddressConverter({
   messages,
@@ -81,7 +78,7 @@ export default function FilecoinAddressConverter({
                   {messages.network}
                 </legend>
                 <div className="flex flex-wrap gap-2">
-                  {networks.map(({ value, label, prefix }) => (
+                  {(["f", "t"] as const).map((value) => (
                     <label
                       key={value}
                       className="flex min-h-9 cursor-pointer items-center gap-2 rounded-lg border px-3 py-1.5 text-sm has-checked:border-foreground/40 has-checked:bg-muted"
@@ -94,9 +91,9 @@ export default function FilecoinAddressConverter({
                         onChange={() => setNetwork(value)}
                         className="size-3.5 shrink-0 accent-primary"
                       />
-                      {messages[label]}{" "}
+                      {messages[networkLabels[value]]}{" "}
                       <bdi className="font-mono text-xs text-muted-foreground">
-                        {prefix}
+                        {`${value}410`}
                       </bdi>
                     </label>
                   ))}
@@ -144,10 +141,7 @@ export default function FilecoinAddressConverter({
             </output>
             {output.format === "ethereum" && (
               <p className="text-xs text-muted-foreground">
-                {messages.network} ·{" "}
-                {output.network === "f"
-                  ? messages.mainnet
-                  : messages.calibration}
+                {messages.network} · {messages[networkLabels[output.network]]}
               </p>
             )}
           </ToolPanelCardContent>

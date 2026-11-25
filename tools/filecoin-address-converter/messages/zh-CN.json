@@ -2,7 +2,7 @@
   "address": "Filecoin 地址或以太坊格式的地址",
   "network": "Filecoin 网络",
   "mainnet": "主网",
-  "calibration": "Calibration 测试网",
+  "testnet": "测试网",
   "convert": "转换地址",
   "sample": "试用示例",
   "filecoinAddress": "Filecoin 地址",

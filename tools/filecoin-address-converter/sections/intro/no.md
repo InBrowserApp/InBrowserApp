@@ -4,7 +4,7 @@ Lim inn en `f410`- eller `t410`-adresse og velg **Konverter adresse**. Konverter
 
 ## Konverter en 0x-adresse til Filecoin
 
-Lim inn en `0x`-adresse med 40 heksadesimale sifre. Velg **Hovednett** for en `f410`-adresse eller **Calibration-testnett** for en `t410`-adresse. `0x`-formen inneholder ikke noe nettverksprefiks, så de samme bytene kan skrives med begge Filecoin-prefiksene. Velg nettverket som lommeboken, blokkutforskeren eller kryptobørsen din bruker. Heksadesimal inndata med bare små eller bare store bokstaver godtas. Inndata med blandede store og små bokstaver må bestå EIP-55-sjekksummen.
+Lim inn en `0x`-adresse med 40 heksadesimale sifre. Velg **Hovednett** for en `f410`-adresse eller **Testnett** for en `t410`-adresse. `0x`-formen inneholder ikke noe nettverksprefiks, så de samme bytene kan skrives med begge Filecoin-prefiksene. Velg nettverket som lommeboken, blokkutforskeren eller kryptobørsen din bruker. Heksadesimal inndata med bare små eller bare store bokstaver godtas. Inndata med blandede store og små bokstaver må bestå EIP-55-sjekksummen. Calibration bruker samme `t410`-prefiks som andre Filecoin-testnett.
 
 ## Hva betyr f410 og t410?
 

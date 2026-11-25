@@ -2,7 +2,7 @@
   "address": "Filecoin-adresse eller adresse i Ethereum-format",
   "network": "Filecoin-nettverk",
   "mainnet": "Hovednett",
-  "calibration": "Calibration-testnett",
+  "testnet": "Testnett",
   "convert": "Konverter adresse",
   "sample": "Prøv et eksempel",
   "filecoinAddress": "Filecoin-adresse",

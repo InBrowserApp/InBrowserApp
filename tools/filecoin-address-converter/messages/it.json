@@ -2,7 +2,7 @@
   "address": "Indirizzo Filecoin o in formato Ethereum",
   "network": "Rete Filecoin",
   "mainnet": "Rete principale",
-  "calibration": "Rete di test Calibration",
+  "testnet": "Rete di test",
   "convert": "Converti indirizzo",
   "sample": "Prova un esempio",
   "filecoinAddress": "Indirizzo Filecoin",

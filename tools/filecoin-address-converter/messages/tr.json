@@ -2,7 +2,7 @@
   "address": "Filecoin adresi veya Ethereum biçiminde adres",
   "network": "Filecoin ağı",
   "mainnet": "Ana ağ",
-  "calibration": "Calibration test ağı",
+  "testnet": "Test ağı",
   "convert": "Adresi dönüştür",
   "sample": "Örnek dene",
   "filecoinAddress": "Filecoin adresi",

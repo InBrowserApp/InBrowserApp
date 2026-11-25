@@ -4,7 +4,7 @@ Paste an `f410` or `t410` address and select **Convert address**. The converter 
 
 ## Convert a 0x address to Filecoin
 
-Paste a `0x` address with 40 hexadecimal digits. Choose **Mainnet** for an `f410` address or **Calibration testnet** for a `t410` address. The `0x` form contains no network prefix, so the same bytes can be written with either Filecoin prefix. Select the network used by your wallet, explorer, or exchange. Lowercase and uppercase hexadecimal inputs are accepted. Mixed-case inputs must pass the EIP-55 checksum.
+Paste a `0x` address with 40 hexadecimal digits. Choose **Mainnet** for an `f410` address or **Testnet** for a `t410` address. Calibration uses the same `t410` prefix as other Filecoin testnets. The `0x` form contains no network prefix, so the same bytes can be written with either Filecoin prefix. Select the network used by your wallet, explorer, or exchange. Lowercase and uppercase hexadecimal inputs are accepted. Mixed-case inputs must pass the EIP-55 checksum.
 
 ## What do f410 and t410 mean?
 

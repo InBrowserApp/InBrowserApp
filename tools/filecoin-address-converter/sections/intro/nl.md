@@ -4,7 +4,7 @@ Plak een `f410`- of `t410`-adres en selecteer **Adres converteren**. De converte
 
 ## Een 0x-adres naar Filecoin converteren
 
-Plak een `0x`-adres met 40 hexadecimale cijfers. Kies **Mainnet** voor een `f410`-adres of **Calibration-testnet** voor een `t410`-adres. De `0x`-vorm bevat geen netwerkprefix, dus dezelfde bytes kunnen met beide Filecoin-prefixen worden geschreven. Selecteer het netwerk dat je wallet, explorer of exchange gebruikt. Hexadecimale invoer met alleen kleine letters of alleen hoofdletters wordt geaccepteerd. Invoer met beide moet voldoen aan de EIP-55-checksum.
+Plak een `0x`-adres met 40 hexadecimale cijfers. Kies **Mainnet** voor een `f410`-adres of **Testnet** voor een `t410`-adres. De `0x`-vorm bevat geen netwerkprefix, dus dezelfde bytes kunnen met beide Filecoin-prefixen worden geschreven. Selecteer het netwerk dat je wallet, explorer of exchange gebruikt. Hexadecimale invoer met alleen kleine letters of alleen hoofdletters wordt geaccepteerd. Invoer met beide moet voldoen aan de EIP-55-checksum. Calibration gebruikt hetzelfde `t410`-prefix als andere Filecoin-testnetten.
 
 ## Wat betekenen f410 en t410?
 

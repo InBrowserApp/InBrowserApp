@@ -2,7 +2,7 @@
   "address": "Filecoin का पता या Ethereum फ़ॉर्मैट का पता",
   "network": "Filecoin नेटवर्क",
   "mainnet": "मेननेट",
-  "calibration": "Calibration टेस्टनेट",
+  "testnet": "टेस्टनेट",
   "convert": "पता बदलें",
   "sample": "कोई उदाहरण आज़माएँ",
   "filecoinAddress": "Filecoin का पता",

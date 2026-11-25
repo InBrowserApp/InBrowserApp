@@ -2,7 +2,7 @@
   "address": "Filecoin 주소 또는 이더리움 형식 주소",
   "network": "Filecoin 네트워크",
   "mainnet": "메인넷",
-  "calibration": "Calibration 테스트넷",
+  "testnet": "테스트넷",
   "convert": "주소 변환",
   "sample": "예제 사용하기",
   "filecoinAddress": "Filecoin 주소",

@@ -4,7 +4,7 @@ Bir `f410` veya `t410` adresi yapıştırıp **Adresi dönüştür** düğmesine
 
 ## 0x adresi Filecoin biçimine nasıl dönüştürülür?
 
-40 onaltılık basamak içeren bir `0x` adresi yapıştırın. `f410` adresi için **Ana ağ**, `t410` adresi için **Calibration test ağı** seçeneğini kullanın. `0x` biçiminde ağ öneki yoktur. Bu nedenle aynı baytlar iki Filecoin önekinden biriyle yazılabilir. Cüzdanınızın, blok gezgininizin veya borsanızın kullandığı ağı seçin. Yalnızca küçük ya da yalnızca büyük harfli onaltılık adresler kabul edilir. Hem küçük hem büyük harf içeren adresler EIP-55 sağlama toplamı doğrulamasından geçmelidir.
+40 onaltılık basamak içeren bir `0x` adresi yapıştırın. `f410` adresi için **Ana ağ**, `t410` adresi için **Test ağı** seçeneğini kullanın. Calibration, diğer Filecoin test ağlarıyla aynı `t410` önekini kullanır. `0x` biçiminde ağ öneki yoktur. Bu nedenle aynı baytlar iki Filecoin önekinden biriyle yazılabilir. Cüzdanınızın, blok gezgininizin veya borsanızın kullandığı ağı seçin. Yalnızca küçük ya da yalnızca büyük harfli onaltılık adresler kabul edilir. Hem küçük hem büyük harf içeren adresler EIP-55 sağlama toplamı doğrulamasından geçmelidir.
 
 ## f410 ve t410 ne anlama gelir?
 

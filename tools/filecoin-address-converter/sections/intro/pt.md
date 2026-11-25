@@ -4,7 +4,7 @@ Cole um endereço `f410` ou `t410` e selecione **Converter endereço**. O conver
 
 ## Converter um endereço 0x para o formato Filecoin
 
-Cole um endereço `0x` com 40 dígitos hexadecimais. Selecione **Rede principal** para obter um endereço `f410` ou **Rede de teste Calibration** para obter um endereço `t410`. O formato `0x` não contém um prefixo de rede, pelo que os mesmos bytes podem ser escritos com qualquer um dos prefixos do Filecoin. Selecione a rede utilizada pela sua carteira, explorador ou plataforma de negociação. São aceites valores hexadecimais inteiramente em minúsculas ou em maiúsculas. Os valores que misturam maiúsculas e minúsculas têm de passar a verificação EIP-55.
+Cole um endereço `0x` com 40 dígitos hexadecimais. Selecione **Rede principal** para obter um endereço `f410` ou **Rede de teste** para obter um endereço `t410`. A rede Calibration utiliza o mesmo prefixo `t410` que as outras redes de teste do Filecoin. O formato `0x` não contém um prefixo de rede, pelo que os mesmos bytes podem ser escritos com qualquer um dos prefixos do Filecoin. Selecione a rede utilizada pela sua carteira, explorador ou plataforma de negociação. São aceites valores hexadecimais inteiramente em minúsculas ou em maiúsculas. Os valores que misturam maiúsculas e minúsculas têm de passar a verificação EIP-55.
 
 ## O que significam f410 e t410?
 

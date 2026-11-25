@@ -4,7 +4,7 @@ Klistra in en `f410`- eller `t410`-adress och välj **Konvertera adress**. Konve
 
 ## Konvertera en 0x-adress till Filecoin
 
-Klistra in en `0x`-adress med 40 hexadecimala siffror. Välj **Huvudnät** för en `f410`-adress eller **Calibration-testnät** för en `t410`-adress. `0x`-formen innehåller inget nätverksprefix, så samma byte kan skrivas med båda Filecoin-prefixen. Välj det nätverk som din plånbok, blockutforskare eller kryptobörs använder. Hexadecimala indata med enbart gemener eller enbart versaler godtas. Indata med blandade gemener och versaler måste klara EIP-55-checksumman.
+Klistra in en `0x`-adress med 40 hexadecimala siffror. Välj **Huvudnät** för en `f410`-adress eller **Testnät** för en `t410`-adress. `0x`-formen innehåller inget nätverksprefix, så samma byte kan skrivas med båda Filecoin-prefixen. Välj det nätverk som din plånbok, blockutforskare eller kryptobörs använder. Hexadecimala indata med enbart gemener eller enbart versaler godtas. Indata med blandade gemener och versaler måste klara EIP-55-checksumman. Calibration använder samma `t410`-prefix som andra Filecoin-testnät.
 
 ## Vad betyder f410 och t410?
 

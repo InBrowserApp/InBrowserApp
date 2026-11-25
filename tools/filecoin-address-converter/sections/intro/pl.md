@@ -4,7 +4,7 @@ Wklej adres `f410` lub `t410` i wybierz **Konwertuj adres**. Konwerter sprawdzi 
 
 ## Jak przekonwertować adres 0x na format Filecoin
 
-Wklej adres `0x` zawierający 40 cyfr szesnastkowych. Wybierz **Sieć główna**, aby uzyskać adres `f410`, albo **Sieć testowa Calibration**, aby uzyskać adres `t410`. Format `0x` nie zawiera prefiksu sieci, więc te same bajty można zapisać z dowolnym z tych prefiksów Filecoin. Wybierz sieć używaną przez portfel, eksplorator bloków lub giełdę. Możesz podać adres szesnastkowy zapisany tylko małymi albo tylko wielkimi literami. Adres zawierający oba rodzaje liter musi mieć poprawną sumę kontrolną EIP-55.
+Wklej adres `0x` zawierający 40 cyfr szesnastkowych. Wybierz **Sieć główna**, aby uzyskać adres `f410`, albo **Sieć testowa**, aby uzyskać adres `t410`. Sieć Calibration używa tego samego prefiksu `t410` co inne sieci testowe Filecoin. Format `0x` nie zawiera prefiksu sieci, więc te same bajty można zapisać z dowolnym z tych prefiksów Filecoin. Wybierz sieć używaną przez portfel, eksplorator bloków lub giełdę. Możesz podać adres szesnastkowy zapisany tylko małymi albo tylko wielkimi literami. Adres zawierający oba rodzaje liter musi mieć poprawną sumę kontrolną EIP-55.
 
 ## Co oznaczają f410 i t410?
 

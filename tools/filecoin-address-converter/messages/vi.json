@@ -2,7 +2,7 @@
   "address": "Địa chỉ Filecoin hoặc địa chỉ kiểu Ethereum",
   "network": "Mạng Filecoin",
   "mainnet": "Mạng chính",
-  "calibration": "Mạng thử nghiệm Calibration",
+  "testnet": "Mạng thử nghiệm",
   "convert": "Chuyển đổi địa chỉ",
   "sample": "Thử ví dụ",
   "filecoinAddress": "Địa chỉ Filecoin",

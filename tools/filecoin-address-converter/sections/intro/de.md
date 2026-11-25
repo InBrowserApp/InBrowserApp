@@ -4,7 +4,7 @@ Fügen Sie eine `f410`- oder `t410`-Adresse ein und wählen Sie **Adresse konver
 
 ## 0x-Adresse ins Filecoin-Format konvertieren
 
-Fügen Sie eine `0x`-Adresse mit 40 Hexadezimalziffern ein. Wählen Sie **Mainnet** für eine `f410`-Adresse oder **Calibration-Testnetz** für eine `t410`-Adresse. Das `0x`-Format enthält kein Netzwerkpräfix. Deshalb lassen sich dieselben Bytes mit beiden Filecoin-Präfixen darstellen. Wählen Sie das Netzwerk, das Ihre Wallet, Ihr Explorer oder Ihre Kryptobörse verwendet. Hexadezimaleingaben in reiner Klein- oder Großschreibung werden akzeptiert. Bei gemischter Schreibweise muss die EIP-55-Prüfsumme stimmen.
+Fügen Sie eine `0x`-Adresse mit 40 Hexadezimalziffern ein. Wählen Sie **Mainnet** für eine `f410`-Adresse oder **Testnetz** für eine `t410`-Adresse. Calibration verwendet dasselbe Präfix `t410` wie andere Filecoin-Testnetze. Das `0x`-Format enthält kein Netzwerkpräfix. Deshalb lassen sich dieselben Bytes mit beiden Filecoin-Präfixen darstellen. Wählen Sie das Netzwerk, das Ihre Wallet, Ihr Explorer oder Ihre Kryptobörse verwendet. Hexadezimaleingaben in reiner Klein- oder Großschreibung werden akzeptiert. Bei gemischter Schreibweise muss die EIP-55-Prüfsumme stimmen.
 
 ## Was bedeuten f410 und t410?
 

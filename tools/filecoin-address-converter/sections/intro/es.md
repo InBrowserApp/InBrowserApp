@@ -4,7 +4,7 @@ Pega una dirección `f410` o `t410` y selecciona **Convertir dirección**. El co
 
 ## Convierte una dirección 0x a Filecoin
 
-Pega una dirección `0x` con 40 dígitos hexadecimales. Selecciona **Red principal** para obtener una dirección `f410` o **Red de pruebas Calibration** para obtener una dirección `t410`. El formato `0x` carece de prefijo de red, así que los mismos bytes se pueden escribir con cualquiera de los dos prefijos de Filecoin. Selecciona la red que utiliza tu cartera, explorador o plataforma de intercambio. Se aceptan entradas hexadecimales en minúsculas o en mayúsculas. Si combinan mayúsculas y minúsculas, deben superar la comprobación EIP-55.
+Pega una dirección `0x` con 40 dígitos hexadecimales. Selecciona **Red principal** para obtener una dirección `f410` o **Red de pruebas** para obtener una dirección `t410`. Calibration usa el mismo prefijo `t410` que las demás redes de pruebas de Filecoin. El formato `0x` carece de prefijo de red, así que los mismos bytes se pueden escribir con cualquiera de los dos prefijos de Filecoin. Selecciona la red que utiliza tu cartera, explorador o plataforma de intercambio. Se aceptan entradas hexadecimales en minúsculas o en mayúsculas. Si combinan mayúsculas y minúsculas, deben superar la comprobación EIP-55.
 
 ## ¿Qué significan f410 y t410?
 

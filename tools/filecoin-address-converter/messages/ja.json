@@ -2,7 +2,7 @@
   "address": "Filecoin または Ethereum 形式のアドレス",
   "network": "Filecoin ネットワーク",
   "mainnet": "メインネット",
-  "calibration": "Calibration テストネット",
+  "testnet": "テストネット",
   "convert": "アドレスを変換",
   "sample": "サンプルを試す",
   "filecoinAddress": "Filecoin アドレス",

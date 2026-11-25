@@ -2,7 +2,7 @@
   "address": "Alamat Filecoin atau alamat gaya Ethereum",
   "network": "Rangkaian Filecoin",
   "mainnet": "Mainnet",
-  "calibration": "Testnet Calibration",
+  "testnet": "Testnet",
   "convert": "Tukar alamat",
   "sample": "Cuba contoh",
   "filecoinAddress": "Alamat Filecoin",

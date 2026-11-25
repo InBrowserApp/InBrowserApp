@@ -4,7 +4,7 @@ Dán địa chỉ `f410` hoặc `t410` rồi chọn **Chuyển đổi địa ch�
 
 ## Chuyển đổi địa chỉ 0x sang Filecoin
 
-Dán địa chỉ `0x` có 40 ký tự thập lục phân. Chọn **Mạng chính** để nhận địa chỉ `f410` hoặc **Mạng thử nghiệm Calibration** để nhận địa chỉ `t410`. Dạng `0x` không chứa tiền tố mạng, nên có thể dùng một trong hai tiền tố Filecoin để biểu diễn cùng một dãy byte. Chọn mạng mà ví, trình khám phá blockchain hoặc sàn giao dịch của bạn sử dụng. Công cụ chấp nhận đầu vào thập lục phân toàn chữ thường hoặc toàn chữ hoa. Đầu vào có cả chữ hoa lẫn chữ thường phải có tổng kiểm tra EIP-55 hợp lệ.
+Dán địa chỉ `0x` có 40 ký tự thập lục phân. Chọn **Mạng chính** để nhận địa chỉ `f410` hoặc **Mạng thử nghiệm** để nhận địa chỉ `t410`. Calibration dùng chung tiền tố `t410` với các mạng thử nghiệm Filecoin khác. Dạng `0x` không chứa tiền tố mạng, nên có thể dùng một trong hai tiền tố Filecoin để biểu diễn cùng một dãy byte. Chọn mạng mà ví, trình khám phá blockchain hoặc sàn giao dịch của bạn sử dụng. Công cụ chấp nhận đầu vào thập lục phân toàn chữ thường hoặc toàn chữ hoa. Đầu vào có cả chữ hoa lẫn chữ thường phải có tổng kiểm tra EIP-55 hợp lệ.
 
 ## f410 và t410 có ý nghĩa gì?
 

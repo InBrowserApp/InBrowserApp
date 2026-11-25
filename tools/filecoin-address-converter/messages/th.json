@@ -2,7 +2,7 @@
   "address": "ที่อยู่ Filecoin หรือที่อยู่แบบ Ethereum",
   "network": "เครือข่าย Filecoin",
   "mainnet": "เครือข่ายหลัก",
-  "calibration": "เครือข่ายทดสอบ Calibration",
+  "testnet": "เครือข่ายทดสอบ",
   "convert": "แปลงที่อยู่",
   "sample": "ลองใช้ตัวอย่าง",
   "filecoinAddress": "ที่อยู่ Filecoin",

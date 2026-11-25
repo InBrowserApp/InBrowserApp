@@ -4,7 +4,7 @@ Tampal alamat `f410` atau `t410`, kemudian pilih **Tukar alamat**. Penukar menye
 
 ## Tukar alamat 0x kepada Filecoin
 
-Tampal alamat `0x` dengan 40 digit heksadesimal. Pilih **Mainnet** untuk mendapatkan alamat `f410` atau **Testnet Calibration** untuk mendapatkan alamat `t410`. Format `0x` tidak mengandungi awalan rangkaian, jadi turutan bait yang sama boleh ditulis dengan mana-mana awalan Filecoin. Pilih rangkaian yang digunakan oleh dompet, peneroka blok atau bursa anda. Input heksadesimal diterima dalam huruf kecil atau huruf besar sepenuhnya. Input yang mencampurkan kedua-duanya mesti lulus semakan checksum EIP-55.
+Tampal alamat `0x` dengan 40 digit heksadesimal. Pilih **Mainnet** untuk mendapatkan alamat `f410` atau **Testnet** untuk mendapatkan alamat `t410`. Calibration menggunakan awalan `t410` yang sama seperti testnet Filecoin lain. Format `0x` tidak mengandungi awalan rangkaian, jadi turutan bait yang sama boleh ditulis dengan mana-mana awalan Filecoin. Pilih rangkaian yang digunakan oleh dompet, peneroka blok atau bursa anda. Input heksadesimal diterima dalam huruf kecil atau huruf besar sepenuhnya. Input yang mencampurkan kedua-duanya mesti lulus semakan checksum EIP-55.
 
 ## Apakah maksud f410 dan t410?
 

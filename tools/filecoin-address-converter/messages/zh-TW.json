@@ -2,7 +2,7 @@
   "address": "Filecoin 位址或以太坊格式的位址",
   "network": "Filecoin 網路",
   "mainnet": "主網",
-  "calibration": "Calibration 測試網",
+  "testnet": "測試網",
   "convert": "轉換位址",
   "sample": "試用範例",
   "filecoinAddress": "Filecoin 位址",

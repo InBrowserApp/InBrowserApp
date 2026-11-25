@@ -4,7 +4,7 @@ Incolla un indirizzo `f410` o `t410` e seleziona **Converti indirizzo**. Il conv
 
 ## Converti un indirizzo 0x in Filecoin
 
-Incolla un indirizzo `0x` con 40 cifre esadecimali. Scegli **Rete principale** per un indirizzo `f410` o **Rete di test Calibration** per un indirizzo `t410`. Il formato `0x` non contiene un prefisso di rete, quindi gli stessi byte possono essere scritti con entrambi i prefissi Filecoin. Seleziona la rete usata dal tuo portafoglio, esploratore o exchange. Sono accettati valori esadecimali tutti minuscoli o tutti maiuscoli. I valori che combinano maiuscole e minuscole devono superare la verifica del checksum EIP-55.
+Incolla un indirizzo `0x` con 40 cifre esadecimali. Scegli **Rete principale** per un indirizzo `f410` o **Rete di test** per un indirizzo `t410`. Il formato `0x` non contiene un prefisso di rete, quindi gli stessi byte possono essere scritti con entrambi i prefissi Filecoin. Seleziona la rete usata dal tuo portafoglio, esploratore o exchange. Sono accettati valori esadecimali tutti minuscoli o tutti maiuscoli. I valori che combinano maiuscole e minuscole devono superare la verifica del checksum EIP-55. Calibration usa lo stesso prefisso `t410` delle altre reti di test Filecoin.
 
 ## Cosa significano f410 e t410?
 

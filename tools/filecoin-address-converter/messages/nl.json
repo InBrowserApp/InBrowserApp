@@ -2,7 +2,7 @@
   "address": "Filecoin- of Ethereum-achtig adres",
   "network": "Filecoin-netwerk",
   "mainnet": "Mainnet",
-  "calibration": "Calibration-testnet",
+  "testnet": "Testnet",
   "convert": "Adres converteren",
   "sample": "Een voorbeeld proberen",
   "filecoinAddress": "Filecoin-adres",
