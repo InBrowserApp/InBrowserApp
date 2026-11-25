@@ -60,6 +60,8 @@ describe("DeadPixelTest", () => {
   it("lets you choose a pure color and click or use arrows to cycle the test", () => {
     const { start, dialog } = launch()
     expect(selected(messages.white)).toBe("true")
+    fireEvent.click(screen.getByRole("button", { name: messages.next }))
+    expect(selected(messages.black)).toBe("true")
     fireEvent.click(screen.getByRole("button", { name: messages.red }))
     expect(selected(messages.red)).toBe("true")
 

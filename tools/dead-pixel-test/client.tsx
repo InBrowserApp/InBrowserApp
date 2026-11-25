@@ -72,16 +72,18 @@ export default function DeadPixelTest({
 
   return (
     <section className="space-y-3">
-      <div
-        aria-hidden="true"
-        className="min-h-56 rounded-xl border border-border sm:min-h-72"
+      <button
+        type="button"
+        aria-label={messages.next}
+        className="block min-h-56 w-full cursor-pointer rounded-xl border border-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:min-h-72"
         style={{ backgroundColor: color.hex }}
+        onClick={() => step(1)}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div
           role="group"
           aria-label={messages.testColors}
-          className="flex flex-wrap gap-2"
+          className="flex flex-wrap gap-1.5 sm:gap-2"
         >
           {colors.map((item, index) => (
             <Button
@@ -89,7 +91,7 @@ export default function DeadPixelTest({
               type="button"
               variant={position === index ? "default" : "outline"}
               aria-pressed={position === index}
-              className="min-h-10"
+              className="min-h-10 gap-1.5 px-2 sm:gap-2 sm:px-3"
               onClick={() => setPosition(index)}
             >
               <span
