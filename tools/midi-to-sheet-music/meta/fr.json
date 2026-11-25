@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur MIDI en partition",
+  "description": "Convertissez un fichier MIDI en partition dans votre navigateur. Ajustez la grille rythmique, vérifiez l’aperçu et téléchargez un PDF imprimable ou un MusicXML modifiable."
+}

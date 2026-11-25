@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI kepada Skor Muzik",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "Penukar MIDI kepada WAV",
     slug: "midi-to-wav-converter",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "MIDI to Sheet Music",
+  "description": "Convert a MIDI file to sheet music in your browser. Adjust the rhythm grid, preview the score, and download a printable PDF or editable MusicXML."
+}

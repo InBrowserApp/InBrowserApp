@@ -23370,6 +23370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-to-sheet-music",
+    language: "ar",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "de",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "en",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "es",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "fr",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "he",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "hi",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "id",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "it",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "ja",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "ko",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "ms",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "nl",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "no",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "pl",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "pt",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "ru",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "sv",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "th",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "tr",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "vi",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-to-sheet-music",
+    language: "zh-TW",
+  },
+  {
     slug: "midi-to-wav-converter",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "MIDI in Noten umwandeln",
+  "description": "Wandle eine MIDI-Datei im Browser in Noten um. Passe das Rhythmusraster an, prüfe die Vorschau und lade eine druckfertige PDF oder eine bearbeitbare MusicXML-Datei herunter."
+}

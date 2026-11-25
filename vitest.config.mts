@@ -37,10 +37,20 @@ export default getViteConfig({
       provider: "v8",
       reporter: ["text", "html", "json-summary", "json"],
       reportOnFailure: true,
-      include: ["packages/tool-sdk/src/**/*.ts", "tools/**/*.{ts,tsx}"],
+      include: [
+        "packages/tool-sdk/src/**/*.ts",
+        "packages/lib/midi-notation/src/**/*.ts",
+        "tools/**/*.{ts,tsx}",
+      ],
       exclude: ["**/*.test.{ts,tsx}", "**/manifest.ts"],
       thresholds: {
         "packages/tool-sdk/src/**": {
+          lines: 100,
+          functions: 100,
+          branches: 100,
+          statements: 100,
+        },
+        "packages/lib/midi-notation/src/**": {
           lines: 100,
           functions: 100,
           branches: 100,

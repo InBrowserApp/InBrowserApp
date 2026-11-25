@@ -1,0 +1,4 @@
+{
+  "name": "MIDI para partitura",
+  "description": "Converta um arquivo MIDI em partitura no navegador. Ajuste a grade rítmica, confira a prévia e baixe um PDF para imprimir ou um MusicXML editável."
+}

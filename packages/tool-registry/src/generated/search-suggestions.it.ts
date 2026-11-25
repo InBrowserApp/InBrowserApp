@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Da MIDI a spartito",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "Convertitore da MIDI a WAV",
     slug: "midi-to-wav-converter",
   },

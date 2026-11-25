@@ -4,6 +4,8 @@ import { groupVoices, makeBars, timelined } from "./score-layout"
 import type { Grid, Key, Part, Score } from "./read-score"
 import type { Bar, Chord } from "./score-layout"
 
+export type { Grid } from "./read-score"
+
 const noteTypes = [
   [64, "whole"],
   [32, "half"],

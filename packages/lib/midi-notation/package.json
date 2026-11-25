@@ -1,0 +1,15 @@
+{
+  "name": "@workspace/midi-notation",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/musicxml.ts"
+  },
+  "dependencies": {
+    "midi-file": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

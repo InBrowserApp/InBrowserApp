@@ -1,0 +1,4 @@
+{
+  "name": "MIDI til noter",
+  "description": "Gjør om en MIDI-fil til noter i nettleseren. Juster rytmerutenettet, forhåndsvis partituret og last ned en utskriftsklar PDF eller en redigerbar MusicXML-fil."
+}

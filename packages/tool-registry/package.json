@@ -261,6 +261,7 @@
     "@tool/microphone-test": "workspace:*",
     "@tool/midi-monitor": "workspace:*",
     "@tool/midi-to-musicxml-converter": "workspace:*",
+    "@tool/midi-to-sheet-music": "workspace:*",
     "@tool/midi-to-wav-converter": "workspace:*",
     "@tool/midi-transposer": "workspace:*",
     "@tool/mime-type-lookup": "workspace:*",

@@ -8,10 +8,9 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Download, Piano } from "@workspace/ui/icons"
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
-import { midiToMusicXml } from "./core/musicxml"
+import { midiToMusicXml, type Grid } from "@workspace/midi-notation"
 
 import type { SubmitEvent } from "react"
-import type { Grid } from "./core/read-score"
 import type english from "./messages/en.json"
 
 type ErrorResult = Extract<ReturnType<typeof midiToMusicXml>, { error: string }>
