@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "apk-manifest-viewer",
+    language: "ar",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "de",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "en",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "es",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "fr",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "he",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "hi",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "id",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "it",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ja",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ko",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ms",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "nl",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "no",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "pl",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "pt",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ru",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "sv",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "th",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "tr",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "vi",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "apng-maker",
     language: "ar",
   },

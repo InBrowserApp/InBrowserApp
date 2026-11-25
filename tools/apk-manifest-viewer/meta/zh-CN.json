@@ -1,0 +1,4 @@
+{
+  "name": "APK 清单查看器",
+  "description": "在浏览器中打开 Android APK 并查看 AndroidManifest.xml。查看软件包名称、版本、SDK 级别、声明的权限，以及解码后的 XML。"
+}

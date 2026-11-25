@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka manifestu APK",
+  "description": "Otwórz plik APK Androida i sprawdź AndroidManifest.xml. Zobacz nazwę pakietu, wersję, poziomy SDK, zadeklarowane uprawnienia i zdekodowany XML w przeglądarce."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Visor de manifiestos APK",
+  "description": "Abre un APK de Android y examina AndroidManifest.xml. Consulta el nombre del paquete, la versión, los niveles de SDK, los permisos declarados y el XML decodificado en tu navegador."
+}

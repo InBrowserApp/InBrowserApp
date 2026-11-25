@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "מציג מניפסט APK",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "יוצר APNG",
     slug: "apng-maker",

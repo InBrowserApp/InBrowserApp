@@ -1,0 +1,4 @@
+{
+  "name": "โปรแกรมดู Manifest ของ APK",
+  "description": "เปิด APK ของ Android และตรวจสอบ AndroidManifest.xml ในเบราว์เซอร์ ดูชื่อแพ็กเกจ เวอร์ชัน ระดับ SDK สิทธิ์ที่ประกาศ และ XML ที่ถอดรหัสแล้ว"
+}
