@@ -58,10 +58,12 @@ test("enables ordinary MIDI input and displays decoded messages, held notes, and
   click(messages.enable)
   await screen.findByRole("option", { name: "Studio Keys" })
   expect(requestMIDIAccess).toHaveBeenCalledWith({ sysex: false })
-  expect(document.activeElement).toBe(
-    screen.getByRole("combobox", { name: messages.input })
+  await waitFor(() =>
+    expect(document.activeElement).toBe(
+      screen.getByRole("combobox", { name: messages.input })
+    )
   )
-  expect(port.open).toHaveBeenCalledOnce()
+  await waitFor(() => expect(port.open).toHaveBeenCalledOnce())
   act(() => {
     send(port, 0x90, 60, 100)
     send(port, 0xb0, 64, 127)
@@ -95,12 +97,14 @@ test("changes inputs safely and preserves the last log when the input unplugs", 
   renderMonitor()
   click(messages.enable)
   await screen.findByRole("option", { name: "Pads" })
+  await waitFor(() => expect(port.open).toHaveBeenCalledOnce())
   act(() => send(port, 0x90, 38, 22))
   await screen.findByText("90 26 16")
   fireEvent.change(screen.getByRole("combobox", { name: messages.input }), {
     target: { value: "pads" },
   })
   await waitFor(() => expect(port.close).toHaveBeenCalledOnce())
+  await waitFor(() => expect(pads.open).toHaveBeenCalledOnce())
   expect(screen.queryByText("90 26 16")).toBeNull()
   act(() => {
     send(port, 0x91, 38, 22)
@@ -131,6 +135,7 @@ test("supports retry after MIDI access and input failures", async () => {
     target: { value: port.id },
   })
   expect(screen.queryByRole("alert")).toBeNull()
+  await waitFor(() => expect(port.open).toHaveBeenCalledTimes(2))
   await act(async () => send(port, 0xb0, 7, 16))
   await screen.findByText("B0 07 10")
 })
@@ -144,6 +149,7 @@ test("shows unsupported browsers and bounds noisy input logs", async () => {
   renderMonitor()
   click(messages.enable)
   await screen.findByRole("option", { name: "Studio Keys" })
+  await waitFor(() => expect(port.open).toHaveBeenCalledOnce())
   act(() => {
     for (let i = 0; i < 105; i++) send(port, 0xb0, 7, i)
     send(port, 0xfa)
@@ -167,6 +173,7 @@ test("waits for a previous close before reopening the same MIDI port", async () 
   renderMonitor()
   click(messages.enable)
   const input = await screen.findByRole("combobox", { name: messages.input })
+  await waitFor(() => expect(port.open).toHaveBeenCalledOnce())
   fireEvent.change(input, { target: { value: second.id } })
   await waitFor(() => expect(port.close).toHaveBeenCalledOnce())
   fireEvent.change(input, { target: { value: port.id } })
@@ -183,5 +190,7 @@ test("preserves focus when permission is granted without an input", async () => 
   renderMonitor()
   click(messages.enable)
   await screen.findByText(messages.noInputs)
-  expect(document.activeElement).toBe(screen.getByRole("status"))
+  await waitFor(() =>
+    expect(document.activeElement).toBe(screen.getByRole("status"))
+  )
 })
