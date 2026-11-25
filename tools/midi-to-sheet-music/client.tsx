@@ -12,15 +12,11 @@ import { Download, FileMusic, LoaderCircle, Piano } from "@workspace/ui/icons"
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
 import { useScoreDownload } from "@workspace/ui/lib/use-score-download"
 import { midiExample } from "./example"
-import type { Grid, midiToMusicXml } from "@workspace/midi-notation"
+import type { Grid, MidiNotationError } from "@workspace/midi-notation"
 import type english from "./messages/en.json"
 
-type MidiError = Extract<
-  ReturnType<typeof midiToMusicXml>,
-  { error: string }
->["error"]
 type ConvertedScore =
-  | { error: MidiError }
+  | { error: MidiNotationError }
   | { xml: File; pages?: SVGSVGElement[] | null }
 type Conversion = { file: File; grid: Grid } & ConvertedScore
 

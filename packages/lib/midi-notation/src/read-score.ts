@@ -21,7 +21,7 @@ export type Score = {
   meters: Map<number, Meter>
   keys: Map<number, Key>
 }
-type ErrorResult = { error: "invalidMidi" | "unsupportedTiming" | "noNotes" }
+export type ScoreReadError = "invalidMidi" | "unsupportedTiming" | "noNotes"
 
 const utf8 = new TextDecoder("utf-8", { fatal: true })
 
@@ -56,7 +56,7 @@ export function readScore(
   grid: Grid,
   title: string,
   partLabel: string
-): Score | ErrorResult {
+): Score | { error: ScoreReadError } {
   let midi
   try {
     midi = parseMidi(input)
