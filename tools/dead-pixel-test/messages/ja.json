@@ -1,0 +1,16 @@
+{
+  "testColors": "テスト色",
+  "white": "白",
+  "black": "黒",
+  "red": "赤",
+  "green": "緑",
+  "blue": "青",
+  "fullscreen": "全画面テストを開始",
+  "fullscreenLabel": "全画面ドット抜けテスト",
+  "exit": "全画面を終了",
+  "previous": "前の色",
+  "next": "次の色",
+  "hideControls": "操作ボタンを隠す",
+  "showControls": "操作ボタンを表示",
+  "controlsHelp": "テスト色をクリックまたはタップすると次の色に進みます。矢印キーで色を切り替え、Escで終了できます。"
+}

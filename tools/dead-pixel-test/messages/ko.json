@@ -1,0 +1,16 @@
+{
+  "testColors": "테스트 색상",
+  "white": "흰색",
+  "black": "검은색",
+  "red": "빨간색",
+  "green": "초록색",
+  "blue": "파란색",
+  "fullscreen": "전체 화면 테스트 시작",
+  "fullscreenLabel": "전체 화면 불량 화소 테스트",
+  "exit": "전체 화면 종료",
+  "previous": "이전 색상",
+  "next": "다음 색상",
+  "hideControls": "조작 버튼 숨기기",
+  "showControls": "조작 버튼 표시",
+  "controlsHelp": "테스트 색상을 클릭하거나 탭하면 다음 색상으로 바뀝니다. 방향키로 색상을 바꾸고 Esc 키로 종료할 수 있습니다."
+}

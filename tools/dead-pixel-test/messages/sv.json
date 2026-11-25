@@ -1,0 +1,16 @@
+{
+  "testColors": "Testfärger",
+  "white": "Vit",
+  "black": "Svart",
+  "red": "Röd",
+  "green": "Grön",
+  "blue": "Blå",
+  "fullscreen": "Starta test i helskärm",
+  "fullscreenLabel": "Test av döda pixlar i helskärm",
+  "exit": "Avsluta helskärm",
+  "previous": "Föregående färg",
+  "next": "Nästa färg",
+  "hideControls": "Dölj kontroller",
+  "showControls": "Visa kontroller",
+  "controlsHelp": "Klicka eller tryck på färgen för att gå vidare. Använd piltangenterna för att byta färg och Esc för att avsluta."
+}

@@ -469,6 +469,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ujian Piksel Mati",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "Maklumat Peranti",
     slug: "device-information",
   },

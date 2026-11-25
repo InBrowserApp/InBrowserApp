@@ -557,6 +557,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "屏幕坏点测试",
+    slug: "dead-pixel-test",
+    alternateName: "螢幕壞點測試",
+  },
+  {
+    category: "misc",
     name: "设备信息",
     slug: "device-information",
     alternateName: "裝置資訊",

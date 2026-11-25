@@ -469,6 +469,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "불량 화소 테스트",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "기기 정보",
     slug: "device-information",
   },

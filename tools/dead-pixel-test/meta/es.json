@@ -1,0 +1,4 @@
+{
+  "name": "Prueba de píxeles muertos",
+  "description": "Comprueba si tu pantalla tiene píxeles muertos, puntos brillantes o subpíxeles atascados con fondos blancos, negros, rojos, verdes y azules a pantalla completa."
+}

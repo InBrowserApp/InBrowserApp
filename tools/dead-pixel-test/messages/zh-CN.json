@@ -1,0 +1,16 @@
+{
+  "testColors": "测试颜色",
+  "white": "白色",
+  "black": "黑色",
+  "red": "红色",
+  "green": "绿色",
+  "blue": "蓝色",
+  "fullscreen": "开始全屏测试",
+  "fullscreenLabel": "全屏坏点测试",
+  "exit": "退出全屏",
+  "previous": "上一种颜色",
+  "next": "下一种颜色",
+  "hideControls": "隐藏控制栏",
+  "showControls": "显示控制栏",
+  "controlsHelp": "点击或轻触测试画面切换颜色。也可使用方向键切换颜色，按 Esc 退出。"
+}

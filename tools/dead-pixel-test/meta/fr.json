@@ -1,0 +1,4 @@
+{
+  "name": "Test de pixels morts",
+  "description": "Repérez les pixels morts, les points lumineux et les sous-pixels bloqués sur cinq fonds unis en plein écran, en blanc, noir, rouge, vert et bleu."
+}
