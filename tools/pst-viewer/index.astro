@@ -17,4 +17,5 @@ const Intro = resolveLocale<AstroComponentFactory>(import.meta.glob("./sections/
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load title={meta.name} lang={lang} messages={{ ...archiveMessages(lang), ...copy }} />
   <ToolArticle><Intro /></ToolArticle>
+  <p class="text-xs text-muted-foreground"><a href="/licenses/pst-viewer.txt">pst-extractor · MIT / java-libpst · Apache-2.0 / fflate · MIT</a></p>
 </ToolPageShell>
