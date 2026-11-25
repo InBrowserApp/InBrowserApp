@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 스토리지 비용 계산기",
+  "description": "데이터 크기, 보존 기간, 복제본 수를 바탕으로 Filecoin Onchain Cloud 스토리지 비용을 USDFC로 추정하세요. 기준 요율이나 실시간 메인넷 요율을 사용해 예상 지출액과 예치금을 확인할 수 있습니다."
+}

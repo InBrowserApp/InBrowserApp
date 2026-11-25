@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "filecoin-piece-cid-calculator",
   },
   {
+    category: "ipfs",
+    name: "Filecoin स्टोरेज लागत कैलकुलेटर",
+    slug: "filecoin-storage-cost-calculator",
+  },
+  {
     category: "web",
     name: "फ़ॉन्ट सबसेट जनरेटर",
     slug: "font-subset-generator",

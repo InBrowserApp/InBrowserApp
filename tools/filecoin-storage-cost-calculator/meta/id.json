@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator Biaya Penyimpanan Filecoin",
+  "description": "Perkirakan biaya penyimpanan Filecoin Onchain Cloud dalam USDFC berdasarkan ukuran data, masa simpan, dan jumlah salinan. Bandingkan pengeluaran dan cadangan dengan opsi tarif terbaru dari mainnet."
+}

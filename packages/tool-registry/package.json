@@ -132,6 +132,7 @@
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/file-type-detector": "workspace:*",
     "@tool/filecoin-piece-cid-calculator": "workspace:*",
+    "@tool/filecoin-storage-cost-calculator": "workspace:*",
     "@tool/font-subset-generator": "workspace:*",
     "@tool/font-to-woff2": "workspace:*",
     "@tool/gamepad-tester": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Depolama Maliyeti Hesaplayıcısı",
+  "description": "Veri boyutuna, saklama süresine ve kopya sayısına göre Filecoin Onchain Cloud depolama maliyetini USDFC cinsinden tahmin edin. Tahmini harcama ve rezervi isterseniz güncel ana ağ tarifeleriyle karşılaştırın."
+}

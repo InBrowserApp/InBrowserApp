@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Storage Cost Calculator",
+  "description": "Estimate Filecoin Onchain Cloud storage costs in USDFC from data size, retention, and replica count. Compare spending and reserves with optional live mainnet rates."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tính chi phí lưu trữ Filecoin",
+  "description": "Ước tính chi phí lưu trữ Filecoin Onchain Cloud bằng USDFC theo dung lượng, thời gian lưu và số bản sao. Xem riêng chi phí và khoản dự phòng, rồi cập nhật đơn giá từ mạng chính khi cần."
+}

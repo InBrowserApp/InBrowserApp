@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "filecoin-piece-cid-calculator",
   },
   {
+    category: "ipfs",
+    name: "Kalkulator Kos Storan Filecoin",
+    slug: "filecoin-storage-cost-calculator",
+  },
+  {
     category: "web",
     name: "Penjana Subset Fon",
     slug: "font-subset-generator",

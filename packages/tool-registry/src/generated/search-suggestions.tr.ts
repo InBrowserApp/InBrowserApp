@@ -628,6 +628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "filecoin-piece-cid-calculator",
   },
   {
+    category: "ipfs",
+    name: "Filecoin Depolama Maliyeti Hesaplayıcısı",
+    slug: "filecoin-storage-cost-calculator",
+  },
+  {
     category: "web",
     name: "Yazı Tipi Alt Kümesi Oluşturucu",
     slug: "font-subset-generator",
