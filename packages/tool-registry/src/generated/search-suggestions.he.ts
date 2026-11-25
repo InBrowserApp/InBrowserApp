@@ -18,6 +18,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-previewer",
   },
   {
+    category: "image",
+    name: "ממיר תיווי ABC לתמונה",
+    slug: "abc-notation-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "ממיר תיווי ABC ל־PDF",
     slug: "abc-notation-to-pdf-converter",

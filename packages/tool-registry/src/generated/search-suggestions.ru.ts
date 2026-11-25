@@ -18,6 +18,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-previewer",
   },
   {
+    category: "image",
+    name: "Конвертер нотации ABC в изображения",
+    slug: "abc-notation-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "Конвертер нотации ABC в PDF",
     slug: "abc-notation-to-pdf-converter",

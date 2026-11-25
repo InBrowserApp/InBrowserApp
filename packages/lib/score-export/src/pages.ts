@@ -14,13 +14,15 @@ export function scoreContentWidth(size: ScorePaper) {
 }
 
 export function scoreFilename(name: string) {
-  return (
-    name
-      // oxlint-disable-next-line no-control-regex -- Replace characters unsuitable for download filenames.
-      .replace(/[<>:"/\\|?*\u0000-\u001f]/g, "_")
-      .trim()
-      .replace(/^\.+|\.+$/g, "") || "score"
-  )
+  const safeName = name
+    // oxlint-disable-next-line no-control-regex -- Replace characters unsuitable for download filenames.
+    .replace(/[<>:"/\\|?*\u0000-\u001f]/g, "_")
+    .trim()
+  let start = 0
+  let end = safeName.length
+  while (safeName[start] === ".") start += 1
+  while (end > start && safeName[end - 1] === ".") end -= 1
+  return safeName.slice(start, end) || "score"
 }
 
 export async function inScoreHost<T>(

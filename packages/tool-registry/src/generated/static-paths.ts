@@ -278,6 +278,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "abc-notation-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "abc-notation-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "abc-notation-to-pdf-converter",
     language: "ar",
   },

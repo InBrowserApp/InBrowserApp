@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
+import type { ScoreImage } from "@workspace/score-export"
 import type { AbcTune } from "@workspace/score-export/abc"
 import type { ScorePaper } from "@workspace/score-export/pages"
 
-type BookTune = { key: string; tune: AbcTune }
+export type BookTune = { key: string; tune: AbcTune }
 
 function keyTunes(tunes: AbcTune[]): BookTune[] {
   const occurrences = new Map<string, number>()
@@ -43,11 +44,14 @@ export function useAbcBook(source: string) {
   return state?.source === source ? state.book : undefined
 }
 
-export function useAbcPages(tunes: AbcTune[] | undefined, paper: ScorePaper) {
+export function useAbcArtwork(
+  tunes: AbcTune[] | undefined,
+  paper?: ScorePaper
+) {
   const [state, setState] = useState<{
     tunes: AbcTune[]
-    paper: ScorePaper
-    pages: SVGSVGElement[] | null
+    paper: ScorePaper | undefined
+    artwork: ScoreImage[] | null
   }>()
   useEffect(() => {
     if (!tunes?.length) {
@@ -57,12 +61,18 @@ export function useAbcPages(tunes: AbcTune[] | undefined, paper: ScorePaper) {
     let cancelled = false
     async function layout(selected: AbcTune[]) {
       try {
-        const { renderAbcPages } = await import("@workspace/score-export/abc")
+        const { renderAbcPages, renderAbcImages } =
+          await import("@workspace/score-export/abc")
         if (cancelled) return
-        const pages = await renderAbcPages(selected, paper)
-        if (!cancelled) setState({ tunes: selected, paper, pages })
+        const artwork = paper
+          ? (await renderAbcPages(selected, paper)).map((page) => ({
+              page,
+              name: "",
+            }))
+          : await renderAbcImages(selected)
+        if (!cancelled) setState({ tunes: selected, paper, artwork })
       } catch {
-        if (!cancelled) setState({ tunes: selected, paper, pages: null })
+        if (!cancelled) setState({ tunes: selected, paper, artwork: null })
       }
     }
     void layout(tunes)
@@ -71,6 +81,6 @@ export function useAbcPages(tunes: AbcTune[] | undefined, paper: ScorePaper) {
     }
   }, [tunes, paper])
   return state?.tunes === tunes && state?.paper === paper
-    ? state?.pages
+    ? state?.artwork
     : undefined
 }

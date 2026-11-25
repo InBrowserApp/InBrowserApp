@@ -397,6 +397,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "abc-notation-to-image-converter",
+    category: "image",
+    secondaryCategories: ["misc"],
+    icon: "file-image",
+    tags: [
+      "abc",
+      "abc notation",
+      "abc to image",
+      "abc to png",
+      "abc to svg",
+      "sheet music",
+      "tune book",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل التدوين الموسيقي ABC إلى صور",
+        description:
+          "حوّل التدوين الموسيقي ABC إلى صور نوتات بتنسيق PNG أو SVG. ألصق نص ABC أو افتح ملف ‎.abc، واختر ألحانًا من مجموعة، ونزّل صورًا مقصوصة حول النوتة.",
+      },
+      de: {
+        name: "ABC-Notation als Bild exportieren",
+        description:
+          "Wandle ABC-Notation in Notenbilder im PNG- oder SVG-Format um. Füge ABC-Text ein oder öffne eine .abc-Datei, wähle Melodien aus einer Sammlung und lade passend zugeschnittene Notenbilder herunter.",
+      },
+      en: {
+        name: "ABC Notation to Image Converter",
+        description:
+          "Convert ABC notation to PNG or SVG sheet music images. Paste ABC text or open an .abc file, choose tunes from a collection, and download cropped notation.",
+      },
+      es: {
+        name: "Conversor de notación ABC a imagen",
+        description:
+          "Convierte notación ABC en partituras PNG o SVG. Pega el texto ABC o abre un archivo .abc, elige las melodías de una colección y descarga imágenes ajustadas al área de la partitura.",
+      },
+      fr: {
+        name: "Convertisseur de notation ABC en image",
+        description:
+          "Convertissez la notation ABC en partitions PNG ou SVG. Collez du texte ABC ou ouvrez un fichier .abc, choisissez les airs d’un recueil et téléchargez les images recadrées.",
+      },
+      he: {
+        name: "ממיר תיווי ABC לתמונה",
+        description:
+          "המירו תיווי ABC לתמונות תווים בפורמט PNG או SVG. הדביקו טקסט ABC או פתחו קובץ ‎.abc, בחרו מנגינות מתוך אוסף והורידו תמונות חתוכות לפי התווים.",
+      },
+      hi: {
+        name: "ABC नोटेशन से इमेज कन्वर्टर",
+        description:
+          "ABC नोटेशन को PNG या SVG शीट म्यूज़िक इमेज में बदलें। ABC टेक्स्ट पेस्ट करें या .abc फ़ाइल खोलें, धुनें चुनें और बिना अतिरिक्त मार्जिन वाली इमेज डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Notasi ABC ke Gambar",
+        description:
+          "Ubah notasi ABC menjadi gambar partitur PNG atau SVG. Tempel teks ABC atau buka file .abc, pilih lagu dari koleksi, lalu unduh gambar tanpa ruang kosong di sekelilingnya.",
+      },
+      it: {
+        name: "Convertitore da notazione ABC a immagine",
+        description:
+          "Converti la notazione ABC in spartiti PNG o SVG. Incolla il testo ABC o apri un file .abc, scegli i brani di una raccolta e scarica le immagini ritagliate.",
+      },
+      ja: {
+        name: "ABC 記譜 画像変換",
+        description:
+          "ABC 記譜を PNG または SVG の楽譜画像に変換します。ABC テキストを貼り付けるか .abc ファイルを開き、曲集から曲を選んで余白を切り取った楽譜をダウンロードできます。",
+      },
+      ko: {
+        name: "ABC 기보법 이미지 변환기",
+        description:
+          "ABC 기보법을 PNG 또는 SVG 악보 이미지로 변환하세요. ABC 텍스트를 붙여 넣거나 .abc 파일을 열고, 곡 모음에서 곡을 선택해 여백을 잘라낸 악보를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Notasi ABC kepada Imej",
+        description:
+          "Tukar notasi ABC kepada imej skor muzik PNG atau SVG. Tampal teks ABC atau buka fail .abc, pilih lagu daripada himpunan dan muat turun imej dengan ruang kosong di sekeliling notasi dibuang.",
+      },
+      nl: {
+        name: "ABC-notatie naar afbeelding",
+        description:
+          "Zet ABC-notatie om in afbeeldingen van bladmuziek als PNG of SVG. Plak ABC-tekst of open een .abc-bestand, kies melodieën uit een bundel en download bijgesneden afbeeldingen.",
+      },
+      no: {
+        name: "ABC-notasjon til bilde",
+        description:
+          "Gjør om ABC-notasjon til notebilder i PNG- eller SVG-format. Lim inn ABC-tekst eller åpne en .abc-fil, velg melodier fra en samling og last ned beskårne bilder.",
+      },
+      pl: {
+        name: "Konwerter notacji ABC na obrazy",
+        description:
+          "Konwertuj notację ABC na obrazy PNG lub SVG z zapisem nutowym. Wklej tekst ABC lub otwórz plik .abc, wybierz melodie ze zbioru i pobierz obrazy przycięte do zapisu.",
+      },
+      pt: {
+        name: "Conversor de notação ABC para imagem",
+        description:
+          "Converta a notação ABC em partituras PNG ou SVG. Cole o texto ABC ou abra um arquivo .abc, escolha melodias de uma coleção e baixe as imagens recortadas.",
+      },
+      ru: {
+        name: "Конвертер нотации ABC в изображения",
+        description:
+          "Создавайте изображения нот в PNG или SVG из записей в нотации ABC. Вставьте текст ABC или откройте файл .abc, выберите мелодии из сборника и скачайте изображения, обрезанные по нотной записи.",
+      },
+      sv: {
+        name: "ABC-notation till bild",
+        description:
+          "Gör om ABC-notation till notbilder i PNG- eller SVG-format. Klistra in ABC-text eller öppna en .abc-fil, välj melodier ur en samling och ladda ner beskurna bilder.",
+      },
+      th: {
+        name: "โปรแกรมแปลงโน้ต ABC เป็นรูปภาพ",
+        description:
+          "แปลงโน้ต ABC เป็นภาพโน้ตเพลง PNG หรือ SVG วางข้อความ ABC หรือเปิดไฟล์ .abc เลือกเพลงจากชุดเพลง แล้วดาวน์โหลดภาพที่ตัดขอบว่างออกแล้ว",
+      },
+      tr: {
+        name: "ABC Nota Yazımından Görsele Dönüştürücü",
+        description:
+          "ABC nota yazımını PNG veya SVG nota görsellerine dönüştürün. ABC metnini yapıştırın veya bir .abc dosyası açın, derlemeden ezgileri seçin ve kırpılmış nota görsellerini indirin.",
+      },
+      vi: {
+        name: "Chuyển ký âm ABC sang ảnh",
+        description:
+          "Chuyển ký âm ABC thành ảnh bản nhạc PNG hoặc SVG. Dán văn bản ABC hoặc mở tệp .abc, chọn các bản trong tuyển tập và tải bản nhạc đã cắt bỏ khoảng trắng xuống.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱转图片转换器",
+        description:
+          "将 ABC 记谱转换为 PNG 或 SVG 乐谱图片。粘贴 ABC 文本或打开 .abc 文件，从曲集中选择曲目并下载裁去空白边缘的乐谱。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜轉圖片轉換器",
+        description:
+          "將 ABC 記譜轉換成 PNG 或 SVG 樂譜圖片。貼上 ABC 文字或開啟 .abc 檔案，從曲集中選擇曲目並下載裁去空白邊緣的樂譜。",
+      },
+    },
+  },
+  {
     slug: "abc-notation-to-pdf-converter",
     category: "pdf",
     secondaryCategories: ["misc"],

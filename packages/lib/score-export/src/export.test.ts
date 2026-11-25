@@ -1,7 +1,7 @@
 import { unzipSync, strFromU8 } from "fflate"
 import { PDFDocument } from "pdf-lib"
 import { expect, test } from "vitest"
-import { exportScore } from "./export"
+import { exportScore, exportScoreImages } from "./export"
 import {
   cropScorePage,
   flowScorePages,
@@ -40,6 +40,12 @@ test("removes the offscreen host after a failure", async () => {
     })
   ).rejects.toThrow("render failed")
   expect(wrapper!.isConnected).toBe(false)
+})
+
+test("removes edge periods and preserves long runs inside a score filename", () => {
+  const title = `Étude${".".repeat(20_000)}No. 1`
+  expect(scoreFilename(`  ..${title}...  `)).toBe(title)
+  expect(scoreFilename("...")).toBe("score")
 })
 
 test("exports a single full SVG page with a white paper background", async () => {
@@ -107,4 +113,51 @@ test("preserves Letter paper dimensions for short tunes", async () => {
   const paper = pdf.getPage(0)
   expect(paper.getWidth()).toBe(612)
   expect(paper.getHeight()).toBe(792)
+})
+
+test("names single tunes and keeps duplicate tune titles in source order inside ZIP", async () => {
+  const first = placeFullPage(section(0, 80))
+  const second = placeFullPage(section(40, 150))
+  const one = await exportScoreImages(
+    [{ page: first, name: "Morning / Path" }],
+    "svg",
+    "my book"
+  )
+  expect(one.filename).toBe("Morning _ Path.svg")
+  const book = await exportScoreImages(
+    [
+      { page: first, name: "Waltz" },
+      { page: second, name: "Waltz" },
+      { page: first, name: "" },
+    ],
+    "svg",
+    "my book"
+  )
+  expect(book.filename).toBe("my book-svg.zip")
+  expect(
+    Object.keys(unzipSync(new Uint8Array(await book.blob.arrayBuffer())))
+  ).toEqual(["1-Waltz.svg", "2-Waltz.svg", "3-my book.svg"])
+})
+
+test("bounds multibyte ABC filenames without splitting UTF-8 characters", async () => {
+  const page = placeFullPage(section(0, 80))
+  const title = "A" + "曲".repeat(120)
+  const result = await exportScoreImages(
+    [
+      { page, name: title },
+      { page, name: title },
+    ],
+    "svg",
+    title
+  )
+  const entries = Object.keys(
+    unzipSync(new Uint8Array(await result.blob.arrayBuffer()))
+  )
+  expect(entries).toEqual([
+    `1-A${"曲".repeat(79)}.svg`,
+    `2-A${"曲".repeat(79)}.svg`,
+  ])
+  for (const filename of [...entries, result.filename]) {
+    expect(new TextEncoder().encode(filename).length).toBeLessThanOrEqual(255)
+  }
 })

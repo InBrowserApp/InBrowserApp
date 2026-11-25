@@ -16,6 +16,7 @@
     "@workspace/email": "workspace:*",
     "@workspace/spreadsheet-conversion": "workspace:*",
     "@workspace/raster-image": "workspace:*",
+    "@workspace/score-export": "workspace:*",
     "@workspace/ocr-models": "workspace:*",
     "@workspace/comic": "workspace:*",
     "@workspace/ebook": "workspace:*",

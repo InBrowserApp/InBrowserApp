@@ -18,6 +18,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-previewer",
   },
   {
+    category: "image",
+    name: "محوّل التدوين الموسيقي ABC إلى صور",
+    slug: "abc-notation-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "محوّل التدوين الموسيقي ABC إلى PDF",
     slug: "abc-notation-to-pdf-converter",
