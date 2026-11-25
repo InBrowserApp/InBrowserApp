@@ -1,0 +1,13 @@
+{
+  "source": "ABC-notatie",
+  "placeholder": "Plak of typ hier ABC-notatie",
+  "open": "ABC-bestand openen",
+  "example": "Voorbeeld proberen",
+  "preview": "Voorbeeld van de bladmuziek",
+  "empty": "De bladmuziek verschijnt hier terwijl je typt.",
+  "noNotes": "Voeg noten toe onder de ABC-kop om de partituur te zien.",
+  "loading": "Bladmuziek weergeven…",
+  "invalid": "De partituur kan niet worden weergegeven. Controleer de ABC-notatie en probeer het opnieuw.",
+  "fileError": "Dit bestand kan niet worden gelezen. Probeer het opnieuw te openen of plak de ABC-tekst.",
+  "warnings": "Meldingen over ABC-notatie"
+}

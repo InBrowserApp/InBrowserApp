@@ -266,6 +266,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "abc-notation-previewer",
+    category: "misc",
+    icon: "list-music",
+    tags: [
+      "abc",
+      "notation",
+      "abc music",
+      "sheet music",
+      "tunebook",
+      "abcjs",
+      "abc viewer",
+    ],
+    locales: {
+      ar: {
+        name: "معاين التدوين الموسيقي ABC",
+        description:
+          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لترى النوتة فورًا. عاين لحنًا واحدًا أو مجموعة ألحان مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Vorschau für ABC-Notation",
+        description:
+          "Füge ABC-Notation ein oder öffne eine .abc-Datei und sieh sofort die Noten. Einzelne Melodien und ganze Melodiesammlungen lassen sich direkt im Browser ansehen.",
+      },
+      en: {
+        name: "ABC Notation Previewer",
+        description:
+          "Paste ABC notation or open an .abc file to see live sheet music. Preview individual tunes and tune books directly in your browser.",
+      },
+      es: {
+        name: "Vista previa de notación ABC",
+        description:
+          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Consulta melodías sueltas y colecciones en el navegador.",
+      },
+      fr: {
+        name: "Aperçu de la notation ABC",
+        description:
+          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Consultez des airs ou des recueils dans votre navigateur.",
+      },
+      he: {
+        name: "תצוגה מקדימה של תיווי ABC",
+        description:
+          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות את התווים מתעדכנים מיד. הציגו מנגינה בודדת או אוסף מנגינות ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ABC नोटेशन प्रीव्यूअर",
+        description:
+          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। एक धुन या धुनों का पूरा संग्रह सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Pratinjau Notasi ABC",
+        description:
+          "Tempel notasi ABC atau buka file .abc untuk langsung melihat partitur. Pratinjau satu lagu atau kumpulan lagu di browser.",
+      },
+      it: {
+        name: "Anteprima della notazione ABC",
+        description:
+          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Visualizza singoli brani o intere raccolte nel browser.",
+      },
+      ja: {
+        name: "ABC 記譜プレビューアー",
+        description:
+          "ABC 記譜を貼り付けるか .abc ファイルを開いて、楽譜をリアルタイムで表示します。1 曲ずつ、または曲集をブラウザーで直接プレビューできます。",
+      },
+      ko: {
+        name: "ABC 기보법 미리보기",
+        description:
+          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 확인하세요. 브라우저에서 개별 곡과 곡집을 바로 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Notasi ABC",
+        description:
+          "Tampal notasi ABC atau buka fail .abc untuk melihat skor muzik secara langsung. Pratonton sebuah lagu atau himpunan lagu dalam pelayar anda.",
+      },
+      nl: {
+        name: "Voorvertoner voor ABC-notatie",
+        description:
+          "Plak ABC-notatie of open een .abc-bestand en zie meteen de bladmuziek. Bekijk losse melodieën en volledige melodiebundels rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Forhåndsviser for ABC-notasjon",
+        description:
+          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene med en gang. Forhåndsvis enkeltmelodier og hele melodisamlinger i nettleseren.",
+      },
+      pl: {
+        name: "Podgląd notacji ABC",
+        description:
+          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby od razu zobaczyć nuty. Przeglądaj pojedyncze melodie i całe zbiory bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Pré-visualizador de notação ABC",
+        description:
+          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Confira melodias individuais ou coleções no navegador.",
+      },
+      ru: {
+        name: "Предпросмотр нотации ABC",
+        description:
+          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы сразу увидеть ноты. Просматривайте отдельные мелодии и целые сборники прямо в браузере.",
+      },
+      sv: {
+        name: "Förhandsgranskare för ABC-notation",
+        description:
+          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna direkt. Förhandsgranska enskilda melodier och hela melodisamlingar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่างโน้ต ABC",
+        description:
+          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูโน้ตเพลงที่อัปเดตทันที ดูได้ทั้งเพลงเดียวและชุดเพลงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ABC Nota Önizleyicisi",
+        description:
+          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Tek bir ezgiyi veya bir ezgi derlemesini doğrudan tarayıcınızda önizleyin.",
+      },
+      vi: {
+        name: "Trình xem trước ký âm ABC",
+        description:
+          "Dán ký âm ABC hoặc mở tệp .abc để xem bản nhạc cập nhật trực tiếp. Xem trước từng bài hoặc tuyển tập ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱预览器",
+        description:
+          "粘贴 ABC 记谱文本或打开 .abc 文件，实时查看乐谱。直接在浏览器中预览单首曲目或曲集。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜預覽器",
+        description:
+          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時查看樂譜。直接在瀏覽器中預覽單首曲目或曲集。",
+      },
+    },
+  },
+  {
     slug: "adler32-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -54052,6 +54183,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "3MF 檢視器",
         description:
           "在瀏覽器中開啟 3MF 檔案。檢查 3D 列印零件、擺放位置與可用顏色，並以毫米查看尺寸。",
+      },
+    },
+  },
+  "abc-notation-previewer": {
+    slug: "abc-notation-previewer",
+    category: "misc",
+    icon: "list-music",
+    tags: [
+      "abc",
+      "notation",
+      "abc music",
+      "sheet music",
+      "tunebook",
+      "abcjs",
+      "abc viewer",
+    ],
+    locales: {
+      ar: {
+        name: "معاين التدوين الموسيقي ABC",
+        description:
+          "ألصق نصًا بتنسيق التدوين الموسيقي ABC أو افتح ملف ‎.abc لترى النوتة فورًا. عاين لحنًا واحدًا أو مجموعة ألحان مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "Vorschau für ABC-Notation",
+        description:
+          "Füge ABC-Notation ein oder öffne eine .abc-Datei und sieh sofort die Noten. Einzelne Melodien und ganze Melodiesammlungen lassen sich direkt im Browser ansehen.",
+      },
+      en: {
+        name: "ABC Notation Previewer",
+        description:
+          "Paste ABC notation or open an .abc file to see live sheet music. Preview individual tunes and tune books directly in your browser.",
+      },
+      es: {
+        name: "Vista previa de notación ABC",
+        description:
+          "Pega notación ABC o abre un archivo .abc para ver la partitura al instante. Consulta melodías sueltas y colecciones en el navegador.",
+      },
+      fr: {
+        name: "Aperçu de la notation ABC",
+        description:
+          "Collez du texte en notation ABC ou ouvrez un fichier .abc pour afficher aussitôt la partition. Consultez des airs ou des recueils dans votre navigateur.",
+      },
+      he: {
+        name: "תצוגה מקדימה של תיווי ABC",
+        description:
+          "הדביקו תיווי ABC או פתחו קובץ ‎.abc כדי לראות את התווים מתעדכנים מיד. הציגו מנגינה בודדת או אוסף מנגינות ישירות בדפדפן.",
+      },
+      hi: {
+        name: "ABC नोटेशन प्रीव्यूअर",
+        description:
+          "ABC नोटेशन पेस्ट करें या .abc फ़ाइल खोलें और शीट म्यूज़िक तुरंत देखें। एक धुन या धुनों का पूरा संग्रह सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Pratinjau Notasi ABC",
+        description:
+          "Tempel notasi ABC atau buka file .abc untuk langsung melihat partitur. Pratinjau satu lagu atau kumpulan lagu di browser.",
+      },
+      it: {
+        name: "Anteprima della notazione ABC",
+        description:
+          "Incolla un testo in notazione ABC o apri un file .abc per vedere subito lo spartito. Visualizza singoli brani o intere raccolte nel browser.",
+      },
+      ja: {
+        name: "ABC 記譜プレビューアー",
+        description:
+          "ABC 記譜を貼り付けるか .abc ファイルを開いて、楽譜をリアルタイムで表示します。1 曲ずつ、または曲集をブラウザーで直接プレビューできます。",
+      },
+      ko: {
+        name: "ABC 기보법 미리보기",
+        description:
+          "ABC 기보법을 붙여 넣거나 .abc 파일을 열어 악보를 실시간으로 확인하세요. 브라우저에서 개별 곡과 곡집을 바로 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton Notasi ABC",
+        description:
+          "Tampal notasi ABC atau buka fail .abc untuk melihat skor muzik secara langsung. Pratonton sebuah lagu atau himpunan lagu dalam pelayar anda.",
+      },
+      nl: {
+        name: "Voorvertoner voor ABC-notatie",
+        description:
+          "Plak ABC-notatie of open een .abc-bestand en zie meteen de bladmuziek. Bekijk losse melodieën en volledige melodiebundels rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Forhåndsviser for ABC-notasjon",
+        description:
+          "Lim inn ABC-notasjon eller åpne en .abc-fil og se notene med en gang. Forhåndsvis enkeltmelodier og hele melodisamlinger i nettleseren.",
+      },
+      pl: {
+        name: "Podgląd notacji ABC",
+        description:
+          "Wklej zapis w notacji ABC lub otwórz plik .abc, aby od razu zobaczyć nuty. Przeglądaj pojedyncze melodie i całe zbiory bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Pré-visualizador de notação ABC",
+        description:
+          "Cole a notação ABC ou abra um arquivo .abc para ver a partitura na hora. Confira melodias individuais ou coleções no navegador.",
+      },
+      ru: {
+        name: "Предпросмотр нотации ABC",
+        description:
+          "Вставьте запись в нотации ABC или откройте файл .abc, чтобы сразу увидеть ноты. Просматривайте отдельные мелодии и целые сборники прямо в браузере.",
+      },
+      sv: {
+        name: "Förhandsgranskare för ABC-notation",
+        description:
+          "Klistra in ABC-notation eller öppna en .abc-fil och se noterna direkt. Förhandsgranska enskilda melodier och hela melodisamlingar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่างโน้ต ABC",
+        description:
+          "วางข้อความโน้ต ABC หรือเปิดไฟล์ .abc เพื่อดูโน้ตเพลงที่อัปเดตทันที ดูได้ทั้งเพลงเดียวและชุดเพลงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "ABC Nota Önizleyicisi",
+        description:
+          "ABC nota yazımını yapıştırın veya bir .abc dosyası açın ve notaları anında görün. Tek bir ezgiyi veya bir ezgi derlemesini doğrudan tarayıcınızda önizleyin.",
+      },
+      vi: {
+        name: "Trình xem trước ký âm ABC",
+        description:
+          "Dán ký âm ABC hoặc mở tệp .abc để xem bản nhạc cập nhật trực tiếp. Xem trước từng bài hoặc tuyển tập ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱预览器",
+        description:
+          "粘贴 ABC 记谱文本或打开 .abc 文件，实时查看乐谱。直接在浏览器中预览单首曲目或曲集。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜預覽器",
+        description:
+          "貼上 ABC 記譜文字或開啟 .abc 檔案，即時查看樂譜。直接在瀏覽器中預覽單首曲目或曲集。",
       },
     },
   },

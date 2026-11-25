@@ -256,6 +256,7 @@ catalog:
   "@zip.js/zip.js": ^2.25.0
   "@zxing/browser": ^0.2.1
   "@zxing/library": ^0.23.0
+  abcjs: 6.7.3
   ajv: ^8.20.0
   ajv-formats: ^3.0.1
   astro: ^7.4.12

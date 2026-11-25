@@ -1,0 +1,13 @@
+{
+  "source": "Ký âm ABC",
+  "placeholder": "Dán hoặc nhập ký âm ABC tại đây",
+  "open": "Mở tệp ABC",
+  "example": "Thử ví dụ",
+  "preview": "Xem trước bản nhạc",
+  "empty": "Bản nhạc sẽ xuất hiện ở đây khi bạn nhập.",
+  "noNotes": "Thêm nốt bên dưới phần đầu ABC để xem bản nhạc.",
+  "loading": "Đang vẽ bản nhạc…",
+  "invalid": "Không thể vẽ bản nhạc. Hãy kiểm tra ký âm ABC và thử lại.",
+  "fileError": "Không thể đọc tệp này. Hãy thử mở lại hoặc dán văn bản ABC.",
+  "warnings": "Thông báo ký âm ABC"
+}

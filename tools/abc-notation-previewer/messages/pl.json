@@ -1,0 +1,13 @@
+{
+  "source": "Notacja ABC",
+  "placeholder": "Wklej lub wpisz tutaj zapis w notacji ABC",
+  "open": "Otwórz plik ABC",
+  "example": "Otwórz przykład",
+  "preview": "Podgląd zapisu nutowego",
+  "empty": "W miarę pisania pojawią się tutaj nuty.",
+  "noNotes": "Dopisz nuty pod nagłówkiem ABC, aby zobaczyć zapis nutowy.",
+  "loading": "Tworzenie zapisu nutowego…",
+  "invalid": "Nie udało się wyświetlić nut. Sprawdź zapis w notacji ABC i spróbuj ponownie.",
+  "fileError": "Nie udało się odczytać pliku. Otwórz go ponownie lub wklej tekst ABC.",
+  "warnings": "Komunikaty dotyczące notacji ABC"
+}

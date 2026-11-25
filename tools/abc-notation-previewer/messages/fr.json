@@ -1,0 +1,13 @@
+{
+  "source": "Notation ABC",
+  "placeholder": "Collez ou saisissez ici votre notation ABC",
+  "open": "Ouvrir un fichier ABC",
+  "example": "Essayer un exemple",
+  "preview": "Aperçu de la partition",
+  "empty": "La partition s’affiche ici au fur et à mesure de la saisie.",
+  "noNotes": "Ajoutez des notes sous l’en-tête ABC pour afficher la partition.",
+  "loading": "Génération de la partition…",
+  "invalid": "Impossible d’afficher la partition. Vérifiez la notation ABC, puis réessayez.",
+  "fileError": "Impossible de lire ce fichier. Essayez de le rouvrir ou collez le texte ABC.",
+  "warnings": "Messages de notation ABC"
+}

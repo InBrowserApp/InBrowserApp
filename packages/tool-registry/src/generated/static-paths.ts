@@ -186,6 +186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "abc-notation-previewer",
+    language: "ar",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "de",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "en",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "es",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "fr",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "he",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "hi",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "id",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "it",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "ja",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "ko",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "ms",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "nl",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "no",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "pl",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "pt",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "ru",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "sv",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "th",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "tr",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "vi",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "abc-notation-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "adler32-hash-text-or-file",
     language: "ar",
   },

@@ -1,0 +1,13 @@
+{
+  "source": "ABC-Notation",
+  "placeholder": "ABC-Notation hier eingeben oder einfügen",
+  "open": "ABC-Datei öffnen",
+  "example": "Beispiel ausprobieren",
+  "preview": "Notenvorschau",
+  "empty": "Die Noten erscheinen hier beim Schreiben.",
+  "noNotes": "Füge unter den ABC-Kopfdaten Noten hinzu, damit die Partitur erscheint.",
+  "loading": "Noten werden gesetzt…",
+  "invalid": "Die Partitur ließ sich nicht darstellen. Prüfe die ABC-Notation und versuche es erneut.",
+  "fileError": "Diese Datei ließ sich nicht lesen. Versuche, sie erneut zu öffnen, oder füge den ABC-Text ein.",
+  "warnings": "Hinweise zur ABC-Notation"
+}
