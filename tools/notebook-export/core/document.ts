@@ -1,8 +1,4 @@
-import {
-  prepareNotebookDocument,
-  restoreNotebookLinks,
-  type Notebook,
-} from "@workspace/notebook"
+import { prepareNotebookDocument, type Notebook } from "@workspace/notebook"
 import type { Messages } from "../types"
 
 export async function notebookDocument(
@@ -32,7 +28,14 @@ export async function notebookDocument(
     aside.append(paragraph)
   }
   doc.body.prepend(aside)
-  restoreNotebookLinks(doc)
+  // These managed destinations were validated by the shared notebook sanitizer.
+  for (const link of doc.querySelectorAll("[data-web-link]")) {
+    const href = link.getAttribute("data-web-link")!
+    link.removeAttribute("data-web-link")
+    link.setAttribute("href", href)
+    link.setAttribute("rel", "noopener noreferrer")
+    if (!href.startsWith("#")) link.setAttribute("target", "_blank")
+  }
   return {
     preview: { ...preview, html, title },
     document: doc,

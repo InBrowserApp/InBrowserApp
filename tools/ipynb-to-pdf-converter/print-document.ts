@@ -1,8 +1,4 @@
-import {
-  openNotebook,
-  prepareNotebookDocument,
-  restoreNotebookLinks,
-} from "@workspace/notebook"
+import { openNotebook, prepareNotebookDocument } from "@workspace/notebook"
 import type { Messages } from "./types"
 
 const layout = `
@@ -36,11 +32,13 @@ export async function prepareNotebookPrint(
     notebook,
     file.name.replace(/\.ipynb$/i, ""),
     signal,
-    m
+    m,
+    "direct"
   )
   doc.documentElement.lang = lang
-  restoreNotebookLinks(doc)
-  for (const section of doc.querySelectorAll("details.nb-section")) {
+  for (const section of doc.querySelectorAll(
+    "body > .nb-cell > details.nb-section"
+  )) {
     const container = doc.createElement("div")
     const label = doc.createElement("p")
     label.className = "nb-section-label"

@@ -6,9 +6,10 @@ export async function prepareNotebookDocument(
   notebook: Notebook,
   title: string,
   signal: AbortSignal,
-  m: Messages & { imageUnavailable: string }
+  m: Messages & { imageUnavailable: string },
+  links?: "inert" | "direct"
 ) {
-  const preview = await preparePreview(notebook, m, signal)
+  const preview = await preparePreview(notebook, m, signal, links)
   const doc = new DOMParser().parseFromString(preview.html, "text/html")
   doc.title = title
   let unavailableImage = false
@@ -39,25 +40,4 @@ export async function prepareNotebookDocument(
   }
   signal.throwIfAborted()
   return { preview, doc, unavailableImage }
-}
-
-export function restoreNotebookLinks(doc: Document) {
-  // These managed destinations were validated by the shared notebook sanitizer.
-  for (const link of doc.querySelectorAll("[data-web-link]")) {
-    const href = link
-      .getAttribute("data-web-link")!
-      .replace(/^(?:https?|mailto):/i, (scheme) => scheme.toLowerCase())
-    link.removeAttribute("data-web-link")
-    if (href.startsWith("#")) {
-      link.setAttribute("href", href)
-    } else if (
-      href.startsWith("https://") ||
-      href.startsWith("http://") ||
-      href.startsWith("mailto:")
-    ) {
-      link.setAttribute("href", href)
-      link.setAttribute("rel", "noopener noreferrer")
-      link.setAttribute("target", "_blank")
-    }
-  }
 }

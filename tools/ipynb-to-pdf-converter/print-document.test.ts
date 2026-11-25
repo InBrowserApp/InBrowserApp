@@ -16,7 +16,7 @@ it("keeps code and saved results visible in a printable document", async () => {
     cells: [
       {
         kind: "code",
-        html: '<pre><code>print(42)</code></pre><a href="HTTPS://example.com/page">Report</a><img src="missing.png" alt="Unavailable chart">',
+        html: '<h2 id="sample">Sample</h2><pre><code>print(42)</code></pre><a href="HTTPS://example.com/page">Report</a><a href="#sample">Jump</a><img src="missing.png" alt="Unavailable chart"><details class="nb-section"><p>Authored details</p></details>',
         attachments: {},
         count: 1,
         outputs: [
@@ -37,10 +37,14 @@ it("keeps code and saved results visible in a printable document", async () => {
   expect(openNotebook).toHaveBeenCalledWith(file, signal)
   expect(doc.documentElement.lang).toBe("en")
   expect(doc.title).toBe("Quarterly <review>")
-  expect(doc.querySelector("details")).toBeNull()
+  expect(doc.querySelector("body > .nb-cell > details")).toBeNull()
+  expect(doc.querySelector(".nb-content details")?.textContent).toBe(
+    "Authored details"
+  )
   expect(doc.querySelector("code")?.textContent).toBe("print(42)")
-  expect(doc.querySelector("a")?.getAttribute("href")).toBe(
-    "https://example.com/page"
+  expect(doc.querySelector("a")?.href).toBe("https://example.com/page")
+  expect(doc.querySelector('a[href^="#"]')?.getAttribute("href")).toBe(
+    "#" + doc.querySelector("h2")?.id
   )
   expect(doc.querySelector("img")).toBeNull()
   expect(doc.body.textContent).toContain("Unavailable chart")

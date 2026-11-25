@@ -6,7 +6,8 @@ import type { Notebook, Messages, Preview } from "./types"
 export async function preparePreview(
   notebook: Notebook,
   m: Messages,
-  signal: AbortSignal
+  signal: AbortSignal,
+  linkMode: "inert" | "direct" = "inert"
 ): Promise<Preview> {
   const preview = prepareWebDocument("", {
     emptyText: m.noContent,
@@ -18,6 +19,7 @@ export async function preparePreview(
   const prefix = `notebook-${crypto.randomUUID()}-`
   const anchors = new Map<string, string>()
   const links: { element: Element; names: Map<string, string> }[] = []
+  const linkAttribute = linkMode === "direct" ? "href" : "data-web-link"
   let limited = false
   if (notebook.cells.length) body.replaceChildren()
   function element(tag: string, content = "", className = "") {
@@ -52,7 +54,7 @@ export async function preparePreview(
       emptyText = m.emptyCell,
       fallback = ""
     ) => {
-      const clean = fragment(html, cell.attachments, m, svg)
+      const clean = fragment(html, cell.attachments, m, svg, linkMode)
       for (const key of ["local", "remote", "active"] as const)
         preview.notes[key] ||= clean.notes[key]
       const content = element("div", "", "nb-content")
@@ -61,7 +63,9 @@ export async function preparePreview(
         content.textContent?.trim() || content.querySelector("img[src],table")
       if (!hasContent() && fallback)
         content.replaceChildren(
-          ...Array.from(fragment(fallback, {}, m).body.childNodes)
+          ...Array.from(
+            fragment(fallback, {}, m, undefined, linkMode).body.childNodes
+          )
         )
       const names = new Map<string, string>()
       for (const heading of content.querySelectorAll("h1,h2,h3,h4,h5,h6")) {
@@ -85,7 +89,7 @@ export async function preparePreview(
           label: heading.textContent?.trim() || m.markdown,
           level: 2,
         })
-      for (const link of content.querySelectorAll("[data-web-link]"))
+      for (const link of content.querySelectorAll(`a[${linkAttribute}]`))
         links.push({ element: link, names })
       if (!hasContent()) content.append(element("p", emptyText, "nb-notice"))
       parent.append(content)
@@ -144,7 +148,7 @@ export async function preparePreview(
     body.append(section)
   }
   for (const { element: link, names } of links) {
-    const href = link.getAttribute("data-web-link")!
+    const href = link.getAttribute(linkAttribute)!
     if (!href.startsWith("#")) continue
     let id = href.slice(1)
     try {
@@ -153,7 +157,7 @@ export async function preparePreview(
       /* Literal reference. */
     }
     const target = names.get(id) ?? anchors.get(id)
-    if (target) link.setAttribute("data-web-link", `#${target}`)
+    if (target) link.setAttribute(linkAttribute, `#${target}`)
   }
   const style = doc.createElement("style")
   style.textContent = readerStyle
