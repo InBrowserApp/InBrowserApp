@@ -15,6 +15,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "animated-webp-maker": () => import("@tool/animated-webp-maker/page"),
   "animated-webp-to-gif-converter": () =>
     import("@tool/animated-webp-to-gif-converter/page"),
+  "apk-manifest-viewer": () => import("@tool/apk-manifest-viewer/page"),
   "apng-maker": () => import("@tool/apng-maker/page"),
   "apng-to-gif-converter": () => import("@tool/apng-to-gif-converter/page"),
   "archive-viewer": () => import("@tool/archive-viewer/page"),
@@ -162,6 +163,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/favicon-assets-generator/page"),
   "fb2-reader": () => import("@tool/fb2-reader/page"),
   "fb2-to-epub-converter": () => import("@tool/fb2-to-epub-converter/page"),
+  "fb2-to-pdf-converter": () => import("@tool/fb2-to-pdf-converter/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
@@ -341,6 +343,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "opml-editor": () => import("@tool/opml-editor/page"),
   "osm-pbf-preview": () => import("@tool/osm-pbf-preview/page"),
   "parquet-viewer": () => import("@tool/parquet-viewer/page"),
   "password-strength-checker": () =>
@@ -384,6 +387,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
+  "refresh-rate-test": () => import("@tool/refresh-rate-test/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
   "remove-pdf-owner-password": () =>
     import("@tool/remove-pdf-owner-password/page"),

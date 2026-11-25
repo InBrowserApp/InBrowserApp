@@ -1,0 +1,4 @@
+{
+  "name": "Penampil Manifes APK",
+  "description": "Buka APK Android dan periksa AndroidManifest.xml. Lihat nama paket, versi, level SDK, izin yang dideklarasikan, dan XML hasil dekode di browser."
+}

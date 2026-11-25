@@ -1190,6 +1190,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "apk-manifest-viewer",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "android",
+      "apk",
+      "axml",
+      "androidmanifest.xml",
+      "permissions",
+      "manifest",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملف بيان APK",
+        description:
+          "افتح ملف APK لتطبيق Android وافحص AndroidManifest.xml. اطّلع على اسم الحزمة والإصدار ومستويات SDK والأذونات المعلَنة وملف XML بعد فك ترميزه، مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "APK-Manifestbetrachter",
+        description:
+          "Öffne eine Android-APK und prüfe AndroidManifest.xml. Zeige Paketname, Version, SDK-Ebenen, deklarierte Berechtigungen und das dekodierte XML im Browser an.",
+      },
+      en: {
+        name: "APK Manifest Viewer",
+        description:
+          "Open an Android APK and inspect AndroidManifest.xml. View the package name, version, SDK levels, declared permissions, and decoded XML in your browser.",
+      },
+      es: {
+        name: "Visor de manifiestos APK",
+        description:
+          "Abre un APK de Android y examina AndroidManifest.xml. Consulta el nombre del paquete, la versión, los niveles de SDK, los permisos declarados y el XML decodificado en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de manifeste APK",
+        description:
+          "Ouvre un APK Android et examine AndroidManifest.xml. Consulte le nom du package, la version, les niveaux de SDK, les autorisations déclarées et le XML décodé dans ton navigateur.",
+      },
+      he: {
+        name: "מציג מניפסט APK",
+        description:
+          "פתחו APK של Android ובדקו את AndroidManifest.xml. צפו בשם החבילה, בגרסה, ברמות ה־SDK, בהרשאות המוצהרות וב־XML שפוענח ישירות בדפדפן.",
+      },
+      hi: {
+        name: "APK मेनिफ़ेस्ट व्यूअर",
+        description:
+          "Android APK खोलकर AndroidManifest.xml की जाँच करें। पैकेज का नाम, वर्शन, SDK लेवल, घोषित अनुमतियाँ और डिकोड किया गया XML ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil Manifes APK",
+        description:
+          "Buka APK Android dan periksa AndroidManifest.xml. Lihat nama paket, versi, level SDK, izin yang dideklarasikan, dan XML hasil dekode di browser.",
+      },
+      it: {
+        name: "Visualizzatore del manifest APK",
+        description:
+          "Apri un APK Android ed esamina AndroidManifest.xml. Consulta il nome del pacchetto, la versione, i livelli SDK, le autorizzazioni dichiarate e l’XML decodificato nel browser.",
+      },
+      ja: {
+        name: "APK マニフェストビューアー",
+        description:
+          "Android APK をブラウザーで開き、AndroidManifest.xml を確認します。パッケージ名、バージョン、SDK レベル、宣言された権限、デコードした XML を表示します。",
+      },
+      ko: {
+        name: "APK 매니페스트 뷰어",
+        description:
+          "브라우저에서 Android APK를 열고 AndroidManifest.xml을 확인하세요. 패키지 이름, 버전, SDK 수준, 선언된 권한, 디코딩한 XML을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Manifes APK",
+        description:
+          "Buka APK Android dan semak AndroidManifest.xml. Lihat nama pakej, versi, aras SDK, kebenaran yang diisytiharkan dan XML yang dinyahkod dalam pelayar.",
+      },
+      nl: {
+        name: "APK-manifestviewer",
+        description:
+          "Open een Android-APK en bekijk AndroidManifest.xml. Controleer de pakketnaam, versie, SDK-niveaus, opgegeven machtigingen en gedecodeerde XML in je browser.",
+      },
+      no: {
+        name: "APK-manifestviser",
+        description:
+          "Åpne en Android-APK og undersøk AndroidManifest.xml. Se pakkenavn, versjon, SDK-nivåer, deklarerte tillatelser og dekodet XML i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka manifestu APK",
+        description:
+          "Otwórz plik APK Androida i sprawdź AndroidManifest.xml. Zobacz nazwę pakietu, wersję, poziomy SDK, zadeklarowane uprawnienia i zdekodowany XML w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de manifesto APK",
+        description:
+          "Abra um APK do Android e examine o AndroidManifest.xml. Veja o nome do pacote, a versão, os níveis de SDK, as permissões declaradas e o XML decodificado no navegador.",
+      },
+      ru: {
+        name: "Просмотр манифеста APK",
+        description:
+          "Откройте APK для Android и изучите AndroidManifest.xml. Просмотрите имя пакета, версию, уровни SDK, объявленные разрешения и декодированный XML в браузере.",
+      },
+      sv: {
+        name: "APK-manifestvisare",
+        description:
+          "Öppna en Android-APK och granska AndroidManifest.xml. Se paketnamn, version, SDK-nivåer, deklarerade behörigheter och avkodad XML i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Manifest ของ APK",
+        description:
+          "เปิด APK ของ Android และตรวจสอบ AndroidManifest.xml ในเบราว์เซอร์ ดูชื่อแพ็กเกจ เวอร์ชัน ระดับ SDK สิทธิ์ที่ประกาศ และ XML ที่ถอดรหัสแล้ว",
+      },
+      tr: {
+        name: "APK Manifest Görüntüleyici",
+        description:
+          "Bir Android APK dosyasını açın ve AndroidManifest.xml dosyasını inceleyin. Paket adını, sürümü, SDK düzeylerini, bildirilen izinleri ve çözülmüş XML’yi tarayıcınızda görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp kê khai APK",
+        description:
+          "Mở APK Android và kiểm tra AndroidManifest.xml ngay trong trình duyệt. Xem tên gói, phiên bản, cấp SDK, quyền đã khai báo và XML đã giải mã.",
+      },
+      "zh-CN": {
+        name: "APK 清单查看器",
+        description:
+          "在浏览器中打开 Android APK 并查看 AndroidManifest.xml。查看软件包名称、版本、SDK 级别、声明的权限，以及解码后的 XML。",
+      },
+      "zh-TW": {
+        name: "APK 資訊清單檢視器",
+        description:
+          "在瀏覽器中開啟 Android APK 並檢視 AndroidManifest.xml。查看套件名稱、版本、SDK 級別、宣告的權限，以及解碼後的 XML。",
+      },
+    },
+  },
+  {
     slug: "apng-maker",
     category: "image",
     icon: "film",
@@ -16409,6 +16540,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "FB2 轉 EPUB 轉換器",
         description:
           "將本機 FB2 與 FBZ 書籍轉換為 EPUB。保留可讀取的章節、目錄、中繼資料及支援的圖片，無須上傳書籍。",
+      },
+    },
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "fb2",
+      "pdf",
+      "ebook",
+      "fb2 to pdf",
+      "fictionbook",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل FB2 إلى PDF",
+        description:
+          "حوّل كتب FictionBook بصيغ FB2 أو FB2.ZIP أو FBZ إلى PDF بنص قابل للتحديد. عاين الفصول، واختر مقاس الورق، واحفظ الملف في متصفحك دون رفعه.",
+      },
+      de: {
+        name: "FB2-zu-PDF-Konverter",
+        description:
+          "Wandle FictionBook-Dateien (FB2, FB2.ZIP oder FBZ) in PDF mit auswählbarem Text um. Prüfe die Kapitel, wähle ein Papierformat und speichere das PDF direkt im Browser. Kein Upload nötig.",
+      },
+      en: {
+        name: "FB2 to PDF Converter",
+        description:
+          "Convert FictionBook (FB2, FB2.ZIP or FBZ) to PDF with selectable text. Preview chapters, choose a paper size, and save in your browser without uploading.",
+      },
+      es: {
+        name: "Convertidor de FB2 a PDF",
+        description:
+          "Convierte libros FictionBook (FB2, FB2.ZIP o FBZ) a PDF con texto seleccionable. Previsualiza los capítulos, elige el tamaño del papel y guarda el PDF en tu navegador sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur FB2 en PDF",
+        description:
+          "Convertissez un livre FictionBook (FB2, FB2.ZIP ou FBZ) en PDF avec du texte sélectionnable. Prévisualisez les chapitres, choisissez le format du papier et enregistrez le PDF dans votre navigateur, sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר FB2 ל־PDF",
+        description:
+          "המירו ספרי FictionBook בפורמט FB2, FB2.ZIP או FBZ ל־PDF עם טקסט שאפשר לסמן. הציגו את הפרקים בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן בלי להעלות את הספר.",
+      },
+      hi: {
+        name: "FB2 से PDF कन्वर्टर",
+        description:
+          "FictionBook (FB2, FB2.ZIP या FBZ) को ऐसी PDF में बदलें जिसमें टेक्स्ट चुना जा सके। अध्यायों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और किताब अपलोड किए बिना ब्राउज़र में PDF सेव करें।",
+      },
+      id: {
+        name: "Konverter FB2 ke PDF",
+        description:
+          "Ubah FictionBook (FB2, FB2.ZIP, atau FBZ) ke PDF dengan teks yang dapat dipilih. Tinjau bab, pilih ukuran kertas, dan simpan PDF di browser tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da FB2 a PDF",
+        description:
+          "Converti libri FictionBook (FB2, FB2.ZIP o FBZ) in PDF con testo selezionabile. Controlla l’anteprima dei capitoli, scegli il formato della carta e salva il PDF nel browser senza caricare il libro.",
+      },
+      ja: {
+        name: "FB2 PDF変換",
+        description:
+          "ブラウザーでFictionBook（FB2、FB2.ZIP、FBZ）をPDFに変換します。章をプレビューし、用紙サイズを指定して、文字を選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "FB2 PDF 변환기",
+        description:
+          "FictionBook(FB2, FB2.ZIP, FBZ) 전자책을 텍스트를 선택할 수 있는 PDF로 변환하세요. 장을 미리 보고 용지 크기를 골라 업로드 없이 브라우저에서 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar FB2 kepada PDF",
+        description:
+          "Tukar buku FictionBook (FB2, FB2.ZIP atau FBZ) kepada PDF dengan teks yang boleh dipilih. Pratonton bab, pilih saiz kertas dan simpan PDF dalam pelayar tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "FB2 naar PDF-converter",
+        description:
+          "Zet FictionBook-bestanden (FB2, FB2.ZIP of FBZ) om naar PDF met selecteerbare tekst. Bekijk de hoofdstukken, kies een papierformaat en sla de PDF lokaal op in je browser.",
+      },
+      no: {
+        name: "Konverter FB2 til PDF",
+        description:
+          "Konverter FictionBook (FB2, FB2.ZIP eller FBZ) til PDF med tekst som kan markeres. Forhåndsvis kapitlene, velg papirstørrelse og lagre i nettleseren uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter FB2 na PDF",
+        description:
+          "Konwertuj książki FictionBook (FB2, FB2.ZIP lub FBZ) na PDF z tekstem, który można zaznaczać. Sprawdź podgląd rozdziałów, wybierz format papieru i zapisz plik w przeglądarce. Książka pozostaje na urządzeniu.",
+      },
+      pt: {
+        name: "Conversor de FB2 para PDF",
+        description:
+          "Converta livros FictionBook (FB2, FB2.ZIP ou FBZ) em PDF com texto selecionável. Confira os capítulos na prévia, escolha o tamanho do papel e salve sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер FB2 в PDF",
+        description:
+          "Конвертируйте книги FictionBook (FB2, FB2.ZIP и FBZ) в PDF с выделяемым текстом. Просмотрите главы, выберите размер бумаги и сохраните PDF в браузере без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konvertera FB2 till PDF",
+        description:
+          "Konvertera FictionBook (FB2, FB2.ZIP eller FBZ) till PDF med markerbar text. Förhandsgranska kapitlen, välj pappersstorlek och spara direkt i webbläsaren utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง FB2 เป็น PDF",
+        description:
+          "แปลงหนังสือ FictionBook (FB2, FB2.ZIP หรือ FBZ) เป็น PDF ที่เลือกและคัดลอกข้อความได้ ดูตัวอย่างบท เลือกขนาดกระดาษ แล้วบันทึกในเบราว์เซอร์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "FB2’den PDF’ye Dönüştürücü",
+        description:
+          "FictionBook (FB2, FB2.ZIP veya FBZ) dosyalarını metni seçilebilen PDF’lere dönüştürün. Bölümleri önizleyin, kâğıt boyutunu seçin ve dosyanızı yüklemeden tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển FB2 sang PDF",
+        description:
+          "Chuyển sách FictionBook (FB2, FB2.ZIP hoặc FBZ) sang PDF có văn bản chọn được. Xem trước các chương, chọn khổ giấy và lưu ngay trong trình duyệt mà không cần tải sách lên.",
+      },
+      "zh-CN": {
+        name: "FB2 转 PDF",
+        description:
+          "将 FictionBook 电子书（FB2、FB2.ZIP 或 FBZ）转为正文可选中的 PDF。预览章节、选择纸张大小，然后直接在浏览器中保存，无需上传。",
+      },
+      "zh-TW": {
+        name: "FB2 轉 PDF",
+        description:
+          "在瀏覽器中將 FictionBook（FB2、FB2.ZIP 或 FBZ）轉成可選取文字的 PDF。預覽章節、選擇紙張大小並儲存，無須上傳檔案。",
       },
     },
   },
@@ -35151,6 +35414,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "opml-editor",
+    category: "web",
+    icon: "list-tree",
+    tags: [
+      "opml",
+      "rss",
+      "atom",
+      "xml",
+      "outline",
+      "subscriptions",
+      "import",
+      "export",
+      "editor",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر OPML",
+        description:
+          "حرّر ملفات OPML في متصفحك. نظّم المجلدات والاشتراكات في خلاصات RSS أو Atom، ثم نزّل ملف OPML المعدّل أو انسخ محتواه بصيغة XML.",
+      },
+      de: {
+        name: "OPML-Editor",
+        description:
+          "Bearbeite OPML-Dateien im Browser. Organisiere Ordner und RSS- oder Atom-Abonnements, lade die bearbeitete OPML-Datei herunter oder kopiere den XML-Text.",
+      },
+      en: {
+        name: "OPML Editor",
+        description:
+          "Edit OPML files in your browser. Organize folders and RSS or Atom subscriptions, then download the updated OPML or copy its XML.",
+      },
+      es: {
+        name: "Editor de OPML",
+        description:
+          "Edita archivos OPML en tu navegador. Organiza carpetas y suscripciones RSS o Atom y descarga el OPML actualizado o copia su XML.",
+      },
+      fr: {
+        name: "Éditeur OPML",
+        description:
+          "Modifiez vos fichiers OPML dans le navigateur. Organisez les dossiers et abonnements RSS ou Atom, puis téléchargez le fichier OPML modifié ou copiez son XML.",
+      },
+      he: {
+        name: "עורך OPML",
+        description:
+          "ערכו קובצי OPML בדפדפן. סדרו תיקיות ומינויים לערוצי RSS או Atom, ואז הורידו את קובץ ה־OPML המעודכן או העתיקו את ה־XML שלו.",
+      },
+      hi: {
+        name: "OPML संपादक",
+        description:
+          "अपने ब्राउज़र में OPML फ़ाइलें संपादित करें। फ़ोल्डर और RSS या Atom की सदस्यताएँ व्यवस्थित करें, फिर बदली हुई OPML फ़ाइल डाउनलोड करें या उसका XML कॉपी करें।",
+      },
+      id: {
+        name: "Editor OPML",
+        description:
+          "Edit file OPML di browser. Atur folder dan langganan RSS atau Atom, lalu unduh file OPML hasil edit atau salin XML-nya.",
+      },
+      it: {
+        name: "Editor OPML",
+        description:
+          "Modifica i file OPML nel browser. Organizza cartelle e iscrizioni RSS o Atom, poi scarica l’OPML aggiornato o copiane il codice XML.",
+      },
+      ja: {
+        name: "OPML エディター",
+        description:
+          "ブラウザーで OPML ファイルを編集します。フォルダーや RSS、Atom の購読リストを整理し、更新した OPML をダウンロードするか、XML をコピーできます。",
+      },
+      ko: {
+        name: "OPML 편집기",
+        description:
+          "브라우저에서 OPML 파일을 편집하세요. 폴더와 RSS 또는 Atom 구독을 정리한 다음 업데이트된 OPML을 다운로드하거나 XML을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting OPML",
+        description:
+          "Sunting fail OPML dalam pelayar. Susun folder dan langganan RSS atau Atom, kemudian muat turun fail OPML yang dikemas kini atau salin XML.",
+      },
+      nl: {
+        name: "OPML-editor",
+        description:
+          "Bewerk OPML-bestanden in je browser. Orden mappen en RSS- of Atom-abonnementen en download daarna het bijgewerkte OPML-bestand of kopieer de XML.",
+      },
+      no: {
+        name: "OPML-redigerer",
+        description:
+          "Rediger OPML-filer i nettleseren. Organiser mapper og abonnementer på RSS- eller Atom-strømmer, og last ned oppdatert OPML eller kopier XML-koden.",
+      },
+      pl: {
+        name: "Edytor OPML",
+        description:
+          "Edytuj pliki OPML w przeglądarce. Porządkuj foldery i subskrypcje RSS lub Atom, a następnie pobierz zmieniony plik OPML albo skopiuj jego XML.",
+      },
+      pt: {
+        name: "Editor de OPML",
+        description:
+          "Edite arquivos OPML no navegador. Organize pastas e assinaturas RSS ou Atom e baixe o OPML atualizado ou copie o XML.",
+      },
+      ru: {
+        name: "Редактор OPML",
+        description:
+          "Редактируйте файлы OPML в браузере. Упорядочивайте папки и подписки RSS или Atom, скачивайте обновлённый файл OPML или копируйте XML.",
+      },
+      sv: {
+        name: "OPML-redigerare",
+        description:
+          "Redigera OPML-filer i webbläsaren. Ordna mappar och prenumerationer på RSS- eller Atom-flöden och ladda sedan ner den uppdaterade OPML-filen eller kopiera XML-koden.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไข OPML",
+        description:
+          "แก้ไขไฟล์ OPML ในเบราว์เซอร์ จัดระเบียบโฟลเดอร์และฟีด RSS หรือ Atom ที่ติดตาม แล้วดาวน์โหลดไฟล์ OPML ที่แก้ไขหรือคัดลอก XML",
+      },
+      tr: {
+        name: "OPML Düzenleyici",
+        description:
+          "OPML dosyalarını tarayıcınızda düzenleyin. Klasörlerinizi ve RSS veya Atom aboneliklerinizi düzenleyip güncel OPML dosyasını indirin ya da XML içeriğini kopyalayın.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa OPML",
+        description:
+          "Chỉnh sửa tệp OPML trong trình duyệt. Sắp xếp thư mục và các nguồn RSS hoặc Atom đã đăng ký, rồi tải tệp OPML đã sửa hoặc sao chép XML.",
+      },
+      "zh-CN": {
+        name: "OPML 编辑器",
+        description:
+          "在浏览器中编辑 OPML 文件。整理文件夹和 RSS 或 Atom 订阅，然后下载更新后的 OPML 或复制其 XML。",
+      },
+      "zh-TW": {
+        name: "OPML 編輯器",
+        description:
+          "在瀏覽器中編輯 OPML 檔案。整理資料夾及 RSS 或 Atom 訂閱，再下載更新後的 OPML 或複製其 XML。",
+      },
+    },
+  },
+  {
     slug: "osm-pbf-preview",
     category: "geo",
     icon: "map",
@@ -40119,6 +40515,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "隨機密碼產生器",
         description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
+      },
+    },
+  },
+  {
+    slug: "refresh-rate-test",
+    category: "misc",
+    icon: "activity",
+    tags: ["screen", "monitor", "display", "refresh rate", "hz", "test"],
+    locales: {
+      ar: {
+        name: "اختبار معدل تحديث الشاشة",
+        description:
+          "قس معدل تحديث شاشتك عبر الإنترنت بالهرتز واعرف الفاصل الزمني بين الإطارات. أعد الاختبار بعد الانتقال إلى شاشة أخرى أو تغيير إعدادات العرض.",
+      },
+      de: {
+        name: "Bildwiederholrate testen",
+        description:
+          "Miss die Bildwiederholrate deines Bildschirms online in Hz und sieh, wie viel Zeit zwischen zwei Bildern liegt. Wiederhole den Test nach einem Bildschirmwechsel oder einer Änderung der Anzeigeeinstellungen.",
+      },
+      en: {
+        name: "Refresh Rate Test",
+        description:
+          "Measure your screen refresh rate online in Hz and see how long each frame takes. Run the test again after switching displays or changing display settings.",
+      },
+      es: {
+        name: "Prueba de frecuencia de actualización",
+        description:
+          "Mide en línea la frecuencia de actualización de tu pantalla en Hz y consulta el tiempo entre fotogramas. Repite la prueba al cambiar de pantalla o de configuración.",
+      },
+      fr: {
+        name: "Test de fréquence de rafraîchissement",
+        description:
+          "Mesurez en ligne la fréquence de rafraîchissement de votre écran en Hz et le temps entre deux images. Relancez le test après avoir changé d’écran ou de réglages d’affichage.",
+      },
+      he: {
+        name: "בדיקת קצב הרענון של המסך",
+        description:
+          "מדדו בדפדפן את קצב רענון המסך ב־Hz ואת הזמן בין פריימים. הריצו את הבדיקה מחדש אחרי מעבר למסך אחר או שינוי בהגדרות התצוגה.",
+      },
+      hi: {
+        name: "स्क्रीन रिफ़्रेश रेट टेस्ट",
+        description:
+          "अपनी स्क्रीन का रिफ़्रेश रेट ऑनलाइन हर्ट्ज़ (Hz) में मापें और देखें कि दो फ़्रेम के बीच कितना समय लगता है। डिस्प्ले या उसकी सेटिंग बदलने के बाद फिर मापें।",
+      },
+      id: {
+        name: "Tes Refresh Rate Layar",
+        description:
+          "Ukur refresh rate layar secara online dalam Hz dan lihat jeda antarframe. Ukur ulang setelah berganti layar atau mengubah setelan tampilan.",
+      },
+      it: {
+        name: "Test della frequenza di aggiornamento",
+        description:
+          "Misura online la frequenza di aggiornamento dello schermo in Hz e controlla l'intervallo tra i fotogrammi. Ripeti il test dopo aver cambiato schermo o modificato le sue impostazioni.",
+      },
+      ja: {
+        name: "リフレッシュレートテスト",
+        description:
+          "画面のリフレッシュレートをオンラインで測定し、周波数（Hz）と1フレームあたりの時間を確認できます。画面を切り替えたり表示設定を変更したりしたら、もう一度測定してください。",
+      },
+      ko: {
+        name: "화면 주사율 테스트",
+        description:
+          "화면 주사율을 온라인에서 Hz 단위로 측정하고 프레임 간격을 확인하세요. 화면을 바꾸거나 디스플레이 설정을 변경한 뒤 다시 측정할 수 있습니다.",
+      },
+      ms: {
+        name: "Ujian Kadar Segar Semula Skrin",
+        description:
+          "Ukur kadar segar semula skrin dalam talian dalam Hz dan lihat selang antara bingkai. Ukur semula selepas menukar skrin atau mengubah tetapan paparan.",
+      },
+      nl: {
+        name: "Vernieuwingsfrequentie meten",
+        description:
+          "Meet online de vernieuwingsfrequentie van je scherm in Hz en bekijk de tijd tussen frames. Meet opnieuw als je van scherm wisselt of de beeldscherminstellingen wijzigt.",
+      },
+      no: {
+        name: "Test av skjermens oppdateringsfrekvens",
+        description:
+          "Mål skjermens oppdateringsfrekvens på nett i Hz, og se tiden mellom bildene. Mål på nytt når du bytter skjerm eller endrer skjerminnstillingene.",
+      },
+      pl: {
+        name: "Test częstotliwości odświeżania ekranu",
+        description:
+          "Zmierz online częstotliwość odświeżania ekranu w Hz i sprawdź odstęp między klatkami. Powtórz test po zmianie ekranu lub ustawień wyświetlania.",
+      },
+      pt: {
+        name: "Teste da taxa de atualização do ecrã",
+        description:
+          "Meça online a taxa de atualização do ecrã em Hz e veja o intervalo entre fotogramas. Repita o teste se mudar de ecrã ou alterar as definições de visualização.",
+      },
+      ru: {
+        name: "Тест частоты обновления экрана",
+        description:
+          "Измерьте частоту обновления экрана онлайн в герцах и узнайте интервал между кадрами. Повторите тест после смены дисплея или его настроек.",
+      },
+      sv: {
+        name: "Test av skärmens uppdateringsfrekvens",
+        description:
+          "Mät skärmens uppdateringsfrekvens online i Hz och se tiden mellan bildrutorna. Mät igen när du byter skärm eller ändrar bildskärmsinställningarna.",
+      },
+      th: {
+        name: "ทดสอบอัตรารีเฟรชหน้าจอ",
+        description:
+          "วัดอัตรารีเฟรชหน้าจอออนไลน์เป็นเฮิรตซ์ (Hz) และดูระยะเวลาต่อเฟรม วัดอีกครั้งได้หลังจากสลับจอหรือเปลี่ยนการตั้งค่าการแสดงผล",
+      },
+      tr: {
+        name: "Ekran Yenileme Hızı Testi",
+        description:
+          "Ekran yenileme hızınızı çevrimiçi olarak Hz cinsinden, kareler arasındaki süreyi de milisaniye cinsinden ölçün. Ekranı veya görüntü ayarlarını değiştirince testi tekrarlayın.",
+      },
+      vi: {
+        name: "Kiểm tra tần số quét màn hình",
+        description:
+          "Đo tần số quét màn hình trực tuyến theo đơn vị Hz và xem khoảng thời gian giữa hai khung hình. Đo lại sau khi đổi màn hình hoặc chỉnh cài đặt hiển thị.",
+      },
+      "zh-CN": {
+        name: "屏幕刷新率测试",
+        description:
+          "在线测量屏幕刷新率（Hz），查看每帧的间隔时间。切换显示器或更改显示设置后可重新测量。",
+      },
+      "zh-TW": {
+        name: "螢幕更新率測試",
+        description:
+          "線上測量螢幕更新率（Hz），查看每個畫格的間隔時間。切換顯示器或變更顯示設定後可重新測量。",
       },
     },
   },

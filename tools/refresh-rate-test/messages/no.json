@@ -1,0 +1,8 @@
+{
+  "estimate": "Anslått oppdateringsfrekvens",
+  "frameInterval": "Typisk tid mellom bilder",
+  "measuring": "Måler skjermens oppdateringsfrekvens …",
+  "paused": "Målingen settes på pause mens fanen er skjult.",
+  "unavailable": "Kunne ikke få et måleresultat. Hold fanen synlig og mål på nytt.",
+  "measureAgain": "Mål på nytt"
+}

@@ -1,0 +1,8 @@
+{
+  "estimate": "Geschatte vernieuwingsfrequentie",
+  "frameInterval": "Gebruikelijke tijd tussen frames",
+  "measuring": "Vernieuwingsfrequentie meten…",
+  "paused": "De meting pauzeert zolang dit tabblad niet zichtbaar is.",
+  "unavailable": "Het lukt niet om een meting te krijgen. Houd dit tabblad zichtbaar en meet opnieuw.",
+  "measureAgain": "Opnieuw meten"
+}

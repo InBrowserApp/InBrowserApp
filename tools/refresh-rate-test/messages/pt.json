@@ -1,0 +1,8 @@
+{
+  "estimate": "Taxa de atualização estimada",
+  "frameInterval": "Intervalo típico entre fotogramas",
+  "measuring": "A medir a taxa de atualização do ecrã…",
+  "paused": "A medição fica em pausa enquanto este separador estiver oculto.",
+  "unavailable": "Não foi possível obter uma leitura. Mantenha este separador visível e volte a medir.",
+  "measureAgain": "Voltar a medir"
+}

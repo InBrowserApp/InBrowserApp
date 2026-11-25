@@ -1,0 +1,4 @@
+{
+  "name": "APK-manifestvisare",
+  "description": "Öppna en Android-APK och granska AndroidManifest.xml. Se paketnamn, version, SDK-nivåer, deklarerade behörigheter och avkodad XML i webbläsaren."
+}

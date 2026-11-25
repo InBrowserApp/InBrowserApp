@@ -1,0 +1,11 @@
+{
+  "open": "Mở sách FB2",
+  "replace": "Thay sách",
+  "drop": "Thả sách FB2 hoặc FBZ vào đây",
+  "unsupported": "Chọn sách FB2 trên thiết bị hoặc tệp nén FBZ / FB2.ZIP chứa một sách FB2.",
+  "invalid": "Sách này có thể bị hỏng hoặc không đầy đủ. Hãy chọn một bản sao khác.",
+  "protected": "Tệp nén này được mã hóa. Hãy chọn một bản sao không mã hóa.",
+  "ambiguous": "Tệp nén này chứa nhiều hơn một sách FB2. Hãy giải nén và mở sách bạn muốn đọc.",
+  "noBook": "Tệp nén này không chứa sách FB2 nào. Hãy chọn tệp khác.",
+  "encoding": "Sách này khai báo bảng mã văn bản không được hỗ trợ. Hãy chọn một bản sao UTF-8."
+}

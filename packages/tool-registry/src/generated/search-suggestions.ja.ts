@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK マニフェストビューアー",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "APNG 作成ツール",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2 から EPUB への変換ツール",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "FB2 PDF変換",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML エディター",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF プレビュー",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "ランダムパスワード生成器",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "リフレッシュレートテスト",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

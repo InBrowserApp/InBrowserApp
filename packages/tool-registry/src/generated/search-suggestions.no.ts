@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK-manifestviser",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "Lag APNG",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2 til EPUB-konverterer",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "Konverter FB2 til PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML-redigerer",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF-forhåndsvisning",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "Generator for tilfeldige passord",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "Test av skjermens oppdateringsfrekvens",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

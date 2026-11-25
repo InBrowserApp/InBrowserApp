@@ -29,6 +29,7 @@ type ToolSearchSuggestionEntry = Readonly<{
   slug: string
   category: string
   name: string
+  alternateName?: string
 }>
 
 type ToolRegistryArtifactPaths = Readonly<{

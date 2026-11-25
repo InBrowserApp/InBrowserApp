@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "โปรแกรมดู Manifest ของ APK",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "เครื่องมือสร้าง APNG",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "โปรแกรมแปลง FB2 เป็น EPUB",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "โปรแกรมแปลง FB2 เป็น PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "เครื่องมือแก้ไข OPML",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "โปรแกรมดูตัวอย่าง OSM PBF",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "เครื่องสร้างรหัสผ่านแบบสุ่ม",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "ทดสอบอัตรารีเฟรชหน้าจอ",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

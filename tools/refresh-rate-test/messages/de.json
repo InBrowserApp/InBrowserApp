@@ -1,0 +1,8 @@
+{
+  "estimate": "Geschätzte Bildwiederholrate",
+  "frameInterval": "Typischer Bildabstand",
+  "measuring": "Bildwiederholrate wird gemessen…",
+  "paused": "Die Messung pausiert, solange dieser Tab nicht sichtbar ist.",
+  "unavailable": "Kein Messwert verfügbar. Lass diesen Tab sichtbar und miss erneut.",
+  "measureAgain": "Erneut messen"
+}

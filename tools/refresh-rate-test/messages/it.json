@@ -1,0 +1,8 @@
+{
+  "estimate": "Frequenza di aggiornamento stimata",
+  "frameInterval": "Intervallo tipico tra fotogrammi",
+  "measuring": "Misurazione della frequenza di aggiornamento…",
+  "paused": "La misurazione resta in pausa mentre la scheda è nascosta.",
+  "unavailable": "Impossibile ottenere una misura. Tieni visibile la scheda e riprova.",
+  "measureAgain": "Misura di nuovo"
+}

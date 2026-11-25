@@ -1,0 +1,4 @@
+{
+  "name": "APK 매니페스트 뷰어",
+  "description": "브라우저에서 Android APK를 열고 AndroidManifest.xml을 확인하세요. 패키지 이름, 버전, SDK 수준, 선언된 권한, 디코딩한 XML을 볼 수 있습니다."
+}

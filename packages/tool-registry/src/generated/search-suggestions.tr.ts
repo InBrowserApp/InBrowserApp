@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK Manifest Görüntüleyici",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "APNG Oluşturucu",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2’den EPUB’a Dönüştürücü",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "FB2’den PDF’ye Dönüştürücü",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML Düzenleyici",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF Önizlemesi",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "Rastgele Parola Oluşturucu",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "Ekran Yenileme Hızı Testi",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

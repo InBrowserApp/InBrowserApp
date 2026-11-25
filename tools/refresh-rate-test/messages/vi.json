@@ -1,0 +1,8 @@
+{
+  "estimate": "Tần số quét ước tính",
+  "frameInterval": "Khoảng thời gian thường gặp giữa hai khung hình",
+  "measuring": "Đang đo tần số quét…",
+  "paused": "Phép đo tạm dừng khi thẻ này bị ẩn.",
+  "unavailable": "Không đo được. Hãy giữ thẻ này hiển thị rồi đo lại.",
+  "measureAgain": "Đo lại"
+}

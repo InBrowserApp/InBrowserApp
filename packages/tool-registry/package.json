@@ -16,6 +16,7 @@
     "@tool/ai-image-upscaler": "workspace:*",
     "@tool/animated-webp-maker": "workspace:*",
     "@tool/animated-webp-to-gif-converter": "workspace:*",
+    "@tool/apk-manifest-viewer": "workspace:*",
     "@tool/apng-maker": "workspace:*",
     "@tool/apng-to-gif-converter": "workspace:*",
     "@tool/archive-viewer": "workspace:*",
@@ -135,6 +136,7 @@
     "@tool/favicon-assets-generator": "workspace:*",
     "@tool/fb2-reader": "workspace:*",
     "@tool/fb2-to-epub-converter": "workspace:*",
+    "@tool/fb2-to-pdf-converter": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/file-type-detector": "workspace:*",
     "@tool/filecoin-address-converter": "workspace:*",
@@ -283,6 +285,7 @@
     "@tool/ofd-to-pdf-converter": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
+    "@tool/opml-editor": "workspace:*",
     "@tool/osm-pbf-preview": "workspace:*",
     "@tool/parquet-viewer": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
@@ -322,6 +325,7 @@
     "@tool/radio-timecode": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",
+    "@tool/refresh-rate-test": "workspace:*",
     "@tool/regex-tester-replacer": "workspace:*",
     "@tool/remove-pdf-owner-password": "workspace:*",
     "@tool/reverse-ip-lookup": "workspace:*",
@@ -450,7 +454,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./page-loaders": "./src/generated/page-loaders.ts",
-    "./search-suggestions": "./src/generated/search-suggestions.ts",
+    "./search-name": "./src/search-name.ts",
+    "./search-suggestions": "./src/search-suggestions.ts",
     "./generate": "./src/generate.ts"
   }
 }

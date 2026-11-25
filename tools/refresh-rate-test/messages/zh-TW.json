@@ -1,0 +1,8 @@
+{
+  "estimate": "估計更新率",
+  "frameInterval": "典型畫格間隔",
+  "measuring": "正在測量螢幕更新率…",
+  "paused": "分頁隱藏時，測量會暫停。",
+  "unavailable": "無法取得測量結果。請保持此分頁可見，然後重新測量。",
+  "measureAgain": "重新測量"
+}

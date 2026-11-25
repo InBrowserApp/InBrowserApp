@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem tệp kê khai APK",
+  "description": "Mở APK Android và kiểm tra AndroidManifest.xml ngay trong trình duyệt. Xem tên gói, phiên bản, cấp SDK, quyền đã khai báo và XML đã giải mã."
+}

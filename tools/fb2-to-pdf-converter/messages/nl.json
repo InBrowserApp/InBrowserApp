@@ -1,0 +1,11 @@
+{
+  "open": "FB2-boek openen",
+  "replace": "Boek vervangen",
+  "drop": "Sleep hier een FB2- of FBZ-boek naartoe",
+  "unsupported": "Kies een lokaal FB2-boek of een FBZ- / FB2.ZIP-archief met één FB2-boek.",
+  "invalid": "Dit boek is mogelijk beschadigd of onvolledig. Kies een andere kopie.",
+  "protected": "Dit archief is versleuteld. Kies een onversleutelde kopie.",
+  "ambiguous": "Dit archief bevat meer dan één FB2-boek. Pak het uit en open het gewenste boek.",
+  "noBook": "Dit archief bevat geen FB2-boek. Kies een ander bestand.",
+  "encoding": "Dit boek vermeldt een niet-ondersteunde tekstcodering. Kies een UTF-8-kopie."
+}

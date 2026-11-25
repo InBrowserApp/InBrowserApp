@@ -1,0 +1,4 @@
+{
+  "name": "FB2 转 PDF",
+  "description": "将 FictionBook 电子书（FB2、FB2.ZIP 或 FBZ）转为正文可选中的 PDF。预览章节、选择纸张大小，然后直接在浏览器中保存，无需上传。"
+}

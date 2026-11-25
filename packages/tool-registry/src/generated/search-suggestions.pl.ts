@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "Przeglądarka manifestu APK",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "Kreator APNG",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "Konwerter FB2 na EPUB",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "Konwerter FB2 na PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "Edytor OPML",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "Podgląd OSM PBF",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "Generator losowych haseł",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "Test częstotliwości odświeżania ekranu",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

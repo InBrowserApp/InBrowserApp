@@ -1,0 +1,8 @@
+{
+  "estimate": "Uppskattad uppdateringsfrekvens",
+  "frameInterval": "Typisk tid mellan bildrutor",
+  "measuring": "Mäter skärmens uppdateringsfrekvens…",
+  "paused": "Mätningen pausas när fliken inte visas.",
+  "unavailable": "Det gick inte att få ett mätvärde. Håll fliken synlig och mät igen.",
+  "measureAgain": "Mät igen"
+}

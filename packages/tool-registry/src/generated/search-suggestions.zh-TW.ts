@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK 資訊清單檢視器",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "APNG 製作器",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2 轉 EPUB 轉換器",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "FB2 轉 PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML 編輯器",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF 預覽",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "隨機密碼產生器",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "螢幕更新率測試",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

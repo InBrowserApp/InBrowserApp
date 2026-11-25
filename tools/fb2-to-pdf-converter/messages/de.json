@@ -1,0 +1,11 @@
+{
+  "open": "FB2-Buch öffnen",
+  "replace": "Buch ersetzen",
+  "drop": "FB2- oder FBZ-Buch hier ablegen",
+  "unsupported": "Wähle ein lokales FB2-Buch oder ein FBZ- / FB2.ZIP-Archiv mit genau einem FB2-Buch.",
+  "invalid": "Dieses Buch ist möglicherweise beschädigt oder unvollständig. Wählen Sie eine andere Kopie.",
+  "protected": "Dieses Archiv ist verschlüsselt. Wähle eine unverschlüsselte Kopie.",
+  "ambiguous": "Dieses Archiv enthält mehrere FB2-Bücher. Entpacken Sie es und öffnen Sie das gewünschte Buch.",
+  "noBook": "Dieses Archiv enthält kein FB2-Buch. Wählen Sie eine andere Datei.",
+  "encoding": "Dieses Buch gibt eine nicht unterstützte Textkodierung an. Wählen Sie eine UTF-8-Kopie."
+}

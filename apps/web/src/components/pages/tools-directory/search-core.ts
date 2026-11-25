@@ -1,12 +1,13 @@
-import type { SiteLanguage } from "@/lib/site"
-import type {
-  DirectoryToolEntry,
-  SearchSuggestionEntry,
-} from "@/lib/tool-directory"
+import {
+  normalizeQuery,
+  prepareSearchQuery,
+  prepareSearchText,
+  splitSuggestionName,
+} from "./search-text"
 
-function normalizeQuery(query: string) {
-  return query.trim().replace(/\s+/g, " ")
-}
+import type { SiteLanguage } from "@/lib/site"
+import type { SearchSuggestionEntry } from "@/lib/tool-directory"
+import type { SearchQuery, SearchText } from "./search-text"
 
 function readDirectoryQueryFromLocation() {
   if (typeof window === "undefined") {
@@ -18,65 +19,197 @@ function readDirectoryQueryFromLocation() {
   return normalizeQuery(params.get("query") ?? "")
 }
 
-function getSearchScore(
-  entry: Pick<DirectoryToolEntry, "name" | "description">,
-  query: string
-) {
-  const normalizedQuery = normalizeQuery(query).toLowerCase()
-
-  if (!normalizedQuery) {
-    return 0
-  }
-
-  const tokens = normalizedQuery.split(" ")
-  const searchableText = [entry.name, entry.description].join(" ").toLowerCase()
-
-  if (!tokens.every((token) => searchableText.includes(token))) {
-    return -1
-  }
-
-  let score = 0
-  const normalizedName = entry.name.toLowerCase()
-  const normalizedDescription = entry.description.toLowerCase()
-
-  if (normalizedName === normalizedQuery) {
-    score += 120
-  }
-
-  if (normalizedName.startsWith(normalizedQuery)) {
-    score += 60
-  }
-
-  if (normalizedName.includes(normalizedQuery)) {
-    score += 30
-  }
-
-  if (normalizedDescription.includes(normalizedQuery)) {
-    score += 15
-  }
-  return score
+enum SearchScore {
+  None,
+  Typo,
+  DescriptionTerms,
+  DescriptionPhrase,
+  AliasTerms,
+  AliasPhrase,
+  NameTerms,
+  NameOrderedTerms,
+  NameLeadingTerms,
+  NameContains,
+  NamePrefix,
+  AliasExact,
+  NameFoldedExact,
+  NameExact,
 }
 
-/**
- * Scores this page's entries against the query and sorts
- * alphabetically when the query is empty or by relevance otherwise.
- */
-function rankToolEntries<
-  Entry extends Pick<DirectoryToolEntry, "name" | "description">,
->(entries: readonly Entry[], normalizedQuery: string, language: SiteLanguage) {
+function getNameScore(name: SearchText, query: SearchQuery) {
+  if (name.normalized === query.normalized) {
+    return SearchScore.NameExact
+  }
+
+  if (name.compact === query.compact) {
+    return SearchScore.NameFoldedExact
+  }
+
+  if (name.compact.startsWith(query.compact)) {
+    return SearchScore.NamePrefix
+  }
+
+  if (name.compact.includes(query.compact)) {
+    return SearchScore.NameContains
+  }
+
+  // Preserve direction for searches like "pdf image" versus "image pdf".
+  let nextIndex = 0
+  const orderedTerms = query.terms.every((term) => {
+    const index = name.compact.indexOf(term, nextIndex)
+
+    nextIndex = index + term.length
+    return index >= 0
+  })
+
+  if (orderedTerms) {
+    return name.compact.startsWith(query.terms[0]!)
+      ? SearchScore.NameLeadingTerms
+      : SearchScore.NameOrderedTerms
+  }
+
+  return query.terms.every((term) => name.compact.includes(term))
+    ? SearchScore.NameTerms
+    : SearchScore.None
+}
+
+function isOneEditAway(term: string, word: string) {
+  if (Math.abs(term.length - word.length) > 1) {
+    return false
+  }
+
+  let index = 0
+  while (index < term.length && term[index] === word[index]) {
+    index++
+  }
+
+  if (term.length !== word.length) {
+    const [shorter, longer] =
+      term.length < word.length ? [term, word] : [word, term]
+    return shorter.slice(index) === longer.slice(index + 1)
+  }
+
+  return (
+    term.slice(index + 1) === word.slice(index + 1) ||
+    (term[index] === word[index + 1] &&
+      term[index + 1] === word[index] &&
+      term.slice(index + 2) === word.slice(index + 2))
+  )
+}
+
+function hasTypoMatch(
+  names: readonly SearchText[],
+  missingTerms: readonly string[]
+) {
+  const [term] = missingTerms
+
+  // Limit typo correction to one longer alphabetic term. File formats and
+  // identifiers with numbers should only match what the user typed.
+  return (
+    missingTerms.length === 1 &&
+    term !== undefined &&
+    /^[a-z]{5,}$/.test(term) &&
+    names.some(({ folded }) =>
+      folded
+        .split(" ")
+        .some((word) => /^[a-z]+$/.test(word) && isOneEditAway(term, word))
+    )
+  )
+}
+
+type SearchEntry = Pick<
+  SearchSuggestionEntry,
+  "name" | "slug" | "alternateName"
+> & {
+  description?: string
+}
+
+function indexEntry(
+  { name, slug, alternateName, description }: SearchEntry,
+  language: SiteLanguage
+) {
+  return {
+    language,
+    name: prepareSearchText(name, language),
+    aliases: (alternateName ? [slug, alternateName] : [slug]).map((alias) =>
+      prepareSearchText(alias, language)
+    ),
+    description: description
+      ? prepareSearchText(description, language).folded
+      : "",
+  }
+}
+
+const indexedEntries = new WeakMap<SearchEntry, ReturnType<typeof indexEntry>>()
+
+function getSearchScore(
+  entry: SearchEntry,
+  query: SearchQuery,
+  language: SiteLanguage,
+  searchDescription: boolean
+) {
+  let indexed = indexedEntries.get(entry)
+  if (indexed?.language !== language) {
+    indexed = indexEntry(entry, language)
+    indexedEntries.set(entry, indexed)
+  }
+  const { name, aliases, description } = indexed
+
+  const nameScore = getNameScore(name, query)
+  if (nameScore >= SearchScore.NameFoldedExact) return nameScore
+
+  const aliasScore = Math.max(
+    ...aliases.map((alias) => getNameScore(alias, query))
+  )
+  if (aliasScore >= SearchScore.NameFoldedExact) return SearchScore.AliasExact
+  if (nameScore > SearchScore.None) return nameScore
+  if (aliasScore >= SearchScore.NameContains) return SearchScore.AliasPhrase
+
+  const names = [name, ...aliases]
+  const missingTerms = query.terms.filter(
+    (term) => !names.some(({ compact }) => compact.includes(term))
+  )
+  if (missingTerms.length === 0) return SearchScore.AliasTerms
+
+  if (searchDescription) {
+    if (description.includes(query.folded)) return SearchScore.DescriptionPhrase
+    if (missingTerms.every((term) => description.includes(term))) {
+      return SearchScore.DescriptionTerms
+    }
+  }
+
+  return hasTypoMatch(names, missingTerms) ? SearchScore.Typo : SearchScore.None
+}
+
+function findRankedMatches<Entry extends SearchEntry>(
+  entries: readonly Entry[],
+  query: SearchQuery,
+  language: SiteLanguage,
+  searchDescription: boolean
+) {
+  if (query.terms.length === 0) return []
+
   return entries
     .map((entry) => ({
       entry,
-      score: getSearchScore(entry, normalizedQuery),
+      score: getSearchScore(entry, query, language, searchDescription),
     }))
-    .filter(({ score }) => normalizedQuery === "" || score >= 0)
-    .sort((left, right) => {
-      if (normalizedQuery === "") {
-        return left.entry.name.localeCompare(right.entry.name, language)
-      }
+    .filter(({ score }) => score > SearchScore.None)
+}
 
-      return right.score - left.score
-    })
+function rankToolEntries<Entry extends SearchEntry>(
+  entries: readonly Entry[],
+  query: string,
+  language: SiteLanguage
+) {
+  const prepared = prepareSearchQuery(query, language)
+  if (prepared.normalized === "") {
+    const { compare } = new Intl.Collator(language)
+    return [...entries].sort((left, right) => compare(left.name, right.name))
+  }
+
+  return findRankedMatches(entries, prepared, language, true)
+    .sort((left, right) => right.score - left.score)
     .map(({ entry }) => entry)
 }
 
@@ -87,78 +220,25 @@ type ToolSearchSuggestion = Readonly<{
   post: string
 }>
 
-/** Suggestion rows shown in the search dropdown (per design spec). */
 const SUGGESTION_LIMIT = 8
 
-function getSuggestionScore(loweredName: string, normalizedQuery: string) {
-  const index = loweredName.indexOf(normalizedQuery)
-
-  if (index === 0) {
-    return 100
-  }
-
-  if (index > 0) {
-    return 50
-  }
-
-  const tokens = normalizedQuery.split(" ")
-
-  return tokens.every((token) => loweredName.includes(token)) ? 10 : -1
-}
-
-function splitSuggestionName(name: string, normalizedQuery: string) {
-  const loweredName = name.toLowerCase()
-  let index = loweredName.indexOf(normalizedQuery)
-  let length = normalizedQuery.length
-
-  if (index < 0) {
-    const firstToken = normalizedQuery.split(" ")[0] ?? ""
-
-    index = firstToken ? loweredName.indexOf(firstToken) : -1
-    length = firstToken.length
-  }
-
-  if (index < 0) {
-    return { match: "", post: "", pre: name }
-  }
-
-  return {
-    match: name.slice(index, index + length),
-    post: name.slice(index + length),
-    pre: name.slice(0, index),
-  }
-}
-
-/**
- * Name-only dropdown suggestions: name prefix > name contains > all
- * tokens included, ties alphabetical, capped at SUGGESTION_LIMIT.
- */
 function buildSearchSuggestions(
   entries: readonly SearchSuggestionEntry[],
   query: string,
   language: SiteLanguage
 ): readonly ToolSearchSuggestion[] {
-  const normalizedQuery = normalizeQuery(query).toLowerCase()
+  const prepared = prepareSearchQuery(query, language)
+  const { compare } = new Intl.Collator(language)
 
-  if (!normalizedQuery) {
-    return []
-  }
-
-  return entries
-    .map((entry) => ({
-      entry,
-      score: getSuggestionScore(entry.name.toLowerCase(), normalizedQuery),
-    }))
-    .filter(({ score }) => score >= 0)
+  return findRankedMatches(entries, prepared, language, false)
     .sort(
       (left, right) =>
-        right.score - left.score ||
-        left.entry.name.localeCompare(right.entry.name, language)
+        right.score - left.score || compare(left.entry.name, right.entry.name)
     )
     .slice(0, SUGGESTION_LIMIT)
     .map(({ entry }) => ({
       entry,
-      ...splitSuggestionName(entry.name, normalizedQuery),
+      ...splitSuggestionName(entry.name, prepared, language),
     }))
 }
 

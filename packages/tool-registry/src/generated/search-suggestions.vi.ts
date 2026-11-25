@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "Trình xem tệp kê khai APK",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "Trình tạo APNG",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "Trình chuyển đổi FB2 sang EPUB",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "Chuyển FB2 sang PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "Trình chỉnh sửa OPML",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "Trình xem trước OSM PBF",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "Trình tạo mật khẩu ngẫu nhiên",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "Kiểm tra tần số quét màn hình",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

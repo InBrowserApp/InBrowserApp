@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "Pemapar Manifes APK",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "Pembuat APNG",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "Penukar FB2 kepada EPUB",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "Penukar FB2 kepada PDF",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "Penyunting OPML",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "Pratonton OSM PBF",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "Penjana Kata Laluan Rawak",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "Ujian Kadar Segar Semula Skrin",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

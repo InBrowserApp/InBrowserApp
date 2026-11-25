@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK 매니페스트 뷰어",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "APNG 만들기",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2 EPUB 변환기",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "FB2 PDF 변환기",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML 편집기",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF 미리보기",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "랜덤 비밀번호 생성기",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "화면 주사율 테스트",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

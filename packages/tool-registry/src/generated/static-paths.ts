@@ -830,6 +830,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "apk-manifest-viewer",
+    language: "ar",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "de",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "en",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "es",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "fr",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "he",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "hi",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "id",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "it",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ja",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ko",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ms",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "nl",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "no",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "pl",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "pt",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "ru",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "sv",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "th",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "tr",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "vi",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "apk-manifest-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "apng-maker",
     language: "ar",
   },
@@ -11775,6 +11867,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "fb2-to-epub-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "fb2-to-pdf-converter",
     language: "zh-TW",
   },
   {
@@ -25394,6 +25578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "opml-editor",
+    language: "ar",
+  },
+  {
+    slug: "opml-editor",
+    language: "de",
+  },
+  {
+    slug: "opml-editor",
+    language: "en",
+  },
+  {
+    slug: "opml-editor",
+    language: "es",
+  },
+  {
+    slug: "opml-editor",
+    language: "fr",
+  },
+  {
+    slug: "opml-editor",
+    language: "he",
+  },
+  {
+    slug: "opml-editor",
+    language: "hi",
+  },
+  {
+    slug: "opml-editor",
+    language: "id",
+  },
+  {
+    slug: "opml-editor",
+    language: "it",
+  },
+  {
+    slug: "opml-editor",
+    language: "ja",
+  },
+  {
+    slug: "opml-editor",
+    language: "ko",
+  },
+  {
+    slug: "opml-editor",
+    language: "ms",
+  },
+  {
+    slug: "opml-editor",
+    language: "nl",
+  },
+  {
+    slug: "opml-editor",
+    language: "no",
+  },
+  {
+    slug: "opml-editor",
+    language: "pl",
+  },
+  {
+    slug: "opml-editor",
+    language: "pt",
+  },
+  {
+    slug: "opml-editor",
+    language: "ru",
+  },
+  {
+    slug: "opml-editor",
+    language: "sv",
+  },
+  {
+    slug: "opml-editor",
+    language: "th",
+  },
+  {
+    slug: "opml-editor",
+    language: "tr",
+  },
+  {
+    slug: "opml-editor",
+    language: "vi",
+  },
+  {
+    slug: "opml-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "opml-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "osm-pbf-preview",
     language: "ar",
   },
@@ -28979,6 +29255,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "random-password-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ar",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "de",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "en",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "es",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "fr",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "he",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "hi",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "id",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "it",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ja",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ko",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ms",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "nl",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "no",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "pl",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "pt",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ru",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "sv",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "th",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "tr",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "vi",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "refresh-rate-test",
     language: "zh-TW",
   },
   {

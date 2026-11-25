@@ -48,6 +48,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "animated-webp-to-gif-converter",
   },
   {
+    category: "developer",
+    name: "APK मेनिफ़ेस्ट व्यूअर",
+    slug: "apk-manifest-viewer",
+  },
+  {
     category: "image",
     name: "APNG मेकर",
     slug: "apng-maker",
@@ -641,6 +646,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "ebook",
     name: "FB2 से EPUB कन्वर्टर",
     slug: "fb2-to-epub-converter",
+  },
+  {
+    category: "ebook",
+    name: "FB2 से PDF कन्वर्टर",
+    slug: "fb2-to-pdf-converter",
   },
   {
     category: "web",
@@ -1383,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML संपादक",
+    slug: "opml-editor",
+  },
+  {
     category: "geo",
     name: "OSM PBF का पूर्वावलोकन",
     slug: "osm-pbf-preview",
@@ -1576,6 +1591,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "random",
     name: "रैंडम पासवर्ड जेनरेटर",
     slug: "random-password-generator",
+  },
+  {
+    category: "misc",
+    name: "स्क्रीन रिफ़्रेश रेट टेस्ट",
+    slug: "refresh-rate-test",
   },
   {
     category: "text",

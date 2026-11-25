@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore del manifest APK",
+  "description": "Apri un APK Android ed esamina AndroidManifest.xml. Consulta il nome del pacchetto, la versione, i livelli SDK, le autorizzazioni dichiarate e l’XML decodificato nel browser."
+}

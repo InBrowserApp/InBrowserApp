@@ -1,0 +1,8 @@
+{
+  "estimate": "Estimated refresh rate",
+  "frameInterval": "Typical frame interval",
+  "measuring": "Measuring display refresh…",
+  "paused": "Measurement pauses while this tab is hidden.",
+  "unavailable": "Could not get a reading. Keep this tab visible and measure again.",
+  "measureAgain": "Measure again"
+}
