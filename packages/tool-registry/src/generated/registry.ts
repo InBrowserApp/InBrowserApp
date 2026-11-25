@@ -10965,6 +10965,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "comic-image-extractor",
+    category: "ebook",
+    secondaryCategories: ["image"],
+    icon: "file-image",
+    tags: [
+      "comic",
+      "manga",
+      "cbz",
+      "cbr",
+      "cb7",
+      "extract",
+      "images",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "استخراج صور القصص المصوّرة",
+        description:
+          "استخرج الصور من ملفات القصص المصوّرة CBZ وCBR وCB7. عاين الصفحات وحدّد ما تريده، ثم احفظ الصور الأصلية أو حوّلها إلى JPG. نزّل صورة واحدة أو أرشيف ZIP من متصفحك.",
+      },
+      de: {
+        name: "Comic-Bilder extrahieren",
+        description:
+          "Extrahiere Bilder aus CBZ-, CBR- und CB7-Comics. Wähle Seiten in der Vorschau aus und speichere die Originalbilder oder wandle sie in JPG um. Lade ein Bild oder ein ZIP-Archiv direkt im Browser herunter.",
+      },
+      en: {
+        name: "Comic Image Extractor",
+        description:
+          "Extract images from CBZ, CBR, and CB7 comic files. Preview and select pages, then save the original images or convert them to JPG. Download one image or a ZIP in your browser.",
+      },
+      es: {
+        name: "Extraer imágenes de cómics",
+        description:
+          "Extrae imágenes de cómics CBZ, CBR y CB7 en tu navegador. Revisa y elige las páginas, conserva las imágenes originales o conviértelas a JPG y descarga una imagen o un archivo ZIP.",
+      },
+      fr: {
+        name: "Extraire les images de bandes dessinées",
+        description:
+          "Extrayez les images de vos BD au format CBZ, CBR ou CB7. Prévisualisez et sélectionnez les pages, puis conservez les images d’origine ou convertissez-les en JPG. Téléchargez une image ou un fichier ZIP dans votre navigateur.",
+      },
+      he: {
+        name: "חילוץ תמונות מחוברות קומיקס",
+        description:
+          "חלצו תמונות מקובצי קומיקס בפורמט CBZ, CBR או CB7. צפו בעמודים ובחרו אילו לשמור כתמונות המקור או להמיר ל־JPG. הורידו תמונה אחת או ארכיון ZIP ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "कॉमिक से चित्र निकालें",
+        description:
+          "CBZ, CBR और CB7 कॉमिक से इमेज निकालें। प्रीव्यू देखकर पृष्ठ चुनें और मूल इमेज सेव करें या उन्हें JPG में बदलें। एक इमेज या ZIP ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Ekstrak Gambar Komik",
+        description:
+          "Ekstrak gambar dari file komik CBZ, CBR, dan CB7. Lihat pratinjau dan pilih halaman yang diinginkan, lalu simpan gambar asli atau ubah ke JPG. Unduh satu gambar atau arsip ZIP langsung di browser.",
+      },
+      it: {
+        name: "Estrai immagini dai fumetti",
+        description:
+          "Estrai immagini da fumetti CBZ, CBR e CB7 nel browser. Guarda l’anteprima, seleziona le pagine e salva le immagini originali o convertile in JPG. Scarica una singola immagine o un archivio ZIP.",
+      },
+      ja: {
+        name: "漫画の画像を抽出",
+        description:
+          "CBZ、CBR、CB7 形式の漫画から画像を抽出します。画像をプレビューして必要なページを選び、元の画像のまま保存するか JPG に変換できます。ブラウザーで画像を 1 枚ずつ、または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "만화 이미지 추출",
+        description:
+          "CBZ, CBR, CB7 만화 파일에서 이미지를 추출하세요. 페이지를 미리 보고 골라 원본 이미지를 저장하거나 JPG로 변환할 수 있습니다. 브라우저에서 이미지 한 장이나 ZIP 파일을 다운로드하세요.",
+      },
+      ms: {
+        name: "Ekstrak Imej Komik",
+        description:
+          "Ekstrak imej daripada fail komik CBZ, CBR atau CB7. Pratonton dan pilih halaman, kemudian simpan imej asal atau tukarkannya kepada JPG. Muat turun satu imej atau fail ZIP dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen uit strips halen",
+        description:
+          "Haal afbeeldingen uit CBZ-, CBR- en CB7-strips. Bekijk en selecteer pagina’s, sla de originele afbeeldingen op of zet ze om naar JPG. Download één afbeelding of meerdere als ZIP, rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Hent ut bilder fra tegneserier",
+        description:
+          "Hent ut bilder fra tegneserier i CBZ-, CBR- eller CB7-format. Forhåndsvis sidene, velg hvilke du vil lagre, og behold originalbildene eller konverter dem til JPG. Last ned ett bilde eller en ZIP-fil i nettleseren.",
+      },
+      pl: {
+        name: "Wyodrębnij obrazy z komiksów",
+        description:
+          "Wybierz strony komiksu CBZ, CBR lub CB7 na podglądzie. Zapisz oryginalne obrazy lub przekonwertuj je na JPG. Pobierz pojedynczy obraz albo archiwum ZIP w przeglądarce.",
+      },
+      pt: {
+        name: "Extrair imagens de quadrinhos",
+        description:
+          "Extraia imagens de quadrinhos em CBZ, CBR e CB7. Confira as miniaturas, selecione as páginas e salve as imagens originais ou converta para JPG. Baixe uma imagem ou um ZIP no navegador.",
+      },
+      ru: {
+        name: "Извлечь изображения из комикса",
+        description:
+          "Извлекайте изображения из CBZ, CBR и CB7 в браузере. Выберите страницы по миниатюрам, сохраните исходные файлы или преобразуйте их в JPG. Скачайте одно изображение либо ZIP-архив.",
+      },
+      sv: {
+        name: "Extrahera bilder ur serier",
+        description:
+          "Extrahera bilder ur seriefiler i CBZ-, CBR- och CB7-format. Förhandsvisa och välj sidor, spara originalbilderna eller konvertera dem till JPG. Ladda ner en bild eller en ZIP-fil i webbläsaren.",
+      },
+      th: {
+        name: "แยกรูปภาพจากการ์ตูน",
+        description:
+          "แยกรูปภาพจากไฟล์การ์ตูน CBZ, CBR และ CB7 ดูตัวอย่างและเลือกหน้า แล้วบันทึกรูปภาพต้นฉบับหรือแปลงเป็น JPG ดาวน์โหลดทีละภาพหรือรวมเป็น ZIP ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çizgi Roman Görsellerini Çıkar",
+        description:
+          "CBZ, CBR ve CB7 çizgi romanlarından görselleri çıkarın. Sayfaları önizleyip seçin, özgün görselleri kaydedin veya JPG’ye dönüştürün. Tarayıcınızdan tek bir görsel ya da ZIP arşivi indirin.",
+      },
+      vi: {
+        name: "Trích xuất hình ảnh truyện tranh",
+        description:
+          "Trích xuất ảnh từ tệp truyện CBZ, CBR và CB7 ngay trong trình duyệt. Xem trước và chọn trang, giữ ảnh gốc hoặc chuyển sang JPG, rồi tải xuống một ảnh hoặc gói ZIP chứa nhiều ảnh.",
+      },
+      "zh-CN": {
+        name: "提取漫画图片",
+        description:
+          "在浏览器中从 CBZ、CBR 和 CB7 漫画中提取图片。预览并选择所需页面，可保留原图或转换为 JPG，支持单张下载或打包下载 ZIP。",
+      },
+      "zh-TW": {
+        name: "擷取漫畫圖片",
+        description:
+          "從 CBZ、CBR 或 CB7 漫畫檔擷取圖片。預覽並選取所需頁面，保留原始圖片或轉成 JPG，再直接在瀏覽器下載單張圖片或 ZIP。",
+      },
+    },
+  },
+  {
     slug: "compound-interest-calculator",
     category: "misc",
     icon: "chart-no-axes-column-increasing",
@@ -69682,6 +69817,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "取色器",
         description:
           "從螢幕或圖片取色，取樣像素並即時複製 HEX、RGB、HSL、HSV 與 CMYK 值。",
+      },
+    },
+  },
+  "comic-image-extractor": {
+    slug: "comic-image-extractor",
+    category: "ebook",
+    secondaryCategories: ["image"],
+    icon: "file-image",
+    tags: [
+      "comic",
+      "manga",
+      "cbz",
+      "cbr",
+      "cb7",
+      "extract",
+      "images",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "استخراج صور القصص المصوّرة",
+        description:
+          "استخرج الصور من ملفات القصص المصوّرة CBZ وCBR وCB7. عاين الصفحات وحدّد ما تريده، ثم احفظ الصور الأصلية أو حوّلها إلى JPG. نزّل صورة واحدة أو أرشيف ZIP من متصفحك.",
+      },
+      de: {
+        name: "Comic-Bilder extrahieren",
+        description:
+          "Extrahiere Bilder aus CBZ-, CBR- und CB7-Comics. Wähle Seiten in der Vorschau aus und speichere die Originalbilder oder wandle sie in JPG um. Lade ein Bild oder ein ZIP-Archiv direkt im Browser herunter.",
+      },
+      en: {
+        name: "Comic Image Extractor",
+        description:
+          "Extract images from CBZ, CBR, and CB7 comic files. Preview and select pages, then save the original images or convert them to JPG. Download one image or a ZIP in your browser.",
+      },
+      es: {
+        name: "Extraer imágenes de cómics",
+        description:
+          "Extrae imágenes de cómics CBZ, CBR y CB7 en tu navegador. Revisa y elige las páginas, conserva las imágenes originales o conviértelas a JPG y descarga una imagen o un archivo ZIP.",
+      },
+      fr: {
+        name: "Extraire les images de bandes dessinées",
+        description:
+          "Extrayez les images de vos BD au format CBZ, CBR ou CB7. Prévisualisez et sélectionnez les pages, puis conservez les images d’origine ou convertissez-les en JPG. Téléchargez une image ou un fichier ZIP dans votre navigateur.",
+      },
+      he: {
+        name: "חילוץ תמונות מחוברות קומיקס",
+        description:
+          "חלצו תמונות מקובצי קומיקס בפורמט CBZ, CBR או CB7. צפו בעמודים ובחרו אילו לשמור כתמונות המקור או להמיר ל־JPG. הורידו תמונה אחת או ארכיון ZIP ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "कॉमिक से चित्र निकालें",
+        description:
+          "CBZ, CBR और CB7 कॉमिक से इमेज निकालें। प्रीव्यू देखकर पृष्ठ चुनें और मूल इमेज सेव करें या उन्हें JPG में बदलें। एक इमेज या ZIP ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Ekstrak Gambar Komik",
+        description:
+          "Ekstrak gambar dari file komik CBZ, CBR, dan CB7. Lihat pratinjau dan pilih halaman yang diinginkan, lalu simpan gambar asli atau ubah ke JPG. Unduh satu gambar atau arsip ZIP langsung di browser.",
+      },
+      it: {
+        name: "Estrai immagini dai fumetti",
+        description:
+          "Estrai immagini da fumetti CBZ, CBR e CB7 nel browser. Guarda l’anteprima, seleziona le pagine e salva le immagini originali o convertile in JPG. Scarica una singola immagine o un archivio ZIP.",
+      },
+      ja: {
+        name: "漫画の画像を抽出",
+        description:
+          "CBZ、CBR、CB7 形式の漫画から画像を抽出します。画像をプレビューして必要なページを選び、元の画像のまま保存するか JPG に変換できます。ブラウザーで画像を 1 枚ずつ、または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "만화 이미지 추출",
+        description:
+          "CBZ, CBR, CB7 만화 파일에서 이미지를 추출하세요. 페이지를 미리 보고 골라 원본 이미지를 저장하거나 JPG로 변환할 수 있습니다. 브라우저에서 이미지 한 장이나 ZIP 파일을 다운로드하세요.",
+      },
+      ms: {
+        name: "Ekstrak Imej Komik",
+        description:
+          "Ekstrak imej daripada fail komik CBZ, CBR atau CB7. Pratonton dan pilih halaman, kemudian simpan imej asal atau tukarkannya kepada JPG. Muat turun satu imej atau fail ZIP dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen uit strips halen",
+        description:
+          "Haal afbeeldingen uit CBZ-, CBR- en CB7-strips. Bekijk en selecteer pagina’s, sla de originele afbeeldingen op of zet ze om naar JPG. Download één afbeelding of meerdere als ZIP, rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Hent ut bilder fra tegneserier",
+        description:
+          "Hent ut bilder fra tegneserier i CBZ-, CBR- eller CB7-format. Forhåndsvis sidene, velg hvilke du vil lagre, og behold originalbildene eller konverter dem til JPG. Last ned ett bilde eller en ZIP-fil i nettleseren.",
+      },
+      pl: {
+        name: "Wyodrębnij obrazy z komiksów",
+        description:
+          "Wybierz strony komiksu CBZ, CBR lub CB7 na podglądzie. Zapisz oryginalne obrazy lub przekonwertuj je na JPG. Pobierz pojedynczy obraz albo archiwum ZIP w przeglądarce.",
+      },
+      pt: {
+        name: "Extrair imagens de quadrinhos",
+        description:
+          "Extraia imagens de quadrinhos em CBZ, CBR e CB7. Confira as miniaturas, selecione as páginas e salve as imagens originais ou converta para JPG. Baixe uma imagem ou um ZIP no navegador.",
+      },
+      ru: {
+        name: "Извлечь изображения из комикса",
+        description:
+          "Извлекайте изображения из CBZ, CBR и CB7 в браузере. Выберите страницы по миниатюрам, сохраните исходные файлы или преобразуйте их в JPG. Скачайте одно изображение либо ZIP-архив.",
+      },
+      sv: {
+        name: "Extrahera bilder ur serier",
+        description:
+          "Extrahera bilder ur seriefiler i CBZ-, CBR- och CB7-format. Förhandsvisa och välj sidor, spara originalbilderna eller konvertera dem till JPG. Ladda ner en bild eller en ZIP-fil i webbläsaren.",
+      },
+      th: {
+        name: "แยกรูปภาพจากการ์ตูน",
+        description:
+          "แยกรูปภาพจากไฟล์การ์ตูน CBZ, CBR และ CB7 ดูตัวอย่างและเลือกหน้า แล้วบันทึกรูปภาพต้นฉบับหรือแปลงเป็น JPG ดาวน์โหลดทีละภาพหรือรวมเป็น ZIP ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Çizgi Roman Görsellerini Çıkar",
+        description:
+          "CBZ, CBR ve CB7 çizgi romanlarından görselleri çıkarın. Sayfaları önizleyip seçin, özgün görselleri kaydedin veya JPG’ye dönüştürün. Tarayıcınızdan tek bir görsel ya da ZIP arşivi indirin.",
+      },
+      vi: {
+        name: "Trích xuất hình ảnh truyện tranh",
+        description:
+          "Trích xuất ảnh từ tệp truyện CBZ, CBR và CB7 ngay trong trình duyệt. Xem trước và chọn trang, giữ ảnh gốc hoặc chuyển sang JPG, rồi tải xuống một ảnh hoặc gói ZIP chứa nhiều ảnh.",
+      },
+      "zh-CN": {
+        name: "提取漫画图片",
+        description:
+          "在浏览器中从 CBZ、CBR 和 CB7 漫画中提取图片。预览并选择所需页面，可保留原图或转换为 JPG，支持单张下载或打包下载 ZIP。",
+      },
+      "zh-TW": {
+        name: "擷取漫畫圖片",
+        description:
+          "從 CBZ、CBR 或 CB7 漫畫檔擷取圖片。預覽並選取所需頁面，保留原始圖片或轉成 JPG，再直接在瀏覽器下載單張圖片或 ZIP。",
       },
     },
   },

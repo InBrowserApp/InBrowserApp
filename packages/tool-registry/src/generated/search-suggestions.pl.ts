@@ -428,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Wyodrębnij obrazy z komiksów",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Kalkulator procentu składanego",
     slug: "compound-interest-calculator",

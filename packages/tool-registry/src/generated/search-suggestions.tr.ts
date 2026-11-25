@@ -428,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Çizgi Roman Görsellerini Çıkar",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Bileşik Faiz Hesaplayıcı",
     slug: "compound-interest-calculator",

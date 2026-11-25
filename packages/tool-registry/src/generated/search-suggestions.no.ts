@@ -428,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Hent ut bilder fra tegneserier",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Kalkulator for rentes rente",
     slug: "compound-interest-calculator",

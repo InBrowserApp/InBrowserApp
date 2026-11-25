@@ -7822,6 +7822,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "comic-image-extractor",
+    language: "ar",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "de",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "en",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "es",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "fr",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "he",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "hi",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "id",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "it",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "ja",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "ko",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "ms",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "nl",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "no",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "pl",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "pt",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "ru",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "sv",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "th",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "tr",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "vi",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "comic-image-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "compound-interest-calculator",
     language: "ar",
   },

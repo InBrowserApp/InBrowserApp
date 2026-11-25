@@ -428,6 +428,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Ekstrak Gambar Komik",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Kalkulator bunga majemuk",
     slug: "compound-interest-calculator",
