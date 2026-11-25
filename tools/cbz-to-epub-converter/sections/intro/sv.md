@@ -4,7 +4,7 @@ Välj en `.cbz`- eller `.cbr`-fil eller dra den till konverteraren. Det går ock
 
 ## Behåll seriesidornas ursprungliga layout
 
-Konverteraren använder EPUB 3 med fast layout, så att varje bild får en egen sida. Sidfilerna följer den naturliga ordningen efter mapp- och filnamn. Den första bilden blir omslag. Stående sidor och breda uppslag behåller sina proportioner. Bildfiler i kompatibla format kan behållas som de är. Övriga bilder som webbläsaren kan läsa sparas som PNG.
+Konverteraren använder EPUB 3 med fast layout, så att varje bild får en egen sida. Sidfilerna följer den naturliga ordningen efter mapp- och filnamn. Den första bilden blir omslag. Stående sidor och breda uppslag behåller sina proportioner. Bildfiler i kompatibla format kan behållas som de är. WebP-, BMP- och AVIF-bilder sparas som PNG.
 
 ## Läs serien i EPUB-format
 

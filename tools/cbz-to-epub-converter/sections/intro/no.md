@@ -4,7 +4,7 @@ Velg en tegneserie i `.cbz`- eller `.cbr`-format, eller dra filen inn i verktøy
 
 ## Behold det opprinnelige sideoppsettet
 
-Verktøyet bruker EPUB 3 med fast sideoppsett, slik at hvert bilde får én side. Sidene sorteres etter mappe- og filnavn med hensyn til tallene i navnene, og det første bildet blir omslaget. Stående sider og brede oppslag beholder proporsjonene. Kompatible bildefiler kan beholdes uendret. Bilder i andre formater som nettleseren kan lese, lagres som PNG.
+Verktøyet bruker EPUB 3 med fast sideoppsett, slik at hvert bilde får én side. Sidene sorteres etter mappe- og filnavn med hensyn til tallene i navnene, og det første bildet blir omslaget. Stående sider og brede oppslag beholder proporsjonene. Kompatible bildefiler kan beholdes uendret. WebP-, BMP- og AVIF-bilder lagres som PNG.
 
 ## Les tegneserien som EPUB
 

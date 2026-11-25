@@ -4,7 +4,7 @@ Selecciona un cómic `.cbz` o `.cbr` o arrástralo al convertidor. También pued
 
 ## Conserva el diseño original de las páginas del cómic
 
-El convertidor usa EPUB 3 de diseño fijo, de modo que cada imagen ocupa una página. Las imágenes se ordenan por carpetas y nombres de archivo en orden natural, y la primera se convierte en la portada. Las páginas verticales y las dobles páginas apaisadas conservan sus proporciones. Las imágenes compatibles se pueden conservar tal cual. Las demás imágenes que el navegador puede leer se guardan como PNG.
+El convertidor usa EPUB 3 de diseño fijo, de modo que cada imagen ocupa una página. Las imágenes se ordenan por carpetas y nombres de archivo en orden natural, y la primera se convierte en la portada. Las páginas verticales y las dobles páginas apaisadas conservan sus proporciones. Las imágenes compatibles se pueden conservar tal cual. Las imágenes WebP, BMP y AVIF se guardan como PNG.
 
 ## Lee el cómic en EPUB
 

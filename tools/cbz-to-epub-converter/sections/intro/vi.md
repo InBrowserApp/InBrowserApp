@@ -4,7 +4,7 @@ Chọn tệp truyện `.cbz` hoặc `.cbr`. Bạn cũng có thể kéo thả t�
 
 ## Giữ nguyên bố cục từng trang truyện
 
-Trình chuyển đổi dùng EPUB 3 có bố cục cố định, mỗi ảnh chiếm một trang. Tệp ảnh được sắp xếp theo tên thư mục và tên tệp, trong đó các số được xếp theo giá trị. Ảnh đầu tiên được dùng làm bìa. Trang dọc và trang đôi khổ ngang giữ nguyên tỷ lệ. Ảnh tương thích được giữ nguyên. Các ảnh khác mà trình duyệt đọc được sẽ được lưu ở định dạng PNG.
+Trình chuyển đổi dùng EPUB 3 có bố cục cố định, mỗi ảnh chiếm một trang. Tệp ảnh được sắp xếp theo tên thư mục và tên tệp, trong đó các số được xếp theo giá trị. Ảnh đầu tiên được dùng làm bìa. Trang dọc và trang đôi khổ ngang giữ nguyên tỷ lệ. Ảnh tương thích được giữ nguyên. Ảnh WebP, BMP và AVIF được lưu ở định dạng PNG.
 
 ## Đọc truyện tranh EPUB
 

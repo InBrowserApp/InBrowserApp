@@ -4,7 +4,7 @@ Escolha um arquivo `.cbz` ou `.cbr`, ou arraste o quadrinho para o conversor. Ta
 
 ## Como é preservado o layout das páginas
 
-O conversor cria um EPUB 3 com layout fixo, em que cada imagem ocupa uma página. A ordem segue os nomes das pastas e dos arquivos, levando a numeração em conta. A primeira imagem vira a capa. Páginas na vertical e páginas duplas mantêm as proporções. As imagens compatíveis podem ser mantidas no formato original. As demais imagens que o navegador consegue ler são salvas em PNG.
+O conversor cria um EPUB 3 com layout fixo, em que cada imagem ocupa uma página. A ordem segue os nomes das pastas e dos arquivos, levando a numeração em conta. A primeira imagem vira a capa. Páginas na vertical e páginas duplas mantêm as proporções. As imagens compatíveis podem ser mantidas no formato original. As imagens WebP, BMP e AVIF são salvas em PNG.
 
 ## Como ler o quadrinho em EPUB
 

@@ -4,7 +4,7 @@ Choose a `.cbz` or `.cbr` comic or drop it onto the converter. ZIP or RAR archiv
 
 ## Keep each comic page in its original layout
 
-The converter uses fixed-layout EPUB 3 so each image takes one page. Page files follow natural order by folder and filename, and the first image becomes the cover. Portrait pages and wide spreads keep their proportions. Compatible image files can be kept as-is. Other pages your browser can read are saved as PNG.
+The converter uses fixed-layout EPUB 3 so each image takes one page. Page files follow natural order by folder and filename, and the first image becomes the cover. Portrait pages and wide spreads keep their proportions. Compatible image files can be kept as-is. WebP, BMP, and AVIF images are saved as PNG.
 
 ## Read the EPUB comic
 

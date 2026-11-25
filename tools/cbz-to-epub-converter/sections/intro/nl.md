@@ -4,7 +4,7 @@ Kies een strip in `.cbz`- of `.cbr`-formaat of sleep het bestand naar de convert
 
 ## De oorspronkelijke indeling van strippagina’s behouden
 
-De converter gebruikt EPUB 3 met een vaste opmaak. Elke afbeelding vult één pagina. De converter sorteert de bestanden op map- en bestandsnaam in natuurlijke volgorde en gebruikt de eerste afbeelding als omslag. Staande pagina’s en brede dubbele pagina’s behouden hun verhoudingen. Compatibele afbeeldingen kunnen ongewijzigd worden overgenomen. Andere afbeeldingen die je browser kan lezen, worden opgeslagen als PNG.
+De converter gebruikt EPUB 3 met een vaste opmaak. Elke afbeelding vult één pagina. De converter sorteert de bestanden op map- en bestandsnaam in natuurlijke volgorde en gebruikt de eerste afbeelding als omslag. Staande pagina’s en brede dubbele pagina’s behouden hun verhoudingen. Compatibele afbeeldingen kunnen ongewijzigd worden overgenomen. WebP-, BMP- en AVIF-afbeeldingen worden opgeslagen als PNG.
 
 ## De EPUB-strip lezen
 

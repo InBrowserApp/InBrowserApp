@@ -4,7 +4,7 @@ Wybierz komiks w pliku `.cbz` lub `.cbr` albo przeciągnij go do konwertera. Mo�
 
 ## Zachowanie oryginalnego układu stron komiksu
 
-Konwerter tworzy plik EPUB 3 o stałym układzie, w którym każdy obraz zajmuje jedną stronę. Ustala kolejność stron według nazw folderów i plików, uwzględniając wartość liczb w nazwach. Pierwszy obraz staje się okładką. Strony pionowe i szerokie rozkładówki zachowują proporcje. Konwerter może zachować oryginalne pliki obrazów w zgodnych formatach. Pozostałe obrazy, które przeglądarka może odczytać, zapisuje jako PNG.
+Konwerter tworzy plik EPUB 3 o stałym układzie, w którym każdy obraz zajmuje jedną stronę. Ustala kolejność stron według nazw folderów i plików, uwzględniając wartość liczb w nazwach. Pierwszy obraz staje się okładką. Strony pionowe i szerokie rozkładówki zachowują proporcje. Konwerter może zachować oryginalne pliki obrazów w zgodnych formatach. Obrazy WebP, BMP i AVIF zapisuje jako PNG.
 
 ## Czytanie komiksu w EPUB
 

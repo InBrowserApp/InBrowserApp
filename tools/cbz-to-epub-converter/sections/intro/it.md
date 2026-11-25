@@ -4,7 +4,7 @@ Scegli un fumetto `.cbz` o `.cbr`, oppure trascinalo nel convertitore. Puoi usar
 
 ## Conserva l’impaginazione originale delle pagine
 
-Il convertitore usa EPUB 3 a impaginazione fissa. Ogni immagine occupa una pagina. Le immagini seguono l’ordine naturale delle cartelle e dei nomi dei file. La prima diventa la copertina. Le pagine verticali e le tavole doppie orizzontali mantengono le loro proporzioni. I file di immagine compatibili possono essere mantenuti così come sono. Le altre immagini che il browser riesce a leggere vengono salvate in PNG.
+Il convertitore usa EPUB 3 a impaginazione fissa. Ogni immagine occupa una pagina. Le immagini seguono l’ordine naturale delle cartelle e dei nomi dei file. La prima diventa la copertina. Le pagine verticali e le tavole doppie orizzontali mantengono le loro proporzioni. I file di immagine compatibili possono essere mantenuti così come sono. Le immagini WebP, BMP e AVIF vengono salvate in PNG.
 
 ## Leggi il fumetto in formato EPUB
 

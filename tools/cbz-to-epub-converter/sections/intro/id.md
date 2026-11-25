@@ -4,7 +4,7 @@ Pilih komik `.cbz` atau `.cbr` atau seret dan lepas file ke konverter. Arsip ZIP
 
 ## Mempertahankan tata letak asli halaman komik
 
-Konverter membuat EPUB 3 dengan tata letak tetap agar setiap gambar menempati satu halaman. Halaman mengikuti urutan alami berdasarkan folder dan nama file, dan gambar pertama menjadi sampul. Proporsi halaman tegak dan bentangan lebar tetap terjaga. File gambar yang kompatibel bisa dipertahankan dalam format aslinya. Gambar lain yang dapat dibaca browser disimpan sebagai PNG.
+Konverter membuat EPUB 3 dengan tata letak tetap agar setiap gambar menempati satu halaman. Halaman mengikuti urutan alami berdasarkan folder dan nama file, dan gambar pertama menjadi sampul. Proporsi halaman tegak dan bentangan lebar tetap terjaga. File gambar yang kompatibel bisa dipertahankan dalam format aslinya. Gambar WebP, BMP, dan AVIF disimpan sebagai PNG.
 
 ## Membaca komik EPUB
 

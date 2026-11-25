@@ -4,7 +4,7 @@ Choisissez une BD au format `.cbz` ou `.cbr` ou faites-la glisser sur le convert
 
 ## Conserver la mise en page d’origine de la BD
 
-Le convertisseur crée un EPUB 3 à mise en page fixe. Chaque image occupe une page entière. Les pages suivent l’ordre naturel des noms de dossiers et de fichiers, et la première image sert de couverture. Les pages verticales et les doubles pages larges gardent leurs proportions. Les fichiers image compatibles peuvent être conservés tels quels. Les autres images que votre navigateur sait lire sont enregistrées en PNG.
+Le convertisseur crée un EPUB 3 à mise en page fixe. Chaque image occupe une page entière. Les pages suivent l’ordre naturel des noms de dossiers et de fichiers, et la première image sert de couverture. Les pages verticales et les doubles pages larges gardent leurs proportions. Les fichiers image compatibles peuvent être conservés tels quels. Les images WebP, BMP et AVIF sont enregistrées en PNG.
 
 ## Lire la BD au format EPUB
 

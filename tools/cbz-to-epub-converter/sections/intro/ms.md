@@ -4,7 +4,7 @@ Pilih fail komik `.cbz` atau `.cbr`, atau seret dan lepaskan fail itu pada penuk
 
 ## Kekalkan susun atur asal setiap halaman komik
 
-Penukar menggunakan EPUB 3 dengan susun atur tetap, jadi setiap imej memenuhi satu halaman. Halaman diatur mengikut nama folder dan fail dengan mengambil kira nilai nombor, dan imej pertama menjadi kulit depan. Halaman potret dan bentangan lebar mengekalkan perkadaran asal. Fail imej yang serasi boleh disalin tanpa perubahan. Imej lain yang dapat dibaca oleh pelayar anda disimpan dalam format PNG.
+Penukar menggunakan EPUB 3 dengan susun atur tetap, jadi setiap imej memenuhi satu halaman. Halaman diatur mengikut nama folder dan fail dengan mengambil kira nilai nombor, dan imej pertama menjadi kulit depan. Halaman potret dan bentangan lebar mengekalkan perkadaran asal. Fail imej yang serasi boleh disalin tanpa perubahan. Imej WebP, BMP dan AVIF disimpan dalam format PNG.
 
 ## Baca komik dalam format EPUB
 

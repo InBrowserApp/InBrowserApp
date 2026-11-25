@@ -4,7 +4,7 @@ Wähle einen Comic im Format `.cbz` oder `.cbr` aus oder ziehe ihn auf den Konve
 
 ## Das ursprüngliche Layout der Comicseiten erhalten
 
-Der Konverter verwendet EPUB 3 mit festem Layout. Jedes Bild füllt eine Seite. Die Dateien werden nach Ordner- und Dateinamen in natürlicher Reihenfolge sortiert. Das erste Bild dient als Titelbild. Seiten im Hochformat und breite Doppelseiten behalten ihre Proportionen. Kompatible Bilddateien kann der Konverter unverändert übernehmen. Andere Bilder, die dein Browser lesen kann, speichert er als PNG.
+Der Konverter verwendet EPUB 3 mit festem Layout. Jedes Bild füllt eine Seite. Die Dateien werden nach Ordner- und Dateinamen in natürlicher Reihenfolge sortiert. Das erste Bild dient als Titelbild. Seiten im Hochformat und breite Doppelseiten behalten ihre Proportionen. Kompatible Bilddateien kann der Konverter unverändert übernehmen. WebP-, BMP- und AVIF-Bilder speichert er als PNG.
 
 ## Den EPUB-Comic lesen
 

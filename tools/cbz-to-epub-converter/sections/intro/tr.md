@@ -4,7 +4,7 @@ Bir `.cbz` veya `.cbr` dosyası seçin ya da dönüştürücüye sürükleyip b�
 
 ## Çizgi roman sayfalarının özgün düzenini koruyun
 
-Dönüştürücü sabit düzenli EPUB 3 kullanır. Her görsel bir sayfada yer alır. Sayfalar klasör ve dosya adlarına göre doğal sırayla dizilir ve ilk görsel kapak olur. Dikey sayfalar ve geniş çift sayfalar en boy oranlarını korur. Uyumlu görsel dosyaları olduğu gibi aktarılabilir. Tarayıcınızın okuyabildiği diğer görseller PNG olarak kaydedilir.
+Dönüştürücü sabit düzenli EPUB 3 kullanır. Her görsel bir sayfada yer alır. Sayfalar klasör ve dosya adlarına göre doğal sırayla dizilir ve ilk görsel kapak olur. Dikey sayfalar ve geniş çift sayfalar en boy oranlarını korur. Uyumlu görsel dosyaları olduğu gibi aktarılabilir. WebP, BMP ve AVIF görselleri PNG olarak kaydedilir.
 
 ## Çizgi romanı EPUB olarak okuyun
 

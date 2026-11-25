@@ -8,14 +8,18 @@ export type ComicEpubPage = {
   label: string
 }
 
-const extensions: Record<string, string> = {
-  "image/jpeg": "jpg",
-  "image/png": "png",
-  "image/gif": "gif",
-}
+const extensions = new Map([
+  ["image/jpeg", "jpg"],
+  ["image/png", "png"],
+  ["image/gif", "gif"],
+])
 const style =
   "body.comic-page{margin:0;background:white}body.comic-page img{display:block;width:100%;height:auto}"
 const xhtmlType = "application/xhtml+xml"
+
+export function comicImageExtension(type: string) {
+  return extensions.get(type)
+}
 
 export function writeComicEpub(
   title: string,
@@ -39,7 +43,9 @@ export function writeComicEpub(
       for await (const { image, width, height, label } of pages) {
         const id = `page-${++number}`
         const href = `${id}.xhtml`
-        const source = `images/${id}.${extensions[image.type]}`
+        const extension = comicImageExtension(image.type)
+        if (!extension) throw new Error("Unsupported EPUB image format")
+        const source = `images/${id}.${extension}`
         const { doc, head, body } = xhtml(label, language)
         head.append(
           element(doc, "meta", {

@@ -1,7 +1,10 @@
 import { openComic } from "@workspace/comic"
 import { ConversionError, conversionFailure } from "@workspace/comic/errors"
 import { decodeImage, encodeImage } from "@workspace/comic/rasterize"
-import { writeComicEpub } from "@workspace/ebook/write-comic-epub"
+import {
+  comicImageExtension,
+  writeComicEpub,
+} from "@workspace/ebook/write-comic-epub"
 import { orientation } from "exifr"
 import { extension } from "./types"
 import type { Messages, Result } from "./types"
@@ -84,12 +87,10 @@ async function prepareImage(blob: Blob) {
   const bitmap = await decodeImage(blob)
   try {
     const exif =
-      blob.type === "image/jpeg"
+      blob.type === "image/jpeg" || blob.type === "image/png"
         ? await orientation(blob).catch(() => undefined)
         : undefined
-    const compatible =
-      ["image/jpeg", "image/png", "image/gif"].includes(blob.type) &&
-      (!exif || exif === 1)
+    const compatible = comicImageExtension(blob.type) && (!exif || exif === 1)
     const image = compatible
       ? blob
       : await encodeImage(bitmap, { type: "image/png" })

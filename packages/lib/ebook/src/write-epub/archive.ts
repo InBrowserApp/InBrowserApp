@@ -36,7 +36,7 @@ export async function writePublication(
         typeof source === "string"
           ? new TextReader(source)
           : new BlobReader(source),
-        fixedLayout && source instanceof Blob ? { level: 0 } : {}
+        fixedLayout && typeof source !== "string" ? { level: 0 } : {}
       )
       items.push({ ...item, href })
     })
@@ -45,7 +45,9 @@ export async function writePublication(
       new TextReader(packageDocument(book, language, items, fixedLayout))
     )
     signal.throwIfAborted()
-    return await zip.close()
+    const epub = await zip.close()
+    signal.throwIfAborted()
+    return epub
   } catch (error) {
     await zip.close().catch(() => {})
     signal.throwIfAborted()
