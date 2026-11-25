@@ -116,6 +116,27 @@ async function updateQuery(input: HTMLInputElement, query: string) {
   )
 }
 
+it("finds a rendered localized row by its alternate Chinese title", async () => {
+  const { input, visibleSlugs } = await renderDirectory({
+    entries: [
+      ...entries,
+      {
+        slug: "qr-code-generator",
+        category: "image",
+        icon: "qr-code",
+        name: "QR Code 產生器",
+        description: "產生 QR Code。",
+        alternateName: "二维码生成器",
+      },
+    ],
+    category: null,
+    language: "zh-TW",
+  })
+
+  await updateQuery(input, "二维 码生成器")
+  expect(visibleSlugs()).toEqual(["qr-code-generator"])
+})
+
 afterEach(() => {
   cleanups.splice(0).forEach((cleanup) => cleanup())
   document.body.replaceChildren()

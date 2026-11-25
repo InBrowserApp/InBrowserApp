@@ -12,6 +12,7 @@ function readDirectoryRows(root: HTMLElement): readonly DirectoryRow[] {
         element,
         slug: element.dataset.toolRow!,
         category: element.dataset.category!,
+        alternateName: element.dataset.alternateName,
         name: element.querySelector("[data-tool-name]")!.textContent!.trim(),
         description: element
           .querySelector("[data-tool-description]")!

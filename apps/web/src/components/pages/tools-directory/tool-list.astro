@@ -17,6 +17,7 @@ const { entries, language, categoryLabels, showCategory } = Astro.props
     <a
       data-tool-row={entry.slug}
       data-category={entry.category}
+      data-alternate-name={entry.alternateName}
       data-first-visible={index === 0 ? "" : undefined}
       href={localizePath(`/tools/${entry.slug}`, language)}
       class="flex items-center gap-3.5 border-t border-border/70 px-4 py-3.5 transition-colors hover:bg-muted/50 data-first-visible:border-t-0 sm:px-4.5"

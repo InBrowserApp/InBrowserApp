@@ -449,7 +449,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./page-loaders": "./src/generated/page-loaders.ts",
-    "./search-suggestions": "./src/generated/search-suggestions.ts",
+    "./search-name": "./src/search-name.ts",
+    "./search-suggestions": "./src/search-suggestions.ts",
     "./generate": "./src/generate.ts"
   }
 }
