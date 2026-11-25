@@ -62,6 +62,8 @@ async function overviewOf(
   let best = original
   let bestSize = Math.max(original.getWidth(), original.getHeight())
   if (bestSize <= target) return best
+  let fallback: GeoTIFFImage | undefined
+  let fallbackSize = 0
   const count = await tiff.getImageCount()
   for (let index = 1; index < count; index++) {
     const candidate = await tiff.getImage(index)
@@ -82,9 +84,12 @@ async function overviewOf(
     if (size >= target && size < bestSize) {
       best = candidate
       bestSize = size
+    } else if (size < target && size > fallbackSize) {
+      fallback = candidate
+      fallbackSize = size
     }
   }
-  return best
+  return best === original ? (fallback ?? original) : best
 }
 
 export type RasterDetails = {
@@ -169,13 +174,12 @@ export async function readRaster(
   const original = await tiff.getImage()
   const details = detailsOf(original)
   const band = selected ?? (details.color ? -1 : 0)
-  const factor = Math.min(
-    1,
-    previewEdge / Math.max(details.width, details.height)
-  )
-  const width = Math.max(1, Math.round(details.width * factor))
-  const height = Math.max(1, Math.round(details.height * factor))
   const image = await overviewOf(tiff, original, previewEdge)
+  const imageWidth = image.getWidth()
+  const imageHeight = image.getHeight()
+  const factor = Math.min(1, previewEdge / Math.max(imageWidth, imageHeight))
+  const width = Math.max(1, Math.round(imageWidth * factor))
+  const height = Math.max(1, Math.round(imageHeight * factor))
   const size = { width, height, interleave: true as const }
   const photometric = photometricOf(image)
 

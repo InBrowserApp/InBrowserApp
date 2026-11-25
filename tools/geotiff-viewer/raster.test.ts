@@ -62,3 +62,17 @@ test("rejects files with no TIFF header", async () => {
     /byte order|bounds|buffer/i
   )
 })
+
+test("uses a smaller overview and keeps original raster metadata", async () => {
+  const bytes = readFileSync(
+    "tools/geotiff-viewer/fixtures/coarse-overviews.tif"
+  )
+  const image = await readRaster(new Blob([new Uint8Array(bytes)]))
+  expect(image.details).toMatchObject({
+    width: 3000,
+    height: 160,
+    crs: "EPSG:4326",
+  })
+  expect(image).toMatchObject({ width: 750, height: 40 })
+  expect(Array.from(image.pixels.slice(0, 4))).toEqual([128, 128, 128, 255])
+})
