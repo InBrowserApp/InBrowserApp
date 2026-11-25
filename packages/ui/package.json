@@ -55,6 +55,7 @@
     "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
     "./comic-reader/*": "./src/components/tool/comic-reader/*.ts",
     "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts",
-    "./mesh-converter-messages": "./src/components/tool/mesh-converter/messages.ts"
+    "./mesh-converter-messages": "./src/components/tool/mesh-converter/messages.ts",
+    "./mesh-inspector-messages": "./src/components/tool/mesh-inspector/messages.ts"
   }
 }

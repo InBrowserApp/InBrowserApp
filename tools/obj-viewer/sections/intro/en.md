@@ -14,3 +14,4 @@ For a triangular mesh exported for 3D printing, use the [STL Viewer](../stl-view
 
 - [GLB / glTF Viewer](../gltf-viewer/)
 - [OBJ to STL Converter](../obj-to-stl-converter/)
+- [Mesh Volume & Topology Checker](../mesh-inspector/)

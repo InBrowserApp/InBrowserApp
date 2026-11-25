@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "Pemeriksa Volume dan Topologi Mesh",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "Konverter MHTML ke HTML",
     slug: "mhtml-to-html-converter",

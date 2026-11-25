@@ -14,3 +14,4 @@
 
 - [عارض GLB / glTF](../gltf-viewer/)
 - [محوّل OBJ إلى STL](../obj-to-stl-converter/)
+- [فاحص حجم الشبكة وطوبولوجيتها](../mesh-inspector/)

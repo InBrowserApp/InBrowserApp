@@ -11,3 +11,5 @@ Una malla con agujeros u otros problemas geométricos puede convertirse correcta
 ## Ver el resultado o convertir en sentido contrario
 
 Usa el [Visor de STL](../stl-viewer/) para abrir el archivo descargado o el [Visor de OBJ](../obj-viewer/) para inspeccionar el original con los materiales que añadas. Usa el [Conversor de STL a OBJ](../stl-to-obj-converter/) para convertir en sentido contrario.
+
+- [Comprobador de volumen y topología de mallas](../mesh-inspector/)

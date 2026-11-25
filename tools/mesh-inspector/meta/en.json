@@ -1,0 +1,4 @@
+{
+  "name": "Mesh Volume & Topology Checker",
+  "description": "Check STL and OBJ meshes in your browser. Measure surface area and enclosed volume and find holes, non-manifold edges and inconsistent winding."
+}

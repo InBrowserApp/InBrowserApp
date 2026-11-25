@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "Kontrollera nätets volym och topologi",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "MHTML till HTML-konverterare",
     slug: "mhtml-to-html-converter",

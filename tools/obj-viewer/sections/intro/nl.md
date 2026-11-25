@@ -14,3 +14,4 @@ Gebruik de [STL-viewer](../stl-viewer/) voor een driehoeksnet dat voor 3D-printe
 
 - [GLB- en glTF-viewer](../gltf-viewer/)
 - [OBJ naar STL-converter](../obj-to-stl-converter/)
+- [Volume en topologie van 3D-netten controleren](../mesh-inspector/)

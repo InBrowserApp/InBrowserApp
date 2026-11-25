@@ -11,3 +11,5 @@ Fail boleh berjaya ditukar walaupun jejaring berlubang atau mempunyai masalah ge
 ## Lihat hasil atau tukar semula
 
 Gunakan [Pemapar STL](../stl-viewer/) untuk membuka fail yang dimuat turun atau [Pemapar OBJ](../obj-viewer/) untuk memeriksa fail asal bersama-sama bahan yang anda sertakan. Gunakan [Penukar STL kepada OBJ](../stl-to-obj-converter/) untuk menukar dalam arah bertentangan.
+
+- [Penyemak Isi Padu dan Topologi Jejaring](../mesh-inspector/)

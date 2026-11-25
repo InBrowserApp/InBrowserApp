@@ -11,3 +11,5 @@ La conversione può riuscire anche quando la mesh presenta fori o altri problemi
 ## Visualizzare il risultato o eseguire la conversione inversa
 
 Usa il [Visualizzatore STL](../stl-viewer/) per aprire il file scaricato o il [Visualizzatore OBJ](../obj-viewer/) per esaminare l’originale con gli eventuali materiali che selezioni. Usa il [Convertitore da STL a OBJ](../stl-to-obj-converter/) per la conversione inversa.
+
+- [Verifica del volume e della topologia della mesh](../mesh-inspector/)

@@ -1,0 +1,4 @@
+{
+  "name": "Verifica del volume e della topologia della mesh",
+  "description": "Controlla le mesh STL e OBJ nel browser. Calcola l’area superficiale e il volume racchiuso e individua fori, spigoli non manifold e orientamenti incoerenti."
+}

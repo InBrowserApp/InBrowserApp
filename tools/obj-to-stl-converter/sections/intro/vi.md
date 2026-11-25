@@ -11,3 +11,5 @@ Tệp có thể chuyển đổi thành công ngay cả khi lưới có lỗ hổ
 ## Xem kết quả hoặc chuyển đổi ngược lại
 
 Dùng [Trình xem STL](../stl-viewer/) để mở tệp tải xuống hoặc [Trình xem OBJ](../obj-viewer/) để kiểm tra tệp gốc cùng các vật liệu bạn cung cấp. Dùng [Trình chuyển đổi STL sang OBJ](../stl-to-obj-converter/) để chuyển theo chiều ngược lại.
+
+- [Công cụ kiểm tra thể tích và tô pô lưới](../mesh-inspector/)

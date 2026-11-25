@@ -16,3 +16,4 @@ STL 使用三角形描述零件表面。若要查看附有材質庫的 Wavefront
 
 - [3MF 檢視器](../3mf-viewer/)
 - [STL 轉 OBJ 轉換器](../stl-to-obj-converter/)
+- [網格體積與拓撲檢查器](../mesh-inspector/)

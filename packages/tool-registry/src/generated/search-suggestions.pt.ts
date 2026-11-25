@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "Verificador de volume e topologia da malha",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "Conversor de MHTML para HTML",
     slug: "mhtml-to-html-converter",

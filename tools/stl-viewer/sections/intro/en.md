@@ -16,3 +16,4 @@ STL describes the surface of a part with triangles. For a Wavefront file with a 
 
 - [3MF Viewer](../3mf-viewer/)
 - [STL to OBJ Converter](../stl-to-obj-converter/)
+- [Mesh Volume & Topology Checker](../mesh-inspector/)

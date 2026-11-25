@@ -1,0 +1,4 @@
+{
+  "name": "Ağ Hacmi ve Topoloji Denetleyici",
+  "description": "STL ve OBJ ağlarını tarayıcınızda denetleyin. Yüzey alanını ve kapalı hacmi ölçün. Delikleri, manifold olmayan kenarları ve tutarsız yüz yönlerini bulun."
+}

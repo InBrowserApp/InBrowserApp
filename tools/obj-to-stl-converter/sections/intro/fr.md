@@ -11,3 +11,5 @@ La conversion peut réussir même si le maillage présente des trous ou d’autr
 ## Afficher le résultat ou effectuer la conversion inverse
 
 Utilisez la [Visionneuse STL](../stl-viewer/) pour ouvrir le fichier téléchargé ou la [Visionneuse OBJ](../obj-viewer/) pour examiner le modèle d’origine avec les matériaux que vous fournissez. Utilisez le [Convertisseur STL en OBJ](../stl-to-obj-converter/) pour effectuer la conversion inverse.
+
+- [Vérificateur de volume et de topologie de maillage](../mesh-inspector/)

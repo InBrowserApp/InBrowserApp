@@ -1,0 +1,4 @@
+{
+  "name": "Comprobador de volumen y topología de mallas",
+  "description": "Comprueba mallas STL y OBJ en tu navegador. Calcula el área superficial y el volumen encerrado, y detecta agujeros, aristas no manifold y caras con orientación incoherente."
+}

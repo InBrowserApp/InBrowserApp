@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "मेश वॉल्यूम और टोपोलॉजी चेकर",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "MHTML से HTML कन्वर्टर",
     slug: "mhtml-to-html-converter",

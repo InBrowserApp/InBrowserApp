@@ -10,7 +10,8 @@
     "./gltf": "./src/gltf.ts",
     "./three-mf": "./src/three-mf.ts",
     "./convert": "./src/convert.ts",
-    "./mesh-file": "./src/mesh-file.ts"
+    "./mesh-file": "./src/mesh-file.ts",
+    "./inspect": "./src/inspect.ts"
   },
   "dependencies": {
     "three": "catalog:",

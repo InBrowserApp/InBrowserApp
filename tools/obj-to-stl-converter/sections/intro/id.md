@@ -11,3 +11,5 @@ Konversi bisa berhasil meskipun mesh berlubang atau memiliki masalah geometri la
 ## Lihat hasil atau konversi kembali
 
 Gunakan [Penampil STL](../stl-viewer/) untuk membuka file hasil unduhan atau [Penampil OBJ](../obj-viewer/) untuk memeriksa file asli, termasuk material yang Anda sertakan. Gunakan [Konverter STL ke OBJ](../stl-to-obj-converter/) untuk konversi ke arah sebaliknya.
+
+- [Pemeriksa Volume dan Topologi Mesh](../mesh-inspector/)

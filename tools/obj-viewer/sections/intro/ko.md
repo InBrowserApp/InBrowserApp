@@ -14,3 +14,4 @@ Wavefront OBJ 파일은 형상 정보를 저장하고 하나 이상의 `.mtl` �
 
 - [GLB / glTF 뷰어](../gltf-viewer/)
 - [OBJ → STL 변환기](../obj-to-stl-converter/)
+- [메시 부피 및 토폴로지 검사기](../mesh-inspector/)

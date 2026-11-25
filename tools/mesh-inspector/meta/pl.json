@@ -1,0 +1,4 @@
+{
+  "name": "Analiza objętości i topologii siatki",
+  "description": "Sprawdzaj siatki STL i OBJ w przeglądarce. Mierz pole powierzchni i objętość wewnątrz siatki oraz wykrywaj otwory, krawędzie non-manifold i niespójnie zorientowane ściany."
+}

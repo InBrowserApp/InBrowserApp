@@ -1,7 +1,7 @@
 import { ShapeUtils, Vector2, Vector3 } from "three"
 
 // OBJLoader uses a triangle fan, which can cover space outside a concave face.
-export function triangulateObj(source: string) {
+export function triangulateObj(source: string, meshOnly: boolean) {
   const vertices: Vector3[] = []
   return source
     .replaceAll("\r\n", "\n")
@@ -9,6 +9,7 @@ export function triangulateObj(source: string) {
     .split("\n")
     .map((line) => {
       const start = line.trimStart()
+      if (meshOnly && /^[lp]\s/.test(start)) return ""
       if (!/^[fv]\s/.test(start)) return line
       const content = start.split("#", 1)[0]!.trimEnd()
       const [kind, ...values] = content.split(/\s+/)

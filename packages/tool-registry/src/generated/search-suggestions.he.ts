@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "בודק נפח וטופולוגיה של רשת",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "ממיר MHTML ל־HTML",
     slug: "mhtml-to-html-converter",

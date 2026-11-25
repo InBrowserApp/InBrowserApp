@@ -11,3 +11,5 @@ STL 存储三角形表面。材质、纹理图像、UV 坐标以及独立的线�
 ## 预览结果或反向转换
 
 使用 [STL 查看器](../stl-viewer/)打开下载文件，或使用 [OBJ 查看器](../obj-viewer/)检查原始文件及您提供的材质。使用 [STL 转 OBJ 转换器](../stl-to-obj-converter/)进行反向转换。
+
+- [网格体积与拓扑检查器](../mesh-inspector/)

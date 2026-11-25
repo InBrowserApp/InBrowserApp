@@ -16,3 +16,4 @@ STL beschreibt die Oberfläche eines Bauteils mit Dreiecken. Für eine Wavefront
 
 - [3MF-Betrachter](../3mf-viewer/)
 - [STL-zu-OBJ-Konverter](../stl-to-obj-converter/)
+- [Netzvolumen und Topologie prüfen](../mesh-inspector/)

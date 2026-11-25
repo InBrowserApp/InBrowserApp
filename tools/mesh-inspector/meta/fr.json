@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de volume et de topologie de maillage",
+  "description": "Vérifiez des maillages STL et OBJ dans votre navigateur. Calculez l’aire de surface et le volume délimité, puis repérez les trous, les arêtes non-manifold et les orientations incohérentes."
+}

@@ -14,3 +14,4 @@ Wavefront OBJ ファイルには形状が保存され、1 つ以上の `.mtl` �
 
 - [GLB / glTF ビューアー](../gltf-viewer/)
 - [OBJ → STL 変換](../obj-to-stl-converter/)
+- [メッシュの体積・トポロジーチェッカー](../mesh-inspector/)

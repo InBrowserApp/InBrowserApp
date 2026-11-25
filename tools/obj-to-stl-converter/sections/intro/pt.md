@@ -11,3 +11,5 @@ A conversão pode ser concluída mesmo que a malha apresente furos ou outros pro
 ## Visualizar o resultado ou fazer a conversão inversa
 
 Use o [Visualizador de STL](../stl-viewer/) para abrir o arquivo baixado ou o [Visualizador de OBJ](../obj-viewer/) para inspecionar o original com os materiais fornecidos. Use o [Conversor de STL para OBJ](../stl-to-obj-converter/) para fazer a conversão inversa.
+
+- [Verificador de volume e topologia da malha](../mesh-inspector/)

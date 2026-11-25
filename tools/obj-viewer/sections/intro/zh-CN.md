@@ -14,3 +14,4 @@ Wavefront OBJ 文件存储几何数据，并可引用一个或多个 `.mtl` 材�
 
 - [GLB / glTF 查看器](../gltf-viewer/)
 - [OBJ 转 STL 转换器](../obj-to-stl-converter/)
+- [网格体积与拓扑检查器](../mesh-inspector/)

@@ -1,0 +1,4 @@
+{
+  "name": "Kontrollera nätets volym och topologi",
+  "description": "Kontrollera STL- och OBJ-nät i webbläsaren. Mät ytarea och innesluten volym och hitta hål, icke-manifoldkanter och ytor med avvikande orientering."
+}

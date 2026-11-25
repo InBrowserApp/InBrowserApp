@@ -14,3 +14,4 @@ Eşlik eden dosyalar eksik olsa da OBJ açılır. İlgili yüzeyler varsayılan 
 
 - [GLB / glTF Görüntüleyici](../gltf-viewer/)
 - [OBJ’den STL’ye Dönüştürücü](../obj-to-stl-converter/)
+- [Ağ Hacmi ve Topoloji Denetleyici](../mesh-inspector/)

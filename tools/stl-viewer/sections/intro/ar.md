@@ -16,3 +16,4 @@
 
 - [عارض 3MF](../3mf-viewer/)
 - [محوّل STL إلى OBJ](../stl-to-obj-converter/)
+- [فاحص حجم الشبكة وطوبولوجيتها](../mesh-inspector/)

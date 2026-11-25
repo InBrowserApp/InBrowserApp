@@ -30540,6 +30540,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mesh-inspector",
+    category: "image",
+    icon: "scan-line",
+    tags: [
+      "mesh",
+      "stl",
+      "obj",
+      "3d printing",
+      "volume",
+      "surface area",
+      "topology",
+      "watertight",
+      "manifold",
+    ],
+    locales: {
+      ar: {
+        name: "فاحص حجم الشبكة وطوبولوجيتها",
+        description:
+          "افحص شبكات STL وOBJ في متصفحك. قِس مساحة السطح والحجم المحصور واكتشف الثقوب والحواف غير المتشعّبية وعدم اتساق اتجاه الأوجه.",
+      },
+      de: {
+        name: "Netzvolumen und Topologie prüfen",
+        description:
+          "Prüfe STL- und OBJ-Netze im Browser. Ermittle Oberflächeninhalt und eingeschlossenes Volumen und finde Löcher, nicht mannigfaltige Kanten und uneinheitlich orientierte Flächen.",
+      },
+      en: {
+        name: "Mesh Volume & Topology Checker",
+        description:
+          "Check STL and OBJ meshes in your browser. Measure surface area and enclosed volume and find holes, non-manifold edges and inconsistent winding.",
+      },
+      es: {
+        name: "Comprobador de volumen y topología de mallas",
+        description:
+          "Comprueba mallas STL y OBJ en tu navegador. Calcula el área superficial y el volumen encerrado, y detecta agujeros, aristas no manifold y caras con orientación incoherente.",
+      },
+      fr: {
+        name: "Vérificateur de volume et de topologie de maillage",
+        description:
+          "Vérifiez des maillages STL et OBJ dans votre navigateur. Calculez l’aire de surface et le volume délimité, puis repérez les trous, les arêtes non-manifold et les orientations incohérentes.",
+      },
+      he: {
+        name: "בודק נפח וטופולוגיה של רשת",
+        description:
+          "בדקו רשתות STL ו־OBJ בדפדפן. מדדו שטח פנים ונפח תחום, ואתרו חורים, צלעות לא מניפולדיות וסדר קודקודים לא עקבי.",
+      },
+      hi: {
+        name: "मेश वॉल्यूम और टोपोलॉजी चेकर",
+        description:
+          "अपने ब्राउज़र में STL और OBJ मेश जाँचें। सतह का क्षेत्रफल और मेश के अंदर का आयतन मापें, और छेद, नॉन-मैनिफ़ोल्ड किनारे और फ़ेस के क्रम में गड़बड़ी ढूँढें।",
+      },
+      id: {
+        name: "Pemeriksa Volume dan Topologi Mesh",
+        description:
+          "Periksa mesh STL dan OBJ di browser. Ukur luas permukaan dan volume tertutup, serta temukan lubang, tepi nonmanifold, dan orientasi muka yang tidak konsisten.",
+      },
+      it: {
+        name: "Verifica del volume e della topologia della mesh",
+        description:
+          "Controlla le mesh STL e OBJ nel browser. Calcola l’area superficiale e il volume racchiuso e individua fori, spigoli non manifold e orientamenti incoerenti.",
+      },
+      ja: {
+        name: "メッシュの体積・トポロジーチェッカー",
+        description:
+          "ブラウザーで STL と OBJ のメッシュをチェックします。表面積と内部体積を測定し、穴、非多様体辺、面の頂点順序の不一致を検出します。",
+      },
+      ko: {
+        name: "메시 부피 및 토폴로지 검사기",
+        description:
+          "브라우저에서 STL과 OBJ 메시를 검사하세요. 표면적과 내부 부피를 측정하고 구멍, 비다양체 모서리, 일관되지 않은 면의 정점 순서를 찾습니다.",
+      },
+      ms: {
+        name: "Penyemak Isi Padu dan Topologi Jejaring",
+        description:
+          "Semak jejaring STL dan OBJ dalam pelayar. Ukur luas permukaan dan isi padu tertutup, serta kesan lubang, tepi bukan manifold dan orientasi muka yang tidak konsisten.",
+      },
+      nl: {
+        name: "Volume en topologie van 3D-netten controleren",
+        description:
+          "Controleer STL- en OBJ-netten in je browser. Meet de oppervlakte en het ingesloten volume en vind gaten, non-manifold randen en vlakken met een afwijkende oriëntatie.",
+      },
+      no: {
+        name: "Sjekk volum og topologi i 3D-nett",
+        description:
+          "Sjekk STL- og OBJ-nett i nettleseren. Mål overflateareal og innelukket volum og finn hull, ikke-manifolde kanter og flater med avvikende orientering.",
+      },
+      pl: {
+        name: "Analiza objętości i topologii siatki",
+        description:
+          "Sprawdzaj siatki STL i OBJ w przeglądarce. Mierz pole powierzchni i objętość wewnątrz siatki oraz wykrywaj otwory, krawędzie non-manifold i niespójnie zorientowane ściany.",
+      },
+      pt: {
+        name: "Verificador de volume e topologia da malha",
+        description:
+          "Verifique malhas STL e OBJ no navegador. Calcule a área da superfície e o volume delimitado e encontre furos, arestas não manifold e orientações inconsistentes.",
+      },
+      ru: {
+        name: "Проверка объёма и топологии сетки",
+        description:
+          "Проверяйте сетки STL и OBJ прямо в браузере. Измеряйте площадь поверхности и объём, находите отверстия, неманифолдные рёбра и несогласованную ориентацию граней.",
+      },
+      sv: {
+        name: "Kontrollera nätets volym och topologi",
+        description:
+          "Kontrollera STL- och OBJ-nät i webbläsaren. Mät ytarea och innesluten volym och hitta hål, icke-manifoldkanter och ytor med avvikande orientering.",
+      },
+      th: {
+        name: "เครื่องมือตรวจสอบปริมาตรและโทโพโลยีของเมช",
+        description:
+          "ตรวจสอบเมช STL และ OBJ ในเบราว์เซอร์ วัดพื้นที่ผิวและปริมาตรภายใน พร้อมค้นหารู ขอบที่ไม่เป็นแมนิโฟลด์ และการเรียงจุดยอดผิดทิศ",
+      },
+      tr: {
+        name: "Ağ Hacmi ve Topoloji Denetleyici",
+        description:
+          "STL ve OBJ ağlarını tarayıcınızda denetleyin. Yüzey alanını ve kapalı hacmi ölçün. Delikleri, manifold olmayan kenarları ve tutarsız yüz yönlerini bulun.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra thể tích và tô pô lưới",
+        description:
+          "Kiểm tra lưới STL và OBJ trong trình duyệt. Đo diện tích bề mặt và thể tích bao kín, tìm lỗ hổng, cạnh không đa tạp và mặt có hướng đỉnh không nhất quán.",
+      },
+      "zh-CN": {
+        name: "网格体积与拓扑检查器",
+        description:
+          "在浏览器中检查 STL 和 OBJ 网格。测量表面积和封闭体积，查找孔洞、非流形边和不一致的面绕序。",
+      },
+      "zh-TW": {
+        name: "網格體積與拓撲檢查器",
+        description:
+          "在瀏覽器中檢查 STL 和 OBJ 網格。量測表面積與封閉體積，找出孔洞、非流形邊和不一致的面繞序。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",

@@ -1,0 +1,4 @@
+{
+  "name": "Verificador de volume e topologia da malha",
+  "description": "Verifique malhas STL e OBJ no navegador. Calcule a área da superfície e o volume delimitado e encontre furos, arestas não manifold e orientações inconsistentes."
+}

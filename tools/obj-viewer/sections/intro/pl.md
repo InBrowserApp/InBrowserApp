@@ -14,3 +14,4 @@ Siatkę trójkątów wyeksportowaną do druku 3D otworzysz w [przeglądarce plik
 
 - [Przeglądarka plików GLB i glTF](../gltf-viewer/)
 - [Konwerter OBJ na STL](../obj-to-stl-converter/)
+- [Analiza objętości i topologii siatki](../mesh-inspector/)

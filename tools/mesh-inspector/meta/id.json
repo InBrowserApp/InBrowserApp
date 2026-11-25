@@ -1,0 +1,4 @@
+{
+  "name": "Pemeriksa Volume dan Topologi Mesh",
+  "description": "Periksa mesh STL dan OBJ di browser. Ukur luas permukaan dan volume tertutup, serta temukan lubang, tepi nonmanifold, dan orientasi muka yang tidak konsisten."
+}

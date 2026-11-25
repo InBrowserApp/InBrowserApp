@@ -1203,6 +1203,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "网格体积与拓扑检查器",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "MHTML 转 HTML 转换器",
     slug: "mhtml-to-html-converter",

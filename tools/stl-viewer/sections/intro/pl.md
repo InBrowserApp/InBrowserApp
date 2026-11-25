@@ -16,3 +16,4 @@ STL opisuje powierzchnię części za pomocą trójkątów. Do pliku Wavefront z
 
 - [Przeglądarka plików 3MF](../3mf-viewer/)
 - [Konwerter STL na OBJ](../stl-to-obj-converter/)
+- [Analiza objętości i topologii siatki](../mesh-inspector/)
