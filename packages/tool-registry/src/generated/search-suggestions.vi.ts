@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Tra cứu thỏa thuận Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Công cụ tính Piece CID Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },

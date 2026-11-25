@@ -1,0 +1,4 @@
+{
+  "name": "Ricerca accordi di archiviazione Filecoin",
+  "description": "Cerca un accordo di archiviazione Filecoin tramite Deal ID. Controlla stato sulla rete principale, provider e date di inizio e fine, e copia il Piece CID."
+}

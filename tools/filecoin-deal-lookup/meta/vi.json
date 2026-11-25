@@ -1,0 +1,4 @@
+{
+  "name": "Tra cứu thỏa thuận Filecoin",
+  "description": "Tra cứu thỏa thuận lưu trữ Filecoin bằng Deal ID. Xem trạng thái trên mạng chính, nhà cung cấp, ngày bắt đầu và kết thúc, rồi sao chép Piece CID."
+}

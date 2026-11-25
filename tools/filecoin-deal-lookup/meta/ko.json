@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 스토리지 거래 조회",
+  "description": "거래 ID로 Filecoin 스토리지 거래를 조회하세요. 메인넷 거래 상태, 스토리지 제공자, 시작일과 종료일을 확인하고 Piece CID를 복사할 수 있습니다."
+}

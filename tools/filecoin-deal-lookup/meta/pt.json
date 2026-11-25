@@ -1,0 +1,4 @@
+{
+  "name": "Consulta de acordos de armazenamento do Filecoin",
+  "description": "Consulte um acordo de armazenamento do Filecoin através do respetivo ID. Veja o estado na rede principal, o fornecedor e as datas de início e fim, e copie o Piece CID."
+}
