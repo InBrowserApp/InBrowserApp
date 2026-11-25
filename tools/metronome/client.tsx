@@ -124,7 +124,7 @@ export default function Metronome({
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_20rem]">
       <div className="flex flex-col items-center justify-center gap-5 rounded-xl border bg-card p-4 sm:p-6">
         <div className="flex w-full max-w-md flex-col items-center gap-3">
           <label htmlFor="metronome-tempo" className="text-sm font-medium">
@@ -198,7 +198,12 @@ export default function Metronome({
           ))}
         </div>
         <div className="grid w-full max-w-md grid-cols-2 gap-2">
-          <Button type="button" size="lg" onClick={() => void togglePlayback()}>
+          <Button
+            type="button"
+            size="lg"
+            className="h-auto min-h-10 whitespace-normal"
+            onClick={() => void togglePlayback()}
+          >
             {playing ? <Square /> : <Play />}
             {playing ? m.stop : m.start}
           </Button>
