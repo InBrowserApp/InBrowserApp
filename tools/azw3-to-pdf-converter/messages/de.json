@@ -1,0 +1,10 @@
+{
+  "open": "AZW3-Buch öffnen",
+  "replace": "Buch ersetzen",
+  "drop": "AZW3-Buch hier ablegen",
+  "unsupported": "Wähle ein lokales AZW3-Buch.",
+  "invalid": "Dieses Buch ist möglicherweise beschädigt oder unvollständig. Wähle eine andere Kopie.",
+  "protected": "Dieses Buch ist verschlüsselt oder kopiergeschützt. Wähle eine unverschlüsselte Kopie.",
+  "unsupportedVariant": "Dieses Buchformat oder diese Komprimierungsvariante wird nicht unterstützt.",
+  "unsupportedLayout": "Dieses Buch verwendet ein festes oder gemischtes Seitenlayout, das nicht zuverlässig exportiert werden kann. Wähle ein Buch mit anpassbarem Textfluss."
+}

@@ -1,0 +1,10 @@
+{
+  "open": "Öppna AZW3-bok",
+  "replace": "Byt bok",
+  "drop": "Släpp en AZW3-bok här",
+  "unsupported": "Välj en AZW3-bok på din enhet.",
+  "invalid": "Boken kan vara skadad eller ofullständig. Välj ett annat exemplar.",
+  "protected": "Boken är krypterad eller kopieringsskyddad. Välj ett okrypterat exemplar.",
+  "unsupportedVariant": "Det här bokformatet eller den här komprimeringsvarianten stöds inte.",
+  "unsupportedLayout": "Boken använder en fast eller blandad sidlayout som inte kan exporteras tillförlitligt. Välj en bok med flödande layout."
+}

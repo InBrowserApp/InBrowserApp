@@ -1,0 +1,10 @@
+{
+  "open": "Otwórz książkę AZW3",
+  "replace": "Zastąp książkę",
+  "drop": "Upuść tutaj plik .azw3",
+  "unsupported": "Wybierz lokalny plik .azw3.",
+  "invalid": "Ta książka może być uszkodzona lub niekompletna. Wybierz inny egzemplarz pliku.",
+  "protected": "Ta książka jest zaszyfrowana lub zabezpieczona przed kopiowaniem. Wybierz niezaszyfrowany egzemplarz.",
+  "unsupportedVariant": "Ten format książki lub wariant kompresji nie jest obsługiwany.",
+  "unsupportedLayout": "Ta książka ma stały lub mieszany układ stron, którego nie można poprawnie wyeksportować. Wybierz książkę z układem dostosowującym się do ekranu."
+}

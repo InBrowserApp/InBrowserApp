@@ -1,0 +1,10 @@
+{
+  "open": "開啟 AZW3 書籍",
+  "replace": "更換書籍",
+  "drop": "將 AZW3 書籍拖放到這裡",
+  "unsupported": "請選擇本機的 AZW3 書籍。",
+  "invalid": "此書籍可能已損毀或不完整。請選擇另一份檔案。",
+  "protected": "此書籍已加密或受複製保護。請選擇未加密的檔案。",
+  "unsupportedVariant": "不支援此書籍格式或壓縮變體。",
+  "unsupportedLayout": "此書籍使用固定或混合頁面版面，無法可靠地匯出。請選擇可重排版面的書籍。"
+}
