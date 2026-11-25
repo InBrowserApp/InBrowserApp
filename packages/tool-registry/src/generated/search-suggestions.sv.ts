@@ -464,6 +464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Test av döda pixlar",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "Enhetsinformation",
     slug: "device-information",
   },

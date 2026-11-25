@@ -464,6 +464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Проверка экрана на битые пиксели",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "Информация об устройстве",
     slug: "device-information",
   },

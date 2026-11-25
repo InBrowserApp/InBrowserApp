@@ -11818,6 +11818,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dead-pixel-test",
+    category: "misc",
+    icon: "monitor",
+    tags: ["screen", "monitor", "display", "dead pixel", "stuck pixel", "test"],
+    locales: {
+      ar: {
+        name: "اختبار البكسلات الميتة",
+        description:
+          "افحص شاشتك بحثًا عن بكسلات ميتة أو نقاط مضيئة أو بكسلات فرعية عالقة باستخدام ألوان اختبار تملأ الشاشة بالأبيض والأسود والأحمر والأخضر والأزرق.",
+      },
+      de: {
+        name: "Pixelfehler-Test",
+        description:
+          "Prüfe deinen Bildschirm mit weißen, schwarzen, roten, grünen und blauen Vollbildern auf tote Pixel, helle Punkte und festhängende Subpixel.",
+      },
+      en: {
+        name: "Dead Pixel Test",
+        description:
+          "Check your screen for dead pixels, bright spots, and stuck subpixels with fullscreen white, black, red, green, and blue test patterns.",
+      },
+      es: {
+        name: "Prueba de píxeles muertos",
+        description:
+          "Comprueba si tu pantalla tiene píxeles muertos, puntos brillantes o subpíxeles atascados con fondos blancos, negros, rojos, verdes y azules a pantalla completa.",
+      },
+      fr: {
+        name: "Test de pixels morts",
+        description:
+          "Repérez les pixels morts, les points lumineux et les sous-pixels bloqués sur cinq fonds unis en plein écran, en blanc, noir, rouge, vert et bleu.",
+      },
+      he: {
+        name: "בדיקת פיקסלים מתים",
+        description:
+          "בדקו אם במסך יש פיקסלים מתים, נקודות בהירות או תת־פיקסלים תקועים, באמצעות צבעי בדיקה במסך מלא בלבן, בשחור, באדום, בירוק ובכחול.",
+      },
+      hi: {
+        name: "डेड पिक्सेल टेस्ट",
+        description:
+          "सफ़ेद, काले, लाल, हरे और नीले फ़ुलस्क्रीन पैटर्न की मदद से स्क्रीन पर डेड पिक्सेल, चमकीले बिंदु और अटके हुए सबपिक्सेल खोजें।",
+      },
+      id: {
+        name: "Tes Piksel Mati",
+        description:
+          "Periksa piksel mati, titik terang, dan subpiksel macet pada layar dengan pola putih, hitam, merah, hijau, dan biru dalam layar penuh.",
+      },
+      it: {
+        name: "Test dei pixel difettosi",
+        description:
+          "Individua pixel morti, punti luminosi e subpixel bloccati con cinque sfondi a schermo intero in bianco, nero, rosso, verde e blu.",
+      },
+      ja: {
+        name: "ドット抜けテスト",
+        description:
+          "白・黒・赤・緑・青の単色を全画面に表示し、画面のドット抜け、輝点、点灯し続けるサブピクセルをチェックできます。",
+      },
+      ko: {
+        name: "불량 화소 테스트",
+        description:
+          "흰색, 검은색, 빨간색, 초록색, 파란색을 전체 화면에 띄워 꺼진 화소, 밝은 점, 특정 색에 고정된 서브픽셀을 확인하세요.",
+      },
+      ms: {
+        name: "Ujian Piksel Mati",
+        description:
+          "Semak piksel mati, titik terang dan subpiksel tersekat pada skrin dengan corak putih, hitam, merah, hijau dan biru dalam skrin penuh.",
+      },
+      nl: {
+        name: "Test op dode pixels",
+        description:
+          "Controleer je scherm op dode pixels, heldere puntjes en vastzittende subpixels met wit, zwart, rood, groen en blauw op volledig scherm.",
+      },
+      no: {
+        name: "Test av døde piksler",
+        description:
+          "Sjekk skjermen for døde piksler, lyse punkter og fastlåste subpiksler med hvite, svarte, røde, grønne og blå testbilder i fullskjerm.",
+      },
+      pl: {
+        name: "Test martwych pikseli",
+        description:
+          "Sprawdź ekran pod kątem martwych pikseli, jasnych punktów i zablokowanych subpikseli na białym, czarnym, czerwonym, zielonym i niebieskim tle wyświetlanym na pełnym ekranie.",
+      },
+      pt: {
+        name: "Teste de píxeis mortos",
+        description:
+          "Procure píxeis mortos, pontos brilhantes e subpíxeis bloqueados no ecrã com fundos branco, preto, vermelho, verde e azul em ecrã inteiro.",
+      },
+      ru: {
+        name: "Проверка экрана на битые пиксели",
+        description:
+          "Проверьте экран на битые пиксели, светлые точки и застрявшие субпиксели на белой, чёрной, красной, зелёной и синей полноэкранных заливках.",
+      },
+      sv: {
+        name: "Test av döda pixlar",
+        description:
+          "Kontrollera skärmen efter döda pixlar, ljusa punkter och subpixlar som fastnat med vita, svarta, röda, gröna och blå testbilder i helskärm.",
+      },
+      th: {
+        name: "ทดสอบพิกเซลเสีย",
+        description:
+          "ตรวจหาพิกเซลเสีย จุดสว่าง และซับพิกเซลที่ค้างบนหน้าจอด้วยภาพสีขาว ดำ แดง เขียว และน้ำเงินแบบเต็มหน้าจอ",
+      },
+      tr: {
+        name: "Ölü Piksel Testi",
+        description:
+          "Ekranınızı tam ekran beyaz, siyah, kırmızı, yeşil ve mavi desenlerle ölü piksel, parlak nokta ve takılı alt piksel açısından kontrol edin.",
+      },
+      vi: {
+        name: "Kiểm tra điểm chết màn hình",
+        description:
+          "Kiểm tra điểm ảnh chết, đốm sáng và điểm ảnh phụ bị kẹt bằng các mẫu màu toàn màn hình trắng, đen, đỏ, xanh lá và xanh dương.",
+      },
+      "zh-CN": {
+        name: "屏幕坏点测试",
+        description:
+          "通过白、黑、红、绿、蓝全屏测试画面，检查屏幕上的坏点、亮点和卡住的子像素。",
+      },
+      "zh-TW": {
+        name: "螢幕壞點測試",
+        description:
+          "使用白、黑、紅、綠、藍全螢幕測試畫面，檢查螢幕上的壞點、亮點和卡住的子像素。",
+      },
+    },
+  },
+  {
     slug: "device-information",
     category: "misc",
     icon: "wrench",

@@ -1,0 +1,16 @@
+{
+  "testColors": "Testfarben",
+  "white": "Weiß",
+  "black": "Schwarz",
+  "red": "Rot",
+  "green": "Grün",
+  "blue": "Blau",
+  "fullscreen": "Vollbildtest starten",
+  "fullscreenLabel": "Pixelfehler-Test im Vollbild",
+  "exit": "Vollbild verlassen",
+  "previous": "Vorherige Farbe",
+  "next": "Nächste Farbe",
+  "hideControls": "Bedienelemente ausblenden",
+  "showControls": "Bedienelemente einblenden",
+  "controlsHelp": "Klicke oder tippe auf die Testfläche, um zur nächsten Farbe zu wechseln. Nutze die Pfeiltasten zum Farbwechsel und Esc zum Beenden."
+}

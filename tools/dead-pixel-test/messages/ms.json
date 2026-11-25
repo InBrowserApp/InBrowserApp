@@ -1,0 +1,16 @@
+{
+  "testColors": "Warna ujian",
+  "white": "Putih",
+  "black": "Hitam",
+  "red": "Merah",
+  "green": "Hijau",
+  "blue": "Biru",
+  "fullscreen": "Mulakan ujian skrin penuh",
+  "fullscreenLabel": "Ujian piksel mati dalam skrin penuh",
+  "exit": "Keluar daripada skrin penuh",
+  "previous": "Warna sebelumnya",
+  "next": "Warna seterusnya",
+  "hideControls": "Sembunyikan kawalan",
+  "showControls": "Tunjukkan kawalan",
+  "controlsHelp": "Klik atau ketik kawasan warna untuk ke warna seterusnya. Gunakan kekunci anak panah untuk menukar warna dan Esc untuk keluar."
+}

@@ -464,6 +464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Kiểm tra điểm chết màn hình",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "Thông tin thiết bị",
     slug: "device-information",
   },

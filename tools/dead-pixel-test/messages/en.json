@@ -1,0 +1,16 @@
+{
+  "testColors": "Test colors",
+  "white": "White",
+  "black": "Black",
+  "red": "Red",
+  "green": "Green",
+  "blue": "Blue",
+  "fullscreen": "Start fullscreen test",
+  "fullscreenLabel": "Fullscreen dead pixel test",
+  "exit": "Exit fullscreen",
+  "previous": "Previous color",
+  "next": "Next color",
+  "hideControls": "Hide controls",
+  "showControls": "Show controls",
+  "controlsHelp": "Click or tap the test color to advance. Use the arrow keys to switch colors and Esc to exit."
+}

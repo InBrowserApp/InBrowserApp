@@ -1,0 +1,16 @@
+{
+  "testColors": "Màu kiểm tra",
+  "white": "Trắng",
+  "black": "Đen",
+  "red": "Đỏ",
+  "green": "Xanh lá",
+  "blue": "Xanh dương",
+  "fullscreen": "Kiểm tra toàn màn hình",
+  "fullscreenLabel": "Kiểm tra điểm chết ở chế độ toàn màn hình",
+  "exit": "Thoát toàn màn hình",
+  "previous": "Màu trước",
+  "next": "Màu tiếp theo",
+  "hideControls": "Ẩn nút điều khiển",
+  "showControls": "Hiện nút điều khiển",
+  "controlsHelp": "Nhấp hoặc chạm vào vùng màu để chuyển sang màu tiếp theo. Dùng phím mũi tên để đổi màu và Esc để thoát."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Test dei pixel difettosi",
+  "description": "Individua pixel morti, punti luminosi e subpixel bloccati con cinque sfondi a schermo intero in bianco, nero, rosso, verde e blu."
+}

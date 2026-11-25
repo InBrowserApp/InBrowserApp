@@ -117,6 +117,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),
   "date-age-calculator": () => import("@tool/date-age-calculator/page"),
+  "dead-pixel-test": () => import("@tool/dead-pixel-test/page"),
   "device-information": () => import("@tool/device-information/page"),
   "dicom-viewer": () => import("@tool/dicom-viewer/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),

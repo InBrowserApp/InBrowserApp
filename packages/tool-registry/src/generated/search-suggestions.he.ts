@@ -464,6 +464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "בדיקת פיקסלים מתים",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "מידע על המכשיר",
     slug: "device-information",
   },

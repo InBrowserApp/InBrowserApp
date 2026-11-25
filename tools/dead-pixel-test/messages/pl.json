@@ -1,0 +1,16 @@
+{
+  "testColors": "Kolory testowe",
+  "white": "Biały",
+  "black": "Czarny",
+  "red": "Czerwony",
+  "green": "Zielony",
+  "blue": "Niebieski",
+  "fullscreen": "Rozpocznij test na pełnym ekranie",
+  "fullscreenLabel": "Pełnoekranowy test martwych pikseli",
+  "exit": "Zamknij tryb pełnoekranowy",
+  "previous": "Poprzedni kolor",
+  "next": "Następny kolor",
+  "hideControls": "Ukryj elementy sterujące",
+  "showControls": "Pokaż elementy sterujące",
+  "controlsHelp": "Kliknij lub dotknij koloru, aby przejść dalej. Używaj klawiszy strzałek, aby zmieniać kolory, a klawisza Esc, aby wyjść."
+}

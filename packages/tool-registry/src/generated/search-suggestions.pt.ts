@@ -464,6 +464,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Teste de píxeis mortos",
+    slug: "dead-pixel-test",
+  },
+  {
+    category: "misc",
     name: "Informações do Dispositivo",
     slug: "device-information",
   },

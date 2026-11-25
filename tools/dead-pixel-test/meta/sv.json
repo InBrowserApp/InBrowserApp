@@ -1,0 +1,4 @@
+{
+  "name": "Test av döda pixlar",
+  "description": "Kontrollera skärmen efter döda pixlar, ljusa punkter och subpixlar som fastnat med vita, svarta, röda, gröna och blå testbilder i helskärm."
+}

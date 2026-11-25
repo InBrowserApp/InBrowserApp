@@ -1,0 +1,16 @@
+{
+  "testColors": "Colori di prova",
+  "white": "Bianco",
+  "black": "Nero",
+  "red": "Rosso",
+  "green": "Verde",
+  "blue": "Blu",
+  "fullscreen": "Avvia test a schermo intero",
+  "fullscreenLabel": "Test dei pixel difettosi a schermo intero",
+  "exit": "Esci da schermo intero",
+  "previous": "Colore precedente",
+  "next": "Colore successivo",
+  "hideControls": "Nascondi i comandi",
+  "showControls": "Mostra i comandi",
+  "controlsHelp": "Fai clic o tocca il colore per passare al successivo. Usa i tasti freccia per cambiare colore ed Esc per uscire."
+}
