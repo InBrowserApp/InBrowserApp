@@ -728,6 +728,9 @@ catalogs:
     '@types/parse-torrent':
       specifier: 11.0.1
       version: 11.0.1
+    '@types/pdfkit':
+      specifier: 0.17.7
+      version: 0.17.7
     '@types/punycode':
       specifier: ^2.1.4
       version: 2.1.4
@@ -746,6 +749,9 @@ catalogs:
     '@types/sql.js':
       specifier: 1.4.11
       version: 1.4.11
+    '@types/svg-to-pdfkit':
+      specifier: 0.1.5
+      version: 0.1.5
     '@types/terraformer__wkt':
       specifier: ^2.0.3
       version: 2.0.3
@@ -1064,6 +1070,9 @@ catalogs:
     pdfjs-dist:
       specifier: ^6.5.438
       version: 6.5.438
+    pdfkit:
+      specifier: 0.21.0
+      version: 0.21.0
     pinyin-pro:
       specifier: 3.29.5
       version: 3.29.5
@@ -1148,6 +1157,9 @@ catalogs:
     svelte:
       specifier: ^5.57.3
       version: 5.57.3
+    svg-to-pdfkit:
+      specifier: 0.1.8
+      version: 0.1.8
     svg2pdf.js:
       specifier: ^2.9.0
       version: 2.9.0
@@ -1261,6 +1273,7 @@ patchedDependencies:
   pst-extractor@1.12.0: ee34e8a5a1d302df017bcf193c98d8fc0315ecae3f0781bb5118ac2dcda4fe52
   rork-plist@0.7.0: 17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
+  svg-to-pdfkit@0.1.8: fde2592c0a5c95d5aabe64c24348330175141cca29e89ca97e5368967e34000d
   xlsx@0.20.3: d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79
 
 importers:
@@ -8758,15 +8771,15 @@ importers:
 
   tools/hwp-to-pdf-converter:
     dependencies:
-      '@resvg/resvg-wasm':
-        specifier: 'catalog:'
-        version: 2.6.2
       '@rhwp/core':
         specifier: 'catalog:'
         version: 0.9.0(patch_hash=38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6)
       '@workspace/hwp':
         specifier: workspace:*
         version: link:../../packages/lib/hwp
+      '@workspace/libreoffice':
+        specifier: workspace:*
+        version: link:../../packages/lib/libreoffice
       '@workspace/pdf-reader':
         specifier: workspace:*
         version: link:../../packages/lib/pdf-reader
@@ -8785,9 +8798,9 @@ importers:
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
-      pdf-lib:
+      pdfkit:
         specifier: 'catalog:'
-        version: 1.17.1
+        version: 0.21.0
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8797,10 +8810,22 @@ importers:
       saxes:
         specifier: 'catalog:'
         version: 6.0.0
+      svg-to-pdfkit:
+        specifier: 'catalog:'
+        version: 0.1.8(patch_hash=fde2592c0a5c95d5aabe64c24348330175141cca29e89ca97e5368967e34000d)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@types/pdfkit':
+        specifier: 'catalog:'
+        version: 0.17.7
+      '@types/svg-to-pdfkit':
+        specifier: 'catalog:'
+        version: 0.1.5
+      pdfjs-dist:
+        specifier: 'catalog:'
+        version: 6.5.438
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -18955,6 +18980,10 @@ packages:
       '@emnapi/core': ^1.7.1 || 2.0.0-beta.2 || 2.0.0-beta.3
       '@emnapi/runtime': ^1.7.1 || 2.0.0-beta.2 || 2.0.0-beta.3
 
+  '@noble/ciphers@2.4.0':
+    resolution: {integrity: sha512-AnjFn0Jv92laAkvMrghlFZq4qQCIN/4DxFV/eooqtC2YTjB7kBeLMS2T9KJX4Dn+ZVXLOwK0lSgqDtx9gvxtiw==}
+    engines: {node: '>= 20.19.0'}
+
   '@noble/ed25519@3.2.0':
     resolution: {integrity: sha512-criDgRlnUA09hchYrTy/JUWPIEap5rZxQe6wDWzRx51oWWpDRcUpuNzlgPxDJaOK6AsW9c0wKcj3rKRv6t+bPQ==}
 
@@ -21398,6 +21427,9 @@ packages:
   '@types/parse-torrent@11.0.1':
     resolution: {integrity: sha512-rzk5O1sk/Fbu8grskEEbFb0FZyDdVIkreRs2br90Y5BNcExSAEeRJftqxvyniJcJzI1xRK4fWxS0PJfxVvVRVQ==}
 
+  '@types/pdfkit@0.17.7':
+    resolution: {integrity: sha512-VMOZDWw7HtNtLbjIuHIhVArm9PlV0gxpz32jAl1IuXWlIgbr1lKFoTsrtvEzY8a9BIpQJEE5DwNPKD50otTs6g==}
+
   '@types/punycode@2.1.4':
     resolution: {integrity: sha512-trzh6NzBnq8yw5e35f8xe8VTYjqM3NE7bohBtvDVf/dtUer3zYTLK1Ka3DG3p7bdtoaOHZucma6FfVKlQ134pQ==}
 
@@ -21432,6 +21464,9 @@ packages:
 
   '@types/stream-buffers@3.0.8':
     resolution: {integrity: sha512-J+7VaHKNvlNPJPEJXX/fKa9DZtR/xPMwuIbe+yNOwp1YB+ApUOBv2aUpEoBJEi8nJgbgs1x8e73ttg0r1rSUdw==}
+
+  '@types/svg-to-pdfkit@0.1.5':
+    resolution: {integrity: sha512-CcA8PIJ7BxqgT0fBeWBXkz7cdUTvSP+32+Gp1+3iCQdKtrh/1DzmxSpx7RqJZ95wkeyvMXcw5M8iPq6Rv+S8rQ==}
 
   '@types/terraformer__wkt@2.0.3':
     resolution: {integrity: sha512-60CGvi30kMIKl2QERrE6LD5iPm4lutZ1M/mqBY4wrn6H/QlZQa/5CN1e6trZ6ZtSRHLbHLwG+egt/nAIDbPG0A==}
@@ -22001,6 +22036,9 @@ packages:
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
+
+  brotli@2.1.0:
+    resolution: {integrity: sha512-4KAtOr4Z3jaIQlXy9AeuaVz1vPWTyZ6eiQYu4SsSz6VcUsV6Epz6kA3Vf7eTGTaspaqlnQLBqvkozKP5WyQMZQ==}
 
   browserslist@4.29.5:
     resolution: {integrity: sha512-khTmKu5NGYTotqcYo8Bew2k4RAE9PuXRSFRXG2lQBrCEQHyeQ/vX6gKMxfokwywBsLiXZMnHsmWMG1pnO8J7uQ==}
@@ -22733,6 +22771,9 @@ packages:
   devtools-protocol@0.0.1727723:
     resolution: {integrity: sha512-laxmpDN+zItbpy5klVbHqBsZ38O2rC6VwI9W5daM11Pc3Dj2gruc2wwnHW48CB8wYiWHALDkA6vRg92U2cfdLA==}
 
+  dfa@2.0.0:
+    resolution: {integrity: sha512-4Z/ig4JY/6CyXaPvkjuJu7q5+6SikugixA/1wf/52A9Z+WOJr8NFKd60pv6KCwsdVdDmCCE3JrGwPFYxNcw8xw==}
+
   diagram-js-direct-editing@3.6.0:
     resolution: {integrity: sha512-zaXChbFqLccq+rji1fnKD9dL90kO7XLJoaENMVqFOxslax8QD7eumwBBpLYS36br7zva9R4bz3YTu0ey3mbHAA==}
     peerDependencies:
@@ -23129,6 +23170,9 @@ packages:
 
   fontace@0.4.1:
     resolution: {integrity: sha512-lDMvbAzSnHmbYMTEld5qdtvNH2/pWpICOqpean9IgC7vUbUJc3k+k5Dokp85CegamqQpFbXf0rAVkbzpyTA8aw==}
+
+  fontkit@3.0.0:
+    resolution: {integrity: sha512-sjSkmtEw6RYJcvEbd+LHHLp2HFDaXdAia2RTbaGcBu/5QaDhxz35249eH9G07E0PzrtlkPF9FYXHF6YXxcAa1w==}
 
   fontkitten@1.0.3:
     resolution: {integrity: sha512-Wp1zXWPVUPBmfoa3Cqc9ctaKuzKAV6uLstRqlR56kSjplf5uAce+qeyYym7F+PHbGTk+tCEdkCW6RD7DX/gBZw==}
@@ -24009,6 +24053,9 @@ packages:
   limiter@1.1.5:
     resolution: {integrity: sha512-FWWMIEOxz3GwUI4Ts/IvgVy6LPvoMPgjMdQ185nN6psJyBJ4yOpzqm695/h5umdLJg2vW3GR5iG11MAkR2AzJA==}
 
+  linebreak@2.0.0:
+    resolution: {integrity: sha512-QG56WhCZhziLQNfXGGNHiwQFBQLkRyd9L8xCPNiTON5p6Kw6ZT+zcN+4+cg3UB7QyGZCoFTR8vkG5NYeeriohQ==}
+
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
@@ -24768,6 +24815,9 @@ packages:
     resolution: {integrity: sha512-vg8Pw1x+AFKy4AMDvhuWl5cOYV8d698UoEANoFFhc79hqXDnZQqnOXoxw3HG907WHOg1JYOvLhP756boddFxpA==}
     engines: {node: '>=22.13.0 || >=24'}
 
+  pdfkit@0.21.0:
+    resolution: {integrity: sha512-AMqXGfsLVac+x/OwXY7cGcRMbztphIYm1MZ4kIerVUKU9fja6pA2pxOm2bwKisutu7Gg/4YT2thz2OrNNFYmzg==}
+
   performance-now@2.1.0:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
 
@@ -24801,6 +24851,10 @@ packages:
   pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
+
+  png-js@3.0.0:
+    resolution: {integrity: sha512-4cXXV2NPgaYdSpa/HrA3bdB9/eJrJppUW2kCYpQkmWOY9/J0B2tKa0EsDymImaDZidoV7hnp8Qx6W6vqodDXwg==}
+    engines: {node: '>=18'}
 
   pngjs@5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
@@ -25166,6 +25220,9 @@ packages:
   restore-cursor@5.1.0:
     resolution: {integrity: sha512-oMA2dcrw6u0YfxJQXm342bFKX/E4sG9rbTzO9ptUcR/e8A33cHuvStiYOwH7fszkZlZ1z/ta9AAoPk2F4qIOHA==}
     engines: {node: '>=18'}
+
+  restructure@3.0.2:
+    resolution: {integrity: sha512-gSfoiOEA0VPE6Tukkrr7I0RBdE0s7H1eFCDBk05l1KIQT1UIKNc5JZy6jdyW6eYH3aR3g5b3PuL77rq0hvwtAw==}
 
   ret@0.1.15:
     resolution: {integrity: sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==}
@@ -25571,6 +25628,9 @@ packages:
     resolution: {integrity: sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==}
     engines: {node: '>=12.0.0'}
 
+  svg-to-pdfkit@0.1.8:
+    resolution: {integrity: sha512-QItiGZBy5TstGy+q8mjQTMGRlDDOARXLxH+sgVm1n/LYeo0zFcQlcCh8m4zi8QxctrxB9Kue/lStc/RD5iLadQ==}
+
   svg2pdf.js@2.9.0:
     resolution: {integrity: sha512-rjxgZ4k4JlgPqAvdBPFU+GMUVIEJm7AeSGAFysKUrmbF2FhKw2pdhgcwb8CinA3Gc8o84aQMpQsGeMNzqA1YyQ==}
     peerDependencies:
@@ -25924,6 +25984,13 @@ packages:
 
   unenv@2.0.0-rc.24:
     resolution: {integrity: sha512-i7qRCmY42zmCwnYlh9H2SvLEypEFGye5iRmEMKjcGi7zk9UquigRjFtTLz0TYqr0ZGLZhaMHl/foy1bZR+Cwlw==}
+
+  unicode-properties@2.0.2:
+    resolution: {integrity: sha512-7MWOxBC6aT/+xeMKjdnp3GEuAMLmu0uRGD3jAN3PrGnjKynnellVkvQ6OYdeSIBwSdo67+zvgs1//7Qenb9iSA==}
+
+  unicode-trie@3.0.0:
+    resolution: {integrity: sha512-Cy+7EIpopVQ7ZCVZ8dFo1fmTk1lHMNxY62SeEhxsVEmISZEryEGgKSLzz6z6pquJXXopamfpi2AzsDCJ7KmAOA==}
+    engines: {node: '>=20.17.0'}
 
   unicorn-magic@0.3.0:
     resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
@@ -28194,6 +28261,8 @@ snapshots:
       '@tybys/wasm-util': 0.10.4
     optional: true
 
+  '@noble/ciphers@2.4.0': {}
+
   '@noble/ed25519@3.2.0': {}
 
   '@noble/hashes@1.8.0': {}
@@ -30296,6 +30365,10 @@ snapshots:
       '@types/magnet-uri': 7.0.0
       '@types/node': 26.6.6
 
+  '@types/pdfkit@0.17.7':
+    dependencies:
+      '@types/node': 26.6.6
+
   '@types/punycode@2.1.4': {}
 
   '@types/qrcode@1.5.6':
@@ -30336,6 +30409,10 @@ snapshots:
   '@types/stream-buffers@3.0.8':
     dependencies:
       '@types/node': 26.6.6
+
+  '@types/svg-to-pdfkit@0.1.5':
+    dependencies:
+      '@types/pdfkit': 0.17.7
 
   '@types/terraformer__wkt@2.0.3':
     dependencies:
@@ -31014,6 +31091,10 @@ snapshots:
   braces@3.0.3:
     dependencies:
       fill-range: 7.1.1
+
+  brotli@2.1.0:
+    dependencies:
+      base64-js: 1.5.1
 
   browserslist@4.29.5:
     dependencies:
@@ -31772,6 +31853,8 @@ snapshots:
 
   devtools-protocol@0.0.1727723: {}
 
+  dfa@2.0.0: {}
+
   diagram-js-direct-editing@3.6.0(diagram-js@15.30.1):
     dependencies:
       diagram-js: 15.30.1
@@ -32238,6 +32321,15 @@ snapshots:
   fontace@0.4.1:
     dependencies:
       fontkitten: 1.0.3
+
+  fontkit@3.0.0:
+    dependencies:
+      brotli: 2.1.0
+      dfa: 2.0.0
+      fflate: 0.8.3
+      restructure: 3.0.2
+      unicode-properties: 2.0.2
+      unicode-trie: 3.0.0
 
   fontkitten@1.0.3:
     dependencies:
@@ -33163,6 +33255,10 @@ snapshots:
 
   limiter@1.1.5: {}
 
+  linebreak@2.0.0:
+    dependencies:
+      unicode-trie: 3.0.0
+
   lines-and-columns@1.2.4: {}
 
   lint-staged@17.6.1:
@@ -33977,6 +34073,15 @@ snapshots:
     optionalDependencies:
       '@napi-rs/canvas': 1.1.1
 
+  pdfkit@0.21.0:
+    dependencies:
+      '@noble/ciphers': 2.4.0
+      '@noble/hashes': 2.4.0
+      fflate: 0.8.3
+      fontkit: 3.0.0
+      linebreak: 2.0.0
+      png-js: 3.0.0
+
   performance-now@2.1.0:
     optional: true
 
@@ -33999,6 +34104,10 @@ snapshots:
   platform@1.3.6: {}
 
   pluralize@8.0.0: {}
+
+  png-js@3.0.0:
+    dependencies:
+      fflate: 0.8.3
 
   pngjs@5.0.0: {}
 
@@ -34446,6 +34555,8 @@ snapshots:
     dependencies:
       onetime: 7.0.0
       signal-exit: 4.1.0
+
+  restructure@3.0.2: {}
 
   ret@0.1.15: {}
 
@@ -34994,6 +35105,10 @@ snapshots:
   svg-pathdata@6.0.3:
     optional: true
 
+  svg-to-pdfkit@0.1.8(patch_hash=fde2592c0a5c95d5aabe64c24348330175141cca29e89ca97e5368967e34000d):
+    dependencies:
+      pdfkit: 0.21.0
+
   svg2pdf.js@2.9.0(jspdf@4.2.1):
     dependencies:
       cssesc: 3.0.0
@@ -35332,6 +35447,14 @@ snapshots:
   unenv@2.0.0-rc.24:
     dependencies:
       pathe: 2.0.3
+
+  unicode-properties@2.0.2:
+    dependencies:
+      unicode-trie: 3.0.0
+
+  unicode-trie@3.0.0:
+    dependencies:
+      fflate: 0.8.3
 
   unicorn-magic@0.3.0: {}
 

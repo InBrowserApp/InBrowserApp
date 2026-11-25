@@ -1,6 +1,6 @@
 ## Om Konverterare från HWP / HWPX till PDF
 
-Öppna ett HWP 5- eller HWPX-dokument för att skapa och ladda ner en PDF lokalt i webbläsaren. Koreansk och flerspråkig text, vanliga tabeller och inbäddade bilder som stöds renderas som sidbilder. Förhandsvisningen visar exakt den PDF du kommer att ladda ner. Använd [HWP-/HWPX-visare](../hwp-viewer/) för att läsa originalet utan att konvertera det.
+Öppna ett HWP 5- eller HWPX-dokument för att skapa och ladda ner en PDF lokalt i webbläsaren. PDF-filen behåller markerbar text, vanliga tabeller och de inbäddade bilder som stöds. Förhandsvisningen visar exakt den PDF du kommer att ladda ner. Använd [HWP-/HWPX-visare](../hwp-viewer/) för att läsa originalet utan att konvertera det.
 
 ## Så konverterar du ett dokument
 
@@ -8,7 +8,7 @@ Välj eller släpp ett dokument, vänta tills varje sida har renderats och kontr
 
 ## Resultat och kompatibilitet
 
-PDF-filen innehåller sidbilder med 150 DPI. Det går inte att markera eller söka i texten, och ingen OCR läggs till. Sidornas mått och ordning följer dokumentrenderaren. Medföljande koreanska teckensnitt ersätter de dokumentteckensnitt som inte är tillgängliga, så teckenformer, avstånd, radbrytningar och sidbrytningar kan skilja sig från Hangul.
+Du kan markera, kopiera och söka i dokumentets text i PDF-filen. Sidornas mått och ordning följer dokumentrenderaren. PDF-filen innehåller inbäddade delmängder av de medföljande koreanska teckensnitten. När teckensnitt ersätts kan teckenformer, avstånd, radbrytningar och sidbrytningar skilja sig från Hangul.
 
 Verktyget är avsett för vanlig text, tabeller och inbäddade rasterbilder eller SVG-bilder som stöds. Komplexa tabeller, ekvationer, textrutor, sidhuvuden, sidfötter och officiella formulär måste kontrolleras noga mot originalet. Om innehåll som inte stöds eller som saknas upptäcks under konverteringen stoppas exporten; detta garanterar inte att alla skillnader i layout kan upptäckas. Makron, länkade resurser, bilagor, kommentarer, signaturer och interaktiva funktioner bevaras inte som interaktivt PDF-innehåll. Digitala signaturer och dokumentets äkthet verifieras inte.
 

@@ -1,6 +1,6 @@
 ## Sobre o Conversor de HWP / HWPX para PDF
 
-Abra um documento HWP 5 ou HWPX para criar e baixar um PDF localmente no navegador. Texto em coreano e em vários idiomas, tabelas comuns e imagens incorporadas são renderizados como imagens de páginas quando compatíveis. A prévia mostra exatamente o PDF que você vai baixar. Para ler o arquivo original sem convertê-lo, use o [Visualizador de HWP / HWPX](../hwp-viewer/).
+Abra um documento HWP 5 ou HWPX para criar e baixar um PDF localmente no navegador. O PDF preserva o texto selecionável, as tabelas simples e as imagens incorporadas compatíveis. A prévia mostra exatamente o PDF que você vai baixar. Para ler o arquivo original sem convertê-lo, use o [Visualizador de HWP / HWPX](../hwp-viewer/).
 
 ## Como converter um documento
 
@@ -8,7 +8,7 @@ Escolha ou solte um documento, aguarde a renderização de cada página e confir
 
 ## Resultado e compatibilidade
 
-O PDF contém imagens de páginas a 150 DPI. O texto não pode ser selecionado nem pesquisado, e OCR não é adicionado. As dimensões e a ordem das páginas são definidas pelo renderizador de documentos. As fontes coreanas incluídas no aplicativo substituem as fontes indisponíveis do documento, por isso a forma dos caracteres, o espaçamento, as quebras de linha e as quebras de página podem diferir da exibição no Hangul.
+Você pode selecionar, copiar e pesquisar o texto do documento no PDF. As dimensões e a ordem das páginas são definidas pelo renderizador de documentos. O PDF incorpora subconjuntos das fontes coreanas incluídas. A substituição de fontes pode alterar a forma dos caracteres, o espaçamento e as quebras de linha e de página em relação ao Hangul.
 
 A ferramenta se destina a texto comum, tabelas, imagens rasterizadas incorporadas e imagens SVG incorporadas compatíveis. Tabelas complexas, equações, caixas de texto, cabeçalhos, rodapés e formulários oficiais exigem uma comparação cuidadosa com o original. Conteúdo não compatível ou ausente detectado durante a conversão interrompe a exportação; isso não garante que todas as diferenças de layout possam ser detectadas. Macros, recursos vinculados, anexos, comentários, assinaturas e funcionalidades interativas não são preservados como conteúdo interativo do PDF. Assinaturas digitais e a autenticidade do documento não são verificadas.
 

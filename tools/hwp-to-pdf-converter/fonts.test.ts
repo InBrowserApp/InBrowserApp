@@ -29,7 +29,7 @@ afterEach(() => vi.unstubAllGlobals())
 test("loads only bundled font URLs and installs four worker font faces", async () => {
   const fonts = await loadFonts()
   expect(fonts).toHaveLength(4)
-  expect(fonts.every((f) => f.byteLength === 4)).toBe(true)
+  expect(fonts.every(({ bytes }) => bytes.byteLength === 4)).toBe(true)
   expect(add).toHaveBeenCalledTimes(4)
   expect(fetch).toHaveBeenCalledTimes(4)
 })

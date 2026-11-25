@@ -1,6 +1,6 @@
 ## HWP / HWPX’ten PDF’ye Dönüştürücü hakkında
 
-Tarayıcınızda yerel olarak PDF oluşturup indirmek için bir HWP 5 veya HWPX belgesi açın. Desteklenen Korece ve birden fazla dil içeren metinler, sıradan tablolar ve gömülü resimler sayfa görselleri olarak çizilir. Önizleme, indireceğiniz PDF’nin aynısını gösterir. Kaynak belgeyi dönüştürmeden okumak için [HWP / HWPX Görüntüleyici](../hwp-viewer/) aracını kullanın.
+Tarayıcınızda yerel olarak PDF oluşturup indirmek için bir HWP 5 veya HWPX belgesi açın. PDF, seçilebilir metni, normal tabloları ve desteklenen gömülü resimleri korur. Önizleme, indireceğiniz PDF’nin aynısını gösterir. Kaynak belgeyi dönüştürmeden okumak için [HWP / HWPX Görüntüleyici](../hwp-viewer/) aracını kullanın.
 
 ## Belge nasıl dönüştürülür
 
@@ -8,7 +8,7 @@ Bir belge seçin veya sürükleyip bırakın, her sayfanın çizilmesini bekleyi
 
 ## Çıktı ve uyumluluk
 
-PDF, 150 DPI çözünürlükte sayfa görselleri içerir. Metin seçilemez ve metinde arama yapılamaz; OCR uygulanmaz. Sayfa boyutları ve sırası belge görüntüleme motoruna göre belirlenir. Birlikte sunulan Korece yazı tipleri, belgenin kullanılamayan yazı tiplerinin yerine geçer. Bu nedenle karakter şekilleri, aralıklar, satır kaydırma ve sayfa sonları Hangul uygulamasındakinden farklı olabilir.
+PDF’deki belge metnini seçebilir, kopyalayabilir ve metinde arama yapabilirsiniz. Sayfa boyutları ve sırası belge görüntüleme motoruna göre belirlenir. Birlikte sunulan Korece yazı tiplerinin kullanılan karakterleri içeren alt kümeleri PDF’ye gömülür. Yazı tiplerinin değiştirilmesi, karakter biçimlerinin, aralıkların, satır ve sayfa sonlarının Hangul uygulamasındakinden farklı olmasına yol açabilir.
 
 Araç, normal metinler ve tablolar ile gömülü raster resimleri veya desteklenen SVG resimlerini işlemek için tasarlanmıştır. Karmaşık tablolar, denklemler, metin kutuları, üstbilgiler, altbilgiler ve resmî formlar özgün belgeyle dikkatlice karşılaştırılmalıdır. Dönüştürme sırasında desteklenmeyen veya eksik içerik algılanırsa dışa aktarma durur; bu, her düzen farkının algılanabileceği anlamına gelmez. Makrolar, bağlantılı kaynaklar, ekler, yorumlar, imzalar ve etkileşimli özellikler, etkileşimli PDF içeriği olarak korunmaz. Dijital imzalar ve belgenin gerçekliği doğrulanmaz.
 

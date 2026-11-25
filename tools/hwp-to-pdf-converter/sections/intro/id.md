@@ -1,6 +1,6 @@
 ## Tentang Konverter HWP / HWPX ke PDF
 
-Buka dokumen HWP 5 atau HWPX untuk membuat dan mengunduh PDF secara lokal di browser Anda. Teks Korea dan campuran bahasa, tabel biasa, serta gambar tertanam yang didukung dirender sebagai gambar halaman. Pratinjau menampilkan PDF yang sama persis dengan yang akan Anda unduh. Untuk membaca file sumber tanpa mengonversinya, gunakan [Penampil HWP / HWPX](../hwp-viewer/).
+Buka dokumen HWP 5 atau HWPX untuk membuat dan mengunduh PDF secara lokal di browser Anda. PDF mempertahankan teks yang dapat dipilih, tabel biasa, serta gambar tertanam yang didukung. Pratinjau menampilkan PDF yang sama persis dengan yang akan Anda unduh. Untuk membaca file sumber tanpa mengonversinya, gunakan [Penampil HWP / HWPX](../hwp-viewer/).
 
 ## Cara mengonversi dokumen
 
@@ -8,7 +8,7 @@ Pilih atau letakkan dokumen, tunggu hingga setiap halaman selesai dirender, lalu
 
 ## Hasil dan kompatibilitas
 
-PDF berisi gambar halaman pada 150 DPI. Teksnya tidak dapat dipilih atau dicari, dan OCR tidak ditambahkan. Ukuran dan urutan halaman mengikuti perender dokumen. Font Korea yang disertakan dalam aplikasi menggantikan font dokumen yang tidak tersedia, sehingga bentuk karakter, jarak, pergantian baris, dan pemisah halaman dapat berbeda dari Hangul.
+Anda dapat memilih, menyalin, dan mencari teks dokumen di PDF. Ukuran dan urutan halaman mengikuti perender dokumen. PDF hanya menyematkan karakter yang digunakan dari font Korea yang disertakan. Penggantian font dapat membuat bentuk karakter, jarak, pergantian baris, dan pemisah halaman berbeda dari tampilan di Hangul.
 
 Alat ini ditujukan untuk teks biasa, tabel, serta gambar raster tertanam atau gambar SVG yang didukung. Tabel kompleks, persamaan, kotak teks, header, footer, dan formulir resmi perlu diperiksa secara teliti dengan membandingkannya dengan dokumen asli. Jika konten yang tidak didukung atau hilang terdeteksi selama konversi, ekspor dihentikan; ini tidak menjamin bahwa setiap perbedaan tata letak dapat dideteksi. Makro, sumber daya tertaut, lampiran, komentar, tanda tangan, dan fitur interaktif tidak dipertahankan sebagai konten PDF interaktif. Tanda tangan digital dan keaslian dokumen tidak diverifikasi.
 

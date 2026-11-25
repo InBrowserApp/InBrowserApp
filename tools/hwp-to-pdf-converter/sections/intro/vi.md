@@ -1,6 +1,6 @@
 ## Giới thiệu về Trình chuyển đổi HWP / HWPX sang PDF
 
-Mở tài liệu HWP 5 hoặc HWPX để tạo và tải xuống PDF ngay trên thiết bị trong trình duyệt. Văn bản tiếng Hàn và đa ngôn ngữ, bảng thông thường và hình ảnh nhúng được hỗ trợ sẽ được kết xuất thành hình ảnh các trang. Bản xem trước hiển thị chính xác PDF mà bạn sẽ tải xuống. Để đọc tài liệu gốc mà không chuyển đổi, hãy dùng [Trình xem HWP / HWPX](../hwp-viewer/).
+Mở tài liệu HWP 5 hoặc HWPX để tạo và tải xuống PDF ngay trên thiết bị trong trình duyệt. PDF giữ lại văn bản có thể chọn, các bảng thông thường và hình ảnh nhúng được hỗ trợ. Bản xem trước hiển thị chính xác PDF mà bạn sẽ tải xuống. Để đọc tài liệu gốc mà không chuyển đổi, hãy dùng [Trình xem HWP / HWPX](../hwp-viewer/).
 
 ## Cách chuyển đổi tài liệu
 
@@ -8,7 +8,7 @@ Chọn hoặc thả tài liệu, chờ từng trang được kết xuất rồi 
 
 ## Kết quả và khả năng tương thích
 
-PDF chứa hình ảnh các trang ở độ phân giải 150 DPI. Không thể chọn hoặc tìm kiếm văn bản và không thêm OCR. Kích thước và thứ tự trang tuân theo bộ hiển thị tài liệu. Các phông chữ tiếng Hàn đi kèm thay thế những phông chữ của tài liệu không có sẵn, nên hình dạng ký tự, khoảng cách, cách xuống dòng và ngắt trang có thể khác với Hangul.
+Bạn có thể chọn, sao chép và tìm kiếm văn bản trong PDF. Kích thước và thứ tự trang tuân theo kết quả kết xuất tài liệu. PDF chỉ nhúng phần được sử dụng của các phông chữ tiếng Hàn đi kèm. Việc thay thế phông chữ có thể làm hình dạng ký tự, khoảng cách, cách xuống dòng và ngắt trang khác với Hangul.
 
 Công cụ dành cho văn bản và bảng thông thường, cùng hình ảnh raster nhúng hoặc hình ảnh SVG được hỗ trợ. Bảng phức tạp, phương trình, hộp văn bản, đầu trang, chân trang và biểu mẫu chính thức cần được đối chiếu cẩn thận với bản gốc. Nếu phát hiện nội dung không được hỗ trợ hoặc bị thiếu trong quá trình chuyển đổi, công cụ sẽ dừng xuất; điều này không đảm bảo có thể phát hiện mọi khác biệt về bố cục. Macro, tài nguyên được liên kết, tệp đính kèm, nhận xét, chữ ký và các tính năng tương tác không được giữ lại dưới dạng nội dung PDF tương tác. Chữ ký số và tính xác thực của tài liệu không được xác minh.
 

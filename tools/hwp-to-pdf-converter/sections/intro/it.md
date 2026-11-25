@@ -1,6 +1,6 @@
 ## Informazioni sul Convertitore da HWP / HWPX a PDF
 
-Apri un documento HWP 5 o HWPX per creare e scaricare un PDF in locale nel browser. Il testo coreano e multilingue supportato, le tabelle ordinarie e le immagini incorporate vengono riprodotti come immagini delle pagine. L’anteprima mostra esattamente il PDF che scaricherai. Per leggere il documento originale senza convertirlo, usa il [Visualizzatore HWP / HWPX](../hwp-viewer/).
+Apri un documento HWP 5 o HWPX per creare e scaricare un PDF in locale nel browser. Il PDF conserva il testo selezionabile, le tabelle semplici e le immagini incorporate supportate. L’anteprima mostra esattamente il PDF che scaricherai. Per leggere il documento originale senza convertirlo, usa il [Visualizzatore HWP / HWPX](../hwp-viewer/).
 
 ## Come convertire un documento
 
@@ -8,7 +8,7 @@ Scegli o trascina un documento, attendi il rendering di ogni pagina e controlla 
 
 ## Risultato e compatibilità
 
-Il PDF contiene immagini delle pagine a 150 DPI. Il testo non può essere selezionato né cercato e non viene aggiunto OCR. Le dimensioni e l’ordine delle pagine seguono quelli del motore di rendering dei documenti. I caratteri tipografici coreani inclusi sostituiscono quelli del documento non disponibili, quindi la forma dei glifi, la spaziatura, i ritorni a capo e le interruzioni di pagina possono differire da Hangul.
+Puoi selezionare, copiare e cercare il testo del documento nel PDF. Le dimensioni e l’ordine delle pagine dipendono dal motore di rendering. Il PDF incorpora sottoinsiemi dei caratteri tipografici coreani inclusi. La sostituzione dei caratteri tipografici può modificare la forma dei glifi, la spaziatura, i ritorni a capo e le interruzioni di pagina rispetto a Hangul.
 
 Lo strumento è pensato per testo e tabelle ordinari e per immagini incorporate raster o SVG supportate. Tabelle complesse, equazioni, caselle di testo, intestazioni, piè di pagina e moduli ufficiali richiedono un confronto attento con l’originale. Il rilevamento di contenuti non supportati o mancanti durante la conversione interrompe l’esportazione; questo non garantisce che vengano rilevate tutte le differenze di impaginazione. Macro, risorse collegate, allegati, commenti, firme e funzionalità interattive non vengono conservati come contenuti interattivi del PDF. Le firme digitali e l’autenticità del documento non vengono verificate.
 

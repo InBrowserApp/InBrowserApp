@@ -330,6 +330,10 @@ catalog:
   papaparse: ^5.7.1
   parse5: ^8.1.1
   pdf-lib: ^1.17.1
+  pdfkit: 0.21.0
+  "@types/pdfkit": 0.17.7
+  svg-to-pdfkit: 0.1.8
+  "@types/svg-to-pdfkit": 0.1.5
   proj4: ^2.23.0
   pdfjs-dist: ^6.5.438
   prettier: ^3.10.1
@@ -410,6 +414,7 @@ publicHoistPattern:
   - "@types/*"
 
 patchedDependencies:
+  svg-to-pdfkit@0.1.8: patches/svg-to-pdfkit@0.1.8.patch
   abcjs@6.7.3: patches/abcjs@6.7.3.patch
   rork-plist@0.7.0: patches/rork-plist@0.7.0.patch
   djvu-rs@0.46.0: patches/djvu-rs@0.46.0.patch

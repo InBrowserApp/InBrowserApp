@@ -1,6 +1,6 @@
 ## Tentang Penukar HWP dan HWPX kepada PDF
 
-Buka dokumen HWP 5 atau HWPX untuk menghasilkan dan memuat turun PDF secara setempat dalam pelayar anda. Teks Korea dan campuran bahasa yang disokong, jadual biasa serta imej terbenam dirender sebagai imej halaman. Pratonton menunjukkan PDF yang sama seperti yang akan anda muat turun. Untuk membaca dokumen sumber tanpa menukarnya, gunakan [Pemapar HWP / HWPX](../hwp-viewer/).
+Buka dokumen HWP 5 atau HWPX untuk menghasilkan dan memuat turun PDF secara setempat dalam pelayar anda. PDF mengekalkan teks yang boleh dipilih, jadual biasa serta imej terbenam yang disokong. Pratonton menunjukkan PDF yang sama seperti yang akan anda muat turun. Untuk membaca dokumen sumber tanpa menukarnya, gunakan [Pemapar HWP / HWPX](../hwp-viewer/).
 
 ## Cara menukar dokumen
 
@@ -8,7 +8,7 @@ Pilih atau lepaskan dokumen, tunggu sehingga setiap halaman selesai dirender, ke
 
 ## Hasil dan keserasian
 
-PDF mengandungi imej halaman pada 150 DPI. Tiada teks yang boleh dipilih atau dicari, dan OCR tidak ditambah. Dimensi dan susunan halaman mengikut enjin perenderan dokumen. Fon Korea yang disertakan menggantikan fon dokumen yang tidak tersedia, jadi bentuk aksara, jarak, pembalutan baris dan pemisah halaman mungkin berbeza daripada Hangul.
+Anda boleh memilih, menyalin dan mencari teks dokumen dalam PDF. Dimensi dan susunan halaman mengikut enjin perenderan dokumen. PDF hanya membenamkan aksara yang digunakan daripada fon Korea yang disertakan. Penggantian fon boleh mengubah bentuk aksara, jarak, pembalutan baris dan pemisah halaman berbanding dengan paparan dalam Hangul.
 
 Alat ini ditujukan untuk teks biasa, jadual dan imej terbenam dalam bentuk raster atau SVG yang disokong. Jadual kompleks, persamaan, kotak teks, pengepala, pengaki dan borang rasmi perlu disemak dengan teliti berbanding dokumen asal. Jika kandungan yang tidak disokong atau hilang dikesan semasa penukaran, eksport dihentikan; ini tidak menjamin bahawa setiap perbezaan susun atur dapat dikesan. Makro, sumber yang dipautkan, lampiran, komen, tandatangan dan ciri interaktif tidak dikekalkan sebagai kandungan PDF interaktif. Tandatangan digital dan ketulenan dokumen tidak disahkan.
 

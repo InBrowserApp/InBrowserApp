@@ -1,6 +1,6 @@
 ## Acerca del Conversor de HWP / HWPX a PDF
 
-Abre un documento HWP 5 o HWPX para crear y descargar un PDF de forma local en tu navegador. El texto compatible en coreano y en varios idiomas, las tablas sencillas y las imágenes incrustadas se representan como imágenes de las páginas. La vista previa muestra exactamente el PDF que descargarás. Para leer el original sin convertirlo, usa el [Visor de HWP / HWPX](../hwp-viewer/).
+Abre un documento HWP 5 o HWPX para crear y descargar un PDF de forma local en tu navegador. El PDF conserva el texto seleccionable, las tablas sencillas y las imágenes incrustadas compatibles. La vista previa muestra exactamente el PDF que descargarás. Para leer el original sin convertirlo, usa el [Visor de HWP / HWPX](../hwp-viewer/).
 
 ## Cómo convertir un documento
 
@@ -8,7 +8,7 @@ Elige o suelta un documento, espera a que se represente cada página y comprueba
 
 ## Resultado y compatibilidad
 
-El PDF contiene imágenes de las páginas a 150 DPI. No permite seleccionar ni buscar texto, y no se añade OCR. Las dimensiones y el orden de las páginas siguen los del motor de representación de documentos. Las fuentes coreanas incluidas sustituyen a las fuentes del documento que no están disponibles, por lo que las formas de los caracteres, el espaciado, el ajuste de las líneas y los saltos de página pueden diferir de Hangul.
+Puedes seleccionar, copiar y buscar texto del documento en el PDF. El motor de representación determina las dimensiones y el orden de las páginas. El PDF incrusta subconjuntos de las fuentes coreanas incluidas. Al sustituir las fuentes, la forma de los caracteres, el espaciado y los saltos de línea y de página pueden diferir de los de Hangul.
 
 La herramienta está pensada para texto y tablas sencillos, así como para imágenes de mapa de bits o SVG compatibles incrustadas. Las tablas complejas, las ecuaciones, los cuadros de texto, los encabezados y pies de página y los formularios oficiales requieren una comparación cuidadosa con el original. Si se detecta contenido no compatible o ausente durante la conversión, la exportación se detiene; esto no garantiza que se detecten todas las diferencias de diseño. Las macros, los recursos vinculados, los archivos adjuntos, los comentarios, las firmas y las funciones interactivas no se conservan como contenido interactivo del PDF. No se verifican las firmas digitales ni la autenticidad del documento.
 

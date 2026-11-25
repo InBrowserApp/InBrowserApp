@@ -1,6 +1,6 @@
 ## O konwerterze HWP / HWPX na PDF
 
-Otwórz dokument HWP 5 lub HWPX, aby utworzyć i pobrać plik PDF lokalnie w przeglądarce. Obsługiwany tekst koreański i wielojęzyczny, zwykłe tabele oraz osadzone obrazy są renderowane jako obrazy stron. Podgląd pokazuje dokładnie ten plik PDF, który pobierzesz. Aby przeczytać dokument źródłowy bez konwersji, skorzystaj z narzędzia [Przeglądarka HWP / HWPX](../hwp-viewer/).
+Otwórz dokument HWP 5 lub HWPX, aby utworzyć i pobrać plik PDF lokalnie w przeglądarce. Plik PDF zachowuje tekst, który można zaznaczać, zwykłe tabele i obsługiwane obrazy osadzone. Podgląd pokazuje dokładnie ten plik PDF, który pobierzesz. Aby przeczytać dokument źródłowy bez konwersji, skorzystaj z narzędzia [Przeglądarka HWP / HWPX](../hwp-viewer/).
 
 ## Jak przekonwertować dokument
 
@@ -8,7 +8,7 @@ Wybierz lub upuść dokument, poczekaj na wyrenderowanie każdej strony i sprawd
 
 ## Wynik i zgodność
 
-Plik PDF zawiera obrazy stron w rozdzielczości 150 DPI. Nie zawiera tekstu, który można zaznaczać lub przeszukiwać, i nie jest wykonywane rozpoznawanie OCR. Wymiary i kolejność stron wynikają z działania silnika renderowania dokumentów. Dołączone czcionki koreańskie zastępują niedostępne czcionki dokumentu, więc kształty znaków, odstępy, zawijanie wierszy i podziały stron mogą różnić się od tych w programie Hangul.
+Tekst dokumentu w pliku PDF można zaznaczać, kopiować i przeszukiwać. Wymiary i kolejność stron określa silnik renderowania dokumentów. Plik PDF zawiera osadzone podzbiory dołączonych czcionek koreańskich. Zastąpienie czcionek może zmienić kształty znaków, odstępy, zawijanie wierszy i podział na strony względem programu Hangul.
 
 Narzędzie jest przeznaczone do zwykłego tekstu, tabel oraz osadzonych obrazów rastrowych lub obsługiwanych obrazów SVG. Złożone tabele, równania, pola tekstowe, nagłówki, stopki i oficjalne formularze wymagają dokładnego porównania z oryginałem. Wykrycie nieobsługiwanych lub brakujących treści podczas konwersji zatrzymuje eksport; nie gwarantuje to wykrycia każdej różnicy w układzie. Makra, połączone zasoby, załączniki, komentarze, podpisy i funkcje interaktywne nie są zachowywane jako interaktywna zawartość PDF. Podpisy cyfrowe i autentyczność dokumentu nie są weryfikowane.
 

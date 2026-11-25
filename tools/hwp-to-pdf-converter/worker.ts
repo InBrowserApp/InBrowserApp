@@ -1,15 +1,14 @@
 import init, { HwpDocument } from "@rhwp/core"
 import hwpWasm from "@rhwp/core/rhwp_bg.wasm?gzip-url"
-import { initWasm, Resvg } from "@resvg/resvg-wasm"
-import svgWasm from "@resvg/resvg-wasm/index_bg.wasm?url"
-import { PDFDocument } from "pdf-lib"
+import PDFDocument from "pdfkit"
+import SVGtoPDF from "svg-to-pdfkit"
 import { preflight } from "@workspace/hwp/preflight"
 import { loadWasmSource } from "@workspace/hwp/wasm"
 import { binaryResources } from "./core/binary"
 import { xmlResources } from "./core/xml"
 import { failure } from "./core/errors"
-import { loadFonts } from "./fonts"
-import { fontFamily } from "./font-family"
+import { loadCjkFont, loadFonts } from "./fonts"
+import { cjkFamily, fontFamily } from "./font-family"
 import type { Request, Reply } from "./protocol"
 
 const send = (reply: Reply) => postMessage(reply)
@@ -34,7 +33,7 @@ async function convert(bytes: Uint8Array) {
       throw new Error("browserUnsupported")
     const context = new OffscreenCanvas(1, 1).getContext("2d")
     if (!context) throw new Error("browserUnsupported")
-    let fonts: Uint8Array[]
+    let fonts: Awaited<ReturnType<typeof loadFonts>>
     try {
       fonts = await loadFonts()
     } catch (cause) {
@@ -50,12 +49,7 @@ async function convert(bytes: Uint8Array) {
       },
     })
     try {
-      await Promise.all([
-        loadWasmSource(hwpWasm).then((module) =>
-          init({ module_or_path: module })
-        ),
-        initWasm(fetch(svgWasm)),
-      ])
+      await init({ module_or_path: await loadWasmSource(hwpWasm) })
     } catch (cause) {
       throw new Error("engineUnavailable", { cause })
     }
@@ -64,7 +58,11 @@ async function convert(bytes: Uint8Array) {
     if (!total) throw new Error("invalid")
     if (JSON.parse(document.getExternalImageReferences()).length)
       throw new Error("unsupported")
-    const pdf = await PDFDocument.create()
+    // Register only the bundled faces. The worker has no system fonts.
+    const pdf = new PDFDocument({ autoFirstPage: false, font: "" })
+    for (const { family, weight, bytes } of fonts)
+      pdf.registerFont(`${family}-${weight}`, bytes)
+    let cjkRegistered = false
     for (let index = 0; index < total; index++) {
       page = index + 1
       const info = JSON.parse(document.getPageInfo(index)) as {
@@ -83,39 +81,38 @@ async function convert(bytes: Uint8Array) {
         page,
         total,
       })
-      const raster = new Resvg(svg, {
-        background: "white",
-        fitTo: { mode: "zoom", value: 150 / 96 },
-        font: {
-          fontBuffers: fonts,
-          defaultFontFamily: "Nanum Gothic",
-          sansSerifFamily: "Nanum Gothic",
-          serifFamily: "Nanum Myeongjo",
+      if (!cjkRegistered && svg.includes(`font-family="${cjkFamily}"`)) {
+        pdf.registerFont(cjkFamily, await loadCjkFont())
+        cjkRegistered = true
+      }
+      pdf.addPage({ size: [info.width * 0.75, info.height * 0.75], margin: 0 })
+      // The library's declaration incorrectly types this PDF instance as a class.
+      SVGtoPDF(pdf as unknown as typeof PDFDocument, svg, 0, 0, {
+        width: info.width,
+        height: info.height,
+        fontCallback(family, bold, italic, options) {
+          options.fauxItalic = italic
+          if (family === cjkFamily) {
+            options.fauxBold = bold
+            return cjkFamily
+          }
+          return `${fontFamily(family)}-${bold ? "700" : "400"}`
+        },
+        warningCallback(message) {
+          throw new Error("unsupported", { cause: message })
         },
       })
-      try {
-        if (raster.imagesToResolve().length) throw new Error("unsupported")
-        const image = raster.render()
-        try {
-          const embedded = await pdf.embedPng(image.asPng())
-          // Embed now to compress this page and release decoded RGB buffers
-          // before rendering the next page of a long document.
-          await embedded.embed()
-          const width = (info.width * 72) / 96,
-            height = (info.height * 72) / 96
-          pdf
-            .addPage([width, height])
-            .drawImage(embedded, { x: 0, y: 0, width, height })
-        } finally {
-          image.free()
-        }
-      } finally {
-        raster.free()
-      }
     }
     page = undefined
     send({ type: "progress", stage: "saving" })
-    const result = await pdf.save()
+    const chunks: Uint8Array<ArrayBuffer>[] = []
+    await new Promise<void>((resolve, reject) => {
+      pdf.on("data", (chunk: Uint8Array<ArrayBuffer>) => chunks.push(chunk))
+      pdf.once("end", resolve)
+      pdf.once("error", reject)
+      pdf.end()
+    })
+    const result = new Uint8Array(await new Blob(chunks).arrayBuffer())
     postMessage(
       { type: "result", bytes: result, pages: total } satisfies Reply,
       { transfer: [result.buffer] }

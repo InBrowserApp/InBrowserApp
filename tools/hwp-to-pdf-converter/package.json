@@ -12,9 +12,10 @@
     "@workspace/ui": "workspace:*",
     "@workspace/pdf-reader": "workspace:*",
     "@workspace/hwp": "workspace:*",
+    "@workspace/libreoffice": "workspace:*",
     "@rhwp/core": "catalog:",
-    "@resvg/resvg-wasm": "catalog:",
-    "pdf-lib": "catalog:",
+    "pdfkit": "catalog:",
+    "svg-to-pdfkit": "catalog:",
     "cfb": "catalog:",
     "fflate": "catalog:",
     "saxes": "catalog:"
@@ -26,6 +27,9 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
+    "@types/pdfkit": "catalog:",
+    "@types/svg-to-pdfkit": "catalog:",
+    "pdfjs-dist": "catalog:",
     "vitest": "catalog:"
   }
 }
