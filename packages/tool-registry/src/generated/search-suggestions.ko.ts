@@ -294,6 +294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBR PDF 변환기",
+    slug: "cbr-to-pdf-converter",
+  },
+  {
+    category: "ebook",
     name: "CBZ 만화 리더",
     slug: "cbz-reader",
   },

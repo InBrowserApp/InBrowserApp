@@ -1,12 +1,12 @@
-import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
-import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
-import { DocumentZoom } from "@workspace/ui/components/tool/document-zoom"
+import { DocumentNumberInput } from "../document-number-input"
+import { DocumentIconButton } from "../document-icon-button"
+import { DocumentZoom } from "../document-zoom"
 import {
   ArrowLeftRight,
   ChevronLeft,
   ChevronRight,
   Maximize2,
-} from "@workspace/ui/icons"
+} from "../../../icons"
 import type { Reader, ReaderState } from "@workspace/pdf-reader"
 import type { Messages } from "./types"
 

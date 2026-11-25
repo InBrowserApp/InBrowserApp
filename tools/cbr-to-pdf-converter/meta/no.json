@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer fra CBR til PDF",
+  "description": "Konverter en CBR-tegneserie til PDF i nettleseren. Sidene sorteres etter mappe- og filnavn, og bildeproporsjonene beholdes. Forhåndsvis og last ned PDF-en uten opplasting."
+}

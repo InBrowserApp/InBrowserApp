@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da CBR a PDF",
+  "description": "Converti un fumetto CBR in PDF nel browser. Le pagine seguono l’ordine naturale di cartelle e nomi dei file. Visualizza l’anteprima e scarica il PDF con le proporzioni originali senza caricare il fumetto."
+}

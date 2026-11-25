@@ -7498,6 +7498,130 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cbr-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: ["cbr", "rar", "comic", "manga", "pdf", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محوّل CBR إلى PDF",
+        description:
+          "حوّل القصص المصوّرة من CBR إلى PDF في متصفحك. عاين الصفحات بترتيب أسمائها ونزّل ملف PDF مع الحفاظ على نسب أبعاد الصور، دون رفع ملفك.",
+      },
+      de: {
+        name: "CBR-zu-PDF-Konverter",
+        description:
+          "Wandle CBR-Comics in PDF um. Prüfe die sortierten Seiten in der Vorschau und lade die PDF mit unveränderten Bildproportionen herunter. Alles bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "CBR to PDF Converter",
+        description:
+          "Convert a CBR comic to PDF in your browser. Preview pages sorted by folder and filename, keep their proportions, and download without an upload.",
+      },
+      es: {
+        name: "Conversor de CBR a PDF",
+        description:
+          "Convierte cómics CBR a PDF en tu navegador. Conserva el orden y las proporciones de las páginas, revisa el resultado y descarga el PDF sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur CBR en PDF",
+        description:
+          "Convertissez une BD CBR en PDF dans votre navigateur. Les pages sont triées par nom et gardent leurs proportions. Vérifiez l’aperçu, puis téléchargez le PDF sans envoyer votre BD.",
+      },
+      he: {
+        name: "ממיר CBR ל־PDF",
+        description:
+          "המירו קומיקס בפורמט CBR ל־PDF בדפדפן. העמודים מסודרים לפי שמות התיקיות והקבצים ושומרים על יחס הממדים המקורי. בדקו את התוצאה והורידו את ה־PDF בלי להעלות את הקומיקס.",
+      },
+      hi: {
+        name: "CBR से PDF कन्वर्टर",
+        description:
+          "ब्राउज़र में CBR कॉमिक को PDF में बदलें। पृष्ठ फ़ोल्डर और फ़ाइल के नामों के स्वाभाविक क्रम में रहते हैं और चित्रों का अनुपात बना रहता है। PDF का पूर्वावलोकन करें और कॉमिक अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CBR ke PDF",
+        description:
+          "Ubah komik CBR ke PDF di browser. Halaman diurutkan berdasarkan folder dan nama file, proporsi gambar tetap terjaga, dan hasilnya bisa ditinjau serta diunduh tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da CBR a PDF",
+        description:
+          "Converti un fumetto CBR in PDF nel browser. Le pagine seguono l’ordine naturale di cartelle e nomi dei file. Visualizza l’anteprima e scarica il PDF con le proporzioni originali senza caricare il fumetto.",
+      },
+      ja: {
+        name: "CBR から PDF への変換ツール",
+        description:
+          "CBR 形式の漫画をブラウザーで PDF に変換します。フォルダー名とファイル名の順にページを並べ、画像の縦横比を保ちます。変換結果のプレビューとダウンロードができ、ファイルのアップロードは不要です。",
+      },
+      ko: {
+        name: "CBR PDF 변환기",
+        description:
+          "브라우저에서 CBR 만화를 PDF로 변환하세요. 폴더와 파일 이름의 숫자 순서에 맞춰 페이지를 정렬하고 이미지 비율을 유지합니다. 업로드 없이 결과를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CBR kepada PDF",
+        description:
+          "Tukar komik CBR kepada PDF dalam pelayar anda. Halaman disusun mengikut nombor dalam nama folder dan fail. Pratonton dan muat turun PDF tanpa memuat naik komik. Perkadaran imej asal dikekalkan.",
+      },
+      nl: {
+        name: "CBR-naar-PDF-converter",
+        description:
+          "Converteer een CBR-strip naar PDF in je browser. Bekijk de pagina’s in natuurlijke volgorde en download de PDF met behoud van de beeldverhoudingen. Je hoeft niets te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra CBR til PDF",
+        description:
+          "Konverter en CBR-tegneserie til PDF i nettleseren. Sidene sorteres etter mappe- og filnavn, og bildeproporsjonene beholdes. Forhåndsvis og last ned PDF-en uten opplasting.",
+      },
+      pl: {
+        name: "Konwerter CBR na PDF",
+        description:
+          "Konwertuj komiks CBR na PDF w przeglądarce. Zachowaj proporcje obrazów, sprawdź kolejność stron na podglądzie i pobierz PDF. Plik pozostaje na urządzeniu.",
+      },
+      pt: {
+        name: "Conversor de CBR para PDF",
+        description:
+          "Converta quadrinhos CBR em PDF no navegador. Confira as páginas em ordem natural e baixe o PDF com as proporções originais, sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер CBR в PDF",
+        description:
+          "Преобразуйте комикс CBR в PDF прямо в браузере. Порядок страниц и пропорции изображений сохраняются. Просмотрите и скачайте PDF без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från CBR till PDF",
+        description:
+          "Konvertera en CBR-serie till PDF direkt i webbläsaren. Sidorna sorteras efter mapp- och filnamn, bilderna behåller sina proportioner och du kan förhandsvisa och ladda ner resultatet utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBR เป็น PDF",
+        description:
+          "แปลงการ์ตูน CBR เป็น PDF ในเบราว์เซอร์ เรียงหน้าตามชื่อโฟลเดอร์และชื่อไฟล์ คงสัดส่วนภาพ และดูตัวอย่างก่อนดาวน์โหลดได้โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "CBR’den PDF’ye Dönüştürücü",
+        description:
+          "CBR çizgi romanlarını tarayıcınızda PDF’ye dönüştürün. Sayfalar doğal sırayla dizilir, görsellerin en boy oranı korunur. Sonucu önizleyin ve dosyanızı yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBR sang PDF",
+        description:
+          "Chuyển truyện tranh CBR sang PDF ngay trong trình duyệt. Giữ nguyên tỷ lệ ảnh, xem trước các trang theo thứ tự tên tệp tự nhiên rồi tải PDF xuống mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "CBR 转 PDF 转换器",
+        description:
+          "在浏览器中将 CBR 漫画转为 PDF。按目录和文件名排列页面，保留原图比例，支持预览和下载，无需上传。",
+      },
+      "zh-TW": {
+        name: "CBR 轉 PDF",
+        description:
+          "直接在瀏覽器中將 CBR 漫畫轉成 PDF，保留頁面順序和圖片比例。可先預覽再下載，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "cbz-reader",
     category: "ebook",
     icon: "image",
