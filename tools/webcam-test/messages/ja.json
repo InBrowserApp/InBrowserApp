@@ -1,0 +1,16 @@
+{
+  "preview": "カメラのプレビュー",
+  "previewHint": "カメラを開始すると、映像がリアルタイムで表示されます。",
+  "start": "カメラを開始",
+  "starting": "カメラを起動中…",
+  "stop": "カメラを停止",
+  "camera": "カメラ",
+  "defaultCamera": "既定のカメラ",
+  "cameraOption": "カメラ {number}",
+  "requestedResolution": "希望する解像度",
+  "videoDetails": "現在の映像の詳細",
+  "actualResolution": "実際の解像度",
+  "previewFps": "プレビューのフレームレート",
+  "reportedFps": "ブラウザが報告するフレームレート",
+  "cameraError": "カメラを開けませんでした。ブラウザのアクセス許可を確認し、カメラを使っているアプリがあれば閉じてから、もう一度お試しください。"
+}

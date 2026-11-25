@@ -1,0 +1,16 @@
+{
+  "preview": "Kameravorschau",
+  "previewHint": "Starte die Kamera, um das Livebild zu sehen.",
+  "start": "Kamera starten",
+  "starting": "Kamera wird gestartet…",
+  "stop": "Kamera stoppen",
+  "camera": "Kamera",
+  "defaultCamera": "Standardkamera",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "Angeforderte Auflösung",
+  "videoDetails": "Live-Videodaten",
+  "actualResolution": "Tatsächliche Auflösung",
+  "previewFps": "Bildrate der Vorschau",
+  "reportedFps": "Gemeldete Bildrate",
+  "cameraError": "Die Kamera konnte nicht gestartet werden. Prüfe die Berechtigungen im Browser und versuche es erneut. Ist die Kamera belegt, schließe andere Apps, die sie nutzen könnten."
+}

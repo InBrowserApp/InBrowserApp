@@ -1,0 +1,16 @@
+{
+  "preview": "Anteprima della webcam",
+  "previewHint": "Avvia la webcam per vedere l'anteprima in diretta.",
+  "start": "Avvia webcam",
+  "starting": "Avvio della webcam…",
+  "stop": "Disattiva webcam",
+  "camera": "Webcam",
+  "defaultCamera": "Webcam predefinita",
+  "cameraOption": "Webcam {number}",
+  "requestedResolution": "Risoluzione richiesta",
+  "videoDetails": "Dati del video in diretta",
+  "actualResolution": "Risoluzione effettiva",
+  "previewFps": "FPS dell'anteprima",
+  "reportedFps": "FPS dichiarati",
+  "cameraError": "Impossibile avviare la webcam. Controlla le autorizzazioni del browser e riprova. Se la webcam è occupata, chiudi le altre app che potrebbero usarla."
+}

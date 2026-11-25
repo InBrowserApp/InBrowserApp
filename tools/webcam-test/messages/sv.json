@@ -1,0 +1,16 @@
+{
+  "preview": "Livebild från kameran",
+  "previewHint": "Starta kameran för att se livebilden.",
+  "start": "Starta kameran",
+  "starting": "Öppnar kameran…",
+  "stop": "Stäng av kameran",
+  "camera": "Kamera",
+  "defaultCamera": "Standardkamera",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "Begärd upplösning",
+  "videoDetails": "Information om livebilden",
+  "actualResolution": "Faktisk upplösning",
+  "previewFps": "Uppmätt bildfrekvens",
+  "reportedFps": "Rapporterad bildfrekvens",
+  "cameraError": "Det gick inte att öppna kameran. Kontrollera behörigheterna i webbläsaren och försök igen. Om kameran är upptagen stänger du andra appar som kan använda den."
+}

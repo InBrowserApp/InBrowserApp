@@ -53543,6 +53543,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "webcam-test",
+    category: "video",
+    icon: "camera",
+    tags: ["camera", "webcam", "resolution", "frame rate", "fps", "test"],
+    locales: {
+      ar: {
+        name: "اختبار كاميرا الويب",
+        description:
+          "اختبر كاميرا الويب عبر الإنترنت مع معاينة مباشرة، وتحقق من دقة الفيديو الفعلية ومعدل الإطارات (FPS). بدّل بين الكاميرات وجرّب دقة أخرى دون تسجيل.",
+      },
+      de: {
+        name: "Webcam-Test",
+        description:
+          "Teste deine Webcam online mit Live-Vorschau, tatsächlicher Videoauflösung und Bildrate in FPS. Wechsle die Kamera und probiere andere Auflösungen aus, ohne ein Video aufzunehmen.",
+      },
+      en: {
+        name: "Webcam Test",
+        description:
+          "Test your webcam online with a live preview, actual video resolution, and frame rate in FPS. Switch cameras and request a different resolution without recording.",
+      },
+      es: {
+        name: "Prueba de cámara web",
+        description:
+          "Prueba tu cámara web en línea con una vista en directo y consulta la resolución real y la frecuencia de fotogramas (FPS). Cambia de cámara o prueba otra resolución sin grabar.",
+      },
+      fr: {
+        name: "Test de webcam",
+        description:
+          "Testez votre webcam en ligne avec un aperçu en direct, la résolution vidéo réelle et la cadence en images par seconde (FPS). Changez de caméra ou demandez une autre résolution sans enregistrer de vidéo.",
+      },
+      he: {
+        name: "בדיקת מצלמת אינטרנט",
+        description:
+          "בדקו את מצלמת האינטרנט בדפדפן עם תצוגה חיה, רזולוציית הווידאו בפועל וקצב פריימים (FPS). החליפו מצלמות ונסו רזולוציה אחרת בלי להקליט.",
+      },
+      hi: {
+        name: "वेबकैम टेस्ट",
+        description:
+          "लाइव प्रीव्यू में वीडियो का वास्तविक रिज़ॉल्यूशन और फ़्रेम रेट (FPS) देखकर अपना वेबकैम ऑनलाइन जाँचें। बिना रिकॉर्डिंग के कैमरा बदलें और दूसरे रिज़ॉल्यूशन आज़माएँ।",
+      },
+      id: {
+        name: "Tes Webcam",
+        description:
+          "Tes webcam secara online dengan pratinjau langsung, resolusi video aktual, dan frame rate dalam FPS. Ganti kamera dan coba resolusi lain tanpa merekam.",
+      },
+      it: {
+        name: "Test webcam",
+        description:
+          "Prova la webcam online con un'anteprima in diretta, la risoluzione effettiva e la frequenza dei fotogrammi in FPS. Cambia webcam e richiedi un'altra risoluzione senza registrare.",
+      },
+      ja: {
+        name: "ウェブカメラテスト",
+        description:
+          "ウェブカメラをオンラインでテストし、ライブプレビュー、実際の映像解像度、フレームレート（FPS）を確認できます。録画せずにカメラや希望する解像度を切り替えられます。",
+      },
+      ko: {
+        name: "웹캠 테스트",
+        description:
+          "웹캠을 온라인으로 테스트하고 실시간 미리보기, 실제 영상 해상도, 프레임 속도(FPS)를 확인하세요. 녹화 없이 카메라를 바꾸거나 다른 해상도를 요청할 수 있습니다.",
+      },
+      ms: {
+        name: "Ujian Kamera Web",
+        description:
+          "Uji kamera web dalam talian dengan pratonton langsung, resolusi video sebenar dan kadar bingkai dalam FPS. Tukar kamera dan cuba resolusi lain tanpa merakam.",
+      },
+      nl: {
+        name: "Webcamtest",
+        description:
+          "Test je webcam online met livebeeld en bekijk de werkelijke videoresolutie en framesnelheid in FPS. Wissel van camera of probeer een andere resolutie zonder opname.",
+      },
+      no: {
+        name: "Test av webkamera",
+        description:
+          "Test webkameraet på nett med direktevisning, faktisk videooppløsning og bildefrekvens i FPS. Bytt kamera eller be om en annen oppløsning uten å ta opp video.",
+      },
+      pl: {
+        name: "Test kamery internetowej",
+        description:
+          "Przetestuj kamerę internetową online i sprawdź podgląd na żywo, rzeczywistą rozdzielczość oraz liczbę klatek na sekundę (FPS). Przełączaj kamery i wypróbuj inne rozdzielczości bez nagrywania.",
+      },
+      pt: {
+        name: "Teste de webcam",
+        description:
+          "Teste sua webcam online com imagem ao vivo, resolução real do vídeo e taxa de quadros em FPS. Troque de câmera ou solicite outra resolução sem gravar.",
+      },
+      ru: {
+        name: "Проверка веб-камеры",
+        description:
+          "Проверьте веб-камеру онлайн. Посмотрите видео в реальном времени, узнайте фактическое разрешение и частоту кадров в FPS. Переключайте камеры и пробуйте другие разрешения без записи.",
+      },
+      sv: {
+        name: "Webbkameratest",
+        description:
+          "Testa webbkameran online med livebild, faktisk videoupplösning och bildfrekvens i FPS. Byt kamera eller begär en annan upplösning utan att spela in.",
+      },
+      th: {
+        name: "ทดสอบเว็บแคม",
+        description:
+          "ทดสอบเว็บแคมออนไลน์ ดูภาพสด ความละเอียดวิดีโอจริง และอัตราเฟรม (FPS) สลับกล้องและลองความละเอียดอื่นได้โดยไม่ต้องบันทึกวิดีโอ",
+      },
+      tr: {
+        name: "Web Kamerası Testi",
+        description:
+          "Web kameranızı çevrimiçi test edin. Canlı önizlemeyi, gerçek video çözünürlüğünü ve FPS cinsinden kare hızını görün. Kayıt yapmadan kamera değiştirin ve farklı çözünürlükler deneyin.",
+      },
+      vi: {
+        name: "Kiểm tra webcam",
+        description:
+          "Kiểm tra webcam trực tuyến với hình ảnh trực tiếp, độ phân giải thực tế và tốc độ khung hình (FPS). Đổi camera và thử độ phân giải khác mà không cần quay video.",
+      },
+      "zh-CN": {
+        name: "摄像头测试",
+        description:
+          "在线测试摄像头，实时预览画面，查看实际视频分辨率和帧率（FPS）。无需录制即可切换摄像头并请求其他分辨率。",
+      },
+      "zh-TW": {
+        name: "網路攝影機測試",
+        description:
+          "線上測試網路攝影機，即時預覽畫面，查看實際影片解析度和影格率（FPS）。無須錄影即可切換攝影機並要求其他解析度。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",

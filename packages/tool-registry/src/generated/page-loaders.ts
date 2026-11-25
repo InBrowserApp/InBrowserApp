@@ -517,6 +517,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "warc-viewer": () => import("@tool/warc-viewer/page"),
   "webarchive-to-html-converter": () =>
     import("@tool/webarchive-to-html-converter/page"),
+  "webcam-test": () => import("@tool/webcam-test/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),

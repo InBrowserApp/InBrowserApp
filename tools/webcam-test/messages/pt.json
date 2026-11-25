@@ -1,0 +1,16 @@
+{
+  "preview": "Prévia da câmera",
+  "previewHint": "Inicie a câmera para ver a imagem ao vivo.",
+  "start": "Iniciar câmera",
+  "starting": "Abrindo a câmera…",
+  "stop": "Parar câmera",
+  "camera": "Câmera",
+  "defaultCamera": "Câmera padrão",
+  "cameraOption": "Câmera {number}",
+  "requestedResolution": "Resolução solicitada",
+  "videoDetails": "Dados do vídeo ao vivo",
+  "actualResolution": "Resolução real",
+  "previewFps": "FPS da prévia",
+  "reportedFps": "FPS informados pelo navegador",
+  "cameraError": "Não foi possível abrir a câmera. Verifique as permissões do navegador e tente novamente. Se a câmera estiver ocupada, feche outros aplicativos que possam estar usando a câmera."
+}

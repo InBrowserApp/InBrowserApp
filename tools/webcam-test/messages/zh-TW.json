@@ -1,0 +1,16 @@
+{
+  "preview": "攝影機預覽",
+  "previewHint": "開啟攝影機以查看即時畫面。",
+  "start": "開啟攝影機",
+  "starting": "正在開啟攝影機…",
+  "stop": "關閉攝影機",
+  "camera": "攝影機",
+  "defaultCamera": "預設攝影機",
+  "cameraOption": "攝影機 {number}",
+  "requestedResolution": "要求的解析度",
+  "videoDetails": "即時影片資訊",
+  "actualResolution": "實際解析度",
+  "previewFps": "預覽影格率",
+  "reportedFps": "回報的影格率",
+  "cameraError": "無法開啟攝影機。請檢查瀏覽器權限後重試。如果攝影機正被佔用，請關閉可能正在使用它的其他應用程式。"
+}

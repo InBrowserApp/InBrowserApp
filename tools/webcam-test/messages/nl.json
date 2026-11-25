@@ -1,0 +1,16 @@
+{
+  "preview": "Camerabeeld",
+  "previewHint": "Zet de camera aan om het livebeeld te zien.",
+  "start": "Camera aanzetten",
+  "starting": "Camera openen…",
+  "stop": "Camera uitzetten",
+  "camera": "Camera",
+  "defaultCamera": "Standaardcamera",
+  "cameraOption": "Camera {number}",
+  "requestedResolution": "Aangevraagde resolutie",
+  "videoDetails": "Gegevens van het livebeeld",
+  "actualResolution": "Werkelijke resolutie",
+  "previewFps": "Framesnelheid van het livebeeld",
+  "reportedFps": "Framesnelheid volgens de browser",
+  "cameraError": "De camera kon niet worden geopend. Controleer je browsermachtigingen en probeer het opnieuw. Is de camera bezet? Sluit andere apps die de camera mogelijk gebruiken."
+}

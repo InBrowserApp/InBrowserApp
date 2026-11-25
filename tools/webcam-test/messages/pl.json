@@ -1,0 +1,16 @@
+{
+  "preview": "Podgląd z kamery",
+  "previewHint": "Włącz kamerę, aby zobaczyć podgląd na żywo.",
+  "start": "Włącz kamerę",
+  "starting": "Uruchamianie kamery…",
+  "stop": "Wyłącz kamerę",
+  "camera": "Kamera",
+  "defaultCamera": "Kamera domyślna",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "Żądana rozdzielczość",
+  "videoDetails": "Parametry obrazu na żywo",
+  "actualResolution": "Rzeczywista rozdzielczość",
+  "previewFps": "FPS podglądu",
+  "reportedFps": "FPS z ustawień strumienia",
+  "cameraError": "Nie udało się uruchomić kamery. Sprawdź uprawnienia przeglądarki i spróbuj ponownie. Jeśli kamera jest zajęta, zamknij inne aplikacje, które mogą z niej korzystać."
+}
