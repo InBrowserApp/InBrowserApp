@@ -1,0 +1,16 @@
+{
+  "testColors": "Cores de teste",
+  "white": "Branco",
+  "black": "Preto",
+  "red": "Vermelho",
+  "green": "Verde",
+  "blue": "Azul",
+  "fullscreen": "Iniciar teste em ecrã inteiro",
+  "fullscreenLabel": "Teste de píxeis mortos em ecrã inteiro",
+  "exit": "Sair do ecrã inteiro",
+  "previous": "Cor anterior",
+  "next": "Cor seguinte",
+  "hideControls": "Ocultar controlos",
+  "showControls": "Mostrar controlos",
+  "controlsHelp": "Clique ou toque na cor para avançar. Use as teclas de seta para mudar de cor e Esc para sair."
+}

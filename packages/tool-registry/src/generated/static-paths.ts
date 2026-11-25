@@ -8558,6 +8558,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dead-pixel-test",
+    language: "ar",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "de",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "en",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "es",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "fr",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "he",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "hi",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "id",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "it",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "ja",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "ko",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "ms",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "nl",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "no",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "pl",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "pt",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "ru",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "sv",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "th",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "tr",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "vi",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "dead-pixel-test",
+    language: "zh-TW",
+  },
+  {
     slug: "device-information",
     language: "ar",
   },

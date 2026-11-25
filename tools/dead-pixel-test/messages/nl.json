@@ -1,0 +1,16 @@
+{
+  "testColors": "Testkleuren",
+  "white": "Wit",
+  "black": "Zwart",
+  "red": "Rood",
+  "green": "Groen",
+  "blue": "Blauw",
+  "fullscreen": "Test starten op volledig scherm",
+  "fullscreenLabel": "Test op dode pixels op volledig scherm",
+  "exit": "Volledig scherm afsluiten",
+  "previous": "Vorige kleur",
+  "next": "Volgende kleur",
+  "hideControls": "Bediening verbergen",
+  "showControls": "Bediening tonen",
+  "controlsHelp": "Klik of tik op de kleur om verder te gaan. Gebruik de pijltjestoetsen om van kleur te wisselen en Esc om af te sluiten."
+}

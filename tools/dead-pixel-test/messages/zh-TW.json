@@ -1,0 +1,16 @@
+{
+  "testColors": "測試顏色",
+  "white": "白色",
+  "black": "黑色",
+  "red": "紅色",
+  "green": "綠色",
+  "blue": "藍色",
+  "fullscreen": "開始全螢幕測試",
+  "fullscreenLabel": "全螢幕壞點測試",
+  "exit": "離開全螢幕",
+  "previous": "上一個顏色",
+  "next": "下一個顏色",
+  "hideControls": "隱藏控制列",
+  "showControls": "顯示控制列",
+  "controlsHelp": "點擊或輕觸測試畫面切換顏色。也可以使用方向鍵切換顏色，按 Esc 離開。"
+}

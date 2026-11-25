@@ -1,0 +1,4 @@
+{
+  "name": "Test martwych pikseli",
+  "description": "Sprawdź ekran pod kątem martwych pikseli, jasnych punktów i zablokowanych subpikseli na białym, czarnym, czerwonym, zielonym i niebieskim tle wyświetlanym na pełnym ekranie."
+}

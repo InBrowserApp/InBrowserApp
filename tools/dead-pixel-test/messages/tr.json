@@ -1,0 +1,16 @@
+{
+  "testColors": "Test renkleri",
+  "white": "Beyaz",
+  "black": "Siyah",
+  "red": "Kırmızı",
+  "green": "Yeşil",
+  "blue": "Mavi",
+  "fullscreen": "Tam ekran testini başlat",
+  "fullscreenLabel": "Tam ekran ölü piksel testi",
+  "exit": "Tam ekrandan çık",
+  "previous": "Önceki renk",
+  "next": "Sonraki renk",
+  "hideControls": "Kontrolleri gizle",
+  "showControls": "Kontrolleri göster",
+  "controlsHelp": "İlerlemek için test rengine tıklayın veya dokunun. Renk değiştirmek için ok tuşlarını, çıkmak için Esc tuşunu kullanın."
+}

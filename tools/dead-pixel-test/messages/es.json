@@ -1,0 +1,16 @@
+{
+  "testColors": "Colores de prueba",
+  "white": "Blanco",
+  "black": "Negro",
+  "red": "Rojo",
+  "green": "Verde",
+  "blue": "Azul",
+  "fullscreen": "Iniciar prueba a pantalla completa",
+  "fullscreenLabel": "Prueba de píxeles muertos a pantalla completa",
+  "exit": "Salir de pantalla completa",
+  "previous": "Color anterior",
+  "next": "Color siguiente",
+  "hideControls": "Ocultar controles",
+  "showControls": "Mostrar controles",
+  "controlsHelp": "Haz clic en el color o tócalo para avanzar. Usa las flechas para cambiar de color y Esc para salir."
+}

@@ -1,0 +1,16 @@
+{
+  "testColors": "Couleurs de test",
+  "white": "Blanc",
+  "black": "Noir",
+  "red": "Rouge",
+  "green": "Vert",
+  "blue": "Bleu",
+  "fullscreen": "Lancer le test en plein écran",
+  "fullscreenLabel": "Test de pixels morts en plein écran",
+  "exit": "Quitter le plein écran",
+  "previous": "Couleur précédente",
+  "next": "Couleur suivante",
+  "hideControls": "Masquer les commandes",
+  "showControls": "Afficher les commandes",
+  "controlsHelp": "Cliquez ou touchez la couleur pour passer à la suivante. Utilisez les flèches pour changer de couleur et Échap pour quitter."
+}
