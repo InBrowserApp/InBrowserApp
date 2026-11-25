@@ -132,6 +132,7 @@
     "@tool/fb2-to-epub-converter": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/file-type-detector": "workspace:*",
+    "@tool/filecoin-address-converter": "workspace:*",
     "@tool/filecoin-deal-lookup": "workspace:*",
     "@tool/filecoin-piece-cid-calculator": "workspace:*",
     "@tool/filecoin-storage-cost-calculator": "workspace:*",

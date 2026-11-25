@@ -1,0 +1,16 @@
+{
+  "address": "ที่อยู่ Filecoin หรือที่อยู่แบบ Ethereum",
+  "network": "เครือข่าย Filecoin",
+  "mainnet": "เครือข่ายหลัก",
+  "calibration": "เครือข่ายทดสอบ Calibration",
+  "convert": "แปลงที่อยู่",
+  "sample": "ลองใช้ตัวอย่าง",
+  "filecoinAddress": "ที่อยู่ Filecoin",
+  "ethereumAddress": "ที่อยู่แบบ Ethereum",
+  "invalidAddress": "ป้อนที่อยู่ Filecoin แบบ f410 หรือ t410 หรือที่อยู่ 0x ที่มีเลขฐานสิบหก 40 หลัก",
+  "filecoinChecksum": "เช็กซัม Filecoin ไม่ตรงกัน คัดลอกที่อยู่แบบเต็มอีกครั้ง",
+  "ethereumChecksum": "เช็กซัมของที่อยู่ 0x ที่มีทั้งตัวพิมพ์ใหญ่และพิมพ์เล็กไม่ตรงกัน ตรวจสอบที่อยู่กับกระเป๋าเงินหรือตัวสำรวจบล็อกเชน",
+  "actorId": "ที่อยู่นี้เข้ารหัส Actor ID ของ Filecoin ให้ใช้ที่อยู่แบบมอบหมาย f410 หรือ t410 หรือที่อยู่ 0x ที่เทียบเท่ากัน",
+  "copy": "คัดลอก",
+  "copied": "คัดลอกแล้ว"
+}

@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin 位址或以太坊格式的位址",
+  "network": "Filecoin 網路",
+  "mainnet": "主網",
+  "calibration": "Calibration 測試網",
+  "convert": "轉換位址",
+  "sample": "試用範例",
+  "filecoinAddress": "Filecoin 位址",
+  "ethereumAddress": "以太坊格式的位址",
+  "invalidAddress": "請輸入 Filecoin f410 或 t410 位址，或含 40 個十六進位字元的 0x 位址。",
+  "filecoinChecksum": "Filecoin 總和檢查碼不符。請重新複製完整位址。",
+  "ethereumChecksum": "混合大小寫的 0x 位址未通過檢查。請與錢包或區塊瀏覽器中的位址比對。",
+  "actorId": "此位址編碼的是 Filecoin Actor ID。請使用 f410 或 t410 委派位址，或對應的 0x 位址。",
+  "copy": "複製",
+  "copied": "已複製"
+}

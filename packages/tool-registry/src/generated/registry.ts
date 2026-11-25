@@ -16029,6 +16029,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "filecoin-address-converter",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: [
+      "filecoin",
+      "fevm",
+      "f410",
+      "t410",
+      "0x",
+      "ethereum",
+      "delegated address",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل عناوين Filecoin",
+        description:
+          "حوّل عناوين Filecoin من نوع f410 أو t410 إلى صيغة 0x الخاصة بـ Ethereum وبالعكس. افحص مجموع التحقق لعناوين شبكة Filecoin الرئيسية وشبكة الاختبار Calibration في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Adresskonverter",
+        description:
+          "Konvertieren Sie Filecoin-Adressen mit f410 oder t410 ins Ethereum-Format 0x und umgekehrt. Prüfen Sie die Prüfsummen für Filecoin-Mainnet und Calibration im Browser.",
+      },
+      en: {
+        name: "Filecoin Address Converter",
+        description:
+          "Convert Filecoin f410 or t410 addresses to Ethereum-style 0x and back. Check checksums for Filecoin mainnet and Calibration in your browser.",
+      },
+      es: {
+        name: "Conversor de direcciones de Filecoin",
+        description:
+          "Convierte direcciones f410 o t410 de Filecoin al formato 0x de Ethereum y a la inversa. Comprueba las sumas de comprobación de la red principal de Filecoin y de Calibration en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’adresses Filecoin",
+        description:
+          "Convertissez les adresses Filecoin f410 ou t410 au format Ethereum 0x et inversement. Vérifiez les sommes de contrôle sur le réseau principal Filecoin et sur Calibration dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר כתובות Filecoin",
+        description:
+          "המירו כתובות f410 או t410 של Filecoin לפורמט 0x של Ethereum ובחזרה. אמתו סכומי בדיקה לכתובות ברשת הראשית של Filecoin וברשת הבדיקות Calibration, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "Filecoin पता कन्वर्टर",
+        description:
+          "Filecoin के f410 या t410 पते को Ethereum के 0x फ़ॉर्मैट में बदलें या उलटा कन्वर्ज़न करें। ब्राउज़र में Filecoin मेननेट और Calibration के चेकसम जाँचें।",
+      },
+      id: {
+        name: "Konverter Alamat Filecoin",
+        description:
+          "Konversi alamat Filecoin f410 atau t410 ke format 0x bergaya Ethereum dan sebaliknya. Periksa checksum untuk mainnet Filecoin dan Calibration di browser.",
+      },
+      it: {
+        name: "Convertitore di indirizzi Filecoin",
+        description:
+          "Converti indirizzi Filecoin f410 o t410 nel formato 0x di Ethereum e viceversa. Verifica i checksum per la rete principale Filecoin e Calibration nel browser.",
+      },
+      ja: {
+        name: "Filecoin アドレス変換ツール",
+        description:
+          "Filecoin の f410 や t410 アドレスと Ethereum 形式の 0x アドレスを相互変換できます。Filecoin メインネットと Calibration テストネットのアドレスのチェックサムをブラウザで検証します。",
+      },
+      ko: {
+        name: "Filecoin 주소 변환기",
+        description:
+          "Filecoin f410 또는 t410 주소와 이더리움 형식의 0x 주소를 양방향으로 변환하세요. 브라우저에서 Filecoin 메인넷과 Calibration 테스트넷 주소의 체크섬을 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Alamat Filecoin",
+        description:
+          "Tukar alamat Filecoin f410 atau t410 kepada format 0x gaya Ethereum dan sebaliknya. Semak checksum bagi mainnet Filecoin dan Calibration dalam pelayar.",
+      },
+      nl: {
+        name: "Filecoin-adresconverter",
+        description:
+          "Converteer Filecoin f410- of t410-adressen naar Ethereum-achtige 0x-adressen en terug. Controleer checksums voor het Filecoin-mainnet en Calibration in je browser.",
+      },
+      no: {
+        name: "Filecoin-adressekonverterer",
+        description:
+          "Konverter Filecoin f410- eller t410-adresser til Ethereum-formatet 0x og tilbake. Kontroller sjekksummer for Filecoins hovednett og Calibration i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter adresów Filecoin",
+        description:
+          "Konwertuj adresy Filecoin f410 lub t410 na format Ethereum 0x i odwrotnie. Sprawdzaj sumy kontrolne adresów z sieci głównej Filecoin i sieci Calibration w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de endereços do Filecoin",
+        description:
+          "Converta endereços f410 ou t410 do Filecoin para o formato 0x do Ethereum e vice-versa. Valide somas de verificação da rede principal do Filecoin e da rede Calibration no navegador.",
+      },
+      ru: {
+        name: "Конвертер адресов Filecoin",
+        description:
+          "Преобразуйте адреса Filecoin f410 и t410 в формат Ethereum 0x и обратно. Проверяйте контрольные суммы для основной сети Filecoin и тестовой сети Calibration прямо в браузере.",
+      },
+      sv: {
+        name: "Filecoin-adresskonverterare",
+        description:
+          "Konvertera Filecoin-adresserna f410 eller t410 till Ethereum-formatet 0x och tillbaka. Kontrollera checksummor för Filecoins huvudnät och Calibration i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ Filecoin",
+        description:
+          "แปลงที่อยู่ Filecoin แบบ f410 หรือ t410 เป็น 0x แบบ Ethereum และแปลงกลับ ตรวจสอบเช็กซัมสำหรับเครือข่ายหลัก Filecoin และ Calibration ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Adres Dönüştürücü",
+        description:
+          "Filecoin f410 veya t410 adreslerini Ethereum biçiminde 0x adreslerine dönüştürün ya da tersini yapın. Filecoin ana ağı ve Calibration için sağlama toplamlarını tarayıcınızda kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ Filecoin",
+        description:
+          "Chuyển đổi địa chỉ Filecoin f410 hoặc t410 sang dạng 0x kiểu Ethereum và ngược lại. Xác minh tổng kiểm tra cho mạng chính Filecoin và Calibration ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin 地址转换器",
+        description:
+          "在 Filecoin f410 或 t410 地址与以太坊格式的 0x 地址之间双向转换。在浏览器中校验 Filecoin 主网和 Calibration 测试网的地址。",
+      },
+      "zh-TW": {
+        name: "Filecoin 位址轉換器",
+        description:
+          "在 Filecoin f410 或 t410 位址與以太坊格式的 0x 位址之間雙向轉換。在瀏覽器中驗證 Filecoin 主網及 Calibration 測試網位址的總和檢查碼。",
+      },
+    },
+  },
+  {
     slug: "filecoin-deal-lookup",
     category: "ipfs",
     icon: "file-text",
@@ -67718,6 +67850,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案類型偵測器",
         description:
           "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  "filecoin-address-converter": {
+    slug: "filecoin-address-converter",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: [
+      "filecoin",
+      "fevm",
+      "f410",
+      "t410",
+      "0x",
+      "ethereum",
+      "delegated address",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل عناوين Filecoin",
+        description:
+          "حوّل عناوين Filecoin من نوع f410 أو t410 إلى صيغة 0x الخاصة بـ Ethereum وبالعكس. افحص مجموع التحقق لعناوين شبكة Filecoin الرئيسية وشبكة الاختبار Calibration في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Adresskonverter",
+        description:
+          "Konvertieren Sie Filecoin-Adressen mit f410 oder t410 ins Ethereum-Format 0x und umgekehrt. Prüfen Sie die Prüfsummen für Filecoin-Mainnet und Calibration im Browser.",
+      },
+      en: {
+        name: "Filecoin Address Converter",
+        description:
+          "Convert Filecoin f410 or t410 addresses to Ethereum-style 0x and back. Check checksums for Filecoin mainnet and Calibration in your browser.",
+      },
+      es: {
+        name: "Conversor de direcciones de Filecoin",
+        description:
+          "Convierte direcciones f410 o t410 de Filecoin al formato 0x de Ethereum y a la inversa. Comprueba las sumas de comprobación de la red principal de Filecoin y de Calibration en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’adresses Filecoin",
+        description:
+          "Convertissez les adresses Filecoin f410 ou t410 au format Ethereum 0x et inversement. Vérifiez les sommes de contrôle sur le réseau principal Filecoin et sur Calibration dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר כתובות Filecoin",
+        description:
+          "המירו כתובות f410 או t410 של Filecoin לפורמט 0x של Ethereum ובחזרה. אמתו סכומי בדיקה לכתובות ברשת הראשית של Filecoin וברשת הבדיקות Calibration, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "Filecoin पता कन्वर्टर",
+        description:
+          "Filecoin के f410 या t410 पते को Ethereum के 0x फ़ॉर्मैट में बदलें या उलटा कन्वर्ज़न करें। ब्राउज़र में Filecoin मेननेट और Calibration के चेकसम जाँचें।",
+      },
+      id: {
+        name: "Konverter Alamat Filecoin",
+        description:
+          "Konversi alamat Filecoin f410 atau t410 ke format 0x bergaya Ethereum dan sebaliknya. Periksa checksum untuk mainnet Filecoin dan Calibration di browser.",
+      },
+      it: {
+        name: "Convertitore di indirizzi Filecoin",
+        description:
+          "Converti indirizzi Filecoin f410 o t410 nel formato 0x di Ethereum e viceversa. Verifica i checksum per la rete principale Filecoin e Calibration nel browser.",
+      },
+      ja: {
+        name: "Filecoin アドレス変換ツール",
+        description:
+          "Filecoin の f410 や t410 アドレスと Ethereum 形式の 0x アドレスを相互変換できます。Filecoin メインネットと Calibration テストネットのアドレスのチェックサムをブラウザで検証します。",
+      },
+      ko: {
+        name: "Filecoin 주소 변환기",
+        description:
+          "Filecoin f410 또는 t410 주소와 이더리움 형식의 0x 주소를 양방향으로 변환하세요. 브라우저에서 Filecoin 메인넷과 Calibration 테스트넷 주소의 체크섬을 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Alamat Filecoin",
+        description:
+          "Tukar alamat Filecoin f410 atau t410 kepada format 0x gaya Ethereum dan sebaliknya. Semak checksum bagi mainnet Filecoin dan Calibration dalam pelayar.",
+      },
+      nl: {
+        name: "Filecoin-adresconverter",
+        description:
+          "Converteer Filecoin f410- of t410-adressen naar Ethereum-achtige 0x-adressen en terug. Controleer checksums voor het Filecoin-mainnet en Calibration in je browser.",
+      },
+      no: {
+        name: "Filecoin-adressekonverterer",
+        description:
+          "Konverter Filecoin f410- eller t410-adresser til Ethereum-formatet 0x og tilbake. Kontroller sjekksummer for Filecoins hovednett og Calibration i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter adresów Filecoin",
+        description:
+          "Konwertuj adresy Filecoin f410 lub t410 na format Ethereum 0x i odwrotnie. Sprawdzaj sumy kontrolne adresów z sieci głównej Filecoin i sieci Calibration w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de endereços do Filecoin",
+        description:
+          "Converta endereços f410 ou t410 do Filecoin para o formato 0x do Ethereum e vice-versa. Valide somas de verificação da rede principal do Filecoin e da rede Calibration no navegador.",
+      },
+      ru: {
+        name: "Конвертер адресов Filecoin",
+        description:
+          "Преобразуйте адреса Filecoin f410 и t410 в формат Ethereum 0x и обратно. Проверяйте контрольные суммы для основной сети Filecoin и тестовой сети Calibration прямо в браузере.",
+      },
+      sv: {
+        name: "Filecoin-adresskonverterare",
+        description:
+          "Konvertera Filecoin-adresserna f410 eller t410 till Ethereum-formatet 0x och tillbaka. Kontrollera checksummor för Filecoins huvudnät och Calibration i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ Filecoin",
+        description:
+          "แปลงที่อยู่ Filecoin แบบ f410 หรือ t410 เป็น 0x แบบ Ethereum และแปลงกลับ ตรวจสอบเช็กซัมสำหรับเครือข่ายหลัก Filecoin และ Calibration ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Adres Dönüştürücü",
+        description:
+          "Filecoin f410 veya t410 adreslerini Ethereum biçiminde 0x adreslerine dönüştürün ya da tersini yapın. Filecoin ana ağı ve Calibration için sağlama toplamlarını tarayıcınızda kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ Filecoin",
+        description:
+          "Chuyển đổi địa chỉ Filecoin f410 hoặc t410 sang dạng 0x kiểu Ethereum và ngược lại. Xác minh tổng kiểm tra cho mạng chính Filecoin và Calibration ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin 地址转换器",
+        description:
+          "在 Filecoin f410 或 t410 地址与以太坊格式的 0x 地址之间双向转换。在浏览器中校验 Filecoin 主网和 Calibration 测试网的地址。",
+      },
+      "zh-TW": {
+        name: "Filecoin 位址轉換器",
+        description:
+          "在 Filecoin f410 或 t410 位址與以太坊格式的 0x 位址之間雙向轉換。在瀏覽器中驗證 Filecoin 主網及 Calibration 測試網位址的總和檢查碼。",
       },
     },
   },

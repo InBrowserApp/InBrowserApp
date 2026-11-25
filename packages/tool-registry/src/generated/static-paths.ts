@@ -11502,6 +11502,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "filecoin-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "de",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "en",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "es",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "he",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "id",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "it",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "no",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "th",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "filecoin-deal-lookup",
     language: "ar",
   },

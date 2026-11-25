@@ -1,0 +1,16 @@
+{
+  "address": "Endereço do Filecoin ou em formato Ethereum",
+  "network": "Rede do Filecoin",
+  "mainnet": "Rede principal",
+  "calibration": "Rede de teste Calibration",
+  "convert": "Converter endereço",
+  "sample": "Experimentar um exemplo",
+  "filecoinAddress": "Endereço do Filecoin",
+  "ethereumAddress": "Endereço em formato Ethereum",
+  "invalidAddress": "Introduza um endereço f410 ou t410 do Filecoin ou um endereço 0x com 40 dígitos hexadecimais.",
+  "filecoinChecksum": "A soma de verificação do Filecoin não corresponde. Volte a copiar o endereço completo.",
+  "ethereumChecksum": "A combinação de maiúsculas e minúsculas do endereço 0x não corresponde à soma de verificação. Compare o endereço com o da sua carteira ou do explorador.",
+  "actorId": "Este endereço codifica o ID de um ator do Filecoin. Utilize um endereço delegado f410 ou t410, ou o equivalente em formato 0x.",
+  "copy": "Copiar",
+  "copied": "Copiado"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter adresów Filecoin",
+  "description": "Konwertuj adresy Filecoin f410 lub t410 na format Ethereum 0x i odwrotnie. Sprawdzaj sumy kontrolne adresów z sieci głównej Filecoin i sieci Calibration w przeglądarce."
+}

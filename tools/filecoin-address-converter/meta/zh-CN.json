@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 地址转换器",
+  "description": "在 Filecoin f410 或 t410 地址与以太坊格式的 0x 地址之间双向转换。在浏览器中校验 Filecoin 主网和 Calibration 测试网的地址。"
+}

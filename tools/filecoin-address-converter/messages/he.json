@@ -1,0 +1,16 @@
+{
+  "address": "כתובת Filecoin או כתובת בפורמט Ethereum",
+  "network": "רשת Filecoin",
+  "mainnet": "הרשת הראשית",
+  "calibration": "רשת הבדיקות Calibration",
+  "convert": "המרת כתובת",
+  "sample": "נסו דוגמה",
+  "filecoinAddress": "כתובת Filecoin",
+  "ethereumAddress": "כתובת בפורמט Ethereum",
+  "invalidAddress": "הזינו כתובת f410 או t410 של Filecoin, או כתובת 0x עם 40 ספרות הקסדצימליות.",
+  "filecoinChecksum": "סכום הבדיקה של כתובת Filecoin אינו תואם. העתיקו שוב את הכתובת המלאה.",
+  "ethereumChecksum": "סכום הבדיקה של כתובת 0x באותיות גדולות וקטנות אינו תואם. בדקו את הכתובת מול הארנק או סייר הבלוקים.",
+  "actorId": "כתובת זו מקודדת מזהה Actor ב-Filecoin. השתמשו בכתובת מואצלת מסוג f410 או t410, או בכתובת 0x המקבילה.",
+  "copy": "העתקה",
+  "copied": "הועתק"
+}

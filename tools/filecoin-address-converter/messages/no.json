@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin-adresse eller adresse i Ethereum-format",
+  "network": "Filecoin-nettverk",
+  "mainnet": "Hovednett",
+  "calibration": "Calibration-testnett",
+  "convert": "Konverter adresse",
+  "sample": "Prøv et eksempel",
+  "filecoinAddress": "Filecoin-adresse",
+  "ethereumAddress": "Adresse i Ethereum-format",
+  "invalidAddress": "Skriv inn en Filecoin f410- eller t410-adresse, eller en 0x-adresse med 40 heksadesimale sifre.",
+  "filecoinChecksum": "Filecoin-sjekksummen samsvarer ikke. Kopier hele adressen på nytt.",
+  "ethereumChecksum": "Sjekksummen for 0x-adressen med blandede store og små bokstaver samsvarer ikke. Kontroller adressen mot lommeboken eller blokkutforskeren.",
+  "actorId": "Denne adressen koder en Filecoin-aktør-ID. Bruk en delegert f410- eller t410-adresse eller den tilsvarende 0x-adressen.",
+  "copy": "Kopier",
+  "copied": "Kopiert"
+}

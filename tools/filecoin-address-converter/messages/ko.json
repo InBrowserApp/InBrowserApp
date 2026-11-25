@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin 주소 또는 이더리움 형식 주소",
+  "network": "Filecoin 네트워크",
+  "mainnet": "메인넷",
+  "calibration": "Calibration 테스트넷",
+  "convert": "주소 변환",
+  "sample": "예제 사용하기",
+  "filecoinAddress": "Filecoin 주소",
+  "ethereumAddress": "이더리움 형식 주소",
+  "invalidAddress": "Filecoin f410 또는 t410 주소나 16진수 40자리의 0x 주소를 입력하세요.",
+  "filecoinChecksum": "Filecoin 체크섬이 일치하지 않습니다. 전체 주소를 다시 복사하세요.",
+  "ethereumChecksum": "대소문자가 섞인 0x 주소의 체크섬이 일치하지 않습니다. 지갑이나 탐색기의 주소와 대조해 보세요.",
+  "actorId": "이 주소는 Filecoin 액터 ID를 나타냅니다. f410 또는 t410 위임 주소나 이에 해당하는 0x 주소를 사용하세요.",
+  "copy": "복사",
+  "copied": "복사됨"
+}

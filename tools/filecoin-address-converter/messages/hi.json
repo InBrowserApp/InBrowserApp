@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin का पता या Ethereum फ़ॉर्मैट का पता",
+  "network": "Filecoin नेटवर्क",
+  "mainnet": "मेननेट",
+  "calibration": "Calibration टेस्टनेट",
+  "convert": "पता बदलें",
+  "sample": "कोई उदाहरण आज़माएँ",
+  "filecoinAddress": "Filecoin का पता",
+  "ethereumAddress": "Ethereum फ़ॉर्मैट का पता",
+  "invalidAddress": "Filecoin का f410 या t410 पता, या 40 हेक्साडेसिमल अंकों वाला 0x पता दर्ज करें।",
+  "filecoinChecksum": "Filecoin चेकसम मेल नहीं खाता। पूरा पता फिर से कॉपी करें।",
+  "ethereumChecksum": "बड़े और छोटे अक्षरों वाले 0x पते का चेकसम मेल नहीं खाता। अपने वॉलेट या ब्लॉक एक्सप्लोरर में पता मिलाएँ।",
+  "actorId": "इस पते में Filecoin ऐक्टर ID एन्कोड है। डेलिगेट किया हुआ f410 या t410 पता, या उसी का 0x पता इस्तेमाल करें।",
+  "copy": "कॉपी करें",
+  "copied": "कॉपी हो गया"
+}
