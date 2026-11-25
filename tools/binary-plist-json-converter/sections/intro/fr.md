@@ -16,7 +16,8 @@ JSON ne possède pas de type natif pour les dates, les données binaires ou les 
 | Octets en Base64                         | `{"$plist":"data","value":"AQID"}`                     |
 | Grand entier sous forme de texte décimal | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID d’une archive à clés                 | `{"$plist":"uid","value":42}`                          |
+| Nombre réel de grande valeur absolue     | `{"$plist":"real","value":"1e+100"}`                   |
 
-Garde les balises lors de la conversion vers Plist. Pour un entier hors de la plage exacte de JSON, utilise la balise prévue pour les entiers et écris la valeur décimale entre guillemets. Si un dictionnaire a la même structure qu’une balise, le convertisseur l’encapsule dans une balise `dictionary` pour conserver ses clés. La conversion préserve la structure et les valeurs prises en charge. L’ordre des objets Plist, la taille de stockage des nombres et les octets d’origine peuvent changer.
+Garde les balises lors de la conversion vers Plist. Pour un entier hors de la plage exacte de JSON, utilise la balise prévue pour les entiers et écris la valeur décimale entre guillemets. Si un dictionnaire a la même structure qu’une balise, le convertisseur l’encapsule dans une balise `dictionary` pour conserver ses clés. La conversion préserve la structure et les valeurs prises en charge. L’ordre des objets Plist, le type des nombres réels à valeur entière comme `1.0` et les octets d’origine peuvent changer.
 
 [Structure et types des listes de propriétés Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

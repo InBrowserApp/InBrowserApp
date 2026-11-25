@@ -16,7 +16,8 @@ JSON har ingen egne typer for datoer, bytedata eller UID-er i nøkkelbaserte ark
 | Byte som Base64                | `{"$plist":"data","value":"AQID"}`                     |
 | Stort heltall som desimaltekst | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID i nøkkelbasert arkiv       | `{"$plist":"uid","value":42}`                          |
+| Stort reelt tall               | `{"$plist":"real","value":"1e+100"}`                   |
 
-Behold merkene når du konverterer tilbake til Plist. For tall utenfor JSONs sikre heltallsområde bruker du et heltallsmerke med en desimalverdi i anførselstegn. En ordbok med samme struktur som et merke pakkes inn i et `dictionary`-merke for å bevare nøklene. Konverteringen bevarer strukturen og støttede verdier. Rekkefølgen på objektene, antall byte som brukes til å lagre tall, og de opprinnelige binære bytene kan endres.
+Behold merkene når du konverterer tilbake til Plist. For tall utenfor JSONs sikre heltallsområde bruker du et heltallsmerke med en desimalverdi i anførselstegn. En ordbok med samme struktur som et merke pakkes inn i et `dictionary`-merke for å bevare nøklene. Konverteringen bevarer strukturen og støttede verdier. Rekkefølgen på objektene, talltypen for reelle tall med heltallsverdi som `1.0`, og de opprinnelige binære bytene kan endres.
 
 [Struktur og typer i Apples egenskapslister](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

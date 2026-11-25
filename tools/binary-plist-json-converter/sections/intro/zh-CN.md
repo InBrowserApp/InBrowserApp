@@ -16,7 +16,8 @@ JSON 没有表示日期、字节数据或键控归档 UID 的原生类型。转�
 | Base64 编码的字节数据    | `{"$plist":"data","value":"AQID"}`                     |
 | 以十进制文本表示的大整数 | `{"$plist":"integer","value":"9007199254740993"}`      |
 | 键控归档 UID             | `{"$plist":"uid","value":42}`                          |
+| 数值较大的实数           | `{"$plist":"real","value":"1e+100"}`                   |
 
-转回 Plist 时请保留这些标签。对于超出 JSON 安全整数范围的值，请使用整数标签，并用引号包裹十进制值。结构与标签相同的字典会用 `dictionary` 标签包裹，以保留其键。转换会保留数据结构和受支持的值。Plist 对象的顺序、数值的存储位宽以及原始二进制字节可能发生变化。
+转回 Plist 时请保留这些标签。对于超出 JSON 安全整数范围的值，请使用整数标签，并用引号包裹十进制值。结构与标签相同的字典会用 `dictionary` 标签包裹，以保留其键。转换会保留数据结构和受支持的值。Plist 对象的顺序、值为整数的实数（例如 `1.0`）的数值类型以及原始二进制字节可能发生变化。
 
 [Apple 属性列表的结构和类型](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

@@ -401,6 +401,7 @@ publicHoistPattern:
   - "@types/*"
 
 patchedDependencies:
+  rork-plist@0.7.0: patches/rork-plist@0.7.0.patch
   djvu-rs@0.46.0: patches/djvu-rs@0.46.0.patch
   "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch"
   "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch"

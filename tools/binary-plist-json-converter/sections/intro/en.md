@@ -16,7 +16,8 @@ JSON has no native date, byte data, or keyed-archive UID type. This converter us
 | Bytes as Base64               | `{"$plist":"data","value":"AQID"}`                     |
 | Large integer as decimal text | `{"$plist":"integer","value":"9007199254740993"}`      |
 | Keyed-archive UID             | `{"$plist":"uid","value":42}`                          |
+| Large real number             | `{"$plist":"real","value":"1e+100"}`                   |
 
-Keep the tags when converting back to Plist. Use a quoted decimal value with the integer tag for values outside JSON's safe integer range. A dictionary that has the same shape as a tag is wrapped with a `dictionary` tag to preserve its keys. Conversion preserves structure and supported values. Plist object ordering, numeric storage width, and the original binary bytes can change.
+Keep the tags when converting back to Plist. Use a quoted decimal value with the integer tag for values outside JSON's safe integer range. A dictionary that has the same shape as a tag is wrapped with a `dictionary` tag to preserve its keys. Conversion preserves structure and supported values. Plist object ordering, the numeric type of whole-valued reals such as `1.0`, and the original binary bytes can change.
 
 [Apple property list structure and types](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

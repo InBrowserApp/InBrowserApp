@@ -16,7 +16,8 @@ JSON heeft geen eigen typen voor datums, binaire gegevens of UID’s uit archiev
 | Bytes als Base64                      | `{"$plist":"data","value":"AQID"}`                     |
 | Groot geheel getal als decimale tekst | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID uit een archief met sleutels      | `{"$plist":"uid","value":42}`                          |
+| Groot kommagetal                      | `{"$plist":"real","value":"1e+100"}`                   |
 
-Behoud de tags bij het terugzetten naar Plist. Gebruik voor gehele getallen buiten het veilige bereik van JSON de tag voor gehele getallen en zet de decimale waarde tussen aanhalingstekens. Heeft een dictionary dezelfde structuur als een tag, dan plaatst de converter die dictionary in een `dictionary`-tag om de sleutels te behouden. De structuur en ondersteunde waarden blijven bij conversie behouden. De volgorde van Plist-objecten, de opslagbreedte van getallen en de oorspronkelijke bytes kunnen wijzigen.
+Behoud de tags bij het terugzetten naar Plist. Gebruik voor gehele getallen buiten het veilige bereik van JSON de tag voor gehele getallen en zet de decimale waarde tussen aanhalingstekens. Heeft een dictionary dezelfde structuur als een tag, dan plaatst de converter die dictionary in een `dictionary`-tag om de sleutels te behouden. De structuur en ondersteunde waarden blijven bij conversie behouden. De volgorde van Plist-objecten, het numerieke type van kommagetallen met een gehele waarde (zoals `1.0`) en de oorspronkelijke bytes kunnen wijzigen.
 
 [Structuur en typen van Apple-eigenschappenlijsten](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

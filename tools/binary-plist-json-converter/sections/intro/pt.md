@@ -16,7 +16,8 @@ JSON não tem tipos nativos para datas, dados binários ou UIDs de arquivos com 
 | Bytes em Base64                   | `{"$plist":"data","value":"AQID"}`                     |
 | Inteiro grande como texto decimal | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID de um arquivo com chaves      | `{"$plist":"uid","value":42}`                          |
+| Número real de grande magnitude   | `{"$plist":"real","value":"1e+100"}`                   |
 
-Mantenha as tags ao converter de volta para Plist. Para inteiros fora do intervalo seguro do JSON, use a tag de inteiro e escreva o valor decimal entre aspas. Se um dicionário tiver a mesma estrutura de uma tag, o conversor o envolve em uma tag `dictionary` para preservar suas chaves. A conversão preserva a estrutura e os valores compatíveis. A ordem dos objetos Plist, o espaço usado para armazenar números e os bytes originais podem mudar.
+Mantenha as tags ao converter de volta para Plist. Para inteiros fora do intervalo seguro do JSON, use a tag de inteiro e escreva o valor decimal entre aspas. Se um dicionário tiver a mesma estrutura de uma tag, o conversor o envolve em uma tag `dictionary` para preservar suas chaves. A conversão preserva a estrutura e os valores compatíveis. A ordem dos objetos Plist, o tipo numérico de números reais com valor inteiro (como `1.0`) e os bytes originais podem mudar.
 
 [Estrutura e tipos das listas de propriedades da Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

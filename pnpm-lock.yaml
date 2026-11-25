@@ -1229,6 +1229,7 @@ patchedDependencies:
   djvu-rs@0.46.0: 5e2925223863631262eeabc78a87fb8ef78467ec2aebb508412d5d98e8157ce8
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
   hyparquet@1.33.1: f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830
+  rork-plist@0.7.0: 17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
   xlsx@0.20.3: d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79
 
@@ -4717,7 +4718,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       rork-plist:
         specifier: 'catalog:'
-        version: 0.7.0
+        version: 0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -15132,7 +15133,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       rork-plist:
         specifier: 'catalog:'
-        version: 0.7.0
+        version: 0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -32518,7 +32519,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.19
       '@rolldown/binding-win32-x64-msvc': 1.2.19
 
-  rork-plist@0.7.0: {}
+  rork-plist@0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c): {}
 
   roughjs@4.6.6:
     dependencies:

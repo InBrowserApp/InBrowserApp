@@ -16,7 +16,8 @@ JSON 沒有日期、位元組資料或鍵式封存 UID 的原生型別。轉換�
 | Base64 編碼的位元組資料    | `{"$plist":"data","value":"AQID"}`                     |
 | 以十進位文字表示的大型整數 | `{"$plist":"integer","value":"9007199254740993"}`      |
 | 鍵式封存 UID               | `{"$plist":"uid","value":42}`                          |
+| 數值較大的實數             | `{"$plist":"real","value":"1e+100"}`                   |
 
-轉回 Plist 時，請保留這些標籤。超出 JSON 安全整數範圍的值須使用整數標籤，並將十進位值放在引號內。若字典的結構與標籤相同，會以 `dictionary` 標籤包住字典，以保留其中的鍵。轉換會保留資料結構和支援的值。Plist 物件的順序、數值占用的位元數和原始二進位資料可能會改變。
+轉回 Plist 時，請保留這些標籤。超出 JSON 安全整數範圍的值須使用整數標籤，並將十進位值放在引號內。若字典的結構與標籤相同，會以 `dictionary` 標籤包住字典，以保留其中的鍵。轉換會保留資料結構和支援的值。Plist 物件的順序、值為整數的實數（例如 `1.0`）的數值型別和原始二進位資料可能會改變。
 
 [Apple 屬性列表的結構和型別](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

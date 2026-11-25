@@ -98,6 +98,8 @@ test.each([
   ['{"$plist":"dictionary","value":[1]}', "Invalid plist type tag"],
   ['{"$plist":"uid","value":"2"}', "Invalid plist type tag"],
   ['{"$plist":"data","value":12}', "Invalid plist type tag"],
+  ['{"$plist":"real","value":"1e999"}', "Invalid plist type tag"],
+  ['{"$plist":"real","value":"0xf"}', "Invalid plist type tag"],
 ])("rejects unrepresentable input %s", (text, message) => {
   expect(() => jsonToPlist(text)).toThrow(message)
 })
@@ -167,4 +169,24 @@ test("imports JSON from a local file and bases the artifact name on the input", 
       "download"
     )
   ).toBe("settings.plist")
+})
+
+test("round-trips Python plistlib's large finite reals and signed zero", () => {
+  const fixture =
+    "YnBsaXN0MDDTAQIDBAUGWWxhcmdlUmVhbFxuZWdhdGl2ZVplcm9Zd2hvbGVSZWFsI1SySa0llMN9I4AAAAAAAAAAIz/wAAAAAAAACA8ZJjA5QgAAAAAAAAEBAAAAAAAAAAcAAAAAAAAAAAAAAAAAAABL"
+  const bytes = Uint8Array.from(atob(fixture), (character) =>
+    character.charCodeAt(0)
+  )
+  const json = plistToJson(bytes)
+  expect(JSON.parse(json)).toEqual({
+    largeReal: { $plist: "real", value: "1e+100" },
+    negativeZero: { $plist: "real", value: "-0" },
+    wholeReal: 1,
+  })
+  expect(parseBinaryPlist(jsonToPlist(json))).toEqual({
+    largeReal: 1e100,
+    negativeZero: -0,
+    wholeReal: 1,
+  })
+  expect(plistToJson(jsonToPlist(json))).toBe(json)
 })

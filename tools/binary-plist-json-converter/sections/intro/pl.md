@@ -16,7 +16,8 @@ JSON nie ma osobnego typu dla dat, danych bajtowych ani identyfikatorów UID w a
 | Bajty w Base64                              | `{"$plist":"data","value":"AQID"}`                     |
 | Duża liczba całkowita jako zapis dziesiętny | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID w archiwum z kluczami                   | `{"$plist":"uid","value":42}`                          |
+| Duża liczba rzeczywista                     | `{"$plist":"real","value":"1e+100"}`                   |
 
-Zachowaj znaczniki przy konwersji z powrotem na Plist. Liczbę spoza zakresu bezpiecznych liczb całkowitych JSON zapisz jako wartość dziesiętną w cudzysłowie i użyj znacznika liczby całkowitej. Słownik o takiej samej strukturze jak znacznik jest opakowywany znacznikiem `dictionary`, aby zachować jego klucze. Konwersja zachowuje strukturę i obsługiwane wartości. Kolejność obiektów Plist, liczba bajtów przeznaczonych na zapis liczb i oryginalne dane binarne mogą się zmienić.
+Zachowaj znaczniki przy konwersji z powrotem na Plist. Liczbę spoza zakresu bezpiecznych liczb całkowitych JSON zapisz jako wartość dziesiętną w cudzysłowie i użyj znacznika liczby całkowitej. Słownik o takiej samej strukturze jak znacznik jest opakowywany znacznikiem `dictionary`, aby zachować jego klucze. Konwersja zachowuje strukturę i obsługiwane wartości. Kolejność obiektów Plist, typ liczbowy liczb rzeczywistych o wartości całkowitej, takich jak `1.0`, i oryginalne dane binarne mogą się zmienić.
 
 [Struktura i typy list właściwości Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

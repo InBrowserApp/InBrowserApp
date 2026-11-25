@@ -16,7 +16,8 @@ JSON hat keine eigenen Typen für Datumswerte, Binärdaten und UIDs aus Archiven
 | Bytes als Base64                    | `{"$plist":"data","value":"AQID"}`                     |
 | Große Ganzzahl als Dezimaltext      | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID aus einem Archiv mit Schlüsseln | `{"$plist":"uid","value":42}`                          |
+| Große Gleitkommazahl                | `{"$plist":"real","value":"1e+100"}`                   |
 
-Behalte die Tags bei, wenn du zurück in Plist konvertierst. Für Werte außerhalb des sicheren Ganzzahlbereichs von JSON verwende den Ganzzahl-Tag und schreibe den Dezimalwert in Anführungszeichen. Entspricht ein Dictionary genau der Struktur eines Tags, wird es in einen `dictionary`-Tag eingebettet, damit seine Schlüssel erhalten bleiben. Die Konvertierung erhält die Struktur und die unterstützten Werte. Die Reihenfolge der Plist-Objekte, die Speicherbreite von Zahlen und die ursprünglichen Binärdaten können sich ändern.
+Behalte die Tags bei, wenn du zurück in Plist konvertierst. Für Werte außerhalb des sicheren Ganzzahlbereichs von JSON verwende den Ganzzahl-Tag und schreibe den Dezimalwert in Anführungszeichen. Entspricht ein Dictionary genau der Struktur eines Tags, wird es in einen `dictionary`-Tag eingebettet, damit seine Schlüssel erhalten bleiben. Die Konvertierung erhält die Struktur und die unterstützten Werte. Die Reihenfolge der Plist-Objekte, der Zahlentyp von Gleitkommazahlen mit ganzzahligem Wert wie `1.0` und die ursprünglichen Binärdaten können sich ändern.
 
 [Struktur und Typen von Apple-Eigenschaftslisten](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

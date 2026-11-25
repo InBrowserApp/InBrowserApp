@@ -11,7 +11,7 @@ import type { PlistDictionary, PlistValue } from "rork-plist"
 type Json = null | string | number | boolean | Json[] | JsonObject
 type JsonObject = { [key: string]: Json }
 
-const tags = new Set(["date", "data", "integer", "uid", "dictionary"])
+const tags = new Set(["date", "data", "integer", "uid", "real", "dictionary"])
 
 function tagOf(object: JsonObject) {
   const tag = object.$plist
@@ -38,8 +38,14 @@ function toJson(value: PlistValue): Json {
     )
     return tagOf(object) ? { $plist: "dictionary", value: object } : object
   }
-  if (typeof value === "number" && !Number.isFinite(value))
-    throw new TypeError("Non-finite plist number")
+  if (typeof value === "number") {
+    if (!Number.isFinite(value)) throw new TypeError("Non-finite plist number")
+    // Integral doubles outside the exact integer range must remain real values.
+    if (Object.is(value, -0)) return { $plist: "real", value: "-0" }
+    if (Number.isInteger(value) && !Number.isSafeInteger(value)) {
+      return { $plist: "real", value: value.toString() }
+    }
+  }
   return value
 }
 
@@ -83,6 +89,14 @@ function fromJson(value: Json): PlistValue {
     /^-?\d+$/.test(payload)
   )
     return BigInt(payload)
+  if (
+    tag === "real" &&
+    typeof payload === "string" &&
+    /^-?\d+(?:\.\d+)?(?:e[+-]?\d+)?$/i.test(payload)
+  ) {
+    const real = Number(payload)
+    if (Number.isFinite(real)) return real
+  }
   if (tag === "uid" && typeof payload === "number") return new PlistUid(payload)
   if (
     tag === "dictionary" &&

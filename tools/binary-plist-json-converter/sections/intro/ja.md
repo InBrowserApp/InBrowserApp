@@ -16,7 +16,8 @@ JSON には日付、バイトデータ、キー付きアーカイブの UID に�
 | Base64 で表現したバイトデータ       | `{"$plist":"data","value":"AQID"}`                     |
 | 10 進数の文字列で表現した大きな整数 | `{"$plist":"integer","value":"9007199254740993"}`      |
 | キー付きアーカイブの UID            | `{"$plist":"uid","value":42}`                          |
+| 大きな実数                          | `{"$plist":"real","value":"1e+100"}`                   |
 
-Plist に戻すときはタグを残してください。JSON で安全に表現できる整数の範囲を超える値には、整数タグを使い、10 進数の値を引用符で囲みます。型タグと同じ構造の辞書には `dictionary` タグを付けてキーを保持します。変換ではデータ構造と対応する値を保持します。Plist オブジェクトの順序や数値を格納するビット幅、元のバイナリデータは変わる場合があります。
+Plist に戻すときはタグを残してください。JSON で安全に表現できる整数の範囲を超える値には、整数タグを使い、10 進数の値を引用符で囲みます。型タグと同じ構造の辞書には `dictionary` タグを付けてキーを保持します。変換ではデータ構造と対応する値を保持します。Plist オブジェクトの順序や`1.0` など整数と同じ値を持つ実数の数値型、元のバイナリデータは変わる場合があります。
 
 [Apple のプロパティリストの構造と型](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

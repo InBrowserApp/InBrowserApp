@@ -16,7 +16,8 @@ JSON’da tarih, bayt verisi ve anahtarlı arşiv UID’si için yerleşik türl
 | Base64 olarak baytlar               | `{"$plist":"data","value":"AQID"}`                     |
 | Ondalık metin olarak büyük tam sayı | `{"$plist":"integer","value":"9007199254740993"}`      |
 | Anahtarlı arşiv UID’si              | `{"$plist":"uid","value":42}`                          |
+| Büyük reel sayı                     | `{"$plist":"real","value":"1e+100"}`                   |
 
-Plist’e geri dönüştürürken etiketleri koruyun. JSON’un güvenli tam sayı aralığı dışındaki değerlerde tam sayı etiketiyle birlikte ondalık değeri tırnak içinde yazın. Bir etiketle aynı yapıya sahip bir sözlük, anahtarlarını korumak için `dictionary` etiketiyle sarılır. Dönüşüm yapıyı ve desteklenen değerleri korur. Plist nesnelerinin sırası, sayıları saklamak için kullanılan bayt sayısı ve özgün ikili veriler değişebilir.
+Plist’e geri dönüştürürken etiketleri koruyun. JSON’un güvenli tam sayı aralığı dışındaki değerlerde tam sayı etiketiyle birlikte ondalık değeri tırnak içinde yazın. Bir etiketle aynı yapıya sahip bir sözlük, anahtarlarını korumak için `dictionary` etiketiyle sarılır. Dönüşüm yapıyı ve desteklenen değerleri korur. Plist nesnelerinin sırası, `1.0` gibi tam sayı değerine sahip reel sayıların türü ve özgün ikili veriler değişebilir.
 
 [Apple özellik listelerinin yapısı ve türleri](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

@@ -16,7 +16,8 @@ JSON tidak menyediakan tipe bawaan untuk tanggal, data bita, atau UID arsip berk
 | Bita dalam Base64                         | `{"$plist":"data","value":"AQID"}`                     |
 | Bilangan bulat besar sebagai teks desimal | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID arsip berkunci                        | `{"$plist":"uid","value":42}`                          |
+| Bilangan riil besar                       | `{"$plist":"real","value":"1e+100"}`                   |
 
-Pertahankan tag saat mengonversi kembali ke Plist. Untuk bilangan bulat di luar rentang aman JSON, tulis nilai desimal dalam tanda kutip dan gunakan tag bilangan bulat. Kamus yang strukturnya sama dengan tag akan dibungkus dengan tag `dictionary` agar kuncinya tetap tersimpan. Konversi mempertahankan struktur dan nilai yang didukung. Urutan objek Plist, jumlah bita untuk menyimpan angka, dan bita biner asli dapat berubah.
+Pertahankan tag saat mengonversi kembali ke Plist. Untuk bilangan bulat di luar rentang aman JSON, tulis nilai desimal dalam tanda kutip dan gunakan tag bilangan bulat. Kamus yang strukturnya sama dengan tag akan dibungkus dengan tag `dictionary` agar kuncinya tetap tersimpan. Konversi mempertahankan struktur dan nilai yang didukung. Urutan objek Plist, tipe numerik bilangan riil bernilai bulat seperti `1.0`, dan bita biner asli dapat berubah.
 
 [Struktur dan tipe daftar properti Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

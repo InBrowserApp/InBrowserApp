@@ -16,7 +16,8 @@ JSON carece de tipos nativos para fechas, datos binarios y UID de archivos con c
 | Bytes en Base64                  | `{"$plist":"data","value":"AQID"}`                     |
 | Entero grande como texto decimal | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID de un archivo con claves     | `{"$plist":"uid","value":42}`                          |
+| Número real de gran magnitud     | `{"$plist":"real","value":"1e+100"}`                   |
 
-Conserva las etiquetas al volver a convertir a Plist. Para enteros fuera del rango seguro de JSON, usa la etiqueta de entero y escribe el valor decimal entre comillas. Si un diccionario tiene la misma estructura que una etiqueta, el conversor lo envuelve con la etiqueta `dictionary` para conservar sus claves. La conversión conserva la estructura y los valores compatibles. El orden de los objetos Plist, el tamaño de almacenamiento de los números y los bytes originales pueden cambiar.
+Conserva las etiquetas al volver a convertir a Plist. Para enteros fuera del rango seguro de JSON, usa la etiqueta de entero y escribe el valor decimal entre comillas. Si un diccionario tiene la misma estructura que una etiqueta, el conversor lo envuelve con la etiqueta `dictionary` para conservar sus claves. La conversión conserva la estructura y los valores compatibles. El orden de los objetos Plist, el tipo numérico de los números reales de valor entero (como `1.0`) y los bytes originales pueden cambiar.
 
 [Estructura y tipos de las listas de propiedades de Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

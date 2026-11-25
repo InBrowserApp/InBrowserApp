@@ -16,7 +16,8 @@ JSON không có kiểu dữ liệu riêng cho ngày giờ, dữ liệu byte ho�
 | Dữ liệu byte ở dạng Base64              | `{"$plist":"data","value":"AQID"}`                     |
 | Số nguyên lớn dưới dạng chuỗi thập phân | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID của bản lưu trữ theo khóa           | `{"$plist":"uid","value":42}`                          |
+| Số thực có độ lớn lớn                   | `{"$plist":"real","value":"1e+100"}`                   |
 
-Giữ các thẻ này khi chuyển ngược sang Plist. Với số nguyên ngoài phạm vi an toàn của JSON, dùng thẻ số nguyên và đặt giá trị thập phân trong dấu ngoặc kép. Từ điển có cấu trúc trùng với thẻ sẽ được bọc bằng thẻ `dictionary` để giữ nguyên các khóa. Quá trình chuyển đổi giữ nguyên cấu trúc và các giá trị được hỗ trợ. Thứ tự đối tượng Plist, số bit dùng để lưu số và dữ liệu nhị phân ban đầu có thể thay đổi.
+Giữ các thẻ này khi chuyển ngược sang Plist. Với số nguyên ngoài phạm vi an toàn của JSON, dùng thẻ số nguyên và đặt giá trị thập phân trong dấu ngoặc kép. Từ điển có cấu trúc trùng với thẻ sẽ được bọc bằng thẻ `dictionary` để giữ nguyên các khóa. Quá trình chuyển đổi giữ nguyên cấu trúc và các giá trị được hỗ trợ. Thứ tự đối tượng Plist, kiểu số của các số thực có giá trị nguyên như `1.0` và dữ liệu nhị phân ban đầu có thể thay đổi.
 
 [Cấu trúc và kiểu dữ liệu của danh sách thuộc tính Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

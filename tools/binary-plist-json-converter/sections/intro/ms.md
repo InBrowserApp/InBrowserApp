@@ -16,7 +16,8 @@ JSON tiada jenis terbina dalam untuk tarikh, data bait atau UID arkib berkunci. 
 | Bait dalam Base64                     | `{"$plist":"data","value":"AQID"}`                     |
 | Integer besar sebagai teks perpuluhan | `{"$plist":"integer","value":"9007199254740993"}`      |
 | UID arkib berkunci                    | `{"$plist":"uid","value":42}`                          |
+| Nombor nyata yang besar               | `{"$plist":"real","value":"1e+100"}`                   |
 
-Kekalkan teg apabila menukar kembali kepada Plist. Bagi integer di luar julat selamat JSON, tulis nilai perpuluhan dalam tanda petik bersama teg integer. Kamus yang mempunyai struktur yang sama seperti teg dibalut dengan teg `dictionary` untuk mengekalkan kuncinya. Penukaran mengekalkan struktur dan nilai yang disokong. Tertib objek Plist, bilangan bait untuk menyimpan nombor dan bait binari asal boleh berubah.
+Kekalkan teg apabila menukar kembali kepada Plist. Bagi integer di luar julat selamat JSON, tulis nilai perpuluhan dalam tanda petik bersama teg integer. Kamus yang mempunyai struktur yang sama seperti teg dibalut dengan teg `dictionary` untuk mengekalkan kuncinya. Penukaran mengekalkan struktur dan nilai yang disokong. Tertib objek Plist, jenis angka bagi nombor nyata bernilai integer seperti `1.0`, dan bait binari asal boleh berubah.
 
 [Struktur dan jenis senarai sifat Apple](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)

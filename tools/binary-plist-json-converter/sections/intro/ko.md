@@ -16,7 +16,8 @@ JSON에는 날짜, 바이트 데이터, 키 기반 아카이브의 UID를 위한
 | Base64로 인코딩된 바이트 데이터 | `{"$plist":"data","value":"AQID"}`                     |
 | 10진수 문자열로 표현한 큰 정수  | `{"$plist":"integer","value":"9007199254740993"}`      |
 | 키 기반 아카이브의 UID          | `{"$plist":"uid","value":42}`                          |
+| 값이 큰 실수                    | `{"$plist":"real","value":"1e+100"}`                   |
 
-Plist로 되돌릴 때 태그를 유지하세요. JSON의 안전한 정수 범위를 벗어나는 값은 정수 태그를 사용하고 10진수 값을 따옴표로 감싸세요. 태그와 구조가 같은 딕셔너리는 키를 보존하기 위해 `dictionary` 태그로 감쌉니다. 변환 시 데이터 구조와 지원되는 값은 보존됩니다. Plist 객체 순서, 숫자 저장에 쓰이는 비트 수, 원본 바이너리 데이터는 바뀔 수 있습니다.
+Plist로 되돌릴 때 태그를 유지하세요. JSON의 안전한 정수 범위를 벗어나는 값은 정수 태그를 사용하고 10진수 값을 따옴표로 감싸세요. 태그와 구조가 같은 딕셔너리는 키를 보존하기 위해 `dictionary` 태그로 감쌉니다. 변환 시 데이터 구조와 지원되는 값은 보존됩니다. Plist 객체 순서, `1.0`처럼 정수와 값이 같은 실수의 숫자 타입, 원본 바이너리 데이터는 바뀔 수 있습니다.
 
 [Apple 속성 목록 구조 및 타입](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFPropertyLists/CFPropertyLists.html)
