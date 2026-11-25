@@ -126,10 +126,11 @@ export default function MeshConverter({
         </Alert>
       )}
       <Empty
-        className={cn(
-          "border border-dashed bg-muted/30",
-          result ? "min-h-36" : "min-h-64"
-        )}
+        className={
+          result
+            ? "items-start gap-2 p-0"
+            : "min-h-64 border border-dashed bg-muted/30"
+        }
       >
         {!result && (
           <EmptyHeader>
