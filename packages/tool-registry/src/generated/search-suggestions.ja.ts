@@ -1378,6 +1378,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "OPML エディター",
+    slug: "opml-editor",
+  },
+  {
     category: "developer",
     name: "Parquet ビューアー",
     slug: "parquet-viewer",

@@ -340,6 +340,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "opml-editor": () => import("@tool/opml-editor/page"),
   "parquet-viewer": () => import("@tool/parquet-viewer/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),

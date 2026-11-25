@@ -35018,6 +35018,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "opml-editor",
+    category: "web",
+    icon: "list-tree",
+    tags: [
+      "opml",
+      "rss",
+      "atom",
+      "xml",
+      "outline",
+      "subscriptions",
+      "import",
+      "export",
+      "editor",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر OPML",
+        description:
+          "حرّر ملفات OPML في متصفحك. نظّم المجلدات والاشتراكات في خلاصات RSS أو Atom، ثم نزّل ملف OPML المعدّل أو انسخ محتواه بصيغة XML.",
+      },
+      de: {
+        name: "OPML-Editor",
+        description:
+          "Bearbeite OPML-Dateien im Browser. Organisiere Ordner und RSS- oder Atom-Abonnements, lade die bearbeitete OPML-Datei herunter oder kopiere den XML-Text.",
+      },
+      en: {
+        name: "OPML Editor",
+        description:
+          "Edit OPML files in your browser. Organize folders and RSS or Atom subscriptions, then download the updated OPML or copy its XML.",
+      },
+      es: {
+        name: "Editor de OPML",
+        description:
+          "Edita archivos OPML en tu navegador. Organiza carpetas y suscripciones RSS o Atom y descarga el OPML actualizado o copia su XML.",
+      },
+      fr: {
+        name: "Éditeur OPML",
+        description:
+          "Modifiez vos fichiers OPML dans le navigateur. Organisez les dossiers et abonnements RSS ou Atom, puis téléchargez le fichier OPML modifié ou copiez son XML.",
+      },
+      he: {
+        name: "עורך OPML",
+        description:
+          "ערכו קובצי OPML בדפדפן. סדרו תיקיות ומינויים לערוצי RSS או Atom, ואז הורידו את קובץ ה־OPML המעודכן או העתיקו את ה־XML שלו.",
+      },
+      hi: {
+        name: "OPML संपादक",
+        description:
+          "अपने ब्राउज़र में OPML फ़ाइलें संपादित करें। फ़ोल्डर और RSS या Atom की सदस्यताएँ व्यवस्थित करें, फिर बदली हुई OPML फ़ाइल डाउनलोड करें या उसका XML कॉपी करें।",
+      },
+      id: {
+        name: "Editor OPML",
+        description:
+          "Edit file OPML di browser. Atur folder dan langganan RSS atau Atom, lalu unduh file OPML hasil edit atau salin XML-nya.",
+      },
+      it: {
+        name: "Editor OPML",
+        description:
+          "Modifica i file OPML nel browser. Organizza cartelle e iscrizioni RSS o Atom, poi scarica l’OPML aggiornato o copiane il codice XML.",
+      },
+      ja: {
+        name: "OPML エディター",
+        description:
+          "ブラウザーで OPML ファイルを編集します。フォルダーや RSS、Atom の購読リストを整理し、更新した OPML をダウンロードするか、XML をコピーできます。",
+      },
+      ko: {
+        name: "OPML 편집기",
+        description:
+          "브라우저에서 OPML 파일을 편집하세요. 폴더와 RSS 또는 Atom 구독을 정리한 다음 업데이트된 OPML을 다운로드하거나 XML을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting OPML",
+        description:
+          "Sunting fail OPML dalam pelayar. Susun folder dan langganan RSS atau Atom, kemudian muat turun fail OPML yang dikemas kini atau salin XML.",
+      },
+      nl: {
+        name: "OPML-editor",
+        description:
+          "Bewerk OPML-bestanden in je browser. Orden mappen en RSS- of Atom-abonnementen en download daarna het bijgewerkte OPML-bestand of kopieer de XML.",
+      },
+      no: {
+        name: "OPML-redigerer",
+        description:
+          "Rediger OPML-filer i nettleseren. Organiser mapper og abonnementer på RSS- eller Atom-strømmer, og last ned oppdatert OPML eller kopier XML-koden.",
+      },
+      pl: {
+        name: "Edytor OPML",
+        description:
+          "Edytuj pliki OPML w przeglądarce. Porządkuj foldery i subskrypcje RSS lub Atom, a następnie pobierz zmieniony plik OPML albo skopiuj jego XML.",
+      },
+      pt: {
+        name: "Editor de OPML",
+        description:
+          "Edite arquivos OPML no navegador. Organize pastas e assinaturas RSS ou Atom e baixe o OPML atualizado ou copie o XML.",
+      },
+      ru: {
+        name: "Редактор OPML",
+        description:
+          "Редактируйте файлы OPML в браузере. Упорядочивайте папки и подписки RSS или Atom, скачивайте обновлённый файл OPML или копируйте XML.",
+      },
+      sv: {
+        name: "OPML-redigerare",
+        description:
+          "Redigera OPML-filer i webbläsaren. Ordna mappar och prenumerationer på RSS- eller Atom-flöden och ladda sedan ner den uppdaterade OPML-filen eller kopiera XML-koden.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไข OPML",
+        description:
+          "แก้ไขไฟล์ OPML ในเบราว์เซอร์ จัดระเบียบโฟลเดอร์และฟีด RSS หรือ Atom ที่ติดตาม แล้วดาวน์โหลดไฟล์ OPML ที่แก้ไขหรือคัดลอก XML",
+      },
+      tr: {
+        name: "OPML Düzenleyici",
+        description:
+          "OPML dosyalarını tarayıcınızda düzenleyin. Klasörlerinizi ve RSS veya Atom aboneliklerinizi düzenleyip güncel OPML dosyasını indirin ya da XML içeriğini kopyalayın.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa OPML",
+        description:
+          "Chỉnh sửa tệp OPML trong trình duyệt. Sắp xếp thư mục và các nguồn RSS hoặc Atom đã đăng ký, rồi tải tệp OPML đã sửa hoặc sao chép XML.",
+      },
+      "zh-CN": {
+        name: "OPML 编辑器",
+        description:
+          "在浏览器中编辑 OPML 文件。整理文件夹和 RSS 或 Atom 订阅，然后下载更新后的 OPML 或复制其 XML。",
+      },
+      "zh-TW": {
+        name: "OPML 編輯器",
+        description:
+          "在瀏覽器中編輯 OPML 檔案。整理資料夾及 RSS 或 Atom 訂閱，再下載更新後的 OPML 或複製其 XML。",
+      },
+    },
+  },
+  {
     slug: "parquet-viewer",
     category: "developer",
     icon: "table-2",
@@ -89710,6 +89843,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  "opml-editor": {
+    slug: "opml-editor",
+    category: "web",
+    icon: "list-tree",
+    tags: [
+      "opml",
+      "rss",
+      "atom",
+      "xml",
+      "outline",
+      "subscriptions",
+      "import",
+      "export",
+      "editor",
+    ],
+    locales: {
+      ar: {
+        name: "محرّر OPML",
+        description:
+          "حرّر ملفات OPML في متصفحك. نظّم المجلدات والاشتراكات في خلاصات RSS أو Atom، ثم نزّل ملف OPML المعدّل أو انسخ محتواه بصيغة XML.",
+      },
+      de: {
+        name: "OPML-Editor",
+        description:
+          "Bearbeite OPML-Dateien im Browser. Organisiere Ordner und RSS- oder Atom-Abonnements, lade die bearbeitete OPML-Datei herunter oder kopiere den XML-Text.",
+      },
+      en: {
+        name: "OPML Editor",
+        description:
+          "Edit OPML files in your browser. Organize folders and RSS or Atom subscriptions, then download the updated OPML or copy its XML.",
+      },
+      es: {
+        name: "Editor de OPML",
+        description:
+          "Edita archivos OPML en tu navegador. Organiza carpetas y suscripciones RSS o Atom y descarga el OPML actualizado o copia su XML.",
+      },
+      fr: {
+        name: "Éditeur OPML",
+        description:
+          "Modifiez vos fichiers OPML dans le navigateur. Organisez les dossiers et abonnements RSS ou Atom, puis téléchargez le fichier OPML modifié ou copiez son XML.",
+      },
+      he: {
+        name: "עורך OPML",
+        description:
+          "ערכו קובצי OPML בדפדפן. סדרו תיקיות ומינויים לערוצי RSS או Atom, ואז הורידו את קובץ ה־OPML המעודכן או העתיקו את ה־XML שלו.",
+      },
+      hi: {
+        name: "OPML संपादक",
+        description:
+          "अपने ब्राउज़र में OPML फ़ाइलें संपादित करें। फ़ोल्डर और RSS या Atom की सदस्यताएँ व्यवस्थित करें, फिर बदली हुई OPML फ़ाइल डाउनलोड करें या उसका XML कॉपी करें।",
+      },
+      id: {
+        name: "Editor OPML",
+        description:
+          "Edit file OPML di browser. Atur folder dan langganan RSS atau Atom, lalu unduh file OPML hasil edit atau salin XML-nya.",
+      },
+      it: {
+        name: "Editor OPML",
+        description:
+          "Modifica i file OPML nel browser. Organizza cartelle e iscrizioni RSS o Atom, poi scarica l’OPML aggiornato o copiane il codice XML.",
+      },
+      ja: {
+        name: "OPML エディター",
+        description:
+          "ブラウザーで OPML ファイルを編集します。フォルダーや RSS、Atom の購読リストを整理し、更新した OPML をダウンロードするか、XML をコピーできます。",
+      },
+      ko: {
+        name: "OPML 편집기",
+        description:
+          "브라우저에서 OPML 파일을 편집하세요. 폴더와 RSS 또는 Atom 구독을 정리한 다음 업데이트된 OPML을 다운로드하거나 XML을 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Penyunting OPML",
+        description:
+          "Sunting fail OPML dalam pelayar. Susun folder dan langganan RSS atau Atom, kemudian muat turun fail OPML yang dikemas kini atau salin XML.",
+      },
+      nl: {
+        name: "OPML-editor",
+        description:
+          "Bewerk OPML-bestanden in je browser. Orden mappen en RSS- of Atom-abonnementen en download daarna het bijgewerkte OPML-bestand of kopieer de XML.",
+      },
+      no: {
+        name: "OPML-redigerer",
+        description:
+          "Rediger OPML-filer i nettleseren. Organiser mapper og abonnementer på RSS- eller Atom-strømmer, og last ned oppdatert OPML eller kopier XML-koden.",
+      },
+      pl: {
+        name: "Edytor OPML",
+        description:
+          "Edytuj pliki OPML w przeglądarce. Porządkuj foldery i subskrypcje RSS lub Atom, a następnie pobierz zmieniony plik OPML albo skopiuj jego XML.",
+      },
+      pt: {
+        name: "Editor de OPML",
+        description:
+          "Edite arquivos OPML no navegador. Organize pastas e assinaturas RSS ou Atom e baixe o OPML atualizado ou copie o XML.",
+      },
+      ru: {
+        name: "Редактор OPML",
+        description:
+          "Редактируйте файлы OPML в браузере. Упорядочивайте папки и подписки RSS или Atom, скачивайте обновлённый файл OPML или копируйте XML.",
+      },
+      sv: {
+        name: "OPML-redigerare",
+        description:
+          "Redigera OPML-filer i webbläsaren. Ordna mappar och prenumerationer på RSS- eller Atom-flöden och ladda sedan ner den uppdaterade OPML-filen eller kopiera XML-koden.",
+      },
+      th: {
+        name: "เครื่องมือแก้ไข OPML",
+        description:
+          "แก้ไขไฟล์ OPML ในเบราว์เซอร์ จัดระเบียบโฟลเดอร์และฟีด RSS หรือ Atom ที่ติดตาม แล้วดาวน์โหลดไฟล์ OPML ที่แก้ไขหรือคัดลอก XML",
+      },
+      tr: {
+        name: "OPML Düzenleyici",
+        description:
+          "OPML dosyalarını tarayıcınızda düzenleyin. Klasörlerinizi ve RSS veya Atom aboneliklerinizi düzenleyip güncel OPML dosyasını indirin ya da XML içeriğini kopyalayın.",
+      },
+      vi: {
+        name: "Trình chỉnh sửa OPML",
+        description:
+          "Chỉnh sửa tệp OPML trong trình duyệt. Sắp xếp thư mục và các nguồn RSS hoặc Atom đã đăng ký, rồi tải tệp OPML đã sửa hoặc sao chép XML.",
+      },
+      "zh-CN": {
+        name: "OPML 编辑器",
+        description:
+          "在浏览器中编辑 OPML 文件。整理文件夹和 RSS 或 Atom 订阅，然后下载更新后的 OPML 或复制其 XML。",
+      },
+      "zh-TW": {
+        name: "OPML 編輯器",
+        description:
+          "在瀏覽器中編輯 OPML 檔案。整理資料夾及 RSS 或 Atom 訂閱，再下載更新後的 OPML 或複製其 XML。",
       },
     },
   },

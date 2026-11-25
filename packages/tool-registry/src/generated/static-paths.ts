@@ -25302,6 +25302,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "opml-editor",
+    language: "ar",
+  },
+  {
+    slug: "opml-editor",
+    language: "de",
+  },
+  {
+    slug: "opml-editor",
+    language: "en",
+  },
+  {
+    slug: "opml-editor",
+    language: "es",
+  },
+  {
+    slug: "opml-editor",
+    language: "fr",
+  },
+  {
+    slug: "opml-editor",
+    language: "he",
+  },
+  {
+    slug: "opml-editor",
+    language: "hi",
+  },
+  {
+    slug: "opml-editor",
+    language: "id",
+  },
+  {
+    slug: "opml-editor",
+    language: "it",
+  },
+  {
+    slug: "opml-editor",
+    language: "ja",
+  },
+  {
+    slug: "opml-editor",
+    language: "ko",
+  },
+  {
+    slug: "opml-editor",
+    language: "ms",
+  },
+  {
+    slug: "opml-editor",
+    language: "nl",
+  },
+  {
+    slug: "opml-editor",
+    language: "no",
+  },
+  {
+    slug: "opml-editor",
+    language: "pl",
+  },
+  {
+    slug: "opml-editor",
+    language: "pt",
+  },
+  {
+    slug: "opml-editor",
+    language: "ru",
+  },
+  {
+    slug: "opml-editor",
+    language: "sv",
+  },
+  {
+    slug: "opml-editor",
+    language: "th",
+  },
+  {
+    slug: "opml-editor",
+    language: "tr",
+  },
+  {
+    slug: "opml-editor",
+    language: "vi",
+  },
+  {
+    slug: "opml-editor",
+    language: "zh-CN",
+  },
+  {
+    slug: "opml-editor",
+    language: "zh-TW",
+  },
+  {
     slug: "parquet-viewer",
     language: "ar",
   },
