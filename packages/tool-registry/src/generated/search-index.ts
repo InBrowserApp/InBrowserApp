@@ -32856,6 +32856,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mobi-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "mobi",
+      "pdf",
+      "ebook",
+      "mobi to pdf",
+      "mobipocket",
+      "kindle",
+      "azw",
+      "prc",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MOBI إلى PDF",
+        description:
+          "حوّل كتب MOBI وAZW وPRC المتوافقة وغير المحمية إلى PDF. عاين الفصول واختر مقاس الورق، ثم احفظ ملف PDF بنص قابل للتحديد في متصفحك.",
+      },
+      de: {
+        name: "MOBI-zu-PDF-Konverter",
+        description:
+          "Wandle kompatible MOBI-, AZW- und PRC-E-Books ohne Kopierschutz in PDF um. Prüfe die Kapitel, wähle ein Papierformat und speichere die PDF mit auswählbarem Text direkt im Browser.",
+      },
+      en: {
+        name: "MOBI to PDF Converter",
+        description:
+          "Convert compatible unprotected MOBI, AZW, and PRC books to PDF. Preview chapters, choose a paper size, and save selectable text in your browser.",
+      },
+      es: {
+        name: "Convertidor de MOBI a PDF",
+        description:
+          "Convierte libros MOBI, AZW y PRC compatibles y sin protección a PDF. Revisa los capítulos, elige el tamaño del papel y guarda un PDF con texto seleccionable en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur MOBI en PDF",
+        description:
+          "Convertissez les livres MOBI, AZW et PRC compatibles et sans protection en PDF. Prévisualisez les chapitres, choisissez le format du papier et enregistrez un PDF avec du texte sélectionnable dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MOBI ל־PDF",
+        description:
+          "המירו ספרי MOBI, AZW ו־PRC תואמים ללא הגנה לקובץ PDF. בדקו את הפרקים בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן קובץ עם טקסט שאפשר לסמן.",
+      },
+      hi: {
+        name: "MOBI से PDF कन्वर्टर",
+        description:
+          "बिना एन्क्रिप्शन वाली समर्थित MOBI, AZW और PRC किताबें PDF में बदलें। अध्यायों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और ब्राउज़र में ऐसी PDF सेव करें जिसमें टेक्स्ट चुना जा सके।",
+      },
+      id: {
+        name: "Konverter MOBI ke PDF",
+        description:
+          "Ubah buku MOBI, AZW, dan PRC yang kompatibel dan tanpa perlindungan ke PDF. Tinjau bab, pilih ukuran kertas, lalu simpan PDF dengan teks yang bisa dipilih langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da MOBI a PDF",
+        description:
+          "Converti libri MOBI, AZW e PRC compatibili e senza protezione in PDF con testo selezionabile. Controlla i capitoli in anteprima, scegli il formato della carta e salva dal browser.",
+      },
+      ja: {
+        name: "MOBI PDF変換",
+        description:
+          "暗号化や DRM 保護のない、対応形式の MOBI・AZW・PRC 電子書籍を PDF に変換します。章をプレビューし、用紙サイズを選んで、文字を選択できる PDF をブラウザーで保存できます。",
+      },
+      ko: {
+        name: "MOBI PDF 변환기",
+        description:
+          "지원되는 MOBI, AZW, PRC 전자책을 브라우저에서 PDF로 변환하세요. 암호화되지 않은 책을 열어 장을 미리 보고, 용지 크기를 골라 텍스트를 선택할 수 있는 PDF로 저장하세요.",
+      },
+      ms: {
+        name: "Penukar MOBI kepada PDF",
+        description:
+          "Tukar buku MOBI, AZW dan PRC yang serasi dan tidak dilindungi kepada PDF. Pratonton bab, pilih saiz kertas dan simpan PDF dengan teks yang boleh dipilih dalam pelayar anda.",
+      },
+      nl: {
+        name: "MOBI naar PDF-converter",
+        description:
+          "Zet ondersteunde, onbeveiligde MOBI-, AZW- en PRC-boeken om naar PDF. Bekijk de hoofdstukken, kies een papierformaat en sla in je browser een PDF met selecteerbare tekst op.",
+      },
+      no: {
+        name: "Konverter MOBI til PDF",
+        description:
+          "Konverter kompatible, ubeskyttede MOBI-, AZW- og PRC-bøker til PDF. Forhåndsvis kapitlene, velg papirstørrelse og lagre PDF-en med tekst som kan markeres, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MOBI na PDF",
+        description:
+          "Konwertuj obsługiwane książki MOBI, AZW i PRC bez zabezpieczeń na PDF. Sprawdź podgląd rozdziałów, wybierz format papieru i zapisz w przeglądarce PDF z tekstem, który można zaznaczać.",
+      },
+      pt: {
+        name: "Conversor de MOBI para PDF",
+        description:
+          "Converta livros MOBI, AZW e PRC compatíveis e sem proteção em PDF. Confira a prévia dos capítulos, escolha o tamanho do papel e salve um PDF com texto selecionável no navegador.",
+      },
+      ru: {
+        name: "Конвертер MOBI в PDF",
+        description:
+          "Преобразуйте совместимые книги MOBI, AZW и PRC без защиты в PDF. Просмотрите главы, выберите размер бумаги и сохраните PDF с выделяемым текстом прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera MOBI till PDF",
+        description:
+          "Konvertera okrypterade MOBI-, AZW- och PRC-böcker som stöds till PDF. Förhandsgranska kapitlen, välj pappersstorlek och spara en PDF med markerbar text i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MOBI เป็น PDF",
+        description:
+          "แปลงหนังสือ MOBI, AZW และ PRC ที่รองรับและไม่มีการป้องกันเป็น PDF ดูตัวอย่างบท เลือกขนาดกระดาษ และบันทึก PDF ที่เลือกข้อความได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MOBI’den PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu ve korumasız MOBI, AZW ve PRC kitaplarını PDF’ye dönüştürün. Bölümleri önizleyin, kâğıt boyutunu seçin ve metni seçilebilen PDF’yi tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển MOBI sang PDF",
+        description:
+          "Chuyển sách MOBI, AZW và PRC tương thích, không được bảo vệ, sang PDF. Xem trước các chương, chọn khổ giấy và lưu PDF có văn bản chọn được ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MOBI 转 PDF",
+        description:
+          "将兼容且未受保护的 MOBI、AZW 和 PRC 电子书转为 PDF。可在浏览器中预览章节、选择纸张大小，并保存正文可选中的 PDF。",
+      },
+      "zh-TW": {
+        name: "MOBI 轉 PDF",
+        description:
+          "在瀏覽器中將相容且未受保護的 MOBI、AZW 或 PRC 書籍轉成可選取文字的 PDF。可預覽章節、選擇紙張大小，再儲存檔案。",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",

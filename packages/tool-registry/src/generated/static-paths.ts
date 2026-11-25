@@ -23738,6 +23738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mobi-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "morse-code-converter",
     language: "ar",
   },

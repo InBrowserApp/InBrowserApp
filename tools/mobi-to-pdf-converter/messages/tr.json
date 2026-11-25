@@ -1,0 +1,10 @@
+{
+  "open": "MOBI kitabı aç",
+  "replace": "Kitabı değiştir",
+  "drop": "MOBI, AZW veya PRC kitabını buraya bırakın",
+  "unsupported": "Cihazınızdan bir MOBI, AZW veya PRC kitabı seçin.",
+  "invalid": "Bu kitap hasarlı veya eksik olabilir. Başka bir kopya seçin.",
+  "protected": "Bu kitap şifreli veya kopya korumalı. Şifresiz bir kopya seçin.",
+  "unsupportedVariant": "Bu kitap biçimi veya sıkıştırma türü desteklenmiyor. KFX ve farklı biçimler içeren PRC dosyaları dönüştürülemez.",
+  "unsupportedLayout": "Bu kitap, güvenilir biçimde dışa aktarılamayan sabit veya karma bir sayfa düzeni kullanıyor. Metin akışı ekrana uyarlanan bir kitap seçin."
+}

@@ -1,0 +1,10 @@
+{
+  "open": "Ouvrir un livre MOBI",
+  "replace": "Remplacer le livre",
+  "drop": "Déposez un livre MOBI, AZW ou PRC ici",
+  "unsupported": "Choisissez un livre MOBI, AZW ou PRC sur votre appareil.",
+  "invalid": "Ce livre est peut-être endommagé ou incomplet. Choisissez une autre copie.",
+  "protected": "Ce livre est chiffré ou protégé contre la copie. Choisissez une copie non chiffrée.",
+  "unsupportedVariant": "Ce format de livre ou cette variante de compression n’est pas pris en charge. Les fichiers KFX et les fichiers PRC qui ne sont pas des livres ne peuvent pas être convertis.",
+  "unsupportedLayout": "Ce livre utilise une mise en page fixe ou mixte qui ne peut pas être exportée de manière fiable. Choisissez un livre à mise en page adaptable."
+}

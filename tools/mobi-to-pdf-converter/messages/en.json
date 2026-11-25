@@ -1,0 +1,10 @@
+{
+  "open": "Open MOBI book",
+  "replace": "Replace book",
+  "drop": "Drop a MOBI, AZW, or PRC book here",
+  "unsupported": "Choose a local MOBI, AZW, or PRC book.",
+  "invalid": "This book may be damaged or incomplete. Choose another copy.",
+  "protected": "This book is encrypted or copy-protected. Choose an unencrypted copy.",
+  "unsupportedVariant": "This book format or compression variant is not supported. KFX and unrelated PRC files cannot be converted.",
+  "unsupportedLayout": "This book uses a fixed or mixed page layout that cannot be exported reliably. Choose a reflowable book."
+}

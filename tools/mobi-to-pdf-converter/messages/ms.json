@@ -1,0 +1,10 @@
+{
+  "open": "Buka buku MOBI",
+  "replace": "Ganti buku",
+  "drop": "Letakkan buku MOBI, AZW atau PRC di sini",
+  "unsupported": "Pilih buku MOBI, AZW atau PRC pada peranti anda.",
+  "invalid": "Buku ini mungkin rosak atau tidak lengkap. Pilih salinan lain.",
+  "protected": "Buku ini disulitkan atau dilindungi daripada penyalinan. Pilih salinan yang tidak disulitkan.",
+  "unsupportedVariant": "Format buku atau varian pemampatan ini tidak disokong. KFX dan fail PRC yang bukan buku tidak boleh ditukar.",
+  "unsupportedLayout": "Buku ini menggunakan susun atur halaman tetap atau bercampur yang tidak dapat dieksport dengan tepat. Pilih buku dengan susun atur boleh alir semula."
+}

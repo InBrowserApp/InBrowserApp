@@ -1,0 +1,10 @@
+{
+  "open": "Öppna MOBI-bok",
+  "replace": "Byt bok",
+  "drop": "Släpp en MOBI-, AZW- eller PRC-bok här",
+  "unsupported": "Välj en lokal MOBI-, AZW- eller PRC-bok.",
+  "invalid": "Boken kan vara skadad eller ofullständig. Välj ett annat exemplar.",
+  "protected": "Boken är krypterad eller kopieringsskyddad. Välj ett okrypterat exemplar.",
+  "unsupportedVariant": "Det här bokformatet eller den här komprimeringsvarianten stöds inte. KFX-filer och PRC-filer som inte är böcker kan inte konverteras.",
+  "unsupportedLayout": "Boken använder en fast eller blandad sidlayout som inte kan exporteras tillförlitligt. Välj en bok med flödande layout."
+}

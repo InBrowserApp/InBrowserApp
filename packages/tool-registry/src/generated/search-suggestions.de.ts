@@ -1293,6 +1293,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mobi-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "MOBI-zu-PDF-Konverter",
+    slug: "mobi-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "Morsecode-Konverter",
     slug: "morse-code-converter",
