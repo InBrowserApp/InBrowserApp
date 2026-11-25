@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid 源码",
+  "example": "加载示例",
+  "flowchart": "流程图",
+  "sequence": "时序图",
+  "relationships": "ER 图",
+  "preview": "图表预览",
+  "empty": "输入 Mermaid 代码以预览图表。",
+  "loading": "正在渲染图表…",
+  "invalid": "无法渲染此 Mermaid 图表。请检查语法后重试。",
+  "openFile": "打开文件",
+  "fileError": "无法读取文件。请打开 Mermaid 源文件或直接粘贴代码。",
+  "sourcePlaceholder": "在此粘贴 Mermaid 代码，或拖入 .mmd 文件。",
+  "format": "输出格式",
+  "scale": "图片缩放比例",
+  "download": "下载图片",
+  "background": "背景",
+  "transparent": "透明",
+  "white": "白色",
+  "downloadBusy": "正在准备图片…",
+  "downloadError": "无法生成图片。请尝试使用 1× 比例，或下载 SVG。",
+  "actualSize": "实际大小"
+}

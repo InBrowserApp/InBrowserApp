@@ -1,0 +1,23 @@
+{
+  "source": "Code Mermaid",
+  "example": "Charger un exemple",
+  "flowchart": "Diagramme de flux",
+  "sequence": "Diagramme de séquence",
+  "relationships": "Diagramme entité-association",
+  "preview": "Aperçu du diagramme",
+  "empty": "Saisissez du code Mermaid pour afficher un diagramme.",
+  "loading": "Rendu du diagramme…",
+  "invalid": "Impossible d’afficher ce diagramme Mermaid. Vérifiez la syntaxe et réessayez.",
+  "openFile": "Ouvrir un fichier",
+  "fileError": "Impossible de lire ce fichier. Ouvrez un fichier source Mermaid ou collez le code.",
+  "sourcePlaceholder": "Collez du code Mermaid ou déposez un fichier .mmd ici.",
+  "format": "Format de sortie",
+  "scale": "Échelle de l’image",
+  "download": "Télécharger l’image",
+  "background": "Fond",
+  "transparent": "Transparent",
+  "white": "Blanc",
+  "downloadBusy": "Préparation des images…",
+  "downloadError": "Impossible de créer cette image. Essayez 1× ou téléchargez le SVG.",
+  "actualSize": "Taille réelle"
+}

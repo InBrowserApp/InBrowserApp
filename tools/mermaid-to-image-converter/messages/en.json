@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid source",
+  "example": "Load an example",
+  "flowchart": "Flowchart",
+  "sequence": "Sequence diagram",
+  "relationships": "ER diagram",
+  "preview": "Diagram preview",
+  "empty": "Enter Mermaid code to preview a diagram.",
+  "loading": "Rendering diagram…",
+  "invalid": "Could not render this Mermaid diagram. Check the syntax and try again.",
+  "openFile": "Open file",
+  "fileError": "Could not read this file. Open a Mermaid source file or paste the code.",
+  "sourcePlaceholder": "Paste Mermaid code or drop a .mmd file here.",
+  "format": "Output format",
+  "scale": "Image scale",
+  "download": "Download image",
+  "background": "Background",
+  "transparent": "Transparent",
+  "white": "White",
+  "downloadBusy": "Preparing images…",
+  "downloadError": "Could not create this image. Try 1× or download SVG.",
+  "actualSize": "Actual size"
+}

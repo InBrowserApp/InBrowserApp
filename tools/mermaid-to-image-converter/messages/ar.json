@@ -1,0 +1,23 @@
+{
+  "source": "شيفرة Mermaid",
+  "example": "تحميل مثال",
+  "flowchart": "مخطط انسيابي",
+  "sequence": "مخطط تسلسل",
+  "relationships": "مخطط كيانات وعلاقات",
+  "preview": "معاينة المخطط",
+  "empty": "أدخل شيفرة Mermaid لمعاينة المخطط.",
+  "loading": "جارٍ رسم المخطط…",
+  "invalid": "تعذّر رسم مخطط Mermaid. راجع صياغة الشيفرة ثم حاول مجددًا.",
+  "openFile": "فتح ملف",
+  "fileError": "تعذّرت قراءة الملف. افتح ملف شيفرة Mermaid أو الصق الشيفرة.",
+  "sourcePlaceholder": "الصق شيفرة Mermaid أو أفلت ملف ‎.mmd هنا.",
+  "format": "تنسيق الإخراج",
+  "scale": "مقياس الصورة",
+  "download": "تنزيل الصورة",
+  "background": "الخلفية",
+  "transparent": "شفافة",
+  "white": "أبيض",
+  "downloadBusy": "جارٍ تجهيز الصور…",
+  "downloadError": "تعذّر إنشاء هذه الصورة. جرّب المقياس 1× أو نزّلها بصيغة SVG.",
+  "actualSize": "الحجم الفعلي"
+}

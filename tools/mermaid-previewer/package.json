@@ -6,7 +6,9 @@
   "exports": {
     "./editor": "./editor.astro",
     "./manifest": "./manifest.ts",
-    "./page": "./index.astro"
+    "./page": "./index.astro",
+    "./render": "./render.ts",
+    "./source-panel": "./source-panel.tsx"
   },
   "dependencies": {
     "@workspace/svg-pdf": "workspace:*",

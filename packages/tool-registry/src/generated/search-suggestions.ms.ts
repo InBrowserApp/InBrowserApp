@@ -1244,6 +1244,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "diagram",
+    name: "Penukar Mermaid kepada Imej",
+    slug: "mermaid-to-image-converter",
+  },
+  {
+    category: "diagram",
     name: "Penukar Mermaid ke PDF",
     slug: "mermaid-to-pdf-converter",
   },

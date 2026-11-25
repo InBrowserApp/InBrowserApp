@@ -1,0 +1,23 @@
+{
+  "source": "קוד Mermaid",
+  "example": "טעינת דוגמה",
+  "flowchart": "תרשים זרימה",
+  "sequence": "תרשים רצף",
+  "relationships": "תרשים ישויות וקשרים",
+  "preview": "תצוגה מקדימה של התרשים",
+  "empty": "יש להזין קוד Mermaid כדי להציג תרשים.",
+  "loading": "התרשים נטען…",
+  "invalid": "לא ניתן להציג את תרשים ה-Mermaid. יש לבדוק את התחביר ולנסות שוב.",
+  "openFile": "פתיחת קובץ",
+  "fileError": "לא ניתן לקרוא את הקובץ. פתחו קובץ מקור של Mermaid או הדביקו את הקוד.",
+  "sourcePlaceholder": "הדביקו קוד Mermaid או גררו לכאן קובץ ‎.mmd.",
+  "format": "פורמט פלט",
+  "scale": "קנה מידה של התמונה",
+  "download": "הורדת תמונה",
+  "background": "רקע",
+  "transparent": "שקוף",
+  "white": "לבן",
+  "downloadBusy": "מכינים את התמונות…",
+  "downloadError": "לא ניתן ליצור את התמונה. נסו קנה מידה של 1× או הורידו כ־SVG.",
+  "actualSize": "גודל בפועל"
+}

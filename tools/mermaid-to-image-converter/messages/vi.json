@@ -1,0 +1,23 @@
+{
+  "source": "Mã nguồn Mermaid",
+  "example": "Tải ví dụ",
+  "flowchart": "Lưu đồ",
+  "sequence": "Biểu đồ tuần tự",
+  "relationships": "Biểu đồ ER",
+  "preview": "Xem trước sơ đồ",
+  "empty": "Nhập mã Mermaid để xem trước sơ đồ.",
+  "loading": "Đang kết xuất sơ đồ…",
+  "invalid": "Không thể kết xuất sơ đồ Mermaid này. Hãy kiểm tra cú pháp và thử lại.",
+  "openFile": "Mở tệp",
+  "fileError": "Không thể đọc tệp này. Hãy mở tệp nguồn Mermaid hoặc dán mã.",
+  "sourcePlaceholder": "Dán mã Mermaid hoặc thả tệp .mmd vào đây.",
+  "format": "Định dạng đầu ra",
+  "scale": "Tỷ lệ ảnh",
+  "download": "Tải ảnh xuống",
+  "background": "Nền",
+  "transparent": "Trong suốt",
+  "white": "Trắng",
+  "downloadBusy": "Đang chuẩn bị ảnh…",
+  "downloadError": "Không thể tạo ảnh. Hãy thử tỷ lệ 1× hoặc tải xuống bản SVG.",
+  "actualSize": "Kích thước thực"
+}

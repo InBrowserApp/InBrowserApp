@@ -1,0 +1,23 @@
+{
+  "source": "Kod Mermaid",
+  "example": "Muatkan contoh",
+  "flowchart": "Carta alir",
+  "sequence": "Rajah jujukan",
+  "relationships": "Rajah ER",
+  "preview": "Pratonton rajah",
+  "empty": "Masukkan kod Mermaid untuk melihat pratonton rajah.",
+  "loading": "Memaparkan rajah…",
+  "invalid": "Rajah Mermaid ini tidak dapat dipaparkan. Semak sintaks dan cuba lagi.",
+  "openFile": "Buka fail",
+  "fileError": "Fail ini tidak dapat dibaca. Buka fail sumber Mermaid atau tampal kodnya.",
+  "sourcePlaceholder": "Tampal kod Mermaid atau lepaskan fail .mmd di sini.",
+  "format": "Format keluaran",
+  "scale": "Skala imej",
+  "download": "Muat turun imej",
+  "background": "Latar belakang",
+  "transparent": "Lutsinar",
+  "white": "Putih",
+  "downloadBusy": "Menyediakan imej…",
+  "downloadError": "Imej ini tidak dapat dihasilkan. Cuba skala 1× atau muat turun dalam format SVG.",
+  "actualSize": "Saiz sebenar"
+}

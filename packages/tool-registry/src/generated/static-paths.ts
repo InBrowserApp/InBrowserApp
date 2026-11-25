@@ -22818,6 +22818,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mermaid-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mermaid-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "mermaid-to-pdf-converter",
     language: "ar",
   },
