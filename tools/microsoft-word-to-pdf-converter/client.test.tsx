@@ -18,7 +18,7 @@ const mock = vi.hoisted(() => ({
 }))
 vi.mock("@workspace/legacy-doc/pdf", () => ({ convert: mock.legacy }))
 vi.mock("./core/convert", () => ({ convert: mock.prepare }))
-vi.mock("@workspace/pdf-reader", () => ({ openReader: mock.open }))
+vi.mock(import("@workspace/pdf-reader"), () => ({ openReader: mock.open }))
 const result = {
   pdf: new Blob(["%PDF-output"], { type: "application/pdf" }),
   pages: 2,

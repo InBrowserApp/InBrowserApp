@@ -5,7 +5,9 @@ import m from "./messages/en.json"
 
 const mock = vi.hoisted(() => ({ convert: vi.fn(), openReader: vi.fn() }))
 vi.mock("@workspace/legacy-doc/pdf", () => ({ convert: mock.convert }))
-vi.mock("@workspace/pdf-reader", () => ({ openReader: mock.openReader }))
+vi.mock(import("@workspace/pdf-reader"), () => ({
+  openReader: mock.openReader,
+}))
 
 const pdf = new Blob(["%PDF-test"], { type: "application/pdf" })
 
