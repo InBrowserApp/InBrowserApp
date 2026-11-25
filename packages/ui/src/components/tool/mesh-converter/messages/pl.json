@@ -6,5 +6,6 @@
   "converting": "Konwertowanie modelu…",
   "failed": "Nie udało się przekonwertować modelu. Wybierz poprawny plik modelu ze ścianami siatki.",
   "output": "Przekonwertowany plik",
-  "download": "Pobierz {format}"
+  "download": "Pobierz {format}",
+  "previousOutput": "Poprzednia konwersja"
 }

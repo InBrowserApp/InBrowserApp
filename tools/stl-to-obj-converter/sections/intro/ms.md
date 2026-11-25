@@ -4,7 +4,7 @@ Pilih **Buka fail** atau seret dan lepaskan fail `.stl` ke penukar. Penukar memb
 
 ## Semak kandungan fail OBJ
 
-Penukar menyimpan segi tiga permukaan asal dalam fail Wavefront OBJ. Paksi koordinat dan skala jejaring dikekalkan. STL tidak mempunyai tetapan unit piawai. Jika panjang satu tepi dalam fail sumber ialah 40 unit koordinat, panjangnya kekal 40 unit koordinat dalam OBJ. Pilih unit yang dikehendaki semasa mengimport fail ke dalam aplikasi lain.
+Penukar menyimpan segi tiga permukaan asal dalam fail Wavefront OBJ. Bucu pada kedudukan yang sama berkongsi satu indeks bucu dalam OBJ, jadi jejaring lebih mudah disunting. Paksi koordinat dan skala jejaring dikekalkan. STL tidak mempunyai tetapan unit piawai. Jika panjang satu tepi dalam fail sumber ialah 40 unit koordinat, panjangnya kekal 40 unit koordinat dalam OBJ. Pilih unit yang dikehendaki semasa mengimport fail ke dalam aplikasi lain.
 
 Fail yang dimuat turun mengandungi geometri jejaring. Pustaka bahan dan tekstur tidak disertakan kerana model permukaan STL piawai tidak menyimpan kedua-duanya.
 

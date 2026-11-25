@@ -4,7 +4,7 @@ Wähle **Datei öffnen** oder ziehe eine `.stl`-Datei in den Konverter. Er liest
 
 ## Prüfen, was in der OBJ-Datei steckt
 
-Die Konvertierung schreibt die ursprünglichen Oberflächendreiecke in eine Wavefront-OBJ-Datei. Die Koordinatenachsen und die Größe des Netzes bleiben erhalten. STL speichert standardmäßig keine Maßeinheit. Ist eine Kante in der Quelldatei 40 Einheiten lang, misst sie in der OBJ-Datei ebenfalls 40 Koordinateneinheiten. Wähle beim Import in ein anderes Programm die vorgesehene Einheit.
+Die Konvertierung schreibt die ursprünglichen Oberflächendreiecke in eine Wavefront-OBJ-Datei. Eckpunkte an identischen Positionen verwenden denselben OBJ-Index. Dadurch lässt sich das Netz leichter bearbeiten. Die Koordinatenachsen und die Größe des Netzes bleiben erhalten. STL speichert standardmäßig keine Maßeinheit. Ist eine Kante in der Quelldatei 40 Einheiten lang, misst sie in der OBJ-Datei ebenfalls 40 Koordinateneinheiten. Wähle beim Import in ein anderes Programm die vorgesehene Einheit.
 
 Der Download enthält die Netzgeometrie. Materialbibliotheken und Texturen gehören nicht zum STL-Standard und sind daher nicht im Ergebnis enthalten.
 

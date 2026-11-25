@@ -6,5 +6,6 @@
   "converting": "Convertendo o modelo…",
   "failed": "Não foi possível converter o modelo. Escolha um arquivo válido que contenha faces de malha.",
   "output": "Arquivo convertido",
-  "download": "Baixar {format}"
+  "download": "Baixar {format}",
+  "previousOutput": "Conversão anterior"
 }

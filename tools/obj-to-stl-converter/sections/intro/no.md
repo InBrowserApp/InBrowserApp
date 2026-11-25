@@ -4,7 +4,7 @@ Velg **Åpne fil**, eller dra en `.obj`-fil inn i konvertereren. Velg **Prøv et
 
 ## Hva som endres ved eksport til STL
 
-STL lagrer en overflate som består av trekanter. Materialer, teksturbilder, UV-koordinater og frittstående linjer og punkter blir utelatt. De opprinnelige koordinatene og aksene beholdes. Velg den tiltenkte måleenheten i slicerprogrammet før utskrift. En avstand på 40 koordinatenheter i OBJ-filen tilsvarer for eksempel 40 koordinatenheter i STL-filen.
+STL lagrer en overflate som består av trekanter. Materialer, teksturbilder, UV-koordinater og frittstående linjer og punkter blir utelatt. Konvertereren beholder aksene og målestokken. Binær STL lagrer koordinater som 32-bits flyttall. Ved svært store koordinatverdier kan de minste detaljene forsvinne ved avrunding. Velg den tiltenkte måleenheten i slicerprogrammet før utskrift. En avstand på 40 koordinatenheter i OBJ-filen tilsvarer for eksempel 40 koordinatenheter i STL-filen.
 
 En fil kan konverteres selv om nettet har hull eller andre geometriske problemer. Sjekk resultatet i slicerprogrammet før du skriver ut.
 

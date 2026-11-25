@@ -4,7 +4,7 @@ Wähle **Datei öffnen** oder ziehe eine `.obj`-Datei in den Konverter. Mit **Be
 
 ## Was sich beim Export nach STL ändert
 
-STL speichert eine aus Dreiecken aufgebaute Oberfläche. Materialien, Texturbilder, UV-Koordinaten sowie einzelne Linien und Punkte werden beim Export weggelassen. Die ursprünglichen Koordinaten und Achsen bleiben erhalten. Wähle vor dem Drucken die vorgesehene Einheit im Slicer. Eine Ausdehnung von 40 Koordinateneinheiten in der OBJ-Datei entspricht beispielsweise 40 Koordinateneinheiten in der STL-Datei.
+STL speichert eine aus Dreiecken aufgebaute Oberfläche. Materialien, Texturbilder, UV-Koordinaten sowie einzelne Linien und Punkte werden beim Export weggelassen. Der Konverter behält die Achsen und den Maßstab bei. Binäre STL-Dateien speichern Koordinaten als 32-Bit-Gleitkommazahlen. Bei sehr großen Koordinaten können feine Details durch Rundung verloren gehen. Wähle vor dem Drucken die vorgesehene Einheit im Slicer. Eine Ausdehnung von 40 Koordinateneinheiten in der OBJ-Datei entspricht beispielsweise 40 Koordinateneinheiten in der STL-Datei.
 
 Dateien lassen sich auch konvertieren, wenn das Netz Löcher oder andere Geometrieprobleme hat. Prüfe das Ergebnis vor dem Drucken im Slicer.
 

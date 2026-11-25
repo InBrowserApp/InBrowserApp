@@ -4,7 +4,7 @@ Välj **Öppna fil** eller dra en `.stl`-fil till konverteraren. Den läser båd
 
 ## Se vad OBJ-filen innehåller
 
-Konverteraren skriver de ursprungliga yttrianglarna till en Wavefront OBJ-fil. Koordinataxlarna och nätets storlek behålls. STL har ingen standardinställning för måttenheter. Om en kant är 40 enheter lång i källfilen är den fortfarande 40 koordinatenheter lång i OBJ-filen. Välj den avsedda måttenheten när du importerar filen i ett annat program.
+Konverteraren skriver de ursprungliga yttrianglarna till en Wavefront OBJ-fil. Hörn med exakt samma position delar ett hörnindex i OBJ-filen. Det gör nätet enklare att redigera. Koordinataxlarna och nätets storlek behålls. STL har ingen standardinställning för måttenheter. Om en kant är 40 enheter lång i källfilen är den fortfarande 40 koordinatenheter lång i OBJ-filen. Välj den avsedda måttenheten när du importerar filen i ett annat program.
 
 Den nedladdade filen innehåller nätets geometri. Materialbibliotek och texturer ingår inte eftersom standardformatet för STL saknar sådana uppgifter.
 

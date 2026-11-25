@@ -18,7 +18,8 @@ export async function readMeshFile(file: File, format: MeshFormat) {
     if (!mesh.isMesh) return
     const positions = mesh.geometry.getAttribute("position")
     const vertices = mesh.geometry.index?.count ?? positions.count
-    faces += Math.floor(vertices / 3)
+    if (vertices % 3 !== 0) throw new Error("Incomplete mesh triangle")
+    faces += vertices / 3
     bounds.expandByObject(mesh)
   })
   if (

@@ -4,7 +4,7 @@ Choose **Open file** or drop an `.obj` file onto the converter. Choose **Try an 
 
 ## What changes when you export STL
 
-STL stores a triangular surface. Materials, texture images, UV coordinates, standalone lines and points do not become part of the STL. The original coordinates and axes stay in place. Before printing, choose the intended unit in your slicer. For example, an OBJ span of 40 coordinate units becomes an STL span of 40 coordinate units.
+STL stores a triangular surface. Materials, texture images, UV coordinates, standalone lines and points do not become part of the STL. The converter preserves the axes and scale. Binary STL stores coordinates as 32-bit floats, so the smallest details on very large coordinates can round. Before printing, choose the intended unit in your slicer. For example, an OBJ span of 40 coordinate units becomes an STL span of 40 coordinate units.
 
 A file can convert successfully even when the mesh has holes or other geometry problems. Check the result in your slicer before printing.
 

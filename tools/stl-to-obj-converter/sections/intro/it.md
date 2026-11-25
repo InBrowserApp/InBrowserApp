@@ -4,7 +4,7 @@ Seleziona **Apri file** o trascina un file `.stl` nel convertitore. Il programma
 
 ## Controllare il contenuto del file OBJ
 
-La conversione scrive i triangoli della superficie originale in un file Wavefront OBJ. Gli assi delle coordinate e la scala della mesh restano invariati. Il formato STL non definisce un’unità di misura standard. Se uno spigolo misura 40 unità nell’originale, misura ancora 40 unità di coordinate nell’OBJ. Seleziona l’unità prevista quando lo importi in un’altra applicazione.
+La conversione scrive i triangoli della superficie originale in un file Wavefront OBJ. I vertici nella stessa posizione condividono lo stesso indice nell’OBJ, facilitando la modifica della mesh. Gli assi delle coordinate e la scala della mesh restano invariati. Il formato STL non definisce un’unità di misura standard. Se uno spigolo misura 40 unità nell’originale, misura ancora 40 unità di coordinate nell’OBJ. Seleziona l’unità prevista quando lo importi in un’altra applicazione.
 
 Il file scaricato contiene la geometria della mesh. Il formato STL standard descrive la superficie, perciò l’OBJ generato non include una libreria di materiali o texture.
 

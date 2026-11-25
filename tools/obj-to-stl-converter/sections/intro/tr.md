@@ -4,7 +4,7 @@
 
 ## STL’ye aktarırken neler değişir?
 
-STL, yüzeyleri üçgenler halinde saklar. Malzemeler, doku görselleri, UV koordinatları, bağımsız çizgiler ve noktalar STL dosyasına aktarılmaz. Özgün koordinatlar ve eksenler korunur. Baskıdan önce dilimleme yazılımında kullanmak istediğiniz ölçü birimini seçin. Örneğin OBJ dosyasındaki 40 koordinat birimlik bir uzunluk, STL dosyasında da 40 koordinat birimi olarak kalır.
+STL, yüzeyleri üçgenler halinde saklar. Malzemeler, doku görselleri, UV koordinatları, bağımsız çizgiler ve noktalar STL dosyasına aktarılmaz. Dönüştürücü, eksenleri ve ölçeği korur. İkili STL, koordinatları 32 bit kayan noktalı sayılar olarak saklar. Bu nedenle çok büyük koordinatların yuvarlanması ince ayrıntıların kaybolmasına yol açabilir. Baskıdan önce dilimleme yazılımında kullanmak istediğiniz ölçü birimini seçin. Örneğin OBJ dosyasındaki 40 koordinat birimlik bir uzunluk, STL dosyasında da 40 koordinat birimi olarak kalır.
 
 Ağda delikler veya başka geometri sorunları olsa da dönüştürme başarılı olabilir. Baskıdan önce sonucu dilimleme yazılımında kontrol edin.
 

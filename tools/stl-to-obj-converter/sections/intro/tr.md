@@ -4,7 +4,7 @@
 
 ## OBJ dosyasında neler bulunur?
 
-Dönüştürücü, modelin yüzeyindeki üçgenleri Wavefront OBJ dosyasına yazar. Koordinat eksenleri ve ağın ölçeği korunur. STL biçimi standart bir ölçü birimi tanımlamaz. Kaynak dosyadaki bir kenar 40 birim uzunluğundaysa OBJ dosyasında da 40 koordinat birimi uzunluğunda kalır. Dosyayı başka bir uygulamaya aktarırken kullanmak istediğiniz birimi seçin.
+Dönüştürücü, modelin yüzeyindeki üçgenleri Wavefront OBJ dosyasına yazar. Aynı konumdaki köşeler OBJ dosyasında aynı köşe indeksini kullanır. Bu, elde edilen ağı düzenlemeyi kolaylaştırır. Koordinat eksenleri ve ağın ölçeği korunur. STL biçimi standart bir ölçü birimi tanımlamaz. Kaynak dosyadaki bir kenar 40 birim uzunluğundaysa OBJ dosyasında da 40 koordinat birimi uzunluğunda kalır. Dosyayı başka bir uygulamaya aktarırken kullanmak istediğiniz birimi seçin.
 
 İndirilen dosya ağ geometrisini içerir. Malzeme kitaplığı ve dokular standart STL yüzey modelinin parçası olmadığı için bunlar çıktı dosyasına aktarılmaz.
 

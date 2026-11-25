@@ -4,7 +4,7 @@ Velg **Åpne fil**, eller dra en `.stl`-fil inn i konvertereren. Den leser STL-f
 
 ## Sjekk hva OBJ-filen inneholder
 
-Konvertereren skriver de opprinnelige trekantene fra overflaten til en Wavefront OBJ-fil. Koordinataksene og størrelsen på nettet beholdes. STL har ingen standardinnstilling for måleenhet. En kant som er 40 enheter lang i kildefilen, er fortsatt 40 koordinatenheter lang i OBJ-filen. Velg den tiltenkte måleenheten når du importerer filen i et annet program.
+Konvertereren skriver de opprinnelige trekantene fra overflaten til en Wavefront OBJ-fil. Hjørnepunkter med nøyaktig samme posisjon får samme indeks i OBJ-filen. Det gjør nettet enklere å redigere. Koordinataksene og størrelsen på nettet beholdes. STL har ingen standardinnstilling for måleenhet. En kant som er 40 enheter lang i kildefilen, er fortsatt 40 koordinatenheter lang i OBJ-filen. Velg den tiltenkte måleenheten når du importerer filen i et annet program.
 
 Filen du laster ned, inneholder nettets geometri. Materialbiblioteker og teksturer følger ikke med, siden slike opplysninger ikke inngår i standardformatet for STL.
 

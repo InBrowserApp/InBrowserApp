@@ -4,7 +4,7 @@ Kies **Bestand openen** of sleep een `.obj`-bestand naar de converter. Kies **Vo
 
 ## Wat er verandert bij export naar STL
 
-STL slaat een oppervlak van driehoeken op. Materialen, textuurafbeeldingen, uv-coördinaten, losse lijnen en punten komen niet in het STL-bestand terecht. De oorspronkelijke coördinaten en assen blijven behouden. Kies vóór het printen de bedoelde eenheid in je slicer. Een afmeting van 40 coördinaateenheden in het OBJ-bestand blijft bijvoorbeeld 40 coördinaateenheden in het STL-bestand.
+STL slaat een oppervlak van driehoeken op. Materialen, textuurafbeeldingen, uv-coördinaten, losse lijnen en punten komen niet in het STL-bestand terecht. De converter behoudt de assen en de schaal. Binaire STL slaat coördinaten op als 32-bits drijvendekommagetallen. Daardoor kunnen kleine details bij zeer grote coördinaatwaarden door afronding verloren gaan. Kies vóór het printen de bedoelde eenheid in je slicer. Een afmeting van 40 coördinaateenheden in het OBJ-bestand blijft bijvoorbeeld 40 coördinaateenheden in het STL-bestand.
 
 De conversie kan ook slagen als het net gaten of andere geometrische problemen heeft. Controleer het resultaat vóór het printen in je slicer.
 

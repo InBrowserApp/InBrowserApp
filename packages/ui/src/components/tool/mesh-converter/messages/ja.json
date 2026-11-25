@@ -6,5 +6,6 @@
   "converting": "モデルを変換しています…",
   "failed": "モデルを変換できませんでした。メッシュの面を含む有効なファイルを選択してください。",
   "output": "変換後のファイル",
-  "download": "{format} をダウンロード"
+  "download": "{format} をダウンロード",
+  "previousOutput": "前回の変換"
 }

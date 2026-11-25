@@ -6,5 +6,6 @@
   "converting": "Conversion du modèle…",
   "failed": "Impossible de convertir ce modèle. Choisissez un fichier valide contenant des faces de maillage.",
   "output": "Fichier converti",
-  "download": "Télécharger le {format}"
+  "download": "Télécharger le {format}",
+  "previousOutput": "Conversion précédente"
 }

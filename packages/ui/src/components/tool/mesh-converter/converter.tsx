@@ -17,6 +17,7 @@ import type { MeshFormat } from "@workspace/model-mesh/mesh-file"
 import type { MeshConverterMessages } from "./messages"
 
 type Result = { data: Blob; name: string; source: string }
+type Conversion = { worker?: Worker }
 
 export default function MeshConverter({
   format,
@@ -26,8 +27,7 @@ export default function MeshConverter({
   messages: MeshConverterMessages
 }) {
   const input = useRef<HTMLInputElement>(null)
-  const worker = useRef<Worker>(null)
-  const pending = useRef(0)
+  const active = useRef<Conversion>(null)
   const [status, setStatus] = useState<"converting" | "failed">()
   const [result, setResult] = useState<Result>()
   const [dragging, setDragging] = useState(false)
@@ -35,41 +35,41 @@ export default function MeshConverter({
 
   useEffect(
     () => () => {
-      pending.current += 1
-      worker.current?.terminate()
+      active.current?.worker?.terminate()
+      active.current = null
     },
     []
   )
 
   async function convert(supplied?: File) {
-    const request = ++pending.current
-    worker.current?.terminate()
+    active.current?.worker?.terminate()
+    const request: Conversion = {}
+    active.current = request
     setStatus("converting")
+
+    function finish(output?: Result) {
+      if (active.current !== request) return
+      request.worker?.terminate()
+      active.current = null
+      if (output) setResult(output)
+      setStatus(output ? undefined : "failed")
+    }
+
     try {
       const file = supplied ?? (await exampleFile(format))
-      if (request !== pending.current) return
+      if (active.current !== request) return
       const job = new Worker(new URL("./convert.worker.ts", import.meta.url), {
         type: "module",
       })
-      worker.current = job
-      function finish(data: Blob | null) {
-        job.terminate()
-        if (request !== pending.current) return
-        worker.current = null
-        if (data) {
-          const name = `${file.name.slice(0, -4) || "model"}.${target}`
-          setResult({ data, name, source: file.name })
-        }
-        setStatus(data ? undefined : "failed")
+      request.worker = job
+      job.onmessage = ({ data }: MessageEvent<Blob | null>) => {
+        const name = `${file.name.slice(0, -4) || "model"}.${target}`
+        finish(data ? { data, name, source: file.name } : undefined)
       }
-      job.onmessage = (event: MessageEvent<Blob | null>) => finish(event.data)
-      job.onerror = () => finish(null)
+      job.onerror = () => finish()
       job.postMessage({ file, format })
     } catch {
-      if (request !== pending.current) return
-      worker.current?.terminate()
-      worker.current = null
-      setStatus("failed")
+      finish()
     }
   }
 
@@ -162,6 +162,9 @@ export default function MeshConverter({
           </p>
         )}
       </Empty>
+      <p className="sr-only" role="status">
+        {result && !status && `${m.output} ${result.name}`}
+      </p>
       {result && (
         <div className="flex flex-wrap items-center gap-3 rounded-lg border bg-background p-4">
           <div className="flex min-w-0 flex-1 items-center gap-3">
@@ -170,7 +173,9 @@ export default function MeshConverter({
               aria-hidden="true"
             />
             <div className="min-w-0">
-              <p className="text-xs text-muted-foreground">{m.output}</p>
+              <p className="text-xs text-muted-foreground">
+                {status ? m.previousOutput : m.output}
+              </p>
               <p
                 dir="auto"
                 className="truncate font-medium"

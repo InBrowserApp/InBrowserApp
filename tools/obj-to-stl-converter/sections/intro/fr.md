@@ -4,7 +4,7 @@ Cliquez sur **Ouvrir un fichier** ou déposez un fichier `.obj` dans le converti
 
 ## Comprendre les changements lors de l’export STL
 
-Le format STL enregistre une surface triangulée. La conversion écarte les matériaux, les images de texture, les coordonnées UV, les lignes isolées et les points isolés. Elle conserve les coordonnées et les axes d’origine. Sélectionnez l’unité voulue dans votre logiciel de tranchage avant d’imprimer. Une longueur de 40 unités de coordonnées dans l’OBJ, par exemple, reste de 40 unités dans le STL.
+Le format STL enregistre une surface triangulée. La conversion écarte les matériaux, les images de texture, les coordonnées UV, les lignes isolées et les points isolés. La conversion conserve les axes et l’échelle. Le format STL binaire stocke les coordonnées sous forme de nombres à virgule flottante sur 32 bits. L’arrondi peut donc affecter les détails les plus fins lorsque les coordonnées sont très grandes. Sélectionnez l’unité voulue dans votre logiciel de tranchage avant d’imprimer. Une longueur de 40 unités de coordonnées dans l’OBJ, par exemple, reste de 40 unités dans le STL.
 
 La conversion peut réussir même si le maillage présente des trous ou d’autres défauts géométriques. Vérifiez le résultat dans votre logiciel de tranchage avant d’imprimer.
 

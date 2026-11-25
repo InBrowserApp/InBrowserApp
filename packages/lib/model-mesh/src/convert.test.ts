@@ -43,3 +43,31 @@ it("rejects OBJ points and lines when no surface faces can be exported", async (
     "No usable mesh faces"
   )
 })
+
+it("writes one OBJ vertex per exact position while preserving the triangles", async () => {
+  const source = new File(
+    [
+      "solid square\nfacet normal 0 0 1\nouter loop\nvertex 0 0 0\nvertex 2 0 0\nvertex 2 2 0\nendloop\nendfacet\nfacet normal 0 0 1\nouter loop\nvertex 0 0 0\nvertex 2 2 0\nvertex 0 2 0\nendloop\nendfacet\nendsolid square",
+    ],
+    "square.stl"
+  )
+  const file = await convertMesh(source, "stl")
+  const lines = (await file.text()).trim().split("\n")
+  expect(lines.filter((line) => line.startsWith("v "))).toHaveLength(4)
+  expect(lines.filter((line) => line.startsWith("f "))).toEqual([
+    "f 1 2 3",
+    "f 1 3 4",
+  ])
+})
+
+it("rejects malformed STL vertex counts instead of writing dangling OBJ indices", async () => {
+  const source = new File(
+    [
+      "solid t\nfacet normal 0 0 1\nouter loop\nvertex 0 0 0\nvertex 2 0 0\nvertex 2 2 0\nvertex 0 2 0\nendloop\nendfacet\nendsolid t",
+    ],
+    "bad.stl"
+  )
+  await expect(convertMesh(source, "stl")).rejects.toThrow(
+    "Incomplete mesh triangle"
+  )
+})

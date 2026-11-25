@@ -6,5 +6,6 @@
   "converting": "Model dönüştürülüyor…",
   "failed": "Model dönüştürülemedi. Ağ yüzleri içeren geçerli bir dosya seçin.",
   "output": "Dönüştürülen dosya",
-  "download": "{format} indir"
+  "download": "{format} indir",
+  "previousOutput": "Önceki dönüştürme"
 }

@@ -6,5 +6,6 @@
   "converting": "Convirtiendo el modelo…",
   "failed": "No se pudo convertir el modelo. Elige un archivo válido que contenga caras de malla.",
   "output": "Archivo convertido",
-  "download": "Descargar {format}"
+  "download": "Descargar {format}",
+  "previousOutput": "Conversión anterior"
 }

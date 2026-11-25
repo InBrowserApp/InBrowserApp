@@ -6,5 +6,6 @@
   "converting": "Konverterer modellen …",
   "failed": "Kunne ikke konvertere modellen. Velg en gyldig modellfil som inneholder polygonflater.",
   "output": "Konvertert fil",
-  "download": "Last ned {format}"
+  "download": "Last ned {format}",
+  "previousOutput": "Forrige konvertering"
 }

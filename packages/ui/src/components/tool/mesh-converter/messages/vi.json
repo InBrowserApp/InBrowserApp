@@ -6,5 +6,6 @@
   "converting": "Đang chuyển đổi mô hình…",
   "failed": "Không chuyển đổi được mô hình này. Hãy chọn tệp hợp lệ có chứa các mặt lưới.",
   "output": "Tệp đã chuyển đổi",
-  "download": "Tải xuống {format}"
+  "download": "Tải xuống {format}",
+  "previousOutput": "Lần chuyển đổi trước"
 }

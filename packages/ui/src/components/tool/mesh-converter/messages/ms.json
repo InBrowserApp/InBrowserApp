@@ -6,5 +6,6 @@
   "converting": "Menukar model…",
   "failed": "Model ini tidak dapat ditukar. Pilih fail sah yang mengandungi muka jejaring.",
   "output": "Fail hasil penukaran",
-  "download": "Muat turun {format}"
+  "download": "Muat turun {format}",
+  "previousOutput": "Hasil penukaran sebelumnya"
 }

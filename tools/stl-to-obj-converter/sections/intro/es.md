@@ -4,7 +4,7 @@ Pulsa **Abrir archivo** o suelta un archivo `.stl` en el conversor. El navegador
 
 ## Comprobar qué contiene el OBJ
 
-El conversor guarda los triángulos de la superficie original en un archivo Wavefront OBJ. Conserva los ejes de coordenadas y la escala de la malla. El formato STL carece de una unidad estándar. Si una arista mide 40 unidades en el original, seguirá midiendo 40 unidades de coordenadas en el OBJ. Selecciona la unidad correcta al importarlo en otro programa.
+El conversor guarda los triángulos de la superficie original en un archivo Wavefront OBJ. Los vértices que ocupan la misma posición comparten un índice en el OBJ, lo que facilita la edición de la malla. El conversor conserva los ejes de coordenadas y la escala. El formato STL carece de una unidad estándar. Si una arista mide 40 unidades en el original, seguirá midiendo 40 unidades de coordenadas en el OBJ. Selecciona la unidad correcta al importarlo en otro programa.
 
 La descarga contiene la geometría de la malla. Los archivos STL estándar describen la superficie de la pieza, por lo que el OBJ generado se entrega sin biblioteca de materiales ni texturas.
 

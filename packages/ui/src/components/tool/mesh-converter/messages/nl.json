@@ -6,5 +6,6 @@
   "converting": "Model wordt geconverteerd…",
   "failed": "Het model kon niet worden geconverteerd. Kies een geldig modelbestand met polygonen.",
   "output": "Geconverteerd bestand",
-  "download": "{format} downloaden"
+  "download": "{format} downloaden",
+  "previousOutput": "Vorige conversie"
 }

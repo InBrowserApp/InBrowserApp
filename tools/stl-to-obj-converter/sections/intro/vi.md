@@ -4,7 +4,7 @@ Chọn **Mở tệp** hoặc thả tệp `.stl` vào công cụ chuyển đổi.
 
 ## Kiểm tra nội dung của tệp OBJ
 
-Công cụ ghi các tam giác trên bề mặt gốc vào tệp Wavefront OBJ, giữ nguyên các trục tọa độ và tỷ lệ lưới. STL không có thiết lập đơn vị chuẩn. Nếu một cạnh trong tệp gốc dài 40 đơn vị tọa độ, cạnh đó vẫn dài 40 đơn vị tọa độ trong OBJ. Hãy chọn đúng đơn vị khi nhập tệp vào phần mềm khác.
+Công cụ ghi các tam giác trên bề mặt gốc vào tệp Wavefront OBJ. Các đỉnh có cùng tọa độ dùng chung một chỉ số đỉnh trong OBJ, giúp chỉnh sửa lưới dễ hơn. Công cụ giữ nguyên các trục tọa độ và tỷ lệ lưới. STL không có thiết lập đơn vị chuẩn. Nếu một cạnh trong tệp gốc dài 40 đơn vị tọa độ, cạnh đó vẫn dài 40 đơn vị tọa độ trong OBJ. Hãy chọn đúng đơn vị khi nhập tệp vào phần mềm khác.
 
 Tệp tải xuống chứa hình học của lưới. Định dạng bề mặt STL tiêu chuẩn không lưu thư viện vật liệu hay ảnh họa tiết, nên các dữ liệu này không có trong tệp OBJ.
 

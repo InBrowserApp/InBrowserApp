@@ -4,7 +4,7 @@ Wybierz **Otwórz plik** lub upuść plik `.stl` w konwerterze. Narzędzie odczy
 
 ## Sprawdzanie zawartości pliku OBJ
 
-Konwerter zapisuje trójkąty oryginalnej powierzchni w pliku Wavefront OBJ. Zachowuje osie współrzędnych i rozmiar siatki. Format STL nie definiuje jednostki miary. Krawędź o długości 40 jednostek w pliku źródłowym nadal ma 40 jednostek współrzędnych w pliku OBJ. Wybierz właściwą jednostkę podczas importowania pliku do innego programu.
+Konwerter zapisuje trójkąty oryginalnej powierzchni w pliku Wavefront OBJ. Wierzchołki o identycznych współrzędnych mają ten sam indeks w pliku OBJ. Dzięki temu siatkę łatwiej edytować. Zachowuje osie współrzędnych i rozmiar siatki. Format STL nie definiuje jednostki miary. Krawędź o długości 40 jednostek w pliku źródłowym nadal ma 40 jednostek współrzędnych w pliku OBJ. Wybierz właściwą jednostkę podczas importowania pliku do innego programu.
 
 Pobrany plik zawiera geometrię siatki. Biblioteki materiałów i tekstury wykraczają poza standardowy opis powierzchni STL i dlatego nie trafiają do wyniku.
 

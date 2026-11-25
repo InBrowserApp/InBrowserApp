@@ -4,7 +4,7 @@ Välj **Öppna fil** eller dra en `.obj`-fil till konverteraren. Välj **Prova e
 
 ## Det som ändras vid export till STL
 
-STL lagrar en yta uppbyggd av trianglar. Material, texturbilder, UV-koordinater samt fristående linjer och punkter utelämnas. De ursprungliga koordinaterna och axlarna behålls. Välj avsedd måttenhet i slicerprogrammet före utskrift. Ett mått på 40 koordinatenheter i OBJ-filen blir till exempel 40 koordinatenheter i STL-filen.
+STL lagrar en yta uppbyggd av trianglar. Material, texturbilder, UV-koordinater samt fristående linjer och punkter utelämnas. Konverteraren behåller axlarna och skalan. Binär STL lagrar koordinater som 32-bitars flyttal. Vid mycket stora koordinatvärden kan de minsta detaljerna gå förlorade genom avrundning. Välj avsedd måttenhet i slicerprogrammet före utskrift. Ett mått på 40 koordinatenheter i OBJ-filen blir till exempel 40 koordinatenheter i STL-filen.
 
 Det går att konvertera en fil även om nätet har hål eller andra geometriska problem. Kontrollera resultatet i ditt slicerprogram före utskrift.
 

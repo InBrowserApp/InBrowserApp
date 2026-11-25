@@ -4,7 +4,7 @@ Cliquez sur **Ouvrir un fichier** ou déposez un fichier `.stl` dans le converti
 
 ## Vérifier le contenu du fichier OBJ
 
-Le convertisseur écrit les triangles de la surface d’origine dans un fichier Wavefront OBJ. Il conserve les axes et l’échelle du maillage. Le format STL ne définit aucune unité de mesure. Si une arête mesure 40 unités dans le fichier source, elle mesure toujours 40 unités de coordonnées dans l’OBJ. Sélectionnez l’unité voulue lorsque vous l’importez dans un autre logiciel.
+Le convertisseur écrit les triangles de la surface d’origine dans un fichier Wavefront OBJ. Les sommets de même position partagent un index de sommet dans l’OBJ, ce qui facilite la modification du maillage. Le convertisseur conserve les axes et l’échelle du maillage. Le format STL ne définit aucune unité de mesure. Si une arête mesure 40 unités dans le fichier source, elle mesure toujours 40 unités de coordonnées dans l’OBJ. Sélectionnez l’unité voulue lorsque vous l’importez dans un autre logiciel.
 
 Le fichier téléchargé contient la géométrie du maillage. Le format STL standard décrit la surface de la pièce. Le fichier OBJ obtenu est donc fourni sans bibliothèque de matériaux ni textures.
 

@@ -6,5 +6,6 @@
   "converting": "Mengonversi model…",
   "failed": "Model ini tidak dapat dikonversi. Pilih file yang valid dan memuat bidang mesh.",
   "output": "File hasil konversi",
-  "download": "Unduh {format}"
+  "download": "Unduh {format}",
+  "previousOutput": "Hasil konversi sebelumnya"
 }

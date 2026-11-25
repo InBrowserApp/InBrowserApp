@@ -4,7 +4,7 @@ Kies **Bestand openen** of sleep een `.stl`-bestand naar de converter. De conver
 
 ## Bekijken wat het OBJ-bestand bevat
 
-De converter schrijft de oorspronkelijke oppervlaktedriehoeken naar een Wavefront OBJ-bestand. De coördinaatassen en de schaal van het net blijven behouden. STL slaat standaard geen maateenheid op. Een rand van 40 eenheden in het bronbestand blijft in het OBJ-bestand 40 coördinaateenheden lang. Kies daarom bij het importeren in een andere toepassing de bedoelde eenheid.
+De converter schrijft de oorspronkelijke oppervlaktedriehoeken naar een Wavefront OBJ-bestand. Hoekpunten op exact dezelfde positie krijgen dezelfde OBJ-index. Daardoor kun je het net makkelijker bewerken. De coördinaatassen en de schaal van het net blijven behouden. STL slaat standaard geen maateenheid op. Een rand van 40 eenheden in het bronbestand blijft in het OBJ-bestand 40 coördinaateenheden lang. Kies daarom bij het importeren in een andere toepassing de bedoelde eenheid.
 
 De download bevat de geometrie van het net. Standaard-STL slaat geen materiaalbibliotheken of texturen op, dus die zitten ook niet in het OBJ-bestand.
 

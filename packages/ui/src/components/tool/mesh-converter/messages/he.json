@@ -6,5 +6,6 @@
   "converting": "המודל מומר…",
   "failed": "לא ניתן להמיר את המודל. בחרו קובץ תקין שמכיל פאות של רשת.",
   "output": "הקובץ שהומר",
-  "download": "הורדת {format}"
+  "download": "הורדת {format}",
+  "previousOutput": "תוצאת ההמרה הקודמת"
 }

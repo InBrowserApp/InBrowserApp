@@ -6,5 +6,6 @@
   "converting": "Conversione del modello…",
   "failed": "Impossibile convertire il modello. Scegli un file valido che contenga facce della mesh.",
   "output": "File convertito",
-  "download": "Scarica {format}"
+  "download": "Scarica {format}",
+  "previousOutput": "Conversione precedente"
 }

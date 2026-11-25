@@ -6,5 +6,6 @@
   "converting": "正在转换模型…",
   "failed": "无法转换此模型。请选择包含网格面的有效文件。",
   "output": "转换后的文件",
-  "download": "下载 {format}"
+  "download": "下载 {format}",
+  "previousOutput": "先前的转换"
 }

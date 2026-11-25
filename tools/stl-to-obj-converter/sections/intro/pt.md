@@ -4,7 +4,7 @@ Clique em **Abrir arquivo** ou solte um arquivo `.stl` no conversor. Ele lê arq
 
 ## Conferir o conteúdo do arquivo OBJ
 
-A conversão grava os triângulos da superfície original em um arquivo Wavefront OBJ. Ela preserva os eixos de coordenadas e a escala da malha. O formato STL não define uma unidade de medida padrão. Uma aresta de 40 unidades no arquivo original continua com 40 unidades de coordenadas no OBJ. Use a unidade de medida pretendida ao importar o arquivo em outro aplicativo.
+A conversão grava os triângulos da superfície original em um arquivo Wavefront OBJ. Vértices na mesma posição compartilham um índice no OBJ, o que facilita a edição da malha. A conversão preserva os eixos de coordenadas e a escala. O formato STL não define uma unidade de medida padrão. Uma aresta de 40 unidades no arquivo original continua com 40 unidades de coordenadas no OBJ. Use a unidade de medida pretendida ao importar o arquivo em outro aplicativo.
 
 O arquivo baixado contém a geometria da malha. Como o STL padrão descreve a superfície da peça, o OBJ gerado vem sem biblioteca de materiais ou texturas.
 

@@ -4,7 +4,7 @@ Chọn **Mở tệp** hoặc thả tệp `.obj` vào công cụ chuyển đổi.
 
 ## Điều gì thay đổi khi xuất sang STL
 
-STL lưu bề mặt dưới dạng lưới tam giác. Tệp STL không chứa vật liệu, ảnh họa tiết, tọa độ UV, đường và điểm độc lập. Công cụ giữ nguyên tọa độ và các trục gốc. Trước khi in, hãy chọn đúng đơn vị trong phần mềm cắt lớp. Ví dụ, chiều dài 40 đơn vị tọa độ trong OBJ vẫn là 40 đơn vị tọa độ trong STL.
+STL lưu bề mặt dưới dạng lưới tam giác. Tệp STL không chứa vật liệu, ảnh họa tiết, tọa độ UV, đường và điểm độc lập. Công cụ giữ nguyên các trục và tỷ lệ. STL nhị phân lưu tọa độ dưới dạng số dấu phẩy động 32 bit, nên phép làm tròn có thể ảnh hưởng đến những chi tiết rất nhỏ ở vị trí có tọa độ rất lớn. Trước khi in, hãy chọn đúng đơn vị trong phần mềm cắt lớp. Ví dụ, chiều dài 40 đơn vị tọa độ trong OBJ vẫn là 40 đơn vị tọa độ trong STL.
 
 Tệp có thể chuyển đổi thành công ngay cả khi lưới có lỗ hổng hoặc lỗi hình học khác. Hãy kiểm tra kết quả trong phần mềm cắt lớp trước khi in.
 

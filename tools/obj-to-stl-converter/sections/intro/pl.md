@@ -4,7 +4,7 @@ Wybierz **Otwórz plik** lub upuść plik `.obj` w konwerterze. Kliknij **Wypró
 
 ## Zmiany podczas eksportu do STL
 
-STL zapisuje powierzchnię złożoną z trójkątów. Materiały, obrazy tekstur, współrzędne UV oraz samodzielne linie i punkty są pomijane. Oryginalne współrzędne i osie zostają zachowane. Przed drukowaniem wybierz właściwą jednostkę w programie do przygotowywania wydruku. Przykładowo wymiar wynoszący 40 jednostek współrzędnych w pliku OBJ ma taką samą wartość w pliku STL.
+STL zapisuje powierzchnię złożoną z trójkątów. Materiały, obrazy tekstur, współrzędne UV oraz samodzielne linie i punkty są pomijane. Konwerter zachowuje osie i skalę. Binarny format STL zapisuje współrzędne jako 32-bitowe liczby zmiennoprzecinkowe. Przy bardzo dużych współrzędnych zaokrąglenie może zatrzeć najdrobniejsze szczegóły. Przed drukowaniem wybierz właściwą jednostkę w programie do przygotowywania wydruku. Przykładowo wymiar wynoszący 40 jednostek współrzędnych w pliku OBJ ma taką samą wartość w pliku STL.
 
 Konwersja może się udać nawet wtedy, gdy siatka ma otwory lub inne problemy geometryczne. Przed drukowaniem sprawdź wynik w programie do przygotowywania wydruku.
 

@@ -6,5 +6,6 @@
   "converting": "Modell wird konvertiert …",
   "failed": "Das Modell ließ sich nicht konvertieren. Wähle eine gültige Datei, die Polygonflächen enthält.",
   "output": "Konvertierte Datei",
-  "download": "{format} herunterladen"
+  "download": "{format} herunterladen",
+  "previousOutput": "Vorherige Konvertierung"
 }

@@ -4,7 +4,7 @@ Pilih **Buka file** atau seret file `.stl` ke konverter. Alat ini membaca STL AS
 
 ## Periksa isi file OBJ
 
-Konverter menyimpan segitiga permukaan asli dalam file Wavefront OBJ. Sumbu koordinat dan skala mesh tetap sama. STL tidak memiliki pengaturan satuan standar. Jika panjang sebuah tepi pada file awal adalah 40 satuan koordinat, panjangnya tetap 40 satuan koordinat di OBJ. Pilih satuan yang sesuai saat mengimpor file ke aplikasi lain.
+Konverter menyimpan segitiga permukaan asli dalam file Wavefront OBJ. Titik-titik sudut dengan posisi yang sama memakai satu indeks titik di OBJ, sehingga mesh lebih mudah diedit. Sumbu koordinat dan skala mesh tetap sama. STL tidak memiliki pengaturan satuan standar. Jika panjang sebuah tepi pada file awal adalah 40 satuan koordinat, panjangnya tetap 40 satuan koordinat di OBJ. Pilih satuan yang sesuai saat mengimpor file ke aplikasi lain.
 
 File hasil unduhan berisi geometri mesh. Pustaka material dan tekstur tidak disertakan karena model permukaan STL standar tidak menyimpan keduanya.
 
