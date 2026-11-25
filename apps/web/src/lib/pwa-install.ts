@@ -1,58 +1,57 @@
+import { getInstallTarget } from "./install-target"
+
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<unknown>
 }
 
+const installLinkSelector = "a[data-pwa-install-trigger]"
+
 export function setupPwaInstall() {
   let installPrompt: BeforeInstallPromptEvent | null = null
-  let offered = false
+  const guide = getInstallTarget(navigator)
 
-  function refresh() {
-    const standalone = window.matchMedia("(display-mode: standalone)").matches
-    document
-      .querySelectorAll<HTMLElement>("[data-pwa-install]")
-      .forEach((control) => {
-        control.hidden = !offered || standalone
-        control
-          .querySelector("[data-pwa-install-trigger]")
-          ?.setAttribute("aria-disabled", String(!installPrompt))
-      })
+  if (guide) {
+    for (const link of document.querySelectorAll<HTMLAnchorElement>(
+      installLinkSelector
+    )) {
+      const href = link.getAttribute("href")
+      if (href?.endsWith("/install/")) link.href = `${href}${guide}/`
+    }
   }
 
   function beforeInstall(event: Event) {
     event.preventDefault()
     installPrompt = event as BeforeInstallPromptEvent
-    offered = true
-    refresh()
   }
 
   function installed() {
     installPrompt = null
-    offered = false
-    refresh()
   }
 
   async function install(event: MouseEvent) {
-    if (!(event.target instanceof Element)) return
-    const trigger = event.target.closest<HTMLElement>(
-      "[data-pwa-install-trigger]"
-    )
-    if (!trigger) return
-    // The summary is an install action; do not toggle a disclosure on click.
-    event.preventDefault()
     if (
-      trigger.closest<HTMLElement>("[data-pwa-install]")?.hidden ||
-      !installPrompt
+      !installPrompt ||
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey ||
+      !(event.target instanceof Element)
     )
       return
 
-    // Browsers allow each prompt to be used only once, including on dismissal.
+    const link = event.target.closest<HTMLAnchorElement>(installLinkSelector)
+    if (!link || window.matchMedia("(display-mode: standalone)").matches) return
+
+    event.preventDefault()
     const prompt = installPrompt
     installPrompt = null
-    refresh()
+
     try {
       await prompt.prompt()
     } catch {
-      // Keep the icon visible, awaiting a fresh one-use prompt from the browser.
+      window.location.assign(link.href)
     }
   }
 

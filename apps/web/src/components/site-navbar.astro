@@ -12,7 +12,7 @@ import { loadSiteMessages } from "@/lib/site-messages"
 
 interface Props {
   language: SiteLanguage
-  current: "home" | "tools"
+  current: "home" | "tools" | "install"
   pathname: string
   availableLanguages?: readonly SiteLanguage[]
 }
@@ -48,7 +48,7 @@ const toolsHref = localizePath("/tools", language)
   <div class="ms-auto flex items-center gap-1">
     <NavbarSearch language={language} action={toolsHref} />
     <div class="mx-1 hidden h-4 w-px bg-border supports-[selector(:popover-open)]:block" aria-hidden="true" />
-    <PwaInstallButton label={catalog.site.installApp} />
+    <PwaInstallButton label={catalog.site.installApp} href={localizePath("/install", language)} />
     <ThemeToggle
       labelLight={catalog.site.themeLight}
       labelDark={catalog.site.themeDark}

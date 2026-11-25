@@ -1,0 +1,55 @@
+{
+  "title": "Instalar InBrowser.App",
+  "description": "Escolha o navegador que utiliza para ver as instruções de instalação.",
+  "guideTitle": "Instalar InBrowser.App · {browser}",
+  "guideDescription": "Como instalar InBrowser.App em {browser}.",
+  "switchBrowser": "Escolher outro navegador",
+  "browserHelp": "Ajuda do navegador",
+  "otherBrowsers": "Outros navegadores",
+  "desktop": "Computador",
+  "steps": {
+    "ios-safari": [
+      "Abra esta página no Safari e toque em «Partilhar». Se a opção não estiver visível, abra primeiro o menu da página ou o menu «Mais».",
+      "No menu Partilhar, toque em Ver mais, se for necessário. Toque em «Adicionar ao ecrã principal». Se aparecer «Abrir como aplicação web», ative essa opção.",
+      "Toque em «Adicionar» e abra InBrowser.App a partir do ecrã principal."
+    ],
+    "ios-other": [
+      "Abra o menu «Partilhar» do navegador, normalmente junto à barra de endereços.",
+      "Se «Adicionar ao ecrã principal» estiver disponível, toque na opção e confirme. Ative «Abrir como aplicação web» se essa opção aparecer.",
+      "Se a opção não estiver disponível ou se tiver aberto esta página noutra aplicação, abra inbrowser.app no Safari e siga o guia para Safari."
+    ],
+    "android-chrome": [
+      "Abra o menu do Chrome (⋮) e escolha «Instalar e criar atalho».",
+      "Escolha «Instalar» e siga as instruções. Em algumas versões, procure «Instalar aplicação» ou «Adicionar ao ecrã principal» no menu principal."
+    ],
+    "android-firefox": [
+      "Abra o menu do Firefox (⋮) e toque em «Instalar».",
+      "Toque em «Adicionar automaticamente» ou arraste o ícone para o local pretendido no ecrã principal."
+    ],
+    "android-samsung-internet": [
+      "Se vir um ícone de instalação na barra de endereços, toque nele.",
+      "Também pode abrir o menu do Samsung Internet e escolher «Adicionar página a» e depois «Ecrã principal». Siga as instruções."
+    ],
+    "android-other": [
+      "No menu do navegador, procure «Instalar», «Adicionar ao ecrã principal» ou «Adicionar ao telemóvel». Se puder escolher, selecione «Instalar».",
+      "Se a opção não estiver disponível ou se tiver aberto o site noutra aplicação, use «Abrir no navegador» se estiver disponível. Também pode abrir inbrowser.app no Chrome e seguir o guia para Chrome."
+    ],
+    "desktop-chrome": [
+      "Se vir um ícone de instalação na barra de endereços, clique nele.",
+      "Também pode abrir o menu do Chrome e escolher «Transmitir, guardar e partilhar» e depois «Instalar página como aplicação». Confirme a instalação."
+    ],
+    "desktop-edge": [
+      "Se vir um ícone de instalação de aplicações na barra de endereços, clique nele.",
+      "Também pode abrir «Definições e muito mais» e escolher «Mais ferramentas», «Aplicações» e «Instalar este site como uma aplicação». Confirme a instalação."
+    ],
+    "macos-safari": [
+      "Abra esta página no Safari em macOS Sonoma 14 ou posterior.",
+      "Escolha «Ficheiro» e depois «Adicionar à Dock». Também encontra esta opção no menu «Partilhar» da barra de ferramentas.",
+      "Clique em «Adicionar» e abra InBrowser.App a partir da Dock ou da pasta Aplicações."
+    ],
+    "windows-firefox": [
+      "Abra esta página numa janela normal do Firefox. Utilize o Firefox 143 ou posterior, ou o Firefox 150 ou posterior se o tiver instalado através da Microsoft Store.",
+      "Clique no botão das aplicações web na barra de endereços. Abra InBrowser.App a partir da barra de tarefas ou do menu Iniciar."
+    ]
+  }
+}

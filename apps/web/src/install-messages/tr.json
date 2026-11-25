@@ -1,0 +1,55 @@
+{
+  "title": "InBrowser.App’i yükle",
+  "description": "Yükleme adımlarını görmek için kullandığınız tarayıcıyı seçin.",
+  "guideTitle": "InBrowser.App’i yükle · {browser}",
+  "guideDescription": "{browser} için InBrowser.App yükleme adımları.",
+  "switchBrowser": "Başka bir tarayıcı seç",
+  "browserHelp": "Tarayıcı yardımı",
+  "otherBrowsers": "Diğer tarayıcılar",
+  "desktop": "Masaüstü",
+  "steps": {
+    "ios-safari": [
+      "Bu sayfayı Safari’de açın ve Paylaş düğmesine dokunun. Paylaş’ı görmüyorsanız önce sayfa menüsünü veya Daha Fazla menüsünü açın.",
+      "Gerekirse Paylaş menüsünde Daha Fazla Göster’e dokunun. Ana Ekrana Ekle’ye dokunun. Web Uygulaması Olarak Aç seçeneği görünüyorsa bu seçeneği açın.",
+      "Ekle’ye dokunun, ardından InBrowser.App’i Ana Ekran’dan açın."
+    ],
+    "ios-other": [
+      "Tarayıcının Paylaş menüsünü açın. Bu menü genellikle adres çubuğunun yanındadır.",
+      "Ana Ekrana Ekle seçeneği varsa dokunun ve onaylayın. Web Uygulaması Olarak Aç seçeneğini görürseniz bu seçeneği açın.",
+      "Bu seçenek yoksa veya sayfayı başka bir uygulamanın içinde açtıysanız Safari’de inbrowser.app adresine gidin ve Safari kılavuzundaki adımları izleyin."
+    ],
+    "android-chrome": [
+      "Chrome menüsünü (⋮) açın ve Yükle ve kısayol oluştur’u seçin.",
+      "Yükle’ye dokunun ve ekrandaki talimatları izleyin. Bazı sürümlerde ana menüde Uygulamayı yükle veya Ana ekrana ekle seçeneğini arayın."
+    ],
+    "android-firefox": [
+      "Firefox menüsünü (⋮) açın ve Yükle’ye dokunun.",
+      "Otomatik olarak ekle’ye dokunun veya simgeyi ana ekranda istediğiniz yere sürükleyin."
+    ],
+    "android-samsung-internet": [
+      "Adres çubuğunda yükleme simgesini görüyorsanız simgeye dokunun.",
+      "Samsung Internet menüsünü açıp Sayfayı şuraya ekle’yi, ardından Ana ekran’ı da seçebilirsiniz. Ekrandaki talimatları izleyin."
+    ],
+    "android-other": [
+      "Tarayıcı menüsünde Yükle, Ana ekrana ekle veya Telefona ekle seçeneğini arayın. Birden fazla seçenek varsa Yükle’yi seçin.",
+      "Bu seçenek yoksa veya siteyi başka bir uygulamanın içinde açtıysanız, varsa Tarayıcıda aç seçeneğini kullanın. Chrome’da inbrowser.app adresine gidip Chrome kılavuzundaki adımları da izleyebilirsiniz."
+    ],
+    "desktop-chrome": [
+      "Adres çubuğunda yükleme simgesini görüyorsanız simgeyi tıklayın.",
+      "Chrome menüsünde önce Yayınla, kaydet ve paylaş’ı, ardından Sayfayı uygulama olarak yükle’yi de seçebilirsiniz. Yüklemeyi onaylayın."
+    ],
+    "desktop-edge": [
+      "Adres çubuğunda uygulama yükleme simgesini görüyorsanız simgeyi tıklayın.",
+      "Ayarlar ve daha fazlası menüsünü açıp Diğer araçlar, Uygulamalar ve Bu siteyi uygulama olarak yükle seçeneklerini sırasıyla belirleyebilirsiniz. Yüklemeyi onaylayın."
+    ],
+    "macos-safari": [
+      "Bu sayfayı macOS Sonoma 14 veya daha yeni bir sürümde Safari ile açın.",
+      "Dosya menüsünden Dock’a Ekle’yi seçin. Dock’a Ekle seçeneğini araç çubuğundaki Paylaş menüsünde de bulabilirsiniz.",
+      "Ekle’yi tıklayın, ardından InBrowser.App’i Dock’tan veya Uygulamalar klasöründen açın."
+    ],
+    "windows-firefox": [
+      "Bu sayfayı normal bir Firefox penceresinde açın. Firefox 143 veya daha yenisini kullanın. Tarayıcıyı Microsoft Store’dan yüklediyseniz 150 veya daha yeni bir sürüm kullanın.",
+      "Adres çubuğundaki web uygulamaları düğmesini tıklayın. InBrowser.App’i görev çubuğundan veya Başlat menüsünden açın."
+    ]
+  }
+}

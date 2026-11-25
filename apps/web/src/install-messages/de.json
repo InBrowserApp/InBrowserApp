@@ -1,0 +1,55 @@
+{
+  "title": "InBrowser.App installieren",
+  "description": "Wählen Sie Ihren Browser aus, um die passende Installationsanleitung zu öffnen.",
+  "guideTitle": "InBrowser.App installieren · {browser}",
+  "guideDescription": "So installieren Sie InBrowser.App in {browser}.",
+  "switchBrowser": "Anderen Browser auswählen",
+  "browserHelp": "Browser-Hilfe",
+  "otherBrowsers": "Andere Browser",
+  "desktop": "Computer",
+  "steps": {
+    "ios-safari": [
+      "Öffnen Sie diese Seite in Safari und tippen Sie auf „Teilen“. Wenn „Teilen“ nicht angezeigt wird, öffnen Sie zuerst das Seitenmenü oder das Menü „Mehr“.",
+      "Tippen Sie im Teilen-Menü bei Bedarf auf „Mehr anzeigen“. Tippen Sie auf „Zu Home-Bildschirm hinzufügen“. Wenn „Als Web-App öffnen“ angezeigt wird, aktivieren Sie diese Option.",
+      "Tippen Sie auf „Hinzufügen“ und öffnen Sie InBrowser.App anschließend auf dem Home-Bildschirm."
+    ],
+    "ios-other": [
+      "Öffnen Sie das Teilen-Menü Ihres Browsers. Es befindet sich meist neben der Adressleiste.",
+      "Wenn „Zu Home-Bildschirm hinzufügen“ verfügbar ist, tippen Sie darauf und bestätigen Sie. Aktivieren Sie „Als Web-App öffnen“, falls die Option angezeigt wird.",
+      "Wenn diese Option fehlt oder Sie die Seite in einer anderen App geöffnet haben, rufen Sie inbrowser.app in Safari auf und folgen Sie der Safari-Anleitung."
+    ],
+    "android-chrome": [
+      "Öffnen Sie das Chrome-Menü (⋮) und wählen Sie „Installieren und Verknüpfung erstellen“.",
+      "Wählen Sie „Installieren“ und folgen Sie den Anweisungen. In manchen Versionen finden Sie „App installieren“ oder „Zum Startbildschirm hinzufügen“ direkt im Hauptmenü."
+    ],
+    "android-firefox": [
+      "Öffnen Sie das Firefox-Menü (⋮) und tippen Sie auf „Installieren“.",
+      "Tippen Sie auf „Automatisch hinzufügen“ oder ziehen Sie das Symbol an die gewünschte Stelle auf dem Startbildschirm."
+    ],
+    "android-samsung-internet": [
+      "Tippen Sie auf das Installationssymbol in der Adressleiste, falls es angezeigt wird.",
+      "Sie können auch das Menü von Samsung Internet öffnen und unter „Seite hinzufügen zu“ den „Startbildschirm“ auswählen. Folgen Sie den Anweisungen."
+    ],
+    "android-other": [
+      "Suchen Sie im Browsermenü nach „Installieren“, „Zum Startbildschirm hinzufügen“ oder „Zum Telefon hinzufügen“. Wenn Sie die Wahl haben, wählen Sie „Installieren“.",
+      "Wenn die Option fehlt oder Sie die Seite in einer anderen App geöffnet haben, wählen Sie „Im Browser öffnen“, sofern verfügbar. Sie können inbrowser.app auch in Chrome öffnen und der Chrome-Anleitung folgen."
+    ],
+    "desktop-chrome": [
+      "Klicken Sie auf das Installationssymbol in der Adressleiste, falls es angezeigt wird.",
+      "Sie können auch das Chrome-Menü öffnen und unter „Streamen, speichern und teilen“ die Option „Seite als App installieren“ auswählen. Bestätigen Sie die Installation."
+    ],
+    "desktop-edge": [
+      "Klicken Sie auf das Symbol zum Installieren der App in der Adressleiste, falls es angezeigt wird.",
+      "Sie können auch „Einstellungen und mehr“ öffnen und über „Weitere Tools“ und „Apps“ die Option „Diese Website als App installieren“ auswählen. Bestätigen Sie die Installation."
+    ],
+    "macos-safari": [
+      "Öffnen Sie diese Seite in Safari unter macOS Sonoma 14 oder neuer.",
+      "Wählen Sie „Ablage“ und dann „Zum Dock hinzufügen“. Diese Option finden Sie auch unter „Teilen“ in der Symbolleiste.",
+      "Klicken Sie auf „Hinzufügen“ und öffnen Sie InBrowser.App anschließend im Dock oder im Ordner „Programme“."
+    ],
+    "windows-firefox": [
+      "Öffnen Sie diese Seite in einem normalen Firefox-Fenster. Verwenden Sie Firefox ab Version 143 oder ab Version 150, wenn Sie Firefox aus dem Microsoft Store installiert haben.",
+      "Klicken Sie auf die Schaltfläche für Web-Apps in der Adressleiste. Öffnen Sie InBrowser.App anschließend über die Taskleiste oder das Startmenü."
+    ]
+  }
+}

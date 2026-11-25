@@ -1,0 +1,55 @@
+{
+  "title": "Install InBrowser.App",
+  "description": "Choose the browser you use to get installation instructions.",
+  "guideTitle": "Install InBrowser.App · {browser}",
+  "guideDescription": "How to install InBrowser.App in {browser}.",
+  "switchBrowser": "Choose another browser",
+  "browserHelp": "Browser help",
+  "otherBrowsers": "Other browsers",
+  "desktop": "Desktop",
+  "steps": {
+    "ios-safari": [
+      "Open this page in Safari and tap Share. If you do not see Share, open the page menu or the More menu first.",
+      "In the Share menu, tap View More if needed, then Add to Home Screen. If Open as Web App appears, turn it on.",
+      "Tap Add, then open InBrowser.App from your Home Screen."
+    ],
+    "ios-other": [
+      "Open the browser’s Share menu, usually beside the address bar.",
+      "If Add to Home Screen is available, tap it and confirm. Turn on Open as Web App if you see that option.",
+      "If the option is missing or you opened this page inside another app, open inbrowser.app in Safari and follow the Safari guide."
+    ],
+    "android-chrome": [
+      "Open the Chrome menu (⋮) and choose Install and create shortcut.",
+      "Choose Install and follow the prompts. On some versions, look for Install app or Add to Home screen in the main menu."
+    ],
+    "android-firefox": [
+      "Open the Firefox menu (⋮) and tap Install.",
+      "Tap Add automatically or drag the icon to a spot on your Home screen."
+    ],
+    "android-samsung-internet": [
+      "Tap the install icon in the address bar if you see one.",
+      "You can also open the Samsung Internet menu and choose Add page to, then Home screen. Follow the prompts."
+    ],
+    "android-other": [
+      "Look in your browser menu for Install, Add to Home screen, or Add to Phone. If you have a choice, select Install.",
+      "If the option is missing or you opened the site inside another app, use Open in browser if available. You can also open inbrowser.app in Chrome and follow the Chrome guide."
+    ],
+    "desktop-chrome": [
+      "Click the install icon in the address bar if you see one.",
+      "You can also open the Chrome menu, choose Cast, save, and share, then Install page as app. Confirm to install."
+    ],
+    "desktop-edge": [
+      "Click the app install icon in the address bar if you see one.",
+      "You can also open Settings and more, then More tools, Apps, and Install this site as an app. Confirm to install."
+    ],
+    "macos-safari": [
+      "Open this page in Safari on macOS Sonoma 14 or later.",
+      "Choose File, then Add to Dock. You can also find Add to Dock under Share in the toolbar.",
+      "Click Add, then open InBrowser.App from the Dock or Applications."
+    ],
+    "windows-firefox": [
+      "Open this page in a regular Firefox window. Use Firefox 143 or later, or version 150 or later if installed from the Microsoft Store.",
+      "Click the web apps button in the address bar. Open InBrowser.App from the taskbar or Start menu."
+    ]
+  }
+}

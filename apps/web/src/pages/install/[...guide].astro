@@ -1,0 +1,13 @@
+---
+import InstallPage from "@/components/pages/install-page.astro"
+import { INSTALL_GUIDE_IDS, isInstallGuideId } from "@/lib/install-guides"
+import { DEFAULT_SITE_LANGUAGE } from "@/lib/site"
+
+export function getStaticPaths() {
+  return [undefined, ...INSTALL_GUIDE_IDS].map((guide) => ({ params: { guide } }))
+}
+
+const { guide } = Astro.params
+---
+
+<InstallPage language={DEFAULT_SITE_LANGUAGE} guideId={isInstallGuideId(guide) ? guide : undefined} />
