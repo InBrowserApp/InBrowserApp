@@ -9,7 +9,7 @@ import {
   EmptyTitle,
 } from "../../ui/empty"
 import { Spinner } from "../../ui/spinner"
-import { Box, Folder, FolderOpen } from "../../../icons"
+import { Box, Folder, FolderInput } from "../../../icons"
 import { cn } from "../../../lib/utils"
 import { exampleFile, getModelFormat, loadModel } from "./load-model"
 import type { ChangeEvent } from "react"
@@ -90,7 +90,7 @@ export default function ModelViewer({
   )
   const chooseFolder = options.companions && (
     <Button variant="outline" onClick={() => folder.current?.click()}>
-      <FolderOpen data-icon="inline-start" aria-hidden="true" />
+      <FolderInput data-icon="inline-start" aria-hidden="true" />
       {m.openFolder}
     </Button>
   )
