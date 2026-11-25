@@ -16,5 +16,9 @@
   "layers": "Lagen",
   "controls": "Slepen om te verschuiven · Scrollen om te zoomen",
   "touchControls": "Slepen om te verschuiven · Knijpen om te zoomen",
-  "keyboardControls": "Gebruik de pijltoetsen om de weergave te verschuiven en + of − om te zoomen."
+  "keyboardControls": "Gebruik de pijltoetsen om de weergave te verschuiven en + of − om te zoomen.",
+  "focus": "Volledig scherm openen",
+  "exitFocus": "Volledig scherm verlaten",
+  "save": "PNG opslaan",
+  "exportError": "De PNG kon niet worden opgeslagen. Probeer het opnieuw."
 }

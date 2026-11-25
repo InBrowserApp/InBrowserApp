@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import type { ReactNode } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
-import { Folder, Maximize2, Minimize2, X } from "@workspace/ui/icons"
+import { ViewportFocusButton } from "@workspace/ui/components/tool/viewport-focus"
+import { Folder, X } from "@workspace/ui/icons"
+import { useWorkspaceFocus } from "@workspace/ui/lib/use-workspace-focus"
 import { cn } from "@workspace/ui/lib/utils"
 
 type Messages = Record<
@@ -38,64 +40,47 @@ export function DocumentWorkspace({
   children: ReactNode
   renderEmpty?: (chooseFile: () => void) => ReactNode
 }) {
-  const frame = useRef<HTMLDialogElement>(null)
+  const focus = useWorkspaceFocus()
+  const { frame, focusButton, focused, changeFocus } = focus
   const picker = useRef<HTMLInputElement>(null)
-  const focusButton = useRef<HTMLButtonElement>(null)
   const restoreOpenFocus = useRef(false)
   const dragDepth = useRef(0)
   const [dragging, setDragging] = useState(false)
-  const [focused, setFocused] = useState(false)
   const [height, setHeight] = useState(600)
-  function exitFocus() {
-    const dialog = frame.current!
-    dialog.close()
-    dialog.show()
-    setFocused(false)
-    const target =
-      focusButton.current ??
-      dialog.querySelector<HTMLButtonElement>("[data-file-open]")
-    target?.focus({ preventScroll: true })
-  }
-  function enterFocus() {
-    const dialog = frame.current!
-    dialog.close()
-    dialog.showModal()
-    setFocused(true)
-    focusButton.current?.focus({ preventScroll: true })
-  }
+  const exitFocus = useCallback(() => {
+    changeFocus(false)
+    if (!focusButton.current) {
+      frame.current
+        ?.querySelector<HTMLButtonElement>("[data-file-open]")
+        ?.focus({ preventScroll: true })
+    }
+  }, [changeFocus, focusButton, frame])
   useEffect(() => {
     if (!active && focused) exitFocus()
-  }, [active, focused])
+  }, [active, exitFocus, focused])
   useEffect(() => {
     if (file || !restoreOpenFocus.current) return
     restoreOpenFocus.current = false
     frame.current
       ?.querySelector<HTMLButtonElement>("[data-file-open]")
       ?.focus({ preventScroll: true })
-  }, [file])
+  }, [file, frame])
   useEffect(() => {
-    if (!focused) return
-    const previous = document.body.style.overflow
-    document.body.style.overflow = "hidden"
-    return () => {
-      document.body.style.overflow = previous
-    }
-  }, [focused])
-  useEffect(() => {
+    if (focused || fitContent) return
+    const dialog = frame.current!
     function resize() {
-      const top = frame.current!.getBoundingClientRect().top + window.scrollY
+      const top = dialog.getBoundingClientRect().top + window.scrollY
       setHeight(Math.max(400, window.innerHeight - top - 24))
     }
-    if (focused || fitContent) return
     resize()
     const observer = new ResizeObserver(resize)
-    observer.observe(frame.current!.parentElement!)
+    observer.observe(dialog.parentElement!)
     window.addEventListener("resize", resize)
     return () => {
       observer.disconnect()
       window.removeEventListener("resize", resize)
     }
-  }, [focused, active, fitContent])
+  }, [focused, active, fitContent, frame])
   const unit =
     file && file.size >= 1024 * 1024
       ? "megabyte"
@@ -190,20 +175,7 @@ export function DocumentWorkspace({
                 </span>
               </span>
             ) : null}
-            {active ? (
-              <DocumentIconButton
-                ref={focusButton}
-                label={focused ? m.exitFocus : m.focus}
-                aria-pressed={focused}
-                onClick={focused ? exitFocus : enterFocus}
-              >
-                {focused ? (
-                  <Minimize2 aria-hidden="true" />
-                ) : (
-                  <Maximize2 aria-hidden="true" />
-                )}
-              </DocumentIconButton>
-            ) : null}
+            {active ? <ViewportFocusButton focus={focus} messages={m} /> : null}
             {file ? (
               <DocumentIconButton
                 label={m.clear}

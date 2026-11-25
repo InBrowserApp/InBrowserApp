@@ -16,5 +16,9 @@
   "layers": "Layer",
   "controls": "Trascina per spostare la vista · Usa la rotellina per lo zoom",
   "touchControls": "Trascina per spostare la vista · Allarga o stringi due dita per lo zoom",
-  "keyboardControls": "Usa le frecce per spostare la vista e + o − per lo zoom."
+  "keyboardControls": "Usa le frecce per spostare la vista e + o − per lo zoom.",
+  "focus": "Apri a schermo intero",
+  "exitFocus": "Esci da schermo intero",
+  "save": "Salva PNG",
+  "exportError": "Impossibile salvare il PNG. Riprova."
 }

@@ -16,5 +16,9 @@
   "layers": "도면층",
   "controls": "드래그하여 이동 · 스크롤하여 확대/축소",
   "touchControls": "드래그하여 이동 · 두 손가락으로 확대/축소",
-  "keyboardControls": "방향키로 이동하고 + 또는 −로 확대/축소하세요."
+  "keyboardControls": "방향키로 이동하고 + 또는 −로 확대/축소하세요.",
+  "focus": "전체 화면 열기",
+  "exitFocus": "전체 화면 나가기",
+  "save": "PNG 저장",
+  "exportError": "PNG를 저장할 수 없습니다. 다시 시도하세요."
 }

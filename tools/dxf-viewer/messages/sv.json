@@ -16,5 +16,9 @@
   "layers": "Lager",
   "controls": "Dra för att panorera · Rulla för att zooma",
   "touchControls": "Dra för att panorera · Nyp för att zooma",
-  "keyboardControls": "Använd piltangenterna för att panorera och + eller − för att zooma."
+  "keyboardControls": "Använd piltangenterna för att panorera och + eller − för att zooma.",
+  "focus": "Öppna helskärmsvyn",
+  "exitFocus": "Lämna helskärmsvyn",
+  "save": "Spara PNG",
+  "exportError": "Det gick inte att spara PNG-bilden. Försök igen."
 }

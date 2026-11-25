@@ -16,5 +16,9 @@
   "layers": "画層",
   "controls": "ドラッグで移動 · スクロールで拡大縮小",
   "touchControls": "ドラッグで移動 · ピンチで拡大縮小",
-  "keyboardControls": "矢印キーで移動し、+ または − で拡大縮小します。"
+  "keyboardControls": "矢印キーで移動し、+ または − で拡大縮小します。",
+  "focus": "全画面表示",
+  "exitFocus": "全画面表示を終了",
+  "save": "PNG を保存",
+  "exportError": "PNG を保存できませんでした。もう一度お試しください。"
 }

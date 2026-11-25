@@ -16,5 +16,9 @@
   "layers": "Camadas",
   "controls": "Arraste para deslocar a vista · Use a roda do mouse para dar zoom",
   "touchControls": "Arraste para deslocar a vista · Faça o gesto de pinça para dar zoom",
-  "keyboardControls": "Use as setas para deslocar a vista e + ou − para ajustar o zoom."
+  "keyboardControls": "Use as setas para deslocar a vista e + ou − para ajustar o zoom.",
+  "focus": "Abrir em tela cheia",
+  "exitFocus": "Sair da tela cheia",
+  "save": "Salvar PNG",
+  "exportError": "Não foi possível salvar o PNG. Tente novamente."
 }

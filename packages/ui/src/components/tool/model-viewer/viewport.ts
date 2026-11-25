@@ -13,6 +13,8 @@ import {
   WebGLRenderer,
 } from "three"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
+import { saveViewportPng } from "../../../lib/save-viewport-png"
+import { createModelMeasurement } from "../../../lib/model-measurement"
 import type { AnimationClip, Material, Mesh } from "three"
 import type { OpenModel } from "./load-model"
 
@@ -64,6 +66,12 @@ export function createModelViewport(
   const direction = zUp ? new Vector3(1, -1, 0.86) : new Vector3(1, 0.86, 1)
   camera.position.copy(direction).setLength(radius * 6)
   const controls = new OrbitControls(camera, renderer.domElement)
+  const measurement = createModelMeasurement(
+    scene,
+    renderer.domElement,
+    camera,
+    [object]
+  )
   const mixer = animations?.length ? new AnimationMixer(object) : undefined
   let selectedClip: AnimationClip | undefined
   controls.minZoom = 0.12
@@ -74,6 +82,7 @@ export function createModelViewport(
   function render() {
     grid.visible =
       camera.position[zUp ? "z" : "y"] > grid.position[zUp ? "z" : "y"]
+    measurement.resizeMarkers()
     renderer.render(scene, camera)
   }
 
@@ -169,6 +178,19 @@ export function createModelViewport(
       }
       render()
     },
+    pick: measurement.pick,
+    showMeasurement(points: Vector3[]) {
+      measurement.show(points)
+      render()
+    },
+    save(filename: string, label?: string) {
+      render()
+      return saveViewportPng(renderer.domElement, filename, {
+        pixelRatio: renderer.getPixelRatio(),
+        background: getComputedStyle(host).backgroundColor,
+        label,
+      })
+    },
     dispose() {
       renderer.setAnimationLoop(null)
       mixer?.stopAllAction()
@@ -178,6 +200,7 @@ export function createModelViewport(
       controls.dispose()
       object.removeFromParent()
       grid.dispose()
+      measurement.dispose()
       renderer.dispose()
       renderer.forceContextLoss()
       renderer.domElement.remove()

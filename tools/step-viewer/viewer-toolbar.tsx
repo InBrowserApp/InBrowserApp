@@ -43,14 +43,14 @@ export function ViewerToolbar({
         <DocumentIconButton label={m.fit} onClick={viewport.fit}>
           <Scan aria-hidden="true" />
         </DocumentIconButton>
+        <DocumentIconButton label={m.zoomIn} onClick={() => viewport.zoom(0.8)}>
+          <ZoomIn aria-hidden="true" />
+        </DocumentIconButton>
         <DocumentIconButton
           label={m.zoomOut}
           onClick={() => viewport.zoom(1.25)}
         >
           <ZoomOut aria-hidden="true" />
-        </DocumentIconButton>
-        <DocumentIconButton label={m.zoomIn} onClick={() => viewport.zoom(0.8)}>
-          <ZoomIn aria-hidden="true" />
         </DocumentIconButton>
       </div>
       <div className="flex flex-wrap items-center gap-2">

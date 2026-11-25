@@ -1,13 +1,22 @@
-export async function saveScreenshot(
+import { downloadBlob } from "./download-blob"
+
+export async function saveViewportPng(
   source: HTMLCanvasElement,
-  pixelRatio: number,
   filename: string,
-  label?: string
+  {
+    pixelRatio = 1,
+    label,
+    background,
+  }: { pixelRatio?: number; label?: string; background?: string } = {}
 ) {
   const output = document.createElement("canvas")
   output.width = source.width
   output.height = source.height
   const context = output.getContext("2d")!
+  if (background) {
+    context.fillStyle = background
+    context.fillRect(0, 0, output.width, output.height)
+  }
   context.drawImage(source, 0, 0)
   if (label) {
     context.scale(pixelRatio, pixelRatio)
@@ -33,10 +42,5 @@ export async function saveScreenshot(
     output.toBlob(resolve)
   )
   if (!png) throw new Error("PNG encoding failed")
-  const url = URL.createObjectURL(png)
-  const link = document.createElement("a")
-  link.download = `${filename.replace(/\.(step|stp)$/i, "") || "model"}.png`
-  link.href = url
-  link.click()
-  setTimeout(() => URL.revokeObjectURL(url), 1000)
+  downloadBlob(png, `${filename.replace(/\.[^.]*$/, "") || "model"}.png`)
 }

@@ -16,5 +16,9 @@
   "layers": "Lag",
   "controls": "Dra for å panorere · Rull for å zoome",
   "touchControls": "Dra for å panorere · Knip for å zoome",
-  "keyboardControls": "Bruk piltastene til å panorere og + eller − til å zoome."
+  "keyboardControls": "Bruk piltastene til å panorere og + eller − til å zoome.",
+  "focus": "Åpne fullskjermvisning",
+  "exitFocus": "Avslutt fullskjermvisning",
+  "save": "Lagre som PNG",
+  "exportError": "Kunne ikke lagre PNG-bildet. Prøv på nytt."
 }

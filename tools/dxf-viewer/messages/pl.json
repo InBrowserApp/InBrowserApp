@@ -16,5 +16,9 @@
   "layers": "Warstwy",
   "controls": "Przeciągnij, aby przesunąć · Przewiń, aby zmienić powiększenie",
   "touchControls": "Przeciągnij, aby przesunąć · Zsuń lub rozsuń palce, aby zmienić powiększenie",
-  "keyboardControls": "Przesuwaj widok klawiszami strzałek. Zmieniaj powiększenie klawiszami + i −."
+  "keyboardControls": "Przesuwaj widok klawiszami strzałek. Zmieniaj powiększenie klawiszami + i −.",
+  "focus": "Otwórz widok pełnoekranowy",
+  "exitFocus": "Zamknij widok pełnoekranowy",
+  "save": "Zapisz PNG",
+  "exportError": "Nie udało się zapisać pliku PNG. Spróbuj ponownie."
 }
