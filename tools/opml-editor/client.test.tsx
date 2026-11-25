@@ -43,6 +43,17 @@ test("creates a folder and feed and exports the current outline", () => {
   fireEvent.change(screen.getByLabelText(m.feedUrl), {
     target: { value: "https://example.test/feed" },
   })
+  fireEvent.change(screen.getByLabelText(m.feedUrl), {
+    target: { value: "not a URL" },
+  })
+  expect(screen.getByLabelText(m.feedUrl)).toHaveProperty("ariaInvalid", "true")
+  expect(screen.getByRole("button", { name: m.download })).toHaveProperty(
+    "disabled",
+    true
+  )
+  fireEvent.change(screen.getByLabelText(m.feedUrl), {
+    target: { value: "https://example.test/feed" },
+  })
   const list = screen.getByRole("list", { name: m.outline })
   expect(
     within(list).getByRole("button", { name: "New lab blog" })

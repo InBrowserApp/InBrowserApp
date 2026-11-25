@@ -49,16 +49,14 @@ export function EditorToolbar({
           }}
         />
         <PasteDialog messages={m} read={readText} />
-        {loaded ? (
-          <Button size="sm" variant="ghost" onClick={reset}>
-            <Plus data-icon="inline-start" aria-hidden="true" />
-            {m.newOutline}
-          </Button>
-        ) : (
-          <Button size="sm" variant="ghost" onClick={() => readText(example)}>
-            {m.sample}
-          </Button>
-        )}
+        <Button
+          size="sm"
+          variant="ghost"
+          onClick={loaded ? reset : () => readText(example)}
+        >
+          {loaded && <Plus data-icon="inline-start" aria-hidden="true" />}
+          {loaded ? m.newOutline : m.sample}
+        </Button>
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <ToolCopyButton

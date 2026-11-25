@@ -1,23 +1,29 @@
 import { Folder, Rss } from "@workspace/ui/icons"
-import { isFeed, outlineName, outlineRows } from "./xml"
+import { isFeed, outlineName, outlineChildren } from "./xml"
 import type { Messages } from "./types"
 
 export function OutlineList({
-  rows,
+  parent,
+  depth = 0,
   selected,
   onSelect,
   messages: m,
 }: {
-  rows: ReturnType<typeof outlineRows>
+  parent: Element
+  depth?: number
   selected: Element | null
   onSelect: (node: Element, keyboard: boolean) => void
   messages: Messages
 }) {
   return (
-    <ul aria-label={m.outline} className="max-h-[28rem] flex-1 overflow-auto">
-      {rows.map(({ node, depth }, index) => {
+    <ul
+      aria-label={depth === 0 ? m.outline : undefined}
+      className={depth === 0 ? "max-h-[28rem] flex-1 overflow-auto" : undefined}
+    >
+      {outlineChildren(parent).map((node, index) => {
         const Icon = isFeed(node) ? Rss : Folder
         const name = outlineName(node) || m.unnamed
+        const nested = outlineChildren(node).length > 0
         return (
           <li className="border-b last:border-b-0" key={index}>
             <button
@@ -39,6 +45,15 @@ export function OutlineList({
                 {name}
               </span>
             </button>
+            {nested && (
+              <OutlineList
+                parent={node}
+                depth={depth + 1}
+                selected={selected}
+                onSelect={onSelect}
+                messages={m}
+              />
+            )}
           </li>
         )
       })}

@@ -13,6 +13,8 @@ import {
   serializeOpml,
   setDocumentTitle,
   setOutlineName,
+  setOutlineAddress,
+  validFeedAddress,
 } from "./xml"
 
 test("preserves the OPML version, other head fields and namespaced attributes on round-trip", () => {
@@ -43,7 +45,8 @@ test("preserves the OPML version, other head fields and namespaced attributes on
   expect(folder!.node.getAttributeNS("urn:vendor", "flag")).toBe("x")
   expect(nested!.depth).toBe(1)
   expect(nested!.node.getAttributeNS("urn:vendor", "date")).toBe("2026")
-  expect(nested!.node.getAttribute("title")).toBe("日本語のニュース")
+  expect(nested!.node.getAttribute("title")).toBe("Old name")
+  expect(outlineName(nested!.node)).toBe("日本語のニュース")
   expect(nested!.node.getAttribute("xmlUrl")).toBe(
     "https://example.test/rss?q=1&lang=ja"
   )
@@ -113,9 +116,43 @@ test("creates missing head metadata, handles declared encodings and validates do
   for (const input of [
     "<opml><body>",
     "<opml><head/></opml>",
+    "<opml><body/><body/></opml>",
+    '<opml><body/><parsererror xmlns="http://www.w3.org/1999/xhtml"/></opml>',
     "<rss/>",
     "<!DOCTYPE opml><opml><body/></opml>",
   ]) {
     expect(() => parseOpml(input)).toThrow("invalid")
   }
+})
+
+test("keeps an independent feed title and exports valid XML after editing unusual text", () => {
+  const doc = parseOpml(
+    '<opml version="2.0"><body><outline text="My feed" title="Publisher title" xmlUrl="https://example.test" htmlUrl="https://example.test"/></body></opml>'
+  )
+  const feed = outlineRows(doc)[0]!.node
+  setDocumentTitle(doc, "Feeds\u0000 and updates")
+  setOutlineName(feed, "Alias \u0001 & 🚀")
+  setOutlineAddress(feed, "xmlUrl", "https://example.test/rss?a=1&b=2")
+  setOutlineAddress(feed, "htmlUrl", "")
+  const reread = parseOpml(serializeOpml(doc))
+  const node = outlineRows(reread)[0]!.node
+  expect(documentTitle(reread)).toBe("Feeds and updates")
+  expect(outlineName(node)).toBe("Alias  & 🚀")
+  expect(node.getAttribute("title")).toBe("Publisher title")
+  expect(node.getAttribute("xmlUrl")).toBe("https://example.test/rss?a=1&b=2")
+  expect(node.hasAttribute("htmlUrl")).toBe(false)
+})
+
+test("recognizes RSS and Atom entries with missing or malformed addresses", () => {
+  const doc = parseOpml(
+    '<opml><body><outline type="rss" text="No address"/><outline type="Atom" text="Broken" xmlUrl="not a URL"/></body></opml>'
+  )
+  const [rss, atom] = outlineRows(doc).map(({ node }) => node)
+  expect(doc.root.getAttribute("version")).toBe("2.0")
+  expect(isFeed(rss!)).toBe(true)
+  expect(isFeed(atom!)).toBe(true)
+  expect(validFeedAddress(rss!)).toBe(false)
+  expect(validFeedAddress(atom!)).toBe(false)
+  setOutlineAddress(atom!, "xmlUrl", "https://example.test/feed")
+  expect(validFeedAddress(atom!)).toBe(true)
 })

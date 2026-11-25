@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -24,14 +25,13 @@ export function PasteDialog({
   const [open, setOpen] = useState(false)
   const [text, setText] = useState("")
   const [error, setError] = useState(false)
+  function changeOpen(next: boolean) {
+    setOpen(next)
+    setError(false)
+  }
+
   return (
-    <Dialog
-      open={open}
-      onOpenChange={(next) => {
-        setOpen(next)
-        if (!next) setError(false)
-      }}
-    >
+    <Dialog open={open} onOpenChange={changeOpen}>
       <DialogTrigger asChild>
         <Button type="button" size="sm" variant="outline">
           <Clipboard data-icon="inline-start" aria-hidden="true" />
@@ -47,11 +47,12 @@ export function PasteDialog({
           className="grid gap-3"
           onSubmit={(event) => {
             event.preventDefault()
-            if (read(text)) {
-              setOpen(false)
-              setText("")
-              setError(false)
-            } else setError(true)
+            if (!read(text)) {
+              setError(true)
+              return
+            }
+            setText("")
+            changeOpen(false)
           }}
         >
           <Textarea
@@ -70,13 +71,11 @@ export function PasteDialog({
             </Alert>
           )}
           <DialogFooter>
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => setOpen(false)}
-            >
-              {m.cancel}
-            </Button>
+            <DialogClose asChild>
+              <Button type="button" variant="outline">
+                {m.cancel}
+              </Button>
+            </DialogClose>
             <Button type="submit" disabled={!text.trim()}>
               {m.import}
             </Button>

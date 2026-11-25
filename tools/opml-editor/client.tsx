@@ -13,11 +13,13 @@ import {
   documentTitle,
   isFeed,
   newOutline,
+  outlineName,
   outlineRows,
   parseOpml,
   readOpmlFile,
   serializeOpml,
   setDocumentTitle,
+  validFeedAddress,
 } from "./xml"
 import type { OpmlDocument } from "./xml"
 import type { Messages } from "./types"
@@ -33,16 +35,18 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const [fileError, setFileError] = useState(false)
   const heading = useRef<HTMLHeadingElement>(null)
   const outline = useRef<HTMLDivElement>(null)
+  const undoButton = useRef<HTMLButtonElement>(null)
   const load = useRef(0)
   const titleId = useId()
   const title = model ? documentTitle(model) : ""
   const rows = useMemo(() => (model ? outlineRows(model) : []), [model])
-  const missingFeed = rows.some(
-    ({ node }) => isFeed(node) && !node.getAttribute("xmlUrl")?.trim()
-  )
+  const invalidFeed = rows.find(
+    ({ node }) => isFeed(node) && !validFeedAddress(node)
+  )?.node
+  const canExport = rows.length > 0 && !invalidFeed
   const exported = useMemo(
-    () => (model && !missingFeed ? serializeOpml(model) : ""),
-    [model, missingFeed]
+    () => (model && canExport ? serializeOpml(model) : ""),
+    [model, canExport]
   )
 
   function apply(next: OpmlDocument | null) {
@@ -101,6 +105,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
     edit(() => selected.remove())
     setSelected(null)
     setShowDetails(false)
+    requestAnimationFrame(() => undoButton.current?.focus())
   }
   function undo() {
     if (!removed) return
@@ -145,13 +150,18 @@ export default function Client({ messages: m }: { messages: Messages }) {
           </Alert>
         </div>
       )}
-      {missingFeed && (
-        <p
-          role="status"
-          className="border-b px-4 py-2 text-sm text-muted-foreground"
-        >
-          {m.feedRequired}
-        </p>
+      {invalidFeed && (
+        <div className="flex flex-wrap items-center gap-x-2 border-b px-4 py-2 text-sm text-muted-foreground">
+          <p role="status">{m.feedRequired}</p>
+          <Button
+            size="sm"
+            variant="link"
+            className="h-auto max-w-full px-0 text-start wrap-anywhere whitespace-normal"
+            onClick={() => select(invalidFeed, true)}
+          >
+            {outlineName(invalidFeed) || m.unnamed}
+          </Button>
+        </div>
       )}
       <div className="flex flex-wrap items-center gap-2 border-b px-4 py-3 sm:gap-3">
         <Label htmlFor={titleId}>{m.title}</Label>
@@ -165,11 +175,12 @@ export default function Client({ messages: m }: { messages: Messages }) {
           }
         />
       </div>
-      <div className="grid md:grid-cols-2">
+      <div className={cn("grid", rows.length > 0 && "md:grid-cols-2")}>
         <div
           ref={outline}
           className={cn(
-            "min-w-0 flex-col md:flex md:border-e",
+            "min-w-0 flex-col md:flex",
+            rows.length > 0 && "md:border-e",
             showDetails ? "hidden" : "flex"
           )}
         >
@@ -186,9 +197,9 @@ export default function Client({ messages: m }: { messages: Messages }) {
               </Button>
             </div>
           </div>
-          {rows.length ? (
+          {model && rows.length > 0 ? (
             <OutlineList
-              rows={rows}
+              parent={model.body}
               selected={selected}
               onSelect={select}
               messages={m}
@@ -196,42 +207,45 @@ export default function Client({ messages: m }: { messages: Messages }) {
           ) : (
             <div className="m-auto flex min-h-48 flex-col items-center justify-center gap-2 p-6 text-center text-sm text-muted-foreground">
               <ListTree className="size-6" aria-hidden="true" />
-              <p>{m.empty}</p>
-              {!model && <p className="text-xs">{m.fileHint}</p>}
+              <p>{model ? m.empty : m.fileHint}</p>
             </div>
           )}
         </div>
-        <div
-          className={cn("min-w-0 md:block", showDetails ? "block" : "hidden")}
-        >
-          {selected && model ? (
-            <ItemEditor
-              node={selected}
-              body={model.body}
-              messages={m}
-              heading={heading}
-              onEdit={edit}
-              onRemove={remove}
-              onBack={() => {
-                setShowDetails(false)
-                requestAnimationFrame(() =>
-                  outline.current
-                    ?.querySelector<HTMLButtonElement>('[aria-current="true"]')
-                    ?.focus()
-                )
-              }}
-            />
-          ) : (
-            <p className="grid h-full min-h-48 place-content-center p-6 text-center text-sm text-muted-foreground">
-              {m.choose}
-            </p>
-          )}
-        </div>
+        {rows.length > 0 && (
+          <div
+            className={cn("min-w-0 md:block", showDetails ? "block" : "hidden")}
+          >
+            {selected && model ? (
+              <ItemEditor
+                node={selected}
+                body={model.body}
+                messages={m}
+                heading={heading}
+                onEdit={edit}
+                onRemove={remove}
+                onBack={() => {
+                  setShowDetails(false)
+                  requestAnimationFrame(() =>
+                    outline.current
+                      ?.querySelector<HTMLButtonElement>(
+                        '[aria-current="true"]'
+                      )
+                      ?.focus()
+                  )
+                }}
+              />
+            ) : (
+              <p className="grid h-full min-h-48 place-content-center p-6 text-center text-sm text-muted-foreground">
+                {m.choose}
+              </p>
+            )}
+          </div>
+        )}
       </div>
       {removed && (
         <div className="flex items-center justify-between gap-2 border-t px-4 py-2 text-sm">
           <p role="status">{m.removed}</p>
-          <Button size="sm" variant="outline" onClick={undo}>
+          <Button ref={undoButton} size="sm" variant="outline" onClick={undo}>
             <Undo2 data-icon="inline-start" aria-hidden="true" />
             {m.undo}
           </Button>

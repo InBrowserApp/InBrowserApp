@@ -11,15 +11,26 @@ import {
   List,
   Trash2,
 } from "@workspace/ui/icons"
-import { isFeed, outlineMoves, outlineName, setOutlineName } from "./xml"
+import {
+  isFeed,
+  outlineMoves,
+  outlineName,
+  setOutlineAddress,
+  setOutlineName,
+  validFeedAddress,
+} from "./xml"
 import type { Messages } from "./types"
 
-const actions = {
-  moveUp: ArrowUp,
-  moveDown: ArrowDown,
-  indent: IndentIncrease,
-  outdent: IndentDecrease,
-} as const
+const actions = [
+  ["moveUp", ArrowUp],
+  ["moveDown", ArrowDown],
+  ["indent", IndentIncrease, "rtl:-scale-x-100"],
+  ["outdent", IndentDecrease, "rtl:-scale-x-100"],
+] as const
+const feedFields = [
+  ["xmlUrl", "feedUrl"],
+  ["htmlUrl", "siteUrl"],
+] as const
 
 export function ItemEditor({
   node,
@@ -71,41 +82,25 @@ export function ItemEditor({
           }
         />
       </div>
-      {feed && (
-        <>
-          <div className="space-y-2">
-            <Label htmlFor={`${id}-feed`}>{m.feedUrl}</Label>
+      {feed &&
+        feedFields.map(([attribute, label]) => (
+          <div key={attribute} className="space-y-2">
+            <Label htmlFor={`${id}-${attribute}`}>{m[label]}</Label>
             <Input
-              id={`${id}-feed`}
+              id={`${id}-${attribute}`}
               type="url"
               dir="ltr"
-              value={node.getAttribute("xmlUrl") ?? ""}
-              onChange={(event) =>
-                onEdit(() => node.setAttribute("xmlUrl", event.target.value))
-              }
+              aria-invalid={attribute === "xmlUrl" && !validFeedAddress(node)}
+              value={node.getAttribute(attribute) ?? ""}
+              onChange={(event) => {
+                const value = event.currentTarget.value
+                onEdit(() => setOutlineAddress(node, attribute, value))
+              }}
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor={`${id}-site`}>{m.siteUrl}</Label>
-            <Input
-              id={`${id}-site`}
-              type="url"
-              dir="ltr"
-              value={node.getAttribute("htmlUrl") ?? ""}
-              onChange={(event) =>
-                onEdit(() => {
-                  if (event.target.value)
-                    node.setAttribute("htmlUrl", event.target.value)
-                  else node.removeAttribute("htmlUrl")
-                })
-              }
-            />
-          </div>
-        </>
-      )}
+        ))}
       <div className="flex flex-wrap items-center gap-1.5 border-t pt-3">
-        {(Object.keys(actions) as (keyof typeof actions)[]).map((key) => {
-          const Icon = actions[key]
+        {actions.map(([key, Icon, className]) => {
           const move = moves[key]
           return (
             <Button
@@ -117,14 +112,7 @@ export function ItemEditor({
               disabled={!move}
               onClick={() => move && onEdit(move)}
             >
-              <Icon
-                className={
-                  key === "indent" || key === "outdent"
-                    ? "rtl:-scale-x-100"
-                    : undefined
-                }
-                aria-hidden="true"
-              />
+              <Icon className={className} aria-hidden="true" />
             </Button>
           )
         })}
