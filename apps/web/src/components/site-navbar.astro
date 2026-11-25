@@ -47,7 +47,7 @@ const toolsHref = localizePath("/tools", language)
   </div>
   <div class="ms-auto flex items-center gap-1">
     <NavbarSearch action={toolsHref} label={catalog.tools.searchLabel} />
-    <div class="mx-1 h-4 w-px bg-border" aria-hidden="true" />
+    <div class="mx-1 hidden h-4 w-px bg-border supports-[selector(:popover-open)]:block" aria-hidden="true" />
     <PwaInstallButton label={catalog.site.installApp} />
     <ThemeToggle
       labelLight={catalog.site.themeLight}
