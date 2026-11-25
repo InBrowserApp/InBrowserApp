@@ -8,11 +8,11 @@ import {
   it,
   vi,
 } from "vitest"
-import { renderMidiToWav } from "./core/render"
+import { renderMidiToWav } from "./render"
 
 import type { Request } from "./render.worker"
 
-vi.mock("./core/render", () => ({ renderMidiToWav: vi.fn() }))
+vi.mock("./render", () => ({ renderMidiToWav: vi.fn() }))
 
 const host = {
   onmessage: undefined as

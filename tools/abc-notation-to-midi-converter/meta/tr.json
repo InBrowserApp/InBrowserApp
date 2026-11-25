@@ -1,0 +1,4 @@
+{
+  "name": "ABC Nota Yazımından MIDI'ye Dönüştürücü",
+  "description": "ABC nota yazımını MIDI'ye dönüştürün. ABC metnini yapıştırın veya bir .abc dosyası açın, ezgiyi önizleyip dinleyin ve bir .mid dosyası ya da seçili ezgileri ZIP olarak indirin."
+}

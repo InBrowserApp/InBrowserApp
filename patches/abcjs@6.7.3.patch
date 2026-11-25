@@ -1,0 +1,125 @@
+diff --git a/src/midi/abc_midi_create.js b/src/midi/abc_midi_create.js
+index c5f7d07..4143722 100644
+--- a/src/midi/abc_midi_create.js
++++ b/src/midi/abc_midi_create.js
+@@ -14,7 +14,6 @@ var create;
+ 		var commands = abcTune.setUpAudio(options);
+ 		var midi = rendererFactory();
+ 		var title = abcTune.metaText ? abcTune.metaText.title : undefined;
+-		if (title && title.length > 128) title = title.substring(0, 124) + '...';
+ 		var key = abcTune.getKeySignature();
+ 		var time = abcTune.getMeterFraction();
+ 
+diff --git a/src/synth/abc_midi_renderer.js b/src/synth/abc_midi_renderer.js
+index e8e8c47..3bd5cf5 100644
+--- a/src/synth/abc_midi_renderer.js
++++ b/src/synth/abc_midi_renderer.js
+@@ -15,6 +15,7 @@ var rendererFactory;
+ 	function Midi() {
+ 		this.trackstrings = "";
+ 		this.trackcount = 0;
++		this.channel = 0;
+ 		this.noteOnAndChannel = "%90";
+ 		this.noteOffAndChannel = "%80";
+ 	}
+@@ -83,7 +84,7 @@ var rendererFactory;
+ 	};
+ 
+ 	Midi.prototype.setInstrument = function(number) {
+-		this.trackInstrument = "%00%C0" + toHex(number, 2);
++		this.trackInstrument = "%00" + toHex(0xc0 + this.channel, 2) + toHex(number, 2);
+ 		this.instrument = number;
+ 	};
+ 
+@@ -118,7 +119,7 @@ var rendererFactory;
+ 			this.noteWarped[pitch] = true;
+ 		}
+ 		this.track += this.noteOnAndChannel;
+-		this.track += "%" + pitch.toString(16) + toHex(loudness, 2); //note
++		this.track += toHex(pitch, 2) + toHex(loudness, 2); //note
+ 	};
+ 
+ 	Midi.prototype.endNote = function(pitch) {
+@@ -132,7 +133,7 @@ var rendererFactory;
+ 			this.noteWarped[pitch] = false;
+ 		}
+ 		this.track += this.noteOffAndChannel;
+-		this.track += "%" + pitch.toString(16) + "%00";//end note
++		this.track += toHex(pitch, 2) + "%00";//end note
+ 	};
+ 
+ 	Midi.prototype.addRest = function(length) {
+@@ -172,11 +173,11 @@ var rendererFactory;
+ 	};
+ 
+ 	function encodeString(str, cmdType) {
+-		// If there are multi-byte chars, we don't know how long the string will be until we create it.
+-		var nameArray = "";
+-		for (var i = 0; i < str.length; i++)
+-			nameArray += toHex(str.charCodeAt(i), 2);
+-		return "%00%FF" + cmdType + toHex(nameArray.length/3, 2) + nameArray; // Each byte is represented by three chars "%XX", so divide by 3 to get the length.
++		var bytes = new TextEncoder().encode(str);
++		var text = "";
++		for (var i = 0; i < bytes.length; i++)
++			text += toHex(bytes[i], 2);
++		return "%00%FF" + cmdType + toDurationHex(bytes.length) + text;
+ 	}
+ 
+ 	function keySignature(key) {
+@@ -283,6 +284,7 @@ var rendererFactory;
+ 			res = res | bits;
+ 		}
+ 
++		res = res >>> 0;
+ 		var padding = res.toString(16).length;
+ 		padding += padding % 2;
+ 
+diff --git a/src/synth/abc_midi_sequencer.js b/src/synth/abc_midi_sequencer.js
+index 2996763..0c745bd 100644
+--- a/src/synth/abc_midi_sequencer.js
++++ b/src/synth/abc_midi_sequencer.js
+@@ -24,6 +24,7 @@ var Repeats = require("./repeats");
+ 		if (abctune.visualTranspose)
+ 			transpose -= abctune.visualTranspose;
+ 		var channel = options.channel || 0;
++		var directiveChannel;
+ 		var channelExplicitlySet = false;
+ 		var drumPattern = options.drum || "";
+ 		var drumBars = options.drumBars || 1;
+@@ -73,14 +74,14 @@ var Repeats = require("./repeats");
+ 				program = globals.program[0];
+ 				if (globals.program.length > 1) {
+ 					program = globals.program[1];
+-					channel = globals.program[0];
++					directiveChannel = globals.program[0];
+ 				}
+ 				channelExplicitlySet = true;
+ 			}
+ 			if (globals.transpose)
+ 				transpose = globals.transpose[0];
+ 			if (globals.channel) {
+-				channel = globals.channel[0];
++				directiveChannel = globals.channel[0];
+ 				channelExplicitlySet = true;
+ 			}
+ 			if (globals.drum)
+@@ -89,7 +90,7 @@ var Repeats = require("./repeats");
+ 				drumBars = globals.drumbars[0];
+ 			if (globals.drumon)
+ 				drumOn = true;
+-			if (channel === 10)
++			if ((directiveChannel === undefined ? channel : directiveChannel) === 10)
+ 				program = PERCUSSION_PROGRAM;
+ 			if (globals.beat)
+ 				startingMidi.push({ el_type: 'beat', beats: globals.beat })
+@@ -117,7 +118,9 @@ var Repeats = require("./repeats");
+ 		if (bagpipes)
+ 			startVoice.push({ el_type: 'bagpipes' });
+ 		startVoice.push({ el_type: 'instrument', program: program });
+-		if (channel)
++		if (directiveChannel >= 1 && directiveChannel <= 16)
++			startVoice.push({ el_type: 'channel', channel: directiveChannel - 1 });
++		else if (channel)
+ 			startVoice.push({ el_type: 'channel', channel: channel });
+ 		if (transpose)
+ 			startVoice.push({ el_type: 'transpose', transpose: transpose });

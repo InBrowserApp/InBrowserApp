@@ -25,6 +25,17 @@ export function scoreFilename(name: string) {
   return safeName.slice(start, end) || "score"
 }
 
+export function tuneFilename(value: string) {
+  const name = scoreFilename(value)
+  // Leave room for the tune number and extension in a 255-byte filename.
+  const { read } = new TextEncoder().encodeInto(name, new Uint8Array(240))
+  return read === name.length ? name : scoreFilename(name.slice(0, read))
+}
+
+export function scoreItemNumber(index: number, count: number) {
+  return String(index + 1).padStart(String(count).length, "0")
+}
+
 export async function inScoreHost<T>(
   width: number,
   render: (host: HTMLDivElement) => T | Promise<T>

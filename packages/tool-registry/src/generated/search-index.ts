@@ -652,6 +652,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "abc-notation-to-midi-converter",
+    category: "music",
+    icon: "file-music",
+    tags: [
+      "abc",
+      "abc notation",
+      "abc to midi",
+      "sheet music",
+      "midi converter",
+      "tune book",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل التدوين الموسيقي ABC إلى MIDI",
+        description:
+          "حوّل التدوين الموسيقي ABC إلى MIDI. ألصق نص ABC أو افتح ملف ‎.abc، وعاين اللحن واستمع إليه، ثم نزّل ملف ‎.mid أو أرشيف ZIP بالألحان المحدّدة.",
+      },
+      de: {
+        name: "ABC-Notation in MIDI umwandeln",
+        description:
+          "Wandle ABC-Notation in MIDI um. Füge ABC-Text ein oder öffne eine .abc-Datei, prüfe die Noten und höre die Melodie an. Lade eine .mid-Datei oder ein ZIP mit ausgewählten Melodien herunter.",
+      },
+      en: {
+        name: "ABC Notation to MIDI Converter",
+        description:
+          "Convert ABC notation to MIDI. Paste ABC or open an .abc file, preview and listen to a tune, and download a .mid file or a ZIP of selected tunes.",
+      },
+      es: {
+        name: "Conversor de notación ABC a MIDI",
+        description:
+          "Convierte notación ABC a MIDI. Pega el texto ABC o abre un archivo .abc, revisa y escucha la partitura, y descarga un .mid o un ZIP con las melodías elegidas.",
+      },
+      fr: {
+        name: "Convertisseur de notation ABC en MIDI",
+        description:
+          "Convertissez la notation ABC en MIDI. Collez du texte ABC ou ouvrez un fichier .abc, visualisez et écoutez un air, puis téléchargez un fichier .mid ou une archive ZIP des airs sélectionnés.",
+      },
+      he: {
+        name: "ממיר תיווי ABC ל־MIDI",
+        description:
+          "המירו תיווי ABC ל־MIDI. הדביקו טקסט ABC או פתחו קובץ ‎.abc, צפו בתווים והאזינו למנגינה, והורידו קובץ ‎.mid או ארכיון ZIP של המנגינות שנבחרו.",
+      },
+      hi: {
+        name: "ABC नोटेशन से MIDI कन्वर्टर",
+        description:
+          "ABC नोटेशन को MIDI में बदलें। ABC टेक्स्ट पेस्ट करें या .abc फ़ाइल खोलें, धुन का प्रीव्यू देखें और सुनें, फिर .mid फ़ाइल या चुनी हुई धुनों की ZIP डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Notasi ABC ke MIDI",
+        description:
+          "Ubah notasi ABC menjadi MIDI. Tempel teks ABC atau buka file .abc, lihat pratinjau dan dengarkan lagu, lalu unduh file .mid atau ZIP berisi lagu pilihan.",
+      },
+      it: {
+        name: "Convertitore da notazione ABC a MIDI",
+        description:
+          "Converti la notazione ABC in MIDI. Incolla il testo ABC o apri un file .abc, visualizza e ascolta un brano, quindi scarica un file .mid o uno ZIP con i brani selezionati.",
+      },
+      ja: {
+        name: "ABC 記譜 MIDI 変換",
+        description:
+          "ABC 記譜を MIDI に変換します。ABC を貼り付けるか .abc ファイルを開いて曲をプレビュー・試聴し、.mid ファイルまたは選択した曲の ZIP をダウンロードできます。",
+      },
+      ko: {
+        name: "ABC 기보법 MIDI 변환기",
+        description:
+          "ABC 기보법을 MIDI로 변환하세요. ABC를 붙여 넣거나 .abc 파일을 열어 곡을 미리 보고 들어본 뒤 .mid 파일 또는 선택한 곡의 ZIP을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Notasi ABC kepada MIDI",
+        description:
+          "Tukar notasi ABC kepada MIDI. Tampal teks ABC atau buka fail .abc, pratonton dan dengar lagu, kemudian muat turun fail .mid atau ZIP yang mengandungi lagu pilihan.",
+      },
+      nl: {
+        name: "ABC-notatie naar MIDI",
+        description:
+          "Zet ABC-notatie om in MIDI. Plak ABC-tekst of open een .abc-bestand, bekijk en beluister een melodie en download een .mid-bestand of een ZIP met geselecteerde melodieën.",
+      },
+      no: {
+        name: "ABC-notasjon til MIDI",
+        description:
+          "Konverter ABC-notasjon til MIDI. Lim inn ABC-tekst eller åpne en .abc-fil, se notene og lytt til en melodi. Last ned en .mid-fil eller en ZIP-fil med valgte melodier.",
+      },
+      pl: {
+        name: "Konwerter notacji ABC na MIDI",
+        description:
+          "Konwertuj notację ABC na MIDI. Wklej tekst ABC lub otwórz plik .abc, wyświetl i odsłuchaj melodię, a następnie pobierz plik .mid lub archiwum ZIP z wybranymi melodiami.",
+      },
+      pt: {
+        name: "Conversor de notação ABC para MIDI",
+        description:
+          "Converta a notação ABC em MIDI. Cole o texto ABC ou abra um arquivo .abc, confira a partitura, ouça a melodia e baixe um .mid ou um ZIP com as melodias selecionadas.",
+      },
+      ru: {
+        name: "Конвертер нотации ABC в MIDI",
+        description:
+          "Преобразуйте нотацию ABC в MIDI. Вставьте текст ABC или откройте файл .abc, просмотрите ноты и прослушайте мелодию, затем скачайте файл .mid или ZIP с выбранными мелодиями.",
+      },
+      sv: {
+        name: "ABC-notation till MIDI",
+        description:
+          "Konvertera ABC-notation till MIDI. Klistra in ABC-text eller öppna en .abc-fil, granska noterna och lyssna på en melodi och ladda ner en .mid-fil eller en ZIP med valda melodier.",
+      },
+      th: {
+        name: "โปรแกรมแปลงโน้ต ABC เป็น MIDI",
+        description:
+          "แปลงโน้ต ABC เป็น MIDI วางข้อความ ABC หรือเปิดไฟล์ .abc ดูตัวอย่างและฟังเพลง แล้วดาวน์โหลดไฟล์ .mid หรือ ZIP ที่รวมเพลงที่เลือก",
+      },
+      tr: {
+        name: "ABC Nota Yazımından MIDI'ye Dönüştürücü",
+        description:
+          "ABC nota yazımını MIDI'ye dönüştürün. ABC metnini yapıştırın veya bir .abc dosyası açın, ezgiyi önizleyip dinleyin ve bir .mid dosyası ya da seçili ezgileri ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển ký âm ABC sang MIDI",
+        description:
+          "Chuyển ký âm ABC sang MIDI. Dán ABC hoặc mở tệp .abc, xem trước và nghe bản nhạc, rồi tải tệp .mid hoặc ZIP chứa các bản nhạc đã chọn.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱转 MIDI 转换器",
+        description:
+          "将 ABC 记谱转换为 MIDI。粘贴 ABC 文本或打开 .abc 文件，预览并试听曲目，然后下载 .mid 文件或包含所选曲目的 ZIP。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜轉 MIDI 轉換器",
+        description:
+          "將 ABC 記譜轉換成 MIDI。貼上 ABC 文字或開啟 .abc 檔案，預覽並聆聽曲目，再下載 .mid 檔案或包含所選曲目的 ZIP。",
+      },
+    },
+  },
+  {
     slug: "abc-notation-to-pdf-converter",
     category: "pdf",
     secondaryCategories: ["music"],

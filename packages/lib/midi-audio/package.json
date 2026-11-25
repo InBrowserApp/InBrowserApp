@@ -1,0 +1,16 @@
+{
+  "name": "@workspace/midi-audio",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./worker-client": "./src/worker-client.ts"
+  },
+  "dependencies": {
+    "@workspace/pcm-audio": "workspace:*",
+    "spessasynth_core": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

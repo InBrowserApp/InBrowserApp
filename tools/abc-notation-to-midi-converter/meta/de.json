@@ -1,0 +1,4 @@
+{
+  "name": "ABC-Notation in MIDI umwandeln",
+  "description": "Wandle ABC-Notation in MIDI um. Füge ABC-Text ein oder öffne eine .abc-Datei, prüfe die Noten und höre die Melodie an. Lade eine .mid-Datei oder ein ZIP mit ausgewählten Melodien herunter."
+}

@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/export.ts",
     "./abc": "./src/abc.ts",
+    "./abc-midi": "./src/abc-midi.ts",
     "./abc-source": "./src/abc-source.ts",
     "./musicxml": "./src/musicxml.ts",
     "./musicxml-example": "./src/musicxml-example.ts",
@@ -20,6 +21,7 @@
     "pdf-lib": "catalog:"
   },
   "devDependencies": {
+    "midi-file": "catalog:",
     "vitest": "catalog:"
   }
 }

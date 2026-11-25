@@ -2,7 +2,13 @@ import {
   canvasBlob,
   loadImageSource,
 } from "@workspace/raster-image/browser-canvas"
-import { scoreFilename, serializeImagePage } from "./pages"
+import { exportScoreZip } from "./archive"
+import {
+  scoreFilename,
+  scoreItemNumber,
+  serializeImagePage,
+  tuneFilename,
+} from "./pages"
 
 export type ScoreImageFormat = "png" | "svg"
 export type ScoreFormat = "pdf" | ScoreImageFormat
@@ -61,10 +67,6 @@ async function exportImage(page: SVGSVGElement, format: ScoreImageFormat) {
   }
 }
 
-function imageNumber(index: number, count: number) {
-  return String(index + 1).padStart(String(count).length, "0")
-}
-
 async function exportImages(
   images: readonly ScoreImage[],
   format: ScoreImageFormat,
@@ -79,29 +81,16 @@ async function exportImages(
     }
   }
 
-  const { zip } = await import("fflate")
   const files: Record<string, Uint8Array> = {}
   for (const { page, name } of images) {
     const blob = await exportImage(page, format)
     files[`${name}.${format}`] = new Uint8Array(await blob.arrayBuffer())
   }
-  const bytes = await new Promise<Uint8Array>((resolve, reject) => {
-    zip(files, { level: format === "png" ? 0 : 6 }, (error, result) => {
-      if (error) reject(error)
-      else resolve(result)
-    })
-  })
-  return {
-    blob: new Blob([new Uint8Array(bytes)], { type: "application/zip" }),
-    filename: `${name}-${format}.zip`,
-  }
-}
-
-function tuneFilename(value: string) {
-  const name = scoreFilename(value)
-  // Leave room for the tune number and extension in a 255-byte filename.
-  const { read } = new TextEncoder().encodeInto(name, new Uint8Array(240))
-  return read === name.length ? name : scoreFilename(name.slice(0, read))
+  return exportScoreZip(
+    files,
+    `${name}-${format}.zip`,
+    format === "png" ? 0 : 6
+  )
 }
 
 export function exportScoreImages(
@@ -117,7 +106,7 @@ export function exportScoreImages(
       name:
         images.length === 1
           ? title
-          : `${imageNumber(index, images.length)}-${title}`,
+          : `${scoreItemNumber(index, images.length)}-${title}`,
     }
   })
   return exportImages(named, format, name)
@@ -137,7 +126,9 @@ export async function exportScore(
   const images = pages.map((page, index) => ({
     page,
     name:
-      pages.length === 1 ? name : `${name}-${imageNumber(index, pages.length)}`,
+      pages.length === 1
+        ? name
+        : `${name}-${scoreItemNumber(index, pages.length)}`,
   }))
   return exportImages(images, format, name)
 }

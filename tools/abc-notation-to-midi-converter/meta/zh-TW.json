@@ -1,0 +1,4 @@
+{
+  "name": "ABC 記譜轉 MIDI 轉換器",
+  "description": "將 ABC 記譜轉換成 MIDI。貼上 ABC 文字或開啟 .abc 檔案，預覽並聆聽曲目，再下載 .mid 檔案或包含所選曲目的 ZIP。"
+}

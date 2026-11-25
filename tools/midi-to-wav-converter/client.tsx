@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { createMidiRenderWorker } from "@workspace/midi-audio/worker-client"
 import { AudioPreviewDownload } from "@workspace/ui/components/tool/audio-preview-download"
 import { FileDropPicker } from "@workspace/ui/components/tool/file-drop-picker"
 import { ToolOpenTextFile } from "@workspace/ui/components/tool/tool-open-text-file"
@@ -10,7 +11,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { AudioLines, Piano } from "@workspace/ui/icons"
 
 import type english from "./messages/en.json"
-import type { Request, Response } from "./render.worker"
+import type { Request, Response } from "@workspace/midi-audio/worker-client"
 
 type State = { type: "idle" } | Response
 
@@ -45,10 +46,7 @@ export default function MidiToWav({
   function start() {
     if (!file || rendering) return
     try {
-      const worker = new Worker(
-        new URL("./render.worker.ts", import.meta.url),
-        { type: "module" }
-      )
+      const worker = createMidiRenderWorker()
       active.current = worker
       setState({ type: "progress", percent: 0 })
       function receive(data: Response) {

@@ -17,6 +17,7 @@
     "@workspace/spreadsheet-conversion": "workspace:*",
     "@workspace/raster-image": "workspace:*",
     "@workspace/score-export": "workspace:*",
+    "@workspace/midi-audio": "workspace:*",
     "@workspace/ocr-models": "workspace:*",
     "@workspace/comic": "workspace:*",
     "@workspace/ebook": "workspace:*",

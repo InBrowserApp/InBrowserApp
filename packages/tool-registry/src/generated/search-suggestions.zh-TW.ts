@@ -28,6 +28,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-to-image-converter",
   },
   {
+    category: "music",
+    name: "ABC 記譜轉 MIDI 轉換器",
+    slug: "abc-notation-to-midi-converter",
+  },
+  {
     category: "pdf",
     name: "ABC 記譜轉 PDF 轉換器",
     slug: "abc-notation-to-pdf-converter",
