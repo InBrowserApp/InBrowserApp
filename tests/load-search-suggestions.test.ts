@@ -1,8 +1,8 @@
 import { afterEach, expect, it, vi } from "vitest"
-import { loadToolSearchSuggestions as loadLocale } from "./generated/search-suggestions"
-import { loadToolSearchSuggestions } from "./search-suggestions"
+import { loadToolSearchSuggestions as loadLocale } from "../packages/tool-registry/src/generated/search-suggestions"
+import { loadToolSearchSuggestions } from "../packages/tool-registry/src/search-suggestions"
 
-vi.mock("./generated/search-suggestions", () => ({
+vi.mock("../packages/tool-registry/src/generated/search-suggestions", () => ({
   loadToolSearchSuggestions: vi.fn<typeof loadLocale>(),
 }))
 
