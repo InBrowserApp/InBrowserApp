@@ -53,8 +53,10 @@ describe("MusicXML viewer", () => {
     await screen.findByRole("button", { name: messages.zoomIn })
     const sample = load.mock.calls[0]?.[0] as File
     const display = createViewer.mock.calls[0]?.[0]
-    expect(document.activeElement).toBe(
-      screen.getByRole("region", { name: messages.preview })
+    await waitFor(() =>
+      expect(document.activeElement).toBe(
+        screen.getByRole("region", { name: messages.preview })
+      )
     )
     expect(sample.name).toBe("Morning Steps.musicxml")
     expect(await sample.text()).toContain("<score-partwise")
