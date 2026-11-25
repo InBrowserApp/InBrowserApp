@@ -1,0 +1,4 @@
+{
+  "name": "Generador de ISBN aleatorios",
+  "description": "Genera números ISBN-10 e ISBN-13 aleatorios con dígitos de control válidos para pruebas. Copia un lote con o sin guiones o descarga un archivo TXT."
+}

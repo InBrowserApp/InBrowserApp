@@ -1,0 +1,14 @@
+{
+  "format": "ISBN biçimi",
+  "hyphens": "Tireleri dahil et",
+  "quantity": "Miktar",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Oluşturulan ISBN’ler",
+  "placeholder": "Oluşturulan ISBN’ler burada görünecek.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalama başarısız",
+  "download": "TXT indir",
+  "error": "ISBN oluşturucu yüklenemedi. Tekrar denemek için sayfayı yenileyin."
+}

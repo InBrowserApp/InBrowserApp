@@ -1,0 +1,14 @@
+{
+  "format": "ISBN 格式",
+  "hyphens": "包含连字符",
+  "quantity": "数量",
+  "generate": "生成",
+  "generating": "正在生成…",
+  "results": "生成的 ISBN",
+  "placeholder": "生成的 ISBN 将显示在这里。",
+  "copy": "全部复制",
+  "copied": "已复制",
+  "copyFailed": "复制失败",
+  "download": "下载 TXT",
+  "error": "无法加载 ISBN 生成器。请刷新页面重试。"
+}

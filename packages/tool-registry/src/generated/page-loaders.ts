@@ -425,6 +425,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-coordinate-generator": () =>
     import("@tool/random-coordinate-generator/page"),
   "random-date-generator": () => import("@tool/random-date-generator/page"),
+  "random-isbn-generator": () => import("@tool/random-isbn-generator/page"),
   "random-name-generator": () => import("@tool/random-name-generator/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>

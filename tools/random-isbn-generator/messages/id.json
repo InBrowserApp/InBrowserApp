@@ -1,0 +1,14 @@
+{
+  "format": "Format ISBN",
+  "hyphens": "Sertakan tanda hubung",
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Membuat…",
+  "results": "ISBN yang dibuat",
+  "placeholder": "ISBN yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "error": "Generator ISBN tidak dapat dimuat. Muat ulang halaman untuk mencoba lagi."
+}

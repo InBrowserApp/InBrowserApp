@@ -44421,6 +44421,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-isbn-generator",
+    category: "random",
+    icon: "book-open",
+    tags: [
+      "random",
+      "isbn",
+      "isbn-10",
+      "isbn-13",
+      "generator",
+      "checksum",
+      "book",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد ISBN عشوائي",
+        description:
+          "أنشئ أرقام ISBN-10 وISBN-13 عشوائية بأرقام تحقق صحيحة للاختبار. انسخ مجموعة بشرطات أو بدونها، أو نزّل ملف TXT.",
+      },
+      de: {
+        name: "Zufällige ISBN generieren",
+        description:
+          "Erzeugen Sie zufällige ISBN-10 und ISBN-13 mit gültigen Prüfziffern für Tests. Kopieren Sie mehrere ISBN mit oder ohne Bindestriche oder laden Sie sie als TXT herunter.",
+      },
+      en: {
+        name: "Random ISBN Generator",
+        description:
+          "Generate random ISBN-10 and ISBN-13 numbers with valid check digits for testing. Copy a batch with or without hyphens, or download TXT.",
+      },
+      es: {
+        name: "Generador de ISBN aleatorios",
+        description:
+          "Genera números ISBN-10 e ISBN-13 aleatorios con dígitos de control válidos para pruebas. Copia un lote con o sin guiones o descarga un archivo TXT.",
+      },
+      fr: {
+        name: "Générateur d’ISBN aléatoires",
+        description:
+          "Générez des ISBN-10 et ISBN-13 aléatoires avec des chiffres de contrôle valides pour vos tests. Copiez un lot avec ou sans tirets, ou téléchargez-le en TXT.",
+      },
+      he: {
+        name: "מחולל ISBN אקראי",
+        description:
+          "יצירת מספרי ISBN-10 ו-ISBN-13 אקראיים עם ספרות ביקורת תקינות לצורכי בדיקה. אפשר להעתיק קבוצה עם מקפים או בלעדיהם, או להוריד קובץ TXT.",
+      },
+      hi: {
+        name: "रैंडम ISBN जनरेटर",
+        description:
+          "जाँच के लिए मान्य चेक अंकों वाले रैंडम ISBN-10 और ISBN-13 नंबर बनाएँ। बैच को हाइफ़न के साथ या बिना कॉपी करें या TXT डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator ISBN Acak",
+        description:
+          "Buat nomor ISBN-10 dan ISBN-13 acak dengan digit pemeriksa yang valid untuk pengujian. Salin sekumpulan nomor dengan atau tanpa tanda hubung, atau unduh sebagai TXT.",
+      },
+      it: {
+        name: "Generatore di ISBN casuali",
+        description:
+          "Genera numeri ISBN-10 e ISBN-13 casuali con cifre di controllo valide per i test. Copia un gruppo di numeri con o senza trattini oppure scarica un file TXT.",
+      },
+      ja: {
+        name: "ランダム ISBN 生成ツール",
+        description:
+          "チェックディジットが正しいランダムな ISBN-10 と ISBN-13 をテスト用に生成します。ハイフンの有無を選んで一括コピーするか、TXT をダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 ISBN 생성기",
+        description:
+          "테스트용으로 체크 디지트가 올바른 무작위 ISBN-10과 ISBN-13을 생성합니다. 하이픈 포함 여부를 선택해 일괄 복사하거나 TXT로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana ISBN Rawak",
+        description:
+          "Jana nombor ISBN-10 dan ISBN-13 rawak dengan digit semakan yang sah untuk ujian. Salin sekumpulan nombor dengan atau tanpa tanda sempang, atau muat turun sebagai TXT.",
+      },
+      nl: {
+        name: "Willekeurige ISBN-generator",
+        description:
+          "Genereer willekeurige ISBN-10- en ISBN-13-nummers met geldige controlecijfers voor tests. Kopieer een reeks met of zonder koppeltekens of download een TXT-bestand.",
+      },
+      no: {
+        name: "Tilfeldig ISBN-generator",
+        description:
+          "Generer tilfeldige ISBN-10- og ISBN-13-numre med gyldige kontrollsifre for testing. Kopier en gruppe med eller uten bindestreker, eller last ned TXT.",
+      },
+      pl: {
+        name: "Generator losowych numerów ISBN",
+        description:
+          "Generuj losowe numery ISBN-10 i ISBN-13 z prawidłowymi cyframi kontrolnymi do testów. Skopiuj zestaw z łącznikami lub bez albo pobierz plik TXT.",
+      },
+      pt: {
+        name: "Gerador de ISBN aleatórios",
+        description:
+          "Gere números ISBN-10 e ISBN-13 aleatórios com dígitos verificadores válidos para testes. Copie um lote com ou sem hífens ou baixe um arquivo TXT.",
+      },
+      ru: {
+        name: "Генератор случайных ISBN",
+        description:
+          "Генерируйте случайные номера ISBN-10 и ISBN-13 с правильными контрольными цифрами для тестирования. Скопируйте набор с дефисами или без них либо скачайте TXT.",
+      },
+      sv: {
+        name: "Slumpmässig ISBN-generator",
+        description:
+          "Generera slumpmässiga ISBN-10- och ISBN-13-nummer med giltiga kontrollsiffror för testning. Kopiera en uppsättning med eller utan bindestreck eller ladda ner en TXT-fil.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ISBN แบบสุ่ม",
+        description:
+          "สร้างหมายเลข ISBN-10 และ ISBN-13 แบบสุ่มพร้อมเลขตรวจสอบที่ถูกต้องสำหรับทดสอบ คัดลอกทั้งชุดโดยมีหรือไม่มีขีดกลาง หรือดาวน์โหลดเป็น TXT",
+      },
+      tr: {
+        name: "Rastgele ISBN Oluşturucu",
+        description:
+          "Test için geçerli kontrol basamaklarına sahip rastgele ISBN-10 ve ISBN-13 numaraları oluşturun. Toplu sonuçları tireli veya tiresiz kopyalayın ya da TXT indirin.",
+      },
+      vi: {
+        name: "Trình tạo ISBN ngẫu nhiên",
+        description:
+          "Tạo số ISBN-10 và ISBN-13 ngẫu nhiên với chữ số kiểm tra hợp lệ để thử nghiệm. Sao chép hàng loạt có hoặc không có dấu gạch ngang, hoặc tải xuống tệp TXT.",
+      },
+      "zh-CN": {
+        name: "随机 ISBN 生成器",
+        description:
+          "生成校验位有效的随机 ISBN-10 和 ISBN-13，供测试使用。可批量复制带或不带连字符的号码，也可下载 TXT 文件。",
+      },
+      "zh-TW": {
+        name: "隨機 ISBN 產生器",
+        description:
+          "產生校驗位有效的隨機 ISBN-10 和 ISBN-13，供測試使用。可批次複製含或不含連字號的號碼，或下載 TXT 檔案。",
+      },
+    },
+  },
+  {
     slug: "random-name-generator",
     category: "random",
     icon: "contact-round",

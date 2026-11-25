@@ -1,0 +1,14 @@
+{
+  "format": "ISBN 格式",
+  "hyphens": "包含連字號",
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "正在產生…",
+  "results": "產生的 ISBN",
+  "placeholder": "產生的 ISBN 會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "error": "無法載入 ISBN 產生器，請重新整理頁面再試一次。"
+}

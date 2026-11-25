@@ -1,0 +1,14 @@
+{
+  "format": "ISBN-Format",
+  "hyphens": "Bindestriche einfügen",
+  "quantity": "Anzahl",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Generierte ISBN",
+  "placeholder": "Die generierten ISBN erscheinen hier.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "TXT herunterladen",
+  "error": "Der ISBN-Generator konnte nicht geladen werden. Laden Sie die Seite neu und versuchen Sie es erneut."
+}

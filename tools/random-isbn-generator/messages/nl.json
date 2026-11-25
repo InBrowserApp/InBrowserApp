@@ -1,0 +1,14 @@
+{
+  "format": "ISBN-formaat",
+  "hyphens": "Koppeltekens toevoegen",
+  "quantity": "Aantal",
+  "generate": "Genereren",
+  "generating": "Genereren…",
+  "results": "Gegenereerde ISBN-nummers",
+  "placeholder": "De gegenereerde ISBN-nummers verschijnen hier.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "TXT downloaden",
+  "error": "De ISBN-generator kon niet worden geladen. Laad de pagina opnieuw om het nog eens te proberen."
+}

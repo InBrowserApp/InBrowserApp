@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo ISBN ngẫu nhiên",
+  "description": "Tạo số ISBN-10 và ISBN-13 ngẫu nhiên với chữ số kiểm tra hợp lệ để thử nghiệm. Sao chép hàng loạt có hoặc không có dấu gạch ngang, hoặc tải xuống tệp TXT."
+}

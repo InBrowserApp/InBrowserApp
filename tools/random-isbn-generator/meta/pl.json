@@ -1,0 +1,4 @@
+{
+  "name": "Generator losowych numerów ISBN",
+  "description": "Generuj losowe numery ISBN-10 i ISBN-13 z prawidłowymi cyframi kontrolnymi do testów. Skopiuj zestaw z łącznikami lub bez albo pobierz plik TXT."
+}

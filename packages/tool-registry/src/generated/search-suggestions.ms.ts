@@ -1744,6 +1744,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana ISBN Rawak",
+    slug: "random-isbn-generator",
+  },
+  {
+    category: "random",
     name: "Penjana nama rawak",
     slug: "random-name-generator",
   },

@@ -1744,6 +1744,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "무작위 ISBN 생성기",
+    slug: "random-isbn-generator",
+  },
+  {
+    category: "random",
     name: "무작위 이름 생성기",
     slug: "random-name-generator",
   },
