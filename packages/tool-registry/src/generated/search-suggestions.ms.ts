@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana Nombor Telefon Rawak",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "Penjana poskod rawak",
     slug: "random-postal-code-generator",
   },

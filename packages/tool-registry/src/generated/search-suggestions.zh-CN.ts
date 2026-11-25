@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "随机电话号码生成器",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "随机邮政编码生成器",
     slug: "random-postal-code-generator",
   },

@@ -31742,6 +31742,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-phone-number-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "de",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "en",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "es",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "he",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "id",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "it",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "no",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "th",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-phone-number-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-postal-code-generator",
     language: "ar",
   },

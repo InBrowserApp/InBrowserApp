@@ -1,0 +1,16 @@
+{
+  "country": "Land of regio",
+  "format": "Nummernotatie",
+  "national": "Nationaal",
+  "international": "Internationaal (E.164)",
+  "quantity": "Aantal",
+  "generate": "Genereren",
+  "generating": "Bezig met genereren…",
+  "results": "Telefoonnummers",
+  "placeholder": "Hier verschijnen de gegenereerde telefoonnummers.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "TXT downloaden",
+  "error": "De telefoonnummers konden niet worden gegenereerd. Probeer het opnieuw."
+}

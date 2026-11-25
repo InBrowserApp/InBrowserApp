@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "무작위 전화번호 생성기",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "무작위 우편번호 생성기",
     slug: "random-postal-code-generator",
   },

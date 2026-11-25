@@ -1,0 +1,16 @@
+{
+  "country": "Land eller region",
+  "format": "Nummerformat",
+  "national": "Nationellt",
+  "international": "Internationellt (E.164)",
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Telefonnummer",
+  "placeholder": "Genererade telefonnummer visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "copyFailed": "Kunde inte kopiera",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att generera telefonnummer. Försök igen."
+}

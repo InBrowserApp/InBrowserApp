@@ -1,0 +1,16 @@
+{
+  "country": "국가 또는 지역",
+  "format": "번호 형식",
+  "national": "국내 형식",
+  "international": "국제 형식(E.164)",
+  "quantity": "수량",
+  "generate": "생성",
+  "generating": "생성 중…",
+  "results": "전화번호",
+  "placeholder": "생성된 전화번호가 여기에 표시됩니다.",
+  "copy": "모두 복사",
+  "copied": "복사됨",
+  "copyFailed": "복사 실패",
+  "download": "TXT 다운로드",
+  "error": "전화번호를 생성하지 못했습니다. 다시 시도하세요."
+}

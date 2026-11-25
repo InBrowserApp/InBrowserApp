@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "مولّد أرقام هواتف عشوائية",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "مولّد رموز بريدية عشوائية",
     slug: "random-postal-code-generator",
   },
