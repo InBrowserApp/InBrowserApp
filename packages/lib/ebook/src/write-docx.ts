@@ -14,9 +14,6 @@ function preserveBookmarkTargets(doc: Document) {
   for (const target of doc.querySelectorAll(
     ":is(img,svg,math,br,wbr,hr,q,rt,table,thead,tbody,tfoot,tr,colgroup,col,td,th,caption)[id]"
   )) {
-    const anchor = doc.createElement("span")
-    anchor.id = target.id
-    target.removeAttribute("id")
     let container: Element | null = null
     let sibling = target
     if (target.matches("q,rt,td,th,caption")) {
@@ -26,12 +23,16 @@ function preserveBookmarkTargets(doc: Document) {
       container =
         target.querySelector("td,th") ?? sibling.querySelector("td,th")
     }
-    if (container) {
-      const paragraph = container.querySelector(":scope > p") ?? container
-      paragraph.prepend(anchor)
-    } else {
-      sibling.before(anchor)
-    }
+    // Empty cells need a paragraph for Word to keep the bookmark.
+    const emptyCell =
+      container?.matches("td,th,caption") &&
+      !container.textContent?.trim() &&
+      !container.querySelector("p,img,svg,math,br,hr")
+    const anchor = doc.createElement(emptyCell ? "p" : "span")
+    anchor.id = target.id
+    target.removeAttribute("id")
+    if (container) container.prepend(anchor)
+    else sibling.before(anchor)
   }
 }
 

@@ -26,8 +26,11 @@ const book: BookSnapshot = {
         <p>Read <strong>中文花园</strong> and <a href="#chapter-2">jump to chapter two</a>.</p>
         <p lang="ar">الحديقة العربية</p>
         <ol start="3"><li>Plant flowers<ul><li>White blossoms</li></ul></li></ol>
-        <p><a href="#plants">Plant table</a>, <a href="#moonflower">Moonflower cell</a>, <a href="#garden">Garden illustration</a>.</p>
-        <table id="plants"><tr><th colspan="2">Plant name</th></tr><tr><td id="moonflower">Moonflower</td><td>Evening primrose</td></tr></table>
+        <p><a href="#plants">Plant table</a>, <a href="#empty-heading">Empty heading</a>, <a href="#empty-cell">Empty cell</a>, <a href="#moonflower">Moonflower cell</a>, <a href="#garden">Garden illustration</a>.</p>
+        <table id="plants">
+          <thead><tr><th id="empty-heading"></th><th colspan="2">Plant name</th></tr></thead>
+          <tbody><tr><td id="empty-cell"><p></p></td><td id="moonflower">Moonflower</td><td>Evening primrose</td></tr></tbody>
+        </table>
         <p><img id="garden" src="${illustration}" alt="Garden diagram" /></p>`,
     },
     {
@@ -74,13 +77,13 @@ test("writes editable Word headings, lists, tables, links and original images", 
     node.getAttributeNS(word, "name")
   )
   const links = elements("hyperlink")
-  expect(links).toHaveLength(5)
+  expect(links).toHaveLength(7)
   expect(bookmarks).toEqual(
     expect.arrayContaining(
-      links.slice(0, 4).map((node) => node.getAttributeNS(word, "anchor"))
+      links.slice(0, -1).map((node) => node.getAttributeNS(word, "anchor"))
     )
   )
-  expect(links[4]?.getAttributeNS(word, "anchor")).toBe("notes")
+  expect(links.at(-1)?.getAttributeNS(word, "anchor")).toBe("notes")
   expect(strFromU8(files["word/_rels/document.xml.rels"]!)).toContain(
     'Target="https://example.com/read" TargetMode="External"'
   )
