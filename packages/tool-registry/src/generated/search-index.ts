@@ -40661,6 +40661,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pptx-to-image-converter",
+    category: "image",
+    secondaryCategories: ["document"],
+    icon: "file-image",
+    tags: [
+      "pptx",
+      "powerpoint",
+      "presentation",
+      "slide",
+      "png",
+      "jpg",
+      "jpeg",
+      "webp",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل PPTX إلى صور",
+        description:
+          "حوّل شرائح PowerPoint إلى PNG أو JPG أو WebP في متصفحك. عاين العرض ونزّل شريحة واحدة، أو نطاقًا من الشرائح، أو العرض كاملًا في ملف ZIP.",
+      },
+      de: {
+        name: "PPTX in Bild umwandeln",
+        description:
+          "Wandle PowerPoint-Folien im Browser in PNG, JPG oder WebP um. Sieh dir die Präsentation an und lade eine Folie, einen Bereich oder alle Folien als ZIP herunter.",
+      },
+      en: {
+        name: "PPTX to Image Converter",
+        description:
+          "Convert PowerPoint slides to PNG, JPG, or WebP in your browser. Preview the deck and download one slide, a range, or all slides as a ZIP.",
+      },
+      es: {
+        name: "Convertidor de PPTX a imagen",
+        description:
+          "Convierte diapositivas de PowerPoint a PNG, JPG o WebP en el navegador. Previsualiza la presentación y descarga una diapositiva, un rango o todas las diapositivas en un ZIP.",
+      },
+      fr: {
+        name: "Convertisseur PPTX en image",
+        description:
+          "Convertissez des diapositives PowerPoint en PNG, JPG ou WebP dans votre navigateur. Prévisualisez la présentation et téléchargez une diapositive, une plage ou toutes les diapositives dans un ZIP.",
+      },
+      he: {
+        name: "ממיר PPTX לתמונות",
+        description:
+          "המירו שקופיות PowerPoint ל־PNG, ל־JPG או ל־WebP בדפדפן. צפו במצגת והורידו שקופית אחת, טווח שקופיות או את כולן בקובץ ZIP.",
+      },
+      hi: {
+        name: "PPTX से इमेज कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में PowerPoint स्लाइड को PNG, JPG या WebP में बदलें। प्रेज़ेंटेशन का प्रीव्यू देखें और एक स्लाइड, चुनी हुई स्लाइडें या सभी स्लाइडें ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter PPTX ke Gambar",
+        description:
+          "Ubah slide PowerPoint ke PNG, JPG, atau WebP di browser. Pratinjau presentasi, lalu unduh satu slide sebagai gambar, atau rentang slide maupun seluruh presentasi sebagai ZIP.",
+      },
+      it: {
+        name: "Convertitore da PPTX a immagine",
+        description:
+          "Converti le diapositive PowerPoint in PNG, JPG o WebP nel browser. Visualizza l’anteprima e scarica una diapositiva, un intervallo o tutte le diapositive in un file ZIP.",
+      },
+      ja: {
+        name: "PPTXを画像に変換",
+        description:
+          "PowerPoint のスライドをブラウザーで PNG、JPG、WebP に変換します。スライドをプレビューし、1 枚だけ保存するか、指定範囲や全スライドを ZIP でダウンロードできます。",
+      },
+      ko: {
+        name: "PPTX 이미지 변환기",
+        description:
+          "브라우저에서 PowerPoint 슬라이드를 PNG, JPG 또는 WebP로 변환하세요. 프레젠테이션을 미리 보고 슬라이드 한 장을 내려받거나, 선택한 범위 또는 전체를 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar PPTX kepada Imej",
+        description:
+          "Tukar slaid PowerPoint kepada PNG, JPG atau WebP dalam pelayar. Pratonton pembentangan dan muat turun satu slaid, julat slaid atau semua slaid sebagai ZIP.",
+      },
+      nl: {
+        name: "PPTX naar afbeelding converteren",
+        description:
+          "Converteer PowerPoint-dia’s naar PNG, JPG of WebP in je browser. Bekijk de presentatie en download één dia, een bereik of alle dia’s als ZIP.",
+      },
+      no: {
+        name: "Konverter PPTX til bilder",
+        description:
+          "Konverter PowerPoint-lysbilder til PNG, JPG eller WebP i nettleseren. Forhåndsvis presentasjonen og last ned ett lysbilde som bilde eller flere lysbilder som ZIP.",
+      },
+      pl: {
+        name: "Konwerter PPTX na obrazy",
+        description:
+          "Konwertuj slajdy PowerPoint na PNG, JPG lub WebP w przeglądarce. Sprawdź podgląd prezentacji i pobierz jeden slajd jako obraz lub kilka slajdów jako ZIP.",
+      },
+      pt: {
+        name: "Conversor de PPTX para imagem",
+        description:
+          "Converta slides do PowerPoint em PNG, JPG ou WebP no navegador. Veja a apresentação e baixe um slide, um intervalo ou todos os slides em um ZIP.",
+      },
+      ru: {
+        name: "Конвертер PPTX в изображения",
+        description:
+          "Преобразуйте слайды PowerPoint в PNG, JPG или WebP прямо в браузере. Просмотрите презентацию и скачайте один слайд как изображение или несколько слайдов одним ZIP-архивом.",
+      },
+      sv: {
+        name: "Konvertera PPTX till bilder",
+        description:
+          "Konvertera PowerPoint-bilder till PNG, JPG eller WebP i webbläsaren. Granska presentationen och ladda ner en bild eller flera bilder tillsammans som en ZIP-fil.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPTX เป็นรูปภาพ",
+        description:
+          "แปลงสไลด์ PowerPoint เป็น PNG, JPG หรือ WebP ในเบราว์เซอร์ ดูตัวอย่างงานนำเสนอแล้วดาวน์โหลดสไลด์เดียว หรือดาวน์โหลดช่วงที่เลือกหรือทุกสไลด์เป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "PPTX’ten Görsele Dönüştürücü",
+        description:
+          "PowerPoint slaytlarını tarayıcınızda PNG, JPG veya WebP’ye dönüştürün. Sunumu önizleyin ve tek bir slaytı görsel olarak ya da birden çok slaytı ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển PPTX sang ảnh",
+        description:
+          "Chuyển trang chiếu PowerPoint sang PNG, JPG hoặc WebP ngay trong trình duyệt. Xem trước bản trình bày rồi tải một trang chiếu xuống, hoặc tải các trang đã chọn hay toàn bộ bản trình bày dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "PPTX 转图片",
+        description:
+          "在浏览器中将 PowerPoint 幻灯片转换为 PNG、JPG 或 WebP。预览演示文稿后可直接下载单张图片，也可将指定范围或全部幻灯片打包为 ZIP 下载。",
+      },
+      "zh-TW": {
+        name: "PPTX 轉圖片",
+        description:
+          "在瀏覽器中將 PowerPoint 投影片轉成 PNG、JPG 或 WebP。預覽簡報後可直接下載單張圖片，也可將指定範圍或所有投影片打包成 ZIP 下載。",
+      },
+    },
+  },
+  {
     slug: "pptx-to-markdown-converter",
     category: "document",
     icon: "file-text",

@@ -1598,6 +1598,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ppt-viewer",
   },
   {
+    category: "image",
+    name: "PPTX से इमेज कन्वर्टर",
+    slug: "pptx-to-image-converter",
+  },
+  {
     category: "document",
     name: "PPTX से Markdown कन्वर्टर",
     slug: "pptx-to-markdown-converter",

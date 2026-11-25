@@ -1,58 +1,9 @@
-import { PptxPresentation } from "@silurus/ooxml/pptx"
-import { math } from "@silurus/ooxml/math"
-import { threeD } from "@silurus/ooxml/three-d"
-import { regionMap } from "@silurus/ooxml/region-map"
-import { chartEx } from "@silurus/ooxml/chart-ex"
-import { tiff } from "@silurus/ooxml/tiff"
-import {
-  imageResources,
-  maximumPageZoom,
-  officeLoadOptions,
-} from "@workspace/document-reader"
 import { PDFDocument } from "pdf-lib"
-import { inspectArchive } from "./archive"
+import { loadPresentation, renderSlideImage } from "../presentation"
 import { ConversionError, failure } from "./errors"
 
 export type Progress = { page: number; pages: number; saving?: boolean }
 export type Result = { pdf: Blob; pages: number }
-
-async function rasterize(
-  source: PptxPresentation,
-  index: number,
-  width: number,
-  height: number,
-  signal: AbortSignal
-) {
-  // Check the actual 150 DPI allocation rather than allowing the renderer to
-  // silently clamp it and produce a lower-resolution page.
-  if (maximumPageZoom(width, height) < 1) throw new ConversionError("resource")
-  const canvas = document.createElement("canvas")
-  try {
-    await source.renderSlide(canvas, index, {
-      width,
-      dpr: 1,
-      imageResources,
-      skipMediaControls: true,
-      failOnError: true,
-    })
-    signal.throwIfAborted()
-    const context = canvas.getContext("2d")
-    if (!context) throw new ConversionError("resource")
-    context.globalCompositeOperation = "destination-over"
-    context.fillStyle = "#ffffff"
-    context.fillRect(0, 0, canvas.width, canvas.height)
-    const blob = await new Promise<Blob | null>((resolve) =>
-      canvas.toBlob(resolve, "image/png")
-    )
-    signal.throwIfAborted()
-    if (!blob) throw new ConversionError("resource")
-    const bytes = new Uint8Array(await blob.arrayBuffer())
-    signal.throwIfAborted()
-    return bytes
-  } finally {
-    canvas.width = canvas.height = 0
-  }
-}
 
 export async function convert(
   file: File,
@@ -60,24 +11,14 @@ export async function convert(
   progress: (value: Progress) => void
 ): Promise<Result> {
   signal.throwIfAborted()
-  let source: PptxPresentation | undefined
+  let source: Awaited<ReturnType<typeof loadPresentation>> | undefined
   let page = 0
   const dispose = () => {
     source?.destroy()
     source = undefined
   }
   try {
-    const data = await file.arrayBuffer()
-    signal.throwIfAborted()
-    inspectArchive(data)
-    source = await PptxPresentation.load(data, {
-      ...officeLoadOptions,
-      math,
-      threeD,
-      regionMap,
-      chartEx,
-      tiff,
-    })
+    source = await loadPresentation(file, signal)
     signal.throwIfAborted()
     signal.addEventListener("abort", dispose, { once: true })
     await source.waitUntilLayoutComplete()
@@ -91,13 +32,15 @@ export async function convert(
       signal.throwIfAborted()
       const width = source.slideWidth / 12_700
       const height = source.slideHeight / 12_700
-      const bytes = await rasterize(
+      const image = await renderSlideImage(
         source,
         page - 1,
         (width * 150) / 72,
         (height * 150) / 72,
         signal
       )
+      const bytes = new Uint8Array(await image.arrayBuffer())
+      signal.throwIfAborted()
       const embedded = await pdf.embedPng(bytes)
       signal.throwIfAborted()
       pdf.addPage([width, height]).drawImage(embedded, {
