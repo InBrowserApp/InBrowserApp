@@ -82,6 +82,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chinese-to-pinyin": () => import("@tool/chinese-to-pinyin/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
+  "chm-to-pdf-converter": () => import("@tool/chm-to-pdf-converter/page"),
   "chm-viewer": () => import("@tool/chm-viewer/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),

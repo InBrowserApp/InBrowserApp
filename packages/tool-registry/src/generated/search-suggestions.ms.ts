@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "document",
+    name: "Penukar CHM kepada PDF",
+    slug: "chm-to-pdf-converter",
+  },
+  {
+    category: "document",
     name: "Pemapar CHM",
     slug: "chm-viewer",
   },

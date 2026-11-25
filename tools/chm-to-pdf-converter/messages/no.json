@@ -1,0 +1,27 @@
+{
+  "choose": "Velg CHM-fil",
+  "drop": "Eller slipp en .chm-fil her",
+  "privacy": "Filen din blir på denne enheten.",
+  "reading": "Leser CHM-emner…",
+  "rendering": "Lager side {page} av {total}…",
+  "saving": "Lagrer PDF…",
+  "ready": "PDF-filen er klar",
+  "pageCount": "Antall sider: {total}",
+  "download": "Last ned PDF",
+  "cancel": "Avbryt",
+  "error": "Kunne ikke konvertere denne CHM-filen",
+  "errorHelp": "Prøv å åpne filen i CHM-viseren for å se om den inneholder lesbare emner, eller velg en annen .chm-fil.",
+  "article": {
+    "howTitle": "Slik konverterer du CHM til PDF",
+    "chooseStep": "Velg en .chm-fil eller dra den inn i feltet. Verktøyet åpner filen og begynner automatisk å lage PDF-filen.",
+    "waitStep": "Vent til alle sidene er klare. Store håndbøker kan ta lengre tid.",
+    "downloadStep": "Velg «Last ned PDF» for å lagre resultatet. Du kan åpne filen i en PDF-leser, dele den eller skrive den ut.",
+    "whatTitle": "Hva er en CHM-fil?",
+    "what": "CHM står for Compiled HTML Help, et Microsoft-format som samler HTML-emner, bilder og en innholdsfortegnelse i én fil. Formatet er vanlig i eldre Windows-hjelpefiler, programvarehåndbøker og enkelte e-bøker. PDF-filer er enklere å åpne på ulike enheter og beholder et fast sideoppsett for utskrift.",
+    "layoutTitle": "Hva inneholder PDF-filen?",
+    "layout": "Verktøyet samler hjelpeemnene i én PDF-fil i A4-format. Hvis filen har en innholdsfortegnelse, bestemmer den rekkefølgen. PDF-filen inneholder enkle overskrifter, avsnitt, lister, tabeller, kode og innebygde bilder i formater som støttes. Utskriftsoppsettet kan avvike fra det opprinnelige utseendet og navigasjonen. Sidene lagres som bilder. Derfor kan du verken merke eller søke i teksten, og lenkene kan ikke klikkes på.",
+    "privacyTitle": "Blir CHM-filen lastet opp?",
+    "privacy": "Konverteringen skjer i nettleseren. CHM-filen og PDF-filen blir på enheten. Eksterne ressurser i hjelpefilen lastes ikke inn.",
+    "viewer": "Åpne en CHM-fil uten å konvertere den"
+  }
+}

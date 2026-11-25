@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@file-viewer/renderer-chm": "catalog:",
+    "@workspace/chm": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@workspace/web-document": "workspace:*"

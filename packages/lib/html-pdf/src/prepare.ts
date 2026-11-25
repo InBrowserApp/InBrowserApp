@@ -128,9 +128,10 @@ export function prepare(source: Source) {
   })
   if (
     unsafe ||
-    purifier.removed.some(
-      (entry) => "element" in entry && entry.element.nodeName !== "BODY"
-    )
+    (!source.omitUnsupportedElements &&
+      purifier.removed.some(
+        (entry) => "element" in entry && entry.element.nodeName !== "BODY"
+      ))
   )
     throw new Error("unsupported")
   if (

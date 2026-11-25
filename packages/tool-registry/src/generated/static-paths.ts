@@ -5798,6 +5798,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "chm-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "chm-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "chm-viewer",
     language: "ar",
   },

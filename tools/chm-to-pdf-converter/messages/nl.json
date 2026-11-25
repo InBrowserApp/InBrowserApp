@@ -1,0 +1,27 @@
+{
+  "choose": "CHM-bestand kiezen",
+  "drop": "Of sleep hier een .chm-bestand naartoe",
+  "privacy": "Je bestand blijft op dit apparaat.",
+  "reading": "CHM-onderwerpen lezen…",
+  "rendering": "Pagina {page} van {total} maken…",
+  "saving": "PDF opslaan…",
+  "ready": "Je PDF is klaar",
+  "pageCount": "Pagina’s: {total}",
+  "download": "PDF downloaden",
+  "cancel": "Annuleren",
+  "error": "Dit CHM-bestand kon niet worden geconverteerd",
+  "errorHelp": "Open het bestand in de CHM-viewer om te controleren of het leesbare onderwerpen bevat. Je kunt ook een ander .chm-bestand kiezen.",
+  "article": {
+    "howTitle": "Zo converteer je CHM naar PDF",
+    "chooseStep": "Kies een .chm-bestand of sleep het naar het invoervak. De converter opent het bestand en maakt automatisch een PDF.",
+    "waitStep": "Wacht tot alle pagina’s klaar zijn. Bij grote handleidingen kan dit langer duren.",
+    "downloadStep": "Kies ‘PDF downloaden’ om het resultaat op te slaan. Je kunt het bestand openen in een PDF-lezer, delen of afdrukken.",
+    "whatTitle": "Wat is een CHM-bestand?",
+    "what": "CHM staat voor Compiled HTML Help. Dit Microsoft-formaat bundelt HTML-onderwerpen, afbeeldingen en een inhoudsopgave in één bestand. CHM komt vaak voor in oudere Windows-helpbestanden, softwarehandleidingen en sommige e-books. Een PDF is makkelijker te openen op verschillende apparaten en behoudt een vaste opmaak voor afdrukken.",
+    "layoutTitle": "Wat staat er in de PDF?",
+    "layout": "De converter bundelt de helponderwerpen in één PDF op A4-formaat. Als er een inhoudsopgave is, bepaalt die de volgorde. De PDF bevat eenvoudige koppen, alinea’s, lijsten, tabellen, code en ondersteunde ingesloten afbeeldingen. De afdrukopmaak kan afwijken van de oorspronkelijke stijl en navigatie. Elke pagina is een afbeelding. Je kunt daardoor geen tekst selecteren of doorzoeken en niet op links klikken.",
+    "privacyTitle": "Wordt het CHM-bestand geüpload?",
+    "privacy": "De conversie gebeurt volledig in je browser. De CHM- en PDF-bestanden blijven op je apparaat. Externe bronnen waarnaar het helpbestand verwijst, worden niet geladen.",
+    "viewer": "Een CHM-bestand openen zonder conversie"
+  }
+}

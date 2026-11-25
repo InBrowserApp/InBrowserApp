@@ -1,0 +1,27 @@
+{
+  "choose": "選擇 CHM 檔案",
+  "drop": "或將 .chm 檔案拖放至此",
+  "privacy": "檔案只會留在此裝置上。",
+  "reading": "正在讀取 CHM 主題…",
+  "rendering": "正在產生第 {page} 頁，共 {total} 頁…",
+  "saving": "正在儲存 PDF…",
+  "ready": "PDF 已轉換完成",
+  "pageCount": "共 {total} 頁",
+  "download": "下載 PDF",
+  "cancel": "取消",
+  "error": "無法轉換此 CHM 檔案",
+  "errorHelp": "請用 CHM 檢視器開啟檔案，確認是否有可讀取的主題，或選擇其他 .chm 檔案。",
+  "article": {
+    "howTitle": "如何將 CHM 轉成 PDF？",
+    "chooseStep": "選擇或拖放 .chm 檔案。轉換器會開啟檔案並自動開始產生 PDF。",
+    "waitStep": "等待所有頁面產生完畢。篇幅較長的手冊可能需要多一點時間。",
+    "downloadStep": "點選「下載 PDF」儲存檔案，即可用 PDF 閱讀器開啟、分享或列印。",
+    "whatTitle": "什麼是 CHM 檔案？",
+    "what": "CHM 是 Compiled HTML Help 的縮寫，是 Microsoft 開發的檔案格式，會把 HTML 主題、圖片和目錄封裝在同一個檔案中。舊版 Windows 說明檔、軟體手冊及部分電子書常用這種格式。PDF 較容易在各種裝置上開啟，列印時也能維持固定的版面。",
+    "layoutTitle": "轉出的 PDF 包含哪些內容？",
+    "layout": "轉換器會將說明主題合併成一份 A4 PDF。CHM 檔有目錄時，會依目錄排序。轉換內容包含基本的標題、段落、清單、表格、程式碼和支援的內嵌圖片。頁面採用列印版面，外觀與導覽可能和原檔不同。每頁都以圖片儲存，因此無法選取或搜尋文字，也無法點擊連結。",
+    "privacyTitle": "CHM 檔案會上傳嗎？",
+    "privacy": "轉換全程在瀏覽器中完成。CHM 和產生的 PDF 都只留在此裝置上，說明檔內引用的遠端資源也不會載入。",
+    "viewer": "直接開啟 CHM 檔案"
+  }
+}
