@@ -7,6 +7,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "2fa-authenticator": () => import("@tool/2fa-authenticator/page"),
   "3mf-viewer": () => import("@tool/3mf-viewer/page"),
   "abc-notation-previewer": () => import("@tool/abc-notation-previewer/page"),
+  "abc-notation-to-image-converter": () =>
+    import("@tool/abc-notation-to-image-converter/page"),
   "abc-notation-to-pdf-converter": () =>
     import("@tool/abc-notation-to-pdf-converter/page"),
   "adler32-hash-text-or-file": () =>

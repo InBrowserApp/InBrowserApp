@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da notazione ABC a immagine",
+  "description": "Converti la notazione ABC in spartiti PNG o SVG. Incolla il testo ABC o apri un file .abc, scegli i brani di una raccolta e scarica le immagini ritagliate."
+}

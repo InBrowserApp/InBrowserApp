@@ -1,0 +1,4 @@
+{
+  "name": "ABC Notation to Image Converter",
+  "description": "Convert ABC notation to PNG or SVG sheet music images. Paste ABC text or open an .abc file, choose tunes from a collection, and download cropped notation."
+}

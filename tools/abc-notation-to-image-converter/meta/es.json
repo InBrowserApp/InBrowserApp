@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de notación ABC a imagen",
+  "description": "Convierte notación ABC en partituras PNG o SVG. Pega el texto ABC o abre un archivo .abc, elige las melodías de una colección y descarga imágenes ajustadas al área de la partitura."
+}
