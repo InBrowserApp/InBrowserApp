@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Ralentir le tempo",
+  "faster": "Accélérer le tempo",
+  "start": "Démarrer",
+  "stop": "Arrêter",
+  "tapTempo": "Taper le tempo",
+  "tapAgain": "Appuyez de nouveau",
+  "beatsPerBar": "Temps par mesure",
+  "subdivision": "Subdivision",
+  "onePerBeat": "1 par temps",
+  "twoPerBeat": "2 par temps",
+  "threePerBeat": "3 par temps",
+  "fourPerBeat": "4 par temps",
+  "accent": "Accentuer le premier temps",
+  "sound": "Son",
+  "audioError": "Impossible de démarrer le métronome. Appuyez de nouveau sur Démarrer."
+}

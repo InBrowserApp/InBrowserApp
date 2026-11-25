@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Tempo senken",
+  "faster": "Tempo erhöhen",
+  "start": "Start",
+  "stop": "Stopp",
+  "tapTempo": "Tempo klopfen",
+  "tapAgain": "Noch einmal tippen",
+  "beatsPerBar": "Schläge pro Takt",
+  "subdivision": "Unterteilung",
+  "onePerBeat": "1 pro Schlag",
+  "twoPerBeat": "2 pro Schlag",
+  "threePerBeat": "3 pro Schlag",
+  "fourPerBeat": "4 pro Schlag",
+  "accent": "Ersten Schlag betonen",
+  "sound": "Ton",
+  "audioError": "Das Metronom ließ sich nicht starten. Drücke erneut auf Start."
+}

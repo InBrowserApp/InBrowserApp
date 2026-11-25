@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Tempoyu düşür",
+  "faster": "Tempoyu artır",
+  "start": "Başlat",
+  "stop": "Durdur",
+  "tapTempo": "Tempo tut",
+  "tapAgain": "Tekrar bas",
+  "beatsPerBar": "Ölçü başına vuruş",
+  "subdivision": "Vuruşu böl",
+  "onePerBeat": "Vuruş başına 1",
+  "twoPerBeat": "Vuruş başına 2",
+  "threePerBeat": "Vuruş başına 3",
+  "fourPerBeat": "Vuruş başına 4",
+  "accent": "İlk vuruşu vurgula",
+  "sound": "Ses",
+  "audioError": "Metronom başlatılamadı. Başlat düğmesine tekrar basın."
+}

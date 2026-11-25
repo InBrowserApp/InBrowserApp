@@ -1273,6 +1273,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mesh-inspector",
   },
   {
+    category: "music",
+    name: "Métronome en ligne",
+    slug: "metronome",
+  },
+  {
     category: "document",
     name: "Convertisseur MHTML en HTML",
     slug: "mhtml-to-html-converter",

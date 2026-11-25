@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Tempo verlagen",
+  "faster": "Tempo verhogen",
+  "start": "Start",
+  "stop": "Stop",
+  "tapTempo": "Tempo tikken",
+  "tapAgain": "Tik opnieuw",
+  "beatsPerBar": "Tellen per maat",
+  "subdivision": "Onderverdeling",
+  "onePerBeat": "1 per tel",
+  "twoPerBeat": "2 per tel",
+  "threePerBeat": "3 per tel",
+  "fourPerBeat": "4 per tel",
+  "accent": "Eerste tel benadrukken",
+  "sound": "Geluid",
+  "audioError": "De metronoom kan niet starten. Druk opnieuw op Start."
+}

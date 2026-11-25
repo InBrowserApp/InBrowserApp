@@ -1,0 +1,18 @@
+{
+  "tempo": "Andamento (BPM)",
+  "slower": "Diminuir o andamento",
+  "faster": "Aumentar o andamento",
+  "start": "Iniciar",
+  "stop": "Parar",
+  "tapTempo": "Marcar andamento",
+  "tapAgain": "Toque novamente",
+  "beatsPerBar": "Tempos por compasso",
+  "subdivision": "Subdivisão",
+  "onePerBeat": "1 por tempo",
+  "twoPerBeat": "2 por tempo",
+  "threePerBeat": "3 por tempo",
+  "fourPerBeat": "4 por tempo",
+  "accent": "Acentuar o primeiro tempo",
+  "sound": "Som",
+  "audioError": "Não foi possível iniciar o metrônomo. Pressione Iniciar novamente."
+}

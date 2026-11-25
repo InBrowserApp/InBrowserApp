@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Decrease tempo",
+  "faster": "Increase tempo",
+  "start": "Start",
+  "stop": "Stop",
+  "tapTempo": "Tap tempo",
+  "tapAgain": "Tap again",
+  "beatsPerBar": "Beats per bar",
+  "subdivision": "Subdivision",
+  "onePerBeat": "1 per beat",
+  "twoPerBeat": "2 per beat",
+  "threePerBeat": "3 per beat",
+  "fourPerBeat": "4 per beat",
+  "accent": "Accent first beat",
+  "sound": "Sound",
+  "audioError": "The metronome could not start. Try pressing Start again."
+}

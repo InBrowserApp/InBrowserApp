@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Senk tempoet",
+  "faster": "Øk tempoet",
+  "start": "Start",
+  "stop": "Stopp",
+  "tapTempo": "Trykk i takt",
+  "tapAgain": "Trykk igjen",
+  "beatsPerBar": "Slag per takt",
+  "subdivision": "Underdeling",
+  "onePerBeat": "1 per slag",
+  "twoPerBeat": "2 per slag",
+  "threePerBeat": "3 per slag",
+  "fourPerBeat": "4 per slag",
+  "accent": "Fremhev første slag",
+  "sound": "Lyd",
+  "audioError": "Metronomen kunne ikke starte. Trykk Start på nytt."
+}

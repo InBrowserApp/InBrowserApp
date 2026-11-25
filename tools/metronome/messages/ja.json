@@ -1,0 +1,18 @@
+{
+  "tempo": "テンポ（BPM）",
+  "slower": "テンポを下げる",
+  "faster": "テンポを上げる",
+  "start": "開始",
+  "stop": "停止",
+  "tapTempo": "タップテンポ",
+  "tapAgain": "もう一度タップ",
+  "beatsPerBar": "1小節の拍数",
+  "subdivision": "拍の分割",
+  "onePerBeat": "1拍に1音",
+  "twoPerBeat": "1拍に2音",
+  "threePerBeat": "1拍に3音",
+  "fourPerBeat": "1拍に4音",
+  "accent": "1拍目にアクセント",
+  "sound": "音",
+  "audioError": "メトロノームを開始できませんでした。もう一度「開始」を押してください。"
+}
