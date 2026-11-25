@@ -37,7 +37,7 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
     data-search-form
     data-category-labels={JSON.stringify(categories)}
   >
-    <div class="search-entry flex h-full min-w-0 items-center gap-1 overflow-clip ps-[1.375rem] pe-[0.3125rem]">
+    <div class="search-entry flex h-full min-w-0 items-center gap-1 overflow-clip">
       <input
         type="text"
         name="query"
@@ -81,8 +81,17 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
     --motion: var(--motion-duration) cubic-bezier(0.2, 0.75, 0.3, 1);
     --gutter: max(var(--spacing-page-x), (100% - 24rem) / 2);
     --trigger-size: 1.75rem;
+    --action-size: var(--trigger-size);
+    --action-padding: 0.3125rem;
     --field-height: 2.75rem;
     --expanded-width: calc(100% - 2 * var(--gutter));
+    /* Match the trigger at rest and the submit icon's inset when expanded. */
+    --closed-icon-inset: calc((var(--trigger-size) - 1rem) / 2);
+    --open-icon-inset: calc(var(--action-padding) + (var(--action-size) - 1rem) / 2);
+    --icon-inset: calc(
+      var(--closed-icon-inset) +
+      (var(--open-icon-inset) - var(--closed-icon-inset)) * var(--navbar-search-progress)
+    );
   }
 
   .search-trigger,
@@ -152,8 +161,13 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
   .search-frame {
     z-index: 50;
     pointer-events: none;
-    padding-inline-start: 0.3125rem;
+    padding-inline-start: calc(var(--icon-inset) - 1px);
     outline: 2px solid transparent;
+  }
+
+  .search-entry {
+    padding-inline-start: calc(var(--icon-inset) + 1rem);
+    padding-inline-end: var(--action-padding);
   }
 
   form:focus-within + .search-frame {
@@ -161,9 +175,13 @@ const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
   }
 
   @media (pointer: coarse) {
+    navbar-search {
+      --action-size: 2.25rem;
+    }
+
     .search-entry button {
-      min-inline-size: 2.25rem;
-      min-block-size: 2.25rem;
+      min-inline-size: var(--action-size);
+      min-block-size: var(--action-size);
     }
   }
 
