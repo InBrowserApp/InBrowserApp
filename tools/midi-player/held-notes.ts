@@ -1,4 +1,5 @@
 import type {
+  MidiControllerEvent,
   MidiData,
   MidiNoteOffEvent,
   MidiNoteOnEvent,
@@ -10,7 +11,11 @@ type HeldNote = { channel: number; noteNumber: number; velocity: number }
 type TimedEvent = {
   tick: number
   track: number
-  event: MidiNoteOnEvent | MidiNoteOffEvent | MidiPortPrefixEvent
+  event:
+    | MidiNoteOnEvent
+    | MidiNoteOffEvent
+    | MidiPortPrefixEvent
+    | MidiControllerEvent
 }
 
 function seekTick(
@@ -65,7 +70,9 @@ export function heldNotesAt(midi: MidiData, seconds: number): HeldNote[] {
       if (
         event.type === "noteOn" ||
         event.type === "noteOff" ||
-        event.type === "portPrefix"
+        event.type === "portPrefix" ||
+        (event.type === "controller" &&
+          (event.controllerType === 120 || event.controllerType === 123))
       ) {
         events.push({ tick, track: index, event })
       }
@@ -99,6 +106,13 @@ export function heldNotesAt(midi: MidiData, seconds: number): HeldNote[] {
       continue
     }
     const channel = event.channel + offsets.get(route.port!)!
+    if (event.type === "controller") {
+      // All Sound Off and All Notes Off both release this channel's held keys.
+      for (const key of held.keys()) {
+        if (Math.floor(key / 128) === channel) held.delete(key)
+      }
+      continue
+    }
     const key = channel * 128 + event.noteNumber
     const attacks = held.get(key)
     if (event.type === "noteOn" && event.velocity > 0) {

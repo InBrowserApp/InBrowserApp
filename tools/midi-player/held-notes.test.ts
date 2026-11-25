@@ -76,6 +76,38 @@ test("pairs overlapping attacks and releases in song order across shared channel
   ])
 })
 
+test.each([120, 123])(
+  "clears held notes only on the addressed channel for controller %i",
+  (controllerType) => {
+    const midi = score(
+      [attack(0), end(1920)],
+      [
+        {
+          type: "noteOn",
+          deltaTime: 0,
+          channel: 1,
+          noteNumber: 64,
+          velocity: 80,
+        },
+        {
+          type: "controller",
+          deltaTime: 480,
+          channel: 0,
+          controllerType,
+          value: 0,
+        },
+        end(1440),
+      ]
+    )
+    expect(heldNotesAt(midi, 0.25)).toHaveLength(2)
+    for (const time of [0.5, 1]) {
+      expect(heldNotesAt(midi, time)).toEqual([
+        { channel: 1, noteNumber: 64, velocity: 80 },
+      ])
+    }
+  }
+)
+
 test("restores active notes on distinct MIDI port channels", () => {
   const midi = score(
     [
