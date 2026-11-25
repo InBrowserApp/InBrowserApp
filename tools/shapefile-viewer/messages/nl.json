@@ -1,0 +1,21 @@
+{
+  "open": "Shapefile openen",
+  "example": "Voorbeeld proberen",
+  "drop": "Sleep een Shapefile hierheen",
+  "formats": "Open een ZIP-archief of selecteer een .shp-bestand samen met de bijbehorende bestanden.",
+  "privacy": "Je bestanden blijven op dit apparaat.",
+  "loading": "Shapefile lezen…",
+  "invalid": "Kan deze Shapefile niet lezen. Open een ZIP met een .shp-bestand of selecteer de .shp en de bijbehorende bestanden samen.",
+  "layer": "Laag",
+  "map": "Shapefile-kaart",
+  "fit": "Zoomen naar gegevens",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "features": "Objecten",
+  "feature": "Object {number}",
+  "attributes": "Attributen",
+  "noAttributes": "Dit object heeft geen attributen. Voeg het bijbehorende .dbf-bestand toe om de attributen te bekijken.",
+  "noGeometry": "Deze laag bevat geen geometrieën om weer te geven.",
+  "assumed": "Er is geen .prj-bestand gevonden. De kaart interpreteert deze coördinaten als WGS 84.",
+  "unmapped": "De kaart kan deze coördinaten niet plaatsen. Voeg het bijbehorende .prj-bestand met een ondersteund coördinatenreferentiesysteem toe."
+}

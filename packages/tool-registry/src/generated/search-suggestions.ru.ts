@@ -1653,6 +1653,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "shake256-hash-text-or-file",
   },
   {
+    category: "geo",
+    name: "Просмотр Shapefile",
+    slug: "shapefile-viewer",
+  },
+  {
     category: "crypto",
     name: "Хеш SipHash-128-2-4 для текста или файла",
     slug: "siphash-128-2-4-hash-text-or-file",

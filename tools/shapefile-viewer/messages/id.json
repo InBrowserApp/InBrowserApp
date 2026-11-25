@@ -1,0 +1,21 @@
+{
+  "open": "Buka Shapefile",
+  "example": "Coba contoh",
+  "drop": "Lepas Shapefile di sini",
+  "formats": "Buka arsip ZIP atau pilih berkas .shp bersama berkas pendampingnya.",
+  "privacy": "Berkas Anda tetap berada di perangkat ini.",
+  "loading": "Membaca Shapefile…",
+  "invalid": "Shapefile ini tidak dapat dibaca. Buka ZIP yang berisi berkas .shp atau pilih .shp bersama berkas pendampingnya.",
+  "layer": "Lapisan",
+  "map": "Peta Shapefile",
+  "fit": "Sesuaikan tampilan dengan data",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "features": "Fitur",
+  "feature": "Fitur {number}",
+  "attributes": "Atribut",
+  "noAttributes": "Tidak ada atribut untuk fitur ini. Sertakan berkas .dbf yang sesuai untuk melihat rekamannya.",
+  "noGeometry": "Lapisan ini tidak memiliki geometri yang bisa ditampilkan.",
+  "assumed": "Berkas .prj tidak ditemukan. Peta membaca koordinat ini sebagai WGS 84.",
+  "unmapped": "Koordinat ini tidak dapat ditampilkan pada peta. Sertakan berkas .prj yang sesuai dengan sistem referensi koordinat yang didukung."
+}

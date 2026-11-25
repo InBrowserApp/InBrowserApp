@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile Viewer",
+  "description": "Open a zipped Esri Shapefile or .shp with its companion files. Explore its layers on an offline map and inspect feature attributes in your browser."
+}

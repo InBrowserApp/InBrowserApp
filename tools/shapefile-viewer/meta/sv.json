@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile-visare",
+  "description": "Öppna en Esri Shapefile i ett ZIP-arkiv eller välj en .shp-fil med tillhörande filer. Utforska lagren på en karta offline och granska objektens attribut i webbläsaren."
+}

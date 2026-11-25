@@ -1,0 +1,21 @@
+{
+  "open": "打开 Shapefile",
+  "example": "试用示例",
+  "drop": "将 Shapefile 拖到此处",
+  "formats": "打开 ZIP 压缩包，或同时选择 .shp 及其配套文件。",
+  "privacy": "文件始终保留在此设备上。",
+  "loading": "正在读取 Shapefile…",
+  "invalid": "无法读取此 Shapefile。请打开包含 .shp 文件的 ZIP，或同时选择 .shp 及其配套文件。",
+  "layer": "图层",
+  "map": "Shapefile 地图",
+  "fit": "适应数据范围",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "features": "要素",
+  "feature": "要素 {number}",
+  "attributes": "属性",
+  "noAttributes": "此要素没有属性。请添加配套的 .dbf 文件以查看记录。",
+  "noGeometry": "此图层没有可显示的图形。",
+  "assumed": "未找到 .prj 文件。地图将这些坐标视为 WGS 84。",
+  "unmapped": "无法在此地图上定位这些坐标。请添加使用受支持坐标参考系的配套 .prj 文件。"
+}

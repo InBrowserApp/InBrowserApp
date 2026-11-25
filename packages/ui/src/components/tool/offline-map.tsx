@@ -77,6 +77,8 @@ function OfflineMap({
       map = leaflet
         .map(element, {
           zoomControl: false,
+          // A new file can remove the map before Leaflet’s zoom transition finishes.
+          zoomAnimation: false,
           attributionControl: true,
           minZoom: 1,
           maxZoom: 20,

@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile-viser",
+  "description": "Åpne en Esri Shapefile i et ZIP-arkiv eller velg en .shp-fil med tilhørende filer. Se lagene på et kart uten nett og undersøk objektegenskapene i nettleseren."
+}

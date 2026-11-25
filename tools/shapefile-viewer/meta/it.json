@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore Shapefile",
+  "description": "Apri uno Shapefile Esri in formato ZIP o un file .shp con i file associati. Esplora i layer su una mappa offline e consulta gli attributi nel browser."
+}

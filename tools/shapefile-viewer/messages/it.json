@@ -1,0 +1,21 @@
+{
+  "open": "Apri Shapefile",
+  "example": "Prova un esempio",
+  "drop": "Rilascia qui uno Shapefile",
+  "formats": "Apri un archivio ZIP oppure seleziona un file .shp insieme ai file associati.",
+  "privacy": "I file restano su questo dispositivo.",
+  "loading": "Lettura dello Shapefile…",
+  "invalid": "Impossibile leggere questo Shapefile. Apri un archivio ZIP con un file .shp oppure seleziona il .shp insieme ai file associati.",
+  "layer": "Layer",
+  "map": "Mappa dello Shapefile",
+  "fit": "Inquadra i dati",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "features": "Elementi geografici",
+  "feature": "Elemento {number}",
+  "attributes": "Attributi",
+  "noAttributes": "Nessun attributo disponibile per questo elemento. Includi il file .dbf corrispondente per consultare i record.",
+  "noGeometry": "Questo layer non contiene geometrie da visualizzare.",
+  "assumed": "Non è stato trovato alcun file .prj. La mappa interpreta le coordinate come WGS 84.",
+  "unmapped": "Impossibile posizionare queste coordinate sulla mappa. Includi il file .prj corrispondente con un sistema di riferimento delle coordinate supportato."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile-Betrachter",
+  "description": "Öffne ein Esri-Shapefile im ZIP-Format oder eine .shp-Datei mit den zugehörigen Dateien. Zeige die Layer auf einer Offline-Karte an und prüfe ihre Attribute im Browser."
+}

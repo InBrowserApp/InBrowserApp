@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile-viewer",
+  "description": "Open een Esri Shapefile als ZIP of kies een .shp-bestand met de bijbehorende bestanden. Bekijk de lagen op een offlinekaart en inspecteer de attributen in je browser."
+}

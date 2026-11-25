@@ -1,0 +1,21 @@
+{
+  "open": "Mở Shapefile",
+  "example": "Dùng thử ví dụ",
+  "drop": "Thả Shapefile vào đây",
+  "formats": "Mở tệp ZIP hoặc chọn đồng thời tệp .shp và các tệp đi kèm.",
+  "privacy": "Các tệp của bạn được giữ trên thiết bị này.",
+  "loading": "Đang đọc Shapefile…",
+  "invalid": "Không đọc được Shapefile này. Hãy mở tệp ZIP có chứa tệp .shp hoặc chọn đồng thời tệp .shp và các tệp đi kèm.",
+  "layer": "Lớp",
+  "map": "Bản đồ Shapefile",
+  "fit": "Vừa với dữ liệu",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "features": "Đối tượng",
+  "feature": "Đối tượng {number}",
+  "attributes": "Thuộc tính",
+  "noAttributes": "Không có thuộc tính cho đối tượng này. Hãy chọn kèm tệp .dbf tương ứng để xem các bản ghi.",
+  "noGeometry": "Lớp này không có hình học để hiển thị.",
+  "assumed": "Không tìm thấy tệp .prj. Bản đồ coi các tọa độ này là tọa độ WGS 84.",
+  "unmapped": "Không thể định vị các tọa độ này trên bản đồ. Hãy chọn kèm tệp .prj tương ứng có hệ quy chiếu tọa độ được hỗ trợ."
+}

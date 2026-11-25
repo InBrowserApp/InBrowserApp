@@ -1,0 +1,21 @@
+{
+  "open": "Shapefile aç",
+  "example": "Örneği dene",
+  "drop": "Shapefile dosyalarını buraya bırakın",
+  "formats": "Bir ZIP arşivi açın veya .shp dosyasını eşlik eden dosyalarla birlikte seçin.",
+  "privacy": "Dosyalarınız bu cihazda kalır.",
+  "loading": "Shapefile okunuyor…",
+  "invalid": "Bu Shapefile okunamadı. .shp içeren bir ZIP açın veya .shp dosyasını eşlik eden dosyalarla birlikte seçin.",
+  "layer": "Katman",
+  "map": "Shapefile haritası",
+  "fit": "Verileri haritaya sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "features": "Coğrafi detaylar",
+  "feature": "Detay {number}",
+  "attributes": "Öznitelikler",
+  "noAttributes": "Bu detayın öznitelikleri bulunamadı. Kayıtları görmek için ilgili .dbf dosyasını ekleyin.",
+  "noGeometry": "Bu katmanda gösterilecek geometri yok.",
+  "assumed": ".prj dosyası bulunamadı. Harita bu koordinatları WGS 84 olarak yorumlar.",
+  "unmapped": "Bu koordinatlar haritada konumlandırılamıyor. Desteklenen bir koordinat referans sistemi belirten ilgili .prj dosyasını ekleyin."
+}

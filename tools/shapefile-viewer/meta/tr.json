@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile Görüntüleyici",
+  "description": "Esri Shapefile içeren bir ZIP arşivi açın ya da .shp dosyasını eşlik eden dosyalarla birlikte seçin. Katmanları çevrimdışı haritada görün ve detayların özniteliklerini tarayıcınızda inceleyin."
+}

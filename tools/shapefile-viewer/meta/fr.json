@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse Shapefile",
+  "description": "Ouvrez un Shapefile Esri en ZIP ou un fichier .shp avec ses fichiers associés. Parcourez ses couches sur une carte hors ligne et consultez les attributs des entités dans votre navigateur."
+}
