@@ -978,6 +978,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ip-range-to-cidr-converter",
   },
   {
+    category: "developer",
+    name: "Visualizzatore di metadati IPA",
+    slug: "ipa-metadata-viewer",
+  },
+  {
     category: "ipfs",
     name: "Generatore CAR IPFS",
     slug: "ipfs-car-builder",

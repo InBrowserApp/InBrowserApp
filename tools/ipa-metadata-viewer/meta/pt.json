@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de metadados IPA",
+  "description": "Abra um arquivo .ipa do iOS e examine o Info.plist. Veja no navegador o nome do app, o ID do pacote, a versão, a compilação, a versão mínima do sistema e as plataformas compatíveis."
+}

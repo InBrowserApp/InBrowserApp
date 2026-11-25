@@ -24945,6 +24945,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ipa-metadata-viewer",
+    category: "developer",
+    icon: "archive",
+    tags: [
+      "ios",
+      "ipad",
+      "ipa",
+      "info.plist",
+      "bundle identifier",
+      "app metadata",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض بيانات IPA الوصفية",
+        description:
+          "افتح ملف ‎.ipa لتطبيق iOS وافحص ملف Info.plist. اطّلع في متصفحك على اسم التطبيق ومعرّف الحزمة والإصدار ورقم البناء وأدنى إصدار للنظام والمنصات المدعومة.",
+      },
+      de: {
+        name: "Betrachter für IPA-Metadaten",
+        description:
+          "Öffne eine iOS-Datei mit der Endung .ipa und prüfe ihre Info.plist. Zeige App-Name, Paket-ID, Version, Build, Mindestversion des Betriebssystems und unterstützte Plattformen im Browser an.",
+      },
+      en: {
+        name: "IPA Metadata Viewer",
+        description:
+          "Open an iOS .ipa file and inspect its Info.plist. View the app name, bundle identifier, version, build, minimum OS, and supported platforms in your browser.",
+      },
+      es: {
+        name: "Visor de metadatos IPA",
+        description:
+          "Abre un archivo .ipa de iOS y examina su Info.plist. Consulta el nombre de la app, el ID de paquete, la versión, la compilación, el sistema mínimo y las plataformas compatibles en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de métadonnées IPA",
+        description:
+          "Ouvre un fichier .ipa iOS et examine son Info.plist. Consulte le nom de l’app, l’identifiant de paquet, la version, le build, la version minimale du système et les plateformes prises en charge dans ton navigateur.",
+      },
+      he: {
+        name: "מציג מטא־נתוני IPA",
+        description:
+          "פתחו קובץ ‎.ipa של iOS ובדקו את Info.plist. עיינו בשם האפליקציה, במזהה החבילה, בגרסה, במספר הבנייה, בגרסת המערכת המינימלית ובפלטפורמות הנתמכות בדפדפן.",
+      },
+      hi: {
+        name: "IPA मेटाडेटा व्यूअर",
+        description:
+          "iOS की .ipa फ़ाइल खोलें और उसका Info.plist जाँचें। ब्राउज़र में ऐप का नाम, बंडल आइडेंटिफ़ायर, वर्शन, बिल्ड नंबर, न्यूनतम OS वर्शन और समर्थित प्लैटफ़ॉर्म देखें।",
+      },
+      id: {
+        name: "Penampil Metadata IPA",
+        description:
+          "Buka file .ipa iOS dan periksa Info.plist-nya. Lihat nama aplikasi, ID bundel, versi, nomor build, versi OS minimum, dan platform yang didukung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di metadati IPA",
+        description:
+          "Apri un file .ipa di iOS ed esamina il suo Info.plist. Consulta nel browser il nome dell’app, l’ID pacchetto, la versione, la build, la versione minima del sistema e le piattaforme supportate.",
+      },
+      ja: {
+        name: "IPA メタデータビューアー",
+        description:
+          "iOS の .ipa ファイルをブラウザーで開き、Info.plist を確認します。アプリ名、バンドル ID、バージョン、ビルド番号、最小 OS バージョン、対応プラットフォームを表示できます。",
+      },
+      ko: {
+        name: "IPA 메타데이터 뷰어",
+        description:
+          "브라우저에서 iOS .ipa 파일을 열고 Info.plist를 확인하세요. 앱 이름, 번들 식별자, 버전, 빌드 번호, 최소 OS 버전, 지원 플랫폼을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Metadata IPA",
+        description:
+          "Buka fail .ipa iOS dan semak Info.plist. Lihat nama aplikasi, pengecam himpunan, versi, nombor binaan, versi OS minimum dan platform yang disokong dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor IPA-metagegevens",
+        description:
+          "Open een .ipa-bestand van iOS en bekijk Info.plist. Controleer de appnaam, bundel-ID, versie, build, minimale systeemversie en ondersteunde platforms in je browser.",
+      },
+      no: {
+        name: "Viser for IPA-metadata",
+        description:
+          "Åpne en iOS-fil i .ipa-format og undersøk Info.plist. Se appnavn, pakke-ID, versjon, byggnummer, minste systemversjon og støttede plattformer i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka metadanych IPA",
+        description:
+          "Otwórz plik .ipa z iOS i sprawdź jego Info.plist w przeglądarce. Zobacz nazwę aplikacji, identyfikator pakietu, wersję, numer kompilacji, minimalną wersję systemu i obsługiwane platformy.",
+      },
+      pt: {
+        name: "Visualizador de metadados IPA",
+        description:
+          "Abra um arquivo .ipa do iOS e examine o Info.plist. Veja no navegador o nome do app, o ID do pacote, a versão, a compilação, a versão mínima do sistema e as plataformas compatíveis.",
+      },
+      ru: {
+        name: "Просмотр метаданных IPA",
+        description:
+          "Откройте файл .ipa для iOS и изучите его Info.plist. Посмотрите в браузере имя приложения, идентификатор пакета, версию, номер сборки, минимальную версию ОС и поддерживаемые платформы.",
+      },
+      sv: {
+        name: "Visare för IPA-metadata",
+        description:
+          "Öppna en .ipa-fil för iOS och granska Info.plist. Se appnamn, paketidentifierare, version, byggnummer, lägsta systemversion och plattformar som stöds i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเมตา IPA",
+        description:
+          "เปิดไฟล์ .ipa ของ iOS และตรวจสอบ Info.plist ในเบราว์เซอร์ ดูชื่อแอป ตัวระบุบันเดิล เวอร์ชัน หมายเลขบิลด์ เวอร์ชันระบบขั้นต่ำ และแพลตฟอร์มที่รองรับ",
+      },
+      tr: {
+        name: "IPA Meta Veri Görüntüleyici",
+        description:
+          "Bir iOS .ipa dosyasını açıp Info.plist dosyasını inceleyin. Uygulama adını, paket kimliğini, sürümü, derlemeyi, minimum işletim sistemi sürümünü ve desteklenen platformları tarayıcınızda görün.",
+      },
+      vi: {
+        name: "Trình xem siêu dữ liệu IPA",
+        description:
+          "Mở tệp .ipa của iOS và kiểm tra Info.plist ngay trong trình duyệt. Xem tên ứng dụng, mã định danh gói, phiên bản, số bản dựng, phiên bản hệ điều hành tối thiểu và các nền tảng được hỗ trợ.",
+      },
+      "zh-CN": {
+        name: "IPA 元数据查看器",
+        description:
+          "在浏览器中打开 iOS .ipa 文件并检查其中的 Info.plist。查看应用名称、捆绑包标识符、版本、构建号、最低系统版本和支持的平台。",
+      },
+      "zh-TW": {
+        name: "IPA 中繼資料檢視器",
+        description:
+          "在瀏覽器中開啟 iOS .ipa 檔案並檢視其中的 Info.plist。查看 App 名稱、套件識別碼、版本、組建編號、最低系統版本及支援的平台。",
+      },
+    },
+  },
+  {
     slug: "ipfs-car-builder",
     category: "ipfs",
     icon: "archive",
@@ -80421,6 +80552,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IP 範圍到 CIDR 轉換器",
         description:
           "將 IPv4 或 IPv6 起始位址和結束位址轉換為精確覆蓋範圍的最小 CIDR 區塊集。",
+      },
+    },
+  },
+  "ipa-metadata-viewer": {
+    slug: "ipa-metadata-viewer",
+    category: "developer",
+    icon: "archive",
+    tags: [
+      "ios",
+      "ipad",
+      "ipa",
+      "info.plist",
+      "bundle identifier",
+      "app metadata",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض بيانات IPA الوصفية",
+        description:
+          "افتح ملف ‎.ipa لتطبيق iOS وافحص ملف Info.plist. اطّلع في متصفحك على اسم التطبيق ومعرّف الحزمة والإصدار ورقم البناء وأدنى إصدار للنظام والمنصات المدعومة.",
+      },
+      de: {
+        name: "Betrachter für IPA-Metadaten",
+        description:
+          "Öffne eine iOS-Datei mit der Endung .ipa und prüfe ihre Info.plist. Zeige App-Name, Paket-ID, Version, Build, Mindestversion des Betriebssystems und unterstützte Plattformen im Browser an.",
+      },
+      en: {
+        name: "IPA Metadata Viewer",
+        description:
+          "Open an iOS .ipa file and inspect its Info.plist. View the app name, bundle identifier, version, build, minimum OS, and supported platforms in your browser.",
+      },
+      es: {
+        name: "Visor de metadatos IPA",
+        description:
+          "Abre un archivo .ipa de iOS y examina su Info.plist. Consulta el nombre de la app, el ID de paquete, la versión, la compilación, el sistema mínimo y las plataformas compatibles en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de métadonnées IPA",
+        description:
+          "Ouvre un fichier .ipa iOS et examine son Info.plist. Consulte le nom de l’app, l’identifiant de paquet, la version, le build, la version minimale du système et les plateformes prises en charge dans ton navigateur.",
+      },
+      he: {
+        name: "מציג מטא־נתוני IPA",
+        description:
+          "פתחו קובץ ‎.ipa של iOS ובדקו את Info.plist. עיינו בשם האפליקציה, במזהה החבילה, בגרסה, במספר הבנייה, בגרסת המערכת המינימלית ובפלטפורמות הנתמכות בדפדפן.",
+      },
+      hi: {
+        name: "IPA मेटाडेटा व्यूअर",
+        description:
+          "iOS की .ipa फ़ाइल खोलें और उसका Info.plist जाँचें। ब्राउज़र में ऐप का नाम, बंडल आइडेंटिफ़ायर, वर्शन, बिल्ड नंबर, न्यूनतम OS वर्शन और समर्थित प्लैटफ़ॉर्म देखें।",
+      },
+      id: {
+        name: "Penampil Metadata IPA",
+        description:
+          "Buka file .ipa iOS dan periksa Info.plist-nya. Lihat nama aplikasi, ID bundel, versi, nomor build, versi OS minimum, dan platform yang didukung di browser.",
+      },
+      it: {
+        name: "Visualizzatore di metadati IPA",
+        description:
+          "Apri un file .ipa di iOS ed esamina il suo Info.plist. Consulta nel browser il nome dell’app, l’ID pacchetto, la versione, la build, la versione minima del sistema e le piattaforme supportate.",
+      },
+      ja: {
+        name: "IPA メタデータビューアー",
+        description:
+          "iOS の .ipa ファイルをブラウザーで開き、Info.plist を確認します。アプリ名、バンドル ID、バージョン、ビルド番号、最小 OS バージョン、対応プラットフォームを表示できます。",
+      },
+      ko: {
+        name: "IPA 메타데이터 뷰어",
+        description:
+          "브라우저에서 iOS .ipa 파일을 열고 Info.plist를 확인하세요. 앱 이름, 번들 식별자, 버전, 빌드 번호, 최소 OS 버전, 지원 플랫폼을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Metadata IPA",
+        description:
+          "Buka fail .ipa iOS dan semak Info.plist. Lihat nama aplikasi, pengecam himpunan, versi, nombor binaan, versi OS minimum dan platform yang disokong dalam pelayar.",
+      },
+      nl: {
+        name: "Viewer voor IPA-metagegevens",
+        description:
+          "Open een .ipa-bestand van iOS en bekijk Info.plist. Controleer de appnaam, bundel-ID, versie, build, minimale systeemversie en ondersteunde platforms in je browser.",
+      },
+      no: {
+        name: "Viser for IPA-metadata",
+        description:
+          "Åpne en iOS-fil i .ipa-format og undersøk Info.plist. Se appnavn, pakke-ID, versjon, byggnummer, minste systemversjon og støttede plattformer i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka metadanych IPA",
+        description:
+          "Otwórz plik .ipa z iOS i sprawdź jego Info.plist w przeglądarce. Zobacz nazwę aplikacji, identyfikator pakietu, wersję, numer kompilacji, minimalną wersję systemu i obsługiwane platformy.",
+      },
+      pt: {
+        name: "Visualizador de metadados IPA",
+        description:
+          "Abra um arquivo .ipa do iOS e examine o Info.plist. Veja no navegador o nome do app, o ID do pacote, a versão, a compilação, a versão mínima do sistema e as plataformas compatíveis.",
+      },
+      ru: {
+        name: "Просмотр метаданных IPA",
+        description:
+          "Откройте файл .ipa для iOS и изучите его Info.plist. Посмотрите в браузере имя приложения, идентификатор пакета, версию, номер сборки, минимальную версию ОС и поддерживаемые платформы.",
+      },
+      sv: {
+        name: "Visare för IPA-metadata",
+        description:
+          "Öppna en .ipa-fil för iOS och granska Info.plist. Se appnamn, paketidentifierare, version, byggnummer, lägsta systemversion och plattformar som stöds i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเมตา IPA",
+        description:
+          "เปิดไฟล์ .ipa ของ iOS และตรวจสอบ Info.plist ในเบราว์เซอร์ ดูชื่อแอป ตัวระบุบันเดิล เวอร์ชัน หมายเลขบิลด์ เวอร์ชันระบบขั้นต่ำ และแพลตฟอร์มที่รองรับ",
+      },
+      tr: {
+        name: "IPA Meta Veri Görüntüleyici",
+        description:
+          "Bir iOS .ipa dosyasını açıp Info.plist dosyasını inceleyin. Uygulama adını, paket kimliğini, sürümü, derlemeyi, minimum işletim sistemi sürümünü ve desteklenen platformları tarayıcınızda görün.",
+      },
+      vi: {
+        name: "Trình xem siêu dữ liệu IPA",
+        description:
+          "Mở tệp .ipa của iOS và kiểm tra Info.plist ngay trong trình duyệt. Xem tên ứng dụng, mã định danh gói, phiên bản, số bản dựng, phiên bản hệ điều hành tối thiểu và các nền tảng được hỗ trợ.",
+      },
+      "zh-CN": {
+        name: "IPA 元数据查看器",
+        description:
+          "在浏览器中打开 iOS .ipa 文件并检查其中的 Info.plist。查看应用名称、捆绑包标识符、版本、构建号、最低系统版本和支持的平台。",
+      },
+      "zh-TW": {
+        name: "IPA 中繼資料檢視器",
+        description:
+          "在瀏覽器中開啟 iOS .ipa 檔案並檢視其中的 Info.plist。查看 App 名稱、套件識別碼、版本、組建編號、最低系統版本及支援的平台。",
       },
     },
   },

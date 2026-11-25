@@ -1,0 +1,4 @@
+{
+  "name": "Betrachter für IPA-Metadaten",
+  "description": "Öffne eine iOS-Datei mit der Endung .ipa und prüfe ihre Info.plist. Zeige App-Name, Paket-ID, Version, Build, Mindestversion des Betriebssystems und unterstützte Plattformen im Browser an."
+}

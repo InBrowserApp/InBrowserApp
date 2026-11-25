@@ -17942,6 +17942,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipa-metadata-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "de",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "en",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "es",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "he",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "id",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "it",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "no",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "th",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipa-metadata-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "ipfs-car-builder",
     language: "ar",
   },

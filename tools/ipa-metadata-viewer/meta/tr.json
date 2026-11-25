@@ -1,0 +1,4 @@
+{
+  "name": "IPA Meta Veri Görüntüleyici",
+  "description": "Bir iOS .ipa dosyasını açıp Info.plist dosyasını inceleyin. Uygulama adını, paket kimliğini, sürümü, derlemeyi, minimum işletim sistemi sürümünü ve desteklenen platformları tarayıcınızda görün."
+}

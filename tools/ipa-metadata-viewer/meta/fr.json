@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de métadonnées IPA",
+  "description": "Ouvre un fichier .ipa iOS et examine son Info.plist. Consulte le nom de l’app, l’identifiant de paquet, la version, le build, la version minimale du système et les plateformes prises en charge dans ton navigateur."
+}

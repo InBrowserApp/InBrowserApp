@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem siêu dữ liệu IPA",
+  "description": "Mở tệp .ipa của iOS và kiểm tra Info.plist ngay trong trình duyệt. Xem tên ứng dụng, mã định danh gói, phiên bản, số bản dựng, phiên bản hệ điều hành tối thiểu và các nền tảng được hỗ trợ."
+}

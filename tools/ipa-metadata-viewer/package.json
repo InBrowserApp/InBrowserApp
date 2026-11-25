@@ -1,0 +1,25 @@
+{
+  "name": "@tool/ipa-metadata-viewer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/archive": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "rork-plist": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

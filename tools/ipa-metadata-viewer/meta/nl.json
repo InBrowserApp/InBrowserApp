@@ -1,0 +1,4 @@
+{
+  "name": "Viewer voor IPA-metagegevens",
+  "description": "Open een .ipa-bestand van iOS en bekijk Info.plist. Controleer de appnaam, bundel-ID, versie, build, minimale systeemversie en ondersteunde platforms in je browser."
+}

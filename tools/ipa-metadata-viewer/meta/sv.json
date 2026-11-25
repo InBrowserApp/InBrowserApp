@@ -1,0 +1,4 @@
+{
+  "name": "Visare för IPA-metadata",
+  "description": "Öppna en .ipa-fil för iOS och granska Info.plist. Se appnamn, paketidentifierare, version, byggnummer, lägsta systemversion och plattformar som stöds i webbläsaren."
+}
