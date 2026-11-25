@@ -1,0 +1,18 @@
+{
+  "start": "Startdatum",
+  "end": "Slutdatum",
+  "format": "Datumformat",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Lokalt datumformat",
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Datum",
+  "placeholder": "Genererade datum visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "copyFailed": "Kunde inte kopiera",
+  "download": "Ladda ner TXT",
+  "invalidRange": "Välj ett slutdatum som infaller på eller efter startdatumet.",
+  "error": "Det gick inte att generera datum. Försök igen."
+}

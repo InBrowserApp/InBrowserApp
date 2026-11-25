@@ -1,0 +1,18 @@
+{
+  "start": "Startdato",
+  "end": "Sluttdato",
+  "format": "Datoformat",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Dato på sidens språk",
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Datoer",
+  "placeholder": "De genererte datoene vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
+  "download": "Last ned TXT",
+  "invalidRange": "Velg en sluttdato som er lik eller senere enn startdatoen.",
+  "error": "Kunne ikke generere datoer. Prøv igjen."
+}

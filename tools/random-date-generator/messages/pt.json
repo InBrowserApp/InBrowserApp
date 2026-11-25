@@ -1,0 +1,18 @@
+{
+  "start": "Data inicial",
+  "end": "Data final",
+  "format": "Formato de saída",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Data localizada",
+  "quantity": "Quantidade",
+  "generate": "Gerar",
+  "generating": "A gerar…",
+  "results": "Datas",
+  "placeholder": "As datas geradas aparecerão aqui.",
+  "copy": "Copiar tudo",
+  "copied": "Copiado",
+  "copyFailed": "Falha ao copiar",
+  "download": "Transferir TXT",
+  "invalidRange": "Escolha uma data final igual ou posterior à data inicial.",
+  "error": "Não foi possível gerar as datas. Tente novamente."
+}

@@ -1,0 +1,18 @@
+{
+  "start": "開始日期",
+  "end": "結束日期",
+  "format": "輸出格式",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "本地化日期",
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "日期",
+  "placeholder": "產生的日期會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "invalidRange": "請選擇不早於開始日期的結束日期。",
+  "error": "無法產生日期，請再試一次。"
+}

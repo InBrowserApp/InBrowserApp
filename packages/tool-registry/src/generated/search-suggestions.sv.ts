@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Slumpgenerator för datum",
+    slug: "random-date-generator",
+  },
+  {
+    category: "random",
     name: "Slumpgenerator för namn",
     slug: "random-name-generator",
   },

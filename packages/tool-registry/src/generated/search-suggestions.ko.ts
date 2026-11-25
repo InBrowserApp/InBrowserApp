@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "랜덤 날짜 생성기",
+    slug: "random-date-generator",
+  },
+  {
+    category: "random",
     name: "무작위 이름 생성기",
     slug: "random-name-generator",
   },

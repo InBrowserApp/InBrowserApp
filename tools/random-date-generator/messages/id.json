@@ -1,0 +1,18 @@
+{
+  "start": "Tanggal mulai",
+  "end": "Tanggal akhir",
+  "format": "Format hasil",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Tanggal sesuai bahasa",
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Tanggal",
+  "placeholder": "Tanggal yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "invalidRange": "Pilih tanggal akhir yang sama dengan atau setelah tanggal mulai.",
+  "error": "Tanggal gagal dibuat. Coba lagi."
+}

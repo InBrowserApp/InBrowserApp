@@ -1,0 +1,18 @@
+{
+  "start": "Start date",
+  "end": "End date",
+  "format": "Output format",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Localized date",
+  "quantity": "Quantity",
+  "generate": "Generate",
+  "generating": "Generating…",
+  "results": "Dates",
+  "placeholder": "Generated dates will appear here.",
+  "copy": "Copy all",
+  "copied": "Copied",
+  "copyFailed": "Copy failed",
+  "download": "Download TXT",
+  "invalidRange": "Choose an end date on or after the start date.",
+  "error": "Could not generate dates. Try again."
+}

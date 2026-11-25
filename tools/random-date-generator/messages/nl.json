@@ -1,0 +1,18 @@
+{
+  "start": "Startdatum",
+  "end": "Einddatum",
+  "format": "Uitvoernotatie",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Datum in lokale notatie",
+  "quantity": "Aantal",
+  "generate": "Genereren",
+  "generating": "Bezig met genereren…",
+  "results": "Datums",
+  "placeholder": "Hier verschijnen de gegenereerde datums.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "TXT downloaden",
+  "invalidRange": "Kies een einddatum op of na de startdatum.",
+  "error": "De datums konden niet worden gegenereerd. Probeer het opnieuw."
+}

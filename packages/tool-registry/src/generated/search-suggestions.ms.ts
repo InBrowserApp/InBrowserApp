@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana Tarikh Rawak",
+    slug: "random-date-generator",
+  },
+  {
+    category: "random",
     name: "Penjana nama rawak",
     slug: "random-name-generator",
   },

@@ -44052,6 +44052,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-date-generator",
+    category: "random",
+    icon: "calendar-days",
+    tags: ["random", "date", "date range", "calendar", "ISO 8601", "generator"],
+    locales: {
+      ar: {
+        name: "مولّد تواريخ عشوائية",
+        description:
+          "ولّد تواريخ عشوائية بين تاريخ بدء وتاريخ انتهاء. اختر تنسيق ISO أو اعرض التواريخ بلغة الصفحة، ثم انسخ الدفعة أو نزّلها.",
+      },
+      de: {
+        name: "Zufallsdatum-Generator",
+        description:
+          "Erzeuge zufällige Daten zwischen einem Start- und Enddatum. Wähle das ISO- oder lokalisierte Format und kopiere die Ergebnisse oder lade sie herunter.",
+      },
+      en: {
+        name: "Random Date Generator",
+        description:
+          "Generate random dates between a start and end date. Choose ISO or localized output, then copy or download the batch.",
+      },
+      es: {
+        name: "Generador de fechas aleatorias",
+        description:
+          "Genera fechas aleatorias entre una fecha de inicio y una de fin. Elige el formato ISO o localizado y copia o descarga el lote.",
+      },
+      fr: {
+        name: "Générateur de dates aléatoires",
+        description:
+          "Générez des dates aléatoires entre une date de début et une date de fin. Choisissez un format ISO ou localisé, puis copiez ou téléchargez le lot.",
+      },
+      he: {
+        name: "מחולל תאריכים אקראיים",
+        description:
+          "צרו תאריכים אקראיים בטווח שתבחרו. בחרו בפורמט ISO או בתצוגה בשפת הדף, והעתיקו או הורידו את התוצאות.",
+      },
+      hi: {
+        name: "रैंडम तारीख जनरेटर",
+        description:
+          "शुरुआत और अंत की तारीखों के बीच रैंडम तारीखें जनरेट करें। ISO फ़ॉर्मैट या पेज की भाषा वाला फ़ॉर्मैट चुनें, फिर परिणाम कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Tanggal Acak",
+        description:
+          "Buat tanggal acak antara tanggal mulai dan tanggal akhir. Pilih format ISO atau format sesuai bahasa halaman, lalu salin atau unduh hasilnya sekaligus.",
+      },
+      it: {
+        name: "Generatore di date casuali",
+        description:
+          "Genera date casuali tra una data di inizio e una di fine. Scegli il formato ISO o quello locale, quindi copia o scarica l’elenco.",
+      },
+      ja: {
+        name: "ランダム日付生成",
+        description:
+          "開始日から終了日までの範囲でランダムな日付を生成します。ISO形式またはローカライズ形式を選び、結果をまとめてコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "랜덤 날짜 생성기",
+        description:
+          "시작일부터 종료일까지의 범위에서 랜덤 날짜를 생성합니다. ISO 또는 현지화 형식을 선택하고 결과를 한꺼번에 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana Tarikh Rawak",
+        description:
+          "Jana tarikh rawak antara tarikh mula dengan tarikh akhir. Pilih format ISO atau format mengikut bahasa halaman, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "Generator voor willekeurige datums",
+        description:
+          "Genereer willekeurige datums tussen een start- en einddatum. Kies ISO of lokale notatie en kopieer of download de lijst.",
+      },
+      no: {
+        name: "Generator for tilfeldige datoer",
+        description:
+          "Generer tilfeldige datoer i et valgt datointervall. Bruk ISO-format eller datoformatet for sidespråket, og kopier eller last ned resultatene.",
+      },
+      pl: {
+        name: "Generator losowych dat",
+        description:
+          "Generuj losowe daty od daty początkowej do końcowej. Wybierz format ISO lub zapis lokalny, a potem skopiuj albo pobierz listę.",
+      },
+      pt: {
+        name: "Gerador de datas aleatórias",
+        description:
+          "Gere datas aleatórias entre uma data inicial e uma data final. Escolha o formato ISO ou localizado e copie ou transfira o conjunto.",
+      },
+      ru: {
+        name: "Генератор случайных дат",
+        description:
+          "Генерируйте случайные даты между начальной и конечной датами. Выберите формат ISO или локальный формат, затем скопируйте или скачайте список.",
+      },
+      sv: {
+        name: "Slumpgenerator för datum",
+        description:
+          "Generera slumpmässiga datum mellan ett startdatum och ett slutdatum. Välj ISO eller lokalt datumformat och kopiera eller ladda ner listan.",
+      },
+      th: {
+        name: "เครื่องมือสร้างวันที่แบบสุ่ม",
+        description:
+          "สร้างวันที่แบบสุ่มระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด เลือกรูปแบบ ISO หรือรูปแบบตามภาษาของหน้า แล้วคัดลอกหรือดาวน์โหลดทั้งชุด",
+      },
+      tr: {
+        name: "Rastgele Tarih Oluşturucu",
+        description:
+          "Başlangıç ve bitiş tarihleri arasında rastgele tarihler oluşturun. ISO biçimini veya sayfanın diline uygun biçimi seçin, ardından sonuçları kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình tạo ngày ngẫu nhiên",
+        description:
+          "Tạo ngày ngẫu nhiên trong khoảng từ ngày bắt đầu đến ngày kết thúc. Chọn định dạng ISO hoặc theo ngôn ngữ trang rồi sao chép hoặc tải xuống cả danh sách.",
+      },
+      "zh-CN": {
+        name: "随机日期生成器",
+        description:
+          "在开始日期和结束日期之间生成随机日期。选择 ISO 或本地化格式，然后复制或下载整批结果。",
+      },
+      "zh-TW": {
+        name: "隨機日期產生器",
+        description:
+          "在開始日期與結束日期之間產生隨機日期。選擇 ISO 或本地化格式，再複製或下載整批結果。",
+      },
+    },
+  },
+  {
     slug: "random-name-generator",
     category: "random",
     icon: "contact-round",
