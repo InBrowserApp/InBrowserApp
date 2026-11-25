@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { CbzDownload } from "@workspace/ui/components/tool/cbz-download"
+import { ComicDownload } from "@workspace/ui/components/tool/comic-download"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
@@ -120,8 +120,9 @@ export default function Client({
         </Alert>
       ) : null}
       {job?.status === "ready" ? (
-        <CbzDownload
-          file={job.result}
+        <ComicDownload
+          file={job.result.cbz}
+          preview={job.result}
           filename={job.file.name.replace(extension, ".cbz")}
           detail={
             job.result.reused

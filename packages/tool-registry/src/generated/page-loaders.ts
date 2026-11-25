@@ -88,6 +88,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cbr-to-cbz-converter": () => import("@tool/cbr-to-cbz-converter/page"),
   "cbr-to-pdf-converter": () => import("@tool/cbr-to-pdf-converter/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),
+  "cbz-to-epub-converter": () => import("@tool/cbz-to-epub-converter/page"),
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),

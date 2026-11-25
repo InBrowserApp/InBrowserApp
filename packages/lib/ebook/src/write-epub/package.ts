@@ -1,5 +1,10 @@
-import type { BookSnapshot } from "../types"
 import { DC, OPF, element, serialize, xmlText } from "./xml"
+
+export type PublicationMetadata = {
+  title: string
+  author?: string
+  description?: string
+}
 
 export type PublicationItem = {
   id: string
@@ -9,9 +14,10 @@ export type PublicationItem = {
   linear?: boolean
 }
 export function packageDocument(
-  book: BookSnapshot,
+  book: PublicationMetadata,
   language: string,
-  items: PublicationItem[]
+  items: PublicationItem[],
+  fixedLayout = false
 ) {
   const doc = document.implementation.createDocument(OPF, "package")
   doc.documentElement.setAttribute("version", "3.0")
@@ -40,6 +46,12 @@ export function packageDocument(
       new Date().toISOString().replace(/\.\d{3}Z$/, "Z")
     )
   )
+  if (fixedLayout) {
+    metadata.append(
+      element(doc, "meta", { property: "rendition:layout" }, "pre-paginated"),
+      element(doc, "meta", { property: "rendition:spread" }, "none")
+    )
+  }
   const manifest = element(doc, "manifest")
   const spine = element(doc, "spine")
   for (const item of items) {

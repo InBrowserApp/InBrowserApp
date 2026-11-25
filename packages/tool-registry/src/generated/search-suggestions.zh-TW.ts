@@ -344,6 +344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBZ 轉 EPUB",
+    slug: "cbz-to-epub-converter",
+  },
+  {
+    category: "ebook",
     name: "CBZ 轉 PDF 轉換器",
     slug: "cbz-to-pdf-converter",
   },

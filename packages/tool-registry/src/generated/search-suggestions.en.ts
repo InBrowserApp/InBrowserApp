@@ -344,6 +344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBZ to EPUB Converter",
+    slug: "cbz-to-epub-converter",
+  },
+  {
+    category: "ebook",
     name: "CBZ to PDF Converter",
     slug: "cbz-to-pdf-converter",
   },

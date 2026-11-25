@@ -1,17 +1,12 @@
-import { BlobReader, BlobWriter, TextReader, ZipWriter } from "@zip.js/zip.js"
 import type { BookSnapshot, ContentsItem } from "../types"
 import { languageTag } from "../language"
+import { writePublication } from "./archive"
 import { chapterContent } from "./chapter"
 import { epubImages } from "./images"
-import { packageDocument } from "./package"
-import type { PublicationItem } from "./package"
 import { EPUB, element, serialize, xhtml } from "./xml"
 
 const style =
   "body{line-height:1.6;margin:1em;overflow-wrap:anywhere}img{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid;padding:.4em}pre{white-space:pre-wrap}blockquote{margin-inline:1em}h1,h2,h3{line-height:1.3}"
-
-const container =
-  '<?xml version="1.0" encoding="UTF-8"?><container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/></rootfiles></container>'
 
 export async function writeEpub(
   book: BookSnapshot,
@@ -37,31 +32,7 @@ export async function writeEpub(
       targets.set(target.id, `${chapter.href}#${target.id}`)
       targetOrder.set(target.id, targetOrder.size)
     }
-  const zip = new ZipWriter(new BlobWriter("application/epub+zip"), {
-    signal,
-    extendedTimestamp: false,
-    dataDescriptor: false,
-  })
-  const items: PublicationItem[] = []
-  async function add(
-    href: string,
-    source: string | Blob,
-    item: Omit<PublicationItem, "href">
-  ) {
-    signal.throwIfAborted()
-    await zip.add(
-      "EPUB/" + href,
-      typeof source === "string"
-        ? new TextReader(source)
-        : new BlobReader(source)
-    )
-    items.push({ ...item, href })
-  }
-  try {
-    await zip.add("mimetype", new TextReader("application/epub+zip"), {
-      level: 0,
-    })
-    await zip.add("META-INF/container.xml", new TextReader(container))
+  return writePublication(book, language, signal, async (add) => {
     const cover = book.cover ? await images.add(book.cover) : null
     if (
       cover &&
@@ -157,15 +128,5 @@ export async function writeEpub(
         media: asset.blob.type,
         properties: asset.href === cover ? "cover-image" : undefined,
       })
-    await zip.add(
-      "EPUB/package.opf",
-      new TextReader(packageDocument(book, language, items))
-    )
-    signal.throwIfAborted()
-    return await zip.close()
-  } catch (error) {
-    await zip.close().catch(() => {})
-    signal.throwIfAborted()
-    throw error
-  }
+  })
 }

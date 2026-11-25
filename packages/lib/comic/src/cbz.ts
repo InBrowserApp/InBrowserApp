@@ -1,12 +1,7 @@
 import { BlobWriter, ZipWriter } from "@zip.js/zip.js"
+import type { ComicPreview } from "./types"
 
-export type CbzFile = {
-  cbz: Blob
-  total: number
-  first: string
-  last: string
-  cover: Blob | null
-}
+export type CbzFile = ComicPreview & { cbz: Blob }
 
 export function createCbzWriter() {
   return new ZipWriter(new BlobWriter("application/vnd.comicbook+zip"), {

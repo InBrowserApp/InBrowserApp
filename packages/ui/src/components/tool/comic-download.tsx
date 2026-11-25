@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { CbzFile } from "@workspace/comic/cbz"
+import type { ComicPreview } from "@workspace/comic/types"
 import { DocumentDownload } from "./document-download"
 
 type Messages = {
@@ -26,14 +26,16 @@ function Cover({ file }: { file: Blob }) {
   ) : null
 }
 
-export function CbzDownload({
+export function ComicDownload({
   file,
+  preview,
   filename,
   detail,
   lang,
   messages: m,
 }: {
-  file: CbzFile
+  file: Blob
+  preview: ComicPreview
   filename: string
   detail?: string
   lang: string
@@ -46,31 +48,27 @@ export function CbzDownload({
           <p className="font-medium">
             {m.ready.replace(
               "{total}",
-              new Intl.NumberFormat(lang).format(file.total)
+              new Intl.NumberFormat(lang).format(preview.total)
             )}
           </p>
           {detail ? <p className="text-muted-foreground">{detail}</p> : null}
         </div>
-        <DocumentDownload
-          file={file.cbz}
-          filename={filename}
-          label={m.download}
-        />
+        <DocumentDownload file={file} filename={filename} label={m.download} />
       </div>
       <div className="flex min-w-0 flex-wrap items-center gap-4 bg-muted/25 p-4">
-        {file.cover ? <Cover file={file.cover} /> : null}
+        {preview.cover ? <Cover file={preview.cover} /> : null}
         <dl className="grid min-w-0 flex-1 basis-36 gap-3 text-sm">
           <div>
             <dt className="text-muted-foreground">{m.first}</dt>
             <dd className="wrap-anywhere">
-              <bdi>{file.first}</bdi>
+              <bdi>{preview.first}</bdi>
             </dd>
           </div>
-          {file.total > 1 ? (
+          {preview.total > 1 ? (
             <div>
               <dt className="text-muted-foreground">{m.last}</dt>
               <dd className="wrap-anywhere">
-                <bdi>{file.last}</bdi>
+                <bdi>{preview.last}</bdi>
               </dd>
             </div>
           ) : null}

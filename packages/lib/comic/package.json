@@ -10,7 +10,8 @@
     "./cbz": "./src/cbz.ts",
     "./pdf": "./src/prepare-pdf.ts",
     "./errors": "./src/errors.ts",
-    "./compressed": "./src/compressed.ts"
+    "./compressed": "./src/compressed.ts",
+    "./rasterize": "./src/rasterize.ts"
   },
   "dependencies": {
     "@zip.js/zip.js": "catalog:",

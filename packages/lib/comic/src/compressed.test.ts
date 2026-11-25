@@ -9,7 +9,10 @@ const file = new File([], "comic.cb7")
 const png = new Blob([Uint8Array.of(137, 80, 78, 71, 13, 10, 26, 10)])
 const signal = new AbortController().signal
 
-function comicWith(readEntry: (path: string) => Promise<Blob>) {
+function comicWith(
+  readEntry: (path: string) => Promise<Blob>,
+  options?: Parameters<typeof openCompressedComic>[3]
+) {
   const entries = [
     ["chapter10/1.png", "file"],
     ["chapter2/10.png", "file"],
@@ -33,14 +36,15 @@ function comicWith(readEntry: (path: string) => Promise<Blob>) {
     readEntry,
     dispose,
   })
-  return { comic: openCompressedComic(file, "7z", signal), dispose }
+  return { comic: openCompressedComic(file, "7z", signal, options), dispose }
 }
 
 test("opens the selected archive format and reads only indexed raster pages", async () => {
   const readEntry = vi.fn(async () => png)
-  const { comic, dispose } = comicWith(readEntry)
+  const options = { preservePaths: true, sequentialReads: true }
+  const { comic, dispose } = comicWith(readEntry, options)
   const book = await comic
-  expect(openWorkerArchive).toHaveBeenCalledWith(file, "7z", signal)
+  expect(openWorkerArchive).toHaveBeenCalledWith(file, "7z", signal, options)
   expect(book.pages.map(({ name }) => name)).toEqual([
     "chapter2/2.png",
     "chapter2/10.png",

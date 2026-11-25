@@ -6,9 +6,10 @@ import type { Comic } from "./types"
 export async function openCompressedComic(
   file: File,
   format: "rar" | "7z",
-  signal: AbortSignal
+  signal: AbortSignal,
+  options?: Parameters<typeof openWorkerArchive>[3]
 ): Promise<Comic> {
-  const archive = await openWorkerArchive(file, format, signal)
+  const archive = await openWorkerArchive(file, format, signal, options)
   const indexed = indexArchivePages(archive.entries)
   let pending = Promise.resolve()
 
