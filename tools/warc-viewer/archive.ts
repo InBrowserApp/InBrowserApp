@@ -17,7 +17,7 @@ export function mediaType(contentType: string) {
   return contentType.split(";", 1)[0]!.trim().toLowerCase()
 }
 
-export function isHtml(contentType: string) {
+function isHtml(contentType: string) {
   return ["text/html", "application/xhtml+xml"].includes(mediaType(contentType))
 }
 
