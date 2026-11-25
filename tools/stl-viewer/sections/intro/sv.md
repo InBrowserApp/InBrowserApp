@@ -16,3 +16,4 @@ STL beskriver ytan på en detalj med trianglar. Använd [OBJ-visaren](../obj-vie
 
 - [3MF-visare](../3mf-viewer/)
 - [STL till OBJ-konverterare](../stl-to-obj-converter/)
+- [Kontrollera nätets volym och topologi](../mesh-inspector/)

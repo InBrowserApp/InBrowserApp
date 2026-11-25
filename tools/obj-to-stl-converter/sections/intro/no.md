@@ -11,3 +11,5 @@ En fil kan konverteres selv om nettet har hull eller andre geometriske problemer
 ## Se resultatet eller konverter tilbake
 
 Åpne den nedlastede filen i [STL-viseren](../stl-viewer/), eller sjekk originalen og eventuelle materialer du legger til, i [OBJ-viseren](../obj-viewer/). Bruk [STL til OBJ-konvertereren](../stl-to-obj-converter/) for å konvertere motsatt vei.
+
+- [Sjekk volum og topologi i 3D-nett](../mesh-inspector/)

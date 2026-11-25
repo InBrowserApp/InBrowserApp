@@ -1,0 +1,4 @@
+{
+  "name": "Netzvolumen und Topologie prüfen",
+  "description": "Prüfe STL- und OBJ-Netze im Browser. Ermittle Oberflächeninhalt und eingeschlossenes Volumen und finde Löcher, nicht mannigfaltige Kanten und uneinheitlich orientierte Flächen."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Sjekk volum og topologi i 3D-nett",
+  "description": "Sjekk STL- og OBJ-nett i nettleseren. Mål overflateareal og innelukket volum og finn hull, ikke-manifolde kanter og flater med avvikende orientering."
+}

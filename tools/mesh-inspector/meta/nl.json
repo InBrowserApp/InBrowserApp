@@ -1,0 +1,4 @@
+{
+  "name": "Volume en topologie van 3D-netten controleren",
+  "description": "Controleer STL- en OBJ-netten in je browser. Meet de oppervlakte en het ingesloten volume en vind gaten, non-manifold randen en vlakken met een afwijkende oriëntatie."
+}

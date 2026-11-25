@@ -1183,6 +1183,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "メッシュの体積・トポロジーチェッカー",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "MHTMLからHTMLへの変換ツール",
     slug: "mhtml-to-html-converter",

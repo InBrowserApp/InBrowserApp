@@ -14,3 +14,4 @@
 
 - [โปรแกรมดู GLB / glTF](../gltf-viewer/)
 - [โปรแกรมแปลง OBJ เป็น STL](../obj-to-stl-converter/)
+- [เครื่องมือตรวจสอบปริมาตรและโทโพโลยีของเมช](../mesh-inspector/)

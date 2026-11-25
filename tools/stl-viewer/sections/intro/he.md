@@ -16,3 +16,4 @@
 
 - [מציג 3MF](../3mf-viewer/)
 - [ממיר STL ל־OBJ](../stl-to-obj-converter/)
+- [בודק נפח וטופולוגיה של רשת](../mesh-inspector/)

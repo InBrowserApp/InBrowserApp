@@ -14,3 +14,4 @@ Para uma malha triangular exportada para impressão 3D, use o [Visualizador de S
 
 - [Visualizador de GLB / glTF](../gltf-viewer/)
 - [Conversor de OBJ para STL](../obj-to-stl-converter/)
+- [Verificador de volume e topologia da malha](../mesh-inspector/)

@@ -11,3 +11,5 @@ Dateien lassen sich auch konvertieren, wenn das Netz Löcher oder andere Geometr
 ## Ergebnis ansehen oder zurückkonvertieren
 
 Öffne die heruntergeladene Datei im [STL-Betrachter](../stl-viewer/) oder sieh dir das Original mit den zugehörigen Materialien im [OBJ-Betrachter](../obj-viewer/) an. Für die umgekehrte Richtung nutze den [STL-zu-OBJ-Konverter](../stl-to-obj-converter/).
+
+- [Netzvolumen und Topologie prüfen](../mesh-inspector/)

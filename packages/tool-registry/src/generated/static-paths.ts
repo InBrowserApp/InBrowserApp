@@ -21714,6 +21714,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mesh-inspector",
+    language: "ar",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "de",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "en",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "es",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "fr",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "he",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "hi",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "id",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "it",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "ja",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "ko",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "ms",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "nl",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "no",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "pl",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "pt",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "ru",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "sv",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "th",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "tr",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "vi",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "zh-CN",
+  },
+  {
+    slug: "mesh-inspector",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-html-converter",
     language: "ar",
   },

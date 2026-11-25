@@ -16,3 +16,4 @@ STL は三角形で部品の表面を表します。マテリアルライブラ�
 
 - [3MF ビューアー](../3mf-viewer/)
 - [STL → OBJ 変換](../stl-to-obj-converter/)
+- [メッシュの体積・トポロジーチェッカー](../mesh-inspector/)

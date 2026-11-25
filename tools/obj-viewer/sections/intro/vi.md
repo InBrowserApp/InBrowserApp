@@ -14,3 +14,4 @@ Bạn vẫn có thể mở OBJ khi thiếu tệp đi kèm. Các bề mặt liên
 
 - [Trình xem GLB / glTF](../gltf-viewer/)
 - [Trình chuyển đổi OBJ sang STL](../obj-to-stl-converter/)
+- [Công cụ kiểm tra thể tích và tô pô lưới](../mesh-inspector/)

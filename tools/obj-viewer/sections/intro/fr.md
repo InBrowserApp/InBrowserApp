@@ -14,3 +14,4 @@ Pour un maillage triangulaire exporté pour l’impression 3D, utilisez la [Visi
 
 - [Visionneuse GLB / glTF](../gltf-viewer/)
 - [Convertisseur OBJ en STL](../obj-to-stl-converter/)
+- [Vérificateur de volume et de topologie de maillage](../mesh-inspector/)

@@ -1183,6 +1183,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "Analiza objętości i topologii siatki",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "Konwerter MHTML na HTML",
     slug: "mhtml-to-html-converter",

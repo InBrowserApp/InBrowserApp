@@ -11,3 +11,5 @@ De conversie kan ook slagen als het net gaten of andere geometrische problemen h
 ## Het resultaat bekijken of terug converteren
 
 Open de download in de [STL-viewer](../stl-viewer/) of bekijk het origineel in de [OBJ-viewer](../obj-viewer/), eventueel met de materialen die je toevoegt. Gebruik de [STL naar OBJ-converter](../stl-to-obj-converter/) om in de andere richting te converteren.
+
+- [Volume en topologie van 3D-netten controleren](../mesh-inspector/)

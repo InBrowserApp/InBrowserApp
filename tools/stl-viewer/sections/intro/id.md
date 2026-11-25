@@ -16,3 +16,4 @@ STL menggambarkan permukaan komponen dengan segitiga. Untuk melihat file Wavefro
 
 - [Penampil 3MF](../3mf-viewer/)
 - [Konverter STL ke OBJ](../stl-to-obj-converter/)
+- [Pemeriksa Volume dan Topologi Mesh](../mesh-inspector/)

@@ -14,3 +14,4 @@ Per una mesh triangolare esportata per la stampa 3D, usa il [Visualizzatore STL]
 
 - [Visualizzatore GLB / glTF](../gltf-viewer/)
 - [Convertitore da OBJ a STL](../obj-to-stl-converter/)
+- [Verifica del volume e della topologia della mesh](../mesh-inspector/)

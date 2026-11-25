@@ -14,3 +14,4 @@ Bruk [STL-viseren](../stl-viewer/) til et trekantnett som er eksportert for 3D-u
 
 - [GLB- og glTF-viser](../gltf-viewer/)
 - [OBJ til STL-konverterer](../obj-to-stl-converter/)
+- [Sjekk volum og topologi i 3D-nett](../mesh-inspector/)

@@ -16,3 +16,4 @@ Le STL représente la surface d’une pièce par des triangles. Pour ouvrir un f
 
 - [Visionneuse 3MF](../3mf-viewer/)
 - [Convertisseur STL en OBJ](../stl-to-obj-converter/)
+- [Vérificateur de volume et de topologie de maillage](../mesh-inspector/)

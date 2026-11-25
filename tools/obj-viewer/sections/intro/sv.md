@@ -14,3 +14,4 @@ Använd [STL-visaren](../stl-viewer/) för ett triangelnät som har exporterats 
 
 - [GLB- och glTF-visare](../gltf-viewer/)
 - [OBJ till STL-konverterare](../obj-to-stl-converter/)
+- [Kontrollera nätets volym och topologi](../mesh-inspector/)

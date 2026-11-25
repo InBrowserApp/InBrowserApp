@@ -11,3 +11,5 @@ A file can convert successfully even when the mesh has holes or other geometry p
 ## Preview the result or convert back
 
 Use the [STL Viewer](../stl-viewer/) to open the download or the [OBJ Viewer](../obj-viewer/) to inspect the original, including any materials you supply. Use the [STL to OBJ Converter](../stl-to-obj-converter/) for the opposite direction.
+
+- [Mesh Volume & Topology Checker](../mesh-inspector/)

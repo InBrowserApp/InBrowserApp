@@ -14,3 +14,4 @@ Si tienes una malla triangular exportada para impresión 3D, usa el [Visor de ST
 
 - [Visor de GLB / glTF](../gltf-viewer/)
 - [Conversor de OBJ a STL](../obj-to-stl-converter/)
+- [Comprobador de volumen y topología de mallas](../mesh-inspector/)

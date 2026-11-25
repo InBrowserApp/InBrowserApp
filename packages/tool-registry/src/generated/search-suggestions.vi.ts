@@ -1183,6 +1183,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "Công cụ kiểm tra thể tích và tô pô lưới",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "Trình chuyển đổi MHTML sang HTML",
     slug: "mhtml-to-html-converter",

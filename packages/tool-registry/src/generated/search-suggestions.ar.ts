@@ -1183,6 +1183,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
+    category: "image",
+    name: "فاحص حجم الشبكة وطوبولوجيتها",
+    slug: "mesh-inspector",
+  },
+  {
     category: "document",
     name: "محوّل MHTML إلى HTML",
     slug: "mhtml-to-html-converter",

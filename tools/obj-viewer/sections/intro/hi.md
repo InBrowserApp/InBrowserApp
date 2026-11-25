@@ -14,3 +14,4 @@ Wavefront OBJ फ़ाइल मॉडल की ज्यामिति र�
 
 - [GLB / glTF व्यूअर](../gltf-viewer/)
 - [OBJ से STL कन्वर्टर](../obj-to-stl-converter/)
+- [मेश वॉल्यूम और टोपोलॉजी चेकर](../mesh-inspector/)

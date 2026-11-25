@@ -14,3 +14,4 @@ Für ein Dreiecksnetz, das für den 3D-Druck exportiert wurde, nutze den [STL-Be
 
 - [GLB- und glTF-Betrachter](../gltf-viewer/)
 - [OBJ-zu-STL-Konverter](../obj-to-stl-converter/)
+- [Netzvolumen und Topologie prüfen](../mesh-inspector/)

@@ -16,3 +16,4 @@ STL beskriver overflaten til en del med trekanter. Bruk [OBJ-viseren](../obj-vie
 
 - [3MF-viser](../3mf-viewer/)
 - [STL til OBJ-konverterer](../stl-to-obj-converter/)
+- [Sjekk volum og topologi i 3D-nett](../mesh-inspector/)

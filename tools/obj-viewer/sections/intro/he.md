@@ -14,3 +14,4 @@
 
 - [מציג GLB / glTF](../gltf-viewer/)
 - [ממיר OBJ ל־STL](../obj-to-stl-converter/)
+- [בודק נפח וטופולוגיה של רשת](../mesh-inspector/)

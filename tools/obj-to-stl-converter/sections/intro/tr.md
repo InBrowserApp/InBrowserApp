@@ -11,3 +11,5 @@ Ağda delikler veya başka geometri sorunları olsa da dönüştürme başarıl�
 ## Sonucu önizleme veya ters yönde dönüştürme
 
 İndirdiğiniz dosyayı [STL Görüntüleyici](../stl-viewer/) aracında açın. Kaynak dosyayı eklediğiniz malzemelerle birlikte [OBJ Görüntüleyici](../obj-viewer/) aracında inceleyebilirsiniz. Ters yönde dönüştürmek için [STL’den OBJ’ye Dönüştürücü](../stl-to-obj-converter/) aracını kullanın.
+
+- [Ağ Hacmi ve Topoloji Denetleyici](../mesh-inspector/)
