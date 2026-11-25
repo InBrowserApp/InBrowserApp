@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore WARC",
+  "description": "Apri archivi web WARC e WARC.GZ nel browser. Cerca gli URL archiviati, visualizza l’anteprima delle pagine salvate e consulta le date di acquisizione e le intestazioni HTTP."
+}

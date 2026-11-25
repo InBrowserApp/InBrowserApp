@@ -50815,6 +50815,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "warc-viewer",
+    category: "document",
+    icon: "globe",
+    tags: [
+      "warc",
+      "warc.gz",
+      "web archive",
+      "webpage",
+      "common crawl",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض WARC",
+        description:
+          "افتح أرشيفات الويب بتنسيق WARC أو WARC.GZ في متصفحك. ابحث عن عناوين URL المؤرشفة، وعاين الصفحات المحفوظة، واطّلع على تواريخ الالتقاط وترويسات HTTP.",
+      },
+      de: {
+        name: "WARC-Betrachter",
+        description:
+          "Öffne WARC- und WARC.GZ-Webarchive im Browser. Suche nach archivierten URLs, sieh dir gespeicherte Webseiten an und prüfe Erfassungszeitpunkte und HTTP-Header.",
+      },
+      en: {
+        name: "WARC Viewer",
+        description:
+          "Open WARC and WARC.GZ web archives in your browser. Search captured URLs, preview saved web pages, and inspect capture dates and HTTP headers.",
+      },
+      es: {
+        name: "Visor de WARC",
+        description:
+          "Abre archivos web WARC y WARC.GZ en tu navegador. Busca URL archivadas, previsualiza páginas guardadas y consulta las fechas de captura y las cabeceras HTTP.",
+      },
+      fr: {
+        name: "Visionneuse WARC",
+        description:
+          "Ouvre des archives web WARC et WARC.GZ dans ton navigateur. Recherche les URL capturées, affiche les pages enregistrées et consulte les dates de capture et les en-têtes HTTP.",
+      },
+      he: {
+        name: "מציג WARC",
+        description:
+          "פתחו ארכיוני אינטרנט מסוג WARC או WARC.GZ בדפדפן. חפשו כתובות URL שאורכבו, הציגו דפים שמורים ובדקו תאריכי לכידה וכותרות HTTP.",
+      },
+      hi: {
+        name: "WARC व्यूअर",
+        description:
+          "ब्राउज़र में WARC और WARC.GZ वेब आर्काइव खोलें। दर्ज किए गए URL खोजें, सहेजे गए वेब पेज का पूर्वावलोकन करें और कैप्चर की तारीखें व HTTP हेडर देखें।",
+      },
+      id: {
+        name: "Penampil WARC",
+        description:
+          "Buka arsip web WARC dan WARC.GZ di browser. Cari URL yang diarsipkan, lihat pratinjau halaman tersimpan, dan periksa waktu pengarsipan serta header HTTP.",
+      },
+      it: {
+        name: "Visualizzatore WARC",
+        description:
+          "Apri archivi web WARC e WARC.GZ nel browser. Cerca gli URL archiviati, visualizza l’anteprima delle pagine salvate e consulta le date di acquisizione e le intestazioni HTTP.",
+      },
+      ja: {
+        name: "WARC ビューアー",
+        description:
+          "WARC・WARC.GZ 形式のウェブアーカイブをブラウザーで開きます。収集した URL の検索や保存済みページのプレビュー、取得日時と HTTP ヘッダーの確認ができます。",
+      },
+      ko: {
+        name: "WARC 뷰어",
+        description:
+          "브라우저에서 WARC 및 WARC.GZ 웹 아카이브를 여세요. 수집한 URL을 검색하고 저장된 페이지를 미리 보거나 수집 시각과 HTTP 헤더를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar WARC",
+        description:
+          "Buka arkib web WARC dan WARC.GZ dalam pelayar. Cari URL yang diarkibkan, pratonton halaman tersimpan dan semak tarikh tangkapan serta pengepala HTTP.",
+      },
+      nl: {
+        name: "WARC-viewer",
+        description:
+          "Open WARC- en WARC.GZ-webarchieven in je browser. Zoek naar gearchiveerde URL’s, bekijk opgeslagen webpagina’s en controleer wanneer ze zijn vastgelegd en welke HTTP-headers zijn opgeslagen.",
+      },
+      no: {
+        name: "WARC-viser",
+        description:
+          "Åpne nettarkiver i WARC- og WARC.GZ-format i nettleseren. Søk etter arkiverte nettadresser, se lagrede nettsider og undersøk arkiveringstidspunkter og HTTP-hoder.",
+      },
+      pl: {
+        name: "Przeglądarka WARC",
+        description:
+          "Otwieraj archiwa stron WARC i WARC.GZ w przeglądarce. Wyszukuj zapisane adresy URL, wyświetlaj podgląd stron i sprawdzaj daty zapisu oraz nagłówki HTTP.",
+      },
+      pt: {
+        name: "Visualizador de WARC",
+        description:
+          "Abra arquivos da web WARC e WARC.GZ no navegador. Busque URLs capturadas, veja páginas salvas e consulte as datas de captura e os cabeçalhos HTTP.",
+      },
+      ru: {
+        name: "Просмотр WARC",
+        description:
+          "Открывайте веб-архивы WARC и WARC.GZ в браузере. Ищите сохранённые URL, просматривайте копии страниц, проверяйте даты архивации и заголовки HTTP.",
+      },
+      sv: {
+        name: "WARC-visare",
+        description:
+          "Öppna webbarkiv i WARC- och WARC.GZ-format i webbläsaren. Sök efter arkiverade webbadresser, förhandsgranska sparade webbsidor och granska arkiveringstider och HTTP-huvuden.",
+      },
+      th: {
+        name: "โปรแกรมดู WARC",
+        description:
+          "เปิดไฟล์เก็บถาวรเว็บ WARC และ WARC.GZ ในเบราว์เซอร์ ค้นหา URL ที่เก็บไว้ ดูตัวอย่างหน้าเว็บ และตรวจสอบเวลาที่บันทึกกับส่วนหัว HTTP",
+      },
+      tr: {
+        name: "WARC Görüntüleyici",
+        description:
+          "WARC ve WARC.GZ web arşivlerini tarayıcınızda açın. Arşivlenen URL’leri arayın, kaydedilen sayfaları önizleyin ve arşivleme tarihleriyle HTTP başlıklarını inceleyin.",
+      },
+      vi: {
+        name: "Trình xem WARC",
+        description:
+          "Mở tệp lưu trữ web WARC và WARC.GZ ngay trong trình duyệt. Tìm URL đã thu thập, xem trước trang đã lưu và kiểm tra thời điểm thu thập cùng tiêu đề HTTP.",
+      },
+      "zh-CN": {
+        name: "WARC 查看器",
+        description:
+          "在浏览器中打开 WARC 和 WARC.GZ 网页归档。搜索已采集的网址，预览保存的网页，并查看采集时间和 HTTP 标头。",
+      },
+      "zh-TW": {
+        name: "WARC 檢視器",
+        description:
+          "在瀏覽器中開啟 WARC 和 WARC.GZ 網頁封存檔。搜尋已擷取的網址、預覽儲存的網頁，以及查看擷取時間與 HTTP 標頭。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -103298,6 +103428,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IPv4 VLSM 子網路計算機",
         description:
           "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  "warc-viewer": {
+    slug: "warc-viewer",
+    category: "document",
+    icon: "globe",
+    tags: [
+      "warc",
+      "warc.gz",
+      "web archive",
+      "webpage",
+      "common crawl",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض WARC",
+        description:
+          "افتح أرشيفات الويب بتنسيق WARC أو WARC.GZ في متصفحك. ابحث عن عناوين URL المؤرشفة، وعاين الصفحات المحفوظة، واطّلع على تواريخ الالتقاط وترويسات HTTP.",
+      },
+      de: {
+        name: "WARC-Betrachter",
+        description:
+          "Öffne WARC- und WARC.GZ-Webarchive im Browser. Suche nach archivierten URLs, sieh dir gespeicherte Webseiten an und prüfe Erfassungszeitpunkte und HTTP-Header.",
+      },
+      en: {
+        name: "WARC Viewer",
+        description:
+          "Open WARC and WARC.GZ web archives in your browser. Search captured URLs, preview saved web pages, and inspect capture dates and HTTP headers.",
+      },
+      es: {
+        name: "Visor de WARC",
+        description:
+          "Abre archivos web WARC y WARC.GZ en tu navegador. Busca URL archivadas, previsualiza páginas guardadas y consulta las fechas de captura y las cabeceras HTTP.",
+      },
+      fr: {
+        name: "Visionneuse WARC",
+        description:
+          "Ouvre des archives web WARC et WARC.GZ dans ton navigateur. Recherche les URL capturées, affiche les pages enregistrées et consulte les dates de capture et les en-têtes HTTP.",
+      },
+      he: {
+        name: "מציג WARC",
+        description:
+          "פתחו ארכיוני אינטרנט מסוג WARC או WARC.GZ בדפדפן. חפשו כתובות URL שאורכבו, הציגו דפים שמורים ובדקו תאריכי לכידה וכותרות HTTP.",
+      },
+      hi: {
+        name: "WARC व्यूअर",
+        description:
+          "ब्राउज़र में WARC और WARC.GZ वेब आर्काइव खोलें। दर्ज किए गए URL खोजें, सहेजे गए वेब पेज का पूर्वावलोकन करें और कैप्चर की तारीखें व HTTP हेडर देखें।",
+      },
+      id: {
+        name: "Penampil WARC",
+        description:
+          "Buka arsip web WARC dan WARC.GZ di browser. Cari URL yang diarsipkan, lihat pratinjau halaman tersimpan, dan periksa waktu pengarsipan serta header HTTP.",
+      },
+      it: {
+        name: "Visualizzatore WARC",
+        description:
+          "Apri archivi web WARC e WARC.GZ nel browser. Cerca gli URL archiviati, visualizza l’anteprima delle pagine salvate e consulta le date di acquisizione e le intestazioni HTTP.",
+      },
+      ja: {
+        name: "WARC ビューアー",
+        description:
+          "WARC・WARC.GZ 形式のウェブアーカイブをブラウザーで開きます。収集した URL の検索や保存済みページのプレビュー、取得日時と HTTP ヘッダーの確認ができます。",
+      },
+      ko: {
+        name: "WARC 뷰어",
+        description:
+          "브라우저에서 WARC 및 WARC.GZ 웹 아카이브를 여세요. 수집한 URL을 검색하고 저장된 페이지를 미리 보거나 수집 시각과 HTTP 헤더를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar WARC",
+        description:
+          "Buka arkib web WARC dan WARC.GZ dalam pelayar. Cari URL yang diarkibkan, pratonton halaman tersimpan dan semak tarikh tangkapan serta pengepala HTTP.",
+      },
+      nl: {
+        name: "WARC-viewer",
+        description:
+          "Open WARC- en WARC.GZ-webarchieven in je browser. Zoek naar gearchiveerde URL’s, bekijk opgeslagen webpagina’s en controleer wanneer ze zijn vastgelegd en welke HTTP-headers zijn opgeslagen.",
+      },
+      no: {
+        name: "WARC-viser",
+        description:
+          "Åpne nettarkiver i WARC- og WARC.GZ-format i nettleseren. Søk etter arkiverte nettadresser, se lagrede nettsider og undersøk arkiveringstidspunkter og HTTP-hoder.",
+      },
+      pl: {
+        name: "Przeglądarka WARC",
+        description:
+          "Otwieraj archiwa stron WARC i WARC.GZ w przeglądarce. Wyszukuj zapisane adresy URL, wyświetlaj podgląd stron i sprawdzaj daty zapisu oraz nagłówki HTTP.",
+      },
+      pt: {
+        name: "Visualizador de WARC",
+        description:
+          "Abra arquivos da web WARC e WARC.GZ no navegador. Busque URLs capturadas, veja páginas salvas e consulte as datas de captura e os cabeçalhos HTTP.",
+      },
+      ru: {
+        name: "Просмотр WARC",
+        description:
+          "Открывайте веб-архивы WARC и WARC.GZ в браузере. Ищите сохранённые URL, просматривайте копии страниц, проверяйте даты архивации и заголовки HTTP.",
+      },
+      sv: {
+        name: "WARC-visare",
+        description:
+          "Öppna webbarkiv i WARC- och WARC.GZ-format i webbläsaren. Sök efter arkiverade webbadresser, förhandsgranska sparade webbsidor och granska arkiveringstider och HTTP-huvuden.",
+      },
+      th: {
+        name: "โปรแกรมดู WARC",
+        description:
+          "เปิดไฟล์เก็บถาวรเว็บ WARC และ WARC.GZ ในเบราว์เซอร์ ค้นหา URL ที่เก็บไว้ ดูตัวอย่างหน้าเว็บ และตรวจสอบเวลาที่บันทึกกับส่วนหัว HTTP",
+      },
+      tr: {
+        name: "WARC Görüntüleyici",
+        description:
+          "WARC ve WARC.GZ web arşivlerini tarayıcınızda açın. Arşivlenen URL’leri arayın, kaydedilen sayfaları önizleyin ve arşivleme tarihleriyle HTTP başlıklarını inceleyin.",
+      },
+      vi: {
+        name: "Trình xem WARC",
+        description:
+          "Mở tệp lưu trữ web WARC và WARC.GZ ngay trong trình duyệt. Tìm URL đã thu thập, xem trước trang đã lưu và kiểm tra thời điểm thu thập cùng tiêu đề HTTP.",
+      },
+      "zh-CN": {
+        name: "WARC 查看器",
+        description:
+          "在浏览器中打开 WARC 和 WARC.GZ 网页归档。搜索已采集的网址，预览保存的网页，并查看采集时间和 HTTP 标头。",
+      },
+      "zh-TW": {
+        name: "WARC 檢視器",
+        description:
+          "在瀏覽器中開啟 WARC 和 WARC.GZ 網頁封存檔。搜尋已擷取的網址、預覽儲存的網頁，以及查看擷取時間與 HTTP 標頭。",
       },
     },
   },

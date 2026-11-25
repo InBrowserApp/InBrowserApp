@@ -492,6 +492,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "video-trimmer": () => import("@tool/video-trimmer/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "vlsm-calculator": () => import("@tool/vlsm-calculator/page"),
+  "warc-viewer": () => import("@tool/warc-viewer/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),

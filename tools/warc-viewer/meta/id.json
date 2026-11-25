@@ -1,0 +1,4 @@
+{
+  "name": "Penampil WARC",
+  "description": "Buka arsip web WARC dan WARC.GZ di browser. Cari URL yang diarsipkan, lihat pratinjau halaman tersimpan, dan periksa waktu pengarsipan serta header HTTP."
+}

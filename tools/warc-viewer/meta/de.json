@@ -1,0 +1,4 @@
+{
+  "name": "WARC-Betrachter",
+  "description": "Öffne WARC- und WARC.GZ-Webarchive im Browser. Suche nach archivierten URLs, sieh dir gespeicherte Webseiten an und prüfe Erfassungszeitpunkte und HTTP-Header."
+}

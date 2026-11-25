@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  warcio: 2.4.12
   geotiff: 3.0.5
   "@types/parse-torrent": 11.0.1
   "@types/webtorrent": 3.0.0

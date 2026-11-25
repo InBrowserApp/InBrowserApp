@@ -1998,6 +1998,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "vlsm-calculator",
   },
   {
+    category: "document",
+    name: "WARC 查看器",
+    slug: "warc-viewer",
+  },
+  {
     category: "crypto",
     name: "Whirlpool 哈希文本或文件",
     slug: "whirlpool-hash-text-or-file",
