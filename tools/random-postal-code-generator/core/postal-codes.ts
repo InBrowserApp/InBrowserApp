@@ -38,7 +38,7 @@ export async function generatePostalCodes(
         return location.zipCode(zipFormat === "zip4" ? "#####-####" : "#####")
       case "GB": {
         // Faker's templates allow unrestricted letters in some positions.
-        const [template] = location.zipCode().split(" ")
+        const template = location.zipCode().replace(/ .*/, "")
         const outward = template.replace(/[A-Z]$/, () =>
           faker.helpers.arrayElement(
             (template.length === 3 ? "ABCDEFGHJKSTUW" : "ABEHMNPRVWXY").split(

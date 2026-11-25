@@ -28,7 +28,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <RandomPostalCodeClient client:load lang={lang} messages={messages} />
-  <ToolArticle>
+  <ToolArticle className="[&_code]:whitespace-nowrap [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]">
     <Intro />
   </ToolArticle>
 </ToolPageShell>

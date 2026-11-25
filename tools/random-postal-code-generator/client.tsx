@@ -61,6 +61,7 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
   const output = result?.text ?? ""
   const pending = status === "pending"
   const zipLabels = { zip5: messages.zip5, zip4: "ZIP+4" }
+  const direction = lang === "ar" || lang === "he" ? "rtl" : "ltr"
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -86,6 +87,7 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
             <Field>
               <FieldLabel htmlFor={countryId}>{messages.country}</FieldLabel>
               <Select
+                dir={direction}
                 value={country}
                 onValueChange={(value) => setCountry(value as PostalCountry)}
                 disabled={pending}
@@ -122,6 +124,7 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
               <Field>
                 <FieldLabel htmlFor={formatId}>{messages.zipFormat}</FieldLabel>
                 <Select
+                  dir={direction}
                   value={zipFormat}
                   onValueChange={(value) => setZipFormat(value as ZipFormat)}
                   disabled={pending}
