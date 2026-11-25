@@ -46,6 +46,9 @@ async function exportImage(page: SVGSVGElement, format: "png" | "svg") {
   try {
     const context = canvas.getContext("2d")
     if (!context) throw new Error("Could not create score canvas")
+    // Pixel rounding can leave a fraction of a pixel outside the SVG page.
+    context.fillStyle = "white"
+    context.fillRect(0, 0, canvas.width, canvas.height)
     context.drawImage(image, 0, 0, canvas.width, canvas.height)
     const blob = await canvasBlob(canvas, "image/png", 1)
     if (!blob) throw new Error("Could not encode score image")

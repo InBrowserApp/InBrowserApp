@@ -10,6 +10,7 @@ vi.mock("opensheetmusicdisplay", () => ({
   OpenSheetMusicDisplay: class {
     load = load
     destroy = destroy
+    Sheet = { SourceMeasures: [{}] }
     render: () => void
 
     constructor(host: HTMLDivElement, options: unknown) {

@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML 转图片转换器",
+  "description": "将 MusicXML 或压缩的 MXL 乐谱转换为 PNG 或 SVG。预览乐谱并导出全部页面、当前页面或选定的小节范围。"
+}

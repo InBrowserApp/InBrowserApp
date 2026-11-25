@@ -7,17 +7,21 @@ type Messages = Record<"preview" | "page" | "previous" | "next", string>
 export function ScorePagePreview<T>({
   pages,
   makePreview,
+  activePage,
+  onPageChange,
   language,
   messages: m,
 }: {
   pages: readonly T[]
   makePreview: (page: T) => Blob
+  activePage?: number
+  onPageChange?: (page: number) => void
   language: string
   messages: Messages
 }) {
   const [page, setPage] = useState(0)
   const count = pages.length
-  const index = Math.min(page, count - 1)
+  const index = Math.min(activePage ?? page, count - 1)
   const selected = pages[index]!
   const [url, setUrl] = useState("")
   useEffect(() => {
@@ -25,6 +29,10 @@ export function ScorePagePreview<T>({
     setUrl(next)
     return () => URL.revokeObjectURL(next)
   }, [selected, makePreview])
+  function changePage(next: number) {
+    if (activePage === undefined) setPage(next)
+    onPageChange?.(next)
+  }
   const format = new Intl.NumberFormat(language)
   const label = m.page
     .replace("{page}", format.format(index + 1))
@@ -41,7 +49,7 @@ export function ScorePagePreview<T>({
             <DocumentIconButton
               label={m.previous}
               disabled={index === 0}
-              onClick={() => setPage(index - 1)}
+              onClick={() => changePage(index - 1)}
             >
               <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
             </DocumentIconButton>
@@ -56,7 +64,7 @@ export function ScorePagePreview<T>({
             <DocumentIconButton
               label={m.next}
               disabled={index + 1 === count}
-              onClick={() => setPage(index + 1)}
+              onClick={() => changePage(index + 1)}
             >
               <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
             </DocumentIconButton>

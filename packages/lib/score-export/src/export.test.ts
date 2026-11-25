@@ -3,6 +3,7 @@ import { PDFDocument } from "pdf-lib"
 import { expect, test } from "vitest"
 import { exportScore } from "./export"
 import {
+  cropScorePage,
   flowScorePages,
   inScoreHost,
   paperHeight,
@@ -77,4 +78,23 @@ test("bundles paginated SVGs in order and keeps vector PDF pages at the same siz
     expect(page.getWidth()).toBeCloseTo(paperWidth * 0.75)
     expect(page.getHeight()).toBeCloseTo(paperHeight * 0.75)
   }
+})
+
+test("crops a rendered excerpt to padded ink bounds with a fully white canvas", async () => {
+  const rendered = section(50, 900)
+  Object.assign(rendered, {
+    getBBox: () => ({ x: 100.25, y: 95.5, width: 220.3, height: 45.1 }),
+  })
+  const page = cropScorePage(rendered)
+  const { blob } = await exportScore([page], "svg", "excerpt", "en")
+  const svg = new DOMParser().parseFromString(
+    await blob.text(),
+    "image/svg+xml"
+  )
+  expect(svg.documentElement.getAttribute("viewBox")).toBe("0 0 245 70")
+  expect(svg.querySelector("svg svg")?.getAttribute("viewBox")).toBe(
+    "88 83 245 70"
+  )
+  expect(svg.querySelector("rect")?.getAttribute("width")).toBe("100%")
+  expect(svg.querySelector("rect")?.getAttribute("fill")).toBe("white")
 })

@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML als Bild exportieren",
+  "description": "Wandle Noten aus MusicXML oder komprimierten MXL-Dateien in PNG oder SVG um. Prüfe die Vorschau und exportiere alle Seiten, die aktuelle Seite oder einen Taktbereich."
+}

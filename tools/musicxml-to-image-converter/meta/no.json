@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML til bilde",
+  "description": "Gjør om noter i MusicXML eller komprimert MXL-format til PNG eller SVG. Forhåndsvis partituret og eksporter alle sidene, den gjeldende siden eller et utvalg takter."
+}

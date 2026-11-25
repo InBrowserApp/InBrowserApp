@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML to Image Converter",
+  "description": "Convert MusicXML or compressed MXL sheet music to PNG or SVG. Preview the score and export all pages, the current page, or a selected range of measures."
+}

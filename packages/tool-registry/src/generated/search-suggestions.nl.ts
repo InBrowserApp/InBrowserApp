@@ -1343,6 +1343,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "murmurhash3-x86-32-hash-text-or-file",
   },
   {
+    category: "image",
+    name: "MusicXML naar afbeelding",
+    slug: "musicxml-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "MusicXML-naar-PDF-converter",
     slug: "musicxml-to-pdf-converter",

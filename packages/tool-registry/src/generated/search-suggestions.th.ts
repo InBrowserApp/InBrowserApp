@@ -1343,6 +1343,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "murmurhash3-x86-32-hash-text-or-file",
   },
   {
+    category: "image",
+    name: "โปรแกรมแปลง MusicXML เป็นรูปภาพ",
+    slug: "musicxml-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "โปรแกรมแปลง MusicXML เป็น PDF",
     slug: "musicxml-to-pdf-converter",
