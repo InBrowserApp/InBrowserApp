@@ -32662,6 +32662,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-upc-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "de",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "en",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "es",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "he",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "id",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "it",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "no",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "th",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-upc-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-vin-generator",
     language: "ar",
   },

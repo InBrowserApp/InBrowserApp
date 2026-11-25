@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Rastgele UPC Oluşturucu",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "Rastgele VIN Oluşturucu",
     slug: "random-vin-generator",
   },

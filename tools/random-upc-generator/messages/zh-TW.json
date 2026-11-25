@@ -1,0 +1,12 @@
+{
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "產生的 UPC-A 代碼",
+  "placeholder": "產生的 UPC-A 代碼會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "error": "無法載入 UPC 產生器。請重新載入頁面再試一次。"
+}

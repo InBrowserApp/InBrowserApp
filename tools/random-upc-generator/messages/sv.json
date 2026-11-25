@@ -1,0 +1,12 @@
+{
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Genererade UPC-A-koder",
+  "placeholder": "Genererade UPC-A-koder visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "copyFailed": "Kopieringen misslyckades",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att läsa in UPC-generatorn. Ladda om sidan och försök igen."
+}

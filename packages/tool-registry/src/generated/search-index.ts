@@ -45303,6 +45303,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-upc-generator",
+    category: "random",
+    icon: "barcode",
+    tags: [
+      "random",
+      "upc",
+      "upc-a",
+      "gtin-12",
+      "generator",
+      "barcode",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد رموز UPC عشوائية",
+        description:
+          "أنشئ رموز UPC-A عشوائية من 12 رقمًا بأرقام تحقق صحيحة للاختبار. انسخ مجموعة أو نزّل ملف TXT مع الحفاظ على الأصفار البادئة.",
+      },
+      de: {
+        name: "Zufällige UPC-Codes generieren",
+        description:
+          "Erzeugen Sie zufällige 12-stellige UPC-A-Codes mit gültiger Prüfziffer für Tests. Kopieren Sie mehrere Codes oder laden Sie eine TXT-Datei mit führenden Nullen herunter.",
+      },
+      en: {
+        name: "Random UPC Generator",
+        description:
+          "Generate random 12-digit UPC-A codes with valid check digits for testing. Copy a batch or download a TXT file with leading zeros intact.",
+      },
+      es: {
+        name: "Generador de UPC aleatorios",
+        description:
+          "Genera códigos UPC-A aleatorios de 12 dígitos con dígitos de control válidos para pruebas. Copia un lote o descarga un archivo TXT conservando los ceros iniciales.",
+      },
+      fr: {
+        name: "Générateur de codes UPC aléatoires",
+        description:
+          "Générez des codes UPC-A aléatoires à 12 chiffres avec une clé de contrôle valide pour vos tests. Copiez un lot ou téléchargez un fichier TXT en conservant les zéros initiaux.",
+      },
+      he: {
+        name: "מחולל קודי UPC אקראיים",
+        description:
+          "יצירת קודי UPC-A אקראיים בני 12 ספרות עם ספרות ביקורת תקינות לצורכי בדיקה. אפשר להעתיק אצווה או להוריד קובץ TXT תוך שמירה על אפסים מובילים.",
+      },
+      hi: {
+        name: "रैंडम UPC जनरेटर",
+        description:
+          "परीक्षण के लिए मान्य चेक डिजिट वाले 12 अंकों के रैंडम UPC-A कोड बनाएँ। कोड का समूह कॉपी करें या शुरुआती शून्य सुरक्षित रखते हुए TXT फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator UPC Acak",
+        description:
+          "Buat kode UPC-A acak 12 digit dengan digit pemeriksa yang valid untuk pengujian. Salin satu kumpulan atau unduh file TXT dengan angka nol di depan tetap utuh.",
+      },
+      it: {
+        name: "Generatore di UPC casuali",
+        description:
+          "Genera codici UPC-A casuali di 12 cifre con cifre di controllo valide per i test. Copia i codici o scarica un file TXT mantenendo gli zeri iniziali.",
+      },
+      ja: {
+        name: "ランダム UPC ジェネレーター",
+        description:
+          "テスト用に、正しいチェックデジットを持つ12桁のランダムな UPC-A コードを生成します。一括コピーや TXT ダウンロードで先頭のゼロも保持できます。",
+      },
+      ko: {
+        name: "무작위 UPC 생성기",
+        description:
+          "테스트용으로 유효한 체크디지트가 있는 12자리 UPC-A 코드를 무작위로 생성합니다. 일괄 복사하거나 TXT 파일로 다운로드해 앞의 0을 유지할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana UPC Rawak",
+        description:
+          "Jana kod UPC-A rawak 12 digit dengan digit semak yang sah untuk ujian. Salin satu kumpulan atau muat turun fail TXT dengan sifar di hadapan dikekalkan.",
+      },
+      nl: {
+        name: "Generator voor willekeurige UPC-codes",
+        description:
+          "Genereer voor tests willekeurige UPC-A-codes van 12 cijfers met geldige controlecijfers. Kopieer een reeks of download een TXT-bestand met behoud van voorloopnullen.",
+      },
+      no: {
+        name: "Tilfeldig UPC-generator",
+        description:
+          "Generer tilfeldige 12-sifrede UPC-A-koder med gyldige kontrollsifre for testing. Kopier en samling eller last ned en TXT-fil uten å miste innledende nuller.",
+      },
+      pl: {
+        name: "Generator losowych kodów UPC",
+        description:
+          "Generuj losowe 12-cyfrowe kody UPC-A z prawidłowymi cyframi kontrolnymi do testów. Skopiuj zestaw lub pobierz plik TXT z zachowaniem zer na początku.",
+      },
+      pt: {
+        name: "Gerador de UPC aleatório",
+        description:
+          "Gere códigos UPC-A aleatórios de 12 dígitos com dígitos verificadores válidos para testes. Copie um lote ou baixe um arquivo TXT preservando os zeros à esquerda.",
+      },
+      ru: {
+        name: "Генератор случайных UPC",
+        description:
+          "Создавайте случайные 12-значные коды UPC-A с корректной контрольной цифрой для тестирования. Копируйте набор или скачивайте TXT-файл с сохранением начальных нулей.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga UPC-koder",
+        description:
+          "Skapa slumpmässiga UPC-A-koder med 12 siffror och giltiga kontrollsiffror för testning. Kopiera en uppsättning eller ladda ner en TXT-fil med inledande nollor bevarade.",
+      },
+      th: {
+        name: "ตัวสร้างรหัส UPC แบบสุ่ม",
+        description:
+          "สร้างรหัส UPC-A แบบสุ่ม 12 หลักพร้อมเลขตรวจสอบที่ถูกต้องสำหรับการทดสอบ คัดลอกทั้งชุดหรือดาวน์โหลดไฟล์ TXT โดยคงเลขศูนย์นำหน้าไว้",
+      },
+      tr: {
+        name: "Rastgele UPC Oluşturucu",
+        description:
+          "Test için geçerli kontrol basamaklarına sahip rastgele 12 basamaklı UPC-A kodları oluşturun. Baştaki sıfırları koruyarak kodları topluca kopyalayın veya TXT dosyası indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã UPC ngẫu nhiên",
+        description:
+          "Tạo mã UPC-A ngẫu nhiên gồm 12 chữ số với chữ số kiểm tra hợp lệ để thử nghiệm. Sao chép cả loạt hoặc tải tệp TXT mà vẫn giữ các số 0 ở đầu.",
+      },
+      "zh-CN": {
+        name: "随机 UPC 生成器",
+        description:
+          "生成带有效校验位的随机 12 位 UPC-A 代码，用于测试。可批量复制或下载 TXT 文件，保留前导零。",
+      },
+      "zh-TW": {
+        name: "隨機 UPC 產生器",
+        description:
+          "產生含有效檢核碼的隨機 12 位 UPC-A 代碼供測試使用。可批次複製或下載 TXT 檔案，保留開頭的零。",
+      },
+    },
+  },
+  {
     slug: "random-vin-generator",
     category: "random",
     icon: "car",

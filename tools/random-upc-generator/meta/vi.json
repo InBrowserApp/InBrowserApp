@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo mã UPC ngẫu nhiên",
+  "description": "Tạo mã UPC-A ngẫu nhiên gồm 12 chữ số với chữ số kiểm tra hợp lệ để thử nghiệm. Sao chép cả loạt hoặc tải tệp TXT mà vẫn giữ các số 0 ở đầu."
+}

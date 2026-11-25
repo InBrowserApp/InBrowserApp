@@ -1,0 +1,4 @@
+{
+  "name": "Generator losowych kodów UPC",
+  "description": "Generuj losowe 12-cyfrowe kody UPC-A z prawidłowymi cyframi kontrolnymi do testów. Skopiuj zestaw lub pobierz plik TXT z zachowaniem zer na początku."
+}

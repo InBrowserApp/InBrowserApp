@@ -1,0 +1,4 @@
+{
+  "name": "Tilfeldig UPC-generator",
+  "description": "Generer tilfeldige 12-sifrede UPC-A-koder med gyldige kontrollsifre for testing. Kopier en samling eller last ned en TXT-fil uten å miste innledende nuller."
+}

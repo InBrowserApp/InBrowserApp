@@ -1,0 +1,12 @@
+{
+  "quantity": "Liczba",
+  "generate": "Generuj",
+  "generating": "Generowanie…",
+  "results": "Wygenerowane kody UPC-A",
+  "placeholder": "Tutaj pojawią się wygenerowane kody UPC-A.",
+  "copy": "Kopiuj wszystko",
+  "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
+  "download": "Pobierz TXT",
+  "error": "Nie udało się załadować generatora UPC. Odśwież stronę i spróbuj ponownie."
+}

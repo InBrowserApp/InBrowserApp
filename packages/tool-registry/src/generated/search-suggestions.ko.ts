@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "무작위 UPC 생성기",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "무작위 VIN 생성기",
     slug: "random-vin-generator",
   },

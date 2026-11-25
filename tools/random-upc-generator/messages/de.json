@@ -1,0 +1,12 @@
+{
+  "quantity": "Anzahl",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Generierte UPC-A-Codes",
+  "placeholder": "Hier erscheinen die generierten UPC-A-Codes.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "TXT herunterladen",
+  "error": "Der UPC-Generator konnte nicht geladen werden. Laden Sie die Seite neu und versuchen Sie es erneut."
+}

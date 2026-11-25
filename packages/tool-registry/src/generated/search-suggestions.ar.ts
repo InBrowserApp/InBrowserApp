@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "مولّد رموز UPC عشوائية",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "مولّد أرقام VIN عشوائية",
     slug: "random-vin-generator",
   },

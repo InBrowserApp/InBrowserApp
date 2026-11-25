@@ -12,6 +12,7 @@ export {
   ArrowRight,
   AudioLines,
   BadgeCheck,
+  Barcode,
   Binary,
   Bluetooth,
   Blocks,

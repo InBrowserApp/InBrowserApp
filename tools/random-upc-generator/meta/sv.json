@@ -1,0 +1,4 @@
+{
+  "name": "Generator för slumpmässiga UPC-koder",
+  "description": "Skapa slumpmässiga UPC-A-koder med 12 siffror och giltiga kontrollsiffror för testning. Kopiera en uppsättning eller ladda ner en TXT-fil med inledande nollor bevarade."
+}
