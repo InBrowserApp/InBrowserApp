@@ -37,5 +37,7 @@
   "distance": "Abstand",
   "controls": "Ziehen zum Drehen · Mausrad zum Zoomen · Rechts ziehen zum Verschieben",
   "touchControls": "Ziehen zum Drehen · Auf- oder zuziehen zum Zoomen · Mit zwei Fingern verschieben",
-  "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Wähle beim Messen mit der Eingabetaste einen Punkt in der Mitte der Ansicht. Halte die Umschalttaste gedrückt und verwende die Pfeiltasten, um die Ansicht zu verschieben."
+  "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Wähle beim Messen mit der Eingabetaste einen Punkt in der Mitte der Ansicht. Halte die Umschalttaste gedrückt und verwende die Pfeiltasten, um die Ansicht zu verschieben.",
+  "saveStl": "STL exportieren",
+  "stlExportError": "Die STL-Datei ließ sich nicht speichern. Versuche es erneut."
 }

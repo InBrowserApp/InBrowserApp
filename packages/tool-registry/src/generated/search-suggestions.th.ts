@@ -1884,6 +1884,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "โปรแกรมแปลง STEP เป็น STL",
+    slug: "step-to-stl-converter",
+  },
+  {
+    category: "3d-cad",
     name: "โปรแกรมดู STEP",
     slug: "step-viewer",
   },

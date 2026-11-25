@@ -17,3 +17,5 @@
 - [מציג 3MF](../3mf-viewer/)
 - [ממיר STL ל־OBJ](../stl-to-obj-converter/)
 - [בודק נפח וטופולוגיה של רשת](../mesh-inspector/)
+
+השתמשו ב[ממיר STEP ל־STL](../step-to-stl-converter/) כדי לייצא רשת ממודל ה־CAD המקורי בפורמט STEP או STP.

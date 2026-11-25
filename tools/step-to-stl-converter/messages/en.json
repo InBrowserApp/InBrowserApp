@@ -1,0 +1,4 @@
+{
+  "failed": "Could not convert this file. Open a STEP or STP model with 3D surfaces.",
+  "unitHint": "Use millimeters when importing this STL. STL files store coordinates without a unit."
+}

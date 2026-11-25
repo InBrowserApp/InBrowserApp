@@ -17,3 +17,5 @@ STL은 삼각형으로 부품의 표면을 표현합니다. 재질 라이브러�
 - [3MF 뷰어](../3mf-viewer/)
 - [STL → OBJ 변환기](../stl-to-obj-converter/)
 - [메시 부피 및 토폴로지 검사기](../mesh-inspector/)
+
+[STEP → STL 변환기](../step-to-stl-converter/)를 사용해 원본 STEP 또는 STP CAD 모델에서 메시 형상을 내보내세요.

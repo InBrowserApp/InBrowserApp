@@ -1,6 +1,7 @@
+import { BufferGeometry, Float32BufferAttribute, Group, Mesh } from "three"
 import { STLExporter } from "three/addons/exporters/STLExporter.js"
 import { readMeshFile } from "./mesh-file"
-import type { Mesh } from "three"
+import type { Object3D } from "three"
 import type { MeshFormat } from "./mesh-file"
 
 function writeObj(mesh: Mesh) {
@@ -26,9 +27,35 @@ function writeObj(mesh: Mesh) {
   )
 }
 
-export async function convertMesh(file: File, format: MeshFormat) {
-  const model = await readMeshFile(file, format)
-  if (format === "stl") return writeObj(model as Mesh)
+export type MeshConversionInput = MeshFormat | "step"
+
+function binaryStl(model: Object3D) {
   const output = new STLExporter().parse(model, { binary: true })
   return new Blob([output], { type: "model/stl" })
+}
+
+async function convertStep(file: File) {
+  const { readStep } = await import("./cad")
+  const meshes = await readStep(await file.arrayBuffer())
+  if (!meshes) throw new Error("No STEP surfaces")
+
+  const assembly = new Group()
+  for (const { attributes, index } of meshes) {
+    if (!index.array.length) continue
+    const geometry = new BufferGeometry()
+    geometry.setAttribute(
+      "position",
+      new Float32BufferAttribute(attributes.position.array, 3)
+    )
+    geometry.setIndex(index.array)
+    assembly.add(new Mesh(geometry))
+  }
+  if (!assembly.children.length) throw new Error("No STEP surfaces")
+  return binaryStl(assembly)
+}
+
+export async function convertMesh(file: File, format: MeshConversionInput) {
+  if (format === "step") return convertStep(file)
+  const model = await readMeshFile(file, format)
+  return format === "stl" ? writeObj(model as Mesh) : binaryStl(model)
 }

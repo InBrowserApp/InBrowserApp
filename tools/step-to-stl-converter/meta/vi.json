@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi STEP sang STL",
+  "description": "Chuyển mô hình CAD STEP và STP sang STL nhị phân trong trình duyệt. Giữ kích thước và vị trí lắp ráp của các chi tiết, rồi tải lưới xuống để in 3D hoặc kiểm tra."
+}

@@ -10,8 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "occt-import-js": "catalog:",
-    "three": "catalog:"
+    "three": "catalog:",
+    "@workspace/model-mesh": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

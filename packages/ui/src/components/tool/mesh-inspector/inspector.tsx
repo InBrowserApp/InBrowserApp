@@ -11,7 +11,8 @@ import {
   EmptyTitle,
 } from "../../ui/empty"
 import { Spinner } from "../../ui/spinner"
-import { useMeshWorker } from "../use-mesh-worker"
+import { useMeshWorker } from "../../../lib/use-mesh-worker"
+import { exampleFile } from "../model-viewer/load-model"
 import { InspectionReport } from "./report"
 import type { MeshReport } from "@workspace/model-mesh/inspect"
 import type { MeshInspectorMessages } from "./messages"
@@ -30,7 +31,7 @@ export default function MeshInspector({
     status,
     run: inspect,
   } = useMeshWorker<MeshReport>(
-    "stl",
+    () => exampleFile("stl"),
     () =>
       new Worker(new URL("./inspect.worker.ts", import.meta.url), {
         type: "module",

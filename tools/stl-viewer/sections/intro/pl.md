@@ -17,3 +17,5 @@ STL opisuje powierzchnię części za pomocą trójkątów. Do pliku Wavefront z
 - [Przeglądarka plików 3MF](../3mf-viewer/)
 - [Konwerter STL na OBJ](../stl-to-obj-converter/)
 - [Analiza objętości i topologii siatki](../mesh-inspector/)
+
+Użyj [konwertera STEP na STL](../step-to-stl-converter/), aby wyeksportować siatkę trójkątów z oryginalnego modelu CAD w formacie STEP lub STP.

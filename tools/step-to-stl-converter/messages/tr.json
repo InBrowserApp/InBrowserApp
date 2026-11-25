@@ -1,0 +1,4 @@
+{
+  "failed": "Bu dosya dönüştürülemedi. 3B yüzeyler içeren bir STEP veya STP modeli açın.",
+  "unitHint": "Bu STL dosyasını içe aktarırken milimetreyi seçin. STL dosyaları koordinatları ölçü birimi olmadan saklar."
+}

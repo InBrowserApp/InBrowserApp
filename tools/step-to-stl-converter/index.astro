@@ -1,0 +1,38 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { CadLicenses } from "@workspace/ui/components/tool/cad-licenses"
+import MeshConverter from "@workspace/ui/components/tool/mesh-converter/converter"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { getMeshConverterMessages } from "@workspace/ui/mesh-converter-messages"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+import type Messages from "./messages/en.json"
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const Intro = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
+  lang
+)!
+const localized = resolveLocale<typeof Messages>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const messages = { ...await getMeshConverterMessages(lang), ...localized }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <MeshConverter client:load format="step" messages={messages} />
+  <ToolArticle><Intro /></ToolArticle>
+  <CadLicenses />
+</ToolPageShell>

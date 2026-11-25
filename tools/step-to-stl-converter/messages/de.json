@@ -1,0 +1,4 @@
+{
+  "failed": "Die Datei ließ sich nicht konvertieren. Öffne ein STEP- oder STP-Modell mit 3D-Flächen.",
+  "unitHint": "Verwende beim Import dieser STL-Datei Millimeter. STL speichert Koordinaten ohne Maßeinheit."
+}

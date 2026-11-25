@@ -1,0 +1,4 @@
+{
+  "name": "STEP till STL-konverterare",
+  "description": "Konvertera CAD-modeller i STEP- eller STP-format till binär STL i webbläsaren. Behåll delarnas mått och placering i sammanställningen och ladda ner triangelnätet för 3D-utskrift eller granskning."
+}

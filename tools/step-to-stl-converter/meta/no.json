@@ -1,0 +1,4 @@
+{
+  "name": "STEP til STL-konverterer",
+  "description": "Konverter CAD-modeller i STEP- eller STP-format til binær STL i nettleseren. Behold målene og plasseringen til delene i sammenstillingen, og last ned trekantnettet for 3D-utskrift eller kontroll."
+}

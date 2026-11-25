@@ -12,7 +12,7 @@ import {
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Box, Folder } from "@workspace/ui/icons"
 import { loadStep } from "./load-step"
-import example from "./mounting-bracket.step?raw"
+import { exampleStepFile } from "@workspace/model-mesh/step-example"
 import type Messages from "./messages/en.json"
 import type { StepModel } from "./step-data"
 
@@ -70,7 +70,7 @@ function OpenModel({
     <Suspense fallback={loading}>
       <ModelPanel
         model={model}
-        filename={file.name}
+        file={file}
         lang={lang}
         messages={messages}
         focusOnOpen={focusOnOpen}
@@ -127,12 +127,7 @@ export default function Client({
             </Button>
             <Button
               variant="outline"
-              onClick={(event) =>
-                open(
-                  new File([example], "mounting-bracket.step"),
-                  event.detail === 0
-                )
-              }
+              onClick={(event) => open(exampleStepFile(), event.detail === 0)}
             >
               {m.example}
             </Button>

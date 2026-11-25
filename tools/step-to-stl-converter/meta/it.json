@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da STEP a STL",
+  "description": "Converti modelli CAD STEP e STP in STL binario nel browser. Mantieni le dimensioni delle parti e la loro posizione nell’assieme, poi scarica la mesh per esaminarla o stamparla in 3D."
+}

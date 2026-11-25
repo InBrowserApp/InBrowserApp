@@ -15,3 +15,5 @@ Pilih **Ukur** dan pilih dua titik pada model yang kelihatan untuk melihat jarak
 Tetapkan sudut pandangan dan aras zum yang dikehendaki, kemudian pilih **Simpan PNG**. Fail yang dimuat turun merakam model seperti yang dipaparkan, termasuk ukuran yang telah dibuat berserta nilainya. Gunakan imej ini untuk berkongsi butiran reka bentuk dalam semakan, sebut harga atau nota pemasangan.
 
 - [Pemapar DXF](../dxf-viewer/)
+
+Gunakan [Penukar STEP kepada STL](../step-to-stl-converter/) untuk menyediakan STL binari dengan koordinat dalam milimeter bagi perisian penghiris.

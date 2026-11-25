@@ -17,3 +17,5 @@ STL beschrijft het oppervlak van een onderdeel met driehoeken. Gebruik de [OBJ-v
 - [3MF-viewer](../3mf-viewer/)
 - [STL naar OBJ-converter](../stl-to-obj-converter/)
 - [Volume en topologie van 3D-netten controleren](../mesh-inspector/)
+
+Gebruik de [STEP naar STL-converter](../step-to-stl-converter/) om een driehoeksnet uit een origineel STEP- of STP-model te exporteren.

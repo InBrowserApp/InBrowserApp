@@ -11,11 +11,15 @@
     "./three-mf": "./src/three-mf.ts",
     "./convert": "./src/convert.ts",
     "./mesh-file": "./src/mesh-file.ts",
-    "./inspect": "./src/inspect.ts"
+    "./inspect": "./src/inspect.ts",
+    "./cad": "./src/cad.ts",
+    "./cad-licenses": "./src/cad-licenses.ts",
+    "./step-example": "./src/step-example.ts"
   },
   "dependencies": {
     "three": "catalog:",
-    "fflate": "catalog:"
+    "fflate": "catalog:",
+    "occt-import-js": "catalog:"
   },
   "devDependencies": {
     "@types/three": "catalog:",

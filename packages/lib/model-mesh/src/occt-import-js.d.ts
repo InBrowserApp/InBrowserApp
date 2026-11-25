@@ -1,5 +1,5 @@
 declare module "occt-import-js" {
-  type ImportedMesh = import("./step-data").ImportedMesh
+  type ImportedMesh = import("./cad").ImportedMesh
 
   export default function initialize(options: {
     locateFile: () => string

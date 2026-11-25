@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur STEP en STL",
+  "description": "Convertissez des modèles de CAO STEP et STP en STL binaire dans votre navigateur. Conservez les dimensions des pièces et leur position dans l’assemblage, puis téléchargez le maillage pour l’examiner ou l’imprimer en 3D."
+}

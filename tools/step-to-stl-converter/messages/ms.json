@@ -1,0 +1,4 @@
+{
+  "failed": "Fail ini tidak dapat ditukar. Buka model STEP atau STP yang mempunyai permukaan 3D.",
+  "unitHint": "Gunakan milimeter apabila mengimport STL ini. Fail STL menyimpan koordinat tanpa unit."
+}

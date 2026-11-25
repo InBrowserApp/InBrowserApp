@@ -1,0 +1,4 @@
+{
+  "failed": "Dit bestand kon niet worden geconverteerd. Open een STEP- of STP-model met 3D-oppervlakken.",
+  "unitHint": "Gebruik millimeters bij het importeren van dit STL-bestand. STL slaat coördinaten zonder maateenheid op."
+}

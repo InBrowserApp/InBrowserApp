@@ -1,0 +1,4 @@
+{
+  "failed": "Kunne ikke konvertere filen. Åpne en STEP- eller STP-modell med 3D-flater.",
+  "unitHint": "Bruk millimeter når du importerer denne STL-filen. STL lagrer koordinater uten måleenhet."
+}

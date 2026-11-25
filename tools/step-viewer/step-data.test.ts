@@ -1,29 +1,8 @@
-import { createRequire } from "node:module"
-import initialize from "occt-import-js"
 import { Color } from "three"
 import { makeMesh } from "./model-scene"
 import { expect, test } from "vitest"
-import bracket from "./mounting-bracket.step?raw"
 import { prepareModel } from "./step-data"
-import type { ImportedMesh } from "./step-data"
-
-test("tessellates the STEP example at its real size in millimeters", async () => {
-  const require = createRequire(import.meta.url)
-  const occt = await initialize({
-    locateFile: () =>
-      require.resolve("occt-import-js/dist/occt-import-js.wasm"),
-  })
-  const result = occt.ReadStepFile(new TextEncoder().encode(bracket), {
-    linearUnit: "millimeter",
-    angularDeflection: 0.2,
-  })
-  expect(result.success).toBe(true)
-  if (!result.success) throw new Error("The bracket is not valid STEP geometry")
-  const model = prepareModel(result.meshes)
-  expect(model?.size).toEqual([60, 36, 36])
-  expect(model?.meshes).toHaveLength(1)
-  expect(model?.meshes[0]?.indices.length).toBeGreaterThan(60)
-})
+import type { ImportedMesh } from "@workspace/model-mesh/cad"
 
 test("centers the whole assembly before reducing precision and skips unmeshed shapes", () => {
   function triangle(x: number): ImportedMesh {

@@ -15,3 +15,5 @@ Välj **Mät** och markera två punkter på den synliga delen av modellen för a
 Ställ in vinkel och zoomnivå och välj **Spara PNG**. Bilden visar modellen som den ser ut i visaren och tar med en eventuell slutförd mätning och dess värde. Använd bilden för att visa en konstruktionsdetalj vid en granskning, i ett offertunderlag eller i en monteringsanvisning.
 
 - [DXF-visare](../dxf-viewer/)
+
+Använd [STEP till STL-konverteraren](../step-to-stl-converter/) för att skapa en binär STL-fil med koordinater i millimeter för ditt slicerprogram.

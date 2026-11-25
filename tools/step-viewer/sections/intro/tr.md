@@ -15,3 +15,5 @@ Modeli döndürmek için sürükleyin. Yakınlaştırıp uzaklaştırmak için f
 İstediğiniz açıyı ve yakınlaştırma düzeyini ayarlayıp **PNG olarak kaydet** düğmesini seçin. İndirilen görsel, modeli görüntüleyicideki haliyle gösterir ve tamamlanmış ölçümü değeriyle birlikte içerir. Görseli bir tasarım incelemesinde, fiyat teklifinde veya montaj notunda paylaşabilirsiniz.
 
 - [DXF Görüntüleyici](../dxf-viewer/)
+
+Dilimleme yazılımı için koordinatları milimetre cinsinden olan ikili bir STL dosyası oluşturmak üzere [STEP’ten STL’ye Dönüştürücü](../step-to-stl-converter/) aracını kullanın.

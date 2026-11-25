@@ -15,3 +15,5 @@ Velg **Mål avstand** og deretter to punkter på den synlige modellen for å se 
 Velg ønsket vinkel og zoomnivå, og klikk på **Lagre som PNG**. Skjermbildet viser modellen slik den ser ut i viseren, med eventuell ferdig måling og måleverdi. Bruk bildet til å dele en konstruksjonsdetalj i en gjennomgang, et tilbud eller et monteringsnotat.
 
 - [DXF-viser](../dxf-viewer/)
+
+Bruk [STEP til STL-konvertereren](../step-to-stl-converter/) til å lage en binær STL-fil med koordinater i millimeter for slicerprogrammet.

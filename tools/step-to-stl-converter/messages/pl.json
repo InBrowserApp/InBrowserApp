@@ -1,0 +1,4 @@
+{
+  "failed": "Nie udało się przekonwertować pliku. Otwórz model STEP lub STP zawierający powierzchnie 3D.",
+  "unitHint": "Podczas importowania tego pliku STL wybierz milimetry. STL zapisuje współrzędne bez jednostki miary."
+}

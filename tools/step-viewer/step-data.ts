@@ -1,3 +1,5 @@
+import type { ImportedMesh } from "@workspace/model-mesh/cad"
+
 export type Triple = [number, number, number]
 
 export type StepMesh = {
@@ -9,13 +11,6 @@ export type StepMesh = {
 }
 
 export type StepModel = { size: Triple; meshes: StepMesh[] }
-
-export type ImportedMesh = {
-  attributes: { position: { array: number[] }; normal?: { array: number[] } }
-  index: { array: number[] }
-  color?: Triple
-  brep_faces: { first: number; last: number; color: Triple | null }[]
-}
 
 export function prepareModel(input: ImportedMesh[]): StepModel | null {
   const meshes = input.filter((mesh) => mesh.index.array.length > 0)
