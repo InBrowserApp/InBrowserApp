@@ -1,0 +1,18 @@
+{
+  "open": "MusicXML dosyası aç",
+  "replace": "Dosyayı değiştir",
+  "clear": "Partisyonu kapat",
+  "reader": "MusicXML Görüntüleyici",
+  "privacy": "Dosyanız bu tarayıcıda kalır.",
+  "focus": "Odak modunu aç",
+  "exitFocus": "Odak modundan çık",
+  "releaseFile": "MusicXML dosyasını açmak için bırakın",
+  "dropHint": "Bir dosya seçin veya buraya sürükleyin.",
+  "example": "Bir örnek deneyin",
+  "loading": "Partisyon açılıyor…",
+  "preview": "Nota önizlemesi",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "resetZoom": "Yakınlaştırmayı sıfırla",
+  "invalidScore": "Partisyon görüntülenemedi. Parti bazlı (partwise) MusicXML olarak dışa aktarılmış bir .musicxml, .xml veya .mxl dosyası seçin."
+}

@@ -1,0 +1,18 @@
+{
+  "open": "MusicXML-Datei öffnen",
+  "replace": "Datei wechseln",
+  "clear": "Partitur schließen",
+  "reader": "MusicXML-Betrachter",
+  "privacy": "Deine Datei bleibt in diesem Browser.",
+  "focus": "Fokusmodus aktivieren",
+  "exitFocus": "Fokusmodus beenden",
+  "releaseFile": "MusicXML-Datei zum Öffnen loslassen",
+  "dropHint": "Wähle eine Datei aus oder ziehe sie hierher.",
+  "example": "Beispiel ausprobieren",
+  "loading": "Partitur wird geöffnet…",
+  "preview": "Notenvorschau",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "resetZoom": "Zoom zurücksetzen",
+  "invalidScore": "Diese Partitur ließ sich nicht anzeigen. Wähle eine .musicxml-, .xml- oder .mxl-Datei, die als nach Stimmen gegliederte MusicXML-Partitur (Partwise) exportiert wurde."
+}

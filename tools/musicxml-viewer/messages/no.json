@@ -1,0 +1,18 @@
+{
+  "open": "Åpne MusicXML-fil",
+  "replace": "Bytt fil",
+  "clear": "Lukk partituret",
+  "reader": "MusicXML-viser",
+  "privacy": "Filen din blir i denne nettleseren.",
+  "focus": "Aktiver fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "releaseFile": "Slipp MusicXML-filen for å åpne den",
+  "dropHint": "Velg en fil eller dra den hit.",
+  "example": "Prøv et eksempel",
+  "loading": "Åpner partituret…",
+  "preview": "Forhåndsvisning av notene",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "resetZoom": "Tilbakestill zoom",
+  "invalidScore": "Partituret kunne ikke vises. Velg en .musicxml-, .xml- eller .mxl-fil som er eksportert med stemmene hver for seg (partwise)."
+}

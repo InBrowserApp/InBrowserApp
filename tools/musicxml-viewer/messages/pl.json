@@ -1,0 +1,18 @@
+{
+  "open": "Otwórz plik MusicXML",
+  "replace": "Zmień plik",
+  "clear": "Zamknij partyturę",
+  "reader": "Przeglądarka MusicXML",
+  "privacy": "Plik pozostaje w tej przeglądarce.",
+  "focus": "Włącz tryb skupienia",
+  "exitFocus": "Wyłącz tryb skupienia",
+  "releaseFile": "Upuść plik MusicXML, aby go otworzyć",
+  "dropHint": "Wybierz plik lub przeciągnij go tutaj.",
+  "example": "Otwórz przykład",
+  "loading": "Otwieranie partytury…",
+  "preview": "Podgląd zapisu nutowego",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "resetZoom": "Przywróć domyślne powiększenie",
+  "invalidScore": "Nie udało się wyświetlić partytury. Wybierz plik .musicxml, .xml lub .mxl wyeksportowany jako MusicXML z podziałem na partie (score-partwise)."
+}

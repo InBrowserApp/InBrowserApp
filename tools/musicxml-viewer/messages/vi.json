@@ -1,0 +1,18 @@
+{
+  "open": "Mở tệp MusicXML",
+  "replace": "Đổi tệp",
+  "clear": "Đóng bản nhạc",
+  "reader": "Trình xem MusicXML",
+  "privacy": "Tệp của bạn được giữ trong trình duyệt này.",
+  "focus": "Bật chế độ tập trung",
+  "exitFocus": "Thoát chế độ tập trung",
+  "releaseFile": "Thả tệp MusicXML để mở",
+  "dropHint": "Chọn tệp hoặc kéo tệp vào đây.",
+  "example": "Thử ví dụ",
+  "loading": "Đang mở bản nhạc…",
+  "preview": "Xem trước bản nhạc",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "resetZoom": "Đặt lại mức thu phóng",
+  "invalidScore": "Không thể hiển thị bản nhạc này. Hãy chọn tệp .musicxml, .xml hoặc .mxl được xuất dưới dạng bản nhạc MusicXML theo từng bè (partwise)."
+}

@@ -22726,6 +22726,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "musicxml-viewer",
+    language: "ar",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "de",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "en",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "es",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "fr",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "he",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "hi",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "id",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "it",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "ja",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "ko",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "ms",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "nl",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "no",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "pl",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "pt",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "ru",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "sv",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "th",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "tr",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "vi",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "musicxml-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "my-ip-address",
     language: "ar",
   },

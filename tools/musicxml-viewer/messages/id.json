@@ -1,0 +1,18 @@
+{
+  "open": "Buka file MusicXML",
+  "replace": "Ganti file",
+  "clear": "Tutup partitur",
+  "reader": "Penampil MusicXML",
+  "privacy": "File Anda tetap di browser ini.",
+  "focus": "Masuk ke mode fokus",
+  "exitFocus": "Keluar dari mode fokus",
+  "releaseFile": "Lepas file MusicXML untuk membukanya",
+  "dropHint": "Pilih file atau seret ke sini.",
+  "example": "Coba contoh",
+  "loading": "Membuka partitur…",
+  "preview": "Pratinjau partitur",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "resetZoom": "Atur ulang perbesaran",
+  "invalidScore": "Partitur ini tidak dapat ditampilkan. Pilih file .musicxml, .xml, atau .mxl yang diekspor dalam format MusicXML partwise."
+}

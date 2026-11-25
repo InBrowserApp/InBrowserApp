@@ -1,0 +1,18 @@
+{
+  "open": "פתיחת קובץ MusicXML",
+  "replace": "החלפת קובץ",
+  "clear": "סגירת התווים",
+  "reader": "מציג MusicXML",
+  "privacy": "הקובץ נשאר בדפדפן.",
+  "focus": "מעבר למצב מיקוד",
+  "exitFocus": "יציאה ממצב מיקוד",
+  "releaseFile": "שחררו את קובץ ה־MusicXML כדי לפתוח אותו",
+  "dropHint": "בחרו קובץ או גררו אותו לכאן.",
+  "example": "נסו דוגמה",
+  "loading": "פותחים את התווים…",
+  "preview": "תצוגה מקדימה של התווים",
+  "zoomIn": "הגדלה",
+  "zoomOut": "הקטנה",
+  "resetZoom": "איפוס גודל התצוגה",
+  "invalidScore": "לא ניתן להציג את התווים. בחרו קובץ ‎.musicxml,‏ ‎.xml או ‎.mxl שיוצא כ־MusicXML במבנה לפי תפקידים (partwise)."
+}

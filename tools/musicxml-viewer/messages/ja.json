@@ -1,0 +1,18 @@
+{
+  "open": "MusicXML ファイルを開く",
+  "replace": "ファイルを変更",
+  "clear": "楽譜を閉じる",
+  "reader": "MusicXML ビューアー",
+  "privacy": "ファイルはこのブラウザー内に保持されます。",
+  "focus": "集中モードにする",
+  "exitFocus": "集中モードを終了",
+  "releaseFile": "MusicXML ファイルをドロップして開く",
+  "dropHint": "ファイルを選択するか、ここにドラッグしてください。",
+  "example": "サンプルを試す",
+  "loading": "楽譜を開いています…",
+  "preview": "楽譜のプレビュー",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "resetZoom": "ズームをリセット",
+  "invalidScore": "この楽譜を表示できませんでした。パート単位（partwise）の MusicXML 楽譜として書き出された .musicxml、.xml、または .mxl ファイルを選択してください。"
+}

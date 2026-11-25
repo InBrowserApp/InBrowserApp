@@ -254,6 +254,7 @@
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
+    "@tool/musicxml-viewer": "workspace:*",
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/nft-metadata-batch-checker": "workspace:*",

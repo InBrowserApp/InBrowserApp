@@ -1,0 +1,18 @@
+{
+  "open": "MusicXML 파일 열기",
+  "replace": "파일 변경",
+  "clear": "악보 닫기",
+  "reader": "MusicXML 뷰어",
+  "privacy": "파일은 이 브라우저에 그대로 유지됩니다.",
+  "focus": "집중 모드 시작",
+  "exitFocus": "집중 모드 종료",
+  "releaseFile": "MusicXML 파일을 놓아 열기",
+  "dropHint": "파일을 선택하거나 여기로 끌어오세요.",
+  "example": "예제 사용해 보기",
+  "loading": "악보를 여는 중…",
+  "preview": "악보 미리보기",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "resetZoom": "배율 초기화",
+  "invalidScore": "이 악보를 표시할 수 없습니다. 파트별(partwise) MusicXML 악보로 내보낸 .musicxml, .xml 또는 .mxl 파일을 선택하세요."
+}

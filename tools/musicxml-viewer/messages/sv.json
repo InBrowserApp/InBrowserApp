@@ -1,0 +1,18 @@
+{
+  "open": "Öppna MusicXML-fil",
+  "replace": "Byt fil",
+  "clear": "Stäng partituret",
+  "reader": "MusicXML-visare",
+  "privacy": "Filen stannar i den här webbläsaren.",
+  "focus": "Aktivera fokusläge",
+  "exitFocus": "Avsluta fokusläge",
+  "releaseFile": "Släpp MusicXML-filen för att öppna den",
+  "dropHint": "Välj en fil eller dra den hit.",
+  "example": "Prova ett exempel",
+  "loading": "Öppnar partituret…",
+  "preview": "Förhandsvisning av noterna",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "resetZoom": "Återställ zoom",
+  "invalidScore": "Partituret kunde inte visas. Välj en .musicxml-, .xml- eller .mxl-fil som exporterats med stämmorna var för sig (partwise)."
+}

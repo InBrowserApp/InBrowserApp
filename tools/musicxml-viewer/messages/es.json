@@ -1,0 +1,18 @@
+{
+  "open": "Abrir archivo MusicXML",
+  "replace": "Cambiar archivo",
+  "clear": "Cerrar partitura",
+  "reader": "Visor de partituras MusicXML",
+  "privacy": "El archivo se queda en este navegador.",
+  "focus": "Activar el modo de lectura",
+  "exitFocus": "Salir del modo de lectura",
+  "releaseFile": "Suelta el archivo MusicXML para abrirlo",
+  "dropHint": "Elige un archivo o arrástralo aquí.",
+  "example": "Probar un ejemplo",
+  "loading": "Abriendo partitura…",
+  "preview": "Vista previa de la partitura",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "resetZoom": "Restablecer el zoom",
+  "invalidScore": "No se pudo mostrar la partitura. Elige un archivo .musicxml, .xml o .mxl exportado con la estructura por partes de MusicXML (partwise)."
+}

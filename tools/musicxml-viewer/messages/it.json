@@ -1,0 +1,18 @@
+{
+  "open": "Apri file MusicXML",
+  "replace": "Cambia file",
+  "clear": "Chiudi spartito",
+  "reader": "Visualizzatore di spartiti MusicXML",
+  "privacy": "Il file resta in questo browser.",
+  "focus": "Attiva la lettura senza distrazioni",
+  "exitFocus": "Esci dalla lettura senza distrazioni",
+  "releaseFile": "Rilascia il file MusicXML per aprirlo",
+  "dropHint": "Scegli un file o trascinalo qui.",
+  "example": "Prova un esempio",
+  "loading": "Apertura dello spartito…",
+  "preview": "Anteprima dello spartito",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "resetZoom": "Ripristina lo zoom",
+  "invalidScore": "Impossibile mostrare lo spartito. Scegli un file .musicxml, .xml o .mxl esportato in formato MusicXML organizzato per parti (partwise)."
+}

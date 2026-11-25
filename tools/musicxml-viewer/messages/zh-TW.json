@@ -1,0 +1,18 @@
+{
+  "open": "開啟 MusicXML 檔案",
+  "replace": "更換檔案",
+  "clear": "關閉樂譜",
+  "reader": "MusicXML 檢視器",
+  "privacy": "檔案會保留在此瀏覽器中。",
+  "focus": "進入專注模式",
+  "exitFocus": "退出專注模式",
+  "releaseFile": "放開以開啟 MusicXML 檔案",
+  "dropHint": "選擇檔案或將它拖曳至此。",
+  "example": "試用範例",
+  "loading": "正在開啟樂譜…",
+  "preview": "樂譜預覽",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "resetZoom": "重設縮放",
+  "invalidScore": "無法顯示此樂譜。請選擇以分譜式 MusicXML 格式匯出的 .musicxml、.xml 或 .mxl 檔案。"
+}
