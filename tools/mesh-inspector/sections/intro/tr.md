@@ -6,12 +6,12 @@
 
 STL ve OBJ koordinatları ortak bir fiziksel ölçü birimi tanımlamaz. **Koordinat birimi** olarak modeli dışa aktarırken kullandığınız birimi seçin. Alan kare, hacim küp birimlerle gösterilir. Birim seçtiğinizde kayıtlı koordinatlara birim atanır ve ölçek değişmez. Örnekteki braketin koordinatları milimetre cinsindense hacmi 16.016 mm³ olur.
 
-Ağ topoloji denetimlerini geçerse araç yüzlerin yönünden hacmi hesaplar. Kendiyle kesişen yüzeyler, yanlış yönlendirilmiş kabuklar veya birbiriyle örtüşen kabuklar bu tahmini etkileyebilir. Önemli sonuçları özgün katı modelle karşılaştırın.
+Yüzey alanı, dosyadaki üçgenlerin alanları toplanarak hesaplanır. Yinelenen yüzlerin alanı her kopya için ayrı ayrı sayılır. Ağ topoloji denetimlerini geçerse araç yüzlerin yönünden hacmi hesaplar. Kendiyle kesişen yüzeyler, yanlış yönlendirilmiş kabuklar veya birbiriyle örtüşen kabuklar bu tahmini etkileyebilir. Önemli sonuçları özgün katı modelle karşılaştırın.
 
 ## Topoloji sonuçlarını anlama
 
 - Bir **sınır kenarı** tek bir üçgene aittir. Bu kenarlar, deliklerin çevresi de dahil olmak üzere ağın açık sınırlarını gösterir.
-- Bir **manifold olmayan kenar** ikiden fazla üçgene aittir. **Manifold olmayan köşede** birbirine bağlı olmayan yüz grupları aynı köşede buluşur.
+- Bir **manifold olmayan kenar** ikiden fazla üçgene aittir. **Manifold olmayan köşe**, böyle bir kenarın ucunda yer alır ya da birbirine bağlı olmayan yüz gruplarının birleştiği köşedir.
 - **Tutarsız yüz yönü**, bitişik iki üçgenin ortak kenarını aynı yönde dolaşmasıdır. Doğru yönlendirilmiş komşu yüzler bu kenarı zıt yönlerde dolaşır.
 - **Sıfır alanlı yüzlerin** alanı sıfırdır. **Yinelenen yüzler** aynı üçgenin birden fazla kez bulunduğunu gösterir.
 

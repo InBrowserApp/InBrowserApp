@@ -6,12 +6,12 @@ Wybierz **Otwórz plik** lub upuść w narzędziu model `.stl` lub `.obj`. Narz�
 
 Formaty STL i OBJ nie narzucają wspólnej fizycznej jednostki współrzędnych. W polu **Jednostka współrzędnych** wybierz jednostkę użytą podczas eksportu modelu. Pole powierzchni wyświetla się w jednostkach kwadratowych, a objętość w sześciennych. Wybór przypisuje jednostkę do zapisanych współrzędnych bez zmiany ich wartości. Przykładowy wspornik ma objętość 16 016 mm³, gdy jego współrzędne są wyrażone w milimetrach.
 
-Jeśli siatka przejdzie kontrolę topologii, narzędzie oblicza objętość na podstawie orientacji ścian. Powierzchnie przecinające same siebie oraz nieprawidłowo zorientowane lub nakładające się powłoki mogą nadal wpływać na oszacowanie. Porównaj ważne wyniki z oryginalnym modelem bryłowym.
+Pole powierzchni to suma pól wszystkich trójkątów z pliku. Powielone ściany liczą się ponownie. Jeśli siatka przejdzie kontrolę topologii, narzędzie oblicza objętość na podstawie orientacji ścian. Powierzchnie przecinające same siebie oraz nieprawidłowo zorientowane lub nakładające się powłoki mogą nadal wpływać na oszacowanie. Porównaj ważne wyniki z oryginalnym modelem bryłowym.
 
 ## Interpretowanie wyników kontroli topologii
 
 - **Krawędź brzegowa** należy do jednego trójkąta. Krawędzie brzegowe wyznaczają otwarte brzegi, między innymi wokół otworów.
-- **Krawędź non-manifold** należy do więcej niż dwóch trójkątów. W **wierzchołku non-manifold** spotykają się grupy ścian, które poza tym wierzchołkiem są od siebie oddzielone.
+- **Krawędź non-manifold** należy do więcej niż dwóch trójkątów. **Wierzchołek non-manifold** leży na takiej krawędzi lub łączy grupy ścian, które poza tym wierzchołkiem są od siebie oddzielone.
 - **Niespójna orientacja ścian** oznacza, że dwa trójkąty przechodzą wzdłuż wspólnej krawędzi w tym samym kierunku. Prawidłowo zorientowane sąsiednie ściany przechodzą wzdłuż niej w przeciwnych kierunkach.
 - **Zdegenerowane ściany** mają pole powierzchni równe zeru. **Powielone ściany** powtarzają ten sam trójkąt.
 

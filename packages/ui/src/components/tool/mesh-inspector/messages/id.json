@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Titik sudut nonmanifold",
   "inconsistentEdges": "Tepi dengan orientasi muka tidak konsisten",
   "degenerateFaces": "Muka degenerat",
-  "duplicateFaces": "Muka duplikat"
+  "duplicateFaces": "Muka duplikat",
+  "shellVolumeHint": "Volume setiap selubung ditambahkan atau dikurangkan sesuai orientasi mukanya."
 }

@@ -6,12 +6,12 @@ Cliquez sur **Ouvrir un fichier** ou déposez un modèle `.stl` ou `.obj` dans l
 
 Les coordonnées STL et OBJ ne définissent pas d’unité physique commune. Dans **Unité des coordonnées**, sélectionnez celle utilisée à l’export. L’aire s’exprime en unités carrées et le volume en unités cubes. Le choix de l’unité ajoute un libellé aux valeurs enregistrées en conservant leur échelle. Le support donné en exemple occupe un volume de 16 016 mm³ si ses coordonnées sont en millimètres.
 
-Si le maillage passe les vérifications de topologie, l’outil calcule le volume à partir de l’orientation des faces. Les surfaces qui se recoupent et les composantes mal orientées ou qui se chevauchent peuvent fausser cette estimation. Pour un résultat important, comparez la valeur au modèle solide d’origine.
+L’aire de surface est la somme des aires des triangles du fichier, y compris toutes les copies des faces en double. Si le maillage passe les vérifications de topologie, l’outil calcule le volume à partir de l’orientation des faces. Les surfaces qui se recoupent et les composantes mal orientées ou qui se chevauchent peuvent fausser cette estimation. Pour un résultat important, comparez la valeur au modèle solide d’origine.
 
 ## Comprendre les résultats de topologie
 
 - Une **arête de bord** appartient à un seul triangle. Ces arêtes délimitent les bords ouverts, y compris les trous.
-- Une **arête non-manifold** appartient à plus de deux triangles. Un **sommet non-manifold** est le point de rencontre de groupes de faces disjoints.
+- Une **arête non-manifold** appartient à plus de deux triangles. Un **sommet non-manifold** est l’extrémité d’une de ces arêtes ou le point de rencontre de groupes de faces disjoints.
 - Il y a **orientation incohérente** lorsque deux triangles parcourent leur arête commune dans le même sens. Deux faces voisines bien orientées la parcourent en sens opposés.
 - Les **faces dégénérées** ont une aire nulle. Les **faces en double** répètent le même triangle.
 

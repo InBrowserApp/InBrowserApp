@@ -3,7 +3,7 @@
   "drop": "Drop an STL or OBJ file here",
   "example": "Try an example",
   "privacy": "Your file stays on this device.",
-  "checking": "Checking mesh…",
+  "checking": "Checking mesh\u2026",
   "failed": "Could not read a triangle mesh. Open a valid STL or an OBJ with faces.",
   "result": "Mesh inspection",
   "previous": "Previous inspection",
@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Non-manifold vertices",
   "inconsistentEdges": "Edges with inconsistent winding",
   "degenerateFaces": "Degenerate faces",
-  "duplicateFaces": "Duplicate faces"
+  "duplicateFaces": "Duplicate faces",
+  "shellVolumeHint": "Shell volumes add or subtract according to their face winding."
 }

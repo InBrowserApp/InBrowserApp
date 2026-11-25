@@ -28,5 +28,6 @@
   "nonManifoldVertices": "非流形顶点",
   "inconsistentEdges": "绕序不一致的边",
   "degenerateFaces": "退化面",
-  "duplicateFaces": "重复面"
+  "duplicateFaces": "重复面",
+  "shellVolumeHint": "壳体体积根据面绕序相加或相减。"
 }

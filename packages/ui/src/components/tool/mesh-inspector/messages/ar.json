@@ -28,5 +28,6 @@
   "nonManifoldVertices": "رؤوس غير متشعّبية",
   "inconsistentEdges": "حواف باتجاهات أوجه غير متسقة",
   "degenerateFaces": "أوجه منعدمة المساحة",
-  "duplicateFaces": "أوجه مكررة"
+  "duplicateFaces": "أوجه مكررة",
+  "shellVolumeHint": "يُضاف حجم كل غلاف أو يُطرح بحسب اتجاه أوجهه."
 }

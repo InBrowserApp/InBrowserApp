@@ -6,12 +6,12 @@ Pulsa **Abrir archivo** o suelta un modelo `.stl` u `.obj` en el comprobador. La
 
 Las coordenadas de un STL o un OBJ no indican una unidad física común. En **Unidad de coordenadas**, selecciona la unidad que usaste al exportar el modelo. El área se expresa en unidades cuadradas y el volumen en unidades cúbicas. La opción asigna una unidad a las coordenadas guardadas y conserva su escala. El soporte del ejemplo tiene un volumen de 16 016 mm³ cuando sus coordenadas están en milímetros.
 
-Si la malla supera las comprobaciones de topología, la herramienta calcula el volumen a partir de la orientación de las caras. Las superficies que se cortan a sí mismas y los componentes con una orientación incorrecta o que se solapan pueden afectar a la estimación. Si el resultado es importante, compáralo con el modelo sólido original.
+El área superficial suma las áreas de los triángulos del archivo, incluidas todas las copias de las caras duplicadas. Si la malla supera las comprobaciones de topología, la herramienta calcula el volumen a partir de la orientación de las caras. Las superficies que se cortan a sí mismas y los componentes con una orientación incorrecta o que se solapan pueden afectar a la estimación. Si el resultado es importante, compáralo con el modelo sólido original.
 
 ## Interpretar los resultados de topología
 
 - Una **arista de contorno** pertenece a un único triángulo. Estas aristas delimitan los bordes abiertos, incluidos los agujeros.
-- Una **arista no manifold** pertenece a más de dos triángulos. En un **vértice no manifold** se juntan grupos de caras desconectados entre sí.
+- Una **arista no manifold** pertenece a más de dos triángulos. Un **vértice no manifold** es el extremo de una de esas aristas o el punto donde se juntan grupos de caras desconectados entre sí.
 - Hay **orientación incoherente** cuando dos triángulos recorren en el mismo sentido la arista que comparten. Las caras vecinas orientadas correctamente recorren la arista en sentidos opuestos.
 - Las **caras degeneradas** tienen área cero. Las **caras duplicadas** repiten el mismo triángulo.
 

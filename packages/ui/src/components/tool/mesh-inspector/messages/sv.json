@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Icke-manifoldhörn",
   "inconsistentEdges": "Kanter med inkonsekvent ytorientering",
   "degenerateFaces": "Degenererade ytor",
-  "duplicateFaces": "Dubbla ytor"
+  "duplicateFaces": "Dubbla ytor",
+  "shellVolumeHint": "Skalens volymer adderas eller subtraheras beroende på ytornas orientering."
 }

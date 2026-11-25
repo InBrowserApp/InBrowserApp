@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { Alert, AlertDescription } from "../../ui/alert"
 import { Button } from "../../ui/button"
 import {
@@ -12,12 +12,9 @@ import { Spinner } from "../../ui/spinner"
 import { ArrowLeftRight, Box, Folder } from "../../../icons"
 import { cn } from "../../../lib/utils"
 import { DocumentDownload } from "../document-download"
-import { exampleFile } from "../model-viewer/load-model"
+import { useMeshWorker } from "../use-mesh-worker"
 import type { MeshFormat } from "@workspace/model-mesh/mesh-file"
 import type { MeshConverterMessages } from "./messages"
-
-type Result = { data: Blob; name: string; source: string }
-type Conversion = { worker?: Worker }
 
 export default function MeshConverter({
   format,
@@ -27,51 +24,21 @@ export default function MeshConverter({
   messages: MeshConverterMessages
 }) {
   const input = useRef<HTMLInputElement>(null)
-  const active = useRef<Conversion>(null)
-  const [status, setStatus] = useState<"converting" | "failed">()
-  const [result, setResult] = useState<Result>()
   const [dragging, setDragging] = useState(false)
-  const target = format === "stl" ? "obj" : "stl"
-
-  useEffect(
-    () => () => {
-      active.current?.worker?.terminate()
-      active.current = null
-    },
-    []
-  )
-
-  async function convert(supplied?: File) {
-    active.current?.worker?.terminate()
-    const request: Conversion = {}
-    active.current = request
-    setStatus("converting")
-
-    function finish(output?: Result) {
-      if (active.current !== request) return
-      request.worker?.terminate()
-      active.current = null
-      if (output) setResult(output)
-      setStatus(output ? undefined : "failed")
-    }
-
-    try {
-      const file = supplied ?? (await exampleFile(format))
-      if (active.current !== request) return
-      const job = new Worker(new URL("./convert.worker.ts", import.meta.url), {
+  const {
+    result,
+    status,
+    run: convert,
+  } = useMeshWorker<Blob>(
+    format,
+    () =>
+      new Worker(new URL("./convert.worker.ts", import.meta.url), {
         type: "module",
-      })
-      request.worker = job
-      job.onmessage = ({ data }: MessageEvent<Blob | null>) => {
-        const name = `${file.name.slice(0, -4) || "model"}.${target}`
-        finish(data ? { data, name, source: file.name } : undefined)
-      }
-      job.onerror = () => finish()
-      job.postMessage({ file, format })
-    } catch {
-      finish()
-    }
-  }
+      }),
+    (file) => ({ file, format })
+  )
+  const target = format === "stl" ? "obj" : "stl"
+  const outputName = `${result?.name.slice(0, -4) || "model"}.${target}`
 
   const choose = (
     <Button
@@ -153,7 +120,7 @@ export default function MeshConverter({
             {m.example}
           </Button>
         </div>
-        {status === "converting" && (
+        {status === "working" && (
           <p
             role="status"
             className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -164,7 +131,7 @@ export default function MeshConverter({
         )}
       </Empty>
       <p className="sr-only" role="status">
-        {result && !status && `${m.output} ${result.name}`}
+        {result && !status && `${m.output} ${outputName}`}
       </p>
       {result && (
         <div className="flex flex-wrap items-center gap-3 rounded-lg border bg-background p-4">
@@ -177,25 +144,21 @@ export default function MeshConverter({
               <p className="text-xs text-muted-foreground">
                 {status ? m.previousOutput : m.output}
               </p>
-              <p
-                dir="auto"
-                className="truncate font-medium"
-                title={result.name}
-              >
-                {result.name}
+              <p dir="auto" className="truncate font-medium" title={outputName}>
+                {outputName}
               </p>
               <p
                 dir="auto"
                 className="truncate text-xs text-muted-foreground"
-                title={result.source}
+                title={result.name}
               >
-                {result.source}
+                {result.name}
               </p>
             </div>
           </div>
           <DocumentDownload
             file={result.data}
-            filename={result.name}
+            filename={outputName}
             label={m.download.replace("{format}", target.toUpperCase())}
           />
         </div>

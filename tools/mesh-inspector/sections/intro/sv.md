@@ -6,12 +6,12 @@ Välj **Öppna fil** eller dra en `.stl`- eller `.obj`-modell till verktyget. De
 
 STL och OBJ anger ingen gemensam fysisk måttenhet för koordinaterna. Välj den enhet du använde vid exporten under **Koordinatenhet**. Ytarean anges i kvadratenheter och volymen i kubikenheter. Valet anger en enhet för de lagrade koordinaterna, vars värden förblir desamma. Beslaget i exemplet har volymen 16 016 mm³ när koordinaterna anges i millimeter.
 
-Om nätet klarar topologikontrollerna beräknar verktyget volymen utifrån ytornas orientering. Ytor som korsar sig själva samt felvända eller överlappande skal kan fortfarande påverka uppskattningen. Jämför viktiga resultat med den ursprungliga solidmodellen.
+Ytarean är summan av areorna för alla trianglar i filen. Dubbla ytor räknas därför med igen. Om nätet klarar topologikontrollerna beräknar verktyget volymen utifrån ytornas orientering. Ytor som korsar sig själva samt felvända eller överlappande skal kan fortfarande påverka uppskattningen. Jämför viktiga resultat med den ursprungliga solidmodellen.
 
 ## Förstå topologikontrollerna
 
 - En **randkant** tillhör en enda triangel. Randkanterna följer öppna gränser, till exempel runt hål.
-- En **icke-manifoldkant** tillhör fler än två trianglar. I ett **icke-manifoldhörn** möts ytor från grupper som i övrigt inte hänger ihop.
+- En **icke-manifoldkant** tillhör fler än två trianglar. Ett **icke-manifoldhörn** ligger vid en sådan kant eller förenar grupper av ytor som i övrigt inte hänger ihop.
 - Vid **inkonsekvent ytorientering** går två trianglar längs sin gemensamma kant i samma riktning. Korrekt orienterade grannytor går längs kanten i motsatta riktningar.
 - **Degenererade ytor** har arean noll. **Dubbla ytor** upprepar samma triangel.
 

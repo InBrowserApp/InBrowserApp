@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Ikke-manifolde hjørnepunkter",
   "inconsistentEdges": "Kanter med inkonsekvent flateorientering",
   "degenerateFaces": "Degenererte flater",
-  "duplicateFaces": "Duplikate flater"
+  "duplicateFaces": "Duplikate flater",
+  "shellVolumeHint": "Volumet til hvert skall legges til eller trekkes fra, avhengig av hvordan flatene er orientert."
 }

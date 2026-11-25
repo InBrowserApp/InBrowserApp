@@ -6,12 +6,12 @@ Velg **Åpne fil**, eller dra en `.stl`- eller `.obj`-modell inn i verktøyet. D
 
 STL og OBJ fastsetter ingen felles fysisk måleenhet for koordinatene. Under **Koordinatenhet** velger du enheten du brukte da du eksporterte modellen. Arealet vises i kvadratenheter og volumet i kubikkenheter. Valget angir hvilken enhet de lagrede koordinatene har. Verdiene endres ikke. Braketten i eksemplet har et volum på 16 016 mm³ når koordinatene angir millimeter.
 
-Hvis nettet består topologikontrollene, beregner verktøyet volumet ut fra orienteringen til flatene. Flater som skjærer gjennom seg selv, og skall som er feilvendte eller overlapper, kan fortsatt påvirke beregningen. Sammenlign viktige resultater med den opprinnelige solidmodellen.
+Overflatearealet er summen av arealene til alle trekantene i filen. Duplikate flater blir derfor telt med på nytt. Hvis nettet består topologikontrollene, beregner verktøyet volumet ut fra orienteringen til flatene. Flater som skjærer gjennom seg selv, og skall som er feilvendte eller overlapper, kan fortsatt påvirke beregningen. Sammenlign viktige resultater med den opprinnelige solidmodellen.
 
 ## Forstå topologiresultatene
 
 - En **randkant** tilhører én trekant. Randkanter følger de åpne kantene i nettet, for eksempel rundt hull.
-- En **ikke-manifold kant** tilhører mer enn to trekanter. I et **ikke-manifold hjørnepunkt** møtes grupper av flater som ellers ikke henger sammen.
+- En **ikke-manifold kant** tilhører mer enn to trekanter. Et **ikke-manifold hjørnepunkt** ligger på en slik kant eller forbinder grupper av flater som ellers ikke henger sammen.
 - Ved **inkonsekvent flateorientering** følger to trekanter den felles kanten i samme retning. Riktig orienterte naboflater følger kanten i motsatt retning av hverandre.
 - **Degenererte flater** har et areal på null. **Duplikate flater** gjentar den samme trekanten.
 

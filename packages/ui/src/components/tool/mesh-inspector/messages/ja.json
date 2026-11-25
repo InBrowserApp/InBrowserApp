@@ -28,5 +28,6 @@
   "nonManifoldVertices": "非多様体頂点",
   "inconsistentEdges": "頂点順序が不一致の辺",
   "degenerateFaces": "縮退面",
-  "duplicateFaces": "重複面"
+  "duplicateFaces": "重複面",
+  "shellVolumeHint": "シェルの体積は面の頂点順序に応じて加算または減算されます。"
 }

@@ -28,5 +28,6 @@
   "nonManifoldVertices": "नॉन-मैनिफ़ोल्ड वर्टेक्स",
   "inconsistentEdges": "असंगत वाइंडिंग वाले किनारे",
   "degenerateFaces": "शून्य क्षेत्रफल वाले फ़ेस",
-  "duplicateFaces": "डुप्लिकेट फ़ेस"
+  "duplicateFaces": "डुप्लिकेट फ़ेस",
+  "shellVolumeHint": "फ़ेस की वाइंडिंग तय करती है कि शेल का आयतन कुल में जुड़ेगा या उसमें से घटेगा।"
 }

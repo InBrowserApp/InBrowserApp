@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Đỉnh không đa tạp",
   "inconsistentEdges": "Cạnh có hướng đỉnh không nhất quán",
   "degenerateFaces": "Mặt suy biến",
-  "duplicateFaces": "Mặt trùng lặp"
+  "duplicateFaces": "Mặt trùng lặp",
+  "shellVolumeHint": "Thể tích từng vỏ lưới được cộng hoặc trừ tùy theo hướng của các mặt."
 }

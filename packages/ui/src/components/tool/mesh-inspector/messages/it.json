@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Vertici non manifold",
   "inconsistentEdges": "Spigoli con orientamento incoerente",
   "degenerateFaces": "Facce degeneri",
-  "duplicateFaces": "Facce duplicate"
+  "duplicateFaces": "Facce duplicate",
+  "shellVolumeHint": "I volumi delle componenti si sommano o si sottraggono in base all’orientamento delle facce."
 }

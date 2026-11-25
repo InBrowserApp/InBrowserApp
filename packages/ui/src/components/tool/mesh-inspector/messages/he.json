@@ -28,5 +28,6 @@
   "nonManifoldVertices": "קודקודים לא מניפולדיים",
   "inconsistentEdges": "צלעות עם סדר קודקודים לא עקבי",
   "degenerateFaces": "פאות מנוונות",
-  "duplicateFaces": "פאות כפולות"
+  "duplicateFaces": "פאות כפולות",
+  "shellVolumeHint": "נפח כל מעטפת מתווסף או מופחת לפי סדר הקודקודים בפאותיה."
 }

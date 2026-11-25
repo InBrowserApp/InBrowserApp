@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Non-manifold hoekpunten",
   "inconsistentEdges": "Randen met inconsistent georiënteerde vlakken",
   "degenerateFaces": "Gedegenereerde vlakken",
-  "duplicateFaces": "Dubbele vlakken"
+  "duplicateFaces": "Dubbele vlakken",
+  "shellVolumeHint": "Afhankelijk van de oriëntatie van de vlakken worden de volumes van de schillen opgeteld of afgetrokken."
 }

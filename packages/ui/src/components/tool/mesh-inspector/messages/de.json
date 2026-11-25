@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Nicht mannigfaltige Eckpunkte",
   "inconsistentEdges": "Kanten mit uneinheitlicher Flächenorientierung",
   "degenerateFaces": "Degenerierte Flächen",
-  "duplicateFaces": "Doppelte Flächen"
+  "duplicateFaces": "Doppelte Flächen",
+  "shellVolumeHint": "Je nach Orientierung ihrer Flächen werden die Volumenbeiträge der Schalen addiert oder abgezogen."
 }

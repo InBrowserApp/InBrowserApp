@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { ScanLine, Folder } from "../../../icons"
 import { cn } from "../../../lib/utils"
 import { Alert, AlertDescription } from "../../ui/alert"
@@ -11,7 +11,7 @@ import {
   EmptyTitle,
 } from "../../ui/empty"
 import { Spinner } from "../../ui/spinner"
-import { exampleFile } from "../model-viewer/load-model"
+import { useMeshWorker } from "../use-mesh-worker"
 import { InspectionReport } from "./report"
 import type { MeshReport } from "@workspace/model-mesh/inspect"
 import type { MeshInspectorMessages } from "./messages"
@@ -24,49 +24,18 @@ export default function MeshInspector({
   messages: MeshInspectorMessages
 }) {
   const picker = useRef<HTMLInputElement>(null)
-  const active = useRef<{ worker?: Worker } | null>(null)
-  const [status, setStatus] = useState<"checking" | "failed">()
-  const [result, setResult] = useState<{ name: string; report: MeshReport }>()
   const [dragging, setDragging] = useState(false)
-
-  useEffect(
-    () => () => {
-      active.current?.worker?.terminate()
-      active.current = null
-    },
-    []
+  const {
+    result,
+    status,
+    run: inspect,
+  } = useMeshWorker<MeshReport>(
+    "stl",
+    () =>
+      new Worker(new URL("./inspect.worker.ts", import.meta.url), {
+        type: "module",
+      })
   )
-
-  async function inspect(file?: File) {
-    active.current?.worker?.terminate()
-    const request: { worker?: Worker } = {}
-    active.current = request
-    setStatus("checking")
-    let name = ""
-    function finish(report: MeshReport | null) {
-      request.worker?.terminate()
-      if (active.current !== request) return
-      active.current = null
-      if (report) setResult({ name, report })
-      setStatus(report ? undefined : "failed")
-    }
-    try {
-      const input = file ?? (await exampleFile("stl"))
-      if (active.current !== request) return
-      name = input.name
-      const worker = new Worker(
-        new URL("./inspect.worker.ts", import.meta.url),
-        { type: "module" }
-      )
-      request.worker = worker
-      worker.onmessage = (event: MessageEvent<MeshReport | null>) =>
-        finish(event.data)
-      worker.onerror = () => finish(null)
-      worker.postMessage(input)
-    } catch {
-      finish(null)
-    }
-  }
 
   return (
     <section
@@ -141,7 +110,7 @@ export default function MeshInspector({
             {m.example}
           </Button>
         </div>
-        {status === "checking" && (
+        {status === "working" && (
           <p
             role="status"
             className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -153,7 +122,8 @@ export default function MeshInspector({
       </Empty>
       {result && (
         <InspectionReport
-          {...result}
+          name={result.name}
+          report={result.data}
           previous={Boolean(status)}
           lang={lang}
           messages={m}

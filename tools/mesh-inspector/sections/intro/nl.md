@@ -6,12 +6,12 @@ Kies **Bestand openen** of sleep een `.stl`- of `.obj`-model naar het hulpmiddel
 
 STL en OBJ leggen geen vaste fysieke eenheid voor de coördinaten vast. Kies bij **Eenheid van de coördinaten** de eenheid waarin je het model hebt geëxporteerd. De resultaten staan respectievelijk in vierkante en kubieke eenheden. De keuze geeft de opgeslagen coördinaten een eenheidslabel. De getallen zelf blijven gelijk. De voorbeeldbeugel heeft een volume van 16.016 mm³ als de coördinaten millimeters voorstellen.
 
-Als het net de topologiecontroles doorstaat, berekent de tool het volume op basis van de oriëntatie van de vlakken. Oppervlakken die zichzelf snijden en verkeerd georiënteerde of overlappende schillen kunnen die schatting nog beïnvloeden. Vergelijk belangrijke resultaten met het oorspronkelijke volumemodel.
+De oppervlakte is de som van de oppervlaktes van alle driehoeken in het bestand. Dubbele vlakken tellen opnieuw mee. Als het net de topologiecontroles doorstaat, berekent de tool het volume op basis van de oriëntatie van de vlakken. Oppervlakken die zichzelf snijden en verkeerd georiënteerde of overlappende schillen kunnen die schatting nog beïnvloeden. Vergelijk belangrijke resultaten met het oorspronkelijke volumemodel.
 
 ## De topologieresultaten begrijpen
 
 - Een **grensrand** hoort bij één driehoek. Grensranden volgen de open randen van het net, bijvoorbeeld rond gaten.
-- Een **non-manifold rand** wordt gedeeld door meer dan twee driehoeken. Bij een **non-manifold hoekpunt** komen groepen vlakken die onderling losstaan samen in hetzelfde hoekpunt.
+- Een **non-manifold rand** wordt gedeeld door meer dan twee driehoeken. Een **non-manifold hoekpunt** ligt aan zo'n rand of verbindt groepen vlakken die verder los van elkaar staan.
 - Bij **inconsistente oriëntatie** volgen twee driehoeken hun gedeelde rand in dezelfde richting. Correct georiënteerde aangrenzende vlakken volgen die rand in tegengestelde richtingen.
 - **Gedegenereerde vlakken** hebben geen oppervlakte. **Dubbele vlakken** herhalen dezelfde driehoek.
 

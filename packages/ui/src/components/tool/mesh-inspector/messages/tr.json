@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Manifold olmayan köşeler",
   "inconsistentEdges": "Yüz yönleri tutarsız kenarlar",
   "degenerateFaces": "Sıfır alanlı yüzler",
-  "duplicateFaces": "Yinelenen yüzler"
+  "duplicateFaces": "Yinelenen yüzler",
+  "shellVolumeHint": "Her kabuğun hacmi, yüzlerinin yönüne göre toplama eklenir veya toplamdan çıkarılır."
 }

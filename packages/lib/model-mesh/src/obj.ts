@@ -8,8 +8,8 @@ import { triangulateObj } from "./triangulate-obj"
 const emptyTexture =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jAtkAAAAASUVORK5CYII="
 
-export function parseObj(source: string) {
-  return new OBJLoader().parse(triangulateObj(source)) as Group & {
+export function parseObj(source: string, meshOnly = false) {
+  return new OBJLoader().parse(triangulateObj(source, meshOnly)) as Group & {
     materialLibraries: string[]
   }
 }

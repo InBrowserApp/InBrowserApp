@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Bucu bukan manifold",
   "inconsistentEdges": "Tepi dengan orientasi muka tidak konsisten",
   "degenerateFaces": "Muka berluas sifar",
-  "duplicateFaces": "Muka pendua"
+  "duplicateFaces": "Muka pendua",
+  "shellVolumeHint": "Isi padu setiap cangkerang ditambah atau ditolak mengikut orientasi mukanya."
 }

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Check, Info } from "../../../icons"
+import { Check, TriangleAlert } from "../../../icons"
 import { Badge } from "../../ui/badge"
 import {
   Select,
@@ -71,7 +71,7 @@ export function InspectionReport({
         </div>
         <Badge variant="outline" className="inline-flex max-w-full gap-1.5">
           {report.volume === null ? (
-            <Info aria-hidden="true" />
+            <TriangleAlert aria-hidden="true" />
           ) : (
             <Check aria-hidden="true" />
           )}
@@ -107,11 +107,15 @@ export function InspectionReport({
               <bdi>{format(report.volume, "³")}</bdi>
             )}
           </dd>
-          {report.volume === null && (
+          {report.volume === null ? (
             <dd className="mt-0.5 text-xs text-muted-foreground">
               {m.noVolume}
             </dd>
-          )}
+          ) : report.shells > 1 ? (
+            <dd className="mt-0.5 text-xs text-muted-foreground">
+              {m.shellVolumeHint}
+            </dd>
+          ) : null}
         </div>
         <div className="min-w-0 rounded-md bg-muted/55 p-3">
           <dt className="text-sm text-muted-foreground">{m.area}</dt>

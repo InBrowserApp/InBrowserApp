@@ -28,5 +28,6 @@
   "nonManifoldVertices": "비다양체 정점",
   "inconsistentEdges": "정점 순서가 일관되지 않은 모서리",
   "degenerateFaces": "퇴화 면",
-  "duplicateFaces": "중복 면"
+  "duplicateFaces": "중복 면",
+  "shellVolumeHint": "셸의 부피는 면의 정점 순서에 따라 더해지거나 빼집니다."
 }

@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Wierzchołki non-manifold",
   "inconsistentEdges": "Krawędzie o niespójnej orientacji ścian",
   "degenerateFaces": "Zdegenerowane ściany",
-  "duplicateFaces": "Powielone ściany"
+  "duplicateFaces": "Powielone ściany",
+  "shellVolumeHint": "Objętości poszczególnych powłok są dodawane lub odejmowane zależnie od orientacji ich ścian."
 }

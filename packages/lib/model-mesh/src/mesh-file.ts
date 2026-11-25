@@ -10,7 +10,7 @@ export async function readMeshFile(file: File, format: MeshFormat) {
   const object =
     format === "stl"
       ? (await import("./stl")).parseStl(await file.arrayBuffer())
-      : (await import("./obj")).parseObj(await file.text())
+      : (await import("./obj")).parseObj(await file.text(), true)
   let faces = 0
   const bounds = new Box3()
   object.traverse((node) => {

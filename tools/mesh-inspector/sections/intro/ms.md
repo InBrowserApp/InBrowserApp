@@ -6,12 +6,12 @@ Pilih **Buka fail** atau seret dan lepaskan model `.stl` atau `.obj` ke alat pen
 
 Koordinat STL dan OBJ tidak menetapkan unit ukuran fizikal yang seragam. Tetapkan **Unit koordinat** kepada unit yang digunakan ketika mengeksport model. Luas permukaan menggunakan unit persegi, manakala isi padu menggunakan unit padu. Pemilihan unit hanya melabelkan koordinat yang disimpan tanpa mengubah skalanya. Pendakap contoh mempunyai isi padu 16,016 mm³ jika koordinatnya mewakili milimeter.
 
-Penyemak mengira isi padu berdasarkan orientasi muka apabila jejaring lulus semakan topologi. Permukaan yang bersilang dengan dirinya sendiri dan cangkerang yang berorientasi salah atau bertindih masih boleh menjejaskan anggaran itu. Bandingkan hasil yang penting dengan model pepejal asal.
+Luas permukaan ialah jumlah luas segi tiga dalam fail input, jadi luas muka pendua turut dikira. Penyemak mengira isi padu berdasarkan orientasi muka apabila jejaring lulus semakan topologi. Permukaan yang bersilang dengan dirinya sendiri dan cangkerang yang berorientasi salah atau bertindih masih boleh menjejaskan anggaran itu. Bandingkan hasil yang penting dengan model pepejal asal.
 
 ## Fahami hasil semakan topologi
 
 - **Tepi sempadan** hanya dimiliki oleh satu segi tiga. Tepi sempadan membentuk garis sempadan terbuka, termasuk di sekeliling lubang.
-- **Tepi bukan manifold** dimiliki oleh lebih daripada dua segi tiga. Pada **bucu bukan manifold**, kumpulan muka yang terpisah bertemu pada bucu yang sama.
+- **Tepi bukan manifold** dimiliki oleh lebih daripada dua segi tiga. **Bucu bukan manifold** ialah titik hujung tepi tersebut atau tempat kumpulan muka yang terpisah bertemu.
 - **Orientasi muka yang tidak konsisten** bermaksud urutan bucu pada dua segi tiga merentasi tepi kongsi dalam arah yang sama. Muka bersebelahan dengan orientasi yang betul merentasi tepi itu dalam arah yang bertentangan.
 - **Muka berluas sifar** tidak mempunyai luas. **Muka pendua** mengulangi segi tiga yang sama.
 

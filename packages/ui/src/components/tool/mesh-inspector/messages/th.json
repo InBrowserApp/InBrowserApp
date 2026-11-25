@@ -28,5 +28,6 @@
   "nonManifoldVertices": "จุดยอดที่ไม่เป็นแมนิโฟลด์",
   "inconsistentEdges": "ขอบที่เรียงจุดยอดผิดทิศ",
   "degenerateFaces": "หน้าที่มีพื้นที่เป็นศูนย์",
-  "duplicateFaces": "หน้าซ้ำ"
+  "duplicateFaces": "หน้าซ้ำ",
+  "shellVolumeHint": "ปริมาตรของแต่ละเปลือกเมชจะนำมาบวกหรือลบตามทิศทางการเรียงจุดยอดของหน้าเมช"
 }

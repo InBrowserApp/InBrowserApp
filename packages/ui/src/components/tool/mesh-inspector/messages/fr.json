@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Sommets non-manifold",
   "inconsistentEdges": "Arêtes à orientation incohérente",
   "degenerateFaces": "Faces dégénérées",
-  "duplicateFaces": "Faces en double"
+  "duplicateFaces": "Faces en double",
+  "shellVolumeHint": "Les volumes des composantes s’additionnent ou se soustraient selon l’orientation de leurs faces."
 }

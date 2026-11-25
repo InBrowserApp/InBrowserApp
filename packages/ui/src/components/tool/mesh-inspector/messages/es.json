@@ -28,5 +28,6 @@
   "nonManifoldVertices": "Vértices no manifold",
   "inconsistentEdges": "Aristas con orientación incoherente",
   "degenerateFaces": "Caras degeneradas",
-  "duplicateFaces": "Caras duplicadas"
+  "duplicateFaces": "Caras duplicadas",
+  "shellVolumeHint": "Los volúmenes de los componentes se suman o se restan según la orientación de sus caras."
 }
