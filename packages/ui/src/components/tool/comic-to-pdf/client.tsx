@@ -9,8 +9,9 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "../../ui/empty"
+import { Button } from "../../ui/button"
 import { Spinner } from "../../ui/spinner"
-import { FileText } from "../../../icons"
+import { FileText, Folder } from "../../../icons"
 import { Toolbar } from "./toolbar"
 import { useDocument } from "./use-document"
 import type { ComicPdfFormat, Messages } from "./types"
@@ -50,6 +51,25 @@ export default function Client({
         messages={
           format === "cbr" && status ? { ...m, clear: m.pdfExport.cancel } : m
         }
+        renderEmpty={(chooseFile) => (
+          <Empty className="min-h-60 bg-muted/30">
+            <EmptyHeader>
+              <EmptyMedia variant="icon">
+                <FileText aria-hidden="true" />
+              </EmptyMedia>
+              <Button
+                data-file-open
+                className="min-h-11 px-4"
+                onClick={chooseFile}
+              >
+                <Folder data-icon="inline-start" aria-hidden="true" />
+                {m.open}
+              </Button>
+            </EmptyHeader>
+            <EmptyTitle>{m.drop}</EmptyTitle>
+            <EmptyDescription>{m.privacy}</EmptyDescription>
+          </Empty>
+        )}
       >
         {error ? (
           <Alert variant="destructive">
@@ -58,17 +78,6 @@ export default function Client({
               {error}
             </AlertDescription>
           </Alert>
-        ) : null}
-        {!file ? (
-          <Empty className="min-h-80">
-            <EmptyHeader>
-              <EmptyMedia variant="icon">
-                <FileText aria-hidden="true" />
-              </EmptyMedia>
-              <EmptyTitle>{m.drop}</EmptyTitle>
-              <EmptyDescription>{m.privacy}</EmptyDescription>
-            </EmptyHeader>
-          </Empty>
         ) : null}
         <div
           className={file && !error ? "flex min-h-0 flex-1 flex-col" : "hidden"}
