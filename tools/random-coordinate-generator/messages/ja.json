@@ -1,0 +1,18 @@
+{
+  "area": "範囲",
+  "worldwide": "世界中",
+  "nearby": "指定地点の周辺",
+  "latitude": "中心の緯度",
+  "longitude": "中心の経度",
+  "radius": "半径（km）",
+  "quantity": "生成数",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "座標",
+  "placeholder": "生成された座標がここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーに失敗しました",
+  "download": "TXT をダウンロード",
+  "error": "座標を生成できませんでした。もう一度お試しください。"
+}

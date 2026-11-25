@@ -1,0 +1,18 @@
+{
+  "area": "Area",
+  "worldwide": "Seluruh dunia",
+  "nearby": "Sekitar titik",
+  "latitude": "Lintang pusat",
+  "longitude": "Bujur pusat",
+  "radius": "Radius (km)",
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Koordinat",
+  "placeholder": "Koordinat yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "error": "Gagal membuat koordinat. Coba lagi."
+}

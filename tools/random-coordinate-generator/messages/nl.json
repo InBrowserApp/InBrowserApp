@@ -1,0 +1,18 @@
+{
+  "area": "Gebied",
+  "worldwide": "Wereldwijd",
+  "nearby": "Nabij een punt",
+  "latitude": "Breedtegraad van het middelpunt",
+  "longitude": "Lengtegraad van het middelpunt",
+  "radius": "Straal (km)",
+  "quantity": "Aantal",
+  "generate": "Genereren",
+  "generating": "Bezig met genereren…",
+  "results": "Coördinaten",
+  "placeholder": "Hier verschijnen de gegenereerde coördinaten.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
+  "download": "TXT downloaden",
+  "error": "De coördinaten konden niet worden gegenereerd. Probeer het opnieuw."
+}

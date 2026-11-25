@@ -31742,6 +31742,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-coordinate-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "de",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "en",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "es",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "he",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "id",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "it",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "no",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "th",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-coordinate-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-date-generator",
     language: "ar",
   },

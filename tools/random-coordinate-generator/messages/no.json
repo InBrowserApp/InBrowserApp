@@ -1,0 +1,18 @@
+{
+  "area": "Område",
+  "worldwide": "Hele verden",
+  "nearby": "Nær et punkt",
+  "latitude": "Senterets breddegrad",
+  "longitude": "Senterets lengdegrad",
+  "radius": "Radius (km)",
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Koordinater",
+  "placeholder": "De genererte koordinatene vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke generere koordinater. Prøv igjen."
+}

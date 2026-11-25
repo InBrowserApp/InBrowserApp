@@ -1729,6 +1729,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "מחולל קואורדינטות אקראיות",
+    slug: "random-coordinate-generator",
+  },
+  {
+    category: "random",
     name: "מחולל תאריכים אקראיים",
     slug: "random-date-generator",
   },

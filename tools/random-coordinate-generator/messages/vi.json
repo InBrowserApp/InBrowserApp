@@ -1,0 +1,18 @@
+{
+  "area": "Phạm vi",
+  "worldwide": "Toàn thế giới",
+  "nearby": "Quanh một điểm",
+  "latitude": "Vĩ độ tâm",
+  "longitude": "Kinh độ tâm",
+  "radius": "Bán kính (km)",
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Tọa độ",
+  "placeholder": "Tọa độ được tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tạo tọa độ. Hãy thử lại."
+}

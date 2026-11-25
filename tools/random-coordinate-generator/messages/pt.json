@@ -1,0 +1,18 @@
+{
+  "area": "Área",
+  "worldwide": "Todo o mundo",
+  "nearby": "Perto de um ponto",
+  "latitude": "Latitude do centro",
+  "longitude": "Longitude do centro",
+  "radius": "Raio (km)",
+  "quantity": "Quantidade",
+  "generate": "Gerar",
+  "generating": "Gerando…",
+  "results": "Coordenadas",
+  "placeholder": "As coordenadas geradas aparecerão aqui.",
+  "copy": "Copiar tudo",
+  "copied": "Copiadas",
+  "copyFailed": "Falha ao copiar",
+  "download": "Baixar TXT",
+  "error": "Não foi possível gerar as coordenadas. Tente novamente."
+}
