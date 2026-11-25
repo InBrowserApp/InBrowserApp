@@ -1,0 +1,15 @@
+{
+  "chooseFile": "MIDI dosyası seç",
+  "changeFile": "Dosyayı değiştir",
+  "dropHint": "veya bir MIDI dosyasını buraya bırakın",
+  "privacy": "Dosyanız bu tarayıcıda kalır.",
+  "pitch": "Transpoze (yarım ses)",
+  "pitchHint": "Notaları pesleştirmek için negatif bir sayı girin.",
+  "speed": "Tempo (%)",
+  "speedHint": "%100, özgün tempoyu korur.",
+  "keepDrums": "Davul notalarını özgün perdelerinde tut",
+  "download": "MIDI dosyasını indir",
+  "invalidFile": "Dosya, Standart MIDI Dosyası olarak okunamadı. Başka bir .mid veya .midi dosyası seçin.",
+  "pitchOutOfRange": "Bazı notalar MIDI aralığının dışında kalacak. Daha az yarım ses kaydırmayı deneyin.",
+  "tempoOutOfRange": "Bu ayar MIDI zamanlama aralığını aşar. %100'e daha yakın bir değer deneyin."
+}

@@ -1173,6 +1173,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "midi-monitor",
   },
   {
+    category: "misc",
+    name: "MIDI 移調與速度調整",
+    slug: "midi-transposer",
+  },
+  {
     category: "network",
     name: "MIME 類型查詢",
     slug: "mime-type-lookup",

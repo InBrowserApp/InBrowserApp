@@ -1173,6 +1173,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "midi-monitor",
   },
   {
+    category: "misc",
+    name: "MIDI ट्रांसपोज़र और टेम्पो परिवर्तक",
+    slug: "midi-transposer",
+  },
+  {
     category: "network",
     name: "MIME प्रकार खोज",
     slug: "mime-type-lookup",

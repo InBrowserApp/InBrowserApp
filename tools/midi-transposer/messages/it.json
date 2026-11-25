@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Scegli file MIDI",
+  "changeFile": "Cambia file",
+  "dropHint": "oppure trascina qui un file MIDI",
+  "privacy": "Il file resta in questo browser.",
+  "pitch": "Trasposizione (semitoni)",
+  "pitchHint": "Usa un numero negativo per abbassare le note.",
+  "speed": "Tempo (%)",
+  "speedHint": "Al 100% il tempo rimane quello originale.",
+  "keepDrums": "Mantieni le note originali della batteria",
+  "download": "Scarica MIDI",
+  "invalidFile": "Impossibile leggere questo file come MIDI standard. Scegli un altro file .mid o .midi.",
+  "pitchOutOfRange": "Alcune note uscirebbero dall’intervallo MIDI. Riduci il numero di semitoni.",
+  "tempoOutOfRange": "Questa impostazione supererebbe i limiti di temporizzazione del formato MIDI. Prova una percentuale più vicina al 100%."
+}

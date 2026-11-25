@@ -1173,6 +1173,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "midi-monitor",
   },
   {
+    category: "misc",
+    name: "Chuyển giọng và đổi nhịp độ MIDI",
+    slug: "midi-transposer",
+  },
+  {
     category: "network",
     name: "Tra Cứu Loại MIME",
     slug: "mime-type-lookup",

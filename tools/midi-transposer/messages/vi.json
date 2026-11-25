@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Chọn tệp MIDI",
+  "changeFile": "Đổi tệp",
+  "dropHint": "hoặc thả tệp MIDI vào đây",
+  "privacy": "Tệp của bạn được giữ trong trình duyệt này.",
+  "pitch": "Chuyển cao độ (nửa cung)",
+  "pitchHint": "Nhập số âm để hạ cao độ.",
+  "speed": "Nhịp độ (%)",
+  "speedHint": "100% giữ nguyên nhịp độ gốc.",
+  "keepDrums": "Giữ nguyên cao độ các nốt trống",
+  "download": "Tải MIDI",
+  "invalidFile": "Không thể đọc tệp này dưới dạng tệp MIDI chuẩn. Hãy chọn tệp .mid hoặc .midi khác.",
+  "pitchOutOfRange": "Một số nốt sẽ nằm ngoài phạm vi cao độ MIDI. Hãy thử mức chuyển nhỏ hơn.",
+  "tempoOutOfRange": "Thiết lập này vượt quá phạm vi thời gian MIDI. Hãy thử tỷ lệ gần 100% hơn."
+}

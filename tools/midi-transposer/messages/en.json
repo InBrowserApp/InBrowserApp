@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Choose MIDI file",
+  "changeFile": "Change file",
+  "dropHint": "or drop a MIDI file here",
+  "privacy": "Your file stays in this browser.",
+  "pitch": "Transpose (semitones)",
+  "pitchHint": "Use a negative number to lower the pitch.",
+  "speed": "Tempo (%)",
+  "speedHint": "100% keeps the original tempo.",
+  "keepDrums": "Keep drum notes at their original pitches",
+  "download": "Download MIDI",
+  "invalidFile": "This file could not be read as a Standard MIDI File. Choose another .mid or .midi file.",
+  "pitchOutOfRange": "Some notes would fall outside the MIDI range. Try a smaller shift.",
+  "tempoOutOfRange": "This setting would exceed the MIDI timing range. Try a percentage closer to 100%."
+}

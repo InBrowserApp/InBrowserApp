@@ -1173,6 +1173,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "midi-monitor",
   },
   {
+    category: "misc",
+    name: "Pengubah Nada dan Tempo MIDI",
+    slug: "midi-transposer",
+  },
+  {
     category: "network",
     name: "Pencarian Tipe MIME",
     slug: "mime-type-lookup",

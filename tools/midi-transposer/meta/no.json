@@ -1,0 +1,4 @@
+{
+  "name": "Transponer MIDI og endre tempo",
+  "description": "Transponer MIDI-noter i halvtonetrinn og øk eller senk tempoet. Last ned den redigerte MIDI-filen direkte fra nettleseren."
+}

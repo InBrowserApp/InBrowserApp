@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Choisir un fichier MIDI",
+  "changeFile": "Changer de fichier",
+  "dropHint": "ou déposez un fichier MIDI ici",
+  "privacy": "Votre fichier reste dans ce navigateur.",
+  "pitch": "Transposition (demi-tons)",
+  "pitchHint": "Utilisez un nombre négatif pour abaisser les notes.",
+  "speed": "Tempo (%)",
+  "speedHint": "À 100 %, le tempo d’origine est conservé.",
+  "keepDrums": "Conserver les notes de batterie d’origine",
+  "download": "Télécharger le MIDI",
+  "invalidFile": "Ce fichier n’a pas pu être lu au format MIDI standard. Choisissez un autre fichier .mid ou .midi.",
+  "pitchOutOfRange": "Certaines notes sortiraient de la plage MIDI. Réduisez le nombre de demi-tons.",
+  "tempoOutOfRange": "Ce réglage dépasserait les limites temporelles du format MIDI. Essayez un pourcentage plus proche de 100 %."
+}

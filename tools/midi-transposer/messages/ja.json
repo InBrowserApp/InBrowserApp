@@ -1,0 +1,15 @@
+{
+  "chooseFile": "MIDI ファイルを選択",
+  "changeFile": "ファイルを変更",
+  "dropHint": "または MIDI ファイルをここにドロップ",
+  "privacy": "ファイルはこのブラウザー内に保持されます。",
+  "pitch": "移調（半音）",
+  "pitchHint": "音を低くするには負の数を入力します。",
+  "speed": "テンポ（%）",
+  "speedHint": "100% で元のテンポを維持します。",
+  "keepDrums": "ドラムの音程を変更しない",
+  "download": "MIDI をダウンロード",
+  "invalidFile": "このファイルを標準 MIDI ファイルとして読み込めませんでした。別の .mid または .midi ファイルを選択してください。",
+  "pitchOutOfRange": "MIDI の音域を超える音符があります。移調幅を小さくしてください。",
+  "tempoOutOfRange": "この設定は MIDI の時間の範囲を超えます。100% に近い値を試してください。"
+}
