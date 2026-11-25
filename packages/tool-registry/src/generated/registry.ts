@@ -28727,6 +28727,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mbox-viewer",
+    category: "document",
+    icon: "mails",
+    tags: [
+      "mbox",
+      "mailbox",
+      "email",
+      "gmail",
+      "google takeout",
+      "thunderbird",
+      "apple mail",
+      "archive",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض MBOX",
+        description:
+          "افتح أرشيفات البريد الإلكتروني بتنسيق MBOX من Gmail ‏(Google Takeout) أو Thunderbird أو Apple Mail. ابحث عن الرسائل واقرأها ونزّل المرفقات في متصفحك.",
+      },
+      de: {
+        name: "MBOX-Betrachter",
+        description:
+          "Öffne MBOX-Dateien aus Gmail (Google Takeout), Thunderbird oder Apple Mail. Durchsuche und lies E-Mails und lade Anhänge direkt im Browser herunter.",
+      },
+      en: {
+        name: "MBOX Viewer",
+        description:
+          "Open MBOX email archives from Gmail (Google Takeout), Thunderbird, or Apple Mail. Search messages, read email, and download attachments in your browser.",
+      },
+      es: {
+        name: "Visor MBOX",
+        description:
+          "Abre archivos de correo MBOX de Gmail (Google Takeout), Thunderbird o Apple Mail. Busca y lee mensajes y descarga adjuntos desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse MBOX",
+        description:
+          "Ouvrez les archives d’e-mails MBOX de Gmail (Google Takeout), Thunderbird ou Apple Mail. Recherchez et lisez vos messages, puis téléchargez les pièces jointes dans votre navigateur.",
+      },
+      he: {
+        name: "מציג MBOX",
+        description:
+          "פתחו בדפדפן ארכיוני דוא״ל בפורמט MBOX מ־Gmail (באמצעות Google Takeout),‏ Thunderbird או Apple Mail. אפשר לחפש ולקרוא הודעות ולהוריד קבצים מצורפים.",
+      },
+      hi: {
+        name: "MBOX व्यूअर",
+        description:
+          "Gmail (Google Takeout), Thunderbird या Apple Mail से निर्यात किए गए MBOX ईमेल आर्काइव खोलें। ब्राउज़र में संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil MBOX",
+        description:
+          "Buka arsip email MBOX dari Gmail (Google Takeout), Thunderbird, atau Apple Mail. Cari dan baca pesan serta unduh lampiran langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore MBOX",
+        description:
+          "Apri nel browser gli archivi di posta MBOX di Gmail (Google Takeout), Thunderbird o Apple Mail. Cerca e leggi i messaggi e scarica gli allegati.",
+      },
+      ja: {
+        name: "MBOX ビューアー",
+        description:
+          "Gmail（Google Takeout）、Thunderbird、Apple Mail の MBOX ファイルを開けます。メールの検索、本文の閲覧、添付ファイルのダウンロードがブラウザーでできます。",
+      },
+      ko: {
+        name: "MBOX 뷰어",
+        description:
+          "Gmail(Google Takeout), Thunderbird 또는 Apple Mail에서 내보낸 MBOX 이메일 보관 파일을 여세요. 브라우저에서 메시지를 검색하고 읽고 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar MBOX",
+        description:
+          "Buka arkib e-mel MBOX daripada Gmail (Google Takeout), Thunderbird atau Apple Mail. Cari dan baca mesej serta muat turun lampiran dalam pelayar anda.",
+      },
+      nl: {
+        name: "MBOX-viewer",
+        description:
+          "Open MBOX-e-mailarchieven van Gmail (Google Takeout), Thunderbird of Apple Mail. Zoek en lees berichten en download bijlagen in je browser.",
+      },
+      no: {
+        name: "MBOX-viser",
+        description:
+          "Åpne MBOX-arkiver fra Gmail (Google Takeout), Thunderbird eller Apple Mail. Søk etter meldinger, les e-post og last ned vedlegg i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka MBOX",
+        description:
+          "Otwieraj archiwa poczty MBOX z Gmaila (Google Takeout), Thunderbirda lub Apple Mail. Wyszukuj i czytaj wiadomości oraz pobieraj załączniki w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador MBOX",
+        description:
+          "Abra arquivos MBOX do Gmail (Google Takeout), Thunderbird ou Apple Mail. Pesquise e leia e-mails e baixe anexos no navegador.",
+      },
+      ru: {
+        name: "Просмотр MBOX",
+        description:
+          "Открывайте почтовые архивы MBOX из Gmail (Google Takeout), Thunderbird или Apple Mail. Ищите и читайте письма, скачивайте вложения прямо в браузере.",
+      },
+      sv: {
+        name: "MBOX-visare",
+        description:
+          "Öppna MBOX-arkiv från Gmail (Google Takeout), Thunderbird eller Apple Mail. Sök och läs e-post och ladda ner bilagor i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู MBOX",
+        description:
+          "เปิดไฟล์อีเมล MBOX จาก Gmail (Google Takeout), Thunderbird หรือ Apple Mail ค้นหาและอ่านอีเมล พร้อมดาวน์โหลดไฟล์แนบได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MBOX Görüntüleyici",
+        description:
+          "Gmail (Google Takeout), Thunderbird veya Apple Mail’den gelen MBOX e-posta arşivlerini tarayıcınızda açın. İletileri arayın, okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem MBOX",
+        description:
+          "Mở tệp lưu trữ email MBOX từ Gmail (Google Takeout), Thunderbird hoặc Apple Mail. Tìm kiếm, đọc thư và tải tệp đính kèm ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MBOX 查看器",
+        description:
+          "打开来自 Gmail（Google Takeout）、Thunderbird 或 Apple Mail 的 MBOX 邮件归档。在浏览器中搜索和阅读邮件，并下载附件。",
+      },
+      "zh-TW": {
+        name: "MBOX 檢視器",
+        description:
+          "在瀏覽器中開啟 Gmail（Google 匯出）、Thunderbird 或 Apple Mail 的 MBOX 郵件備份，搜尋及閱讀郵件，並下載附件。",
+      },
+    },
+  },
+  {
     slug: "md4-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -80549,6 +80682,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Markdown 轉 PDF 轉換器",
         description:
           "將本機 Markdown 文件轉換為 PDF，並預覽頁面與下載檔案。處理過程皆在瀏覽器中完成。",
+      },
+    },
+  },
+  "mbox-viewer": {
+    slug: "mbox-viewer",
+    category: "document",
+    icon: "mails",
+    tags: [
+      "mbox",
+      "mailbox",
+      "email",
+      "gmail",
+      "google takeout",
+      "thunderbird",
+      "apple mail",
+      "archive",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض MBOX",
+        description:
+          "افتح أرشيفات البريد الإلكتروني بتنسيق MBOX من Gmail ‏(Google Takeout) أو Thunderbird أو Apple Mail. ابحث عن الرسائل واقرأها ونزّل المرفقات في متصفحك.",
+      },
+      de: {
+        name: "MBOX-Betrachter",
+        description:
+          "Öffne MBOX-Dateien aus Gmail (Google Takeout), Thunderbird oder Apple Mail. Durchsuche und lies E-Mails und lade Anhänge direkt im Browser herunter.",
+      },
+      en: {
+        name: "MBOX Viewer",
+        description:
+          "Open MBOX email archives from Gmail (Google Takeout), Thunderbird, or Apple Mail. Search messages, read email, and download attachments in your browser.",
+      },
+      es: {
+        name: "Visor MBOX",
+        description:
+          "Abre archivos de correo MBOX de Gmail (Google Takeout), Thunderbird o Apple Mail. Busca y lee mensajes y descarga adjuntos desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse MBOX",
+        description:
+          "Ouvrez les archives d’e-mails MBOX de Gmail (Google Takeout), Thunderbird ou Apple Mail. Recherchez et lisez vos messages, puis téléchargez les pièces jointes dans votre navigateur.",
+      },
+      he: {
+        name: "מציג MBOX",
+        description:
+          "פתחו בדפדפן ארכיוני דוא״ל בפורמט MBOX מ־Gmail (באמצעות Google Takeout),‏ Thunderbird או Apple Mail. אפשר לחפש ולקרוא הודעות ולהוריד קבצים מצורפים.",
+      },
+      hi: {
+        name: "MBOX व्यूअर",
+        description:
+          "Gmail (Google Takeout), Thunderbird या Apple Mail से निर्यात किए गए MBOX ईमेल आर्काइव खोलें। ब्राउज़र में संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil MBOX",
+        description:
+          "Buka arsip email MBOX dari Gmail (Google Takeout), Thunderbird, atau Apple Mail. Cari dan baca pesan serta unduh lampiran langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore MBOX",
+        description:
+          "Apri nel browser gli archivi di posta MBOX di Gmail (Google Takeout), Thunderbird o Apple Mail. Cerca e leggi i messaggi e scarica gli allegati.",
+      },
+      ja: {
+        name: "MBOX ビューアー",
+        description:
+          "Gmail（Google Takeout）、Thunderbird、Apple Mail の MBOX ファイルを開けます。メールの検索、本文の閲覧、添付ファイルのダウンロードがブラウザーでできます。",
+      },
+      ko: {
+        name: "MBOX 뷰어",
+        description:
+          "Gmail(Google Takeout), Thunderbird 또는 Apple Mail에서 내보낸 MBOX 이메일 보관 파일을 여세요. 브라우저에서 메시지를 검색하고 읽고 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar MBOX",
+        description:
+          "Buka arkib e-mel MBOX daripada Gmail (Google Takeout), Thunderbird atau Apple Mail. Cari dan baca mesej serta muat turun lampiran dalam pelayar anda.",
+      },
+      nl: {
+        name: "MBOX-viewer",
+        description:
+          "Open MBOX-e-mailarchieven van Gmail (Google Takeout), Thunderbird of Apple Mail. Zoek en lees berichten en download bijlagen in je browser.",
+      },
+      no: {
+        name: "MBOX-viser",
+        description:
+          "Åpne MBOX-arkiver fra Gmail (Google Takeout), Thunderbird eller Apple Mail. Søk etter meldinger, les e-post og last ned vedlegg i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka MBOX",
+        description:
+          "Otwieraj archiwa poczty MBOX z Gmaila (Google Takeout), Thunderbirda lub Apple Mail. Wyszukuj i czytaj wiadomości oraz pobieraj załączniki w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador MBOX",
+        description:
+          "Abra arquivos MBOX do Gmail (Google Takeout), Thunderbird ou Apple Mail. Pesquise e leia e-mails e baixe anexos no navegador.",
+      },
+      ru: {
+        name: "Просмотр MBOX",
+        description:
+          "Открывайте почтовые архивы MBOX из Gmail (Google Takeout), Thunderbird или Apple Mail. Ищите и читайте письма, скачивайте вложения прямо в браузере.",
+      },
+      sv: {
+        name: "MBOX-visare",
+        description:
+          "Öppna MBOX-arkiv från Gmail (Google Takeout), Thunderbird eller Apple Mail. Sök och läs e-post och ladda ner bilagor i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู MBOX",
+        description:
+          "เปิดไฟล์อีเมล MBOX จาก Gmail (Google Takeout), Thunderbird หรือ Apple Mail ค้นหาและอ่านอีเมล พร้อมดาวน์โหลดไฟล์แนบได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MBOX Görüntüleyici",
+        description:
+          "Gmail (Google Takeout), Thunderbird veya Apple Mail’den gelen MBOX e-posta arşivlerini tarayıcınızda açın. İletileri arayın, okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem MBOX",
+        description:
+          "Mở tệp lưu trữ email MBOX từ Gmail (Google Takeout), Thunderbird hoặc Apple Mail. Tìm kiếm, đọc thư và tải tệp đính kèm ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MBOX 查看器",
+        description:
+          "打开来自 Gmail（Google Takeout）、Thunderbird 或 Apple Mail 的 MBOX 邮件归档。在浏览器中搜索和阅读邮件，并下载附件。",
+      },
+      "zh-TW": {
+        name: "MBOX 檢視器",
+        description:
+          "在瀏覽器中開啟 Gmail（Google 匯出）、Thunderbird 或 Apple Mail 的 MBOX 郵件備份，搜尋及閱讀郵件，並下載附件。",
       },
     },
   },

@@ -8,7 +8,7 @@ import {
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Minus, Plus } from "@workspace/ui/icons"
 import { MessageDetails } from "./message-details"
-import { MessageFrame } from "./message-frame"
+import { MessageFrame } from "@workspace/ui/components/tool/email-message-frame"
 import type { Email, Messages } from "./types"
 
 export function MessageView({

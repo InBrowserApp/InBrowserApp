@@ -51,7 +51,10 @@ export default function Client({ messages: m }: { messages: Messages }) {
     const { signal } = controller
     let preview: Ready["preview"] | undefined
     setLoading(true)
-    void Promise.all([import("@workspace/email"), import("./preview")])
+    void Promise.all([
+      import("@workspace/email"),
+      import("@workspace/ui/lib/email-preview"),
+    ])
       .then(async ([{ openEmail }, { preparePreview }]) => {
         signal.throwIfAborted()
         const email = await openEmail(file, signal)

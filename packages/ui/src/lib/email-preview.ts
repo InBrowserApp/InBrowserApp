@@ -1,6 +1,6 @@
 import createDOMPurify from "dompurify"
 import { contentId, rasterImage } from "@workspace/email"
-import type { Email } from "./types"
+import type { Email } from "@workspace/email"
 
 const policy =
   "default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src blob: data:; base-uri 'none'; form-action 'none'"

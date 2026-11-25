@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import { preparePreview } from "./preview"
+import { preparePreview } from "@workspace/ui/lib/email-preview"
 import type { Email } from "./types"
 const create = vi.fn(() => "blob:http://local/included-image")
 const revoke = vi.fn()

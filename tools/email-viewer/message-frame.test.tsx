@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react"
 import { afterEach, expect, test, vi } from "vitest"
-import { MessageFrame } from "./message-frame"
+import { MessageFrame } from "@workspace/ui/components/tool/email-message-frame"
 afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
