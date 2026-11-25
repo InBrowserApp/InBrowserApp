@@ -1,0 +1,14 @@
+{
+  "country": "Negara atau wilayah",
+  "quantity": "Jumlah",
+  "zipFormat": "Format ZIP AS",
+  "zip5": "ZIP 5 digit",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Kode pos",
+  "placeholder": "Kode pos yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "download": "Unduh TXT",
+  "error": "Kode pos gagal dibuat. Coba lagi."
+}

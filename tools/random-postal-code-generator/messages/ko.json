@@ -1,0 +1,14 @@
+{
+  "country": "국가 또는 지역",
+  "quantity": "수량",
+  "zipFormat": "미국 ZIP 형식",
+  "zip5": "5자리 ZIP",
+  "generate": "생성",
+  "generating": "생성 중…",
+  "results": "우편번호",
+  "placeholder": "생성된 우편번호가 여기에 표시됩니다.",
+  "copy": "모두 복사",
+  "copied": "복사됨",
+  "download": "TXT 다운로드",
+  "error": "우편번호를 생성하지 못했습니다. 다시 시도해 주세요."
+}

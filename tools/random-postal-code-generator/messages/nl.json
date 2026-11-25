@@ -1,0 +1,14 @@
+{
+  "country": "Land of regio",
+  "quantity": "Aantal",
+  "zipFormat": "ZIP-formaat voor de VS",
+  "zip5": "ZIP-code met 5 cijfers",
+  "generate": "Genereren",
+  "generating": "Bezig met genereren…",
+  "results": "Postcodes",
+  "placeholder": "Hier verschijnen de gegenereerde postcodes.",
+  "copy": "Alles kopiëren",
+  "copied": "Gekopieerd",
+  "download": "TXT downloaden",
+  "error": "De postcodes konden niet worden gegenereerd. Probeer het opnieuw."
+}

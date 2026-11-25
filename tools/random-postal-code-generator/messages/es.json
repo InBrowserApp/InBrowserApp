@@ -1,0 +1,14 @@
+{
+  "country": "País o región",
+  "quantity": "Cantidad",
+  "zipFormat": "Formato ZIP de EE. UU.",
+  "zip5": "ZIP de 5 dígitos",
+  "generate": "Generar",
+  "generating": "Generando…",
+  "results": "Códigos postales",
+  "placeholder": "Los códigos postales generados aparecerán aquí.",
+  "copy": "Copiar todo",
+  "copied": "Copiado",
+  "download": "Descargar TXT",
+  "error": "No se pudieron generar los códigos postales. Inténtalo de nuevo."
+}

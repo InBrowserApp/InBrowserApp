@@ -1,0 +1,14 @@
+{
+  "country": "Land eller region",
+  "quantity": "Antal",
+  "zipFormat": "Amerikanskt ZIP-format",
+  "zip5": "Femsiffrig ZIP-kod",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Postnummer",
+  "placeholder": "Genererade postnummer visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att generera postnummer. Försök igen."
+}

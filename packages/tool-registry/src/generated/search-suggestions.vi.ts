@@ -1673,6 +1673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "random",
+    name: "Trình tạo mã bưu chính ngẫu nhiên",
+    slug: "random-postal-code-generator",
+  },
+  {
     category: "misc",
     name: "Kiểm tra tần số quét màn hình",
     slug: "refresh-rate-test",

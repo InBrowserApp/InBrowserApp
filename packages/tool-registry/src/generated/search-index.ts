@@ -42631,6 +42631,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-postal-code-generator",
+    category: "random",
+    icon: "mail",
+    tags: [
+      "random",
+      "postal code",
+      "ZIP code",
+      "ZIP+4",
+      "postcode",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد رموز بريدية عشوائية",
+        description:
+          "أنشئ رموزًا بريدية تجريبية لـ12 بلدًا، بما فيها رموز ZIP وZIP+4 الأمريكية. انسخ المجموعة أو نزّلها في ملف نصي.",
+      },
+      de: {
+        name: "Zufalls-Postleitzahlengenerator",
+        description:
+          "Erzeuge Beispiel-Postleitzahlen für 12 Länder, darunter US-amerikanische ZIP- und ZIP+4-Codes. Kopiere eine Liste oder lade sie als Textdatei herunter.",
+      },
+      en: {
+        name: "Random Postal Code Generator",
+        description:
+          "Generate sample postal codes for 12 countries, including US ZIP and ZIP+4 codes. Copy a batch or download it as a text file.",
+      },
+      es: {
+        name: "Generador de códigos postales aleatorios",
+        description:
+          "Genera códigos postales de ejemplo para 12 países, incluidos códigos ZIP y ZIP+4 de EE. UU. Copia un lote o descárgalo como archivo de texto.",
+      },
+      fr: {
+        name: "Générateur de codes postaux aléatoires",
+        description:
+          "Générez des exemples de codes postaux pour 12 pays, dont les codes ZIP et ZIP+4 américains. Copiez un lot ou téléchargez-le sous forme de fichier texte.",
+      },
+      he: {
+        name: "מחולל מיקודים אקראיים",
+        description:
+          "צרו מיקודים לדוגמה ל־12 מדינות, כולל קודי ZIP ו־ZIP+4 בארצות הברית. אפשר להעתיק את הרשימה או להוריד אותה כקובץ טקסט.",
+      },
+      hi: {
+        name: "रैंडम पोस्टल कोड जनरेटर",
+        description:
+          "12 देशों के लिए नमूना पोस्टल कोड जनरेट करें, जिनमें अमेरिकी ZIP और ZIP+4 कोड शामिल हैं। पूरी सूची कॉपी करें या टेक्स्ट फ़ाइल में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator kode pos acak",
+        description:
+          "Buat contoh kode pos untuk 12 negara, termasuk kode ZIP dan ZIP+4 AS. Salin seluruh daftar atau unduh sebagai berkas teks.",
+      },
+      it: {
+        name: "Generatore di codici postali casuali",
+        description:
+          "Genera codici postali di esempio per 12 paesi, inclusi i codici ZIP e ZIP+4 degli Stati Uniti. Copia l’elenco o scaricalo come file di testo.",
+      },
+      ja: {
+        name: "ランダム郵便番号生成ツール",
+        description:
+          "米国の ZIP・ZIP+4 を含む 12 か国の郵便番号のサンプルを生成します。まとめてコピーするか、テキストファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 우편번호 생성기",
+        description:
+          "미국 ZIP 및 ZIP+4 코드를 포함해 12개 국가의 우편번호 예시를 생성합니다. 결과를 한꺼번에 복사하거나 텍스트 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana poskod rawak",
+        description:
+          "Jana contoh poskod untuk 12 negara, termasuk kod ZIP dan ZIP+4 Amerika Syarikat. Salin seluruh senarai atau muat turunnya sebagai fail teks.",
+      },
+      nl: {
+        name: "Generator voor willekeurige postcodes",
+        description:
+          "Genereer voorbeeldpostcodes voor 12 landen, waaronder ZIP- en ZIP+4-codes voor de VS. Kopieer de lijst of download deze als tekstbestand.",
+      },
+      no: {
+        name: "Generator for tilfeldige postnumre",
+        description:
+          "Generer postnumre til testing for 12 land, inkludert amerikanske ZIP- og ZIP+4-koder. Kopier listen eller last den ned som tekstfil.",
+      },
+      pl: {
+        name: "Generator losowych kodów pocztowych",
+        description:
+          "Generuj przykładowe kody pocztowe dla 12 krajów, w tym amerykańskie kody ZIP i ZIP+4. Skopiuj listę lub pobierz ją jako plik tekstowy.",
+      },
+      pt: {
+        name: "Gerador de códigos postais aleatórios",
+        description:
+          "Gere exemplos de códigos postais para 12 países, incluindo códigos ZIP e ZIP+4 dos EUA. Copie um lote ou descarregue-o como ficheiro de texto.",
+      },
+      ru: {
+        name: "Генератор случайных почтовых индексов",
+        description:
+          "Создавайте примеры почтовых индексов для 12 стран, включая форматы ZIP и ZIP+4 для США. Копируйте список или скачивайте его текстовым файлом.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga postnummer",
+        description:
+          "Generera exempel på postnummer för 12 länder, inklusive amerikanska ZIP- och ZIP+4-koder. Kopiera listan eller ladda ner den som textfil.",
+      },
+      th: {
+        name: "ตัวสร้างรหัสไปรษณีย์สุ่ม",
+        description:
+          "สร้างรหัสไปรษณีย์ตัวอย่างสำหรับ 12 ประเทศ รวมถึงรหัส ZIP และ ZIP+4 ของสหรัฐอเมริกา คัดลอกทั้งรายการหรือดาวน์โหลดเป็นไฟล์ข้อความได้",
+      },
+      tr: {
+        name: "Rastgele Posta Kodu Oluşturucu",
+        description:
+          "ABD’nin ZIP ve ZIP+4 kodları dahil 12 ülke için örnek posta kodları oluşturun. Listeyi kopyalayın veya metin dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã bưu chính ngẫu nhiên",
+        description:
+          "Tạo mã bưu chính mẫu cho 12 quốc gia, gồm mã ZIP và ZIP+4 của Hoa Kỳ. Sao chép cả danh sách hoặc tải xuống dưới dạng tệp văn bản.",
+      },
+      "zh-CN": {
+        name: "随机邮政编码生成器",
+        description:
+          "生成 12 个国家的示例邮政编码，包括美国 ZIP 和 ZIP+4 编码。可批量复制或下载为文本文件。",
+      },
+      "zh-TW": {
+        name: "隨機郵遞區號產生器",
+        description:
+          "產生 12 個國家的郵遞區號範例，包括美國 ZIP 和 ZIP+4 郵遞區號。可整批複製或下載為文字檔。",
+      },
+    },
+  },
+  {
     slug: "refresh-rate-test",
     category: "misc",
     icon: "activity",

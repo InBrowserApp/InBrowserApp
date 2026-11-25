@@ -1,0 +1,14 @@
+{
+  "country": "Quốc gia hoặc khu vực",
+  "quantity": "Số lượng",
+  "zipFormat": "Định dạng ZIP của Hoa Kỳ",
+  "zip5": "ZIP 5 chữ số",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Mã bưu chính",
+  "placeholder": "Các mã bưu chính đã tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tạo mã bưu chính. Hãy thử lại."
+}

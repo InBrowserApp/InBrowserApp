@@ -1673,6 +1673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "random",
+    name: "Generator kode pos acak",
+    slug: "random-postal-code-generator",
+  },
+  {
     category: "misc",
     name: "Tes Refresh Rate Layar",
     slug: "refresh-rate-test",

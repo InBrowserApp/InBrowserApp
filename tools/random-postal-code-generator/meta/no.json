@@ -1,0 +1,4 @@
+{
+  "name": "Generator for tilfeldige postnumre",
+  "description": "Generer postnumre til testing for 12 land, inkludert amerikanske ZIP- og ZIP+4-koder. Kopier listen eller last den ned som tekstfil."
+}

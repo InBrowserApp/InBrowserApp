@@ -1,0 +1,14 @@
+{
+  "country": "Kraj lub region",
+  "quantity": "Liczba kodów",
+  "zipFormat": "Format kodu ZIP w USA",
+  "zip5": "5-cyfrowy kod ZIP",
+  "generate": "Generuj",
+  "generating": "Generowanie…",
+  "results": "Kody pocztowe",
+  "placeholder": "Tutaj pojawią się wygenerowane kody pocztowe.",
+  "copy": "Kopiuj wszystko",
+  "copied": "Skopiowano",
+  "download": "Pobierz TXT",
+  "error": "Nie udało się wygenerować kodów pocztowych. Spróbuj ponownie."
+}

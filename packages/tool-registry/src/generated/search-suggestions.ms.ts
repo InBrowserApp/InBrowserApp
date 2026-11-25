@@ -1673,6 +1673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "random",
+    name: "Penjana poskod rawak",
+    slug: "random-postal-code-generator",
+  },
+  {
     category: "misc",
     name: "Ujian Kadar Segar Semula Skrin",
     slug: "refresh-rate-test",

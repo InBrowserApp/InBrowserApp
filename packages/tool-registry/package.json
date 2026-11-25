@@ -341,6 +341,7 @@
     "@tool/radio-timecode": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",
+    "@tool/random-postal-code-generator": "workspace:*",
     "@tool/refresh-rate-test": "workspace:*",
     "@tool/regex-tester-replacer": "workspace:*",
     "@tool/remove-pdf-owner-password": "workspace:*",

@@ -1,0 +1,14 @@
+{
+  "country": "Land eller region",
+  "quantity": "Antall",
+  "zipFormat": "Amerikansk ZIP-format",
+  "zip5": "5-sifret ZIP",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Postnumre",
+  "placeholder": "De genererte postnumrene vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke generere postnumre. Prøv igjen."
+}

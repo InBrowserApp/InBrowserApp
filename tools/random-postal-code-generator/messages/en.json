@@ -1,0 +1,14 @@
+{
+  "country": "Country or region",
+  "quantity": "Quantity",
+  "zipFormat": "US ZIP format",
+  "zip5": "5-digit ZIP",
+  "generate": "Generate",
+  "generating": "Generating…",
+  "results": "Postal codes",
+  "placeholder": "Generated postal codes will appear here.",
+  "copy": "Copy all",
+  "copied": "Copied",
+  "download": "Download TXT",
+  "error": "Could not generate postal codes. Try again."
+}

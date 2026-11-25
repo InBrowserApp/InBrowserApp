@@ -1,0 +1,14 @@
+{
+  "country": "国家或地区",
+  "quantity": "数量",
+  "zipFormat": "美国 ZIP 格式",
+  "zip5": "5 位 ZIP",
+  "generate": "生成",
+  "generating": "正在生成…",
+  "results": "邮政编码",
+  "placeholder": "生成的邮政编码将显示在这里。",
+  "copy": "全部复制",
+  "copied": "已复制",
+  "download": "下载 TXT",
+  "error": "无法生成邮政编码，请重试。"
+}
