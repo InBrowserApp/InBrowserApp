@@ -22,7 +22,12 @@ export async function renderMusicXmlScore(
   {
     paper = "a4",
     measures,
-  }: { paper?: ScorePaper; measures?: MeasureRange } = {}
+    cropWhitespace = false,
+  }: {
+    paper?: ScorePaper
+    measures?: MeasureRange
+    cropWhitespace?: boolean
+  } = {}
 ) {
   const { width } = paperSizes[paper]
   return inScoreHost(width, async (host) => {
@@ -61,7 +66,7 @@ export async function renderMusicXmlScore(
       return {
         measureCount,
         pages: Array.from(pages, (page) =>
-          measures
+          measures || cropWhitespace
             ? cropScorePage(page)
             : placeFullPage(page.cloneNode(true) as SVGSVGElement, paper)
         ),

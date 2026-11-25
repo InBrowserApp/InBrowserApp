@@ -27,11 +27,13 @@ function ScoreConversion({
     let cancelled = false
     async function preview() {
       try {
-        const { renderMusicXmlPages } =
+        const { renderMusicXmlScore } =
           await import("@workspace/score-export/musicxml")
         if (cancelled) return
-        const result = await renderMusicXmlPages(input)
-        if (!cancelled) setPages(result)
+        const { pages } = await renderMusicXmlScore(input, {
+          cropWhitespace: true,
+        })
+        if (!cancelled) setPages(pages)
       } catch {
         if (!cancelled) setPages(null)
       }
