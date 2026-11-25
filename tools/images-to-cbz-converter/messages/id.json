@@ -1,0 +1,23 @@
+{
+  "open": "Pilih gambar",
+  "folder": "Pilih folder",
+  "add": "Tambahkan gambar",
+  "drop": "Atau seret dan lepas gambar halaman komik di sini.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP, dan AVIF",
+  "privacy": "Gambar Anda tetap di perangkat ini.",
+  "reading": "Membaca gambar…",
+  "pages": "Halaman komik ({total})",
+  "reorder": "Seret halaman atau gunakan tombol panah untuk mengubah urutannya.",
+  "cover": "Sampul",
+  "makeCover": "Jadikan sampul",
+  "coverAction": "Jadikan {name} sebagai sampul",
+  "moveUp": "Pindahkan {name} ke atas",
+  "moveDown": "Pindahkan {name} ke bawah",
+  "remove": "Hapus {name}",
+  "skipped": "File yang dilewati ({count})",
+  "create": "Buat CBZ",
+  "download": "Unduh CBZ",
+  "cancel": "Batalkan pembuatan",
+  "packing": "Mengemas halaman {page} dari {total}…",
+  "failed": "CBZ tidak dapat dibuat. Coba lagi."
+}

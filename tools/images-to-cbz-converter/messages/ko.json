@@ -1,0 +1,23 @@
+{
+  "open": "이미지 선택",
+  "folder": "폴더 선택",
+  "add": "이미지 추가",
+  "drop": "만화 페이지 이미지를 여기에 끌어다 놓을 수도 있습니다.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP, AVIF",
+  "privacy": "이미지는 이 기기에만 남습니다.",
+  "reading": "이미지 읽는 중…",
+  "pages": "만화 페이지 ({total}개)",
+  "reorder": "페이지를 끌거나 화살표 버튼을 눌러 순서를 바꾸세요.",
+  "cover": "표지",
+  "makeCover": "표지로 지정",
+  "coverAction": "{name}을(를) 표지로 지정",
+  "moveUp": "{name} 위로 이동",
+  "moveDown": "{name} 아래로 이동",
+  "remove": "{name} 삭제",
+  "skipped": "건너뛴 파일 ({count}개)",
+  "create": "CBZ 만들기",
+  "download": "CBZ 다운로드",
+  "cancel": "만들기 취소",
+  "packing": "전체 {total}페이지 중 {page}페이지를 묶는 중…",
+  "failed": "CBZ를 만들 수 없습니다. 다시 시도하세요."
+}

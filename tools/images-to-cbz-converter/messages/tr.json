@@ -1,0 +1,23 @@
+{
+  "open": "Görselleri seç",
+  "folder": "Klasör seç",
+  "add": "Görsel ekle",
+  "drop": "Veya çizgi roman sayfalarının görsellerini buraya bırakın.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP ve AVIF",
+  "privacy": "Görselleriniz bu cihazda kalır.",
+  "reading": "Görseller okunuyor…",
+  "pages": "Çizgi roman sayfaları ({total})",
+  "reorder": "Sıralamayı değiştirmek için sayfaları sürükleyin veya ok düğmelerini kullanın.",
+  "cover": "Kapak",
+  "makeCover": "Kapak yap",
+  "coverAction": "{name} dosyasını kapak yap",
+  "moveUp": "{name} dosyasını yukarı taşı",
+  "moveDown": "{name} dosyasını aşağı taşı",
+  "remove": "{name} dosyasını kaldır",
+  "skipped": "Atlanan dosyalar ({count})",
+  "create": "CBZ oluştur",
+  "download": "CBZ indir",
+  "cancel": "Oluşturmayı iptal et",
+  "packing": "Sayfa arşive ekleniyor ({page} / {total})…",
+  "failed": "CBZ oluşturulamadı. Tekrar deneyin."
+}

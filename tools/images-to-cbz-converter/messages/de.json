@@ -1,0 +1,23 @@
+{
+  "open": "Bilder auswählen",
+  "folder": "Ordner auswählen",
+  "add": "Bilder hinzufügen",
+  "drop": "Oder ziehe die Bilder der Comicseiten hierher.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP und AVIF",
+  "privacy": "Deine Bilder bleiben auf diesem Gerät.",
+  "reading": "Bilder werden eingelesen…",
+  "pages": "Comicseiten ({total})",
+  "reorder": "Ziehe die Seiten an die gewünschte Position oder ändere die Reihenfolge mit den Pfeilschaltflächen.",
+  "cover": "Titelbild",
+  "makeCover": "Als Titelbild verwenden",
+  "coverAction": "{name} als Titelbild verwenden",
+  "moveUp": "{name} nach oben verschieben",
+  "moveDown": "{name} nach unten verschieben",
+  "remove": "{name} entfernen",
+  "skipped": "Übersprungene Dateien ({count})",
+  "create": "CBZ erstellen",
+  "download": "CBZ herunterladen",
+  "cancel": "Erstellung abbrechen",
+  "packing": "Seite {page} von {total} wird gepackt…",
+  "failed": "Die CBZ-Datei konnte nicht erstellt werden. Versuche es erneut."
+}

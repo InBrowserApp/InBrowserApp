@@ -1,0 +1,23 @@
+{
+  "open": "Escolher imagens",
+  "folder": "Escolher pasta",
+  "add": "Adicionar imagens",
+  "drop": "Ou solte as imagens das páginas do quadrinho aqui.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP e AVIF",
+  "privacy": "Suas imagens ficam neste dispositivo.",
+  "reading": "Lendo imagens…",
+  "pages": "Páginas do quadrinho ({total})",
+  "reorder": "Arraste as páginas ou use os botões de seta para mudar a ordem.",
+  "cover": "Capa",
+  "makeCover": "Definir como capa",
+  "coverAction": "Definir {name} como capa",
+  "moveUp": "Mover {name} para cima",
+  "moveDown": "Mover {name} para baixo",
+  "remove": "Remover {name}",
+  "skipped": "Arquivos ignorados ({count})",
+  "create": "Criar CBZ",
+  "download": "Baixar CBZ",
+  "cancel": "Cancelar criação",
+  "packing": "Adicionando a página {page} de {total} ao CBZ…",
+  "failed": "Não foi possível criar o CBZ. Tente novamente."
+}

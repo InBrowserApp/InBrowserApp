@@ -1,0 +1,23 @@
+{
+  "open": "Velg bilder",
+  "folder": "Velg mappe",
+  "add": "Legg til bilder",
+  "drop": "Du kan også slippe bilder av tegneseriesidene her.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP og AVIF",
+  "privacy": "Bildene blir på enheten din.",
+  "reading": "Leser bildene…",
+  "pages": "Tegneseriesider ({total})",
+  "reorder": "Dra sidene eller bruk pilknappene for å endre rekkefølgen.",
+  "cover": "Forside",
+  "makeCover": "Bruk som forside",
+  "coverAction": "Bruk {name} som forside",
+  "moveUp": "Flytt {name} opp",
+  "moveDown": "Flytt {name} ned",
+  "remove": "Fjern {name}",
+  "skipped": "Filer som ble hoppet over ({count})",
+  "create": "Opprett CBZ",
+  "download": "Last ned CBZ",
+  "cancel": "Avbryt opprettelsen",
+  "packing": "Pakker side {page} av {total}…",
+  "failed": "Kunne ikke opprette CBZ-filen. Prøv igjen."
+}

@@ -1,0 +1,23 @@
+{
+  "open": "Elegir imágenes",
+  "folder": "Elegir carpeta",
+  "add": "Añadir imágenes",
+  "drop": "O arrastra aquí las imágenes de tu cómic.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP y AVIF",
+  "privacy": "Tus imágenes se quedan en este dispositivo.",
+  "reading": "Leyendo las imágenes…",
+  "pages": "Páginas del cómic ({total})",
+  "reorder": "Arrastra las páginas o usa los botones con flechas para cambiar el orden.",
+  "cover": "Portada",
+  "makeCover": "Usar como portada",
+  "coverAction": "Usar {name} como portada",
+  "moveUp": "Subir {name}",
+  "moveDown": "Bajar {name}",
+  "remove": "Quitar {name}",
+  "skipped": "Archivos omitidos ({count})",
+  "create": "Crear CBZ",
+  "download": "Descargar CBZ",
+  "cancel": "Cancelar creación",
+  "packing": "Empaquetando la página {page} de {total}…",
+  "failed": "No se pudo crear el CBZ. Vuelve a intentarlo."
+}

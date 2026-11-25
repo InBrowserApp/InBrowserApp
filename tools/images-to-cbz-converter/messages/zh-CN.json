@@ -1,0 +1,23 @@
+{
+  "open": "选择图片",
+  "folder": "选择文件夹",
+  "add": "添加图片",
+  "drop": "也可将漫画图片拖放到此处。",
+  "formats": "JPEG、PNG、WebP、GIF、BMP 和 AVIF",
+  "privacy": "图片仅保留在此设备上。",
+  "reading": "正在读取图片…",
+  "pages": "漫画页面（{total} 页）",
+  "reorder": "拖动页面或使用上下箭头按钮调整顺序。",
+  "cover": "封面",
+  "makeCover": "设为封面",
+  "coverAction": "将 {name} 设为封面",
+  "moveUp": "向前移动 {name}",
+  "moveDown": "向后移动 {name}",
+  "remove": "移除 {name}",
+  "skipped": "已跳过 {count} 个文件",
+  "create": "生成 CBZ",
+  "download": "下载 CBZ",
+  "cancel": "取消生成",
+  "packing": "正在打包第 {page} 页，共 {total} 页…",
+  "failed": "无法生成 CBZ。请重试。"
+}

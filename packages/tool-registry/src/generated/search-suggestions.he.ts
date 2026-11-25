@@ -988,6 +988,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "image-watermark",
   },
   {
+    category: "ebook",
+    name: "יצירת CBZ מתמונות",
+    slug: "images-to-cbz-converter",
+  },
+  {
     category: "text",
     name: "מאמת IMEI",
     slug: "imei-validator",
