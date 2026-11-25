@@ -107,6 +107,27 @@ test("keeps distinct ASCII coordinates that would collapse in binary STL", async
   expect(await inspectMesh(output)).toEqual(result.after)
 })
 
+test("reads faces without stored normals and skips geometry keywords in solid names", async () => {
+  const data = await asciiStl([
+    [a, b, c],
+    [a, d, c],
+  ]).text()
+  const file = new File(
+    [
+      data
+        .replace("facet normal 0 0 0", "facet")
+        .replaceAll("solid test", "solid facet normal name endfacet"),
+    ],
+    "no-normal.stl"
+  )
+  const result = await repairStl(file)
+  expect(result.before.triangles).toBe(2)
+  expect(result.after.triangles).toBe(2)
+  expect(
+    new DataView(await result.stl!.arrayBuffer()).getUint32(80, true)
+  ).toBe(2)
+})
+
 test("keeps the binary header and per-face attributes on retained triangles", async () => {
   const base = await repairStl(asciiStl(tetrahedron))
   const binary = new Uint8Array(84 + 5 * 50)

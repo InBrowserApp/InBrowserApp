@@ -33,9 +33,11 @@ export function parseStlForProcessing(data: ArrayBuffer) {
   if (isBinaryStl(data)) return parseStl(data)
 
   const text = new TextDecoder().decode(data)
+  // Solid names can contain facet keywords. Also accept single-line STL.
+  const body = text.replace(/^[\t ]*(?:end)?solid\b[^\r\n]*$/gim, "").trim()
   const coordinates: number[] = []
-  for (const [, facet] of text.matchAll(
-    /\bfacet\s+normal\b([\s\S]*?)\bendfacet\b/gi
+  for (const [, facet] of (body || text).matchAll(
+    /\bfacet\b([\s\S]*?)\bendfacet\b/gi
   )) {
     const vertices = [...facet!.matchAll(/\bvertex\s+(\S+)\s+(\S+)\s+(\S+)/gi)]
     if (vertices.length !== 3) throw new Error("Incomplete mesh triangle")
