@@ -1,0 +1,18 @@
+{
+  "open": "Ouvrir un fichier MusicXML",
+  "replace": "Changer de fichier",
+  "clear": "Fermer la partition",
+  "reader": "Visionneuse de partitions MusicXML",
+  "privacy": "Votre fichier reste dans ce navigateur.",
+  "focus": "Activer la lecture sans distraction",
+  "exitFocus": "Quitter la lecture sans distraction",
+  "releaseFile": "Déposez le fichier MusicXML pour l’ouvrir",
+  "dropHint": "Choisissez un fichier ou faites-le glisser ici.",
+  "example": "Essayer un exemple",
+  "loading": "Ouverture de la partition…",
+  "preview": "Aperçu de la partition",
+  "zoomIn": "Agrandir",
+  "zoomOut": "Réduire",
+  "resetZoom": "Réinitialiser le zoom",
+  "invalidScore": "Impossible d’afficher la partition. Choisissez un fichier .musicxml, .xml ou .mxl exporté au format MusicXML structuré par partie (partwise)."
+}

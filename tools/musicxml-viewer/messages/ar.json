@@ -1,0 +1,18 @@
+{
+  "open": "فتح ملف MusicXML",
+  "replace": "تغيير الملف",
+  "clear": "إغلاق النوتة",
+  "reader": "عارض MusicXML",
+  "privacy": "يبقى ملفك في هذا المتصفح.",
+  "focus": "الدخول إلى وضع التركيز",
+  "exitFocus": "الخروج من وضع التركيز",
+  "releaseFile": "أفلت ملف MusicXML لفتحه",
+  "dropHint": "اختر ملفًا أو اسحبه إلى هنا.",
+  "example": "جرّب مثالًا",
+  "loading": "جارٍ فتح النوتة…",
+  "preview": "معاينة النوتة الموسيقية",
+  "zoomIn": "تكبير",
+  "zoomOut": "تصغير",
+  "resetZoom": "إعادة ضبط التكبير",
+  "invalidScore": "تعذّر عرض النوتة. اختر ملف ‎.musicxml أو ‎.xml أو ‎.mxl مصدّرًا بتنسيق MusicXML المرتّب حسب الأجزاء (partwise)."
+}

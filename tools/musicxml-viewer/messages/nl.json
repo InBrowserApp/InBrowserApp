@@ -1,0 +1,18 @@
+{
+  "open": "MusicXML-bestand openen",
+  "replace": "Ander bestand kiezen",
+  "clear": "Partituur sluiten",
+  "reader": "MusicXML-viewer",
+  "privacy": "Je bestand blijft in deze browser.",
+  "focus": "Focusmodus inschakelen",
+  "exitFocus": "Focusmodus verlaten",
+  "releaseFile": "Laat het MusicXML-bestand los om het te openen",
+  "dropHint": "Kies een bestand of sleep het hierheen.",
+  "example": "Voorbeeld proberen",
+  "loading": "Partituur openen…",
+  "preview": "Voorbeeld van de bladmuziek",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "resetZoom": "Zoom herstellen",
+  "invalidScore": "Deze partituur kan niet worden weergegeven. Kies een .musicxml-, .xml- of .mxl-bestand dat per partij is opgebouwd (partwise)."
+}

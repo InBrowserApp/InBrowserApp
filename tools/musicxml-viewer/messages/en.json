@@ -1,0 +1,18 @@
+{
+  "open": "Open MusicXML file",
+  "replace": "Change file",
+  "clear": "Close score",
+  "reader": "MusicXML Viewer",
+  "privacy": "Your file stays in this browser.",
+  "focus": "Enter focus mode",
+  "exitFocus": "Exit focus mode",
+  "releaseFile": "Drop the MusicXML file to open it",
+  "dropHint": "Choose a file or drag it here.",
+  "example": "Try an example",
+  "loading": "Opening score…",
+  "preview": "Sheet music preview",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "resetZoom": "Reset zoom",
+  "invalidScore": "This score could not be displayed. Choose a .musicxml, .xml, or .mxl file exported as a partwise MusicXML score."
+}

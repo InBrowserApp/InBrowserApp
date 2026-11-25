@@ -1,0 +1,18 @@
+{
+  "open": "Buka fail MusicXML",
+  "replace": "Tukar fail",
+  "clear": "Tutup skor",
+  "reader": "Pemapar MusicXML",
+  "privacy": "Fail anda kekal dalam pelayar ini.",
+  "focus": "Masuk ke mod fokus",
+  "exitFocus": "Keluar mod fokus",
+  "releaseFile": "Lepaskan fail MusicXML untuk membukanya",
+  "dropHint": "Pilih fail atau seret ke sini.",
+  "example": "Cuba contoh",
+  "loading": "Membuka skor…",
+  "preview": "Pratonton skor muzik",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "resetZoom": "Tetapkan semula zum",
+  "invalidScore": "Skor ini tidak dapat dipaparkan. Pilih fail .musicxml, .xml atau .mxl yang dieksport dalam format MusicXML partwise."
+}

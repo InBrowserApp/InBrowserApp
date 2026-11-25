@@ -1248,6 +1248,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "murmurhash3-x86-32-hash-text-or-file",
   },
   {
+    category: "misc",
+    name: "MusicXML 查看器",
+    slug: "musicxml-viewer",
+  },
+  {
     category: "network",
     name: "我的 IP 地址",
     slug: "my-ip-address",

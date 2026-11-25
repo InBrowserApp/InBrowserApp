@@ -31681,6 +31681,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "musicxml-viewer",
+    category: "misc",
+    icon: "file-music",
+    tags: [
+      "musicxml",
+      "mxl",
+      "sheet music",
+      "score viewer",
+      "notation",
+      "musicxml reader",
+    ],
+    locales: {
+      ar: {
+        name: "عارض MusicXML",
+        description:
+          "افتح ملفات MusicXML وMXL المضغوطة واعرضها كنوتة موسيقية. كبّر العرض أو استخدم وضع التركيز لقراءة النوتة في متصفحك.",
+      },
+      de: {
+        name: "MusicXML-Betrachter",
+        description:
+          "Öffne MusicXML-Dateien und komprimierte MXL-Dateien als Noten. Vergrößere die Ansicht oder nutze den Fokusmodus, um die Partitur im Browser zu lesen.",
+      },
+      en: {
+        name: "MusicXML Viewer",
+        description:
+          "Open MusicXML and compressed MXL files as readable sheet music. Zoom in or use focus mode to read the score in your browser.",
+      },
+      es: {
+        name: "Visor de partituras MusicXML",
+        description:
+          "Abre partituras en formato MusicXML o en archivos MXL comprimidos. Usa el zoom o el modo de lectura para verlas en el navegador.",
+      },
+      fr: {
+        name: "Visionneuse de partitions MusicXML",
+        description:
+          "Ouvrez vos partitions aux formats MusicXML et MXL compressé. Utilisez le zoom ou la lecture sans distraction dans votre navigateur.",
+      },
+      he: {
+        name: "מציג MusicXML",
+        description:
+          "פתחו קובצי MusicXML וקובצי MXL דחוסים וקראו אותם כתווים. הגדילו את התצוגה או הפעילו מצב מיקוד כדי לקרוא את התווים בדפדפן.",
+      },
+      hi: {
+        name: "MusicXML व्यूअर",
+        description:
+          "MusicXML और कंप्रेस की गई MXL फ़ाइलों को शीट म्यूज़िक के रूप में खोलें। ब्राउज़र में संगीत स्कोर पढ़ने के लिए ज़ूम करें या फ़ोकस मोड इस्तेमाल करें।",
+      },
+      id: {
+        name: "Penampil MusicXML",
+        description:
+          "Buka file MusicXML dan file MXL terkompresi untuk membaca partitur. Perbesar tampilan atau gunakan mode fokus untuk membaca partitur di browser.",
+      },
+      it: {
+        name: "Visualizzatore di spartiti MusicXML",
+        description:
+          "Apri spartiti in formato MusicXML o in file MXL compressi. Usa lo zoom o la lettura senza distrazioni per leggerli nel browser.",
+      },
+      ja: {
+        name: "MusicXML ビューアー",
+        description:
+          "MusicXML と圧縮された MXL ファイルを楽譜として表示します。拡大表示や集中モードを使ってブラウザーで楽譜を読めます。",
+      },
+      ko: {
+        name: "MusicXML 뷰어",
+        description:
+          "MusicXML과 압축된 MXL 파일을 읽기 쉬운 악보로 엽니다. 확대하거나 집중 모드를 사용해 브라우저에서 악보를 읽으세요.",
+      },
+      ms: {
+        name: "Pemapar MusicXML",
+        description:
+          "Buka fail MusicXML dan fail MXL termampat untuk membaca skor muzik. Zum masuk atau gunakan mod fokus untuk membaca skor dalam pelayar.",
+      },
+      nl: {
+        name: "MusicXML-viewer",
+        description:
+          "Open MusicXML-bestanden en gecomprimeerde MXL-bestanden als bladmuziek. Zoom in of gebruik de focusmodus om de partituur in je browser te lezen.",
+      },
+      no: {
+        name: "MusicXML-viser",
+        description:
+          "Åpne MusicXML-filer og komprimerte MXL-filer som noter. Zoom inn eller bruk fokusmodus for å lese partituret i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka MusicXML",
+        description:
+          "Otwieraj pliki MusicXML i skompresowane pliki MXL jako zapis nutowy. Powiększ zapis lub włącz tryb skupienia, aby wygodnie czytać partyturę w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de partituras MusicXML",
+        description:
+          "Abra partituras no formato MusicXML ou em arquivos MXL compactados. Use o zoom ou a leitura focada para ler no navegador.",
+      },
+      ru: {
+        name: "Просмотр MusicXML",
+        description:
+          "Открывайте файлы MusicXML и сжатые файлы MXL в виде нот. Меняйте масштаб или включайте режим чтения, чтобы рассмотреть партитуру в браузере.",
+      },
+      sv: {
+        name: "MusicXML-visare",
+        description:
+          "Öppna MusicXML-filer och komprimerade MXL-filer som noter. Zooma in eller använd fokusläget för att läsa partituret i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูโน้ตเพลง MusicXML",
+        description:
+          "เปิดไฟล์ MusicXML และไฟล์ MXL แบบบีบอัดเพื่ออ่านโน้ตเพลง ซูมเข้าหรือใช้โหมดโฟกัสเพื่ออ่านโน้ตในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MusicXML Görüntüleyici",
+        description:
+          "MusicXML dosyalarını ve sıkıştırılmış MXL dosyalarını nota olarak açın. Notaları tarayıcıda okumak için yakınlaştırın veya odak modunu kullanın.",
+      },
+      vi: {
+        name: "Trình xem MusicXML",
+        description:
+          "Mở tệp MusicXML và MXL nén dưới dạng bản nhạc dễ đọc. Phóng to hoặc dùng chế độ tập trung để đọc bản nhạc trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MusicXML 查看器",
+        description:
+          "将 MusicXML 和压缩的 MXL 文件打开为易读的乐谱。放大或使用专注模式，在浏览器中阅读乐谱。",
+      },
+      "zh-TW": {
+        name: "MusicXML 檢視器",
+        description:
+          "將 MusicXML 和壓縮的 MXL 檔案開啟為易於閱讀的樂譜。放大或使用專注模式，在瀏覽器中閱讀樂譜。",
+      },
+    },
+  },
+  {
     slug: "my-ip-address",
     category: "network",
     secondaryCategories: ["geo"],
