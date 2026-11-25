@@ -13,6 +13,7 @@
     "./mesh-file": "./src/mesh-file.ts",
     "./inspect": "./src/inspect.ts",
     "./cad": "./src/cad.ts",
+    "./cad-licenses": "./src/cad-licenses.ts",
     "./step-example": "./src/mounting-bracket.step"
   },
   "dependencies": {

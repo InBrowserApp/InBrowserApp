@@ -85,7 +85,7 @@ export function ViewerToolbar({
           ) : (
             <Download data-icon="inline-start" aria-hidden="true" />
           )}
-          {m.saveStl}
+          {m.saveStl} <span className="text-xs text-muted-foreground">mm</span>
         </Button>
         <Button onClick={onSave}>
           <Camera data-icon="inline-start" aria-hidden="true" />

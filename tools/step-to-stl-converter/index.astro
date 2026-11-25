@@ -1,5 +1,6 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { CadLicenses } from "@workspace/ui/components/tool/cad-licenses"
 import MeshConverter from "@workspace/ui/components/tool/mesh-converter/converter"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
@@ -33,4 +34,5 @@ const messages = { ...await getMeshConverterMessages(lang), ...localized }
 <ToolPageShell title={meta.name} description={meta.description}>
   <MeshConverter client:load format="step" messages={messages} />
   <ToolArticle><Intro /></ToolArticle>
+  <CadLicenses />
 </ToolPageShell>
