@@ -1,0 +1,10 @@
+{
+  "open": "AZW3-boek openen",
+  "replace": "Boek vervangen",
+  "drop": "Sleep hier een AZW3-boek naartoe",
+  "unsupported": "Kies een AZW3-boek op je apparaat.",
+  "invalid": "Dit boek is mogelijk beschadigd of onvolledig. Kies een andere kopie.",
+  "protected": "Dit boek is versleuteld of beveiligd tegen kopiëren. Kies een onversleutelde kopie.",
+  "unsupportedVariant": "Dit boekformaat of deze compressievariant wordt niet ondersteund.",
+  "unsupportedLayout": "Dit boek gebruikt een vaste of gemengde pagina-indeling die niet betrouwbaar kan worden geëxporteerd. Kies een boek met een aanpasbare indeling."
+}

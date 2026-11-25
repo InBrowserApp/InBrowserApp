@@ -1,0 +1,10 @@
+{
+  "open": "Buka buku AZW3",
+  "replace": "Ganti buku",
+  "drop": "Letakkan buku AZW3 di sini",
+  "unsupported": "Pilih buku AZW3 pada peranti anda.",
+  "invalid": "Buku ini mungkin rosak atau tidak lengkap. Pilih salinan lain.",
+  "protected": "Buku ini disulitkan atau dilindungi daripada penyalinan. Pilih salinan yang tidak disulitkan.",
+  "unsupportedVariant": "Format buku atau varian pemampatan ini tidak disokong.",
+  "unsupportedLayout": "Buku ini menggunakan susun atur halaman tetap atau bercampur yang tidak dapat dieksport dengan tepat. Pilih buku dengan susun atur boleh alir semula."
+}

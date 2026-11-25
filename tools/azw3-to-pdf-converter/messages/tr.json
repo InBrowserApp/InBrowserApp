@@ -1,0 +1,10 @@
+{
+  "open": "AZW3 kitabı aç",
+  "replace": "Kitabı değiştir",
+  "drop": "Bir AZW3 kitabını buraya bırakın",
+  "unsupported": "Cihazınızdan bir AZW3 kitabı seçin.",
+  "invalid": "Bu kitap hasarlı veya eksik olabilir. Başka bir kopya seçin.",
+  "protected": "Bu kitap şifreli veya kopya korumalı. Şifresiz bir kopya seçin.",
+  "unsupportedVariant": "Bu kitap biçimi veya sıkıştırma türü desteklenmiyor.",
+  "unsupportedLayout": "Bu kitap, güvenilir biçimde dışa aktarılamayan sabit veya karma bir sayfa düzeni kullanıyor. Metin akışı ekrana uyarlanan bir kitap seçin."
+}

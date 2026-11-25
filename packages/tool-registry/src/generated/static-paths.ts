@@ -2302,6 +2302,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "azw3-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "azw3-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "barcode-generator",
     language: "ar",
   },

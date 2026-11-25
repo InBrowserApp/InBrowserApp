@@ -128,6 +128,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "audio-trimmer-merger",
   },
   {
+    category: "ebook",
+    name: "AZW3 naar PDF-converter",
+    slug: "azw3-to-pdf-converter",
+  },
+  {
     category: "image",
     name: "Barcodegenerator",
     slug: "barcode-generator",

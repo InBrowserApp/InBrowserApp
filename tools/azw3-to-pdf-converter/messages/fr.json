@@ -1,0 +1,10 @@
+{
+  "open": "Ouvrir un livre AZW3",
+  "replace": "Remplacer le livre",
+  "drop": "Déposez un livre AZW3 ici",
+  "unsupported": "Choisissez un livre AZW3 sur votre appareil.",
+  "invalid": "Ce livre est peut-être endommagé ou incomplet. Choisissez une autre copie.",
+  "protected": "Ce livre est chiffré ou protégé contre la copie. Choisissez une copie non chiffrée.",
+  "unsupportedVariant": "Ce format de livre ou cette variante de compression n’est pas pris en charge.",
+  "unsupportedLayout": "Ce livre utilise une mise en page fixe ou mixte qui ne peut pas être exportée de manière fiable. Choisissez un livre à mise en page adaptable."
+}

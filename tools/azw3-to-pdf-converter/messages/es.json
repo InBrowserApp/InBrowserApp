@@ -1,0 +1,10 @@
+{
+  "open": "Abrir libro AZW3",
+  "replace": "Reemplazar libro",
+  "drop": "Suelta un archivo .azw3 aquí",
+  "unsupported": "Elige un archivo .azw3 de tu dispositivo.",
+  "invalid": "Este libro puede estar dañado o incompleto. Elige otra copia.",
+  "protected": "Este libro está cifrado o protegido contra copia. Elige una copia sin cifrar.",
+  "unsupportedVariant": "Este formato de libro o variante de compresión no es compatible.",
+  "unsupportedLayout": "Este libro usa un diseño de página fijo o mixto que no se puede exportar de forma fiable. Elige un libro con diseño adaptable."
+}

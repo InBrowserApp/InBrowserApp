@@ -16,6 +16,7 @@ const formats = {
     accept: ".fb2,.fbz,.fb2.zip,application/x-fictionbook+xml",
     extension: /\.(?:fb2|fbz|fb2\.zip)$/i,
   },
+  azw3: { accept: ".azw3", extension: /\.azw3$/i },
   mobi: {
     accept: ".mobi,.azw,.prc,application/x-mobipocket-ebook",
     extension: /\.(?:mobi|azw|prc)$/i,

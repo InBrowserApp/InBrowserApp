@@ -3227,6 +3227,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "azw3-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "azw3",
+      "pdf",
+      "ebook",
+      "azw3 to pdf",
+      "kf8",
+      "kindle",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل AZW3 إلى PDF",
+        description:
+          "حوّل كتب Kindle المتوافقة وغير المحمية بصيغة AZW3 إلى PDF. عاين الفصول والصور، واختر مقاس الورق، واحفظ الملف بنص قابل للتحديد في متصفحك.",
+      },
+      de: {
+        name: "AZW3-zu-PDF-Konverter",
+        description:
+          "Wandle kompatible Kindle-E-Books im AZW3-Format ohne Kopierschutz in PDF um. Prüfe Kapitel und Bilder, wähle ein Papierformat und speichere das PDF mit auswählbarem Text im Browser.",
+      },
+      en: {
+        name: "AZW3 to PDF Converter",
+        description:
+          "Convert a compatible unprotected Kindle AZW3 book to PDF. Preview chapters and images, choose a paper size, and save in your browser with selectable text.",
+      },
+      es: {
+        name: "Convertidor de AZW3 a PDF",
+        description:
+          "Convierte libros Kindle AZW3 compatibles y sin protección a PDF. Previsualiza los capítulos y las imágenes, elige el tamaño del papel y guarda un PDF con texto seleccionable en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur AZW3 en PDF",
+        description:
+          "Convertissez un livre Kindle au format AZW3 compatible et sans protection en PDF. Prévisualisez les chapitres et les images, choisissez le format du papier et enregistrez un PDF avec du texte sélectionnable dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר AZW3 ל־PDF",
+        description:
+          "המירו ספר Kindle תואם בפורמט AZW3 ללא הגנה לקובץ PDF. בדקו את הפרקים והתמונות בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן קובץ עם טקסט שאפשר לסמן.",
+      },
+      hi: {
+        name: "AZW3 से PDF कन्वर्टर",
+        description:
+          "बिना DRM वाली समर्थित Kindle AZW3 किताब को PDF में बदलें। अध्यायों और चित्रों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और ब्राउज़र में ऐसी PDF सेव करें जिसमें टेक्स्ट चुना जा सके।",
+      },
+      id: {
+        name: "Konverter AZW3 ke PDF",
+        description:
+          "Ubah buku Kindle AZW3 yang kompatibel dan tanpa perlindungan ke PDF. Tinjau bab dan ilustrasi, pilih ukuran kertas, lalu simpan PDF dengan teks yang bisa dipilih.",
+      },
+      it: {
+        name: "Convertitore da AZW3 a PDF",
+        description:
+          "Converti un libro Kindle AZW3 compatibile e senza protezione in un PDF con testo selezionabile. Controlla capitoli e immagini in anteprima, scegli il formato della carta e salva dal browser.",
+      },
+      ja: {
+        name: "AZW3 PDF変換",
+        description:
+          "保護されていない対応形式の Kindle AZW3 電子書籍を PDF に変換します。章や画像をプレビューし、用紙サイズを選んで、文字を選択できる PDF をブラウザーで保存できます。",
+      },
+      ko: {
+        name: "AZW3 PDF 변환기",
+        description:
+          "브라우저에서 Kindle의 AZW3 전자책을 PDF로 변환하세요. 암호화되지 않은 호환 파일을 열어 장과 이미지를 미리 보고, 용지 크기를 골라 텍스트를 선택할 수 있는 PDF로 저장합니다.",
+      },
+      ms: {
+        name: "Penukar AZW3 kepada PDF",
+        description:
+          "Tukar buku Kindle AZW3 yang serasi dan tidak dilindungi kepada PDF. Pratonton bab dan imej, pilih saiz kertas dan simpan PDF dengan teks yang boleh dipilih dalam pelayar anda.",
+      },
+      nl: {
+        name: "AZW3 naar PDF-converter",
+        description:
+          "Zet een ondersteund, onbeveiligd Kindle-boek in AZW3-formaat om naar PDF. Bekijk de hoofdstukken en afbeeldingen, kies een papierformaat en sla in je browser een PDF met selecteerbare tekst op.",
+      },
+      no: {
+        name: "Konverter AZW3 til PDF",
+        description:
+          "Konverter en kompatibel, ubeskyttet Kindle-bok i AZW3-format til PDF. Forhåndsvis kapitler og bilder, velg papirstørrelse og lagre PDF-en med tekst som kan markeres, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter AZW3 na PDF",
+        description:
+          "Konwertuj obsługiwaną książkę Kindle AZW3 bez zabezpieczeń na PDF. Sprawdź podgląd rozdziałów i ilustracji, wybierz format papieru i zapisz w przeglądarce PDF z tekstem, który można zaznaczać.",
+      },
+      pt: {
+        name: "Conversor de AZW3 para PDF",
+        description:
+          "Converta em PDF livros Kindle AZW3 compatíveis e sem proteção. Confira a prévia dos capítulos e das imagens, escolha o tamanho do papel e salve com texto selecionável no navegador.",
+      },
+      ru: {
+        name: "Конвертер AZW3 в PDF",
+        description:
+          "Преобразуйте совместимую книгу Kindle AZW3 без защиты в PDF. Просмотрите главы и иллюстрации, выберите размер бумаги и сохраните PDF с выделяемым текстом прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera AZW3 till PDF",
+        description:
+          "Konvertera en okrypterad Kindle-bok i AZW3-format som stöds till PDF. Förhandsgranska kapitel och bilder, välj pappersstorlek och spara en PDF med markerbar text i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง AZW3 เป็น PDF",
+        description:
+          "แปลงหนังสือ Kindle AZW3 ที่รองรับและไม่มีการป้องกันเป็น PDF ดูตัวอย่างบทและภาพ เลือกขนาดกระดาษ แล้วบันทึก PDF ที่เลือกข้อความได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "AZW3’ten PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu ve korumasız bir Kindle AZW3 kitabını PDF’ye dönüştürün. Bölümleri ve görselleri önizleyin, kâğıt boyutunu seçin ve metni seçilebilen PDF’yi tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển AZW3 sang PDF",
+        description:
+          "Chuyển sách Kindle AZW3 tương thích và không được bảo vệ sang PDF. Xem trước các chương và hình ảnh, chọn khổ giấy rồi lưu PDF có văn bản chọn được ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "AZW3 转 PDF",
+        description:
+          "将兼容且未受保护的 Kindle AZW3 电子书转为 PDF。在浏览器中预览章节和插图、选择纸张大小，并保存正文可选中的 PDF。",
+      },
+      "zh-TW": {
+        name: "AZW3 轉 PDF",
+        description:
+          "在瀏覽器中將相容且未受保護的 Kindle AZW3 電子書轉成可選取文字的 PDF。可預覽章節和圖片、選擇紙張大小，再儲存檔案。",
+      },
+    },
+  },
+  {
     slug: "barcode-generator",
     category: "image",
     icon: "image",

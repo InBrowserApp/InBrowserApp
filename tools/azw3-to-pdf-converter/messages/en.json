@@ -1,0 +1,10 @@
+{
+  "open": "Open AZW3 book",
+  "replace": "Replace book",
+  "drop": "Drop an AZW3 book here",
+  "unsupported": "Choose a local AZW3 book.",
+  "invalid": "This book may be damaged or incomplete. Choose another copy.",
+  "protected": "This book is encrypted or copy-protected. Choose an unencrypted copy.",
+  "unsupportedVariant": "This book format or compression variant is not supported.",
+  "unsupportedLayout": "This book uses a fixed or mixed page layout that cannot be exported reliably. Choose a reflowable book."
+}

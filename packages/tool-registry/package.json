@@ -32,6 +32,7 @@
     "@tool/audio-spectrum-analyzer": "workspace:*",
     "@tool/audio-to-text": "workspace:*",
     "@tool/audio-trimmer-merger": "workspace:*",
+    "@tool/azw3-to-pdf-converter": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

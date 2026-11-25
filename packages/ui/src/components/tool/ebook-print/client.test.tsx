@@ -187,3 +187,19 @@ test("routes an AZW3 selection through unsupported input feedback on the MOBI pa
   await screen.findByText(m.unsupported)
   expect(mock.prepareBook).not.toHaveBeenCalled()
 })
+
+test("prepares an AZW3 file and explains other selections on the AZW3 page", async () => {
+  const { select, input } = setup("azw3")
+  expect(input.accept).toBe(".azw3")
+  select("book.mobi")
+  await screen.findByText(m.unsupported)
+  expect(mock.prepareBook).not.toHaveBeenCalled()
+  select("book.AZW3")
+  await screen.findByTitle(m.preview)
+  expect(mock.prepareBook).toHaveBeenCalledWith(
+    expect.objectContaining({ name: "book.AZW3" }),
+    expect.any(AbortSignal),
+    m,
+    "en"
+  )
+})

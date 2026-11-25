@@ -35,6 +35,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "audio-spectrum-analyzer": () => import("@tool/audio-spectrum-analyzer/page"),
   "audio-to-text": () => import("@tool/audio-to-text/page"),
   "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
+  "azw3-to-pdf-converter": () => import("@tool/azw3-to-pdf-converter/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "barcode-reader": () => import("@tool/barcode-reader/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),
