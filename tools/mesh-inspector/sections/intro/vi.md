@@ -20,3 +20,5 @@ Khi đếm đỉnh, công cụ xem các vị trí trùng khớp hoàn toàn là 
 ## Xem hoặc chuyển đổi mô hình
 
 Dùng [Trình xem STL](../stl-viewer/) hoặc [Trình xem OBJ](../obj-viewer/) để kiểm tra mô hình ở dạng 3D, kể cả chế độ khung dây. Dùng [Trình chuyển đổi OBJ sang STL](../obj-to-stl-converter/) nếu công cụ ở bước tiếp theo cần tệp STL.
+
+Nếu báo cáo STL phát hiện mặt trùng lặp, mặt có diện tích bằng 0 hoặc hướng đỉnh không nhất quán, hãy chọn **Sửa STL** để sửa ngay tệp đang kiểm tra. Trang [Sửa lưới STL](../stl-mesh-repair/) cũng cho phép so sánh các mặt trùng lặp và mặt có diện tích bằng 0, hướng mặt và lỗi tô pô còn lại trước khi tải xuống tệp STL mới.

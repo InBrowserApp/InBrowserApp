@@ -21,3 +21,5 @@ STL beskriver ytan på en detalj med trianglar. Använd [OBJ-visaren](../obj-vie
 Använd [STEP till STL-konverteraren](../step-to-stl-converter/) för att exportera ett triangelnät från den ursprungliga CAD-modellen i STEP- eller STP-format.
 
 Använd [STL till 3MF-konverteraren](../stl-to-3mf-converter/) för att spara modellens måttenhet i en 3MF-fil.
+
+Använd [Reparera STL-nät](../stl-mesh-repair/) för att ta bort dubbla ytor och ytor utan area, rätta tydliga orienteringsfel och se vad som återstår att åtgärda.

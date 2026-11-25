@@ -1924,6 +1924,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "STL Ağ Onarımı",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "STL’den 3MF’ye Dönüştürücü",
     slug: "stl-to-3mf-converter",
   },

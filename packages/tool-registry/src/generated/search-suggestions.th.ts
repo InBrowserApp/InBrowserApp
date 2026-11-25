@@ -1924,6 +1924,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "เครื่องมือซ่อมเมช STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "โปรแกรมแปลง STL เป็น 3MF",
     slug: "stl-to-3mf-converter",
   },

@@ -480,6 +480,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "step-to-stl-converter": () => import("@tool/step-to-stl-converter/page"),
   "step-viewer": () => import("@tool/step-viewer/page"),
   "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
+  "stl-mesh-repair": () => import("@tool/stl-mesh-repair/page"),
   "stl-to-3mf-converter": () => import("@tool/stl-to-3mf-converter/page"),
   "stl-to-obj-converter": () => import("@tool/stl-to-obj-converter/page"),
   "stl-viewer": () => import("@tool/stl-viewer/page"),

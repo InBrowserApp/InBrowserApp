@@ -20,3 +20,5 @@ Narzędzie traktuje punkty o dokładnie tych samych współrzędnych jak jeden w
 ## Oglądanie i konwertowanie modelu
 
 Obejrzyj model w 3D, również w trybie siatki, w [przeglądarce plików STL](../stl-viewer/) lub [przeglądarce plików OBJ](../obj-viewer/). Gdy następne narzędzie wymaga pliku STL, użyj [konwertera OBJ na STL](../obj-to-stl-converter/).
+
+Jeśli raport STL pokazuje powielone ściany, ściany o zerowym polu lub niespójną orientację ścian, wybierz **Napraw STL**, aby pracować dalej z tym samym plikiem. Na stronie [Naprawa siatki STL](../stl-mesh-repair/) możesz przed pobraniem nowego pliku porównać powielone ściany i ściany o zerowym polu, orientację ścian oraz pozostałe usterki topologii.

@@ -1924,6 +1924,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "Perbaikan Mesh STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "Konverter STL ke 3MF",
     slug: "stl-to-3mf-converter",
   },

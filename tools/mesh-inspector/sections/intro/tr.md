@@ -20,3 +20,5 @@ Araç, tam olarak aynı konumdaki noktaları tek bir köşe olarak sayar. Kabukl
 ## Modeli inceleme veya dönüştürme
 
 Modeli 3B olarak veya tel kafes görünümünde incelemek için [STL Görüntüleyici](../stl-viewer/) ya da [OBJ Görüntüleyici](../obj-viewer/) aracını kullanın. Sonraki araç bir STL dosyası gerektiriyorsa [OBJ’den STL’ye Dönüştürücü](../obj-to-stl-converter/) aracını kullanın.
+
+STL raporunda yinelenen yüzler, sıfır alanlı yüzler veya tutarsız yüz yönleri görünüyorsa aynı dosyada çalışmak için **STL’yi onar** düğmesine tıklayın. [STL Ağ Onarımı](../stl-mesh-repair/) sayfasında da yeni bir STL indirmeden önce yinelenen ve sıfır alanlı yüzleri, yüz yönlerini ve kalan topoloji sorunlarını karşılaştırabilirsiniz.

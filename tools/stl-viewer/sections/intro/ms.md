@@ -21,3 +21,5 @@ STL menerangkan permukaan komponen menggunakan segi tiga. Untuk melihat fail Wav
 Gunakan [Penukar STEP kepada STL](../step-to-stl-converter/) untuk mengeksport geometri jejaring daripada model CAD STEP atau STP asal.
 
 Gunakan [Penukar STL kepada 3MF](../stl-to-3mf-converter/) untuk merekodkan unit fizikal model dalam fail 3MF.
+
+Gunakan [Pembaikan Jejaring STL](../stl-mesh-repair/) untuk membuang muka pendua dan muka berluas sifar, membetulkan masalah orientasi yang jelas dan menyemak masalah yang masih perlu ditangani.

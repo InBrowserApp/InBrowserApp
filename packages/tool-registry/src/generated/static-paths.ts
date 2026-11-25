@@ -35330,6 +35330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "stl-mesh-repair",
+    language: "ar",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "de",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "en",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "es",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "fr",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "he",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "hi",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "id",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "it",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "ja",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "ko",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "ms",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "nl",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "no",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "pl",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "pt",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "ru",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "sv",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "th",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "tr",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "vi",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "zh-CN",
+  },
+  {
+    slug: "stl-mesh-repair",
+    language: "zh-TW",
+  },
+  {
     slug: "stl-to-3mf-converter",
     language: "ar",
   },

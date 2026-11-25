@@ -21,3 +21,5 @@ STL descrive la superficie di una parte mediante triangoli. Per aprire un file W
 Usa il [Convertitore da STEP a STL](../step-to-stl-converter/) per esportare la mesh da un modello CAD originale in formato STEP o STP.
 
 Usa il [Convertitore da STL a 3MF](../stl-to-3mf-converter/) per registrare l’unità di misura del modello in un file 3MF.
+
+Usa lo strumento di [Riparazione mesh STL](../stl-mesh-repair/) per rimuovere facce duplicate o con area nulla, correggere evidenti problemi di orientamento e verificare quali problemi restano.

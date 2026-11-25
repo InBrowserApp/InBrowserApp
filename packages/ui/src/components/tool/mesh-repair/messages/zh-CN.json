@@ -1,0 +1,16 @@
+{
+  "action": "修复 STL",
+  "drop": "将 STL 文件拖放到此处",
+  "working": "正在修复网格…",
+  "failed": "无法读取此 STL。请打开有效的 ASCII 或二进制 STL 文件。",
+  "result": "修复结果",
+  "previous": "上一次修复",
+  "before": "修复前",
+  "after": "修复后",
+  "flipped": "已调整方向的面：{count}",
+  "complete": "修复后的网格通过了这些拓扑检查。",
+  "remaining": "仍有一些拓扑问题需要处理。",
+  "unchanged": "未发现可修复的面。",
+  "empty": "没有可供导出的非零面积三角形。",
+  "download": "下载 STL"
+}

@@ -1924,6 +1924,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "Réparation de maillages STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "Convertisseur STL en 3MF",
     slug: "stl-to-3mf-converter",
   },

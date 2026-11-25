@@ -20,3 +20,5 @@ Genau übereinanderliegende Positionen zählen als ein Eckpunkt. Die Netzprüfun
 ## Das Modell ansehen oder konvertieren
 
 Im [STL-Betrachter](../stl-viewer/) oder [OBJ-Betrachter](../obj-viewer/) kannst du das Modell in 3D und als Drahtgitter betrachten. Nutze den [OBJ-zu-STL-Konverter](../obj-to-stl-converter/), wenn das nächste Programm eine STL-Datei erwartet.
+
+Wenn der STL-Prüfbericht doppelte Flächen, Flächen mit einem Flächeninhalt von null oder eine uneinheitliche Flächenorientierung meldet, wähle **STL reparieren**, um mit derselben Datei weiterzuarbeiten. Die [STL-Netzreparatur](../stl-mesh-repair/) zeigt doppelte Flächen und Flächen mit einem Flächeninhalt von null, die Flächenorientierung und verbleibende Topologieprobleme im Vergleich, bevor du die neue STL-Datei herunterlädst.

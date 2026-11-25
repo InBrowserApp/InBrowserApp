@@ -20,3 +20,5 @@ Penyemak mengira kedudukan yang bertepatan sepenuhnya sebagai satu bucu. Cangker
 ## Periksa atau tukar model
 
 Gunakan [Pemapar STL](../stl-viewer/) atau [Pemapar OBJ](../obj-viewer/) untuk memeriksa model dalam 3D, termasuk rangka dawainya. Gunakan [Penukar OBJ kepada STL](../obj-to-stl-converter/) jika alat seterusnya dalam aliran kerja anda memerlukan fail STL.
+
+Jika laporan STL menunjukkan muka pendua, muka berluas sifar atau orientasi muka yang tidak konsisten, pilih **Baiki STL** untuk membaiki fail yang sama. Halaman [Pembaikan Jejaring STL](../stl-mesh-repair/) juga membandingkan muka pendua dan muka berluas sifar, orientasi muka serta masalah topologi yang masih ada sebelum anda memuat turun STL baharu.

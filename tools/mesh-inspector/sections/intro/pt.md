@@ -20,3 +20,5 @@ A ferramenta conta posições exatamente coincidentes como um único vértice. E
 ## Inspecionar ou converter o modelo
 
 Use o [Visualizador de STL](../stl-viewer/) ou o [Visualizador de OBJ](../obj-viewer/) para examinar o modelo em 3D, inclusive no modo de malha de arame. Use o [Conversor de OBJ para STL](../obj-to-stl-converter/) se a próxima ferramenta exigir um arquivo STL.
+
+Se o relatório de um STL mostrar faces duplicadas ou de área zero, ou orientações inconsistentes, clique em **Reparar STL** para trabalhar com o mesmo arquivo. A ferramenta de [Reparo de malhas STL](../stl-mesh-repair/) também compara as faces duplicadas ou de área zero, a orientação das faces e os problemas de topologia restantes antes de você baixar um novo STL.

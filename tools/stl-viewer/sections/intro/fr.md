@@ -21,3 +21,5 @@ Le STL représente la surface d’une pièce par des triangles. Pour ouvrir un f
 Utilisez le [Convertisseur STEP en STL](../step-to-stl-converter/) pour exporter le maillage d’un modèle de CAO d’origine au format STEP ou STP.
 
 Utilisez le [Convertisseur STL en 3MF](../stl-to-3mf-converter/) pour enregistrer l’unité de mesure du modèle dans un fichier 3MF.
+
+Utilisez l’outil de [Réparation de maillages STL](../stl-mesh-repair/) pour supprimer les faces en double ou d’aire nulle, corriger les orientations clairement incohérentes et repérer les problèmes qui restent à résoudre.

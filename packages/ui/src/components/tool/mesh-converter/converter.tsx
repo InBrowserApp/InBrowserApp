@@ -47,7 +47,7 @@ export default function MeshConverter({
     })
   )
   const target = units ? "3mf" : format === "stl" ? "obj" : "stl"
-  const outputName = `${result?.name.replace(/\.[^.]*$/, "") || "model"}.${target}`
+  const outputName = `${result?.file.name.replace(/\.[^.]*$/, "") || "model"}.${target}`
 
   function convert(file?: File) {
     selection.current = { file }
@@ -184,9 +184,9 @@ export default function MeshConverter({
               <p
                 dir="auto"
                 className="truncate text-xs text-muted-foreground"
-                title={result.name}
+                title={result.file.name}
               >
-                {result.name}
+                {result.file.name}
               </p>
             </div>
           </div>

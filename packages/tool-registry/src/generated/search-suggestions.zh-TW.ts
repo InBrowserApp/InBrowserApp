@@ -1924,6 +1924,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "STL 網格修復",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "STL 轉 3MF 轉換器",
     slug: "stl-to-3mf-converter",
   },

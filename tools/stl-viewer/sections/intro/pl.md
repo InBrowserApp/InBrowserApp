@@ -21,3 +21,5 @@ STL opisuje powierzchnię części za pomocą trójkątów. Do pliku Wavefront z
 Użyj [konwertera STEP na STL](../step-to-stl-converter/), aby wyeksportować siatkę trójkątów z oryginalnego modelu CAD w formacie STEP lub STP.
 
 Użyj [konwertera STL na 3MF](../stl-to-3mf-converter/), aby zapisać jednostkę miary modelu w pliku 3MF.
+
+Użyj narzędzia [Naprawa siatki STL](../stl-mesh-repair/), aby usunąć powielone ściany i ściany o zerowym polu, skorygować jednoznaczne błędy orientacji oraz sprawdzić, co jeszcze wymaga naprawy.

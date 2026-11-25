@@ -20,3 +20,5 @@ Verktøyet teller posisjoner som sammenfaller nøyaktig, som ett hjørnepunkt. D
 ## Se på modellen eller konverter den
 
 Bruk [STL-viseren](../stl-viewer/) eller [OBJ-viseren](../obj-viewer/) til å se på modellen i 3D, også som trådmodell. Bruk [OBJ til STL-konvertereren](../obj-to-stl-converter/) hvis neste verktøy trenger en STL-fil.
+
+Hvis STL-rapporten viser duplikate flater, flater uten areal eller inkonsekvent flateorientering, kan du velge **Reparer STL** for å jobbe videre med samme fil. På siden [Reparer STL-nett](../stl-mesh-repair/) kan du også sammenligne duplikate flater, flater uten areal, flatenes orientering og gjenværende topologiproblemer før du laster ned en ny STL-fil.

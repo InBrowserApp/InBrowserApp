@@ -20,3 +20,5 @@ La herramienta agrupa las posiciones exactamente iguales en un único vértice. 
 ## Inspeccionar o convertir el modelo
 
 Usa el [Visor de STL](../stl-viewer/) o el [Visor de OBJ](../obj-viewer/) para ver el modelo en 3D, incluida su malla alámbrica. Si el siguiente programa requiere un archivo STL, usa el [Conversor de OBJ a STL](../obj-to-stl-converter/).
+
+Si el informe de un STL muestra caras duplicadas o de área cero, u orientaciones incoherentes, pulsa **Reparar STL** para trabajar con el mismo archivo. La herramienta de [Reparación de mallas STL](../stl-mesh-repair/) también compara las caras duplicadas o de área cero, la orientación de las caras y los problemas de topología que quedan antes de descargar un nuevo STL.

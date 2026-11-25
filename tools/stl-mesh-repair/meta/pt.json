@@ -1,0 +1,4 @@
+{
+  "name": "Reparo de malhas STL",
+  "description": "Repare arquivos STL binários ou ASCII no navegador. Remova triângulos duplicados ou de área zero, corrija problemas claros de orientação das faces e compare a topologia antes de baixar."
+}

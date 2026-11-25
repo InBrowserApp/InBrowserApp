@@ -1,0 +1,4 @@
+{
+  "name": "STL-Netzreparatur",
+  "description": "Repariere binäre und ASCII-STL-Dateien im Browser. Entferne doppelte Dreiecke und Dreiecke ohne Fläche, korrigiere eindeutige Ausrichtungsfehler und vergleiche die Topologie vor dem Download."
+}

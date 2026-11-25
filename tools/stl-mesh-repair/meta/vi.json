@@ -1,0 +1,4 @@
+{
+  "name": "Sửa lưới STL",
+  "description": "Sửa tệp STL dạng nhị phân hoặc ASCII trong trình duyệt. Loại bỏ tam giác trùng lặp và tam giác có diện tích bằng 0, chỉnh các mặt có hướng sai rõ ràng và so sánh tô pô lưới trước khi tải xuống."
+}

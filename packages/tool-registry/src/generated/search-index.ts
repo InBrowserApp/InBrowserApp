@@ -49051,6 +49051,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "stl-mesh-repair",
+    category: "3d-cad",
+    icon: "wrench",
+    tags: ["stl", "mesh", "repair", "3d printing", "topology", "winding"],
+    locales: {
+      ar: {
+        name: "إصلاح شبكة STL",
+        description:
+          "أصلح ملفات STL الثنائية أو النصية بترميز ASCII في متصفحك. أزل المثلثات المكررة والمنعدمة المساحة، وصحّح أخطاء اتجاه الأوجه الواضحة، وقارن طوبولوجيا الشبكة قبل التنزيل.",
+      },
+      de: {
+        name: "STL-Netzreparatur",
+        description:
+          "Repariere binäre und ASCII-STL-Dateien im Browser. Entferne doppelte Dreiecke und Dreiecke ohne Fläche, korrigiere eindeutige Ausrichtungsfehler und vergleiche die Topologie vor dem Download.",
+      },
+      en: {
+        name: "STL Mesh Repair",
+        description:
+          "Repair binary or ASCII STL files in your browser. Remove duplicate and zero-area triangles, fix clear face orientation issues, and compare mesh topology before downloading.",
+      },
+      es: {
+        name: "Reparación de mallas STL",
+        description:
+          "Repara archivos STL binarios o ASCII en tu navegador. Elimina triángulos duplicados o de área cero, corrige problemas claros de orientación de las caras y compara la topología antes de descargar.",
+      },
+      fr: {
+        name: "Réparation de maillages STL",
+        description:
+          "Réparez des fichiers STL binaires ou ASCII dans votre navigateur. Supprimez les triangles en double ou d’aire nulle, corrigez les orientations clairement incohérentes et comparez la topologie avant de télécharger.",
+      },
+      he: {
+        name: "תיקון רשת STL",
+        description:
+          "תקנו בדפדפן קובצי STL בינאריים או בקידוד ASCII. הסירו משולשים כפולים ומשולשים ששטחם אפס, תקנו כיווני פאות שגויים במקרים ברורים והשוו את טופולוגיית הרשת לפני ההורדה.",
+      },
+      hi: {
+        name: "STL मेश रिपेयर",
+        description:
+          "अपने ब्राउज़र में बाइनरी या ASCII STL फ़ाइलें ठीक करें। डुप्लिकेट और शून्य क्षेत्रफल वाले त्रिकोण हटाएँ, फ़ेस की दिशा की साफ़ गड़बड़ियाँ ठीक करें और डाउनलोड से पहले मेश की टोपोलॉजी की तुलना करें।",
+      },
+      id: {
+        name: "Perbaikan Mesh STL",
+        description:
+          "Perbaiki file STL biner atau ASCII di browser. Hapus segitiga duplikat dan segitiga berluas nol, perbaiki masalah orientasi muka yang jelas, lalu bandingkan topologi mesh sebelum mengunduh.",
+      },
+      it: {
+        name: "Riparazione mesh STL",
+        description:
+          "Ripara file STL binari o ASCII nel browser. Rimuovi i triangoli duplicati o con area nulla, correggi i problemi evidenti di orientamento delle facce e confronta la topologia prima di scaricare.",
+      },
+      ja: {
+        name: "STL メッシュ修復",
+        description:
+          "バイナリまたは ASCII 形式の STL ファイルをブラウザーで修復します。重複した三角形と面積ゼロの三角形を削除し、明らかな面の向きの問題を修正して、ダウンロード前にトポロジーを比較できます。",
+      },
+      ko: {
+        name: "STL 메시 복구",
+        description:
+          "브라우저에서 바이너리 또는 ASCII STL 파일을 복구하세요. 중복 삼각형과 면적이 0인 삼각형을 제거하고 명확한 면 방향 문제를 수정한 다음 다운로드 전에 메시 토폴로지를 비교합니다.",
+      },
+      ms: {
+        name: "Pembaikan Jejaring STL",
+        description:
+          "Baiki fail STL binari atau ASCII dalam pelayar. Buang segi tiga pendua dan segi tiga berluas sifar, betulkan masalah orientasi muka yang jelas, dan bandingkan topologi jejaring sebelum memuat turun.",
+      },
+      nl: {
+        name: "STL-netreparatie",
+        description:
+          "Repareer binaire en ASCII STL-bestanden in je browser. Verwijder dubbele driehoeken en driehoeken zonder oppervlakte, herstel duidelijke oriëntatiefouten en vergelijk de topologie voordat je downloadt.",
+      },
+      no: {
+        name: "Reparer STL-nett",
+        description:
+          "Reparer binære STL-filer og STL-filer i ASCII-format i nettleseren. Fjern duplikate trekanter og trekanter uten areal, rett tydelige orienteringsfeil og sammenlign topologien før nedlasting.",
+      },
+      pl: {
+        name: "Naprawa siatki STL",
+        description:
+          "Naprawiaj pliki STL w formacie binarnym lub ASCII w przeglądarce. Usuwaj powielone trójkąty i trójkąty o zerowym polu, koryguj jednoznaczne błędy orientacji ścian i porównuj topologię przed pobraniem.",
+      },
+      pt: {
+        name: "Reparo de malhas STL",
+        description:
+          "Repare arquivos STL binários ou ASCII no navegador. Remova triângulos duplicados ou de área zero, corrija problemas claros de orientação das faces e compare a topologia antes de baixar.",
+      },
+      ru: {
+        name: "Исправление сетки STL",
+        description:
+          "Исправляйте двоичные и текстовые STL в кодировке ASCII прямо в браузере. Удаляйте дублирующиеся треугольники и треугольники нулевой площади, исправляйте явные ошибки ориентации граней и сравнивайте топологию сетки перед скачиванием.",
+      },
+      sv: {
+        name: "Reparera STL-nät",
+        description:
+          "Reparera binära STL-filer och STL-filer i ASCII-format i webbläsaren. Ta bort dubbla trianglar och trianglar utan area, åtgärda tydliga orienteringsfel och jämför topologin före nedladdning.",
+      },
+      th: {
+        name: "เครื่องมือซ่อมเมช STL",
+        description:
+          "ซ่อมไฟล์ STL แบบไบนารีหรือ ASCII ในเบราว์เซอร์ ลบสามเหลี่ยมซ้ำและสามเหลี่ยมที่มีพื้นที่เป็นศูนย์ แก้ทิศทางหน้าเมชที่ผิดอย่างชัดเจน และเปรียบเทียบโทโพโลยีก่อนดาวน์โหลด",
+      },
+      tr: {
+        name: "STL Ağ Onarımı",
+        description:
+          "İkili veya ASCII STL dosyalarını tarayıcınızda onarın. Yinelenen ve sıfır alanlı üçgenleri kaldırın, belirgin yüz yönü hatalarını düzeltin ve indirmeden önce ağ topolojisini karşılaştırın.",
+      },
+      vi: {
+        name: "Sửa lưới STL",
+        description:
+          "Sửa tệp STL dạng nhị phân hoặc ASCII trong trình duyệt. Loại bỏ tam giác trùng lặp và tam giác có diện tích bằng 0, chỉnh các mặt có hướng sai rõ ràng và so sánh tô pô lưới trước khi tải xuống.",
+      },
+      "zh-CN": {
+        name: "STL 网格修复",
+        description:
+          "在浏览器中修复二进制或 ASCII STL 文件。删除重复及零面积三角形，修正明确的面方向问题，并在下载前比较网格拓扑。",
+      },
+      "zh-TW": {
+        name: "STL 網格修復",
+        description:
+          "在瀏覽器中修復二進位或 ASCII STL 檔案。移除重複及零面積三角形、修正明確的面方向問題，並在下載前比較網格拓撲。",
+      },
+    },
+  },
+  {
     slug: "stl-to-3mf-converter",
     category: "3d-cad",
     icon: "arrow-left-right",

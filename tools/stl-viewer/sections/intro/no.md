@@ -21,3 +21,5 @@ STL beskriver overflaten til en del med trekanter. Bruk [OBJ-viseren](../obj-vie
 Bruk [STEP til STL-konvertereren](../step-to-stl-converter/) til å eksportere et trekantnett fra den opprinnelige CAD-modellen i STEP- eller STP-format.
 
 Bruk [STL til 3MF-konvertereren](../stl-to-3mf-converter/) til å lagre modellens måleenhet i en 3MF-fil.
+
+Bruk [Reparer STL-nett](../stl-mesh-repair/) til å fjerne duplikate flater og flater uten areal, rette tydelige orienteringsfeil og sjekke hva som gjenstår.

@@ -1,0 +1,16 @@
+{
+  "action": "STL reparieren",
+  "drop": "STL-Datei hier ablegen",
+  "working": "Netz wird repariert …",
+  "failed": "Die STL-Datei ließ sich nicht lesen. Öffne eine gültige ASCII- oder binäre STL-Datei.",
+  "result": "Reparaturergebnis",
+  "previous": "Vorherige Reparatur",
+  "before": "Vorher",
+  "after": "Nachher",
+  "flipped": "Neu ausgerichtete Flächen: {count}",
+  "complete": "Das reparierte Netz besteht diese Topologieprüfungen.",
+  "remaining": "Einige Topologieprobleme müssen noch behoben werden.",
+  "unchanged": "Es wurden keine Flächen gefunden, die sich mit diesem Tool reparieren lassen.",
+  "empty": "Es sind keine Dreiecke mit Flächeninhalt für den Export übrig.",
+  "download": "STL herunterladen"
+}

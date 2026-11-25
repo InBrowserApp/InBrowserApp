@@ -1,0 +1,16 @@
+{
+  "action": "STL 복구",
+  "drop": "여기에 STL 파일을 놓으세요",
+  "working": "메시를 복구하는 중…",
+  "failed": "이 STL을 읽을 수 없습니다. 올바른 ASCII 또는 바이너리 STL 파일을 여세요.",
+  "result": "복구 결과",
+  "previous": "이전 복구",
+  "before": "복구 전",
+  "after": "복구 후",
+  "flipped": "방향을 조정한 면: {count}",
+  "complete": "복구된 메시가 이 토폴로지 검사를 통과했습니다.",
+  "remaining": "아직 확인해야 할 토폴로지 문제가 있습니다.",
+  "unchanged": "복구할 수 있는 면이 없습니다.",
+  "empty": "내보낼 면적이 있는 삼각형이 남아 있지 않습니다.",
+  "download": "STL 다운로드"
+}
