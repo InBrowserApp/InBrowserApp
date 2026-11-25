@@ -1,0 +1,13 @@
+{
+  "source": "ABC-notasjon",
+  "placeholder": "Lim inn eller skriv ABC-notasjon her",
+  "open": "Åpne ABC-fil",
+  "example": "Prøv et eksempel",
+  "preview": "Forhåndsvisning av notene",
+  "empty": "Notene vises her mens du skriver.",
+  "noNotes": "Legg til noter under ABC-feltene for å se partituret.",
+  "loading": "Tegner notene…",
+  "invalid": "Partituret kunne ikke vises. Kontroller ABC-notasjonen og prøv igjen.",
+  "fileError": "Filen kunne ikke leses. Prøv å åpne den på nytt eller lim inn ABC-teksten.",
+  "warnings": "Meldinger om ABC-notasjon"
+}

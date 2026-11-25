@@ -1,0 +1,13 @@
+{
+  "source": "ABC notation",
+  "placeholder": "Paste or type ABC notation here",
+  "open": "Open ABC file",
+  "example": "Try an example",
+  "preview": "Sheet music preview",
+  "empty": "Your sheet music appears here as you type.",
+  "noNotes": "Add notes below the ABC header to see the score.",
+  "loading": "Drawing sheet music…",
+  "invalid": "The score could not be drawn. Check the ABC notation and try again.",
+  "fileError": "This file could not be read. Try opening it again or paste the ABC text.",
+  "warnings": "ABC notation messages"
+}

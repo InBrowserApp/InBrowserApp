@@ -1,0 +1,13 @@
+{
+  "source": "ABC 记谱",
+  "placeholder": "在此粘贴或输入 ABC 记谱文本",
+  "open": "打开 ABC 文件",
+  "example": "试用示例",
+  "preview": "乐谱预览",
+  "empty": "输入时，乐谱会显示在这里。",
+  "noNotes": "在 ABC 标头下方添加音符以查看乐谱。",
+  "loading": "正在绘制乐谱…",
+  "invalid": "无法绘制乐谱。请检查 ABC 记谱文本后重试。",
+  "fileError": "无法读取此文件。请尝试重新打开或粘贴 ABC 文本。",
+  "warnings": "ABC 记谱消息"
+}

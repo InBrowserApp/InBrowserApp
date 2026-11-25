@@ -1,0 +1,13 @@
+{
+  "source": "Notación ABC",
+  "placeholder": "Pega o escribe aquí la notación ABC",
+  "open": "Abrir archivo ABC",
+  "example": "Probar un ejemplo",
+  "preview": "Vista previa de la partitura",
+  "empty": "La partitura aparecerá aquí mientras escribes.",
+  "noNotes": "Añade notas debajo del encabezado ABC para ver la partitura.",
+  "loading": "Generando partitura…",
+  "invalid": "No se pudo mostrar la partitura. Revisa la notación ABC e inténtalo de nuevo.",
+  "fileError": "No se pudo leer el archivo. Intenta abrirlo de nuevo o pega el texto ABC.",
+  "warnings": "Mensajes de notación ABC"
+}

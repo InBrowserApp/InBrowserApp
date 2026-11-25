@@ -1,0 +1,13 @@
+{
+  "source": "Notasi ABC",
+  "placeholder": "Tampal atau taip notasi ABC di sini",
+  "open": "Buka fail ABC",
+  "example": "Cuba contoh",
+  "preview": "Pratonton skor muzik",
+  "empty": "Skor muzik akan dipaparkan di sini semasa anda menaip.",
+  "noNotes": "Tambahkan not di bawah pengepala ABC untuk melihat skor.",
+  "loading": "Memaparkan skor muzik…",
+  "invalid": "Skor tidak dapat dipaparkan. Semak notasi ABC dan cuba lagi.",
+  "fileError": "Fail ini tidak dapat dibaca. Cuba buka semula atau tampal teks ABC.",
+  "warnings": "Mesej notasi ABC"
+}

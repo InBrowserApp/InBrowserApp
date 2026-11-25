@@ -1,0 +1,13 @@
+{
+  "source": "Notazione ABC",
+  "placeholder": "Incolla o scrivi qui il testo in notazione ABC",
+  "open": "Apri file ABC",
+  "example": "Prova un esempio",
+  "preview": "Anteprima dello spartito",
+  "empty": "Lo spartito appare qui mentre scrivi.",
+  "noNotes": "Aggiungi le note sotto l’intestazione ABC per vedere lo spartito.",
+  "loading": "Generazione dello spartito…",
+  "invalid": "Impossibile mostrare lo spartito. Controlla la notazione ABC e riprova.",
+  "fileError": "Impossibile leggere il file. Prova a riaprirlo o incolla il testo ABC.",
+  "warnings": "Messaggi sulla notazione ABC"
+}

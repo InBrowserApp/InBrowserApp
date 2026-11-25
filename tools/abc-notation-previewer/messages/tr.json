@@ -1,0 +1,13 @@
+{
+  "source": "ABC nota yazımı",
+  "placeholder": "ABC nota yazımını buraya yapıştırın veya yazın",
+  "open": "ABC dosyası aç",
+  "example": "Bir örnek deneyin",
+  "preview": "Nota önizlemesi",
+  "empty": "Yazdıkça notalar burada görünür.",
+  "noNotes": "Partisyonu görmek için ABC başlığının altına notalar ekleyin.",
+  "loading": "Notalar çiziliyor…",
+  "invalid": "Partisyon çizilemedi. ABC nota yazımını kontrol edip tekrar deneyin.",
+  "fileError": "Dosya okunamadı. Tekrar açmayı deneyin veya ABC metnini yapıştırın.",
+  "warnings": "ABC nota yazımı bildirimleri"
+}

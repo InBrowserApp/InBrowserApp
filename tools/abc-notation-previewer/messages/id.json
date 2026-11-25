@@ -1,0 +1,13 @@
+{
+  "source": "Notasi ABC",
+  "placeholder": "Tempel atau ketik notasi ABC di sini",
+  "open": "Buka file ABC",
+  "example": "Coba contoh",
+  "preview": "Pratinjau partitur",
+  "empty": "Partitur akan muncul di sini saat Anda mengetik.",
+  "noNotes": "Tambahkan not di bawah header ABC untuk melihat partitur.",
+  "loading": "Menyiapkan partitur…",
+  "invalid": "Partitur tidak dapat ditampilkan. Periksa notasi ABC, lalu coba lagi.",
+  "fileError": "File ini tidak dapat dibaca. Coba buka lagi atau tempel teks ABC.",
+  "warnings": "Pesan notasi ABC"
+}

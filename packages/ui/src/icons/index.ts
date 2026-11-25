@@ -85,6 +85,7 @@ export {
   LoaderCircle,
   Lock,
   List,
+  ListMusic,
   Mic,
   Mouse,
   Map,

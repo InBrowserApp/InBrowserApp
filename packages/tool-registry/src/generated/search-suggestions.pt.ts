@@ -13,6 +13,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "3mf-viewer",
   },
   {
+    category: "misc",
+    name: "Pré-visualizador de notação ABC",
+    slug: "abc-notation-previewer",
+  },
+  {
     category: "crypto",
     name: "Hash Adler-32 de Texto ou Arquivo",
     slug: "adler32-hash-text-or-file",

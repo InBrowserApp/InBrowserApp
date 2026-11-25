@@ -13,6 +13,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "3mf-viewer",
   },
   {
+    category: "misc",
+    name: "Trình xem trước ký âm ABC",
+    slug: "abc-notation-previewer",
+  },
+  {
     category: "crypto",
     name: "Hash Adler-32 văn bản hoặc tệp",
     slug: "adler32-hash-text-or-file",
