@@ -1,7 +1,10 @@
 import { loadDefaultSoundBank } from "@workspace/midi-audio/sound-bank"
+import { parseMidi } from "midi-file"
 import { Sequencer, WorkletSynthesizer } from "spessasynth_lib"
 import processorUrl from "spessasynth_lib/dist/spessasynth_processor.min.js?url"
+import { heldNotesAt } from "./held-notes"
 
+import type { MidiData } from "midi-file"
 import type { LibSequencerEvent } from "spessasynth_lib"
 
 export interface MidiPlayback {
@@ -61,11 +64,13 @@ export async function openMidiPlayback(
     const sequencer = new Sequencer(synth, { skipToFirstNoteOn: false })
     const { eventHandler } = sequencer
     let duration = 0
+    let mix: MidiData
     let speed = 1
     let loop = false
     let wantsPlayback = false
     let loadingPosition: number | undefined
     let resumePosition: number | undefined
+    let restorePosition: number | undefined
     let queue = Promise.resolve()
     const eventId = "midi-player-load"
     eventHandler.addEvent("songEnded", "midi-player-loop", () => {
@@ -73,8 +78,26 @@ export async function openMidiPlayback(
         return
       }
       // The native loop can start at the first note or an embedded marker.
+      restorePosition = undefined
       sequencer.currentTime = 0
       sequencer.play()
+    })
+    eventHandler.addEvent("timeChange", "midi-player-notes", ({ newTime }) => {
+      if (
+        closed ||
+        !wantsPlayback ||
+        restorePosition === undefined ||
+        Math.abs(newTime - restorePosition) >= 1e-6
+      ) {
+        return
+      }
+      restorePosition = undefined
+      for (const { channel, noteNumber, velocity } of heldNotesAt(
+        mix,
+        newTime
+      )) {
+        synth.noteOn(channel, noteNumber, velocity)
+      }
     })
 
     function waitFor<Event extends "songChange" | "timeChange">(
@@ -111,10 +134,17 @@ export async function openMidiPlayback(
       return Math.max(0, Math.min(duration, seconds))
     }
 
+    function seekWhilePlaying(target: number) {
+      restorePosition = target > 0 && target < duration ? target : undefined
+      sequencer.currentTime = target
+    }
+
     function replace(input: ArrayBuffer, position: number) {
       const operation = queue.then(async () => {
         if (closed) throw new Error("MIDI playback closed")
+        const nextMix = parseMidi(new Uint8Array(input))
         loadingPosition = clamp(position)
+        restorePosition = undefined
         wantsPlayback = false
         sequencer.pause()
         synth.stopAll(true)
@@ -123,6 +153,7 @@ export async function openMidiPlayback(
             sequencer.loadNewSongList([{ binary: input }])
           )
           duration = sequencer.duration
+          mix = nextMix
           sequencer.playbackRate = speed
           sequencer.loopCount = 0
           const target = clamp(position)
@@ -155,28 +186,28 @@ export async function openMidiPlayback(
       },
       play() {
         if (closed || loadingPosition !== undefined || !sequencer.paused) return
+        const target = resumePosition ?? clamp(sequencer.currentTime)
+        resumePosition = undefined
         wantsPlayback = true
         sequencer.play()
-        // SpessaSynth can round a paused seek forward to the next MIDI event.
-        // Reapply the requested position after starting so resume stays exact.
-        if (
-          resumePosition !== undefined &&
-          resumePosition > 0 &&
-          resumePosition < duration
-        ) {
-          sequencer.currentTime = resumePosition
-        }
-        resumePosition = undefined
+        // A paused seek can round forward to the next MIDI event. Apply the
+        // exact position once playing and restore held notes after its event.
+        if (target > 0 && target < duration) seekWhilePlaying(target)
       },
       pause() {
+        restorePosition = undefined
         wantsPlayback = false
         if (!closed) sequencer.pause()
       },
       seek(seconds) {
         if (!closed && loadingPosition === undefined) {
           const target = clamp(seconds)
-          if (sequencer.paused) resumePosition = target
-          sequencer.currentTime = target
+          if (sequencer.paused) {
+            resumePosition = target
+            sequencer.currentTime = target
+          } else {
+            seekWhilePlaying(target)
+          }
         }
       },
       setSpeed(rate) {
