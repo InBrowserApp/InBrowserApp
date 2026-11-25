@@ -1,6 +1,6 @@
 import { afterEach, expect, it, vi } from "vitest"
 
-import { estimateCost, referenceRates } from "./cost"
+import { estimateCost, referenceRates, suggestedPieces } from "./cost"
 import { fetchMainnetRates } from "./pricing"
 
 const plan = {
@@ -17,12 +17,19 @@ const block = "0x645544"
 afterEach(() => vi.unstubAllGlobals())
 
 it("matches the official 1 TiB two-copy example and separates the reserve", () => {
-  const quote = estimateCost(plan, referenceRates)!
+  const pieces = suggestedPieces(plan.size, plan.unit)
+  expect(pieces).toBe(17)
+  const quote = estimateCost({ ...plan, pieces }, referenceRates)!
   expect(quote.monthly).toBeCloseTo(5.24)
   expect(quote.term).toBeCloseTo(5.24)
-  expect(quote.operations).toBeCloseTo(0.072)
-  expect(quote.spending).toBeCloseTo(5.312)
+  expect(quote.operations).toBeCloseTo(0.168)
+  expect(quote.spending).toBeCloseTo(5.408)
   expect(quote.reserve).toBe(1)
+})
+
+it("suggests another piece immediately above the Synapse payload limit", () => {
+  expect(suggestedPieces(63.5, "GiB")).toBe(1)
+  expect(suggestedPieces(63.5001, "GiB")).toBe(2)
 })
 
 it("prorates retention, converts binary units, and charges by batch and piece", () => {

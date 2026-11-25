@@ -8,7 +8,7 @@ Elke actieve dataset betaalt een opslagtarief op basis van grootte plus een vast
 
 ## Uploadkosten en de terugbetaalbare reserve plannen
 
-Open **Uploaddetails** om het aantal pieces en uploadbatches per kopie in te voeren. Standaard is dit één piece in één batch. Elke kopie heeft eigen kosten voor het aanmaken van een dataset; voor het toevoegen van pieces geldt een basisbedrag per batch plus een bedrag per piece. De levenscyclusreserve is een saldo dat de dienst aanhoudt voor operaties. De getoonde reserve staat los van de geschatte uitgaven; ongebruikte middelen komen na afrekening vrij. Deze schatting dekt een nieuwe upload en de bijbehorende opslagtermijn. Ophalen en latere operaties hebben eigen kosten.
+Open **Uploaddetails** om het aantal pieces en uploadbatches per kopie in te voeren. De schatting begint met één batch per kopie. Laat het aantal pieces leeg om het minimum te schatten op basis van de uploadlimiet van 63,5 GiB van de Synapse SDK, of voer je werkelijke aantallen in. Elke kopie heeft eigen kosten voor het aanmaken van een dataset; voor het toevoegen van pieces geldt een basisbedrag per batch plus een bedrag per piece. De levenscyclusreserve is een saldo dat de dienst aanhoudt voor operaties. De getoonde reserve staat los van de geschatte uitgaven; ongebruikte middelen komen na afrekening vrij. Deze schatting dekt een nieuwe upload en de bijbehorende opslagtermijn. Ophalen en latere operaties hebben eigen kosten. Zie de [groottebeperkingen van de Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Waar de Filecoin-tarieven vandaan komen
 

@@ -8,7 +8,7 @@ Her etkin veri kümesi için boyuta bağlı bir depolama ücreti ve Veri Bulundu
 
 ## Yükleme ücretlerini ve iade edilebilir rezervi planlama
 
-Her kopyanın kaç parça ve yükleme grubundan oluşacağını belirtmek için **Yükleme ayrıntıları** bölümünü açın. Varsayılan değer, bir grupta bir parçadır. Her kopya için ayrı bir veri kümesi oluşturma ücreti alınır. Parça eklerken grup başına taban ücrete parça başına ücret de eklenir. Yaşam döngüsü rezervi, hizmetin işlemleri karşılamak için tuttuğu bakiyedir. Rezerv, tahmini harcamadan ayrı gösterilir. Kullanılmayan bakiye hesaplaşma tamamlandıktan sonra serbest bırakılır. Tahmin, yeni bir yüklemeyi ve saklama süresini kapsar. Veri alma ve sonraki işlemler ayrı ücretlendirilir.
+Her kopyanın kaç parça ve yükleme grubundan oluşacağını belirtmek için **Yükleme ayrıntıları** bölümünü açın. Tahmin başlangıçta kopya başına bir yükleme grubu kullanır. Synapse SDK'nın 63,5 GiB yükleme sınırına göre gereken en az parça sayısını hesaplamak için alanı boş bırakın veya gerçek parça ve grup sayılarını girin. Her kopya için ayrı bir veri kümesi oluşturma ücreti alınır. Parça eklerken grup başına taban ücrete parça başına ücret de eklenir. Yaşam döngüsü rezervi, hizmetin işlemleri karşılamak için tuttuğu bakiyedir. Rezerv, tahmini harcamadan ayrı gösterilir. Kullanılmayan bakiye hesaplaşma tamamlandıktan sonra serbest bırakılır. Tahmin, yeni bir yüklemeyi ve saklama süresini kapsar. Veri alma ve sonraki işlemler ayrı ücretlendirilir. [Synapse SDK boyut sınırlarına](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints) bakın.
 
 ## Filecoin tarifeleri nereden gelir?
 

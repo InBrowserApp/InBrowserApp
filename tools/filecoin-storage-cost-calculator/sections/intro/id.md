@@ -8,7 +8,7 @@ Setiap set data aktif dikenai tarif penyimpanan berdasarkan ukurannya, ditambah 
 
 ## Rencanakan biaya unggahan dan cadangan yang dapat dikembalikan
 
-Buka **Detail unggahan** untuk memasukkan jumlah piece dan batch unggahan untuk tiap salinan. Setelan bawaan menggunakan satu piece dalam satu batch. Setiap salinan memiliki biaya pembuatan set data sendiri. Penambahan piece dikenai biaya dasar per batch dan biaya per piece. Layanan menahan saldo cadangan untuk menutup biaya operasi selama siklus hidup data. Cadangan ditampilkan terpisah dari perkiraan pengeluaran. Dana yang tidak terpakai dilepas setelah penyelesaian tagihan. Perkiraan ini mencakup unggahan baru dan masa simpannya. Pengambilan data dan operasi selanjutnya memiliki biaya tersendiri.
+Buka **Detail unggahan** untuk memasukkan jumlah piece dan batch unggahan untuk tiap salinan. Secara bawaan, perkiraan menggunakan satu batch per salinan. Kosongkan jumlah piece untuk memperkirakan jumlah minimum dengan batas unggahan Synapse SDK sebesar 63,5 GiB, atau masukkan jumlah sebenarnya. Setiap salinan memiliki biaya pembuatan set data sendiri. Penambahan piece dikenai biaya dasar per batch dan biaya per piece. Layanan menahan saldo cadangan untuk menutup biaya operasi selama siklus hidup data. Cadangan ditampilkan terpisah dari perkiraan pengeluaran. Dana yang tidak terpakai dilepas setelah penyelesaian tagihan. Perkiraan ini mencakup unggahan baru dan masa simpannya. Pengambilan data dan operasi selanjutnya memiliki biaya tersendiri. Lihat [batas ukuran Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Dari mana tarif Filecoin berasal?
 

@@ -8,7 +8,7 @@ Each active data set pays a size-based storage rate plus a flat fee for Proof of
 
 ## Plan upload fees and the refundable reserve
 
-Open **Upload details** to enter how many pieces and upload batches each copy will contain. The default is one piece in one batch. Each copy has its own data set creation fee, and adding pieces has a base fee per batch plus a fee per piece. The lifecycle reserve is a balance the service holds to cover operations. The displayed reserve is separate from estimated spending, and unused funds are released after settlement. This estimate covers a new upload and its storage term. Retrieval and later operations have their own charges.
+Open **Upload details** to enter how many pieces and upload batches each copy will contain. The estimate starts with one batch per copy. Keep the piece count blank to estimate the minimum from the Synapse SDK's 63.5 GiB upload limit, or enter your actual counts. Each copy has its own data set creation fee, and adding pieces has a base fee per batch plus a fee per piece. The lifecycle reserve is a balance the service holds to cover operations. The displayed reserve is separate from estimated spending, and unused funds are released after settlement. This estimate covers a new upload and its storage term. Retrieval and later operations have their own charges. See [Synapse SDK size constraints](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Where the Filecoin rates come from
 

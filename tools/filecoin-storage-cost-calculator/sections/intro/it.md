@@ -8,7 +8,7 @@ Ogni set di dati attivo paga una tariffa di archiviazione basata sulla dimension
 
 ## Pianifica i costi di caricamento e la riserva rimborsabile
 
-Apri **Dettagli del caricamento** per inserire quanti piece e batch di caricamento conterrà ogni copia. Il valore predefinito è un piece in un batch. Ogni copia ha un costo di creazione del proprio set di dati; l’aggiunta di piece prevede una quota base per batch più una quota per piece. La riserva per il ciclo di vita è un saldo trattenuto dal servizio per coprire le operazioni. La riserva mostrata è distinta dalla spesa stimata e i fondi non utilizzati vengono svincolati dopo la liquidazione. Questa stima copre un nuovo caricamento e il relativo periodo di archiviazione. Il recupero dei dati e le operazioni successive comportano costi propri.
+Apri **Dettagli del caricamento** per inserire quanti piece e batch di caricamento conterrà ogni copia. La stima parte da un batch per copia. Lascia vuoto il numero di piece per stimare il minimo dal limite di caricamento di 63,5 GiB di Synapse SDK, oppure inserisci i valori effettivi. Ogni copia ha un costo di creazione del proprio set di dati; l’aggiunta di piece prevede una quota base per batch più una quota per piece. La riserva per il ciclo di vita è un saldo trattenuto dal servizio per coprire le operazioni. La riserva mostrata è distinta dalla spesa stimata e i fondi non utilizzati vengono svincolati dopo la liquidazione. Questa stima copre un nuovo caricamento e il relativo periodo di archiviazione. Il recupero dei dati e le operazioni successive comportano costi propri. Consulta i [limiti di dimensione di Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Da dove provengono le tariffe Filecoin
 

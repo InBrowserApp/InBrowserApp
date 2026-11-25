@@ -8,7 +8,7 @@ Setiap set data aktif dikenakan kadar storan mengikut saiz, ditambah yuran tetap
 
 ## Rancang yuran muat naik dan rizab yang boleh dikembalikan
 
-Buka **Butiran muat naik** untuk memasukkan bilangan piece dan kelompok muat naik bagi setiap salinan. Tetapan lalai ialah satu piece dalam satu kelompok. Setiap salinan dikenakan yuran penciptaan set data sendiri. Penambahan piece dikenakan yuran asas bagi setiap kelompok serta yuran bagi setiap piece. Perkhidmatan memegang rizab untuk menampung kos operasi sepanjang kitar hayat data. Rizab dipaparkan secara berasingan daripada anggaran perbelanjaan. Baki yang tidak digunakan dilepaskan selepas caj diselesaikan. Anggaran ini meliputi muat naik baharu dan tempoh penyimpanannya. Pengambilan data dan operasi selepas itu mempunyai caj tersendiri.
+Buka **Butiran muat naik** untuk memasukkan bilangan piece dan kelompok muat naik bagi setiap salinan. Anggaran lalai menggunakan satu kelompok bagi setiap salinan. Biarkan bilangan piece kosong untuk menganggarkan bilangan minimum berdasarkan had muat naik Synapse SDK sebanyak 63.5 GiB, atau masukkan bilangan sebenar. Setiap salinan dikenakan yuran penciptaan set data sendiri. Penambahan piece dikenakan yuran asas bagi setiap kelompok serta yuran bagi setiap piece. Perkhidmatan memegang rizab untuk menampung kos operasi sepanjang kitar hayat data. Rizab dipaparkan secara berasingan daripada anggaran perbelanjaan. Baki yang tidak digunakan dilepaskan selepas caj diselesaikan. Anggaran ini meliputi muat naik baharu dan tempoh penyimpanannya. Pengambilan data dan operasi selepas itu mempunyai caj tersendiri. Lihat [had saiz Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Dari manakah kadar Filecoin diperoleh?
 

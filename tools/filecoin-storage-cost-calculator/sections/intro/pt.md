@@ -8,7 +8,7 @@ Cada conjunto de dados ativo está sujeito a uma tarifa de armazenamento baseada
 
 ## Planear as taxas de envio e a reserva reembolsável
 
-Abra **Detalhes do envio** para indicar quantas peças e lotes de envio terá cada cópia. Por predefinição, é uma peça num lote. Cada cópia tem a sua própria taxa de criação do conjunto de dados. A adição de peças tem uma taxa base por lote e uma taxa por peça. A reserva para o ciclo de vida é um saldo que o serviço retém para cobrir operações. A reserva apresentada é separada da despesa estimada e os fundos não utilizados são libertados após a liquidação. A estimativa abrange um novo envio e o respetivo período de armazenamento. A recuperação de dados e as operações posteriores têm custos próprios.
+Abra **Detalhes do envio** para indicar quantas peças e lotes de envio terá cada cópia. A estimativa começa com um lote por cópia. Deixe o número de peças em branco para estimar o mínimo a partir do limite de envio de 63,5 GiB do SDK do Synapse ou introduza as quantidades reais. Cada cópia tem a sua própria taxa de criação do conjunto de dados. A adição de peças tem uma taxa base por lote e uma taxa por peça. A reserva para o ciclo de vida é um saldo que o serviço retém para cobrir operações. A reserva apresentada é separada da despesa estimada e os fundos não utilizados são libertados após a liquidação. A estimativa abrange um novo envio e o respetivo período de armazenamento. A recuperação de dados e as operações posteriores têm custos próprios. Consulte os [limites de tamanho do SDK do Synapse](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## De onde vêm as tarifas do Filecoin
 

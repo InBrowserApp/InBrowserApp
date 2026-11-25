@@ -26,6 +26,11 @@ export const referenceRates: Rates = {
   reserve: 0.5,
 }
 
+export function suggestedPieces(size: number, unit: SizeUnit) {
+  // The Synapse SDK accepts up to 63.5 GiB of payload per upload.
+  return Math.max(1, Math.ceil((size * sizes[unit] * 1024) / 63.5))
+}
+
 export function estimateCost(
   plan: {
     size: number

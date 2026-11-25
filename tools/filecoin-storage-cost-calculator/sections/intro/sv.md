@@ -8,7 +8,7 @@ Varje aktiv datamängd betalar en storleksbaserad lagringstariff plus en fast av
 
 ## Planera uppladdningsavgifter och återbetalningsbar reserv
 
-Öppna **Uppladdningsdetaljer** för att ange hur många pieces och uppladdningsbatcher varje kopia innehåller. Standardvärdet är en piece i en batch. Varje kopia har en egen avgift för att skapa datamängden, och tillägg av pieces har en grundavgift per batch plus en avgift per piece. Livscykelreserven är ett saldo som tjänsten håller för att täcka operationer. Den visade reserven är separat från de beräknade utgifterna och oanvända medel frigörs efter slutavräkning. Uppskattningen omfattar en ny uppladdning och dess lagringsperiod. Hämtning och senare operationer har egna avgifter.
+Öppna **Uppladdningsdetaljer** för att ange hur många pieces och uppladdningsbatcher varje kopia innehåller. Uppskattningen börjar med en batch per kopia. Lämna antalet pieces tomt för att uppskatta minimum utifrån Synapse SDK:s uppladdningsgräns på 63,5 GiB, eller ange de faktiska antalen. Varje kopia har en egen avgift för att skapa datamängden, och tillägg av pieces har en grundavgift per batch plus en avgift per piece. Livscykelreserven är ett saldo som tjänsten håller för att täcka operationer. Den visade reserven är separat från de beräknade utgifterna och oanvända medel frigörs efter slutavräkning. Uppskattningen omfattar en ny uppladdning och dess lagringsperiod. Hämtning och senare operationer har egna avgifter. Se [storleksbegränsningarna i Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Var Filecoin-tarifferna kommer ifrån
 

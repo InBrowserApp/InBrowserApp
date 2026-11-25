@@ -8,7 +8,7 @@ Chaque jeu de données actif est facturé selon sa taille, avec un forfait pour 
 
 ## Prévoir les frais d’envoi et la réserve remboursable
 
-Ouvrez **Détails de l’envoi** pour définir le nombre de pièces et de lots d’envoi par copie. Le réglage par défaut est d’une pièce dans un lot. Chaque copie entraîne des frais de création de son jeu de données. L’ajout de pièces entraîne des frais de base par lot et des frais par pièce. La réserve pour le cycle de vie est un solde retenu par le service pour couvrir les opérations. La réserve affichée est distincte des dépenses estimées. Les fonds inutilisés sont libérés après le règlement. L’estimation couvre un nouvel envoi et sa durée de stockage. La récupération et les opérations ultérieures font l’objet de frais propres.
+Ouvrez **Détails de l’envoi** pour définir le nombre de pièces et de lots d’envoi par copie. L’estimation prévoit un lot par copie par défaut. Laissez le nombre de pièces vide pour estimer le minimum à partir de la limite d’envoi de 63,5 GiB du SDK Synapse, ou saisissez les quantités réelles. Chaque copie entraîne des frais de création de son jeu de données. L’ajout de pièces entraîne des frais de base par lot et des frais par pièce. La réserve pour le cycle de vie est un solde retenu par le service pour couvrir les opérations. La réserve affichée est distincte des dépenses estimées. Les fonds inutilisés sont libérés après le règlement. L’estimation couvre un nouvel envoi et sa durée de stockage. La récupération et les opérations ultérieures font l’objet de frais propres. Consultez les [limites de taille du SDK Synapse](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## D’où viennent les tarifs Filecoin ?
 

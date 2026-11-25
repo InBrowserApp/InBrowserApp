@@ -8,7 +8,7 @@ Por cada conjunto de datos activo se paga una tarifa de almacenamiento que depen
 
 ## Planifica los cargos de subida y la reserva reembolsable
 
-Abre **Detalles de la subida** para indicar cuántas piezas y lotes de subida incluye cada copia. La opción predeterminada es una pieza en un lote. Cada copia tiene su propio cargo por crear el conjunto de datos. Añadir piezas tiene un cargo base por lote y un cargo por pieza. La reserva para el ciclo de vida es un saldo que el servicio retiene para cubrir operaciones. La reserva que se muestra se mantiene separada del gasto estimado y los fondos sin utilizar se liberan después de la liquidación. Esta estimación cubre una subida nueva y su plazo de almacenamiento. La recuperación de datos y las operaciones posteriores tienen sus propios cargos.
+Abre **Detalles de la subida** para indicar cuántas piezas y lotes de subida incluye cada copia. La estimación parte de un lote por copia. Deja en blanco el número de piezas para estimar el mínimo a partir del límite de subida de 63,5 GiB del SDK de Synapse o introduce las cantidades reales. Cada copia tiene su propio cargo por crear el conjunto de datos. Añadir piezas tiene un cargo base por lote y un cargo por pieza. La reserva para el ciclo de vida es un saldo que el servicio retiene para cubrir operaciones. La reserva que se muestra se mantiene separada del gasto estimado y los fondos sin utilizar se liberan después de la liquidación. Esta estimación cubre una subida nueva y su plazo de almacenamiento. La recuperación de datos y las operaciones posteriores tienen sus propios cargos. Consulta los [límites de tamaño del SDK de Synapse](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## De dónde proceden las tarifas de Filecoin
 

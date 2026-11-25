@@ -8,7 +8,7 @@ Hvert aktive datasett betaler en størrelsesbasert lagringspris pluss et fast ge
 
 ## Planlegg opplastingsgebyrer og refunderbar reserve
 
-Åpne **Opplastingsdetaljer** for å angi hvor mange pieces og opplastingspartier hver kopi skal inneholde. Standard er én piece i ett parti. Hver kopi har sitt eget gebyr for opprettelse av datasett, og det å legge til pieces har et grunngebyr per parti pluss et gebyr per piece. Livssyklusreserven er en saldo tjenesten holder for å dekke operasjoner. Reserven som vises, er atskilt fra de anslåtte utgiftene, og ubrukte midler frigis etter sluttavregning. Anslaget dekker en ny opplasting og lagringsperioden. Henting og senere operasjoner har egne gebyrer.
+Åpne **Opplastingsdetaljer** for å angi hvor mange pieces og opplastingspartier hver kopi skal inneholde. Anslaget starter med ett parti per kopi. La antallet pieces stå tomt for å anslå minimum ut fra opplastingsgrensen på 63,5 GiB i Synapse SDK, eller skriv inn de faktiske antallene. Hver kopi har sitt eget gebyr for opprettelse av datasett, og det å legge til pieces har et grunngebyr per parti pluss et gebyr per piece. Livssyklusreserven er en saldo tjenesten holder for å dekke operasjoner. Reserven som vises, er atskilt fra de anslåtte utgiftene, og ubrukte midler frigis etter sluttavregning. Anslaget dekker en ny opplasting og lagringsperioden. Henting og senere operasjoner har egne gebyrer. Se [størrelsesbegrensningene i Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Hvor Filecoin-prisene kommer fra
 

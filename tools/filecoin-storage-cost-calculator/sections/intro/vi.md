@@ -8,7 +8,7 @@ Mỗi bộ dữ liệu đang hoạt động chịu phí lưu trữ theo dung lư
 
 ## Dự tính phí tải lên và khoản dự phòng có thể hoàn lại
 
-Mở **Chi tiết tải lên** để nhập số piece và số lô tải lên cho mỗi bản sao. Mặc định là một piece trong một lô. Mỗi bản sao có phí tạo bộ dữ liệu riêng. Khi thêm các piece, dịch vụ tính phí cơ bản trên mỗi lô và phí trên mỗi piece. Khoản dự phòng cho vòng đời dữ liệu là số dư dịch vụ giữ để thanh toán các hoạt động. Khoản dự phòng được hiển thị riêng với chi phí ước tính. Số tiền chưa dùng được giải phóng sau khi quyết toán. Ước tính áp dụng cho lần tải lên mới và thời gian lưu trữ tương ứng. Truy xuất dữ liệu và các hoạt động sau đó có mức phí riêng.
+Mở **Chi tiết tải lên** để nhập số piece và số lô tải lên cho mỗi bản sao. Ước tính mặc định dùng một lô trên mỗi bản sao. Để trống số piece để ước tính số lượng tối thiểu theo giới hạn tải lên 63,5 GiB của Synapse SDK, hoặc nhập số lượng thực tế. Mỗi bản sao có phí tạo bộ dữ liệu riêng. Khi thêm các piece, dịch vụ tính phí cơ bản trên mỗi lô và phí trên mỗi piece. Khoản dự phòng cho vòng đời dữ liệu là số dư dịch vụ giữ để thanh toán các hoạt động. Khoản dự phòng được hiển thị riêng với chi phí ước tính. Số tiền chưa dùng được giải phóng sau khi quyết toán. Ước tính áp dụng cho lần tải lên mới và thời gian lưu trữ tương ứng. Truy xuất dữ liệu và các hoạt động sau đó có mức phí riêng. Xem [giới hạn dung lượng của Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Đơn giá Filecoin lấy từ đâu?
 

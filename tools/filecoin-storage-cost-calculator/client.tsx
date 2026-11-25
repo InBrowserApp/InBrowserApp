@@ -10,7 +10,13 @@ import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 import { ChevronDown, RefreshCcw } from "@workspace/ui/icons"
 
-import { estimateCost, referenceRates, sizes, type SizeUnit } from "./core/cost"
+import {
+  estimateCost,
+  referenceRates,
+  sizes,
+  suggestedPieces,
+  type SizeUnit,
+} from "./core/cost"
 import { fetchMainnetRates } from "./core/pricing"
 import type EnglishMessages from "./messages/en.json"
 
@@ -32,7 +38,7 @@ export default function StorageCostCalculator({
     unit: "TiB" as SizeUnit,
     days: "30",
     copies: "2",
-    pieces: "1",
+    pieces: "",
     batches: "1",
   })
   const [live, setLive] = useState<Awaited<
@@ -41,14 +47,25 @@ export default function StorageCostCalculator({
   const [status, setStatus] = useState<"refreshing" | "refreshFailed" | null>(
     null
   )
+  const size = Number(plan.size)
+  const suggested = suggestedPieces(size, plan.unit)
+  const pieces = Number(plan.pieces || suggested)
+  const batches = Number(plan.batches)
+  const validPieces = Number.isSafeInteger(pieces) && pieces > 0
+  const invalidPieces = plan.pieces !== "" && !validPieces
+  const invalidBatches =
+    !Number.isSafeInteger(batches) ||
+    batches < 1 ||
+    (validPieces && batches > pieces)
+  const uploadError = invalidPieces || invalidBatches
   const estimate = estimateCost(
     {
-      size: Number(plan.size),
+      size,
       unit: plan.unit,
       days: Number(plan.days),
       copies: Number(plan.copies),
-      pieces: Number(plan.pieces),
-      batches: Number(plan.batches),
+      pieces,
+      batches,
     },
     live?.rates ?? referenceRates
   )
@@ -57,7 +74,6 @@ export default function StorageCostCalculator({
     dateStyle: "medium",
     timeZone: "UTC",
   })
-  const invalidBatches = Number(plan.batches) > Number(plan.pieces)
 
   useEffect(() => () => active.current?.abort(), [])
 
@@ -85,8 +101,16 @@ export default function StorageCostCalculator({
     field: (typeof planFields)[number] | (typeof details)[number]
   ) {
     const fieldId = `${id}-${field}`
+    const invalid =
+      field === "pieces" ? invalidPieces : field === "batches" && invalidBatches
+    const description = [
+      field === "pieces" ? `${id}-auto-pieces` : null,
+      invalid ? `${id}-batch-error` : null,
+    ]
+      .filter(Boolean)
+      .join(" ")
     return (
-      <Field key={field}>
+      <Field key={field} data-invalid={invalid}>
         <FieldLabel htmlFor={fieldId}>{messages[field]}</FieldLabel>
         <Input
           id={fieldId}
@@ -95,12 +119,15 @@ export default function StorageCostCalculator({
           step={field === "days" ? "any" : 1}
           type="number"
           value={plan[field]}
-          aria-invalid={field === "batches" && invalidBatches}
-          aria-describedby={
-            field === "batches" && invalidBatches
-              ? `${id}-batch-error`
+          placeholder={
+            field === "pieces" &&
+            Number.isSafeInteger(suggested) &&
+            suggested > 0
+              ? numbers.format(suggested)
               : undefined
           }
+          aria-invalid={invalid}
+          aria-describedby={description || undefined}
           onChange={(event) =>
             setPlan({ ...plan, [field]: event.target.value })
           }
@@ -154,8 +181,25 @@ export default function StorageCostCalculator({
             {planFields.map(numberField)}
           </div>
           <details className="group rounded-lg border">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-2 p-3 text-sm font-medium hover:bg-muted/40 [&::-webkit-details-marker]:hidden">
-              {messages.uploadDetails}
+            <summary
+              className="flex cursor-pointer list-none items-center justify-between gap-2 p-3 text-sm font-medium hover:bg-muted/40 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring [&::-webkit-details-marker]:hidden"
+              aria-labelledby={`${id}-upload-details`}
+              aria-describedby={uploadError ? `${id}-batch-error` : undefined}
+            >
+              <span className="grid gap-1">
+                <span id={`${id}-upload-details`}>
+                  {messages.uploadDetails}
+                </span>
+                {uploadError && (
+                  <span
+                    id={`${id}-batch-error`}
+                    role="alert"
+                    className="text-xs font-normal text-destructive"
+                  >
+                    {messages.batchError}
+                  </span>
+                )}
+              </span>
               <ChevronDown
                 aria-hidden="true"
                 className="size-4 shrink-0 text-muted-foreground group-open:rotate-180"
@@ -163,15 +207,13 @@ export default function StorageCostCalculator({
             </summary>
             <div className="grid grid-cols-2 items-end gap-3 border-t p-3">
               {details.map(numberField)}
-            </div>
-            {invalidBatches && (
               <p
-                id={`${id}-batch-error`}
-                className="px-3 pb-3 text-sm text-destructive"
+                id={`${id}-auto-pieces`}
+                className="col-span-2 text-xs text-muted-foreground"
               >
-                {messages.batchError}
+                {messages.autoPieces}
               </p>
-            )}
+            </div>
           </details>
         </ToolPanelCardContent>
       </ToolPanelCard>

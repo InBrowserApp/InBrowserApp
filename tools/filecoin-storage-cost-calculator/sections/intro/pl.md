@@ -8,7 +8,7 @@ Każdy aktywny zbiór danych podlega opłacie za przechowywanie zależnej od roz
 
 ## Jak zaplanować opłaty za przesłanie i rezerwę zwrotną
 
-Otwórz **Szczegóły przesyłania**, aby podać liczbę fragmentów i partii przesyłania dla każdej kopii. Domyślnie jest to jeden fragment w jednej partii. Utworzenie zbioru danych dla każdej kopii wiąże się z osobną opłatą. Na koszt dodawania fragmentów składają się opłata podstawowa za partię i opłata za każdy fragment. Usługa zatrzymuje rezerwę na pokrycie kosztów kolejnych operacji. Rezerwa jest wyświetlana osobno od szacowanych wydatków, a niewykorzystane środki są zwalniane po rozliczeniu. To oszacowanie obejmuje przesłanie nowych danych i wybrany okres przechowywania. Pobieranie danych i późniejsze operacje mają odrębne opłaty.
+Otwórz **Szczegóły przesyłania**, aby podać liczbę fragmentów i partii przesyłania dla każdej kopii. Domyślnie oszacowanie zakłada jedną partię na kopię. Pozostaw pole liczby fragmentów puste, aby obliczyć minimum na podstawie limitu przesyłania 63,5 GiB w Synapse SDK, lub podaj rzeczywiste liczby fragmentów i partii. Utworzenie zbioru danych dla każdej kopii wiąże się z osobną opłatą. Na koszt dodawania fragmentów składają się opłata podstawowa za partię i opłata za każdy fragment. Usługa zatrzymuje rezerwę na pokrycie kosztów kolejnych operacji. Rezerwa jest wyświetlana osobno od szacowanych wydatków, a niewykorzystane środki są zwalniane po rozliczeniu. To oszacowanie obejmuje przesłanie nowych danych i wybrany okres przechowywania. Pobieranie danych i późniejsze operacje mają odrębne opłaty. Zobacz [limity rozmiaru w Synapse SDK](https://docs.filecoin.cloud/developer-guides/synapse/#size-constraints).
 
 ## Skąd pochodzą stawki Filecoin
 
