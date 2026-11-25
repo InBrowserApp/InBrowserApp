@@ -26338,6 +26338,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipynb-to-pdf-converter",
+    category: "pdf",
+    secondaryCategories: ["document"],
+    icon: "file-text",
+    tags: [
+      "ipynb",
+      "jupyter",
+      "notebook",
+      "pdf",
+      "converter",
+      "print",
+      "colab",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل IPYNB إلى PDF",
+        description:
+          "حوّل دفتر Jupyter محفوظًا (.ipynb) إلى PDF. عاين محتوى Markdown والتعليمات البرمجية والمخرجات المحفوظة، ثم احفظ نسخة قابلة للطباعة مباشرة من متصفحك.",
+      },
+      de: {
+        name: "IPYNB in PDF umwandeln",
+        description:
+          "Wandle ein gespeichertes Jupyter Notebook (.ipynb) in PDF um. Prüfe Markdown, Code und gespeicherte Ausgaben und speichere eine druckbare Kopie lokal im Browser.",
+      },
+      en: {
+        name: "IPYNB to PDF Converter",
+        description:
+          "Convert a saved Jupyter Notebook (.ipynb) to PDF. Preview Markdown, code and saved outputs, then save a printable copy locally in your browser.",
+      },
+      es: {
+        name: "Convertir IPYNB a PDF",
+        description:
+          "Convierte un notebook de Jupyter guardado (.ipynb) a PDF. Previsualiza Markdown, código y salidas guardadas, y guarda una copia imprimible localmente en el navegador.",
+      },
+      fr: {
+        name: "Convertir IPYNB en PDF",
+        description:
+          "Convertissez un notebook Jupyter enregistré (.ipynb) en PDF. Prévisualisez le Markdown, le code et les sorties enregistrées, puis enregistrez une copie imprimable localement dans votre navigateur.",
+      },
+      he: {
+        name: "המרת IPYNB ל־PDF",
+        description:
+          "המירו מחברת Jupyter שמורה (.ipynb) ל־PDF. הציגו את ה־Markdown, הקוד והפלטים השמורים, ושמרו עותק להדפסה ישירות בדפדפן.",
+      },
+      hi: {
+        name: "IPYNB से PDF कन्वर्टर",
+        description:
+          "सहेजी गई Jupyter नोटबुक (.ipynb) को PDF में बदलें। Markdown, कोड और सहेजे गए आउटपुट का प्रीव्यू देखें और प्रिंट करने योग्य कॉपी अपने ब्राउज़र में सेव करें।",
+      },
+      id: {
+        name: "Konverter IPYNB ke PDF",
+        description:
+          "Konversi notebook Jupyter (.ipynb) yang tersimpan ke PDF. Pratinjau Markdown, kode, dan keluaran tersimpan, lalu simpan salinan siap cetak langsung di browser.",
+      },
+      it: {
+        name: "Convertire IPYNB in PDF",
+        description:
+          "Converti un notebook Jupyter salvato (.ipynb) in PDF. Visualizza Markdown, codice e output salvati, poi salva una copia stampabile localmente nel browser.",
+      },
+      ja: {
+        name: "IPYNBをPDFに変換",
+        description:
+          "保存した Jupyter Notebook（.ipynb）を PDF に変換します。Markdown、コード、保存済みの出力をプレビューし、印刷用の PDF をブラウザーで端末に保存できます。",
+      },
+      ko: {
+        name: "IPYNB PDF 변환기",
+        description:
+          "저장한 Jupyter 노트북(.ipynb)을 PDF로 변환하세요. Markdown, 코드, 저장된 출력을 미리 보고 인쇄할 수 있는 PDF를 브라우저에서 기기에 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar IPYNB kepada PDF",
+        description:
+          "Tukar buku nota Jupyter (.ipynb) yang disimpan kepada PDF. Lihat pratonton Markdown, kod dan output yang disimpan, kemudian simpan salinan sedia cetak terus dalam pelayar.",
+      },
+      nl: {
+        name: "IPYNB naar PDF converteren",
+        description:
+          "Converteer een opgeslagen Jupyter Notebook (.ipynb) naar PDF. Bekijk Markdown, code en opgeslagen uitvoer en sla een afdrukbare kopie lokaal op in je browser.",
+      },
+      no: {
+        name: "Konverter IPYNB til PDF",
+        description:
+          "Konverter en lagret Jupyter-notatbok (.ipynb) til PDF. Forhåndsvis Markdown, kode og lagrede utdata, og lagre en utskriftsklar kopi lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter IPYNB na PDF",
+        description:
+          "Konwertuj zapisany notatnik Jupyter (.ipynb) na PDF. Sprawdź podgląd Markdown, kodu i zapisanych wyników, a następnie zapisz w przeglądarce kopię do druku.",
+      },
+      pt: {
+        name: "Converter IPYNB em PDF",
+        description:
+          "Converta um notebook Jupyter salvo (.ipynb) em PDF. Veja Markdown, código e saídas salvas e guarde uma cópia para impressão localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер IPYNB в PDF",
+        description:
+          "Преобразуйте сохранённый блокнот Jupyter (.ipynb) в PDF. Просмотрите Markdown, код и сохранённый вывод, затем сохраните копию для печати прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera IPYNB till PDF",
+        description:
+          "Konvertera en sparad Jupyter Notebook (.ipynb) till PDF. Förhandsgranska Markdown, kod och sparade utmatningar och spara sedan en utskriftsklar kopia direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง IPYNB เป็น PDF",
+        description:
+          "แปลงโน้ตบุ๊ก Jupyter (.ipynb) ที่บันทึกไว้เป็น PDF ดูตัวอย่าง Markdown โค้ด และเอาต์พุตที่บันทึกไว้ แล้วบันทึก PDF สำหรับพิมพ์ลงในอุปกรณ์ผ่านเบราว์เซอร์",
+      },
+      tr: {
+        name: "IPYNB’den PDF’ye Dönüştürücü",
+        description:
+          "Kaydedilmiş bir Jupyter not defterini (.ipynb) PDF’ye dönüştürün. Markdown içeriğini, kodu ve kaydedilmiş çıktıları önizleyip yazdırılabilir bir kopyayı doğrudan tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi IPYNB sang PDF",
+        description:
+          "Chuyển notebook Jupyter (.ipynb) đã lưu sang PDF. Xem trước Markdown, mã và đầu ra đã lưu, rồi lưu bản PDF để in ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "IPYNB 转 PDF",
+        description:
+          "将已保存的 Jupyter 笔记本（.ipynb）转换为 PDF。预览 Markdown、代码和已保存的输出，再在浏览器中将可打印的 PDF 保存到本地。",
+      },
+      "zh-TW": {
+        name: "IPYNB 轉 PDF",
+        description:
+          "將已儲存的 Jupyter 筆記本（.ipynb）轉換為 PDF。預覽 Markdown、程式碼及已儲存的輸出，再從瀏覽器將可列印的 PDF 儲存到本機。",
+      },
+    },
+  },
+  {
     slug: "isbn-validator",
     category: "text",
     icon: "file-text",

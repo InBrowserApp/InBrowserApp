@@ -213,6 +213,7 @@
     "@tool/ipfs-folder-diff": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
     "@tool/ipv6-ula-generator": "workspace:*",
+    "@tool/ipynb-to-pdf-converter": "workspace:*",
     "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",

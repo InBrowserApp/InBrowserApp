@@ -1,0 +1,4 @@
+{
+  "name": "Konverter IPYNB ke PDF",
+  "description": "Konversi notebook Jupyter (.ipynb) yang tersimpan ke PDF. Pratinjau Markdown, kode, dan keluaran tersimpan, lalu simpan salinan siap cetak langsung di browser."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "IPYNB PDF 변환기",
+  "description": "저장한 Jupyter 노트북(.ipynb)을 PDF로 변환하세요. Markdown, 코드, 저장된 출력을 미리 보고 인쇄할 수 있는 PDF를 브라우저에서 기기에 저장할 수 있습니다."
+}

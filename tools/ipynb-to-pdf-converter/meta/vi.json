@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi IPYNB sang PDF",
+  "description": "Chuyển notebook Jupyter (.ipynb) đã lưu sang PDF. Xem trước Markdown, mã và đầu ra đã lưu, rồi lưu bản PDF để in ngay trong trình duyệt."
+}

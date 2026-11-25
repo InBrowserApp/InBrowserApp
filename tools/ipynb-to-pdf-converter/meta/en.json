@@ -1,0 +1,4 @@
+{
+  "name": "IPYNB to PDF Converter",
+  "description": "Convert a saved Jupyter Notebook (.ipynb) to PDF. Preview Markdown, code and saved outputs, then save a printable copy locally in your browser."
+}

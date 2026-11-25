@@ -1,0 +1,4 @@
+{
+  "name": "IPYNB 轉 PDF",
+  "description": "將已儲存的 Jupyter 筆記本（.ipynb）轉換為 PDF。預覽 Markdown、程式碼及已儲存的輸出，再從瀏覽器將可列印的 PDF 儲存到本機。"
+}
