@@ -9,5 +9,9 @@
   "loading": "Tegner notene…",
   "invalid": "Partituret kunne ikke vises. Kontroller ABC-notasjonen og prøv igjen.",
   "fileError": "Filen kunne ikke leses. Prøv å åpne den på nytt eller lim inn ABC-teksten.",
-  "warnings": "Meldinger om ABC-notasjon"
+  "warnings": "Meldinger om ABC-notasjon",
+  "download": "Last ned",
+  "downloadBusy": "Klargjør nedlasting…",
+  "downloadError": "Partituret kunne ikke eksporteres. Prøv igjen eller velg et annet format.",
+  "downloadSource": "ABC-kildetekst"
 }

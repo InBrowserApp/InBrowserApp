@@ -14,5 +14,8 @@
   "zoomIn": "Zooma in",
   "zoomOut": "Zooma ut",
   "resetZoom": "Återställ zoom",
-  "invalidScore": "Partituret kunde inte visas. Välj en .musicxml-, .xml- eller .mxl-fil som exporterats med stämmorna var för sig (partwise)."
+  "invalidScore": "Partituret kunde inte visas. Välj en .musicxml-, .xml- eller .mxl-fil som exporterats med stämmorna var för sig (partwise).",
+  "download": "Ladda ner",
+  "downloadBusy": "Förbereder nedladdning…",
+  "downloadError": "Partituret kunde inte exporteras. Försök igen eller välj ett annat format."
 }

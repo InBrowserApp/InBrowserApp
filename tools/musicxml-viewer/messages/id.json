@@ -14,5 +14,8 @@
   "zoomIn": "Perbesar",
   "zoomOut": "Perkecil",
   "resetZoom": "Atur ulang perbesaran",
-  "invalidScore": "Partitur ini tidak dapat ditampilkan. Pilih file .musicxml, .xml, atau .mxl yang diekspor dalam format MusicXML partwise."
+  "invalidScore": "Partitur ini tidak dapat ditampilkan. Pilih file .musicxml, .xml, atau .mxl yang diekspor dalam format MusicXML partwise.",
+  "download": "Unduh",
+  "downloadBusy": "Menyiapkan unduhan…",
+  "downloadError": "Partitur tidak dapat diekspor. Coba lagi atau pilih format lain."
 }

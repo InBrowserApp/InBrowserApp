@@ -11,3 +11,7 @@ Schrijf noten met letters, scheid maten met `|` en gebruik `z` voor een rust. Ee
 ## Onvolledige of onverwachte notatie controleren
 
 Ziet een deel van de partituur er anders uit dan verwacht? Controleer eerst de maatsoort, nootduren en maatstrepen. Open **Meldingen over ABC-notatie** als dit onderdeel verschijnt, zodat je kunt zien welke regels of tekens de voorvertoner niet kon verwerken. De leesbare delen kunnen zichtbaar blijven terwijl je de brontekst herstelt.
+
+## Bladmuziek downloaden
+
+Kies **Downloaden** om de partituur op A4-pagina’s op te slaan. Kies PDF om af te drukken, PNG om een scherpe afbeelding te delen of SVG voor een afbeelding die je zonder kwaliteitsverlies kunt schalen. Bij een partituur van meerdere pagina’s bevat de PNG- of SVG-download één bestand per pagina in een ZIP-archief. Kies **ABC-brontekst** om de tekst in de editor op te slaan als .abc-bestand en later verder te bewerken.

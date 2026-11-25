@@ -9,3 +9,7 @@ Dùng các nút thu phóng để đọc đoạn nhạc dày đặc hoặc xem nh
 ## Tệp MusicXML, XML và MXL
 
 Bản nhạc MusicXML có thể dùng phần mở rộng .musicxml hoặc .xml. Tệp .mxl là gói MusicXML nén và có thể mở trực tiếp. Nếu không mở được bản nhạc, hãy xuất lại từ phần mềm ký âm ở định dạng MusicXML theo từng bè (partwise). Các phần mềm ký âm có thể bố trí cùng một bản nhạc khác nhau nên vị trí xuống dòng và khoảng cách có thể thay đổi. Trình xem đọc và hiển thị tệp trong trình duyệt.
+
+## Tải bản nhạc
+
+Dùng **Tải xuống** để lưu bản nhạc trên các trang A4. Chọn PDF để in, PNG để chia sẻ hình ảnh sắc nét hoặc SVG để thay đổi kích thước mà không mất chi tiết. Nếu bản nhạc có nhiều trang, tệp PNG hoặc SVG tải xuống sẽ nằm trong một tệp ZIP, mỗi trang là một tệp riêng. Các trang xuất ra giữ cùng bố cục trên điện thoại và máy tính.

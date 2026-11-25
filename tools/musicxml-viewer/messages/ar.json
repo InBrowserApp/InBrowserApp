@@ -14,5 +14,8 @@
   "zoomIn": "تكبير",
   "zoomOut": "تصغير",
   "resetZoom": "إعادة ضبط التكبير",
-  "invalidScore": "تعذّر عرض النوتة. اختر ملف ‎.musicxml أو ‎.xml أو ‎.mxl مصدّرًا بتنسيق MusicXML المرتّب حسب الأجزاء (partwise)."
+  "invalidScore": "تعذّر عرض النوتة. اختر ملف ‎.musicxml أو ‎.xml أو ‎.mxl مصدّرًا بتنسيق MusicXML المرتّب حسب الأجزاء (partwise).",
+  "download": "تنزيل",
+  "downloadBusy": "جارٍ تجهيز التنزيل…",
+  "downloadError": "تعذّر تصدير النوتة. أعد المحاولة أو اختر تنسيقًا آخر."
 }

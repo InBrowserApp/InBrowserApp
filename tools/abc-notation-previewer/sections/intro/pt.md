@@ -11,3 +11,7 @@ Escreva as notas com letras, separe os compassos com `|` e use `z` para escrever
 ## Como conferir uma notação incompleta ou inesperada
 
 Se parte da partitura estiver diferente do que você esperava, confira primeiro a fórmula de compasso, a duração das notas e as barras de compasso. Abra **Mensagens sobre a notação ABC** quando a seção aparecer para localizar trechos de sintaxe que a ferramenta não conseguiu interpretar. A prévia pode continuar mostrando os trechos legíveis enquanto você corrige o texto.
+
+## Como baixar a partitura
+
+Use **Baixar** para salvar a partitura em páginas A4. Escolha PDF para imprimir, PNG para compartilhar uma imagem nítida ou SVG para redimensioná-la sem perder detalhes. Se a partitura ocupar mais de uma página, o download em PNG ou SVG inclui um arquivo por página dentro de um ZIP. Escolha **Texto ABC** para salvar o texto do editor em um arquivo .abc e editá-lo mais tarde.

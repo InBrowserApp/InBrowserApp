@@ -9,5 +9,9 @@
   "loading": "Ritar noterna…",
   "invalid": "Partituret kunde inte visas. Kontrollera ABC-notationen och försök igen.",
   "fileError": "Filen kunde inte läsas. Försök öppna den igen eller klistra in ABC-texten.",
-  "warnings": "Meddelanden om ABC-notation"
+  "warnings": "Meddelanden om ABC-notation",
+  "download": "Ladda ner",
+  "downloadBusy": "Förbereder nedladdning…",
+  "downloadError": "Partituret kunde inte exporteras. Försök igen eller välj ett annat format.",
+  "downloadSource": "ABC-källtext"
 }

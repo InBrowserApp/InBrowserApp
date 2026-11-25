@@ -1,4 +1,4 @@
 {
   "name": "MusicXML-Betrachter",
-  "description": "Öffne MusicXML-Dateien und komprimierte MXL-Dateien als Noten. Vergrößere die Ansicht oder nutze den Fokusmodus, um die Partitur im Browser zu lesen."
+  "description": "Öffne Noten im MusicXML- oder MXL-Format im Browser. Vergrößere die Ansicht, nutze den Fokusmodus und lade die Partitur als PDF, PNG oder SVG herunter."
 }

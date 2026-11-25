@@ -1,4 +1,4 @@
 {
   "name": "ABC Notation Previewer",
-  "description": "Paste ABC notation or open an .abc file to see live sheet music. Preview individual tunes and tune books directly in your browser."
+  "description": "Paste ABC notation or open an .abc file to preview sheet music live. Download scores as PDF, PNG, or SVG, and save the editable ABC source."
 }

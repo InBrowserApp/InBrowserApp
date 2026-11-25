@@ -11,3 +11,7 @@ Tulis not dengan huruf, asingkan bar dengan `|` dan gunakan `z` sebagai tanda re
 ## Semak notasi yang belum lengkap atau kelihatan berbeza
 
 Jika sebahagian skor kelihatan berbeza daripada jangkaan, semak tanda meter, nilai not dan garis bar terlebih dahulu. Buka **Mesej notasi ABC** jika tertera untuk mengenal pasti sintaks yang tidak dapat ditafsirkan. Pratonton boleh terus memaparkan bahagian yang boleh dibaca semasa anda membetulkan teks ABC.
+
+## Muat turun skor muzik
+
+Pilih **Muat turun** untuk menyimpan skor dalam halaman bersaiz A4. Pilih PDF untuk cetakan, PNG untuk berkongsi imej yang jelas atau SVG jika anda mahu mengubah saiz imej tanpa kehilangan perincian. Jika skor melebihi satu halaman, muat turun PNG atau SVG mengandungi satu fail bagi setiap halaman dalam arkib ZIP. Pilih **Teks sumber ABC** untuk menyimpan teks dalam penyunting sebagai fail .abc yang boleh disunting kemudian.

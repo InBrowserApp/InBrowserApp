@@ -14,5 +14,8 @@
   "zoomIn": "放大",
   "zoomOut": "縮小",
   "resetZoom": "重設縮放",
-  "invalidScore": "無法顯示此樂譜。請選擇以分譜式 MusicXML 格式匯出的 .musicxml、.xml 或 .mxl 檔案。"
+  "invalidScore": "無法顯示此樂譜。請選擇以分譜式 MusicXML 格式匯出的 .musicxml、.xml 或 .mxl 檔案。",
+  "download": "下載",
+  "downloadBusy": "正在準備下載…",
+  "downloadError": "無法匯出樂譜。請重試或選擇其他格式。"
 }

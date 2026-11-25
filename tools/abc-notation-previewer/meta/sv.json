@@ -1,4 +1,4 @@
 {
   "name": "Förhandsgranskare för ABC-notation",
-  "description": "Klistra in ABC-notation eller öppna en .abc-fil och se noterna direkt. Förhandsgranska enskilda melodier och hela melodisamlingar i webbläsaren."
+  "description": "Klistra in ABC-notation eller öppna en .abc-fil och se noterna medan du skriver. Ladda ner partituret som PDF, PNG eller SVG och spara den redigerbara ABC-källtexten."
 }

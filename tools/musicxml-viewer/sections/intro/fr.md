@@ -9,3 +9,7 @@ Utilisez les commandes de zoom pour lire un passage dense ou voir plus de mesure
 ## Fichiers MusicXML, XML et MXL
 
 Une partition MusicXML peut porter l’extension .musicxml ou .xml. Un fichier .mxl est une archive MusicXML compressée que vous pouvez ouvrir directement. Si une partition ne s’ouvre pas, exportez-la de nouveau depuis votre logiciel de notation au format MusicXML structuré par partie (partwise). La mise en page d’une même partition peut varier d’un logiciel à l’autre, notamment les sauts de système et l’espacement. La visionneuse lit et affiche le fichier dans votre navigateur.
+
+## Télécharger la partition
+
+Utilisez **Télécharger** pour enregistrer la partition sur des pages au format A4. Choisissez le PDF pour l’impression, le PNG pour partager une image nette ou le SVG pour la redimensionner sans perte de détail. Si la partition s’étend sur plusieurs pages, un téléchargement en PNG ou SVG contient un fichier par page dans une archive ZIP. Les pages exportées conservent la même mise en page sur téléphone et sur ordinateur.

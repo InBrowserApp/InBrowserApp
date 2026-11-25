@@ -1,4 +1,4 @@
 {
   "name": "MusicXML Viewer",
-  "description": "Open MusicXML and compressed MXL files as readable sheet music. Zoom in or use focus mode to read the score in your browser."
+  "description": "Open MusicXML and MXL sheet music in your browser. Zoom in, read in focus mode, and download the score as PDF, PNG, or SVG."
 }

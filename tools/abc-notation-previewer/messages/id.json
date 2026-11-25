@@ -9,5 +9,9 @@
   "loading": "Menyiapkan partitur…",
   "invalid": "Partitur tidak dapat ditampilkan. Periksa notasi ABC, lalu coba lagi.",
   "fileError": "File ini tidak dapat dibaca. Coba buka lagi atau tempel teks ABC.",
-  "warnings": "Pesan notasi ABC"
+  "warnings": "Pesan notasi ABC",
+  "download": "Unduh",
+  "downloadBusy": "Menyiapkan unduhan…",
+  "downloadError": "Partitur tidak dapat diekspor. Coba lagi atau pilih format lain.",
+  "downloadSource": "Teks sumber ABC"
 }

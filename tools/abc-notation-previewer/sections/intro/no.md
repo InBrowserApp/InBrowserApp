@@ -11,3 +11,7 @@ Skriv noter med bokstaver, skill taktene med `|` og bruk `z` for en pause. Et ta
 ## Kontroller ufullstendig eller uventet notasjon
 
 Hvis en del av partituret ser annerledes ut enn forventet, kontroller først taktart, noteverdier og taktstreker. Åpne **Meldinger om ABC-notasjon** når feltet vises, for å finne kodetekst som forhåndsviseren ikke kunne tolke. De delene som kan leses, kan fortsatt vises mens du retter kildeteksten.
+
+## Last ned notene
+
+Velg **Last ned** for å lagre partituret på sider i A4-format. Velg PDF for utskrift, PNG for å dele et skarpt bilde eller SVG for et bilde som kan skaleres uten kvalitetstap. Hvis partituret har flere sider, inneholder PNG- eller SVG-nedlastingen én fil per side i et ZIP-arkiv. Velg **ABC-kildetekst** for å lagre teksten i redigeringsfeltet som en .abc-fil og redigere den videre senere.

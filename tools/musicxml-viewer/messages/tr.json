@@ -14,5 +14,8 @@
   "zoomIn": "Yakınlaştır",
   "zoomOut": "Uzaklaştır",
   "resetZoom": "Yakınlaştırmayı sıfırla",
-  "invalidScore": "Partisyon görüntülenemedi. Parti bazlı (partwise) MusicXML olarak dışa aktarılmış bir .musicxml, .xml veya .mxl dosyası seçin."
+  "invalidScore": "Partisyon görüntülenemedi. Parti bazlı (partwise) MusicXML olarak dışa aktarılmış bir .musicxml, .xml veya .mxl dosyası seçin.",
+  "download": "İndir",
+  "downloadBusy": "İndirme hazırlanıyor…",
+  "downloadError": "Partisyon dışa aktarılamadı. Tekrar deneyin veya başka bir biçim seçin."
 }

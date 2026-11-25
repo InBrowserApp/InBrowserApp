@@ -9,3 +9,7 @@ Powiększ zapis, aby odczytać trudniejszy fragment, lub pomniejsz go, aby widzi
 ## Pliki MusicXML, XML i MXL
 
 Partytura MusicXML może mieć rozszerzenie .musicxml lub .xml. Plik .mxl to skompresowany pakiet MusicXML, który można otworzyć bezpośrednio. Jeśli nie uda się otworzyć partytury, wyeksportuj ją ponownie z programu do zapisu nut jako MusicXML z podziałem na partie (score-partwise). Programy mogą różnie rozkładać tę samą partyturę, więc podział na systemy i odstępy mogą się różnić. Odczyt i wyświetlanie pliku odbywają się w przeglądarce.
+
+## Pobieranie zapisu nutowego
+
+Kliknij **Pobierz**, aby zapisać nuty na stronach w formacie A4. Wybierz PDF do druku, PNG, aby udostępnić wyraźny obraz, lub SVG, jeśli chcesz zmieniać wymiary obrazu bez utraty szczegółów. Jeśli zapis zajmuje więcej niż jedną stronę, otrzymasz archiwum ZIP z oddzielnym plikiem PNG lub SVG dla każdej strony. Układ wyeksportowanych stron jest taki sam na telefonie i komputerze.

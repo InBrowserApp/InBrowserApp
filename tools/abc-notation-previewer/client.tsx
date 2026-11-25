@@ -1,4 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react"
+import { scoreFilename } from "@workspace/score-export/pages"
+import { ScoreDownloadMenu } from "@workspace/ui/components/tool/score-download-menu"
 import {
   ToolOpenTextFile,
   useTextFileImport,
@@ -13,12 +15,13 @@ import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { prepareAbc } from "./core/source"
 import example from "./fixtures/morning-path.abc?raw"
 
-import type { AbcVisualParams } from "abcjs"
+import { abcLayout } from "./render-options"
 import type english from "./messages/en.json"
 
 type Preview =
   | { type: "empty" | "loading" | "invalid" }
-  | { type: "ready" | "noNotes"; warnings: string[] }
+  | { type: "noNotes"; warnings: string[] }
+  | { type: "ready"; warnings: string[]; source: string; title?: string }
 
 function warningText(warning: string) {
   return warning
@@ -30,22 +33,26 @@ function warningText(warning: string) {
 
 export default function AbcNotationPreviewer({
   messages: m,
+  language = "en",
 }: {
   messages: typeof english
+  language?: string
 }) {
   const field = useId()
   const previewLabel = useId()
   const score = useRef<HTMLDivElement>(null)
   const [source, setSource] = useState("")
+  const [importedName, setImportedName] = useState("")
   const [width, setWidth] = useState(600)
   const [preview, setPreview] = useState<Preview>({ type: "empty" })
   const [fileError, setFileError] = useState(false)
   const importer = useTextFileImport()
 
-  function edit(value: string) {
+  function edit(value: string, filename?: string) {
     importer.cancel()
     setFileError(false)
     setSource(value)
+    if (filename !== undefined || !value.trim()) setImportedName(filename ?? "")
   }
 
   useEffect(() => {
@@ -76,16 +83,11 @@ export default function AbcNotationPreviewer({
         host.replaceChildren()
         const warnings: string[] = []
         const book = new TuneBook(prepareAbc(source))
-        const options: AbcVisualParams = {
-          staffwidth: Math.max(220, width - 20),
-          responsive: "resize",
+        const options = {
+          ...abcLayout(Math.max(220, width - 20)),
+          responsive: "resize" as const,
           paddingright: 8,
           paddingleft: 8,
-          wrap: {
-            preferredMeasuresPerLine: 4,
-            minSpacing: 1.8,
-            maxSpacing: 2.7,
-          },
         }
         for (const tune of book.tunes) {
           const target = document.createElement("div")
@@ -101,10 +103,17 @@ export default function AbcNotationPreviewer({
           }
           if (!result?.lines.some((line) => line.staff?.length)) target.remove()
         }
-        setPreview({
-          type: host.childElementCount ? "ready" : "noNotes",
-          warnings,
-        })
+        setPreview(
+          host.childElementCount
+            ? {
+                type: "ready",
+                source,
+                title:
+                  book.tunes.length === 1 ? book.tunes[0]?.title : undefined,
+                warnings,
+              }
+            : { type: "noNotes", warnings }
+        )
       } catch {
         if (!cancelled) {
           host.replaceChildren()
@@ -120,6 +129,9 @@ export default function AbcNotationPreviewer({
     }
   }, [source, width])
 
+  const ready = preview.type === "ready" && preview.source === source
+  const name = importedName || (ready ? preview.title : "") || "score"
+
   return (
     <div className="grid min-w-0 items-start gap-4 lg:grid-cols-2">
       <ToolPanelCard className="min-w-0">
@@ -132,7 +144,12 @@ export default function AbcNotationPreviewer({
               accept=".abc,.txt,text/plain"
               label={m.open}
               onFile={(file) =>
-                void importer.read(file, edit, () => setFileError(true))
+                void importer.read(
+                  file,
+                  (value) =>
+                    edit(value, file.name.replace(/\.(?:abc|txt)$/i, "")),
+                  () => setFileError(true)
+                )
               }
             />
             {!source.trim() && (
@@ -166,9 +183,33 @@ export default function AbcNotationPreviewer({
       </ToolPanelCard>
       <ToolPanelCard className="min-w-0">
         <ToolPanelCardContent className="gap-3">
-          <h2 id={previewLabel} className="text-base font-medium">
-            {m.preview}
-          </h2>
+          <div className="flex min-h-8 flex-wrap items-center justify-between gap-2">
+            <h2 id={previewLabel} className="text-base font-medium">
+              {m.preview}
+            </h2>
+            {source.trim() && (
+              <ScoreDownloadMenu
+                messages={m}
+                onScore={
+                  ready
+                    ? async (format) => {
+                        const { exportAbc } = await import("./export-score")
+                        return exportAbc(source, format, name, language)
+                      }
+                    : undefined
+                }
+                source={{
+                  label: m.downloadSource,
+                  file: () => ({
+                    blob: new Blob([source], {
+                      type: "text/vnd.abc; charset=utf-8",
+                    }),
+                    filename: `${scoreFilename(name)}.abc`,
+                  }),
+                }}
+              />
+            )}
+          </div>
           <div className="min-h-52 rounded-lg border lg:min-h-80">
             {preview.type === "invalid" && (
               <p role="alert" className="p-4 text-sm text-destructive">

@@ -1,4 +1,4 @@
 {
   "name": "Visualizador de partituras MusicXML",
-  "description": "Abra partituras no formato MusicXML ou em arquivos MXL compactados. Use o zoom ou a leitura focada para ler no navegador."
+  "description": "Abra partituras MusicXML e MXL no navegador. Use o zoom ou a leitura focada e baixe a partitura em PDF, PNG ou SVG."
 }

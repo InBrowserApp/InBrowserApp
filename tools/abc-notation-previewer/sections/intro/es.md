@@ -11,3 +11,7 @@ Escribe las notas con letras, separa los compases con `|` y usa `z` para escribi
 ## Revisa la notación incompleta o inesperada
 
 Si una parte de la partitura no queda como esperabas, revisa primero el compás, la duración de las notas y las barras de compás. Abre **Mensajes de notación ABC** cuando aparezca para localizar la sintaxis que no se pudo interpretar. La vista previa puede seguir mostrando los pasajes que se pueden leer mientras corriges el texto.
+
+## Descargar partituras
+
+Usa **Descargar** para guardar la partitura en páginas de tamaño A4. Elige PDF para imprimir, PNG para compartir una imagen nítida o SVG para cambiar el tamaño de la imagen sin perder detalle. Si la partitura ocupa más de una página, la descarga en PNG o SVG incluye un archivo por página dentro de un ZIP. Elige **Texto fuente ABC** para guardar el texto del editor en un archivo .abc y editarlo más adelante.

@@ -9,3 +9,7 @@ Use the zoom controls to read a dense passage or see more measures at a glance. 
 ## MusicXML, XML, and MXL files
 
 A MusicXML score may use the .musicxml or .xml extension. An .mxl file is a compressed MusicXML package and can be opened directly. If a score fails to open, export it again from your notation program in partwise MusicXML format. Notation programs can lay the same score out differently, so line breaks and spacing may vary. The viewer reads and renders the file in your browser.
+
+## Download sheet music
+
+Use **Download** to save the score on A4 pages. Choose PDF for printing, PNG for sharing a crisp image, or SVG for artwork you can resize without losing detail. If the score fills more than one page, the PNG or SVG download contains one file per page in a ZIP archive. The exported pages keep the same layout on phones and desktops.

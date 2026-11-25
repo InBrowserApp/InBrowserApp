@@ -14,5 +14,8 @@
   "zoomIn": "ซูมเข้า",
   "zoomOut": "ซูมออก",
   "resetZoom": "รีเซ็ตการซูม",
-  "invalidScore": "แสดงโน้ตเพลงนี้ไม่ได้ เลือกไฟล์ .musicxml, .xml หรือ .mxl ที่ส่งออกเป็น MusicXML แบบ partwise"
+  "invalidScore": "แสดงโน้ตเพลงนี้ไม่ได้ เลือกไฟล์ .musicxml, .xml หรือ .mxl ที่ส่งออกเป็น MusicXML แบบ partwise",
+  "download": "ดาวน์โหลด",
+  "downloadBusy": "กำลังเตรียมไฟล์ดาวน์โหลด…",
+  "downloadError": "ส่งออกโน้ตเพลงไม่ได้ ลองอีกครั้งหรือเลือกรูปแบบอื่น"
 }

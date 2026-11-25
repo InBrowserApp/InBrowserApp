@@ -9,3 +9,7 @@ Gunakan kawalan zum untuk membaca bahagian yang padat atau melihat lebih banyak 
 ## Fail MusicXML, XML dan MXL
 
 Skor MusicXML boleh menggunakan sambungan .musicxml atau .xml. Fail .mxl ialah pakej MusicXML termampat yang boleh dibuka terus. Jika skor gagal dibuka, eksport semula daripada perisian notasi muzik dalam format MusicXML partwise, yang menyusun data mengikut bahagian alat muzik atau vokal. Perisian notasi boleh menyusun atur skor yang sama dengan cara berbeza, jadi pemisahan baris dan jarak antara tanda boleh berubah. Pemapar membaca dan memaparkan skor dalam pelayar anda.
+
+## Muat turun skor muzik
+
+Pilih **Muat turun** untuk menyimpan skor dalam halaman bersaiz A4. Pilih PDF untuk cetakan, PNG untuk berkongsi imej yang jelas atau SVG jika anda mahu mengubah saiz imej tanpa kehilangan perincian. Jika skor melebihi satu halaman, muat turun PNG atau SVG mengandungi satu fail bagi setiap halaman dalam arkib ZIP. Halaman yang dieksport mempunyai susun atur yang sama pada telefon dan komputer.

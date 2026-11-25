@@ -9,5 +9,9 @@
   "loading": "Tworzenie zapisu nutowego…",
   "invalid": "Nie udało się wyświetlić nut. Sprawdź zapis w notacji ABC i spróbuj ponownie.",
   "fileError": "Nie udało się odczytać pliku. Otwórz go ponownie lub wklej tekst ABC.",
-  "warnings": "Komunikaty dotyczące notacji ABC"
+  "warnings": "Komunikaty dotyczące notacji ABC",
+  "download": "Pobierz",
+  "downloadBusy": "Przygotowywanie pliku…",
+  "downloadError": "Nie udało się wyeksportować nut. Spróbuj ponownie lub wybierz inny format.",
+  "downloadSource": "Plik źródłowy ABC"
 }

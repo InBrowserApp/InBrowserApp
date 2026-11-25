@@ -11,3 +11,7 @@ Write notes with letters, separate measures with `|`, and use `z` for a rest. A 
 ## Check incomplete or unexpected notation
 
 If part of the score looks different from what you expected, review the meter, note lengths, and bar lines first. Open **ABC notation messages** when it appears to locate syntax the renderer could not interpret. The preview can keep showing readable parts while you fix the source.
+
+## Download sheet music
+
+Use **Download** to save the score on A4 pages. Choose PDF for printing, PNG for sharing a crisp image, or SVG for artwork you can resize without losing detail. If the score fills more than one page, the PNG or SVG download contains one file per page in a ZIP archive. Choose **ABC source** to save the text in the editor as an .abc file for later editing.

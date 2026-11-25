@@ -14,5 +14,8 @@
   "zoomIn": "Zoom in",
   "zoomOut": "Zoom out",
   "resetZoom": "Reset zoom",
-  "invalidScore": "This score could not be displayed. Choose a .musicxml, .xml, or .mxl file exported as a partwise MusicXML score."
+  "invalidScore": "This score could not be displayed. Choose a .musicxml, .xml, or .mxl file exported as a partwise MusicXML score.",
+  "download": "Download",
+  "downloadBusy": "Preparing download…",
+  "downloadError": "Could not export the score. Try again or choose another format."
 }

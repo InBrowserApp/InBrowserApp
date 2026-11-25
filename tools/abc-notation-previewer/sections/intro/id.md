@@ -11,3 +11,7 @@ Tulis not dengan huruf, pisahkan birama dengan `|`, dan gunakan `z` sebagai tand
 ## Periksa notasi yang belum lengkap atau tampak berbeda
 
 Jika bagian partitur tampak berbeda dari yang diharapkan, periksa dulu tanda birama, nilai not, dan garis birama. Buka **Pesan notasi ABC** jika muncul untuk menemukan sintaks yang tidak dapat dibaca oleh penampil. Bagian partitur yang masih bisa dibaca dapat tetap terlihat saat Anda memperbaiki teks ABC.
+
+## Unduh partitur
+
+Pilih **Unduh** untuk menyimpan partitur dalam halaman berukuran A4. Pilih PDF untuk mencetak, PNG untuk membagikan gambar yang tajam, atau SVG jika ingin mengubah ukuran gambar tanpa kehilangan detail. Jika partitur lebih dari satu halaman, unduhan PNG atau SVG berisi satu file per halaman dalam arsip ZIP. Pilih **Teks sumber ABC** untuk menyimpan teks dari editor sebagai file .abc yang bisa Anda sunting lagi nanti.

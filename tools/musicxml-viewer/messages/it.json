@@ -14,5 +14,8 @@
   "zoomIn": "Ingrandisci",
   "zoomOut": "Riduci",
   "resetZoom": "Ripristina lo zoom",
-  "invalidScore": "Impossibile mostrare lo spartito. Scegli un file .musicxml, .xml o .mxl esportato in formato MusicXML organizzato per parti (partwise)."
+  "invalidScore": "Impossibile mostrare lo spartito. Scegli un file .musicxml, .xml o .mxl esportato in formato MusicXML organizzato per parti (partwise).",
+  "download": "Scarica",
+  "downloadBusy": "Preparazione del download…",
+  "downloadError": "Impossibile esportare lo spartito. Riprova o scegli un altro formato."
 }

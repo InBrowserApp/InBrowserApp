@@ -64,8 +64,8 @@ export async function loadImageSource(file: File): Promise<LoadedImageSource> {
 
 export function canvasBlob(
   canvas: HTMLCanvasElement,
-  type: "image/jpeg" | "image/webp",
-  quality: number
+  type: "image/jpeg" | "image/webp" | "image/png",
+  quality?: number
 ) {
   return new Promise<Blob | null>((resolve) => {
     canvas.toBlob(resolve, type, quality)
