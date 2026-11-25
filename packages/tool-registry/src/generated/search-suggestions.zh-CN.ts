@@ -1603,6 +1603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ppt-viewer",
   },
   {
+    category: "image",
+    name: "PPTX 转图片",
+    slug: "pptx-to-image-converter",
+  },
+  {
     category: "document",
     name: "PPTX 转 Markdown 转换器",
     slug: "pptx-to-markdown-converter",

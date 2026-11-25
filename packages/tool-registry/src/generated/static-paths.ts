@@ -29442,6 +29442,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pptx-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pptx-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "pptx-to-markdown-converter",
     language: "ar",
   },

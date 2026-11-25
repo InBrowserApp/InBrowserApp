@@ -1603,6 +1603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ppt-viewer",
   },
   {
+    category: "image",
+    name: "PPTX 이미지 변환기",
+    slug: "pptx-to-image-converter",
+  },
+  {
     category: "document",
     name: "PPTX → Markdown 변환기",
     slug: "pptx-to-markdown-converter",

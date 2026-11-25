@@ -391,6 +391,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "ppt-to-pdf-converter": () => import("@tool/ppt-to-pdf-converter/page"),
   "ppt-viewer": () => import("@tool/ppt-viewer/page"),
+  "pptx-to-image-converter": () => import("@tool/pptx-to-image-converter/page"),
   "pptx-to-markdown-converter": () =>
     import("@tool/pptx-to-markdown-converter/page"),
   "pptx-to-pdf-converter": () => import("@tool/pptx-to-pdf-converter/page"),

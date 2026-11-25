@@ -1603,6 +1603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ppt-viewer",
   },
   {
+    category: "image",
+    name: "PPTX in Bild umwandeln",
+    slug: "pptx-to-image-converter",
+  },
+  {
     category: "document",
     name: "PPTX-zu-Markdown-Konverter",
     slug: "pptx-to-markdown-converter",

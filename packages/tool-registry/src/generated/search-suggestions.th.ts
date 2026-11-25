@@ -1603,6 +1603,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ppt-viewer",
   },
   {
+    category: "image",
+    name: "โปรแกรมแปลง PPTX เป็นรูปภาพ",
+    slug: "pptx-to-image-converter",
+  },
+  {
     category: "document",
     name: "โปรแกรมแปลง PPTX เป็น Markdown",
     slug: "pptx-to-markdown-converter",
