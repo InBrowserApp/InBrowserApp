@@ -1,0 +1,74 @@
+---
+import MainLayout from "@/layouts/main.astro"
+import { INSTALL_GROUPS, INSTALL_GUIDES, INSTALL_GUIDE_IDS, type InstallGuideId } from "@/lib/install-guides"
+import { localizeInstallHelpHref } from "@/lib/install-help-links"
+import { loadInstallMessages } from "@/lib/install-messages"
+import { createPageSeo } from "@/lib/seo"
+import { localizePath, type SiteLanguage } from "@/lib/site"
+import { formatSiteMessage } from "@/lib/site-messages"
+
+interface Props {
+  language: SiteLanguage
+  guideId?: InstallGuideId
+}
+
+const { language, guideId } = Astro.props
+const messages = loadInstallMessages(language)
+const guide = guideId && INSTALL_GUIDES[guideId]
+const browser = guide ? guide.browser ?? messages.otherBrowsers : ""
+const platformLabels = { ios: "iPhone / iPad", android: "Android", desktop: messages.desktop }
+const pathname = guideId ? `/install/${guideId}/` : "/install/"
+const pickerHref = localizePath("/install/", language)
+const guideHref = (id: InstallGuideId) => localizePath(`/install/${id}/`, language)
+const title = guide ? formatSiteMessage(messages.guideTitle, { browser }) : messages.title
+const [titleBefore, titleAfter] = messages.guideTitle.split("{browser}")
+const description = guide ? formatSiteMessage(messages.guideDescription, { browser }) : messages.description
+const seo = createPageSeo({ title, description, pathname, language })
+const fallback = guide && "fallback" in guide ? guide.fallback : undefined
+---
+
+<MainLayout {...seo} lang={language} current="install" pathname={pathname}>
+  <div class="w-full max-w-3xl">
+    <header class="flex flex-col items-start gap-3">
+      {guide && <a href={pickerHref} class="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground">{messages.switchBrowser}</a>}
+      <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">
+        {guide ? <>{titleBefore}<bdi>{browser}</bdi>{titleAfter}</> : messages.title}
+      </h1>
+      <p class="text-base text-muted-foreground">{guide ? platformLabels[guide.group] : messages.description}</p>
+    </header>
+
+    {guideId && guide ? (
+      <>
+        <ol class="mt-7 list-decimal space-y-3 ps-6 text-base leading-relaxed marker:text-muted-foreground">
+          {messages.steps[guideId].map((step) => <li class="ps-1">{step}</li>)}
+        </ol>
+        {fallback && (
+          <p class="mt-5 text-sm">
+            <a class="underline underline-offset-4" href={guideHref(fallback)}>{titleBefore}<bdi>{INSTALL_GUIDES[fallback].browser}</bdi>{titleAfter}</a>
+          </p>
+        )}
+        <div class="mt-7 border-t border-border pt-4 text-sm text-muted-foreground">
+          <h2 class="font-medium">{messages.browserHelp}</h2>
+          <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+            {guide.links.map(({ label, href }) => (
+              <li><a href={localizeInstallHelpHref(href, language)} class="underline underline-offset-4 hover:text-foreground">{label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </>
+    ) : (
+      <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {INSTALL_GROUPS.map((group) => (
+          <section>
+            <h2 class="mb-2 font-medium">{platformLabels[group]}</h2>
+            <ul class="divide-y divide-border overflow-hidden rounded-xl border border-border">
+              {INSTALL_GUIDE_IDS.filter((id) => INSTALL_GUIDES[id].group === group).map((id) => (
+                <li><a href={guideHref(id)} class="flex min-h-11 items-center px-3 py-2 text-sm hover:bg-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring">{INSTALL_GUIDES[id].browser ?? messages.otherBrowsers}</a></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    )}
+  </div>
+</MainLayout>

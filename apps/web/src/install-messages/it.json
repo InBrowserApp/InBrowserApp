@@ -1,0 +1,55 @@
+{
+  "title": "Installa InBrowser.App",
+  "description": "Scegli il browser che usi per vedere le istruzioni di installazione.",
+  "guideTitle": "Installa InBrowser.App · {browser}",
+  "guideDescription": "Come installare InBrowser.App in {browser}.",
+  "switchBrowser": "Scegli un altro browser",
+  "browserHelp": "Guida del browser",
+  "otherBrowsers": "Altri browser",
+  "desktop": "Computer",
+  "steps": {
+    "ios-safari": [
+      "Apri questa pagina in Safari e tocca «Condividi». Se non vedi l’opzione, apri prima il menu della pagina o il menu «Altro».",
+      "Nel menu di condivisione, tocca Visualizza altro se necessario. Tocca «Aggiungi alla schermata Home». Se compare «Apri come app web», attiva l’opzione.",
+      "Tocca «Aggiungi», poi apri InBrowser.App dalla schermata Home."
+    ],
+    "ios-other": [
+      "Apri il menu «Condividi» del browser, di solito accanto alla barra degli indirizzi.",
+      "Se è disponibile «Aggiungi alla schermata Home», tocca l’opzione e conferma. Attiva «Apri come app web» se compare.",
+      "Se l’opzione non è disponibile o hai aperto questa pagina dentro un’altra app, apri inbrowser.app in Safari e segui la guida per Safari."
+    ],
+    "android-chrome": [
+      "Apri il menu di Chrome (⋮) e scegli «Installa e crea scorciatoia».",
+      "Scegli «Installa» e segui le istruzioni. In alcune versioni, nel menu principale trovi «Installa app» o «Aggiungi alla schermata Home»."
+    ],
+    "android-firefox": [
+      "Apri il menu di Firefox (⋮) e tocca «Installa».",
+      "Tocca «Aggiungi automaticamente» o trascina l’icona nel punto desiderato della schermata Home."
+    ],
+    "android-samsung-internet": [
+      "Se nella barra degli indirizzi vedi un’icona di installazione, toccala.",
+      "Puoi anche aprire il menu di Samsung Internet e scegliere «Aggiungi pagina a», poi «Schermata Home». Segui le istruzioni."
+    ],
+    "android-other": [
+      "Nel menu del browser cerca «Installa», «Aggiungi alla schermata Home» o «Aggiungi al telefono». Se puoi scegliere, seleziona «Installa».",
+      "Se l’opzione non è disponibile o hai aperto il sito dentro un’altra app, usa «Apri nel browser» se disponibile. Puoi anche aprire inbrowser.app in Chrome e seguire la guida per Chrome."
+    ],
+    "desktop-chrome": [
+      "Se nella barra degli indirizzi vedi un’icona di installazione, fai clic su di essa.",
+      "Puoi anche aprire il menu di Chrome e scegliere «Trasmetti, salva e condividi», poi «Installa pagina come app». Conferma l’installazione."
+    ],
+    "desktop-edge": [
+      "Se nella barra degli indirizzi vedi un’icona per installare l’app, fai clic su di essa.",
+      "Puoi anche aprire «Impostazioni e altro», poi scegliere «Altri strumenti», «App» e «Installa questo sito come app». Conferma l’installazione."
+    ],
+    "macos-safari": [
+      "Apri questa pagina in Safari su macOS Sonoma 14 o versioni successive.",
+      "Scegli «File», poi «Aggiungi al Dock». Puoi trovare la stessa opzione nel menu «Condividi» della barra degli strumenti.",
+      "Fai clic su «Aggiungi», poi apri InBrowser.App dal Dock o dalla cartella Applicazioni."
+    ],
+    "windows-firefox": [
+      "Apri questa pagina in una finestra normale di Firefox. Usa Firefox 143 o successivo, oppure Firefox 150 o successivo se lo hai installato dal Microsoft Store.",
+      "Fai clic sul pulsante delle app web nella barra degli indirizzi. Apri InBrowser.App dalla barra delle applicazioni o dal menu Start."
+    ]
+  }
+}

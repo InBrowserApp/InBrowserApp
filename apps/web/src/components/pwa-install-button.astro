@@ -5,32 +5,34 @@ import { cn } from "@workspace/ui/lib/utils"
 
 interface Props {
   label: string
+  href: string
 }
 
-const { label } = Astro.props
+const { label, href } = Astro.props
 ---
 
-<div data-pwa-install hidden class="flex items-center gap-1">
-  <details>
-    <summary
-      data-pwa-install-trigger
-      role="button"
-      aria-label={label}
-      aria-describedby="pwa-install-tooltip"
-      class={cn(
-        buttonVariants({ variant: "ghost", size: "icon-sm" }),
-        "group/pwa-install relative list-none aria-disabled:[&_svg]:opacity-50 [&::-webkit-details-marker]:hidden"
-      )}
+<div data-pwa-install class="flex items-center gap-1">
+  <a
+    href={href}
+    data-pwa-install-trigger
+    aria-label={label}
+    class={cn(buttonVariants({ variant: "ghost", size: "icon-sm" }), "group/pwa-install relative")}
+  >
+    <MonitorDown aria-hidden="true" />
+    <span
+      aria-hidden="true"
+      class="pointer-events-none invisible absolute end-0 top-full mt-2 rounded-md bg-foreground px-2 py-1 text-xs whitespace-nowrap text-background opacity-0 transition-opacity group-hover/pwa-install:visible group-hover/pwa-install:opacity-100 group-focus-visible/pwa-install:visible group-focus-visible/pwa-install:opacity-100"
     >
-      <MonitorDown />
-      <span
-        id="pwa-install-tooltip"
-        role="tooltip"
-        class="pointer-events-none invisible absolute end-0 top-full mt-2 rounded-md bg-foreground px-2 py-1 text-xs whitespace-nowrap text-background opacity-0 transition-opacity group-hover/pwa-install:visible group-hover/pwa-install:opacity-100 group-focus-visible/pwa-install:visible group-focus-visible/pwa-install:opacity-100"
-      >
-        {label}
-      </span>
-    </summary>
-  </details>
+      {label}
+    </span>
+  </a>
   <div class="mx-1 h-4 w-px bg-border" aria-hidden="true" />
 </div>
+
+<style>
+  @media (display-mode: standalone) {
+    [data-pwa-install] {
+      display: none;
+    }
+  }
+</style>

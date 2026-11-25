@@ -1,0 +1,55 @@
+{
+  "title": "Pasang InBrowser.App",
+  "description": "Pilih peramban yang Anda gunakan untuk melihat petunjuk pemasangan.",
+  "guideTitle": "Pasang InBrowser.App · {browser}",
+  "guideDescription": "Cara memasang InBrowser.App di {browser}.",
+  "switchBrowser": "Pilih peramban lain",
+  "browserHelp": "Bantuan peramban",
+  "otherBrowsers": "Peramban lain",
+  "desktop": "Komputer",
+  "steps": {
+    "ios-safari": [
+      "Buka halaman ini di Safari, lalu ketuk Bagikan. Jika tombol Bagikan tidak terlihat, buka menu halaman atau menu Lainnya terlebih dahulu.",
+      "Di menu Bagikan, ketuk Lihat Lainnya jika perlu. Ketuk Tambah ke Layar Utama. Jika pilihan Buka sebagai App Web muncul, aktifkan.",
+      "Ketuk Tambah, lalu buka InBrowser.App dari Layar Utama."
+    ],
+    "ios-other": [
+      "Buka menu Bagikan di peramban, biasanya di samping bilah alamat.",
+      "Jika Tambah ke Layar Utama tersedia, ketuk pilihan itu dan konfirmasikan. Aktifkan Buka sebagai App Web jika pilihan itu muncul.",
+      "Jika pilihan itu tidak ada atau Anda membuka halaman ini di dalam aplikasi lain, buka inbrowser.app di Safari dan ikuti panduan Safari."
+    ],
+    "android-chrome": [
+      "Buka menu Chrome (⋮) dan pilih Instal dan buat pintasan.",
+      "Pilih Instal, lalu ikuti petunjuk di layar. Pada beberapa versi, cari Instal aplikasi atau Tambahkan ke layar utama di menu utama."
+    ],
+    "android-firefox": [
+      "Buka menu Firefox (⋮) dan ketuk Instal.",
+      "Ketuk Tambahkan secara otomatis atau seret ikon ke posisi yang diinginkan di layar utama."
+    ],
+    "android-samsung-internet": [
+      "Ketuk ikon instal di bilah alamat jika tersedia.",
+      "Anda juga bisa membuka menu Samsung Internet, memilih Tambahkan halaman ke, lalu memilih Layar depan. Ikuti petunjuk di layar."
+    ],
+    "android-other": [
+      "Cari Instal, Tambahkan ke layar utama, atau Tambahkan ke ponsel di menu peramban. Jika ada beberapa pilihan, pilih Instal.",
+      "Jika pilihan itu tidak ada atau Anda membuka situs ini di dalam aplikasi lain, gunakan Buka di peramban jika tersedia. Anda juga bisa membuka inbrowser.app di Chrome dan mengikuti panduan Chrome."
+    ],
+    "desktop-chrome": [
+      "Klik ikon instal di bilah alamat jika tersedia.",
+      "Anda juga bisa membuka menu Chrome, memilih Transmisikan, simpan, dan bagikan, lalu memilih Instal halaman sebagai aplikasi. Konfirmasikan untuk memasang."
+    ],
+    "desktop-edge": [
+      "Klik ikon instal aplikasi di bilah alamat jika tersedia.",
+      "Anda juga bisa membuka Pengaturan dan lainnya, lalu memilih Alat lainnya, Aplikasi, dan Instal situs ini sebagai aplikasi. Konfirmasikan untuk memasang."
+    ],
+    "macos-safari": [
+      "Buka halaman ini di Safari pada macOS Sonoma 14 atau versi lebih baru.",
+      "Pilih File, lalu Tambahkan ke Dock. Opsi ini juga ada di menu Bagikan pada bilah alat.",
+      "Klik Tambahkan, lalu buka InBrowser.App dari Dock atau folder Aplikasi."
+    ],
+    "windows-firefox": [
+      "Buka halaman ini di jendela Firefox biasa. Gunakan Firefox 143 atau versi lebih baru, atau versi 150 atau lebih baru jika dipasang dari Microsoft Store.",
+      "Klik tombol aplikasi web di bilah alamat. Buka InBrowser.App dari bilah tugas atau menu Mulai."
+    ]
+  }
+}

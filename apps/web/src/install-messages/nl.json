@@ -1,0 +1,55 @@
+{
+  "title": "InBrowser.App installeren",
+  "description": "Kies je browser om de installatie-instructies te bekijken.",
+  "guideTitle": "InBrowser.App installeren · {browser}",
+  "guideDescription": "Zo installeer je InBrowser.App in {browser}.",
+  "switchBrowser": "Een andere browser kiezen",
+  "browserHelp": "Browserhulp",
+  "otherBrowsers": "Andere browsers",
+  "desktop": "Computer",
+  "steps": {
+    "ios-safari": [
+      "Open deze pagina in Safari en tik op ‘Deel’. Zie je ‘Deel’ niet? Open dan eerst het paginamenu of het menu ‘Meer’.",
+      "Tik zo nodig op ‘Toon meer’ in het deelmenu. Tik op ‘Zet op beginscherm’. Schakel ‘Open als webapp’ in als je die optie ziet.",
+      "Tik op ‘Voeg toe’ en open InBrowser.App vanaf je beginscherm."
+    ],
+    "ios-other": [
+      "Open het deelmenu van je browser. Dat zit meestal naast de adresbalk.",
+      "Als ‘Zet op beginscherm’ beschikbaar is, tik je erop en bevestig je. Schakel ‘Open als webapp’ in als je die optie ziet.",
+      "Ontbreekt die optie of heb je deze pagina in een andere app geopend? Open inbrowser.app in Safari en volg de Safari-instructies."
+    ],
+    "android-chrome": [
+      "Open het Chrome-menu (⋮) en kies ‘Installeren en snelkoppeling maken’.",
+      "Kies ‘Installeren’ en volg de aanwijzingen. In sommige versies staat ‘App installeren’ of ‘Toevoegen aan startscherm’ in het hoofdmenu."
+    ],
+    "android-firefox": [
+      "Open het Firefox-menu (⋮) en tik op ‘Installeren’.",
+      "Tik op ‘Automatisch toevoegen’ of sleep het pictogram naar een plek op je startscherm."
+    ],
+    "android-samsung-internet": [
+      "Tik op het installatiepictogram in de adresbalk als je dat ziet.",
+      "Je kunt ook het menu van Samsung Internet openen en via ‘Pagina toevoegen aan’ voor ‘Startscherm’ kiezen. Volg de aanwijzingen."
+    ],
+    "android-other": [
+      "Zoek in het browsermenu naar ‘Installeren’, ‘Toevoegen aan startscherm’ of ‘Toevoegen aan telefoon’. Als je kunt kiezen, selecteer je ‘Installeren’.",
+      "Ontbreekt de optie of heb je de site in een andere app geopend? Kies ‘Openen in browser’ als die optie beschikbaar is. Je kunt inbrowser.app ook in Chrome openen en de Chrome-instructies volgen."
+    ],
+    "desktop-chrome": [
+      "Klik op het installatiepictogram in de adresbalk als je dat ziet.",
+      "Je kunt ook het Chrome-menu openen en via ‘Casten, opslaan en delen’ naar ‘Pagina installeren als app’ gaan. Bevestig de installatie."
+    ],
+    "desktop-edge": [
+      "Klik op het pictogram voor app-installatie in de adresbalk als je dat ziet.",
+      "Je kunt ook ‘Instellingen en meer’ openen en via ‘Meer hulpprogramma’s’ en ‘Apps’ naar ‘Deze site installeren als app’ gaan. Bevestig de installatie."
+    ],
+    "macos-safari": [
+      "Open deze pagina in Safari op macOS Sonoma 14 of nieuwer.",
+      "Kies ‘Archief’ en dan ‘Zet in Dock’. Je vindt ‘Zet in Dock’ ook onder ‘Deel’ in de knoppenbalk.",
+      "Klik op ‘Voeg toe’ en open InBrowser.App vanuit het Dock of de map ‘Apps’."
+    ],
+    "windows-firefox": [
+      "Open deze pagina in een normaal Firefox-venster. Gebruik Firefox 143 of nieuwer, of versie 150 of nieuwer als je Firefox via de Microsoft Store hebt geïnstalleerd.",
+      "Klik op de knop voor webapps in de adresbalk. Open InBrowser.App daarna vanuit de taakbalk of het startmenu."
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Zainstaluj InBrowser.App",
+  "description": "Wybierz swoją przeglądarkę, aby zobaczyć instrukcję instalacji.",
+  "guideTitle": "Instalacja InBrowser.App · {browser}",
+  "guideDescription": "Instrukcja instalacji InBrowser.App dla {browser}.",
+  "switchBrowser": "Wybierz inną przeglądarkę",
+  "browserHelp": "Pomoc przeglądarki",
+  "otherBrowsers": "Inne przeglądarki",
+  "desktop": "Komputer",
+  "steps": {
+    "ios-safari": [
+      "Otwórz tę stronę w Safari i stuknij „Udostępnij”. Jeśli nie widzisz tego przycisku, otwórz menu strony lub menu „Więcej”.",
+      "W razie potrzeby stuknij „Pokaż więcej” w menu udostępniania. Stuknij „Do ekranu głównego”. Włącz opcję „Otwórz jako aplikację www”, jeśli się pojawi.",
+      "Stuknij „Dodaj”, a następnie otwórz InBrowser.App z ekranu głównego."
+    ],
+    "ios-other": [
+      "Otwórz menu „Udostępnij”. Zwykle znajduje się obok paska adresu przeglądarki.",
+      "Jeśli widzisz opcję „Do ekranu głównego”, stuknij ją i potwierdź. Włącz opcję „Otwórz jako aplikację www”, jeśli się pojawi.",
+      "Jeśli brakuje tej opcji lub strona jest otwarta wewnątrz innej aplikacji, przejdź do inbrowser.app w Safari i wykonaj kroki z instrukcji dla Safari."
+    ],
+    "android-chrome": [
+      "Otwórz menu Chrome (⋮) i wybierz „Zainstaluj i utwórz skrót”.",
+      "Wybierz „Zainstaluj” i postępuj zgodnie z instrukcjami na ekranie. W niektórych wersjach w głównym menu znajdziesz „Zainstaluj aplikację” lub „Dodaj do ekranu głównego”."
+    ],
+    "android-firefox": [
+      "Otwórz menu Firefoksa (⋮) i stuknij „Zainstaluj”.",
+      "Stuknij „Dodaj automatycznie” lub przeciągnij ikonę w wybrane miejsce na ekranie głównym."
+    ],
+    "android-samsung-internet": [
+      "Stuknij ikonę instalacji na pasku adresu, jeśli ją widzisz.",
+      "Możesz też otworzyć menu Samsung Internet, wybrać „Dodaj stronę do”, a następnie „Ekran główny”. Postępuj zgodnie z instrukcjami na ekranie."
+    ],
+    "android-other": [
+      "Poszukaj w menu przeglądarki opcji „Zainstaluj”, „Dodaj do ekranu głównego” lub „Dodaj do telefonu”. Jeśli masz wybór, wybierz „Zainstaluj”.",
+      "Jeśli brakuje tej opcji lub strona jest otwarta wewnątrz innej aplikacji, wybierz „Otwórz w przeglądarce”, o ile ta opcja jest dostępna. Możesz też otworzyć inbrowser.app w Chrome i skorzystać z instrukcji dla Chrome."
+    ],
+    "desktop-chrome": [
+      "Kliknij ikonę instalacji na pasku adresu, jeśli ją widzisz.",
+      "Możesz też otworzyć menu Chrome, wybrać „Przesyłaj, zapisuj i udostępniaj”, a następnie „Zainstaluj stronę jako aplikację”. Potwierdź instalację."
+    ],
+    "desktop-edge": [
+      "Kliknij ikonę instalacji aplikacji na pasku adresu, jeśli ją widzisz.",
+      "Możesz też otworzyć menu „Ustawienia i nie tylko” i wybrać kolejno „Więcej narzędzi”, „Aplikacje” oraz „Zainstaluj tę witrynę jako aplikację”. Potwierdź instalację."
+    ],
+    "macos-safari": [
+      "Otwórz tę stronę w Safari na macOS Sonoma 14 lub nowszym.",
+      "Z menu „Plik” wybierz „Dodaj do Docka”. Tę samą opcję znajdziesz w menu „Udostępnij” na pasku narzędzi.",
+      "Kliknij „Dodaj”, a następnie otwórz InBrowser.App z Docka lub folderu Aplikacje."
+    ],
+    "windows-firefox": [
+      "Otwórz tę stronę w zwykłym oknie Firefoksa. Użyj Firefoksa 143 lub nowszego, a w przypadku wersji z Microsoft Store – wersji 150 lub nowszej.",
+      "Kliknij przycisk aplikacji internetowych na pasku adresu. Otwórz InBrowser.App z paska zadań lub menu Start."
+    ]
+  }
+}

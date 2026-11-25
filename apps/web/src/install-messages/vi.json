@@ -1,0 +1,55 @@
+{
+  "title": "Cài đặt InBrowser.App",
+  "description": "Chọn trình duyệt bạn đang dùng để xem hướng dẫn cài đặt.",
+  "guideTitle": "Cài đặt InBrowser.App · {browser}",
+  "guideDescription": "Cách cài đặt InBrowser.App trong {browser}.",
+  "switchBrowser": "Chọn trình duyệt khác",
+  "browserHelp": "Trợ giúp về trình duyệt",
+  "otherBrowsers": "Trình duyệt khác",
+  "desktop": "Máy tính",
+  "steps": {
+    "ios-safari": [
+      "Mở trang này trong Safari rồi chạm vào Chia sẻ. Nếu không thấy nút Chia sẻ, hãy mở menu trang hoặc menu Thêm trước.",
+      "Trong menu Chia sẻ, chạm vào Xem thêm nếu cần. Chạm vào Thêm vào Màn hình chính. Bật Mở dưới dạng ứng dụng web nếu mục này xuất hiện.",
+      "Chạm vào Thêm, sau đó mở InBrowser.App từ Màn hình chính."
+    ],
+    "ios-other": [
+      "Mở menu Chia sẻ của trình duyệt. Menu này thường nằm cạnh thanh địa chỉ.",
+      "Nếu có mục Thêm vào Màn hình chính, hãy chạm vào mục đó rồi xác nhận. Bật Mở dưới dạng ứng dụng web nếu mục này xuất hiện.",
+      "Nếu không thấy tùy chọn này hoặc bạn đang mở trang trong một ứng dụng khác, hãy mở inbrowser.app trong Safari và làm theo hướng dẫn dành cho Safari."
+    ],
+    "android-chrome": [
+      "Mở menu Chrome (⋮) rồi chọn Cài đặt và tạo lối tắt.",
+      "Chọn Cài đặt và làm theo hướng dẫn trên màn hình. Trên một số phiên bản, hãy tìm Cài đặt ứng dụng hoặc Thêm vào màn hình chính trong menu chính."
+    ],
+    "android-firefox": [
+      "Mở menu Firefox (⋮) rồi chạm vào Cài đặt.",
+      "Chạm vào Thêm tự động hoặc kéo biểu tượng đến vị trí bạn muốn trên màn hình chính."
+    ],
+    "android-samsung-internet": [
+      "Chạm vào biểu tượng cài đặt trên thanh địa chỉ nếu có.",
+      "Bạn cũng có thể mở menu Samsung Internet, chọn Thêm trang vào rồi chọn Màn hình chờ. Làm theo hướng dẫn trên màn hình."
+    ],
+    "android-other": [
+      "Trong menu trình duyệt, tìm Cài đặt, Thêm vào màn hình chính hoặc Thêm vào điện thoại. Nếu có nhiều lựa chọn, hãy chọn Cài đặt.",
+      "Nếu không thấy tùy chọn này hoặc đang xem trang web trong ứng dụng khác, hãy chọn Mở trong trình duyệt nếu có. Bạn cũng có thể mở inbrowser.app trong Chrome và làm theo hướng dẫn dành cho Chrome."
+    ],
+    "desktop-chrome": [
+      "Nhấp vào biểu tượng Cài đặt trên thanh địa chỉ nếu có.",
+      "Bạn cũng có thể mở menu Chrome, chọn Truyền, lưu và chia sẻ rồi chọn Cài đặt trang dưới dạng ứng dụng. Xác nhận để cài đặt."
+    ],
+    "desktop-edge": [
+      "Nhấp vào biểu tượng cài đặt ứng dụng trên thanh địa chỉ nếu có.",
+      "Bạn cũng có thể mở Cài đặt và hơn thế nữa, chọn Công cụ khác, Ứng dụng rồi chọn Cài đặt trang web này dưới dạng ứng dụng. Xác nhận để cài đặt."
+    ],
+    "macos-safari": [
+      "Mở trang này trong Safari trên macOS Sonoma 14 trở lên.",
+      "Chọn Tệp rồi chọn Thêm vào Dock. Bạn cũng có thể tìm mục Thêm vào Dock trong menu Chia sẻ trên thanh công cụ.",
+      "Nhấp vào Thêm, sau đó mở InBrowser.App từ Dock hoặc thư mục Ứng dụng."
+    ],
+    "windows-firefox": [
+      "Mở trang này trong cửa sổ Firefox thông thường. Dùng Firefox 143 trở lên, hoặc bản 150 trở lên nếu cài từ Microsoft Store.",
+      "Nhấp vào nút ứng dụng web trên thanh địa chỉ. Mở InBrowser.App từ thanh tác vụ hoặc menu Bắt đầu."
+    ]
+  }
+}

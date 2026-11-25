@@ -1,0 +1,19 @@
+---
+import InstallPage from "@/components/pages/install-page.astro"
+import { INSTALL_GUIDE_IDS, isInstallGuideId } from "@/lib/install-guides"
+import { createNonDefaultLanguageStaticPaths } from "@/lib/site"
+
+export function getStaticPaths() {
+  return createNonDefaultLanguageStaticPaths().flatMap(({ params, props }) =>
+    [undefined, ...INSTALL_GUIDE_IDS].map((guide) => ({
+      params: { ...params, guide },
+      props,
+    }))
+  )
+}
+
+const { language } = Astro.props
+const { guide } = Astro.params
+---
+
+<InstallPage language={language} guideId={isInstallGuideId(guide) ? guide : undefined} />

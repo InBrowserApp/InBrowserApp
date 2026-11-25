@@ -1,0 +1,55 @@
+{
+  "title": "Installer InBrowser.App",
+  "description": "Choisissez votre navigateur pour afficher les instructions d’installation.",
+  "guideTitle": "Installer InBrowser.App · {browser}",
+  "guideDescription": "Comment installer InBrowser.App dans {browser}.",
+  "switchBrowser": "Choisir un autre navigateur",
+  "browserHelp": "Aide du navigateur",
+  "otherBrowsers": "Autres navigateurs",
+  "desktop": "Ordinateur",
+  "steps": {
+    "ios-safari": [
+      "Ouvrez cette page dans Safari et touchez « Partager ». Si cette option ne s’affiche pas, ouvrez d’abord le menu de la page ou le menu « Plus ».",
+      "Dans le menu de partage, touchez Voir plus si nécessaire. Touchez « Sur l’écran d’accueil ». Si l’option « Ouvrir comme app web » s’affiche, activez-la.",
+      "Touchez « Ajouter », puis ouvrez InBrowser.App depuis votre écran d’accueil."
+    ],
+    "ios-other": [
+      "Ouvrez le menu « Partager » du navigateur, généralement situé à côté de la barre d’adresse.",
+      "Si l’option « Sur l’écran d’accueil » est disponible, touchez-la et confirmez. Activez « Ouvrir comme app web » si cette option s’affiche.",
+      "Si l’option manque ou si vous avez ouvert cette page depuis une autre app, ouvrez inbrowser.app dans Safari et suivez le guide pour Safari."
+    ],
+    "android-chrome": [
+      "Ouvrez le menu de Chrome (⋮) et choisissez « Installer et créer un raccourci ».",
+      "Choisissez « Installer » et suivez les instructions. Dans certaines versions, cherchez plutôt « Installer l’application » ou « Ajouter à l’écran d’accueil » dans le menu principal."
+    ],
+    "android-firefox": [
+      "Ouvrez le menu de Firefox (⋮) et appuyez sur « Installer ».",
+      "Appuyez sur « Ajouter automatiquement » ou faites glisser l’icône à l’endroit souhaité sur l’écran d’accueil."
+    ],
+    "android-samsung-internet": [
+      "Si une icône d’installation apparaît dans la barre d’adresse, appuyez dessus.",
+      "Vous pouvez aussi ouvrir le menu de Samsung Internet et choisir « Ajouter la page à », puis « Écran d’accueil ». Suivez les instructions."
+    ],
+    "android-other": [
+      "Dans le menu du navigateur, cherchez « Installer », « Ajouter à l’écran d’accueil » ou « Ajouter au téléphone ». Si vous avez le choix, sélectionnez « Installer ».",
+      "Si l’option manque ou si vous avez ouvert le site depuis une autre app, choisissez « Ouvrir dans le navigateur » si cette option est disponible. Vous pouvez aussi ouvrir inbrowser.app dans Chrome et suivre le guide pour Chrome."
+    ],
+    "desktop-chrome": [
+      "Si une icône d’installation apparaît dans la barre d’adresse, cliquez dessus.",
+      "Vous pouvez aussi ouvrir le menu de Chrome et choisir « Caster, enregistrer et partager », puis « Installer la page en tant qu’application ». Confirmez l’installation."
+    ],
+    "desktop-edge": [
+      "Si une icône d’installation apparaît dans la barre d’adresse, cliquez dessus.",
+      "Vous pouvez aussi ouvrir « Paramètres et plus », puis choisir « Outils supplémentaires », « Applications » et « Installer ce site en tant qu’application ». Confirmez l’installation."
+    ],
+    "macos-safari": [
+      "Ouvrez cette page dans Safari sur macOS Sonoma 14 ou une version ultérieure.",
+      "Choisissez « Fichier », puis « Ajouter au Dock ». Vous trouverez aussi cette option dans le menu « Partager » de la barre d’outils.",
+      "Cliquez sur « Ajouter », puis ouvrez InBrowser.App depuis le Dock ou le dossier Applications."
+    ],
+    "windows-firefox": [
+      "Ouvrez cette page dans une fenêtre de navigation normale de Firefox. Utilisez Firefox 143 ou une version ultérieure, ou Firefox 150 ou une version ultérieure si vous l’avez installé depuis le Microsoft Store.",
+      "Cliquez sur le bouton des applications web dans la barre d’adresse. Ouvrez InBrowser.App depuis la barre des tâches ou le menu Démarrer."
+    ]
+  }
+}

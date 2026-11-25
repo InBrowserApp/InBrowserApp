@@ -1,0 +1,55 @@
+{
+  "title": "Installer InBrowser.App",
+  "description": "Velg nettleseren du bruker for å se hvordan du installerer appen.",
+  "guideTitle": "Installer InBrowser.App · {browser}",
+  "guideDescription": "Slik installerer du InBrowser.App i {browser}.",
+  "switchBrowser": "Velg en annen nettleser",
+  "browserHelp": "Hjelp for nettleseren",
+  "otherBrowsers": "Andre nettlesere",
+  "desktop": "Datamaskin",
+  "steps": {
+    "ios-safari": [
+      "Åpne denne siden i Safari og trykk på «Del». Hvis du ikke ser «Del», åpner du sidemenyen eller «Mer»-menyen først.",
+      "Trykk på «Vis mer» i delingsmenyen hvis det trengs. Trykk på «Legg til på Hjem-skjerm». Slå på «Åpne som nettapp» hvis du ser det alternativet.",
+      "Trykk på «Legg til», og åpne deretter InBrowser.App fra Hjem-skjermen."
+    ],
+    "ios-other": [
+      "Åpne delingsmenyen i nettleseren. Den ligger vanligvis ved siden av adressefeltet.",
+      "Hvis «Legg til på Hjem-skjerm» er tilgjengelig, trykker du på alternativet og bekrefter. Slå på «Åpne som nettapp» hvis du ser det alternativet.",
+      "Hvis alternativet mangler eller du åpnet siden i en annen app, åpner du inbrowser.app i Safari og følger Safari-veiledningen."
+    ],
+    "android-chrome": [
+      "Åpne Chrome-menyen (⋮) og velg «Installer og opprett snarvei».",
+      "Velg «Installer» og følg veiledningen. I noen versjoner finner du «Installer app» eller «Legg til på startskjermen» i hovedmenyen."
+    ],
+    "android-firefox": [
+      "Åpne Firefox-menyen (⋮) og trykk på «Installer».",
+      "Trykk på «Legg til automatisk», eller dra ikonet til ønsket sted på startskjermen."
+    ],
+    "android-samsung-internet": [
+      "Trykk på installasjonsikonet i adressefeltet hvis det vises.",
+      "Du kan også åpne menyen i Samsung Internet og velge «Legg til side i» og deretter «Startskjerm». Følg veiledningen."
+    ],
+    "android-other": [
+      "Se etter «Installer», «Legg til på startskjermen» eller «Legg til på telefonen» i nettlesermenyen. Hvis du får velge, trykker du på «Installer».",
+      "Hvis alternativet mangler eller du åpnet nettstedet i en annen app, velger du «Åpne i nettleser» hvis det er tilgjengelig. Du kan også åpne inbrowser.app i Chrome og følge Chrome-veiledningen."
+    ],
+    "desktop-chrome": [
+      "Klikk på installasjonsikonet i adressefeltet hvis det vises.",
+      "Du kan også åpne Chrome-menyen, velge «Cast, lagre og del» og deretter «Installer siden som app». Bekreft installasjonen."
+    ],
+    "desktop-edge": [
+      "Klikk på ikonet for appinstallasjon i adressefeltet hvis det vises.",
+      "Du kan også åpne «Innstillinger og mer» og velge «Flere verktøy», «Apper» og deretter «Installer dette området som en app». Bekreft installasjonen."
+    ],
+    "macos-safari": [
+      "Åpne denne siden i Safari på macOS Sonoma 14 eller nyere.",
+      "Velg «Arkiv» og deretter «Legg til i Dock». Du finner også «Legg til i Dock» under «Del» på verktøylinjen.",
+      "Klikk på «Legg til», og åpne deretter InBrowser.App fra Dock eller Programmer-mappen."
+    ],
+    "windows-firefox": [
+      "Åpne denne siden i et vanlig Firefox-vindu. Bruk Firefox 143 eller nyere, eller versjon 150 eller nyere hvis du installerte Firefox fra Microsoft Store.",
+      "Klikk på knappen for nettapper i adressefeltet. Åpne deretter InBrowser.App fra oppgavelinjen eller Start-menyen."
+    ]
+  }
+}

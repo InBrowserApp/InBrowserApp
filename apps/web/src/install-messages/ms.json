@@ -1,0 +1,55 @@
+{
+  "title": "Pasang InBrowser.App",
+  "description": "Pilih pelayar yang anda gunakan untuk melihat arahan pemasangan.",
+  "guideTitle": "Pasang InBrowser.App · {browser}",
+  "guideDescription": "Cara memasang InBrowser.App dalam {browser}.",
+  "switchBrowser": "Pilih pelayar lain",
+  "browserHelp": "Bantuan pelayar",
+  "otherBrowsers": "Pelayar lain",
+  "desktop": "Komputer",
+  "steps": {
+    "ios-safari": [
+      "Buka halaman ini dalam Safari, kemudian ketik Kongsi. Jika butang Kongsi tidak kelihatan, buka menu halaman atau menu Lagi terlebih dahulu.",
+      "Dalam menu Kongsi, ketik Lihat Lagi jika perlu. Ketik Tambah ke Skrin Utama. Jika pilihan Buka sebagai Apl Web dipaparkan, hidupkannya.",
+      "Ketik Tambah, kemudian buka InBrowser.App daripada Skrin Utama."
+    ],
+    "ios-other": [
+      "Buka menu Kongsi dalam pelayar, biasanya di sebelah bar alamat.",
+      "Jika Tambah ke Skrin Utama tersedia, ketik pilihan itu dan sahkan. Hidupkan Buka sebagai Apl Web jika pilihan itu dipaparkan.",
+      "Jika pilihan itu tiada atau anda membuka halaman ini dalam apl lain, buka inbrowser.app dalam Safari dan ikut panduan Safari."
+    ],
+    "android-chrome": [
+      "Buka menu Chrome (⋮) dan pilih Pasang dan buat pintasan.",
+      "Pilih Pasang dan ikut arahan pada skrin. Pada sesetengah versi, cari Pasang apl atau Tambah pada skrin utama dalam menu utama."
+    ],
+    "android-firefox": [
+      "Buka menu Firefox (⋮) dan ketik Pasang.",
+      "Ketik Tambah secara automatik atau seret ikon ke kedudukan yang anda inginkan pada skrin utama."
+    ],
+    "android-samsung-internet": [
+      "Ketik ikon pasang dalam bar alamat jika ikon itu dipaparkan.",
+      "Anda juga boleh membuka menu Samsung Internet, memilih Tambah halaman ke, kemudian Skrin utama. Ikut arahan pada skrin."
+    ],
+    "android-other": [
+      "Cari Pasang, Tambah pada skrin utama atau Tambah pada telefon dalam menu pelayar. Jika terdapat beberapa pilihan, pilih Pasang.",
+      "Jika pilihan itu tiada atau anda membuka laman ini dalam apl lain, gunakan Buka dalam pelayar jika tersedia. Anda juga boleh membuka inbrowser.app dalam Chrome dan mengikut panduan Chrome."
+    ],
+    "desktop-chrome": [
+      "Klik ikon pasang dalam bar alamat jika ikon itu dipaparkan.",
+      "Anda juga boleh membuka menu Chrome, memilih Hantar, simpan dan kongsi, kemudian Pasang halaman sebagai apl. Sahkan pemasangan."
+    ],
+    "desktop-edge": [
+      "Klik ikon pemasangan apl dalam bar alamat jika ikon itu dipaparkan.",
+      "Anda juga boleh membuka Tetapan dan banyak lagi, kemudian memilih Alat lain, Apl dan Pasang laman ini sebagai apl. Sahkan pemasangan."
+    ],
+    "macos-safari": [
+      "Buka halaman ini dalam Safari pada macOS Sonoma 14 atau lebih baharu.",
+      "Pilih Fail, kemudian Tambah ke Dock. Pilihan ini juga tersedia dalam menu Kongsi pada bar alat.",
+      "Klik Tambah, kemudian buka InBrowser.App daripada Dock atau folder Aplikasi."
+    ],
+    "windows-firefox": [
+      "Buka halaman ini dalam tetingkap Firefox biasa. Gunakan Firefox 143 atau lebih baharu, atau versi 150 atau lebih baharu jika dipasang daripada Microsoft Store.",
+      "Klik butang apl web dalam bar alamat. Buka InBrowser.App daripada bar tugas atau menu Mula."
+    ]
+  }
+}
