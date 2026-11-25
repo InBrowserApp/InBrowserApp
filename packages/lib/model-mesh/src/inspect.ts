@@ -50,13 +50,14 @@ function countNonManifoldVertices(
 
 export function analyzeMesh(
   object: Object3D,
-  { orientedVolume = false } = {}
+  { requirePositiveShellVolume = false } = {}
 ): MeshReport {
   const vertexIndex = new Map<string, number>()
   const incident: number[][] = []
   const faces: Face[] = []
   const edges = new Map<string, Edge>()
   const faceKeys = new Set<string>()
+  const faceVolumes: number[] = []
   let triangles = 0
   let surfaceArea = 0
   let sixTimesVolume = 0
@@ -122,7 +123,9 @@ export function analyzeMesh(
       }
       origin ??= a.clone()
       surfaceArea += twiceArea / 2
-      sixTimesVolume += offset.subVectors(a, origin).dot(cross)
+      const volume = offset.subVectors(a, origin).dot(cross)
+      sixTimesVolume += volume
+      if (requirePositiveShellVolume) faceVolumes.push(volume)
 
       const faceKey = [...ids].sort((first, second) => first - second).join(":")
       if (faceKeys.has(faceKey)) duplicateFaces += 1
@@ -159,7 +162,17 @@ export function analyzeMesh(
     for (const neighbor of neighbors) parent[find(neighbor)] = find(first!)
   }
 
-  const shells = new Set(parent.map((_, index) => find(index))).size
+  const shellIds = parent.map((_, index) => find(index))
+  const shells = new Set(shellIds).size
+  const shellVolumes = new Map<number, number>()
+  if (requirePositiveShellVolume) {
+    for (const [face, id] of shellIds.entries()) {
+      shellVolumes.set(id, (shellVolumes.get(id) ?? 0) + faceVolumes[face]!)
+    }
+  }
+  const nonPositiveShell = [...shellVolumes.values()].some(
+    (volume) => volume <= 0
+  )
   const nonManifoldVertices = countNonManifoldVertices(incident, faces, edges)
   const defects =
     boundaryEdges +
@@ -170,9 +183,7 @@ export function analyzeMesh(
     duplicateFaces
   return {
     surfaceArea,
-    volume: defects
-      ? null
-      : (orientedVolume ? sixTimesVolume : Math.abs(sixTimesVolume)) / 6,
+    volume: defects || nonPositiveShell ? null : Math.abs(sixTimesVolume) / 6,
     triangles,
     vertices: vertexIndex.size,
     shells,

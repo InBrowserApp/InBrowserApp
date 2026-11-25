@@ -9,6 +9,7 @@ import {
   MeshBasicMaterial,
 } from "three"
 import {
+  modelNamespace,
   modelRelationship,
   production,
   rootRelationships,
@@ -17,7 +18,7 @@ import {
 import type { SaxesTagNS } from "saxes"
 import type { Object3D } from "three"
 
-type Placement = { objectId: string; path?: string; matrix?: Matrix4 }
+type Placement = { objectId: number; path?: string; matrix?: Matrix4 }
 type Shape = { positions: number[]; indices: number[]; components: Placement[] }
 
 function attributes(tag: SaxesTagNS) {
@@ -30,10 +31,16 @@ function numeric(value?: string) {
   return number
 }
 
+function resourceId(value?: string) {
+  const id = numeric(value)
+  if (!Number.isInteger(id) || id < 1 || id >= 2 ** 31)
+    throw new Error("Invalid 3MF object ID")
+  return id
+}
+
 function placement(tag: SaxesTagNS, scale: number): Placement {
   const get = attributes(tag)
-  const objectId = get("objectid")
-  if (!objectId) throw new Error("Missing 3MF object reference")
+  const objectId = resourceId(get("objectid"))
   const path = Object.values(tag.attributes)
     .find(({ uri, local }) => uri === production && local === "path")
     ?.value.replace(/^\//, "")
@@ -80,7 +87,7 @@ function placement(tag: SaxesTagNS, scale: number): Placement {
 }
 
 function parseModel(xml: string) {
-  const shapes = new Map<string, Shape>()
+  const shapes = new Map<number, Shape>()
   const build: Placement[] = []
   const parents: string[] = []
   let scale = 1
@@ -89,11 +96,27 @@ function parseModel(xml: string) {
   parser.on("opentag", (tag) => {
     const get = attributes(tag)
     const parent = parents.at(-1)
-    if (tag.local === "model" && parents.length === 0)
+    const core = !tag.uri || tag.uri === modelNamespace
+    parents.push(core ? tag.local : "")
+    if (!core) return
+    if (tag.local === "model" && parents.length === 1) {
       scale = unitScale(get("unit"))
+      const materials =
+        "http://schemas.microsoft.com/3dmanufacturing/material/2015/02"
+      const required =
+        get("requiredextensions")?.trim().split(/\s+/).filter(Boolean) ?? []
+      if (
+        required.some(
+          (prefix) =>
+            tag.ns[prefix] !== production && tag.ns[prefix] !== materials
+        )
+      ) {
+        throw new Error("Unsupported required 3MF extension")
+      }
+    }
     if (tag.local === "object" && parent === "resources") {
-      const id = get("id")
-      if (!id || shapes.has(id)) throw new Error("Invalid 3MF object ID")
+      const id = resourceId(get("id"))
+      if (shapes.has(id)) throw new Error("Duplicate 3MF object ID")
       shape = { positions: [], indices: [], components: [] }
       shapes.set(id, shape)
     }
@@ -111,11 +134,9 @@ function parseModel(xml: string) {
       shape.components.push(placement(tag, scale))
     if (tag.local === "item" && parent === "build")
       build.push(placement(tag, scale))
-    parents.push(tag.local)
   })
-  parser.on("closetag", ({ local }) => {
-    if (local === "object") shape = undefined
-    parents.pop()
+  parser.on("closetag", () => {
+    if (parents.pop() === "object") shape = undefined
   })
   parser.write(xml).close()
   return { shapes, build }

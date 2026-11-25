@@ -8,4 +8,4 @@ Konvertereren lagrer nettets koordinater i millimeter. Delene beholder plasserin
 
 ## Sjekk hva STL-filen inneholder
 
-STL-filen inneholder trekantene fra overflatene. Ta vare på den opprinnelige 3MF-filen for farger, materialer og innstillinger for slicerprogrammet. Åpne resultatet i [STL-viseren](../stl-viewer/), eller sjekk kildefilen i [3MF-viseren](../3mf-viewer/). Bruk [STL til 3MF-konvertereren](../stl-to-3mf-converter/) hvis neste steg krever en 3MF-modellpakke. [Om 3MF-formatet](https://3mf.io/resources/faq/)
+Konvertereren leser trekantnettene som er lagret i 3MF-filen. Hvis modellen er avhengig av et gitter av staver eller en annen geometriutvidelse, eksporterer du først et trekantnett fra programmet der modellen ble opprettet. STL-filen inneholder trekantene fra overflatene. Ta vare på den opprinnelige 3MF-filen for farger, materialer og innstillinger for slicerprogrammet. Åpne resultatet i [STL-viseren](../stl-viewer/), eller sjekk kildefilen i [3MF-viseren](../3mf-viewer/). Bruk [STL til 3MF-konvertereren](../stl-to-3mf-converter/) hvis neste steg krever en 3MF-modellpakke. [Om 3MF-formatet](https://3mf.io/resources/faq/)

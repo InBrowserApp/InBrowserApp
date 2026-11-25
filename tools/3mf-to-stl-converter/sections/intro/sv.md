@@ -8,4 +8,4 @@ Konverteraren skriver nätets koordinater i millimeter. Delarna behåller sina p
 
 ## Se vad STL-filen innehåller
 
-STL-filen innehåller ytornas trianglar. Spara den ursprungliga 3MF-filen om du vill behålla färger, material och utskriftsinställningar. Öppna resultatet i [STL-visaren](../stl-viewer/) eller granska källfilen i [3MF-visaren](../3mf-viewer/). Använd [STL till 3MF-konverteraren](../stl-to-3mf-converter/) om nästa steg kräver ett 3MF-modellpaket. [Om 3MF-formatet](https://3mf.io/resources/faq/)
+Konverteraren läser triangelnäten som finns sparade i 3MF-filen. Om modellen är beroende av ett balkgitter eller ett annat geometriskt tillägg måste du först exportera ett triangelnät från det program där modellen skapades. STL-filen innehåller ytornas trianglar. Spara den ursprungliga 3MF-filen om du vill behålla färger, material och utskriftsinställningar. Öppna resultatet i [STL-visaren](../stl-viewer/) eller granska källfilen i [3MF-visaren](../3mf-viewer/). Använd [STL till 3MF-konverteraren](../stl-to-3mf-converter/) om nästa steg kräver ett 3MF-modellpaket. [Om 3MF-formatet](https://3mf.io/resources/faq/)

@@ -8,4 +8,4 @@ The converter outputs mesh coordinates in millimeters. Parts placed on the build
 
 ## Check what the STL contains
 
-STL contains the surface triangles. For colors, materials or slicer settings, keep the original 3MF. Open the result in the [STL Viewer](../stl-viewer/) or inspect the source in the [3MF Viewer](../3mf-viewer/). Use the [STL to 3MF Converter](../stl-to-3mf-converter/) if your next workflow needs a 3MF model package. [About the 3MF format](https://3mf.io/resources/faq/)
+The converter reads the triangle meshes stored in the 3MF. For a model that depends on a beam lattice or another geometry extension, export a triangle mesh from the source application first. STL contains the surface triangles. For colors, materials or slicer settings, keep the original 3MF. Open the result in the [STL Viewer](../stl-viewer/) or inspect the source in the [3MF Viewer](../3mf-viewer/). Use the [STL to 3MF Converter](../stl-to-3mf-converter/) if your next workflow needs a 3MF model package. [About the 3MF format](https://3mf.io/resources/faq/)

@@ -77,7 +77,7 @@ export async function convertMesh(
       import("./three-mf-export"),
       import("./inspect"),
     ])
-    const { volume } = analyzeMesh(mesh, { orientedVolume: true })
+    const { volume } = analyzeMesh(mesh, { requirePositiveShellVolume: true })
     return export3mf(
       mesh.geometry.getAttribute("position"),
       options.unit ?? "millimeter",

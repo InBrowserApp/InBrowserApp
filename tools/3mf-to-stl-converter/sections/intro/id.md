@@ -8,4 +8,4 @@ Konverter menghasilkan koordinat mesh dalam milimeter. Komponen yang disusun di 
 
 ## Periksa isi file STL
 
-STL memuat segitiga permukaan. Simpan file 3MF asli jika Anda memerlukan warna, material, atau pengaturan slicer. Buka hasilnya di [Penampil STL](../stl-viewer/) atau periksa file sumber di [Penampil 3MF](../3mf-viewer/). Gunakan [Konverter STL ke 3MF](../stl-to-3mf-converter/) jika langkah berikutnya memerlukan paket model 3MF. [Tentang format 3MF](https://3mf.io/resources/faq/)
+Konverter membaca mesh segitiga yang disimpan dalam file 3MF. Jika model bergantung pada kisi batang (beam lattice) atau ekstensi geometri lain, ekspor mesh segitiga dari aplikasi sumber terlebih dahulu. STL memuat segitiga permukaan. Simpan file 3MF asli jika Anda memerlukan warna, material, atau pengaturan slicer. Buka hasilnya di [Penampil STL](../stl-viewer/) atau periksa file sumber di [Penampil 3MF](../3mf-viewer/). Gunakan [Konverter STL ke 3MF](../stl-to-3mf-converter/) jika langkah berikutnya memerlukan paket model 3MF. [Tentang format 3MF](https://3mf.io/resources/faq/)

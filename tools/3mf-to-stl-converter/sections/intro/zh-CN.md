@@ -8,4 +8,4 @@
 
 ## 检查 STL 的内容
 
-STL 包含表面三角形。要保留颜色、材质或切片设置，请保留原始 3MF。在 [STL 查看器](../stl-viewer/)中打开结果，或在 [3MF 查看器](../3mf-viewer/)中检查源文件。如果后续工作需要 3MF 模型包，请使用 [STL 转 3MF 转换器](../stl-to-3mf-converter/)。[关于 3MF 格式](https://3mf.io/resources/faq/)
+转换器读取 3MF 中存储的三角网格。对于依赖梁晶格或其他几何扩展的模型，请先从源应用程序导出三角网格。 STL 包含表面三角形。要保留颜色、材质或切片设置，请保留原始 3MF。在 [STL 查看器](../stl-viewer/)中打开结果，或在 [3MF 查看器](../3mf-viewer/)中检查源文件。如果后续工作需要 3MF 模型包，请使用 [STL 转 3MF 转换器](../stl-to-3mf-converter/)。[关于 3MF 格式](https://3mf.io/resources/faq/)

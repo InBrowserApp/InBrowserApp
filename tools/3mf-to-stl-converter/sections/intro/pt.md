@@ -8,4 +8,4 @@ O conversor exporta as coordenadas da malha em milímetros. As peças posicionad
 
 ## Conferir o conteúdo do arquivo STL
 
-O STL contém os triângulos da superfície. Mantenha o 3MF original para consultar as cores, os materiais e as configurações do fatiador. Abra o resultado no [Visualizador de STL](../stl-viewer/) ou inspecione o original no [Visualizador de 3MF](../3mf-viewer/). Use o [Conversor de STL para 3MF](../stl-to-3mf-converter/) se a próxima etapa exigir um arquivo 3MF. [Sobre o formato 3MF](https://3mf.io/resources/faq/)
+O conversor lê as malhas triangulares armazenadas no 3MF. Se o modelo depender de uma estrutura treliçada de barras ou de outra extensão de geometria, exporte primeiro uma malha triangular do aplicativo de origem. O STL contém os triângulos da superfície. Mantenha o 3MF original para consultar as cores, os materiais e as configurações do fatiador. Abra o resultado no [Visualizador de STL](../stl-viewer/) ou inspecione o original no [Visualizador de 3MF](../3mf-viewer/). Use o [Conversor de STL para 3MF](../stl-to-3mf-converter/) se a próxima etapa exigir um arquivo 3MF. [Sobre o formato 3MF](https://3mf.io/resources/faq/)

@@ -8,4 +8,4 @@ Công cụ xuất tọa độ lưới theo milimét. Các chi tiết đã đư�
 
 ## Kiểm tra nội dung của tệp STL
 
-STL chứa các tam giác bề mặt. Nếu cần màu sắc, vật liệu hoặc thiết lập in, hãy giữ tệp 3MF gốc. Mở kết quả bằng [Trình xem STL](../stl-viewer/) hoặc kiểm tra tệp nguồn trong [Trình xem 3MF](../3mf-viewer/). Dùng [Trình chuyển đổi STL sang 3MF](../stl-to-3mf-converter/) nếu bước tiếp theo cần gói mô hình 3MF. [Tìm hiểu về định dạng 3MF](https://3mf.io/resources/faq/)
+Công cụ đọc các lưới tam giác được lưu trong tệp 3MF. Nếu mô hình dựa vào mạng thanh (beam lattice) hoặc một phần mở rộng hình học khác, hãy xuất lưới tam giác từ phần mềm nguồn trước. STL chứa các tam giác bề mặt. Nếu cần màu sắc, vật liệu hoặc thiết lập in, hãy giữ tệp 3MF gốc. Mở kết quả bằng [Trình xem STL](../stl-viewer/) hoặc kiểm tra tệp nguồn trong [Trình xem 3MF](../3mf-viewer/). Dùng [Trình chuyển đổi STL sang 3MF](../stl-to-3mf-converter/) nếu bước tiếp theo cần gói mô hình 3MF. [Tìm hiểu về định dạng 3MF](https://3mf.io/resources/faq/)
