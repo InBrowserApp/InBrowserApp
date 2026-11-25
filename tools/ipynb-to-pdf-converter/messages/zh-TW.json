@@ -39,5 +39,6 @@
   "preview": "列印版筆記本",
   "paper": "紙張大小",
   "save": "儲存為 PDF",
-  "saveHelp": "在列印對話方塊的目的地選擇「儲存為 PDF」。"
+  "saveHelp": "在列印對話方塊的目的地選擇「儲存為 PDF」。",
+  "imageUnavailable": "無法讀取此內含圖片。將改以佔位內容表示。"
 }

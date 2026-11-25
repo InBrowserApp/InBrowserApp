@@ -39,5 +39,6 @@
   "preview": "Notebook stampabile",
   "paper": "Formato carta",
   "save": "Salva come PDF",
-  "saveHelp": "Nella finestra di stampa, scegli Salva come PDF come destinazione."
+  "saveHelp": "Nella finestra di stampa, scegli Salva come PDF come destinazione.",
+  "imageUnavailable": "Impossibile leggere questa immagine inclusa. Al suo posto viene inserito un segnaposto."
 }

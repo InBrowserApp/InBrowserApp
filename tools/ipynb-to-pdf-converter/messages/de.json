@@ -39,5 +39,6 @@
   "preview": "Druckbares Notebook",
   "paper": "Papierformat",
   "save": "Als PDF speichern",
-  "saveHelp": "Wähle im Druckdialog „Als PDF speichern“ als Ziel."
+  "saveHelp": "Wähle im Druckdialog „Als PDF speichern“ als Ziel.",
+  "imageUnavailable": "Dieses enthaltene Bild konnte nicht gelesen werden. Stattdessen wird ein Platzhalter eingefügt."
 }

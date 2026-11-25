@@ -39,5 +39,6 @@
   "preview": "Notebook para impressão",
   "paper": "Tamanho do papel",
   "save": "Salvar como PDF",
-  "saveHelp": "Na janela de impressão, escolha Salvar como PDF como destino."
+  "saveHelp": "Na janela de impressão, escolha Salvar como PDF como destino.",
+  "imageUnavailable": "Não foi possível ler esta imagem incluída. Um marcador é incluído em seu lugar."
 }

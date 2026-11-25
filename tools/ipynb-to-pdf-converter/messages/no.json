@@ -39,5 +39,6 @@
   "preview": "Utskriftsklar notatbok",
   "paper": "Papirstørrelse",
   "save": "Lagre som PDF",
-  "saveHelp": "Velg Lagre som PDF som utskriftsmål i utskriftsdialogen."
+  "saveHelp": "Velg Lagre som PDF som utskriftsmål i utskriftsdialogen.",
+  "imageUnavailable": "Dette inkluderte bildet kunne ikke leses. En plassholder tas med i stedet."
 }

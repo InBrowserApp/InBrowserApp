@@ -39,5 +39,6 @@
   "preview": "Notebook để in",
   "paper": "Khổ giấy",
   "save": "Lưu dưới dạng PDF",
-  "saveHelp": "Trong hộp thoại in, chọn «Lưu dưới dạng PDF» làm đích đến."
+  "saveHelp": "Trong hộp thoại in, chọn «Lưu dưới dạng PDF» làm đích đến.",
+  "imageUnavailable": "Không thể đọc hình ảnh đi kèm này. Một phần giữ chỗ được đưa vào thay thế."
 }

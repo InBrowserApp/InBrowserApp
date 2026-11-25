@@ -39,5 +39,6 @@
   "preview": "Printable notebook",
   "paper": "Paper size",
   "save": "Save as PDF",
-  "saveHelp": "In the print dialog, choose Save as PDF as the destination."
+  "saveHelp": "In the print dialog, choose Save as PDF as the destination.",
+  "imageUnavailable": "This included image could not be read. A placeholder is included instead."
 }

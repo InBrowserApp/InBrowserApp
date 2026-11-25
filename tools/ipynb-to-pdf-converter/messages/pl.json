@@ -39,5 +39,6 @@
   "preview": "Notatnik do druku",
   "paper": "Rozmiar papieru",
   "save": "Zapisz jako PDF",
-  "saveHelp": "W oknie drukowania wybierz Zapisz jako PDF jako miejsce docelowe."
+  "saveHelp": "W oknie drukowania wybierz Zapisz jako PDF jako miejsce docelowe.",
+  "imageUnavailable": "Nie udało się odczytać tego dołączonego obrazu. Zamiast niego umieszczono znacznik zastępczy."
 }

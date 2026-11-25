@@ -39,5 +39,6 @@
   "preview": "Notebook siap cetak",
   "paper": "Ukuran kertas",
   "save": "Simpan sebagai PDF",
-  "saveHelp": "Pada dialog cetak, atur tujuan cetak ke Simpan sebagai PDF."
+  "saveHelp": "Pada dialog cetak, atur tujuan cetak ke Simpan sebagai PDF.",
+  "imageUnavailable": "Gambar yang disertakan ini tidak dapat dibaca. Penanda tempat disertakan sebagai gantinya."
 }

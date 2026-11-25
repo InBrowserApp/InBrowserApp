@@ -30,6 +30,7 @@ export default function Client({
   const [file, setFile] = useState<File | null>(null)
   const [result, setResult] = useState<Result | null>(null)
   const current = result?.source === file ? result : null
+  const html = current && "html" in current ? current.html : null
   const error = current && "error" in current ? current.error : null
 
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function Client({
         setFile(next)
       }}
       accept=".ipynb"
-      active={Boolean(current && "html" in current)}
+      active={Boolean(html)}
       messages={m}
     >
       {!file ? (
@@ -94,9 +95,7 @@ export default function Client({
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       ) : null}
-      {current && "html" in current ? (
-        <PrintPreview html={current.html} messages={m} />
-      ) : null}
+      {html ? <PrintPreview html={html} messages={m} /> : null}
     </DocumentWorkspace>
   )
 }

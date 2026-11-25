@@ -39,5 +39,6 @@
   "preview": "Notebook listo para imprimir",
   "paper": "Tamaño del papel",
   "save": "Guardar como PDF",
-  "saveHelp": "En el cuadro de impresión, elige Guardar como PDF como destino."
+  "saveHelp": "En el cuadro de impresión, elige Guardar como PDF como destino.",
+  "imageUnavailable": "No se pudo leer esta imagen incluida. En su lugar se incluye un marcador de posición."
 }

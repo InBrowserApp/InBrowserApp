@@ -39,5 +39,6 @@
   "preview": "Yazdırılabilir not defteri",
   "paper": "Kağıt boyutu",
   "save": "PDF olarak kaydet",
-  "saveHelp": "Yazdırma penceresinde hedef olarak PDF olarak kaydet seçeneğini belirleyin."
+  "saveHelp": "Yazdırma penceresinde hedef olarak PDF olarak kaydet seçeneğini belirleyin.",
+  "imageUnavailable": "Bu dahil edilmiş görsel okunamadı. Yerine bir yer tutucu eklendi."
 }

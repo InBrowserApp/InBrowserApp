@@ -39,5 +39,6 @@
   "preview": "Afdrukbaar notebook",
   "paper": "Papierformaat",
   "save": "Opslaan als PDF",
-  "saveHelp": "Kies Opslaan als PDF als bestemming in het afdrukvenster."
+  "saveHelp": "Kies Opslaan als PDF als bestemming in het afdrukvenster.",
+  "imageUnavailable": "Deze opgenomen afbeelding kon niet worden gelezen. Er wordt een tijdelijke aanduiding opgenomen."
 }

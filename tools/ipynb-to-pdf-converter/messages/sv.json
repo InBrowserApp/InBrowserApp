@@ -39,5 +39,6 @@
   "preview": "Utskriftsklar notebook",
   "paper": "Pappersstorlek",
   "save": "Spara som PDF",
-  "saveHelp": "Välj Spara som PDF som destination i utskriftsdialogrutan."
+  "saveHelp": "Välj Spara som PDF som destination i utskriftsdialogrutan.",
+  "imageUnavailable": "Den inkluderade bilden kunde inte läsas. En platshållare inkluderas i stället."
 }

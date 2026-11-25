@@ -39,5 +39,6 @@
   "preview": "Notebook imprimable",
   "paper": "Format du papier",
   "save": "Enregistrer au format PDF",
-  "saveHelp": "Dans la boîte de dialogue d’impression, choisissez Enregistrer au format PDF comme destination."
+  "saveHelp": "Dans la boîte de dialogue d’impression, choisissez Enregistrer au format PDF comme destination.",
+  "imageUnavailable": "Cette image incluse n’a pas pu être lue. Un emplacement réservé la remplace."
 }

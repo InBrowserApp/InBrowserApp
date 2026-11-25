@@ -39,5 +39,6 @@
   "preview": "打印版笔记本",
   "paper": "纸张大小",
   "save": "保存为 PDF",
-  "saveHelp": "在打印对话框的目标选项中选择“保存为 PDF”。"
+  "saveHelp": "在打印对话框的目标选项中选择“保存为 PDF”。",
+  "imageUnavailable": "无法读取此内含图片，将以占位内容代替。"
 }

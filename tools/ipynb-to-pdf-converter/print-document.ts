@@ -1,4 +1,8 @@
-import { openNotebook, preparePreview } from "@workspace/notebook"
+import {
+  openNotebook,
+  prepareNotebookDocument,
+  restoreNotebookLinks,
+} from "@workspace/notebook"
 import type { Messages } from "./types"
 
 const layout = `
@@ -28,17 +32,21 @@ export async function prepareNotebookPrint(
   signal: AbortSignal
 ) {
   const notebook = await openNotebook(file, signal)
-  const preview = await preparePreview(notebook, m, signal)
-  const doc = new DOMParser().parseFromString(preview.html, "text/html")
+  const { doc } = await prepareNotebookDocument(
+    notebook,
+    file.name.replace(/\.ipynb$/i, ""),
+    signal,
+    m
+  )
   doc.documentElement.lang = lang
-  doc.title = file.name.replace(/\.ipynb$/i, "")
+  restoreNotebookLinks(doc)
   for (const section of doc.querySelectorAll("details.nb-section")) {
     const container = doc.createElement("div")
     const label = doc.createElement("p")
     label.className = "nb-section-label"
-    const summary = section.querySelector("summary")
-    label.textContent = summary?.textContent ?? ""
-    summary?.remove()
+    const summary = section.querySelector("summary")!
+    label.textContent = summary.textContent
+    summary.remove()
     container.append(label, ...section.childNodes)
     section.replaceWith(container)
   }

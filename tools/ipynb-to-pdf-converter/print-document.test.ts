@@ -16,7 +16,7 @@ it("keeps code and saved results visible in a printable document", async () => {
     cells: [
       {
         kind: "code",
-        html: "<pre><code>print(42)</code></pre>",
+        html: '<pre><code>print(42)</code></pre><a href="https://example.com/page">Report</a><img src="missing.png" alt="Unavailable chart">',
         attachments: {},
         count: 1,
         outputs: [
@@ -39,6 +39,11 @@ it("keeps code and saved results visible in a printable document", async () => {
   expect(doc.title).toBe("Quarterly <review>")
   expect(doc.querySelector("details")).toBeNull()
   expect(doc.querySelector("code")?.textContent).toBe("print(42)")
+  expect(doc.querySelector("a")?.getAttribute("href")).toBe(
+    "https://example.com/page"
+  )
+  expect(doc.querySelector("img")).toBeNull()
+  expect(doc.body.textContent).toContain("Unavailable chart")
   expect(doc.querySelector(".nb-output pre")?.textContent).toBe("42")
   expect(
     doc

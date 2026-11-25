@@ -39,5 +39,6 @@
   "preview": "Buku nota sedia cetak",
   "paper": "Saiz kertas",
   "save": "Simpan sebagai PDF",
-  "saveHelp": "Tetapkan destinasi dalam dialog cetak kepada Simpan sebagai PDF."
+  "saveHelp": "Tetapkan destinasi dalam dialog cetak kepada Simpan sebagai PDF.",
+  "imageUnavailable": "Imej yang disertakan ini tidak dapat dibaca. Pemegang tempat disertakan sebagai gantinya."
 }

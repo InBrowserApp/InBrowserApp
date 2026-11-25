@@ -18,6 +18,7 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@testing-library/react": "catalog:",
     "vitest": "catalog:"
   }
 }
