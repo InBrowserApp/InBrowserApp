@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "แปลง EPUB เป็น Word (DOCX)",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: "ตัวตรวจสอบหมายเลข VAT ของสหภาพยุโรป",
     slug: "eu-vat-number-validator",

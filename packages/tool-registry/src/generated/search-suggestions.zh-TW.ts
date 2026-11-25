@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "EPUB 轉 Word（DOCX）",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: "歐盟 VAT 號碼驗證器",
     slug: "eu-vat-number-validator",

@@ -11,11 +11,13 @@
     "./document": "./src/document.ts",
     "./images": "./src/resources.ts",
     "./write-epub": "./src/write-epub/index.ts",
+    "./write-docx": "./src/write-docx.ts",
     "./write-comic-epub": "./src/write-epub/comic.ts"
   },
   "dependencies": {
     "@workspace/web-document": "workspace:*",
     "@zip.js/zip.js": "catalog:",
+    "docx": "catalog:",
     "foliate-js": "catalog:",
     "fflate": "catalog:"
   },

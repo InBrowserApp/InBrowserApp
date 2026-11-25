@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "EPUBをWord（DOCX）に変換",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: "EU VAT番号バリデーター",
     slug: "eu-vat-number-validator",

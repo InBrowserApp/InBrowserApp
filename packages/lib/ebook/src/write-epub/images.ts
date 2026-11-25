@@ -1,3 +1,5 @@
+import { imagePng } from "../image-png"
+
 /** Snapshot images have already been decoded and sanitized by bookImages. */
 export function epubImages(signal: AbortSignal) {
   const assets = new Map<string, { href: string; blob: Blob }>()
@@ -19,29 +21,7 @@ export function epubImages(signal: AbortSignal) {
         "image/webp": "webp",
       }
       // Convert browser-readable foreign image formats to an EPUB core type.
-      if (!extensions[blob.type]) {
-        const image = new Image()
-        image.src = url
-        try {
-          await image.decode()
-          signal.throwIfAborted()
-          const canvas = document.createElement("canvas")
-          canvas.width = image.naturalWidth
-          canvas.height = image.naturalHeight
-          const context = canvas.getContext("2d")
-          if (!context) throw new Error("incomplete")
-          context.drawImage(image, 0, 0)
-          blob = await new Promise<Blob>((resolve, reject) => {
-            canvas.toBlob(
-              (result) =>
-                result ? resolve(result) : reject(new Error("incomplete")),
-              "image/png"
-            )
-          })
-        } finally {
-          image.removeAttribute("src")
-        }
-      }
+      if (!extensions[blob.type]) blob = await imagePng(url, signal)
       signal.throwIfAborted()
       const href = `images/image-${assets.size}.${extensions[blob.type]}`
       assets.set(url, { href, blob })
