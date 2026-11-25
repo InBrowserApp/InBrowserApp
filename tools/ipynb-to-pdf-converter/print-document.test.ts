@@ -16,7 +16,7 @@ it("keeps code and saved results visible in a printable document", async () => {
     cells: [
       {
         kind: "code",
-        html: '<pre><code>print(42)</code></pre><a href="https://example.com/page">Report</a><img src="missing.png" alt="Unavailable chart">',
+        html: '<pre><code>print(42)</code></pre><a href="HTTPS://example.com/page">Report</a><img src="missing.png" alt="Unavailable chart">',
         attachments: {},
         count: 1,
         outputs: [
