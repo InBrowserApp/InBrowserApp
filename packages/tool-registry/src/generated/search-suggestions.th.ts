@@ -719,6 +719,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "เครื่องมือแปลง GPX เป็น GeoJSON",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "โปรแกรมดู GPX และกราฟระดับความสูง",
     slug: "gpx-viewer",
   },

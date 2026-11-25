@@ -1,0 +1,4 @@
+{
+  "name": "GPX’ten GeoJSON’a Dönüştürücü",
+  "description": "GPX izlerini, rotalarını ve yol noktalarını tarayıcınızda GeoJSON’a dönüştürün. Bir .gpx dosyası açın veya GPX XML metnini yapıştırın, ardından sonucu kopyalayın ya da indirin."
+}

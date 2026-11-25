@@ -5,6 +5,7 @@
   "type": "module",
   "exports": {
     "./geojson": "./src/geojson.ts",
+    "./gpx": "./src/gpx.ts",
     "./xml": "./src/xml.ts"
   },
   "dependencies": {

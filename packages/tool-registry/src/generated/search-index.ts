@@ -18348,6 +18348,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "gpx-to-geojson-converter",
+    category: "geo",
+    secondaryCategories: ["json"],
+    icon: "route",
+    tags: [
+      "gpx",
+      "geojson",
+      "gps",
+      "converter",
+      "track",
+      "route",
+      "waypoint",
+      "gis",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل GPX إلى GeoJSON",
+        description:
+          "حوّل المسارات المسجّلة والمخطّطة ونقاط المرور من GPX إلى GeoJSON في متصفحك. افتح ملف .gpx أو ألصق نص GPX بصيغة XML، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "GPX-zu-GeoJSON-Konverter",
+        description:
+          "Konvertiere GPX-Tracks, Routen und Wegpunkte im Browser zu GeoJSON. Öffne eine .gpx-Datei oder füge GPX-XML ein. Kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "GPX to GeoJSON Converter",
+        description:
+          "Convert GPX tracks, routes and waypoints to GeoJSON in your browser. Open a .gpx file or paste GPX XML, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de GPX a GeoJSON",
+        description:
+          "Convierte trayectos, rutas y puntos de paso de GPX a GeoJSON en tu navegador. Abre un archivo .gpx o pega el XML de GPX y luego copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur GPX vers GeoJSON",
+        description:
+          "Convertissez les traces, itinéraires et points de cheminement GPX en GeoJSON dans votre navigateur. Ouvrez un fichier .gpx ou collez du XML GPX, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר GPX ל־GeoJSON",
+        description:
+          "המירו מסלולים מוקלטים, מסלולים מתוכננים ונקודות ציון מ־GPX ל־GeoJSON בדפדפן. פתחו קובץ ‎.gpx או הדביקו GPX בפורמט XML, ואז העתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "GPX से GeoJSON कन्वर्टर",
+        description:
+          "ब्राउज़र में GPX ट्रैक, मार्ग और वेपॉइंट को GeoJSON में बदलें। .gpx फ़ाइल खोलें या GPX XML पेस्ट करें, फिर नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter GPX ke GeoJSON",
+        description:
+          "Konversi jejak, rute, dan titik penanda GPX ke GeoJSON di browser. Buka berkas .gpx atau tempel XML GPX, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore da GPX a GeoJSON",
+        description:
+          "Converti tracce, percorsi e waypoint GPX in GeoJSON nel browser. Apri un file .gpx o incolla il suo XML, quindi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "GPX → GeoJSON 変換",
+        description:
+          "ブラウザーで GPX のトラック、ルート、ウェイポイントを GeoJSON に変換します。.gpx ファイルを開くか GPX XML を貼り付け、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "GPX → GeoJSON 변환기",
+        description:
+          "브라우저에서 GPX 트랙, 경로, 웨이포인트를 GeoJSON으로 변환하세요. .gpx 파일을 열거나 GPX XML을 붙여 넣고 결과를 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar GPX kepada GeoJSON",
+        description:
+          "Tukar trek, laluan dan titik laluan GPX kepada GeoJSON dalam pelayar anda. Buka fail .gpx atau tampal XML GPX, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "Converter van GPX naar GeoJSON",
+        description:
+          "Zet GPX-tracks, routes en waypoints om naar GeoJSON in je browser. Open een .gpx-bestand of plak GPX-XML en kopieer of download het resultaat.",
+      },
+      no: {
+        name: "Omformer fra GPX til GeoJSON",
+        description:
+          "Konverter GPX-spor, ruter og veipunkter til GeoJSON i nettleseren. Åpne en .gpx-fil eller lim inn GPX-XML, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter GPX na GeoJSON",
+        description:
+          "Konwertuj ślady, trasy i punkty trasy z GPX na GeoJSON w przeglądarce. Otwórz plik .gpx lub wklej GPX w formacie XML, a następnie skopiuj albo pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de GPX para GeoJSON",
+        description:
+          "Converta trilhas, rotas e pontos de passagem GPX para GeoJSON no navegador. Abra um arquivo .gpx ou cole o XML do GPX e depois copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер GPX в GeoJSON",
+        description:
+          "Преобразуйте треки, маршруты и путевые точки из GPX в GeoJSON прямо в браузере. Откройте файл .gpx или вставьте XML-код GPX, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "Konverterare från GPX till GeoJSON",
+        description:
+          "Konvertera GPX-spår, rutter och waypoints till GeoJSON i webbläsaren. Öppna en .gpx-fil eller klistra in GPX-XML och kopiera eller ladda ned resultatet.",
+      },
+      th: {
+        name: "เครื่องมือแปลง GPX เป็น GeoJSON",
+        description:
+          "แปลงเส้นทางที่บันทึกด้วย GPS เส้นทางที่วางแผนไว้ และจุดอ้างอิงใน GPX เป็น GeoJSON ในเบราว์เซอร์ เปิดไฟล์ .gpx หรือวาง XML ของ GPX แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "GPX’ten GeoJSON’a Dönüştürücü",
+        description:
+          "GPX izlerini, rotalarını ve yol noktalarını tarayıcınızda GeoJSON’a dönüştürün. Bir .gpx dosyası açın veya GPX XML metnini yapıştırın, ardından sonucu kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi GPX sang GeoJSON",
+        description:
+          "Chuyển vệt đường, tuyến đường và điểm đánh dấu trong GPX sang GeoJSON ngay trong trình duyệt. Mở tệp .gpx hoặc dán XML của GPX rồi sao chép hoặc tải kết quả xuống.",
+      },
+      "zh-CN": {
+        name: "GPX 转 GeoJSON 转换器",
+        description:
+          "在浏览器中将 GPX 轨迹、路线和航点转换为 GeoJSON。打开 .gpx 文件或粘贴 GPX XML，然后复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "GPX 轉 GeoJSON 轉換器",
+        description:
+          "在瀏覽器中將 GPX 軌跡、路線和航點轉換為 GeoJSON。開啟 .gpx 檔案或貼上 GPX XML，再複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "gpx-viewer",
     category: "geo",
     icon: "route",

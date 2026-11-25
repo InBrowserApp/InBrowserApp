@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi GPX sang GeoJSON",
+  "description": "Chuyển vệt đường, tuyến đường và điểm đánh dấu trong GPX sang GeoJSON ngay trong trình duyệt. Mở tệp .gpx hoặc dán XML của GPX rồi sao chép hoặc tải kết quả xuống."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "GPX 轉 GeoJSON 轉換器",
+  "description": "在瀏覽器中將 GPX 軌跡、路線和航點轉換為 GeoJSON。開啟 .gpx 檔案或貼上 GPX XML，再複製或下載結果。"
+}

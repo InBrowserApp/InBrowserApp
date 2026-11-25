@@ -719,6 +719,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Penukar GPX kepada GeoJSON",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "Pemapar GPX dan Profil Ketinggian",
     slug: "gpx-viewer",
   },

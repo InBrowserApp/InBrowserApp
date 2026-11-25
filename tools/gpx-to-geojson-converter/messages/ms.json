@@ -1,0 +1,10 @@
+{
+  "example": "Cuba contoh",
+  "openFile": "Buka GPX",
+  "convert": "Tukar kepada GeoJSON",
+  "copy": "Salin",
+  "copied": "Disalin",
+  "download": "Muat turun GeoJSON",
+  "empty": "Hasil GeoJSON akan dipaparkan di sini.",
+  "invalid": "GPX ini tidak dapat ditukar. Semak XML serta latitud dan longitud setiap titik."
+}

@@ -11,7 +11,6 @@ import {
 } from "@workspace/ui/icons"
 
 type Messages = Readonly<{
-  direction: string
   example: string
   openFile: string
   convert: string
@@ -20,23 +19,30 @@ type Messages = Readonly<{
   download: string
   empty: string
   invalid: string
-  swap: string
 }>
 
 type Format = Readonly<{
   name: string
   extension: string
   accept: string
-  example: string
+  example?: string
 }>
 
 type Props = Readonly<{
   formats: readonly [Format, Format]
-  messages: Messages
   convert: (input: string, reverse: boolean) => string
-}>
+  readFile?: (file: File) => Promise<string>
+}> &
+  (
+    | { oneWay: true; messages: Messages }
+    | {
+        oneWay?: false
+        messages: Messages & Readonly<{ direction: string; swap: string }>
+      }
+  )
 
-function TextFormatConverter({ formats, messages, convert }: Props) {
+function TextFormatConverter(props: Props) {
+  const { formats, messages, convert, oneWay, readFile } = props
   const errorId = useId()
   const picker = useRef<HTMLInputElement>(null)
   const fileRead = useRef(0)
@@ -45,6 +51,7 @@ function TextFormatConverter({ formats, messages, convert }: Props) {
   const [output, setOutput] = useState("")
   const [invalid, setInvalid] = useState(false)
   const [source, target] = reverse ? [formats[1], formats[0]] : formats
+  const example = source.example
 
   function reset(text: string, direction = reverse) {
     fileRead.current++
@@ -65,14 +72,17 @@ function TextFormatConverter({ formats, messages, convert }: Props) {
 
   async function open(file: File) {
     const read = ++fileRead.current
-    const matches = formats.map((format) =>
-      format.accept
-        .split(",")
-        .some((extension) => file.name.toLowerCase().endsWith(extension))
-    )
-    const direction = matches[0] === matches[1] ? reverse : matches[1]
+    let direction = false
+    if (!oneWay) {
+      const matches = formats.map((format) =>
+        format.accept
+          .split(",")
+          .some((extension) => file.name.toLowerCase().endsWith(extension))
+      )
+      direction = matches[0] === matches[1] ? reverse : matches[1]!
+    }
     try {
-      const text = await file.text()
+      const text = await (readFile ? readFile(file) : file.text())
       if (read === fileRead.current) run(text, direction)
     } catch {
       if (read === fileRead.current) {
@@ -102,22 +112,24 @@ function TextFormatConverter({ formats, messages, convert }: Props) {
       }}
     >
       <div className="flex flex-wrap items-end gap-3">
-        <label className="grid gap-1 text-sm font-medium">
-          {messages.direction}
-          <select
-            dir="ltr"
-            className="h-9 rounded-md border border-input bg-background px-3"
-            value={String(reverse)}
-            onChange={(event) => reset(input, event.target.value === "true")}
-          >
-            <option value="false">
-              {formats[0].name} → {formats[1].name}
-            </option>
-            <option value="true">
-              {formats[1].name} → {formats[0].name}
-            </option>
-          </select>
-        </label>
+        {!props.oneWay && (
+          <label className="grid gap-1 text-sm font-medium">
+            {props.messages.direction}
+            <select
+              dir="ltr"
+              className="h-9 rounded-md border border-input bg-background px-3"
+              value={String(reverse)}
+              onChange={(event) => reset(input, event.target.value === "true")}
+            >
+              <option value="false">
+                {formats[0].name} → {formats[1].name}
+              </option>
+              <option value="true">
+                {formats[1].name} → {formats[0].name}
+              </option>
+            </select>
+          </label>
+        )}
         <Button
           type="button"
           variant="outline"
@@ -126,19 +138,21 @@ function TextFormatConverter({ formats, messages, convert }: Props) {
           <FolderInput aria-hidden="true" />
           {messages.openFile}
         </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          onClick={() => run(source.example)}
-        >
-          <Sparkles aria-hidden="true" />
-          {messages.example}
-        </Button>
+        {example && (
+          <Button type="button" variant="ghost" onClick={() => run(example)}>
+            <Sparkles aria-hidden="true" />
+            {messages.example}
+          </Button>
+        )}
         <input
           ref={picker}
           type="file"
           hidden
-          accept={formats.map(({ accept }) => accept).join(",")}
+          accept={
+            oneWay
+              ? source.accept
+              : formats.map(({ accept }) => accept).join(",")
+          }
           onChange={(event) => {
             const file = event.target.files?.[0]
             event.target.value = ""
@@ -210,16 +224,18 @@ function TextFormatConverter({ formats, messages, convert }: Props) {
                 <Download aria-hidden="true" />
                 {messages.download}
               </Button>
-              <Button
-                type="button"
-                size="sm"
-                variant="ghost"
-                disabled={!output}
-                onClick={() => run(output, !reverse)}
-              >
-                <ArrowLeftRight aria-hidden="true" />
-                {messages.swap}
-              </Button>
+              {!props.oneWay && (
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="ghost"
+                  disabled={!output}
+                  onClick={() => run(output, !reverse)}
+                >
+                  <ArrowLeftRight aria-hidden="true" />
+                  {props.messages.swap}
+                </Button>
+              )}
             </div>
           </CardContent>
         </Card>

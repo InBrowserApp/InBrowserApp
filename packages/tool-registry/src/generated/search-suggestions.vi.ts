@@ -719,6 +719,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Trình chuyển đổi GPX sang GeoJSON",
+    slug: "gpx-to-geojson-converter",
+  },
+  {
+    category: "geo",
     name: "Trình xem GPX và biểu đồ độ cao",
     slug: "gpx-viewer",
   },

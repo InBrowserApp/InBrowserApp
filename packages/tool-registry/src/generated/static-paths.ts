@@ -13158,6 +13158,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gpx-to-geojson-converter",
+    language: "ar",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "de",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "en",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "es",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "fr",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "he",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "hi",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "id",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "it",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "ja",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "ko",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "ms",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "nl",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "no",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "pl",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "pt",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "ru",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "sv",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "th",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "tr",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "vi",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gpx-to-geojson-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "gpx-viewer",
     language: "ar",
   },

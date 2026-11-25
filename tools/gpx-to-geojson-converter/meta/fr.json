@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur GPX vers GeoJSON",
+  "description": "Convertissez les traces, itinéraires et points de cheminement GPX en GeoJSON dans votre navigateur. Ouvrez un fichier .gpx ou collez du XML GPX, puis copiez ou téléchargez le résultat."
+}

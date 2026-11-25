@@ -1,0 +1,4 @@
+{
+  "name": "GPX-zu-GeoJSON-Konverter",
+  "description": "Konvertiere GPX-Tracks, Routen und Wegpunkte im Browser zu GeoJSON. Öffne eine .gpx-Datei oder füge GPX-XML ein. Kopiere das Ergebnis oder lade es herunter."
+}

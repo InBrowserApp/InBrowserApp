@@ -1,0 +1,10 @@
+{
+  "example": "Prova ett exempel",
+  "openFile": "Öppna GPX",
+  "convert": "Konvertera till GeoJSON",
+  "copy": "Kopiera",
+  "copied": "Kopierat",
+  "download": "Ladda ned GeoJSON",
+  "empty": "Resultatet i GeoJSON visas här.",
+  "invalid": "Det gick inte att konvertera GPX-data. Kontrollera XML-koden och punkternas latitud och longitud."
+}

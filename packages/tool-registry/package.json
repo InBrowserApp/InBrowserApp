@@ -150,6 +150,7 @@
     "@tool/gitignore-generator": "workspace:*",
     "@tool/gltf-viewer": "workspace:*",
     "@tool/gpu-information": "workspace:*",
+    "@tool/gpx-to-geojson-converter": "workspace:*",
     "@tool/gpx-viewer": "workspace:*",
     "@tool/graphviz-dot-previewer": "workspace:*",
     "@tool/har-analyzer": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "GPX → GeoJSON 변환기",
+  "description": "브라우저에서 GPX 트랙, 경로, 웨이포인트를 GeoJSON으로 변환하세요. .gpx 파일을 열거나 GPX XML을 붙여 넣고 결과를 복사하거나 다운로드할 수 있습니다."
+}
