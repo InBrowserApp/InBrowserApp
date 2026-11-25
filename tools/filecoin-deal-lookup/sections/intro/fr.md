@@ -4,7 +4,7 @@ Saisissez l’**ID du contrat** numérique (Deal ID) d’un contrat du Storage M
 
 ## Comment interpréter le statut d’un contrat Filecoin
 
-Un contrat est actif si son activation a été enregistrée et que sa date de fin prévue est encore à venir. Un contrat est en attente lorsqu’il doit encore être activé et que sa date de début prévue n’est pas passée. La recherche signale aussi les cas où la date de début est dépassée sans activation, le contrat a expiré ou l’état du marché enregistre une pénalité. Les époques de début et de fin proviennent de la proposition de contrat. Leurs dates UTC sont calculées à partir du calendrier des époques de la chaîne.
+Un contrat est actif si son activation a été enregistrée et que sa date de fin prévue est encore à venir. Un contrat est en attente lorsqu’il doit encore être activé et qu’elle n’a pas dépassé son époque de début prévue. La recherche signale aussi les cas où la date de début est dépassée sans activation, le contrat a expiré ou l’état du marché enregistre une pénalité. Les époques de début et de fin proviennent de la proposition de contrat. Leurs dates UTC sont calculées à partir du calendrier des époques de la chaîne.
 
 ## Comparer le Piece CID du contrat à votre fichier
 

@@ -4,7 +4,7 @@ Geben Sie die numerische **Vereinbarungs-ID** (Deal ID) einer Storage-Market-Ver
 
 ## Was der Status einer Filecoin-Speichervereinbarung bedeutet
 
-Eine Vereinbarung ist aktiv, wenn ihre Aktivierung erfasst wurde und ihr geplantes Ende noch bevorsteht. Sie ist ausstehend, wenn sie auf die Aktivierung wartet und ihr geplanter Start noch bevorsteht. Die Suche zeigt auch Fälle an, in denen der Starttermin ohne Aktivierung verstrichen ist, die Vereinbarung abgelaufen ist oder im Marktstatus eine Sanktion vermerkt wurde. Die Epochen für Start und Ende stammen aus dem Vereinbarungsvorschlag. Die zugehörigen Termine in UTC werden aus dem Epochenzeitplan der Blockchain berechnet.
+Eine Vereinbarung ist aktiv, wenn ihre Aktivierung erfasst wurde und ihr geplantes Ende noch bevorsteht. Sie ist ausstehend, wenn sie auf die Aktivierung wartet und ihre geplante Startepoche noch nicht verstrichen ist. Die Suche zeigt auch Fälle an, in denen der Starttermin ohne Aktivierung verstrichen ist, die Vereinbarung abgelaufen ist oder im Marktstatus eine Sanktion vermerkt wurde. Die Epochen für Start und Ende stammen aus dem Vereinbarungsvorschlag. Die zugehörigen Termine in UTC werden aus dem Epochenzeitplan der Blockchain berechnet.
 
 ## Piece-CID der Vereinbarung mit Ihrer Datei vergleichen
 

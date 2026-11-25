@@ -4,7 +4,7 @@ Para consultar um acordo do Storage Market na rede principal do Filecoin, introd
 
 ## Como interpretar o estado de um acordo do Filecoin
 
-Um acordo está ativo se a sua ativação estiver registada e a data de fim prevista ainda não tiver chegado. Um acordo pendente aguarda ativação e a data de início prevista ainda não passou. A consulta também indica os casos em que a data de início passou sem ativação, o acordo expirou ou o estado do mercado regista uma penalização. As épocas de início e fim constam da proposta de acordo. As respetivas datas em UTC são calculadas a partir do calendário de épocas da cadeia.
+Um acordo está ativo se a sua ativação estiver registada e a data de fim prevista ainda não tiver chegado. Um acordo pendente aguarda ativação até ao fim da época de início prevista. A consulta também indica os casos em que a data de início passou sem ativação, o acordo expirou ou o estado do mercado regista uma penalização. As épocas de início e fim constam da proposta de acordo. As respetivas datas em UTC são calculadas a partir do calendário de épocas da cadeia.
 
 ## Comparar o Piece CID do acordo com o seu ficheiro
 

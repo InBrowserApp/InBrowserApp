@@ -4,7 +4,7 @@ Podaj numeryczne **ID umowy** zawartej na rynku przechowywania (Storage Market) 
 
 ## Jak interpretować status umowy Filecoin
 
-Umowa jest aktywna, gdy odnotowano jej aktywację, a planowany termin zakończenia jeszcze nie minął. Status oczekiwania oznacza, że umowa czeka na aktywację, a planowany termin rozpoczęcia przypada w przyszłości. Wyszukiwarka wyświetla również przypadki, gdy termin rozpoczęcia minął bez aktywacji, umowa wygasła lub w stanie rynku odnotowano nałożenie kary. Epoki rozpoczęcia i zakończenia pochodzą z propozycji umowy. Odpowiadające im daty w UTC są obliczane zgodnie z harmonogramem epok łańcucha.
+Umowa jest aktywna, gdy odnotowano jej aktywację, a planowany termin zakończenia jeszcze nie minął. Status oczekiwania oznacza, że umowa czeka na aktywację, aż do planowanej epoki rozpoczęcia włącznie. Wyszukiwarka wyświetla również przypadki, gdy termin rozpoczęcia minął bez aktywacji, umowa wygasła lub w stanie rynku odnotowano nałożenie kary. Epoki rozpoczęcia i zakończenia pochodzą z propozycji umowy. Odpowiadające im daty w UTC są obliczane zgodnie z harmonogramem epok łańcucha.
 
 ## Jak porównać Piece CID umowy z własnym plikiem
 

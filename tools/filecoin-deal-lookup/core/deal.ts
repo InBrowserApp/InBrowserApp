@@ -85,7 +85,7 @@ function currentStatus(
   if ((state?.SlashEpoch ?? -1) >= 0) return "slashed"
   if (epoch >= terms.end) return "expired"
   if ((state?.SectorStartEpoch ?? -1) >= 0) return "active"
-  return epoch >= terms.start ? "notActivated" : "pending"
+  return epoch > terms.start ? "notActivated" : "pending"
 }
 
 async function marketDeal(
@@ -198,7 +198,7 @@ export async function lookupDeal(
     const archived = await archivedDeal(id, signal, fetcher)
     return archived ? { deal: archived } : { problem: "missing" }
   } catch {
-    signal.throwIfAborted()
+    if (signal.reason?.name !== "TimeoutError") signal.throwIfAborted()
     return { problem: "historyFailed" }
   }
 }

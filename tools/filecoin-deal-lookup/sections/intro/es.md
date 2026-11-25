@@ -4,7 +4,7 @@ Introduce el **ID del acuerdo** numérico (Deal ID) de un acuerdo del Storage Ma
 
 ## Cómo interpretar el estado de un acuerdo de Filecoin
 
-Un acuerdo está activo si se ha registrado su activación y aún no ha llegado la fecha de fin prevista. Si está pendiente, todavía espera la activación y aún no ha llegado la fecha prevista de inicio. La consulta también muestra los casos en que pasó la fecha de inicio sin activación, el acuerdo venció o el estado del mercado registra una penalización. Las épocas de inicio y fin proceden de la propuesta del acuerdo. Sus fechas en UTC se calculan según el calendario de épocas de la cadena.
+Un acuerdo está activo si se ha registrado su activación y aún no ha llegado la fecha de fin prevista. Si está pendiente, todavía espera la activación hasta que termine la época de inicio prevista. La consulta también muestra los casos en que pasó la fecha de inicio sin activación, el acuerdo venció o el estado del mercado registra una penalización. Las épocas de inicio y fin proceden de la propuesta del acuerdo. Sus fechas en UTC se calculan según el calendario de épocas de la cadena.
 
 ## Compara el Piece CID del acuerdo con tu archivo
 

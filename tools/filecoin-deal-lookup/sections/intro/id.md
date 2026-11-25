@@ -4,7 +4,7 @@ Masukkan **Deal ID** numerik untuk kesepakatan Storage Market di mainnet Filecoi
 
 ## Cara membaca status kesepakatan Filecoin
 
-Kesepakatan aktif memiliki catatan aktivasi dan belum mencapai waktu berakhir yang dijadwalkan. Status menunggu aktivasi berarti kesepakatan belum diaktifkan dan belum mencapai jadwal mulai. Alat ini juga menampilkan keadaan ketika jadwal mulai telah lewat tanpa aktivasi, kesepakatan kedaluwarsa, atau status pasar mencatat bahwa kesepakatan terkena penalti. Epoch mulai dan berakhir berasal dari proposal kesepakatan. Tanggal UTC-nya dihitung berdasarkan jadwal epoch blockchain.
+Kesepakatan aktif memiliki catatan aktivasi dan belum mencapai waktu berakhir yang dijadwalkan. Status menunggu aktivasi berarti kesepakatan belum diaktifkan dan masih dapat diaktifkan hingga akhir epoch mulai yang dijadwalkan. Alat ini juga menampilkan keadaan ketika jadwal mulai telah lewat tanpa aktivasi, kesepakatan kedaluwarsa, atau status pasar mencatat bahwa kesepakatan terkena penalti. Epoch mulai dan berakhir berasal dari proposal kesepakatan. Tanggal UTC-nya dihitung berdasarkan jadwal epoch blockchain.
 
 ## Bandingkan Piece CID kesepakatan dengan file Anda
 

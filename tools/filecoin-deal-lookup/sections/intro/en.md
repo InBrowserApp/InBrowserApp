@@ -4,7 +4,7 @@ Enter the numerical **Deal ID** for a Filecoin mainnet Storage Market deal, then
 
 ## How to read Filecoin deal status
 
-An active deal has a recorded activation and its scheduled end is still ahead. Pending means the deal is awaiting activation before its scheduled start. The lookup also displays cases where the start has passed without activation, the deal has expired, or the market state records that it was slashed. Start and end epochs come from the deal proposal. Their UTC dates are calculated from the chain's epoch schedule.
+An active deal has a recorded activation and its scheduled end is still ahead. Pending means the deal is awaiting activation through its scheduled start epoch. The lookup also displays cases where the start has passed without activation, the deal has expired, or the market state records that it was slashed. Start and end epochs come from the deal proposal. Their UTC dates are calculated from the chain's epoch schedule.
 
 ## Compare the deal's Piece CID with your file
 

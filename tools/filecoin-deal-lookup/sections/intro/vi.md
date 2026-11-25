@@ -4,7 +4,7 @@ Nhập **Deal ID** dạng số của một thỏa thuận trên thị trường 
 
 ## Cách đọc trạng thái thỏa thuận Filecoin
 
-Thỏa thuận đang hoạt động đã được ghi nhận kích hoạt và chưa đến thời điểm kết thúc dự kiến. Đang chờ kích hoạt nghĩa là thỏa thuận chưa được kích hoạt và chưa đến thời điểm bắt đầu dự kiến. Công cụ cũng hiển thị trường hợp đã qua thời điểm bắt đầu mà chưa kích hoạt, thỏa thuận hết hạn hoặc trạng thái thị trường ghi nhận thỏa thuận bị phạt. Epoch bắt đầu và kết thúc lấy từ đề xuất thỏa thuận. Các ngày theo UTC được tính dựa trên lịch epoch của blockchain.
+Thỏa thuận đang hoạt động đã được ghi nhận kích hoạt và chưa đến thời điểm kết thúc dự kiến. Đang chờ kích hoạt nghĩa là thỏa thuận chưa được kích hoạt và vẫn có thể được kích hoạt đến hết epoch bắt đầu dự kiến. Công cụ cũng hiển thị trường hợp đã qua thời điểm bắt đầu mà chưa kích hoạt, thỏa thuận hết hạn hoặc trạng thái thị trường ghi nhận thỏa thuận bị phạt. Epoch bắt đầu và kết thúc lấy từ đề xuất thỏa thuận. Các ngày theo UTC được tính dựa trên lịch epoch của blockchain.
 
 ## So sánh Piece CID của thỏa thuận với tệp của bạn
 

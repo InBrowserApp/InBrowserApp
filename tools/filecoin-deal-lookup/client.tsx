@@ -11,11 +11,11 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Link2, LoaderCircle, Search } from "@workspace/ui/icons"
+import { LoaderCircle, Search } from "@workspace/ui/icons"
 
 import { lookupDeal, parseDealId, type Deal } from "./core/deal"
 import type EnglishMessages from "./messages/en.json"
-import DealDetails from "./deal-details"
+import DealDetails, { DealExplorerLink } from "./deal-details"
 
 type Problem = "invalidId" | "failed" | "missing" | "historyFailed"
 const example = "133464300"
@@ -74,8 +74,8 @@ export default function FilecoinDealLookup({
     }
   }
 
-  const validId = parseDealId(input)
   const invalid = problem === "invalidId"
+  const failedDealId = problem && !invalid ? parseDealId(input) : null
   return (
     <div className="grid min-w-0 gap-4">
       <ToolPanelCard>
@@ -148,21 +148,12 @@ export default function FilecoinDealLookup({
               )
             )}
           </p>
-          {problem && !invalid && validId !== null && (
+          {problem && failedDealId !== null && (
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p role="alert" className="text-sm text-muted-foreground">
                 {messages[problem]}
               </p>
-              <Button asChild size="sm" variant="outline">
-                <a
-                  href={`https://filfox.info/en/deal/${validId}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Link2 data-icon="inline-start" aria-hidden="true" />
-                  {messages.explorer}
-                </a>
-              </Button>
+              <DealExplorerLink id={failedDealId} label={messages.explorer} />
             </div>
           )}
         </ToolPanelCardContent>

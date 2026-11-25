@@ -4,7 +4,7 @@ Filecoin ana ağındaki Storage Market anlaşmasının sayısal **Anlaşma kimli
 
 ## Filecoin anlaşma durumu nasıl okunur?
 
-Etkin bir anlaşmanın etkinleştirildiği kayda geçmiştir ve planlanan bitiş zamanı henüz gelmemiştir. Bekleyen bir anlaşma planlanan başlangıçtan önce etkinleştirilmeyi bekler. Araç ayrıca etkinleştirme olmadan başlangıç zamanı geçen, süresi dolan veya piyasa durumunda ceza uygulandığı görülen anlaşmaları gösterir. Başlangıç ve bitiş epokları anlaşma teklifinden alınır. UTC tarihleri zincirin epok takvimine göre hesaplanır.
+Etkin bir anlaşmanın etkinleştirildiği kayda geçmiştir ve planlanan bitiş zamanı henüz gelmemiştir. Bekleyen bir anlaşma planlanan başlangıç epokunun sonuna kadar etkinleştirilmeyi bekler. Araç ayrıca etkinleştirme olmadan başlangıç zamanı geçen, süresi dolan veya piyasa durumunda ceza uygulandığı görülen anlaşmaları gösterir. Başlangıç ve bitiş epokları anlaşma teklifinden alınır. UTC tarihleri zincirin epok takvimine göre hesaplanır.
 
 ## Anlaşmanın Piece CID değerini dosyanızla karşılaştırma
 

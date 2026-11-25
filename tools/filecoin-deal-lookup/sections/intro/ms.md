@@ -4,7 +4,7 @@ Masukkan **Deal ID** berangka bagi perjanjian Storage Market di mainnet Filecoin
 
 ## Cara membaca status perjanjian Filecoin
 
-Perjanjian aktif mempunyai rekod pengaktifan dan belum sampai pada waktu tamat yang dijadualkan. Status menunggu pengaktifan bermakna perjanjian belum diaktifkan dan belum tiba pada waktu mula yang dijadualkan. Alat ini turut menunjukkan keadaan apabila jadual mula telah berlalu tanpa pengaktifan, perjanjian telah tamat tempoh atau keadaan pasaran merekodkan bahawa perjanjian dikenakan penalti. Epok mula dan tamat diambil daripada cadangan perjanjian. Tarikh UTC dikira berdasarkan jadual epok rantaian blok.
+Perjanjian aktif mempunyai rekod pengaktifan dan belum sampai pada waktu tamat yang dijadualkan. Status menunggu pengaktifan bermakna perjanjian belum diaktifkan dan masih boleh diaktifkan hingga akhir epok mula yang dijadualkan. Alat ini turut menunjukkan keadaan apabila jadual mula telah berlalu tanpa pengaktifan, perjanjian telah tamat tempoh atau keadaan pasaran merekodkan bahawa perjanjian dikenakan penalti. Epok mula dan tamat diambil daripada cadangan perjanjian. Tarikh UTC dikira berdasarkan jadual epok rantaian blok.
 
 ## Bandingkan Piece CID perjanjian dengan fail anda
 

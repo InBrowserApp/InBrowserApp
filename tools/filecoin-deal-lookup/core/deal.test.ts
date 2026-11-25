@@ -77,10 +77,11 @@ it.each([
   [head.Height, { ...state, SlashEpoch: head.Height }, "slashed"],
   [proposal.EndEpoch, state, "expired"],
   [
-    proposal.StartEpoch,
+    proposal.StartEpoch + 1,
     { SectorStartEpoch: -1, SlashEpoch: -1 },
     "notActivated",
   ],
+  [proposal.StartEpoch, null, "pending"],
   [proposal.StartEpoch - 1, null, "pending"],
 ])(
   "identifies market status with observed epoch %d",
@@ -190,4 +191,17 @@ it("propagates cancellation instead of trying another source", async () => {
   await expect(
     lookupDeal(id, archive.signal, archiveFetcher)
   ).rejects.toHaveProperty("name", "AbortError")
+})
+
+it("preserves the known market absence when the archive request times out", async () => {
+  const controller = new AbortController()
+  const fetcher = withHead()
+    .mockResolvedValueOnce(missing())
+    .mockImplementationOnce(async () => {
+      controller.abort(new DOMException("Deadline reached", "TimeoutError"))
+      throw controller.signal.reason
+    })
+  await expect(lookupDeal(id, controller.signal, fetcher)).resolves.toEqual({
+    problem: "historyFailed",
+  })
 })

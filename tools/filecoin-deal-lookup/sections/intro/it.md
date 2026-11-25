@@ -4,7 +4,7 @@ Inserisci il **Deal ID** numerico di un accordo Storage Market sulla rete princi
 
 ## Come interpretare lo stato di un accordo Filecoin
 
-Un accordo attivo ha un’attivazione registrata e la sua fine prevista è ancora futura. In attesa significa che l’accordo aspetta l’attivazione prima dell’inizio previsto. La ricerca mostra anche i casi in cui l’inizio è trascorso senza attivazione, l’accordo è scaduto o lo stato del mercato registra una penalizzazione. Le epoche di inizio e fine provengono dalla proposta di accordo. Le date UTC sono calcolate secondo la pianificazione delle epoche della catena.
+Un accordo attivo ha un’attivazione registrata e la sua fine prevista è ancora futura. In attesa significa che l’accordo aspetta l’attivazione fino all’epoca di inizio prevista compresa. La ricerca mostra anche i casi in cui l’inizio è trascorso senza attivazione, l’accordo è scaduto o lo stato del mercato registra una penalizzazione. Le epoche di inizio e fine provengono dalla proposta di accordo. Le date UTC sono calcolate secondo la pianificazione delle epoche della catena.
 
 ## Confronta il Piece CID dell’accordo con il tuo file
 

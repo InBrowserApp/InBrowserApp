@@ -4,7 +4,7 @@ Ange numeriskt **Deal ID** för ett Storage Market-avtal på Filecoins huvudnät
 
 ## Så läser du statusen för ett Filecoin-avtal
 
-Ett aktivt avtal har en registrerad aktivering och dess planerade slut ligger fortfarande i framtiden. Väntar innebär att avtalet inväntar aktivering före planerad start. Sökningen visar även fall där starten har passerat utan aktivering, avtalet har löpt ut eller marknadstillståndet registrerar att det har straffats. Start- och slutepoker kommer från avtalsförslaget. UTC-datumen beräknas utifrån kedjans epokschema.
+Ett aktivt avtal har en registrerad aktivering och dess planerade slut ligger fortfarande i framtiden. Väntar innebär att avtalet inväntar aktivering till och med den planerade startepochen. Sökningen visar även fall där starten har passerat utan aktivering, avtalet har löpt ut eller marknadstillståndet registrerar att det har straffats. Start- och slutepoker kommer från avtalsförslaget. UTC-datumen beräknas utifrån kedjans epokschema.
 
 ## Jämför avtalets Piece CID med din fil
 

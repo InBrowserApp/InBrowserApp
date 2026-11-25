@@ -4,7 +4,7 @@ Voer de numerieke **Deal ID** van een Storage Market-deal op het Filecoin-mainne
 
 ## De status van een Filecoin-deal begrijpen
 
-Een actieve deal heeft een geregistreerde activatie en het geplande einde ligt nog in de toekomst. In afwachting betekent dat de deal vóór de geplande start op activatie wacht. De zoekfunctie toont ook wanneer de start zonder activatie is verstreken, de deal is verlopen of de marktstatus een bestraffing registreert. De begin- en einde-epochs komen uit het dealvoorstel. De UTC-datums worden berekend op basis van het epochschema van de chain.
+Een actieve deal heeft een geregistreerde activatie en het geplande einde ligt nog in de toekomst. In afwachting betekent dat de deal tot en met het geplande begin-epoch op activatie wacht. De zoekfunctie toont ook wanneer de start zonder activatie is verstreken, de deal is verlopen of de marktstatus een bestraffing registreert. De begin- en einde-epochs komen uit het dealvoorstel. De UTC-datums worden berekend op basis van het epochschema van de chain.
 
 ## De Piece CID van de deal vergelijken met je bestand
 
