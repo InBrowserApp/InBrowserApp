@@ -1,0 +1,21 @@
+{
+  "open": "Shapefile を開く",
+  "example": "サンプルを試す",
+  "drop": "Shapefile をここにドロップ",
+  "formats": "ZIP ファイルを開くか、.shp と対応するファイルをまとめて選択してください。",
+  "privacy": "ファイルはこのデバイス内に保持されます。",
+  "loading": "Shapefile を読み込み中…",
+  "invalid": "この Shapefile を読み込めませんでした。.shp を含む ZIP を開くか、.shp と対応するファイルをまとめて選択してください。",
+  "layer": "レイヤー",
+  "map": "Shapefile の地図",
+  "fit": "データ全体を表示",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "features": "地物",
+  "feature": "地物 {number}",
+  "attributes": "属性",
+  "noAttributes": "この地物に属性はありません。レコードを表示するには、対応する .dbf ファイルを追加してください。",
+  "noGeometry": "このレイヤーには表示できる図形がありません。",
+  "assumed": ".prj ファイルが見つかりません。地図上ではこれらの座標を WGS 84 として扱います。",
+  "unmapped": "これらの座標を地図上に配置できません。対応する、サポート対象の座標参照系を含む .prj ファイルを追加してください。"
+}

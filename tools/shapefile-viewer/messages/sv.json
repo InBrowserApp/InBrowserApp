@@ -1,0 +1,21 @@
+{
+  "open": "Öppna Shapefile",
+  "example": "Prova ett exempel",
+  "drop": "Släpp en Shapefile här",
+  "formats": "Öppna ett ZIP-arkiv eller välj en .shp-fil tillsammans med de tillhörande filerna.",
+  "privacy": "Filerna stannar på den här enheten.",
+  "loading": "Läser in Shapefile…",
+  "invalid": "Det gick inte att läsa denna Shapefile. Öppna ett ZIP-arkiv med en .shp-fil eller välj .shp-filen tillsammans med de tillhörande filerna.",
+  "layer": "Lager",
+  "map": "Shapefile-karta",
+  "fit": "Anpassa till data",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "features": "Objekt",
+  "feature": "Objekt {number}",
+  "attributes": "Attribut",
+  "noAttributes": "Objektet saknar attribut. Ta med den tillhörande .dbf-filen för att visa dem.",
+  "noGeometry": "Det här lagret innehåller inga geometrier att visa.",
+  "assumed": "Ingen .prj-fil hittades. Kartan tolkar koordinaterna som WGS 84.",
+  "unmapped": "Koordinaterna kan inte placeras på kartan. Ta med en tillhörande .prj-fil med ett koordinatreferenssystem som stöds."
+}

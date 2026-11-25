@@ -9,6 +9,8 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  shpjs: 6.2.0
+  "@types/shpjs": 3.4.7
   geotiff: 3.0.5
   "@types/parse-torrent": 11.0.1
   "@types/webtorrent": 3.0.0

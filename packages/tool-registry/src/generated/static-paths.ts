@@ -29718,6 +29718,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "shapefile-viewer",
+    language: "ar",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "de",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "en",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "es",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "fr",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "he",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "hi",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "id",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "it",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "ja",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "ko",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "ms",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "nl",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "no",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "pl",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "pt",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "ru",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "sv",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "th",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "tr",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "vi",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "shapefile-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "siphash-128-2-4-hash-text-or-file",
     language: "ar",
   },

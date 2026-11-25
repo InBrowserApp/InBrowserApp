@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile 查看器",
+  "description": "打开 ZIP 格式的 Esri Shapefile，或同时打开 .shp 及其配套文件。在离线地图上浏览图层，并在浏览器中查看要素属性。"
+}

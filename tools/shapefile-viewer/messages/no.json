@@ -1,0 +1,21 @@
+{
+  "open": "Åpne Shapefile",
+  "example": "Prøv et eksempel",
+  "drop": "Slipp en Shapefile her",
+  "formats": "Åpne et ZIP-arkiv, eller velg en .shp-fil sammen med de tilhørende filene.",
+  "privacy": "Filene blir på denne enheten.",
+  "loading": "Leser Shapefile…",
+  "invalid": "Kunne ikke lese Shapefile. Åpne et ZIP-arkiv med en .shp-fil, eller velg .shp-filen sammen med de tilhørende filene.",
+  "layer": "Lag",
+  "map": "Shapefile-kart",
+  "fit": "Tilpass kartutsnittet",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "features": "Objekter",
+  "feature": "Objekt {number}",
+  "attributes": "Egenskaper",
+  "noAttributes": "Dette objektet har ingen egenskaper. Ta med den tilhørende .dbf-filen for å vise egenskapene.",
+  "noGeometry": "Dette laget inneholder ingen geometrier som kan vises.",
+  "assumed": "Fant ingen .prj-fil. Kartet tolker koordinatene som WGS 84.",
+  "unmapped": "Koordinatene kan ikke plasseres på kartet. Ta med en tilhørende .prj-fil med et koordinatreferansesystem som støttes."
+}

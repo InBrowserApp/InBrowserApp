@@ -1,0 +1,21 @@
+{
+  "open": "Buka Shapefile",
+  "example": "Cuba contoh",
+  "drop": "Lepaskan Shapefile di sini",
+  "formats": "Buka arkib ZIP atau pilih fail .shp bersama fail pelengkap yang sepadan.",
+  "privacy": "Fail anda kekal pada peranti ini.",
+  "loading": "Sedang membaca Shapefile…",
+  "invalid": "Shapefile ini tidak dapat dibaca. Buka ZIP yang mengandungi fail .shp atau pilih fail .shp bersama fail pelengkap yang sepadan.",
+  "layer": "Lapisan",
+  "map": "Peta Shapefile",
+  "fit": "Papar seluruh kawasan data",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "features": "Ciri",
+  "feature": "Ciri {number}",
+  "attributes": "Atribut",
+  "noAttributes": "Tiada atribut untuk ciri ini. Sertakan fail .dbf yang sepadan untuk melihat rekodnya.",
+  "noGeometry": "Lapisan ini tidak mengandungi bentuk yang boleh dipaparkan.",
+  "assumed": "Fail .prj tidak ditemui. Peta membaca koordinat ini sebagai WGS 84.",
+  "unmapped": "Koordinat ini tidak dapat diletakkan pada peta. Sertakan fail .prj yang sepadan dengan sistem rujukan koordinat yang disokong."
+}

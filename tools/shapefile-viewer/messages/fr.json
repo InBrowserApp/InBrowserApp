@@ -1,0 +1,21 @@
+{
+  "open": "Ouvrir un Shapefile",
+  "example": "Essayer un exemple",
+  "drop": "Déposez un Shapefile ici",
+  "formats": "Ouvrez une archive ZIP ou sélectionnez un fichier .shp et ses fichiers associés.",
+  "privacy": "Vos fichiers restent sur cet appareil.",
+  "loading": "Lecture du Shapefile…",
+  "invalid": "Impossible de lire ce Shapefile. Ouvrez une archive ZIP contenant un fichier .shp ou sélectionnez ce dernier avec ses fichiers associés.",
+  "layer": "Couche",
+  "map": "Carte du Shapefile",
+  "fit": "Cadrer sur les données",
+  "zoomIn": "Zoom avant",
+  "zoomOut": "Zoom arrière",
+  "features": "Entités",
+  "feature": "Entité {number}",
+  "attributes": "Attributs",
+  "noAttributes": "Aucun attribut disponible pour cette entité. Ajoutez le fichier .dbf associé pour consulter ses données.",
+  "noGeometry": "Cette couche ne contient aucune géométrie à afficher.",
+  "assumed": "Aucun fichier .prj trouvé. La carte interprète ces coordonnées dans le système WGS 84.",
+  "unmapped": "Impossible de positionner ces coordonnées sur la carte. Ajoutez le fichier .prj associé et vérifiez que son système de coordonnées de référence est pris en charge."
+}

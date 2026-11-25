@@ -1,0 +1,21 @@
+{
+  "open": "Shapefile 열기",
+  "example": "예제 사용하기",
+  "drop": "여기에 Shapefile 끌어 놓기",
+  "formats": "ZIP 압축 파일을 열거나 .shp와 관련 파일을 함께 선택하세요.",
+  "privacy": "파일은 이 기기에만 보관됩니다.",
+  "loading": "Shapefile 읽는 중…",
+  "invalid": "이 Shapefile을 읽을 수 없습니다. .shp 파일이 포함된 ZIP을 열거나 .shp와 관련 파일을 함께 선택하세요.",
+  "layer": "레이어",
+  "map": "Shapefile 지도",
+  "fit": "데이터 전체 보기",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "features": "피처",
+  "feature": "피처 {number}",
+  "attributes": "속성",
+  "noAttributes": "이 피처에 속성이 없습니다. 레코드를 보려면 관련 .dbf 파일을 포함하세요.",
+  "noGeometry": "이 레이어에는 표시할 도형이 없습니다.",
+  "assumed": ".prj 파일을 찾지 못했습니다. 지도에서 이 좌표를 WGS 84로 취급합니다.",
+  "unmapped": "이 좌표를 지도에 표시할 수 없습니다. 지원되는 좌표계가 담긴 관련 .prj 파일을 포함하세요."
+}

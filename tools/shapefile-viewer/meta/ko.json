@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile 뷰어",
+  "description": "ZIP으로 압축된 Esri Shapefile이나 .shp와 관련 파일을 함께 여세요. 오프라인 지도에서 레이어를 살펴보고 브라우저에서 피처 속성을 확인할 수 있습니다."
+}

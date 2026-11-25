@@ -41077,6 +41077,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "shapefile-viewer",
+    category: "geo",
+    icon: "layers",
+    tags: [
+      "shapefile",
+      "shp",
+      "dbf",
+      "shx",
+      "prj",
+      "esri",
+      "gis",
+      "map",
+      "viewer",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Shapefile",
+        description:
+          "افتح ملف Esri Shapefile مضغوطًا بصيغة ZIP أو ملف .shp مع ملفاته المرافقة. استكشف طبقاته على خريطة تعمل دون اتصال وافحص سمات المعالم في متصفحك.",
+      },
+      de: {
+        name: "Shapefile-Betrachter",
+        description:
+          "Öffne ein Esri-Shapefile im ZIP-Format oder eine .shp-Datei mit den zugehörigen Dateien. Zeige die Layer auf einer Offline-Karte an und prüfe ihre Attribute im Browser.",
+      },
+      en: {
+        name: "Shapefile Viewer",
+        description:
+          "Open a zipped Esri Shapefile or .shp with its companion files. Explore its layers on an offline map and inspect feature attributes in your browser.",
+      },
+      es: {
+        name: "Visor de Shapefile",
+        description:
+          "Abre un Shapefile de Esri en ZIP o un archivo .shp con sus archivos auxiliares. Explora las capas en un mapa sin conexión y consulta los atributos de las entidades en el navegador.",
+      },
+      fr: {
+        name: "Visionneuse Shapefile",
+        description:
+          "Ouvrez un Shapefile Esri en ZIP ou un fichier .shp avec ses fichiers associés. Parcourez ses couches sur une carte hors ligne et consultez les attributs des entités dans votre navigateur.",
+      },
+      he: {
+        name: "מציג Shapefile",
+        description:
+          "פתחו ארכיון ZIP של Esri Shapefile או קובץ ‎.shp עם הקבצים הנלווים. עיינו בשכבות במפה שעובדת בלי חיבור לרשת ובדקו את מאפייני הישויות בדפדפן.",
+      },
+      hi: {
+        name: "Shapefile व्यूअर",
+        description:
+          "ZIP में पैक की गई Esri Shapefile खोलें या .shp और उसकी संबंधित फ़ाइलें साथ चुनें। ऑफ़लाइन मानचित्र पर उसकी परतें देखें और फ़ीचर की विशेषताएँ ब्राउज़र में जाँचें।",
+      },
+      id: {
+        name: "Penampil Shapefile",
+        description:
+          "Buka Esri Shapefile dalam arsip ZIP atau buka .shp bersama berkas pendampingnya. Jelajahi lapisan pada peta luring dan periksa atribut fitur di browser.",
+      },
+      it: {
+        name: "Visualizzatore Shapefile",
+        description:
+          "Apri uno Shapefile Esri in formato ZIP o un file .shp con i file associati. Esplora i layer su una mappa offline e consulta gli attributi nel browser.",
+      },
+      ja: {
+        name: "Shapefile ビューアー",
+        description:
+          "ZIP 形式の Esri Shapefile、または .shp と関連ファイルを開きます。オフライン地図でレイヤーを表示し、ブラウザーで地物の属性を確認できます。",
+      },
+      ko: {
+        name: "Shapefile 뷰어",
+        description:
+          "ZIP으로 압축된 Esri Shapefile이나 .shp와 관련 파일을 함께 여세요. 오프라인 지도에서 레이어를 살펴보고 브라우저에서 피처 속성을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Shapefile",
+        description:
+          "Buka Esri Shapefile dalam arkib ZIP atau buka fail .shp bersama fail pelengkapnya. Terokai lapisan pada peta luar talian dan semak atribut ciri dalam pelayar.",
+      },
+      nl: {
+        name: "Shapefile-viewer",
+        description:
+          "Open een Esri Shapefile als ZIP of kies een .shp-bestand met de bijbehorende bestanden. Bekijk de lagen op een offlinekaart en inspecteer de attributen in je browser.",
+      },
+      no: {
+        name: "Shapefile-viser",
+        description:
+          "Åpne en Esri Shapefile i et ZIP-arkiv eller velg en .shp-fil med tilhørende filer. Se lagene på et kart uten nett og undersøk objektegenskapene i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka Shapefile",
+        description:
+          "Otwórz plik Esri Shapefile w archiwum ZIP lub wybierz plik .shp wraz z plikami towarzyszącymi. Oglądaj warstwy na mapie offline i sprawdzaj atrybuty obiektów w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de Shapefile",
+        description:
+          "Abra um Shapefile da Esri em ZIP ou um arquivo .shp com os arquivos associados. Explore as camadas em um mapa offline e consulte os atributos das feições no navegador.",
+      },
+      ru: {
+        name: "Просмотр Shapefile",
+        description:
+          "Откройте Esri Shapefile в ZIP-архиве или выберите файл .shp вместе с сопутствующими файлами. Изучайте слои на офлайн-карте и просматривайте атрибуты в браузере.",
+      },
+      sv: {
+        name: "Shapefile-visare",
+        description:
+          "Öppna en Esri Shapefile i ett ZIP-arkiv eller välj en .shp-fil med tillhörande filer. Utforska lagren på en karta offline och granska objektens attribut i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Shapefile",
+        description:
+          "เปิด Esri Shapefile ในไฟล์ ZIP หรือเปิดไฟล์ .shp พร้อมไฟล์ประกอบ สำรวจชั้นข้อมูลบนแผนที่ออฟไลน์และตรวจสอบแอตทริบิวต์ของฟีเจอร์ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Shapefile Görüntüleyici",
+        description:
+          "Esri Shapefile içeren bir ZIP arşivi açın ya da .shp dosyasını eşlik eden dosyalarla birlikte seçin. Katmanları çevrimdışı haritada görün ve detayların özniteliklerini tarayıcınızda inceleyin.",
+      },
+      vi: {
+        name: "Trình xem Shapefile",
+        description:
+          "Mở Esri Shapefile trong tệp ZIP hoặc mở tệp .shp cùng các tệp đi kèm. Khám phá các lớp trên bản đồ ngoại tuyến và xem thuộc tính đối tượng ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Shapefile 查看器",
+        description:
+          "打开 ZIP 格式的 Esri Shapefile，或同时打开 .shp 及其配套文件。在离线地图上浏览图层，并在浏览器中查看要素属性。",
+      },
+      "zh-TW": {
+        name: "Shapefile 檢視器",
+        description:
+          "開啟 ZIP 格式的 Esri Shapefile，或同時開啟 .shp 與其附屬檔案。在離線地圖上瀏覽圖層，並在瀏覽器中查看圖徵屬性。",
+      },
+    },
+  },
+  {
     slug: "siphash-128-2-4-hash-text-or-file",
     category: "crypto",
     icon: "lock",

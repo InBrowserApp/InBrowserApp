@@ -1,0 +1,4 @@
+{
+  "name": "Shapefile ビューアー",
+  "description": "ZIP 形式の Esri Shapefile、または .shp と関連ファイルを開きます。オフライン地図でレイヤーを表示し、ブラウザーで地物の属性を確認できます。"
+}

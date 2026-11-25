@@ -1,0 +1,21 @@
+{
+  "open": "開啟 Shapefile",
+  "example": "試用範例",
+  "drop": "將 Shapefile 拖放到這裡",
+  "formats": "開啟 ZIP 壓縮檔，或同時選取 .shp 及其對應檔案。",
+  "privacy": "檔案只會保留在這部裝置上。",
+  "loading": "正在讀取 Shapefile…",
+  "invalid": "無法讀取此 Shapefile。請開啟包含 .shp 的 ZIP，或同時選取 .shp 及其對應檔案。",
+  "layer": "圖層",
+  "map": "Shapefile 地圖",
+  "fit": "符合資料範圍",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "features": "圖徵",
+  "feature": "圖徵 {number}",
+  "attributes": "屬性",
+  "noAttributes": "此圖徵沒有屬性。請加入對應的 .dbf 檔案以查看紀錄。",
+  "noGeometry": "此圖層沒有可顯示的圖形。",
+  "assumed": "找不到 .prj 檔案。地圖會將這些座標視為 WGS 84。",
+  "unmapped": "無法在此地圖上定位這些座標。請加入使用受支援座標參考系統的對應 .prj 檔案。"
+}

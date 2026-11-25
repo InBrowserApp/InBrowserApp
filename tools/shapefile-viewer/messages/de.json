@@ -1,0 +1,21 @@
+{
+  "open": "Shapefile öffnen",
+  "example": "Beispiel ausprobieren",
+  "drop": "Shapefile hier ablegen",
+  "formats": "Öffne eine ZIP-Datei oder wähle eine .shp-Datei zusammen mit den zugehörigen Dateien aus.",
+  "privacy": "Deine Dateien bleiben auf diesem Gerät.",
+  "loading": "Shapefile wird gelesen…",
+  "invalid": "Dieses Shapefile konnte nicht gelesen werden. Öffne ein ZIP mit einer .shp-Datei oder wähle die .shp-Datei mit den zugehörigen Dateien aus.",
+  "layer": "Layer",
+  "map": "Shapefile-Karte",
+  "fit": "Auf Daten zoomen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "features": "Objekte",
+  "feature": "Objekt {number}",
+  "attributes": "Attribute",
+  "noAttributes": "Für dieses Objekt sind keine Attribute verfügbar. Wähle die zugehörige .dbf-Datei mit aus, um die Datensätze zu sehen.",
+  "noGeometry": "Dieser Layer enthält keine Geometrien zur Anzeige.",
+  "assumed": "Es wurde keine .prj-Datei gefunden. Die Karte interpretiert diese Koordinaten als WGS 84.",
+  "unmapped": "Die Koordinaten lassen sich auf der Karte nicht darstellen. Wähle die zugehörige .prj-Datei mit einem unterstützten Koordinatenreferenzsystem aus."
+}

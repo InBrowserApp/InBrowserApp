@@ -1,0 +1,21 @@
+{
+  "open": "Otwórz Shapefile",
+  "example": "Wypróbuj przykład",
+  "drop": "Upuść tutaj plik Shapefile",
+  "formats": "Otwórz archiwum ZIP albo wybierz plik .shp razem z plikami towarzyszącymi.",
+  "privacy": "Pliki pozostają na tym urządzeniu.",
+  "loading": "Wczytywanie pliku Shapefile…",
+  "invalid": "Nie udało się odczytać pliku Shapefile. Otwórz ZIP z plikiem .shp albo wybierz .shp i odpowiadające mu pliki razem.",
+  "layer": "Warstwa",
+  "map": "Mapa Shapefile",
+  "fit": "Dopasuj widok do danych",
+  "zoomIn": "Przybliż",
+  "zoomOut": "Oddal",
+  "features": "Obiekty",
+  "feature": "Obiekt {number}",
+  "attributes": "Atrybuty",
+  "noAttributes": "Ten obiekt nie ma atrybutów. Dołącz plik .dbf tej warstwy, aby je wyświetlić.",
+  "noGeometry": "Ta warstwa nie zawiera geometrii do wyświetlenia.",
+  "assumed": "Nie znaleziono pliku .prj. Mapa interpretuje te współrzędne jako WGS 84.",
+  "unmapped": "Nie można umieścić tych współrzędnych na mapie. Dołącz właściwy plik .prj z obsługiwanym układem odniesienia współrzędnych."
+}

@@ -1,0 +1,21 @@
+{
+  "open": "Abrir Shapefile",
+  "example": "Probar un ejemplo",
+  "drop": "Suelta aquí un Shapefile",
+  "formats": "Abre un archivo ZIP o selecciona un archivo .shp junto con sus archivos auxiliares.",
+  "privacy": "Los archivos se quedan en este dispositivo.",
+  "loading": "Leyendo el Shapefile…",
+  "invalid": "No se pudo leer este Shapefile. Abre un ZIP que contenga un .shp o selecciona el .shp junto con sus archivos auxiliares.",
+  "layer": "Capa",
+  "map": "Mapa del Shapefile",
+  "fit": "Ajustar vista a los datos",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "features": "Entidades",
+  "feature": "Entidad {number}",
+  "attributes": "Atributos",
+  "noAttributes": "No hay atributos para esta entidad. Incluye el archivo .dbf correspondiente para consultar los registros.",
+  "noGeometry": "Esta capa no contiene geometrías que se puedan mostrar.",
+  "assumed": "No se encontró un archivo .prj. El mapa interpreta las coordenadas como WGS 84.",
+  "unmapped": "No se pueden ubicar estas coordenadas en el mapa. Incluye el archivo .prj correspondiente con un sistema de referencia de coordenadas compatible."
+}

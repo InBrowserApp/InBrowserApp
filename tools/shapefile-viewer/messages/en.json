@@ -1,0 +1,21 @@
+{
+  "open": "Open Shapefile",
+  "example": "Try an example",
+  "drop": "Drop a Shapefile here",
+  "formats": "Open a ZIP archive, or select a .shp and its matching files together.",
+  "privacy": "Your files stay on this device.",
+  "loading": "Reading Shapefile…",
+  "invalid": "Could not read this Shapefile. Open a ZIP with a .shp file, or choose the .shp and matching files together.",
+  "layer": "Layer",
+  "map": "Shapefile map",
+  "fit": "Fit to data",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "features": "Features",
+  "feature": "Feature {number}",
+  "attributes": "Attributes",
+  "noAttributes": "No attributes for this feature. Include the matching .dbf file to view its records.",
+  "noGeometry": "This layer contains no shapes to display.",
+  "assumed": "No .prj file was found. The map treats these coordinates as WGS 84.",
+  "unmapped": "The coordinates cannot be placed on this map. Include a matching .prj file with a supported coordinate reference system."
+}
