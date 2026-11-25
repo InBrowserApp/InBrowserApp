@@ -1,0 +1,13 @@
+{
+  "domain": "Domän",
+  "anyDomain": "Slumpmässig exempeldomän",
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "E-postadresser",
+  "placeholder": "Genererade adresser visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att generera e-postadresser. Försök igen."
+}

@@ -1,0 +1,13 @@
+{
+  "domain": "Domaine",
+  "anyDomain": "Tout domaine d’exemple",
+  "quantity": "Quantité",
+  "generate": "Générer",
+  "generating": "Génération…",
+  "results": "Adresses e-mail",
+  "placeholder": "Les adresses générées apparaîtront ici.",
+  "copy": "Tout copier",
+  "copied": "Copié",
+  "download": "Télécharger en TXT",
+  "error": "Impossible de générer les adresses e-mail. Réessayez."
+}

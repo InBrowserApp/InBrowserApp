@@ -1,0 +1,13 @@
+{
+  "domain": "Domene",
+  "anyDomain": "Tilfeldig eksempeldomene",
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "E-postadresser",
+  "placeholder": "De genererte adressene vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke generere e-postadresser. Prøv igjen."
+}

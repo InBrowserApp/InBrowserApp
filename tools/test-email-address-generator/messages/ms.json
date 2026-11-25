@@ -1,0 +1,13 @@
+{
+  "domain": "Domain",
+  "anyDomain": "Mana-mana domain contoh",
+  "quantity": "Kuantiti",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Alamat e-mel",
+  "placeholder": "Alamat yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "download": "Muat turun TXT",
+  "error": "Alamat e-mel tidak dapat dijana. Cuba lagi."
+}

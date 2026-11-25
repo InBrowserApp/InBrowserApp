@@ -407,6 +407,7 @@
     "@tool/svg-to-image-converter": "workspace:*",
     "@tool/svg-to-pdf-converter": "workspace:*",
     "@tool/svg-viewer": "workspace:*",
+    "@tool/test-email-address-generator": "workspace:*",
     "@tool/text-diff": "workspace:*",
     "@tool/text-encoding-converter": "workspace:*",
     "@tool/text-line-sorter": "workspace:*",

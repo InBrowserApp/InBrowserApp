@@ -2003,6 +2003,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "svg-viewer",
   },
   {
+    category: "random",
+    name: "Generatore di indirizzi email di prova",
+    slug: "test-email-address-generator",
+  },
+  {
     category: "text",
     name: "Confronto testi",
     slug: "text-diff",

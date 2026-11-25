@@ -1,0 +1,13 @@
+{
+  "domain": "Alan adı",
+  "anyDomain": "Herhangi bir örnek alan adı",
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "E-posta adresleri",
+  "placeholder": "Oluşturulan adresler burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "download": "TXT indir",
+  "error": "E-posta adresleri oluşturulamadı. Tekrar deneyin."
+}
