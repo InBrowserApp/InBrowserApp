@@ -6,9 +6,11 @@
   "exports": {
     ".": "./src/index.ts",
     "./assets": "./src/pdf-assets.ts",
-    "./document": "./src/document.ts"
+    "./document": "./src/document.ts",
+    "./original-images": "./src/original-images.ts"
   },
   "dependencies": {
+    "pdf-lib": "catalog:",
     "pdfjs-dist": "catalog:"
   },
   "devDependencies": {

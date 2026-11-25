@@ -1,4 +1,5 @@
 import { PdfAssets } from "@workspace/pdf-reader/assets"
+import { getPageImage } from "@workspace/pdf-reader/original-images"
 import {
   AnnotationMode,
   getDocument,
@@ -8,7 +9,6 @@ import {
 // oxlint-disable-next-line import/default -- Vite creates the default export for ?url assets.
 import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { encodePng, openOriginalImages } from "./image-export"
-import type { PDFPageProxy } from "pdfjs-dist"
 import type { PdfRaster } from "./image-export"
 
 export type ExtractedImage = {
@@ -22,17 +22,6 @@ export type ExtractedImage = {
 export type Extraction = {
   images: ExtractedImage[]
   skipped: boolean
-}
-
-function getImage(page: PDFPageProxy, id: string, signal: AbortSignal) {
-  const objects = id.startsWith("g_") ? page.commonObjs : page.objs
-  let abort!: () => void
-  const promise = new Promise<PdfRaster | null>((resolve, reject) => {
-    abort = () => reject(signal.reason)
-    signal.addEventListener("abort", abort, { once: true })
-    objects.get(id, resolve, reject)
-  })
-  return promise.finally(() => signal.removeEventListener("abort", abort))
 }
 
 export async function extractPdfImages(
@@ -87,7 +76,7 @@ export async function extractPdfImages(
             ]
             const raster =
               typeof argument === "string"
-                ? await getImage(page, argument, signal)
+                ? await getPageImage(page, argument, signal)
                 : argument
             if (!raster) {
               skipped = true

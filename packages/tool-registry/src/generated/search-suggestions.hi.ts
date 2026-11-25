@@ -1553,6 +1553,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "pdf-text-extractor",
   },
   {
+    category: "ebook",
+    name: "PDF से CBZ कन्वर्टर",
+    slug: "pdf-to-cbz-converter",
+  },
+  {
     category: "pdf",
     name: "PDF से इमेज कनवर्टर",
     slug: "pdf-to-image-converter",

@@ -1,3 +1,4 @@
+import type { CbzFile } from "@workspace/comic/cbz"
 import type englishMessages from "./messages/en.json"
 
 export type Messages = typeof englishMessages
@@ -10,12 +11,5 @@ export class RepackError extends Error {
     super(code)
   }
 }
-export type Result = {
-  cbz: Blob
-  total: number
-  first: string
-  last: string
-  metadata: boolean
-  cover: Blob | null
-}
+export type Result = CbzFile & { metadata: boolean }
 export type Progress = { page: number; total: number } | "saving"

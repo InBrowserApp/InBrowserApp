@@ -1,11 +1,12 @@
 import { ArchiveError } from "@workspace/archive/types"
 import { openWorkerArchive } from "@workspace/archive/worker"
+import { createCbzWriter } from "@workspace/comic/cbz"
 import {
   failureCode,
   indexArchivePages,
   readPageImage,
 } from "@workspace/comic/pages"
-import { BlobReader, BlobWriter, ZipWriter } from "@zip.js/zip.js"
+import { BlobReader } from "@zip.js/zip.js"
 import { RepackError } from "./types"
 import type { Progress, Result } from "./types"
 
@@ -38,11 +39,7 @@ export async function repack(
       ({ path, kind }) =>
         kind === "file" && /(?:^|\/)comicinfo\.xml$/i.test(path)
     )
-    const zip = new ZipWriter(new BlobWriter("application/vnd.comicbook+zip"), {
-      level: 0,
-      bufferedWrite: false,
-      useWebWorkers: false,
-    })
+    const zip = createCbzWriter()
     let cover: Blob | null = null
     const total = pages.length
     async function copy({
