@@ -30,7 +30,7 @@ const IntroSection = resolveLocale<AstroComponentFactory>(
 <ToolPageShell title={meta.name} description={meta.description}>
   <AbcNotationPreviewer client:load messages={messages} />
 
-  <ToolArticle>
+  <ToolArticle className="[&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]">
     <IntroSection />
   </ToolArticle>
 </ToolPageShell>

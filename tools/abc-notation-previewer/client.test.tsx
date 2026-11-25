@@ -14,9 +14,11 @@ const { renderAbc } = vi.hoisted(() => ({ renderAbc: vi.fn() }))
 vi.mock("abcjs", () => ({
   renderAbc,
   TuneBook: class {
-    tunes: { abc: string }[]
+    tunes: { abc: string; id: string }[]
     constructor(text: string) {
-      this.tunes = text.split(/\n(?=X:)/).map((abc) => ({ abc }))
+      this.tunes = text
+        .split(/\n(?=X:)/)
+        .map((abc, index) => ({ abc, id: String(index + 1) }))
     }
   },
 }))
@@ -68,6 +70,7 @@ describe("ABC notation previewer", () => {
     expect(screen.getByRole("status").textContent).toBe(messages.empty)
     fireEvent.click(screen.getByRole("button", { name: messages.example }))
     expect(textbox().value).toContain("T:Morning Path")
+    expect(screen.queryByRole("button", { name: messages.example })).toBeNull()
     expect(screen.getByRole("status").textContent).toBe(messages.loading)
     const score = screen.getByRole("region", { name: messages.preview })
     await waitFor(() => expect(score.querySelector("svg")).toBeTruthy())
@@ -119,6 +122,25 @@ describe("ABC notation previewer", () => {
     )
     edit("X:1\nK:C\nCDEF|")
     await waitFor(() => expect(screen.queryByRole("alert")).toBeNull())
+  })
+
+  it("identifies which tune produced a warning in a book", async () => {
+    renderAbc.mockReturnValue([
+      {
+        lines: [{ staff: [{}] }],
+        warnings: ["Music Line:4:3: Unknown character"],
+      },
+    ])
+    render(<AbcNotationPreviewer messages={messages} />)
+    edit("X:1\nK:C\nCD@|\nX:2\nK:D\nEF@|")
+    expect(
+      (
+        await screen.findByText("X:1 · Music Line:4:3: Unknown character")
+      ).getAttribute("lang")
+    ).toBe("en")
+    expect(
+      screen.getByText("X:2 · Music Line:4:3: Unknown character")
+    ).toBeTruthy()
   })
 
   it("keeps editor text after a file-read error or a stale import", async () => {

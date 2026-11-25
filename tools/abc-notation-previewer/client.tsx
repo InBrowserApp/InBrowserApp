@@ -10,8 +10,10 @@ import {
 import { Button } from "@workspace/ui/components/ui/button"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { prepareAbc } from "./core/source"
 import example from "./fixtures/morning-path.abc?raw"
 
+import type { AbcVisualParams } from "abcjs"
 import type english from "./messages/en.json"
 
 type Preview =
@@ -73,23 +75,30 @@ export default function AbcNotationPreviewer({
         if (cancelled) return
         host.replaceChildren()
         const warnings: string[] = []
-        const book = new TuneBook(source)
+        const book = new TuneBook(prepareAbc(source))
+        const options: AbcVisualParams = {
+          staffwidth: Math.max(220, width - 20),
+          responsive: "resize",
+          paddingright: 8,
+          paddingleft: 8,
+          wrap: {
+            preferredMeasuresPerLine: 4,
+            minSpacing: 1.8,
+            maxSpacing: 2.7,
+          },
+        }
         for (const tune of book.tunes) {
           const target = document.createElement("div")
           host.append(target)
-          const [result] = renderAbc(target, tune.abc, {
-            staffwidth: Math.max(220, width - 20),
-            responsive: "resize",
-            paddingright: 8,
-            paddingleft: 8,
-            wrap: {
-              preferredMeasuresPerLine: 4,
-              minSpacing: 1.8,
-              maxSpacing: 2.7,
-            },
-          })
-          if (result?.warnings)
-            warnings.push(...result.warnings.map(warningText))
+          const [result] = renderAbc(target, tune.abc, options)
+          if (result?.warnings) {
+            const tuneLabel = book.tunes.length > 1 ? `X:${tune.id} · ` : ""
+            warnings.push(
+              ...result.warnings.map(
+                (warning) => tuneLabel + warningText(warning)
+              )
+            )
+          }
           if (!result?.lines.some((line) => line.staff?.length)) target.remove()
         }
         setPreview({
@@ -126,13 +135,15 @@ export default function AbcNotationPreviewer({
                 void importer.read(file, edit, () => setFileError(true))
               }
             />
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => edit(example)}
-            >
-              {m.example}
-            </Button>
+            {!source.trim() && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => edit(example)}
+              >
+                {m.example}
+              </Button>
+            )}
           </div>
           <Textarea
             id={field}
@@ -184,7 +195,12 @@ export default function AbcNotationPreviewer({
               <summary className="cursor-pointer">{m.warnings}</summary>
               <ul className="mt-2 list-disc space-y-1 ps-5">
                 {preview.warnings.map((warning, index) => (
-                  <li className="wrap-anywhere" dir="auto" key={index}>
+                  <li
+                    className="wrap-anywhere"
+                    dir="auto"
+                    lang="en"
+                    key={index}
+                  >
                     {warning}
                   </li>
                 ))}
