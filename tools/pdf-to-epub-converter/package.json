@@ -13,8 +13,7 @@
     "@workspace/pdf-reader": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "pdfjs-dist": "catalog:",
-    "tesseract.js": "catalog:"
+    "pdfjs-dist": "catalog:"
   },
   "devDependencies": {
     "vitest": "catalog:"
