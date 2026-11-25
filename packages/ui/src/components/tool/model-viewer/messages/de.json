@@ -16,5 +16,11 @@
   "controls": "Ziehen zum Drehen · Mausrad zum Zoomen · Rechts ziehen zum Verschieben",
   "touchControls": "Ziehen zum Drehen · Auf- oder zuziehen zum Zoomen · Mit zwei Fingern verschieben",
   "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Halte die Umschalttaste gedrückt, um die Ansicht mit den Pfeiltasten zu verschieben.",
-  "missingResources": "Einige Materialien oder Texturen fehlen. Öffne das Modell zusammen mit den zugehörigen Dateien."
+  "missingResources": "Einige Materialien oder Texturen fehlen. Öffne das Modell zusammen mit den zugehörigen Dateien.",
+  "companionHelp": "Wähle das Modell zusammen mit den zugehörigen Dateien aus.",
+  "missingCompanions": "Eine zum Modell gehörende Datei fehlt. Öffne das Modell zusammen mit den referenzierten Pufferdateien und Texturen.",
+  "animation": "Animation",
+  "clip": "Clip {number}",
+  "playAnimation": "Animation abspielen",
+  "pauseAnimation": "Animation pausieren"
 }

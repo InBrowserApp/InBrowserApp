@@ -683,6 +683,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
+    category: "image",
+    name: "Pemapar GLB / glTF",
+    slug: "gltf-viewer",
+  },
+  {
     category: "web",
     name: "Maklumat GPU",
     slug: "gpu-information",

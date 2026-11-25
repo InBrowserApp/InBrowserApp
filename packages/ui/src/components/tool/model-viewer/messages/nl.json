@@ -16,5 +16,11 @@
   "controls": "Slepen om te draaien · Scrollen om te zoomen · Slepen met de rechtermuisknop om te verschuiven",
   "touchControls": "Slepen om te draaien · Knijpen om te zoomen · Slepen met twee vingers om te verschuiven",
   "keyboardControls": "Gebruik de pijltoetsen om te draaien en + of − om te zoomen. Houd Shift ingedrukt om de weergave met de pijltoetsen te verschuiven.",
-  "missingResources": "Er ontbreken materialen of texturen. Open het model samen met de bijbehorende bestanden."
+  "missingResources": "Er ontbreken materialen of texturen. Open het model samen met de bijbehorende bestanden.",
+  "companionHelp": "Selecteer het model samen met de bijbehorende bestanden.",
+  "missingCompanions": "Er ontbreekt een bestand dat het model nodig heeft. Open het model samen met de bufferbestanden en texturen waarnaar het verwijst.",
+  "animation": "Animatie",
+  "clip": "Clip {number}",
+  "playAnimation": "Animatie afspelen",
+  "pauseAnimation": "Animatie pauzeren"
 }

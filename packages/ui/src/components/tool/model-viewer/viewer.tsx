@@ -32,7 +32,9 @@ export default function ModelViewer({
   const restoreFocus = useRef(false)
   const sequence = useRef(0)
   const [model, setModel] = useState<OpenModel>()
-  const [status, setStatus] = useState<"loading" | "invalid">()
+  const [status, setStatus] = useState<
+    "loading" | "invalid" | "missingCompanions"
+  >()
   const [dragging, setDragging] = useState(false)
   const options = getModelFormat(format)
   useEffect(
@@ -62,8 +64,14 @@ export default function ModelViewer({
         emptyActions.current?.contains(document.activeElement) ?? false
       setModel(next)
       setStatus(undefined)
-    } catch {
-      if (request === sequence.current) setStatus("invalid")
+    } catch (error) {
+      if (request === sequence.current) {
+        setStatus(
+          error instanceof Error && error.cause === "missingCompanions"
+            ? "missingCompanions"
+            : "invalid"
+        )
+      }
     }
   }
 
@@ -119,9 +127,9 @@ export default function ModelViewer({
           event.currentTarget.value = ""
         }}
       />
-      {status === "invalid" && (
+      {status && status !== "loading" && (
         <Alert variant="destructive">
-          <AlertDescription>{m.invalid}</AlertDescription>
+          <AlertDescription>{m[status]}</AlertDescription>
         </Alert>
       )}
       {model ? (
@@ -166,6 +174,12 @@ export default function ModelViewer({
                 ].join(" · ")}
               </span>
               <br />
+              {options.companions && (
+                <>
+                  {m.companionHelp}
+                  <br />
+                </>
+              )}
               {m.privacy}
             </EmptyDescription>
           </EmptyHeader>

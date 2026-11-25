@@ -683,6 +683,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
+    category: "image",
+    name: "Przeglądarka plików GLB i glTF",
+    slug: "gltf-viewer",
+  },
+  {
     category: "web",
     name: "Informacje o GPU",
     slug: "gpu-information",

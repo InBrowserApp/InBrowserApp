@@ -16,5 +16,11 @@
   "controls": "Arraste para girar · Use a roda do mouse para dar zoom · Arraste com o botão direito para deslocar",
   "touchControls": "Arraste para girar · Faça o gesto de pinça para dar zoom · Arraste com dois dedos para deslocar",
   "keyboardControls": "Use as setas para girar e + ou − para ajustar o zoom. Mantenha Shift pressionado e use as setas para mover a vista.",
-  "missingResources": "Alguns materiais ou texturas estão faltando. Abra o modelo e os arquivos associados juntos."
+  "missingResources": "Alguns materiais ou texturas estão faltando. Abra o modelo e os arquivos associados juntos.",
+  "companionHelp": "Selecione o modelo e os arquivos associados juntos.",
+  "missingCompanions": "Falta um recurso do modelo. Abra o modelo junto com os buffers e texturas a que ele faz referência.",
+  "animation": "Animação",
+  "clip": "Clipe {number}",
+  "playAnimation": "Reproduzir animação",
+  "pauseAnimation": "Pausar animação"
 }

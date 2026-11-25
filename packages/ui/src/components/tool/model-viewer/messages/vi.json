@@ -16,5 +16,11 @@
   "controls": "Kéo để xoay · Cuộn để thu phóng · Giữ nút chuột phải và kéo để dịch chuyển",
   "touchControls": "Kéo để xoay · Chụm hoặc tách hai ngón tay để thu phóng · Kéo hai ngón tay để dịch chuyển",
   "keyboardControls": "Dùng các phím mũi tên để xoay và + hoặc − để thu phóng. Giữ Shift và nhấn các phím mũi tên để dịch chuyển góc nhìn.",
-  "missingResources": "Thiếu một số vật liệu hoặc ảnh họa tiết. Hãy mở mô hình cùng các tệp đi kèm."
+  "missingResources": "Thiếu một số vật liệu hoặc ảnh họa tiết. Hãy mở mô hình cùng các tệp đi kèm.",
+  "companionHelp": "Chọn mô hình và các tệp đi kèm cùng lúc.",
+  "missingCompanions": "Thiếu tài nguyên của mô hình. Hãy mở mô hình cùng các tệp bộ đệm và ảnh họa tiết mà mô hình tham chiếu.",
+  "animation": "Hoạt ảnh",
+  "clip": "Đoạn {number}",
+  "playAnimation": "Phát hoạt ảnh",
+  "pauseAnimation": "Tạm dừng hoạt ảnh"
 }

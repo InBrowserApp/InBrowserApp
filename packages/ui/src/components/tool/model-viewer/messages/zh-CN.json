@@ -16,5 +16,11 @@
   "controls": "拖动旋转 · 滚动缩放 · 右键拖动平移",
   "touchControls": "拖动旋转 · 双指缩放 · 双指拖动平移",
   "keyboardControls": "使用方向键旋转，使用 + 或 − 缩放。按住 Shift 并使用方向键平移。",
-  "missingResources": "部分材质或纹理缺失。请同时打开模型及其配套文件。"
+  "missingResources": "部分材质或纹理缺失。请同时打开模型及其配套文件。",
+  "companionHelp": "请同时选择模型及其配套文件。",
+  "missingCompanions": "缺少模型资源。请同时打开模型及其引用的缓冲区和纹理文件。",
+  "animation": "动画",
+  "clip": "片段 {number}",
+  "playAnimation": "播放动画",
+  "pauseAnimation": "暂停动画"
 }

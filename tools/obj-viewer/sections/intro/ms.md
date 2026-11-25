@@ -11,3 +11,5 @@ OBJ masih boleh dibuka walaupun fail iringan tidak lengkap. Permukaan yang terje
 ## Lihat format 3D berkaitan
 
 Untuk melihat jejaring segi tiga yang dieksport untuk cetakan 3D, gunakan [Pemapar STL](../stl-viewer/). Jika anda mempunyai fail CAD asal bagi komponen atau pemasangan dalam format `.step` atau `.stp`, bukanya dengan [Pemapar STEP](../step-viewer/).
+
+- [Pemapar GLB / glTF](../gltf-viewer/)

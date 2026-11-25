@@ -11,3 +11,5 @@ Wavefront OBJ 檔案儲存幾何資料，並可參照一個或多個 `.mtl` 材�
 ## 檢視相關 3D 格式
 
 若要查看為 3D 列印匯出的三角網格，請使用 [STL 檢視器](../stl-viewer/)。如果您有 `.step` 或 `.stp` 格式的原始 CAD 零件或組合件，請用 [STEP 檢視器](../step-viewer/)開啟。
+
+- [GLB / glTF 檢視器](../gltf-viewer/)

@@ -11,3 +11,5 @@ Ytterdimensjonene viser hvor langt modellen strekker seg langs X-, Y- og Z-aksen
 ## Se andre 3D-filformater
 
 STL beskriver overflaten til en del med trekanter. Bruk [OBJ-viseren](../obj-viewer/) til Wavefront-filer med et tilhørende materialbibliotek. Åpne CAD-utvekslingsfiler med en sammenstilling eller en solidmodell i [STEP-viseren](../step-viewer/).
+
+- [GLB- og glTF-viser](../gltf-viewer/)

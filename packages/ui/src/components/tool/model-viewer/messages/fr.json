@@ -16,5 +16,11 @@
   "controls": "Glisser pour pivoter · Molette pour zoomer · Glisser avec le bouton droit pour déplacer la vue",
   "touchControls": "Glisser pour pivoter · Pincer pour zoomer · Glisser à deux doigts pour déplacer la vue",
   "keyboardControls": "Utilisez les flèches pour faire pivoter le modèle et les touches + ou − pour zoomer. Maintenez Maj et utilisez les flèches pour déplacer la vue.",
-  "missingResources": "Des matériaux ou des textures manquent. Ouvrez le modèle et ses fichiers associés ensemble."
+  "missingResources": "Des matériaux ou des textures manquent. Ouvrez le modèle et ses fichiers associés ensemble.",
+  "companionHelp": "Sélectionnez ensemble le modèle et ses fichiers associés.",
+  "missingCompanions": "Il manque une ressource. Ouvrez le modèle avec les tampons de données et les textures auxquels il fait référence.",
+  "animation": "Animation",
+  "clip": "Séquence {number}",
+  "playAnimation": "Lire l’animation",
+  "pauseAnimation": "Mettre l’animation en pause"
 }

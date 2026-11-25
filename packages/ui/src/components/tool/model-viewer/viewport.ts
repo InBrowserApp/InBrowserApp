@@ -1,4 +1,5 @@
 import {
+  AnimationMixer,
   Color,
   DirectionalLight,
   GridHelper,
@@ -15,7 +16,7 @@ import type { OpenModel } from "./load-model"
 
 export function createModelViewport(
   host: HTMLElement,
-  { object, size, center, zUp }: OpenModel
+  { object, size, center, zUp, animations }: OpenModel
 ) {
   const radius = size.length() / 2
   const renderer = new WebGLRenderer({ antialias: true, alpha: true })
@@ -60,6 +61,10 @@ export function createModelViewport(
   const direction = zUp ? new Vector3(1, -1, 0.86) : new Vector3(1, 0.86, 1)
   camera.position.copy(direction).setLength(radius * 6)
   const controls = new OrbitControls(camera, renderer.domElement)
+  const mixer = animations?.length ? new AnimationMixer(object) : undefined
+  let clipIndex = -1
+  let frame = 0
+  let previousTime = 0
   controls.minZoom = 0.12
   controls.maxZoom = 100
   controls.zoomToCursor = true
@@ -69,6 +74,13 @@ export function createModelViewport(
     grid.visible =
       camera.position[zUp ? "z" : "y"] > grid.position[zUp ? "z" : "y"]
     renderer.render(scene, camera)
+  }
+
+  function step(time: number) {
+    mixer!.update(Math.min((time - previousTime) / 1000, 0.1))
+    previousTime = time
+    render()
+    frame = requestAnimationFrame(step)
   }
 
   function resize() {
@@ -129,7 +141,26 @@ export function createModelViewport(
       })
       render()
     },
+    setPlayback(index: number, playing: boolean) {
+      const clip = animations?.[index]
+      if (!mixer || !clip) return
+      cancelAnimationFrame(frame)
+      if (clipIndex !== index) {
+        mixer.stopAllAction()
+        mixer.clipAction(clip).reset().play()
+        mixer.update(0)
+        clipIndex = index
+      }
+      if (playing) {
+        previousTime = performance.now()
+        frame = requestAnimationFrame(step)
+      }
+      render()
+    },
     dispose() {
+      cancelAnimationFrame(frame)
+      mixer?.stopAllAction()
+      mixer?.uncacheRoot(object)
       observer.disconnect()
       theme.disconnect()
       controls.dispose()

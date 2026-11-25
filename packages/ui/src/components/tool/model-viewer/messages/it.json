@@ -16,5 +16,11 @@
   "controls": "Trascina per ruotare · Usa la rotellina per lo zoom · Trascina con il tasto destro per spostare la vista",
   "touchControls": "Trascina per ruotare · Allarga o stringi due dita per lo zoom · Trascina con due dita per spostare la vista",
   "keyboardControls": "Usa le frecce per ruotare e + o − per lo zoom. Tieni premuto Maiusc e usa le frecce per spostare la vista.",
-  "missingResources": "Mancano alcuni materiali o texture. Apri insieme il modello e i file associati."
+  "missingResources": "Mancano alcuni materiali o texture. Apri insieme il modello e i file associati.",
+  "companionHelp": "Seleziona insieme il modello e i file associati.",
+  "missingCompanions": "Manca una risorsa. Apri insieme il modello, i buffer e le texture a cui fa riferimento.",
+  "animation": "Animazione",
+  "clip": "Clip {number}",
+  "playAnimation": "Riproduci animazione",
+  "pauseAnimation": "Metti in pausa l’animazione"
 }

@@ -11,3 +11,5 @@ The size values show the complete span along X, Y and Z. STL stores coordinates 
 ## View other 3D file formats
 
 STL describes the surface of a part with triangles. For a Wavefront file with a companion material library, use the [OBJ Viewer](../obj-viewer/). For a CAD exchange file containing an assembly or solid model, use the [STEP Viewer](../step-viewer/).
+
+- [GLB / glTF Viewer](../gltf-viewer/)

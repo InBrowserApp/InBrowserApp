@@ -16,5 +16,11 @@
   "controls": "Dra for å rotere · Rull for å zoome · Dra med høyre museknapp for å panorere",
   "touchControls": "Dra for å rotere · Knip for å zoome · Dra med to fingre for å panorere",
   "keyboardControls": "Roter med piltastene og zoom med + eller −. Hold nede Shift og bruk piltastene til å flytte visningen.",
-  "missingResources": "Noen materialer eller teksturer mangler. Åpne modellen sammen med de tilhørende filene."
+  "missingResources": "Noen materialer eller teksturer mangler. Åpne modellen sammen med de tilhørende filene.",
+  "companionHelp": "Velg modellen sammen med de tilhørende filene.",
+  "missingCompanions": "En fil som modellen trenger, mangler. Åpne modellen sammen med bufferfilene og teksturene som den viser til.",
+  "animation": "Animasjon",
+  "clip": "Klipp {number}",
+  "playAnimation": "Spill av animasjon",
+  "pauseAnimation": "Sett animasjon på pause"
 }

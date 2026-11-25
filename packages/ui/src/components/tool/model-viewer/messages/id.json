@@ -16,5 +16,11 @@
   "controls": "Seret untuk memutar · Gulir untuk memperbesar atau memperkecil · Seret dengan tombol kanan untuk menggeser",
   "touchControls": "Seret untuk memutar · Cubit atau rentangkan dua jari untuk mengubah skala · Geser dengan dua jari",
   "keyboardControls": "Gunakan tombol panah untuk memutar, serta + atau − untuk memperbesar atau memperkecil. Tahan Shift sambil menekan tombol panah untuk menggeser tampilan.",
-  "missingResources": "Sebagian material atau tekstur tidak tersedia. Buka kembali model bersama file pendampingnya."
+  "missingResources": "Sebagian material atau tekstur tidak tersedia. Buka kembali model bersama file pendampingnya.",
+  "companionHelp": "Pilih model dan file pendampingnya secara bersamaan.",
+  "missingCompanions": "Ada sumber daya model yang hilang. Buka model bersama file buffer dan gambar tekstur yang dirujuknya.",
+  "animation": "Animasi",
+  "clip": "Klip {number}",
+  "playAnimation": "Putar animasi",
+  "pauseAnimation": "Jeda animasi"
 }

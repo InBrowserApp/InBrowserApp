@@ -11,3 +11,5 @@ Nilai dimensi menunjukkan ukuran model dari hujung ke hujung pada setiap paksi X
 ## Lihat format fail 3D lain
 
 STL menerangkan permukaan komponen menggunakan segi tiga. Untuk melihat fail Wavefront dengan pustaka bahan iringan, gunakan [Pemapar OBJ](../obj-viewer/). Untuk fail pertukaran data CAD yang mengandungi pemasangan atau model pepejal, gunakan [Pemapar STEP](../step-viewer/).
+
+- [Pemapar GLB / glTF](../gltf-viewer/)
