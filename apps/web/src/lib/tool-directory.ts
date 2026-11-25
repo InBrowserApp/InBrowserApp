@@ -34,6 +34,7 @@ const CATEGORY_ICONS: Readonly<Record<string, string>> = {
   ipfs: "box",
   json: "braces",
   misc: "layout-grid",
+  music: "music",
   network: "network",
   pdf: "file-text",
   random: "sparkles",

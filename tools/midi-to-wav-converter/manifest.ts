@@ -1,7 +1,8 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "misc",
+  category: "music",
+  secondaryCategories: ["audio"],
   icon: "audio-lines",
   tags: [
     "midi",

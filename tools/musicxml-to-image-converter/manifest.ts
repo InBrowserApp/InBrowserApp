@@ -2,7 +2,7 @@ import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
   category: "image",
-  secondaryCategories: ["misc"],
+  secondaryCategories: ["music"],
   icon: "file-image",
   tags: [
     "musicxml",
