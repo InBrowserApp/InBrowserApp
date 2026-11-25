@@ -16,5 +16,9 @@
   "layers": "Capas",
   "controls": "Arrastra para desplazar · Usa la rueda para acercar o alejar",
   "touchControls": "Arrastra para desplazar · Pellizca para acercar o alejar",
-  "keyboardControls": "Usa las flechas para desplazar la vista y + o − para acercar o alejar."
+  "keyboardControls": "Usa las flechas para desplazar la vista y + o − para acercar o alejar.",
+  "focus": "Abrir en pantalla completa",
+  "exitFocus": "Salir de pantalla completa",
+  "save": "Guardar PNG",
+  "exportError": "No se pudo guardar el PNG. Vuelve a intentarlo."
 }

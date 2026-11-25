@@ -1,4 +1,5 @@
 import type { AnimationClip, Object3D, Vector3 } from "three"
+import type { LengthUnit } from "../../../lib/model-length-format"
 
 type ParsedModel = {
   object: Object3D
@@ -11,7 +12,7 @@ type FormatOptions = {
   companions?: { accept: string[]; labels: string[] }
   example: { name: string; read: () => Promise<BlobPart> }
   zUp: boolean
-  unit?: string
+  unit?: LengthUnit
   parse: (file: File, files: File[]) => Promise<ParsedModel>
 }
 
@@ -96,7 +97,7 @@ export type OpenModel = {
   missingResources?: boolean
   animations?: AnimationClip[]
   zUp: boolean
-  unit?: string
+  unit?: LengthUnit
   dispose: () => void
 }
 

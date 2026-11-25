@@ -16,5 +16,9 @@
   "layers": "Lớp",
   "controls": "Kéo để dịch chuyển · Cuộn để thu phóng",
   "touchControls": "Kéo để dịch chuyển · Chụm hoặc tách hai ngón tay để thu phóng",
-  "keyboardControls": "Dùng các phím mũi tên để dịch chuyển và + hoặc − để thu phóng."
+  "keyboardControls": "Dùng các phím mũi tên để dịch chuyển và + hoặc − để thu phóng.",
+  "focus": "Mở chế độ toàn màn hình",
+  "exitFocus": "Thoát chế độ toàn màn hình",
+  "save": "Lưu PNG",
+  "exportError": "Không lưu được ảnh PNG. Hãy thử lại."
 }

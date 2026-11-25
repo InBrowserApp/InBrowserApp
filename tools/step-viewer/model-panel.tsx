@@ -1,4 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react"
+import { modelLengthFormat } from "@workspace/ui/lib/model-length-format"
+import { useModelMeasurement } from "@workspace/ui/lib/use-model-measurement"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Plus, X } from "@workspace/ui/icons"
@@ -7,8 +9,7 @@ import { createViewport } from "./viewport"
 import type Messages from "./messages/en.json"
 import type { StepModel } from "./step-data"
 import type { Viewport } from "./viewport"
-import type { Vector3 } from "three"
-import type { KeyboardEvent, PointerEvent } from "react"
+import type { KeyboardEvent } from "react"
 
 const axes = ["X", "Y", "Z"] as const
 const arrows: Record<string, [number, number]> = {
@@ -34,13 +35,13 @@ export default function ModelPanel({
   focusOnOpen: boolean
 }) {
   const host = useRef<HTMLDivElement>(null)
-  const pointer = useRef<{ id: number; x: number; y: number } | null>(null)
   const helpId = useId()
   const [viewportState, setViewportState] = useState<Viewport | "error">()
   const [exportFailed, setExportFailed] = useState(false)
   const [unit, setUnit] = useState<Unit>("millimeter")
-  const [measuring, setMeasuring] = useState(false)
-  const [points, setPoints] = useState<Vector3[]>([])
+  const viewport = viewportState === "error" ? undefined : viewportState
+  const measurement = useModelMeasurement(viewport)
+  const measuring = measurement.active
   useEffect(() => {
     try {
       const viewer = createViewport(host.current!, model)
@@ -63,43 +64,12 @@ export default function ModelPanel({
     )
   }
 
-  const viewport = viewportState
-  const numberFormat = new Intl.NumberFormat(lang, {
-    style: "unit",
-    unit,
-    unitDisplay: "short",
-    maximumSignificantDigits: 5,
-  })
-  function format(mm: number) {
-    return numberFormat.format(unit === "inch" ? mm / 25.4 : mm)
-  }
-  const [first, second] = points
+  const format = modelLengthFormat(lang, "millimeter", unit)
   const distance =
-    first && second ? `≈ ${format(first.distanceTo(second))}` : undefined
+    measurement.distance === undefined
+      ? undefined
+      : `≈ ${format(measurement.distance)}`
 
-  function updatePoints(next: Vector3[]) {
-    setPoints(next)
-    viewport?.showMeasurement(next)
-  }
-  function selectPoint(x: number, y: number) {
-    if (!measuring) return
-    const point = viewport?.pick(x, y)
-    if (point) updatePoints(first && !second ? [first, point] : [point])
-  }
-  function onPointerDown(event: PointerEvent<HTMLDivElement>) {
-    pointer.current =
-      measuring && event.button === 0 && event.isPrimary
-        ? { id: event.pointerId, x: event.clientX, y: event.clientY }
-        : null
-  }
-  function moved(event: PointerEvent<HTMLDivElement>) {
-    const start = pointer.current
-    return (
-      !start ||
-      start.id !== event.pointerId ||
-      Math.hypot(event.clientX - start.x, event.clientY - start.y) > 5
-    )
-  }
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     if (!viewport) return
     const direction = arrows[event.key]
@@ -109,9 +79,7 @@ export default function ModelPanel({
     } else if (event.key === "+" || event.key === "=") viewport.zoom(0.8)
     else if (event.key === "-" || event.key === "−") viewport.zoom(1.25)
     else if (event.key === "Enter" && measuring) {
-      const { left, top, width, height } =
-        event.currentTarget.getBoundingClientRect()
-      selectPoint(left + width / 2, top + height / 2)
+      measurement.selectCenter(event.currentTarget)
     } else return
     event.preventDefault()
   }
@@ -123,10 +91,7 @@ export default function ModelPanel({
           messages={m}
           viewport={viewport}
           measuring={measuring}
-          onMeasure={() => {
-            if (measuring && first && !second) updatePoints([])
-            setMeasuring(!measuring)
-          }}
+          onMeasure={measurement.toggle}
           onSave={() => {
             setExportFailed(false)
             void viewport
@@ -145,7 +110,7 @@ export default function ModelPanel({
               {m.distance} <bdi className="ms-1 tabular-nums">{distance}</bdi>
             </span>
           ) : measuring ? (
-            <span>{first ? m.secondPoint : m.firstPoint}</span>
+            <span>{measurement.count ? m.secondPoint : m.firstPoint}</span>
           ) : (
             <p className="text-xs text-muted-foreground">
               <span className="pointer-coarse:hidden">{m.controls}</span>
@@ -154,10 +119,10 @@ export default function ModelPanel({
               </span>
             </p>
           )}
-          {first && (
+          {measurement.count > 0 && (
             <DocumentIconButton
               label={m.clearMeasurement}
-              onClick={() => updatePoints([])}
+              onClick={measurement.clear}
             >
               <X aria-hidden="true" />
             </DocumentIconButton>
@@ -175,17 +140,7 @@ export default function ModelPanel({
         dir="ltr"
         data-suppress-language-suggestion={Boolean(viewport) || undefined}
         className={`group/view relative h-[clamp(17rem,38dvh,23rem)] min-h-56 flex-auto touch-none overflow-hidden bg-slate-100 focus-visible:z-10 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring sm:h-[clamp(22rem,48dvh,35rem)] dark:bg-slate-900 ${measuring ? "cursor-crosshair" : "cursor-grab active:cursor-grabbing"}`}
-        onPointerDown={onPointerDown}
-        onPointerMove={(event) => {
-          if (moved(event)) pointer.current = null
-        }}
-        onPointerUp={(event) => {
-          if (!moved(event)) selectPoint(event.clientX, event.clientY)
-          pointer.current = null
-        }}
-        onPointerCancel={() => {
-          pointer.current = null
-        }}
+        {...measurement.pointerHandlers}
         onKeyDown={onKeyDown}
       >
         {measuring && (

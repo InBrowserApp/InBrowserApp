@@ -16,7 +16,7 @@ export function DrawingLayers({
     <div
       id={id}
       hidden={hidden}
-      className="max-h-40 min-w-0 overflow-y-auto border-b p-2 md:max-h-[29rem] md:border-e md:border-b-0"
+      className="max-h-40 min-h-0 min-w-0 overflow-y-auto border-b p-2 md:max-h-[29rem] md:border-e md:border-b-0 md:group-data-focus/viewport:max-h-none max-md:portrait:group-data-focus/viewport:max-h-[min(10rem,30dvh)] max-md:landscape:group-data-focus/viewport:max-h-none max-md:landscape:group-data-focus/viewport:border-e max-md:landscape:group-data-focus/viewport:border-b-0"
     >
       {layers.map((layer) => {
         const label = layer.displayName || layer.name

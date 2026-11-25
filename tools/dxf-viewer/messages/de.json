@@ -16,5 +16,9 @@
   "layers": "Layer",
   "controls": "Ziehen zum Verschieben · Mausrad zum Zoomen",
   "touchControls": "Ziehen zum Verschieben · Auf- oder zuziehen zum Zoomen",
-  "keyboardControls": "Verschiebe die Ansicht mit den Pfeiltasten und zoome mit + oder −."
+  "keyboardControls": "Verschiebe die Ansicht mit den Pfeiltasten und zoome mit + oder −.",
+  "focus": "Vollbild öffnen",
+  "exitFocus": "Vollbild verlassen",
+  "save": "PNG speichern",
+  "exportError": "Das PNG ließ sich nicht speichern. Versuche es erneut."
 }

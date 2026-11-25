@@ -16,5 +16,9 @@
   "layers": "Lapisan",
   "controls": "Seret untuk alih pandangan · Tatal untuk zum",
   "touchControls": "Seret untuk alih pandangan · Cubit untuk zum",
-  "keyboardControls": "Gunakan kekunci anak panah untuk mengalih pandangan dan + atau − untuk zum."
+  "keyboardControls": "Gunakan kekunci anak panah untuk mengalih pandangan dan + atau − untuk zum.",
+  "focus": "Buka paparan skrin penuh",
+  "exitFocus": "Keluar daripada skrin penuh",
+  "save": "Simpan PNG",
+  "exportError": "PNG tidak dapat disimpan. Cuba lagi."
 }

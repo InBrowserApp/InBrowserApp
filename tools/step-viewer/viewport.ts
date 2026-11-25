@@ -1,27 +1,19 @@
 import {
-  BufferGeometry,
   Color,
   DirectionalLight,
   GridHelper,
   HemisphereLight,
-  Line,
-  LineBasicMaterial,
-  Mesh,
-  MeshBasicMaterial,
   OrthographicCamera,
-  Raycaster,
   Scene,
-  SphereGeometry,
-  Vector2,
   Vector3,
   WebGLRenderer,
 } from "three"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
+import { createModelMeasurement } from "@workspace/ui/lib/model-measurement"
+import { saveViewportPng } from "@workspace/ui/lib/save-viewport-png"
 import { makeMesh } from "./model-scene"
-import { saveScreenshot } from "./screenshot"
 import type { StepModel } from "./step-data"
 
-type Point = Vector3
 const directions = {
   isometric: new Vector3(1, 1, 1),
   front: new Vector3(0, -1, 0),
@@ -74,37 +66,16 @@ export function createViewport(host: HTMLElement, model: StepModel) {
   grid.material.depthWrite = false
   scene.add(grid)
 
-  const dotGeometry = new SphereGeometry(1, 12, 8)
-  const dotMaterial = new MeshBasicMaterial({
-    color: 0xff7b43,
-    depthTest: false,
-  })
-  const dots = [
-    new Mesh(dotGeometry, dotMaterial),
-    new Mesh(dotGeometry, dotMaterial),
-  ]
-  const lineGeometry = new BufferGeometry().setFromPoints([
-    new Vector3(),
-    new Vector3(),
-  ])
-  const line = new Line(
-    lineGeometry,
-    new LineBasicMaterial({ color: 0xff7b43, depthTest: false })
+  const measurement = createModelMeasurement(
+    scene,
+    renderer.domElement,
+    camera,
+    meshes
   )
-  line.frustumCulled = false
-  line.visible = false
-  line.renderOrder = 1
-  for (const dot of dots) {
-    dot.visible = false
-    dot.renderOrder = 2
-  }
-  scene.add(line, ...dots)
 
   function render() {
     grid.visible = camera.position.z > grid.position.z
-    for (const dot of dots) {
-      dot.scale.setScalar((camera.top / camera.zoom) * 0.016)
-    }
+    measurement.resizeMarkers()
     renderer.render(scene, camera)
   }
 
@@ -146,7 +117,6 @@ export function createViewport(host: HTMLElement, model: StepModel) {
     render()
   }
 
-  const ray = new Raycaster()
   return {
     fit: () => fit(),
     view: (view: View) => fit(directions[view]),
@@ -156,41 +126,17 @@ export function createViewport(host: HTMLElement, model: StepModel) {
       if (horizontal) controls.rotateLeft(horizontal)
       if (vertical) controls.rotateUp(vertical)
     },
-    pick(x: number, y: number): Point | undefined {
-      const bounds = renderer.domElement.getBoundingClientRect()
-      ray.setFromCamera(
-        new Vector2(
-          ((x - bounds.left) / bounds.width) * 2 - 1,
-          1 - ((y - bounds.top) / bounds.height) * 2
-        ),
-        camera
-      )
-      return ray.intersectObjects(meshes)[0]?.point
-    },
-    showMeasurement(points: Point[]) {
-      dots.forEach((dot, index) => {
-        const point = points[index]
-        dot.visible = Boolean(point)
-        if (point) dot.position.copy(point)
-      })
-      const [first, second] = points
-      line.visible = Boolean(first && second)
-      if (first && second) {
-        const position = lineGeometry.getAttribute("position")
-        position.setXYZ(0, first.x, first.y, first.z)
-        position.setXYZ(1, second.x, second.y, second.z)
-        position.needsUpdate = true
-      }
+    pick: measurement.pick,
+    showMeasurement(points: Vector3[]) {
+      measurement.show(points)
       render()
     },
     save(filename: string, label?: string) {
       render()
-      return saveScreenshot(
-        renderer.domElement,
-        renderer.getPixelRatio(),
-        filename,
-        label
-      )
+      return saveViewportPng(renderer.domElement, filename, {
+        pixelRatio: renderer.getPixelRatio(),
+        label,
+      })
     },
     dispose() {
       observer.disconnect()
@@ -201,10 +147,7 @@ export function createViewport(host: HTMLElement, model: StepModel) {
         mesh.material.dispose()
       }
       grid.dispose()
-      dotGeometry.dispose()
-      dotMaterial.dispose()
-      lineGeometry.dispose()
-      line.material.dispose()
+      measurement.dispose()
       renderer.dispose()
       renderer.forceContextLoss()
       renderer.domElement.remove()

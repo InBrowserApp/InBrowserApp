@@ -16,5 +16,9 @@
   "layers": "圖層",
   "controls": "拖曳平移 · 捲動縮放",
   "touchControls": "拖曳平移 · 雙指縮放",
-  "keyboardControls": "使用方向鍵平移，按 + 或 − 縮放。"
+  "keyboardControls": "使用方向鍵平移，按 + 或 − 縮放。",
+  "focus": "開啟全螢幕檢視",
+  "exitFocus": "結束全螢幕檢視",
+  "save": "儲存 PNG",
+  "exportError": "無法儲存 PNG。請再試一次。"
 }

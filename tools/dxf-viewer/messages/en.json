@@ -16,5 +16,9 @@
   "layers": "Layers",
   "controls": "Drag to pan · Scroll to zoom",
   "touchControls": "Drag to pan · Pinch to zoom",
-  "keyboardControls": "Use the arrow keys to pan and + or − to zoom."
+  "keyboardControls": "Use the arrow keys to pan and + or − to zoom.",
+  "focus": "Enter full screen",
+  "exitFocus": "Exit full screen",
+  "save": "Save PNG",
+  "exportError": "The PNG could not be saved. Try again."
 }

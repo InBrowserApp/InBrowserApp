@@ -16,5 +16,9 @@
   "layers": "Katmanlar",
   "controls": "Kaydırmak için sürükleyin · Yakınlaştırmak için tekerleği kullanın",
   "touchControls": "Kaydırmak için sürükleyin · Yakınlaştırmak için iki parmağınızı açıp kapatın",
-  "keyboardControls": "Kaydırmak için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + ve − tuşlarını kullanın."
+  "keyboardControls": "Kaydırmak için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + ve − tuşlarını kullanın.",
+  "focus": "Tam ekrana geç",
+  "exitFocus": "Tam ekrandan çık",
+  "save": "PNG olarak kaydet",
+  "exportError": "PNG kaydedilemedi. Tekrar deneyin."
 }

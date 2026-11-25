@@ -16,5 +16,9 @@
   "layers": "Lapisan",
   "controls": "Seret untuk menggeser · Gulir untuk memperbesar atau memperkecil",
   "touchControls": "Seret untuk menggeser · Cubit atau rentangkan dua jari untuk mengubah skala",
-  "keyboardControls": "Gunakan tombol panah untuk menggeser serta + atau − untuk memperbesar atau memperkecil."
+  "keyboardControls": "Gunakan tombol panah untuk menggeser serta + atau − untuk memperbesar atau memperkecil.",
+  "focus": "Buka layar penuh",
+  "exitFocus": "Keluar dari layar penuh",
+  "save": "Simpan PNG",
+  "exportError": "PNG tidak dapat disimpan. Coba lagi."
 }

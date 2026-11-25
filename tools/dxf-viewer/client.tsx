@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
+import { ViewportFrame } from "@workspace/ui/components/tool/viewport-focus"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -10,19 +10,15 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
-import {
-  Folder,
-  Layers,
-  Maximize2,
-  Ruler,
-  ZoomIn,
-  ZoomOut,
-} from "@workspace/ui/icons"
+import { Folder, Ruler } from "@workspace/ui/icons"
+import { saveViewportPng } from "@workspace/ui/lib/save-viewport-png"
+import { useWorkspaceFocus } from "@workspace/ui/lib/use-workspace-focus"
 import { cn } from "@workspace/ui/lib/utils"
 import type { LayerInfo } from "dxf-viewer"
 import type Messages from "./messages/en.json"
 import { adjustDrawing, fitDrawing, openDrawing } from "./drawing"
 import { DrawingLayers } from "./layers"
+import { DrawingToolbar } from "./drawing-toolbar"
 import type { Drawing } from "./drawing"
 
 type ErrorKey = "binary" | "invalid" | "empty" | "webgl"
@@ -41,6 +37,7 @@ export default function DxfClient({
   messages: typeof Messages
   lang: string
 }) {
+  const focus = useWorkspaceFocus()
   const picker = useRef<HTMLInputElement>(null)
   const stage = useRef<HTMLDivElement>(null)
   const mountedDrawing = useRef<Drawing>(null)
@@ -50,6 +47,7 @@ export default function DxfClient({
     name: string
     layers: LayerInfo[]
   }>()
+  const [exportFailed, setExportFailed] = useState(false)
   const [showLayers, setShowLayers] = useState(false)
   const [dragging, setDragging] = useState(false)
   const helpId = useId()
@@ -100,6 +98,7 @@ export default function DxfClient({
   }, [selection, lang])
 
   function open(file?: File) {
+    setExportFailed(false)
     setSelection({ file })
     setStatus("opening")
   }
@@ -108,6 +107,34 @@ export default function DxfClient({
     const viewer = mountedDrawing.current?.viewer
     if (viewer) adjustDrawing(viewer, x, y, zoom)
   }
+
+  async function save() {
+    const current = mountedDrawing.current?.viewer
+    if (!current || !drawing) return
+    setExportFailed(false)
+    try {
+      current.Render()
+      await saveViewportPng(current.GetCanvas(), drawing.name)
+    } catch {
+      setExportFailed(true)
+    }
+  }
+
+  const layersVisible = showLayers && Boolean(drawing?.layers.length)
+  const feedback =
+    status === "opening" ? (
+      <p
+        role="status"
+        className="flex shrink-0 items-center gap-2 px-2 py-1.5 text-sm"
+      >
+        <Spinner aria-hidden="true" />
+        {m.opening}
+      </p>
+    ) : status ? (
+      <Alert variant="destructive" className="shrink-0">
+        <AlertDescription>{m[status]}</AlertDescription>
+      </Alert>
+    ) : null
 
   return (
     <section
@@ -146,14 +173,7 @@ export default function DxfClient({
           if (file) open(file)
         }}
       />
-      <p className="sr-only" role="status">
-        {!status && drawing ? `${m.drawing} · ${drawing.name}` : ""}
-      </p>
-      {status && status !== "opening" && (
-        <Alert variant="destructive">
-          <AlertDescription>{m[status]}</AlertDescription>
-        </Alert>
-      )}
+      {!drawing && status !== "opening" && feedback}
       <Empty
         className={
           drawing || status === "opening"
@@ -190,64 +210,50 @@ export default function DxfClient({
             </p>
           )}
         </div>
-        {status === "opening" && (
-          <p role="status" className="flex items-center gap-2 text-sm">
-            <Spinner aria-hidden="true" />
-            {m.opening}
-          </p>
-        )}
+        {!drawing && status === "opening" && feedback}
       </Empty>
-      <div
+      <ViewportFrame
         hidden={!drawing && status !== "opening"}
-        className="min-w-0 overflow-hidden rounded-lg border"
+        label={m.drawing}
+        focus={focus}
       >
+        <p className="sr-only" role="status">
+          {!status && drawing ? `${m.drawing} · ${drawing.name}` : ""}
+        </p>
+        {drawing && feedback}
         {drawing && (
-          <div className="flex flex-wrap items-center gap-1.5 border-b px-2 py-1.5">
-            <DocumentIconButton
-              label={m.fit}
-              onClick={() => {
-                const viewer = mountedDrawing.current?.viewer
-                if (viewer) fitDrawing(viewer)
-              }}
-            >
-              <Maximize2 aria-hidden="true" />
-            </DocumentIconButton>
-            <DocumentIconButton
-              label={m.zoomIn}
-              onClick={() => move(0, 0, 0.8)}
-            >
-              <ZoomIn aria-hidden="true" />
-            </DocumentIconButton>
-            <DocumentIconButton
-              label={m.zoomOut}
-              onClick={() => move(0, 0, 1.25)}
-            >
-              <ZoomOut aria-hidden="true" />
-            </DocumentIconButton>
-            {drawing.layers.length > 0 && (
-              <Button
-                size="sm"
-                variant={showLayers ? "secondary" : "ghost"}
-                aria-expanded={showLayers}
-                aria-controls={layersId}
-                onClick={() => setShowLayers(!showLayers)}
-              >
-                <Layers data-icon="inline-start" aria-hidden="true" />
-                {m.layers}
-              </Button>
-            )}
-          </div>
+          <DrawingToolbar
+            messages={m}
+            focus={focus}
+            onFit={() => {
+              const viewer = mountedDrawing.current?.viewer
+              if (viewer) fitDrawing(viewer)
+            }}
+            onZoom={(factor) => move(0, 0, factor)}
+            layersId={layersId}
+            showLayers={layersVisible}
+            onLayers={
+              drawing.layers.length
+                ? () => setShowLayers(!showLayers)
+                : undefined
+            }
+            onSave={() => void save()}
+          />
         )}
         <div
           className={cn(
             "grid min-w-0",
-            showLayers && drawing && "md:grid-cols-[15rem_minmax(0,1fr)]"
+            focus.focused && "min-h-0 flex-1 grid-rows-[minmax(0,1fr)]",
+            layersVisible && "md:grid-cols-[15rem_minmax(0,1fr)]",
+            layersVisible &&
+              focus.focused &&
+              "grid-rows-[auto_minmax(0,1fr)] md:grid-rows-[minmax(0,1fr)] max-md:landscape:grid-cols-[minmax(0,28%)_minmax(0,1fr)] max-md:landscape:grid-rows-[minmax(0,1fr)]"
           )}
         >
           {drawing && (
             <DrawingLayers
               id={layersId}
-              hidden={!showLayers}
+              hidden={!layersVisible}
               layers={drawing.layers}
               onToggle={(name, visible) => {
                 mountedDrawing.current?.viewer.ShowLayer(name, visible)
@@ -268,7 +274,10 @@ export default function DxfClient({
             aria-describedby={helpId}
             // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- The viewport supports keyboard pan and zoom.
             tabIndex={drawing ? 0 : -1}
-            className="relative h-80 min-w-0 cursor-grab touch-none bg-muted outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset active:cursor-grabbing sm:h-[29rem]"
+            className={cn(
+              "relative min-w-0 cursor-grab touch-none bg-muted outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset active:cursor-grabbing",
+              !focus.focused && "h-80 sm:h-[29rem]"
+            )}
             onKeyDown={(event) => {
               const vector = pan[event.key as keyof typeof pan]
               if (vector) move(vector[0], vector[1])
@@ -283,14 +292,19 @@ export default function DxfClient({
           {m.keyboardControls}
         </p>
         {drawing && (
-          <div className="border-t px-3 py-2 text-xs text-muted-foreground">
+          <div className="shrink-0 border-t px-3 py-2 text-xs text-muted-foreground">
             <p className="hidden [@media(pointer:coarse)]:block">
               {m.touchControls}
             </p>
             <p className="[@media(pointer:coarse)]:hidden">{m.controls}</p>
           </div>
         )}
-      </div>
+        {exportFailed && (
+          <Alert variant="destructive" className="m-2 w-auto">
+            <AlertDescription>{m.exportError}</AlertDescription>
+          </Alert>
+        )}
+      </ViewportFrame>
     </section>
   )
 }

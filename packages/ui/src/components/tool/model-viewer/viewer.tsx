@@ -11,6 +11,8 @@ import {
 import { Spinner } from "../../ui/spinner"
 import { Box, Folder, FolderInput } from "../../../icons"
 import { cn } from "../../../lib/utils"
+import { useWorkspaceFocus } from "../../../lib/use-workspace-focus"
+import { ViewportFrame } from "../viewport-focus"
 import { exampleFile, getModelFormat, loadModel } from "./load-model"
 import type { ChangeEvent } from "react"
 import type { ModelFormat, OpenModel } from "./load-model"
@@ -27,6 +29,7 @@ export default function ModelViewer({
   lang: string
   messages: ModelViewerMessages
 }) {
+  const focus = useWorkspaceFocus()
   const input = useRef<HTMLInputElement>(null)
   const folder = useRef<HTMLInputElement>(null)
   const chooseButton = useRef<HTMLButtonElement>(null)
@@ -47,10 +50,15 @@ export default function ModelViewer({
   )
   useEffect(() => model?.dispose, [model])
   useEffect(() => {
-    if (!restoreFocus.current) return
+    const restore = restoreFocus.current
     restoreFocus.current = false
-    if (document.activeElement === document.body) chooseButton.current?.focus()
-  }, [model])
+    const active = document.activeElement
+    if (focus.focused && !focus.frame.current?.contains(active)) {
+      focus.focusButton.current?.focus({ preventScroll: true })
+    } else if (restore && active === document.body) {
+      chooseButton.current?.focus()
+    }
+  }, [model, focus.focused, focus.frame, focus.focusButton])
 
   async function open(files?: File[]) {
     if (files?.length === 0) return
@@ -95,10 +103,18 @@ export default function ModelViewer({
     </Button>
   )
   const opening = (
-    <p role="status" className="flex min-h-10 items-center gap-2 px-3 text-sm">
+    <p
+      role="status"
+      className="flex min-h-10 shrink-0 items-center gap-2 px-3 text-sm"
+    >
       <Spinner aria-hidden="true" />
       {m.loading}
     </p>
+  )
+  const openError = status && status !== "loading" && (
+    <Alert variant="destructive" className="shrink-0">
+      <AlertDescription>{m[status]}</AlertDescription>
+    </Alert>
   )
   return (
     <section
@@ -147,11 +163,7 @@ export default function ModelViewer({
           onChange={pickFiles}
         />
       )}
-      {status && status !== "loading" && (
-        <Alert variant="destructive">
-          <AlertDescription>{m[status]}</AlertDescription>
-        </Alert>
-      )}
+      {!model && openError}
       {model ? (
         <>
           <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
@@ -165,20 +177,28 @@ export default function ModelViewer({
               {model.name}
             </p>
           </div>
-          {status === "loading" && opening}
-          {model.missingResources && (
-            <Alert>
-              <AlertDescription>{m.missingResources}</AlertDescription>
-            </Alert>
-          )}
-          <Suspense fallback={opening}>
-            <ModelPanel
-              key={model.object.uuid}
-              model={model}
-              lang={lang}
-              messages={m}
-            />
-          </Suspense>
+          <ViewportFrame label={m.viewport} focus={focus}>
+            {status === "loading" ? opening : openError}
+            {model.missingResources && (
+              <Alert className="shrink-0">
+                <AlertDescription>{m.missingResources}</AlertDescription>
+              </Alert>
+            )}
+            <Suspense fallback={opening}>
+              <ModelPanel
+                key={model.object.uuid}
+                model={model}
+                lang={lang}
+                messages={m}
+                focus={focus}
+              />
+            </Suspense>
+            {dragging && (
+              <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center bg-background/85 p-4 text-center text-sm font-medium">
+                {m.release}
+              </div>
+            )}
+          </ViewportFrame>
         </>
       ) : (
         <Empty className="min-h-72 border border-dashed bg-muted/30">
@@ -216,11 +236,6 @@ export default function ModelViewer({
           </div>
           {status === "loading" && opening}
         </Empty>
-      )}
-      {model && dragging && (
-        <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center rounded-lg bg-background/85 p-4 text-center text-sm font-medium">
-          {m.release}
-        </div>
       )}
     </section>
   )

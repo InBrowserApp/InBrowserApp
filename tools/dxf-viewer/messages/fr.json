@@ -16,5 +16,9 @@
   "layers": "Calques",
   "controls": "Glisser pour déplacer la vue · Molette pour zoomer",
   "touchControls": "Glisser pour déplacer la vue · Pincer pour zoomer",
-  "keyboardControls": "Utilisez les flèches pour déplacer la vue et les touches + ou − pour zoomer."
+  "keyboardControls": "Utilisez les flèches pour déplacer la vue et les touches + ou − pour zoomer.",
+  "focus": "Passer en plein écran",
+  "exitFocus": "Quitter le plein écran",
+  "save": "Enregistrer en PNG",
+  "exportError": "Impossible d’enregistrer le PNG. Réessayez."
 }
