@@ -40,8 +40,12 @@ export default function DealDetails({
   const number = new Intl.NumberFormat(language, { maximumFractionDigits: 3 })
   const date = new Intl.DateTimeFormat(language, {
     dateStyle: "medium",
+    timeZone: "UTC",
+  })
+  const time = new Intl.DateTimeFormat(language, {
     timeStyle: "short",
     timeZone: "UTC",
+    hourCycle: "h23",
   })
   const unit = [
     [2 ** 40, "TiB"],
@@ -77,19 +81,33 @@ export default function DealDetails({
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <dl className="grid grid-cols-2 gap-2">
-          {dates.map(([key, seconds, epoch]) => (
-            <div key={key} className="grid min-w-0 gap-1 rounded-lg border p-3">
-              <dt className="text-xs text-muted-foreground">{messages[key]}</dt>
-              <dd className="grid gap-1 text-sm font-medium wrap-anywhere">
-                <span>
-                  {date.format(seconds * 1000)} <bdi>UTC</bdi>
-                </span>
-                <span className="text-xs font-normal text-muted-foreground">
-                  {messages.epoch} <bdi>{number.format(epoch)}</bdi>
-                </span>
-              </dd>
-            </div>
-          ))}
+          {dates.map(([key, seconds, epoch]) => {
+            const timestamp = new Date(seconds * 1000)
+            return (
+              <div
+                key={key}
+                className="grid min-w-0 gap-1 rounded-lg border p-3"
+              >
+                <dt className="text-xs text-muted-foreground">
+                  {messages[key]}
+                </dt>
+                <dd className="grid gap-1 text-sm font-medium wrap-anywhere">
+                  <time
+                    dateTime={timestamp.toISOString()}
+                    className="flex flex-wrap items-baseline gap-x-1"
+                  >
+                    <span>{date.format(timestamp)}</span>
+                    <bdi dir="ltr" className="whitespace-nowrap">
+                      {time.format(timestamp)} UTC
+                    </bdi>
+                  </time>
+                  <span className="text-xs font-normal text-muted-foreground">
+                    {messages.epoch} <bdi>{number.format(epoch)}</bdi>
+                  </span>
+                </dd>
+              </div>
+            )
+          })}
         </dl>
         <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {fields.map(([key, value]) => (
