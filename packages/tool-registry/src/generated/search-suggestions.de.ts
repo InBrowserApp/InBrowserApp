@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI in Noten umwandeln",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "MIDI-zu-WAV-Konverter",
     slug: "midi-to-wav-converter",
   },

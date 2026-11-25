@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Chuyển MIDI thành bản nhạc",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "Chuyển MIDI sang WAV",
     slug: "midi-to-wav-converter",
   },

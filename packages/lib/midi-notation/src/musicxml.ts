@@ -1,8 +1,11 @@
 import { divisions, readScore } from "./read-score"
 import { groupVoices, makeBars, timelined } from "./score-layout"
 
-import type { Grid, Key, Part, Score } from "./read-score"
+import type { Grid, Key, Part, Score, ScoreReadError } from "./read-score"
 import type { Bar, Chord } from "./score-layout"
+
+export type { Grid } from "./read-score"
+export type MidiNotationError = ScoreReadError | "tooManyMeasures"
 
 const noteTypes = [
   [64, "whole"],
@@ -283,7 +286,7 @@ export function midiToMusicXml(
   grid: Grid,
   title: string,
   partLabel: string
-) {
+): { xml: string } | { error: MidiNotationError } {
   const score = readScore(input, grid, title, partLabel)
   if ("error" in score) return score
   const bars = makeBars(score)

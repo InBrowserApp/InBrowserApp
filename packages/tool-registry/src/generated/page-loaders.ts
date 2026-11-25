@@ -313,6 +313,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "midi-monitor": () => import("@tool/midi-monitor/page"),
   "midi-to-musicxml-converter": () =>
     import("@tool/midi-to-musicxml-converter/page"),
+  "midi-to-sheet-music": () => import("@tool/midi-to-sheet-music/page"),
   "midi-to-wav-converter": () => import("@tool/midi-to-wav-converter/page"),
   "midi-transposer": () => import("@tool/midi-transposer/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),

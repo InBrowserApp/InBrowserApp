@@ -8,13 +8,14 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Download, Piano } from "@workspace/ui/icons"
 import { downloadBlob } from "@workspace/ui/lib/download-blob"
-import { midiToMusicXml } from "./core/musicxml"
+import {
+  midiToMusicXml,
+  type Grid,
+  type MidiNotationError,
+} from "@workspace/midi-notation"
 
 import type { SubmitEvent } from "react"
-import type { Grid } from "./core/read-score"
 import type english from "./messages/en.json"
-
-type ErrorResult = Extract<ReturnType<typeof midiToMusicXml>, { error: string }>
 
 export default function MidiToMusicXml({
   messages: m,
@@ -24,7 +25,7 @@ export default function MidiToMusicXml({
   const id = useId()
   const [file, setFile] = useState<File>()
   const [busy, setBusy] = useState(false)
-  const [error, setError] = useState<ErrorResult["error"]>()
+  const [error, setError] = useState<MidiNotationError>()
 
   async function convert(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()

@@ -1,0 +1,4 @@
+{
+  "name": "Da MIDI a spartito",
+  "description": "Converti un file MIDI in uno spartito nel browser. Regola la griglia ritmica, controlla l’anteprima e scarica un PDF da stampare o un MusicXML modificabile."
+}

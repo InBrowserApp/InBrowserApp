@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI to Sheet Music",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "MIDI to WAV Converter",
     slug: "midi-to-wav-converter",
   },

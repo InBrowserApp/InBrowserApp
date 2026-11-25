@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI से शीट म्यूज़िक",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "MIDI से WAV कन्वर्टर",
     slug: "midi-to-wav-converter",
   },

@@ -8,9 +8,9 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/midi-notation": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*",
-    "midi-file": "catalog:"
+    "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
+    "midi-file": "catalog:",
     "vitest": "catalog:"
   }
 }

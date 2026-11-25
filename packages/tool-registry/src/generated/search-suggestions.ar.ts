@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "تحويل MIDI إلى نوتة موسيقية",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "محوّل MIDI إلى WAV",
     slug: "midi-to-wav-converter",
   },

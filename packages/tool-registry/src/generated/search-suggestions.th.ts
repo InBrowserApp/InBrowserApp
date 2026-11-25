@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "แปลง MIDI เป็นโน้ตเพลง",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "โปรแกรมแปลง MIDI เป็น WAV",
     slug: "midi-to-wav-converter",
   },

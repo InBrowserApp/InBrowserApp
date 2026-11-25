@@ -1,0 +1,10 @@
+const melody =
+  "TVRoZAAAAAYAAAABAeBNVHJrAAAArwD/AwVQaWFubwD/UQMHoSAAwAAAkDxSg2CAPAAAkEBSeIBAAACQQ1KCaIBDAACQRVKDYIBFAACQQ1KDYIBDAACQQFKBcIBAAACQPlKBcIA+AACQQFKDYIBAAACQPFKHQIA8AACQPlKDYIA+AACQQVKBcIBBAACQRVKBcIBFAACQQ1KDYIBDAACQQFKDYIBAAACQPlKDYIA+AACQQFKDYIBAAACQPFKHQIA8AAD/LwA="
+
+export function midiExample() {
+  return new File(
+    [Uint8Array.from(atob(melody), (character) => character.charCodeAt(0))],
+    "Morning Path.mid",
+    { type: "audio/midi" }
+  )
+}

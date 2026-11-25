@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI'yi Notaya Dönüştürme",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "MIDI'den WAV'a Dönüştürücü",
     slug: "midi-to-wav-converter",
   },

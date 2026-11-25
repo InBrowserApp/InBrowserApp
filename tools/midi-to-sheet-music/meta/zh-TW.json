@@ -1,0 +1,4 @@
+{
+  "name": "MIDI 轉樂譜",
+  "description": "在瀏覽器中將 MIDI 檔案轉換成樂譜。調整節奏網格、預覽樂譜，並下載可列印的 PDF 或可編輯的 MusicXML。"
+}

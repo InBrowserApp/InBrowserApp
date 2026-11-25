@@ -1274,6 +1274,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Convertisseur MIDI en partition",
+    slug: "midi-to-sheet-music",
+  },
+  {
+    category: "misc",
     name: "Convertisseur MIDI vers WAV",
     slug: "midi-to-wav-converter",
   },

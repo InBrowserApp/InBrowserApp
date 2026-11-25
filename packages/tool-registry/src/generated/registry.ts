@@ -32361,6 +32361,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "midi-to-sheet-music",
+    category: "misc",
+    secondaryCategories: ["pdf"],
+    icon: "piano",
+    tags: [
+      "midi",
+      "sheet music",
+      "midi to sheet music",
+      "midi to pdf",
+      "musicxml",
+      "notation",
+      "quantization",
+      "print score",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل MIDI إلى نوتة موسيقية",
+        description:
+          "حوّل ملف MIDI إلى نوتة موسيقية في متصفحك. اضبط الشبكة الإيقاعية، وعاين النوتة، ثم نزّل ملف PDF للطباعة أو MusicXML للتحرير.",
+      },
+      de: {
+        name: "MIDI in Noten umwandeln",
+        description:
+          "Wandle eine MIDI-Datei im Browser in Noten um. Passe das Rhythmusraster an, prüfe die Vorschau und lade eine druckfertige PDF oder eine bearbeitbare MusicXML-Datei herunter.",
+      },
+      en: {
+        name: "MIDI to Sheet Music",
+        description:
+          "Convert a MIDI file to sheet music in your browser. Adjust the rhythm grid, preview the score, and download a printable PDF or editable MusicXML.",
+      },
+      es: {
+        name: "MIDI a partitura",
+        description:
+          "Convierte un archivo MIDI en partitura en tu navegador. Ajusta la rejilla rítmica, revisa la partitura y descarga un PDF listo para imprimir o un MusicXML editable.",
+      },
+      fr: {
+        name: "Convertisseur MIDI en partition",
+        description:
+          "Convertissez un fichier MIDI en partition dans votre navigateur. Ajustez la grille rythmique, vérifiez l’aperçu et téléchargez un PDF imprimable ou un MusicXML modifiable.",
+      },
+      he: {
+        name: "המרת MIDI לתווים",
+        description:
+          "המירו קובץ MIDI לתווים בדפדפן. התאימו את רשת הקצב, צפו בתוצאה והורידו PDF להדפסה או MusicXML לעריכה.",
+      },
+      hi: {
+        name: "MIDI से शीट म्यूज़िक",
+        description:
+          "ब्राउज़र में MIDI फ़ाइल को शीट म्यूज़िक में बदलें। लय का ग्रिड समायोजित करें, स्कोर का प्रीव्यू देखें और प्रिंट के लिए PDF या संपादन के लिए MusicXML डाउनलोड करें।",
+      },
+      id: {
+        name: "MIDI ke Partitur",
+        description:
+          "Konversikan file MIDI menjadi partitur di browser. Sesuaikan grid ritme, lihat pratinjau, lalu unduh PDF siap cetak atau MusicXML yang bisa disunting.",
+      },
+      it: {
+        name: "Da MIDI a spartito",
+        description:
+          "Converti un file MIDI in uno spartito nel browser. Regola la griglia ritmica, controlla l’anteprima e scarica un PDF da stampare o un MusicXML modificabile.",
+      },
+      ja: {
+        name: "MIDI を楽譜に変換",
+        description:
+          "ブラウザーで MIDI ファイルを楽譜に変換します。リズムのグリッドを調整し、楽譜をプレビューして、印刷用 PDF または編集可能な MusicXML をダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI를 악보로 변환",
+        description:
+          "브라우저에서 MIDI 파일을 악보로 변환하세요. 리듬 격자를 조정하고 악보를 미리 본 다음 인쇄용 PDF 또는 편집 가능한 MusicXML을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "MIDI kepada Skor Muzik",
+        description:
+          "Tukar fail MIDI kepada skor muzik dalam pelayar. Laraskan grid ritma, pratonton skor dan muat turun PDF untuk dicetak atau MusicXML untuk disunting.",
+      },
+      nl: {
+        name: "MIDI naar bladmuziek",
+        description:
+          "Zet een MIDI-bestand om naar bladmuziek in je browser. Pas het ritmeraster aan, bekijk de partituur en download een afdrukbare PDF of een bewerkbaar MusicXML-bestand.",
+      },
+      no: {
+        name: "MIDI til noter",
+        description:
+          "Gjør om en MIDI-fil til noter i nettleseren. Juster rytmerutenettet, forhåndsvis partituret og last ned en utskriftsklar PDF eller en redigerbar MusicXML-fil.",
+      },
+      pl: {
+        name: "Konwerter MIDI na nuty",
+        description:
+          "Zamień plik MIDI na zapis nutowy w przeglądarce. Dopasuj siatkę rytmiczną, sprawdź podgląd partytury i pobierz PDF do druku lub edytowalny plik MusicXML.",
+      },
+      pt: {
+        name: "MIDI para partitura",
+        description:
+          "Converta um arquivo MIDI em partitura no navegador. Ajuste a grade rítmica, confira a prévia e baixe um PDF para imprimir ou um MusicXML editável.",
+      },
+      ru: {
+        name: "Конвертер MIDI в ноты",
+        description:
+          "Преобразуйте MIDI-файл в нотную запись в браузере. Настройте ритмическую сетку, просмотрите партитуру и скачайте PDF для печати или редактируемый файл MusicXML.",
+      },
+      sv: {
+        name: "MIDI till noter",
+        description:
+          "Gör om en MIDI-fil till noter i webbläsaren. Justera rytmrutnätet, förhandsgranska partituret och ladda ner en utskrivbar PDF eller en redigerbar MusicXML-fil.",
+      },
+      th: {
+        name: "แปลง MIDI เป็นโน้ตเพลง",
+        description:
+          "แปลงไฟล์ MIDI เป็นโน้ตเพลงในเบราว์เซอร์ ปรับกริดจังหวะ ดูตัวอย่าง แล้วดาวน์โหลด PDF สำหรับพิมพ์หรือ MusicXML สำหรับแก้ไข",
+      },
+      tr: {
+        name: "MIDI'yi Notaya Dönüştürme",
+        description:
+          "MIDI dosyasını tarayıcınızda notaya dönüştürün. Ritim ızgarasını ayarlayın, partisyonu önizleyin ve yazdırılabilir PDF ya da düzenlenebilir MusicXML olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển MIDI thành bản nhạc",
+        description:
+          "Chuyển tệp MIDI thành bản nhạc ngay trong trình duyệt. Điều chỉnh lưới nhịp, xem trước bản nhạc và tải PDF có thể in hoặc MusicXML có thể chỉnh sửa.",
+      },
+      "zh-CN": {
+        name: "MIDI 转乐谱",
+        description:
+          "在浏览器中将 MIDI 文件转换为乐谱。调整节奏网格、预览乐谱，并下载可打印的 PDF 或可编辑的 MusicXML。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉樂譜",
+        description:
+          "在瀏覽器中將 MIDI 檔案轉換成樂譜。調整節奏網格、預覽樂譜，並下載可列印的 PDF 或可編輯的 MusicXML。",
+      },
+    },
+  },
+  {
     slug: "midi-to-wav-converter",
     category: "misc",
     icon: "audio-lines",
@@ -88756,6 +88889,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MIDI 轉 MusicXML 轉換器",
         description:
           "將 MIDI 檔案轉換為可編輯的樂譜。選擇節奏網格、下載 MusicXML，然後在記譜軟體中開啟樂譜。",
+      },
+    },
+  },
+  "midi-to-sheet-music": {
+    slug: "midi-to-sheet-music",
+    category: "misc",
+    secondaryCategories: ["pdf"],
+    icon: "piano",
+    tags: [
+      "midi",
+      "sheet music",
+      "midi to sheet music",
+      "midi to pdf",
+      "musicxml",
+      "notation",
+      "quantization",
+      "print score",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل MIDI إلى نوتة موسيقية",
+        description:
+          "حوّل ملف MIDI إلى نوتة موسيقية في متصفحك. اضبط الشبكة الإيقاعية، وعاين النوتة، ثم نزّل ملف PDF للطباعة أو MusicXML للتحرير.",
+      },
+      de: {
+        name: "MIDI in Noten umwandeln",
+        description:
+          "Wandle eine MIDI-Datei im Browser in Noten um. Passe das Rhythmusraster an, prüfe die Vorschau und lade eine druckfertige PDF oder eine bearbeitbare MusicXML-Datei herunter.",
+      },
+      en: {
+        name: "MIDI to Sheet Music",
+        description:
+          "Convert a MIDI file to sheet music in your browser. Adjust the rhythm grid, preview the score, and download a printable PDF or editable MusicXML.",
+      },
+      es: {
+        name: "MIDI a partitura",
+        description:
+          "Convierte un archivo MIDI en partitura en tu navegador. Ajusta la rejilla rítmica, revisa la partitura y descarga un PDF listo para imprimir o un MusicXML editable.",
+      },
+      fr: {
+        name: "Convertisseur MIDI en partition",
+        description:
+          "Convertissez un fichier MIDI en partition dans votre navigateur. Ajustez la grille rythmique, vérifiez l’aperçu et téléchargez un PDF imprimable ou un MusicXML modifiable.",
+      },
+      he: {
+        name: "המרת MIDI לתווים",
+        description:
+          "המירו קובץ MIDI לתווים בדפדפן. התאימו את רשת הקצב, צפו בתוצאה והורידו PDF להדפסה או MusicXML לעריכה.",
+      },
+      hi: {
+        name: "MIDI से शीट म्यूज़िक",
+        description:
+          "ब्राउज़र में MIDI फ़ाइल को शीट म्यूज़िक में बदलें। लय का ग्रिड समायोजित करें, स्कोर का प्रीव्यू देखें और प्रिंट के लिए PDF या संपादन के लिए MusicXML डाउनलोड करें।",
+      },
+      id: {
+        name: "MIDI ke Partitur",
+        description:
+          "Konversikan file MIDI menjadi partitur di browser. Sesuaikan grid ritme, lihat pratinjau, lalu unduh PDF siap cetak atau MusicXML yang bisa disunting.",
+      },
+      it: {
+        name: "Da MIDI a spartito",
+        description:
+          "Converti un file MIDI in uno spartito nel browser. Regola la griglia ritmica, controlla l’anteprima e scarica un PDF da stampare o un MusicXML modificabile.",
+      },
+      ja: {
+        name: "MIDI を楽譜に変換",
+        description:
+          "ブラウザーで MIDI ファイルを楽譜に変換します。リズムのグリッドを調整し、楽譜をプレビューして、印刷用 PDF または編集可能な MusicXML をダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI를 악보로 변환",
+        description:
+          "브라우저에서 MIDI 파일을 악보로 변환하세요. 리듬 격자를 조정하고 악보를 미리 본 다음 인쇄용 PDF 또는 편집 가능한 MusicXML을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "MIDI kepada Skor Muzik",
+        description:
+          "Tukar fail MIDI kepada skor muzik dalam pelayar. Laraskan grid ritma, pratonton skor dan muat turun PDF untuk dicetak atau MusicXML untuk disunting.",
+      },
+      nl: {
+        name: "MIDI naar bladmuziek",
+        description:
+          "Zet een MIDI-bestand om naar bladmuziek in je browser. Pas het ritmeraster aan, bekijk de partituur en download een afdrukbare PDF of een bewerkbaar MusicXML-bestand.",
+      },
+      no: {
+        name: "MIDI til noter",
+        description:
+          "Gjør om en MIDI-fil til noter i nettleseren. Juster rytmerutenettet, forhåndsvis partituret og last ned en utskriftsklar PDF eller en redigerbar MusicXML-fil.",
+      },
+      pl: {
+        name: "Konwerter MIDI na nuty",
+        description:
+          "Zamień plik MIDI na zapis nutowy w przeglądarce. Dopasuj siatkę rytmiczną, sprawdź podgląd partytury i pobierz PDF do druku lub edytowalny plik MusicXML.",
+      },
+      pt: {
+        name: "MIDI para partitura",
+        description:
+          "Converta um arquivo MIDI em partitura no navegador. Ajuste a grade rítmica, confira a prévia e baixe um PDF para imprimir ou um MusicXML editável.",
+      },
+      ru: {
+        name: "Конвертер MIDI в ноты",
+        description:
+          "Преобразуйте MIDI-файл в нотную запись в браузере. Настройте ритмическую сетку, просмотрите партитуру и скачайте PDF для печати или редактируемый файл MusicXML.",
+      },
+      sv: {
+        name: "MIDI till noter",
+        description:
+          "Gör om en MIDI-fil till noter i webbläsaren. Justera rytmrutnätet, förhandsgranska partituret och ladda ner en utskrivbar PDF eller en redigerbar MusicXML-fil.",
+      },
+      th: {
+        name: "แปลง MIDI เป็นโน้ตเพลง",
+        description:
+          "แปลงไฟล์ MIDI เป็นโน้ตเพลงในเบราว์เซอร์ ปรับกริดจังหวะ ดูตัวอย่าง แล้วดาวน์โหลด PDF สำหรับพิมพ์หรือ MusicXML สำหรับแก้ไข",
+      },
+      tr: {
+        name: "MIDI'yi Notaya Dönüştürme",
+        description:
+          "MIDI dosyasını tarayıcınızda notaya dönüştürün. Ritim ızgarasını ayarlayın, partisyonu önizleyin ve yazdırılabilir PDF ya da düzenlenebilir MusicXML olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển MIDI thành bản nhạc",
+        description:
+          "Chuyển tệp MIDI thành bản nhạc ngay trong trình duyệt. Điều chỉnh lưới nhịp, xem trước bản nhạc và tải PDF có thể in hoặc MusicXML có thể chỉnh sửa.",
+      },
+      "zh-CN": {
+        name: "MIDI 转乐谱",
+        description:
+          "在浏览器中将 MIDI 文件转换为乐谱。调整节奏网格、预览乐谱，并下载可打印的 PDF 或可编辑的 MusicXML。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉樂譜",
+        description:
+          "在瀏覽器中將 MIDI 檔案轉換成樂譜。調整節奏網格、預覽樂譜，並下載可列印的 PDF 或可編輯的 MusicXML。",
       },
     },
   },
