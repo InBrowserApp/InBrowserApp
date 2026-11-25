@@ -62,7 +62,17 @@ export default function RefreshRateTest({
         intervals.sort((left, right) => left - right)
         const middle = Math.floor(intervals.length / 2)
         const lower = Math.floor((intervals.length - 1) / 2)
-        const frameInterval = (intervals[lower]! + intervals[middle]!) / 2
+        const median = (intervals[lower]! + intervals[middle]!) / 2
+        // Keep both ordinary timestamp buckets on browsers that round to 2 ms.
+        const delayThreshold = Math.max(median * 1.5, median + 2)
+        let elapsed = 0
+        let frames = 0
+        for (const interval of intervals) {
+          if (interval > delayThreshold) break
+          elapsed += interval
+          frames++
+        }
+        const frameInterval = elapsed / frames
         setReading({
           status: "ready",
           hertz: 1000 / frameInterval,

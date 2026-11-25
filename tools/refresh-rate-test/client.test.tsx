@@ -22,7 +22,13 @@ function installFrameClock() {
     callback(timestamp)
   }
 
-  function sample(hertz: number, delayedFrame = 0) {
+  function sample(
+    hertz: number,
+    {
+      delayedFrame = 0,
+      clockPrecision,
+    }: { delayedFrame?: number; clockPrecision?: number } = {}
+  ) {
     const interval = 1000 / hertz
     act(() => {
       frame(0)
@@ -32,7 +38,11 @@ function installFrameClock() {
         timestamp <= 2000 + delayedFrame;
         timestamp += interval
       ) {
-        frame(timestamp)
+        frame(
+          clockPrecision
+            ? Math.round(timestamp / clockPrecision) * clockPrecision
+            : timestamp
+        )
       }
     })
   }
@@ -58,11 +68,20 @@ describe("RefreshRateTest", () => {
     render(<RefreshRateTest language="en" messages={messages} />)
     const output = screen.getByRole("status")
     expect(output.textContent).toContain(messages.measuring)
-    clock.sample(120, 70)
+    clock.sample(120, { delayedFrame: 70 })
     expect(output.textContent).toContain("120 Hz")
     expect(output.textContent).toContain("8.3 ms")
     expect(clock.frames.size).toBe(0)
   })
+
+  it.each([60, 120, 144, 240, 360])(
+    "estimates %i Hz when the browser timestamps use 2 ms precision",
+    (hertz) => {
+      render(<RefreshRateTest language="en" messages={messages} />)
+      clock.sample(hertz, { clockPrecision: 2 })
+      expect(screen.getByRole("status").textContent).toContain(`${hertz} Hz`)
+    }
+  )
 
   it("restarts measurement without keeping an old callback or a stale result", () => {
     render(<RefreshRateTest language="de" messages={messages} />)
