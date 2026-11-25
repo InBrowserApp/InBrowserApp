@@ -12,7 +12,11 @@ type Response = Exclude<ArchiveResponse, { type: "error" }>
 async function openWorkerArchive(
   file: File,
   format: ExtendedArchiveFormat,
-  signal?: AbortSignal
+  signal?: AbortSignal,
+  {
+    preservePaths,
+    sequentialReads,
+  }: { preservePaths?: boolean; sequentialReads?: boolean } = {}
 ): Promise<ArchiveHandle> {
   signal?.throwIfAborted()
   const worker = new Worker(new URL("./archive.worker.ts", import.meta.url), {
@@ -75,13 +79,22 @@ async function openWorkerArchive(
   }
 
   try {
-    const result = await send({ type: "open", file, format })
+    const result = await send({ type: "open", file, format, preservePaths })
     if (result.type !== "opened") throw new Error("Expected archive listing.")
     // A path identifies a single visible entry. Keep its source header index
     // even when duplicate or empty paths are skipped.
     const indexByPath = new Map<string, number>()
-    const entries = result.listing.entries.filter(({ path }, index) => {
-      if (!path || indexByPath.has(path)) return false
+    const entries = result.listing.entries.filter(({ path, kind }, index) => {
+      if (!path) return false
+      if (indexByPath.has(path)) {
+        if (preservePaths && kind === "file") {
+          throw new ArchiveError(
+            "archive-read-failed",
+            `Duplicate archive path: ${path}`
+          )
+        }
+        return false
+      }
       indexByPath.set(path, index)
       return true
     })
@@ -90,7 +103,7 @@ async function openWorkerArchive(
       entries: sortEntries(entries),
       tarWrapped: result.listing.tarWrapped,
       async readEntry(path) {
-        const normalized = normalizeArchivePath(path)
+        const normalized = preservePaths ? path : normalizeArchivePath(path)
         const index = indexByPath.get(normalized)
         if (index === undefined) {
           throw new ArchiveError(
@@ -108,6 +121,7 @@ async function openWorkerArchive(
           type: "extract",
           index,
           path: normalized,
+          keepOpen: sequentialReads,
         })
         if (extracted.type !== "extracted")
           throw new Error("Expected archive entry.")

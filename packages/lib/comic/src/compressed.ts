@@ -1,6 +1,6 @@
 import { ArchiveError } from "@workspace/archive/types"
 import { openWorkerArchive } from "@workspace/archive/worker"
-import { indexPages, readPageImage } from "./pages"
+import { indexArchivePages, readPageImage } from "./pages"
 import type { Comic } from "./types"
 
 export async function openCompressedComic(
@@ -9,12 +9,7 @@ export async function openCompressedComic(
   signal: AbortSignal
 ): Promise<Comic> {
   const archive = await openWorkerArchive(file, format, signal)
-  const indexed = indexPages(
-    archive.entries.map(({ path, kind }) => ({
-      filename: path,
-      directory: kind !== "file",
-    }))
-  )
+  const indexed = indexArchivePages(archive.entries)
   let pending = Promise.resolve()
 
   return {

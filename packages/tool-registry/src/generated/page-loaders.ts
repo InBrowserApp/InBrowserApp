@@ -83,6 +83,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cbor-messagepack-converter": () =>
     import("@tool/cbor-messagepack-converter/page"),
   "cbr-reader": () => import("@tool/cbr-reader/page"),
+  "cbr-to-cbz-converter": () => import("@tool/cbr-to-cbz-converter/page"),
   "cbr-to-pdf-converter": () => import("@tool/cbr-to-pdf-converter/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),

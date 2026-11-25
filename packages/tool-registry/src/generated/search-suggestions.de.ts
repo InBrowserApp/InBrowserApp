@@ -324,6 +324,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBR in CBZ umwandeln",
+    slug: "cbr-to-cbz-converter",
+  },
+  {
+    category: "ebook",
     name: "CBR-zu-PDF-Konverter",
     slug: "cbr-to-pdf-converter",
   },

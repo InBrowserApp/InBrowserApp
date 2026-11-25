@@ -324,6 +324,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBR을 CBZ로 변환",
+    slug: "cbr-to-cbz-converter",
+  },
+  {
+    category: "ebook",
     name: "CBR PDF 변환기",
     slug: "cbr-to-pdf-converter",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "CBRをCBZに変換",
+  "description": "CBR 形式の漫画や、ページ画像を収めた RAR アーカイブをブラウザーで CBZ に変換します。元のページ画像、読む順序、ComicInfo.xml を保ったまま、RAR から ZIP に切り替えられます。"
+}

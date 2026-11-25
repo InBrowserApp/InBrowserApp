@@ -51,6 +51,7 @@ class LibarchiveReader {
   private filterId: number
   private formatId: number
   private allowRaw: boolean
+  private nextIndex: number | null = null
 
   constructor(
     private module: LibarchiveModule,
@@ -75,18 +76,18 @@ class LibarchiveReader {
       (suffix ? name.slice(0, -suffix.length) : name) || "archive.bin"
   }
 
-  list(): ArchiveListing {
-    const listing = this.listEntries()
+  list(preservePaths = false): ArchiveListing {
+    const listing = this.listEntries(preservePaths)
     // A zero-filled first block can make libarchive bid TAR for a raw file.
     // Honor empty TAR explicitly named by the user and preserve raw bytes otherwise.
     if (this.allowRaw && listing.tarWrapped && listing.entries.length === 0) {
       this.formatId = RAW
-      return this.listEntries()
+      return this.listEntries(preservePaths)
     }
     return listing
   }
 
-  private listEntries(): ArchiveListing {
+  private listEntries(preservePaths: boolean): ArchiveListing {
     return this.withReader(() => {
       const entries: ArchiveListing["entries"] = []
       let hasEntry = this.next()
@@ -98,11 +99,17 @@ class LibarchiveReader {
       }
       while (hasEntry) {
         const kind = this.getKind()
-        const path = raw
+        const original = raw
           ? this.rawName
-          : normalizeArchivePath(
-              this.module.UTF8ToString(this.module._viewer_path())
-            )
+          : this.module.UTF8ToString(this.module._viewer_path())
+        const path = raw
+          ? original
+          : preservePaths
+            ? original
+                .replace(/\\/g, "/")
+                .replace(/^(?:\.\/)+/, "")
+                .replace(/\/$/, "")
+            : normalizeArchivePath(original)
         const modifiedAt = this.module._viewer_mtime()
         const size = raw
           ? this.readChunks()
@@ -115,7 +122,8 @@ class LibarchiveReader {
             kind,
             size,
             Number.isFinite(modifiedAt) ? new Date(modifiedAt) : null,
-            raw
+            raw,
+            preservePaths
           )
         )
         hasEntry = this.next()
@@ -124,11 +132,13 @@ class LibarchiveReader {
     })
   }
 
-  extract(index: number, path: string): Blob {
-    return this.withReader(() => {
-      let current = 0
+  extract(index: number, path: string, keepOpen = false): Blob {
+    try {
+      if (this.nextIndex === null || index < this.nextIndex) this.open()
       while (this.next()) {
-        if (current++ !== index) continue
+        const current = this.nextIndex!
+        this.nextIndex = current + 1
+        if (current !== index) continue
         if (this.module._viewer_encrypted()) {
           throw new ArchiveError("archive-read-failed", "Entry is encrypted.")
         }
@@ -142,13 +152,19 @@ class LibarchiveReader {
         this.allowRaw &&
         this.module._viewer_format() !== TAR
       ) {
+        this.close()
         return new Blob([], { type: guessMimeType(path) })
       }
       throw new ArchiveError(
         "entry-not-found",
         `Archive entry not found: ${path}`
       )
-    })
+    } catch (error) {
+      this.close()
+      throw error
+    } finally {
+      if (!keepOpen) this.close()
+    }
   }
 
   private makeEntry(
@@ -156,12 +172,17 @@ class LibarchiveReader {
     kind: ArchiveEntryKind,
     size: number,
     modifiedAt: Date | null,
-    raw: boolean
+    raw: boolean,
+    preservePaths = false
   ): ArchiveListing["entries"][number] {
     const segments = splitPathSegments(path).filter((part) => part !== ".")
     // The viewer never creates archive paths on a filesystem. Skip parent
     // segments so they cannot masquerade as navigation controls.
-    const normalized = segments.includes("..") ? "" : segments.join("/")
+    const normalized = preservePaths
+      ? path
+      : segments.includes("..")
+        ? ""
+        : segments.join("/")
     const displayPath =
       normalized && kind === "directory" ? `${normalized}/` : normalized
     return {
@@ -187,7 +208,9 @@ class LibarchiveReader {
     }
   }
 
-  private withReader<T>(run: () => T): T {
+  private open() {
+    this.close()
+    this.nextIndex = 0
     this.module.readArchiveBytes = (offset, pointer, length) => {
       const bytes = this.input.read(offset, length)
       if (bytes.length !== length) return 0
@@ -195,18 +218,28 @@ class LibarchiveReader {
       return 1
     }
 
-    try {
-      this.checkStatus(
-        this.module._viewer_open(
-          this.input.size,
-          this.formatId,
-          this.filterId,
-          Number(this.allowRaw)
-        )
+    this.checkStatus(
+      this.module._viewer_open(
+        this.input.size,
+        this.formatId,
+        this.filterId,
+        Number(this.allowRaw)
       )
+    )
+  }
+
+  private close() {
+    if (this.nextIndex === null) return
+    this.module._viewer_close()
+    this.nextIndex = null
+  }
+
+  private withReader<T>(run: () => T): T {
+    try {
+      this.open()
       return run()
     } finally {
-      this.module._viewer_close()
+      this.close()
     }
   }
 

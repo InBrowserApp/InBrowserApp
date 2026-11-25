@@ -1,0 +1,4 @@
+{
+  "name": "CBR 转 CBZ 转换器",
+  "description": "在浏览器中将 CBR 漫画或 RAR 压缩包转为 CBZ。将原始页面文件重新打包为 ZIP，保留画质、阅读顺序和 ComicInfo.xml，无需上传。"
+}

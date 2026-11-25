@@ -27,9 +27,13 @@ self.onmessage = async ({ data }: MessageEvent<ArchiveRequest>) => {
         },
         format
       )
-      postResponse({ id: data.id, type: "opened", listing: reader.list() })
+      postResponse({
+        id: data.id,
+        type: "opened",
+        listing: reader.list(data.preservePaths),
+      })
     } else {
-      const blob = reader.extract(data.index, data.path)
+      const blob = reader.extract(data.index, data.path, data.keepOpen)
       postResponse({ id: data.id, type: "extracted", blob })
     }
   } catch (error) {

@@ -1,3 +1,4 @@
+import type { ArchiveEntry } from "@workspace/archive/types"
 import type { ComicPage } from "./types"
 
 const supported = new Set([
@@ -70,6 +71,16 @@ export function indexPages<T extends Entry>(entries: readonly T[]) {
             ? 1
             : a.position - b.position)
     )
+}
+
+export function indexArchivePages(entries: readonly ArchiveEntry[]) {
+  return indexPages(
+    entries.map((entry) => ({
+      ...entry,
+      filename: entry.path,
+      directory: entry.kind !== "file",
+    }))
+  )
 }
 
 export function imageMime(bytes: Uint8Array): string | null {
