@@ -1293,6 +1293,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mobi-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "โปรแกรมแปลง MOBI เป็น PDF",
+    slug: "mobi-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "ทดสอบการไล่ระดับสีของจอ",
     slug: "monitor-gradient-test",
@@ -1411,6 +1416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "เครื่องมือแก้ไข OPML",
     slug: "opml-editor",
+  },
+  {
+    category: "geo",
+    name: "โปรแกรมดูตัวอย่าง OSM PBF",
+    slug: "osm-pbf-preview",
   },
   {
     category: "developer",

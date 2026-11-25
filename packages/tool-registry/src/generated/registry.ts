@@ -32856,6 +32856,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mobi-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "mobi",
+      "pdf",
+      "ebook",
+      "mobi to pdf",
+      "mobipocket",
+      "kindle",
+      "azw",
+      "prc",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MOBI إلى PDF",
+        description:
+          "حوّل كتب MOBI وAZW وPRC المتوافقة وغير المحمية إلى PDF. عاين الفصول واختر مقاس الورق، ثم احفظ ملف PDF بنص قابل للتحديد في متصفحك.",
+      },
+      de: {
+        name: "MOBI-zu-PDF-Konverter",
+        description:
+          "Wandle kompatible MOBI-, AZW- und PRC-E-Books ohne Kopierschutz in PDF um. Prüfe die Kapitel, wähle ein Papierformat und speichere die PDF mit auswählbarem Text direkt im Browser.",
+      },
+      en: {
+        name: "MOBI to PDF Converter",
+        description:
+          "Convert compatible unprotected MOBI, AZW, and PRC books to PDF. Preview chapters, choose a paper size, and save selectable text in your browser.",
+      },
+      es: {
+        name: "Convertidor de MOBI a PDF",
+        description:
+          "Convierte libros MOBI, AZW y PRC compatibles y sin protección a PDF. Revisa los capítulos, elige el tamaño del papel y guarda un PDF con texto seleccionable en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur MOBI en PDF",
+        description:
+          "Convertissez les livres MOBI, AZW et PRC compatibles et sans protection en PDF. Prévisualisez les chapitres, choisissez le format du papier et enregistrez un PDF avec du texte sélectionnable dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MOBI ל־PDF",
+        description:
+          "המירו ספרי MOBI, AZW ו־PRC תואמים ללא הגנה לקובץ PDF. בדקו את הפרקים בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן קובץ עם טקסט שאפשר לסמן.",
+      },
+      hi: {
+        name: "MOBI से PDF कन्वर्टर",
+        description:
+          "बिना एन्क्रिप्शन वाली समर्थित MOBI, AZW और PRC किताबें PDF में बदलें। अध्यायों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और ब्राउज़र में ऐसी PDF सेव करें जिसमें टेक्स्ट चुना जा सके।",
+      },
+      id: {
+        name: "Konverter MOBI ke PDF",
+        description:
+          "Ubah buku MOBI, AZW, dan PRC yang kompatibel dan tanpa perlindungan ke PDF. Tinjau bab, pilih ukuran kertas, lalu simpan PDF dengan teks yang bisa dipilih langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da MOBI a PDF",
+        description:
+          "Converti libri MOBI, AZW e PRC compatibili e senza protezione in PDF con testo selezionabile. Controlla i capitoli in anteprima, scegli il formato della carta e salva dal browser.",
+      },
+      ja: {
+        name: "MOBI PDF変換",
+        description:
+          "暗号化や DRM 保護のない、対応形式の MOBI・AZW・PRC 電子書籍を PDF に変換します。章をプレビューし、用紙サイズを選んで、文字を選択できる PDF をブラウザーで保存できます。",
+      },
+      ko: {
+        name: "MOBI PDF 변환기",
+        description:
+          "지원되는 MOBI, AZW, PRC 전자책을 브라우저에서 PDF로 변환하세요. 암호화되지 않은 책을 열어 장을 미리 보고, 용지 크기를 골라 텍스트를 선택할 수 있는 PDF로 저장하세요.",
+      },
+      ms: {
+        name: "Penukar MOBI kepada PDF",
+        description:
+          "Tukar buku MOBI, AZW dan PRC yang serasi dan tidak dilindungi kepada PDF. Pratonton bab, pilih saiz kertas dan simpan PDF dengan teks yang boleh dipilih dalam pelayar anda.",
+      },
+      nl: {
+        name: "MOBI naar PDF-converter",
+        description:
+          "Zet ondersteunde, onbeveiligde MOBI-, AZW- en PRC-boeken om naar PDF. Bekijk de hoofdstukken, kies een papierformaat en sla in je browser een PDF met selecteerbare tekst op.",
+      },
+      no: {
+        name: "Konverter MOBI til PDF",
+        description:
+          "Konverter kompatible, ubeskyttede MOBI-, AZW- og PRC-bøker til PDF. Forhåndsvis kapitlene, velg papirstørrelse og lagre PDF-en med tekst som kan markeres, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MOBI na PDF",
+        description:
+          "Konwertuj obsługiwane książki MOBI, AZW i PRC bez zabezpieczeń na PDF. Sprawdź podgląd rozdziałów, wybierz format papieru i zapisz w przeglądarce PDF z tekstem, który można zaznaczać.",
+      },
+      pt: {
+        name: "Conversor de MOBI para PDF",
+        description:
+          "Converta livros MOBI, AZW e PRC compatíveis e sem proteção em PDF. Confira a prévia dos capítulos, escolha o tamanho do papel e salve um PDF com texto selecionável no navegador.",
+      },
+      ru: {
+        name: "Конвертер MOBI в PDF",
+        description:
+          "Преобразуйте совместимые книги MOBI, AZW и PRC без защиты в PDF. Просмотрите главы, выберите размер бумаги и сохраните PDF с выделяемым текстом прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera MOBI till PDF",
+        description:
+          "Konvertera okrypterade MOBI-, AZW- och PRC-böcker som stöds till PDF. Förhandsgranska kapitlen, välj pappersstorlek och spara en PDF med markerbar text i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MOBI เป็น PDF",
+        description:
+          "แปลงหนังสือ MOBI, AZW และ PRC ที่รองรับและไม่มีการป้องกันเป็น PDF ดูตัวอย่างบท เลือกขนาดกระดาษ และบันทึก PDF ที่เลือกข้อความได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MOBI’den PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu ve korumasız MOBI, AZW ve PRC kitaplarını PDF’ye dönüştürün. Bölümleri önizleyin, kâğıt boyutunu seçin ve metni seçilebilen PDF’yi tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển MOBI sang PDF",
+        description:
+          "Chuyển sách MOBI, AZW và PRC tương thích, không được bảo vệ, sang PDF. Xem trước các chương, chọn khổ giấy và lưu PDF có văn bản chọn được ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MOBI 转 PDF",
+        description:
+          "将兼容且未受保护的 MOBI、AZW 和 PRC 电子书转为 PDF。可在浏览器中预览章节、选择纸张大小，并保存正文可选中的 PDF。",
+      },
+      "zh-TW": {
+        name: "MOBI 轉 PDF",
+        description:
+          "在瀏覽器中將相容且未受保護的 MOBI、AZW 或 PRC 書籍轉成可選取文字的 PDF。可預覽章節、選擇紙張大小，再儲存檔案。",
+      },
+    },
+  },
+  {
     slug: "monitor-gradient-test",
     category: "misc",
     icon: "columns-2",
@@ -35936,6 +36071,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "OPML 編輯器",
         description:
           "在瀏覽器中編輯 OPML 檔案。整理資料夾及 RSS 或 Atom 訂閱，再下載更新後的 OPML 或複製其 XML。",
+      },
+    },
+  },
+  {
+    slug: "osm-pbf-preview",
+    category: "geo",
+    icon: "map",
+    tags: [
+      "openstreetmap",
+      "osm",
+      "pbf",
+      "osm.pbf",
+      "extract",
+      "map",
+      "preview",
+      "viewer",
+      "nodes",
+      "ways",
+      "relations",
+    ],
+    locales: {
+      ar: {
+        name: "معاينة OSM PBF",
+        description:
+          "افتح مقتطف بيانات OpenStreetMap محليًا بصيغة .osm.pbf أو .pbf في متصفحك. اطّلع على أعداد العقد والطرق والعلاقات واستكشف عيّنة من المعالم ووسومها على خريطة تعمل دون اتصال.",
+      },
+      de: {
+        name: "OSM-PBF-Vorschau",
+        description:
+          "Öffne einen lokalen OpenStreetMap-Auszug (.osm.pbf oder .pbf) im Browser. Zähle Knoten, Wege und Relationen und prüfe ausgewählte Objekte und ihre Tags auf einer Offline-Karte.",
+      },
+      en: {
+        name: "OSM PBF Preview",
+        description:
+          "Open a local OpenStreetMap .osm.pbf or .pbf extract in your browser. Count nodes, ways and relations, and inspect a sample and its tags on an offline map.",
+      },
+      es: {
+        name: "Vista previa de OSM PBF",
+        description:
+          "Abre un extracto local de OpenStreetMap (.osm.pbf o .pbf) en tu navegador. Cuenta nodos, vías y relaciones y consulta las etiquetas de una selección de elementos en un mapa sin conexión.",
+      },
+      fr: {
+        name: "Aperçu OSM PBF",
+        description:
+          "Ouvrez un extrait OpenStreetMap local (.osm.pbf ou .pbf). Comptez les nœuds, les chemins et les relations et examinez un échantillon et ses attributs sur une carte hors ligne.",
+      },
+      he: {
+        name: "תצוגה מקדימה של OSM PBF",
+        description:
+          "פתחו בדפדפן קובץ נתונים מקומי של OpenStreetMap בסיומת ‎.osm.pbf או ‎.pbf. בדקו את מספר הצמתים, הדרכים והיחסים ועיינו במדגם ובתגיות שלו במפה שעובדת בלי אינטרנט.",
+      },
+      hi: {
+        name: "OSM PBF का पूर्वावलोकन",
+        description:
+          "ब्राउज़र में स्थानीय OpenStreetMap .osm.pbf या .pbf डेटा अंश खोलें। नोड, पथ और संबंधों की संख्या देखें और ऑफ़लाइन मानचित्र पर डेटा के नमूने और उसके टैग जाँचें।",
+      },
+      id: {
+        name: "Pratinjau OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf dari perangkat Anda di browser. Hitung simpul, garis, dan relasi, lalu periksa sampel beserta tagnya pada peta luring.",
+      },
+      it: {
+        name: "Anteprima OSM PBF",
+        description:
+          "Apri un estratto locale di OpenStreetMap (.osm.pbf o .pbf) nel browser. Conta nodi, percorsi e relazioni ed esamina un campione e i suoi tag su una mappa offline.",
+      },
+      ja: {
+        name: "OSM PBF プレビュー",
+        description:
+          "ローカルの OpenStreetMap .osm.pbf または .pbf 抽出データをブラウザーで開きます。ノード、ウェイ、リレーションを数え、サンプルとそのタグをオフライン地図で確認できます。",
+      },
+      ko: {
+        name: "OSM PBF 미리보기",
+        description:
+          "기기에 저장된 OpenStreetMap .osm.pbf 또는 .pbf 추출 데이터를 브라우저에서 여세요. 노드, 웨이, 관계를 집계하고 오프라인 지도에서 표본과 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf daripada peranti anda dalam pelayar. Kira nod, jalan dan hubungan, kemudian semak sampel data serta tagnya pada peta luar talian.",
+      },
+      nl: {
+        name: "OSM PBF-voorvertoner",
+        description:
+          "Open een lokaal OpenStreetMap-extract (.osm.pbf of .pbf) in je browser. Tel knopen, wegen en relaties en bekijk een selectie met de bijbehorende tags op een offlinekaart.",
+      },
+      no: {
+        name: "OSM PBF-forhåndsvisning",
+        description:
+          "Åpne et lokalt OpenStreetMap-uttrekk (.osm.pbf eller .pbf) i nettleseren. Tell noder, veger og relasjoner, og se et utvalg av objekter med merker på et kart uten nett.",
+      },
+      pl: {
+        name: "Podgląd OSM PBF",
+        description:
+          "Otwórz lokalny wyciąg OpenStreetMap (.osm.pbf lub .pbf) w przeglądarce. Policz węzły, linie i relacje, a wybrane obiekty i ich tagi obejrzyj na mapie offline.",
+      },
+      pt: {
+        name: "Prévia de OSM PBF",
+        description:
+          "Abra um extrato local do OpenStreetMap (.osm.pbf ou .pbf) no navegador. Conte nós, caminhos e relações e confira uma amostra com suas etiquetas em um mapa offline.",
+      },
+      ru: {
+        name: "Предпросмотр OSM PBF",
+        description:
+          "Откройте локальную выгрузку OpenStreetMap (.osm.pbf или .pbf) в браузере. Узнайте число точек, линий и отношений, просмотрите выборку объектов и их теги на офлайн-карте.",
+      },
+      sv: {
+        name: "Förhandsgranskning av OSM PBF",
+        description:
+          "Öppna ett lokalt OpenStreetMap-utdrag (.osm.pbf eller .pbf) i webbläsaren. Räkna noder, vägar och relationer och granska ett urval av objekt med deras attribut på en offlinekarta.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง OSM PBF",
+        description:
+          "เปิดไฟล์ข้อมูลบางพื้นที่ของ OpenStreetMap นามสกุล .osm.pbf หรือ .pbf จากอุปกรณ์ในเบราว์เซอร์ นับโหนด ทาง และความสัมพันธ์ พร้อมดูตัวอย่างข้อมูลและแท็กบนแผนที่ออฟไลน์",
+      },
+      tr: {
+        name: "OSM PBF Önizlemesi",
+        description:
+          "Tarayıcınızda yerel bir OpenStreetMap .osm.pbf veya .pbf veri kesiti açın. Düğüm, yol ve ilişki sayılarını görün, örnek verileri ve etiketlerini çevrimdışı haritada inceleyin.",
+      },
+      vi: {
+        name: "Trình xem trước OSM PBF",
+        description:
+          "Mở tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf từ thiết bị ngay trong trình duyệt. Đếm nốt, lối và quan hệ, rồi xem một phần dữ liệu cùng các thẻ trên bản đồ ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "OSM PBF 预览",
+        description:
+          "在浏览器中打开本地 OpenStreetMap .osm.pbf 或 .pbf 区域提取文件。统计节点、路径和关系，并在离线地图上查看样本及其标签。",
+      },
+      "zh-TW": {
+        name: "OSM PBF 預覽",
+        description:
+          "在瀏覽器中開啟本機的 OpenStreetMap .osm.pbf 或 .pbf 區域擷取檔案。統計節點、路徑和關聯，並在離線地圖上查看樣本及其標籤。",
       },
     },
   },
@@ -88719,6 +88989,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "mobi-to-pdf-converter": {
+    slug: "mobi-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "mobi",
+      "pdf",
+      "ebook",
+      "mobi to pdf",
+      "mobipocket",
+      "kindle",
+      "azw",
+      "prc",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MOBI إلى PDF",
+        description:
+          "حوّل كتب MOBI وAZW وPRC المتوافقة وغير المحمية إلى PDF. عاين الفصول واختر مقاس الورق، ثم احفظ ملف PDF بنص قابل للتحديد في متصفحك.",
+      },
+      de: {
+        name: "MOBI-zu-PDF-Konverter",
+        description:
+          "Wandle kompatible MOBI-, AZW- und PRC-E-Books ohne Kopierschutz in PDF um. Prüfe die Kapitel, wähle ein Papierformat und speichere die PDF mit auswählbarem Text direkt im Browser.",
+      },
+      en: {
+        name: "MOBI to PDF Converter",
+        description:
+          "Convert compatible unprotected MOBI, AZW, and PRC books to PDF. Preview chapters, choose a paper size, and save selectable text in your browser.",
+      },
+      es: {
+        name: "Convertidor de MOBI a PDF",
+        description:
+          "Convierte libros MOBI, AZW y PRC compatibles y sin protección a PDF. Revisa los capítulos, elige el tamaño del papel y guarda un PDF con texto seleccionable en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur MOBI en PDF",
+        description:
+          "Convertissez les livres MOBI, AZW et PRC compatibles et sans protection en PDF. Prévisualisez les chapitres, choisissez le format du papier et enregistrez un PDF avec du texte sélectionnable dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MOBI ל־PDF",
+        description:
+          "המירו ספרי MOBI, AZW ו־PRC תואמים ללא הגנה לקובץ PDF. בדקו את הפרקים בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן קובץ עם טקסט שאפשר לסמן.",
+      },
+      hi: {
+        name: "MOBI से PDF कन्वर्टर",
+        description:
+          "बिना एन्क्रिप्शन वाली समर्थित MOBI, AZW और PRC किताबें PDF में बदलें। अध्यायों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और ब्राउज़र में ऐसी PDF सेव करें जिसमें टेक्स्ट चुना जा सके।",
+      },
+      id: {
+        name: "Konverter MOBI ke PDF",
+        description:
+          "Ubah buku MOBI, AZW, dan PRC yang kompatibel dan tanpa perlindungan ke PDF. Tinjau bab, pilih ukuran kertas, lalu simpan PDF dengan teks yang bisa dipilih langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da MOBI a PDF",
+        description:
+          "Converti libri MOBI, AZW e PRC compatibili e senza protezione in PDF con testo selezionabile. Controlla i capitoli in anteprima, scegli il formato della carta e salva dal browser.",
+      },
+      ja: {
+        name: "MOBI PDF変換",
+        description:
+          "暗号化や DRM 保護のない、対応形式の MOBI・AZW・PRC 電子書籍を PDF に変換します。章をプレビューし、用紙サイズを選んで、文字を選択できる PDF をブラウザーで保存できます。",
+      },
+      ko: {
+        name: "MOBI PDF 변환기",
+        description:
+          "지원되는 MOBI, AZW, PRC 전자책을 브라우저에서 PDF로 변환하세요. 암호화되지 않은 책을 열어 장을 미리 보고, 용지 크기를 골라 텍스트를 선택할 수 있는 PDF로 저장하세요.",
+      },
+      ms: {
+        name: "Penukar MOBI kepada PDF",
+        description:
+          "Tukar buku MOBI, AZW dan PRC yang serasi dan tidak dilindungi kepada PDF. Pratonton bab, pilih saiz kertas dan simpan PDF dengan teks yang boleh dipilih dalam pelayar anda.",
+      },
+      nl: {
+        name: "MOBI naar PDF-converter",
+        description:
+          "Zet ondersteunde, onbeveiligde MOBI-, AZW- en PRC-boeken om naar PDF. Bekijk de hoofdstukken, kies een papierformaat en sla in je browser een PDF met selecteerbare tekst op.",
+      },
+      no: {
+        name: "Konverter MOBI til PDF",
+        description:
+          "Konverter kompatible, ubeskyttede MOBI-, AZW- og PRC-bøker til PDF. Forhåndsvis kapitlene, velg papirstørrelse og lagre PDF-en med tekst som kan markeres, direkte i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MOBI na PDF",
+        description:
+          "Konwertuj obsługiwane książki MOBI, AZW i PRC bez zabezpieczeń na PDF. Sprawdź podgląd rozdziałów, wybierz format papieru i zapisz w przeglądarce PDF z tekstem, który można zaznaczać.",
+      },
+      pt: {
+        name: "Conversor de MOBI para PDF",
+        description:
+          "Converta livros MOBI, AZW e PRC compatíveis e sem proteção em PDF. Confira a prévia dos capítulos, escolha o tamanho do papel e salve um PDF com texto selecionável no navegador.",
+      },
+      ru: {
+        name: "Конвертер MOBI в PDF",
+        description:
+          "Преобразуйте совместимые книги MOBI, AZW и PRC без защиты в PDF. Просмотрите главы, выберите размер бумаги и сохраните PDF с выделяемым текстом прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera MOBI till PDF",
+        description:
+          "Konvertera okrypterade MOBI-, AZW- och PRC-böcker som stöds till PDF. Förhandsgranska kapitlen, välj pappersstorlek och spara en PDF med markerbar text i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MOBI เป็น PDF",
+        description:
+          "แปลงหนังสือ MOBI, AZW และ PRC ที่รองรับและไม่มีการป้องกันเป็น PDF ดูตัวอย่างบท เลือกขนาดกระดาษ และบันทึก PDF ที่เลือกข้อความได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MOBI’den PDF’ye Dönüştürücü",
+        description:
+          "Uyumlu ve korumasız MOBI, AZW ve PRC kitaplarını PDF’ye dönüştürün. Bölümleri önizleyin, kâğıt boyutunu seçin ve metni seçilebilen PDF’yi tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển MOBI sang PDF",
+        description:
+          "Chuyển sách MOBI, AZW và PRC tương thích, không được bảo vệ, sang PDF. Xem trước các chương, chọn khổ giấy và lưu PDF có văn bản chọn được ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MOBI 转 PDF",
+        description:
+          "将兼容且未受保护的 MOBI、AZW 和 PRC 电子书转为 PDF。可在浏览器中预览章节、选择纸张大小，并保存正文可选中的 PDF。",
+      },
+      "zh-TW": {
+        name: "MOBI 轉 PDF",
+        description:
+          "在瀏覽器中將相容且未受保護的 MOBI、AZW 或 PRC 書籍轉成可選取文字的 PDF。可預覽章節、選擇紙張大小，再儲存檔案。",
+      },
+    },
+  },
   "monitor-gradient-test": {
     slug: "monitor-gradient-test",
     category: "misc",
@@ -91800,6 +92205,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OPML 編輯器",
         description:
           "在瀏覽器中編輯 OPML 檔案。整理資料夾及 RSS 或 Atom 訂閱，再下載更新後的 OPML 或複製其 XML。",
+      },
+    },
+  },
+  "osm-pbf-preview": {
+    slug: "osm-pbf-preview",
+    category: "geo",
+    icon: "map",
+    tags: [
+      "openstreetmap",
+      "osm",
+      "pbf",
+      "osm.pbf",
+      "extract",
+      "map",
+      "preview",
+      "viewer",
+      "nodes",
+      "ways",
+      "relations",
+    ],
+    locales: {
+      ar: {
+        name: "معاينة OSM PBF",
+        description:
+          "افتح مقتطف بيانات OpenStreetMap محليًا بصيغة .osm.pbf أو .pbf في متصفحك. اطّلع على أعداد العقد والطرق والعلاقات واستكشف عيّنة من المعالم ووسومها على خريطة تعمل دون اتصال.",
+      },
+      de: {
+        name: "OSM-PBF-Vorschau",
+        description:
+          "Öffne einen lokalen OpenStreetMap-Auszug (.osm.pbf oder .pbf) im Browser. Zähle Knoten, Wege und Relationen und prüfe ausgewählte Objekte und ihre Tags auf einer Offline-Karte.",
+      },
+      en: {
+        name: "OSM PBF Preview",
+        description:
+          "Open a local OpenStreetMap .osm.pbf or .pbf extract in your browser. Count nodes, ways and relations, and inspect a sample and its tags on an offline map.",
+      },
+      es: {
+        name: "Vista previa de OSM PBF",
+        description:
+          "Abre un extracto local de OpenStreetMap (.osm.pbf o .pbf) en tu navegador. Cuenta nodos, vías y relaciones y consulta las etiquetas de una selección de elementos en un mapa sin conexión.",
+      },
+      fr: {
+        name: "Aperçu OSM PBF",
+        description:
+          "Ouvrez un extrait OpenStreetMap local (.osm.pbf ou .pbf). Comptez les nœuds, les chemins et les relations et examinez un échantillon et ses attributs sur une carte hors ligne.",
+      },
+      he: {
+        name: "תצוגה מקדימה של OSM PBF",
+        description:
+          "פתחו בדפדפן קובץ נתונים מקומי של OpenStreetMap בסיומת ‎.osm.pbf או ‎.pbf. בדקו את מספר הצמתים, הדרכים והיחסים ועיינו במדגם ובתגיות שלו במפה שעובדת בלי אינטרנט.",
+      },
+      hi: {
+        name: "OSM PBF का पूर्वावलोकन",
+        description:
+          "ब्राउज़र में स्थानीय OpenStreetMap .osm.pbf या .pbf डेटा अंश खोलें। नोड, पथ और संबंधों की संख्या देखें और ऑफ़लाइन मानचित्र पर डेटा के नमूने और उसके टैग जाँचें।",
+      },
+      id: {
+        name: "Pratinjau OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf dari perangkat Anda di browser. Hitung simpul, garis, dan relasi, lalu periksa sampel beserta tagnya pada peta luring.",
+      },
+      it: {
+        name: "Anteprima OSM PBF",
+        description:
+          "Apri un estratto locale di OpenStreetMap (.osm.pbf o .pbf) nel browser. Conta nodi, percorsi e relazioni ed esamina un campione e i suoi tag su una mappa offline.",
+      },
+      ja: {
+        name: "OSM PBF プレビュー",
+        description:
+          "ローカルの OpenStreetMap .osm.pbf または .pbf 抽出データをブラウザーで開きます。ノード、ウェイ、リレーションを数え、サンプルとそのタグをオフライン地図で確認できます。",
+      },
+      ko: {
+        name: "OSM PBF 미리보기",
+        description:
+          "기기에 저장된 OpenStreetMap .osm.pbf 또는 .pbf 추출 데이터를 브라우저에서 여세요. 노드, 웨이, 관계를 집계하고 오프라인 지도에서 표본과 태그를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pratonton OSM PBF",
+        description:
+          "Buka ekstrak OpenStreetMap .osm.pbf atau .pbf daripada peranti anda dalam pelayar. Kira nod, jalan dan hubungan, kemudian semak sampel data serta tagnya pada peta luar talian.",
+      },
+      nl: {
+        name: "OSM PBF-voorvertoner",
+        description:
+          "Open een lokaal OpenStreetMap-extract (.osm.pbf of .pbf) in je browser. Tel knopen, wegen en relaties en bekijk een selectie met de bijbehorende tags op een offlinekaart.",
+      },
+      no: {
+        name: "OSM PBF-forhåndsvisning",
+        description:
+          "Åpne et lokalt OpenStreetMap-uttrekk (.osm.pbf eller .pbf) i nettleseren. Tell noder, veger og relasjoner, og se et utvalg av objekter med merker på et kart uten nett.",
+      },
+      pl: {
+        name: "Podgląd OSM PBF",
+        description:
+          "Otwórz lokalny wyciąg OpenStreetMap (.osm.pbf lub .pbf) w przeglądarce. Policz węzły, linie i relacje, a wybrane obiekty i ich tagi obejrzyj na mapie offline.",
+      },
+      pt: {
+        name: "Prévia de OSM PBF",
+        description:
+          "Abra um extrato local do OpenStreetMap (.osm.pbf ou .pbf) no navegador. Conte nós, caminhos e relações e confira uma amostra com suas etiquetas em um mapa offline.",
+      },
+      ru: {
+        name: "Предпросмотр OSM PBF",
+        description:
+          "Откройте локальную выгрузку OpenStreetMap (.osm.pbf или .pbf) в браузере. Узнайте число точек, линий и отношений, просмотрите выборку объектов и их теги на офлайн-карте.",
+      },
+      sv: {
+        name: "Förhandsgranskning av OSM PBF",
+        description:
+          "Öppna ett lokalt OpenStreetMap-utdrag (.osm.pbf eller .pbf) i webbläsaren. Räkna noder, vägar och relationer och granska ett urval av objekt med deras attribut på en offlinekarta.",
+      },
+      th: {
+        name: "โปรแกรมดูตัวอย่าง OSM PBF",
+        description:
+          "เปิดไฟล์ข้อมูลบางพื้นที่ของ OpenStreetMap นามสกุล .osm.pbf หรือ .pbf จากอุปกรณ์ในเบราว์เซอร์ นับโหนด ทาง และความสัมพันธ์ พร้อมดูตัวอย่างข้อมูลและแท็กบนแผนที่ออฟไลน์",
+      },
+      tr: {
+        name: "OSM PBF Önizlemesi",
+        description:
+          "Tarayıcınızda yerel bir OpenStreetMap .osm.pbf veya .pbf veri kesiti açın. Düğüm, yol ve ilişki sayılarını görün, örnek verileri ve etiketlerini çevrimdışı haritada inceleyin.",
+      },
+      vi: {
+        name: "Trình xem trước OSM PBF",
+        description:
+          "Mở tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf từ thiết bị ngay trong trình duyệt. Đếm nốt, lối và quan hệ, rồi xem một phần dữ liệu cùng các thẻ trên bản đồ ngoại tuyến.",
+      },
+      "zh-CN": {
+        name: "OSM PBF 预览",
+        description:
+          "在浏览器中打开本地 OpenStreetMap .osm.pbf 或 .pbf 区域提取文件。统计节点、路径和关系，并在离线地图上查看样本及其标签。",
+      },
+      "zh-TW": {
+        name: "OSM PBF 預覽",
+        description:
+          "在瀏覽器中開啟本機的 OpenStreetMap .osm.pbf 或 .pbf 區域擷取檔案。統計節點、路徑和關聯，並在離線地圖上查看樣本及其標籤。",
       },
     },
   },

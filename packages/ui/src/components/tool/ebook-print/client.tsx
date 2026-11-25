@@ -6,7 +6,7 @@ import { Label } from "../../ui/label"
 import { Spinner } from "../../ui/spinner"
 import { BookOpen, Folder, Printer } from "../../../icons"
 import { cn } from "../../../lib/utils"
-import type { BookPrintFormat, Messages } from "./messages"
+import { openingErrorCodes, type Messages } from "./messages"
 
 const paperSizes = ["A4", "A5", "letter"] as const
 
@@ -16,7 +16,13 @@ const formats = {
     accept: ".fb2,.fbz,.fb2.zip,application/x-fictionbook+xml",
     extension: /\.(?:fb2|fbz|fb2\.zip)$/i,
   },
+  mobi: {
+    accept: ".mobi,.azw,.prc,application/x-mobipocket-ebook",
+    extension: /\.(?:mobi|azw|prc)$/i,
+  },
 } as const
+
+export type BookPrintFormat = keyof typeof formats
 
 type Result = { url: string; missing: boolean } | { error: string }
 
@@ -64,14 +70,8 @@ export default function Client({
       } catch (reason) {
         if (task.signal.aborted) return
         const code = reason instanceof Error ? reason.message : ""
-        const detail =
-          code === "protected" ||
-          code === "unsupportedLayout" ||
-          code === "ambiguous" ||
-          code === "noBook" ||
-          code === "encoding"
-            ? m[code]
-            : undefined
+        const key = openingErrorCodes.find((key) => key === code)
+        const detail = key ? m[key] : undefined
         setResult({ error: detail ?? m.invalid })
       }
     }

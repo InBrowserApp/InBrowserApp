@@ -1,0 +1,10 @@
+{
+  "open": "打开 MOBI 书籍",
+  "replace": "更换书籍",
+  "drop": "将 MOBI、AZW 或 PRC 书籍拖放到此处",
+  "unsupported": "请选择本地 MOBI、AZW 或 PRC 书籍。",
+  "invalid": "此书籍可能已损坏或不完整。请选择其他副本。",
+  "protected": "此书籍已加密或受复制保护。请选择未加密的副本。",
+  "unsupportedVariant": "不支持此书籍格式或压缩变体。无法转换 KFX 和非电子书的 PRC 文件。",
+  "unsupportedLayout": "此书籍使用固定或混合页面布局，无法可靠导出。请选择可重排版的书籍。"
+}

@@ -1,0 +1,22 @@
+{
+  "open": "Apri OSM PBF",
+  "example": "Prova un esempio",
+  "drop": "Rilascia qui un file OSM PBF",
+  "formats": "Usa un estratto di OpenStreetMap in formato .osm.pbf o .pbf. Il file resta su questo dispositivo.",
+  "loading": "Analisi del file OSM PBF…",
+  "invalid": "Impossibile leggere il file. Scegli un estratto di OpenStreetMap in formato .osm.pbf.",
+  "nodes": "Nodi",
+  "ways": "Percorsi",
+  "relations": "Relazioni",
+  "map": "Anteprima dei dati OpenStreetMap",
+  "fit": "Inquadra i dati",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "sample": "La mappa mostra un campione di nodi e percorsi con tag. I conteggi riguardano l’intero file.",
+  "features": "Elementi in anteprima",
+  "feature": "Elemento {number}",
+  "attributes": "Tag OSM",
+  "noAttributes": "Questo elemento non ha tag.",
+  "noFeatures": "Non è stato possibile visualizzare sulla mappa nodi o percorsi completi con tag.",
+  "attribution": "© contributori di OpenStreetMap"
+}

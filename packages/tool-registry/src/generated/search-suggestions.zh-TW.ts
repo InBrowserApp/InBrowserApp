@@ -1293,6 +1293,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mobi-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "MOBI 轉 PDF",
+    slug: "mobi-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "螢幕色階測試",
     slug: "monitor-gradient-test",
@@ -1411,6 +1416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "OPML 編輯器",
     slug: "opml-editor",
+  },
+  {
+    category: "geo",
+    name: "OSM PBF 預覽",
+    slug: "osm-pbf-preview",
   },
   {
     category: "developer",

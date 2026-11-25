@@ -1,12 +1,12 @@
 ---
 import { resolveLocale, type ToolMeta } from "@workspace/tool-sdk"
 import { ToolPageShell } from "../tool-page-shell"
-import Client from "./client"
+import Client, { type BookPrintFormat } from "./client"
 import type { FormatCopy, Messages } from "./messages"
 
 type Props = { lang: string; meta: ToolMeta } & (
   | { format: "epub"; copy?: never }
-  | { format: "fb2"; copy: FormatCopy }
+  | { format: Exclude<BookPrintFormat, "epub">; copy: FormatCopy }
 )
 
 const { lang, meta, format, copy } = Astro.props

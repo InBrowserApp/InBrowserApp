@@ -1,0 +1,4 @@
+{
+  "name": "Förhandsgranskning av OSM PBF",
+  "description": "Öppna ett lokalt OpenStreetMap-utdrag (.osm.pbf eller .pbf) i webbläsaren. Räkna noder, vägar och relationer och granska ett urval av objekt med deras attribut på en offlinekarta."
+}

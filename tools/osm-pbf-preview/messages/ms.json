@@ -1,0 +1,22 @@
+{
+  "open": "Buka OSM PBF",
+  "example": "Cuba contoh",
+  "drop": "Lepaskan fail OSM PBF di sini",
+  "formats": "Gunakan ekstrak OpenStreetMap .osm.pbf atau .pbf. Fail anda kekal pada peranti ini.",
+  "loading": "Sedang mengimbas fail OSM PBF…",
+  "invalid": "Fail ini tidak dapat dibaca. Pilih ekstrak OpenStreetMap .osm.pbf.",
+  "nodes": "Nod",
+  "ways": "Jalan (way)",
+  "relations": "Hubungan",
+  "map": "Pratonton data OpenStreetMap",
+  "fit": "Papar seluruh kawasan data",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "sample": "Peta memaparkan sampel nod dan jalan yang mempunyai tag. Kiraan di atas meliputi seluruh fail.",
+  "features": "Ciri dalam pratonton",
+  "feature": "Ciri {number}",
+  "attributes": "Tag OSM",
+  "noAttributes": "Ciri ini tidak mempunyai tag.",
+  "noFeatures": "Tiada nod bertag atau jalan bertag dengan data lengkap yang dapat dipaparkan pada peta.",
+  "attribution": "© Penyumbang OpenStreetMap"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OSM-PBF-Vorschau",
+  "description": "Öffne einen lokalen OpenStreetMap-Auszug (.osm.pbf oder .pbf) im Browser. Zähle Knoten, Wege und Relationen und prüfe ausgewählte Objekte und ihre Tags auf einer Offline-Karte."
+}

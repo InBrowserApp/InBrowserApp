@@ -23738,6 +23738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mobi-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mobi-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "monitor-gradient-test",
     language: "ar",
   },
@@ -25943,6 +26035,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "opml-editor",
+    language: "zh-TW",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ar",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "de",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "en",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "es",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "fr",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "he",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "hi",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "id",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "it",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ja",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ko",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ms",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "nl",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "no",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "pl",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "pt",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ru",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "sv",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "th",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "tr",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "vi",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "zh-CN",
+  },
+  {
+    slug: "osm-pbf-preview",
     language: "zh-TW",
   },
   {

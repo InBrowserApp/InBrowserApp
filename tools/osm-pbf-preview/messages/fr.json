@@ -1,0 +1,22 @@
+{
+  "open": "Ouvrir un fichier OSM PBF",
+  "example": "Essayer un exemple",
+  "drop": "Déposez un fichier OSM PBF ici",
+  "formats": "Utilisez un extrait OpenStreetMap au format .osm.pbf ou .pbf. Votre fichier reste sur cet appareil.",
+  "loading": "Analyse du fichier OSM PBF…",
+  "invalid": "Impossible de lire ce fichier. Choisissez un extrait OpenStreetMap au format .osm.pbf.",
+  "nodes": "Nœuds",
+  "ways": "Chemins",
+  "relations": "Relations",
+  "map": "Aperçu des données OpenStreetMap",
+  "fit": "Cadrer sur les données",
+  "zoomIn": "Zoom avant",
+  "zoomOut": "Zoom arrière",
+  "sample": "La carte montre un échantillon de nœuds et de chemins dotés d’attributs. Les totaux ci-dessus portent sur l’ensemble du fichier.",
+  "features": "Éléments de l’aperçu",
+  "feature": "Élément {number}",
+  "attributes": "Attributs OSM",
+  "noAttributes": "Cet élément n’a aucun attribut.",
+  "noFeatures": "Aucun nœud ni chemin complet doté d’attributs n’a pu être affiché sur la carte.",
+  "attribution": "© les contributeurs d’OpenStreetMap"
+}

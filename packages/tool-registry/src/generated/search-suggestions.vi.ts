@@ -1293,6 +1293,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mobi-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "Chuyển MOBI sang PDF",
+    slug: "mobi-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "Kiểm tra dải chuyển màu màn hình",
     slug: "monitor-gradient-test",
@@ -1411,6 +1416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "Trình chỉnh sửa OPML",
     slug: "opml-editor",
+  },
+  {
+    category: "geo",
+    name: "Trình xem trước OSM PBF",
+    slug: "osm-pbf-preview",
   },
   {
     category: "developer",

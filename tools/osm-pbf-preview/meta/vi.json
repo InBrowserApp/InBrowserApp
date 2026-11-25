@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem trước OSM PBF",
+  "description": "Mở tệp trích xuất OpenStreetMap .osm.pbf hoặc .pbf từ thiết bị ngay trong trình duyệt. Đếm nốt, lối và quan hệ, rồi xem một phần dữ liệu cùng các thẻ trên bản đồ ngoại tuyến."
+}

@@ -1,0 +1,22 @@
+{
+  "open": "OSM-PBF öffnen",
+  "example": "Beispiel ausprobieren",
+  "drop": "OSM-PBF-Datei hier ablegen",
+  "formats": "Wähle einen OpenStreetMap-Auszug im Format .osm.pbf oder .pbf. Deine Datei bleibt auf diesem Gerät.",
+  "loading": "OSM-PBF-Datei wird eingelesen…",
+  "invalid": "Diese Datei konnte nicht gelesen werden. Wähle einen OpenStreetMap-Auszug im Format .osm.pbf.",
+  "nodes": "Knoten",
+  "ways": "Wege",
+  "relations": "Relationen",
+  "map": "Vorschau der OpenStreetMap-Daten",
+  "fit": "Auf Daten zoomen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "sample": "Die Karte zeigt eine Auswahl von Knoten und Wegen mit Tags. Die Zahlen oben gelten für die gesamte Datei.",
+  "features": "Objekte in der Vorschau",
+  "feature": "Objekt {number}",
+  "attributes": "OSM-Tags",
+  "noAttributes": "Dieses Objekt hat keine Tags.",
+  "noFeatures": "Die Karte konnte keine Knoten mit Tags oder vollständigen Wege mit Tags darstellen.",
+  "attribution": "© OpenStreetMap-Mitwirkende"
+}

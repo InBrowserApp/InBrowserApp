@@ -7,14 +7,14 @@ import {
   waitFor,
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import Client from "./client"
+import Client, { type BookPrintFormat } from "./client"
 import m from "./messages/en.json"
 
 const mock = vi.hoisted(() => ({ prepareBook: vi.fn() }))
 vi.mock("./prepare-book", () => mock)
 const book = { html: "<!doctype html><p>Book text</p>", missing: false }
 
-function setup(format: "epub" | "fb2" = "epub") {
+function setup(format: BookPrintFormat = "epub") {
   const { container } = render(
     <Client lang="en" format={format} messages={m} />
   )
@@ -164,3 +164,26 @@ test.each(["book.fb2", "book.FBZ", "book.fb2.zip"])(
     )
   }
 )
+
+test.each(["book.MOBI", "book.azw", "book.prc"])(
+  "prepares %s on the MOBI page",
+  async (name) => {
+    const { select, input } = setup("mobi")
+    expect(input.accept).toContain(".azw,.prc")
+    select(name)
+    await screen.findByTitle(m.preview)
+    expect(mock.prepareBook).toHaveBeenCalledWith(
+      expect.objectContaining({ name }),
+      expect.any(AbortSignal),
+      m,
+      "en"
+    )
+  }
+)
+
+test("routes an AZW3 selection through unsupported input feedback on the MOBI page", async () => {
+  const { select } = setup("mobi")
+  select("book.azw3")
+  await screen.findByText(m.unsupported)
+  expect(mock.prepareBook).not.toHaveBeenCalled()
+})

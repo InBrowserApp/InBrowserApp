@@ -317,6 +317,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "mobi-reader": () => import("@tool/mobi-reader/page"),
   "mobi-to-epub-converter": () => import("@tool/mobi-to-epub-converter/page"),
+  "mobi-to-pdf-converter": () => import("@tool/mobi-to-pdf-converter/page"),
   "monitor-gradient-test": () => import("@tool/monitor-gradient-test/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
   "mouse-tester": () => import("@tool/mouse-tester/page"),
@@ -347,6 +348,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "opml-editor": () => import("@tool/opml-editor/page"),
+  "osm-pbf-preview": () => import("@tool/osm-pbf-preview/page"),
   "parquet-viewer": () => import("@tool/parquet-viewer/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),

@@ -1,0 +1,10 @@
+{
+  "open": "MOBI-boek openen",
+  "replace": "Boek vervangen",
+  "drop": "Sleep hier een MOBI-, AZW- of PRC-boek naartoe",
+  "unsupported": "Kies een MOBI-, AZW- of PRC-boek op je apparaat.",
+  "invalid": "Dit boek is mogelijk beschadigd of onvolledig. Kies een andere kopie.",
+  "protected": "Dit boek is versleuteld of beveiligd tegen kopiëren. Kies een onversleutelde kopie.",
+  "unsupportedVariant": "Dit boekformaat of deze compressievariant wordt niet ondersteund. KFX en PRC-bestanden die geen ondersteund boek bevatten, kunnen niet worden geconverteerd.",
+  "unsupportedLayout": "Dit boek gebruikt een vaste of gemengde pagina-indeling die niet betrouwbaar kan worden geëxporteerd. Kies een boek met een aanpasbare indeling."
+}

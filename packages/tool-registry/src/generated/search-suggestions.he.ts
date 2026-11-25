@@ -1293,6 +1293,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mobi-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "ממיר MOBI ל־PDF",
+    slug: "mobi-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "בדיקת מעברי צבע במסך",
     slug: "monitor-gradient-test",
@@ -1411,6 +1416,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "web",
     name: "עורך OPML",
     slug: "opml-editor",
+  },
+  {
+    category: "geo",
+    name: "תצוגה מקדימה של OSM PBF",
+    slug: "osm-pbf-preview",
   },
   {
     category: "developer",

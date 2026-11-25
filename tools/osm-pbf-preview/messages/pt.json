@@ -1,0 +1,22 @@
+{
+  "open": "Abrir OSM PBF",
+  "example": "Testar um exemplo",
+  "drop": "Solte um arquivo OSM PBF aqui",
+  "formats": "Use um extrato do OpenStreetMap em formato .osm.pbf ou .pbf. Seu arquivo fica neste dispositivo.",
+  "loading": "Analisando o arquivo OSM PBF…",
+  "invalid": "Não foi possível ler este arquivo. Escolha um extrato do OpenStreetMap em formato .osm.pbf.",
+  "nodes": "Nós",
+  "ways": "Caminhos",
+  "relations": "Relações",
+  "map": "Prévia dos dados do OpenStreetMap",
+  "fit": "Ajustar aos dados",
+  "zoomIn": "Aproximar",
+  "zoomOut": "Afastar",
+  "sample": "O mapa mostra uma amostra de nós e caminhos com etiquetas. As contagens acima incluem todo o arquivo.",
+  "features": "Elementos da prévia",
+  "feature": "Elemento {number}",
+  "attributes": "Etiquetas do OSM",
+  "noAttributes": "Este elemento não tem etiquetas.",
+  "noFeatures": "Não foi possível posicionar no mapa nós ou caminhos completos com etiquetas.",
+  "attribution": "© colaboradores do OpenStreetMap"
+}

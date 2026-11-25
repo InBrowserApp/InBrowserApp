@@ -1,0 +1,4 @@
+{
+  "name": "Vista previa de OSM PBF",
+  "description": "Abre un extracto local de OpenStreetMap (.osm.pbf o .pbf) en tu navegador. Cuenta nodos, vías y relaciones y consulta las etiquetas de una selección de elementos en un mapa sin conexión."
+}

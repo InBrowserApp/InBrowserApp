@@ -1,0 +1,4 @@
+{
+  "name": "OSM PBF 미리보기",
+  "description": "기기에 저장된 OpenStreetMap .osm.pbf 또는 .pbf 추출 데이터를 브라우저에서 여세요. 노드, 웨이, 관계를 집계하고 오프라인 지도에서 표본과 태그를 확인할 수 있습니다."
+}
