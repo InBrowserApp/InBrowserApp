@@ -1,0 +1,4 @@
+{
+  "name": "Odtwarzacz MIDI",
+  "description": "Odtwarzaj pliki MIDI w przeglądarce z brzmieniami wbudowanych instrumentów General MIDI. Przewijaj pliki .mid lub .midi, zmieniaj prędkość, odtwarzaj w pętli i wyciszaj wybrane ścieżki."
+}

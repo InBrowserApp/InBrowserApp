@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-speler",
+  "description": "Speel MIDI-bestanden af in je browser met ingebouwde General MIDI-instrumenten. Spring naar een passage in een .mid- of .midi-bestand, verander de afspeelsnelheid, herhaal het bestand of demp afzonderlijke sporen."
+}

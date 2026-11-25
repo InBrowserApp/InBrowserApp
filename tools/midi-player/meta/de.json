@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-Player",
+  "description": "Spiele MIDI-Dateien mit integrierten General-MIDI-Instrumenten im Browser ab. Springe zu einer Stelle in einer .mid- oder .midi-Datei, ändere die Geschwindigkeit, wiederhole sie oder schalte einzelne Spuren stumm."
+}

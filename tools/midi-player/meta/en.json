@@ -1,0 +1,4 @@
+{
+  "name": "MIDI Player",
+  "description": "Play MIDI files in your browser with built-in General MIDI instruments. Seek through a .mid or .midi file, change playback speed, loop it, and mute individual tracks."
+}

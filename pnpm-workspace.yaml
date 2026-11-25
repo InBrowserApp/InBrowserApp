@@ -190,6 +190,7 @@ catalog:
   lossless-json: 4.3.3
   sql.js: 1.16.0
   spessasynth_core: 4.4.12
+  spessasynth_lib: 4.4.10
   "@types/sql.js": 1.4.11
   "@resvg/resvg-wasm": 2.6.2
   "@matbee/libreoffice-converter": 2.7.2

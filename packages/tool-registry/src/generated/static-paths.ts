@@ -24658,6 +24658,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-player",
+    language: "ar",
+  },
+  {
+    slug: "midi-player",
+    language: "de",
+  },
+  {
+    slug: "midi-player",
+    language: "en",
+  },
+  {
+    slug: "midi-player",
+    language: "es",
+  },
+  {
+    slug: "midi-player",
+    language: "fr",
+  },
+  {
+    slug: "midi-player",
+    language: "he",
+  },
+  {
+    slug: "midi-player",
+    language: "hi",
+  },
+  {
+    slug: "midi-player",
+    language: "id",
+  },
+  {
+    slug: "midi-player",
+    language: "it",
+  },
+  {
+    slug: "midi-player",
+    language: "ja",
+  },
+  {
+    slug: "midi-player",
+    language: "ko",
+  },
+  {
+    slug: "midi-player",
+    language: "ms",
+  },
+  {
+    slug: "midi-player",
+    language: "nl",
+  },
+  {
+    slug: "midi-player",
+    language: "no",
+  },
+  {
+    slug: "midi-player",
+    language: "pl",
+  },
+  {
+    slug: "midi-player",
+    language: "pt",
+  },
+  {
+    slug: "midi-player",
+    language: "ru",
+  },
+  {
+    slug: "midi-player",
+    language: "sv",
+  },
+  {
+    slug: "midi-player",
+    language: "th",
+  },
+  {
+    slug: "midi-player",
+    language: "tr",
+  },
+  {
+    slug: "midi-player",
+    language: "vi",
+  },
+  {
+    slug: "midi-player",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-player",
+    language: "zh-TW",
+  },
+  {
     slug: "midi-to-musicxml-converter",
     language: "ar",
   },

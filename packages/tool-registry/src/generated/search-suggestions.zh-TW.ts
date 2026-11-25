@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "music",
+    name: "MIDI 播放器",
+    slug: "midi-player",
+  },
+  {
+    category: "music",
     name: "MIDI 轉 MusicXML 轉換器",
     slug: "midi-to-musicxml-converter",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-spelare",
+  "description": "Spela MIDI-filer i webbläsaren med inbyggda General MIDI-instrument. Hoppa till ett avsnitt i en .mid- eller .midi-fil, ändra hastigheten, spela i loop eller tysta enskilda spår."
+}

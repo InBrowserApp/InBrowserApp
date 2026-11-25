@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-spiller",
+  "description": "Spill av MIDI-filer i nettleseren med innebygde General MIDI-instrumenter. Hopp til et sted i en .mid- eller .midi-fil, endre hastigheten, gjenta avspillingen og demp enkeltspor."
+}

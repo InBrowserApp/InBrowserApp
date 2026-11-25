@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "music",
+    name: "MIDI-spelare",
+    slug: "midi-player",
+  },
+  {
+    category: "music",
     name: "MIDI till MusicXML-konverterare",
     slug: "midi-to-musicxml-converter",
   },

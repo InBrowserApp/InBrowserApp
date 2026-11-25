@@ -136,6 +136,7 @@ export {
   TriangleAlert,
   Video,
   Volume2,
+  VolumeX,
   Wrench,
   Workflow,
   Upload,
