@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Ricerca accordi di archiviazione Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Calcolatore Filecoin Piece CID",
     slug: "filecoin-piece-cid-calculator",
   },

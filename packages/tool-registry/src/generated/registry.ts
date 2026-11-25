@@ -16029,6 +16029,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "filecoin-deal-lookup",
+    category: "ipfs",
+    icon: "file-text",
+    tags: [
+      "filecoin",
+      "deal id",
+      "storage deal",
+      "status",
+      "provider",
+      "piece cid",
+    ],
+    locales: {
+      ar: {
+        name: "البحث عن صفقات تخزين Filecoin",
+        description:
+          "ابحث عن صفقة تخزين على Filecoin باستخدام معرّف الصفقة. تحقّق من حالتها على الشبكة الرئيسية، واعرض مزوّد التخزين وتاريخَي البدء والانتهاء، وانسخ معرّف Piece CID.",
+      },
+      de: {
+        name: "Filecoin-Speichervereinbarungen suchen",
+        description:
+          "Rufen Sie eine Filecoin-Speichervereinbarung per Vereinbarungs-ID ab. Prüfen Sie Mainnet-Status, Speicheranbieter, Start- und Enddatum und kopieren Sie die Piece-CID.",
+      },
+      en: {
+        name: "Filecoin Deal Lookup",
+        description:
+          "Look up a Filecoin storage deal by Deal ID. Check mainnet deal status, provider, start and end dates, and copy its Piece CID.",
+      },
+      es: {
+        name: "Consulta de acuerdos de almacenamiento de Filecoin",
+        description:
+          "Consulta un acuerdo de almacenamiento de Filecoin por su ID. Comprueba su estado en la red principal, el proveedor y las fechas de inicio y fin, y copia su Piece CID.",
+      },
+      fr: {
+        name: "Recherche de contrats de stockage Filecoin",
+        description:
+          "Retrouvez un contrat de stockage Filecoin à partir de son ID. Consultez son statut sur le réseau principal, son fournisseur et ses dates de début et de fin, puis copiez son Piece CID.",
+      },
+      he: {
+        name: "איתור עסקאות אחסון ב-Filecoin",
+        description:
+          "אתרו עסקת אחסון ב-Filecoin לפי מזהה העסקה. בדקו את מצבה ברשת הראשית, את ספק האחסון ואת תאריכי ההתחלה והסיום, והעתיקו את ה-Piece CID שלה.",
+      },
+      hi: {
+        name: "Filecoin डील खोज",
+        description:
+          "डील ID से Filecoin स्टोरेज डील ढूँढें। मेननेट पर डील की स्थिति, स्टोरेज प्रदाता, शुरू और खत्म होने की तारीखें देखें और उसका Piece CID कॉपी करें।",
+      },
+      id: {
+        name: "Pencarian Kesepakatan Filecoin",
+        description:
+          "Cari kesepakatan penyimpanan Filecoin dengan Deal ID. Periksa status di mainnet, penyedia, serta tanggal mulai dan berakhir, lalu salin Piece CID.",
+      },
+      it: {
+        name: "Ricerca accordi di archiviazione Filecoin",
+        description:
+          "Cerca un accordo di archiviazione Filecoin tramite Deal ID. Controlla stato sulla rete principale, provider e date di inizio e fine, e copia il Piece CID.",
+      },
+      ja: {
+        name: "Filecoin ストレージ取引検索",
+        description:
+          "取引 ID から Filecoin のストレージ取引を検索します。メインネットでの取引の状態、ストレージプロバイダー、開始日と終了日を確認し、Piece CID をコピーできます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 거래 조회",
+        description:
+          "거래 ID로 Filecoin 스토리지 거래를 조회하세요. 메인넷 거래 상태, 스토리지 제공자, 시작일과 종료일을 확인하고 Piece CID를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Carian Perjanjian Filecoin",
+        description:
+          "Cari perjanjian storan Filecoin dengan Deal ID. Semak status di mainnet, penyedia, tarikh mula dan tamat, lalu salin Piece CID.",
+      },
+      nl: {
+        name: "Filecoin-opslagdeal opzoeken",
+        description:
+          "Zoek een Filecoin-opslagdeal op met een Deal ID. Controleer de dealstatus op mainnet, provider en begin- en einddatum, en kopieer de Piece CID.",
+      },
+      no: {
+        name: "Søk etter Filecoin-lagringsavtale",
+        description:
+          "Søk opp en Filecoin-lagringsavtale med Deal ID. Kontroller avtalestatus på hovednettet, leverandør og start- og sluttdato, og kopier Piece CID.",
+      },
+      pl: {
+        name: "Wyszukiwarka umów Filecoin",
+        description:
+          "Znajdź umowę przechowywania danych w Filecoin po jej identyfikatorze. Sprawdź status w sieci głównej, dostawcę oraz daty rozpoczęcia i zakończenia, a także skopiuj Piece CID.",
+      },
+      pt: {
+        name: "Consulta de acordos de armazenamento do Filecoin",
+        description:
+          "Consulte um acordo de armazenamento do Filecoin através do respetivo ID. Veja o estado na rede principal, o fornecedor e as datas de início e fim, e copie o Piece CID.",
+      },
+      ru: {
+        name: "Поиск сделок Filecoin",
+        description:
+          "Найдите сделку на хранение в Filecoin по ID. Проверьте статус в основной сети, поставщика хранилища, даты начала и окончания и скопируйте Piece CID.",
+      },
+      sv: {
+        name: "Sök Filecoin-lagringsavtal",
+        description:
+          "Sök ett Filecoin-lagringsavtal med Deal ID. Kontrollera avtalets status på huvudnätet, leverantör samt start- och slutdatum, och kopiera dess Piece CID.",
+      },
+      th: {
+        name: "เครื่องมือค้นหาข้อตกลง Filecoin",
+        description:
+          "ค้นหาข้อตกลงการจัดเก็บข้อมูล Filecoin ด้วย Deal ID ดูสถานะบนเครือข่ายหลัก ผู้ให้บริการ วันที่เริ่มต้นและสิ้นสุด แล้วคัดลอก Piece CID",
+      },
+      tr: {
+        name: "Filecoin Depolama Anlaşması Sorgulama",
+        description:
+          "Filecoin depolama anlaşmasını kimliğiyle sorgulayın. Ana ağdaki anlaşma durumunu, sağlayıcıyı, başlangıç ve bitiş tarihlerini inceleyin, Piece CID değerini kopyalayın.",
+      },
+      vi: {
+        name: "Tra cứu thỏa thuận Filecoin",
+        description:
+          "Tra cứu thỏa thuận lưu trữ Filecoin bằng Deal ID. Xem trạng thái trên mạng chính, nhà cung cấp, ngày bắt đầu và kết thúc, rồi sao chép Piece CID.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储交易查询",
+        description:
+          "按交易 ID 查询 Filecoin 存储交易。查看主网交易状态、存储提供商及起止日期，并复制 Piece CID。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存交易查詢",
+        description:
+          "依交易 ID 查詢 Filecoin 儲存交易。查看主網交易狀態、儲存供應商及起訖日期，並複製 Piece CID。",
+      },
+    },
+  },
+  {
     slug: "filecoin-piece-cid-calculator",
     category: "ipfs",
     icon: "hash",
@@ -67588,6 +67718,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案類型偵測器",
         description:
           "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  "filecoin-deal-lookup": {
+    slug: "filecoin-deal-lookup",
+    category: "ipfs",
+    icon: "file-text",
+    tags: [
+      "filecoin",
+      "deal id",
+      "storage deal",
+      "status",
+      "provider",
+      "piece cid",
+    ],
+    locales: {
+      ar: {
+        name: "البحث عن صفقات تخزين Filecoin",
+        description:
+          "ابحث عن صفقة تخزين على Filecoin باستخدام معرّف الصفقة. تحقّق من حالتها على الشبكة الرئيسية، واعرض مزوّد التخزين وتاريخَي البدء والانتهاء، وانسخ معرّف Piece CID.",
+      },
+      de: {
+        name: "Filecoin-Speichervereinbarungen suchen",
+        description:
+          "Rufen Sie eine Filecoin-Speichervereinbarung per Vereinbarungs-ID ab. Prüfen Sie Mainnet-Status, Speicheranbieter, Start- und Enddatum und kopieren Sie die Piece-CID.",
+      },
+      en: {
+        name: "Filecoin Deal Lookup",
+        description:
+          "Look up a Filecoin storage deal by Deal ID. Check mainnet deal status, provider, start and end dates, and copy its Piece CID.",
+      },
+      es: {
+        name: "Consulta de acuerdos de almacenamiento de Filecoin",
+        description:
+          "Consulta un acuerdo de almacenamiento de Filecoin por su ID. Comprueba su estado en la red principal, el proveedor y las fechas de inicio y fin, y copia su Piece CID.",
+      },
+      fr: {
+        name: "Recherche de contrats de stockage Filecoin",
+        description:
+          "Retrouvez un contrat de stockage Filecoin à partir de son ID. Consultez son statut sur le réseau principal, son fournisseur et ses dates de début et de fin, puis copiez son Piece CID.",
+      },
+      he: {
+        name: "איתור עסקאות אחסון ב-Filecoin",
+        description:
+          "אתרו עסקת אחסון ב-Filecoin לפי מזהה העסקה. בדקו את מצבה ברשת הראשית, את ספק האחסון ואת תאריכי ההתחלה והסיום, והעתיקו את ה-Piece CID שלה.",
+      },
+      hi: {
+        name: "Filecoin डील खोज",
+        description:
+          "डील ID से Filecoin स्टोरेज डील ढूँढें। मेननेट पर डील की स्थिति, स्टोरेज प्रदाता, शुरू और खत्म होने की तारीखें देखें और उसका Piece CID कॉपी करें।",
+      },
+      id: {
+        name: "Pencarian Kesepakatan Filecoin",
+        description:
+          "Cari kesepakatan penyimpanan Filecoin dengan Deal ID. Periksa status di mainnet, penyedia, serta tanggal mulai dan berakhir, lalu salin Piece CID.",
+      },
+      it: {
+        name: "Ricerca accordi di archiviazione Filecoin",
+        description:
+          "Cerca un accordo di archiviazione Filecoin tramite Deal ID. Controlla stato sulla rete principale, provider e date di inizio e fine, e copia il Piece CID.",
+      },
+      ja: {
+        name: "Filecoin ストレージ取引検索",
+        description:
+          "取引 ID から Filecoin のストレージ取引を検索します。メインネットでの取引の状態、ストレージプロバイダー、開始日と終了日を確認し、Piece CID をコピーできます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 거래 조회",
+        description:
+          "거래 ID로 Filecoin 스토리지 거래를 조회하세요. 메인넷 거래 상태, 스토리지 제공자, 시작일과 종료일을 확인하고 Piece CID를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Carian Perjanjian Filecoin",
+        description:
+          "Cari perjanjian storan Filecoin dengan Deal ID. Semak status di mainnet, penyedia, tarikh mula dan tamat, lalu salin Piece CID.",
+      },
+      nl: {
+        name: "Filecoin-opslagdeal opzoeken",
+        description:
+          "Zoek een Filecoin-opslagdeal op met een Deal ID. Controleer de dealstatus op mainnet, provider en begin- en einddatum, en kopieer de Piece CID.",
+      },
+      no: {
+        name: "Søk etter Filecoin-lagringsavtale",
+        description:
+          "Søk opp en Filecoin-lagringsavtale med Deal ID. Kontroller avtalestatus på hovednettet, leverandør og start- og sluttdato, og kopier Piece CID.",
+      },
+      pl: {
+        name: "Wyszukiwarka umów Filecoin",
+        description:
+          "Znajdź umowę przechowywania danych w Filecoin po jej identyfikatorze. Sprawdź status w sieci głównej, dostawcę oraz daty rozpoczęcia i zakończenia, a także skopiuj Piece CID.",
+      },
+      pt: {
+        name: "Consulta de acordos de armazenamento do Filecoin",
+        description:
+          "Consulte um acordo de armazenamento do Filecoin através do respetivo ID. Veja o estado na rede principal, o fornecedor e as datas de início e fim, e copie o Piece CID.",
+      },
+      ru: {
+        name: "Поиск сделок Filecoin",
+        description:
+          "Найдите сделку на хранение в Filecoin по ID. Проверьте статус в основной сети, поставщика хранилища, даты начала и окончания и скопируйте Piece CID.",
+      },
+      sv: {
+        name: "Sök Filecoin-lagringsavtal",
+        description:
+          "Sök ett Filecoin-lagringsavtal med Deal ID. Kontrollera avtalets status på huvudnätet, leverantör samt start- och slutdatum, och kopiera dess Piece CID.",
+      },
+      th: {
+        name: "เครื่องมือค้นหาข้อตกลง Filecoin",
+        description:
+          "ค้นหาข้อตกลงการจัดเก็บข้อมูล Filecoin ด้วย Deal ID ดูสถานะบนเครือข่ายหลัก ผู้ให้บริการ วันที่เริ่มต้นและสิ้นสุด แล้วคัดลอก Piece CID",
+      },
+      tr: {
+        name: "Filecoin Depolama Anlaşması Sorgulama",
+        description:
+          "Filecoin depolama anlaşmasını kimliğiyle sorgulayın. Ana ağdaki anlaşma durumunu, sağlayıcıyı, başlangıç ve bitiş tarihlerini inceleyin, Piece CID değerini kopyalayın.",
+      },
+      vi: {
+        name: "Tra cứu thỏa thuận Filecoin",
+        description:
+          "Tra cứu thỏa thuận lưu trữ Filecoin bằng Deal ID. Xem trạng thái trên mạng chính, nhà cung cấp, ngày bắt đầu và kết thúc, rồi sao chép Piece CID.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储交易查询",
+        description:
+          "按交易 ID 查询 Filecoin 存储交易。查看主网交易状态、存储提供商及起止日期，并复制 Piece CID。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存交易查詢",
+        description:
+          "依交易 ID 查詢 Filecoin 儲存交易。查看主網交易狀態、儲存供應商及起訖日期，並複製 Piece CID。",
       },
     },
   },

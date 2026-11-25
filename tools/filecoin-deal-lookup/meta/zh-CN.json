@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 存储交易查询",
+  "description": "按交易 ID 查询 Filecoin 存储交易。查看主网交易状态、存储提供商及起止日期，并复制 Piece CID。"
+}

@@ -11502,6 +11502,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "filecoin-deal-lookup",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "de",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "en",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "es",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "he",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "id",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "it",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "no",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "th",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "filecoin-piece-cid-calculator",
     language: "ar",
   },

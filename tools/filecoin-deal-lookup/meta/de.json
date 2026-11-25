@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-Speichervereinbarungen suchen",
+  "description": "Rufen Sie eine Filecoin-Speichervereinbarung per Vereinbarungs-ID ab. Prüfen Sie Mainnet-Status, Speicheranbieter, Start- und Enddatum und kopieren Sie die Piece-CID."
+}
