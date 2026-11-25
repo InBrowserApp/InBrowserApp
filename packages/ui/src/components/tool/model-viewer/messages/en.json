@@ -1,0 +1,20 @@
+{
+  "open": "Open files",
+  "drop": "Drop model files here",
+  "release": "Release to open the model",
+  "privacy": "Your files stay on this device.",
+  "example": "Try an example",
+  "loading": "Opening 3D model…",
+  "invalid": "Could not open the model. Choose a valid file in one of the supported formats.",
+  "renderError": "The 3D view could not start. Try a browser with WebGL 2 available.",
+  "viewport": "3D model view",
+  "fit": "Fit to view",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "wireframe": "Wireframe",
+  "overall": "Overall size",
+  "controls": "Drag to rotate · Scroll to zoom · Right-drag to pan",
+  "touchControls": "Drag to rotate · Pinch to zoom · Two fingers to pan",
+  "keyboardControls": "Use the arrow keys to rotate and + or − to zoom. Hold Shift with the arrow keys to pan.",
+  "missingResources": "Some materials or textures are missing. Open the model and its companion files together."
+}

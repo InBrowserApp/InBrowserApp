@@ -1,0 +1,4 @@
+{
+  "name": "STL Viewer",
+  "description": "Open ASCII or binary STL files in your browser. Rotate, zoom and inspect the triangular mesh before sending the model to a 3D printer."
+}

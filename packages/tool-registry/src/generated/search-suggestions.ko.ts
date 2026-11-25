@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "OBJ 뷰어",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "ODS → XLSX 변환기",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "스테레오 좌우 채널 분리",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL 뷰어",
+    slug: "stl-viewer",
   },
   {
     category: "time",

@@ -1,0 +1,20 @@
+{
+  "open": "Öppna filer",
+  "drop": "Släpp modellfiler här",
+  "release": "Släpp för att öppna modellen",
+  "privacy": "Dina filer stannar på den här enheten.",
+  "example": "Prova ett exempel",
+  "loading": "Öppnar 3D-modellen…",
+  "invalid": "Det gick inte att öppna modellen. Välj en giltig fil i något av de format som stöds.",
+  "renderError": "Det gick inte att starta 3D-vyn. Prova en webbläsare där WebGL 2 är tillgängligt.",
+  "viewport": "3D-modellvy",
+  "fit": "Visa hela modellen",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "wireframe": "Trådram",
+  "overall": "Yttermått",
+  "controls": "Dra för att rotera · Rulla för att zooma · Dra med höger musknapp för att panorera",
+  "touchControls": "Dra för att rotera · Nyp för att zooma · Dra med två fingrar för att panorera",
+  "keyboardControls": "Rotera med piltangenterna och zooma med + eller −. Håll ned Skift och använd piltangenterna för att flytta vyn.",
+  "missingResources": "Vissa material eller texturer saknas. Öppna modellen tillsammans med tillhörande filer."
+}

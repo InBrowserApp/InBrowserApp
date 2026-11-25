@@ -1,0 +1,20 @@
+{
+  "open": "Dosyaları aç",
+  "drop": "Model dosyalarını buraya bırakın",
+  "release": "Modeli açmak için bırakın",
+  "privacy": "Dosyalarınız cihazınızda kalır.",
+  "example": "Örnek dene",
+  "loading": "3B model açılıyor…",
+  "invalid": "Model açılamadı. Desteklenen biçimlerden birinde geçerli bir dosya seçin.",
+  "renderError": "3B görünüm açılamadı. WebGL 2 destekleyen bir tarayıcı deneyin.",
+  "viewport": "3B model görünümü",
+  "fit": "Ekrana sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "wireframe": "Tel kafes",
+  "overall": "Genel boyutlar",
+  "controls": "Döndürmek için sürükleyin · Yakınlaştırmak için tekerleği kullanın · Kaydırmak için sağ tuşla sürükleyin",
+  "touchControls": "Döndürmek için sürükleyin · Yakınlaştırmak için iki parmağınızı açıp kapatın · Kaydırmak için iki parmakla sürükleyin",
+  "keyboardControls": "Döndürmek için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + ve − tuşlarını kullanın. Görünümü kaydırmak için Shift tuşunu basılı tutarak ok tuşlarını kullanın.",
+  "missingResources": "Bazı malzemeler veya dokular eksik. Modeli ve ona ait dosyaları birlikte açın."
+}

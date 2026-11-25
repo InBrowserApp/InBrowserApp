@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de OBJ",
+  "description": "Abra arquivos Wavefront OBJ em 3D. Inspecione a malha ou selecione também os arquivos MTL e as texturas para visualizar a aparência do modelo."
+}

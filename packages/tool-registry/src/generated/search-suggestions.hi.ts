@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "OBJ व्यूअर",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "ODS से XLSX कन्वर्टर",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "स्टीरियो चैनल अलग करें",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL व्यूअर",
+    slug: "stl-viewer",
   },
   {
     category: "time",

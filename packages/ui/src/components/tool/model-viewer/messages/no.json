@@ -1,0 +1,20 @@
+{
+  "open": "Åpne filer",
+  "drop": "Slipp modellfiler her",
+  "release": "Slipp for å åpne modellen",
+  "privacy": "Filene blir på enheten din.",
+  "example": "Prøv et eksempel",
+  "loading": "Åpner 3D-modellen …",
+  "invalid": "Kunne ikke åpne modellen. Velg en gyldig fil i et av de støttede formatene.",
+  "renderError": "Kunne ikke starte 3D-visningen. Prøv en nettleser der WebGL 2 er tilgjengelig.",
+  "viewport": "3D-visning av modellen",
+  "fit": "Vis hele modellen",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "wireframe": "Trådmodell",
+  "overall": "Ytterdimensjoner",
+  "controls": "Dra for å rotere · Rull for å zoome · Dra med høyre museknapp for å panorere",
+  "touchControls": "Dra for å rotere · Knip for å zoome · Dra med to fingre for å panorere",
+  "keyboardControls": "Roter med piltastene og zoom med + eller −. Hold nede Shift og bruk piltastene til å flytte visningen.",
+  "missingResources": "Noen materialer eller teksturer mangler. Åpne modellen sammen med de tilhørende filene."
+}

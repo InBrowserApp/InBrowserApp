@@ -1,0 +1,20 @@
+{
+  "open": "Abrir arquivos",
+  "drop": "Solte aqui os arquivos do modelo",
+  "release": "Solte para abrir o modelo",
+  "privacy": "Seus arquivos ficam neste dispositivo.",
+  "example": "Experimentar um exemplo",
+  "loading": "Abrindo modelo 3D…",
+  "invalid": "Não foi possível abrir o modelo. Escolha um arquivo válido em um dos formatos compatíveis.",
+  "renderError": "Não foi possível iniciar a visualização 3D. Experimente um navegador com suporte a WebGL 2.",
+  "viewport": "Visualização do modelo 3D",
+  "fit": "Ajustar à janela",
+  "zoomIn": "Aumentar zoom",
+  "zoomOut": "Diminuir zoom",
+  "wireframe": "Malha de arame",
+  "overall": "Dimensões totais",
+  "controls": "Arraste para girar · Use a roda do mouse para dar zoom · Arraste com o botão direito para deslocar",
+  "touchControls": "Arraste para girar · Faça o gesto de pinça para dar zoom · Arraste com dois dedos para deslocar",
+  "keyboardControls": "Use as setas para girar e + ou − para ajustar o zoom. Mantenha Shift pressionado e use as setas para mover a vista.",
+  "missingResources": "Alguns materiais ou texturas estão faltando. Abra o modelo e os arquivos associados juntos."
+}

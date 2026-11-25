@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "Trình xem OBJ",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "Trình chuyển đổi ODS sang XLSX",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Tách kênh âm thanh stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Trình xem STL",
+    slug: "stl-viewer",
   },
   {
     category: "time",

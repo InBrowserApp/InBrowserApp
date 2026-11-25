@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "מציג OBJ",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "ממיר ODS ל-XLSX",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "פיצול ערוצי סטריאו",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "מציג STL",
+    slug: "stl-viewer",
   },
   {
     category: "time",

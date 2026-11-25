@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore STL",
+  "description": "Apri file STL ASCII o binari nel browser. Ruota e ingrandisci il modello per esaminarne la mesh triangolare prima di stamparlo in 3D."
+}

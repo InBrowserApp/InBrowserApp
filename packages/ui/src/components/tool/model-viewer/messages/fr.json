@@ -1,0 +1,20 @@
+{
+  "open": "Ouvrir des fichiers",
+  "drop": "Déposez les fichiers du modèle ici",
+  "release": "Relâchez pour ouvrir le modèle",
+  "privacy": "Vos fichiers restent sur votre appareil.",
+  "example": "Essayer un exemple",
+  "loading": "Ouverture du modèle 3D…",
+  "invalid": "Impossible d’ouvrir le modèle. Choisissez un fichier valide dans un format pris en charge.",
+  "renderError": "Impossible d’afficher la vue 3D. Essayez avec un navigateur compatible avec WebGL 2.",
+  "viewport": "Vue 3D du modèle",
+  "fit": "Cadrer le modèle",
+  "zoomIn": "Zoom avant",
+  "zoomOut": "Zoom arrière",
+  "wireframe": "Filaire",
+  "overall": "Dimensions hors tout",
+  "controls": "Glisser pour pivoter · Molette pour zoomer · Glisser avec le bouton droit pour déplacer la vue",
+  "touchControls": "Glisser pour pivoter · Pincer pour zoomer · Glisser à deux doigts pour déplacer la vue",
+  "keyboardControls": "Utilisez les flèches pour faire pivoter le modèle et les touches + ou − pour zoomer. Maintenez Maj et utilisez les flèches pour déplacer la vue.",
+  "missingResources": "Des matériaux ou des textures manquent. Ouvrez le modèle et ses fichiers associés ensemble."
+}

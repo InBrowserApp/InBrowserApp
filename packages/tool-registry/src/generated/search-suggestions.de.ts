@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "OBJ-Betrachter",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "ODS-zu-XLSX-Konverter",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Stereokanäle trennen",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL-Betrachter",
+    slug: "stl-viewer",
   },
   {
     category: "time",

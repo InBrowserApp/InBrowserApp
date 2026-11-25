@@ -1,0 +1,4 @@
+{
+  "name": "OBJ-Betrachter",
+  "description": "Öffne Wavefront-OBJ-Dateien in 3D. Prüfe das Polygonnetz oder wähle die MTL-Datei und die Texturen mit aus, um das Modell mit seinen Materialien zu sehen."
+}

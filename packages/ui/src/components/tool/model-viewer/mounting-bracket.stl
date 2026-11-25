@@ -1,0 +1,142 @@
+solid mounting-bracket
+  facet normal 0 0 -1
+    outer loop
+      vertex 44 8 0
+      vertex 44 0 0
+      vertex 0 0 0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 12 8 0
+      vertex 44 8 0
+      vertex 0 0 0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 30 0
+      vertex 12 8 0
+      vertex 0 0 0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 30 0
+      vertex 12 30 0
+      vertex 12 8 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 26
+      vertex 44 0 26
+      vertex 44 8 26
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 26
+      vertex 44 8 26
+      vertex 12 8 26
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 26
+      vertex 12 8 26
+      vertex 0 30 26
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 12 8 26
+      vertex 12 30 26
+      vertex 0 30 26
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 44 0 0
+      vertex 44 0 26
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 44 0 26
+      vertex 0 0 26
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 44 0 0
+      vertex 44 8 0
+      vertex 44 8 26
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 44 0 0
+      vertex 44 8 26
+      vertex 44 0 26
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 44 8 0
+      vertex 12 8 0
+      vertex 12 8 26
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 44 8 0
+      vertex 12 8 26
+      vertex 44 8 26
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 12 8 0
+      vertex 12 30 0
+      vertex 12 30 26
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 12 8 0
+      vertex 12 30 26
+      vertex 12 8 26
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 12 30 0
+      vertex 0 30 0
+      vertex 0 30 26
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 12 30 0
+      vertex 0 30 26
+      vertex 12 30 26
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 30 0
+      vertex 0 0 0
+      vertex 0 0 26
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 30 0
+      vertex 0 0 26
+      vertex 0 30 26
+    endloop
+  endfacet
+endsolid mounting-bracket

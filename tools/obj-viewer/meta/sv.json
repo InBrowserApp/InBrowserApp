@@ -1,0 +1,4 @@
+{
+  "name": "OBJ-visare",
+  "description": "Öppna Wavefront OBJ-filer i 3D. Granska modellens polygonnät eller lägg till MTL-filen och texturerna för att se modellens material och ytor."
+}

@@ -1,0 +1,20 @@
+{
+  "open": "Buka file",
+  "drop": "Letakkan file model di sini",
+  "release": "Lepaskan untuk membuka model",
+  "privacy": "File tetap di perangkat Anda.",
+  "example": "Coba contoh",
+  "loading": "Membuka model 3D…",
+  "invalid": "Model tidak dapat dibuka. Pilih file yang valid dalam salah satu format yang didukung.",
+  "renderError": "Tampilan 3D tidak dapat dimuat. Coba browser yang mendukung WebGL 2.",
+  "viewport": "Area tampilan model 3D",
+  "fit": "Tampilkan seluruh model",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "wireframe": "Rangka kawat",
+  "overall": "Dimensi keseluruhan",
+  "controls": "Seret untuk memutar · Gulir untuk memperbesar atau memperkecil · Seret dengan tombol kanan untuk menggeser",
+  "touchControls": "Seret untuk memutar · Cubit atau rentangkan dua jari untuk mengubah skala · Geser dengan dua jari",
+  "keyboardControls": "Gunakan tombol panah untuk memutar, serta + atau − untuk memperbesar atau memperkecil. Tahan Shift sambil menekan tombol panah untuk menggeser tampilan.",
+  "missingResources": "Sebagian material atau tekstur tidak tersedia. Buka kembali model bersama file pendampingnya."
+}

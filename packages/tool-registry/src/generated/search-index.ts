@@ -31524,6 +31524,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "obj-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "obj",
+      "wavefront",
+      "3d",
+      "mesh",
+      "materials",
+      "mtl",
+      "textures",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض OBJ",
+        description:
+          "افتح ملفات Wavefront OBJ واعرضها ثلاثية الأبعاد. افحص الشبكة، أو اختر ملف MTL وملفات صور الخامات معه لترى مظهر النموذج.",
+      },
+      de: {
+        name: "OBJ-Betrachter",
+        description:
+          "Öffne Wavefront-OBJ-Dateien in 3D. Prüfe das Polygonnetz oder wähle die MTL-Datei und die Texturen mit aus, um das Modell mit seinen Materialien zu sehen.",
+      },
+      en: {
+        name: "OBJ Viewer",
+        description:
+          "Open Wavefront OBJ files in 3D. Inspect the mesh or select its MTL file and textures together to see the model’s appearance.",
+      },
+      es: {
+        name: "Visor de OBJ",
+        description:
+          "Abre archivos Wavefront OBJ en 3D. Inspecciona la malla o selecciona también los archivos MTL y las texturas para ver el aspecto del modelo.",
+      },
+      fr: {
+        name: "Visionneuse OBJ",
+        description:
+          "Ouvrez vos fichiers Wavefront OBJ en 3D. Inspectez le maillage ou sélectionnez aussi les fichiers MTL et les textures pour voir l’apparence du modèle.",
+      },
+      he: {
+        name: "מציג OBJ",
+        description:
+          "פתחו קובצי Wavefront OBJ בתלת־ממד. בדקו את הרשת, או בחרו גם את קובץ ה־MTL ואת קובצי המרקמים כדי לראות את מראה המודל.",
+      },
+      hi: {
+        name: "OBJ व्यूअर",
+        description:
+          "Wavefront OBJ फ़ाइलें 3D में खोलें। मेश की जाँच करें या मॉडल का रूप देखने के लिए उसकी MTL फ़ाइल और टेक्सचर भी साथ चुनें।",
+      },
+      id: {
+        name: "Penampil OBJ",
+        description:
+          "Buka file Wavefront OBJ dalam 3D. Periksa mesh atau sertakan file MTL dan gambar tekstur untuk melihat tampilan model.",
+      },
+      it: {
+        name: "Visualizzatore OBJ",
+        description:
+          "Apri file Wavefront OBJ in 3D. Esamina la mesh o seleziona anche i file MTL e le texture per vedere l’aspetto del modello.",
+      },
+      ja: {
+        name: "OBJ ビューアー",
+        description:
+          "Wavefront OBJ ファイルを 3D で開きます。メッシュを確認したり、MTL ファイルとテクスチャを一緒に選択してモデルの外観を表示したりできます。",
+      },
+      ko: {
+        name: "OBJ 뷰어",
+        description:
+          "Wavefront OBJ 파일을 3D로 여세요. 메시를 살펴보거나 MTL 파일과 텍스처를 함께 선택해 모델의 외관을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar OBJ",
+        description:
+          "Buka fail Wavefront OBJ dalam 3D. Periksa jejaring atau pilih fail MTL bersama imej tekstur untuk melihat rupa model.",
+      },
+      nl: {
+        name: "OBJ-viewer",
+        description:
+          "Open Wavefront OBJ-bestanden in 3D. Bekijk het polygonennet of selecteer ook het MTL-bestand en de texturen om te zien hoe het model eruitziet.",
+      },
+      no: {
+        name: "OBJ-viser",
+        description:
+          "Åpne Wavefront OBJ-filer i 3D. Se på modellens polygonnett, eller velg også MTL-filen og teksturene for å se hvordan modellen ser ut.",
+      },
+      pl: {
+        name: "Przeglądarka plików OBJ",
+        description:
+          "Otwieraj pliki Wavefront OBJ w 3D. Obejrzyj siatkę lub dołącz plik MTL i tekstury, aby zobaczyć wygląd powierzchni modelu.",
+      },
+      pt: {
+        name: "Visualizador de OBJ",
+        description:
+          "Abra arquivos Wavefront OBJ em 3D. Inspecione a malha ou selecione também os arquivos MTL e as texturas para visualizar a aparência do modelo.",
+      },
+      ru: {
+        name: "Просмотр OBJ",
+        description:
+          "Открывайте файлы Wavefront OBJ в 3D. Проверяйте полигональную сетку или откройте вместе с моделью файл MTL и текстуры, чтобы увидеть её внешний вид.",
+      },
+      sv: {
+        name: "OBJ-visare",
+        description:
+          "Öppna Wavefront OBJ-filer i 3D. Granska modellens polygonnät eller lägg till MTL-filen och texturerna för att se modellens material och ytor.",
+      },
+      th: {
+        name: "โปรแกรมดู OBJ",
+        description:
+          "เปิดไฟล์ Wavefront OBJ แบบ 3 มิติ ตรวจสอบเมชหรือเลือกไฟล์ MTL พร้อมภาพเท็กซ์เจอร์เพื่อดูลักษณะพื้นผิวของโมเดล",
+      },
+      tr: {
+        name: "OBJ Görüntüleyici",
+        description:
+          "Wavefront OBJ dosyalarını 3B olarak açın. Modelin ağını inceleyin veya nasıl göründüğünü görmek için MTL dosyasını ve dokularını modelle birlikte seçin.",
+      },
+      vi: {
+        name: "Trình xem OBJ",
+        description:
+          "Mở tệp Wavefront OBJ ở dạng 3D. Kiểm tra lưới hoặc chọn thêm tệp MTL và ảnh họa tiết để xem bề mặt mô hình.",
+      },
+      "zh-CN": {
+        name: "OBJ 查看器",
+        description:
+          "以 3D 方式打开 Wavefront OBJ 文件。检查网格，或同时选择 MTL 文件和纹理以查看模型外观。",
+      },
+      "zh-TW": {
+        name: "OBJ 檢視器",
+        description:
+          "以 3D 開啟 Wavefront OBJ 檔案。檢查網格，或同時選取 MTL 檔案與貼圖以查看模型外觀。",
+      },
+    },
+  },
+  {
     slug: "ods-to-xlsx-converter",
     category: "spreadsheet",
     icon: "file-text",
@@ -42626,6 +42758,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "左右聲道分離",
         description:
           "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  {
+    slug: "stl-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "stl",
+      "3d",
+      "mesh",
+      "3d printing",
+      "triangles",
+      "binary stl",
+      "ascii stl",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض STL",
+        description:
+          "افتح ملفات STL النصية (ASCII) أو الثنائية في متصفحك. دوّر النموذج وكبّره وافحص شبكته المثلثة قبل إرساله إلى طابعة ثلاثية الأبعاد.",
+      },
+      de: {
+        name: "STL-Betrachter",
+        description:
+          "Öffne ASCII- und binäre STL-Dateien im Browser. Drehe und vergrößere das Modell und prüfe das Dreiecksnetz vor dem 3D-Druck.",
+      },
+      en: {
+        name: "STL Viewer",
+        description:
+          "Open ASCII or binary STL files in your browser. Rotate, zoom and inspect the triangular mesh before sending the model to a 3D printer.",
+      },
+      es: {
+        name: "Visor de STL",
+        description:
+          "Abre archivos STL en formato ASCII o binario en tu navegador. Gira el modelo, amplíalo e inspecciona su malla triangular antes de imprimirlo en 3D.",
+      },
+      fr: {
+        name: "Visionneuse STL",
+        description:
+          "Ouvrez des fichiers STL ASCII ou binaires dans votre navigateur. Faites pivoter le modèle, zoomez et inspectez son maillage triangulaire avant l’impression 3D.",
+      },
+      he: {
+        name: "מציג STL",
+        description:
+          "פתחו בדפדפן קובצי STL בינאריים או בקידוד ASCII. סובבו את המודל, שנו את הזום ובדקו את רשת המשולשים לפני שליחתו למדפסת תלת־ממד.",
+      },
+      hi: {
+        name: "STL व्यूअर",
+        description:
+          "अपने ब्राउज़र में ASCII या बाइनरी STL फ़ाइलें खोलें। मॉडल को 3D प्रिंटर पर भेजने से पहले घुमाएँ, ज़ूम करें और उसकी त्रिकोणीय मेश जाँचें।",
+      },
+      id: {
+        name: "Penampil STL",
+        description:
+          "Buka file STL ASCII atau biner di browser. Putar, perbesar, dan periksa mesh segitiga sebelum mencetak model dengan printer 3D.",
+      },
+      it: {
+        name: "Visualizzatore STL",
+        description:
+          "Apri file STL ASCII o binari nel browser. Ruota e ingrandisci il modello per esaminarne la mesh triangolare prima di stamparlo in 3D.",
+      },
+      ja: {
+        name: "STL ビューアー",
+        description:
+          "ASCII またはバイナリ形式の STL ファイルをブラウザーで開きます。モデルを 3D プリンターに送る前に、三角形メッシュを回転・拡大縮小して確認できます。",
+      },
+      ko: {
+        name: "STL 뷰어",
+        description:
+          "브라우저에서 ASCII 또는 바이너리 STL 파일을 여세요. 3D 프린터로 보내기 전에 삼각형 메시를 회전하고 확대하며 살펴볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar STL",
+        description:
+          "Buka fail STL ASCII atau binari dalam pelayar. Putar, zum dan periksa jejaring segi tiga sebelum mencetak model dengan pencetak 3D.",
+      },
+      nl: {
+        name: "STL-viewer",
+        description:
+          "Open ASCII- en binaire STL-bestanden in je browser. Draai het model, zoom in en bekijk het driehoeksnet voordat je het model 3D-print.",
+      },
+      no: {
+        name: "STL-viser",
+        description:
+          "Åpne STL-filer i ASCII- eller binærformat i nettleseren. Roter, zoom og sjekk trekantnettet før du sender modellen til 3D-skriveren.",
+      },
+      pl: {
+        name: "Przeglądarka plików STL",
+        description:
+          "Otwieraj w przeglądarce pliki STL w formacie ASCII lub binarnym. Obracaj i powiększaj model, by obejrzeć siatkę trójkątów przed drukiem 3D.",
+      },
+      pt: {
+        name: "Visualizador de STL",
+        description:
+          "Abra arquivos STL ASCII ou binários no navegador. Gire, amplie e inspecione a malha triangular antes de enviar o modelo para impressão 3D.",
+      },
+      ru: {
+        name: "Просмотр STL",
+        description:
+          "Открывайте файлы STL в текстовом формате ASCII или двоичном формате прямо в браузере. Вращайте модель, меняйте масштаб и проверяйте сетку из треугольников перед 3D-печатью.",
+      },
+      sv: {
+        name: "STL-visare",
+        description:
+          "Öppna STL-filer i ASCII- eller binärformat i webbläsaren. Rotera, zooma och granska triangelnätet innan du skriver ut modellen i 3D.",
+      },
+      th: {
+        name: "โปรแกรมดู STL",
+        description:
+          "เปิดไฟล์ STL แบบ ASCII หรือไบนารีในเบราว์เซอร์ หมุน ซูม และตรวจสอบเมชสามเหลี่ยมก่อนนำโมเดลไปพิมพ์ 3 มิติ",
+      },
+      tr: {
+        name: "STL Görüntüleyici",
+        description:
+          "ASCII veya ikili STL dosyalarını tarayıcınızda açın. Modeli 3B yazıcıya göndermeden önce döndürün, yakınlaştırın ve üçgen ağını inceleyin.",
+      },
+      vi: {
+        name: "Trình xem STL",
+        description:
+          "Mở tệp STL dạng ASCII hoặc nhị phân trong trình duyệt. Xoay, thu phóng và kiểm tra lưới tam giác trước khi đưa mô hình đi in 3D.",
+      },
+      "zh-CN": {
+        name: "STL 查看器",
+        description:
+          "在浏览器中打开 ASCII 或二进制 STL 文件。旋转、缩放并检查三角网格，然后将模型送往 3D 打印机。",
+      },
+      "zh-TW": {
+        name: "STL 檢視器",
+        description:
+          "在瀏覽器中開啟 ASCII 或二進位 STL 檔案。旋轉、縮放並檢查三角網格，再將模型送至 3D 印表機。",
       },
     },
   },

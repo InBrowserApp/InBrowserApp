@@ -1,0 +1,20 @@
+{
+  "open": "Buka fail",
+  "drop": "Letakkan fail model di sini",
+  "release": "Lepaskan untuk membuka model",
+  "privacy": "Fail kekal pada peranti anda.",
+  "example": "Cuba contoh",
+  "loading": "Membuka model 3D…",
+  "invalid": "Model tidak dapat dibuka. Pilih fail yang sah dalam salah satu format yang disokong.",
+  "renderError": "Paparan 3D tidak dapat dimulakan. Cuba pelayar yang mempunyai WebGL 2 aktif.",
+  "viewport": "Paparan model 3D",
+  "fit": "Papar seluruh model",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "wireframe": "Rangka dawai",
+  "overall": "Dimensi keseluruhan",
+  "controls": "Seret untuk putar · Tatal untuk zum · Seret dengan butang kanan untuk alih pandangan",
+  "touchControls": "Seret untuk putar · Cubit untuk zum · Seret dengan dua jari untuk alih pandangan",
+  "keyboardControls": "Gunakan kekunci anak panah untuk memutar model dan + atau − untuk zum. Tekan dan tahan Shift sambil menggunakan kekunci anak panah untuk mengalih pandangan.",
+  "missingResources": "Sesetengah bahan atau tekstur tiada. Buka semula model bersama-sama fail iringannya."
+}

@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "OBJ 檢視器",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "ODS 轉 XLSX 轉換器",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "左右聲道分離",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL 檢視器",
+    slug: "stl-viewer",
   },
   {
     category: "time",

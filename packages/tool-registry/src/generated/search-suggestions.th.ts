@@ -1243,6 +1243,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "โปรแกรมดู OBJ",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "โปรแกรมแปลง ODS เป็น XLSX",
     slug: "ods-to-xlsx-converter",
@@ -1676,6 +1681,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมดู STL",
+    slug: "stl-viewer",
   },
   {
     category: "time",

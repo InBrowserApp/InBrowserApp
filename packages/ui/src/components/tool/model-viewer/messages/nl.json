@@ -1,0 +1,20 @@
+{
+  "open": "Bestanden openen",
+  "drop": "Sleep modelbestanden hierheen",
+  "release": "Laat los om het model te openen",
+  "privacy": "Je bestanden blijven op dit apparaat.",
+  "example": "Voorbeeld proberen",
+  "loading": "3D-model wordt geopend…",
+  "invalid": "Het model kon niet worden geopend. Kies een geldig bestand in een van de ondersteunde formaten.",
+  "renderError": "De 3D-weergave kon niet worden gestart. Probeer een browser waarin WebGL 2 beschikbaar is.",
+  "viewport": "3D-weergave van het model",
+  "fit": "Hele model tonen",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "wireframe": "Draadmodel",
+  "overall": "Buitenmaten",
+  "controls": "Slepen om te draaien · Scrollen om te zoomen · Slepen met de rechtermuisknop om te verschuiven",
+  "touchControls": "Slepen om te draaien · Knijpen om te zoomen · Slepen met twee vingers om te verschuiven",
+  "keyboardControls": "Gebruik de pijltoetsen om te draaien en + of − om te zoomen. Houd Shift ingedrukt om de weergave met de pijltoetsen te verschuiven.",
+  "missingResources": "Er ontbreken materialen of texturen. Open het model samen met de bijbehorende bestanden."
+}

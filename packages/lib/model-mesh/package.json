@@ -1,0 +1,18 @@
+{
+  "name": "@workspace/model-mesh",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./stl": "./src/stl.ts",
+    "./obj": "./src/obj.ts",
+    "./dispose": "./src/dispose.ts"
+  },
+  "dependencies": {
+    "three": "catalog:"
+  },
+  "devDependencies": {
+    "@types/three": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OBJ 檢視器",
+  "description": "以 3D 開啟 Wavefront OBJ 檔案。檢查網格，或同時選取 MTL 檔案與貼圖以查看模型外觀。"
+}
