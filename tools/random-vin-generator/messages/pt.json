@@ -8,5 +8,5 @@
   "copied": "Copiado",
   "copyFailed": "Falha ao copiar",
   "download": "Baixar TXT",
-  "error": "Não foi possível gerar os VINs. Tente novamente."
+  "error": "Não foi possível carregar o gerador de VIN. Recarregue a página para tentar novamente."
 }

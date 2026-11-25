@@ -8,5 +8,5 @@
   "copied": "Gekopieerd",
   "copyFailed": "Kopiëren mislukt",
   "download": "TXT downloaden",
-  "error": "VIN's konden niet worden gegenereerd. Probeer het opnieuw."
+  "error": "De VIN-generator kon niet worden geladen. Vernieuw de pagina om het opnieuw te proberen."
 }

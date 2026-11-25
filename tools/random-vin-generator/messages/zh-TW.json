@@ -8,5 +8,5 @@
   "copied": "已複製",
   "copyFailed": "複製失敗",
   "download": "下載 TXT",
-  "error": "無法產生 VIN，請再試一次。"
+  "error": "無法載入 VIN 產生器。請重新載入頁面後再試一次。"
 }

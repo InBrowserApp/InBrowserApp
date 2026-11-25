@@ -8,5 +8,5 @@
   "copied": "Copié",
   "copyFailed": "Échec de la copie",
   "download": "Télécharger en TXT",
-  "error": "Impossible de générer les NIV. Réessayez."
+  "error": "Impossible de charger le générateur de NIV. Rechargez la page pour réessayer."
 }

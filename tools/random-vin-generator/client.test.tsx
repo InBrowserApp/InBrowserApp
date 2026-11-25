@@ -63,7 +63,7 @@ describe("Random VIN Generator", () => {
     )
   })
 
-  it("keeps focus during a pending batch and allows retry after failure", async () => {
+  it("keeps focus during a pending batch and explains how to recover from a load failure", async () => {
     let rejectBatch!: (error: Error) => void
     const pendingBatch = new Promise<string[]>((_, reject) => {
       rejectBatch = reject
@@ -71,7 +71,6 @@ describe("Random VIN Generator", () => {
     const createBatch = vi
       .spyOn(vins, "generateVins")
       .mockReturnValueOnce(pendingBatch)
-      .mockResolvedValueOnce([firstVin])
     render(<RandomVinClient messages={messages} />)
     const button = generate()
     const form = button.closest("form")!
@@ -82,8 +81,6 @@ describe("Random VIN Generator", () => {
 
     rejectBatch(new Error("Load failed"))
     expect((await screen.findByRole("alert")).textContent).toBe(messages.error)
-    fireEvent.click(button)
-    await waitFor(() => expect(output().value).toBe(firstVin))
     expect(document.activeElement).toBe(button)
   })
 })
