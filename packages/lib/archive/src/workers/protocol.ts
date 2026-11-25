@@ -2,8 +2,13 @@ import type { ExtendedArchiveFormat } from "../core/formats"
 import type { ArchiveEntry, ArchiveErrorCode } from "../core/types"
 
 type ArchiveRequest = { id: number } & (
-  | { type: "open"; file: File; format: ExtendedArchiveFormat }
-  | { type: "extract"; index: number; path: string }
+  | {
+      type: "open"
+      file: File
+      format: ExtendedArchiveFormat
+      preservePaths?: boolean
+    }
+  | { type: "extract"; index: number; path: string; keepOpen?: boolean }
 )
 
 type ArchiveListing = {

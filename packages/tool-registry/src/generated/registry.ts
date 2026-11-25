@@ -8147,6 +8147,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cbr-to-cbz-converter",
+    category: "ebook",
+    icon: "archive",
+    tags: ["cbr", "rar", "cbz", "zip", "comic", "manga", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل CBR إلى CBZ",
+        description:
+          "حوّل القصص المصوّرة بتنسيق CBR أو أرشيفات RAR إلى CBZ في متصفحك. احتفظ بصور الصفحات الأصلية وترتيب القراءة وملف ComicInfo.xml عند الانتقال من RAR إلى ZIP.",
+      },
+      de: {
+        name: "CBR in CBZ umwandeln",
+        description:
+          "Wandle CBR-Comics und RAR-Archive mit Comicseiten direkt im Browser in CBZ um. Beim Wechsel von RAR zu ZIP bleiben die Originalbilder, die Lesereihenfolge und ComicInfo.xml erhalten.",
+      },
+      en: {
+        name: "CBR to CBZ Converter",
+        description:
+          "Convert CBR comics or RAR archives to CBZ in your browser. Keep original page images, reading order, and ComicInfo.xml while switching from RAR to ZIP.",
+      },
+      es: {
+        name: "Convertidor de CBR a CBZ",
+        description:
+          "Convierte cómics CBR o archivos RAR a CBZ en tu navegador. Al pasar de RAR a ZIP, se conservan las imágenes originales, el orden de lectura y ComicInfo.xml.",
+      },
+      fr: {
+        name: "Convertisseur CBR en CBZ",
+        description:
+          "Convertissez vos BD CBR ou vos archives RAR en CBZ dans votre navigateur. Passez du RAR au ZIP en conservant les images d’origine, l’ordre des pages et le fichier ComicInfo.xml.",
+      },
+      he: {
+        name: "ממיר CBR ל־CBZ",
+        description:
+          "המירו קובצי קומיקס בפורמט CBR או ארכיוני RAR ל־CBZ בדפדפן. עברו מ־RAR ל־ZIP תוך שמירה על תמונות העמודים המקוריות, סדר הקריאה וקובץ ComicInfo.xml.",
+      },
+      hi: {
+        name: "CBR से CBZ कन्वर्टर",
+        description:
+          "CBR कॉमिक या RAR आर्काइव को ब्राउज़र में CBZ में बदलें। RAR से ZIP में बदलते समय पृष्ठों की मूल इमेज, पढ़ने का क्रम और ComicInfo.xml बने रहते हैं।",
+      },
+      id: {
+        name: "Konverter CBR ke CBZ",
+        description:
+          "Ubah komik CBR atau arsip RAR berisi gambar komik menjadi CBZ langsung di browser. Gambar halaman asli, urutan baca, dan ComicInfo.xml tetap terjaga saat arsip diubah dari RAR ke ZIP.",
+      },
+      it: {
+        name: "Convertitore da CBR a CBZ",
+        description:
+          "Converti fumetti CBR o archivi RAR in CBZ nel browser. Passa da RAR a ZIP mantenendo le immagini originali delle pagine, l’ordine di lettura e ComicInfo.xml.",
+      },
+      ja: {
+        name: "CBRをCBZに変換",
+        description:
+          "CBR 形式の漫画や、ページ画像を収めた RAR アーカイブをブラウザーで CBZ に変換します。元のページ画像、読む順序、ComicInfo.xml を保ったまま、RAR から ZIP に切り替えられます。",
+      },
+      ko: {
+        name: "CBR을 CBZ로 변환",
+        description:
+          "브라우저에서 CBR 만화나 만화 이미지가 담긴 RAR 압축 파일을 CBZ로 변환하세요. RAR을 ZIP 형식으로 바꾸면서 원본 페이지 이미지와 읽는 순서, ComicInfo.xml을 그대로 유지합니다.",
+      },
+      ms: {
+        name: "Penukar CBR kepada CBZ",
+        description:
+          "Tukar komik CBR atau arkib RAR yang mengandungi imej komik kepada CBZ dalam pelayar anda. Penukaran daripada RAR kepada ZIP mengekalkan imej asal, susunan bacaan dan fail ComicInfo.xml.",
+      },
+      nl: {
+        name: "CBR-naar-CBZ-converter",
+        description:
+          "Zet CBR-strips of RAR-archieven met strippagina’s om naar CBZ in je browser. Bij het overzetten van RAR naar ZIP blijven de originele afbeeldingen, de paginavolgorde en ComicInfo.xml behouden.",
+      },
+      no: {
+        name: "Konverter CBR til CBZ",
+        description:
+          "Konverter CBR-tegneserier eller RAR-arkiver til CBZ i nettleseren. Behold de opprinnelige sidebildene, leserekkefølgen og ComicInfo.xml når du går fra RAR til ZIP.",
+      },
+      pl: {
+        name: "Konwerter CBR na CBZ",
+        description:
+          "Konwertuj komiksy CBR i archiwa RAR na CBZ w przeglądarce. Zmień format archiwum z RAR na ZIP i zachowaj oryginalne obrazy stron, kolejność czytania oraz plik ComicInfo.xml.",
+      },
+      pt: {
+        name: "Conversor de CBR para CBZ",
+        description:
+          "Converta quadrinhos CBR ou arquivos RAR para CBZ no navegador. A conversão de RAR para ZIP preserva as imagens originais, a ordem de leitura e o arquivo ComicInfo.xml.",
+      },
+      ru: {
+        name: "Конвертер CBR в CBZ",
+        description:
+          "Преобразуйте комиксы CBR и архивы RAR со страницами комиксов в CBZ прямо в браузере. При переходе с RAR на ZIP сохраняются изображения страниц, порядок чтения и файл ComicInfo.xml.",
+      },
+      sv: {
+        name: "Konverterare från CBR till CBZ",
+        description:
+          "Konvertera CBR-serier eller RAR-arkiv till CBZ i webbläsaren. När arkivet packas om från RAR till ZIP bevaras originalbilderna, sidordningen och ComicInfo.xml.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBR เป็น CBZ",
+        description:
+          "แปลงการ์ตูน CBR หรือไฟล์บีบอัด RAR ที่มีภาพการ์ตูนเป็น CBZ ในเบราว์เซอร์ เปลี่ยนจาก RAR เป็น ZIP พร้อมคงภาพต้นฉบับ ลำดับหน้า และไฟล์ ComicInfo.xml",
+      },
+      tr: {
+        name: "CBR’den CBZ’ye Dönüştürücü",
+        description:
+          "CBR çizgi romanlarını veya RAR arşivlerini tarayıcınızda CBZ’ye dönüştürün. RAR’dan ZIP’e geçerken özgün sayfa görsellerini, okuma sırasını ve ComicInfo.xml dosyasını koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBR sang CBZ",
+        description:
+          "Chuyển truyện tranh CBR hoặc tệp nén RAR chứa ảnh truyện sang CBZ ngay trong trình duyệt. Công cụ chuyển từ RAR sang ZIP, giữ nguyên ảnh gốc, thứ tự đọc và tệp ComicInfo.xml.",
+      },
+      "zh-CN": {
+        name: "CBR 转 CBZ 转换器",
+        description:
+          "在浏览器中将 CBR 漫画或 RAR 压缩包转为 CBZ。将原始页面文件重新打包为 ZIP，保留画质、阅读顺序和 ComicInfo.xml，无需上传。",
+      },
+      "zh-TW": {
+        name: "CBR 轉 CBZ",
+        description:
+          "在瀏覽器中將 CBR 漫畫或內含漫畫圖片的 RAR 壓縮檔轉成 CBZ。重新打包成 ZIP 格式，保留原始頁面圖片、閱讀順序與 ComicInfo.xml。",
+      },
+    },
+  },
+  {
     slug: "cbr-to-pdf-converter",
     category: "ebook",
     secondaryCategories: ["pdf"],
@@ -65055,6 +65178,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CBR 漫畫閱讀器",
         description:
           "在瀏覽器中開啟 CBR（RAR）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  "cbr-to-cbz-converter": {
+    slug: "cbr-to-cbz-converter",
+    category: "ebook",
+    icon: "archive",
+    tags: ["cbr", "rar", "cbz", "zip", "comic", "manga", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل CBR إلى CBZ",
+        description:
+          "حوّل القصص المصوّرة بتنسيق CBR أو أرشيفات RAR إلى CBZ في متصفحك. احتفظ بصور الصفحات الأصلية وترتيب القراءة وملف ComicInfo.xml عند الانتقال من RAR إلى ZIP.",
+      },
+      de: {
+        name: "CBR in CBZ umwandeln",
+        description:
+          "Wandle CBR-Comics und RAR-Archive mit Comicseiten direkt im Browser in CBZ um. Beim Wechsel von RAR zu ZIP bleiben die Originalbilder, die Lesereihenfolge und ComicInfo.xml erhalten.",
+      },
+      en: {
+        name: "CBR to CBZ Converter",
+        description:
+          "Convert CBR comics or RAR archives to CBZ in your browser. Keep original page images, reading order, and ComicInfo.xml while switching from RAR to ZIP.",
+      },
+      es: {
+        name: "Convertidor de CBR a CBZ",
+        description:
+          "Convierte cómics CBR o archivos RAR a CBZ en tu navegador. Al pasar de RAR a ZIP, se conservan las imágenes originales, el orden de lectura y ComicInfo.xml.",
+      },
+      fr: {
+        name: "Convertisseur CBR en CBZ",
+        description:
+          "Convertissez vos BD CBR ou vos archives RAR en CBZ dans votre navigateur. Passez du RAR au ZIP en conservant les images d’origine, l’ordre des pages et le fichier ComicInfo.xml.",
+      },
+      he: {
+        name: "ממיר CBR ל־CBZ",
+        description:
+          "המירו קובצי קומיקס בפורמט CBR או ארכיוני RAR ל־CBZ בדפדפן. עברו מ־RAR ל־ZIP תוך שמירה על תמונות העמודים המקוריות, סדר הקריאה וקובץ ComicInfo.xml.",
+      },
+      hi: {
+        name: "CBR से CBZ कन्वर्टर",
+        description:
+          "CBR कॉमिक या RAR आर्काइव को ब्राउज़र में CBZ में बदलें। RAR से ZIP में बदलते समय पृष्ठों की मूल इमेज, पढ़ने का क्रम और ComicInfo.xml बने रहते हैं।",
+      },
+      id: {
+        name: "Konverter CBR ke CBZ",
+        description:
+          "Ubah komik CBR atau arsip RAR berisi gambar komik menjadi CBZ langsung di browser. Gambar halaman asli, urutan baca, dan ComicInfo.xml tetap terjaga saat arsip diubah dari RAR ke ZIP.",
+      },
+      it: {
+        name: "Convertitore da CBR a CBZ",
+        description:
+          "Converti fumetti CBR o archivi RAR in CBZ nel browser. Passa da RAR a ZIP mantenendo le immagini originali delle pagine, l’ordine di lettura e ComicInfo.xml.",
+      },
+      ja: {
+        name: "CBRをCBZに変換",
+        description:
+          "CBR 形式の漫画や、ページ画像を収めた RAR アーカイブをブラウザーで CBZ に変換します。元のページ画像、読む順序、ComicInfo.xml を保ったまま、RAR から ZIP に切り替えられます。",
+      },
+      ko: {
+        name: "CBR을 CBZ로 변환",
+        description:
+          "브라우저에서 CBR 만화나 만화 이미지가 담긴 RAR 압축 파일을 CBZ로 변환하세요. RAR을 ZIP 형식으로 바꾸면서 원본 페이지 이미지와 읽는 순서, ComicInfo.xml을 그대로 유지합니다.",
+      },
+      ms: {
+        name: "Penukar CBR kepada CBZ",
+        description:
+          "Tukar komik CBR atau arkib RAR yang mengandungi imej komik kepada CBZ dalam pelayar anda. Penukaran daripada RAR kepada ZIP mengekalkan imej asal, susunan bacaan dan fail ComicInfo.xml.",
+      },
+      nl: {
+        name: "CBR-naar-CBZ-converter",
+        description:
+          "Zet CBR-strips of RAR-archieven met strippagina’s om naar CBZ in je browser. Bij het overzetten van RAR naar ZIP blijven de originele afbeeldingen, de paginavolgorde en ComicInfo.xml behouden.",
+      },
+      no: {
+        name: "Konverter CBR til CBZ",
+        description:
+          "Konverter CBR-tegneserier eller RAR-arkiver til CBZ i nettleseren. Behold de opprinnelige sidebildene, leserekkefølgen og ComicInfo.xml når du går fra RAR til ZIP.",
+      },
+      pl: {
+        name: "Konwerter CBR na CBZ",
+        description:
+          "Konwertuj komiksy CBR i archiwa RAR na CBZ w przeglądarce. Zmień format archiwum z RAR na ZIP i zachowaj oryginalne obrazy stron, kolejność czytania oraz plik ComicInfo.xml.",
+      },
+      pt: {
+        name: "Conversor de CBR para CBZ",
+        description:
+          "Converta quadrinhos CBR ou arquivos RAR para CBZ no navegador. A conversão de RAR para ZIP preserva as imagens originais, a ordem de leitura e o arquivo ComicInfo.xml.",
+      },
+      ru: {
+        name: "Конвертер CBR в CBZ",
+        description:
+          "Преобразуйте комиксы CBR и архивы RAR со страницами комиксов в CBZ прямо в браузере. При переходе с RAR на ZIP сохраняются изображения страниц, порядок чтения и файл ComicInfo.xml.",
+      },
+      sv: {
+        name: "Konverterare från CBR till CBZ",
+        description:
+          "Konvertera CBR-serier eller RAR-arkiv till CBZ i webbläsaren. När arkivet packas om från RAR till ZIP bevaras originalbilderna, sidordningen och ComicInfo.xml.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBR เป็น CBZ",
+        description:
+          "แปลงการ์ตูน CBR หรือไฟล์บีบอัด RAR ที่มีภาพการ์ตูนเป็น CBZ ในเบราว์เซอร์ เปลี่ยนจาก RAR เป็น ZIP พร้อมคงภาพต้นฉบับ ลำดับหน้า และไฟล์ ComicInfo.xml",
+      },
+      tr: {
+        name: "CBR’den CBZ’ye Dönüştürücü",
+        description:
+          "CBR çizgi romanlarını veya RAR arşivlerini tarayıcınızda CBZ’ye dönüştürün. RAR’dan ZIP’e geçerken özgün sayfa görsellerini, okuma sırasını ve ComicInfo.xml dosyasını koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBR sang CBZ",
+        description:
+          "Chuyển truyện tranh CBR hoặc tệp nén RAR chứa ảnh truyện sang CBZ ngay trong trình duyệt. Công cụ chuyển từ RAR sang ZIP, giữ nguyên ảnh gốc, thứ tự đọc và tệp ComicInfo.xml.",
+      },
+      "zh-CN": {
+        name: "CBR 转 CBZ 转换器",
+        description:
+          "在浏览器中将 CBR 漫画或 RAR 压缩包转为 CBZ。将原始页面文件重新打包为 ZIP，保留画质、阅读顺序和 ComicInfo.xml，无需上传。",
+      },
+      "zh-TW": {
+        name: "CBR 轉 CBZ",
+        description:
+          "在瀏覽器中將 CBR 漫畫或內含漫畫圖片的 RAR 壓縮檔轉成 CBZ。重新打包成 ZIP 格式，保留原始頁面圖片、閱讀順序與 ComicInfo.xml。",
       },
     },
   },

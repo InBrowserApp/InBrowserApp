@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de CBR para CBZ",
+  "description": "Converta quadrinhos CBR ou arquivos RAR para CBZ no navegador. A conversão de RAR para ZIP preserva as imagens originais, a ordem de leitura e o arquivo ComicInfo.xml."
+}

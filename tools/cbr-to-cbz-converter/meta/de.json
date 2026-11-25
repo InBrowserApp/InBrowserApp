@@ -1,0 +1,4 @@
+{
+  "name": "CBR in CBZ umwandeln",
+  "description": "Wandle CBR-Comics und RAR-Archive mit Comicseiten direkt im Browser in CBZ um. Beim Wechsel von RAR zu ZIP bleiben die Originalbilder, die Lesereihenfolge und ComicInfo.xml erhalten."
+}

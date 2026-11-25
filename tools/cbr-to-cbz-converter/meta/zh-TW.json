@@ -1,0 +1,4 @@
+{
+  "name": "CBR 轉 CBZ",
+  "description": "在瀏覽器中將 CBR 漫畫或內含漫畫圖片的 RAR 壓縮檔轉成 CBZ。重新打包成 ZIP 格式，保留原始頁面圖片、閱讀順序與 ComicInfo.xml。"
+}

@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "โปรแกรมแปลง CBR เป็น CBZ",
+    slug: "cbr-to-cbz-converter",
+  },
+  {
+    category: "ebook",
     name: "โปรแกรมแปลง CBR เป็น PDF",
     slug: "cbr-to-pdf-converter",
   },

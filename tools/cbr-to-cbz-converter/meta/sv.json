@@ -1,0 +1,4 @@
+{
+  "name": "Konverterare från CBR till CBZ",
+  "description": "Konvertera CBR-serier eller RAR-arkiv till CBZ i webbläsaren. När arkivet packas om från RAR till ZIP bevaras originalbilderna, sidordningen och ComicInfo.xml."
+}

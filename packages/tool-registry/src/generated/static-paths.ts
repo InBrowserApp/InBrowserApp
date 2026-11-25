@@ -5798,6 +5798,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbr-to-cbz-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "de",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "en",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "es",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "he",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "id",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "it",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "no",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "th",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbr-to-cbz-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbr-to-pdf-converter",
     language: "ar",
   },

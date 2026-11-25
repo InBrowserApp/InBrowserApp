@@ -319,6 +319,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "CBRをCBZに変換",
+    slug: "cbr-to-cbz-converter",
+  },
+  {
+    category: "ebook",
     name: "CBR から PDF への変換ツール",
     slug: "cbr-to-pdf-converter",
   },

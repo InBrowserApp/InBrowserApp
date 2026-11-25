@@ -100,6 +100,46 @@ describe("bundled libarchive decoder", () => {
     ).toEqual([3, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0, 9, 0, 0, 0])
   })
 
+  test("reuses a solid RAR decoder for forward reads and reopens on rewind", async () => {
+    const reader = await fixture("rar5-solid.rar")
+    reader.list()
+    const open = vi.spyOn(module, "_viewer_open")
+    try {
+      const first = reader.extract(0, "test1.bin", true)
+      const second = reader.extract(1, "test2.bin", true)
+      const forwardOpens = open.mock.calls.length
+      const rewind = reader.extract(0, "test1.bin")
+      expect(forwardOpens).toBe(1)
+      expect(open).toHaveBeenCalledTimes(2)
+      expect(new Uint8Array(await rewind.arrayBuffer())).toEqual(
+        new Uint8Array(await first.arrayBuffer())
+      )
+      expect(new Uint8Array(await second.arrayBuffer())).not.toEqual(
+        new Uint8Array(await first.arrayBuffer())
+      )
+    } finally {
+      open.mockRestore()
+    }
+  })
+
+  test("preserves distinct whitespace in paths when repacking", async () => {
+    const reader = readerFor(
+      zstdCompressSync(
+        createTar([
+          { path: "chapter/page.png", content: "first" },
+          { path: "chapter /page.png", content: "second" },
+        ])
+      ),
+      "comic.tar.zst"
+    )
+    const { entries } = reader.list(true)
+    expect(entries.map(({ path }) => path)).toEqual([
+      "chapter/page.png",
+      "chapter /page.png",
+    ])
+    expect(await reader.extract(1, entries[1]!.path).text()).toBe("second")
+  })
+
   test("reads Windows-encoded LHA filenames as Unicode", async () => {
     const reader = await fixture("japanese.lzh")
     expect(reader.list().entries.map(({ path }) => path)).toEqual([

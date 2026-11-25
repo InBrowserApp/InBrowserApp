@@ -1,0 +1,4 @@
+{
+  "name": "CBR을 CBZ로 변환",
+  "description": "브라우저에서 CBR 만화나 만화 이미지가 담긴 RAR 압축 파일을 CBZ로 변환하세요. RAR을 ZIP 형식으로 바꾸면서 원본 페이지 이미지와 읽는 순서, ComicInfo.xml을 그대로 유지합니다."
+}
