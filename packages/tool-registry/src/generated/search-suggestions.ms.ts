@@ -1413,6 +1413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "opml-editor",
   },
   {
+    category: "geo",
+    name: "Pratonton OSM PBF",
+    slug: "osm-pbf-preview",
+  },
+  {
     category: "developer",
     name: "Pemapar Parquet",
     slug: "parquet-viewer",

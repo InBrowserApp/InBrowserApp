@@ -25946,6 +25946,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "osm-pbf-preview",
+    language: "ar",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "de",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "en",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "es",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "fr",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "he",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "hi",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "id",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "it",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ja",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ko",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ms",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "nl",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "no",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "pl",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "pt",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "ru",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "sv",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "th",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "tr",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "vi",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "zh-CN",
+  },
+  {
+    slug: "osm-pbf-preview",
+    language: "zh-TW",
+  },
+  {
     slug: "parquet-viewer",
     language: "ar",
   },

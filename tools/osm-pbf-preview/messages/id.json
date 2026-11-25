@@ -1,0 +1,22 @@
+{
+  "open": "Buka OSM PBF",
+  "example": "Coba contoh",
+  "drop": "Lepas berkas OSM PBF di sini",
+  "formats": "Gunakan ekstrak OpenStreetMap .osm.pbf atau .pbf. Berkas tetap berada di perangkat Anda.",
+  "loading": "Memindai berkas OSM PBF…",
+  "invalid": "Berkas ini tidak dapat dibaca. Pilih ekstrak OpenStreetMap .osm.pbf.",
+  "nodes": "Simpul",
+  "ways": "Garis",
+  "relations": "Relasi",
+  "map": "Pratinjau data OpenStreetMap",
+  "fit": "Sesuaikan tampilan dengan data",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "sample": "Peta menampilkan sebagian simpul dan garis yang memiliki tag. Jumlah di atas dihitung dari seluruh berkas.",
+  "features": "Fitur dalam pratinjau",
+  "feature": "Fitur {number}",
+  "attributes": "Tag OSM",
+  "noAttributes": "Fitur ini tidak memiliki tag.",
+  "noFeatures": "Tidak ada simpul bertag atau garis bertag dengan data lengkap yang dapat ditampilkan pada peta.",
+  "attribution": "© Kontributor OpenStreetMap"
+}

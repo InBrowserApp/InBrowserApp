@@ -1,0 +1,22 @@
+{
+  "open": "Åpne OSM PBF",
+  "example": "Prøv et eksempel",
+  "drop": "Slipp en OSM PBF-fil her",
+  "formats": "Velg et OpenStreetMap-uttrekk i .osm.pbf- eller .pbf-format. Filen blir på denne enheten.",
+  "loading": "Leser OSM PBF-filen…",
+  "invalid": "Kunne ikke lese filen. Velg et OpenStreetMap-uttrekk i .osm.pbf-format.",
+  "nodes": "Noder",
+  "ways": "Veger",
+  "relations": "Relasjoner",
+  "map": "Forhåndsvisning av OpenStreetMap-data",
+  "fit": "Tilpass kartutsnittet",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "sample": "Kartet viser et utvalg noder og veger med merker. Tallene ovenfor gjelder hele filen.",
+  "features": "Objekter i forhåndsvisningen",
+  "feature": "Objekt {number}",
+  "attributes": "OSM-merker",
+  "noAttributes": "Dette objektet har ingen merker.",
+  "noFeatures": "Ingen noder med merker eller fullstendige veger med merker kunne vises på kartet.",
+  "attribution": "© OpenStreetMap-bidragsytere"
+}

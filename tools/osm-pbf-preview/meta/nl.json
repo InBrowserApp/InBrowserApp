@@ -1,0 +1,4 @@
+{
+  "name": "OSM PBF-voorvertoner",
+  "description": "Open een lokaal OpenStreetMap-extract (.osm.pbf of .pbf) in je browser. Tel knopen, wegen en relaties en bekijk een selectie met de bijbehorende tags op een offlinekaart."
+}

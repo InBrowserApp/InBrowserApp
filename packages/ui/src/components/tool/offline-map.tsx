@@ -111,13 +111,18 @@ function OfflineMap({
   useEffect(() => {
     if (!state) return
     const { leaflet, map } = state
-    const shapes: Feature<Geometry, { index: number }>[] = []
+    type MapFeature = Feature<Geometry, { index: number }>
+    const shapes: MapFeature[] = []
+    const points: MapFeature[] = []
     features.forEach(({ geometry }, index) => {
       const shape = geometry && renderable(geometry)
-      if (shape)
-        shapes.push({ type: "Feature", geometry: shape, properties: { index } })
+      if (!shape) return
+      const layer =
+        shape.type === "Point" || shape.type === "MultiPoint" ? points : shapes
+      layer.push({ type: "Feature", geometry: shape, properties: { index } })
     })
-    const layer = leaflet.geoJSON<{ index: number }>(shapes, {
+    // Keep point markers clickable where a path crosses them.
+    const layer = leaflet.geoJSON<{ index: number }>([...shapes, ...points], {
       style: dataStyle,
       pointToLayer: (_, point) =>
         leaflet.circleMarker(point, {

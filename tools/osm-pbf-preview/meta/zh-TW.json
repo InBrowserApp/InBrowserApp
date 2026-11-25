@@ -1,0 +1,4 @@
+{
+  "name": "OSM PBF 預覽",
+  "description": "在瀏覽器中開啟本機的 OpenStreetMap .osm.pbf 或 .pbf 區域擷取檔案。統計節點、路徑和關聯，並在離線地圖上查看樣本及其標籤。"
+}

@@ -1,0 +1,22 @@
+{
+  "open": "Öppna OSM PBF",
+  "example": "Prova ett exempel",
+  "drop": "Släpp en OSM PBF-fil här",
+  "formats": "Välj ett OpenStreetMap-utdrag i .osm.pbf- eller .pbf-format. Filen stannar på den här enheten.",
+  "loading": "Läser in OSM PBF-filen…",
+  "invalid": "Det gick inte att läsa filen. Välj ett OpenStreetMap-utdrag i .osm.pbf-format.",
+  "nodes": "Noder",
+  "ways": "Vägar",
+  "relations": "Relationer",
+  "map": "Förhandsgranskning av OpenStreetMap-data",
+  "fit": "Anpassa till data",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "sample": "Kartan visar ett urval av noder och vägar med attribut. Antalen ovan gäller hela filen.",
+  "features": "Objekt i förhandsgranskningen",
+  "feature": "Objekt {number}",
+  "attributes": "OSM-attribut",
+  "noAttributes": "Det här objektet saknar attribut.",
+  "noFeatures": "Det gick inte att visa några noder eller fullständiga vägar med attribut på kartan.",
+  "attribution": "© OpenStreetMaps bidragsgivare"
+}

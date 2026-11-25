@@ -1,0 +1,22 @@
+{
+  "open": "OSM PBF aç",
+  "example": "Örneği dene",
+  "drop": "OSM PBF dosyasını buraya bırakın",
+  "formats": "Bir OpenStreetMap .osm.pbf veya .pbf veri kesiti seçin. Dosyanız bu cihazda kalır.",
+  "loading": "OSM PBF dosyası taranıyor…",
+  "invalid": "Bu dosya okunamadı. Bir OpenStreetMap .osm.pbf veri kesiti seçin.",
+  "nodes": "Düğümler",
+  "ways": "Yollar",
+  "relations": "İlişkiler",
+  "map": "OpenStreetMap veri önizlemesi",
+  "fit": "Verileri haritaya sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "sample": "Haritada etiketli düğüm ve yollardan bir örnek gösterilir. Yukarıdaki sayılar tüm dosyayı kapsar.",
+  "features": "Önizlemedeki detaylar",
+  "feature": "Detay {number}",
+  "attributes": "OSM etiketleri",
+  "noAttributes": "Bu detayın etiketi yok.",
+  "noFeatures": "Haritada gösterilebilecek etiketli düğüm veya eksiksiz etiketli yol yok.",
+  "attribution": "© OpenStreetMap katkıcıları"
+}

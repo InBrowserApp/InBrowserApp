@@ -1413,6 +1413,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "opml-editor",
   },
   {
+    category: "geo",
+    name: "OSM PBF 미리보기",
+    slug: "osm-pbf-preview",
+  },
+  {
     category: "developer",
     name: "Parquet 뷰어",
     slug: "parquet-viewer",

@@ -1,0 +1,22 @@
+{
+  "open": "打开 OSM PBF",
+  "example": "试用示例",
+  "drop": "将 OSM PBF 文件拖到此处",
+  "formats": "请使用 OpenStreetMap .osm.pbf 或 .pbf 区域提取文件。文件保留在此设备上。",
+  "loading": "正在扫描 OSM PBF 文件…",
+  "invalid": "无法读取此文件。请选择 OpenStreetMap .osm.pbf 区域提取文件。",
+  "nodes": "节点",
+  "ways": "路径",
+  "relations": "关系",
+  "map": "OpenStreetMap 数据预览",
+  "fit": "适应数据范围",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "sample": "地图显示带标签的节点和路径样本。上方统计涵盖整个文件。",
+  "features": "预览要素",
+  "feature": "要素 {number}",
+  "attributes": "OSM 标签",
+  "noAttributes": "此要素没有标签。",
+  "noFeatures": "没有带标签的节点或完整路径可以显示在地图上。",
+  "attribution": "© OpenStreetMap 贡献者"
+}
