@@ -13,3 +13,5 @@ As dimensões totais mostram a extensão do modelo nos eixos X, Y e Z. O formato
 O STL representa a superfície de uma peça com triângulos. Para abrir um arquivo Wavefront com sua biblioteca de materiais, use o [Visualizador de OBJ](../obj-viewer/). Para um arquivo de intercâmbio CAD com uma montagem ou um modelo sólido, use o [Visualizador de STEP](../step-viewer/).
 
 - [Visualizador de GLB / glTF](../gltf-viewer/)
+
+- [Visualizador de 3MF](../3mf-viewer/)

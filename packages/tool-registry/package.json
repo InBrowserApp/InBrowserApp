@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/2fa-authenticator": "workspace:*",
+    "@tool/3mf-viewer": "workspace:*",
     "@tool/adler32-hash-text-or-file": "workspace:*",
     "@tool/aes-decryptor": "workspace:*",
     "@tool/aes-encryptor": "workspace:*",

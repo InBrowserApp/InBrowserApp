@@ -13,3 +13,5 @@ Nếu tệp tham chiếu đến bộ đệm hoặc ảnh bên ngoài, hãy chọ
 ## Xem các định dạng tệp 3D liên quan
 
 Dùng [Trình xem OBJ](../obj-viewer/) cho lưới Wavefront có vật liệu MTL hoặc [Trình xem STL](../stl-viewer/) để kiểm tra lưới tam giác trước khi in 3D.
+
+- [Trình xem 3MF](../3mf-viewer/)

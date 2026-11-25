@@ -13,3 +13,5 @@ Se il modello fa riferimento a un buffer o a un’immagine esterni, selezionalo 
 ## Aprire altri formati 3D
 
 Usa il [Visualizzatore OBJ](../obj-viewer/) per le mesh Wavefront con materiali MTL o il [Visualizzatore STL](../stl-viewer/) per esaminare una mesh triangolare prima della stampa 3D.
+
+- [Visualizzatore 3MF](../3mf-viewer/)

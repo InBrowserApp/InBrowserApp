@@ -13,3 +13,5 @@ When a file refers to an external buffer or image, choose the model and the matc
 ## View related 3D file formats
 
 Use the [OBJ Viewer](../obj-viewer/) for Wavefront meshes with MTL materials, or the [STL Viewer](../stl-viewer/) to inspect a triangular mesh before 3D printing.
+
+- [3MF Viewer](../3mf-viewer/)

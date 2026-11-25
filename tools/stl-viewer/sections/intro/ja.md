@@ -13,3 +13,5 @@
 STL は三角形で部品の表面を表します。マテリアルライブラリを伴う Wavefront ファイルには [OBJ ビューアー](../obj-viewer/)、アセンブリやソリッドモデルを含む CAD 交換ファイルには [STEP ビューアー](../step-viewer/)を使用してください。
 
 - [GLB / glTF ビューアー](../gltf-viewer/)
+
+- [3MF ビューアー](../3mf-viewer/)

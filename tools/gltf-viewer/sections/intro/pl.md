@@ -13,3 +13,5 @@ Gdy model odwołuje się do zewnętrznego bufora lub obrazu, zaznacz razem model
 ## Otwieranie pokrewnych formatów 3D
 
 W [przeglądarce plików OBJ](../obj-viewer/) otworzysz siatki Wavefront z materiałami MTL. [Przeglądarka plików STL](../stl-viewer/) pozwala obejrzeć siatkę trójkątów przed drukiem 3D.
+
+- [Przeglądarka plików 3MF](../3mf-viewer/)

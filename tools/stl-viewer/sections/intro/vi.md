@@ -13,3 +13,5 @@ Các giá trị kích thước cho biết độ dài từ đầu này đến đ�
 STL mô tả bề mặt của một chi tiết bằng các tam giác. Với tệp Wavefront có thư viện vật liệu đi kèm, hãy dùng [Trình xem OBJ](../obj-viewer/). Để mở tệp trao đổi dữ liệu CAD chứa một cụm lắp ráp hoặc mô hình khối, hãy dùng [Trình xem STEP](../step-viewer/).
 
 - [Trình xem GLB / glTF](../gltf-viewer/)
+
+- [Trình xem 3MF](../3mf-viewer/)

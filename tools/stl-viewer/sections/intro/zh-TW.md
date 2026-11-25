@@ -13,3 +13,5 @@
 STL 使用三角形描述零件表面。若要查看附有材質庫的 Wavefront 檔案，請使用 [OBJ 檢視器](../obj-viewer/)。若要查看包含組合件或實體模型的 CAD 交換檔案，請使用 [STEP 檢視器](../step-viewer/)。
 
 - [GLB / glTF 檢視器](../gltf-viewer/)
+
+- [3MF 檢視器](../3mf-viewer/)

@@ -7,10 +7,12 @@
     "./stl": "./src/stl.ts",
     "./obj": "./src/obj.ts",
     "./dispose": "./src/dispose.ts",
-    "./gltf": "./src/gltf.ts"
+    "./gltf": "./src/gltf.ts",
+    "./three-mf": "./src/three-mf.ts"
   },
   "dependencies": {
-    "three": "catalog:"
+    "three": "catalog:",
+    "fflate": "catalog:"
   },
   "devDependencies": {
     "@types/three": "catalog:",

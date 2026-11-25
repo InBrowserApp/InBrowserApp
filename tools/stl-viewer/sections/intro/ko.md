@@ -13,3 +13,5 @@
 STL은 삼각형으로 부품의 표면을 표현합니다. 재질 라이브러리가 함께 제공되는 Wavefront 파일은 [OBJ 뷰어](../obj-viewer/)를, 조립품이나 솔리드 모델이 포함된 CAD 교환 파일은 [STEP 뷰어](../step-viewer/)를 사용하세요.
 
 - [GLB / glTF 뷰어](../gltf-viewer/)
+
+- [3MF 뷰어](../3mf-viewer/)

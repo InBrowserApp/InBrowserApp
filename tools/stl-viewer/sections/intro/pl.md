@@ -13,3 +13,5 @@ Wymiary całkowite podają pełną rozpiętość modelu wzdłuż osi X, Y i Z. S
 STL opisuje powierzchnię części za pomocą trójkątów. Do pliku Wavefront z powiązaną biblioteką materiałów użyj [przeglądarki plików OBJ](../obj-viewer/). Plik wymiany CAD z zespołem lub modelem bryłowym otworzysz w [przeglądarce plików STEP](../step-viewer/).
 
 - [Przeglądarka plików GLB i glTF](../gltf-viewer/)
+
+- [Przeglądarka plików 3MF](../3mf-viewer/)

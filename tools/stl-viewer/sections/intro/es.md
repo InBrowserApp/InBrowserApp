@@ -13,3 +13,5 @@ Las dimensiones totales muestran cuánto ocupa el modelo en cada eje, X, Y y Z. 
 STL representa la superficie de una pieza mediante triángulos. Para abrir un archivo Wavefront con su biblioteca de materiales, usa el [Visor de OBJ](../obj-viewer/). Si tienes un archivo de intercambio CAD que contiene un ensamblaje o un sólido, usa el [Visor de STEP](../step-viewer/).
 
 - [Visor de GLB / glTF](../gltf-viewer/)
+
+- [Visor de 3MF](../3mf-viewer/)

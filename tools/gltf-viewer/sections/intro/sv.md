@@ -13,3 +13,5 @@ När modellen hänvisar till en extern buffert eller bild väljer du modellen oc
 ## Visa närliggande 3D-filformat
 
 Använd [OBJ-visaren](../obj-viewer/) för Wavefront-nät med MTL-material eller [STL-visaren](../stl-viewer/) för att granska ett triangelnät före 3D-utskrift.
+
+- [3MF-visare](../3mf-viewer/)

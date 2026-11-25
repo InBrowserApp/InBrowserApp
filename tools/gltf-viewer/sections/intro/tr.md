@@ -13,3 +13,5 @@ Model dosyası harici bir arabellek dosyasına veya görsele başvuruyorsa model
 ## Diğer 3B dosya biçimlerini görüntüleme
 
 MTL malzemeleri içeren Wavefront ağlarını [OBJ Görüntüleyici](../obj-viewer/) aracında açın. 3B baskıdan önce üçgen ağı incelemek için [STL Görüntüleyici](../stl-viewer/) aracını kullanın.
+
+- [3MF Görüntüleyici](../3mf-viewer/)

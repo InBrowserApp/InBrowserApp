@@ -13,3 +13,5 @@ Wenn die Datei auf einen externen Puffer oder ein Bild verweist, wähle die pass
 ## Verwandte 3D-Dateiformate ansehen
 
 Nutze den [OBJ-Betrachter](../obj-viewer/) für Wavefront-Netze mit MTL-Materialien oder den [STL-Betrachter](../stl-viewer/), um ein Dreiecksnetz vor dem 3D-Druck zu prüfen.
+
+- [3MF-Betrachter](../3mf-viewer/)

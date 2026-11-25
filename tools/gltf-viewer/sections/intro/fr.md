@@ -13,3 +13,5 @@ Si le modèle fait référence à un tampon de données ou à une image externe,
 ## Ouvrir d’autres formats 3D
 
 Utilisez la [Visionneuse OBJ](../obj-viewer/) pour les maillages Wavefront avec matériaux MTL ou la [Visionneuse STL](../stl-viewer/) pour examiner un maillage triangulaire avant l’impression 3D.
+
+- [Visionneuse 3MF](../3mf-viewer/)

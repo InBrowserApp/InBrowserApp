@@ -13,3 +13,5 @@ Le dimensioni d’ingombro indicano l’estensione del modello lungo gli assi X,
 STL descrive la superficie di una parte mediante triangoli. Per aprire un file Wavefront con la relativa libreria di materiali, usa il [Visualizzatore OBJ](../obj-viewer/). Per un file di interscambio CAD che contiene un assieme o un modello solido, usa il [Visualizzatore STEP](../step-viewer/).
 
 - [Visualizzatore GLB / glTF](../gltf-viewer/)
+
+- [Visualizzatore 3MF](../3mf-viewer/)

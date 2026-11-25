@@ -13,3 +13,5 @@
 ## 관련 3D 파일 형식 보기
 
 MTL 재질을 사용하는 Wavefront 메시는 [OBJ 뷰어](../obj-viewer/)를, 3D 프린팅 전에 삼각형 메시를 확인하려면 [STL 뷰어](../stl-viewer/)를 사용하세요.
+
+- [3MF 뷰어](../3mf-viewer/)

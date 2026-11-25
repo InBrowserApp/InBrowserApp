@@ -13,3 +13,5 @@
 ## 查看相关 3D 文件格式
 
 带 MTL 材质的 Wavefront 网格可使用 [OBJ 查看器](../obj-viewer/)；要在 3D 打印前检查三角网格，请使用 [STL 查看器](../stl-viewer/)。
+
+- [3MF 查看器](../3mf-viewer/)

@@ -8,6 +8,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "2fa-authenticator",
   },
   {
+    category: "image",
+    name: "โปรแกรมดู 3MF",
+    slug: "3mf-viewer",
+  },
+  {
     category: "crypto",
     name: "แฮช Adler-32 ข้อความหรือไฟล์",
     slug: "adler32-hash-text-or-file",
