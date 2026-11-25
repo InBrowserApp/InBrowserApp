@@ -68,7 +68,7 @@ const { id, messages, compact = false } = Astro.props
       --suggestion-scroll-thumb: color-mix(in oklab, var(--foreground) 48%, transparent);
     }
 
-    @supports selector(::-webkit-scrollbar) {
+    @supports selector(::-webkit-scrollbar-thumb) {
       /* Standard scrollbar properties take precedence over the native parts. */
       .suggestion-list {
         scrollbar-width: auto;
