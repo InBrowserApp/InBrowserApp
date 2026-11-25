@@ -1,0 +1,4 @@
+{
+  "name": "Trình kiểm tra GeoJSON",
+  "description": "Kiểm tra cú pháp, đối tượng, hình học và tọa độ GeoJSON ngay trong trình duyệt. Dán GeoJSON hoặc mở tệp để tìm lỗi và xem đường dẫn đến từng trường bị ảnh hưởng."
+}

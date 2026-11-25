@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON-validerare",
+  "description": "Kontrollera GeoJSON-syntax, objekt, geometrier och koordinater i webbläsaren. Klistra in GeoJSON eller öppna en fil för att hitta fel med sökvägar till berörda fält."
+}

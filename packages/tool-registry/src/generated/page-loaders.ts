@@ -175,6 +175,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "font-to-woff2": () => import("@tool/font-to-woff2/page"),
   "gamepad-tester": () => import("@tool/gamepad-tester/page"),
+  "geojson-validator": () => import("@tool/geojson-validator/page"),
   "geojson-viewer": () => import("@tool/geojson-viewer/page"),
   "geopackage-viewer": () => import("@tool/geopackage-viewer/page"),
   "geotiff-viewer": () => import("@tool/geotiff-viewer/page"),

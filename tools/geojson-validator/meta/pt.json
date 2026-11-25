@@ -1,0 +1,4 @@
+{
+  "name": "Validador de GeoJSON",
+  "description": "Verifique a sintaxe, as feições, as geometrias e as coordenadas do GeoJSON no navegador. Cole o conteúdo ou abra um arquivo para encontrar erros e os caminhos dos campos afetados."
+}

@@ -144,6 +144,7 @@
     "@tool/font-subset-generator": "workspace:*",
     "@tool/font-to-woff2": "workspace:*",
     "@tool/gamepad-tester": "workspace:*",
+    "@tool/geojson-validator": "workspace:*",
     "@tool/geojson-viewer": "workspace:*",
     "@tool/geopackage-viewer": "workspace:*",
     "@tool/geotiff-viewer": "workspace:*",

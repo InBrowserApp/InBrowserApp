@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON Validator",
+  "description": "Check GeoJSON syntax, features, geometries and coordinates in your browser. Paste GeoJSON or open a file to find errors with paths to the affected fields."
+}

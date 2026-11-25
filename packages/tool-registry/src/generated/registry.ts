@@ -17585,6 +17585,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "geojson-validator",
+    category: "geo",
+    secondaryCategories: ["json"],
+    icon: "file-check",
+    tags: [
+      "geojson",
+      "geojsonlint",
+      "validator",
+      "validation",
+      "json",
+      "gis",
+      "coordinates",
+      "rfc-7946",
+    ],
+    locales: {
+      ar: {
+        name: "مدقّق GeoJSON",
+        description:
+          "تحقّق من صياغة GeoJSON ومعالمه وأشكاله الهندسية وإحداثياته في متصفحك. ألصق نص GeoJSON أو افتح ملفًا للعثور على الأخطاء ومعرفة مسارات الحقول المتأثرة.",
+      },
+      de: {
+        name: "GeoJSON-Validator",
+        description:
+          "Prüfe die Syntax, Objekte, Geometrien und Koordinaten von GeoJSON direkt im Browser. Füge GeoJSON ein oder öffne eine Datei, um Fehler und die Pfade zu den betroffenen Feldern zu sehen.",
+      },
+      en: {
+        name: "GeoJSON Validator",
+        description:
+          "Check GeoJSON syntax, features, geometries and coordinates in your browser. Paste GeoJSON or open a file to find errors with paths to the affected fields.",
+      },
+      es: {
+        name: "Validador de GeoJSON",
+        description:
+          "Comprueba la sintaxis, las entidades, las geometrías y las coordenadas de GeoJSON en tu navegador. Pega el contenido o abre un archivo para localizar errores y ver la ruta de los campos afectados.",
+      },
+      fr: {
+        name: "Validateur GeoJSON",
+        description:
+          "Vérifiez la syntaxe, les entités, les géométries et les coordonnées GeoJSON dans votre navigateur. Collez du GeoJSON ou ouvrez un fichier pour repérer les erreurs et les champs concernés.",
+      },
+      he: {
+        name: "מאמת GeoJSON",
+        description:
+          "בדקו את התחביר, הישויות, הגאומטריות והקואורדינטות של GeoJSON בדפדפן. הדביקו GeoJSON או פתחו קובץ כדי לאתר שגיאות ולקבל נתיבים לשדות שבהם הן מופיעות.",
+      },
+      hi: {
+        name: "GeoJSON वैलिडेटर",
+        description:
+          "ब्राउज़र में GeoJSON का सिंटैक्स, फ़ीचर, ज्यामिति और निर्देशांक जाँचें। GeoJSON पेस्ट करें या फ़ाइल खोलें और समस्याओं से जुड़े फ़ील्ड के पाथ देखें।",
+      },
+      id: {
+        name: "Validator GeoJSON",
+        description:
+          "Periksa sintaks, fitur, geometri, dan koordinat GeoJSON di browser. Tempel GeoJSON atau buka berkas untuk menemukan kesalahan beserta jalur ke kolom yang bermasalah.",
+      },
+      it: {
+        name: "Validatore GeoJSON",
+        description:
+          "Controlla sintassi, elementi geografici, geometrie e coordinate GeoJSON nel browser. Incolla il contenuto o apri un file per individuare gli errori e visualizzare il percorso dei campi interessati.",
+      },
+      ja: {
+        name: "GeoJSON バリデーター",
+        description:
+          "ブラウザーで GeoJSON の構文、地物、ジオメトリ、座標を検証します。GeoJSON を貼り付けるかファイルを開くと、エラーと対象フィールドのパスを確認できます。",
+      },
+      ko: {
+        name: "GeoJSON 검증기",
+        description:
+          "브라우저에서 GeoJSON 구문, 피처, 도형과 좌표를 검사하세요. GeoJSON을 붙여 넣거나 파일을 열어 오류와 해당 필드의 경로를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah GeoJSON",
+        description:
+          "Semak sintaks, ciri, geometri dan koordinat GeoJSON dalam pelayar anda. Tampal GeoJSON atau buka fail untuk mencari ralat berserta laluan ke medan yang terlibat.",
+      },
+      nl: {
+        name: "GeoJSON-validator",
+        description:
+          "Controleer de syntaxis, objecten, geometrieën en coördinaten van GeoJSON in je browser. Plak GeoJSON of open een bestand en zie bij elke fout het pad naar het veld.",
+      },
+      no: {
+        name: "GeoJSON-validator",
+        description:
+          "Kontroller GeoJSON-syntaks, objekter, geometrier og koordinater i nettleseren. Lim inn GeoJSON eller åpne en fil for å finne feil og se stien til feltene det gjelder.",
+      },
+      pl: {
+        name: "Walidator GeoJSON",
+        description:
+          "Sprawdź składnię, obiekty, geometrie i współrzędne GeoJSON w przeglądarce. Wklej GeoJSON lub otwórz plik, aby znaleźć błędy ze ścieżkami do odpowiednich pól.",
+      },
+      pt: {
+        name: "Validador de GeoJSON",
+        description:
+          "Verifique a sintaxe, as feições, as geometrias e as coordenadas do GeoJSON no navegador. Cole o conteúdo ou abra um arquivo para encontrar erros e os caminhos dos campos afetados.",
+      },
+      ru: {
+        name: "Валидатор GeoJSON",
+        description:
+          "Проверьте синтаксис, объекты, геометрию и координаты GeoJSON прямо в браузере. Вставьте GeoJSON или откройте файл, чтобы найти ошибки и узнать, в каких полях они возникли.",
+      },
+      sv: {
+        name: "GeoJSON-validerare",
+        description:
+          "Kontrollera GeoJSON-syntax, objekt, geometrier och koordinater i webbläsaren. Klistra in GeoJSON eller öppna en fil för att hitta fel med sökvägar till berörda fält.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ GeoJSON",
+        description:
+          "ตรวจสอบไวยากรณ์ ฟีเจอร์ เรขาคณิต และพิกัด GeoJSON ในเบราว์เซอร์ วาง GeoJSON หรือเปิดไฟล์เพื่อค้นหาข้อผิดพลาดพร้อมพาธของฟิลด์ที่มีปัญหา",
+      },
+      tr: {
+        name: "GeoJSON Doğrulayıcı",
+        description:
+          "GeoJSON sözdizimini, coğrafi detayları, geometrileri ve koordinatları tarayıcınızda denetleyin. GeoJSON yapıştırın veya dosya açın, hataları ve ilgili alanların yollarını görün.",
+      },
+      vi: {
+        name: "Trình kiểm tra GeoJSON",
+        description:
+          "Kiểm tra cú pháp, đối tượng, hình học và tọa độ GeoJSON ngay trong trình duyệt. Dán GeoJSON hoặc mở tệp để tìm lỗi và xem đường dẫn đến từng trường bị ảnh hưởng.",
+      },
+      "zh-CN": {
+        name: "GeoJSON 校验器",
+        description:
+          "在浏览器中检查 GeoJSON 语法、要素、几何图形和坐标。粘贴 GeoJSON 或打开文件，即可查找错误及相关字段的路径。",
+      },
+      "zh-TW": {
+        name: "GeoJSON 驗證器",
+        description:
+          "在瀏覽器中檢查 GeoJSON 語法、圖徵、幾何圖形和座標。貼上 GeoJSON 或開啟檔案，即可找出錯誤及相關欄位的路徑。",
+      },
+    },
+  },
+  {
     slug: "geojson-viewer",
     category: "geo",
     secondaryCategories: ["json"],
@@ -72277,6 +72410,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "遊戲控制器測試器",
         description:
           "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
+  "geojson-validator": {
+    slug: "geojson-validator",
+    category: "geo",
+    secondaryCategories: ["json"],
+    icon: "file-check",
+    tags: [
+      "geojson",
+      "geojsonlint",
+      "validator",
+      "validation",
+      "json",
+      "gis",
+      "coordinates",
+      "rfc-7946",
+    ],
+    locales: {
+      ar: {
+        name: "مدقّق GeoJSON",
+        description:
+          "تحقّق من صياغة GeoJSON ومعالمه وأشكاله الهندسية وإحداثياته في متصفحك. ألصق نص GeoJSON أو افتح ملفًا للعثور على الأخطاء ومعرفة مسارات الحقول المتأثرة.",
+      },
+      de: {
+        name: "GeoJSON-Validator",
+        description:
+          "Prüfe die Syntax, Objekte, Geometrien und Koordinaten von GeoJSON direkt im Browser. Füge GeoJSON ein oder öffne eine Datei, um Fehler und die Pfade zu den betroffenen Feldern zu sehen.",
+      },
+      en: {
+        name: "GeoJSON Validator",
+        description:
+          "Check GeoJSON syntax, features, geometries and coordinates in your browser. Paste GeoJSON or open a file to find errors with paths to the affected fields.",
+      },
+      es: {
+        name: "Validador de GeoJSON",
+        description:
+          "Comprueba la sintaxis, las entidades, las geometrías y las coordenadas de GeoJSON en tu navegador. Pega el contenido o abre un archivo para localizar errores y ver la ruta de los campos afectados.",
+      },
+      fr: {
+        name: "Validateur GeoJSON",
+        description:
+          "Vérifiez la syntaxe, les entités, les géométries et les coordonnées GeoJSON dans votre navigateur. Collez du GeoJSON ou ouvrez un fichier pour repérer les erreurs et les champs concernés.",
+      },
+      he: {
+        name: "מאמת GeoJSON",
+        description:
+          "בדקו את התחביר, הישויות, הגאומטריות והקואורדינטות של GeoJSON בדפדפן. הדביקו GeoJSON או פתחו קובץ כדי לאתר שגיאות ולקבל נתיבים לשדות שבהם הן מופיעות.",
+      },
+      hi: {
+        name: "GeoJSON वैलिडेटर",
+        description:
+          "ब्राउज़र में GeoJSON का सिंटैक्स, फ़ीचर, ज्यामिति और निर्देशांक जाँचें। GeoJSON पेस्ट करें या फ़ाइल खोलें और समस्याओं से जुड़े फ़ील्ड के पाथ देखें।",
+      },
+      id: {
+        name: "Validator GeoJSON",
+        description:
+          "Periksa sintaks, fitur, geometri, dan koordinat GeoJSON di browser. Tempel GeoJSON atau buka berkas untuk menemukan kesalahan beserta jalur ke kolom yang bermasalah.",
+      },
+      it: {
+        name: "Validatore GeoJSON",
+        description:
+          "Controlla sintassi, elementi geografici, geometrie e coordinate GeoJSON nel browser. Incolla il contenuto o apri un file per individuare gli errori e visualizzare il percorso dei campi interessati.",
+      },
+      ja: {
+        name: "GeoJSON バリデーター",
+        description:
+          "ブラウザーで GeoJSON の構文、地物、ジオメトリ、座標を検証します。GeoJSON を貼り付けるかファイルを開くと、エラーと対象フィールドのパスを確認できます。",
+      },
+      ko: {
+        name: "GeoJSON 검증기",
+        description:
+          "브라우저에서 GeoJSON 구문, 피처, 도형과 좌표를 검사하세요. GeoJSON을 붙여 넣거나 파일을 열어 오류와 해당 필드의 경로를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengesah GeoJSON",
+        description:
+          "Semak sintaks, ciri, geometri dan koordinat GeoJSON dalam pelayar anda. Tampal GeoJSON atau buka fail untuk mencari ralat berserta laluan ke medan yang terlibat.",
+      },
+      nl: {
+        name: "GeoJSON-validator",
+        description:
+          "Controleer de syntaxis, objecten, geometrieën en coördinaten van GeoJSON in je browser. Plak GeoJSON of open een bestand en zie bij elke fout het pad naar het veld.",
+      },
+      no: {
+        name: "GeoJSON-validator",
+        description:
+          "Kontroller GeoJSON-syntaks, objekter, geometrier og koordinater i nettleseren. Lim inn GeoJSON eller åpne en fil for å finne feil og se stien til feltene det gjelder.",
+      },
+      pl: {
+        name: "Walidator GeoJSON",
+        description:
+          "Sprawdź składnię, obiekty, geometrie i współrzędne GeoJSON w przeglądarce. Wklej GeoJSON lub otwórz plik, aby znaleźć błędy ze ścieżkami do odpowiednich pól.",
+      },
+      pt: {
+        name: "Validador de GeoJSON",
+        description:
+          "Verifique a sintaxe, as feições, as geometrias e as coordenadas do GeoJSON no navegador. Cole o conteúdo ou abra um arquivo para encontrar erros e os caminhos dos campos afetados.",
+      },
+      ru: {
+        name: "Валидатор GeoJSON",
+        description:
+          "Проверьте синтаксис, объекты, геометрию и координаты GeoJSON прямо в браузере. Вставьте GeoJSON или откройте файл, чтобы найти ошибки и узнать, в каких полях они возникли.",
+      },
+      sv: {
+        name: "GeoJSON-validerare",
+        description:
+          "Kontrollera GeoJSON-syntax, objekt, geometrier och koordinater i webbläsaren. Klistra in GeoJSON eller öppna en fil för att hitta fel med sökvägar till berörda fält.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ GeoJSON",
+        description:
+          "ตรวจสอบไวยากรณ์ ฟีเจอร์ เรขาคณิต และพิกัด GeoJSON ในเบราว์เซอร์ วาง GeoJSON หรือเปิดไฟล์เพื่อค้นหาข้อผิดพลาดพร้อมพาธของฟิลด์ที่มีปัญหา",
+      },
+      tr: {
+        name: "GeoJSON Doğrulayıcı",
+        description:
+          "GeoJSON sözdizimini, coğrafi detayları, geometrileri ve koordinatları tarayıcınızda denetleyin. GeoJSON yapıştırın veya dosya açın, hataları ve ilgili alanların yollarını görün.",
+      },
+      vi: {
+        name: "Trình kiểm tra GeoJSON",
+        description:
+          "Kiểm tra cú pháp, đối tượng, hình học và tọa độ GeoJSON ngay trong trình duyệt. Dán GeoJSON hoặc mở tệp để tìm lỗi và xem đường dẫn đến từng trường bị ảnh hưởng.",
+      },
+      "zh-CN": {
+        name: "GeoJSON 校验器",
+        description:
+          "在浏览器中检查 GeoJSON 语法、要素、几何图形和坐标。粘贴 GeoJSON 或打开文件，即可查找错误及相关字段的路径。",
+      },
+      "zh-TW": {
+        name: "GeoJSON 驗證器",
+        description:
+          "在瀏覽器中檢查 GeoJSON 語法、圖徵、幾何圖形和座標。貼上 GeoJSON 或開啟檔案，即可找出錯誤及相關欄位的路徑。",
       },
     },
   },

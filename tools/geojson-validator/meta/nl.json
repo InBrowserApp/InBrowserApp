@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON-validator",
+  "description": "Controleer de syntaxis, objecten, geometrieën en coördinaten van GeoJSON in je browser. Plak GeoJSON of open een bestand en zie bij elke fout het pad naar het veld."
+}

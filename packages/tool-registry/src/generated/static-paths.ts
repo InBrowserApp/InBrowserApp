@@ -12606,6 +12606,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geojson-validator",
+    language: "ar",
+  },
+  {
+    slug: "geojson-validator",
+    language: "de",
+  },
+  {
+    slug: "geojson-validator",
+    language: "en",
+  },
+  {
+    slug: "geojson-validator",
+    language: "es",
+  },
+  {
+    slug: "geojson-validator",
+    language: "fr",
+  },
+  {
+    slug: "geojson-validator",
+    language: "he",
+  },
+  {
+    slug: "geojson-validator",
+    language: "hi",
+  },
+  {
+    slug: "geojson-validator",
+    language: "id",
+  },
+  {
+    slug: "geojson-validator",
+    language: "it",
+  },
+  {
+    slug: "geojson-validator",
+    language: "ja",
+  },
+  {
+    slug: "geojson-validator",
+    language: "ko",
+  },
+  {
+    slug: "geojson-validator",
+    language: "ms",
+  },
+  {
+    slug: "geojson-validator",
+    language: "nl",
+  },
+  {
+    slug: "geojson-validator",
+    language: "no",
+  },
+  {
+    slug: "geojson-validator",
+    language: "pl",
+  },
+  {
+    slug: "geojson-validator",
+    language: "pt",
+  },
+  {
+    slug: "geojson-validator",
+    language: "ru",
+  },
+  {
+    slug: "geojson-validator",
+    language: "sv",
+  },
+  {
+    slug: "geojson-validator",
+    language: "th",
+  },
+  {
+    slug: "geojson-validator",
+    language: "tr",
+  },
+  {
+    slug: "geojson-validator",
+    language: "vi",
+  },
+  {
+    slug: "geojson-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "geojson-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "geojson-viewer",
     language: "ar",
   },

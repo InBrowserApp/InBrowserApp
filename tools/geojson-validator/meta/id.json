@@ -1,0 +1,4 @@
+{
+  "name": "Validator GeoJSON",
+  "description": "Periksa sintaks, fitur, geometri, dan koordinat GeoJSON di browser. Tempel GeoJSON atau buka berkas untuk menemukan kesalahan beserta jalur ke kolom yang bermasalah."
+}
