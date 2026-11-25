@@ -16544,6 +16544,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "fb2-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: [
+      "fb2",
+      "pdf",
+      "ebook",
+      "fb2 to pdf",
+      "fictionbook",
+      "print",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل FB2 إلى PDF",
+        description:
+          "حوّل كتب FictionBook بصيغ FB2 أو FB2.ZIP أو FBZ إلى PDF بنص قابل للتحديد. عاين الفصول، واختر مقاس الورق، واحفظ الملف في متصفحك دون رفعه.",
+      },
+      de: {
+        name: "FB2-zu-PDF-Konverter",
+        description:
+          "Wandle FictionBook-Dateien (FB2, FB2.ZIP oder FBZ) in PDF mit auswählbarem Text um. Prüfe die Kapitel, wähle ein Papierformat und speichere das PDF direkt im Browser. Kein Upload nötig.",
+      },
+      en: {
+        name: "FB2 to PDF Converter",
+        description:
+          "Convert FictionBook (FB2, FB2.ZIP or FBZ) to PDF with selectable text. Preview chapters, choose a paper size, and save in your browser without uploading.",
+      },
+      es: {
+        name: "Convertidor de FB2 a PDF",
+        description:
+          "Convierte libros FictionBook (FB2, FB2.ZIP o FBZ) a PDF con texto seleccionable. Previsualiza los capítulos, elige el tamaño del papel y guarda el PDF en tu navegador sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur FB2 en PDF",
+        description:
+          "Convertissez un livre FictionBook (FB2, FB2.ZIP ou FBZ) en PDF avec du texte sélectionnable. Prévisualisez les chapitres, choisissez le format du papier et enregistrez le PDF dans votre navigateur, sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר FB2 ל־PDF",
+        description:
+          "המירו ספרי FictionBook בפורמט FB2, FB2.ZIP או FBZ ל־PDF עם טקסט שאפשר לסמן. הציגו את הפרקים בתצוגה מקדימה, בחרו גודל נייר ושמרו בדפדפן בלי להעלות את הספר.",
+      },
+      hi: {
+        name: "FB2 से PDF कन्वर्टर",
+        description:
+          "FictionBook (FB2, FB2.ZIP या FBZ) को ऐसी PDF में बदलें जिसमें टेक्स्ट चुना जा सके। अध्यायों का प्रीव्यू देखें, काग़ज़ का आकार चुनें और किताब अपलोड किए बिना ब्राउज़र में PDF सेव करें।",
+      },
+      id: {
+        name: "Konverter FB2 ke PDF",
+        description:
+          "Ubah FictionBook (FB2, FB2.ZIP, atau FBZ) ke PDF dengan teks yang dapat dipilih. Tinjau bab, pilih ukuran kertas, dan simpan PDF di browser tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da FB2 a PDF",
+        description:
+          "Converti libri FictionBook (FB2, FB2.ZIP o FBZ) in PDF con testo selezionabile. Controlla l’anteprima dei capitoli, scegli il formato della carta e salva il PDF nel browser senza caricare il libro.",
+      },
+      ja: {
+        name: "FB2 PDF変換",
+        description:
+          "ブラウザーでFictionBook（FB2、FB2.ZIP、FBZ）をPDFに変換します。章をプレビューし、用紙サイズを指定して、文字を選択できるPDFとして保存できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "FB2 PDF 변환기",
+        description:
+          "FictionBook(FB2, FB2.ZIP, FBZ) 전자책을 텍스트를 선택할 수 있는 PDF로 변환하세요. 장을 미리 보고 용지 크기를 골라 업로드 없이 브라우저에서 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar FB2 kepada PDF",
+        description:
+          "Tukar buku FictionBook (FB2, FB2.ZIP atau FBZ) kepada PDF dengan teks yang boleh dipilih. Pratonton bab, pilih saiz kertas dan simpan PDF dalam pelayar tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "FB2 naar PDF-converter",
+        description:
+          "Zet FictionBook-bestanden (FB2, FB2.ZIP of FBZ) om naar PDF met selecteerbare tekst. Bekijk de hoofdstukken, kies een papierformaat en sla de PDF lokaal op in je browser.",
+      },
+      no: {
+        name: "Konverter FB2 til PDF",
+        description:
+          "Konverter FictionBook (FB2, FB2.ZIP eller FBZ) til PDF med tekst som kan markeres. Forhåndsvis kapitlene, velg papirstørrelse og lagre i nettleseren uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter FB2 na PDF",
+        description:
+          "Konwertuj książki FictionBook (FB2, FB2.ZIP lub FBZ) na PDF z tekstem, który można zaznaczać. Sprawdź podgląd rozdziałów, wybierz format papieru i zapisz plik w przeglądarce. Książka pozostaje na urządzeniu.",
+      },
+      pt: {
+        name: "Conversor de FB2 para PDF",
+        description:
+          "Converta livros FictionBook (FB2, FB2.ZIP ou FBZ) em PDF com texto selecionável. Confira os capítulos na prévia, escolha o tamanho do papel e salve sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер FB2 в PDF",
+        description:
+          "Конвертируйте книги FictionBook (FB2, FB2.ZIP и FBZ) в PDF с выделяемым текстом. Просмотрите главы, выберите размер бумаги и сохраните PDF в браузере без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konvertera FB2 till PDF",
+        description:
+          "Konvertera FictionBook (FB2, FB2.ZIP eller FBZ) till PDF med markerbar text. Förhandsgranska kapitlen, välj pappersstorlek och spara direkt i webbläsaren utan uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง FB2 เป็น PDF",
+        description:
+          "แปลงหนังสือ FictionBook (FB2, FB2.ZIP หรือ FBZ) เป็น PDF ที่เลือกและคัดลอกข้อความได้ ดูตัวอย่างบท เลือกขนาดกระดาษ แล้วบันทึกในเบราว์เซอร์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "FB2’den PDF’ye Dönüştürücü",
+        description:
+          "FictionBook (FB2, FB2.ZIP veya FBZ) dosyalarını metni seçilebilen PDF’lere dönüştürün. Bölümleri önizleyin, kâğıt boyutunu seçin ve dosyanızı yüklemeden tarayıcınızda kaydedin.",
+      },
+      vi: {
+        name: "Chuyển FB2 sang PDF",
+        description:
+          "Chuyển sách FictionBook (FB2, FB2.ZIP hoặc FBZ) sang PDF có văn bản chọn được. Xem trước các chương, chọn khổ giấy và lưu ngay trong trình duyệt mà không cần tải sách lên.",
+      },
+      "zh-CN": {
+        name: "FB2 转 PDF",
+        description:
+          "将 FictionBook 电子书（FB2、FB2.ZIP 或 FBZ）转为正文可选中的 PDF。预览章节、选择纸张大小，然后直接在浏览器中保存，无需上传。",
+      },
+      "zh-TW": {
+        name: "FB2 轉 PDF",
+        description:
+          "在瀏覽器中將 FictionBook（FB2、FB2.ZIP 或 FBZ）轉成可選取文字的 PDF。預覽章節、選擇紙張大小並儲存，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",

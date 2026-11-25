@@ -648,6 +648,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "fb2-to-epub-converter",
   },
   {
+    category: "ebook",
+    name: "Convertitore da FB2 a PDF",
+    slug: "fb2-to-pdf-converter",
+  },
+  {
     category: "web",
     name: "Convertitore da file a Data URI",
     slug: "file-to-data-uri-converter",

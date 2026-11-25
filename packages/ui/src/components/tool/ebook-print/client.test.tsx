@@ -14,8 +14,10 @@ const mock = vi.hoisted(() => ({ prepareBook: vi.fn() }))
 vi.mock("./prepare-book", () => mock)
 const book = { html: "<!doctype html><p>Book text</p>", missing: false }
 
-function setup() {
-  const { container } = render(<Client lang="en" messages={m} />)
+function setup(format: "epub" | "fb2" = "epub") {
+  const { container } = render(
+    <Client lang="en" format={format} messages={m} />
+  )
   const input = container.querySelector("input")!
   function select(name = "reading.epub") {
     fireEvent.change(input, { target: { files: [new File(["book"], name)] } })
@@ -143,6 +145,22 @@ test.each(["resolve", "reject"])(
     expect(screen.queryByRole("alert")).toBeNull()
     expect(document.activeElement).toBe(
       screen.getByRole("button", { name: m.open })
+    )
+  }
+)
+
+test.each(["book.fb2", "book.FBZ", "book.fb2.zip"])(
+  "prepares %s on the FB2 page",
+  async (name) => {
+    const { select, input } = setup("fb2")
+    expect(input.accept).toContain(".fb2.zip")
+    select(name)
+    await screen.findByTitle(m.preview)
+    expect(mock.prepareBook).toHaveBeenCalledWith(
+      expect.objectContaining({ name }),
+      expect.any(AbortSignal),
+      m,
+      "en"
     )
   }
 )

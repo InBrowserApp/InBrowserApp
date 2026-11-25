@@ -1,0 +1,11 @@
+{
+  "open": "Buka buku FB2",
+  "replace": "Ganti buku",
+  "drop": "Letakkan buku FB2 atau FBZ di sini",
+  "unsupported": "Pilih buku FB2 lokal atau arsip FBZ / FB2.ZIP yang berisi satu buku FB2.",
+  "invalid": "Buku ini mungkin rusak atau tidak lengkap. Pilih salinan lain.",
+  "protected": "Arsip ini dienkripsi. Pilih salinan tanpa enkripsi.",
+  "ambiguous": "Arsip ini berisi lebih dari satu buku FB2. Ekstrak arsip dan buka buku yang Anda inginkan.",
+  "noBook": "Arsip ini tidak berisi buku FB2. Pilih file lain.",
+  "encoding": "Buku ini menyatakan pengodean teks yang tidak didukung. Pilih salinan UTF-8."
+}

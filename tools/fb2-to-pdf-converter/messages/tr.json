@@ -1,0 +1,11 @@
+{
+  "open": "FB2 kitabı aç",
+  "replace": "Kitabı değiştir",
+  "drop": "FB2 veya FBZ kitabını buraya bırakın",
+  "unsupported": "Yerel bir FB2 kitabı veya tek bir FB2 kitabı içeren FBZ / FB2.ZIP arşivi seçin.",
+  "invalid": "Bu kitap hasarlı veya eksik olabilir. Başka bir kopya seçin.",
+  "protected": "Bu arşiv şifreli. Şifresiz bir kopya seçin.",
+  "ambiguous": "Bu arşiv birden fazla FB2 kitabı içeriyor. Arşivi çıkarın ve istediğiniz kitabı açın.",
+  "noBook": "Bu arşivde FB2 kitabı yok. Başka bir dosya seçin.",
+  "encoding": "Bu kitap desteklenmeyen bir metin kodlaması belirtiyor. UTF-8 kodlamalı bir kopya seçin."
+}

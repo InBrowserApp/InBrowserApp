@@ -1,0 +1,11 @@
+{
+  "open": "Åpne FB2-bok",
+  "replace": "Bytt bok",
+  "drop": "Slipp en FB2- eller FBZ-bok her",
+  "unsupported": "Velg en lokal FB2-bok eller et FBZ- / FB2.ZIP-arkiv som inneholder én FB2-bok.",
+  "invalid": "Boken kan være skadet eller ufullstendig. Velg en annen kopi.",
+  "protected": "Arkivet er kryptert. Velg en ukryptert kopi.",
+  "ambiguous": "Arkivet inneholder mer enn én FB2-bok. Pakk det ut og åpne boken du vil lese.",
+  "noBook": "Arkivet inneholder ingen FB2-bok. Velg en annen fil.",
+  "encoding": "Boken angir en tekstkoding som ikke støttes. Velg en UTF-8-kopi."
+}

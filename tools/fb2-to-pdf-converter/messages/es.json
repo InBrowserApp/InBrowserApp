@@ -1,0 +1,11 @@
+{
+  "open": "Abrir libro FB2",
+  "replace": "Reemplazar libro",
+  "drop": "Suelta un libro FB2 o FBZ aquí",
+  "unsupported": "Elige un libro FB2 local o un archivo FBZ / FB2.ZIP que contenga un solo libro FB2.",
+  "invalid": "Este libro puede estar dañado o incompleto. Elige otra copia.",
+  "protected": "Este archivo comprimido está cifrado. Elige una copia sin cifrar.",
+  "ambiguous": "Este archivo comprimido contiene más de un libro FB2. Extráelo y abre el libro que quieras.",
+  "noBook": "Este archivo comprimido no contiene ningún libro FB2. Elige otro archivo.",
+  "encoding": "Este libro declara una codificación de texto no compatible. Elige una copia en UTF-8."
+}

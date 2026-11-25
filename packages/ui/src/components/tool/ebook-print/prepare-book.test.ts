@@ -7,8 +7,10 @@ const mock = vi.hoisted(() => ({
   snapshotBook: vi.fn(),
   dispose: vi.fn(),
 }))
-vi.mock("@workspace/ebook", () => ({ snapshotBook: mock.snapshotBook }))
-vi.mock("@workspace/ebook/epub", () => ({ openBook: mock.openBook }))
+vi.mock("@workspace/ebook", () => ({
+  openEbook: mock.openBook,
+  snapshotBook: mock.snapshotBook,
+}))
 
 const snapshot = {
   title: "Test & notes",
@@ -38,7 +40,9 @@ test("prepares an isolated, printable book with expandable content and chapter d
   const signal = new AbortController().signal
   const { html, missing } = await prepareBook(file, signal, m, "en")
   const doc = new DOMParser().parseFromString(html, "text/html")
-  expect(mock.openBook).toHaveBeenCalledWith(file, signal, true)
+  expect(mock.openBook).toHaveBeenCalledWith(file, signal, {
+    preserveMissingImages: true,
+  })
   expect(doc.querySelector("header h1")?.textContent).toBe(snapshot.title)
   expect(doc.documentElement.lang).toBe("ar")
   expect(doc.querySelector("#ebook-chapter-0")?.getAttribute("dir")).toBe(
@@ -67,4 +71,31 @@ test("uses the page locale without a book language and releases the book on fail
   mock.snapshotBook.mockRejectedValueOnce(new Error("incomplete"))
   await expect(prepareBook(file, signal, m, "en")).rejects.toThrow("incomplete")
   expect(mock.dispose).toHaveBeenCalledTimes(2)
+})
+
+test("prints FB2 text and internal note targets with missing illustrations identified", async () => {
+  const file = new File(["book"], "book.fb2.zip")
+  const signal = new AbortController().signal
+  const book = { dispose: mock.dispose }
+  mock.openBook.mockResolvedValueOnce(book)
+  mock.snapshotBook.mockResolvedValueOnce({
+    ...snapshot,
+    language: "ru",
+    chapters: [
+      {
+        ...snapshot.chapters[0]!,
+        html: '<p>Стихотворение <a href="#note">1</a></p><p id="note">Примечание</p>',
+      },
+    ],
+  })
+  const { html } = await prepareBook(file, signal, m, "en")
+  const doc = new DOMParser().parseFromString(html, "text/html")
+  expect(mock.openBook).toHaveBeenCalledWith(file, signal, {
+    preserveMissingImages: true,
+  })
+  expect(doc.documentElement.lang).toBe("ru")
+  expect(doc.querySelector('a[href="#note"]')?.textContent).toBe("1")
+  expect(doc.querySelector("#note")?.textContent).toBe("Примечание")
+  expect(doc.body.textContent).toContain("Стихотворение")
+  expect(mock.dispose).toHaveBeenCalledOnce()
 })

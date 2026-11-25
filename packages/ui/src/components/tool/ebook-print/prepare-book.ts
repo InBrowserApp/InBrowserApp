@@ -1,5 +1,4 @@
-import { openBook } from "@workspace/ebook/epub"
-import { snapshotBook } from "@workspace/ebook"
+import { openEbook, snapshotBook } from "@workspace/ebook"
 import { createReadingDocument } from "@workspace/ebook/document"
 import type { Messages } from "./messages"
 
@@ -27,7 +26,7 @@ export async function prepareBook(
   lang: string
 ) {
   signal.throwIfAborted()
-  const book = await openBook(file, signal, true)
+  const book = await openEbook(file, signal, { preserveMissingImages: true })
   try {
     const snapshot = await snapshotBook(book, signal, m)
     const doc = createReadingDocument(snapshot, m)
