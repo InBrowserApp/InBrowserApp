@@ -79,7 +79,8 @@ export async function convertPdf(
           const page = await wait(pdf.getPage(number))
           try {
             const text = await wait(page.getTextContent())
-            const blocks = reflowPdfText(text, page.getViewport({ scale: 1 }))
+            const viewport = page.getViewport({ scale: 1 })
+            const blocks = reflowPdfText(text, viewport)
             const pageNumber =
               blocks.length === 1 && /^\p{Nd}{1,6}$/u.test(blocks[0]!.text)
             const scanWithNumber =
@@ -87,8 +88,22 @@ export async function convertPdf(
               (await wait(page.getOperatorList())).fnArray.some((op) =>
                 scanImageOps.has(op)
               )
-            if (blocks.length && !scanWithNumber) pages.push({ number, blocks })
-            else yield { page, blocks }
+            if (blocks.length && !scanWithNumber) {
+              pages.push({ number, blocks })
+            } else {
+              const label = scanWithNumber
+                ? text.items.find((item) => "str" in item && item.str.trim())
+                : null
+              const numberAtTop =
+                label && "transform" in label
+                  ? viewport.convertToViewportPoint(
+                      label.transform[4]!,
+                      label.transform[5]!
+                    )[1]! <
+                    viewport.height / 2
+                  : false
+              yield { page, blocks, numberAtTop }
+            }
           } finally {
             page.cleanup()
           }
@@ -108,19 +123,26 @@ export async function convertPdf(
             async (worker) => {
               while (!next.done) {
                 recognizing(0)
-                const { page, blocks: native } = next.value
+                const { page, blocks: native, numberAtTop } = next.value
                 await renderPdfScan(page, canvas, signal)
                 const { data } = await worker.recognize(canvas)
                 signal.throwIfAborted()
-                const lines = data.text.trimEnd().split(/\r?\n/)
-                if (native.length && lines.at(-1)?.trim() === native[0]!.text)
-                  lines.pop()
+                const lines = data.text.trim().split(/\r?\n/)
+                const edge = numberAtTop ? 0 : -1
+                if (native.length && lines.at(edge)?.trim() === native[0]!.text)
+                  lines.splice(edge, 1)
                 const blocks = reflowRecognizedText(lines.join("\n"))
                 const image = blocks.length
                   ? undefined
                   : canvas.toDataURL("image/jpeg", 0.9)
                 if (image) imagePages++
-                pages.push({ number, blocks: [...blocks, ...native], image })
+                pages.push({
+                  number,
+                  blocks: numberAtTop
+                    ? [...native, ...blocks]
+                    : [...blocks, ...native],
+                  image,
+                })
                 next = await scanPages.next()
               }
             }
