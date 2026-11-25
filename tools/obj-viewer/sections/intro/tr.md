@@ -13,3 +13,4 @@ Eşlik eden dosyalar eksik olsa da OBJ açılır. İlgili yüzeyler varsayılan 
 3B baskı için dışa aktarılmış bir üçgen ağı incelemek için [STL Görüntüleyici](../stl-viewer/) aracını kullanın. Orijinal CAD parçanız veya montajınız `.step` ya da `.stp` dosyasıysa [STEP Görüntüleyici](../step-viewer/) aracında açın.
 
 - [GLB / glTF Görüntüleyici](../gltf-viewer/)
+- [OBJ’den STL’ye Dönüştürücü](../obj-to-stl-converter/)

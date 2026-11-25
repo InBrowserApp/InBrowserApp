@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Convertitore da OBJ a STL",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "Visualizzatore OBJ",
     slug: "obj-viewer",
   },
@@ -1746,6 +1751,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Separa i canali stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Convertitore da STL a OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

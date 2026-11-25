@@ -1,0 +1,11 @@
+{
+  "open": "開啟檔案",
+  "drop": "將模型檔案拖放到這裡",
+  "example": "試用範例",
+  "privacy": "檔案會留在此裝置上。",
+  "converting": "正在轉換模型…",
+  "failed": "無法轉換此模型。請選擇包含網格面的有效檔案。",
+  "output": "轉換後的檔案",
+  "download": "下載 {format}",
+  "previousOutput": "先前的轉換"
+}

@@ -13,3 +13,4 @@ An OBJ still opens when its companion files are missing. The affected surfaces a
 For a triangular mesh exported for 3D printing, use the [STL Viewer](../stl-viewer/). If you have the original CAD part or assembly as a `.step` or `.stp` file, open it in the [STEP Viewer](../step-viewer/).
 
 - [GLB / glTF Viewer](../gltf-viewer/)
+- [OBJ to STL Converter](../obj-to-stl-converter/)

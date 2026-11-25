@@ -15,3 +15,4 @@ STL beschreibt die Oberfläche eines Bauteils mit Dreiecken. Für eine Wavefront
 - [GLB- und glTF-Betrachter](../gltf-viewer/)
 
 - [3MF-Betrachter](../3mf-viewer/)
+- [STL-zu-OBJ-Konverter](../stl-to-obj-converter/)

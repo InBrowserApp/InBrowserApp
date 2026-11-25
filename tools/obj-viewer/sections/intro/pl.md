@@ -13,3 +13,4 @@ Plik OBJ otworzy się nawet przy braku powiązanych plików. Powierzchnie, któr
 Siatkę trójkątów wyeksportowaną do druku 3D otworzysz w [przeglądarce plików STL](../stl-viewer/). Jeśli masz oryginalną część lub zespół CAD w pliku `.step` lub `.stp`, otwórz je w [przeglądarce plików STEP](../step-viewer/).
 
 - [Przeglądarka plików GLB i glTF](../gltf-viewer/)
+- [Konwerter OBJ na STL](../obj-to-stl-converter/)

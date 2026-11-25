@@ -15,3 +15,4 @@ STL descrive la superficie di una parte mediante triangoli. Per aprire un file W
 - [Visualizzatore GLB / glTF](../gltf-viewer/)
 
 - [Visualizzatore 3MF](../3mf-viewer/)
+- [Convertitore da STL a OBJ](../stl-to-obj-converter/)

@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "OBJ 轉 STL 轉換器",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "OBJ 檢視器",
     slug: "obj-viewer",
   },
@@ -1746,6 +1751,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "左右聲道分離",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL 轉 OBJ 轉換器",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

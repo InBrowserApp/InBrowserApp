@@ -1,0 +1,11 @@
+{
+  "open": "Mở tệp",
+  "drop": "Thả tệp mô hình vào đây",
+  "example": "Thử ví dụ",
+  "privacy": "Tệp được giữ trên thiết bị của bạn.",
+  "converting": "Đang chuyển đổi mô hình…",
+  "failed": "Không chuyển đổi được mô hình này. Hãy chọn tệp hợp lệ có chứa các mặt lưới.",
+  "output": "Tệp đã chuyển đổi",
+  "download": "Tải xuống {format}",
+  "previousOutput": "Lần chuyển đổi trước"
+}

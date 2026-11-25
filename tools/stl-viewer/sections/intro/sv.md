@@ -15,3 +15,4 @@ STL beskriver ytan på en detalj med trianglar. Använd [OBJ-visaren](../obj-vie
 - [GLB- och glTF-visare](../gltf-viewer/)
 
 - [3MF-visare](../3mf-viewer/)
+- [STL till OBJ-konverterare](../stl-to-obj-converter/)

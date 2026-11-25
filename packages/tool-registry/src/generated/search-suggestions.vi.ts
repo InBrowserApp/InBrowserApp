@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Trình chuyển đổi OBJ sang STL",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "Trình xem OBJ",
     slug: "obj-viewer",
   },
@@ -1746,6 +1751,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Tách kênh âm thanh stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Trình chuyển đổi STL sang OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

@@ -1,0 +1,4 @@
+{
+  "name": "STL till OBJ-konverterare",
+  "description": "Konvertera STL-filer i ASCII- eller binärformat till Wavefront OBJ i webbläsaren. Ladda ner modellens triangelnät som en OBJ-fil."
+}

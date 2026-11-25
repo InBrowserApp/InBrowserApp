@@ -13,3 +13,4 @@ Um arquivo Wavefront OBJ contém a geometria e pode fazer referência a uma ou m
 Para uma malha triangular exportada para impressão 3D, use o [Visualizador de STL](../stl-viewer/). Se a peça ou montagem CAD original estiver em um arquivo `.step` ou `.stp`, abra o arquivo no [Visualizador de STEP](../step-viewer/).
 
 - [Visualizador de GLB / glTF](../gltf-viewer/)
+- [Conversor de OBJ para STL](../obj-to-stl-converter/)

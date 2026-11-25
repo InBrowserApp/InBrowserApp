@@ -1,0 +1,4 @@
+{
+  "name": "STL 轉 OBJ 轉換器",
+  "description": "在瀏覽器中將 ASCII 或二進位 STL 轉換為 Wavefront OBJ，並將模型的三角網格下載為 OBJ 檔案。"
+}

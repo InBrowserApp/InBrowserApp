@@ -1,0 +1,4 @@
+{
+  "name": "OBJ 轉 STL 轉換器",
+  "description": "在瀏覽器中將 Wavefront OBJ 網格轉換為二進位 STL 檔案，以便在切片軟體或 STL 檢視器中開啟。"
+}

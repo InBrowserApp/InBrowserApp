@@ -15,3 +15,4 @@ STL representa la superficie de una pieza mediante triángulos. Para abrir un ar
 - [Visor de GLB / glTF](../gltf-viewer/)
 
 - [Visor de 3MF](../3mf-viewer/)
+- [Conversor de STL a OBJ](../stl-to-obj-converter/)

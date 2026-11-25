@@ -13,3 +13,4 @@ En OBJ-fil går att öppna även om tillhörande filer saknas. Berörda ytor vis
 Använd [STL-visaren](../stl-viewer/) för ett triangelnät som har exporterats för 3D-utskrift. Öppna den ursprungliga CAD-detaljen eller sammanställningen i [STEP-visaren](../step-viewer/) om du har den som en `.step`- eller `.stp`-fil.
 
 - [GLB- och glTF-visare](../gltf-viewer/)
+- [OBJ till STL-konverterare](../obj-to-stl-converter/)

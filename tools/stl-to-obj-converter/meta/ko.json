@@ -1,0 +1,4 @@
+{
+  "name": "STL → OBJ 변환기",
+  "description": "브라우저에서 ASCII 또는 바이너리 STL을 Wavefront OBJ로 변환하고 모델의 삼각형 메시를 OBJ 파일로 다운로드하세요."
+}

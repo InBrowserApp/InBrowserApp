@@ -1,0 +1,4 @@
+{
+  "name": "Konverter STL ke OBJ",
+  "description": "Konversi STL ASCII atau biner ke Wavefront OBJ di browser. Unduh mesh segitiga model sebagai file OBJ."
+}

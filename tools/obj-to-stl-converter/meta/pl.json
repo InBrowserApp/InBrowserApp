@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter OBJ na STL",
+  "description": "Konwertuj siatki Wavefront OBJ w przeglądarce na binarne pliki STL, które otworzysz w przeglądarce STL lub programie do przygotowywania wydruku."
+}

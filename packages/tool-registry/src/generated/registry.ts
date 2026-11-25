@@ -33102,6 +33102,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "obj-to-stl-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "obj",
+      "stl",
+      "obj to stl",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل OBJ إلى STL",
+        description:
+          "حوّل شبكة Wavefront OBJ إلى ملف STL ثنائي في متصفحك، ثم افتحه في برنامج التقطيع أو عارض STL.",
+      },
+      de: {
+        name: "OBJ-zu-STL-Konverter",
+        description:
+          "Wandle ein Wavefront-OBJ-Netz im Browser in eine binäre STL-Datei um. Öffne die Datei anschließend im Slicer oder im STL-Betrachter.",
+      },
+      en: {
+        name: "OBJ to STL Converter",
+        description:
+          "Convert a Wavefront OBJ mesh to a binary STL file in your browser, ready to open in a slicer or STL viewer.",
+      },
+      es: {
+        name: "Conversor de OBJ a STL",
+        description:
+          "Convierte una malla Wavefront OBJ a un archivo STL binario en tu navegador. Abre el resultado en un laminador o en un visor de STL.",
+      },
+      fr: {
+        name: "Convertisseur OBJ en STL",
+        description:
+          "Convertissez un maillage Wavefront OBJ en fichier STL binaire dans votre navigateur. Ouvrez le résultat dans un logiciel de tranchage ou une visionneuse STL.",
+      },
+      he: {
+        name: "ממיר OBJ ל־STL",
+        description:
+          "המירו רשת Wavefront OBJ לקובץ STL בינארי בדפדפן, ואז פתחו את הקובץ בתוכנת חיתוך או במציג STL.",
+      },
+      hi: {
+        name: "OBJ से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में Wavefront OBJ मेश को बाइनरी STL फ़ाइल में बदलें। उसे स्लाइसर या STL व्यूअर में खोलें।",
+      },
+      id: {
+        name: "Konverter OBJ ke STL",
+        description:
+          "Konversi mesh Wavefront OBJ ke file STL biner di browser, siap dibuka di aplikasi slicer atau penampil STL.",
+      },
+      it: {
+        name: "Convertitore da OBJ a STL",
+        description:
+          "Converti una mesh Wavefront OBJ in un file STL binario nel browser. Apri il risultato in uno slicer o in un visualizzatore STL.",
+      },
+      ja: {
+        name: "OBJ → STL 変換",
+        description:
+          "Wavefront OBJ メッシュをブラウザーでバイナリ STL ファイルに変換し、スライサーや STL ビューアーで開けます。",
+      },
+      ko: {
+        name: "OBJ → STL 변환기",
+        description:
+          "브라우저에서 Wavefront OBJ 메시를 바이너리 STL 파일로 변환하여 슬라이서나 STL 뷰어에서 여세요.",
+      },
+      ms: {
+        name: "Penukar OBJ kepada STL",
+        description:
+          "Tukar jejaring Wavefront OBJ kepada fail STL binari dalam pelayar untuk dibuka dalam perisian penghiris atau pemapar STL.",
+      },
+      nl: {
+        name: "OBJ naar STL-converter",
+        description:
+          "Converteer een Wavefront OBJ-net in je browser naar een binair STL-bestand dat je in een slicer of STL-viewer kunt openen.",
+      },
+      no: {
+        name: "OBJ til STL-konverterer",
+        description:
+          "Konverter et Wavefront OBJ-nett til en binær STL-fil i nettleseren. Åpne filen i et slicerprogram eller en STL-viser.",
+      },
+      pl: {
+        name: "Konwerter OBJ na STL",
+        description:
+          "Konwertuj siatki Wavefront OBJ w przeglądarce na binarne pliki STL, które otworzysz w przeglądarce STL lub programie do przygotowywania wydruku.",
+      },
+      pt: {
+        name: "Conversor de OBJ para STL",
+        description:
+          "Converta uma malha Wavefront OBJ em um arquivo STL binário no navegador. Abra o resultado em um fatiador ou visualizador de STL.",
+      },
+      ru: {
+        name: "Конвертер OBJ в STL",
+        description:
+          "Преобразуйте полигональную сетку Wavefront OBJ в двоичный файл STL прямо в браузере. Результат можно открыть в слайсере или программе просмотра STL.",
+      },
+      sv: {
+        name: "OBJ till STL-konverterare",
+        description:
+          "Konvertera ett Wavefront OBJ-nät till en binär STL-fil i webbläsaren. Öppna filen i ett slicerprogram eller en STL-visare.",
+      },
+      th: {
+        name: "โปรแกรมแปลง OBJ เป็น STL",
+        description:
+          "แปลงเมช Wavefront OBJ เป็นไฟล์ STL ไบนารีในเบราว์เซอร์ เพื่อเปิดในโปรแกรมตัดชั้นหรือโปรแกรมดู STL",
+      },
+      tr: {
+        name: "OBJ’den STL’ye Dönüştürücü",
+        description:
+          "Wavefront OBJ ağını tarayıcınızda ikili STL dosyasına dönüştürün. Dosyayı bir dilimleme yazılımında veya STL görüntüleyicide açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi OBJ sang STL",
+        description:
+          "Chuyển lưới Wavefront OBJ sang tệp STL nhị phân trong trình duyệt để mở bằng phần mềm cắt lớp hoặc trình xem STL.",
+      },
+      "zh-CN": {
+        name: "OBJ 转 STL 转换器",
+        description:
+          "在浏览器中将 Wavefront OBJ 网格转换为二进制 STL 文件，以便在切片软件或 STL 查看器中打开。",
+      },
+      "zh-TW": {
+        name: "OBJ 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 Wavefront OBJ 網格轉換為二進位 STL 檔案，以便在切片軟體或 STL 檢視器中開啟。",
+      },
+    },
+  },
+  {
     slug: "obj-viewer",
     category: "image",
     icon: "box",
@@ -44470,6 +44601,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "左右聲道分離",
         description:
           "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  {
+    slug: "stl-to-obj-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "stl",
+      "obj",
+      "stl to obj",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل STL إلى OBJ",
+        description:
+          "حوّل ملفات STL النصية (ASCII) أو الثنائية إلى Wavefront OBJ في متصفحك. نزّل الشبكة المثلثة للنموذج في ملف OBJ.",
+      },
+      de: {
+        name: "STL-zu-OBJ-Konverter",
+        description:
+          "Wandle ASCII- oder binäre STL-Dateien im Browser in Wavefront OBJ um. Lade das Dreiecksnetz des Modells als OBJ-Datei herunter.",
+      },
+      en: {
+        name: "STL to OBJ Converter",
+        description:
+          "Convert ASCII or binary STL to Wavefront OBJ in your browser. Download the model’s triangular mesh as an OBJ file.",
+      },
+      es: {
+        name: "Conversor de STL a OBJ",
+        description:
+          "Convierte archivos STL ASCII o binarios a Wavefront OBJ en tu navegador. Descarga la malla triangular del modelo como archivo OBJ.",
+      },
+      fr: {
+        name: "Convertisseur STL en OBJ",
+        description:
+          "Convertissez des fichiers STL ASCII ou binaires en Wavefront OBJ dans votre navigateur. Téléchargez le maillage triangulaire du modèle au format OBJ.",
+      },
+      he: {
+        name: "ממיר STL ל־OBJ",
+        description:
+          "המירו קובצי STL בינאריים או בקידוד ASCII לפורמט Wavefront OBJ בדפדפן. הורידו את רשת המשולשים של המודל כקובץ OBJ.",
+      },
+      hi: {
+        name: "STL से OBJ कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ASCII या बाइनरी STL को Wavefront OBJ में बदलें। मॉडल का त्रिकोणीय मेश OBJ फ़ाइल के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STL ke OBJ",
+        description:
+          "Konversi STL ASCII atau biner ke Wavefront OBJ di browser. Unduh mesh segitiga model sebagai file OBJ.",
+      },
+      it: {
+        name: "Convertitore da STL a OBJ",
+        description:
+          "Converti file STL ASCII o binari in Wavefront OBJ nel browser. Scarica la mesh triangolare del modello come file OBJ.",
+      },
+      ja: {
+        name: "STL → OBJ 変換",
+        description:
+          "ASCII またはバイナリ形式の STL をブラウザーで Wavefront OBJ に変換し、モデルの三角形メッシュを OBJ ファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "STL → OBJ 변환기",
+        description:
+          "브라우저에서 ASCII 또는 바이너리 STL을 Wavefront OBJ로 변환하고 모델의 삼각형 메시를 OBJ 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar STL kepada OBJ",
+        description:
+          "Tukar STL ASCII atau binari kepada Wavefront OBJ dalam pelayar. Muat turun jejaring segi tiga model sebagai fail OBJ.",
+      },
+      nl: {
+        name: "STL naar OBJ-converter",
+        description:
+          "Converteer ASCII- en binaire STL-bestanden naar Wavefront OBJ in je browser. Download het driehoeksnet van het model als OBJ-bestand.",
+      },
+      no: {
+        name: "STL til OBJ-konverterer",
+        description:
+          "Konverter STL-filer i ASCII- eller binærformat til Wavefront OBJ i nettleseren. Last ned modellens trekantnett som en OBJ-fil.",
+      },
+      pl: {
+        name: "Konwerter STL na OBJ",
+        description:
+          "Konwertuj pliki STL w formacie ASCII lub binarnym na Wavefront OBJ w przeglądarce. Pobierz siatkę trójkątów modelu jako plik OBJ.",
+      },
+      pt: {
+        name: "Conversor de STL para OBJ",
+        description:
+          "Converta arquivos STL ASCII ou binários para Wavefront OBJ no navegador. Baixe a malha triangular do modelo em um arquivo OBJ.",
+      },
+      ru: {
+        name: "Конвертер STL в OBJ",
+        description:
+          "Преобразуйте текстовые файлы STL в кодировке ASCII и двоичные файлы STL в Wavefront OBJ прямо в браузере. Скачайте треугольную сетку модели в файле OBJ.",
+      },
+      sv: {
+        name: "STL till OBJ-konverterare",
+        description:
+          "Konvertera STL-filer i ASCII- eller binärformat till Wavefront OBJ i webbläsaren. Ladda ner modellens triangelnät som en OBJ-fil.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STL เป็น OBJ",
+        description:
+          "แปลงไฟล์ STL แบบ ASCII หรือไบนารีเป็น Wavefront OBJ ในเบราว์เซอร์ แล้วดาวน์โหลดเมชสามเหลี่ยมของโมเดลเป็นไฟล์ OBJ",
+      },
+      tr: {
+        name: "STL’den OBJ’ye Dönüştürücü",
+        description:
+          "ASCII veya ikili STL dosyalarını tarayıcınızda Wavefront OBJ’ye dönüştürün. Modelin üçgen ağını OBJ dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STL sang OBJ",
+        description:
+          "Chuyển tệp STL dạng ASCII hoặc nhị phân sang Wavefront OBJ trong trình duyệt. Tải lưới tam giác của mô hình xuống dưới dạng tệp OBJ.",
+      },
+      "zh-CN": {
+        name: "STL 转 OBJ 转换器",
+        description:
+          "在浏览器中将 ASCII 或二进制 STL 转换为 Wavefront OBJ，并将模型的三角网格下载为 OBJ 文件。",
+      },
+      "zh-TW": {
+        name: "STL 轉 OBJ 轉換器",
+        description:
+          "在瀏覽器中將 ASCII 或二進位 STL 轉換為 Wavefront OBJ，並將模型的三角網格下載為 OBJ 檔案。",
       },
     },
   },
@@ -86498,6 +86760,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "obj-to-stl-converter": {
+    slug: "obj-to-stl-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "obj",
+      "stl",
+      "obj to stl",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل OBJ إلى STL",
+        description:
+          "حوّل شبكة Wavefront OBJ إلى ملف STL ثنائي في متصفحك، ثم افتحه في برنامج التقطيع أو عارض STL.",
+      },
+      de: {
+        name: "OBJ-zu-STL-Konverter",
+        description:
+          "Wandle ein Wavefront-OBJ-Netz im Browser in eine binäre STL-Datei um. Öffne die Datei anschließend im Slicer oder im STL-Betrachter.",
+      },
+      en: {
+        name: "OBJ to STL Converter",
+        description:
+          "Convert a Wavefront OBJ mesh to a binary STL file in your browser, ready to open in a slicer or STL viewer.",
+      },
+      es: {
+        name: "Conversor de OBJ a STL",
+        description:
+          "Convierte una malla Wavefront OBJ a un archivo STL binario en tu navegador. Abre el resultado en un laminador o en un visor de STL.",
+      },
+      fr: {
+        name: "Convertisseur OBJ en STL",
+        description:
+          "Convertissez un maillage Wavefront OBJ en fichier STL binaire dans votre navigateur. Ouvrez le résultat dans un logiciel de tranchage ou une visionneuse STL.",
+      },
+      he: {
+        name: "ממיר OBJ ל־STL",
+        description:
+          "המירו רשת Wavefront OBJ לקובץ STL בינארי בדפדפן, ואז פתחו את הקובץ בתוכנת חיתוך או במציג STL.",
+      },
+      hi: {
+        name: "OBJ से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में Wavefront OBJ मेश को बाइनरी STL फ़ाइल में बदलें। उसे स्लाइसर या STL व्यूअर में खोलें।",
+      },
+      id: {
+        name: "Konverter OBJ ke STL",
+        description:
+          "Konversi mesh Wavefront OBJ ke file STL biner di browser, siap dibuka di aplikasi slicer atau penampil STL.",
+      },
+      it: {
+        name: "Convertitore da OBJ a STL",
+        description:
+          "Converti una mesh Wavefront OBJ in un file STL binario nel browser. Apri il risultato in uno slicer o in un visualizzatore STL.",
+      },
+      ja: {
+        name: "OBJ → STL 変換",
+        description:
+          "Wavefront OBJ メッシュをブラウザーでバイナリ STL ファイルに変換し、スライサーや STL ビューアーで開けます。",
+      },
+      ko: {
+        name: "OBJ → STL 변환기",
+        description:
+          "브라우저에서 Wavefront OBJ 메시를 바이너리 STL 파일로 변환하여 슬라이서나 STL 뷰어에서 여세요.",
+      },
+      ms: {
+        name: "Penukar OBJ kepada STL",
+        description:
+          "Tukar jejaring Wavefront OBJ kepada fail STL binari dalam pelayar untuk dibuka dalam perisian penghiris atau pemapar STL.",
+      },
+      nl: {
+        name: "OBJ naar STL-converter",
+        description:
+          "Converteer een Wavefront OBJ-net in je browser naar een binair STL-bestand dat je in een slicer of STL-viewer kunt openen.",
+      },
+      no: {
+        name: "OBJ til STL-konverterer",
+        description:
+          "Konverter et Wavefront OBJ-nett til en binær STL-fil i nettleseren. Åpne filen i et slicerprogram eller en STL-viser.",
+      },
+      pl: {
+        name: "Konwerter OBJ na STL",
+        description:
+          "Konwertuj siatki Wavefront OBJ w przeglądarce na binarne pliki STL, które otworzysz w przeglądarce STL lub programie do przygotowywania wydruku.",
+      },
+      pt: {
+        name: "Conversor de OBJ para STL",
+        description:
+          "Converta uma malha Wavefront OBJ em um arquivo STL binário no navegador. Abra o resultado em um fatiador ou visualizador de STL.",
+      },
+      ru: {
+        name: "Конвертер OBJ в STL",
+        description:
+          "Преобразуйте полигональную сетку Wavefront OBJ в двоичный файл STL прямо в браузере. Результат можно открыть в слайсере или программе просмотра STL.",
+      },
+      sv: {
+        name: "OBJ till STL-konverterare",
+        description:
+          "Konvertera ett Wavefront OBJ-nät till en binär STL-fil i webbläsaren. Öppna filen i ett slicerprogram eller en STL-visare.",
+      },
+      th: {
+        name: "โปรแกรมแปลง OBJ เป็น STL",
+        description:
+          "แปลงเมช Wavefront OBJ เป็นไฟล์ STL ไบนารีในเบราว์เซอร์ เพื่อเปิดในโปรแกรมตัดชั้นหรือโปรแกรมดู STL",
+      },
+      tr: {
+        name: "OBJ’den STL’ye Dönüştürücü",
+        description:
+          "Wavefront OBJ ağını tarayıcınızda ikili STL dosyasına dönüştürün. Dosyayı bir dilimleme yazılımında veya STL görüntüleyicide açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi OBJ sang STL",
+        description:
+          "Chuyển lưới Wavefront OBJ sang tệp STL nhị phân trong trình duyệt để mở bằng phần mềm cắt lớp hoặc trình xem STL.",
+      },
+      "zh-CN": {
+        name: "OBJ 转 STL 转换器",
+        description:
+          "在浏览器中将 Wavefront OBJ 网格转换为二进制 STL 文件，以便在切片软件或 STL 查看器中打开。",
+      },
+      "zh-TW": {
+        name: "OBJ 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 Wavefront OBJ 網格轉換為二進位 STL 檔案，以便在切片軟體或 STL 檢視器中開啟。",
+      },
+    },
+  },
   "obj-viewer": {
     slug: "obj-viewer",
     category: "image",
@@ -97867,6 +98260,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "左右聲道分離",
         description:
           "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  "stl-to-obj-converter": {
+    slug: "stl-to-obj-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "stl",
+      "obj",
+      "stl to obj",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل STL إلى OBJ",
+        description:
+          "حوّل ملفات STL النصية (ASCII) أو الثنائية إلى Wavefront OBJ في متصفحك. نزّل الشبكة المثلثة للنموذج في ملف OBJ.",
+      },
+      de: {
+        name: "STL-zu-OBJ-Konverter",
+        description:
+          "Wandle ASCII- oder binäre STL-Dateien im Browser in Wavefront OBJ um. Lade das Dreiecksnetz des Modells als OBJ-Datei herunter.",
+      },
+      en: {
+        name: "STL to OBJ Converter",
+        description:
+          "Convert ASCII or binary STL to Wavefront OBJ in your browser. Download the model’s triangular mesh as an OBJ file.",
+      },
+      es: {
+        name: "Conversor de STL a OBJ",
+        description:
+          "Convierte archivos STL ASCII o binarios a Wavefront OBJ en tu navegador. Descarga la malla triangular del modelo como archivo OBJ.",
+      },
+      fr: {
+        name: "Convertisseur STL en OBJ",
+        description:
+          "Convertissez des fichiers STL ASCII ou binaires en Wavefront OBJ dans votre navigateur. Téléchargez le maillage triangulaire du modèle au format OBJ.",
+      },
+      he: {
+        name: "ממיר STL ל־OBJ",
+        description:
+          "המירו קובצי STL בינאריים או בקידוד ASCII לפורמט Wavefront OBJ בדפדפן. הורידו את רשת המשולשים של המודל כקובץ OBJ.",
+      },
+      hi: {
+        name: "STL से OBJ कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ASCII या बाइनरी STL को Wavefront OBJ में बदलें। मॉडल का त्रिकोणीय मेश OBJ फ़ाइल के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STL ke OBJ",
+        description:
+          "Konversi STL ASCII atau biner ke Wavefront OBJ di browser. Unduh mesh segitiga model sebagai file OBJ.",
+      },
+      it: {
+        name: "Convertitore da STL a OBJ",
+        description:
+          "Converti file STL ASCII o binari in Wavefront OBJ nel browser. Scarica la mesh triangolare del modello come file OBJ.",
+      },
+      ja: {
+        name: "STL → OBJ 変換",
+        description:
+          "ASCII またはバイナリ形式の STL をブラウザーで Wavefront OBJ に変換し、モデルの三角形メッシュを OBJ ファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "STL → OBJ 변환기",
+        description:
+          "브라우저에서 ASCII 또는 바이너리 STL을 Wavefront OBJ로 변환하고 모델의 삼각형 메시를 OBJ 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar STL kepada OBJ",
+        description:
+          "Tukar STL ASCII atau binari kepada Wavefront OBJ dalam pelayar. Muat turun jejaring segi tiga model sebagai fail OBJ.",
+      },
+      nl: {
+        name: "STL naar OBJ-converter",
+        description:
+          "Converteer ASCII- en binaire STL-bestanden naar Wavefront OBJ in je browser. Download het driehoeksnet van het model als OBJ-bestand.",
+      },
+      no: {
+        name: "STL til OBJ-konverterer",
+        description:
+          "Konverter STL-filer i ASCII- eller binærformat til Wavefront OBJ i nettleseren. Last ned modellens trekantnett som en OBJ-fil.",
+      },
+      pl: {
+        name: "Konwerter STL na OBJ",
+        description:
+          "Konwertuj pliki STL w formacie ASCII lub binarnym na Wavefront OBJ w przeglądarce. Pobierz siatkę trójkątów modelu jako plik OBJ.",
+      },
+      pt: {
+        name: "Conversor de STL para OBJ",
+        description:
+          "Converta arquivos STL ASCII ou binários para Wavefront OBJ no navegador. Baixe a malha triangular do modelo em um arquivo OBJ.",
+      },
+      ru: {
+        name: "Конвертер STL в OBJ",
+        description:
+          "Преобразуйте текстовые файлы STL в кодировке ASCII и двоичные файлы STL в Wavefront OBJ прямо в браузере. Скачайте треугольную сетку модели в файле OBJ.",
+      },
+      sv: {
+        name: "STL till OBJ-konverterare",
+        description:
+          "Konvertera STL-filer i ASCII- eller binärformat till Wavefront OBJ i webbläsaren. Ladda ner modellens triangelnät som en OBJ-fil.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STL เป็น OBJ",
+        description:
+          "แปลงไฟล์ STL แบบ ASCII หรือไบนารีเป็น Wavefront OBJ ในเบราว์เซอร์ แล้วดาวน์โหลดเมชสามเหลี่ยมของโมเดลเป็นไฟล์ OBJ",
+      },
+      tr: {
+        name: "STL’den OBJ’ye Dönüştürücü",
+        description:
+          "ASCII veya ikili STL dosyalarını tarayıcınızda Wavefront OBJ’ye dönüştürün. Modelin üçgen ağını OBJ dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STL sang OBJ",
+        description:
+          "Chuyển tệp STL dạng ASCII hoặc nhị phân sang Wavefront OBJ trong trình duyệt. Tải lưới tam giác của mô hình xuống dưới dạng tệp OBJ.",
+      },
+      "zh-CN": {
+        name: "STL 转 OBJ 转换器",
+        description:
+          "在浏览器中将 ASCII 或二进制 STL 转换为 Wavefront OBJ，并将模型的三角网格下载为 OBJ 文件。",
+      },
+      "zh-TW": {
+        name: "STL 轉 OBJ 轉換器",
+        description:
+          "在瀏覽器中將 ASCII 或二進位 STL 轉換為 Wavefront OBJ，並將模型的三角網格下載為 OBJ 檔案。",
       },
     },
   },

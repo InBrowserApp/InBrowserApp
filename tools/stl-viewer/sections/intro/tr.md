@@ -15,3 +15,4 @@ STL, bir parçanın yüzeyini üçgenlerle tanımlar. Malzeme kitaplığıyla bi
 - [GLB / glTF Görüntüleyici](../gltf-viewer/)
 
 - [3MF Görüntüleyici](../3mf-viewer/)
+- [STL’den OBJ’ye Dönüştürücü](../stl-to-obj-converter/)

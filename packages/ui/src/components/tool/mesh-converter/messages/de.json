@@ -1,0 +1,11 @@
+{
+  "open": "Datei öffnen",
+  "drop": "Modelldatei hier ablegen",
+  "example": "Beispiel ausprobieren",
+  "privacy": "Deine Datei bleibt auf deinem Gerät.",
+  "converting": "Modell wird konvertiert …",
+  "failed": "Das Modell ließ sich nicht konvertieren. Wähle eine gültige Datei, die Polygonflächen enthält.",
+  "output": "Konvertierte Datei",
+  "download": "{format} herunterladen",
+  "previousOutput": "Vorherige Konvertierung"
+}
