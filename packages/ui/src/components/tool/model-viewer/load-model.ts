@@ -81,8 +81,8 @@ const formats = {
     },
     zUp: true,
     async parse(file) {
-      const { parse3mf } = await import("@workspace/model-mesh/three-mf")
-      return { object: parse3mf(await file.arrayBuffer()) }
+      const { load3mf } = await import("@workspace/model-mesh/three-mf")
+      return { object: await load3mf(await file.arrayBuffer()) }
     },
   },
 } satisfies Record<string, FormatOptions>
