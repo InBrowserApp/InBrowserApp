@@ -1,0 +1,12 @@
+{
+  "open": "Öppna PST-fil",
+  "replace": "Öppna en annan PST-fil",
+  "releaseFile": "Släpp filen för att öppna den",
+  "drop": "Släpp en PST-fil här",
+  "formats": "Öppna en Outlook-datafil (.pst) från en exporterad, säkerhetskopierad eller arkiverad brevlåda.",
+  "invalid": "Det gick inte att läsa PST-filen. Välj en Outlook-datafil (.pst) eller exportera en ny kopia från Outlook.",
+  "empty": "PST-filen innehåller inga läsbara e-postmeddelanden.",
+  "folders": "E-postmappar",
+  "allFolders": "Alla mappar",
+  "emptyFolder": "Mappen innehåller inga e-postmeddelanden."
+}

@@ -1,0 +1,12 @@
+{
+  "open": "Abrir archivo PST",
+  "replace": "Abrir otro archivo PST",
+  "releaseFile": "Suelta para abrir el archivo PST",
+  "drop": "Suelta un archivo PST aquí",
+  "formats": "Abre un archivo de datos de Outlook (.pst) procedente de una exportación, una copia de seguridad o un archivo de correo.",
+  "invalid": "No se ha podido leer este archivo PST. Elige un archivo de datos de Outlook (.pst) o exporta una nueva copia desde Outlook.",
+  "empty": "Este archivo PST no contiene mensajes de correo que se puedan leer.",
+  "folders": "Carpetas de correo",
+  "allFolders": "Todas las carpetas",
+  "emptyFolder": "Esta carpeta no contiene mensajes de correo."
+}

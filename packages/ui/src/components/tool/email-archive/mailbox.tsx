@@ -2,38 +2,44 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
 import { MailboxStatus } from "./mailbox-status"
-import {
-  ChevronLeft,
-  ChevronRight,
-  List,
-  Mail,
-  Search,
-} from "@workspace/ui/icons"
+import { List, Mail, Search } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
-import type { MailSummary } from "@workspace/email/mbox"
+import type {
+  ArchiveMessage,
+  ArchiveReply,
+  ArchiveRequest,
+  MailSummary,
+} from "@workspace/email/archive"
 import type { Failure } from "@workspace/email"
 import { ReadMessage } from "./read-message"
-import type { Messages } from "./types"
-import type { Reply, Request } from "./worker"
+import type { ArchiveMessages, FolderMessages } from "./copy"
+import { FolderSelect } from "./folder-select"
+import { MailboxPager } from "./mailbox-pager"
 
-type Selection = { id: number; result: Extract<Reply, { id: number }> | null }
+type Selection = { id: number; result: ArchiveMessage | null }
 const pageSize = 50
 const desktop = "(min-width: 48rem)"
 
 export function Mailbox({
   file,
+  createWorker,
+  folderMessages,
   lang,
   messages: m,
 }: {
   file: File
+  createWorker: () => Worker
+  folderMessages?: FolderMessages
   lang: string
-  messages: Messages
+  messages: ArchiveMessages
 }) {
   const worker = useRef<Worker | null>(null)
   const lastRow = useRef<HTMLButtonElement>(null)
   const back = useRef<HTMLButtonElement>(null)
   const reader = useRef<HTMLDivElement>(null)
   const [entries, setEntries] = useState<MailSummary[] | null>(null)
+  const [folders, setFolders] = useState<string[]>([])
+  const [folder, setFolder] = useState("")
   const [error, setError] = useState<Failure | null>(null)
   const [selection, setSelection] = useState<Selection | null>(null)
   const [query, setQuery] = useState("")
@@ -42,40 +48,45 @@ export function Mailbox({
   useEffect(() => {
     let instance: Worker
     try {
-      instance = new Worker(new URL("./worker.ts", import.meta.url), {
-        type: "module",
-      })
+      instance = createWorker()
     } catch {
       setError("invalid")
       return
     }
     worker.current = instance
-    instance.onmessage = ({ data }: MessageEvent<Reply>) => {
+    instance.onmessage = ({ data }: MessageEvent<ArchiveReply>) => {
       if ("id" in data) {
         setSelection((current) =>
           current?.id === data.id ? { id: data.id, result: data } : current
         )
       } else if ("messages" in data) {
         setEntries(data.messages)
-        if (window.matchMedia(desktop).matches) {
+        if (data.folders) setFolders(data.folders)
+        if (data.messages.length && window.matchMedia(desktop).matches) {
           setSelection({ id: 0, result: null })
-          instance.postMessage({ id: 0 } satisfies Request)
+          instance.postMessage({ id: 0 } satisfies ArchiveRequest)
         }
       } else {
         setError(data.error)
       }
     }
     instance.onerror = instance.onmessageerror = () => setError("invalid")
-    instance.postMessage({ file } satisfies Request)
+    instance.postMessage({ file } satisfies ArchiveRequest)
     return () => instance.terminate()
-  }, [file])
+  }, [createWorker, file])
 
   const rows = useMemo(
     () =>
       (entries ?? []).map((entry, id) => ({
         ...entry,
         id,
-        search: [entry.subject || m.subjectFallback, entry.from, entry.to]
+        search: [
+          entry.subject || m.subjectFallback,
+          entry.from,
+          entry.to,
+          entry.cc,
+          entry.bcc,
+        ]
           .join("\n")
           .toLocaleLowerCase(lang),
       })),
@@ -83,15 +94,20 @@ export function Mailbox({
   )
   const filtered = useMemo(() => {
     const terms = query.toLocaleLowerCase(lang).trim().split(/\s+/)
-    return rows.filter((row) =>
-      terms.every((term) => row.search.includes(term))
+    return rows.filter(
+      (row) =>
+        (folder === "" || row.folder === Number(folder)) &&
+        terms.every((term) => row.search.includes(term))
     )
-  }, [query, rows, lang])
+  }, [folder, query, rows, lang])
   const date = useMemo(
-    () => new Intl.DateTimeFormat(lang, { dateStyle: "medium" }),
-    [lang]
+    () =>
+      new Intl.DateTimeFormat(lang, {
+        dateStyle: "medium",
+        timeZone: folderMessages ? "UTC" : undefined,
+      }),
+    [lang, folderMessages]
   )
-  const number = useMemo(() => new Intl.NumberFormat(lang), [lang])
   const start = page * pageSize
   const end = Math.min(start + pageSize, filtered.length)
 
@@ -103,7 +119,7 @@ export function Mailbox({
     lastRow.current = row
     if (id !== selection?.id) {
       setSelection({ id, result: null })
-      worker.current?.postMessage({ id } satisfies Request)
+      worker.current?.postMessage({ id } satisfies ArchiveRequest)
     }
     requestAnimationFrame(() => {
       if (!window.matchMedia(desktop).matches) back.current?.focus()
@@ -122,6 +138,15 @@ export function Mailbox({
       </MailboxStatus>
     )
   if (!entries) return <MailboxStatus>{m.indexing}</MailboxStatus>
+  if (!entries.length && folderMessages)
+    return (
+      <p
+        role="status"
+        className="m-auto p-6 text-center text-sm text-muted-foreground"
+      >
+        {folderMessages.empty}
+      </p>
+    )
   return (
     <div className="flex min-h-0 flex-1">
       <div
@@ -130,7 +155,19 @@ export function Mailbox({
           selection ? "hidden" : "flex"
         )}
       >
-        <div className="border-b p-3">
+        <div className="space-y-2 border-b p-3">
+          {folderMessages && folders.length > 0 && (
+            <FolderSelect
+              folders={folders}
+              value={folder}
+              messages={folderMessages}
+              onChange={(next) => {
+                setFolder(next)
+                setSelection(null)
+                movePage(0)
+              }}
+            />
+          )}
           <div className="relative">
             <Search
               aria-hidden="true"
@@ -194,42 +231,20 @@ export function Mailbox({
             role="status"
             className="flex-1 px-4 py-8 text-center text-sm text-muted-foreground"
           >
-            {m.noResults}
+            {!query.trim() && folderMessages
+              ? folderMessages.emptyFolder
+              : m.noResults}
           </p>
         )}
         {filtered.length > 0 && (
-          <div className="flex min-h-12 shrink-0 items-center justify-between gap-1 border-t px-3 py-1 text-xs text-muted-foreground">
-            <span role="status">
-              {m.range
-                .replace("{start}", number.format(start + 1))
-                .replace("{end}", number.format(end))
-                .replace("{total}", number.format(filtered.length))}
-            </span>
-            {filtered.length > pageSize && (
-              <div className="flex gap-1">
-                <Button
-                  variant="ghost"
-                  size="icon-sm"
-                  aria-label={m.previous}
-                  title={m.previous}
-                  disabled={!page}
-                  onClick={() => movePage(page - 1)}
-                >
-                  <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon-sm"
-                  aria-label={m.next}
-                  title={m.next}
-                  disabled={end === filtered.length}
-                  onClick={() => movePage(page + 1)}
-                >
-                  <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
-                </Button>
-              </div>
-            )}
-          </div>
+          <MailboxPager
+            lang={lang}
+            count={filtered.length}
+            page={page}
+            pageSize={pageSize}
+            messages={m}
+            movePage={movePage}
+          />
         )}
       </div>
       <div

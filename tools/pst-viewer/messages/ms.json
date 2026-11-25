@@ -1,0 +1,12 @@
+{
+  "open": "Buka fail PST",
+  "replace": "Buka fail PST lain",
+  "releaseFile": "Lepaskan untuk membuka fail PST",
+  "drop": "Seret dan lepaskan fail PST di sini",
+  "formats": "Buka Fail Data Outlook (.pst) daripada eksport peti mel, sandaran atau arkib.",
+  "invalid": "Fail PST ini tidak dapat dibaca. Pilih Fail Data Outlook (.pst) atau eksport salinan baharu daripada Outlook.",
+  "empty": "Fail PST ini tidak mengandungi e-mel yang boleh dibaca.",
+  "folders": "Folder e-mel",
+  "allFolders": "Semua folder",
+  "emptyFolder": "Tiada e-mel dalam folder ini."
+}

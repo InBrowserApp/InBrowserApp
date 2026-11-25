@@ -1,0 +1,12 @@
+{
+  "open": "PST dosyası aç",
+  "replace": "Başka bir PST dosyası aç",
+  "releaseFile": "PST dosyasını açmak için bırakın",
+  "drop": "PST dosyasını buraya bırakın",
+  "formats": "Dışa aktarılan bir posta kutusundan, yedekten veya arşivden Outlook Veri Dosyası (.pst) açın.",
+  "invalid": "Bu PST dosyası okunamadı. Bir Outlook Veri Dosyası (.pst) seçin veya Outlook’tan yeni bir kopya dışa aktarın.",
+  "empty": "Bu PST dosyasında okunabilir e-posta iletisi yok.",
+  "folders": "Posta klasörleri",
+  "allFolders": "Tüm klasörler",
+  "emptyFolder": "Bu klasörde e-posta iletisi yok."
+}

@@ -1,0 +1,12 @@
+{
+  "open": "PST-Datei öffnen",
+  "replace": "Andere PST-Datei öffnen",
+  "releaseFile": "Loslassen, um die PST-Datei zu öffnen",
+  "drop": "PST-Datei hier ablegen",
+  "formats": "Öffne eine Outlook-Datendatei (.pst) aus einem Postfachexport, einer Sicherung oder einem Archiv.",
+  "invalid": "Diese PST-Datei konnte nicht gelesen werden. Wähle eine Outlook-Datendatei (.pst) oder exportiere eine neue Kopie aus Outlook.",
+  "empty": "Diese PST-Datei enthält keine lesbaren E-Mails.",
+  "folders": "E-Mail-Ordner",
+  "allFolders": "Alle Ordner",
+  "emptyFolder": "Dieser Ordner enthält keine E-Mails."
+}

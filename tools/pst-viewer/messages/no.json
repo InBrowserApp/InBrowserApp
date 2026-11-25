@@ -1,0 +1,12 @@
+{
+  "open": "Åpne PST-fil",
+  "replace": "Åpne en annen PST-fil",
+  "releaseFile": "Slipp for å åpne PST-filen",
+  "drop": "Slipp en PST-fil her",
+  "formats": "Åpne en Outlook-datafil (.pst) fra en eksportert postboks, en sikkerhetskopi eller et arkiv.",
+  "invalid": "Kunne ikke lese PST-filen. Velg en Outlook-datafil (.pst) eller eksporter en ny kopi fra Outlook.",
+  "empty": "Denne PST-filen inneholder ingen e-postmeldinger som kan leses.",
+  "folders": "E-postmapper",
+  "allFolders": "Alle mapper",
+  "emptyFolder": "Det er ingen e-postmeldinger i denne mappen."
+}

@@ -1,0 +1,12 @@
+{
+  "open": "PST-bestand openen",
+  "replace": "Ander PST-bestand openen",
+  "releaseFile": "Laat los om het PST-bestand te openen",
+  "drop": "Sleep een PST-bestand hierheen",
+  "formats": "Open een Outlook-gegevensbestand (.pst) uit een geëxporteerd postvak, back-up of archief.",
+  "invalid": "Dit PST-bestand kon niet worden gelezen. Kies een Outlook-gegevensbestand (.pst) of exporteer een nieuwe kopie uit Outlook.",
+  "empty": "Dit PST-bestand bevat geen leesbare berichten.",
+  "folders": "E-mailmappen",
+  "allFolders": "Alle mappen",
+  "emptyFolder": "Deze map bevat geen e-mailberichten."
+}
