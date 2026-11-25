@@ -19,5 +19,8 @@
     "astro": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
   }
 }
