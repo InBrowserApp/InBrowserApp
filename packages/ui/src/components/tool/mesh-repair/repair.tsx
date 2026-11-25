@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Wrench } from "../../../icons"
 import { useMeshWorker } from "../../../lib/use-mesh-worker"
 import { Alert, AlertDescription } from "../../ui/alert"
@@ -59,35 +60,53 @@ export default function StlMeshRepair(props: Props) {
   )
 }
 
-export function RepairCurrentStl({ file, ...props }: Props & { file: File }) {
+export function RepairCurrentStl({
+  file,
+  previous,
+  ...props
+}: Props & { file: File; previous: boolean }) {
   const { messages: m } = props
   const { result, status, run } = useStlMeshRepair()
+  const [focusOnReady, setFocusOnReady] = useState(false)
+  const working = status === "working"
+  const blocked = previous || working
 
   return (
     <>
-      <div className="flex flex-wrap items-center gap-2">
+      {!result && (
         <Button
-          onClick={() => void run(file)}
-          disabled={status === "working" || Boolean(result)}
+          className="justify-self-start aria-disabled:opacity-50"
+          aria-disabled={blocked || undefined}
+          onClick={(event) => {
+            if (blocked) return
+            setFocusOnReady(document.activeElement === event.currentTarget)
+            void run(file)
+          }}
         >
-          {status === "working" ? (
+          {working ? (
             <Spinner aria-hidden="true" data-icon="inline-start" />
           ) : (
             <Wrench aria-hidden="true" data-icon="inline-start" />
           )}
-          {status === "working" ? m.working : m.action}
+          {working ? m.working : m.action}
         </Button>
-        <p className="sr-only" role="status">
-          {status === "working" ? m.working : result ? m.result : ""}
-        </p>
-      </div>
-      {status === "failed" && (
+      )}
+      <p className="sr-only" role="status">
+        {working ? m.working : result && !previous ? m.result : ""}
+      </p>
+      {!previous && status === "failed" && (
         <Alert variant="destructive">
           <AlertDescription>{m.failed}</AlertDescription>
         </Alert>
       )}
       {result && (
-        <RepairReport {...props} name={result.file.name} report={result.data} />
+        <RepairReport
+          {...props}
+          name={result.file.name}
+          report={result.data}
+          previous={previous}
+          focusOnReady={focusOnReady && !previous}
+        />
       )}
     </>
   )

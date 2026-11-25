@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { Box3 } from "three"
 import { expect, test } from "vitest"
+import { inspectMesh } from "./inspect"
 import { repairStl } from "./repair"
 import { parseStl } from "./stl"
 
@@ -94,4 +95,35 @@ test("reports when discarding zero-area triangles leaves no STL to export", asyn
   expect(result.before.degenerateFaces).toBe(2)
   expect(result.after.triangles).toBe(0)
   expect(result.stl).toBeNull()
+})
+
+test("keeps distinct ASCII coordinates that would collapse in binary STL", async () => {
+  const file = asciiStl([["100000000 0 0", "100000001 0 0", "100000000 1 0"]])
+  const result = await repairStl(file)
+  expect(result.before.surfaceArea).toBe(0.5)
+  expect(result.after.degenerateFaces).toBe(0)
+  const output = new File([result.stl!], "repaired.stl")
+  expect(await output.text()).toContain("100000001")
+  expect(await inspectMesh(output)).toEqual(result.after)
+})
+
+test("keeps the binary header and per-face attributes on retained triangles", async () => {
+  const base = await repairStl(asciiStl(tetrahedron))
+  const binary = new Uint8Array(84 + 5 * 50)
+  binary.set(new Uint8Array(await base.stl!.arrayBuffer()))
+  binary.set(new TextEncoder().encode("COLOR=rgba"))
+  binary.copyWithin(84 + 4 * 50, 84, 134)
+  const source = new DataView(binary.buffer)
+  source.setUint32(80, 5, true)
+  for (let face = 0; face < 5; face++)
+    source.setUint16(132 + face * 50, 10 + face, true)
+  const result = await repairStl(new File([binary], "colored.stl"))
+  const output = new DataView(await result.stl!.arrayBuffer())
+  expect(output.getUint32(80, true)).toBe(4)
+  expect(new TextDecoder().decode(output.buffer.slice(0, 10))).toBe(
+    "COLOR=rgba"
+  )
+  expect(
+    Array.from({ length: 4 }, (_, i) => output.getUint16(132 + i * 50, true))
+  ).toEqual([10, 11, 12, 13])
 })

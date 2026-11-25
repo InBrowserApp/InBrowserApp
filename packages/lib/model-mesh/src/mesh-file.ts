@@ -3,13 +3,19 @@ import type { Mesh } from "three"
 
 export type MeshFormat = "stl" | "obj"
 
-export async function readMeshFile(file: File, format: MeshFormat) {
+export async function readMeshFile(
+  file: File,
+  format: MeshFormat,
+  stlData?: ArrayBuffer
+) {
   if (!file.name.toLowerCase().endsWith(`.${format}`)) {
     throw new Error("Unexpected mesh format")
   }
   const object =
     format === "stl"
-      ? (await import("./stl")).parseStl(await file.arrayBuffer())
+      ? (await import("./stl")).parseStlForProcessing(
+          stlData ?? (await file.arrayBuffer())
+        )
       : (await import("./obj")).parseObj(await file.text(), true)
   let faces = 0
   const bounds = new Box3()

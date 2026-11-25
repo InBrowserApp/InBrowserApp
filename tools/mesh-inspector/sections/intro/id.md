@@ -21,4 +21,4 @@ Pemeriksa menganggap posisi yang persis sama sebagai satu titik sudut. Jumlah se
 
 Gunakan [Penampil STL](../stl-viewer/) atau [Penampil OBJ](../obj-viewer/) untuk memeriksa model dalam 3D, termasuk melihat rangka kawatnya. Gunakan [Konverter OBJ ke STL](../obj-to-stl-converter/) jika alat berikutnya dalam alur kerja Anda memerlukan file STL.
 
-Jika laporan STL menunjukkan masalah topologi, pilih **Perbaiki STL** untuk menangani file yang sama. Halaman [Perbaikan Mesh STL](../stl-mesh-repair/) juga membandingkan muka duplikat dan berluas nol, orientasi muka, serta masalah topologi yang tersisa sebelum Anda mengunduh STL baru.
+Jika laporan STL menunjukkan muka duplikat, muka berluas nol, atau orientasi muka yang tidak konsisten, pilih **Perbaiki STL** untuk menangani file yang sama. Halaman [Perbaikan Mesh STL](../stl-mesh-repair/) juga membandingkan muka duplikat dan berluas nol, orientasi muka, serta masalah topologi yang tersisa sebelum Anda mengunduh STL baru.

@@ -58,7 +58,7 @@ export default function ModelPanel({
     if (stl)
       downloadBlob(
         stl.data,
-        `${stl.name.replace(/\.[^.]*$/, "") || "model"}.stl`
+        `${stl.file.name.replace(/\.[^.]*$/, "") || "model"}.stl`
       )
   }, [stl])
   useEffect(() => {

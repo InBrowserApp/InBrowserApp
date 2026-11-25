@@ -1,6 +1,6 @@
 import { BufferGeometry, Float32BufferAttribute, Group, Mesh } from "three"
 import { readMeshFile } from "./mesh-file"
-import { exportStl } from "./stl"
+import { exportStl } from "./stl-export"
 import type { ThreeMfUnit } from "./three-mf-package"
 
 export type { ThreeMfUnit } from "./three-mf-package"

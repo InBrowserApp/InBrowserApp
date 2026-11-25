@@ -21,4 +21,4 @@ De controle telt exact samenvallende posities als één hoekpunt. De schillen wo
 
 Bekijk het model in 3D of als draadmodel met de [STL-viewer](../stl-viewer/) of de [OBJ-viewer](../obj-viewer/). Gebruik de [OBJ naar STL-converter](../obj-to-stl-converter/) als de volgende toepassing een STL-bestand verwacht.
 
-Als de controle topologieproblemen in een STL-bestand vindt, kies dan **STL repareren** om met hetzelfde bestand verder te gaan. Op de pagina [STL-netreparatie](../stl-mesh-repair/) vergelijk je dubbele vlakken en vlakken zonder oppervlakte, de oriëntatie van vlakken en resterende topologieproblemen voordat je een nieuw STL-bestand downloadt.
+Als het STL-rapport dubbele vlakken, vlakken zonder oppervlakte of een inconsistente oriëntatie toont, kies dan **STL repareren** om met hetzelfde bestand verder te gaan. Op de pagina [STL-netreparatie](../stl-mesh-repair/) vergelijk je dubbele vlakken en vlakken zonder oppervlakte, de oriëntatie van vlakken en resterende topologieproblemen voordat je een nieuw STL-bestand downloadt.

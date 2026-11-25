@@ -55,12 +55,16 @@ export default function MeshInspector({
           messages={m}
         />
       )}
-      {!status &&
-        result?.data.volume === null &&
-        /\.stl$/i.test(result.file.name) && (
+      {result &&
+        /\.stl$/i.test(result.file.name) &&
+        (result.data.duplicateFaces > 0 ||
+          result.data.degenerateFaces > 0 ||
+          result.data.inconsistentEdges > 0) && (
           <RepairCurrentStl
+            key={result.id}
             lang={lang}
             file={result.file}
+            previous={Boolean(status)}
             messages={repairMessages}
             meshMessages={m}
           />

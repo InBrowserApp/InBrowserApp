@@ -10,7 +10,7 @@ export function useMeshWorker<Output, Settings = undefined>(
   type Result = { file: File; data: Output }
   const active = useRef<Request>(null)
   const [status, setStatus] = useState<"working" | "failed">()
-  const [result, setResult] = useState<Result>()
+  const [result, setResult] = useState<Result & { id: number }>()
 
   useEffect(
     () => () => {
@@ -30,7 +30,8 @@ export function useMeshWorker<Output, Settings = undefined>(
       if (active.current !== request) return
       request.worker?.terminate()
       active.current = null
-      if (output) setResult(output)
+      if (output)
+        setResult((previous) => ({ ...output, id: (previous?.id ?? 0) + 1 }))
       setStatus(output ? undefined : "failed")
     }
 

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react"
 import { Check, TriangleAlert } from "../../../icons"
 import { DocumentDownload } from "../document-download"
 import type { MeshRepair } from "@workspace/model-mesh/repair"
@@ -19,6 +20,7 @@ export function RepairReport({
   name,
   report,
   previous,
+  focusOnReady,
   messages: m,
   meshMessages,
 }: {
@@ -26,10 +28,16 @@ export function RepairReport({
   name: string
   report: MeshRepair
   previous?: boolean
+  focusOnReady?: boolean
   messages: MeshRepairMessages
   meshMessages: MeshInspectorMessages
 }) {
   const { before, after, flipped, stl } = report
+  const heading = useRef<HTMLHeadingElement>(null)
+  useEffect(() => {
+    if (focusOnReady && !stl && document.activeElement === document.body)
+      heading.current?.focus({ preventScroll: true })
+  }, [focusOnReady, stl])
   const count = new Intl.NumberFormat(lang)
   const issuesRemain = after.volume === null
   const status = !stl ? m.empty : issuesRemain ? m.remaining : m.complete
@@ -44,13 +52,20 @@ export function RepairReport({
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <h2 className="font-medium">{previous ? m.previous : m.result}</h2>
+          <h2 ref={heading} tabIndex={-1} className="font-medium">
+            {previous ? m.previous : m.result}
+          </h2>
           <p className="text-sm break-all text-muted-foreground" dir="auto">
             {name}
           </p>
         </div>
         {stl && (
-          <DocumentDownload file={stl} filename={filename} label={m.download} />
+          <DocumentDownload
+            file={stl}
+            filename={filename}
+            label={m.download}
+            focusOnReady={focusOnReady}
+          />
         )}
       </div>
       <div className="grid gap-1 text-sm">

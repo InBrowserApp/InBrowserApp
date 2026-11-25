@@ -1,7 +1,8 @@
-import { BufferGeometry, Float32BufferAttribute, Mesh, Vector3 } from "three"
+import { BufferAttribute, BufferGeometry, Mesh, Vector3 } from "three"
 import { analyzeMesh } from "./inspect"
 import { readMeshFile } from "./mesh-file"
-import { exportStl } from "./stl"
+import { isBinaryStl } from "./stl"
+import { exportAsciiStl, exportStl } from "./stl-export"
 import type { MeshReport } from "./inspect"
 
 type Face = [number, number, number]
@@ -77,13 +78,15 @@ function orientFaces(faces: Face[]) {
 }
 
 export async function repairStl(file: File): Promise<MeshRepair> {
-  const input = (await readMeshFile(file, "stl")) as Mesh
+  const data = await file.arrayBuffer()
+  const input = (await readMeshFile(file, "stl", data)) as Mesh
   const before = analyzeMesh(input)
-  const { position } = input.geometry.attributes
+  const position = input.geometry.getAttribute("position")
   const points: number[] = []
   const indices = new Map<string, number>()
   const seen = new Set<string>()
   const faces: Face[] = []
+  const retained: number[] = []
 
   function indexOf(point: Vector3) {
     const key = `${point.x}:${point.y}:${point.z}`
@@ -110,17 +113,23 @@ export async function repairStl(file: File): Promise<MeshRepair> {
     if (seen.has(key)) continue
     seen.add(key)
     faces.push(face)
+    retained.push(i / 3)
   }
 
   const flipped = orientFaces(faces)
   const geometry = new BufferGeometry()
-  geometry.setAttribute("position", new Float32BufferAttribute(points, 3))
+  geometry.setAttribute(
+    "position",
+    new BufferAttribute(new Float64Array(points), 3)
+  )
   geometry.setIndex(faces.flat())
   const mesh = new Mesh(geometry)
-  return {
-    before,
-    after: analyzeMesh(mesh),
-    flipped,
-    stl: faces.length ? exportStl(mesh) : null,
+  let stl: Blob | null = null
+  if (faces.length) {
+    if (isBinaryStl(data)) stl = exportStl(mesh, { data, faces: retained })
+    else if (points.some((value) => Math.fround(value) !== value))
+      stl = exportAsciiStl(mesh)
+    else stl = exportStl(mesh)
   }
+  return { before, after: analyzeMesh(mesh), flipped, stl }
 }

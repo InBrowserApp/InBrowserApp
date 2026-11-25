@@ -1,6 +1,6 @@
 ## STL dosyası çevrimiçi nasıl onarılır?
 
-**Dosya aç** düğmesine tıklayın veya ASCII ya da ikili bir `.stl` dosyasını araca bırakın. Onarım cihazınızda gerçekleşir. Yinelenen, sıfır alanlı ve ters yönlü yüzleri olan küçük bir ağı görmek için **Örnek dene** düğmesine tıklayın. Sonuçları karşılaştırın ve özgün boyutları ve koordinatları koruyan yeni bir ikili dosya kaydetmek için **STL indir** düğmesine tıklayın.
+**Dosya aç** düğmesine tıklayın veya ASCII ya da ikili bir `.stl` dosyasını araca bırakın. Onarım cihazınızda gerçekleşir. Yinelenen, sıfır alanlı ve ters yönlü yüzleri olan küçük bir ağı görmek için **Örnek dene** düğmesine tıklayın. Sonuçları karşılaştırın ve özgün boyutları ve koordinatları koruyan yeni bir dosya kaydetmek için **STL indir** düğmesine tıklayın. İkili STL özgün koordinatları yuvarlayacaksa dosya ASCII biçiminde indirilir.
 
 ## Ağ onarımında neler değişir?
 
@@ -8,4 +8,4 @@ Araç, birebir yinelenen üçgenleri ve sıfır alanlı üçgenleri kaldırır. 
 
 ## Onarım öncesi ve sonrası topolojiyi karşılaştırma
 
-Üçgenlerin, yinelenen yüzlerin ve sıfır alanlı yüzlerin sayılarını kontrol edin. Rapor ayrıca yüz yönleri tutarsız kenarları, açık sınırları ve kalan manifold olmayan kenar ve köşeleri gösterir. İndirilen dosyayı 3B olarak incelemek için [STL Görüntüleyici](../stl-viewer/) aracında açın. Yüzey alanı veya kapalı hacim için [Ağ Hacmi ve Topoloji Denetleyici](../mesh-inspector/) aracını kullanın. STL denetim raporunda topoloji sorunları varsa doğrudan **STL’yi onar** düğmesine de tıklayabilirsiniz.
+Üçgenlerin, yinelenen yüzlerin ve sıfır alanlı yüzlerin sayılarını kontrol edin. Rapor ayrıca yüz yönleri tutarsız kenarları, açık sınırları ve kalan manifold olmayan kenar ve köşeleri gösterir. İndirilen dosyayı 3B olarak incelemek için [STL Görüntüleyici](../stl-viewer/) aracında açın. Yüzey alanı veya kapalı hacim için [Ağ Hacmi ve Topoloji Denetleyici](../mesh-inspector/) aracını kullanın. STL denetim raporu yinelenen yüzler, sıfır alanlı yüzler veya tutarsız yüz yönleri bulduğunda **STL’yi onar** düğmesini gösterir.

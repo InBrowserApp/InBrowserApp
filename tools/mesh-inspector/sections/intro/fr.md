@@ -21,4 +21,4 @@ L’outil regroupe les positions exactement identiques en un seul sommet. Il ide
 
 Utilisez la [Visionneuse STL](../stl-viewer/) ou la [Visionneuse OBJ](../obj-viewer/) pour examiner le modèle en 3D, notamment en mode filaire. Si votre prochaine étape exige un fichier STL, utilisez le [Convertisseur OBJ en STL](../obj-to-stl-converter/).
 
-Si le rapport d’un STL signale des problèmes de topologie, cliquez sur **Réparer le STL** pour travailler avec le même fichier. L’outil de [Réparation de maillages STL](../stl-mesh-repair/) compare aussi les faces en double ou d’aire nulle, l’orientation des faces et les problèmes de topologie restants avant le téléchargement d’un nouveau STL.
+Si le rapport d’un STL signale des faces en double ou d’aire nulle, ou des orientations incohérentes, cliquez sur **Réparer le STL** pour travailler avec le même fichier. L’outil de [Réparation de maillages STL](../stl-mesh-repair/) compare aussi les faces en double ou d’aire nulle, l’orientation des faces et les problèmes de topologie restants avant le téléchargement d’un nouveau STL.

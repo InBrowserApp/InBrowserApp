@@ -21,4 +21,4 @@ The checker counts exactly coincident positions as a single vertex. It counts sh
 
 Use the [STL Viewer](../stl-viewer/) or [OBJ Viewer](../obj-viewer/) to examine the model in 3D, including its wireframe. Use the [OBJ to STL Converter](../obj-to-stl-converter/) when the next tool in your workflow expects an STL.
 
-If an STL report shows topology issues, choose **Repair STL** to work with the same file. The [STL Mesh Repair](../stl-mesh-repair/) page also compares duplicate and zero-area faces, face directions and remaining topology issues before you download a new STL.
+If an STL report shows duplicate or zero-area faces, or inconsistent winding, choose **Repair STL** to work with the same file. The [STL Mesh Repair](../stl-mesh-repair/) page also compares duplicate and zero-area faces, face directions and remaining topology issues before you download a new STL.
