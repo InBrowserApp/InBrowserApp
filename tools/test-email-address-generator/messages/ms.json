@@ -8,6 +8,7 @@
   "placeholder": "Alamat yang dijana akan dipaparkan di sini.",
   "copy": "Salin semua",
   "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
   "download": "Muat turun TXT",
   "error": "Alamat e-mel tidak dapat dijana. Cuba lagi."
 }

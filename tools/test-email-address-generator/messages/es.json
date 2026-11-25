@@ -8,6 +8,7 @@
   "placeholder": "Las direcciones generadas aparecerán aquí.",
   "copy": "Copiar todo",
   "copied": "Copiado",
+  "copyFailed": "No se pudo copiar",
   "download": "Descargar TXT",
   "error": "No se pudieron generar las direcciones de correo electrónico. Inténtalo de nuevo."
 }

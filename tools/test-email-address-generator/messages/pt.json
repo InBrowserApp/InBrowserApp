@@ -8,6 +8,7 @@
   "placeholder": "Os endereços gerados aparecerão aqui.",
   "copy": "Copiar tudo",
   "copied": "Copiado",
+  "copyFailed": "Falha ao copiar",
   "download": "Baixar TXT",
   "error": "Não foi possível gerar os endereços de e-mail. Tente novamente."
 }

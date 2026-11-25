@@ -8,6 +8,7 @@
   "placeholder": "Oluşturulan adresler burada görünür.",
   "copy": "Tümünü kopyala",
   "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
   "download": "TXT indir",
   "error": "E-posta adresleri oluşturulamadı. Tekrar deneyin."
 }

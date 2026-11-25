@@ -11,10 +11,14 @@ export async function generateEmailAddresses(
   count: number
 ) {
   const { faker } = await import("@faker-js/faker/locale/en_US")
-  const generateEmail =
-    domain === "any"
-      ? () => faker.internet.exampleEmail()
-      : () => faker.internet.email({ provider: domain })
-
-  return faker.helpers.uniqueArray(generateEmail, count)
+  return faker.helpers.uniqueArray(
+    () =>
+      faker.internet.email({
+        provider:
+          domain === "any"
+            ? faker.helpers.arrayElement(EXAMPLE_DOMAINS)
+            : domain,
+      }),
+    count
+  )
 }

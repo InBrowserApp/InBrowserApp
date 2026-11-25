@@ -8,6 +8,7 @@
   "placeholder": "Tutaj pojawią się wygenerowane adresy.",
   "copy": "Kopiuj wszystko",
   "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
   "download": "Pobierz TXT",
   "error": "Nie udało się wygenerować adresów e-mail. Spróbuj ponownie."
 }

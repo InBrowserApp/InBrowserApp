@@ -1,4 +1,4 @@
-import { useId, useState } from "react"
+import { useEffect, useId, useState } from "react"
 import type { FormEvent } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
@@ -42,11 +42,14 @@ type Result = Readonly<{ domain: EmailDomain; text: string }>
 export default function TestEmailAddressClient({ lang, messages }: Props) {
   const domainId = useId()
   const quantityId = useId()
+  const [ready, setReady] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
   const [status, setStatus] = useState<"idle" | "pending" | "failed">("idle")
   const output = result?.text ?? ""
   const pending = status === "pending"
   const direction = lang === "ar" || lang === "he" ? "rtl" : "ltr"
+
+  useEffect(() => setReady(true), [])
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -112,6 +115,7 @@ export default function TestEmailAddressClient({ lang, messages }: Props) {
             </Field>
             <Button
               type="submit"
+              disabled={!ready}
               aria-disabled={pending}
               className="aria-disabled:opacity-50"
             >
@@ -133,8 +137,7 @@ export default function TestEmailAddressClient({ lang, messages }: Props) {
             {messages.results}
             {result && (
               <>
-                {" "}
-                ·{" "}
+                {" · "}
                 <bdi>
                   {result.domain === "any" ? messages.anyDomain : result.domain}
                 </bdi>
@@ -148,6 +151,7 @@ export default function TestEmailAddressClient({ lang, messages }: Props) {
             value={output}
             copyLabel={messages.copy}
             copiedLabel={messages.copied}
+            failedLabel={messages.copyFailed}
           />
           {result && (
             <Button asChild variant="outline" size="sm">

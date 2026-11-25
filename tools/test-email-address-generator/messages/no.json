@@ -8,6 +8,7 @@
   "placeholder": "De genererte adressene vises her.",
   "copy": "Kopier alle",
   "copied": "Kopiert",
+  "copyFailed": "Kunne ikke kopiere",
   "download": "Last ned TXT",
   "error": "Kunne ikke generere e-postadresser. Prøv igjen."
 }

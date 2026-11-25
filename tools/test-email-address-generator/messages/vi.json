@@ -8,6 +8,7 @@
   "placeholder": "Các địa chỉ đã tạo sẽ xuất hiện ở đây.",
   "copy": "Sao chép tất cả",
   "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
   "download": "Tải xuống TXT",
   "error": "Không thể tạo địa chỉ email. Hãy thử lại."
 }

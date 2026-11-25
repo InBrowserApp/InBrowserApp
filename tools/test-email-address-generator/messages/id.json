@@ -8,6 +8,7 @@
   "placeholder": "Alamat yang dibuat akan muncul di sini.",
   "copy": "Salin semua",
   "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
   "download": "Unduh TXT",
   "error": "Alamat email tidak dapat dibuat. Coba lagi."
 }

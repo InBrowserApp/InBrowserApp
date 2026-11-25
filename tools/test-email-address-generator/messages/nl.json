@@ -8,6 +8,7 @@
   "placeholder": "Hier verschijnen de gegenereerde adressen.",
   "copy": "Alles kopiëren",
   "copied": "Gekopieerd",
+  "copyFailed": "Kopiëren mislukt",
   "download": "TXT downloaden",
   "error": "De e-mailadressen konden niet worden gegenereerd. Probeer het opnieuw."
 }

@@ -6,6 +6,7 @@ import {
   waitFor,
 } from "@testing-library/react"
 import { afterEach, describe, expect, it, vi } from "vitest"
+import { renderToString } from "react-dom/server"
 
 import TestEmailAddressClient from "./client"
 import * as emails from "./core/email-addresses"
@@ -22,6 +23,19 @@ const generate = () =>
   fireEvent.click(screen.getByRole("button", { name: messages.generate }))
 
 describe("Test Email Address Generator", () => {
+  it("prevents native submission before hydration", () => {
+    const markup = renderToString(
+      <TestEmailAddressClient lang="en" messages={messages} />
+    )
+    const template = document.createElement("template")
+    template.innerHTML = markup
+
+    const submit = template.content.querySelector<HTMLButtonElement>(
+      "button[type=submit]"
+    )
+    expect(submit?.disabled).toBe(true)
+  })
+
   it("generates, copies and downloads addresses for the selected domain", async () => {
     const mockGenerate = vi
       .spyOn(emails, "generateEmailAddresses")
@@ -60,6 +74,12 @@ describe("Test Email Address Generator", () => {
     await waitFor(() => expect(output().value).toBe("Ari.Young@example.org"))
     expect(screen.getByRole("button", { name: messages.copy })).toBeTruthy()
     expect(writeText).toHaveBeenCalledTimes(1)
+
+    writeText.mockRejectedValueOnce(
+      new DOMException("Copy blocked", "NotAllowedError")
+    )
+    fireEvent.click(screen.getByRole("button", { name: messages.copy }))
+    await screen.findByRole("button", { name: messages.copyFailed })
   })
 
   it("keeps keyboard focus and ignores repeats while generation is pending", async () => {

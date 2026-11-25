@@ -8,6 +8,7 @@
   "placeholder": "Generated addresses will appear here.",
   "copy": "Copy all",
   "copied": "Copied",
+  "copyFailed": "Copy failed",
   "download": "Download TXT",
   "error": "Could not generate email addresses. Try again."
 }

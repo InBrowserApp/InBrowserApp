@@ -8,6 +8,7 @@
   "placeholder": "產生的電子郵件地址會顯示在此。",
   "copy": "全部複製",
   "copied": "已複製",
+  "copyFailed": "複製失敗",
   "download": "下載 TXT",
   "error": "無法產生電子郵件地址，請再試一次。"
 }

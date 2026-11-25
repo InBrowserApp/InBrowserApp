@@ -8,6 +8,7 @@
   "placeholder": "生成的邮箱地址会显示在这里。",
   "copy": "全部复制",
   "copied": "已复制",
+  "copyFailed": "复制失败",
   "download": "下载 TXT",
   "error": "无法生成邮箱地址，请重试。"
 }
