@@ -1,0 +1,4 @@
+{
+  "name": "Prueba de frecuencia de actualización",
+  "description": "Mide en línea la frecuencia de actualización de tu pantalla en Hz y consulta el tiempo entre fotogramas. Repite la prueba al cambiar de pantalla o de configuración."
+}

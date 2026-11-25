@@ -28982,6 +28982,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "refresh-rate-test",
+    language: "ar",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "de",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "en",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "es",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "fr",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "he",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "hi",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "id",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "it",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ja",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ko",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ms",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "nl",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "no",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "pl",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "pt",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "ru",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "sv",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "th",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "tr",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "vi",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "refresh-rate-test",
+    language: "zh-TW",
+  },
+  {
     slug: "regex-tester-replacer",
     language: "ar",
   },

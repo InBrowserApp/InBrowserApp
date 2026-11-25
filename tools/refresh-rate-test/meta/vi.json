@@ -1,0 +1,4 @@
+{
+  "name": "Kiểm tra tần số quét màn hình",
+  "description": "Đo tần số quét màn hình trực tuyến theo đơn vị Hz và xem khoảng thời gian giữa hai khung hình. Đo lại sau khi đổi màn hình hoặc chỉnh cài đặt hiển thị."
+}

@@ -1578,6 +1578,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "misc",
+    name: "Kiểm tra tần số quét màn hình",
+    slug: "refresh-rate-test",
+  },
+  {
     category: "text",
     name: "Trình kiểm thử và thay thế biểu thức chính quy",
     slug: "regex-tester-replacer",

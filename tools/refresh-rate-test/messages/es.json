@@ -1,0 +1,8 @@
+{
+  "estimate": "Frecuencia de actualización estimada",
+  "frameInterval": "Intervalo típico entre fotogramas",
+  "measuring": "Midiendo la frecuencia de la pantalla…",
+  "paused": "La medición se pausa cuando esta pestaña no está visible.",
+  "unavailable": "No se pudo obtener una lectura. Mantén esta pestaña visible y vuelve a medir.",
+  "measureAgain": "Volver a medir"
+}

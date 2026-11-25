@@ -1,0 +1,8 @@
+{
+  "estimate": "Fréquence de rafraîchissement estimée",
+  "frameInterval": "Intervalle typique entre les images",
+  "measuring": "Mesure de la fréquence en cours…",
+  "paused": "La mesure est en pause tant que cet onglet est masqué.",
+  "unavailable": "La mesure a échoué. Gardez cet onglet visible et relancez-la.",
+  "measureAgain": "Mesurer à nouveau"
+}

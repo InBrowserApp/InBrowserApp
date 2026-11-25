@@ -1,0 +1,4 @@
+{
+  "name": "Test av skjermens oppdateringsfrekvens",
+  "description": "Mål skjermens oppdateringsfrekvens på nett i Hz, og se tiden mellom bildene. Mål på nytt når du bytter skjerm eller endrer skjerminnstillingene."
+}
