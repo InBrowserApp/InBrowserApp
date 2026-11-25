@@ -1,0 +1,14 @@
+{
+  "domain": "Dominio",
+  "anyDomain": "Qualsiasi dominio di esempio",
+  "quantity": "Quantità",
+  "generate": "Genera",
+  "generating": "Generazione in corso…",
+  "results": "Indirizzi email",
+  "placeholder": "Gli indirizzi generati appariranno qui.",
+  "copy": "Copia tutto",
+  "copied": "Copiato",
+  "copyFailed": "Copia non riuscita",
+  "download": "Scarica TXT",
+  "error": "Impossibile generare gli indirizzi email. Riprova."
+}

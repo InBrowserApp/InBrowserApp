@@ -1,0 +1,14 @@
+{
+  "domain": "Domain",
+  "anyDomain": "Domain contoh mana saja",
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Alamat email",
+  "placeholder": "Alamat yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "error": "Alamat email tidak dapat dibuat. Coba lagi."
+}

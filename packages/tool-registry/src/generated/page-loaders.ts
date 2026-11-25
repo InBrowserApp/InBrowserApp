@@ -501,6 +501,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "svg-to-pdf-converter": () => import("@tool/svg-to-pdf-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),
+  "test-email-address-generator": () =>
+    import("@tool/test-email-address-generator/page"),
   "text-diff": () => import("@tool/text-diff/page"),
   "text-encoding-converter": () => import("@tool/text-encoding-converter/page"),
   "text-line-sorter": () => import("@tool/text-line-sorter/page"),

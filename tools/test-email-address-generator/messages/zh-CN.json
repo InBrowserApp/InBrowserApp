@@ -1,0 +1,14 @@
+{
+  "domain": "域名",
+  "anyDomain": "任意示例域名",
+  "quantity": "数量",
+  "generate": "生成",
+  "generating": "正在生成…",
+  "results": "邮箱地址",
+  "placeholder": "生成的邮箱地址会显示在这里。",
+  "copy": "全部复制",
+  "copied": "已复制",
+  "copyFailed": "复制失败",
+  "download": "下载 TXT",
+  "error": "无法生成邮箱地址，请重试。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "测试邮箱地址生成器",
+  "description": "使用 example.com、example.net 或 example.org 生成不重复的测试邮箱地址。可以批量复制，也可以下载为文本文件。"
+}

@@ -51316,6 +51316,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "test-email-address-generator",
+    category: "random",
+    icon: "mails",
+    tags: [
+      "random",
+      "email",
+      "email address",
+      "test data",
+      "sample",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد عناوين البريد الإلكتروني للاختبار",
+        description:
+          "ولّد عناوين بريد إلكتروني فريدة للاختبار على example.com أو example.net أو example.org. انسخ العناوين دفعة واحدة أو نزّلها كملف نصي.",
+      },
+      de: {
+        name: "Test-E-Mail-Adressen-Generator",
+        description:
+          "Erzeuge eindeutige Test-E-Mail-Adressen mit example.com, example.net oder example.org. Kopiere eine Liste oder lade sie als Textdatei herunter.",
+      },
+      en: {
+        name: "Test Email Address Generator",
+        description:
+          "Generate unique test email addresses on example.com, example.net, or example.org. Copy a batch or download it as a text file.",
+      },
+      es: {
+        name: "Generador de direcciones de correo electrónico de prueba",
+        description:
+          "Genera direcciones de correo electrónico de prueba únicas en example.com, example.net o example.org. Copia un lote o descárgalo como archivo de texto.",
+      },
+      fr: {
+        name: "Générateur d’adresses e-mail de test",
+        description:
+          "Générez des adresses e-mail de test uniques sur example.com, example.net ou example.org. Copiez un lot ou téléchargez-le au format texte.",
+      },
+      he: {
+        name: "מחולל כתובות דוא״ל לבדיקה",
+        description:
+          "צרו כתובות דוא״ל ייחודיות לבדיקה בדומיינים example.com, example.net או example.org. אפשר להעתיק את כל הכתובות או להוריד אותן כקובץ טקסט.",
+      },
+      hi: {
+        name: "टेस्ट ईमेल पता जनरेटर",
+        description:
+          "example.com, example.net या example.org पर अलग-अलग टेस्ट ईमेल पते जनरेट करें। सभी पते एक साथ कॉपी करें या टेक्स्ट फ़ाइल के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Alamat Email Uji",
+        description:
+          "Buat alamat email uji yang unik dengan domain example.com, example.net, atau example.org. Salin semua hasil atau unduh sebagai berkas teks.",
+      },
+      it: {
+        name: "Generatore di indirizzi email di prova",
+        description:
+          "Genera indirizzi email di prova univoci con example.com, example.net o example.org. Copia l'elenco o scaricalo come file di testo.",
+      },
+      ja: {
+        name: "テスト用メールアドレス生成ツール",
+        description:
+          "example.com、example.net、example.org の一意なテスト用メールアドレスを生成します。まとめてコピーするか、テキストファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "테스트 이메일 주소 생성기",
+        description:
+          "example.com, example.net 또는 example.org의 고유한 테스트 이메일 주소를 생성합니다. 생성한 주소를 한 번에 복사하거나 텍스트 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana Alamat E-mel Ujian",
+        description:
+          "Jana alamat e-mel ujian yang unik menggunakan example.com, example.net atau example.org. Salin semua hasil atau muat turunnya sebagai fail teks.",
+      },
+      nl: {
+        name: "Generator voor test-e-mailadressen",
+        description:
+          "Genereer unieke test-e-mailadressen op example.com, example.net of example.org. Kopieer de lijst of download die als tekstbestand.",
+      },
+      no: {
+        name: "Generator for e-postadresser til testing",
+        description:
+          "Generer unike e-postadresser til testing med example.com, example.net eller example.org. Kopier hele listen eller last den ned som en tekstfil.",
+      },
+      pl: {
+        name: "Generator testowych adresów e-mail",
+        description:
+          "Generuj unikalne testowe adresy e-mail w domenie example.com, example.net lub example.org. Skopiuj listę lub pobierz ją jako plik tekstowy.",
+      },
+      pt: {
+        name: "Gerador de endereços de e-mail de teste",
+        description:
+          "Gere endereços de e-mail de teste únicos em example.com, example.net ou example.org. Copie um lote ou baixe-o como arquivo de texto.",
+      },
+      ru: {
+        name: "Генератор тестовых адресов электронной почты",
+        description:
+          "Создавайте уникальные тестовые адреса электронной почты в доменах example.com, example.net или example.org. Скопируйте список или скачайте его как текстовый файл.",
+      },
+      sv: {
+        name: "Generator för test-e-postadresser",
+        description:
+          "Generera unika test-e-postadresser med example.com, example.net eller example.org. Kopiera listan eller ladda ner den som textfil.",
+      },
+      th: {
+        name: "ตัวสร้างที่อยู่อีเมลทดสอบ",
+        description:
+          "สร้างที่อยู่อีเมลทดสอบแบบไม่ซ้ำกันบน example.com, example.net หรือ example.org คัดลอกทั้งชุดหรือดาวน์โหลดเป็นไฟล์ข้อความ",
+      },
+      tr: {
+        name: "Test E-posta Adresi Oluşturucu",
+        description:
+          "example.com, example.net veya example.org alan adlarında benzersiz test e-posta adresleri oluşturun. Tüm adresleri kopyalayın veya metin dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo địa chỉ email kiểm thử",
+        description:
+          "Tạo địa chỉ email kiểm thử không trùng lặp với tên miền example.com, example.net hoặc example.org. Sao chép toàn bộ kết quả hoặc tải xuống dưới dạng tệp văn bản.",
+      },
+      "zh-CN": {
+        name: "测试邮箱地址生成器",
+        description:
+          "使用 example.com、example.net 或 example.org 生成不重复的测试邮箱地址。可以批量复制，也可以下载为文本文件。",
+      },
+      "zh-TW": {
+        name: "測試電子郵件地址產生器",
+        description:
+          "使用 example.com、example.net 或 example.org 產生不重複的測試電子郵件地址。可整批複製或下載為文字檔。",
+      },
+    },
+  },
+  {
     slug: "text-diff",
     category: "text",
     icon: "file-text",
@@ -111058,6 +111188,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SVG 檢視器",
         description:
           "在本機開啟 SVG 與 SVGZ 向量圖。放大、平移向量圖像、檢查尺寸，並切換透明度背景。",
+      },
+    },
+  },
+  "test-email-address-generator": {
+    slug: "test-email-address-generator",
+    category: "random",
+    icon: "mails",
+    tags: [
+      "random",
+      "email",
+      "email address",
+      "test data",
+      "sample",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد عناوين البريد الإلكتروني للاختبار",
+        description:
+          "ولّد عناوين بريد إلكتروني فريدة للاختبار على example.com أو example.net أو example.org. انسخ العناوين دفعة واحدة أو نزّلها كملف نصي.",
+      },
+      de: {
+        name: "Test-E-Mail-Adressen-Generator",
+        description:
+          "Erzeuge eindeutige Test-E-Mail-Adressen mit example.com, example.net oder example.org. Kopiere eine Liste oder lade sie als Textdatei herunter.",
+      },
+      en: {
+        name: "Test Email Address Generator",
+        description:
+          "Generate unique test email addresses on example.com, example.net, or example.org. Copy a batch or download it as a text file.",
+      },
+      es: {
+        name: "Generador de direcciones de correo electrónico de prueba",
+        description:
+          "Genera direcciones de correo electrónico de prueba únicas en example.com, example.net o example.org. Copia un lote o descárgalo como archivo de texto.",
+      },
+      fr: {
+        name: "Générateur d’adresses e-mail de test",
+        description:
+          "Générez des adresses e-mail de test uniques sur example.com, example.net ou example.org. Copiez un lot ou téléchargez-le au format texte.",
+      },
+      he: {
+        name: "מחולל כתובות דוא״ל לבדיקה",
+        description:
+          "צרו כתובות דוא״ל ייחודיות לבדיקה בדומיינים example.com, example.net או example.org. אפשר להעתיק את כל הכתובות או להוריד אותן כקובץ טקסט.",
+      },
+      hi: {
+        name: "टेस्ट ईमेल पता जनरेटर",
+        description:
+          "example.com, example.net या example.org पर अलग-अलग टेस्ट ईमेल पते जनरेट करें। सभी पते एक साथ कॉपी करें या टेक्स्ट फ़ाइल के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Alamat Email Uji",
+        description:
+          "Buat alamat email uji yang unik dengan domain example.com, example.net, atau example.org. Salin semua hasil atau unduh sebagai berkas teks.",
+      },
+      it: {
+        name: "Generatore di indirizzi email di prova",
+        description:
+          "Genera indirizzi email di prova univoci con example.com, example.net o example.org. Copia l'elenco o scaricalo come file di testo.",
+      },
+      ja: {
+        name: "テスト用メールアドレス生成ツール",
+        description:
+          "example.com、example.net、example.org の一意なテスト用メールアドレスを生成します。まとめてコピーするか、テキストファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "테스트 이메일 주소 생성기",
+        description:
+          "example.com, example.net 또는 example.org의 고유한 테스트 이메일 주소를 생성합니다. 생성한 주소를 한 번에 복사하거나 텍스트 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana Alamat E-mel Ujian",
+        description:
+          "Jana alamat e-mel ujian yang unik menggunakan example.com, example.net atau example.org. Salin semua hasil atau muat turunnya sebagai fail teks.",
+      },
+      nl: {
+        name: "Generator voor test-e-mailadressen",
+        description:
+          "Genereer unieke test-e-mailadressen op example.com, example.net of example.org. Kopieer de lijst of download die als tekstbestand.",
+      },
+      no: {
+        name: "Generator for e-postadresser til testing",
+        description:
+          "Generer unike e-postadresser til testing med example.com, example.net eller example.org. Kopier hele listen eller last den ned som en tekstfil.",
+      },
+      pl: {
+        name: "Generator testowych adresów e-mail",
+        description:
+          "Generuj unikalne testowe adresy e-mail w domenie example.com, example.net lub example.org. Skopiuj listę lub pobierz ją jako plik tekstowy.",
+      },
+      pt: {
+        name: "Gerador de endereços de e-mail de teste",
+        description:
+          "Gere endereços de e-mail de teste únicos em example.com, example.net ou example.org. Copie um lote ou baixe-o como arquivo de texto.",
+      },
+      ru: {
+        name: "Генератор тестовых адресов электронной почты",
+        description:
+          "Создавайте уникальные тестовые адреса электронной почты в доменах example.com, example.net или example.org. Скопируйте список или скачайте его как текстовый файл.",
+      },
+      sv: {
+        name: "Generator för test-e-postadresser",
+        description:
+          "Generera unika test-e-postadresser med example.com, example.net eller example.org. Kopiera listan eller ladda ner den som textfil.",
+      },
+      th: {
+        name: "ตัวสร้างที่อยู่อีเมลทดสอบ",
+        description:
+          "สร้างที่อยู่อีเมลทดสอบแบบไม่ซ้ำกันบน example.com, example.net หรือ example.org คัดลอกทั้งชุดหรือดาวน์โหลดเป็นไฟล์ข้อความ",
+      },
+      tr: {
+        name: "Test E-posta Adresi Oluşturucu",
+        description:
+          "example.com, example.net veya example.org alan adlarında benzersiz test e-posta adresleri oluşturun. Tüm adresleri kopyalayın veya metin dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo địa chỉ email kiểm thử",
+        description:
+          "Tạo địa chỉ email kiểm thử không trùng lặp với tên miền example.com, example.net hoặc example.org. Sao chép toàn bộ kết quả hoặc tải xuống dưới dạng tệp văn bản.",
+      },
+      "zh-CN": {
+        name: "测试邮箱地址生成器",
+        description:
+          "使用 example.com、example.net 或 example.org 生成不重复的测试邮箱地址。可以批量复制，也可以下载为文本文件。",
+      },
+      "zh-TW": {
+        name: "測試電子郵件地址產生器",
+        description:
+          "使用 example.com、example.net 或 example.org 產生不重複的測試電子郵件地址。可整批複製或下載為文字檔。",
       },
     },
   },

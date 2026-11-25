@@ -1,0 +1,4 @@
+{
+  "name": "테스트 이메일 주소 생성기",
+  "description": "example.com, example.net 또는 example.org의 고유한 테스트 이메일 주소를 생성합니다. 생성한 주소를 한 번에 복사하거나 텍스트 파일로 다운로드하세요."
+}

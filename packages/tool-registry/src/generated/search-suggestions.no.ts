@@ -2013,6 +2013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "svg-viewer",
   },
   {
+    category: "random",
+    name: "Generator for e-postadresser til testing",
+    slug: "test-email-address-generator",
+  },
+  {
     category: "text",
     name: "Tekstsammenligning",
     slug: "text-diff",

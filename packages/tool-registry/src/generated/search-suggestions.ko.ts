@@ -2013,6 +2013,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "svg-viewer",
   },
   {
+    category: "random",
+    name: "테스트 이메일 주소 생성기",
+    slug: "test-email-address-generator",
+  },
+  {
     category: "text",
     name: "텍스트 차이 비교",
     slug: "text-diff",

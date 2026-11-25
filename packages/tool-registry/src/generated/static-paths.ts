@@ -36986,6 +36986,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "test-email-address-generator",
+    language: "ar",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "de",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "en",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "es",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "fr",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "he",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "hi",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "id",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "it",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "ja",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "ko",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "ms",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "nl",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "no",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "pl",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "pt",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "ru",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "sv",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "th",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "tr",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "vi",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "test-email-address-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "text-diff",
     language: "ar",
   },
