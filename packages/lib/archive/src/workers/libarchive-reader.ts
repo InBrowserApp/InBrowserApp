@@ -102,12 +102,14 @@ class LibarchiveReader {
         const original = raw
           ? this.rawName
           : this.module.UTF8ToString(this.module._viewer_path())
-        const path = preservePaths
+        const path = raw
           ? original
-              .replace(/\\/g, "/")
-              .replace(/^(?:\.\/)+/, "")
-              .replace(/\/$/, "")
-          : normalizeArchivePath(original)
+          : preservePaths
+            ? original
+                .replace(/\\/g, "/")
+                .replace(/^(?:\.\/)+/, "")
+                .replace(/\/$/, "")
+            : normalizeArchivePath(original)
         const modifiedAt = this.module._viewer_mtime()
         const size = raw
           ? this.readChunks()
