@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Kiểm tra dải chuyển màu màn hình",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "Bộ Chuyển Đổi Mã Morse",
     slug: "morse-code-converter",
   },

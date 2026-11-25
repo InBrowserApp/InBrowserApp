@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Ujian Gradien Monitor",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "Penukar Kod Morse",
     slug: "morse-code-converter",
   },

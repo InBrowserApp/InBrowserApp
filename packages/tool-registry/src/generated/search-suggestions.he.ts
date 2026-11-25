@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "בדיקת מעברי צבע במסך",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "ממיר קוד מורס",
     slug: "morse-code-converter",
   },

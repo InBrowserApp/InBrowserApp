@@ -1,0 +1,19 @@
+{
+  "patterns": "Testmønstre",
+  "grayscale": "Gråskala",
+  "rgb": "RGB-gradienter",
+  "black": "Svartnivåer",
+  "white": "Hvitnivåer",
+  "smoothGrayscale": "Jevn gråskala",
+  "grayscaleSteps": "16 trinn i gråskalaen",
+  "red": "Rød",
+  "green": "Grønn",
+  "blue": "Blå",
+  "grayscaleHint": "Se etter en jevn, nøytral overgang øverst og tydelig adskilte trinn nederst.",
+  "rgbHint": "Sjekk at alle fargeovergangene er jevne, uten tydelige grenser mellom fargebånd.",
+  "blackHint": "Sammenlign hvert nummererte felt med feltene ved siden av på den svarte bakgrunnen.",
+  "whiteHint": "Sammenlign hvert nummererte felt med feltene ved siden av på den hvite bakgrunnen.",
+  "fullscreen": "Vis i fullskjerm",
+  "fullscreenLabel": "Test av skjermens fargeoverganger i fullskjerm",
+  "exit": "Avslutt fullskjerm"
+}

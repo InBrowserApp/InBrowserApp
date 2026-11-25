@@ -1,0 +1,4 @@
+{
+  "name": "Test dei gradienti del monitor",
+  "description": "Verifica se il monitor mostra bande di colore o perde dettagli nelle ombre e nelle alte luci. Usa la scala di grigi, i gradienti RGB e i livelli di nero e bianco numerati."
+}

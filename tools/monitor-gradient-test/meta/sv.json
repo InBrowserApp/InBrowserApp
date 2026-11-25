@@ -1,0 +1,4 @@
+{
+  "name": "Test av skärmens färgövergångar",
+  "description": "Kontrollera om skärmen visar färgband eller tappar detaljer i skuggor och högdagrar med gråskala, RGB-gradienter och numrerade testfält för svart- och vitnivåer."
+}

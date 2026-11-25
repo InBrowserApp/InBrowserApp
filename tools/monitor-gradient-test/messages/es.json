@@ -1,0 +1,19 @@
+{
+  "patterns": "Patrones de prueba",
+  "grayscale": "Escala de grises",
+  "rgb": "Degradados RGB",
+  "black": "Niveles de negro",
+  "white": "Niveles de blanco",
+  "smoothGrayscale": "Degradado de grises",
+  "grayscaleSteps": "16 niveles de gris",
+  "red": "Rojo",
+  "green": "Verde",
+  "blue": "Azul",
+  "grayscaleHint": "Busca una transición suave y neutra arriba y distingue los niveles de gris abajo.",
+  "rgbHint": "Comprueba que cada degradado de color sea suave y no muestre bandas con bordes bruscos.",
+  "blackHint": "Compara cada muestra numerada con las que tiene al lado sobre el fondo negro.",
+  "whiteHint": "Compara cada muestra numerada con las que tiene al lado sobre el fondo blanco.",
+  "fullscreen": "Ver a pantalla completa",
+  "fullscreenLabel": "Prueba de degradados del monitor a pantalla completa",
+  "exit": "Salir de pantalla completa"
+}

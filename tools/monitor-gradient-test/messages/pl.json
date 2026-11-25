@@ -1,0 +1,19 @@
+{
+  "patterns": "Wzorce testowe",
+  "grayscale": "Skala szarości",
+  "rgb": "Gradienty RGB",
+  "black": "Poziomy czerni",
+  "white": "Poziomy bieli",
+  "smoothGrayscale": "Płynny gradient szarości",
+  "grayscaleSteps": "16 stopni szarości",
+  "red": "Czerwony",
+  "green": "Zielony",
+  "blue": "Niebieski",
+  "grayscaleHint": "Sprawdź, czy przejście u góry jest płynne i neutralne, a stopnie u dołu pozostają rozróżnialne.",
+  "rgbHint": "Sprawdź, czy każdy kolor zmienia się płynnie, bez wyraźnych pasów.",
+  "blackHint": "Porównaj każde ponumerowane pole z sąsiednimi na czarnym tle.",
+  "whiteHint": "Porównaj każde ponumerowane pole z sąsiednimi na białym tle.",
+  "fullscreen": "Wyświetl na pełnym ekranie",
+  "fullscreenLabel": "Pełnoekranowy test gradientów monitora",
+  "exit": "Zamknij tryb pełnoekranowy"
+}

@@ -1,0 +1,19 @@
+{
+  "patterns": "Testmönster",
+  "grayscale": "Gråskala",
+  "rgb": "RGB-gradienter",
+  "black": "Svartnivåer",
+  "white": "Vitnivåer",
+  "smoothGrayscale": "Jämn gråskala",
+  "grayscaleSteps": "16 steg i gråskalan",
+  "red": "Röd",
+  "green": "Grön",
+  "blue": "Blå",
+  "grayscaleHint": "Titta efter en jämn, neutral övergång ovanför och tydligt åtskilda steg nedanför.",
+  "rgbHint": "Kontrollera att varje färgövergång är jämn och utan plötsliga band.",
+  "blackHint": "Jämför varje numrerat fält med fälten intill på den svarta bakgrunden.",
+  "whiteHint": "Jämför varje numrerat fält med fälten intill på den vita bakgrunden.",
+  "fullscreen": "Visa i helskärm",
+  "fullscreenLabel": "Test av skärmens färgövergångar i helskärm",
+  "exit": "Avsluta helskärm"
+}

@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "螢幕色階測試",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "摩爾斯電碼轉換器",
     slug: "morse-code-converter",
   },

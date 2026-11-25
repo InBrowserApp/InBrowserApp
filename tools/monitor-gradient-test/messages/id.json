@@ -1,0 +1,19 @@
+{
+  "patterns": "Pola uji",
+  "grayscale": "Skala abu-abu",
+  "rgb": "Gradien RGB",
+  "black": "Level hitam",
+  "white": "Level putih",
+  "smoothGrayscale": "Gradien abu-abu mulus",
+  "grayscaleSteps": "16 tingkat abu-abu",
+  "red": "Merah",
+  "green": "Hijau",
+  "blue": "Biru",
+  "grayscaleHint": "Periksa apakah transisi di atas mulus dan netral serta tingkat abu-abu di bawah dapat dibedakan.",
+  "rgbHint": "Periksa apakah setiap gradien warna bertransisi dengan mulus tanpa garis yang mencolok.",
+  "blackHint": "Bandingkan setiap petak bernomor dengan petak di sebelahnya di atas latar hitam.",
+  "whiteHint": "Bandingkan setiap petak bernomor dengan petak di sebelahnya di atas latar putih.",
+  "fullscreen": "Tampilkan layar penuh",
+  "fullscreenLabel": "Tes gradien monitor dalam layar penuh",
+  "exit": "Keluar dari layar penuh"
+}

@@ -1,0 +1,19 @@
+{
+  "patterns": "Testpatronen",
+  "grayscale": "Grijswaarden",
+  "rgb": "RGB-verlopen",
+  "black": "Zwartniveaus",
+  "white": "Witniveaus",
+  "smoothGrayscale": "Vloeiend grijsverloop",
+  "grayscaleSteps": "16 grijsstappen",
+  "red": "Rood",
+  "green": "Groen",
+  "blue": "Blauw",
+  "grayscaleHint": "Let bovenaan op een vloeiende, neutrale overgang en onderaan op duidelijk verschillende stappen.",
+  "rgbHint": "Controleer of elk kleurverloop vloeiend blijft zonder zichtbare kleurbanden.",
+  "blackHint": "Vergelijk elk genummerd vlak met de aangrenzende vlakken op de zwarte achtergrond.",
+  "whiteHint": "Vergelijk elk genummerd vlak met de aangrenzende vlakken op de witte achtergrond.",
+  "fullscreen": "Op volledig scherm weergeven",
+  "fullscreenLabel": "Kleurverlooptest voor je monitor op volledig scherm",
+  "exit": "Volledig scherm afsluiten"
+}

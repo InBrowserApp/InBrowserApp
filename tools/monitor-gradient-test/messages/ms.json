@@ -1,0 +1,19 @@
+{
+  "patterns": "Corak ujian",
+  "grayscale": "Skala kelabu",
+  "rgb": "Gradien RGB",
+  "black": "Aras hitam",
+  "white": "Aras putih",
+  "smoothGrayscale": "Gradien kelabu berterusan",
+  "grayscaleSteps": "16 tahap kelabu",
+  "red": "Merah",
+  "green": "Hijau",
+  "blue": "Biru",
+  "grayscaleHint": "Periksa sama ada peralihan di atas beransur-ansur dan neutral, dan tahap di bawah dapat dibezakan.",
+  "rgbHint": "Periksa sama ada setiap gradien warna beralih secara beransur-ansur tanpa jalur yang ketara.",
+  "blackHint": "Bandingkan setiap petak bernombor dengan petak di sebelahnya pada latar hitam.",
+  "whiteHint": "Bandingkan setiap petak bernombor dengan petak di sebelahnya pada latar putih.",
+  "fullscreen": "Papar dalam skrin penuh",
+  "fullscreenLabel": "Ujian gradien monitor dalam skrin penuh",
+  "exit": "Keluar daripada skrin penuh"
+}

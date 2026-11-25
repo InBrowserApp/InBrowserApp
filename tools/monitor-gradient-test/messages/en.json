@@ -1,0 +1,19 @@
+{
+  "patterns": "Test patterns",
+  "grayscale": "Grayscale",
+  "rgb": "RGB gradients",
+  "black": "Black levels",
+  "white": "White levels",
+  "smoothGrayscale": "Smooth grayscale",
+  "grayscaleSteps": "16 grayscale steps",
+  "red": "Red",
+  "green": "Green",
+  "blue": "Blue",
+  "grayscaleHint": "Look for a smooth, neutral transition above and distinct steps below.",
+  "rgbHint": "Check each color ramp for smooth transitions without abrupt bands.",
+  "blackHint": "Compare each numbered patch with its neighbors on the black background.",
+  "whiteHint": "Compare each numbered patch with its neighbors on the white background.",
+  "fullscreen": "View fullscreen",
+  "fullscreenLabel": "Fullscreen monitor gradient test",
+  "exit": "Exit fullscreen"
+}

@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Monitor Gradient Test",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "Morse Code Converter",
     slug: "morse-code-converter",
   },

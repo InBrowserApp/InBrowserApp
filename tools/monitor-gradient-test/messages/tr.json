@@ -1,0 +1,19 @@
+{
+  "patterns": "Test desenleri",
+  "grayscale": "Gri tonlama",
+  "rgb": "RGB renk geçişleri",
+  "black": "Siyah seviyeleri",
+  "white": "Beyaz seviyeleri",
+  "smoothGrayscale": "Yumuşak gri ton geçişi",
+  "grayscaleSteps": "16 gri ton basamağı",
+  "red": "Kırmızı",
+  "green": "Yeşil",
+  "blue": "Mavi",
+  "grayscaleHint": "Üstte geçişin yumuşak ve renk tonundan arınmış olmasına, altta ise basamakların ayırt edilebilmesine bakın.",
+  "rgbHint": "Her rengin keskin bantlar oluşturmadan yumuşak biçimde değiştiğini kontrol edin.",
+  "blackHint": "Siyah arka planda her numaralı kutuyu yanındakilerle karşılaştırın.",
+  "whiteHint": "Beyaz arka planda her numaralı kutuyu yanındakilerle karşılaştırın.",
+  "fullscreen": "Tam ekranda görüntüle",
+  "fullscreenLabel": "Tam ekran monitör renk geçişi testi",
+  "exit": "Tam ekrandan çık"
+}

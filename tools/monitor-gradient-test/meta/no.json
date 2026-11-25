@@ -1,0 +1,4 @@
+{
+  "name": "Test av skjermens fargeoverganger",
+  "description": "Sjekk skjermen for fargebånd og tap av detaljer i skygger og høylys med gråskala, RGB-gradienter og nummererte testfelt for svart- og hvitnivå."
+}

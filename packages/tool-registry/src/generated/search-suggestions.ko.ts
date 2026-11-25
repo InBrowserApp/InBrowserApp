@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "모니터 그라데이션 테스트",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "모스 부호 변환기",
     slug: "morse-code-converter",
   },

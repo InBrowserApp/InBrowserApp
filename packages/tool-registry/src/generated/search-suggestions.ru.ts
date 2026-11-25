@@ -1304,6 +1304,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Тест градиентов монитора",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "Конвертер кода Морзе",
     slug: "morse-code-converter",
   },
