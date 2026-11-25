@@ -1,5 +1,4 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react"
-import { disposeModel } from "@workspace/model-mesh/dispose"
 import { Alert, AlertDescription } from "../../ui/alert"
 import { Button } from "../../ui/button"
 import {
@@ -28,10 +27,12 @@ export default function ModelViewer({
   messages: ModelViewerMessages
 }) {
   const input = useRef<HTMLInputElement>(null)
+  const chooseButton = useRef<HTMLButtonElement>(null)
+  const emptyActions = useRef<HTMLDivElement>(null)
+  const restoreFocus = useRef(false)
   const sequence = useRef(0)
   const [model, setModel] = useState<OpenModel>()
-  const [loading, setLoading] = useState(false)
-  const [invalid, setInvalid] = useState(false)
+  const [status, setStatus] = useState<"loading" | "invalid">()
   const [dragging, setDragging] = useState(false)
   const options = getModelFormat(format)
   useEffect(
@@ -40,36 +41,39 @@ export default function ModelViewer({
     },
     []
   )
-  useEffect(
-    () => () => {
-      if (model) disposeModel(model.object)
-    },
-    [model]
-  )
+  useEffect(() => model?.dispose, [model])
+  useEffect(() => {
+    if (!restoreFocus.current) return
+    restoreFocus.current = false
+    if (document.activeElement === document.body) chooseButton.current?.focus()
+  }, [model])
 
-  async function open(files: File[]) {
-    if (!files.length) return
+  async function open(files?: File[]) {
+    if (files?.length === 0) return
     const request = ++sequence.current
-    setLoading(true)
-    setInvalid(false)
+    setStatus("loading")
     try {
-      const next = await loadModel(files, format)
-      if (request === sequence.current) setModel(next)
-      else disposeModel(next.object)
+      const next = await loadModel(files ?? [await exampleFile(format)], format)
+      if (request !== sequence.current) {
+        next.dispose()
+        return
+      }
+      restoreFocus.current =
+        emptyActions.current?.contains(document.activeElement) ?? false
+      setModel(next)
+      setStatus(undefined)
     } catch {
-      if (request === sequence.current) setInvalid(true)
-    } finally {
-      if (request === sequence.current) setLoading(false)
+      if (request === sequence.current) setStatus("invalid")
     }
   }
 
   const choose = (
-    <Button onClick={() => input.current?.click()}>
+    <Button ref={chooseButton} onClick={() => input.current?.click()}>
       <Folder data-icon="inline-start" aria-hidden="true" />
       {m.open}
     </Button>
   )
-  const status = (
+  const opening = (
     <p role="status" className="flex min-h-10 items-center gap-2 px-3 text-sm">
       <Spinner aria-hidden="true" />
       {m.loading}
@@ -105,14 +109,17 @@ export default function ModelViewer({
         ref={input}
         type="file"
         hidden
-        multiple={options.multiple}
-        accept={options.accept}
+        multiple={Boolean(options.companions)}
+        accept={[
+          ...options.extensions,
+          ...(options.companions?.accept ?? []),
+        ].join(",")}
         onChange={(event) => {
           void open(Array.from(event.currentTarget.files ?? []))
           event.currentTarget.value = ""
         }}
       />
-      {invalid && (
+      {status === "invalid" && (
         <Alert variant="destructive">
           <AlertDescription>{m.invalid}</AlertDescription>
         </Alert>
@@ -129,13 +136,13 @@ export default function ModelViewer({
               {model.name}
             </p>
           </div>
-          {loading && status}
+          {status === "loading" && opening}
           {model.missingResources && (
             <Alert>
               <AlertDescription>{m.missingResources}</AlertDescription>
             </Alert>
           )}
-          <Suspense fallback={status}>
+          <Suspense fallback={opening}>
             <ModelPanel
               key={model.object.uuid}
               model={model}
@@ -153,24 +160,25 @@ export default function ModelViewer({
             <EmptyTitle>{dragging ? m.release : m.drop}</EmptyTitle>
             <EmptyDescription>
               <span dir="ltr" className="font-mono">
-                {options.accept
-                  .replaceAll(",", " · ")
-                  .replace("image/*", "PNG · JPG · WebP")}
+                {[
+                  ...options.extensions,
+                  ...(options.companions?.labels ?? []),
+                ].join(" · ")}
               </span>
               <br />
               {m.privacy}
             </EmptyDescription>
           </EmptyHeader>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div
+            ref={emptyActions}
+            className="flex flex-wrap items-center justify-center gap-2"
+          >
             {choose}
-            <Button
-              variant="outline"
-              onClick={() => void open([exampleFile(format)])}
-            >
+            <Button variant="outline" onClick={() => void open()}>
               {m.example}
             </Button>
           </div>
-          {loading && status}
+          {status === "loading" && opening}
         </Empty>
       )}
       {model && dragging && (

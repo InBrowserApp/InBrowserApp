@@ -1,25 +1,51 @@
-import { Box3, Vector3 } from "three"
-import { disposeModel } from "@workspace/model-mesh/dispose"
-import stlExample from "./mounting-bracket.stl?raw"
-import objExample from "./mounting-bracket.obj?raw"
-import type { Object3D } from "three"
+import type { Object3D, Vector3 } from "three"
+
+type ParsedModel = {
+  object: Object3D
+  missingResources?: boolean
+}
+
+type FormatOptions = {
+  extensions: string[]
+  companions?: { accept: string[]; labels: string[] }
+  example: { name: string; read: () => Promise<BlobPart> }
+  zUp: boolean
+  parse: (file: File, files: File[]) => Promise<ParsedModel>
+}
 
 const formats = {
   stl: {
-    extensions: ".stl",
-    accept: ".stl",
-    multiple: false,
-    example: stlExample,
+    extensions: [".stl"],
+    example: {
+      name: "mounting-bracket.stl",
+      read: async () => (await import("./mounting-bracket.stl?raw")).default,
+    },
     zUp: true,
+    async parse(file) {
+      const { parseStl } = await import("@workspace/model-mesh/stl")
+      return { object: parseStl(await file.arrayBuffer()) }
+    },
   },
   obj: {
-    extensions: ".obj",
-    accept: ".obj,.mtl,image/*",
-    multiple: true,
-    example: objExample,
+    extensions: [".obj"],
+    companions: {
+      accept: [".mtl", "image/*"],
+      labels: [".mtl", "PNG", "JPG", "WebP"],
+    },
+    example: {
+      name: "mounting-bracket.obj",
+      read: async () => (await import("./mounting-bracket.obj?raw")).default,
+    },
     zUp: false,
+    async parse(file, files) {
+      const { loadObj } = await import("@workspace/model-mesh/obj")
+      return loadObj(
+        file,
+        files.filter((candidate) => candidate !== file)
+      )
+    },
   },
-}
+} satisfies Record<string, FormatOptions>
 
 export type ModelFormat = keyof typeof formats
 export type OpenModel = {
@@ -27,39 +53,37 @@ export type OpenModel = {
   object: Object3D
   center: Vector3
   size: Vector3
-  missingResources: boolean
+  missingResources?: boolean
   zUp: boolean
+  dispose: () => void
 }
 
-export function getModelFormat(format: ModelFormat) {
+export function getModelFormat(format: ModelFormat): FormatOptions {
   return formats[format]
 }
 
-export function exampleFile(format: ModelFormat) {
-  return new File([formats[format].example], `mounting-bracket.${format}`)
+export async function exampleFile(format: ModelFormat) {
+  const { example } = formats[format]
+  return new File([await example.read()], example.name)
 }
 
 export async function loadModel(
   files: File[],
   format: ModelFormat
 ): Promise<OpenModel> {
-  const options = formats[format]
-  const file = files.find((candidate) =>
-    candidate.name.toLowerCase().endsWith(options.extensions)
-  )
+  const options = getModelFormat(format)
+  const file = files.find((candidate) => {
+    const name = candidate.name.toLowerCase()
+    return options.extensions.some((extension) => name.endsWith(extension))
+  })
   if (!file) throw new Error("Missing model")
-  let object: Object3D
-  let missingResources = false
-  if (format === "stl") {
-    const { parseStl } = await import("@workspace/model-mesh/stl")
-    object = parseStl(await file.arrayBuffer())
-  } else {
-    const { loadObj } = await import("@workspace/model-mesh/obj")
-    ;({ object, missingResources } = await loadObj(
-      file,
-      files.filter((candidate) => candidate !== file)
-    ))
-  }
+
+  const [{ object, missingResources }, { Box3, Vector3 }, { disposeModel }] =
+    await Promise.all([
+      options.parse(file, files),
+      import("three"),
+      import("@workspace/model-mesh/dispose"),
+    ])
   const bounds = new Box3().setFromObject(object)
   const size = bounds.getSize(new Vector3())
   const center = bounds.getCenter(new Vector3())
@@ -79,5 +103,6 @@ export async function loadModel(
     center,
     missingResources,
     zUp: options.zUp,
+    dispose: () => disposeModel(object),
   }
 }

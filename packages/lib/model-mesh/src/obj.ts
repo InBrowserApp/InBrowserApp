@@ -1,14 +1,15 @@
 import { findLocalFile } from "./local-files"
-import { DoubleSide, LoadingManager } from "three"
+import { DoubleSide, LoadingManager, Texture } from "three"
 import { MTLLoader } from "three/addons/loaders/MTLLoader.js"
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js"
 import type { Group, Material, Mesh } from "three"
+import { triangulateObj } from "./triangulate-obj"
 
 const emptyTexture =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jAtkAAAAASUVORK5CYII="
 
 export function parseObj(source: string) {
-  return new OBJLoader().parse(source) as Group & {
+  return new OBJLoader().parse(triangulateObj(source)) as Group & {
     materialLibraries: string[]
   }
 }
@@ -47,7 +48,14 @@ export async function loadObj(model: File, companions: File[]) {
     // Parse first so OBJLoader owns the syntax and triangulation. Preserve
     // its fallback material when an individual OBJ material cannot be found.
     const object = parseObj(source)
-    for (const reference of object.materialLibraries) {
+    const libraries = object.materialLibraries.flatMap((reference) =>
+      findLocalFile(companions, reference)
+        ? [reference]
+        : (reference
+            .match(/.*?\.mtl(?=\s+|$)/gi)
+            ?.map((name) => name.trim()) ?? [reference])
+    )
+    for (const reference of libraries) {
       const file = findLocalFile(companions, reference)
       if (!file) {
         missingResources = true
@@ -58,11 +66,12 @@ export async function loadObj(model: File, companions: File[]) {
       loader.setMaterialOptions({ side: DoubleSide })
       const materials = loader.parse(await file.text(), base)
       for (const name of Object.keys(materials.materialsInfo)) {
-        materialLoaders.set(name, materials)
+        if (!materialLoaders.has(name)) materialLoaders.set(name, materials)
       }
     }
 
     const defaults = new Set<Material>()
+    const replacements = new Set<Material>()
     object.traverse((node) => {
       const mesh = node as Mesh
       if (!mesh.isMesh) return
@@ -71,7 +80,8 @@ export async function loadObj(model: File, companions: File[]) {
         if (loader) {
           defaults.add(material)
           const replacement = loader.create(material.name)
-          replacement.vertexColors = material.vertexColors
+          replacement.vertexColors ||= material.vertexColors
+          replacements.add(replacement)
           return replacement
         }
         if (material.name && object.materialLibraries.length)
@@ -85,6 +95,17 @@ export async function loadObj(model: File, companions: File[]) {
     })
     for (const material of defaults) material.dispose()
     if (loading) await ready
+    for (const material of replacements) {
+      for (const [key, value] of Object.entries(material)) {
+        if (
+          value instanceof Texture &&
+          (!value.image || value.image.src === emptyTexture)
+        ) {
+          Object.assign(material, { [key]: null })
+          value.dispose()
+        }
+      }
+    }
     return { object, missingResources }
   } finally {
     for (const url of textureUrls.values()) URL.revokeObjectURL(url)
