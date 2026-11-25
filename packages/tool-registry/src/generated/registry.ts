@@ -41459,6 +41459,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-to-epub-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: ["pdf", "epub", "ebook", "ocr", "scan", "reflowable", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى EPUB",
+        description:
+          "حوّل PDF إلى EPUB بتخطيط يتكيّف مع شاشتك، مباشرةً في متصفحك. احتفظ بالنص القابل للتحديد واستخدم التعرّف الضوئي على الحروف (OCR) للصفحات الممسوحة. يعطي التحويل أفضل النتائج مع الكتب ذات العمود الواحد.",
+      },
+      de: {
+        name: "PDF in EPUB umwandeln",
+        description:
+          "Wandle PDF im Browser in EPUB mit anpassbarem Textfluss um. Markierbarer Text bleibt erhalten. Auf reinen Scanseiten erkennt die integrierte OCR den Text. Besonders geeignet für einspaltige Bücher.",
+      },
+      en: {
+        name: "PDF to EPUB Converter",
+        description:
+          "Convert PDF to reflowable EPUB in your browser. Keep selectable text from searchable PDFs and use OCR on scanned pages. Best for single-column books.",
+      },
+      es: {
+        name: "Convertidor de PDF a EPUB",
+        description:
+          "Convierte PDF a EPUB de diseño adaptable en tu navegador. Conserva el texto seleccionable y usa OCR en páginas escaneadas. Funciona mejor con libros de una sola columna.",
+      },
+      fr: {
+        name: "Convertisseur PDF en EPUB",
+        description:
+          "Convertissez un PDF en EPUB à mise en page adaptable dans votre navigateur. Conservez le texte sélectionnable du PDF et utilisez l’OCR sur les pages numérisées. Le résultat est optimal pour les livres à une colonne.",
+      },
+      he: {
+        name: "ממיר PDF ל־EPUB",
+        description:
+          "המירו קובצי PDF ל־EPUB בפריסה גמישה בדפדפן. שמרו על הטקסט שאפשר לסמן והשתמשו בזיהוי תווים אופטי (OCR) בעמודים סרוקים. התוצאות הטובות ביותר מתקבלות בספרים עם טור אחד.",
+      },
+      hi: {
+        name: "PDF से EPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में PDF को ऐसे EPUB में बदलें जिसका टेक्स्ट स्क्रीन के अनुसार ढलता है। चुनने योग्य टेक्स्ट बनाए रखें और OCR से स्कैन का टेक्स्ट पहचानें। एक कॉलम वाली किताबों के लिए सबसे उपयुक्त।",
+      },
+      id: {
+        name: "Konverter PDF ke EPUB",
+        description:
+          "Konversi PDF di browser menjadi EPUB dengan tata letak yang menyesuaikan layar. Pertahankan teks PDF yang bisa dipilih dan gunakan OCR bawaan untuk halaman hasil pindai. Paling cocok untuk buku dengan satu kolom teks.",
+      },
+      it: {
+        name: "Convertitore da PDF a EPUB",
+        description:
+          "Converti PDF in EPUB a impaginazione adattabile nel browser. Conserva il testo selezionabile e usa l’OCR per le pagine scansionate. I risultati migliori si ottengono con libri a colonna singola.",
+      },
+      ja: {
+        name: "PDFをEPUBに変換",
+        description:
+          "PDF をブラウザーでリフロー型の EPUB に変換します。検索可能な PDF の文字を選択できる形で引き継ぎ、スキャン画像だけのページは OCR で読み取ります。1 段組みの書籍に適しています。",
+      },
+      ko: {
+        name: "PDF를 EPUB으로 변환",
+        description:
+          "브라우저에서 PDF를 화면에 맞춰 텍스트가 재배치되는 EPUB으로 변환하세요. 검색 가능한 PDF의 텍스트를 유지하고 스캔 페이지는 OCR로 읽습니다. 한 단으로 편집된 책에 적합합니다.",
+      },
+      ms: {
+        name: "Penukar PDF ke EPUB",
+        description:
+          "Tukar PDF kepada EPUB dengan susun atur boleh alir semula dalam pelayar. Kekalkan teks yang boleh dipilih dan gunakan OCR pada halaman imbasan. Paling sesuai untuk buku satu lajur.",
+      },
+      nl: {
+        name: "PDF naar EPUB converteren",
+        description:
+          "Zet PDF in je browser om naar EPUB met een aanpasbare indeling. Behoud selecteerbare tekst en gebruik OCR voor pagina’s die alleen uit een scan bestaan. Vooral geschikt voor boeken met één kolom.",
+      },
+      no: {
+        name: "Konverter PDF til EPUB",
+        description:
+          "Konverter PDF til EPUB med flytende tekst i nettleseren. Behold tekst som kan merkes i søkbare PDF-filer, og bruk OCR på skannede sider. Fungerer best for bøker med én spalte.",
+      },
+      pl: {
+        name: "Konwerter PDF na EPUB",
+        description:
+          "Konwertuj PDF na EPUB w przeglądarce. Zachowaj tekst, który można zaznaczać, a ze skanów odczytaj tekst za pomocą wbudowanego OCR. Układ EPUB dopasowuje się do ekranu. Najlepsze wyniki dają książki z jedną kolumną tekstu.",
+      },
+      pt: {
+        name: "Converter PDF para EPUB",
+        description:
+          "Converta PDF em EPUB com layout adaptável no navegador. Preserve o texto selecionável e reconheça o texto de páginas digitalizadas com OCR. Ideal para livros com uma coluna de texto.",
+      },
+      ru: {
+        name: "Конвертер PDF в EPUB",
+        description:
+          "Преобразуйте PDF в EPUB с адаптивной вёрсткой прямо в браузере. Сохраняйте текст, который можно выделить, и распознавайте сканы с помощью OCR. Лучше всего подходят книги с одной колонкой.",
+      },
+      sv: {
+        name: "Konvertera PDF till EPUB",
+        description:
+          "Konvertera PDF till EPUB med flödande text i webbläsaren. Bevara markerbar text från sökbara PDF-filer och läs av skannade sidor med OCR. Fungerar bäst för böcker med text i en spalt.",
+      },
+      th: {
+        name: "แปลง PDF เป็น EPUB",
+        description:
+          "แปลง PDF ในเบราว์เซอร์เป็น EPUB ที่จัดข้อความให้พอดีกับหน้าจอ คงข้อความที่เลือกได้จาก PDF และใช้ OCR อ่านหน้าที่เป็นภาพสแกน เหมาะกับหนังสือที่จัดข้อความเป็นคอลัมน์เดียว",
+      },
+      tr: {
+        name: "PDF’den EPUB’a Dönüştürücü",
+        description:
+          "PDF dosyalarını tarayıcınızda metni ekrana uyarlanan EPUB dosyalarına dönüştürün. Seçilebilir metni koruyun, taranmış sayfalarda OCR kullanın. En iyi sonuçları tek sütunlu kitaplarda alırsınız.",
+      },
+      vi: {
+        name: "Chuyển PDF sang EPUB",
+        description:
+          "Chuyển PDF sang EPUB có bố cục linh hoạt ngay trong trình duyệt. Giữ văn bản chọn được trong PDF và dùng OCR cho các trang chỉ có ảnh quét. Phù hợp nhất với sách trình bày một cột.",
+      },
+      "zh-CN": {
+        name: "PDF 转 EPUB 转换器",
+        description:
+          "在浏览器中将 PDF 转为可重排版的 EPUB，保留原 PDF 中可选中的文字，并对纯扫描页进行 OCR 文字识别。适合单栏排版的书籍。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 EPUB 轉換器",
+        description:
+          "在瀏覽器中將 PDF 轉成可重排版面的 EPUB。保留 PDF 中可選取的文字，並使用內建 OCR 辨識掃描頁面。最適合單欄書籍。",
+      },
+    },
+  },
+  {
     slug: "pdf-to-image-converter",
     category: "pdf",
     secondaryCategories: ["image"],
@@ -102222,6 +102346,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 轉 CBZ",
         description:
           "在瀏覽器中將 PDF 漫畫轉成 CBZ。保留原始頁面順序，沿用符合條件的全頁 JPEG 掃描影像，並下載以 ZIP 格式打包的漫畫檔。",
+      },
+    },
+  },
+  "pdf-to-epub-converter": {
+    slug: "pdf-to-epub-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "book-open",
+    tags: ["pdf", "epub", "ebook", "ocr", "scan", "reflowable", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى EPUB",
+        description:
+          "حوّل PDF إلى EPUB بتخطيط يتكيّف مع شاشتك، مباشرةً في متصفحك. احتفظ بالنص القابل للتحديد واستخدم التعرّف الضوئي على الحروف (OCR) للصفحات الممسوحة. يعطي التحويل أفضل النتائج مع الكتب ذات العمود الواحد.",
+      },
+      de: {
+        name: "PDF in EPUB umwandeln",
+        description:
+          "Wandle PDF im Browser in EPUB mit anpassbarem Textfluss um. Markierbarer Text bleibt erhalten. Auf reinen Scanseiten erkennt die integrierte OCR den Text. Besonders geeignet für einspaltige Bücher.",
+      },
+      en: {
+        name: "PDF to EPUB Converter",
+        description:
+          "Convert PDF to reflowable EPUB in your browser. Keep selectable text from searchable PDFs and use OCR on scanned pages. Best for single-column books.",
+      },
+      es: {
+        name: "Convertidor de PDF a EPUB",
+        description:
+          "Convierte PDF a EPUB de diseño adaptable en tu navegador. Conserva el texto seleccionable y usa OCR en páginas escaneadas. Funciona mejor con libros de una sola columna.",
+      },
+      fr: {
+        name: "Convertisseur PDF en EPUB",
+        description:
+          "Convertissez un PDF en EPUB à mise en page adaptable dans votre navigateur. Conservez le texte sélectionnable du PDF et utilisez l’OCR sur les pages numérisées. Le résultat est optimal pour les livres à une colonne.",
+      },
+      he: {
+        name: "ממיר PDF ל־EPUB",
+        description:
+          "המירו קובצי PDF ל־EPUB בפריסה גמישה בדפדפן. שמרו על הטקסט שאפשר לסמן והשתמשו בזיהוי תווים אופטי (OCR) בעמודים סרוקים. התוצאות הטובות ביותר מתקבלות בספרים עם טור אחד.",
+      },
+      hi: {
+        name: "PDF से EPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में PDF को ऐसे EPUB में बदलें जिसका टेक्स्ट स्क्रीन के अनुसार ढलता है। चुनने योग्य टेक्स्ट बनाए रखें और OCR से स्कैन का टेक्स्ट पहचानें। एक कॉलम वाली किताबों के लिए सबसे उपयुक्त।",
+      },
+      id: {
+        name: "Konverter PDF ke EPUB",
+        description:
+          "Konversi PDF di browser menjadi EPUB dengan tata letak yang menyesuaikan layar. Pertahankan teks PDF yang bisa dipilih dan gunakan OCR bawaan untuk halaman hasil pindai. Paling cocok untuk buku dengan satu kolom teks.",
+      },
+      it: {
+        name: "Convertitore da PDF a EPUB",
+        description:
+          "Converti PDF in EPUB a impaginazione adattabile nel browser. Conserva il testo selezionabile e usa l’OCR per le pagine scansionate. I risultati migliori si ottengono con libri a colonna singola.",
+      },
+      ja: {
+        name: "PDFをEPUBに変換",
+        description:
+          "PDF をブラウザーでリフロー型の EPUB に変換します。検索可能な PDF の文字を選択できる形で引き継ぎ、スキャン画像だけのページは OCR で読み取ります。1 段組みの書籍に適しています。",
+      },
+      ko: {
+        name: "PDF를 EPUB으로 변환",
+        description:
+          "브라우저에서 PDF를 화면에 맞춰 텍스트가 재배치되는 EPUB으로 변환하세요. 검색 가능한 PDF의 텍스트를 유지하고 스캔 페이지는 OCR로 읽습니다. 한 단으로 편집된 책에 적합합니다.",
+      },
+      ms: {
+        name: "Penukar PDF ke EPUB",
+        description:
+          "Tukar PDF kepada EPUB dengan susun atur boleh alir semula dalam pelayar. Kekalkan teks yang boleh dipilih dan gunakan OCR pada halaman imbasan. Paling sesuai untuk buku satu lajur.",
+      },
+      nl: {
+        name: "PDF naar EPUB converteren",
+        description:
+          "Zet PDF in je browser om naar EPUB met een aanpasbare indeling. Behoud selecteerbare tekst en gebruik OCR voor pagina’s die alleen uit een scan bestaan. Vooral geschikt voor boeken met één kolom.",
+      },
+      no: {
+        name: "Konverter PDF til EPUB",
+        description:
+          "Konverter PDF til EPUB med flytende tekst i nettleseren. Behold tekst som kan merkes i søkbare PDF-filer, og bruk OCR på skannede sider. Fungerer best for bøker med én spalte.",
+      },
+      pl: {
+        name: "Konwerter PDF na EPUB",
+        description:
+          "Konwertuj PDF na EPUB w przeglądarce. Zachowaj tekst, który można zaznaczać, a ze skanów odczytaj tekst za pomocą wbudowanego OCR. Układ EPUB dopasowuje się do ekranu. Najlepsze wyniki dają książki z jedną kolumną tekstu.",
+      },
+      pt: {
+        name: "Converter PDF para EPUB",
+        description:
+          "Converta PDF em EPUB com layout adaptável no navegador. Preserve o texto selecionável e reconheça o texto de páginas digitalizadas com OCR. Ideal para livros com uma coluna de texto.",
+      },
+      ru: {
+        name: "Конвертер PDF в EPUB",
+        description:
+          "Преобразуйте PDF в EPUB с адаптивной вёрсткой прямо в браузере. Сохраняйте текст, который можно выделить, и распознавайте сканы с помощью OCR. Лучше всего подходят книги с одной колонкой.",
+      },
+      sv: {
+        name: "Konvertera PDF till EPUB",
+        description:
+          "Konvertera PDF till EPUB med flödande text i webbläsaren. Bevara markerbar text från sökbara PDF-filer och läs av skannade sidor med OCR. Fungerar bäst för böcker med text i en spalt.",
+      },
+      th: {
+        name: "แปลง PDF เป็น EPUB",
+        description:
+          "แปลง PDF ในเบราว์เซอร์เป็น EPUB ที่จัดข้อความให้พอดีกับหน้าจอ คงข้อความที่เลือกได้จาก PDF และใช้ OCR อ่านหน้าที่เป็นภาพสแกน เหมาะกับหนังสือที่จัดข้อความเป็นคอลัมน์เดียว",
+      },
+      tr: {
+        name: "PDF’den EPUB’a Dönüştürücü",
+        description:
+          "PDF dosyalarını tarayıcınızda metni ekrana uyarlanan EPUB dosyalarına dönüştürün. Seçilebilir metni koruyun, taranmış sayfalarda OCR kullanın. En iyi sonuçları tek sütunlu kitaplarda alırsınız.",
+      },
+      vi: {
+        name: "Chuyển PDF sang EPUB",
+        description:
+          "Chuyển PDF sang EPUB có bố cục linh hoạt ngay trong trình duyệt. Giữ văn bản chọn được trong PDF và dùng OCR cho các trang chỉ có ảnh quét. Phù hợp nhất với sách trình bày một cột.",
+      },
+      "zh-CN": {
+        name: "PDF 转 EPUB 转换器",
+        description:
+          "在浏览器中将 PDF 转为可重排版的 EPUB，保留原 PDF 中可选中的文字，并对纯扫描页进行 OCR 文字识别。适合单栏排版的书籍。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 EPUB 轉換器",
+        description:
+          "在瀏覽器中將 PDF 轉成可重排版面的 EPUB。保留 PDF 中可選取的文字，並使用內建 OCR 辨識掃描頁面。最適合單欄書籍。",
       },
     },
   },
