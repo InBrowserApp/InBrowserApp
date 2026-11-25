@@ -1,0 +1,14 @@
+{
+  "country": "Ülke veya bölge",
+  "quantity": "Adet",
+  "zipFormat": "ABD ZIP biçimi",
+  "zip5": "5 haneli ZIP",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Posta kodları",
+  "placeholder": "Oluşturulan posta kodları burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "download": "TXT indir",
+  "error": "Posta kodları oluşturulamadı. Tekrar deneyin."
+}

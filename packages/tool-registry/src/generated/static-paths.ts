@@ -31098,6 +31098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-postal-code-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "de",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "en",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "es",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "he",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "id",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "it",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "no",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "th",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-postal-code-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "refresh-rate-test",
     language: "ar",
   },

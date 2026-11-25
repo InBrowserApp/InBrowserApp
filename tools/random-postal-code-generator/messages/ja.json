@@ -1,0 +1,14 @@
+{
+  "country": "国または地域",
+  "quantity": "件数",
+  "zipFormat": "米国 ZIP の形式",
+  "zip5": "5 桁の ZIP",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "郵便番号",
+  "placeholder": "生成された郵便番号がここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "download": "TXT をダウンロード",
+  "error": "郵便番号を生成できませんでした。もう一度お試しください。"
+}

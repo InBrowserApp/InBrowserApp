@@ -1,0 +1,14 @@
+{
+  "country": "Land oder Region",
+  "quantity": "Anzahl",
+  "zipFormat": "US-ZIP-Format",
+  "zip5": "5-stelliger ZIP-Code",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Postleitzahlen",
+  "placeholder": "Generierte Postleitzahlen erscheinen hier.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "download": "TXT herunterladen",
+  "error": "Postleitzahlen konnten nicht generiert werden. Versuche es erneut."
+}

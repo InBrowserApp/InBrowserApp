@@ -1693,6 +1693,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "random",
+    name: "随机邮政编码生成器",
+    slug: "random-postal-code-generator",
+  },
+  {
     category: "misc",
     name: "屏幕刷新率测试",
     slug: "refresh-rate-test",

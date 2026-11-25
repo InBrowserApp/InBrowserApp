@@ -1,0 +1,14 @@
+{
+  "country": "國家或地區",
+  "quantity": "數量",
+  "zipFormat": "美國 ZIP 格式",
+  "zip5": "5 位數 ZIP",
+  "generate": "產生",
+  "generating": "正在產生…",
+  "results": "郵遞區號",
+  "placeholder": "產生的郵遞區號會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "download": "下載 TXT",
+  "error": "無法產生郵遞區號，請再試一次。"
+}

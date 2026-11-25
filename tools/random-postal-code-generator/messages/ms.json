@@ -1,0 +1,14 @@
+{
+  "country": "Negara atau wilayah",
+  "quantity": "Kuantiti",
+  "zipFormat": "Format ZIP Amerika Syarikat",
+  "zip5": "ZIP 5 digit",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Poskod",
+  "placeholder": "Poskod yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "download": "Muat turun TXT",
+  "error": "Poskod tidak dapat dijana. Cuba lagi."
+}

@@ -1693,6 +1693,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "random",
+    name: "Rastgele Posta Kodu Oluşturucu",
+    slug: "random-postal-code-generator",
+  },
+  {
     category: "misc",
     name: "Ekran Yenileme Hızı Testi",
     slug: "refresh-rate-test",
