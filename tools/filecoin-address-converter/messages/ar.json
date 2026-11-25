@@ -1,0 +1,16 @@
+{
+  "address": "عنوان Filecoin أو عنوان بصيغة Ethereum",
+  "network": "شبكة Filecoin",
+  "mainnet": "الشبكة الرئيسية",
+  "testnet": "شبكة اختبار",
+  "convert": "حوّل العنوان",
+  "sample": "جرّب مثالًا",
+  "filecoinAddress": "عنوان Filecoin",
+  "ethereumAddress": "عنوان بصيغة Ethereum",
+  "invalidAddress": "أدخل عنوان Filecoin من نوع f410 أو t410، أو عنوانًا يبدأ بـ 0x ويتبعه 40 رقمًا سداسيًا عشريًا.",
+  "filecoinChecksum": "مجموع التحقق لعنوان Filecoin غير مطابق. أعد نسخ العنوان كاملًا.",
+  "ethereumChecksum": "مجموع التحقق لعنوان 0x المكتوب بأحرف كبيرة وصغيرة غير مطابق. طابق العنوان مع محفظتك أو مستكشف الكتل.",
+  "actorId": "يشفّر هذا العنوان معرّف كيان في Filecoin ‏(Actor ID). استخدم عنوانًا مفوّضًا من نوع f410 أو t410 أو عنوان 0x المكافئ.",
+  "copy": "نسخ",
+  "copied": "تم النسخ"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi địa chỉ Filecoin",
+  "description": "Chuyển đổi địa chỉ Filecoin f410 hoặc t410 sang dạng 0x kiểu Ethereum và ngược lại. Xác minh tổng kiểm tra cho mạng chính Filecoin và Calibration ngay trong trình duyệt."
+}

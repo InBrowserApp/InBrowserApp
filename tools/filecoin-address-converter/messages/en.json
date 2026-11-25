@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin or Ethereum-style address",
+  "network": "Filecoin network",
+  "mainnet": "Mainnet",
+  "testnet": "Testnet",
+  "convert": "Convert address",
+  "sample": "Try an example",
+  "filecoinAddress": "Filecoin address",
+  "ethereumAddress": "Ethereum-style address",
+  "invalidAddress": "Enter a Filecoin f410 or t410 address, or a 0x address with 40 hexadecimal digits.",
+  "filecoinChecksum": "The Filecoin checksum does not match. Copy the full address again.",
+  "ethereumChecksum": "The mixed-case 0x checksum does not match. Check the address against your wallet or explorer.",
+  "actorId": "This address encodes a Filecoin actor ID. Use a delegated f410 or t410 address or its equivalent 0x address.",
+  "copy": "Copy",
+  "copied": "Copied"
+}

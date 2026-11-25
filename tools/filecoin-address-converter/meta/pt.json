@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de endereços do Filecoin",
+  "description": "Converta endereços f410 ou t410 do Filecoin para o formato 0x do Ethereum e vice-versa. Valide somas de verificação da rede principal do Filecoin e da rede Calibration no navegador."
+}

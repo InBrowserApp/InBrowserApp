@@ -1,0 +1,4 @@
+{
+  "name": "Penukar Alamat Filecoin",
+  "description": "Tukar alamat Filecoin f410 atau t410 kepada format 0x gaya Ethereum dan sebaliknya. Semak checksum bagi mainnet Filecoin dan Calibration dalam pelayar."
+}

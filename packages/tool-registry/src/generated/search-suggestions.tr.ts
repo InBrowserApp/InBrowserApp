@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Filecoin Adres Dönüştürücü",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
     name: "Filecoin Depolama Anlaşması Sorgulama",
     slug: "filecoin-deal-lookup",
   },

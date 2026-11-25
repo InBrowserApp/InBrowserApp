@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Konverter Alamat Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
     name: "Pencarian Kesepakatan Filecoin",
     slug: "filecoin-deal-lookup",
   },

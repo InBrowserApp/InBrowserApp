@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin 地址或以太坊格式的地址",
+  "network": "Filecoin 网络",
+  "mainnet": "主网",
+  "testnet": "测试网",
+  "convert": "转换地址",
+  "sample": "试用示例",
+  "filecoinAddress": "Filecoin 地址",
+  "ethereumAddress": "以太坊格式的地址",
+  "invalidAddress": "请输入 Filecoin f410 或 t410 地址，或包含 40 个十六进制字符的 0x 地址。",
+  "filecoinChecksum": "Filecoin 校验和不匹配。请重新复制完整地址。",
+  "ethereumChecksum": "混合大小写的 0x 地址未通过校验。请与钱包或区块浏览器中的地址核对。",
+  "actorId": "此地址编码的是 Filecoin Actor ID。请使用 f410 或 t410 委托地址，或对应的 0x 地址。",
+  "copy": "复制",
+  "copied": "已复制"
+}

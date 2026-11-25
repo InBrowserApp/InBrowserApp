@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin アドレス変換ツール",
+  "description": "Filecoin の f410 や t410 アドレスと Ethereum 形式の 0x アドレスを相互変換できます。Filecoin メインネットと Calibration テストネットのアドレスのチェックサムをブラウザで検証します。"
+}

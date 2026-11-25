@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-adressekonverterer",
+  "description": "Konverter Filecoin f410- eller t410-adresser til Ethereum-formatet 0x og tilbake. Kontroller sjekksummer for Filecoins hovednett og Calibration i nettleseren."
+}

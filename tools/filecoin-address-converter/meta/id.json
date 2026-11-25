@@ -1,0 +1,4 @@
+{
+  "name": "Konverter Alamat Filecoin",
+  "description": "Konversi alamat Filecoin f410 atau t410 ke format 0x bergaya Ethereum dan sebaliknya. Periksa checksum untuk mainnet Filecoin dan Calibration di browser."
+}

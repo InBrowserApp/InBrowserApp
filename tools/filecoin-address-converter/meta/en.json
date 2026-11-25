@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Address Converter",
+  "description": "Convert Filecoin f410 or t410 addresses to Ethereum-style 0x and back. Check checksums for Filecoin mainnet and Calibration in your browser."
+}

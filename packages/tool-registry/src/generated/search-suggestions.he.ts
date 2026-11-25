@@ -629,6 +629,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "ממיר כתובות Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
     name: "איתור עסקאות אחסון ב-Filecoin",
     slug: "filecoin-deal-lookup",
   },
