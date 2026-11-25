@@ -1,0 +1,4 @@
+{
+  "name": "APK マニフェストビューアー",
+  "description": "Android APK をブラウザーで開き、AndroidManifest.xml を確認します。パッケージ名、バージョン、SDK レベル、宣言された権限、デコードした XML を表示します。"
+}

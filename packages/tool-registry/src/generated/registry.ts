@@ -1059,6 +1059,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "apk-manifest-viewer",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "android",
+      "apk",
+      "axml",
+      "androidmanifest.xml",
+      "permissions",
+      "manifest",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملف بيان APK",
+        description:
+          "افتح ملف APK لتطبيق Android وافحص AndroidManifest.xml. اطّلع على اسم الحزمة والإصدار ومستويات SDK والأذونات المعلَنة وملف XML بعد فك ترميزه، مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "APK-Manifestbetrachter",
+        description:
+          "Öffne eine Android-APK und prüfe AndroidManifest.xml. Zeige Paketname, Version, SDK-Ebenen, deklarierte Berechtigungen und das dekodierte XML im Browser an.",
+      },
+      en: {
+        name: "APK Manifest Viewer",
+        description:
+          "Open an Android APK and inspect AndroidManifest.xml. View the package name, version, SDK levels, declared permissions, and decoded XML in your browser.",
+      },
+      es: {
+        name: "Visor de manifiestos APK",
+        description:
+          "Abre un APK de Android y examina AndroidManifest.xml. Consulta el nombre del paquete, la versión, los niveles de SDK, los permisos declarados y el XML decodificado en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de manifeste APK",
+        description:
+          "Ouvre un APK Android et examine AndroidManifest.xml. Consulte le nom du package, la version, les niveaux de SDK, les autorisations déclarées et le XML décodé dans ton navigateur.",
+      },
+      he: {
+        name: "מציג מניפסט APK",
+        description:
+          "פתחו APK של Android ובדקו את AndroidManifest.xml. צפו בשם החבילה, בגרסה, ברמות ה־SDK, בהרשאות המוצהרות וב־XML שפוענח ישירות בדפדפן.",
+      },
+      hi: {
+        name: "APK मेनिफ़ेस्ट व्यूअर",
+        description:
+          "Android APK खोलकर AndroidManifest.xml की जाँच करें। पैकेज का नाम, वर्शन, SDK लेवल, घोषित अनुमतियाँ और डिकोड किया गया XML ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil Manifes APK",
+        description:
+          "Buka APK Android dan periksa AndroidManifest.xml. Lihat nama paket, versi, level SDK, izin yang dideklarasikan, dan XML hasil dekode di browser.",
+      },
+      it: {
+        name: "Visualizzatore del manifest APK",
+        description:
+          "Apri un APK Android ed esamina AndroidManifest.xml. Consulta il nome del pacchetto, la versione, i livelli SDK, le autorizzazioni dichiarate e l’XML decodificato nel browser.",
+      },
+      ja: {
+        name: "APK マニフェストビューアー",
+        description:
+          "Android APK をブラウザーで開き、AndroidManifest.xml を確認します。パッケージ名、バージョン、SDK レベル、宣言された権限、デコードした XML を表示します。",
+      },
+      ko: {
+        name: "APK 매니페스트 뷰어",
+        description:
+          "브라우저에서 Android APK를 열고 AndroidManifest.xml을 확인하세요. 패키지 이름, 버전, SDK 수준, 선언된 권한, 디코딩한 XML을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Manifes APK",
+        description:
+          "Buka APK Android dan semak AndroidManifest.xml. Lihat nama pakej, versi, aras SDK, kebenaran yang diisytiharkan dan XML yang dinyahkod dalam pelayar.",
+      },
+      nl: {
+        name: "APK-manifestviewer",
+        description:
+          "Open een Android-APK en bekijk AndroidManifest.xml. Controleer de pakketnaam, versie, SDK-niveaus, opgegeven machtigingen en gedecodeerde XML in je browser.",
+      },
+      no: {
+        name: "APK-manifestviser",
+        description:
+          "Åpne en Android-APK og undersøk AndroidManifest.xml. Se pakkenavn, versjon, SDK-nivåer, deklarerte tillatelser og dekodet XML i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka manifestu APK",
+        description:
+          "Otwórz plik APK Androida i sprawdź AndroidManifest.xml. Zobacz nazwę pakietu, wersję, poziomy SDK, zadeklarowane uprawnienia i zdekodowany XML w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de manifesto APK",
+        description:
+          "Abra um APK do Android e examine o AndroidManifest.xml. Veja o nome do pacote, a versão, os níveis de SDK, as permissões declaradas e o XML decodificado no navegador.",
+      },
+      ru: {
+        name: "Просмотр манифеста APK",
+        description:
+          "Откройте APK для Android и изучите AndroidManifest.xml. Просмотрите имя пакета, версию, уровни SDK, объявленные разрешения и декодированный XML в браузере.",
+      },
+      sv: {
+        name: "APK-manifestvisare",
+        description:
+          "Öppna en Android-APK och granska AndroidManifest.xml. Se paketnamn, version, SDK-nivåer, deklarerade behörigheter och avkodad XML i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Manifest ของ APK",
+        description:
+          "เปิด APK ของ Android และตรวจสอบ AndroidManifest.xml ในเบราว์เซอร์ ดูชื่อแพ็กเกจ เวอร์ชัน ระดับ SDK สิทธิ์ที่ประกาศ และ XML ที่ถอดรหัสแล้ว",
+      },
+      tr: {
+        name: "APK Manifest Görüntüleyici",
+        description:
+          "Bir Android APK dosyasını açın ve AndroidManifest.xml dosyasını inceleyin. Paket adını, sürümü, SDK düzeylerini, bildirilen izinleri ve çözülmüş XML’yi tarayıcınızda görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp kê khai APK",
+        description:
+          "Mở APK Android và kiểm tra AndroidManifest.xml ngay trong trình duyệt. Xem tên gói, phiên bản, cấp SDK, quyền đã khai báo và XML đã giải mã.",
+      },
+      "zh-CN": {
+        name: "APK 清单查看器",
+        description:
+          "在浏览器中打开 Android APK 并查看 AndroidManifest.xml。查看软件包名称、版本、SDK 级别、声明的权限，以及解码后的 XML。",
+      },
+      "zh-TW": {
+        name: "APK 資訊清單檢視器",
+        description:
+          "在瀏覽器中開啟 Android APK 並檢視 AndroidManifest.xml。查看套件名稱、版本、SDK 級別、宣告的權限，以及解碼後的 XML。",
+      },
+    },
+  },
+  {
     slug: "apng-maker",
     category: "image",
     icon: "film",
@@ -55487,6 +55618,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "動態 WebP 轉 GIF 轉換器",
         description:
           "在瀏覽器中將動態 WebP 轉為 GIF。保留影格時間和循環設定，播放預覽後即可下載，無需上傳檔案。",
+      },
+    },
+  },
+  "apk-manifest-viewer": {
+    slug: "apk-manifest-viewer",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "android",
+      "apk",
+      "axml",
+      "androidmanifest.xml",
+      "permissions",
+      "manifest",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض ملف بيان APK",
+        description:
+          "افتح ملف APK لتطبيق Android وافحص AndroidManifest.xml. اطّلع على اسم الحزمة والإصدار ومستويات SDK والأذونات المعلَنة وملف XML بعد فك ترميزه، مباشرةً في متصفحك.",
+      },
+      de: {
+        name: "APK-Manifestbetrachter",
+        description:
+          "Öffne eine Android-APK und prüfe AndroidManifest.xml. Zeige Paketname, Version, SDK-Ebenen, deklarierte Berechtigungen und das dekodierte XML im Browser an.",
+      },
+      en: {
+        name: "APK Manifest Viewer",
+        description:
+          "Open an Android APK and inspect AndroidManifest.xml. View the package name, version, SDK levels, declared permissions, and decoded XML in your browser.",
+      },
+      es: {
+        name: "Visor de manifiestos APK",
+        description:
+          "Abre un APK de Android y examina AndroidManifest.xml. Consulta el nombre del paquete, la versión, los niveles de SDK, los permisos declarados y el XML decodificado en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse de manifeste APK",
+        description:
+          "Ouvre un APK Android et examine AndroidManifest.xml. Consulte le nom du package, la version, les niveaux de SDK, les autorisations déclarées et le XML décodé dans ton navigateur.",
+      },
+      he: {
+        name: "מציג מניפסט APK",
+        description:
+          "פתחו APK של Android ובדקו את AndroidManifest.xml. צפו בשם החבילה, בגרסה, ברמות ה־SDK, בהרשאות המוצהרות וב־XML שפוענח ישירות בדפדפן.",
+      },
+      hi: {
+        name: "APK मेनिफ़ेस्ट व्यूअर",
+        description:
+          "Android APK खोलकर AndroidManifest.xml की जाँच करें। पैकेज का नाम, वर्शन, SDK लेवल, घोषित अनुमतियाँ और डिकोड किया गया XML ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Penampil Manifes APK",
+        description:
+          "Buka APK Android dan periksa AndroidManifest.xml. Lihat nama paket, versi, level SDK, izin yang dideklarasikan, dan XML hasil dekode di browser.",
+      },
+      it: {
+        name: "Visualizzatore del manifest APK",
+        description:
+          "Apri un APK Android ed esamina AndroidManifest.xml. Consulta il nome del pacchetto, la versione, i livelli SDK, le autorizzazioni dichiarate e l’XML decodificato nel browser.",
+      },
+      ja: {
+        name: "APK マニフェストビューアー",
+        description:
+          "Android APK をブラウザーで開き、AndroidManifest.xml を確認します。パッケージ名、バージョン、SDK レベル、宣言された権限、デコードした XML を表示します。",
+      },
+      ko: {
+        name: "APK 매니페스트 뷰어",
+        description:
+          "브라우저에서 Android APK를 열고 AndroidManifest.xml을 확인하세요. 패키지 이름, 버전, SDK 수준, 선언된 권한, 디코딩한 XML을 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Manifes APK",
+        description:
+          "Buka APK Android dan semak AndroidManifest.xml. Lihat nama pakej, versi, aras SDK, kebenaran yang diisytiharkan dan XML yang dinyahkod dalam pelayar.",
+      },
+      nl: {
+        name: "APK-manifestviewer",
+        description:
+          "Open een Android-APK en bekijk AndroidManifest.xml. Controleer de pakketnaam, versie, SDK-niveaus, opgegeven machtigingen en gedecodeerde XML in je browser.",
+      },
+      no: {
+        name: "APK-manifestviser",
+        description:
+          "Åpne en Android-APK og undersøk AndroidManifest.xml. Se pakkenavn, versjon, SDK-nivåer, deklarerte tillatelser og dekodet XML i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka manifestu APK",
+        description:
+          "Otwórz plik APK Androida i sprawdź AndroidManifest.xml. Zobacz nazwę pakietu, wersję, poziomy SDK, zadeklarowane uprawnienia i zdekodowany XML w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de manifesto APK",
+        description:
+          "Abra um APK do Android e examine o AndroidManifest.xml. Veja o nome do pacote, a versão, os níveis de SDK, as permissões declaradas e o XML decodificado no navegador.",
+      },
+      ru: {
+        name: "Просмотр манифеста APK",
+        description:
+          "Откройте APK для Android и изучите AndroidManifest.xml. Просмотрите имя пакета, версию, уровни SDK, объявленные разрешения и декодированный XML в браузере.",
+      },
+      sv: {
+        name: "APK-manifestvisare",
+        description:
+          "Öppna en Android-APK och granska AndroidManifest.xml. Se paketnamn, version, SDK-nivåer, deklarerade behörigheter och avkodad XML i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Manifest ของ APK",
+        description:
+          "เปิด APK ของ Android และตรวจสอบ AndroidManifest.xml ในเบราว์เซอร์ ดูชื่อแพ็กเกจ เวอร์ชัน ระดับ SDK สิทธิ์ที่ประกาศ และ XML ที่ถอดรหัสแล้ว",
+      },
+      tr: {
+        name: "APK Manifest Görüntüleyici",
+        description:
+          "Bir Android APK dosyasını açın ve AndroidManifest.xml dosyasını inceleyin. Paket adını, sürümü, SDK düzeylerini, bildirilen izinleri ve çözülmüş XML’yi tarayıcınızda görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem tệp kê khai APK",
+        description:
+          "Mở APK Android và kiểm tra AndroidManifest.xml ngay trong trình duyệt. Xem tên gói, phiên bản, cấp SDK, quyền đã khai báo và XML đã giải mã.",
+      },
+      "zh-CN": {
+        name: "APK 清单查看器",
+        description:
+          "在浏览器中打开 Android APK 并查看 AndroidManifest.xml。查看软件包名称、版本、SDK 级别、声明的权限，以及解码后的 XML。",
+      },
+      "zh-TW": {
+        name: "APK 資訊清單檢視器",
+        description:
+          "在瀏覽器中開啟 Android APK 並檢視 AndroidManifest.xml。查看套件名稱、版本、SDK 級別、宣告的權限，以及解碼後的 XML。",
       },
     },
   },

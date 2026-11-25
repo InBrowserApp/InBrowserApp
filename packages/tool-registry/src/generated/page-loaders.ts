@@ -14,6 +14,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "animated-webp-maker": () => import("@tool/animated-webp-maker/page"),
   "animated-webp-to-gif-converter": () =>
     import("@tool/animated-webp-to-gif-converter/page"),
+  "apk-manifest-viewer": () => import("@tool/apk-manifest-viewer/page"),
   "apng-maker": () => import("@tool/apng-maker/page"),
   "apng-to-gif-converter": () => import("@tool/apng-to-gif-converter/page"),
   "archive-viewer": () => import("@tool/archive-viewer/page"),

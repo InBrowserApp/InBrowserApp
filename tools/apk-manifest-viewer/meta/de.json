@@ -1,0 +1,4 @@
+{
+  "name": "APK-Manifestbetrachter",
+  "description": "Öffne eine Android-APK und prüfe AndroidManifest.xml. Zeige Paketname, Version, SDK-Ebenen, deklarierte Berechtigungen und das dekodierte XML im Browser an."
+}

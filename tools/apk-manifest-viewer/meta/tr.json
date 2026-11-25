@@ -1,0 +1,4 @@
+{
+  "name": "APK Manifest Görüntüleyici",
+  "description": "Bir Android APK dosyasını açın ve AndroidManifest.xml dosyasını inceleyin. Paket adını, sürümü, SDK düzeylerini, bildirilen izinleri ve çözülmüş XML’yi tarayıcınızda görüntüleyin."
+}

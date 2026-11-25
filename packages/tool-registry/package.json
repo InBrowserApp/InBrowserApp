@@ -15,6 +15,7 @@
     "@tool/ai-image-upscaler": "workspace:*",
     "@tool/animated-webp-maker": "workspace:*",
     "@tool/animated-webp-to-gif-converter": "workspace:*",
+    "@tool/apk-manifest-viewer": "workspace:*",
     "@tool/apng-maker": "workspace:*",
     "@tool/apng-to-gif-converter": "workspace:*",
     "@tool/archive-viewer": "workspace:*",
