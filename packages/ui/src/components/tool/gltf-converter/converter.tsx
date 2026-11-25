@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import {
   ArrowLeftRight,
   Box,
@@ -24,10 +24,18 @@ import type { GltfPackResult } from "@workspace/model-mesh/gltf-pack"
 import type { ChangeEvent } from "react"
 import type { GltfConverterMessages } from "./messages"
 
-type Selection = { model: File; files: File[] }
+type Selection = { model: File; models: File[]; assets: File[] }
 
 const isModel = (file: File) => /\.gltf$/i.test(file.name)
 const filePath = (file: File) => file.webkitRelativePath || file.name
+
+function displayPath(path: string) {
+  try {
+    return decodeURI(path)
+  } catch {
+    return path
+  }
+}
 
 export default function GltfConverter({
   messages: m,
@@ -39,7 +47,11 @@ export default function GltfConverter({
   const [selection, setSelection] = useState<Selection>()
   const [dragging, setDragging] = useState(false)
   const [noModel, setNoModel] = useState(false)
-  const [saved, setSaved] = useState<{ source: string; glb: Blob }>()
+  const [saved, setSaved] = useState<{
+    id: number
+    source: string
+    glb: Blob
+  }>()
   const { result, status, run } = useMeshWorker<GltfPackResult, File[]>(
     () => exampleFile("gltf"),
     () =>
@@ -49,32 +61,32 @@ export default function GltfConverter({
     (file, assets) => ({ file, assets: assets ?? [] })
   )
 
-  useEffect(() => {
-    if (result?.data.kind === "ready") {
-      setSaved({ source: result.file.name, glb: result.data.glb })
-    }
-  }, [result])
+  if (result?.data.kind === "ready" && result.id !== saved?.id) {
+    setSaved({
+      id: result.id,
+      source: result.file.name,
+      glb: result.data.glb,
+    })
+  }
 
   function pack(next: Selection) {
     setNoModel(false)
     setSelection(next)
-    void run(
-      next.model,
-      next.files.filter((file) => !isModel(file))
-    )
+    void run(next.model, next.assets)
   }
 
   function open(files: File[]) {
     if (!files.length) return
-    const model = files.find(isModel)
+    const models = files.filter(isModel)
+    const model = models[0]
     if (model) {
-      pack({ model, files })
+      pack({ model, models, assets: files.filter((file) => !isModel(file)) })
     } else if (selection) {
       const combined = new Map(
-        selection.files.map((file) => [filePath(file), file])
+        selection.assets.map((file) => [filePath(file), file])
       )
       for (const file of files) combined.set(filePath(file), file)
-      pack({ model: selection.model, files: [...combined.values()] })
+      pack({ ...selection, assets: [...combined.values()] })
     } else {
       setNoModel(true)
     }
@@ -94,7 +106,7 @@ export default function GltfConverter({
       : current?.kind === "unsupported"
         ? m.unsupported
         : undefined
-  const models = selection?.files.filter(isModel) ?? []
+  const models = selection?.models ?? []
   const outputName =
     saved && `${saved.source.replace(/\.gltf$/i, "") || "model"}.glb`
   const active = Boolean(selection || result)
@@ -225,12 +237,15 @@ export default function GltfConverter({
             <p dir="auto" className="text-sm wrap-anywhere">
               {result?.file.name}
             </p>
-            <ul className="list-inside list-disc">
-              {missing.map((path) => (
-                <li key={path} className="wrap-anywhere">
-                  <bdi>{path}</bdi>
-                </li>
-              ))}
+            <ul className="list-inside list-disc font-mono">
+              {missing.map((path) => {
+                const label = displayPath(path)
+                return (
+                  <li key={path} className="wrap-anywhere">
+                    <bdi title={label === path ? undefined : path}>{label}</bdi>
+                  </li>
+                )
+              })}
             </ul>
           </AlertDescription>
         </Alert>

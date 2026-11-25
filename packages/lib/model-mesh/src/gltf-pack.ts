@@ -1,4 +1,4 @@
-import { findLocalFile, localFolder } from "./local-files"
+import { localFolder, matchLocalFilePath } from "./local-files"
 
 type BufferSource = {
   uri?: string
@@ -37,15 +37,14 @@ function findResource(files: File[], uri: string, model: File) {
       `https://model.invalid/${folder}`
     )
     const path = decodeURIComponent(url.pathname).slice(1)
-    if (!folder) return findLocalFile(files, path)
-    const exact = files.find((file) => file.webkitRelativePath === path)
-    return (
-      exact ??
-      findLocalFile(
-        files.filter((file) => !file.webkitRelativePath),
-        path
-      )
-    )
+    const file = folder
+      ? (files.find((file) => file.webkitRelativePath === path) ??
+        matchLocalFilePath(
+          files.filter((file) => !file.webkitRelativePath),
+          path
+        ))
+      : matchLocalFilePath(files, path)
+    return file && { file, key: JSON.stringify([url.origin, path, url.search]) }
   } catch {
     return undefined
   }
@@ -79,7 +78,7 @@ function hasUnmappedResource(value: unknown): boolean {
 
 async function imageMimeType(blob: Blob) {
   const view = new Uint8Array(await blob.slice(0, 32).arrayBuffer())
-  const prefix = new TextDecoder().decode(view)
+  const prefix = String.fromCharCode(...view)
   if (view[0] === 0x89 && prefix.slice(1, 4) === "PNG") return "image/png"
   if (view[0] === 0xff && view[1] === 0xd8 && view[2] === 0xff)
     return "image/jpeg"
@@ -89,6 +88,7 @@ async function imageMimeType(blob: Blob) {
   if (prefix.slice(4, 8) === "ftyp" && /avi[fs]/.test(prefix.slice(8)))
     return "image/avif"
   if (prefix.startsWith("DDS ")) return "image/vnd-ms.dds"
+  return undefined
 }
 
 function natural(value: number) {
@@ -156,17 +156,27 @@ export async function packGltf(
   const uris = new Set(
     [...buffers, ...images].flatMap(({ uri }) => (uri ? [uri] : []))
   )
-  const supplied = new Map<string, Blob>()
-  const missing: string[] = []
-  for (const uri of uris) {
-    if (isDataUri(uri)) continue
-    const file = findResource(files, uri, model)
-    if (file) supplied.set(uri, file)
-    else missing.push(uri)
+  const localUris = [...uris].filter((uri) => !isDataUri(uri))
+  const localFiles = new Map<string, File>()
+  const resolved = new Map<File, string>()
+  const ambiguous = new Set<File>()
+  for (const uri of localUris) {
+    const match = findResource(files, uri, model)
+    if (!match) continue
+    const { file, key } = match
+    const previous = resolved.get(file)
+    if (previous && previous !== key) ambiguous.add(file)
+    resolved.set(file, key)
+    localFiles.set(uri, file)
   }
+  const missing = localUris.filter((uri) => {
+    const file = localFiles.get(uri)
+    return !file || ambiguous.has(file)
+  })
   if (missing.length) return { kind: "missing", paths: missing }
+  const supplied = new Map<string, Blob>(localFiles)
   for (const uri of uris) {
-    if (!supplied.has(uri)) supplied.set(uri, await (await fetch(uri)).blob())
+    if (isDataUri(uri)) supplied.set(uri, await (await fetch(uri)).blob())
   }
 
   const contents: BlobPart[] = []

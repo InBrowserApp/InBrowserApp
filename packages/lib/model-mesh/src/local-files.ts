@@ -4,7 +4,7 @@ export function localFolder(file: File) {
 
 const modelBase = "https://model.invalid/"
 
-function matchPath(files: File[], path: string) {
+export function matchLocalFilePath(files: File[], path: string) {
   const exact = files.find((file) => file.webkitRelativePath === path)
   if (exact) return exact
   const basename = path.split("/").at(-1)
@@ -14,10 +14,10 @@ function matchPath(files: File[], path: string) {
 
 export function findLocalFile(files: File[], reference: string) {
   const path = reference.replaceAll("\\", "/")
-  const literal = matchPath(files, path)
+  const literal = matchLocalFilePath(files, path)
   if (literal) return literal
   try {
-    return matchPath(
+    return matchLocalFilePath(
       files,
       decodeURIComponent(new URL(path, modelBase).pathname).slice(1)
     )
