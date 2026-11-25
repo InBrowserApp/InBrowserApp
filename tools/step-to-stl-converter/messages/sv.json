@@ -1,0 +1,4 @@
+{
+  "failed": "Det gick inte att konvertera filen. Öppna en STEP- eller STP-modell med 3D-ytor.",
+  "unitHint": "Använd millimeter när du importerar den här STL-filen. STL lagrar koordinater utan måttenhet."
+}

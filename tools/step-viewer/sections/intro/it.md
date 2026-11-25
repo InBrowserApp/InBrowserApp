@@ -15,3 +15,5 @@ Seleziona **Misura** e indica due punti sulla superficie visibile del modello pe
 Regola l’angolazione e lo zoom, quindi seleziona **Salva PNG**. L’immagine scaricata riproduce la vista del modello e include la misura completata con il suo valore. Puoi usarla per condividere un dettaglio durante una revisione di progetto, in un preventivo o in una nota di montaggio.
 
 - [Visualizzatore DXF](../dxf-viewer/)
+
+Usa il [Convertitore da STEP a STL](../step-to-stl-converter/) per preparare un STL binario con coordinate in millimetri per lo slicer.

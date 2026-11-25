@@ -37,5 +37,7 @@
   "distance": "Distancia",
   "controls": "Arrastra para girar · Usa la rueda para acercar o alejar · Arrastra con el botón derecho para desplazar",
   "touchControls": "Arrastra para girar · Pellizca para acercar o alejar · Arrastra con dos dedos para desplazar",
-  "keyboardControls": "Usa las flechas para girar y + o − para acercar o alejar. Al medir, pulsa Intro para seleccionar el punto en el centro de la vista. Mantén pulsada Mayús y usa las flechas para desplazar la vista."
+  "keyboardControls": "Usa las flechas para girar y + o − para acercar o alejar. Al medir, pulsa Intro para seleccionar el punto en el centro de la vista. Mantén pulsada Mayús y usa las flechas para desplazar la vista.",
+  "saveStl": "Exportar STL",
+  "stlExportError": "No se pudo guardar el STL. Vuelve a intentarlo."
 }

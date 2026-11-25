@@ -15,3 +15,5 @@ Kies **Meten** en selecteer twee punten op het zichtbare model om de afstand in 
 Kies de gewenste kijkhoek en zoomstand en klik op **PNG opslaan**. De afbeelding toont het model zoals het in de viewer staat, inclusief een voltooide meting en de bijbehorende afstand. Zo kun je een ontwerpdetail delen bij een ontwerpbespreking, in een offerte of in een montage-instructie.
 
 - [DXF-viewer](../dxf-viewer/)
+
+Gebruik de [STEP naar STL-converter](../step-to-stl-converter/) om een binair STL-bestand met coördinaten in millimeters klaar te maken voor je slicer.

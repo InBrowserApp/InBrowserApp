@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react"
-import { exampleFile } from "./model-viewer/load-model"
-import type { MeshFormat } from "@workspace/model-mesh/mesh-file"
 
 type Request = { worker?: Worker }
 
 export function useMeshWorker<Output>(
-  sampleFormat: MeshFormat,
+  getSample: () => Promise<File>,
   createWorker: () => Worker,
   buildMessage: (file: File) => unknown = (file) => file
 ) {
@@ -37,7 +35,7 @@ export function useMeshWorker<Output>(
     }
 
     try {
-      const file = supplied ?? (await exampleFile(sampleFormat))
+      const file = supplied ?? (await getSample())
       if (active.current !== request) return
       const worker = createWorker()
       request.worker = worker

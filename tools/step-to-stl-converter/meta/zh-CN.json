@@ -1,0 +1,4 @@
+{
+  "name": "STEP 转 STL 转换器",
+  "description": "在浏览器中将 STEP 和 STP CAD 模型转换为二进制 STL。保留零件尺寸和装配体位置，然后下载网格用于 3D 打印或检查。"
+}

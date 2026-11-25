@@ -1,6 +1,14 @@
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Camera, Scan, Ruler, ZoomIn, ZoomOut } from "@workspace/ui/icons"
+import { Spinner } from "@workspace/ui/components/ui/spinner"
+import {
+  Camera,
+  Download,
+  Scan,
+  Ruler,
+  ZoomIn,
+  ZoomOut,
+} from "@workspace/ui/icons"
 import type Messages from "./messages/en.json"
 import type { View, Viewport } from "./viewport"
 
@@ -12,12 +20,16 @@ export function ViewerToolbar({
   measuring,
   onMeasure,
   onSave,
+  onSaveStl,
+  savingStl,
 }: {
   messages: typeof Messages
   viewport: Viewport
   measuring: boolean
   onMeasure: () => void
   onSave: () => void
+  onSaveStl: () => void
+  savingStl: boolean
 }) {
   return (
     <div className="flex shrink-0 flex-wrap items-center justify-between gap-x-4 gap-y-1 border-b px-3 py-2">
@@ -61,6 +73,19 @@ export function ViewerToolbar({
         >
           <Ruler data-icon="inline-start" aria-hidden="true" />
           {m.measure}
+        </Button>
+        <Button
+          variant="outline"
+          disabled={savingStl}
+          aria-busy={savingStl}
+          onClick={onSaveStl}
+        >
+          {savingStl ? (
+            <Spinner aria-hidden="true" />
+          ) : (
+            <Download data-icon="inline-start" aria-hidden="true" />
+          )}
+          {m.saveStl}
         </Button>
         <Button onClick={onSave}>
           <Camera data-icon="inline-start" aria-hidden="true" />

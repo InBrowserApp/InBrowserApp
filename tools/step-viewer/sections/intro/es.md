@@ -15,3 +15,5 @@ Selecciona **Medir** y elige dos puntos sobre la superficie visible del modelo p
 Ajusta el ángulo y el nivel de zoom y selecciona **Guardar PNG**. La imagen descargada muestra el modelo tal como aparece en el visor, incluida la medición completada con su valor. Úsala para compartir un detalle del diseño en una revisión, un presupuesto o una nota de montaje.
 
 - [Visor de DXF](../dxf-viewer/)
+
+Usa el [Conversor de STEP a STL](../step-to-stl-converter/) para preparar un STL binario con coordenadas en milímetros para tu laminador.

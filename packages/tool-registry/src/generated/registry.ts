@@ -48114,6 +48114,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "step-to-stl-converter",
+    category: "3d-cad",
+    icon: "arrow-left-right",
+    tags: [
+      "step",
+      "stp",
+      "stl",
+      "step to stl",
+      "stp to stl",
+      "cad",
+      "3d printing",
+      "mesh",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل STEP إلى STL",
+        description:
+          "حوّل نماذج CAD بصيغة STEP أو STP إلى ملفات STL ثنائية في متصفحك. حافظ على أبعاد القطع ومواضعها في التجميع، ثم نزّل الشبكة للطباعة ثلاثية الأبعاد أو المعاينة.",
+      },
+      de: {
+        name: "STEP-zu-STL-Konverter",
+        description:
+          "Wandle STEP- und STP-CAD-Modelle im Browser in binäre STL-Dateien um. Größe und Anordnung der Teile bleiben erhalten. Lade das Dreiecksnetz für den 3D-Druck oder zur Prüfung herunter.",
+      },
+      en: {
+        name: "STEP to STL Converter",
+        description:
+          "Convert STEP and STP CAD models to binary STL in your browser. Keep part sizes and assembly placement, then download the mesh for 3D printing or inspection.",
+      },
+      es: {
+        name: "Conversor de STEP a STL",
+        description:
+          "Convierte modelos CAD STEP y STP a STL binario en tu navegador. Conserva las dimensiones de las piezas y su posición en el ensamblaje, y descarga la malla para inspeccionarla o imprimirla en 3D.",
+      },
+      fr: {
+        name: "Convertisseur STEP en STL",
+        description:
+          "Convertissez des modèles de CAO STEP et STP en STL binaire dans votre navigateur. Conservez les dimensions des pièces et leur position dans l’assemblage, puis téléchargez le maillage pour l’examiner ou l’imprimer en 3D.",
+      },
+      he: {
+        name: "ממיר STEP ל־STL",
+        description:
+          "המירו מודלי CAD בפורמט STEP או STP לקובץ STL בינארי בדפדפן. שמרו על מידות החלקים ומיקומם במכלול, והורידו את הרשת להדפסת תלת־ממד או לבדיקה.",
+      },
+      hi: {
+        name: "STEP से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में STEP और STP CAD मॉडल को बाइनरी STL में बदलें। पुर्ज़ों के आकार और असेंबली में उनकी जगह बरकरार रखें, फिर 3D प्रिंटिंग या जाँच के लिए मेश डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STEP ke STL",
+        description:
+          "Konversi model CAD STEP dan STP ke STL biner di browser. Pertahankan ukuran komponen dan posisinya dalam rakitan, lalu unduh mesh untuk pencetakan 3D atau pemeriksaan.",
+      },
+      it: {
+        name: "Convertitore da STEP a STL",
+        description:
+          "Converti modelli CAD STEP e STP in STL binario nel browser. Mantieni le dimensioni delle parti e la loro posizione nell’assieme, poi scarica la mesh per esaminarla o stamparla in 3D.",
+      },
+      ja: {
+        name: "STEP → STL 変換",
+        description:
+          "STEP・STP 形式の CAD モデルをブラウザーでバイナリ STL に変換します。部品の寸法とアセンブリの配置を保ち、3D プリントや確認用にメッシュをダウンロードできます。",
+      },
+      ko: {
+        name: "STEP → STL 변환기",
+        description:
+          "브라우저에서 STEP 및 STP CAD 모델을 바이너리 STL로 변환하세요. 부품 크기와 조립품 배치를 유지하고 3D 프린팅이나 검사용 메시를 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar STEP kepada STL",
+        description:
+          "Tukar model CAD STEP dan STP kepada STL binari dalam pelayar. Kekalkan saiz komponen dan kedudukannya dalam pemasangan, kemudian muat turun jejaring untuk cetakan 3D atau pemeriksaan.",
+      },
+      nl: {
+        name: "STEP naar STL-converter",
+        description:
+          "Converteer CAD-modellen in STEP- of STP-formaat naar binair STL in je browser. Behoud de afmetingen en plaatsing van onderdelen en download het driehoeksnet voor 3D-printen of controle.",
+      },
+      no: {
+        name: "STEP til STL-konverterer",
+        description:
+          "Konverter CAD-modeller i STEP- eller STP-format til binær STL i nettleseren. Behold målene og plasseringen til delene i sammenstillingen, og last ned trekantnettet for 3D-utskrift eller kontroll.",
+      },
+      pl: {
+        name: "Konwerter STEP na STL",
+        description:
+          "Konwertuj modele CAD w formacie STEP lub STP na binarne pliki STL w przeglądarce. Zachowaj wymiary i rozmieszczenie części w zespole, a następnie pobierz siatkę do druku 3D lub sprawdzenia.",
+      },
+      pt: {
+        name: "Conversor de STEP para STL",
+        description:
+          "Converta modelos CAD STEP e STP em STL binário no navegador. Preserve as dimensões e as posições das peças na montagem e baixe a malha para inspecioná-la ou imprimi-la em 3D.",
+      },
+      ru: {
+        name: "Конвертер STEP в STL",
+        description:
+          "Преобразуйте модели САПР в формате STEP или STP в двоичный STL прямо в браузере. Сохраните размеры деталей и их положение в сборке, затем скачайте сетку для 3D-печати или проверки.",
+      },
+      sv: {
+        name: "STEP till STL-konverterare",
+        description:
+          "Konvertera CAD-modeller i STEP- eller STP-format till binär STL i webbläsaren. Behåll delarnas mått och placering i sammanställningen och ladda ner triangelnätet för 3D-utskrift eller granskning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STEP เป็น STL",
+        description:
+          "แปลงโมเดล CAD แบบ STEP และ STP เป็น STL ไบนารีในเบราว์เซอร์ คงขนาดชิ้นส่วนและตำแหน่งในชุดประกอบไว้ แล้วดาวน์โหลดเมชเพื่อนำไปพิมพ์ 3 มิติหรือตรวจสอบ",
+      },
+      tr: {
+        name: "STEP’ten STL’ye Dönüştürücü",
+        description:
+          "STEP ve STP CAD modellerini tarayıcınızda ikili STL dosyasına dönüştürün. Parça boyutları ve montajdaki konumlar korunur. Ağı 3B baskı veya inceleme için indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STEP sang STL",
+        description:
+          "Chuyển mô hình CAD STEP và STP sang STL nhị phân trong trình duyệt. Giữ kích thước và vị trí lắp ráp của các chi tiết, rồi tải lưới xuống để in 3D hoặc kiểm tra.",
+      },
+      "zh-CN": {
+        name: "STEP 转 STL 转换器",
+        description:
+          "在浏览器中将 STEP 和 STP CAD 模型转换为二进制 STL。保留零件尺寸和装配体位置，然后下载网格用于 3D 打印或检查。",
+      },
+      "zh-TW": {
+        name: "STEP 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 STEP 和 STP CAD 模型轉換為二進位 STL。保留零件尺寸與組合件位置，再下載網格供 3D 列印或檢查。",
+      },
+    },
+  },
+  {
     slug: "step-viewer",
     category: "3d-cad",
     icon: "box",
@@ -105666,6 +105798,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SSH 公開金鑰指紋",
         description:
           "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
+      },
+    },
+  },
+  "step-to-stl-converter": {
+    slug: "step-to-stl-converter",
+    category: "3d-cad",
+    icon: "arrow-left-right",
+    tags: [
+      "step",
+      "stp",
+      "stl",
+      "step to stl",
+      "stp to stl",
+      "cad",
+      "3d printing",
+      "mesh",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل STEP إلى STL",
+        description:
+          "حوّل نماذج CAD بصيغة STEP أو STP إلى ملفات STL ثنائية في متصفحك. حافظ على أبعاد القطع ومواضعها في التجميع، ثم نزّل الشبكة للطباعة ثلاثية الأبعاد أو المعاينة.",
+      },
+      de: {
+        name: "STEP-zu-STL-Konverter",
+        description:
+          "Wandle STEP- und STP-CAD-Modelle im Browser in binäre STL-Dateien um. Größe und Anordnung der Teile bleiben erhalten. Lade das Dreiecksnetz für den 3D-Druck oder zur Prüfung herunter.",
+      },
+      en: {
+        name: "STEP to STL Converter",
+        description:
+          "Convert STEP and STP CAD models to binary STL in your browser. Keep part sizes and assembly placement, then download the mesh for 3D printing or inspection.",
+      },
+      es: {
+        name: "Conversor de STEP a STL",
+        description:
+          "Convierte modelos CAD STEP y STP a STL binario en tu navegador. Conserva las dimensiones de las piezas y su posición en el ensamblaje, y descarga la malla para inspeccionarla o imprimirla en 3D.",
+      },
+      fr: {
+        name: "Convertisseur STEP en STL",
+        description:
+          "Convertissez des modèles de CAO STEP et STP en STL binaire dans votre navigateur. Conservez les dimensions des pièces et leur position dans l’assemblage, puis téléchargez le maillage pour l’examiner ou l’imprimer en 3D.",
+      },
+      he: {
+        name: "ממיר STEP ל־STL",
+        description:
+          "המירו מודלי CAD בפורמט STEP או STP לקובץ STL בינארי בדפדפן. שמרו על מידות החלקים ומיקומם במכלול, והורידו את הרשת להדפסת תלת־ממד או לבדיקה.",
+      },
+      hi: {
+        name: "STEP से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में STEP और STP CAD मॉडल को बाइनरी STL में बदलें। पुर्ज़ों के आकार और असेंबली में उनकी जगह बरकरार रखें, फिर 3D प्रिंटिंग या जाँच के लिए मेश डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STEP ke STL",
+        description:
+          "Konversi model CAD STEP dan STP ke STL biner di browser. Pertahankan ukuran komponen dan posisinya dalam rakitan, lalu unduh mesh untuk pencetakan 3D atau pemeriksaan.",
+      },
+      it: {
+        name: "Convertitore da STEP a STL",
+        description:
+          "Converti modelli CAD STEP e STP in STL binario nel browser. Mantieni le dimensioni delle parti e la loro posizione nell’assieme, poi scarica la mesh per esaminarla o stamparla in 3D.",
+      },
+      ja: {
+        name: "STEP → STL 変換",
+        description:
+          "STEP・STP 形式の CAD モデルをブラウザーでバイナリ STL に変換します。部品の寸法とアセンブリの配置を保ち、3D プリントや確認用にメッシュをダウンロードできます。",
+      },
+      ko: {
+        name: "STEP → STL 변환기",
+        description:
+          "브라우저에서 STEP 및 STP CAD 모델을 바이너리 STL로 변환하세요. 부품 크기와 조립품 배치를 유지하고 3D 프린팅이나 검사용 메시를 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar STEP kepada STL",
+        description:
+          "Tukar model CAD STEP dan STP kepada STL binari dalam pelayar. Kekalkan saiz komponen dan kedudukannya dalam pemasangan, kemudian muat turun jejaring untuk cetakan 3D atau pemeriksaan.",
+      },
+      nl: {
+        name: "STEP naar STL-converter",
+        description:
+          "Converteer CAD-modellen in STEP- of STP-formaat naar binair STL in je browser. Behoud de afmetingen en plaatsing van onderdelen en download het driehoeksnet voor 3D-printen of controle.",
+      },
+      no: {
+        name: "STEP til STL-konverterer",
+        description:
+          "Konverter CAD-modeller i STEP- eller STP-format til binær STL i nettleseren. Behold målene og plasseringen til delene i sammenstillingen, og last ned trekantnettet for 3D-utskrift eller kontroll.",
+      },
+      pl: {
+        name: "Konwerter STEP na STL",
+        description:
+          "Konwertuj modele CAD w formacie STEP lub STP na binarne pliki STL w przeglądarce. Zachowaj wymiary i rozmieszczenie części w zespole, a następnie pobierz siatkę do druku 3D lub sprawdzenia.",
+      },
+      pt: {
+        name: "Conversor de STEP para STL",
+        description:
+          "Converta modelos CAD STEP e STP em STL binário no navegador. Preserve as dimensões e as posições das peças na montagem e baixe a malha para inspecioná-la ou imprimi-la em 3D.",
+      },
+      ru: {
+        name: "Конвертер STEP в STL",
+        description:
+          "Преобразуйте модели САПР в формате STEP или STP в двоичный STL прямо в браузере. Сохраните размеры деталей и их положение в сборке, затем скачайте сетку для 3D-печати или проверки.",
+      },
+      sv: {
+        name: "STEP till STL-konverterare",
+        description:
+          "Konvertera CAD-modeller i STEP- eller STP-format till binär STL i webbläsaren. Behåll delarnas mått och placering i sammanställningen och ladda ner triangelnätet för 3D-utskrift eller granskning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STEP เป็น STL",
+        description:
+          "แปลงโมเดล CAD แบบ STEP และ STP เป็น STL ไบนารีในเบราว์เซอร์ คงขนาดชิ้นส่วนและตำแหน่งในชุดประกอบไว้ แล้วดาวน์โหลดเมชเพื่อนำไปพิมพ์ 3 มิติหรือตรวจสอบ",
+      },
+      tr: {
+        name: "STEP’ten STL’ye Dönüştürücü",
+        description:
+          "STEP ve STP CAD modellerini tarayıcınızda ikili STL dosyasına dönüştürün. Parça boyutları ve montajdaki konumlar korunur. Ağı 3B baskı veya inceleme için indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STEP sang STL",
+        description:
+          "Chuyển mô hình CAD STEP và STP sang STL nhị phân trong trình duyệt. Giữ kích thước và vị trí lắp ráp của các chi tiết, rồi tải lưới xuống để in 3D hoặc kiểm tra.",
+      },
+      "zh-CN": {
+        name: "STEP 转 STL 转换器",
+        description:
+          "在浏览器中将 STEP 和 STP CAD 模型转换为二进制 STL。保留零件尺寸和装配体位置，然后下载网格用于 3D 打印或检查。",
+      },
+      "zh-TW": {
+        name: "STEP 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 STEP 和 STP CAD 模型轉換為二進位 STL。保留零件尺寸與組合件位置，再下載網格供 3D 列印或檢查。",
       },
     },
   },

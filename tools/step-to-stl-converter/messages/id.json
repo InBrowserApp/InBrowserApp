@@ -1,0 +1,4 @@
+{
+  "failed": "File ini tidak dapat dikonversi. Buka model STEP atau STP yang memiliki permukaan 3D.",
+  "unitHint": "Gunakan milimeter saat mengimpor STL ini. File STL menyimpan koordinat tanpa satuan."
+}

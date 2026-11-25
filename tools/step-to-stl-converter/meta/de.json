@@ -1,0 +1,4 @@
+{
+  "name": "STEP-zu-STL-Konverter",
+  "description": "Wandle STEP- und STP-CAD-Modelle im Browser in binäre STL-Dateien um. Größe und Anordnung der Teile bleiben erhalten. Lade das Dreiecksnetz für den 3D-Druck oder zur Prüfung herunter."
+}

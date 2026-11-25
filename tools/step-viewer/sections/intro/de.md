@@ -15,3 +15,5 @@ Wähle **Messen** und markiere zwei Punkte auf der sichtbaren Modelloberfläche.
 Stelle Blickwinkel und Zoom ein und wähle **PNG speichern**. Die Datei zeigt das Modell wie im Betrachter, einschließlich einer abgeschlossenen Messung und ihres Werts. So kannst du ein Konstruktionsdetail für eine Besprechung, ein Angebot oder einen Montagehinweis festhalten.
 
 - [DXF-Betrachter](../dxf-viewer/)
+
+Nutze den [STEP-zu-STL-Konverter](../step-to-stl-converter/), um eine binäre STL-Datei mit Koordinaten in Millimetern für einen Slicer vorzubereiten.

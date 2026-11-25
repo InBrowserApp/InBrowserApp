@@ -1,0 +1,4 @@
+{
+  "name": "STEP to STL Converter",
+  "description": "Convert STEP and STP CAD models to binary STL in your browser. Keep part sizes and assembly placement, then download the mesh for 3D printing or inspection."
+}

@@ -37,5 +37,7 @@
   "distance": "Avstand",
   "controls": "Dra for å rotere · Rull for å zoome · Dra med høyre museknapp for å panorere",
   "touchControls": "Dra for å rotere · Knip for å zoome · Dra med to fingre for å panorere",
-  "keyboardControls": "Bruk piltastene til å rotere, + eller − til å zoome og Enter til å velge punktet midt i visningen når du måler. Hold nede Shift og bruk piltastene til å flytte visningen."
+  "keyboardControls": "Bruk piltastene til å rotere, + eller − til å zoome og Enter til å velge punktet midt i visningen når du måler. Hold nede Shift og bruk piltastene til å flytte visningen.",
+  "saveStl": "Eksporter STL",
+  "stlExportError": "Kunne ikke lagre STL-filen. Prøv igjen."
 }

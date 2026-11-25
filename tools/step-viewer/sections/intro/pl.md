@@ -15,3 +15,5 @@ Wybierz **Zmierz** i wskaż dwa punkty na widocznej powierzchni modelu, aby odcz
 Ustaw kąt i powiększenie, a następnie wybierz **Zapisz PNG**. Pobrany obraz pokazuje model w bieżącym widoku wraz z ukończonym pomiarem i jego wartością. Możesz w ten sposób udostępnić szczegół projektu podczas przeglądu, w wycenie lub w dokumentacji montażowej.
 
 - [Przeglądarka plików DXF](../dxf-viewer/)
+
+Użyj [konwertera STEP na STL](../step-to-stl-converter/), aby przygotować dla programu do druku binarny plik STL ze współrzędnymi w milimetrach.

@@ -1889,6 +1889,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "STEP til STL-konverterer",
+    slug: "step-to-stl-converter",
+  },
+  {
+    category: "3d-cad",
     name: "STEP-viser",
     slug: "step-viewer",
   },

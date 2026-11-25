@@ -17,3 +17,5 @@
 - [عارض 3MF](../3mf-viewer/)
 - [محوّل STL إلى OBJ](../stl-to-obj-converter/)
 - [فاحص حجم الشبكة وطوبولوجيتها](../mesh-inspector/)
+
+استخدم [محوّل STEP إلى STL](../step-to-stl-converter/) لتصدير هندسة الشبكة من نموذج CAD الأصلي بصيغة STEP أو STP.

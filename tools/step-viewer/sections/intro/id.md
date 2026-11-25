@@ -15,3 +15,5 @@ Pilih **Ukur**, lalu pilih dua titik pada permukaan model yang terlihat untuk me
 Atur sudut pandang dan tingkat perbesaran sesuai kebutuhan, lalu pilih **Simpan PNG**. File yang diunduh menampilkan model sebagaimana terlihat di penampil, termasuk pengukuran yang sudah selesai beserta nilainya. Gunakan gambar tersebut untuk menunjukkan detail desain dalam tinjauan, penawaran harga, atau catatan perakitan.
 
 - [Penampil DXF](../dxf-viewer/)
+
+Gunakan [Konverter STEP ke STL](../step-to-stl-converter/) untuk menyiapkan STL biner dengan koordinat dalam milimeter bagi aplikasi slicer.

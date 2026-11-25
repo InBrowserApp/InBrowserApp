@@ -37,5 +37,7 @@
   "distance": "Distanza",
   "controls": "Trascina per ruotare · Scorri per zoomare · Trascina con il tasto destro per spostare la vista",
   "touchControls": "Trascina per ruotare · Allarga o stringi due dita per zoomare · Trascina con due dita per spostare la vista",
-  "keyboardControls": "Usa le frecce per ruotare, + o − per lo zoom e Invio per selezionare il punto al centro della vista durante la misurazione. Tieni premuto Maiusc e usa i tasti freccia per spostare la vista."
+  "keyboardControls": "Usa le frecce per ruotare, + o − per lo zoom e Invio per selezionare il punto al centro della vista durante la misurazione. Tieni premuto Maiusc e usa i tasti freccia per spostare la vista.",
+  "saveStl": "Esporta STL",
+  "stlExportError": "Impossibile salvare lo STL. Riprova."
 }

@@ -12,16 +12,18 @@ import { Spinner } from "../../ui/spinner"
 import { ArrowLeftRight, Box, Folder } from "../../../icons"
 import { cn } from "../../../lib/utils"
 import { DocumentDownload } from "../document-download"
-import { useMeshWorker } from "../use-mesh-worker"
-import type { MeshFormat } from "@workspace/model-mesh/mesh-file"
+import { useMeshWorker } from "../../../lib/use-mesh-worker"
+import { createMeshConverterWorker } from "../../../lib/mesh-converter-worker"
+import { exampleFile } from "../model-viewer/load-model"
+import type { MeshConversionInput } from "@workspace/model-mesh/convert"
 import type { MeshConverterMessages } from "./messages"
 
 export default function MeshConverter({
   format,
   messages: m,
 }: {
-  format: MeshFormat
-  messages: MeshConverterMessages
+  format: MeshConversionInput
+  messages: MeshConverterMessages & { unitHint?: string }
 }) {
   const input = useRef<HTMLInputElement>(null)
   const [dragging, setDragging] = useState(false)
@@ -30,15 +32,18 @@ export default function MeshConverter({
     status,
     run: convert,
   } = useMeshWorker<Blob>(
-    format,
-    () =>
-      new Worker(new URL("./convert.worker.ts", import.meta.url), {
-        type: "module",
-      }),
+    async () =>
+      format === "step"
+        ? new File(
+            [(await import("@workspace/model-mesh/step-example?raw")).default],
+            "mounting-bracket.step"
+          )
+        : exampleFile(format),
+    createMeshConverterWorker,
     (file) => ({ file, format })
   )
   const target = format === "stl" ? "obj" : "stl"
-  const outputName = `${result?.name.slice(0, -4) || "model"}.${target}`
+  const outputName = `${result?.name.replace(/\.[^.]*$/, "") || "model"}.${target}`
 
   const choose = (
     <Button
@@ -80,7 +85,7 @@ export default function MeshConverter({
         ref={input}
         hidden
         type="file"
-        accept={`.${format}`}
+        accept={format === "step" ? ".step,.stp" : `.${format}`}
         onChange={(event) => {
           const file = event.currentTarget.files?.[0]
           event.currentTarget.value = ""
@@ -161,6 +166,11 @@ export default function MeshConverter({
             filename={outputName}
             label={m.download.replace("{format}", target.toUpperCase())}
           />
+          {m.unitHint && (
+            <p className="basis-full text-xs text-muted-foreground">
+              {m.unitHint}
+            </p>
+          )}
         </div>
       )}
     </section>

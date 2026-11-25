@@ -15,3 +15,5 @@ Choose **Measure** and select two points on the visible model to see the straigh
 Set the angle and zoom you want, then choose **Save PNG**. The download captures the model as it appears in the viewer, including a completed measurement and its value. Use it to share a design detail in a review, quote, or assembly note.
 
 - [DXF Viewer](../dxf-viewer/)
+
+Use the [STEP to STL Converter](../step-to-stl-converter/) to prepare a binary STL in millimeter coordinates for a slicer.

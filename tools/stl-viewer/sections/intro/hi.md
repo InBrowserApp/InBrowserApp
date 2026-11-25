@@ -17,3 +17,5 @@ STL किसी पुर्ज़े की सतह को त्रिक�
 - [3MF व्यूअर](../3mf-viewer/)
 - [STL से OBJ कन्वर्टर](../stl-to-obj-converter/)
 - [मेश वॉल्यूम और टोपोलॉजी चेकर](../mesh-inspector/)
+
+मूल STEP या STP CAD मॉडल से मेश की ज्यामिति निर्यात करने के लिए [STEP से STL कन्वर्टर](../step-to-stl-converter/) इस्तेमाल करें।

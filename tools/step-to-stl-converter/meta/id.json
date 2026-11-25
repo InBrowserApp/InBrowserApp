@@ -1,0 +1,4 @@
+{
+  "name": "Konverter STEP ke STL",
+  "description": "Konversi model CAD STEP dan STP ke STL biner di browser. Pertahankan ukuran komponen dan posisinya dalam rakitan, lalu unduh mesh untuk pencetakan 3D atau pemeriksaan."
+}

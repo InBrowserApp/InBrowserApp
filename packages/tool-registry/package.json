@@ -384,6 +384,7 @@
     "@tool/sri-hash-generator": "workspace:*",
     "@tool/ssh-key-generator": "workspace:*",
     "@tool/ssh-public-key-fingerprint": "workspace:*",
+    "@tool/step-to-stl-converter": "workspace:*",
     "@tool/step-viewer": "workspace:*",
     "@tool/stereo-channel-splitter": "workspace:*",
     "@tool/stl-to-obj-converter": "workspace:*",

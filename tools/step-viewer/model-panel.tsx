@@ -1,5 +1,8 @@
 import { useEffect, useId, useRef, useState } from "react"
 import { modelLengthFormat } from "@workspace/ui/lib/model-length-format"
+import { downloadBlob } from "@workspace/ui/lib/download-blob"
+import { createMeshConverterWorker } from "@workspace/ui/lib/mesh-converter-worker"
+import { useMeshWorker } from "@workspace/ui/lib/use-mesh-worker"
 import { useModelMeasurement } from "@workspace/ui/lib/use-model-measurement"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
@@ -23,13 +26,13 @@ type Unit = "millimeter" | "inch"
 
 export default function ModelPanel({
   model,
-  filename,
+  file,
   lang,
   messages: m,
   focusOnOpen,
 }: {
   model: StepModel
-  filename: string
+  file: File
   lang: string
   messages: typeof Messages
   focusOnOpen: boolean
@@ -42,6 +45,22 @@ export default function ModelPanel({
   const viewport = viewportState === "error" ? undefined : viewportState
   const measurement = useModelMeasurement(viewport)
   const measuring = measurement.active
+  const {
+    result: stl,
+    status: stlStatus,
+    run: exportStl,
+  } = useMeshWorker<Blob>(
+    async () => file,
+    createMeshConverterWorker,
+    (input) => ({ file: input, format: "step" })
+  )
+  useEffect(() => {
+    if (stl)
+      downloadBlob(
+        stl.data,
+        `${stl.name.replace(/\.[^.]*$/, "") || "model"}.stl`
+      )
+  }, [stl])
   useEffect(() => {
     try {
       const viewer = createViewport(host.current!, model)
@@ -92,10 +111,12 @@ export default function ModelPanel({
           viewport={viewport}
           measuring={measuring}
           onMeasure={measurement.toggle}
+          onSaveStl={() => void exportStl(file)}
+          savingStl={stlStatus === "working"}
           onSave={() => {
             setExportFailed(false)
             void viewport
-              .save(filename, distance)
+              .save(file.name, distance)
               .catch(() => setExportFailed(true))
           }}
         />
@@ -181,9 +202,11 @@ export default function ModelPanel({
               <option value="inch">{m.inches}</option>
             </select>
           </div>
-          {exportFailed && (
+          {(exportFailed || stlStatus === "failed") && (
             <Alert variant="destructive" className="m-3 w-auto">
-              <AlertDescription>{m.exportError}</AlertDescription>
+              <AlertDescription>
+                {stlStatus === "failed" ? m.stlExportError : m.exportError}
+              </AlertDescription>
             </Alert>
           )}
         </>

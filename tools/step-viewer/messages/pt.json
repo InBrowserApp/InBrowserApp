@@ -37,5 +37,7 @@
   "distance": "Distância",
   "controls": "Arraste para girar · Use a roda do mouse para dar zoom · Arraste com o botão direito para deslocar",
   "touchControls": "Arraste para girar · Faça o gesto de pinça para dar zoom · Arraste com dois dedos para deslocar",
-  "keyboardControls": "Use as setas para girar, + ou − para ajustar o zoom e Enter para selecionar um ponto no centro durante a medição. Mantenha Shift pressionado e use as setas para mover a vista."
+  "keyboardControls": "Use as setas para girar, + ou − para ajustar o zoom e Enter para selecionar um ponto no centro durante a medição. Mantenha Shift pressionado e use as setas para mover a vista.",
+  "saveStl": "Exportar STL",
+  "stlExportError": "Não foi possível salvar o STL. Tente novamente."
 }

@@ -17,3 +17,5 @@ STL 使用三角形描述零件表面。要查看带配套材质库的 Wavefront
 - [3MF 查看器](../3mf-viewer/)
 - [STL 转 OBJ 转换器](../stl-to-obj-converter/)
 - [网格体积与拓扑检查器](../mesh-inspector/)
+
+使用 [STEP 转 STL 转换器](../step-to-stl-converter/)从原始 STEP 或 STP CAD 模型导出网格几何数据。

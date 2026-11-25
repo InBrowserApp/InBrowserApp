@@ -1,0 +1,4 @@
+{
+  "name": "STEP naar STL-converter",
+  "description": "Converteer CAD-modellen in STEP- of STP-formaat naar binair STL in je browser. Behoud de afmetingen en plaatsing van onderdelen en download het driehoeksnet voor 3D-printen of controle."
+}

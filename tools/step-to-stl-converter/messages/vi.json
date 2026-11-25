@@ -1,0 +1,4 @@
+{
+  "failed": "Không chuyển đổi được tệp này. Hãy mở mô hình STEP hoặc STP có bề mặt 3D.",
+  "unitHint": "Chọn milimét khi nhập tệp STL này. Tệp STL lưu tọa độ mà không kèm đơn vị."
+}

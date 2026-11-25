@@ -37,5 +37,7 @@
   "distance": "Odległość",
   "controls": "Przeciągnij, aby obrócić · Przewiń, aby zmienić powiększenie · Przeciągnij prawym przyciskiem, aby przesunąć",
   "touchControls": "Przeciągnij, aby obrócić · Zsuń lub rozsuń palce, aby zmienić powiększenie · Przeciągnij dwoma palcami, aby przesunąć",
-  "keyboardControls": "Obracaj model klawiszami strzałek. Zmieniaj powiększenie klawiszami + i −. Podczas pomiaru naciśnij Enter, aby wskazać punkt pośrodku widoku. Przytrzymaj Shift i użyj klawiszy strzałek, aby przesunąć widok."
+  "keyboardControls": "Obracaj model klawiszami strzałek. Zmieniaj powiększenie klawiszami + i −. Podczas pomiaru naciśnij Enter, aby wskazać punkt pośrodku widoku. Przytrzymaj Shift i użyj klawiszy strzałek, aby przesunąć widok.",
+  "saveStl": "Eksportuj STL",
+  "stlExportError": "Nie udało się zapisać pliku STL. Spróbuj ponownie."
 }

@@ -11,11 +11,14 @@
     "./three-mf": "./src/three-mf.ts",
     "./convert": "./src/convert.ts",
     "./mesh-file": "./src/mesh-file.ts",
-    "./inspect": "./src/inspect.ts"
+    "./inspect": "./src/inspect.ts",
+    "./cad": "./src/cad.ts",
+    "./step-example": "./src/mounting-bracket.step"
   },
   "dependencies": {
     "three": "catalog:",
-    "fflate": "catalog:"
+    "fflate": "catalog:",
+    "occt-import-js": "catalog:"
   },
   "devDependencies": {
     "@types/three": "catalog:",

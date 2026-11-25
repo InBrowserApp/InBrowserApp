@@ -37,5 +37,7 @@
   "distance": "距离",
   "controls": "拖动以旋转 · 滚动以缩放 · 按住右键拖动以平移",
   "touchControls": "拖动以旋转 · 双指捏合以缩放 · 双指拖动以平移",
-  "keyboardControls": "使用方向键旋转，+ 或 − 缩放；测量时按 Enter 选择视图中心的点。按住 Shift 并使用方向键可平移视图。"
+  "keyboardControls": "使用方向键旋转，+ 或 − 缩放；测量时按 Enter 选择视图中心的点。按住 Shift 并使用方向键可平移视图。",
+  "saveStl": "导出 STL",
+  "stlExportError": "无法保存 STL。请重试。"
 }

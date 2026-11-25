@@ -34686,6 +34686,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "step-to-stl-converter",
+    language: "ar",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "de",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "en",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "es",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "fr",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "he",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "hi",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "id",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "it",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "ja",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "ko",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "ms",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "nl",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "no",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "pl",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "pt",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "ru",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "sv",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "th",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "tr",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "vi",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "step-to-stl-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "step-viewer",
     language: "ar",
   },

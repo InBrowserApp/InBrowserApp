@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de STEP a STL",
+  "description": "Convierte modelos CAD STEP y STP a STL binario en tu navegador. Conserva las dimensiones de las piezas y su posición en el ensamblaje, y descarga la malla para inspeccionarla o imprimirla en 3D."
+}

@@ -37,5 +37,7 @@
   "distance": "Distance",
   "controls": "Drag to rotate · Scroll to zoom · Right-drag to pan",
   "touchControls": "Drag to rotate · Pinch to zoom · Two fingers to pan",
-  "keyboardControls": "Use the arrow keys to rotate, + or − to zoom, and Enter to select a point at the center when measuring. Hold Shift with the arrow keys to pan."
+  "keyboardControls": "Use the arrow keys to rotate, + or − to zoom, and Enter to select a point at the center when measuring. Hold Shift with the arrow keys to pan.",
+  "saveStl": "Export STL",
+  "stlExportError": "The STL could not be saved. Try again."
 }

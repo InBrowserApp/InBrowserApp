@@ -17,3 +17,5 @@ STL, bir parçanın yüzeyini üçgenlerle tanımlar. Malzeme kitaplığıyla bi
 - [3MF Görüntüleyici](../3mf-viewer/)
 - [STL’den OBJ’ye Dönüştürücü](../stl-to-obj-converter/)
 - [Ağ Hacmi ve Topoloji Denetleyici](../mesh-inspector/)
+
+Özgün STEP veya STP CAD modelinin ağ geometrisini dışa aktarmak için [STEP’ten STL’ye Dönüştürücü](../step-to-stl-converter/) aracını kullanın.
