@@ -62,26 +62,22 @@ async function normalizeSvg(source: string, signal: AbortSignal, page = false) {
   ]
   for (let index = 0; index < pending.length; index++) {
     const node = pending[index]!.node
+    const vectorPage = page && index === 0
     for (const element of [node, ...node.querySelectorAll("*")]) {
       const family = element.getAttribute("font-family")
       const cjk =
-        page &&
-        index === 0 &&
+        vectorPage &&
         (element.localName === "text" || element.localName === "tspan") &&
         /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(
           element.textContent ?? ""
         )
-      if (cjk || family)
-        element.setAttribute(
-          "font-family",
-          cjk ? cjkFamily : fontFamily(family!)
-        )
+      if (cjk) element.setAttribute("font-family", cjkFamily)
+      else if (family) element.setAttribute("font-family", fontFamily(family))
       const style = element.getAttribute("style")
       // The PDF renderer does not apply SVG filters. Embedded illustrations
       // are decoded by the browser and can still use them.
       if (
-        page &&
-        index === 0 &&
+        vectorPage &&
         (element.hasAttribute("filter") ||
           /(?:^|;)\s*filter\s*:/i.test(style ?? ""))
       )

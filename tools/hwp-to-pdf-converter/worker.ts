@@ -1,6 +1,7 @@
 import init, { HwpDocument } from "@rhwp/core"
 import hwpWasm from "@rhwp/core/rhwp_bg.wasm?gzip-url"
 import PDFDocument from "pdfkit"
+import { toBytes } from "pdfkit/output"
 import SVGtoPDF from "svg-to-pdfkit"
 import { preflight } from "@workspace/hwp/preflight"
 import { loadWasmSource } from "@workspace/hwp/wasm"
@@ -58,7 +59,7 @@ async function convert(bytes: Uint8Array) {
     if (!total) throw new Error("invalid")
     if (JSON.parse(document.getExternalImageReferences()).length)
       throw new Error("unsupported")
-    // Register only the bundled faces. The worker has no system fonts.
+    // An empty font skips PDFKit's built-in default.
     const pdf = new PDFDocument({ autoFirstPage: false, font: "" })
     for (const { family, weight, bytes } of fonts)
       pdf.registerFont(`${family}-${weight}`, bytes)
@@ -105,14 +106,9 @@ async function convert(bytes: Uint8Array) {
     }
     page = undefined
     send({ type: "progress", stage: "saving" })
-    const chunks: Uint8Array<ArrayBuffer>[] = []
-    await new Promise<void>((resolve, reject) => {
-      pdf.on("data", (chunk: Uint8Array<ArrayBuffer>) => chunks.push(chunk))
-      pdf.once("end", resolve)
-      pdf.once("error", reject)
-      pdf.end()
-    })
-    const result = new Uint8Array(await new Blob(chunks).arrayBuffer())
+    const bytesReady = toBytes(pdf)
+    pdf.end()
+    const result = await bytesReady
     postMessage(
       { type: "result", bytes: result, pages: total } satisfies Reply,
       { transfer: [result.buffer] }

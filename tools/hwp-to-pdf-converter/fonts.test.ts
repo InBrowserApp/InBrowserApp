@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import { loadFonts } from "./fonts"
+import { loadCjkFont, loadFonts } from "./fonts"
 const add = vi.fn(),
   load = vi.fn()
 beforeEach(() => {
@@ -44,4 +44,9 @@ test.each(["FontFace", "fonts"])(
 test("rejects failed font requests", async () => {
   vi.mocked(fetch).mockResolvedValue({ ok: false } as Response)
   await expect(loadFonts()).rejects.toThrow("engineUnavailable")
+})
+test("fetches the supplemental face separately from the worker faces", async () => {
+  expect((await loadCjkFont()).byteLength).toBe(4)
+  expect(fetch).toHaveBeenCalledOnce()
+  expect(add).not.toHaveBeenCalled()
 })
