@@ -1,0 +1,17 @@
+{
+  "open": "Buka WebArchive",
+  "replace": "Ganti file",
+  "clear": "Tutup file",
+  "reader": "Konverter WebArchive ke HTML",
+  "privacy": "File tetap di perangkat Anda.",
+  "focus": "Fokus pada pratinjau",
+  "exitFocus": "Keluar dari mode fokus",
+  "releaseFile": "Lepaskan untuk mengonversi arsip",
+  "drop": "Lepaskan file .webarchive dari Safari di sini",
+  "example": "Coba arsip contoh",
+  "loading": "Mengonversi arsip…",
+  "invalid": "Halaman HTML yang disimpan tidak dapat dibaca. Pilih file .webarchive yang disimpan di Safari, lalu coba lagi.",
+  "preview": "Pratinjau HTML",
+  "download": "Unduh HTML",
+  "missing": "Beberapa gambar, gaya, atau bingkai tidak tersedia. Anda tetap dapat mengunduh halaman yang disimpan."
+}

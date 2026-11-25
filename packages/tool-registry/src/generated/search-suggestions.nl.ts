@@ -2003,6 +2003,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "warc-viewer",
   },
   {
+    category: "document",
+    name: "WebArchive naar HTML converteren",
+    slug: "webarchive-to-html-converter",
+  },
+  {
     category: "crypto",
     name: "Whirlpool-hash tekst of bestand",
     slug: "whirlpool-hash-text-or-file",

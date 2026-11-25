@@ -1,0 +1,17 @@
+{
+  "open": "Apri WebArchive",
+  "replace": "Sostituisci file",
+  "clear": "Chiudi file",
+  "reader": "Convertitore da WebArchive a HTML",
+  "privacy": "I file restano sul tuo dispositivo.",
+  "focus": "Anteprima immersiva",
+  "exitFocus": "Esci dall’anteprima immersiva",
+  "releaseFile": "Rilascia per convertire l’archivio",
+  "drop": "Trascina qui un file .webarchive di Safari",
+  "example": "Prova l’archivio di esempio",
+  "loading": "Conversione dell’archivio…",
+  "invalid": "Impossibile leggere una pagina HTML salvata. Scegli un file .webarchive salvato con Safari e riprova.",
+  "preview": "Anteprima HTML",
+  "download": "Scarica HTML",
+  "missing": "Alcune immagini, fogli di stile o frame non sono disponibili. Puoi comunque scaricare la pagina salvata."
+}

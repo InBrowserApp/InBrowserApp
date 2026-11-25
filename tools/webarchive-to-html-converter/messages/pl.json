@@ -1,0 +1,17 @@
+{
+  "open": "Otwórz WebArchive",
+  "replace": "Zmień plik",
+  "clear": "Zamknij plik",
+  "reader": "Konwerter WebArchive na HTML",
+  "privacy": "Pliki pozostają na Twoim urządzeniu.",
+  "focus": "Podgląd w trybie skupienia",
+  "exitFocus": "Zakończ tryb skupienia",
+  "releaseFile": "Upuść plik, aby przekonwertować archiwum",
+  "drop": "Upuść plik .webarchive z Safari",
+  "example": "Wypróbuj przykładowe archiwum",
+  "loading": "Konwertowanie archiwum…",
+  "invalid": "Nie udało się odczytać zapisanej strony HTML. Wybierz plik .webarchive zapisany w Safari i spróbuj ponownie.",
+  "preview": "Podgląd HTML",
+  "download": "Pobierz HTML",
+  "missing": "Brakuje niektórych obrazów, stylów lub ramek. Nadal możesz pobrać zapisaną stronę."
+}

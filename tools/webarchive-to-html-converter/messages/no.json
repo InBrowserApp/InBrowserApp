@@ -1,0 +1,17 @@
+{
+  "open": "Åpne WebArchive",
+  "replace": "Bytt fil",
+  "clear": "Lukk fil",
+  "reader": "WebArchive til HTML-konverterer",
+  "privacy": "Filene blir på enheten din.",
+  "focus": "Forhåndsvisning i fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "releaseFile": "Slipp filen for å konvertere arkivet",
+  "drop": "Slipp en .webarchive-fil fra Safari",
+  "example": "Prøv et eksempelarkiv",
+  "loading": "Konverterer arkivet …",
+  "invalid": "Fant ingen lesbar, lagret HTML-side. Velg en .webarchive-fil som er lagret i Safari, og prøv igjen.",
+  "preview": "HTML-forhåndsvisning",
+  "download": "Last ned HTML",
+  "missing": "Enkelte bilder, stiler eller rammer mangler. Du kan fortsatt laste ned den lagrede siden."
+}

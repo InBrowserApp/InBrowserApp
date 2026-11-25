@@ -1,0 +1,17 @@
+{
+  "open": "Buka WebArchive",
+  "replace": "Gantikan fail",
+  "clear": "Tutup fail",
+  "reader": "Penukar WebArchive kepada HTML",
+  "privacy": "Fail kekal pada peranti anda.",
+  "focus": "Pratonton dalam mod fokus",
+  "exitFocus": "Keluar daripada mod fokus pratonton",
+  "releaseFile": "Lepaskan untuk menukar arkib kepada HTML",
+  "drop": "Lepaskan fail .webarchive Safari di sini",
+  "example": "Cuba arkib contoh",
+  "loading": "Sedang menukar arkib…",
+  "invalid": "Halaman HTML yang disimpan tidak dapat dibaca. Pilih fail .webarchive yang disimpan daripada Safari dan cuba lagi.",
+  "preview": "Pratonton HTML",
+  "download": "Muat turun HTML",
+  "missing": "Sesetengah imej, gaya atau bingkai tiada. Anda masih boleh memuat turun halaman yang disimpan."
+}

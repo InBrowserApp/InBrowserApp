@@ -2003,6 +2003,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "warc-viewer",
   },
   {
+    category: "document",
+    name: "Trình chuyển đổi WebArchive sang HTML",
+    slug: "webarchive-to-html-converter",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool văn bản hoặc tệp",
     slug: "whirlpool-hash-text-or-file",

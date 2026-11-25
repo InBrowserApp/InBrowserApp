@@ -1,0 +1,17 @@
+{
+  "open": "WebArchive öffnen",
+  "replace": "Datei ersetzen",
+  "clear": "Datei schließen",
+  "reader": "WebArchive-zu-HTML-Konverter",
+  "privacy": "Dateien bleiben auf deinem Gerät.",
+  "focus": "Vorschau fokussieren",
+  "exitFocus": "Fokussierte Vorschau beenden",
+  "releaseFile": "Loslassen, um das Archiv zu konvertieren",
+  "drop": "Safari-Datei mit der Endung .webarchive hier ablegen",
+  "example": "Beispielarchiv öffnen",
+  "loading": "Archiv wird konvertiert …",
+  "invalid": "Es konnte keine gespeicherte HTML-Seite gelesen werden. Wähle eine mit Safari gespeicherte .webarchive-Datei und versuche es erneut.",
+  "preview": "HTML-Vorschau",
+  "download": "HTML herunterladen",
+  "missing": "Einige Bilder, Stylesheets oder Frames sind nicht verfügbar. Du kannst die gespeicherte Seite trotzdem herunterladen."
+}

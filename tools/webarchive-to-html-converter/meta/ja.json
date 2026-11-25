@@ -1,0 +1,4 @@
+{
+  "name": "WebArchive から HTML への変換ツール",
+  "description": "Safari の .webarchive を、保存済みの画像やスタイルを含む単体の HTML ファイルに変換します。ブラウザーでプレビューとダウンロードができます。"
+}

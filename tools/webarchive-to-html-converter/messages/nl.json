@@ -1,0 +1,17 @@
+{
+  "open": "WebArchive openen",
+  "replace": "Bestand vervangen",
+  "clear": "Bestand sluiten",
+  "reader": "WebArchive naar HTML converteren",
+  "privacy": "Bestanden blijven op je apparaat.",
+  "focus": "Afleidingsvrije voorvertoning",
+  "exitFocus": "Afleidingsvrije voorvertoning afsluiten",
+  "releaseFile": "Laat los om het archief te converteren",
+  "drop": "Sleep hier een .webarchive-bestand van Safari naartoe",
+  "example": "Voorbeeldarchief openen",
+  "loading": "Archief converteren…",
+  "invalid": "Er kon geen opgeslagen HTML-pagina worden gelezen. Kies een .webarchive-bestand dat in Safari is opgeslagen en probeer het opnieuw.",
+  "preview": "HTML-voorvertoning",
+  "download": "HTML downloaden",
+  "missing": "Sommige afbeeldingen, stijlbladen of frames ontbreken. Je kunt de opgeslagen pagina nog steeds downloaden."
+}

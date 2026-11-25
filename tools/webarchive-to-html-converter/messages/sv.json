@@ -1,0 +1,17 @@
+{
+  "open": "Öppna WebArchive",
+  "replace": "Byt fil",
+  "clear": "Stäng fil",
+  "reader": "WebArchive till HTML-konverterare",
+  "privacy": "Filerna stannar på din enhet.",
+  "focus": "Visa förhandsgranskning i fokusläge",
+  "exitFocus": "Avsluta fokusläge",
+  "releaseFile": "Släpp filen för att konvertera arkivet",
+  "drop": "Släpp en .webarchive-fil från Safari",
+  "example": "Prova ett exempelarkiv",
+  "loading": "Konverterar arkivet …",
+  "invalid": "Det gick inte att läsa en sparad HTML-sida. Välj en .webarchive-fil som sparats från Safari och försök igen.",
+  "preview": "Förhandsgranskning av HTML",
+  "download": "Ladda ner HTML",
+  "missing": "Vissa bilder, stilar eller ramar saknas. Du kan ändå ladda ner den sparade sidan."
+}
