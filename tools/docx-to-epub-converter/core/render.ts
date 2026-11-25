@@ -5,7 +5,7 @@ import type {
   DocTable,
 } from "@silurus/ooxml/docx"
 
-type ImageRun = Extract<DocRun, { type: "image" }>
+export type ImageRun = Extract<DocRun, { type: "image" }>
 type Note = { id: string; label: string }
 export type RenderContext = {
   doc: Document
@@ -29,6 +29,29 @@ function bookmark(name: string) {
   return `word-bookmark-${Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("")}`
 }
 
+function destination(url?: string | null, bookmarkName?: string | null) {
+  const external = url?.trim()
+  if (external && /^(?:https?:\/\/|mailto:)/i.test(external)) return external
+  const anchor =
+    bookmarkName || (external?.startsWith("#") ? external.slice(1) : "")
+  return anchor ? `#${bookmark(anchor)}` : undefined
+}
+
+function fieldDestination(instruction: string) {
+  const reference = /^\s*(?:REF|PAGEREF)\s+(?:"([^"]+)"|([^\s\\]+))/i.exec(
+    instruction
+  )
+  if (
+    reference &&
+    /\s\\h(?=\s|$)/i.test(instruction.slice(reference[0].length))
+  )
+    return destination(null, reference[1] || reference[2])
+  if (!/^\s*HYPERLINK(?=\s|$)/i.test(instruction)) return undefined
+  const url = /^\s*HYPERLINK\s+(?:"([^"]+)"|([^\s\\]+))/i.exec(instruction)
+  const anchor = /\s\\l\s+(?:"([^"]+)"|([^\s\\]+))/i.exec(instruction)
+  return destination(url?.[1] || url?.[2], anchor?.[1] || anchor?.[2])
+}
+
 function inlineText(
   doc: Document,
   run: Extract<DocRun, { type: "text" | "field" }>
@@ -48,20 +71,15 @@ function inlineText(
     wrapper.append(result)
     result = wrapper
   }
-  if (run.type === "text") {
-    const external = run.hyperlink?.trim()
-    const anchor =
-      run.hyperlinkAnchor ||
-      (external?.startsWith("#") ? external.slice(1) : "")
-    const href = anchor ? `#${bookmark(anchor)}` : external
-    if (href && /^(?:#|https?:|mailto:)/i.test(href)) {
-      const link = doc.createElement("a")
-      link.setAttribute("href", href)
-      link.append(result)
-      return link
-    }
-  }
-  return result
+  const href =
+    run.type === "text"
+      ? destination(run.hyperlink, run.hyperlinkAnchor)
+      : fieldDestination(run.instruction)
+  if (!href) return result
+  const link = doc.createElement("a")
+  link.setAttribute("href", href)
+  link.append(result)
+  return link
 }
 
 async function paragraph(
@@ -205,9 +223,8 @@ function listItem(root: HTMLElement, p: DocParagraph, lists: List[]) {
     lists.push(list)
   }
   const item = doc.createElement("li")
-  const value = /^\d{1,9}(?:[.)]|$)/.exec(number.text)
-  if (value && list.element.localName === "ol")
-    item.value = Number.parseInt(value[0], 10)
+  const value = /(?:^|\.)(\d{1,9})[.)]?$/.exec(number.text.trim())
+  if (value && list.element.localName === "ol") item.value = Number(value[1])
   list.element.append(item)
   return item
 }
@@ -234,6 +251,8 @@ export async function renderBlocks(
       }
       lists.length = 0
       const node = ctx.doc.createElement(level ? `h${level}` : "p")
+      if (level && block.numbering?.text)
+        node.append(block.numbering.text.trimEnd() + " ")
       await paragraph(node, block, ctx)
       if (node.childNodes.length) root.append(node)
     }

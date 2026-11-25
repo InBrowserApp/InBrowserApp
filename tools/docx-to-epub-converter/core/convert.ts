@@ -9,6 +9,7 @@ import { readingDocument, readingPreview } from "@workspace/ebook/document"
 import { bookImages } from "@workspace/ebook/images"
 import { writeEpub } from "@workspace/ebook/write-epub"
 import { readArchive } from "./archive"
+import { imageTransform } from "./image-transform"
 import { renderBlocks } from "./render"
 import type { RenderContext } from "./render"
 import { extension } from "../types"
@@ -17,11 +18,8 @@ import type { Messages } from "../types"
 export function failure(reason: unknown) {
   if (isDocumentLimitError(reason) || reason instanceof RangeError)
     return "resourceLimit"
-  if (
-    reason instanceof Error &&
-    ["protected", "empty"].includes(reason.message)
-  )
-    return reason.message === "protected" ? "protected" : "empty"
+  const message = reason instanceof Error ? reason.message : ""
+  if (message === "protected" || message === "empty") return message
   return "invalid"
 }
 
@@ -137,10 +135,10 @@ async function snapshot(
     doc,
     signal,
     async image(run) {
-      return (
+      const url =
         (await asset.load(run.svgImagePath, "image/svg+xml")) ??
         (await asset.load(run.imagePath, run.mimeType))
-      )
+      return url ? imageTransform(url, run, signal) : null
     },
     note(kind, id) {
       const key = `${kind}-${id}`
