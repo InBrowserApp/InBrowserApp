@@ -1,0 +1,16 @@
+{
+  "action": "Napraw STL",
+  "drop": "Upuść tutaj plik STL",
+  "working": "Naprawianie siatki…",
+  "failed": "Nie udało się odczytać pliku STL. Otwórz poprawny plik STL w formacie ASCII lub binarnym.",
+  "result": "Wyniki naprawy",
+  "previous": "Poprzednia naprawa",
+  "before": "Przed",
+  "after": "Po",
+  "flipped": "Ściany o zmienionej orientacji: {count}",
+  "complete": "Naprawiona siatka przechodzi te kontrole topologii.",
+  "remaining": "Niektóre usterki topologii nadal wymagają naprawy.",
+  "unchanged": "Nie znaleziono ścian, które można naprawić tym narzędziem.",
+  "empty": "Do wyeksportowania nie pozostały żadne trójkąty o polu większym od zera.",
+  "download": "Pobierz STL"
+}

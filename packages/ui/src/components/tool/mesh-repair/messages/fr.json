@@ -1,0 +1,16 @@
+{
+  "action": "Réparer le STL",
+  "drop": "Déposez un fichier STL ici",
+  "working": "Réparation du maillage…",
+  "failed": "Impossible de lire ce fichier STL. Ouvrez un STL ASCII ou binaire valide.",
+  "result": "Résultats de la réparation",
+  "previous": "Réparation précédente",
+  "before": "Avant",
+  "after": "Après",
+  "flipped": "Faces réorientées : {count}",
+  "complete": "Le maillage réparé passe ces vérifications de topologie.",
+  "remaining": "Certains problèmes de topologie restent à résoudre.",
+  "unchanged": "Aucune face à réparer n’a été trouvée.",
+  "empty": "Il ne reste aucun triangle d’aire non nulle à exporter.",
+  "download": "Télécharger le STL"
+}

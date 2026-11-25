@@ -1,0 +1,4 @@
+{
+  "name": "Naprawa siatki STL",
+  "description": "Naprawiaj pliki STL w formacie binarnym lub ASCII w przeglądarce. Usuwaj powielone trójkąty i trójkąty o zerowym polu, koryguj jednoznaczne błędy orientacji ścian i porównuj topologię przed pobraniem."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Reparer STL-nett",
+  "description": "Reparer binære STL-filer og STL-filer i ASCII-format i nettleseren. Fjern duplikate trekanter og trekanter uten areal, rett tydelige orienteringsfeil og sammenlign topologien før nedlasting."
+}

@@ -1919,6 +1919,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "STL 메시 복구",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "STL → 3MF 변환기",
     slug: "stl-to-3mf-converter",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Perbaikan Mesh STL",
+  "description": "Perbaiki file STL biner atau ASCII di browser. Hapus segitiga duplikat dan segitiga berluas nol, perbaiki masalah orientasi muka yang jelas, lalu bandingkan topologi mesh sebelum mengunduh."
+}

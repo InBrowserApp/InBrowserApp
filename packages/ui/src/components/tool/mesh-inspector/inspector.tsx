@@ -1,31 +1,22 @@
-import { useRef, useState } from "react"
-import { ScanLine, Folder } from "../../../icons"
-import { cn } from "../../../lib/utils"
-import { Alert, AlertDescription } from "../../ui/alert"
-import { Button } from "../../ui/button"
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "../../ui/empty"
-import { Spinner } from "../../ui/spinner"
+import { ScanLine } from "../../../icons"
 import { useMeshWorker } from "../../../lib/use-mesh-worker"
+import { MeshFileInput } from "../mesh-file-input/input"
+import { RepairCurrentStl } from "../mesh-repair/repair"
 import { exampleFile } from "../model-viewer/load-model"
 import { InspectionReport } from "./report"
 import type { MeshReport } from "@workspace/model-mesh/inspect"
+import type { MeshRepairMessages } from "../mesh-repair/messages"
 import type { MeshInspectorMessages } from "./messages"
 
 export default function MeshInspector({
   lang,
   messages: m,
+  repairMessages,
 }: {
   lang: string
   messages: MeshInspectorMessages
+  repairMessages: MeshRepairMessages
 }) {
-  const picker = useRef<HTMLInputElement>(null)
-  const [dragging, setDragging] = useState(false)
   const {
     result,
     status,
@@ -39,97 +30,41 @@ export default function MeshInspector({
   )
 
   return (
-    <section
-      className={cn(
-        "grid min-w-0 gap-3 rounded-lg",
-        dragging && "ring-2 ring-ring"
-      )}
-      onDragOver={(event) => {
-        if (!event.dataTransfer.types.includes("Files")) return
-        event.preventDefault()
-        event.dataTransfer.dropEffect = "copy"
-        setDragging(true)
-      }}
-      onDragLeave={(event) => {
-        if (
-          !(event.relatedTarget instanceof Node) ||
-          !event.currentTarget.contains(event.relatedTarget)
-        )
-          setDragging(false)
-      }}
-      onDrop={(event) => {
-        event.preventDefault()
-        setDragging(false)
-        const file = event.dataTransfer.files[0]
-        if (file) void inspect(file)
-      }}
+    <MeshFileInput
+      accept=".stl,.obj"
+      open={m.open}
+      example={m.example}
+      drop={m.drop}
+      privacy={m.privacy}
+      icon={<ScanLine aria-hidden="true" />}
+      filled={Boolean(result)}
+      onFile={inspect}
+      onExample={() => void inspect()}
+      working={status === "working" ? m.checking : undefined}
+      error={status === "failed" ? m.failed : undefined}
     >
-      <input
-        ref={picker}
-        hidden
-        type="file"
-        accept=".stl,.obj"
-        onChange={(event) => {
-          const file = event.currentTarget.files?.[0]
-          event.currentTarget.value = ""
-          if (file) void inspect(file)
-        }}
-      />
       <p role="status" className="sr-only">
-        {!status && result ? `${m.result} · ${result.name}` : ""}
+        {!status && result ? `${m.result} · ${result.file.name}` : ""}
       </p>
-      {status === "failed" && (
-        <Alert variant="destructive">
-          <AlertDescription>{m.failed}</AlertDescription>
-        </Alert>
-      )}
-      <Empty
-        className={
-          result
-            ? "items-start gap-2 p-0"
-            : "min-h-64 border border-dashed bg-muted/30"
-        }
-      >
-        {!result && (
-          <EmptyHeader>
-            <EmptyMedia variant="icon">
-              <ScanLine aria-hidden="true" />
-            </EmptyMedia>
-            <EmptyTitle>{m.drop}</EmptyTitle>
-            <EmptyDescription>{m.privacy}</EmptyDescription>
-          </EmptyHeader>
-        )}
-        <div className="flex flex-wrap items-center gap-2">
-          <Button
-            variant={result ? "outline" : "default"}
-            onClick={() => picker.current?.click()}
-          >
-            <Folder data-icon="inline-start" aria-hidden="true" />
-            {m.open}
-          </Button>
-          <Button variant="outline" onClick={() => void inspect()}>
-            {m.example}
-          </Button>
-        </div>
-        {status === "working" && (
-          <p
-            role="status"
-            className="flex items-center gap-2 text-sm text-muted-foreground"
-          >
-            <Spinner aria-hidden="true" />
-            {m.checking}
-          </p>
-        )}
-      </Empty>
       {result && (
         <InspectionReport
-          name={result.name}
+          name={result.file.name}
           report={result.data}
           previous={Boolean(status)}
           lang={lang}
           messages={m}
         />
       )}
-    </section>
+      {!status &&
+        result?.data.volume === null &&
+        /\.stl$/i.test(result.file.name) && (
+          <RepairCurrentStl
+            lang={lang}
+            file={result.file}
+            messages={repairMessages}
+            meshMessages={m}
+          />
+        )}
+    </MeshFileInput>
   )
 }

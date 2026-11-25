@@ -21,3 +21,5 @@ STL mô tả bề mặt của một chi tiết bằng các tam giác. Với tệ
 Dùng [Trình chuyển đổi STEP sang STL](../step-to-stl-converter/) để xuất hình học dạng lưới từ mô hình CAD STEP hoặc STP gốc.
 
 Dùng [Trình chuyển đổi STL sang 3MF](../stl-to-3mf-converter/) để lưu đơn vị đo của mô hình trong tệp 3MF.
+
+Dùng [Sửa lưới STL](../stl-mesh-repair/) để loại bỏ mặt trùng lặp và mặt có diện tích bằng 0, chỉnh các mặt có hướng sai rõ ràng và xem những lỗi còn cần xử lý.

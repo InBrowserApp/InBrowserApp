@@ -1,0 +1,16 @@
+{
+  "action": "STL’yi onar",
+  "drop": "STL dosyasını buraya bırakın",
+  "working": "Ağ onarılıyor…",
+  "failed": "STL dosyası okunamadı. Geçerli bir ASCII veya ikili STL dosyası açın.",
+  "result": "Onarım sonuçları",
+  "previous": "Önceki onarım",
+  "before": "Önce",
+  "after": "Sonra",
+  "flipped": "Yönü düzeltilen yüzler: {count}",
+  "complete": "Onarılan ağ bu topoloji denetimlerini geçiyor.",
+  "remaining": "Bazı topoloji sorunlarının hâlâ giderilmesi gerekiyor.",
+  "unchanged": "Onarılabilecek yüz bulunamadı.",
+  "empty": "Dışa aktarılabilecek, alanı sıfırdan büyük üçgen kalmadı.",
+  "download": "STL indir"
+}

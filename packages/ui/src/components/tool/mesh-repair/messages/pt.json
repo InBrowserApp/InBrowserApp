@@ -1,0 +1,16 @@
+{
+  "action": "Reparar STL",
+  "drop": "Solte aqui um arquivo STL",
+  "working": "Reparando a malha…",
+  "failed": "Não foi possível ler o STL. Abra um arquivo STL ASCII ou binário válido.",
+  "result": "Resultados do reparo",
+  "previous": "Reparo anterior",
+  "before": "Antes",
+  "after": "Depois",
+  "flipped": "Faces reorientadas: {count}",
+  "complete": "A malha reparada passa por essas verificações de topologia.",
+  "remaining": "Alguns problemas de topologia ainda precisam ser corrigidos.",
+  "unchanged": "Nenhuma face passível de reparo foi encontrada.",
+  "empty": "Não restam triângulos com área para exportar.",
+  "download": "Baixar STL"
+}

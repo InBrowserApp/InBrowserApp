@@ -1919,6 +1919,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "Riparazione mesh STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "Convertitore da STL a 3MF",
     slug: "stl-to-3mf-converter",
   },

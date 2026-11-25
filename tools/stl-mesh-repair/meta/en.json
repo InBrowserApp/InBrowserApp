@@ -1,0 +1,4 @@
+{
+  "name": "STL Mesh Repair",
+  "description": "Repair binary or ASCII STL files in your browser. Remove duplicate and zero-area triangles, fix clear face orientation issues, and compare mesh topology before downloading."
+}

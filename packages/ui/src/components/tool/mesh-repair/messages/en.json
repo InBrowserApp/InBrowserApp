@@ -1,0 +1,16 @@
+{
+  "action": "Repair STL",
+  "drop": "Drop an STL file here",
+  "working": "Repairing mesh…",
+  "failed": "Could not read this STL. Open a valid ASCII or binary STL file.",
+  "result": "Repair results",
+  "previous": "Previous repair",
+  "before": "Before",
+  "after": "After",
+  "flipped": "Faces reoriented: {count}",
+  "complete": "The repaired mesh passes these topology checks.",
+  "remaining": "Some topology issues still need attention.",
+  "unchanged": "No repairable faces were found.",
+  "empty": "No triangles with area remain to export.",
+  "download": "Download STL"
+}

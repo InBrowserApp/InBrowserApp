@@ -1919,6 +1919,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "Sửa lưới STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "Trình chuyển đổi STL sang 3MF",
     slug: "stl-to-3mf-converter",
   },

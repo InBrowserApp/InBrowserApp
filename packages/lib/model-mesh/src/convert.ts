@@ -1,7 +1,6 @@
 import { BufferGeometry, Float32BufferAttribute, Group, Mesh } from "three"
-import { STLExporter } from "three/addons/exporters/STLExporter.js"
 import { readMeshFile } from "./mesh-file"
-import type { Object3D } from "three"
+import { exportStl } from "./stl"
 import type { ThreeMfUnit } from "./three-mf-package"
 
 export type { ThreeMfUnit } from "./three-mf-package"
@@ -33,12 +32,6 @@ function writeObj(mesh: Mesh) {
 export type MeshConversionInput = MeshFormat | "step" | "3mf"
 export type MeshConversionOptions = { target?: "3mf"; unit?: ThreeMfUnit }
 
-function binaryStl(model: Object3D) {
-  model.updateMatrixWorld(true)
-  const output = new STLExporter().parse(model, { binary: true })
-  return new Blob([output], { type: "model/stl" })
-}
-
 async function convertStep(file: File) {
   const { readStep } = await import("./cad")
   const meshes = await readStep(await file.arrayBuffer())
@@ -56,7 +49,7 @@ async function convertStep(file: File) {
     assembly.add(new Mesh(geometry))
   }
   if (!assembly.children.length) throw new Error("No STEP surfaces")
-  return binaryStl(assembly)
+  return exportStl(assembly)
 }
 
 export async function convertMesh(
@@ -67,10 +60,10 @@ export async function convertMesh(
   if (format === "step") return convertStep(file)
   if (format === "3mf") {
     const { read3mfGeometry } = await import("./three-mf-geometry")
-    return binaryStl(read3mfGeometry(await file.arrayBuffer()))
+    return exportStl(read3mfGeometry(await file.arrayBuffer()))
   }
   const model = await readMeshFile(file, format)
-  if (format === "obj") return binaryStl(model)
+  if (format === "obj") return exportStl(model)
   const mesh = model as Mesh
   if (options?.target === "3mf") {
     const [{ export3mf }, { analyzeMesh }] = await Promise.all([

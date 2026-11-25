@@ -21,3 +21,5 @@ STL describes the surface of a part with triangles. For a Wavefront file with a 
 Use the [STEP to STL Converter](../step-to-stl-converter/) to export mesh geometry from an original STEP or STP CAD model.
 
 Use the [STL to 3MF Converter](../stl-to-3mf-converter/) to record the model’s physical unit in a 3MF file.
+
+Use [STL Mesh Repair](../stl-mesh-repair/) to remove duplicate and zero-area faces, correct clear orientation issues, and check what still needs attention.

@@ -20,3 +20,5 @@ Lo strumento conta le posizioni esattamente coincidenti come un unico vertice. I
 ## Ispezionare o convertire il modello
 
 Usa il [Visualizzatore STL](../stl-viewer/) o il [Visualizzatore OBJ](../obj-viewer/) per esaminare il modello in 3D, anche in modalità wireframe. Se il prossimo strumento richiede un file STL, usa il [Convertitore da OBJ a STL](../obj-to-stl-converter/).
+
+Se il rapporto di un STL mostra problemi di topologia, scegli **Ripara STL** per lavorare sullo stesso file. Lo strumento di [Riparazione mesh STL](../stl-mesh-repair/) confronta anche le facce duplicate o con area nulla, l’orientamento delle facce e i problemi di topologia rimanenti prima di scaricare un nuovo STL.

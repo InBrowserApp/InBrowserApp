@@ -1,0 +1,16 @@
+{
+  "action": "Baiki STL",
+  "drop": "Letakkan fail STL di sini",
+  "working": "Membaiki jejaring…",
+  "failed": "Fail STL ini tidak dapat dibaca. Buka fail STL ASCII atau binari yang sah.",
+  "result": "Hasil pembaikan",
+  "previous": "Hasil pembaikan sebelumnya",
+  "before": "Sebelum",
+  "after": "Selepas",
+  "flipped": "Muka yang orientasinya diubah: {count}",
+  "complete": "Jejaring yang dibaiki lulus semakan topologi ini.",
+  "remaining": "Beberapa masalah topologi masih perlu ditangani.",
+  "unchanged": "Tiada muka yang boleh dibaiki ditemukan.",
+  "empty": "Tiada segi tiga dengan luas melebihi sifar yang tinggal untuk dieksport.",
+  "download": "Muat turun STL"
+}

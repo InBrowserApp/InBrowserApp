@@ -1,0 +1,4 @@
+{
+  "name": "Reparera STL-nät",
+  "description": "Reparera binära STL-filer och STL-filer i ASCII-format i webbläsaren. Ta bort dubbla trianglar och trianglar utan area, åtgärda tydliga orienteringsfel och jämför topologin före nedladdning."
+}

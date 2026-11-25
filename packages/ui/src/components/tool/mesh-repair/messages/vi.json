@@ -1,0 +1,16 @@
+{
+  "action": "Sửa STL",
+  "drop": "Thả tệp STL vào đây",
+  "working": "Đang sửa lưới…",
+  "failed": "Không đọc được tệp STL này. Hãy mở tệp STL hợp lệ ở dạng ASCII hoặc nhị phân.",
+  "result": "Kết quả sửa lưới",
+  "previous": "Kết quả sửa trước",
+  "before": "Trước",
+  "after": "Sau",
+  "flipped": "Số mặt đã đổi hướng: {count}",
+  "complete": "Lưới đã sửa vượt qua các bước kiểm tra tô pô này.",
+  "remaining": "Một số lỗi tô pô vẫn cần xử lý.",
+  "unchanged": "Không tìm thấy mặt nào có thể sửa.",
+  "empty": "Không còn tam giác nào có diện tích để xuất.",
+  "download": "Tải xuống STL"
+}

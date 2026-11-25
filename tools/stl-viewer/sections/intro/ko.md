@@ -21,3 +21,5 @@ STL은 삼각형으로 부품의 표면을 표현합니다. 재질 라이브러�
 [STEP → STL 변환기](../step-to-stl-converter/)를 사용해 원본 STEP 또는 STP CAD 모델에서 메시 형상을 내보내세요.
 
 [STL → 3MF 변환기](../stl-to-3mf-converter/)를 사용해 모델의 실제 단위를 3MF 파일에 기록하세요.
+
+[STL 메시 복구](../stl-mesh-repair/)를 사용해 중복 면과 면적이 0인 면을 제거하고 명확한 방향 문제를 수정한 후 남은 문제를 확인하세요.

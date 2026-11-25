@@ -21,3 +21,5 @@ STL beschreibt die Oberfläche eines Bauteils mit Dreiecken. Für eine Wavefront
 Nutze den [STEP-zu-STL-Konverter](../step-to-stl-converter/), um ein Dreiecksnetz aus einem ursprünglichen STEP- oder STP-CAD-Modell zu exportieren.
 
 Nutze den [STL-zu-3MF-Konverter](../stl-to-3mf-converter/), um die Maßeinheit des Modells in einer 3MF-Datei zu speichern.
+
+Entferne mit der [STL-Netzreparatur](../stl-mesh-repair/) doppelte Flächen und Flächen mit einem Flächeninhalt von null, korrigiere eindeutige Ausrichtungsfehler und prüfe, was noch zu beheben ist.

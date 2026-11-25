@@ -20,3 +20,5 @@ Verktyget räknar positioner som sammanfaller exakt som ett enda hörn. Skal rä
 ## Granska eller konvertera modellen
 
 Använd [STL-visaren](../stl-viewer/) eller [OBJ-visaren](../obj-viewer/) för att granska modellen i 3D, även som trådram. Använd [OBJ till STL-konverteraren](../obj-to-stl-converter/) om nästa verktyg behöver en STL-fil.
+
+Om en STL-kontroll hittar topologiproblem väljer du **Reparera STL** för att arbeta vidare med samma fil. På sidan [Reparera STL-nät](../stl-mesh-repair/) kan du även jämföra dubbla ytor, ytor utan area, ytornas orientering och kvarstående topologiproblem innan du laddar ner en ny STL-fil.

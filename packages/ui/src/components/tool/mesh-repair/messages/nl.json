@@ -1,0 +1,16 @@
+{
+  "action": "STL repareren",
+  "drop": "Sleep een STL-bestand hierheen",
+  "working": "Net wordt gerepareerd…",
+  "failed": "Het STL-bestand kon niet worden gelezen. Open een geldig ASCII- of binair STL-bestand.",
+  "result": "Reparatieresultaten",
+  "previous": "Vorige reparatie",
+  "before": "Voor",
+  "after": "Na",
+  "flipped": "Vlakken met aangepaste oriëntatie: {count}",
+  "complete": "Het gerepareerde net doorstaat deze topologiecontroles.",
+  "remaining": "Sommige topologieproblemen vragen nog aandacht.",
+  "unchanged": "Er zijn geen vlakken gevonden die dit gereedschap kan repareren.",
+  "empty": "Er blijven geen driehoeken met oppervlakte over om te exporteren.",
+  "download": "STL downloaden"
+}

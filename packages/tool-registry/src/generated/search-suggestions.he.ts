@@ -1919,6 +1919,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "תיקון רשת STL",
+    slug: "stl-mesh-repair",
+  },
+  {
+    category: "3d-cad",
     name: "ממיר STL ל־3MF",
     slug: "stl-to-3mf-converter",
   },

@@ -21,3 +21,5 @@ STL representa la superficie de una pieza mediante triángulos. Para abrir un ar
 Usa el [Conversor de STEP a STL](../step-to-stl-converter/) para exportar la malla de un modelo CAD original en STEP o STP.
 
 Usa el [Conversor de STL a 3MF](../stl-to-3mf-converter/) para guardar la unidad de medida del modelo en un archivo 3MF.
+
+Usa la herramienta de [Reparación de mallas STL](../stl-mesh-repair/) para eliminar caras duplicadas o de área cero, corregir problemas claros de orientación y comprobar qué queda por solucionar.

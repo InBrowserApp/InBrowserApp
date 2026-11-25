@@ -1,0 +1,4 @@
+{
+  "name": "Réparation de maillages STL",
+  "description": "Réparez des fichiers STL binaires ou ASCII dans votre navigateur. Supprimez les triangles en double ou d’aire nulle, corrigez les orientations clairement incohérentes et comparez la topologie avant de télécharger."
+}

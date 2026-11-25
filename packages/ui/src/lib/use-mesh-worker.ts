@@ -7,7 +7,7 @@ export function useMeshWorker<Output, Settings = undefined>(
   createWorker: () => Worker,
   buildMessage: (file: File, settings?: Settings) => unknown = (file) => file
 ) {
-  type Result = { name: string; data: Output }
+  type Result = { file: File; data: Output }
   const active = useRef<Request>(null)
   const [status, setStatus] = useState<"working" | "failed">()
   const [result, setResult] = useState<Result>()
@@ -40,7 +40,7 @@ export function useMeshWorker<Output, Settings = undefined>(
       const worker = createWorker()
       request.worker = worker
       worker.onmessage = ({ data }: MessageEvent<Output | null>) =>
-        finish(data === null ? undefined : { name: file.name, data })
+        finish(data === null ? undefined : { file, data })
       worker.onerror = () => finish()
       worker.postMessage(buildMessage(file, settings))
     } catch {

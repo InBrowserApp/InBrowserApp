@@ -1,0 +1,16 @@
+{
+  "action": "Perbaiki STL",
+  "drop": "Letakkan file STL di sini",
+  "working": "Memperbaiki mesh…",
+  "failed": "STL ini tidak dapat dibaca. Buka file STL ASCII atau biner yang valid.",
+  "result": "Hasil perbaikan",
+  "previous": "Hasil perbaikan sebelumnya",
+  "before": "Sebelum",
+  "after": "Sesudah",
+  "flipped": "Muka yang diubah orientasinya: {count}",
+  "complete": "Mesh yang telah diperbaiki lulus pemeriksaan topologi ini.",
+  "remaining": "Beberapa masalah topologi masih perlu ditangani.",
+  "unchanged": "Tidak ditemukan muka yang dapat diperbaiki.",
+  "empty": "Tidak ada lagi segitiga dengan luas di atas nol yang dapat diekspor.",
+  "download": "Unduh STL"
+}

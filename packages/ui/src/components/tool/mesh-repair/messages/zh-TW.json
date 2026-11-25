@@ -1,0 +1,16 @@
+{
+  "action": "修復 STL",
+  "drop": "將 STL 檔案拖放到這裡",
+  "working": "正在修復網格…",
+  "failed": "無法讀取此 STL。請開啟有效的 ASCII 或二進位 STL 檔案。",
+  "result": "修復結果",
+  "previous": "上一次修復",
+  "before": "修復前",
+  "after": "修復後",
+  "flipped": "已調整方向的面：{count}",
+  "complete": "修復後的網格通過這些拓撲檢查。",
+  "remaining": "仍有一些拓撲問題需要處理。",
+  "unchanged": "找不到可修復的面。",
+  "empty": "沒有可匯出的非零面積三角形。",
+  "download": "下載 STL"
+}

@@ -1,0 +1,16 @@
+{
+  "action": "Reparer STL",
+  "drop": "Slipp en STL-fil her",
+  "working": "Reparerer nettet …",
+  "failed": "Kunne ikke lese STL-filen. Åpne en gyldig STL-fil i ASCII- eller binærformat.",
+  "result": "Reparasjonsresultater",
+  "previous": "Forrige reparasjon",
+  "before": "Før",
+  "after": "Etter",
+  "flipped": "Flater med endret orientering: {count}",
+  "complete": "Det reparerte nettet består disse topologikontrollene.",
+  "remaining": "Noen topologiproblemer må fortsatt løses.",
+  "unchanged": "Fant ingen flater som verktøyet kan reparere.",
+  "empty": "Det er ingen trekanter med areal igjen å eksportere.",
+  "download": "Last ned STL"
+}

@@ -1,0 +1,16 @@
+{
+  "action": "Reparera STL",
+  "drop": "Släpp en STL-fil här",
+  "working": "Reparerar nätet…",
+  "failed": "Det gick inte att läsa STL-filen. Öppna en giltig STL-fil i ASCII- eller binärformat.",
+  "result": "Reparationsresultat",
+  "previous": "Föregående reparation",
+  "before": "Före",
+  "after": "Efter",
+  "flipped": "Omorienterade ytor: {count}",
+  "complete": "Det reparerade nätet klarar de här topologikontrollerna.",
+  "remaining": "Vissa topologiproblem behöver fortfarande åtgärdas.",
+  "unchanged": "Inga ytor som verktyget kan reparera hittades.",
+  "empty": "Det finns inga trianglar med area kvar att exportera.",
+  "download": "Ladda ner STL"
+}

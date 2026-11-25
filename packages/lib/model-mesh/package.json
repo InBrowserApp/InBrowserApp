@@ -12,6 +12,7 @@
     "./convert": "./src/convert.ts",
     "./mesh-file": "./src/mesh-file.ts",
     "./inspect": "./src/inspect.ts",
+    "./repair": "./src/repair.ts",
     "./cad": "./src/cad.ts",
     "./cad-licenses": "./src/cad-licenses.ts",
     "./step-example": "./src/step-example.ts"

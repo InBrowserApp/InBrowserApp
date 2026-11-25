@@ -21,3 +21,5 @@ STL beschrijft het oppervlak van een onderdeel met driehoeken. Gebruik de [OBJ-v
 Gebruik de [STEP naar STL-converter](../step-to-stl-converter/) om een driehoeksnet uit een origineel STEP- of STP-model te exporteren.
 
 Gebruik de [STL naar 3MF-converter](../stl-to-3mf-converter/) om de maateenheid van het model op te slaan in een 3MF-bestand.
+
+Gebruik [STL-netreparatie](../stl-mesh-repair/) om dubbele vlakken en vlakken zonder oppervlakte te verwijderen, duidelijke oriëntatiefouten te herstellen en te zien wat nog aandacht vraagt.

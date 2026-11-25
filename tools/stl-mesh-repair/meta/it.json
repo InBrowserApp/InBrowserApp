@@ -1,0 +1,4 @@
+{
+  "name": "Riparazione mesh STL",
+  "description": "Ripara file STL binari o ASCII nel browser. Rimuovi i triangoli duplicati o con area nulla, correggi i problemi evidenti di orientamento delle facce e confronta la topologia prima di scaricare."
+}

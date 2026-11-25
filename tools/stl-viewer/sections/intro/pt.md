@@ -21,3 +21,5 @@ O STL representa a superfície de uma peça com triângulos. Para abrir um arqui
 Use o [Conversor de STEP para STL](../step-to-stl-converter/) para exportar a malha de um modelo CAD original em STEP ou STP.
 
 Use o [Conversor de STL para 3MF](../stl-to-3mf-converter/) para registrar a unidade de medida do modelo em um arquivo 3MF.
+
+Use a ferramenta de [Reparo de malhas STL](../stl-mesh-repair/) para remover faces duplicadas ou de área zero, corrigir problemas claros de orientação e identificar o que ainda precisa de reparo.

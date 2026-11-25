@@ -1,0 +1,16 @@
+{
+  "action": "Ripara STL",
+  "drop": "Trascina qui un file STL",
+  "working": "Riparazione della mesh…",
+  "failed": "Impossibile leggere il file STL. Apri un file STL ASCII o binario valido.",
+  "result": "Risultati della riparazione",
+  "previous": "Riparazione precedente",
+  "before": "Prima",
+  "after": "Dopo",
+  "flipped": "Facce riorientate: {count}",
+  "complete": "La mesh riparata supera queste verifiche della topologia.",
+  "remaining": "Restano alcuni problemi di topologia da risolvere.",
+  "unchanged": "Non sono state trovate facce da riparare.",
+  "empty": "Non restano triangoli con area diversa da zero da esportare.",
+  "download": "Scarica STL"
+}
