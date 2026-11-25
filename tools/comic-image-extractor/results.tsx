@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { failureMessage } from "@workspace/comic/errors"
 import type { Comic } from "@workspace/comic/types"
+import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import {
   Alert,
   AlertDescription,
@@ -54,6 +55,10 @@ export function Results({
   const end = Math.min(start + pageGroupSize, total)
   const number = useMemo(() => new Intl.NumberFormat(lang), [lang])
   const single = selected.size === 1
+  const canSelectAll = !busy && selected.size < selectable.length
+  const canClear = !busy && selected.size > 0
+  const canGoBack = !busy && start > 0
+  const canGoNext = !busy && end < total
 
   useEffect(() => () => active.current?.abort(), [])
 
@@ -126,18 +131,18 @@ export function Results({
             <Button
               size="sm"
               variant="ghost"
-              className="min-h-11 sm:min-h-8"
-              disabled={busy || selected.size === selectable.length}
-              onClick={() => selectPages(selectable)}
+              className="min-h-11 aria-disabled:pointer-events-none aria-disabled:opacity-50 sm:min-h-8"
+              aria-disabled={!canSelectAll}
+              onClick={canSelectAll ? () => selectPages(selectable) : undefined}
             >
               {m.selectAll}
             </Button>
             <Button
               size="sm"
               variant="ghost"
-              className="min-h-11 sm:min-h-8"
-              disabled={busy || !selected.size}
-              onClick={() => selectPages([])}
+              className="min-h-11 aria-disabled:pointer-events-none aria-disabled:opacity-50 sm:min-h-8"
+              aria-disabled={!canClear}
+              onClick={canClear ? () => selectPages([]) : undefined}
             >
               {m.clearSelection}
             </Button>
@@ -204,32 +209,33 @@ export function Results({
               .replace("{total}", number.format(total))}
           </p>
           <div className="flex gap-1">
-            <Button
-              size="icon"
+            <DocumentIconButton
+              label={m.previous}
               variant="outline"
-              className="size-11 sm:size-8"
-              aria-label={m.previous}
-              disabled={busy || start === 0}
-              onClick={() => setStart(start - pageGroupSize)}
+              className="aria-disabled:pointer-events-none aria-disabled:opacity-50 max-sm:size-11 sm:size-8"
+              aria-disabled={!canGoBack}
+              onClick={
+                canGoBack ? () => setStart(start - pageGroupSize) : undefined
+              }
             >
               <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
-            </Button>
-            <Button
-              size="icon"
+            </DocumentIconButton>
+            <DocumentIconButton
+              label={m.next}
               variant="outline"
-              className="size-11 sm:size-8"
-              aria-label={m.next}
-              disabled={busy || end === total}
-              onClick={() => setStart(end)}
+              className="aria-disabled:pointer-events-none aria-disabled:opacity-50 max-sm:size-11 sm:size-8"
+              aria-disabled={!canGoNext}
+              onClick={canGoNext ? () => setStart(end) : undefined}
             >
               <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
-            </Button>
+            </DocumentIconButton>
           </div>
         </div>
       ) : (
         <div className="h-4" />
       )}
       <PageGrid
+        key={start}
         comic={comic}
         start={start}
         selected={selected}

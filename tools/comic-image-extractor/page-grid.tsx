@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { conversionFailure } from "@workspace/comic/errors"
 import type { Comic, ComicPage } from "@workspace/comic/types"
 import { Check, ImageIcon } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
@@ -6,6 +7,10 @@ import { canRead } from "./types"
 import type { Messages } from "./types"
 
 export const pageGroupSize = 12
+type Preview =
+  | { url: string }
+  | { problem: "encryptedPage" | "previewUnavailable" }
+type Previews = Partial<Record<number, Preview>>
 
 export function PageGrid({
   comic,
@@ -24,36 +29,49 @@ export function PageGrid({
   messages: Messages
   number: Intl.NumberFormat
 }) {
-  const [previews, setPreviews] = useState<
-    Partial<Record<number, string | false>>
-  >({})
+  const [previews, setPreviews] = useState<Previews>({})
+  const loaded = useRef<Previews>({})
 
   useEffect(() => {
+    return () => {
+      for (const preview of Object.values(loaded.current))
+        if (preview && "url" in preview) URL.revokeObjectURL(preview.url)
+      loaded.current = {}
+    }
+  }, [])
+
+  useEffect(() => {
+    if (busy) return
     const controller = new AbortController()
     const { signal } = controller
-    const urls: string[] = []
-    setPreviews({})
     const end = Math.min(start + pageGroupSize, comic.pages.length)
-    for (let index = start; index < end; index++) {
-      if (!canRead(comic.pages[index]!)) continue
-      void comic.read(index, signal).then(
-        (blob) => {
-          if (signal.aborted) return
-          const url = URL.createObjectURL(blob)
-          urls.push(url)
-          setPreviews((current) => ({ ...current, [index]: url }))
-        },
-        () => {
-          if (!signal.aborted)
-            setPreviews((current) => ({ ...current, [index]: false }))
-        }
-      )
+    async function load() {
+      for (let index = start; index < end; index++) {
+        if (
+          loaded.current[index] !== undefined ||
+          !canRead(comic.pages[index]!)
+        )
+          continue
+        const result = await comic
+          .read(index, signal)
+          .catch((reason: unknown) => conversionFailure(reason).code)
+        if (signal.aborted) return
+        const preview: Preview =
+          typeof result === "string"
+            ? {
+                problem:
+                  result === "encrypted"
+                    ? "encryptedPage"
+                    : "previewUnavailable",
+              }
+            : { url: URL.createObjectURL(result) }
+        loaded.current = { ...loaded.current, [index]: preview }
+        setPreviews(loaded.current)
+      }
     }
-    return () => {
-      controller.abort()
-      urls.forEach((url) => URL.revokeObjectURL(url))
-    }
-  }, [comic, start])
+    void load()
+    return () => controller.abort()
+  }, [busy, comic, start])
 
   return (
     <ul className="grid grid-cols-2 gap-3 px-4 pb-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
@@ -89,7 +107,7 @@ function PageTile({
 }: {
   page: ComicPage
   label: string
-  preview?: string | false
+  preview?: Preview
   selected: boolean
   busy: boolean
   onToggle: () => void
@@ -98,11 +116,14 @@ function PageTile({
   const [broken, setBroken] = useState(false)
   const status = page.status
   const unavailable = status !== "unchecked" && status !== "ready"
+  const image = preview && "url" in preview ? preview.url : undefined
   const problem = unavailable
     ? m[status]
-    : preview === false || broken
-      ? m.previewUnavailable
-      : undefined
+    : preview && "problem" in preview
+      ? m[preview.problem]
+      : broken
+        ? m.previewUnavailable
+        : undefined
 
   return (
     <button
@@ -120,9 +141,9 @@ function PageTile({
       )}
     >
       <span className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-t-[inherit] bg-muted/60 p-2">
-        {preview && !broken ? (
+        {image && !broken ? (
           <img
-            src={preview}
+            src={image}
             alt=""
             loading="lazy"
             decoding="async"
