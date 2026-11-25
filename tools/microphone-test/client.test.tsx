@@ -194,13 +194,17 @@ describe("MicrophoneTest", () => {
   })
 
   it("only plays the latest channel when audio resumes after a new choice", async () => {
-    const pending = Promise.withResolvers<void>()
-    audio.context.resume.mockReturnValueOnce(pending.promise)
+    let resume!: () => void
+    audio.context.resume.mockReturnValueOnce(
+      new Promise<void>((resolve) => {
+        resume = resolve
+      })
+    )
     render(<MicrophoneTest messages={messages} />)
 
     click(messages.left)
     await act(async () => click(messages.right))
-    await act(async () => pending.resolve())
+    await act(async () => resume())
 
     expect(audio.panner.pan.value).toBe(1)
     expect(audio.oscillator.start).toHaveBeenCalledOnce()
