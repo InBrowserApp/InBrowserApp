@@ -46652,6 +46652,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "unicode-normalizer",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "unicode",
+      "normalization",
+      "nfc",
+      "nfd",
+      "nfkc",
+      "nfkd",
+      "code-points",
+      "combining-marks",
+      "full-width",
+    ],
+    locales: {
+      ar: {
+        name: "أداة تطبيع نصوص Unicode",
+        description:
+          "طبّع نصوص Unicode إلى NFC أو NFD أو NFKC أو NFKD. قارن نقاط الترميز وانسخ النتيجة مباشرة من متصفحك.",
+      },
+      de: {
+        name: "Unicode-Normalisierung",
+        description:
+          "Normalisiere eingefügten Unicode-Text in NFC, NFD, NFKC oder NFKD. Vergleiche Codepunkte und kopiere das Ergebnis direkt im Browser.",
+      },
+      en: {
+        name: "Unicode Normalizer",
+        description:
+          "Normalize pasted Unicode text to NFC, NFD, NFKC, or NFKD. Compare code points and copy the result directly in your browser.",
+      },
+      es: {
+        name: "Normalizador Unicode",
+        description:
+          "Normaliza texto Unicode a NFC, NFD, NFKC o NFKD. Compara los puntos de código y copia el resultado directamente en tu navegador.",
+      },
+      fr: {
+        name: "Normaliseur Unicode",
+        description:
+          "Normalisez du texte Unicode en NFC, NFD, NFKC ou NFKD. Comparez les points de code et copiez le résultat directement dans votre navigateur.",
+      },
+      he: {
+        name: "נרמול טקסט Unicode",
+        description:
+          "נרמלו טקסט Unicode לפי NFC, NFD, NFKC או NFKD. השוו נקודות קוד והעתיקו את התוצאה ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "यूनिकोड नॉर्मलाइज़र",
+        description:
+          "पेस्ट किए गए यूनिकोड टेक्स्ट को NFC, NFD, NFKC या NFKD रूप में बदलें। कोड पॉइंट की तुलना करें और नतीजा सीधे ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Alat Normalisasi Unicode",
+        description:
+          "Normalisasi teks Unicode ke NFC, NFD, NFKC, atau NFKD. Bandingkan titik kode dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Normalizzatore Unicode",
+        description:
+          "Normalizza il testo Unicode in NFC, NFD, NFKC o NFKD. Confronta i punti di codice e copia il risultato direttamente dal browser.",
+      },
+      ja: {
+        name: "Unicode 正規化ツール",
+        description:
+          "入力した Unicode テキストを NFC、NFD、NFKC、NFKD に正規化します。ブラウザーでコードポイントを比較し、結果をコピーできます。",
+      },
+      ko: {
+        name: "유니코드 정규화 도구",
+        description:
+          "붙여넣은 유니코드 텍스트를 NFC, NFD, NFKC 또는 NFKD로 정규화합니다. 브라우저에서 코드 포인트를 비교하고 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Alat Penormalan Unicode",
+        description:
+          "Normalkan teks Unicode kepada NFC, NFD, NFKC atau NFKD. Bandingkan titik kod dan salin hasil terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Unicode-normalisatie",
+        description:
+          "Normaliseer geplakte Unicode-tekst met NFC, NFD, NFKC of NFKD. Vergelijk codepunten en kopieer het resultaat rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Unicode-normalisering",
+        description:
+          "Normaliser innlimt Unicode-tekst til NFC, NFD, NFKC eller NFKD. Sammenlign kodepunkter og kopier resultatet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja Unicode",
+        description:
+          "Normalizuj wklejony tekst Unicode do postaci NFC, NFD, NFKC lub NFKD. Porównaj punkty kodowe i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador Unicode",
+        description:
+          "Normalize texto Unicode em NFC, NFD, NFKC ou NFKD. Compare os pontos de código e copie o resultado diretamente no navegador.",
+      },
+      ru: {
+        name: "Нормализация Unicode",
+        description:
+          "Нормализуйте текст Unicode в форму NFC, NFD, NFKC или NFKD. Сравните кодовые точки и скопируйте результат прямо в браузере.",
+      },
+      sv: {
+        name: "Unicode-normalisering",
+        description:
+          "Normalisera inklistrad Unicode-text till NFC, NFD, NFKC eller NFKD. Jämför kodpunkter och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือปรับมาตรฐาน Unicode",
+        description:
+          "ปรับข้อความ Unicode ที่วางให้เป็น NFC, NFD, NFKC หรือ NFKD แล้วเปรียบเทียบจุดรหัสและคัดลอกผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Unicode Normalleştirme",
+        description:
+          "Yapıştırdığınız Unicode metni NFC, NFD, NFKC veya NFKD biçimine dönüştürün. Kod noktalarını karşılaştırıp sonucu doğrudan tarayıcınızdan kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuẩn hóa Unicode",
+        description:
+          "Chuẩn hóa văn bản Unicode sang NFC, NFD, NFKC hoặc NFKD. So sánh điểm mã và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Unicode 规范化工具",
+        description:
+          "将粘贴的 Unicode 文本规范化为 NFC、NFD、NFKC 或 NFKD。在浏览器中比较码位并复制结果。",
+      },
+      "zh-TW": {
+        name: "Unicode 正規化工具",
+        description:
+          "將貼上的 Unicode 文字正規化為 NFC、NFD、NFKC 或 NFKD。在瀏覽器中比較碼位並複製結果。",
+      },
+    },
+  },
+  {
     slug: "unicode-punycode-converter",
     category: "network",
     icon: "network",
@@ -98738,6 +98871,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Unicode 不可見字元檢查",
         description: "偵測零寬、雙向控制與特殊空白字元，並匯出清理後的版本。",
+      },
+    },
+  },
+  "unicode-normalizer": {
+    slug: "unicode-normalizer",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "unicode",
+      "normalization",
+      "nfc",
+      "nfd",
+      "nfkc",
+      "nfkd",
+      "code-points",
+      "combining-marks",
+      "full-width",
+    ],
+    locales: {
+      ar: {
+        name: "أداة تطبيع نصوص Unicode",
+        description:
+          "طبّع نصوص Unicode إلى NFC أو NFD أو NFKC أو NFKD. قارن نقاط الترميز وانسخ النتيجة مباشرة من متصفحك.",
+      },
+      de: {
+        name: "Unicode-Normalisierung",
+        description:
+          "Normalisiere eingefügten Unicode-Text in NFC, NFD, NFKC oder NFKD. Vergleiche Codepunkte und kopiere das Ergebnis direkt im Browser.",
+      },
+      en: {
+        name: "Unicode Normalizer",
+        description:
+          "Normalize pasted Unicode text to NFC, NFD, NFKC, or NFKD. Compare code points and copy the result directly in your browser.",
+      },
+      es: {
+        name: "Normalizador Unicode",
+        description:
+          "Normaliza texto Unicode a NFC, NFD, NFKC o NFKD. Compara los puntos de código y copia el resultado directamente en tu navegador.",
+      },
+      fr: {
+        name: "Normaliseur Unicode",
+        description:
+          "Normalisez du texte Unicode en NFC, NFD, NFKC ou NFKD. Comparez les points de code et copiez le résultat directement dans votre navigateur.",
+      },
+      he: {
+        name: "נרמול טקסט Unicode",
+        description:
+          "נרמלו טקסט Unicode לפי NFC, NFD, NFKC או NFKD. השוו נקודות קוד והעתיקו את התוצאה ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "यूनिकोड नॉर्मलाइज़र",
+        description:
+          "पेस्ट किए गए यूनिकोड टेक्स्ट को NFC, NFD, NFKC या NFKD रूप में बदलें। कोड पॉइंट की तुलना करें और नतीजा सीधे ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Alat Normalisasi Unicode",
+        description:
+          "Normalisasi teks Unicode ke NFC, NFD, NFKC, atau NFKD. Bandingkan titik kode dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Normalizzatore Unicode",
+        description:
+          "Normalizza il testo Unicode in NFC, NFD, NFKC o NFKD. Confronta i punti di codice e copia il risultato direttamente dal browser.",
+      },
+      ja: {
+        name: "Unicode 正規化ツール",
+        description:
+          "入力した Unicode テキストを NFC、NFD、NFKC、NFKD に正規化します。ブラウザーでコードポイントを比較し、結果をコピーできます。",
+      },
+      ko: {
+        name: "유니코드 정규화 도구",
+        description:
+          "붙여넣은 유니코드 텍스트를 NFC, NFD, NFKC 또는 NFKD로 정규화합니다. 브라우저에서 코드 포인트를 비교하고 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Alat Penormalan Unicode",
+        description:
+          "Normalkan teks Unicode kepada NFC, NFD, NFKC atau NFKD. Bandingkan titik kod dan salin hasil terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Unicode-normalisatie",
+        description:
+          "Normaliseer geplakte Unicode-tekst met NFC, NFD, NFKC of NFKD. Vergelijk codepunten en kopieer het resultaat rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Unicode-normalisering",
+        description:
+          "Normaliser innlimt Unicode-tekst til NFC, NFD, NFKC eller NFKD. Sammenlign kodepunkter og kopier resultatet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja Unicode",
+        description:
+          "Normalizuj wklejony tekst Unicode do postaci NFC, NFD, NFKC lub NFKD. Porównaj punkty kodowe i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador Unicode",
+        description:
+          "Normalize texto Unicode em NFC, NFD, NFKC ou NFKD. Compare os pontos de código e copie o resultado diretamente no navegador.",
+      },
+      ru: {
+        name: "Нормализация Unicode",
+        description:
+          "Нормализуйте текст Unicode в форму NFC, NFD, NFKC или NFKD. Сравните кодовые точки и скопируйте результат прямо в браузере.",
+      },
+      sv: {
+        name: "Unicode-normalisering",
+        description:
+          "Normalisera inklistrad Unicode-text till NFC, NFD, NFKC eller NFKD. Jämför kodpunkter och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือปรับมาตรฐาน Unicode",
+        description:
+          "ปรับข้อความ Unicode ที่วางให้เป็น NFC, NFD, NFKC หรือ NFKD แล้วเปรียบเทียบจุดรหัสและคัดลอกผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Unicode Normalleştirme",
+        description:
+          "Yapıştırdığınız Unicode metni NFC, NFD, NFKC veya NFKD biçimine dönüştürün. Kod noktalarını karşılaştırıp sonucu doğrudan tarayıcınızdan kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuẩn hóa Unicode",
+        description:
+          "Chuẩn hóa văn bản Unicode sang NFC, NFD, NFKC hoặc NFKD. So sánh điểm mã và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Unicode 规范化工具",
+        description:
+          "将粘贴的 Unicode 文本规范化为 NFC、NFD、NFKC 或 NFKD。在浏览器中比较码位并复制结果。",
+      },
+      "zh-TW": {
+        name: "Unicode 正規化工具",
+        description:
+          "將貼上的 Unicode 文字正規化為 NFC、NFD、NFKC 或 NFKD。在瀏覽器中比較碼位並複製結果。",
       },
     },
   },

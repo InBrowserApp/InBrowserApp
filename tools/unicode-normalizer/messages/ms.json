@@ -1,0 +1,20 @@
+{
+  "formLabel": "Bentuk penormalan",
+  "NFC": "Menggabungkan huruf dan tanda aksen jika boleh. Sesuai sebagai pilihan lalai untuk membandingkan dan menyimpan teks.",
+  "NFD": "Mengasingkan huruf daripada tanda aksen gabungan supaya cara teks diwakili dapat diperiksa.",
+  "NFKC": "Menggabungkan huruf dan aksen serta menyeragamkan varian keserasian. Contohnya, Ａ menjadi A, ① menjadi 1 dan ﬁ menjadi fi.",
+  "NFKD": "Mengasingkan huruf daripada tanda aksen gabungan dan menyeragamkan varian keserasian seperti Ａ, ① dan ﬁ.",
+  "inputLabel": "Teks asal",
+  "inputPlaceholder": "Taip atau tampal teks yang ingin dinormalkan",
+  "outputLabel": "Teks yang dinormalkan",
+  "outputPlaceholder": "Hasil dipaparkan di sini",
+  "exampleLabel": "Cuba contoh",
+  "clearLabel": "Kosongkan teks",
+  "copyLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Tidak dapat menyalin",
+  "changedLabel": "Teks berubah",
+  "unchangedLabel": "Teks sudah dalam bentuk ini",
+  "codePointsLabel": "Bandingkan titik kod",
+  "codePointsLimit": "Memaparkan sehingga 40 titik kod pertama bagi setiap teks."
+}

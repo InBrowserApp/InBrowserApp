@@ -1,0 +1,4 @@
+{
+  "name": "Unicode-normalisatie",
+  "description": "Normaliseer geplakte Unicode-tekst met NFC, NFD, NFKC of NFKD. Vergelijk codepunten en kopieer het resultaat rechtstreeks in je browser."
+}

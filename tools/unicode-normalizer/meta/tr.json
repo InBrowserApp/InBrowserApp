@@ -1,0 +1,4 @@
+{
+  "name": "Unicode Normalleştirme",
+  "description": "Yapıştırdığınız Unicode metni NFC, NFD, NFKC veya NFKD biçimine dönüştürün. Kod noktalarını karşılaştırıp sonucu doğrudan tarayıcınızdan kopyalayın."
+}

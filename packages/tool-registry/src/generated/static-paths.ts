@@ -33766,6 +33766,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "de",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "en",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "es",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "he",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "id",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "it",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "no",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "th",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-punycode-converter",
     language: "ar",
   },

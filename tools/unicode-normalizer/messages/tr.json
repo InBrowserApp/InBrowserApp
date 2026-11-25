@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normalleştirme biçimi",
+  "NFC": "Mümkün olduğunda harfleri vurgu işaretleriyle birleştirir. Metin karşılaştırmak ve saklamak için iyi bir varsayılan seçimdir.",
+  "NFD": "Birleştirici vurgu işaretlerini harflerden ayırır. Metnin nasıl temsil edildiğini incelemeyi kolaylaştırır.",
+  "NFKC": "Harfleri vurgu işaretleriyle birleştirir ve uyumluluk karakterlerini eşdeğerleriyle değiştirir. Örneğin Ａ yerine A, ① yerine 1, ﬁ yerine fi kullanır.",
+  "NFKD": "Birleştirici vurgu işaretlerini harflerden ayırır ve Ａ, ①, ﬁ gibi uyumluluk karakterlerini eşdeğerleriyle değiştirir.",
+  "inputLabel": "Özgün metin",
+  "inputPlaceholder": "Normalleştirmek için metin yazın veya yapıştırın",
+  "outputLabel": "Normalleştirilmiş metin",
+  "outputPlaceholder": "Sonuç burada görünür",
+  "exampleLabel": "Örnek dene",
+  "clearLabel": "Temizle",
+  "copyLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "copyFailedLabel": "Kopyalanamadı",
+  "changedLabel": "Metin değişti",
+  "unchangedLabel": "Metin zaten bu biçimde",
+  "codePointsLabel": "Kod noktalarını karşılaştır",
+  "codePointsLimit": "Her metnin ilk 40 kod noktasına kadarını gösterir."
+}

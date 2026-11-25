@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normalisierungsform",
+  "NFC": "Fügt Buchstaben und ihre Akzente zusammen, wo es möglich ist. Eine gute Standardeinstellung zum Vergleichen und Speichern von Text.",
+  "NFD": "Trennt Buchstaben von ihren kombinierenden Akzenten, damit du die Darstellung des Textes genauer prüfen kannst.",
+  "NFKC": "Fügt Buchstaben und Akzente zusammen und vereinheitlicht Kompatibilitätszeichen. So wird aus Ａ ein A, aus ① eine 1 und aus ﬁ die Folge fi.",
+  "NFKD": "Trennt Buchstaben von ihren kombinierenden Akzenten und vereinheitlicht Kompatibilitätszeichen wie Ａ, ① und ﬁ.",
+  "inputLabel": "Originaltext",
+  "inputPlaceholder": "Text zum Normalisieren eingeben oder einfügen",
+  "outputLabel": "Normalisierter Text",
+  "outputPlaceholder": "Hier erscheint das Ergebnis",
+  "exampleLabel": "Beispiel ausprobieren",
+  "clearLabel": "Leeren",
+  "copyLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kopieren fehlgeschlagen",
+  "changedLabel": "Text geändert",
+  "unchangedLabel": "Bereits in dieser Form",
+  "codePointsLabel": "Codepunkte vergleichen",
+  "codePointsLimit": "Pro Text werden bis zu 40 Codepunkte angezeigt."
+}

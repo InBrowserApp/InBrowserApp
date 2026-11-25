@@ -1,0 +1,20 @@
+{
+  "formLabel": "正規化形式",
+  "NFC": "盡可能合併字母與重音符號，適合用於比較和儲存文字。",
+  "NFD": "將字母與組合重音符號分開，方便檢查文字的表示方式。",
+  "NFKC": "合併字母與重音符號，並轉換相容字元。例如，Ａ 變成 A，① 變成 1，ﬁ 變成 fi。",
+  "NFKD": "將字母與組合重音符號分開，並轉換 Ａ、① 和 ﬁ 等相容字元。",
+  "inputLabel": "原始文字",
+  "inputPlaceholder": "輸入或貼上要正規化的文字",
+  "outputLabel": "正規化後的文字",
+  "outputPlaceholder": "結果會顯示在這裡",
+  "exampleLabel": "試用範例",
+  "clearLabel": "清除",
+  "copyLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "copyFailedLabel": "無法複製",
+  "changedLabel": "文字已變更",
+  "unchangedLabel": "已符合此形式",
+  "codePointsLabel": "比較碼位",
+  "codePointsLimit": "每段文字最多顯示 40 個碼位。"
+}

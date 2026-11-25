@@ -1,0 +1,4 @@
+{
+  "name": "Alat Normalisasi Unicode",
+  "description": "Normalisasi teks Unicode ke NFC, NFD, NFKC, atau NFKD. Bandingkan titik kode dan salin hasilnya langsung di peramban."
+}

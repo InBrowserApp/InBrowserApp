@@ -1,0 +1,20 @@
+{
+  "formLabel": "Forma normalizacji",
+  "NFC": "Łączy litery ze znakami diakrytycznymi, gdy to możliwe. Dobry wybór do porównywania i przechowywania tekstu.",
+  "NFD": "Oddziela od liter łączące znaki diakrytyczne, dzięki czemu widać, jak zapisano tekst.",
+  "NFKC": "Łączy litery ze znakami diakrytycznymi i ujednolica warianty zgodności. Na przykład Ａ zmienia się w A, ① w 1, a ﬁ w fi.",
+  "NFKD": "Oddziela od liter łączące znaki diakrytyczne i ujednolica warianty zgodności, takie jak Ａ, ① i ﬁ.",
+  "inputLabel": "Tekst źródłowy",
+  "inputPlaceholder": "Wpisz lub wklej tekst do normalizacji",
+  "outputLabel": "Znormalizowany tekst",
+  "outputPlaceholder": "Tutaj pojawi się wynik",
+  "exampleLabel": "Wypróbuj przykład",
+  "clearLabel": "Wyczyść",
+  "copyLabel": "Skopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "copyFailedLabel": "Nie udało się skopiować",
+  "changedLabel": "Tekst się zmienił",
+  "unchangedLabel": "Tekst ma już tę postać",
+  "codePointsLabel": "Porównaj punkty kodowe",
+  "codePointsLimit": "Podgląd obejmuje do 40 punktów kodowych każdego tekstu."
+}

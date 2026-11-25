@@ -1,0 +1,20 @@
+{
+  "formLabel": "Forma di normalizzazione",
+  "NFC": "Unisce le lettere ai loro accenti quando possibile. È una buona scelta per confrontare e archiviare il testo.",
+  "NFD": "Separa le lettere dagli accenti combinanti per esaminare la rappresentazione del testo.",
+  "NFKC": "Unisce lettere e accenti e uniforma le varianti di compatibilità. Ad esempio, Ａ diventa A, ① diventa 1 e ﬁ diventa fi.",
+  "NFKD": "Separa le lettere dagli accenti combinanti e uniforma le varianti di compatibilità come Ａ, ① e ﬁ.",
+  "inputLabel": "Testo originale",
+  "inputPlaceholder": "Digita o incolla il testo da normalizzare",
+  "outputLabel": "Testo normalizzato",
+  "outputPlaceholder": "Il risultato appare qui",
+  "exampleLabel": "Prova un esempio",
+  "clearLabel": "Cancella",
+  "copyLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "copyFailedLabel": "Copia non riuscita",
+  "changedLabel": "Il testo è cambiato",
+  "unchangedLabel": "Il testo è già in questa forma",
+  "codePointsLabel": "Confronta i punti di codice",
+  "codePointsLimit": "Vengono mostrati fino a 40 punti di codice per ciascun testo."
+}

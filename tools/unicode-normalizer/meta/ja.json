@@ -1,0 +1,4 @@
+{
+  "name": "Unicode 正規化ツール",
+  "description": "入力した Unicode テキストを NFC、NFD、NFKC、NFKD に正規化します。ブラウザーでコードポイントを比較し、結果をコピーできます。"
+}

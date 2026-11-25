@@ -1,0 +1,20 @@
+{
+  "formLabel": "Dạng chuẩn hóa",
+  "NFC": "Gộp chữ cái và dấu khi có thể. Đây là lựa chọn mặc định phù hợp để so sánh và lưu trữ văn bản.",
+  "NFD": "Tách chữ cái khỏi các dấu kết hợp để kiểm tra cách biểu diễn văn bản.",
+  "NFKC": "Gộp chữ cái với dấu và quy các ký tự tương thích về cùng dạng. Ví dụ, Ａ thành A, ① thành 1 và ﬁ thành fi.",
+  "NFKD": "Tách chữ cái khỏi các dấu kết hợp và quy đổi các ký tự tương thích như Ａ, ① và ﬁ.",
+  "inputLabel": "Văn bản gốc",
+  "inputPlaceholder": "Nhập hoặc dán văn bản cần chuẩn hóa",
+  "outputLabel": "Văn bản đã chuẩn hóa",
+  "outputPlaceholder": "Kết quả sẽ hiện ở đây",
+  "exampleLabel": "Thử ví dụ",
+  "clearLabel": "Xóa",
+  "copyLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "copyFailedLabel": "Không sao chép được",
+  "changedLabel": "Văn bản đã thay đổi",
+  "unchangedLabel": "Văn bản đã ở dạng này",
+  "codePointsLabel": "So sánh điểm mã",
+  "codePointsLimit": "Hiển thị tối đa 40 điểm mã đầu tiên của mỗi văn bản."
+}

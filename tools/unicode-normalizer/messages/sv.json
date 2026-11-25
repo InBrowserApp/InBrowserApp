@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normaliseringsform",
+  "NFC": "Slår ihop bokstäver och accenter där det går. Ett bra standardval när du jämför och sparar text.",
+  "NFD": "Skiljer bokstäver från deras kombinerande accenter, så att du kan se hur texten är uppbyggd.",
+  "NFKC": "Slår ihop bokstäver och accenter och omvandlar kompatibilitetstecken. Till exempel blir Ａ till A, ① till 1 och ﬁ till fi.",
+  "NFKD": "Skiljer bokstäver från deras kombinerande accenter och omvandlar kompatibilitetstecken som Ａ, ① och ﬁ.",
+  "inputLabel": "Originaltext",
+  "inputPlaceholder": "Skriv eller klistra in text att normalisera",
+  "outputLabel": "Normaliserad text",
+  "outputPlaceholder": "Resultatet visas här",
+  "exampleLabel": "Prova ett exempel",
+  "clearLabel": "Rensa",
+  "copyLabel": "Kopiera resultatet",
+  "copiedLabel": "Kopierat",
+  "copyFailedLabel": "Kunde inte kopiera",
+  "changedLabel": "Texten ändrades",
+  "unchangedLabel": "Redan i den här formen",
+  "codePointsLabel": "Jämför kodpunkter",
+  "codePointsLimit": "Visar upp till 40 kodpunkter per text."
+}
