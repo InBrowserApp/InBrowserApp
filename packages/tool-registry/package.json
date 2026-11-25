@@ -235,6 +235,7 @@
     "@tool/markdown-previewer": "workspace:*",
     "@tool/markdown-to-html-converter": "workspace:*",
     "@tool/markdown-to-pdf-converter": "workspace:*",
+    "@tool/mbox-viewer": "workspace:*",
     "@tool/md4-hash-text-or-file": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/media-info-viewer": "workspace:*",

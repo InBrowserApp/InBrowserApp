@@ -20978,6 +20978,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mbox-viewer",
+    language: "ar",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "de",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "en",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "es",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "fr",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "he",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "hi",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "id",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "it",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ja",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ko",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ms",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "nl",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "no",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "pl",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "pt",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ru",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "sv",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "th",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "tr",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "vi",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "md4-hash-text-or-file",
     language: "ar",
   },

@@ -1143,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "MBOX 查看器",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "MD4 哈希文本或文件",
     slug: "md4-hash-text-or-file",

@@ -89,6 +89,7 @@ export {
   Map,
   Magnet,
   Mail,
+  Mails,
   MapPin,
   Paperclip,
   MicOff,

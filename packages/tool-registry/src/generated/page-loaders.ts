@@ -283,6 +283,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/markdown-to-html-converter/page"),
   "markdown-to-pdf-converter": () =>
     import("@tool/markdown-to-pdf-converter/page"),
+  "mbox-viewer": () => import("@tool/mbox-viewer/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "media-info-viewer": () => import("@tool/media-info-viewer/page"),
