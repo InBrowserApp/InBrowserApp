@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "Tilfeldig VIN-generator",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "Test av skjermens oppdateringsfrekvens",
     slug: "refresh-rate-test",

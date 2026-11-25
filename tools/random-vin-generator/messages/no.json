@@ -1,0 +1,12 @@
+{
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Kjøretøyidentifikasjonsnumre (VIN)",
+  "placeholder": "Genererte VIN-er vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "copyFailed": "Kopiering mislyktes",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke generere VIN-er. Prøv igjen."
+}

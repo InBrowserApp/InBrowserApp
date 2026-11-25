@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "Rastgele VIN Oluşturucu",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "Ekran Yenileme Hızı Testi",
     slug: "refresh-rate-test",

@@ -1,0 +1,12 @@
+{
+  "quantity": "כמות",
+  "generate": "יצירה",
+  "generating": "יוצר…",
+  "results": "מספרי זיהוי רכב (VIN)",
+  "placeholder": "מספרי ה-VIN שייווצרו יופיעו כאן.",
+  "copy": "העתקת הכול",
+  "copied": "הועתק",
+  "copyFailed": "ההעתקה נכשלה",
+  "download": "הורדת TXT",
+  "error": "לא ניתן ליצור מספרי VIN. נסו שוב."
+}

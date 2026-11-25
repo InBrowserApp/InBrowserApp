@@ -1,0 +1,4 @@
+{
+  "name": "Generator losowych numerów VIN",
+  "description": "Generuj losowe, 17-znakowe numery identyfikacyjne pojazdów z pasującą cyfrą kontrolną do testów. Kopiuj numery VIN grupami lub pobierz plik TXT."
+}

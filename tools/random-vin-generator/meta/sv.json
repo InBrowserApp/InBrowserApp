@@ -1,0 +1,4 @@
+{
+  "name": "Generator för slumpmässiga VIN",
+  "description": "Generera slumpmässiga fordonsidentifieringsnummer med 17 tecken och matchande kontrollsiffra för testning. Kopiera flera VIN eller ladda ner en TXT-fil."
+}

@@ -32478,6 +32478,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-vin-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "de",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "en",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "es",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "he",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "id",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "it",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "no",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "th",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-vin-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "refresh-rate-test",
     language: "ar",
   },

@@ -1,0 +1,12 @@
+{
+  "quantity": "Quantity",
+  "generate": "Generate",
+  "generating": "Generating…",
+  "results": "Vehicle identification numbers (VINs)",
+  "placeholder": "Generated VINs will appear here.",
+  "copy": "Copy all",
+  "copied": "Copied",
+  "copyFailed": "Copy failed",
+  "download": "Download TXT",
+  "error": "Could not generate VINs. Try again."
+}

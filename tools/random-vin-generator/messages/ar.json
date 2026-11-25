@@ -1,0 +1,12 @@
+{
+  "quantity": "العدد",
+  "generate": "إنشاء",
+  "generating": "جارٍ الإنشاء…",
+  "results": "أرقام تعريف المركبات (VIN)",
+  "placeholder": "ستظهر أرقام VIN المُنشأة هنا.",
+  "copy": "نسخ الكل",
+  "copied": "تم النسخ",
+  "copyFailed": "فشل النسخ",
+  "download": "تنزيل TXT",
+  "error": "تعذّر إنشاء أرقام VIN. حاول مرة أخرى."
+}

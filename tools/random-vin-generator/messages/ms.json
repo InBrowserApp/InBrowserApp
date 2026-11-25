@@ -1,0 +1,12 @@
+{
+  "quantity": "Kuantiti",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Nombor pengenalan kenderaan (VIN)",
+  "placeholder": "VIN yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun TXT",
+  "error": "VIN tidak dapat dijana. Cuba lagi."
+}

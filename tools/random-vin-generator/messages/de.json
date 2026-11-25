@@ -1,0 +1,12 @@
+{
+  "quantity": "Anzahl",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Fahrzeug-Identifizierungsnummern (VINs)",
+  "placeholder": "Generierte VINs erscheinen hier.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "TXT herunterladen",
+  "error": "VINs konnten nicht generiert werden. Bitte erneut versuchen."
+}

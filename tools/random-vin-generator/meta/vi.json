@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo VIN ngẫu nhiên",
+  "description": "Tạo mã số nhận dạng xe ngẫu nhiên gồm 17 ký tự với chữ số kiểm tra khớp để thử nghiệm. Sao chép hàng loạt VIN hoặc tải tệp TXT."
+}

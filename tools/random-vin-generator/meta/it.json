@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di VIN casuali",
+  "description": "Genera numeri di identificazione del veicolo casuali di 17 caratteri con cifra di controllo corrispondente per i test. Copia gruppi di VIN o scarica un file TXT."
+}

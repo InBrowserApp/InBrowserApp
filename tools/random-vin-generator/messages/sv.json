@@ -1,0 +1,12 @@
+{
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Fordonsidentifieringsnummer (VIN)",
+  "placeholder": "Genererade VIN visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "copyFailed": "Kopieringen misslyckades",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att generera VIN. Försök igen."
+}

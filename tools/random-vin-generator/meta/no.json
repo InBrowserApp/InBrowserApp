@@ -1,0 +1,4 @@
+{
+  "name": "Tilfeldig VIN-generator",
+  "description": "Generer tilfeldige kjøretøyidentifikasjonsnumre på 17 tegn med riktige kontrollsifre til testing. Kopier flere VIN-er samtidig eller last ned en TXT-fil."
+}

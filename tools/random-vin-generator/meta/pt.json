@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de VIN aleatórios",
+  "description": "Gere números de identificação de veículos com 17 caracteres e dígitos verificadores válidos para testes. Copie VINs em lote ou baixe um arquivo TXT."
+}

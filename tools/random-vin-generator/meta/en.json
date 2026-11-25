@@ -1,0 +1,4 @@
+{
+  "name": "Random VIN Generator",
+  "description": "Generate random 17-character vehicle identification numbers with matching check digits for testing. Copy VINs in batches or download a TXT file."
+}

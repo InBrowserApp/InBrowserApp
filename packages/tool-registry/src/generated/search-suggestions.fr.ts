@@ -1768,6 +1768,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-postal-code-generator",
   },
   {
+    category: "random",
+    name: "Générateur de NIV aléatoires",
+    slug: "random-vin-generator",
+  },
+  {
     category: "misc",
     name: "Test de fréquence de rafraîchissement",
     slug: "refresh-rate-test",

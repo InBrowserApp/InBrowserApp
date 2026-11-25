@@ -1,0 +1,12 @@
+{
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Mã số nhận dạng xe (VIN)",
+  "placeholder": "VIN được tạo sẽ xuất hiện tại đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Sao chép thất bại",
+  "download": "Tải TXT",
+  "error": "Không thể tạo VIN. Vui lòng thử lại."
+}
