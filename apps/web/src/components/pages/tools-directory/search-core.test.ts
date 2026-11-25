@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 
 import { buildSearchSuggestions, rankToolEntries } from "./search-core"
 import type { DirectoryToolEntry } from "@/lib/tool-directory"
@@ -98,6 +98,23 @@ describe("localized directory search", () => {
       "to-pdf",
       "from-pdf",
     ])
+  })
+
+  it("matches contiguous titles and spaced terms without Intl.Segmenter", () => {
+    vi.stubGlobal(
+      "Intl",
+      Object.create(Intl, { Segmenter: { value: undefined } })
+    )
+    try {
+      expect(slugs(rankToolEntries(entries, "jsonformatter", "en"))).toEqual([
+        "json-formatter",
+      ])
+      expect(
+        buildSearchSuggestions(entries, "formatter json", "en")[0]?.entry
+      ).toBe(entries[1])
+    } finally {
+      vi.unstubAllGlobals()
+    }
   })
 
   it("matches alternate Chinese titles through both search entry points", () => {
