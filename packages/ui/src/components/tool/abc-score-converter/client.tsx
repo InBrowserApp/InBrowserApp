@@ -1,4 +1,4 @@
-import { useId, useMemo, useRef, useState } from "react"
+import { useId, useMemo, useState } from "react"
 import type { ScoreImageFormat } from "@workspace/score-export"
 import {
   scorePagePreviewBlob,
@@ -6,22 +6,14 @@ import {
 } from "@workspace/score-export/pages"
 import { ScoreConverterLayout } from "@workspace/ui/components/tool/score-converter-layout"
 import { ScorePagePreview } from "@workspace/ui/components/tool/score-page-preview"
-import {
-  ToolOpenTextFile,
-  useTextFileImport,
-} from "@workspace/ui/components/tool/tool-open-text-file"
-import {
-  ToolPanelCard,
-  ToolPanelCardContent,
-} from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Label } from "@workspace/ui/components/ui/label"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, LoaderCircle } from "@workspace/ui/icons"
 import { useScoreDownload } from "@workspace/ui/lib/use-score-download"
+import { AbcSourceEditor } from "./source-editor"
+import { AbcMidiListen, type ListenMessages } from "./midi-listen"
 import { TuneSelection } from "./tune-selection"
 import { useAbcBook, useAbcArtwork } from "./use-abc"
-import example from "./tune-book.abc?raw"
 
 type Messages = Record<
   | "source"
@@ -56,19 +48,21 @@ type Props = { language: string } & (
       mode: "image"
       messages: Messages & Record<"format" | "downloadZip", string>
     }
+  | {
+      mode: "midi"
+      messages: Messages & ListenMessages & Record<"downloadZip", string>
+    }
 )
 
 export function AbcScoreConverter(props: Props) {
   const { messages: m, language } = props
   const id = useId()
-  const editor = useRef<HTMLTextAreaElement>(null)
   const [source, setSource] = useState("")
   const [filename, setFilename] = useState("")
   const [paper, setPaper] = useState<ScorePaper>("a4")
   const [format, setFormat] = useState<ScoreImageFormat>("png")
+  const [previewIndex, setPreviewIndex] = useState(0)
   const [selected, setSelected] = useState<Set<string>>()
-  const [fileError, setFileError] = useState(false)
-  const importer = useTextFileImport()
   const { status: download, reset, save } = useScoreDownload()
 
   const book = useAbcBook(source)
@@ -84,12 +78,13 @@ export function AbcScoreConverter(props: Props) {
     included,
     props.mode === "pdf" ? paper : undefined
   )
+  const activeIndex = Math.min(previewIndex, (artwork?.length ?? 1) - 1)
+  const activeTune = artwork?.[activeIndex]?.tune
 
   function edit(value: string, name?: string) {
-    importer.cancel()
     reset()
-    setFileError(false)
     setSource(value.replace(/\r\n?/g, "\n"))
+    setPreviewIndex(0)
     if (!value.trim() || name !== undefined) {
       setFilename(name ?? "")
       setSelected(undefined)
@@ -109,8 +104,16 @@ export function AbcScoreConverter(props: Props) {
   function downloadScore() {
     if (!artwork?.length) return
     void save(async () => {
-      const scoreExport = await import("@workspace/score-export")
       const basename = filename.replace(/\.(?:abc|txt)$/i, "") || "abc-score"
+      if (props.mode === "midi") {
+        const { exportAbcMidi } =
+          await import("@workspace/score-export/abc-midi")
+        return exportAbcMidi(
+          artwork.flatMap((image) => (image.tune ? [image.tune] : [])),
+          basename
+        )
+      }
+      const scoreExport = await import("@workspace/score-export")
       if (props.mode === "image")
         return scoreExport.exportScoreImages(artwork, format, basename)
       const title = included?.length === 1 ? included[0]?.title : undefined
@@ -129,104 +132,55 @@ export function AbcScoreConverter(props: Props) {
   else if (!book || (included?.length && !artwork)) notice = m.loading
   else if (!book.length || artwork?.length === 0) notice = m.noNotes
   else if (included?.length === 0) notice = m.noSelection
-  const settingLabel =
-    props.mode === "pdf" ? props.messages.paper : props.messages.format
   const downloadLabel =
-    props.mode === "image" && (artwork?.length ?? 0) > 1
+    props.mode !== "pdf" && (artwork?.length ?? 0) > 1
       ? props.messages.downloadZip
       : m.download
   const allSelected = book?.length === included?.length
 
   return (
     <div className="space-y-4">
-      <ToolPanelCard>
-        <ToolPanelCardContent className="gap-3">
-          <Label htmlFor={`${id}-source`} className="text-base">
-            {m.source}
-          </Label>
-          <div className="flex flex-wrap items-center gap-2 [&_button]:min-h-11 sm:[&_button]:min-h-8">
-            <ToolOpenTextFile
-              accept=".abc,.txt,text/plain"
-              label={m.open}
-              onFile={(file) =>
-                void importer.read(
-                  file,
-                  (text) => edit(text, file.name),
-                  () => setFileError(true)
-                )
-              }
-            />
-            {!source.trim() && (
-              <Button
-                type="button"
-                variant="outline"
-                onClick={(event) => {
-                  edit(example)
-                  if (event.detail === 0)
-                    editor.current?.focus({ preventScroll: true })
-                }}
-              >
-                {m.example}
-              </Button>
-            )}
-            {filename && (
-              <bdi
-                className="max-w-full min-w-0 truncate text-sm text-muted-foreground"
-                title={filename}
-              >
-                {filename}
-              </bdi>
-            )}
-          </div>
-          <Textarea
-            ref={editor}
-            id={`${id}-source`}
-            value={source}
-            onChange={(event) => edit(event.currentTarget.value)}
-            placeholder={m.placeholder}
-            dir="ltr"
-            spellCheck={false}
-            autoCapitalize="off"
-            autoComplete="off"
-            wrap="off"
-            className="![field-sizing:fixed] min-h-40 resize-y font-mono text-sm"
-          />
-          {fileError && (
-            <p role="alert" className="text-sm text-destructive">
-              {m.fileError}
-            </p>
-          )}
-        </ToolPanelCardContent>
-      </ToolPanelCard>
+      <AbcSourceEditor
+        source={source}
+        filename={filename}
+        messages={m}
+        onEdit={edit}
+      />
       <ScoreConverterLayout
         settings={
           <>
-            <div className="grid gap-2">
-              <Label htmlFor={`${id}-setting`}>{settingLabel}</Label>
-              <select
-                id={`${id}-setting`}
-                value={props.mode === "pdf" ? paper : format}
-                onChange={(event) => {
-                  reset()
-                  const value = event.currentTarget.value
-                  if (props.mode === "pdf") setPaper(value as ScorePaper)
-                  else setFormat(value as ScoreImageFormat)
-                }}
-                className="min-h-11 w-full rounded-lg border border-input bg-background px-3 text-sm focus-visible:ring-2 focus-visible:ring-ring sm:min-h-9"
-              >
-                {props.mode === "pdf" ? (
-                  <>
-                    <option value="a4">{props.messages.a4}</option>
-                    <option value="letter">{props.messages.letter}</option>
-                  </>
-                ) : (
-                  <>
-                    <option value="png">PNG</option>
-                    <option value="svg">SVG</option>
-                  </>
-                )}
-              </select>
-            </div>
+            {props.mode !== "midi" && (
+              <div className="grid gap-2">
+                <Label htmlFor={`${id}-setting`}>
+                  {props.mode === "pdf"
+                    ? props.messages.paper
+                    : props.messages.format}
+                </Label>
+                <select
+                  id={`${id}-setting`}
+                  value={props.mode === "pdf" ? paper : format}
+                  onChange={(event) => {
+                    reset()
+                    const value = event.currentTarget.value
+                    if (props.mode === "pdf") setPaper(value as ScorePaper)
+                    else setFormat(value as ScoreImageFormat)
+                  }}
+                  className="min-h-11 w-full rounded-lg border border-input bg-background px-3 text-sm focus-visible:ring-2 focus-visible:ring-ring sm:min-h-9"
+                >
+                  {props.mode === "pdf" ? (
+                    <>
+                      <option value="a4">{props.messages.a4}</option>
+                      <option value="letter">{props.messages.letter}</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="png">PNG</option>
+                      <option value="svg">SVG</option>
+                    </>
+                  )}
+                </select>
+              </div>
+            )}
             {book && book.length > 1 && (
               <TuneSelection
                 book={book}
@@ -239,6 +193,13 @@ export function AbcScoreConverter(props: Props) {
                   setSelected(allSelected ? new Set() : undefined)
                 }}
                 allSelected={allSelected}
+              />
+            )}
+            {props.mode === "midi" && activeTune && (
+              <AbcMidiListen
+                key={activeIndex}
+                tune={activeTune}
+                messages={props.messages}
               />
             )}
             <Button
@@ -270,6 +231,8 @@ export function AbcScoreConverter(props: Props) {
           <ScorePagePreview
             pages={artwork}
             makePreview={previewBlob}
+            activePage={props.mode === "midi" ? activeIndex : undefined}
+            onPageChange={props.mode === "midi" ? setPreviewIndex : undefined}
             language={language}
             messages={m}
           />

@@ -1,0 +1,4 @@
+{
+  "name": "ABC Notation to MIDI Converter",
+  "description": "Convert ABC notation to MIDI. Paste ABC or open an .abc file, preview and listen to a tune, and download a .mid file or a ZIP of selected tunes."
+}

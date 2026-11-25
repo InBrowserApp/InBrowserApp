@@ -28,6 +28,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-to-image-converter",
   },
   {
+    category: "music",
+    name: "ממיר תיווי ABC ל־MIDI",
+    slug: "abc-notation-to-midi-converter",
+  },
+  {
     category: "pdf",
     name: "ממיר תיווי ABC ל־PDF",
     slug: "abc-notation-to-pdf-converter",

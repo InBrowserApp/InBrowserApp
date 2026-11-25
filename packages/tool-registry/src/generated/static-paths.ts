@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "abc-notation-to-midi-converter",
+    language: "ar",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "de",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "en",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "es",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "fr",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "he",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "hi",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "id",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "it",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "ja",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "ko",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "ms",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "nl",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "no",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "pl",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "pt",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "ru",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "sv",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "th",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "tr",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "vi",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "abc-notation-to-midi-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "abc-notation-to-pdf-converter",
     language: "ar",
   },

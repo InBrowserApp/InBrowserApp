@@ -8,10 +8,9 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/midi-audio": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*",
-    "spessasynth_core": "catalog:",
-    "@workspace/pcm-audio": "workspace:*"
+    "@workspace/ui": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

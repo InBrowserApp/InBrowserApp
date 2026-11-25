@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import MidiToWav from "./client"
 import messages from "./messages/en.json"
 
-import type { Response } from "./render.worker"
+import type { Response } from "@workspace/midi-audio/worker-client"
 
 const workers: TestWorker[] = []
 class TestWorker {

@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de notação ABC para MIDI",
+  "description": "Converta a notação ABC em MIDI. Cole o texto ABC ou abra um arquivo .abc, confira a partitura, ouça a melodia e baixe um .mid ou um ZIP com as melodias selecionadas."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "ABC-notasjon til MIDI",
+  "description": "Konverter ABC-notasjon til MIDI. Lim inn ABC-tekst eller åpne en .abc-fil, se notene og lytt til en melodi. Last ned en .mid-fil eller en ZIP-fil med valgte melodier."
+}

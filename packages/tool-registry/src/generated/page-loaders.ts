@@ -10,6 +10,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "abc-notation-previewer": () => import("@tool/abc-notation-previewer/page"),
   "abc-notation-to-image-converter": () =>
     import("@tool/abc-notation-to-image-converter/page"),
+  "abc-notation-to-midi-converter": () =>
+    import("@tool/abc-notation-to-midi-converter/page"),
   "abc-notation-to-pdf-converter": () =>
     import("@tool/abc-notation-to-pdf-converter/page"),
   "adler32-hash-text-or-file": () =>

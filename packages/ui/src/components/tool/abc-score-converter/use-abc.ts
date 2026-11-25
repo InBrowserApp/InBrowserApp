@@ -4,6 +4,7 @@ import type { AbcTune } from "@workspace/score-export/abc"
 import type { ScorePaper } from "@workspace/score-export/pages"
 
 export type BookTune = { key: string; tune: AbcTune }
+type AbcArtwork = ScoreImage & { tune?: AbcTune }
 
 function keyTunes(tunes: AbcTune[]): BookTune[] {
   const occurrences = new Map<string, number>()
@@ -51,7 +52,7 @@ export function useAbcArtwork(
   const [state, setState] = useState<{
     tunes: AbcTune[]
     paper: ScorePaper | undefined
-    artwork: ScoreImage[] | null
+    artwork: AbcArtwork[] | null
   }>()
   useEffect(() => {
     if (!tunes?.length) {

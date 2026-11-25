@@ -1,0 +1,4 @@
+{
+  "name": "ABC 기보법 MIDI 변환기",
+  "description": "ABC 기보법을 MIDI로 변환하세요. ABC를 붙여 넣거나 .abc 파일을 열어 곡을 미리 보고 들어본 뒤 .mid 파일 또는 선택한 곡의 ZIP을 다운로드할 수 있습니다."
+}

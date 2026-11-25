@@ -1,4 +1,4 @@
-import { renderMidiToWav } from "./core/render"
+import { renderMidiToWav } from "./render"
 
 export type Request = { file: File; soundFont?: File }
 export type Response =
@@ -8,7 +8,7 @@ export type Response =
 
 async function fetchSoundFont(): Promise<ArrayBuffer> {
   const response = await fetch(
-    new URL("./assets/GeneralUserGS.sf3", import.meta.url)
+    new URL("../assets/GeneralUserGS.sf3", import.meta.url)
   )
   if (!response.ok) throw new Error("SoundFont download failed")
   return response.arrayBuffer()

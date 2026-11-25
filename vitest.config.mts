@@ -40,6 +40,7 @@ export default getViteConfig({
       include: [
         "packages/tool-sdk/src/**/*.ts",
         "packages/lib/midi-notation/src/**/*.ts",
+        "packages/lib/midi-audio/src/render.ts",
         "packages/lib/score-export/src/abc-source.ts",
         "tools/**/*.{ts,tsx}",
       ],
@@ -58,6 +59,12 @@ export default getViteConfig({
           statements: 100,
         },
         "packages/lib/midi-notation/src/**": {
+          lines: 100,
+          functions: 100,
+          branches: 100,
+          statements: 100,
+        },
+        "packages/lib/midi-audio/src/render.ts": {
           lines: 100,
           functions: 100,
           branches: 100,

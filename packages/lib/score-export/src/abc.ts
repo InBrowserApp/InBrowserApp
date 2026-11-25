@@ -65,9 +65,9 @@ export function renderAbcImages(tunes: readonly AbcTune[]) {
   const width = scoreContentWidth("a4")
   const options = tuneOptions(width)
   return inScoreHost(width, (host) =>
-    tunes.flatMap((tune): ScoreImage[] => {
+    tunes.flatMap((tune): (ScoreImage & { tune: AbcTune })[] => {
       const [svg] = renderTune(host, tune, options, width)
-      return svg ? [{ page: cropScorePage(svg), name: tune.title }] : []
+      return svg ? [{ page: cropScorePage(svg), name: tune.title, tune }] : []
     })
   )
 }
