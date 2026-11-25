@@ -1,0 +1,20 @@
+{
+  "open": "Otwórz pliki",
+  "drop": "Upuść tutaj pliki modelu",
+  "release": "Upuść, aby otworzyć model",
+  "privacy": "Pliki pozostają na Twoim urządzeniu.",
+  "example": "Wypróbuj przykład",
+  "loading": "Otwieranie modelu 3D…",
+  "invalid": "Nie udało się otworzyć modelu. Wybierz poprawny plik w jednym z obsługiwanych formatów.",
+  "renderError": "Nie udało się uruchomić widoku 3D. Spróbuj w przeglądarce z obsługą WebGL 2.",
+  "viewport": "Widok modelu 3D",
+  "fit": "Pokaż cały model",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "wireframe": "Siatka",
+  "overall": "Wymiary całkowite",
+  "controls": "Przeciągnij, aby obrócić · Przewiń, aby zmienić powiększenie · Przeciągnij prawym przyciskiem, aby przesunąć",
+  "touchControls": "Przeciągnij, aby obrócić · Zsuń lub rozsuń palce, aby zmienić powiększenie · Przeciągnij dwoma palcami, aby przesunąć",
+  "keyboardControls": "Obracaj model klawiszami strzałek, a powiększenie zmieniaj klawiszami + i −. Przytrzymaj Shift i użyj strzałek, aby przesunąć widok.",
+  "missingResources": "Brakuje niektórych materiałów lub tekstur. Otwórz model razem z powiązanymi plikami."
+}

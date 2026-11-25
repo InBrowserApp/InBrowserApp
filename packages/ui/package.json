@@ -23,7 +23,9 @@
     "@types/topojson-client": "catalog:",
     "leaflet": "catalog:",
     "topojson-client": "catalog:",
-    "world-atlas": "catalog:"
+    "world-atlas": "catalog:",
+    "@workspace/model-mesh": "workspace:*",
+    "three": "catalog:"
   },
   "peerDependencies": {
     "react": "catalog:",
@@ -35,7 +37,8 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "tailwindcss": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@types/three": "catalog:"
   },
   "exports": {
     "./globals.css": "./src/styles/globals.css",
@@ -46,6 +49,7 @@
     "./astro/torrent-page": "./src/components/tool/torrent-page.astro",
     "./torrent-messages": "./src/components/tool/torrent-messages.ts",
     "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
-    "./comic-reader/*": "./src/components/tool/comic-reader/*.ts"
+    "./comic-reader/*": "./src/components/tool/comic-reader/*.ts",
+    "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts"
   }
 }

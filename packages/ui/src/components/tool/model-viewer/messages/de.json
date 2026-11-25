@@ -1,0 +1,20 @@
+{
+  "open": "Dateien öffnen",
+  "drop": "Modelldateien hier ablegen",
+  "release": "Loslassen, um das Modell zu öffnen",
+  "privacy": "Deine Dateien bleiben auf deinem Gerät.",
+  "example": "Beispiel ausprobieren",
+  "loading": "3D-Modell wird geöffnet …",
+  "invalid": "Das Modell ließ sich nicht öffnen. Wähle eine gültige Datei in einem der unterstützten Formate.",
+  "renderError": "Die 3D-Ansicht ließ sich nicht starten. Versuche es mit einem Browser, in dem WebGL 2 verfügbar ist.",
+  "viewport": "3D-Modellansicht",
+  "fit": "Modell einpassen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "wireframe": "Drahtgitter",
+  "overall": "Gesamtabmessungen",
+  "controls": "Ziehen zum Drehen · Mausrad zum Zoomen · Rechts ziehen zum Verschieben",
+  "touchControls": "Ziehen zum Drehen · Auf- oder zuziehen zum Zoomen · Mit zwei Fingern verschieben",
+  "keyboardControls": "Drehe das Modell mit den Pfeiltasten und zoome mit + oder −. Halte die Umschalttaste gedrückt, um die Ansicht mit den Pfeiltasten zu verschieben.",
+  "missingResources": "Einige Materialien oder Texturen fehlen. Öffne das Modell zusammen mit den zugehörigen Dateien."
+}

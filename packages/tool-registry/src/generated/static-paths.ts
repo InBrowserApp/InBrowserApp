@@ -22910,6 +22910,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "obj-viewer",
+    language: "ar",
+  },
+  {
+    slug: "obj-viewer",
+    language: "de",
+  },
+  {
+    slug: "obj-viewer",
+    language: "en",
+  },
+  {
+    slug: "obj-viewer",
+    language: "es",
+  },
+  {
+    slug: "obj-viewer",
+    language: "fr",
+  },
+  {
+    slug: "obj-viewer",
+    language: "he",
+  },
+  {
+    slug: "obj-viewer",
+    language: "hi",
+  },
+  {
+    slug: "obj-viewer",
+    language: "id",
+  },
+  {
+    slug: "obj-viewer",
+    language: "it",
+  },
+  {
+    slug: "obj-viewer",
+    language: "ja",
+  },
+  {
+    slug: "obj-viewer",
+    language: "ko",
+  },
+  {
+    slug: "obj-viewer",
+    language: "ms",
+  },
+  {
+    slug: "obj-viewer",
+    language: "nl",
+  },
+  {
+    slug: "obj-viewer",
+    language: "no",
+  },
+  {
+    slug: "obj-viewer",
+    language: "pl",
+  },
+  {
+    slug: "obj-viewer",
+    language: "pt",
+  },
+  {
+    slug: "obj-viewer",
+    language: "ru",
+  },
+  {
+    slug: "obj-viewer",
+    language: "sv",
+  },
+  {
+    slug: "obj-viewer",
+    language: "th",
+  },
+  {
+    slug: "obj-viewer",
+    language: "tr",
+  },
+  {
+    slug: "obj-viewer",
+    language: "vi",
+  },
+  {
+    slug: "obj-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "obj-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "ods-to-xlsx-converter",
     language: "ar",
   },
@@ -30911,6 +31003,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
+    slug: "stl-viewer",
+    language: "ar",
+  },
+  {
+    slug: "stl-viewer",
+    language: "de",
+  },
+  {
+    slug: "stl-viewer",
+    language: "en",
+  },
+  {
+    slug: "stl-viewer",
+    language: "es",
+  },
+  {
+    slug: "stl-viewer",
+    language: "fr",
+  },
+  {
+    slug: "stl-viewer",
+    language: "he",
+  },
+  {
+    slug: "stl-viewer",
+    language: "hi",
+  },
+  {
+    slug: "stl-viewer",
+    language: "id",
+  },
+  {
+    slug: "stl-viewer",
+    language: "it",
+  },
+  {
+    slug: "stl-viewer",
+    language: "ja",
+  },
+  {
+    slug: "stl-viewer",
+    language: "ko",
+  },
+  {
+    slug: "stl-viewer",
+    language: "ms",
+  },
+  {
+    slug: "stl-viewer",
+    language: "nl",
+  },
+  {
+    slug: "stl-viewer",
+    language: "no",
+  },
+  {
+    slug: "stl-viewer",
+    language: "pl",
+  },
+  {
+    slug: "stl-viewer",
+    language: "pt",
+  },
+  {
+    slug: "stl-viewer",
+    language: "ru",
+  },
+  {
+    slug: "stl-viewer",
+    language: "sv",
+  },
+  {
+    slug: "stl-viewer",
+    language: "th",
+  },
+  {
+    slug: "stl-viewer",
+    language: "tr",
+  },
+  {
+    slug: "stl-viewer",
+    language: "vi",
+  },
+  {
+    slug: "stl-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "stl-viewer",
     language: "zh-TW",
   },
   {

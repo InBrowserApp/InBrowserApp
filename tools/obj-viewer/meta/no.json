@@ -1,0 +1,4 @@
+{
+  "name": "OBJ-viser",
+  "description": "Åpne Wavefront OBJ-filer i 3D. Se på modellens polygonnett, eller velg også MTL-filen og teksturene for å se hvordan modellen ser ut."
+}

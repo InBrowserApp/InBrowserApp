@@ -1,0 +1,20 @@
+{
+  "open": "開啟檔案",
+  "drop": "將模型檔案拖放到這裡",
+  "release": "放開以開啟模型",
+  "privacy": "檔案會留在此裝置上。",
+  "example": "試用範例",
+  "loading": "正在開啟 3D 模型…",
+  "invalid": "無法開啟模型。請選擇支援格式的有效檔案。",
+  "renderError": "無法啟動 3D 檢視畫面。請使用支援 WebGL 2 的瀏覽器。",
+  "viewport": "3D 模型檢視畫面",
+  "fit": "符合視窗",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "wireframe": "線框",
+  "overall": "整體尺寸",
+  "controls": "拖曳旋轉 · 捲動縮放 · 按住右鍵拖曳平移",
+  "touchControls": "拖曳旋轉 · 雙指縮放 · 雙指拖曳平移",
+  "keyboardControls": "使用方向鍵旋轉，按 + 或 − 縮放。按住 Shift 並使用方向鍵平移。",
+  "missingResources": "部分材質或貼圖遺失。請同時開啟模型及其相關檔案。"
+}

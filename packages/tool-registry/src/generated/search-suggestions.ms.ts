@@ -1248,6 +1248,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "Pemapar OBJ",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "Penukar ODS ke XLSX",
     slug: "ods-to-xlsx-converter",
@@ -1681,6 +1686,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Pemisah Saluran Audio Stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Pemapar STL",
+    slug: "stl-viewer",
   },
   {
     category: "time",

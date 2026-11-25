@@ -1248,6 +1248,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
+    category: "image",
+    name: "Penampil OBJ",
+    slug: "obj-viewer",
+  },
+  {
     category: "spreadsheet",
     name: "Konverter ODS ke XLSX",
     slug: "ods-to-xlsx-converter",
@@ -1681,6 +1686,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Pemisah Kanal Audio Stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Penampil STL",
+    slug: "stl-viewer",
   },
   {
     category: "time",

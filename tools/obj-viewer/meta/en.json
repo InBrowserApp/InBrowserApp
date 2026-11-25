@@ -1,0 +1,4 @@
+{
+  "name": "OBJ Viewer",
+  "description": "Open Wavefront OBJ files in 3D. Inspect the mesh or select its MTL file and textures together to see the model’s appearance."
+}

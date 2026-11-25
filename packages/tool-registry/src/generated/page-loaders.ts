@@ -309,6 +309,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "number-base-converter": () => import("@tool/number-base-converter/page"),
   "numbers-to-xlsx-converter": () =>
     import("@tool/numbers-to-xlsx-converter/page"),
+  "obj-viewer": () => import("@tool/obj-viewer/page"),
   "ods-to-xlsx-converter": () => import("@tool/ods-to-xlsx-converter/page"),
   "odt-to-pdf-converter": () => import("@tool/odt-to-pdf-converter/page"),
   "odt-viewer": () => import("@tool/odt-viewer/page"),
@@ -422,6 +423,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/ssh-public-key-fingerprint/page"),
   "step-viewer": () => import("@tool/step-viewer/page"),
   "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
+  "stl-viewer": () => import("@tool/stl-viewer/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),

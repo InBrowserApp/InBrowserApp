@@ -1,0 +1,20 @@
+{
+  "open": "打开文件",
+  "drop": "将模型文件拖放到此处",
+  "release": "松开以打开模型",
+  "privacy": "文件始终保留在此设备上。",
+  "example": "试用示例",
+  "loading": "正在打开 3D 模型…",
+  "invalid": "无法打开模型。请选择支持的格式中的有效文件。",
+  "renderError": "无法启动 3D 视图。请尝试使用支持 WebGL 2 的浏览器。",
+  "viewport": "3D 模型视图",
+  "fit": "适合视图",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "wireframe": "线框",
+  "overall": "整体尺寸",
+  "controls": "拖动旋转 · 滚动缩放 · 右键拖动平移",
+  "touchControls": "拖动旋转 · 双指缩放 · 双指拖动平移",
+  "keyboardControls": "使用方向键旋转，使用 + 或 − 缩放。按住 Shift 并使用方向键平移。",
+  "missingResources": "部分材质或纹理缺失。请同时打开模型及其配套文件。"
+}

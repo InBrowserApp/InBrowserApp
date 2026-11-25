@@ -1,0 +1,4 @@
+{
+  "name": "OBJ 查看器",
+  "description": "以 3D 方式打开 Wavefront OBJ 文件。检查网格，或同时选择 MTL 文件和纹理以查看模型外观。"
+}
