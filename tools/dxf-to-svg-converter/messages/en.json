@@ -1,0 +1,19 @@
+{
+  "open": "Open DXF file",
+  "change": "Change DXF file",
+  "drop": "Drop an ASCII DXF drawing here",
+  "example": "Try an example",
+  "privacy": "Your file stays on this device.",
+  "reading": "Reading drawing…",
+  "failed": "Could not read this DXF drawing. Check the file and try again.",
+  "binary": "This is a binary DXF. Save it as ASCII DXF in your CAD application and open it again.",
+  "empty": "This drawing has no supported model-space geometry to export.",
+  "layers": "Layers",
+  "selectAll": "Select all",
+  "clear": "Clear selection",
+  "preview": "SVG preview",
+  "noLayers": "Select at least one layer to preview and download.",
+  "size": "Drawing size",
+  "fileUnits": "drawing units",
+  "download": "Download SVG"
+}

@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "DXF 转 SVG 转换器",
+    slug: "dxf-to-svg-converter",
+  },
+  {
+    category: "3d-cad",
     name: "DXF 查看器",
     slug: "dxf-viewer",
   },

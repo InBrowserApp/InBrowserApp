@@ -1,0 +1,19 @@
+{
+  "open": "DXF-bestand openen",
+  "change": "Ander DXF-bestand openen",
+  "drop": "Sleep een ASCII DXF-tekening hierheen",
+  "example": "Voorbeeld proberen",
+  "privacy": "Je bestand blijft op dit apparaat.",
+  "reading": "Tekening wordt gelezen…",
+  "failed": "De DXF-tekening kon niet worden gelezen. Controleer het bestand en probeer het opnieuw.",
+  "binary": "Dit is een binair DXF-bestand. Sla het in je CAD-programma op als ASCII DXF en open het opnieuw.",
+  "empty": "Deze tekening bevat geen ondersteunde geometrie uit de modelruimte om te exporteren.",
+  "layers": "Lagen",
+  "selectAll": "Alles selecteren",
+  "clear": "Selectie wissen",
+  "preview": "SVG-voorbeeld",
+  "noLayers": "Selecteer ten minste één laag om een voorbeeld te zien en het bestand te downloaden.",
+  "size": "Tekeningafmetingen",
+  "fileUnits": "tekeneenheden",
+  "download": "SVG downloaden"
+}

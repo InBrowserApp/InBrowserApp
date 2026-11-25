@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "DXF’ten SVG’ye Dönüştürücü",
+    slug: "dxf-to-svg-converter",
+  },
+  {
+    category: "3d-cad",
     name: "DXF Görüntüleyici",
     slug: "dxf-viewer",
   },

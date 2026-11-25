@@ -1,0 +1,19 @@
+{
+  "open": "DXF 파일 열기",
+  "change": "DXF 파일 변경",
+  "drop": "여기에 ASCII DXF 도면을 놓으세요",
+  "example": "예제 사용하기",
+  "privacy": "파일은 이 기기에 보관됩니다.",
+  "reading": "도면을 읽는 중…",
+  "failed": "이 DXF 도면을 읽을 수 없습니다. 파일을 확인하고 다시 시도하세요.",
+  "binary": "바이너리 DXF 파일입니다. CAD 앱에서 ASCII DXF로 저장한 후 다시 여세요.",
+  "empty": "이 도면에는 내보낼 수 있는 지원되는 모형 공간 형상이 없습니다.",
+  "layers": "도면층",
+  "selectAll": "모두 선택",
+  "clear": "선택 해제",
+  "preview": "SVG 미리보기",
+  "noLayers": "미리 보고 다운로드하려면 도면층을 하나 이상 선택하세요.",
+  "size": "도면 크기",
+  "fileUnits": "도면 단위",
+  "download": "SVG 다운로드"
+}

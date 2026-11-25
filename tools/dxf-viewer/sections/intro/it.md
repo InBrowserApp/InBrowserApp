@@ -15,3 +15,5 @@ Il formato DXF memorizza le informazioni del disegno sotto forma di entità e ta
 ## Esaminare il modello CAD originale
 
 Se hai il file STEP o STP originale, usa il [Visualizzatore STEP](../step-viewer/) per esaminare in 3D una parte solida o un assieme.
+
+Usa il [Convertitore da DXF a SVG](../dxf-to-svg-converter/) per esportare i layer selezionati dello spazio modello in SVG per un documento, una pagina web o un editor vettoriale.

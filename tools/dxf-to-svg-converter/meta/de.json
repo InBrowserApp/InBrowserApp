@@ -1,0 +1,4 @@
+{
+  "name": "DXF-zu-SVG-Konverter",
+  "description": "Wandle eine 2D-DXF-Zeichnung im Browser in SVG um. Wähle Layer aus, prüfe die Vektorvorschau und exportiere im Maßstab der Zeichnungseinheiten."
+}

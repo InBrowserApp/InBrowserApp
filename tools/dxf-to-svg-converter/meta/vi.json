@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi DXF sang SVG",
+  "description": "Chuyển bản vẽ DXF 2D sang SVG trong trình duyệt. Chọn lớp, xem trước hình vector và xuất theo tỷ lệ của đơn vị bản vẽ."
+}

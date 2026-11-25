@@ -15,3 +15,5 @@ DXF lưu thông tin bản vẽ dưới dạng các đối tượng và bảng li
 ## Kiểm tra mô hình CAD gốc
 
 Nếu có tệp STEP hoặc STP gốc, hãy dùng [Trình xem STEP](../step-viewer/) để kiểm tra chi tiết dạng khối hoặc cụm lắp ráp ở dạng 3D.
+
+Dùng [Trình chuyển đổi DXF sang SVG](../dxf-to-svg-converter/) để xuất các lớp đã chọn trong không gian mô hình thành tệp SVG cho tài liệu, trang web hoặc trình chỉnh sửa vector.

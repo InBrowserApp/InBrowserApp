@@ -1,0 +1,19 @@
+{
+  "open": "打开 DXF 文件",
+  "change": "更换 DXF 文件",
+  "drop": "将 ASCII DXF 图纸拖放到此处",
+  "example": "试用示例",
+  "privacy": "文件始终保留在此设备上。",
+  "reading": "正在读取图纸…",
+  "failed": "无法读取此 DXF 图纸。请检查文件后重试。",
+  "binary": "这是二进制 DXF。请在 CAD 应用中将其另存为 ASCII DXF 后重新打开。",
+  "empty": "此图纸没有可导出的受支持模型空间几何图形。",
+  "layers": "图层",
+  "selectAll": "全选",
+  "clear": "清除选择",
+  "preview": "SVG 预览",
+  "noLayers": "请至少选择一个图层以预览和下载。",
+  "size": "图纸尺寸",
+  "fileUnits": "图纸单位",
+  "download": "下载 SVG"
+}

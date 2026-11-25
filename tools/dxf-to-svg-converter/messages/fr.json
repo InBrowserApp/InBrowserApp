@@ -1,0 +1,19 @@
+{
+  "open": "Ouvrir un fichier DXF",
+  "change": "Changer de fichier DXF",
+  "drop": "Déposez un dessin DXF ASCII ici",
+  "example": "Essayer un exemple",
+  "privacy": "Votre fichier reste sur votre appareil.",
+  "reading": "Lecture du dessin…",
+  "failed": "Impossible de lire ce dessin DXF. Vérifiez le fichier et réessayez.",
+  "binary": "Ce fichier DXF est binaire. Enregistrez-le au format DXF ASCII dans votre logiciel de CAO, puis ouvrez-le de nouveau.",
+  "empty": "Ce dessin ne contient aucune géométrie de l’espace objet compatible avec l’exportation.",
+  "layers": "Calques",
+  "selectAll": "Tout sélectionner",
+  "clear": "Effacer la sélection",
+  "preview": "Aperçu du SVG",
+  "noLayers": "Sélectionnez au moins un calque pour afficher l’aperçu et télécharger le fichier.",
+  "size": "Dimensions du dessin",
+  "fileUnits": "unités de dessin",
+  "download": "Télécharger le SVG"
+}

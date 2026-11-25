@@ -604,6 +604,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "โปรแกรมแปลง DXF เป็น SVG",
+    slug: "dxf-to-svg-converter",
+  },
+  {
+    category: "3d-cad",
     name: "โปรแกรมดู DXF",
     slug: "dxf-viewer",
   },

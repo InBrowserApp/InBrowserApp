@@ -1,0 +1,19 @@
+{
+  "open": "Abrir arquivo DXF",
+  "change": "Trocar arquivo DXF",
+  "drop": "Solte aqui um desenho DXF ASCII",
+  "example": "Experimentar um exemplo",
+  "privacy": "Seu arquivo fica neste dispositivo.",
+  "reading": "Lendo o desenho…",
+  "failed": "Não foi possível ler o desenho DXF. Confira o arquivo e tente novamente.",
+  "binary": "Este arquivo DXF é binário. Salve-o como DXF ASCII no seu programa CAD e abra-o novamente.",
+  "empty": "O desenho não contém geometria do espaço do modelo compatível com a exportação.",
+  "layers": "Camadas",
+  "selectAll": "Selecionar tudo",
+  "clear": "Limpar seleção",
+  "preview": "Prévia do SVG",
+  "noLayers": "Selecione pelo menos uma camada para ver a prévia e baixar o arquivo.",
+  "size": "Dimensões do desenho",
+  "fileUnits": "unidades do desenho",
+  "download": "Baixar SVG"
+}

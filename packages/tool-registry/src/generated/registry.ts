@@ -15410,6 +15410,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "dxf-to-svg-converter",
+    category: "3d-cad",
+    secondaryCategories: ["diagram"],
+    icon: "arrow-left-right",
+    tags: ["dxf", "svg", "cad", "vector", "drawing", "layers", "convert"],
+    locales: {
+      ar: {
+        name: "محوّل DXF إلى SVG",
+        description:
+          "حوّل رسم DXF ثنائي الأبعاد إلى SVG في متصفحك. اختر الطبقات وعاين الرسم المتجهي وصدّره بالمقياس الذي تحدّده وحدات الرسم.",
+      },
+      de: {
+        name: "DXF-zu-SVG-Konverter",
+        description:
+          "Wandle eine 2D-DXF-Zeichnung im Browser in SVG um. Wähle Layer aus, prüfe die Vektorvorschau und exportiere im Maßstab der Zeichnungseinheiten.",
+      },
+      en: {
+        name: "DXF to SVG Converter",
+        description:
+          "Convert a 2D DXF drawing to SVG in your browser. Choose layers, preview the vector, and export at the scale defined by the drawing units.",
+      },
+      es: {
+        name: "Conversor de DXF a SVG",
+        description:
+          "Convierte dibujos DXF en 2D a SVG en tu navegador. Elige las capas, revisa la vista previa vectorial y exporta a la escala indicada por las unidades del dibujo.",
+      },
+      fr: {
+        name: "Convertisseur DXF en SVG",
+        description:
+          "Convertissez un dessin DXF 2D en SVG dans votre navigateur. Sélectionnez les calques, affichez l’aperçu vectoriel et exportez à l’échelle définie par les unités du dessin.",
+      },
+      he: {
+        name: "ממיר DXF ל־SVG",
+        description:
+          "המירו שרטוט DXF דו־ממדי ל־SVG בדפדפן. בחרו שכבות, בדקו את התצוגה המקדימה הווקטורית וייצאו בקנה המידה שנקבע לפי יחידות השרטוט.",
+      },
+      hi: {
+        name: "DXF से SVG कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में 2D DXF ड्रॉइंग को SVG में बदलें। लेयर चुनें, वेक्टर प्रीव्यू देखें और ड्रॉइंग की इकाइयों के स्केल पर निर्यात करें।",
+      },
+      id: {
+        name: "Konverter DXF ke SVG",
+        description:
+          "Konversi gambar DXF 2D ke SVG di browser. Pilih lapisan, lihat pratinjau vektor, dan ekspor sesuai skala satuan gambar.",
+      },
+      it: {
+        name: "Convertitore da DXF a SVG",
+        description:
+          "Converti un disegno DXF 2D in SVG nel browser. Scegli i layer, guarda l’anteprima vettoriale ed esporta alla scala definita dalle unità del disegno.",
+      },
+      ja: {
+        name: "DXF → SVG 変換",
+        description:
+          "2D DXF 図面をブラウザーで SVG に変換します。画層を選んでベクターをプレビューし、図面の単位で定義された縮尺で出力できます。",
+      },
+      ko: {
+        name: "DXF → SVG 변환기",
+        description:
+          "브라우저에서 2D DXF 도면을 SVG로 변환하세요. 도면층을 선택하고 벡터를 미리 본 다음 도면 단위로 정의된 크기 비율로 내보냅니다.",
+      },
+      ms: {
+        name: "Penukar DXF kepada SVG",
+        description:
+          "Tukar lukisan DXF 2D kepada SVG dalam pelayar. Pilih lapisan, lihat pratonton vektor dan eksport pada skala yang ditetapkan oleh unit lukisan.",
+      },
+      nl: {
+        name: "DXF naar SVG-converter",
+        description:
+          "Converteer een 2D DXF-tekening naar SVG in je browser. Kies lagen, bekijk het vectorvoorbeeld en exporteer op de schaal van de tekeneenheden.",
+      },
+      no: {
+        name: "DXF til SVG-konverterer",
+        description:
+          "Konverter en 2D-tegning i DXF-format til SVG i nettleseren. Velg lag, se en forhåndsvisning av vektorgrafikken og eksporter i målestokken som tegningsenhetene angir.",
+      },
+      pl: {
+        name: "Konwerter DXF na SVG",
+        description:
+          "Konwertuj rysunki 2D z DXF na SVG w przeglądarce. Wybierz warstwy, obejrzyj podgląd wektorowy i eksportuj w skali określonej przez jednostki rysunku.",
+      },
+      pt: {
+        name: "Conversor de DXF para SVG",
+        description:
+          "Converta desenhos DXF 2D em SVG no navegador. Escolha as camadas, confira a prévia vetorial e exporte na escala definida pelas unidades do desenho.",
+      },
+      ru: {
+        name: "Конвертер DXF в SVG",
+        description:
+          "Преобразуйте двумерный чертёж DXF в SVG прямо в браузере. Выбирайте слои, просматривайте векторный результат и экспортируйте в масштабе, заданном единицами чертежа.",
+      },
+      sv: {
+        name: "DXF till SVG-konverterare",
+        description:
+          "Konvertera en 2D-ritning i DXF-format till SVG i webbläsaren. Välj lager, förhandsgranska vektorgrafiken och exportera i den skala som ritningsenheterna anger.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DXF เป็น SVG",
+        description:
+          "แปลงแบบเขียน DXF 2 มิติเป็น SVG ในเบราว์เซอร์ เลือกเลเยอร์ ดูตัวอย่างเวกเตอร์ และส่งออกตามมาตราส่วนจากหน่วยของแบบเขียน",
+      },
+      tr: {
+        name: "DXF’ten SVG’ye Dönüştürücü",
+        description:
+          "2B DXF çizimini tarayıcınızda SVG’ye dönüştürün. Katmanları seçin, vektör çizimini önizleyin ve çizim birimlerinin belirlediği ölçekte dışa aktarın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DXF sang SVG",
+        description:
+          "Chuyển bản vẽ DXF 2D sang SVG trong trình duyệt. Chọn lớp, xem trước hình vector và xuất theo tỷ lệ của đơn vị bản vẽ.",
+      },
+      "zh-CN": {
+        name: "DXF 转 SVG 转换器",
+        description:
+          "在浏览器中将二维 DXF 图纸转换为 SVG。选择图层、预览矢量图，并按图纸单位定义的比例导出。",
+      },
+      "zh-TW": {
+        name: "DXF 轉 SVG 轉換器",
+        description:
+          "在瀏覽器中將 2D DXF 圖面轉換為 SVG。選擇圖層、預覽向量圖，並依圖面單位定義的比例匯出。",
+      },
+    },
+  },
+  {
     slug: "dxf-viewer",
     category: "3d-cad",
     secondaryCategories: ["diagram"],
@@ -74899,6 +75023,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "時長加減計算器",
         description: "在任何時區，從基準時間加減 ISO 8601 時長，精確到毫秒。",
+      },
+    },
+  },
+  "dxf-to-svg-converter": {
+    slug: "dxf-to-svg-converter",
+    category: "3d-cad",
+    secondaryCategories: ["diagram"],
+    icon: "arrow-left-right",
+    tags: ["dxf", "svg", "cad", "vector", "drawing", "layers", "convert"],
+    locales: {
+      ar: {
+        name: "محوّل DXF إلى SVG",
+        description:
+          "حوّل رسم DXF ثنائي الأبعاد إلى SVG في متصفحك. اختر الطبقات وعاين الرسم المتجهي وصدّره بالمقياس الذي تحدّده وحدات الرسم.",
+      },
+      de: {
+        name: "DXF-zu-SVG-Konverter",
+        description:
+          "Wandle eine 2D-DXF-Zeichnung im Browser in SVG um. Wähle Layer aus, prüfe die Vektorvorschau und exportiere im Maßstab der Zeichnungseinheiten.",
+      },
+      en: {
+        name: "DXF to SVG Converter",
+        description:
+          "Convert a 2D DXF drawing to SVG in your browser. Choose layers, preview the vector, and export at the scale defined by the drawing units.",
+      },
+      es: {
+        name: "Conversor de DXF a SVG",
+        description:
+          "Convierte dibujos DXF en 2D a SVG en tu navegador. Elige las capas, revisa la vista previa vectorial y exporta a la escala indicada por las unidades del dibujo.",
+      },
+      fr: {
+        name: "Convertisseur DXF en SVG",
+        description:
+          "Convertissez un dessin DXF 2D en SVG dans votre navigateur. Sélectionnez les calques, affichez l’aperçu vectoriel et exportez à l’échelle définie par les unités du dessin.",
+      },
+      he: {
+        name: "ממיר DXF ל־SVG",
+        description:
+          "המירו שרטוט DXF דו־ממדי ל־SVG בדפדפן. בחרו שכבות, בדקו את התצוגה המקדימה הווקטורית וייצאו בקנה המידה שנקבע לפי יחידות השרטוט.",
+      },
+      hi: {
+        name: "DXF से SVG कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में 2D DXF ड्रॉइंग को SVG में बदलें। लेयर चुनें, वेक्टर प्रीव्यू देखें और ड्रॉइंग की इकाइयों के स्केल पर निर्यात करें।",
+      },
+      id: {
+        name: "Konverter DXF ke SVG",
+        description:
+          "Konversi gambar DXF 2D ke SVG di browser. Pilih lapisan, lihat pratinjau vektor, dan ekspor sesuai skala satuan gambar.",
+      },
+      it: {
+        name: "Convertitore da DXF a SVG",
+        description:
+          "Converti un disegno DXF 2D in SVG nel browser. Scegli i layer, guarda l’anteprima vettoriale ed esporta alla scala definita dalle unità del disegno.",
+      },
+      ja: {
+        name: "DXF → SVG 変換",
+        description:
+          "2D DXF 図面をブラウザーで SVG に変換します。画層を選んでベクターをプレビューし、図面の単位で定義された縮尺で出力できます。",
+      },
+      ko: {
+        name: "DXF → SVG 변환기",
+        description:
+          "브라우저에서 2D DXF 도면을 SVG로 변환하세요. 도면층을 선택하고 벡터를 미리 본 다음 도면 단위로 정의된 크기 비율로 내보냅니다.",
+      },
+      ms: {
+        name: "Penukar DXF kepada SVG",
+        description:
+          "Tukar lukisan DXF 2D kepada SVG dalam pelayar. Pilih lapisan, lihat pratonton vektor dan eksport pada skala yang ditetapkan oleh unit lukisan.",
+      },
+      nl: {
+        name: "DXF naar SVG-converter",
+        description:
+          "Converteer een 2D DXF-tekening naar SVG in je browser. Kies lagen, bekijk het vectorvoorbeeld en exporteer op de schaal van de tekeneenheden.",
+      },
+      no: {
+        name: "DXF til SVG-konverterer",
+        description:
+          "Konverter en 2D-tegning i DXF-format til SVG i nettleseren. Velg lag, se en forhåndsvisning av vektorgrafikken og eksporter i målestokken som tegningsenhetene angir.",
+      },
+      pl: {
+        name: "Konwerter DXF na SVG",
+        description:
+          "Konwertuj rysunki 2D z DXF na SVG w przeglądarce. Wybierz warstwy, obejrzyj podgląd wektorowy i eksportuj w skali określonej przez jednostki rysunku.",
+      },
+      pt: {
+        name: "Conversor de DXF para SVG",
+        description:
+          "Converta desenhos DXF 2D em SVG no navegador. Escolha as camadas, confira a prévia vetorial e exporte na escala definida pelas unidades do desenho.",
+      },
+      ru: {
+        name: "Конвертер DXF в SVG",
+        description:
+          "Преобразуйте двумерный чертёж DXF в SVG прямо в браузере. Выбирайте слои, просматривайте векторный результат и экспортируйте в масштабе, заданном единицами чертежа.",
+      },
+      sv: {
+        name: "DXF till SVG-konverterare",
+        description:
+          "Konvertera en 2D-ritning i DXF-format till SVG i webbläsaren. Välj lager, förhandsgranska vektorgrafiken och exportera i den skala som ritningsenheterna anger.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DXF เป็น SVG",
+        description:
+          "แปลงแบบเขียน DXF 2 มิติเป็น SVG ในเบราว์เซอร์ เลือกเลเยอร์ ดูตัวอย่างเวกเตอร์ และส่งออกตามมาตราส่วนจากหน่วยของแบบเขียน",
+      },
+      tr: {
+        name: "DXF’ten SVG’ye Dönüştürücü",
+        description:
+          "2B DXF çizimini tarayıcınızda SVG’ye dönüştürün. Katmanları seçin, vektör çizimini önizleyin ve çizim birimlerinin belirlediği ölçekte dışa aktarın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DXF sang SVG",
+        description:
+          "Chuyển bản vẽ DXF 2D sang SVG trong trình duyệt. Chọn lớp, xem trước hình vector và xuất theo tỷ lệ của đơn vị bản vẽ.",
+      },
+      "zh-CN": {
+        name: "DXF 转 SVG 转换器",
+        description:
+          "在浏览器中将二维 DXF 图纸转换为 SVG。选择图层、预览矢量图，并按图纸单位定义的比例导出。",
+      },
+      "zh-TW": {
+        name: "DXF 轉 SVG 轉換器",
+        description:
+          "在瀏覽器中將 2D DXF 圖面轉換為 SVG。選擇圖層、預覽向量圖，並依圖面單位定義的比例匯出。",
       },
     },
   },

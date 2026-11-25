@@ -15,3 +15,5 @@ DXF 將圖面資訊儲存為圖元及相關表格。詳情請參閱 [Autodesk DX
 ## 檢查原始 CAD 模型
 
 如果有原始 STEP 或 STP 檔案，可使用 [STEP 檢視器](../step-viewer/)以 3D 檢查實體零件或組合件。
+
+使用 [DXF 轉 SVG 轉換器](../dxf-to-svg-converter/)將所選模型空間圖層匯出為 SVG，供文件、網頁或向量編輯器使用。

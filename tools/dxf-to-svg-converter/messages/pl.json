@@ -1,0 +1,19 @@
+{
+  "open": "Otwórz plik DXF",
+  "change": "Zmień plik DXF",
+  "drop": "Upuść tutaj rysunek DXF w formacie ASCII",
+  "example": "Wypróbuj przykład",
+  "privacy": "Plik pozostaje na Twoim urządzeniu.",
+  "reading": "Odczytywanie rysunku…",
+  "failed": "Nie udało się odczytać rysunku DXF. Sprawdź plik i spróbuj ponownie.",
+  "binary": "To binarny plik DXF. Zapisz go w formacie ASCII w programie CAD i otwórz ponownie.",
+  "empty": "W obszarze modelu brakuje geometrii obsługiwanej podczas eksportu.",
+  "layers": "Warstwy",
+  "selectAll": "Zaznacz wszystko",
+  "clear": "Wyczyść zaznaczenie",
+  "preview": "Podgląd SVG",
+  "noLayers": "Zaznacz co najmniej jedną warstwę, aby wyświetlić podgląd i pobrać plik.",
+  "size": "Wymiary rysunku",
+  "fileUnits": "jednostki rysunku",
+  "download": "Pobierz SVG"
+}

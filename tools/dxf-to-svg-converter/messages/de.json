@@ -1,0 +1,19 @@
+{
+  "open": "DXF-Datei öffnen",
+  "change": "Andere DXF-Datei öffnen",
+  "drop": "ASCII-DXF-Zeichnung hier ablegen",
+  "example": "Beispiel ausprobieren",
+  "privacy": "Deine Datei bleibt auf deinem Gerät.",
+  "reading": "Zeichnung wird gelesen …",
+  "failed": "Die DXF-Zeichnung ließ sich nicht lesen. Prüfe die Datei und versuche es erneut.",
+  "binary": "Das ist eine binäre DXF-Datei. Speichere sie in deinem CAD-Programm als ASCII-DXF und öffne sie erneut.",
+  "empty": "Die Zeichnung enthält keine unterstützte Geometrie aus dem Modellbereich, die sich exportieren lässt.",
+  "layers": "Layer",
+  "selectAll": "Alle auswählen",
+  "clear": "Auswahl aufheben",
+  "preview": "SVG-Vorschau",
+  "noLayers": "Wähle mindestens einen Layer für die Vorschau und den Download aus.",
+  "size": "Zeichnungsmaße",
+  "fileUnits": "Zeichnungseinheiten",
+  "download": "SVG herunterladen"
+}

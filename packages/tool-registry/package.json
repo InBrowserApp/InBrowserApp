@@ -127,6 +127,7 @@
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/docx-to-markdown-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
+    "@tool/dxf-to-svg-converter": "workspace:*",
     "@tool/dxf-viewer": "workspace:*",
     "@tool/ebook-text-html-export": "workspace:*",
     "@tool/email-attachment-extractor": "workspace:*",

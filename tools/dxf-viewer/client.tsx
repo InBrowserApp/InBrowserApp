@@ -1,3 +1,4 @@
+import { exampleDrawing } from "@workspace/dxf-drawing/example"
 import { useEffect, useId, useRef, useState } from "react"
 import { ViewportFrame } from "@workspace/ui/components/tool/viewport-focus"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
@@ -67,9 +68,7 @@ export default function DxfClient({
     const signal = controller.signal
     void (async () => {
       try {
-        const file =
-          selection.file ??
-          new File([(await import("./bracket.dxf?raw")).default], "bracket.dxf")
+        const file = selection.file ?? (await exampleDrawing())
         signal.throwIfAborted()
         const next = await openDrawing(file, stage.current!, lang, signal)
         if (signal.aborted) {

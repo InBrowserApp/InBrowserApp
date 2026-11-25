@@ -11042,6 +11042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dxf-to-svg-converter",
+    language: "ar",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "de",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "en",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "es",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "fr",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "he",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "hi",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "id",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "it",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "ja",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "ko",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "ms",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "nl",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "no",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "pl",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "pt",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "ru",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "sv",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "th",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "tr",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "vi",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "dxf-to-svg-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "dxf-viewer",
     language: "ar",
   },

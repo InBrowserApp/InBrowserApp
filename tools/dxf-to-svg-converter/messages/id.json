@@ -1,0 +1,19 @@
+{
+  "open": "Buka file DXF",
+  "change": "Ganti file DXF",
+  "drop": "Letakkan gambar DXF ASCII di sini",
+  "example": "Coba contoh",
+  "privacy": "File tetap di perangkat Anda.",
+  "reading": "Membaca gambar…",
+  "failed": "Gambar DXF ini tidak dapat dibaca. Periksa file lalu coba lagi.",
+  "binary": "Ini adalah DXF biner. Simpan sebagai DXF ASCII di aplikasi CAD Anda lalu buka kembali.",
+  "empty": "Gambar ini tidak memiliki geometri ruang model yang didukung untuk diekspor.",
+  "layers": "Lapisan",
+  "selectAll": "Pilih semua",
+  "clear": "Hapus pilihan",
+  "preview": "Pratinjau SVG",
+  "noLayers": "Pilih setidaknya satu lapisan untuk melihat pratinjau dan mengunduh.",
+  "size": "Ukuran gambar",
+  "fileUnits": "satuan gambar",
+  "download": "Unduh SVG"
+}

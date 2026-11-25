@@ -1,0 +1,4 @@
+{
+  "name": "DXF till SVG-konverterare",
+  "description": "Konvertera en 2D-ritning i DXF-format till SVG i webbläsaren. Välj lager, förhandsgranska vektorgrafiken och exportera i den skala som ritningsenheterna anger."
+}

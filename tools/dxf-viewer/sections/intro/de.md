@@ -15,3 +15,5 @@ DXF speichert Zeichnungsinformationen als Objekte und zugehörige Tabellen. Weit
 ## Das ursprüngliche CAD-Modell ansehen
 
 Wenn das Original als STEP- oder STP-Datei vorliegt, kannst du ein Volumenmodell eines Bauteils oder eine Baugruppe im [STEP-Betrachter](../step-viewer/) in 3D ansehen.
+
+Nutze den [DXF-zu-SVG-Konverter](../dxf-to-svg-converter/), um ausgewählte Layer aus dem Modellbereich als SVG für ein Dokument, eine Webseite oder einen Vektoreditor zu exportieren.

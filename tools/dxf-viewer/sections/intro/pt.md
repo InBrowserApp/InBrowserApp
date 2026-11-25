@@ -15,3 +15,5 @@ O formato DXF guarda as informações do desenho na forma de entidades e tabelas
 ## Inspecionar o modelo CAD original
 
 Se você tiver o arquivo STEP ou STP original, use o [Visualizador de STEP](../step-viewer/) para inspecionar uma peça sólida ou montagem em 3D.
+
+Use o [Conversor de DXF para SVG](../dxf-to-svg-converter/) para exportar as camadas selecionadas do espaço do modelo como SVG para um documento, uma página da web ou um editor vetorial.

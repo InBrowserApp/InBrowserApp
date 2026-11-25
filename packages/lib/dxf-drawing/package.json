@@ -1,0 +1,21 @@
+{
+  "name": "@workspace/dxf-drawing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./encoding": "./src/encoding.ts",
+    "./example": "./src/example.ts",
+    "./fonts": "./src/fonts.ts",
+    "./reader": "./src/reader.ts",
+    "./vector": "./src/vector.ts"
+  },
+  "dependencies": {
+    "@workspace/libreoffice": "workspace:*",
+    "@workspace/svg-pdf": "workspace:*",
+    "dxf-viewer": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}
