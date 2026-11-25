@@ -21,6 +21,7 @@
   "minimumOs": "Versi OS minimum",
   "platforms": "Platform yang didukung",
   "unspecified": "Tidak ditentukan",
+  "previewUnavailable": "Pratinjau XML tidak tersedia untuk daftar properti ini.",
   "copyXml": "Salin XML",
   "copied": "Disalin",
   "download": "Unduh Info.plist"

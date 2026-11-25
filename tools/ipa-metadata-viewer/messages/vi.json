@@ -21,6 +21,7 @@
   "minimumOs": "Phiên bản hệ điều hành tối thiểu",
   "platforms": "Nền tảng được hỗ trợ",
   "unspecified": "Không chỉ định",
+  "previewUnavailable": "Không thể xem trước danh sách thuộc tính này ở định dạng XML.",
   "copyXml": "Sao chép XML",
   "copied": "Đã sao chép",
   "download": "Tải Info.plist về"

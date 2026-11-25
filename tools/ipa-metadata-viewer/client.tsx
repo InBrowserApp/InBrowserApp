@@ -114,27 +114,21 @@ export default function Client({
         </Alert>
       ) : null}
       {output ? (
-        <MetadataDetails
-          key={output.file.name}
-          result={output}
-          messages={m}
-          lang={lang}
-        />
+        <MetadataDetails output={output.output} messages={m} lang={lang} />
       ) : null}
     </DocumentWorkspace>
   )
 }
 
 function MetadataDetails({
-  result,
+  output,
   messages: m,
   lang,
 }: {
-  result: { output: Metadata }
+  output: Metadata
   messages: Messages
   lang: string
 }) {
-  const { output } = result
   return (
     <Tabs
       defaultValue="overview"
@@ -180,12 +174,14 @@ function MetadataDetails({
         className="flex min-h-0 flex-col data-[state=inactive]:hidden"
       >
         <div className="flex flex-wrap gap-2 border-b p-3">
-          <ToolCopyButton
-            value={output.xml}
-            copyLabel={m.copyXml}
-            copiedLabel={m.copied}
-            size="default"
-          />
+          {output.xml ? (
+            <ToolCopyButton
+              value={output.xml}
+              copyLabel={m.copyXml}
+              copiedLabel={m.copied}
+              size="default"
+            />
+          ) : null}
           <DocumentDownload
             file={output.original}
             filename="Info.plist"
@@ -198,12 +194,18 @@ function MetadataDetails({
         >
           {output.path}
         </p>
-        <pre
-          dir="ltr"
-          className="max-h-[32rem] min-h-0 flex-1 overflow-auto p-4 font-mono text-sm wrap-anywhere whitespace-pre-wrap group-data-[focus=true]/workspace:max-h-none"
-        >
-          {output.xml}
-        </pre>
+        {output.xml ? (
+          <pre
+            dir="ltr"
+            className="max-h-[32rem] min-h-0 flex-1 overflow-auto p-4 font-mono text-sm wrap-anywhere whitespace-pre-wrap group-data-[focus=true]/workspace:max-h-none"
+          >
+            {output.xml}
+          </pre>
+        ) : (
+          <p className="p-4 text-sm text-muted-foreground">
+            {m.previewUnavailable}
+          </p>
+        )}
       </TabsContent>
     </Tabs>
   )

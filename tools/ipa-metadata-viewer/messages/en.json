@@ -21,6 +21,7 @@
   "minimumOs": "Minimum OS version",
   "platforms": "Supported platforms",
   "unspecified": "Unspecified",
+  "previewUnavailable": "The XML preview is unavailable for this property list.",
   "copyXml": "Copy XML",
   "copied": "Copied",
   "download": "Download Info.plist"

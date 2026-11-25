@@ -21,6 +21,7 @@
   "minimumOs": "เวอร์ชันระบบขั้นต่ำ",
   "platforms": "แพลตฟอร์มที่รองรับ",
   "unspecified": "ไม่ได้ระบุ",
+  "previewUnavailable": "ไม่สามารถแสดงตัวอย่างรายการคุณสมบัตินี้เป็น XML ได้",
   "copyXml": "คัดลอก XML",
   "copied": "คัดลอกแล้ว",
   "download": "ดาวน์โหลด Info.plist"

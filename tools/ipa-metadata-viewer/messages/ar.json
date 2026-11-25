@@ -21,6 +21,7 @@
   "minimumOs": "أدنى إصدار لنظام التشغيل",
   "platforms": "المنصات المدعومة",
   "unspecified": "غير محدّد",
+  "previewUnavailable": "معاينة XML غير متاحة لقائمة الخصائص هذه.",
   "copyXml": "نسخ XML",
   "copied": "تم النسخ",
   "download": "تنزيل Info.plist"

@@ -21,6 +21,7 @@
   "minimumOs": "גרסת מערכת הפעלה מינימלית",
   "platforms": "פלטפורמות נתמכות",
   "unspecified": "לא צוין",
+  "previewUnavailable": "אין תצוגה מקדימה ב־XML עבור רשימת המאפיינים הזו.",
   "copyXml": "העתקת XML",
   "copied": "הועתק",
   "download": "הורדת Info.plist"

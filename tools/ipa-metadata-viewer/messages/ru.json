@@ -21,6 +21,7 @@
   "minimumOs": "Минимальная версия ОС",
   "platforms": "Поддерживаемые платформы",
   "unspecified": "Не указано",
+  "previewUnavailable": "Для этого списка свойств недоступен предпросмотр в XML.",
   "copyXml": "Копировать XML",
   "copied": "Скопировано",
   "download": "Скачать Info.plist"

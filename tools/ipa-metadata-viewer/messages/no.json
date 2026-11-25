@@ -21,6 +21,7 @@
   "minimumOs": "Minste systemversjon",
   "platforms": "Støttede plattformer",
   "unspecified": "Ikke angitt",
+  "previewUnavailable": "XML-forhåndsvisning er ikke tilgjengelig for denne egenskapslisten.",
   "copyXml": "Kopier XML",
   "copied": "Kopiert",
   "download": "Last ned Info.plist"

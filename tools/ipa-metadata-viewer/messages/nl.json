@@ -21,6 +21,7 @@
   "minimumOs": "Minimale systeemversie",
   "platforms": "Ondersteunde platforms",
   "unspecified": "Niet opgegeven",
+  "previewUnavailable": "Voor deze eigenschappenlijst is geen XML-voorbeeld beschikbaar.",
   "copyXml": "XML kopiëren",
   "copied": "Gekopieerd",
   "download": "Info.plist downloaden"

@@ -82,6 +82,20 @@ test("distinguishes missing app metadata from unreadable inputs", async () => {
   await expect(openIpa(new File([empty], "empty.ipa"))).resolves.toBeNull()
 })
 
+test("preserves the overview and original download when XML preview is unavailable", async () => {
+  render(<Client messages={m} lang="en" />)
+  fireEvent.change(screen.getByLabelText(m.open), {
+    target: { files: [fixture("binary-without-xml-preview.ipa")] },
+  })
+  await screen.findByText("org.example.journal")
+  fireEvent.mouseDown(screen.getByRole("tab", { name: m.details }), {
+    button: 0,
+  })
+  await screen.findByText(m.previewUnavailable)
+  expect(screen.getByRole("link", { name: m.download })).toBeTruthy()
+  expect(screen.queryByRole("button", { name: m.copyXml })).toBeNull()
+})
+
 test("opens the built-in IPA, downloads the primary plist, and recovers after replacement", async () => {
   const response = new Response()
   vi.spyOn(response, "blob").mockResolvedValue(fixture())

@@ -21,6 +21,7 @@
   "minimumOs": "Versi OS minimum",
   "platforms": "Platform yang disokong",
   "unspecified": "Tidak dinyatakan",
+  "previewUnavailable": "Pratonton XML tidak tersedia untuk senarai sifat ini.",
   "copyXml": "Salin XML",
   "copied": "Disalin",
   "download": "Muat turun Info.plist"

@@ -21,6 +21,7 @@
   "minimumOs": "Version minimale du système",
   "platforms": "Plateformes prises en charge",
   "unspecified": "Non spécifié",
+  "previewUnavailable": "L’aperçu XML n’est pas disponible pour cette liste de propriétés.",
   "copyXml": "Copier le XML",
   "copied": "Copié",
   "download": "Télécharger Info.plist"

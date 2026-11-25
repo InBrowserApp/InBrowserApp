@@ -20,6 +20,12 @@ export async function openIpa(file: File) {
       new Uint8Array(await original.arrayBuffer()),
       { data: "view" }
     )
+    let xml: string | undefined
+    try {
+      xml = buildXmlPlist(plist)
+    } catch {
+      // Some binary plist values have no equivalent in the XML preview.
+    }
     function text(key: string) {
       const value = plist[key]
       if (typeof value === "string") return value.trim() || undefined
@@ -42,7 +48,7 @@ export async function openIpa(file: File) {
       minimumOs: text("MinimumOSVersion"),
       platforms,
       path: info.path,
-      xml: buildXmlPlist(plist),
+      xml,
       original,
     }
   } finally {

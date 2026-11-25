@@ -21,6 +21,7 @@
   "minimumOs": "Versión mínima del sistema",
   "platforms": "Plataformas compatibles",
   "unspecified": "Sin especificar",
+  "previewUnavailable": "La vista previa en XML no está disponible para esta lista de propiedades.",
   "copyXml": "Copiar XML",
   "copied": "Copiado",
   "download": "Descargar Info.plist"

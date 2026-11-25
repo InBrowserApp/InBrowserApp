@@ -21,6 +21,7 @@
   "minimumOs": "最小 OS バージョン",
   "platforms": "対応プラットフォーム",
   "unspecified": "指定なし",
+  "previewUnavailable": "このプロパティリストは XML でプレビューできません。",
   "copyXml": "XML をコピー",
   "copied": "コピーしました",
   "download": "Info.plist をダウンロード"

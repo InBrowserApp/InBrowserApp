@@ -21,6 +21,7 @@
   "minimumOs": "최소 OS 버전",
   "platforms": "지원 플랫폼",
   "unspecified": "지정되지 않음",
+  "previewUnavailable": "이 속성 목록은 XML로 미리 볼 수 없습니다.",
   "copyXml": "XML 복사",
   "copied": "복사됨",
   "download": "Info.plist 다운로드"

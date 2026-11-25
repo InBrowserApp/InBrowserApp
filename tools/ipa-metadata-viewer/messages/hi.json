@@ -21,6 +21,7 @@
   "minimumOs": "न्यूनतम OS वर्शन",
   "platforms": "समर्थित प्लैटफ़ॉर्म",
   "unspecified": "दिया नहीं गया",
+  "previewUnavailable": "इस प्रॉपर्टी लिस्ट का XML पूर्वावलोकन उपलब्ध नहीं है।",
   "copyXml": "XML कॉपी करें",
   "copied": "कॉपी हो गया",
   "download": "Info.plist डाउनलोड करें"

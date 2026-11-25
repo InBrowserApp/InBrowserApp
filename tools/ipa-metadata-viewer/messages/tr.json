@@ -21,6 +21,7 @@
   "minimumOs": "Minimum işletim sistemi sürümü",
   "platforms": "Desteklenen platformlar",
   "unspecified": "Belirtilmemiş",
+  "previewUnavailable": "Bu özellik listesi XML olarak önizlenemiyor.",
   "copyXml": "XML’yi kopyala",
   "copied": "Kopyalandı",
   "download": "Info.plist dosyasını indir"

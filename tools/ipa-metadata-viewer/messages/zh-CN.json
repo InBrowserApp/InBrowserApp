@@ -21,6 +21,7 @@
   "minimumOs": "最低系统版本",
   "platforms": "支持的平台",
   "unspecified": "未指定",
+  "previewUnavailable": "此属性列表暂无法以 XML 格式预览。",
   "copyXml": "复制 XML",
   "copied": "已复制",
   "download": "下载 Info.plist"

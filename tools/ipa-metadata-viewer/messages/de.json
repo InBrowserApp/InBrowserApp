@@ -21,6 +21,7 @@
   "minimumOs": "Mindestversion des Betriebssystems",
   "platforms": "Unterstützte Plattformen",
   "unspecified": "Nicht angegeben",
+  "previewUnavailable": "Für diese Eigenschaftsliste ist keine XML-Vorschau verfügbar.",
   "copyXml": "XML kopieren",
   "copied": "Kopiert",
   "download": "Info.plist herunterladen"

@@ -21,6 +21,7 @@
   "minimumOs": "Lägsta systemversion",
   "platforms": "Plattformar som stöds",
   "unspecified": "Inte angivet",
+  "previewUnavailable": "Det går inte att förhandsvisa den här egenskapslistan i XML.",
   "copyXml": "Kopiera XML",
   "copied": "Kopierat",
   "download": "Ladda ner Info.plist"
