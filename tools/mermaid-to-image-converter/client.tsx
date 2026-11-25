@@ -9,14 +9,14 @@ import { cn } from "@workspace/ui/lib/utils"
 import type { Messages } from "./types"
 
 const formats = {
-  png: "image/png",
-  svg: "image/svg+xml",
-  jpg: "image/jpeg",
-  webp: "image/webp",
+  png: { label: "PNG", type: "image/png" },
+  svg: { label: "SVG", type: "image/svg+xml" },
+  jpg: { label: "JPG", type: "image/jpeg" },
+  webp: { label: "WebP", type: "image/webp" },
 } as const
 
 type Format = keyof typeof formats
-type Result = { source: string } & ({ svg: string } | { error: true })
+type Result = { source: string; diagram: { svg: string; url: string } | null }
 const selectClass = "h-9 w-full rounded-md border bg-background px-2 text-sm"
 
 export default function Client({ messages: m }: { messages: Messages }) {
@@ -30,31 +30,35 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const [actualSize, setActualSize] = useState(false)
   const [background, setBackground] = useState("transparent")
   const [status, setStatus] = useState<"ready" | "saving" | "error">("ready")
+  const hasSource = Boolean(source.trim())
   const current = result?.source === source ? result : undefined
-  const svg = current && "svg" in current ? current.svg : undefined
-  const url = svg && `data:image/svg+xml,${encodeURIComponent(svg)}`
+  const diagram = current?.diagram
+  const rendering = hasSource && !current
   const hasBackground = format === "png" || format === "webp"
   const white = format === "jpg" || (hasBackground && background === "white")
   const saving = status === "saving"
 
   useEffect(() => {
-    if (!source.trim()) return
+    if (!hasSource) return
     let obsolete = false
     const timer = window.setTimeout(async () => {
       try {
         const { renderDiagram } = await import("@tool/mermaid-previewer/render")
         if (obsolete) return
         const svg = await renderDiagram(source)
-        if (!obsolete) setResult({ source, svg })
+        if (!obsolete) {
+          const url = `data:image/svg+xml,${encodeURIComponent(svg)}`
+          setResult({ source, diagram: { svg, url } })
+        }
       } catch {
-        if (!obsolete) setResult({ source, error: true })
+        if (!obsolete) setResult({ source, diagram: null })
       }
     }, 200)
     return () => {
       obsolete = true
       window.clearTimeout(timer)
     }
-  }, [source])
+  }, [hasSource, source])
 
   function updateSource(value: string, name?: string) {
     revision.current++
@@ -64,16 +68,20 @@ export default function Client({ messages: m }: { messages: Messages }) {
   }
 
   async function save() {
-    if (!url || !svg || saving) return
+    if (!diagram || saving) return
     const version = revision.current
     setStatus("saving")
     try {
       let blob: Blob
       if (format === "svg") {
-        blob = new Blob([svg], { type: formats.svg })
+        blob = new Blob([diagram.svg], { type: formats.svg.type })
       } else {
         const { createRaster } = await import("@tool/mermaid-previewer/render")
-        blob = await createRaster(url, { type: formats[format], scale, white })
+        blob = await createRaster(diagram.url, {
+          type: formats[format].type,
+          scale,
+          white,
+        })
       }
       if (version !== revision.current) return
       downloadBlob(blob, `${filename}.${format}`)
@@ -109,7 +117,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             aria-label={m.actualSize}
             aria-pressed={actualSize}
             title={m.actualSize}
-            disabled={!url}
+            disabled={!diagram}
             className="aria-pressed:bg-accent"
             onClick={() => setActualSize(!actualSize)}
           >
@@ -117,7 +125,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
           </Button>
         </div>
         <div className="flex min-h-48 flex-1 items-center justify-center p-4">
-          {url ? (
+          {diagram ? (
             <div
               role="group"
               aria-labelledby={id}
@@ -131,7 +139,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
               )}
             >
               <img
-                src={url}
+                src={diagram.url}
                 alt={m.preview}
                 className={
                   actualSize
@@ -145,8 +153,8 @@ export default function Client({ messages: m }: { messages: Messages }) {
               role="status"
               className="flex items-center gap-2 text-center text-sm text-muted-foreground"
             >
-              {source.trim() && !current ? <Spinner /> : null}
-              {!source.trim() ? m.empty : current ? m.invalid : m.loading}
+              {rendering ? <Spinner /> : null}
+              {!hasSource ? m.empty : rendering ? m.loading : m.invalid}
             </p>
           )}
         </div>
@@ -162,10 +170,11 @@ export default function Client({ messages: m }: { messages: Messages }) {
                   setFormat(event.currentTarget.value as Format)
                 }
               >
-                <option value="png">PNG</option>
-                <option value="svg">SVG</option>
-                <option value="jpg">JPG</option>
-                <option value="webp">WebP</option>
+                {Object.entries(formats).map(([value, { label }]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
               </select>
             </div>
             {format !== "svg" ? (
@@ -201,7 +210,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
           </fieldset>
           <Button
             onClick={() => void save()}
-            disabled={!url || saving}
+            disabled={!diagram || saving}
             aria-busy={saving}
             className="min-h-11 w-full sm:min-h-9"
           >
