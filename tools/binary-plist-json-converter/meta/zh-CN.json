@@ -1,0 +1,4 @@
+{
+  "name": "二进制 Plist 与 JSON 互转",
+  "description": "在浏览器中将 Apple 二进制 .plist 文件转换为 JSON，或转回 Plist。保留日期、字节数据和大整数，并复制或下载结果。"
+}

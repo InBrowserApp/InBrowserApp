@@ -213,6 +213,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bill-splitter",
   },
   {
+    category: "json",
+    name: "二進位 Plist 與 JSON 互轉",
+    slug: "binary-plist-json-converter",
+  },
+  {
     category: "random",
     name: "BIP39 助記詞產生器",
     slug: "bip39-mnemonic-generator",

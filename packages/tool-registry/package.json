@@ -49,6 +49,7 @@
     "@tool/bibliography-converter": "workspace:*",
     "@tool/bic-swift-validator": "workspace:*",
     "@tool/bill-splitter": "workspace:*",
+    "@tool/binary-plist-json-converter": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/blake2b-hash-text-or-file": "workspace:*",
     "@tool/blake2s-hash-text-or-file": "workspace:*",

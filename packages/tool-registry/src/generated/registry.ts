@@ -5443,6 +5443,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "binary-plist-json-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "binary plist",
+      "bplist",
+      "property list",
+      "json",
+      "apple",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل Plist الثنائي ↔ JSON",
+        description:
+          "حوّل ملفات ‎.plist الثنائية من Apple إلى JSON وبالعكس في متصفحك. احتفظ بالتواريخ وبيانات البايت والأعداد الصحيحة الكبيرة، ثم انسخ الناتج أو نزّله.",
+      },
+      de: {
+        name: "Konverter für binäre Plists ↔ JSON",
+        description:
+          "Konvertiere binäre .plist-Dateien von Apple im Browser in JSON und zurück. Datumswerte, Binärdaten und große Ganzzahlen bleiben erhalten. Kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "Binary Plist ↔ JSON Converter",
+        description:
+          "Convert Apple binary .plist files to JSON and back in your browser. Preserve dates, byte data, and large integers, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de Plist binario ↔ JSON",
+        description:
+          "Convierte archivos .plist binarios de Apple a JSON y viceversa en tu navegador. Conserva las fechas, los datos binarios y los enteros grandes, y copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur Plist binaire ↔ JSON",
+        description:
+          "Convertis les fichiers .plist binaires d’Apple en JSON et inversement dans ton navigateur. Conserve les dates, les données binaires et les grands entiers, puis copie ou télécharge le résultat.",
+      },
+      he: {
+        name: "ממיר Plist בינארי ↔ JSON",
+        description:
+          "המירו קובצי ‎.plist בינאריים של Apple ל־JSON ובחזרה בדפדפן. שמרו על תאריכים, נתוני בתים ומספרים שלמים גדולים, והעתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "बाइनरी Plist ↔ JSON कन्वर्टर",
+        description:
+          "ब्राउज़र में Apple की बाइनरी .plist फ़ाइलों को JSON में बदलें और वापस बदलें। तारीखें, बाइट डेटा और बड़े पूर्णांक सुरक्षित रखते हुए नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Plist Biner ↔ JSON",
+        description:
+          "Ubah file .plist biner Apple ke JSON dan sebaliknya di browser. Pertahankan tanggal, data bita, dan bilangan bulat besar, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore Plist binario ↔ JSON",
+        description:
+          "Converti i file .plist binari di Apple in JSON e viceversa nel browser. Mantieni date, dati binari e interi grandi, poi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "バイナリ Plist ↔ JSON 変換ツール",
+        description:
+          "Apple のバイナリ .plist ファイルと JSON をブラウザーで相互変換します。日付、バイトデータ、大きな整数を保持し、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "바이너리 Plist ↔ JSON 변환기",
+        description:
+          "브라우저에서 Apple 바이너리 .plist 파일을 JSON으로 변환하거나 다시 Plist로 바꿀 수 있습니다. 날짜, 바이트 데이터, 큰 정수를 보존하고 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar Plist Binari ↔ JSON",
+        description:
+          "Tukar fail .plist binari Apple kepada JSON dan sebaliknya dalam pelayar. Kekalkan tarikh, data bait dan integer besar, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "Binaire Plist ↔ JSON converteren",
+        description:
+          "Zet binaire .plist-bestanden van Apple om naar JSON en terug in je browser. Datums, binaire gegevens en grote gehele getallen blijven behouden. Kopieer of download het resultaat.",
+      },
+      no: {
+        name: "Binær Plist ↔ JSON-omformer",
+        description:
+          "Konverter binære .plist-filer fra Apple til JSON og tilbake i nettleseren. Behold datoer, bytedata og store heltall, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter binarnych plików Plist ↔ JSON",
+        description:
+          "Konwertuj binarne pliki .plist Apple na JSON i z powrotem w przeglądarce. Zachowaj daty, dane binarne i duże liczby całkowite, a następnie skopiuj lub pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de Plist binário ↔ JSON",
+        description:
+          "Converta arquivos .plist binários da Apple em JSON e vice-versa no navegador. Preserve datas, dados binários e inteiros grandes e copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер бинарного Plist ↔ JSON",
+        description:
+          "Преобразуйте бинарные файлы Apple .plist в JSON и обратно в браузере. Сохраняйте даты, байтовые данные и большие целые числа, копируйте или скачивайте результат.",
+      },
+      sv: {
+        name: "Binär Plist ↔ JSON-omvandlare",
+        description:
+          "Konvertera binära .plist-filer från Apple till JSON och tillbaka i webbläsaren. Bevara datum, bytedata och stora heltal, och kopiera eller ladda ner resultatet.",
+      },
+      th: {
+        name: "ตัวแปลง Plist ไบนารี ↔ JSON",
+        description:
+          "แปลงไฟล์ .plist ไบนารีของ Apple เป็น JSON และแปลงกลับได้ในเบราว์เซอร์ โดยเก็บวันที่ ข้อมูลไบต์ และจำนวนเต็มขนาดใหญ่ไว้ พร้อมคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "İkili Plist ↔ JSON Dönüştürücü",
+        description:
+          "Apple’ın ikili .plist dosyalarını tarayıcınızda JSON’a ve geri dönüştürün. Tarihleri, bayt verilerini ve büyük tam sayıları koruyun, sonucu kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Plist nhị phân ↔ JSON",
+        description:
+          "Chuyển tệp .plist nhị phân của Apple sang JSON và ngược lại ngay trong trình duyệt. Giữ nguyên ngày giờ, dữ liệu byte và số nguyên lớn, rồi sao chép hoặc tải kết quả về.",
+      },
+      "zh-CN": {
+        name: "二进制 Plist 与 JSON 互转",
+        description:
+          "在浏览器中将 Apple 二进制 .plist 文件转换为 JSON，或转回 Plist。保留日期、字节数据和大整数，并复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "二進位 Plist 與 JSON 互轉",
+        description:
+          "在瀏覽器中將 Apple 二進位 .plist 檔案轉換成 JSON，或轉回 Plist。保留日期、位元組資料及大型整數，並複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "bip39-mnemonic-generator",
     category: "random",
     icon: "lock",
@@ -58704,6 +58834,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "AA 分帳計算機",
         description:
           "聚餐、搭車或團購都能用。支援平分帳單、指定金額或按比例分攤，還能複製每人應付明細。帳單無須上傳。",
+      },
+    },
+  },
+  "binary-plist-json-converter": {
+    slug: "binary-plist-json-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "binary plist",
+      "bplist",
+      "property list",
+      "json",
+      "apple",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل Plist الثنائي ↔ JSON",
+        description:
+          "حوّل ملفات ‎.plist الثنائية من Apple إلى JSON وبالعكس في متصفحك. احتفظ بالتواريخ وبيانات البايت والأعداد الصحيحة الكبيرة، ثم انسخ الناتج أو نزّله.",
+      },
+      de: {
+        name: "Konverter für binäre Plists ↔ JSON",
+        description:
+          "Konvertiere binäre .plist-Dateien von Apple im Browser in JSON und zurück. Datumswerte, Binärdaten und große Ganzzahlen bleiben erhalten. Kopiere das Ergebnis oder lade es herunter.",
+      },
+      en: {
+        name: "Binary Plist ↔ JSON Converter",
+        description:
+          "Convert Apple binary .plist files to JSON and back in your browser. Preserve dates, byte data, and large integers, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de Plist binario ↔ JSON",
+        description:
+          "Convierte archivos .plist binarios de Apple a JSON y viceversa en tu navegador. Conserva las fechas, los datos binarios y los enteros grandes, y copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur Plist binaire ↔ JSON",
+        description:
+          "Convertis les fichiers .plist binaires d’Apple en JSON et inversement dans ton navigateur. Conserve les dates, les données binaires et les grands entiers, puis copie ou télécharge le résultat.",
+      },
+      he: {
+        name: "ממיר Plist בינארי ↔ JSON",
+        description:
+          "המירו קובצי ‎.plist בינאריים של Apple ל־JSON ובחזרה בדפדפן. שמרו על תאריכים, נתוני בתים ומספרים שלמים גדולים, והעתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "बाइनरी Plist ↔ JSON कन्वर्टर",
+        description:
+          "ब्राउज़र में Apple की बाइनरी .plist फ़ाइलों को JSON में बदलें और वापस बदलें। तारीखें, बाइट डेटा और बड़े पूर्णांक सुरक्षित रखते हुए नतीजा कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Plist Biner ↔ JSON",
+        description:
+          "Ubah file .plist biner Apple ke JSON dan sebaliknya di browser. Pertahankan tanggal, data bita, dan bilangan bulat besar, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore Plist binario ↔ JSON",
+        description:
+          "Converti i file .plist binari di Apple in JSON e viceversa nel browser. Mantieni date, dati binari e interi grandi, poi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "バイナリ Plist ↔ JSON 変換ツール",
+        description:
+          "Apple のバイナリ .plist ファイルと JSON をブラウザーで相互変換します。日付、バイトデータ、大きな整数を保持し、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "바이너리 Plist ↔ JSON 변환기",
+        description:
+          "브라우저에서 Apple 바이너리 .plist 파일을 JSON으로 변환하거나 다시 Plist로 바꿀 수 있습니다. 날짜, 바이트 데이터, 큰 정수를 보존하고 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar Plist Binari ↔ JSON",
+        description:
+          "Tukar fail .plist binari Apple kepada JSON dan sebaliknya dalam pelayar. Kekalkan tarikh, data bait dan integer besar, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "Binaire Plist ↔ JSON converteren",
+        description:
+          "Zet binaire .plist-bestanden van Apple om naar JSON en terug in je browser. Datums, binaire gegevens en grote gehele getallen blijven behouden. Kopieer of download het resultaat.",
+      },
+      no: {
+        name: "Binær Plist ↔ JSON-omformer",
+        description:
+          "Konverter binære .plist-filer fra Apple til JSON og tilbake i nettleseren. Behold datoer, bytedata og store heltall, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter binarnych plików Plist ↔ JSON",
+        description:
+          "Konwertuj binarne pliki .plist Apple na JSON i z powrotem w przeglądarce. Zachowaj daty, dane binarne i duże liczby całkowite, a następnie skopiuj lub pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de Plist binário ↔ JSON",
+        description:
+          "Converta arquivos .plist binários da Apple em JSON e vice-versa no navegador. Preserve datas, dados binários e inteiros grandes e copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер бинарного Plist ↔ JSON",
+        description:
+          "Преобразуйте бинарные файлы Apple .plist в JSON и обратно в браузере. Сохраняйте даты, байтовые данные и большие целые числа, копируйте или скачивайте результат.",
+      },
+      sv: {
+        name: "Binär Plist ↔ JSON-omvandlare",
+        description:
+          "Konvertera binära .plist-filer från Apple till JSON och tillbaka i webbläsaren. Bevara datum, bytedata och stora heltal, och kopiera eller ladda ner resultatet.",
+      },
+      th: {
+        name: "ตัวแปลง Plist ไบนารี ↔ JSON",
+        description:
+          "แปลงไฟล์ .plist ไบนารีของ Apple เป็น JSON และแปลงกลับได้ในเบราว์เซอร์ โดยเก็บวันที่ ข้อมูลไบต์ และจำนวนเต็มขนาดใหญ่ไว้ พร้อมคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "İkili Plist ↔ JSON Dönüştürücü",
+        description:
+          "Apple’ın ikili .plist dosyalarını tarayıcınızda JSON’a ve geri dönüştürün. Tarihleri, bayt verilerini ve büyük tam sayıları koruyun, sonucu kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Plist nhị phân ↔ JSON",
+        description:
+          "Chuyển tệp .plist nhị phân của Apple sang JSON và ngược lại ngay trong trình duyệt. Giữ nguyên ngày giờ, dữ liệu byte và số nguyên lớn, rồi sao chép hoặc tải kết quả về.",
+      },
+      "zh-CN": {
+        name: "二进制 Plist 与 JSON 互转",
+        description:
+          "在浏览器中将 Apple 二进制 .plist 文件转换为 JSON，或转回 Plist。保留日期、字节数据和大整数，并复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "二進位 Plist 與 JSON 互轉",
+        description:
+          "在瀏覽器中將 Apple 二進位 .plist 檔案轉換成 JSON，或轉回 Plist。保留日期、位元組資料及大型整數，並複製或下載結果。",
       },
     },
   },

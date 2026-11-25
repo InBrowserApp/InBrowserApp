@@ -1,0 +1,4 @@
+{
+  "name": "Binaire Plist ↔ JSON converteren",
+  "description": "Zet binaire .plist-bestanden van Apple om naar JSON en terug in je browser. Datums, binaire gegevens en grote gehele getallen blijven behouden. Kopieer of download het resultaat."
+}

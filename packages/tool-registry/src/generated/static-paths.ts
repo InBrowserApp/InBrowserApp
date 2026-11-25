@@ -3866,6 +3866,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "binary-plist-json-converter",
+    language: "ar",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "de",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "en",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "es",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "fr",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "he",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "hi",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "id",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "it",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "ja",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "ko",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "ms",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "nl",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "no",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "pl",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "pt",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "ru",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "sv",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "th",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "tr",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "vi",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "binary-plist-json-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "bip39-mnemonic-generator",
     language: "ar",
   },
