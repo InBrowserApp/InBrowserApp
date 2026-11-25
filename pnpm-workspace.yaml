@@ -419,6 +419,7 @@ patchedDependencies:
   "@rhwp/core@0.9.0": patches/@rhwp__core@0.9.0.patch
   hyparquet@1.33.1: patches/hyparquet@1.33.1.patch
   pst-extractor@1.12.0: patches/pst-extractor@1.12.0.patch
+  dxf-viewer@1.0.51: patches/dxf-viewer@1.0.51.patch
 
 minimumReleaseAgeExclude:
   - lint-staged@17.6.1

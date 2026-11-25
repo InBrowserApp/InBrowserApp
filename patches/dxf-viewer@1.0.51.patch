@@ -1,0 +1,19 @@
+diff --git a/src/TextRenderer.js b/src/TextRenderer.js
+index 64fe0c3559749b2177031a88b33e10297b323068..8ad04875e26f62ba13870db4063ba1d9890f15be 100644
+--- a/src/TextRenderer.js
++++ b/src/TextRenderer.js
+@@ -452,9 +452,12 @@ class Font {
+                 break
+             }
+         }
++        /* CFF glyphs expose their bounds through the outline, rather than stored metrics. */
++        const bounds = glyph.xMin === undefined ? glyph.getBoundingBox() :
++            {x1: glyph.xMin, x2: glyph.xMax, y1: glyph.yMin, y2: glyph.yMax}
+         return {advance: glyph.advanceWidth * scale, path,
+-                bounds: {xMin: glyph.xMin * scale, xMax: glyph.xMax * scale,
+-                         yMin: glyph.yMin * scale, yMax: glyph.yMax * scale}}
++                bounds: {xMin: bounds.x1 * scale, xMax: bounds.x2 * scale,
++                         yMin: bounds.y1 * scale, yMax: bounds.y2 * scale}}
+     }
+ 
+     /**

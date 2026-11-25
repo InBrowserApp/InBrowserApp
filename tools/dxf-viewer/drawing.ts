@@ -62,6 +62,7 @@ export async function openDrawing(
     viewer = new DxfViewer(host, {
       autoResize: true,
       antialias: true,
+      colorCorrection: true,
       fileEncoding: encoding,
       sceneOptions: { suppressPaperSpace: true },
     })
