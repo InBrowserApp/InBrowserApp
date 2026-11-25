@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import { Button } from "@workspace/ui/components/ui/button"
@@ -24,6 +24,7 @@ export default function MusicXmlViewer({
   )
   const [zoom, setZoom] = useState(defaultZoom)
   const host = useRef<HTMLDivElement>(null)
+  const preview = useRef<HTMLDivElement>(null)
   const viewer = useRef<OpenSheetMusicDisplay>(null)
 
   function open(next: File | null) {
@@ -61,12 +62,20 @@ export default function MusicXmlViewer({
     }
   }, [file])
 
-  function updateZoom(next: number) {
+  useEffect(() => {
+    if (status === "ready" && document.activeElement === document.body) {
+      preview.current?.focus({ preventScroll: true })
+    }
+  }, [status])
+
+  useLayoutEffect(() => {
+    if (status !== "ready") return
     const display = viewer.current!
-    display.Zoom = next / 100
+    const scale = zoom / defaultZoom
+    if (display.Zoom === scale) return
+    display.Zoom = scale
     display.render()
-    setZoom(next)
-  }
+  }, [status, zoom])
 
   const percent = new Intl.NumberFormat(language, { style: "percent" }).format(
     zoom / 100
@@ -78,6 +87,7 @@ export default function MusicXmlViewer({
       onFile={open}
       accept=".musicxml,.xml,.mxl,application/vnd.recordare.musicxml,application/vnd.recordare.musicxml+xml"
       active={status === "ready"}
+      fitContent
       messages={m}
       renderEmpty={(chooseFile) => (
         <div className="flex flex-col items-center gap-3 px-4 py-10 text-center">
@@ -131,7 +141,7 @@ export default function MusicXmlViewer({
           <DocumentIconButton
             label={m.zoomOut}
             disabled={zoom <= 60}
-            onClick={() => updateZoom(zoom - zoomStep)}
+            onClick={() => setZoom(zoom - zoomStep)}
           >
             <ZoomOut aria-hidden="true" />
           </DocumentIconButton>
@@ -139,16 +149,16 @@ export default function MusicXmlViewer({
             type="button"
             variant="ghost"
             className="min-w-14 tabular-nums"
-            aria-label={m.resetZoom}
+            aria-label={`${m.resetZoom} (${percent})`}
             title={m.resetZoom}
-            onClick={() => updateZoom(defaultZoom)}
+            onClick={() => setZoom(defaultZoom)}
           >
             {percent}
           </Button>
           <DocumentIconButton
             label={m.zoomIn}
             disabled={zoom >= 200}
-            onClick={() => updateZoom(zoom + zoomStep)}
+            onClick={() => setZoom(zoom + zoomStep)}
           >
             <ZoomIn aria-hidden="true" />
           </DocumentIconButton>
@@ -158,6 +168,7 @@ export default function MusicXmlViewer({
         hidden={status === "idle" || status === "error"}
         className="min-h-0 flex-1 [scrollbar-gutter:stable] overflow-auto bg-white p-2 text-black sm:p-4"
         dir="ltr"
+        ref={preview}
         role="region"
         aria-label={m.preview}
         // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- Enable keyboard scrolling in the score.
@@ -165,7 +176,11 @@ export default function MusicXmlViewer({
       >
         <div
           ref={host}
-          style={{ minWidth: Math.round((340 * zoom) / defaultZoom) }}
+          style={
+            zoom > defaultZoom
+              ? { minWidth: Math.round((340 * zoom) / defaultZoom) }
+              : undefined
+          }
         />
       </div>
     </DocumentWorkspace>

@@ -53,15 +53,19 @@ describe("MusicXML viewer", () => {
     await screen.findByRole("button", { name: messages.zoomIn })
     const sample = load.mock.calls[0]?.[0] as File
     const display = createViewer.mock.calls[0]?.[0]
+    expect(document.activeElement).toBe(
+      screen.getByRole("region", { name: messages.preview })
+    )
     expect(sample.name).toBe("Morning Steps.musicxml")
     expect(await sample.text()).toContain("<score-partwise")
     expect(display.render).toHaveBeenCalledOnce()
     press(messages.zoomIn)
     expect(
-      screen.getByRole("button", { name: messages.resetZoom }).textContent
+      screen.getByRole("button", { name: `${messages.resetZoom} (120%)` })
+        .textContent
     ).toBe("120%")
     expect(display.Zoom).toBe(1.2)
-    press(messages.resetZoom)
+    press(`${messages.resetZoom} (120%)`)
     expect(display.Zoom).toBe(1)
     press(messages.zoomOut)
     press(messages.zoomOut)
