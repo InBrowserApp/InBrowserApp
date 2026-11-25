@@ -99,7 +99,7 @@ export default function UnicodeNormalizer({
               spellCheck={false}
               autoCapitalize="off"
               rows={7}
-              className="field-sizing-fixed resize-y font-mono"
+              className="field-sizing-fixed h-32 resize-y font-mono md:h-auto"
             />
           </CardContent>
           <CardFooter className="flex-wrap gap-2">
@@ -139,11 +139,12 @@ export default function UnicodeNormalizer({
               readOnly
               spellCheck={false}
               rows={7}
-              className="field-sizing-fixed resize-y font-mono"
+              className="field-sizing-fixed h-32 resize-y font-mono md:h-auto"
             />
           </CardContent>
           <CardFooter className="flex-wrap gap-x-3 gap-y-2">
             <ToolCopyButton
+              key={result}
               value={result}
               copyLabel={messages.copyLabel}
               copiedLabel={messages.copiedLabel}
