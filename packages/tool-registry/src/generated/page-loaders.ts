@@ -315,6 +315,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "mobi-reader": () => import("@tool/mobi-reader/page"),
   "mobi-to-epub-converter": () => import("@tool/mobi-to-epub-converter/page"),
+  "mobi-to-pdf-converter": () => import("@tool/mobi-to-pdf-converter/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
   "mouse-tester": () => import("@tool/mouse-tester/page"),
   "murmurhash3-x64-128-hash-text-or-file": () =>

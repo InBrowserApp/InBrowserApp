@@ -1,0 +1,10 @@
+{
+  "open": "Otwórz książkę MOBI",
+  "replace": "Zastąp książkę",
+  "drop": "Upuść tutaj książkę MOBI, AZW lub PRC",
+  "unsupported": "Wybierz lokalną książkę MOBI, AZW lub PRC.",
+  "invalid": "Ta książka może być uszkodzona lub niekompletna. Wybierz inny egzemplarz pliku.",
+  "protected": "Ta książka jest zaszyfrowana lub zabezpieczona przed kopiowaniem. Wybierz niezaszyfrowany egzemplarz.",
+  "unsupportedVariant": "Ten format książki lub wariant kompresji nie jest obsługiwany. Plików KFX i plików PRC w innych formatach nie można przekonwertować.",
+  "unsupportedLayout": "Ta książka ma stały lub mieszany układ stron, którego nie można poprawnie wyeksportować. Wybierz książkę z układem dostosowującym się do ekranu."
+}

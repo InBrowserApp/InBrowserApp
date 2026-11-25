@@ -1,0 +1,10 @@
+{
+  "open": "Mở sách MOBI",
+  "replace": "Thay sách",
+  "drop": "Thả sách MOBI, AZW hoặc PRC vào đây",
+  "unsupported": "Chọn sách MOBI, AZW hoặc PRC trên thiết bị.",
+  "invalid": "Sách này có thể bị hỏng hoặc không đầy đủ. Hãy chọn bản khác.",
+  "protected": "Sách này được mã hóa hoặc bảo vệ chống sao chép. Hãy chọn bản không mã hóa.",
+  "unsupportedVariant": "Định dạng sách hoặc kiểu nén này không được hỗ trợ. Không thể chuyển đổi KFX và các tệp PRC không phải sách thuộc định dạng được hỗ trợ.",
+  "unsupportedLayout": "Sách này dùng bố cục trang cố định hoặc hỗn hợp nên không thể xuất một cách đáng tin cậy. Hãy chọn sách có bố cục linh hoạt."
+}
