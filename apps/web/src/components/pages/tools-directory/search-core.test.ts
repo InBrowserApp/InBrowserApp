@@ -163,6 +163,16 @@ describe("directory suggestions", () => {
     ).toEqual([])
   })
 
+  it("prefers a leading run of query words over ordered words later in a title", () => {
+    const converter = { ...entries[0], name: "Image to PDF Converter" }
+    const extractor = { ...entries[1], name: "Extract Images from PDF" }
+
+    expect(
+      buildSearchSuggestions([extractor, converter], "image pdf", "en")[0]
+        ?.entry
+    ).toBe(converter)
+  })
+
   it("limits suggestions to eight entries in alphabetical order for equal scores", () => {
     const matches = Array.from({ length: 10 }, (_, index) => ({
       ...entries[0],

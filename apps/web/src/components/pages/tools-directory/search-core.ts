@@ -28,6 +28,7 @@ enum SearchScore {
   AliasPhrase,
   NameTerms,
   NameOrderedTerms,
+  NameLeadingTerms,
   NameContains,
   NamePrefix,
   AliasExact,
@@ -62,7 +63,9 @@ function getNameScore(name: SearchText, query: SearchQuery) {
   })
 
   if (orderedTerms) {
-    return SearchScore.NameOrderedTerms
+    return name.compact.startsWith(query.terms[0]!)
+      ? SearchScore.NameLeadingTerms
+      : SearchScore.NameOrderedTerms
   }
 
   return query.terms.every((term) => name.compact.includes(term))
