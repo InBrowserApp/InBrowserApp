@@ -1,6 +1,6 @@
 ## About HWP / HWPX to PDF Converter
 
-Open an HWP 5 or HWPX document to create and download a PDF locally in your browser. Supported Korean and mixed-language text, ordinary tables, and embedded images are rendered as page images. The preview shows the exact PDF you will download. To read the source without converting it, use the [HWP / HWPX Viewer](../hwp-viewer/).
+Open an HWP 5 or HWPX document to create and download a PDF locally in your browser. The PDF retains selectable text, ordinary tables, and supported embedded images. The preview shows the exact PDF you will download. To read the source without converting it, use the [HWP / HWPX Viewer](../hwp-viewer/).
 
 ## How to convert a document
 
@@ -8,7 +8,7 @@ Choose or drop a document, wait for each page to render, and check the PDF previ
 
 ## Output and compatibility
 
-The PDF contains page images at 150 DPI. It has no selectable or searchable text, and no OCR is added. Page dimensions and order follow the document renderer. Bundled Korean fonts substitute for unavailable document fonts, so glyph shapes, spacing, line wrapping, and page breaks can differ from Hangul.
+You can select, copy, and search document text in the PDF. Page dimensions and order follow the document renderer. The PDF embeds subsets of bundled Korean fonts. Font substitution can change glyph shapes, spacing, line wrapping, and page breaks compared with Hangul.
 
 Ordinary text, tables, and embedded raster or supported SVG images are the intended scope. Complex tables, equations, text boxes, headers, footers, and official forms require careful checking against the original. Unsupported or missing content detected during conversion stops the export; this is not a guarantee that every layout difference can be detected. Macros, linked resources, attachments, comments, signatures, and interactive features are not preserved as interactive PDF content. Digital signatures and document authenticity are not verified.
 

@@ -44,15 +44,28 @@ test("uses Korean serif/sans fallbacks while retaining other styling", async () 
   expect(result).toContain("font-family:Nanum Gothic;fill:red")
   expect(fontFamily("sans-serif")).toBe("Nanum Gothic")
 })
-test("normalizes embedded rasters and safely serializes nested SVGs", async () => {
+test("normalizes embedded rasters and nested SVGs to PNG", async () => {
   const child = svg('<image href="data:image/jpeg;base64,/9j/"/>')
   const result = await prepareSvg(
     svg(`<image href="data:image/svg+xml;base64,${btoa(child)}"/>`),
     signal()
   )
-  const encoded = result.match(/data:image\/svg\+xml;base64,([^"]+)/)![1]!
-  expect(atob(encoded)).toContain("data:image/png;base64,AQ==")
+  expect(result).toContain("data:image/png;base64,AQ==")
+  expect(HTMLImageElement.prototype.decode).toHaveBeenCalledTimes(2)
   expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:owned")
+})
+test("selects the bundled CJK font for Han and Japanese text", async () => {
+  const result = await prepareSvg(
+    svg('<text font-family="바탕" style="font-family:Gulim">漢字とかな</text>'),
+    signal()
+  )
+  expect(result).toContain('font-family="Noto Sans CJK SC"')
+  expect(result).toContain("font-family:Noto Sans CJK SC")
+})
+test("rejects page filters that the PDF renderer would omit", async () => {
+  await expect(
+    prepareSvg(svg('<g filter="url(#shadow)"/>'), signal())
+  ).rejects.toThrow("unsupported")
 })
 test.each([
   '<image href="https://example.invalid/a"/>',

@@ -1,5 +1,5 @@
 import { sanitizePage } from "@workspace/hwp/sanitize"
-import { fontFamily } from "./font-family"
+import { cjkFamily, fontFamily } from "./font-family"
 import { checkRaster } from "./raster-mime"
 import type { Resource } from "./core/resources"
 
@@ -50,7 +50,7 @@ async function decode(blob: Blob, signal: AbortSignal, png = false) {
   }
 }
 
-export async function prepareSvg(source: string, signal: AbortSignal) {
+async function normalizeSvg(source: string, signal: AbortSignal, page = false) {
   signal.throwIfAborted()
   const clean = sanitizePage(source)
   if (clean.limited) throw new Error("unsupported")
@@ -62,16 +62,33 @@ export async function prepareSvg(source: string, signal: AbortSignal) {
   ]
   for (let index = 0; index < pending.length; index++) {
     const node = pending[index]!.node
+    const vectorPage = page && index === 0
     for (const element of [node, ...node.querySelectorAll("*")]) {
       const family = element.getAttribute("font-family")
-      if (family) element.setAttribute("font-family", fontFamily(family))
+      const cjk =
+        vectorPage &&
+        (element.localName === "text" || element.localName === "tspan") &&
+        /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(
+          element.textContent ?? ""
+        )
+      if (cjk) element.setAttribute("font-family", cjkFamily)
+      else if (family) element.setAttribute("font-family", fontFamily(family))
       const style = element.getAttribute("style")
+      // The PDF renderer does not apply SVG filters. Embedded illustrations
+      // are decoded by the browser and can still use them.
+      if (
+        vectorPage &&
+        (element.hasAttribute("filter") ||
+          /(?:^|;)\s*filter\s*:/i.test(style ?? ""))
+      )
+        throw new Error("unsupported")
       if (style)
         element.setAttribute(
           "style",
           style.replace(
             /font-family\s*:\s*([^;]+)/gi,
-            (_, value: string) => `font-family:${fontFamily(value)}`
+            (_, value: string) =>
+              `font-family:${cjk ? cjkFamily : fontFamily(value)}`
           )
         )
       if (element.localName !== "image") continue
@@ -113,12 +130,17 @@ export async function prepareSvg(source: string, signal: AbortSignal) {
   const serializer = new XMLSerializer()
   for (let index = pending.length - 1; index > 0; index--) {
     const { node, reference } = pending[index]!
-    const bytes = new TextEncoder().encode(serializer.serializeToString(node))
-    let binary = ""
-    for (const value of bytes) binary += String.fromCharCode(value)
-    reference!.value = `data:image/svg+xml;base64,${btoa(binary)}`
+    reference!.value = await decode(
+      new Blob([serializer.serializeToString(node)], { type: "image/svg+xml" }),
+      signal,
+      true
+    )
   }
   return serializer.serializeToString(pending[0]!.node)
+}
+
+export function prepareSvg(source: string, signal: AbortSignal) {
+  return normalizeSvg(source, signal, true)
 }
 
 export async function validateResources(
@@ -129,7 +151,7 @@ export async function validateResources(
     signal.throwIfAborted()
     let blob: Blob
     if (item.mime === "image/svg+xml") {
-      const svg = await prepareSvg(
+      const svg = await normalizeSvg(
         new TextDecoder("utf-8", { fatal: true }).decode(item.bytes),
         signal
       )

@@ -1,0 +1,15 @@
+diff --git a/source.js b/source.js
+index 88e0218..1e201f1 100644
+--- a/source.js
++++ b/source.js
+@@ -2116,7 +2116,9 @@ var SVGtoPDF = function(doc, svg, x, y, options) {
+               break;
+             case '#text': case '#cdata-section':
+               if (this.get('visibility') === 'hidden') {continue;}
+-              if (fill || stroke || isClip) {
++              // Some renderers draw a glyph as a shape and include invisible text
++              // for selection. Keep that text using PDF rendering mode 3.
++              if (fill || stroke || isClip || this.attr('fill-opacity') === '0') {
+                 if (fill) {
+                   docFillColor(fill);
+                 }

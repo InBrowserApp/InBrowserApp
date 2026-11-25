@@ -1,6 +1,6 @@
 ## Über den HWP/HWPX-zu-PDF-Konverter
 
-Öffne ein HWP-5- oder HWPX-Dokument, um lokal in deinem Browser eine PDF zu erstellen und herunterzuladen. Unterstützte koreanische und mehrsprachige Texte, gewöhnliche Tabellen und eingebettete Bilder werden als Seitenbilder dargestellt. Die Vorschau zeigt genau die PDF, die du herunterladen wirst. Verwende den [HWP- und HWPX-Betrachter](../hwp-viewer/), um das Original ohne Konvertierung zu lesen.
+Öffne ein HWP-5- oder HWPX-Dokument, um lokal in deinem Browser eine PDF zu erstellen und herunterzuladen. In der PDF bleiben auswählbarer Text, gewöhnliche Tabellen und unterstützte eingebettete Bilder erhalten. Die Vorschau zeigt genau die PDF, die du herunterladen wirst. Verwende den [HWP- und HWPX-Betrachter](../hwp-viewer/), um das Original ohne Konvertierung zu lesen.
 
 ## So konvertierst du ein Dokument
 
@@ -8,7 +8,7 @@ Wähle ein Dokument aus oder lege es ab, warte auf die Darstellung jeder Seite u
 
 ## Ausgabe und Kompatibilität
 
-Die PDF enthält Seitenbilder mit 150 DPI. Sie enthält keinen auswählbaren oder durchsuchbaren Text, und OCR wird nicht hinzugefügt. Seitengröße und Reihenfolge richten sich nach dem Dokument-Renderer. Mitgelieferte koreanische Schriftarten ersetzen nicht verfügbare Dokumentschriftarten. Daher können Zeichenformen, Abstände, Zeilenumbrüche und Seitenumbrüche von Hangul abweichen.
+Du kannst den Dokumenttext in der PDF auswählen, kopieren und durchsuchen. Seitengröße und Reihenfolge richten sich nach dem Dokument-Renderer. Die PDF bettet die verwendeten Zeichen der mitgelieferten koreanischen Schriftarten ein. Ersatzschriftarten können Zeichenformen, Abstände, Zeilenumbrüche und Seitenumbrüche gegenüber Hangul verändern.
 
 Das Tool ist für gewöhnliche Texte, Tabellen und eingebettete Rasterbilder oder unterstützte SVG-Bilder ausgelegt. Komplexe Tabellen, Formeln, Textfelder, Kopf- und Fußzeilen sowie amtliche Formulare müssen sorgfältig mit dem Original verglichen werden. Werden während der Konvertierung nicht unterstützte oder fehlende Inhalte erkannt, wird der Export abgebrochen. Dies garantiert nicht, dass jede Layoutabweichung erkannt werden kann. Makros, verknüpfte Ressourcen, Anhänge, Kommentare, Signaturen und interaktive Funktionen bleiben nicht als interaktive PDF-Inhalte erhalten. Digitale Signaturen und die Echtheit des Dokuments werden nicht überprüft.
 

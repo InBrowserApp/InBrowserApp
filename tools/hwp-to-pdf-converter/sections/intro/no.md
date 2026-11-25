@@ -1,6 +1,6 @@
 ## Om Konverterer fra HWP / HWPX til PDF
 
-Åpne et HWP 5- eller HWPX-dokument for å opprette og laste ned en PDF lokalt i nettleseren. Koreansk og flerspråklig tekst, vanlige tabeller og innebygde bilder som støttes, gjengis som bilder av sidene. Forhåndsvisningen viser nøyaktig den PDF-en du vil laste ned. Bruk [HWP- / HWPX-viser](../hwp-viewer/) for å lese kildefilen uten å konvertere den.
+Åpne et HWP 5- eller HWPX-dokument for å opprette og laste ned en PDF lokalt i nettleseren. PDF-en beholder tekst som kan merkes, vanlige tabeller og innebygde bilder som støttes. Forhåndsvisningen viser nøyaktig den PDF-en du vil laste ned. Bruk [HWP- / HWPX-viser](../hwp-viewer/) for å lese kildefilen uten å konvertere den.
 
 ## Slik konverterer du et dokument
 
@@ -8,7 +8,7 @@ Velg eller slipp et dokument, vent til hver side er gjengitt, og kontroller PDF-
 
 ## Resultat og kompatibilitet
 
-PDF-en inneholder bilder av sidene ved 150 DPI. Den har ingen tekst som kan merkes eller søkes i, og OCR legges ikke til. Sidestørrelse og rekkefølge følger gjengivelsesmotoren for dokumenter. Medfølgende koreanske skrifter erstatter dokumentskrifter som ikke er tilgjengelige, så tegnformer, avstander, linjebryting og sideskift kan avvike fra Hangul.
+Du kan merke og kopiere dokumenttekst i PDF-en og søke i den. Sidestørrelsen og rekkefølgen følger gjengivelsesmotoren. PDF-en bruker innebygde delsett av de medfølgende koreanske skriftene. Når skrifter erstattes, kan tegnformer, avstander, linjeskift og sideskift avvike fra Hangul.
 
 Verktøyet er beregnet på vanlig tekst, tabeller og innebygde rasterbilder eller SVG-bilder som støttes. Komplekse tabeller, ligninger, tekstbokser, topptekster, bunntekster og offisielle skjemaer må kontrolleres nøye mot originalen. Hvis manglende innhold eller innhold som ikke støttes, oppdages under konverteringen, stoppes eksporten; dette garanterer ikke at alle forskjeller i sideoppsettet kan oppdages. Makroer, lenkede ressurser, vedlegg, kommentarer, signaturer og interaktive funksjoner bevares ikke som interaktivt PDF-innhold. Digitale signaturer og dokumentets ekthet blir ikke verifisert.
 

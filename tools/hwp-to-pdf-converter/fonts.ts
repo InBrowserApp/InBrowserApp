@@ -3,6 +3,16 @@ import gothicBold from "./fonts/NanumGothic-Bold.ttf?url"
 import myeongjo from "./fonts/NanumMyeongjo-Regular.ttf?url"
 import myeongjoBold from "./fonts/NanumMyeongjo-Bold.ttf?url"
 
+async function readFont(url: string) {
+  const response = await fetch(url)
+  if (!response.ok) throw new Error("engineUnavailable")
+  return response.arrayBuffer()
+}
+
+export function loadCjkFont() {
+  return readFont(cjk)
+}
+
 export async function loadFonts() {
   if (typeof FontFace === "undefined" || !("fonts" in globalThis))
     throw new Error("browserUnsupported")
@@ -14,15 +24,14 @@ export async function loadFonts() {
   ] as const
   return Promise.all(
     sources.map(async ([url, family, weight]) => {
-      const response = await fetch(url)
-      if (!response.ok) throw new Error("engineUnavailable")
-      const bytes = await response.arrayBuffer()
+      const bytes = await readFont(url)
       const face = await new FontFace(family, bytes, { weight }).load()
       // Dedicated workers expose a FontFaceSet independently of document.fonts.
       ;(
         globalThis as unknown as { fonts: { add: (face: FontFace) => void } }
       ).fonts.add(face)
-      return new Uint8Array(bytes)
+      return { family, weight, bytes }
     })
   )
 }
+import { cjk } from "@workspace/libreoffice/fonts"
