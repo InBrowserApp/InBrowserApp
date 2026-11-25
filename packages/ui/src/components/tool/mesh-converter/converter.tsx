@@ -169,7 +169,7 @@ export default function MeshConverter({
       </p>
       {result && (
         <div className="flex flex-wrap items-center gap-3 rounded-lg border bg-background p-4">
-          <div className="flex min-w-0 flex-1 items-center gap-3">
+          <div className="flex min-w-0 flex-1 items-center gap-3 max-[360px]:basis-full">
             <Box
               className="size-5 shrink-0 text-muted-foreground"
               aria-hidden="true"
