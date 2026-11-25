@@ -127,4 +127,4 @@ function isInstallGuideId(guide: string | undefined): guide is InstallGuideId {
 }
 
 export { INSTALL_GROUPS, INSTALL_GUIDES, INSTALL_GUIDE_IDS, isInstallGuideId }
-export type { InstallGuideId, InstallGroup }
+export type { InstallGuideId }
