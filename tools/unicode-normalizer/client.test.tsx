@@ -45,7 +45,8 @@ test("shows Unicode code points, including supplementary characters, and marks a
   render(<UnicodeNormalizer messages={messages} />)
   fireEvent.change(input(), { target: { value: "e\u0301🙂" + "x".repeat(41) } })
   const [original, normalized] = Array.from(
-    document.querySelectorAll("dd code")
+    document.querySelectorAll("dd code"),
+    (code) => code.textContent
   )
   expect(original).toMatch(/^U\+0065 U\+0301 U\+1F642 /)
   expect(normalized).toMatch(/^U\+00E9 U\+1F642 /)
