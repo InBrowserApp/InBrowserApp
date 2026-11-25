@@ -51,6 +51,11 @@ describe("Random Date Generator", () => {
     generate()
     await waitFor(() => expect(output().value).toBe("2024-02-29"))
     expect(output().dir).toBe("ltr")
+    expect(
+      screen.getByRole("heading", {
+        name: `Dates · 2024-02-29 · ${messages.iso}`,
+      })
+    ).toBeTruthy()
 
     updateRange("2024-03-01", "2024-02-28")
     generate()

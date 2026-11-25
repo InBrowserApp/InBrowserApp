@@ -42,6 +42,11 @@ type Result = Readonly<{
 const minDate = "0001-01-01"
 const maxDate = "9999-12-31"
 
+function readCalendarDate(form: HTMLFormElement, name: "start" | "end") {
+  const input = form.elements.namedItem(name) as HTMLInputElement
+  return input.valueAsDate!.toISOString().slice(0, 10)
+}
+
 export default function RandomDateClient({ lang, messages }: Props) {
   const startId = useId()
   const endId = useId()
@@ -67,14 +72,14 @@ export default function RandomDateClient({ lang, messages }: Props) {
     event.preventDefault()
     if (pending) return
 
-    const form = new FormData(event.currentTarget)
-    const start = form.get("start") as string
-    const end = form.get("end") as string
+    const start = readCalendarDate(event.currentTarget, "start")
+    const end = readCalendarDate(event.currentTarget, "end")
     if (end < start) {
       setStatus("invalid-range")
       return
     }
 
+    const form = new FormData(event.currentTarget)
     const format = form.get("format") as DateFormat
     const count = Number(form.get("quantity"))
     setStatus("pending")
@@ -196,7 +201,9 @@ export default function RandomDateClient({ lang, messages }: Props) {
               <>
                 {" · "}
                 <bdi dir="ltr">
-                  {result.start} – {result.end}
+                  {result.start === result.end
+                    ? result.start
+                    : `${result.start} – ${result.end}`}
                 </bdi>
                 {` · ${messages[result.format]}`}
               </>
