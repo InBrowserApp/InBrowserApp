@@ -7,6 +7,8 @@
     ".": "./src/index.ts",
     "./assets": "./src/pdf-assets.ts",
     "./document": "./src/document.ts",
+    "./conversion": "./src/conversion.ts",
+    "./text-layout": "./src/text-layout.ts",
     "./original-images": "./src/original-images.ts"
   },
   "dependencies": {

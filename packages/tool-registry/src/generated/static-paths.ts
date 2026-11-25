@@ -29902,6 +29902,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-to-epub-converter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "de",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "en",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "es",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "he",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "id",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "it",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "no",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "th",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-to-epub-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-to-image-converter",
     language: "ar",
   },

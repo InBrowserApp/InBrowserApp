@@ -1,0 +1,26 @@
+{
+  "name": "@tool/pdf-to-epub-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/ebook": "workspace:*",
+    "@workspace/ocr-models": "workspace:*",
+    "@workspace/pdf-reader": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "pdfjs-dist": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  }
+}

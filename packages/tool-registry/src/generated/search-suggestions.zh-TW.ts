@@ -1628,6 +1628,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "pdf-to-cbz-converter",
   },
   {
+    category: "ebook",
+    name: "PDF 轉 EPUB 轉換器",
+    slug: "pdf-to-epub-converter",
+  },
+  {
     category: "pdf",
     name: "PDF 轉圖片轉換器",
     slug: "pdf-to-image-converter",
