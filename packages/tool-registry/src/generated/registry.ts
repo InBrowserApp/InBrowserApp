@@ -39254,6 +39254,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-to-cbz-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "archive",
+    tags: ["pdf", "cbz", "zip", "comic", "manga", "scan", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى CBZ",
+        description:
+          "حوّل القصص المصوّرة والمانغا من PDF إلى CBZ في متصفحك. احتفظ بترتيب الصفحات وصور JPEG الأصلية التي تغطي صفحة كاملة عند الإمكان، ونزّل قصتك في أرشيف ZIP بامتداد CBZ.",
+      },
+      de: {
+        name: "PDF in CBZ umwandeln",
+        description:
+          "Wandle Comics und Manga im PDF-Format direkt im Browser in CBZ um. Der Konverter behält die Seitenreihenfolge bei und übernimmt geeignete ganzseitige JPEG-Scans. Lade das Comicarchiv im ZIP-Format herunter.",
+      },
+      en: {
+        name: "PDF to CBZ Converter",
+        description:
+          "Convert PDF comics and manga to CBZ in your browser. Keep pages in order, reuse suitable full-page JPEG scans, and download a ZIP-based comic archive.",
+      },
+      es: {
+        name: "Convertidor de PDF a CBZ",
+        description:
+          "Convierte cómics y manga de PDF a CBZ en tu navegador. Conserva el orden de las páginas, reutiliza las imágenes JPEG de página completa cuando es posible y descarga el cómic en un archivo ZIP con extensión CBZ.",
+      },
+      fr: {
+        name: "Convertisseur PDF en CBZ",
+        description:
+          "Convertissez vos BD et mangas PDF en CBZ dans votre navigateur. Conservez l’ordre des pages et réutilisez les images JPEG d’origine compatibles dans l’archive ZIP à télécharger.",
+      },
+      he: {
+        name: "ממיר PDF ל־CBZ",
+        description:
+          "המירו קומיקס ומאנגה מ־PDF ל־CBZ בדפדפן. הממיר שומר על סדר העמודים ומשתמש בסריקות JPEG מקוריות של עמודים שלמים כשאפשר. בסיום הורידו את ארכיון הקומיקס המבוסס על ZIP.",
+      },
+      hi: {
+        name: "PDF से CBZ कन्वर्टर",
+        description:
+          "PDF कॉमिक और मांगा को ब्राउज़र में CBZ में बदलें। पृष्ठों का क्रम बना रहता है और पूरे पृष्ठ वाले JPEG स्कैन जहाँ संभव हो, सीधे कॉपी होते हैं। ZIP फ़ॉर्मैट में बना CBZ डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter PDF ke CBZ",
+        description:
+          "Ubah komik dan manga PDF ke CBZ langsung di browser. Pertahankan urutan halaman, gunakan kembali gambar pindai JPEG asli yang memenuhi syarat, lalu unduh komik sebagai arsip ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a CBZ",
+        description:
+          "Converti fumetti e manga da PDF a CBZ nel browser. Mantieni l’ordine delle pagine, riutilizza quando possibile le scansioni JPEG a pagina intera e scarica il fumetto come archivio ZIP con estensione CBZ.",
+      },
+      ja: {
+        name: "PDFをCBZに変換",
+        description:
+          "PDF 形式の漫画をブラウザーで CBZ に変換します。元のページ順を保ち、ページ全体を占める JPEG は条件に合えばそのまま使います。結果は ZIP 形式のコミックアーカイブとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF를 CBZ로 변환",
+        description:
+          "브라우저에서 PDF 만화를 CBZ로 변환하세요. 원래 페이지 순서를 유지하고 조건에 맞는 전체 페이지 JPEG 스캔을 그대로 사용합니다. 결과는 ZIP 형식의 만화 압축 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar PDF kepada CBZ",
+        description:
+          "Tukar komik dan manga PDF kepada CBZ dalam pelayar anda. Kekalkan susunan halaman, guna semula imbasan JPEG halaman penuh yang sesuai, dan muat turun hasil sebagai arkib komik berformat ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-CBZ-converter",
+        description:
+          "Zet PDF-strips en manga in je browser om naar CBZ. De paginavolgorde blijft behouden en geschikte paginavullende JPEG-scans gaan ongewijzigd mee. Download het resultaat als striparchief in ZIP-formaat.",
+      },
+      no: {
+        name: "Konverter PDF til CBZ",
+        description:
+          "Konverter tegneserier og manga fra PDF til CBZ i nettleseren. Behold siderekkefølgen, gjenbruk helsides JPEG-skanninger der det er mulig, og last ned tegneserien som et ZIP-basert CBZ-arkiv.",
+      },
+      pl: {
+        name: "Konwerter PDF na CBZ",
+        description:
+          "Konwertuj komiksy i mangę z PDF na CBZ w przeglądarce. Zachowaj kolejność stron i oryginalne skany JPEG, jeśli wypełniają całą stronę i można je przenieść bez zmian. Pobierz gotowe archiwum komiksu w formacie ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para CBZ",
+        description:
+          "Converta quadrinhos e mangás de PDF para CBZ no navegador. Preserve a ordem das páginas, aproveite digitalizações JPEG de página inteira quando compatíveis e baixe o quadrinho em um arquivo no formato ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в CBZ",
+        description:
+          "Преобразуйте комиксы и мангу из PDF в CBZ прямо в браузере. Скачайте комикс в ZIP-архиве с исходным порядком страниц и без перекодирования подходящих сканов JPEG.",
+      },
+      sv: {
+        name: "Konverterare från PDF till CBZ",
+        description:
+          "Konvertera serier och manga från PDF till CBZ i webbläsaren. Behåll sidordningen, återanvänd lämpliga skannade helsidor i JPEG och ladda ner serien som ett ZIP-baserat arkiv.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PDF เป็น CBZ",
+        description:
+          "แปลงการ์ตูนและมังงะ PDF เป็น CBZ ในเบราว์เซอร์ คงลำดับหน้า ใช้ภาพสแกน JPEG เต็มหน้าจากต้นฉบับเมื่อเข้าเงื่อนไข และดาวน์โหลดเป็นไฟล์การ์ตูนแบบ ZIP",
+      },
+      tr: {
+        name: "PDF’den CBZ’ye Dönüştürücü",
+        description:
+          "PDF biçimindeki çizgi roman ve mangaları tarayıcınızda CBZ’ye dönüştürün. Sayfa sırasını koruyun, uygun tam sayfa JPEG taramalarını olduğu gibi aktarın ve çizgi romanı ZIP tabanlı bir arşiv olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang CBZ",
+        description:
+          "Chuyển truyện tranh và manga dạng PDF sang CBZ ngay trong trình duyệt. Giữ nguyên thứ tự trang, dùng lại ảnh quét JPEG toàn trang khi đủ điều kiện và tải xuống tệp truyện dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转 CBZ 转换器",
+        description:
+          "在浏览器中将 PDF 漫画转为 CBZ。保留原始页序，直接复制符合条件的整页 JPEG 原图，并下载为 ZIP 格式的漫画压缩包。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 CBZ",
+        description:
+          "在瀏覽器中將 PDF 漫畫轉成 CBZ。保留原始頁面順序，沿用符合條件的全頁 JPEG 掃描影像，並下載以 ZIP 格式打包的漫畫檔。",
+      },
+    },
+  },
+  {
     slug: "pdf-to-image-converter",
     category: "pdf",
     secondaryCategories: ["image"],
@@ -96417,6 +96541,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "PDF 文字擷取工具",
         description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
+      },
+    },
+  },
+  "pdf-to-cbz-converter": {
+    slug: "pdf-to-cbz-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "archive",
+    tags: ["pdf", "cbz", "zip", "comic", "manga", "scan", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل PDF إلى CBZ",
+        description:
+          "حوّل القصص المصوّرة والمانغا من PDF إلى CBZ في متصفحك. احتفظ بترتيب الصفحات وصور JPEG الأصلية التي تغطي صفحة كاملة عند الإمكان، ونزّل قصتك في أرشيف ZIP بامتداد CBZ.",
+      },
+      de: {
+        name: "PDF in CBZ umwandeln",
+        description:
+          "Wandle Comics und Manga im PDF-Format direkt im Browser in CBZ um. Der Konverter behält die Seitenreihenfolge bei und übernimmt geeignete ganzseitige JPEG-Scans. Lade das Comicarchiv im ZIP-Format herunter.",
+      },
+      en: {
+        name: "PDF to CBZ Converter",
+        description:
+          "Convert PDF comics and manga to CBZ in your browser. Keep pages in order, reuse suitable full-page JPEG scans, and download a ZIP-based comic archive.",
+      },
+      es: {
+        name: "Convertidor de PDF a CBZ",
+        description:
+          "Convierte cómics y manga de PDF a CBZ en tu navegador. Conserva el orden de las páginas, reutiliza las imágenes JPEG de página completa cuando es posible y descarga el cómic en un archivo ZIP con extensión CBZ.",
+      },
+      fr: {
+        name: "Convertisseur PDF en CBZ",
+        description:
+          "Convertissez vos BD et mangas PDF en CBZ dans votre navigateur. Conservez l’ordre des pages et réutilisez les images JPEG d’origine compatibles dans l’archive ZIP à télécharger.",
+      },
+      he: {
+        name: "ממיר PDF ל־CBZ",
+        description:
+          "המירו קומיקס ומאנגה מ־PDF ל־CBZ בדפדפן. הממיר שומר על סדר העמודים ומשתמש בסריקות JPEG מקוריות של עמודים שלמים כשאפשר. בסיום הורידו את ארכיון הקומיקס המבוסס על ZIP.",
+      },
+      hi: {
+        name: "PDF से CBZ कन्वर्टर",
+        description:
+          "PDF कॉमिक और मांगा को ब्राउज़र में CBZ में बदलें। पृष्ठों का क्रम बना रहता है और पूरे पृष्ठ वाले JPEG स्कैन जहाँ संभव हो, सीधे कॉपी होते हैं। ZIP फ़ॉर्मैट में बना CBZ डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter PDF ke CBZ",
+        description:
+          "Ubah komik dan manga PDF ke CBZ langsung di browser. Pertahankan urutan halaman, gunakan kembali gambar pindai JPEG asli yang memenuhi syarat, lalu unduh komik sebagai arsip ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a CBZ",
+        description:
+          "Converti fumetti e manga da PDF a CBZ nel browser. Mantieni l’ordine delle pagine, riutilizza quando possibile le scansioni JPEG a pagina intera e scarica il fumetto come archivio ZIP con estensione CBZ.",
+      },
+      ja: {
+        name: "PDFをCBZに変換",
+        description:
+          "PDF 形式の漫画をブラウザーで CBZ に変換します。元のページ順を保ち、ページ全体を占める JPEG は条件に合えばそのまま使います。結果は ZIP 形式のコミックアーカイブとしてダウンロードできます。",
+      },
+      ko: {
+        name: "PDF를 CBZ로 변환",
+        description:
+          "브라우저에서 PDF 만화를 CBZ로 변환하세요. 원래 페이지 순서를 유지하고 조건에 맞는 전체 페이지 JPEG 스캔을 그대로 사용합니다. 결과는 ZIP 형식의 만화 압축 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar PDF kepada CBZ",
+        description:
+          "Tukar komik dan manga PDF kepada CBZ dalam pelayar anda. Kekalkan susunan halaman, guna semula imbasan JPEG halaman penuh yang sesuai, dan muat turun hasil sebagai arkib komik berformat ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-CBZ-converter",
+        description:
+          "Zet PDF-strips en manga in je browser om naar CBZ. De paginavolgorde blijft behouden en geschikte paginavullende JPEG-scans gaan ongewijzigd mee. Download het resultaat als striparchief in ZIP-formaat.",
+      },
+      no: {
+        name: "Konverter PDF til CBZ",
+        description:
+          "Konverter tegneserier og manga fra PDF til CBZ i nettleseren. Behold siderekkefølgen, gjenbruk helsides JPEG-skanninger der det er mulig, og last ned tegneserien som et ZIP-basert CBZ-arkiv.",
+      },
+      pl: {
+        name: "Konwerter PDF na CBZ",
+        description:
+          "Konwertuj komiksy i mangę z PDF na CBZ w przeglądarce. Zachowaj kolejność stron i oryginalne skany JPEG, jeśli wypełniają całą stronę i można je przenieść bez zmian. Pobierz gotowe archiwum komiksu w formacie ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para CBZ",
+        description:
+          "Converta quadrinhos e mangás de PDF para CBZ no navegador. Preserve a ordem das páginas, aproveite digitalizações JPEG de página inteira quando compatíveis e baixe o quadrinho em um arquivo no formato ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в CBZ",
+        description:
+          "Преобразуйте комиксы и мангу из PDF в CBZ прямо в браузере. Скачайте комикс в ZIP-архиве с исходным порядком страниц и без перекодирования подходящих сканов JPEG.",
+      },
+      sv: {
+        name: "Konverterare från PDF till CBZ",
+        description:
+          "Konvertera serier och manga från PDF till CBZ i webbläsaren. Behåll sidordningen, återanvänd lämpliga skannade helsidor i JPEG och ladda ner serien som ett ZIP-baserat arkiv.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PDF เป็น CBZ",
+        description:
+          "แปลงการ์ตูนและมังงะ PDF เป็น CBZ ในเบราว์เซอร์ คงลำดับหน้า ใช้ภาพสแกน JPEG เต็มหน้าจากต้นฉบับเมื่อเข้าเงื่อนไข และดาวน์โหลดเป็นไฟล์การ์ตูนแบบ ZIP",
+      },
+      tr: {
+        name: "PDF’den CBZ’ye Dönüştürücü",
+        description:
+          "PDF biçimindeki çizgi roman ve mangaları tarayıcınızda CBZ’ye dönüştürün. Sayfa sırasını koruyun, uygun tam sayfa JPEG taramalarını olduğu gibi aktarın ve çizgi romanı ZIP tabanlı bir arşiv olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang CBZ",
+        description:
+          "Chuyển truyện tranh và manga dạng PDF sang CBZ ngay trong trình duyệt. Giữ nguyên thứ tự trang, dùng lại ảnh quét JPEG toàn trang khi đủ điều kiện và tải xuống tệp truyện dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转 CBZ 转换器",
+        description:
+          "在浏览器中将 PDF 漫画转为 CBZ。保留原始页序，直接复制符合条件的整页 JPEG 原图，并下载为 ZIP 格式的漫画压缩包。",
+      },
+      "zh-TW": {
+        name: "PDF 轉 CBZ",
+        description:
+          "在瀏覽器中將 PDF 漫畫轉成 CBZ。保留原始頁面順序，沿用符合條件的全頁 JPEG 掃描影像，並下載以 ZIP 格式打包的漫畫檔。",
       },
     },
   },

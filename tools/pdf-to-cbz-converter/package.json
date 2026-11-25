@@ -1,0 +1,27 @@
+{
+  "name": "@tool/pdf-to-cbz-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/comic": "workspace:*",
+    "@workspace/pdf-reader": "workspace:*",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "@zip.js/zip.js": "catalog:",
+    "exifr": "catalog:",
+    "pdfjs-dist": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

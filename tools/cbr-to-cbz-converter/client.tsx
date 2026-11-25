@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
+import { CbzDownload } from "@workspace/ui/components/tool/cbz-download"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
@@ -24,23 +24,6 @@ type State =
   | { status: "working"; message: string }
   | { status: "error"; message: string; path?: string }
   | { status: "ready"; result: Result }
-
-function Cover({ file }: { file: Blob }) {
-  const [url, setUrl] = useState("")
-  useEffect(() => {
-    const src = URL.createObjectURL(file)
-    setUrl(src)
-    return () => URL.revokeObjectURL(src)
-  }, [file])
-  return url ? (
-    <img
-      src={url}
-      alt=""
-      className="h-36 max-w-40 rounded-md object-contain"
-      onError={() => setUrl("")}
-    />
-  ) : null
-}
 
 export default function Client({
   lang,
@@ -142,45 +125,13 @@ export default function Client({
         </Alert>
       ) : null}
       {job?.status === "ready" ? (
-        <>
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b px-4 py-3">
-            <div role="status" className="text-sm">
-              <p className="font-medium">
-                {m.ready.replace(
-                  "{total}",
-                  new Intl.NumberFormat(lang).format(job.result.total)
-                )}
-              </p>
-              {job.result.metadata ? (
-                <p className="text-muted-foreground">{m.metadata}</p>
-              ) : null}
-            </div>
-            <DocumentDownload
-              file={job.result.cbz}
-              filename={job.file.name.replace(extension, ".cbz")}
-              label={m.download}
-            />
-          </div>
-          <div className="flex min-w-0 flex-wrap items-center gap-4 bg-muted/25 p-4">
-            {job.result.cover ? <Cover file={job.result.cover} /> : null}
-            <dl className="grid min-w-0 flex-1 basis-36 gap-3 text-sm">
-              <div>
-                <dt className="text-muted-foreground">{m.first}</dt>
-                <dd className="wrap-anywhere">
-                  <bdi>{job.result.first}</bdi>
-                </dd>
-              </div>
-              {job.result.total > 1 ? (
-                <div>
-                  <dt className="text-muted-foreground">{m.last}</dt>
-                  <dd className="wrap-anywhere">
-                    <bdi>{job.result.last}</bdi>
-                  </dd>
-                </div>
-              ) : null}
-            </dl>
-          </div>
-        </>
+        <CbzDownload
+          file={job.result}
+          filename={job.file.name.replace(extension, ".cbz")}
+          detail={job.result.metadata ? m.metadata : undefined}
+          lang={lang}
+          messages={m}
+        />
       ) : null}
     </DocumentWorkspace>
   )

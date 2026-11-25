@@ -1543,6 +1543,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "pdf-text-extractor",
   },
   {
+    category: "ebook",
+    name: "โปรแกรมแปลง PDF เป็น CBZ",
+    slug: "pdf-to-cbz-converter",
+  },
+  {
     category: "pdf",
     name: "ตัวแปลง PDF เป็นรูปภาพ",
     slug: "pdf-to-image-converter",

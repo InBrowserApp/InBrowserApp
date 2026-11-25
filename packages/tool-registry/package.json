@@ -315,6 +315,7 @@
     "@tool/pdf-redactor": "workspace:*",
     "@tool/pdf-splitter": "workspace:*",
     "@tool/pdf-text-extractor": "workspace:*",
+    "@tool/pdf-to-cbz-converter": "workspace:*",
     "@tool/pdf-to-image-converter": "workspace:*",
     "@tool/pdf-to-pdfa-converter": "workspace:*",
     "@tool/pdf-viewer": "workspace:*",

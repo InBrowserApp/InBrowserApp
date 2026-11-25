@@ -377,6 +377,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-redactor": () => import("@tool/pdf-redactor/page"),
   "pdf-splitter": () => import("@tool/pdf-splitter/page"),
   "pdf-text-extractor": () => import("@tool/pdf-text-extractor/page"),
+  "pdf-to-cbz-converter": () => import("@tool/pdf-to-cbz-converter/page"),
   "pdf-to-image-converter": () => import("@tool/pdf-to-image-converter/page"),
   "pdf-to-pdfa-converter": () => import("@tool/pdf-to-pdfa-converter/page"),
   "pdf-viewer": () => import("@tool/pdf-viewer/page"),

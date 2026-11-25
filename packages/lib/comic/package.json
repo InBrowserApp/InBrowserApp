@@ -7,6 +7,7 @@
     ".": "./src/archive.ts",
     "./types": "./src/types.ts",
     "./pages": "./src/pages.ts",
+    "./cbz": "./src/cbz.ts",
     "./pdf": "./src/prepare-pdf.ts",
     "./errors": "./src/errors.ts",
     "./compressed": "./src/compressed.ts"

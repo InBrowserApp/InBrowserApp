@@ -1,0 +1,4 @@
+{
+  "name": "PDF 轉 CBZ",
+  "description": "在瀏覽器中將 PDF 漫畫轉成 CBZ。保留原始頁面順序，沿用符合條件的全頁 JPEG 掃描影像，並下載以 ZIP 格式打包的漫畫檔。"
+}
