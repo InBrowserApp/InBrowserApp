@@ -6,6 +6,11 @@ export type OpmlDocument = {
 }
 type Row = { node: Element; depth: number }
 
+const parserErrorNamespaces = [
+  "http://www.w3.org/1999/xhtml",
+  "http://www.mozilla.org/newlayout/xml/parsererror.xml",
+]
+
 function xmlText(value: string) {
   return value.replace(
     // oxlint-disable-next-line no-control-regex -- XML 1.0 permits only these characters.
@@ -33,11 +38,11 @@ function createChild(parent: Element, name: string) {
 export function parseOpml(source: string): OpmlDocument {
   const xml = new DOMParser().parseFromString(source, "application/xml")
   const root = xml.documentElement
-  if (
-    root.localName !== "opml" ||
-    xml.doctype ||
-    xml.querySelector("parsererror")
+  const parserFailed = parserErrorNamespaces.some(
+    (namespace) =>
+      xml.getElementsByTagNameNS(namespace, "parsererror").length > 0
   )
+  if (root.localName !== "opml" || xml.doctype || parserFailed)
     throw new Error("invalid")
   const bodies = children(root, "body")
   const heads = children(root, "head")

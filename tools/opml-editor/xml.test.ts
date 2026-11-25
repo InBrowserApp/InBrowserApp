@@ -21,7 +21,7 @@ test("preserves the OPML version, other head fields and namespaced attributes on
   const source = `<?xml version="1.0"?>
     <!-- retained -->
     <opml version="1.0" xmlns:ext="urn:vendor">
-      <head><title>Before</title><ownerName>Åsa</ownerName></head>
+      <head><title>Before</title><ownerName>Åsa</ownerName><ext:parsererror>Vendor note</ext:parsererror></head>
       <body>
         <outline text="Tech" ext:flag="x">
           <outline type="rss" text="Old name" title="Old name" xmlUrl="https://example.test/rss?q=1&amp;lang=ja" ext:date="2026"/>
@@ -42,6 +42,10 @@ test("preserves the OPML version, other head fields and namespaced attributes on
   expect(reread.root.getAttribute("version")).toBe("1.0")
   expect(documentTitle(reread)).toBe("Feeds & friends")
   expect(reread.root.querySelector("ownerName")?.textContent).toBe("Åsa")
+  expect(
+    reread.head.getElementsByTagNameNS("urn:vendor", "parsererror")[0]
+      ?.textContent
+  ).toBe("Vendor note")
   const [folder, nested] = outlineRows(reread)
   expect(folder!.node.getAttributeNS("urn:vendor", "flag")).toBe("x")
   expect(nested!.depth).toBe(1)
