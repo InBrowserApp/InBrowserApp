@@ -31,7 +31,9 @@
   "messageBody": "Message body",
   "noBody": "This email has no readable message body. Its available headers and attachments are shown above.",
   "protected": "This email is encrypted or protected. Decrypt it in your email application before opening it here.",
-  "rtfOnly": "This message only contains an Outlook rich-text body, which cannot be displayed here. Its headers and attachments are available.",
+  "html": "HTML message",
+  "plain": "Plain text",
   "downloadAttachment": "Download {name}",
-  "download": "Download"
+  "download": "Download",
+  "searchPlaceholder": "Search messages"
 }

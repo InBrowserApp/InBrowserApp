@@ -31,7 +31,9 @@
   "messageBody": "Berichttekst",
   "noBody": "Deze e-mail heeft geen leesbare berichttekst. De beschikbare headers en bijlagen staan hierboven.",
   "protected": "Deze e-mail is versleuteld of beveiligd. Ontsleutel deze in je e-mailprogramma voordat je de e-mail hier opent.",
-  "rtfOnly": "Dit bericht bevat alleen Outlook-tekst met opmaak, die hier niet kan worden weergegeven. De headers en bijlagen zijn beschikbaar.",
+  "html": "HTML-bericht",
+  "plain": "Platte tekst",
   "downloadAttachment": "{name} downloaden",
-  "download": "Downloaden"
+  "download": "Downloaden",
+  "searchPlaceholder": "Zoeken in berichten"
 }

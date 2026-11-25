@@ -12,9 +12,7 @@ import {
 import { Folder, Mails } from "@workspace/ui/icons"
 import { Mailbox } from "./mailbox"
 import { sampleMailbox } from "./sample"
-import type messages from "./messages/en.json"
-
-export type Messages = typeof messages
+import type { Messages } from "./types"
 
 export default function Client({
   messages: m,

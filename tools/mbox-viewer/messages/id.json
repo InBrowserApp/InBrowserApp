@@ -31,7 +31,9 @@
   "messageBody": "Isi pesan",
   "noBody": "Email ini tidak memiliki isi pesan yang dapat dibaca. Header dan lampiran yang tersedia ditampilkan di atas.",
   "protected": "Email ini dienkripsi atau dilindungi. Dekripsikan di aplikasi email Anda sebelum membukanya di sini.",
-  "rtfOnly": "Pesan ini hanya berisi teks berformat Outlook yang tidak dapat ditampilkan di sini. Header dan lampirannya tersedia.",
+  "html": "Pesan HTML",
+  "plain": "Teks biasa",
   "downloadAttachment": "Unduh {name}",
-  "download": "Unduh"
+  "download": "Unduh",
+  "searchPlaceholder": "Cari pesan"
 }

@@ -31,7 +31,9 @@
   "messageBody": "Isi mesej",
   "noBody": "E-mel ini tiada isi mesej yang boleh dibaca. Pengepala dan lampiran yang tersedia ditunjukkan di atas.",
   "protected": "E-mel ini disulitkan atau dilindungi. Nyahsulitkannya dalam aplikasi e-mel anda sebelum membukanya di sini.",
-  "rtfOnly": "Mesej ini hanya mengandungi isi teks kaya Outlook yang tidak dapat dipaparkan di sini. Pengepala dan lampirannya tersedia.",
+  "html": "Mesej HTML",
+  "plain": "Teks biasa",
   "downloadAttachment": "Muat turun {name}",
-  "download": "Muat turun"
+  "download": "Muat turun",
+  "searchPlaceholder": "Cari mesej"
 }

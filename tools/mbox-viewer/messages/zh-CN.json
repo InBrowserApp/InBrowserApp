@@ -31,7 +31,9 @@
   "messageBody": "邮件正文",
   "noBody": "此邮件没有可读取的正文。可用的邮件头和附件已显示在上方。",
   "protected": "此邮件已加密或受保护。请先在邮件应用中解密，再在此处打开。",
-  "rtfOnly": "此邮件仅包含 Outlook 富文本正文，无法在此处显示。您仍可查看邮件头和附件。",
+  "html": "HTML 正文",
+  "plain": "纯文本",
   "downloadAttachment": "下载 {name}",
-  "download": "下载"
+  "download": "下载",
+  "searchPlaceholder": "搜索邮件"
 }

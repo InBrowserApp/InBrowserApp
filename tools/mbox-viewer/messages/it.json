@@ -31,7 +31,9 @@
   "messageBody": "Corpo del messaggio",
   "noBody": "Questa email non ha un corpo del messaggio leggibile. Le intestazioni e gli allegati disponibili sono mostrati sopra.",
   "protected": "Questa email è crittografata o protetta. Decrittala nella tua applicazione di posta prima di aprirla qui.",
-  "rtfOnly": "Questo messaggio contiene solo un corpo in formato RTF di Outlook, che non può essere visualizzato qui. Le intestazioni e gli allegati sono disponibili.",
+  "html": "Messaggio HTML",
+  "plain": "Testo semplice",
   "downloadAttachment": "Scarica {name}",
-  "download": "Scarica"
+  "download": "Scarica",
+  "searchPlaceholder": "Cerca messaggi"
 }

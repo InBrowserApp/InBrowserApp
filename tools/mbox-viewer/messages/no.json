@@ -31,7 +31,9 @@
   "messageBody": "Meldingstekst",
   "noBody": "Denne e-posten har ingen lesbar meldingstekst. Tilgjengelige meldingshoder og vedlegg vises ovenfor.",
   "protected": "Denne e-posten er kryptert eller beskyttet. Dekrypter den i e-postprogrammet ditt før du åpner den her.",
-  "rtfOnly": "Denne meldingen inneholder bare Outlook-riktekst, som ikke kan vises her. Meldingshoder og vedlegg er tilgjengelige.",
+  "html": "HTML-melding",
+  "plain": "Ren tekst",
   "downloadAttachment": "Last ned {name}",
-  "download": "Last ned"
+  "download": "Last ned",
+  "searchPlaceholder": "Søk i meldinger"
 }

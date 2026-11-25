@@ -79,6 +79,47 @@ describe("MBOX indexing and reading", () => {
     )
   })
 
+  it("honors a validated Content-Length and keeps mboxcl2 body lines intact", async () => {
+    const body =
+      "From - Sat Jan  1 12:30:00 2022\nSubject: embedded sample\n\n>From literal text\n"
+    const second =
+      "From - Mon Jan  3 12:30:00 2022\nSubject: Second\n\nSecond body"
+    const mailbox = (length: number) =>
+      new Blob([
+        "From - Sat Jan  1 12:30:00 2022\nSubject: First\n",
+        `Content-Length: ${length}\n\n`,
+        body,
+        "\n",
+        second,
+      ])
+    const file = mailbox(body.length)
+    const entries = await indexMbox(file)
+    expect(entries.map(({ subject }) => subject)).toEqual(["First", "Second"])
+    expect((await readMboxMessage(file, entries[0]!)).text).toBe(body)
+    expect(
+      (await indexMbox(mailbox(body.length - 5))).map(({ subject }) => subject)
+    ).toEqual(["First", "embedded sample", "Second"])
+  })
+
+  it("indexes legacy Latin-1 headers the same way as the MIME reader", async () => {
+    const file = new Blob([
+      "From - Sat Jan  1 12:30:00 2022\nFrom: Andr",
+      new Uint8Array([233]),
+      " <legacy@example.test>\nSubject: Caf",
+      new Uint8Array([233]),
+      "\n\nLegacy message",
+    ])
+    const [entry] = await indexMbox(file)
+    expect(entry).toMatchObject({
+      from: "André <legacy@example.test>",
+      subject: "Café",
+    })
+    expect(await readMboxMessage(file, entry!)).toMatchObject({
+      from: entry!.from,
+      subject: entry!.subject,
+    })
+  })
+
   it("rejects input that does not contain an MBOX message", async () => {
     await expect(
       indexMbox(new Blob(["Subject: Standalone message\n\nHi"]))

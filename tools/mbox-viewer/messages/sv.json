@@ -31,7 +31,9 @@
   "messageBody": "Meddelandetext",
   "noBody": "Meddelandet har ingen läsbar meddelandetext. Tillgängliga meddelandehuvuden och bilagor visas ovan.",
   "protected": "Meddelandet är krypterat eller skyddat. Dekryptera det i ditt e-postprogram innan du öppnar det här.",
-  "rtfOnly": "Meddelandet innehåller bara Outlook-text i RTF-format som inte kan visas här. Meddelandehuvuden och bilagor är tillgängliga.",
+  "html": "HTML-meddelande",
+  "plain": "Oformaterad text",
   "downloadAttachment": "Ladda ner {name}",
-  "download": "Ladda ner"
+  "download": "Ladda ner",
+  "searchPlaceholder": "Sök meddelanden"
 }

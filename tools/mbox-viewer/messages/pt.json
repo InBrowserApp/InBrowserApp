@@ -31,7 +31,9 @@
   "messageBody": "Corpo da mensagem",
   "noBody": "Este e-mail não tem um corpo de mensagem legível. Os cabeçalhos e anexos disponíveis são exibidos acima.",
   "protected": "Este e-mail está criptografado ou protegido. Descriptografe-o no seu aplicativo de e-mail antes de abri-lo aqui.",
-  "rtfOnly": "Esta mensagem contém apenas um corpo em texto formatado do Outlook, que não pode ser exibido aqui. Os cabeçalhos e anexos estão disponíveis.",
+  "html": "Mensagem HTML",
+  "plain": "Texto simples",
   "downloadAttachment": "Baixar {name}",
-  "download": "Baixar"
+  "download": "Baixar",
+  "searchPlaceholder": "Buscar mensagens"
 }

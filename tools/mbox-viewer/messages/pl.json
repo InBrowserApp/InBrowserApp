@@ -31,7 +31,9 @@
   "messageBody": "Treść wiadomości",
   "noBody": "Ten e-mail nie zawiera treści, którą można odczytać. Dostępne nagłówki i załączniki są pokazane powyżej.",
   "protected": "Ten e-mail jest zaszyfrowany lub chroniony. Odszyfruj go w programie pocztowym, zanim otworzysz go tutaj.",
-  "rtfOnly": "Ta wiadomość zawiera tylko tekst sformatowany programu Outlook, którego nie można tu wyświetlić. Nagłówki i załączniki są dostępne.",
+  "html": "Wiadomość HTML",
+  "plain": "Zwykły tekst",
   "downloadAttachment": "Pobierz {name}",
-  "download": "Pobierz"
+  "download": "Pobierz",
+  "searchPlaceholder": "Szukaj wiadomości"
 }

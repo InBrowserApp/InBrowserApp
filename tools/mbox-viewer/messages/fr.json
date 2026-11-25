@@ -31,7 +31,9 @@
   "messageBody": "Corps du message",
   "noBody": "Cet e-mail ne contient aucun corps de message lisible. Les en-têtes et pièces jointes disponibles sont affichés ci-dessus.",
   "protected": "Cet e-mail est chiffré ou protégé. Déchiffrez-le dans votre messagerie avant de l’ouvrir ici.",
-  "rtfOnly": "Ce message contient uniquement un corps au format texte enrichi Outlook, qui ne peut pas être affiché ici. Ses en-têtes et pièces jointes sont disponibles.",
+  "html": "Message HTML",
+  "plain": "Texte brut",
   "downloadAttachment": "Télécharger {name}",
-  "download": "Télécharger"
+  "download": "Télécharger",
+  "searchPlaceholder": "Rechercher des messages"
 }

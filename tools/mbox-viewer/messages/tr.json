@@ -31,7 +31,9 @@
   "messageBody": "İleti gövdesi",
   "noBody": "Bu e-postanın okunabilir bir ileti gövdesi yok. Mevcut üstbilgileri ve ekleri yukarıda gösteriliyor.",
   "protected": "Bu e-posta şifreli veya korumalı. Burada açmadan önce e-posta uygulamanızda şifresini çözün.",
-  "rtfOnly": "Bu ileti yalnızca burada görüntülenemeyen bir Outlook zengin metin gövdesi içeriyor. Üstbilgileri ve ekleri kullanılabilir.",
+  "html": "HTML iletisi",
+  "plain": "Düz metin",
   "downloadAttachment": "{name} indir",
-  "download": "İndir"
+  "download": "İndir",
+  "searchPlaceholder": "E-postalarda ara"
 }

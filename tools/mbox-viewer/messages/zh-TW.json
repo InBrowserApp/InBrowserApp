@@ -31,7 +31,9 @@
   "messageBody": "郵件本文",
   "noBody": "此郵件沒有可讀取的本文。可用的郵件標頭與附件已顯示於上方。",
   "protected": "此郵件已加密或受到保護。請先在您的郵件應用程式中解密，再於此處開啟。",
-  "rtfOnly": "此郵件僅包含 Outlook RTF 格式的本文，無法在此顯示。仍可檢視其標頭與附件。",
+  "html": "HTML 郵件",
+  "plain": "純文字",
   "downloadAttachment": "下載 {name}",
-  "download": "下載"
+  "download": "下載",
+  "searchPlaceholder": "搜尋郵件"
 }

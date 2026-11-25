@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
-import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Spinner } from "@workspace/ui/components/ui/spinner"
+import { MailboxStatus } from "./mailbox-status"
 import {
   ChevronLeft,
   ChevronRight,
@@ -14,11 +13,12 @@ import { cn } from "@workspace/ui/lib/utils"
 import type { MailSummary } from "@workspace/email/mbox"
 import type { Failure } from "@workspace/email"
 import { ReadMessage } from "./read-message"
-import type { Messages } from "./client"
+import type { Messages } from "./types"
 import type { Reply, Request } from "./worker"
 
 type Selection = { id: number; result: Extract<Reply, { id: number }> | null }
 const pageSize = 50
+const desktop = "(min-width: 48rem)"
 
 export function Mailbox({
   file,
@@ -32,6 +32,7 @@ export function Mailbox({
   const worker = useRef<Worker | null>(null)
   const lastRow = useRef<HTMLButtonElement>(null)
   const back = useRef<HTMLButtonElement>(null)
+  const reader = useRef<HTMLDivElement>(null)
   const [entries, setEntries] = useState<MailSummary[] | null>(null)
   const [error, setError] = useState<Failure | null>(null)
   const [selection, setSelection] = useState<Selection | null>(null)
@@ -56,7 +57,7 @@ export function Mailbox({
         )
       } else if ("messages" in data) {
         setEntries(data.messages)
-        if (window.matchMedia("(min-width: 48rem)").matches) {
+        if (window.matchMedia(desktop).matches) {
           setSelection({ id: 0, result: null })
           instance.postMessage({ id: 0 } satisfies Request)
         }
@@ -98,31 +99,29 @@ export function Mailbox({
     setPage(next)
     if (list.current) list.current.scrollTop = 0
   }
-  function select(id: number, row: HTMLButtonElement) {
+  function select(id: number, row: HTMLButtonElement, keyboard: boolean) {
     lastRow.current = row
     if (id !== selection?.id) {
       setSelection({ id, result: null })
       worker.current?.postMessage({ id } satisfies Request)
     }
-    requestAnimationFrame(() => back.current?.focus())
+    requestAnimationFrame(() => {
+      if (!window.matchMedia(desktop).matches) back.current?.focus()
+      else if (keyboard) reader.current?.focus()
+    })
   }
   function returnToList() {
     setSelection(null)
     requestAnimationFrame(() => lastRow.current?.focus())
   }
 
-  if (error) {
+  if (error)
     return (
-      <div className="p-4">
-        <Alert variant="destructive">
-          <AlertDescription role="alert">
-            {error === "resourceLimit" ? m.resourceLimit : m.invalid}
-          </AlertDescription>
-        </Alert>
-      </div>
+      <MailboxStatus error>
+        {error === "resourceLimit" ? m.resourceLimit : m.invalid}
+      </MailboxStatus>
     )
-  }
-  if (!entries) return <Loading>{m.indexing}</Loading>
+  if (!entries) return <MailboxStatus>{m.indexing}</MailboxStatus>
   return (
     <div className="flex min-h-0 flex-1">
       <div
@@ -140,7 +139,7 @@ export function Mailbox({
             <Input
               type="search"
               aria-label={m.search}
-              placeholder={m.search}
+              placeholder={m.searchPlaceholder}
               className="ps-9"
               value={query}
               onChange={(event) => {
@@ -163,7 +162,9 @@ export function Mailbox({
                   <button
                     type="button"
                     aria-current={selection?.id === row.id || undefined}
-                    onClick={(event) => select(row.id, event.currentTarget)}
+                    onClick={(event) =>
+                      select(row.id, event.currentTarget, event.detail === 0)
+                    }
                     className="block w-full border-s-2 border-transparent px-3 py-3 text-start hover:bg-muted/70 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring aria-[current=true]:border-s-primary aria-[current=true]:bg-muted"
                   >
                     <span
@@ -199,15 +200,10 @@ export function Mailbox({
         {filtered.length > 0 && (
           <div className="flex min-h-12 shrink-0 items-center justify-between gap-1 border-t px-3 py-1 text-xs text-muted-foreground">
             <span role="status">
-              {m.range.replace(/\{(start|end|total)\}/g, (_, key: string) =>
-                number.format(
-                  key === "start"
-                    ? start + 1
-                    : key === "end"
-                      ? end
-                      : filtered.length
-                )
-              )}
+              {m.range
+                .replace("{start}", number.format(start + 1))
+                .replace("{end}", number.format(end))
+                .replace("{total}", number.format(filtered.length))}
             </span>
             {filtered.length > pageSize && (
               <div className="flex gap-1">
@@ -237,6 +233,10 @@ export function Mailbox({
         )}
       </div>
       <div
+        ref={reader}
+        role={selection ? "region" : undefined}
+        aria-label={selection ? m.messageBody : undefined}
+        tabIndex={selection ? -1 : undefined}
         className={cn(
           "min-w-0 flex-1 flex-col",
           selection ? "flex" : "hidden md:flex"
@@ -244,7 +244,7 @@ export function Mailbox({
       >
         {selection ? (
           <>
-            <div className="shrink-0 border-b p-2 md:hidden">
+            <div className="shrink-0 border-b p-2 md:sr-only md:focus-within:not-sr-only md:focus-within:p-2">
               <Button
                 ref={back}
                 variant="ghost"
@@ -264,18 +264,14 @@ export function Mailbox({
                   messages={m}
                 />
               ) : (
-                <div className="p-4">
-                  <Alert variant="destructive">
-                    <AlertDescription role="alert">
-                      {selection.result.error === "protected"
-                        ? m.protected
-                        : m.messageError}
-                    </AlertDescription>
-                  </Alert>
-                </div>
+                <MailboxStatus error>
+                  {selection.result.error === "protected"
+                    ? m.protected
+                    : m.messageError}
+                </MailboxStatus>
               )
             ) : (
-              <Loading>{m.loading}</Loading>
+              <MailboxStatus>{m.loading}</MailboxStatus>
             )}
           </>
         ) : (
@@ -286,17 +282,5 @@ export function Mailbox({
         )}
       </div>
     </div>
-  )
-}
-
-function Loading({ children }: { children: string }) {
-  return (
-    <p
-      role="status"
-      className="m-auto flex items-center gap-2 p-6 text-sm text-muted-foreground"
-    >
-      <Spinner />
-      {children}
-    </p>
   )
 }
