@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid 原始碼",
+  "example": "載入範例",
+  "flowchart": "流程圖",
+  "sequence": "循序圖",
+  "relationships": "ER 圖",
+  "preview": "圖表預覽",
+  "empty": "輸入 Mermaid 程式碼以預覽圖表。",
+  "loading": "正在轉譯圖表…",
+  "invalid": "無法轉譯此 Mermaid 圖表。請檢查語法後再試。",
+  "openFile": "開啟檔案",
+  "fileError": "無法讀取檔案。請開啟 Mermaid 原始檔或直接貼上程式碼。",
+  "sourcePlaceholder": "在這裡貼上 Mermaid 程式碼，或拖入 .mmd 檔案。",
+  "format": "輸出格式",
+  "scale": "圖片縮放比例",
+  "download": "下載圖片",
+  "background": "背景",
+  "transparent": "透明",
+  "white": "白色",
+  "downloadBusy": "正在準備圖片…",
+  "downloadError": "無法產生圖片。請試用 1× 比例，或下載 SVG。",
+  "actualSize": "實際大小"
+}

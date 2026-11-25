@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid-kildekode",
+  "example": "Last inn eksempel",
+  "flowchart": "Flytskjema",
+  "sequence": "Sekvensdiagram",
+  "relationships": "ER-diagram",
+  "preview": "Forhåndsvisning av diagram",
+  "empty": "Skriv inn Mermaid-kode for å forhåndsvise et diagram.",
+  "loading": "Tegner diagrammet …",
+  "invalid": "Kunne ikke tegne Mermaid-diagrammet. Sjekk syntaksen og prøv igjen.",
+  "openFile": "Åpne fil",
+  "fileError": "Kunne ikke lese filen. Åpne en Mermaid-kildefil eller lim inn koden.",
+  "sourcePlaceholder": "Lim inn Mermaid-kode, eller slipp en .mmd-fil her.",
+  "format": "Utdataformat",
+  "scale": "Bildeskala",
+  "download": "Last ned bilde",
+  "background": "Bakgrunn",
+  "transparent": "Gjennomsiktig",
+  "white": "Hvit",
+  "downloadBusy": "Klargjør bilder…",
+  "downloadError": "Kunne ikke lage bildet. Prøv 1× eller last ned som SVG.",
+  "actualSize": "Faktisk størrelse"
+}

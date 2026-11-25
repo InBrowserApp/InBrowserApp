@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid ソース",
+  "example": "サンプルを読み込む",
+  "flowchart": "フローチャート",
+  "sequence": "シーケンス図",
+  "relationships": "ER 図",
+  "preview": "図のプレビュー",
+  "empty": "Mermaid コードを入力すると図をプレビューできます。",
+  "loading": "図を描画しています…",
+  "invalid": "Mermaid の図を描画できませんでした。構文を確認してもう一度お試しください。",
+  "openFile": "ファイルを開く",
+  "fileError": "ファイルを読み取れませんでした。Mermaid のソースファイルを開くか、コードを貼り付けてください。",
+  "sourcePlaceholder": "Mermaid コードを貼り付けるか、.mmd ファイルをドロップしてください。",
+  "format": "出力形式",
+  "scale": "画像の倍率",
+  "download": "画像をダウンロード",
+  "background": "背景",
+  "transparent": "透明",
+  "white": "白",
+  "downloadBusy": "画像を準備しています…",
+  "downloadError": "画像を作成できませんでした。倍率を 1× にするか、SVG をダウンロードしてください。",
+  "actualSize": "実寸"
+}

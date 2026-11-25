@@ -1,0 +1,4 @@
+{
+  "name": "Mermaid 转图片",
+  "description": "将 Mermaid 代码或 MMD 文件转换为 PNG、SVG、JPG 或 WebP。预览图表，设置位图的缩放比例和背景，再在浏览器中下载图片。"
+}

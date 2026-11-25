@@ -130,22 +130,48 @@ export function renderDiagram(source: string) {
   return result
 }
 
-export async function createPng(url: string) {
+export async function createRaster(
+  url: string,
+  {
+    type,
+    scale,
+    white,
+  }: {
+    type: "image/png" | "image/jpeg" | "image/webp"
+    scale: number
+    white: boolean
+  }
+) {
   const image = new Image()
   image.src = url
   await image.decode()
 
   const canvas = document.createElement("canvas")
-  canvas.width = image.naturalWidth * 2
-  canvas.height = image.naturalHeight * 2
-  const context = canvas.getContext("2d")
-  if (!context) throw new Error("Canvas unavailable")
-  context.drawImage(image, 0, 0, canvas.width, canvas.height)
+  try {
+    canvas.width = image.naturalWidth * scale
+    canvas.height = image.naturalHeight * scale
+    const context = canvas.getContext("2d")
+    if (!context) throw new Error("Canvas unavailable")
+    if (white || type === "image/jpeg") {
+      context.fillStyle = "#fff"
+      context.fillRect(0, 0, canvas.width, canvas.height)
+    }
+    context.drawImage(image, 0, 0, canvas.width, canvas.height)
+    return await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob(
+        (blob) => {
+          if (blob?.type === type) resolve(blob)
+          else reject(new Error("Image export failed"))
+        },
+        type,
+        type === "image/png" ? undefined : 0.92
+      )
+    })
+  } finally {
+    canvas.width = canvas.height = 0
+  }
+}
 
-  return new Promise<Blob>((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (blob) resolve(blob)
-      else reject(new Error("PNG export failed"))
-    }, "image/png")
-  })
+export function createPng(url: string) {
+  return createRaster(url, { type: "image/png", scale: 2, white: false })
 }

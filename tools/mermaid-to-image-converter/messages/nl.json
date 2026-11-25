@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid-brontekst",
+  "example": "Voorbeeld laden",
+  "flowchart": "Stroomdiagram",
+  "sequence": "Sequentiediagram",
+  "relationships": "ER-diagram",
+  "preview": "Diagramvoorvertoning",
+  "empty": "Voer Mermaid-code in om het diagram te bekijken.",
+  "loading": "Diagram wordt getekend…",
+  "invalid": "Dit Mermaid-diagram kon niet worden getekend. Controleer de syntaxis en probeer het opnieuw.",
+  "openFile": "Bestand openen",
+  "fileError": "Het bestand kon niet worden gelezen. Open een Mermaid-bronbestand of plak de code.",
+  "sourcePlaceholder": "Plak Mermaid-code of sleep een .mmd-bestand hierheen.",
+  "format": "Uitvoerformaat",
+  "scale": "Afbeeldingsschaal",
+  "download": "Afbeelding downloaden",
+  "background": "Achtergrond",
+  "transparent": "Transparant",
+  "white": "Wit",
+  "downloadBusy": "Afbeeldingen voorbereiden…",
+  "downloadError": "De afbeelding kon niet worden gemaakt. Probeer 1× of download SVG.",
+  "actualSize": "Ware grootte"
+}

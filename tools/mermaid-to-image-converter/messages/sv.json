@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid-källkod",
+  "example": "Ladda exempel",
+  "flowchart": "Flödesschema",
+  "sequence": "Sekvensdiagram",
+  "relationships": "ER-diagram",
+  "preview": "Förhandsvisning av diagram",
+  "empty": "Skriv Mermaid-kod för att förhandsvisa ett diagram.",
+  "loading": "Ritar diagrammet…",
+  "invalid": "Det gick inte att rita Mermaid-diagrammet. Kontrollera syntaxen och försök igen.",
+  "openFile": "Öppna fil",
+  "fileError": "Det gick inte att läsa filen. Öppna en Mermaid-källfil eller klistra in koden.",
+  "sourcePlaceholder": "Klistra in Mermaid-kod eller släpp en .mmd-fil här.",
+  "format": "Utdataformat",
+  "scale": "Bildskala",
+  "download": "Ladda ner bild",
+  "background": "Bakgrund",
+  "transparent": "Genomskinlig",
+  "white": "Vit",
+  "downloadBusy": "Förbereder bilderna…",
+  "downloadError": "Det gick inte att skapa bilden. Prova 1× eller ladda ner diagrammet som SVG.",
+  "actualSize": "Faktisk storlek"
+}

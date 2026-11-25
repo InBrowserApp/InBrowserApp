@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid kodu",
+  "example": "Örnek yükle",
+  "flowchart": "Akış şeması",
+  "sequence": "Sıralama diyagramı",
+  "relationships": "ER diyagramı",
+  "preview": "Diyagram önizlemesi",
+  "empty": "Diyagramı önizlemek için Mermaid kodu girin.",
+  "loading": "Diyagram oluşturuluyor…",
+  "invalid": "Mermaid diyagramı oluşturulamadı. Söz dizimini kontrol edip yeniden deneyin.",
+  "openFile": "Dosya aç",
+  "fileError": "Dosya okunamadı. Mermaid kaynak dosyası açın veya kodu yapıştırın.",
+  "sourcePlaceholder": "Mermaid kodunu yapıştırın veya bir .mmd dosyasını buraya bırakın.",
+  "format": "Çıkış biçimi",
+  "scale": "Görsel ölçeği",
+  "download": "Görseli indir",
+  "background": "Arka plan",
+  "transparent": "Saydam",
+  "white": "Beyaz",
+  "downloadBusy": "Görseller hazırlanıyor…",
+  "downloadError": "Görsel oluşturulamadı. 1× ölçeğini deneyin veya diyagramı SVG olarak indirin.",
+  "actualSize": "Gerçek boyut"
+}

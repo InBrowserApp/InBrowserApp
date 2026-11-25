@@ -1249,6 +1249,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "diagram",
+    name: "Chuyển Mermaid sang ảnh",
+    slug: "mermaid-to-image-converter",
+  },
+  {
+    category: "diagram",
     name: "Trình chuyển Mermaid sang PDF",
     slug: "mermaid-to-pdf-converter",
   },

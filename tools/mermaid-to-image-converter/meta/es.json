@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de Mermaid a imagen",
+  "description": "Convierte código Mermaid o un archivo MMD a PNG, SVG, JPG o WebP. Previsualiza el diagrama, elige la escala de imagen y el fondo, y descarga la imagen en el navegador."
+}

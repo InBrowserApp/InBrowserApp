@@ -1,0 +1,4 @@
+{
+  "name": "Mermaidを画像に変換",
+  "description": "Mermaid コードや .mmd ファイルを PNG、SVG、JPG、WebP に変換します。図をプレビューし、ラスター画像の倍率と背景を選んで、ブラウザーからダウンロードできます。"
+}

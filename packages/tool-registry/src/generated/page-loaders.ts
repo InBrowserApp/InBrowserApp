@@ -308,6 +308,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "media-info-viewer": () => import("@tool/media-info-viewer/page"),
   "mermaid-previewer": () => import("@tool/mermaid-previewer/page"),
+  "mermaid-to-image-converter": () =>
+    import("@tool/mermaid-to-image-converter/page"),
   "mermaid-to-pdf-converter": () =>
     import("@tool/mermaid-to-pdf-converter/page"),
   "mesh-inspector": () => import("@tool/mesh-inspector/page"),

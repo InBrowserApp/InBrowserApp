@@ -31718,6 +31718,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "mermaid-to-image-converter",
+    category: "diagram",
+    secondaryCategories: ["image", "developer"],
+    icon: "blocks",
+    tags: [
+      "mermaid",
+      "diagram",
+      "flowchart",
+      "mmd",
+      "png",
+      "svg",
+      "jpg",
+      "jpeg",
+      "webp",
+      "image",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل Mermaid إلى صور",
+        description:
+          "حوّل شيفرة Mermaid أو ملف MMD إلى PNG أو SVG أو JPG أو WebP. عاين المخطط وحدد مقياس الصورة النقطية وخلفيتها، ثم نزّل الصورة من متصفحك.",
+      },
+      de: {
+        name: "Mermaid-zu-Bild-Konverter",
+        description:
+          "Wandle Mermaid-Code oder eine MMD-Datei in PNG, SVG, JPG oder WebP um. Prüfe das Diagramm, wähle Rastermaßstab und Hintergrund und lade das Bild im Browser herunter.",
+      },
+      en: {
+        name: "Mermaid to Image Converter",
+        description:
+          "Convert Mermaid code or an MMD file to PNG, SVG, JPG, or WebP. Preview the diagram, choose a raster scale and background, and download the image in your browser.",
+      },
+      es: {
+        name: "Conversor de Mermaid a imagen",
+        description:
+          "Convierte código Mermaid o un archivo MMD a PNG, SVG, JPG o WebP. Previsualiza el diagrama, elige la escala de imagen y el fondo, y descarga la imagen en el navegador.",
+      },
+      fr: {
+        name: "Convertisseur Mermaid en image",
+        description:
+          "Convertissez du code Mermaid ou un fichier MMD en PNG, SVG, JPG ou WebP. Prévisualisez le diagramme, choisissez l’échelle matricielle et le fond, puis téléchargez l’image dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר Mermaid לתמונות",
+        description:
+          "המירו קוד Mermaid או קובץ MMD ל־PNG, ל־SVG, ל־JPG או ל־WebP. צפו בתרשים, בחרו קנה מידה ורקע לתמונת רסטר והורידו את התמונה בדפדפן.",
+      },
+      hi: {
+        name: "Mermaid से इमेज कन्वर्टर",
+        description:
+          "Mermaid कोड या MMD फ़ाइल को PNG, SVG, JPG या WebP में बदलें। डायग्राम का प्रीव्यू देखें, रास्टर इमेज का स्केल और बैकग्राउंड चुनें, और ब्राउज़र से इमेज डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Mermaid ke Gambar",
+        description:
+          "Ubah kode Mermaid atau file MMD ke PNG, SVG, JPG, atau WebP. Lihat pratinjau diagram, pilih skala dan latar belakang gambar raster, lalu unduh gambar di browser.",
+      },
+      it: {
+        name: "Convertitore da Mermaid a immagine",
+        description:
+          "Converti codice Mermaid o un file MMD in PNG, SVG, JPG o WebP. Controlla l’anteprima del diagramma, scegli scala raster e sfondo e scarica l’immagine nel browser.",
+      },
+      ja: {
+        name: "Mermaidを画像に変換",
+        description:
+          "Mermaid コードや .mmd ファイルを PNG、SVG、JPG、WebP に変換します。図をプレビューし、ラスター画像の倍率と背景を選んで、ブラウザーからダウンロードできます。",
+      },
+      ko: {
+        name: "Mermaid 이미지 변환기",
+        description:
+          "Mermaid 코드나 MMD 파일을 PNG, SVG, JPG 또는 WebP로 변환하세요. 다이어그램을 미리 보고 래스터 이미지의 배율과 배경을 선택한 뒤 브라우저에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Mermaid kepada Imej",
+        description:
+          "Tukar kod Mermaid atau fail MMD kepada PNG, SVG, JPG atau WebP. Pratonton rajah, pilih skala dan latar belakang imej raster, kemudian muat turun imej dalam pelayar.",
+      },
+      nl: {
+        name: "Mermaid naar afbeelding converteren",
+        description:
+          "Converteer Mermaid-code of een MMD-bestand naar PNG, SVG, JPG of WebP. Bekijk het diagram, kies een rasterschaal en achtergrond en download de afbeelding in je browser.",
+      },
+      no: {
+        name: "Konverter Mermaid til bilder",
+        description:
+          "Konverter Mermaid-kode eller en MMD-fil til PNG, SVG, JPG eller WebP. Forhåndsvis diagrammet, velg skala og bakgrunn for pikselbilder, og last ned bildet i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter Mermaid na obrazy",
+        description:
+          "Konwertuj kod Mermaid lub plik MMD na PNG, SVG, JPG lub WebP. Sprawdź podgląd diagramu, wybierz skalę i tło obrazu rastrowego, a następnie pobierz obraz w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de Mermaid para imagem",
+        description:
+          "Converta código Mermaid ou um arquivo MMD em PNG, SVG, JPG ou WebP. Veja o diagrama, escolha a escala da imagem rasterizada e o fundo e baixe a imagem no navegador.",
+      },
+      ru: {
+        name: "Конвертер Mermaid в изображения",
+        description:
+          "Преобразуйте код Mermaid или файл MMD в PNG, SVG, JPG или WebP. Проверьте предпросмотр диаграммы, выберите масштаб и фон растрового изображения и скачайте результат в браузере.",
+      },
+      sv: {
+        name: "Konvertera Mermaid till bilder",
+        description:
+          "Konvertera Mermaid-kod eller en MMD-fil till PNG, SVG, JPG eller WebP. Granska diagrammet, välj skala och bakgrund för pixelbilder och ladda ner bilden i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลง Mermaid เป็นรูปภาพ",
+        description:
+          "แปลงโค้ด Mermaid หรือไฟล์ MMD เป็น PNG, SVG, JPG หรือ WebP ดูตัวอย่างแผนภาพ เลือกอัตราขยายและพื้นหลังสำหรับภาพแรสเตอร์ แล้วดาวน์โหลดรูปภาพในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Mermaid’den Görsele Dönüştürücü",
+        description:
+          "Mermaid kodunu veya bir MMD dosyasını PNG, SVG, JPG ya da WebP’ye dönüştürün. Diyagramı önizleyin, piksel tabanlı görseller için ölçeği ve arka planı seçin, ardından görseli tarayıcınızda indirin.",
+      },
+      vi: {
+        name: "Chuyển Mermaid sang ảnh",
+        description:
+          "Chuyển mã Mermaid hoặc tệp MMD sang PNG, SVG, JPG hay WebP. Xem trước sơ đồ, chọn tỷ lệ và nền cho ảnh raster rồi tải xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Mermaid 转图片",
+        description:
+          "将 Mermaid 代码或 MMD 文件转换为 PNG、SVG、JPG 或 WebP。预览图表，设置位图的缩放比例和背景，再在浏览器中下载图片。",
+      },
+      "zh-TW": {
+        name: "Mermaid 轉圖片",
+        description:
+          "將 Mermaid 程式碼或 MMD 檔案轉成 PNG、SVG、JPG 或 WebP。預覽圖表，設定點陣圖的縮放比例和背景，再從瀏覽器下載圖片。",
+      },
+    },
+  },
+  {
     slug: "mermaid-to-pdf-converter",
     category: "diagram",
     secondaryCategories: ["pdf"],

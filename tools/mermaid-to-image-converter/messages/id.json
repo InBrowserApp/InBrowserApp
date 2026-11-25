@@ -1,0 +1,23 @@
+{
+  "source": "Kode Mermaid",
+  "example": "Muat contoh",
+  "flowchart": "Diagram alir",
+  "sequence": "Diagram urutan",
+  "relationships": "Diagram ER",
+  "preview": "Pratinjau diagram",
+  "empty": "Masukkan kode Mermaid untuk melihat pratinjau diagram.",
+  "loading": "Menampilkan diagram…",
+  "invalid": "Diagram Mermaid ini tidak dapat ditampilkan. Periksa sintaksnya, lalu coba lagi.",
+  "openFile": "Buka file",
+  "fileError": "File ini tidak dapat dibaca. Buka file sumber Mermaid atau tempel kodenya.",
+  "sourcePlaceholder": "Tempel kode Mermaid atau letakkan file .mmd di sini.",
+  "format": "Format keluaran",
+  "scale": "Skala gambar",
+  "download": "Unduh gambar",
+  "background": "Latar belakang",
+  "transparent": "Transparan",
+  "white": "Putih",
+  "downloadBusy": "Menyiapkan gambar…",
+  "downloadError": "Gambar ini tidak dapat dibuat. Coba skala 1× atau unduh sebagai SVG.",
+  "actualSize": "Ukuran sebenarnya"
+}

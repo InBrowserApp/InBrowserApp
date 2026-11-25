@@ -1,0 +1,23 @@
+{
+  "source": "Mermaid 소스",
+  "example": "예제 불러오기",
+  "flowchart": "순서도",
+  "sequence": "시퀀스 다이어그램",
+  "relationships": "ER 다이어그램",
+  "preview": "다이어그램 미리보기",
+  "empty": "Mermaid 코드를 입력하면 다이어그램이 표시됩니다.",
+  "loading": "다이어그램을 렌더링하는 중…",
+  "invalid": "Mermaid 다이어그램을 렌더링할 수 없습니다. 구문을 확인하고 다시 시도하세요.",
+  "openFile": "파일 열기",
+  "fileError": "이 파일을 읽을 수 없습니다. Mermaid 소스 파일을 열거나 코드를 붙여넣으세요.",
+  "sourcePlaceholder": "Mermaid 코드를 붙여넣거나 .mmd 파일을 여기에 놓으세요.",
+  "format": "출력 형식",
+  "scale": "이미지 배율",
+  "download": "이미지 다운로드",
+  "background": "배경",
+  "transparent": "투명",
+  "white": "흰색",
+  "downloadBusy": "이미지를 준비하는 중…",
+  "downloadError": "이미지를 만들 수 없습니다. 배율을 1×로 낮추거나 SVG를 다운로드하세요.",
+  "actualSize": "실제 크기"
+}

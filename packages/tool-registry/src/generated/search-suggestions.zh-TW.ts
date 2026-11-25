@@ -1249,6 +1249,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "diagram",
+    name: "Mermaid 轉圖片",
+    slug: "mermaid-to-image-converter",
+  },
+  {
+    category: "diagram",
     name: "Mermaid 轉 PDF",
     slug: "mermaid-to-pdf-converter",
   },

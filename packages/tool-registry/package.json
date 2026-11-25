@@ -256,6 +256,7 @@
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/media-info-viewer": "workspace:*",
     "@tool/mermaid-previewer": "workspace:*",
+    "@tool/mermaid-to-image-converter": "workspace:*",
     "@tool/mermaid-to-pdf-converter": "workspace:*",
     "@tool/mesh-inspector": "workspace:*",
     "@tool/mhtml-to-html-converter": "workspace:*",

@@ -11,6 +11,8 @@ import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Code, FolderInput } from "@workspace/ui/icons"
 import { examples } from "./examples"
 
+export { examples }
+
 type Example = keyof typeof examples
 
 export interface FileMessages {
