@@ -1,0 +1,16 @@
+{
+  "address": "Alamat Filecoin atau alamat gaya Ethereum",
+  "network": "Rangkaian Filecoin",
+  "mainnet": "Mainnet",
+  "testnet": "Testnet",
+  "convert": "Tukar alamat",
+  "sample": "Cuba contoh",
+  "filecoinAddress": "Alamat Filecoin",
+  "ethereumAddress": "Alamat gaya Ethereum",
+  "invalidAddress": "Masukkan alamat Filecoin f410 atau t410, atau alamat 0x dengan 40 digit heksadesimal.",
+  "filecoinChecksum": "Checksum Filecoin tidak sepadan. Salin semula alamat penuh.",
+  "ethereumChecksum": "Checksum alamat 0x yang mengandungi huruf besar dan kecil tidak sepadan. Semak alamat dengan dompet atau peneroka blok anda.",
+  "actorId": "Alamat ini mengekodkan ID actor Filecoin. Gunakan alamat delegasi f410 atau t410, atau alamat 0x yang setara.",
+  "copy": "Salin",
+  "copied": "Disalin"
+}

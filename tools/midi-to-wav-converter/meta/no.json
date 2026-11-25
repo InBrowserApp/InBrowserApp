@@ -1,0 +1,4 @@
+{
+  "name": "MIDI til WAV-konverterer",
+  "description": "Konverter MIDI-filer til WAV i stereo med innebygde General MIDI-instrumenter eller en egen SoundFont. Lytt til og last ned lyden i nettleseren."
+}

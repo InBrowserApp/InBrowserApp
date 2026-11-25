@@ -13,6 +13,7 @@
     "tailwind-merge": "catalog:",
     "tw-animate-css": "catalog:",
     "dompurify": "catalog:",
+    "@workspace/email": "workspace:*",
     "@workspace/spreadsheet-conversion": "workspace:*",
     "@workspace/raster-image": "workspace:*",
     "@workspace/ocr-models": "workspace:*",

@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Конвертер адресов Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Поиск сделок Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Калькулятор Piece CID для Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Генератор .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "Просмотр GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "Просмотр MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "MD4-хеш текста или файла",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "MIDI-монитор",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "Конвертер MIDI в WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "Транспонирование и изменение темпа MIDI",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Нормализация Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Конвертер Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Калькулятор подсетей IPv4 с VLSM",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "Просмотр WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

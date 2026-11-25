@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Velg MIDI-fil",
+  "changeFile": "Bytt fil",
+  "dropHint": "eller slipp en MIDI-fil her",
+  "privacy": "Filen din blir i denne nettleseren.",
+  "pitch": "Transponering (halvtoner)",
+  "pitchHint": "Et negativt tall senker tonehøyden.",
+  "speed": "Tempo (%)",
+  "speedHint": "100 % beholder det opprinnelige tempoet.",
+  "keepDrums": "Behold trommenotenes opprinnelige tonehøyder",
+  "download": "Last ned MIDI",
+  "invalidFile": "Filen kunne ikke leses som en standard MIDI-fil. Velg en annen .mid- eller .midi-fil.",
+  "pitchOutOfRange": "Noen toner vil havne utenfor MIDI-området. Prøv å transponere færre halvtoner.",
+  "tempoOutOfRange": "Innstillingen ligger utenfor MIDI-formatets tidsområde. Prøv en prosentverdi nærmere 100 %."
+}

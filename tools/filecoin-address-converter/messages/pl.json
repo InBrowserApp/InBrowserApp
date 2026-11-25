@@ -1,0 +1,16 @@
+{
+  "address": "Adres Filecoin lub adres w formacie Ethereum",
+  "network": "Sieć Filecoin",
+  "mainnet": "Sieć główna",
+  "testnet": "Sieć testowa",
+  "convert": "Konwertuj adres",
+  "sample": "Wypróbuj przykład",
+  "filecoinAddress": "Adres Filecoin",
+  "ethereumAddress": "Adres w formacie Ethereum",
+  "invalidAddress": "Wpisz adres Filecoin f410 lub t410 albo adres 0x z 40 cyframi szesnastkowymi.",
+  "filecoinChecksum": "Suma kontrolna Filecoin się nie zgadza. Skopiuj ponownie cały adres.",
+  "ethereumChecksum": "Suma kontrolna adresu 0x z małymi i wielkimi literami się nie zgadza. Porównaj adres z adresem w portfelu lub eksploratorze bloków.",
+  "actorId": "Ten adres koduje identyfikator aktora Filecoin. Użyj delegowanego adresu f410 lub t410 albo równoważnego adresu 0x.",
+  "copy": "Kopiuj",
+  "copied": "Skopiowano"
+}

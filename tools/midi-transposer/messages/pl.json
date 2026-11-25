@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Wybierz plik MIDI",
+  "changeFile": "Zmień plik",
+  "dropHint": "lub upuść tutaj plik MIDI",
+  "privacy": "Plik pozostaje w tej przeglądarce.",
+  "pitch": "Transpozycja (półtony)",
+  "pitchHint": "Wpisz liczbę ujemną, aby obniżyć dźwięki.",
+  "speed": "Tempo (%)",
+  "speedHint": "100% zachowuje pierwotne tempo.",
+  "keepDrums": "Zachowaj oryginalną wysokość nut perkusji",
+  "download": "Pobierz MIDI",
+  "invalidFile": "Nie można odczytać tego pliku w standardowym formacie MIDI. Wybierz inny plik .mid lub .midi.",
+  "pitchOutOfRange": "Część nut wykroczyłaby poza zakres MIDI. Zmniejsz liczbę półtonów.",
+  "tempoOutOfRange": "To ustawienie wykracza poza zakres czasowy MIDI. Wybierz wartość bliższą 100%."
+}

@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Filecoin Adres Dönüştürücü",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Filecoin Depolama Anlaşması Sorgulama",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Filecoin Piece CID Hesaplayıcısı",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".gitignore Oluşturucu",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "GLB / glTF Görüntüleyici",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "MBOX Görüntüleyici",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "MD4 Hash Metin veya Dosya",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "MIDI Monitörü",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "MIDI'den WAV'a Dönüştürücü",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "MIDI Transpoze ve Tempo Ayarı",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Unicode Normalleştirme",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Unicode ↔ Punycode Dönüştürücü",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "IPv4 VLSM Hesaplayıcı",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "WARC Görüntüleyici",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

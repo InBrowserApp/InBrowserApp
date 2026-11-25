@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Conversor de endereços do Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Consulta de acordos de armazenamento do Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Calculadora de Piece CID do Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Gerador de .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "Visualizador de GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "Visualizador MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "Hash MD4 de Texto ou Arquivo",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Monitor MIDI",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "Conversor de MIDI para WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "Transposição MIDI e ajuste de andamento",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Normalizador Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Conversor Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Calculadora VLSM para IPv4",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "Visualizador de WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Pilih fail MIDI",
+  "changeFile": "Tukar fail",
+  "dropHint": "atau lepaskan fail MIDI di sini",
+  "privacy": "Fail anda kekal dalam pelayar ini.",
+  "pitch": "Transposisi (semiton)",
+  "pitchHint": "Gunakan nombor negatif untuk menurunkan nada.",
+  "speed": "Tempo (%)",
+  "speedHint": "100% mengekalkan tempo asal.",
+  "keepDrums": "Kekalkan nada asal not dram",
+  "download": "Muat turun MIDI",
+  "invalidFile": "Fail ini tidak dapat dibaca sebagai fail MIDI standard. Pilih fail .mid atau .midi yang lain.",
+  "pitchOutOfRange": "Sesetengah not akan terkeluar daripada julat MIDI. Cuba anjakan nada yang lebih kecil.",
+  "tempoOutOfRange": "Tetapan ini akan melebihi julat masa MIDI. Cuba peratusan yang lebih hampir kepada 100%."
+}

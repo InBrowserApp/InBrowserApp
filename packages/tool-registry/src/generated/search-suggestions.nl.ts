@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Filecoin-adresconverter",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Filecoin-opslagdeal opzoeken",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Filecoin Piece CID-calculator",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".gitignore-generator",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "GLB- en glTF-viewer",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "MBOX-viewer",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "MD4-hash tekst of bestand",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "MIDI-monitor",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "MIDI-naar-WAV-converter",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "MIDI transponeren en tempo aanpassen",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Unicode-normalisatie",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Unicode ↔ Punycode-converter",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "IPv4 VLSM-calculator",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "WARC-viewer",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

@@ -16,5 +16,12 @@
   "controls": "Przeciągnij, aby obrócić · Przewiń, aby zmienić powiększenie · Przeciągnij prawym przyciskiem, aby przesunąć",
   "touchControls": "Przeciągnij, aby obrócić · Zsuń lub rozsuń palce, aby zmienić powiększenie · Przeciągnij dwoma palcami, aby przesunąć",
   "keyboardControls": "Obracaj model klawiszami strzałek, a powiększenie zmieniaj klawiszami + i −. Przytrzymaj Shift i użyj strzałek, aby przesunąć widok.",
-  "missingResources": "Brakuje niektórych materiałów lub tekstur. Otwórz model razem z powiązanymi plikami."
+  "missingResources": "Brakuje niektórych materiałów lub tekstur. Otwórz model razem z powiązanymi plikami.",
+  "companionHelp": "Wybierz model razem z powiązanymi plikami.",
+  "missingCompanions": "Brakuje pliku wymaganego przez model. Otwórz model razem z plikami buforów i teksturami, do których się odwołuje.",
+  "animation": "Animacja",
+  "clip": "Klip {number}",
+  "playAnimation": "Odtwórz animację",
+  "pauseAnimation": "Wstrzymaj animację",
+  "openFolder": "Otwórz folder"
 }

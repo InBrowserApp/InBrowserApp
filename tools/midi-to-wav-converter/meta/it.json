@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da MIDI a WAV",
+  "description": "Converti file MIDI in WAV stereo con gli strumenti General MIDI integrati o con il tuo SoundFont. Ascolta e scarica l’audio dal browser."
+}

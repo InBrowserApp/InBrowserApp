@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "เครื่องมือแปลงที่อยู่ Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "เครื่องมือค้นหาข้อตกลง Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "เครื่องมือคำนวณ Piece CID ของ Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวสร้าง .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมดู GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "โปรแกรมดู MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "แฮช MD4 ข้อความหรือไฟล์",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "มอนิเตอร์ MIDI",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "โปรแกรมแปลง MIDI เป็น WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "เครื่องมือเปลี่ยนคีย์และปรับเทมโป MIDI",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "เครื่องมือปรับมาตรฐาน Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "ตัวแปลง Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "เครื่องคำนวณ IPv4 VLSM",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "محوّل عناوين Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "البحث عن صفقات تخزين Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "حاسبة Piece CID لـ Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "مولد .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "عارض GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "عارض MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "تجزئة MD4 للنص أو الملف",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "مراقب MIDI",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "محوّل MIDI إلى WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "تغيير طبقة النغمات وسرعة MIDI",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "أداة تطبيع نصوص Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "محول Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "حاسبة الشبكات الفرعية VLSM لعناوين IPv4",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "عارض WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

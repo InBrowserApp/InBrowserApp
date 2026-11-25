@@ -1,0 +1,4 @@
+{
+  "name": "Recherche de contrats de stockage Filecoin",
+  "description": "Retrouvez un contrat de stockage Filecoin à partir de son ID. Consultez son statut sur le réseau principal, son fournisseur et ses dates de début et de fin, puis copiez son Piece CID."
+}

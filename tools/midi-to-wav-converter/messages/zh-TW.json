@@ -1,0 +1,22 @@
+{
+  "chooseFile": "選擇 MIDI 檔案",
+  "changeFile": "更換檔案",
+  "dropHint": "或將 MIDI 檔案拖放至此處",
+  "privacy": "檔案會保留在此瀏覽器中。",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS（內建）",
+  "chooseSoundFont": "選擇 SoundFont",
+  "useDefaultSoundFont": "使用內建 SoundFont",
+  "soundFontHint": "選填。選擇 .sf2 或 .sf3 檔案以更換樂器音色。",
+  "render": "轉換為 WAV",
+  "rendering": "正在渲染音訊…",
+  "cancel": "取消",
+  "preview": "WAV 音訊預覽",
+  "download": "下載 WAV",
+  "invalidMidi": "無法開啟此 MIDI 檔案，或檔案中沒有可播放的音符。請嘗試其他 .mid 或 .midi 檔案。",
+  "unsupportedTiming": "請將此檔案匯出為以節拍為基礎的 MIDI 檔案（格式 0 或 1），然後重試。",
+  "invalidSoundFont": "無法開啟此 SoundFont。請嘗試其他 .sf2 或 .sf3 檔案，或使用內建 SoundFont。",
+  "soundFontUnavailable": "無法載入內建 SoundFont。請重試或選擇 SoundFont 檔案。",
+  "tooLong": "請選擇長度小於 10 分鐘的 MIDI 檔案，以便在瀏覽器中渲染。",
+  "renderFailed": "無法渲染音訊。請嘗試較小的 MIDI 檔案或其他 SoundFont。"
+}

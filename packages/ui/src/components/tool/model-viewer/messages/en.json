@@ -16,5 +16,12 @@
   "controls": "Drag to rotate · Scroll to zoom · Right-drag to pan",
   "touchControls": "Drag to rotate · Pinch to zoom · Two fingers to pan",
   "keyboardControls": "Use the arrow keys to rotate and + or − to zoom. Hold Shift with the arrow keys to pan.",
-  "missingResources": "Some materials or textures are missing. Open the model and its companion files together."
+  "missingResources": "Some materials or textures are missing. Open the model and its companion files together.",
+  "companionHelp": "Select the model and its companion files together.",
+  "missingCompanions": "A model resource is missing. Open the model and its referenced buffers and textures together.",
+  "animation": "Animation",
+  "clip": "Clip {number}",
+  "playAnimation": "Play animation",
+  "pauseAnimation": "Pause animation",
+  "openFolder": "Open folder"
 }

@@ -1,0 +1,20 @@
+{
+  "formLabel": "正規化形式",
+  "NFC": "可能な場合、文字とアクセントを結合します。テキストの比較や保存に適しています。",
+  "NFD": "文字と結合アクセントを分離し、テキストの表現を確認できます。",
+  "NFKC": "文字とアクセントを結合し、互換文字を変換します。例えば、Ａ は A、① は 1、ﬁ は fi になります。",
+  "NFKD": "文字と結合アクセントを分離し、Ａ、①、ﬁ などの互換文字を変換します。",
+  "inputLabel": "元のテキスト",
+  "inputPlaceholder": "正規化するテキストを入力または貼り付け",
+  "outputLabel": "正規化後のテキスト",
+  "outputPlaceholder": "ここに結果が表示されます",
+  "exampleLabel": "例を試す",
+  "clearLabel": "クリア",
+  "copyLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "copyFailedLabel": "コピーできませんでした",
+  "changedLabel": "テキストが変化しました",
+  "unchangedLabel": "すでにこの形式です",
+  "codePointsLabel": "コードポイントを比較",
+  "codePointsLimit": "各テキストの先頭から最大 40 コードポイントを表示します。"
+}

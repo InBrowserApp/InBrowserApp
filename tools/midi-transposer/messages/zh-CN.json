@@ -1,0 +1,15 @@
+{
+  "chooseFile": "选择 MIDI 文件",
+  "changeFile": "更换文件",
+  "dropHint": "或将 MIDI 文件拖放到此处",
+  "privacy": "文件保留在当前浏览器中。",
+  "pitch": "移调（半音）",
+  "pitchHint": "输入负数可降低音高。",
+  "speed": "速度（%）",
+  "speedHint": "100% 保持原始速度。",
+  "keepDrums": "保持鼓声音符的原始音高",
+  "download": "下载 MIDI",
+  "invalidFile": "无法将此文件读取为标准 MIDI 文件。请选择其他 .mid 或 .midi 文件。",
+  "pitchOutOfRange": "部分音符将超出 MIDI 音高范围。请尝试较小的移调幅度。",
+  "tempoOutOfRange": "此设置将超出 MIDI 时间范围。请尝试更接近 100% 的百分比。"
+}

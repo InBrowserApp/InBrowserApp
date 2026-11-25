@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 位址轉換器",
+  "description": "在 Filecoin f410 或 t410 位址與以太坊格式的 0x 位址之間雙向轉換。在瀏覽器中驗證 Filecoin 主網及 Calibration 測試網位址的總和檢查碼。"
+}

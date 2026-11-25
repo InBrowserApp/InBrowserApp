@@ -18,8 +18,10 @@ vi.mock("@workspace/email", async (original) => ({
   ...(await original<typeof import("@workspace/email")>()),
   openEmail: mock.open,
 }))
-vi.mock("./preview", () => ({ preparePreview: mock.prepare }))
-vi.mock("./message-frame", () => ({
+vi.mock("@workspace/ui/lib/email-preview", () => ({
+  preparePreview: mock.prepare,
+}))
+vi.mock("@workspace/ui/components/tool/email-message-frame", () => ({
   MessageFrame: ({
     html,
     title,

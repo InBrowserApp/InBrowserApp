@@ -1,0 +1,4 @@
+{
+  "name": "MIDI 轉 WAV 轉換器",
+  "description": "使用內建 General MIDI 樂器或自己的 SoundFont，將 MIDI 檔案轉換為立體聲 WAV。在瀏覽器中預覽並下載音訊。"
+}

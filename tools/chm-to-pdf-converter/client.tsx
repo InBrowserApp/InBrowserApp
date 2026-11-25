@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react"
-import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
+import { useEffect, useId, useRef, useState } from "react"
 import {
   Alert,
   AlertDescription,
@@ -7,50 +6,59 @@ import {
 } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
-import { Check, FileText, Folder } from "@workspace/ui/icons"
+import { Check, FileText, Folder, Printer } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
-import type { Progress, Result } from "@workspace/html-pdf"
 import type Catalog from "./messages/en.json"
 
 type Messages = Omit<typeof Catalog, "article">
 type State =
   | { phase: "idle" }
-  | { phase: "working"; file: File; progress?: Progress }
-  | { phase: "ready"; file: File; result: Result }
+  | { phase: "working"; file: File }
+  | { phase: "ready"; file: File; url: string }
   | { phase: "error"; file: File }
 
-export default function Client({
-  messages: m,
-  lang,
-}: {
-  messages: Messages
-  lang: string
-}) {
+export default function Client({ messages: m }: { messages: Messages }) {
   const input = useRef<HTMLInputElement>(null)
+  const helpId = useId()
+  const preview = useRef<HTMLIFrameElement>(null)
   const chooser = useRef<HTMLButtonElement>(null)
   const task = useRef<AbortController | null>(null)
   const dragDepth = useRef(0)
   const [dragging, setDragging] = useState(false)
   const [state, setState] = useState<State>({ phase: "idle" })
-  const numbers = new Intl.NumberFormat(lang)
+  const [loadedUrl, setLoadedUrl] = useState<string>()
+  const [printFailed, setPrintFailed] = useState(false)
   const working = state.phase === "working"
   const ready = state.phase === "ready"
+  const url = ready ? state.url : null
+  const loaded = url === loadedUrl
+  const preparing = working || (ready && !loaded)
 
   useEffect(() => () => task.current?.abort(), [])
+  useEffect(
+    () => () => {
+      if (url) URL.revokeObjectURL(url)
+    },
+    [url]
+  )
 
   async function select(file: File) {
     task.current?.abort()
     const controller = new AbortController()
     task.current = controller
     const { signal } = controller
+    setPrintFailed(false)
     setState({ phase: "working", file })
     try {
-      const { convert } = await import("./convert")
+      const { prepareDocument } = await import("./prepare-document")
       signal.throwIfAborted()
-      const result = await convert(file, signal, (progress) => {
-        if (!signal.aborted) setState({ phase: "working", file, progress })
-      })
-      if (!signal.aborted) setState({ phase: "ready", file, result })
+      const html = await prepareDocument(file, signal)
+      if (!signal.aborted) {
+        const url = URL.createObjectURL(
+          new Blob([html], { type: "text/html;charset=utf-8" })
+        )
+        setState({ phase: "ready", file, url })
+      }
     } catch {
       if (!signal.aborted) setState({ phase: "error", file })
     }
@@ -62,20 +70,23 @@ export default function Client({
     chooser.current?.focus()
   }
 
-  let status = ""
-  if (working) {
-    const progress = state.progress
-    if (!progress) status = m.reading
-    else if (progress.saving) status = m.saving
-    else {
-      status = m.rendering
-        .replace("{page}", numbers.format(progress.page))
-        .replace("{total}", numbers.format(progress.pages))
+  function savePdf() {
+    try {
+      const view = preview.current?.contentWindow
+      if (typeof view?.print !== "function") {
+        setPrintFailed(true)
+        return
+      }
+      view.print()
+      setPrintFailed(false)
+    } catch {
+      setPrintFailed(true)
     }
-  } else if (ready) {
-    status = `${m.ready} · ${m.pageCount.replace("{total}", numbers.format(state.result.pages))}`
   }
-  const Icon = ready ? Check : FileText
+
+  const status = preparing ? m.reading : ready ? m.ready : ""
+  const Icon = loaded ? Check : FileText
+  const failed = state.phase === "error"
 
   return (
     <section data-tool="chm-to-pdf-converter">
@@ -133,32 +144,41 @@ export default function Client({
             !status && "sr-only"
           )}
         >
-          {working && <Spinner aria-hidden="true" className="shrink-0" />}
+          {preparing && <Spinner aria-hidden="true" className="shrink-0" />}
           {status}
         </p>
         <div className="flex flex-wrap justify-center gap-2">
           {ready && (
-            <DocumentDownload
-              file={state.result.pdf}
-              filename={state.file.name.replace(/\.chm$/i, "") + ".pdf"}
-              label={m.download}
-            />
+            <Button
+              onClick={savePdf}
+              disabled={!loaded}
+              aria-describedby={helpId}
+              className="max-sm:min-h-11"
+            >
+              <Printer data-icon="inline-start" aria-hidden="true" />
+              {m.save}
+            </Button>
           )}
           <Button
             ref={chooser}
-            className="h-auto min-h-8 max-w-full whitespace-normal"
+            className="h-auto min-h-8 max-w-full whitespace-normal max-sm:min-h-11"
             variant={ready || working ? "outline" : "default"}
             onClick={() => input.current?.click()}
           >
             <Folder data-icon="inline-start" aria-hidden="true" />
             {m.choose}
           </Button>
-          {working && (
+          {preparing && (
             <Button variant="ghost" onClick={cancel}>
               {m.cancel}
             </Button>
           )}
         </div>
+        {ready && (
+          <p id={helpId} className="text-sm text-muted-foreground">
+            {m.saveHelp}
+          </p>
+        )}
         {state.phase === "idle" && (
           <p className="text-sm text-muted-foreground">
             {m.drop}
@@ -167,11 +187,24 @@ export default function Client({
           </p>
         )}
       </div>
-      {state.phase === "error" && (
+      {(failed || printFailed) && (
         <Alert variant="destructive" className="mt-3 text-start">
-          <AlertTitle>{m.error}</AlertTitle>
-          <AlertDescription>{m.errorHelp}</AlertDescription>
+          {failed && <AlertTitle>{m.error}</AlertTitle>}
+          <AlertDescription>
+            {failed ? m.errorHelp : m.printUnavailable}
+          </AlertDescription>
         </Alert>
+      )}
+      {ready && (
+        <iframe
+          key={state.url}
+          ref={preview}
+          src={state.url}
+          title={m.preview}
+          sandbox="allow-same-origin allow-modals"
+          onLoad={() => setLoadedUrl(state.url)}
+          className="mt-3 block h-[min(64dvh,36rem)] min-h-64 w-full rounded-xl border bg-white"
+        />
       )}
     </section>
   )

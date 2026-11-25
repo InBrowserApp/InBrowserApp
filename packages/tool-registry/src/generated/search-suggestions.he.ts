@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "ממיר כתובות Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "איתור עסקאות אחסון ב-Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "מחשבון Piece CID של Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "מחולל .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "מציג GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "מציג MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "האש MD4 טקסט או קובץ",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "מוניטור MIDI",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "ממיר MIDI ל־WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "טרנספוזיציה ושינוי טמפו ל־MIDI",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "נרמול טקסט Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "ממיר Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "מחשבון VLSM לתת־רשתות IPv4",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "מציג WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

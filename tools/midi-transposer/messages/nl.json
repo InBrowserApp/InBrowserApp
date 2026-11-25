@@ -1,0 +1,15 @@
+{
+  "chooseFile": "MIDI-bestand kiezen",
+  "changeFile": "Ander bestand kiezen",
+  "dropHint": "of sleep een MIDI-bestand hierheen",
+  "privacy": "Je bestand blijft in deze browser.",
+  "pitch": "Transponeren (halve tonen)",
+  "pitchHint": "Met een negatief getal verlaag je de toonhoogte.",
+  "speed": "Tempo (%)",
+  "speedHint": "Bij 100% blijft het oorspronkelijke tempo behouden.",
+  "keepDrums": "Oorspronkelijke toonhoogte van drumnoten behouden",
+  "download": "MIDI downloaden",
+  "invalidFile": "Dit bestand kan niet worden gelezen als standaard MIDI-bestand. Kies een ander .mid- of .midi-bestand.",
+  "pitchOutOfRange": "Sommige noten zouden buiten het MIDI-bereik vallen. Kies een kleinere verschuiving.",
+  "tempoOutOfRange": "Deze instelling valt buiten het MIDI-tijdbereik. Kies een percentage dichter bij 100%."
+}

@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normalization form",
+  "NFC": "Combines letters and accents where possible. A good default for comparing and storing text.",
+  "NFD": "Separates letters from their combining accents, for inspecting how text is represented.",
+  "NFKC": "Combines letters and accents and folds compatibility characters. For example, Ａ becomes A, ① becomes 1, and ﬁ becomes fi.",
+  "NFKD": "Separates letters from their combining accents and folds compatibility characters such as Ａ, ①, and ﬁ.",
+  "inputLabel": "Original text",
+  "inputPlaceholder": "Type or paste text to normalize",
+  "outputLabel": "Normalized text",
+  "outputPlaceholder": "The result appears here",
+  "exampleLabel": "Try an example",
+  "clearLabel": "Clear",
+  "copyLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "copyFailedLabel": "Couldn’t copy",
+  "changedLabel": "Text changed",
+  "unchangedLabel": "Already in this form",
+  "codePointsLabel": "Compare code points",
+  "codePointsLimit": "Showing up to 40 code points from each text."
+}

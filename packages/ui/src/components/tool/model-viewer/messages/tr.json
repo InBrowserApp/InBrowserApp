@@ -16,5 +16,12 @@
   "controls": "Döndürmek için sürükleyin · Yakınlaştırmak için tekerleği kullanın · Kaydırmak için sağ tuşla sürükleyin",
   "touchControls": "Döndürmek için sürükleyin · Yakınlaştırmak için iki parmağınızı açıp kapatın · Kaydırmak için iki parmakla sürükleyin",
   "keyboardControls": "Döndürmek için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + ve − tuşlarını kullanın. Görünümü kaydırmak için Shift tuşunu basılı tutarak ok tuşlarını kullanın.",
-  "missingResources": "Bazı malzemeler veya dokular eksik. Modeli ve ona ait dosyaları birlikte açın."
+  "missingResources": "Bazı malzemeler veya dokular eksik. Modeli ve ona ait dosyaları birlikte açın.",
+  "companionHelp": "Modeli ve ona ait dosyaları birlikte seçin.",
+  "missingCompanions": "Bir model kaynağı eksik. Modeli, başvurduğu arabellek dosyaları ve dokularla birlikte açın.",
+  "animation": "Animasyon",
+  "clip": "Klip {number}",
+  "playAnimation": "Animasyonu oynat",
+  "pauseAnimation": "Animasyonu duraklat",
+  "openFolder": "Klasörü aç"
 }

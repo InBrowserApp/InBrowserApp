@@ -1,0 +1,20 @@
+{
+  "formLabel": "Bentuk normalisasi",
+  "NFC": "Menggabungkan huruf dan tanda aksen jika memungkinkan. Cocok sebagai pilihan awal untuk membandingkan dan menyimpan teks.",
+  "NFD": "Memisahkan huruf dari tanda aksen penggabung agar susunan karakter dalam teks bisa diperiksa.",
+  "NFKC": "Menggabungkan huruf dan aksen serta menyamakan varian kompatibilitas. Misalnya, Ａ menjadi A, ① menjadi 1, dan ﬁ menjadi fi.",
+  "NFKD": "Memisahkan huruf dari tanda aksen penggabung dan menyamakan varian kompatibilitas seperti Ａ, ①, dan ﬁ.",
+  "inputLabel": "Teks asli",
+  "inputPlaceholder": "Ketik atau tempel teks yang ingin dinormalisasi",
+  "outputLabel": "Teks hasil normalisasi",
+  "outputPlaceholder": "Hasilnya muncul di sini",
+  "exampleLabel": "Coba contoh",
+  "clearLabel": "Hapus teks",
+  "copyLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin",
+  "changedLabel": "Teks berubah",
+  "unchangedLabel": "Teks sudah dalam bentuk ini",
+  "codePointsLabel": "Bandingkan titik kode",
+  "codePointsLimit": "Menampilkan hingga 40 titik kode pertama dari setiap teks."
+}

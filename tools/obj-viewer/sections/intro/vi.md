@@ -11,3 +11,5 @@ Bạn vẫn có thể mở OBJ khi thiếu tệp đi kèm. Các bề mặt liên
 ## Xem các định dạng 3D liên quan
 
 Để xem lưới tam giác được xuất cho in 3D, hãy dùng [Trình xem STL](../stl-viewer/). Nếu có tệp CAD gốc của chi tiết hoặc cụm lắp ráp ở dạng `.step` hay `.stp`, hãy mở tệp đó bằng [Trình xem STEP](../step-viewer/).
+
+- [Trình xem GLB / glTF](../gltf-viewer/)

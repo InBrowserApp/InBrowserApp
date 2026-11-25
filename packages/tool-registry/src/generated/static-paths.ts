@@ -11502,6 +11502,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "filecoin-address-converter",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "de",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "en",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "es",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "he",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "id",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "it",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "no",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "th",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ar",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "de",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "en",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "es",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "fr",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "he",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "hi",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "id",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "it",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ja",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ko",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ms",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "nl",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "no",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "pl",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "pt",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "ru",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "sv",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "th",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "tr",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "vi",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "filecoin-piece-cid-calculator",
     language: "ar",
   },
@@ -12603,6 +12787,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "gitignore-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "de",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "en",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "es",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "he",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "id",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "it",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "no",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "th",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "gltf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "gltf-viewer",
     language: "zh-TW",
   },
   {
@@ -20702,6 +20978,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mbox-viewer",
+    language: "ar",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "de",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "en",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "es",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "fr",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "he",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "hi",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "id",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "it",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ja",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ko",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ms",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "nl",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "no",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "pl",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "pt",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "ru",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "sv",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "th",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "tr",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "vi",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mbox-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "md4-hash-text-or-file",
     language: "ar",
   },
@@ -21527,6 +21895,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "midi-monitor",
+    language: "zh-TW",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ar",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "de",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "en",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "es",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "fr",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "he",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "hi",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "id",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "it",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ja",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ko",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ms",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "nl",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "no",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "pl",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "pt",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ru",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "sv",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "th",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "tr",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "vi",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ar",
+  },
+  {
+    slug: "midi-transposer",
+    language: "de",
+  },
+  {
+    slug: "midi-transposer",
+    language: "en",
+  },
+  {
+    slug: "midi-transposer",
+    language: "es",
+  },
+  {
+    slug: "midi-transposer",
+    language: "fr",
+  },
+  {
+    slug: "midi-transposer",
+    language: "he",
+  },
+  {
+    slug: "midi-transposer",
+    language: "hi",
+  },
+  {
+    slug: "midi-transposer",
+    language: "id",
+  },
+  {
+    slug: "midi-transposer",
+    language: "it",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ja",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ko",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ms",
+  },
+  {
+    slug: "midi-transposer",
+    language: "nl",
+  },
+  {
+    slug: "midi-transposer",
+    language: "no",
+  },
+  {
+    slug: "midi-transposer",
+    language: "pl",
+  },
+  {
+    slug: "midi-transposer",
+    language: "pt",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ru",
+  },
+  {
+    slug: "midi-transposer",
+    language: "sv",
+  },
+  {
+    slug: "midi-transposer",
+    language: "th",
+  },
+  {
+    slug: "midi-transposer",
+    language: "tr",
+  },
+  {
+    slug: "midi-transposer",
+    language: "vi",
+  },
+  {
+    slug: "midi-transposer",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-transposer",
     language: "zh-TW",
   },
   {
@@ -33490,6 +34042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unicode-normalizer",
+    language: "ar",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "de",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "en",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "es",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "fr",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "he",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "hi",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "id",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "it",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ja",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ko",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ms",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "nl",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "no",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "pl",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "pt",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "ru",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "sv",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "th",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "tr",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "vi",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "unicode-normalizer",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-punycode-converter",
     language: "ar",
   },
@@ -36155,6 +36799,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "vlsm-calculator",
+    language: "zh-TW",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ar",
+  },
+  {
+    slug: "warc-viewer",
+    language: "de",
+  },
+  {
+    slug: "warc-viewer",
+    language: "en",
+  },
+  {
+    slug: "warc-viewer",
+    language: "es",
+  },
+  {
+    slug: "warc-viewer",
+    language: "fr",
+  },
+  {
+    slug: "warc-viewer",
+    language: "he",
+  },
+  {
+    slug: "warc-viewer",
+    language: "hi",
+  },
+  {
+    slug: "warc-viewer",
+    language: "id",
+  },
+  {
+    slug: "warc-viewer",
+    language: "it",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ja",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ko",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ms",
+  },
+  {
+    slug: "warc-viewer",
+    language: "nl",
+  },
+  {
+    slug: "warc-viewer",
+    language: "no",
+  },
+  {
+    slug: "warc-viewer",
+    language: "pl",
+  },
+  {
+    slug: "warc-viewer",
+    language: "pt",
+  },
+  {
+    slug: "warc-viewer",
+    language: "ru",
+  },
+  {
+    slug: "warc-viewer",
+    language: "sv",
+  },
+  {
+    slug: "warc-viewer",
+    language: "th",
+  },
+  {
+    slug: "warc-viewer",
+    language: "tr",
+  },
+  {
+    slug: "warc-viewer",
+    language: "vi",
+  },
+  {
+    slug: "warc-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "warc-viewer",
     language: "zh-TW",
   },
   {

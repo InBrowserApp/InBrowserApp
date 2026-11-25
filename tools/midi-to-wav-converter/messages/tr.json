@@ -1,0 +1,22 @@
+{
+  "chooseFile": "MIDI dosyası seç",
+  "changeFile": "Dosyayı değiştir",
+  "dropHint": "veya bir MIDI dosyasını buraya bırakın",
+  "privacy": "Dosyalarınız bu tarayıcıda kalır.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (dahili)",
+  "chooseSoundFont": "SoundFont seç",
+  "useDefaultSoundFont": "Dahili SoundFont'u kullan",
+  "soundFontHint": "İsteğe bağlı. Enstrüman seslerini değiştirmek için bir .sf2 veya .sf3 dosyası seçin.",
+  "render": "WAV'a dönüştür",
+  "rendering": "Ses oluşturuluyor…",
+  "cancel": "İptal",
+  "preview": "WAV ses önizlemesi",
+  "download": "WAV dosyasını indir",
+  "invalidMidi": "MIDI dosyası açılamadı veya çalınabilir nota içermiyor. Başka bir .mid veya .midi dosyası deneyin.",
+  "unsupportedTiming": "Dosyayı vuruş tabanlı zamanlama kullanan bir MIDI dosyası (biçim 0 veya 1) olarak dışa aktarın, ardından tekrar deneyin.",
+  "invalidSoundFont": "SoundFont dosyası açılamadı. Başka bir .sf2 veya .sf3 dosyası deneyin ya da dahili SoundFont'u kullanın.",
+  "soundFontUnavailable": "Dahili SoundFont yüklenemedi. Tekrar deneyin veya bir SoundFont dosyası seçin.",
+  "tooLong": "Tarayıcıda dönüştürmek için 10 dakikadan kısa bir MIDI dosyası seçin.",
+  "renderFailed": "Ses oluşturulamadı. Daha küçük bir MIDI dosyası veya farklı bir SoundFont deneyin."
+}

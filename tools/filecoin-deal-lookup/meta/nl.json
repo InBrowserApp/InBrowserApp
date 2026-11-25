@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin-opslagdeal opzoeken",
+  "description": "Zoek een Filecoin-opslagdeal op met een Deal ID. Controleer de dealstatus op mainnet, provider en begin- en einddatum, en kopieer de Piece CID."
+}

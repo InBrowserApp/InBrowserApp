@@ -1,0 +1,16 @@
+{
+  "address": "Địa chỉ Filecoin hoặc địa chỉ kiểu Ethereum",
+  "network": "Mạng Filecoin",
+  "mainnet": "Mạng chính",
+  "testnet": "Mạng thử nghiệm",
+  "convert": "Chuyển đổi địa chỉ",
+  "sample": "Thử ví dụ",
+  "filecoinAddress": "Địa chỉ Filecoin",
+  "ethereumAddress": "Địa chỉ kiểu Ethereum",
+  "invalidAddress": "Nhập địa chỉ Filecoin f410 hoặc t410, hoặc địa chỉ 0x có 40 ký tự thập lục phân.",
+  "filecoinChecksum": "Tổng kiểm tra Filecoin không khớp. Hãy sao chép lại địa chỉ đầy đủ.",
+  "ethereumChecksum": "Tổng kiểm tra của địa chỉ 0x có cả chữ hoa và chữ thường không khớp. Hãy đối chiếu với địa chỉ trong ví hoặc trên trình khám phá blockchain.",
+  "actorId": "Địa chỉ này mã hóa một ID actor Filecoin. Hãy dùng địa chỉ ủy quyền f410 hoặc t410, hoặc địa chỉ 0x tương ứng.",
+  "copy": "Sao chép",
+  "copied": "Đã sao chép"
+}

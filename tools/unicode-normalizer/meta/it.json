@@ -1,0 +1,4 @@
+{
+  "name": "Normalizzatore Unicode",
+  "description": "Normalizza il testo Unicode in NFC, NFD, NFKC o NFKD. Confronta i punti di codice e copia il risultato direttamente dal browser."
+}

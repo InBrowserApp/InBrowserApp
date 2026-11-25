@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin 주소 변환기",
+  "description": "Filecoin f410 또는 t410 주소와 이더리움 형식의 0x 주소를 양방향으로 변환하세요. 브라우저에서 Filecoin 메인넷과 Calibration 테스트넷 주소의 체크섬을 검증할 수 있습니다."
+}

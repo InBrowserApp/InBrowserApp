@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Filecoin 位址轉換器",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Filecoin 儲存交易查詢",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Filecoin Piece CID 計算器",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: ".gitignore 產生器",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "GLB / glTF 檢視器",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "MBOX 檢視器",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "MD4 雜湊文字或檔案",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "MIDI 監視器",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "MIDI 轉 WAV 轉換器",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "MIDI 移調與速度調整",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Unicode 正規化工具",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Unicode ↔ Punycode 轉換器",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "IPv4 VLSM 子網路計算機",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "WARC 檢視器",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

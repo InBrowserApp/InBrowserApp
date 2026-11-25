@@ -11,3 +11,5 @@ Dimensi menunjukkan bentang model dari ujung ke ujung pada sumbu X, Y, dan Z. ST
 ## Lihat format file 3D lainnya
 
 STL menggambarkan permukaan komponen dengan segitiga. Untuk melihat file Wavefront yang disertai pustaka material, gunakan [Penampil OBJ](../obj-viewer/). Untuk file pertukaran data CAD yang berisi rakitan atau model solid, gunakan [Penampil STEP](../step-viewer/).
+
+- [Penampil GLB / glTF](../gltf-viewer/)

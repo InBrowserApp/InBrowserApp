@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Depolama Anlaşması Sorgulama",
+  "description": "Filecoin depolama anlaşmasını kimliğiyle sorgulayın. Ana ağdaki anlaşma durumunu, sağlayıcıyı, başlangıç ve bitiş tarihlerini inceleyin, Piece CID değerini kopyalayın."
+}

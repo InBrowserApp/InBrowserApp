@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin または Ethereum 形式のアドレス",
+  "network": "Filecoin ネットワーク",
+  "mainnet": "メインネット",
+  "testnet": "テストネット",
+  "convert": "アドレスを変換",
+  "sample": "サンプルを試す",
+  "filecoinAddress": "Filecoin アドレス",
+  "ethereumAddress": "Ethereum 形式のアドレス",
+  "invalidAddress": "Filecoin の f410 または t410 アドレス、もしくは 16 進数 40 桁の 0x アドレスを入力してください。",
+  "filecoinChecksum": "Filecoin のチェックサムが一致しません。アドレス全体をコピーし直してください。",
+  "ethereumChecksum": "大文字と小文字が混在する 0x アドレスのチェックサムが一致しません。ウォレットやエクスプローラーのアドレスと照合してください。",
+  "actorId": "このアドレスは Filecoin のアクター ID を表しています。委任アドレスの f410 または t410 形式か、それに対応する 0x アドレスを指定してください。",
+  "copy": "コピー",
+  "copied": "コピーしました"
+}

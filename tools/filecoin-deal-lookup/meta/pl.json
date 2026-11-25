@@ -1,0 +1,4 @@
+{
+  "name": "Wyszukiwarka umów Filecoin",
+  "description": "Znajdź umowę przechowywania danych w Filecoin po jej identyfikatorze. Sprawdź status w sieci głównej, dostawcę oraz daty rozpoczęcia i zakończenia, a także skopiuj Piece CID."
+}

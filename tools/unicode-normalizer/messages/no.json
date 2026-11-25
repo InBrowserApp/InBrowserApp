@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normaliseringsform",
+  "NFC": "Setter sammen bokstaver og aksenter der det er mulig. Et godt standardvalg for sammenligning og lagring av tekst.",
+  "NFD": "Skiller bokstaver fra de kombinerende aksentene, slik at du kan undersøke hvordan teksten er bygd opp.",
+  "NFKC": "Setter sammen bokstaver og aksenter og omformer kompatibilitetstegn. For eksempel blir Ａ til A, ① til 1 og ﬁ til fi.",
+  "NFKD": "Skiller bokstaver fra de kombinerende aksentene og omformer kompatibilitetstegn som Ａ, ① og ﬁ.",
+  "inputLabel": "Originaltekst",
+  "inputPlaceholder": "Skriv eller lim inn tekst du vil normalisere",
+  "outputLabel": "Normalisert tekst",
+  "outputPlaceholder": "Resultatet vises her",
+  "exampleLabel": "Prøv et eksempel",
+  "clearLabel": "Tøm",
+  "copyLabel": "Kopier resultatet",
+  "copiedLabel": "Kopiert",
+  "copyFailedLabel": "Kunne ikke kopiere",
+  "changedLabel": "Teksten er endret",
+  "unchangedLabel": "Allerede i denne formen",
+  "codePointsLabel": "Sammenlign kodepunkter",
+  "codePointsLimit": "Viser opptil 40 kodepunkter fra hver tekst."
+}

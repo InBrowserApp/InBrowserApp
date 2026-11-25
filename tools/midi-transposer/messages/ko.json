@@ -1,0 +1,15 @@
+{
+  "chooseFile": "MIDI 파일 선택",
+  "changeFile": "파일 변경",
+  "dropHint": "또는 여기에 MIDI 파일 놓기",
+  "privacy": "파일은 이 브라우저에 그대로 유지됩니다.",
+  "pitch": "조옮김 (반음)",
+  "pitchHint": "음높이를 낮추려면 음수를 입력하세요.",
+  "speed": "템포 (%)",
+  "speedHint": "100%는 원래 템포를 유지합니다.",
+  "keepDrums": "드럼 음의 원래 음높이 유지",
+  "download": "MIDI 다운로드",
+  "invalidFile": "이 파일을 표준 MIDI 파일로 읽을 수 없습니다. 다른 .mid 또는 .midi 파일을 선택하세요.",
+  "pitchOutOfRange": "일부 음이 MIDI 음높이 범위를 벗어납니다. 이동 폭을 줄여 보세요.",
+  "tempoOutOfRange": "이 설정은 MIDI 시간 범위를 초과합니다. 100%에 더 가까운 값을 입력하세요."
+}

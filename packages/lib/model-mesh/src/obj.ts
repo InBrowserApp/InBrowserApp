@@ -1,4 +1,4 @@
-import { findLocalFile } from "./local-files"
+import { findLocalFile, localFolder } from "./local-files"
 import { DoubleSide, LoadingManager, Texture } from "three"
 import { MTLLoader } from "three/addons/loaders/MTLLoader.js"
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js"
@@ -48,20 +48,23 @@ export async function loadObj(model: File, companions: File[]) {
     // Parse first so OBJLoader owns the syntax and triangulation. Preserve
     // its fallback material when an individual OBJ material cannot be found.
     const object = parseObj(source)
+    const folder = localFolder(model)
     const libraries = object.materialLibraries.flatMap((reference) =>
-      findLocalFile(companions, reference)
+      findLocalFile(companions, folder + reference)
         ? [reference]
         : (reference
             .match(/.*?\.mtl(?=\s+|$)/gi)
             ?.map((name) => name.trim()) ?? [reference])
     )
     for (const reference of libraries) {
-      const file = findLocalFile(companions, reference)
+      const file = findLocalFile(companions, folder + reference)
       if (!file) {
         missingResources = true
         continue
       }
-      const base = reference.replaceAll("\\", "/").replace(/[^/]*$/, "")
+      const base =
+        localFolder(file) ||
+        reference.replaceAll("\\", "/").replace(/[^/]*$/, "")
       const loader = new MTLLoader(manager)
       loader.setMaterialOptions({ side: DoubleSide })
       const materials = loader.parse(await file.text(), base)

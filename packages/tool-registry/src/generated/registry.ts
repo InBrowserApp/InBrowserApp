@@ -8160,117 +8160,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "محوّل CHM إلى PDF",
         description:
-          "حوّل ملفات CHM إلى PDF مجانًا عبر الإنترنت. احفظ ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية بصيغة PDF مباشرةً في متصفحك.",
+          "حوّل ملفات CHM مجانًا إلى ملفات PDF قابلة للبحث. عاين ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية، ثم احفظها بتنسيق PDF مع إمكانية تحديد النص.",
       },
       de: {
         name: "CHM-zu-PDF-Konverter",
         description:
-          "Wandle CHM-Dateien kostenlos online in PDF um. Speichere Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books direkt im Browser als PDF.",
+          "Wandle CHM-Dateien kostenlos in durchsuchbare PDFs um. Sieh dir Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books an und speichere sie als PDF mit markierbarem Text.",
       },
       en: {
         name: "CHM to PDF Converter",
         description:
-          "Convert CHM files to PDF online for free. Save Windows help files, software manuals, and CHM ebooks as PDFs directly in your browser.",
+          "Convert CHM files to searchable PDFs for free. Preview Windows help files, software manuals, and CHM ebooks, then save as PDF with selectable text.",
       },
       es: {
         name: "Conversor de CHM a PDF",
         description:
-          "Convierte archivos CHM a PDF gratis en línea. Guarda archivos de ayuda de Windows, manuales de software y libros electrónicos CHM como PDF desde tu navegador.",
+          "Convierte gratis archivos CHM a PDF con texto que puedes buscar y seleccionar. Revisa la vista previa de la ayuda de Windows, los manuales y los libros electrónicos CHM antes de guardarlos.",
       },
       fr: {
         name: "Convertisseur CHM en PDF",
         description:
-          "Convertissez gratuitement vos fichiers CHM en PDF en ligne. Enregistrez des fichiers d’aide Windows, des manuels de logiciels et des livres numériques CHM en PDF directement dans votre navigateur.",
+          "Convertissez gratuitement vos fichiers CHM en PDF. Prévisualisez vos fichiers d’aide Windows, manuels et livres numériques CHM, puis enregistrez un PDF avec sélection et recherche de texte.",
       },
       he: {
         name: "ממיר CHM ל־PDF",
         description:
-          "המרת קובצי CHM ל־PDF בחינם באינטרנט. אפשר לשמור קובצי עזרה של Windows, מדריכי תוכנה וספרים דיגיטליים בפורמט CHM כקובצי PDF ישירות בדפדפן.",
+          "המרת קובצי CHM לקובצי PDF שאפשר לחפש בהם, בחינם. בדקו בתצוגה מקדימה קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM, ושמרו כ־PDF עם טקסט שאפשר לסמן.",
       },
       hi: {
         name: "CHM से PDF कन्वर्टर",
         description:
-          "CHM फ़ाइलें मुफ़्त में ऑनलाइन PDF में बदलें। Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकें सीधे अपने ब्राउज़र में PDF के रूप में सहेजें।",
+          "CHM फ़ाइलें मुफ़्त में ऐसी PDF में बदलें जिनमें आप खोज सकें। Windows सहायता फ़ाइलों, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकों का प्रीव्यू देखें, फिर उन्हें ऐसी PDF में सेव करें जिसमें टेक्स्ट चुना जा सके।",
       },
       id: {
         name: "Konverter CHM ke PDF",
         description:
-          "Konversi berkas CHM ke PDF secara gratis. Simpan berkas bantuan Windows, panduan perangkat lunak, dan buku digital CHM sebagai PDF langsung di browser.",
+          "Konversi berkas CHM menjadi PDF yang dapat dicari secara gratis. Pratinjau bantuan Windows, panduan perangkat lunak, dan buku digital CHM, lalu simpan sebagai PDF dengan teks yang dapat dipilih.",
       },
       it: {
         name: "Convertitore da CHM a PDF",
         description:
-          "Converti gratis i file CHM in PDF online. Salva file della guida di Windows, manuali software ed ebook CHM in formato PDF direttamente nel browser.",
+          "Converti gratis i file CHM in PDF ricercabili. Apri l’anteprima di guide di Windows, manuali software ed ebook CHM, poi salva un PDF con testo selezionabile.",
       },
       ja: {
         name: "CHM PDF 変換",
         description:
-          "CHM ファイルを無料で PDF に変換。Windows のヘルプファイル、ソフトウェアのマニュアル、CHM 形式の書籍をブラウザーで直接 PDF に保存できます。",
+          "CHM ファイルを検索可能な PDF に無料で変換。Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍をプレビューし、テキストを選択できる PDF として保存できます。",
       },
       ko: {
         name: "CHM PDF 변환기",
         description:
-          "CHM 파일을 무료로 PDF로 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 브라우저에서 바로 PDF로 저장할 수 있습니다.",
+          "CHM 파일을 검색 가능한 PDF로 무료 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 미리 보고 텍스트를 선택할 수 있는 PDF로 저장합니다.",
       },
       ms: {
         name: "Penukar CHM kepada PDF",
         description:
-          "Tukar fail CHM kepada PDF secara percuma. Simpan fail bantuan Windows, manual perisian dan e-buku CHM sebagai PDF terus dalam pelayar anda.",
+          "Tukar fail CHM kepada PDF yang boleh dicari secara percuma. Pratonton bantuan Windows, manual perisian dan e-buku CHM, kemudian simpan sebagai PDF dengan teks yang boleh dipilih.",
       },
       nl: {
         name: "CHM-naar-PDF-converter",
         description:
-          "Converteer CHM-bestanden gratis online naar PDF. Sla Windows-helpbestanden, softwarehandleidingen en CHM-e-books rechtstreeks vanuit je browser op als PDF.",
+          "Converteer CHM-bestanden gratis naar doorzoekbare PDF’s. Bekijk Windows-helpbestanden, softwarehandleidingen en CHM-e-books en sla ze op als PDF met selecteerbare tekst.",
       },
       no: {
         name: "Konverter CHM til PDF",
         description:
-          "Konverter CHM-filer til PDF gratis på nett. Lagre Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker som PDF direkte i nettleseren.",
+          "Konverter CHM-filer gratis til søkbare PDF-er. Forhåndsvis Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker og lagre dem som PDF med tekst du kan merke.",
       },
       pl: {
         name: "Konwerter CHM na PDF",
         description:
-          "Konwertuj pliki CHM na PDF bezpłatnie online. Zapisuj pliki pomocy Windows, instrukcje programów i e-booki CHM jako PDF bezpośrednio w przeglądarce.",
+          "Konwertuj pliki CHM na PDF z możliwością wyszukiwania tekstu. Wyświetl podgląd plików pomocy Windows, instrukcji i e-booków CHM, a potem zapisz je za darmo jako PDF z tekstem, który można zaznaczać.",
       },
       pt: {
         name: "Conversor de CHM para PDF",
         description:
-          "Converta arquivos CHM para PDF online e grátis. Salve arquivos de ajuda do Windows, manuais de software e e-books CHM como PDFs direto no navegador.",
+          "Converta arquivos CHM em PDFs pesquisáveis de graça. Confira a prévia de arquivos de ajuda do Windows, manuais de software e e-books CHM e salve um PDF com texto selecionável.",
       },
       ru: {
         name: "Конвертер CHM в PDF",
         description:
-          "Бесплатно конвертируйте файлы CHM в PDF онлайн. Сохраняйте справку Windows, руководства к программам и электронные книги CHM в формате PDF прямо в браузере.",
+          "Бесплатно преобразуйте файлы CHM в PDF с поиском по тексту. Просматривайте справку Windows, руководства и электронные книги CHM, а затем сохраняйте их в PDF, где можно выделять текст.",
       },
       sv: {
         name: "Konvertera CHM till PDF",
         description:
-          "Konvertera CHM-filer till PDF gratis online. Spara Windows-hjälpfiler, programhandböcker och CHM-e-böcker som PDF direkt i webbläsaren.",
+          "Konvertera CHM-filer till sökbara PDF-filer gratis. Förhandsgranska Windows-hjälpfiler, programhandböcker och CHM-e-böcker och spara dem som PDF med text som går att markera.",
       },
       th: {
         name: "แปลง CHM เป็น PDF",
         description:
-          "แปลงไฟล์ CHM เป็น PDF ออนไลน์ฟรี บันทึกไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM เป็น PDF ได้จากเบราว์เซอร์",
+          "แปลงไฟล์ CHM เป็น PDF ที่ค้นหาข้อความได้ฟรี ดูตัวอย่างไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM แล้วบันทึกเป็น PDF ที่เลือกข้อความได้",
       },
       tr: {
         name: "CHM’den PDF’ye Dönüştürücü",
         description:
-          "CHM dosyalarını ücretsiz olarak çevrimiçi PDF’ye dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını doğrudan tarayıcınızda PDF olarak kaydedin.",
+          "CHM dosyalarını ücretsiz olarak arama yapılabilir PDF’lere dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını önizleyin, ardından seçilebilir metin içeren bir PDF olarak kaydedin.",
       },
       vi: {
         name: "Chuyển CHM sang PDF",
         description:
-          "Chuyển tệp CHM sang PDF trực tuyến miễn phí. Lưu tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM dưới dạng PDF ngay trong trình duyệt.",
+          "Chuyển tệp CHM sang PDF có thể tìm kiếm miễn phí. Xem trước tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM, rồi lưu thành PDF có thể chọn văn bản.",
       },
       "zh-CN": {
         name: "CHM 转 PDF",
         description:
-          "免费在线将 CHM 转为 PDF。直接在浏览器中把 Windows 帮助文件、软件手册和 CHM 电子书保存为 PDF。",
+          "免费将 CHM 文件转换为可搜索的 PDF。预览 Windows 帮助文件、软件手册和 CHM 电子书，再保存为可选中文本的 PDF。",
       },
       "zh-TW": {
         name: "CHM 轉 PDF",
         description:
-          "免費線上將 CHM 檔轉成 PDF。在瀏覽器中直接將 Windows 說明檔、軟體手冊和 CHM 電子書儲存為 PDF。",
+          "免費將 CHM 檔案轉成可搜尋的 PDF。預覽 Windows 說明檔、軟體手冊和 CHM 電子書，再儲存為可選取文字的 PDF。",
       },
     },
   },
@@ -16029,6 +16029,268 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "filecoin-address-converter",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: [
+      "filecoin",
+      "fevm",
+      "f410",
+      "t410",
+      "0x",
+      "ethereum",
+      "delegated address",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل عناوين Filecoin",
+        description:
+          "حوّل عناوين Filecoin من نوع f410 أو t410 إلى صيغة 0x الخاصة بـ Ethereum وبالعكس. افحص مجموع التحقق لعناوين شبكة Filecoin الرئيسية وشبكة الاختبار Calibration في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Adresskonverter",
+        description:
+          "Konvertieren Sie Filecoin-Adressen mit f410 oder t410 ins Ethereum-Format 0x und umgekehrt. Prüfen Sie die Prüfsummen für Filecoin-Mainnet und Calibration im Browser.",
+      },
+      en: {
+        name: "Filecoin Address Converter",
+        description:
+          "Convert Filecoin f410 or t410 addresses to Ethereum-style 0x and back. Check checksums for Filecoin mainnet and Calibration in your browser.",
+      },
+      es: {
+        name: "Conversor de direcciones de Filecoin",
+        description:
+          "Convierte direcciones f410 o t410 de Filecoin al formato 0x de Ethereum y a la inversa. Comprueba las sumas de comprobación de la red principal de Filecoin y de Calibration en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’adresses Filecoin",
+        description:
+          "Convertissez les adresses Filecoin f410 ou t410 au format Ethereum 0x et inversement. Vérifiez les sommes de contrôle sur le réseau principal Filecoin et sur Calibration dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר כתובות Filecoin",
+        description:
+          "המירו כתובות f410 או t410 של Filecoin לפורמט 0x של Ethereum ובחזרה. אמתו סכומי בדיקה לכתובות ברשת הראשית של Filecoin וברשת הבדיקות Calibration, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "Filecoin पता कन्वर्टर",
+        description:
+          "Filecoin के f410 या t410 पते को Ethereum के 0x फ़ॉर्मैट में बदलें या उलटा कन्वर्ज़न करें। ब्राउज़र में Filecoin मेननेट और Calibration के चेकसम जाँचें।",
+      },
+      id: {
+        name: "Konverter Alamat Filecoin",
+        description:
+          "Konversi alamat Filecoin f410 atau t410 ke format 0x bergaya Ethereum dan sebaliknya. Periksa checksum untuk mainnet Filecoin dan Calibration di browser.",
+      },
+      it: {
+        name: "Convertitore di indirizzi Filecoin",
+        description:
+          "Converti indirizzi Filecoin f410 o t410 nel formato 0x di Ethereum e viceversa. Verifica i checksum per la rete principale Filecoin e Calibration nel browser.",
+      },
+      ja: {
+        name: "Filecoin アドレス変換ツール",
+        description:
+          "Filecoin の f410 や t410 アドレスと Ethereum 形式の 0x アドレスを相互変換できます。Filecoin メインネットと Calibration テストネットのアドレスのチェックサムをブラウザで検証します。",
+      },
+      ko: {
+        name: "Filecoin 주소 변환기",
+        description:
+          "Filecoin f410 또는 t410 주소와 이더리움 형식의 0x 주소를 양방향으로 변환하세요. 브라우저에서 Filecoin 메인넷과 Calibration 테스트넷 주소의 체크섬을 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Alamat Filecoin",
+        description:
+          "Tukar alamat Filecoin f410 atau t410 kepada format 0x gaya Ethereum dan sebaliknya. Semak checksum bagi mainnet Filecoin dan Calibration dalam pelayar.",
+      },
+      nl: {
+        name: "Filecoin-adresconverter",
+        description:
+          "Converteer Filecoin f410- of t410-adressen naar Ethereum-achtige 0x-adressen en terug. Controleer checksums voor het Filecoin-mainnet en Calibration in je browser.",
+      },
+      no: {
+        name: "Filecoin-adressekonverterer",
+        description:
+          "Konverter Filecoin f410- eller t410-adresser til Ethereum-formatet 0x og tilbake. Kontroller sjekksummer for Filecoins hovednett og Calibration i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter adresów Filecoin",
+        description:
+          "Konwertuj adresy Filecoin f410 lub t410 na format Ethereum 0x i odwrotnie. Sprawdzaj sumy kontrolne adresów z sieci głównej Filecoin i sieci Calibration w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de endereços do Filecoin",
+        description:
+          "Converta endereços f410 ou t410 do Filecoin para o formato 0x do Ethereum e vice-versa. Valide somas de verificação da rede principal do Filecoin e da rede Calibration no navegador.",
+      },
+      ru: {
+        name: "Конвертер адресов Filecoin",
+        description:
+          "Преобразуйте адреса Filecoin f410 и t410 в формат Ethereum 0x и обратно. Проверяйте контрольные суммы для основной сети Filecoin и тестовой сети Calibration прямо в браузере.",
+      },
+      sv: {
+        name: "Filecoin-adresskonverterare",
+        description:
+          "Konvertera Filecoin-adresserna f410 eller t410 till Ethereum-formatet 0x och tillbaka. Kontrollera checksummor för Filecoins huvudnät och Calibration i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ Filecoin",
+        description:
+          "แปลงที่อยู่ Filecoin แบบ f410 หรือ t410 เป็น 0x แบบ Ethereum และแปลงกลับ ตรวจสอบเช็กซัมสำหรับเครือข่ายหลัก Filecoin และ Calibration ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Adres Dönüştürücü",
+        description:
+          "Filecoin f410 veya t410 adreslerini Ethereum biçiminde 0x adreslerine dönüştürün ya da tersini yapın. Filecoin ana ağı ve Calibration için sağlama toplamlarını tarayıcınızda kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ Filecoin",
+        description:
+          "Chuyển đổi địa chỉ Filecoin f410 hoặc t410 sang dạng 0x kiểu Ethereum và ngược lại. Xác minh tổng kiểm tra cho mạng chính Filecoin và Calibration ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin 地址转换器",
+        description:
+          "在 Filecoin f410 或 t410 地址与以太坊格式的 0x 地址之间双向转换。在浏览器中校验 Filecoin 主网和 Calibration 测试网的地址。",
+      },
+      "zh-TW": {
+        name: "Filecoin 位址轉換器",
+        description:
+          "在 Filecoin f410 或 t410 位址與以太坊格式的 0x 位址之間雙向轉換。在瀏覽器中驗證 Filecoin 主網及 Calibration 測試網位址的總和檢查碼。",
+      },
+    },
+  },
+  {
+    slug: "filecoin-deal-lookup",
+    category: "ipfs",
+    icon: "file-text",
+    tags: [
+      "filecoin",
+      "deal id",
+      "storage deal",
+      "status",
+      "provider",
+      "piece cid",
+    ],
+    locales: {
+      ar: {
+        name: "البحث عن صفقات تخزين Filecoin",
+        description:
+          "ابحث عن صفقة تخزين على Filecoin باستخدام معرّف الصفقة. تحقّق من حالتها على الشبكة الرئيسية، واعرض مزوّد التخزين وتاريخَي البدء والانتهاء، وانسخ معرّف Piece CID.",
+      },
+      de: {
+        name: "Filecoin-Speichervereinbarungen suchen",
+        description:
+          "Rufen Sie eine Filecoin-Speichervereinbarung per Vereinbarungs-ID ab. Prüfen Sie Mainnet-Status, Speicheranbieter, Start- und Enddatum und kopieren Sie die Piece-CID.",
+      },
+      en: {
+        name: "Filecoin Deal Lookup",
+        description:
+          "Look up a Filecoin storage deal by Deal ID. Check mainnet deal status, provider, start and end dates, and copy its Piece CID.",
+      },
+      es: {
+        name: "Consulta de acuerdos de almacenamiento de Filecoin",
+        description:
+          "Consulta un acuerdo de almacenamiento de Filecoin por su ID. Comprueba su estado en la red principal, el proveedor y las fechas de inicio y fin, y copia su Piece CID.",
+      },
+      fr: {
+        name: "Recherche de contrats de stockage Filecoin",
+        description:
+          "Retrouvez un contrat de stockage Filecoin à partir de son ID. Consultez son statut sur le réseau principal, son fournisseur et ses dates de début et de fin, puis copiez son Piece CID.",
+      },
+      he: {
+        name: "איתור עסקאות אחסון ב-Filecoin",
+        description:
+          "אתרו עסקת אחסון ב-Filecoin לפי מזהה העסקה. בדקו את מצבה ברשת הראשית, את ספק האחסון ואת תאריכי ההתחלה והסיום, והעתיקו את ה-Piece CID שלה.",
+      },
+      hi: {
+        name: "Filecoin डील खोज",
+        description:
+          "डील ID से Filecoin स्टोरेज डील ढूँढें। मेननेट पर डील की स्थिति, स्टोरेज प्रदाता, शुरू और खत्म होने की तारीखें देखें और उसका Piece CID कॉपी करें।",
+      },
+      id: {
+        name: "Pencarian Kesepakatan Filecoin",
+        description:
+          "Cari kesepakatan penyimpanan Filecoin dengan Deal ID. Periksa status di mainnet, penyedia, serta tanggal mulai dan berakhir, lalu salin Piece CID.",
+      },
+      it: {
+        name: "Ricerca accordi di archiviazione Filecoin",
+        description:
+          "Cerca un accordo di archiviazione Filecoin tramite Deal ID. Controlla stato sulla rete principale, provider e date di inizio e fine, e copia il Piece CID.",
+      },
+      ja: {
+        name: "Filecoin ストレージ取引検索",
+        description:
+          "取引 ID から Filecoin のストレージ取引を検索します。メインネットでの取引の状態、ストレージプロバイダー、開始日と終了日を確認し、Piece CID をコピーできます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 거래 조회",
+        description:
+          "거래 ID로 Filecoin 스토리지 거래를 조회하세요. 메인넷 거래 상태, 스토리지 제공자, 시작일과 종료일을 확인하고 Piece CID를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Carian Perjanjian Filecoin",
+        description:
+          "Cari perjanjian storan Filecoin dengan Deal ID. Semak status di mainnet, penyedia, tarikh mula dan tamat, lalu salin Piece CID.",
+      },
+      nl: {
+        name: "Filecoin-opslagdeal opzoeken",
+        description:
+          "Zoek een Filecoin-opslagdeal op met een Deal ID. Controleer de dealstatus op mainnet, provider en begin- en einddatum, en kopieer de Piece CID.",
+      },
+      no: {
+        name: "Søk etter Filecoin-lagringsavtale",
+        description:
+          "Søk opp en Filecoin-lagringsavtale med Deal ID. Kontroller avtalestatus på hovednettet, leverandør og start- og sluttdato, og kopier Piece CID.",
+      },
+      pl: {
+        name: "Wyszukiwarka umów Filecoin",
+        description:
+          "Znajdź umowę przechowywania danych w Filecoin po jej identyfikatorze. Sprawdź status w sieci głównej, dostawcę oraz daty rozpoczęcia i zakończenia, a także skopiuj Piece CID.",
+      },
+      pt: {
+        name: "Consulta de acordos de armazenamento do Filecoin",
+        description:
+          "Consulte um acordo de armazenamento do Filecoin através do respetivo ID. Veja o estado na rede principal, o fornecedor e as datas de início e fim, e copie o Piece CID.",
+      },
+      ru: {
+        name: "Поиск сделок Filecoin",
+        description:
+          "Найдите сделку на хранение в Filecoin по ID. Проверьте статус в основной сети, поставщика хранилища, даты начала и окончания и скопируйте Piece CID.",
+      },
+      sv: {
+        name: "Sök Filecoin-lagringsavtal",
+        description:
+          "Sök ett Filecoin-lagringsavtal med Deal ID. Kontrollera avtalets status på huvudnätet, leverantör samt start- och slutdatum, och kopiera dess Piece CID.",
+      },
+      th: {
+        name: "เครื่องมือค้นหาข้อตกลง Filecoin",
+        description:
+          "ค้นหาข้อตกลงการจัดเก็บข้อมูล Filecoin ด้วย Deal ID ดูสถานะบนเครือข่ายหลัก ผู้ให้บริการ วันที่เริ่มต้นและสิ้นสุด แล้วคัดลอก Piece CID",
+      },
+      tr: {
+        name: "Filecoin Depolama Anlaşması Sorgulama",
+        description:
+          "Filecoin depolama anlaşmasını kimliğiyle sorgulayın. Ana ağdaki anlaşma durumunu, sağlayıcıyı, başlangıç ve bitiş tarihlerini inceleyin, Piece CID değerini kopyalayın.",
+      },
+      vi: {
+        name: "Tra cứu thỏa thuận Filecoin",
+        description:
+          "Tra cứu thỏa thuận lưu trữ Filecoin bằng Deal ID. Xem trạng thái trên mạng chính, nhà cung cấp, ngày bắt đầu và kết thúc, rồi sao chép Piece CID.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储交易查询",
+        description:
+          "按交易 ID 查询 Filecoin 存储交易。查看主网交易状态、存储提供商及起止日期，并复制 Piece CID。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存交易查詢",
+        description:
+          "依交易 ID 查詢 Filecoin 儲存交易。查看主網交易狀態、儲存供應商及起訖日期，並複製 Piece CID。",
+      },
+    },
+  },
+  {
     slug: "filecoin-piece-cid-calculator",
     category: "ipfs",
     icon: "hash",
@@ -17565,6 +17827,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  {
+    slug: "gltf-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "glb",
+      "gltf",
+      "3d",
+      "model",
+      "khronos",
+      "textures",
+      "animation",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GLB / glTF",
+        description:
+          "افتح نماذج GLB وglTF 2.0 في متصفحك. افحص هندسة النموذج ومواده وصور خاماته، وشغّل حركاته.",
+      },
+      de: {
+        name: "GLB- und glTF-Betrachter",
+        description:
+          "Öffne GLB- und glTF-2.0-Modelle im Browser. Sieh dir Geometrie, Materialien und Texturen an und spiele die Animationen des Modells ab.",
+      },
+      en: {
+        name: "GLB / glTF Viewer",
+        description:
+          "Open GLB and glTF 2.0 models in your browser. Inspect geometry, materials and textures, and play the model’s animations.",
+      },
+      es: {
+        name: "Visor de GLB / glTF",
+        description:
+          "Abre modelos GLB y glTF 2.0 en tu navegador. Inspecciona la geometría, los materiales y las texturas, y reproduce las animaciones del modelo.",
+      },
+      fr: {
+        name: "Visionneuse GLB / glTF",
+        description:
+          "Ouvrez des modèles GLB et glTF 2.0 dans votre navigateur. Examinez leur géométrie, leurs matériaux et leurs textures, puis lancez leurs animations.",
+      },
+      he: {
+        name: "מציג GLB / glTF",
+        description:
+          "פתחו מודלים בפורמט GLB או glTF 2.0 בדפדפן. בדקו את הגאומטריה, החומרים והמרקמים והפעילו את האנימציות של המודל.",
+      },
+      hi: {
+        name: "GLB / glTF व्यूअर",
+        description:
+          "अपने ब्राउज़र में GLB और glTF 2.0 मॉडल खोलें। ज्यामिति, मटीरियल और टेक्सचर देखें और मॉडल के ऐनिमेशन चलाएँ।",
+      },
+      id: {
+        name: "Penampil GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 di browser. Periksa geometri, material, dan tekstur, serta putar animasi model.",
+      },
+      it: {
+        name: "Visualizzatore GLB / glTF",
+        description:
+          "Apri modelli GLB e glTF 2.0 nel browser. Esamina geometria, materiali e texture e riproduci le animazioni del modello.",
+      },
+      ja: {
+        name: "GLB / glTF ビューアー",
+        description:
+          "GLB および glTF 2.0 モデルをブラウザーで開きます。形状、マテリアル、テクスチャを確認し、モデルのアニメーションを再生できます。",
+      },
+      ko: {
+        name: "GLB / glTF 뷰어",
+        description:
+          "브라우저에서 GLB 및 glTF 2.0 모델을 여세요. 형상, 재질, 텍스처를 살펴보고 모델의 애니메이션을 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 dalam pelayar. Periksa geometri, bahan dan tekstur, serta mainkan animasi model.",
+      },
+      nl: {
+        name: "GLB- en glTF-viewer",
+        description:
+          "Open GLB- en glTF 2.0-modellen in je browser. Bekijk de geometrie, materialen en texturen en speel de animaties van het model af.",
+      },
+      no: {
+        name: "GLB- og glTF-viser",
+        description:
+          "Åpne GLB- og glTF 2.0-modeller i nettleseren. Se på geometri, materialer og teksturer, og spill av animasjonene i modellen.",
+      },
+      pl: {
+        name: "Przeglądarka plików GLB i glTF",
+        description:
+          "Otwieraj modele GLB i glTF 2.0 w przeglądarce. Oglądaj geometrię, materiały i tekstury oraz odtwarzaj animacje modelu.",
+      },
+      pt: {
+        name: "Visualizador de GLB / glTF",
+        description:
+          "Abra modelos GLB e glTF 2.0 no navegador. Inspecione a geometria, os materiais e as texturas e reproduza as animações do modelo.",
+      },
+      ru: {
+        name: "Просмотр GLB / glTF",
+        description:
+          "Открывайте модели GLB и glTF 2.0 прямо в браузере. Просматривайте геометрию, материалы и текстуры и воспроизводите анимации модели.",
+      },
+      sv: {
+        name: "GLB- och glTF-visare",
+        description:
+          "Öppna GLB- och glTF 2.0-modeller i webbläsaren. Granska geometri, material och texturer och spela upp modellens animationer.",
+      },
+      th: {
+        name: "โปรแกรมดู GLB / glTF",
+        description:
+          "เปิดโมเดล GLB และ glTF 2.0 ในเบราว์เซอร์ ตรวจสอบรูปทรง วัสดุ และเท็กซ์เจอร์ พร้อมเล่นแอนิเมชันของโมเดล",
+      },
+      tr: {
+        name: "GLB / glTF Görüntüleyici",
+        description:
+          "GLB ve glTF 2.0 modellerini tarayıcınızda açın. Geometriyi, malzemeleri ve dokuları inceleyin, modelin animasyonlarını oynatın.",
+      },
+      vi: {
+        name: "Trình xem GLB / glTF",
+        description:
+          "Mở mô hình GLB và glTF 2.0 trong trình duyệt. Kiểm tra hình học, vật liệu và họa tiết, đồng thời phát hoạt ảnh của mô hình.",
+      },
+      "zh-CN": {
+        name: "GLB / glTF 查看器",
+        description:
+          "在浏览器中打开 GLB 和 glTF 2.0 模型。检查几何形状、材质和纹理，并播放模型动画。",
+      },
+      "zh-TW": {
+        name: "GLB / glTF 檢視器",
+        description:
+          "在瀏覽器中開啟 GLB 和 glTF 2.0 模型。檢查幾何形狀、材質與貼圖，並播放模型動畫。",
       },
     },
   },
@@ -28597,6 +28991,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mbox-viewer",
+    category: "document",
+    icon: "mails",
+    tags: [
+      "mbox",
+      "mailbox",
+      "email",
+      "gmail",
+      "google takeout",
+      "thunderbird",
+      "apple mail",
+      "archive",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض MBOX",
+        description:
+          "افتح أرشيفات البريد الإلكتروني بتنسيق MBOX من Gmail ‏(Google Takeout) أو Thunderbird أو Apple Mail. ابحث عن الرسائل واقرأها ونزّل المرفقات في متصفحك.",
+      },
+      de: {
+        name: "MBOX-Betrachter",
+        description:
+          "Öffne MBOX-Dateien aus Gmail (Google Takeout), Thunderbird oder Apple Mail. Durchsuche und lies E-Mails und lade Anhänge direkt im Browser herunter.",
+      },
+      en: {
+        name: "MBOX Viewer",
+        description:
+          "Open MBOX email archives from Gmail (Google Takeout), Thunderbird, or Apple Mail. Search messages, read email, and download attachments in your browser.",
+      },
+      es: {
+        name: "Visor MBOX",
+        description:
+          "Abre archivos de correo MBOX de Gmail (Google Takeout), Thunderbird o Apple Mail. Busca y lee mensajes y descarga adjuntos desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse MBOX",
+        description:
+          "Ouvrez les archives d’e-mails MBOX de Gmail (Google Takeout), Thunderbird ou Apple Mail. Recherchez et lisez vos messages, puis téléchargez les pièces jointes dans votre navigateur.",
+      },
+      he: {
+        name: "מציג MBOX",
+        description:
+          "פתחו בדפדפן ארכיוני דוא״ל בפורמט MBOX מ־Gmail (באמצעות Google Takeout),‏ Thunderbird או Apple Mail. אפשר לחפש ולקרוא הודעות ולהוריד קבצים מצורפים.",
+      },
+      hi: {
+        name: "MBOX व्यूअर",
+        description:
+          "Gmail (Google Takeout), Thunderbird या Apple Mail से निर्यात किए गए MBOX ईमेल आर्काइव खोलें। ब्राउज़र में संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil MBOX",
+        description:
+          "Buka arsip email MBOX dari Gmail (Google Takeout), Thunderbird, atau Apple Mail. Cari dan baca pesan serta unduh lampiran langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore MBOX",
+        description:
+          "Apri nel browser gli archivi di posta MBOX di Gmail (Google Takeout), Thunderbird o Apple Mail. Cerca e leggi i messaggi e scarica gli allegati.",
+      },
+      ja: {
+        name: "MBOX ビューアー",
+        description:
+          "Gmail（Google Takeout）、Thunderbird、Apple Mail の MBOX ファイルを開けます。メールの検索、本文の閲覧、添付ファイルのダウンロードがブラウザーでできます。",
+      },
+      ko: {
+        name: "MBOX 뷰어",
+        description:
+          "Gmail(Google Takeout), Thunderbird 또는 Apple Mail에서 내보낸 MBOX 이메일 보관 파일을 여세요. 브라우저에서 메시지를 검색하고 읽고 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar MBOX",
+        description:
+          "Buka arkib e-mel MBOX daripada Gmail (Google Takeout), Thunderbird atau Apple Mail. Cari dan baca mesej serta muat turun lampiran dalam pelayar anda.",
+      },
+      nl: {
+        name: "MBOX-viewer",
+        description:
+          "Open MBOX-e-mailarchieven van Gmail (Google Takeout), Thunderbird of Apple Mail. Zoek en lees berichten en download bijlagen in je browser.",
+      },
+      no: {
+        name: "MBOX-viser",
+        description:
+          "Åpne MBOX-arkiver fra Gmail (Google Takeout), Thunderbird eller Apple Mail. Søk etter meldinger, les e-post og last ned vedlegg i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka MBOX",
+        description:
+          "Otwieraj archiwa poczty MBOX z Gmaila (Google Takeout), Thunderbirda lub Apple Mail. Wyszukuj i czytaj wiadomości oraz pobieraj załączniki w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador MBOX",
+        description:
+          "Abra arquivos MBOX do Gmail (Google Takeout), Thunderbird ou Apple Mail. Pesquise e leia e-mails e baixe anexos no navegador.",
+      },
+      ru: {
+        name: "Просмотр MBOX",
+        description:
+          "Открывайте почтовые архивы MBOX из Gmail (Google Takeout), Thunderbird или Apple Mail. Ищите и читайте письма, скачивайте вложения прямо в браузере.",
+      },
+      sv: {
+        name: "MBOX-visare",
+        description:
+          "Öppna MBOX-arkiv från Gmail (Google Takeout), Thunderbird eller Apple Mail. Sök och läs e-post och ladda ner bilagor i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู MBOX",
+        description:
+          "เปิดไฟล์อีเมล MBOX จาก Gmail (Google Takeout), Thunderbird หรือ Apple Mail ค้นหาและอ่านอีเมล พร้อมดาวน์โหลดไฟล์แนบได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MBOX Görüntüleyici",
+        description:
+          "Gmail (Google Takeout), Thunderbird veya Apple Mail’den gelen MBOX e-posta arşivlerini tarayıcınızda açın. İletileri arayın, okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem MBOX",
+        description:
+          "Mở tệp lưu trữ email MBOX từ Gmail (Google Takeout), Thunderbird hoặc Apple Mail. Tìm kiếm, đọc thư và tải tệp đính kèm ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MBOX 查看器",
+        description:
+          "打开来自 Gmail（Google Takeout）、Thunderbird 或 Apple Mail 的 MBOX 邮件归档。在浏览器中搜索和阅读邮件，并下载附件。",
+      },
+      "zh-TW": {
+        name: "MBOX 檢視器",
+        description:
+          "在瀏覽器中開啟 Gmail（Google 匯出）、Thunderbird 或 Apple Mail 的 MBOX 郵件備份，搜尋及閱讀郵件，並下載附件。",
+      },
+    },
+  },
+  {
     slug: "md4-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -29740,6 +30267,270 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "MIDI 監視器",
         description:
           "在瀏覽器中測試 MIDI 鍵盤、打擊墊或控制器。在鋼琴鍵盤上查看音符和力度，並檢視 CC、彎音、時鐘及原始 MIDI 位元組。",
+      },
+    },
+  },
+  {
+    slug: "midi-to-wav-converter",
+    category: "misc",
+    icon: "audio-lines",
+    tags: [
+      "midi",
+      "wav",
+      "soundfont",
+      "gm",
+      "audio",
+      "synthesizer",
+      "midi to audio",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MIDI إلى WAV",
+        description:
+          "حوّل ملفات MIDI إلى WAV ستيريو باستخدام آلات General MIDI المدمجة أو ملف SoundFont من اختيارك. استمع إلى الناتج ونزّله من متصفحك.",
+      },
+      de: {
+        name: "MIDI-zu-WAV-Konverter",
+        description:
+          "Wandle MIDI-Dateien mit integrierten General-MIDI-Instrumenten oder einem eigenen SoundFont in Stereo-WAV um. Höre das Ergebnis im Browser an und lade es herunter.",
+      },
+      en: {
+        name: "MIDI to WAV Converter",
+        description:
+          "Convert MIDI files to stereo WAV with built-in General MIDI instruments or your own SoundFont. Preview and download the audio in your browser.",
+      },
+      es: {
+        name: "Conversor de MIDI a WAV",
+        description:
+          "Convierte archivos MIDI a WAV estéreo con los instrumentos General MIDI integrados o con tu propio banco SoundFont. Escucha y descarga el audio desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur MIDI vers WAV",
+        description:
+          "Convertissez des fichiers MIDI en WAV stéréo avec les instruments General MIDI intégrés ou votre propre banque SoundFont. Écoutez et téléchargez l’audio dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MIDI ל־WAV",
+        description:
+          "המירו קובצי MIDI ל־WAV בסטריאו עם כלי General MIDI המובנים או עם SoundFont משלכם. האזינו לתוצאה והורידו אותה בדפדפן.",
+      },
+      hi: {
+        name: "MIDI से WAV कन्वर्टर",
+        description:
+          "बिल्ट-इन General MIDI वाद्यों या अपने SoundFont से MIDI फ़ाइल को स्टीरियो WAV में बदलें। ब्राउज़र में ऑडियो सुनें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MIDI ke WAV",
+        description:
+          "Konversikan MIDI ke WAV stereo dengan instrumen General MIDI bawaan atau SoundFont Anda sendiri. Dengarkan pratinjau dan unduh audio di browser.",
+      },
+      it: {
+        name: "Convertitore da MIDI a WAV",
+        description:
+          "Converti file MIDI in WAV stereo con gli strumenti General MIDI integrati o con il tuo SoundFont. Ascolta e scarica l’audio dal browser.",
+      },
+      ja: {
+        name: "MIDI WAV 変換",
+        description:
+          "内蔵の General MIDI 楽器またはお手持ちの SoundFont を使い、MIDI ファイルをステレオ WAV に変換します。ブラウザーで音声を試聴してダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI를 WAV로 변환",
+        description:
+          "내장 General MIDI 악기나 직접 선택한 SoundFont로 MIDI 파일을 스테레오 WAV로 변환합니다. 브라우저에서 오디오를 미리 듣고 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar MIDI kepada WAV",
+        description:
+          "Tukar fail MIDI kepada WAV stereo dengan alat muzik General MIDI terbina dalam atau SoundFont anda sendiri. Dengar pratonton dan muat turun audio dalam pelayar.",
+      },
+      nl: {
+        name: "MIDI-naar-WAV-converter",
+        description:
+          "Zet MIDI-bestanden om naar stereo-WAV met ingebouwde General MIDI-instrumenten of je eigen SoundFont. Beluister en download de audio in je browser.",
+      },
+      no: {
+        name: "MIDI til WAV-konverterer",
+        description:
+          "Konverter MIDI-filer til WAV i stereo med innebygde General MIDI-instrumenter eller en egen SoundFont. Lytt til og last ned lyden i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MIDI na WAV",
+        description:
+          "Konwertuj pliki MIDI na stereofoniczny WAV za pomocą wbudowanych instrumentów General MIDI lub własnego banku SoundFont. Odsłuchaj i pobierz dźwięk w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de MIDI para WAV",
+        description:
+          "Converta arquivos MIDI em WAV estéreo com os instrumentos General MIDI integrados ou com seu próprio SoundFont. Ouça e baixe o áudio pelo navegador.",
+      },
+      ru: {
+        name: "Конвертер MIDI в WAV",
+        description:
+          "Преобразуйте MIDI-файлы в стерео WAV со встроенными инструментами General MIDI или своим банком SoundFont. Прослушивайте и скачивайте звук прямо в браузере.",
+      },
+      sv: {
+        name: "MIDI till WAV-konverterare",
+        description:
+          "Konvertera MIDI-filer till WAV i stereo med inbyggda General MIDI-instrument eller en egen SoundFont. Provlyssna och ladda ner ljudet i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MIDI เป็น WAV",
+        description:
+          "แปลงไฟล์ MIDI เป็น WAV สเตอริโอด้วยเสียงเครื่องดนตรี General MIDI ที่มีให้หรือ SoundFont ของคุณเอง ฟังตัวอย่างและดาวน์โหลดเสียงได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI'den WAV'a Dönüştürücü",
+        description:
+          "Dahili General MIDI enstrümanlarıyla veya kendi SoundFont dosyanızla MIDI dosyalarını stereo WAV'a dönüştürün. Sesi tarayıcınızda dinleyip indirin.",
+      },
+      vi: {
+        name: "Chuyển MIDI sang WAV",
+        description:
+          "Chuyển tệp MIDI thành WAV stereo bằng nhạc cụ General MIDI tích hợp hoặc SoundFont của bạn. Nghe thử và tải âm thanh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 转 WAV 转换器",
+        description:
+          "使用内置 General MIDI 乐器或自己的 SoundFont 将 MIDI 文件转换为立体声 WAV。在浏览器中预览并下载音频。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉 WAV 轉換器",
+        description:
+          "使用內建 General MIDI 樂器或自己的 SoundFont，將 MIDI 檔案轉換為立體聲 WAV。在瀏覽器中預覽並下載音訊。",
+      },
+    },
+  },
+  {
+    slug: "midi-transposer",
+    category: "misc",
+    icon: "piano",
+    tags: [
+      "midi",
+      "transpose",
+      "transposer",
+      "semitones",
+      "key change",
+      "tempo",
+      "bpm",
+      "speed",
+      "pitch",
+    ],
+    locales: {
+      ar: {
+        name: "تغيير طبقة النغمات وسرعة MIDI",
+        description:
+          "انقل نغمات MIDI بمقدار أنصاف درجات وزِد سرعة العزف أو خفّضها. نزّل ملف MIDI المعدّل مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "MIDI transponieren und Tempo ändern",
+        description:
+          "Transponiere MIDI-Noten in Halbtonschritten und stelle das Tempo schneller oder langsamer ein. Lade die bearbeitete MIDI-Datei direkt im Browser herunter.",
+      },
+      en: {
+        name: "MIDI Transposer and Tempo Changer",
+        description:
+          "Transpose MIDI notes by semitones and speed up or slow down the tempo. Download the edited MIDI file directly from your browser.",
+      },
+      es: {
+        name: "Transposición MIDI y ajuste de tempo",
+        description:
+          "Transpón las notas de un archivo MIDI por semitonos, acelera o ralentiza el tempo y descarga el MIDI editado desde tu navegador.",
+      },
+      fr: {
+        name: "Transposition MIDI et réglage du tempo",
+        description:
+          "Transposez les notes d’un fichier MIDI par demi-tons, accélérez ou ralentissez le tempo et téléchargez le MIDI modifié depuis votre navigateur.",
+      },
+      he: {
+        name: "טרנספוזיציה ושינוי טמפו ל־MIDI",
+        description:
+          "הזיזו תווי MIDI בחצאי טונים והאיצו או האטו את הטמפו. הורידו את קובץ ה־MIDI הערוך ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "MIDI ट्रांसपोज़र और टेम्पो परिवर्तक",
+        description:
+          "MIDI नोटों की पिच सेमीटोन में बदलें और टेम्पो बढ़ाएँ या घटाएँ। संपादित MIDI फ़ाइल सीधे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengubah Nada dan Tempo MIDI",
+        description:
+          "Transposisikan not MIDI dalam semiton dan percepat atau perlambat temponya. Unduh file MIDI hasil suntingan langsung dari browser.",
+      },
+      it: {
+        name: "Trasposizione MIDI e regolazione del tempo",
+        description:
+          "Trasponi le note di un file MIDI per semitoni, accelera o rallenta il tempo e scarica il MIDI modificato direttamente dal browser.",
+      },
+      ja: {
+        name: "MIDI 移調・テンポ変更",
+        description:
+          "MIDI の音符を半音単位で移調し、テンポを速くしたり遅くしたりできます。編集した MIDI ファイルをブラウザーから直接ダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI 조옮김 및 템포 변경",
+        description:
+          "MIDI 음표를 반음 단위로 조옮김하고 템포를 빠르게 하거나 느리게 합니다. 수정한 MIDI 파일을 브라우저에서 바로 다운로드하세요.",
+      },
+      ms: {
+        name: "Pelarasan Nada dan Tempo MIDI",
+        description:
+          "Ubah nada not MIDI dalam langkah semiton dan laraskan tempo agar lebih laju atau perlahan. Muat turun fail MIDI yang disunting terus daripada pelayar.",
+      },
+      nl: {
+        name: "MIDI transponeren en tempo aanpassen",
+        description:
+          "Transponeer MIDI-noten in halve tonen en maak het tempo sneller of langzamer. Download het aangepaste MIDI-bestand rechtstreeks vanuit je browser.",
+      },
+      no: {
+        name: "Transponer MIDI og endre tempo",
+        description:
+          "Transponer MIDI-noter i halvtonetrinn og øk eller senk tempoet. Last ned den redigerte MIDI-filen direkte fra nettleseren.",
+      },
+      pl: {
+        name: "Transpozycja i zmiana tempa MIDI",
+        description:
+          "Transponuj nuty MIDI o wybraną liczbę półtonów, przyspiesz lub zwolnij odtwarzanie i pobierz zmieniony plik MIDI bezpośrednio z przeglądarki.",
+      },
+      pt: {
+        name: "Transposição MIDI e ajuste de andamento",
+        description:
+          "Transponha as notas de um arquivo MIDI em semitons, acelere ou diminua o andamento e baixe o MIDI editado direto do navegador.",
+      },
+      ru: {
+        name: "Транспонирование и изменение темпа MIDI",
+        description:
+          "Транспонируйте ноты MIDI на нужное число полутонов, ускоряйте или замедляйте воспроизведение и скачивайте изменённый MIDI-файл прямо из браузера.",
+      },
+      sv: {
+        name: "MIDI-transponering och tempoändring",
+        description:
+          "Transponera MIDI-toner i halvtonssteg och höj eller sänk tempot. Ladda ner den redigerade MIDI-filen direkt från webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปลี่ยนคีย์และปรับเทมโป MIDI",
+        description:
+          "เลื่อนโน้ต MIDI ขึ้นหรือลงทีละครึ่งเสียงและปรับเทมโปให้เร็วขึ้นหรือช้าลง ดาวน์โหลดไฟล์ MIDI ที่แก้ไขแล้วได้จากเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI Transpoze ve Tempo Ayarı",
+        description:
+          "MIDI notalarını yarım ses adımlarıyla transpoze edin, tempoyu hızlandırın veya yavaşlatın. Düzenlenen MIDI dosyasını doğrudan tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển giọng và đổi nhịp độ MIDI",
+        description:
+          "Chuyển cao độ các nốt MIDI theo nửa cung và tăng hoặc giảm nhịp độ. Tải tệp MIDI đã chỉnh sửa trực tiếp từ trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 移调与速度调整",
+        description:
+          "按半音移调 MIDI 音符，并加快或减慢速度。直接从浏览器下载修改后的 MIDI 文件。",
+      },
+      "zh-TW": {
+        name: "MIDI 移調與速度調整",
+        description:
+          "以半音為單位移調 MIDI 音符，並加快或減慢速度。直接從瀏覽器下載修改後的 MIDI 檔案。",
       },
     },
   },
@@ -46259,6 +47050,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "unicode-normalizer",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "unicode",
+      "normalization",
+      "nfc",
+      "nfd",
+      "nfkc",
+      "nfkd",
+      "code-points",
+      "combining-marks",
+      "full-width",
+    ],
+    locales: {
+      ar: {
+        name: "أداة تطبيع نصوص Unicode",
+        description:
+          "طبّع نصوص Unicode إلى NFC أو NFD أو NFKC أو NFKD. قارن نقاط الترميز وانسخ النتيجة مباشرة من متصفحك.",
+      },
+      de: {
+        name: "Unicode-Normalisierung",
+        description:
+          "Normalisiere eingefügten Unicode-Text in NFC, NFD, NFKC oder NFKD. Vergleiche Codepunkte und kopiere das Ergebnis direkt im Browser.",
+      },
+      en: {
+        name: "Unicode Normalizer",
+        description:
+          "Normalize pasted Unicode text to NFC, NFD, NFKC, or NFKD. Compare code points and copy the result directly in your browser.",
+      },
+      es: {
+        name: "Normalizador Unicode",
+        description:
+          "Normaliza texto Unicode a NFC, NFD, NFKC o NFKD. Compara los puntos de código y copia el resultado directamente en tu navegador.",
+      },
+      fr: {
+        name: "Normaliseur Unicode",
+        description:
+          "Normalisez du texte Unicode en NFC, NFD, NFKC ou NFKD. Comparez les points de code et copiez le résultat directement dans votre navigateur.",
+      },
+      he: {
+        name: "נרמול טקסט Unicode",
+        description:
+          "נרמלו טקסט Unicode לפי NFC, NFD, NFKC או NFKD. השוו נקודות קוד והעתיקו את התוצאה ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "यूनिकोड नॉर्मलाइज़र",
+        description:
+          "पेस्ट किए गए यूनिकोड टेक्स्ट को NFC, NFD, NFKC या NFKD रूप में बदलें। कोड पॉइंट की तुलना करें और नतीजा सीधे ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Alat Normalisasi Unicode",
+        description:
+          "Normalisasi teks Unicode ke NFC, NFD, NFKC, atau NFKD. Bandingkan titik kode dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Normalizzatore Unicode",
+        description:
+          "Normalizza il testo Unicode in NFC, NFD, NFKC o NFKD. Confronta i punti di codice e copia il risultato direttamente dal browser.",
+      },
+      ja: {
+        name: "Unicode 正規化ツール",
+        description:
+          "入力した Unicode テキストを NFC、NFD、NFKC、NFKD に正規化します。ブラウザーでコードポイントを比較し、結果をコピーできます。",
+      },
+      ko: {
+        name: "유니코드 정규화 도구",
+        description:
+          "붙여넣은 유니코드 텍스트를 NFC, NFD, NFKC 또는 NFKD로 정규화합니다. 브라우저에서 코드 포인트를 비교하고 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Alat Penormalan Unicode",
+        description:
+          "Normalkan teks Unicode kepada NFC, NFD, NFKC atau NFKD. Bandingkan titik kod dan salin hasil terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Unicode-normalisatie",
+        description:
+          "Normaliseer geplakte Unicode-tekst met NFC, NFD, NFKC of NFKD. Vergelijk codepunten en kopieer het resultaat rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Unicode-normalisering",
+        description:
+          "Normaliser innlimt Unicode-tekst til NFC, NFD, NFKC eller NFKD. Sammenlign kodepunkter og kopier resultatet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja Unicode",
+        description:
+          "Normalizuj wklejony tekst Unicode do postaci NFC, NFD, NFKC lub NFKD. Porównaj punkty kodowe i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador Unicode",
+        description:
+          "Normalize texto Unicode em NFC, NFD, NFKC ou NFKD. Compare os pontos de código e copie o resultado diretamente no navegador.",
+      },
+      ru: {
+        name: "Нормализация Unicode",
+        description:
+          "Нормализуйте текст Unicode в форму NFC, NFD, NFKC или NFKD. Сравните кодовые точки и скопируйте результат прямо в браузере.",
+      },
+      sv: {
+        name: "Unicode-normalisering",
+        description:
+          "Normalisera inklistrad Unicode-text till NFC, NFD, NFKC eller NFKD. Jämför kodpunkter och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือปรับมาตรฐาน Unicode",
+        description:
+          "ปรับข้อความ Unicode ที่วางให้เป็น NFC, NFD, NFKC หรือ NFKD แล้วเปรียบเทียบจุดรหัสและคัดลอกผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Unicode Normalleştirme",
+        description:
+          "Yapıştırdığınız Unicode metni NFC, NFD, NFKC veya NFKD biçimine dönüştürün. Kod noktalarını karşılaştırıp sonucu doğrudan tarayıcınızdan kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuẩn hóa Unicode",
+        description:
+          "Chuẩn hóa văn bản Unicode sang NFC, NFD, NFKC hoặc NFKD. So sánh điểm mã và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Unicode 规范化工具",
+        description:
+          "将粘贴的 Unicode 文本规范化为 NFC、NFD、NFKC 或 NFKD。在浏览器中比较码位并复制结果。",
+      },
+      "zh-TW": {
+        name: "Unicode 正規化工具",
+        description:
+          "將貼上的 Unicode 文字正規化為 NFC、NFD、NFKC 或 NFKD。在瀏覽器中比較碼位並複製結果。",
+      },
+    },
+  },
+  {
     slug: "unicode-punycode-converter",
     category: "network",
     icon: "network",
@@ -50021,6 +50945,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "IPv4 VLSM 子網路計算機",
         description:
           "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  {
+    slug: "warc-viewer",
+    category: "document",
+    icon: "globe",
+    tags: [
+      "warc",
+      "warc.gz",
+      "web archive",
+      "webpage",
+      "common crawl",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض WARC",
+        description:
+          "افتح أرشيفات الويب بتنسيق WARC أو WARC.GZ في متصفحك. ابحث عن عناوين URL المؤرشفة، وعاين الصفحات المحفوظة، واطّلع على تواريخ الالتقاط وترويسات HTTP.",
+      },
+      de: {
+        name: "WARC-Betrachter",
+        description:
+          "Öffne WARC- und WARC.GZ-Webarchive im Browser. Suche nach archivierten URLs, sieh dir gespeicherte Webseiten an und prüfe Erfassungszeitpunkte und HTTP-Header.",
+      },
+      en: {
+        name: "WARC Viewer",
+        description:
+          "Open WARC and WARC.GZ web archives in your browser. Search captured URLs, preview saved web pages, and inspect capture dates and HTTP headers.",
+      },
+      es: {
+        name: "Visor de WARC",
+        description:
+          "Abre archivos web WARC y WARC.GZ en tu navegador. Busca URL archivadas, previsualiza páginas guardadas y consulta las fechas de captura y las cabeceras HTTP.",
+      },
+      fr: {
+        name: "Visionneuse WARC",
+        description:
+          "Ouvre des archives web WARC et WARC.GZ dans ton navigateur. Recherche les URL capturées, affiche les pages enregistrées et consulte les dates de capture et les en-têtes HTTP.",
+      },
+      he: {
+        name: "מציג WARC",
+        description:
+          "פתחו ארכיוני אינטרנט מסוג WARC או WARC.GZ בדפדפן. חפשו כתובות URL שאורכבו, הציגו דפים שמורים ובדקו תאריכי לכידה וכותרות HTTP.",
+      },
+      hi: {
+        name: "WARC व्यूअर",
+        description:
+          "ब्राउज़र में WARC और WARC.GZ वेब आर्काइव खोलें। दर्ज किए गए URL खोजें, सहेजे गए वेब पेज का पूर्वावलोकन करें और कैप्चर की तारीखें व HTTP हेडर देखें।",
+      },
+      id: {
+        name: "Penampil WARC",
+        description:
+          "Buka arsip web WARC dan WARC.GZ di browser. Cari URL yang diarsipkan, lihat pratinjau halaman tersimpan, dan periksa waktu pengarsipan serta header HTTP.",
+      },
+      it: {
+        name: "Visualizzatore WARC",
+        description:
+          "Apri archivi web WARC e WARC.GZ nel browser. Cerca gli URL archiviati, visualizza l’anteprima delle pagine salvate e consulta le date di acquisizione e le intestazioni HTTP.",
+      },
+      ja: {
+        name: "WARC ビューアー",
+        description:
+          "WARC・WARC.GZ 形式のウェブアーカイブをブラウザーで開きます。収集した URL の検索や保存済みページのプレビュー、取得日時と HTTP ヘッダーの確認ができます。",
+      },
+      ko: {
+        name: "WARC 뷰어",
+        description:
+          "브라우저에서 WARC 및 WARC.GZ 웹 아카이브를 여세요. 수집한 URL을 검색하고 저장된 페이지를 미리 보거나 수집 시각과 HTTP 헤더를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar WARC",
+        description:
+          "Buka arkib web WARC dan WARC.GZ dalam pelayar. Cari URL yang diarkibkan, pratonton halaman tersimpan dan semak tarikh tangkapan serta pengepala HTTP.",
+      },
+      nl: {
+        name: "WARC-viewer",
+        description:
+          "Open WARC- en WARC.GZ-webarchieven in je browser. Zoek naar gearchiveerde URL’s, bekijk opgeslagen webpagina’s en controleer wanneer ze zijn vastgelegd en welke HTTP-headers zijn opgeslagen.",
+      },
+      no: {
+        name: "WARC-viser",
+        description:
+          "Åpne nettarkiver i WARC- og WARC.GZ-format i nettleseren. Søk etter arkiverte nettadresser, se lagrede nettsider og undersøk arkiveringstidspunkter og HTTP-hoder.",
+      },
+      pl: {
+        name: "Przeglądarka WARC",
+        description:
+          "Otwieraj archiwa stron WARC i WARC.GZ w przeglądarce. Wyszukuj zapisane adresy URL, wyświetlaj podgląd stron i sprawdzaj daty zapisu oraz nagłówki HTTP.",
+      },
+      pt: {
+        name: "Visualizador de WARC",
+        description:
+          "Abra arquivos da web WARC e WARC.GZ no navegador. Busque URLs capturadas, veja páginas salvas e consulte as datas de captura e os cabeçalhos HTTP.",
+      },
+      ru: {
+        name: "Просмотр WARC",
+        description:
+          "Открывайте веб-архивы WARC и WARC.GZ в браузере. Ищите сохранённые URL, просматривайте копии страниц, проверяйте даты архивации и заголовки HTTP.",
+      },
+      sv: {
+        name: "WARC-visare",
+        description:
+          "Öppna webbarkiv i WARC- och WARC.GZ-format i webbläsaren. Sök efter arkiverade webbadresser, förhandsgranska sparade webbsidor och granska arkiveringstider och HTTP-huvuden.",
+      },
+      th: {
+        name: "โปรแกรมดู WARC",
+        description:
+          "เปิดไฟล์เก็บถาวรเว็บ WARC และ WARC.GZ ในเบราว์เซอร์ ค้นหา URL ที่เก็บไว้ ดูตัวอย่างหน้าเว็บ และตรวจสอบเวลาที่บันทึกกับส่วนหัว HTTP",
+      },
+      tr: {
+        name: "WARC Görüntüleyici",
+        description:
+          "WARC ve WARC.GZ web arşivlerini tarayıcınızda açın. Arşivlenen URL’leri arayın, kaydedilen sayfaları önizleyin ve arşivleme tarihleriyle HTTP başlıklarını inceleyin.",
+      },
+      vi: {
+        name: "Trình xem WARC",
+        description:
+          "Mở tệp lưu trữ web WARC và WARC.GZ ngay trong trình duyệt. Tìm URL đã thu thập, xem trước trang đã lưu và kiểm tra thời điểm thu thập cùng tiêu đề HTTP.",
+      },
+      "zh-CN": {
+        name: "WARC 查看器",
+        description:
+          "在浏览器中打开 WARC 和 WARC.GZ 网页归档。搜索已采集的网址，预览保存的网页，并查看采集时间和 HTTP 标头。",
+      },
+      "zh-TW": {
+        name: "WARC 檢視器",
+        description:
+          "在瀏覽器中開啟 WARC 和 WARC.GZ 網頁封存檔。搜尋已擷取的網址、預覽儲存的網頁，以及查看擷取時間與 HTTP 標頭。",
       },
     },
   },
@@ -59857,117 +60911,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "محوّل CHM إلى PDF",
         description:
-          "حوّل ملفات CHM إلى PDF مجانًا عبر الإنترنت. احفظ ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية بصيغة PDF مباشرةً في متصفحك.",
+          "حوّل ملفات CHM مجانًا إلى ملفات PDF قابلة للبحث. عاين ملفات تعليمات Windows وأدلة البرامج وكتب CHM الإلكترونية، ثم احفظها بتنسيق PDF مع إمكانية تحديد النص.",
       },
       de: {
         name: "CHM-zu-PDF-Konverter",
         description:
-          "Wandle CHM-Dateien kostenlos online in PDF um. Speichere Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books direkt im Browser als PDF.",
+          "Wandle CHM-Dateien kostenlos in durchsuchbare PDFs um. Sieh dir Windows-Hilfedateien, Softwarehandbücher und CHM-E-Books an und speichere sie als PDF mit markierbarem Text.",
       },
       en: {
         name: "CHM to PDF Converter",
         description:
-          "Convert CHM files to PDF online for free. Save Windows help files, software manuals, and CHM ebooks as PDFs directly in your browser.",
+          "Convert CHM files to searchable PDFs for free. Preview Windows help files, software manuals, and CHM ebooks, then save as PDF with selectable text.",
       },
       es: {
         name: "Conversor de CHM a PDF",
         description:
-          "Convierte archivos CHM a PDF gratis en línea. Guarda archivos de ayuda de Windows, manuales de software y libros electrónicos CHM como PDF desde tu navegador.",
+          "Convierte gratis archivos CHM a PDF con texto que puedes buscar y seleccionar. Revisa la vista previa de la ayuda de Windows, los manuales y los libros electrónicos CHM antes de guardarlos.",
       },
       fr: {
         name: "Convertisseur CHM en PDF",
         description:
-          "Convertissez gratuitement vos fichiers CHM en PDF en ligne. Enregistrez des fichiers d’aide Windows, des manuels de logiciels et des livres numériques CHM en PDF directement dans votre navigateur.",
+          "Convertissez gratuitement vos fichiers CHM en PDF. Prévisualisez vos fichiers d’aide Windows, manuels et livres numériques CHM, puis enregistrez un PDF avec sélection et recherche de texte.",
       },
       he: {
         name: "ממיר CHM ל־PDF",
         description:
-          "המרת קובצי CHM ל־PDF בחינם באינטרנט. אפשר לשמור קובצי עזרה של Windows, מדריכי תוכנה וספרים דיגיטליים בפורמט CHM כקובצי PDF ישירות בדפדפן.",
+          "המרת קובצי CHM לקובצי PDF שאפשר לחפש בהם, בחינם. בדקו בתצוגה מקדימה קובצי עזרה של Windows, מדריכי תוכנה וספרי CHM, ושמרו כ־PDF עם טקסט שאפשר לסמן.",
       },
       hi: {
         name: "CHM से PDF कन्वर्टर",
         description:
-          "CHM फ़ाइलें मुफ़्त में ऑनलाइन PDF में बदलें। Windows सहायता फ़ाइलें, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकें सीधे अपने ब्राउज़र में PDF के रूप में सहेजें।",
+          "CHM फ़ाइलें मुफ़्त में ऐसी PDF में बदलें जिनमें आप खोज सकें। Windows सहायता फ़ाइलों, सॉफ़्टवेयर मैनुअल और CHM ई-पुस्तकों का प्रीव्यू देखें, फिर उन्हें ऐसी PDF में सेव करें जिसमें टेक्स्ट चुना जा सके।",
       },
       id: {
         name: "Konverter CHM ke PDF",
         description:
-          "Konversi berkas CHM ke PDF secara gratis. Simpan berkas bantuan Windows, panduan perangkat lunak, dan buku digital CHM sebagai PDF langsung di browser.",
+          "Konversi berkas CHM menjadi PDF yang dapat dicari secara gratis. Pratinjau bantuan Windows, panduan perangkat lunak, dan buku digital CHM, lalu simpan sebagai PDF dengan teks yang dapat dipilih.",
       },
       it: {
         name: "Convertitore da CHM a PDF",
         description:
-          "Converti gratis i file CHM in PDF online. Salva file della guida di Windows, manuali software ed ebook CHM in formato PDF direttamente nel browser.",
+          "Converti gratis i file CHM in PDF ricercabili. Apri l’anteprima di guide di Windows, manuali software ed ebook CHM, poi salva un PDF con testo selezionabile.",
       },
       ja: {
         name: "CHM PDF 変換",
         description:
-          "CHM ファイルを無料で PDF に変換。Windows のヘルプファイル、ソフトウェアのマニュアル、CHM 形式の書籍をブラウザーで直接 PDF に保存できます。",
+          "CHM ファイルを検索可能な PDF に無料で変換。Windows のヘルプファイルやソフトウェアのマニュアル、CHM 形式の書籍をプレビューし、テキストを選択できる PDF として保存できます。",
       },
       ko: {
         name: "CHM PDF 변환기",
         description:
-          "CHM 파일을 무료로 PDF로 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 브라우저에서 바로 PDF로 저장할 수 있습니다.",
+          "CHM 파일을 검색 가능한 PDF로 무료 변환하세요. Windows 도움말, 소프트웨어 설명서, CHM 전자책을 미리 보고 텍스트를 선택할 수 있는 PDF로 저장합니다.",
       },
       ms: {
         name: "Penukar CHM kepada PDF",
         description:
-          "Tukar fail CHM kepada PDF secara percuma. Simpan fail bantuan Windows, manual perisian dan e-buku CHM sebagai PDF terus dalam pelayar anda.",
+          "Tukar fail CHM kepada PDF yang boleh dicari secara percuma. Pratonton bantuan Windows, manual perisian dan e-buku CHM, kemudian simpan sebagai PDF dengan teks yang boleh dipilih.",
       },
       nl: {
         name: "CHM-naar-PDF-converter",
         description:
-          "Converteer CHM-bestanden gratis online naar PDF. Sla Windows-helpbestanden, softwarehandleidingen en CHM-e-books rechtstreeks vanuit je browser op als PDF.",
+          "Converteer CHM-bestanden gratis naar doorzoekbare PDF’s. Bekijk Windows-helpbestanden, softwarehandleidingen en CHM-e-books en sla ze op als PDF met selecteerbare tekst.",
       },
       no: {
         name: "Konverter CHM til PDF",
         description:
-          "Konverter CHM-filer til PDF gratis på nett. Lagre Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker som PDF direkte i nettleseren.",
+          "Konverter CHM-filer gratis til søkbare PDF-er. Forhåndsvis Windows-hjelpefiler, programvarehåndbøker og CHM-e-bøker og lagre dem som PDF med tekst du kan merke.",
       },
       pl: {
         name: "Konwerter CHM na PDF",
         description:
-          "Konwertuj pliki CHM na PDF bezpłatnie online. Zapisuj pliki pomocy Windows, instrukcje programów i e-booki CHM jako PDF bezpośrednio w przeglądarce.",
+          "Konwertuj pliki CHM na PDF z możliwością wyszukiwania tekstu. Wyświetl podgląd plików pomocy Windows, instrukcji i e-booków CHM, a potem zapisz je za darmo jako PDF z tekstem, który można zaznaczać.",
       },
       pt: {
         name: "Conversor de CHM para PDF",
         description:
-          "Converta arquivos CHM para PDF online e grátis. Salve arquivos de ajuda do Windows, manuais de software e e-books CHM como PDFs direto no navegador.",
+          "Converta arquivos CHM em PDFs pesquisáveis de graça. Confira a prévia de arquivos de ajuda do Windows, manuais de software e e-books CHM e salve um PDF com texto selecionável.",
       },
       ru: {
         name: "Конвертер CHM в PDF",
         description:
-          "Бесплатно конвертируйте файлы CHM в PDF онлайн. Сохраняйте справку Windows, руководства к программам и электронные книги CHM в формате PDF прямо в браузере.",
+          "Бесплатно преобразуйте файлы CHM в PDF с поиском по тексту. Просматривайте справку Windows, руководства и электронные книги CHM, а затем сохраняйте их в PDF, где можно выделять текст.",
       },
       sv: {
         name: "Konvertera CHM till PDF",
         description:
-          "Konvertera CHM-filer till PDF gratis online. Spara Windows-hjälpfiler, programhandböcker och CHM-e-böcker som PDF direkt i webbläsaren.",
+          "Konvertera CHM-filer till sökbara PDF-filer gratis. Förhandsgranska Windows-hjälpfiler, programhandböcker och CHM-e-böcker och spara dem som PDF med text som går att markera.",
       },
       th: {
         name: "แปลง CHM เป็น PDF",
         description:
-          "แปลงไฟล์ CHM เป็น PDF ออนไลน์ฟรี บันทึกไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM เป็น PDF ได้จากเบราว์เซอร์",
+          "แปลงไฟล์ CHM เป็น PDF ที่ค้นหาข้อความได้ฟรี ดูตัวอย่างไฟล์วิธีใช้ Windows คู่มือซอฟต์แวร์ และอีบุ๊ก CHM แล้วบันทึกเป็น PDF ที่เลือกข้อความได้",
       },
       tr: {
         name: "CHM’den PDF’ye Dönüştürücü",
         description:
-          "CHM dosyalarını ücretsiz olarak çevrimiçi PDF’ye dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını doğrudan tarayıcınızda PDF olarak kaydedin.",
+          "CHM dosyalarını ücretsiz olarak arama yapılabilir PDF’lere dönüştürün. Windows yardım dosyalarını, yazılım kılavuzlarını ve CHM e-kitaplarını önizleyin, ardından seçilebilir metin içeren bir PDF olarak kaydedin.",
       },
       vi: {
         name: "Chuyển CHM sang PDF",
         description:
-          "Chuyển tệp CHM sang PDF trực tuyến miễn phí. Lưu tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM dưới dạng PDF ngay trong trình duyệt.",
+          "Chuyển tệp CHM sang PDF có thể tìm kiếm miễn phí. Xem trước tệp trợ giúp Windows, hướng dẫn phần mềm và sách điện tử CHM, rồi lưu thành PDF có thể chọn văn bản.",
       },
       "zh-CN": {
         name: "CHM 转 PDF",
         description:
-          "免费在线将 CHM 转为 PDF。直接在浏览器中把 Windows 帮助文件、软件手册和 CHM 电子书保存为 PDF。",
+          "免费将 CHM 文件转换为可搜索的 PDF。预览 Windows 帮助文件、软件手册和 CHM 电子书，再保存为可选中文本的 PDF。",
       },
       "zh-TW": {
         name: "CHM 轉 PDF",
         description:
-          "免費線上將 CHM 檔轉成 PDF。在瀏覽器中直接將 Windows 說明檔、軟體手冊和 CHM 電子書儲存為 PDF。",
+          "免費將 CHM 檔案轉成可搜尋的 PDF。預覽 Windows 說明檔、軟體手冊和 CHM 電子書，再儲存為可選取文字的 PDF。",
       },
     },
   },
@@ -67725,6 +68779,268 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "filecoin-address-converter": {
+    slug: "filecoin-address-converter",
+    category: "ipfs",
+    icon: "arrow-left-right",
+    tags: [
+      "filecoin",
+      "fevm",
+      "f410",
+      "t410",
+      "0x",
+      "ethereum",
+      "delegated address",
+      "checksum",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل عناوين Filecoin",
+        description:
+          "حوّل عناوين Filecoin من نوع f410 أو t410 إلى صيغة 0x الخاصة بـ Ethereum وبالعكس. افحص مجموع التحقق لعناوين شبكة Filecoin الرئيسية وشبكة الاختبار Calibration في متصفحك.",
+      },
+      de: {
+        name: "Filecoin-Adresskonverter",
+        description:
+          "Konvertieren Sie Filecoin-Adressen mit f410 oder t410 ins Ethereum-Format 0x und umgekehrt. Prüfen Sie die Prüfsummen für Filecoin-Mainnet und Calibration im Browser.",
+      },
+      en: {
+        name: "Filecoin Address Converter",
+        description:
+          "Convert Filecoin f410 or t410 addresses to Ethereum-style 0x and back. Check checksums for Filecoin mainnet and Calibration in your browser.",
+      },
+      es: {
+        name: "Conversor de direcciones de Filecoin",
+        description:
+          "Convierte direcciones f410 o t410 de Filecoin al formato 0x de Ethereum y a la inversa. Comprueba las sumas de comprobación de la red principal de Filecoin y de Calibration en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’adresses Filecoin",
+        description:
+          "Convertissez les adresses Filecoin f410 ou t410 au format Ethereum 0x et inversement. Vérifiez les sommes de contrôle sur le réseau principal Filecoin et sur Calibration dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר כתובות Filecoin",
+        description:
+          "המירו כתובות f410 או t410 של Filecoin לפורמט 0x של Ethereum ובחזרה. אמתו סכומי בדיקה לכתובות ברשת הראשית של Filecoin וברשת הבדיקות Calibration, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "Filecoin पता कन्वर्टर",
+        description:
+          "Filecoin के f410 या t410 पते को Ethereum के 0x फ़ॉर्मैट में बदलें या उलटा कन्वर्ज़न करें। ब्राउज़र में Filecoin मेननेट और Calibration के चेकसम जाँचें।",
+      },
+      id: {
+        name: "Konverter Alamat Filecoin",
+        description:
+          "Konversi alamat Filecoin f410 atau t410 ke format 0x bergaya Ethereum dan sebaliknya. Periksa checksum untuk mainnet Filecoin dan Calibration di browser.",
+      },
+      it: {
+        name: "Convertitore di indirizzi Filecoin",
+        description:
+          "Converti indirizzi Filecoin f410 o t410 nel formato 0x di Ethereum e viceversa. Verifica i checksum per la rete principale Filecoin e Calibration nel browser.",
+      },
+      ja: {
+        name: "Filecoin アドレス変換ツール",
+        description:
+          "Filecoin の f410 や t410 アドレスと Ethereum 形式の 0x アドレスを相互変換できます。Filecoin メインネットと Calibration テストネットのアドレスのチェックサムをブラウザで検証します。",
+      },
+      ko: {
+        name: "Filecoin 주소 변환기",
+        description:
+          "Filecoin f410 또는 t410 주소와 이더리움 형식의 0x 주소를 양방향으로 변환하세요. 브라우저에서 Filecoin 메인넷과 Calibration 테스트넷 주소의 체크섬을 검증할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Alamat Filecoin",
+        description:
+          "Tukar alamat Filecoin f410 atau t410 kepada format 0x gaya Ethereum dan sebaliknya. Semak checksum bagi mainnet Filecoin dan Calibration dalam pelayar.",
+      },
+      nl: {
+        name: "Filecoin-adresconverter",
+        description:
+          "Converteer Filecoin f410- of t410-adressen naar Ethereum-achtige 0x-adressen en terug. Controleer checksums voor het Filecoin-mainnet en Calibration in je browser.",
+      },
+      no: {
+        name: "Filecoin-adressekonverterer",
+        description:
+          "Konverter Filecoin f410- eller t410-adresser til Ethereum-formatet 0x og tilbake. Kontroller sjekksummer for Filecoins hovednett og Calibration i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter adresów Filecoin",
+        description:
+          "Konwertuj adresy Filecoin f410 lub t410 na format Ethereum 0x i odwrotnie. Sprawdzaj sumy kontrolne adresów z sieci głównej Filecoin i sieci Calibration w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de endereços do Filecoin",
+        description:
+          "Converta endereços f410 ou t410 do Filecoin para o formato 0x do Ethereum e vice-versa. Valide somas de verificação da rede principal do Filecoin e da rede Calibration no navegador.",
+      },
+      ru: {
+        name: "Конвертер адресов Filecoin",
+        description:
+          "Преобразуйте адреса Filecoin f410 и t410 в формат Ethereum 0x и обратно. Проверяйте контрольные суммы для основной сети Filecoin и тестовой сети Calibration прямо в браузере.",
+      },
+      sv: {
+        name: "Filecoin-adresskonverterare",
+        description:
+          "Konvertera Filecoin-adresserna f410 eller t410 till Ethereum-formatet 0x och tillbaka. Kontrollera checksummor för Filecoins huvudnät och Calibration i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ Filecoin",
+        description:
+          "แปลงที่อยู่ Filecoin แบบ f410 หรือ t410 เป็น 0x แบบ Ethereum และแปลงกลับ ตรวจสอบเช็กซัมสำหรับเครือข่ายหลัก Filecoin และ Calibration ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Filecoin Adres Dönüştürücü",
+        description:
+          "Filecoin f410 veya t410 adreslerini Ethereum biçiminde 0x adreslerine dönüştürün ya da tersini yapın. Filecoin ana ağı ve Calibration için sağlama toplamlarını tarayıcınızda kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi địa chỉ Filecoin",
+        description:
+          "Chuyển đổi địa chỉ Filecoin f410 hoặc t410 sang dạng 0x kiểu Ethereum và ngược lại. Xác minh tổng kiểm tra cho mạng chính Filecoin và Calibration ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Filecoin 地址转换器",
+        description:
+          "在 Filecoin f410 或 t410 地址与以太坊格式的 0x 地址之间双向转换。在浏览器中校验 Filecoin 主网和 Calibration 测试网的地址。",
+      },
+      "zh-TW": {
+        name: "Filecoin 位址轉換器",
+        description:
+          "在 Filecoin f410 或 t410 位址與以太坊格式的 0x 位址之間雙向轉換。在瀏覽器中驗證 Filecoin 主網及 Calibration 測試網位址的總和檢查碼。",
+      },
+    },
+  },
+  "filecoin-deal-lookup": {
+    slug: "filecoin-deal-lookup",
+    category: "ipfs",
+    icon: "file-text",
+    tags: [
+      "filecoin",
+      "deal id",
+      "storage deal",
+      "status",
+      "provider",
+      "piece cid",
+    ],
+    locales: {
+      ar: {
+        name: "البحث عن صفقات تخزين Filecoin",
+        description:
+          "ابحث عن صفقة تخزين على Filecoin باستخدام معرّف الصفقة. تحقّق من حالتها على الشبكة الرئيسية، واعرض مزوّد التخزين وتاريخَي البدء والانتهاء، وانسخ معرّف Piece CID.",
+      },
+      de: {
+        name: "Filecoin-Speichervereinbarungen suchen",
+        description:
+          "Rufen Sie eine Filecoin-Speichervereinbarung per Vereinbarungs-ID ab. Prüfen Sie Mainnet-Status, Speicheranbieter, Start- und Enddatum und kopieren Sie die Piece-CID.",
+      },
+      en: {
+        name: "Filecoin Deal Lookup",
+        description:
+          "Look up a Filecoin storage deal by Deal ID. Check mainnet deal status, provider, start and end dates, and copy its Piece CID.",
+      },
+      es: {
+        name: "Consulta de acuerdos de almacenamiento de Filecoin",
+        description:
+          "Consulta un acuerdo de almacenamiento de Filecoin por su ID. Comprueba su estado en la red principal, el proveedor y las fechas de inicio y fin, y copia su Piece CID.",
+      },
+      fr: {
+        name: "Recherche de contrats de stockage Filecoin",
+        description:
+          "Retrouvez un contrat de stockage Filecoin à partir de son ID. Consultez son statut sur le réseau principal, son fournisseur et ses dates de début et de fin, puis copiez son Piece CID.",
+      },
+      he: {
+        name: "איתור עסקאות אחסון ב-Filecoin",
+        description:
+          "אתרו עסקת אחסון ב-Filecoin לפי מזהה העסקה. בדקו את מצבה ברשת הראשית, את ספק האחסון ואת תאריכי ההתחלה והסיום, והעתיקו את ה-Piece CID שלה.",
+      },
+      hi: {
+        name: "Filecoin डील खोज",
+        description:
+          "डील ID से Filecoin स्टोरेज डील ढूँढें। मेननेट पर डील की स्थिति, स्टोरेज प्रदाता, शुरू और खत्म होने की तारीखें देखें और उसका Piece CID कॉपी करें।",
+      },
+      id: {
+        name: "Pencarian Kesepakatan Filecoin",
+        description:
+          "Cari kesepakatan penyimpanan Filecoin dengan Deal ID. Periksa status di mainnet, penyedia, serta tanggal mulai dan berakhir, lalu salin Piece CID.",
+      },
+      it: {
+        name: "Ricerca accordi di archiviazione Filecoin",
+        description:
+          "Cerca un accordo di archiviazione Filecoin tramite Deal ID. Controlla stato sulla rete principale, provider e date di inizio e fine, e copia il Piece CID.",
+      },
+      ja: {
+        name: "Filecoin ストレージ取引検索",
+        description:
+          "取引 ID から Filecoin のストレージ取引を検索します。メインネットでの取引の状態、ストレージプロバイダー、開始日と終了日を確認し、Piece CID をコピーできます。",
+      },
+      ko: {
+        name: "Filecoin 스토리지 거래 조회",
+        description:
+          "거래 ID로 Filecoin 스토리지 거래를 조회하세요. 메인넷 거래 상태, 스토리지 제공자, 시작일과 종료일을 확인하고 Piece CID를 복사할 수 있습니다.",
+      },
+      ms: {
+        name: "Carian Perjanjian Filecoin",
+        description:
+          "Cari perjanjian storan Filecoin dengan Deal ID. Semak status di mainnet, penyedia, tarikh mula dan tamat, lalu salin Piece CID.",
+      },
+      nl: {
+        name: "Filecoin-opslagdeal opzoeken",
+        description:
+          "Zoek een Filecoin-opslagdeal op met een Deal ID. Controleer de dealstatus op mainnet, provider en begin- en einddatum, en kopieer de Piece CID.",
+      },
+      no: {
+        name: "Søk etter Filecoin-lagringsavtale",
+        description:
+          "Søk opp en Filecoin-lagringsavtale med Deal ID. Kontroller avtalestatus på hovednettet, leverandør og start- og sluttdato, og kopier Piece CID.",
+      },
+      pl: {
+        name: "Wyszukiwarka umów Filecoin",
+        description:
+          "Znajdź umowę przechowywania danych w Filecoin po jej identyfikatorze. Sprawdź status w sieci głównej, dostawcę oraz daty rozpoczęcia i zakończenia, a także skopiuj Piece CID.",
+      },
+      pt: {
+        name: "Consulta de acordos de armazenamento do Filecoin",
+        description:
+          "Consulte um acordo de armazenamento do Filecoin através do respetivo ID. Veja o estado na rede principal, o fornecedor e as datas de início e fim, e copie o Piece CID.",
+      },
+      ru: {
+        name: "Поиск сделок Filecoin",
+        description:
+          "Найдите сделку на хранение в Filecoin по ID. Проверьте статус в основной сети, поставщика хранилища, даты начала и окончания и скопируйте Piece CID.",
+      },
+      sv: {
+        name: "Sök Filecoin-lagringsavtal",
+        description:
+          "Sök ett Filecoin-lagringsavtal med Deal ID. Kontrollera avtalets status på huvudnätet, leverantör samt start- och slutdatum, och kopiera dess Piece CID.",
+      },
+      th: {
+        name: "เครื่องมือค้นหาข้อตกลง Filecoin",
+        description:
+          "ค้นหาข้อตกลงการจัดเก็บข้อมูล Filecoin ด้วย Deal ID ดูสถานะบนเครือข่ายหลัก ผู้ให้บริการ วันที่เริ่มต้นและสิ้นสุด แล้วคัดลอก Piece CID",
+      },
+      tr: {
+        name: "Filecoin Depolama Anlaşması Sorgulama",
+        description:
+          "Filecoin depolama anlaşmasını kimliğiyle sorgulayın. Ana ağdaki anlaşma durumunu, sağlayıcıyı, başlangıç ve bitiş tarihlerini inceleyin, Piece CID değerini kopyalayın.",
+      },
+      vi: {
+        name: "Tra cứu thỏa thuận Filecoin",
+        description:
+          "Tra cứu thỏa thuận lưu trữ Filecoin bằng Deal ID. Xem trạng thái trên mạng chính, nhà cung cấp, ngày bắt đầu và kết thúc, rồi sao chép Piece CID.",
+      },
+      "zh-CN": {
+        name: "Filecoin 存储交易查询",
+        description:
+          "按交易 ID 查询 Filecoin 存储交易。查看主网交易状态、存储提供商及起止日期，并复制 Piece CID。",
+      },
+      "zh-TW": {
+        name: "Filecoin 儲存交易查詢",
+        description:
+          "依交易 ID 查詢 Filecoin 儲存交易。查看主網交易狀態、儲存供應商及起訖日期，並複製 Piece CID。",
+      },
+    },
+  },
   "filecoin-piece-cid-calculator": {
     slug: "filecoin-piece-cid-calculator",
     category: "ipfs",
@@ -69262,6 +70578,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "gltf-viewer": {
+    slug: "gltf-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "glb",
+      "gltf",
+      "3d",
+      "model",
+      "khronos",
+      "textures",
+      "animation",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GLB / glTF",
+        description:
+          "افتح نماذج GLB وglTF 2.0 في متصفحك. افحص هندسة النموذج ومواده وصور خاماته، وشغّل حركاته.",
+      },
+      de: {
+        name: "GLB- und glTF-Betrachter",
+        description:
+          "Öffne GLB- und glTF-2.0-Modelle im Browser. Sieh dir Geometrie, Materialien und Texturen an und spiele die Animationen des Modells ab.",
+      },
+      en: {
+        name: "GLB / glTF Viewer",
+        description:
+          "Open GLB and glTF 2.0 models in your browser. Inspect geometry, materials and textures, and play the model’s animations.",
+      },
+      es: {
+        name: "Visor de GLB / glTF",
+        description:
+          "Abre modelos GLB y glTF 2.0 en tu navegador. Inspecciona la geometría, los materiales y las texturas, y reproduce las animaciones del modelo.",
+      },
+      fr: {
+        name: "Visionneuse GLB / glTF",
+        description:
+          "Ouvrez des modèles GLB et glTF 2.0 dans votre navigateur. Examinez leur géométrie, leurs matériaux et leurs textures, puis lancez leurs animations.",
+      },
+      he: {
+        name: "מציג GLB / glTF",
+        description:
+          "פתחו מודלים בפורמט GLB או glTF 2.0 בדפדפן. בדקו את הגאומטריה, החומרים והמרקמים והפעילו את האנימציות של המודל.",
+      },
+      hi: {
+        name: "GLB / glTF व्यूअर",
+        description:
+          "अपने ब्राउज़र में GLB और glTF 2.0 मॉडल खोलें। ज्यामिति, मटीरियल और टेक्सचर देखें और मॉडल के ऐनिमेशन चलाएँ।",
+      },
+      id: {
+        name: "Penampil GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 di browser. Periksa geometri, material, dan tekstur, serta putar animasi model.",
+      },
+      it: {
+        name: "Visualizzatore GLB / glTF",
+        description:
+          "Apri modelli GLB e glTF 2.0 nel browser. Esamina geometria, materiali e texture e riproduci le animazioni del modello.",
+      },
+      ja: {
+        name: "GLB / glTF ビューアー",
+        description:
+          "GLB および glTF 2.0 モデルをブラウザーで開きます。形状、マテリアル、テクスチャを確認し、モデルのアニメーションを再生できます。",
+      },
+      ko: {
+        name: "GLB / glTF 뷰어",
+        description:
+          "브라우저에서 GLB 및 glTF 2.0 모델을 여세요. 형상, 재질, 텍스처를 살펴보고 모델의 애니메이션을 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar GLB / glTF",
+        description:
+          "Buka model GLB dan glTF 2.0 dalam pelayar. Periksa geometri, bahan dan tekstur, serta mainkan animasi model.",
+      },
+      nl: {
+        name: "GLB- en glTF-viewer",
+        description:
+          "Open GLB- en glTF 2.0-modellen in je browser. Bekijk de geometrie, materialen en texturen en speel de animaties van het model af.",
+      },
+      no: {
+        name: "GLB- og glTF-viser",
+        description:
+          "Åpne GLB- og glTF 2.0-modeller i nettleseren. Se på geometri, materialer og teksturer, og spill av animasjonene i modellen.",
+      },
+      pl: {
+        name: "Przeglądarka plików GLB i glTF",
+        description:
+          "Otwieraj modele GLB i glTF 2.0 w przeglądarce. Oglądaj geometrię, materiały i tekstury oraz odtwarzaj animacje modelu.",
+      },
+      pt: {
+        name: "Visualizador de GLB / glTF",
+        description:
+          "Abra modelos GLB e glTF 2.0 no navegador. Inspecione a geometria, os materiais e as texturas e reproduza as animações do modelo.",
+      },
+      ru: {
+        name: "Просмотр GLB / glTF",
+        description:
+          "Открывайте модели GLB и glTF 2.0 прямо в браузере. Просматривайте геометрию, материалы и текстуры и воспроизводите анимации модели.",
+      },
+      sv: {
+        name: "GLB- och glTF-visare",
+        description:
+          "Öppna GLB- och glTF 2.0-modeller i webbläsaren. Granska geometri, material och texturer och spela upp modellens animationer.",
+      },
+      th: {
+        name: "โปรแกรมดู GLB / glTF",
+        description:
+          "เปิดโมเดล GLB และ glTF 2.0 ในเบราว์เซอร์ ตรวจสอบรูปทรง วัสดุ และเท็กซ์เจอร์ พร้อมเล่นแอนิเมชันของโมเดล",
+      },
+      tr: {
+        name: "GLB / glTF Görüntüleyici",
+        description:
+          "GLB ve glTF 2.0 modellerini tarayıcınızda açın. Geometriyi, malzemeleri ve dokuları inceleyin, modelin animasyonlarını oynatın.",
+      },
+      vi: {
+        name: "Trình xem GLB / glTF",
+        description:
+          "Mở mô hình GLB và glTF 2.0 trong trình duyệt. Kiểm tra hình học, vật liệu và họa tiết, đồng thời phát hoạt ảnh của mô hình.",
+      },
+      "zh-CN": {
+        name: "GLB / glTF 查看器",
+        description:
+          "在浏览器中打开 GLB 和 glTF 2.0 模型。检查几何形状、材质和纹理，并播放模型动画。",
+      },
+      "zh-TW": {
+        name: "GLB / glTF 檢視器",
+        description:
+          "在瀏覽器中開啟 GLB 和 glTF 2.0 模型。檢查幾何形狀、材質與貼圖，並播放模型動畫。",
       },
     },
   },
@@ -80293,6 +81741,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "mbox-viewer": {
+    slug: "mbox-viewer",
+    category: "document",
+    icon: "mails",
+    tags: [
+      "mbox",
+      "mailbox",
+      "email",
+      "gmail",
+      "google takeout",
+      "thunderbird",
+      "apple mail",
+      "archive",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض MBOX",
+        description:
+          "افتح أرشيفات البريد الإلكتروني بتنسيق MBOX من Gmail ‏(Google Takeout) أو Thunderbird أو Apple Mail. ابحث عن الرسائل واقرأها ونزّل المرفقات في متصفحك.",
+      },
+      de: {
+        name: "MBOX-Betrachter",
+        description:
+          "Öffne MBOX-Dateien aus Gmail (Google Takeout), Thunderbird oder Apple Mail. Durchsuche und lies E-Mails und lade Anhänge direkt im Browser herunter.",
+      },
+      en: {
+        name: "MBOX Viewer",
+        description:
+          "Open MBOX email archives from Gmail (Google Takeout), Thunderbird, or Apple Mail. Search messages, read email, and download attachments in your browser.",
+      },
+      es: {
+        name: "Visor MBOX",
+        description:
+          "Abre archivos de correo MBOX de Gmail (Google Takeout), Thunderbird o Apple Mail. Busca y lee mensajes y descarga adjuntos desde tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse MBOX",
+        description:
+          "Ouvrez les archives d’e-mails MBOX de Gmail (Google Takeout), Thunderbird ou Apple Mail. Recherchez et lisez vos messages, puis téléchargez les pièces jointes dans votre navigateur.",
+      },
+      he: {
+        name: "מציג MBOX",
+        description:
+          "פתחו בדפדפן ארכיוני דוא״ל בפורמט MBOX מ־Gmail (באמצעות Google Takeout),‏ Thunderbird או Apple Mail. אפשר לחפש ולקרוא הודעות ולהוריד קבצים מצורפים.",
+      },
+      hi: {
+        name: "MBOX व्यूअर",
+        description:
+          "Gmail (Google Takeout), Thunderbird या Apple Mail से निर्यात किए गए MBOX ईमेल आर्काइव खोलें। ब्राउज़र में संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil MBOX",
+        description:
+          "Buka arsip email MBOX dari Gmail (Google Takeout), Thunderbird, atau Apple Mail. Cari dan baca pesan serta unduh lampiran langsung di browser.",
+      },
+      it: {
+        name: "Visualizzatore MBOX",
+        description:
+          "Apri nel browser gli archivi di posta MBOX di Gmail (Google Takeout), Thunderbird o Apple Mail. Cerca e leggi i messaggi e scarica gli allegati.",
+      },
+      ja: {
+        name: "MBOX ビューアー",
+        description:
+          "Gmail（Google Takeout）、Thunderbird、Apple Mail の MBOX ファイルを開けます。メールの検索、本文の閲覧、添付ファイルのダウンロードがブラウザーでできます。",
+      },
+      ko: {
+        name: "MBOX 뷰어",
+        description:
+          "Gmail(Google Takeout), Thunderbird 또는 Apple Mail에서 내보낸 MBOX 이메일 보관 파일을 여세요. 브라우저에서 메시지를 검색하고 읽고 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar MBOX",
+        description:
+          "Buka arkib e-mel MBOX daripada Gmail (Google Takeout), Thunderbird atau Apple Mail. Cari dan baca mesej serta muat turun lampiran dalam pelayar anda.",
+      },
+      nl: {
+        name: "MBOX-viewer",
+        description:
+          "Open MBOX-e-mailarchieven van Gmail (Google Takeout), Thunderbird of Apple Mail. Zoek en lees berichten en download bijlagen in je browser.",
+      },
+      no: {
+        name: "MBOX-viser",
+        description:
+          "Åpne MBOX-arkiver fra Gmail (Google Takeout), Thunderbird eller Apple Mail. Søk etter meldinger, les e-post og last ned vedlegg i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka MBOX",
+        description:
+          "Otwieraj archiwa poczty MBOX z Gmaila (Google Takeout), Thunderbirda lub Apple Mail. Wyszukuj i czytaj wiadomości oraz pobieraj załączniki w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador MBOX",
+        description:
+          "Abra arquivos MBOX do Gmail (Google Takeout), Thunderbird ou Apple Mail. Pesquise e leia e-mails e baixe anexos no navegador.",
+      },
+      ru: {
+        name: "Просмотр MBOX",
+        description:
+          "Открывайте почтовые архивы MBOX из Gmail (Google Takeout), Thunderbird или Apple Mail. Ищите и читайте письма, скачивайте вложения прямо в браузере.",
+      },
+      sv: {
+        name: "MBOX-visare",
+        description:
+          "Öppna MBOX-arkiv från Gmail (Google Takeout), Thunderbird eller Apple Mail. Sök och läs e-post och ladda ner bilagor i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู MBOX",
+        description:
+          "เปิดไฟล์อีเมล MBOX จาก Gmail (Google Takeout), Thunderbird หรือ Apple Mail ค้นหาและอ่านอีเมล พร้อมดาวน์โหลดไฟล์แนบได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MBOX Görüntüleyici",
+        description:
+          "Gmail (Google Takeout), Thunderbird veya Apple Mail’den gelen MBOX e-posta arşivlerini tarayıcınızda açın. İletileri arayın, okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem MBOX",
+        description:
+          "Mở tệp lưu trữ email MBOX từ Gmail (Google Takeout), Thunderbird hoặc Apple Mail. Tìm kiếm, đọc thư và tải tệp đính kèm ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MBOX 查看器",
+        description:
+          "打开来自 Gmail（Google Takeout）、Thunderbird 或 Apple Mail 的 MBOX 邮件归档。在浏览器中搜索和阅读邮件，并下载附件。",
+      },
+      "zh-TW": {
+        name: "MBOX 檢視器",
+        description:
+          "在瀏覽器中開啟 Gmail（Google 匯出）、Thunderbird 或 Apple Mail 的 MBOX 郵件備份，搜尋及閱讀郵件，並下載附件。",
+      },
+    },
+  },
   "md4-hash-text-or-file": {
     slug: "md4-hash-text-or-file",
     category: "crypto",
@@ -81437,6 +83018,270 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MIDI 監視器",
         description:
           "在瀏覽器中測試 MIDI 鍵盤、打擊墊或控制器。在鋼琴鍵盤上查看音符和力度，並檢視 CC、彎音、時鐘及原始 MIDI 位元組。",
+      },
+    },
+  },
+  "midi-to-wav-converter": {
+    slug: "midi-to-wav-converter",
+    category: "misc",
+    icon: "audio-lines",
+    tags: [
+      "midi",
+      "wav",
+      "soundfont",
+      "gm",
+      "audio",
+      "synthesizer",
+      "midi to audio",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MIDI إلى WAV",
+        description:
+          "حوّل ملفات MIDI إلى WAV ستيريو باستخدام آلات General MIDI المدمجة أو ملف SoundFont من اختيارك. استمع إلى الناتج ونزّله من متصفحك.",
+      },
+      de: {
+        name: "MIDI-zu-WAV-Konverter",
+        description:
+          "Wandle MIDI-Dateien mit integrierten General-MIDI-Instrumenten oder einem eigenen SoundFont in Stereo-WAV um. Höre das Ergebnis im Browser an und lade es herunter.",
+      },
+      en: {
+        name: "MIDI to WAV Converter",
+        description:
+          "Convert MIDI files to stereo WAV with built-in General MIDI instruments or your own SoundFont. Preview and download the audio in your browser.",
+      },
+      es: {
+        name: "Conversor de MIDI a WAV",
+        description:
+          "Convierte archivos MIDI a WAV estéreo con los instrumentos General MIDI integrados o con tu propio banco SoundFont. Escucha y descarga el audio desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur MIDI vers WAV",
+        description:
+          "Convertissez des fichiers MIDI en WAV stéréo avec les instruments General MIDI intégrés ou votre propre banque SoundFont. Écoutez et téléchargez l’audio dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MIDI ל־WAV",
+        description:
+          "המירו קובצי MIDI ל־WAV בסטריאו עם כלי General MIDI המובנים או עם SoundFont משלכם. האזינו לתוצאה והורידו אותה בדפדפן.",
+      },
+      hi: {
+        name: "MIDI से WAV कन्वर्टर",
+        description:
+          "बिल्ट-इन General MIDI वाद्यों या अपने SoundFont से MIDI फ़ाइल को स्टीरियो WAV में बदलें। ब्राउज़र में ऑडियो सुनें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MIDI ke WAV",
+        description:
+          "Konversikan MIDI ke WAV stereo dengan instrumen General MIDI bawaan atau SoundFont Anda sendiri. Dengarkan pratinjau dan unduh audio di browser.",
+      },
+      it: {
+        name: "Convertitore da MIDI a WAV",
+        description:
+          "Converti file MIDI in WAV stereo con gli strumenti General MIDI integrati o con il tuo SoundFont. Ascolta e scarica l’audio dal browser.",
+      },
+      ja: {
+        name: "MIDI WAV 変換",
+        description:
+          "内蔵の General MIDI 楽器またはお手持ちの SoundFont を使い、MIDI ファイルをステレオ WAV に変換します。ブラウザーで音声を試聴してダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI를 WAV로 변환",
+        description:
+          "내장 General MIDI 악기나 직접 선택한 SoundFont로 MIDI 파일을 스테레오 WAV로 변환합니다. 브라우저에서 오디오를 미리 듣고 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar MIDI kepada WAV",
+        description:
+          "Tukar fail MIDI kepada WAV stereo dengan alat muzik General MIDI terbina dalam atau SoundFont anda sendiri. Dengar pratonton dan muat turun audio dalam pelayar.",
+      },
+      nl: {
+        name: "MIDI-naar-WAV-converter",
+        description:
+          "Zet MIDI-bestanden om naar stereo-WAV met ingebouwde General MIDI-instrumenten of je eigen SoundFont. Beluister en download de audio in je browser.",
+      },
+      no: {
+        name: "MIDI til WAV-konverterer",
+        description:
+          "Konverter MIDI-filer til WAV i stereo med innebygde General MIDI-instrumenter eller en egen SoundFont. Lytt til og last ned lyden i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MIDI na WAV",
+        description:
+          "Konwertuj pliki MIDI na stereofoniczny WAV za pomocą wbudowanych instrumentów General MIDI lub własnego banku SoundFont. Odsłuchaj i pobierz dźwięk w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de MIDI para WAV",
+        description:
+          "Converta arquivos MIDI em WAV estéreo com os instrumentos General MIDI integrados ou com seu próprio SoundFont. Ouça e baixe o áudio pelo navegador.",
+      },
+      ru: {
+        name: "Конвертер MIDI в WAV",
+        description:
+          "Преобразуйте MIDI-файлы в стерео WAV со встроенными инструментами General MIDI или своим банком SoundFont. Прослушивайте и скачивайте звук прямо в браузере.",
+      },
+      sv: {
+        name: "MIDI till WAV-konverterare",
+        description:
+          "Konvertera MIDI-filer till WAV i stereo med inbyggda General MIDI-instrument eller en egen SoundFont. Provlyssna och ladda ner ljudet i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MIDI เป็น WAV",
+        description:
+          "แปลงไฟล์ MIDI เป็น WAV สเตอริโอด้วยเสียงเครื่องดนตรี General MIDI ที่มีให้หรือ SoundFont ของคุณเอง ฟังตัวอย่างและดาวน์โหลดเสียงได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI'den WAV'a Dönüştürücü",
+        description:
+          "Dahili General MIDI enstrümanlarıyla veya kendi SoundFont dosyanızla MIDI dosyalarını stereo WAV'a dönüştürün. Sesi tarayıcınızda dinleyip indirin.",
+      },
+      vi: {
+        name: "Chuyển MIDI sang WAV",
+        description:
+          "Chuyển tệp MIDI thành WAV stereo bằng nhạc cụ General MIDI tích hợp hoặc SoundFont của bạn. Nghe thử và tải âm thanh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 转 WAV 转换器",
+        description:
+          "使用内置 General MIDI 乐器或自己的 SoundFont 将 MIDI 文件转换为立体声 WAV。在浏览器中预览并下载音频。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉 WAV 轉換器",
+        description:
+          "使用內建 General MIDI 樂器或自己的 SoundFont，將 MIDI 檔案轉換為立體聲 WAV。在瀏覽器中預覽並下載音訊。",
+      },
+    },
+  },
+  "midi-transposer": {
+    slug: "midi-transposer",
+    category: "misc",
+    icon: "piano",
+    tags: [
+      "midi",
+      "transpose",
+      "transposer",
+      "semitones",
+      "key change",
+      "tempo",
+      "bpm",
+      "speed",
+      "pitch",
+    ],
+    locales: {
+      ar: {
+        name: "تغيير طبقة النغمات وسرعة MIDI",
+        description:
+          "انقل نغمات MIDI بمقدار أنصاف درجات وزِد سرعة العزف أو خفّضها. نزّل ملف MIDI المعدّل مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "MIDI transponieren und Tempo ändern",
+        description:
+          "Transponiere MIDI-Noten in Halbtonschritten und stelle das Tempo schneller oder langsamer ein. Lade die bearbeitete MIDI-Datei direkt im Browser herunter.",
+      },
+      en: {
+        name: "MIDI Transposer and Tempo Changer",
+        description:
+          "Transpose MIDI notes by semitones and speed up or slow down the tempo. Download the edited MIDI file directly from your browser.",
+      },
+      es: {
+        name: "Transposición MIDI y ajuste de tempo",
+        description:
+          "Transpón las notas de un archivo MIDI por semitonos, acelera o ralentiza el tempo y descarga el MIDI editado desde tu navegador.",
+      },
+      fr: {
+        name: "Transposition MIDI et réglage du tempo",
+        description:
+          "Transposez les notes d’un fichier MIDI par demi-tons, accélérez ou ralentissez le tempo et téléchargez le MIDI modifié depuis votre navigateur.",
+      },
+      he: {
+        name: "טרנספוזיציה ושינוי טמפו ל־MIDI",
+        description:
+          "הזיזו תווי MIDI בחצאי טונים והאיצו או האטו את הטמפו. הורידו את קובץ ה־MIDI הערוך ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "MIDI ट्रांसपोज़र और टेम्पो परिवर्तक",
+        description:
+          "MIDI नोटों की पिच सेमीटोन में बदलें और टेम्पो बढ़ाएँ या घटाएँ। संपादित MIDI फ़ाइल सीधे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengubah Nada dan Tempo MIDI",
+        description:
+          "Transposisikan not MIDI dalam semiton dan percepat atau perlambat temponya. Unduh file MIDI hasil suntingan langsung dari browser.",
+      },
+      it: {
+        name: "Trasposizione MIDI e regolazione del tempo",
+        description:
+          "Trasponi le note di un file MIDI per semitoni, accelera o rallenta il tempo e scarica il MIDI modificato direttamente dal browser.",
+      },
+      ja: {
+        name: "MIDI 移調・テンポ変更",
+        description:
+          "MIDI の音符を半音単位で移調し、テンポを速くしたり遅くしたりできます。編集した MIDI ファイルをブラウザーから直接ダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI 조옮김 및 템포 변경",
+        description:
+          "MIDI 음표를 반음 단위로 조옮김하고 템포를 빠르게 하거나 느리게 합니다. 수정한 MIDI 파일을 브라우저에서 바로 다운로드하세요.",
+      },
+      ms: {
+        name: "Pelarasan Nada dan Tempo MIDI",
+        description:
+          "Ubah nada not MIDI dalam langkah semiton dan laraskan tempo agar lebih laju atau perlahan. Muat turun fail MIDI yang disunting terus daripada pelayar.",
+      },
+      nl: {
+        name: "MIDI transponeren en tempo aanpassen",
+        description:
+          "Transponeer MIDI-noten in halve tonen en maak het tempo sneller of langzamer. Download het aangepaste MIDI-bestand rechtstreeks vanuit je browser.",
+      },
+      no: {
+        name: "Transponer MIDI og endre tempo",
+        description:
+          "Transponer MIDI-noter i halvtonetrinn og øk eller senk tempoet. Last ned den redigerte MIDI-filen direkte fra nettleseren.",
+      },
+      pl: {
+        name: "Transpozycja i zmiana tempa MIDI",
+        description:
+          "Transponuj nuty MIDI o wybraną liczbę półtonów, przyspiesz lub zwolnij odtwarzanie i pobierz zmieniony plik MIDI bezpośrednio z przeglądarki.",
+      },
+      pt: {
+        name: "Transposição MIDI e ajuste de andamento",
+        description:
+          "Transponha as notas de um arquivo MIDI em semitons, acelere ou diminua o andamento e baixe o MIDI editado direto do navegador.",
+      },
+      ru: {
+        name: "Транспонирование и изменение темпа MIDI",
+        description:
+          "Транспонируйте ноты MIDI на нужное число полутонов, ускоряйте или замедляйте воспроизведение и скачивайте изменённый MIDI-файл прямо из браузера.",
+      },
+      sv: {
+        name: "MIDI-transponering och tempoändring",
+        description:
+          "Transponera MIDI-toner i halvtonssteg och höj eller sänk tempot. Ladda ner den redigerade MIDI-filen direkt från webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปลี่ยนคีย์และปรับเทมโป MIDI",
+        description:
+          "เลื่อนโน้ต MIDI ขึ้นหรือลงทีละครึ่งเสียงและปรับเทมโปให้เร็วขึ้นหรือช้าลง ดาวน์โหลดไฟล์ MIDI ที่แก้ไขแล้วได้จากเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI Transpoze ve Tempo Ayarı",
+        description:
+          "MIDI notalarını yarım ses adımlarıyla transpoze edin, tempoyu hızlandırın veya yavaşlatın. Düzenlenen MIDI dosyasını doğrudan tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển giọng và đổi nhịp độ MIDI",
+        description:
+          "Chuyển cao độ các nốt MIDI theo nửa cung và tăng hoặc giảm nhịp độ. Tải tệp MIDI đã chỉnh sửa trực tiếp từ trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 移调与速度调整",
+        description:
+          "按半音移调 MIDI 音符，并加快或减慢速度。直接从浏览器下载修改后的 MIDI 文件。",
+      },
+      "zh-TW": {
+        name: "MIDI 移調與速度調整",
+        description:
+          "以半音為單位移調 MIDI 音符，並加快或減慢速度。直接從瀏覽器下載修改後的 MIDI 檔案。",
       },
     },
   },
@@ -97955,6 +99800,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "unicode-normalizer": {
+    slug: "unicode-normalizer",
+    category: "text",
+    icon: "case-sensitive",
+    tags: [
+      "unicode",
+      "normalization",
+      "nfc",
+      "nfd",
+      "nfkc",
+      "nfkd",
+      "code-points",
+      "combining-marks",
+      "full-width",
+    ],
+    locales: {
+      ar: {
+        name: "أداة تطبيع نصوص Unicode",
+        description:
+          "طبّع نصوص Unicode إلى NFC أو NFD أو NFKC أو NFKD. قارن نقاط الترميز وانسخ النتيجة مباشرة من متصفحك.",
+      },
+      de: {
+        name: "Unicode-Normalisierung",
+        description:
+          "Normalisiere eingefügten Unicode-Text in NFC, NFD, NFKC oder NFKD. Vergleiche Codepunkte und kopiere das Ergebnis direkt im Browser.",
+      },
+      en: {
+        name: "Unicode Normalizer",
+        description:
+          "Normalize pasted Unicode text to NFC, NFD, NFKC, or NFKD. Compare code points and copy the result directly in your browser.",
+      },
+      es: {
+        name: "Normalizador Unicode",
+        description:
+          "Normaliza texto Unicode a NFC, NFD, NFKC o NFKD. Compara los puntos de código y copia el resultado directamente en tu navegador.",
+      },
+      fr: {
+        name: "Normaliseur Unicode",
+        description:
+          "Normalisez du texte Unicode en NFC, NFD, NFKC ou NFKD. Comparez les points de code et copiez le résultat directement dans votre navigateur.",
+      },
+      he: {
+        name: "נרמול טקסט Unicode",
+        description:
+          "נרמלו טקסט Unicode לפי NFC, NFD, NFKC או NFKD. השוו נקודות קוד והעתיקו את התוצאה ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "यूनिकोड नॉर्मलाइज़र",
+        description:
+          "पेस्ट किए गए यूनिकोड टेक्स्ट को NFC, NFD, NFKC या NFKD रूप में बदलें। कोड पॉइंट की तुलना करें और नतीजा सीधे ब्राउज़र से कॉपी करें।",
+      },
+      id: {
+        name: "Alat Normalisasi Unicode",
+        description:
+          "Normalisasi teks Unicode ke NFC, NFD, NFKC, atau NFKD. Bandingkan titik kode dan salin hasilnya langsung di peramban.",
+      },
+      it: {
+        name: "Normalizzatore Unicode",
+        description:
+          "Normalizza il testo Unicode in NFC, NFD, NFKC o NFKD. Confronta i punti di codice e copia il risultato direttamente dal browser.",
+      },
+      ja: {
+        name: "Unicode 正規化ツール",
+        description:
+          "入力した Unicode テキストを NFC、NFD、NFKC、NFKD に正規化します。ブラウザーでコードポイントを比較し、結果をコピーできます。",
+      },
+      ko: {
+        name: "유니코드 정규화 도구",
+        description:
+          "붙여넣은 유니코드 텍스트를 NFC, NFD, NFKC 또는 NFKD로 정규화합니다. 브라우저에서 코드 포인트를 비교하고 결과를 복사하세요.",
+      },
+      ms: {
+        name: "Alat Penormalan Unicode",
+        description:
+          "Normalkan teks Unicode kepada NFC, NFD, NFKC atau NFKD. Bandingkan titik kod dan salin hasil terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Unicode-normalisatie",
+        description:
+          "Normaliseer geplakte Unicode-tekst met NFC, NFD, NFKC of NFKD. Vergelijk codepunten en kopieer het resultaat rechtstreeks in je browser.",
+      },
+      no: {
+        name: "Unicode-normalisering",
+        description:
+          "Normaliser innlimt Unicode-tekst til NFC, NFD, NFKC eller NFKD. Sammenlign kodepunkter og kopier resultatet direkte i nettleseren.",
+      },
+      pl: {
+        name: "Normalizacja Unicode",
+        description:
+          "Normalizuj wklejony tekst Unicode do postaci NFC, NFD, NFKC lub NFKD. Porównaj punkty kodowe i skopiuj wynik w przeglądarce.",
+      },
+      pt: {
+        name: "Normalizador Unicode",
+        description:
+          "Normalize texto Unicode em NFC, NFD, NFKC ou NFKD. Compare os pontos de código e copie o resultado diretamente no navegador.",
+      },
+      ru: {
+        name: "Нормализация Unicode",
+        description:
+          "Нормализуйте текст Unicode в форму NFC, NFD, NFKC или NFKD. Сравните кодовые точки и скопируйте результат прямо в браузере.",
+      },
+      sv: {
+        name: "Unicode-normalisering",
+        description:
+          "Normalisera inklistrad Unicode-text till NFC, NFD, NFKC eller NFKD. Jämför kodpunkter och kopiera resultatet direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือปรับมาตรฐาน Unicode",
+        description:
+          "ปรับข้อความ Unicode ที่วางให้เป็น NFC, NFD, NFKC หรือ NFKD แล้วเปรียบเทียบจุดรหัสและคัดลอกผลลัพธ์ได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Unicode Normalleştirme",
+        description:
+          "Yapıştırdığınız Unicode metni NFC, NFD, NFKC veya NFKD biçimine dönüştürün. Kod noktalarını karşılaştırıp sonucu doğrudan tarayıcınızdan kopyalayın.",
+      },
+      vi: {
+        name: "Trình chuẩn hóa Unicode",
+        description:
+          "Chuẩn hóa văn bản Unicode sang NFC, NFD, NFKC hoặc NFKD. So sánh điểm mã và sao chép kết quả ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "Unicode 规范化工具",
+        description:
+          "将粘贴的 Unicode 文本规范化为 NFC、NFD、NFKC 或 NFKD。在浏览器中比较码位并复制结果。",
+      },
+      "zh-TW": {
+        name: "Unicode 正規化工具",
+        description:
+          "將貼上的 Unicode 文字正規化為 NFC、NFD、NFKC 或 NFKD。在瀏覽器中比較碼位並複製結果。",
+      },
+    },
+  },
   "unicode-punycode-converter": {
     slug: "unicode-punycode-converter",
     category: "network",
@@ -101718,6 +103696,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IPv4 VLSM 子網路計算機",
         description:
           "依主機數規劃 IPv4 子網路。輸入基礎網路的 CIDR 區塊，即可算出子網路遮罩、可用 IP 位址範圍、廣播位址及剩餘位址空間。",
+      },
+    },
+  },
+  "warc-viewer": {
+    slug: "warc-viewer",
+    category: "document",
+    icon: "globe",
+    tags: [
+      "warc",
+      "warc.gz",
+      "web archive",
+      "webpage",
+      "common crawl",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض WARC",
+        description:
+          "افتح أرشيفات الويب بتنسيق WARC أو WARC.GZ في متصفحك. ابحث عن عناوين URL المؤرشفة، وعاين الصفحات المحفوظة، واطّلع على تواريخ الالتقاط وترويسات HTTP.",
+      },
+      de: {
+        name: "WARC-Betrachter",
+        description:
+          "Öffne WARC- und WARC.GZ-Webarchive im Browser. Suche nach archivierten URLs, sieh dir gespeicherte Webseiten an und prüfe Erfassungszeitpunkte und HTTP-Header.",
+      },
+      en: {
+        name: "WARC Viewer",
+        description:
+          "Open WARC and WARC.GZ web archives in your browser. Search captured URLs, preview saved web pages, and inspect capture dates and HTTP headers.",
+      },
+      es: {
+        name: "Visor de WARC",
+        description:
+          "Abre archivos web WARC y WARC.GZ en tu navegador. Busca URL archivadas, previsualiza páginas guardadas y consulta las fechas de captura y las cabeceras HTTP.",
+      },
+      fr: {
+        name: "Visionneuse WARC",
+        description:
+          "Ouvre des archives web WARC et WARC.GZ dans ton navigateur. Recherche les URL capturées, affiche les pages enregistrées et consulte les dates de capture et les en-têtes HTTP.",
+      },
+      he: {
+        name: "מציג WARC",
+        description:
+          "פתחו ארכיוני אינטרנט מסוג WARC או WARC.GZ בדפדפן. חפשו כתובות URL שאורכבו, הציגו דפים שמורים ובדקו תאריכי לכידה וכותרות HTTP.",
+      },
+      hi: {
+        name: "WARC व्यूअर",
+        description:
+          "ब्राउज़र में WARC और WARC.GZ वेब आर्काइव खोलें। दर्ज किए गए URL खोजें, सहेजे गए वेब पेज का पूर्वावलोकन करें और कैप्चर की तारीखें व HTTP हेडर देखें।",
+      },
+      id: {
+        name: "Penampil WARC",
+        description:
+          "Buka arsip web WARC dan WARC.GZ di browser. Cari URL yang diarsipkan, lihat pratinjau halaman tersimpan, dan periksa waktu pengarsipan serta header HTTP.",
+      },
+      it: {
+        name: "Visualizzatore WARC",
+        description:
+          "Apri archivi web WARC e WARC.GZ nel browser. Cerca gli URL archiviati, visualizza l’anteprima delle pagine salvate e consulta le date di acquisizione e le intestazioni HTTP.",
+      },
+      ja: {
+        name: "WARC ビューアー",
+        description:
+          "WARC・WARC.GZ 形式のウェブアーカイブをブラウザーで開きます。収集した URL の検索や保存済みページのプレビュー、取得日時と HTTP ヘッダーの確認ができます。",
+      },
+      ko: {
+        name: "WARC 뷰어",
+        description:
+          "브라우저에서 WARC 및 WARC.GZ 웹 아카이브를 여세요. 수집한 URL을 검색하고 저장된 페이지를 미리 보거나 수집 시각과 HTTP 헤더를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar WARC",
+        description:
+          "Buka arkib web WARC dan WARC.GZ dalam pelayar. Cari URL yang diarkibkan, pratonton halaman tersimpan dan semak tarikh tangkapan serta pengepala HTTP.",
+      },
+      nl: {
+        name: "WARC-viewer",
+        description:
+          "Open WARC- en WARC.GZ-webarchieven in je browser. Zoek naar gearchiveerde URL’s, bekijk opgeslagen webpagina’s en controleer wanneer ze zijn vastgelegd en welke HTTP-headers zijn opgeslagen.",
+      },
+      no: {
+        name: "WARC-viser",
+        description:
+          "Åpne nettarkiver i WARC- og WARC.GZ-format i nettleseren. Søk etter arkiverte nettadresser, se lagrede nettsider og undersøk arkiveringstidspunkter og HTTP-hoder.",
+      },
+      pl: {
+        name: "Przeglądarka WARC",
+        description:
+          "Otwieraj archiwa stron WARC i WARC.GZ w przeglądarce. Wyszukuj zapisane adresy URL, wyświetlaj podgląd stron i sprawdzaj daty zapisu oraz nagłówki HTTP.",
+      },
+      pt: {
+        name: "Visualizador de WARC",
+        description:
+          "Abra arquivos da web WARC e WARC.GZ no navegador. Busque URLs capturadas, veja páginas salvas e consulte as datas de captura e os cabeçalhos HTTP.",
+      },
+      ru: {
+        name: "Просмотр WARC",
+        description:
+          "Открывайте веб-архивы WARC и WARC.GZ в браузере. Ищите сохранённые URL, просматривайте копии страниц, проверяйте даты архивации и заголовки HTTP.",
+      },
+      sv: {
+        name: "WARC-visare",
+        description:
+          "Öppna webbarkiv i WARC- och WARC.GZ-format i webbläsaren. Sök efter arkiverade webbadresser, förhandsgranska sparade webbsidor och granska arkiveringstider och HTTP-huvuden.",
+      },
+      th: {
+        name: "โปรแกรมดู WARC",
+        description:
+          "เปิดไฟล์เก็บถาวรเว็บ WARC และ WARC.GZ ในเบราว์เซอร์ ค้นหา URL ที่เก็บไว้ ดูตัวอย่างหน้าเว็บ และตรวจสอบเวลาที่บันทึกกับส่วนหัว HTTP",
+      },
+      tr: {
+        name: "WARC Görüntüleyici",
+        description:
+          "WARC ve WARC.GZ web arşivlerini tarayıcınızda açın. Arşivlenen URL’leri arayın, kaydedilen sayfaları önizleyin ve arşivleme tarihleriyle HTTP başlıklarını inceleyin.",
+      },
+      vi: {
+        name: "Trình xem WARC",
+        description:
+          "Mở tệp lưu trữ web WARC và WARC.GZ ngay trong trình duyệt. Tìm URL đã thu thập, xem trước trang đã lưu và kiểm tra thời điểm thu thập cùng tiêu đề HTTP.",
+      },
+      "zh-CN": {
+        name: "WARC 查看器",
+        description:
+          "在浏览器中打开 WARC 和 WARC.GZ 网页归档。搜索已采集的网址，预览保存的网页，并查看采集时间和 HTTP 标头。",
+      },
+      "zh-TW": {
+        name: "WARC 檢視器",
+        description:
+          "在瀏覽器中開啟 WARC 和 WARC.GZ 網頁封存檔。搜尋已擷取的網址、預覽儲存的網頁，以及查看擷取時間與 HTTP 標頭。",
       },
     },
   },

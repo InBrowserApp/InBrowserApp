@@ -1,0 +1,15 @@
+{
+  "chooseFile": "Pilih file MIDI",
+  "changeFile": "Ganti file",
+  "dropHint": "atau lepas file MIDI di sini",
+  "privacy": "File Anda tetap di browser ini.",
+  "pitch": "Transposisi (semiton)",
+  "pitchHint": "Gunakan angka negatif untuk menurunkan nada.",
+  "speed": "Tempo (%)",
+  "speedHint": "100% mempertahankan tempo asli.",
+  "keepDrums": "Pertahankan nada asli not drum",
+  "download": "Unduh MIDI",
+  "invalidFile": "File ini tidak dapat dibaca sebagai file MIDI standar. Pilih file .mid atau .midi yang lain.",
+  "pitchOutOfRange": "Sebagian not akan berada di luar rentang MIDI. Coba transposisi yang lebih kecil.",
+  "tempoOutOfRange": "Pengaturan ini akan melampaui rentang waktu MIDI. Coba persentase yang lebih dekat ke 100%."
+}

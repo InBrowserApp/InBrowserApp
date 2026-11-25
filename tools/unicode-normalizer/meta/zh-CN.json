@@ -1,0 +1,4 @@
+{
+  "name": "Unicode 规范化工具",
+  "description": "将粘贴的 Unicode 文本规范化为 NFC、NFD、NFKC 或 NFKD。在浏览器中比较码位并复制结果。"
+}

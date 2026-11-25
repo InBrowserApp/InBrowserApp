@@ -1,0 +1,16 @@
+{
+  "address": "Filecoin- of Ethereum-achtig adres",
+  "network": "Filecoin-netwerk",
+  "mainnet": "Mainnet",
+  "testnet": "Testnet",
+  "convert": "Adres converteren",
+  "sample": "Een voorbeeld proberen",
+  "filecoinAddress": "Filecoin-adres",
+  "ethereumAddress": "Ethereum-achtig adres",
+  "invalidAddress": "Voer een Filecoin f410- of t410-adres in, of een 0x-adres met 40 hexadecimale cijfers.",
+  "filecoinChecksum": "De Filecoin-checksum komt niet overeen. Kopieer het volledige adres opnieuw.",
+  "ethereumChecksum": "De checksum van het 0x-adres met hoofdletters en kleine letters komt niet overeen. Controleer het adres in je wallet of explorer.",
+  "actorId": "Dit adres codeert een Filecoin-actor-ID. Gebruik een gedelegeerd f410- of t410-adres of het equivalente 0x-adres.",
+  "copy": "Kopiëren",
+  "copied": "Gekopieerd"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Unicode 正規化工具",
+  "description": "將貼上的 Unicode 文字正規化為 NFC、NFD、NFKC 或 NFKD。在瀏覽器中比較碼位並複製結果。"
+}

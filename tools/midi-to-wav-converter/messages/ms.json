@@ -1,0 +1,22 @@
+{
+  "chooseFile": "Pilih fail MIDI",
+  "changeFile": "Tukar fail",
+  "dropHint": "atau lepaskan fail MIDI di sini",
+  "privacy": "Fail anda kekal dalam pelayar ini.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (terbina dalam)",
+  "chooseSoundFont": "Pilih SoundFont",
+  "useDefaultSoundFont": "Gunakan SoundFont terbina dalam",
+  "soundFontHint": "Pilihan. Pilih fail .sf2 atau .sf3 untuk menukar bunyi alat muzik.",
+  "render": "Tukar kepada WAV",
+  "rendering": "Menjana audio…",
+  "cancel": "Batal",
+  "preview": "Pratonton audio WAV",
+  "download": "Muat turun WAV",
+  "invalidMidi": "Fail MIDI ini tidak dapat dibuka atau tidak mengandungi not yang boleh dimainkan. Cuba fail .mid atau .midi lain.",
+  "unsupportedTiming": "Eksport fail ini sebagai fail MIDI dengan pemasaan berasaskan rentak (format 0 atau 1), kemudian cuba lagi.",
+  "invalidSoundFont": "SoundFont ini tidak dapat dibuka. Cuba fail .sf2 atau .sf3 lain atau gunakan SoundFont terbina dalam.",
+  "soundFontUnavailable": "SoundFont terbina dalam tidak dapat dimuatkan. Cuba lagi atau pilih fail SoundFont.",
+  "tooLong": "Pilih fail MIDI yang berdurasi kurang daripada 10 minit untuk menjana audio dalam pelayar.",
+  "renderFailed": "Audio tidak dapat dijana. Cuba fail MIDI yang lebih kecil atau SoundFont lain."
+}

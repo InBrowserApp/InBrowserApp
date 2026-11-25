@@ -1,0 +1,4 @@
+{
+  "name": "Søk etter Filecoin-lagringsavtale",
+  "description": "Søk opp en Filecoin-lagringsavtale med Deal ID. Kontroller avtalestatus på hovednettet, leverandør og start- og sluttdato, og kopier Piece CID."
+}

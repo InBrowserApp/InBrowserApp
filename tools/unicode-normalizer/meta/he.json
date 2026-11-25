@@ -1,0 +1,4 @@
+{
+  "name": "נרמול טקסט Unicode",
+  "description": "נרמלו טקסט Unicode לפי NFC, NFD, NFKC או NFKD. השוו נקודות קוד והעתיקו את התוצאה ישירות מהדפדפן."
+}

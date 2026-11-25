@@ -9,9 +9,10 @@ import {
   EmptyTitle,
 } from "../../ui/empty"
 import { Spinner } from "../../ui/spinner"
-import { Box, Folder } from "../../../icons"
+import { Box, Folder, FolderInput } from "../../../icons"
 import { cn } from "../../../lib/utils"
 import { exampleFile, getModelFormat, loadModel } from "./load-model"
+import type { ChangeEvent } from "react"
 import type { ModelFormat, OpenModel } from "./load-model"
 import type { ModelViewerMessages } from "./messages"
 
@@ -27,12 +28,15 @@ export default function ModelViewer({
   messages: ModelViewerMessages
 }) {
   const input = useRef<HTMLInputElement>(null)
+  const folder = useRef<HTMLInputElement>(null)
   const chooseButton = useRef<HTMLButtonElement>(null)
   const emptyActions = useRef<HTMLDivElement>(null)
   const restoreFocus = useRef(false)
   const sequence = useRef(0)
   const [model, setModel] = useState<OpenModel>()
-  const [status, setStatus] = useState<"loading" | "invalid">()
+  const [status, setStatus] = useState<
+    "loading" | "invalid" | "missingCompanions"
+  >()
   const [dragging, setDragging] = useState(false)
   const options = getModelFormat(format)
   useEffect(
@@ -62,15 +66,32 @@ export default function ModelViewer({
         emptyActions.current?.contains(document.activeElement) ?? false
       setModel(next)
       setStatus(undefined)
-    } catch {
-      if (request === sequence.current) setStatus("invalid")
+    } catch (error) {
+      if (request === sequence.current) {
+        setStatus(
+          error instanceof Error && error.cause === "missingCompanions"
+            ? "missingCompanions"
+            : "invalid"
+        )
+      }
     }
+  }
+
+  function pickFiles(event: ChangeEvent<HTMLInputElement>) {
+    void open(Array.from(event.currentTarget.files ?? []))
+    event.currentTarget.value = ""
   }
 
   const choose = (
     <Button ref={chooseButton} onClick={() => input.current?.click()}>
       <Folder data-icon="inline-start" aria-hidden="true" />
       {m.open}
+    </Button>
+  )
+  const chooseFolder = options.companions && (
+    <Button variant="outline" onClick={() => folder.current?.click()}>
+      <FolderInput data-icon="inline-start" aria-hidden="true" />
+      {m.openFolder}
     </Button>
   )
   const opening = (
@@ -114,20 +135,28 @@ export default function ModelViewer({
           ...options.extensions,
           ...(options.companions?.accept ?? []),
         ].join(",")}
-        onChange={(event) => {
-          void open(Array.from(event.currentTarget.files ?? []))
-          event.currentTarget.value = ""
-        }}
+        onChange={pickFiles}
       />
-      {status === "invalid" && (
+      {options.companions && (
+        <input
+          ref={folder}
+          type="file"
+          hidden
+          multiple
+          {...{ webkitdirectory: "" }}
+          onChange={pickFiles}
+        />
+      )}
+      {status && status !== "loading" && (
         <Alert variant="destructive">
-          <AlertDescription>{m.invalid}</AlertDescription>
+          <AlertDescription>{m[status]}</AlertDescription>
         </Alert>
       )}
       {model ? (
         <>
           <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
             {choose}
+            {chooseFolder}
             <p
               dir="auto"
               className="min-w-0 flex-1 truncate text-sm font-medium"
@@ -166,6 +195,12 @@ export default function ModelViewer({
                 ].join(" · ")}
               </span>
               <br />
+              {options.companions && (
+                <>
+                  {m.companionHelp}
+                  <br />
+                </>
+              )}
               {m.privacy}
             </EmptyDescription>
           </EmptyHeader>
@@ -174,6 +209,7 @@ export default function ModelViewer({
             className="flex flex-wrap items-center justify-center gap-2"
           >
             {choose}
+            {chooseFolder}
             <Button variant="outline" onClick={() => void open()}>
               {m.example}
             </Button>

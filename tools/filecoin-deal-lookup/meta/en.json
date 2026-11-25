@@ -1,0 +1,4 @@
+{
+  "name": "Filecoin Deal Lookup",
+  "description": "Look up a Filecoin storage deal by Deal ID. Check mainnet deal status, provider, start and end dates, and copy its Piece CID."
+}

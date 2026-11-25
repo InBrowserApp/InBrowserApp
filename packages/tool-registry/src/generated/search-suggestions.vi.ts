@@ -629,6 +629,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ipfs",
+    name: "Trình chuyển đổi địa chỉ Filecoin",
+    slug: "filecoin-address-converter",
+  },
+  {
+    category: "ipfs",
+    name: "Tra cứu thỏa thuận Filecoin",
+    slug: "filecoin-deal-lookup",
+  },
+  {
+    category: "ipfs",
     name: "Công cụ tính Piece CID Filecoin",
     slug: "filecoin-piece-cid-calculator",
   },
@@ -686,6 +696,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình tạo .gitignore",
     slug: "gitignore-generator",
+  },
+  {
+    category: "image",
+    name: "Trình xem GLB / glTF",
+    slug: "gltf-viewer",
   },
   {
     category: "web",
@@ -1128,6 +1143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "markdown-to-pdf-converter",
   },
   {
+    category: "document",
+    name: "Trình xem MBOX",
+    slug: "mbox-viewer",
+  },
+  {
     category: "crypto",
     name: "Hash MD4 văn bản hoặc tệp",
     slug: "md4-hash-text-or-file",
@@ -1171,6 +1191,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "Bộ theo dõi MIDI",
     slug: "midi-monitor",
+  },
+  {
+    category: "misc",
+    name: "Chuyển MIDI sang WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
+    name: "Chuyển giọng và đổi nhịp độ MIDI",
+    slug: "midi-transposer",
   },
   {
     category: "network",
@@ -1823,6 +1853,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Trình chuẩn hóa Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Bộ chuyển đổi Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
@@ -1966,6 +2001,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "network",
     name: "Công cụ tính mạng con IPv4 theo VLSM",
     slug: "vlsm-calculator",
+  },
+  {
+    category: "document",
+    name: "Trình xem WARC",
+    slug: "warc-viewer",
   },
   {
     category: "crypto",

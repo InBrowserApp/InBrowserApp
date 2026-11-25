@@ -16,5 +16,12 @@
   "controls": "Arrastra para girar · Usa la rueda para acercar o alejar · Arrastra con el botón derecho para desplazar",
   "touchControls": "Arrastra para girar · Pellizca para acercar o alejar · Arrastra con dos dedos para desplazar",
   "keyboardControls": "Usa las flechas para girar y + o − para acercar o alejar. Mantén pulsada Mayús y usa las flechas para desplazar la vista.",
-  "missingResources": "Faltan materiales o texturas. Abre el modelo y los archivos asociados a la vez."
+  "missingResources": "Faltan materiales o texturas. Abre el modelo y los archivos asociados a la vez.",
+  "companionHelp": "Selecciona el modelo y los archivos asociados a la vez.",
+  "missingCompanions": "Falta un recurso del modelo. Abre el modelo junto con los búferes y las texturas a los que hace referencia.",
+  "animation": "Animación",
+  "clip": "Clip {number}",
+  "playAnimation": "Reproducir animación",
+  "pauseAnimation": "Pausar animación",
+  "openFolder": "Abrir carpeta"
 }

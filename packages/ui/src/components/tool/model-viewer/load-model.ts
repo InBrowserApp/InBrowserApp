@@ -1,8 +1,9 @@
-import type { Object3D, Vector3 } from "three"
+import type { AnimationClip, Object3D, Vector3 } from "three"
 
 type ParsedModel = {
   object: Object3D
   missingResources?: boolean
+  animations?: AnimationClip[]
 }
 
 type FormatOptions = {
@@ -10,6 +11,7 @@ type FormatOptions = {
   companions?: { accept: string[]; labels: string[] }
   example: { name: string; read: () => Promise<BlobPart> }
   zUp: boolean
+  unit?: string
   parse: (file: File, files: File[]) => Promise<ParsedModel>
 }
 
@@ -45,6 +47,26 @@ const formats = {
       )
     },
   },
+  gltf: {
+    extensions: [".glb", ".gltf"],
+    unit: "meter",
+    companions: {
+      accept: [".bin", "image/*"],
+      labels: [".bin", "PNG", "JPG", "WebP"],
+    },
+    example: {
+      name: "orbiting-pyramid.gltf",
+      read: async () => (await import("./orbiting-pyramid.gltf?raw")).default,
+    },
+    zUp: false,
+    async parse(file, files) {
+      const { loadGltf } = await import("@workspace/model-mesh/gltf")
+      return loadGltf(
+        file,
+        files.filter((candidate) => candidate !== file)
+      )
+    },
+  },
 } satisfies Record<string, FormatOptions>
 
 export type ModelFormat = keyof typeof formats
@@ -54,7 +76,9 @@ export type OpenModel = {
   center: Vector3
   size: Vector3
   missingResources?: boolean
+  animations?: AnimationClip[]
   zUp: boolean
+  unit?: string
   dispose: () => void
 }
 
@@ -78,12 +102,15 @@ export async function loadModel(
   })
   if (!file) throw new Error("Missing model")
 
-  const [{ object, missingResources }, { Box3, Vector3 }, { disposeModel }] =
-    await Promise.all([
-      options.parse(file, files),
-      import("three"),
-      import("@workspace/model-mesh/dispose"),
-    ])
+  const [
+    { object, missingResources, animations },
+    { Box3, Vector3 },
+    { disposeModel },
+  ] = await Promise.all([
+    options.parse(file, files),
+    import("three"),
+    import("@workspace/model-mesh/dispose"),
+  ])
   const bounds = new Box3().setFromObject(object)
   const size = bounds.getSize(new Vector3())
   const center = bounds.getCenter(new Vector3())
@@ -102,7 +129,9 @@ export async function loadModel(
     size,
     center,
     missingResources,
+    animations,
     zUp: options.zUp,
+    unit: options.unit,
     dispose: () => disposeModel(object),
   }
 }

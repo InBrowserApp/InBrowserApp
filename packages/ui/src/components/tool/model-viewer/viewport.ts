@@ -1,4 +1,7 @@
 import {
+  AnimationMixer,
+  Box3,
+  Sphere,
   Color,
   DirectionalLight,
   GridHelper,
@@ -10,14 +13,15 @@ import {
   WebGLRenderer,
 } from "three"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
-import type { Material, Mesh } from "three"
+import type { AnimationClip, Material, Mesh } from "three"
 import type { OpenModel } from "./load-model"
 
 export function createModelViewport(
   host: HTMLElement,
-  { object, size, center, zUp }: OpenModel
+  { object, size, center, zUp, animations }: OpenModel
 ) {
-  const radius = size.length() / 2
+  const initialRadius = size.length() / 2
+  let radius = initialRadius
   const renderer = new WebGLRenderer({ antialias: true, alpha: true })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
   renderer.domElement.className = "absolute inset-0 block"
@@ -60,6 +64,8 @@ export function createModelViewport(
   const direction = zUp ? new Vector3(1, -1, 0.86) : new Vector3(1, 0.86, 1)
   camera.position.copy(direction).setLength(radius * 6)
   const controls = new OrbitControls(camera, renderer.domElement)
+  const mixer = animations?.length ? new AnimationMixer(object) : undefined
+  let selectedClip: AnimationClip | undefined
   controls.minZoom = 0.12
   controls.maxZoom = 100
   controls.zoomToCursor = true
@@ -102,11 +108,24 @@ export function createModelViewport(
   applyTheme()
   return {
     fit() {
-      camera.position.sub(controls.target).setLength(radius * 6)
+      const direction = camera.position.clone().sub(controls.target)
       controls.target.set(0, 0, 0)
+      radius = initialRadius
+      if (selectedClip) {
+        const current = new Box3()
+          .setFromObject(object, true)
+          .getBoundingSphere(new Sphere())
+        if (current.radius > 0 && Number.isFinite(current.radius)) {
+          radius = current.radius
+          controls.target.copy(current.center)
+        }
+      }
+      camera.position.copy(controls.target).add(direction.setLength(radius * 6))
+      camera.near = radius * 0.001
+      camera.far = radius * 60
       camera.zoom = 1
-      camera.updateProjectionMatrix()
       controls.update()
+      resize()
     },
     zoom(factor: number) {
       controls.dollyIn(factor)
@@ -129,7 +148,31 @@ export function createModelViewport(
       })
       render()
     },
+    setPlayback(index: number, playing: boolean) {
+      const clip = animations?.[index]
+      if (!mixer || !clip) return
+      if (selectedClip !== clip) {
+        mixer.stopAllAction()
+        mixer.clipAction(clip).reset().play()
+        mixer.update(0)
+        selectedClip = clip
+      }
+      if (playing) {
+        let previousTime = performance.now()
+        renderer.setAnimationLoop((time) => {
+          mixer.update(Math.min((time - previousTime) / 1000, 0.1))
+          previousTime = time
+          render()
+        })
+      } else {
+        renderer.setAnimationLoop(null)
+      }
+      render()
+    },
     dispose() {
+      renderer.setAnimationLoop(null)
+      mixer?.stopAllAction()
+      mixer?.uncacheRoot(object)
       observer.disconnect()
       theme.disconnect()
       controls.dispose()

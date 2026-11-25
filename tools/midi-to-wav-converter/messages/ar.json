@@ -1,0 +1,22 @@
+{
+  "chooseFile": "اختر ملف MIDI",
+  "changeFile": "تغيير الملف",
+  "dropHint": "أو أفلت ملف MIDI هنا",
+  "privacy": "تبقى ملفاتك في هذا المتصفح.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (مدمج)",
+  "chooseSoundFont": "اختر ملف SoundFont",
+  "useDefaultSoundFont": "استخدام SoundFont المدمج",
+  "soundFontHint": "اختياري. اختر ملف ‎.sf2 أو ‎.sf3 لتغيير أصوات الآلات.",
+  "render": "تحويل إلى WAV",
+  "rendering": "جارٍ توليد الصوت…",
+  "cancel": "إلغاء",
+  "preview": "معاينة صوت WAV",
+  "download": "تنزيل WAV",
+  "invalidMidi": "تعذّر فتح ملف MIDI أو لا يحتوي على نغمات قابلة للتشغيل. جرّب ملف ‎.mid أو ‎.midi آخر.",
+  "unsupportedTiming": "صدّر الملف بتنسيق MIDI يعتمد توقيته على النبضات (التنسيق 0 أو 1)، ثم أعد المحاولة.",
+  "invalidSoundFont": "تعذّر فتح ملف SoundFont. جرّب ملف ‎.sf2 أو ‎.sf3 آخر أو استخدم SoundFont المدمج.",
+  "soundFontUnavailable": "تعذّر تحميل SoundFont المدمج. أعد المحاولة أو اختر ملف SoundFont.",
+  "tooLong": "اختر ملف MIDI مدته أقل من 10 دقائق لتحويله في المتصفح.",
+  "renderFailed": "تعذّر توليد الصوت. جرّب ملف MIDI أصغر أو ملف SoundFont آخر."
+}

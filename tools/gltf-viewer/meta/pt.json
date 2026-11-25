@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de GLB / glTF",
+  "description": "Abra modelos GLB e glTF 2.0 no navegador. Inspecione a geometria, os materiais e as texturas e reproduza as animações do modelo."
+}

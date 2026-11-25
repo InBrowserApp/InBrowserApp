@@ -1,0 +1,20 @@
+{
+  "formLabel": "정규화 형식",
+  "NFC": "가능한 경우 문자와 악센트를 결합합니다. 텍스트를 비교하거나 저장할 때 기본값으로 적합합니다.",
+  "NFD": "문자와 결합 악센트를 분리하여 텍스트의 표현 방식을 확인합니다.",
+  "NFKC": "문자와 악센트를 결합하고 호환 문자를 변환합니다. 예를 들어 Ａ는 A로, ①은 1로, ﬁ는 fi로 바뀝니다.",
+  "NFKD": "문자와 결합 악센트를 분리하고 Ａ, ①, ﬁ와 같은 호환 문자를 변환합니다.",
+  "inputLabel": "원본 텍스트",
+  "inputPlaceholder": "정규화할 텍스트를 입력하거나 붙여넣으세요",
+  "outputLabel": "정규화된 텍스트",
+  "outputPlaceholder": "여기에 결과가 표시됩니다",
+  "exampleLabel": "예제 사용",
+  "clearLabel": "지우기",
+  "copyLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "copyFailedLabel": "복사하지 못했습니다",
+  "changedLabel": "텍스트가 변경됨",
+  "unchangedLabel": "이미 이 형식입니다",
+  "codePointsLabel": "코드 포인트 비교",
+  "codePointsLimit": "각 텍스트의 코드 포인트를 최대 40개까지 표시합니다."
+}

@@ -159,6 +159,9 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
+  "filecoin-address-converter": () =>
+    import("@tool/filecoin-address-converter/page"),
+  "filecoin-deal-lookup": () => import("@tool/filecoin-deal-lookup/page"),
   "filecoin-piece-cid-calculator": () =>
     import("@tool/filecoin-piece-cid-calculator/page"),
   "filecoin-storage-cost-calculator": () =>
@@ -175,6 +178,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "github-actions-workflow-validator": () =>
     import("@tool/github-actions-workflow-validator/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
+  "gltf-viewer": () => import("@tool/gltf-viewer/page"),
   "gpu-information": () => import("@tool/gpu-information/page"),
   "gpx-viewer": () => import("@tool/gpx-viewer/page"),
   "graphviz-dot-previewer": () => import("@tool/graphviz-dot-previewer/page"),
@@ -279,6 +283,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/markdown-to-html-converter/page"),
   "markdown-to-pdf-converter": () =>
     import("@tool/markdown-to-pdf-converter/page"),
+  "mbox-viewer": () => import("@tool/mbox-viewer/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "media-info-viewer": () => import("@tool/media-info-viewer/page"),
@@ -289,6 +294,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
   "midi-monitor": () => import("@tool/midi-monitor/page"),
+  "midi-to-wav-converter": () => import("@tool/midi-to-wav-converter/page"),
+  "midi-transposer": () => import("@tool/midi-transposer/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
   "mobi-reader": () => import("@tool/mobi-reader/page"),
   "mobi-to-epub-converter": () => import("@tool/mobi-to-epub-converter/page"),
@@ -451,6 +458,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),
   "unicode-invisible-character-checker": () =>
     import("@tool/unicode-invisible-character-checker/page"),
+  "unicode-normalizer": () => import("@tool/unicode-normalizer/page"),
   "unicode-punycode-converter": () =>
     import("@tool/unicode-punycode-converter/page"),
   "unit-converter": () => import("@tool/unit-converter/page"),
@@ -485,6 +493,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "video-trimmer": () => import("@tool/video-trimmer/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "vlsm-calculator": () => import("@tool/vlsm-calculator/page"),
+  "warc-viewer": () => import("@tool/warc-viewer/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "wkt-geojson-converter": () => import("@tool/wkt-geojson-converter/page"),

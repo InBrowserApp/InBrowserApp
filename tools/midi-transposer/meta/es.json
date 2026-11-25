@@ -1,0 +1,4 @@
+{
+  "name": "Transposición MIDI y ajuste de tempo",
+  "description": "Transpón las notas de un archivo MIDI por semitonos, acelera o ralentiza el tempo y descarga el MIDI editado desde tu navegador."
+}

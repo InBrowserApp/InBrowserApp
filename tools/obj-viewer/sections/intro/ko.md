@@ -11,3 +11,5 @@ Wavefront OBJ 파일은 형상 정보를 저장하고 하나 이상의 `.mtl` �
 ## 관련 3D 형식 보기
 
 3D 프린팅용으로 내보낸 삼각형 메시는 [STL 뷰어](../stl-viewer/)를 사용하세요. 원본 CAD 부품이나 조립품이 `.step` 또는 `.stp` 파일로 있다면 [STEP 뷰어](../step-viewer/)에서 열 수 있습니다.
+
+- [GLB / glTF 뷰어](../gltf-viewer/)

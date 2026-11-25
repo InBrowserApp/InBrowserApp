@@ -11,3 +11,5 @@ De buitenmaten geven de volledige afmetingen langs de X-, Y- en Z-as aan. STL sl
 ## Andere 3D-bestandsformaten bekijken
 
 STL beschrijft het oppervlak van een onderdeel met driehoeken. Gebruik de [OBJ-viewer](../obj-viewer/) voor een Wavefront-bestand met een bijbehorende materiaalbibliotheek. Open een CAD-uitwisselingsbestand met een samenstelling of volumemodel in de [STEP-viewer](../step-viewer/).
+
+- [GLB- en glTF-viewer](../gltf-viewer/)
