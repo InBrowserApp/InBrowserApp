@@ -1,0 +1,16 @@
+{
+  "preview": "Direktevisning fra kameraet",
+  "previewHint": "Slå på kameraet for å se bildet i sanntid.",
+  "start": "Slå på kameraet",
+  "starting": "Åpner kameraet …",
+  "stop": "Slå av kameraet",
+  "camera": "Kamera",
+  "defaultCamera": "Standardkamera",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "Forespurt oppløsning",
+  "videoDetails": "Videodetaljer",
+  "actualResolution": "Faktisk oppløsning",
+  "previewFps": "Målt bildefrekvens",
+  "reportedFps": "Rapportert bildefrekvens",
+  "cameraError": "Kunne ikke åpne kameraet. Sjekk tillatelsene i nettleseren og prøv igjen. Hvis kameraet er opptatt, lukk andre apper som kan bruke det."
+}

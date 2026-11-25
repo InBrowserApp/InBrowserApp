@@ -1,0 +1,16 @@
+{
+  "preview": "Camera preview",
+  "previewHint": "Start the camera to see its live preview.",
+  "start": "Start camera",
+  "starting": "Opening camera…",
+  "stop": "Stop camera",
+  "camera": "Camera",
+  "defaultCamera": "Default camera",
+  "cameraOption": "Camera {number}",
+  "requestedResolution": "Requested resolution",
+  "videoDetails": "Live video details",
+  "actualResolution": "Actual resolution",
+  "previewFps": "Preview frame rate",
+  "reportedFps": "Reported frame rate",
+  "cameraError": "Could not open the camera. Check your browser permissions, then try again. If the camera is busy, close other apps that may be using it."
+}

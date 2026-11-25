@@ -38918,6 +38918,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "webcam-test",
+    language: "ar",
+  },
+  {
+    slug: "webcam-test",
+    language: "de",
+  },
+  {
+    slug: "webcam-test",
+    language: "en",
+  },
+  {
+    slug: "webcam-test",
+    language: "es",
+  },
+  {
+    slug: "webcam-test",
+    language: "fr",
+  },
+  {
+    slug: "webcam-test",
+    language: "he",
+  },
+  {
+    slug: "webcam-test",
+    language: "hi",
+  },
+  {
+    slug: "webcam-test",
+    language: "id",
+  },
+  {
+    slug: "webcam-test",
+    language: "it",
+  },
+  {
+    slug: "webcam-test",
+    language: "ja",
+  },
+  {
+    slug: "webcam-test",
+    language: "ko",
+  },
+  {
+    slug: "webcam-test",
+    language: "ms",
+  },
+  {
+    slug: "webcam-test",
+    language: "nl",
+  },
+  {
+    slug: "webcam-test",
+    language: "no",
+  },
+  {
+    slug: "webcam-test",
+    language: "pl",
+  },
+  {
+    slug: "webcam-test",
+    language: "pt",
+  },
+  {
+    slug: "webcam-test",
+    language: "ru",
+  },
+  {
+    slug: "webcam-test",
+    language: "sv",
+  },
+  {
+    slug: "webcam-test",
+    language: "th",
+  },
+  {
+    slug: "webcam-test",
+    language: "tr",
+  },
+  {
+    slug: "webcam-test",
+    language: "vi",
+  },
+  {
+    slug: "webcam-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "webcam-test",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },

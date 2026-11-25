@@ -1,0 +1,16 @@
+{
+  "preview": "Aperçu de la caméra",
+  "previewHint": "Activez la caméra pour voir l’aperçu en direct.",
+  "start": "Activer la caméra",
+  "starting": "Activation de la caméra…",
+  "stop": "Désactiver la caméra",
+  "camera": "Caméra",
+  "defaultCamera": "Caméra par défaut",
+  "cameraOption": "Caméra {number}",
+  "requestedResolution": "Résolution demandée",
+  "videoDetails": "Détails de la vidéo en direct",
+  "actualResolution": "Résolution réelle",
+  "previewFps": "Cadence de l’aperçu",
+  "reportedFps": "Cadence déclarée",
+  "cameraError": "Impossible d’accéder à la caméra. Vérifiez les autorisations du navigateur, puis réessayez. Si la caméra est occupée, fermez les autres applications susceptibles de l’utiliser."
+}

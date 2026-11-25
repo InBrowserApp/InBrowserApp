@@ -1,0 +1,16 @@
+{
+  "preview": "Pratinjau kamera",
+  "previewHint": "Nyalakan kamera untuk melihat pratinjau langsung.",
+  "start": "Nyalakan kamera",
+  "starting": "Membuka kamera…",
+  "stop": "Matikan kamera",
+  "camera": "Kamera",
+  "defaultCamera": "Kamera default",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "Resolusi yang diminta",
+  "videoDetails": "Detail video langsung",
+  "actualResolution": "Resolusi aktual",
+  "previewFps": "Frame rate pratinjau",
+  "reportedFps": "Frame rate yang dilaporkan",
+  "cameraError": "Kamera tidak dapat dibuka. Periksa izin browser, lalu coba lagi. Jika kamera sedang digunakan, tutup aplikasi lain yang mungkin menggunakannya."
+}

@@ -2118,6 +2118,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "webarchive-to-html-converter",
   },
   {
+    category: "video",
+    name: "Test kamery internetowej",
+    slug: "webcam-test",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool tekstu lub pliku",
     slug: "whirlpool-hash-text-or-file",

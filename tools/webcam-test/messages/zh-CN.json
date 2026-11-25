@@ -1,0 +1,16 @@
+{
+  "preview": "摄像头预览",
+  "previewHint": "开启摄像头以查看实时画面。",
+  "start": "开启摄像头",
+  "starting": "正在开启摄像头…",
+  "stop": "关闭摄像头",
+  "camera": "摄像头",
+  "defaultCamera": "默认摄像头",
+  "cameraOption": "摄像头 {number}",
+  "requestedResolution": "请求的分辨率",
+  "videoDetails": "实时视频信息",
+  "actualResolution": "实际分辨率",
+  "previewFps": "预览帧率",
+  "reportedFps": "报告的帧率",
+  "cameraError": "无法开启摄像头。请检查浏览器权限后重试。如果摄像头正被占用，请关闭可能正在使用它的其他应用。"
+}

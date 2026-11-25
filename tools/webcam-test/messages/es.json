@@ -1,0 +1,16 @@
+{
+  "preview": "Vista previa de la cámara",
+  "previewHint": "Activa la cámara para ver la imagen en directo.",
+  "start": "Activar cámara",
+  "starting": "Abriendo la cámara…",
+  "stop": "Desactivar cámara",
+  "camera": "Cámara",
+  "defaultCamera": "Cámara predeterminada",
+  "cameraOption": "Cámara {number}",
+  "requestedResolution": "Resolución solicitada",
+  "videoDetails": "Datos del vídeo en directo",
+  "actualResolution": "Resolución real",
+  "previewFps": "FPS de la vista previa",
+  "reportedFps": "FPS indicados por el navegador",
+  "cameraError": "No se pudo abrir la cámara. Revisa los permisos del navegador y vuelve a intentarlo. Si la cámara está ocupada, cierra las otras aplicaciones que puedan estar usándola."
+}

@@ -1,0 +1,16 @@
+{
+  "preview": "Xem trước camera",
+  "previewHint": "Bật camera để xem hình ảnh trực tiếp.",
+  "start": "Bật camera",
+  "starting": "Đang mở camera…",
+  "stop": "Tắt camera",
+  "camera": "Camera",
+  "defaultCamera": "Camera mặc định",
+  "cameraOption": "Camera {number}",
+  "requestedResolution": "Độ phân giải yêu cầu",
+  "videoDetails": "Thông số video trực tiếp",
+  "actualResolution": "Độ phân giải thực tế",
+  "previewFps": "Tốc độ khung hình xem trước",
+  "reportedFps": "Tốc độ khung hình do trình duyệt báo",
+  "cameraError": "Không mở được camera. Hãy kiểm tra quyền truy cập trong trình duyệt rồi thử lại. Nếu camera đang bận, hãy đóng các ứng dụng có thể đang dùng camera."
+}

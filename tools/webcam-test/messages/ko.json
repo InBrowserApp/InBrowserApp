@@ -1,0 +1,16 @@
+{
+  "preview": "카메라 미리보기",
+  "previewHint": "카메라를 시작하면 실시간 영상이 표시됩니다.",
+  "start": "카메라 시작",
+  "starting": "카메라 준비 중…",
+  "stop": "카메라 중지",
+  "camera": "카메라",
+  "defaultCamera": "기본 카메라",
+  "cameraOption": "카메라 {number}",
+  "requestedResolution": "요청 해상도",
+  "videoDetails": "실시간 영상 정보",
+  "actualResolution": "실제 해상도",
+  "previewFps": "미리보기 프레임 속도",
+  "reportedFps": "설정된 프레임 속도",
+  "cameraError": "카메라를 열 수 없습니다. 브라우저의 카메라 권한을 확인한 뒤 다시 시도하세요. 다른 앱이 카메라를 사용 중이라면 해당 앱을 닫으세요."
+}

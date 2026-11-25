@@ -1,0 +1,16 @@
+{
+  "preview": "Kamera önizlemesi",
+  "previewHint": "Canlı önizlemeyi görmek için kamerayı açın.",
+  "start": "Kamerayı aç",
+  "starting": "Kamera açılıyor…",
+  "stop": "Kamerayı kapat",
+  "camera": "Kamera",
+  "defaultCamera": "Varsayılan kamera",
+  "cameraOption": "Kamera {number}",
+  "requestedResolution": "İstenen çözünürlük",
+  "videoDetails": "Canlı video bilgileri",
+  "actualResolution": "Gerçek çözünürlük",
+  "previewFps": "Önizleme kare hızı",
+  "reportedFps": "Bildirilen kare hızı",
+  "cameraError": "Kamera açılamadı. Tarayıcı izinlerini kontrol edip tekrar deneyin. Kamera meşgulse kamerayı kullanıyor olabilecek diğer uygulamaları kapatın."
+}
