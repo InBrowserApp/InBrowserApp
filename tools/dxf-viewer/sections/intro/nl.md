@@ -15,3 +15,5 @@ DXF slaat tekengegevens op als objecten en bijbehorende tabellen. Zie de [DXF-re
 ## Het oorspronkelijke CAD-model bekijken
 
 Heb je het oorspronkelijke STEP- of STP-bestand, bekijk het massieve onderdeel of de samenstelling dan in 3D in de [STEP-viewer](../step-viewer/).
+
+Gebruik de [DXF naar SVG-converter](../dxf-to-svg-converter/) om geselecteerde lagen uit de modelruimte als SVG te exporteren voor een document, webpagina of vectorbewerkingsprogramma.

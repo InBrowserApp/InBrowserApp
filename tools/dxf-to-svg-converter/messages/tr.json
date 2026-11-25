@@ -1,0 +1,19 @@
+{
+  "open": "DXF dosyası aç",
+  "change": "DXF dosyasını değiştir",
+  "drop": "ASCII DXF çizimini buraya bırakın",
+  "example": "Örnek dene",
+  "privacy": "Dosyanız cihazınızda kalır.",
+  "reading": "Çizim okunuyor…",
+  "failed": "Bu DXF çizimi okunamadı. Dosyayı kontrol edip tekrar deneyin.",
+  "binary": "Bu dosya ikili DXF biçiminde. CAD yazılımınızda ASCII DXF olarak kaydedip yeniden açın.",
+  "empty": "Bu çizimin model alanında dışa aktarılabilecek, desteklenen geometri yok.",
+  "layers": "Katmanlar",
+  "selectAll": "Tümünü seç",
+  "clear": "Seçimi temizle",
+  "preview": "SVG önizlemesi",
+  "noLayers": "Önizlemek ve indirmek için en az bir katman seçin.",
+  "size": "Çizim boyutları",
+  "fileUnits": "çizim birimi",
+  "download": "SVG indir"
+}

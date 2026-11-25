@@ -15,3 +15,5 @@ DXF menyimpan informasi gambar sebagai entitas dan tabel terkait. Lihat [referen
 ## Periksa model CAD asli
 
 Jika Anda memiliki file STEP atau STP asli, gunakan [Penampil STEP](../step-viewer/) untuk memeriksa komponen solid atau rakitan dalam 3D.
+
+Gunakan [Konverter DXF ke SVG](../dxf-to-svg-converter/) untuk mengekspor lapisan ruang model yang dipilih menjadi SVG bagi dokumen, halaman web, atau editor vektor.

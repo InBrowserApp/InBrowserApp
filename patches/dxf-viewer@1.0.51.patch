@@ -17,3 +17,12 @@ index 64fe0c3559749b2177031a88b33e10297b323068..8ad04875e26f62ba13870db4063ba1d9
      }
  
      /**
+diff --git a/src/SceneReader.js b/src/SceneReader.js
+--- a/src/SceneReader.js
++++ b/src/SceneReader.js
+@@ -194,3 +194,4 @@ class BatchReader {
+     *_ReadGeometry(instanceBatch) {
+         const color = instanceBatch ? instanceBatch._ResolveInstanceColor(this) : this.key.color
+-        const layer = this.layer ?? instanceBatch?.layer ?? null
++        /* Match DxfViewer and the flattened block path when an INSERT supplies the layer. */
++        const layer = instanceBatch?.layer ?? this.layer ?? null

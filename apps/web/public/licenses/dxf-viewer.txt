@@ -1,7 +1,7 @@
 dxf-viewer 1.0.51, copyright Artyom Lebedev and contributors.
 
 Source for this exact release: https://registry.npmjs.org/dxf-viewer/-/dxf-viewer-1.0.51.tgz
-Source for the CFF glyph bounds change: https://github.com/InBrowserApp/InBrowserApp/blob/main/patches/dxf-viewer%401.0.51.patch
+Source for the CFF glyph bounds and block layer changes: https://github.com/InBrowserApp/InBrowserApp/blob/main/patches/dxf-viewer%401.0.51.patch
 
 Mozilla Public License Version 2.0
 ==================================

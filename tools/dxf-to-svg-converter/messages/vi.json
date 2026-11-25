@@ -1,0 +1,19 @@
+{
+  "open": "Mở tệp DXF",
+  "change": "Đổi tệp DXF",
+  "drop": "Thả bản vẽ DXF dạng ASCII vào đây",
+  "example": "Thử ví dụ",
+  "privacy": "Tệp được giữ trên thiết bị của bạn.",
+  "reading": "Đang đọc bản vẽ…",
+  "failed": "Không đọc được bản vẽ DXF này. Hãy kiểm tra tệp rồi thử lại.",
+  "binary": "Đây là tệp DXF nhị phân. Hãy lưu dưới dạng DXF ASCII trong phần mềm CAD rồi mở lại.",
+  "empty": "Bản vẽ này không có hình học được hỗ trợ trong không gian mô hình để xuất.",
+  "layers": "Lớp",
+  "selectAll": "Chọn tất cả",
+  "clear": "Bỏ chọn",
+  "preview": "Bản xem trước SVG",
+  "noLayers": "Chọn ít nhất một lớp để xem trước và tải xuống.",
+  "size": "Kích thước bản vẽ",
+  "fileUnits": "đơn vị bản vẽ",
+  "download": "Tải xuống SVG"
+}

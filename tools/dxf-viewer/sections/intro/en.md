@@ -15,3 +15,5 @@ DXF stores drawing information as entities and related tables. See the [Autodesk
 ## Inspect the original CAD model
 
 Use the [STEP Viewer](../step-viewer/) to inspect a solid part or assembly in 3D when you have the original STEP or STP file.
+
+Use the [DXF to SVG Converter](../dxf-to-svg-converter/) to export selected model-space layers as an SVG for a document, a web page or a vector editor.

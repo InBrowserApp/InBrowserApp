@@ -1,4 +1,5 @@
-import { dxfEncoding } from "./encoding"
+import { dxfEncoding } from "@workspace/dxf-drawing/encoding"
+import { drawingFonts } from "@workspace/dxf-drawing/fonts"
 import type { DxfViewer as Viewer } from "dxf-viewer"
 
 export type Drawing = {
@@ -38,21 +39,11 @@ export async function openDrawing(
 ): Promise<Drawing> {
   const header = await file.slice(0, 65536).text()
   const encoding = dxfEncoding(header)
-  const [{ DxfViewer }, { dejavuSans }, { cjk, devanagari, thai }] =
-    await Promise.all([
-      import("dxf-viewer"),
-      import("@workspace/svg-pdf/fonts"),
-      import("@workspace/libreoffice/fonts"),
-    ])
+  const [{ DxfViewer }, fonts] = await Promise.all([
+    import("dxf-viewer"),
+    drawingFonts(lang),
+  ])
   signal.throwIfAborted()
-  const fonts = [
-    dejavuSans,
-    ...(lang === "th"
-      ? [thai, cjk, devanagari]
-      : lang === "hi"
-        ? [devanagari, cjk, thai]
-        : [cjk, devanagari, thai]),
-  ]
   const host = document.createElement("div")
   host.className = "absolute inset-0 overflow-hidden"
   host.style.visibility = "hidden"

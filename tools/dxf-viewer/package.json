@@ -10,16 +10,12 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@workspace/svg-pdf": "workspace:*",
-    "@workspace/libreoffice": "workspace:*",
-    "dxf-viewer": "catalog:"
+    "dxf-viewer": "catalog:",
+    "@workspace/dxf-drawing": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
-  },
-  "devDependencies": {
-    "vitest": "catalog:"
   }
 }

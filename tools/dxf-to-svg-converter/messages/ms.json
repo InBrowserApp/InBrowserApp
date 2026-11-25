@@ -1,0 +1,19 @@
+{
+  "open": "Buka fail DXF",
+  "change": "Ganti fail DXF",
+  "drop": "Letakkan lukisan DXF ASCII di sini",
+  "example": "Cuba contoh",
+  "privacy": "Fail kekal pada peranti anda.",
+  "reading": "Membaca lukisan…",
+  "failed": "Lukisan DXF ini tidak dapat dibaca. Semak fail dan cuba lagi.",
+  "binary": "Ini ialah DXF binari. Simpan sebagai DXF ASCII dalam perisian CAD anda dan buka semula.",
+  "empty": "Lukisan ini tidak mempunyai geometri ruang model yang disokong untuk dieksport.",
+  "layers": "Lapisan",
+  "selectAll": "Pilih semua",
+  "clear": "Kosongkan pilihan",
+  "preview": "Pratonton SVG",
+  "noLayers": "Pilih sekurang-kurangnya satu lapisan untuk pratonton dan muat turun.",
+  "size": "Saiz lukisan",
+  "fileUnits": "unit lukisan",
+  "download": "Muat turun SVG"
+}

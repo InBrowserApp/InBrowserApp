@@ -15,3 +15,5 @@ DXF lagrar ritningsinformation som objekt och tillhörande tabeller. Mer informa
 ## Granska den ursprungliga CAD-modellen
 
 Om du har originalet som STEP- eller STP-fil kan du använda [STEP-visaren](../step-viewer/) för att granska en solid detalj eller en sammanställning i 3D.
+
+Använd [DXF till SVG-konverteraren](../dxf-to-svg-converter/) för att exportera valda lager från modellutrymmet som SVG för ett dokument, en webbsida eller ett vektorgrafikprogram.

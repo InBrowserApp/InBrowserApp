@@ -15,3 +15,5 @@ DXF przechowuje informacje o rysunku jako obiekty i powiązane tabele. Szczegó�
 ## Oglądanie oryginalnego modelu CAD
 
 Jeśli masz oryginalny plik STEP lub STP, możesz obejrzeć model bryłowy części lub zespół w 3D w [przeglądarce plików STEP](../step-viewer/).
+
+Użyj [konwertera DXF na SVG](../dxf-to-svg-converter/), aby wyeksportować wybrane warstwy z obszaru modelu jako SVG do dokumentu, strony internetowej lub edytora wektorowego.

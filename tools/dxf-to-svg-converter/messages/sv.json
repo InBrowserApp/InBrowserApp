@@ -1,0 +1,19 @@
+{
+  "open": "Öppna DXF-fil",
+  "change": "Byt DXF-fil",
+  "drop": "Släpp en ASCII-DXF-ritning här",
+  "example": "Prova ett exempel",
+  "privacy": "Din fil stannar på den här enheten.",
+  "reading": "Läser ritningen…",
+  "failed": "Det gick inte att läsa DXF-ritningen. Kontrollera filen och försök igen.",
+  "binary": "Det här är en binär DXF-fil. Spara den som ASCII-DXF i ditt CAD-program och öppna den igen.",
+  "empty": "Ritningen innehåller ingen geometri i modellutrymmet som stöds för export.",
+  "layers": "Lager",
+  "selectAll": "Markera alla",
+  "clear": "Rensa markering",
+  "preview": "Förhandsvisning av SVG",
+  "noLayers": "Markera minst ett lager för att förhandsgranska och ladda ner.",
+  "size": "Ritningens mått",
+  "fileUnits": "ritningsenheter",
+  "download": "Ladda ner SVG"
+}

@@ -15,3 +15,5 @@ DXF, çizim bilgilerini nesneler ve bunlarla ilişkili tablolar halinde saklar. 
 ## Özgün CAD modelini inceleme
 
 Özgün STEP veya STP dosyanız varsa katı parçayı veya montajı 3B olarak incelemek için [STEP Görüntüleyici](../step-viewer/) aracını kullanın.
+
+Model alanından seçtiğiniz katmanları bir belge, web sayfası veya vektör düzenleyici için SVG olarak dışa aktarmak üzere [DXF’ten SVG’ye Dönüştürücü](../dxf-to-svg-converter/) aracını kullanın.

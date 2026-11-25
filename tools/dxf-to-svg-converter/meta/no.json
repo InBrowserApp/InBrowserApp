@@ -1,0 +1,4 @@
+{
+  "name": "DXF til SVG-konverterer",
+  "description": "Konverter en 2D-tegning i DXF-format til SVG i nettleseren. Velg lag, se en forhåndsvisning av vektorgrafikken og eksporter i målestokken som tegningsenhetene angir."
+}

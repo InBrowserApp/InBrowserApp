@@ -154,6 +154,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docx-to-markdown-converter": () =>
     import("@tool/docx-to-markdown-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
+  "dxf-to-svg-converter": () => import("@tool/dxf-to-svg-converter/page"),
   "dxf-viewer": () => import("@tool/dxf-viewer/page"),
   "ebook-text-html-export": () => import("@tool/ebook-text-html-export/page"),
   "email-attachment-extractor": () =>

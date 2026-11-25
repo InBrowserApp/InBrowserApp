@@ -1,0 +1,19 @@
+{
+  "open": "Åpne DXF-fil",
+  "change": "Bytt DXF-fil",
+  "drop": "Slipp en ASCII-DXF-tegning her",
+  "example": "Prøv et eksempel",
+  "privacy": "Filen blir på enheten din.",
+  "reading": "Leser tegningen …",
+  "failed": "Kunne ikke lese DXF-tegningen. Sjekk filen og prøv igjen.",
+  "binary": "Dette er en binær DXF-fil. Lagre den som ASCII-DXF i CAD-programmet og åpne den på nytt.",
+  "empty": "Tegningen inneholder ingen geometri i modellområdet som kan eksporteres.",
+  "layers": "Lag",
+  "selectAll": "Velg alle",
+  "clear": "Opphev valg",
+  "preview": "Forhåndsvisning av SVG",
+  "noLayers": "Velg minst ett lag for å se en forhåndsvisning og laste ned.",
+  "size": "Tegningens mål",
+  "fileUnits": "tegningsenheter",
+  "download": "Last ned SVG"
+}

@@ -15,3 +15,5 @@ Le DXF enregistre les informations du dessin sous forme d’entités et de table
 ## Examiner le modèle CAO d’origine
 
 Si vous avez le fichier STEP ou STP d’origine, utilisez la [Visionneuse STEP](../step-viewer/) pour examiner une pièce solide ou un assemblage en 3D.
+
+Utilisez le [Convertisseur DXF en SVG](../dxf-to-svg-converter/) pour exporter les calques sélectionnés de l’espace objet en SVG pour un document, une page web ou un éditeur vectoriel.

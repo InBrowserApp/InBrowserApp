@@ -15,3 +15,5 @@ DXF menyimpan maklumat lukisan sebagai entiti dan jadual berkaitan. Rujuk [rujuk
 ## Periksa model CAD asal
 
 Jika anda mempunyai fail STEP atau STP asal, gunakan [Pemapar STEP](../step-viewer/) untuk memeriksa komponen pepejal atau model pemasangan dalam 3D.
+
+Gunakan [Penukar DXF kepada SVG](../dxf-to-svg-converter/) untuk mengeksport lapisan ruang model yang dipilih sebagai SVG bagi dokumen, halaman web atau penyunting vektor.

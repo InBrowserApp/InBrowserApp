@@ -15,3 +15,5 @@ DXF lagrer tegningsinformasjon som objekter og tilhørende tabeller. Se [Autodes
 ## Se på den opprinnelige CAD-modellen
 
 Hvis du har den opprinnelige STEP- eller STP-filen, kan du sjekke en solid del eller en sammenstilling i 3D med [STEP-viseren](../step-viewer/).
+
+Bruk [DXF til SVG-konvertereren](../dxf-to-svg-converter/) til å eksportere valgte lag fra modellområdet som SVG for et dokument, en nettside eller et vektorgrafikkprogram.
