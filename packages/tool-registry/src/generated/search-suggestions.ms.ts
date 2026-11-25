@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "Penukar EPUB ke KEPUB untuk Kobo",
+    slug: "epub-to-kepub-converter",
+  },
+  {
+    category: "ebook",
     name: "Penukar EPUB kepada PDF",
     slug: "epub-to-pdf-converter",
   },

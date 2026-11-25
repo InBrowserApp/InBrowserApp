@@ -1,0 +1,4 @@
+{
+  "name": "EPUB 转 KEPUB（Kobo）",
+  "description": "在浏览器中将 EPUB 转为适合 Kobo 阅读器的 KEPUB。保留正文、封面和目录，并下载扩展名为 .kepub.epub 的文件。"
+}

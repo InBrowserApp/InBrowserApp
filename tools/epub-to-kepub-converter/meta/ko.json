@@ -1,0 +1,4 @@
+{
+  "name": "EPUB을 Kobo용 KEPUB으로 변환",
+  "description": "브라우저에서 EPUB을 Kobo용 KEPUB으로 변환하세요. 책의 본문, 표지, 목차를 유지하고 Kobo 전자책 리더에서 읽을 수 있는 .kepub.epub 파일을 다운로드합니다."
+}

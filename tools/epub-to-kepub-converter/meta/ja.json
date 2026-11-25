@@ -1,0 +1,4 @@
+{
+  "name": "Kobo向けにEPUBをKEPUBに変換",
+  "description": "EPUB をブラウザーで Kobo 向けの KEPUB に変換します。本文、表紙、目次を引き継ぎ、Kobo 電子書籍リーダー用の .kepub.epub ファイルをダウンロードできます。"
+}

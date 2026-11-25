@@ -17071,6 +17071,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-to-kepub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: ["epub", "kepub", "kobo", "kobo epub", "ebook", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل EPUB إلى KEPUB لجهاز Kobo",
+        description:
+          "حوّل كتب EPUB إلى KEPUB المتوافق مع Kobo في متصفحك. احتفظ بنص الكتاب وغلافه وفهرس محتوياته، ثم نزّل ملفًا بامتداد ⁦.kepub.epub⁩ لقارئ Kobo الإلكتروني.",
+      },
+      de: {
+        name: "EPUB in KEPUB für Kobo umwandeln",
+        description:
+          "Wandle EPUB direkt im Browser in KEPUB für Kobo um. Text, Cover und Inhaltsverzeichnis bleiben erhalten. Lade die Datei mit der Endung .kepub.epub für deinen Kobo-Reader herunter.",
+      },
+      en: {
+        name: "EPUB to KEPUB Converter for Kobo",
+        description:
+          "Convert EPUB to Kobo-ready KEPUB in your browser. Keep the book’s text, cover and table of contents, and download a .kepub.epub file for your Kobo eReader.",
+      },
+      es: {
+        name: "Convertidor de EPUB a KEPUB para Kobo",
+        description:
+          "Convierte EPUB a KEPUB para Kobo en tu navegador. Conserva el texto, la portada y el índice del libro y descarga un archivo .kepub.epub para tu lector Kobo.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en KEPUB pour Kobo",
+        description:
+          "Convertissez un EPUB en KEPUB pour Kobo dans votre navigateur. Conservez le texte, la couverture et la table des matières, puis téléchargez un fichier .kepub.epub pour votre liseuse Kobo.",
+      },
+      he: {
+        name: "ממיר EPUB ל־KEPUB עבור Kobo",
+        description:
+          "המירו בדפדפן קובצי EPUB ל־KEPUB שמתאים לקורא Kobo. שמרו על הטקסט, הכריכה ותוכן העניינים של הספר והורידו קובץ עם הסיומת ⁦.kepub.epub⁩ למכשיר ה־Kobo שלכם.",
+      },
+      hi: {
+        name: "Kobo के लिए EPUB से KEPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में EPUB को Kobo के लिए KEPUB में बदलें। किताब का टेक्स्ट, कवर और विषय सूची बरकरार रहते हैं। अपने Kobo रीडर के लिए .kepub.epub फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter EPUB ke KEPUB untuk Kobo",
+        description:
+          "Ubah EPUB menjadi KEPUB untuk Kobo langsung di browser. Pertahankan teks, sampul, dan daftar isi buku, lalu unduh file .kepub.epub untuk dibaca di perangkat Kobo.",
+      },
+      it: {
+        name: "Convertitore da EPUB a KEPUB per Kobo",
+        description:
+          "Converti EPUB in KEPUB per Kobo nel browser. Conserva il testo, la copertina e l’indice del libro e scarica un file .kepub.epub per il tuo lettore Kobo.",
+      },
+      ja: {
+        name: "Kobo向けにEPUBをKEPUBに変換",
+        description:
+          "EPUB をブラウザーで Kobo 向けの KEPUB に変換します。本文、表紙、目次を引き継ぎ、Kobo 電子書籍リーダー用の .kepub.epub ファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB을 Kobo용 KEPUB으로 변환",
+        description:
+          "브라우저에서 EPUB을 Kobo용 KEPUB으로 변환하세요. 책의 본문, 표지, 목차를 유지하고 Kobo 전자책 리더에서 읽을 수 있는 .kepub.epub 파일을 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar EPUB ke KEPUB untuk Kobo",
+        description:
+          "Tukar EPUB kepada KEPUB untuk Kobo dalam pelayar anda. Kekalkan teks, kulit buku dan isi kandungan, kemudian muat turun fail .kepub.epub untuk pembaca e-buku Kobo anda.",
+      },
+      nl: {
+        name: "EPUB naar KEPUB converteren voor Kobo",
+        description:
+          "Zet EPUB in je browser om naar KEPUB voor je Kobo-e-reader. De tekst, omslag en inhoudsopgave blijven behouden. Download het boek als .kepub.epub-bestand.",
+      },
+      no: {
+        name: "Konverter EPUB til KEPUB for Kobo",
+        description:
+          "Konverter EPUB til KEPUB for Kobo i nettleseren. Behold teksten, omslaget og innholdsfortegnelsen, og last ned en .kepub.epub-fil til Kobo-lesebrettet ditt.",
+      },
+      pl: {
+        name: "Konwerter EPUB na KEPUB dla Kobo",
+        description:
+          "Konwertuj EPUB na KEPUB w przeglądarce. Zachowaj tekst książki, okładkę i spis treści. Pobierz plik .kepub.epub do czytania na Kobo.",
+      },
+      pt: {
+        name: "Conversor de EPUB para KEPUB (Kobo)",
+        description:
+          "Converta EPUB para KEPUB no navegador. Preserve o texto, a capa e o sumário do livro e baixe um arquivo .kepub.epub pronto para ler no Kobo.",
+      },
+      ru: {
+        name: "Конвертер EPUB в KEPUB для Kobo",
+        description:
+          "Преобразуйте EPUB в KEPUB прямо в браузере. Текст, обложка и оглавление книги сохраняются. Скачайте файл с расширением .kepub.epub для читалки Kobo.",
+      },
+      sv: {
+        name: "Konvertera EPUB till KEPUB för Kobo",
+        description:
+          "Konvertera EPUB till KEPUB för Kobo i webbläsaren. Bevara bokens text, omslag och innehållsförteckning, och ladda ner en .kepub.epub-fil för din Kobo-läsplatta.",
+      },
+      th: {
+        name: "แปลง EPUB เป็น KEPUB สำหรับ Kobo",
+        description:
+          "แปลง EPUB เป็น KEPUB สำหรับ Kobo ในเบราว์เซอร์ คงข้อความ ปก และสารบัญของหนังสือ แล้วดาวน์โหลดไฟล์ .kepub.epub สำหรับเครื่องอ่านอีบุ๊ก Kobo",
+      },
+      tr: {
+        name: "Kobo için EPUB’dan KEPUB’a Dönüştürücü",
+        description:
+          "EPUB kitaplarını tarayıcınızda Kobo uyumlu KEPUB biçimine dönüştürün. Kitabın metnini, kapağını ve içindekiler listesini koruyun. Kobo okuyucunuz için .kepub.epub dosyasını indirin.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang KEPUB cho Kobo",
+        description:
+          "Chuyển EPUB sang KEPUB ngay trong trình duyệt để đọc trên máy Kobo. Giữ nguyên văn bản, bìa và mục lục, rồi tải xuống tệp có đuôi .kepub.epub.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 KEPUB（Kobo）",
+        description:
+          "在浏览器中将 EPUB 转为适合 Kobo 阅读器的 KEPUB。保留正文、封面和目录，并下载扩展名为 .kepub.epub 的文件。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 KEPUB（Kobo）",
+        description:
+          "在瀏覽器中將 EPUB 轉成適用於 Kobo 的 KEPUB。保留文字、封面與目錄，並下載可匯入 Kobo 電子書閱讀器的 .kepub.epub 檔案。",
+      },
+    },
+  },
+  {
     slug: "epub-to-pdf-converter",
     category: "ebook",
     secondaryCategories: ["pdf"],
@@ -77711,6 +77834,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EPUB 閱讀器",
         description:
           "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  "epub-to-kepub-converter": {
+    slug: "epub-to-kepub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: ["epub", "kepub", "kobo", "kobo epub", "ebook", "converter"],
+    locales: {
+      ar: {
+        name: "تحويل EPUB إلى KEPUB لجهاز Kobo",
+        description:
+          "حوّل كتب EPUB إلى KEPUB المتوافق مع Kobo في متصفحك. احتفظ بنص الكتاب وغلافه وفهرس محتوياته، ثم نزّل ملفًا بامتداد ⁦.kepub.epub⁩ لقارئ Kobo الإلكتروني.",
+      },
+      de: {
+        name: "EPUB in KEPUB für Kobo umwandeln",
+        description:
+          "Wandle EPUB direkt im Browser in KEPUB für Kobo um. Text, Cover und Inhaltsverzeichnis bleiben erhalten. Lade die Datei mit der Endung .kepub.epub für deinen Kobo-Reader herunter.",
+      },
+      en: {
+        name: "EPUB to KEPUB Converter for Kobo",
+        description:
+          "Convert EPUB to Kobo-ready KEPUB in your browser. Keep the book’s text, cover and table of contents, and download a .kepub.epub file for your Kobo eReader.",
+      },
+      es: {
+        name: "Convertidor de EPUB a KEPUB para Kobo",
+        description:
+          "Convierte EPUB a KEPUB para Kobo en tu navegador. Conserva el texto, la portada y el índice del libro y descarga un archivo .kepub.epub para tu lector Kobo.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en KEPUB pour Kobo",
+        description:
+          "Convertissez un EPUB en KEPUB pour Kobo dans votre navigateur. Conservez le texte, la couverture et la table des matières, puis téléchargez un fichier .kepub.epub pour votre liseuse Kobo.",
+      },
+      he: {
+        name: "ממיר EPUB ל־KEPUB עבור Kobo",
+        description:
+          "המירו בדפדפן קובצי EPUB ל־KEPUB שמתאים לקורא Kobo. שמרו על הטקסט, הכריכה ותוכן העניינים של הספר והורידו קובץ עם הסיומת ⁦.kepub.epub⁩ למכשיר ה־Kobo שלכם.",
+      },
+      hi: {
+        name: "Kobo के लिए EPUB से KEPUB कन्वर्टर",
+        description:
+          "ब्राउज़र में EPUB को Kobo के लिए KEPUB में बदलें। किताब का टेक्स्ट, कवर और विषय सूची बरकरार रहते हैं। अपने Kobo रीडर के लिए .kepub.epub फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter EPUB ke KEPUB untuk Kobo",
+        description:
+          "Ubah EPUB menjadi KEPUB untuk Kobo langsung di browser. Pertahankan teks, sampul, dan daftar isi buku, lalu unduh file .kepub.epub untuk dibaca di perangkat Kobo.",
+      },
+      it: {
+        name: "Convertitore da EPUB a KEPUB per Kobo",
+        description:
+          "Converti EPUB in KEPUB per Kobo nel browser. Conserva il testo, la copertina e l’indice del libro e scarica un file .kepub.epub per il tuo lettore Kobo.",
+      },
+      ja: {
+        name: "Kobo向けにEPUBをKEPUBに変換",
+        description:
+          "EPUB をブラウザーで Kobo 向けの KEPUB に変換します。本文、表紙、目次を引き継ぎ、Kobo 電子書籍リーダー用の .kepub.epub ファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "EPUB을 Kobo용 KEPUB으로 변환",
+        description:
+          "브라우저에서 EPUB을 Kobo용 KEPUB으로 변환하세요. 책의 본문, 표지, 목차를 유지하고 Kobo 전자책 리더에서 읽을 수 있는 .kepub.epub 파일을 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar EPUB ke KEPUB untuk Kobo",
+        description:
+          "Tukar EPUB kepada KEPUB untuk Kobo dalam pelayar anda. Kekalkan teks, kulit buku dan isi kandungan, kemudian muat turun fail .kepub.epub untuk pembaca e-buku Kobo anda.",
+      },
+      nl: {
+        name: "EPUB naar KEPUB converteren voor Kobo",
+        description:
+          "Zet EPUB in je browser om naar KEPUB voor je Kobo-e-reader. De tekst, omslag en inhoudsopgave blijven behouden. Download het boek als .kepub.epub-bestand.",
+      },
+      no: {
+        name: "Konverter EPUB til KEPUB for Kobo",
+        description:
+          "Konverter EPUB til KEPUB for Kobo i nettleseren. Behold teksten, omslaget og innholdsfortegnelsen, og last ned en .kepub.epub-fil til Kobo-lesebrettet ditt.",
+      },
+      pl: {
+        name: "Konwerter EPUB na KEPUB dla Kobo",
+        description:
+          "Konwertuj EPUB na KEPUB w przeglądarce. Zachowaj tekst książki, okładkę i spis treści. Pobierz plik .kepub.epub do czytania na Kobo.",
+      },
+      pt: {
+        name: "Conversor de EPUB para KEPUB (Kobo)",
+        description:
+          "Converta EPUB para KEPUB no navegador. Preserve o texto, a capa e o sumário do livro e baixe um arquivo .kepub.epub pronto para ler no Kobo.",
+      },
+      ru: {
+        name: "Конвертер EPUB в KEPUB для Kobo",
+        description:
+          "Преобразуйте EPUB в KEPUB прямо в браузере. Текст, обложка и оглавление книги сохраняются. Скачайте файл с расширением .kepub.epub для читалки Kobo.",
+      },
+      sv: {
+        name: "Konvertera EPUB till KEPUB för Kobo",
+        description:
+          "Konvertera EPUB till KEPUB för Kobo i webbläsaren. Bevara bokens text, omslag och innehållsförteckning, och ladda ner en .kepub.epub-fil för din Kobo-läsplatta.",
+      },
+      th: {
+        name: "แปลง EPUB เป็น KEPUB สำหรับ Kobo",
+        description:
+          "แปลง EPUB เป็น KEPUB สำหรับ Kobo ในเบราว์เซอร์ คงข้อความ ปก และสารบัญของหนังสือ แล้วดาวน์โหลดไฟล์ .kepub.epub สำหรับเครื่องอ่านอีบุ๊ก Kobo",
+      },
+      tr: {
+        name: "Kobo için EPUB’dan KEPUB’a Dönüştürücü",
+        description:
+          "EPUB kitaplarını tarayıcınızda Kobo uyumlu KEPUB biçimine dönüştürün. Kitabın metnini, kapağını ve içindekiler listesini koruyun. Kobo okuyucunuz için .kepub.epub dosyasını indirin.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang KEPUB cho Kobo",
+        description:
+          "Chuyển EPUB sang KEPUB ngay trong trình duyệt để đọc trên máy Kobo. Giữ nguyên văn bản, bìa và mục lục, rồi tải xuống tệp có đuôi .kepub.epub.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 KEPUB（Kobo）",
+        description:
+          "在浏览器中将 EPUB 转为适合 Kobo 阅读器的 KEPUB。保留正文、封面和目录，并下载扩展名为 .kepub.epub 的文件。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 KEPUB（Kobo）",
+        description:
+          "在瀏覽器中將 EPUB 轉成適用於 Kobo 的 KEPUB。保留文字、封面與目錄，並下載可匯入 Kobo 電子書閱讀器的 .kepub.epub 檔案。",
       },
     },
   },
