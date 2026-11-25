@@ -583,6 +583,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "docker-run-to-compose-converter",
   },
   {
+    category: "ebook",
+    name: "DOCX → EPUB 변환기",
+    slug: "docx-to-epub-converter",
+  },
+  {
     category: "document",
     name: "DOCX → Markdown 변환기",
     slug: "docx-to-markdown-converter",

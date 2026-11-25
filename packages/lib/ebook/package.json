@@ -9,6 +9,7 @@
     "./mobi": "./src/mobi/open-book.ts",
     "./fb2": "./src/fb2/open-book.ts",
     "./document": "./src/document.ts",
+    "./images": "./src/resources.ts",
     "./write-epub": "./src/write-epub/index.ts",
     "./write-comic-epub": "./src/write-epub/comic.ts"
   },
