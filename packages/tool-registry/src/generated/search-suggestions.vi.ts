@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Chuyển MIDI sang WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "Chuyển giọng và đổi nhịp độ MIDI",
     slug: "midi-transposer",
   },

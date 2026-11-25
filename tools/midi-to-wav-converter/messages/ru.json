@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Выбрать MIDI-файл",
+  "changeFile": "Заменить файл",
+  "dropHint": "или перетащите сюда MIDI-файл",
+  "privacy": "Файлы остаются в браузере.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (встроенный)",
+  "chooseSoundFont": "Выбрать файл SoundFont",
+  "useDefaultSoundFont": "Использовать встроенный SoundFont",
+  "soundFontHint": "При желании выберите файл .sf2 или .sf3, чтобы изменить звучание инструментов.",
+  "render": "Преобразовать в WAV",
+  "rendering": "Создаём аудио…",
+  "cancel": "Отмена",
+  "preview": "Прослушивание WAV",
+  "download": "Скачать WAV",
+  "invalidMidi": "Не удалось открыть MIDI-файл или в нём нет нот для воспроизведения. Попробуйте другой файл .mid или .midi.",
+  "invalidSoundFont": "Не удалось открыть банк SoundFont. Попробуйте другой файл .sf2 или .sf3 либо используйте встроенный банк.",
+  "soundFontUnavailable": "Не удалось загрузить встроенный SoundFont. Повторите попытку или выберите файл SoundFont.",
+  "tooLong": "Для преобразования в браузере выберите MIDI-файл длительностью меньше 10 минут.",
+  "renderFailed": "Не удалось создать аудио. Попробуйте MIDI-файл меньшего размера или другой банк SoundFont."
+}

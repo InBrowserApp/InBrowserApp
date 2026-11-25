@@ -1,0 +1,21 @@
+{
+  "chooseFile": "MIDI-bestand kiezen",
+  "changeFile": "Ander bestand kiezen",
+  "dropHint": "of sleep een MIDI-bestand hierheen",
+  "privacy": "Je bestanden blijven in deze browser.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (ingebouwd)",
+  "chooseSoundFont": "SoundFont kiezen",
+  "useDefaultSoundFont": "Ingebouwde SoundFont gebruiken",
+  "soundFontHint": "Optioneel. Kies een .sf2- of .sf3-bestand om de instrumentklanken te wijzigen.",
+  "render": "Omzetten naar WAV",
+  "rendering": "Audio renderen…",
+  "cancel": "Annuleren",
+  "preview": "WAV-voorbeeld beluisteren",
+  "download": "WAV downloaden",
+  "invalidMidi": "Dit MIDI-bestand kan niet worden geopend of bevat geen afspeelbare noten. Probeer een ander .mid- of .midi-bestand.",
+  "invalidSoundFont": "Dit SoundFont-bestand kan niet worden geopend. Probeer een ander .sf2- of .sf3-bestand of gebruik de ingebouwde SoundFont.",
+  "soundFontUnavailable": "De ingebouwde SoundFont kan niet worden geladen. Probeer het opnieuw of kies een SoundFont-bestand.",
+  "tooLong": "Kies een MIDI-bestand van minder dan 10 minuten om het in je browser te renderen.",
+  "renderFailed": "De audio kan niet worden gerenderd. Probeer een kleiner MIDI-bestand of een andere SoundFont."
+}

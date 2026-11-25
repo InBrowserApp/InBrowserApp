@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Convertitore da MIDI a WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "Trasposizione MIDI e regolazione del tempo",
     slug: "midi-transposer",
   },

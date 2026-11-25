@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI를 WAV로 변환",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI 조옮김 및 템포 변경",
     slug: "midi-transposer",
   },

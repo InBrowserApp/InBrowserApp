@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ממיר MIDI ל־WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "טרנספוזיציה ושינוי טמפו ל־MIDI",
     slug: "midi-transposer",
   },

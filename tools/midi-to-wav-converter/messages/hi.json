@@ -1,0 +1,21 @@
+{
+  "chooseFile": "MIDI फ़ाइल चुनें",
+  "changeFile": "फ़ाइल बदलें",
+  "dropHint": "या MIDI फ़ाइल यहाँ खींचकर छोड़ें",
+  "privacy": "आपकी फ़ाइलें इसी ब्राउज़र में रहती हैं।",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (बिल्ट-इन)",
+  "chooseSoundFont": "SoundFont चुनें",
+  "useDefaultSoundFont": "बिल्ट-इन SoundFont इस्तेमाल करें",
+  "soundFontHint": "वैकल्पिक। वाद्यों की ध्वनि बदलने के लिए .sf2 या .sf3 फ़ाइल चुनें।",
+  "render": "WAV में बदलें",
+  "rendering": "ऑडियो तैयार हो रहा है…",
+  "cancel": "रद्द करें",
+  "preview": "WAV ऑडियो प्रीव्यू",
+  "download": "WAV डाउनलोड करें",
+  "invalidMidi": "यह MIDI फ़ाइल खुल नहीं सकी या इसमें बजाने योग्य नोट नहीं हैं। कोई दूसरी .mid या .midi फ़ाइल आज़माएँ।",
+  "invalidSoundFont": "यह SoundFont खुल नहीं सका। कोई दूसरी .sf2 या .sf3 फ़ाइल आज़माएँ या बिल्ट-इन SoundFont इस्तेमाल करें।",
+  "soundFontUnavailable": "बिल्ट-इन SoundFont लोड नहीं हो सका। फिर से कोशिश करें या कोई SoundFont फ़ाइल चुनें।",
+  "tooLong": "ब्राउज़र में ऑडियो बनाने के लिए 10 मिनट से कम अवधि की MIDI फ़ाइल चुनें।",
+  "renderFailed": "ऑडियो तैयार नहीं हो सका। कोई छोटी MIDI फ़ाइल या दूसरा SoundFont आज़माएँ।"
+}

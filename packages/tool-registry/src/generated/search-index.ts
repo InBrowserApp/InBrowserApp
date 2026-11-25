@@ -29874,6 +29874,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "midi-to-wav-converter",
+    category: "misc",
+    icon: "audio-lines",
+    tags: [
+      "midi",
+      "wav",
+      "soundfont",
+      "gm",
+      "audio",
+      "synthesizer",
+      "midi to audio",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MIDI إلى WAV",
+        description:
+          "حوّل ملفات MIDI إلى WAV ستيريو باستخدام آلات General MIDI المدمجة أو ملف SoundFont من اختيارك. استمع إلى الناتج ونزّله من متصفحك.",
+      },
+      de: {
+        name: "MIDI-zu-WAV-Konverter",
+        description:
+          "Wandle MIDI-Dateien mit integrierten General-MIDI-Instrumenten oder einem eigenen SoundFont in Stereo-WAV um. Höre das Ergebnis im Browser an und lade es herunter.",
+      },
+      en: {
+        name: "MIDI to WAV Converter",
+        description:
+          "Convert MIDI files to stereo WAV with built-in General MIDI instruments or your own SoundFont. Preview and download the audio in your browser.",
+      },
+      es: {
+        name: "Conversor de MIDI a WAV",
+        description:
+          "Convierte archivos MIDI a WAV estéreo con los instrumentos General MIDI integrados o con tu propio banco SoundFont. Escucha y descarga el audio desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur MIDI vers WAV",
+        description:
+          "Convertissez des fichiers MIDI en WAV stéréo avec les instruments General MIDI intégrés ou votre propre banque SoundFont. Écoutez et téléchargez l’audio dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MIDI ל־WAV",
+        description:
+          "המירו קובצי MIDI ל־WAV בסטריאו עם כלי General MIDI המובנים או עם SoundFont משלכם. האזינו לתוצאה והורידו אותה בדפדפן.",
+      },
+      hi: {
+        name: "MIDI से WAV कन्वर्टर",
+        description:
+          "बिल्ट-इन General MIDI वाद्यों या अपने SoundFont से MIDI फ़ाइल को स्टीरियो WAV में बदलें। ब्राउज़र में ऑडियो सुनें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MIDI ke WAV",
+        description:
+          "Konversikan MIDI ke WAV stereo dengan instrumen General MIDI bawaan atau SoundFont Anda sendiri. Dengarkan pratinjau dan unduh audio di browser.",
+      },
+      it: {
+        name: "Convertitore da MIDI a WAV",
+        description:
+          "Converti file MIDI in WAV stereo con gli strumenti General MIDI integrati o con il tuo SoundFont. Ascolta e scarica l’audio dal browser.",
+      },
+      ja: {
+        name: "MIDI WAV 変換",
+        description:
+          "内蔵の General MIDI 楽器またはお手持ちの SoundFont を使い、MIDI ファイルをステレオ WAV に変換します。ブラウザーで音声を試聴してダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI를 WAV로 변환",
+        description:
+          "내장 General MIDI 악기나 직접 선택한 SoundFont로 MIDI 파일을 스테레오 WAV로 변환합니다. 브라우저에서 오디오를 미리 듣고 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar MIDI kepada WAV",
+        description:
+          "Tukar fail MIDI kepada WAV stereo dengan alat muzik General MIDI terbina dalam atau SoundFont anda sendiri. Dengar pratonton dan muat turun audio dalam pelayar.",
+      },
+      nl: {
+        name: "MIDI-naar-WAV-converter",
+        description:
+          "Zet MIDI-bestanden om naar stereo-WAV met ingebouwde General MIDI-instrumenten of je eigen SoundFont. Beluister en download de audio in je browser.",
+      },
+      no: {
+        name: "MIDI til WAV-konverterer",
+        description:
+          "Konverter MIDI-filer til WAV i stereo med innebygde General MIDI-instrumenter eller en egen SoundFont. Lytt til og last ned lyden i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MIDI na WAV",
+        description:
+          "Konwertuj pliki MIDI na stereofoniczny WAV za pomocą wbudowanych instrumentów General MIDI lub własnego banku SoundFont. Odsłuchaj i pobierz dźwięk w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de MIDI para WAV",
+        description:
+          "Converta arquivos MIDI em WAV estéreo com os instrumentos General MIDI integrados ou com seu próprio SoundFont. Ouça e baixe o áudio pelo navegador.",
+      },
+      ru: {
+        name: "Конвертер MIDI в WAV",
+        description:
+          "Преобразуйте MIDI-файлы в стерео WAV со встроенными инструментами General MIDI или своим банком SoundFont. Прослушивайте и скачивайте звук прямо в браузере.",
+      },
+      sv: {
+        name: "MIDI till WAV-konverterare",
+        description:
+          "Konvertera MIDI-filer till WAV i stereo med inbyggda General MIDI-instrument eller en egen SoundFont. Provlyssna och ladda ner ljudet i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MIDI เป็น WAV",
+        description:
+          "แปลงไฟล์ MIDI เป็น WAV สเตอริโอด้วยเสียงเครื่องดนตรี General MIDI ที่มีให้หรือ SoundFont ของคุณเอง ฟังตัวอย่างและดาวน์โหลดเสียงได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI'den WAV'a Dönüştürücü",
+        description:
+          "Dahili General MIDI enstrümanlarıyla veya kendi SoundFont dosyanızla MIDI dosyalarını stereo WAV'a dönüştürün. Sesi tarayıcınızda dinleyip indirin.",
+      },
+      vi: {
+        name: "Chuyển MIDI sang WAV",
+        description:
+          "Chuyển tệp MIDI thành WAV stereo bằng nhạc cụ General MIDI tích hợp hoặc SoundFont của bạn. Nghe thử và tải âm thanh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 转 WAV 转换器",
+        description:
+          "使用内置 General MIDI 乐器或自己的 SoundFont 将 MIDI 文件转换为立体声 WAV。在浏览器中预览并下载音频。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉 WAV 轉換器",
+        description:
+          "使用內建 General MIDI 樂器或自己的 SoundFont，將 MIDI 檔案轉換為立體聲 WAV。在瀏覽器中預覽並下載音訊。",
+      },
+    },
+  },
+  {
     slug: "midi-transposer",
     category: "misc",
     icon: "piano",

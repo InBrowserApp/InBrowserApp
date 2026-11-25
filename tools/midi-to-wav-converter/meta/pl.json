@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter MIDI na WAV",
+  "description": "Konwertuj pliki MIDI na stereofoniczny WAV za pomocą wbudowanych instrumentów General MIDI lub własnego banku SoundFont. Odsłuchaj i pobierz dźwięk w przeglądarce."
+}

@@ -1,0 +1,21 @@
+{
+  "chooseFile": "MIDI ファイルを選択",
+  "changeFile": "ファイルを変更",
+  "dropHint": "または MIDI ファイルをここにドロップ",
+  "privacy": "ファイルはこのブラウザー内に保持されます。",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS（内蔵）",
+  "chooseSoundFont": "SoundFont を選択",
+  "useDefaultSoundFont": "内蔵 SoundFont を使う",
+  "soundFontHint": "任意。楽器の音色を変えるには .sf2 または .sf3 ファイルを選択します。",
+  "render": "WAV に変換",
+  "rendering": "音声をレンダリング中…",
+  "cancel": "キャンセル",
+  "preview": "WAV 音声のプレビュー",
+  "download": "WAV をダウンロード",
+  "invalidMidi": "この MIDI ファイルを開けないか、再生可能な音符がありません。別の .mid または .midi ファイルをお試しください。",
+  "invalidSoundFont": "この SoundFont を開けませんでした。別の .sf2 または .sf3 ファイルを試すか、内蔵 SoundFont を使ってください。",
+  "soundFontUnavailable": "内蔵 SoundFont を読み込めませんでした。再試行するか、SoundFont ファイルを選択してください。",
+  "tooLong": "ブラウザーでレンダリングするには、10 分未満の MIDI ファイルを選択してください。",
+  "renderFailed": "音声をレンダリングできませんでした。より小さい MIDI ファイルか別の SoundFont をお試しください。"
+}

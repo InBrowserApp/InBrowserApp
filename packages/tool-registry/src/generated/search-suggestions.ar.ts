@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "محوّل MIDI إلى WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "تغيير طبقة النغمات وسرعة MIDI",
     slug: "midi-transposer",
   },

@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Choose MIDI file",
+  "changeFile": "Change file",
+  "dropHint": "or drop a MIDI file here",
+  "privacy": "Your files stay in this browser.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (built in)",
+  "chooseSoundFont": "Choose a SoundFont",
+  "useDefaultSoundFont": "Use built-in SoundFont",
+  "soundFontHint": "Optional. Choose an .sf2 or .sf3 file to change the instrument sounds.",
+  "render": "Convert to WAV",
+  "rendering": "Rendering audio…",
+  "cancel": "Cancel",
+  "preview": "WAV audio preview",
+  "download": "Download WAV",
+  "invalidMidi": "This MIDI file could not be opened or has no playable notes. Try another .mid or .midi file.",
+  "invalidSoundFont": "This SoundFont could not be opened. Try another .sf2 or .sf3 file or use the built-in SoundFont.",
+  "soundFontUnavailable": "The built-in SoundFont could not load. Try again or choose a SoundFont file.",
+  "tooLong": "Choose a MIDI file under 10 minutes to render it in your browser.",
+  "renderFailed": "The audio could not be rendered. Try a smaller MIDI file or a different SoundFont."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển MIDI sang WAV",
+  "description": "Chuyển tệp MIDI thành WAV stereo bằng nhạc cụ General MIDI tích hợp hoặc SoundFont của bạn. Nghe thử và tải âm thanh ngay trong trình duyệt."
+}

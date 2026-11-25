@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Choisir un fichier MIDI",
+  "changeFile": "Changer de fichier",
+  "dropHint": "ou déposez un fichier MIDI ici",
+  "privacy": "Vos fichiers restent dans ce navigateur.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (intégrée)",
+  "chooseSoundFont": "Choisir une banque SoundFont",
+  "useDefaultSoundFont": "Utiliser la banque SoundFont intégrée",
+  "soundFontHint": "Facultatif. Choisissez un fichier .sf2 ou .sf3 pour changer les sons des instruments.",
+  "render": "Convertir en WAV",
+  "rendering": "Génération de l’audio…",
+  "cancel": "Annuler",
+  "preview": "Aperçu audio WAV",
+  "download": "Télécharger en WAV",
+  "invalidMidi": "Ce fichier MIDI n’a pas pu être ouvert ou ne contient aucune note jouable. Essayez un autre fichier .mid ou .midi.",
+  "invalidSoundFont": "Impossible d’ouvrir cette banque SoundFont. Essayez un autre fichier .sf2 ou .sf3, ou utilisez la banque intégrée.",
+  "soundFontUnavailable": "Impossible de charger la banque SoundFont intégrée. Réessayez ou choisissez un fichier SoundFont.",
+  "tooLong": "Choisissez un fichier MIDI de moins de 10 minutes pour générer l’audio dans votre navigateur.",
+  "renderFailed": "Impossible de générer l’audio. Essayez un fichier MIDI plus petit ou une autre banque SoundFont."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "MIDI'den WAV'a Dönüştürücü",
+  "description": "Dahili General MIDI enstrümanlarıyla veya kendi SoundFont dosyanızla MIDI dosyalarını stereo WAV'a dönüştürün. Sesi tarayıcınızda dinleyip indirin."
+}

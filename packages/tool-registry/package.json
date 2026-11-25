@@ -242,6 +242,7 @@
     "@tool/mhtml-to-pdf-converter": "workspace:*",
     "@tool/mhtml-viewer": "workspace:*",
     "@tool/midi-monitor": "workspace:*",
+    "@tool/midi-to-wav-converter": "workspace:*",
     "@tool/midi-transposer": "workspace:*",
     "@tool/mime-type-lookup": "workspace:*",
     "@tool/mobi-reader": "workspace:*",

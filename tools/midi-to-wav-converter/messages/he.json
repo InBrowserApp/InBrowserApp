@@ -1,0 +1,21 @@
+{
+  "chooseFile": "בחירת קובץ MIDI",
+  "changeFile": "החלפת קובץ",
+  "dropHint": "או גררו לכאן קובץ MIDI",
+  "privacy": "הקבצים נשארים בדפדפן.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (מובנה)",
+  "chooseSoundFont": "בחירת SoundFont",
+  "useDefaultSoundFont": "שימוש ב־SoundFont המובנה",
+  "soundFontHint": "לבחירתכם. בחרו קובץ ‎.sf2 או ‎.sf3 כדי לשנות את צלילי הכלים.",
+  "render": "המרה ל־WAV",
+  "rendering": "מפיקים את האודיו…",
+  "cancel": "ביטול",
+  "preview": "האזנה לקובץ ה־WAV",
+  "download": "הורדת WAV",
+  "invalidMidi": "לא ניתן לפתוח את קובץ ה־MIDI, או שאין בו תווים שניתן לנגן. נסו קובץ ‎.mid או ‎.midi אחר.",
+  "invalidSoundFont": "לא ניתן לפתוח את קובץ ה־SoundFont. נסו קובץ ‎.sf2 או ‎.sf3 אחר, או השתמשו ב־SoundFont המובנה.",
+  "soundFontUnavailable": "לא ניתן לטעון את ה־SoundFont המובנה. נסו שוב או בחרו קובץ SoundFont.",
+  "tooLong": "בחרו קובץ MIDI שאורכו פחות מ־10 דקות כדי להמיר אותו בדפדפן.",
+  "renderFailed": "לא ניתן להפיק את האודיו. נסו קובץ MIDI קטן יותר או SoundFont אחר."
+}

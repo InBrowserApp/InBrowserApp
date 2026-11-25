@@ -1,0 +1,4 @@
+{
+  "name": "MIDI WAV 変換",
+  "description": "内蔵の General MIDI 楽器またはお手持ちの SoundFont を使い、MIDI ファイルをステレオ WAV に変換します。ブラウザーで音声を試聴してダウンロードできます。"
+}

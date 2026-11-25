@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-naar-WAV-converter",
+  "description": "Zet MIDI-bestanden om naar stereo-WAV met ingebouwde General MIDI-instrumenten of je eigen SoundFont. Beluister en download de audio in je browser."
+}

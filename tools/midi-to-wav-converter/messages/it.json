@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Scegli file MIDI",
+  "changeFile": "Cambia file",
+  "dropHint": "oppure trascina qui un file MIDI",
+  "privacy": "I tuoi file restano in questo browser.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (integrato)",
+  "chooseSoundFont": "Scegli un SoundFont",
+  "useDefaultSoundFont": "Usa il SoundFont integrato",
+  "soundFontHint": "Facoltativo. Scegli un file .sf2 o .sf3 per cambiare il suono degli strumenti.",
+  "render": "Converti in WAV",
+  "rendering": "Generazione dell’audio…",
+  "cancel": "Annulla",
+  "preview": "Anteprima audio WAV",
+  "download": "Scarica WAV",
+  "invalidMidi": "Impossibile aprire questo file MIDI, oppure il file non contiene note riproducibili. Prova con un altro file .mid o .midi.",
+  "invalidSoundFont": "Impossibile aprire questo SoundFont. Prova con un altro file .sf2 o .sf3 oppure usa il SoundFont integrato.",
+  "soundFontUnavailable": "Impossibile caricare il SoundFont integrato. Riprova o scegli un file SoundFont.",
+  "tooLong": "Scegli un file MIDI di durata inferiore a 10 minuti per generare l’audio nel browser.",
+  "renderFailed": "Impossibile generare l’audio. Prova con un file MIDI più piccolo o con un altro SoundFont."
+}

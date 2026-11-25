@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Chọn tệp MIDI",
+  "changeFile": "Đổi tệp",
+  "dropHint": "hoặc thả tệp MIDI vào đây",
+  "privacy": "Các tệp của bạn được giữ trong trình duyệt này.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (tích hợp)",
+  "chooseSoundFont": "Chọn SoundFont",
+  "useDefaultSoundFont": "Dùng SoundFont tích hợp",
+  "soundFontHint": "Không bắt buộc. Chọn tệp .sf2 hoặc .sf3 để đổi âm sắc nhạc cụ.",
+  "render": "Chuyển sang WAV",
+  "rendering": "Đang kết xuất âm thanh…",
+  "cancel": "Hủy",
+  "preview": "Nghe thử âm thanh WAV",
+  "download": "Tải WAV",
+  "invalidMidi": "Không thể mở tệp MIDI này hoặc tệp không có nốt nào có thể phát. Hãy thử tệp .mid hoặc .midi khác.",
+  "invalidSoundFont": "Không thể mở SoundFont này. Hãy thử tệp .sf2 hoặc .sf3 khác hoặc dùng SoundFont tích hợp.",
+  "soundFontUnavailable": "Không thể tải SoundFont tích hợp. Hãy thử lại hoặc chọn tệp SoundFont.",
+  "tooLong": "Hãy chọn tệp MIDI ngắn hơn 10 phút để kết xuất trong trình duyệt.",
+  "renderFailed": "Không thể kết xuất âm thanh. Hãy thử tệp MIDI nhỏ hơn hoặc SoundFont khác."
+}

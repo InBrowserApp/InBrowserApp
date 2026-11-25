@@ -1,0 +1,4 @@
+{
+  "name": "MIDI를 WAV로 변환",
+  "description": "내장 General MIDI 악기나 직접 선택한 SoundFont로 MIDI 파일을 스테레오 WAV로 변환합니다. 브라우저에서 오디오를 미리 듣고 다운로드하세요."
+}

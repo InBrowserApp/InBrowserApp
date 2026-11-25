@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Velg MIDI-fil",
+  "changeFile": "Bytt fil",
+  "dropHint": "eller slipp en MIDI-fil her",
+  "privacy": "Filene dine blir i denne nettleseren.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (innebygd)",
+  "chooseSoundFont": "Velg SoundFont",
+  "useDefaultSoundFont": "Bruk innebygd SoundFont",
+  "soundFontHint": "Valgfritt. Velg en .sf2- eller .sf3-fil for å endre instrumentlydene.",
+  "render": "Konverter til WAV",
+  "rendering": "Gjengir lyd…",
+  "cancel": "Avbryt",
+  "preview": "Forhåndslytt til WAV-filen",
+  "download": "Last ned WAV",
+  "invalidMidi": "MIDI-filen kunne ikke åpnes eller inneholder ingen noter som kan spilles av. Prøv en annen .mid- eller .midi-fil.",
+  "invalidSoundFont": "SoundFont-filen kunne ikke åpnes. Prøv en annen .sf2- eller .sf3-fil, eller bruk den innebygde SoundFont-filen.",
+  "soundFontUnavailable": "Den innebygde SoundFont-filen kunne ikke lastes inn. Prøv igjen eller velg en SoundFont-fil.",
+  "tooLong": "Velg en MIDI-fil som er kortere enn 10 minutter for å gjengi den i nettleseren.",
+  "renderFailed": "Lyden kunne ikke gjengis. Prøv en mindre MIDI-fil eller en annen SoundFont."
+}

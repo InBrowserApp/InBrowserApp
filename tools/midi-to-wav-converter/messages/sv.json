@@ -1,0 +1,21 @@
+{
+  "chooseFile": "Välj MIDI-fil",
+  "changeFile": "Byt fil",
+  "dropHint": "eller släpp en MIDI-fil här",
+  "privacy": "Filerna stannar i den här webbläsaren.",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (inbyggd)",
+  "chooseSoundFont": "Välj SoundFont",
+  "useDefaultSoundFont": "Använd inbyggd SoundFont",
+  "soundFontHint": "Valfritt. Välj en .sf2- eller .sf3-fil för att byta instrumentljud.",
+  "render": "Konvertera till WAV",
+  "rendering": "Renderar ljud…",
+  "cancel": "Avbryt",
+  "preview": "Provlyssna på WAV-filen",
+  "download": "Ladda ner WAV",
+  "invalidMidi": "MIDI-filen kunde inte öppnas eller innehåller inga spelbara toner. Prova en annan .mid- eller .midi-fil.",
+  "invalidSoundFont": "SoundFont-filen kunde inte öppnas. Prova en annan .sf2- eller .sf3-fil eller använd den inbyggda SoundFont-filen.",
+  "soundFontUnavailable": "Den inbyggda SoundFont-filen kunde inte läsas in. Försök igen eller välj en SoundFont-fil.",
+  "tooLong": "Välj en MIDI-fil som är kortare än 10 minuter för att rendera den i webbläsaren.",
+  "renderFailed": "Ljudet kunde inte renderas. Prova en mindre MIDI-fil eller en annan SoundFont."
+}

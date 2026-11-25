@@ -1179,6 +1179,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "โปรแกรมแปลง MIDI เป็น WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "เครื่องมือเปลี่ยนคีย์และปรับเทมโป MIDI",
     slug: "midi-transposer",
   },
