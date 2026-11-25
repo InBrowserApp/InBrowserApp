@@ -10075,6 +10075,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "chromatic-tuner",
+    category: "music",
+    icon: "audio-lines",
+    tags: [
+      "tuner",
+      "chromatic",
+      "guitar tuner",
+      "ukulele tuner",
+      "pitch",
+      "cents",
+      "A440",
+    ],
+    locales: {
+      ar: {
+        name: "موالف كروماتي على الإنترنت",
+        description:
+          "اضبط أوتار الغيتار أو الأوكوليلي أو أي آلة أخرى باستخدام الميكروفون. اعرف النغمة وتردّدها بالهرتز ومقدار ارتفاعها أو انخفاضها بالسنت. استمع إلى نغمة مرجعية.",
+      },
+      de: {
+        name: "Chromatisches Online-Stimmgerät",
+        description:
+          "Stimme Gitarre, Ukulele oder andere Instrumente mit dem Mikrofon. Sieh den Notennamen, die Frequenz in Hz und die Abweichung in Cent. Spiele einen Referenzton ab.",
+      },
+      en: {
+        name: "Online Chromatic Tuner",
+        description:
+          "Tune a guitar, ukulele, or other instrument with your microphone. See the note, pitch in Hz, and how many cents it is flat or sharp. Play a reference tone.",
+      },
+      es: {
+        name: "Afinador cromático en línea",
+        description:
+          "Afina la guitarra, el ukelele u otro instrumento con el micrófono. Consulta la nota, la frecuencia en Hz y la desviación en cents. Escucha un tono de referencia.",
+      },
+      fr: {
+        name: "Accordeur chromatique en ligne",
+        description:
+          "Accordez une guitare, un ukulélé ou un autre instrument avec votre microphone. Consultez la note, sa fréquence en Hz et l’écart en cents. Écoutez une note de référence.",
+      },
+      he: {
+        name: "טיונר כרומטי מקוון",
+        description:
+          "כוונו גיטרה, יוקולילי או כלי נגינה אחר בעזרת המיקרופון. ראו את התו, את התדר בהרץ ואת הסטייה מהצליל הרצוי בסנטים. השמיעו צליל ייחוס.",
+      },
+      hi: {
+        name: "ऑनलाइन क्रोमैटिक ट्यूनर",
+        description:
+          "माइक्रोफ़ोन से गिटार, यूकुलेले या कोई और वाद्य ट्यून करें। नोट और उसकी फ़्रीक्वेंसी Hz में देखें और जानें कि पिच कितने सेंट कम या ज़्यादा है। संदर्भ स्वर भी सुनें।",
+      },
+      id: {
+        name: "Tuner Kromatik Online",
+        description:
+          "Setem gitar, ukulele, atau instrumen lain lewat mikrofon. Lihat nama nada, frekuensi dalam Hz, serta seberapa rendah atau tinggi nada dari target dalam cent. Putar nada acuan untuk membandingkan.",
+      },
+      it: {
+        name: "Accordatore cromatico online",
+        description:
+          "Accorda chitarra, ukulele o un altro strumento con il microfono. Vedi la nota, la frequenza in Hz e lo scarto in cent. Ascolta una nota di riferimento.",
+      },
+      ja: {
+        name: "オンラインクロマチックチューナー",
+        description:
+          "マイクを使ってギター、ウクレレなどの楽器を調律できます。音名、周波数（Hz）、音の高低のずれをセント単位で確認し、基準音も再生できます。",
+      },
+      ko: {
+        name: "온라인 크로매틱 튜너",
+        description:
+          "마이크로 기타, 우쿨렐레 등 악기를 조율하세요. 음이름, 주파수(Hz), 목표보다 높거나 낮은 정도를 센트로 확인하고 기준음도 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Penala Kromatik Dalam Talian",
+        description:
+          "Tala gitar, ukulele atau alat muzik lain menggunakan mikrofon. Lihat not, frekuensi dalam Hz dan beza pic daripada sasaran dalam sen. Mainkan nada rujukan untuk perbandingan.",
+      },
+      nl: {
+        name: "Online chromatisch stemapparaat",
+        description:
+          "Stem een gitaar, ukelele of ander instrument met je microfoon. Bekijk de noot, de frequentie in Hz en hoeveel cent de toon te laag of te hoog is. Speel een referentietoon af.",
+      },
+      no: {
+        name: "Kromatisk stemmeapparat på nett",
+        description:
+          "Stem gitar, ukulele eller andre instrumenter med mikrofonen. Se tonen, frekvensen i Hz og hvor mange cent tonen er for lav eller for høy. Spill av en referansetone.",
+      },
+      pl: {
+        name: "Tuner chromatyczny online",
+        description:
+          "Nastrój gitarę, ukulele lub inny instrument za pomocą mikrofonu. Sprawdź nazwę dźwięku, częstotliwość w Hz i odchylenie w centach. Odtwórz dźwięk wzorcowy.",
+      },
+      pt: {
+        name: "Afinador cromático online",
+        description:
+          "Afine violão, guitarra, ukulele ou outro instrumento com o microfone. Confira a nota, a frequência em Hz e o desvio em cents. Ouça um tom de referência.",
+      },
+      ru: {
+        name: "Хроматический тюнер онлайн",
+        description:
+          "Настройте гитару, укулеле или другой инструмент через микрофон. Узнайте ноту, частоту в герцах и отклонение в центах. Воспроизведите эталонный звук.",
+      },
+      sv: {
+        name: "Kromatisk stämapparat online",
+        description:
+          "Stäm gitarr, ukulele eller andra instrument med mikrofonen. Se tonen, frekvensen i Hz och hur många cent för låg eller för hög tonen är. Spela upp en referenston.",
+      },
+      th: {
+        name: "จูนเนอร์โครมาติกออนไลน์",
+        description:
+          "ตั้งสายกีตาร์ อูคูเลเล่ หรือเทียบเสียงเครื่องดนตรีอื่นผ่านไมโครโฟน ดูชื่อโน้ต ความถี่เป็น Hz และจำนวนเซนต์ที่สูงหรือต่ำกว่าเป้าหมาย พร้อมฟังเสียงอ้างอิง",
+      },
+      tr: {
+        name: "Çevrimiçi Kromatik Akort Aleti",
+        description:
+          "Mikrofonunuzla gitar, ukulele veya başka bir çalgıyı akort edin. Notayı, Hz cinsinden frekansı ve sesin kaç sent pes ya da tiz olduğunu görün. Referans sesini dinleyin.",
+      },
+      vi: {
+        name: "Máy lên dây chromatic trực tuyến",
+        description:
+          "Dùng micro để lên dây guitar, ukulele hoặc chỉnh âm cho nhạc cụ khác. Xem tên nốt, tần số theo Hz và độ lệch cao hay thấp theo cent. Bạn cũng có thể phát âm chuẩn.",
+      },
+      "zh-CN": {
+        name: "在线半音阶调音器",
+        description:
+          "使用麦克风为吉他、尤克里里或其他乐器调音。查看音名、频率（Hz）和偏高或偏低的音分数，也可播放参考音。",
+      },
+      "zh-TW": {
+        name: "線上半音階調音器",
+        description:
+          "使用麥克風為吉他、烏克麗麗或其他樂器調音。查看音名、頻率（Hz）和偏高或偏低的音分數，也能播放參考音。",
+      },
+    },
+  },
+  {
     slug: "cidr-parser",
     category: "network",
     icon: "network",
@@ -69057,6 +69188,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Chmod 計算器",
         description:
           "在數字 (755) 和符號 (rwxr-xr-x) 表示法之間轉換 Unix 檔案權限",
+      },
+    },
+  },
+  "chromatic-tuner": {
+    slug: "chromatic-tuner",
+    category: "music",
+    icon: "audio-lines",
+    tags: [
+      "tuner",
+      "chromatic",
+      "guitar tuner",
+      "ukulele tuner",
+      "pitch",
+      "cents",
+      "A440",
+    ],
+    locales: {
+      ar: {
+        name: "موالف كروماتي على الإنترنت",
+        description:
+          "اضبط أوتار الغيتار أو الأوكوليلي أو أي آلة أخرى باستخدام الميكروفون. اعرف النغمة وتردّدها بالهرتز ومقدار ارتفاعها أو انخفاضها بالسنت. استمع إلى نغمة مرجعية.",
+      },
+      de: {
+        name: "Chromatisches Online-Stimmgerät",
+        description:
+          "Stimme Gitarre, Ukulele oder andere Instrumente mit dem Mikrofon. Sieh den Notennamen, die Frequenz in Hz und die Abweichung in Cent. Spiele einen Referenzton ab.",
+      },
+      en: {
+        name: "Online Chromatic Tuner",
+        description:
+          "Tune a guitar, ukulele, or other instrument with your microphone. See the note, pitch in Hz, and how many cents it is flat or sharp. Play a reference tone.",
+      },
+      es: {
+        name: "Afinador cromático en línea",
+        description:
+          "Afina la guitarra, el ukelele u otro instrumento con el micrófono. Consulta la nota, la frecuencia en Hz y la desviación en cents. Escucha un tono de referencia.",
+      },
+      fr: {
+        name: "Accordeur chromatique en ligne",
+        description:
+          "Accordez une guitare, un ukulélé ou un autre instrument avec votre microphone. Consultez la note, sa fréquence en Hz et l’écart en cents. Écoutez une note de référence.",
+      },
+      he: {
+        name: "טיונר כרומטי מקוון",
+        description:
+          "כוונו גיטרה, יוקולילי או כלי נגינה אחר בעזרת המיקרופון. ראו את התו, את התדר בהרץ ואת הסטייה מהצליל הרצוי בסנטים. השמיעו צליל ייחוס.",
+      },
+      hi: {
+        name: "ऑनलाइन क्रोमैटिक ट्यूनर",
+        description:
+          "माइक्रोफ़ोन से गिटार, यूकुलेले या कोई और वाद्य ट्यून करें। नोट और उसकी फ़्रीक्वेंसी Hz में देखें और जानें कि पिच कितने सेंट कम या ज़्यादा है। संदर्भ स्वर भी सुनें।",
+      },
+      id: {
+        name: "Tuner Kromatik Online",
+        description:
+          "Setem gitar, ukulele, atau instrumen lain lewat mikrofon. Lihat nama nada, frekuensi dalam Hz, serta seberapa rendah atau tinggi nada dari target dalam cent. Putar nada acuan untuk membandingkan.",
+      },
+      it: {
+        name: "Accordatore cromatico online",
+        description:
+          "Accorda chitarra, ukulele o un altro strumento con il microfono. Vedi la nota, la frequenza in Hz e lo scarto in cent. Ascolta una nota di riferimento.",
+      },
+      ja: {
+        name: "オンラインクロマチックチューナー",
+        description:
+          "マイクを使ってギター、ウクレレなどの楽器を調律できます。音名、周波数（Hz）、音の高低のずれをセント単位で確認し、基準音も再生できます。",
+      },
+      ko: {
+        name: "온라인 크로매틱 튜너",
+        description:
+          "마이크로 기타, 우쿨렐레 등 악기를 조율하세요. 음이름, 주파수(Hz), 목표보다 높거나 낮은 정도를 센트로 확인하고 기준음도 재생할 수 있습니다.",
+      },
+      ms: {
+        name: "Penala Kromatik Dalam Talian",
+        description:
+          "Tala gitar, ukulele atau alat muzik lain menggunakan mikrofon. Lihat not, frekuensi dalam Hz dan beza pic daripada sasaran dalam sen. Mainkan nada rujukan untuk perbandingan.",
+      },
+      nl: {
+        name: "Online chromatisch stemapparaat",
+        description:
+          "Stem een gitaar, ukelele of ander instrument met je microfoon. Bekijk de noot, de frequentie in Hz en hoeveel cent de toon te laag of te hoog is. Speel een referentietoon af.",
+      },
+      no: {
+        name: "Kromatisk stemmeapparat på nett",
+        description:
+          "Stem gitar, ukulele eller andre instrumenter med mikrofonen. Se tonen, frekvensen i Hz og hvor mange cent tonen er for lav eller for høy. Spill av en referansetone.",
+      },
+      pl: {
+        name: "Tuner chromatyczny online",
+        description:
+          "Nastrój gitarę, ukulele lub inny instrument za pomocą mikrofonu. Sprawdź nazwę dźwięku, częstotliwość w Hz i odchylenie w centach. Odtwórz dźwięk wzorcowy.",
+      },
+      pt: {
+        name: "Afinador cromático online",
+        description:
+          "Afine violão, guitarra, ukulele ou outro instrumento com o microfone. Confira a nota, a frequência em Hz e o desvio em cents. Ouça um tom de referência.",
+      },
+      ru: {
+        name: "Хроматический тюнер онлайн",
+        description:
+          "Настройте гитару, укулеле или другой инструмент через микрофон. Узнайте ноту, частоту в герцах и отклонение в центах. Воспроизведите эталонный звук.",
+      },
+      sv: {
+        name: "Kromatisk stämapparat online",
+        description:
+          "Stäm gitarr, ukulele eller andra instrument med mikrofonen. Se tonen, frekvensen i Hz och hur många cent för låg eller för hög tonen är. Spela upp en referenston.",
+      },
+      th: {
+        name: "จูนเนอร์โครมาติกออนไลน์",
+        description:
+          "ตั้งสายกีตาร์ อูคูเลเล่ หรือเทียบเสียงเครื่องดนตรีอื่นผ่านไมโครโฟน ดูชื่อโน้ต ความถี่เป็น Hz และจำนวนเซนต์ที่สูงหรือต่ำกว่าเป้าหมาย พร้อมฟังเสียงอ้างอิง",
+      },
+      tr: {
+        name: "Çevrimiçi Kromatik Akort Aleti",
+        description:
+          "Mikrofonunuzla gitar, ukulele veya başka bir çalgıyı akort edin. Notayı, Hz cinsinden frekansı ve sesin kaç sent pes ya da tiz olduğunu görün. Referans sesini dinleyin.",
+      },
+      vi: {
+        name: "Máy lên dây chromatic trực tuyến",
+        description:
+          "Dùng micro để lên dây guitar, ukulele hoặc chỉnh âm cho nhạc cụ khác. Xem tên nốt, tần số theo Hz và độ lệch cao hay thấp theo cent. Bạn cũng có thể phát âm chuẩn.",
+      },
+      "zh-CN": {
+        name: "在线半音阶调音器",
+        description:
+          "使用麦克风为吉他、尤克里里或其他乐器调音。查看音名、频率（Hz）和偏高或偏低的音分数，也可播放参考音。",
+      },
+      "zh-TW": {
+        name: "線上半音階調音器",
+        description:
+          "使用麥克風為吉他、烏克麗麗或其他樂器調音。查看音名、頻率（Hz）和偏高或偏低的音分數，也能播放參考音。",
       },
     },
   },

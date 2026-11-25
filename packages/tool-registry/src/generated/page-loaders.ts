@@ -100,6 +100,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chm-to-pdf-converter": () => import("@tool/chm-to-pdf-converter/page"),
   "chm-viewer": () => import("@tool/chm-viewer/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
+  "chromatic-tuner": () => import("@tool/chromatic-tuner/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),
   "cidrs-merger-excluder": () => import("@tool/cidrs-merger-excluder/page"),
   "cityhash64-hash-text-or-file": () =>

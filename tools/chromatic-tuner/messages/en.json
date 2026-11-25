@@ -1,0 +1,21 @@
+{
+  "start": "Start microphone",
+  "stop": "Stop microphone",
+  "starting": "Waiting for microphone access",
+  "listenHint": "Start the microphone, then play one steady note.",
+  "playHint": "Play one steady note.",
+  "microphoneError": "The microphone is unavailable. Check your browser permissions or choose a connected microphone, then try again.",
+  "mode": "Tuning mode",
+  "chromatic": "Chromatic",
+  "guitar": "Guitar",
+  "ukulele": "Ukulele",
+  "strings": "Target string",
+  "reference": "A4 reference (Hz)",
+  "playReference": "Play reference tone",
+  "toneError": "The reference tone could not play. Try again.",
+  "flat": "Flat",
+  "inTune": "In tune",
+  "sharp": "Sharp",
+  "cents": "{value} cents",
+  "frequency": "{value} Hz"
+}

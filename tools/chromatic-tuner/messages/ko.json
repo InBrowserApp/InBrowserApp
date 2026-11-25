@@ -1,0 +1,21 @@
+{
+  "start": "마이크 시작",
+  "stop": "마이크 중지",
+  "starting": "마이크 사용 권한을 기다리는 중",
+  "listenHint": "마이크를 시작한 후 일정한 음 하나를 연주하세요.",
+  "playHint": "일정한 음 하나를 연주하세요.",
+  "microphoneError": "마이크를 사용할 수 없습니다. 브라우저 권한을 확인하거나 연결된 마이크를 선택한 후 다시 시도하세요.",
+  "mode": "조율 모드",
+  "chromatic": "크로매틱",
+  "guitar": "기타",
+  "ukulele": "우쿨렐레",
+  "strings": "조율할 줄",
+  "reference": "A4 기준 주파수 (Hz)",
+  "playReference": "기준음 재생",
+  "toneError": "기준음을 재생할 수 없습니다. 다시 시도하세요.",
+  "flat": "낮음",
+  "inTune": "조율됨",
+  "sharp": "높음",
+  "cents": "{value}센트",
+  "frequency": "{value} Hz"
+}

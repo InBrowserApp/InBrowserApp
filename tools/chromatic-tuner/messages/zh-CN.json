@@ -1,0 +1,21 @@
+{
+  "start": "启动麦克风",
+  "stop": "停止麦克风",
+  "starting": "正在等待麦克风授权",
+  "listenHint": "启动麦克风，然后持续演奏一个稳定的音。",
+  "playHint": "请持续演奏一个稳定的音。",
+  "microphoneError": "无法使用麦克风。请检查浏览器权限或选择已连接的麦克风，然后重试。",
+  "mode": "调音模式",
+  "chromatic": "半音阶",
+  "guitar": "吉他",
+  "ukulele": "尤克里里",
+  "strings": "目标琴弦",
+  "reference": "A4 基准频率（Hz）",
+  "playReference": "播放参考音",
+  "toneError": "无法播放参考音，请重试。",
+  "flat": "偏低",
+  "inTune": "音准",
+  "sharp": "偏高",
+  "cents": "{value} 音分",
+  "frequency": "{value} Hz"
+}

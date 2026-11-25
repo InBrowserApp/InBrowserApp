@@ -1,0 +1,21 @@
+{
+  "start": "Activer le microphone",
+  "stop": "Désactiver le microphone",
+  "starting": "En attente de l’autorisation d’utiliser le microphone",
+  "listenHint": "Activez le microphone, puis jouez une note tenue.",
+  "playHint": "Jouez une note tenue.",
+  "microphoneError": "Le microphone est indisponible. Vérifiez les autorisations du navigateur ou sélectionnez un microphone connecté, puis réessayez.",
+  "mode": "Mode d’accordage",
+  "chromatic": "Chromatique",
+  "guitar": "Guitare",
+  "ukulele": "Ukulélé",
+  "strings": "Corde à accorder",
+  "reference": "Fréquence de référence (A4, Hz)",
+  "playReference": "Jouer la note de référence",
+  "toneError": "Impossible de jouer la note de référence. Réessayez.",
+  "flat": "Trop grave",
+  "inTune": "Juste",
+  "sharp": "Trop aiguë",
+  "cents": "{value} cents",
+  "frequency": "{value} Hz"
+}

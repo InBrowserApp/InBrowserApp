@@ -1,0 +1,21 @@
+{
+  "start": "Start mikrofonen",
+  "stop": "Slå av mikrofonen",
+  "starting": "Venter på mikrofontilgang",
+  "listenHint": "Start mikrofonen og spill deretter én jevn tone.",
+  "playHint": "Spill én jevn tone.",
+  "microphoneError": "Mikrofonen er ikke tilgjengelig. Kontroller nettlesertillatelsene eller velg en tilkoblet mikrofon og prøv igjen.",
+  "mode": "Stemmingsmodus",
+  "chromatic": "Kromatisk",
+  "guitar": "Gitar",
+  "ukulele": "Ukulele",
+  "strings": "Streng å stemme",
+  "reference": "A4-referanse (Hz)",
+  "playReference": "Spill av referansetone",
+  "toneError": "Referansetonen kunne ikke spilles av. Prøv igjen.",
+  "flat": "For lav",
+  "inTune": "Riktig tonehøyde",
+  "sharp": "For høy",
+  "cents": "{value} cent",
+  "frequency": "{value} Hz"
+}

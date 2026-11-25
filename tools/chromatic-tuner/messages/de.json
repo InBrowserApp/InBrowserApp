@@ -1,0 +1,21 @@
+{
+  "start": "Mikrofon starten",
+  "stop": "Mikrofon stoppen",
+  "starting": "Warte auf Mikrofonzugriff",
+  "listenHint": "Starte das Mikrofon und spiele einen gleichmäßigen Ton.",
+  "playHint": "Spiele einen gleichmäßigen Ton.",
+  "microphoneError": "Das Mikrofon ist nicht verfügbar. Prüfe die Browserberechtigungen oder wähle ein angeschlossenes Mikrofon und versuche es erneut.",
+  "mode": "Stimmmodus",
+  "chromatic": "Chromatisch",
+  "guitar": "Gitarre",
+  "ukulele": "Ukulele",
+  "strings": "Zu stimmende Saite",
+  "reference": "Referenzton A4 (Hz)",
+  "playReference": "Referenzton abspielen",
+  "toneError": "Der Referenzton ließ sich nicht abspielen. Versuche es erneut.",
+  "flat": "Zu tief",
+  "inTune": "Gestimmt",
+  "sharp": "Zu hoch",
+  "cents": "{value} Cent",
+  "frequency": "{value} Hz"
+}

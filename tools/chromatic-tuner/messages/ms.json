@@ -1,0 +1,21 @@
+{
+  "start": "Hidupkan mikrofon",
+  "stop": "Matikan mikrofon",
+  "starting": "Menunggu kebenaran mikrofon",
+  "listenHint": "Hidupkan mikrofon, kemudian mainkan satu not dengan stabil.",
+  "playHint": "Mainkan satu not dengan stabil.",
+  "microphoneError": "Mikrofon tidak tersedia. Semak kebenaran pelayar atau pilih mikrofon yang telah disambungkan, kemudian cuba lagi.",
+  "mode": "Mod penalaan",
+  "chromatic": "Kromatik",
+  "guitar": "Gitar",
+  "ukulele": "Ukulele",
+  "strings": "Tali sasaran",
+  "reference": "Rujukan A4 (Hz)",
+  "playReference": "Mainkan nada rujukan",
+  "toneError": "Nada rujukan tidak dapat dimainkan. Cuba lagi.",
+  "flat": "Terlalu rendah",
+  "inTune": "Tepat",
+  "sharp": "Terlalu tinggi",
+  "cents": "{value} sen",
+  "frequency": "{value} Hz"
+}

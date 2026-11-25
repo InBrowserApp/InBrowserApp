@@ -393,6 +393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "chmod-calculator",
   },
   {
+    category: "music",
+    name: "טיונר כרומטי מקוון",
+    slug: "chromatic-tuner",
+  },
+  {
     category: "network",
     name: "מנתח CIDR",
     slug: "cidr-parser",
