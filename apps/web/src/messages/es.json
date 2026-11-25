@@ -57,6 +57,7 @@
     "emptySearchTitle": "No hay herramientas coincidentes.",
     "emptySearchDescription": "Prueba con otra palabra clave o borra la búsqueda.",
     "categories": {
+      "3d-cad": "3D y CAD",
       "audio": "Audio",
       "crypto": "Criptografía y hashing",
       "developer": "Desarrollo",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category}: herramientas",
     "descriptions": {
+      "3d-cad": "Visualiza modelos 3D y planos CAD en tu navegador. Abre archivos STL, OBJ, GLB, glTF, 3MF, STEP y DXF, convierte entre STL y OBJ y comprueba el volumen y la topología de las mallas.",
       "audio": "Graba, edita y analiza audio en tu navegador. Recorta clips, detecta el tempo, separa canales estéreo y transcribe el habla.",
       "crypto": "Calcula hashes de texto y archivos, cifra datos y genera o verifica contraseñas y claves. Explora herramientas basadas en el navegador para sumas de verificación, criptografía y credenciales seguras.",
       "developer": "Inspecciona archivos comprimidos, da formato a código, genera identificadores y convierte configuraciones de desarrollo. Encuentra utilidades basadas en el navegador para las tareas de desarrollo cotidianas.",

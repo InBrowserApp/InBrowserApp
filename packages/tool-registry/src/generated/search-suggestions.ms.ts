@@ -8,7 +8,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "2fa-authenticator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Pemapar 3MF",
     slug: "3mf-viewer",
   },
@@ -593,7 +593,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "diagram",
+    category: "3d-cad",
     name: "Pemapar DXF",
     slug: "dxf-viewer",
   },
@@ -773,7 +773,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Pemapar GLB / glTF",
     slug: "gltf-viewer",
   },
@@ -1258,7 +1258,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Penyemak Isi Padu dan Topologi Jejaring",
     slug: "mesh-inspector",
   },
@@ -1413,12 +1413,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Penukar OBJ kepada STL",
     slug: "obj-to-stl-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Pemapar OBJ",
     slug: "obj-viewer",
   },
@@ -1873,7 +1873,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Pemapar STEP",
     slug: "step-viewer",
   },
@@ -1883,12 +1883,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "stereo-channel-splitter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Penukar STL kepada OBJ",
     slug: "stl-to-obj-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Pemapar STL",
     slug: "stl-viewer",
   },

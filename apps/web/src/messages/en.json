@@ -57,6 +57,7 @@
     "emptySearchTitle": "No matching tools.",
     "emptySearchDescription": "Try a different keyword or clear the search.",
     "categories": {
+      "3d-cad": "3D & CAD",
       "audio": "Audio",
       "crypto": "Crypto & Hashing",
       "developer": "Developer",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} Tools",
     "descriptions": {
+      "3d-cad": "View 3D models and CAD drawings in your browser. Open STL, OBJ, GLB, glTF, 3MF, STEP, and DXF files, convert between STL and OBJ, and check mesh volume and topology.",
       "audio": "Record, edit, and analyze audio in your browser. Trim clips, detect tempo, split stereo channels, and turn speech into text.",
       "crypto": "Hash text and files, encrypt data, and generate or verify passwords and keys. Explore browser-based tools for checksums, cryptography, and secure credentials.",
       "developer": "Inspect archives, format code, generate identifiers, and convert developer configurations. Find browser-based utilities for everyday development tasks.",

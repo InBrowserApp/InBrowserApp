@@ -57,6 +57,7 @@
     "emptySearchTitle": "Inga matchande verktyg.",
     "emptySearchDescription": "Prova ett annat nyckelord eller rensa sökningen.",
     "categories": {
+      "3d-cad": "3D och CAD",
       "audio": "Ljud",
       "crypto": "Krypto & hashning",
       "developer": "Utvecklare",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} – verktyg",
     "descriptions": {
+      "3d-cad": "Visa 3D-modeller och CAD-ritningar i webbläsaren. Öppna filer i formaten STL, OBJ, GLB, glTF, 3MF, STEP och DXF, konvertera mellan STL och OBJ och kontrollera nätens volym och topologi.",
       "audio": "Spela in, redigera och analysera ljud i webbläsaren. Trimma ljudklipp, identifiera tempot, separera stereokanaler och omvandla tal till text.",
       "crypto": "Hasha text och filer, kryptera data och generera eller verifiera lösenord och nycklar. Utforska webbläsarbaserade verktyg för kontrollsummor, kryptografi och säkra inloggningsuppgifter.",
       "developer": "Granska arkiv, formatera kod, generera identifierare och konvertera utvecklarkonfigurationer. Hitta webbläsarbaserade verktyg för vardagliga utvecklingsuppgifter.",

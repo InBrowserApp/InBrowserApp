@@ -57,6 +57,7 @@
     "emptySearchTitle": "Aucun outil correspondant.",
     "emptySearchDescription": "Essayez un autre mot-clé ou effacez la recherche.",
     "categories": {
+      "3d-cad": "3D et CAO",
       "audio": "Audio",
       "crypto": "Crypto et hachage",
       "developer": "Développement",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "Outils : {category}",
     "descriptions": {
+      "3d-cad": "Visualisez des modèles 3D et des dessins de CAO dans votre navigateur. Ouvrez des fichiers STL, OBJ, GLB, glTF, 3MF, STEP et DXF, convertissez les fichiers STL et OBJ dans les deux sens et vérifiez le volume et la topologie des maillages.",
       "audio": "Enregistrez, modifiez et analysez des fichiers audio dans votre navigateur. Découpez des extraits, détectez le tempo, séparez les canaux stéréo et transcrivez la parole en texte.",
       "crypto": "Calculez le hachage de textes et de fichiers, chiffrez des données et générez ou vérifiez des mots de passe et des clés. Découvrez des outils dans votre navigateur pour les sommes de contrôle, la cryptographie et les identifiants sécurisés.",
       "developer": "Inspectez des archives, formatez du code, générez des identifiants et convertissez des configurations de développement. Trouvez des utilitaires dans votre navigateur pour vos tâches de développement quotidiennes.",

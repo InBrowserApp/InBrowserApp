@@ -57,6 +57,7 @@
     "emptySearchTitle": "没有匹配的工具。",
     "emptySearchDescription": "试试其他关键词，或清除搜索。",
     "categories": {
+      "3d-cad": "3D 与 CAD",
       "audio": "音频",
       "crypto": "加密与哈希",
       "developer": "开发者",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category}工具",
     "descriptions": {
+      "3d-cad": "在浏览器中查看 3D 模型和 CAD 图纸。支持打开 STL、OBJ、GLB、glTF、3MF、STEP 和 DXF 文件，进行 STL 与 OBJ 互转，并检查网格体积和拓扑。",
       "audio": "在浏览器中录制、编辑和分析音频。裁剪片段、检测节拍、拆分立体声声道，或将语音转为文本。",
       "crypto": "计算文本和文件的哈希值、加密数据，以及生成或验证密码和密钥。探索用于校验和、加密和安全凭据的浏览器工具。",
       "developer": "查看归档文件、格式化代码、生成标识符，以及转换开发配置。查找用于日常开发任务的浏览器实用工具。",

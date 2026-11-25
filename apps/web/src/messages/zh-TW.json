@@ -57,6 +57,7 @@
     "emptySearchTitle": "沒有符合的工具。",
     "emptySearchDescription": "請嘗試其他關鍵字或清除搜尋。",
     "categories": {
+      "3d-cad": "3D 與 CAD",
       "audio": "音訊",
       "crypto": "加密與雜湊",
       "developer": "開發者",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category}工具",
     "descriptions": {
+      "3d-cad": "在瀏覽器中檢視 3D 模型和 CAD 圖面。可開啟 STL、OBJ、GLB、glTF、3MF、STEP 和 DXF 檔案、在 STL 與 OBJ 之間互轉，以及檢查網格體積與拓撲。",
       "audio": "在瀏覽器中錄製、編輯及分析音訊。裁剪片段、偵測節拍、分離立體聲聲道，或將語音轉成文字。",
       "crypto": "計算文字與檔案的雜湊值、加密資料，以及產生或驗證密碼與金鑰。探索可在瀏覽器中使用的檢查碼、密碼學及安全憑證工具。",
       "developer": "檢視壓縮檔、格式化程式碼、產生識別碼，以及轉換開發設定。尋找可在瀏覽器中處理日常開發工作的實用工具。",

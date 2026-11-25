@@ -57,6 +57,7 @@
     "emptySearchTitle": "Tiada alat yang sepadan.",
     "emptySearchDescription": "Cuba kata kunci lain atau kosongkan carian.",
     "categories": {
+      "3d-cad": "3D dan CAD",
       "audio": "Audio",
       "crypto": "Kripto & Pencincangan",
       "developer": "Pembangun",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "Alat {category}",
     "descriptions": {
+      "3d-cad": "Lihat model 3D dan lukisan CAD dalam pelayar anda. Buka fail STL, OBJ, GLB, glTF, 3MF, STEP dan DXF, tukar antara STL dengan OBJ, dan semak isi padu serta topologi jejaring.",
       "audio": "Rakam, sunting dan analisis audio dalam pelayar anda. Pangkas klip, kesan tempo, pisahkan saluran stereo dan tukar pertuturan kepada teks.",
       "crypto": "Cincang teks dan fail, sulitkan data, serta jana atau sahkan kata laluan dan kunci. Terokai alat berasaskan pelayar untuk hasil tambah semak, kriptografi dan kelayakan akses yang selamat.",
       "developer": "Periksa arkib, format kod, jana pengecam dan tukar konfigurasi pembangun. Cari utiliti berasaskan pelayar untuk tugas pembangunan harian.",

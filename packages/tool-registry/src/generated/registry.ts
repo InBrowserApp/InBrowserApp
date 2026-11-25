@@ -137,7 +137,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "3mf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "3mf",
@@ -15142,7 +15142,8 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "dxf-viewer",
-    category: "diagram",
+    category: "3d-cad",
+    secondaryCategories: ["diagram"],
     icon: "ruler",
     tags: [
       "dxf",
@@ -19766,7 +19767,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "gltf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "glb",
@@ -31967,7 +31968,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "mesh-inspector",
-    category: "image",
+    category: "3d-cad",
     icon: "scan-line",
     tags: [
       "mesh",
@@ -35965,7 +35966,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "obj-to-stl-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "obj",
@@ -36096,7 +36097,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "obj-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "obj",
@@ -47726,7 +47727,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "step-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "step",
@@ -47991,7 +47992,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "stl-to-obj-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "stl",
@@ -48122,7 +48123,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "stl-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "stl",
@@ -57304,7 +57305,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "3mf-viewer": {
     slug: "3mf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "3mf",
@@ -72309,7 +72310,8 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "dxf-viewer": {
     slug: "dxf-viewer",
-    category: "diagram",
+    category: "3d-cad",
+    secondaryCategories: ["diagram"],
     icon: "ruler",
     tags: [
       "dxf",
@@ -76933,7 +76935,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "gltf-viewer": {
     slug: "gltf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "glb",
@@ -89134,7 +89136,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "mesh-inspector": {
     slug: "mesh-inspector",
-    category: "image",
+    category: "3d-cad",
     icon: "scan-line",
     tags: [
       "mesh",
@@ -93132,7 +93134,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "obj-to-stl-converter": {
     slug: "obj-to-stl-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "obj",
@@ -93263,7 +93265,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "obj-viewer": {
     slug: "obj-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "obj",
@@ -104893,7 +104895,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "step-viewer": {
     slug: "step-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "step",
@@ -105158,7 +105160,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "stl-to-obj-converter": {
     slug: "stl-to-obj-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "stl",
@@ -105289,7 +105291,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "stl-viewer": {
     slug: "stl-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "stl",

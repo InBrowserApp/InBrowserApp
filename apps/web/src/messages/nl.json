@@ -57,6 +57,7 @@
     "emptySearchTitle": "Geen overeenkomende tools.",
     "emptySearchDescription": "Probeer een ander trefwoord of wis de zoekopdracht.",
     "categories": {
+      "3d-cad": "3D en CAD",
       "audio": "Audio",
       "crypto": "Crypto & hashing",
       "developer": "Ontwikkelaars",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} – tools",
     "descriptions": {
+      "3d-cad": "Bekijk 3D-modellen en CAD-tekeningen in je browser. Open STL-, OBJ-, GLB-, glTF-, 3MF-, STEP- en DXF-bestanden, converteer tussen STL en OBJ en controleer het volume en de topologie van 3D-netten.",
       "audio": "Neem audio op, bewerk en analyseer die in je browser. Knip fragmenten bij, bepaal het tempo, splits stereokanalen en zet spraak om in tekst.",
       "crypto": "Bereken hashes van tekst en bestanden, versleutel gegevens en genereer of controleer wachtwoorden en sleutels. Ontdek browsergebaseerde tools voor controlesommen, cryptografie en veilige inloggegevens.",
       "developer": "Inspecteer archieven, maak code op, genereer identificatoren en converteer ontwikkelaarsconfiguraties. Vind browsergebaseerde hulpmiddelen voor dagelijkse ontwikkeltaken.",
