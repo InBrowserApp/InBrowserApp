@@ -12,4 +12,4 @@ Jika DXF menetapkan satuan panjang seperti milimeter atau inci, SVG mencatat dim
 
 ## Ekspor geometri ruang model
 
-Konverter mengekspor garis, garis bersambung (polyline), busur, lingkaran, blok, dan teks yang didukung. Kurva digambar dengan segmen vektor, sementara teks yang didukung diubah menjadi kontur vektor menggunakan font yang tersedia. Untuk gambar di lembar tata letak, pindahkan geometri ke ruang model sebelum mengekspor DXF. Untuk memeriksa gambar, geser, perbesar atau perkecil tampilan, dan tampilkan atau sembunyikan lapisan di [Penampil DXF](../dxf-viewer/).
+Konverter mengekspor garis, garis bersambung (polyline), busur, lingkaran, blok, dan teks yang didukung. Kurva digambar dengan segmen vektor, sementara teks yang didukung diubah menjadi kontur vektor menggunakan font yang tersedia. Uraikan array blok yang tersusun dalam baris dan kolom menjadi referensi blok terpisah di aplikasi CAD sebelum menyimpan DXF. Untuk gambar di lembar tata letak, pindahkan geometri ke ruang model sebelum mengekspor DXF. Untuk memeriksa gambar, geser, perbesar atau perkecil tampilan, dan tampilkan atau sembunyikan lapisan di [Penampil DXF](../dxf-viewer/).

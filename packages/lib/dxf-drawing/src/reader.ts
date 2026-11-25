@@ -1,3 +1,4 @@
+import { TransformColor } from "dxf-viewer/src/ColorTransform.js"
 import { DxfWorker } from "dxf-viewer/src/DxfWorker.js"
 import { SceneReader } from "dxf-viewer/src/SceneReader.js"
 import { dxfEncoding } from "./encoding"
@@ -9,7 +10,8 @@ import type { VectorDrawing } from "./vector"
 type ShapeGroup = { type: Primitive["type"]; color: string; paths: string[] }
 
 const surveyFoot = 1_200_000 / 3937
-const units = [
+// DXF $INSUNITS values, with index zero left unitless.
+const millimetersByUnit = [
   undefined,
   25.4,
   304.8,
@@ -38,8 +40,7 @@ const units = [
 ]
 
 function lineColor(color: number) {
-  // AutoCAD's adaptive white is black on a light page.
-  const rgb = color === 0xffffff ? 0 : color & 0xffffff
+  const rgb = TransformColor(color, 0xffffff, true, true) & 0xffffff
   return `#${rgb.toString(16).padStart(6, "0")}`
 }
 
@@ -138,7 +139,7 @@ export async function readVectorDrawing(
             ]
           : []
       ),
-      millimetersPerUnit: units[Number(dxf.header?.$INSUNITS)],
+      millimetersPerUnit: millimetersByUnit[Number(dxf.header?.$INSUNITS)],
     }
   } finally {
     URL.revokeObjectURL(url)

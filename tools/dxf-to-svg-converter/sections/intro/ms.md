@@ -12,4 +12,4 @@ Jika DXF menetapkan unit panjang seperti milimeter atau inci, SVG merekodkan dim
 
 ## Eksport geometri ruang model
 
-Penukar mengeksport garis, garis bersambung (polyline), lengkok, bulatan, blok dan teks yang disokong. Lengkung dilukis menggunakan segmen vektor, manakala teks yang disokong ditukar kepada garis bentuk vektor menggunakan fon yang tersedia. Bagi lukisan pada helaian susun atur, alihkan geometri ke ruang model sebelum mengeksport DXF. Untuk memeriksa lukisan, alih pandangan, zum dan papar atau sembunyikan lapisan dalam [Pemapar DXF](../dxf-viewer/).
+Penukar mengeksport garis, garis bersambung (polyline), lengkok, bulatan, blok dan teks yang disokong. Lengkung dilukis menggunakan segmen vektor, manakala teks yang disokong ditukar kepada garis bentuk vektor menggunakan fon yang tersedia. Pecahkan tatasusunan blok berbaris dan berlajur kepada sisipan blok berasingan dalam perisian CAD sebelum menyimpan DXF. Bagi lukisan pada helaian susun atur, alihkan geometri ke ruang model sebelum mengeksport DXF. Untuk memeriksa lukisan, alih pandangan, zum dan papar atau sembunyikan lapisan dalam [Pemapar DXF](../dxf-viewer/).

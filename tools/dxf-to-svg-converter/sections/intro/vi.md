@@ -12,4 +12,4 @@ Khi DXF khai báo đơn vị chiều dài như milimét hoặc inch, SVG ghi kí
 
 ## Xuất hình học trong không gian mô hình
 
-Công cụ xuất các đoạn thẳng, đường đa tuyến, cung, đường tròn, khối và văn bản được hỗ trợ. Đường cong được vẽ bằng các đoạn vector. Văn bản được hỗ trợ chuyển thành đường bao vector dựa trên phông chữ có sẵn. Nếu bản vẽ nằm trên trang bố cục, hãy chuyển hình học sang không gian mô hình trước khi xuất DXF. Để kiểm tra bản vẽ, hãy dịch chuyển, thu phóng và bật tắt các lớp trong [Trình xem DXF](../dxf-viewer/).
+Công cụ xuất các đoạn thẳng, đường đa tuyến, cung, đường tròn, khối và văn bản được hỗ trợ. Đường cong được vẽ bằng các đoạn vector. Văn bản được hỗ trợ chuyển thành đường bao vector dựa trên phông chữ có sẵn. Hãy phân rã các mảng khối xếp theo hàng và cột thành từng tham chiếu khối riêng lẻ trong phần mềm CAD trước khi lưu tệp DXF. Nếu bản vẽ nằm trên trang bố cục, hãy chuyển hình học sang không gian mô hình trước khi xuất DXF. Để kiểm tra bản vẽ, hãy dịch chuyển, thu phóng và bật tắt các lớp trong [Trình xem DXF](../dxf-viewer/).

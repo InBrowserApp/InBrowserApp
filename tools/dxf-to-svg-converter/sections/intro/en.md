@@ -12,4 +12,4 @@ When the DXF declares a length unit such as millimeters or inches, the SVG recor
 
 ## Export model-space geometry
 
-The converter exports supported lines, polylines, arcs, circles, blocks and text. Curves are drawn with vector segments, and supported text becomes vector outlines using available fonts. For layouts, move the geometry into model space before exporting the DXF. For inspection, pan, zoom and toggle layers in the [DXF Viewer](../dxf-viewer/).
+The converter exports supported lines, polylines, arcs, circles, blocks and text. Curves are drawn with vector segments, and supported text becomes vector outlines using available fonts. Explode row-and-column block arrays into individual inserts in your CAD application before saving the DXF. For layouts, move the geometry into model space before exporting the DXF. For inspection, pan, zoom and toggle layers in the [DXF Viewer](../dxf-viewer/).

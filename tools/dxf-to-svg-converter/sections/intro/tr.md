@@ -12,4 +12,4 @@ DXF dosyası milimetre veya inç gibi bir uzunluk birimi belirtiyorsa SVG, fizik
 
 ## Model alanı geometrisini dışa aktarma
 
-Dönüştürücü, desteklenen çizgileri, çoklu çizgileri, yayları, daireleri, blokları ve metinleri dışa aktarır. Eğriler vektör parçalarıyla çizilir. Desteklenen metinler, mevcut yazı tipleri kullanılarak vektör dış hatlarına dönüştürülür. Geometri bir yerleşim paftasındaysa DXF dosyasını dışa aktarmadan önce model alanına taşıyın. Çizimi incelemek için [DXF Görüntüleyici](../dxf-viewer/) aracında görünümü kaydırın, yakınlaştırın ve katmanları açıp kapatın.
+Dönüştürücü, desteklenen çizgileri, çoklu çizgileri, yayları, daireleri, blokları ve metinleri dışa aktarır. Eğriler vektör parçalarıyla çizilir. Desteklenen metinler, mevcut yazı tipleri kullanılarak vektör dış hatlarına dönüştürülür. DXF dosyasını kaydetmeden önce CAD yazılımınızda satır ve sütunlardan oluşan blok dizilerini patlatarak ayrı blok eklemelerine dönüştürün. Geometri bir yerleşim paftasındaysa DXF dosyasını dışa aktarmadan önce model alanına taşıyın. Çizimi incelemek için [DXF Görüntüleyici](../dxf-viewer/) aracında görünümü kaydırın, yakınlaştırın ve katmanları açıp kapatın.

@@ -12,4 +12,4 @@ Gibt die DXF-Datei eine Längeneinheit wie Millimeter oder Zoll an, speichert di
 
 ## Geometrie aus dem Modellbereich exportieren
 
-Der Konverter exportiert unterstützte Linien, Polylinien, Bögen, Kreise, Blöcke und Texte. Kurven werden mit Vektorsegmenten dargestellt. Unterstützte Texte werden mit den verfügbaren Schriftarten in Vektorkonturen umgewandelt. Verschiebe bei Layouts die Geometrie vor dem DXF-Export in den Modellbereich. Im [DXF-Betrachter](../dxf-viewer/) kannst du die Ansicht verschieben, zoomen und Layer ein- oder ausblenden.
+Der Konverter exportiert unterstützte Linien, Polylinien, Bögen, Kreise, Blöcke und Texte. Kurven werden mit Vektorsegmenten dargestellt. Unterstützte Texte werden mit den verfügbaren Schriftarten in Vektorkonturen umgewandelt. Löse rechteckige Blockanordnungen aus Zeilen und Spalten in deinem CAD-Programm in einzelne Blockreferenzen auf, bevor du die DXF-Datei speicherst. Verschiebe bei Layouts die Geometrie vor dem DXF-Export in den Modellbereich. Im [DXF-Betrachter](../dxf-viewer/) kannst du die Ansicht verschieben, zoomen und Layer ein- oder ausblenden.

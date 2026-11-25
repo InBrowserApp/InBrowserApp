@@ -12,4 +12,4 @@ När DXF-filen anger en längdenhet som millimeter eller tum sparar SVG-filen de
 
 ## Exportera geometri från modellutrymmet
 
-Konverteraren exporterar linjer, polylinjer, bågar, cirklar, block och text som stöds. Kurvor ritas med vektorsegment. Text som stöds omvandlas till vektorkonturer med tillgängliga teckensnitt. Flytta geometri från layoutblad till modellutrymmet innan du exporterar DXF-filen. I [DXF-visaren](../dxf-viewer/) kan du panorera, zooma och visa eller dölja lager.
+Konverteraren exporterar linjer, polylinjer, bågar, cirklar, block och text som stöds. Kurvor ritas med vektorsegment. Text som stöds omvandlas till vektorkonturer med tillgängliga teckensnitt. Spräng blockmatriser med rader och kolumner till enskilda blockreferenser i CAD-programmet innan du sparar DXF-filen. Flytta geometri från layoutblad till modellutrymmet innan du exporterar DXF-filen. I [DXF-visaren](../dxf-viewer/) kan du panorera, zooma och visa eller dölja lager.

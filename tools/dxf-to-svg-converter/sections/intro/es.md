@@ -12,4 +12,4 @@ Si el DXF indica una unidad de longitud, como milímetros o pulgadas, el SVG gua
 
 ## Exportar la geometría del espacio modelo
 
-El conversor exporta las líneas, polilíneas, arcos, círculos, bloques y textos compatibles. Las curvas se dibujan con segmentos vectoriales, y los textos compatibles se convierten en contornos vectoriales con las fuentes disponibles. Si trabajas con una presentación, mueve la geometría al espacio modelo antes de exportar el DXF. Para inspeccionar el dibujo, desplaza la vista, usa el zoom y muestra u oculta capas en el [Visor de DXF](../dxf-viewer/).
+El conversor exporta las líneas, polilíneas, arcos, círculos, bloques y textos compatibles. Las curvas se dibujan con segmentos vectoriales, y los textos compatibles se convierten en contornos vectoriales con las fuentes disponibles. Antes de guardar el DXF, descompón las matrices rectangulares de bloques en referencias de bloque individuales en tu programa CAD. Si trabajas con una presentación, mueve la geometría al espacio modelo antes de exportar el DXF. Para inspeccionar el dibujo, desplaza la vista, usa el zoom y muestra u oculta capas en el [Visor de DXF](../dxf-viewer/).

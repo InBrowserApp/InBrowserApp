@@ -12,4 +12,4 @@ Jeśli w pliku DXF podano jednostkę długości, taką jak milimetry lub cale, p
 
 ## Eksport geometrii z obszaru modelu
 
-Konwerter eksportuje obsługiwane linie, polilinie, łuki, okręgi, bloki i tekst. Krzywe są rysowane za pomocą odcinków wektorowych, a obsługiwany tekst jest zamieniany na kontury wektorowe przy użyciu dostępnych czcionek. Jeśli korzystasz z arkusza układu, przenieś geometrię do obszaru modelu przed wyeksportowaniem DXF. W [przeglądarce plików DXF](../dxf-viewer/) możesz przesuwać i powiększać widok oraz włączać i wyłączać widoczność warstw.
+Konwerter eksportuje obsługiwane linie, polilinie, łuki, okręgi, bloki i tekst. Krzywe są rysowane za pomocą odcinków wektorowych, a obsługiwany tekst jest zamieniany na kontury wektorowe przy użyciu dostępnych czcionek. Przed zapisaniem pliku DXF rozbij w programie CAD szyki bloków w wierszach i kolumnach na pojedyncze odwołania do bloków. Jeśli korzystasz z arkusza układu, przenieś geometrię do obszaru modelu przed wyeksportowaniem DXF. W [przeglądarce plików DXF](../dxf-viewer/) możesz przesuwać i powiększać widok oraz włączać i wyłączać widoczność warstw.

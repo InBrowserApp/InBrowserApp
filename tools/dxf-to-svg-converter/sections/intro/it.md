@@ -12,4 +12,4 @@ Se il DXF specifica un’unità di lunghezza, come millimetri o pollici, il file
 
 ## Esportare la geometria dello spazio modello
 
-Il convertitore esporta le linee, polilinee, archi, cerchi, blocchi e testi supportati. Le curve sono disegnate con segmenti vettoriali, mentre i testi supportati diventano contorni vettoriali ottenuti dai caratteri disponibili. Per i layout, sposta la geometria nello spazio modello prima di esportare il DXF. Per esaminare il disegno, sposta la vista, regola lo zoom e mostra o nascondi i layer nel [Visualizzatore DXF](../dxf-viewer/).
+Il convertitore esporta le linee, polilinee, archi, cerchi, blocchi e testi supportati. Le curve sono disegnate con segmenti vettoriali, mentre i testi supportati diventano contorni vettoriali ottenuti dai caratteri disponibili. Prima di salvare il DXF, esplodi le serie rettangolari di blocchi in singoli riferimenti di blocco nel programma CAD. Per i layout, sposta la geometria nello spazio modello prima di esportare il DXF. Per esaminare il disegno, sposta la vista, regola lo zoom e mostra o nascondi i layer nel [Visualizzatore DXF](../dxf-viewer/).

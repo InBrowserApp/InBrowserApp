@@ -12,4 +12,4 @@ Hvis DXF-filen angir en lengdeenhet som millimeter eller tommer, lagrer SVG-file
 
 ## Eksporter geometri fra modellområdet
 
-Konvertereren eksporterer linjer, polylinjer, buer, sirkler, blokker og tekst som støttes. Kurver tegnes med vektorsegmenter. Tekst som støttes, blir til vektorkonturer ved hjelp av tilgjengelige skrifttyper. Flytt geometri fra oppsettark til modellområdet før du eksporterer DXF-filen. I [DXF-viseren](../dxf-viewer/) kan du panorere, zoome og slå lag av eller på.
+Konvertereren eksporterer linjer, polylinjer, buer, sirkler, blokker og tekst som støttes. Kurver tegnes med vektorsegmenter. Tekst som støttes, blir til vektorkonturer ved hjelp av tilgjengelige skrifttyper. Eksploder blokkmatriser med rader og kolonner til enkeltstående blokkreferanser i CAD-programmet før du lagrer DXF-filen. Flytt geometri fra oppsettark til modellområdet før du eksporterer DXF-filen. I [DXF-viseren](../dxf-viewer/) kan du panorere, zoome og slå lag av eller på.

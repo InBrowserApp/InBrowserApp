@@ -38,11 +38,13 @@ function DrawingPanel({
   drawing,
   fileName,
   lang,
+  focusOnReady,
   messages: m,
 }: {
   drawing: VectorDrawing
   fileName: string
   lang: string
+  focusOnReady: boolean
   messages: Messages
 }) {
   const { layers } = drawing
@@ -59,7 +61,9 @@ function DrawingPanel({
   const dimensions = new Intl.NumberFormat(lang, {
     maximumSignificantDigits: 6,
   })
-  const units = drawing.millimetersPerUnit ? "mm" : m.fileUnits
+  const physicalSize = Boolean(drawing.millimetersPerUnit)
+  const allSelected = selected.size === layers.length
+  const noneSelected = selected.size === 0
 
   function toggle(name: string) {
     setSelected((previous) => {
@@ -85,20 +89,25 @@ function DrawingPanel({
               <Button
                 variant="ghost"
                 size="sm"
-                className="px-2"
-                onClick={() =>
-                  setSelected(new Set(layers.map((layer) => layer.name)))
+                className="px-2 aria-disabled:opacity-50"
+                aria-disabled={allSelected || undefined}
+                onClick={
+                  allSelected
+                    ? undefined
+                    : () =>
+                        setSelected(new Set(layers.map((layer) => layer.name)))
                 }
-                disabled={selected.size === layers.length}
               >
                 {m.selectAll}
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
-                className="px-2"
-                onClick={() => setSelected(new Set())}
-                disabled={selected.size === 0}
+                className="px-2 aria-disabled:opacity-50"
+                aria-disabled={noneSelected || undefined}
+                onClick={
+                  noneSelected ? undefined : () => setSelected(new Set())
+                }
               >
                 {m.clear}
               </Button>
@@ -141,17 +150,19 @@ function DrawingPanel({
           <p className="flex flex-wrap items-baseline gap-x-2 text-sm">
             <span className="text-muted-foreground">{m.size}</span>
             <span className="font-medium tabular-nums">
-              <bdi>
+              <bdi dir="ltr">
                 {dimensions.format(result.width)} ×{" "}
                 {dimensions.format(result.height)}
-              </bdi>{" "}
-              {units}
+                {physicalSize && " mm"}
+              </bdi>
+              {!physicalSize && ` ${m.fileUnits}`}
             </span>
           </p>
           <DocumentDownload
             file={result.svg}
             filename={`${fileName.replace(/\.dxf$/i, "") || "drawing"}.svg`}
             label={m.download}
+            focusOnReady={focusOnReady}
           />
         </div>
       )}
@@ -174,6 +185,7 @@ export default function DxfToSvg({
       }),
     (file) => ({ file, lang })
   )
+  const [focusOnReady, setFocusOnReady] = useState(false)
   const [loaded, setLoaded] = useState<{
     id: number
     name: string
@@ -186,14 +198,18 @@ export default function DxfToSvg({
       drawing: result.data.drawing,
     })
   }
+  const outcome = status ?? result?.data.kind
   const error =
-    status === "failed"
-      ? m.failed
-      : !status && result?.data.kind === "binary"
-        ? m.binary
-        : !status && result?.data.kind === "empty"
-          ? m.empty
-          : undefined
+    outcome && outcome !== "working" && outcome !== "ready"
+      ? m[outcome]
+      : undefined
+
+  function open(file?: File) {
+    setFocusOnReady(
+      !file && document.activeElement instanceof HTMLButtonElement
+    )
+    void run(file)
+  }
 
   return (
     <div className="grid min-w-0 gap-3">
@@ -208,10 +224,10 @@ export default function DxfToSvg({
           dropHint: m.drop,
           privacy: m.privacy,
         }}
-        example={{ label: m.example, onClick: () => void run() }}
-        onFile={(file) => void run(file)}
+        example={{ label: m.example, onClick: () => open() }}
+        onFile={open}
       />
-      {status === "working" && (
+      {outcome === "working" && (
         <p
           role="status"
           className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -231,6 +247,7 @@ export default function DxfToSvg({
           drawing={loaded.drawing}
           fileName={loaded.name}
           lang={lang}
+          focusOnReady={focusOnReady}
           messages={m}
         />
       )}

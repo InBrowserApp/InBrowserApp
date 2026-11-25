@@ -12,4 +12,4 @@ Als het DXF-bestand een lengtemaat zoals millimeter of inch opgeeft, slaat het S
 
 ## Geometrie uit de modelruimte exporteren
 
-De converter exporteert ondersteunde lijnen, polylijnen, bogen, cirkels, blokken en teksten. Krommen worden getekend met vectorsegmenten. Ondersteunde tekst wordt op basis van de beschikbare lettertypen omgezet in vectorcontouren. Staat de geometrie op een lay-outblad, verplaats die dan vóór de DXF-export naar de modelruimte. In de [DXF-viewer](../dxf-viewer/) kun je de weergave verschuiven, zoomen en lagen tonen of verbergen.
+De converter exporteert ondersteunde lijnen, polylijnen, bogen, cirkels, blokken en teksten. Krommen worden getekend met vectorsegmenten. Ondersteunde tekst wordt op basis van de beschikbare lettertypen omgezet in vectorcontouren. Splits blokpatronen met rijen en kolommen in je CAD-programma op in afzonderlijke blokreferenties voordat je het DXF-bestand opslaat. Staat de geometrie op een lay-outblad, verplaats die dan vóór de DXF-export naar de modelruimte. In de [DXF-viewer](../dxf-viewer/) kun je de weergave verschuiven, zoomen en lagen tonen of verbergen.

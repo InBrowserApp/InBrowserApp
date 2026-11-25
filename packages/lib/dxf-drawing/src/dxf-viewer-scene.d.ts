@@ -1,3 +1,12 @@
+declare module "dxf-viewer/src/ColorTransform.js" {
+  export function TransformColor(
+    color: number,
+    clearColor: number,
+    colorCorrection: boolean,
+    blackWhiteInversion: boolean
+  ): number
+}
+
 declare module "dxf-viewer/src/DxfWorker.js" {
   export class DxfWorker {
     constructor(worker: null)

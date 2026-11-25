@@ -1246,7 +1246,7 @@ patchedDependencies:
   caj2pdf-rust@0.8.1: a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
   djvu-rs@0.46.0: 5e2925223863631262eeabc78a87fb8ef78467ec2aebb508412d5d98e8157ce8
-  dxf-viewer@1.0.51: d90b11d47d9c05e537203679ebdafe3147182e2b10c6725b2158cbcd5869b179
+  dxf-viewer@1.0.51: b365740b27318f0d316d99dd0ec321625c7ac8b8bfeb7a3d023a36bc701a1a42
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
   hyparquet@1.33.1: f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830
   pst-extractor@1.12.0: ee34e8a5a1d302df017bcf193c98d8fc0315ecae3f0781bb5118ac2dcda4fe52
@@ -1480,7 +1480,7 @@ importers:
         version: link:../svg-pdf
       dxf-viewer:
         specifier: 'catalog:'
-        version: 1.0.51(patch_hash=d90b11d47d9c05e537203679ebdafe3147182e2b10c6725b2158cbcd5869b179)
+        version: 1.0.51(patch_hash=b365740b27318f0d316d99dd0ec321625c7ac8b8bfeb7a3d023a36bc701a1a42)
     devDependencies:
       vitest:
         specifier: 'catalog:'
@@ -7146,7 +7146,7 @@ importers:
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dxf-viewer:
         specifier: 'catalog:'
-        version: 1.0.51(patch_hash=d90b11d47d9c05e537203679ebdafe3147182e2b10c6725b2158cbcd5869b179)
+        version: 1.0.51(patch_hash=b365740b27318f0d316d99dd0ec321625c7ac8b8bfeb7a3d023a36bc701a1a42)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -31418,7 +31418,7 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  dxf-viewer@1.0.51(patch_hash=d90b11d47d9c05e537203679ebdafe3147182e2b10c6725b2158cbcd5869b179):
+  dxf-viewer@1.0.51(patch_hash=b365740b27318f0d316d99dd0ec321625c7ac8b8bfeb7a3d023a36bc701a1a42):
     dependencies:
       '@types/three': 0.186.0
       earcut: 3.2.4

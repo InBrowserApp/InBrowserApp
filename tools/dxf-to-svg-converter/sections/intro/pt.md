@@ -12,4 +12,4 @@ Quando o DXF especifica uma unidade de comprimento, como milímetros ou polegada
 
 ## Exportar a geometria do espaço do modelo
 
-O conversor exporta linhas, polilinhas, arcos, círculos, blocos e textos compatíveis. As curvas são desenhadas com segmentos vetoriais, e os textos compatíveis viram contornos vetoriais com as fontes disponíveis. Se o desenho estiver em um layout, mova a geometria para o espaço do modelo antes de exportar o DXF. Para inspecionar o desenho, desloque a vista, ajuste o zoom e mostre ou oculte camadas no [Visualizador de DXF](../dxf-viewer/).
+O conversor exporta linhas, polilinhas, arcos, círculos, blocos e textos compatíveis. As curvas são desenhadas com segmentos vetoriais, e os textos compatíveis viram contornos vetoriais com as fontes disponíveis. Antes de salvar o DXF, exploda as matrizes retangulares de blocos em referências de bloco individuais no programa CAD. Se o desenho estiver em um layout, mova a geometria para o espaço do modelo antes de exportar o DXF. Para inspecionar o desenho, desloque a vista, ajuste o zoom e mostre ou oculte camadas no [Visualizador de DXF](../dxf-viewer/).
