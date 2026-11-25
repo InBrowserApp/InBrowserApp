@@ -1,0 +1,11 @@
+{
+  "open": "Åpne fil",
+  "drop": "Slipp en modellfil her",
+  "example": "Prøv et eksempel",
+  "privacy": "Filen blir på enheten din.",
+  "converting": "Konverterer modellen …",
+  "failed": "Kunne ikke konvertere modellen. Velg en gyldig modellfil som inneholder polygonflater.",
+  "output": "Konvertert fil",
+  "download": "Last ned {format}",
+  "previousOutput": "Forrige konvertering"
+}

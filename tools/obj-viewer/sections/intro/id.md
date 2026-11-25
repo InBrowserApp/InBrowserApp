@@ -13,3 +13,4 @@ OBJ tetap dapat dibuka ketika file pendampingnya kurang lengkap. Permukaan yang 
 Untuk melihat mesh segitiga yang diekspor untuk pencetakan 3D, gunakan [Penampil STL](../stl-viewer/). Jika Anda mempunyai file CAD asli komponen atau rakitan dalam format `.step` atau `.stp`, buka dengan [Penampil STEP](../step-viewer/).
 
 - [Penampil GLB / glTF](../gltf-viewer/)
+- [Konverter OBJ ke STL](../obj-to-stl-converter/)

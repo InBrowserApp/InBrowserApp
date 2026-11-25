@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "عارض GeoPackage",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "عارض GeoTIFF",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "محوّل MIDI إلى MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "محوّل MIDI إلى WAV",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "محول Numbers إلى XLSX",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "محوّل OBJ إلى STL",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "حماية ملف PDF بكلمة مرور",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "عارض PST",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "أداة فصل قنوات الستيريو",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "محوّل STL إلى OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

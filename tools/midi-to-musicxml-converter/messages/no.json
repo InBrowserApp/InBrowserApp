@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Velg MIDI-fil",
+  "changeFile": "Bytt fil",
+  "dropHint": "eller slipp en MIDI-fil her",
+  "privacy": "Filen din blir i denne nettleseren.",
+  "quantization": "Rutenett for kvantisering",
+  "quantizationHint": "Et finere rutenett beholder kortere noter. Et grovere rutenett kan gjøre innspilt musikk lettere å lese.",
+  "eighth": "Åttedelsnote (1/8)",
+  "sixteenth": "Sekstendelsnote (1/16)",
+  "thirtySecond": "Trettitodelsnote (1/32)",
+  "download": "Last ned MusicXML",
+  "part": "Stemme",
+  "invalidMidi": "Filen kunne ikke leses som en standard MIDI-fil. Velg en annen .mid- eller .midi-fil.",
+  "unsupportedTiming": "Eksporter filen som en MIDI-fil med musikalsk tidsbase (format 0 eller 1) og prøv igjen.",
+  "noNotes": "MIDI-filen inneholder ingen noter å sette inn i partituret.",
+  "tooManyMeasures": "Partituret har for mange takter til å konverteres på én gang. Prøv et kortere utdrag."
+}

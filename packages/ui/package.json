@@ -48,9 +48,11 @@
     "./lib/*": "./src/lib/*.ts",
     "./components/*": "./src/components/*.tsx",
     "./astro/torrent-page": "./src/components/tool/torrent-page.astro",
+    "./email-archive-messages": "./src/components/tool/email-archive/copy.ts",
     "./torrent-messages": "./src/components/tool/torrent-messages.ts",
     "./astro/comic-archive-tool": "./src/components/tool/comic-reader/archive-tool.astro",
     "./comic-reader/*": "./src/components/tool/comic-reader/*.ts",
-    "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts"
+    "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts",
+    "./mesh-converter-messages": "./src/components/tool/mesh-converter/messages.ts"
   }
 }

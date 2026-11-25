@@ -1,0 +1,12 @@
+{
+  "open": "Mở tệp PST",
+  "replace": "Mở tệp PST khác",
+  "releaseFile": "Thả để mở tệp PST",
+  "drop": "Thả tệp PST vào đây",
+  "formats": "Mở tệp dữ liệu Outlook (.pst) từ hộp thư đã xuất, bản sao lưu hoặc kho lưu trữ.",
+  "invalid": "Không đọc được tệp PST này. Hãy chọn một tệp dữ liệu Outlook (.pst) hoặc xuất bản sao mới từ Outlook.",
+  "empty": "Tệp PST này không có thư nào đọc được.",
+  "folders": "Thư mục email",
+  "allFolders": "Tất cả thư mục",
+  "emptyFolder": "Thư mục này không có thư."
+}

@@ -39,6 +39,7 @@ catalog:
   "@types/leaflet": ^1.9.22
   "@types/geojson": ^7946.0.16
   shpjs: 6.2.0
+  "@uwdata/wk-geojson": 0.0.1
   "@types/shpjs": 3.4.7
   "@tmcw/togeojson": ^7.1.4
   "@citation-js/core": 0.9.0
@@ -208,6 +209,7 @@ catalog:
   foliate-js: 1.0.1
   "@ofdjs/viewer": 0.1.1
   postal-mime: 4.2.1
+  pst-extractor: 1.12.0
   string_decoder: 1.3.0
   "@kenjiuno/msgreader": 1.29.0
   fflate: 0.8.3
@@ -415,6 +417,7 @@ patchedDependencies:
   "@matbee/libreoffice-converter@2.7.2": "patches/@matbee__libreoffice-converter@2.7.2.patch"
   "@rhwp/core@0.9.0": patches/@rhwp__core@0.9.0.patch
   hyparquet@1.33.1: patches/hyparquet@1.33.1.patch
+  pst-extractor@1.12.0: patches/pst-extractor@1.12.0.patch
 
 minimumReleaseAgeExclude:
   - lint-staged@17.6.1

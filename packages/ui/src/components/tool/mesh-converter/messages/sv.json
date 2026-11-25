@@ -1,0 +1,11 @@
+{
+  "open": "Öppna fil",
+  "drop": "Släpp en modellfil här",
+  "example": "Prova ett exempel",
+  "privacy": "Din fil stannar på den här enheten.",
+  "converting": "Konverterar modellen…",
+  "failed": "Det gick inte att konvertera modellen. Välj en giltig modellfil med polygoner.",
+  "output": "Konverterad fil",
+  "download": "Ladda ner {format}",
+  "previousOutput": "Föregående konvertering"
+}

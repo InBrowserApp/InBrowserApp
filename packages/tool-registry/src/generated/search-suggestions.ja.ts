@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GeoPackage ビューアー",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "GeoTIFF ビューアー",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI MusicXML 変換",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI WAV 変換",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "NumbersからXLSXへの変換ツール",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "OBJ → STL 変換",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDFをパスワードで保護",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "PST ビューアー",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "ステレオ音声の左右チャンネル分割",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL → OBJ 変換",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

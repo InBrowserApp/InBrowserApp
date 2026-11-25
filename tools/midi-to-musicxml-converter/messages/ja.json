@@ -1,0 +1,17 @@
+{
+  "chooseFile": "MIDI ファイルを選択",
+  "changeFile": "ファイルを変更",
+  "dropHint": "または MIDI ファイルをここにドロップ",
+  "privacy": "ファイルはこのブラウザー内に保持されます。",
+  "quantization": "クオンタイズのグリッド",
+  "quantizationHint": "細かいグリッドは短い音符を保持します。粗いグリッドは録音した演奏を読みやすくする場合があります。",
+  "eighth": "8 分音符（1/8）",
+  "sixteenth": "16 分音符（1/16）",
+  "thirtySecond": "32 分音符（1/32）",
+  "download": "MusicXML をダウンロード",
+  "part": "パート",
+  "invalidMidi": "このファイルを標準 MIDI ファイルとして読み込めませんでした。別の .mid または .midi ファイルを選択してください。",
+  "unsupportedTiming": "このファイルを拍ベースの MIDI ファイル（フォーマット 0 または 1）として書き出してから、もう一度お試しください。",
+  "noNotes": "この MIDI ファイルには楽譜に書き出せる音符がありません。",
+  "tooManyMeasures": "この楽譜は小節数が多すぎて一度に変換できません。短い範囲をお試しください。"
+}

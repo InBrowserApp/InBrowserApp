@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Choisir un fichier MIDI",
+  "changeFile": "Changer de fichier",
+  "dropHint": "ou déposez un fichier MIDI ici",
+  "privacy": "Votre fichier reste dans ce navigateur.",
+  "quantization": "Grille de quantification",
+  "quantizationHint": "Une grille plus fine conserve les notes courtes. Une grille plus large peut faciliter la lecture d’une interprétation enregistrée.",
+  "eighth": "Croche (1/8)",
+  "sixteenth": "Double croche (1/16)",
+  "thirtySecond": "Triple croche (1/32)",
+  "download": "Télécharger le MusicXML",
+  "part": "Partie",
+  "invalidMidi": "Ce fichier n’a pas pu être lu au format MIDI standard. Choisissez un autre fichier .mid ou .midi.",
+  "unsupportedTiming": "Exportez le fichier MIDI au format 0 ou 1 avec une résolution en impulsions par noire (PPQ), puis réessayez.",
+  "noNotes": "Ce fichier MIDI ne contient aucune note à inscrire dans la partition.",
+  "tooManyMeasures": "La partition contient trop de mesures pour être convertie en une fois. Essayez un extrait plus court."
+}

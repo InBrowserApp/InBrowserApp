@@ -1,0 +1,4 @@
+{
+  "name": "OBJ to STL Converter",
+  "description": "Convert a Wavefront OBJ mesh to a binary STL file in your browser, ready to open in a slicer or STL viewer."
+}

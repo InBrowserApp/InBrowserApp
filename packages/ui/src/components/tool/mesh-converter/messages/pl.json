@@ -1,0 +1,11 @@
+{
+  "open": "Otwórz plik",
+  "drop": "Upuść tutaj plik modelu",
+  "example": "Wypróbuj przykład",
+  "privacy": "Plik pozostaje na Twoim urządzeniu.",
+  "converting": "Konwertowanie modelu…",
+  "failed": "Nie udało się przekonwertować modelu. Wybierz poprawny plik modelu ze ścianami siatki.",
+  "output": "Przekonwertowany plik",
+  "download": "Pobierz {format}",
+  "previousOutput": "Poprzednia konwersja"
+}

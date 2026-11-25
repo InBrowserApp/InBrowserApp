@@ -17341,6 +17341,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "geopackage-viewer",
+    category: "geo",
+    icon: "database",
+    tags: [
+      "geopackage",
+      "gpkg",
+      "sqlite",
+      "gis",
+      "vector",
+      "layers",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoPackage",
+        description:
+          "افتح ملف GeoPackage بامتداد .gpkg في متصفحك. استكشف الطبقات المتجهة على خريطة تعمل دون اتصال، وتحقّق من سمات المعالم وتصفّح جداول البيانات غير المكانية.",
+      },
+      de: {
+        name: "GeoPackage-Betrachter",
+        description:
+          "Öffne ein GeoPackage (.gpkg) im Browser. Sieh dir Vektorlayer auf einer Offline-Karte an, prüfe Objektattribute und durchsuche Tabellen ohne Geometrie.",
+      },
+      en: {
+        name: "GeoPackage Viewer",
+        description:
+          "Open a GeoPackage (.gpkg) in your browser. Explore vector layers on an offline map, inspect feature attributes, and browse non-spatial data tables.",
+      },
+      es: {
+        name: "Visor de GeoPackage",
+        description:
+          "Abre un GeoPackage (.gpkg) en tu navegador. Explora capas vectoriales en un mapa sin conexión, consulta los atributos y examina tablas no espaciales.",
+      },
+      fr: {
+        name: "Visionneuse GeoPackage",
+        description:
+          "Ouvrez un GeoPackage (.gpkg) dans votre navigateur. Explorez les couches vectorielles sur une carte hors ligne, consultez les attributs des entités et parcourez les tables non spatiales.",
+      },
+      he: {
+        name: "מציג GeoPackage",
+        description:
+          "פתחו קובץ GeoPackage בסיומת ‎.gpkg בדפדפן. עיינו בשכבות וקטוריות במפה שעובדת בלי חיבור לרשת, בדקו את מאפייני הישויות ועיינו בטבלאות נתונים לא מרחביים.",
+      },
+      hi: {
+        name: "GeoPackage व्यूअर",
+        description:
+          "ब्राउज़र में GeoPackage (.gpkg) खोलें। ऑफ़लाइन मानचित्र पर वेक्टर परतें देखें, फ़ीचर की विशेषताएँ जाँचें और गैर-स्थानिक डेटा तालिकाएँ ब्राउज़ करें।",
+      },
+      id: {
+        name: "Penampil GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) di browser. Jelajahi lapisan vektor pada peta luring, periksa atribut fitur, dan telusuri tabel data nonspasial.",
+      },
+      it: {
+        name: "Visualizzatore GeoPackage",
+        description:
+          "Apri un GeoPackage (.gpkg) nel browser. Esplora i layer vettoriali su una mappa offline, consulta gli attributi degli elementi e sfoglia le tabelle non spaziali.",
+      },
+      ja: {
+        name: "GeoPackage ビューアー",
+        description:
+          "ブラウザーで GeoPackage（.gpkg）を開き、オフライン地図でベクターレイヤーや地物の属性、非空間データのテーブルを確認できます。",
+      },
+      ko: {
+        name: "GeoPackage 뷰어",
+        description:
+          "브라우저에서 GeoPackage(.gpkg)를 열어 오프라인 지도에서 벡터 레이어를 살펴보고 피처 속성과 비공간 데이터 테이블을 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) dalam pelayar. Terokai lapisan vektor pada peta luar talian, semak atribut ciri dan semak imbas jadual data bukan ruang.",
+      },
+      nl: {
+        name: "GeoPackage-viewer",
+        description:
+          "Open een GeoPackage (.gpkg) in je browser. Verken vectorlagen op een offlinekaart, bekijk objectattributen en blader door tabellen zonder geometrie.",
+      },
+      no: {
+        name: "GeoPackage-viser",
+        description:
+          "Åpne en GeoPackage-fil (.gpkg) i nettleseren. Utforsk vektorlag på et kart uten nett, se objektegenskaper og bla gjennom tabeller uten geometri.",
+      },
+      pl: {
+        name: "Przeglądarka GeoPackage",
+        description:
+          "Otwórz plik GeoPackage (.gpkg) w przeglądarce. Oglądaj warstwy wektorowe na mapie offline, sprawdzaj atrybuty obiektów i przeglądaj tabele bez geometrii.",
+      },
+      pt: {
+        name: "Visualizador de GeoPackage",
+        description:
+          "Abra um GeoPackage (.gpkg) no navegador. Explore camadas vetoriais em um mapa offline, consulte os atributos das feições e navegue por tabelas não espaciais.",
+      },
+      ru: {
+        name: "Просмотр GeoPackage",
+        description:
+          "Откройте GeoPackage (.gpkg) в браузере. Просматривайте векторные слои на офлайн-карте, изучайте атрибуты объектов и записи в таблицах без геометрии.",
+      },
+      sv: {
+        name: "GeoPackage-visare",
+        description:
+          "Öppna en GeoPackage-fil (.gpkg) i webbläsaren. Utforska vektorlager på en karta offline, granska objektens attribut och bläddra i tabeller utan geometri.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoPackage",
+        description:
+          "เปิด GeoPackage (.gpkg) ในเบราว์เซอร์ สำรวจชั้นข้อมูลเวกเตอร์บนแผนที่ออฟไลน์ ตรวจสอบแอตทริบิวต์ของฟีเจอร์ และเรียกดูตารางข้อมูลที่ไม่มีข้อมูลเชิงพื้นที่",
+      },
+      tr: {
+        name: "GeoPackage Görüntüleyici",
+        description:
+          "Tarayıcınızda bir GeoPackage (.gpkg) dosyası açın. Çevrimdışı haritada vektör katmanlarını keşfedin, detayların özniteliklerini inceleyin ve konumsal olmayan veri tablolarına göz atın.",
+      },
+      vi: {
+        name: "Trình xem GeoPackage",
+        description:
+          "Mở GeoPackage (.gpkg) trong trình duyệt. Khám phá các lớp vectơ trên bản đồ ngoại tuyến, kiểm tra thuộc tính đối tượng và duyệt bảng dữ liệu phi không gian.",
+      },
+      "zh-CN": {
+        name: "GeoPackage 查看器",
+        description:
+          "在浏览器中打开 GeoPackage（.gpkg），在离线地图上浏览矢量图层、查看要素属性并浏览非空间数据表。",
+      },
+      "zh-TW": {
+        name: "GeoPackage 檢視器",
+        description:
+          "在瀏覽器中開啟 GeoPackage（.gpkg），在離線地圖上探索向量圖層、查看圖徵屬性並瀏覽非空間資料表。",
+      },
+    },
+  },
+  {
     slug: "geotiff-viewer",
     category: "geo",
     secondaryCategories: ["image"],
@@ -30662,6 +30794,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "midi-to-musicxml-converter",
+    category: "misc",
+    icon: "arrow-left-right",
+    tags: [
+      "midi",
+      "musicxml",
+      "midi to sheet music",
+      "notation",
+      "quantization",
+      "score",
+      "midi converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MIDI إلى MusicXML",
+        description:
+          "حوّل ملف MIDI إلى نوتة موسيقية قابلة للتحرير. اختر شبكة إيقاعية، ونزّل ملف MusicXML، وافتح النوتة في برنامج التدوين الموسيقي.",
+      },
+      de: {
+        name: "MIDI-zu-MusicXML-Konverter",
+        description:
+          "Wandle eine MIDI-Datei in bearbeitbare Noten um. Wähle ein Rhythmusraster, lade die MusicXML-Datei herunter und öffne die Partitur in deinem Notensatzprogramm.",
+      },
+      en: {
+        name: "MIDI to MusicXML Converter",
+        description:
+          "Turn a MIDI file into editable sheet music. Choose a rhythm grid, download MusicXML, and open the score in your notation software.",
+      },
+      es: {
+        name: "Conversor de MIDI a MusicXML",
+        description:
+          "Convierte un archivo MIDI en una partitura editable. Elige una rejilla rítmica, descarga el MusicXML y abre la partitura en tu editor de partituras.",
+      },
+      fr: {
+        name: "Convertisseur MIDI vers MusicXML",
+        description:
+          "Transformez un fichier MIDI en partition modifiable. Choisissez une grille rythmique, téléchargez le MusicXML et ouvrez la partition dans votre logiciel de notation.",
+      },
+      he: {
+        name: "ממיר MIDI ל־MusicXML",
+        description:
+          "הפכו קובץ MIDI לתווים שאפשר לערוך. בחרו רשת קצב, הורידו קובץ MusicXML ופתחו אותו בתוכנת התיווי שלכם.",
+      },
+      hi: {
+        name: "MIDI से MusicXML कन्वर्टर",
+        description:
+          "MIDI फ़ाइल को संपादन योग्य शीट म्यूज़िक में बदलें। लय का ग्रिड चुनें, MusicXML डाउनलोड करें और स्कोर को अपने नोटेशन सॉफ़्टवेयर में खोलें।",
+      },
+      id: {
+        name: "Konverter MIDI ke MusicXML",
+        description:
+          "Ubah file MIDI menjadi partitur yang dapat disunting. Pilih grid ritme, unduh MusicXML, lalu buka partitur di program notasi Anda.",
+      },
+      it: {
+        name: "Convertitore da MIDI a MusicXML",
+        description:
+          "Trasforma un file MIDI in uno spartito modificabile. Scegli una griglia ritmica, scarica il MusicXML e apri lo spartito nel tuo programma di notazione.",
+      },
+      ja: {
+        name: "MIDI MusicXML 変換",
+        description:
+          "MIDI ファイルを編集可能な楽譜に変換します。リズムのグリッドを選び、MusicXML をダウンロードして楽譜作成ソフトで開けます。",
+      },
+      ko: {
+        name: "MIDI를 MusicXML로 변환",
+        description:
+          "MIDI 파일을 편집 가능한 악보로 변환합니다. 리듬 격자를 선택하고 MusicXML을 다운로드해 악보 작성 프로그램에서 여세요.",
+      },
+      ms: {
+        name: "Penukar MIDI kepada MusicXML",
+        description:
+          "Tukar fail MIDI kepada skor muzik yang boleh disunting. Pilih grid ritma, muat turun MusicXML dan buka skor dalam perisian notasi anda.",
+      },
+      nl: {
+        name: "MIDI-naar-MusicXML-converter",
+        description:
+          "Zet een MIDI-bestand om naar bewerkbare bladmuziek. Kies een ritmeraster, download het MusicXML-bestand en open de partituur in je muzieknotatieprogramma.",
+      },
+      no: {
+        name: "MIDI til MusicXML-konverterer",
+        description:
+          "Gjør om en MIDI-fil til redigerbare noter. Velg et rytmerutenett, last ned MusicXML og åpne partituret i noteprogrammet ditt.",
+      },
+      pl: {
+        name: "Konwerter MIDI na MusicXML",
+        description:
+          "Zamień plik MIDI na edytowalny zapis nutowy. Wybierz siatkę rytmiczną, pobierz plik MusicXML i otwórz partyturę w edytorze nut.",
+      },
+      pt: {
+        name: "Conversor de MIDI para MusicXML",
+        description:
+          "Converta um arquivo MIDI em uma partitura editável. Escolha uma grade rítmica, baixe o MusicXML e abra a partitura no seu editor de partituras.",
+      },
+      ru: {
+        name: "Конвертер MIDI в MusicXML",
+        description:
+          "Преобразуйте MIDI-файл в редактируемые ноты. Выберите ритмическую сетку, скачайте MusicXML и откройте партитуру в нотном редакторе.",
+      },
+      sv: {
+        name: "MIDI till MusicXML-konverterare",
+        description:
+          "Gör om en MIDI-fil till redigerbara noter. Välj ett rytmrutnät, ladda ner MusicXML och öppna partituret i ditt notskrivningsprogram.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MIDI เป็น MusicXML",
+        description:
+          "แปลงไฟล์ MIDI เป็นโน้ตเพลงที่แก้ไขได้ เลือกกริดจังหวะ ดาวน์โหลด MusicXML แล้วเปิดโน้ตในโปรแกรมเขียนโน้ตของคุณ",
+      },
+      tr: {
+        name: "MIDI'den MusicXML'e Dönüştürücü",
+        description:
+          "MIDI dosyanızı düzenlenebilir notalara dönüştürün. Bir ritim ızgarası seçin, MusicXML dosyasını indirin ve partisyonu nota yazım programınızda açın.",
+      },
+      vi: {
+        name: "Chuyển MIDI sang MusicXML",
+        description:
+          "Chuyển tệp MIDI thành bản nhạc có thể chỉnh sửa. Chọn lưới nhịp, tải MusicXML và mở bản nhạc trong phần mềm ký âm.",
+      },
+      "zh-CN": {
+        name: "MIDI 转 MusicXML 转换器",
+        description:
+          "将 MIDI 文件转换为可编辑的乐谱。选择节奏网格，下载 MusicXML，然后在记谱软件中打开乐谱。",
+      },
+      "zh-TW": {
+        name: "MIDI 轉 MusicXML 轉換器",
+        description:
+          "將 MIDI 檔案轉換為可編輯的樂譜。選擇節奏網格、下載 MusicXML，然後在記譜軟體中開啟樂譜。",
+      },
+    },
+  },
+  {
     slug: "midi-to-wav-converter",
     category: "misc",
     icon: "audio-lines",
@@ -33096,6 +33359,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "Numbers 轉 XLSX 轉換器",
         description:
           "在瀏覽器中將本機 Apple Numbers 試算表轉換為 Excel XLSX。檢視表格、查看工作表對應關係並下載資料，無須上傳。",
+      },
+    },
+  },
+  {
+    slug: "obj-to-stl-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "obj",
+      "stl",
+      "obj to stl",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل OBJ إلى STL",
+        description:
+          "حوّل شبكة Wavefront OBJ إلى ملف STL ثنائي في متصفحك، ثم افتحه في برنامج التقطيع أو عارض STL.",
+      },
+      de: {
+        name: "OBJ-zu-STL-Konverter",
+        description:
+          "Wandle ein Wavefront-OBJ-Netz im Browser in eine binäre STL-Datei um. Öffne die Datei anschließend im Slicer oder im STL-Betrachter.",
+      },
+      en: {
+        name: "OBJ to STL Converter",
+        description:
+          "Convert a Wavefront OBJ mesh to a binary STL file in your browser, ready to open in a slicer or STL viewer.",
+      },
+      es: {
+        name: "Conversor de OBJ a STL",
+        description:
+          "Convierte una malla Wavefront OBJ a un archivo STL binario en tu navegador. Abre el resultado en un laminador o en un visor de STL.",
+      },
+      fr: {
+        name: "Convertisseur OBJ en STL",
+        description:
+          "Convertissez un maillage Wavefront OBJ en fichier STL binaire dans votre navigateur. Ouvrez le résultat dans un logiciel de tranchage ou une visionneuse STL.",
+      },
+      he: {
+        name: "ממיר OBJ ל־STL",
+        description:
+          "המירו רשת Wavefront OBJ לקובץ STL בינארי בדפדפן, ואז פתחו את הקובץ בתוכנת חיתוך או במציג STL.",
+      },
+      hi: {
+        name: "OBJ से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में Wavefront OBJ मेश को बाइनरी STL फ़ाइल में बदलें। उसे स्लाइसर या STL व्यूअर में खोलें।",
+      },
+      id: {
+        name: "Konverter OBJ ke STL",
+        description:
+          "Konversi mesh Wavefront OBJ ke file STL biner di browser, siap dibuka di aplikasi slicer atau penampil STL.",
+      },
+      it: {
+        name: "Convertitore da OBJ a STL",
+        description:
+          "Converti una mesh Wavefront OBJ in un file STL binario nel browser. Apri il risultato in uno slicer o in un visualizzatore STL.",
+      },
+      ja: {
+        name: "OBJ → STL 変換",
+        description:
+          "Wavefront OBJ メッシュをブラウザーでバイナリ STL ファイルに変換し、スライサーや STL ビューアーで開けます。",
+      },
+      ko: {
+        name: "OBJ → STL 변환기",
+        description:
+          "브라우저에서 Wavefront OBJ 메시를 바이너리 STL 파일로 변환하여 슬라이서나 STL 뷰어에서 여세요.",
+      },
+      ms: {
+        name: "Penukar OBJ kepada STL",
+        description:
+          "Tukar jejaring Wavefront OBJ kepada fail STL binari dalam pelayar untuk dibuka dalam perisian penghiris atau pemapar STL.",
+      },
+      nl: {
+        name: "OBJ naar STL-converter",
+        description:
+          "Converteer een Wavefront OBJ-net in je browser naar een binair STL-bestand dat je in een slicer of STL-viewer kunt openen.",
+      },
+      no: {
+        name: "OBJ til STL-konverterer",
+        description:
+          "Konverter et Wavefront OBJ-nett til en binær STL-fil i nettleseren. Åpne filen i et slicerprogram eller en STL-viser.",
+      },
+      pl: {
+        name: "Konwerter OBJ na STL",
+        description:
+          "Konwertuj siatki Wavefront OBJ w przeglądarce na binarne pliki STL, które otworzysz w przeglądarce STL lub programie do przygotowywania wydruku.",
+      },
+      pt: {
+        name: "Conversor de OBJ para STL",
+        description:
+          "Converta uma malha Wavefront OBJ em um arquivo STL binário no navegador. Abra o resultado em um fatiador ou visualizador de STL.",
+      },
+      ru: {
+        name: "Конвертер OBJ в STL",
+        description:
+          "Преобразуйте полигональную сетку Wavefront OBJ в двоичный файл STL прямо в браузере. Результат можно открыть в слайсере или программе просмотра STL.",
+      },
+      sv: {
+        name: "OBJ till STL-konverterare",
+        description:
+          "Konvertera ett Wavefront OBJ-nät till en binär STL-fil i webbläsaren. Öppna filen i ett slicerprogram eller en STL-visare.",
+      },
+      th: {
+        name: "โปรแกรมแปลง OBJ เป็น STL",
+        description:
+          "แปลงเมช Wavefront OBJ เป็นไฟล์ STL ไบนารีในเบราว์เซอร์ เพื่อเปิดในโปรแกรมตัดชั้นหรือโปรแกรมดู STL",
+      },
+      tr: {
+        name: "OBJ’den STL’ye Dönüştürücü",
+        description:
+          "Wavefront OBJ ağını tarayıcınızda ikili STL dosyasına dönüştürün. Dosyayı bir dilimleme yazılımında veya STL görüntüleyicide açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi OBJ sang STL",
+        description:
+          "Chuyển lưới Wavefront OBJ sang tệp STL nhị phân trong trình duyệt để mở bằng phần mềm cắt lớp hoặc trình xem STL.",
+      },
+      "zh-CN": {
+        name: "OBJ 转 STL 转换器",
+        description:
+          "在浏览器中将 Wavefront OBJ 网格转换为二进制 STL 文件，以便在切片软件或 STL 查看器中打开。",
+      },
+      "zh-TW": {
+        name: "OBJ 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 Wavefront OBJ 網格轉換為二進位 STL 檔案，以便在切片軟體或 STL 檢視器中開啟。",
       },
     },
   },
@@ -38041,6 +38435,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "為 PDF 設定密碼",
         description:
           "為 PDF 設定開啟密碼，收件者輸入密碼後才能檢視檔案。直接在瀏覽器中加密並下載受保護的副本，無須上傳檔案。",
+      },
+    },
+  },
+  {
+    slug: "pst-viewer",
+    category: "document",
+    icon: "archive",
+    tags: [
+      "pst",
+      "outlook",
+      "email",
+      "mailbox",
+      "archive",
+      "backup",
+      "attachment",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PST",
+        description:
+          "افتح ملفات Outlook بتنسيق PST في متصفحك. تصفّح مجلدات البريد وابحث عن الرسائل واقرأها ونزّل المرفقات من دون رفع الأرشيف.",
+      },
+      de: {
+        name: "PST-Betrachter",
+        description:
+          "Öffne PST-Dateien aus Outlook im Browser. Durchsuche E-Mail-Ordner, lies Nachrichten und lade Anhänge herunter. Das Archiv bleibt auf deinem Gerät.",
+      },
+      en: {
+        name: "PST Viewer",
+        description:
+          "Open Outlook PST files in your browser. Browse mail folders, search messages, read email, and download attachments without uploading your archive.",
+      },
+      es: {
+        name: "Visor PST",
+        description:
+          "Abre archivos PST de Outlook en tu navegador. Explora carpetas de correo, busca y lee mensajes y descarga adjuntos sin subir el archivo.",
+      },
+      fr: {
+        name: "Visionneuse PST",
+        description:
+          "Ouvrez vos fichiers PST Outlook dans le navigateur. Parcourez les dossiers, recherchez et lisez vos e-mails, puis téléchargez les pièces jointes sans envoyer l’archive.",
+      },
+      he: {
+        name: "מציג PST",
+        description:
+          "פתחו קובצי PST של Outlook בדפדפן. עיינו בתיקיות דואר, חפשו וקראו הודעות והורידו קבצים מצורפים בלי להעלות את הארכיון.",
+      },
+      hi: {
+        name: "PST व्यूअर",
+        description:
+          "Outlook की PST फ़ाइलें अपने ब्राउज़र में खोलें। आर्काइव अपलोड किए बिना मेल फ़ोल्डर देखें, संदेश खोजें, ईमेल पढ़ें और अटैचमेंट डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil PST",
+        description:
+          "Buka file PST Outlook di browser. Jelajahi folder, cari dan baca email, serta unduh lampiran tanpa perlu mengunggah arsip Anda.",
+      },
+      it: {
+        name: "Visualizzatore PST",
+        description:
+          "Apri i file PST di Outlook nel browser. Sfoglia le cartelle di posta, cerca e leggi i messaggi e scarica gli allegati senza caricare l’archivio online.",
+      },
+      ja: {
+        name: "PST ビューアー",
+        description:
+          "ブラウザーで Outlook の PST ファイルを開きます。アーカイブをアップロードせずに、メールフォルダーの閲覧、メッセージの検索と表示、添付ファイルのダウンロードができます。",
+      },
+      ko: {
+        name: "PST 뷰어",
+        description:
+          "브라우저에서 Outlook PST 파일을 열어 보세요. 보관 파일을 업로드하지 않고 메일 폴더를 탐색하고, 메시지를 검색하고 읽으며, 첨부 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar PST",
+        description:
+          "Buka fail PST Outlook dalam pelayar. Semak folder, cari dan baca e-mel, serta muat turun lampiran tanpa memuat naik arkib anda.",
+      },
+      nl: {
+        name: "PST-viewer",
+        description:
+          "Open Outlook-PST-bestanden in je browser. Blader door e-mailmappen, zoek en lees berichten en download bijlagen zonder je archief te uploaden.",
+      },
+      no: {
+        name: "PST-viser",
+        description:
+          "Åpne Outlooks PST-filer i nettleseren. Bla i e-postmapper, søk etter meldinger, les e-post og last ned vedlegg uten å laste opp arkivet.",
+      },
+      pl: {
+        name: "Przeglądarka PST",
+        description:
+          "Otwieraj pliki PST programu Outlook w przeglądarce. Przeglądaj foldery poczty, wyszukuj i czytaj wiadomości oraz pobieraj załączniki bez przesyłania archiwum.",
+      },
+      pt: {
+        name: "Visualizador PST",
+        description:
+          "Abra arquivos PST do Outlook no navegador. Navegue pelas pastas, pesquise e leia e-mails e baixe anexos sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Просмотр PST",
+        description:
+          "Открывайте файлы Outlook PST в браузере. Просматривайте почтовые папки, ищите и читайте письма и скачивайте вложения без загрузки архива на сервер.",
+      },
+      sv: {
+        name: "PST-visare",
+        description:
+          "Öppna Outlooks PST-filer i webbläsaren. Bläddra bland e-postmappar, sök och läs meddelanden och ladda ner bilagor utan att ladda upp arkivet.",
+      },
+      th: {
+        name: "โปรแกรมดู PST",
+        description:
+          "เปิดไฟล์ PST ของ Outlook ในเบราว์เซอร์ เรียกดูโฟลเดอร์ ค้นหาและอ่านอีเมล หรือดาวน์โหลดไฟล์แนบโดยไม่ต้องอัปโหลดไฟล์ PST",
+      },
+      tr: {
+        name: "PST Görüntüleyici",
+        description:
+          "Outlook PST dosyalarını tarayıcınızda açın. Arşivinizi yüklemeden posta klasörlerine göz atın, iletileri arayıp okuyun ve ekleri indirin.",
+      },
+      vi: {
+        name: "Trình xem PST",
+        description:
+          "Mở tệp PST của Outlook ngay trong trình duyệt. Duyệt thư mục, tìm và đọc thư, tải tệp đính kèm mà không cần tải tệp lưu trữ lên.",
+      },
+      "zh-CN": {
+        name: "PST 查看器",
+        description:
+          "在浏览器中打开 Outlook PST 文件。浏览邮件文件夹、搜索和阅读邮件、下载附件，无需上传存档。",
+      },
+      "zh-TW": {
+        name: "PST 檢視器",
+        description:
+          "在瀏覽器中開啟 Outlook PST 檔案。瀏覽郵件資料夾、搜尋和閱讀郵件、下載附件，無須上傳封存檔。",
       },
     },
   },
@@ -44468,6 +44994,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "左右聲道分離",
         description:
           "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  {
+    slug: "stl-to-obj-converter",
+    category: "image",
+    icon: "arrow-left-right",
+    tags: [
+      "stl",
+      "obj",
+      "stl to obj",
+      "3d",
+      "mesh",
+      "conversion",
+      "3d printing",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل STL إلى OBJ",
+        description:
+          "حوّل ملفات STL النصية (ASCII) أو الثنائية إلى Wavefront OBJ في متصفحك. نزّل الشبكة المثلثة للنموذج في ملف OBJ.",
+      },
+      de: {
+        name: "STL-zu-OBJ-Konverter",
+        description:
+          "Wandle ASCII- oder binäre STL-Dateien im Browser in Wavefront OBJ um. Lade das Dreiecksnetz des Modells als OBJ-Datei herunter.",
+      },
+      en: {
+        name: "STL to OBJ Converter",
+        description:
+          "Convert ASCII or binary STL to Wavefront OBJ in your browser. Download the model’s triangular mesh as an OBJ file.",
+      },
+      es: {
+        name: "Conversor de STL a OBJ",
+        description:
+          "Convierte archivos STL ASCII o binarios a Wavefront OBJ en tu navegador. Descarga la malla triangular del modelo como archivo OBJ.",
+      },
+      fr: {
+        name: "Convertisseur STL en OBJ",
+        description:
+          "Convertissez des fichiers STL ASCII ou binaires en Wavefront OBJ dans votre navigateur. Téléchargez le maillage triangulaire du modèle au format OBJ.",
+      },
+      he: {
+        name: "ממיר STL ל־OBJ",
+        description:
+          "המירו קובצי STL בינאריים או בקידוד ASCII לפורמט Wavefront OBJ בדפדפן. הורידו את רשת המשולשים של המודל כקובץ OBJ.",
+      },
+      hi: {
+        name: "STL से OBJ कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ASCII या बाइनरी STL को Wavefront OBJ में बदलें। मॉडल का त्रिकोणीय मेश OBJ फ़ाइल के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STL ke OBJ",
+        description:
+          "Konversi STL ASCII atau biner ke Wavefront OBJ di browser. Unduh mesh segitiga model sebagai file OBJ.",
+      },
+      it: {
+        name: "Convertitore da STL a OBJ",
+        description:
+          "Converti file STL ASCII o binari in Wavefront OBJ nel browser. Scarica la mesh triangolare del modello come file OBJ.",
+      },
+      ja: {
+        name: "STL → OBJ 変換",
+        description:
+          "ASCII またはバイナリ形式の STL をブラウザーで Wavefront OBJ に変換し、モデルの三角形メッシュを OBJ ファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "STL → OBJ 변환기",
+        description:
+          "브라우저에서 ASCII 또는 바이너리 STL을 Wavefront OBJ로 변환하고 모델의 삼각형 메시를 OBJ 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar STL kepada OBJ",
+        description:
+          "Tukar STL ASCII atau binari kepada Wavefront OBJ dalam pelayar. Muat turun jejaring segi tiga model sebagai fail OBJ.",
+      },
+      nl: {
+        name: "STL naar OBJ-converter",
+        description:
+          "Converteer ASCII- en binaire STL-bestanden naar Wavefront OBJ in je browser. Download het driehoeksnet van het model als OBJ-bestand.",
+      },
+      no: {
+        name: "STL til OBJ-konverterer",
+        description:
+          "Konverter STL-filer i ASCII- eller binærformat til Wavefront OBJ i nettleseren. Last ned modellens trekantnett som en OBJ-fil.",
+      },
+      pl: {
+        name: "Konwerter STL na OBJ",
+        description:
+          "Konwertuj pliki STL w formacie ASCII lub binarnym na Wavefront OBJ w przeglądarce. Pobierz siatkę trójkątów modelu jako plik OBJ.",
+      },
+      pt: {
+        name: "Conversor de STL para OBJ",
+        description:
+          "Converta arquivos STL ASCII ou binários para Wavefront OBJ no navegador. Baixe a malha triangular do modelo em um arquivo OBJ.",
+      },
+      ru: {
+        name: "Конвертер STL в OBJ",
+        description:
+          "Преобразуйте текстовые файлы STL в кодировке ASCII и двоичные файлы STL в Wavefront OBJ прямо в браузере. Скачайте треугольную сетку модели в файле OBJ.",
+      },
+      sv: {
+        name: "STL till OBJ-konverterare",
+        description:
+          "Konvertera STL-filer i ASCII- eller binärformat till Wavefront OBJ i webbläsaren. Ladda ner modellens triangelnät som en OBJ-fil.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STL เป็น OBJ",
+        description:
+          "แปลงไฟล์ STL แบบ ASCII หรือไบนารีเป็น Wavefront OBJ ในเบราว์เซอร์ แล้วดาวน์โหลดเมชสามเหลี่ยมของโมเดลเป็นไฟล์ OBJ",
+      },
+      tr: {
+        name: "STL’den OBJ’ye Dönüştürücü",
+        description:
+          "ASCII veya ikili STL dosyalarını tarayıcınızda Wavefront OBJ’ye dönüştürün. Modelin üçgen ağını OBJ dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STL sang OBJ",
+        description:
+          "Chuyển tệp STL dạng ASCII hoặc nhị phân sang Wavefront OBJ trong trình duyệt. Tải lưới tam giác của mô hình xuống dưới dạng tệp OBJ.",
+      },
+      "zh-CN": {
+        name: "STL 转 OBJ 转换器",
+        description:
+          "在浏览器中将 ASCII 或二进制 STL 转换为 Wavefront OBJ，并将模型的三角网格下载为 OBJ 文件。",
+      },
+      "zh-TW": {
+        name: "STL 轉 OBJ 轉換器",
+        description:
+          "在瀏覽器中將 ASCII 或二進位 STL 轉換為 Wavefront OBJ，並將模型的三角網格下載為 OBJ 檔案。",
       },
     },
   },

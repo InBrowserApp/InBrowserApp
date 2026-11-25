@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage 查看器",
+  "description": "在浏览器中打开 GeoPackage（.gpkg），在离线地图上浏览矢量图层、查看要素属性并浏览非空间数据表。"
+}

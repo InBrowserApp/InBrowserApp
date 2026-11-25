@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GeoPackage व्यूअर",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "GeoTIFF व्यूअर",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI से MusicXML कन्वर्टर",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI से WAV कन्वर्टर",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "Numbers से XLSX कन्वर्टर",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "OBJ से STL कन्वर्टर",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "PDF में पासवर्ड लगाएँ",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "PST व्यूअर",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "स्टीरियो चैनल अलग करें",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL से OBJ कन्वर्टर",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

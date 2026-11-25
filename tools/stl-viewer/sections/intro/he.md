@@ -15,3 +15,4 @@
 - [מציג GLB / glTF](../gltf-viewer/)
 
 - [מציג 3MF](../3mf-viewer/)
+- [ממיר STL ל־OBJ](../stl-to-obj-converter/)

@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GeoPackage 檢視器",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "GeoTIFF 檢視器",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI 轉 MusicXML 轉換器",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI 轉 WAV 轉換器",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "Numbers 轉 XLSX 轉換器",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "OBJ 轉 STL 轉換器",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "為 PDF 設定密碼",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "PST 檢視器",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "左右聲道分離",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL 轉 OBJ 轉換器",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

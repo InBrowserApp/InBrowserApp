@@ -1,0 +1,4 @@
+{
+  "name": "MIDI MusicXML 変換",
+  "description": "MIDI ファイルを編集可能な楽譜に変換します。リズムのグリッドを選び、MusicXML をダウンロードして楽譜作成ソフトで開けます。"
+}

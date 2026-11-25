@@ -1,0 +1,12 @@
+{
+  "open": "打开 PST 文件",
+  "replace": "打开其他 PST 文件",
+  "releaseFile": "松开以打开 PST 文件",
+  "drop": "将 PST 文件拖放到此处",
+  "formats": "打开从邮箱导出、备份或存档的 Outlook 数据文件 (.pst)。",
+  "invalid": "无法读取此 PST 文件。请选择 Outlook 数据文件 (.pst)，或从 Outlook 导出新的副本。",
+  "empty": "此 PST 文件中没有可读取的邮件。",
+  "folders": "邮件文件夹",
+  "allFolders": "所有文件夹",
+  "emptyFolder": "此文件夹中没有邮件。"
+}

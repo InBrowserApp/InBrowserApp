@@ -1,16 +1,10 @@
 import { addressParser, decodeWords } from "postal-mime"
 import { address, cleanLabel } from "./content"
 import { parseMime } from "./mime"
-
-export type MailSummary = {
-  subject: string
-  from: string
-  to: string
-  date: string
-}
+import type { MailSummary } from "./archive"
 
 type Entry = MailSummary & { start: number; end: number; byteCounted: boolean }
-type Header = keyof MailSummary
+type Header = keyof Omit<MailSummary, "folder" | "cc" | "bcc">
 
 const envelope =
   /^From [^\s]+\s+(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}\s+\d{1,2}:\d{2}(?::\d{2})?\s+(?:(?:[+-]\d{4}|[A-Z]{1,5})\s+)?\d{4}(?:\s.*)?\s*$/

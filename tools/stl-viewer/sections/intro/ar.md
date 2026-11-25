@@ -15,3 +15,4 @@
 - [عارض GLB / glTF](../gltf-viewer/)
 
 - [عارض 3MF](../3mf-viewer/)
+- [محوّل STL إلى OBJ](../stl-to-obj-converter/)

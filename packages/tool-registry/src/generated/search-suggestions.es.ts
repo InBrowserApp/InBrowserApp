@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Visor de GeoPackage",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "Visor de GeoTIFF",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Conversor de MIDI a MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "Conversor de MIDI a WAV",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "Conversor de Numbers a XLSX",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "Conversor de OBJ a STL",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Proteger un PDF con contraseña",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "Visor PST",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Separador de canales estéreo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Conversor de STL a OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

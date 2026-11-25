@@ -12422,6 +12422,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geopackage-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "de",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "en",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "es",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "he",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "id",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "it",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "no",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "th",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "geotiff-viewer",
     language: "ar",
   },
@@ -22174,6 +22266,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-to-musicxml-converter",
+    language: "ar",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "de",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "en",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "es",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "fr",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "he",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "hi",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "id",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "it",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "ja",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "ko",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "ms",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "nl",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "no",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "pl",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "pt",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "ru",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "sv",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "th",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "tr",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "vi",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-to-musicxml-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "midi-to-wav-converter",
     language: "ar",
   },
@@ -23919,6 +24103,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "numbers-to-xlsx-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ar",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "de",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "en",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "es",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "fr",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "he",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "hi",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "id",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "it",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ja",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ko",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ms",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "nl",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "no",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "pl",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "pt",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ru",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "sv",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "th",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "tr",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "vi",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "obj-to-stl-converter",
     language: "zh-TW",
   },
   {
@@ -27507,6 +27783,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "protect-pdf",
+    language: "zh-TW",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ar",
+  },
+  {
+    slug: "pst-viewer",
+    language: "de",
+  },
+  {
+    slug: "pst-viewer",
+    language: "en",
+  },
+  {
+    slug: "pst-viewer",
+    language: "es",
+  },
+  {
+    slug: "pst-viewer",
+    language: "fr",
+  },
+  {
+    slug: "pst-viewer",
+    language: "he",
+  },
+  {
+    slug: "pst-viewer",
+    language: "hi",
+  },
+  {
+    slug: "pst-viewer",
+    language: "id",
+  },
+  {
+    slug: "pst-viewer",
+    language: "it",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ja",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ko",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ms",
+  },
+  {
+    slug: "pst-viewer",
+    language: "nl",
+  },
+  {
+    slug: "pst-viewer",
+    language: "no",
+  },
+  {
+    slug: "pst-viewer",
+    language: "pl",
+  },
+  {
+    slug: "pst-viewer",
+    language: "pt",
+  },
+  {
+    slug: "pst-viewer",
+    language: "ru",
+  },
+  {
+    slug: "pst-viewer",
+    language: "sv",
+  },
+  {
+    slug: "pst-viewer",
+    language: "th",
+  },
+  {
+    slug: "pst-viewer",
+    language: "tr",
+  },
+  {
+    slug: "pst-viewer",
+    language: "vi",
+  },
+  {
+    slug: "pst-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pst-viewer",
     language: "zh-TW",
   },
   {
@@ -32107,6 +32475,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ar",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "de",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "en",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "es",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "fr",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "he",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "hi",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "id",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "it",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ja",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ko",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ms",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "nl",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "no",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "pl",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "pt",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ru",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "sv",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "th",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "tr",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "vi",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stl-to-obj-converter",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "STL til OBJ-konverterer",
+  "description": "Konverter STL-filer i ASCII- eller binærformat til Wavefront OBJ i nettleseren. Last ned modellens trekantnett som en OBJ-fil."
+}

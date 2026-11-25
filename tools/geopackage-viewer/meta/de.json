@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage-Betrachter",
+  "description": "Öffne ein GeoPackage (.gpkg) im Browser. Sieh dir Vektorlayer auf einer Offline-Karte an, prüfe Objektattribute und durchsuche Tabellen ohne Geometrie."
+}

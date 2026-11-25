@@ -1,0 +1,4 @@
+{
+  "name": "STL’den OBJ’ye Dönüştürücü",
+  "description": "ASCII veya ikili STL dosyalarını tarayıcınızda Wavefront OBJ’ye dönüştürün. Modelin üçgen ağını OBJ dosyası olarak indirin."
+}

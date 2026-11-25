@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Penampil GeoPackage",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "Penampil GeoTIFF",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Konverter MIDI ke MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "Konverter MIDI ke WAV",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "Konverter Numbers ke XLSX",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "Konverter OBJ ke STL",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "Lindungi PDF dengan Kata Sandi",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "Penampil PST",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Pemisah Kanal Audio Stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Konverter STL ke OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

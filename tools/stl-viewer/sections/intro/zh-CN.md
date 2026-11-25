@@ -15,3 +15,4 @@ STL 使用三角形描述零件表面。要查看带配套材质库的 Wavefront
 - [GLB / glTF 查看器](../gltf-viewer/)
 
 - [3MF 查看器](../3mf-viewer/)
+- [STL 转 OBJ 转换器](../stl-to-obj-converter/)

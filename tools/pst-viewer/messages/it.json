@@ -1,0 +1,12 @@
+{
+  "open": "Apri file PST",
+  "replace": "Apri un altro file PST",
+  "releaseFile": "Rilascia per aprire il file PST",
+  "drop": "Trascina qui un file PST",
+  "formats": "Apri un file di dati di Outlook (.pst) da un’esportazione, un backup o un archivio di posta.",
+  "invalid": "Impossibile leggere questo file PST. Scegli un file di dati di Outlook (.pst) o esportane una nuova copia da Outlook.",
+  "empty": "Questo file PST non contiene messaggi di posta leggibili.",
+  "folders": "Cartelle di posta",
+  "allFolders": "Tutte le cartelle",
+  "emptyFolder": "Non ci sono messaggi in questa cartella."
+}

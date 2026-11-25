@@ -13,3 +13,4 @@ Vous pouvez ouvrir un OBJ même si des fichiers associés manquent. Les surfaces
 Pour un maillage triangulaire exporté pour l’impression 3D, utilisez la [Visionneuse STL](../stl-viewer/). Si la pièce ou l’assemblage CAO d’origine est dans un fichier `.step` ou `.stp`, ouvrez-le dans la [Visionneuse STEP](../step-viewer/).
 
 - [Visionneuse GLB / glTF](../gltf-viewer/)
+- [Convertisseur OBJ en STL](../obj-to-stl-converter/)

@@ -1,0 +1,4 @@
+{
+  "name": "OBJ til STL-konverterer",
+  "description": "Konverter et Wavefront OBJ-nett til en binær STL-fil i nettleseren. Åpne filen i et slicerprogram eller en STL-viser."
+}

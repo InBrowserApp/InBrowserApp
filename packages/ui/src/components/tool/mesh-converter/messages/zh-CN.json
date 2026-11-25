@@ -1,0 +1,11 @@
+{
+  "open": "打开文件",
+  "drop": "将模型文件拖放到此处",
+  "example": "试用示例",
+  "privacy": "文件始终保留在此设备上。",
+  "converting": "正在转换模型…",
+  "failed": "无法转换此模型。请选择包含网格面的有效文件。",
+  "output": "转换后的文件",
+  "download": "下载 {format}",
+  "previousOutput": "先前的转换"
+}

@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Wybierz plik MIDI",
+  "changeFile": "Zmień plik",
+  "dropHint": "lub upuść tutaj plik MIDI",
+  "privacy": "Plik pozostaje w tej przeglądarce.",
+  "quantization": "Siatka kwantyzacji",
+  "quantizationHint": "Gęstsza siatka zachowuje krótsze nuty. Rzadsza może ułatwić odczytanie zapisu nagranego wykonania.",
+  "eighth": "Ósemka (1/8)",
+  "sixteenth": "Szesnastka (1/16)",
+  "thirtySecond": "Trzydziestodwójka (1/32)",
+  "download": "Pobierz MusicXML",
+  "part": "Partia",
+  "invalidMidi": "Nie można odczytać tego pliku w standardowym formacie MIDI. Wybierz inny plik .mid lub .midi.",
+  "unsupportedTiming": "Wyeksportuj plik w formacie MIDI 0 lub 1 z podziałem czasu PPQ i spróbuj ponownie.",
+  "noNotes": "Plik MIDI nie zawiera nut, które można zapisać w partyturze.",
+  "tooManyMeasures": "Partytura ma za dużo taktów, aby przekonwertować ją w całości. Spróbuj z krótszym fragmentem."
+}

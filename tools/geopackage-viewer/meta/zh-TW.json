@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage 檢視器",
+  "description": "在瀏覽器中開啟 GeoPackage（.gpkg），在離線地圖上探索向量圖層、查看圖徵屬性並瀏覽非空間資料表。"
+}

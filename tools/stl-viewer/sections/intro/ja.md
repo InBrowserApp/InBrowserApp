@@ -15,3 +15,4 @@ STL は三角形で部品の表面を表します。マテリアルライブラ�
 - [GLB / glTF ビューアー](../gltf-viewer/)
 
 - [3MF ビューアー](../3mf-viewer/)
+- [STL → OBJ 変換](../stl-to-obj-converter/)

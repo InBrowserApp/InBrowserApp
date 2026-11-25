@@ -679,6 +679,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "โปรแกรมดู GeoPackage",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "โปรแกรมดู GeoTIFF",
     slug: "geotiff-viewer",
   },
@@ -1209,6 +1214,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "โปรแกรมแปลง MIDI เป็น MusicXML",
+    slug: "midi-to-musicxml-converter",
+  },
+  {
+    category: "misc",
     name: "โปรแกรมแปลง MIDI เป็น WAV",
     slug: "midi-to-wav-converter",
   },
@@ -1301,6 +1311,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "spreadsheet",
     name: "โปรแกรมแปลง Numbers เป็น XLSX",
     slug: "numbers-to-xlsx-converter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมแปลง OBJ เป็น STL",
+    slug: "obj-to-stl-converter",
   },
   {
     category: "image",
@@ -1496,6 +1511,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "pdf",
     name: "ตั้งรหัสผ่านให้ PDF",
     slug: "protect-pdf",
+  },
+  {
+    category: "document",
+    name: "โปรแกรมดู PST",
+    slug: "pst-viewer",
   },
   {
     category: "image",
@@ -1746,6 +1766,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมแปลง STL เป็น OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

@@ -13,3 +13,4 @@
 כדי לבדוק רשת משולשים שיוצאה להדפסת תלת־ממד, השתמשו ב[מציג STL](../stl-viewer/). אם החלק או המכלול המקורי נשמר כקובץ CAD בסיומת `.step` או `.stp`, פתחו אותו ב[מציג STEP](../step-viewer/).
 
 - [מציג GLB / glTF](../gltf-viewer/)
+- [ממיר OBJ ל־STL](../obj-to-stl-converter/)

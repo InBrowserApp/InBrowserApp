@@ -21,7 +21,7 @@ export type Attachment = {
   bytes?: Uint8Array<ArrayBuffer>
 }
 export type Email = {
-  format: "EML" | "EMLX" | "MSG"
+  format: "EML" | "EMLX" | "MSG" | "PST"
   subject: string
   from: string
   to: string

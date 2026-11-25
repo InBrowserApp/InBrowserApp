@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse GeoPackage",
+  "description": "Ouvrez un GeoPackage (.gpkg) dans votre navigateur. Explorez les couches vectorielles sur une carte hors ligne, consultez les attributs des entités et parcourez les tables non spatiales."
+}

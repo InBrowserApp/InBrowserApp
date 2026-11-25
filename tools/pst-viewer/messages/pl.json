@@ -1,0 +1,12 @@
+{
+  "open": "Otwórz plik PST",
+  "replace": "Otwórz inny plik PST",
+  "releaseFile": "Upuść, aby otworzyć plik PST",
+  "drop": "Upuść tutaj plik PST",
+  "formats": "Otwórz plik danych programu Outlook (.pst) wyeksportowany ze skrzynki lub zapisany jako kopia zapasowa albo archiwum.",
+  "invalid": "Nie udało się odczytać pliku PST. Wybierz plik danych programu Outlook (.pst) lub wyeksportuj nową kopię z Outlooka.",
+  "empty": "Ten plik PST nie zawiera wiadomości, które można odczytać.",
+  "folders": "Foldery poczty",
+  "allFolders": "Wszystkie foldery",
+  "emptyFolder": "W tym folderze nie ma wiadomości."
+}

@@ -13,3 +13,4 @@ OBJ-filen kan åpnes selv om de tilhørende filene mangler. De berørte flatene 
 Bruk [STL-viseren](../stl-viewer/) til et trekantnett som er eksportert for 3D-utskrift. Hvis du har den opprinnelige CAD-delen eller sammenstillingen som en `.step`- eller `.stp`-fil, kan du åpne den i [STEP-viseren](../step-viewer/).
 
 - [GLB- og glTF-viser](../gltf-viewer/)
+- [OBJ til STL-konverterer](../obj-to-stl-converter/)

@@ -1,19 +1,11 @@
 import { failure } from "@workspace/email"
 import { indexMbox, readMboxMessage } from "@workspace/email/mbox"
-import type { MailSummary } from "@workspace/email/mbox"
-import type { Email, Failure } from "@workspace/email"
-
-export type Request = { file: File } | { id: number }
-export type Reply =
-  | { messages: MailSummary[] }
-  | { error: Failure }
-  | { id: number; email: Email }
-  | { id: number; error: Failure }
+import type { ArchiveReply, ArchiveRequest } from "@workspace/email/archive"
 
 let archive: { file: File; entries: Awaited<ReturnType<typeof indexMbox>> }
 
-self.onmessage = async ({ data }: MessageEvent<Request>) => {
-  let reply: Reply
+self.onmessage = async ({ data }: MessageEvent<ArchiveRequest>) => {
+  let reply: ArchiveReply
   if ("file" in data) {
     try {
       const entries = await indexMbox(data.file)

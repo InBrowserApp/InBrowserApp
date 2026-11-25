@@ -15,3 +15,4 @@ STL किसी पुर्ज़े की सतह को त्रिक�
 - [GLB / glTF व्यूअर](../gltf-viewer/)
 
 - [3MF व्यूअर](../3mf-viewer/)
+- [STL से OBJ कन्वर्टर](../stl-to-obj-converter/)

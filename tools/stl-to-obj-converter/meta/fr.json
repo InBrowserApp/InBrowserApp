@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur STL en OBJ",
+  "description": "Convertissez des fichiers STL ASCII ou binaires en Wavefront OBJ dans votre navigateur. Téléchargez le maillage triangulaire du modèle au format OBJ."
+}

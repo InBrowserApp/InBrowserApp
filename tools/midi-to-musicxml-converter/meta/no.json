@@ -1,0 +1,4 @@
+{
+  "name": "MIDI til MusicXML-konverterer",
+  "description": "Gjør om en MIDI-fil til redigerbare noter. Velg et rytmerutenett, last ned MusicXML og åpne partituret i noteprogrammet ditt."
+}

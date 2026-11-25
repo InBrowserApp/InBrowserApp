@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter STL na OBJ",
+  "description": "Konwertuj pliki STL w formacie ASCII lub binarnym na Wavefront OBJ w przeglądarce. Pobierz siatkę trójkątów modelu jako plik OBJ."
+}

@@ -15,3 +15,4 @@ O STL representa a superfície de uma peça com triângulos. Para abrir um arqui
 - [Visualizador de GLB / glTF](../gltf-viewer/)
 
 - [Visualizador de 3MF](../3mf-viewer/)
+- [Conversor de STL para OBJ](../stl-to-obj-converter/)

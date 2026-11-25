@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Pilih file MIDI",
+  "changeFile": "Ganti file",
+  "dropHint": "atau lepas file MIDI di sini",
+  "privacy": "File Anda tetap di browser ini.",
+  "quantization": "Grid kuantisasi",
+  "quantizationHint": "Grid yang lebih rapat mempertahankan not yang lebih pendek. Grid yang lebih renggang bisa membuat hasil rekaman lebih mudah dibaca.",
+  "eighth": "Not seperdelapan (1/8)",
+  "sixteenth": "Not seperenam belas (1/16)",
+  "thirtySecond": "Not sepertiga puluh dua (1/32)",
+  "download": "Unduh MusicXML",
+  "part": "Bagian",
+  "invalidMidi": "File ini tidak dapat dibaca sebagai file MIDI standar. Pilih file .mid atau .midi yang lain.",
+  "unsupportedTiming": "Ekspor file ini sebagai MIDI dengan pengaturan waktu berbasis ketukan (format 0 atau 1), lalu coba lagi.",
+  "noNotes": "File MIDI ini tidak berisi not yang bisa ditulis ke partitur.",
+  "tooManyMeasures": "Partitur ini berisi terlalu banyak birama untuk dikonversi sekaligus. Coba cuplikan yang lebih pendek."
+}
