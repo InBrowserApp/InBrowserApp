@@ -42,6 +42,12 @@ test("removes the offscreen host after a failure", async () => {
   expect(wrapper!.isConnected).toBe(false)
 })
 
+test("removes edge periods and preserves long runs inside a score filename", () => {
+  const title = `Étude${".".repeat(20_000)}No. 1`
+  expect(scoreFilename(`  ..${title}...  `)).toBe(title)
+  expect(scoreFilename("...")).toBe("score")
+})
+
 test("exports a single full SVG page with a white paper background", async () => {
   const page = placeFullPage(section(0, 200))
   const { blob, filename } = await exportScore(
