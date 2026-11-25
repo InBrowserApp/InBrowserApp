@@ -98,3 +98,13 @@ test("crops a rendered excerpt to padded ink bounds with a fully white canvas", 
   expect(svg.querySelector("rect")?.getAttribute("width")).toBe("100%")
   expect(svg.querySelector("rect")?.getAttribute("fill")).toBe("white")
 })
+
+test("preserves Letter paper dimensions for short tunes", async () => {
+  const pages = flowScorePages([[section(0, 100)]], "letter")
+  expect(pages[0]?.getAttribute("viewBox")).toBe("0 0 816 1056")
+  const { blob } = await exportScore(pages, "pdf", "waltz", "en")
+  const pdf = await PDFDocument.load(await blob.arrayBuffer())
+  const paper = pdf.getPage(0)
+  expect(paper.getWidth()).toBe(612)
+  expect(paper.getHeight()).toBe(792)
+})

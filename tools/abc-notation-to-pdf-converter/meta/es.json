@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de notación ABC a PDF",
+  "description": "Convierte notación ABC en partituras PDF listas para imprimir. Pega el texto ABC o abre un archivo .abc, elige las melodías de una colección y revisa las páginas en formato A4 o Carta (EE. UU.)."
+}

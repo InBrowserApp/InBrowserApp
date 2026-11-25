@@ -278,6 +278,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "abc-notation-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "abc-notation-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "adler32-hash-text-or-file",
     language: "ar",
   },

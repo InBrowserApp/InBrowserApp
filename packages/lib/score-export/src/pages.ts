@@ -9,8 +9,9 @@ export const paperSizes = {
 export type ScorePaper = keyof typeof paperSizes
 
 const margin = Math.round(12 * pixelsPerMillimeter)
-export const pageContentWidth = paperWidth - 2 * margin
-const pageContentHeight = paperHeight - 2 * margin
+export function scoreContentWidth(size: ScorePaper) {
+  return paperSizes[size].width - 2 * margin
+}
 
 export function scoreFilename(name: string) {
   return (
@@ -93,32 +94,38 @@ export function cropScorePage(source: SVGSVGElement) {
   return placeScore(score, width, height)
 }
 
-function measure(section: SVGSVGElement) {
+function measure(section: SVGSVGElement, contentWidth: number) {
   const box = section.getAttribute("viewBox")!.trim().split(/\s+/).map(Number)
   const [, , width, height] = box
   if (!width || !height || height < 0) return null
-  const scale = Math.min(1, pageContentWidth / width)
+  const scale = Math.min(1, contentWidth / width)
   return { section, width: width * scale, height: height * scale }
 }
 
 type Section = NonNullable<ReturnType<typeof measure>>
 
-export function flowScorePages(tunes: SVGSVGElement[][]) {
+export function flowScorePages(
+  tunes: SVGSVGElement[][],
+  size: ScorePaper = "a4"
+) {
+  const { width, height } = paperSizes[size]
+  const contentWidth = scoreContentWidth(size)
+  const contentHeight = height - 2 * margin
   const pages: SVGSVGElement[] = []
   let page: SVGSVGElement | undefined
   let y = 0
   function place(sections: Section[], gap: number) {
-    const height = sections.reduce(
+    const groupHeight = sections.reduce(
       (total, section) => total + section.height,
       0
     )
-    if (!page || y + gap + height > pageContentHeight) {
-      page = makePage(paperWidth, paperHeight)
+    if (!page || y + gap + groupHeight > contentHeight) {
+      page = makePage(width, height)
       pages.push(page)
       y = 0
     }
     if (y) y += gap
-    const scale = Math.min(1, pageContentHeight / height)
+    const scale = Math.min(1, contentHeight / groupHeight)
     for (const { section, width, height } of sections) {
       section.setAttribute("x", String(margin))
       section.setAttribute("y", String(margin + y))
@@ -130,7 +137,9 @@ export function flowScorePages(tunes: SVGSVGElement[][]) {
   }
 
   for (const tune of tunes) {
-    const sections = tune.map(measure).filter((section) => section !== null)
+    const sections = tune
+      .map((section) => measure(section, contentWidth))
+      .filter((section) => section !== null)
     if (!sections.length) continue
     // Keep introductory text with the first system when a tune starts near a page break.
     const firstSystem = sections.findIndex(({ section }) =>

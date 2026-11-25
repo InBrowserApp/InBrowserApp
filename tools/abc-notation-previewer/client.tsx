@@ -12,10 +12,13 @@ import {
 import { Button } from "@workspace/ui/components/ui/button"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { prepareAbc } from "./core/source"
+import {
+  abcLayout,
+  hasAbcMusic,
+  prepareAbc,
+} from "@workspace/score-export/abc-source"
 import example from "./fixtures/morning-path.abc?raw"
 
-import { abcLayout } from "./render-options"
 import type english from "./messages/en.json"
 
 type Preview =
@@ -101,7 +104,7 @@ export default function AbcNotationPreviewer({
               )
             )
           }
-          if (!result?.lines.some((line) => line.staff?.length)) target.remove()
+          if (!result || !hasAbcMusic(result)) target.remove()
         }
         setPreview(
           host.childElementCount

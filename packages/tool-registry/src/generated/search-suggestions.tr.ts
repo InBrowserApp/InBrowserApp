@@ -18,6 +18,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-previewer",
   },
   {
+    category: "pdf",
+    name: "ABC Nota Yazımından PDF'ye Dönüştürücü",
+    slug: "abc-notation-to-pdf-converter",
+  },
+  {
     category: "crypto",
     name: "Adler-32 Hash Metin veya Dosya",
     slug: "adler32-hash-text-or-file",

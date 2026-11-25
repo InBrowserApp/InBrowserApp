@@ -18,6 +18,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "abc-notation-previewer",
   },
   {
+    category: "pdf",
+    name: "محوّل التدوين الموسيقي ABC إلى PDF",
+    slug: "abc-notation-to-pdf-converter",
+  },
+  {
     category: "crypto",
     name: "تجزئة Adler-32 للنص أو الملف",
     slug: "adler32-hash-text-or-file",
