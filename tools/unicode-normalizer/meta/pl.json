@@ -1,0 +1,4 @@
+{
+  "name": "Normalizacja Unicode",
+  "description": "Normalizuj wklejony tekst Unicode do postaci NFC, NFD, NFKC lub NFKD. Porównaj punkty kodowe i skopiuj wynik w przeglądarce."
+}

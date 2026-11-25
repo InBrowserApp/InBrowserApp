@@ -447,6 +447,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),
   "unicode-invisible-character-checker": () =>
     import("@tool/unicode-invisible-character-checker/page"),
+  "unicode-normalizer": () => import("@tool/unicode-normalizer/page"),
   "unicode-punycode-converter": () =>
     import("@tool/unicode-punycode-converter/page"),
   "unit-converter": () => import("@tool/unit-converter/page"),

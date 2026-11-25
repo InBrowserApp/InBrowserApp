@@ -1803,6 +1803,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Unicode Normalleştirme",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Unicode ↔ Punycode Dönüştürücü",
     slug: "unicode-punycode-converter",

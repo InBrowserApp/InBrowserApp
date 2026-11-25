@@ -1,0 +1,20 @@
+{
+  "formLabel": "Normalisatievorm",
+  "NFC": "Voegt waar mogelijk letters en accenten samen. Een goede standaard voor het vergelijken en opslaan van tekst.",
+  "NFD": "Scheidt letters van hun combinerende accenten, zodat je kunt zien hoe de tekst is opgebouwd.",
+  "NFKC": "Voegt letters en accenten samen en zet compatibiliteitstekens om. Zo wordt Ａ een A, ① een 1 en ﬁ de reeks fi.",
+  "NFKD": "Scheidt letters van hun combinerende accenten en zet compatibiliteitstekens zoals Ａ, ① en ﬁ om.",
+  "inputLabel": "Oorspronkelijke tekst",
+  "inputPlaceholder": "Typ of plak tekst om te normaliseren",
+  "outputLabel": "Genormaliseerde tekst",
+  "outputPlaceholder": "Hier verschijnt het resultaat",
+  "exampleLabel": "Probeer een voorbeeld",
+  "clearLabel": "Wissen",
+  "copyLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "copyFailedLabel": "Kopiëren mislukt",
+  "changedLabel": "Tekst gewijzigd",
+  "unchangedLabel": "Al in deze vorm",
+  "codePointsLabel": "Codepunten vergelijken",
+  "codePointsLimit": "Per tekst zie je maximaal 40 codepunten."
+}

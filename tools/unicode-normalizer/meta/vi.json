@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuẩn hóa Unicode",
+  "description": "Chuẩn hóa văn bản Unicode sang NFC, NFD, NFKC hoặc NFKD. So sánh điểm mã và sao chép kết quả ngay trong trình duyệt."
+}

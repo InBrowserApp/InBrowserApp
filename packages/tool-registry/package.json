@@ -367,6 +367,7 @@
     "@tool/ulid-generator": "workspace:*",
     "@tool/unicode-escape-unescape": "workspace:*",
     "@tool/unicode-invisible-character-checker": "workspace:*",
+    "@tool/unicode-normalizer": "workspace:*",
     "@tool/unicode-punycode-converter": "workspace:*",
     "@tool/unit-converter": "workspace:*",
     "@tool/unix-timestamp-converter": "workspace:*",

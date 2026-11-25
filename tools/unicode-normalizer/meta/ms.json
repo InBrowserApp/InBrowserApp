@@ -1,0 +1,4 @@
+{
+  "name": "Alat Penormalan Unicode",
+  "description": "Normalkan teks Unicode kepada NFC, NFD, NFKC atau NFKD. Bandingkan titik kod dan salin hasil terus dalam pelayar anda."
+}

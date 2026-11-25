@@ -1,0 +1,20 @@
+{
+  "formLabel": "规范化形式",
+  "NFC": "尽可能将字母与重音符合并。适合用于比较和存储文本。",
+  "NFD": "将字母与组合重音符分开，便于检查文本的表示方式。",
+  "NFKC": "合并字母与重音符，并转换兼容字符。例如，Ａ 变为 A，① 变为 1，ﬁ 变为 fi。",
+  "NFKD": "将字母与组合重音符分开，并转换 Ａ、① 和 ﬁ 等兼容字符。",
+  "inputLabel": "原始文本",
+  "inputPlaceholder": "输入或粘贴要规范化的文本",
+  "outputLabel": "规范化后的文本",
+  "outputPlaceholder": "结果将显示在这里",
+  "exampleLabel": "试用示例",
+  "clearLabel": "清空",
+  "copyLabel": "复制结果",
+  "copiedLabel": "已复制",
+  "copyFailedLabel": "复制失败",
+  "changedLabel": "文本已更改",
+  "unchangedLabel": "已符合此形式",
+  "codePointsLabel": "比较码位",
+  "codePointsLimit": "每段文本最多显示 40 个码位。"
+}

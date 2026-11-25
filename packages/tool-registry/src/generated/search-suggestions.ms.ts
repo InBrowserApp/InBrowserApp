@@ -1803,6 +1803,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "unicode-invisible-character-checker",
   },
   {
+    category: "text",
+    name: "Alat Penormalan Unicode",
+    slug: "unicode-normalizer",
+  },
+  {
     category: "network",
     name: "Penukar Unicode ↔ Punycode",
     slug: "unicode-punycode-converter",
