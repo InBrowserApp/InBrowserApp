@@ -2,7 +2,7 @@ import type { ToolSearchIndexEntry } from "./types"
 
 function getAlternateSearchLocale(language: string) {
   if (language === "zh-CN") return "zh-TW"
-  if (language === "zh-TW") return "zh-CN"
+  return language === "zh-TW" ? "zh-CN" : undefined
 }
 
 function getAlternateSearchName(
