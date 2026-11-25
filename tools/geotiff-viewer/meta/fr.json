@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse GeoTIFF",
+  "description": "Ouvrez un fichier GeoTIFF (.tif ou .tiff) dans votre navigateur, visualisez ses bandes raster et consultez ses dimensions en pixels, son système de coordonnées et son emprise."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF 뷰어",
+  "description": "브라우저에서 GeoTIFF(.tif 또는 .tiff)를 열어 래스터 밴드를 미리 보고 픽셀 크기, 좌표계와 범위를 확인하세요."
+}

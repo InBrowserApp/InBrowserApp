@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF 檢視器",
+  "description": "在瀏覽器中開啟 GeoTIFF（.tif 或 .tiff），預覽網格波段並查看像素尺寸、座標參考系統和範圍。"
+}

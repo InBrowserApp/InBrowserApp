@@ -16556,6 +16556,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "geotiff-viewer",
+    category: "geo",
+    secondaryCategories: ["image"],
+    icon: "image",
+    tags: [
+      "geotiff",
+      "tiff",
+      "raster",
+      "gis",
+      "viewer",
+      "cog",
+      "elevation",
+      "crs",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoTIFF",
+        description:
+          "افتح ملف GeoTIFF بامتداد .tif أو .tiff. عاين نطاقات البيانات النقطية وتحقّق من الأبعاد بالبكسل ونظام الإسناد الإحداثي والحدود المكانية في متصفحك.",
+      },
+      de: {
+        name: "GeoTIFF-Betrachter",
+        description:
+          "Öffne eine GeoTIFF-Datei (.tif oder .tiff) im Browser, zeige Rasterbänder an und prüfe Pixelmaße, Koordinatenreferenzsystem und Ausdehnung.",
+      },
+      en: {
+        name: "GeoTIFF Viewer",
+        description:
+          "Open a GeoTIFF (.tif or .tiff), preview raster bands, and inspect its pixel dimensions, coordinate reference system and bounds in your browser.",
+      },
+      es: {
+        name: "Visor de GeoTIFF",
+        description:
+          "Abre un GeoTIFF (.tif o .tiff) en tu navegador. Visualiza sus bandas ráster y consulta las dimensiones en píxeles, el sistema de referencia de coordenadas y la extensión.",
+      },
+      fr: {
+        name: "Visionneuse GeoTIFF",
+        description:
+          "Ouvrez un fichier GeoTIFF (.tif ou .tiff) dans votre navigateur, visualisez ses bandes raster et consultez ses dimensions en pixels, son système de coordonnées et son emprise.",
+      },
+      he: {
+        name: "מציג GeoTIFF",
+        description:
+          "פתחו קובץ GeoTIFF בסיומת .tif או .tiff, צפו בערוצי הרסטר ובדקו את הממדים בפיקסלים, את מערכת הייחוס לקואורדינטות ואת תחום הכיסוי בדפדפן.",
+      },
+      hi: {
+        name: "GeoTIFF व्यूअर",
+        description:
+          "ब्राउज़र में GeoTIFF (.tif या .tiff) खोलें, रास्टर बैंड देखें और पिक्सेल में आकार, निर्देशांक संदर्भ प्रणाली और स्थानिक सीमाएँ जाँचें।",
+      },
+      id: {
+        name: "Penampil GeoTIFF",
+        description:
+          "Buka GeoTIFF (.tif atau .tiff), pratinjau kanal raster, serta periksa dimensi piksel, sistem referensi koordinat, dan batas cakupan di browser.",
+      },
+      it: {
+        name: "Visualizzatore GeoTIFF",
+        description:
+          "Apri un GeoTIFF (.tif o .tiff) nel browser, visualizza le bande raster e consulta le dimensioni in pixel, il sistema di riferimento e l’estensione.",
+      },
+      ja: {
+        name: "GeoTIFF ビューアー",
+        description:
+          "ブラウザーで GeoTIFF（.tif または .tiff）を開き、ラスターバンドをプレビューして、ピクセル寸法、座標参照系、範囲を確認できます。",
+      },
+      ko: {
+        name: "GeoTIFF 뷰어",
+        description:
+          "브라우저에서 GeoTIFF(.tif 또는 .tiff)를 열어 래스터 밴드를 미리 보고 픽셀 크기, 좌표계와 범위를 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar GeoTIFF",
+        description:
+          "Buka GeoTIFF (.tif atau .tiff), pratonton jalur raster dan semak dimensi piksel, sistem rujukan koordinat serta sempadan liputan dalam pelayar.",
+      },
+      nl: {
+        name: "GeoTIFF-viewer",
+        description:
+          "Open een GeoTIFF-bestand (.tif of .tiff), bekijk rasterbanden en controleer de pixelafmetingen, het coördinatenreferentiesysteem en het ruimtelijk bereik in je browser.",
+      },
+      no: {
+        name: "GeoTIFF-viser",
+        description:
+          "Åpne GeoTIFF-filer (.tif eller .tiff), se rasterbånd og undersøk pikselmål, koordinatreferansesystem og geografisk utstrekning i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka GeoTIFF",
+        description:
+          "Otwórz plik GeoTIFF (.tif lub .tiff), wyświetl pasma rastra i sprawdź w przeglądarce wymiary w pikselach, układ odniesienia oraz zasięg danych.",
+      },
+      pt: {
+        name: "Visualizador de GeoTIFF",
+        description:
+          "Abra um GeoTIFF (.tif ou .tiff) no navegador, visualize as bandas raster e consulte as dimensões em pixels, o sistema de referência de coordenadas e a extensão.",
+      },
+      ru: {
+        name: "Просмотр GeoTIFF",
+        description:
+          "Откройте файл GeoTIFF (.tif или .tiff) в браузере, чтобы просмотреть растровые каналы, размеры в пикселях, систему координат и границы растра.",
+      },
+      sv: {
+        name: "GeoTIFF-visare",
+        description:
+          "Öppna en GeoTIFF-fil (.tif eller .tiff), förhandsgranska rasterband och kontrollera pixelmått, koordinatreferenssystem och utbredning i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoTIFF",
+        description:
+          "เปิด GeoTIFF (.tif หรือ .tiff) ดูตัวอย่างแบนด์ราสเตอร์ และตรวจสอบขนาดภาพเป็นพิกเซล ระบบพิกัดอ้างอิง และขอบเขตในเบราว์เซอร์",
+      },
+      tr: {
+        name: "GeoTIFF Görüntüleyici",
+        description:
+          "Tarayıcınızda GeoTIFF (.tif veya .tiff) dosyası açın, raster bantlarını önizleyin ve piksel boyutlarını, koordinat referans sistemini ve coğrafi kapsamı inceleyin.",
+      },
+      vi: {
+        name: "Trình xem GeoTIFF",
+        description:
+          "Mở GeoTIFF (.tif hoặc .tiff), xem trước các kênh raster và kiểm tra kích thước pixel, hệ quy chiếu tọa độ và phạm vi tọa độ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GeoTIFF 查看器",
+        description:
+          "在浏览器中打开 GeoTIFF（.tif 或 .tiff），预览栅格波段并查看像素尺寸、坐标参考系和范围。",
+      },
+      "zh-TW": {
+        name: "GeoTIFF 檢視器",
+        description:
+          "在瀏覽器中開啟 GeoTIFF（.tif 或 .tiff），預覽網格波段並查看像素尺寸、座標參考系統和範圍。",
+      },
+    },
+  },
+  {
     slug: "gif-maker",
     category: "image",
     icon: "film",

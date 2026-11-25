@@ -1,0 +1,4 @@
+{
+  "name": "GeoTIFF-Betrachter",
+  "description": "Öffne eine GeoTIFF-Datei (.tif oder .tiff) im Browser, zeige Rasterbänder an und prüfe Pixelmaße, Koordinatenreferenzsystem und Ausdehnung."
+}

@@ -136,6 +136,7 @@
     "@tool/font-to-woff2": "workspace:*",
     "@tool/gamepad-tester": "workspace:*",
     "@tool/geojson-viewer": "workspace:*",
+    "@tool/geotiff-viewer": "workspace:*",
     "@tool/gif-maker": "workspace:*",
     "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",
