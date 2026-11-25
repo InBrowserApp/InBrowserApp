@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML 이미지 변환기",
+  "description": "MusicXML 또는 압축된 MXL 악보를 PNG나 SVG로 변환하세요. 악보를 미리 보고 모든 페이지, 현재 페이지 또는 선택한 마디 범위를 내보낼 수 있습니다."
+}

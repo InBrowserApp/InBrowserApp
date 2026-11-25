@@ -274,6 +274,7 @@
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
+    "@tool/musicxml-to-image-converter": "workspace:*",
     "@tool/musicxml-to-pdf-converter": "workspace:*",
     "@tool/musicxml-viewer": "workspace:*",
     "@tool/my-ip-address": "workspace:*",

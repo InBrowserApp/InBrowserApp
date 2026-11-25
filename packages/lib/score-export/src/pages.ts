@@ -37,8 +37,7 @@ export async function inScoreHost<T>(
   }
 }
 
-function paper(size: ScorePaper = "a4") {
-  const { width, height } = paperSizes[size]
+function makePage(width: number, height: number) {
   const page = document.createElementNS(SVG_NS, "svg")
   page.setAttribute("width", String(width))
   page.setAttribute("height", String(height))
@@ -70,11 +69,28 @@ export function scorePagePreviewBlob(page: SVGSVGElement) {
 }
 
 export function placeFullPage(score: SVGSVGElement, size: ScorePaper = "a4") {
-  const page = paper(size)
-  score.setAttribute("width", String(paperSizes[size].width))
-  score.setAttribute("height", String(paperSizes[size].height))
+  const { width, height } = paperSizes[size]
+  return placeScore(score, width, height)
+}
+
+function placeScore(score: SVGSVGElement, width: number, height: number) {
+  const page = makePage(width, height)
+  score.setAttribute("width", String(width))
+  score.setAttribute("height", String(height))
   page.append(score)
   return page
+}
+
+export function cropScorePage(source: SVGSVGElement) {
+  const ink = source.getBBox()
+  const padding = 12
+  const left = Math.floor(ink.x) - padding
+  const top = Math.floor(ink.y) - padding
+  const width = Math.ceil(ink.x + ink.width) + padding - left
+  const height = Math.ceil(ink.y + ink.height) + padding - top
+  const score = source.cloneNode(true) as SVGSVGElement
+  score.setAttribute("viewBox", `${left} ${top} ${width} ${height}`)
+  return placeScore(score, width, height)
 }
 
 function measure(section: SVGSVGElement) {
@@ -97,7 +113,7 @@ export function flowScorePages(tunes: SVGSVGElement[][]) {
       0
     )
     if (!page || y + gap + height > pageContentHeight) {
-      page = paper()
+      page = makePage(paperWidth, paperHeight)
       pages.push(page)
       y = 0
     }

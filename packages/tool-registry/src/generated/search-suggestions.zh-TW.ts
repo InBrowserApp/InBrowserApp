@@ -1338,6 +1338,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "murmurhash3-x86-32-hash-text-or-file",
   },
   {
+    category: "image",
+    name: "MusicXML 轉圖片轉換器",
+    slug: "musicxml-to-image-converter",
+  },
+  {
     category: "pdf",
     name: "MusicXML 轉 PDF 轉換器",
     slug: "musicxml-to-pdf-converter",

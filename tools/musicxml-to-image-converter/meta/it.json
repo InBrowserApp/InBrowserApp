@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da MusicXML a immagine",
+  "description": "Converti spartiti MusicXML o file MXL compressi in PNG o SVG. Controlla l’anteprima ed esporta tutte le pagine, quella corrente o un intervallo di battute."
+}

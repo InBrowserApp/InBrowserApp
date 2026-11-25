@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur MusicXML en image",
+  "description": "Convertissez des partitions MusicXML ou des fichiers MXL compressés en PNG ou SVG. Prévisualisez la partition et exportez toutes les pages, la page actuelle ou une plage de mesures."
+}

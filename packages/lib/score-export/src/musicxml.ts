@@ -1,6 +1,8 @@
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay"
-import { inScoreHost, paperSizes, placeFullPage } from "./pages"
+import { cropScorePage, inScoreHost, paperSizes, placeFullPage } from "./pages"
 import type { ScorePaper } from "./pages"
+
+export type MeasureRange = readonly [first: number, last: number]
 
 const formats = { a4: "A4 P", letter: "Letter P" } as const
 
@@ -12,6 +14,16 @@ export async function renderMusicXmlPages(
   file: File,
   paper: ScorePaper = "a4"
 ) {
+  return (await renderMusicXmlScore(file, { paper })).pages
+}
+
+export async function renderMusicXmlScore(
+  file: File,
+  {
+    paper = "a4",
+    measures,
+  }: { paper?: ScorePaper; measures?: MeasureRange } = {}
+) {
   const { width } = paperSizes[paper]
   return inScoreHost(width, async (host) => {
     const display = new OpenSheetMusicDisplay(host, {
@@ -19,9 +31,17 @@ export async function renderMusicXmlPages(
       pageFormat: formats[paper],
       autoResize: false,
       keepWarm: false,
+      drawCredits: !measures,
     })
     try {
       await display.load(file)
+      const measureCount = display.Sheet.SourceMeasures.length
+      if (measures) {
+        // OSMD's indices use file order, including pickups and irregular printed numbers.
+        const [first, last] = measures
+        display.EngravingRules.MinMeasureToDrawIndex = first - 1
+        display.EngravingRules.MaxMeasureToDrawIndex = last - 1
+      }
       display.render()
       const title = host.querySelector<SVGTextElement>(".osmd-title text")
       const titleWidth = title?.getBBox().width ?? 0
@@ -38,9 +58,14 @@ export async function renderMusicXmlPages(
         'svg[id^="osmdSvgPage"]'
       )
       if (!pages.length) throw new Error("The score has no rendered pages")
-      return Array.from(pages, (page) =>
-        placeFullPage(page.cloneNode(true) as SVGSVGElement, paper)
-      )
+      return {
+        measureCount,
+        pages: Array.from(pages, (page) =>
+          measures
+            ? cropScorePage(page)
+            : placeFullPage(page.cloneNode(true) as SVGSVGElement, paper)
+        ),
+      }
     } finally {
       display.destroy()
     }

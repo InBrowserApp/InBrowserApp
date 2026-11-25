@@ -34039,6 +34039,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "musicxml-to-image-converter",
+    category: "image",
+    secondaryCategories: ["misc"],
+    icon: "file-image",
+    tags: [
+      "musicxml",
+      "mxl",
+      "musicxml to png",
+      "musicxml to svg",
+      "sheet music",
+      "score image",
+      "measure excerpt",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MusicXML إلى صور",
+        description:
+          "حوّل نوتات MusicXML أو MXL المضغوطة إلى PNG أو SVG. عاين النوتة وصدّر كل الصفحات أو الصفحة الحالية أو مجموعة من الموازير.",
+      },
+      de: {
+        name: "MusicXML als Bild exportieren",
+        description:
+          "Wandle Noten aus MusicXML oder komprimierten MXL-Dateien in PNG oder SVG um. Prüfe die Vorschau und exportiere alle Seiten, die aktuelle Seite oder einen Taktbereich.",
+      },
+      en: {
+        name: "MusicXML to Image Converter",
+        description:
+          "Convert MusicXML or compressed MXL sheet music to PNG or SVG. Preview the score and export all pages, the current page, or a selected range of measures.",
+      },
+      es: {
+        name: "Conversor de MusicXML a imagen",
+        description:
+          "Convierte partituras MusicXML o archivos MXL comprimidos en PNG o SVG. Revisa la partitura y exporta todas las páginas, la página actual o un rango de compases.",
+      },
+      fr: {
+        name: "Convertisseur MusicXML en image",
+        description:
+          "Convertissez des partitions MusicXML ou des fichiers MXL compressés en PNG ou SVG. Prévisualisez la partition et exportez toutes les pages, la page actuelle ou une plage de mesures.",
+      },
+      he: {
+        name: "ממיר MusicXML לתמונה",
+        description:
+          "המירו תווים בפורמט MusicXML או MXL דחוס ל־PNG או SVG. צפו בתווים וייצאו את כל העמודים, את העמוד הנוכחי או טווח תיבות נבחר.",
+      },
+      hi: {
+        name: "MusicXML से इमेज कन्वर्टर",
+        description:
+          "MusicXML या कंप्रेस किए गए MXL शीट म्यूज़िक को PNG या SVG में बदलें। स्कोर का प्रीव्यू देखें और सभी पन्ने, मौजूदा पन्ना या चुने हुए बार एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Konverter MusicXML ke Gambar",
+        description:
+          "Ubah partitur MusicXML atau MXL terkompresi menjadi PNG atau SVG. Lihat pratinjau dan ekspor semua halaman, halaman saat ini, atau rentang birama pilihan.",
+      },
+      it: {
+        name: "Convertitore da MusicXML a immagine",
+        description:
+          "Converti spartiti MusicXML o file MXL compressi in PNG o SVG. Controlla l’anteprima ed esporta tutte le pagine, quella corrente o un intervallo di battute.",
+      },
+      ja: {
+        name: "MusicXML 画像変換",
+        description:
+          "MusicXML または圧縮された MXL 楽譜を PNG や SVG に変換します。楽譜をプレビューし、全ページ、現在のページ、または指定した小節範囲を書き出せます。",
+      },
+      ko: {
+        name: "MusicXML 이미지 변환기",
+        description:
+          "MusicXML 또는 압축된 MXL 악보를 PNG나 SVG로 변환하세요. 악보를 미리 보고 모든 페이지, 현재 페이지 또는 선택한 마디 범위를 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MusicXML kepada Imej",
+        description:
+          "Tukar skor muzik MusicXML atau MXL termampat kepada PNG atau SVG. Pratonton skor dan eksport semua halaman, halaman semasa atau julat bar pilihan.",
+      },
+      nl: {
+        name: "MusicXML naar afbeelding",
+        description:
+          "Zet bladmuziek in MusicXML of gecomprimeerd MXL om naar PNG of SVG. Bekijk de partituur en exporteer alle pagina’s, de huidige pagina of een reeks maten.",
+      },
+      no: {
+        name: "MusicXML til bilde",
+        description:
+          "Gjør om noter i MusicXML eller komprimert MXL-format til PNG eller SVG. Forhåndsvis partituret og eksporter alle sidene, den gjeldende siden eller et utvalg takter.",
+      },
+      pl: {
+        name: "Konwerter MusicXML na obrazy",
+        description:
+          "Konwertuj nuty z MusicXML lub skompresowanych plików MXL na PNG lub SVG. Sprawdź podgląd partytury i wyeksportuj wszystkie strony, bieżącą stronę lub wybrane takty.",
+      },
+      pt: {
+        name: "Conversor de MusicXML para imagem",
+        description:
+          "Converta partituras MusicXML ou arquivos MXL compactados em PNG ou SVG. Confira a prévia e exporte todas as páginas, a página atual ou um intervalo de compassos.",
+      },
+      ru: {
+        name: "Конвертер MusicXML в изображения",
+        description:
+          "Преобразуйте ноты MusicXML или сжатые файлы MXL в PNG или SVG. Просмотрите партитуру и экспортируйте все страницы, текущую страницу или диапазон тактов.",
+      },
+      sv: {
+        name: "MusicXML till bild",
+        description:
+          "Konvertera noter i MusicXML eller komprimerat MXL-format till PNG eller SVG. Förhandsgranska partituret och exportera alla sidor, den aktuella sidan eller ett urval av takter.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MusicXML เป็นรูปภาพ",
+        description:
+          "แปลงโน้ตเพลง MusicXML หรือ MXL แบบบีบอัดเป็น PNG หรือ SVG ดูตัวอย่างแล้วส่งออกทุกหน้า หน้าปัจจุบัน หรือช่วงห้องเพลงที่เลือก",
+      },
+      tr: {
+        name: "MusicXML'den Görsele Dönüştürücü",
+        description:
+          "MusicXML veya sıkıştırılmış MXL partisyonlarını PNG ya da SVG'ye dönüştürün. Partisyonu önizleyin ve tüm sayfaları, geçerli sayfayı veya bir ölçü aralığını dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển MusicXML sang ảnh",
+        description:
+          "Chuyển bản nhạc MusicXML hoặc MXL nén thành PNG hay SVG. Xem trước bản nhạc và xuất tất cả các trang, trang hiện tại hoặc một phạm vi ô nhịp đã chọn.",
+      },
+      "zh-CN": {
+        name: "MusicXML 转图片转换器",
+        description:
+          "将 MusicXML 或压缩的 MXL 乐谱转换为 PNG 或 SVG。预览乐谱并导出全部页面、当前页面或选定的小节范围。",
+      },
+      "zh-TW": {
+        name: "MusicXML 轉圖片轉換器",
+        description:
+          "將 MusicXML 或壓縮的 MXL 樂譜轉換成 PNG 或 SVG。預覽樂譜並匯出所有頁面、目前頁面或選定的小節範圍。",
+      },
+    },
+  },
+  {
     slug: "musicxml-to-pdf-converter",
     category: "pdf",
     secondaryCategories: ["misc"],
@@ -90567,6 +90699,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MurmurHash3 (x86 32-bit) 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MurmurHash3 x86 32-bit 雜湊值。計算快速 32 位元非加密校驗和，用於資料完整性驗證和效能導向的雜湊計算",
+      },
+    },
+  },
+  "musicxml-to-image-converter": {
+    slug: "musicxml-to-image-converter",
+    category: "image",
+    secondaryCategories: ["misc"],
+    icon: "file-image",
+    tags: [
+      "musicxml",
+      "mxl",
+      "musicxml to png",
+      "musicxml to svg",
+      "sheet music",
+      "score image",
+      "measure excerpt",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MusicXML إلى صور",
+        description:
+          "حوّل نوتات MusicXML أو MXL المضغوطة إلى PNG أو SVG. عاين النوتة وصدّر كل الصفحات أو الصفحة الحالية أو مجموعة من الموازير.",
+      },
+      de: {
+        name: "MusicXML als Bild exportieren",
+        description:
+          "Wandle Noten aus MusicXML oder komprimierten MXL-Dateien in PNG oder SVG um. Prüfe die Vorschau und exportiere alle Seiten, die aktuelle Seite oder einen Taktbereich.",
+      },
+      en: {
+        name: "MusicXML to Image Converter",
+        description:
+          "Convert MusicXML or compressed MXL sheet music to PNG or SVG. Preview the score and export all pages, the current page, or a selected range of measures.",
+      },
+      es: {
+        name: "Conversor de MusicXML a imagen",
+        description:
+          "Convierte partituras MusicXML o archivos MXL comprimidos en PNG o SVG. Revisa la partitura y exporta todas las páginas, la página actual o un rango de compases.",
+      },
+      fr: {
+        name: "Convertisseur MusicXML en image",
+        description:
+          "Convertissez des partitions MusicXML ou des fichiers MXL compressés en PNG ou SVG. Prévisualisez la partition et exportez toutes les pages, la page actuelle ou une plage de mesures.",
+      },
+      he: {
+        name: "ממיר MusicXML לתמונה",
+        description:
+          "המירו תווים בפורמט MusicXML או MXL דחוס ל־PNG או SVG. צפו בתווים וייצאו את כל העמודים, את העמוד הנוכחי או טווח תיבות נבחר.",
+      },
+      hi: {
+        name: "MusicXML से इमेज कन्वर्टर",
+        description:
+          "MusicXML या कंप्रेस किए गए MXL शीट म्यूज़िक को PNG या SVG में बदलें। स्कोर का प्रीव्यू देखें और सभी पन्ने, मौजूदा पन्ना या चुने हुए बार एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Konverter MusicXML ke Gambar",
+        description:
+          "Ubah partitur MusicXML atau MXL terkompresi menjadi PNG atau SVG. Lihat pratinjau dan ekspor semua halaman, halaman saat ini, atau rentang birama pilihan.",
+      },
+      it: {
+        name: "Convertitore da MusicXML a immagine",
+        description:
+          "Converti spartiti MusicXML o file MXL compressi in PNG o SVG. Controlla l’anteprima ed esporta tutte le pagine, quella corrente o un intervallo di battute.",
+      },
+      ja: {
+        name: "MusicXML 画像変換",
+        description:
+          "MusicXML または圧縮された MXL 楽譜を PNG や SVG に変換します。楽譜をプレビューし、全ページ、現在のページ、または指定した小節範囲を書き出せます。",
+      },
+      ko: {
+        name: "MusicXML 이미지 변환기",
+        description:
+          "MusicXML 또는 압축된 MXL 악보를 PNG나 SVG로 변환하세요. 악보를 미리 보고 모든 페이지, 현재 페이지 또는 선택한 마디 범위를 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MusicXML kepada Imej",
+        description:
+          "Tukar skor muzik MusicXML atau MXL termampat kepada PNG atau SVG. Pratonton skor dan eksport semua halaman, halaman semasa atau julat bar pilihan.",
+      },
+      nl: {
+        name: "MusicXML naar afbeelding",
+        description:
+          "Zet bladmuziek in MusicXML of gecomprimeerd MXL om naar PNG of SVG. Bekijk de partituur en exporteer alle pagina’s, de huidige pagina of een reeks maten.",
+      },
+      no: {
+        name: "MusicXML til bilde",
+        description:
+          "Gjør om noter i MusicXML eller komprimert MXL-format til PNG eller SVG. Forhåndsvis partituret og eksporter alle sidene, den gjeldende siden eller et utvalg takter.",
+      },
+      pl: {
+        name: "Konwerter MusicXML na obrazy",
+        description:
+          "Konwertuj nuty z MusicXML lub skompresowanych plików MXL na PNG lub SVG. Sprawdź podgląd partytury i wyeksportuj wszystkie strony, bieżącą stronę lub wybrane takty.",
+      },
+      pt: {
+        name: "Conversor de MusicXML para imagem",
+        description:
+          "Converta partituras MusicXML ou arquivos MXL compactados em PNG ou SVG. Confira a prévia e exporte todas as páginas, a página atual ou um intervalo de compassos.",
+      },
+      ru: {
+        name: "Конвертер MusicXML в изображения",
+        description:
+          "Преобразуйте ноты MusicXML или сжатые файлы MXL в PNG или SVG. Просмотрите партитуру и экспортируйте все страницы, текущую страницу или диапазон тактов.",
+      },
+      sv: {
+        name: "MusicXML till bild",
+        description:
+          "Konvertera noter i MusicXML eller komprimerat MXL-format till PNG eller SVG. Förhandsgranska partituret och exportera alla sidor, den aktuella sidan eller ett urval av takter.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MusicXML เป็นรูปภาพ",
+        description:
+          "แปลงโน้ตเพลง MusicXML หรือ MXL แบบบีบอัดเป็น PNG หรือ SVG ดูตัวอย่างแล้วส่งออกทุกหน้า หน้าปัจจุบัน หรือช่วงห้องเพลงที่เลือก",
+      },
+      tr: {
+        name: "MusicXML'den Görsele Dönüştürücü",
+        description:
+          "MusicXML veya sıkıştırılmış MXL partisyonlarını PNG ya da SVG'ye dönüştürün. Partisyonu önizleyin ve tüm sayfaları, geçerli sayfayı veya bir ölçü aralığını dışa aktarın.",
+      },
+      vi: {
+        name: "Chuyển MusicXML sang ảnh",
+        description:
+          "Chuyển bản nhạc MusicXML hoặc MXL nén thành PNG hay SVG. Xem trước bản nhạc và xuất tất cả các trang, trang hiện tại hoặc một phạm vi ô nhịp đã chọn.",
+      },
+      "zh-CN": {
+        name: "MusicXML 转图片转换器",
+        description:
+          "将 MusicXML 或压缩的 MXL 乐谱转换为 PNG 或 SVG。预览乐谱并导出全部页面、当前页面或选定的小节范围。",
+      },
+      "zh-TW": {
+        name: "MusicXML 轉圖片轉換器",
+        description:
+          "將 MusicXML 或壓縮的 MXL 樂譜轉換成 PNG 或 SVG。預覽樂譜並匯出所有頁面、目前頁面或選定的小節範圍。",
       },
     },
   },
