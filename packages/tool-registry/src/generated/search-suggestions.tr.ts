@@ -1734,6 +1734,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Rastgele Koordinat Oluşturucu",
+    slug: "random-coordinate-generator",
+  },
+  {
+    category: "random",
     name: "Rastgele Tarih Oluşturucu",
     slug: "random-date-generator",
   },

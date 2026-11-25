@@ -1734,6 +1734,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Generador de coordenadas aleatorias",
+    slug: "random-coordinate-generator",
+  },
+  {
+    category: "random",
     name: "Generador de fechas aleatorias",
     slug: "random-date-generator",
   },

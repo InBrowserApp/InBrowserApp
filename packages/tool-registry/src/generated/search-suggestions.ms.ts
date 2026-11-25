@@ -1734,6 +1734,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana Koordinat Rawak",
+    slug: "random-coordinate-generator",
+  },
+  {
+    category: "random",
     name: "Penjana Tarikh Rawak",
     slug: "random-date-generator",
   },

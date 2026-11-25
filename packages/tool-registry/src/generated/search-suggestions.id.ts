@@ -1734,6 +1734,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Pembuat Koordinat Acak",
+    slug: "random-coordinate-generator",
+  },
+  {
+    category: "random",
     name: "Pembuat Tanggal Acak",
     slug: "random-date-generator",
   },

@@ -1,0 +1,18 @@
+{
+  "area": "區域",
+  "worldwide": "全球",
+  "nearby": "指定點附近",
+  "latitude": "中心緯度",
+  "longitude": "中心經度",
+  "radius": "半徑（km）",
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "座標",
+  "placeholder": "產生的座標會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "error": "無法產生座標，請再試一次。"
+}

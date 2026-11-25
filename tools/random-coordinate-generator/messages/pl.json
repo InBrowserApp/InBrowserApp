@@ -1,0 +1,18 @@
+{
+  "area": "Obszar",
+  "worldwide": "Na całym świecie",
+  "nearby": "Wokół punktu",
+  "latitude": "Szerokość geograficzna środka",
+  "longitude": "Długość geograficzna środka",
+  "radius": "Promień (km)",
+  "quantity": "Liczba par",
+  "generate": "Generuj",
+  "generating": "Generowanie…",
+  "results": "Współrzędne",
+  "placeholder": "Tutaj pojawią się wygenerowane współrzędne.",
+  "copy": "Kopiuj wszystko",
+  "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
+  "download": "Pobierz TXT",
+  "error": "Nie udało się wygenerować współrzędnych. Spróbuj ponownie."
+}

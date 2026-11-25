@@ -1,0 +1,18 @@
+{
+  "area": "Kawasan",
+  "worldwide": "Seluruh dunia",
+  "nearby": "Sekitar titik",
+  "latitude": "Latitud pusat",
+  "longitude": "Longitud pusat",
+  "radius": "Jejari (km)",
+  "quantity": "Kuantiti",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Koordinat",
+  "placeholder": "Koordinat yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun TXT",
+  "error": "Koordinat tidak dapat dijana. Cuba lagi."
+}

@@ -1,0 +1,18 @@
+{
+  "area": "범위",
+  "worldwide": "전 세계",
+  "nearby": "지점 주변",
+  "latitude": "중심 위도",
+  "longitude": "중심 경도",
+  "radius": "반경(km)",
+  "quantity": "개수",
+  "generate": "생성",
+  "generating": "생성 중…",
+  "results": "좌표",
+  "placeholder": "생성된 좌표가 여기에 표시됩니다.",
+  "copy": "모두 복사",
+  "copied": "복사됨",
+  "copyFailed": "복사 실패",
+  "download": "TXT 다운로드",
+  "error": "좌표를 생성하지 못했습니다. 다시 시도해 주세요."
+}

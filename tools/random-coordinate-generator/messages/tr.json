@@ -1,0 +1,18 @@
+{
+  "area": "Bölge",
+  "worldwide": "Dünya geneli",
+  "nearby": "Bir noktaya yakın",
+  "latitude": "Merkez enlemi",
+  "longitude": "Merkez boylamı",
+  "radius": "Yarıçap (km)",
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Koordinatlar",
+  "placeholder": "Oluşturulan koordinatlar burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "download": "TXT indir",
+  "error": "Koordinatlar oluşturulamadı. Tekrar deneyin."
+}

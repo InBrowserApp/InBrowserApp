@@ -44175,6 +44175,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "random-coordinate-generator",
+    category: "random",
+    icon: "map",
+    tags: ["random", "coordinate", "latitude", "longitude", "GPS", "generator"],
+    locales: {
+      ar: {
+        name: "مولّد إحداثيات عشوائية",
+        description:
+          "ولّد أزواجًا عشوائية من خطوط العرض والطول حول العالم أو بالقرب من نقطة محددة. انسخ الإحداثيات بالدرجات العشرية أو نزّلها.",
+      },
+      de: {
+        name: "Zufallskoordinaten-Generator",
+        description:
+          "Erzeuge zufällige Paare aus Breiten- und Längengrad weltweit oder um einen Punkt. Kopiere oder lade Koordinaten in Dezimalgrad herunter.",
+      },
+      en: {
+        name: "Random Coordinate Generator",
+        description:
+          "Generate random latitude and longitude pairs worldwide or near a point. Copy or download coordinates in decimal degrees.",
+      },
+      es: {
+        name: "Generador de coordenadas aleatorias",
+        description:
+          "Genera pares aleatorios de latitud y longitud en todo el mundo o cerca de un punto. Copia o descarga las coordenadas en grados decimales.",
+      },
+      fr: {
+        name: "Générateur de coordonnées aléatoires",
+        description:
+          "Générez des paires de latitude et de longitude aléatoires dans le monde ou autour d’un point. Copiez ou téléchargez les coordonnées en degrés décimaux.",
+      },
+      he: {
+        name: "מחולל קואורדינטות אקראיות",
+        description:
+          "צרו זוגות אקראיים של קווי רוחב ואורך ברחבי העולם או ליד נקודה. העתיקו או הורידו את הקואורדינטות במעלות עשרוניות.",
+      },
+      hi: {
+        name: "रैंडम निर्देशांक जनरेटर",
+        description:
+          "दुनिया भर में या किसी बिंदु के पास अक्षांश और देशांतर के यादृच्छिक जोड़े बनाएँ। निर्देशांक दशमलव डिग्री में कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Koordinat Acak",
+        description:
+          "Buat pasangan lintang dan bujur acak di seluruh dunia atau di sekitar suatu titik. Salin atau unduh koordinat dalam derajat desimal.",
+      },
+      it: {
+        name: "Generatore di coordinate casuali",
+        description:
+          "Genera coppie casuali di latitudine e longitudine in tutto il mondo o vicino a un punto. Copia o scarica le coordinate in gradi decimali.",
+      },
+      ja: {
+        name: "ランダム座標生成",
+        description:
+          "世界中または指定した地点の周辺からランダムな緯度・経度を生成します。座標は十進法の度数でコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 좌표 생성기",
+        description:
+          "전 세계 또는 지정한 지점 주변의 무작위 위도와 경도를 생성합니다. 좌표를 십진 도로 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana Koordinat Rawak",
+        description:
+          "Jana pasangan latitud dan longitud rawak di seluruh dunia atau sekitar suatu titik. Salin atau muat turun koordinat dalam darjah perpuluhan.",
+      },
+      nl: {
+        name: "Generator voor willekeurige coördinaten",
+        description:
+          "Genereer willekeurige paren van breedte- en lengtegraden wereldwijd of nabij een punt. Kopieer of download de coördinaten in decimale graden.",
+      },
+      no: {
+        name: "Generator for tilfeldige koordinater",
+        description:
+          "Generer tilfeldige par med breddegrad og lengdegrad over hele verden eller nær et punkt. Kopier eller last ned koordinatene i desimalgrader.",
+      },
+      pl: {
+        name: "Generator losowych współrzędnych",
+        description:
+          "Generuj losowe pary szerokości i długości geograficznej na całym świecie lub w pobliżu punktu. Kopiuj lub pobieraj współrzędne w stopniach dziesiętnych.",
+      },
+      pt: {
+        name: "Gerador de coordenadas aleatórias",
+        description:
+          "Gere pares aleatórios de latitude e longitude em todo o mundo ou perto de um ponto. Copie ou baixe as coordenadas em graus decimais.",
+      },
+      ru: {
+        name: "Генератор случайных координат",
+        description:
+          "Генерируйте случайные пары широты и долготы по всему миру или рядом с заданной точкой. Копируйте или скачивайте координаты в десятичных градусах.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga koordinater",
+        description:
+          "Generera slumpmässiga par av latitud och longitud över hela världen eller nära en punkt. Kopiera eller ladda ner koordinaterna i decimalgrader.",
+      },
+      th: {
+        name: "เครื่องมือสร้างพิกัดแบบสุ่ม",
+        description:
+          "สุ่มคู่ละติจูดและลองจิจูดจากทั่วโลกหรือรอบจุดที่กำหนด คัดลอกหรือดาวน์โหลดพิกัดในรูปแบบองศาทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Koordinat Oluşturucu",
+        description:
+          "Dünya genelinde veya bir noktanın yakınında rastgele enlem ve boylam çiftleri oluşturun. Koordinatları ondalık derece biçiminde kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình tạo tọa độ ngẫu nhiên",
+        description:
+          "Tạo các cặp vĩ độ và kinh độ ngẫu nhiên trên khắp thế giới hoặc quanh một điểm. Sao chép hoặc tải xuống tọa độ ở dạng độ thập phân.",
+      },
+      "zh-CN": {
+        name: "随机坐标生成器",
+        description:
+          "在全球范围内或指定点附近生成随机经纬度。以十进制度复制或下载坐标。",
+      },
+      "zh-TW": {
+        name: "隨機座標產生器",
+        description:
+          "在全球範圍或指定點附近產生隨機經緯度，並以十進位度複製或下載座標。",
+      },
+    },
+  },
+  {
     slug: "random-date-generator",
     category: "random",
     icon: "calendar-days",
@@ -104938,6 +105061,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "無線電時碼同步",
         description:
           "在本機產生 JJY、BPC、DCF77、MSF 或 WWVB 無線電時碼音訊，協助同步相容的電波鐘。",
+      },
+    },
+  },
+  "random-coordinate-generator": {
+    slug: "random-coordinate-generator",
+    category: "random",
+    icon: "map",
+    tags: ["random", "coordinate", "latitude", "longitude", "GPS", "generator"],
+    locales: {
+      ar: {
+        name: "مولّد إحداثيات عشوائية",
+        description:
+          "ولّد أزواجًا عشوائية من خطوط العرض والطول حول العالم أو بالقرب من نقطة محددة. انسخ الإحداثيات بالدرجات العشرية أو نزّلها.",
+      },
+      de: {
+        name: "Zufallskoordinaten-Generator",
+        description:
+          "Erzeuge zufällige Paare aus Breiten- und Längengrad weltweit oder um einen Punkt. Kopiere oder lade Koordinaten in Dezimalgrad herunter.",
+      },
+      en: {
+        name: "Random Coordinate Generator",
+        description:
+          "Generate random latitude and longitude pairs worldwide or near a point. Copy or download coordinates in decimal degrees.",
+      },
+      es: {
+        name: "Generador de coordenadas aleatorias",
+        description:
+          "Genera pares aleatorios de latitud y longitud en todo el mundo o cerca de un punto. Copia o descarga las coordenadas en grados decimales.",
+      },
+      fr: {
+        name: "Générateur de coordonnées aléatoires",
+        description:
+          "Générez des paires de latitude et de longitude aléatoires dans le monde ou autour d’un point. Copiez ou téléchargez les coordonnées en degrés décimaux.",
+      },
+      he: {
+        name: "מחולל קואורדינטות אקראיות",
+        description:
+          "צרו זוגות אקראיים של קווי רוחב ואורך ברחבי העולם או ליד נקודה. העתיקו או הורידו את הקואורדינטות במעלות עשרוניות.",
+      },
+      hi: {
+        name: "रैंडम निर्देशांक जनरेटर",
+        description:
+          "दुनिया भर में या किसी बिंदु के पास अक्षांश और देशांतर के यादृच्छिक जोड़े बनाएँ। निर्देशांक दशमलव डिग्री में कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Koordinat Acak",
+        description:
+          "Buat pasangan lintang dan bujur acak di seluruh dunia atau di sekitar suatu titik. Salin atau unduh koordinat dalam derajat desimal.",
+      },
+      it: {
+        name: "Generatore di coordinate casuali",
+        description:
+          "Genera coppie casuali di latitudine e longitudine in tutto il mondo o vicino a un punto. Copia o scarica le coordinate in gradi decimali.",
+      },
+      ja: {
+        name: "ランダム座標生成",
+        description:
+          "世界中または指定した地点の周辺からランダムな緯度・経度を生成します。座標は十進法の度数でコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 좌표 생성기",
+        description:
+          "전 세계 또는 지정한 지점 주변의 무작위 위도와 경도를 생성합니다. 좌표를 십진 도로 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana Koordinat Rawak",
+        description:
+          "Jana pasangan latitud dan longitud rawak di seluruh dunia atau sekitar suatu titik. Salin atau muat turun koordinat dalam darjah perpuluhan.",
+      },
+      nl: {
+        name: "Generator voor willekeurige coördinaten",
+        description:
+          "Genereer willekeurige paren van breedte- en lengtegraden wereldwijd of nabij een punt. Kopieer of download de coördinaten in decimale graden.",
+      },
+      no: {
+        name: "Generator for tilfeldige koordinater",
+        description:
+          "Generer tilfeldige par med breddegrad og lengdegrad over hele verden eller nær et punkt. Kopier eller last ned koordinatene i desimalgrader.",
+      },
+      pl: {
+        name: "Generator losowych współrzędnych",
+        description:
+          "Generuj losowe pary szerokości i długości geograficznej na całym świecie lub w pobliżu punktu. Kopiuj lub pobieraj współrzędne w stopniach dziesiętnych.",
+      },
+      pt: {
+        name: "Gerador de coordenadas aleatórias",
+        description:
+          "Gere pares aleatórios de latitude e longitude em todo o mundo ou perto de um ponto. Copie ou baixe as coordenadas em graus decimais.",
+      },
+      ru: {
+        name: "Генератор случайных координат",
+        description:
+          "Генерируйте случайные пары широты и долготы по всему миру или рядом с заданной точкой. Копируйте или скачивайте координаты в десятичных градусах.",
+      },
+      sv: {
+        name: "Generator för slumpmässiga koordinater",
+        description:
+          "Generera slumpmässiga par av latitud och longitud över hela världen eller nära en punkt. Kopiera eller ladda ner koordinaterna i decimalgrader.",
+      },
+      th: {
+        name: "เครื่องมือสร้างพิกัดแบบสุ่ม",
+        description:
+          "สุ่มคู่ละติจูดและลองจิจูดจากทั่วโลกหรือรอบจุดที่กำหนด คัดลอกหรือดาวน์โหลดพิกัดในรูปแบบองศาทศนิยม",
+      },
+      tr: {
+        name: "Rastgele Koordinat Oluşturucu",
+        description:
+          "Dünya genelinde veya bir noktanın yakınında rastgele enlem ve boylam çiftleri oluşturun. Koordinatları ondalık derece biçiminde kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình tạo tọa độ ngẫu nhiên",
+        description:
+          "Tạo các cặp vĩ độ và kinh độ ngẫu nhiên trên khắp thế giới hoặc quanh một điểm. Sao chép hoặc tải xuống tọa độ ở dạng độ thập phân.",
+      },
+      "zh-CN": {
+        name: "随机坐标生成器",
+        description:
+          "在全球范围内或指定点附近生成随机经纬度。以十进制度复制或下载坐标。",
+      },
+      "zh-TW": {
+        name: "隨機座標產生器",
+        description:
+          "在全球範圍或指定點附近產生隨機經緯度，並以十進位度複製或下載座標。",
       },
     },
   },
