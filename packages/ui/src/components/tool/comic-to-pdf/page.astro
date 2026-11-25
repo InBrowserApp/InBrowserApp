@@ -18,7 +18,7 @@ const base = resolveLocale<Messages>(
   lang
 )!
 let messages = base
-if (format === "cbr") {
+if (format !== "cbz") {
   const archive = resolveLocale<typeof archiveEnglish>(
     import.meta.glob("../comic-reader/archive-copy/*.json", {
       eager: true,
@@ -43,4 +43,9 @@ if (format === "cbr") {
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} format={format} />
   <slot />
+  {format !== "cbz" && (
+    <p class="text-xs text-muted-foreground">
+      <a href="/licenses/archive-viewer.txt">libarchive</a>
+    </p>
+  )}
 </ToolPageShell>

@@ -158,32 +158,43 @@ test("disposes late readers and suppresses progress/errors after closing", async
   expect(screen.getByText(m.drop)).toBeTruthy()
 })
 
-test("accepts CBR and RAR with a PDF filename and cancels via the file toolbar", async () => {
-  render(<Client messages={{ ...m, open: "Choose a CBR file" }} format="cbr" />)
-  const picker = screen.getByLabelText("Choose a CBR file", {
-    selector: "input",
-  })
-  const select = (name: string) =>
-    fireEvent.change(picker, { target: { files: [new File(["rar"], name)] } })
+test.each([
+  { format: "cbr", extension: "CBR", alias: "rar" },
+  { format: "cb7", extension: "CB7", alias: "7z" },
+] as const)(
+  "$format accepts its archive alias and can cancel the conversion",
+  async ({ format, extension, alias }) => {
+    const label = `Choose a ${extension} file`
+    render(<Client messages={{ ...m, open: label }} format={format} />)
+    const picker = screen.getByLabelText(label, {
+      selector: "input",
+    })
+    const select = (name: string) =>
+      fireEvent.change(picker, {
+        target: { files: [new File(["archive"], name)] },
+      })
 
-  select("volume-01.CBR")
-  const pdf = await screen.findByRole("link", { name: m.pdfExport.download })
-  expect(pdf.getAttribute("download")).toBe("volume-01.pdf")
+    select(`volume-01.${extension}`)
+    const pdf = await screen.findByRole("link", { name: m.pdfExport.download })
+    expect(pdf.getAttribute("download")).toBe("volume-01.pdf")
 
-  mock.prepare.mockImplementationOnce(
-    (_file, signal: AbortSignal) =>
-      new Promise((_resolve, reject) =>
-        signal.addEventListener("abort", () => reject(signal.reason), {
-          once: true,
-        })
-      )
-  )
-  select("volume-02.rar")
-  await waitFor(() => expect(mock.prepare).toHaveBeenCalledTimes(2))
-  fireEvent.click(screen.getByRole("button", { name: m.pdfExport.cancel }))
-  expect(mock.prepare.mock.calls[1]![1].aborted).toBe(true)
-  expect(screen.queryByRole("link", { name: m.pdfExport.download })).toBeNull()
-  expect(document.activeElement).toBe(
-    screen.getByRole("button", { name: "Choose a CBR file" })
-  )
-})
+    mock.prepare.mockImplementationOnce(
+      (_file, signal: AbortSignal) =>
+        new Promise((_resolve, reject) =>
+          signal.addEventListener("abort", () => reject(signal.reason), {
+            once: true,
+          })
+        )
+    )
+    select(`volume-02.${alias}`)
+    await waitFor(() => expect(mock.prepare).toHaveBeenCalledTimes(2))
+    fireEvent.click(screen.getByRole("button", { name: m.pdfExport.cancel }))
+    expect(mock.prepare.mock.calls[1]![1].aborted).toBe(true)
+    expect(
+      screen.queryByRole("link", { name: m.pdfExport.download })
+    ).toBeNull()
+    expect(document.activeElement).toBe(
+      screen.getByRole("button", { name: label })
+    )
+  }
+)

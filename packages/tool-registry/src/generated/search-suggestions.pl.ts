@@ -303,6 +303,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "cb7-reader",
   },
   {
+    category: "ebook",
+    name: "Konwerter CB7 na PDF",
+    slug: "cb7-to-pdf-converter",
+  },
+  {
     category: "json",
     name: "Konwerter CBOR / MessagePack",
     slug: "cbor-messagepack-converter",

@@ -7768,6 +7768,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cb7-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: ["cb7", "7z", "comic", "manga", "pdf", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محوّل CB7 إلى PDF",
+        description:
+          "حوّل قصص CB7 المصوّرة وأرشيفات 7z التي تحتوي على صور الصفحات إلى PDF. عاين الصفحات مرتّبة بحسب أسماء المجلدات والملفات، ونزّل الملف في متصفحك مع الحفاظ على نسب أبعاد الصور الأصلية.",
+      },
+      de: {
+        name: "CB7-zu-PDF-Konverter",
+        description:
+          "Wandle CB7-Comics und 7z-Archive mit Comicseiten in PDF um. Prüfe die nach Ordner- und Dateinamen sortierten Seiten und lade das PDF mit den ursprünglichen Bildproportionen direkt im Browser herunter.",
+      },
+      en: {
+        name: "CB7 to PDF Converter",
+        description:
+          "Convert CB7 comics and 7z archives of comic pages to PDF. Preview pages sorted by folder and filename and download in your browser with the original image proportions.",
+      },
+      es: {
+        name: "Conversor de CB7 a PDF",
+        description:
+          "Convierte cómics CB7 y archivos 7z con páginas de cómic a PDF. Previsualiza las páginas en orden y descarga el PDF desde tu navegador con las proporciones originales.",
+      },
+      fr: {
+        name: "Convertisseur CB7 en PDF",
+        description:
+          "Convertissez une BD CB7 ou une archive 7z de planches en PDF. Vérifiez l’aperçu des pages triées par dossier et nom de fichier, puis téléchargez le PDF dans votre navigateur. Les images gardent leurs proportions.",
+      },
+      he: {
+        name: "ממיר CB7 ל־PDF",
+        description:
+          "המירו קובצי קומיקס CB7 וארכיוני 7z של עמודי קומיקס ל־PDF. הציגו את העמודים לפי סדר התיקיות ושמות הקבצים והורידו את ה־PDF בדפדפן ביחסי הממדים המקוריים של התמונות.",
+      },
+      hi: {
+        name: "CB7 से PDF कन्वर्टर",
+        description:
+          "CB7 कॉमिक और कॉमिक पृष्ठों वाले 7z आर्काइव को PDF में बदलें। फ़ोल्डर और फ़ाइल के नामों के क्रम में पृष्ठों का प्रीव्यू देखें और चित्रों के मूल अनुपात के साथ ब्राउज़र से PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CB7 ke PDF",
+        description:
+          "Ubah komik CB7 atau arsip 7z berisi gambar komik ke PDF. Tinjau urutan halaman berdasarkan folder dan nama file, lalu unduh PDF dengan proporsi gambar asli langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da CB7 a PDF",
+        description:
+          "Converti fumetti CB7 e archivi 7z di pagine a fumetti in PDF. Controlla l’anteprima delle pagine ordinate per cartella e nome del file e scarica il PDF nel browser con le proporzioni originali delle immagini.",
+      },
+      ja: {
+        name: "CB7 から PDF への変換ツール",
+        description:
+          "CB7 形式の漫画やページ画像が入った 7z アーカイブを PDF に変換します。フォルダー名とファイル名の順に並んだページをプレビューし、元の縦横比を保った PDF をブラウザーでダウンロードできます。",
+      },
+      ko: {
+        name: "CB7 PDF 변환기",
+        description:
+          "CB7 만화와 만화 이미지가 담긴 7z 파일을 PDF로 변환하세요. 폴더와 파일 이름순으로 정렬된 페이지를 미리 보고, 원본 이미지 비율을 유지한 PDF를 브라우저에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CB7 kepada PDF",
+        description:
+          "Tukar komik CB7 dan arkib 7z yang mengandungi halaman komik kepada PDF. Pratonton halaman yang disusun mengikut nama folder dan fail, kemudian muat turun PDF dalam pelayar dengan perkadaran imej asal.",
+      },
+      nl: {
+        name: "CB7-naar-PDF-converter",
+        description:
+          "Zet CB7-strips en 7z-archieven met strippagina’s om naar PDF. Bekijk de pagina’s op map- en bestandsnaam en download de PDF in je browser met behoud van de beeldverhoudingen.",
+      },
+      no: {
+        name: "Konverterer fra CB7 til PDF",
+        description:
+          "Konverter CB7-tegneserier og 7z-arkiver med tegneseriesider til PDF. Forhåndsvis sider sortert etter mappe- og filnavn, og last ned PDF-en i nettleseren med de opprinnelige bildeproporsjonene.",
+      },
+      pl: {
+        name: "Konwerter CB7 na PDF",
+        description:
+          "Konwertuj komiksy CB7 i archiwa 7z ze stronami komiksów na PDF. Sprawdź w przeglądarce podgląd stron posortowanych według nazw folderów i plików. Pobierz PDF z zachowaniem proporcji obrazów.",
+      },
+      pt: {
+        name: "Conversor de CB7 para PDF",
+        description:
+          "Converta quadrinhos em CB7 ou 7z para PDF no navegador. Confira as páginas em ordem de pasta e nome de arquivo e baixe o PDF com as proporções originais.",
+      },
+      ru: {
+        name: "Конвертер CB7 в PDF",
+        description:
+          "Конвертируйте комиксы CB7 и архивы 7z со страницами комиксов в PDF. Просмотрите страницы, отсортированные по папкам и именам файлов, и скачайте PDF с исходными пропорциями изображений прямо в браузере.",
+      },
+      sv: {
+        name: "Konverterare från CB7 till PDF",
+        description:
+          "Konvertera CB7-serier och 7z-arkiv med seriesidor till PDF. Förhandsvisa sidorna sorterade efter mapp- och filnamn och ladda ner i webbläsaren med bildernas ursprungliga proportioner.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CB7 เป็น PDF",
+        description:
+          "แปลงการ์ตูน CB7 หรือไฟล์ 7z ที่เก็บภาพหน้าการ์ตูนเป็น PDF ดูตัวอย่างหน้าที่เรียงตามชื่อโฟลเดอร์และชื่อไฟล์ แล้วดาวน์โหลดจากเบราว์เซอร์โดยคงสัดส่วนภาพเดิม",
+      },
+      tr: {
+        name: "CB7’den PDF’ye Dönüştürücü",
+        description:
+          "CB7 çizgi romanlarını ve çizgi roman sayfaları içeren 7z arşivlerini PDF’ye dönüştürün. Klasör ve dosya adlarına göre sıralanan sayfaları önizleyin ve görsellerin özgün en boy oranı korunarak hazırlanan PDF’yi tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CB7 sang PDF",
+        description:
+          "Chuyển truyện tranh CB7 hoặc tệp nén 7z chứa ảnh truyện sang PDF. Xem trước các trang theo thứ tự tên thư mục và tên tệp, rồi tải PDF giữ nguyên tỷ lệ ảnh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CB7 转 PDF 转换器",
+        description:
+          "将 CB7 漫画或包含漫画图片的 7z 压缩包转为 PDF。按目录和文件名排列页面，保留原图比例，可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "CB7 轉 PDF",
+        description:
+          "將 CB7 漫畫或內含漫畫圖片的 7z 壓縮檔轉成 PDF。預覽依資料夾和檔名排序的頁面，並直接在瀏覽器下載，保留圖片的原始比例。",
+      },
+    },
+  },
+  {
     slug: "cbor-messagepack-converter",
     category: "json",
     icon: "binary",
@@ -64296,6 +64420,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CB7 漫畫閱讀器",
         description:
           "在瀏覽器中開啟 CB7（7z）漫畫。可翻頁、透過縮圖跳頁、縮放圖片，以及由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  "cb7-to-pdf-converter": {
+    slug: "cb7-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "file-text",
+    tags: ["cb7", "7z", "comic", "manga", "pdf", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محوّل CB7 إلى PDF",
+        description:
+          "حوّل قصص CB7 المصوّرة وأرشيفات 7z التي تحتوي على صور الصفحات إلى PDF. عاين الصفحات مرتّبة بحسب أسماء المجلدات والملفات، ونزّل الملف في متصفحك مع الحفاظ على نسب أبعاد الصور الأصلية.",
+      },
+      de: {
+        name: "CB7-zu-PDF-Konverter",
+        description:
+          "Wandle CB7-Comics und 7z-Archive mit Comicseiten in PDF um. Prüfe die nach Ordner- und Dateinamen sortierten Seiten und lade das PDF mit den ursprünglichen Bildproportionen direkt im Browser herunter.",
+      },
+      en: {
+        name: "CB7 to PDF Converter",
+        description:
+          "Convert CB7 comics and 7z archives of comic pages to PDF. Preview pages sorted by folder and filename and download in your browser with the original image proportions.",
+      },
+      es: {
+        name: "Conversor de CB7 a PDF",
+        description:
+          "Convierte cómics CB7 y archivos 7z con páginas de cómic a PDF. Previsualiza las páginas en orden y descarga el PDF desde tu navegador con las proporciones originales.",
+      },
+      fr: {
+        name: "Convertisseur CB7 en PDF",
+        description:
+          "Convertissez une BD CB7 ou une archive 7z de planches en PDF. Vérifiez l’aperçu des pages triées par dossier et nom de fichier, puis téléchargez le PDF dans votre navigateur. Les images gardent leurs proportions.",
+      },
+      he: {
+        name: "ממיר CB7 ל־PDF",
+        description:
+          "המירו קובצי קומיקס CB7 וארכיוני 7z של עמודי קומיקס ל־PDF. הציגו את העמודים לפי סדר התיקיות ושמות הקבצים והורידו את ה־PDF בדפדפן ביחסי הממדים המקוריים של התמונות.",
+      },
+      hi: {
+        name: "CB7 से PDF कन्वर्टर",
+        description:
+          "CB7 कॉमिक और कॉमिक पृष्ठों वाले 7z आर्काइव को PDF में बदलें। फ़ोल्डर और फ़ाइल के नामों के क्रम में पृष्ठों का प्रीव्यू देखें और चित्रों के मूल अनुपात के साथ ब्राउज़र से PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CB7 ke PDF",
+        description:
+          "Ubah komik CB7 atau arsip 7z berisi gambar komik ke PDF. Tinjau urutan halaman berdasarkan folder dan nama file, lalu unduh PDF dengan proporsi gambar asli langsung di browser.",
+      },
+      it: {
+        name: "Convertitore da CB7 a PDF",
+        description:
+          "Converti fumetti CB7 e archivi 7z di pagine a fumetti in PDF. Controlla l’anteprima delle pagine ordinate per cartella e nome del file e scarica il PDF nel browser con le proporzioni originali delle immagini.",
+      },
+      ja: {
+        name: "CB7 から PDF への変換ツール",
+        description:
+          "CB7 形式の漫画やページ画像が入った 7z アーカイブを PDF に変換します。フォルダー名とファイル名の順に並んだページをプレビューし、元の縦横比を保った PDF をブラウザーでダウンロードできます。",
+      },
+      ko: {
+        name: "CB7 PDF 변환기",
+        description:
+          "CB7 만화와 만화 이미지가 담긴 7z 파일을 PDF로 변환하세요. 폴더와 파일 이름순으로 정렬된 페이지를 미리 보고, 원본 이미지 비율을 유지한 PDF를 브라우저에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CB7 kepada PDF",
+        description:
+          "Tukar komik CB7 dan arkib 7z yang mengandungi halaman komik kepada PDF. Pratonton halaman yang disusun mengikut nama folder dan fail, kemudian muat turun PDF dalam pelayar dengan perkadaran imej asal.",
+      },
+      nl: {
+        name: "CB7-naar-PDF-converter",
+        description:
+          "Zet CB7-strips en 7z-archieven met strippagina’s om naar PDF. Bekijk de pagina’s op map- en bestandsnaam en download de PDF in je browser met behoud van de beeldverhoudingen.",
+      },
+      no: {
+        name: "Konverterer fra CB7 til PDF",
+        description:
+          "Konverter CB7-tegneserier og 7z-arkiver med tegneseriesider til PDF. Forhåndsvis sider sortert etter mappe- og filnavn, og last ned PDF-en i nettleseren med de opprinnelige bildeproporsjonene.",
+      },
+      pl: {
+        name: "Konwerter CB7 na PDF",
+        description:
+          "Konwertuj komiksy CB7 i archiwa 7z ze stronami komiksów na PDF. Sprawdź w przeglądarce podgląd stron posortowanych według nazw folderów i plików. Pobierz PDF z zachowaniem proporcji obrazów.",
+      },
+      pt: {
+        name: "Conversor de CB7 para PDF",
+        description:
+          "Converta quadrinhos em CB7 ou 7z para PDF no navegador. Confira as páginas em ordem de pasta e nome de arquivo e baixe o PDF com as proporções originais.",
+      },
+      ru: {
+        name: "Конвертер CB7 в PDF",
+        description:
+          "Конвертируйте комиксы CB7 и архивы 7z со страницами комиксов в PDF. Просмотрите страницы, отсортированные по папкам и именам файлов, и скачайте PDF с исходными пропорциями изображений прямо в браузере.",
+      },
+      sv: {
+        name: "Konverterare från CB7 till PDF",
+        description:
+          "Konvertera CB7-serier och 7z-arkiv med seriesidor till PDF. Förhandsvisa sidorna sorterade efter mapp- och filnamn och ladda ner i webbläsaren med bildernas ursprungliga proportioner.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CB7 เป็น PDF",
+        description:
+          "แปลงการ์ตูน CB7 หรือไฟล์ 7z ที่เก็บภาพหน้าการ์ตูนเป็น PDF ดูตัวอย่างหน้าที่เรียงตามชื่อโฟลเดอร์และชื่อไฟล์ แล้วดาวน์โหลดจากเบราว์เซอร์โดยคงสัดส่วนภาพเดิม",
+      },
+      tr: {
+        name: "CB7’den PDF’ye Dönüştürücü",
+        description:
+          "CB7 çizgi romanlarını ve çizgi roman sayfaları içeren 7z arşivlerini PDF’ye dönüştürün. Klasör ve dosya adlarına göre sıralanan sayfaları önizleyin ve görsellerin özgün en boy oranı korunarak hazırlanan PDF’yi tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CB7 sang PDF",
+        description:
+          "Chuyển truyện tranh CB7 hoặc tệp nén 7z chứa ảnh truyện sang PDF. Xem trước các trang theo thứ tự tên thư mục và tên tệp, rồi tải PDF giữ nguyên tỷ lệ ảnh ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CB7 转 PDF 转换器",
+        description:
+          "将 CB7 漫画或包含漫画图片的 7z 压缩包转为 PDF。按目录和文件名排列页面，保留原图比例，可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "CB7 轉 PDF",
+        description:
+          "將 CB7 漫畫或內含漫畫圖片的 7z 壓縮檔轉成 PDF。預覽依資料夾和檔名排序的頁面，並直接在瀏覽器下載，保留圖片的原始比例。",
       },
     },
   },

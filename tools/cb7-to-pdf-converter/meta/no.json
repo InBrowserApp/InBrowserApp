@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer fra CB7 til PDF",
+  "description": "Konverter CB7-tegneserier og 7z-arkiver med tegneseriesider til PDF. Forhåndsvis sider sortert etter mappe- og filnavn, og last ned PDF-en i nettleseren med de opprinnelige bildeproporsjonene."
+}

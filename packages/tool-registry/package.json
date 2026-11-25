@@ -67,6 +67,7 @@
     "@tool/camera": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/cb7-reader": "workspace:*",
+    "@tool/cb7-to-pdf-converter": "workspace:*",
     "@tool/cbor-messagepack-converter": "workspace:*",
     "@tool/cbr-reader": "workspace:*",
     "@tool/cbr-to-pdf-converter": "workspace:*",
