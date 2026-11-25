@@ -1,0 +1,18 @@
+{
+  "start": "Ngày bắt đầu",
+  "end": "Ngày kết thúc",
+  "format": "Định dạng kết quả",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Ngày theo ngôn ngữ",
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Ngày",
+  "placeholder": "Các ngày đã tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "download": "Tải xuống TXT",
+  "invalidRange": "Chọn ngày kết thúc trùng hoặc sau ngày bắt đầu.",
+  "error": "Không thể tạo ngày. Hãy thử lại."
+}

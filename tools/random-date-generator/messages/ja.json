@@ -1,0 +1,18 @@
+{
+  "start": "開始日",
+  "end": "終了日",
+  "format": "出力形式",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "ローカライズされた日付",
+  "quantity": "件数",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "日付",
+  "placeholder": "生成された日付がここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーに失敗しました",
+  "download": "TXTをダウンロード",
+  "invalidRange": "終了日は開始日以降の日付を選択してください。",
+  "error": "日付を生成できませんでした。もう一度お試しください。"
+}

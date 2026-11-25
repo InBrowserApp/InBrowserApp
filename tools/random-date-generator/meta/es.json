@@ -1,0 +1,4 @@
+{
+  "name": "Generador de fechas aleatorias",
+  "description": "Genera fechas aleatorias entre una fecha de inicio y una de fin. Elige el formato ISO o localizado y copia o descarga el lote."
+}

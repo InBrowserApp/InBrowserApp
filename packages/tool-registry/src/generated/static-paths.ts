@@ -31466,6 +31466,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-date-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-date-generator",
+    language: "de",
+  },
+  {
+    slug: "random-date-generator",
+    language: "en",
+  },
+  {
+    slug: "random-date-generator",
+    language: "es",
+  },
+  {
+    slug: "random-date-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-date-generator",
+    language: "he",
+  },
+  {
+    slug: "random-date-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-date-generator",
+    language: "id",
+  },
+  {
+    slug: "random-date-generator",
+    language: "it",
+  },
+  {
+    slug: "random-date-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-date-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-date-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-date-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-date-generator",
+    language: "no",
+  },
+  {
+    slug: "random-date-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-date-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-date-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-date-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-date-generator",
+    language: "th",
+  },
+  {
+    slug: "random-date-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-date-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-date-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-date-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-name-generator",
     language: "ar",
   },

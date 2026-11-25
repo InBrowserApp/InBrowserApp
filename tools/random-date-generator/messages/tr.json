@@ -1,0 +1,18 @@
+{
+  "start": "Başlangıç tarihi",
+  "end": "Bitiş tarihi",
+  "format": "Çıktı biçimi",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Sayfanın dilinde tarih",
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Tarihler",
+  "placeholder": "Oluşturulan tarihler burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "download": "TXT indir",
+  "invalidRange": "Başlangıç tarihiyle aynı veya daha sonraki bir bitiş tarihi seçin.",
+  "error": "Tarihler oluşturulamadı. Tekrar deneyin."
+}

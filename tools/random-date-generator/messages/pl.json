@@ -1,0 +1,18 @@
+{
+  "start": "Data początkowa",
+  "end": "Data końcowa",
+  "format": "Format wyniku",
+  "iso": "ISO (YYYY-MM-DD)",
+  "localized": "Data w formacie lokalnym",
+  "quantity": "Liczba dat",
+  "generate": "Generuj",
+  "generating": "Generowanie…",
+  "results": "Daty",
+  "placeholder": "Tutaj pojawią się wygenerowane daty.",
+  "copy": "Kopiuj wszystko",
+  "copied": "Skopiowano",
+  "copyFailed": "Nie udało się skopiować",
+  "download": "Pobierz TXT",
+  "invalidRange": "Ustaw datę końcową na datę początkową lub późniejszą.",
+  "error": "Nie udało się wygenerować dat. Spróbuj ponownie."
+}
