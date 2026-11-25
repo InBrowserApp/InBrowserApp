@@ -8,4 +8,4 @@ Un file MIDI contiene istruzioni come le note, il tempo e i cambi di strumento. 
 
 ## Ascoltare e scaricare il WAV
 
-Usa il lettore per controllare il mix prima di scaricarlo. La conversione aggiunge una breve coda dopo l’ultimo evento, così le note e gli effetti possono spegnersi gradualmente. Lo strumento converte file MIDI di durata inferiore a 10 minuti ed elabora il MIDI e il SoundFont in locale. Il banco sonoro integrato viene scaricato al primo utilizzo.
+Usa il lettore per controllare il mix prima di scaricarlo. La conversione aggiunge una breve coda dopo l’ultimo evento, così le note e gli effetti possono spegnersi gradualmente. Lo strumento converte file MIDI di durata inferiore a 10 minuti in formato 0 o 1 con risoluzione in impulsi per semiminima (PPQ) ed elabora il MIDI e il SoundFont in locale. Il banco sonoro integrato viene scaricato al primo utilizzo.

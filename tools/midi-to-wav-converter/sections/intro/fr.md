@@ -8,4 +8,4 @@ Un fichier MIDI contient des instructions telles que les notes, le tempo et les 
 
 ## Écouter et télécharger votre WAV
 
-Utilisez le lecteur pour vérifier le mixage avant le téléchargement. Le rendu se prolonge un court instant après le dernier événement pour laisser les notes et les effets s’atténuer. L’outil convertit des fichiers MIDI de moins de 10 minutes et traite votre MIDI et votre SoundFont localement. La banque intégrée est téléchargée à sa première utilisation.
+Utilisez le lecteur pour vérifier le mixage avant le téléchargement. Le rendu se prolonge un court instant après le dernier événement pour laisser les notes et les effets s’atténuer. L’outil convertit les fichiers MIDI de moins de 10 minutes au format 0 ou 1 avec une résolution en impulsions par noire (PPQ) et traite votre MIDI et votre SoundFont localement. La banque intégrée est téléchargée à sa première utilisation.

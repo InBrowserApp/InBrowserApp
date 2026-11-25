@@ -8,4 +8,4 @@ File MIDI menyimpan instruksi seperti not, tempo, dan pergantian instrumen. Soun
 
 ## Dengarkan pratinjau dan unduh WAV
 
-Dengarkan hasil pencampuran audio sebelum mengunduhnya. Perenderan menambahkan sedikit waktu di bagian akhir agar suara not dan efek dapat meluruh setelah peristiwa MIDI terakhir. Alat ini merender file MIDI berdurasi kurang dari 10 menit dan memproses MIDI serta SoundFont secara lokal. Bank suara bawaan diunduh saat pertama kali Anda menggunakannya.
+Dengarkan hasil pencampuran audio sebelum mengunduhnya. Perenderan menambahkan sedikit waktu di bagian akhir agar suara not dan efek dapat meluruh setelah peristiwa MIDI terakhir. Alat ini merender file MIDI dengan pengaturan waktu berbasis ketukan (format 0 atau 1) yang berdurasi kurang dari 10 menit dan memproses MIDI serta SoundFont secara lokal. Bank suara bawaan diunduh saat pertama kali Anda menggunakannya.

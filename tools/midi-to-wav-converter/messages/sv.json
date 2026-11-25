@@ -14,6 +14,7 @@
   "preview": "Provlyssna på WAV-filen",
   "download": "Ladda ner WAV",
   "invalidMidi": "MIDI-filen kunde inte öppnas eller innehåller inga spelbara toner. Prova en annan .mid- eller .midi-fil.",
+  "unsupportedTiming": "Exportera filen som en MIDI-fil med musikalisk tidsbas (format 0 eller 1) och försök igen.",
   "invalidSoundFont": "SoundFont-filen kunde inte öppnas. Prova en annan .sf2- eller .sf3-fil eller använd den inbyggda SoundFont-filen.",
   "soundFontUnavailable": "Den inbyggda SoundFont-filen kunde inte läsas in. Försök igen eller välj en SoundFont-fil.",
   "tooLong": "Välj en MIDI-fil som är kortare än 10 minuter för att rendera den i webbläsaren.",

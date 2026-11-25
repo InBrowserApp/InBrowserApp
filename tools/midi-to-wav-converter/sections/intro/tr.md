@@ -8,4 +8,4 @@ MIDI dosyası nota, tempo ve enstrüman değişikliği gibi talimatları saklar.
 
 ## WAV dosyanızı dinleyin ve indirin
 
-İndirmeden önce önizlemede ses karışımını dinleyebilirsiniz. Dönüştürme işlemi, son MIDI olayından sonra notaların ve efektlerin doğal biçimde sönmesi için sona kısa bir süre ekler. Araç 10 dakikadan kısa MIDI dosyalarını dönüştürür. MIDI ve SoundFont dosyalarınız tarayıcıda işlenir. Dahili ses bankası ilk kullanımda yüklenir.
+İndirmeden önce önizlemede ses karışımını dinleyebilirsiniz. Dönüştürme işlemi, son MIDI olayından sonra notaların ve efektlerin doğal biçimde sönmesi için sona kısa bir süre ekler. Araç 10 dakikadan kısa, vuruş tabanlı zamanlama kullanan MIDI dosyalarını (biçim 0 veya 1) dönüştürür. MIDI ve SoundFont dosyalarınız tarayıcıda işlenir. Dahili ses bankası ilk kullanımda yüklenir.

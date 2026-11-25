@@ -14,6 +14,7 @@
   "preview": "WAV audio preview",
   "download": "Download WAV",
   "invalidMidi": "This MIDI file could not be opened or has no playable notes. Try another .mid or .midi file.",
+  "unsupportedTiming": "Export this file as a beat-based MIDI file (format 0 or 1), then try again.",
   "invalidSoundFont": "This SoundFont could not be opened. Try another .sf2 or .sf3 file or use the built-in SoundFont.",
   "soundFontUnavailable": "The built-in SoundFont could not load. Try again or choose a SoundFont file.",
   "tooLong": "Choose a MIDI file under 10 minutes to render it in your browser.",

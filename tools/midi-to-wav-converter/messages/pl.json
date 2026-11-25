@@ -14,6 +14,7 @@
   "preview": "Odsłuch pliku WAV",
   "download": "Pobierz WAV",
   "invalidMidi": "Nie można otworzyć tego pliku MIDI lub nie zawiera on nut do odtworzenia. Wybierz inny plik .mid lub .midi.",
+  "unsupportedTiming": "Wyeksportuj plik w formacie MIDI 0 lub 1 z podziałem czasu PPQ i spróbuj ponownie.",
   "invalidSoundFont": "Nie można otworzyć tego banku SoundFont. Wybierz inny plik .sf2 lub .sf3 albo użyj wbudowanego banku.",
   "soundFontUnavailable": "Nie udało się wczytać wbudowanego banku SoundFont. Spróbuj ponownie lub wybierz plik SoundFont.",
   "tooLong": "Do konwersji w przeglądarce wybierz plik MIDI krótszy niż 10 minut.",

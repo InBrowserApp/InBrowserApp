@@ -8,6 +8,7 @@ import {
 
 type RenderError =
   | "invalidMidi"
+  | "unsupportedTiming"
   | "invalidSoundFont"
   | "tooLong"
   | "renderFailed"
@@ -28,6 +29,9 @@ export async function renderMidiToWav(
     midi = BasicMIDI.fromArrayBuffer(input)
   } catch {
     return { type: "error", key: "invalidMidi" }
+  }
+  if (midi.format === 2 || (midi.timeDivision & 0x8000) !== 0) {
+    return { type: "error", key: "unsupportedTiming" }
   }
   const hasNotes = midi.tracks.some((track) =>
     track.events.some(
@@ -52,9 +56,9 @@ export async function renderMidiToWav(
 
   try {
     const sequencer = new SpessaSynthSequencer(synth)
+    sequencer.skipToFirstNoteOn = false
     sequencer.loadNewSongList([midi])
     sequencer.loopCount = 0
-    sequencer.skipToFirstNoteOn = false
     sequencer.play()
 
     const frames = Math.ceil((midi.duration + 2) * sampleRate)

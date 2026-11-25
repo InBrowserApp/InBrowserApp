@@ -70,6 +70,17 @@ describe("MIDI rendering worker", () => {
     })
   })
 
+  it("finishes when renderer initialization throws", async () => {
+    vi.mocked(renderMidiToWav).mockRejectedValue(
+      new Error("initialization failed")
+    )
+    await host.onmessage!({ data: { file, soundFont } })
+    expect(host.postMessage).toHaveBeenCalledWith({
+      type: "error",
+      key: "renderFailed",
+    })
+  })
+
   it("reports file read and bank download failures", async () => {
     const badFile = new File([], "missing.mid")
     vi.spyOn(badFile, "arrayBuffer").mockRejectedValue(new Error("unreadable"))

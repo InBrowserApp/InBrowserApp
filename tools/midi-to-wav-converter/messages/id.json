@@ -14,6 +14,7 @@
   "preview": "Pratinjau audio WAV",
   "download": "Unduh WAV",
   "invalidMidi": "File MIDI ini tidak dapat dibuka atau tidak berisi not yang bisa dimainkan. Coba file .mid atau .midi lain.",
+  "unsupportedTiming": "Ekspor file ini sebagai MIDI dengan pengaturan waktu berbasis ketukan (format 0 atau 1), lalu coba lagi.",
   "invalidSoundFont": "SoundFont ini tidak dapat dibuka. Coba file .sf2 atau .sf3 lain, atau gunakan SoundFont bawaan.",
   "soundFontUnavailable": "SoundFont bawaan tidak dapat dimuat. Coba lagi atau pilih file SoundFont.",
   "tooLong": "Pilih file MIDI berdurasi kurang dari 10 menit untuk dirender di browser.",

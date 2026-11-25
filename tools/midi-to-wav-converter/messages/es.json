@@ -14,6 +14,7 @@
   "preview": "Vista previa del audio WAV",
   "download": "Descargar WAV",
   "invalidMidi": "No se pudo abrir este MIDI o no contiene notas que se puedan reproducir. Prueba con otro archivo .mid o .midi.",
+  "unsupportedTiming": "Exporta el archivo MIDI en formato 0 o 1 con temporización en pulsos por negra (PPQ) e inténtalo de nuevo.",
   "invalidSoundFont": "No se pudo abrir este banco SoundFont. Prueba con otro archivo .sf2 o .sf3 o usa el banco integrado.",
   "soundFontUnavailable": "No se pudo cargar el banco SoundFont integrado. Inténtalo de nuevo o elige un archivo SoundFont.",
   "tooLong": "Elige un archivo MIDI de menos de 10 minutos para generar el audio en el navegador.",

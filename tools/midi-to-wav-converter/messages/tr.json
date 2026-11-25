@@ -14,6 +14,7 @@
   "preview": "WAV ses önizlemesi",
   "download": "WAV dosyasını indir",
   "invalidMidi": "MIDI dosyası açılamadı veya çalınabilir nota içermiyor. Başka bir .mid veya .midi dosyası deneyin.",
+  "unsupportedTiming": "Dosyayı vuruş tabanlı zamanlama kullanan bir MIDI dosyası (biçim 0 veya 1) olarak dışa aktarın, ardından tekrar deneyin.",
   "invalidSoundFont": "SoundFont dosyası açılamadı. Başka bir .sf2 veya .sf3 dosyası deneyin ya da dahili SoundFont'u kullanın.",
   "soundFontUnavailable": "Dahili SoundFont yüklenemedi. Tekrar deneyin veya bir SoundFont dosyası seçin.",
   "tooLong": "Tarayıcıda dönüştürmek için 10 dakikadan kısa bir MIDI dosyası seçin.",

@@ -8,4 +8,4 @@ Plik MIDI zawiera informacje o nutach, tempie i zmianach instrumentów. Bank Sou
 
 ## Odsłuch i pobieranie pliku WAV
 
-Odsłuchaj nagranie przed pobraniem, aby sprawdzić brzmienie wszystkich partii. Po ostatnim zdarzeniu MIDI konwerter dodaje krótki odcinek, który pozwala nutom i efektom wybrzmieć. Narzędzie konwertuje pliki MIDI krótsze niż 10 minut i przetwarza MIDI oraz SoundFont lokalnie. Wbudowany bank brzmień pobiera się przy pierwszym użyciu.
+Odsłuchaj nagranie przed pobraniem, aby sprawdzić brzmienie wszystkich partii. Po ostatnim zdarzeniu MIDI konwerter dodaje krótki odcinek, który pozwala nutom i efektom wybrzmieć. Narzędzie konwertuje pliki MIDI w formacie 0 lub 1, z czasem zapisanym w impulsach na ćwierćnutę (PPQ) i trwające krócej niż 10 minut i przetwarza MIDI oraz SoundFont lokalnie. Wbudowany bank brzmień pobiera się przy pierwszym użyciu.

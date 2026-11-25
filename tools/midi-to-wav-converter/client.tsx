@@ -32,10 +32,14 @@ export default function MidiToWav({
     active.current = null
   }
 
-  function reset(next?: File) {
+  function reset() {
     stop()
-    setSoundFont(next)
     setState({ type: "idle" })
+  }
+
+  function changeSoundFont(next?: File) {
+    reset()
+    setSoundFont(next)
   }
 
   function start() {
@@ -70,9 +74,8 @@ export default function MidiToWav({
         icon={Piano}
         labels={m}
         onFile={(next) => {
-          stop()
+          reset()
           setFile(next)
-          setState({ type: "idle" })
         }}
       />
       <ToolPanelCard>
@@ -88,10 +91,14 @@ export default function MidiToWav({
               <ToolOpenTextFile
                 accept=".sf2,.sf3"
                 label={m.chooseSoundFont}
-                onFile={reset}
+                onFile={changeSoundFont}
               />
               {soundFont && (
-                <Button type="button" variant="ghost" onClick={() => reset()}>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  onClick={() => changeSoundFont()}
+                >
                   {m.useDefaultSoundFont}
                 </Button>
               )}
@@ -120,15 +127,12 @@ export default function MidiToWav({
                 type="button"
                 variant="outline"
                 className="min-h-11"
-                onClick={() => {
-                  stop()
-                  setState({ type: "idle" })
-                }}
+                onClick={reset}
               >
                 {m.cancel}
               </Button>
             </div>
-          ) : (
+          ) : state.type !== "complete" ? (
             <Button
               type="button"
               disabled={!file}
@@ -138,11 +142,11 @@ export default function MidiToWav({
               <AudioLines data-icon="inline-start" aria-hidden="true" />
               {m.render}
             </Button>
-          )}
-          {state.type === "complete" && (
+          ) : null}
+          {state.type === "complete" && file && (
             <AudioPreviewDownload
               wav={state.wav}
-              filename={file!.name.replace(/\.(mid|midi)$/i, "") + ".wav"}
+              filename={file.name.replace(/\.(mid|midi)$/i, "") + ".wav"}
               previewLabel={m.preview}
               downloadLabel={m.download}
             />

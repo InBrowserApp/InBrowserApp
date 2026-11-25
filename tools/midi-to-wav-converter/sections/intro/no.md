@@ -8,4 +8,4 @@ En MIDI-fil lagrer instruksjoner som noter, tempo og instrumentbytter. En SoundF
 
 ## Lytt til og last ned WAV-filen
 
-Lytt til forhåndsvisningen for å kontrollere miksen før du laster ned. Ved gjengivelse legges det til litt ekstra tid, slik at noter og effekter kan klinge ut etter den siste MIDI-hendelsen. Verktøyet gjengir MIDI-filer som er kortere enn 10 minutter, og behandler både MIDI- og SoundFont-filen lokalt. Den innebygde lydbanken hentes første gang du bruker den.
+Lytt til forhåndsvisningen for å kontrollere miksen før du laster ned. Ved gjengivelse legges det til litt ekstra tid, slik at noter og effekter kan klinge ut etter den siste MIDI-hendelsen. Verktøyet gjengir MIDI-filer med musikalsk tidsbase (format 0 eller 1) som er kortere enn 10 minutter. Både MIDI- og SoundFont-filen behandles lokalt. Den innebygde lydbanken hentes første gang du bruker den.

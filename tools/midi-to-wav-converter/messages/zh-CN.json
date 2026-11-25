@@ -14,6 +14,7 @@
   "preview": "WAV 音频预览",
   "download": "下载 WAV",
   "invalidMidi": "无法打开此 MIDI 文件，或文件中没有可播放的音符。请尝试其他 .mid 或 .midi 文件。",
+  "unsupportedTiming": "请将此文件导出为基于节拍的 MIDI 文件（格式 0 或 1），然后重试。",
   "invalidSoundFont": "无法打开此 SoundFont。请尝试其他 .sf2 或 .sf3 文件，或使用内置 SoundFont。",
   "soundFontUnavailable": "无法加载内置 SoundFont。请重试或选择一个 SoundFont 文件。",
   "tooLong": "请选择时长小于 10 分钟的 MIDI 文件，以便在浏览器中渲染。",

@@ -14,6 +14,7 @@
   "preview": "Nghe thử âm thanh WAV",
   "download": "Tải WAV",
   "invalidMidi": "Không thể mở tệp MIDI này hoặc tệp không có nốt nào có thể phát. Hãy thử tệp .mid hoặc .midi khác.",
+  "unsupportedTiming": "Hãy xuất tệp này thành tệp MIDI dựa trên phách (định dạng 0 hoặc 1), rồi thử lại.",
   "invalidSoundFont": "Không thể mở SoundFont này. Hãy thử tệp .sf2 hoặc .sf3 khác hoặc dùng SoundFont tích hợp.",
   "soundFontUnavailable": "Không thể tải SoundFont tích hợp. Hãy thử lại hoặc chọn tệp SoundFont.",
   "tooLong": "Hãy chọn tệp MIDI ngắn hơn 10 phút để kết xuất trong trình duyệt.",

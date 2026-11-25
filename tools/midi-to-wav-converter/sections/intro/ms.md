@@ -8,4 +8,4 @@ Fail MIDI menyimpan arahan seperti not, tempo dan pertukaran alat muzik. SoundFo
 
 ## Dengar pratonton dan muat turun WAV
 
-Gunakan pratonton audio untuk menyemak imbangan bunyi sebelum memuat turun. Sedikit masa ditambah di hujung audio supaya bunyi not dan kesan dapat surut selepas peristiwa MIDI terakhir. Alat ini menjana audio daripada fail MIDI yang berdurasi kurang daripada 10 minit dan memproses MIDI serta SoundFont secara setempat. Bank bunyi terbina dalam dimuat turun pada kali pertama anda menggunakannya.
+Gunakan pratonton audio untuk menyemak imbangan bunyi sebelum memuat turun. Sedikit masa ditambah di hujung audio supaya bunyi not dan kesan dapat surut selepas peristiwa MIDI terakhir. Alat ini menjana audio daripada fail MIDI dengan pemasaan berasaskan rentak (format 0 atau 1) yang berdurasi kurang daripada 10 minit dan memproses MIDI serta SoundFont secara setempat. Bank bunyi terbina dalam dimuat turun pada kali pertama anda menggunakannya.

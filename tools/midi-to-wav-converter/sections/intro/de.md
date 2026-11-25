@@ -8,4 +8,4 @@ Eine MIDI-Datei speichert Anweisungen wie Noten, Tempo und Instrumentenwechsel. 
 
 ## WAV anhören und herunterladen
 
-In der Hörprobe kannst du die Mischung vor dem Download prüfen. Beim Rendern wird eine kurze Nachlaufzeit ergänzt, damit Noten und Effekte nach dem letzten Ereignis ausklingen können. Das Tool rendert MIDI-Dateien mit weniger als 10 Minuten Spielzeit und verarbeitet MIDI und SoundFont lokal. Die integrierte Klangbank wird bei der ersten Verwendung geladen.
+In der Hörprobe kannst du die Mischung vor dem Download prüfen. Beim Rendern wird eine kurze Nachlaufzeit ergänzt, damit Noten und Effekte nach dem letzten Ereignis ausklingen können. Das Tool rendert MIDI-Dateien mit musikalischer Zeitbasis (Format 0 oder 1) und weniger als 10 Minuten Spielzeit. MIDI und SoundFont werden lokal verarbeitet. Die integrierte Klangbank wird bei der ersten Verwendung geladen.

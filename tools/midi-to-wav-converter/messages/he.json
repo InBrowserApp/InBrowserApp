@@ -14,6 +14,7 @@
   "preview": "האזנה לקובץ ה־WAV",
   "download": "הורדת WAV",
   "invalidMidi": "לא ניתן לפתוח את קובץ ה־MIDI, או שאין בו תווים שניתן לנגן. נסו קובץ ‎.mid או ‎.midi אחר.",
+  "unsupportedTiming": "ייצאו את הקובץ כקובץ MIDI עם תזמון לפי פעימות (פורמט 0 או 1), ואז נסו שוב.",
   "invalidSoundFont": "לא ניתן לפתוח את קובץ ה־SoundFont. נסו קובץ ‎.sf2 או ‎.sf3 אחר, או השתמשו ב־SoundFont המובנה.",
   "soundFontUnavailable": "לא ניתן לטעון את ה־SoundFont המובנה. נסו שוב או בחרו קובץ SoundFont.",
   "tooLong": "בחרו קובץ MIDI שאורכו פחות מ־10 דקות כדי להמיר אותו בדפדפן.",

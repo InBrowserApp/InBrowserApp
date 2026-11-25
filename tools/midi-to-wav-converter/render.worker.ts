@@ -36,7 +36,7 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
 
   const result = await renderMidiToWav(input, soundFont, (percent) =>
     self.postMessage({ type: "progress", percent } satisfies Response)
-  )
+  ).catch(() => ({ type: "error", key: "renderFailed" }) as const)
   if (result.type === "complete")
     self.postMessage(result, { transfer: [result.wav] })
   else self.postMessage(result)

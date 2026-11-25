@@ -14,6 +14,7 @@
   "preview": "WAV-Hörprobe",
   "download": "WAV herunterladen",
   "invalidMidi": "Diese MIDI-Datei ließ sich nicht öffnen oder enthält keine abspielbaren Noten. Versuche es mit einer anderen .mid- oder .midi-Datei.",
+  "unsupportedTiming": "Exportiere die Datei als MIDI-Datei mit musikalischer Zeitbasis (Format 0 oder 1) und versuche es erneut.",
   "invalidSoundFont": "Dieser SoundFont ließ sich nicht öffnen. Wähle eine andere .sf2- oder .sf3-Datei oder verwende den integrierten SoundFont.",
   "soundFontUnavailable": "Der integrierte SoundFont konnte nicht geladen werden. Versuche es erneut oder wähle eine SoundFont-Datei.",
   "tooLong": "Wähle eine MIDI-Datei mit weniger als 10 Minuten Spielzeit, um sie im Browser zu rendern.",

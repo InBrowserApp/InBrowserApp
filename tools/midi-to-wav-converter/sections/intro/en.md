@@ -8,4 +8,4 @@ A MIDI file stores instructions such as notes, tempo, and instrument changes. A 
 
 ## Preview and download your WAV
 
-The audio preview lets you check the mix before downloading. Rendering adds a short tail so notes and effects can decay after the last event. This tool renders MIDI files under 10 minutes and processes your MIDI and SoundFont locally. The built-in sound bank is fetched when you first use it.
+The audio preview lets you check the mix before downloading. Rendering adds a short tail so notes and effects can decay after the last event. This tool renders beat-based MIDI files (format 0 or 1) under 10 minutes and processes your MIDI and SoundFont locally. The built-in sound bank is fetched when you first use it.

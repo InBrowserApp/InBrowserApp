@@ -8,4 +8,4 @@ Tệp MIDI lưu các chỉ dẫn như nốt nhạc, nhịp độ và thay đổi
 
 ## Nghe thử và tải WAV
 
-Bản nghe thử giúp bạn kiểm tra bản phối trước khi tải xuống. Quá trình kết xuất thêm một đoạn đuôi ngắn để các nốt và hiệu ứng có thể ngân rồi tắt dần sau sự kiện cuối cùng. Công cụ này kết xuất tệp MIDI ngắn hơn 10 phút và xử lý MIDI cùng SoundFont ngay trên thiết bị. Bộ âm thanh tích hợp được tải về khi bạn sử dụng lần đầu.
+Bản nghe thử giúp bạn kiểm tra bản phối trước khi tải xuống. Quá trình kết xuất thêm một đoạn đuôi ngắn để các nốt và hiệu ứng có thể ngân rồi tắt dần sau sự kiện cuối cùng. Công cụ này kết xuất tệp MIDI dựa trên phách (định dạng 0 hoặc 1) ngắn hơn 10 phút và xử lý MIDI cùng SoundFont ngay trên thiết bị. Bộ âm thanh tích hợp được tải về khi bạn sử dụng lần đầu.

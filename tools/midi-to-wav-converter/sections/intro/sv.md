@@ -8,4 +8,4 @@ En MIDI-fil innehåller instruktioner som toner, tempo och instrumentbyten. En S
 
 ## Provlyssna och ladda ner WAV-filen
 
-Provlyssna för att kontrollera mixen före nedladdningen. Renderingen fortsätter en kort stund så att toner och effekter hinner klinga ut efter den sista MIDI-händelsen. Verktyget renderar MIDI-filer som är kortare än 10 minuter och bearbetar både MIDI- och SoundFont-filen lokalt. Den inbyggda ljudbanken hämtas första gången du använder den.
+Provlyssna för att kontrollera mixen före nedladdningen. Renderingen fortsätter en kort stund så att toner och effekter hinner klinga ut efter den sista MIDI-händelsen. Verktyget renderar MIDI-filer med musikalisk tidsbas (format 0 eller 1) som är kortare än 10 minuter. Både MIDI- och SoundFont-filen bearbetas lokalt. Den inbyggda ljudbanken hämtas första gången du använder den.

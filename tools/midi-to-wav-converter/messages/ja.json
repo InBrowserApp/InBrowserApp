@@ -14,6 +14,7 @@
   "preview": "WAV 音声のプレビュー",
   "download": "WAV をダウンロード",
   "invalidMidi": "この MIDI ファイルを開けないか、再生可能な音符がありません。別の .mid または .midi ファイルをお試しください。",
+  "unsupportedTiming": "このファイルを拍ベースの MIDI ファイル（フォーマット 0 または 1）として書き出してから、もう一度お試しください。",
   "invalidSoundFont": "この SoundFont を開けませんでした。別の .sf2 または .sf3 ファイルを試すか、内蔵 SoundFont を使ってください。",
   "soundFontUnavailable": "内蔵 SoundFont を読み込めませんでした。再試行するか、SoundFont ファイルを選択してください。",
   "tooLong": "ブラウザーでレンダリングするには、10 分未満の MIDI ファイルを選択してください。",

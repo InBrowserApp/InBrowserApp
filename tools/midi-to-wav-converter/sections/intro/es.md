@@ -8,4 +8,4 @@ Un archivo MIDI guarda instrucciones como las notas, el tempo y los cambios de i
 
 ## Escucha y descarga el WAV
 
-Usa el reproductor para comprobar la mezcla antes de descargarla. La conversión añade unos instantes de audio al final para que las notas y los efectos se desvanezcan después del último evento. La herramienta admite archivos MIDI de menos de 10 minutos y procesa el MIDI y el SoundFont de forma local. El banco integrado se descarga al usarlo por primera vez.
+Usa el reproductor para comprobar la mezcla antes de descargarla. La conversión añade unos instantes de audio al final para que las notas y los efectos se desvanezcan después del último evento. La herramienta admite archivos MIDI de menos de 10 minutos en formato 0 o 1 con temporización en pulsos por negra (PPQ) y procesa el MIDI y el SoundFont de forma local. El banco integrado se descarga al usarlo por primera vez.

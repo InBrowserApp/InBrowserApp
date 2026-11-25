@@ -62,6 +62,41 @@ describe("renderMidiToWav", () => {
     )
   })
 
+  it("preserves leading silence before the first note", async () => {
+    const leadingRest = midi([
+      0x87,
+      0x40,
+      ...note.slice(1),
+      0x83,
+      0x60,
+      0x80,
+      60,
+      0,
+      ...end,
+    ])
+    const result = await renderMidiToWav(leadingRest, soundFont, vi.fn())
+    if (result.type !== "complete") throw Error(result.key)
+    const samples = new Int16Array(result.wav, 44)
+    const onset =
+      samples.findIndex((sample) => Math.abs(sample) > 100) / 2 / 44100
+    expect(onset).toBeGreaterThanOrEqual(1)
+    expect(onset).toBeLessThan(1.05)
+  })
+
+  it("reports unsupported timecode and independent-format timing", async () => {
+    const smpte = phrase.slice(0)
+    new DataView(smpte).setUint16(12, 0xe728)
+    const format2 = phrase.slice(0)
+    new DataView(format2).setUint16(8, 2)
+    const error = { type: "error", key: "unsupportedTiming" }
+    await expect(renderMidiToWav(smpte, soundFont, vi.fn())).resolves.toEqual(
+      error
+    )
+    await expect(renderMidiToWav(format2, soundFont, vi.fn())).resolves.toEqual(
+      error
+    )
+  })
+
   it("reports malformed, note-less, too long MIDI, and a malformed SoundFont", async () => {
     const progress = vi.fn()
     const blank = new ArrayBuffer(0)

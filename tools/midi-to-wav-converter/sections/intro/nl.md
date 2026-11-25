@@ -8,4 +8,4 @@ Een MIDI-bestand bevat instructies zoals noten, tempo en instrumentwisselingen. 
 
 ## Je WAV-bestand beluisteren en downloaden
 
-Beluister het voorbeeld om de mix te controleren voordat je het bestand downloadt. Bij het renderen komt er een kort stukje bij, zodat noten en effecten na het laatste MIDI-event kunnen uitklinken. De tool rendert MIDI-bestanden van minder dan 10 minuten en verwerkt je MIDI-bestand en SoundFont lokaal. De ingebouwde klankbank wordt bij het eerste gebruik opgehaald.
+Beluister het voorbeeld om de mix te controleren voordat je het bestand downloadt. Bij het renderen komt er een kort stukje bij, zodat noten en effecten na het laatste MIDI-event kunnen uitklinken. De tool rendert MIDI-bestanden met een muzikale tijdbasis (formaat 0 of 1) van minder dan 10 minuten. Je MIDI-bestand en SoundFont worden lokaal verwerkt. De ingebouwde klankbank wordt bij het eerste gebruik opgehaald.

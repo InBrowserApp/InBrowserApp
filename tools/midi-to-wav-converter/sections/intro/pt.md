@@ -8,4 +8,4 @@ Um arquivo MIDI armazena instruções como as notas, o andamento e as mudanças 
 
 ## Como ouvir e baixar o WAV
 
-Use o reprodutor para conferir a mixagem antes de baixar. A conversão prolonga o áudio por um breve instante após o último evento para que as notas e os efeitos tenham tempo de se dissipar. A ferramenta converte arquivos MIDI com menos de 10 minutos e processa o MIDI e o SoundFont localmente. O banco de sons integrado é baixado na primeira vez que você o usa.
+Use o reprodutor para conferir a mixagem antes de baixar. A conversão prolonga o áudio por um breve instante após o último evento para que as notas e os efeitos tenham tempo de se dissipar. A ferramenta converte arquivos MIDI com menos de 10 minutos no formato 0 ou 1 com resolução em pulsos por semínima (PPQ) e processa o MIDI e o SoundFont localmente. O banco de sons integrado é baixado na primeira vez que você o usa.

@@ -14,6 +14,7 @@
   "preview": "WAV 音訊預覽",
   "download": "下載 WAV",
   "invalidMidi": "無法開啟此 MIDI 檔案，或檔案中沒有可播放的音符。請嘗試其他 .mid 或 .midi 檔案。",
+  "unsupportedTiming": "請將此檔案匯出為以節拍為基礎的 MIDI 檔案（格式 0 或 1），然後重試。",
   "invalidSoundFont": "無法開啟此 SoundFont。請嘗試其他 .sf2 或 .sf3 檔案，或使用內建 SoundFont。",
   "soundFontUnavailable": "無法載入內建 SoundFont。請重試或選擇 SoundFont 檔案。",
   "tooLong": "請選擇長度小於 10 分鐘的 MIDI 檔案，以便在瀏覽器中渲染。",
