@@ -15,3 +15,5 @@ Se o modelo fizer referência a um buffer ou a uma imagem externa, selecione-o j
 Use o [Visualizador de OBJ](../obj-viewer/) para malhas Wavefront com materiais MTL ou o [Visualizador de STL](../stl-viewer/) para inspecionar uma malha triangular antes da impressão 3D.
 
 - [Visualizador de 3MF](../3mf-viewer/)
+
+Use o [Conversor de glTF para GLB](../gltf-to-glb-converter/) para incorporar em um só arquivo GLB os buffers e as texturas referenciados por um modelo glTF.

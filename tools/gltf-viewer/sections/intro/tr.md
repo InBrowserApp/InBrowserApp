@@ -15,3 +15,5 @@ Model dosyası harici bir arabellek dosyasına veya görsele başvuruyorsa model
 MTL malzemeleri içeren Wavefront ağlarını [OBJ Görüntüleyici](../obj-viewer/) aracında açın. 3B baskıdan önce üçgen ağı incelemek için [STL Görüntüleyici](../stl-viewer/) aracını kullanın.
 
 - [3MF Görüntüleyici](../3mf-viewer/)
+
+glTF modelinin başvurduğu arabellekleri ve dokuları tek bir GLB dosyasına gömmek için [glTF’den GLB’ye Dönüştürücü](../gltf-to-glb-converter/) aracını kullanın.

@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter glTF na GLB",
+  "description": "Konwertuj glTF 2.0 na pojedynczy plik GLB w przeglądarce. Osadzaj bufory .bin i tekstury razem z siatkami, materiałami i animacjami modelu."
+}

@@ -784,6 +784,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "glTF naar GLB-converter",
+    slug: "gltf-to-glb-converter",
+  },
+  {
+    category: "3d-cad",
     name: "GLB- en glTF-viewer",
     slug: "gltf-viewer",
   },

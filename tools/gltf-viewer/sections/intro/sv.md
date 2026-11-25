@@ -15,3 +15,5 @@ När modellen hänvisar till en extern buffert eller bild väljer du modellen oc
 Använd [OBJ-visaren](../obj-viewer/) för Wavefront-nät med MTL-material eller [STL-visaren](../stl-viewer/) för att granska ett triangelnät före 3D-utskrift.
 
 - [3MF-visare](../3mf-viewer/)
+
+Använd [glTF till GLB-konverteraren](../gltf-to-glb-converter/) för att bädda in de buffertar och texturer som en glTF-modell hänvisar till i en enda GLB-fil.

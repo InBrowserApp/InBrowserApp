@@ -1,0 +1,4 @@
+{
+  "name": "glTF’den GLB’ye Dönüştürücü",
+  "description": "glTF 2.0 dosyasını tarayıcınızda tek bir GLB dosyasına dönüştürün. .bin arabelleklerini ve dokuları modelin ağları, malzemeleri ve animasyonlarıyla birlikte dosyaya gömün."
+}

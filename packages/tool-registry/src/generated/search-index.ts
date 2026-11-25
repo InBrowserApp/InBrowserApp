@@ -20035,6 +20035,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "gltf-to-glb-converter",
+    category: "3d-cad",
+    icon: "arrow-left-right",
+    tags: ["gltf", "glb", "3d model", "binary gltf", "textures", "convert"],
+    locales: {
+      ar: {
+        name: "محوّل glTF إلى GLB",
+        description:
+          "حوّل glTF 2.0 إلى ملف GLB واحد في متصفحك. ضمّن ملفات البيانات الثنائية .bin وصور الخامات مع شبكات النموذج ومواده وحركاته.",
+      },
+      de: {
+        name: "glTF-zu-GLB-Konverter",
+        description:
+          "Wandle glTF 2.0 im Browser in eine einzige GLB-Datei um. Bette .bin-Puffer und Texturen zusammen mit den Netzen, Materialien und Animationen des Modells ein.",
+      },
+      en: {
+        name: "glTF to GLB Converter",
+        description:
+          "Convert glTF 2.0 to a single GLB in your browser. Embed .bin buffers and textures with the model’s meshes, materials, and animations.",
+      },
+      es: {
+        name: "Conversor de glTF a GLB",
+        description:
+          "Convierte glTF 2.0 a un único archivo GLB en tu navegador. Integra los búferes .bin y las texturas junto con las mallas, los materiales y las animaciones del modelo.",
+      },
+      fr: {
+        name: "Convertisseur glTF en GLB",
+        description:
+          "Convertissez un glTF 2.0 en un seul fichier GLB dans votre navigateur. Intégrez les tampons de données .bin et les textures avec les maillages, les matériaux et les animations du modèle.",
+      },
+      he: {
+        name: "ממיר glTF ל־GLB",
+        description:
+          "המירו glTF 2.0 לקובץ GLB אחד בדפדפן. הטמיעו את קובצי הנתונים בסיומת .bin ואת המרקמים לצד הרשתות, החומרים והאנימציות של המודל.",
+      },
+      hi: {
+        name: "glTF से GLB कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में glTF 2.0 को एक GLB फ़ाइल में बदलें। मॉडल के मेश, मटीरियल और ऐनिमेशन के साथ .bin बफ़र और टेक्सचर एम्बेड करें।",
+      },
+      id: {
+        name: "Konverter glTF ke GLB",
+        description:
+          "Konversi glTF 2.0 menjadi satu file GLB di browser. Sematkan buffer .bin dan tekstur beserta mesh, material, dan animasi model.",
+      },
+      it: {
+        name: "Convertitore da glTF a GLB",
+        description:
+          "Converti glTF 2.0 in un unico GLB nel browser. Incorpora i buffer .bin e le texture insieme alle mesh, ai materiali e alle animazioni del modello.",
+      },
+      ja: {
+        name: "glTF → GLB 変換",
+        description:
+          "glTF 2.0 をブラウザーで単一の GLB に変換します。.bin バッファーとテクスチャを、モデルのメッシュ、マテリアル、アニメーションとともに埋め込みます。",
+      },
+      ko: {
+        name: "glTF → GLB 변환기",
+        description:
+          "브라우저에서 glTF 2.0을 단일 GLB로 변환하세요. .bin 버퍼와 텍스처를 모델의 메시, 재질, 애니메이션과 함께 포함합니다.",
+      },
+      ms: {
+        name: "Penukar glTF kepada GLB",
+        description:
+          "Tukar glTF 2.0 kepada satu fail GLB dalam pelayar. Benamkan penimbal .bin dan tekstur bersama jejaring, bahan dan animasi model.",
+      },
+      nl: {
+        name: "glTF naar GLB-converter",
+        description:
+          "Converteer glTF 2.0 naar één GLB-bestand in je browser. Sluit .bin-buffers en texturen in, samen met de netten, materialen en animaties van het model.",
+      },
+      no: {
+        name: "glTF til GLB-konverterer",
+        description:
+          "Konverter glTF 2.0 til én GLB-fil i nettleseren. Bygg inn .bin-buffere og teksturer sammen med modellens nett, materialer og animasjoner.",
+      },
+      pl: {
+        name: "Konwerter glTF na GLB",
+        description:
+          "Konwertuj glTF 2.0 na pojedynczy plik GLB w przeglądarce. Osadzaj bufory .bin i tekstury razem z siatkami, materiałami i animacjami modelu.",
+      },
+      pt: {
+        name: "Conversor de glTF para GLB",
+        description:
+          "Converta glTF 2.0 em um único GLB no navegador. Incorpore buffers .bin e texturas com as malhas, os materiais e as animações do modelo.",
+      },
+      ru: {
+        name: "Конвертер glTF в GLB",
+        description:
+          "Преобразуйте glTF 2.0 в один файл GLB прямо в браузере. Встройте буферы .bin и текстуры вместе с сетками, материалами и анимациями модели.",
+      },
+      sv: {
+        name: "glTF till GLB-konverterare",
+        description:
+          "Konvertera glTF 2.0 till en enda GLB-fil i webbläsaren. Bädda in .bin-buffertar och texturer tillsammans med modellens nät, material och animationer.",
+      },
+      th: {
+        name: "โปรแกรมแปลง glTF เป็น GLB",
+        description:
+          "แปลง glTF 2.0 เป็นไฟล์ GLB ไฟล์เดียวในเบราว์เซอร์ ฝังไฟล์บัฟเฟอร์ .bin และเท็กซ์เจอร์พร้อมเมช วัสดุ และแอนิเมชันของโมเดล",
+      },
+      tr: {
+        name: "glTF’den GLB’ye Dönüştürücü",
+        description:
+          "glTF 2.0 dosyasını tarayıcınızda tek bir GLB dosyasına dönüştürün. .bin arabelleklerini ve dokuları modelin ağları, malzemeleri ve animasyonlarıyla birlikte dosyaya gömün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi glTF sang GLB",
+        description:
+          "Chuyển glTF 2.0 thành một tệp GLB trong trình duyệt. Nhúng các tệp bộ đệm .bin và họa tiết cùng lưới, vật liệu và hoạt ảnh của mô hình.",
+      },
+      "zh-CN": {
+        name: "glTF 转 GLB 转换器",
+        description:
+          "在浏览器中将 glTF 2.0 转换为单个 GLB 文件。将 .bin 缓冲区和纹理与模型的网格、材质及动画一起嵌入。",
+      },
+      "zh-TW": {
+        name: "glTF 轉 GLB 轉換器",
+        description:
+          "在瀏覽器中將 glTF 2.0 轉換為單一 GLB 檔案。將 .bin 緩衝區和貼圖與模型的網格、材質及動畫一起內嵌。",
+      },
+    },
+  },
+  {
     slug: "gltf-viewer",
     category: "3d-cad",
     icon: "box",

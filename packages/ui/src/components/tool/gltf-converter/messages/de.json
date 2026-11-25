@@ -1,0 +1,17 @@
+{
+  "drop": "glTF-Modell und zugehörige Dateien hier ablegen",
+  "open": "Dateien öffnen",
+  "folder": "Ordner öffnen",
+  "add": "Dateien hinzufügen",
+  "example": "Beispiel ausprobieren",
+  "privacy": "Deine Dateien bleiben auf deinem Gerät.",
+  "chooseModel": "glTF-Modell",
+  "noModel": "Wähle eine .gltf-Datei zusammen mit ihren Puffern und Texturen aus.",
+  "packing": "GLB-Datei wird erstellt …",
+  "missing": "Füge die unten aufgeführten Dateien hinzu, um die GLB-Datei fertigzustellen.",
+  "failed": "Das glTF-Modell ließ sich nicht verpacken. Prüfe, ob die glTF-2.0-Datei gültig ist und sich alle zugehörigen Dateien lesen lassen.",
+  "unsupported": "Das glTF-Modell enthält ein Bild oder eine Ressource einer Erweiterung, die sich mit diesem Konverter nicht einbetten lässt.",
+  "result": "GLB-Datei bereit",
+  "previous": "Vorherige Konvertierung",
+  "download": "GLB herunterladen"
+}

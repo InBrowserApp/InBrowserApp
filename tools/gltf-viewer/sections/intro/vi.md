@@ -15,3 +15,5 @@ Nếu tệp tham chiếu đến bộ đệm hoặc ảnh bên ngoài, hãy chọ
 Dùng [Trình xem OBJ](../obj-viewer/) cho lưới Wavefront có vật liệu MTL hoặc [Trình xem STL](../stl-viewer/) để kiểm tra lưới tam giác trước khi in 3D.
 
 - [Trình xem 3MF](../3mf-viewer/)
+
+Dùng [Trình chuyển đổi glTF sang GLB](../gltf-to-glb-converter/) để nhúng các tệp bộ đệm và họa tiết mà mô hình glTF tham chiếu vào một tệp GLB.

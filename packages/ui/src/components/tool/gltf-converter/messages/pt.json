@@ -1,0 +1,17 @@
+{
+  "drop": "Solte aqui o modelo glTF e os arquivos associados",
+  "open": "Abrir arquivos",
+  "folder": "Abrir pasta",
+  "add": "Adicionar arquivos",
+  "example": "Experimentar um exemplo",
+  "privacy": "Seus arquivos ficam neste dispositivo.",
+  "chooseModel": "Modelo glTF",
+  "noModel": "Selecione um arquivo .gltf junto com seus buffers e texturas.",
+  "packing": "Criando GLB…",
+  "missing": "Adicione os arquivos listados abaixo para terminar de criar o GLB.",
+  "failed": "Não foi possível criar o GLB. Verifique se o arquivo glTF 2.0 é válido e se os recursos podem ser lidos.",
+  "unsupported": "Este glTF contém uma imagem ou um recurso de extensão que o conversor não consegue incorporar.",
+  "result": "GLB pronto",
+  "previous": "Conversão anterior",
+  "download": "Baixar GLB"
+}

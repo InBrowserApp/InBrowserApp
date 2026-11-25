@@ -1,0 +1,17 @@
+{
+  "drop": "Sleep een glTF-model en de bijbehorende bestanden hierheen",
+  "open": "Bestanden openen",
+  "folder": "Map openen",
+  "add": "Bestanden toevoegen",
+  "example": "Voorbeeld proberen",
+  "privacy": "Je bestanden blijven op dit apparaat.",
+  "chooseModel": "glTF-model",
+  "noModel": "Selecteer een .gltf-bestand samen met de bijbehorende buffers en texturen.",
+  "packing": "GLB-bestand wordt gemaakt…",
+  "missing": "Voeg de onderstaande bestanden toe om het GLB-bestand af te maken.",
+  "failed": "Dit glTF-model kon niet worden gebundeld. Controleer of het een geldig glTF 2.0-bestand is en alle bijbehorende bestanden leesbaar zijn.",
+  "unsupported": "Dit glTF-model bevat een afbeelding of een bestand van een extensie dat de converter niet kan insluiten.",
+  "result": "GLB-bestand klaar",
+  "previous": "Vorige conversie",
+  "download": "GLB downloaden"
+}

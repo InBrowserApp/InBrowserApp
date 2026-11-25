@@ -15,3 +15,5 @@ Jika file merujuk ke buffer atau gambar eksternal, pilih model dan file terkait 
 Gunakan [Penampil OBJ](../obj-viewer/) untuk melihat mesh Wavefront dengan material MTL atau [Penampil STL](../stl-viewer/) untuk memeriksa mesh segitiga sebelum mencetaknya dalam 3D.
 
 - [Penampil 3MF](../3mf-viewer/)
+
+Gunakan [Konverter glTF ke GLB](../gltf-to-glb-converter/) untuk menyematkan buffer dan tekstur yang dirujuk oleh model glTF dalam satu file GLB.

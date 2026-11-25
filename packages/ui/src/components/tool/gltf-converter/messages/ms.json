@@ -1,0 +1,17 @@
+{
+  "drop": "Letakkan model glTF dan fail iringannya di sini",
+  "open": "Buka fail",
+  "folder": "Buka folder",
+  "add": "Tambah fail",
+  "example": "Cuba contoh",
+  "privacy": "Fail kekal pada peranti anda.",
+  "chooseModel": "Model glTF",
+  "noModel": "Pilih fail .gltf bersama penimbal dan teksturnya.",
+  "packing": "Mencipta GLB…",
+  "missing": "Tambah fail di bawah untuk melengkapkan penciptaan GLB.",
+  "failed": "glTF ini tidak dapat dibungkus. Pastikan fail glTF 2.0 sah dan asetnya boleh dibaca.",
+  "unsupported": "glTF ini mengandungi imej atau sumber daripada sambungan format yang tidak boleh dibenamkan oleh penukar.",
+  "result": "GLB sedia dimuat turun",
+  "previous": "Hasil penukaran sebelumnya",
+  "download": "Muat turun GLB"
+}

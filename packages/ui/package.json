@@ -62,6 +62,7 @@
     "./model-viewer-messages": "./src/components/tool/model-viewer/messages.ts",
     "./mesh-converter-messages": "./src/components/tool/mesh-converter/messages.ts",
     "./mesh-inspector-messages": "./src/components/tool/mesh-inspector/messages.ts",
-    "./mesh-repair-messages": "./src/components/tool/mesh-repair/messages.ts"
+    "./mesh-repair-messages": "./src/components/tool/mesh-repair/messages.ts",
+    "./gltf-converter-messages": "./src/components/tool/gltf-converter/messages.ts"
   }
 }

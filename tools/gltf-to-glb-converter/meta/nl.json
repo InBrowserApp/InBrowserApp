@@ -1,0 +1,4 @@
+{
+  "name": "glTF naar GLB-converter",
+  "description": "Converteer glTF 2.0 naar één GLB-bestand in je browser. Sluit .bin-buffers en texturen in, samen met de netten, materialen en animaties van het model."
+}

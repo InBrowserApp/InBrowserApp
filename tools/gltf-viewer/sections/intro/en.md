@@ -15,3 +15,5 @@ When a file refers to an external buffer or image, choose the model and the matc
 Use the [OBJ Viewer](../obj-viewer/) for Wavefront meshes with MTL materials, or the [STL Viewer](../stl-viewer/) to inspect a triangular mesh before 3D printing.
 
 - [3MF Viewer](../3mf-viewer/)
+
+Use the [glTF to GLB Converter](../gltf-to-glb-converter/) to embed the buffers and textures referenced by a glTF model in one GLB file.

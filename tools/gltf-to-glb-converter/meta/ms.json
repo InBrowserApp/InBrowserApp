@@ -1,0 +1,4 @@
+{
+  "name": "Penukar glTF kepada GLB",
+  "description": "Tukar glTF 2.0 kepada satu fail GLB dalam pelayar. Benamkan penimbal .bin dan tekstur bersama jejaring, bahan dan animasi model."
+}
