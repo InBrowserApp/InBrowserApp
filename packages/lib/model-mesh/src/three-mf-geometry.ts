@@ -1,8 +1,8 @@
 import { unzipSync } from "fflate"
 import { SaxesParser } from "saxes"
 import {
+  BufferAttribute,
   BufferGeometry,
-  Float32BufferAttribute,
   Group,
   Matrix4,
   Mesh,
@@ -199,7 +199,7 @@ export function read3mfGeometry(data: ArrayBuffer) {
         const geometry = new BufferGeometry()
         geometry.setAttribute(
           "position",
-          new Float32BufferAttribute(positions, 3)
+          new BufferAttribute(new Float64Array(positions), 3)
         )
         geometry.setIndex(indices)
         object = new Mesh(geometry, material)

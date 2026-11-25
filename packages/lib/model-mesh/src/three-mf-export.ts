@@ -17,7 +17,7 @@ export function export3mf(
   const vertices: string[] = []
   const triangles = []
   for (let i = 0; i < positions.count; i += 3) {
-    const face = []
+    const face: number[] = []
     for (let vertex = i; vertex < i + 3; vertex++) {
       const point = `<vertex x="${positions.getX(vertex)}" y="${positions.getY(vertex)}" z="${positions.getZ(vertex)}"/>`
       let index = vertexIndices.get(point)

@@ -63,6 +63,22 @@ test("exports repeated, rotated, mirrored and translated Production instances in
   expect(new DataView(bytes).getFloat32(142, true)).toBe(1)
 })
 
+test("applies placement before rounding coordinates to STL precision", async () => {
+  const modelPath = "3D/3dmodel.model"
+  const model =
+    '<model><resources><object id="1"><mesh><vertices><vertex x="100000000" y="0" z="0"/><vertex x="100000001" y="0" z="0"/><vertex x="100000000" y="1" z="0"/></vertices><triangles><triangle v1="0" v2="1" v3="2"/></triangles></mesh></object></resources><build><item objectid="1" transform="1 0 0 0 1 0 0 0 1 -100000000 0 0"/></build></model>'
+  const input = zipSync({
+    [rootRelationships]: strToU8(
+      `<Relationships><Relationship Target="/${modelPath}" Type="${modelRelationship}"/></Relationships>`
+    ),
+    [modelPath]: strToU8(model),
+  }).slice().buffer
+  const output = await convertMesh(new File([input], "offset.3mf"), "3mf")
+  const bounds = new Box3().setFromObject(parseStl(await output.arrayBuffer()))
+  expect(bounds.min.toArray()).toEqual([0, 0, 0])
+  expect(bounds.max.toArray()).toEqual([1, 1, 0])
+})
+
 test("records mixed outward and inward disconnected shells as a surface", async () => {
   const vertices = [
     [0, 0, 0],
