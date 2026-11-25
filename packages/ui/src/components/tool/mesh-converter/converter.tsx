@@ -15,32 +15,44 @@ import { DocumentDownload } from "../document-download"
 import { useMeshWorker } from "../../../lib/use-mesh-worker"
 import { createMeshConverterWorker } from "../../../lib/mesh-converter-worker"
 import { exampleFile } from "../model-viewer/load-model"
-import type { MeshConversionInput } from "@workspace/model-mesh/convert"
+import type {
+  MeshConversionInput,
+  ThreeMfUnit,
+} from "@workspace/model-mesh/convert"
 import type { MeshConverterMessages } from "./messages"
 
 export default function MeshConverter({
   format,
   messages: m,
+  units,
 }: {
   format: MeshConversionInput
   messages: MeshConverterMessages & { unitHint?: string }
+  units?: { label: string; options: { value: ThreeMfUnit; label: string }[] }
 }) {
   const input = useRef<HTMLInputElement>(null)
+  const selection = useRef<{ file?: File }>(null)
+  const [unit, setUnit] = useState<ThreeMfUnit>("millimeter")
   const [dragging, setDragging] = useState(false)
-  const {
-    result,
-    status,
-    run: convert,
-  } = useMeshWorker<Blob>(
+  const { result, status, run } = useMeshWorker<Blob, ThreeMfUnit>(
     async () =>
       format === "step"
         ? (await import("@workspace/model-mesh/step-example")).exampleStepFile()
         : exampleFile(format),
     createMeshConverterWorker,
-    (file) => ({ file, format })
+    (file, unit) => ({
+      file,
+      format,
+      options: units && { target: "3mf", unit },
+    })
   )
-  const target = format === "stl" ? "obj" : "stl"
+  const target = units ? "3mf" : format === "stl" ? "obj" : "stl"
   const outputName = `${result?.name.replace(/\.[^.]*$/, "") || "model"}.${target}`
+
+  function convert(file?: File) {
+    selection.current = { file }
+    void run(file, unit)
+  }
 
   const choose = (
     <Button
@@ -115,6 +127,26 @@ export default function MeshConverter({
               {m.privacy}
             </EmptyDescription>
           </EmptyHeader>
+        )}
+        {units && (
+          <label className="flex max-w-full flex-wrap items-center gap-2 text-sm">
+            <span>{units.label}</span>
+            <select
+              value={unit}
+              className="h-9 max-w-full rounded-md border border-input bg-background px-2 text-sm"
+              onChange={(event) => {
+                const next = event.target.value as ThreeMfUnit
+                setUnit(next)
+                if (selection.current) void run(selection.current.file, next)
+              }}
+            >
+              {units.options.map(({ value, label }) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
         )}
         <div className="flex flex-wrap justify-center gap-2">
           {choose}

@@ -1,0 +1,4 @@
+{
+  "name": "3MF-zu-STL-Konverter",
+  "description": "Wandle ein 3MF-Modell im Browser in binäres STL um. Die Koordinaten bleiben in Millimetern korrekt skaliert, und die Anordnung der Teile bleibt erhalten. Lade das Netz als STL-Datei herunter."
+}

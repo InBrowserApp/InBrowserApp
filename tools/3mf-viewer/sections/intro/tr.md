@@ -13,3 +13,5 @@ Modeli döndürmek için sürükleyin. Yakınlaştırmak veya uzaklaştırmak i�
 ## Diğer 3B modelleri görüntüleme
 
 Baskı için dışa aktarılmış bir üçgen ağı açmak için [STL Görüntüleyici](../stl-viewer/) aracını kullanın. Doku veya animasyon içeren bir GLB ya da glTF modeli için [GLB / glTF Görüntüleyici](../gltf-viewer/) aracını kullanın.
+
+Ağ geometrisini parça yerleşimiyle birlikte ikili STL olarak indirmek için [3MF’den STL’ye Dönüştürücü](../3mf-to-stl-converter/) aracını kullanın.

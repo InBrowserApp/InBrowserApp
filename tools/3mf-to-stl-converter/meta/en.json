@@ -1,0 +1,4 @@
+{
+  "name": "3MF to STL Converter",
+  "description": "Convert a 3MF model to binary STL in your browser. Keep part sizes and build placement in millimeter coordinates, and download the mesh for STL workflows."
+}

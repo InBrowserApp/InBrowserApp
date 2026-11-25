@@ -2,6 +2,9 @@ import { BufferGeometry, Float32BufferAttribute, Group, Mesh } from "three"
 import { STLExporter } from "three/addons/exporters/STLExporter.js"
 import { readMeshFile } from "./mesh-file"
 import type { Object3D } from "three"
+import type { ThreeMfUnit } from "./three-mf-package"
+
+export type { ThreeMfUnit } from "./three-mf-package"
 import type { MeshFormat } from "./mesh-file"
 
 function writeObj(mesh: Mesh) {
@@ -27,9 +30,11 @@ function writeObj(mesh: Mesh) {
   )
 }
 
-export type MeshConversionInput = MeshFormat | "step"
+export type MeshConversionInput = MeshFormat | "step" | "3mf"
+export type MeshConversionOptions = { target?: "3mf"; unit?: ThreeMfUnit }
 
 function binaryStl(model: Object3D) {
+  model.updateMatrixWorld(true)
   const output = new STLExporter().parse(model, { binary: true })
   return new Blob([output], { type: "model/stl" })
 }
@@ -54,8 +59,30 @@ async function convertStep(file: File) {
   return binaryStl(assembly)
 }
 
-export async function convertMesh(file: File, format: MeshConversionInput) {
+export async function convertMesh(
+  file: File,
+  format: MeshConversionInput,
+  options?: MeshConversionOptions
+) {
   if (format === "step") return convertStep(file)
+  if (format === "3mf") {
+    const { read3mfGeometry } = await import("./three-mf-geometry")
+    return binaryStl(read3mfGeometry(await file.arrayBuffer()))
+  }
   const model = await readMeshFile(file, format)
-  return format === "stl" ? writeObj(model as Mesh) : binaryStl(model)
+  if (format === "obj") return binaryStl(model)
+  const mesh = model as Mesh
+  if (options?.target === "3mf") {
+    const [{ export3mf }, { analyzeMesh }] = await Promise.all([
+      import("./three-mf-export"),
+      import("./inspect"),
+    ])
+    const { volume } = analyzeMesh(mesh, { orientedVolume: true })
+    return export3mf(
+      mesh.geometry.getAttribute("position"),
+      options.unit ?? "millimeter",
+      volume !== null && volume > 0 ? "model" : "surface"
+    )
+  }
+  return writeObj(mesh)
 }

@@ -1,0 +1,4 @@
+{
+  "failed": "Não foi possível converter o arquivo. Abra um modelo 3MF que contenha uma malha 3D.",
+  "unitHint": "Importe o STL em milímetros. As cores, os materiais e as configurações do fatiador ficam no 3MF."
+}

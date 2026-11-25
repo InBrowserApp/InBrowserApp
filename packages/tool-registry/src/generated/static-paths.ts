@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "3mf-to-stl-converter",
+    language: "ar",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "de",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "en",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "es",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "fr",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "he",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "hi",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "id",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "it",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "ja",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "ko",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "ms",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "nl",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "no",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "pl",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "pt",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "ru",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "sv",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "th",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "tr",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "vi",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "3mf-to-stl-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "3mf-viewer",
     language: "ar",
   },
@@ -34867,6 +34959,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "ar",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "de",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "en",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "es",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "fr",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "he",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "hi",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "id",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "it",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "ja",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "ko",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "ms",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "nl",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "no",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "pl",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "pt",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "ru",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "sv",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "th",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "tr",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "vi",
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stl-to-3mf-converter",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi 3MF sang STL",
+  "description": "Chuyển mô hình 3MF sang STL nhị phân trong trình duyệt. Giữ kích thước và vị trí in của các chi tiết theo tọa độ milimét rồi tải lưới xuống để dùng với phần mềm hỗ trợ STL."
+}

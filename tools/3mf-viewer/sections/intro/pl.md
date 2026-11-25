@@ -13,3 +13,5 @@ Podgląd pokazuje geometrię i obsługiwane kolory modelu. Ustawienia wydruku, p
 ## Otwieranie innych modeli 3D
 
 W [przeglądarce plików STL](../stl-viewer/) otworzysz siatkę trójkątów wyeksportowaną do druku 3D. Model GLB lub glTF z teksturami lub animacją otworzysz w [przeglądarce plików GLB i glTF](../gltf-viewer/).
+
+Użyj [konwertera 3MF na STL](../3mf-to-stl-converter/), aby pobrać siatkę z zachowanym położeniem części jako binarny plik STL.

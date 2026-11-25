@@ -1,0 +1,4 @@
+{
+  "failed": "Bu dosya dönüştürülemedi. 3B ağ geometrisi içeren bir 3MF modeli açın.",
+  "unitHint": "STL dosyasını milimetre cinsinden içe aktarın. Renkler, malzemeler ve dilimleme ayarları 3MF dosyasında kalır."
+}

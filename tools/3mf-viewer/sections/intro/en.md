@@ -13,3 +13,5 @@ The preview shows the model geometry and supported model colors. Slicer-specific
 ## View other 3D models
 
 Use the [STL Viewer](../stl-viewer/) to open a triangular mesh exported for printing. For a GLB or glTF model with textures or animation, use the [GLB / glTF Viewer](../gltf-viewer/).
+
+Use the [3MF to STL Converter](../3mf-to-stl-converter/) to download the placed mesh geometry as a binary STL.

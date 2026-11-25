@@ -19,3 +19,5 @@ STL descrive la superficie di una parte mediante triangoli. Per aprire un file W
 - [Verifica del volume e della topologia della mesh](../mesh-inspector/)
 
 Usa il [Convertitore da STEP a STL](../step-to-stl-converter/) per esportare la mesh da un modello CAD originale in formato STEP o STP.
+
+Usa il [Convertitore da STL a 3MF](../stl-to-3mf-converter/) per registrare l’unità di misura del modello in un file 3MF.

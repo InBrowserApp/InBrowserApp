@@ -1,0 +1,4 @@
+{
+  "name": "STL til 3MF-konverterer",
+  "description": "Konverter et STL-nett til 3MF i nettleseren. Velg måleenheten for STL-koordinatene og last ned en 3MF-modell med den fysiske størrelsen angitt."
+}

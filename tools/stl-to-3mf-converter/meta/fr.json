@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur STL en 3MF",
+  "description": "Convertissez un maillage STL en 3MF dans votre navigateur. Sélectionnez l’unité des coordonnées du STL et téléchargez un modèle 3MF qui conserve l’échelle physique."
+}

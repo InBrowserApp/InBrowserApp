@@ -13,3 +13,5 @@
 ## 檢視其他 3D 模型
 
 使用 [STL 檢視器](../stl-viewer/)開啟為列印匯出的三角網格。若要查看含有貼圖或動畫的 GLB 或 glTF 模型，請使用 [GLB / glTF 檢視器](../gltf-viewer/)。
+
+使用 [3MF 轉 STL 轉換器](../3mf-to-stl-converter/)將已擺放的網格幾何資料下載為二進位 STL。

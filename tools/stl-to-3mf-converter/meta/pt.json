@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de STL para 3MF",
+  "description": "Converta uma malha STL para 3MF no navegador. Escolha a unidade das coordenadas do STL e baixe um modelo 3MF com a escala física registrada."
+}

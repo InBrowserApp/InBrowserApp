@@ -1,0 +1,4 @@
+{
+  "failed": "No se pudo convertir el archivo. Abre un modelo 3MF que contenga una malla 3D.",
+  "unitHint": "Importa el STL en milímetros. Los colores, materiales y ajustes del laminador se conservan en el 3MF."
+}

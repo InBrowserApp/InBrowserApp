@@ -1,0 +1,4 @@
+{
+  "failed": "File ini tidak dapat dikonversi. Buka model 3MF yang memuat geometri mesh 3D.",
+  "unitHint": "Gunakan milimeter saat mengimpor STL. Warna, material, dan pengaturan slicer tetap tersimpan di file 3MF."
+}

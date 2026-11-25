@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/2fa-authenticator": "workspace:*",
+    "@tool/3mf-to-stl-converter": "workspace:*",
     "@tool/3mf-viewer": "workspace:*",
     "@tool/abc-notation-previewer": "workspace:*",
     "@tool/abc-notation-to-image-converter": "workspace:*",
@@ -386,6 +387,7 @@
     "@tool/step-to-stl-converter": "workspace:*",
     "@tool/step-viewer": "workspace:*",
     "@tool/stereo-channel-splitter": "workspace:*",
+    "@tool/stl-to-3mf-converter": "workspace:*",
     "@tool/stl-to-obj-converter": "workspace:*",
     "@tool/stl-viewer": "workspace:*",
     "@tool/stopwatch": "workspace:*",

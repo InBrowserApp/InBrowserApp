@@ -1,0 +1,4 @@
+{
+  "failed": "Die Datei ließ sich nicht konvertieren. Öffne ein 3MF-Modell mit einem 3D-Netz.",
+  "unitHint": "Importiere die STL-Datei in Millimetern. Farben, Materialien und Slicer-Einstellungen bleiben in der 3MF-Datei."
+}

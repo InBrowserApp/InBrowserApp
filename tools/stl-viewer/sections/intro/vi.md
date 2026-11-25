@@ -19,3 +19,5 @@ STL mô tả bề mặt của một chi tiết bằng các tam giác. Với tệ
 - [Công cụ kiểm tra thể tích và tô pô lưới](../mesh-inspector/)
 
 Dùng [Trình chuyển đổi STEP sang STL](../step-to-stl-converter/) để xuất hình học dạng lưới từ mô hình CAD STEP hoặc STP gốc.
+
+Dùng [Trình chuyển đổi STL sang 3MF](../stl-to-3mf-converter/) để lưu đơn vị đo của mô hình trong tệp 3MF.

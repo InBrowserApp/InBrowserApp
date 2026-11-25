@@ -13,3 +13,5 @@ Die Vorschau zeigt die Modellgeometrie und die unterstützten Modellfarben. Proj
 ## Andere 3D-Modelle ansehen
 
 Nutze den [STL-Betrachter](../stl-viewer/), um ein für den 3D-Druck exportiertes Dreiecksnetz zu öffnen. Für GLB- oder glTF-Modelle mit Texturen oder Animationen eignet sich der [GLB- und glTF-Betrachter](../gltf-viewer/).
+
+Nutze den [3MF-zu-STL-Konverter](../3mf-to-stl-converter/), um das Dreiecksnetz mit der Anordnung der Teile als binäre STL-Datei herunterzuladen.

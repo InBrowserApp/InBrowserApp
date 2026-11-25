@@ -13,3 +13,5 @@ De weergave toont de geometrie en ondersteunde kleuren van het model. Gebruik de
 ## Andere 3D-modellen bekijken
 
 Gebruik de [STL-viewer](../stl-viewer/) om een voor 3D-printen geëxporteerd driehoeksnet te openen. Voor een GLB- of glTF-model met texturen of animatie gebruik je de [GLB- en glTF-viewer](../gltf-viewer/).
+
+Gebruik de [3MF naar STL-converter](../3mf-to-stl-converter/) om het driehoeksnet met de plaatsing van de onderdelen te downloaden als binair STL-bestand.

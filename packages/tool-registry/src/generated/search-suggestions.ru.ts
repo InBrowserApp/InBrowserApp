@@ -9,6 +9,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "Конвертер 3MF в STL",
+    slug: "3mf-to-stl-converter",
+  },
+  {
+    category: "3d-cad",
     name: "Просмотр 3MF",
     slug: "3mf-viewer",
   },
@@ -1896,6 +1901,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Разделение стереоканалов",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "3d-cad",
+    name: "Конвертер STL в 3MF",
+    slug: "stl-to-3mf-converter",
   },
   {
     category: "3d-cad",

@@ -13,3 +13,5 @@
 ## 查看其他 3D 模型
 
 使用 [STL 查看器](../stl-viewer/)打开为打印导出的三角网格。要查看带纹理或动画的 GLB 或 glTF 模型，请使用 [GLB / glTF 查看器](../gltf-viewer/)。
+
+使用 [3MF 转 STL 转换器](../3mf-to-stl-converter/)将已放置的网格几何数据下载为二进制 STL。

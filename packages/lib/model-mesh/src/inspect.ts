@@ -48,7 +48,10 @@ function countNonManifoldVertices(
   }, 0)
 }
 
-export function analyzeMesh(object: Object3D): MeshReport {
+export function analyzeMesh(
+  object: Object3D,
+  { orientedVolume = false } = {}
+): MeshReport {
   const vertexIndex = new Map<string, number>()
   const incident: number[][] = []
   const faces: Face[] = []
@@ -167,7 +170,9 @@ export function analyzeMesh(object: Object3D): MeshReport {
     duplicateFaces
   return {
     surfaceArea,
-    volume: defects ? null : Math.abs(sixTimesVolume) / 6,
+    volume: defects
+      ? null
+      : (orientedVolume ? sixTimesVolume : Math.abs(sixTimesVolume)) / 6,
     triangles,
     vertices: vertexIndex.size,
     shells,

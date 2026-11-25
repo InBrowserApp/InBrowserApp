@@ -13,3 +13,5 @@ A prévia mostra a geometria e as cores do modelo que o visualizador suporta. Pa
 ## Abrir outros modelos 3D
 
 Use o [Visualizador de STL](../stl-viewer/) para abrir uma malha triangular exportada para impressão. Para um modelo GLB ou glTF com texturas ou animações, use o [Visualizador de GLB / glTF](../gltf-viewer/).
+
+Use o [Conversor de 3MF para STL](../3mf-to-stl-converter/) para baixar a malha em STL binário com as peças nas posições originais.

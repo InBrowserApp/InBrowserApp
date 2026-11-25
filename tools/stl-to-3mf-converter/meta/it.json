@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da STL a 3MF",
+  "description": "Converti una mesh STL in 3MF nel browser. Scegli l’unità di misura delle coordinate STL e scarica un file 3MF che conserva la scala fisica del modello."
+}

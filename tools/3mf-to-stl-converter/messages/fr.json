@@ -1,0 +1,4 @@
+{
+  "failed": "Impossible de convertir ce fichier. Ouvrez un modèle 3MF qui contient un maillage 3D.",
+  "unitHint": "Importez le STL en millimètres. Les couleurs, les matériaux et les paramètres de tranchage restent dans le 3MF."
+}
