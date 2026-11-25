@@ -1,0 +1,4 @@
+{
+  "name": "DXF-visare",
+  "description": "Öppna 2D-ritningar i DXF-format i webbläsaren. Panorera, zooma och visa eller dölj enskilda CAD-lager för att granska geometri och beteckningar i modellutrymmet."
+}

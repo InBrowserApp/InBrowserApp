@@ -1,0 +1,20 @@
+{
+  "open": "Abrir archivo DXF",
+  "drop": "Suelta aquí un dibujo DXF",
+  "example": "Probar un ejemplo",
+  "privacy": "El dibujo permanece en tu dispositivo.",
+  "opening": "Abriendo el dibujo…",
+  "invalid": "No se pudo abrir el dibujo. Vuelve a exportarlo como DXF ASCII e inténtalo de nuevo.",
+  "binary": "Este archivo DXF es binario. Expórtalo como DXF ASCII para abrirlo aquí.",
+  "empty": "No se encontró geometría que se pueda mostrar en el espacio modelo.",
+  "webgl": "No se pudo iniciar el visor. Prueba con un navegador compatible con WebGL 2.",
+  "previous": "Dibujo anterior",
+  "drawing": "Dibujo DXF",
+  "fit": "Encuadrar dibujo",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "layers": "Capas",
+  "controls": "Arrastra para desplazar · Usa la rueda para acercar o alejar",
+  "touchControls": "Arrastra para desplazar · Pellizca para acercar o alejar",
+  "keyboardControls": "Usa las flechas para desplazar la vista y + o − para acercar o alejar."
+}

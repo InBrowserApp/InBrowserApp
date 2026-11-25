@@ -1,0 +1,20 @@
+{
+  "open": "DXF 파일 열기",
+  "drop": "여기에 DXF 도면을 놓으세요",
+  "example": "예제 사용하기",
+  "privacy": "도면은 이 기기에 보관됩니다.",
+  "opening": "도면을 여는 중…",
+  "invalid": "도면을 열 수 없습니다. ASCII DXF 파일로 다시 내보낸 후 시도하세요.",
+  "binary": "바이너리 DXF 파일입니다. ASCII DXF로 내보낸 후 여기에서 여세요.",
+  "empty": "표시할 수 있는 모형 공간 형상이 없습니다.",
+  "webgl": "도면 뷰어를 시작할 수 없습니다. WebGL 2를 지원하는 브라우저를 사용해 보세요.",
+  "previous": "이전 도면",
+  "drawing": "DXF 도면",
+  "fit": "도면 전체 보기",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "layers": "도면층",
+  "controls": "드래그하여 이동 · 스크롤하여 확대/축소",
+  "touchControls": "드래그하여 이동 · 두 손가락으로 확대/축소",
+  "keyboardControls": "방향키로 이동하고 + 또는 −로 확대/축소하세요."
+}

@@ -1,0 +1,20 @@
+{
+  "open": "Buka file DXF",
+  "drop": "Letakkan gambar DXF di sini",
+  "example": "Coba contoh",
+  "privacy": "Gambar tetap di perangkat Anda.",
+  "opening": "Membuka gambar…",
+  "invalid": "Gambar ini tidak dapat dibuka. Ekspor ulang sebagai file DXF ASCII, lalu coba lagi.",
+  "binary": "Ini adalah DXF biner. Ekspor sebagai DXF ASCII agar dapat dibuka di sini.",
+  "empty": "Tidak ada geometri ruang model yang dapat ditampilkan.",
+  "webgl": "Penampil gambar tidak dapat dimuat. Coba browser yang mendukung WebGL 2.",
+  "previous": "Gambar sebelumnya",
+  "drawing": "Gambar DXF",
+  "fit": "Tampilkan seluruh gambar",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "layers": "Lapisan",
+  "controls": "Seret untuk menggeser · Gulir untuk memperbesar atau memperkecil",
+  "touchControls": "Seret untuk menggeser · Cubit atau rentangkan dua jari untuk mengubah skala",
+  "keyboardControls": "Gunakan tombol panah untuk menggeser serta + atau − untuk memperbesar atau memperkecil."
+}

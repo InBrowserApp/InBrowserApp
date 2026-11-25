@@ -1,0 +1,20 @@
+{
+  "open": "Öppna DXF-fil",
+  "drop": "Släpp en DXF-ritning här",
+  "example": "Prova ett exempel",
+  "privacy": "Din ritning stannar på den här enheten.",
+  "opening": "Öppnar ritningen…",
+  "invalid": "Det gick inte att öppna ritningen. Exportera den på nytt som ASCII-DXF och försök igen.",
+  "binary": "Det här är en binär DXF-fil. Exportera den som ASCII-DXF för att öppna den här.",
+  "empty": "Det gick inte att visa någon geometri från modellutrymmet.",
+  "webgl": "Det gick inte att starta ritningsvisaren. Prova en webbläsare där WebGL 2 är tillgängligt.",
+  "previous": "Föregående ritning",
+  "drawing": "DXF-ritning",
+  "fit": "Visa hela ritningen",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "layers": "Lager",
+  "controls": "Dra för att panorera · Rulla för att zooma",
+  "touchControls": "Dra för att panorera · Nyp för att zooma",
+  "keyboardControls": "Använd piltangenterna för att panorera och + eller − för att zooma."
+}

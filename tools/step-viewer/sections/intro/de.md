@@ -13,3 +13,5 @@ Wähle **Messen** und markiere zwei Punkte auf der sichtbaren Modelloberfläche.
 ## Die aktuelle 3D-Ansicht als PNG speichern
 
 Stelle Blickwinkel und Zoom ein und wähle **PNG speichern**. Die Datei zeigt das Modell wie im Betrachter, einschließlich einer abgeschlossenen Messung und ihres Werts. So kannst du ein Konstruktionsdetail für eine Besprechung, ein Angebot oder einen Montagehinweis festhalten.
+
+- [DXF-Betrachter](../dxf-viewer/)

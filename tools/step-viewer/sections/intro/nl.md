@@ -13,3 +13,5 @@ Kies **Meten** en selecteer twee punten op het zichtbare model om de afstand in 
 ## Sla de huidige 3D-weergave op als PNG
 
 Kies de gewenste kijkhoek en zoomstand en klik op **PNG opslaan**. De afbeelding toont het model zoals het in de viewer staat, inclusief een voltooide meting en de bijbehorende afstand. Zo kun je een ontwerpdetail delen bij een ontwerpbespreking, in een offerte of in een montage-instructie.
+
+- [DXF-viewer](../dxf-viewer/)

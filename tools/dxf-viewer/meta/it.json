@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore DXF",
+  "description": "Apri disegni DXF 2D nel browser. Sposta la vista, regola lo zoom e mostra o nascondi i singoli layer CAD per esaminare la geometria e le annotazioni nello spazio modello."
+}

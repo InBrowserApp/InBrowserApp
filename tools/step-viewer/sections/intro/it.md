@@ -13,3 +13,5 @@ Seleziona **Misura** e indica due punti sulla superficie visibile del modello pe
 ## Salvare la vista 3D corrente in PNG
 
 Regola l’angolazione e lo zoom, quindi seleziona **Salva PNG**. L’immagine scaricata riproduce la vista del modello e include la misura completata con il suo valore. Puoi usarla per condividere un dettaglio durante una revisione di progetto, in un preventivo o in una nota di montaggio.
+
+- [Visualizzatore DXF](../dxf-viewer/)

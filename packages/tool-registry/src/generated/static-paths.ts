@@ -10214,6 +10214,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dxf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "de",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "en",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "es",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "he",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "id",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "it",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "no",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "th",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "dxf-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "ebook-text-html-export",
     language: "ar",
   },

@@ -1,0 +1,20 @@
+{
+  "open": "DXF-bestand openen",
+  "drop": "Sleep een DXF-tekening hierheen",
+  "example": "Voorbeeld proberen",
+  "privacy": "Je tekening blijft op dit apparaat.",
+  "opening": "Tekening wordt geopend…",
+  "invalid": "De tekening kon niet worden geopend. Exporteer de tekening opnieuw als ASCII DXF en probeer het nog eens.",
+  "binary": "Dit is een binair DXF-bestand. Exporteer het als ASCII DXF om het hier te openen.",
+  "empty": "Er kon geen geometrie uit de modelruimte worden weergegeven.",
+  "webgl": "De DXF-viewer kon niet worden gestart. Probeer een browser waarin WebGL 2 beschikbaar is.",
+  "previous": "Vorige tekening",
+  "drawing": "DXF-tekening",
+  "fit": "Hele tekening tonen",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "layers": "Lagen",
+  "controls": "Slepen om te verschuiven · Scrollen om te zoomen",
+  "touchControls": "Slepen om te verschuiven · Knijpen om te zoomen",
+  "keyboardControls": "Gebruik de pijltoetsen om de weergave te verschuiven en + of − om te zoomen."
+}

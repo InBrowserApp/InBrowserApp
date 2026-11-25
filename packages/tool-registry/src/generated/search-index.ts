@@ -14243,6 +14243,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dxf-viewer",
+    category: "diagram",
+    icon: "ruler",
+    tags: [
+      "dxf",
+      "autocad",
+      "cad",
+      "drawing",
+      "layers",
+      "model space",
+      "2d",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض DXF",
+        description:
+          "افتح رسومات DXF ثنائية الأبعاد في متصفحك. حرّك العرض وكبّره أو صغّره، وأظهر طبقات CAD أو أخفِها لفحص الأشكال والتسميات في مساحة النموذج.",
+      },
+      de: {
+        name: "DXF-Betrachter",
+        description:
+          "Öffne 2D-DXF-Zeichnungen im Browser. Verschiebe und vergrößere die Ansicht und blende einzelne CAD-Layer ein oder aus, um Geometrie und Beschriftungen im Modellbereich zu prüfen.",
+      },
+      en: {
+        name: "DXF Viewer",
+        description:
+          "Open 2D DXF drawings in your browser. Pan, zoom and switch individual CAD layers on or off to inspect model-space geometry and labels.",
+      },
+      es: {
+        name: "Visor de DXF",
+        description:
+          "Abre dibujos DXF en 2D en tu navegador. Desplaza la vista, acerca o aleja y muestra u oculta capas de CAD para examinar la geometría y las etiquetas del espacio modelo.",
+      },
+      fr: {
+        name: "Visionneuse DXF",
+        description:
+          "Ouvrez des dessins DXF 2D dans votre navigateur. Déplacez la vue, zoomez et affichez ou masquez les calques pour examiner la géométrie et les annotations de l’espace objet.",
+      },
+      he: {
+        name: "מציג DXF",
+        description:
+          "פתחו שרטוטי DXF דו־ממדיים בדפדפן. הזיזו את התצוגה, שנו את הזום והציגו או הסתירו שכבות CAD כדי לבדוק את הגאומטריה והכיתובים במרחב המודל.",
+      },
+      hi: {
+        name: "DXF व्यूअर",
+        description:
+          "अपने ब्राउज़र में 2D DXF ड्रॉइंग खोलें। दृश्य खिसकाएँ, ज़ूम करें और अलग-अलग CAD लेयर दिखाएँ या छिपाएँ, ताकि मॉडल स्पेस की ज्यामिति और लेबल देख सकें।",
+      },
+      id: {
+        name: "Penampil DXF",
+        description:
+          "Buka gambar teknik DXF 2D di browser. Geser, perbesar, dan tampilkan atau sembunyikan tiap lapisan CAD untuk memeriksa geometri dan label di ruang model.",
+      },
+      it: {
+        name: "Visualizzatore DXF",
+        description:
+          "Apri disegni DXF 2D nel browser. Sposta la vista, regola lo zoom e mostra o nascondi i singoli layer CAD per esaminare la geometria e le annotazioni nello spazio modello.",
+      },
+      ja: {
+        name: "DXF ビューアー",
+        description:
+          "ブラウザーで 2D DXF 図面を開きます。画面の移動や拡大縮小、CAD 画層の個別表示を切り替えて、モデル空間の図形や文字を確認できます。",
+      },
+      ko: {
+        name: "DXF 뷰어",
+        description:
+          "브라우저에서 2D DXF 도면을 여세요. 이동과 확대/축소를 하고 CAD 도면층을 개별적으로 표시하거나 숨겨 모형 공간의 형상과 문자를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar DXF",
+        description:
+          "Buka lukisan DXF 2D dalam pelayar. Alih pandangan, zum dan papar atau sembunyikan setiap lapisan CAD untuk memeriksa geometri dan label dalam ruang model.",
+      },
+      nl: {
+        name: "DXF-viewer",
+        description:
+          "Open 2D-tekeningen in DXF-formaat in je browser. Verschuif de weergave, zoom in en toon of verberg afzonderlijke CAD-lagen om de geometrie en labels in de modelruimte te bekijken.",
+      },
+      no: {
+        name: "DXF-viser",
+        description:
+          "Åpne 2D-tegninger i DXF-format i nettleseren. Panorer, zoom og vis eller skjul enkeltlag for å se på geometri og etiketter i modellområdet.",
+      },
+      pl: {
+        name: "Przeglądarka plików DXF",
+        description:
+          "Otwieraj rysunki 2D w formacie DXF w przeglądarce. Przesuwaj i powiększaj widok oraz włączaj lub wyłączaj warstwy CAD, aby sprawdzić geometrię i opisy w obszarze modelu.",
+      },
+      pt: {
+        name: "Visualizador de DXF",
+        description:
+          "Abra desenhos DXF 2D no navegador. Desloque a vista, ajuste o zoom e mostre ou oculte camadas CAD para inspecionar a geometria e as anotações do espaço do modelo.",
+      },
+      ru: {
+        name: "Просмотр DXF",
+        description:
+          "Открывайте двумерные чертежи DXF в браузере. Перемещайте чертёж, меняйте масштаб и включайте или выключайте слои, чтобы рассмотреть геометрию и надписи в пространстве модели.",
+      },
+      sv: {
+        name: "DXF-visare",
+        description:
+          "Öppna 2D-ritningar i DXF-format i webbläsaren. Panorera, zooma och visa eller dölj enskilda CAD-lager för att granska geometri och beteckningar i modellutrymmet.",
+      },
+      th: {
+        name: "โปรแกรมดู DXF",
+        description:
+          "เปิดแบบเขียน DXF 2 มิติในเบราว์เซอร์ เลื่อน ซูม และเปิดหรือปิดแต่ละเลเยอร์ CAD เพื่อตรวจสอบรูปทรงและป้ายกำกับในพื้นที่โมเดล",
+      },
+      tr: {
+        name: "DXF Görüntüleyici",
+        description:
+          "2B DXF çizimlerini tarayıcınızda açın. Model alanındaki geometriyi ve etiketleri incelemek için görünümü kaydırın, yakınlaştırın ve CAD katmanlarını açıp kapatın.",
+      },
+      vi: {
+        name: "Trình xem DXF",
+        description:
+          "Mở bản vẽ DXF 2D trong trình duyệt. Dịch chuyển, thu phóng và bật tắt từng lớp CAD để kiểm tra hình học và nhãn trong không gian mô hình.",
+      },
+      "zh-CN": {
+        name: "DXF 查看器",
+        description:
+          "在浏览器中打开二维 DXF 图纸。平移、缩放并单独显示或隐藏 CAD 图层，检查模型空间中的几何图形和标注。",
+      },
+      "zh-TW": {
+        name: "DXF 檢視器",
+        description:
+          "在瀏覽器中開啟 2D DXF 圖面。平移、縮放並個別顯示或隱藏 CAD 圖層，以檢查模型空間的幾何圖形與標註。",
+      },
+    },
+  },
+  {
     slug: "ebook-text-html-export",
     category: "ebook",
     icon: "book-open",

@@ -1,8 +1,7 @@
 import { initWasm, Resvg } from "@resvg/resvg-wasm"
 import wasmUrl from "@resvg/resvg-wasm/index_bg.wasm?url"
 import { cjk, devanagari, thai } from "@workspace/libreoffice/fonts"
-import bold from "../fonts/DejaVuSans-Bold.ttf?url"
-import regular from "../fonts/DejaVuSans.ttf?url"
+import { dejavuSansBold as bold, dejavuSans as regular } from "./fonts"
 import emoji from "../fonts/NotoEmoji.ttf?url"
 import type { SvgArtwork } from "./svg"
 

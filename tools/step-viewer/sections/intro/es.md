@@ -13,3 +13,5 @@ Selecciona **Medir** y elige dos puntos sobre la superficie visible del modelo p
 ## Guardar la vista 3D actual en PNG
 
 Ajusta el ángulo y el nivel de zoom y selecciona **Guardar PNG**. La imagen descargada muestra el modelo tal como aparece en el visor, incluida la medición completada con su valor. Úsala para compartir un detalle del diseño en una revisión, un presupuesto o una nota de montaje.
+
+- [Visor de DXF](../dxf-viewer/)

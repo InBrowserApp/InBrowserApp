@@ -1,0 +1,4 @@
+{
+  "name": "DXF Viewer",
+  "description": "Open 2D DXF drawings in your browser. Pan, zoom and switch individual CAD layers on or off to inspect model-space geometry and labels."
+}

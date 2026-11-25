@@ -1,0 +1,20 @@
+{
+  "open": "Mở tệp DXF",
+  "drop": "Thả bản vẽ DXF vào đây",
+  "example": "Thử ví dụ",
+  "privacy": "Bản vẽ được giữ trên thiết bị của bạn.",
+  "opening": "Đang mở bản vẽ…",
+  "invalid": "Không mở được bản vẽ này. Hãy xuất lại dưới dạng DXF ASCII rồi thử lại.",
+  "binary": "Đây là tệp DXF nhị phân. Hãy xuất dưới dạng DXF ASCII để mở tại đây.",
+  "empty": "Không có hình học nào trong không gian mô hình có thể hiển thị.",
+  "webgl": "Không mở được trình xem bản vẽ. Hãy thử trình duyệt có hỗ trợ WebGL 2.",
+  "previous": "Bản vẽ trước",
+  "drawing": "Bản vẽ DXF",
+  "fit": "Hiện toàn bộ bản vẽ",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "layers": "Lớp",
+  "controls": "Kéo để dịch chuyển · Cuộn để thu phóng",
+  "touchControls": "Kéo để dịch chuyển · Chụm hoặc tách hai ngón tay để thu phóng",
+  "keyboardControls": "Dùng các phím mũi tên để dịch chuyển và + hoặc − để thu phóng."
+}

@@ -1,0 +1,20 @@
+{
+  "open": "Otwórz plik DXF",
+  "drop": "Upuść tutaj rysunek DXF",
+  "example": "Wypróbuj przykład",
+  "privacy": "Rysunek pozostaje na Twoim urządzeniu.",
+  "opening": "Otwieranie rysunku…",
+  "invalid": "Nie udało się otworzyć rysunku. Wyeksportuj go ponownie jako plik DXF w formacie ASCII i spróbuj jeszcze raz.",
+  "binary": "To binarny plik DXF. Wyeksportuj go w formacie ASCII, aby go tutaj otworzyć.",
+  "empty": "Nie udało się wyświetlić geometrii z obszaru modelu.",
+  "webgl": "Nie udało się uruchomić podglądu rysunku. Spróbuj w przeglądarce z obsługą WebGL 2.",
+  "previous": "Poprzedni rysunek",
+  "drawing": "Rysunek DXF",
+  "fit": "Pokaż cały rysunek",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "layers": "Warstwy",
+  "controls": "Przeciągnij, aby przesunąć · Przewiń, aby zmienić powiększenie",
+  "touchControls": "Przeciągnij, aby przesunąć · Zsuń lub rozsuń palce, aby zmienić powiększenie",
+  "keyboardControls": "Przesuwaj widok klawiszami strzałek. Zmieniaj powiększenie klawiszami + i −."
+}

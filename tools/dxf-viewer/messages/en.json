@@ -1,0 +1,20 @@
+{
+  "open": "Open DXF file",
+  "drop": "Drop a DXF drawing here",
+  "example": "Try an example",
+  "privacy": "Your drawing stays on this device.",
+  "opening": "Opening drawing…",
+  "invalid": "Could not open this drawing. Export it again as an ASCII DXF file and retry.",
+  "binary": "This is a binary DXF. Export it as ASCII DXF to open it here.",
+  "empty": "No model-space geometry could be displayed.",
+  "webgl": "The drawing viewer could not start. Try a browser with WebGL 2 available.",
+  "previous": "Previous drawing",
+  "drawing": "DXF drawing",
+  "fit": "Fit drawing",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "layers": "Layers",
+  "controls": "Drag to pan · Scroll to zoom",
+  "touchControls": "Drag to pan · Pinch to zoom",
+  "keyboardControls": "Use the arrow keys to pan and + or − to zoom."
+}

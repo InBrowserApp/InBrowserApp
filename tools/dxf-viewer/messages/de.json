@@ -1,0 +1,20 @@
+{
+  "open": "DXF-Datei öffnen",
+  "drop": "DXF-Zeichnung hier ablegen",
+  "example": "Beispiel ausprobieren",
+  "privacy": "Deine Zeichnung bleibt auf deinem Gerät.",
+  "opening": "Zeichnung wird geöffnet …",
+  "invalid": "Die Zeichnung ließ sich nicht öffnen. Exportiere sie erneut als ASCII-DXF und versuche es noch einmal.",
+  "binary": "Das ist eine binäre DXF-Datei. Exportiere sie als ASCII-DXF, um sie hier zu öffnen.",
+  "empty": "Es konnte keine Geometrie aus dem Modellbereich angezeigt werden.",
+  "webgl": "Der Zeichnungsbetrachter ließ sich nicht starten. Versuche es mit einem Browser, in dem WebGL 2 verfügbar ist.",
+  "previous": "Vorherige Zeichnung",
+  "drawing": "DXF-Zeichnung",
+  "fit": "Zeichnung einpassen",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "layers": "Layer",
+  "controls": "Ziehen zum Verschieben · Mausrad zum Zoomen",
+  "touchControls": "Ziehen zum Verschieben · Auf- oder zuziehen zum Zoomen",
+  "keyboardControls": "Verschiebe die Ansicht mit den Pfeiltasten und zoome mit + oder −."
+}

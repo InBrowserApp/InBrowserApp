@@ -13,3 +13,5 @@ Chọn **Đo**, rồi chọn hai điểm trên phần mô hình đang hiển th�
 ## Lưu góc nhìn 3D hiện tại dưới dạng PNG
 
 Điều chỉnh góc nhìn và mức thu phóng, rồi chọn **Lưu PNG**. Ảnh tải xuống ghi lại mô hình như đang hiển thị trong trình xem, kèm phép đo đã hoàn tất và giá trị đo. Dùng ảnh để chia sẻ một chi tiết thiết kế khi duyệt thiết kế, báo giá hoặc ghi chú lắp ráp.
+
+- [Trình xem DXF](../dxf-viewer/)

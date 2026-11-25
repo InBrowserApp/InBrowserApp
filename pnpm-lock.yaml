@@ -857,6 +857,9 @@ catalogs:
     dompurify:
       specifier: ^3.4.18
       version: 3.4.18
+    dxf-viewer:
+      specifier: 1.0.51
+      version: 1.0.51
     exifr:
       specifier: ^7.1.3
       version: 7.1.3
@@ -2518,6 +2521,9 @@ importers:
       '@tool/duration-calculator':
         specifier: workspace:*
         version: link:../../tools/duration-calculator
+      '@tool/dxf-viewer':
+        specifier: workspace:*
+        version: link:../../tools/dxf-viewer
       '@tool/ebook-text-html-export':
         specifier: workspace:*
         version: link:../../tools/ebook-text-html-export
@@ -6701,6 +6707,37 @@ importers:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/dxf-viewer:
+    dependencies:
+      '@workspace/libreoffice':
+        specifier: workspace:*
+        version: link:../../packages/lib/libreoffice
+      '@workspace/svg-pdf':
+        specifier: workspace:*
+        version: link:../../packages/lib/svg-pdf
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      dxf-viewer:
+        specifier: 'catalog:'
+        version: 1.0.51
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -19821,6 +19858,9 @@ packages:
   '@types/terraformer__wkt@2.0.3':
     resolution: {integrity: sha512-60CGvi30kMIKl2QERrE6LD5iPm4lutZ1M/mqBY4wrn6H/QlZQa/5CN1e6trZ6ZtSRHLbHLwG+egt/nAIDbPG0A==}
 
+  '@types/three@0.186.0':
+    resolution: {integrity: sha512-mxYSBpDC+D0pLfSP6sW4WZTcT+nrtmZcimMqnVmy36Hte3XpeYSrvgg4TRdaM1GemGog1AWzI5qL2VoIfMXbJQ==}
+
   '@types/three@0.187.0':
     resolution: {integrity: sha512-v+vKNarUtk4n2QRZ4+CN5ygMM0ARUjXjIQl0R/unMUfmStFeVqGbgqarbrpoGTXRZoulSH16ePrVJVxPJEbMUA==}
 
@@ -21187,6 +21227,12 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
+  dxf-viewer@1.0.51:
+    resolution: {integrity: sha512-KCluD5hCUd/2Kn7j7tKo/e/Eq0VHlvviZ1wFAylOfzV9UcMp1uXgl05ajkp8S0rn5ACQF+3heUsA0Nsi5hXfXA==}
+
+  earcut@3.2.4:
+    resolution: {integrity: sha512-FHc6yNpnTORB0tM5kmZ03iD2mDuNakDE2lvf4Hw1XkfxtEHIGVi01B/GqUSwx+NcC1WGjidAfpTXzeALtPtfpg==}
+
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
@@ -22415,6 +22461,10 @@ packages:
     resolution: {integrity: sha512-i24m8rpwhmPIS4zscNzK6MSEhk0DUWa/8iYQWxhffV8jkI4Phvs3F+quL5xvS0gdQR0FyTCMMH33Y78dDTzzIw==}
     engines: {node: '>=18'}
 
+  loglevel@1.9.2:
+    resolution: {integrity: sha512-HgMmCqIJSAKqo68l0rS2AanEWfkxaZ5wNiEFb5ggm08lDs9Xl2KxBlX3PTcaD2chBM1gXAYf491/M2Rv8Jwayg==}
+    engines: {node: '>= 0.6.0'}
+
   long@5.3.2:
     resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
 
@@ -22916,6 +22966,11 @@ packages:
 
   opensheetmusicdisplay@3.0.0:
     resolution: {integrity: sha512-aGQUsU2MGEXySz26DlWqAM11U7qdzp8aAZDRt5PJ9LI/793jb81ZPRNDmrybwECYfRnjE7s/I7HqsW4WjbhkBg==}
+
+  opentype.js@1.3.4:
+    resolution: {integrity: sha512-d2JE9RP/6uagpQAVtJoF0pJJA/fgai89Cc50Yp0EJHk+eLp6QQ7gBoblsnubRULNY132I0J1QKMJ+JTbMqz4sw==}
+    engines: {node: '>= 8.0.0'}
+    hasBin: true
 
   ora@5.4.1:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
@@ -23827,6 +23882,9 @@ packages:
     resolution: {integrity: sha512-ZbmZM0JCihQN91dWnxoipT2KOEyHqEyfRXUyjuRhW8b/xnqPDoq4gWEVApTVa9db2wN8mmoikgFBbjh71+cGeQ==}
     engines: {node: '>=20'}
 
+  string.prototype.codepointat@0.2.1:
+    resolution: {integrity: sha512-2cBVCj6I4IOvEnjgO/hWqXjqBGsY+zwPmHl12Srk9IXSZ56Jwwmy+66XO5Iut/oQVR7t5ihYdLB0GMa4alEUcg==}
+
   string2compact@2.0.2:
     resolution: {integrity: sha512-ZUUIyrS+sSj84gR6fFoz/boiqCptyw37/hMxIehReuf6ekpJOlwSXhTfEasqc5t3QucBXi2ghwLlHOSC8hjEaw==}
     engines: {node: '>=12.20.0'}
@@ -23986,6 +24044,9 @@ packages:
 
   third-party-web@0.30.0:
     resolution: {integrity: sha512-p+PfyL5U0ediGzvwPzMSdD9MnC8rHW6nWJJVLIQvqN7RsSqfaZ+7n4c9GILqH36EYR0eXB9CzAeCRnKFr/9uJg==}
+
+  three@0.186.1:
+    resolution: {integrity: sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==}
 
   three@0.187.0:
     resolution: {integrity: sha512-Qiu7R+Cmh8CstZsY1uJOSWnVlfo7ZtNLV7mF8Jltk3LB3AtDu9cRZlcnRKkAk8Y4z6KKw35z7Y7Urd7jWY8etA==}
@@ -28672,6 +28733,15 @@ snapshots:
     dependencies:
       '@types/geojson': 7946.0.16
 
+  '@types/three@0.186.0':
+    dependencies:
+      '@dimforge/rapier3d-compat': 0.12.0
+      '@tweenjs/tween.js': 23.1.3
+      '@types/stats.js': 0.17.4
+      '@types/webxr': 0.5.24
+      fflate: 0.8.3
+      meshoptimizer: 1.1.1
+
   '@types/three@0.187.0':
     dependencies:
       '@dimforge/rapier3d-compat': 0.12.0
@@ -30170,6 +30240,16 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
+  dxf-viewer@1.0.51:
+    dependencies:
+      '@types/three': 0.186.0
+      earcut: 3.2.4
+      loglevel: 1.9.2
+      opentype.js: 1.3.4
+      three: 0.186.1
+
+  earcut@3.2.4: {}
+
   ee-first@1.1.1: {}
 
   electron-to-chromium@1.5.486: {}
@@ -31511,6 +31591,8 @@ snapshots:
       chalk: 5.6.2
       is-unicode-supported: 1.3.0
 
+  loglevel@1.9.2: {}
+
   long@5.3.2: {}
 
   lossless-json@4.3.3: {}
@@ -31974,6 +32056,11 @@ snapshots:
       '@types/vexflow': 1.2.42
       jszip: 3.10.2
       typescript-collections: 1.3.3
+
+  opentype.js@1.3.4:
+    dependencies:
+      string.prototype.codepointat: 0.2.1
+      tiny-inflate: 1.0.3
 
   ora@5.4.1:
     dependencies:
@@ -33184,6 +33271,8 @@ snapshots:
       get-east-asian-width: 1.7.0
       strip-ansi: 7.2.0
 
+  string.prototype.codepointat@0.2.1: {}
+
   string2compact@2.0.2:
     dependencies:
       addr-to-ip-port: 2.0.0
@@ -33377,6 +33466,8 @@ snapshots:
       utrie: 1.0.2
 
   third-party-web@0.30.0: {}
+
+  three@0.186.1: {}
 
   three@0.187.0: {}
 

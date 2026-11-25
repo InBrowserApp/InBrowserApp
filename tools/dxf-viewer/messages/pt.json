@@ -1,0 +1,20 @@
+{
+  "open": "Abrir arquivo DXF",
+  "drop": "Solte aqui um desenho DXF",
+  "example": "Experimentar um exemplo",
+  "privacy": "Seu desenho fica neste dispositivo.",
+  "opening": "Abrindo o desenho…",
+  "invalid": "Não foi possível abrir o desenho. Exporte-o novamente como DXF ASCII e tente outra vez.",
+  "binary": "Este arquivo DXF é binário. Exporte-o como DXF ASCII para abri-lo aqui.",
+  "empty": "Não foi possível exibir a geometria do espaço do modelo.",
+  "webgl": "Não foi possível iniciar o visualizador. Experimente um navegador com suporte a WebGL 2.",
+  "previous": "Desenho anterior",
+  "drawing": "Desenho DXF",
+  "fit": "Enquadrar desenho",
+  "zoomIn": "Ampliar",
+  "zoomOut": "Reduzir",
+  "layers": "Camadas",
+  "controls": "Arraste para deslocar a vista · Use a roda do mouse para dar zoom",
+  "touchControls": "Arraste para deslocar a vista · Faça o gesto de pinça para dar zoom",
+  "keyboardControls": "Use as setas para deslocar a vista e + ou − para ajustar o zoom."
+}
