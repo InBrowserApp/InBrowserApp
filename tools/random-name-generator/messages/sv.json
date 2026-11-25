@@ -1,0 +1,16 @@
+{
+  "locale": "Språk eller region",
+  "quantity": "Antal",
+  "nameType": "Namntyp",
+  "full": "Fullständigt namn",
+  "given": "Förnamn",
+  "family": "Efternamn",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Namn",
+  "placeholder": "Genererade namn visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "download": "Ladda ner TXT",
+  "error": "Det gick inte att generera namn. Försök igen."
+}

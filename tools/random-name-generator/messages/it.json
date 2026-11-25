@@ -1,0 +1,16 @@
+{
+  "locale": "Lingua o area geografica",
+  "quantity": "Quantità",
+  "nameType": "Tipo di nome",
+  "full": "Nome completo",
+  "given": "Nome proprio",
+  "family": "Cognome",
+  "generate": "Genera",
+  "generating": "Generazione in corso…",
+  "results": "Nomi",
+  "placeholder": "I nomi generati appariranno qui.",
+  "copy": "Copia tutto",
+  "copied": "Copiato",
+  "download": "Scarica TXT",
+  "error": "Impossibile generare i nomi. Riprova."
+}

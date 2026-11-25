@@ -410,6 +410,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "qr-code-generator": () => import("@tool/qr-code-generator/page"),
   "qr-code-reader": () => import("@tool/qr-code-reader/page"),
   "radio-timecode": () => import("@tool/radio-timecode/page"),
+  "random-name-generator": () => import("@tool/random-name-generator/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),

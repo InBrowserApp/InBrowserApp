@@ -1,0 +1,16 @@
+{
+  "locale": "Idioma o región de los nombres",
+  "quantity": "Cantidad",
+  "nameType": "Tipo de nombre",
+  "full": "Nombre completo",
+  "given": "Nombre de pila",
+  "family": "Apellido",
+  "generate": "Generar",
+  "generating": "Generando…",
+  "results": "Nombres",
+  "placeholder": "Los nombres generados aparecerán aquí.",
+  "copy": "Copiar todo",
+  "copied": "Copiado",
+  "download": "Descargar TXT",
+  "error": "No se pudieron generar los nombres. Inténtalo de nuevo."
+}

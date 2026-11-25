@@ -1,0 +1,16 @@
+{
+  "locale": "Bahasa atau rantau asal nama",
+  "quantity": "Kuantiti",
+  "nameType": "Jenis nama",
+  "full": "Nama penuh",
+  "given": "Nama pertama",
+  "family": "Nama keluarga",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Senarai nama",
+  "placeholder": "Nama yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "download": "Muat turun TXT",
+  "error": "Nama tidak dapat dijana. Cuba lagi."
+}

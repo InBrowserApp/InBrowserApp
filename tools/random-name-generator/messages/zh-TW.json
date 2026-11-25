@@ -1,0 +1,16 @@
+{
+  "locale": "姓名語言或地區",
+  "quantity": "數量",
+  "nameType": "姓名類型",
+  "full": "完整姓名",
+  "given": "名字",
+  "family": "姓氏",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "姓名",
+  "placeholder": "產生的姓名會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "download": "下載 TXT",
+  "error": "無法產生姓名，請再試一次。"
+}

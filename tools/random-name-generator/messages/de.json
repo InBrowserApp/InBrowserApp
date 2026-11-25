@@ -1,0 +1,16 @@
+{
+  "locale": "Sprache oder Region der Namen",
+  "quantity": "Anzahl",
+  "nameType": "Namenstyp",
+  "full": "Vollständiger Name",
+  "given": "Vorname",
+  "family": "Familienname",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Namen",
+  "placeholder": "Die generierten Namen erscheinen hier.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "download": "TXT herunterladen",
+  "error": "Namen konnten nicht generiert werden. Versuche es erneut."
+}

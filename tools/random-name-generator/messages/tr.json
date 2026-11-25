@@ -1,0 +1,16 @@
+{
+  "locale": "Adların dili veya bölgesi",
+  "quantity": "Adet",
+  "nameType": "Ad türü",
+  "full": "Tam ad",
+  "given": "Ad",
+  "family": "Soyadı",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Adlar",
+  "placeholder": "Oluşturulan adlar burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "download": "TXT indir",
+  "error": "Adlar oluşturulamadı. Tekrar deneyin."
+}

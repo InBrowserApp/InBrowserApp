@@ -1684,6 +1684,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Generator nama acak",
+    slug: "random-name-generator",
+  },
+  {
+    category: "random",
     name: "Generator angka acak",
     slug: "random-number-generator",
   },

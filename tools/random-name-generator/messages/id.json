@@ -1,0 +1,16 @@
+{
+  "locale": "Bahasa atau wilayah asal nama",
+  "quantity": "Jumlah",
+  "nameType": "Jenis nama",
+  "full": "Nama lengkap",
+  "given": "Nama depan",
+  "family": "Nama keluarga",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Daftar nama",
+  "placeholder": "Nama yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "download": "Unduh TXT",
+  "error": "Nama tidak dapat dibuat. Coba lagi."
+}

@@ -1,0 +1,16 @@
+{
+  "locale": "Navnenes språk eller region",
+  "quantity": "Antall",
+  "nameType": "Navnetype",
+  "full": "Fullt navn",
+  "given": "Fornavn",
+  "family": "Etternavn",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Navn",
+  "placeholder": "De genererte navnene vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke generere navn. Prøv igjen."
+}

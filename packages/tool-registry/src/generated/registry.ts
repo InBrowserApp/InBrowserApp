@@ -42900,6 +42900,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "random-name-generator",
+    category: "random",
+    icon: "contact-round",
+    tags: ["random", "name", "first name", "last name", "surname", "generator"],
+    locales: {
+      ar: {
+        name: "مولّد أسماء عشوائية",
+        description:
+          "ولّد أسماء كاملة أو أسماء شخصية أو أسماء عائلة عشوائية حسب اللغة أو المنطقة. انسخ الأسماء دفعة واحدة أو نزّلها في ملف نصي.",
+      },
+      de: {
+        name: "Zufallsnamengenerator",
+        description:
+          "Erzeuge zufällige vollständige Namen, Vornamen oder Familiennamen nach Sprache oder Region. Kopiere mehrere Namen oder lade sie als Textdatei herunter.",
+      },
+      en: {
+        name: "Random Name Generator",
+        description:
+          "Generate random full names, first names, or surnames by language or region. Copy a batch or download the names as a text file.",
+      },
+      es: {
+        name: "Generador de nombres aleatorios",
+        description:
+          "Genera nombres completos, nombres de pila o apellidos aleatorios según el idioma o la región. Copia una lista o descarga los nombres en un archivo de texto.",
+      },
+      fr: {
+        name: "Générateur de noms aléatoires",
+        description:
+          "Générez des noms complets, des prénoms ou des noms de famille aléatoires selon la langue ou la région. Copiez une série ou téléchargez les noms dans un fichier texte.",
+      },
+      he: {
+        name: "מחולל שמות אקראיים",
+        description:
+          "צרו שמות מלאים, שמות פרטיים או שמות משפחה אקראיים לפי שפה או אזור. העתיקו את הרשימה או הורידו אותה כקובץ טקסט.",
+      },
+      hi: {
+        name: "रैंडम नाम जनरेटर",
+        description:
+          "भाषा या क्षेत्र के अनुसार रैंडम पूरे नाम, व्यक्तिगत नाम या पारिवारिक नाम जनरेट करें। सूची कॉपी करें या नामों को टेक्स्ट फ़ाइल में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator nama acak",
+        description:
+          "Buat nama lengkap, nama depan, atau nama keluarga secara acak menurut bahasa atau wilayah. Salin seluruh daftar atau unduh nama sebagai berkas teks.",
+      },
+      it: {
+        name: "Generatore di nomi casuali",
+        description:
+          "Genera nomi completi, nomi propri o cognomi casuali in base alla lingua o all’area geografica. Copia l’elenco o scaricalo come file di testo.",
+      },
+      ja: {
+        name: "ランダム名前生成",
+        description:
+          "言語や地域を選んで、フルネーム、名、姓をランダムに生成します。まとめてコピーするか、テキストファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 이름 생성기",
+        description:
+          "언어 또는 지역에 따라 전체 이름, 이름 또는 성을 무작위로 생성합니다. 결과를 한꺼번에 복사하거나 텍스트 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana nama rawak",
+        description:
+          "Jana nama penuh, nama pertama atau nama keluarga secara rawak mengikut bahasa atau rantau. Salin seluruh senarai atau muat turun nama sebagai fail teks.",
+      },
+      nl: {
+        name: "Generator voor willekeurige namen",
+        description:
+          "Genereer willekeurige volledige namen, voornamen of achternamen per taal of regio. Kopieer de lijst of download die als tekstbestand.",
+      },
+      no: {
+        name: "Generator for tilfeldige navn",
+        description:
+          "Generer tilfeldige fullstendige navn, fornavn eller etternavn etter språk eller region. Kopier listen eller last ned navnene som en tekstfil.",
+      },
+      pl: {
+        name: "Generator losowych imion i nazwisk",
+        description:
+          "Generuj losowe imiona i nazwiska razem lub osobno w wybranym języku lub dla wybranego regionu. Skopiuj listę lub pobierz ją jako plik tekstowy.",
+      },
+      pt: {
+        name: "Gerador de nomes aleatórios",
+        description:
+          "Gere nomes completos, nomes próprios ou sobrenomes aleatórios por idioma ou região. Copie uma lista ou baixe os nomes em um arquivo de texto.",
+      },
+      ru: {
+        name: "Генератор случайных имён и фамилий",
+        description:
+          "Генерируйте случайные имена и фамилии вместе или по отдельности с учётом выбранного языка или региона. Скопируйте список или скачайте его как текстовый файл.",
+      },
+      sv: {
+        name: "Slumpgenerator för namn",
+        description:
+          "Generera slumpmässiga fullständiga namn, förnamn eller efternamn efter språk eller region. Kopiera listan eller ladda ner den som textfil.",
+      },
+      th: {
+        name: "ตัวสร้างชื่อสุ่ม",
+        description:
+          "สุ่มชื่อ-นามสกุล ชื่อ หรือนามสกุลตามภาษาหรือภูมิภาค คัดลอกทั้งรายการหรือดาวน์โหลดเป็นไฟล์ข้อความได้",
+      },
+      tr: {
+        name: "Rastgele Ad Oluşturucu",
+        description:
+          "Dile veya bölgeye göre rastgele tam ad, ad veya soyadı oluşturun. Listeyi kopyalayın ya da adları metin dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo tên ngẫu nhiên",
+        description:
+          "Tạo ngẫu nhiên họ và tên, tên hoặc họ theo ngôn ngữ hay khu vực. Sao chép cả danh sách hoặc tải xuống dưới dạng tệp văn bản.",
+      },
+      "zh-CN": {
+        name: "随机姓名生成器",
+        description:
+          "按语言或地区随机生成完整姓名、名或姓氏。复制一批结果或将姓名下载为文本文件。",
+      },
+      "zh-TW": {
+        name: "隨機姓名產生器",
+        description:
+          "依語言或地區隨機產生完整姓名、名字或姓氏。複製一批結果，或將姓名下載為文字檔。",
+      },
+    },
+  },
+  {
     slug: "random-number-generator",
     category: "random",
     icon: "binary",
@@ -101882,6 +102005,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "無線電時碼同步",
         description:
           "在本機產生 JJY、BPC、DCF77、MSF 或 WWVB 無線電時碼音訊，協助同步相容的電波鐘。",
+      },
+    },
+  },
+  "random-name-generator": {
+    slug: "random-name-generator",
+    category: "random",
+    icon: "contact-round",
+    tags: ["random", "name", "first name", "last name", "surname", "generator"],
+    locales: {
+      ar: {
+        name: "مولّد أسماء عشوائية",
+        description:
+          "ولّد أسماء كاملة أو أسماء شخصية أو أسماء عائلة عشوائية حسب اللغة أو المنطقة. انسخ الأسماء دفعة واحدة أو نزّلها في ملف نصي.",
+      },
+      de: {
+        name: "Zufallsnamengenerator",
+        description:
+          "Erzeuge zufällige vollständige Namen, Vornamen oder Familiennamen nach Sprache oder Region. Kopiere mehrere Namen oder lade sie als Textdatei herunter.",
+      },
+      en: {
+        name: "Random Name Generator",
+        description:
+          "Generate random full names, first names, or surnames by language or region. Copy a batch or download the names as a text file.",
+      },
+      es: {
+        name: "Generador de nombres aleatorios",
+        description:
+          "Genera nombres completos, nombres de pila o apellidos aleatorios según el idioma o la región. Copia una lista o descarga los nombres en un archivo de texto.",
+      },
+      fr: {
+        name: "Générateur de noms aléatoires",
+        description:
+          "Générez des noms complets, des prénoms ou des noms de famille aléatoires selon la langue ou la région. Copiez une série ou téléchargez les noms dans un fichier texte.",
+      },
+      he: {
+        name: "מחולל שמות אקראיים",
+        description:
+          "צרו שמות מלאים, שמות פרטיים או שמות משפחה אקראיים לפי שפה או אזור. העתיקו את הרשימה או הורידו אותה כקובץ טקסט.",
+      },
+      hi: {
+        name: "रैंडम नाम जनरेटर",
+        description:
+          "भाषा या क्षेत्र के अनुसार रैंडम पूरे नाम, व्यक्तिगत नाम या पारिवारिक नाम जनरेट करें। सूची कॉपी करें या नामों को टेक्स्ट फ़ाइल में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator nama acak",
+        description:
+          "Buat nama lengkap, nama depan, atau nama keluarga secara acak menurut bahasa atau wilayah. Salin seluruh daftar atau unduh nama sebagai berkas teks.",
+      },
+      it: {
+        name: "Generatore di nomi casuali",
+        description:
+          "Genera nomi completi, nomi propri o cognomi casuali in base alla lingua o all’area geografica. Copia l’elenco o scaricalo come file di testo.",
+      },
+      ja: {
+        name: "ランダム名前生成",
+        description:
+          "言語や地域を選んで、フルネーム、名、姓をランダムに生成します。まとめてコピーするか、テキストファイルとしてダウンロードできます。",
+      },
+      ko: {
+        name: "무작위 이름 생성기",
+        description:
+          "언어 또는 지역에 따라 전체 이름, 이름 또는 성을 무작위로 생성합니다. 결과를 한꺼번에 복사하거나 텍스트 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana nama rawak",
+        description:
+          "Jana nama penuh, nama pertama atau nama keluarga secara rawak mengikut bahasa atau rantau. Salin seluruh senarai atau muat turun nama sebagai fail teks.",
+      },
+      nl: {
+        name: "Generator voor willekeurige namen",
+        description:
+          "Genereer willekeurige volledige namen, voornamen of achternamen per taal of regio. Kopieer de lijst of download die als tekstbestand.",
+      },
+      no: {
+        name: "Generator for tilfeldige navn",
+        description:
+          "Generer tilfeldige fullstendige navn, fornavn eller etternavn etter språk eller region. Kopier listen eller last ned navnene som en tekstfil.",
+      },
+      pl: {
+        name: "Generator losowych imion i nazwisk",
+        description:
+          "Generuj losowe imiona i nazwiska razem lub osobno w wybranym języku lub dla wybranego regionu. Skopiuj listę lub pobierz ją jako plik tekstowy.",
+      },
+      pt: {
+        name: "Gerador de nomes aleatórios",
+        description:
+          "Gere nomes completos, nomes próprios ou sobrenomes aleatórios por idioma ou região. Copie uma lista ou baixe os nomes em um arquivo de texto.",
+      },
+      ru: {
+        name: "Генератор случайных имён и фамилий",
+        description:
+          "Генерируйте случайные имена и фамилии вместе или по отдельности с учётом выбранного языка или региона. Скопируйте список или скачайте его как текстовый файл.",
+      },
+      sv: {
+        name: "Slumpgenerator för namn",
+        description:
+          "Generera slumpmässiga fullständiga namn, förnamn eller efternamn efter språk eller region. Kopiera listan eller ladda ner den som textfil.",
+      },
+      th: {
+        name: "ตัวสร้างชื่อสุ่ม",
+        description:
+          "สุ่มชื่อ-นามสกุล ชื่อ หรือนามสกุลตามภาษาหรือภูมิภาค คัดลอกทั้งรายการหรือดาวน์โหลดเป็นไฟล์ข้อความได้",
+      },
+      tr: {
+        name: "Rastgele Ad Oluşturucu",
+        description:
+          "Dile veya bölgeye göre rastgele tam ad, ad veya soyadı oluşturun. Listeyi kopyalayın ya da adları metin dosyası olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo tên ngẫu nhiên",
+        description:
+          "Tạo ngẫu nhiên họ và tên, tên hoặc họ theo ngôn ngữ hay khu vực. Sao chép cả danh sách hoặc tải xuống dưới dạng tệp văn bản.",
+      },
+      "zh-CN": {
+        name: "随机姓名生成器",
+        description:
+          "按语言或地区随机生成完整姓名、名或姓氏。复制一批结果或将姓名下载为文本文件。",
+      },
+      "zh-TW": {
+        name: "隨機姓名產生器",
+        description:
+          "依語言或地區隨機產生完整姓名、名字或姓氏。複製一批結果，或將姓名下載為文字檔。",
       },
     },
   },
