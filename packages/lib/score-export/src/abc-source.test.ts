@@ -1,6 +1,6 @@
 import { parseOnly } from "abcjs"
 import { describe, expect, it } from "vitest"
-import { prepareAbc } from "./source"
+import { hasAbcMusic, prepareAbc } from "./abc-source"
 
 describe("prepareAbc", () => {
   it("normalizes CRLF and CR without changing a single tune or fragment", () => {
@@ -42,5 +42,20 @@ describe("prepareAbc", () => {
         return note?.duration
       })
     ).toEqual([1 / 16, 1 / 8])
+  })
+})
+
+describe("hasAbcMusic", () => {
+  it("checks for timed notes or rests before rendering a score", () => {
+    function hasMusic(line: string) {
+      return hasAbcMusic(parseOnly(`X:1\nT:Tune\nK:D\n${line}`)[0]!)
+    }
+    expect(hasMusic("")).toBe(false)
+    expect(hasMusic("|")).toBe(false)
+    expect(hasMusic("z4|")).toBe(true)
+    expect(hasMusic("D4|")).toBe(true)
+    const tune = parseOnly("X:1\nK:D\nD4|")[0]!
+    tune.lines.unshift({}, { staff: [{}] })
+    expect(hasAbcMusic(tune)).toBe(true)
   })
 })

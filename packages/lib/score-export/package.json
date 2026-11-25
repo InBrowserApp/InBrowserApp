@@ -5,6 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/export.ts",
+    "./abc": "./src/abc.ts",
+    "./abc-source": "./src/abc-source.ts",
     "./musicxml": "./src/musicxml.ts",
     "./musicxml-example": "./src/musicxml-example.ts",
     "./pages": "./src/pages.ts"
@@ -12,6 +14,7 @@
   "dependencies": {
     "@workspace/raster-image": "workspace:*",
     "@workspace/svg-pdf": "workspace:*",
+    "abcjs": "catalog:",
     "fflate": "catalog:",
     "opensheetmusicdisplay": "catalog:",
     "pdf-lib": "catalog:"

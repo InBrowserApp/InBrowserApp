@@ -397,6 +397,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "abc-notation-to-pdf-converter",
+    category: "pdf",
+    secondaryCategories: ["misc"],
+    icon: "file-music",
+    tags: [
+      "abc",
+      "abc notation",
+      "abc to pdf",
+      "sheet music",
+      "tune book",
+      "print score",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل التدوين الموسيقي ABC إلى PDF",
+        description:
+          "حوّل التدوين الموسيقي ABC إلى نوتة PDF قابلة للطباعة. ألصق نص ABC أو افتح ملف ‎.abc، واختر ألحانًا من مجموعة، وعاين الصفحات بمقاس A4 أو US Letter.",
+      },
+      de: {
+        name: "ABC-Notation in PDF umwandeln",
+        description:
+          "Wandle ABC-Notation in druckfertige Noten als PDF um. Füge ABC-Text ein oder öffne eine .abc-Datei, wähle Melodien aus der Sammlung und prüfe die Seiten in A4 oder US Letter.",
+      },
+      en: {
+        name: "ABC Notation to PDF Converter",
+        description:
+          "Convert ABC notation to printable PDF sheet music. Paste ABC text or open an .abc file, choose tunes from a collection, and preview A4 or US Letter pages.",
+      },
+      es: {
+        name: "Conversor de notación ABC a PDF",
+        description:
+          "Convierte notación ABC en partituras PDF listas para imprimir. Pega el texto ABC o abre un archivo .abc, elige las melodías de una colección y revisa las páginas en formato A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur de notation ABC en PDF",
+        description:
+          "Convertissez la notation ABC en partitions PDF prêtes à imprimer. Collez du texte ABC ou ouvrez un fichier .abc, choisissez les airs d’un recueil et prévisualisez les pages au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר תיווי ABC ל־PDF",
+        description:
+          "המירו תיווי ABC לתווים ב־PDF להדפסה. הדביקו טקסט ABC או פתחו קובץ ‎.abc, בחרו מנגינות מהאוסף וצפו בעמודי A4 או US Letter.",
+      },
+      hi: {
+        name: "ABC नोटेशन से PDF कन्वर्टर",
+        description:
+          "ABC नोटेशन से प्रिंट करने योग्य PDF शीट म्यूज़िक बनाएँ। ABC टेक्स्ट पेस्ट करें या .abc फ़ाइल खोलें, संग्रह से धुनें चुनें और A4 या US Letter पन्नों का प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Konverter Notasi ABC ke PDF",
+        description:
+          "Ubah notasi ABC menjadi partitur PDF siap cetak. Tempel teks ABC atau buka file .abc, pilih lagu dari koleksi, lalu lihat pratinjau halaman A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da notazione ABC a PDF",
+        description:
+          "Converti la notazione ABC in spartiti PDF pronti da stampare. Incolla il testo ABC o apri un file .abc, scegli i brani di una raccolta e controlla le pagine in formato A4 o Lettera USA.",
+      },
+      ja: {
+        name: "ABC 記譜 PDF 変換",
+        description:
+          "ABC 記譜を印刷用の楽譜 PDF に変換します。ABC テキストを貼り付けるか .abc ファイルを開き、曲集から曲を選んで A4 または US Letter のページをプレビューできます。",
+      },
+      ko: {
+        name: "ABC 기보법 PDF 변환기",
+        description:
+          "ABC 기보법을 인쇄용 악보 PDF로 변환하세요. ABC 텍스트를 붙여 넣거나 .abc 파일을 열고, 곡 모음에서 곡을 선택해 A4 또는 US Letter 페이지를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Notasi ABC kepada PDF",
+        description:
+          "Tukar notasi ABC kepada skor muzik dalam PDF sedia cetak. Tampal teks ABC atau buka fail .abc, pilih lagu daripada himpunan dan pratonton halaman A4 atau US Letter.",
+      },
+      nl: {
+        name: "ABC-notatie naar PDF",
+        description:
+          "Zet ABC-notatie om in afdrukbare bladmuziek als PDF. Plak ABC-tekst of open een .abc-bestand, kies melodieën uit een bundel en bekijk de pagina’s op A4 of US Letter.",
+      },
+      no: {
+        name: "ABC-notasjon til PDF",
+        description:
+          "Gjør om ABC-notasjon til utskriftsklare noter i PDF-format. Lim inn ABC-tekst eller åpne en .abc-fil, velg melodier fra en samling og forhåndsvis sidene i A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter notacji ABC na PDF",
+        description:
+          "Konwertuj notację ABC na zapis nutowy w PDF do druku. Wklej tekst ABC lub otwórz plik .abc, wybierz melodie ze zbioru i sprawdź podgląd stron A4 lub US Letter.",
+      },
+      pt: {
+        name: "Conversor de notação ABC para PDF",
+        description:
+          "Converta a notação ABC em partituras PDF prontas para imprimir. Cole o texto ABC ou abra um arquivo .abc, escolha melodias de uma coleção e confira as páginas em A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер нотации ABC в PDF",
+        description:
+          "Преобразуйте нотацию ABC в PDF с нотами для печати. Вставьте текст ABC или откройте файл .abc, выберите мелодии из сборника и просмотрите страницы A4 или US Letter.",
+      },
+      sv: {
+        name: "ABC-notation till PDF",
+        description:
+          "Konvertera ABC-notation till utskrivbara noter i PDF-format. Klistra in ABC-text eller öppna en .abc-fil, välj melodier ur en samling och förhandsgranska sidorna i A4 eller US Letter.",
+      },
+      th: {
+        name: "โปรแกรมแปลงโน้ต ABC เป็น PDF",
+        description:
+          "แปลงโน้ต ABC เป็นโน้ตเพลง PDF พร้อมพิมพ์ วางข้อความ ABC หรือเปิดไฟล์ .abc เลือกเพลงจากชุดเพลงและดูตัวอย่างหน้าขนาด A4 หรือ US Letter",
+      },
+      tr: {
+        name: "ABC Nota Yazımından PDF'ye Dönüştürücü",
+        description:
+          "ABC nota yazımını yazdırılabilir PDF notalarına dönüştürün. ABC metnini yapıştırın veya bir .abc dosyası açın, derlemeden ezgileri seçin ve A4 ya da US Letter sayfalarını önizleyin.",
+      },
+      vi: {
+        name: "Chuyển ký âm ABC sang PDF",
+        description:
+          "Chuyển ký âm ABC thành bản nhạc PDF có thể in. Dán văn bản ABC hoặc mở tệp .abc, chọn các bản nhạc trong tuyển tập và xem trước trang A4 hoặc US Letter.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱转 PDF 转换器",
+        description:
+          "将 ABC 记谱转换为可打印的 PDF 乐谱。粘贴 ABC 文本或打开 .abc 文件，从曲集中选择曲目，并预览 A4 或美式 Letter 页面。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜轉 PDF 轉換器",
+        description:
+          "將 ABC 記譜轉換成可列印的 PDF 樂譜。貼上 ABC 文字或開啟 .abc 檔案，從曲集中選擇曲目，並預覽 A4 或美式 Letter 頁面。",
+      },
+    },
+  },
+  {
     slug: "adler32-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -57181,6 +57313,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ABC 記譜預覽器",
         description:
           "貼上 ABC 記譜文字或開啟 .abc 檔案，即時預覽樂譜。將樂譜下載為 PDF、PNG 或 SVG，並儲存可編輯的 ABC 原始文字。",
+      },
+    },
+  },
+  "abc-notation-to-pdf-converter": {
+    slug: "abc-notation-to-pdf-converter",
+    category: "pdf",
+    secondaryCategories: ["misc"],
+    icon: "file-music",
+    tags: [
+      "abc",
+      "abc notation",
+      "abc to pdf",
+      "sheet music",
+      "tune book",
+      "print score",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل التدوين الموسيقي ABC إلى PDF",
+        description:
+          "حوّل التدوين الموسيقي ABC إلى نوتة PDF قابلة للطباعة. ألصق نص ABC أو افتح ملف ‎.abc، واختر ألحانًا من مجموعة، وعاين الصفحات بمقاس A4 أو US Letter.",
+      },
+      de: {
+        name: "ABC-Notation in PDF umwandeln",
+        description:
+          "Wandle ABC-Notation in druckfertige Noten als PDF um. Füge ABC-Text ein oder öffne eine .abc-Datei, wähle Melodien aus der Sammlung und prüfe die Seiten in A4 oder US Letter.",
+      },
+      en: {
+        name: "ABC Notation to PDF Converter",
+        description:
+          "Convert ABC notation to printable PDF sheet music. Paste ABC text or open an .abc file, choose tunes from a collection, and preview A4 or US Letter pages.",
+      },
+      es: {
+        name: "Conversor de notación ABC a PDF",
+        description:
+          "Convierte notación ABC en partituras PDF listas para imprimir. Pega el texto ABC o abre un archivo .abc, elige las melodías de una colección y revisa las páginas en formato A4 o Carta (EE. UU.).",
+      },
+      fr: {
+        name: "Convertisseur de notation ABC en PDF",
+        description:
+          "Convertissez la notation ABC en partitions PDF prêtes à imprimer. Collez du texte ABC ou ouvrez un fichier .abc, choisissez les airs d’un recueil et prévisualisez les pages au format A4 ou Lettre US.",
+      },
+      he: {
+        name: "ממיר תיווי ABC ל־PDF",
+        description:
+          "המירו תיווי ABC לתווים ב־PDF להדפסה. הדביקו טקסט ABC או פתחו קובץ ‎.abc, בחרו מנגינות מהאוסף וצפו בעמודי A4 או US Letter.",
+      },
+      hi: {
+        name: "ABC नोटेशन से PDF कन्वर्टर",
+        description:
+          "ABC नोटेशन से प्रिंट करने योग्य PDF शीट म्यूज़िक बनाएँ। ABC टेक्स्ट पेस्ट करें या .abc फ़ाइल खोलें, संग्रह से धुनें चुनें और A4 या US Letter पन्नों का प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Konverter Notasi ABC ke PDF",
+        description:
+          "Ubah notasi ABC menjadi partitur PDF siap cetak. Tempel teks ABC atau buka file .abc, pilih lagu dari koleksi, lalu lihat pratinjau halaman A4 atau US Letter.",
+      },
+      it: {
+        name: "Convertitore da notazione ABC a PDF",
+        description:
+          "Converti la notazione ABC in spartiti PDF pronti da stampare. Incolla il testo ABC o apri un file .abc, scegli i brani di una raccolta e controlla le pagine in formato A4 o Lettera USA.",
+      },
+      ja: {
+        name: "ABC 記譜 PDF 変換",
+        description:
+          "ABC 記譜を印刷用の楽譜 PDF に変換します。ABC テキストを貼り付けるか .abc ファイルを開き、曲集から曲を選んで A4 または US Letter のページをプレビューできます。",
+      },
+      ko: {
+        name: "ABC 기보법 PDF 변환기",
+        description:
+          "ABC 기보법을 인쇄용 악보 PDF로 변환하세요. ABC 텍스트를 붙여 넣거나 .abc 파일을 열고, 곡 모음에서 곡을 선택해 A4 또는 US Letter 페이지를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Notasi ABC kepada PDF",
+        description:
+          "Tukar notasi ABC kepada skor muzik dalam PDF sedia cetak. Tampal teks ABC atau buka fail .abc, pilih lagu daripada himpunan dan pratonton halaman A4 atau US Letter.",
+      },
+      nl: {
+        name: "ABC-notatie naar PDF",
+        description:
+          "Zet ABC-notatie om in afdrukbare bladmuziek als PDF. Plak ABC-tekst of open een .abc-bestand, kies melodieën uit een bundel en bekijk de pagina’s op A4 of US Letter.",
+      },
+      no: {
+        name: "ABC-notasjon til PDF",
+        description:
+          "Gjør om ABC-notasjon til utskriftsklare noter i PDF-format. Lim inn ABC-tekst eller åpne en .abc-fil, velg melodier fra en samling og forhåndsvis sidene i A4 eller US Letter.",
+      },
+      pl: {
+        name: "Konwerter notacji ABC na PDF",
+        description:
+          "Konwertuj notację ABC na zapis nutowy w PDF do druku. Wklej tekst ABC lub otwórz plik .abc, wybierz melodie ze zbioru i sprawdź podgląd stron A4 lub US Letter.",
+      },
+      pt: {
+        name: "Conversor de notação ABC para PDF",
+        description:
+          "Converta a notação ABC em partituras PDF prontas para imprimir. Cole o texto ABC ou abra um arquivo .abc, escolha melodias de uma coleção e confira as páginas em A4 ou Carta (EUA).",
+      },
+      ru: {
+        name: "Конвертер нотации ABC в PDF",
+        description:
+          "Преобразуйте нотацию ABC в PDF с нотами для печати. Вставьте текст ABC или откройте файл .abc, выберите мелодии из сборника и просмотрите страницы A4 или US Letter.",
+      },
+      sv: {
+        name: "ABC-notation till PDF",
+        description:
+          "Konvertera ABC-notation till utskrivbara noter i PDF-format. Klistra in ABC-text eller öppna en .abc-fil, välj melodier ur en samling och förhandsgranska sidorna i A4 eller US Letter.",
+      },
+      th: {
+        name: "โปรแกรมแปลงโน้ต ABC เป็น PDF",
+        description:
+          "แปลงโน้ต ABC เป็นโน้ตเพลง PDF พร้อมพิมพ์ วางข้อความ ABC หรือเปิดไฟล์ .abc เลือกเพลงจากชุดเพลงและดูตัวอย่างหน้าขนาด A4 หรือ US Letter",
+      },
+      tr: {
+        name: "ABC Nota Yazımından PDF'ye Dönüştürücü",
+        description:
+          "ABC nota yazımını yazdırılabilir PDF notalarına dönüştürün. ABC metnini yapıştırın veya bir .abc dosyası açın, derlemeden ezgileri seçin ve A4 ya da US Letter sayfalarını önizleyin.",
+      },
+      vi: {
+        name: "Chuyển ký âm ABC sang PDF",
+        description:
+          "Chuyển ký âm ABC thành bản nhạc PDF có thể in. Dán văn bản ABC hoặc mở tệp .abc, chọn các bản nhạc trong tuyển tập và xem trước trang A4 hoặc US Letter.",
+      },
+      "zh-CN": {
+        name: "ABC 记谱转 PDF 转换器",
+        description:
+          "将 ABC 记谱转换为可打印的 PDF 乐谱。粘贴 ABC 文本或打开 .abc 文件，从曲集中选择曲目，并预览 A4 或美式 Letter 页面。",
+      },
+      "zh-TW": {
+        name: "ABC 記譜轉 PDF 轉換器",
+        description:
+          "將 ABC 記譜轉換成可列印的 PDF 樂譜。貼上 ABC 文字或開啟 .abc 檔案，從曲集中選擇曲目，並預覽 A4 或美式 Letter 頁面。",
       },
     },
   },

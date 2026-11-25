@@ -54,7 +54,7 @@ beforeEach(() => {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     svg.textContent = source
     target.append(svg)
-    return [{ lines: [{ staff: [{}] }] }]
+    return [{ lines: [{ staff: [{ voices: [[{ el_type: "note" }]] }] }] }]
   })
 })
 
@@ -127,7 +127,7 @@ describe("ABC notation previewer", () => {
   it("identifies which tune produced a warning in a book", async () => {
     renderAbc.mockReturnValue([
       {
-        lines: [{ staff: [{}] }],
+        lines: [{ staff: [{ voices: [[{ el_type: "note" }]] }] }],
         warnings: ["Music Line:4:3: Unknown character"],
       },
     ])

@@ -16,7 +16,13 @@ test("exports all tunes with notes and drops header-only fragments", async () =>
   render.mockImplementation((target: HTMLElement, abc: string) => {
     target.innerHTML =
       '<div><svg viewBox="0 0 704 80"><path d="M 20 20 h 100"/></svg></div>'
-    return [{ lines: abc.includes("CDEF|") ? [{ staff: [{}] }] : [] }]
+    return [
+      {
+        lines: abc.includes("CDEF|")
+          ? [{ staff: [{ voices: [[{ el_type: "note" }]] }] }]
+          : [],
+      },
+    ]
   })
   const source = "X:1\nK:D\nCDEF|\nX:2\nK:C\nX:3\nK:D\nCDEF|"
   const result = await exportAbc(source, "svg", "Túnes", "en")
