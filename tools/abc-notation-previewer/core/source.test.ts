@@ -36,7 +36,9 @@ describe("prepareAbc", () => {
     expect(
       tunes.map((tune) => {
         const staff = tune.lines.find((line) => line.staff)?.staff?.[0]
-        const note = staff?.voices[0]?.find((event) => event.el_type === "note")
+        const note = staff?.voices?.[0]?.find(
+          (event) => event.el_type === "note"
+        )
         return note?.duration
       })
     ).toEqual([1 / 16, 1 / 8])
