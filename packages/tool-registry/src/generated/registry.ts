@@ -17211,6 +17211,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "geopackage-viewer",
+    category: "geo",
+    icon: "database",
+    tags: [
+      "geopackage",
+      "gpkg",
+      "sqlite",
+      "gis",
+      "vector",
+      "layers",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoPackage",
+        description:
+          "افتح ملف GeoPackage بامتداد .gpkg في متصفحك. استكشف الطبقات المتجهة على خريطة تعمل دون اتصال، وتحقّق من سمات المعالم وتصفّح جداول البيانات غير المكانية.",
+      },
+      de: {
+        name: "GeoPackage-Betrachter",
+        description:
+          "Öffne ein GeoPackage (.gpkg) im Browser. Sieh dir Vektorlayer auf einer Offline-Karte an, prüfe Objektattribute und durchsuche Tabellen ohne Geometrie.",
+      },
+      en: {
+        name: "GeoPackage Viewer",
+        description:
+          "Open a GeoPackage (.gpkg) in your browser. Explore vector layers on an offline map, inspect feature attributes, and browse non-spatial data tables.",
+      },
+      es: {
+        name: "Visor de GeoPackage",
+        description:
+          "Abre un GeoPackage (.gpkg) en tu navegador. Explora capas vectoriales en un mapa sin conexión, consulta los atributos y examina tablas no espaciales.",
+      },
+      fr: {
+        name: "Visionneuse GeoPackage",
+        description:
+          "Ouvrez un GeoPackage (.gpkg) dans votre navigateur. Explorez les couches vectorielles sur une carte hors ligne, consultez les attributs des entités et parcourez les tables non spatiales.",
+      },
+      he: {
+        name: "מציג GeoPackage",
+        description:
+          "פתחו קובץ GeoPackage בסיומת ‎.gpkg בדפדפן. עיינו בשכבות וקטוריות במפה שעובדת בלי חיבור לרשת, בדקו את מאפייני הישויות ועיינו בטבלאות נתונים לא מרחביים.",
+      },
+      hi: {
+        name: "GeoPackage व्यूअर",
+        description:
+          "ब्राउज़र में GeoPackage (.gpkg) खोलें। ऑफ़लाइन मानचित्र पर वेक्टर परतें देखें, फ़ीचर की विशेषताएँ जाँचें और गैर-स्थानिक डेटा तालिकाएँ ब्राउज़ करें।",
+      },
+      id: {
+        name: "Penampil GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) di browser. Jelajahi lapisan vektor pada peta luring, periksa atribut fitur, dan telusuri tabel data nonspasial.",
+      },
+      it: {
+        name: "Visualizzatore GeoPackage",
+        description:
+          "Apri un GeoPackage (.gpkg) nel browser. Esplora i layer vettoriali su una mappa offline, consulta gli attributi degli elementi e sfoglia le tabelle non spaziali.",
+      },
+      ja: {
+        name: "GeoPackage ビューアー",
+        description:
+          "ブラウザーで GeoPackage（.gpkg）を開き、オフライン地図でベクターレイヤーや地物の属性、非空間データのテーブルを確認できます。",
+      },
+      ko: {
+        name: "GeoPackage 뷰어",
+        description:
+          "브라우저에서 GeoPackage(.gpkg)를 열어 오프라인 지도에서 벡터 레이어를 살펴보고 피처 속성과 비공간 데이터 테이블을 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) dalam pelayar. Terokai lapisan vektor pada peta luar talian, semak atribut ciri dan semak imbas jadual data bukan ruang.",
+      },
+      nl: {
+        name: "GeoPackage-viewer",
+        description:
+          "Open een GeoPackage (.gpkg) in je browser. Verken vectorlagen op een offlinekaart, bekijk objectattributen en blader door tabellen zonder geometrie.",
+      },
+      no: {
+        name: "GeoPackage-viser",
+        description:
+          "Åpne en GeoPackage-fil (.gpkg) i nettleseren. Utforsk vektorlag på et kart uten nett, se objektegenskaper og bla gjennom tabeller uten geometri.",
+      },
+      pl: {
+        name: "Przeglądarka GeoPackage",
+        description:
+          "Otwórz plik GeoPackage (.gpkg) w przeglądarce. Oglądaj warstwy wektorowe na mapie offline, sprawdzaj atrybuty obiektów i przeglądaj tabele bez geometrii.",
+      },
+      pt: {
+        name: "Visualizador de GeoPackage",
+        description:
+          "Abra um GeoPackage (.gpkg) no navegador. Explore camadas vetoriais em um mapa offline, consulte os atributos das feições e navegue por tabelas não espaciais.",
+      },
+      ru: {
+        name: "Просмотр GeoPackage",
+        description:
+          "Откройте GeoPackage (.gpkg) в браузере. Просматривайте векторные слои на офлайн-карте, изучайте атрибуты объектов и записи в таблицах без геометрии.",
+      },
+      sv: {
+        name: "GeoPackage-visare",
+        description:
+          "Öppna en GeoPackage-fil (.gpkg) i webbläsaren. Utforska vektorlager på en karta offline, granska objektens attribut och bläddra i tabeller utan geometri.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoPackage",
+        description:
+          "เปิด GeoPackage (.gpkg) ในเบราว์เซอร์ สำรวจชั้นข้อมูลเวกเตอร์บนแผนที่ออฟไลน์ ตรวจสอบแอตทริบิวต์ของฟีเจอร์ และเรียกดูตารางข้อมูลที่ไม่มีข้อมูลเชิงพื้นที่",
+      },
+      tr: {
+        name: "GeoPackage Görüntüleyici",
+        description:
+          "Tarayıcınızda bir GeoPackage (.gpkg) dosyası açın. Çevrimdışı haritada vektör katmanlarını keşfedin, detayların özniteliklerini inceleyin ve konumsal olmayan veri tablolarına göz atın.",
+      },
+      vi: {
+        name: "Trình xem GeoPackage",
+        description:
+          "Mở GeoPackage (.gpkg) trong trình duyệt. Khám phá các lớp vectơ trên bản đồ ngoại tuyến, kiểm tra thuộc tính đối tượng và duyệt bảng dữ liệu phi không gian.",
+      },
+      "zh-CN": {
+        name: "GeoPackage 查看器",
+        description:
+          "在浏览器中打开 GeoPackage（.gpkg），在离线地图上浏览矢量图层、查看要素属性并浏览非空间数据表。",
+      },
+      "zh-TW": {
+        name: "GeoPackage 檢視器",
+        description:
+          "在瀏覽器中開啟 GeoPackage（.gpkg），在離線地圖上探索向量圖層、查看圖徵屬性並瀏覽非空間資料表。",
+      },
+    },
+  },
+  {
     slug: "geotiff-viewer",
     category: "geo",
     secondaryCategories: ["image"],
@@ -70472,6 +70604,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "GeoJSON 檢視器",
         description:
           "開啟或貼上 GeoJSON，在可離線使用的互動地圖上查看點、線和多邊形，並檢查圖徵屬性。檔案只在瀏覽器內處理。",
+      },
+    },
+  },
+  "geopackage-viewer": {
+    slug: "geopackage-viewer",
+    category: "geo",
+    icon: "database",
+    tags: [
+      "geopackage",
+      "gpkg",
+      "sqlite",
+      "gis",
+      "vector",
+      "layers",
+      "map",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض GeoPackage",
+        description:
+          "افتح ملف GeoPackage بامتداد .gpkg في متصفحك. استكشف الطبقات المتجهة على خريطة تعمل دون اتصال، وتحقّق من سمات المعالم وتصفّح جداول البيانات غير المكانية.",
+      },
+      de: {
+        name: "GeoPackage-Betrachter",
+        description:
+          "Öffne ein GeoPackage (.gpkg) im Browser. Sieh dir Vektorlayer auf einer Offline-Karte an, prüfe Objektattribute und durchsuche Tabellen ohne Geometrie.",
+      },
+      en: {
+        name: "GeoPackage Viewer",
+        description:
+          "Open a GeoPackage (.gpkg) in your browser. Explore vector layers on an offline map, inspect feature attributes, and browse non-spatial data tables.",
+      },
+      es: {
+        name: "Visor de GeoPackage",
+        description:
+          "Abre un GeoPackage (.gpkg) en tu navegador. Explora capas vectoriales en un mapa sin conexión, consulta los atributos y examina tablas no espaciales.",
+      },
+      fr: {
+        name: "Visionneuse GeoPackage",
+        description:
+          "Ouvrez un GeoPackage (.gpkg) dans votre navigateur. Explorez les couches vectorielles sur une carte hors ligne, consultez les attributs des entités et parcourez les tables non spatiales.",
+      },
+      he: {
+        name: "מציג GeoPackage",
+        description:
+          "פתחו קובץ GeoPackage בסיומת ‎.gpkg בדפדפן. עיינו בשכבות וקטוריות במפה שעובדת בלי חיבור לרשת, בדקו את מאפייני הישויות ועיינו בטבלאות נתונים לא מרחביים.",
+      },
+      hi: {
+        name: "GeoPackage व्यूअर",
+        description:
+          "ब्राउज़र में GeoPackage (.gpkg) खोलें। ऑफ़लाइन मानचित्र पर वेक्टर परतें देखें, फ़ीचर की विशेषताएँ जाँचें और गैर-स्थानिक डेटा तालिकाएँ ब्राउज़ करें।",
+      },
+      id: {
+        name: "Penampil GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) di browser. Jelajahi lapisan vektor pada peta luring, periksa atribut fitur, dan telusuri tabel data nonspasial.",
+      },
+      it: {
+        name: "Visualizzatore GeoPackage",
+        description:
+          "Apri un GeoPackage (.gpkg) nel browser. Esplora i layer vettoriali su una mappa offline, consulta gli attributi degli elementi e sfoglia le tabelle non spaziali.",
+      },
+      ja: {
+        name: "GeoPackage ビューアー",
+        description:
+          "ブラウザーで GeoPackage（.gpkg）を開き、オフライン地図でベクターレイヤーや地物の属性、非空間データのテーブルを確認できます。",
+      },
+      ko: {
+        name: "GeoPackage 뷰어",
+        description:
+          "브라우저에서 GeoPackage(.gpkg)를 열어 오프라인 지도에서 벡터 레이어를 살펴보고 피처 속성과 비공간 데이터 테이블을 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar GeoPackage",
+        description:
+          "Buka GeoPackage (.gpkg) dalam pelayar. Terokai lapisan vektor pada peta luar talian, semak atribut ciri dan semak imbas jadual data bukan ruang.",
+      },
+      nl: {
+        name: "GeoPackage-viewer",
+        description:
+          "Open een GeoPackage (.gpkg) in je browser. Verken vectorlagen op een offlinekaart, bekijk objectattributen en blader door tabellen zonder geometrie.",
+      },
+      no: {
+        name: "GeoPackage-viser",
+        description:
+          "Åpne en GeoPackage-fil (.gpkg) i nettleseren. Utforsk vektorlag på et kart uten nett, se objektegenskaper og bla gjennom tabeller uten geometri.",
+      },
+      pl: {
+        name: "Przeglądarka GeoPackage",
+        description:
+          "Otwórz plik GeoPackage (.gpkg) w przeglądarce. Oglądaj warstwy wektorowe na mapie offline, sprawdzaj atrybuty obiektów i przeglądaj tabele bez geometrii.",
+      },
+      pt: {
+        name: "Visualizador de GeoPackage",
+        description:
+          "Abra um GeoPackage (.gpkg) no navegador. Explore camadas vetoriais em um mapa offline, consulte os atributos das feições e navegue por tabelas não espaciais.",
+      },
+      ru: {
+        name: "Просмотр GeoPackage",
+        description:
+          "Откройте GeoPackage (.gpkg) в браузере. Просматривайте векторные слои на офлайн-карте, изучайте атрибуты объектов и записи в таблицах без геометрии.",
+      },
+      sv: {
+        name: "GeoPackage-visare",
+        description:
+          "Öppna en GeoPackage-fil (.gpkg) i webbläsaren. Utforska vektorlager på en karta offline, granska objektens attribut och bläddra i tabeller utan geometri.",
+      },
+      th: {
+        name: "โปรแกรมดู GeoPackage",
+        description:
+          "เปิด GeoPackage (.gpkg) ในเบราว์เซอร์ สำรวจชั้นข้อมูลเวกเตอร์บนแผนที่ออฟไลน์ ตรวจสอบแอตทริบิวต์ของฟีเจอร์ และเรียกดูตารางข้อมูลที่ไม่มีข้อมูลเชิงพื้นที่",
+      },
+      tr: {
+        name: "GeoPackage Görüntüleyici",
+        description:
+          "Tarayıcınızda bir GeoPackage (.gpkg) dosyası açın. Çevrimdışı haritada vektör katmanlarını keşfedin, detayların özniteliklerini inceleyin ve konumsal olmayan veri tablolarına göz atın.",
+      },
+      vi: {
+        name: "Trình xem GeoPackage",
+        description:
+          "Mở GeoPackage (.gpkg) trong trình duyệt. Khám phá các lớp vectơ trên bản đồ ngoại tuyến, kiểm tra thuộc tính đối tượng và duyệt bảng dữ liệu phi không gian.",
+      },
+      "zh-CN": {
+        name: "GeoPackage 查看器",
+        description:
+          "在浏览器中打开 GeoPackage（.gpkg），在离线地图上浏览矢量图层、查看要素属性并浏览非空间数据表。",
+      },
+      "zh-TW": {
+        name: "GeoPackage 檢視器",
+        description:
+          "在瀏覽器中開啟 GeoPackage（.gpkg），在離線地圖上探索向量圖層、查看圖徵屬性並瀏覽非空間資料表。",
       },
     },
   },

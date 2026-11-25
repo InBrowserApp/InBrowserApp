@@ -12330,6 +12330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "geopackage-viewer",
+    language: "ar",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "de",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "en",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "es",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "fr",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "he",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "hi",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "id",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "it",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ja",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ko",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ms",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "nl",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "no",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "pl",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "pt",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "ru",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "sv",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "th",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "tr",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "vi",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "geopackage-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "geotiff-viewer",
     language: "ar",
   },

@@ -39,6 +39,7 @@ catalog:
   "@types/leaflet": ^1.9.22
   "@types/geojson": ^7946.0.16
   shpjs: 6.2.0
+  "@uwdata/wk-geojson": 0.0.1
   "@types/shpjs": 3.4.7
   "@tmcw/togeojson": ^7.1.4
   "@citation-js/core": 0.9.0

@@ -674,6 +674,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GeoPackage 檢視器",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "GeoTIFF 檢視器",
     slug: "geotiff-viewer",
   },

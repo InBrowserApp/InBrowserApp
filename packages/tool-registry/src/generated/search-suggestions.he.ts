@@ -674,6 +674,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "מציג GeoPackage",
+    slug: "geopackage-viewer",
+  },
+  {
+    category: "geo",
     name: "מציג GeoTIFF",
     slug: "geotiff-viewer",
   },

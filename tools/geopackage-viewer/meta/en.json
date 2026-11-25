@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage Viewer",
+  "description": "Open a GeoPackage (.gpkg) in your browser. Explore vector layers on an offline map, inspect feature attributes, and browse non-spatial data tables."
+}

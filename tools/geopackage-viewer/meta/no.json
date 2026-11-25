@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage-viser",
+  "description": "Åpne en GeoPackage-fil (.gpkg) i nettleseren. Utforsk vektorlag på et kart uten nett, se objektegenskaper og bla gjennom tabeller uten geometri."
+}
