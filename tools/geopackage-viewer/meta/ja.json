@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage ビューアー",
+  "description": "ブラウザーで GeoPackage（.gpkg）を開き、オフライン地図でベクターレイヤーや地物の属性、非空間データのテーブルを確認できます。"
+}

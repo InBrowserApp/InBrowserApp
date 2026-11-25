@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage 뷰어",
+  "description": "브라우저에서 GeoPackage(.gpkg)를 열어 오프라인 지도에서 벡터 레이어를 살펴보고 피처 속성과 비공간 데이터 테이블을 확인하세요."
+}

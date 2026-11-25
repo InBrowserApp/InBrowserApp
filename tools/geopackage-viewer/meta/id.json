@@ -1,0 +1,4 @@
+{
+  "name": "Penampil GeoPackage",
+  "description": "Buka GeoPackage (.gpkg) di browser. Jelajahi lapisan vektor pada peta luring, periksa atribut fitur, dan telusuri tabel data nonspasial."
+}

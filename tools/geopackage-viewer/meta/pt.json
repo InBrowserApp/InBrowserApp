@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de GeoPackage",
+  "description": "Abra um GeoPackage (.gpkg) no navegador. Explore camadas vetoriais em um mapa offline, consulte os atributos das feições e navegue por tabelas não espaciais."
+}

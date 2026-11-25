@@ -1,0 +1,4 @@
+{
+  "name": "GeoPackage-viewer",
+  "description": "Open een GeoPackage (.gpkg) in je browser. Verken vectorlagen op een offlinekaart, bekijk objectattributen en blader door tabellen zonder geometrie."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka GeoPackage",
+  "description": "Otwórz plik GeoPackage (.gpkg) w przeglądarce. Oglądaj warstwy wektorowe na mapie offline, sprawdzaj atrybuty obiektów i przeglądaj tabele bez geometrii."
+}

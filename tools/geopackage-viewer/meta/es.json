@@ -1,0 +1,4 @@
+{
+  "name": "Visor de GeoPackage",
+  "description": "Abre un GeoPackage (.gpkg) en tu navegador. Explora capas vectoriales en un mapa sin conexión, consulta los atributos y examina tablas no espaciales."
+}
