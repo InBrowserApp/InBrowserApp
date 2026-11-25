@@ -8,7 +8,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "2fa-authenticator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình xem 3MF",
     slug: "3mf-viewer",
   },
@@ -593,7 +593,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "diagram",
+    category: "3d-cad",
     name: "Trình xem DXF",
     slug: "dxf-viewer",
   },
@@ -773,7 +773,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình xem GLB / glTF",
     slug: "gltf-viewer",
   },
@@ -1258,7 +1258,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Công cụ kiểm tra thể tích và tô pô lưới",
     slug: "mesh-inspector",
   },
@@ -1413,12 +1413,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình chuyển đổi OBJ sang STL",
     slug: "obj-to-stl-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình xem OBJ",
     slug: "obj-viewer",
   },
@@ -1873,7 +1873,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình xem STEP",
     slug: "step-viewer",
   },
@@ -1883,12 +1883,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "stereo-channel-splitter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình chuyển đổi STL sang OBJ",
     slug: "stl-to-obj-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "Trình xem STL",
     slug: "stl-viewer",
   },

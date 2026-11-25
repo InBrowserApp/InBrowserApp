@@ -8,7 +8,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "2fa-authenticator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "3MF व्यूअर",
     slug: "3mf-viewer",
   },
@@ -593,7 +593,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "diagram",
+    category: "3d-cad",
     name: "DXF व्यूअर",
     slug: "dxf-viewer",
   },
@@ -773,7 +773,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "GLB / glTF व्यूअर",
     slug: "gltf-viewer",
   },
@@ -1258,7 +1258,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "मेश वॉल्यूम और टोपोलॉजी चेकर",
     slug: "mesh-inspector",
   },
@@ -1413,12 +1413,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "OBJ से STL कन्वर्टर",
     slug: "obj-to-stl-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "OBJ व्यूअर",
     slug: "obj-viewer",
   },
@@ -1873,7 +1873,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STEP व्यूअर",
     slug: "step-viewer",
   },
@@ -1883,12 +1883,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "stereo-channel-splitter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STL से OBJ कन्वर्टर",
     slug: "stl-to-obj-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STL व्यूअर",
     slug: "stl-viewer",
   },

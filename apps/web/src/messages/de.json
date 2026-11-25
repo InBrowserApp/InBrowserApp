@@ -57,6 +57,7 @@
     "emptySearchTitle": "Keine passenden Tools.",
     "emptySearchDescription": "Versuchen Sie ein anderes Stichwort oder löschen Sie die Suche.",
     "categories": {
+      "3d-cad": "3D & CAD",
       "audio": "Audio",
       "crypto": "Krypto & Hashing",
       "developer": "Entwickler",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} – Tools",
     "descriptions": {
+      "3d-cad": "Betrachten Sie 3D-Modelle und CAD-Zeichnungen im Browser. Öffnen Sie STL-, OBJ-, GLB-, glTF-, 3MF-, STEP- und DXF-Dateien, konvertieren Sie zwischen STL und OBJ und prüfen Sie Volumen und Topologie von Netzen.",
       "audio": "Nehmen Sie Audio im Browser auf, bearbeiten und analysieren Sie es. Kürzen Sie Clips, ermitteln Sie das Tempo, trennen Sie Stereokanäle und wandeln Sie Sprache in Text um.",
       "crypto": "Hashen Sie Texte und Dateien, verschlüsseln Sie Daten und generieren oder prüfen Sie Passwörter und Schlüssel. Entdecken Sie browserbasierte Tools für Prüfsummen, Kryptografie und sichere Zugangsdaten.",
       "developer": "Prüfen Sie Archive, formatieren Sie Code, generieren Sie Kennungen und konvertieren Sie Konfigurationen für die Entwicklung. Finden Sie browserbasierte Dienstprogramme für alltägliche Entwicklungsaufgaben.",

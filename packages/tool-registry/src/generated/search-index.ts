@@ -137,7 +137,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "3mf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "3mf",
@@ -15142,7 +15142,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "dxf-viewer",
-    category: "diagram",
+    category: "3d-cad",
+    secondaryCategories: ["diagram"],
     icon: "ruler",
     tags: [
       "dxf",
@@ -19766,7 +19767,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "gltf-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "glb",
@@ -31967,7 +31968,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "mesh-inspector",
-    category: "image",
+    category: "3d-cad",
     icon: "scan-line",
     tags: [
       "mesh",
@@ -35965,7 +35966,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "obj-to-stl-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "obj",
@@ -36096,7 +36097,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "obj-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "obj",
@@ -47726,7 +47727,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "step-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "step",
@@ -47991,7 +47992,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "stl-to-obj-converter",
-    category: "image",
+    category: "3d-cad",
     icon: "arrow-left-right",
     tags: [
       "stl",
@@ -48122,7 +48123,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "stl-viewer",
-    category: "image",
+    category: "3d-cad",
     icon: "box",
     tags: [
       "stl",

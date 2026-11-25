@@ -57,6 +57,7 @@
     "emptySearchTitle": "Không tìm thấy công cụ phù hợp.",
     "emptySearchDescription": "Hãy thử từ khóa khác hoặc xóa tìm kiếm.",
     "categories": {
+      "3d-cad": "3D và CAD",
       "audio": "Âm thanh",
       "crypto": "Mã hóa & Băm",
       "developer": "Nhà phát triển",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "Công cụ {category}",
     "descriptions": {
+      "3d-cad": "Xem mô hình 3D và bản vẽ CAD ngay trong trình duyệt. Mở tệp STL, OBJ, GLB, glTF, 3MF, STEP và DXF, chuyển đổi qua lại giữa STL và OBJ, đồng thời kiểm tra thể tích và tô pô của lưới.",
       "audio": "Ghi âm, chỉnh sửa và phân tích âm thanh trong trình duyệt. Cắt đoạn âm thanh, nhận diện nhịp độ, tách các kênh stereo và chuyển lời nói thành văn bản.",
       "crypto": "Băm văn bản và tệp, mã hóa dữ liệu, tạo hoặc xác minh mật khẩu và khóa. Khám phá các công cụ chạy trên trình duyệt để tính tổng kiểm tra, xử lý mật mã và tạo thông tin xác thực an toàn.",
       "developer": "Kiểm tra tệp nén, định dạng mã, tạo mã định danh và chuyển đổi cấu hình dành cho nhà phát triển. Tìm các tiện ích chạy trên trình duyệt cho công việc phát triển hằng ngày.",

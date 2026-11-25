@@ -57,6 +57,7 @@
     "emptySearchTitle": "Eşleşen araç yok.",
     "emptySearchDescription": "Farklı bir anahtar kelime deneyin veya aramayı temizleyin.",
     "categories": {
+      "3d-cad": "3B ve CAD",
       "audio": "Ses",
       "crypto": "Kripto ve Hash",
       "developer": "Geliştirici",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} Araçları",
     "descriptions": {
+      "3d-cad": "Tarayıcınızda 3B modelleri ve CAD çizimlerini görüntüleyin. STL, OBJ, GLB, glTF, 3MF, STEP ve DXF dosyalarını açın, STL ile OBJ arasında dönüştürün ve ağ hacmini ve topolojisini inceleyin.",
       "audio": "Tarayıcınızda ses kaydedin, düzenleyin ve analiz edin. Ses kliplerini kırpın, tempoyu algılayın, stereo kanalları ayırın ve konuşmayı metne dönüştürün.",
       "crypto": "Metin ve dosyaların özetlerini hesaplayın, verileri şifreleyin, parolalar ve anahtarlar oluşturun veya doğrulayın. Sağlama toplamları, kriptografi ve güvenli kimlik bilgileri için tarayıcı tabanlı araçları keşfedin.",
       "developer": "Arşivleri inceleyin, kodu biçimlendirin, tanımlayıcılar oluşturun ve geliştirici yapılandırmalarını dönüştürün. Günlük geliştirme görevleri için tarayıcı tabanlı yardımcı araçlar bulun.",

@@ -8,7 +8,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "2fa-authenticator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "3MF 뷰어",
     slug: "3mf-viewer",
   },
@@ -593,7 +593,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
-    category: "diagram",
+    category: "3d-cad",
     name: "DXF 뷰어",
     slug: "dxf-viewer",
   },
@@ -773,7 +773,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "gitignore-generator",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "GLB / glTF 뷰어",
     slug: "gltf-viewer",
   },
@@ -1258,7 +1258,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mermaid-to-pdf-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "메시 부피 및 토폴로지 검사기",
     slug: "mesh-inspector",
   },
@@ -1413,12 +1413,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "numbers-to-xlsx-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "OBJ → STL 변환기",
     slug: "obj-to-stl-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "OBJ 뷰어",
     slug: "obj-viewer",
   },
@@ -1873,7 +1873,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ssh-public-key-fingerprint",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STEP 뷰어",
     slug: "step-viewer",
   },
@@ -1883,12 +1883,12 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "stereo-channel-splitter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STL → OBJ 변환기",
     slug: "stl-to-obj-converter",
   },
   {
-    category: "image",
+    category: "3d-cad",
     name: "STL 뷰어",
     slug: "stl-viewer",
   },

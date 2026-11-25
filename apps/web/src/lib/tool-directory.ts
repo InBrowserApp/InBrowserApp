@@ -22,6 +22,7 @@ type DirectoryToolEntry = ToolSearchSuggestionEntry &
 
 /** Icon identifiers (see ToolIcon) shown on the home category tiles. */
 const CATEGORY_ICONS: Readonly<Record<string, string>> = {
+  "3d-cad": "box",
   audio: "audio-lines",
   crypto: "lock",
   developer: "wrench",

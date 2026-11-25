@@ -57,6 +57,7 @@
     "emptySearchTitle": "Brak pasujących narzędzi.",
     "emptySearchDescription": "Spróbuj innego słowa kluczowego lub wyczyść wyszukiwanie.",
     "categories": {
+      "3d-cad": "3D i CAD",
       "audio": "Dźwięk",
       "crypto": "Kryptografia i haszowanie",
       "developer": "Dla programistów",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} — narzędzia",
     "descriptions": {
+      "3d-cad": "Przeglądaj modele 3D i rysunki CAD w przeglądarce. Otwieraj pliki STL, OBJ, GLB, glTF, 3MF, STEP i DXF, konwertuj między STL a OBJ oraz sprawdzaj objętość i topologię siatek.",
       "audio": "Nagrywaj, edytuj i analizuj dźwięk w przeglądarce. Przycinaj nagrania, wykrywaj tempo, rozdzielaj kanały stereo i zamieniaj mowę na tekst.",
       "crypto": "Obliczaj skróty tekstu i plików, szyfruj dane oraz generuj lub weryfikuj hasła i klucze. Poznaj narzędzia przeglądarkowe do sum kontrolnych, kryptografii i bezpiecznych danych uwierzytelniających.",
       "developer": "Przeglądaj archiwa, formatuj kod, generuj identyfikatory i konwertuj konfiguracje programistyczne. Znajdź narzędzia przeglądarkowe do codziennych zadań programistycznych.",

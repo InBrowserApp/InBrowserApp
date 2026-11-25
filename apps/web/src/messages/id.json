@@ -57,6 +57,7 @@
     "emptySearchTitle": "Tidak ada alat yang cocok.",
     "emptySearchDescription": "Coba kata kunci lain atau hapus pencarian.",
     "categories": {
+      "3d-cad": "3D dan CAD",
       "audio": "Audio",
       "crypto": "Kripto & Hashing",
       "developer": "Pengembang",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "Alat {category}",
     "descriptions": {
+      "3d-cad": "Lihat model 3D dan gambar CAD di browser. Buka berkas STL, OBJ, GLB, glTF, 3MF, STEP, dan DXF, konversi antara STL dan OBJ, serta periksa volume dan topologi mesh.",
       "audio": "Rekam, edit, dan analisis audio di browser. Pangkas klip, deteksi tempo, pisahkan kanal stereo, dan ubah tuturan menjadi teks.",
       "crypto": "Hitung hash teks dan berkas, enkripsi data, serta buat atau verifikasi kata sandi dan kunci. Jelajahi alat berbasis browser untuk checksum, kriptografi, dan kredensial yang aman.",
       "developer": "Periksa arsip, format kode, buat pengenal, dan konversi konfigurasi pengembang. Temukan utilitas berbasis browser untuk tugas pengembangan sehari-hari.",

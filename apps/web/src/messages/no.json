@@ -57,6 +57,7 @@
     "emptySearchTitle": "Ingen treff på verktøy.",
     "emptySearchDescription": "Prøv et annet søkeord eller tøm søket.",
     "categories": {
+      "3d-cad": "3D og CAD",
       "audio": "Lyd",
       "crypto": "Krypto og hashing",
       "developer": "Utvikler",
@@ -81,6 +82,7 @@
   "categoryPages": {
     "titleTemplate": "{category} – verktøy",
     "descriptions": {
+      "3d-cad": "Vis 3D-modeller og CAD-tegninger i nettleseren. Åpne STL-, OBJ-, GLB-, glTF-, 3MF-, STEP- og DXF-filer, konverter mellom STL og OBJ og sjekk volum og topologi i 3D-nett.",
       "audio": "Ta opp, rediger og analyser lyd i nettleseren din. Klipp til lydopptak, finn tempoet, del opp stereokanaler og gjør tale om til tekst.",
       "crypto": "Beregn hashverdier for tekst og filer, krypter data og generer eller bekreft passord og nøkler. Utforsk nettleserbaserte verktøy for kontrollsummer, kryptografi og sikre påloggingsopplysninger.",
       "developer": "Undersøk arkiver, formater kode, generer identifikatorer og konverter utviklerkonfigurasjoner. Finn nettleserbaserte verktøy for daglige utviklingsoppgaver.",
