@@ -1,0 +1,4 @@
+{
+  "name": "Pemutar MIDI",
+  "description": "Putar file MIDI di browser dengan instrumen General MIDI bawaan. Lompat ke bagian tertentu dalam file .mid atau .midi, ubah kecepatan, ulangi pemutaran, dan bisukan trek satu per satu."
+}

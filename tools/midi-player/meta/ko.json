@@ -1,0 +1,4 @@
+{
+  "name": "MIDI 플레이어",
+  "description": "내장 General MIDI 악기로 브라우저에서 MIDI 파일을 재생하세요. .mid 또는 .midi 파일의 재생 위치와 속도를 바꾸고, 반복 재생하거나 개별 트랙을 음소거할 수 있습니다."
+}

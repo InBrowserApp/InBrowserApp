@@ -1,0 +1,4 @@
+{
+  "name": "MIDI 播放器",
+  "description": "使用內建 General MIDI 樂器在瀏覽器中播放 MIDI 檔案。跳至 .mid 或 .midi 檔案中的位置、調整播放速度、循環播放並將個別音軌靜音。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Lecteur MIDI",
+  "description": "Lisez des fichiers MIDI dans votre navigateur avec les instruments General MIDI intégrés. Parcourez un fichier .mid ou .midi, changez la vitesse, lisez en boucle et coupez le son des pistes de votre choix."
+}

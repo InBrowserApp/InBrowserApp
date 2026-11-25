@@ -331,6 +331,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/microsoft-word-to-pdf-converter/page"),
   "microsoft-word-viewer": () => import("@tool/microsoft-word-viewer/page"),
   "midi-monitor": () => import("@tool/midi-monitor/page"),
+  "midi-player": () => import("@tool/midi-player/page"),
   "midi-to-musicxml-converter": () =>
     import("@tool/midi-to-musicxml-converter/page"),
   "midi-to-sheet-music": () => import("@tool/midi-to-sheet-music/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "Lettore MIDI",
+  "description": "Riproduci file MIDI nel browser con gli strumenti General MIDI integrati. Spostati in un file .mid o .midi, cambia la velocità, ripeti in loop e silenzia singole tracce."
+}

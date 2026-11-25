@@ -1,18 +1,11 @@
 import { renderMidiToWav } from "./render"
+import { loadDefaultSoundBank } from "./sound-bank"
 
 export type Request = { file: File; soundFont?: File }
 export type Response =
   | Awaited<ReturnType<typeof renderMidiToWav>>
   | { type: "progress"; percent: number }
   | { type: "error"; key: "soundFontUnavailable" }
-
-async function fetchSoundFont(): Promise<ArrayBuffer> {
-  const response = await fetch(
-    new URL("../assets/GeneralUserGS.sf3", import.meta.url)
-  )
-  if (!response.ok) throw new Error("SoundFont download failed")
-  return response.arrayBuffer()
-}
 
 self.onmessage = async ({ data }: MessageEvent<Request>) => {
   let input: ArrayBuffer
@@ -25,7 +18,7 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
 
   let soundFont: ArrayBuffer
   try {
-    soundFont = await (data.soundFont?.arrayBuffer() ?? fetchSoundFont())
+    soundFont = await (data.soundFont?.arrayBuffer() ?? loadDefaultSoundBank())
   } catch {
     self.postMessage({
       type: "error",

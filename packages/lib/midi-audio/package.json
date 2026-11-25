@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./sound-bank": "./src/sound-bank.ts",
     "./worker-client": "./src/worker-client.ts"
   },
   "dependencies": {

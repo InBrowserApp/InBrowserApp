@@ -275,6 +275,7 @@
     "@tool/microsoft-word-to-pdf-converter": "workspace:*",
     "@tool/microsoft-word-viewer": "workspace:*",
     "@tool/midi-monitor": "workspace:*",
+    "@tool/midi-player": "workspace:*",
     "@tool/midi-to-musicxml-converter": "workspace:*",
     "@tool/midi-to-sheet-music": "workspace:*",
     "@tool/midi-to-wav-converter": "workspace:*",

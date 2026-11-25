@@ -1344,6 +1344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "music",
+    name: "Pemutar MIDI",
+    slug: "midi-player",
+  },
+  {
+    category: "music",
     name: "Konverter MIDI ke MusicXML",
     slug: "midi-to-musicxml-converter",
   },

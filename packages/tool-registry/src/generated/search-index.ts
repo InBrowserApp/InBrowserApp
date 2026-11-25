@@ -34177,6 +34177,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "midi-player",
+    category: "music",
+    icon: "list-music",
+    tags: [
+      "midi",
+      "midi player",
+      "soundfont",
+      "general midi",
+      "playback",
+      "music",
+    ],
+    locales: {
+      ar: {
+        name: "مشغّل MIDI",
+        description:
+          "شغّل ملفات MIDI في متصفحك بأصوات آلات General MIDI المدمجة. تنقّل داخل ملفات ‎.mid أو ‎.midi، وغيّر سرعة التشغيل أو كرّره، واكتم أي مسار على حدة.",
+      },
+      de: {
+        name: "MIDI-Player",
+        description:
+          "Spiele MIDI-Dateien mit integrierten General-MIDI-Instrumenten im Browser ab. Springe zu einer Stelle in einer .mid- oder .midi-Datei, ändere die Geschwindigkeit, wiederhole sie oder schalte einzelne Spuren stumm.",
+      },
+      en: {
+        name: "MIDI Player",
+        description:
+          "Play MIDI files in your browser with built-in General MIDI instruments. Seek through a .mid or .midi file, change playback speed, loop it, and mute individual tracks.",
+      },
+      es: {
+        name: "Reproductor MIDI",
+        description:
+          "Reproduce archivos MIDI en el navegador con instrumentos General MIDI integrados. Desplázate por un archivo .mid o .midi, cambia la velocidad, repite en bucle y silencia pistas individuales.",
+      },
+      fr: {
+        name: "Lecteur MIDI",
+        description:
+          "Lisez des fichiers MIDI dans votre navigateur avec les instruments General MIDI intégrés. Parcourez un fichier .mid ou .midi, changez la vitesse, lisez en boucle et coupez le son des pistes de votre choix.",
+      },
+      he: {
+        name: "נגן MIDI",
+        description:
+          "נגנו קובצי MIDI בדפדפן עם כלי General MIDI מובנים. עברו בין קטעים בקובץ ‎.mid או ‎.midi, שנו את מהירות ההשמעה, נגנו בלולאה והשתיקו רצועות בנפרד.",
+      },
+      hi: {
+        name: "MIDI प्लेयर",
+        description:
+          "ब्राउज़र में बिल्ट-इन General MIDI वाद्यों के साथ MIDI फ़ाइलें चलाएँ। .mid या .midi फ़ाइल में आगे-पीछे जाएँ, प्लेबैक की गति बदलें, लूप चलाएँ और अलग-अलग ट्रैक म्यूट करें।",
+      },
+      id: {
+        name: "Pemutar MIDI",
+        description:
+          "Putar file MIDI di browser dengan instrumen General MIDI bawaan. Lompat ke bagian tertentu dalam file .mid atau .midi, ubah kecepatan, ulangi pemutaran, dan bisukan trek satu per satu.",
+      },
+      it: {
+        name: "Lettore MIDI",
+        description:
+          "Riproduci file MIDI nel browser con gli strumenti General MIDI integrati. Spostati in un file .mid o .midi, cambia la velocità, ripeti in loop e silenzia singole tracce.",
+      },
+      ja: {
+        name: "MIDI プレーヤー",
+        description:
+          "内蔵の General MIDI 楽器で MIDI ファイルをブラウザ再生します。.mid や .midi ファイルの再生位置や速度を変え、ループ再生やトラックごとのミュートができます。",
+      },
+      ko: {
+        name: "MIDI 플레이어",
+        description:
+          "내장 General MIDI 악기로 브라우저에서 MIDI 파일을 재생하세요. .mid 또는 .midi 파일의 재생 위치와 속도를 바꾸고, 반복 재생하거나 개별 트랙을 음소거할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemain MIDI",
+        description:
+          "Mainkan fail MIDI dalam pelayar dengan alat muzik General MIDI terbina dalam. Lompat ke bahagian tertentu dalam fail .mid atau .midi, ubah kelajuan main balik, ulang main balik dan senyapkan trek satu demi satu.",
+      },
+      nl: {
+        name: "MIDI-speler",
+        description:
+          "Speel MIDI-bestanden af in je browser met ingebouwde General MIDI-instrumenten. Spring naar een passage in een .mid- of .midi-bestand, verander de afspeelsnelheid, herhaal het bestand of demp afzonderlijke sporen.",
+      },
+      no: {
+        name: "MIDI-spiller",
+        description:
+          "Spill av MIDI-filer i nettleseren med innebygde General MIDI-instrumenter. Hopp til et sted i en .mid- eller .midi-fil, endre hastigheten, gjenta avspillingen og demp enkeltspor.",
+      },
+      pl: {
+        name: "Odtwarzacz MIDI",
+        description:
+          "Odtwarzaj pliki MIDI w przeglądarce z brzmieniami wbudowanych instrumentów General MIDI. Przewijaj pliki .mid lub .midi, zmieniaj prędkość, odtwarzaj w pętli i wyciszaj wybrane ścieżki.",
+      },
+      pt: {
+        name: "Reprodutor MIDI",
+        description:
+          "Reproduza arquivos MIDI no navegador com instrumentos General MIDI integrados. Navegue pelo arquivo .mid ou .midi, mude a velocidade, repita em loop e silencie faixas individuais.",
+      },
+      ru: {
+        name: "MIDI-проигрыватель",
+        description:
+          "Воспроизводите MIDI-файлы в браузере со звуками встроенных инструментов General MIDI. Перематывайте файлы .mid и .midi, меняйте скорость, включайте повтор и отключайте отдельные дорожки.",
+      },
+      sv: {
+        name: "MIDI-spelare",
+        description:
+          "Spela MIDI-filer i webbläsaren med inbyggda General MIDI-instrument. Hoppa till ett avsnitt i en .mid- eller .midi-fil, ändra hastigheten, spela i loop eller tysta enskilda spår.",
+      },
+      th: {
+        name: "โปรแกรมเล่น MIDI",
+        description:
+          "เล่นไฟล์ MIDI ในเบราว์เซอร์ด้วยเสียงเครื่องดนตรี General MIDI ที่มีให้ เลื่อนไปยังท่อนที่ต้องการในไฟล์ .mid หรือ .midi ปรับความเร็ว เล่นวนซ้ำ และปิดเสียงแทร็กทีละแทร็ก",
+      },
+      tr: {
+        name: "MIDI Çalar",
+        description:
+          "Dahili General MIDI çalgılarıyla tarayıcınızda MIDI dosyalarını çalın. .mid veya .midi dosyasında istediğiniz bölüme geçin, çalma hızını değiştirin, döngüde çalın ve istediğiniz izleri susturun.",
+      },
+      vi: {
+        name: "Trình phát MIDI",
+        description:
+          "Phát tệp MIDI trong trình duyệt bằng nhạc cụ General MIDI có sẵn. Di chuyển trong tệp .mid hoặc .midi, đổi tốc độ phát, phát lặp và tắt tiếng từng rãnh.",
+      },
+      "zh-CN": {
+        name: "MIDI 播放器",
+        description:
+          "使用内置 General MIDI 乐器在浏览器中播放 MIDI 文件。跳转到 .mid 或 .midi 文件中的位置、调整播放速度、循环播放并将单个音轨静音。",
+      },
+      "zh-TW": {
+        name: "MIDI 播放器",
+        description:
+          "使用內建 General MIDI 樂器在瀏覽器中播放 MIDI 檔案。跳至 .mid 或 .midi 檔案中的位置、調整播放速度、循環播放並將個別音軌靜音。",
+      },
+    },
+  },
+  {
     slug: "midi-to-musicxml-converter",
     category: "music",
     icon: "arrow-left-right",

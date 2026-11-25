@@ -1,0 +1,4 @@
+{
+  "name": "Reproductor MIDI",
+  "description": "Reproduce archivos MIDI en el navegador con instrumentos General MIDI integrados. Desplázate por un archivo .mid o .midi, cambia la velocidad, repite en bucle y silencia pistas individuales."
+}
