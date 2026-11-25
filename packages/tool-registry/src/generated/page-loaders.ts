@@ -326,6 +326,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/murmurhash3-x86-128-hash-text-or-file/page"),
   "murmurhash3-x86-32-hash-text-or-file": () =>
     import("@tool/murmurhash3-x86-32-hash-text-or-file/page"),
+  "musicxml-to-pdf-converter": () =>
+    import("@tool/musicxml-to-pdf-converter/page"),
   "musicxml-viewer": () => import("@tool/musicxml-viewer/page"),
   "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),

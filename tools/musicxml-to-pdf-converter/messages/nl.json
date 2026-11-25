@@ -1,0 +1,19 @@
+{
+  "chooseFile": "MusicXML-bestand openen",
+  "changeFile": "Ander bestand kiezen",
+  "dropHint": "Sleep een MusicXML- of MXL-partituur hierheen",
+  "privacy": "Je partituur blijft in je browser.",
+  "example": "Voorbeeld proberen",
+  "paper": "Papierformaat",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 inch)",
+  "preview": "PDF-voorbeeld",
+  "page": "Pagina {page} van {total}",
+  "previous": "Vorige pagina",
+  "next": "Volgende pagina",
+  "loading": "Bladmuziek opmaken…",
+  "invalidScore": "Deze partituur kan niet worden opgemaakt. Probeer een ander bestand of exporteer de partituur opnieuw als MusicXML dat per partij is opgebouwd (partwise).",
+  "download": "PDF downloaden",
+  "downloadBusy": "PDF voorbereiden…",
+  "downloadError": "De PDF kan niet worden gemaakt. Probeer deze opnieuw te downloaden."
+}

@@ -2,6 +2,12 @@ const SVG_NS = "http://www.w3.org/2000/svg"
 const pixelsPerMillimeter = 96 / 25.4
 export const paperWidth = Math.round(210 * pixelsPerMillimeter)
 export const paperHeight = (paperWidth * 297) / 210
+export const paperSizes = {
+  a4: { width: paperWidth, height: paperHeight },
+  letter: { width: 816, height: 1056 },
+} as const
+export type ScorePaper = keyof typeof paperSizes
+
 const margin = Math.round(12 * pixelsPerMillimeter)
 export const pageContentWidth = paperWidth - 2 * margin
 const pageContentHeight = paperHeight - 2 * margin
@@ -31,19 +37,26 @@ export async function inScoreHost<T>(
   }
 }
 
-function paper() {
+function paper(size: ScorePaper = "a4") {
+  const { width, height } = paperSizes[size]
   const page = document.createElementNS(SVG_NS, "svg")
-  page.setAttribute("width", String(paperWidth))
-  page.setAttribute("height", String(paperHeight))
-  page.setAttribute("viewBox", `0 0 ${paperWidth} ${paperHeight}`)
+  page.setAttribute("width", String(width))
+  page.setAttribute("height", String(height))
+  page.setAttribute("viewBox", `0 0 ${width} ${height}`)
   page.setAttribute("color", "black")
   return page
 }
 
 export function serializeImagePage(page: SVGSVGElement, scale: number) {
   const copy = page.cloneNode(true) as SVGSVGElement
-  copy.setAttribute("width", String(paperWidth * scale))
-  copy.setAttribute("height", String(Math.round(paperHeight * scale)))
+  copy.setAttribute(
+    "width",
+    String(Math.round(Number(page.getAttribute("width")) * scale))
+  )
+  copy.setAttribute(
+    "height",
+    String(Math.round(Number(page.getAttribute("height")) * scale))
+  )
   const background = document.createElementNS(SVG_NS, "rect")
   background.setAttribute("width", "100%")
   background.setAttribute("height", "100%")
@@ -52,10 +65,14 @@ export function serializeImagePage(page: SVGSVGElement, scale: number) {
   return new XMLSerializer().serializeToString(copy)
 }
 
-export function placeFullPage(score: SVGSVGElement) {
-  const page = paper()
-  score.setAttribute("width", String(paperWidth))
-  score.setAttribute("height", String(paperHeight))
+export function scorePagePreviewBlob(page: SVGSVGElement) {
+  return new Blob([serializeImagePage(page, 1)], { type: "image/svg+xml" })
+}
+
+export function placeFullPage(score: SVGSVGElement, size: ScorePaper = "a4") {
+  const page = paper(size)
+  score.setAttribute("width", String(paperSizes[size].width))
+  score.setAttribute("height", String(paperSizes[size].height))
   page.append(score)
   return page
 }

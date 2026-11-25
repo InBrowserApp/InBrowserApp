@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Open MusicXML file",
+  "changeFile": "Change file",
+  "dropHint": "Drop a MusicXML or MXL score here",
+  "privacy": "Your score stays in your browser.",
+  "example": "Try an example",
+  "paper": "Paper size",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8.5 × 11 in)",
+  "preview": "PDF preview",
+  "page": "Page {page} of {total}",
+  "previous": "Previous page",
+  "next": "Next page",
+  "loading": "Laying out sheet music…",
+  "invalidScore": "This score could not be laid out. Try another file or export it again as partwise MusicXML.",
+  "download": "Download PDF",
+  "downloadBusy": "Preparing PDF…",
+  "downloadError": "Could not create the PDF. Try downloading it again."
+}

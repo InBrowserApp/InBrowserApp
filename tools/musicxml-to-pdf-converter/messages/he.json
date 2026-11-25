@@ -1,0 +1,19 @@
+{
+  "chooseFile": "פתיחת קובץ MusicXML",
+  "changeFile": "החלפת קובץ",
+  "dropHint": "גררו לכאן קובץ תווים מסוג MusicXML או MXL",
+  "privacy": "קובץ התווים נשאר בדפדפן.",
+  "example": "נסו דוגמה",
+  "paper": "גודל נייר",
+  "a4": "A4 (210 × 297 מ״מ)",
+  "letter": "US Letter (8.5 × 11 אינץ׳)",
+  "preview": "תצוגה מקדימה של PDF",
+  "page": "עמוד {page} מתוך {total}",
+  "previous": "העמוד הקודם",
+  "next": "העמוד הבא",
+  "loading": "מסדרים את התווים בעמודים…",
+  "invalidScore": "לא ניתן לסדר את התווים בעמודים. נסו קובץ אחר או ייצאו את התווים שוב כ־MusicXML במבנה לפי תפקידים (partwise).",
+  "download": "הורדת PDF",
+  "downloadBusy": "מכינים את ה־PDF…",
+  "downloadError": "לא ניתן ליצור את קובץ ה־PDF. נסו להוריד אותו שוב."
+}

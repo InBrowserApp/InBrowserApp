@@ -1,0 +1,19 @@
+{
+  "chooseFile": "MusicXML-Datei öffnen",
+  "changeFile": "Datei wechseln",
+  "dropHint": "MusicXML- oder MXL-Partitur hierher ziehen",
+  "privacy": "Deine Partitur bleibt in deinem Browser.",
+  "example": "Beispiel ausprobieren",
+  "paper": "Papierformat",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 Zoll)",
+  "preview": "PDF-Vorschau",
+  "page": "Seite {page} von {total}",
+  "previous": "Vorherige Seite",
+  "next": "Nächste Seite",
+  "loading": "Noten werden gesetzt…",
+  "invalidScore": "Die Partitur ließ sich nicht setzen. Wähle eine andere Datei oder exportiere sie erneut als nach Stimmen gegliedertes MusicXML (Partwise).",
+  "download": "PDF herunterladen",
+  "downloadBusy": "PDF wird vorbereitet…",
+  "downloadError": "Die PDF ließ sich nicht erstellen. Versuche, sie erneut herunterzuladen."
+}

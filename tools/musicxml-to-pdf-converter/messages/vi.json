@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Mở tệp MusicXML",
+  "changeFile": "Đổi tệp",
+  "dropHint": "Thả bản nhạc MusicXML hoặc MXL vào đây",
+  "privacy": "Bản nhạc chỉ nằm trong trình duyệt của bạn.",
+  "example": "Dùng thử bản mẫu",
+  "paper": "Khổ giấy",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 inch)",
+  "preview": "Xem trước PDF",
+  "page": "Trang {page} / {total}",
+  "previous": "Trang trước",
+  "next": "Trang tiếp theo",
+  "loading": "Đang dàn trang bản nhạc…",
+  "invalidScore": "Không thể dàn trang bản nhạc này. Hãy thử tệp khác hoặc xuất lại dưới dạng MusicXML theo từng bè.",
+  "download": "Tải PDF xuống",
+  "downloadBusy": "Đang chuẩn bị PDF…",
+  "downloadError": "Không thể tạo PDF. Hãy thử tải xuống lại."
+}

@@ -10,7 +10,9 @@ async function exportPdf(pages: SVGSVGElement[], language: string) {
   const { createDiagramPdf } = await import("@workspace/svg-pdf")
   const serializer = new XMLSerializer()
   const convert = (page: SVGSVGElement) =>
-    createDiagramPdf(serializer.serializeToString(page), "original", language)
+    createDiagramPdf(serializer.serializeToString(page), "original", language, {
+      keepPageSize: true,
+    })
   if (pages.length === 1) return convert(pages[0]!)
 
   const { PDFDocument } = await import("pdf-lib")

@@ -1323,6 +1323,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "murmurhash3-x86-32-hash-text-or-file",
   },
   {
+    category: "pdf",
+    name: "MusicXML PDF 변환기",
+    slug: "musicxml-to-pdf-converter",
+  },
+  {
     category: "misc",
     name: "MusicXML 뷰어",
     slug: "musicxml-viewer",

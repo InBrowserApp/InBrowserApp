@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML PDF変換",
+  "description": "MusicXMLや圧縮されたMXLファイルを印刷用の楽譜PDFに変換します。ブラウザでページをプレビューし、A4またはUS Letterを選んで、ベクターPDFをダウンロードできます。"
+}

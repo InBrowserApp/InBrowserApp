@@ -5,12 +5,15 @@
   "type": "module",
   "exports": {
     ".": "./src/export.ts",
+    "./musicxml": "./src/musicxml.ts",
+    "./musicxml-example": "./src/musicxml-example.ts",
     "./pages": "./src/pages.ts"
   },
   "dependencies": {
     "@workspace/raster-image": "workspace:*",
     "@workspace/svg-pdf": "workspace:*",
     "fflate": "catalog:",
+    "opensheetmusicdisplay": "catalog:",
     "pdf-lib": "catalog:"
   },
   "devDependencies": {

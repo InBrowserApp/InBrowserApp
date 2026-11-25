@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Ouvrir un fichier MusicXML",
+  "changeFile": "Changer de fichier",
+  "dropHint": "Déposez une partition MusicXML ou MXL ici",
+  "privacy": "Votre partition reste dans votre navigateur.",
+  "example": "Essayer un exemple",
+  "paper": "Format du papier",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "Lettre US (8,5 × 11 pouces)",
+  "preview": "Aperçu du PDF",
+  "page": "Page {page} sur {total}",
+  "previous": "Page précédente",
+  "next": "Page suivante",
+  "loading": "Mise en page de la partition…",
+  "invalidScore": "Impossible de mettre en page cette partition. Essayez un autre fichier ou exportez de nouveau la partition au format MusicXML structuré par partie (partwise).",
+  "download": "Télécharger le PDF",
+  "downloadBusy": "Préparation du PDF…",
+  "downloadError": "Impossible de créer le PDF. Relancez le téléchargement."
+}
