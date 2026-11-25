@@ -3,14 +3,15 @@ import { beforeEach, expect, test, vi } from "vitest"
 import { notebookDocument } from "./document"
 import { notebookMarkdown } from "./markdown"
 import type { Notebook } from "@workspace/notebook"
+import { readableImage } from "@workspace/web-document"
 import m from "../messages/en.json"
 
-const images = vi.hoisted(() => ({ readableImage: vi.fn() }))
 vi.mock("@workspace/web-document", async (original) => ({
   ...(await original<object>()),
-  ...images,
+  readableImage: vi.fn(),
 }))
-beforeEach(() => images.readableImage.mockReset().mockResolvedValue(true))
+const imageDecoder = vi.mocked(readableImage)
+beforeEach(() => imageDecoder.mockReset().mockResolvedValue(true))
 const cell = (html: string): Notebook["cells"][number] => ({
   kind: "markdown",
   html,
@@ -49,7 +50,7 @@ test("builds offline HTML and Markdown with safe links, notes, headings and cach
   expect(result.preview.html).toContain("data-web-link=")
   expect(result.preview.html).not.toContain(m.safePreview)
   expect(doc.querySelector("[data-web-link]")).toBeNull()
-  expect(images.readableImage).toHaveBeenCalledTimes(1)
+  expect(imageDecoder).toHaveBeenCalledTimes(1)
   expect(result.file.type).toBe("text/html;charset=utf-8")
   expect(result.notes).toEqual([m.safePreview, m.layoutNotice])
   expect(notebookMarkdown(doc)).toContain(
@@ -59,7 +60,7 @@ test("builds offline HTML and Markdown with safe links, notes, headings and cach
 })
 
 test("identifies missing/remote resources, unsupported output and unreadable included images", async () => {
-  images.readableImage.mockResolvedValue(false)
+  imageDecoder.mockResolvedValue(false)
   const unknown = {
     ...cell("<p>Unknown cell source</p>"),
     kind: "unknownCell" as const,
@@ -91,7 +92,7 @@ test("identifies missing/remote resources, unsupported output and unreadable inc
     "Broken plot · " + m.imageUnavailable
   )
   expect(result.document.body.textContent).toContain(m.unsupportedCell)
-  expect(images.readableImage).toHaveBeenCalledTimes(1)
+  expect(imageDecoder).toHaveBeenCalledTimes(1)
 })
 
 test("exports an empty notebook with the no-content message and respects cancellation", async () => {
