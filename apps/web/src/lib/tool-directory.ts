@@ -1,3 +1,4 @@
+import { getAlternateSearchName } from "@workspace/tool-registry/search-name"
 import type {
   ToolSearchIndexEntry,
   ToolSearchSuggestionEntry,
@@ -13,13 +14,11 @@ type CategorizedTool = Pick<
   "category" | "secondaryCategories"
 >
 
-type DirectoryToolEntry = Readonly<{
-  slug: string
-  category: string
-  icon: string
-  name: string
-  description: string
-}>
+type DirectoryToolEntry = ToolSearchSuggestionEntry &
+  Readonly<{
+    icon: string
+    description: string
+  }>
 
 /** Icon identifiers (see ToolIcon) shown on the home category tiles. */
 const CATEGORY_ICONS: Readonly<Record<string, string>> = {
@@ -124,12 +123,17 @@ function toDirectoryEntries(
   entries: readonly ToolSearchIndexEntry[],
   language: string
 ): readonly DirectoryToolEntry[] {
-  return entries.map((entry) => ({
-    slug: entry.slug,
-    category: entry.category,
-    icon: entry.icon,
-    ...resolveEntryLocale(entry, language),
-  }))
+  return entries.map((entry) => {
+    const locale = resolveEntryLocale(entry, language)
+
+    return {
+      slug: entry.slug,
+      category: entry.category,
+      icon: entry.icon,
+      ...locale,
+      alternateName: getAlternateSearchName(entry, language, locale.name),
+    }
+  })
 }
 
 type SearchSuggestionEntry = ToolSearchSuggestionEntry

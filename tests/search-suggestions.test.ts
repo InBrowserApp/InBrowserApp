@@ -12,6 +12,8 @@ const entries: readonly ToolSearchIndexEntry[] = [
     locales: {
       en: { name: "Example", description: "English description" },
       de: { name: "Beispiel", description: "German description" },
+      "zh-CN": { name: "简体示例", description: "简体说明" },
+      "zh-TW": { name: "繁體範例", description: "繁體說明" },
     },
   },
   {
@@ -33,6 +35,18 @@ describe("search suggestion modules", () => {
     expect(german).toContain('"slug": "example"')
     expect(german).not.toMatch(/description|locales|tags|icon|import\(/)
     expect(sources["search-suggestions.en.ts"]).toContain('"name": "Example"')
+  })
+
+  it("ships the alternate Chinese title only in the paired locale modules", () => {
+    const sources = createSearchSuggestionSources(entries)
+
+    expect(sources["search-suggestions.zh-CN.ts"]).toContain(
+      '"alternateName": "繁體範例"'
+    )
+    expect(sources["search-suggestions.zh-TW.ts"]).toContain(
+      '"alternateName": "简体示例"'
+    )
+    expect(sources["search-suggestions.en.ts"]).not.toContain("alternateName")
   })
 
   it("uses dynamic imports per locale and provides an English fallback", () => {
