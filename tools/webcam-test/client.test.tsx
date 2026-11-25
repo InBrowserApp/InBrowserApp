@@ -79,7 +79,7 @@ function mount(measure = true) {
 }
 
 function click(name: string) {
-  fireEvent.click(screen.getByRole("button", { name, exact: true }))
+  fireEvent.click(screen.getByRole("button", { name }))
 }
 
 afterEach(() => {
