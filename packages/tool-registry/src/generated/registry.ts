@@ -12971,6 +12971,130 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "djvu-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "scan-text",
+    tags: ["djvu", "djv", "pdf", "converter", "scanned", "searchable", "book"],
+    locales: {
+      ar: {
+        name: "تحويل DjVu إلى PDF",
+        description:
+          "حوّل الكتب والمستندات الممسوحة ضوئيًا بصيغة DjVu أو DJV إلى PDF في متصفحك. احتفظ بتخطيط الصفحات والنص القابل للبحث، وعاين النتيجة قبل تنزيل ملف PDF.",
+      },
+      de: {
+        name: "DjVu in PDF umwandeln",
+        description:
+          "Wandle gescannte Bücher und Dokumente im DjVu- oder DJV-Format direkt im Browser in PDF um. Seitenlayout und vorhandener durchsuchbarer Text bleiben erhalten. Prüfe das Ergebnis in der Vorschau und lade das PDF herunter.",
+      },
+      en: {
+        name: "DjVu to PDF Converter",
+        description:
+          "Convert scanned books and documents from DjVu or DJV to PDF in your browser. Keep the page layout and existing searchable text, preview the result, and download the PDF.",
+      },
+      es: {
+        name: "Convertidor de DjVu a PDF",
+        description:
+          "Convierte libros y documentos escaneados de DjVu o DJV a PDF en tu navegador. Conserva el diseño de las páginas y el texto que ya permite búsquedas. Revisa y descarga el PDF.",
+      },
+      fr: {
+        name: "Convertisseur DjVu en PDF",
+        description:
+          "Convertissez vos livres et documents numérisés DjVu (.djvu ou .djv) en PDF dans votre navigateur. Vérifiez l’aperçu et téléchargez le PDF en conservant la mise en page et le texte sélectionnable d’origine.",
+      },
+      he: {
+        name: "ממיר DjVu ל־PDF",
+        description:
+          "המירו ספרים ומסמכים סרוקים בפורמט DjVu או DJV ל־PDF בדפדפן. צפו בתוצאה והורידו את קובץ ה־PDF עם פריסת העמודים המקורית והטקסט הקיים שאפשר לחפש בו.",
+      },
+      hi: {
+        name: "DjVu से PDF कन्वर्टर",
+        description:
+          "स्कैन की गई DjVu या DJV किताबें और दस्तावेज़ ब्राउज़र में PDF में बदलें। पेजों का लेआउट और पहले से मौजूद खोजने योग्य टेक्स्ट बने रहते हैं। प्रीव्यू देखकर PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DjVu ke PDF",
+        description:
+          "Ubah hasil pindai buku dan dokumen berformat DjVu atau DJV ke PDF langsung di browser. Pertahankan tata letak halaman dan teks yang sudah bisa dicari, lihat pratinjau, lalu unduh PDF.",
+      },
+      it: {
+        name: "Convertitore da DjVu a PDF",
+        description:
+          "Converti libri e documenti scansionati da DjVu o DJV in PDF nel browser. Mantieni l’impaginazione e il testo ricercabile già presente, controlla l’anteprima e scarica il PDF.",
+      },
+      ja: {
+        name: "DjVuをPDFに変換",
+        description:
+          "DjVu や DJV 形式のスキャン書籍や文書をブラウザーで PDF に変換します。元のレイアウトと検索可能なテキストを保ち、プレビューで確認してから PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "DjVu PDF 변환기",
+        description:
+          "스캔한 책과 문서의 DjVu 또는 DJV 파일을 브라우저에서 PDF로 변환하세요. 페이지 레이아웃과 원본의 검색 가능한 텍스트를 유지하며, 결과를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DjVu kepada PDF",
+        description:
+          "Tukar buku dan dokumen imbasan daripada fail DjVu atau DJV kepada PDF dalam pelayar. Kekalkan reka letak halaman dan teks yang boleh dicari daripada fail asal. Pratonton hasil sebelum memuat turun PDF.",
+      },
+      nl: {
+        name: "DjVu-naar-PDF-converter",
+        description:
+          "Zet gescande boeken en documenten in DjVu- of DJV-formaat in je browser om naar PDF. De pagina-indeling en bestaande doorzoekbare tekst blijven behouden. Bekijk het resultaat en download de PDF.",
+      },
+      no: {
+        name: "Konverter DjVu til PDF",
+        description:
+          "Konverter skannede bøker og dokumenter fra DjVu eller DJV til PDF i nettleseren. Behold sideoppsettet og eksisterende søkbar tekst, forhåndsvis resultatet og last ned PDF-en.",
+      },
+      pl: {
+        name: "Konwerter DjVu na PDF",
+        description:
+          "Konwertuj skany książek i dokumentów DjVu lub DJV na PDF w przeglądarce. Zachowaj układ stron i możliwość wyszukiwania istniejącego tekstu, sprawdź podgląd i pobierz PDF.",
+      },
+      pt: {
+        name: "Conversor de DjVu para PDF",
+        description:
+          "Converta livros e documentos digitalizados de DjVu ou DJV para PDF no navegador. Preserve o layout e o texto pesquisável do original, confira a prévia e baixe o PDF.",
+      },
+      ru: {
+        name: "Конвертер DjVu в PDF",
+        description:
+          "Преобразуйте сканы книг и документов из DjVu или DJV в PDF прямо в браузере. Вид страниц и имеющийся текстовый слой сохраняются. Проверьте результат и скачайте PDF.",
+      },
+      sv: {
+        name: "Konvertera DjVu till PDF",
+        description:
+          "Konvertera skannade böcker och dokument från DjVu eller DJV till PDF i webbläsaren. Behåll sidlayouten och den sökbara text som redan finns, granska resultatet och ladda ner PDF-filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DjVu เป็น PDF",
+        description:
+          "แปลงหนังสือและเอกสารที่สแกนจากไฟล์ DjVu หรือ DJV เป็น PDF ในเบราว์เซอร์ คงรูปแบบหน้าและข้อความที่ค้นหาได้จากต้นฉบับ พร้อมดูตัวอย่างก่อนดาวน์โหลด PDF",
+      },
+      tr: {
+        name: "DjVu’dan PDF’ye Dönüştürücü",
+        description:
+          "DjVu veya DJV biçimindeki taranmış kitap ve belgeleri tarayıcınızda PDF’ye dönüştürün. Sayfa düzenini ve mevcut aranabilir metni koruyun, sonucu önizleyin ve PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DjVu sang PDF",
+        description:
+          "Chuyển sách và tài liệu đã quét ở định dạng DjVu hoặc DJV sang PDF ngay trong trình duyệt. Giữ nguyên bố cục trang và phần văn bản có thể tìm kiếm trong tệp gốc. Xem trước kết quả rồi tải PDF xuống.",
+      },
+      "zh-CN": {
+        name: "DjVu 转 PDF 转换器",
+        description:
+          "在浏览器中将 DjVu 或 DJV 格式的扫描书籍和文档转为 PDF，保留原有页面布局和可搜索文本，支持预览和下载。",
+      },
+      "zh-TW": {
+        name: "DjVu 轉 PDF",
+        description:
+          "在瀏覽器中將 DjVu 或 DJV 格式的掃描書籍與文件轉成 PDF。保留原始版面和檔案中已有的可搜尋文字，確認預覽後即可下載。",
+      },
+    },
+  },
+  {
     slug: "djvu-viewer",
     category: "document",
     icon: "book-open",
@@ -69623,6 +69747,130 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DICOM 檢視器",
         description:
           "在瀏覽器中開啟本機 DICOM（.dcm、.dicom）影像，瀏覽 CT 和 MRI 切片、調整窗寬與窗位，並檢視 DICOM 標籤，無須上傳檔案。",
+      },
+    },
+  },
+  "djvu-to-pdf-converter": {
+    slug: "djvu-to-pdf-converter",
+    category: "ebook",
+    secondaryCategories: ["pdf"],
+    icon: "scan-text",
+    tags: ["djvu", "djv", "pdf", "converter", "scanned", "searchable", "book"],
+    locales: {
+      ar: {
+        name: "تحويل DjVu إلى PDF",
+        description:
+          "حوّل الكتب والمستندات الممسوحة ضوئيًا بصيغة DjVu أو DJV إلى PDF في متصفحك. احتفظ بتخطيط الصفحات والنص القابل للبحث، وعاين النتيجة قبل تنزيل ملف PDF.",
+      },
+      de: {
+        name: "DjVu in PDF umwandeln",
+        description:
+          "Wandle gescannte Bücher und Dokumente im DjVu- oder DJV-Format direkt im Browser in PDF um. Seitenlayout und vorhandener durchsuchbarer Text bleiben erhalten. Prüfe das Ergebnis in der Vorschau und lade das PDF herunter.",
+      },
+      en: {
+        name: "DjVu to PDF Converter",
+        description:
+          "Convert scanned books and documents from DjVu or DJV to PDF in your browser. Keep the page layout and existing searchable text, preview the result, and download the PDF.",
+      },
+      es: {
+        name: "Convertidor de DjVu a PDF",
+        description:
+          "Convierte libros y documentos escaneados de DjVu o DJV a PDF en tu navegador. Conserva el diseño de las páginas y el texto que ya permite búsquedas. Revisa y descarga el PDF.",
+      },
+      fr: {
+        name: "Convertisseur DjVu en PDF",
+        description:
+          "Convertissez vos livres et documents numérisés DjVu (.djvu ou .djv) en PDF dans votre navigateur. Vérifiez l’aperçu et téléchargez le PDF en conservant la mise en page et le texte sélectionnable d’origine.",
+      },
+      he: {
+        name: "ממיר DjVu ל־PDF",
+        description:
+          "המירו ספרים ומסמכים סרוקים בפורמט DjVu או DJV ל־PDF בדפדפן. צפו בתוצאה והורידו את קובץ ה־PDF עם פריסת העמודים המקורית והטקסט הקיים שאפשר לחפש בו.",
+      },
+      hi: {
+        name: "DjVu से PDF कन्वर्टर",
+        description:
+          "स्कैन की गई DjVu या DJV किताबें और दस्तावेज़ ब्राउज़र में PDF में बदलें। पेजों का लेआउट और पहले से मौजूद खोजने योग्य टेक्स्ट बने रहते हैं। प्रीव्यू देखकर PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DjVu ke PDF",
+        description:
+          "Ubah hasil pindai buku dan dokumen berformat DjVu atau DJV ke PDF langsung di browser. Pertahankan tata letak halaman dan teks yang sudah bisa dicari, lihat pratinjau, lalu unduh PDF.",
+      },
+      it: {
+        name: "Convertitore da DjVu a PDF",
+        description:
+          "Converti libri e documenti scansionati da DjVu o DJV in PDF nel browser. Mantieni l’impaginazione e il testo ricercabile già presente, controlla l’anteprima e scarica il PDF.",
+      },
+      ja: {
+        name: "DjVuをPDFに変換",
+        description:
+          "DjVu や DJV 形式のスキャン書籍や文書をブラウザーで PDF に変換します。元のレイアウトと検索可能なテキストを保ち、プレビューで確認してから PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "DjVu PDF 변환기",
+        description:
+          "스캔한 책과 문서의 DjVu 또는 DJV 파일을 브라우저에서 PDF로 변환하세요. 페이지 레이아웃과 원본의 검색 가능한 텍스트를 유지하며, 결과를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DjVu kepada PDF",
+        description:
+          "Tukar buku dan dokumen imbasan daripada fail DjVu atau DJV kepada PDF dalam pelayar. Kekalkan reka letak halaman dan teks yang boleh dicari daripada fail asal. Pratonton hasil sebelum memuat turun PDF.",
+      },
+      nl: {
+        name: "DjVu-naar-PDF-converter",
+        description:
+          "Zet gescande boeken en documenten in DjVu- of DJV-formaat in je browser om naar PDF. De pagina-indeling en bestaande doorzoekbare tekst blijven behouden. Bekijk het resultaat en download de PDF.",
+      },
+      no: {
+        name: "Konverter DjVu til PDF",
+        description:
+          "Konverter skannede bøker og dokumenter fra DjVu eller DJV til PDF i nettleseren. Behold sideoppsettet og eksisterende søkbar tekst, forhåndsvis resultatet og last ned PDF-en.",
+      },
+      pl: {
+        name: "Konwerter DjVu na PDF",
+        description:
+          "Konwertuj skany książek i dokumentów DjVu lub DJV na PDF w przeglądarce. Zachowaj układ stron i możliwość wyszukiwania istniejącego tekstu, sprawdź podgląd i pobierz PDF.",
+      },
+      pt: {
+        name: "Conversor de DjVu para PDF",
+        description:
+          "Converta livros e documentos digitalizados de DjVu ou DJV para PDF no navegador. Preserve o layout e o texto pesquisável do original, confira a prévia e baixe o PDF.",
+      },
+      ru: {
+        name: "Конвертер DjVu в PDF",
+        description:
+          "Преобразуйте сканы книг и документов из DjVu или DJV в PDF прямо в браузере. Вид страниц и имеющийся текстовый слой сохраняются. Проверьте результат и скачайте PDF.",
+      },
+      sv: {
+        name: "Konvertera DjVu till PDF",
+        description:
+          "Konvertera skannade böcker och dokument från DjVu eller DJV till PDF i webbläsaren. Behåll sidlayouten och den sökbara text som redan finns, granska resultatet och ladda ner PDF-filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DjVu เป็น PDF",
+        description:
+          "แปลงหนังสือและเอกสารที่สแกนจากไฟล์ DjVu หรือ DJV เป็น PDF ในเบราว์เซอร์ คงรูปแบบหน้าและข้อความที่ค้นหาได้จากต้นฉบับ พร้อมดูตัวอย่างก่อนดาวน์โหลด PDF",
+      },
+      tr: {
+        name: "DjVu’dan PDF’ye Dönüştürücü",
+        description:
+          "DjVu veya DJV biçimindeki taranmış kitap ve belgeleri tarayıcınızda PDF’ye dönüştürün. Sayfa düzenini ve mevcut aranabilir metni koruyun, sonucu önizleyin ve PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DjVu sang PDF",
+        description:
+          "Chuyển sách và tài liệu đã quét ở định dạng DjVu hoặc DJV sang PDF ngay trong trình duyệt. Giữ nguyên bố cục trang và phần văn bản có thể tìm kiếm trong tệp gốc. Xem trước kết quả rồi tải PDF xuống.",
+      },
+      "zh-CN": {
+        name: "DjVu 转 PDF 转换器",
+        description:
+          "在浏览器中将 DjVu 或 DJV 格式的扫描书籍和文档转为 PDF，保留原有页面布局和可搜索文本，支持预览和下载。",
+      },
+      "zh-TW": {
+        name: "DjVu 轉 PDF",
+        description:
+          "在瀏覽器中將 DjVu 或 DJV 格式的掃描書籍與文件轉成 PDF。保留原始版面和檔案中已有的可搜尋文字，確認預覽後即可下載。",
       },
     },
   },

@@ -127,6 +127,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "dead-pixel-test": () => import("@tool/dead-pixel-test/page"),
   "device-information": () => import("@tool/device-information/page"),
   "dicom-viewer": () => import("@tool/dicom-viewer/page"),
+  "djvu-to-pdf-converter": () => import("@tool/djvu-to-pdf-converter/page"),
   "djvu-viewer": () => import("@tool/djvu-viewer/page"),
   "dmarc-report-viewer": () => import("@tool/dmarc-report-viewer/page"),
   "dms-coordinate-converter": () =>
