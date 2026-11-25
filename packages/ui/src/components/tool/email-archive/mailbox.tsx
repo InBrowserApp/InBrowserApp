@@ -80,7 +80,13 @@ export function Mailbox({
       (entries ?? []).map((entry, id) => ({
         ...entry,
         id,
-        search: [entry.subject || m.subjectFallback, entry.from, entry.to]
+        search: [
+          entry.subject || m.subjectFallback,
+          entry.from,
+          entry.to,
+          entry.cc,
+          entry.bcc,
+        ]
           .join("\n")
           .toLocaleLowerCase(lang),
       })),
@@ -95,8 +101,12 @@ export function Mailbox({
     )
   }, [folder, query, rows, lang])
   const date = useMemo(
-    () => new Intl.DateTimeFormat(lang, { dateStyle: "medium" }),
-    [lang]
+    () =>
+      new Intl.DateTimeFormat(lang, {
+        dateStyle: "medium",
+        timeZone: folderMessages ? "UTC" : undefined,
+      }),
+    [lang, folderMessages]
   )
   const start = page * pageSize
   const end = Math.min(start + pageSize, filtered.length)

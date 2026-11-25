@@ -32,5 +32,6 @@
   "cc": "Bilgi",
   "bcc": "Gizli",
   "rtfOnly": "Bu ileti yalnızca burada görüntülenemeyen bir Outlook zengin metin gövdesi içeriyor. Üstbilgileri ve ekleri kullanılabilir.",
-  "attachmentError": "Bazı ek ayrıntıları okunamadı."
+  "attachmentError": "Bazı ek ayrıntıları okunamadı.",
+  "nested": "Ekli e-posta"
 }

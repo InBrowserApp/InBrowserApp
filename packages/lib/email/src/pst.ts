@@ -13,6 +13,7 @@ type Source = {
 const pageSize = 1024 * 1024
 const cacheSize = 8
 const byteAttachment = 1
+const embeddedMessage = 5
 const nodeTypeMask = 0x1f
 const searchFolder = 0x03
 
@@ -54,7 +55,37 @@ function label(name: string, email: string) {
   return name || email
 }
 
-function messageSummary(message: PSTMessage, folder: number): MailSummary {
+function messageRecipients(message: PSTMessage) {
+  const fallback = {
+    to: cleanLabel(message.displayTo),
+    cc: cleanLabel(message.displayCC),
+    bcc: cleanLabel(message.displayBCC),
+  }
+  const byType = [[], [], []] as string[][]
+  try {
+    for (let i = 0; i < message.numberOfRecipients; i++) {
+      const recipient = message.getRecipient(i)
+      if (!recipient) continue
+      const address = label(
+        recipient.displayName,
+        recipient.smtpAddress || recipient.emailAddress
+      )
+      if (address) byType[recipient.recipientType - 1]?.push(address)
+    }
+    return {
+      to: byType[0]!.join("; ") || fallback.to,
+      cc: byType[1]!.join("; ") || fallback.cc,
+      bcc: byType[2]!.join("; ") || fallback.bcc,
+    }
+  } catch {
+    // A missing recipient table still leaves the transport display names.
+    return fallback
+  }
+}
+
+type PstSummary = MailSummary & Pick<Email, "cc" | "bcc">
+
+function messageSummary(message: PSTMessage, folder: number): PstSummary {
   const date = message.clientSubmitTime || message.messageDeliveryTime
   return {
     subject: cleanLabel(message.subject),
@@ -62,7 +93,7 @@ function messageSummary(message: PSTMessage, folder: number): MailSummary {
       message.sentRepresentingName || message.senderName,
       message.sentRepresentingEmailAddress || message.senderEmailAddress
     ),
-    to: cleanLabel(message.displayTo),
+    ...messageRecipients(message),
     date: date && Number.isFinite(date.getTime()) ? date.toISOString() : "",
     folder,
   }
@@ -80,20 +111,26 @@ function readAttachments(message: PSTMessage, html: string, notices: Notice[]) {
   for (let i = 0; i < count; i++) {
     try {
       const item = message.getAttachment(i)
-      const stream =
-        item.attachMethod === byteAttachment ? item.fileInputStream : null
-      if (!stream) {
-        if (!notices.includes("attachmentError"))
-          notices.push("attachmentError")
+      const name = cleanLabel(item.longFilename || item.filename)
+      if (item.attachMethod === embeddedMessage) {
+        attachments.push({
+          name: name || cleanLabel(item.displayName),
+          type: "application/vnd.ms-outlook",
+          size: null,
+          kind: "nested",
+        })
         continue
       }
+      if (item.attachMethod !== byteAttachment) continue
+      const stream = item.fileInputStream
+      if (!stream) throw new Error("invalid")
       const size = stream.length.toNumber()
       const bytes = new Uint8Array(size)
       if (size) stream.readCompletely(Buffer.from(bytes.buffer))
       const type = item.mimeTag || "application/octet-stream"
       const cid = contentId(item.contentId)
       attachments.push({
-        name: cleanLabel(item.longFilename || item.filename),
+        name,
         type,
         bytes,
         size,
@@ -110,11 +147,14 @@ function readAttachments(message: PSTMessage, html: string, notices: Notice[]) {
 export async function openPst(source: Source) {
   // pst-extractor's browser path uses a byte source and the browser Buffer polyfill.
   globalThis.Buffer ??= Buffer
+  const header = Buffer.alloc(10)
+  source.read(header, header.length, 0)
+  if (header.toString("ascii", 8) !== "SM") throw new Error("invalid")
   const { PSTFile, PSTMessage } = await import("pst-extractor")
   const { PSTUtil } = await import("pst-extractor/dist/PSTUtil.class.js")
   const pst = new PSTFile(source)
   const indexed: {
-    summary: MailSummary
+    summary: PstSummary
     handle: PSTMessage["descriptorNodeId"]
   }[] = []
   const folders: string[] = []
@@ -169,8 +209,6 @@ export async function openPst(source: Source) {
       return {
         ...summary,
         format: "PST",
-        cc: cleanLabel(message.displayCC),
-        bcc: cleanLabel(message.displayBCC),
         html,
         text,
         attachments: readAttachments(message, html, notices),

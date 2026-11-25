@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Bcc",
   "rtfOnly": "Diese Nachricht enthält nur Outlook-Rich-Text, der hier nicht angezeigt werden kann. Kopfzeilen und Anhänge sind verfügbar.",
-  "attachmentError": "Einige Anhangdetails konnten nicht gelesen werden."
+  "attachmentError": "Einige Anhangdetails konnten nicht gelesen werden.",
+  "nested": "Angehängte E-Mail"
 }

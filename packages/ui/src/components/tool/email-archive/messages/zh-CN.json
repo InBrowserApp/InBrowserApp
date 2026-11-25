@@ -32,5 +32,6 @@
   "cc": "抄送",
   "bcc": "密送",
   "rtfOnly": "此邮件仅包含 Outlook 富文本正文，无法在此处显示。您仍可查看邮件头和附件。",
-  "attachmentError": "无法读取部分附件详情。"
+  "attachmentError": "无法读取部分附件详情。",
+  "nested": "附加的邮件"
 }

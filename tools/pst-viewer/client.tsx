@@ -1,4 +1,5 @@
 import { EmailArchiveViewer } from "@workspace/ui/components/tool/email-archive/viewer"
+import { FileArchive } from "@workspace/ui/icons"
 import type { ComponentProps } from "react"
 import type own from "./messages/en.json"
 
@@ -21,7 +22,7 @@ export default function Client({
   return (
     <EmailArchiveViewer
       tool="pst-viewer"
-      icon="archive"
+      emptyIcon={<FileArchive aria-hidden="true" />}
       accept=".pst"
       createWorker={createWorker}
       messages={messages}

@@ -32,5 +32,6 @@
   "cc": "Kopi",
   "bcc": "Blindkopi",
   "rtfOnly": "Denne meldingen inneholder bare Outlook-riktekst, som ikke kan vises her. Meldingshoder og vedlegg er tilgjengelige.",
-  "attachmentError": "Noen vedleggsdetaljer kunne ikke leses."
+  "attachmentError": "Noen vedleggsdetaljer kunne ikke leses.",
+  "nested": "Vedlagt e-post"
 }

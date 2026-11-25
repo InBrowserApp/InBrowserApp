@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Bcc",
   "rtfOnly": "Dit bericht bevat alleen Outlook-tekst met opmaak, die hier niet kan worden weergegeven. De headers en bijlagen zijn beschikbaar.",
-  "attachmentError": "Sommige bijlagegegevens konden niet worden gelezen."
+  "attachmentError": "Sommige bijlagegegevens konden niet worden gelezen.",
+  "nested": "Bijgevoegde e-mail"
 }

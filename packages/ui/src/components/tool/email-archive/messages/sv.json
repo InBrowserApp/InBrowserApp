@@ -32,5 +32,6 @@
   "cc": "Kopia",
   "bcc": "Hemlig kopia",
   "rtfOnly": "Meddelandet innehåller bara Outlook-text i RTF-format som inte kan visas här. Meddelandehuvuden och bilagor är tillgängliga.",
-  "attachmentError": "Viss information om bilagorna kunde inte läsas."
+  "attachmentError": "Viss information om bilagorna kunde inte läsas.",
+  "nested": "Bifogat e-postmeddelande"
 }

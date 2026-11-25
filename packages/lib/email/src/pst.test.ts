@@ -36,5 +36,29 @@ test("decodes compressed blocks and rejects invalid file headers", async () => {
   expect(source.unzip(deflateSync("compressed PST block")).toString()).toBe(
     "compressed PST block"
   )
-  await expect(openPst(source)).rejects.toThrow(/Invalid file header/)
+  await expect(openPst(source)).rejects.toThrow("invalid")
+})
+
+test("rejects an OST header and a partial read from a PST source", async () => {
+  for (const [magic, error] of [
+    ["SO", "invalid"],
+    ["SM", "Incomplete read"],
+  ] as const) {
+    const bytes = Buffer.alloc(514)
+    bytes.write("!BDN")
+    bytes.write(magic, 8)
+    await expect(
+      openPst({
+        read(target, length) {
+          return bytes.copy(
+            target,
+            0,
+            0,
+            length === bytes.length ? length - 1 : length
+          )
+        },
+        unzip: (data) => data,
+      })
+    ).rejects.toThrow(error)
+  }
 })

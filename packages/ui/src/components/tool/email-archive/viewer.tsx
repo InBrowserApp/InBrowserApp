@@ -1,4 +1,5 @@
 import { useState } from "react"
+import type { ReactNode } from "react"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -10,13 +11,12 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
 import { Folder } from "@workspace/ui/icons"
-import { ToolIcon } from "../tool-icon"
 import { Mailbox } from "./mailbox"
 import type { ArchiveMessages, FolderMessages } from "./copy"
 
 export function EmailArchiveViewer({
   tool,
-  icon,
+  emptyIcon,
   accept,
   createWorker,
   sample,
@@ -26,7 +26,7 @@ export function EmailArchiveViewer({
   title,
 }: {
   tool: string
-  icon: string
+  emptyIcon: ReactNode
   accept: string
   createWorker: () => Worker
   sample?: () => File
@@ -53,9 +53,7 @@ export function EmailArchiveViewer({
       renderEmpty={(chooseFile) => (
         <Empty className="min-h-72 rounded-none">
           <EmptyHeader>
-            <EmptyMedia variant="icon">
-              <ToolIcon icon={icon} aria-hidden="true" />
-            </EmptyMedia>
+            <EmptyMedia variant="icon">{emptyIcon}</EmptyMedia>
             <EmptyTitle>{m.drop}</EmptyTitle>
             <EmptyDescription>{m.formats}</EmptyDescription>
           </EmptyHeader>

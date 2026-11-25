@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Bcc",
   "rtfOnly": "Mesej ini hanya mengandungi isi teks kaya Outlook yang tidak dapat dipaparkan di sini. Pengepala dan lampirannya tersedia.",
-  "attachmentError": "Sesetengah butiran lampiran tidak dapat dibaca."
+  "attachmentError": "Sesetengah butiran lampiran tidak dapat dibaca.",
+  "nested": "E-mel dilampirkan"
 }

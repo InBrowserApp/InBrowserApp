@@ -32,5 +32,6 @@
   "cc": "DW",
   "bcc": "UDW",
   "rtfOnly": "Ta wiadomość zawiera tylko tekst sformatowany programu Outlook, którego nie można tu wyświetlić. Nagłówki i załączniki są dostępne.",
-  "attachmentError": "Nie udało się odczytać niektórych szczegółów załączników."
+  "attachmentError": "Nie udało się odczytać niektórych szczegółów załączników.",
+  "nested": "Załączony e-mail"
 }

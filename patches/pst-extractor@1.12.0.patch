@@ -24,7 +24,7 @@ index 052825cd..74dd2888 100644
       * Close the file.
       * @memberof PSTFile
 diff --git a/dist/PSTFile.class.js b/dist/PSTFile.class.js
-index e356b2a3..4b116ea8 100644
+index e356b2a3..e8820484 100644
 --- a/dist/PSTFile.class.js
 +++ b/dist/PSTFile.class.js
 @@ -38,6 +38,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
@@ -46,17 +46,21 @@ index e356b2a3..4b116ea8 100644
          else {
              // use PST in filesystem
              this._pstFilename = arg;
-@@ -803,6 +808,9 @@ class PSTFile {
+@@ -803,6 +808,13 @@ class PSTFile {
       * @memberof PSTFile
       */
      readSync(buffer, length, position) {
 +        if (this.byteSource) {
-+            return this.byteSource.read(buffer, length, position);
++            const bytesRead = this.byteSource.read(buffer, length, position);
++            if (bytesRead !== length) {
++                throw new Error("PSTFile::readSync Incomplete read");
++            }
++            return bytesRead;
 +        }
          if (this.pstFD > 0) {
              // read from file system
              return fs.readSync(this.pstFD, buffer, 0, length, position);
-@@ -813,6 +821,9 @@ class PSTFile {
+@@ -813,6 +825,9 @@ class PSTFile {
              return length;
          }
      }

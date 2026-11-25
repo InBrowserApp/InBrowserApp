@@ -32,5 +32,6 @@
   "cc": "副本",
   "bcc": "密件副本",
   "rtfOnly": "此郵件僅包含 Outlook RTF 格式的本文，無法在此顯示。仍可檢視其標頭與附件。",
-  "attachmentError": "無法讀取部分附件詳細資訊。"
+  "attachmentError": "無法讀取部分附件詳細資訊。",
+  "nested": "附加的郵件"
 }

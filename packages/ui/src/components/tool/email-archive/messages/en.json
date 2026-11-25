@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Bcc",
   "rtfOnly": "This message only contains an Outlook rich-text body, which cannot be displayed here. Its headers and attachments are available.",
-  "attachmentError": "Some attachment details could not be read."
+  "attachmentError": "Some attachment details could not be read.",
+  "nested": "Attached email"
 }

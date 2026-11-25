@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Cco",
   "rtfOnly": "Esta mensagem contém apenas um corpo em texto formatado do Outlook, que não pode ser exibido aqui. Os cabeçalhos e anexos estão disponíveis.",
-  "attachmentError": "Não foi possível ler alguns detalhes dos anexos."
+  "attachmentError": "Não foi possível ler alguns detalhes dos anexos.",
+  "nested": "E-mail anexado"
 }

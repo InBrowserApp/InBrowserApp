@@ -32,8 +32,8 @@ export function ReadMessage({
       return undefined
     }
   }, [email])
-  const attachments = email.attachments.flatMap(({ bytes, name }) =>
-    bytes ? [{ bytes, name: name || m.attachmentFallback }] : []
+  const attachments = email.attachments.filter(
+    ({ bytes, kind }) => bytes || kind === "nested"
   )
   const formatSize = fileSizeFormatter(lang)
   const date =
@@ -75,36 +75,40 @@ export function ReadMessage({
               {m.attachments} ({attachments.length.toLocaleString(lang)})
             </summary>
             <ul className="mt-2 space-y-1">
-              {attachments.map(({ bytes, name }, index) => (
+              {attachments.map(({ bytes, name, kind }, index) => (
                 <li
                   key={index}
                   className="flex min-w-0 items-center justify-between gap-2 rounded-md border ps-3 pe-1"
                 >
                   <span className="min-w-0 text-sm wrap-anywhere">
-                    <bdi>{name}</bdi>
+                    <bdi>{name || m.attachmentFallback}</bdi>
                     <small className="ms-2 text-muted-foreground">
-                      {formatSize(bytes.byteLength)}
+                      {kind === "nested"
+                        ? m.nested
+                        : bytes && formatSize(bytes.byteLength)}
                     </small>
                   </span>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    title={m.download}
-                    aria-label={m.downloadAttachment.replace(
-                      "{name}",
-                      () => name
-                    )}
-                    onClick={() =>
-                      downloadBlob(
-                        new Blob([bytes], {
-                          type: "application/octet-stream",
-                        }),
-                        name.replace(/[/\\]/g, "_")
-                      )
-                    }
-                  >
-                    <Download aria-hidden="true" />
-                  </Button>
+                  {bytes && (
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      title={m.download}
+                      aria-label={m.downloadAttachment.replace(
+                        "{name}",
+                        () => name || m.attachmentFallback
+                      )}
+                      onClick={() =>
+                        downloadBlob(
+                          new Blob([bytes], {
+                            type: "application/octet-stream",
+                          }),
+                          (name || m.attachmentFallback).replace(/[/\\]/g, "_")
+                        )
+                      }
+                    >
+                      <Download aria-hidden="true" />
+                    </Button>
+                  )}
                 </li>
               ))}
             </ul>
@@ -112,9 +116,26 @@ export function ReadMessage({
         )}
       </header>
       {preview && email.text && (
-        <div className="flex shrink-0 justify-end border-b px-3 py-1">
-          <Button variant="ghost" size="sm" onClick={() => setPlain(!plain)}>
-            {plain ? m.html : m.plain}
+        <div
+          className="flex shrink-0 flex-wrap gap-1 border-b px-3 py-1.5"
+          role="group"
+          aria-label={m.messageBody}
+        >
+          <Button
+            variant={plain ? "ghost" : "secondary"}
+            size="sm"
+            aria-pressed={!plain}
+            onClick={() => setPlain(false)}
+          >
+            {m.html}
+          </Button>
+          <Button
+            variant={plain ? "secondary" : "ghost"}
+            size="sm"
+            aria-pressed={plain}
+            onClick={() => setPlain(true)}
+          >
+            {m.plain}
           </Button>
         </div>
       )}

@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Ccn",
   "rtfOnly": "Questo messaggio contiene solo un corpo in formato RTF di Outlook, che non può essere visualizzato qui. Le intestazioni e gli allegati sono disponibili.",
-  "attachmentError": "Impossibile leggere alcuni dettagli degli allegati."
+  "attachmentError": "Impossibile leggere alcuni dettagli degli allegati.",
+  "nested": "Email allegata"
 }

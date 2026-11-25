@@ -1,7 +1,11 @@
 import { EmailArchiveViewer } from "@workspace/ui/components/tool/email-archive/viewer"
+import { Mails } from "@workspace/ui/icons"
 import type { ComponentProps } from "react"
-import { createMboxWorker } from "./create-worker"
 import { sampleMailbox } from "./sample"
+
+function createWorker() {
+  return new Worker(new URL("./worker.ts", import.meta.url), { type: "module" })
+}
 
 export default function Client(
   props: Pick<
@@ -13,9 +17,9 @@ export default function Client(
     <EmailArchiveViewer
       {...props}
       tool="mbox-viewer"
-      icon="mails"
+      emptyIcon={<Mails aria-hidden="true" />}
       accept=""
-      createWorker={createMboxWorker}
+      createWorker={createWorker}
       sample={sampleMailbox}
     />
   )

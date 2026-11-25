@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Bcc",
   "rtfOnly": "Thư này chỉ có nội dung văn bản định dạng phong phú của Outlook, không thể hiển thị tại đây. Bạn vẫn có thể xem các trường tiêu đề và tệp đính kèm.",
-  "attachmentError": "Không thể đọc một số thông tin tệp đính kèm."
+  "attachmentError": "Không thể đọc một số thông tin tệp đính kèm.",
+  "nested": "Email đính kèm"
 }

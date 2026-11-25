@@ -4,6 +4,8 @@ export type MailSummary = {
   subject: string
   from: string
   to: string
+  cc?: string
+  bcc?: string
   date: string
   folder?: number
 }

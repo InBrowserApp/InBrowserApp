@@ -32,5 +32,6 @@
   "cc": "Cc",
   "bcc": "Cci",
   "rtfOnly": "Ce message contient uniquement un corps au format texte enrichi Outlook, qui ne peut pas être affiché ici. Ses en-têtes et pièces jointes sont disponibles.",
-  "attachmentError": "Certains détails des pièces jointes n’ont pas pu être lus."
+  "attachmentError": "Certains détails des pièces jointes n’ont pas pu être lus.",
+  "nested": "E-mail joint"
 }
