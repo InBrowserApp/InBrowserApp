@@ -14,6 +14,7 @@ import { KepubError, type Progress } from "./types"
 const epubMime = "application/epub+zip"
 const packageMime = "application/oebps-package+xml"
 const xhtmlMime = "application/xhtml+xml"
+const ncxMime = "application/x-dtbncx+xml"
 const dc = "http://purl.org/dc/elements/1.1/"
 const fontObfuscation = new Set([
   "http://www.idpf.org/2008/embedding",
@@ -105,10 +106,20 @@ function getPublication(
 
   const chapters = new Map<string, FileEntry>()
   for (const item of items) {
-    if (item.getAttribute("media-type") !== xhtmlMime) continue
-    const href = resourcePath(path, item.getAttribute("href"))
-    const file = href && entries.get(href)
+    const type = item.getAttribute("media-type")
+    const href = item.getAttribute("href")
+    const resource = resourcePath(path, href)
+    // EPUB can reference remote media; keep those URLs without loading them.
+    if (
+      !resource &&
+      /^(?:https?:)?\/\//i.test(href ?? "") &&
+      type !== xhtmlMime &&
+      type !== ncxMime
+    )
+      continue
+    const file = resource && entries.get(resource)
     if (!file) throw new KepubError("incomplete")
+    if (type !== xhtmlMime) continue
     if (properties(item).includes("nav") && !spineIds.has(item.id)) continue
     chapters.set(file.filename, file)
   }

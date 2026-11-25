@@ -220,6 +220,7 @@ test.each([
   ],
   ["incomplete", { [chapter]: null }],
   ["incomplete", { [nav]: null }],
+  ["incomplete", { "images/garden.jpg": null }],
   [
     "alreadyKepub",
     {
