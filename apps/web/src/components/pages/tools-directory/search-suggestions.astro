@@ -10,7 +10,10 @@ interface Props {
 const { id, messages, compact = false } = Astro.props
 ---
 
-<div data-search-panel hidden class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]">
+<div data-search-panel hidden class:list={[
+  "absolute inset-x-0 z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]",
+  compact ? "top-full md:pointer-fine:top-[calc(100%+0.5rem)]" : "top-[calc(100%+0.5rem)]",
+]}>
   <ul role="listbox" id={`${id}-suggestions`} tabindex="-1" aria-label={messages.suggestionsLabel} class:list={["m-0 flex list-none flex-col overflow-y-auto overscroll-contain p-0", compact ? "max-h-[min(11rem,30dvh)] sm:pointer-fine:max-h-[min(20rem,40dvh)]" : "max-h-44 sm:max-h-80"]}></ul>
   <div data-search-empty hidden class="px-3 py-4 text-center">
     <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
