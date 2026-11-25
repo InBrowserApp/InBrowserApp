@@ -53,6 +53,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "bibliography-converter": () => import("@tool/bibliography-converter/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
   "bill-splitter": () => import("@tool/bill-splitter/page"),
+  "binary-plist-json-converter": () =>
+    import("@tool/binary-plist-json-converter/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
   "blake2b-hash-text-or-file": () =>

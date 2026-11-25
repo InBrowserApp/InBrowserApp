@@ -213,6 +213,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bill-splitter",
   },
   {
+    category: "json",
+    name: "Trình chuyển đổi Plist nhị phân ↔ JSON",
+    slug: "binary-plist-json-converter",
+  },
+  {
     category: "random",
     name: "Trình tạo cụm từ ghi nhớ BIP39",
     slug: "bip39-mnemonic-generator",

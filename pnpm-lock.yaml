@@ -1236,6 +1236,7 @@ patchedDependencies:
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
   hyparquet@1.33.1: f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830
   pst-extractor@1.12.0: ee34e8a5a1d302df017bcf193c98d8fc0315ecae3f0781bb5118ac2dcda4fe52
+  rork-plist@0.7.0: 17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
   xlsx@0.20.3: d9677d06ef4ec9a0741c152b150cf16ab54f41d20e2cd5ebe11efc1ce8827e79
 
@@ -2310,6 +2311,9 @@ importers:
       '@tool/bill-splitter':
         specifier: workspace:*
         version: link:../../tools/bill-splitter
+      '@tool/binary-plist-json-converter':
+        specifier: workspace:*
+        version: link:../../tools/binary-plist-json-converter
       '@tool/bip39-mnemonic-generator':
         specifier: workspace:*
         version: link:../../tools/bip39-mnemonic-generator
@@ -4727,6 +4731,34 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/binary-plist-json-converter:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      rork-plist:
+        specifier: 'catalog:'
+        version: 0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -15331,7 +15363,7 @@ importers:
         version: 19.3.1(react@19.3.1)
       rork-plist:
         specifier: 'catalog:'
-        version: 0.7.0
+        version: 0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -32735,7 +32767,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.19
       '@rolldown/binding-win32-x64-msvc': 1.2.19
 
-  rork-plist@0.7.0: {}
+  rork-plist@0.7.0(patch_hash=17092b8fe40b359a5cad6d863d254640c53b55418ef6d218b1685272ec20099c): {}
 
   roughjs@4.6.6:
     dependencies:

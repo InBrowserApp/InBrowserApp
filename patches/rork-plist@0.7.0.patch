@@ -1,0 +1,28 @@
+diff --git a/dist/index.js b/dist/index.js
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -653,21 +653,11 @@
+ 		}
+ 	}
+ 	/**
+-	* Interns a `number`: an integral value becomes an `<integer>` object (with
+-	* `-0` normalized to `0`), a finite fraction becomes a `<real>`, and `NaN`
+-	* or an infinity is rejected — mirroring the XML builder.
+-	*
+-	* Integral numbers pass through the same 64-bit range check as bigints
+-	* because `encodeInteger` cannot represent values outside `[-(2^63), 2^64)`:
+-	* a too-negative value would wrap in the signed 8-byte branch, and a value
+-	* above `2^128` would silently truncate in the 16-byte branch. Both are
+-	* data corruption, so an out-of-range integer must fail loudly instead.
++	* Safe integers use plist integer storage. Keep rounded doubles and signed
++	* zero as reals. Callers use bigint for exact integers outside the safe range.
+ 	*/
+ 	internNumber(value, path) {
+-		if (Number.isInteger(value)) {
+-			if (value >= Number.MIN_SAFE_INTEGER && value <= Number.MAX_SAFE_INTEGER) return this.internSafeInteger(value === 0 ? 0 : value);
+-			return this.internInteger(this.checkedBigInt(BigInt(value), path));
+-		}
++		if (Number.isSafeInteger(value) && !Object.is(value, -0)) return this.internSafeInteger(value);
+ 		if (!Number.isFinite(value)) throw new PlistBuildError(`${value} cannot be written to a property list`, path);
+ 		const existing = this.realIndex.get(value);
+ 		if (existing !== void 0) return existing;

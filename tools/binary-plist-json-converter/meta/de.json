@@ -1,0 +1,4 @@
+{
+  "name": "Konverter für binäre Plists ↔ JSON",
+  "description": "Konvertiere binäre .plist-Dateien von Apple im Browser in JSON und zurück. Datumswerte, Binärdaten und große Ganzzahlen bleiben erhalten. Kopiere das Ergebnis oder lade es herunter."
+}

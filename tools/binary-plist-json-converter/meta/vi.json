@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi Plist nhị phân ↔ JSON",
+  "description": "Chuyển tệp .plist nhị phân của Apple sang JSON và ngược lại ngay trong trình duyệt. Giữ nguyên ngày giờ, dữ liệu byte và số nguyên lớn, rồi sao chép hoặc tải kết quả về."
+}

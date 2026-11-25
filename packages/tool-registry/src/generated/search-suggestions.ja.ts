@@ -213,6 +213,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bill-splitter",
   },
   {
+    category: "json",
+    name: "バイナリ Plist ↔ JSON 変換ツール",
+    slug: "binary-plist-json-converter",
+  },
+  {
     category: "random",
     name: "BIP39 ニーモニック生成ツール",
     slug: "bip39-mnemonic-generator",
