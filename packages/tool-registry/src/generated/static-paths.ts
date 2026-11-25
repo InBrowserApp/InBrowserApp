@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "3mf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "de",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "en",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "es",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "he",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "id",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "it",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "no",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "th",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "3mf-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "adler32-hash-text-or-file",
     language: "ar",
   },

@@ -67,6 +67,24 @@ const formats = {
       )
     },
   },
+  "3mf": {
+    extensions: [".3mf"],
+    unit: "millimeter",
+    example: {
+      name: "print-brackets.3mf",
+      async read() {
+        const { default: url } = await import("./print-brackets.3mf?url")
+        const response = await fetch(url)
+        if (!response.ok) throw new Error("Could not read the example")
+        return response.blob()
+      },
+    },
+    zUp: true,
+    async parse(file) {
+      const { load3mf } = await import("@workspace/model-mesh/three-mf")
+      return { object: await load3mf(await file.arrayBuffer()) }
+    },
+  },
 } satisfies Record<string, FormatOptions>
 
 export type ModelFormat = keyof typeof formats

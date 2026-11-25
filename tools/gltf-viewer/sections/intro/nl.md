@@ -13,3 +13,5 @@ Als het model naar een externe buffer of afbeelding verwijst, kies je het model 
 ## Verwante 3D-bestandsformaten bekijken
 
 Gebruik de [OBJ-viewer](../obj-viewer/) voor Wavefront-netten met MTL-materialen of de [STL-viewer](../stl-viewer/) om een driehoeksnet te controleren voordat je het 3D-print.
+
+- [3MF-viewer](../3mf-viewer/)

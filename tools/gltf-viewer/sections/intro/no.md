@@ -13,3 +13,5 @@ Hvis modellen viser til en ekstern buffer eller bildefil, velger du modellen og 
 ## Se andre 3D-filformater
 
 Bruk [OBJ-viseren](../obj-viewer/) til Wavefront-nett med MTL-materialer, eller åpne et trekantnett i [STL-viseren](../stl-viewer/) for å sjekke det før 3D-utskrift.
+
+- [3MF-viser](../3mf-viewer/)

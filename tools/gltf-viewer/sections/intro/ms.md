@@ -13,3 +13,5 @@ Jika fail merujuk kepada penimbal atau imej luaran, pilih model dan fail yang se
 ## Lihat format fail 3D berkaitan
 
 Gunakan [Pemapar OBJ](../obj-viewer/) untuk melihat jejaring Wavefront dengan bahan MTL atau [Pemapar STL](../stl-viewer/) untuk memeriksa jejaring segi tiga sebelum mencetaknya dalam 3D.
+
+- [Pemapar 3MF](../3mf-viewer/)

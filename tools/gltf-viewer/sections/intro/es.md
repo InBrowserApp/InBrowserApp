@@ -13,3 +13,5 @@ Si el modelo hace referencia a un búfer o a una imagen externos, selecciónalo 
 ## Ver otros formatos 3D
 
 Usa el [Visor de OBJ](../obj-viewer/) para ver mallas Wavefront con materiales MTL o el [Visor de STL](../stl-viewer/) para inspeccionar una malla triangular antes de imprimirla en 3D.
+
+- [Visor de 3MF](../3mf-viewer/)

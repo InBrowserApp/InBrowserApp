@@ -136,6 +136,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "3mf-viewer",
+    category: "image",
+    icon: "box",
+    tags: [
+      "3mf",
+      "3d manufacturing format",
+      "3d printing",
+      "model",
+      "mesh",
+      "viewer",
+    ],
+    locales: {
+      ar: {
+        name: "عارض 3MF",
+        description:
+          "افتح ملفات 3MF في متصفحك. افحص القطع المعدّة للطباعة ثلاثية الأبعاد ومواضعها وألوانها المتاحة، واطّلع على أبعادها بالمليمتر.",
+      },
+      de: {
+        name: "3MF-Betrachter",
+        description:
+          "Öffne 3MF-Dateien im Browser. Prüfe die Bauteile für den 3D-Druck, ihre Anordnung und die verfügbaren Farben. Die Abmessungen siehst du in Millimetern.",
+      },
+      en: {
+        name: "3MF Viewer",
+        description:
+          "Open 3MF files in your browser. Inspect 3D-printing parts, their placement and available colors, and read dimensions in millimeters.",
+      },
+      es: {
+        name: "Visor de 3MF",
+        description:
+          "Abre archivos 3MF en tu navegador. Inspecciona las piezas para impresión 3D, su colocación y los colores disponibles, y consulta las dimensiones en milímetros.",
+      },
+      fr: {
+        name: "Visionneuse 3MF",
+        description:
+          "Ouvrez des fichiers 3MF dans votre navigateur. Examinez les pièces à imprimer en 3D, leur placement et les couleurs disponibles. Consultez leurs dimensions en millimètres.",
+      },
+      he: {
+        name: "מציג 3MF",
+        description:
+          "פתחו קובצי 3MF בדפדפן. בדקו את החלקים להדפסת תלת־ממד, את המיקום והצבעים שלהם, והציגו את המידות במילימטרים.",
+      },
+      hi: {
+        name: "3MF व्यूअर",
+        description:
+          "अपने ब्राउज़र में 3MF फ़ाइलें खोलें। 3D प्रिंटिंग के पुर्ज़े, उनकी जगह और उपलब्ध रंग देखें, और आयाम मिलीमीटर में पढ़ें।",
+      },
+      id: {
+        name: "Penampil 3MF",
+        description:
+          "Buka file 3MF di browser. Periksa komponen untuk pencetakan 3D, penempatan, dan warna yang tersedia, serta lihat dimensi dalam milimeter.",
+      },
+      it: {
+        name: "Visualizzatore 3MF",
+        description:
+          "Apri file 3MF nel browser. Esamina le parti per la stampa 3D, la loro disposizione e i colori disponibili, e leggi le dimensioni in millimetri.",
+      },
+      ja: {
+        name: "3MF ビューアー",
+        description:
+          "3MF ファイルをブラウザーで開きます。3D プリント用の部品、配置、利用可能な色を確認し、寸法をミリメートルで表示できます。",
+      },
+      ko: {
+        name: "3MF 뷰어",
+        description:
+          "브라우저에서 3MF 파일을 여세요. 3D 프린팅 부품과 배치, 사용 가능한 색상을 살펴보고 크기를 밀리미터로 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar 3MF",
+        description:
+          "Buka fail 3MF dalam pelayar. Periksa komponen untuk cetakan 3D, kedudukan dan warna yang tersedia, serta lihat dimensi dalam milimeter.",
+      },
+      nl: {
+        name: "3MF-viewer",
+        description:
+          "Open 3MF-bestanden in je browser. Bekijk de onderdelen voor 3D-printen, hun plaatsing en beschikbare kleuren, en lees de afmetingen af in millimeters.",
+      },
+      no: {
+        name: "3MF-viser",
+        description:
+          "Åpne 3MF-filer i nettleseren. Se delene til 3D-utskrift, plasseringen og de tilgjengelige fargene. Målene vises i millimeter.",
+      },
+      pl: {
+        name: "Przeglądarka plików 3MF",
+        description:
+          "Otwieraj pliki 3MF w przeglądarce. Sprawdzaj części do druku 3D, ich rozmieszczenie i dostępne kolory oraz odczytuj wymiary w milimetrach.",
+      },
+      pt: {
+        name: "Visualizador de 3MF",
+        description:
+          "Abra arquivos 3MF no navegador. Confira as peças para impressão 3D, suas posições e as cores disponíveis, e consulte as dimensões em milímetros.",
+      },
+      ru: {
+        name: "Просмотр 3MF",
+        description:
+          "Открывайте файлы 3MF прямо в браузере. Проверяйте детали для 3D-печати, их расположение и доступные цвета, просматривайте габариты в миллиметрах.",
+      },
+      sv: {
+        name: "3MF-visare",
+        description:
+          "Öppna 3MF-filer i webbläsaren. Granska delarna för 3D-utskrift, deras placering och tillgängliga färger. Måtten visas i millimeter.",
+      },
+      th: {
+        name: "โปรแกรมดู 3MF",
+        description:
+          "เปิดไฟล์ 3MF ในเบราว์เซอร์ ตรวจสอบชิ้นงานพิมพ์ 3 มิติ ตำแหน่งจัดวาง และสีที่แสดงได้ พร้อมดูขนาดเป็นมิลลิเมตร",
+      },
+      tr: {
+        name: "3MF Görüntüleyici",
+        description:
+          "3MF dosyalarını tarayıcınızda açın. 3B baskı parçalarını, yerleşimlerini ve mevcut renklerini inceleyin. Boyutları milimetre cinsinden görün.",
+      },
+      vi: {
+        name: "Trình xem 3MF",
+        description:
+          "Mở tệp 3MF trong trình duyệt. Kiểm tra các chi tiết in 3D, vị trí, màu có thể hiển thị và kích thước tính bằng milimét.",
+      },
+      "zh-CN": {
+        name: "3MF 查看器",
+        description:
+          "在浏览器中打开 3MF 文件。检查 3D 打印零件、摆放位置和可用颜色，并以毫米查看尺寸。",
+      },
+      "zh-TW": {
+        name: "3MF 檢視器",
+        description:
+          "在瀏覽器中開啟 3MF 檔案。檢查 3D 列印零件、擺放位置與可用顏色，並以毫米查看尺寸。",
+      },
+    },
+  },
+  {
     slug: "adler32-hash-text-or-file",
     category: "crypto",
     icon: "lock",

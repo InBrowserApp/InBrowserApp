@@ -13,3 +13,5 @@ Yttermåtten visar modellens fulla utsträckning längs X-, Y- och Z-axlarna. ST
 STL beskriver ytan på en detalj med trianglar. Använd [OBJ-visaren](../obj-viewer/) för Wavefront-filer med ett tillhörande materialbibliotek. Öppna CAD-utbytesfiler med en sammanställning eller en solidmodell i [STEP-visaren](../step-viewer/).
 
 - [GLB- och glTF-visare](../gltf-viewer/)
+
+- [3MF-visare](../3mf-viewer/)

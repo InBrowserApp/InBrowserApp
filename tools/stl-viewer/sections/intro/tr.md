@@ -13,3 +13,5 @@ Genel boyutlar, modelin X, Y ve Z eksenlerindeki toplam uzunluğunu gösterir. S
 STL, bir parçanın yüzeyini üçgenlerle tanımlar. Malzeme kitaplığıyla birlikte gelen bir Wavefront dosyası için [OBJ Görüntüleyici](../obj-viewer/) aracını kullanın. Montaj veya katı model içeren bir CAD değişim dosyası için [STEP Görüntüleyici](../step-viewer/) aracını kullanın.
 
 - [GLB / glTF Görüntüleyici](../gltf-viewer/)
+
+- [3MF Görüntüleyici](../3mf-viewer/)

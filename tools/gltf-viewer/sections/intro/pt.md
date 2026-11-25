@@ -13,3 +13,5 @@ Se o modelo fizer referência a um buffer ou a uma imagem externa, selecione-o j
 ## Abrir outros formatos 3D
 
 Use o [Visualizador de OBJ](../obj-viewer/) para malhas Wavefront com materiais MTL ou o [Visualizador de STL](../stl-viewer/) para inspecionar uma malha triangular antes da impressão 3D.
+
+- [Visualizador de 3MF](../3mf-viewer/)
