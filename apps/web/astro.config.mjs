@@ -78,6 +78,8 @@ export default defineConfig({
     mdx(),
     react(),
     sitemap({
+      // Leave headroom under Cloudflare's 25 MiB asset limit for hreflang links.
+      entryLimit: 5_000,
       i18n: {
         defaultLocale: DEFAULT_SITE_LANGUAGE,
         locales: Object.fromEntries(
