@@ -45,8 +45,6 @@ export default function RandomNameClient({ lang, messages }: Props) {
   const localeId = useId()
   const quantityId = useId()
   const typeId = useId()
-  const [locale, setLocale] = useState(() => getDefaultNameLocale(lang))
-  const [type, setType] = useState<NameType>("full")
   const [result, setResult] = useState<Result | null>(null)
   const [status, setStatus] = useState<"idle" | "pending" | "failed">("idle")
 
@@ -61,7 +59,12 @@ export default function RandomNameClient({ lang, messages }: Props) {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const quantity = Number(new FormData(event.currentTarget).get("quantity"))
+    if (pending) return
+
+    const form = new FormData(event.currentTarget)
+    const locale = form.get("locale") as NameLocale
+    const type = form.get("name-type") as NameType
+    const quantity = Number(form.get("quantity"))
     setStatus("pending")
     try {
       const names = await generateNames(locale, type, quantity)
@@ -84,8 +87,8 @@ export default function RandomNameClient({ lang, messages }: Props) {
               <FieldLabel htmlFor={localeId}>{messages.locale}</FieldLabel>
               <Select
                 dir={direction}
-                value={locale}
-                onValueChange={(value) => setLocale(value as NameLocale)}
+                name="locale"
+                defaultValue={getDefaultNameLocale(lang)}
                 disabled={pending}
               >
                 <SelectTrigger id={localeId} className="w-full">
@@ -106,8 +109,8 @@ export default function RandomNameClient({ lang, messages }: Props) {
               <FieldLabel htmlFor={typeId}>{messages.nameType}</FieldLabel>
               <Select
                 dir={direction}
-                value={type}
-                onValueChange={(value) => setType(value as NameType)}
+                name="name-type"
+                defaultValue="full"
                 disabled={pending}
               >
                 <SelectTrigger id={typeId} className="w-full">
@@ -135,10 +138,14 @@ export default function RandomNameClient({ lang, messages }: Props) {
                 max={MAX_NAMES}
                 defaultValue={10}
                 required
-                disabled={pending}
+                readOnly={pending}
               />
             </Field>
-            <Button type="submit" disabled={pending} className="shrink-0">
+            <Button
+              type="submit"
+              aria-disabled={pending}
+              className="shrink-0 aria-disabled:opacity-50"
+            >
               <RefreshCcw data-icon="inline-start" />
               {pending ? messages.generating : messages.generate}
             </Button>
@@ -161,6 +168,7 @@ export default function RandomNameClient({ lang, messages }: Props) {
         </CardTitle>
         <div className="flex flex-wrap gap-2">
           <ToolCopyButton
+            key={output}
             value={output}
             copyLabel={messages.copy}
             copiedLabel={messages.copied}

@@ -33,6 +33,7 @@ describe("Random Name Generator", () => {
     const mockGenerate = vi
       .spyOn(names, "generateNames")
       .mockResolvedValueOnce(["田中", "鈴木"])
+      .mockResolvedValueOnce(["山田", "岡田"])
     const writeText = vi
       .spyOn(navigator.clipboard, "writeText")
       .mockResolvedValue()
@@ -58,6 +59,35 @@ describe("Random Name Generator", () => {
     expect(download.getAttribute("href")).toBe(
       `data:text/plain;charset=utf-8,${encodeURIComponent("田中\n鈴木")}`
     )
+
+    generate()
+    await waitFor(() => expect(output().value).toBe("山田\n岡田"))
+    expect(screen.getByRole("button", { name: messages.copy })).toBeTruthy()
+    expect(writeText).toHaveBeenCalledTimes(1)
+  })
+
+  it("ignores repeat submissions while leaving the focused Generate button available", async () => {
+    let resolveNames!: (names: string[]) => void
+    const batch = new Promise<string[]>((resolve) => {
+      resolveNames = resolve
+    })
+    const mockGenerate = vi
+      .spyOn(names, "generateNames")
+      .mockReturnValueOnce(batch)
+    render(<RandomNameClient lang="en" messages={messages} />)
+
+    const button = screen.getByRole("button", { name: messages.generate })
+    const form = button.closest("form")!
+    button.focus()
+    fireEvent.submit(form)
+    expect(button.getAttribute("aria-disabled")).toBe("true")
+    fireEvent.submit(form)
+    expect(mockGenerate).toHaveBeenCalledTimes(1)
+    resolveNames(["Alex Morgan"])
+
+    await waitFor(() => expect(output().value).toBe("Alex Morgan"))
+    expect(document.activeElement).toBe(button)
+    expect(button.getAttribute("aria-disabled")).toBe("false")
   })
 
   it("keeps the original batch after a failed generation and allows a retry", async () => {
