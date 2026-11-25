@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "Конвертер DOC / WPS в PDF",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "Просмотр DOC и WPS",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Валидатор Docker Compose",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "Конвертер DOCX в Markdown",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "Конвертер DOCX в PDF",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "Просмотр DOCX",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Проверка микрофона и динамиков",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Конвертер Microsoft Word (DOC и DOCX) в PDF",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Просмотр Microsoft Word (DOC и DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "Конвертер WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "Конвертер WPS в PDF",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Просмотр WPS",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

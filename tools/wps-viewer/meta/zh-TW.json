@@ -1,0 +1,4 @@
+{
+  "name": "WPS 檢視器",
+  "description": "在瀏覽器中閱讀相容的 WPS Writer 文件（.wps）與範本（.wpt），檔案全程在本機處理。"
+}

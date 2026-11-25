@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC और WPS से PDF कन्वर्टर",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC और WPS व्यूअर",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose वैलिडेटर",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX से Markdown कन्वर्टर",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX से PDF कन्वर्टर",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX व्यूअर",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "माइक्रोफ़ोन और स्पीकर टेस्ट",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word (DOC और DOCX) से PDF कन्वर्टर",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word (DOC और DOCX) व्यूअर",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON कन्वर्टर",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS से PDF कन्वर्टर",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS व्यूअर",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

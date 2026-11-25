@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC・WPSからPDFへの変換ツール",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC・WPS ビューアー",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose バリデーター",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCXからMarkdownへの変換ツール",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCXからPDFへの変換ツール",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX ビューアー",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "マイクとスピーカーのテスト",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC・DOCX）からPDFへの変換ツール",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC・DOCX）ビューアー",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON 変換",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPSからPDFへの変換ツール",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS ビューアー",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

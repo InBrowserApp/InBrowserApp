@@ -29,7 +29,8 @@
     "topojson-client": "catalog:",
     "world-atlas": "catalog:",
     "@workspace/model-mesh": "workspace:*",
-    "three": "catalog:"
+    "three": "catalog:",
+    "@workspace/legacy-doc": "workspace:*"
   },
   "peerDependencies": {
     "react": "catalog:",

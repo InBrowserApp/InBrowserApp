@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC ve WPS’ten PDF’ye Dönüştürücü",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC ve WPS Görüntüleyici",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose Doğrulayıcı",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX’ten Markdown’a Dönüştürücü",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX’ten PDF’ye Dönüştürücü",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX Görüntüleyici",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Mikrofon ve Hoparlör Testi",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word’den PDF’ye Dönüştürücü (DOC ve DOCX)",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word Görüntüleyici (DOC ve DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON Dönüştürücü",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS’ten PDF’ye Dönüştürücü",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS Görüntüleyici",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC / WPS 轉 PDF 轉換器",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC 與 WPS 檢視器",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose 驗證器",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX 轉 Markdown 轉換器",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX 轉 PDF 轉換器",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX 檢視器",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "麥克風與喇叭測試",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC 與 DOCX）轉 PDF 轉換器",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC 與 DOCX）檢視器",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON 轉換器",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS 轉 PDF 轉換器",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS 檢視器",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

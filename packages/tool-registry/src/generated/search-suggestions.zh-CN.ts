@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "DOC / WPS 转 PDF 转换器",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOC 和 WPS 查看器",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "Docker Compose 校验器",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "DOCX 转 Markdown 转换器",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX 转 PDF 转换器",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "DOCX 查看器",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "麦克风与扬声器测试",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC 和 DOCX）转 PDF 转换器",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "Microsoft Word（DOC 和 DOCX）查看器",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "WKT ↔ GeoJSON 转换器",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "WPS 转 PDF 转换器",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "WPS 查看器",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",

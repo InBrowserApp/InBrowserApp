@@ -558,16 +558,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "dnslink-generator-checker",
   },
   {
-    category: "document",
-    name: "ממיר DOC / WPS ל-PDF",
-    slug: "doc-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "מציג קובצי DOC ו-WPS",
-    slug: "doc-viewer",
-  },
-  {
     category: "developer",
     name: "מאמת Docker Compose",
     slug: "docker-compose-validator",
@@ -581,16 +571,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "document",
     name: "ממיר DOCX ל-Markdown",
     slug: "docx-to-markdown-converter",
-  },
-  {
-    category: "document",
-    name: "ממיר DOCX ל-PDF",
-    slug: "docx-to-pdf-converter",
-  },
-  {
-    category: "document",
-    name: "מציג DOCX",
-    slug: "docx-viewer",
   },
   {
     category: "time",
@@ -1291,6 +1271,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "בדיקת מיקרופון ורמקולים",
     slug: "microphone-test",
+  },
+  {
+    category: "document",
+    name: "ממיר קובצי Microsoft Word (DOC ו־DOCX) ל־PDF",
+    slug: "microsoft-word-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "מציג קובצי Microsoft Word (DOC ו־DOCX)",
+    slug: "microsoft-word-viewer",
   },
   {
     category: "misc",
@@ -2196,6 +2186,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "geo",
     name: "ממיר WKT ↔ GeoJSON",
     slug: "wkt-geojson-converter",
+  },
+  {
+    category: "document",
+    name: "ממיר WPS ל־PDF",
+    slug: "wps-to-pdf-converter",
+  },
+  {
+    category: "document",
+    name: "מציג קובצי WPS",
+    slug: "wps-viewer",
   },
   {
     category: "spreadsheet",
