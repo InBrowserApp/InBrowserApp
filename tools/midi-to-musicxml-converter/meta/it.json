@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da MIDI a MusicXML",
+  "description": "Trasforma un file MIDI in uno spartito modificabile. Scegli una griglia ritmica, scarica il MusicXML e apri lo spartito nel tuo programma di notazione."
+}

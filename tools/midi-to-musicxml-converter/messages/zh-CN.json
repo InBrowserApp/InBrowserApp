@@ -1,0 +1,17 @@
+{
+  "chooseFile": "选择 MIDI 文件",
+  "changeFile": "更换文件",
+  "dropHint": "或将 MIDI 文件拖放到此处",
+  "privacy": "文件保留在当前浏览器中。",
+  "quantization": "量化网格",
+  "quantizationHint": "更细的网格可保留较短的音符；更粗的网格可让录制的演奏更易读。",
+  "eighth": "八分音符（1/8）",
+  "sixteenth": "十六分音符（1/16）",
+  "thirtySecond": "三十二分音符（1/32）",
+  "download": "下载 MusicXML",
+  "part": "声部",
+  "invalidMidi": "无法将此文件读取为标准 MIDI 文件。请选择其他 .mid 或 .midi 文件。",
+  "unsupportedTiming": "请将此文件导出为基于节拍的 MIDI 文件（格式 0 或 1），然后重试。",
+  "noNotes": "此 MIDI 文件中没有可写入乐谱的音符。",
+  "tooManyMeasures": "此乐谱的小节过多，无法一次转换。请尝试较短的片段。"
+}

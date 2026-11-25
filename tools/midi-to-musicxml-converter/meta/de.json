@@ -1,0 +1,4 @@
+{
+  "name": "MIDI-zu-MusicXML-Konverter",
+  "description": "Wandle eine MIDI-Datei in bearbeitbare Noten um. Wähle ein Rhythmusraster, lade die MusicXML-Datei herunter und öffne die Partitur in deinem Notensatzprogramm."
+}

@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Elegir archivo MIDI",
+  "changeFile": "Cambiar archivo",
+  "dropHint": "o suelta aquí un archivo MIDI",
+  "privacy": "El archivo se queda en este navegador.",
+  "quantization": "Rejilla de cuantización",
+  "quantizationHint": "Una rejilla más fina conserva las notas cortas. Una rejilla más amplia puede facilitar la lectura de una interpretación grabada.",
+  "eighth": "Corchea (1/8)",
+  "sixteenth": "Semicorchea (1/16)",
+  "thirtySecond": "Fusa (1/32)",
+  "download": "Descargar MusicXML",
+  "part": "Parte",
+  "invalidMidi": "No se pudo leer este archivo como MIDI estándar. Elige otro archivo .mid o .midi.",
+  "unsupportedTiming": "Exporta el archivo MIDI en formato 0 o 1 con temporización en pulsos por negra (PPQ) e inténtalo de nuevo.",
+  "noNotes": "Este archivo MIDI no contiene notas que se puedan escribir en la partitura.",
+  "tooManyMeasures": "La partitura tiene demasiados compases para convertirlos de una vez. Prueba con un fragmento más corto."
+}

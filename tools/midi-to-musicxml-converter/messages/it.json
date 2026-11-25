@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Scegli file MIDI",
+  "changeFile": "Cambia file",
+  "dropHint": "oppure trascina qui un file MIDI",
+  "privacy": "Il file resta in questo browser.",
+  "quantization": "Griglia di quantizzazione",
+  "quantizationHint": "Una griglia più fine conserva le note brevi. Una griglia più ampia può rendere più leggibile un’esecuzione registrata.",
+  "eighth": "Croma (1/8)",
+  "sixteenth": "Semicroma (1/16)",
+  "thirtySecond": "Biscroma (1/32)",
+  "download": "Scarica MusicXML",
+  "part": "Parte",
+  "invalidMidi": "Impossibile leggere questo file come MIDI standard. Scegli un altro file .mid o .midi.",
+  "unsupportedTiming": "Esporta il file MIDI in formato 0 o 1 con risoluzione in impulsi per semiminima (PPQ), poi riprova.",
+  "noNotes": "Questo file MIDI non contiene note da scrivere nello spartito.",
+  "tooManyMeasures": "Lo spartito contiene troppe battute per una sola conversione. Prova con un estratto più breve."
+}

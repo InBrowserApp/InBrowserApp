@@ -1,0 +1,17 @@
+{
+  "chooseFile": "MIDI-Datei auswählen",
+  "changeFile": "Datei wechseln",
+  "dropHint": "oder eine MIDI-Datei hierher ziehen",
+  "privacy": "Deine Datei bleibt in diesem Browser.",
+  "quantization": "Quantisierungsraster",
+  "quantizationHint": "Ein feineres Raster erhält kürzere Noten. Ein gröberes Raster kann eingespielte Musik leichter lesbar machen.",
+  "eighth": "Achtelnote (1/8)",
+  "sixteenth": "Sechzehntelnote (1/16)",
+  "thirtySecond": "Zweiunddreißigstelnote (1/32)",
+  "download": "MusicXML herunterladen",
+  "part": "Stimme",
+  "invalidMidi": "Diese Datei ließ sich nicht als Standard-MIDI-Datei lesen. Wähle eine andere .mid- oder .midi-Datei.",
+  "unsupportedTiming": "Exportiere die Datei als MIDI-Datei mit musikalischer Zeitbasis (Format 0 oder 1) und versuche es erneut.",
+  "noNotes": "Diese MIDI-Datei enthält keine Noten für die Partitur.",
+  "tooManyMeasures": "Die Partitur enthält zu viele Takte, um sie auf einmal umzuwandeln. Versuche es mit einem kürzeren Ausschnitt."
+}

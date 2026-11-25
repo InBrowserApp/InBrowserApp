@@ -1,0 +1,17 @@
+{
+  "chooseFile": "Pilih fail MIDI",
+  "changeFile": "Tukar fail",
+  "dropHint": "atau lepaskan fail MIDI di sini",
+  "privacy": "Fail anda kekal dalam pelayar ini.",
+  "quantization": "Grid kuantisasi",
+  "quantizationHint": "Grid yang lebih halus mengekalkan not yang lebih pendek. Grid yang lebih jarang boleh memudahkan pembacaan skor daripada rakaman.",
+  "eighth": "Kuaver (1/8)",
+  "sixteenth": "Semikuaver (1/16)",
+  "thirtySecond": "Demisemikuaver (1/32)",
+  "download": "Muat turun MusicXML",
+  "part": "Bahagian",
+  "invalidMidi": "Fail ini tidak dapat dibaca sebagai fail MIDI standard. Pilih fail .mid atau .midi yang lain.",
+  "unsupportedTiming": "Eksport fail ini sebagai fail MIDI dengan pemasaan berasaskan rentak (format 0 atau 1), kemudian cuba lagi.",
+  "noNotes": "Fail MIDI ini tiada not untuk ditulis pada skor.",
+  "tooManyMeasures": "Skor ini mempunyai terlalu banyak bar untuk ditukar sekali gus. Cuba petikan yang lebih pendek."
+}
