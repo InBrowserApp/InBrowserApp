@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Kurangkan tempo",
+  "faster": "Tingkatkan tempo",
+  "start": "Mula",
+  "stop": "Henti",
+  "tapTempo": "Ketuk tempo",
+  "tapAgain": "Ketuk lagi",
+  "beatsPerBar": "Rentak setiap bar",
+  "subdivision": "Pecahan rentak",
+  "onePerBeat": "1 setiap rentak",
+  "twoPerBeat": "2 setiap rentak",
+  "threePerBeat": "3 setiap rentak",
+  "fourPerBeat": "4 setiap rentak",
+  "accent": "Tekankan rentak pertama",
+  "sound": "Bunyi",
+  "audioError": "Metronom tidak dapat dimulakan. Cuba tekan Mula sekali lagi."
+}

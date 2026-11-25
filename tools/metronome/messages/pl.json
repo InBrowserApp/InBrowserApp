@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Zmniejsz tempo",
+  "faster": "Zwiększ tempo",
+  "start": "Start",
+  "stop": "Stop",
+  "tapTempo": "Wystukaj tempo",
+  "tapAgain": "Naciśnij ponownie",
+  "beatsPerBar": "Uderzenia w takcie",
+  "subdivision": "Podział rytmiczny",
+  "onePerBeat": "1 na uderzenie",
+  "twoPerBeat": "2 na uderzenie",
+  "threePerBeat": "3 na uderzenie",
+  "fourPerBeat": "4 na uderzenie",
+  "accent": "Akcentuj pierwsze uderzenie",
+  "sound": "Dźwięk",
+  "audioError": "Nie udało się uruchomić metronomu. Ponownie naciśnij Start."
+}

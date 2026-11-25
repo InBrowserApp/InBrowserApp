@@ -313,6 +313,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mermaid-to-pdf-converter": () =>
     import("@tool/mermaid-to-pdf-converter/page"),
   "mesh-inspector": () => import("@tool/mesh-inspector/page"),
+  metronome: () => import("@tool/metronome/page"),
   "mhtml-to-html-converter": () => import("@tool/mhtml-to-html-converter/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),

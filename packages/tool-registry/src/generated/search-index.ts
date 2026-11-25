@@ -32119,6 +32119,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "metronome",
+    category: "music",
+    icon: "music",
+    tags: ["metronome", "tap tempo", "bpm", "beat", "rhythm", "practice"],
+    locales: {
+      ar: {
+        name: "مترونوم على الإنترنت",
+        description:
+          "حافظ على إيقاع ثابت مع مترونوم في متصفحك. أدخل قيمة BPM أو حدّدها بالنقر، واختر عدد النبضات في المازورة وتقسيماتها، وتدرّب بالإشارة الصوتية أو المرئية.",
+      },
+      de: {
+        name: "Online-Metronom",
+        description:
+          "Halte das Tempo mit einem Online-Metronom. Gib die BPM ein oder klopfe das Tempo, wähle Schläge pro Takt und Unterteilung und übe mit Klick oder optischem Taktsignal.",
+      },
+      en: {
+        name: "Online Metronome",
+        description:
+          "Keep time with an online metronome. Set or tap a BPM, choose beats per bar and subdivisions, and practice with a click or a visual beat.",
+      },
+      es: {
+        name: "Metrónomo en línea",
+        description:
+          "Mantén el pulso con un metrónomo en línea. Ajusta el tempo o márcalo a toques, elige los pulsos por compás y la subdivisión, y practica con clics o con una señal visual.",
+      },
+      fr: {
+        name: "Métronome en ligne",
+        description:
+          "Gardez le tempo avec un métronome en ligne. Réglez les BPM ou tapez la pulsation, choisissez les temps par mesure et la subdivision, puis pratiquez avec un clic ou un repère visuel.",
+      },
+      he: {
+        name: "מטרונום מקוון",
+        description:
+          "שמרו על קצב יציב עם מטרונום בדפדפן. הזינו BPM או הקישו לקביעתו, בחרו פעימות לתיבה וחלוקת פעימה, ותרגלו עם נקישות או סימון חזותי.",
+      },
+      hi: {
+        name: "ऑनलाइन मेट्रोनोम",
+        description:
+          "ऑनलाइन मेट्रोनोम के साथ ताल में अभ्यास करें। BPM डालें या थाप देकर तय करें। हर बार की बीट गिनती और बीट के हिस्से चुनें, फिर क्लिक सुनकर या स्क्रीन पर बीट देखकर अभ्यास करें।",
+      },
+      id: {
+        name: "Metronom Online",
+        description:
+          "Jaga ketukan dengan metronom online. Masukkan BPM atau ketuk untuk mengaturnya, pilih jumlah ketukan per birama dan subdivisi, lalu berlatih dengan bunyi klik atau indikator visual.",
+      },
+      it: {
+        name: "Metronomo online",
+        description:
+          "Tieni il tempo con un metronomo online. Imposta i BPM o ricavali battendo il tempo, scegli i movimenti per battuta e la suddivisione, poi esercitati con un clic o un segnale visivo.",
+      },
+      ja: {
+        name: "オンラインメトロノーム",
+        description:
+          "オンラインメトロノームで一定のテンポを保ちます。BPM の入力やタップでテンポを設定し、1小節の拍数と拍の分割を選んで、クリック音や画面の拍表示に合わせて練習できます。",
+      },
+      ko: {
+        name: "온라인 메트로놈",
+        description:
+          "온라인 메트로놈으로 박자를 유지하세요. BPM을 입력하거나 탭으로 맞추고, 마디당 박 수와 박 분할을 선택해 클릭 소리나 화면의 박자 표시를 따라 연습할 수 있습니다.",
+      },
+      ms: {
+        name: "Metronom Dalam Talian",
+        description:
+          "Kekalkan rentak dengan metronom dalam talian. Tetapkan BPM atau ketuk untuk mengukurnya, pilih bilangan rentak setiap bar dan pecahan rentak, kemudian berlatih dengan bunyi klik atau penunjuk visual.",
+      },
+      nl: {
+        name: "Online metronoom",
+        description:
+          "Houd de maat met een online metronoom. Stel de BPM in of tik het tempo, kies tellen per maat en een onderverdeling en oefen met een klik of een zichtbaar signaal.",
+      },
+      no: {
+        name: "Metronom på nett",
+        description:
+          "Hold takten med en metronom på nett. Angi BPM eller trykk i takt for å finne tempoet, velg slag per takt og underdeling, og øv med klikk eller en synlig puls.",
+      },
+      pl: {
+        name: "Metronom online",
+        description:
+          "Ćwicz grę z metronomem online. Wpisz lub wystukaj tempo w BPM, ustaw liczbę uderzeń w takcie i podział rytmiczny, a potem śledź puls na słuch lub na ekranie.",
+      },
+      pt: {
+        name: "Metrônomo online",
+        description:
+          "Mantenha o pulso com um metrônomo online. Ajuste o BPM ou marque o andamento com toques, escolha os tempos por compasso e a subdivisão e pratique com cliques ou um pulso visual.",
+      },
+      ru: {
+        name: "Метроном онлайн",
+        description:
+          "Занимайтесь под онлайн-метроном. Задайте или отбейте темп в BPM, выберите число долей в такте и их деление, затем следите за щелчками или индикатором долей.",
+      },
+      sv: {
+        name: "Metronom online",
+        description:
+          "Håll takten med en metronom online. Ange BPM eller tryck i takt för att hitta tempot, välj slag per takt och underdelning och öva med klickljud eller en visuell puls.",
+      },
+      th: {
+        name: "เมโทรนอมออนไลน์",
+        description:
+          "ฝึกให้ตรงจังหวะด้วยเมโทรนอมออนไลน์ ตั้งค่า BPM หรือแตะตามจังหวะเพื่อวัด เลือกจำนวนจังหวะต่อห้องและการแบ่งจังหวะย่อย แล้วซ้อมตามเสียงเคาะหรือสัญญาณบนหน้าจอ",
+      },
+      tr: {
+        name: "Çevrimiçi Metronom",
+        description:
+          "Çevrimiçi metronomla tempoyu koruyun. BPM’yi girin veya vurarak belirleyin, ölçüdeki vuruşları ve alt bölümleri seçin, sesli ya da görsel vuruşlarla çalışın.",
+      },
+      vi: {
+        name: "Máy đếm nhịp trực tuyến",
+        description:
+          "Giữ nhịp với máy đếm nhịp trực tuyến. Nhập hoặc gõ để đặt BPM, chọn số phách mỗi ô nhịp và chia nhỏ phách, rồi luyện tập theo tiếng gõ hoặc tín hiệu trên màn hình.",
+      },
+      "zh-CN": {
+        name: "在线节拍器",
+        description:
+          "使用在线节拍器保持节奏。设置或点按测出 BPM，选择每小节拍数和细分，通过节拍声或视觉节拍练习。",
+      },
+      "zh-TW": {
+        name: "線上節拍器",
+        description:
+          "使用線上節拍器保持節奏。設定或點按測出 BPM，選擇每小節拍數和細分，透過節拍聲或視覺節拍練習。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",

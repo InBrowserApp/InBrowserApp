@@ -1,0 +1,18 @@
+{
+  "tempo": "Nhịp độ (BPM)",
+  "slower": "Giảm nhịp độ",
+  "faster": "Tăng nhịp độ",
+  "start": "Bắt đầu",
+  "stop": "Dừng",
+  "tapTempo": "Gõ nhịp lấy tốc độ",
+  "tapAgain": "Gõ thêm lần nữa",
+  "beatsPerBar": "Số phách mỗi ô nhịp",
+  "subdivision": "Chia nhỏ phách",
+  "onePerBeat": "1 tiếng mỗi phách",
+  "twoPerBeat": "2 tiếng mỗi phách",
+  "threePerBeat": "3 tiếng mỗi phách",
+  "fourPerBeat": "4 tiếng mỗi phách",
+  "accent": "Nhấn phách đầu",
+  "sound": "Âm thanh",
+  "audioError": "Không thể khởi động máy đếm nhịp. Hãy nhấn Bắt đầu lần nữa."
+}

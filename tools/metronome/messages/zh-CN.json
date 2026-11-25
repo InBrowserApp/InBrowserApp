@@ -1,0 +1,18 @@
+{
+  "tempo": "速度（BPM）",
+  "slower": "降低速度",
+  "faster": "提高速度",
+  "start": "开始",
+  "stop": "停止",
+  "tapTempo": "点击测速",
+  "tapAgain": "再次点击",
+  "beatsPerBar": "每小节拍数",
+  "subdivision": "细分",
+  "onePerBeat": "每拍 1 声",
+  "twoPerBeat": "每拍 2 声",
+  "threePerBeat": "每拍 3 声",
+  "fourPerBeat": "每拍 4 声",
+  "accent": "第一拍重音",
+  "sound": "声音",
+  "audioError": "节拍器无法启动，请再次点击“开始”。"
+}

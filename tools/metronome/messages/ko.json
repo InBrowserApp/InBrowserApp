@@ -1,0 +1,18 @@
+{
+  "tempo": "템포 (BPM)",
+  "slower": "템포 낮추기",
+  "faster": "템포 높이기",
+  "start": "시작",
+  "stop": "정지",
+  "tapTempo": "탭 템포",
+  "tapAgain": "다시 탭하세요",
+  "beatsPerBar": "마디당 박 수",
+  "subdivision": "박 분할",
+  "onePerBeat": "한 박에 1번",
+  "twoPerBeat": "한 박에 2번",
+  "threePerBeat": "한 박에 3번",
+  "fourPerBeat": "한 박에 4번",
+  "accent": "첫 박 강조",
+  "sound": "소리",
+  "audioError": "메트로놈을 시작하지 못했습니다. 시작 버튼을 다시 눌러 주세요."
+}

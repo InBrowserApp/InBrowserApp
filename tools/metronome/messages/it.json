@@ -1,0 +1,18 @@
+{
+  "tempo": "Tempo (BPM)",
+  "slower": "Riduci il tempo",
+  "faster": "Aumenta il tempo",
+  "start": "Avvia",
+  "stop": "Ferma",
+  "tapTempo": "Batti il tempo",
+  "tapAgain": "Premi di nuovo",
+  "beatsPerBar": "Movimenti per battuta",
+  "subdivision": "Suddivisione",
+  "onePerBeat": "1 per movimento",
+  "twoPerBeat": "2 per movimento",
+  "threePerBeat": "3 per movimento",
+  "fourPerBeat": "4 per movimento",
+  "accent": "Accenta il primo movimento",
+  "sound": "Suono",
+  "audioError": "Impossibile avviare il metronomo. Premi di nuovo Avvia."
+}

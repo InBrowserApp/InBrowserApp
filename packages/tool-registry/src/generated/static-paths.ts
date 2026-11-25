@@ -23186,6 +23186,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "metronome",
+    language: "ar",
+  },
+  {
+    slug: "metronome",
+    language: "de",
+  },
+  {
+    slug: "metronome",
+    language: "en",
+  },
+  {
+    slug: "metronome",
+    language: "es",
+  },
+  {
+    slug: "metronome",
+    language: "fr",
+  },
+  {
+    slug: "metronome",
+    language: "he",
+  },
+  {
+    slug: "metronome",
+    language: "hi",
+  },
+  {
+    slug: "metronome",
+    language: "id",
+  },
+  {
+    slug: "metronome",
+    language: "it",
+  },
+  {
+    slug: "metronome",
+    language: "ja",
+  },
+  {
+    slug: "metronome",
+    language: "ko",
+  },
+  {
+    slug: "metronome",
+    language: "ms",
+  },
+  {
+    slug: "metronome",
+    language: "nl",
+  },
+  {
+    slug: "metronome",
+    language: "no",
+  },
+  {
+    slug: "metronome",
+    language: "pl",
+  },
+  {
+    slug: "metronome",
+    language: "pt",
+  },
+  {
+    slug: "metronome",
+    language: "ru",
+  },
+  {
+    slug: "metronome",
+    language: "sv",
+  },
+  {
+    slug: "metronome",
+    language: "th",
+  },
+  {
+    slug: "metronome",
+    language: "tr",
+  },
+  {
+    slug: "metronome",
+    language: "vi",
+  },
+  {
+    slug: "metronome",
+    language: "zh-CN",
+  },
+  {
+    slug: "metronome",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-html-converter",
     language: "ar",
   },

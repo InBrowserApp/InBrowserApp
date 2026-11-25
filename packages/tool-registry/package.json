@@ -259,6 +259,7 @@
     "@tool/mermaid-to-image-converter": "workspace:*",
     "@tool/mermaid-to-pdf-converter": "workspace:*",
     "@tool/mesh-inspector": "workspace:*",
+    "@tool/metronome": "workspace:*",
     "@tool/mhtml-to-html-converter": "workspace:*",
     "@tool/mhtml-to-pdf-converter": "workspace:*",
     "@tool/mhtml-viewer": "workspace:*",
