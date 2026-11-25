@@ -1,0 +1,20 @@
+{
+  "open": "打开 DXF 文件",
+  "drop": "将 DXF 图纸拖放到此处",
+  "example": "试用示例",
+  "privacy": "图纸始终保留在此设备上。",
+  "opening": "正在打开图纸…",
+  "invalid": "无法打开此图纸。请重新导出为 ASCII DXF 文件后重试。",
+  "binary": "这是二进制 DXF 文件。请将其导出为 ASCII DXF 后在此打开。",
+  "empty": "没有可显示的模型空间几何图形。",
+  "webgl": "无法启动图纸查看器。请尝试使用支持 WebGL 2 的浏览器。",
+  "previous": "上一张图纸",
+  "drawing": "DXF 图纸",
+  "fit": "缩放至图纸范围",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "layers": "图层",
+  "controls": "拖动平移 · 滚动缩放",
+  "touchControls": "拖动平移 · 双指缩放",
+  "keyboardControls": "使用方向键平移，使用 + 或 − 缩放。"
+}

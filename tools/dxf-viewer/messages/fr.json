@@ -1,0 +1,20 @@
+{
+  "open": "Ouvrir un fichier DXF",
+  "drop": "Déposez un dessin DXF ici",
+  "example": "Essayer un exemple",
+  "privacy": "Votre dessin reste sur votre appareil.",
+  "opening": "Ouverture du dessin…",
+  "invalid": "Impossible d’ouvrir ce dessin. Exportez-le de nouveau au format DXF ASCII et réessayez.",
+  "binary": "Ce fichier DXF est binaire. Exportez-le au format DXF ASCII pour l’ouvrir ici.",
+  "empty": "Impossible d’afficher la géométrie de l’espace objet.",
+  "webgl": "Impossible de démarrer la visionneuse. Essayez un navigateur compatible avec WebGL 2.",
+  "previous": "Dessin précédent",
+  "drawing": "Dessin DXF",
+  "fit": "Cadrer le dessin",
+  "zoomIn": "Zoom avant",
+  "zoomOut": "Zoom arrière",
+  "layers": "Calques",
+  "controls": "Glisser pour déplacer la vue · Molette pour zoomer",
+  "touchControls": "Glisser pour déplacer la vue · Pincer pour zoomer",
+  "keyboardControls": "Utilisez les flèches pour déplacer la vue et les touches + ou − pour zoomer."
+}

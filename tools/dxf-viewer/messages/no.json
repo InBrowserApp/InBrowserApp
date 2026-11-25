@@ -1,0 +1,20 @@
+{
+  "open": "Åpne DXF-fil",
+  "drop": "Slipp en DXF-tegning her",
+  "example": "Prøv et eksempel",
+  "privacy": "Tegningen blir på enheten din.",
+  "opening": "Åpner tegningen …",
+  "invalid": "Kunne ikke åpne tegningen. Eksporter den på nytt som ASCII-DXF og prøv igjen.",
+  "binary": "Dette er en binær DXF-fil. Eksporter den som ASCII-DXF for å åpne den her.",
+  "empty": "Kunne ikke vise geometri fra modellområdet.",
+  "webgl": "Kunne ikke starte tegningsviseren. Prøv en nettleser der WebGL 2 er tilgjengelig.",
+  "previous": "Forrige tegning",
+  "drawing": "DXF-tegning",
+  "fit": "Vis hele tegningen",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "layers": "Lag",
+  "controls": "Dra for å panorere · Rull for å zoome",
+  "touchControls": "Dra for å panorere · Knip for å zoome",
+  "keyboardControls": "Bruk piltastene til å panorere og + eller − til å zoome."
+}

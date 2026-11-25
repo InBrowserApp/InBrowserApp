@@ -13,3 +13,5 @@ Modeli döndürmek için sürükleyin. Yakınlaştırıp uzaklaştırmak için f
 ## Geçerli 3B görünümü PNG olarak kaydedin
 
 İstediğiniz açıyı ve yakınlaştırma düzeyini ayarlayıp **PNG olarak kaydet** düğmesini seçin. İndirilen görsel, modeli görüntüleyicideki haliyle gösterir ve tamamlanmış ölçümü değeriyle birlikte içerir. Görseli bir tasarım incelemesinde, fiyat teklifinde veya montaj notunda paylaşabilirsiniz.
+
+- [DXF Görüntüleyici](../dxf-viewer/)

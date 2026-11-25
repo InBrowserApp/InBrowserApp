@@ -13,3 +13,5 @@ Välj **Mät** och markera två punkter på den synliga delen av modellen för a
 ## Spara den aktuella 3D-vyn som PNG
 
 Ställ in vinkel och zoomnivå och välj **Spara PNG**. Bilden visar modellen som den ser ut i visaren och tar med en eventuell slutförd mätning och dess värde. Använd bilden för att visa en konstruktionsdetalj vid en granskning, i ett offertunderlag eller i en monteringsanvisning.
+
+- [DXF-visare](../dxf-viewer/)

@@ -1,0 +1,20 @@
+{
+  "open": "DXF dosyası aç",
+  "drop": "DXF çizimini buraya bırakın",
+  "example": "Örnek dene",
+  "privacy": "Çiziminiz cihazınızda kalır.",
+  "opening": "Çizim açılıyor…",
+  "invalid": "Bu çizim açılamadı. ASCII DXF olarak yeniden dışa aktarın ve tekrar deneyin.",
+  "binary": "Bu dosya ikili DXF biçiminde. Burada açmak için ASCII DXF olarak dışa aktarın.",
+  "empty": "Model alanından hiçbir geometri görüntülenemedi.",
+  "webgl": "Çizim görüntüleyicisi açılamadı. WebGL 2 destekleyen bir tarayıcı deneyin.",
+  "previous": "Önceki çizim",
+  "drawing": "DXF çizimi",
+  "fit": "Çizimi ekrana sığdır",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "layers": "Katmanlar",
+  "controls": "Kaydırmak için sürükleyin · Yakınlaştırmak için tekerleği kullanın",
+  "touchControls": "Kaydırmak için sürükleyin · Yakınlaştırmak için iki parmağınızı açıp kapatın",
+  "keyboardControls": "Kaydırmak için ok tuşlarını, yakınlaştırıp uzaklaştırmak için + ve − tuşlarını kullanın."
+}

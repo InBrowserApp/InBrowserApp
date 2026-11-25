@@ -1,0 +1,4 @@
+{
+  "name": "DXF-viewer",
+  "description": "Open 2D-tekeningen in DXF-formaat in je browser. Verschuif de weergave, zoom in en toon of verberg afzonderlijke CAD-lagen om de geometrie en labels in de modelruimte te bekijken."
+}

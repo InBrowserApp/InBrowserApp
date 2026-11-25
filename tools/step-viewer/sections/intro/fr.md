@@ -13,3 +13,5 @@ Cliquez sur **Mesurer**, puis sélectionnez deux points sur la partie visible du
 ## Enregistrer la vue 3D actuelle en PNG
 
 Réglez l’angle et le zoom, puis cliquez sur **Enregistrer en PNG**. L’image téléchargée reprend le modèle tel qu’il apparaît dans la visionneuse et inclut la mesure et sa valeur si vous avez sélectionné les deux points. Vous pouvez ainsi partager un détail de la conception dans une revue, un devis ou une note de montage.
+
+- [Visionneuse DXF](../dxf-viewer/)

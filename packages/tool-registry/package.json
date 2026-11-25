@@ -120,6 +120,7 @@
     "@tool/docx-to-pdf-converter": "workspace:*",
     "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
+    "@tool/dxf-viewer": "workspace:*",
     "@tool/ebook-text-html-export": "workspace:*",
     "@tool/email-attachment-extractor": "workspace:*",
     "@tool/email-content-export": "workspace:*",

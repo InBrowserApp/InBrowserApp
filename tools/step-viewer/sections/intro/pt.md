@@ -13,3 +13,5 @@ Selecione **Medir** e marque dois pontos na parte visível do modelo para ver a 
 ## Salvar a vista 3D atual em PNG
 
 Ajuste o ângulo e o zoom e selecione **Salvar PNG**. A imagem mostra o modelo como ele aparece no visualizador e inclui a medição e seu valor, se você já tiver selecionado os dois pontos. Use a imagem para compartilhar um detalhe do projeto em uma revisão, um orçamento ou uma instrução de montagem.
+
+- [Visualizador de DXF](../dxf-viewer/)

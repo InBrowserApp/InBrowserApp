@@ -1,0 +1,4 @@
+{
+  "name": "DXF-Betrachter",
+  "description": "Öffne 2D-DXF-Zeichnungen im Browser. Verschiebe und vergrößere die Ansicht und blende einzelne CAD-Layer ein oder aus, um Geometrie und Beschriftungen im Modellbereich zu prüfen."
+}

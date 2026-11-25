@@ -47,6 +47,7 @@ catalog:
   "@citation-js/plugin-ris": 0.9.0
   "@pinyin-pro/data": 1.3.1
   pinyin-pro: 3.29.5
+  dxf-viewer: 1.0.51
   djvu-rs: 0.46.0
   mediabunny: 1.66.0
   "@mediabunny/flac-encoder": 1.66.0
@@ -419,6 +420,7 @@ patchedDependencies:
   "@rhwp/core@0.9.0": patches/@rhwp__core@0.9.0.patch
   hyparquet@1.33.1: patches/hyparquet@1.33.1.patch
   pst-extractor@1.12.0: patches/pst-extractor@1.12.0.patch
+  dxf-viewer@1.0.51: patches/dxf-viewer@1.0.51.patch
 
 minimumReleaseAgeExclude:
   - lint-staged@17.6.1

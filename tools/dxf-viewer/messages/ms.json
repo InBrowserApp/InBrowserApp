@@ -1,0 +1,20 @@
+{
+  "open": "Buka fail DXF",
+  "drop": "Letakkan lukisan DXF di sini",
+  "example": "Cuba contoh",
+  "privacy": "Lukisan kekal pada peranti anda.",
+  "opening": "Membuka lukisan…",
+  "invalid": "Lukisan ini tidak dapat dibuka. Eksport semula sebagai fail DXF ASCII dan cuba lagi.",
+  "binary": "Ini ialah DXF binari. Eksport sebagai DXF ASCII untuk membukanya di sini.",
+  "empty": "Tiada geometri ruang model yang dapat dipaparkan.",
+  "webgl": "Pemapar lukisan tidak dapat dimulakan. Cuba pelayar dengan sokongan WebGL 2.",
+  "previous": "Lukisan sebelumnya",
+  "drawing": "Lukisan DXF",
+  "fit": "Papar seluruh lukisan",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "layers": "Lapisan",
+  "controls": "Seret untuk alih pandangan · Tatal untuk zum",
+  "touchControls": "Seret untuk alih pandangan · Cubit untuk zum",
+  "keyboardControls": "Gunakan kekunci anak panah untuk mengalih pandangan dan + atau − untuk zum."
+}

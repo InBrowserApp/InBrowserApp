@@ -568,6 +568,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "duration-calculator",
   },
   {
+    category: "diagram",
+    name: "Visor de DXF",
+    slug: "dxf-viewer",
+  },
+  {
     category: "ebook",
     name: "Convertidor de libros electrónicos a TXT / HTML",
     slug: "ebook-text-html-export",
