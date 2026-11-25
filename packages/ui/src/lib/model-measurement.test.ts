@@ -37,9 +37,15 @@ test("picks the visible mesh in world coordinates behind hidden surfaces", () =>
   scene.updateMatrixWorld(true)
 
   const measurement = createModelMeasurement(scene, canvas, camera, [root])
+  expect(measurement.canMeasure).toBe(true)
   expect(measurement.pick(50, 50)).toEqual(new Vector3(0, 0, 1))
   expect(measurement.pick(75, 50)).toEqual(new Vector3(0.5, 0, 1))
 
+  visible.visible = false
+  const withoutSurface = createModelMeasurement(scene, canvas, camera, [root])
+  expect(withoutSurface.canMeasure).toBe(false)
+  expect(withoutSurface.pick(50, 50)).toBeUndefined()
+  withoutSurface.dispose()
   measurement.dispose()
   geometry.dispose()
   material.dispose()

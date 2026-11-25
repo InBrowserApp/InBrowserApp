@@ -9,7 +9,11 @@ import {
   Vector2,
   Vector3,
 } from "three"
-import type { Object3D, OrthographicCamera, Scene } from "three"
+import type { Material, Object3D, OrthographicCamera, Scene } from "three"
+
+function isVisible(material?: Material) {
+  return material?.visible && material.opacity !== 0
+}
 
 export function createModelMeasurement(
   scene: Scene,
@@ -37,7 +41,20 @@ export function createModelMeasurement(
 
   const ray = new Raycaster()
   const pointer = new Vector2()
+  function visibleMeshes() {
+    const meshes: Mesh[] = []
+    for (const root of modelRoots) {
+      root.traverseVisible((node) => {
+        if ((node as Mesh).isMesh) meshes.push(node as Mesh)
+      })
+    }
+    return meshes
+  }
+
   return {
+    canMeasure: visibleMeshes().some(({ material }) =>
+      Array.isArray(material) ? material.some(isVisible) : isVisible(material)
+    ),
     pick(x: number, y: number) {
       const bounds = canvas.getBoundingClientRect()
       pointer.set(
@@ -45,18 +62,12 @@ export function createModelMeasurement(
         1 - ((y - bounds.top) / bounds.height) * 2
       )
       ray.setFromCamera(pointer, camera)
-      const meshes: Mesh[] = []
-      for (const root of modelRoots) {
-        root.traverseVisible((node) => {
-          if ((node as Mesh).isMesh) meshes.push(node as Mesh)
-        })
-      }
-      return ray.intersectObjects(meshes, false).find((hit) => {
+      return ray.intersectObjects(visibleMeshes(), false).find((hit) => {
         const { material } = hit.object as Mesh
         const surface = Array.isArray(material)
           ? material[hit.face?.materialIndex ?? 0]
           : material
-        return surface?.visible && surface.opacity !== 0
+        return isVisible(surface)
       })?.point
     },
     show(points: Vector3[]) {

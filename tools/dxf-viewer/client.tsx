@@ -120,6 +120,22 @@ export default function DxfClient({
     }
   }
 
+  const layersVisible = showLayers && Boolean(drawing?.layers.length)
+  const feedback =
+    status === "opening" ? (
+      <p
+        role="status"
+        className="flex shrink-0 items-center gap-2 px-2 py-1.5 text-sm"
+      >
+        <Spinner aria-hidden="true" />
+        {m.opening}
+      </p>
+    ) : status ? (
+      <Alert variant="destructive" className="shrink-0">
+        <AlertDescription>{m[status]}</AlertDescription>
+      </Alert>
+    ) : null
+
   return (
     <section
       className={cn(
@@ -157,14 +173,7 @@ export default function DxfClient({
           if (file) open(file)
         }}
       />
-      <p className="sr-only" role="status">
-        {!status && drawing ? `${m.drawing} · ${drawing.name}` : ""}
-      </p>
-      {status && status !== "opening" && (
-        <Alert variant="destructive">
-          <AlertDescription>{m[status]}</AlertDescription>
-        </Alert>
-      )}
+      {!drawing && status !== "opening" && feedback}
       <Empty
         className={
           drawing || status === "opening"
@@ -201,18 +210,17 @@ export default function DxfClient({
             </p>
           )}
         </div>
-        {status === "opening" && (
-          <p role="status" className="flex items-center gap-2 text-sm">
-            <Spinner aria-hidden="true" />
-            {m.opening}
-          </p>
-        )}
+        {!drawing && status === "opening" && feedback}
       </Empty>
       <ViewportFrame
         hidden={!drawing && status !== "opening"}
         label={m.drawing}
         focus={focus}
       >
+        <p className="sr-only" role="status">
+          {!status && drawing ? `${m.drawing} · ${drawing.name}` : ""}
+        </p>
+        {drawing && feedback}
         {drawing && (
           <DrawingToolbar
             messages={m}
@@ -223,7 +231,7 @@ export default function DxfClient({
             }}
             onZoom={(factor) => move(0, 0, factor)}
             layersId={layersId}
-            showLayers={showLayers}
+            showLayers={layersVisible}
             onLayers={
               drawing.layers.length
                 ? () => setShowLayers(!showLayers)
@@ -236,17 +244,16 @@ export default function DxfClient({
           className={cn(
             "grid min-w-0",
             focus.focused && "min-h-0 flex-1 grid-rows-[minmax(0,1fr)]",
-            showLayers && drawing && "md:grid-cols-[15rem_minmax(0,1fr)]",
-            showLayers &&
-              drawing &&
+            layersVisible && "md:grid-cols-[15rem_minmax(0,1fr)]",
+            layersVisible &&
               focus.focused &&
-              "grid-rows-[auto_minmax(0,1fr)] md:grid-rows-[minmax(0,1fr)]"
+              "grid-rows-[auto_minmax(0,1fr)] md:grid-rows-[minmax(0,1fr)] max-md:landscape:grid-cols-[minmax(0,28%)_minmax(0,1fr)] max-md:landscape:grid-rows-[minmax(0,1fr)]"
           )}
         >
           {drawing && (
             <DrawingLayers
               id={layersId}
-              hidden={!showLayers}
+              hidden={!layersVisible}
               layers={drawing.layers}
               onToggle={(name, visible) => {
                 mountedDrawing.current?.viewer.ShowLayer(name, visible)

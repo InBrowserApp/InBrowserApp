@@ -11,10 +11,10 @@ import {
   ZoomIn,
   ZoomOut,
 } from "../../../icons"
-import { useWorkspaceFocus } from "../../../lib/use-workspace-focus"
+import type { useWorkspaceFocus } from "../../../lib/use-workspace-focus"
 import { cn } from "../../../lib/utils"
 import { DocumentIconButton } from "../document-icon-button"
-import { ViewportFocusButton, ViewportFrame } from "../viewport-focus"
+import { ViewportFocusButton } from "../viewport-focus"
 import { Alert, AlertDescription } from "../../ui/alert"
 import { Button } from "../../ui/button"
 import { modelLengthFormat } from "../../../lib/model-length-format"
@@ -36,14 +36,15 @@ export default function ModelPanel({
   model,
   lang,
   messages: m,
+  focus,
 }: {
   model: OpenModel
   lang: string
   messages: ModelViewerMessages
+  focus: ReturnType<typeof useWorkspaceFocus>
 }) {
   const host = useRef<HTMLDivElement>(null)
   const helpId = useId()
-  const focus = useWorkspaceFocus()
   const [viewportState, setViewportState] = useState<
     ReturnType<typeof createModelViewport> | "error"
   >()
@@ -67,20 +68,29 @@ export default function ModelPanel({
 
   if (viewportState === "error") {
     return (
-      <Alert variant="destructive">
-        <AlertDescription>{m.renderError}</AlertDescription>
-      </Alert>
+      <>
+        {focus.focused && (
+          <div className="flex shrink-0 justify-end border-b px-2 py-1.5">
+            <ViewportFocusButton focus={focus} messages={m} />
+          </div>
+        )}
+        <Alert variant="destructive">
+          <AlertDescription>{m.renderError}</AlertDescription>
+        </Alert>
+      </>
     )
   }
 
   const animations = model.animations ?? []
   const numberFormat = new Intl.NumberFormat(lang)
   const formatLength = modelLengthFormat(lang, model.unit, unit)
+  const dimensions = (["x", "y", "z"] as const)
+    .map((axis) => `${axis.toUpperCase()} ${formatLength(model.size[axis])}`)
+    .join(" · ")
   const distance =
     measurement.distance === undefined
       ? undefined
       : `≈ ${formatLength(measurement.distance)}`
-  const showMeasurement = measurement.active || distance !== undefined
 
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     if (!viewport) return
@@ -108,9 +118,9 @@ export default function ModelPanel({
   }
 
   return (
-    <ViewportFrame label={m.viewport} focus={focus}>
-      <div className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 border-b px-2 py-1.5">
-        <div className="flex flex-wrap items-center gap-1">
+    <>
+      <div className="flex shrink-0 flex-wrap items-center gap-x-1 gap-y-1 border-b px-2 py-1.5 sm:gap-x-3">
+        <div className="contents sm:flex sm:flex-wrap sm:items-center sm:gap-1">
           <DocumentIconButton label={m.fit} onClick={() => viewport?.fit()}>
             <Scan aria-hidden="true" />
           </DocumentIconButton>
@@ -138,22 +148,23 @@ export default function ModelPanel({
             <LayoutGrid data-icon="inline-start" aria-hidden="true" />
             {m.wireframe}
           </Button>
-          <Button
-            size="sm"
-            variant={measurement.active ? "secondary" : "ghost"}
-            aria-pressed={measurement.active}
-            disabled={!viewport}
-            onClick={() => {
-              if (playing) {
-                viewport?.setPlayback(clip, false)
-                setPlaying(false)
-              }
-              measurement.toggle()
-            }}
-          >
-            <Ruler data-icon="inline-start" aria-hidden="true" />
-            {m.measure}
-          </Button>
+          {viewport?.canMeasure && (
+            <Button
+              size="sm"
+              variant={measurement.active ? "secondary" : "ghost"}
+              aria-pressed={measurement.active}
+              onClick={() => {
+                if (playing) {
+                  viewport.setPlayback(clip, false)
+                  setPlaying(false)
+                }
+                measurement.toggle()
+              }}
+            >
+              <Ruler data-icon="inline-start" aria-hidden="true" />
+              {m.measure}
+            </Button>
+          )}
         </div>
         {animations.length > 0 && (
           <div className="flex min-w-0 items-center gap-1">
@@ -208,7 +219,7 @@ export default function ModelPanel({
       <div
         aria-live="polite"
         className={cn(
-          showMeasurement &&
+          (measurement.active || distance !== undefined) &&
             "flex min-h-10 shrink-0 items-center gap-2 border-b px-3 py-1 text-sm"
         )}
       >
@@ -266,12 +277,7 @@ export default function ModelPanel({
           <p>
             {m.overall}{" "}
             <bdi className="font-mono text-foreground" dir="ltr">
-              {(["x", "y", "z"] as const)
-                .map(
-                  (axis) =>
-                    `${axis.toUpperCase()} ${formatLength(model.size[axis])}`
-                )
-                .join(" · ")}
+              {dimensions}
             </bdi>
           </p>
           {model.unit ? (
@@ -297,6 +303,6 @@ export default function ModelPanel({
           <AlertDescription>{m.exportError}</AlertDescription>
         </Alert>
       )}
-    </ViewportFrame>
+    </>
   )
 }

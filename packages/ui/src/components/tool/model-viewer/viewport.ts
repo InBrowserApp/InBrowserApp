@@ -116,6 +116,7 @@ export function createModelViewport(
   resize()
   applyTheme()
   return {
+    canMeasure: measurement.canMeasure,
     fit() {
       const direction = camera.position.clone().sub(controls.target)
       controls.target.set(0, 0, 0)
