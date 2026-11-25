@@ -1,0 +1,16 @@
+{
+  "country": "Quốc gia hoặc khu vực",
+  "format": "Định dạng số",
+  "national": "Trong nước",
+  "international": "Quốc tế (E.164)",
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Số điện thoại",
+  "placeholder": "Các số điện thoại đã tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không thể sao chép",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tạo số điện thoại. Hãy thử lại."
+}

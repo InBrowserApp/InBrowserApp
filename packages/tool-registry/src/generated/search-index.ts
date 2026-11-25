@@ -43904,6 +43904,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "random-phone-number-generator",
+    category: "random",
+    icon: "phone",
+    tags: [
+      "random",
+      "phone number",
+      "telephone",
+      "E.164",
+      "test data",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أرقام هواتف عشوائية",
+        description:
+          "ولّد أرقام هواتف تجريبية لـ12 بلدًا أو منطقة بالتنسيق المحلي أو الدولي E.164. انسخ الأرقام دفعة واحدة أو نزّلها في ملف نصي.",
+      },
+      de: {
+        name: "Zufällige Telefonnummern generieren",
+        description:
+          "Generiere Beispieltelefonnummern für 12 Länder oder Regionen im nationalen oder internationalen E.164-Format. Kopiere oder lade eine Liste herunter.",
+      },
+      en: {
+        name: "Random Phone Number Generator",
+        description:
+          "Generate sample phone numbers for 12 countries or regions in national or international E.164 format. Copy or download a batch.",
+      },
+      es: {
+        name: "Generador de números de teléfono aleatorios",
+        description:
+          "Genera números de teléfono de ejemplo para 12 países o regiones en formato nacional o internacional E.164. Copia o descarga una serie.",
+      },
+      fr: {
+        name: "Générateur de numéros de téléphone aléatoires",
+        description:
+          "Générez des exemples de numéros de téléphone pour 12 pays ou régions au format national ou international E.164. Copiez ou téléchargez une série.",
+      },
+      he: {
+        name: "מחולל מספרי טלפון אקראיים",
+        description:
+          "צרו מספרי טלפון לדוגמה ל־12 מדינות או אזורים, בפורמט מקומי או בינלאומי E.164. אפשר להעתיק את הרשימה או להוריד אותה.",
+      },
+      hi: {
+        name: "रैंडम फ़ोन नंबर जनरेटर",
+        description:
+          "12 देशों या क्षेत्रों के लिए राष्ट्रीय या अंतरराष्ट्रीय E.164 फ़ॉर्मैट में नमूना फ़ोन नंबर जनरेट करें। पूरी सूची कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Nomor Telepon Acak",
+        description:
+          "Buat nomor telepon contoh untuk 12 negara atau wilayah dalam format nasional atau internasional E.164. Salin atau unduh hasilnya sekaligus.",
+      },
+      it: {
+        name: "Generatore di numeri di telefono casuali",
+        description:
+          "Genera numeri di telefono di esempio per 12 paesi o aree geografiche in formato nazionale o internazionale E.164. Copia o scarica l’elenco.",
+      },
+      ja: {
+        name: "ランダム電話番号ジェネレーター",
+        description:
+          "12の国や地域のサンプル電話番号を国内形式または国際形式（E.164）で生成します。まとめてコピーやダウンロードができます。",
+      },
+      ko: {
+        name: "무작위 전화번호 생성기",
+        description:
+          "12개 국가 또는 지역의 예시 전화번호를 국내 형식이나 국제 E.164 형식으로 생성합니다. 결과를 한꺼번에 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Nombor Telefon Rawak",
+        description:
+          "Jana nombor telefon contoh untuk 12 negara atau wilayah mengikut format dalam negara atau format antarabangsa E.164. Salin atau muat turun satu set nombor.",
+      },
+      nl: {
+        name: "Generator voor willekeurige telefoonnummers",
+        description:
+          "Genereer voorbeeldnummers voor 12 landen of regio’s in nationaal of internationaal E.164-formaat. Kopieer of download de lijst.",
+      },
+      no: {
+        name: "Generator for tilfeldige telefonnumre",
+        description:
+          "Generer telefonnumre til testing for 12 land eller regioner i nasjonalt eller internasjonalt E.164-format. Kopier eller last ned listen.",
+      },
+      pl: {
+        name: "Generator losowych numerów telefonu",
+        description:
+          "Generuj przykładowe numery telefonu dla 12 krajów lub regionów w formacie krajowym albo międzynarodowym E.164. Kopiuj lub pobieraj całe listy.",
+      },
+      pt: {
+        name: "Gerador de números de telefone aleatórios",
+        description:
+          "Gere exemplos de números de telefone para 12 países ou regiões no formato nacional ou internacional E.164. Copie ou baixe uma lista.",
+      },
+      ru: {
+        name: "Генератор случайных телефонных номеров",
+        description:
+          "Генерируйте примеры телефонных номеров для 12 стран или регионов в национальном или международном формате E.164. Скопируйте или скачайте список.",
+      },
+      sv: {
+        name: "Slumpgenerator för telefonnummer",
+        description:
+          "Generera exempelnummer för 12 länder eller regioner i nationellt eller internationellt E.164-format. Kopiera eller ladda ner listan.",
+      },
+      th: {
+        name: "เครื่องมือสร้างหมายเลขโทรศัพท์แบบสุ่ม",
+        description:
+          "สร้างหมายเลขโทรศัพท์ตัวอย่างสำหรับ 12 ประเทศหรือภูมิภาคในรูปแบบในประเทศหรือรูปแบบสากล E.164 แล้วคัดลอกหรือดาวน์โหลดทั้งชุด",
+      },
+      tr: {
+        name: "Rastgele Telefon Numarası Oluşturucu",
+        description:
+          "12 ülke veya bölge için ulusal ya da uluslararası E.164 biçiminde örnek telefon numaraları oluşturun. Listeyi kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Trình tạo số điện thoại ngẫu nhiên",
+        description:
+          "Tạo số điện thoại mẫu cho 12 quốc gia hoặc khu vực theo định dạng trong nước hoặc quốc tế E.164. Sao chép hoặc tải xuống cả danh sách.",
+      },
+      "zh-CN": {
+        name: "随机电话号码生成器",
+        description:
+          "生成 12 个国家或地区的示例电话号码，支持国内格式或国际 E.164 格式。可批量复制或下载。",
+      },
+      "zh-TW": {
+        name: "隨機電話號碼產生器",
+        description:
+          "產生 12 個國家或地區的範例電話號碼，支援國內格式或國際 E.164 格式，可批次複製或下載。",
+      },
+    },
+  },
+  {
     slug: "random-postal-code-generator",
     category: "random",
     icon: "mail",

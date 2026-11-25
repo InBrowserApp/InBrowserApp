@@ -1724,6 +1724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "ランダム電話番号ジェネレーター",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "ランダム郵便番号生成ツール",
     slug: "random-postal-code-generator",
   },

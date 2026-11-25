@@ -421,6 +421,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
+  "random-phone-number-generator": () =>
+    import("@tool/random-phone-number-generator/page"),
   "random-postal-code-generator": () =>
     import("@tool/random-postal-code-generator/page"),
   "refresh-rate-test": () => import("@tool/refresh-rate-test/page"),

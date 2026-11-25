@@ -1,0 +1,16 @@
+{
+  "country": "Negara atau wilayah",
+  "format": "Format nombor",
+  "national": "Dalam negara",
+  "international": "Antarabangsa (E.164)",
+  "quantity": "Kuantiti",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Nombor telefon",
+  "placeholder": "Nombor telefon yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun TXT",
+  "error": "Nombor telefon tidak dapat dijana. Cuba lagi."
+}

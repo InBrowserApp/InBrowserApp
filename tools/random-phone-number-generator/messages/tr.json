@@ -1,0 +1,16 @@
+{
+  "country": "Ülke veya bölge",
+  "format": "Numara biçimi",
+  "national": "Ulusal",
+  "international": "Uluslararası (E.164)",
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Telefon numaraları",
+  "placeholder": "Oluşturulan telefon numaraları burada görünür.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalanamadı",
+  "download": "TXT indir",
+  "error": "Telefon numaraları oluşturulamadı. Tekrar deneyin."
+}

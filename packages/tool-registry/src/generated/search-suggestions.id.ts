@@ -1724,6 +1724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Pembuat Nomor Telepon Acak",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "Generator kode pos acak",
     slug: "random-postal-code-generator",
   },

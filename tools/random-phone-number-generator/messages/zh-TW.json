@@ -1,0 +1,16 @@
+{
+  "country": "國家或地區",
+  "format": "號碼格式",
+  "national": "國內格式",
+  "international": "國際格式（E.164）",
+  "quantity": "數量",
+  "generate": "產生",
+  "generating": "產生中…",
+  "results": "電話號碼",
+  "placeholder": "產生的電話號碼會顯示在這裡。",
+  "copy": "全部複製",
+  "copied": "已複製",
+  "copyFailed": "複製失敗",
+  "download": "下載 TXT",
+  "error": "無法產生電話號碼，請再試一次。"
+}

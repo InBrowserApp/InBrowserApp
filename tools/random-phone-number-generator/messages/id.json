@@ -1,0 +1,16 @@
+{
+  "country": "Negara atau wilayah",
+  "format": "Format nomor",
+  "national": "Nasional",
+  "international": "Internasional (E.164)",
+  "quantity": "Jumlah",
+  "generate": "Buat",
+  "generating": "Sedang membuat…",
+  "results": "Nomor telepon",
+  "placeholder": "Nomor telepon yang dibuat akan muncul di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT",
+  "error": "Nomor telepon gagal dibuat. Coba lagi."
+}

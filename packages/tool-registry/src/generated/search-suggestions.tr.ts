@@ -1724,6 +1724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Rastgele Telefon Numarası Oluşturucu",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "Rastgele Posta Kodu Oluşturucu",
     slug: "random-postal-code-generator",
   },

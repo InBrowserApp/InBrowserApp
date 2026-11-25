@@ -1724,6 +1724,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "เครื่องมือสร้างหมายเลขโทรศัพท์แบบสุ่ม",
+    slug: "random-phone-number-generator",
+  },
+  {
+    category: "random",
     name: "ตัวสร้างรหัสไปรษณีย์สุ่ม",
     slug: "random-postal-code-generator",
   },

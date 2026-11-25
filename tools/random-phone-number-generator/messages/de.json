@@ -1,0 +1,16 @@
+{
+  "country": "Land oder Region",
+  "format": "Nummernformat",
+  "national": "National",
+  "international": "International (E.164)",
+  "quantity": "Anzahl",
+  "generate": "Generieren",
+  "generating": "Wird generiert…",
+  "results": "Telefonnummern",
+  "placeholder": "Generierte Telefonnummern erscheinen hier.",
+  "copy": "Alle kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "TXT herunterladen",
+  "error": "Telefonnummern konnten nicht generiert werden. Versuche es erneut."
+}
