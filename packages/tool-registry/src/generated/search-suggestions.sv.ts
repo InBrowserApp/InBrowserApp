@@ -1178,6 +1178,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "midi-monitor",
   },
   {
+    category: "misc",
+    name: "MIDI-transponering och tempoändring",
+    slug: "midi-transposer",
+  },
+  {
     category: "network",
     name: "MIME-typsökning",
     slug: "mime-type-lookup",

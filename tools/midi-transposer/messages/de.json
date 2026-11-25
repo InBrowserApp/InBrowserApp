@@ -1,0 +1,15 @@
+{
+  "chooseFile": "MIDI-Datei auswählen",
+  "changeFile": "Datei wechseln",
+  "dropHint": "oder eine MIDI-Datei hierher ziehen",
+  "privacy": "Deine Datei bleibt in diesem Browser.",
+  "pitch": "Transponieren (Halbtöne)",
+  "pitchHint": "Ein negativer Wert senkt die Tonhöhe.",
+  "speed": "Tempo (%)",
+  "speedHint": "100 % entspricht dem Originaltempo.",
+  "keepDrums": "Tonhöhe der Schlagzeugnoten beibehalten",
+  "download": "MIDI herunterladen",
+  "invalidFile": "Diese Datei ließ sich nicht als Standard-MIDI-Datei lesen. Wähle eine andere .mid- oder .midi-Datei.",
+  "pitchOutOfRange": "Einige Noten würden außerhalb des MIDI-Tonumfangs liegen. Wähle eine kleinere Verschiebung.",
+  "tempoOutOfRange": "Dieser Wert liegt außerhalb des darstellbaren MIDI-Zeitbereichs. Wähle einen Prozentsatz näher an 100 %."
+}

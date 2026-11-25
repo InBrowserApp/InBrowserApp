@@ -1,0 +1,4 @@
+{
+  "name": "MIDI transponieren und Tempo ändern",
+  "description": "Transponiere MIDI-Noten in Halbtonschritten und stelle das Tempo schneller oder langsamer ein. Lade die bearbeitete MIDI-Datei direkt im Browser herunter."
+}

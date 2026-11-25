@@ -303,6 +303,7 @@ catalog:
   marked: ^18.2.1
   mermaid: 12.3.0
   mhtml-to-html: 2.2.1
+  midi-file: 1.2.4
   mime-db: ^1.54.0
   minimatch: ^11.0.8
   murmurhash3js-revisited: ^3.0.0

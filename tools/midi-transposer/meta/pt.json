@@ -1,0 +1,4 @@
+{
+  "name": "Transposição MIDI e ajuste de andamento",
+  "description": "Transponha as notas de um arquivo MIDI em semitons, acelere ou diminua o andamento e baixe o MIDI editado direto do navegador."
+}

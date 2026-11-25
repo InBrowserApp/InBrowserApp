@@ -21622,6 +21622,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-transposer",
+    language: "ar",
+  },
+  {
+    slug: "midi-transposer",
+    language: "de",
+  },
+  {
+    slug: "midi-transposer",
+    language: "en",
+  },
+  {
+    slug: "midi-transposer",
+    language: "es",
+  },
+  {
+    slug: "midi-transposer",
+    language: "fr",
+  },
+  {
+    slug: "midi-transposer",
+    language: "he",
+  },
+  {
+    slug: "midi-transposer",
+    language: "hi",
+  },
+  {
+    slug: "midi-transposer",
+    language: "id",
+  },
+  {
+    slug: "midi-transposer",
+    language: "it",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ja",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ko",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ms",
+  },
+  {
+    slug: "midi-transposer",
+    language: "nl",
+  },
+  {
+    slug: "midi-transposer",
+    language: "no",
+  },
+  {
+    slug: "midi-transposer",
+    language: "pl",
+  },
+  {
+    slug: "midi-transposer",
+    language: "pt",
+  },
+  {
+    slug: "midi-transposer",
+    language: "ru",
+  },
+  {
+    slug: "midi-transposer",
+    language: "sv",
+  },
+  {
+    slug: "midi-transposer",
+    language: "th",
+  },
+  {
+    slug: "midi-transposer",
+    language: "tr",
+  },
+  {
+    slug: "midi-transposer",
+    language: "vi",
+  },
+  {
+    slug: "midi-transposer",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-transposer",
+    language: "zh-TW",
+  },
+  {
     slug: "mime-type-lookup",
     language: "ar",
   },

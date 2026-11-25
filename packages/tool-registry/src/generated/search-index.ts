@@ -29874,6 +29874,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "midi-transposer",
+    category: "misc",
+    icon: "piano",
+    tags: [
+      "midi",
+      "transpose",
+      "transposer",
+      "semitones",
+      "key change",
+      "tempo",
+      "bpm",
+      "speed",
+      "pitch",
+    ],
+    locales: {
+      ar: {
+        name: "تغيير طبقة النغمات وسرعة MIDI",
+        description:
+          "انقل نغمات MIDI بمقدار أنصاف درجات وزِد سرعة العزف أو خفّضها. نزّل ملف MIDI المعدّل مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "MIDI transponieren und Tempo ändern",
+        description:
+          "Transponiere MIDI-Noten in Halbtonschritten und stelle das Tempo schneller oder langsamer ein. Lade die bearbeitete MIDI-Datei direkt im Browser herunter.",
+      },
+      en: {
+        name: "MIDI Transposer and Tempo Changer",
+        description:
+          "Transpose MIDI notes by semitones and speed up or slow down the tempo. Download the edited MIDI file directly from your browser.",
+      },
+      es: {
+        name: "Transposición MIDI y ajuste de tempo",
+        description:
+          "Transpón las notas de un archivo MIDI por semitonos, acelera o ralentiza el tempo y descarga el MIDI editado desde tu navegador.",
+      },
+      fr: {
+        name: "Transposition MIDI et réglage du tempo",
+        description:
+          "Transposez les notes d’un fichier MIDI par demi-tons, accélérez ou ralentissez le tempo et téléchargez le MIDI modifié depuis votre navigateur.",
+      },
+      he: {
+        name: "טרנספוזיציה ושינוי טמפו ל־MIDI",
+        description:
+          "הזיזו תווי MIDI בחצאי טונים והאיצו או האטו את הטמפו. הורידו את קובץ ה־MIDI הערוך ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "MIDI ट्रांसपोज़र और टेम्पो परिवर्तक",
+        description:
+          "MIDI नोटों की पिच सेमीटोन में बदलें और टेम्पो बढ़ाएँ या घटाएँ। संपादित MIDI फ़ाइल सीधे ब्राउज़र से डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengubah Nada dan Tempo MIDI",
+        description:
+          "Transposisikan not MIDI dalam semiton dan percepat atau perlambat temponya. Unduh file MIDI hasil suntingan langsung dari browser.",
+      },
+      it: {
+        name: "Trasposizione MIDI e regolazione del tempo",
+        description:
+          "Trasponi le note di un file MIDI per semitoni, accelera o rallenta il tempo e scarica il MIDI modificato direttamente dal browser.",
+      },
+      ja: {
+        name: "MIDI 移調・テンポ変更",
+        description:
+          "MIDI の音符を半音単位で移調し、テンポを速くしたり遅くしたりできます。編集した MIDI ファイルをブラウザーから直接ダウンロードできます。",
+      },
+      ko: {
+        name: "MIDI 조옮김 및 템포 변경",
+        description:
+          "MIDI 음표를 반음 단위로 조옮김하고 템포를 빠르게 하거나 느리게 합니다. 수정한 MIDI 파일을 브라우저에서 바로 다운로드하세요.",
+      },
+      ms: {
+        name: "Pelarasan Nada dan Tempo MIDI",
+        description:
+          "Ubah nada not MIDI dalam langkah semiton dan laraskan tempo agar lebih laju atau perlahan. Muat turun fail MIDI yang disunting terus daripada pelayar.",
+      },
+      nl: {
+        name: "MIDI transponeren en tempo aanpassen",
+        description:
+          "Transponeer MIDI-noten in halve tonen en maak het tempo sneller of langzamer. Download het aangepaste MIDI-bestand rechtstreeks vanuit je browser.",
+      },
+      no: {
+        name: "Transponer MIDI og endre tempo",
+        description:
+          "Transponer MIDI-noter i halvtonetrinn og øk eller senk tempoet. Last ned den redigerte MIDI-filen direkte fra nettleseren.",
+      },
+      pl: {
+        name: "Transpozycja i zmiana tempa MIDI",
+        description:
+          "Transponuj nuty MIDI o wybraną liczbę półtonów, przyspiesz lub zwolnij odtwarzanie i pobierz zmieniony plik MIDI bezpośrednio z przeglądarki.",
+      },
+      pt: {
+        name: "Transposição MIDI e ajuste de andamento",
+        description:
+          "Transponha as notas de um arquivo MIDI em semitons, acelere ou diminua o andamento e baixe o MIDI editado direto do navegador.",
+      },
+      ru: {
+        name: "Транспонирование и изменение темпа MIDI",
+        description:
+          "Транспонируйте ноты MIDI на нужное число полутонов, ускоряйте или замедляйте воспроизведение и скачивайте изменённый MIDI-файл прямо из браузера.",
+      },
+      sv: {
+        name: "MIDI-transponering och tempoändring",
+        description:
+          "Transponera MIDI-toner i halvtonssteg och höj eller sänk tempot. Ladda ner den redigerade MIDI-filen direkt från webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปลี่ยนคีย์และปรับเทมโป MIDI",
+        description:
+          "เลื่อนโน้ต MIDI ขึ้นหรือลงทีละครึ่งเสียงและปรับเทมโปให้เร็วขึ้นหรือช้าลง ดาวน์โหลดไฟล์ MIDI ที่แก้ไขแล้วได้จากเบราว์เซอร์",
+      },
+      tr: {
+        name: "MIDI Transpoze ve Tempo Ayarı",
+        description:
+          "MIDI notalarını yarım ses adımlarıyla transpoze edin, tempoyu hızlandırın veya yavaşlatın. Düzenlenen MIDI dosyasını doğrudan tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển giọng và đổi nhịp độ MIDI",
+        description:
+          "Chuyển cao độ các nốt MIDI theo nửa cung và tăng hoặc giảm nhịp độ. Tải tệp MIDI đã chỉnh sửa trực tiếp từ trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MIDI 移调与速度调整",
+        description:
+          "按半音移调 MIDI 音符，并加快或减慢速度。直接从浏览器下载修改后的 MIDI 文件。",
+      },
+      "zh-TW": {
+        name: "MIDI 移調與速度調整",
+        description:
+          "以半音為單位移調 MIDI 音符，並加快或減慢速度。直接從瀏覽器下載修改後的 MIDI 檔案。",
+      },
+    },
+  },
+  {
     slug: "mime-type-lookup",
     category: "network",
     icon: "network",
