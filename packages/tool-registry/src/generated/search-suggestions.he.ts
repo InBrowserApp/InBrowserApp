@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "ממיר EPUB ל־KEPUB עבור Kobo",
+    slug: "epub-to-kepub-converter",
+  },
+  {
+    category: "ebook",
     name: "ממיר EPUB ל־PDF",
     slug: "epub-to-pdf-converter",
   },

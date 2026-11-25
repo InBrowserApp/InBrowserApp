@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "แปลง EPUB เป็น KEPUB สำหรับ Kobo",
+    slug: "epub-to-kepub-converter",
+  },
+  {
+    category: "ebook",
     name: "โปรแกรมแปลง EPUB เป็น PDF",
     slug: "epub-to-pdf-converter",
   },

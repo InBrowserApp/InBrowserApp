@@ -169,6 +169,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/epsg-coordinate-transformer/page"),
   "epub-metadata-editor": () => import("@tool/epub-metadata-editor/page"),
   "epub-reader": () => import("@tool/epub-reader/page"),
+  "epub-to-kepub-converter": () => import("@tool/epub-to-kepub-converter/page"),
   "epub-to-pdf-converter": () => import("@tool/epub-to-pdf-converter/page"),
   "epub-to-word-converter": () => import("@tool/epub-to-word-converter/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),

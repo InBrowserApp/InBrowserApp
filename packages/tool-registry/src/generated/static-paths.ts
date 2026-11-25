@@ -12238,6 +12238,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epub-to-kepub-converter",
+    language: "ar",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "de",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "en",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "es",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "fr",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "he",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "hi",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "id",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "it",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "ja",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "ko",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "ms",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "nl",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "no",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "pl",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "pt",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "ru",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "sv",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "th",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "tr",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "vi",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-to-kepub-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-to-pdf-converter",
     language: "ar",
   },

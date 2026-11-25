@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "Kobo向けにEPUBをKEPUBに変換",
+    slug: "epub-to-kepub-converter",
+  },
+  {
+    category: "ebook",
     name: "EPUB PDF変換",
     slug: "epub-to-pdf-converter",
   },

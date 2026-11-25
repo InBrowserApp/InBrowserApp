@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "Convertidor de EPUB a KEPUB para Kobo",
+    slug: "epub-to-kepub-converter",
+  },
+  {
+    category: "ebook",
     name: "Convertidor de EPUB a PDF",
     slug: "epub-to-pdf-converter",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển EPUB sang KEPUB cho Kobo",
+  "description": "Chuyển EPUB sang KEPUB ngay trong trình duyệt để đọc trên máy Kobo. Giữ nguyên văn bản, bìa và mục lục, rồi tải xuống tệp có đuôi .kepub.epub."
+}

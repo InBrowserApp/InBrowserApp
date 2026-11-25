@@ -140,6 +140,7 @@
     "@tool/epsg-coordinate-transformer": "workspace:*",
     "@tool/epub-metadata-editor": "workspace:*",
     "@tool/epub-reader": "workspace:*",
+    "@tool/epub-to-kepub-converter": "workspace:*",
     "@tool/epub-to-pdf-converter": "workspace:*",
     "@tool/epub-to-word-converter": "workspace:*",
     "@tool/eu-vat-number-validator": "workspace:*",

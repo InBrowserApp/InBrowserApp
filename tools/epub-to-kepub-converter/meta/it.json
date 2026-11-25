@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da EPUB a KEPUB per Kobo",
+  "description": "Converti EPUB in KEPUB per Kobo nel browser. Conserva il testo, la copertina e l’indice del libro e scarica un file .kepub.epub per il tuo lettore Kobo."
+}
