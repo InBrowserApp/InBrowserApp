@@ -1,4 +1,5 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
@@ -114,4 +115,40 @@ it("recovers from an unsupported file and an engine error", async () => {
   await screen.findByText(m.protected)
   upload()
   await screen.findByRole("img", { name: m.preview })
+})
+
+it("jumps to a slide and can cancel and retry an all-slide export", async () => {
+  render(<Client messages={m} />)
+  upload()
+  await screen.findByRole("img", { name: m.preview })
+  const page = screen.getByLabelText(m.page) as HTMLSelectElement
+  fireEvent.change(page, { target: { value: "3" } })
+  await screen.findByRole("img", { name: m.preview })
+  expect(page.value).toBe("3")
+  fireEvent.click(screen.getByRole("button", { name: m.previous }))
+  await screen.findByRole("img", { name: m.preview })
+  expect(page.value).toBe("2")
+  fireEvent.change(screen.getByLabelText(m.scope), {
+    target: { value: "whole" },
+  })
+  let finish!: (blob: Blob) => void
+  mocked.renderSlideImage.mockImplementationOnce(
+    () =>
+      new Promise<Blob>((resolve) => {
+        finish = resolve
+      })
+  )
+  const save = screen.getByRole("button", { name: m.downloadZip })
+  fireEvent.click(save)
+  await waitFor(() => expect(finish).toBeTypeOf("function"))
+  fireEvent.click(screen.getByRole("button", { name: m.cancel }))
+  await act(async () => finish(new Blob(["slide"], { type: "image/png" })))
+  expect(mocked.downloadBlob).not.toHaveBeenCalled()
+  fireEvent.click(save)
+  await waitFor(() =>
+    expect(mocked.downloadBlob).toHaveBeenCalledWith(
+      expect.objectContaining({ type: "application/zip" }),
+      "Sales-slides-1-3-png.zip"
+    )
+  )
 })
