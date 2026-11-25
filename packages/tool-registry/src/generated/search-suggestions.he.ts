@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "ממיר EPUB ל־Word (DOCX)",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: 'מאמת מספרי מע"מ של האיחוד האירופי',
     slug: "eu-vat-number-validator",

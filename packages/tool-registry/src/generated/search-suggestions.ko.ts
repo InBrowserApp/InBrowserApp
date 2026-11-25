@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "EPUB을 Word(DOCX)로 변환",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: "EU 부가가치세 번호 검증기",
     slug: "eu-vat-number-validator",

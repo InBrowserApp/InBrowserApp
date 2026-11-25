@@ -210,6 +210,7 @@ catalog:
   "@extend-ai/react-pptx": 0.6.0
   caj2pdf-rust: 0.8.1
   foliate-js: 1.0.1
+  docx: 9.16.0
   "@ofdjs/viewer": 0.1.1
   postal-mime: 4.2.1
   pst-extractor: 1.12.0

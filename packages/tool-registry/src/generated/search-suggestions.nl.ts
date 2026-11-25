@@ -673,6 +673,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "epub-to-pdf-converter",
   },
   {
+    category: "ebook",
+    name: "EPUB naar Word (DOCX) converteren",
+    slug: "epub-to-word-converter",
+  },
+  {
     category: "text",
     name: "EU-btw-nummer-validator",
     slug: "eu-vat-number-validator",

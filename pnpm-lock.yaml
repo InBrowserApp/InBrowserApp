@@ -860,6 +860,9 @@ catalogs:
     djvu-rs:
       specifier: 0.46.0
       version: 0.46.0
+    docx:
+      specifier: 9.16.0
+      version: 9.16.0
     dompurify:
       specifier: ^3.4.18
       version: 3.4.18
@@ -1497,6 +1500,9 @@ importers:
       '@zip.js/zip.js':
         specifier: 'catalog:'
         version: 2.25.0
+      docx:
+        specifier: 'catalog:'
+        version: 9.16.0
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -2696,6 +2702,9 @@ importers:
       '@tool/epub-to-pdf-converter':
         specifier: workspace:*
         version: link:../../tools/epub-to-pdf-converter
+      '@tool/epub-to-word-converter':
+        specifier: workspace:*
+        version: link:../../tools/epub-to-word-converter
       '@tool/eu-vat-number-validator':
         specifier: workspace:*
         version: link:../../tools/eu-vat-number-validator
@@ -7497,6 +7506,27 @@ importers:
 
   tools/epub-to-pdf-converter:
     dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+
+  tools/epub-to-word-converter:
+    dependencies:
+      '@workspace/ebook':
+        specifier: workspace:*
+        version: link:../../packages/lib/ebook
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -22457,6 +22487,10 @@ packages:
   djvu-rs@0.46.0:
     resolution: {integrity: sha512-ngVO2NXNx3h0CDMbC44qW+gDzFMAwRrku9+zmAwObeJmIQUAAkhmpUF6rQwRCdnho4uGr6HHjFmOGGB9EuUrqw==}
 
+  docx@9.16.0:
+    resolution: {integrity: sha512-fvAuqxV0705bEQ9OGPLt6onJqufGJTMS+b7PtRxNktea+iPWYgc1zO+OQBMW9ZmRLj9THTnOeiAoxTDz2ub0Fw==}
+    engines: {node: '>=16'}
+
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
 
@@ -24033,6 +24067,11 @@ packages:
   nanoid@3.3.20:
     resolution: {integrity: sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
+  nanoid@6.0.2:
+    resolution: {integrity: sha512-hIvVOb9Qr1p/9CNNLOe0OlWvgx/ziTsVwKN/GDSsuArN2K0wDiafP3s0SWmsm7o2BdnyS8Z9Z64NFBUbn6ziBg==}
+    engines: {node: ^22 || ^24 || >=26}
     hasBin: true
 
   napi-build-utils@2.0.0:
@@ -31486,6 +31525,12 @@ snapshots:
 
   djvu-rs@0.46.0(patch_hash=5e2925223863631262eeabc78a87fb8ef78467ec2aebb508412d5d98e8157ce8): {}
 
+  docx@9.16.0:
+    dependencies:
+      '@types/node': 26.6.6
+      fflate: 0.8.3
+      nanoid: 6.0.2
+
   dom-accessibility-api@0.5.16: {}
 
   dom-serializer@2.0.0:
@@ -33151,6 +33196,8 @@ snapshots:
   mute-stream@0.0.8: {}
 
   nanoid@3.3.20: {}
+
+  nanoid@6.0.2: {}
 
   napi-build-utils@2.0.0: {}
 

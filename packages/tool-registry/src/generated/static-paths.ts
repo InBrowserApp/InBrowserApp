@@ -12330,6 +12330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epub-to-word-converter",
+    language: "ar",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "de",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "en",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "es",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "fr",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "he",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "hi",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "id",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "it",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "ja",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "ko",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "ms",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "nl",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "no",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "pl",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "pt",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "ru",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "sv",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "th",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "tr",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "vi",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-to-word-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "eu-vat-number-validator",
     language: "ar",
   },

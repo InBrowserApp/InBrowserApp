@@ -17203,6 +17203,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-to-word-converter",
+    category: "ebook",
+    icon: "file-text",
+    tags: [
+      "epub",
+      "word",
+      "docx",
+      "ebook",
+      "microsoft word",
+      "editable",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل EPUB إلى Word (DOCX)",
+        description:
+          "حوّل ملفات EPUB إلى مستند Word بتنسيق DOCX قابل للتحرير في متصفحك. احتفظ بنص الفصول والعناوين والقوائم والجداول والروابط والرسوم التوضيحية المدعومة في المستند الناتج.",
+      },
+      de: {
+        name: "EPUB in Word (DOCX) konvertieren",
+        description:
+          "Wandle EPUB-Bücher direkt im Browser in bearbeitbare Word-Dokumente im DOCX-Format um. Kapiteltext, Überschriften, Listen, Tabellen, Links und unterstützte Abbildungen bleiben erhalten.",
+      },
+      en: {
+        name: "EPUB to Word (DOCX) Converter",
+        description:
+          "Convert EPUB to editable Word DOCX in your browser. Keep chapter text, headings, lists, tables, links and supported illustrations in your Word document.",
+      },
+      es: {
+        name: "Convertidor de EPUB a Word (DOCX)",
+        description:
+          "Convierte libros EPUB a Word (DOCX) en tu navegador. El documento editable conserva el texto de los capítulos, los títulos, las listas, las tablas, los enlaces y las ilustraciones compatibles.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en Word (DOCX)",
+        description:
+          "Convertissez un EPUB en document Word (DOCX) modifiable dans votre navigateur. Retrouvez le texte des chapitres, les titres, les listes, les tableaux, les liens et les illustrations prises en charge.",
+      },
+      he: {
+        name: "ממיר EPUB ל־Word (DOCX)",
+        description:
+          "המירו בדפדפן קובצי EPUB למסמכי Word בפורמט DOCX שאפשר לערוך. הממיר שומר במסמך את הטקסט בפרקים, הכותרות, הרשימות, הטבלאות, הקישורים והאיורים הנתמכים.",
+      },
+      hi: {
+        name: "EPUB से Word (DOCX) कन्वर्टर",
+        description:
+          "ब्राउज़र में EPUB को संपादन योग्य Word (DOCX) दस्तावेज़ में बदलें। अध्यायों का टेक्स्ट, हेडिंग, सूचियाँ, टेबल, लिंक और समर्थित चित्र दस्तावेज़ में बने रहते हैं।",
+      },
+      id: {
+        name: "Konverter EPUB ke Word (DOCX)",
+        description:
+          "Konversi EPUB di browser menjadi dokumen Word DOCX yang bisa diedit. Pertahankan teks bab, judul bagian, daftar, tabel, tautan, dan ilustrasi yang didukung.",
+      },
+      it: {
+        name: "Convertitore da EPUB a Word (DOCX)",
+        description:
+          "Converti i tuoi EPUB in Word (DOCX) nel browser. Ottieni un documento modificabile che conserva il testo dei capitoli, i titoli, gli elenchi, le tabelle, i link e le illustrazioni compatibili.",
+      },
+      ja: {
+        name: "EPUBをWord（DOCX）に変換",
+        description:
+          "EPUB をブラウザーで編集可能な Word の DOCX に変換します。各章の本文、見出し、リスト、表、リンク、対応する挿絵を Word 文書に引き継げます。",
+      },
+      ko: {
+        name: "EPUB을 Word(DOCX)로 변환",
+        description:
+          "브라우저에서 EPUB을 편집 가능한 Word DOCX 문서로 변환하세요. 각 장의 텍스트와 제목, 목록, 표, 링크, 지원되는 삽화를 Word 문서에 유지합니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada Word (DOCX)",
+        description:
+          "Gunakan pelayar anda untuk menukar EPUB kepada dokumen Word (DOCX) yang boleh disunting. Kekalkan teks bab, tajuk, senarai, jadual, pautan dan ilustrasi yang disokong dalam dokumen Word anda.",
+      },
+      nl: {
+        name: "EPUB naar Word (DOCX) converteren",
+        description:
+          "Zet EPUB in je browser om naar een bewerkbaar Word-document in DOCX-formaat. Hoofdstuktekst, koppen, lijsten, tabellen, links en ondersteunde illustraties blijven behouden.",
+      },
+      no: {
+        name: "Konverter EPUB til Word (DOCX)",
+        description:
+          "Konverter EPUB til et redigerbart Word-dokument i DOCX-format i nettleseren. Behold kapitteltekst, overskrifter, lister, tabeller, lenker og illustrasjoner som støttes.",
+      },
+      pl: {
+        name: "Konwerter EPUB na Word (DOCX)",
+        description:
+          "Konwertuj EPUB na edytowalny plik DOCX w przeglądarce. Zachowaj w dokumencie Word tekst rozdziałów, nagłówki, listy, tabele, linki i obsługiwane ilustracje.",
+      },
+      pt: {
+        name: "Conversor de EPUB para Word (DOCX)",
+        description:
+          "Converta EPUB em um documento editável do Word (DOCX) no navegador. Preserve o texto dos capítulos, os títulos, as listas, as tabelas, os links e as ilustrações compatíveis.",
+      },
+      ru: {
+        name: "Конвертер EPUB в Word (DOCX)",
+        description:
+          "Преобразуйте EPUB в редактируемый документ Word (DOCX) прямо в браузере. Текст глав, заголовки, списки, таблицы, ссылки и поддерживаемые иллюстрации сохраняются.",
+      },
+      sv: {
+        name: "Konverterare från EPUB till Word (DOCX)",
+        description:
+          "Konvertera EPUB till redigerbara Word-dokument (DOCX) i webbläsaren. Bevara texten i kapitlen, rubriker, listor, tabeller, länkar och illustrationer som stöds.",
+      },
+      th: {
+        name: "แปลง EPUB เป็น Word (DOCX)",
+        description:
+          "ใช้เบราว์เซอร์แปลง EPUB เป็นเอกสาร Word แบบ DOCX ที่แก้ไขได้ คงข้อความในแต่ละบท หัวเรื่อง รายการ ตาราง ลิงก์ และภาพประกอบที่รองรับไว้ในเอกสาร Word",
+      },
+      tr: {
+        name: "EPUB’dan Word’e (DOCX) Dönüştürücü",
+        description:
+          "EPUB kitaplarını tarayıcınızda düzenlenebilir Word (DOCX) belgelerine dönüştürün. Bölüm metinlerini, başlıkları, listeleri, tabloları, bağlantıları ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang Word (DOCX)",
+        description:
+          "Chuyển EPUB sang tệp Word DOCX có thể chỉnh sửa ngay trong trình duyệt. Giữ văn bản của các chương, tiêu đề, danh sách, bảng, liên kết và hình minh họa được hỗ trợ.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 Word（DOCX）转换器",
+        description:
+          "在浏览器中将可重排版的 EPUB 转为可编辑的 Word DOCX 文档，保留章节文字、标题、列表、表格、链接和受支持的插图。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 Word（DOCX）",
+        description:
+          "在瀏覽器中將 EPUB 轉成可編輯的 Word DOCX 文件。保留章節文字、標題、清單、表格、連結與支援的插圖。",
+      },
+    },
+  },
+  {
     slug: "eu-vat-number-validator",
     category: "text",
     icon: "file-text",
@@ -77206,6 +77337,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EPUB 轉 PDF",
         description:
           "在瀏覽器中將 EPUB 電子書轉成 PDF。預覽內容，選擇 A4、A5 或美式信紙，儲存後可選取和搜尋內文。無需上傳。",
+      },
+    },
+  },
+  "epub-to-word-converter": {
+    slug: "epub-to-word-converter",
+    category: "ebook",
+    icon: "file-text",
+    tags: [
+      "epub",
+      "word",
+      "docx",
+      "ebook",
+      "microsoft word",
+      "editable",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل EPUB إلى Word (DOCX)",
+        description:
+          "حوّل ملفات EPUB إلى مستند Word بتنسيق DOCX قابل للتحرير في متصفحك. احتفظ بنص الفصول والعناوين والقوائم والجداول والروابط والرسوم التوضيحية المدعومة في المستند الناتج.",
+      },
+      de: {
+        name: "EPUB in Word (DOCX) konvertieren",
+        description:
+          "Wandle EPUB-Bücher direkt im Browser in bearbeitbare Word-Dokumente im DOCX-Format um. Kapiteltext, Überschriften, Listen, Tabellen, Links und unterstützte Abbildungen bleiben erhalten.",
+      },
+      en: {
+        name: "EPUB to Word (DOCX) Converter",
+        description:
+          "Convert EPUB to editable Word DOCX in your browser. Keep chapter text, headings, lists, tables, links and supported illustrations in your Word document.",
+      },
+      es: {
+        name: "Convertidor de EPUB a Word (DOCX)",
+        description:
+          "Convierte libros EPUB a Word (DOCX) en tu navegador. El documento editable conserva el texto de los capítulos, los títulos, las listas, las tablas, los enlaces y las ilustraciones compatibles.",
+      },
+      fr: {
+        name: "Convertisseur EPUB en Word (DOCX)",
+        description:
+          "Convertissez un EPUB en document Word (DOCX) modifiable dans votre navigateur. Retrouvez le texte des chapitres, les titres, les listes, les tableaux, les liens et les illustrations prises en charge.",
+      },
+      he: {
+        name: "ממיר EPUB ל־Word (DOCX)",
+        description:
+          "המירו בדפדפן קובצי EPUB למסמכי Word בפורמט DOCX שאפשר לערוך. הממיר שומר במסמך את הטקסט בפרקים, הכותרות, הרשימות, הטבלאות, הקישורים והאיורים הנתמכים.",
+      },
+      hi: {
+        name: "EPUB से Word (DOCX) कन्वर्टर",
+        description:
+          "ब्राउज़र में EPUB को संपादन योग्य Word (DOCX) दस्तावेज़ में बदलें। अध्यायों का टेक्स्ट, हेडिंग, सूचियाँ, टेबल, लिंक और समर्थित चित्र दस्तावेज़ में बने रहते हैं।",
+      },
+      id: {
+        name: "Konverter EPUB ke Word (DOCX)",
+        description:
+          "Konversi EPUB di browser menjadi dokumen Word DOCX yang bisa diedit. Pertahankan teks bab, judul bagian, daftar, tabel, tautan, dan ilustrasi yang didukung.",
+      },
+      it: {
+        name: "Convertitore da EPUB a Word (DOCX)",
+        description:
+          "Converti i tuoi EPUB in Word (DOCX) nel browser. Ottieni un documento modificabile che conserva il testo dei capitoli, i titoli, gli elenchi, le tabelle, i link e le illustrazioni compatibili.",
+      },
+      ja: {
+        name: "EPUBをWord（DOCX）に変換",
+        description:
+          "EPUB をブラウザーで編集可能な Word の DOCX に変換します。各章の本文、見出し、リスト、表、リンク、対応する挿絵を Word 文書に引き継げます。",
+      },
+      ko: {
+        name: "EPUB을 Word(DOCX)로 변환",
+        description:
+          "브라우저에서 EPUB을 편집 가능한 Word DOCX 문서로 변환하세요. 각 장의 텍스트와 제목, 목록, 표, 링크, 지원되는 삽화를 Word 문서에 유지합니다.",
+      },
+      ms: {
+        name: "Penukar EPUB kepada Word (DOCX)",
+        description:
+          "Gunakan pelayar anda untuk menukar EPUB kepada dokumen Word (DOCX) yang boleh disunting. Kekalkan teks bab, tajuk, senarai, jadual, pautan dan ilustrasi yang disokong dalam dokumen Word anda.",
+      },
+      nl: {
+        name: "EPUB naar Word (DOCX) converteren",
+        description:
+          "Zet EPUB in je browser om naar een bewerkbaar Word-document in DOCX-formaat. Hoofdstuktekst, koppen, lijsten, tabellen, links en ondersteunde illustraties blijven behouden.",
+      },
+      no: {
+        name: "Konverter EPUB til Word (DOCX)",
+        description:
+          "Konverter EPUB til et redigerbart Word-dokument i DOCX-format i nettleseren. Behold kapitteltekst, overskrifter, lister, tabeller, lenker og illustrasjoner som støttes.",
+      },
+      pl: {
+        name: "Konwerter EPUB na Word (DOCX)",
+        description:
+          "Konwertuj EPUB na edytowalny plik DOCX w przeglądarce. Zachowaj w dokumencie Word tekst rozdziałów, nagłówki, listy, tabele, linki i obsługiwane ilustracje.",
+      },
+      pt: {
+        name: "Conversor de EPUB para Word (DOCX)",
+        description:
+          "Converta EPUB em um documento editável do Word (DOCX) no navegador. Preserve o texto dos capítulos, os títulos, as listas, as tabelas, os links e as ilustrações compatíveis.",
+      },
+      ru: {
+        name: "Конвертер EPUB в Word (DOCX)",
+        description:
+          "Преобразуйте EPUB в редактируемый документ Word (DOCX) прямо в браузере. Текст глав, заголовки, списки, таблицы, ссылки и поддерживаемые иллюстрации сохраняются.",
+      },
+      sv: {
+        name: "Konverterare från EPUB till Word (DOCX)",
+        description:
+          "Konvertera EPUB till redigerbara Word-dokument (DOCX) i webbläsaren. Bevara texten i kapitlen, rubriker, listor, tabeller, länkar och illustrationer som stöds.",
+      },
+      th: {
+        name: "แปลง EPUB เป็น Word (DOCX)",
+        description:
+          "ใช้เบราว์เซอร์แปลง EPUB เป็นเอกสาร Word แบบ DOCX ที่แก้ไขได้ คงข้อความในแต่ละบท หัวเรื่อง รายการ ตาราง ลิงก์ และภาพประกอบที่รองรับไว้ในเอกสาร Word",
+      },
+      tr: {
+        name: "EPUB’dan Word’e (DOCX) Dönüştürücü",
+        description:
+          "EPUB kitaplarını tarayıcınızda düzenlenebilir Word (DOCX) belgelerine dönüştürün. Bölüm metinlerini, başlıkları, listeleri, tabloları, bağlantıları ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Chuyển EPUB sang Word (DOCX)",
+        description:
+          "Chuyển EPUB sang tệp Word DOCX có thể chỉnh sửa ngay trong trình duyệt. Giữ văn bản của các chương, tiêu đề, danh sách, bảng, liên kết và hình minh họa được hỗ trợ.",
+      },
+      "zh-CN": {
+        name: "EPUB 转 Word（DOCX）转换器",
+        description:
+          "在浏览器中将可重排版的 EPUB 转为可编辑的 Word DOCX 文档，保留章节文字、标题、列表、表格、链接和受支持的插图。",
+      },
+      "zh-TW": {
+        name: "EPUB 轉 Word（DOCX）",
+        description:
+          "在瀏覽器中將 EPUB 轉成可編輯的 Word DOCX 文件。保留章節文字、標題、清單、表格、連結與支援的插圖。",
       },
     },
   },
