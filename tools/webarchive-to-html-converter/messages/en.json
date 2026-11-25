@@ -1,0 +1,17 @@
+{
+  "open": "Open WebArchive",
+  "replace": "Replace file",
+  "clear": "Close file",
+  "reader": "WebArchive to HTML converter",
+  "privacy": "Files stay on your device.",
+  "focus": "Focus preview",
+  "exitFocus": "Exit focus preview",
+  "releaseFile": "Release to convert the archive",
+  "drop": "Drop a Safari .webarchive file",
+  "example": "Try sample archive",
+  "loading": "Converting archive…",
+  "invalid": "Could not read a saved HTML page. Choose a .webarchive file saved from Safari and try again.",
+  "preview": "HTML preview",
+  "download": "Download HTML",
+  "missing": "Some images, styles, or frames are unavailable. You can still download the saved page."
+}

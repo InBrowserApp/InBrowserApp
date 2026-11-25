@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de WebArchive a HTML",
+  "description": "Convierte un archivo .webarchive de Safari en un HTML independiente con las imágenes y los estilos guardados. Previsualiza y descarga la página en el navegador."
+}

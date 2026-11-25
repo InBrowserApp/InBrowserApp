@@ -2023,6 +2023,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "warc-viewer",
   },
   {
+    category: "document",
+    name: "Konverter WebArchive ke HTML",
+    slug: "webarchive-to-html-converter",
+  },
+  {
     category: "crypto",
     name: "Hash Whirlpool Teks atau File",
     slug: "whirlpool-hash-text-or-file",

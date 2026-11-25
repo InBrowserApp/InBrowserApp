@@ -1,0 +1,17 @@
+{
+  "open": "WebArchive aç",
+  "replace": "Dosyayı değiştir",
+  "clear": "Dosyayı kapat",
+  "reader": "WebArchive’dan HTML’ye dönüştürücü",
+  "privacy": "Dosyalar cihazınızda kalır.",
+  "focus": "Odak modunda önizle",
+  "exitFocus": "Odak modundan çık",
+  "releaseFile": "Arşivi dönüştürmek için dosyayı bırakın",
+  "drop": "Bir Safari .webarchive dosyası bırakın",
+  "example": "Örnek arşivi deneyin",
+  "loading": "Arşiv dönüştürülüyor…",
+  "invalid": "Kayıtlı HTML sayfası okunamadı. Safari’de kaydedilmiş bir .webarchive dosyası seçip yeniden deneyin.",
+  "preview": "HTML önizlemesi",
+  "download": "HTML’yi indir",
+  "missing": "Bazı görseller, stiller veya çerçeveler kullanılamıyor. Kayıtlı sayfayı yine de indirebilirsiniz."
+}

@@ -411,6 +411,7 @@
     "@tool/vin-validator": "workspace:*",
     "@tool/vlsm-calculator": "workspace:*",
     "@tool/warc-viewer": "workspace:*",
+    "@tool/webarchive-to-html-converter": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/wkt-geojson-converter": "workspace:*",
     "@tool/xls-to-xlsx-converter": "workspace:*",

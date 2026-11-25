@@ -51470,6 +51470,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "webarchive-to-html-converter",
+    category: "document",
+    icon: "globe",
+    tags: ["safari", "webarchive", "html", "web archive", "offline", "convert"],
+    locales: {
+      ar: {
+        name: "محوّل WebArchive إلى HTML",
+        description:
+          "حوّل ملف ‎.webarchive من Safari إلى ملف HTML مستقل يتضمن الصور والأنماط المحفوظة. عاين الصفحة ونزّلها مباشرةً من متصفحك.",
+      },
+      de: {
+        name: "WebArchive-zu-HTML-Konverter",
+        description:
+          "Konvertiere eine Safari-Datei im Format .webarchive in eigenständiges HTML mit gespeicherten Bildern und Stilen. Sieh dir die Vorschau an und lade die Seite im Browser herunter.",
+      },
+      en: {
+        name: "WebArchive to HTML Converter",
+        description:
+          "Convert a Safari .webarchive file to standalone HTML with saved images and styles. Preview and download the page directly in your browser.",
+      },
+      es: {
+        name: "Conversor de WebArchive a HTML",
+        description:
+          "Convierte un archivo .webarchive de Safari en un HTML independiente con las imágenes y los estilos guardados. Previsualiza y descarga la página en el navegador.",
+      },
+      fr: {
+        name: "Convertisseur WebArchive en HTML",
+        description:
+          "Convertis un fichier .webarchive de Safari en HTML autonome avec ses images et styles enregistrés. Affiche un aperçu et télécharge la page dans ton navigateur.",
+      },
+      he: {
+        name: "ממיר WebArchive ל־HTML",
+        description:
+          "המירו קובץ ‎.webarchive של Safari לקובץ HTML עצמאי עם התמונות והסגנונות שנשמרו. צפו בתצוגה מקדימה והורידו את הדף ישירות מהדפדפן.",
+      },
+      hi: {
+        name: "WebArchive से HTML कन्वर्टर",
+        description:
+          "Safari की .webarchive फ़ाइल को सहेजे गए चित्रों और शैलियों के साथ एक स्वतंत्र HTML फ़ाइल में बदलें। ब्राउज़र में ही पेज का पूर्वावलोकन करें और उसे डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WebArchive ke HTML",
+        description:
+          "Ubah file .webarchive dari Safari menjadi HTML mandiri dengan gambar dan gaya yang tersimpan. Lihat pratinjau dan unduh halaman langsung dari browser.",
+      },
+      it: {
+        name: "Convertitore da WebArchive a HTML",
+        description:
+          "Converti un file .webarchive di Safari in HTML autonomo con le immagini e gli stili salvati. Visualizza l’anteprima e scarica la pagina nel browser.",
+      },
+      ja: {
+        name: "WebArchive から HTML への変換ツール",
+        description:
+          "Safari の .webarchive を、保存済みの画像やスタイルを含む単体の HTML ファイルに変換します。ブラウザーでプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "WebArchive에서 HTML로 변환",
+        description:
+          "Safari .webarchive 파일을 저장된 이미지와 스타일이 포함된 단일 HTML 파일로 변환하세요. 브라우저에서 페이지를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WebArchive kepada HTML",
+        description:
+          "Tukar fail .webarchive Safari kepada fail HTML kendiri dengan imej dan gaya yang disimpan. Pratonton dan muat turun halaman terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "WebArchive naar HTML converteren",
+        description:
+          "Zet een .webarchive-bestand van Safari om naar zelfstandig HTML met opgeslagen afbeeldingen en stijlen. Bekijk en download de pagina in je browser.",
+      },
+      no: {
+        name: "WebArchive til HTML-konverterer",
+        description:
+          "Konverter en Safari-fil i .webarchive-format til en selvstendig HTML-fil med lagrede bilder og stiler. Forhåndsvis og last ned siden i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter WebArchive na HTML",
+        description:
+          "Konwertuj pliki .webarchive z Safari na samodzielne pliki HTML z zapisanymi obrazami i stylami. Wyświetl podgląd i pobierz stronę bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de WebArchive para HTML",
+        description:
+          "Converta um arquivo .webarchive do Safari em HTML independente com as imagens e os estilos salvos. Veja a prévia e baixe a página no navegador.",
+      },
+      ru: {
+        name: "Конвертер WebArchive в HTML",
+        description:
+          "Преобразуйте файл Safari .webarchive в автономный HTML с сохранёнными изображениями и стилями. Просмотрите и скачайте страницу прямо в браузере.",
+      },
+      sv: {
+        name: "WebArchive till HTML-konverterare",
+        description:
+          "Konvertera en .webarchive-fil från Safari till fristående HTML med sparade bilder och stilar. Förhandsgranska och ladda ner sidan direkt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง WebArchive เป็น HTML",
+        description:
+          "แปลงไฟล์ .webarchive จาก Safari เป็นไฟล์ HTML เดียวพร้อมรูปภาพและสไตล์ที่บันทึกไว้ ดูตัวอย่างและดาวน์โหลดหน้าเว็บได้ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "WebArchive’dan HTML’ye Dönüştürücü",
+        description:
+          "Safari .webarchive dosyasını, kayıtlı görselleri ve stilleriyle birlikte bağımsız HTML’ye dönüştürün. Sayfayı doğrudan tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WebArchive sang HTML",
+        description:
+          "Chuyển tệp .webarchive của Safari thành tệp HTML độc lập, kèm hình ảnh và định dạng đã lưu. Xem trước và tải trang về ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "WebArchive 转 HTML",
+        description:
+          "将 Safari 的 .webarchive 文件转换为独立的 HTML，并保留归档中的图片和样式。直接在浏览器中预览和下载网页。",
+      },
+      "zh-TW": {
+        name: "WebArchive 轉 HTML",
+        description:
+          "將 Safari 的 .webarchive 檔案轉換為獨立的 HTML，保留封存的圖片與樣式。直接在瀏覽器中預覽及下載網頁。",
+      },
+    },
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     category: "crypto",
     icon: "lock",

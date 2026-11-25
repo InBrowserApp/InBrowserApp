@@ -1,0 +1,17 @@
+{
+  "open": "WebArchive 열기",
+  "replace": "파일 바꾸기",
+  "clear": "파일 닫기",
+  "reader": "WebArchive에서 HTML로 변환하는 도구",
+  "privacy": "파일은 기기에서 처리됩니다.",
+  "focus": "미리보기 집중 모드",
+  "exitFocus": "집중 모드 종료",
+  "releaseFile": "놓아서 아카이브 변환",
+  "drop": "Safari .webarchive 파일을 여기에 놓으세요",
+  "example": "샘플 아카이브 열기",
+  "loading": "아카이브 변환 중…",
+  "invalid": "저장된 HTML 페이지를 읽을 수 없습니다. Safari에서 저장한 .webarchive 파일을 선택한 뒤 다시 시도하세요.",
+  "preview": "HTML 미리보기",
+  "download": "HTML 다운로드",
+  "missing": "일부 이미지, 스타일 또는 프레임이 표시되지 않습니다. 저장된 페이지는 다운로드할 수 있습니다."
+}

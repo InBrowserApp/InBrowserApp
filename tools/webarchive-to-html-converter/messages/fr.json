@@ -1,0 +1,17 @@
+{
+  "open": "Ouvrir un WebArchive",
+  "replace": "Remplacer le fichier",
+  "clear": "Fermer le fichier",
+  "reader": "Convertisseur WebArchive en HTML",
+  "privacy": "Les fichiers restent sur ton appareil.",
+  "focus": "Aperçu sans distraction",
+  "exitFocus": "Quitter l’aperçu sans distraction",
+  "releaseFile": "Relâche pour convertir l’archive",
+  "drop": "Dépose un fichier .webarchive de Safari",
+  "example": "Essayer l’archive d’exemple",
+  "loading": "Conversion de l’archive…",
+  "invalid": "Impossible de lire une page HTML enregistrée. Choisis un fichier .webarchive enregistré dans Safari et réessaie.",
+  "preview": "Aperçu HTML",
+  "download": "Télécharger le HTML",
+  "missing": "Certaines images, feuilles de style ou cadres sont indisponibles. Tu peux quand même télécharger la page enregistrée."
+}

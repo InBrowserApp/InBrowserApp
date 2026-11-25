@@ -1,0 +1,17 @@
+{
+  "open": "打开 WebArchive",
+  "replace": "更换文件",
+  "clear": "关闭文件",
+  "reader": "WebArchive 转 HTML",
+  "privacy": "文件留在你的设备上。",
+  "focus": "专注预览模式",
+  "exitFocus": "退出专注预览模式",
+  "releaseFile": "松开以转换归档",
+  "drop": "将 Safari 的 .webarchive 文件拖放到这里",
+  "example": "试用示例归档",
+  "loading": "正在转换归档…",
+  "invalid": "无法读取已保存的 HTML 网页。请选择从 Safari 保存的 .webarchive 文件，然后重试。",
+  "preview": "HTML 预览",
+  "download": "下载 HTML",
+  "missing": "部分图片、样式或框架无法显示。你仍可以下载已保存的网页。"
+}

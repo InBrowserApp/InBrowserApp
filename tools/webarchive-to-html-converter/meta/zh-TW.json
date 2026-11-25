@@ -1,0 +1,4 @@
+{
+  "name": "WebArchive 轉 HTML",
+  "description": "將 Safari 的 .webarchive 檔案轉換為獨立的 HTML，保留封存的圖片與樣式。直接在瀏覽器中預覽及下載網頁。"
+}

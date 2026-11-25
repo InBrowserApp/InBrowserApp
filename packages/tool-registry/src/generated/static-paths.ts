@@ -37170,6 +37170,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "webarchive-to-html-converter",
+    language: "ar",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "de",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "en",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "es",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "fr",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "he",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "hi",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "id",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "it",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "ja",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "ko",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "ms",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "nl",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "no",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "pl",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "pt",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "ru",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "sv",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "th",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "tr",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "vi",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "webarchive-to-html-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "whirlpool-hash-text-or-file",
     language: "ar",
   },

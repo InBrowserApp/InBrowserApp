@@ -1,0 +1,17 @@
+{
+  "open": "WebArchive を開く",
+  "replace": "ファイルを差し替える",
+  "clear": "ファイルを閉じる",
+  "reader": "WebArchive から HTML への変換ツール",
+  "privacy": "ファイルは端末内で処理されます。",
+  "focus": "プレビューの集中モード",
+  "exitFocus": "集中モードを終了",
+  "releaseFile": "ドロップしてアーカイブを変換",
+  "drop": "Safari の .webarchive ファイルをドロップ",
+  "example": "サンプルを試す",
+  "loading": "アーカイブを変換中…",
+  "invalid": "保存された HTML ページを読み込めませんでした。Safari で保存した .webarchive ファイルを選んで、もう一度お試しください。",
+  "preview": "HTML プレビュー",
+  "download": "HTML をダウンロード",
+  "missing": "一部の画像、スタイル、フレームが表示されません。保存済みのページはそのままダウンロードできます。"
+}

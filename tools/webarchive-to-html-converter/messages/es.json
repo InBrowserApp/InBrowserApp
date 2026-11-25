@@ -1,0 +1,17 @@
+{
+  "open": "Abrir WebArchive",
+  "replace": "Reemplazar archivo",
+  "clear": "Cerrar archivo",
+  "reader": "Conversor de WebArchive a HTML",
+  "privacy": "Los archivos permanecen en tu dispositivo.",
+  "focus": "Centrar la vista previa",
+  "exitFocus": "Salir de la vista previa centrada",
+  "releaseFile": "Suelta el archivo para convertirlo",
+  "drop": "Arrastra aquí un archivo .webarchive de Safari",
+  "example": "Probar con un ejemplo",
+  "loading": "Convirtiendo el archivo…",
+  "invalid": "No se pudo leer una página HTML guardada. Elige un archivo .webarchive creado con Safari e inténtalo de nuevo.",
+  "preview": "Vista previa HTML",
+  "download": "Descargar HTML",
+  "missing": "Algunas imágenes, estilos o marcos no están disponibles. Aun así, puedes descargar la página guardada."
+}
