@@ -1,0 +1,22 @@
+{
+  "chooseFile": "เลือกไฟล์ MIDI",
+  "changeFile": "เปลี่ยนไฟล์",
+  "dropHint": "หรือลากไฟล์ MIDI มาวางที่นี่",
+  "privacy": "ไฟล์ของคุณจะอยู่ในเบราว์เซอร์นี้",
+  "soundFont": "SoundFont",
+  "defaultSoundFont": "GeneralUser GS (มีให้ในตัว)",
+  "chooseSoundFont": "เลือก SoundFont",
+  "useDefaultSoundFont": "ใช้ SoundFont ที่มีให้",
+  "soundFontHint": "ไม่จำเป็นต้องเลือก หากต้องการเปลี่ยนเสียงเครื่องดนตรี ให้เลือกไฟล์ .sf2 หรือ .sf3",
+  "render": "แปลงเป็น WAV",
+  "rendering": "กำลังเรนเดอร์เสียง…",
+  "cancel": "ยกเลิก",
+  "preview": "ตัวอย่างเสียง WAV",
+  "download": "ดาวน์โหลด WAV",
+  "invalidMidi": "เปิดไฟล์ MIDI นี้ไม่ได้หรือไฟล์ไม่มีโน้ตที่เล่นได้ ลองใช้ไฟล์ .mid หรือ .midi อื่น",
+  "unsupportedTiming": "ส่งออกไฟล์นี้เป็น MIDI ที่กำหนดเวลาตามจังหวะเพลง (รูปแบบ 0 หรือ 1) แล้วลองอีกครั้ง",
+  "invalidSoundFont": "เปิด SoundFont นี้ไม่ได้ ลองใช้ไฟล์ .sf2 หรือ .sf3 อื่น หรือใช้ SoundFont ที่มีให้",
+  "soundFontUnavailable": "โหลด SoundFont ที่มีให้ไม่ได้ ลองอีกครั้งหรือเลือกไฟล์ SoundFont",
+  "tooLong": "เลือกไฟล์ MIDI ที่เล่นได้ไม่ถึง 10 นาทีเพื่อเรนเดอร์ในเบราว์เซอร์",
+  "renderFailed": "เรนเดอร์เสียงไม่ได้ ลองใช้ไฟล์ MIDI ขนาดเล็กลงหรือเปลี่ยน SoundFont"
+}

@@ -1189,6 +1189,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI WAV 変換",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI 移調・テンポ変更",
     slug: "midi-transposer",
   },

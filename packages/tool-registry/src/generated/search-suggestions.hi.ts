@@ -1189,6 +1189,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "MIDI से WAV कन्वर्टर",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "MIDI ट्रांसपोज़र और टेम्पो परिवर्तक",
     slug: "midi-transposer",
   },

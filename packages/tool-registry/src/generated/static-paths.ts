@@ -21806,6 +21806,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "midi-to-wav-converter",
+    language: "ar",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "de",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "en",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "es",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "fr",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "he",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "hi",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "id",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "it",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ja",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ko",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ms",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "nl",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "no",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "pl",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "pt",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "ru",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "sv",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "th",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "tr",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "vi",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "midi-to-wav-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "midi-transposer",
     language: "ar",
   },

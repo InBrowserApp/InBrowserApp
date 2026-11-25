@@ -1189,6 +1189,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Penukar MIDI kepada WAV",
+    slug: "midi-to-wav-converter",
+  },
+  {
+    category: "misc",
     name: "Pelarasan Nada dan Tempo MIDI",
     slug: "midi-transposer",
   },
