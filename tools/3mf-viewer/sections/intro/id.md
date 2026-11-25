@@ -13,3 +13,5 @@ Pratinjau menampilkan geometri dan warna model yang didukung. Untuk melihat peng
 ## Lihat model 3D lainnya
 
 Gunakan [Penampil STL](../stl-viewer/) untuk membuka mesh segitiga yang diekspor untuk pencetakan 3D. Untuk model GLB atau glTF dengan tekstur atau animasi, gunakan [Penampil GLB / glTF](../gltf-viewer/).
+
+Gunakan [Konverter 3MF ke STL](../3mf-to-stl-converter/) untuk mengunduh mesh yang sudah ditata untuk cetak sebagai STL biner.

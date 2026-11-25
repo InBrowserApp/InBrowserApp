@@ -1,0 +1,4 @@
+{
+  "failed": "Dit bestand kon niet worden geconverteerd. Open een 3MF-model met een 3D-net.",
+  "unitHint": "Importeer het STL-bestand in millimeters. Kleuren, materialen en slicerinstellingen blijven in het 3MF-bestand."
+}

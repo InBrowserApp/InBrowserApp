@@ -9,6 +9,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "โปรแกรมแปลง 3MF เป็น STL",
+    slug: "3mf-to-stl-converter",
+  },
+  {
+    category: "3d-cad",
     name: "โปรแกรมดู 3MF",
     slug: "3mf-viewer",
   },
@@ -1911,6 +1916,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "3d-cad",
+    name: "โปรแกรมแปลง STL เป็น 3MF",
+    slug: "stl-to-3mf-converter",
   },
   {
     category: "3d-cad",

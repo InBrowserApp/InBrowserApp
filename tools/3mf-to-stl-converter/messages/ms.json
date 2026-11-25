@@ -1,0 +1,4 @@
+{
+  "failed": "Fail ini tidak dapat ditukar. Buka model 3MF yang mengandungi geometri jejaring 3D.",
+  "unitHint": "Gunakan milimeter apabila mengimport STL. Warna, bahan dan tetapan penghiris kekal dalam fail 3MF."
+}

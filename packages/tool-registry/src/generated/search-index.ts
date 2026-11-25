@@ -136,6 +136,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "3mf-to-stl-converter",
+    category: "3d-cad",
+    icon: "arrow-left-right",
+    tags: ["3mf", "stl", "3mf to stl", "3d printing", "mesh", "conversion"],
+    locales: {
+      ar: {
+        name: "محوّل 3MF إلى STL",
+        description:
+          "حوّل نموذج 3MF إلى STL ثنائي في متصفحك. حافظ على أبعاد القطع ومواضعها المحددة للطباعة بإحداثيات بالمليمتر، ونزّل الشبكة لاستخدامها مع البرامج التي تدعم STL.",
+      },
+      de: {
+        name: "3MF-zu-STL-Konverter",
+        description:
+          "Wandle ein 3MF-Modell im Browser in binäres STL um. Die Koordinaten bleiben in Millimetern korrekt skaliert, und die Anordnung der Teile bleibt erhalten. Lade das Netz als STL-Datei herunter.",
+      },
+      en: {
+        name: "3MF to STL Converter",
+        description:
+          "Convert a 3MF model to binary STL in your browser. Keep part sizes and build placement in millimeter coordinates, and download the mesh for STL workflows.",
+      },
+      es: {
+        name: "Conversor de 3MF a STL",
+        description:
+          "Convierte un modelo 3MF a STL binario en tu navegador. Conserva las dimensiones y la colocación de las piezas en coordenadas en milímetros y descarga la malla en formato STL.",
+      },
+      fr: {
+        name: "Convertisseur 3MF en STL",
+        description:
+          "Convertissez un modèle 3MF en STL binaire dans votre navigateur. Conservez les dimensions et le placement des pièces avec des coordonnées en millimètres, puis téléchargez le maillage au format STL.",
+      },
+      he: {
+        name: "ממיר 3MF ל־STL",
+        description:
+          "המירו מודל 3MF לקובץ STL בינארי בדפדפן. שמרו את מידות החלקים ואת מיקומם להדפסה בקואורדינטות במילימטרים, והורידו את הרשת לשימוש בתוכנות שעובדות עם STL.",
+      },
+      hi: {
+        name: "3MF से STL कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में 3MF मॉडल को बाइनरी STL में बदलें। पुर्ज़ों के आकार और बिल्ड प्लेट पर उनकी जगह को मिलीमीटर वाले निर्देशांकों में बनाए रखें और STL के साथ काम करने के लिए मेश डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter 3MF ke STL",
+        description:
+          "Konversi model 3MF ke STL biner di browser. Pertahankan ukuran dan posisi cetak komponen dalam koordinat milimeter, lalu unduh mesh untuk aplikasi yang menggunakan STL.",
+      },
+      it: {
+        name: "Convertitore da 3MF a STL",
+        description:
+          "Converti un modello 3MF in STL binario nel browser. Mantieni dimensioni e posizioni delle parti con coordinate in millimetri, poi scarica la mesh per usarla in formato STL.",
+      },
+      ja: {
+        name: "3MF → STL 変換",
+        description:
+          "3MF モデルをブラウザーでバイナリ STL に変換します。部品の寸法と造形時の配置をミリメートル座標で保ち、STL 用のメッシュをダウンロードできます。",
+      },
+      ko: {
+        name: "3MF → STL 변환기",
+        description:
+          "브라우저에서 3MF 모델을 바이너리 STL로 변환하세요. 부품 크기와 출력 배치를 밀리미터 좌표로 유지하고 STL용 메시를 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar 3MF kepada STL",
+        description:
+          "Tukar model 3MF kepada STL binari dalam pelayar. Kekalkan saiz dan kedudukan cetakan komponen dalam koordinat milimeter, kemudian muat turun jejaring untuk kegunaan dalam perisian yang menerima STL.",
+      },
+      nl: {
+        name: "3MF naar STL-converter",
+        description:
+          "Converteer een 3MF-model in je browser naar binair STL. Behoud de afmetingen en plaatsing van onderdelen in millimetercoördinaten en download het net als STL-bestand.",
+      },
+      no: {
+        name: "3MF til STL-konverterer",
+        description:
+          "Konverter en 3MF-modell til binær STL i nettleseren. Behold målene og plasseringen til delene med koordinater i millimeter, og last ned nettet som en STL-fil.",
+      },
+      pl: {
+        name: "Konwerter 3MF na STL",
+        description:
+          "Konwertuj modele 3MF na binarne pliki STL w przeglądarce. Zachowaj wymiary i rozmieszczenie części we współrzędnych w milimetrach, a następnie pobierz siatkę jako plik STL.",
+      },
+      pt: {
+        name: "Conversor de 3MF para STL",
+        description:
+          "Converta um modelo 3MF para STL binário no navegador. Preserve as dimensões e posições das peças em coordenadas em milímetros e baixe a malha em formato STL.",
+      },
+      ru: {
+        name: "Конвертер 3MF в STL",
+        description:
+          "Преобразуйте модель 3MF в двоичный STL прямо в браузере. Сохраните размеры деталей и их расположение на платформе в координатах в миллиметрах и скачайте сетку для работы с STL.",
+      },
+      sv: {
+        name: "3MF till STL-konverterare",
+        description:
+          "Konvertera en 3MF-modell till binär STL i webbläsaren. Behåll delarnas mått och placering med koordinater i millimeter och ladda ner nätet som en STL-fil.",
+      },
+      th: {
+        name: "โปรแกรมแปลง 3MF เป็น STL",
+        description:
+          "แปลงโมเดล 3MF เป็น STL ไบนารีในเบราว์เซอร์ คงขนาดและตำแหน่งจัดวางของชิ้นงานในพิกัดมิลลิเมตร แล้วดาวน์โหลดเมชไปใช้กับโปรแกรมที่รองรับ STL",
+      },
+      tr: {
+        name: "3MF’den STL’ye Dönüştürücü",
+        description:
+          "3MF modelini tarayıcınızda ikili STL dosyasına dönüştürün. Parçaların boyutlarını ve baskı yerleşimini milimetre cinsinden koordinatlarla koruyun ve STL ile çalışan yazılımlar için ağı indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi 3MF sang STL",
+        description:
+          "Chuyển mô hình 3MF sang STL nhị phân trong trình duyệt. Giữ kích thước và vị trí in của các chi tiết theo tọa độ milimét rồi tải lưới xuống để dùng với phần mềm hỗ trợ STL.",
+      },
+      "zh-CN": {
+        name: "3MF 转 STL 转换器",
+        description:
+          "在浏览器中将 3MF 模型转换为二进制 STL。以毫米坐标保留零件尺寸和构建位置，下载网格用于 STL 工作流程。",
+      },
+      "zh-TW": {
+        name: "3MF 轉 STL 轉換器",
+        description:
+          "在瀏覽器中將 3MF 模型轉換為二進位 STL。以毫米座標保留零件尺寸與建置位置，下載網格供 STL 工作流程使用。",
+      },
+    },
+  },
+  {
     slug: "3mf-viewer",
     category: "3d-cad",
     icon: "box",
@@ -48801,6 +48924,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "左右聲道分離",
         description:
           "將立體聲音訊的左右聲道分別存成單聲道檔案。直接在瀏覽器中試聽各聲道，並下載為 WAV、FLAC 或 MP3。",
+      },
+    },
+  },
+  {
+    slug: "stl-to-3mf-converter",
+    category: "3d-cad",
+    icon: "arrow-left-right",
+    tags: ["stl", "3mf", "stl to 3mf", "3d printing", "mesh", "conversion"],
+    locales: {
+      ar: {
+        name: "محوّل STL إلى 3MF",
+        description:
+          "حوّل شبكة STL إلى 3MF في متصفحك. اختر وحدة إحداثيات STL ونزّل نموذج 3MF يسجّل مقياسه الفعلي.",
+      },
+      de: {
+        name: "STL-zu-3MF-Konverter",
+        description:
+          "Wandle ein STL-Netz im Browser in 3MF um. Wähle die Einheit der STL-Koordinaten und lade ein 3MF-Modell mit festgelegter physischer Größe herunter.",
+      },
+      en: {
+        name: "STL to 3MF Converter",
+        description:
+          "Convert an STL mesh to 3MF in your browser. Choose the STL coordinate unit and download a 3MF model with its physical scale recorded.",
+      },
+      es: {
+        name: "Conversor de STL a 3MF",
+        description:
+          "Convierte una malla STL a 3MF en tu navegador. Elige la unidad de las coordenadas del STL y descarga un modelo 3MF que conserva la escala física.",
+      },
+      fr: {
+        name: "Convertisseur STL en 3MF",
+        description:
+          "Convertissez un maillage STL en 3MF dans votre navigateur. Sélectionnez l’unité des coordonnées du STL et téléchargez un modèle 3MF qui conserve l’échelle physique.",
+      },
+      he: {
+        name: "ממיר STL ל־3MF",
+        description:
+          "המירו רשת STL ל־3MF בדפדפן. בחרו את יחידת הקואורדינטות של ה־STL והורידו מודל 3MF ששומר את קנה המידה הפיזי שלו.",
+      },
+      hi: {
+        name: "STL से 3MF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में STL मेश को 3MF में बदलें। STL निर्देशांकों की इकाई चुनें और वास्तविक स्केल के साथ 3MF मॉडल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter STL ke 3MF",
+        description:
+          "Konversi mesh STL ke 3MF di browser. Pilih satuan koordinat STL lalu unduh model 3MF yang menyimpan skala fisiknya.",
+      },
+      it: {
+        name: "Convertitore da STL a 3MF",
+        description:
+          "Converti una mesh STL in 3MF nel browser. Scegli l’unità di misura delle coordinate STL e scarica un file 3MF che conserva la scala fisica del modello.",
+      },
+      ja: {
+        name: "STL → 3MF 変換",
+        description:
+          "STL メッシュをブラウザーで 3MF に変換します。STL 座標の単位を選び、実際のスケールが記録された 3MF モデルをダウンロードできます。",
+      },
+      ko: {
+        name: "STL → 3MF 변환기",
+        description:
+          "브라우저에서 STL 메시를 3MF로 변환하세요. STL 좌표 단위를 선택하고 실제 크기 비율이 기록된 3MF 모델을 다운로드합니다.",
+      },
+      ms: {
+        name: "Penukar STL kepada 3MF",
+        description:
+          "Tukar jejaring STL kepada 3MF dalam pelayar. Pilih unit koordinat STL dan muat turun model 3MF yang merekodkan skala fizikalnya.",
+      },
+      nl: {
+        name: "STL naar 3MF-converter",
+        description:
+          "Converteer een STL-net naar 3MF in je browser. Kies de eenheid van de STL-coördinaten en download een 3MF-model waarin de fysieke schaal is vastgelegd.",
+      },
+      no: {
+        name: "STL til 3MF-konverterer",
+        description:
+          "Konverter et STL-nett til 3MF i nettleseren. Velg måleenheten for STL-koordinatene og last ned en 3MF-modell med den fysiske størrelsen angitt.",
+      },
+      pl: {
+        name: "Konwerter STL na 3MF",
+        description:
+          "Konwertuj siatki STL na 3MF w przeglądarce. Wybierz jednostkę współrzędnych STL i pobierz model 3MF z zapisaną jednostką miary.",
+      },
+      pt: {
+        name: "Conversor de STL para 3MF",
+        description:
+          "Converta uma malha STL para 3MF no navegador. Escolha a unidade das coordenadas do STL e baixe um modelo 3MF com a escala física registrada.",
+      },
+      ru: {
+        name: "Конвертер STL в 3MF",
+        description:
+          "Преобразуйте сетку STL в 3MF прямо в браузере. Выберите единицу координат STL и скачайте модель 3MF, которая сохраняет её физический масштаб.",
+      },
+      sv: {
+        name: "STL till 3MF-konverterare",
+        description:
+          "Konvertera ett STL-nät till 3MF i webbläsaren. Välj måttenhet för STL-koordinaterna och ladda ner en 3MF-modell med sparad fysisk storlek.",
+      },
+      th: {
+        name: "โปรแกรมแปลง STL เป็น 3MF",
+        description:
+          "แปลงเมช STL เป็น 3MF ในเบราว์เซอร์ เลือกหน่วยพิกัดของ STL แล้วดาวน์โหลดโมเดล 3MF ที่บันทึกขนาดจริงไว้",
+      },
+      tr: {
+        name: "STL’den 3MF’ye Dönüştürücü",
+        description:
+          "STL ağını tarayıcınızda 3MF biçimine dönüştürün. STL koordinat birimini seçin ve fiziksel ölçeği kayıtlı olan 3MF modelini indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi STL sang 3MF",
+        description:
+          "Chuyển lưới STL sang 3MF trong trình duyệt. Chọn đơn vị tọa độ của STL rồi tải xuống mô hình 3MF có lưu kích thước thực.",
+      },
+      "zh-CN": {
+        name: "STL 转 3MF 转换器",
+        description:
+          "在浏览器中将 STL 网格转换为 3MF。选择 STL 坐标单位，下载记录了实际比例的 3MF 模型。",
+      },
+      "zh-TW": {
+        name: "STL 轉 3MF 轉換器",
+        description:
+          "在瀏覽器中將 STL 網格轉換為 3MF。選擇 STL 座標單位，下載記錄實際比例的 3MF 模型。",
       },
     },
   },

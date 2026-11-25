@@ -13,3 +13,5 @@ L’aperçu montre la géométrie et les couleurs du modèle prises en charge. R
 ## Ouvrir d’autres modèles 3D
 
 Utilisez la [Visionneuse STL](../stl-viewer/) pour ouvrir un maillage triangulaire exporté pour l’impression. Pour un modèle GLB ou glTF avec des textures ou des animations, utilisez la [Visionneuse GLB / glTF](../gltf-viewer/).
+
+Utilisez le [Convertisseur 3MF en STL](../3mf-to-stl-converter/) pour télécharger le maillage en STL binaire en conservant le placement des pièces.

@@ -13,3 +13,5 @@ Pratonton menunjukkan geometri dan warna model yang disokong. Untuk melihat teta
 ## Lihat model 3D lain
 
 Gunakan [Pemapar STL](../stl-viewer/) untuk membuka jejaring segi tiga yang dieksport untuk cetakan 3D. Untuk model GLB atau glTF yang mempunyai tekstur atau animasi, gunakan [Pemapar GLB / glTF](../gltf-viewer/).
+
+Gunakan [Penukar 3MF kepada STL](../3mf-to-stl-converter/) untuk memuat turun jejaring mengikut kedudukan cetakannya sebagai STL binari.

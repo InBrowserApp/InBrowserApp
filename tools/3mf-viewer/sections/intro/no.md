@@ -13,3 +13,5 @@ Forhåndsvisningen viser modellens geometri og de modellfargene viseren støtter
 ## Se andre 3D-modeller
 
 Bruk [STL-viseren](../stl-viewer/) til å åpne et trekantnett som er eksportert for 3D-utskrift. Har du en GLB- eller glTF-modell med teksturer eller animasjon, kan du åpne den i [GLB- og glTF-viseren](../gltf-viewer/).
+
+Bruk [3MF til STL-konvertereren](../3mf-to-stl-converter/) til å laste ned trekantnettet med delenes plassering som en binær STL-fil.

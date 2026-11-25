@@ -1,0 +1,4 @@
+{
+  "failed": "Could not convert this file. Open a 3MF model containing 3D mesh geometry.",
+  "unitHint": "Import the STL in millimeters. Colors, materials and slicer settings stay in the 3MF."
+}

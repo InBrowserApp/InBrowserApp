@@ -13,3 +13,5 @@ La vista previa muestra la geometría y los colores del modelo que admite el vis
 ## Ver otros modelos 3D
 
 Usa el [Visor de STL](../stl-viewer/) para abrir una malla triangular exportada para impresión. Para un modelo con texturas o animaciones, usa el [Visor de GLB / glTF](../gltf-viewer/).
+
+Usa el [Conversor de 3MF a STL](../3mf-to-stl-converter/) para descargar la malla como STL binario, con las piezas en sus posiciones.

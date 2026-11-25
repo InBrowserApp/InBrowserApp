@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur 3MF en STL",
+  "description": "Convertissez un modèle 3MF en STL binaire dans votre navigateur. Conservez les dimensions et le placement des pièces avec des coordonnées en millimètres, puis téléchargez le maillage au format STL."
+}

@@ -13,3 +13,5 @@ Bản xem trước hiển thị hình học và các màu của mô hình mà tr
 ## Xem các mô hình 3D khác
 
 Dùng [Trình xem STL](../stl-viewer/) để mở lưới tam giác được xuất cho in 3D. Với mô hình GLB hoặc glTF có họa tiết hoặc hoạt ảnh, hãy dùng [Trình xem GLB / glTF](../gltf-viewer/).
+
+Dùng [Trình chuyển đổi 3MF sang STL](../3mf-to-stl-converter/) để tải lưới theo vị trí đã bố trí in xuống dưới dạng STL nhị phân.

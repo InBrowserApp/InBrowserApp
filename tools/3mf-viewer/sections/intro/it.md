@@ -13,3 +13,5 @@ L’anteprima mostra la geometria e i colori del modello supportati. Per verific
 ## Aprire altri modelli 3D
 
 Usa il [Visualizzatore STL](../stl-viewer/) per aprire una mesh triangolare esportata per la stampa. Per un modello GLB o glTF con texture o animazioni, usa il [Visualizzatore GLB / glTF](../gltf-viewer/).
+
+Usa il [Convertitore da 3MF a STL](../3mf-to-stl-converter/) per scaricare la mesh in formato STL binario mantenendo la disposizione delle parti.

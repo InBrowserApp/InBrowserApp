@@ -19,3 +19,5 @@ STL 使用三角形描述零件表面。若要查看附有材質庫的 Wavefront
 - [網格體積與拓撲檢查器](../mesh-inspector/)
 
 使用 [STEP 轉 STL 轉換器](../step-to-stl-converter/)從原始 STEP 或 STP CAD 模型匯出網格幾何資料。
+
+使用 [STL 轉 3MF 轉換器](../stl-to-3mf-converter/)將模型的實際單位記錄到 3MF 檔案中。

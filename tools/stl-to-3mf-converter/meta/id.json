@@ -1,0 +1,4 @@
+{
+  "name": "Konverter STL ke 3MF",
+  "description": "Konversi mesh STL ke 3MF di browser. Pilih satuan koordinat STL lalu unduh model 3MF yang menyimpan skala fisiknya."
+}

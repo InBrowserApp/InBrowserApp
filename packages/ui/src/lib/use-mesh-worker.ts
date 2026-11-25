@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react"
 
 type Request = { worker?: Worker }
 
-export function useMeshWorker<Output>(
+export function useMeshWorker<Output, Settings = undefined>(
   getSample: () => Promise<File>,
   createWorker: () => Worker,
-  buildMessage: (file: File) => unknown = (file) => file
+  buildMessage: (file: File, settings?: Settings) => unknown = (file) => file
 ) {
   type Result = { name: string; data: Output }
   const active = useRef<Request>(null)
@@ -20,7 +20,7 @@ export function useMeshWorker<Output>(
     []
   )
 
-  async function run(supplied?: File) {
+  async function run(supplied?: File, settings?: Settings) {
     active.current?.worker?.terminate()
     const request: Request = {}
     active.current = request
@@ -42,7 +42,7 @@ export function useMeshWorker<Output>(
       worker.onmessage = ({ data }: MessageEvent<Output | null>) =>
         finish(data === null ? undefined : { name: file.name, data })
       worker.onerror = () => finish()
-      worker.postMessage(buildMessage(file))
+      worker.postMessage(buildMessage(file, settings))
     } catch {
       finish()
     }

@@ -5,6 +5,7 @@ type ToolPageLoader = () => Promise<ToolPageModule>
 
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "2fa-authenticator": () => import("@tool/2fa-authenticator/page"),
+  "3mf-to-stl-converter": () => import("@tool/3mf-to-stl-converter/page"),
   "3mf-viewer": () => import("@tool/3mf-viewer/page"),
   "abc-notation-previewer": () => import("@tool/abc-notation-previewer/page"),
   "abc-notation-to-image-converter": () =>
@@ -478,6 +479,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "step-to-stl-converter": () => import("@tool/step-to-stl-converter/page"),
   "step-viewer": () => import("@tool/step-viewer/page"),
   "stereo-channel-splitter": () => import("@tool/stereo-channel-splitter/page"),
+  "stl-to-3mf-converter": () => import("@tool/stl-to-3mf-converter/page"),
   "stl-to-obj-converter": () => import("@tool/stl-to-obj-converter/page"),
   "stl-viewer": () => import("@tool/stl-viewer/page"),
   stopwatch: () => import("@tool/stopwatch/page"),

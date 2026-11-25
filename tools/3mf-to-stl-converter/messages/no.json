@@ -1,0 +1,4 @@
+{
+  "failed": "Kunne ikke konvertere filen. Åpne en 3MF-modell som inneholder et 3D-nett.",
+  "unitHint": "Importer STL-filen i millimeter. Farger, materialer og innstillinger for slicerprogrammet blir værende i 3MF-filen."
+}

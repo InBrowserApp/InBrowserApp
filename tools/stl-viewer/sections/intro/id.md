@@ -19,3 +19,5 @@ STL menggambarkan permukaan komponen dengan segitiga. Untuk melihat file Wavefro
 - [Pemeriksa Volume dan Topologi Mesh](../mesh-inspector/)
 
 Gunakan [Konverter STEP ke STL](../step-to-stl-converter/) untuk mengekspor geometri mesh dari model CAD STEP atau STP asli.
+
+Gunakan [Konverter STL ke 3MF](../stl-to-3mf-converter/) untuk mencatat satuan fisik model dalam file 3MF.

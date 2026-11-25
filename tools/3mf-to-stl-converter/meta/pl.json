@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter 3MF na STL",
+  "description": "Konwertuj modele 3MF na binarne pliki STL w przeglądarce. Zachowaj wymiary i rozmieszczenie części we współrzędnych w milimetrach, a następnie pobierz siatkę jako plik STL."
+}

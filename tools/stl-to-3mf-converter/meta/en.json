@@ -1,0 +1,4 @@
+{
+  "name": "STL to 3MF Converter",
+  "description": "Convert an STL mesh to 3MF in your browser. Choose the STL coordinate unit and download a 3MF model with its physical scale recorded."
+}

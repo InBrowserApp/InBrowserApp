@@ -1,0 +1,4 @@
+{
+  "name": "3MF till STL-konverterare",
+  "description": "Konvertera en 3MF-modell till binär STL i webbläsaren. Behåll delarnas mått och placering med koordinater i millimeter och ladda ner nätet som en STL-fil."
+}

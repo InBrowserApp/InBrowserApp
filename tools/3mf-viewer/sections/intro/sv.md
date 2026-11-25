@@ -13,3 +13,5 @@ Förhandsvyn visar modellens geometri och de modellfärger som stöds. Du kan ko
 ## Visa andra 3D-modeller
 
 Använd [STL-visaren](../stl-viewer/) för att öppna ett triangelnät som har exporterats för 3D-utskrift. Öppna en GLB- eller glTF-modell med texturer eller animationer i [GLB- och glTF-visaren](../gltf-viewer/).
+
+Använd [3MF till STL-konverteraren](../3mf-to-stl-converter/) för att ladda ner nätet med delarnas placering som en binär STL-fil.

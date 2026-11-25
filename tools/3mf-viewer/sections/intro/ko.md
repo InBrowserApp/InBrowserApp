@@ -13,3 +13,5 @@
 ## 다른 3D 모델 보기
 
 출력용으로 내보낸 삼각형 메시는 [STL 뷰어](../stl-viewer/)에서 여세요. 텍스처나 애니메이션이 있는 GLB 또는 glTF 모델은 [GLB / glTF 뷰어](../gltf-viewer/)를 사용하세요.
+
+[3MF → STL 변환기](../3mf-to-stl-converter/)를 사용해 배치된 메시 형상을 바이너리 STL로 다운로드하세요.

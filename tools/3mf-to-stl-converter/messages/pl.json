@@ -1,0 +1,4 @@
+{
+  "failed": "Nie udało się przekonwertować pliku. Otwórz model 3MF zawierający siatkę 3D.",
+  "unitHint": "Podczas importowania STL wybierz milimetry. Kolory, materiały i ustawienia przygotowania wydruku pozostają w pliku 3MF."
+}

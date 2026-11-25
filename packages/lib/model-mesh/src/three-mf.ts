@@ -2,19 +2,13 @@ import { strToU8, unzipSync, zipSync } from "fflate"
 import { LoadingManager } from "three"
 import { ThreeMFLoader } from "three/addons/loaders/3MFLoader.js"
 
-const rootRelationships = "_rels/.rels"
-const modelRelationship =
-  "http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"
-const production =
-  "http://schemas.microsoft.com/3dmanufacturing/production/2015/06"
-const millimeters = new Map([
-  ["micron", 0.001],
-  ["millimeter", 1],
-  ["centimeter", 10],
-  ["inch", 25.4],
-  ["foot", 304.8],
-  ["meter", 1000],
-])
+import {
+  rootRelationships,
+  modelRelationship,
+  production,
+  relationshipNamespace,
+  unitScale,
+} from "./three-mf-package"
 
 function readPart(archive: Uint8Array, path: string) {
   const bytes = unzipSync(archive, { filter: ({ name }) => name === path })[
@@ -28,10 +22,7 @@ function readPart(archive: Uint8Array, path: string) {
 }
 
 function modelUnit(model: Document) {
-  const unit = model.documentElement?.getAttribute("unit") ?? "millimeter"
-  const scale = millimeters.get(unit)
-  if (scale === undefined) throw new Error("Unsupported 3MF unit")
-  return scale
+  return unitScale(model.documentElement?.getAttribute("unit") ?? undefined)
 }
 
 function references(model: Document) {
@@ -97,7 +88,7 @@ function normalizePackage(
   })
   const rootName = "3D/3dmodel.model"
   entries[rootRelationships] = strToU8(
-    `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/${rootName}" Id="model" Type="${modelRelationship}"/></Relationships>`
+    `<Relationships xmlns="${relationshipNamespace}"><Relationship Target="/${rootName}" Id="model" Type="${modelRelationship}"/></Relationships>`
   )
   const serializer = new XMLSerializer()
   let partIndex = 0

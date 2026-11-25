@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de 3MF a STL",
+  "description": "Convierte un modelo 3MF a STL binario en tu navegador. Conserva las dimensiones y la colocación de las piezas en coordenadas en milímetros y descarga la malla en formato STL."
+}

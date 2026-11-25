@@ -19,3 +19,5 @@ STL は三角形で部品の表面を表します。マテリアルライブラ�
 - [メッシュの体積・トポロジーチェッカー](../mesh-inspector/)
 
 [STEP → STL 変換](../step-to-stl-converter/)で、元の STEP または STP CAD モデルからメッシュ形状を出力できます。
+
+[STL → 3MF 変換](../stl-to-3mf-converter/)で、モデルの物理単位を 3MF ファイルに記録できます。

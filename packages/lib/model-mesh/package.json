@@ -19,7 +19,8 @@
   "dependencies": {
     "three": "catalog:",
     "fflate": "catalog:",
-    "occt-import-js": "catalog:"
+    "occt-import-js": "catalog:",
+    "saxes": "catalog:"
   },
   "devDependencies": {
     "@types/three": "catalog:",
