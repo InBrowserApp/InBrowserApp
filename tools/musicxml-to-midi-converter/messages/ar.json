@@ -1,0 +1,20 @@
+{
+  "chooseFile": "فتح ملف MusicXML",
+  "changeFile": "تغيير الملف",
+  "dropHint": "أفلت نوتة MusicXML أو MXL هنا",
+  "privacy": "تبقى النوتة في متصفحك.",
+  "example": "جرّب مثالًا",
+  "preview": "معاينة النوتة الموسيقية",
+  "page": "الصفحة {page} من {total}",
+  "previous": "الصفحة السابقة",
+  "next": "الصفحة التالية",
+  "loading": "جارٍ ترتيب النوتة على الصفحات…",
+  "invalidScore": "تعذّر رسم معاينة النوتة. احفظها بتنسيق MusicXML المرتّب حسب الأجزاء (partwise) لمعاينتها.",
+  "download": "تنزيل MIDI",
+  "downloadBusy": "جارٍ تجهيز MIDI…",
+  "downloadError": "تعذّر إنشاء ملف MIDI. تأكّد من أن النوتة تتضمّن نغمات ثم أعد المحاولة.",
+  "listen": "استماع",
+  "audioLoading": "جارٍ تجهيز الصوت…",
+  "audioError": "تعذّر تجهيز الصوت. أعد محاولة الاستماع.",
+  "audioPreview": "معاينة الصوت"
+}

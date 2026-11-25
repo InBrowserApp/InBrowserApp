@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML MIDI 変換",
+  "description": "MusicXML や圧縮された MXL 楽譜を MIDI に変換します。楽譜を開いてページをプレビューし、結果を試聴して、ブラウザで .mid ファイルをダウンロードできます。"
+}

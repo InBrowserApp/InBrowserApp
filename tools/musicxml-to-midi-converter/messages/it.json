@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Apri file MusicXML",
+  "changeFile": "Cambia file",
+  "dropHint": "Trascina qui uno spartito MusicXML o MXL",
+  "privacy": "Lo spartito resta nel browser.",
+  "example": "Prova un esempio",
+  "preview": "Anteprima dello spartito",
+  "page": "Pagina {page} di {total}",
+  "previous": "Pagina precedente",
+  "next": "Pagina successiva",
+  "loading": "Impaginazione dello spartito…",
+  "invalidScore": "Impossibile mostrare l’anteprima dello spartito. Salvalo in formato MusicXML organizzato per parti (partwise) per visualizzarlo.",
+  "download": "Scarica MIDI",
+  "downloadBusy": "Preparazione del MIDI…",
+  "downloadError": "Impossibile creare un file MIDI. Controlla che lo spartito contenga delle note e riprova.",
+  "listen": "Ascolta",
+  "audioLoading": "Preparazione dell’audio…",
+  "audioError": "Impossibile preparare l’audio. Prova ad ascoltarlo di nuovo.",
+  "audioPreview": "Anteprima audio"
+}

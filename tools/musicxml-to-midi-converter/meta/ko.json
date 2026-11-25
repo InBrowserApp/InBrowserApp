@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML MIDI 변환기",
+  "description": "MusicXML과 압축된 MXL 악보를 MIDI로 변환하세요. 악보를 열어 페이지를 미리 보고 결과를 들어본 뒤 브라우저에서 .mid 파일을 다운로드할 수 있습니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML to MIDI Converter",
+  "description": "Convert MusicXML and compressed MXL sheet music to MIDI. Open a score, preview the pages, listen to the result, and download a .mid file in your browser."
+}

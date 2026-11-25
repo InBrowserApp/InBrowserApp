@@ -1,0 +1,20 @@
+{
+  "chooseFile": "MusicXML-bestand openen",
+  "changeFile": "Ander bestand kiezen",
+  "dropHint": "Sleep een MusicXML- of MXL-partituur hierheen",
+  "privacy": "Je partituur blijft in je browser.",
+  "example": "Voorbeeld proberen",
+  "preview": "Voorbeeld van de bladmuziek",
+  "page": "Pagina {page} van {total}",
+  "previous": "Vorige pagina",
+  "next": "Volgende pagina",
+  "loading": "Bladmuziek opmaken…",
+  "invalidScore": "Het voorbeeld van de partituur kan niet worden weergegeven. Sla de partituur op als MusicXML dat per partij is opgebouwd (partwise) om het voorbeeld te bekijken.",
+  "download": "MIDI downloaden",
+  "downloadBusy": "MIDI voorbereiden…",
+  "downloadError": "Het MIDI-bestand kon niet worden gemaakt. Controleer of de partituur noten bevat en probeer het opnieuw.",
+  "listen": "Beluisteren",
+  "audioLoading": "Audio voorbereiden…",
+  "audioError": "De audio kon niet worden voorbereid. Probeer de melodie opnieuw te beluisteren.",
+  "audioPreview": "Audiovoorbeeld"
+}

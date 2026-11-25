@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Öppna MusicXML-fil",
+  "changeFile": "Byt fil",
+  "dropHint": "Släpp ett MusicXML- eller MXL-partitur här",
+  "privacy": "Partituret stannar i din webbläsare.",
+  "example": "Prova ett exempel",
+  "preview": "Förhandsvisning av noterna",
+  "page": "Sida {page} av {total}",
+  "previous": "Föregående sida",
+  "next": "Nästa sida",
+  "loading": "Formaterar noterna…",
+  "invalidScore": "Det gick inte att visa partituret. Spara det som MusicXML med stämmorna var för sig (partwise) för att se förhandsvisningen.",
+  "download": "Ladda ner MIDI",
+  "downloadBusy": "Förbereder MIDI…",
+  "downloadError": "Det gick inte att skapa en MIDI-fil. Kontrollera att partituret innehåller noter och försök igen.",
+  "listen": "Lyssna",
+  "audioLoading": "Förbereder ljud…",
+  "audioError": "Det gick inte att förbereda ljudet. Försök lyssna igen.",
+  "audioPreview": "Förhandslyssning"
+}

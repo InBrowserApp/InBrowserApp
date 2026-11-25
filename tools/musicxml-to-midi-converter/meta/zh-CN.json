@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML 转 MIDI 转换器",
+  "description": "将 MusicXML 和压缩的 MXL 乐谱转换为 MIDI。打开乐谱、预览页面、试听结果，然后在浏览器中下载 .mid 文件。"
+}

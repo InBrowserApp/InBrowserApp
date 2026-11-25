@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da MusicXML a MIDI",
+  "description": "Converti spartiti MusicXML o file MXL compressi in MIDI. Apri uno spartito, controlla le pagine, ascolta il risultato e scarica un file .mid dal browser."
+}

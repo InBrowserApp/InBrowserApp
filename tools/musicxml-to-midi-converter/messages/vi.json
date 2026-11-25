@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Mở tệp MusicXML",
+  "changeFile": "Đổi tệp",
+  "dropHint": "Thả bản nhạc MusicXML hoặc MXL vào đây",
+  "privacy": "Bản nhạc chỉ nằm trong trình duyệt của bạn.",
+  "example": "Dùng thử bản mẫu",
+  "preview": "Xem trước bản nhạc",
+  "page": "Trang {page} / {total}",
+  "previous": "Trang trước",
+  "next": "Trang tiếp theo",
+  "loading": "Đang dàn trang bản nhạc…",
+  "invalidScore": "Không thể vẽ bản xem trước. Hãy lưu dưới dạng MusicXML theo từng bè để xem trước.",
+  "download": "Tải MIDI xuống",
+  "downloadBusy": "Đang chuẩn bị MIDI…",
+  "downloadError": "Không thể tạo tệp MIDI. Hãy kiểm tra bản nhạc có nốt rồi thử lại.",
+  "listen": "Nghe thử",
+  "audioLoading": "Đang chuẩn bị âm thanh…",
+  "audioError": "Không thể chuẩn bị âm thanh. Hãy thử nghe lại.",
+  "audioPreview": "Nghe trước"
+}

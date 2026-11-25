@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Ouvrir un fichier MusicXML",
+  "changeFile": "Changer de fichier",
+  "dropHint": "Déposez une partition MusicXML ou MXL ici",
+  "privacy": "Votre partition reste dans votre navigateur.",
+  "example": "Essayer un exemple",
+  "preview": "Aperçu de la partition",
+  "page": "Page {page} sur {total}",
+  "previous": "Page précédente",
+  "next": "Page suivante",
+  "loading": "Mise en page de la partition…",
+  "invalidScore": "Impossible d’afficher l’aperçu de la partition. Enregistrez-la au format MusicXML structuré par partie (partwise) pour la prévisualiser.",
+  "download": "Télécharger le MIDI",
+  "downloadBusy": "Préparation du MIDI…",
+  "downloadError": "Impossible de créer un fichier MIDI. Vérifiez que la partition contient des notes, puis réessayez.",
+  "listen": "Écouter",
+  "audioLoading": "Préparation de l’audio…",
+  "audioError": "Impossible de préparer l’audio. Réessayez de l’écouter.",
+  "audioPreview": "Aperçu audio"
+}

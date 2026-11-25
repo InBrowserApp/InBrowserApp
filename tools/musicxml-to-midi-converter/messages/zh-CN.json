@@ -1,0 +1,20 @@
+{
+  "chooseFile": "打开 MusicXML 文件",
+  "changeFile": "更换文件",
+  "dropHint": "将 MusicXML 或 MXL 乐谱拖放到此处",
+  "privacy": "乐谱仅保留在您的浏览器中。",
+  "example": "试用示例",
+  "preview": "乐谱预览",
+  "page": "第 {page} 页，共 {total} 页",
+  "previous": "上一页",
+  "next": "下一页",
+  "loading": "正在排版乐谱…",
+  "invalidScore": "无法绘制乐谱预览。请保存为按声部分组的 MusicXML 以进行预览。",
+  "download": "下载 MIDI",
+  "downloadBusy": "正在准备 MIDI…",
+  "downloadError": "无法创建 MIDI 文件。请检查乐谱是否包含音符，然后重试。",
+  "listen": "试听",
+  "audioLoading": "正在准备音频…",
+  "audioError": "无法准备音频。请再次尝试试听。",
+  "audioPreview": "音频预览"
+}

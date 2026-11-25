@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Buka file MusicXML",
+  "changeFile": "Ganti file",
+  "dropHint": "Lepas partitur MusicXML atau MXL di sini",
+  "privacy": "Partitur Anda tetap di browser ini.",
+  "example": "Coba contoh",
+  "preview": "Pratinjau partitur",
+  "page": "Halaman {page} dari {total}",
+  "previous": "Halaman sebelumnya",
+  "next": "Halaman berikutnya",
+  "loading": "Menata halaman partitur…",
+  "invalidScore": "Pratinjau partitur tidak dapat ditampilkan. Simpan dalam format MusicXML partwise untuk melihat pratinjau.",
+  "download": "Unduh MIDI",
+  "downloadBusy": "Menyiapkan MIDI…",
+  "downloadError": "File MIDI tidak dapat dibuat. Pastikan partitur berisi not, lalu coba lagi.",
+  "listen": "Dengarkan",
+  "audioLoading": "Menyiapkan audio…",
+  "audioError": "Audio tidak dapat disiapkan. Coba dengarkan lagi.",
+  "audioPreview": "Pratinjau audio"
+}

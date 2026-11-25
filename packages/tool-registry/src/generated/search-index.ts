@@ -35864,6 +35864,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "musicxml-to-midi-converter",
+    category: "music",
+    icon: "file-music",
+    tags: [
+      "musicxml",
+      "mxl",
+      "musicxml to midi",
+      "sheet music",
+      "midi converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MusicXML إلى MIDI",
+        description:
+          "حوّل نوتات MusicXML وMXL المضغوطة إلى MIDI. افتح النوتة وعاين صفحاتها واستمع إلى النتيجة، ثم نزّل ملف ‎.mid في متصفحك.",
+      },
+      de: {
+        name: "MusicXML-zu-MIDI-Konverter",
+        description:
+          "Wandle MusicXML-Partituren oder komprimierte MXL-Dateien in MIDI um. Öffne die Partitur, prüfe die Seiten, höre das Ergebnis an und lade die .mid-Datei im Browser herunter.",
+      },
+      en: {
+        name: "MusicXML to MIDI Converter",
+        description:
+          "Convert MusicXML and compressed MXL sheet music to MIDI. Open a score, preview the pages, listen to the result, and download a .mid file in your browser.",
+      },
+      es: {
+        name: "Conversor de MusicXML a MIDI",
+        description:
+          "Convierte partituras MusicXML o archivos MXL comprimidos a MIDI. Abre la partitura, revisa las páginas, escucha el resultado y descarga un archivo .mid en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur MusicXML vers MIDI",
+        description:
+          "Convertissez les partitions MusicXML ou les fichiers MXL compressés en MIDI. Ouvrez une partition, parcourez les pages, écoutez le résultat et téléchargez un fichier .mid dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MusicXML ל־MIDI",
+        description:
+          "המירו תווים בפורמט MusicXML או MXL דחוס ל־MIDI. פתחו קובץ תווים, צפו בעמודים, האזינו לתוצאה והורידו קובץ ‎.mid בדפדפן.",
+      },
+      hi: {
+        name: "MusicXML से MIDI कन्वर्टर",
+        description:
+          "MusicXML शीट म्यूज़िक और कंप्रेस की गई MXL फ़ाइलों को MIDI में बदलें। स्कोर खोलें, पन्नों का प्रीव्यू देखें, नतीजा सुनें और सीधे ब्राउज़र से .mid फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MusicXML ke MIDI",
+        description:
+          "Ubah partitur MusicXML dan file MXL terkompresi menjadi MIDI. Buka partitur, lihat pratinjau halaman, dengarkan hasilnya, lalu unduh file .mid di browser.",
+      },
+      it: {
+        name: "Convertitore da MusicXML a MIDI",
+        description:
+          "Converti spartiti MusicXML o file MXL compressi in MIDI. Apri uno spartito, controlla le pagine, ascolta il risultato e scarica un file .mid dal browser.",
+      },
+      ja: {
+        name: "MusicXML MIDI 変換",
+        description:
+          "MusicXML や圧縮された MXL 楽譜を MIDI に変換します。楽譜を開いてページをプレビューし、結果を試聴して、ブラウザで .mid ファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "MusicXML MIDI 변환기",
+        description:
+          "MusicXML과 압축된 MXL 악보를 MIDI로 변환하세요. 악보를 열어 페이지를 미리 보고 결과를 들어본 뒤 브라우저에서 .mid 파일을 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MusicXML kepada MIDI",
+        description:
+          "Tukar skor muzik MusicXML dan fail MXL termampat kepada MIDI. Buka skor, pratonton halaman, dengar hasilnya dan muat turun fail .mid melalui pelayar.",
+      },
+      nl: {
+        name: "MusicXML-naar-MIDI-converter",
+        description:
+          "Zet MusicXML-partituren of gecomprimeerde MXL-bestanden om naar MIDI. Open een partituur, bekijk de pagina’s, beluister het resultaat en download een .mid-bestand in je browser.",
+      },
+      no: {
+        name: "MusicXML til MIDI-konverterer",
+        description:
+          "Konverter MusicXML-partiturer eller komprimerte MXL-filer til MIDI. Åpne et partitur, se gjennom sidene, lytt til resultatet og last ned en .mid-fil i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MusicXML na MIDI",
+        description:
+          "Konwertuj nuty z MusicXML i skompresowanych plików MXL na MIDI. Otwórz partyturę, przejrzyj strony, odsłuchaj wynik i pobierz plik .mid w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de MusicXML para MIDI",
+        description:
+          "Converta partituras MusicXML ou arquivos MXL compactados em MIDI. Abra uma partitura, confira as páginas, ouça o resultado e baixe um arquivo .mid pelo navegador.",
+      },
+      ru: {
+        name: "Конвертер MusicXML в MIDI",
+        description:
+          "Преобразуйте ноты из MusicXML и сжатых файлов MXL в MIDI. Откройте партитуру, просмотрите страницы, прослушайте результат и скачайте файл .mid прямо в браузере.",
+      },
+      sv: {
+        name: "MusicXML till MIDI-konverterare",
+        description:
+          "Konvertera MusicXML-partitur eller komprimerade MXL-filer till MIDI. Öppna ett partitur, granska sidorna, lyssna på resultatet och ladda ner en .mid-fil i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MusicXML เป็น MIDI",
+        description:
+          "แปลงโน้ตเพลง MusicXML และไฟล์ MXL แบบบีบอัดเป็น MIDI เปิดไฟล์ ดูตัวอย่างแต่ละหน้า ฟังผลลัพธ์ แล้วดาวน์โหลดไฟล์ .mid ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MusicXML'den MIDI'ye Dönüştürücü",
+        description:
+          "MusicXML ve sıkıştırılmış MXL partisyonlarını MIDI'ye dönüştürün. Partisyonu açın, sayfaları önizleyin, sonucu dinleyin ve .mid dosyasını tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển MusicXML sang MIDI",
+        description:
+          "Chuyển bản nhạc MusicXML và MXL nén sang MIDI. Mở bản nhạc, xem trước các trang, nghe kết quả và tải tệp .mid ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MusicXML 转 MIDI 转换器",
+        description:
+          "将 MusicXML 和压缩的 MXL 乐谱转换为 MIDI。打开乐谱、预览页面、试听结果，然后在浏览器中下载 .mid 文件。",
+      },
+      "zh-TW": {
+        name: "MusicXML 轉 MIDI 轉換器",
+        description:
+          "將 MusicXML 和壓縮的 MXL 樂譜轉換成 MIDI。開啟樂譜、預覽頁面、聆聽結果，再於瀏覽器中下載 .mid 檔案。",
+      },
+    },
+  },
+  {
     slug: "musicxml-to-pdf-converter",
     category: "pdf",
     secondaryCategories: ["music"],

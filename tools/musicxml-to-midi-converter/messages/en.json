@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Open MusicXML file",
+  "changeFile": "Change file",
+  "dropHint": "Drop a MusicXML or MXL score here",
+  "privacy": "Your score stays in your browser.",
+  "example": "Try an example",
+  "preview": "Score preview",
+  "page": "Page {page} of {total}",
+  "previous": "Previous page",
+  "next": "Next page",
+  "loading": "Laying out sheet music…",
+  "invalidScore": "The score preview could not be drawn. Save as partwise MusicXML to preview it.",
+  "download": "Download MIDI",
+  "downloadBusy": "Preparing MIDI…",
+  "downloadError": "Could not create a MIDI file. Check that the score contains notes and try again.",
+  "listen": "Listen",
+  "audioLoading": "Preparing audio…",
+  "audioError": "Could not prepare the audio. Try listening again.",
+  "audioPreview": "Audio preview"
+}

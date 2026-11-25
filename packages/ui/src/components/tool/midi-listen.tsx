@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react"
 import type { Response } from "@workspace/midi-audio/worker-client"
-import type { AbcTune } from "@workspace/score-export/abc"
 import { Button } from "@workspace/ui/components/ui/button"
 import { LoaderCircle, Play } from "@workspace/ui/icons"
 
@@ -11,11 +10,11 @@ export type ListenMessages = Record<
 
 type Audition = { worker?: Worker }
 
-export function AbcMidiListen({
-  tune,
+export function MidiListen({
+  readMidi,
   messages: m,
 }: {
-  tune: AbcTune
+  readMidi: () => File | Promise<File>
   messages: ListenMessages
 }) {
   const [status, setStatus] = useState<"loading" | "error">()
@@ -55,11 +54,10 @@ export function AbcMidiListen({
     }
 
     try {
-      const [{ compileAbcMidi }, { createMidiRenderWorker }] =
-        await Promise.all([
-          import("@workspace/score-export/abc-midi"),
-          import("@workspace/midi-audio/worker-client"),
-        ])
+      const [{ createMidiRenderWorker }, file] = await Promise.all([
+        import("@workspace/midi-audio/worker-client"),
+        readMidi(),
+      ])
       if (active.current !== audition) return
       const worker = createMidiRenderWorker()
       audition.worker = worker
@@ -68,7 +66,8 @@ export function AbcMidiListen({
         else if (data.type === "error") finish()
       }
       worker.onerror = () => finish()
-      worker.postMessage({ file: compileAbcMidi(tune) })
+      worker.onmessageerror = () => finish()
+      worker.postMessage({ file })
     } catch {
       finish()
     }

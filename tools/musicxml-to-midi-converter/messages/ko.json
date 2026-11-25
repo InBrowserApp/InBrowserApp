@@ -1,0 +1,20 @@
+{
+  "chooseFile": "MusicXML 파일 열기",
+  "changeFile": "파일 변경",
+  "dropHint": "MusicXML 또는 MXL 악보를 여기에 놓으세요",
+  "privacy": "악보는 브라우저에만 보관됩니다.",
+  "example": "예제 보기",
+  "preview": "악보 미리보기",
+  "page": "{total}페이지 중 {page}페이지",
+  "previous": "이전 페이지",
+  "next": "다음 페이지",
+  "loading": "악보를 배치하는 중…",
+  "invalidScore": "악보 미리보기를 그릴 수 없습니다. 미리 보려면 파트별 MusicXML로 저장하세요.",
+  "download": "MIDI 다운로드",
+  "downloadBusy": "MIDI를 준비하는 중…",
+  "downloadError": "MIDI 파일을 만들 수 없습니다. 악보에 음표가 있는지 확인한 후 다시 시도하세요.",
+  "listen": "들어보기",
+  "audioLoading": "오디오를 준비하는 중…",
+  "audioError": "오디오를 준비할 수 없습니다. 다시 들어보세요.",
+  "audioPreview": "오디오 미리보기"
+}

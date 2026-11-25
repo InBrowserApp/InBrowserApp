@@ -1,0 +1,20 @@
+{
+  "chooseFile": "Abrir archivo MusicXML",
+  "changeFile": "Cambiar archivo",
+  "dropHint": "Suelta aquí una partitura MusicXML o MXL",
+  "privacy": "Tu partitura se queda en el navegador.",
+  "example": "Probar un ejemplo",
+  "preview": "Vista previa de la partitura",
+  "page": "Página {page} de {total}",
+  "previous": "Página anterior",
+  "next": "Página siguiente",
+  "loading": "Maquetando la partitura…",
+  "invalidScore": "No se pudo mostrar la vista previa. Guarda la partitura como MusicXML con estructura por partes (partwise) para verla.",
+  "download": "Descargar MIDI",
+  "downloadBusy": "Preparando MIDI…",
+  "downloadError": "No se pudo crear el archivo MIDI. Comprueba que la partitura contiene notas e inténtalo de nuevo.",
+  "listen": "Escuchar",
+  "audioLoading": "Preparando el audio…",
+  "audioError": "No se pudo preparar el audio. Intenta reproducirlo de nuevo.",
+  "audioPreview": "Vista previa del audio"
+}

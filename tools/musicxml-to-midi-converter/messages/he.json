@@ -1,0 +1,20 @@
+{
+  "chooseFile": "פתיחת קובץ MusicXML",
+  "changeFile": "החלפת קובץ",
+  "dropHint": "גררו לכאן קובץ תווים מסוג MusicXML או MXL",
+  "privacy": "קובץ התווים נשאר בדפדפן.",
+  "example": "נסו דוגמה",
+  "preview": "תצוגה מקדימה של התווים",
+  "page": "עמוד {page} מתוך {total}",
+  "previous": "העמוד הקודם",
+  "next": "העמוד הבא",
+  "loading": "מסדרים את התווים בעמודים…",
+  "invalidScore": "לא ניתן ליצור תצוגה מקדימה של התווים. כדי להציג אותם, שמרו את הקובץ כ־MusicXML במבנה לפי תפקידים (partwise).",
+  "download": "הורדת MIDI",
+  "downloadBusy": "מכינים את ה־MIDI…",
+  "downloadError": "לא ניתן ליצור קובץ MIDI. ודאו שיש תווים ביצירה ונסו שוב.",
+  "listen": "האזנה",
+  "audioLoading": "מכינים את האודיו…",
+  "audioError": "לא ניתן להכין את האודיו. נסו להאזין שוב.",
+  "audioPreview": "האזנה מקדימה"
+}
