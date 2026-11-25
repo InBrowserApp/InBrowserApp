@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de UPC aleatório",
+  "description": "Gere códigos UPC-A aleatórios de 12 dígitos com dígitos verificadores válidos para testes. Copie um lote ou baixe um arquivo TXT preservando os zeros à esquerda."
+}

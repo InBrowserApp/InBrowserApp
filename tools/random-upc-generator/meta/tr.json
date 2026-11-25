@@ -1,0 +1,4 @@
+{
+  "name": "Rastgele UPC Oluşturucu",
+  "description": "Test için geçerli kontrol basamaklarına sahip rastgele 12 basamaklı UPC-A kodları oluşturun. Baştaki sıfırları koruyarak kodları topluca kopyalayın veya TXT dosyası indirin."
+}

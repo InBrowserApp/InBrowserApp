@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "ตัวสร้างรหัส UPC แบบสุ่ม",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "โปรแกรมสร้าง VIN แบบสุ่ม",
     slug: "random-vin-generator",
   },

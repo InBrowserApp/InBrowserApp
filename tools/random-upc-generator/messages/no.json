@@ -1,0 +1,12 @@
+{
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Genererte UPC-A-koder",
+  "placeholder": "Genererte UPC-A-koder vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "copyFailed": "Kopiering mislyktes",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke laste UPC-generatoren. Last inn siden på nytt for å prøve igjen."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generator UPC Acak",
+  "description": "Buat kode UPC-A acak 12 digit dengan digit pemeriksa yang valid untuk pengujian. Salin satu kumpulan atau unduh file TXT dengan angka nol di depan tetap utuh."
+}

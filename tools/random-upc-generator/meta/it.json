@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di UPC casuali",
+  "description": "Genera codici UPC-A casuali di 12 cifre con cifre di controllo valide per i test. Copia i codici o scarica un file TXT mantenendo gli zeri iniziali."
+}

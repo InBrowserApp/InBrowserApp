@@ -1,0 +1,12 @@
+{
+  "quantity": "Kuantiti",
+  "generate": "Jana",
+  "generating": "Sedang menjana…",
+  "results": "Kod UPC-A yang dijana",
+  "placeholder": "Kod UPC-A yang dijana akan dipaparkan di sini.",
+  "copy": "Salin semua",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun TXT",
+  "error": "Penjana UPC tidak dapat dimuatkan. Muat semula halaman untuk mencuba lagi."
+}

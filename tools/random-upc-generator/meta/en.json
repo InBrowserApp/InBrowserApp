@@ -1,0 +1,4 @@
+{
+  "name": "Random UPC Generator",
+  "description": "Generate random 12-digit UPC-A codes with valid check digits for testing. Copy a batch or download a TXT file with leading zeros intact."
+}

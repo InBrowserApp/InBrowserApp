@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Generador de UPC aleatorios",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "Generador de VIN aleatorios",
     slug: "random-vin-generator",
   },

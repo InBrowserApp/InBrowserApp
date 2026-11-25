@@ -1,0 +1,4 @@
+{
+  "name": "Generator voor willekeurige UPC-codes",
+  "description": "Genereer voor tests willekeurige UPC-A-codes van 12 cijfers met geldige controlecijfers. Kopieer een reeks of download een TXT-bestand met behoud van voorloopnullen."
+}

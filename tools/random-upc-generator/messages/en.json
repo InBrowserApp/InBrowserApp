@@ -1,0 +1,12 @@
+{
+  "quantity": "Quantity",
+  "generate": "Generate",
+  "generating": "Generating…",
+  "results": "Generated UPC-A codes",
+  "placeholder": "Generated UPC-A codes will appear here.",
+  "copy": "Copy all",
+  "copied": "Copied",
+  "copyFailed": "Copy failed",
+  "download": "Download TXT",
+  "error": "Could not load the UPC generator. Reload the page to try again."
+}

@@ -1,0 +1,12 @@
+{
+  "quantity": "数量",
+  "generate": "生成",
+  "generating": "生成中…",
+  "results": "生成された UPC-A コード",
+  "placeholder": "生成された UPC-A コードがここに表示されます。",
+  "copy": "すべてコピー",
+  "copied": "コピーしました",
+  "copyFailed": "コピーに失敗しました",
+  "download": "TXT をダウンロード",
+  "error": "UPC ジェネレーターを読み込めませんでした。ページを再読み込みしてお試しください。"
+}

@@ -1,0 +1,12 @@
+{
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "Mã UPC-A đã tạo",
+  "placeholder": "Mã UPC-A được tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Sao chép thất bại",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tải trình tạo mã UPC. Hãy tải lại trang để thử lại."
+}

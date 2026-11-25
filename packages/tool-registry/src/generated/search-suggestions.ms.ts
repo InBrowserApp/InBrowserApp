@@ -1779,6 +1779,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Penjana UPC Rawak",
+    slug: "random-upc-generator",
+  },
+  {
+    category: "random",
     name: "Penjana VIN Rawak",
     slug: "random-vin-generator",
   },

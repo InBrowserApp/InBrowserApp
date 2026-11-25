@@ -1,0 +1,12 @@
+{
+  "quantity": "Adet",
+  "generate": "Oluştur",
+  "generating": "Oluşturuluyor…",
+  "results": "Oluşturulan UPC-A kodları",
+  "placeholder": "Oluşturulan UPC-A kodları burada görünecek.",
+  "copy": "Tümünü kopyala",
+  "copied": "Kopyalandı",
+  "copyFailed": "Kopyalama başarısız",
+  "download": "TXT indir",
+  "error": "UPC oluşturucu yüklenemedi. Tekrar denemek için sayfayı yeniden yükleyin."
+}

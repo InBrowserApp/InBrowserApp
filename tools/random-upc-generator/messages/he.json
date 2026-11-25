@@ -1,0 +1,12 @@
+{
+  "quantity": "כמות",
+  "generate": "יצירה",
+  "generating": "יוצר…",
+  "results": "קודי UPC-A שנוצרו",
+  "placeholder": "קודי UPC-A שנוצרו יופיעו כאן.",
+  "copy": "העתקת הכול",
+  "copied": "הועתק",
+  "copyFailed": "ההעתקה נכשלה",
+  "download": "הורדת TXT",
+  "error": "לא ניתן לטעון את מחולל ה־UPC. יש לטעון את הדף מחדש ולנסות שוב."
+}
