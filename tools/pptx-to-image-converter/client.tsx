@@ -10,7 +10,8 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { FileImage } from "@workspace/ui/icons"
-import { accepted, usePresentation } from "./use-presentation"
+import { accepted } from "./export-slides"
+import { usePresentation } from "./use-presentation"
 import { SlideExport } from "./slide-export"
 import type { Messages } from "./types"
 

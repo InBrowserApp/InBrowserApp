@@ -36,10 +36,13 @@ export function SlideExport({
   const [busy, setBusy] = useState<string | null>(null)
   const [failed, setFailed] = useState(false)
   const current = preview?.slide === slide ? preview : null
-  const first =
-    scope === "current" ? slide : scope === "whole" ? 1 : Number(start)
-  const last =
-    scope === "current" ? slide : scope === "whole" ? total : Number(end)
+  const exporting = busy !== null
+  const [first, last]: [number, number] =
+    scope === "range"
+      ? [Number(start), Number(end)]
+      : scope === "whole"
+        ? [1, total]
+        : [slide, slide]
   const valid =
     Number.isInteger(first) &&
     Number.isInteger(last) &&
@@ -108,7 +111,7 @@ export function SlideExport({
               variant="outline"
               size="icon-sm"
               aria-label={m.previous}
-              disabled={slide <= 1 || Boolean(busy)}
+              disabled={slide <= 1 || exporting}
               onClick={() => setSlide(slide - 1)}
             >
               <ChevronLeft className="rtl:rotate-180" aria-hidden="true" />
@@ -117,7 +120,7 @@ export function SlideExport({
               aria-label={m.page}
               className="h-8 rounded-md border bg-background px-2 text-sm tabular-nums"
               value={slide}
-              disabled={Boolean(busy)}
+              disabled={exporting}
               onChange={(event) => setSlide(Number(event.currentTarget.value))}
             >
               {Array.from({ length: total }, (_, index) => (
@@ -133,7 +136,7 @@ export function SlideExport({
               variant="outline"
               size="icon-sm"
               aria-label={m.next}
-              disabled={slide >= total || Boolean(busy)}
+              disabled={slide >= total || exporting}
               onClick={() => setSlide(slide + 1)}
             >
               <ChevronRight className="rtl:rotate-180" aria-hidden="true" />
@@ -162,7 +165,7 @@ export function SlideExport({
         </div>
       </div>
       <div className="space-y-3 self-start rounded-md border p-3">
-        <fieldset disabled={Boolean(busy)} className="space-y-3">
+        <fieldset disabled={exporting} className="space-y-3">
           <div className="grid grid-cols-2 gap-2">
             <div className="space-y-1">
               <Label htmlFor={id + "-format"}>{m.format}</Label>
@@ -241,14 +244,14 @@ export function SlideExport({
         ) : null}
         <Button
           className="min-h-11 w-full sm:min-h-9"
-          disabled={!valid || Boolean(busy)}
-          aria-busy={Boolean(busy)}
+          disabled={!valid || exporting}
+          aria-busy={exporting}
           onClick={() => void download()}
         >
           <Download data-icon="inline-start" aria-hidden="true" />
           {first === last ? m.download : m.downloadZip}
         </Button>
-        {busy ? (
+        {exporting ? (
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p role="status" className="text-sm text-muted-foreground">
               {busy}

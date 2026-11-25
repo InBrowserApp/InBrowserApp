@@ -71,3 +71,22 @@ it("discards partial ZIP output after cancellation", async () => {
   ).rejects.toMatchObject({ name: "AbortError" })
   expect(convert).toHaveBeenCalledTimes(1)
 })
+
+it("keeps ZIP entries flat when the filename contains a path separator", async () => {
+  const result = await exportSlides(render, {
+    first: 1,
+    last: 2,
+    name: "Sales\\Regional.pptx",
+    format: "png",
+    scale: 1,
+    progress: vi.fn(),
+    signal: new AbortController().signal,
+  })
+  const entries = Object.keys(
+    unzipSync(new Uint8Array(await result.blob.arrayBuffer()))
+  )
+  expect(entries).toHaveLength(2)
+  expect(
+    entries.every((entry) => !entry.includes("/") && !entry.includes("\\"))
+  ).toBe(true)
+})

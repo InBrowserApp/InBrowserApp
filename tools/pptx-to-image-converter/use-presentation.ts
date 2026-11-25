@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import type { loadPresentation as load } from "@tool/pptx-to-pdf-converter/presentation"
-import { formats, type Render } from "./export-slides"
+import { formats, presentationExtension, type Render } from "./export-slides"
 
-export const accepted = ".pptx,.pptm,.ppsx,.ppsm,.potx,.potm"
 type Presentation = Awaited<ReturnType<typeof load>>
 type Ready = { file: File; total: number; render: Render }
 type Failure = {
@@ -14,11 +13,12 @@ export function usePresentation(file: File | null) {
   const [result, setResult] = useState<Ready | Failure | null>(null)
   useEffect(() => {
     if (!file) return
-    if (!file.size || !/\.(pptx|pptm|ppsx|ppsm|potx|potm)$/i.test(file.name)) {
+    if (!file.size || !presentationExtension.test(file.name)) {
       setResult({ file, error: "invalid" })
       return
     }
     const controller = new AbortController()
+    const { signal } = controller
     let source: Presentation | undefined
     const dispose = () => {
       source?.destroy()
@@ -27,19 +27,19 @@ export function usePresentation(file: File | null) {
     void import("@tool/pptx-to-pdf-converter/presentation")
       .then(async ({ loadPresentation, renderSlideImage, failure }) => {
         try {
-          source = await loadPresentation(file, controller.signal)
-          controller.signal.throwIfAborted()
+          source = await loadPresentation(file, signal)
+          signal.throwIfAborted()
           await source.waitUntilLayoutComplete()
-          controller.signal.throwIfAborted()
+          signal.throwIfAborted()
           if (!source.slideCount) throw new Error("Empty presentation")
           const presentation = source
           let queue: Promise<unknown> = Promise.resolve()
-          const render: Render = (slide, format, scale, signal) => {
+          const render: Render = (slide, format, scale, renderSignal) => {
             const operation = queue
               .catch(() => {})
               .then(() => {
+                renderSignal.throwIfAborted()
                 signal.throwIfAborted()
-                controller.signal.throwIfAborted()
                 const width = (presentation.slideWidth / 9525) * scale
                 const height = (presentation.slideHeight / 9525) * scale
                 return renderSlideImage(
@@ -47,7 +47,7 @@ export function usePresentation(file: File | null) {
                   slide - 1,
                   width,
                   height,
-                  signal,
+                  renderSignal,
                   formats[format]
                 )
               })
@@ -57,12 +57,11 @@ export function usePresentation(file: File | null) {
           setResult({ file, total: source.slideCount, render })
         } catch (reason) {
           dispose()
-          if (!controller.signal.aborted)
-            setResult({ file, error: failure(reason).code })
+          if (!signal.aborted) setResult({ file, error: failure(reason).code })
         }
       })
       .catch(() => {
-        if (!controller.signal.aborted) setResult({ file, error: "invalid" })
+        if (!signal.aborted) setResult({ file, error: "invalid" })
       })
     return () => {
       controller.abort()

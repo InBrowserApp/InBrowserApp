@@ -1,5 +1,12 @@
 import { zipSync } from "fflate"
 
+const presentationExtensions = ["pptx", "pptm", "ppsx", "ppsm", "potx", "potm"]
+export const accepted = presentationExtensions.map((ext) => `.${ext}`).join(",")
+export const presentationExtension = new RegExp(
+  `\\.(?:${presentationExtensions.join("|")})$`,
+  "i"
+)
+
 export const formats = {
   png: "image/png",
   jpg: "image/jpeg",
@@ -35,10 +42,14 @@ export async function exportSlides(
   }
 ) {
   const stem =
-    name.replace(/\.(pptx|pptm|ppsx|ppsm|potx|potm)$/i, "") || "slides"
+    name
+      .replace(presentationExtension, "")
+      .replace(/[/\\]+/g, "_")
+      .trim() || "slides"
   const total = last - first + 1
+  const digits = String(last).length
   const filename = (slide: number) =>
-    `${stem}-slide-${String(slide).padStart(String(last).length, "0")}.${format}`
+    `${stem}-slide-${String(slide).padStart(digits, "0")}.${format}`
   if (total === 1) {
     progress(1, 1)
     return {
