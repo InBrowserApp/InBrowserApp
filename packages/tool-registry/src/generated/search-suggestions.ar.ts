@@ -13,7 +13,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "3mf-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "معاين التدوين الموسيقي ABC",
     slug: "abc-notation-previewer",
   },
@@ -1288,27 +1288,27 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "microsoft-word-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "مراقب MIDI",
     slug: "midi-monitor",
   },
   {
-    category: "misc",
+    category: "music",
     name: "محوّل MIDI إلى MusicXML",
     slug: "midi-to-musicxml-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "تحويل MIDI إلى نوتة موسيقية",
     slug: "midi-to-sheet-music",
   },
   {
-    category: "misc",
+    category: "music",
     name: "محوّل MIDI إلى WAV",
     slug: "midi-to-wav-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "تغيير طبقة النغمات وسرعة MIDI",
     slug: "midi-transposer",
   },
@@ -1373,7 +1373,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "musicxml-to-pdf-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "عارض MusicXML",
     slug: "musicxml-viewer",
   },

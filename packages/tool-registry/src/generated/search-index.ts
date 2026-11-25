@@ -267,7 +267,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "abc-notation-previewer",
-    category: "misc",
+    category: "music",
     icon: "list-music",
     tags: [
       "abc",
@@ -399,7 +399,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "abc-notation-to-image-converter",
     category: "image",
-    secondaryCategories: ["misc"],
+    secondaryCategories: ["music"],
     icon: "file-image",
     tags: [
       "abc",
@@ -531,7 +531,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "abc-notation-to-pdf-converter",
     category: "pdf",
-    secondaryCategories: ["misc"],
+    secondaryCategories: ["music"],
     icon: "file-music",
     tags: [
       "abc",
@@ -6879,6 +6879,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "bpm-detector",
     category: "audio",
+    secondaryCategories: ["music"],
     icon: "activity",
     tags: ["audio", "bpm", "tempo", "beat", "rhythm", "music", "song", "dj"],
     locales: {
@@ -32757,7 +32758,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "midi-monitor",
-    category: "misc",
+    category: "music",
     icon: "piano",
     tags: [
       "midi",
@@ -32890,7 +32891,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "midi-to-musicxml-converter",
-    category: "misc",
+    category: "music",
     icon: "arrow-left-right",
     tags: [
       "midi",
@@ -33021,7 +33022,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "midi-to-sheet-music",
-    category: "misc",
+    category: "music",
     secondaryCategories: ["pdf"],
     icon: "piano",
     tags: [
@@ -33154,7 +33155,8 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "midi-to-wav-converter",
-    category: "misc",
+    category: "music",
+    secondaryCategories: ["audio"],
     icon: "audio-lines",
     tags: [
       "midi",
@@ -33285,7 +33287,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "midi-transposer",
-    category: "misc",
+    category: "music",
     icon: "piano",
     tags: [
       "midi",
@@ -34700,7 +34702,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "musicxml-to-image-converter",
     category: "image",
-    secondaryCategories: ["misc"],
+    secondaryCategories: ["music"],
     icon: "file-image",
     tags: [
       "musicxml",
@@ -34832,7 +34834,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "musicxml-to-pdf-converter",
     category: "pdf",
-    secondaryCategories: ["misc"],
+    secondaryCategories: ["music"],
     icon: "file-music",
     tags: [
       "musicxml",
@@ -34963,7 +34965,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "musicxml-viewer",
-    category: "misc",
+    category: "music",
     icon: "file-music",
     tags: [
       "musicxml",

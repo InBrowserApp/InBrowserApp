@@ -13,7 +13,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "3mf-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "Voorvertoner voor ABC-notatie",
     slug: "abc-notation-previewer",
   },
@@ -1288,27 +1288,27 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "microsoft-word-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI-monitor",
     slug: "midi-monitor",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI-naar-MusicXML-converter",
     slug: "midi-to-musicxml-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI naar bladmuziek",
     slug: "midi-to-sheet-music",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI-naar-WAV-converter",
     slug: "midi-to-wav-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI transponeren en tempo aanpassen",
     slug: "midi-transposer",
   },
@@ -1373,7 +1373,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "musicxml-to-pdf-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MusicXML-viewer",
     slug: "musicxml-viewer",
   },

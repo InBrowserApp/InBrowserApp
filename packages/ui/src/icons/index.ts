@@ -90,6 +90,7 @@ export {
   ListMusic,
   Mic,
   Mouse,
+  Music,
   Map,
   Magnet,
   Mail,

@@ -13,7 +13,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "3mf-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "ABC 기보법 미리보기",
     slug: "abc-notation-previewer",
   },
@@ -1288,27 +1288,27 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "microsoft-word-viewer",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI 모니터",
     slug: "midi-monitor",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI를 MusicXML로 변환",
     slug: "midi-to-musicxml-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI를 악보로 변환",
     slug: "midi-to-sheet-music",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI를 WAV로 변환",
     slug: "midi-to-wav-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MIDI 조옮김 및 템포 변경",
     slug: "midi-transposer",
   },
@@ -1373,7 +1373,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "musicxml-to-pdf-converter",
   },
   {
-    category: "misc",
+    category: "music",
     name: "MusicXML 뷰어",
     slug: "musicxml-viewer",
   },

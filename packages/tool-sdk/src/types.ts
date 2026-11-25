@@ -26,6 +26,7 @@ type ToolCategory =
   | "ipfs"
   | "json"
   | "misc"
+  | "music"
   | "network"
   | "pdf"
   | "random"
