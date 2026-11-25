@@ -13,3 +13,4 @@ Puoi aprire l’OBJ anche se mancano alcuni file associati. Le superfici interes
 Per una mesh triangolare esportata per la stampa 3D, usa il [Visualizzatore STL](../stl-viewer/). Se hai la parte o l’assieme CAD originale in un file `.step` o `.stp`, usa il [Visualizzatore STEP](../step-viewer/).
 
 - [Visualizzatore GLB / glTF](../gltf-viewer/)
+- [Convertitore da OBJ a STL](../obj-to-stl-converter/)

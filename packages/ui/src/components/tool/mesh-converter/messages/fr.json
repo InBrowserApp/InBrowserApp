@@ -1,0 +1,10 @@
+{
+  "open": "Ouvrir un fichier",
+  "drop": "Déposez un fichier de modèle ici",
+  "example": "Essayer un exemple",
+  "privacy": "Votre fichier reste sur votre appareil.",
+  "converting": "Conversion du modèle…",
+  "failed": "Impossible de convertir ce modèle. Choisissez un fichier valide contenant des faces de maillage.",
+  "output": "Fichier converti",
+  "download": "Télécharger le {format}"
+}

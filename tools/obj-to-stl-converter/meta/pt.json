@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de OBJ para STL",
+  "description": "Converta uma malha Wavefront OBJ em um arquivo STL binário no navegador. Abra o resultado em um fatiador ou visualizador de STL."
+}

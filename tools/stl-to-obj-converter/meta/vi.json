@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi STL sang OBJ",
+  "description": "Chuyển tệp STL dạng ASCII hoặc nhị phân sang Wavefront OBJ trong trình duyệt. Tải lưới tam giác của mô hình xuống dưới dạng tệp OBJ."
+}

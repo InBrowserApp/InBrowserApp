@@ -1,0 +1,10 @@
+{
+  "open": "Abrir arquivo",
+  "drop": "Solte aqui um arquivo de modelo",
+  "example": "Experimentar um exemplo",
+  "privacy": "Seu arquivo fica neste dispositivo.",
+  "converting": "Convertendo o modelo…",
+  "failed": "Não foi possível converter o modelo. Escolha um arquivo válido que contenha faces de malha.",
+  "output": "Arquivo convertido",
+  "download": "Baixar {format}"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "STL to OBJ Converter",
+  "description": "Convert ASCII or binary STL to Wavefront OBJ in your browser. Download the model’s triangular mesh as an OBJ file."
+}

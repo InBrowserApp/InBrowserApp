@@ -1,0 +1,10 @@
+{
+  "open": "Abrir archivo",
+  "drop": "Suelta aquí un archivo de modelo",
+  "example": "Probar un ejemplo",
+  "privacy": "El archivo permanece en tu dispositivo.",
+  "converting": "Convirtiendo el modelo…",
+  "failed": "No se pudo convertir el modelo. Elige un archivo válido que contenga caras de malla.",
+  "output": "Archivo convertido",
+  "download": "Descargar {format}"
+}

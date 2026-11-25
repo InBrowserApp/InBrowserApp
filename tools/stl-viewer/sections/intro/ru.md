@@ -15,3 +15,4 @@ STL описывает поверхность детали треугольни�
 - [Просмотр GLB / glTF](../gltf-viewer/)
 
 - [Просмотр 3MF](../3mf-viewer/)
+- [Конвертер STL в OBJ](../stl-to-obj-converter/)

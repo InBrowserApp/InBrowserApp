@@ -1,0 +1,10 @@
+{
+  "open": "Dosya aç",
+  "drop": "Model dosyasını buraya bırakın",
+  "example": "Örnek dene",
+  "privacy": "Dosyanız cihazınızda kalır.",
+  "converting": "Model dönüştürülüyor…",
+  "failed": "Model dönüştürülemedi. Ağ yüzleri içeren geçerli bir dosya seçin.",
+  "output": "Dönüştürülen dosya",
+  "download": "{format} indir"
+}

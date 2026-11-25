@@ -13,3 +13,4 @@ Een OBJ-bestand opent ook als de bijbehorende bestanden ontbreken. De betrokken 
 Gebruik de [STL-viewer](../stl-viewer/) voor een driehoeksnet dat voor 3D-printen is geëxporteerd. Heb je het oorspronkelijke CAD-onderdeel of de samenstelling als `.step`- of `.stp`-bestand, open het dan in de [STEP-viewer](../step-viewer/).
 
 - [GLB- en glTF-viewer](../gltf-viewer/)
+- [OBJ naar STL-converter](../obj-to-stl-converter/)

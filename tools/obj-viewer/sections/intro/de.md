@@ -13,3 +13,4 @@ Eine OBJ-Datei öffnet sich auch ohne Begleitdateien. Die betroffenen Flächen e
 Für ein Dreiecksnetz, das für den 3D-Druck exportiert wurde, nutze den [STL-Betrachter](../stl-viewer/). Wenn das ursprüngliche CAD-Bauteil oder die Baugruppe als `.step`- oder `.stp`-Datei vorliegt, öffne sie im [STEP-Betrachter](../step-viewer/).
 
 - [GLB- und glTF-Betrachter](../gltf-viewer/)
+- [OBJ-zu-STL-Konverter](../obj-to-stl-converter/)

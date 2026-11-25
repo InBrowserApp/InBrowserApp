@@ -1,0 +1,4 @@
+{
+  "name": "STL → OBJ 変換",
+  "description": "ASCII またはバイナリ形式の STL をブラウザーで Wavefront OBJ に変換し、モデルの三角形メッシュを OBJ ファイルとしてダウンロードできます。"
+}

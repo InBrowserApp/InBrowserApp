@@ -8,7 +8,9 @@
     "./obj": "./src/obj.ts",
     "./dispose": "./src/dispose.ts",
     "./gltf": "./src/gltf.ts",
-    "./three-mf": "./src/three-mf.ts"
+    "./three-mf": "./src/three-mf.ts",
+    "./convert": "./src/convert.ts",
+    "./mesh-file": "./src/mesh-file.ts"
   },
   "dependencies": {
     "three": "catalog:",

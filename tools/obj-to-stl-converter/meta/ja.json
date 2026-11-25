@@ -1,0 +1,4 @@
+{
+  "name": "OBJ → STL 変換",
+  "description": "Wavefront OBJ メッシュをブラウザーでバイナリ STL ファイルに変換し、スライサーや STL ビューアーで開けます。"
+}

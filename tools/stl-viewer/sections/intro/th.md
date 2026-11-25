@@ -15,3 +15,4 @@ STL ใช้สามเหลี่ยมอธิบายพื้นผิ�
 - [โปรแกรมดู GLB / glTF](../gltf-viewer/)
 
 - [โปรแกรมดู 3MF](../3mf-viewer/)
+- [โปรแกรมแปลง STL เป็น OBJ](../stl-to-obj-converter/)

@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur OBJ en STL",
+  "description": "Convertissez un maillage Wavefront OBJ en fichier STL binaire dans votre navigateur. Ouvrez le résultat dans un logiciel de tranchage ou une visionneuse STL."
+}

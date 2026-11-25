@@ -1,0 +1,4 @@
+{
+  "name": "OBJ → STL 변환기",
+  "description": "브라우저에서 Wavefront OBJ 메시를 바이너리 STL 파일로 변환하여 슬라이서나 STL 뷰어에서 여세요."
+}

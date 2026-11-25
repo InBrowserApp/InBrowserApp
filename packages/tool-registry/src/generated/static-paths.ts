@@ -23646,6 +23646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "obj-to-stl-converter",
+    language: "ar",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "de",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "en",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "es",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "fr",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "he",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "hi",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "id",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "it",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ja",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ko",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ms",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "nl",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "no",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "pl",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "pt",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "ru",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "sv",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "th",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "tr",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "vi",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "obj-to-stl-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "obj-viewer",
     language: "ar",
   },
@@ -31739,6 +31831,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "stereo-channel-splitter",
+    language: "zh-TW",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ar",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "de",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "en",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "es",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "fr",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "he",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "hi",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "id",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "it",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ja",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ko",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ms",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "nl",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "no",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "pl",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "pt",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "ru",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "sv",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "th",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "tr",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "vi",
+  },
+  {
+    slug: "stl-to-obj-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "stl-to-obj-converter",
     language: "zh-TW",
   },
   {

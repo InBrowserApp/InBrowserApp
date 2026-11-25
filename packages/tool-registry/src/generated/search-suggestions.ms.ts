@@ -1289,6 +1289,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Penukar OBJ kepada STL",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "Pemapar OBJ",
     slug: "obj-viewer",
   },
@@ -1726,6 +1731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Pemisah Saluran Audio Stereo",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "Penukar STL kepada OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

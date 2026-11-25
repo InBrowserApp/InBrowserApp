@@ -1,0 +1,4 @@
+{
+  "name": "STL-zu-OBJ-Konverter",
+  "description": "Wandle ASCII- oder binäre STL-Dateien im Browser in Wavefront OBJ um. Lade das Dreiecksnetz des Modells als OBJ-Datei herunter."
+}

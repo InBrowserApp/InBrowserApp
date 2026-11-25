@@ -15,3 +15,4 @@ STL beschrijft het oppervlak van een onderdeel met driehoeken. Gebruik de [OBJ-v
 - [GLB- en glTF-viewer](../gltf-viewer/)
 
 - [3MF-viewer](../3mf-viewer/)
+- [STL naar OBJ-converter](../stl-to-obj-converter/)

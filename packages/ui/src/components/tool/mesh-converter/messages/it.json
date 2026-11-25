@@ -1,0 +1,10 @@
+{
+  "open": "Apri file",
+  "drop": "Trascina qui un file di modello",
+  "example": "Prova un esempio",
+  "privacy": "Il file resta sul tuo dispositivo.",
+  "converting": "Conversione del modello…",
+  "failed": "Impossibile convertire il modello. Scegli un file valido che contenga facce della mesh.",
+  "output": "File convertito",
+  "download": "Scarica {format}"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "OBJ 转 STL 转换器",
+  "description": "在浏览器中将 Wavefront OBJ 网格转换为二进制 STL 文件，以便在切片软件或 STL 查看器中打开。"
+}

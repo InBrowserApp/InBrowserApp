@@ -1,0 +1,10 @@
+{
+  "open": "Buka file",
+  "drop": "Letakkan file model di sini",
+  "example": "Coba contoh",
+  "privacy": "File tetap di perangkat Anda.",
+  "converting": "Mengonversi model…",
+  "failed": "Model ini tidak dapat dikonversi. Pilih file yang valid dan memuat bidang mesh.",
+  "output": "File hasil konversi",
+  "download": "Unduh {format}"
+}

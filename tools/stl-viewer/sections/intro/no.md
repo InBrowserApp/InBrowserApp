@@ -15,3 +15,4 @@ STL beskriver overflaten til en del med trekanter. Bruk [OBJ-viseren](../obj-vie
 - [GLB- og glTF-viser](../gltf-viewer/)
 
 - [3MF-viser](../3mf-viewer/)
+- [STL til OBJ-konverterer](../stl-to-obj-converter/)

@@ -1289,6 +1289,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "OBJ से STL कन्वर्टर",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "OBJ व्यूअर",
     slug: "obj-viewer",
   },
@@ -1726,6 +1731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "स्टीरियो चैनल अलग करें",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL से OBJ कन्वर्टर",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

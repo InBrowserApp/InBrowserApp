@@ -1289,6 +1289,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "โปรแกรมแปลง OBJ เป็น STL",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "โปรแกรมดู OBJ",
     slug: "obj-viewer",
   },
@@ -1726,6 +1731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "เครื่องมือแยกช่องเสียงสเตอริโอ",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "โปรแกรมแปลง STL เป็น OBJ",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",

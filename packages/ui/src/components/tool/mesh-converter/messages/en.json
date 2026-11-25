@@ -1,0 +1,10 @@
+{
+  "open": "Open file",
+  "drop": "Drop a model file here",
+  "example": "Try an example",
+  "privacy": "Your file stays on this device.",
+  "converting": "Converting model…",
+  "failed": "Could not convert this model. Choose a valid file containing mesh faces.",
+  "output": "Converted file",
+  "download": "Download {format}"
+}

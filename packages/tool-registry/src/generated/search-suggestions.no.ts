@@ -1289,6 +1289,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "OBJ til STL-konverterer",
+    slug: "obj-to-stl-converter",
+  },
+  {
+    category: "image",
     name: "OBJ-viser",
     slug: "obj-viewer",
   },
@@ -1726,6 +1731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "audio",
     name: "Del stereolyd i to monofiler",
     slug: "stereo-channel-splitter",
+  },
+  {
+    category: "image",
+    name: "STL til OBJ-konverterer",
+    slug: "stl-to-obj-converter",
   },
   {
     category: "image",
