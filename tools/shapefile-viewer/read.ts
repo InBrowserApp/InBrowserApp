@@ -29,9 +29,13 @@ function expandArchive({ bytes }: Input): Input[] {
   }))
 }
 
-function companion(entries: ReadonlyMap<string, ArrayBuffer>, name: string) {
+function companion(
+  entries: ReadonlyMap<string, ArrayBuffer>,
+  name: string,
+  allowFolded: boolean
+) {
   const exact = entries.get(name)
-  if (exact) return exact
+  if (exact || !allowFolded) return exact
   const folded = name.toLowerCase()
   let match: ArrayBuffer | undefined
   for (const [key, bytes] of entries) {
@@ -45,13 +49,21 @@ function companion(entries: ReadonlyMap<string, ArrayBuffer>, name: string) {
 const legacyEncoding = new TextEncoder().encode("windows-1252").buffer
 const emptyEncoding = new ArrayBuffer(0)
 
-function calendarDate(value: Date) {
-  if (!Number.isFinite(value.getTime())) return null
-  return [
-    String(value.getFullYear()).padStart(4, "0"),
-    String(value.getMonth() + 1).padStart(2, "0"),
-    String(value.getDate()).padStart(2, "0"),
-  ].join("-")
+function dateOffsets(view: DataView, headerLength: number) {
+  const dates: number[] = []
+  let offset = 1
+  for (let column = 32; column + 32 < headerLength; column += 32) {
+    const width = view.getUint8(column + 16)
+    if (view.getUint8(column + 11) === 68) dates.push(offset)
+    offset += width
+  }
+  return dates
+}
+
+function calendarDate(bytes: ArrayBuffer, offset: number) {
+  const text = decoder.decode(new Uint8Array(bytes, offset, 8))
+  if (!/^\d{8}$/.test(text) || text === "00000000") return null
+  return `${text.slice(0, 4)}-${text.slice(4, 6)}-${text.slice(6, 8)}`
 }
 
 function readAttributes(
@@ -72,25 +84,33 @@ function readAttributes(
   const codePage =
     encoding ?? (view.getUint8(29) === 0x57 ? legacyEncoding : emptyEncoding)
   const attributes = parseDbf(bytes, codePage)
-  return attributes.map((properties, index) => ({
-    deleted: view.getUint8(start + index * stride) === 0x2a,
-    properties: Object.fromEntries(
-      Object.entries(properties ?? {}).map(([key, value]) => [
-        key,
-        value instanceof Date ? calendarDate(value) : value,
-      ])
-    ) as GeoJsonProperties,
-  }))
+  const dates = dateOffsets(view, start)
+  return attributes.map((properties, index) => {
+    const row = start + index * stride
+    let dateIndex = 0
+    return {
+      deleted: view.getUint8(row) === 0x2a,
+      properties: Object.fromEntries(
+        Object.entries(properties ?? {}).map(([key, value]) => [
+          key,
+          value instanceof Date
+            ? calendarDate(bytes, row + dates[dateIndex++]!)
+            : value,
+        ])
+      ) as GeoJsonProperties,
+    }
+  })
 }
 
 function readLayer(
   shape: Input,
-  entries: ReadonlyMap<string, ArrayBuffer>
+  entries: ReadonlyMap<string, ArrayBuffer>,
+  allowFolded: boolean
 ): Layer {
   const name = shape.name.slice(0, -4)
-  const prj = companion(entries, `${name}.prj`)
-  const dbf = companion(entries, `${name}.dbf`)
-  const cpg = companion(entries, `${name}.cpg`)
+  const prj = companion(entries, `${name}.prj`, allowFolded)
+  const dbf = companion(entries, `${name}.dbf`, allowFolded)
+  const cpg = companion(entries, `${name}.cpg`, allowFolded)
   const projection = decoder.decode(prj).trim()
   const header = new DataView(shape.bytes)
   if (shape.bytes.byteLength < 100 || header.getInt32(0) !== 9994)
@@ -157,9 +177,15 @@ export function readShapefiles(inputs: readonly Input[]): Layer[] {
         bytes,
       ])
     )
-    return files
-      .filter(({ name }) => /\.shp$/i.test(name))
-      .map((shape) => readLayer(shape, entries))
+    const shapes = files.filter(({ name }) => /\.shp$/i.test(name))
+    const count = new Map<string, number>()
+    for (const { name } of shapes) {
+      const key = name.toLowerCase()
+      count.set(key, (count.get(key) ?? 0) + 1)
+    }
+    return shapes.map((shape) =>
+      readLayer(shape, entries, count.get(shape.name.toLowerCase()) === 1)
+    )
   })
   if (!layers.length) throw new Error("No Shapefile geometry found")
   return layers

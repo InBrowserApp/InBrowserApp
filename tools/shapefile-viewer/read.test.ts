@@ -89,7 +89,7 @@ test("keeps DBF calendar dates and default Western text, skipping deleted slots"
     },
   ])
   expect(deleted).toMatchObject({
-    features: [{ properties: { name: "Bern", id: 2 } }],
+    features: [{ properties: { name: "Bern", id: 2, survey_dat: null } }],
   })
   expect(legacy).toMatchObject({
     features: [{ properties: { name: "Région", survey_dat: "2020-01-02" } }],
@@ -106,4 +106,15 @@ test("rejects a truncated DBF before reading its claimed records", () => {
       { name: "piers.dbf", bytes },
     ])
   ).toThrow("Invalid DBF record span")
+})
+
+test("leaves attributes empty when only a case-distinct layer has a DBF", () => {
+  const files = Object.entries(
+    unzipSync(archive("fixtures/case-collision.zip"))
+  )
+    .filter(([name]) => name !== "Sites.dbf")
+    .map(([name, bytes]) => ({ name, bytes: bytes.buffer }))
+  const [upper, lower] = readShapefiles(files)
+  expect(upper?.features[0]?.properties).toBeNull()
+  expect(lower?.features[0]?.properties?.id).toBe(2)
 })
