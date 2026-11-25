@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Bercakap untuk melihat aras input. Gunakan fon kepala semasa mendengar secara langsung untuk mengelakkan bunyi berdesing.",
+  "inputLevel": "Aras input",
+  "start": "Aktifkan mikrofon",
+  "starting": "Menunggu akses mikrofon…",
+  "stop": "Matikan mikrofon",
+  "monitor": "Dengar bunyi mikrofon",
+  "micError": "Mikrofon tidak dapat diakses. Semak kebenaran dalam pelayar dan peranti input, kemudian cuba lagi.",
+  "speakers": "Output stereo",
+  "speakersHint": "Mainkan nada pendek pada satu atau kedua-dua saluran. Perhatikan dari pembesar suara atau telinga sebelah mana nada itu kedengaran.",
+  "left": "Kiri",
+  "both": "Kedua-duanya",
+  "right": "Kanan",
+  "speakerError": "Nada ujian tidak dapat dimainkan. Semak peranti output audio, kemudian cuba lagi."
+}

@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Bicaralah untuk melihat level input. Gunakan headphone saat mendengarkan langsung agar tidak timbul bunyi mendenging.",
+  "inputLevel": "Level input",
+  "start": "Aktifkan mikrofon",
+  "starting": "Menunggu akses mikrofon…",
+  "stop": "Nonaktifkan mikrofon",
+  "monitor": "Dengarkan suara mikrofon",
+  "micError": "Mikrofon tidak dapat diakses. Periksa izin browser dan perangkat input, lalu coba lagi.",
+  "speakers": "Output stereo",
+  "speakersHint": "Putar nada pendek di salah satu kanal atau keduanya. Perhatikan dari speaker atau telinga mana nada terdengar.",
+  "left": "Kiri",
+  "both": "Keduanya",
+  "right": "Kanan",
+  "speakerError": "Nada uji tidak dapat diputar. Periksa perangkat output audio, lalu coba lagi."
+}

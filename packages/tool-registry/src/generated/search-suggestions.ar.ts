@@ -1193,6 +1193,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mhtml-viewer",
   },
   {
+    category: "audio",
+    name: "اختبار الميكروفون ومكبرات الصوت",
+    slug: "microphone-test",
+  },
+  {
     category: "misc",
     name: "مراقب MIDI",
     slug: "midi-monitor",

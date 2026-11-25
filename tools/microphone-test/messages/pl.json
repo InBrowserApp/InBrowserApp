@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Mów, aby zobaczyć poziom sygnału. Do odsłuchu na żywo użyj słuchawek, aby uniknąć sprzężenia.",
+  "inputLevel": "Poziom wejściowy",
+  "start": "Włącz mikrofon",
+  "starting": "Oczekiwanie na mikrofon…",
+  "stop": "Wyłącz mikrofon",
+  "monitor": "Odsłuch na żywo",
+  "micError": "Nie można uzyskać dostępu do mikrofonu. Sprawdź uprawnienia przeglądarki i wybrany mikrofon, a następnie spróbuj ponownie.",
+  "speakers": "Wyjście stereo",
+  "speakersHint": "Odtwórz krótki dźwięk w jednym lub obu kanałach. Sprawdź, z której strony go słyszysz.",
+  "left": "Lewy",
+  "both": "Oba",
+  "right": "Prawy",
+  "speakerError": "Nie udało się odtworzyć dźwięku testowego. Sprawdź wyjście audio i spróbuj ponownie."
+}

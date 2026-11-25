@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Prata för att se ingångsnivån. Använd hörlurar när du lyssnar på dig själv för att undvika rundgång.",
+  "inputLevel": "Ingångsnivå",
+  "start": "Starta mikrofonen",
+  "starting": "Väntar på mikrofonen…",
+  "stop": "Stäng av mikrofonen",
+  "monitor": "Lyssna på min mikrofon",
+  "micError": "Det gick inte att starta mikrofonen. Kontrollera webbläsarens behörigheter och vilken mikrofon som är vald och försök igen.",
+  "speakers": "Stereoutgång",
+  "speakersHint": "Spela upp en kort ton i en eller båda kanalerna. Kontrollera i vilken högtalare eller vilket öra du hör den.",
+  "left": "Vänster",
+  "both": "Båda",
+  "right": "Höger",
+  "speakerError": "Det gick inte att spela upp testtonen. Kontrollera ljudutgången och försök igen."
+}

@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Giriş seviyesini görmek için konuşun. Akustik geri beslemeyi önlemek için canlı dinlemede kulaklık kullanın.",
+  "inputLevel": "Giriş seviyesi",
+  "start": "Mikrofonu aç",
+  "starting": "Mikrofon bekleniyor…",
+  "stop": "Mikrofonu kapat",
+  "monitor": "Mikrofonu canlı dinle",
+  "micError": "Mikrofon açılamadı. Tarayıcı izinlerini ve seçili mikrofonu kontrol edip tekrar deneyin.",
+  "speakers": "Stereo çıkış",
+  "speakersHint": "Bir kanalda veya her iki kanalda kısa bir ses çalın. Sesi hangi taraftan duyduğunuzu kontrol edin.",
+  "left": "Sol",
+  "both": "İkisi de",
+  "right": "Sağ",
+  "speakerError": "Test sesi çalınamadı. Ses çıkışınızı kontrol edip tekrar deneyin."
+}

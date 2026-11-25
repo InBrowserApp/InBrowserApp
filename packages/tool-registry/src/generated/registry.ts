@@ -30268,6 +30268,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "microphone-test",
+    category: "audio",
+    icon: "audio-lines",
+    tags: [
+      "audio",
+      "microphone",
+      "speaker",
+      "headphone",
+      "stereo",
+      "sound",
+      "test",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار الميكروفون ومكبرات الصوت",
+        description:
+          "اختبر الميكروفون عبر الإنترنت، واستمع إلى صوتك مباشرة، وتحقق من القناتين اليمنى واليسرى في مكبرات الصوت أو سماعات الرأس.",
+      },
+      de: {
+        name: "Mikrofon- und Lautsprechertest",
+        description:
+          "Teste dein Mikrofon online, höre deine Stimme live und prüfe den linken und rechten Kanal deiner Lautsprecher oder Kopfhörer.",
+      },
+      en: {
+        name: "Microphone & Speaker Test",
+        description:
+          "Test your microphone online, hear yourself in real time, and check the left and right channels of your speakers or headphones.",
+      },
+      es: {
+        name: "Prueba de micrófono y altavoces",
+        description:
+          "Prueba tu micrófono en línea, escúchate en tiempo real y comprueba los canales izquierdo y derecho de tus altavoces o auriculares.",
+      },
+      fr: {
+        name: "Test de microphone et de haut-parleurs",
+        description:
+          "Testez votre microphone en ligne, écoutez votre voix en direct et vérifiez les canaux gauche et droit de votre casque ou de vos haut-parleurs.",
+      },
+      he: {
+        name: "בדיקת מיקרופון ורמקולים",
+        description:
+          "בדקו את המיקרופון בדפדפן, האזינו לעצמכם בזמן אמת ובדקו את ערוצי השמע השמאלי והימני ברמקולים או באוזניות.",
+      },
+      hi: {
+        name: "माइक्रोफ़ोन और स्पीकर टेस्ट",
+        description:
+          "अपना माइक्रोफ़ोन ऑनलाइन जाँचें, अपनी आवाज़ तुरंत सुनें और स्पीकर या हेडफ़ोन के बाएँ और दाएँ चैनल जाँचें।",
+      },
+      id: {
+        name: "Tes Mikrofon dan Speaker",
+        description:
+          "Uji mikrofon secara online, dengarkan suara Anda secara langsung, dan periksa kanal kiri serta kanan pada speaker atau headphone.",
+      },
+      it: {
+        name: "Test microfono e altoparlanti",
+        description:
+          "Prova il microfono online, ascolta la tua voce in tempo reale e verifica i canali sinistro e destro di altoparlanti o cuffie.",
+      },
+      ja: {
+        name: "マイクとスピーカーのテスト",
+        description:
+          "マイクをオンラインでテストし、自分の声をリアルタイムで確認できます。スピーカーやヘッドホンの左右の音声チャンネルもチェックできます。",
+      },
+      ko: {
+        name: "마이크 및 스피커 테스트",
+        description:
+          "온라인으로 마이크를 테스트하고, 내 목소리를 실시간으로 들으며, 스피커나 헤드폰의 좌우 채널을 확인하세요.",
+      },
+      ms: {
+        name: "Ujian Mikrofon dan Pembesar Suara",
+        description:
+          "Uji mikrofon dalam talian, dengar suara anda secara langsung dan semak saluran kiri dan kanan pembesar suara atau fon kepala.",
+      },
+      nl: {
+        name: "Microfoon- en luidsprekertest",
+        description:
+          "Test je microfoon online, hoor jezelf live en controleer het linker- en rechterkanaal van je luidsprekers of koptelefoon.",
+      },
+      no: {
+        name: "Mikrofon- og høyttalertest",
+        description:
+          "Test mikrofonen på nett, hør deg selv i sanntid og sjekk venstre og høyre kanal på høyttalerne eller hodetelefonene.",
+      },
+      pl: {
+        name: "Test mikrofonu i głośników",
+        description:
+          "Przetestuj mikrofon online, posłuchaj swojego głosu na żywo i sprawdź lewy oraz prawy kanał w głośnikach lub słuchawkach.",
+      },
+      pt: {
+        name: "Teste de microfone e altifalantes",
+        description:
+          "Teste o microfone online, ouça a sua voz em tempo real e verifique os canais esquerdo e direito dos altifalantes ou auscultadores.",
+      },
+      ru: {
+        name: "Проверка микрофона и динамиков",
+        description:
+          "Проверьте микрофон онлайн, послушайте свой голос в реальном времени и протестируйте левый и правый каналы динамиков или наушников.",
+      },
+      sv: {
+        name: "Mikrofon- och högtalartest",
+        description:
+          "Testa mikrofonen online, hör dig själv i realtid och kontrollera vänster och höger kanal i högtalarna eller hörlurarna.",
+      },
+      th: {
+        name: "ทดสอบไมโครโฟนและลำโพง",
+        description:
+          "ทดสอบไมโครโฟนออนไลน์ ฟังเสียงตัวเองแบบเรียลไทม์ และตรวจสอบช่องเสียงซ้ายและขวาของลำโพงหรือหูฟัง",
+      },
+      tr: {
+        name: "Mikrofon ve Hoparlör Testi",
+        description:
+          "Mikrofonunuzu çevrimiçi test edin, sesinizi anlık olarak dinleyin ve hoparlörünüzün veya kulaklığınızın sol ve sağ kanallarını kontrol edin.",
+      },
+      vi: {
+        name: "Kiểm tra micro và loa",
+        description:
+          "Kiểm tra micro trực tuyến, nghe giọng mình theo thời gian thực và thử kênh trái, phải của loa hoặc tai nghe.",
+      },
+      "zh-CN": {
+        name: "麦克风与扬声器测试",
+        description:
+          "在线测试麦克风，实时监听自己的声音，并检查扬声器或耳机的左右声道。",
+      },
+      "zh-TW": {
+        name: "麥克風與喇叭測試",
+        description:
+          "在線上測試麥克風、即時聽見自己的聲音，並檢查喇叭或耳機的左右聲道。",
+      },
+    },
+  },
+  {
     slug: "midi-monitor",
     category: "misc",
     icon: "piano",
@@ -83275,6 +83406,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MHTML 檢視器",
         description:
           "在本機閱讀 MHTML 與 MHT 網頁封存檔，支援封存的圖片、樣式及文件導覽，且不會向網站請求資源。",
+      },
+    },
+  },
+  "microphone-test": {
+    slug: "microphone-test",
+    category: "audio",
+    icon: "audio-lines",
+    tags: [
+      "audio",
+      "microphone",
+      "speaker",
+      "headphone",
+      "stereo",
+      "sound",
+      "test",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار الميكروفون ومكبرات الصوت",
+        description:
+          "اختبر الميكروفون عبر الإنترنت، واستمع إلى صوتك مباشرة، وتحقق من القناتين اليمنى واليسرى في مكبرات الصوت أو سماعات الرأس.",
+      },
+      de: {
+        name: "Mikrofon- und Lautsprechertest",
+        description:
+          "Teste dein Mikrofon online, höre deine Stimme live und prüfe den linken und rechten Kanal deiner Lautsprecher oder Kopfhörer.",
+      },
+      en: {
+        name: "Microphone & Speaker Test",
+        description:
+          "Test your microphone online, hear yourself in real time, and check the left and right channels of your speakers or headphones.",
+      },
+      es: {
+        name: "Prueba de micrófono y altavoces",
+        description:
+          "Prueba tu micrófono en línea, escúchate en tiempo real y comprueba los canales izquierdo y derecho de tus altavoces o auriculares.",
+      },
+      fr: {
+        name: "Test de microphone et de haut-parleurs",
+        description:
+          "Testez votre microphone en ligne, écoutez votre voix en direct et vérifiez les canaux gauche et droit de votre casque ou de vos haut-parleurs.",
+      },
+      he: {
+        name: "בדיקת מיקרופון ורמקולים",
+        description:
+          "בדקו את המיקרופון בדפדפן, האזינו לעצמכם בזמן אמת ובדקו את ערוצי השמע השמאלי והימני ברמקולים או באוזניות.",
+      },
+      hi: {
+        name: "माइक्रोफ़ोन और स्पीकर टेस्ट",
+        description:
+          "अपना माइक्रोफ़ोन ऑनलाइन जाँचें, अपनी आवाज़ तुरंत सुनें और स्पीकर या हेडफ़ोन के बाएँ और दाएँ चैनल जाँचें।",
+      },
+      id: {
+        name: "Tes Mikrofon dan Speaker",
+        description:
+          "Uji mikrofon secara online, dengarkan suara Anda secara langsung, dan periksa kanal kiri serta kanan pada speaker atau headphone.",
+      },
+      it: {
+        name: "Test microfono e altoparlanti",
+        description:
+          "Prova il microfono online, ascolta la tua voce in tempo reale e verifica i canali sinistro e destro di altoparlanti o cuffie.",
+      },
+      ja: {
+        name: "マイクとスピーカーのテスト",
+        description:
+          "マイクをオンラインでテストし、自分の声をリアルタイムで確認できます。スピーカーやヘッドホンの左右の音声チャンネルもチェックできます。",
+      },
+      ko: {
+        name: "마이크 및 스피커 테스트",
+        description:
+          "온라인으로 마이크를 테스트하고, 내 목소리를 실시간으로 들으며, 스피커나 헤드폰의 좌우 채널을 확인하세요.",
+      },
+      ms: {
+        name: "Ujian Mikrofon dan Pembesar Suara",
+        description:
+          "Uji mikrofon dalam talian, dengar suara anda secara langsung dan semak saluran kiri dan kanan pembesar suara atau fon kepala.",
+      },
+      nl: {
+        name: "Microfoon- en luidsprekertest",
+        description:
+          "Test je microfoon online, hoor jezelf live en controleer het linker- en rechterkanaal van je luidsprekers of koptelefoon.",
+      },
+      no: {
+        name: "Mikrofon- og høyttalertest",
+        description:
+          "Test mikrofonen på nett, hør deg selv i sanntid og sjekk venstre og høyre kanal på høyttalerne eller hodetelefonene.",
+      },
+      pl: {
+        name: "Test mikrofonu i głośników",
+        description:
+          "Przetestuj mikrofon online, posłuchaj swojego głosu na żywo i sprawdź lewy oraz prawy kanał w głośnikach lub słuchawkach.",
+      },
+      pt: {
+        name: "Teste de microfone e altifalantes",
+        description:
+          "Teste o microfone online, ouça a sua voz em tempo real e verifique os canais esquerdo e direito dos altifalantes ou auscultadores.",
+      },
+      ru: {
+        name: "Проверка микрофона и динамиков",
+        description:
+          "Проверьте микрофон онлайн, послушайте свой голос в реальном времени и протестируйте левый и правый каналы динамиков или наушников.",
+      },
+      sv: {
+        name: "Mikrofon- och högtalartest",
+        description:
+          "Testa mikrofonen online, hör dig själv i realtid och kontrollera vänster och höger kanal i högtalarna eller hörlurarna.",
+      },
+      th: {
+        name: "ทดสอบไมโครโฟนและลำโพง",
+        description:
+          "ทดสอบไมโครโฟนออนไลน์ ฟังเสียงตัวเองแบบเรียลไทม์ และตรวจสอบช่องเสียงซ้ายและขวาของลำโพงหรือหูฟัง",
+      },
+      tr: {
+        name: "Mikrofon ve Hoparlör Testi",
+        description:
+          "Mikrofonunuzu çevrimiçi test edin, sesinizi anlık olarak dinleyin ve hoparlörünüzün veya kulaklığınızın sol ve sağ kanallarını kontrol edin.",
+      },
+      vi: {
+        name: "Kiểm tra micro và loa",
+        description:
+          "Kiểm tra micro trực tuyến, nghe giọng mình theo thời gian thực và thử kênh trái, phải của loa hoặc tai nghe.",
+      },
+      "zh-CN": {
+        name: "麦克风与扬声器测试",
+        description:
+          "在线测试麦克风，实时监听自己的声音，并检查扬声器或耳机的左右声道。",
+      },
+      "zh-TW": {
+        name: "麥克風與喇叭測試",
+        description:
+          "在線上測試麥克風、即時聽見自己的聲音，並檢查喇叭或耳機的左右聲道。",
       },
     },
   },

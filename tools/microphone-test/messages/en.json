@@ -1,0 +1,16 @@
+{
+  "microphone": "Microphone",
+  "microphoneHint": "Speak to see the input level. Use headphones for live playback to avoid feedback.",
+  "inputLevel": "Input level",
+  "start": "Start microphone",
+  "starting": "Waiting for microphone…",
+  "stop": "Stop microphone",
+  "monitor": "Hear my microphone",
+  "micError": "Could not open the microphone. Check your browser permissions and input device, then try again.",
+  "speakers": "Stereo output",
+  "speakersHint": "Play a short tone in one or both channels. Check which speaker or ear you hear it in.",
+  "left": "Left",
+  "both": "Both",
+  "right": "Right",
+  "speakerError": "Could not play the test tone. Check your audio output and try again."
+}

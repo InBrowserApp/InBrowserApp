@@ -1,0 +1,16 @@
+{
+  "microphone": "Microfono",
+  "microphoneHint": "Parla per vedere il livello in ingresso. Usa le cuffie per ascoltarti in tempo reale senza fischi di ritorno.",
+  "inputLevel": "Livello in ingresso",
+  "start": "Attiva il microfono",
+  "starting": "In attesa del microfono…",
+  "stop": "Disattiva il microfono",
+  "monitor": "Ascolta il microfono",
+  "micError": "Impossibile accedere al microfono. Controlla le autorizzazioni del browser e il dispositivo di ingresso, poi riprova.",
+  "speakers": "Uscita stereo",
+  "speakersHint": "Riproduci un breve tono su uno o su entrambi i canali. Controlla da quale altoparlante o lato delle cuffie lo senti.",
+  "left": "Sinistro",
+  "both": "Entrambi",
+  "right": "Destro",
+  "speakerError": "Impossibile riprodurre il tono di prova. Controlla l'uscita audio e riprova."
+}
