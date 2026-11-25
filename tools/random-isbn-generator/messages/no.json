@@ -1,0 +1,14 @@
+{
+  "format": "ISBN-format",
+  "hyphens": "Ta med bindestreker",
+  "quantity": "Antall",
+  "generate": "Generer",
+  "generating": "Genererer…",
+  "results": "Genererte ISBN-numre",
+  "placeholder": "Genererte ISBN-numre vises her.",
+  "copy": "Kopier alle",
+  "copied": "Kopiert",
+  "copyFailed": "Kopiering mislyktes",
+  "download": "Last ned TXT",
+  "error": "Kunne ikke laste ISBN-generatoren. Last siden på nytt for å prøve igjen."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Tilfeldig ISBN-generator",
+  "description": "Generer tilfeldige ISBN-10- og ISBN-13-numre med gyldige kontrollsifre for testing. Kopier en gruppe med eller uten bindestreker, eller last ned TXT."
+}

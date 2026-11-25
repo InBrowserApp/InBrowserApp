@@ -1749,6 +1749,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Slumpmässig ISBN-generator",
+    slug: "random-isbn-generator",
+  },
+  {
+    category: "random",
     name: "Slumpgenerator för namn",
     slug: "random-name-generator",
   },

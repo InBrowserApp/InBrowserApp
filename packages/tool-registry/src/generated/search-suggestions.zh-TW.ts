@@ -1749,6 +1749,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "隨機 ISBN 產生器",
+    slug: "random-isbn-generator",
+  },
+  {
+    category: "random",
     name: "隨機姓名產生器",
     slug: "random-name-generator",
   },

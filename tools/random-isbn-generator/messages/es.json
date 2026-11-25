@@ -1,0 +1,14 @@
+{
+  "format": "Formato de ISBN",
+  "hyphens": "Incluir guiones",
+  "quantity": "Cantidad",
+  "generate": "Generar",
+  "generating": "Generando…",
+  "results": "ISBN generados",
+  "placeholder": "Los ISBN generados aparecerán aquí.",
+  "copy": "Copiar todo",
+  "copied": "Copiado",
+  "copyFailed": "No se pudo copiar",
+  "download": "Descargar TXT",
+  "error": "No se pudo cargar el generador de ISBN. Recarga la página para intentarlo de nuevo."
+}

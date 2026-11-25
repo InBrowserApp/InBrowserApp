@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di ISBN casuali",
+  "description": "Genera numeri ISBN-10 e ISBN-13 casuali con cifre di controllo valide per i test. Copia un gruppo di numeri con o senza trattini oppure scarica un file TXT."
+}

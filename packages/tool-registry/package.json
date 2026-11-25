@@ -356,6 +356,7 @@
     "@tool/radio-timecode": "workspace:*",
     "@tool/random-coordinate-generator": "workspace:*",
     "@tool/random-date-generator": "workspace:*",
+    "@tool/random-isbn-generator": "workspace:*",
     "@tool/random-name-generator": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",

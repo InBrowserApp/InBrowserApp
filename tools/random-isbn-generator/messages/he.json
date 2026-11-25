@@ -1,0 +1,14 @@
+{
+  "format": "תבנית ISBN",
+  "hyphens": "הכללת מקפים",
+  "quantity": "כמות",
+  "generate": "יצירה",
+  "generating": "מתבצעת יצירה…",
+  "results": "מספרי ISBN שנוצרו",
+  "placeholder": "מספרי ה-ISBN שנוצרו יופיעו כאן.",
+  "copy": "העתקת הכול",
+  "copied": "הועתק",
+  "copyFailed": "ההעתקה נכשלה",
+  "download": "הורדת TXT",
+  "error": "לא ניתן לטעון את מחולל ה-ISBN. יש לטעון את הדף מחדש ולנסות שוב."
+}

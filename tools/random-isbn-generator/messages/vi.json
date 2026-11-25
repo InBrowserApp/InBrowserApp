@@ -1,0 +1,14 @@
+{
+  "format": "Định dạng ISBN",
+  "hyphens": "Thêm dấu gạch ngang",
+  "quantity": "Số lượng",
+  "generate": "Tạo",
+  "generating": "Đang tạo…",
+  "results": "ISBN đã tạo",
+  "placeholder": "ISBN đã tạo sẽ xuất hiện ở đây.",
+  "copy": "Sao chép tất cả",
+  "copied": "Đã sao chép",
+  "copyFailed": "Sao chép thất bại",
+  "download": "Tải xuống TXT",
+  "error": "Không thể tải trình tạo ISBN. Hãy tải lại trang để thử lại."
+}

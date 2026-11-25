@@ -1,0 +1,14 @@
+{
+  "format": "تنسيق ISBN",
+  "hyphens": "تضمين الشرطات",
+  "quantity": "الكمية",
+  "generate": "إنشاء",
+  "generating": "جارٍ الإنشاء…",
+  "results": "أرقام ISBN المنشأة",
+  "placeholder": "ستظهر أرقام ISBN المنشأة هنا.",
+  "copy": "نسخ الكل",
+  "copied": "تم النسخ",
+  "copyFailed": "فشل النسخ",
+  "download": "تنزيل TXT",
+  "error": "تعذّر تحميل مولّد ISBN. أعد تحميل الصفحة للمحاولة مرة أخرى."
+}

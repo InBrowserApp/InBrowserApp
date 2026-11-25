@@ -32110,6 +32110,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "random-isbn-generator",
+    language: "ar",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "de",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "en",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "es",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "fr",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "he",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "hi",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "id",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "it",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "ja",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "ko",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "ms",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "nl",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "no",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "pl",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "pt",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "ru",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "sv",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "th",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "tr",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "vi",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "random-isbn-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "random-name-generator",
     language: "ar",
   },

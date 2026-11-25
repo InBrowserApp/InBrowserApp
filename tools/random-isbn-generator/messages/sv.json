@@ -1,0 +1,14 @@
+{
+  "format": "ISBN-format",
+  "hyphens": "Inkludera bindestreck",
+  "quantity": "Antal",
+  "generate": "Generera",
+  "generating": "Genererar…",
+  "results": "Genererade ISBN-nummer",
+  "placeholder": "Genererade ISBN-nummer visas här.",
+  "copy": "Kopiera alla",
+  "copied": "Kopierat",
+  "copyFailed": "Kopieringen misslyckades",
+  "download": "Ladda ner TXT",
+  "error": "ISBN-generatorn kunde inte läsas in. Ladda om sidan för att försöka igen."
+}

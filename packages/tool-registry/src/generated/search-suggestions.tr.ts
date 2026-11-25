@@ -1749,6 +1749,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "random",
+    name: "Rastgele ISBN Oluşturucu",
+    slug: "random-isbn-generator",
+  },
+  {
+    category: "random",
     name: "Rastgele Ad Oluşturucu",
     slug: "random-name-generator",
   },

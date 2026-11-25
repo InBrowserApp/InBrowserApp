@@ -1,0 +1,4 @@
+{
+  "name": "Random ISBN Generator",
+  "description": "Generate random ISBN-10 and ISBN-13 numbers with valid check digits for testing. Copy a batch with or without hyphens, or download TXT."
+}
