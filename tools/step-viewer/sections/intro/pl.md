@@ -17,3 +17,5 @@ Ustaw kąt i powiększenie, a następnie wybierz **Zapisz PNG**. Pobrany obraz p
 - [Przeglądarka plików DXF](../dxf-viewer/)
 
 Użyj [konwertera STEP na STL](../step-to-stl-converter/), aby przygotować dla programu do druku binarny plik STL ze współrzędnymi w milimetrach.
+
+Otwórz wersję modelu CAD w formacie `.igs` lub `.iges` w [przeglądarce plików IGES](../iges-viewer/), aby obejrzeć powierzchnie, zmierzyć odległości i zapisać obraz PNG.

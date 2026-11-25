@@ -17,3 +17,5 @@
 - [DXF 檢視器](../dxf-viewer/)
 
 使用 [STEP 轉 STL 轉換器](../step-to-stl-converter/)為切片軟體準備以毫米為座標單位的二進位 STL。
+
+在 [IGES 檢視器](../iges-viewer/)中開啟 CAD 模型的 `.igs` 或 `.iges` 版本，可檢查曲面、量測並儲存 PNG。

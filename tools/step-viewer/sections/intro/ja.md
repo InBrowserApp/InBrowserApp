@@ -17,3 +17,5 @@
 - [DXF ビューアー](../dxf-viewer/)
 
 [STEP → STL 変換](../step-to-stl-converter/)で、スライサー用にミリメートル座標のバイナリ STL を作成できます。
+
+CAD モデルの `.igs` または `.iges` 版を [IGES ビューアー](../iges-viewer/)で開き、サーフェスの確認、計測、PNG の保存ができます。

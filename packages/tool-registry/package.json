@@ -188,6 +188,7 @@
     "@tool/ical-event-generator": "workspace:*",
     "@tool/ics-calendar-viewer": "workspace:*",
     "@tool/ics-csv-converter": "workspace:*",
+    "@tool/iges-viewer": "workspace:*",
     "@tool/image-background-remover": "workspace:*",
     "@tool/image-combiner": "workspace:*",
     "@tool/image-comparator": "workspace:*",

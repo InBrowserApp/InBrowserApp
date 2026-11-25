@@ -35,19 +35,14 @@ export default function ModelViewer({
   const chooseButton = useRef<HTMLButtonElement>(null)
   const emptyActions = useRef<HTMLDivElement>(null)
   const restoreFocus = useRef(false)
-  const sequence = useRef(0)
+  const active = useRef<AbortController>(null)
   const [model, setModel] = useState<OpenModel>()
   const [status, setStatus] = useState<
     "loading" | "invalid" | "missingCompanions"
   >()
   const [dragging, setDragging] = useState(false)
   const options = getModelFormat(format)
-  useEffect(
-    () => () => {
-      sequence.current += 1
-    },
-    []
-  )
+  useEffect(() => () => active.current?.abort(), [])
   useEffect(() => model?.dispose, [model])
   useEffect(() => {
     const restore = restoreFocus.current
@@ -62,11 +57,17 @@ export default function ModelViewer({
 
   async function open(files?: File[]) {
     if (files?.length === 0) return
-    const request = ++sequence.current
+    active.current?.abort()
+    const request = new AbortController()
+    active.current = request
     setStatus("loading")
     try {
-      const next = await loadModel(files ?? [await exampleFile(format)], format)
-      if (request !== sequence.current) {
+      const next = await loadModel(
+        files ?? [await exampleFile(format)],
+        format,
+        request.signal
+      )
+      if (request.signal.aborted) {
         next.dispose()
         return
       }
@@ -75,13 +76,15 @@ export default function ModelViewer({
       setModel(next)
       setStatus(undefined)
     } catch (error) {
-      if (request === sequence.current) {
+      if (!request.signal.aborted) {
         setStatus(
           error instanceof Error && error.cause === "missingCompanions"
             ? "missingCompanions"
             : "invalid"
         )
       }
+    } finally {
+      if (active.current === request) active.current = null
     }
   }
 

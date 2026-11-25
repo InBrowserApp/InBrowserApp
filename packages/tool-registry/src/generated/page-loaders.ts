@@ -228,6 +228,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
   "ics-calendar-viewer": () => import("@tool/ics-calendar-viewer/page"),
   "ics-csv-converter": () => import("@tool/ics-csv-converter/page"),
+  "iges-viewer": () => import("@tool/iges-viewer/page"),
   "image-background-remover": () =>
     import("@tool/image-background-remover/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),

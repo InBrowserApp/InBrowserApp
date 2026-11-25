@@ -17,3 +17,5 @@ Stelle Blickwinkel und Zoom ein und wähle **PNG speichern**. Die Datei zeigt da
 - [DXF-Betrachter](../dxf-viewer/)
 
 Nutze den [STEP-zu-STL-Konverter](../step-to-stl-converter/), um eine binäre STL-Datei mit Koordinaten in Millimetern für einen Slicer vorzubereiten.
+
+Öffne eine Version deines CAD-Modells als `.igs` oder `.iges` im [IGES-Betrachter](../iges-viewer/), um die Flächen zu prüfen, Abstände zu messen und ein PNG zu speichern.

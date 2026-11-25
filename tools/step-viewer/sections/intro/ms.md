@@ -17,3 +17,5 @@ Tetapkan sudut pandangan dan aras zum yang dikehendaki, kemudian pilih **Simpan 
 - [Pemapar DXF](../dxf-viewer/)
 
 Gunakan [Penukar STEP kepada STL](../step-to-stl-converter/) untuk menyediakan STL binari dengan koordinat dalam milimeter bagi perisian penghiris.
+
+Buka fail CAD `.igs` atau `.iges` dalam [Pemapar IGES](../iges-viewer/) untuk memeriksa permukaan, mengukur jarak dan menyimpan imej PNG.

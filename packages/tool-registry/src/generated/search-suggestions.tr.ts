@@ -908,6 +908,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-csv-converter",
   },
   {
+    category: "3d-cad",
+    name: "IGES Görüntüleyici",
+    slug: "iges-viewer",
+  },
+  {
     category: "image",
     name: "Görsel Arka Planını Kaldırma",
     slug: "image-background-remover",

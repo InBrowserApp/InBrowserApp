@@ -17,3 +17,5 @@ Velg ønsket vinkel og zoomnivå, og klikk på **Lagre som PNG**. Skjermbildet v
 - [DXF-viser](../dxf-viewer/)
 
 Bruk [STEP til STL-konvertereren](../step-to-stl-converter/) til å lage en binær STL-fil med koordinater i millimeter for slicerprogrammet.
+
+Åpne en `.igs`- eller `.iges`-versjon av en CAD-modell i [IGES-viseren](../iges-viewer/) for å se på flatene, måle avstander og lagre et PNG-bilde.

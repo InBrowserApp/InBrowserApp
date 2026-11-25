@@ -1,8 +1,8 @@
-import type { ImportedMesh } from "@workspace/model-mesh/cad"
+import type { ImportedMesh } from "./cad"
 
 export type Triple = [number, number, number]
 
-export type StepMesh = {
+export type CadMesh = {
   positions: Float32Array<ArrayBuffer>
   normals?: Float32Array<ArrayBuffer>
   indices: Uint32Array<ArrayBuffer>
@@ -10,9 +10,9 @@ export type StepMesh = {
   faces: { first: number; last: number; color: Triple }[]
 }
 
-export type StepModel = { size: Triple; meshes: StepMesh[] }
+export type CadModel = { size: Triple; meshes: CadMesh[] }
 
-export function prepareModel(input: ImportedMesh[]): StepModel | null {
+export function prepareCadModel(input: ImportedMesh[]): CadModel | null {
   const meshes = input.filter((mesh) => mesh.index.array.length > 0)
   if (!meshes.length) return null
 

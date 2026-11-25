@@ -16654,6 +16654,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "iges-viewer",
+    language: "ar",
+  },
+  {
+    slug: "iges-viewer",
+    language: "de",
+  },
+  {
+    slug: "iges-viewer",
+    language: "en",
+  },
+  {
+    slug: "iges-viewer",
+    language: "es",
+  },
+  {
+    slug: "iges-viewer",
+    language: "fr",
+  },
+  {
+    slug: "iges-viewer",
+    language: "he",
+  },
+  {
+    slug: "iges-viewer",
+    language: "hi",
+  },
+  {
+    slug: "iges-viewer",
+    language: "id",
+  },
+  {
+    slug: "iges-viewer",
+    language: "it",
+  },
+  {
+    slug: "iges-viewer",
+    language: "ja",
+  },
+  {
+    slug: "iges-viewer",
+    language: "ko",
+  },
+  {
+    slug: "iges-viewer",
+    language: "ms",
+  },
+  {
+    slug: "iges-viewer",
+    language: "nl",
+  },
+  {
+    slug: "iges-viewer",
+    language: "no",
+  },
+  {
+    slug: "iges-viewer",
+    language: "pl",
+  },
+  {
+    slug: "iges-viewer",
+    language: "pt",
+  },
+  {
+    slug: "iges-viewer",
+    language: "ru",
+  },
+  {
+    slug: "iges-viewer",
+    language: "sv",
+  },
+  {
+    slug: "iges-viewer",
+    language: "th",
+  },
+  {
+    slug: "iges-viewer",
+    language: "tr",
+  },
+  {
+    slug: "iges-viewer",
+    language: "vi",
+  },
+  {
+    slug: "iges-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "iges-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "image-background-remover",
     language: "ar",
   },

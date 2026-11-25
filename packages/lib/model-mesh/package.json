@@ -14,6 +14,10 @@
     "./inspect": "./src/inspect.ts",
     "./repair": "./src/repair.ts",
     "./cad": "./src/cad.ts",
+    "./cad-data": "./src/cad-data.ts",
+    "./cad-loader": "./src/cad-loader.ts",
+    "./cad-scene": "./src/cad-scene.ts",
+    "./iges-example": "./src/iges-example.ts",
     "./cad-licenses": "./src/cad-licenses.ts",
     "./step-example": "./src/step-example.ts",
     "./gltf-pack": "./src/gltf-pack.ts"

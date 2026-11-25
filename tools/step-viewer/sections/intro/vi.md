@@ -17,3 +17,5 @@ Chọn **Đo**, rồi chọn hai điểm trên phần mô hình đang hiển th�
 - [Trình xem DXF](../dxf-viewer/)
 
 Dùng [Trình chuyển đổi STEP sang STL](../step-to-stl-converter/) để tạo tệp STL nhị phân có tọa độ tính bằng milimét cho phần mềm cắt lớp.
+
+Mở tệp CAD `.igs` hoặc `.iges` bằng [Trình xem IGES](../iges-viewer/) để kiểm tra bề mặt, đo khoảng cách và lưu ảnh PNG.

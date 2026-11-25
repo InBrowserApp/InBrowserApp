@@ -908,6 +908,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-csv-converter",
   },
   {
+    category: "3d-cad",
+    name: "IGES-viser",
+    slug: "iges-viewer",
+  },
+  {
     category: "image",
     name: "Fjern bakgrunn fra bilde",
     slug: "image-background-remover",

@@ -11,8 +11,8 @@ import {
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { createModelMeasurement } from "@workspace/ui/lib/model-measurement"
 import { saveViewportPng } from "@workspace/ui/lib/save-viewport-png"
-import { makeMesh } from "./model-scene"
-import type { StepModel } from "./step-data"
+import { makeCadMesh } from "@workspace/model-mesh/cad-scene"
+import type { CadModel } from "@workspace/model-mesh/cad-data"
 
 const directions = {
   isometric: new Vector3(1, 1, 1),
@@ -23,7 +23,7 @@ const directions = {
 export type View = keyof typeof directions
 export type Viewport = ReturnType<typeof createViewport>
 
-export function createViewport(host: HTMLElement, model: StepModel) {
+export function createViewport(host: HTMLElement, model: CadModel) {
   const radius = Math.max(Math.hypot(...model.size) / 2, 0.001)
   const renderer = new WebGLRenderer({ antialias: true })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -33,7 +33,7 @@ export function createViewport(host: HTMLElement, model: StepModel) {
 
   const scene = new Scene()
   const baseColor = new Color(0x659ce8)
-  const meshes = model.meshes.map((mesh) => makeMesh(mesh, baseColor))
+  const meshes = model.meshes.map((mesh) => makeCadMesh(mesh, baseColor))
   for (const mesh of meshes) scene.add(mesh)
   const camera = new OrthographicCamera(
     -1,

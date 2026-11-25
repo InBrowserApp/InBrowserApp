@@ -11,14 +11,14 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Box, Folder } from "@workspace/ui/icons"
-import { loadStep } from "./load-step"
+import { loadCadModel } from "@workspace/model-mesh/cad-loader"
 import { exampleStepFile } from "@workspace/model-mesh/step-example"
 import type Messages from "./messages/en.json"
-import type { StepModel } from "./step-data"
+import type { CadModel } from "@workspace/model-mesh/cad-data"
 
 const ModelPanel = lazy(() => import("./model-panel"))
 
-type ModelState = "loading" | "invalid" | "loadError" | StepModel
+type ModelState = "loading" | "invalid" | "loadError" | CadModel
 
 function Loading({ label }: { label: string }) {
   return (
@@ -46,7 +46,7 @@ function OpenModel({
   const [model, setModel] = useState<ModelState>("loading")
   useEffect(() => {
     const controller = new AbortController()
-    void loadStep(file, controller.signal).then(
+    void loadCadModel(file, "step", controller.signal).then(
       (data) => {
         if (!controller.signal.aborted) setModel(data ?? "invalid")
       },

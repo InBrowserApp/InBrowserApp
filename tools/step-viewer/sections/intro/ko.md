@@ -17,3 +17,5 @@
 - [DXF 뷰어](../dxf-viewer/)
 
 [STEP → STL 변환기](../step-to-stl-converter/)를 사용해 슬라이서용 밀리미터 좌표의 바이너리 STL을 준비하세요.
+
+CAD 모델의 `.igs` 또는 `.iges` 버전을 [IGES 뷰어](../iges-viewer/)에서 열어 표면을 확인하고 측정하거나 PNG를 저장하세요.

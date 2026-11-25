@@ -908,6 +908,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "ics-csv-converter",
   },
   {
+    category: "3d-cad",
+    name: "Visionneuse IGES",
+    slug: "iges-viewer",
+  },
+  {
     category: "image",
     name: "Supprimer l’arrière-plan d’une image",
     slug: "image-background-remover",

@@ -23179,6 +23179,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "iges-viewer",
+    category: "3d-cad",
+    icon: "box",
+    tags: ["iges", "igs", "cad", "3d", "surfaces", "measure", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض IGES",
+        description:
+          "افتح ملفات CAD بامتداد IGS أو IGES في متصفحك. افحص أسطح النموذج ثلاثية الأبعاد، وقِس المسافات، وبدّل وحدات العرض، واحفظ لقطة بصيغة PNG.",
+      },
+      de: {
+        name: "IGES-Betrachter",
+        description:
+          "Öffne IGS- und IGES-CAD-Dateien im Browser. Untersuche Modellflächen in 3D, miss Abstände, wechsle die Maßeinheit und speichere ein PNG.",
+      },
+      en: {
+        name: "IGES Viewer",
+        description:
+          "Open IGS and IGES CAD files in your browser. Inspect model surfaces in 3D, measure distances, switch display units, and save a PNG.",
+      },
+      es: {
+        name: "Visor de IGES",
+        description:
+          "Abre archivos CAD IGS e IGES en tu navegador. Inspecciona las superficies en 3D, mide distancias, cambia la unidad de medida y guarda una imagen PNG.",
+      },
+      fr: {
+        name: "Visionneuse IGES",
+        description:
+          "Ouvrez des fichiers de CAO IGS et IGES dans votre navigateur. Examinez les surfaces en 3D, mesurez les distances, changez l’unité de mesure et enregistrez une image PNG.",
+      },
+      he: {
+        name: "מציג IGES",
+        description:
+          "פתחו בדפדפן קובצי CAD בפורמט IGS או IGES. בדקו את משטחי המודל בתלת־ממד, מדדו מרחקים, החליפו יחידות תצוגה ושמרו צילום כקובץ PNG.",
+      },
+      hi: {
+        name: "IGES व्यूअर",
+        description:
+          "अपने ब्राउज़र में IGS और IGES CAD फ़ाइलें खोलें। मॉडल की सतहें 3D में देखें, दूरियाँ मापें, डिस्प्ले की इकाई बदलें और PNG सहेजें।",
+      },
+      id: {
+        name: "Penampil IGES",
+        description:
+          "Buka file CAD IGS dan IGES di browser. Periksa permukaan model dalam 3D, ukur jarak, ganti satuan tampilan, dan simpan PNG.",
+      },
+      it: {
+        name: "Visualizzatore IGES",
+        description:
+          "Apri file CAD IGS e IGES nel browser. Esamina le superfici in 3D, misura le distanze, cambia l’unità di misura e salva un’immagine PNG.",
+      },
+      ja: {
+        name: "IGES ビューアー",
+        description:
+          "IGS・IGES 形式の CAD ファイルをブラウザーで開きます。モデルのサーフェスを 3D で確認し、距離の計測、表示単位の切り替え、PNG の保存ができます。",
+      },
+      ko: {
+        name: "IGES 뷰어",
+        description:
+          "브라우저에서 IGS 및 IGES CAD 파일을 여세요. 모델 표면을 3D로 살펴보고 거리를 측정하며 표시 단위를 바꾸고 PNG를 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar IGES",
+        description:
+          "Buka fail CAD IGS dan IGES dalam pelayar. Periksa permukaan model dalam 3D, ukur jarak, tukar unit paparan dan simpan imej PNG.",
+      },
+      nl: {
+        name: "IGES-viewer",
+        description:
+          "Open IGS- en IGES-bestanden in je browser. Bekijk CAD-oppervlakken in 3D, meet afstanden, wissel van maateenheid en sla een PNG op.",
+      },
+      no: {
+        name: "IGES-viser",
+        description:
+          "Åpne CAD-filer i IGS- eller IGES-format i nettleseren. Se på modellens flater i 3D, mål avstander, bytt måleenhet og lagre et PNG-bilde.",
+      },
+      pl: {
+        name: "Przeglądarka plików IGES",
+        description:
+          "Otwieraj pliki CAD w formacie IGS lub IGES w przeglądarce. Oglądaj powierzchnie modelu w 3D, mierz odległości, zmieniaj jednostki i zapisuj obrazy PNG.",
+      },
+      pt: {
+        name: "Visualizador de IGES",
+        description:
+          "Abra arquivos CAD IGS e IGES no navegador. Examine as superfícies em 3D, meça distâncias, altere a unidade de medida e salve uma imagem PNG.",
+      },
+      ru: {
+        name: "Просмотр IGES",
+        description:
+          "Открывайте файлы САПР в формате IGS или IGES прямо в браузере. Просматривайте поверхности модели в 3D, измеряйте расстояния, меняйте единицы измерения и сохраняйте снимки в PNG.",
+      },
+      sv: {
+        name: "IGES-visare",
+        description:
+          "Öppna CAD-filer i IGS- eller IGES-format i webbläsaren. Granska modellens ytor i 3D, mät avstånd, byt måttenhet och spara en PNG-bild.",
+      },
+      th: {
+        name: "โปรแกรมดู IGES",
+        description:
+          "เปิดไฟล์ CAD แบบ IGS และ IGES ในเบราว์เซอร์ ตรวจสอบพื้นผิวโมเดลแบบ 3 มิติ วัดระยะ เปลี่ยนหน่วยที่แสดง และบันทึกภาพ PNG",
+      },
+      tr: {
+        name: "IGES Görüntüleyici",
+        description:
+          "IGS ve IGES CAD dosyalarını tarayıcınızda açın. Model yüzeylerini 3B olarak inceleyin, mesafeleri ölçün, görüntüleme birimlerini değiştirin ve PNG olarak kaydedin.",
+      },
+      vi: {
+        name: "Trình xem IGES",
+        description:
+          "Mở tệp CAD IGS và IGES trong trình duyệt. Kiểm tra bề mặt mô hình ở dạng 3D, đo khoảng cách, đổi đơn vị hiển thị và lưu ảnh PNG.",
+      },
+      "zh-CN": {
+        name: "IGES 查看器",
+        description:
+          "在浏览器中打开 IGS 和 IGES CAD 文件。以 3D 方式检查模型曲面、测量距离、切换显示单位并保存 PNG。",
+      },
+      "zh-TW": {
+        name: "IGES 檢視器",
+        description:
+          "在瀏覽器中開啟 IGS 和 IGES CAD 檔案。以 3D 檢查模型曲面、量測距離、切換顯示單位並儲存 PNG。",
+      },
+    },
+  },
+  {
     slug: "image-background-remover",
     category: "image",
     icon: "scissors",
@@ -82921,6 +83044,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ICS 與 CSV 互轉",
         description:
           "將 iCalendar（.ics）行程匯出為 CSV 試算表，或將 CSV 資料列轉成行事曆檔案。兩種格式都可在瀏覽器中預覽與下載。",
+      },
+    },
+  },
+  "iges-viewer": {
+    slug: "iges-viewer",
+    category: "3d-cad",
+    icon: "box",
+    tags: ["iges", "igs", "cad", "3d", "surfaces", "measure", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض IGES",
+        description:
+          "افتح ملفات CAD بامتداد IGS أو IGES في متصفحك. افحص أسطح النموذج ثلاثية الأبعاد، وقِس المسافات، وبدّل وحدات العرض، واحفظ لقطة بصيغة PNG.",
+      },
+      de: {
+        name: "IGES-Betrachter",
+        description:
+          "Öffne IGS- und IGES-CAD-Dateien im Browser. Untersuche Modellflächen in 3D, miss Abstände, wechsle die Maßeinheit und speichere ein PNG.",
+      },
+      en: {
+        name: "IGES Viewer",
+        description:
+          "Open IGS and IGES CAD files in your browser. Inspect model surfaces in 3D, measure distances, switch display units, and save a PNG.",
+      },
+      es: {
+        name: "Visor de IGES",
+        description:
+          "Abre archivos CAD IGS e IGES en tu navegador. Inspecciona las superficies en 3D, mide distancias, cambia la unidad de medida y guarda una imagen PNG.",
+      },
+      fr: {
+        name: "Visionneuse IGES",
+        description:
+          "Ouvrez des fichiers de CAO IGS et IGES dans votre navigateur. Examinez les surfaces en 3D, mesurez les distances, changez l’unité de mesure et enregistrez une image PNG.",
+      },
+      he: {
+        name: "מציג IGES",
+        description:
+          "פתחו בדפדפן קובצי CAD בפורמט IGS או IGES. בדקו את משטחי המודל בתלת־ממד, מדדו מרחקים, החליפו יחידות תצוגה ושמרו צילום כקובץ PNG.",
+      },
+      hi: {
+        name: "IGES व्यूअर",
+        description:
+          "अपने ब्राउज़र में IGS और IGES CAD फ़ाइलें खोलें। मॉडल की सतहें 3D में देखें, दूरियाँ मापें, डिस्प्ले की इकाई बदलें और PNG सहेजें।",
+      },
+      id: {
+        name: "Penampil IGES",
+        description:
+          "Buka file CAD IGS dan IGES di browser. Periksa permukaan model dalam 3D, ukur jarak, ganti satuan tampilan, dan simpan PNG.",
+      },
+      it: {
+        name: "Visualizzatore IGES",
+        description:
+          "Apri file CAD IGS e IGES nel browser. Esamina le superfici in 3D, misura le distanze, cambia l’unità di misura e salva un’immagine PNG.",
+      },
+      ja: {
+        name: "IGES ビューアー",
+        description:
+          "IGS・IGES 形式の CAD ファイルをブラウザーで開きます。モデルのサーフェスを 3D で確認し、距離の計測、表示単位の切り替え、PNG の保存ができます。",
+      },
+      ko: {
+        name: "IGES 뷰어",
+        description:
+          "브라우저에서 IGS 및 IGES CAD 파일을 여세요. 모델 표면을 3D로 살펴보고 거리를 측정하며 표시 단위를 바꾸고 PNG를 저장할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar IGES",
+        description:
+          "Buka fail CAD IGS dan IGES dalam pelayar. Periksa permukaan model dalam 3D, ukur jarak, tukar unit paparan dan simpan imej PNG.",
+      },
+      nl: {
+        name: "IGES-viewer",
+        description:
+          "Open IGS- en IGES-bestanden in je browser. Bekijk CAD-oppervlakken in 3D, meet afstanden, wissel van maateenheid en sla een PNG op.",
+      },
+      no: {
+        name: "IGES-viser",
+        description:
+          "Åpne CAD-filer i IGS- eller IGES-format i nettleseren. Se på modellens flater i 3D, mål avstander, bytt måleenhet og lagre et PNG-bilde.",
+      },
+      pl: {
+        name: "Przeglądarka plików IGES",
+        description:
+          "Otwieraj pliki CAD w formacie IGS lub IGES w przeglądarce. Oglądaj powierzchnie modelu w 3D, mierz odległości, zmieniaj jednostki i zapisuj obrazy PNG.",
+      },
+      pt: {
+        name: "Visualizador de IGES",
+        description:
+          "Abra arquivos CAD IGS e IGES no navegador. Examine as superfícies em 3D, meça distâncias, altere a unidade de medida e salve uma imagem PNG.",
+      },
+      ru: {
+        name: "Просмотр IGES",
+        description:
+          "Открывайте файлы САПР в формате IGS или IGES прямо в браузере. Просматривайте поверхности модели в 3D, измеряйте расстояния, меняйте единицы измерения и сохраняйте снимки в PNG.",
+      },
+      sv: {
+        name: "IGES-visare",
+        description:
+          "Öppna CAD-filer i IGS- eller IGES-format i webbläsaren. Granska modellens ytor i 3D, mät avstånd, byt måttenhet och spara en PNG-bild.",
+      },
+      th: {
+        name: "โปรแกรมดู IGES",
+        description:
+          "เปิดไฟล์ CAD แบบ IGS และ IGES ในเบราว์เซอร์ ตรวจสอบพื้นผิวโมเดลแบบ 3 มิติ วัดระยะ เปลี่ยนหน่วยที่แสดง และบันทึกภาพ PNG",
+      },
+      tr: {
+        name: "IGES Görüntüleyici",
+        description:
+          "IGS ve IGES CAD dosyalarını tarayıcınızda açın. Model yüzeylerini 3B olarak inceleyin, mesafeleri ölçün, görüntüleme birimlerini değiştirin ve PNG olarak kaydedin.",
+      },
+      vi: {
+        name: "Trình xem IGES",
+        description:
+          "Mở tệp CAD IGS và IGES trong trình duyệt. Kiểm tra bề mặt mô hình ở dạng 3D, đo khoảng cách, đổi đơn vị hiển thị và lưu ảnh PNG.",
+      },
+      "zh-CN": {
+        name: "IGES 查看器",
+        description:
+          "在浏览器中打开 IGS 和 IGES CAD 文件。以 3D 方式检查模型曲面、测量距离、切换显示单位并保存 PNG。",
+      },
+      "zh-TW": {
+        name: "IGES 檢視器",
+        description:
+          "在瀏覽器中開啟 IGS 和 IGES CAD 檔案。以 3D 檢查模型曲面、量測距離、切換顯示單位並儲存 PNG。",
       },
     },
   },

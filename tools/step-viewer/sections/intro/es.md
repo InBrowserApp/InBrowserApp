@@ -17,3 +17,5 @@ Ajusta el ángulo y el nivel de zoom y selecciona **Guardar PNG**. La imagen des
 - [Visor de DXF](../dxf-viewer/)
 
 Usa el [Conversor de STEP a STL](../step-to-stl-converter/) para preparar un STL binario con coordenadas en milímetros para tu laminador.
+
+Abre la versión `.igs` o `.iges` de un modelo CAD en el [Visor de IGES](../iges-viewer/) para inspeccionar sus superficies, medir distancias y guardar una imagen PNG.
