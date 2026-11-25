@@ -91,11 +91,14 @@ describe("Random Phone Number Generator", () => {
 
     generate()
     await waitFor(() => expect(output().value).toBe("(202) 555-0100"))
+    const heading = { name: "Phone numbers · United States · National" }
+    const firstBatchTitle = screen.getByRole("heading", heading)
     generate()
     expect((await screen.findByRole("alert")).textContent).toBe(messages.error)
     expect(output().value).toBe("(202) 555-0100")
     generate()
     await waitFor(() => expect(output().value).toBe("(202) 555-0101"))
+    expect(screen.getByRole("heading", heading)).not.toBe(firstBatchTitle)
   })
 
   it("ignores a repeat submission and preserves keyboard focus", async () => {

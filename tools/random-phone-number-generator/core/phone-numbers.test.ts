@@ -53,4 +53,37 @@ describe("random phone numbers", () => {
     expect(getDefaultPhoneCountry("ja")).toBe("JP")
     expect(getDefaultPhoneCountry("nl")).toBe("US")
   })
+
+  it.each(["national", "international"] as const)(
+    "uses country-specific area codes in the shared +1 plan for %s",
+    async (format) => {
+      const regionCodes = {
+        CA: ["204", "403", "416", "514", "604", "613", "709", "902"],
+        US: [
+          "202",
+          "206",
+          "212",
+          "213",
+          "312",
+          "404",
+          "415",
+          "617",
+          "702",
+          "713",
+        ],
+      }
+      const start = format === "national" ? 0 : 1
+
+      for (const country of ["CA", "US"] as const) {
+        const numbers = await generatePhoneNumbers(country, format, 100)
+        const areaCodes = numbers.map((number) =>
+          number.replace(/\D/g, "").slice(start, start + 3)
+        )
+
+        expect(
+          areaCodes.every((areaCode) => regionCodes[country].includes(areaCode))
+        ).toBe(true)
+      }
+    }
+  )
 })

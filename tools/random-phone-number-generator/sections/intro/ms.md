@@ -1,6 +1,6 @@
 ## Jana satu set nombor telefon contoh
 
-Pilih negara atau wilayah dan format nombor, masukkan kuantiti, kemudian pilih **Jana**. Salin hasil ke dalam borang atau muat turun fail teks UTF-8 dengan satu nombor pada setiap baris. Gunakan nombor ini untuk menguji format input borang, mengisi senarai kenalan contoh atau menguji cara apl anda menyimpan dan memaparkan nombor telefon.
+Pilih negara atau wilayah dan format nombor, masukkan kuantiti, kemudian pilih **Jana**. Salin hasil ke dalam borang atau muat turun fail teks `UTF-8` dengan satu nombor pada setiap baris. Gunakan nombor ini untuk menguji format input borang, mengisi senarai kenalan contoh atau menguji cara apl anda menyimpan dan memaparkan nombor telefon.
 
 ## Pilih format dalam negara atau antarabangsa
 

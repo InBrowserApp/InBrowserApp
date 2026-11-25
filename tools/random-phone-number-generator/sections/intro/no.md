@@ -1,6 +1,6 @@
 ## Lag en liste med telefonnumre til testing
 
-Velg land eller region og nummerformat, angi antall og velg **Generer**. Kopier resultatene til et skjema eller last ned en UTF-8-kodet tekstfil med ett nummer per linje. Bruk numrene til å teste inntastingsmasker i skjemaer, fylle en kontaktliste med eksempeldata eller sjekke hvordan appen din lagrer og viser telefonnumre.
+Velg land eller region og nummerformat, angi antall og velg **Generer**. Kopier resultatene til et skjema eller last ned en `UTF-8`-kodet tekstfil med ett nummer per linje. Bruk numrene til å teste inntastingsmasker i skjemaer, fylle en kontaktliste med eksempeldata eller sjekke hvordan appen din lagrer og viser telefonnumre.
 
 ## Velg nasjonalt eller internasjonalt format
 

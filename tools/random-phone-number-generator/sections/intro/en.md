@@ -1,6 +1,6 @@
 ## Generate a batch of sample phone numbers
 
-Choose a country or region, pick a number format, enter the quantity, and select **Generate**. Copy the results into a form or download a UTF-8 text file with one number per line. Use the numbers to check form input masks, populate sample contacts, or exercise how your app stores and displays phone numbers.
+Choose a country or region, pick a number format, enter the quantity, and select **Generate**. Copy the results into a form or download a `UTF-8` text file with one number per line. Use the numbers to check form input masks, populate sample contacts, or exercise how your app stores and displays phone numbers.
 
 ## Choose national or international format
 

@@ -1,6 +1,6 @@
 ## Gerar uma lista de números de telefone de exemplo
 
-Escolha um país ou região e um formato de número, informe a quantidade e selecione **Gerar**. Copie os resultados para um formulário ou baixe um arquivo de texto UTF-8 com um número por linha. Use os números para verificar máscaras de entrada, criar contatos de exemplo ou testar como seu aplicativo armazena e exibe números de telefone.
+Escolha um país ou região e um formato de número, informe a quantidade e selecione **Gerar**. Copie os resultados para um formulário ou baixe um arquivo de texto `UTF-8` com um número por linha. Use os números para verificar máscaras de entrada, criar contatos de exemplo ou testar como seu aplicativo armazena e exibe números de telefone.
 
 ## Escolher o formato nacional ou internacional
 

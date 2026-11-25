@@ -1,6 +1,6 @@
 ## Buat sekumpulan nomor telepon contoh
 
-Pilih negara atau wilayah, pilih format nomor, masukkan jumlah, lalu pilih **Buat**. Salin hasil ke formulir atau unduh berkas teks UTF-8 dengan satu nomor per baris. Gunakan nomor ini untuk menguji pola pengisian formulir, mengisi daftar kontak contoh, atau menguji cara aplikasi menyimpan dan menampilkan nomor telepon.
+Pilih negara atau wilayah, pilih format nomor, masukkan jumlah, lalu pilih **Buat**. Salin hasil ke formulir atau unduh berkas teks `UTF-8` dengan satu nomor per baris. Gunakan nomor ini untuk menguji pola pengisian formulir, mengisi daftar kontak contoh, atau menguji cara aplikasi menyimpan dan menampilkan nomor telepon.
 
 ## Pilih format nasional atau internasional
 

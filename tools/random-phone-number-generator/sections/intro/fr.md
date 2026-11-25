@@ -1,6 +1,6 @@
 ## Générer une série d’exemples de numéros de téléphone
 
-Choisissez un pays ou une région et un format de numéro, saisissez la quantité, puis sélectionnez **Générer**. Copiez les résultats dans un formulaire ou téléchargez un fichier texte UTF-8 contenant un numéro par ligne. Utilisez ces numéros pour vérifier les masques de saisie, créer des exemples de contacts ou tester la façon dont votre application stocke et affiche les numéros de téléphone.
+Choisissez un pays ou une région et un format de numéro, saisissez la quantité, puis sélectionnez **Générer**. Copiez les résultats dans un formulaire ou téléchargez un fichier texte `UTF-8` contenant un numéro par ligne. Utilisez ces numéros pour vérifier les masques de saisie, créer des exemples de contacts ou tester la façon dont votre application stocke et affiche les numéros de téléphone.
 
 ## Choisir le format national ou international
 

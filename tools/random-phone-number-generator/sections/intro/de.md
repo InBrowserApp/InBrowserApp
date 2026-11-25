@@ -1,6 +1,6 @@
 ## Beispieltelefonnummern generieren
 
-Wähle ein Land oder eine Region und ein Nummernformat, gib die Anzahl ein und wähle **Generieren**. Kopiere die Ergebnisse in ein Formular oder lade eine UTF-8-Textdatei mit einer Nummer pro Zeile herunter. Verwende die Nummern, um Eingabemasken zu prüfen, Beispielkontakte anzulegen oder die Speicherung und Anzeige von Telefonnummern in deiner App zu testen.
+Wähle ein Land oder eine Region und ein Nummernformat, gib die Anzahl ein und wähle **Generieren**. Kopiere die Ergebnisse in ein Formular oder lade eine `UTF-8`-Textdatei mit einer Nummer pro Zeile herunter. Verwende die Nummern, um Eingabemasken zu prüfen, Beispielkontakte anzulegen oder die Speicherung und Anzeige von Telefonnummern in deiner App zu testen.
 
 ## Nationales oder internationales Format wählen
 

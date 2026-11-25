@@ -1,6 +1,6 @@
 ## Toplu olarak örnek telefon numarası oluşturun
 
-Ülke veya bölgeyi ve numara biçimini seçin, adedi girin ve **Oluştur** düğmesine tıklayın. Sonuçları bir forma kopyalayın veya her satırında bir numara bulunan UTF-8 kodlu bir metin dosyasını indirin. Bu numaralarla form giriş maskelerini kontrol edebilir, örnek kişi listeleri doldurabilir ya da uygulamanızın telefon numaralarını nasıl saklayıp gösterdiğini test edebilirsiniz.
+Ülke veya bölgeyi ve numara biçimini seçin, adedi girin ve **Oluştur** düğmesine tıklayın. Sonuçları bir forma kopyalayın veya her satırında bir numara bulunan `UTF-8` kodlu bir metin dosyasını indirin. Bu numaralarla form giriş maskelerini kontrol edebilir, örnek kişi listeleri doldurabilir ya da uygulamanızın telefon numaralarını nasıl saklayıp gösterdiğini test edebilirsiniz.
 
 ## Ulusal veya uluslararası biçimi seçin
 

@@ -1,6 +1,6 @@
 ## Jak wygenerować listę przykładowych numerów telefonu
 
-Wybierz kraj lub region i format numeru, podaj liczbę numerów i kliknij **Generuj**. Skopiuj wyniki do formularza lub pobierz plik tekstowy UTF-8 z jednym numerem w każdym wierszu. Użyj numerów, aby sprawdzić maski wprowadzania danych w formularzach, uzupełnić listę przykładowych kontaktów lub przetestować, jak aplikacja zapisuje i wyświetla numery telefonu.
+Wybierz kraj lub region i format numeru, podaj liczbę numerów i kliknij **Generuj**. Skopiuj wyniki do formularza lub pobierz plik tekstowy `UTF-8` z jednym numerem w każdym wierszu. Użyj numerów, aby sprawdzić maski wprowadzania danych w formularzach, uzupełnić listę przykładowych kontaktów lub przetestować, jak aplikacja zapisuje i wyświetla numery telefonu.
 
 ## Format krajowy i międzynarodowy
 

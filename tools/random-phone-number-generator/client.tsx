@@ -49,9 +49,10 @@ export default function RandomPhoneNumberClient({ lang, messages }: Props) {
   const countryId = useId()
   const quantityId = useId()
   const formatId = useId()
-  const [ready, setReady] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
-  const [status, setStatus] = useState<"idle" | "pending" | "failed">("idle")
+  const [status, setStatus] = useState<
+    "starting" | "idle" | "pending" | "failed"
+  >("starting")
 
   const regionNames = new Intl.DisplayNames(lang, { type: "region" })
   const countries = PHONE_COUNTRIES.map((value) => ({
@@ -62,7 +63,7 @@ export default function RandomPhoneNumberClient({ lang, messages }: Props) {
   const pending = status === "pending"
   const direction = lang === "ar" || lang === "he" ? "rtl" : "ltr"
 
-  useEffect(() => setReady(true), [])
+  useEffect(() => setStatus("idle"), [])
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -150,7 +151,7 @@ export default function RandomPhoneNumberClient({ lang, messages }: Props) {
             </Field>
             <Button
               type="submit"
-              disabled={!ready}
+              disabled={status === "starting"}
               aria-disabled={pending}
               className="shrink-0 aria-disabled:opacity-50"
             >
@@ -167,8 +168,8 @@ export default function RandomPhoneNumberClient({ lang, messages }: Props) {
       </CardContent>
       <Separator />
       <CardHeader className="flex flex-wrap items-center justify-between gap-3">
-        <CardTitle aria-live="polite">
-          <h2>
+        <CardTitle aria-live="polite" aria-atomic="true">
+          <h2 key={result?.text}>
             {messages.results}
             {result &&
               ` · ${regionNames.of(result.country)} · ${messages[result.format]}`}

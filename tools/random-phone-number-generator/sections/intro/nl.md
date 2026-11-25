@@ -1,6 +1,6 @@
 ## Een lijst met voorbeeldtelefoonnummers genereren
 
-Kies een land of regio en een nummernotatie, voer het aantal in en klik op **Genereren**. Kopieer de resultaten naar een formulier of download een UTF-8-tekstbestand met één nummer per regel. Gebruik de nummers om invoermaskers van formulieren te testen, een lijst met voorbeeldcontacten te vullen of te controleren hoe je app telefoonnummers opslaat en weergeeft.
+Kies een land of regio en een nummernotatie, voer het aantal in en klik op **Genereren**. Kopieer de resultaten naar een formulier of download een `UTF-8`-tekstbestand met één nummer per regel. Gebruik de nummers om invoermaskers van formulieren te testen, een lijst met voorbeeldcontacten te vullen of te controleren hoe je app telefoonnummers opslaat en weergeeft.
 
 ## Nationale en internationale nummernotatie
 

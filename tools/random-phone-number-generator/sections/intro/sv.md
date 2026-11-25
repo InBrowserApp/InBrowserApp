@@ -1,6 +1,6 @@
 ## Generera en lista med exempel på telefonnummer
 
-Välj land eller region och nummerformat, ange antal och klicka på **Generera**. Kopiera resultaten till ett formulär eller ladda ner en UTF-8-kodad textfil med ett nummer per rad. Använd numren för att testa inmatningsmasker i formulär, fylla en lista med exempelkontakter eller kontrollera hur din app lagrar och visar telefonnummer.
+Välj land eller region och nummerformat, ange antal och klicka på **Generera**. Kopiera resultaten till ett formulär eller ladda ner en `UTF-8`-kodad textfil med ett nummer per rad. Använd numren för att testa inmatningsmasker i formulär, fylla en lista med exempelkontakter eller kontrollera hur din app lagrar och visar telefonnummer.
 
 ## Nationellt och internationellt format
 

@@ -1,6 +1,6 @@
 ## Genera un elenco di numeri di telefono di esempio
 
-Scegli un paese o un’area geografica, seleziona il formato, inserisci la quantità e fai clic su **Genera**. Copia i risultati in un modulo o scarica un file di testo UTF-8 con un numero per riga. Usa i numeri per verificare le maschere di immissione dei moduli, popolare un elenco di contatti di esempio o testare come la tua app memorizza e visualizza i numeri di telefono.
+Scegli un paese o un’area geografica, seleziona il formato, inserisci la quantità e fai clic su **Genera**. Copia i risultati in un modulo o scarica un file di testo `UTF-8` con un numero per riga. Usa i numeri per verificare le maschere di immissione dei moduli, popolare un elenco di contatti di esempio o testare come la tua app memorizza e visualizza i numeri di telefono.
 
 ## Scegli il formato nazionale o internazionale
 

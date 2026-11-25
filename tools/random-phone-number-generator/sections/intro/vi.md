@@ -1,6 +1,6 @@
 ## Tạo danh sách số điện thoại mẫu
 
-Chọn quốc gia hoặc khu vực, chọn định dạng số, nhập số lượng rồi chọn **Tạo**. Sao chép kết quả vào biểu mẫu hoặc tải xuống tệp văn bản UTF-8 có một số trên mỗi dòng. Dùng các số mẫu để kiểm tra quy tắc nhập số trong biểu mẫu, điền dữ liệu vào danh bạ mẫu hoặc thử cách ứng dụng lưu và hiển thị số điện thoại.
+Chọn quốc gia hoặc khu vực, chọn định dạng số, nhập số lượng rồi chọn **Tạo**. Sao chép kết quả vào biểu mẫu hoặc tải xuống tệp văn bản `UTF-8` có một số trên mỗi dòng. Dùng các số mẫu để kiểm tra quy tắc nhập số trong biểu mẫu, điền dữ liệu vào danh bạ mẫu hoặc thử cách ứng dụng lưu và hiển thị số điện thoại.
 
 ## Chọn định dạng trong nước hoặc quốc tế
 
