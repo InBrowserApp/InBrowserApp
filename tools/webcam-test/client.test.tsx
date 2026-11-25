@@ -59,15 +59,19 @@ function mount(measure = true) {
     height = nextHeight
     fireEvent(video, new Event("resize"))
   }
-  function frame(mediaTime: number, presentedFrames: number) {
+  function frame(
+    mediaTime: number,
+    presentedFrames: number,
+    presentationTime = mediaTime * 1000
+  ) {
     act(() =>
-      request.mock.lastCall?.[0](mediaTime * 1000, {
+      request.mock.lastCall?.[0](presentationTime, {
         mediaTime,
         presentedFrames,
         width,
         height,
-        presentationTime: mediaTime * 1000,
-        expectedDisplayTime: mediaTime * 1000,
+        presentationTime,
+        expectedDisplayTime: presentationTime,
       })
     )
   }
@@ -127,6 +131,41 @@ describe("WebcamTest", () => {
     expect(cancel).toHaveBeenCalledWith(7)
     expect(video.srcObject).toBeNull()
     expect(screen.queryByText("30 FPS")).toBeNull()
+  })
+
+  it("measures preview FPS in elapsed presentation time", async () => {
+    mockMedia()
+    const { frame } = mount()
+    click(messages.start)
+    await screen.findByRole("button", { name: messages.stop })
+
+    frame(0, 1, 1000)
+    frame(1, 31, 3000)
+
+    expect(screen.getByText(messages.previewFps)).toBeTruthy()
+    expect(screen.getByText("15 FPS")).toBeTruthy()
+  })
+
+  it("can stop the live camera while preview playback is pending", async () => {
+    const media = mockMedia()
+    let finishPlayback!: () => void
+    media.play.mockReturnValueOnce(
+      new Promise<void>((resolve) => {
+        finishPlayback = resolve
+      })
+    )
+    const { video } = mount()
+    click(messages.start)
+    await screen.findByRole("button", { name: messages.stop })
+    expect(video.srcObject).toBe(media.stream)
+
+    click(messages.stop)
+    expect(video.srcObject).toBeNull()
+    expect(media.stream.track.stop).toHaveBeenCalledOnce()
+    await act(async () => finishPlayback())
+
+    expect(screen.getByRole("button", { name: messages.start })).toBeTruthy()
+    expect(media.enumerateDevices).not.toHaveBeenCalled()
   })
 
   it("switches the active input and keeps using the selected size", async () => {

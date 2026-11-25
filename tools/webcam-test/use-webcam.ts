@@ -92,11 +92,11 @@ export function useWebcam() {
         { once: true }
       )
       preview.srcObject = stream
+      setStatus("active")
       await preview.play()
       if (session.current !== active) return
 
       updateSize()
-      setStatus("active")
       if (typeof preview.requestVideoFrameCallback === "function") {
         active.stopMeasuring = measureFrames(preview, (value) => {
           setFrameRate({ value, reported: false })
@@ -169,9 +169,11 @@ function measureFrames(video: HTMLVideoElement, report: (fps: number) => void) {
   function frame(_now: number, metadata: VideoFrameCallbackMetadata) {
     if (!document.hidden) {
       base ??= metadata
-      const elapsed = metadata.mediaTime - base.mediaTime
-      if (elapsed >= 1) {
-        report((metadata.presentedFrames - base.presentedFrames) / elapsed)
+      const elapsed = metadata.presentationTime - base.presentationTime
+      if (elapsed >= 1000) {
+        report(
+          ((metadata.presentedFrames - base.presentedFrames) * 1000) / elapsed
+        )
         base = metadata
       }
     }
