@@ -34,10 +34,7 @@ export default function MeshConverter({
   } = useMeshWorker<Blob>(
     async () =>
       format === "step"
-        ? new File(
-            [(await import("@workspace/model-mesh/step-example?raw")).default],
-            "mounting-bracket.step"
-          )
+        ? (await import("@workspace/model-mesh/step-example")).exampleStepFile()
         : exampleFile(format),
     createMeshConverterWorker,
     (file) => ({ file, format })

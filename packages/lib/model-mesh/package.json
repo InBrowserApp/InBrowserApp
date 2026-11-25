@@ -14,7 +14,7 @@
     "./inspect": "./src/inspect.ts",
     "./cad": "./src/cad.ts",
     "./cad-licenses": "./src/cad-licenses.ts",
-    "./step-example": "./src/mounting-bracket.step"
+    "./step-example": "./src/step-example.ts"
   },
   "dependencies": {
     "three": "catalog:",
