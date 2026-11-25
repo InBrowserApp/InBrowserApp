@@ -14,6 +14,7 @@ import {
 } from "pdf-lib"
 import type { PDFDocument, PDFPage } from "pdf-lib"
 import glyphlessFont from "./djvu-text.ttf?url"
+import type { Rotation } from "./rotation-info"
 
 export type TextZone = {
   t: string
@@ -22,6 +23,7 @@ export type TextZone = {
   w: number
   h: number
   spaceAfter?: boolean
+  unpositioned?: boolean
 }
 
 const bidi = bidiFactory()
@@ -39,6 +41,26 @@ function unicodeHex(text: string) {
     .join("")
 }
 
+function baseline(
+  rotation: Rotation,
+  left: number,
+  right: number,
+  top: number,
+  bottom: number,
+  descent: number
+) {
+  switch (rotation) {
+    case 90:
+      return setTextMatrix(0, -1, 1, 0, left + descent, top)
+    case 180:
+      return setTextMatrix(-1, 0, 0, -1, right, top - descent)
+    case 270:
+      return setTextMatrix(0, 1, -1, 0, right - descent, bottom)
+    default:
+      return setTextMatrix(1, 0, 0, 1, left, bottom + descent)
+  }
+}
+
 export function createTextLayer(document: PDFDocument) {
   const { context } = document
   const font = context.nextRef()
@@ -48,7 +70,8 @@ export function createTextLayer(document: PDFDocument) {
     page: PDFPage,
     zones: TextZone[],
     width: number,
-    height: number
+    height: number,
+    rotation: Rotation = 0
   ) {
     if (!zones.length) return
     const scaleX = page.getWidth() / width
@@ -85,21 +108,20 @@ export function createTextLayer(document: PDFDocument) {
         }
         return code
       })
-      const size = Math.max(1, zone.h * scaleY)
+      const left = zone.x * scaleX
+      const right = (zone.x + zone.w) * scaleX
+      const top = page.getHeight() - zone.y * scaleY
+      const bottom = top - zone.h * scaleY
+      const angle = zone.unpositioned ? 0 : rotation
+      const quarterTurn = angle === 90 || angle === 270
+      const size = Math.max(1, quarterTurn ? right - left : top - bottom)
+      const advance = quarterTurn ? top - bottom : right - left
       operators.push(
         setFontAndSize(fontName, size),
         setCharacterSqueeze(
-          (100_000 * Math.max(1, zone.w * scaleX)) /
-            (size * glyphWidth * glyphs.length)
+          (100_000 * Math.max(1, advance)) / (size * glyphWidth * glyphs.length)
         ),
-        setTextMatrix(
-          1,
-          0,
-          0,
-          1,
-          zone.x * scaleX,
-          page.getHeight() - (zone.y + zone.h) * scaleY + size * 0.2
-        ),
+        baseline(angle, left, right, top, bottom, size * 0.2),
         showText(PDFHexString.of(encoded.join("")))
       )
     }

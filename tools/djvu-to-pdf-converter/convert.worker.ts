@@ -3,6 +3,7 @@ import type { WasmPage } from "djvu-rs"
 import scalar from "djvu-rs/scalar/djvu_rs_bg.wasm?url"
 import simd from "djvu-rs/simd128/djvu_rs_bg.wasm?url"
 import { PDFDocument } from "pdf-lib"
+import { pageRotations } from "./rotation-info"
 import { createTextLayer } from "./text-layer"
 import type { TextZone } from "./text-layer"
 import type { Reply } from "./types"
@@ -61,6 +62,7 @@ function readText(
       y: index * lineHeight,
       w: Math.min(width, Array.from(t).length * lineHeight * 0.5),
       h: lineHeight,
+      unpositioned: true,
     }))
   } catch {
     // Preserve the scan if the optional text chunk is damaged.
@@ -70,7 +72,11 @@ function readText(
 
 async function open(file: File) {
   try {
-    return WasmDocument.from_bytes(new Uint8Array(await file.arrayBuffer()))
+    const bytes = new Uint8Array(await file.arrayBuffer())
+    return {
+      rotations: pageRotations(bytes),
+      document: WasmDocument.from_bytes(bytes),
+    }
   } catch {
     return undefined
   }
@@ -78,14 +84,15 @@ async function open(file: File) {
 
 async function convert(file: File) {
   await init(wasmSimd128Supported() ? simd : scalar)
-  const document = await open(file)
-  if (!document || !document.page_count()) {
-    document?.free()
+  const opened = await open(file)
+  const total = opened?.document.page_count() ?? 0
+  if (!opened || !total) {
+    opened?.document.free()
     send({ type: "invalid" })
     return
   }
+  const { document, rotations } = opened
   try {
-    const total = document.page_count()
     const output = await PDFDocument.create()
     const text = createTextLayer(output)
     const canvas = new OffscreenCanvas(1, 1)
@@ -138,7 +145,8 @@ async function convert(file: File) {
             page,
             readText(source, dpi, width, height),
             width,
-            height
+            height,
+            rotations.length === total ? rotations[number - 1] : 0
           )
         )
           searchable++
