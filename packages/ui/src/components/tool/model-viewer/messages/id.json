@@ -22,5 +22,6 @@
   "animation": "Animasi",
   "clip": "Klip {number}",
   "playAnimation": "Putar animasi",
-  "pauseAnimation": "Jeda animasi"
+  "pauseAnimation": "Jeda animasi",
+  "openFolder": "Buka folder"
 }

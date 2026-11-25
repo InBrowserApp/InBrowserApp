@@ -22,5 +22,6 @@
   "animation": "Animasjon",
   "clip": "Klipp {number}",
   "playAnimation": "Spill av animasjon",
-  "pauseAnimation": "Sett animasjon på pause"
+  "pauseAnimation": "Sett animasjon på pause",
+  "openFolder": "Åpne mappe"
 }

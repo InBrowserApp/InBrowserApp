@@ -22,5 +22,6 @@
   "animation": "ऐनिमेशन",
   "clip": "क्लिप {number}",
   "playAnimation": "ऐनिमेशन चलाएँ",
-  "pauseAnimation": "ऐनिमेशन रोकें"
+  "pauseAnimation": "ऐनिमेशन रोकें",
+  "openFolder": "फ़ोल्डर खोलें"
 }

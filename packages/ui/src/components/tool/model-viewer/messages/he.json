@@ -22,5 +22,6 @@
   "animation": "אנימציה",
   "clip": "מקטע {number}",
   "playAnimation": "הפעלת אנימציה",
-  "pauseAnimation": "השהיית אנימציה"
+  "pauseAnimation": "השהיית אנימציה",
+  "openFolder": "פתיחת תיקייה"
 }

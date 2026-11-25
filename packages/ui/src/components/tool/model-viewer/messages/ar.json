@@ -22,5 +22,6 @@
   "animation": "الحركة",
   "clip": "المقطع {number}",
   "playAnimation": "تشغيل الحركة",
-  "pauseAnimation": "إيقاف الحركة مؤقتًا"
+  "pauseAnimation": "إيقاف الحركة مؤقتًا",
+  "openFolder": "فتح المجلد"
 }

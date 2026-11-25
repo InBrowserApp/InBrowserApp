@@ -22,5 +22,6 @@
   "animation": "Animation",
   "clip": "Klipp {number}",
   "playAnimation": "Spela upp animation",
-  "pauseAnimation": "Pausa animation"
+  "pauseAnimation": "Pausa animation",
+  "openFolder": "Öppna mapp"
 }

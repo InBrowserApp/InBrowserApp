@@ -22,5 +22,6 @@
   "animation": "Анимация",
   "clip": "Клип {number}",
   "playAnimation": "Запустить анимацию",
-  "pauseAnimation": "Приостановить анимацию"
+  "pauseAnimation": "Приостановить анимацию",
+  "openFolder": "Открыть папку"
 }

@@ -22,5 +22,6 @@
   "animation": "แอนิเมชัน",
   "clip": "คลิป {number}",
   "playAnimation": "เล่นแอนิเมชัน",
-  "pauseAnimation": "พักแอนิเมชัน"
+  "pauseAnimation": "พักแอนิเมชัน",
+  "openFolder": "เปิดโฟลเดอร์"
 }

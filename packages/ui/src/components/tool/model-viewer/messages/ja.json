@@ -22,5 +22,6 @@
   "animation": "アニメーション",
   "clip": "クリップ {number}",
   "playAnimation": "アニメーションを再生",
-  "pauseAnimation": "アニメーションを一時停止"
+  "pauseAnimation": "アニメーションを一時停止",
+  "openFolder": "フォルダーを開く"
 }

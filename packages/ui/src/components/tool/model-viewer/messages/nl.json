@@ -22,5 +22,6 @@
   "animation": "Animatie",
   "clip": "Clip {number}",
   "playAnimation": "Animatie afspelen",
-  "pauseAnimation": "Animatie pauzeren"
+  "pauseAnimation": "Animatie pauzeren",
+  "openFolder": "Map openen"
 }

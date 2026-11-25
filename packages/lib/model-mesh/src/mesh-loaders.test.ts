@@ -100,3 +100,17 @@ it("resolves encoded and nested companion filenames without ambiguous matches", 
   const special = new File([], "paint#2%.png")
   expect(findLocalFile([special], "textures/paint#2%.png")).toBe(special)
 })
+
+it("uses the selected folder path when companion basenames repeat", () => {
+  const first = new File([], "paint.png")
+  const second = new File([], "paint.png")
+  Object.defineProperty(first, "webkitRelativePath", {
+    value: "Model/unused/paint.png",
+  })
+  Object.defineProperty(second, "webkitRelativePath", {
+    value: "Model/textures/paint.png",
+  })
+  expect(
+    findLocalFile([first, second], "Model/meshes/../textures/paint.png")
+  ).toBe(second)
+})

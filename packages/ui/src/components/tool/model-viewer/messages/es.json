@@ -22,5 +22,6 @@
   "animation": "Animación",
   "clip": "Clip {number}",
   "playAnimation": "Reproducir animación",
-  "pauseAnimation": "Pausar animación"
+  "pauseAnimation": "Pausar animación",
+  "openFolder": "Abrir carpeta"
 }

@@ -22,5 +22,6 @@
   "animation": "Hoạt ảnh",
   "clip": "Đoạn {number}",
   "playAnimation": "Phát hoạt ảnh",
-  "pauseAnimation": "Tạm dừng hoạt ảnh"
+  "pauseAnimation": "Tạm dừng hoạt ảnh",
+  "openFolder": "Mở thư mục"
 }

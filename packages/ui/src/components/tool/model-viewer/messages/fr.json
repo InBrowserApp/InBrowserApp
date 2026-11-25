@@ -22,5 +22,6 @@
   "animation": "Animation",
   "clip": "Séquence {number}",
   "playAnimation": "Lire l’animation",
-  "pauseAnimation": "Mettre l’animation en pause"
+  "pauseAnimation": "Mettre l’animation en pause",
+  "openFolder": "Ouvrir le dossier"
 }

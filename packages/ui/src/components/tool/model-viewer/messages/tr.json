@@ -22,5 +22,6 @@
   "animation": "Animasyon",
   "clip": "Klip {number}",
   "playAnimation": "Animasyonu oynat",
-  "pauseAnimation": "Animasyonu duraklat"
+  "pauseAnimation": "Animasyonu duraklat",
+  "openFolder": "Klasörü aç"
 }

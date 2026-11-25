@@ -22,5 +22,6 @@
   "animation": "動畫",
   "clip": "片段 {number}",
   "playAnimation": "播放動畫",
-  "pauseAnimation": "暫停動畫"
+  "pauseAnimation": "暫停動畫",
+  "openFolder": "開啟資料夾"
 }

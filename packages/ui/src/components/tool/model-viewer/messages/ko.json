@@ -22,5 +22,6 @@
   "animation": "애니메이션",
   "clip": "클립 {number}",
   "playAnimation": "애니메이션 재생",
-  "pauseAnimation": "애니메이션 일시 정지"
+  "pauseAnimation": "애니메이션 일시 정지",
+  "openFolder": "폴더 열기"
 }
