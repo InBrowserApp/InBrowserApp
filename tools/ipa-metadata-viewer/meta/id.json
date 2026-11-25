@@ -1,0 +1,4 @@
+{
+  "name": "Penampil Metadata IPA",
+  "description": "Buka file .ipa iOS dan periksa Info.plist-nya. Lihat nama aplikasi, ID bundel, versi, nomor build, versi OS minimum, dan platform yang didukung di browser."
+}

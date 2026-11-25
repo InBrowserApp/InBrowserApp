@@ -1,0 +1,4 @@
+{
+  "name": "IPA Metadata Viewer",
+  "description": "Open an iOS .ipa file and inspect its Info.plist. View the app name, bundle identifier, version, build, minimum OS, and supported platforms in your browser."
+}
