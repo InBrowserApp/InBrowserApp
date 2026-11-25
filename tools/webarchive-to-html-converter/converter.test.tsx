@@ -189,3 +189,45 @@ test("opens the built-in archive and shows its saved page", async () => {
     else Reflect.deleteProperty(File.prototype, "arrayBuffer")
   }
 })
+
+test("uses the saved candidate of a responsive image and embeds nested stylesheets", () => {
+  const bytes = buildBinaryPlist(
+    archive(
+      '<link rel="stylesheet" href="/style/first.css"><picture><source srcset="wide.png 2x, medium.png 1x"><img src="missing.png" srcset="small.png 1x"></picture><p>Market</p>',
+      [
+        resource(
+          "https://example.org/style/first.css",
+          "text/css",
+          '@import "second.css" screen;'
+        ),
+        resource(
+          "https://example.org/style/second.css",
+          "text/css",
+          '@import "first.css"; p {color: purple}'
+        ),
+        resource("https://example.org/market/medium.png", "image/png", png),
+      ]
+    )
+  )
+  const output = convertWebArchive(bytes, m.preview)
+  const doc = parse(output.html)
+  expect(output.missing).toBe(false)
+  expect(doc.querySelector("img")?.getAttribute("src")).toBe(
+    "data:image/png;base64,iVBORw=="
+  )
+  expect(doc.head.textContent).toContain("@media screen")
+  expect(doc.head.textContent).toContain("color: purple")
+})
+
+test("uses the MIME charset when the resource has no separate encoding label", () => {
+  const bytes = buildBinaryPlist({
+    WebMainResource: resource(
+      url,
+      'text/html; charset="shift_jis"',
+      Uint8Array.from([60, 112, 62, 130, 160, 60, 47, 112, 62])
+    ),
+  })
+  expect(
+    parse(convertWebArchive(bytes, m.preview).html).body.textContent
+  ).toContain("あ")
+})

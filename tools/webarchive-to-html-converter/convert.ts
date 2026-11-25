@@ -19,14 +19,17 @@ function resource(value: PlistValue | undefined) {
   ) {
     return null
   }
+  const mime = value.WebResourceMIMEType
+  const declaredEncoding =
+    typeof value.WebResourceTextEncodingName === "string"
+      ? value.WebResourceTextEncodingName.trim()
+      : ""
   return {
     url: value.WebResourceURL,
     bytes: value.WebResourceData,
-    type: value.WebResourceMIMEType.split(";", 1)[0]!.trim().toLowerCase(),
+    type: mime.split(";", 1)[0]!.trim().toLowerCase(),
     encoding:
-      typeof value.WebResourceTextEncodingName === "string"
-        ? value.WebResourceTextEncodingName
-        : undefined,
+      declaredEncoding || /charset\s*=\s*["']?([^\s;"']+)/i.exec(mime)?.[1],
   }
 }
 
@@ -51,6 +54,13 @@ function resolveUrl(value: string, base: string, keepFragment = false) {
   } catch {
     return value
   }
+}
+
+function sourceCandidates(srcset: string) {
+  return Array.from(
+    srcset.matchAll(/(?:^|,)\s*([^\s,]+)(?:\s+[^,]*)?/g),
+    (match) => match[1]!
+  )
 }
 
 export function convertWebArchive(bytes: Uint8Array, previewLabel: string) {
@@ -90,8 +100,9 @@ export function convertWebArchive(bytes: Uint8Array, previewLabel: string) {
   function inlineCss(
     css: string,
     from: string,
-    context: "stylesheet" | "declarationList"
-  ) {
+    context: "stylesheet" | "declarationList",
+    ancestors = new Set([from])
+  ): string {
     const tree = parse(css, { context })
     walk(tree, {
       visit: "Url",
@@ -100,7 +111,36 @@ export function convertWebArchive(bytes: Uint8Array, previewLabel: string) {
         if (data) node.value = data
       },
     })
-    return generate(tree)
+    if (tree.type !== "StyleSheet") return generate(tree)
+    return tree.children
+      .toArray()
+      .map((rule) => {
+        if (
+          rule.type !== "Atrule" ||
+          rule.name.toLowerCase() !== "import" ||
+          rule.prelude?.type !== "AtrulePrelude"
+        )
+          return generate(rule)
+        const [target, media, ...conditions] = rule.prelude.children.toArray()
+        if (
+          (target?.type !== "String" && target?.type !== "Url") ||
+          (media && media.type !== "MediaQueryList") ||
+          conditions.length
+        )
+          return generate(rule)
+        const url = resolveUrl(target.value, from)
+        const sheet = resources.get(url)
+        if (sheet?.type !== "text/css") return generate(rule)
+        if (ancestors.has(url)) return ""
+        const css = inlineCss(
+          decode(sheet),
+          url,
+          "stylesheet",
+          new Set([...ancestors, url])
+        )
+        return media ? `@media ${generate(media)}{${css}}` : css
+      })
+      .join("\n")
   }
   for (const style of page.querySelectorAll("style")) {
     const css = style.textContent ?? ""
@@ -134,11 +174,29 @@ export function convertWebArchive(bytes: Uint8Array, previewLabel: string) {
       inlineCss(node.getAttribute("style")!, base, "declarationList")
     )
   }
-  for (const image of page.querySelectorAll("img[src]")) {
-    const data = dataUrl(image.getAttribute("src")!, base)
-    if (!data) continue
-    image.setAttribute("src", data)
-    image.removeAttribute("srcset")
+  for (const image of page.querySelectorAll("img")) {
+    const src = image.getAttribute("src") ?? ""
+    const sources = [
+      image,
+      ...(image.closest("picture")?.querySelectorAll("source[srcset]") ?? []),
+    ]
+    const paths = [
+      src,
+      ...sources.flatMap((node) =>
+        sourceCandidates(node.getAttribute("srcset") ?? "")
+      ),
+    ].filter(Boolean)
+    for (const path of paths) {
+      const data = /^data:image\/(?:png|jpeg|gif|webp|avif|bmp);base64,/i.test(
+        path
+      )
+        ? path
+        : dataUrl(path, base)
+      if (!data?.startsWith("data:image/")) continue
+      image.setAttribute("src", data)
+      image.removeAttribute("srcset")
+      break
+    }
   }
   for (const link of page.querySelectorAll("a[href]")) {
     const url = link.getAttribute("href")!
