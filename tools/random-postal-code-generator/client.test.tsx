@@ -73,7 +73,11 @@ describe("Random Postal Code Generator", () => {
     expect(
       screen.queryByRole("combobox", { name: messages.zipFormat })
     ).toBeNull()
-    expect(screen.getByText(`${messages.results} · United States`)).toBeTruthy()
+    expect(
+      screen.getByRole("heading", {
+        name: `${messages.results} · United States · ZIP+4`,
+      })
+    ).toBeTruthy()
     generate()
     await waitFor(() =>
       expect(output().value.split("\n")[0]).toMatch(/^[A-Z]\d[A-Z] \d[A-Z]\d$/)

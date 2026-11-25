@@ -12,7 +12,7 @@ const patterns = {
   CN: /^\d{6}$/,
   DE: /^\d{5}$/,
   FR: /^\d{5}$/,
-  GB: /^[A-Z]{1,2}\d[A-Z0-9]? \d[ABD-HJLNP-UW-Z]{2}$/,
+  GB: /^(?:[A-Z]\d[\dABCDEFGHJKSTUW]?|[A-Z]{2}\d[\dABEHMNPRVWXY]?) \d[ABD-HJLNP-UW-Z]{2}$/,
   IN: /^[1-9]\d{5}$/,
   JP: /^\d{3}-\d{4}$/,
   KR: /^\d{5}$/,
@@ -35,6 +35,17 @@ describe("generatePostalCodes", () => {
     const [code] = await generatePostalCodes("US", 1, "zip4")
 
     expect(code).toMatch(/^\d{5}-\d{4}$/)
+  })
+
+  it("generates valid outward suffix letters for UK postcode patterns", async () => {
+    const { faker } = await import("@faker-js/faker/locale/en_GB")
+    faker.seed(42)
+
+    const codes = await generatePostalCodes("GB", 1000, "zip5")
+
+    expect(codes.some((code) => /^[A-Z]\d[A-Z] /.test(code))).toBe(true)
+    expect(codes.some((code) => /^[A-Z]{2}\d[A-Z] /.test(code))).toBe(true)
+    expect(codes.every((code) => patterns.GB.test(code))).toBe(true)
   })
 })
 

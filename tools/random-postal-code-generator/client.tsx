@@ -15,6 +15,7 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { Separator } from "@workspace/ui/components/ui/separator"
 import {
   Select,
   SelectContent,
@@ -37,7 +38,11 @@ import type { PostalCountry, ZipFormat } from "./core/postal-codes"
 export type PostalCodeMessages = typeof import("./messages/en.json")
 
 type Props = Readonly<{ lang: string; messages: PostalCodeMessages }>
-type Result = Readonly<{ country: PostalCountry; text: string }>
+type Result = Readonly<{
+  country: PostalCountry
+  format: ZipFormat
+  text: string
+}>
 
 export default function RandomPostalCodeClient({ lang, messages }: Props) {
   const countryId = useId()
@@ -46,8 +51,7 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
   const [country, setCountry] = useState(() => getDefaultPostalCountry(lang))
   const [zipFormat, setZipFormat] = useState<ZipFormat>("zip5")
   const [result, setResult] = useState<Result | null>(null)
-  const [pending, setPending] = useState(false)
-  const [failed, setFailed] = useState(false)
+  const [status, setStatus] = useState<"idle" | "pending" | "failed">("idle")
 
   const regionNames = new Intl.DisplayNames(lang, { type: "region" })
   const countries = POSTAL_COUNTRIES.map((value) => ({
@@ -55,30 +59,30 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
     label: regionNames.of(value) ?? value,
   })).sort((a, b) => a.label.localeCompare(b.label, lang))
   const output = result?.text ?? ""
+  const pending = status === "pending"
+  const zipLabels = { zip5: messages.zip5, zip4: "ZIP+4" }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const quantity = Number(new FormData(event.currentTarget).get("quantity"))
-    setPending(true)
-    setFailed(false)
+    setStatus("pending")
     try {
       const codes = await generatePostalCodes(country, quantity, zipFormat)
-      setResult({ country, text: codes.join("\n") })
+      setResult({ country, format: zipFormat, text: codes.join("\n") })
+      setStatus("idle")
     } catch {
-      setFailed(true)
-    } finally {
-      setPending(false)
+      setStatus("failed")
     }
   }
 
   return (
     <Card>
-      <CardContent className="flex flex-col gap-5">
+      <CardContent>
         <form
           onSubmit={(event) => void handleSubmit(event)}
           className="flex flex-col gap-4"
         >
-          <FieldGroup className="grid items-end gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)_minmax(0,1fr)_auto]">
+          <FieldGroup className="grid items-end gap-4 sm:grid-cols-2 lg:flex lg:flex-row">
             <Field>
               <FieldLabel htmlFor={countryId}>{messages.country}</FieldLabel>
               <Select
@@ -127,61 +131,63 @@ export default function RandomPostalCodeClient({ lang, messages }: Props) {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectItem value="zip5">{messages.zip5}</SelectItem>
-                      <SelectItem value="zip4">ZIP+4</SelectItem>
+                      <SelectItem value="zip5">{zipLabels.zip5}</SelectItem>
+                      <SelectItem value="zip4">{zipLabels.zip4}</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
               </Field>
             )}
-            <Button type="submit" disabled={pending} className="lg:col-start-4">
+            <Button type="submit" disabled={pending} className="shrink-0">
               <RefreshCcw data-icon="inline-start" />
               {pending ? messages.generating : messages.generate}
             </Button>
           </FieldGroup>
-          {failed && (
+          {status === "failed" && (
             <p role="alert" className="text-sm text-destructive">
               {messages.error}
             </p>
           )}
         </form>
-        <Card>
-          <CardHeader className="flex flex-wrap items-center justify-between gap-3">
-            <CardTitle aria-live="polite">
-              {messages.results}
-              {result && ` · ${regionNames.of(result.country)}`}
-            </CardTitle>
-            <div className="flex flex-wrap gap-2">
-              <ToolCopyButton
-                value={output}
-                copyLabel={messages.copy}
-                copiedLabel={messages.copied}
-              />
-              {result && (
-                <Button asChild variant="outline" size="sm">
-                  <a
-                    href={`data:text/plain;charset=utf-8,${encodeURIComponent(output)}`}
-                    download={`postal-codes-${result.country.toLowerCase()}.txt`}
-                  >
-                    <Download data-icon="inline-start" />
-                    {messages.download}
-                  </a>
-                </Button>
-              )}
-            </div>
-          </CardHeader>
-          <CardContent>
-            <Textarea
-              aria-label={messages.results}
-              value={output}
-              placeholder={messages.placeholder}
-              readOnly
-              dir={output ? "ltr" : undefined}
-              rows={6}
-              className="font-mono"
-            />
-          </CardContent>
-        </Card>
+      </CardContent>
+      <Separator />
+      <CardHeader className="flex flex-wrap items-center justify-between gap-3">
+        <CardTitle aria-live="polite">
+          <h2>
+            {messages.results}
+            {result && ` · ${regionNames.of(result.country)}`}
+            {result?.country === "US" && ` · ${zipLabels[result.format]}`}
+          </h2>
+        </CardTitle>
+        <div className="flex flex-wrap gap-2">
+          <ToolCopyButton
+            value={output}
+            copyLabel={messages.copy}
+            copiedLabel={messages.copied}
+          />
+          {result && (
+            <Button asChild variant="outline" size="sm">
+              <a
+                href={`data:text/plain;charset=utf-8,${encodeURIComponent(output)}`}
+                download={`postal-codes-${result.country.toLowerCase()}.txt`}
+              >
+                <Download data-icon="inline-start" />
+                {messages.download}
+              </a>
+            </Button>
+          )}
+        </div>
+      </CardHeader>
+      <CardContent>
+        <Textarea
+          aria-label={messages.results}
+          value={output}
+          placeholder={messages.placeholder}
+          readOnly
+          dir={result ? "ltr" : undefined}
+          rows={6}
+          className="font-mono"
+        />
       </CardContent>
     </Card>
   )
