@@ -138,6 +138,14 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=8192
         run: pnpm build
 
+      - name: Check Cloudflare static asset sizes
+        run: |
+          oversized_assets=$(find apps/web/dist -type f -size +"$((25 * 1024 * 1024))"c -print)
+          if [[ -n "$oversized_assets" ]]; then
+            printf 'Cloudflare Workers static assets exceed 25 MiB:\n%s\n' "$oversized_assets" >&2
+            exit 1
+          fi
+
       - name: Upload web artifact
         uses: actions/upload-artifact@v7
         with:
