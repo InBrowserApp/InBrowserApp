@@ -674,6 +674,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "GeoJSON Validator",
+    slug: "geojson-validator",
+  },
+  {
+    category: "geo",
     name: "GeoJSON Viewer",
     slug: "geojson-viewer",
   },

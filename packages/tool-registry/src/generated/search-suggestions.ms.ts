@@ -674,6 +674,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "geo",
+    name: "Pengesah GeoJSON",
+    slug: "geojson-validator",
+  },
+  {
+    category: "geo",
     name: "Pemapar GeoJSON",
     slug: "geojson-viewer",
   },

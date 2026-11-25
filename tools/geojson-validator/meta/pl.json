@@ -1,0 +1,4 @@
+{
+  "name": "Walidator GeoJSON",
+  "description": "Sprawdź składnię, obiekty, geometrie i współrzędne GeoJSON w przeglądarce. Wklej GeoJSON lub otwórz plik, aby znaleźć błędy ze ścieżkami do odpowiednich pól."
+}

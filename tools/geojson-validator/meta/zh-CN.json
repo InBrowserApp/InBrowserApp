@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON 校验器",
+  "description": "在浏览器中检查 GeoJSON 语法、要素、几何图形和坐标。粘贴 GeoJSON 或打开文件，即可查找错误及相关字段的路径。"
+}

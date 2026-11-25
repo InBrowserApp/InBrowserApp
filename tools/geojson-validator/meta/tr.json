@@ -1,0 +1,4 @@
+{
+  "name": "GeoJSON Doğrulayıcı",
+  "description": "GeoJSON sözdizimini, coğrafi detayları, geometrileri ve koordinatları tarayıcınızda denetleyin. GeoJSON yapıştırın veya dosya açın, hataları ve ilgili alanların yollarını görün."
+}
