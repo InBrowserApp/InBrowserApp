@@ -1,0 +1,97 @@
+---
+import { buttonVariants } from "@workspace/ui/components/ui/button"
+import { ArrowRight, Search } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
+
+interface Props {
+  action: string
+  label: string
+}
+
+const { action, label } = Astro.props
+const iconButton = buttonVariants({ variant: "ghost", size: "icon-sm" })
+---
+
+<button
+  type="button"
+  popovertarget="navbar-search"
+  aria-label={label}
+  class={cn(iconButton, "search-trigger")}
+>
+  <Search aria-hidden="true" />
+</button>
+<form
+  id="navbar-search"
+  popover
+  role="search"
+  aria-label={label}
+  action={action}
+  method="get"
+  class="items-center gap-1 rounded-lg border border-input bg-popover px-1 text-popover-foreground shadow-sm focus-within:ring-2 focus-within:ring-ring/50"
+>
+  <input
+    type="text"
+    name="query"
+    role="searchbox"
+    aria-label={label}
+    placeholder={label}
+    inputmode="search"
+    enterkeyhint="search"
+    autocomplete="off"
+    autofocus
+    required
+    class="h-8 min-w-0 flex-1 px-2 text-base outline-none placeholder:text-muted-foreground sm:text-sm"
+  />
+  <button type="submit" aria-label={label} class={iconButton}>
+    <ArrowRight aria-hidden="true" className="rtl:-scale-x-100" />
+  </button>
+</form>
+
+<style>
+  .search-trigger,
+  form {
+    display: none;
+  }
+
+  @supports selector(:popover-open) {
+    .search-trigger {
+      display: inline-flex;
+      anchor-name: --navbar-search-trigger;
+    }
+
+    .search-trigger:has(+ :popover-open) {
+      background: var(--muted);
+    }
+
+    form:popover-open {
+      display: flex;
+    }
+  }
+
+  form {
+    inset: auto;
+    inset-block-start: calc(var(--spacing-page-y) + 4rem);
+    inset-inline: var(--spacing-page-x);
+    inline-size: auto;
+    max-inline-size: 24rem;
+    margin: 0.5rem auto 0;
+  }
+
+  @supports (inset-inline-end: anchor(start)) {
+    form {
+      position-anchor: --navbar-search-trigger;
+      inset-block-start: anchor(bottom);
+    }
+
+    @media (width >= 48rem) {
+      form {
+        inset-block-start: anchor(center);
+        inset-inline-start: auto;
+        inset-inline-end: calc(anchor(start) + 0.375rem);
+        inline-size: 18rem;
+        margin: 0;
+        translate: 0 -50%;
+      }
+    }
+  }
+</style>
