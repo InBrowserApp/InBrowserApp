@@ -423,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "แยกรูปภาพจากการ์ตูน",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "เครื่องคำนวณดอกเบี้ยทบต้น",
     slug: "compound-interest-calculator",

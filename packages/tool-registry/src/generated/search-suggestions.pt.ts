@@ -423,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Extrair imagens de quadrinhos",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Calculadora de juros compostos",
     slug: "compound-interest-calculator",

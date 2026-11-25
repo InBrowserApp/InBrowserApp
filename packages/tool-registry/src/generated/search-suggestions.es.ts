@@ -423,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "Extraer imágenes de cómics",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "Calculadora de interés compuesto",
     slug: "compound-interest-calculator",

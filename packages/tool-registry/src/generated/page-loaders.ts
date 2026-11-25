@@ -108,6 +108,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
+  "comic-image-extractor": () => import("@tool/comic-image-extractor/page"),
   "compound-interest-calculator": () =>
     import("@tool/compound-interest-calculator/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),

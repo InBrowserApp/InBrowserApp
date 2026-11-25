@@ -423,6 +423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "color-picker",
   },
   {
+    category: "ebook",
+    name: "कॉमिक से चित्र निकालें",
+    slug: "comic-image-extractor",
+  },
+  {
     category: "misc",
     name: "चक्रवृद्धि ब्याज कैलकुलेटर",
     slug: "compound-interest-calculator",
