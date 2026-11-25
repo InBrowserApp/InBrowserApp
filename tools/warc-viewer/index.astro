@@ -5,8 +5,7 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import Client from "./client"
-import type English from "./messages/en.json"
-type Messages = typeof English
+import type { Messages } from "./client"
 
 interface Props { lang: string }
 const { lang } = Astro.props

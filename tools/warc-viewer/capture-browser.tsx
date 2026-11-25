@@ -8,7 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@workspace/ui/components/ui/tabs"
-import { isHtml } from "./archive"
+import { hasHtmlBody } from "./archive"
 import type { Capture } from "./archive"
 import type { Messages } from "./client"
 import { indexResources, previewCapture } from "./preview"
@@ -53,25 +53,17 @@ export function CaptureBrowser({
   const [query, setQuery] = useState("")
   const [page, setPage] = useState(0)
   const [selected, setSelected] = useState(() =>
-    Math.max(
-      0,
-      captures.findIndex(
-        (record) => record.body?.length && isHtml(record.contentType)
-      )
-    )
+    Math.max(0, captures.findIndex(hasHtmlBody))
   )
   const record = captures[selected]!
   const resources = useMemo(() => indexResources(captures), [captures])
-  const preview = useMemo(() => {
-    if (record.body?.length && isHtml(record.contentType)) {
-      return previewCapture(
-        { ...record, body: record.body },
-        resources,
-        m.noPreview
-      )
-    }
-    return undefined
-  }, [m.noPreview, record, resources])
+  const preview = useMemo(
+    () =>
+      hasHtmlBody(record)
+        ? previewCapture(record, resources, m.noPreview)
+        : undefined,
+    [m.noPreview, record, resources]
+  )
   const rows = useMemo(() => {
     const needle = query.trim().toLowerCase()
     return captures
@@ -127,7 +119,7 @@ export function CaptureBrowser({
                     className="h-auto min-h-11 w-full justify-start gap-2 px-2 py-1.5 text-start"
                     onClick={() => setSelected(index)}
                   >
-                    {isHtml(row.contentType) && row.body?.length ? (
+                    {hasHtmlBody(row) ? (
                       <Globe aria-hidden="true" />
                     ) : (
                       <FileText aria-hidden="true" />
@@ -178,6 +170,7 @@ export function CaptureBrowser({
       <Tabs
         key={selected}
         defaultValue={preview ? "preview" : "details"}
+        dir={lang === "ar" || lang === "he" ? "rtl" : "ltr"}
         className="min-h-0 min-w-0 gap-0"
       >
         <div className="border-b p-3">
@@ -203,7 +196,7 @@ export function CaptureBrowser({
               title={preview.title || m.preview}
               srcDoc={preview.html}
               sandbox=""
-              className="h-[min(50vh,30rem)] min-h-56 w-full flex-1 bg-white group-data-[focus=true]/workspace:h-auto"
+              className="min-h-[clamp(18rem,42vh,30rem)] w-full flex-1 bg-white group-data-[focus=true]/workspace:min-h-0"
             />
             {preview.notes.local || preview.notes.remote ? (
               <p className="border-t px-3 py-2 text-xs text-muted-foreground">

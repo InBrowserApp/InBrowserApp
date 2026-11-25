@@ -12,6 +12,7 @@ import {
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Folder, Globe } from "@workspace/ui/icons"
 import { CaptureBrowser } from "./capture-browser"
+import { openWarc, sampleArchive } from "./archive"
 import type { Capture } from "./archive"
 import type English from "./messages/en.json"
 
@@ -31,16 +32,14 @@ export default function Client({
   useEffect(() => {
     if (!file) return
     const controller = new AbortController()
-    void import("./archive")
-      .then(({ openWarc }) => openWarc(file, controller.signal))
-      .then(
-        (captures) => {
-          if (!controller.signal.aborted) setArchive({ file, captures })
-        },
-        () => {
-          if (!controller.signal.aborted) setArchive({ file, captures: null })
-        }
-      )
+    void openWarc(file, controller.signal).then(
+      (captures) => {
+        if (!controller.signal.aborted) setArchive({ file, captures })
+      },
+      () => {
+        if (!controller.signal.aborted) setArchive({ file, captures: null })
+      }
+    )
     return () => controller.abort()
   }, [file])
   const current = archive?.file === file ? archive : null
@@ -70,13 +69,7 @@ export default function Client({
               <Folder data-icon="inline-start" aria-hidden="true" />
               {m.open}
             </Button>
-            <Button
-              variant="outline"
-              onClick={async () => {
-                const { sampleArchive } = await import("./archive")
-                setFile((current) => current ?? sampleArchive())
-              }}
-            >
+            <Button variant="outline" onClick={() => setFile(sampleArchive())}>
               {m.example}
             </Button>
           </div>

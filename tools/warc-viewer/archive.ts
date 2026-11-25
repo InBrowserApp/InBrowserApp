@@ -1,3 +1,4 @@
+const previewEncodings = new Set(["", "identity", "gzip", "x-gzip", "deflate"])
 const supportedImages = /^image\/(png|jpeg|gif|webp|avif|bmp)$/
 type HeaderEntries = [string, string][]
 
@@ -24,12 +25,18 @@ export function isImage(contentType: string) {
   return supportedImages.test(mediaType(contentType))
 }
 
+export function hasHtmlBody(
+  capture: Capture
+): capture is Capture & { body: Uint8Array } {
+  return Boolean(capture.body?.length) && isHtml(capture.contentType)
+}
+
 export async function openWarc(file: File, signal: AbortSignal) {
   const { WARCParser } = await import("warcio")
   signal.throwIfAborted()
   const records: Capture[] = []
   const reader = file.stream().getReader()
-  const cancel = () => void reader.cancel().catch(() => {})
+  const cancel = () => reader.cancel().catch(() => {})
   signal.addEventListener("abort", cancel, { once: true })
   try {
     for await (const record of new WARCParser(reader)) {
@@ -48,8 +55,11 @@ export async function openWarc(file: File, signal: AbortSignal) {
         (type === "resource" ? record.warcContentType : null) ??
         ""
       const media = mediaType(contentType)
+      const encoding =
+        http?.headers.get("content-encoding")?.toLowerCase() ?? ""
       const body =
         (type === "response" || type === "resource") &&
+        previewEncodings.has(encoding) &&
         (isHtml(media) || media === "text/css" || isImage(media))
           ? await record.readFully(true)
           : undefined
@@ -72,7 +82,7 @@ export async function openWarc(file: File, signal: AbortSignal) {
     return records
   } finally {
     signal.removeEventListener("abort", cancel)
-    await reader.cancel().catch(() => {})
+    await cancel()
     reader.releaseLock()
   }
 }

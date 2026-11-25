@@ -52,7 +52,8 @@ export function previewCapture(
 ) {
   const inert = document.createElement("template").content.ownerDocument
   const root = inert.createElement("html")
-  root.innerHTML = decode(capture.body, capture.contentType)
+  const source = decode(capture.body, capture.contentType)
+  root.innerHTML = source
   const baseAttribute = root.querySelector("base[href]")?.getAttribute("href")
   const base =
     (baseAttribute && absoluteUrl(baseAttribute, capture.url)) || capture.url
@@ -71,24 +72,22 @@ export function previewCapture(
     }
     return best
   }
-  for (const link of root.querySelectorAll('link[rel~="stylesheet" i][href]')) {
+  for (const link of root.querySelectorAll<HTMLLinkElement>("link[href]")) {
+    if (!link.matches('[rel~="stylesheet" i]')) {
+      link.remove()
+      continue
+    }
     const css = resource(
       link.getAttribute("href")!,
       (value) => mediaType(value) === "text/css"
     )
     if (!css?.body) continue
     const style = inert.createElement("style")
-    style.textContent = decode(css.body, css.contentType).replace(
-      /<\/style/gi,
-      "<\\/style"
-    )
+    const text = decode(css.body, css.contentType)
     const media = link.getAttribute("media")
-    if (media) {
-      style.textContent = `@media ${media} {\n${style.textContent}\n}`.replace(
-        /<\/style/gi,
-        "<\\/style"
-      )
-    }
+    style.textContent = (
+      media ? `@media ${media} {\n${text}\n}` : text
+    ).replace(/<\/style/gi, "<\\/style")
     link.replaceWith(style)
   }
   for (const img of root.querySelectorAll("img[src]")) {
@@ -100,7 +99,9 @@ export function previewCapture(
     )
     img.removeAttribute("srcset")
   }
-  return prepareWebDocument(root.outerHTML, {
+  // The HTML fragment parser discards outer attributes such as lang and dir.
+  const opening = source.match(/<html(?=[\s>])[^>]*>/i)?.[0] ?? "<html>"
+  return prepareWebDocument(opening + root.innerHTML + "</html>", {
     emptyText: label,
     headingText: label,
   })

@@ -99,7 +99,7 @@ test("previews saved resources from the nearest capture and strips live paths", 
   const page = capture(
     "https://example.org/page",
     "text/html; charset=windows-1252",
-    '<base href="/assets/"><title>Archived page</title><link rel="stylesheet" href="page.css" media="screen"><p>Archived text</p><img src="ok.png" srcset="live.png"><img src="missing.png"><script>alert(1)</script>'
+    '<html lang="ar" dir="rtl"><base href="/assets/"><title>Archived page</title><link rel="stylesheet" href="page.css" media="screen"><p>Archived text</p><img src="ok.png" srcset="live.png"><img src="missing.png"><script>alert(1)</script>'
   )
   const resources = indexResources([
     capture("not a URL", "text/css", ""),
@@ -123,6 +123,7 @@ test("previews saved resources from the nearest capture and strips live paths", 
     m.noPreview
   )
   expect(preview.title).toBe("Archived page")
+  expect(preview.html).toMatch(/<html[^>]*lang="ar"[^>]*dir="rtl"/)
   expect(preview.html).toContain("color: red")
   expect(preview.html).toContain("data:image/png;base64,ZXhhbXBsZQ==")
   expect(preview.html).not.toMatch(/<script|srcset|missing\.png/)
@@ -239,4 +240,35 @@ test("indexes WARC 1.0 non-HTTP resources and metadata without inventing HTTP de
   await expect(
     openWarc(fileWithBytes(new Uint8Array(), "empty.warc"), signal)
   ).rejects.toThrow("Empty WARC")
+})
+
+test("keeps HTTP headers for captures with unsupported payload encodings", async () => {
+  const original = new TextDecoder().decode(await readSample())
+  const header = "Content-Type: text/html; charset=utf-8"
+  const encoding = "\r\nContent-Encoding: br"
+  const bytes = encoder.encode(
+    original
+      .replace(header, header + encoding)
+      .replace(
+        /Content-Length: (\d+)/,
+        (_, size: string) => `Content-Length: ${Number(size) + encoding.length}`
+      )
+  )
+  const [record] = await openWarc(fileWithBytes(bytes, "brotli.warc"), signal)
+  expect(record?.body).toBeUndefined()
+  expect(record?.httpHeaders).toContainEqual(["content-encoding", "br"])
+})
+
+test("keeps canonical and icon links from being counted as missing preview resources", () => {
+  const page = capture(
+    "https://example.org/",
+    "text/html",
+    '<link rel="canonical" href="https://example.org/"><link rel="icon" href="/favicon.ico"><p>Page</p>'
+  )
+  const preview = previewCapture(
+    { ...page, body: page.body! },
+    indexResources([page]),
+    m.noPreview
+  )
+  expect(preview.notes).toMatchObject({ remote: false, local: false })
 })
