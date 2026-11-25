@@ -75,6 +75,7 @@
     "@tool/cbr-to-cbz-converter": "workspace:*",
     "@tool/cbr-to-pdf-converter": "workspace:*",
     "@tool/cbz-reader": "workspace:*",
+    "@tool/cbz-to-epub-converter": "workspace:*",
     "@tool/cbz-to-pdf-converter": "workspace:*",
     "@tool/certificate-public-key-parser": "workspace:*",
     "@tool/chinese-text-converter": "workspace:*",

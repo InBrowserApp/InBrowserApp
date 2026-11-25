@@ -9,7 +9,8 @@
     "./mobi": "./src/mobi/open-book.ts",
     "./fb2": "./src/fb2/open-book.ts",
     "./document": "./src/document.ts",
-    "./write-epub": "./src/write-epub/index.ts"
+    "./write-epub": "./src/write-epub/index.ts",
+    "./write-comic-epub": "./src/write-epub/comic.ts"
   },
   "dependencies": {
     "@workspace/web-document": "workspace:*",

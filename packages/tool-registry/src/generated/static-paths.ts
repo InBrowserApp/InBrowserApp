@@ -6258,6 +6258,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbz-to-epub-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "de",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "en",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "es",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "he",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "id",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "it",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "no",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "th",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbz-to-epub-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbz-to-pdf-converter",
     language: "ar",
   },

@@ -344,6 +344,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "ebook",
+    name: "โปรแกรมแปลง CBZ เป็น EPUB",
+    slug: "cbz-to-epub-converter",
+  },
+  {
+    category: "ebook",
     name: "โปรแกรมแปลง CBZ เป็น PDF",
     slug: "cbz-to-pdf-converter",
   },

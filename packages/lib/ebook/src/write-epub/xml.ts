@@ -42,7 +42,7 @@ export function xhtml(title: string, language: string) {
   )
   const body = element(doc, "body", { dir: "auto" })
   doc.documentElement.append(head, body)
-  return { doc, body }
+  return { doc, head, body }
 }
 export function serialize(doc: Document) {
   return (

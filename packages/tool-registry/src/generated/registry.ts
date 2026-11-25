@@ -8782,6 +8782,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cbz-to-epub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: [
+      "cbz",
+      "cbr",
+      "epub",
+      "comic",
+      "manga",
+      "archive",
+      "fixed layout",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CBZ إلى EPUB",
+        description:
+          "حوّل القصص المصوّرة والمانغا من CBZ أو CBR إلى EPUB بتخطيط ثابت في متصفحك. احتفظ بترتيب الصفحات ونسب أبعاد الصور، مع غلاف يظهر في تطبيقات قراءة EPUB.",
+      },
+      de: {
+        name: "CBZ in EPUB umwandeln",
+        description:
+          "Wandle Comics und Manga im CBZ- oder CBR-Format direkt im Browser in EPUB mit festem Layout um. Die Seitenfolge und Bildproportionen bleiben erhalten. Das erste Bild dient als Titelbild.",
+      },
+      en: {
+        name: "CBZ to EPUB Converter",
+        description:
+          "Convert CBZ or CBR comics and manga to fixed-layout EPUB in your browser. Keep page order, image proportions, and a cover for EPUB reading apps.",
+      },
+      es: {
+        name: "Convertidor de CBZ a EPUB",
+        description:
+          "Convierte cómics y manga CBZ o CBR en EPUB de diseño fijo desde tu navegador. Conserva el orden y las proporciones de las páginas e incluye una portada para las aplicaciones de lectura de EPUB.",
+      },
+      fr: {
+        name: "Convertisseur CBZ en EPUB",
+        description:
+          "Convertissez vos BD et mangas CBZ ou CBR en EPUB à mise en page fixe dans votre navigateur. Conservez l’ordre des pages et les proportions des images, avec une couverture pour votre application de lecture EPUB.",
+      },
+      he: {
+        name: "ממיר CBZ ל־EPUB",
+        description:
+          "המירו קובצי קומיקס ומאנגה בפורמט CBZ או CBR ל־EPUB בפריסה קבועה בדפדפן. סדר העמודים ויחסי הממדים של התמונות נשמרים, והקובץ כולל כריכה ליישומי קריאת EPUB.",
+      },
+      hi: {
+        name: "CBZ से EPUB कन्वर्टर",
+        description:
+          "CBZ या CBR कॉमिक और मांगा को ब्राउज़र में स्थिर लेआउट वाले EPUB में बदलें। पृष्ठों का क्रम और इमेज के अनुपात बने रहते हैं और पहली इमेज कवर बनती है।",
+      },
+      id: {
+        name: "Konverter CBZ ke EPUB",
+        description:
+          "Ubah komik dan manga CBZ atau CBR menjadi EPUB dengan tata letak tetap langsung di browser. Pertahankan urutan halaman dan proporsi gambar, dengan gambar pertama sebagai sampul.",
+      },
+      it: {
+        name: "Convertitore da CBZ a EPUB",
+        description:
+          "Converti fumetti e manga CBZ o CBR in EPUB a impaginazione fissa nel browser. Conserva l’ordine e le proporzioni delle pagine e ottieni un EPUB con copertina per le app di lettura.",
+      },
+      ja: {
+        name: "CBZをEPUBに変換",
+        description:
+          "CBZ や CBR 形式の漫画をブラウザーで固定レイアウトの EPUB に変換します。ページ順と画像の縦横比を保ち、表紙付きのファイルを EPUB リーダーで読めます。",
+      },
+      ko: {
+        name: "CBZ를 EPUB으로 변환",
+        description:
+          "브라우저에서 CBZ 또는 CBR 만화를 고정 레이아웃 EPUB으로 변환하세요. 페이지 순서와 이미지 비율을 유지하고 표지가 포함된 파일을 EPUB 읽기 앱에서 열 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CBZ kepada EPUB",
+        description:
+          "Tukar komik dan manga CBZ atau CBR kepada EPUB dengan susun atur tetap dalam pelayar anda. Kekalkan susunan halaman dan perkadaran imej serta sediakan kulit depan untuk aplikasi pembaca EPUB.",
+      },
+      nl: {
+        name: "CBZ-naar-EPUB-converter",
+        description:
+          "Zet strips en manga in CBZ- of CBR-formaat in je browser om naar EPUB met een vaste opmaak. De paginavolgorde en beeldverhoudingen blijven behouden. De eerste afbeelding wordt de omslag.",
+      },
+      no: {
+        name: "Konverter CBZ til EPUB",
+        description:
+          "Konverter tegneserier og manga fra CBZ eller CBR til EPUB med fast sideoppsett i nettleseren. Behold siderekkefølgen og proporsjonene i bildene, og få en fil med omslag til EPUB-lesere.",
+      },
+      pl: {
+        name: "Konwerter CBZ na EPUB",
+        description:
+          "Konwertuj komiksy i mangę z CBZ lub CBR na EPUB o stałym układzie stron w przeglądarce. Zachowaj kolejność stron i proporcje obrazów. Pierwszy obraz stanie się okładką.",
+      },
+      pt: {
+        name: "Conversor de CBZ para EPUB",
+        description:
+          "Converta quadrinhos e mangás de CBZ ou CBR para EPUB com layout fixo no navegador. O EPUB mantém a ordem e as proporções das páginas e usa a primeira imagem como capa.",
+      },
+      ru: {
+        name: "Конвертер CBZ в EPUB",
+        description:
+          "Преобразуйте комиксы и мангу из CBZ или CBR в EPUB с фиксированной вёрсткой прямо в браузере. Порядок и пропорции страниц сохраняются, первая страница становится обложкой.",
+      },
+      sv: {
+        name: "Konverterare från CBZ till EPUB",
+        description:
+          "Konvertera serier och manga från CBZ eller CBR till EPUB med fast layout i webbläsaren. Sidordningen och bildernas proportioner bevaras, och den första bilden blir omslag.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBZ เป็น EPUB",
+        description:
+          "แปลงการ์ตูนหรือมังงะ CBZ และ CBR เป็น EPUB แบบจัดหน้าคงที่ในเบราว์เซอร์ คงลำดับหน้าและสัดส่วนภาพ พร้อมปกสำหรับเปิดอ่านในแอปที่รองรับ EPUB",
+      },
+      tr: {
+        name: "CBZ’den EPUB’a Dönüştürücü",
+        description:
+          "CBZ veya CBR biçimindeki çizgi roman ve mangaları tarayıcınızda sabit düzenli EPUB’a dönüştürün. EPUB, sayfa sırasını ve görsellerin en boy oranını korur, ilk görseli kapak olarak kullanır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBZ sang EPUB",
+        description:
+          "Chuyển truyện tranh CBZ hoặc CBR sang EPUB có bố cục cố định ngay trong trình duyệt. Giữ nguyên thứ tự trang và tỷ lệ ảnh, đồng thời dùng ảnh đầu tiên làm bìa.",
+      },
+      "zh-CN": {
+        name: "CBZ 转 EPUB 转换器",
+        description:
+          "在浏览器中将 CBZ 或 CBR 漫画转为固定版式 EPUB，保留页面顺序和图片比例，并用首页作为封面，方便在 EPUB 阅读应用中打开。",
+      },
+      "zh-TW": {
+        name: "CBZ 轉 EPUB",
+        description:
+          "在瀏覽器中將 CBZ、CBR 漫畫或內含漫畫圖片的 ZIP、RAR 壓縮檔轉成固定版面 EPUB。保留頁面順序與圖片比例，並以第一張圖片作為封面。",
+      },
+    },
+  },
+  {
     slug: "cbz-to-pdf-converter",
     category: "ebook",
     secondaryCategories: ["pdf"],
@@ -66875,6 +67007,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CBZ 漫畫閱讀器",
         description:
           "閱讀本機 CBZ 漫畫，支援自然頁面排序、縮圖、縮放、符合頁面與寬度，以及由左至右或由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  "cbz-to-epub-converter": {
+    slug: "cbz-to-epub-converter",
+    category: "ebook",
+    icon: "book-open",
+    tags: [
+      "cbz",
+      "cbr",
+      "epub",
+      "comic",
+      "manga",
+      "archive",
+      "fixed layout",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل CBZ إلى EPUB",
+        description:
+          "حوّل القصص المصوّرة والمانغا من CBZ أو CBR إلى EPUB بتخطيط ثابت في متصفحك. احتفظ بترتيب الصفحات ونسب أبعاد الصور، مع غلاف يظهر في تطبيقات قراءة EPUB.",
+      },
+      de: {
+        name: "CBZ in EPUB umwandeln",
+        description:
+          "Wandle Comics und Manga im CBZ- oder CBR-Format direkt im Browser in EPUB mit festem Layout um. Die Seitenfolge und Bildproportionen bleiben erhalten. Das erste Bild dient als Titelbild.",
+      },
+      en: {
+        name: "CBZ to EPUB Converter",
+        description:
+          "Convert CBZ or CBR comics and manga to fixed-layout EPUB in your browser. Keep page order, image proportions, and a cover for EPUB reading apps.",
+      },
+      es: {
+        name: "Convertidor de CBZ a EPUB",
+        description:
+          "Convierte cómics y manga CBZ o CBR en EPUB de diseño fijo desde tu navegador. Conserva el orden y las proporciones de las páginas e incluye una portada para las aplicaciones de lectura de EPUB.",
+      },
+      fr: {
+        name: "Convertisseur CBZ en EPUB",
+        description:
+          "Convertissez vos BD et mangas CBZ ou CBR en EPUB à mise en page fixe dans votre navigateur. Conservez l’ordre des pages et les proportions des images, avec une couverture pour votre application de lecture EPUB.",
+      },
+      he: {
+        name: "ממיר CBZ ל־EPUB",
+        description:
+          "המירו קובצי קומיקס ומאנגה בפורמט CBZ או CBR ל־EPUB בפריסה קבועה בדפדפן. סדר העמודים ויחסי הממדים של התמונות נשמרים, והקובץ כולל כריכה ליישומי קריאת EPUB.",
+      },
+      hi: {
+        name: "CBZ से EPUB कन्वर्टर",
+        description:
+          "CBZ या CBR कॉमिक और मांगा को ब्राउज़र में स्थिर लेआउट वाले EPUB में बदलें। पृष्ठों का क्रम और इमेज के अनुपात बने रहते हैं और पहली इमेज कवर बनती है।",
+      },
+      id: {
+        name: "Konverter CBZ ke EPUB",
+        description:
+          "Ubah komik dan manga CBZ atau CBR menjadi EPUB dengan tata letak tetap langsung di browser. Pertahankan urutan halaman dan proporsi gambar, dengan gambar pertama sebagai sampul.",
+      },
+      it: {
+        name: "Convertitore da CBZ a EPUB",
+        description:
+          "Converti fumetti e manga CBZ o CBR in EPUB a impaginazione fissa nel browser. Conserva l’ordine e le proporzioni delle pagine e ottieni un EPUB con copertina per le app di lettura.",
+      },
+      ja: {
+        name: "CBZをEPUBに変換",
+        description:
+          "CBZ や CBR 形式の漫画をブラウザーで固定レイアウトの EPUB に変換します。ページ順と画像の縦横比を保ち、表紙付きのファイルを EPUB リーダーで読めます。",
+      },
+      ko: {
+        name: "CBZ를 EPUB으로 변환",
+        description:
+          "브라우저에서 CBZ 또는 CBR 만화를 고정 레이아웃 EPUB으로 변환하세요. 페이지 순서와 이미지 비율을 유지하고 표지가 포함된 파일을 EPUB 읽기 앱에서 열 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CBZ kepada EPUB",
+        description:
+          "Tukar komik dan manga CBZ atau CBR kepada EPUB dengan susun atur tetap dalam pelayar anda. Kekalkan susunan halaman dan perkadaran imej serta sediakan kulit depan untuk aplikasi pembaca EPUB.",
+      },
+      nl: {
+        name: "CBZ-naar-EPUB-converter",
+        description:
+          "Zet strips en manga in CBZ- of CBR-formaat in je browser om naar EPUB met een vaste opmaak. De paginavolgorde en beeldverhoudingen blijven behouden. De eerste afbeelding wordt de omslag.",
+      },
+      no: {
+        name: "Konverter CBZ til EPUB",
+        description:
+          "Konverter tegneserier og manga fra CBZ eller CBR til EPUB med fast sideoppsett i nettleseren. Behold siderekkefølgen og proporsjonene i bildene, og få en fil med omslag til EPUB-lesere.",
+      },
+      pl: {
+        name: "Konwerter CBZ na EPUB",
+        description:
+          "Konwertuj komiksy i mangę z CBZ lub CBR na EPUB o stałym układzie stron w przeglądarce. Zachowaj kolejność stron i proporcje obrazów. Pierwszy obraz stanie się okładką.",
+      },
+      pt: {
+        name: "Conversor de CBZ para EPUB",
+        description:
+          "Converta quadrinhos e mangás de CBZ ou CBR para EPUB com layout fixo no navegador. O EPUB mantém a ordem e as proporções das páginas e usa a primeira imagem como capa.",
+      },
+      ru: {
+        name: "Конвертер CBZ в EPUB",
+        description:
+          "Преобразуйте комиксы и мангу из CBZ или CBR в EPUB с фиксированной вёрсткой прямо в браузере. Порядок и пропорции страниц сохраняются, первая страница становится обложкой.",
+      },
+      sv: {
+        name: "Konverterare från CBZ till EPUB",
+        description:
+          "Konvertera serier och manga från CBZ eller CBR till EPUB med fast layout i webbläsaren. Sidordningen och bildernas proportioner bevaras, och den första bilden blir omslag.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBZ เป็น EPUB",
+        description:
+          "แปลงการ์ตูนหรือมังงะ CBZ และ CBR เป็น EPUB แบบจัดหน้าคงที่ในเบราว์เซอร์ คงลำดับหน้าและสัดส่วนภาพ พร้อมปกสำหรับเปิดอ่านในแอปที่รองรับ EPUB",
+      },
+      tr: {
+        name: "CBZ’den EPUB’a Dönüştürücü",
+        description:
+          "CBZ veya CBR biçimindeki çizgi roman ve mangaları tarayıcınızda sabit düzenli EPUB’a dönüştürün. EPUB, sayfa sırasını ve görsellerin en boy oranını korur, ilk görseli kapak olarak kullanır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBZ sang EPUB",
+        description:
+          "Chuyển truyện tranh CBZ hoặc CBR sang EPUB có bố cục cố định ngay trong trình duyệt. Giữ nguyên thứ tự trang và tỷ lệ ảnh, đồng thời dùng ảnh đầu tiên làm bìa.",
+      },
+      "zh-CN": {
+        name: "CBZ 转 EPUB 转换器",
+        description:
+          "在浏览器中将 CBZ 或 CBR 漫画转为固定版式 EPUB，保留页面顺序和图片比例，并用首页作为封面，方便在 EPUB 阅读应用中打开。",
+      },
+      "zh-TW": {
+        name: "CBZ 轉 EPUB",
+        description:
+          "在瀏覽器中將 CBZ、CBR 漫畫或內含漫畫圖片的 ZIP、RAR 壓縮檔轉成固定版面 EPUB。保留頁面順序與圖片比例，並以第一張圖片作為封面。",
       },
     },
   },
