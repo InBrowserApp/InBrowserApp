@@ -1553,6 +1553,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "misc",
+    name: "Ujian Kadar Segar Semula Skrin",
+    slug: "refresh-rate-test",
+  },
+  {
     category: "text",
     name: "Penguji & Pengganti Regex",
     slug: "regex-tester-replacer",

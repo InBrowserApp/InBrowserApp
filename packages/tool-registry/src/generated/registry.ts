@@ -39461,6 +39461,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "refresh-rate-test",
+    category: "misc",
+    icon: "activity",
+    tags: ["screen", "monitor", "display", "refresh rate", "hz", "test"],
+    locales: {
+      ar: {
+        name: "اختبار معدل تحديث الشاشة",
+        description:
+          "قس معدل تحديث شاشتك عبر الإنترنت بالهرتز واعرف الفاصل الزمني بين الإطارات. أعد الاختبار بعد الانتقال إلى شاشة أخرى أو تغيير إعدادات العرض.",
+      },
+      de: {
+        name: "Bildwiederholrate testen",
+        description:
+          "Miss die Bildwiederholrate deines Bildschirms online in Hz und sieh, wie viel Zeit zwischen zwei Bildern liegt. Wiederhole den Test nach einem Bildschirmwechsel oder einer Änderung der Anzeigeeinstellungen.",
+      },
+      en: {
+        name: "Refresh Rate Test",
+        description:
+          "Measure your screen refresh rate online in Hz and see how long each frame takes. Run the test again after switching displays or changing display settings.",
+      },
+      es: {
+        name: "Prueba de frecuencia de actualización",
+        description:
+          "Mide en línea la frecuencia de actualización de tu pantalla en Hz y consulta el tiempo entre fotogramas. Repite la prueba al cambiar de pantalla o de configuración.",
+      },
+      fr: {
+        name: "Test de fréquence de rafraîchissement",
+        description:
+          "Mesurez en ligne la fréquence de rafraîchissement de votre écran en Hz et le temps entre deux images. Relancez le test après avoir changé d’écran ou de réglages d’affichage.",
+      },
+      he: {
+        name: "בדיקת קצב הרענון של המסך",
+        description:
+          "מדדו בדפדפן את קצב רענון המסך ב־Hz ואת הזמן בין פריימים. הריצו את הבדיקה מחדש אחרי מעבר למסך אחר או שינוי בהגדרות התצוגה.",
+      },
+      hi: {
+        name: "स्क्रीन रिफ़्रेश रेट टेस्ट",
+        description:
+          "अपनी स्क्रीन का रिफ़्रेश रेट ऑनलाइन हर्ट्ज़ (Hz) में मापें और देखें कि दो फ़्रेम के बीच कितना समय लगता है। डिस्प्ले या उसकी सेटिंग बदलने के बाद फिर मापें।",
+      },
+      id: {
+        name: "Tes Refresh Rate Layar",
+        description:
+          "Ukur refresh rate layar secara online dalam Hz dan lihat jeda antarframe. Ukur ulang setelah berganti layar atau mengubah setelan tampilan.",
+      },
+      it: {
+        name: "Test della frequenza di aggiornamento",
+        description:
+          "Misura online la frequenza di aggiornamento dello schermo in Hz e controlla l'intervallo tra i fotogrammi. Ripeti il test dopo aver cambiato schermo o modificato le sue impostazioni.",
+      },
+      ja: {
+        name: "リフレッシュレートテスト",
+        description:
+          "画面のリフレッシュレートをオンラインで測定し、周波数（Hz）と1フレームあたりの時間を確認できます。画面を切り替えたり表示設定を変更したりしたら、もう一度測定してください。",
+      },
+      ko: {
+        name: "화면 주사율 테스트",
+        description:
+          "화면 주사율을 온라인에서 Hz 단위로 측정하고 프레임 간격을 확인하세요. 화면을 바꾸거나 디스플레이 설정을 변경한 뒤 다시 측정할 수 있습니다.",
+      },
+      ms: {
+        name: "Ujian Kadar Segar Semula Skrin",
+        description:
+          "Ukur kadar segar semula skrin dalam talian dalam Hz dan lihat selang antara bingkai. Ukur semula selepas menukar skrin atau mengubah tetapan paparan.",
+      },
+      nl: {
+        name: "Vernieuwingsfrequentie meten",
+        description:
+          "Meet online de vernieuwingsfrequentie van je scherm in Hz en bekijk de tijd tussen frames. Meet opnieuw als je van scherm wisselt of de beeldscherminstellingen wijzigt.",
+      },
+      no: {
+        name: "Test av skjermens oppdateringsfrekvens",
+        description:
+          "Mål skjermens oppdateringsfrekvens på nett i Hz, og se tiden mellom bildene. Mål på nytt når du bytter skjerm eller endrer skjerminnstillingene.",
+      },
+      pl: {
+        name: "Test częstotliwości odświeżania ekranu",
+        description:
+          "Zmierz online częstotliwość odświeżania ekranu w Hz i sprawdź odstęp między klatkami. Powtórz test po zmianie ekranu lub ustawień wyświetlania.",
+      },
+      pt: {
+        name: "Teste da taxa de atualização do ecrã",
+        description:
+          "Meça online a taxa de atualização do ecrã em Hz e veja o intervalo entre fotogramas. Repita o teste se mudar de ecrã ou alterar as definições de visualização.",
+      },
+      ru: {
+        name: "Тест частоты обновления экрана",
+        description:
+          "Измерьте частоту обновления экрана онлайн в герцах и узнайте интервал между кадрами. Повторите тест после смены дисплея или его настроек.",
+      },
+      sv: {
+        name: "Test av skärmens uppdateringsfrekvens",
+        description:
+          "Mät skärmens uppdateringsfrekvens online i Hz och se tiden mellan bildrutorna. Mät igen när du byter skärm eller ändrar bildskärmsinställningarna.",
+      },
+      th: {
+        name: "ทดสอบอัตรารีเฟรชหน้าจอ",
+        description:
+          "วัดอัตรารีเฟรชหน้าจอออนไลน์เป็นเฮิรตซ์ (Hz) และดูระยะเวลาต่อเฟรม วัดอีกครั้งได้หลังจากสลับจอหรือเปลี่ยนการตั้งค่าการแสดงผล",
+      },
+      tr: {
+        name: "Ekran Yenileme Hızı Testi",
+        description:
+          "Ekran yenileme hızınızı çevrimiçi olarak Hz cinsinden, kareler arasındaki süreyi de milisaniye cinsinden ölçün. Ekranı veya görüntü ayarlarını değiştirince testi tekrarlayın.",
+      },
+      vi: {
+        name: "Kiểm tra tần số quét màn hình",
+        description:
+          "Đo tần số quét màn hình trực tuyến theo đơn vị Hz và xem khoảng thời gian giữa hai khung hình. Đo lại sau khi đổi màn hình hoặc chỉnh cài đặt hiển thị.",
+      },
+      "zh-CN": {
+        name: "屏幕刷新率测试",
+        description:
+          "在线测量屏幕刷新率（Hz），查看每帧的间隔时间。切换显示器或更改显示设置后可重新测量。",
+      },
+      "zh-TW": {
+        name: "螢幕更新率測試",
+        description:
+          "線上測量螢幕更新率（Hz），查看每個畫格的間隔時間。切換顯示器或變更顯示設定後可重新測量。",
+      },
+    },
+  },
+  {
     slug: "regex-tester-replacer",
     category: "text",
     icon: "search",
@@ -93759,6 +93882,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "隨機密碼產生器",
         description: "在瀏覽器中產生隨機密碼、口令短語、分組代碼和數字 PIN。",
+      },
+    },
+  },
+  "refresh-rate-test": {
+    slug: "refresh-rate-test",
+    category: "misc",
+    icon: "activity",
+    tags: ["screen", "monitor", "display", "refresh rate", "hz", "test"],
+    locales: {
+      ar: {
+        name: "اختبار معدل تحديث الشاشة",
+        description:
+          "قس معدل تحديث شاشتك عبر الإنترنت بالهرتز واعرف الفاصل الزمني بين الإطارات. أعد الاختبار بعد الانتقال إلى شاشة أخرى أو تغيير إعدادات العرض.",
+      },
+      de: {
+        name: "Bildwiederholrate testen",
+        description:
+          "Miss die Bildwiederholrate deines Bildschirms online in Hz und sieh, wie viel Zeit zwischen zwei Bildern liegt. Wiederhole den Test nach einem Bildschirmwechsel oder einer Änderung der Anzeigeeinstellungen.",
+      },
+      en: {
+        name: "Refresh Rate Test",
+        description:
+          "Measure your screen refresh rate online in Hz and see how long each frame takes. Run the test again after switching displays or changing display settings.",
+      },
+      es: {
+        name: "Prueba de frecuencia de actualización",
+        description:
+          "Mide en línea la frecuencia de actualización de tu pantalla en Hz y consulta el tiempo entre fotogramas. Repite la prueba al cambiar de pantalla o de configuración.",
+      },
+      fr: {
+        name: "Test de fréquence de rafraîchissement",
+        description:
+          "Mesurez en ligne la fréquence de rafraîchissement de votre écran en Hz et le temps entre deux images. Relancez le test après avoir changé d’écran ou de réglages d’affichage.",
+      },
+      he: {
+        name: "בדיקת קצב הרענון של המסך",
+        description:
+          "מדדו בדפדפן את קצב רענון המסך ב־Hz ואת הזמן בין פריימים. הריצו את הבדיקה מחדש אחרי מעבר למסך אחר או שינוי בהגדרות התצוגה.",
+      },
+      hi: {
+        name: "स्क्रीन रिफ़्रेश रेट टेस्ट",
+        description:
+          "अपनी स्क्रीन का रिफ़्रेश रेट ऑनलाइन हर्ट्ज़ (Hz) में मापें और देखें कि दो फ़्रेम के बीच कितना समय लगता है। डिस्प्ले या उसकी सेटिंग बदलने के बाद फिर मापें।",
+      },
+      id: {
+        name: "Tes Refresh Rate Layar",
+        description:
+          "Ukur refresh rate layar secara online dalam Hz dan lihat jeda antarframe. Ukur ulang setelah berganti layar atau mengubah setelan tampilan.",
+      },
+      it: {
+        name: "Test della frequenza di aggiornamento",
+        description:
+          "Misura online la frequenza di aggiornamento dello schermo in Hz e controlla l'intervallo tra i fotogrammi. Ripeti il test dopo aver cambiato schermo o modificato le sue impostazioni.",
+      },
+      ja: {
+        name: "リフレッシュレートテスト",
+        description:
+          "画面のリフレッシュレートをオンラインで測定し、周波数（Hz）と1フレームあたりの時間を確認できます。画面を切り替えたり表示設定を変更したりしたら、もう一度測定してください。",
+      },
+      ko: {
+        name: "화면 주사율 테스트",
+        description:
+          "화면 주사율을 온라인에서 Hz 단위로 측정하고 프레임 간격을 확인하세요. 화면을 바꾸거나 디스플레이 설정을 변경한 뒤 다시 측정할 수 있습니다.",
+      },
+      ms: {
+        name: "Ujian Kadar Segar Semula Skrin",
+        description:
+          "Ukur kadar segar semula skrin dalam talian dalam Hz dan lihat selang antara bingkai. Ukur semula selepas menukar skrin atau mengubah tetapan paparan.",
+      },
+      nl: {
+        name: "Vernieuwingsfrequentie meten",
+        description:
+          "Meet online de vernieuwingsfrequentie van je scherm in Hz en bekijk de tijd tussen frames. Meet opnieuw als je van scherm wisselt of de beeldscherminstellingen wijzigt.",
+      },
+      no: {
+        name: "Test av skjermens oppdateringsfrekvens",
+        description:
+          "Mål skjermens oppdateringsfrekvens på nett i Hz, og se tiden mellom bildene. Mål på nytt når du bytter skjerm eller endrer skjerminnstillingene.",
+      },
+      pl: {
+        name: "Test częstotliwości odświeżania ekranu",
+        description:
+          "Zmierz online częstotliwość odświeżania ekranu w Hz i sprawdź odstęp między klatkami. Powtórz test po zmianie ekranu lub ustawień wyświetlania.",
+      },
+      pt: {
+        name: "Teste da taxa de atualização do ecrã",
+        description:
+          "Meça online a taxa de atualização do ecrã em Hz e veja o intervalo entre fotogramas. Repita o teste se mudar de ecrã ou alterar as definições de visualização.",
+      },
+      ru: {
+        name: "Тест частоты обновления экрана",
+        description:
+          "Измерьте частоту обновления экрана онлайн в герцах и узнайте интервал между кадрами. Повторите тест после смены дисплея или его настроек.",
+      },
+      sv: {
+        name: "Test av skärmens uppdateringsfrekvens",
+        description:
+          "Mät skärmens uppdateringsfrekvens online i Hz och se tiden mellan bildrutorna. Mät igen när du byter skärm eller ändrar bildskärmsinställningarna.",
+      },
+      th: {
+        name: "ทดสอบอัตรารีเฟรชหน้าจอ",
+        description:
+          "วัดอัตรารีเฟรชหน้าจอออนไลน์เป็นเฮิรตซ์ (Hz) และดูระยะเวลาต่อเฟรม วัดอีกครั้งได้หลังจากสลับจอหรือเปลี่ยนการตั้งค่าการแสดงผล",
+      },
+      tr: {
+        name: "Ekran Yenileme Hızı Testi",
+        description:
+          "Ekran yenileme hızınızı çevrimiçi olarak Hz cinsinden, kareler arasındaki süreyi de milisaniye cinsinden ölçün. Ekranı veya görüntü ayarlarını değiştirince testi tekrarlayın.",
+      },
+      vi: {
+        name: "Kiểm tra tần số quét màn hình",
+        description:
+          "Đo tần số quét màn hình trực tuyến theo đơn vị Hz và xem khoảng thời gian giữa hai khung hình. Đo lại sau khi đổi màn hình hoặc chỉnh cài đặt hiển thị.",
+      },
+      "zh-CN": {
+        name: "屏幕刷新率测试",
+        description:
+          "在线测量屏幕刷新率（Hz），查看每帧的间隔时间。切换显示器或更改显示设置后可重新测量。",
+      },
+      "zh-TW": {
+        name: "螢幕更新率測試",
+        description:
+          "線上測量螢幕更新率（Hz），查看每個畫格的間隔時間。切換顯示器或變更顯示設定後可重新測量。",
       },
     },
   },

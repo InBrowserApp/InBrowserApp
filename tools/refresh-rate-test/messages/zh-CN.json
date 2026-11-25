@@ -1,0 +1,8 @@
+{
+  "estimate": "估计刷新率",
+  "frameInterval": "典型帧间隔",
+  "measuring": "正在测量屏幕刷新率…",
+  "paused": "标签页隐藏时，测量会暂停。",
+  "unavailable": "无法获得测量结果。请保持此标签页可见，然后重新测量。",
+  "measureAgain": "重新测量"
+}

@@ -1,0 +1,8 @@
+{
+  "estimate": "Szacowana częstotliwość odświeżania",
+  "frameInterval": "Typowy odstęp między klatkami",
+  "measuring": "Trwa pomiar częstotliwości odświeżania…",
+  "paused": "Pomiar zostanie wstrzymany, gdy karta będzie ukryta.",
+  "unavailable": "Nie udało się uzyskać wyniku. Pozostaw kartę widoczną i powtórz pomiar.",
+  "measureAgain": "Zmierz ponownie"
+}

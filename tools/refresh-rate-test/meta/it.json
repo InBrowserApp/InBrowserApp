@@ -1,0 +1,4 @@
+{
+  "name": "Test della frequenza di aggiornamento",
+  "description": "Misura online la frequenza di aggiornamento dello schermo in Hz e controlla l'intervallo tra i fotogrammi. Ripeti il test dopo aver cambiato schermo o modificato le sue impostazioni."
+}

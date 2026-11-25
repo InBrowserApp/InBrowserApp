@@ -1,0 +1,8 @@
+{
+  "estimate": "Tahmini yenileme hızı",
+  "frameInterval": "Tipik kare aralığı",
+  "measuring": "Ekran yenileme hızı ölçülüyor…",
+  "paused": "Bu sekme görünür değilken ölçüm duraklatılır.",
+  "unavailable": "Ölçüm sonucu alınamadı. Bu sekmeyi görünür tutup tekrar ölçün.",
+  "measureAgain": "Tekrar ölç"
+}

@@ -1553,6 +1553,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "random-password-generator",
   },
   {
+    category: "misc",
+    name: "螢幕更新率測試",
+    slug: "refresh-rate-test",
+  },
+  {
     category: "text",
     name: "正則測試與取代",
     slug: "regex-tester-replacer",

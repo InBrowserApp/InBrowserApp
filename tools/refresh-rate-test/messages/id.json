@@ -1,0 +1,8 @@
+{
+  "estimate": "Perkiraan refresh rate",
+  "frameInterval": "Jeda tipikal antarframe",
+  "measuring": "Mengukur refresh rate layar…",
+  "paused": "Pengukuran dijeda saat tab ini tidak terlihat.",
+  "unavailable": "Hasil pengukuran tidak tersedia. Biarkan tab ini terlihat, lalu ukur ulang.",
+  "measureAgain": "Ukur ulang"
+}
