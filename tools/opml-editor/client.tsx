@@ -146,7 +146,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
       {fileError && (
         <div className="border-b p-3">
           <Alert variant="destructive">
-            <AlertDescription role="alert">{m.invalid}</AlertDescription>
+            <AlertDescription>{m.invalid}</AlertDescription>
           </Alert>
         </div>
       )}

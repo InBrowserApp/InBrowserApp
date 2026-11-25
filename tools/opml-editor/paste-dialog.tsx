@@ -67,7 +67,7 @@ export function PasteDialog({
           />
           {error && (
             <Alert variant="destructive">
-              <AlertDescription role="alert">{m.invalid}</AlertDescription>
+              <AlertDescription>{m.invalid}</AlertDescription>
             </Alert>
           )}
           <DialogFooter>

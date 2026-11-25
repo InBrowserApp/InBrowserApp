@@ -36,6 +36,7 @@ test("preserves the OPML version, other head fields and namespaced attributes on
   setOutlineName(feed, "日本語のニュース")
   const exported = serializeOpml(doc)
   expect(exported).toContain('encoding="UTF-8"')
+  expect(exported.match(/<\?xml\s/g)).toHaveLength(1)
   expect(exported).toContain("<!-- retained -->")
   const reread = parseOpml(exported)
   expect(reread.root.getAttribute("version")).toBe("1.0")

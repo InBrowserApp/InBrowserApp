@@ -144,11 +144,11 @@ export function outlineMoves(node: Element, body: Element) {
 }
 
 export function serializeOpml({ xml }: OpmlDocument) {
-  return (
-    '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    new XMLSerializer().serializeToString(xml) +
-    "\n"
-  )
+  const serializer = new XMLSerializer()
+  const content = Array.from(xml.childNodes, (node) =>
+    serializer.serializeToString(node)
+  ).join("\n")
+  return '<?xml version="1.0" encoding="UTF-8"?>\n' + content + "\n"
 }
 
 export async function readOpmlFile(file: Blob) {
