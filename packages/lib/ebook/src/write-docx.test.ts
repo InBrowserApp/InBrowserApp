@@ -24,9 +24,11 @@ const book: BookSnapshot = {
       supporting: false,
       html: `<h1 id="first">First chapter</h1>
         <p>Read <strong>中文花园</strong> and <a href="#chapter-2">jump to chapter two</a>.</p>
+        <p lang="ar">الحديقة العربية</p>
         <ol start="3"><li>Plant flowers<ul><li>White blossoms</li></ul></li></ol>
-        <table><tr><th colspan="2">Plant name</th></tr><tr><td>Moonflower</td><td>Evening primrose</td></tr></table>
-        <p><img src="${illustration}" alt="Garden diagram" /></p>`,
+        <p><a href="#plants">Plant table</a>, <a href="#moonflower">Moonflower cell</a>, <a href="#garden">Garden illustration</a>.</p>
+        <table id="plants"><tr><th colspan="2">Plant name</th></tr><tr><td id="moonflower">Moonflower</td><td>Evening primrose</td></tr></table>
+        <p><img id="garden" src="${illustration}" alt="Garden diagram" /></p>`,
     },
     {
       id: "chapter-2",
@@ -60,6 +62,9 @@ test("writes editable Word headings, lists, tables, links and original images", 
     Array.from(source.getElementsByTagNameNS(word, name))
   expect(elements("t").map((node) => node.textContent)).toContain("中文花园")
   expect(
+    elements("lang").map((node) => node.getAttributeNS(word, "val"))
+  ).toEqual(expect.arrayContaining(["en-US", "ar"]))
+  expect(
     elements("pStyle").map((node) => node.getAttributeNS(word, "val"))
   ).toContain("Heading1")
   expect(elements("numPr")).toHaveLength(2)
@@ -69,9 +74,13 @@ test("writes editable Word headings, lists, tables, links and original images", 
     node.getAttributeNS(word, "name")
   )
   const links = elements("hyperlink")
-  expect(links).toHaveLength(2)
-  expect(bookmarks).toContain(links[0]?.getAttributeNS(word, "anchor"))
-  expect(links[1]?.getAttributeNS(word, "anchor")).toBe("notes")
+  expect(links).toHaveLength(5)
+  expect(bookmarks).toEqual(
+    expect.arrayContaining(
+      links.slice(0, 4).map((node) => node.getAttributeNS(word, "anchor"))
+    )
+  )
+  expect(links[4]?.getAttributeNS(word, "anchor")).toBe("notes")
   expect(strFromU8(files["word/_rels/document.xml.rels"]!)).toContain(
     'Target="https://example.com/read" TargetMode="External"'
   )
@@ -94,7 +103,7 @@ test("keeps alternate text and skips remotely hosted pictures", async () => {
       chapters: [
         {
           ...book.chapters[0]!,
-          html: '<p>Artwork <img src="https://example.com/remote.png" alt="Garden diagram" /></p>',
+          html: '<p>Artwork <img id="garden" src="https://example.com/remote.png" alt="Garden diagram" /></p><p><a href="#garden">Illustration</a></p>',
         },
       ],
     },
@@ -102,9 +111,17 @@ test("keeps alternate text and skips remotely hosted pictures", async () => {
   )
   expect(missing).toBe(true)
   const files = await unpack(file)
+  const source = parse(files["word/document.xml"]!)
+  expect(source.documentElement.textContent).toContain("Artwork Garden diagram")
   expect(
-    parse(files["word/document.xml"]!).documentElement.textContent
-  ).toContain("Artwork Garden diagram")
+    source
+      .getElementsByTagNameNS(word, "bookmarkStart")[0]
+      ?.getAttributeNS(word, "name")
+  ).toBe(
+    source
+      .getElementsByTagNameNS(word, "hyperlink")[0]
+      ?.getAttributeNS(word, "anchor")
+  )
   expect(strFromU8(files["word/_rels/document.xml.rels"]!)).not.toContain(
     "remote.png"
   )
