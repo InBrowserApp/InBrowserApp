@@ -14078,6 +14078,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gltf-to-glb-converter",
+    language: "ar",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "de",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "en",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "es",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "fr",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "he",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "hi",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "id",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "it",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "ja",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "ko",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "ms",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "nl",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "no",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "pl",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "pt",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "ru",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "sv",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "th",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "tr",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "vi",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gltf-to-glb-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "gltf-viewer",
     language: "ar",
   },

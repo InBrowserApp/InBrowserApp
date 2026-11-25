@@ -1,0 +1,17 @@
+{
+  "drop": "Thả mô hình glTF và các tệp đi kèm vào đây",
+  "open": "Mở tệp",
+  "folder": "Mở thư mục",
+  "add": "Thêm tệp",
+  "example": "Thử ví dụ",
+  "privacy": "Các tệp được giữ trên thiết bị của bạn.",
+  "chooseModel": "Mô hình glTF",
+  "noModel": "Chọn tệp .gltf cùng các tệp bộ đệm và họa tiết.",
+  "packing": "Đang tạo GLB…",
+  "missing": "Thêm các tệp bên dưới để hoàn tất việc tạo GLB.",
+  "failed": "Không đóng gói được tệp glTF này. Hãy kiểm tra tệp có đúng định dạng glTF 2.0 và các tệp đi kèm có đọc được không.",
+  "unsupported": "Tệp glTF này có ảnh hoặc tài nguyên của phần mở rộng mà công cụ không thể nhúng.",
+  "result": "GLB đã sẵn sàng",
+  "previous": "Lần chuyển đổi trước",
+  "download": "Tải xuống GLB"
+}

@@ -769,6 +769,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "glTF → GLB 변환기",
+    slug: "gltf-to-glb-converter",
+  },
+  {
+    category: "3d-cad",
     name: "GLB / glTF 뷰어",
     slug: "gltf-viewer",
   },

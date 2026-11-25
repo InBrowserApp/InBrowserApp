@@ -769,6 +769,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "glTF 转 GLB 转换器",
+    slug: "gltf-to-glb-converter",
+  },
+  {
+    category: "3d-cad",
     name: "GLB / glTF 查看器",
     slug: "gltf-viewer",
   },

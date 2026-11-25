@@ -1,0 +1,17 @@
+{
+  "drop": "여기에 glTF 모델과 관련 파일을 놓으세요",
+  "open": "파일 열기",
+  "folder": "폴더 열기",
+  "add": "파일 추가",
+  "example": "예제 사용하기",
+  "privacy": "파일은 이 기기에 보관됩니다.",
+  "chooseModel": "glTF 모델",
+  "noModel": ".gltf 파일과 해당 버퍼 및 텍스처를 선택하세요.",
+  "packing": "GLB를 만드는 중…",
+  "missing": "GLB 만들기를 완료하려면 아래 파일을 추가하세요.",
+  "failed": "이 glTF를 묶을 수 없습니다. 리소스를 읽을 수 있는 올바른 glTF 2.0 파일인지 확인하세요.",
+  "unsupported": "이 glTF에는 변환기가 포함할 수 없는 이미지 또는 확장 리소스가 있습니다.",
+  "result": "GLB 준비 완료",
+  "previous": "이전 변환",
+  "download": "GLB 다운로드"
+}

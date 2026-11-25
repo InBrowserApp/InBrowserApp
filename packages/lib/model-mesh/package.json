@@ -15,7 +15,8 @@
     "./repair": "./src/repair.ts",
     "./cad": "./src/cad.ts",
     "./cad-licenses": "./src/cad-licenses.ts",
-    "./step-example": "./src/step-example.ts"
+    "./step-example": "./src/step-example.ts",
+    "./gltf-pack": "./src/gltf-pack.ts"
   },
   "dependencies": {
     "three": "catalog:",

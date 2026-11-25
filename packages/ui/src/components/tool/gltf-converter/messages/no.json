@@ -1,0 +1,17 @@
+{
+  "drop": "Slipp en glTF-modell og de tilhørende filene her",
+  "open": "Åpne filer",
+  "folder": "Åpne mappe",
+  "add": "Legg til filer",
+  "example": "Prøv et eksempel",
+  "privacy": "Filene blir på enheten din.",
+  "chooseModel": "glTF-modell",
+  "noModel": "Velg en .gltf-fil sammen med bufferfilene og teksturene.",
+  "packing": "Oppretter GLB-filen …",
+  "missing": "Legg til filene nedenfor for å fullføre GLB-filen.",
+  "failed": "Kunne ikke pakke glTF-modellen. Sjekk at glTF 2.0-filen er gyldig, og at de tilhørende filene kan leses.",
+  "unsupported": "Denne glTF-modellen inneholder et bilde eller en ressurs fra en utvidelse som konvertereren ikke kan bygge inn.",
+  "result": "GLB-filen er klar",
+  "previous": "Forrige konvertering",
+  "download": "Last ned GLB"
+}

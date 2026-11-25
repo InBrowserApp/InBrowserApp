@@ -1,0 +1,17 @@
+{
+  "drop": "將 glTF 模型及其資源拖放到這裡",
+  "open": "開啟檔案",
+  "folder": "開啟資料夾",
+  "add": "新增檔案",
+  "example": "試用範例",
+  "privacy": "檔案會留在此裝置上。",
+  "chooseModel": "glTF 模型",
+  "noModel": "請選取 .gltf 檔案及其緩衝區和貼圖。",
+  "packing": "正在建立 GLB…",
+  "missing": "請新增下列檔案以完成 GLB 建立。",
+  "failed": "無法封裝此 glTF。請確認它是資源可讀取的有效 glTF 2.0 檔案。",
+  "unsupported": "此 glTF 包含轉換器無法內嵌的影像或擴充功能資源。",
+  "result": "GLB 已就緒",
+  "previous": "先前的轉換",
+  "download": "下載 GLB"
+}

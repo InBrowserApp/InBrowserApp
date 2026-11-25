@@ -15,3 +15,5 @@ Wenn die Datei auf einen externen Puffer oder ein Bild verweist, wähle die pass
 Nutze den [OBJ-Betrachter](../obj-viewer/) für Wavefront-Netze mit MTL-Materialien oder den [STL-Betrachter](../stl-viewer/), um ein Dreiecksnetz vor dem 3D-Druck zu prüfen.
 
 - [3MF-Betrachter](../3mf-viewer/)
+
+Nutze den [glTF-zu-GLB-Konverter](../gltf-to-glb-converter/), um die Puffer und Texturen eines glTF-Modells in eine einzige GLB-Datei einzubetten.

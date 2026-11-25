@@ -15,3 +15,5 @@
 帶有 MTL 材質的 Wavefront 網格可使用 [OBJ 檢視器](../obj-viewer/)；若要在 3D 列印前檢查三角網格，請使用 [STL 檢視器](../stl-viewer/)。
 
 - [3MF 檢視器](../3mf-viewer/)
+
+使用 [glTF 轉 GLB 轉換器](../gltf-to-glb-converter/)將 glTF 模型參照的緩衝區和貼圖內嵌至單一 GLB 檔案。

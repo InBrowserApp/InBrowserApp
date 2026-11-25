@@ -769,6 +769,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "3d-cad",
+    name: "โปรแกรมแปลง glTF เป็น GLB",
+    slug: "gltf-to-glb-converter",
+  },
+  {
+    category: "3d-cad",
     name: "โปรแกรมดู GLB / glTF",
     slug: "gltf-viewer",
   },

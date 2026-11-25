@@ -1,0 +1,17 @@
+{
+  "drop": "Drop a glTF model and its assets here",
+  "open": "Open files",
+  "folder": "Open folder",
+  "add": "Add files",
+  "example": "Try an example",
+  "privacy": "Your files stay on this device.",
+  "chooseModel": "glTF model",
+  "noModel": "Select a .gltf file with its buffers and textures.",
+  "packing": "Creating GLB…",
+  "missing": "Add the files below to finish creating the GLB.",
+  "failed": "Could not pack this glTF. Check that it is a valid glTF 2.0 file with readable assets.",
+  "unsupported": "This glTF has an image or extension resource this converter cannot embed.",
+  "result": "GLB ready",
+  "previous": "Previous conversion",
+  "download": "Download GLB"
+}

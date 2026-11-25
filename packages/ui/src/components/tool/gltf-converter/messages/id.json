@@ -1,0 +1,17 @@
+{
+  "drop": "Letakkan model glTF beserta file pendampingnya di sini",
+  "open": "Buka file",
+  "folder": "Buka folder",
+  "add": "Tambahkan file",
+  "example": "Coba contoh",
+  "privacy": "File tetap di perangkat Anda.",
+  "chooseModel": "Model glTF",
+  "noModel": "Pilih file .gltf beserta buffer dan teksturnya.",
+  "packing": "Membuat GLB…",
+  "missing": "Tambahkan file di bawah ini untuk menyelesaikan pembuatan GLB.",
+  "failed": "glTF ini tidak dapat dikemas. Pastikan file glTF 2.0 valid dan asetnya dapat dibaca.",
+  "unsupported": "glTF ini berisi gambar atau sumber daya ekstensi yang tidak dapat disematkan oleh konverter.",
+  "result": "GLB siap diunduh",
+  "previous": "Hasil konversi sebelumnya",
+  "download": "Unduh GLB"
+}

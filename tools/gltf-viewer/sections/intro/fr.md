@@ -15,3 +15,5 @@ Si le modèle fait référence à un tampon de données ou à une image externe,
 Utilisez la [Visionneuse OBJ](../obj-viewer/) pour les maillages Wavefront avec matériaux MTL ou la [Visionneuse STL](../stl-viewer/) pour examiner un maillage triangulaire avant l’impression 3D.
 
 - [Visionneuse 3MF](../3mf-viewer/)
+
+Utilisez le [Convertisseur glTF en GLB](../gltf-to-glb-converter/) pour réunir dans un seul fichier GLB les tampons de données et les textures auxquels le modèle glTF fait référence.

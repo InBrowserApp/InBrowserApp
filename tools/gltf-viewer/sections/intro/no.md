@@ -15,3 +15,5 @@ Hvis modellen viser til en ekstern buffer eller bildefil, velger du modellen og 
 Bruk [OBJ-viseren](../obj-viewer/) til Wavefront-nett med MTL-materialer, eller åpne et trekantnett i [STL-viseren](../stl-viewer/) for å sjekke det før 3D-utskrift.
 
 - [3MF-viser](../3mf-viewer/)
+
+Bruk [glTF til GLB-konvertereren](../gltf-to-glb-converter/) til å bygge inn bufferne og teksturene som en glTF-modell viser til, i én GLB-fil.

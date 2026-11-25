@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi glTF sang GLB",
+  "description": "Chuyển glTF 2.0 thành một tệp GLB trong trình duyệt. Nhúng các tệp bộ đệm .bin và họa tiết cùng lưới, vật liệu và hoạt ảnh của mô hình."
+}

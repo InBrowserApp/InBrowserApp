@@ -1,0 +1,4 @@
+{
+  "name": "glTF-zu-GLB-Konverter",
+  "description": "Wandle glTF 2.0 im Browser in eine einzige GLB-Datei um. Bette .bin-Puffer und Texturen zusammen mit den Netzen, Materialien und Animationen des Modells ein."
+}

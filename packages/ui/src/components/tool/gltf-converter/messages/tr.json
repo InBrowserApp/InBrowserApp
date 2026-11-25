@@ -1,0 +1,17 @@
+{
+  "drop": "glTF modelini ve ilgili dosyalarını buraya bırakın",
+  "open": "Dosyaları aç",
+  "folder": "Klasör aç",
+  "add": "Dosya ekle",
+  "example": "Örnek dene",
+  "privacy": "Dosyalarınız cihazınızda kalır.",
+  "chooseModel": "glTF modeli",
+  "noModel": "Bir .gltf dosyasını arabellekleri ve dokularıyla birlikte seçin.",
+  "packing": "GLB oluşturuluyor…",
+  "missing": "GLB oluşturma işlemini tamamlamak için aşağıdaki dosyaları ekleyin.",
+  "failed": "Bu glTF dosyası paketlenemedi. Dosyanın geçerli bir glTF 2.0 dosyası olduğunu ve ilgili dosyaların okunabildiğini kontrol edin.",
+  "unsupported": "Bu glTF, dönüştürücünün dosyaya gömemediği bir görsel veya uzantı kaynağı içeriyor.",
+  "result": "GLB hazır",
+  "previous": "Önceki dönüştürme",
+  "download": "GLB indir"
+}

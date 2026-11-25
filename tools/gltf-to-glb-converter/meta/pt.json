@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de glTF para GLB",
+  "description": "Converta glTF 2.0 em um único GLB no navegador. Incorpore buffers .bin e texturas com as malhas, os materiais e as animações do modelo."
+}

@@ -15,3 +15,5 @@ Se il modello fa riferimento a un buffer o a un’immagine esterni, selezionalo 
 Usa il [Visualizzatore OBJ](../obj-viewer/) per le mesh Wavefront con materiali MTL o il [Visualizzatore STL](../stl-viewer/) per esaminare una mesh triangolare prima della stampa 3D.
 
 - [Visualizzatore 3MF](../3mf-viewer/)
+
+Usa il [Convertitore da glTF a GLB](../gltf-to-glb-converter/) per incorporare in un unico file GLB i buffer e le texture a cui fa riferimento un modello glTF.

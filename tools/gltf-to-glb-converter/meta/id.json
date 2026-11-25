@@ -1,0 +1,4 @@
+{
+  "name": "Konverter glTF ke GLB",
+  "description": "Konversi glTF 2.0 menjadi satu file GLB di browser. Sematkan buffer .bin dan tekstur beserta mesh, material, dan animasi model."
+}

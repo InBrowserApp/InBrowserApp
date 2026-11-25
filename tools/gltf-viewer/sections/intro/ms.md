@@ -15,3 +15,5 @@ Jika fail merujuk kepada penimbal atau imej luaran, pilih model dan fail yang se
 Gunakan [Pemapar OBJ](../obj-viewer/) untuk melihat jejaring Wavefront dengan bahan MTL atau [Pemapar STL](../stl-viewer/) untuk memeriksa jejaring segi tiga sebelum mencetaknya dalam 3D.
 
 - [Pemapar 3MF](../3mf-viewer/)
+
+Gunakan [Penukar glTF kepada GLB](../gltf-to-glb-converter/) untuk membenamkan penimbal dan tekstur yang dirujuk oleh model glTF ke dalam satu fail GLB.

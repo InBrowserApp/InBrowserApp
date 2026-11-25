@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur glTF en GLB",
+  "description": "Convertissez un glTF 2.0 en un seul fichier GLB dans votre navigateur. Intégrez les tampons de données .bin et les textures avec les maillages, les matériaux et les animations du modèle."
+}

@@ -1,0 +1,17 @@
+{
+  "drop": "Släpp en glTF-modell och dess tillhörande filer här",
+  "open": "Öppna filer",
+  "folder": "Öppna mapp",
+  "add": "Lägg till filer",
+  "example": "Prova ett exempel",
+  "privacy": "Dina filer stannar på den här enheten.",
+  "chooseModel": "glTF-modell",
+  "noModel": "Välj en .gltf-fil tillsammans med dess buffertfiler och texturer.",
+  "packing": "Skapar GLB-filen…",
+  "missing": "Lägg till filerna nedan för att slutföra GLB-filen.",
+  "failed": "Det gick inte att paketera glTF-modellen. Kontrollera att glTF 2.0-filen är giltig och att de tillhörande filerna går att läsa.",
+  "unsupported": "Den här glTF-modellen innehåller en bild eller en resurs från ett tillägg som konverteraren inte kan bädda in.",
+  "result": "GLB-filen är klar",
+  "previous": "Föregående konvertering",
+  "download": "Ladda ner GLB"
+}

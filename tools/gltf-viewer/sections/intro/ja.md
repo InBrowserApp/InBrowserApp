@@ -15,3 +15,5 @@
 MTL マテリアルを伴う Wavefront メッシュには [OBJ ビューアー](../obj-viewer/)を、3D プリント前の三角形メッシュの確認には [STL ビューアー](../stl-viewer/)を使用してください。
 
 - [3MF ビューアー](../3mf-viewer/)
+
+[glTF → GLB 変換](../gltf-to-glb-converter/)で、glTF モデルが参照するバッファーとテクスチャを単一の GLB ファイルに埋め込めます。
