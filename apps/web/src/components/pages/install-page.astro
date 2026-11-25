@@ -1,6 +1,7 @@
 ---
 import MainLayout from "@/layouts/main.astro"
 import { INSTALL_GROUPS, INSTALL_GUIDES, INSTALL_GUIDE_IDS, type InstallGuideId } from "@/lib/install-guides"
+import { localizeInstallHelpHref } from "@/lib/install-help-links"
 import { loadInstallMessages } from "@/lib/install-messages"
 import { createPageSeo } from "@/lib/seo"
 import { localizePath, type SiteLanguage } from "@/lib/site"
@@ -50,7 +51,7 @@ const fallback = guide && "fallback" in guide ? guide.fallback : undefined
           <h2 class="font-medium">{messages.browserHelp}</h2>
           <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-2">
             {guide.links.map(({ label, href }) => (
-              <li><a href={href} class="underline underline-offset-4 hover:text-foreground">{label}</a></li>
+              <li><a href={localizeInstallHelpHref(href, language)} class="underline underline-offset-4 hover:text-foreground">{label}</a></li>
             ))}
           </ul>
         </div>
