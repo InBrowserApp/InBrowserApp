@@ -1,0 +1,16 @@
+{
+  "microphone": "Microfone",
+  "microphoneHint": "Fale para ver o nível de entrada. Use auscultadores para se ouvir em direto sem provocar realimentação acústica.",
+  "inputLevel": "Nível de entrada",
+  "start": "Ativar microfone",
+  "starting": "A aguardar pelo microfone…",
+  "stop": "Desativar microfone",
+  "monitor": "Ouvir o meu microfone",
+  "micError": "Não foi possível ativar o microfone. Verifique as permissões do navegador e o dispositivo de entrada e tente novamente.",
+  "speakers": "Saída estéreo",
+  "speakersHint": "Reproduza um tom breve num ou nos dois canais. Verifique em que altifalante ou lado dos auscultadores o ouve.",
+  "left": "Esquerdo",
+  "both": "Ambos",
+  "right": "Direito",
+  "speakerError": "Não foi possível reproduzir o tom de teste. Verifique a saída de áudio e tente novamente."
+}

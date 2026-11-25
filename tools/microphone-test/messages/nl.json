@@ -1,0 +1,16 @@
+{
+  "microphone": "Microfoon",
+  "microphoneHint": "Praat om het ingangsniveau te zien. Gebruik een koptelefoon om live mee te luisteren zonder rondzingen.",
+  "inputLevel": "Ingangsniveau",
+  "start": "Microfoon aanzetten",
+  "starting": "Wachten op de microfoon…",
+  "stop": "Microfoon uitzetten",
+  "monitor": "Mijn microfoon beluisteren",
+  "micError": "De microfoon kon niet worden ingeschakeld. Controleer je browsermachtigingen en invoerapparaat en probeer het opnieuw.",
+  "speakers": "Stereo-uitvoer",
+  "speakersHint": "Speel een korte toon af in één of beide kanalen. Controleer uit welke luidspreker of aan welke kant van je koptelefoon je de toon hoort.",
+  "left": "Links",
+  "both": "Beide",
+  "right": "Rechts",
+  "speakerError": "De testtoon kon niet worden afgespeeld. Controleer je audio-uitvoer en probeer het opnieuw."
+}

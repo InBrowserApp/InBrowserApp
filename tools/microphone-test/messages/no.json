@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Snakk for å se inngangsnivået. Bruk hodetelefoner når du lytter til deg selv, så unngår du akustisk tilbakekobling.",
+  "inputLevel": "Inngangsnivå",
+  "start": "Slå på mikrofonen",
+  "starting": "Venter på mikrofonen …",
+  "stop": "Slå av mikrofonen",
+  "monitor": "Lytt til mikrofonen",
+  "micError": "Kunne ikke slå på mikrofonen. Sjekk nettleserens tillatelser og hvilken mikrofon som er valgt, og prøv igjen.",
+  "speakers": "Stereoutgang",
+  "speakersHint": "Spill av en kort tone i én eller begge kanaler. Sjekk hvilken høyttaler eller hvilket øre du hører tonen i.",
+  "left": "Venstre",
+  "both": "Begge",
+  "right": "Høyre",
+  "speakerError": "Kunne ikke spille av testtonen. Sjekk lydutgangen og prøv igjen."
+}

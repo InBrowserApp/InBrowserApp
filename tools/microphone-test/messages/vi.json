@@ -1,0 +1,16 @@
+{
+  "microphone": "Micro",
+  "microphoneHint": "Nói vào micro để xem mức âm đầu vào. Hãy đeo tai nghe khi nghe trực tiếp để tránh tiếng hú.",
+  "inputLevel": "Mức âm đầu vào",
+  "start": "Bật micro",
+  "starting": "Đang chờ micro…",
+  "stop": "Tắt micro",
+  "monitor": "Nghe trực tiếp từ micro",
+  "micError": "Không bật được micro. Hãy kiểm tra quyền truy cập trong trình duyệt và thiết bị đầu vào, rồi thử lại.",
+  "speakers": "Đầu ra stereo",
+  "speakersHint": "Phát một âm ngắn ở một hoặc cả hai kênh. Để ý bạn nghe thấy âm ở loa nào hoặc bên tai nào.",
+  "left": "Trái",
+  "both": "Cả hai",
+  "right": "Phải",
+  "speakerError": "Không phát được âm thử. Hãy kiểm tra thiết bị đầu ra âm thanh rồi thử lại."
+}

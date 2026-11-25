@@ -21806,6 +21806,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "microphone-test",
+    language: "ar",
+  },
+  {
+    slug: "microphone-test",
+    language: "de",
+  },
+  {
+    slug: "microphone-test",
+    language: "en",
+  },
+  {
+    slug: "microphone-test",
+    language: "es",
+  },
+  {
+    slug: "microphone-test",
+    language: "fr",
+  },
+  {
+    slug: "microphone-test",
+    language: "he",
+  },
+  {
+    slug: "microphone-test",
+    language: "hi",
+  },
+  {
+    slug: "microphone-test",
+    language: "id",
+  },
+  {
+    slug: "microphone-test",
+    language: "it",
+  },
+  {
+    slug: "microphone-test",
+    language: "ja",
+  },
+  {
+    slug: "microphone-test",
+    language: "ko",
+  },
+  {
+    slug: "microphone-test",
+    language: "ms",
+  },
+  {
+    slug: "microphone-test",
+    language: "nl",
+  },
+  {
+    slug: "microphone-test",
+    language: "no",
+  },
+  {
+    slug: "microphone-test",
+    language: "pl",
+  },
+  {
+    slug: "microphone-test",
+    language: "pt",
+  },
+  {
+    slug: "microphone-test",
+    language: "ru",
+  },
+  {
+    slug: "microphone-test",
+    language: "sv",
+  },
+  {
+    slug: "microphone-test",
+    language: "th",
+  },
+  {
+    slug: "microphone-test",
+    language: "tr",
+  },
+  {
+    slug: "microphone-test",
+    language: "vi",
+  },
+  {
+    slug: "microphone-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "microphone-test",
+    language: "zh-TW",
+  },
+  {
     slug: "midi-monitor",
     language: "ar",
   },

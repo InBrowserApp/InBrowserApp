@@ -1188,6 +1188,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mhtml-viewer",
   },
   {
+    category: "audio",
+    name: "Test microfono e altoparlanti",
+    slug: "microphone-test",
+  },
+  {
     category: "misc",
     name: "Monitor MIDI",
     slug: "midi-monitor",

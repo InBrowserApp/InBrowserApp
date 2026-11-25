@@ -293,6 +293,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "mhtml-to-html-converter": () => import("@tool/mhtml-to-html-converter/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),
   "mhtml-viewer": () => import("@tool/mhtml-viewer/page"),
+  "microphone-test": () => import("@tool/microphone-test/page"),
   "midi-monitor": () => import("@tool/midi-monitor/page"),
   "midi-to-wav-converter": () => import("@tool/midi-to-wav-converter/page"),
   "midi-transposer": () => import("@tool/midi-transposer/page"),

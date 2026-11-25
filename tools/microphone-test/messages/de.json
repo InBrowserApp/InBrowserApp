@@ -1,0 +1,16 @@
+{
+  "microphone": "Mikrofon",
+  "microphoneHint": "Sprich ins Mikrofon, um den Eingangspegel zu sehen. Nutze beim Live-Mithören Kopfhörer, damit es keine Rückkopplung gibt.",
+  "inputLevel": "Eingangspegel",
+  "start": "Mikrofon starten",
+  "starting": "Warte auf das Mikrofon…",
+  "stop": "Mikrofon stoppen",
+  "monitor": "Mikrofon live hören",
+  "micError": "Das Mikrofon konnte nicht gestartet werden. Prüfe die Browserberechtigungen und das Eingabegerät und versuche es erneut.",
+  "speakers": "Stereo-Ausgabe",
+  "speakersHint": "Spiele einen kurzen Ton auf einem oder beiden Kanälen ab. Achte darauf, aus welchem Lautsprecher der Ton kommt oder auf welchem Ohr du ihn hörst.",
+  "left": "Links",
+  "both": "Beide",
+  "right": "Rechts",
+  "speakerError": "Der Testton konnte nicht abgespielt werden. Prüfe deine Audioausgabe und versuche es erneut."
+}

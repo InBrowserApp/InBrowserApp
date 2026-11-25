@@ -1,0 +1,16 @@
+{
+  "microphone": "Micrófono",
+  "microphoneHint": "Habla para ver el nivel de entrada. Usa auriculares para escucharte en directo sin que se produzcan acoples.",
+  "inputLevel": "Nivel de entrada",
+  "start": "Activar micrófono",
+  "starting": "Esperando al micrófono…",
+  "stop": "Desactivar micrófono",
+  "monitor": "Escuchar mi micrófono",
+  "micError": "No se pudo activar el micrófono. Revisa los permisos del navegador y el dispositivo de entrada y vuelve a intentarlo.",
+  "speakers": "Salida estéreo",
+  "speakersHint": "Reproduce un tono breve en uno o ambos canales. Comprueba en qué altavoz o auricular lo oyes.",
+  "left": "Izquierdo",
+  "both": "Ambos",
+  "right": "Derecho",
+  "speakerError": "No se pudo reproducir el tono de prueba. Revisa la salida de audio y vuelve a intentarlo."
+}

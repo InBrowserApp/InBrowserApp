@@ -1,0 +1,16 @@
+{
+  "microphone": "Microphone",
+  "microphoneHint": "Parlez pour voir le niveau d’entrée. Utilisez un casque pour vous écouter en direct et éviter l’effet Larsen.",
+  "inputLevel": "Niveau d’entrée",
+  "start": "Activer le microphone",
+  "starting": "En attente du microphone…",
+  "stop": "Couper le microphone",
+  "monitor": "M’écouter en direct",
+  "micError": "Impossible d’accéder au microphone. Vérifiez les autorisations du navigateur et le micro sélectionné, puis réessayez.",
+  "speakers": "Sortie stéréo",
+  "speakersHint": "Jouez un son bref sur un canal ou sur les deux. Vérifiez de quel côté vous l’entendez.",
+  "left": "Gauche",
+  "both": "Les deux",
+  "right": "Droite",
+  "speakerError": "Impossible de jouer le son de test. Vérifiez votre sortie audio, puis réessayez."
+}
