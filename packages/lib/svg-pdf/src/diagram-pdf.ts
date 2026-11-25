@@ -6,7 +6,8 @@ export type { PageSize } from "./svg"
 export async function createDiagramPdf(
   svg: string,
   size: PageSize = "original",
-  language?: string
+  language?: string,
+  { keepPageSize = false }: { keepPageSize?: boolean } = {}
 ) {
   let artwork = prepareArtwork(svg)
   const labels = Array.from(artwork.root.querySelectorAll("text")).filter(
@@ -16,7 +17,7 @@ export async function createDiagramPdf(
   // Outlines preserve character spacing and glyphs across PDF readers.
   if (labels.length) {
     const { outlineText } = await import("./outline-text")
-    artwork = await outlineText(artwork, labels, language)
+    artwork = await outlineText(artwork, labels, language, keepPageSize)
   }
 
   const pdf = await createPdf(artwork, size)

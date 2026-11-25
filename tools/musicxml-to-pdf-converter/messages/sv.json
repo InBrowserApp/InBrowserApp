@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Öppna MusicXML-fil",
+  "changeFile": "Byt fil",
+  "dropHint": "Släpp ett MusicXML- eller MXL-partitur här",
+  "privacy": "Partituret stannar i din webbläsare.",
+  "example": "Prova ett exempel",
+  "paper": "Pappersstorlek",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 tum)",
+  "preview": "PDF-förhandsvisning",
+  "page": "Sida {page} av {total}",
+  "previous": "Föregående sida",
+  "next": "Nästa sida",
+  "loading": "Formaterar noterna…",
+  "invalidScore": "Partituret kunde inte formateras. Prova en annan fil eller exportera partituret på nytt som MusicXML med stämmorna var för sig (partwise).",
+  "download": "Ladda ner PDF",
+  "downloadBusy": "Förbereder PDF…",
+  "downloadError": "PDF-filen kunde inte skapas. Försök ladda ner den igen."
+}

@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Otwórz plik MusicXML",
+  "changeFile": "Zmień plik",
+  "dropHint": "Upuść tutaj partyturę MusicXML lub MXL",
+  "privacy": "Partytura pozostaje w przeglądarce.",
+  "example": "Otwórz przykład",
+  "paper": "Format papieru",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 cali)",
+  "preview": "Podgląd PDF",
+  "page": "Strona {page} z {total}",
+  "previous": "Poprzednia strona",
+  "next": "Następna strona",
+  "loading": "Układanie nut na stronach…",
+  "invalidScore": "Nie udało się rozmieścić nut na stronach. Wybierz inny plik lub ponownie wyeksportuj partyturę jako MusicXML z podziałem na partie (score-partwise).",
+  "download": "Pobierz PDF",
+  "downloadBusy": "Przygotowywanie PDF…",
+  "downloadError": "Nie udało się utworzyć PDF. Spróbuj pobrać plik ponownie."
+}

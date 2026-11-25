@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Åpne MusicXML-fil",
+  "changeFile": "Bytt fil",
+  "dropHint": "Slipp et MusicXML- eller MXL-partitur her",
+  "privacy": "Partituret ditt blir i nettleseren.",
+  "example": "Prøv et eksempel",
+  "paper": "Papirformat",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 tommer)",
+  "preview": "PDF-forhåndsvisning",
+  "page": "Side {page} av {total}",
+  "previous": "Forrige side",
+  "next": "Neste side",
+  "loading": "Setter opp notene…",
+  "invalidScore": "Partituret kunne ikke settes opp. Prøv en annen fil eller eksporter det på nytt som MusicXML med stemmene hver for seg (partwise).",
+  "download": "Last ned PDF",
+  "downloadBusy": "Klargjør PDF…",
+  "downloadError": "PDF-filen kunne ikke opprettes. Prøv å laste den ned på nytt."
+}

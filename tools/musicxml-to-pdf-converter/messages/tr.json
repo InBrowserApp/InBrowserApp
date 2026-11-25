@@ -1,0 +1,19 @@
+{
+  "chooseFile": "MusicXML dosyası aç",
+  "changeFile": "Dosyayı değiştir",
+  "dropHint": "MusicXML veya MXL partisyonunu buraya bırakın",
+  "privacy": "Partisyonunuz tarayıcınızda kalır.",
+  "example": "Bir örnek deneyin",
+  "paper": "Kâğıt boyutu",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 inç)",
+  "preview": "PDF önizlemesi",
+  "page": "Sayfa {page} / {total}",
+  "previous": "Önceki sayfa",
+  "next": "Sonraki sayfa",
+  "loading": "Notalar sayfalara yerleştiriliyor…",
+  "invalidScore": "Partisyon sayfalara yerleştirilemedi. Başka bir dosya deneyin veya partisyonu parti bazlı (partwise) MusicXML olarak yeniden dışa aktarın.",
+  "download": "PDF'yi indir",
+  "downloadBusy": "PDF hazırlanıyor…",
+  "downloadError": "PDF oluşturulamadı. Tekrar indirmeyi deneyin."
+}

@@ -24290,6 +24290,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "musicxml-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "musicxml-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "musicxml-viewer",
     language: "ar",
   },

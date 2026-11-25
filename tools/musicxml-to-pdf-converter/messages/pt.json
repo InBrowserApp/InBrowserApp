@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Abrir arquivo MusicXML",
+  "changeFile": "Trocar arquivo",
+  "dropHint": "Solte uma partitura MusicXML ou MXL aqui",
+  "privacy": "Sua partitura fica no navegador.",
+  "example": "Experimentar um exemplo",
+  "paper": "Tamanho do papel",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "Carta (EUA, 8,5 × 11 pol.)",
+  "preview": "Prévia do PDF",
+  "page": "Página {page} de {total}",
+  "previous": "Página anterior",
+  "next": "Próxima página",
+  "loading": "Diagramando a partitura…",
+  "invalidScore": "Não foi possível diagramar a partitura. Tente outro arquivo ou exporte a partitura novamente como MusicXML estruturado por partes (partwise).",
+  "download": "Baixar PDF",
+  "downloadBusy": "Preparando o PDF…",
+  "downloadError": "Não foi possível criar o PDF. Tente baixá-lo novamente."
+}

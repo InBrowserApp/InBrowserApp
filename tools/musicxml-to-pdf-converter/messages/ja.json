@@ -1,0 +1,19 @@
+{
+  "chooseFile": "MusicXMLファイルを開く",
+  "changeFile": "ファイルを変更",
+  "dropHint": "MusicXMLまたはMXLの楽譜をここにドロップ",
+  "privacy": "楽譜はブラウザ内に留まります。",
+  "example": "サンプルを試す",
+  "paper": "用紙サイズ",
+  "a4": "A4（210 × 297 mm）",
+  "letter": "US Letter（8.5 × 11インチ）",
+  "preview": "PDFプレビュー",
+  "page": "{total}ページ中{page}ページ",
+  "previous": "前のページ",
+  "next": "次のページ",
+  "loading": "楽譜をレイアウトしています…",
+  "invalidScore": "この楽譜をレイアウトできませんでした。別のファイルを試すか、パート単位のMusicXMLとして再度書き出してください。",
+  "download": "PDFをダウンロード",
+  "downloadBusy": "PDFを準備しています…",
+  "downloadError": "PDFを作成できませんでした。もう一度ダウンロードしてください。"
+}

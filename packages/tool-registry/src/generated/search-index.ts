@@ -33643,6 +33643,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "musicxml-to-pdf-converter",
+    category: "pdf",
+    secondaryCategories: ["misc"],
+    icon: "file-music",
+    tags: [
+      "musicxml",
+      "mxl",
+      "musicxml to pdf",
+      "mxl to pdf",
+      "sheet music",
+      "print score",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل MusicXML إلى PDF",
+        description:
+          "حوّل ملفات MusicXML وMXL المضغوطة إلى نوتات PDF قابلة للطباعة. عاين الصفحات، واختر A4 أو US Letter، ونزّل ملف PDF متجهيًا من متصفحك.",
+      },
+      de: {
+        name: "MusicXML-zu-PDF-Konverter",
+        description:
+          "Wandle MusicXML und komprimierte MXL-Dateien in druckfertige PDF-Partituren um. Prüfe die Seiten in der Vorschau, wähle A4 oder US Letter und lade die Vektor-PDF im Browser herunter.",
+      },
+      en: {
+        name: "MusicXML to PDF Converter",
+        description:
+          "Convert MusicXML and compressed MXL files to printable PDF sheet music. Preview the pages, choose A4 or US Letter, and download a vector PDF in your browser.",
+      },
+      es: {
+        name: "Conversor de MusicXML a PDF",
+        description:
+          "Convierte partituras MusicXML o archivos MXL comprimidos en PDF listos para imprimir. Revisa las páginas, elige A4 o Carta (EE. UU.) y descarga un PDF vectorial desde el navegador.",
+      },
+      fr: {
+        name: "Convertisseur MusicXML en PDF",
+        description:
+          "Convertissez vos partitions MusicXML ou vos fichiers MXL compressés en PDF prêts à imprimer. Prévisualisez les pages, choisissez le format A4 ou Lettre US et téléchargez un PDF vectoriel dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר MusicXML ל־PDF",
+        description:
+          "המירו קובצי MusicXML וקובצי MXL דחוסים לתווים ב־PDF להדפסה. צפו בעמודים, בחרו A4 או US Letter והורידו PDF וקטורי מהדפדפן.",
+      },
+      hi: {
+        name: "MusicXML से PDF कन्वर्टर",
+        description:
+          "MusicXML और कंप्रेस की गई MXL फ़ाइलों से प्रिंट करने योग्य PDF शीट म्यूज़िक बनाएँ। पन्नों का प्रीव्यू देखें, A4 या US Letter चुनें और ब्राउज़र में वेक्टर PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MusicXML ke PDF",
+        description:
+          "Konversikan file MusicXML dan file MXL terkompresi menjadi partitur PDF siap cetak. Lihat pratinjau, pilih A4 atau US Letter, lalu unduh PDF vektor di browser.",
+      },
+      it: {
+        name: "Convertitore da MusicXML a PDF",
+        description:
+          "Converti spartiti MusicXML o file MXL compressi in PDF pronti da stampare. Controlla le pagine, scegli A4 o Lettera USA e scarica un PDF vettoriale dal browser.",
+      },
+      ja: {
+        name: "MusicXML PDF変換",
+        description:
+          "MusicXMLや圧縮されたMXLファイルを印刷用の楽譜PDFに変換します。ブラウザでページをプレビューし、A4またはUS Letterを選んで、ベクターPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "MusicXML PDF 변환기",
+        description:
+          "MusicXML과 압축된 MXL 파일을 인쇄용 악보 PDF로 변환하세요. 브라우저에서 페이지를 미리 보고 A4 또는 US Letter를 선택한 후 벡터 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MusicXML kepada PDF",
+        description:
+          "Tukar fail MusicXML dan fail MXL termampat kepada skor muzik dalam PDF sedia cetak. Pratonton halaman, pilih A4 atau US Letter dan muat turun PDF vektor dalam pelayar.",
+      },
+      nl: {
+        name: "MusicXML-naar-PDF-converter",
+        description:
+          "Zet MusicXML en gecomprimeerde MXL-bestanden om naar afdrukbare bladmuziek. Bekijk de pagina’s, kies A4 of US Letter en download een vector-PDF in je browser.",
+      },
+      no: {
+        name: "MusicXML til PDF-konverterer",
+        description:
+          "Konverter MusicXML og komprimerte MXL-filer til noter som kan skrives ut. Forhåndsvis sidene, velg A4 eller US Letter og last ned en vektor-PDF i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter MusicXML na PDF",
+        description:
+          "Konwertuj pliki MusicXML i skompresowane pliki MXL na nuty w PDF do druku. Sprawdź podgląd stron, wybierz A4 lub US Letter i pobierz wektorowy PDF w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de MusicXML para PDF",
+        description:
+          "Converta partituras MusicXML ou arquivos MXL compactados em PDFs prontos para imprimir. Confira as páginas, escolha A4 ou Carta (EUA) e baixe um PDF vetorial pelo navegador.",
+      },
+      ru: {
+        name: "Конвертер MusicXML в PDF",
+        description:
+          "Преобразуйте MusicXML и сжатые файлы MXL в PDF с нотами для печати. Просмотрите страницы, выберите A4 или US Letter и скачайте векторный PDF в браузере.",
+      },
+      sv: {
+        name: "MusicXML till PDF-konverterare",
+        description:
+          "Konvertera MusicXML och komprimerade MXL-filer till utskrivbara noter. Förhandsgranska sidorna, välj A4 eller US Letter och ladda ner en vektor-PDF i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MusicXML เป็น PDF",
+        description:
+          "แปลงไฟล์ MusicXML และไฟล์ MXL แบบบีบอัดเป็นโน้ตเพลง PDF พร้อมพิมพ์ ดูตัวอย่างหน้า เลือก A4 หรือ US Letter แล้วดาวน์โหลด PDF แบบเวกเตอร์ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "MusicXML'den PDF'ye Dönüştürücü",
+        description:
+          "MusicXML ve sıkıştırılmış MXL dosyalarını yazdırılabilir PDF notalarına dönüştürün. Sayfaları önizleyin, A4 veya US Letter'ı seçin ve vektörel PDF'yi tarayıcınızdan indirin.",
+      },
+      vi: {
+        name: "Chuyển MusicXML sang PDF",
+        description:
+          "Chuyển tệp MusicXML và MXL nén thành bản nhạc PDF có thể in. Xem trước các trang, chọn khổ A4 hoặc US Letter và tải PDF vector ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "MusicXML 转 PDF 转换器",
+        description:
+          "将 MusicXML 和压缩的 MXL 文件转换为可打印的 PDF 乐谱。在浏览器中预览页面，选择 A4 或美式 Letter 纸张，然后下载矢量 PDF。",
+      },
+      "zh-TW": {
+        name: "MusicXML 轉 PDF 轉換器",
+        description:
+          "將 MusicXML 和壓縮的 MXL 檔案轉換成可列印的 PDF 樂譜。在瀏覽器中預覽頁面、選擇 A4 或美式 Letter 紙張，並下載向量 PDF。",
+      },
+    },
+  },
+  {
     slug: "musicxml-viewer",
     category: "misc",
     icon: "file-music",

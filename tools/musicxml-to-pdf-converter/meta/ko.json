@@ -1,0 +1,4 @@
+{
+  "name": "MusicXML PDF 변환기",
+  "description": "MusicXML과 압축된 MXL 파일을 인쇄용 악보 PDF로 변환하세요. 브라우저에서 페이지를 미리 보고 A4 또는 US Letter를 선택한 후 벡터 PDF를 다운로드할 수 있습니다."
+}

@@ -16,7 +16,8 @@ async function fetchFont(url: string) {
 export async function outlineText(
   artwork: SvgArtwork,
   texts: SVGTextElement[],
-  language?: string
+  language: string | undefined,
+  keepPageSize: boolean
 ) {
   const svg = artwork.root
   const labels = texts.map((text) => text.textContent).join("")
@@ -76,6 +77,7 @@ export async function outlineText(
       }
       text.replaceWith(replacement)
     }
+    if (keepPageSize) return artwork
     const bounds = renderer.getBBox()
     if (!bounds) return artwork
     try {

@@ -1,0 +1,19 @@
+{
+  "chooseFile": "فتح ملف MusicXML",
+  "changeFile": "تغيير الملف",
+  "dropHint": "أفلت نوتة MusicXML أو MXL هنا",
+  "privacy": "تبقى النوتة في متصفحك.",
+  "example": "جرّب مثالًا",
+  "paper": "مقاس الورق",
+  "a4": "A4 (210 × 297 مم)",
+  "letter": "US Letter (8.5 × 11 بوصة)",
+  "preview": "معاينة PDF",
+  "page": "الصفحة {page} من {total}",
+  "previous": "الصفحة السابقة",
+  "next": "الصفحة التالية",
+  "loading": "جارٍ ترتيب النوتة على الصفحات…",
+  "invalidScore": "تعذّر ترتيب النوتة على الصفحات. جرّب ملفًا آخر أو صدّرها بتنسيق MusicXML المرتّب حسب الأجزاء (partwise).",
+  "download": "تنزيل PDF",
+  "downloadBusy": "جارٍ تجهيز PDF…",
+  "downloadError": "تعذّر إنشاء ملف PDF. أعد محاولة التنزيل."
+}

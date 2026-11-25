@@ -1,0 +1,19 @@
+{
+  "chooseFile": "打开 MusicXML 文件",
+  "changeFile": "更换文件",
+  "dropHint": "将 MusicXML 或 MXL 乐谱拖放到此处",
+  "privacy": "乐谱仅保留在您的浏览器中。",
+  "example": "试用示例",
+  "paper": "纸张大小",
+  "a4": "A4（210 × 297 毫米）",
+  "letter": "美式 Letter（8.5 × 11 英寸）",
+  "preview": "PDF 预览",
+  "page": "第 {page} 页，共 {total} 页",
+  "previous": "上一页",
+  "next": "下一页",
+  "loading": "正在排版乐谱…",
+  "invalidScore": "无法排版此乐谱。请尝试其他文件，或重新导出为按声部分组的 MusicXML。",
+  "download": "下载 PDF",
+  "downloadBusy": "正在准备 PDF…",
+  "downloadError": "无法创建 PDF。请再次尝试下载。"
+}

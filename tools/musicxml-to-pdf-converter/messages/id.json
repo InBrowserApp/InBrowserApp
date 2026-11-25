@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Buka file MusicXML",
+  "changeFile": "Ganti file",
+  "dropHint": "Lepas partitur MusicXML atau MXL di sini",
+  "privacy": "Partitur Anda tetap di browser ini.",
+  "example": "Coba contoh",
+  "paper": "Ukuran kertas",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8,5 × 11 inci)",
+  "preview": "Pratinjau PDF",
+  "page": "Halaman {page} dari {total}",
+  "previous": "Halaman sebelumnya",
+  "next": "Halaman berikutnya",
+  "loading": "Menata halaman partitur…",
+  "invalidScore": "Partitur tidak dapat ditata. Coba file lain atau ekspor ulang dalam format MusicXML partwise.",
+  "download": "Unduh PDF",
+  "downloadBusy": "Menyiapkan PDF…",
+  "downloadError": "PDF tidak dapat dibuat. Coba unduh lagi."
+}

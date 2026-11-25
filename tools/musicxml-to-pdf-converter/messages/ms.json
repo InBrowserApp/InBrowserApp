@@ -1,0 +1,19 @@
+{
+  "chooseFile": "Buka fail MusicXML",
+  "changeFile": "Tukar fail",
+  "dropHint": "Lepaskan skor MusicXML atau MXL di sini",
+  "privacy": "Skor anda kekal dalam pelayar ini.",
+  "example": "Cuba contoh",
+  "paper": "Saiz kertas",
+  "a4": "A4 (210 × 297 mm)",
+  "letter": "US Letter (8.5 × 11 inci)",
+  "preview": "Pratonton PDF",
+  "page": "Halaman {page} daripada {total}",
+  "previous": "Halaman sebelumnya",
+  "next": "Halaman seterusnya",
+  "loading": "Menyusun atur skor muzik…",
+  "invalidScore": "Skor tidak dapat disusun atur. Cuba fail lain atau eksport semula sebagai MusicXML partwise.",
+  "download": "Muat turun PDF",
+  "downloadBusy": "Menyediakan PDF…",
+  "downloadError": "PDF tidak dapat dihasilkan. Cuba muat turun sekali lagi."
+}

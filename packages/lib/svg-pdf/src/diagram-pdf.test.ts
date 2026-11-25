@@ -35,6 +35,28 @@ test("exports diagrams with no labels without loading font assets", async () => 
   expect(fetchAsset).not.toHaveBeenCalled()
 })
 
+function stubFonts() {
+  const resolve = createRequire(import.meta.url).resolve
+  const paths = {
+    "index_bg.wasm": resolve("@resvg/resvg-wasm/index_bg.wasm"),
+    "DejaVuSans.ttf": resolve("../fonts/DejaVuSans.ttf"),
+    "DejaVuSans-Bold.ttf": resolve("../fonts/DejaVuSans-Bold.ttf"),
+    "NotoEmoji.ttf": resolve("../fonts/NotoEmoji.ttf"),
+    "NotoSansCJKsc-Regular.otf": resolve(
+      "../../libreoffice/fonts/NotoSansCJKsc-Regular.otf"
+    ),
+  }
+  const fetchAsset = vi.fn(async (url: string) => {
+    const name = url.split("/").at(-1) as keyof typeof paths
+    const data = await readFile(paths[name])
+    return new Response(Uint8Array.from(data), {
+      headers: { "Content-Type": "application/octet-stream" },
+    })
+  })
+  vi.stubGlobal("fetch", fetchAsset)
+  return fetchAsset
+}
+
 test.each([
   ["Start", "en", "DejaVuSans.ttf", 10],
   ["流程测试", "zh-CN", "NotoSansCJKsc-Regular.otf", 25],
@@ -43,24 +65,7 @@ test.each([
   "writes %s as vector outlines",
   { timeout: 20_000 },
   async (label, language, font, curves) => {
-    const resolve = createRequire(import.meta.url).resolve
-    const paths = {
-      "index_bg.wasm": resolve("@resvg/resvg-wasm/index_bg.wasm"),
-      "DejaVuSans.ttf": resolve("../fonts/DejaVuSans.ttf"),
-      "DejaVuSans-Bold.ttf": resolve("../fonts/DejaVuSans-Bold.ttf"),
-      "NotoEmoji.ttf": resolve("../fonts/NotoEmoji.ttf"),
-      "NotoSansCJKsc-Regular.otf": resolve(
-        "../../libreoffice/fonts/NotoSansCJKsc-Regular.otf"
-      ),
-    }
-    const fetchAsset = vi.fn(async (url: string) => {
-      const name = url.split("/").at(-1) as keyof typeof paths
-      const data = await readFile(paths[name])
-      return new Response(Uint8Array.from(data), {
-        headers: { "Content-Type": "application/octet-stream" },
-      })
-    })
-    vi.stubGlobal("fetch", fetchAsset)
+    const fetchAsset = stubFonts()
 
     const blob = await createDiagramPdf(diagram(label), "original", language)
     const pdf = Buffer.from(await blob.arrayBuffer()).toString("latin1")
@@ -73,3 +78,19 @@ test.each([
     expect(content).toContain("\nf\n")
   }
 )
+
+test("keeps a fixed page size when outlined text extends past its edges", async () => {
+  stubFonts()
+  const source = diagram("A title that is much wider than this particular page")
+  const fixed = await createDiagramPdf(source, "original", "en", {
+    keepPageSize: true,
+  })
+  const automatic = await createDiagramPdf(source, "original", "en")
+  const mediaBox = "/MediaBox [0 0 180. 45.]"
+  expect(Buffer.from(await fixed.arrayBuffer()).toString("latin1")).toContain(
+    mediaBox
+  )
+  expect(
+    Buffer.from(await automatic.arrayBuffer()).toString("latin1")
+  ).not.toContain(mediaBox)
+})

@@ -4,7 +4,7 @@ import { DocumentWorkspace } from "@workspace/ui/components/tool/document-worksp
 import { ScoreDownloadMenu } from "@workspace/ui/components/tool/score-download-menu"
 import { Button } from "@workspace/ui/components/ui/button"
 import { FileMusic, Upload, ZoomIn, ZoomOut } from "@workspace/ui/icons"
-import example from "./fixtures/morning-steps.musicxml?raw"
+import { musicXmlExample } from "@workspace/score-export/musicxml-example"
 
 import type { OpenSheetMusicDisplay } from "opensheetmusicdisplay"
 import type english from "./messages/en.json"
@@ -116,9 +116,7 @@ export default function MusicXmlViewer({
               type="button"
               className="min-h-11"
               variant="outline"
-              onClick={() =>
-                open(new File([example], "Morning Steps.musicxml"))
-              }
+              onClick={() => open(musicXmlExample())}
             >
               {m.example}
             </Button>

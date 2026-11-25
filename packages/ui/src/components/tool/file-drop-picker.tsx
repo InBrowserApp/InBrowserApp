@@ -20,6 +20,7 @@ export function FileDropPicker({
   formats,
   icon: Icon = File,
   labels,
+  example,
   onFile,
 }: {
   name: string
@@ -27,6 +28,7 @@ export function FileDropPicker({
   formats: string
   icon?: typeof File
   labels: Labels
+  example?: { label: string; onClick: () => void }
   onFile: (file: File) => void
 }) {
   const input = useRef<HTMLInputElement>(null)
@@ -112,6 +114,16 @@ export function FileDropPicker({
             </Button>
           </div>
         </div>
+        {!name && example && (
+          <Button
+            type="button"
+            variant="outline"
+            className="min-h-11 self-center sm:min-h-8"
+            onClick={example.onClick}
+          >
+            {example.label}
+          </Button>
+        )}
         <p className="text-center text-xs text-muted-foreground">
           {labels.privacy}
         </p>

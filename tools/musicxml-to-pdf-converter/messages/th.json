@@ -1,0 +1,19 @@
+{
+  "chooseFile": "เปิดไฟล์ MusicXML",
+  "changeFile": "เปลี่ยนไฟล์",
+  "dropHint": "ลากไฟล์โน้ตเพลง MusicXML หรือ MXL มาวางที่นี่",
+  "privacy": "ไฟล์โน้ตเพลงของคุณจะอยู่ในเบราว์เซอร์นี้",
+  "example": "ลองใช้ตัวอย่าง",
+  "paper": "ขนาดกระดาษ",
+  "a4": "A4 (210 × 297 มม.)",
+  "letter": "US Letter (8.5 × 11 นิ้ว)",
+  "preview": "ตัวอย่าง PDF",
+  "page": "หน้า {page} จาก {total}",
+  "previous": "หน้าก่อนหน้า",
+  "next": "หน้าถัดไป",
+  "loading": "กำลังจัดหน้าโน้ตเพลง…",
+  "invalidScore": "จัดหน้าโน้ตเพลงไม่ได้ ลองใช้ไฟล์อื่นหรือส่งออกใหม่เป็น MusicXML แบบ partwise",
+  "download": "ดาวน์โหลด PDF",
+  "downloadBusy": "กำลังเตรียม PDF…",
+  "downloadError": "สร้าง PDF ไม่ได้ ลองดาวน์โหลดอีกครั้ง"
+}
