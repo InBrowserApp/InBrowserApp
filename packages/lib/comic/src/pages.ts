@@ -38,6 +38,10 @@ const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" })
 
 type Entry = { filename: string; directory?: boolean; encrypted?: boolean }
 
+export function comparePageNames(a: string, b: string) {
+  return collator.compare(a, b) || (a < b ? -1 : a > b ? 1 : 0)
+}
+
 export function indexPages<T extends Entry>(entries: readonly T[]) {
   return entries
     .flatMap((entry, position) => {
@@ -64,12 +68,7 @@ export function indexPages<T extends Entry>(entries: readonly T[]) {
     })
     .sort(
       (a, b) =>
-        collator.compare(a.page.name, b.page.name) ||
-        (a.page.name < b.page.name
-          ? -1
-          : a.page.name > b.page.name
-            ? 1
-            : a.position - b.position)
+        comparePageNames(a.page.name, b.page.name) || a.position - b.position
     )
 }
 

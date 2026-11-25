@@ -968,6 +968,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "image-watermark",
   },
   {
+    category: "ebook",
+    name: "圖片轉 CBZ",
+    slug: "images-to-cbz-converter",
+  },
+  {
     category: "text",
     name: "IMEI 驗證器",
     slug: "imei-validator",

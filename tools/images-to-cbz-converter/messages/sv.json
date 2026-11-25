@@ -1,0 +1,23 @@
+{
+  "open": "Välj bilder",
+  "folder": "Välj mapp",
+  "add": "Lägg till bilder",
+  "drop": "Du kan också släppa bilder på seriesidor här.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP och AVIF",
+  "privacy": "Bilderna stannar på den här enheten.",
+  "reading": "Läser in bilder…",
+  "pages": "Seriesidor ({total})",
+  "reorder": "Dra sidorna eller använd pilknapparna för att ändra ordningen.",
+  "cover": "Omslag",
+  "makeCover": "Använd som omslag",
+  "coverAction": "Använd {name} som omslag",
+  "moveUp": "Flytta {name} uppåt",
+  "moveDown": "Flytta {name} nedåt",
+  "remove": "Ta bort {name}",
+  "skipped": "Filer som hoppades över ({count})",
+  "create": "Skapa CBZ",
+  "download": "Ladda ner CBZ",
+  "cancel": "Avbryt skapandet",
+  "packing": "Lägger till sida {page} av {total} i arkivet…",
+  "failed": "Det gick inte att skapa CBZ-filen. Försök igen."
+}

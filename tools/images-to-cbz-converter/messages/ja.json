@@ -1,0 +1,23 @@
+{
+  "open": "画像を選択",
+  "folder": "フォルダーを選択",
+  "add": "画像を追加",
+  "drop": "または、漫画のページ画像をここにドロップします。",
+  "formats": "JPEG、PNG、WebP、GIF、BMP、AVIF",
+  "privacy": "画像はこの端末内に留まります。",
+  "reading": "画像を読み込み中…",
+  "pages": "コミックのページ（{total} ページ）",
+  "reorder": "ページをドラッグするか、矢印ボタンで順番を変えられます。",
+  "cover": "表紙",
+  "makeCover": "表紙にする",
+  "coverAction": "{name} を表紙にする",
+  "moveUp": "{name} を上へ移動",
+  "moveDown": "{name} を下へ移動",
+  "remove": "{name} を削除",
+  "skipped": "読み飛ばしたファイル（{count} 件）",
+  "create": "CBZ を作成",
+  "download": "CBZ をダウンロード",
+  "cancel": "作成をキャンセル",
+  "packing": "{total} ページ中 {page} ページ目を処理しています…",
+  "failed": "CBZ を作成できませんでした。もう一度お試しください。"
+}

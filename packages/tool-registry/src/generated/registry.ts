@@ -24714,6 +24714,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "images-to-cbz-converter",
+    category: "ebook",
+    secondaryCategories: ["image"],
+    icon: "archive",
+    tags: [
+      "images",
+      "jpg",
+      "png",
+      "webp",
+      "cbz",
+      "comic",
+      "manga",
+      "cover",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل الصور إلى CBZ",
+        description:
+          "حوّل صور الصفحات بتنسيق JPG أو PNG أو WebP وغيرها إلى قصة مصوّرة بتنسيق CBZ. رتّب الصفحات واختر الغلاف واجمع الصور الأصلية في ملف واحد داخل متصفحك.",
+      },
+      de: {
+        name: "Bilder in CBZ umwandeln",
+        description:
+          "Erstelle aus JPG, PNG, WebP und weiteren Bildformaten einen CBZ-Comic. Ordne die Seiten neu, wähle das Titelbild und packe die Originalbilder direkt im Browser in eine Datei.",
+      },
+      en: {
+        name: "Images to CBZ Converter",
+        description:
+          "Convert JPG, PNG, WebP and other page images to a CBZ comic. Reorder pages, choose the cover, and pack the original images into one file in your browser.",
+      },
+      es: {
+        name: "Convertidor de imágenes a CBZ",
+        description:
+          "Convierte imágenes JPG, PNG, WebP y otros formatos en un cómic CBZ. Ordena las páginas, elige la portada y reúne las imágenes originales en un solo archivo desde tu navegador.",
+      },
+      fr: {
+        name: "Créer un CBZ à partir d’images",
+        description:
+          "Créez une BD au format CBZ à partir de fichiers JPG, PNG, WebP et d’autres images. Réordonnez les pages, choisissez la couverture et regroupez les images d’origine dans un seul fichier, directement dans votre navigateur.",
+      },
+      he: {
+        name: "יצירת CBZ מתמונות",
+        description:
+          "צרו קובץ קומיקס בפורמט CBZ מתמונות JPG, PNG, WebP ופורמטים נוספים. סדרו את העמודים, בחרו כריכה וארזו את התמונות המקוריות בקובץ אחד בדפדפן.",
+      },
+      hi: {
+        name: "इमेज से CBZ कन्वर्टर",
+        description:
+          "JPG, PNG, WebP और दूसरे फ़ॉर्मैट की इमेज से CBZ कॉमिक बनाएँ। पृष्ठों का क्रम बदलें, कवर चुनें और ब्राउज़र में ही मूल इमेज को एक फ़ाइल में पैक करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke CBZ",
+        description:
+          "Ubah JPG, PNG, WebP, dan gambar halaman lainnya menjadi komik CBZ. Atur urutan halaman, pilih sampul, dan kemas gambar asli ke dalam satu file langsung di browser.",
+      },
+      it: {
+        name: "Convertitore di immagini in CBZ",
+        description:
+          "Crea un fumetto CBZ da immagini JPG, PNG, WebP o altri formati. Riordina le pagine, scegli la copertina e riunisci le immagini originali in un unico file nel browser.",
+      },
+      ja: {
+        name: "画像をCBZに変換",
+        description:
+          "JPG、PNG、WebP などのページ画像をブラウザーで CBZ 形式のコミックに変換します。ページを並べ替えて表紙を選び、元の画像を 1 つのファイルにまとめられます。",
+      },
+      ko: {
+        name: "이미지를 CBZ로 변환",
+        description:
+          "JPG, PNG, WebP 등의 페이지 이미지로 CBZ 만화를 만드세요. 브라우저에서 페이지 순서를 바꾸고 표지를 고른 뒤 원본 이미지를 파일 하나로 묶을 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada CBZ",
+        description:
+          "Tukar imej halaman JPG, PNG, WebP dan format lain menjadi komik CBZ. Susun semula halaman, pilih kulit depan dan gabungkan imej asal dalam satu fail terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen-naar-CBZ-converter",
+        description:
+          "Maak een CBZ-strip van strippagina’s in JPG, PNG, WebP en andere beeldformaten. Bepaal de paginavolgorde, kies de omslag en bundel de originele afbeeldingen in één bestand in je browser.",
+      },
+      no: {
+        name: "Konverter bilder til CBZ",
+        description:
+          "Lag en CBZ-tegneserie av JPG-, PNG-, WebP- og andre bildefiler. Endre siderekkefølgen, velg forside og samle originalbildene i én fil i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter obrazów na CBZ",
+        description:
+          "Twórz komiksy CBZ z plików JPG, PNG, WebP i innych obrazów stron. Ustaw kolejność stron, wybierz okładkę i spakuj oryginalne obrazy do jednego pliku w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de imagens para CBZ",
+        description:
+          "Converta JPG, PNG, WebP e outras imagens em um quadrinho CBZ. Reordene as páginas, escolha a capa e reúna as imagens originais em um único arquivo no navegador.",
+      },
+      ru: {
+        name: "Создать CBZ из изображений",
+        description:
+          "Соберите комикс CBZ из JPG, PNG, WebP и других изображений. Меняйте порядок страниц, выбирайте обложку и объединяйте исходные файлы в один архив прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera bilder till CBZ",
+        description:
+          "Skapa en CBZ-serie från JPG, PNG, WebP och andra sidbilder. Ändra sidordningen, välj omslag och samla originalbilderna i en fil direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น CBZ",
+        description:
+          "แปลงภาพหน้าการ์ตูน JPG, PNG, WebP และรูปแบบอื่นเป็นการ์ตูน CBZ จัดลำดับหน้า เลือกปก และรวมไฟล์ภาพต้นฉบับเป็นไฟล์เดียวในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görselleri CBZ’ye Dönüştür",
+        description:
+          "JPG, PNG, WebP ve diğer biçimlerdeki sayfa görsellerinden bir CBZ çizgi romanı oluşturun. Sayfaları sıralayın, kapağı seçin ve özgün görselleri tarayıcınızda tek dosyada birleştirin.",
+      },
+      vi: {
+        name: "Trình chuyển ảnh sang CBZ",
+        description:
+          "Tạo truyện tranh CBZ từ ảnh JPG, PNG, WebP và các định dạng ảnh khác. Sắp xếp trang, chọn ảnh bìa rồi đóng gói các ảnh gốc vào một tệp ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片转 CBZ 转换器",
+        description:
+          "将 JPG、PNG、WebP 等图片制作成 CBZ 漫画。在浏览器中调整页序、选择封面，并将原始图片打包成一个文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉 CBZ",
+        description:
+          "將 JPG、PNG、WebP 等圖片轉成 CBZ 漫畫。在瀏覽器中調整頁面順序、挑選封面，並將原始圖片打包成單一檔案。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",
@@ -82536,6 +82670,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片浮水印",
         description:
           "在本機為圖片加入文字或標誌浮水印。調整平鋪、位置與不透明度，再匯出單張圖片或整批 ZIP。",
+      },
+    },
+  },
+  "images-to-cbz-converter": {
+    slug: "images-to-cbz-converter",
+    category: "ebook",
+    secondaryCategories: ["image"],
+    icon: "archive",
+    tags: [
+      "images",
+      "jpg",
+      "png",
+      "webp",
+      "cbz",
+      "comic",
+      "manga",
+      "cover",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل الصور إلى CBZ",
+        description:
+          "حوّل صور الصفحات بتنسيق JPG أو PNG أو WebP وغيرها إلى قصة مصوّرة بتنسيق CBZ. رتّب الصفحات واختر الغلاف واجمع الصور الأصلية في ملف واحد داخل متصفحك.",
+      },
+      de: {
+        name: "Bilder in CBZ umwandeln",
+        description:
+          "Erstelle aus JPG, PNG, WebP und weiteren Bildformaten einen CBZ-Comic. Ordne die Seiten neu, wähle das Titelbild und packe die Originalbilder direkt im Browser in eine Datei.",
+      },
+      en: {
+        name: "Images to CBZ Converter",
+        description:
+          "Convert JPG, PNG, WebP and other page images to a CBZ comic. Reorder pages, choose the cover, and pack the original images into one file in your browser.",
+      },
+      es: {
+        name: "Convertidor de imágenes a CBZ",
+        description:
+          "Convierte imágenes JPG, PNG, WebP y otros formatos en un cómic CBZ. Ordena las páginas, elige la portada y reúne las imágenes originales en un solo archivo desde tu navegador.",
+      },
+      fr: {
+        name: "Créer un CBZ à partir d’images",
+        description:
+          "Créez une BD au format CBZ à partir de fichiers JPG, PNG, WebP et d’autres images. Réordonnez les pages, choisissez la couverture et regroupez les images d’origine dans un seul fichier, directement dans votre navigateur.",
+      },
+      he: {
+        name: "יצירת CBZ מתמונות",
+        description:
+          "צרו קובץ קומיקס בפורמט CBZ מתמונות JPG, PNG, WebP ופורמטים נוספים. סדרו את העמודים, בחרו כריכה וארזו את התמונות המקוריות בקובץ אחד בדפדפן.",
+      },
+      hi: {
+        name: "इमेज से CBZ कन्वर्टर",
+        description:
+          "JPG, PNG, WebP और दूसरे फ़ॉर्मैट की इमेज से CBZ कॉमिक बनाएँ। पृष्ठों का क्रम बदलें, कवर चुनें और ब्राउज़र में ही मूल इमेज को एक फ़ाइल में पैक करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke CBZ",
+        description:
+          "Ubah JPG, PNG, WebP, dan gambar halaman lainnya menjadi komik CBZ. Atur urutan halaman, pilih sampul, dan kemas gambar asli ke dalam satu file langsung di browser.",
+      },
+      it: {
+        name: "Convertitore di immagini in CBZ",
+        description:
+          "Crea un fumetto CBZ da immagini JPG, PNG, WebP o altri formati. Riordina le pagine, scegli la copertina e riunisci le immagini originali in un unico file nel browser.",
+      },
+      ja: {
+        name: "画像をCBZに変換",
+        description:
+          "JPG、PNG、WebP などのページ画像をブラウザーで CBZ 形式のコミックに変換します。ページを並べ替えて表紙を選び、元の画像を 1 つのファイルにまとめられます。",
+      },
+      ko: {
+        name: "이미지를 CBZ로 변환",
+        description:
+          "JPG, PNG, WebP 등의 페이지 이미지로 CBZ 만화를 만드세요. 브라우저에서 페이지 순서를 바꾸고 표지를 고른 뒤 원본 이미지를 파일 하나로 묶을 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada CBZ",
+        description:
+          "Tukar imej halaman JPG, PNG, WebP dan format lain menjadi komik CBZ. Susun semula halaman, pilih kulit depan dan gabungkan imej asal dalam satu fail terus dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen-naar-CBZ-converter",
+        description:
+          "Maak een CBZ-strip van strippagina’s in JPG, PNG, WebP en andere beeldformaten. Bepaal de paginavolgorde, kies de omslag en bundel de originele afbeeldingen in één bestand in je browser.",
+      },
+      no: {
+        name: "Konverter bilder til CBZ",
+        description:
+          "Lag en CBZ-tegneserie av JPG-, PNG-, WebP- og andre bildefiler. Endre siderekkefølgen, velg forside og samle originalbildene i én fil i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter obrazów na CBZ",
+        description:
+          "Twórz komiksy CBZ z plików JPG, PNG, WebP i innych obrazów stron. Ustaw kolejność stron, wybierz okładkę i spakuj oryginalne obrazy do jednego pliku w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de imagens para CBZ",
+        description:
+          "Converta JPG, PNG, WebP e outras imagens em um quadrinho CBZ. Reordene as páginas, escolha a capa e reúna as imagens originais em um único arquivo no navegador.",
+      },
+      ru: {
+        name: "Создать CBZ из изображений",
+        description:
+          "Соберите комикс CBZ из JPG, PNG, WebP и других изображений. Меняйте порядок страниц, выбирайте обложку и объединяйте исходные файлы в один архив прямо в браузере.",
+      },
+      sv: {
+        name: "Konvertera bilder till CBZ",
+        description:
+          "Skapa en CBZ-serie från JPG, PNG, WebP och andra sidbilder. Ändra sidordningen, välj omslag och samla originalbilderna i en fil direkt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น CBZ",
+        description:
+          "แปลงภาพหน้าการ์ตูน JPG, PNG, WebP และรูปแบบอื่นเป็นการ์ตูน CBZ จัดลำดับหน้า เลือกปก และรวมไฟล์ภาพต้นฉบับเป็นไฟล์เดียวในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Görselleri CBZ’ye Dönüştür",
+        description:
+          "JPG, PNG, WebP ve diğer biçimlerdeki sayfa görsellerinden bir CBZ çizgi romanı oluşturun. Sayfaları sıralayın, kapağı seçin ve özgün görselleri tarayıcınızda tek dosyada birleştirin.",
+      },
+      vi: {
+        name: "Trình chuyển ảnh sang CBZ",
+        description:
+          "Tạo truyện tranh CBZ từ ảnh JPG, PNG, WebP và các định dạng ảnh khác. Sắp xếp trang, chọn ảnh bìa rồi đóng gói các ảnh gốc vào một tệp ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片转 CBZ 转换器",
+        description:
+          "将 JPG、PNG、WebP 等图片制作成 CBZ 漫画。在浏览器中调整页序、选择封面，并将原始图片打包成一个文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉 CBZ",
+        description:
+          "將 JPG、PNG、WebP 等圖片轉成 CBZ 漫畫。在瀏覽器中調整頁面順序、挑選封面，並將原始圖片打包成單一檔案。",
       },
     },
   },

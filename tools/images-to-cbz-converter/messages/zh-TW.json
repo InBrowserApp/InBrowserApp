@@ -1,0 +1,23 @@
+{
+  "open": "選擇圖片",
+  "folder": "選擇資料夾",
+  "add": "加入圖片",
+  "drop": "也可以將漫畫頁面圖片拖放至此。",
+  "formats": "JPEG、PNG、WebP、GIF、BMP 和 AVIF",
+  "privacy": "您的圖片會留在此裝置上。",
+  "reading": "正在讀取圖片…",
+  "pages": "漫畫頁面（共 {total} 頁）",
+  "reorder": "拖曳頁面或使用箭頭按鈕調整順序。",
+  "cover": "封面",
+  "makeCover": "設為封面",
+  "coverAction": "將 {name} 設為封面",
+  "moveUp": "上移 {name}",
+  "moveDown": "下移 {name}",
+  "remove": "移除 {name}",
+  "skipped": "已略過 {count} 個檔案",
+  "create": "建立 CBZ",
+  "download": "下載 CBZ",
+  "cancel": "取消建立",
+  "packing": "正在打包第 {page} 頁，共 {total} 頁…",
+  "failed": "無法建立 CBZ，請再試一次。"
+}

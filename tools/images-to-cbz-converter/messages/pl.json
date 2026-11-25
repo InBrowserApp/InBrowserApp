@@ -1,0 +1,23 @@
+{
+  "open": "Wybierz obrazy",
+  "folder": "Wybierz folder",
+  "add": "Dodaj obrazy",
+  "drop": "Możesz też przeciągnąć tutaj obrazy stron komiksu.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP i AVIF",
+  "privacy": "Twoje obrazy pozostają na tym urządzeniu.",
+  "reading": "Odczytywanie obrazów…",
+  "pages": "Strony komiksu ({total})",
+  "reorder": "Przeciągnij strony lub użyj przycisków ze strzałkami, aby zmienić kolejność.",
+  "cover": "Okładka",
+  "makeCover": "Ustaw jako okładkę",
+  "coverAction": "Ustaw {name} jako okładkę",
+  "moveUp": "Przenieś {name} w górę",
+  "moveDown": "Przenieś {name} w dół",
+  "remove": "Usuń {name}",
+  "skipped": "Pominięte pliki ({count})",
+  "create": "Utwórz CBZ",
+  "download": "Pobierz CBZ",
+  "cancel": "Anuluj tworzenie",
+  "packing": "Pakowanie strony {page} z {total}…",
+  "failed": "Nie udało się utworzyć pliku CBZ. Spróbuj ponownie."
+}

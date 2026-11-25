@@ -17758,6 +17758,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "images-to-cbz-converter",
+    language: "ar",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "de",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "en",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "es",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "fr",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "he",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "hi",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "id",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "it",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "ja",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "ko",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "ms",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "nl",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "no",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "pl",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "pt",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "ru",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "sv",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "th",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "tr",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "vi",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "images-to-cbz-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },

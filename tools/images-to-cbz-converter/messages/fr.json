@@ -1,0 +1,23 @@
+{
+  "open": "Choisir des images",
+  "folder": "Choisir un dossier",
+  "add": "Ajouter des images",
+  "drop": "Ou déposez les images des pages de la BD ici.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP et AVIF",
+  "privacy": "Vos images restent sur cet appareil.",
+  "reading": "Lecture des images…",
+  "pages": "Pages de la BD ({total})",
+  "reorder": "Faites glisser les pages ou utilisez les flèches pour les réordonner.",
+  "cover": "Couverture",
+  "makeCover": "Définir comme couverture",
+  "coverAction": "Définir {name} comme couverture",
+  "moveUp": "Déplacer {name} vers le haut",
+  "moveDown": "Déplacer {name} vers le bas",
+  "remove": "Supprimer {name}",
+  "skipped": "Fichiers ignorés ({count})",
+  "create": "Créer le CBZ",
+  "download": "Télécharger le CBZ",
+  "cancel": "Annuler la création",
+  "packing": "Ajout de la page {page} sur {total}…",
+  "failed": "Impossible de créer le CBZ. Réessayez."
+}

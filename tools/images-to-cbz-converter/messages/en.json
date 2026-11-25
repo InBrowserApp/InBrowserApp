@@ -1,0 +1,23 @@
+{
+  "open": "Choose images",
+  "folder": "Choose folder",
+  "add": "Add images",
+  "drop": "Or drop comic page images here.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP and AVIF",
+  "privacy": "Your images stay on this device.",
+  "reading": "Reading images…",
+  "pages": "Comic pages ({total})",
+  "reorder": "Drag pages or use the arrow buttons to change the order.",
+  "cover": "Cover",
+  "makeCover": "Make cover",
+  "coverAction": "Make {name} the cover",
+  "moveUp": "Move {name} up",
+  "moveDown": "Move {name} down",
+  "remove": "Remove {name}",
+  "skipped": "Files skipped ({count})",
+  "create": "Create CBZ",
+  "download": "Download CBZ",
+  "cancel": "Cancel creation",
+  "packing": "Packing page {page} of {total}…",
+  "failed": "Couldn’t create the CBZ. Try again."
+}

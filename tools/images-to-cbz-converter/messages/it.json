@@ -1,0 +1,23 @@
+{
+  "open": "Scegli immagini",
+  "folder": "Scegli cartella",
+  "add": "Aggiungi immagini",
+  "drop": "Oppure trascina qui le immagini delle pagine del fumetto.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP e AVIF",
+  "privacy": "Le immagini restano su questo dispositivo.",
+  "reading": "Lettura delle immagini…",
+  "pages": "Pagine del fumetto ({total})",
+  "reorder": "Trascina le pagine o usa i pulsanti freccia per cambiare l’ordine.",
+  "cover": "Copertina",
+  "makeCover": "Usa come copertina",
+  "coverAction": "Usa {name} come copertina",
+  "moveUp": "Sposta {name} in alto",
+  "moveDown": "Sposta {name} in basso",
+  "remove": "Rimuovi {name}",
+  "skipped": "File ignorati ({count})",
+  "create": "Crea CBZ",
+  "download": "Scarica CBZ",
+  "cancel": "Annulla creazione",
+  "packing": "Aggiunta della pagina {page} di {total} all’archivio…",
+  "failed": "Impossibile creare il CBZ. Riprova."
+}

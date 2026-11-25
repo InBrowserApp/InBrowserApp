@@ -1,0 +1,23 @@
+{
+  "open": "Afbeeldingen kiezen",
+  "folder": "Map kiezen",
+  "add": "Afbeeldingen toevoegen",
+  "drop": "Of sleep de afbeeldingen van strippagina’s hierheen.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP en AVIF",
+  "privacy": "Je afbeeldingen blijven op dit apparaat.",
+  "reading": "Afbeeldingen lezen…",
+  "pages": "Strippagina’s ({total})",
+  "reorder": "Sleep de pagina’s of gebruik de pijlknoppen om de volgorde te wijzigen.",
+  "cover": "Omslag",
+  "makeCover": "Als omslag instellen",
+  "coverAction": "{name} als omslag instellen",
+  "moveUp": "{name} omhoog verplaatsen",
+  "moveDown": "{name} omlaag verplaatsen",
+  "remove": "{name} verwijderen",
+  "skipped": "Overgeslagen bestanden ({count})",
+  "create": "CBZ maken",
+  "download": "CBZ downloaden",
+  "cancel": "Annuleren",
+  "packing": "Pagina {page} van {total} toevoegen…",
+  "failed": "Het CBZ-bestand kon niet worden gemaakt. Probeer het opnieuw."
+}

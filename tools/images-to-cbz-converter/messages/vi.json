@@ -1,0 +1,23 @@
+{
+  "open": "Chọn ảnh",
+  "folder": "Chọn thư mục",
+  "add": "Thêm ảnh",
+  "drop": "Hoặc kéo thả ảnh các trang truyện vào đây.",
+  "formats": "JPEG, PNG, WebP, GIF, BMP và AVIF",
+  "privacy": "Ảnh của bạn vẫn ở trên thiết bị này.",
+  "reading": "Đang đọc ảnh…",
+  "pages": "Số trang truyện ({total})",
+  "reorder": "Kéo thả trang hoặc dùng các nút mũi tên để đổi thứ tự.",
+  "cover": "Ảnh bìa",
+  "makeCover": "Đặt làm ảnh bìa",
+  "coverAction": "Đặt {name} làm ảnh bìa",
+  "moveUp": "Di chuyển {name} lên",
+  "moveDown": "Di chuyển {name} xuống",
+  "remove": "Bỏ ảnh {name}",
+  "skipped": "Số tệp đã bỏ qua ({count})",
+  "create": "Tạo CBZ",
+  "download": "Tải xuống CBZ",
+  "cancel": "Hủy tạo CBZ",
+  "packing": "Đang đóng gói trang {page} trên {total}…",
+  "failed": "Không thể tạo tệp CBZ. Hãy thử lại."
+}

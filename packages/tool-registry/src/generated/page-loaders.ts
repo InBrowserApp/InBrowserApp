@@ -240,6 +240,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "image-viewer": () => import("@tool/image-viewer/page"),
   "image-watermark": () => import("@tool/image-watermark/page"),
+  "images-to-cbz-converter": () => import("@tool/images-to-cbz-converter/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
   "ip-info-lookup": () => import("@tool/ip-info-lookup/page"),
