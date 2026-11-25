@@ -1294,6 +1294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "ทดสอบการไล่ระดับสีของจอ",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "ตัวแปลงรหัสมอร์ส",
     slug: "morse-code-converter",
   },

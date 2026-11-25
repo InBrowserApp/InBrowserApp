@@ -1,0 +1,4 @@
+{
+  "name": "Test gradientów monitora",
+  "description": "Sprawdź pasmowanie kolorów i utratę szczegółów w cieniach oraz jasnych partiach obrazu za pomocą skali szarości, gradientów RGB i ponumerowanych pól bliskich czerni i bieli."
+}

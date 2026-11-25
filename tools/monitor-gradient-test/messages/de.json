@@ -1,0 +1,19 @@
+{
+  "patterns": "Testmuster",
+  "grayscale": "Graustufen",
+  "rgb": "RGB-Verläufe",
+  "black": "Schwarzstufen",
+  "white": "Weißstufen",
+  "smoothGrayscale": "Stufenloser Grauverlauf",
+  "grayscaleSteps": "16 Graustufen",
+  "red": "Rot",
+  "green": "Grün",
+  "blue": "Blau",
+  "grayscaleHint": "Achte oben auf einen gleichmäßigen, farbneutralen Übergang und unten auf klar unterscheidbare Stufen.",
+  "rgbHint": "Prüfe bei jeder Farbe, ob der Verlauf gleichmäßig und ohne sichtbare Streifen ist.",
+  "blackHint": "Vergleiche die nummerierten Felder mit ihren Nachbarfeldern auf schwarzem Hintergrund.",
+  "whiteHint": "Vergleiche die nummerierten Felder mit ihren Nachbarfeldern auf weißem Hintergrund.",
+  "fullscreen": "Im Vollbild ansehen",
+  "fullscreenLabel": "Farbverlaufstest im Vollbild",
+  "exit": "Vollbild verlassen"
+}

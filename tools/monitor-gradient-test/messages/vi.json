@@ -1,0 +1,19 @@
+{
+  "patterns": "Mẫu kiểm tra",
+  "grayscale": "Thang xám",
+  "rgb": "Dải chuyển màu RGB",
+  "black": "Mức đen",
+  "white": "Mức trắng",
+  "smoothGrayscale": "Dải xám chuyển mượt",
+  "grayscaleSteps": "16 mức xám",
+  "red": "Đỏ",
+  "green": "Xanh lá",
+  "blue": "Xanh dương",
+  "grayscaleHint": "Kiểm tra xem dải phía trên có chuyển màu mượt và không ám màu, còn các mức phía dưới có tách biệt không.",
+  "rgbHint": "Kiểm tra xem mỗi dải màu có chuyển mượt, không xuất hiện sọc màu đột ngột hay không.",
+  "blackHint": "So sánh từng ô được đánh số với các ô liền kề trên nền đen.",
+  "whiteHint": "So sánh từng ô được đánh số với các ô liền kề trên nền trắng.",
+  "fullscreen": "Xem toàn màn hình",
+  "fullscreenLabel": "Kiểm tra dải chuyển màu ở chế độ toàn màn hình",
+  "exit": "Thoát toàn màn hình"
+}

@@ -1,0 +1,19 @@
+{
+  "patterns": "Mires de test",
+  "grayscale": "Niveaux de gris",
+  "rgb": "Dégradés RVB",
+  "black": "Niveaux de noir",
+  "white": "Niveaux de blanc",
+  "smoothGrayscale": "Dégradé de gris continu",
+  "grayscaleSteps": "16 niveaux de gris",
+  "red": "Rouge",
+  "green": "Vert",
+  "blue": "Bleu",
+  "grayscaleHint": "Vérifiez que le dégradé du dessus est régulier et neutre et que les niveaux du dessous restent distincts.",
+  "rgbHint": "Vérifiez que chaque dégradé évolue progressivement, sans bandes marquées.",
+  "blackHint": "Comparez chaque case numérotée avec ses voisines sur le fond noir.",
+  "whiteHint": "Comparez chaque case numérotée avec ses voisines sur le fond blanc.",
+  "fullscreen": "Afficher en plein écran",
+  "fullscreenLabel": "Test de dégradés en plein écran",
+  "exit": "Quitter le plein écran"
+}

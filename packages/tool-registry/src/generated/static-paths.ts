@@ -23738,6 +23738,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "monitor-gradient-test",
+    language: "ar",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "de",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "en",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "es",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "fr",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "he",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "hi",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "id",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "it",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "ja",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "ko",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "ms",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "nl",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "no",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "pl",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "pt",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "ru",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "sv",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "th",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "tr",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "vi",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "zh-CN",
+  },
+  {
+    slug: "monitor-gradient-test",
+    language: "zh-TW",
+  },
+  {
     slug: "morse-code-converter",
     language: "ar",
   },

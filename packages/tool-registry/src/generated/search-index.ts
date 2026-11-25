@@ -32856,6 +32856,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "monitor-gradient-test",
+    category: "misc",
+    icon: "columns-2",
+    tags: [
+      "monitor",
+      "display",
+      "grayscale",
+      "gradient",
+      "color banding",
+      "levels",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار تدرجات ألوان الشاشة",
+        description:
+          "افحص شاشتك بحثًا عن تدرجات لونية متقطعة وفقدان التفاصيل في الظلال والمناطق الساطعة باستخدام تدرجات الرمادي وألوان RGB وأنماط مرقّمة لدرجات الأسود والأبيض.",
+      },
+      de: {
+        name: "Farbverlaufstest für Monitore",
+        description:
+          "Prüfe deinen Monitor mit Grau- und RGB-Verläufen sowie nummerierten Schwarz- und Weißstufen auf Tonwertabrisse und Detailverlust in Schatten und Lichtern.",
+      },
+      en: {
+        name: "Monitor Gradient Test",
+        description:
+          "Check your monitor for color banding, crushed shadows, and clipped highlights with grayscale, RGB gradients, and numbered black and white level patterns.",
+      },
+      es: {
+        name: "Prueba de degradados del monitor",
+        description:
+          "Comprueba si tu monitor muestra bandas de color o pierde detalle en las sombras y las luces con escalas de grises, degradados RGB y patrones numerados de niveles de negro y blanco.",
+      },
+      fr: {
+        name: "Test de dégradés à l’écran",
+        description:
+          "Repérez les bandes dans les dégradés, les noirs bouchés et les blancs écrêtés grâce à des dégradés de gris et RVB et à des mires numérotées de niveaux de noir et de blanc.",
+      },
+      he: {
+        name: "בדיקת מעברי צבע במסך",
+        description:
+          "בדקו אם מופיעים פסים במעברי צבע או אם פרטים נעלמים באזורים כהים ובהירים. הבדיקה כוללת גוני אפור, מעברי RGB ודוגמאות ממוספרות של רמות שחור ולבן.",
+      },
+      hi: {
+        name: "मॉनिटर ग्रेडिएंट टेस्ट",
+        description:
+          "ग्रेस्केल, RGB ग्रेडिएंट और नंबर वाले काले-सफ़ेद पैटर्न से जाँचें कि मॉनिटर पर रंगों में धारियाँ दिखती हैं या गहरे और चमकीले हिस्सों की बारीकियाँ खोती हैं।",
+      },
+      id: {
+        name: "Tes Gradien Monitor",
+        description:
+          "Periksa banding warna serta detail bayangan dan sorotan yang hilang pada monitor dengan skala abu-abu, gradien RGB, dan pola level hitam dan putih bernomor.",
+      },
+      it: {
+        name: "Test dei gradienti del monitor",
+        description:
+          "Verifica se il monitor mostra bande di colore o perde dettagli nelle ombre e nelle alte luci. Usa la scala di grigi, i gradienti RGB e i livelli di nero e bianco numerati.",
+      },
+      ja: {
+        name: "モニターのグラデーションテスト",
+        description:
+          "グレースケール、RGBグラデーション、番号付きの黒レベル・白レベルのパターンで、モニターのバンディング、黒つぶれ、白飛びを確認できます。",
+      },
+      ko: {
+        name: "모니터 그라데이션 테스트",
+        description:
+          "회색조, RGB 그라데이션, 번호가 붙은 어두운 계조와 밝은 계조 패턴으로 색상 밴딩과 암부·명부의 디테일 손실을 확인하세요.",
+      },
+      ms: {
+        name: "Ujian Gradien Monitor",
+        description:
+          "Periksa jalur warna serta kehilangan butiran gelap dan cerah pada monitor menggunakan skala kelabu, gradien RGB serta corak aras hitam dan putih bernombor.",
+      },
+      nl: {
+        name: "Kleurverloop van je monitor testen",
+        description:
+          "Controleer je monitor op kleurbanden en detailverlies in schaduwen en hooglichten met grijswaarden, RGB-verlopen en genummerde patronen voor zwart- en witniveaus.",
+      },
+      no: {
+        name: "Test av skjermens fargeoverganger",
+        description:
+          "Sjekk skjermen for fargebånd og tap av detaljer i skygger og høylys med gråskala, RGB-gradienter og nummererte testfelt for svart- og hvitnivå.",
+      },
+      pl: {
+        name: "Test gradientów monitora",
+        description:
+          "Sprawdź pasmowanie kolorów i utratę szczegółów w cieniach oraz jasnych partiach obrazu za pomocą skali szarości, gradientów RGB i ponumerowanych pól bliskich czerni i bieli.",
+      },
+      pt: {
+        name: "Teste de gradientes do monitor",
+        description:
+          "Verifique se o monitor apresenta bandas de cor ou perda de detalhe nas sombras e nas altas luzes com escalas de cinzentos, gradientes RGB e amostras numeradas de preto e branco.",
+      },
+      ru: {
+        name: "Тест градиентов монитора",
+        description:
+          "Проверьте, есть ли на мониторе полосы на цветовых переходах и потеря деталей в тенях или светлых участках. Используйте шкалу серого, градиенты RGB и пронумерованные образцы чёрного и белого.",
+      },
+      sv: {
+        name: "Test av skärmens färgövergångar",
+        description:
+          "Kontrollera om skärmen visar färgband eller tappar detaljer i skuggor och högdagrar med gråskala, RGB-gradienter och numrerade testfält för svart- och vitnivåer.",
+      },
+      th: {
+        name: "ทดสอบการไล่ระดับสีของจอ",
+        description:
+          "ตรวจดูว่าสีบนจอเป็นแถบหรือรายละเอียดส่วนมืดและส่วนสว่างหายไปหรือไม่ ด้วยภาพไล่ระดับสีเทาและสี RGB รวมถึงแบบทดสอบระดับสีดำและสีขาวที่มีหมายเลข",
+      },
+      tr: {
+        name: "Monitör Renk Geçişi Testi",
+        description:
+          "Gri tonlama, RGB renk geçişleri ve numaralı siyah ile beyaz seviye desenleriyle monitörünüzde renk bantlanmasını ve koyu veya açık tonlardaki ayrıntı kaybını kontrol edin.",
+      },
+      vi: {
+        name: "Kiểm tra dải chuyển màu màn hình",
+        description:
+          "Dùng thang xám, dải chuyển màu RGB và các ô đen trắng đánh số để kiểm tra sọc màu, vùng tối bị bệt và vùng sáng mất chi tiết.",
+      },
+      "zh-CN": {
+        name: "显示器色阶测试",
+        description:
+          "通过灰阶、RGB 渐变和带编号的黑白色阶图案，检查显示器是否有色带、暗部细节丢失或高光细节丢失。",
+      },
+      "zh-TW": {
+        name: "螢幕色階測試",
+        description:
+          "透過灰階、RGB 漸層和附有編號的黑白色階圖樣，檢查螢幕是否有色帶、暗部細節流失或亮部細節流失。",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",

@@ -1,0 +1,4 @@
+{
+  "name": "Teste de gradientes do monitor",
+  "description": "Verifique se o monitor apresenta bandas de cor ou perda de detalhe nas sombras e nas altas luzes com escalas de cinzentos, gradientes RGB e amostras numeradas de preto e branco."
+}

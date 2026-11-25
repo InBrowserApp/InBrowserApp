@@ -1,0 +1,19 @@
+{
+  "patterns": "測試圖樣",
+  "grayscale": "灰階",
+  "rgb": "RGB 漸層",
+  "black": "黑色色階",
+  "white": "白色色階",
+  "smoothGrayscale": "平滑灰階",
+  "grayscaleSteps": "16 階灰階",
+  "red": "紅色",
+  "green": "綠色",
+  "blue": "藍色",
+  "grayscaleHint": "觀察上方的過渡是否平滑、灰色是否中性，以及下方各階灰色是否清楚可辨。",
+  "rgbHint": "檢查每種顏色的漸層是否平滑，有無突兀的色帶。",
+  "blackHint": "在黑色背景上比較每個編號色塊與相鄰色塊。",
+  "whiteHint": "在白色背景上比較每個編號色塊與相鄰色塊。",
+  "fullscreen": "全螢幕查看",
+  "fullscreenLabel": "全螢幕螢幕色階測試",
+  "exit": "離開全螢幕"
+}

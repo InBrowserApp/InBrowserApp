@@ -1,0 +1,19 @@
+{
+  "patterns": "Schemi di prova",
+  "grayscale": "Scala di grigi",
+  "rgb": "Gradienti RGB",
+  "black": "Livelli di nero",
+  "white": "Livelli di bianco",
+  "smoothGrayscale": "Scala di grigi continua",
+  "grayscaleSteps": "16 livelli di grigio",
+  "red": "Rosso",
+  "green": "Verde",
+  "blue": "Blu",
+  "grayscaleHint": "Verifica che in alto la sfumatura sia uniforme e neutra e che in basso i livelli siano distinguibili.",
+  "rgbHint": "Controlla che ogni gradiente di colore sia uniforme e privo di bande nette.",
+  "blackHint": "Confronta ogni riquadro numerato con quelli adiacenti sullo sfondo nero.",
+  "whiteHint": "Confronta ogni riquadro numerato con quelli adiacenti sullo sfondo bianco.",
+  "fullscreen": "Visualizza a schermo intero",
+  "fullscreenLabel": "Test dei gradienti del monitor a schermo intero",
+  "exit": "Esci da schermo intero"
+}

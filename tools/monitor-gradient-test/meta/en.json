@@ -1,0 +1,4 @@
+{
+  "name": "Monitor Gradient Test",
+  "description": "Check your monitor for color banding, crushed shadows, and clipped highlights with grayscale, RGB gradients, and numbered black and white level patterns."
+}

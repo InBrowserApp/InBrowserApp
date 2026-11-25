@@ -1294,6 +1294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "Monitör Renk Geçişi Testi",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "Mors Kodu Dönüştürücü",
     slug: "morse-code-converter",
   },

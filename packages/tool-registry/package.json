@@ -265,6 +265,7 @@
     "@tool/mime-type-lookup": "workspace:*",
     "@tool/mobi-reader": "workspace:*",
     "@tool/mobi-to-epub-converter": "workspace:*",
+    "@tool/monitor-gradient-test": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
     "@tool/mouse-tester": "workspace:*",
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",

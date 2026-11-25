@@ -1,0 +1,19 @@
+{
+  "patterns": "Padrões de teste",
+  "grayscale": "Escala de cinzentos",
+  "rgb": "Gradientes RGB",
+  "black": "Níveis de preto",
+  "white": "Níveis de branco",
+  "smoothGrayscale": "Gradiente de cinzentos",
+  "grayscaleSteps": "16 níveis de cinzento",
+  "red": "Vermelho",
+  "green": "Verde",
+  "blue": "Azul",
+  "grayscaleHint": "Procure uma transição suave e neutra em cima e níveis bem distintos em baixo.",
+  "rgbHint": "Verifique se cada gradiente de cor tem uma transição suave, sem bandas abruptas.",
+  "blackHint": "Compare cada amostra numerada com as amostras vizinhas sobre o fundo preto.",
+  "whiteHint": "Compare cada amostra numerada com as amostras vizinhas sobre o fundo branco.",
+  "fullscreen": "Ver em ecrã inteiro",
+  "fullscreenLabel": "Teste de gradientes do monitor em ecrã inteiro",
+  "exit": "Sair do ecrã inteiro"
+}

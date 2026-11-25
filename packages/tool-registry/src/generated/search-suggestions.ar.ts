@@ -1294,6 +1294,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
+    name: "اختبار تدرجات ألوان الشاشة",
+    slug: "monitor-gradient-test",
+  },
+  {
+    category: "misc",
     name: "محول شفرة مورس",
     slug: "morse-code-converter",
   },

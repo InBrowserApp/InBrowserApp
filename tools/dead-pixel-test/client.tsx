@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from "react"
+import { useId, useRef, useState } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -8,6 +8,8 @@ import {
   Maximize2,
   Minimize2,
 } from "@workspace/ui/icons"
+
+import { useFullscreenDialog } from "@workspace/ui/lib/use-fullscreen-dialog"
 
 import type { MouseEvent } from "react"
 import type English from "./messages/en.json"
@@ -29,23 +31,10 @@ export default function DeadPixelTest({
 }) {
   const [position, setPosition] = useState(0)
   const [controlsVisible, setControlsVisible] = useState(true)
-  const dialog = useRef<HTMLDialogElement>(null)
-  const surface = useRef<HTMLDivElement>(null)
+  const { dialog, surface, open, close, cancel } = useFullscreenDialog()
   const canvasButton = useRef<HTMLButtonElement>(null)
   const helpId = useId()
   const color = colors[position]!
-
-  useEffect(() => {
-    let wasFullscreen = false
-    function onFullscreenChange() {
-      const isFullscreen = document.fullscreenElement === surface.current
-      if (wasFullscreen && !isFullscreen) dialog.current?.close()
-      wasFullscreen = isFullscreen
-    }
-    document.addEventListener("fullscreenchange", onFullscreenChange)
-    return () =>
-      document.removeEventListener("fullscreenchange", onFullscreenChange)
-  }, [])
 
   function step(offset: number) {
     setPosition(
@@ -54,20 +43,8 @@ export default function DeadPixelTest({
   }
 
   function startFullscreen(event: MouseEvent<HTMLButtonElement>) {
-    event.currentTarget.focus()
     setControlsVisible(true)
-    dialog.current?.showModal()
-    // The dialog also works when the browser does not offer native fullscreen.
-    void surface.current?.requestFullscreen?.().catch(() => {})
-  }
-
-  function closeTest() {
-    if (document.fullscreenElement === surface.current) {
-      // Keep the dialog open until fullscreenchange so it can restore focus.
-      void document.exitFullscreen()
-    } else {
-      dialog.current?.close()
-    }
+    open(event.currentTarget)
   }
 
   return (
@@ -76,7 +53,7 @@ export default function DeadPixelTest({
         type="button"
         aria-label={messages.next}
         className="block min-h-56 w-full cursor-pointer rounded-xl border border-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:min-h-72"
-        style={{ backgroundColor: color.hex }}
+        style={{ backgroundColor: color.hex, forcedColorAdjust: "none" }}
         onClick={() => step(1)}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -117,10 +94,7 @@ export default function DeadPixelTest({
         aria-label={messages.fullscreenLabel}
         aria-describedby={helpId}
         className="fixed inset-0 m-0 h-dvh max-h-none w-dvw max-w-none overflow-hidden border-0 p-0"
-        onCancel={(event) => {
-          event.preventDefault()
-          closeTest()
-        }}
+        onCancel={cancel}
         onKeyDown={(event) => {
           const { currentTarget, key } = event
           const rtl =
@@ -139,10 +113,13 @@ export default function DeadPixelTest({
         <div
           ref={surface}
           className="relative size-full"
-          style={{ backgroundColor: color.hex }}
+          style={{ backgroundColor: color.hex, forcedColorAdjust: "none" }}
         >
           {controlsVisible && (
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-center p-3">
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-center p-3"
+              style={{ forcedColorAdjust: "auto" }}
+            >
               <div className="pointer-events-auto flex max-w-full flex-wrap items-center justify-center gap-1 rounded-xl bg-neutral-950 p-1 text-white shadow-lg">
                 <Button
                   type="button"
@@ -190,7 +167,7 @@ export default function DeadPixelTest({
                   className={toolbarButton}
                   aria-label={messages.exit}
                   title={messages.exit}
-                  onClick={closeTest}
+                  onClick={close}
                 >
                   <Minimize2 aria-hidden="true" />
                 </Button>

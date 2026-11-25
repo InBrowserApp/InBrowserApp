@@ -1,0 +1,19 @@
+{
+  "patterns": "测试图案",
+  "grayscale": "灰阶",
+  "rgb": "RGB 渐变",
+  "black": "黑色色阶",
+  "white": "白色色阶",
+  "smoothGrayscale": "平滑灰阶",
+  "grayscaleSteps": "16 级灰阶",
+  "red": "红色",
+  "green": "绿色",
+  "blue": "蓝色",
+  "grayscaleHint": "观察上方过渡是否平滑、灰色是否中性，以及下方各级灰阶是否清晰可辨。",
+  "rgbHint": "检查每种颜色的渐变是否平滑，有无突兀的色带。",
+  "blackHint": "在黑色背景上比较每个编号色块与相邻色块。",
+  "whiteHint": "在白色背景上比较每个编号色块与相邻色块。",
+  "fullscreen": "全屏查看",
+  "fullscreenLabel": "全屏显示器色阶测试",
+  "exit": "退出全屏"
+}
