@@ -1393,6 +1393,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "openapi-to-typescript-converter",
   },
   {
+    category: "web",
+    name: "Penyunting OPML",
+    slug: "opml-editor",
+  },
+  {
     category: "developer",
     name: "Pemapar Parquet",
     slug: "parquet-viewer",
