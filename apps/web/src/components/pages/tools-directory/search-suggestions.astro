@@ -14,7 +14,16 @@ const { id, messages, compact = false } = Astro.props
   "absolute inset-x-0 z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]",
   compact ? "top-full md:pointer-fine:top-[calc(100%+0.5rem)]" : "top-[calc(100%+0.5rem)]",
 ]}>
-  <ul role="listbox" id={`${id}-suggestions`} tabindex="-1" aria-label={messages.suggestionsLabel} class:list={["m-0 flex list-none flex-col overflow-y-auto overscroll-contain p-0", compact ? "max-h-[min(11rem,30dvh)] sm:pointer-fine:max-h-[min(20rem,40dvh)]" : "max-h-44 sm:max-h-80"]}></ul>
+  <ul
+    role="listbox"
+    id={`${id}-suggestions`}
+    tabindex="-1"
+    aria-label={messages.suggestionsLabel}
+    class:list={[
+      "suggestion-list m-0 -me-1 flex list-none flex-col overflow-y-auto overscroll-contain p-0 pe-1",
+      compact ? "max-h-[min(11rem,30dvh)] sm:pointer-fine:max-h-[min(20rem,40dvh)]" : "max-h-44 sm:max-h-80",
+    ]}
+  ></ul>
   <div data-search-empty hidden class="px-3 py-4 text-center">
     <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
     <p class="mt-1 text-xs text-muted-foreground">{messages.emptySearchDescription}</p>
@@ -34,12 +43,57 @@ const { id, messages, compact = false } = Astro.props
 </div>
 <template data-search-option>
   <li role="presentation">
-    <a role="option" tabindex="-1" aria-selected="false" data-astro-prefetch="false" class="group/option flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-[9px] hover:bg-muted aria-selected:bg-muted">
+    <a role="option" tabindex="-1" aria-selected="false" data-astro-prefetch="false" class="group/option flex min-h-11 cursor-pointer items-center justify-between gap-2 rounded-lg py-[9px] ps-3 pe-2 hover:bg-muted aria-selected:bg-muted">
       <span class="min-w-0 truncate text-sm text-popover-foreground"><span data-pre></span><mark data-match class="rounded-[3px] bg-muted font-semibold text-inherit group-aria-selected/option:bg-border/70"></mark><span data-post></span></span>
-      <span class="flex shrink-0 items-center gap-2">
-        <span data-category class:list={["text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase", compact && "max-sm:hidden pointer-coarse:hidden"]}></span>
-        <kbd aria-hidden="true" class="invisible rounded-[5px] border border-border px-1 font-mono text-[10px] font-medium text-muted-foreground group-aria-selected/option:visible max-sm:hidden pointer-coarse:hidden">↵</kbd>
-      </span>
+      <span data-category class:list={[
+        "max-w-[40%] shrink-0 truncate text-[10px] font-medium tracking-wide text-foreground/70 uppercase",
+        compact && "max-sm:hidden pointer-coarse:hidden",
+      ]}></span>
     </a>
   </li>
 </template>
+
+<style>
+  .suggestion-list {
+    scrollbar-width: thin;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (forced-colors: none) {
+    .suggestion-list {
+      --suggestion-scroll-thumb: transparent;
+      scrollbar-color: var(--suggestion-scroll-thumb) transparent;
+    }
+
+    .suggestion-list:is(:hover, :focus-visible) {
+      --suggestion-scroll-thumb: color-mix(in oklab, var(--foreground) 48%, transparent);
+    }
+
+    @supports selector(::-webkit-scrollbar-thumb) {
+      /* Standard scrollbar properties take precedence over the native parts. */
+      .suggestion-list {
+        scrollbar-width: auto;
+        scrollbar-color: auto;
+      }
+
+      .suggestion-list::-webkit-scrollbar {
+        width: 0.375rem;
+        background: transparent;
+      }
+
+      .suggestion-list::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+        background: var(--suggestion-scroll-thumb);
+      }
+
+      .suggestion-list::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+  }
+
+  @media (forced-colors: active) {
+    .suggestion-list {
+      scrollbar-width: auto;
+    }
+  }
+</style>
