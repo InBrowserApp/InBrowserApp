@@ -39,9 +39,10 @@ jobs:
       RELEASE_TAG: ${{ inputs.release_tag }}
     steps:
       - name: Checkout Cloudflare deployment configuration
+        id: checkout
         uses: actions/checkout@v7
         with:
-          ref: ${{ inputs.release_tag }}
+          ref: refs/tags/${{ inputs.release_tag }}
           sparse-checkout: apps/web/wrangler.jsonc
           sparse-checkout-cone-mode: false
 
@@ -65,4 +66,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: apps/web
           packageManager: npm
-          command: deploy
+          command: >-
+            deploy --tag ${{ toJSON(inputs.release_tag) }}
+            --message ${{ toJSON(format('Release {0} ({1})', inputs.release_tag, steps.checkout.outputs.commit)) }}
